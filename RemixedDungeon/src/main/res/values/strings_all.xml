@@ -2674,4 +2674,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="BardNPC_Gender">>masculine</string>
   <string name="BardNPC_Desc"></string>
 
+  <string name="Spell_SelectAChar">Select a target being.</string>
+
 </resources>

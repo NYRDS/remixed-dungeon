@@ -13,9 +13,9 @@ import org.luaj.vm2.LuaTable;
  */
 public class CustomSpell extends Spell {
 
-    private String scriptFile;
+    private final String scriptFile;
 
-    private LuaScript script;
+    private final LuaScript script;
 
     public CustomSpell(String scriptFile) {
         this.scriptFile = scriptFile;
@@ -45,6 +45,16 @@ public class CustomSpell extends Spell {
         }
         return ret;
     }
+
+    @Override
+    protected boolean cast(Char chr, Char target) {
+        boolean ret = script.run("castOnChar", chr, target).checkboolean();
+        if(ret) {
+            castCallback(chr);
+        }
+        return ret;
+    }
+
 
     @Override
     public boolean cast(@NotNull Char chr) {

@@ -21,9 +21,10 @@ public class SpellHelper {
 
     public static final String TARGET_SELF = "self";
     public static final String TARGET_CELL = "cell";
+    public static final String TARGET_CHAR = "char";
     public static final String TARGET_NONE = "none";
 
-    private static Map<String, Integer> affinityToIcon = new HashMap<>();
+    private static final Map<String, Integer> affinityToIcon = new HashMap<>();
 
 
     static {

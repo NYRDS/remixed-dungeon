@@ -8,6 +8,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
@@ -44,6 +45,10 @@ public class Spell implements NamedEntityKind {
         return true;
     }
 
+    protected boolean cast(Char chr, Char target) {
+        return true;
+    }
+
     public boolean canCast(@NotNull final Char chr, boolean reallyCast) {
 
         float timeToCast = chr.spellCooldown(getClassName())-cooldown;
@@ -56,7 +61,7 @@ public class Spell implements NamedEntityKind {
             return false;
         }
 
-        if (chr instanceof Hero) {
+        if (chr == Dungeon.hero) {
             final Hero hero = (Hero) chr;
 
             if(hero.getControlTarget().getId()!=hero.getId()) {
@@ -88,33 +93,56 @@ public class Spell implements NamedEntityKind {
             return false;
         }
 
-        if (chr instanceof Hero) {
-            final Hero hero = (Hero) chr;
+        if (targetingType.equals(SpellHelper.TARGET_CELL)) {
+            chr.selectCell(new CellSelector.Listener() {
+                @Override
+                public void onSelect(Integer cell, @NotNull Char selector) {
+                    if (cell != null) {
+                        cast(chr, cell);
 
-            if (targetingType.equals(SpellHelper.TARGET_CELL)) {
-                chr.selectCell(new CellSelector.Listener() {
-                    @Override
-                    public void onSelect(Integer cell, @NotNull Char selector) {
-                        if (cell != null) {
-                            cast(chr, cell);
+                        chr.spend(castTime);
+                        chr.busy();
+                        chr.getSprite().zap(chr.getPos());
+                    }
+                }
 
-                            hero.spend(castTime);
-                            hero.busy();
-                            hero.getSprite().zap(hero.getPos());
+                @Override
+                public String prompt() {
+                    return Game.getVar(R.string.Spell_SelectACell);
+                }
+            });
+            return false;
+        }
+
+        if (targetingType.equals(SpellHelper.TARGET_CHAR)) {
+            chr.selectCell(new CellSelector.Listener() {
+                @Override
+                public void onSelect(Integer cell, @NotNull Char selector) {
+                    if (cell != null) {
+                        Char target = Actor.findChar(cell);
+
+                        if(target!=null) {
+
+                            cast(chr, target);
+
+                            chr.spend(castTime);
+                            chr.busy();
+                            chr.getSprite().zap(chr.getPos());
                         }
                     }
+                }
 
-                    @Override
-                    public String prompt() {
-                        return Game.getVar(R.string.Spell_SelectACell);
-                    }
-                });
-                return false;
-            }
-            hero.spend(castTime);
-            hero.busy();
-            hero.getSprite().zap(hero.getPos());
+                @Override
+                public String prompt() {
+                    return Game.getVar(R.string.Spell_SelectAChar);
+                }
+            });
+            return false;
         }
+
+        chr.spend(castTime);
+        chr.busy();
+        chr.getSprite().zap(chr.getPos());
         return true;
     }
 
