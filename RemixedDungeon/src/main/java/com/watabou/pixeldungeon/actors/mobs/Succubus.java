@@ -19,19 +19,16 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfLullaby;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -91,31 +88,16 @@ public class Succubus extends Mob {
 
 	@Override
     public boolean getCloser(int target) {
-		if (Dungeon.level.fieldOfView[target] && Dungeon.level.distance(getPos(), target) > 2 && delay <= 0) {
-
-			blink(target);
+		if (level().fieldOfView[target] && level().distance(getPos(), target) > 2 && delay <= 0) {
+			CharUtils.blinkTo(this, target);
+			delay = BLINK_DELAY;
 			spend(-1 / speed());
 			return true;
-
 		} else {
-
 			delay--;
 			return super.getCloser(target);
 
 		}
-	}
-
-	private void blink(int target) {
-
-		int cell = Ballistica.cast(getPos(), target, true, true);
-
-		if (Actor.findChar(cell) != null && Ballistica.distance > 1) {
-			cell = Ballistica.trace[Ballistica.distance - 2];
-		}
-
-		WandOfBlink.appear(this, cell);
-
-		delay = BLINK_DELAY;
 	}
 
 	@Override

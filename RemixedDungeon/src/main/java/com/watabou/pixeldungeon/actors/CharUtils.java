@@ -124,7 +124,7 @@ public class CharUtils {
         return true;
     }
 
-    public static void teleportRandom(Char ch ) {
+    public static void teleportRandom(@NotNull Char ch ) {
         Level level = ch.level();
         if(level.isBossLevel() || !ch.isMovable()) {
             GLog.w( Utils.format(R.string.ScrollOfTeleportation_NoTeleport2, ch.getName_objective()) );
@@ -306,5 +306,15 @@ public class CharUtils {
             chr.fx(chr.getPos(), () -> WandOfBlink.appear(ch, tgt));
         }
         Dungeon.observe();
+    }
+
+    public static void blinkTo(@NotNull Char chr, int target) {
+        int cell = Ballistica.cast(chr.getPos(), target, true, true);
+
+        if (Actor.findChar(cell) != null && Ballistica.distance > 1) {
+            cell = Ballistica.trace[Ballistica.distance - 2];
+        }
+
+        WandOfBlink.appear(chr, cell);
     }
 }

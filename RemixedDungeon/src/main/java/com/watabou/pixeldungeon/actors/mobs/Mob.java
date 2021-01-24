@@ -119,6 +119,12 @@ public abstract class Mob extends Char {
 		return makePet(pet,owner.getId());
 	}
 
+	@LuaInterface
+	@NotNull
+	public Mob makePet(@NotNull Char owner) {
+		return Mob.makePet(this, owner);
+	}
+
 	@NotNull
 	public static Mob makePet(@NotNull Mob pet, int ownerId) {
 		if (pet.canBePet()) {

@@ -39,7 +39,8 @@ local Buffs  = {
     Awareness    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Awareness"),
     Barkskin     = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Barkskin"),
     Sleep        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Sleep"),
-    Slow         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Slow")
+    Slow         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Slow"),
+    Blindness    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Blindness")
 }
 
 local Blobs = {
@@ -342,6 +343,13 @@ local RPD = {
         local json = require("scripts/lib/json")
         local item = ItemFactory:createItem(itemClass, json.encode(itemDesc))
         return item
+    end,
+
+    spawnMob = function(mobClass, cell)
+        local mob = MobFactory:mobByName(mobClass)
+        mob:setPos(cell)
+        Dungeon.level:spawnMob(mob)
+        return mob
     end,
 
     levelObject = function(objectClass, cell)
