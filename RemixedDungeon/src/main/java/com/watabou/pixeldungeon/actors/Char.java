@@ -153,7 +153,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@Getter
 	private int pos     = Level.INVALID_CELL;
 
-	private int prevPos = Level.INVALID_CELL;
+	transient private int prevPos = Level.INVALID_CELL;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
 	private int id = EntityIdSource.INVALID_ID;

@@ -104,6 +104,8 @@
         "kind": "Boomerang"
       }
     ],
+    "magicAffinity": "Huntress",
+    "isSpellUser": true,
     "hp": 15
   },
   "ELF": {
