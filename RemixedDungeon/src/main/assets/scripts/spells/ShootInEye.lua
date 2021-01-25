@@ -20,7 +20,7 @@ return spell.init{
             magicAffinity = "Huntress",
             targetingType = "char",
             level         = 1,
-            castTime      = 0,
+            castTime      = 1,
             spellCost     = 1
         }
     end,

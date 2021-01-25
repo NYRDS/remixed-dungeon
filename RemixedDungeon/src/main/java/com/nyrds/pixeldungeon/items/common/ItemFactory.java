@@ -211,8 +211,8 @@ import java.util.Map;
 
 public class ItemFactory {
 
-    static private Map<String, Class<? extends Item>> mItemsList = new HashMap<>();
-    static private Map<Class<? extends Item>, String> mNamesList = new HashMap<>();
+    static private final Map<String, Class<? extends Item>> mItemsList = new HashMap<>();
+    static private final Map<Class<? extends Item>, String> mNamesList = new HashMap<>();
 
     static {
         initItemsMap();

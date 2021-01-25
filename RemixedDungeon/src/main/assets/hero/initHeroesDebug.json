@@ -135,6 +135,9 @@
       "Roots"
     ],
 
+    "magicAffinity": "Elf",
+    "isSpellUser": true,
+
     "str": 9,
     "hp": 15
   },
