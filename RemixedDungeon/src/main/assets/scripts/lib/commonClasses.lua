@@ -341,14 +341,14 @@ local RPD = {
 
     createItem = function(itemClass, itemDesc)
         local json = require("scripts/lib/json")
-        local item = ItemFactory:createItem(itemClass, json.encode(itemDesc or {}))
+        local item = ItemFactory:createItem(itemClass, json.encode(itemDesc or {_=""}))
         return item
     end,
 
     spawnMob = function(mobClass, cell, mobDesc)
         local mob = MobFactory:mobByName(mobClass)
         mob:setPos(cell)
-        mob:fromJson(json.encode(mobDesc or {}))
+        mob:fromJson(json.encode(mobDesc or {_=""}))
         Dungeon.level:spawnMob(mob)
         return mob
     end,

@@ -27,7 +27,7 @@ return spell.init{
     castOnChar = function(self, spell, caster, victim)
 
         RPD.zapEffect(caster:getPos(),victim:getPos(),"CommonArrow")
-        tgt:damage(math.max(math.random(1,caster:ht()/2)), caster)
+        victim:damage(math.max(math.random(1,caster:ht()/2)), caster)
 
         return true
     end
