@@ -17,14 +17,11 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfLullaby;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
@@ -78,9 +75,6 @@ public class Succubus extends Mob {
 			float duration = Charm.durationFactor(target) * Random.IntRange(2, 5);
 
 			Buff.affect(target, Charm.class, duration);
-			enemy.getSprite().centerEmitter().start(Speck.factory(Speck.HEART), 0.2f, 5);
-
-			Sample.INSTANCE.play(Assets.SND_CHARMS);
 		}
 
 		return damage;

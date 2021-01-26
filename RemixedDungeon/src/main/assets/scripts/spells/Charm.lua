@@ -26,7 +26,7 @@ return spell.init{
 
     castOnChar = function(self, spell, caster, chr)
 
-        RPD.affectBuff(chr, RPD.Buffs.Charm, caster:skillLevel()):setSource(caster)
+        RPD.affectBuff(chr, RPD.Buffs.Charm, math.sqrt(caster:skillLevel() * caster:lvl()) + 5 ):setSource(caster)
 
         return true
     end
