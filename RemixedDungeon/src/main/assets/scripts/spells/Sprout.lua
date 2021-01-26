@@ -36,12 +36,17 @@ return spell.init{
 
         RPD.placeBlob(RPD.Blobs.Regrowth, cell, caster:lvl() * 10)
 
+        local level = caster:level()
+
         RPD.forCellsAround(cell, function(cell)
+            if not level.passable[cell+1] then
+                return
+            end
+
             if caster:skillLevel()/(RPD.Dungeon.depth + 1) > math.random() then
                 local seed = seeds[math.random(1, #seeds)]
-                caster:level():plant(RPD.createItem(seed),cell)
+                level:plant(RPD.createItem(seed),cell)
             end
-            return true
         end)
 
         return true

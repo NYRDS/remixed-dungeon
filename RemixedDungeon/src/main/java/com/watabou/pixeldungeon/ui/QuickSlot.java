@@ -181,7 +181,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     @Override
     protected boolean onLongClick() {
-        if (Dungeon.hero.spellUser) {
+        if (Dungeon.hero.isSpellUser()) {
             GameScene.selectSpell(this);
         } else {
             GameScene.selectItem(Dungeon.hero, this, WndBag.Mode.QUICKSLOT, Game.getVar(R.string.QuickSlot_SelectedItem));

@@ -53,7 +53,6 @@
         "kind": "PotionOfStrength"
       }
     ],
-    "isSpellUser": true,
     "magicAffinity": "Combat"
   },
   "MAGE": {
@@ -75,7 +74,6 @@
     ],
     "maxSp":15,
     "sp":15,
-    "isSpellUser": true,
     "magicAffinity": "Elemental"
   },
   "ROGUE": {
@@ -89,7 +87,6 @@
         "kind": "ScrollOfMagicMapping"
       }
     ],
-    "isSpellUser": true,
     "magicAffinity": "Rogue"
   },
   "HUNTRESS": {
@@ -105,7 +102,6 @@
       }
     ],
     "magicAffinity": "Huntress",
-    "isSpellUser": true,
     "hp": 15
   },
   "ELF": {
@@ -134,10 +130,7 @@
     "immunities": [
       "Roots"
     ],
-
     "magicAffinity": "Elf",
-    "isSpellUser": true,
-
     "str": 9,
     "hp": 15
   },
@@ -159,7 +152,6 @@
         "kind": "PotionOfHealing"
       }
     ],
-    "isSpellUser": true,
     "magicAffinity": "Necromancy"
   },
   "GNOLL": {
@@ -177,7 +169,6 @@
         "quantity": 8
       }
     ],
-    "isSpellUser": true,
     "magicAffinity": "Witchcraft",
     "quickslot": [
       {

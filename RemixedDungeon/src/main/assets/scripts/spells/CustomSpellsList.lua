@@ -12,6 +12,6 @@ spells["Combat"] = {"DieHard","Dash","BodyArmor","Smash"}
 spells["Rogue"] = {"Cloak","Backstab","KunaiThrow","Haste"}
 spells["Witchcraft"] = {"Roar","LightningBolt","Heal","Order"}
 spells["Huntress"] = {"Calm","Charm","ShootInEye","SummonBeast"}
-spells["Elf"] = {"MagicArrow","Sprout"}
+spells["Elf"] = {"MagicArrow","Sprout","HideInGrass","NatureArmor"}
 
 return spells

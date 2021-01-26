@@ -162,7 +162,7 @@ public class Toolbar extends Component {
         actionBox.setAlign(VBox.Align.Bottom);
 
         VHBox inventoryBox = new VHBox(width());
-        if (hero.spellUser) {
+        if (hero.isSpellUser()) {
             inventoryBox.add(btnSpells);
         }
         inventoryBox.add(btnInventory);

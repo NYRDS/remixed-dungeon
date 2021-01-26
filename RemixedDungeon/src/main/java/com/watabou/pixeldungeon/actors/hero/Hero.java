@@ -124,8 +124,6 @@ public class Hero extends Char {
 	private HeroClass heroClass = HeroClass.ROGUE;
 	private HeroSubClass subClass = HeroSubClass.NONE;
 
-	public boolean spellUser;
-
 	private boolean    ready      = false;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
@@ -223,7 +221,6 @@ public class Hero extends Char {
 		bundle.put(SP, getSkillPoints());
 		bundle.put(MAX_SP, getSkillPointsMax());
 
-		bundle.put(IS_SPELL_USER, spellUser);
 		bundle.put(MAGIC_LEVEL, skillLevel());
 	}
 
@@ -249,8 +246,6 @@ public class Hero extends Char {
 		maxSp = Scrambler.scramble(bundle.optInt(MAX_SP, 10));
 
 		gender = heroClass.getGender();
-
-		spellUser = bundle.optBoolean(IS_SPELL_USER, false);
 
 		setSkillLevel(bundle.getInt(MAGIC_LEVEL));
 	}
@@ -1240,5 +1235,9 @@ public class Hero extends Char {
 		if(!Dungeon.isLoading()) {
 			level().visited[pos] = true;
 		}
+	}
+
+	public boolean isSpellUser() {
+		return !heroClass.getMagicAffinity().isEmpty();
 	}
 }

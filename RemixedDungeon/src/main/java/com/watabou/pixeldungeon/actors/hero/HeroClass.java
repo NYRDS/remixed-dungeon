@@ -87,7 +87,7 @@ public enum HeroClass implements CharModifier {
     private final Integer    titleId;
     static public final JSONObject initHeroes = JsonHelper.readJsonFromAsset(BuildConfig.DEBUG && !ModdingMode.inMod()? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
 
-    private String  magicAffinity;
+    private String  magicAffinity = Utils.EMPTY_STRING;
 
     HeroClass(Integer titleId, Class<? extends ClassArmor> armorClass) {
         this.titleId = titleId;
@@ -154,8 +154,7 @@ public enum HeroClass implements CharModifier {
 
                 hero.STR(classDesc.optInt("str", hero.STR()));
                 hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
-                hero.spellUser = classDesc.optBoolean("isSpellUser", hero.spellUser);
-                hero.getHeroClass().setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
+                hero.getHeroClass().setMagicAffinity(classDesc.optString("magicAffinity", magicAffinity));
                 hero.setMaxSkillPoints(classDesc.optInt("maxSp", hero.getSkillPointsMax()));
                 hero.setSkillLevel(classDesc.optInt("sl",hero.skillLevel()));
                 hero.setSkillPoints(classDesc.optInt("sp",classDesc.optInt("startingSp", hero.getSkillPoints())));
