@@ -36,7 +36,7 @@ function item.act(self, item)
     item:deactivateActor()
 end
 
-function item.onThrow(self, item, cell)
+function item.onThrow(self, item, cell, thrower)
     item:dropTo(cell)
 end
 

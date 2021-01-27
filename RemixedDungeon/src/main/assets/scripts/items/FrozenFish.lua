@@ -21,7 +21,7 @@ return item.init{
             price     = 15
         }
     end,
-    onThrow = function(self, item, cell)
+    onThrow = function(self, item, cell, thrower)
         local level = RPD.Dungeon.level
 
         if level.water[cell] then
