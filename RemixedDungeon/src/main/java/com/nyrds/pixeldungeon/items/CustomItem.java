@@ -11,6 +11,7 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.CellSelector;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.NotNull;
@@ -26,7 +27,7 @@ import java.util.ArrayList;
 public class CustomItem extends EquipableItem {
 
     @Packable
-    private String scriptFile;
+    private String scriptFile = Utils.EMPTY_STRING;
 
     private boolean upgradable;
     private boolean identified;
@@ -131,7 +132,7 @@ public class CustomItem extends EquipableItem {
     }
 
     public void selectCell(String action,String prompt) {
-        CellSelector.Listener cellSelectorListener= new CellSelector.Listener(){
+        CellSelector.Listener cellSelectorListener = new CellSelector.Listener(){
 
             @Override
             public void onSelect(Integer cell, @NotNull Char selector) {
@@ -199,7 +200,7 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public String getClassName() {
+    public String getEntityKind() {
         return scriptFile;
     }
 

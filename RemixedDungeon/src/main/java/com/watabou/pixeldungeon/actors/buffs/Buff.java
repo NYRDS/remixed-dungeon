@@ -301,7 +301,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
             Item srcItem = item.detach(target.getBelongings().backpack);
 
             if (srcItem == null) {
-                EventCollector.logException(item.getClassName());
+                EventCollector.logException(item.getEntityKind());
                 continue;
             }
 

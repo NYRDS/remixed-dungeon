@@ -58,7 +58,7 @@ public class CellSelector extends TouchArea {
 	
 	public void select( int cell ) {
 		if (enabled && listener != null && cell != Level.INVALID_CELL) {
-			GLog.debug("%s -> %d", listener, cell);
+			GLog.debug("%s -> %d", listener.getClass().getSimpleName(), cell);
 			listener.onSelect( cell, selector);
 			GameScene.ready();
 		} else {

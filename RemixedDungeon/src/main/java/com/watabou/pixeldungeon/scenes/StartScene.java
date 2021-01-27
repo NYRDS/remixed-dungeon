@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.utils.GameControl;
@@ -271,7 +271,7 @@ public class StartScene extends PixelScene {
         curShield.highlight(true);
 
 
-        if (!BuildConfig.DEBUG) {
+        if (!Util.isDebug()) {
             if (curShield.cl == HeroClass.HUNTRESS && !huntressUnlocked) {
                 updateUnlockLabel(Game.getVar(R.string.StartScene_Unlock));
                 return;

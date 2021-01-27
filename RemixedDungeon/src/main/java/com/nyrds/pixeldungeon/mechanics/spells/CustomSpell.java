@@ -69,7 +69,6 @@ public class CustomSpell extends Spell {
         return ret;
     }
 
-    @Override
     public String getClassName() {
         return scriptFile;
     }

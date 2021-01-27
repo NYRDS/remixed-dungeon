@@ -127,7 +127,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 
 	private String helmetDescriptor(EquipableItem armor, Hero hero) {
 		if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()){
-			return "hero/armor/helmet/" +armor.getClass().getSimpleName()+".png";
+			return "hero/armor/helmet/" +armor.getEntityKind()+".png";
 		}
 		return HERO_EMPTY_PNG;
 	}
@@ -135,7 +135,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 	private String collarDescriptor(EquipableItem armor, Hero hero) {
 
 		if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasCollar()){
-			return "hero/armor/collar/" +armor.getClass().getSimpleName()+".png";
+			return "hero/armor/collar/" +armor.getEntityKind()+".png";
 		}
 		return HERO_EMPTY_PNG;
 	}

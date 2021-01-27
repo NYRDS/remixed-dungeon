@@ -196,8 +196,8 @@ public class Treasury {
     }
 
     public Item check(@NotNull Item item) {
-        if(forbidden.contains(item.getClassName())) {
-            GLog.debug("Forbidden item: %s",item.getClassName());
+        if(forbidden.contains(item.getEntityKind())) {
+            GLog.debug("Forbidden item: %s",item.getEntityKind());
             return ItemFactory.itemByName("Gold").quantity(item.price());
         }
         return item;

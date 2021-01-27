@@ -12,8 +12,10 @@ import android.os.Environment;
 import android.os.StatFs;
 import android.util.Base64;
 
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.utils.Callback;
 
 import org.jetbrains.annotations.NotNull;
@@ -117,4 +119,7 @@ public class Util {
         return ret;
     }
 
+    public static boolean isDebug() {
+      return BuildConfig.DEBUG || RemixedDungeon.isDev();
+    }
 }

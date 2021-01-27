@@ -29,7 +29,7 @@ public class ItemSpritesDescription {
 	}
 
 	static public String getImageFile(Item item) {
-		ItemSpritesDescription entry = m_descMap.get(item.getClass().getSimpleName());
+		ItemSpritesDescription entry = m_descMap.get(item.getEntityKind());
 		if (entry != null) {
 			return entry.imageFile;
 		}
@@ -37,7 +37,7 @@ public class ItemSpritesDescription {
 	}
 
 	static public Integer getImageIndex(Item item) {
-		ItemSpritesDescription entry = m_descMap.get(item.getClass().getSimpleName());
+		ItemSpritesDescription entry = m_descMap.get(item.getEntityKind());
 		if (entry != null) {
 			return entry.imageIndex;
 		}
@@ -45,7 +45,7 @@ public class ItemSpritesDescription {
 	}
 
 	static public boolean isFliesStraight(Item item) {
-		ItemSpritesDescription entry = m_descMap.get(item.getClass().getSimpleName());
+		ItemSpritesDescription entry = m_descMap.get(item.getEntityKind());
 		if (entry != null) {
 			return entry.fliesStraight;
 		}
@@ -53,7 +53,7 @@ public class ItemSpritesDescription {
 	}
 
 	static public boolean isFliesFastRotating(Item item) {
-		ItemSpritesDescription entry = m_descMap.get(item.getClass().getSimpleName());
+		ItemSpritesDescription entry = m_descMap.get(item.getEntityKind());
 		if (entry != null) {
 			return entry.fliesFastRotating;
 		}

@@ -213,9 +213,9 @@ public class Heap implements Bundlable, NamedEntityKind {
 		}
 
 		if (item.stackable) {
-			String c = item.getClassName();
+            String c = item.getEntityKind();
 			for (Item i : items) {
-				if (i.getClassName().equals(c)) {
+                if (i.getEntityKind().equals(c)) {
 					i.quantity(i.quantity() + item.quantity());
 					item = i;
 					break;

@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
 
-import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.android.util.Util;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -25,7 +25,7 @@ class OfflineAds {
 			"<div align=\"right\"height=100%%>.</div>";
 
 	static void displayBanner() {
-		if (BuildConfig.DEBUG) {
+		if (Util.isDebug()) {
 			Game.instance().runOnUiThread(() -> {
 				LinearLayout layout = Game.instance().getLayout();
 				if (layout.getChildCount() == 1) {
@@ -46,7 +46,7 @@ class OfflineAds {
 	}
 
 	static void displayIsAd(final InterstitialPoint work) {
-		if (BuildConfig.DEBUG) {
+		if (Util.isDebug()) {
 			Game.instance().runOnUiThread(() -> {
 
 				final AlertDialog.Builder alert = new AlertDialog.Builder(Game.instance());

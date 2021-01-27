@@ -129,7 +129,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	@Packable(defaultValue = "-1")
 	private int quickSlotIndex = -1;
 
-	private static Comparator<Item> itemComparator = (lhs, rhs) -> {
+	private static final Comparator<Item> itemComparator = (lhs, rhs) -> {
 
 		if(lhs.isIdentified() &&  !rhs.isIdentified()) {
 			return -1;
@@ -291,7 +291,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 					QuickSlot.refresh(getOwner());
 				}
 
-				Item detached = ItemFactory.itemByName(getClassName());
+				Item detached = ItemFactory.itemByName(getEntityKind());
 				detached.quantity(n);
 				detached.level(level());
 				detached.onDetach();
@@ -558,7 +558,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	private Char owner = CharsList.DUMMY;
 
 	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
-		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
+		return Utils.getClassParam(getEntityKind(), paramName, defaultValue, warnIfAbsent);
 	}
 
 	@SneakyThrows
@@ -666,10 +666,6 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		return 0;
 	}
 
-	public String getClassName() {
-		return ItemFactory.itemNameByClass(getClass());
-	}
-
 	public Item quickSlotContent() {
 		if(!stackable) {
 			return this;
@@ -679,11 +675,11 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 			return this;
 		}
 
-		return ItemFactory.virtual(getClassName());
+		return ItemFactory.virtual(getEntityKind());
 	}
 
 	public boolean usableByHero() {
-		return quantity() >= 1 && (Dungeon.hero.getItem(getClassName()).valid() || isEquipped(Dungeon.hero));
+		return quantity() >= 1 && (Dungeon.hero.getItem(getEntityKind()).valid() || isEquipped(Dungeon.hero));
 	}
 
 	public boolean announcePickUp() {
@@ -707,7 +703,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
 	@Override
 	public String getEntityKind() {
-		return getClassName();
+		return ItemFactory.itemNameByClass(getClass());
 	}
 
 	public int overlayIndex() {

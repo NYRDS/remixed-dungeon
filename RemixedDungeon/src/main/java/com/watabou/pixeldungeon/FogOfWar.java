@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon;
 
 import android.graphics.Bitmap;
 
-import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.android.util.Util;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Texture;
@@ -89,7 +89,7 @@ public class FogOfWar extends Image {
 
 				var candidates = Dungeon.level.candidates;
 
-				if(BuildConfig.DEBUG && (candidates.contains(pos) || candidates.contains(pos-1)
+				if(Util.isDebug() && (candidates.contains(pos) || candidates.contains(pos-1)
 					|| candidates.contains(pos - (pWidth-1)) || candidates.contains(pos - (pWidth - 1) - 1))
 				) {
 					c = 0xaa444499;

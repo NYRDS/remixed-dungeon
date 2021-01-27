@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.LuaInterface;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.effects.EffectsFactory;
 import com.nyrds.pixeldungeon.effects.ParticleEffect;
@@ -27,7 +28,6 @@ import com.nyrds.pixeldungeon.effects.ZapEffect;
 import com.nyrds.pixeldungeon.levels.TestLevel;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -419,7 +419,7 @@ public class GameScene extends PixelScene {
     }
 
     private void doSelfTest() {
-        if(BuildConfig.DEBUG) {
+        if(Util.isDebug()) {
             for (int i = 0; i< Dungeon.level.map.length; ++i) {
                 Dungeon.level.tileDescByCell(i);
                 Dungeon.level.tileNameByCell(i);

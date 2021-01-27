@@ -51,7 +51,7 @@ public class Spell implements NamedEntityKind {
 
     public boolean canCast(@NotNull final Char chr, boolean reallyCast) {
 
-        float timeToCast = chr.spellCooldown(getClassName())-cooldown;
+        float timeToCast = chr.spellCooldown(getEntityKind())-cooldown;
         if(timeToCast < 0) {
 
             if(reallyCast) {
@@ -147,12 +147,8 @@ public class Spell implements NamedEntityKind {
     }
 
     protected void castCallback(Char chr) {
-        chr.spellCasted(getClassName());
+        chr.spellCasted(getEntityKind());
         chr.spendSkillPoints(spellCost());
-    }
-
-    public String getClassName() {
-        return getClass().getSimpleName();
     }
 
     public String name() {
@@ -186,14 +182,14 @@ public class Spell implements NamedEntityKind {
 
     public int spellCost() {
         if(spellCost==0) {
-            ModError.doReport("Spell cost for "+ getClassName() + "must be > 1", new Exception("spell cost is 0"));
+            ModError.doReport("Spell cost for "+ getEntityKind() + "must be > 1", new Exception("spell cost is 0"));
             spellCost = 1;
         }
         return spellCost;
     }
 
     private String getClassParam(String paramName, String defaultValue) {
-        return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, false);
+        return Utils.getClassParam(getEntityKind(), paramName, defaultValue, false);
     }
 
     public int level() {
@@ -238,8 +234,8 @@ public class Spell implements NamedEntityKind {
                 }
 
                 @Override
-                public String getClassName() {
-                    return Spell.this.getClassName();
+                public String getEntityKind() {
+                    return Spell.this.getEntityKind();
                 }
 
                 @Override
@@ -264,7 +260,7 @@ public class Spell implements NamedEntityKind {
     }
 
     public float getCooldownFactor(Char chr) {
-        float chrCooldown = chr.spellCooldown(getClassName());
+        float chrCooldown = chr.spellCooldown(getEntityKind());
         if(chrCooldown > cooldown) {
             return 1;
         }
@@ -273,7 +269,7 @@ public class Spell implements NamedEntityKind {
 
     @Override
     public String getEntityKind() {
-        return getClassName();
+        return getClass().getSimpleName();
     }
 
     public abstract static class SpellItem extends Item {

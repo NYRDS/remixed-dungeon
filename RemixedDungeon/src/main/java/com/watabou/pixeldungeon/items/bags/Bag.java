@@ -142,7 +142,7 @@ public class Bag extends Item implements Iterable<Item> {
 	}
 	
 	public boolean grab(@NotNull Item item ) {
-		return getOwner().useBags() && item.bag().equals(getClassName());
+        return getOwner().useBags() && item.bag().equals(getEntityKind());
 	}
 
 	@Override
@@ -217,5 +217,10 @@ public class Bag extends Item implements Iterable<Item> {
 				items.remove( index - 1 );
 			}
 		}
+	}
+
+	@Override
+	public String getEntityKind() {
+		return getClass().getSimpleName();
 	}
 }

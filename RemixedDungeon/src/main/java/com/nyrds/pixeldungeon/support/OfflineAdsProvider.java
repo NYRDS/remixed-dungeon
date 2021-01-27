@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
 
-import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -33,7 +33,7 @@ class OfflineAdsProvider {
 
     static void displayBanner() {
         EventCollector.logEvent("OwnAds", "banner");
-        if (BuildConfig.DEBUG) {
+        if (Util.isDebug()) {
             Game.instance().runOnUiThread(() -> {
                 LinearLayout layout = Game.instance().getLayout();
                 if (layout.getChildCount() == 1) {
@@ -55,7 +55,7 @@ class OfflineAdsProvider {
 
     static void displayIsAd(final InterstitialPoint work) {
         EventCollector.logEvent("OwnAds", "is");
-        if (BuildConfig.DEBUG) {
+        if (Util.isDebug()) {
             Game.instance().runOnUiThread(() -> {
 
                 final AlertDialog.Builder alert = new AlertDialog.Builder(Game.instance());

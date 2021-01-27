@@ -21,6 +21,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
@@ -34,7 +35,6 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
@@ -623,20 +623,20 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         	return;
 		}
 
-        if(BuildConfig.DEBUG) {
+        if(Util.isDebug()) {
         	GLog.i("%s <- heal %d (%s)", getEntityKind(), heal, src.getEntityKind());
 		}
 
         hp(hp() + heal);
 
-        if(!noAnim && heal > 0) {
+        if(!noAnim) {
 			getSprite().emitter().burst(Speck.factory(Speck.HEALING), Math.max(1, heal * 5 / ht()));
 		}
     }
 
 	public void damage(int dmg, @NotNull NamedEntityKind src) {
 
-		if(BuildConfig.DEBUG){
+		if(Util.isDebug()){
 			GLog.i("%s: <- %d dmg from %s", getEntityKind(), dmg, src.getEntityKind());
 		}
 
@@ -1420,7 +1420,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			EventCollector.logException(enemy.getEntityKind() + " gonna suicidal");
 		}
 
-		if(BuildConfig.DEBUG) {
+		if(Util.isDebug()) {
 
 			if(enemy == this) {
 				GLog.i("WTF???");

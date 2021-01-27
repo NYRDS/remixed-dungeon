@@ -7,7 +7,7 @@ import android.os.Build;
 
 import com.nyrds.android.RemixedDungeonApp;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -148,7 +148,7 @@ public class StringsManager {
 		Configuration config = getResources().getConfiguration();
 
 		if(!getResources().getConfiguration().locale.equals(userSelectedLocale)) {
-			if(BuildConfig.DEBUG){
+			if(Util.isDebug()){
 				GLog.i("Locale is messed up! Restoring");
 			}
 			config.locale = userSelectedLocale;

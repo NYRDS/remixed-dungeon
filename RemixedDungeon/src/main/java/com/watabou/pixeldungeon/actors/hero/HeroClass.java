@@ -20,10 +20,10 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
@@ -85,7 +85,7 @@ public enum HeroClass implements CharModifier {
 
 
     private final Integer    titleId;
-    static public final JSONObject initHeroes = JsonHelper.readJsonFromAsset(BuildConfig.DEBUG && !ModdingMode.inMod()? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
+    static public final JSONObject initHeroes = JsonHelper.readJsonFromAsset(Util.isDebug() && !ModdingMode.inMod()? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
 
     private String  magicAffinity = Utils.EMPTY_STRING;
 

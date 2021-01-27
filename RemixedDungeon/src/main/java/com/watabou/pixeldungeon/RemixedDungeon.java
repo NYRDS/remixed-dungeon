@@ -27,7 +27,6 @@ import android.view.View;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
@@ -95,9 +94,12 @@ public class RemixedDungeon extends Game {
 	}
 
     public static boolean isAlpha() {
-        return version.contains("alpha");
+        return version.contains("alpha") || version.contains("in_dev");
     }
 
+	public static boolean isDev() {
+		return version.contains("in_dev");
+	}
 
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -177,7 +179,7 @@ public class RemixedDungeon extends Game {
 	}
 
 	public static boolean canDonate() {
-		return Flavours.haveDonations() && Game.instance().iap.isReady() || BuildConfig.DEBUG;
+		return Flavours.haveDonations() && Game.instance().iap.isReady() || Util.isDebug();
 	}
 	
 	/*

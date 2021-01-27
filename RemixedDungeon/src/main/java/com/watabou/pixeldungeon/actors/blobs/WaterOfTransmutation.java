@@ -186,7 +186,7 @@ public class WaterOfTransmutation extends WellWater {
 		Item n;
 		do {
 			n = Treasury.getLevelTreasury().random(Treasury.Category.WAND );
-		} while (n.getClassName().equals(w.getClassName()));
+		} while (n.getEntityKind().equals(w.getEntityKind()));
 		
 		n.level(0);
 		n.upgrade( w.level() );
@@ -201,10 +201,10 @@ public class WaterOfTransmutation extends WellWater {
 	private Item changeSeed(Item s ) {
 		
 		Item n;
-		
+
 		do {
 			n = Treasury.getLevelTreasury().random(Treasury.Category.SEED );
-		} while (n.getClassName().equals(s.getClassName()));
+		} while (n.getEntityKind().equals(s.getEntityKind()));
 		
 		return n;
 	}
@@ -223,7 +223,7 @@ public class WaterOfTransmutation extends WellWater {
 			Item n;
 			do {
 				n =  Treasury.getLevelTreasury().random(Treasury.Category.SCROLL );
-			} while (n.getClassName().equals(s.getClassName()));
+			} while (n.getEntityKind().equals(s.getEntityKind()));
 			return n;
 		}
 	}
@@ -235,7 +235,7 @@ public class WaterOfTransmutation extends WellWater {
 			Item n;
 			do {
 				n  = Treasury.getLevelTreasury().random(Treasury.Category.POTION );
-			} while (n.getClassName().equals(p.getClassName()));
+			} while (n.getEntityKind().equals(p.getEntityKind()));
 			return n;
 		}
 	}

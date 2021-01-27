@@ -271,16 +271,16 @@ public class Armor extends EquipableItem {
 		}
 
 		@Override
-		public String getEntityKind() {
-			return getClass().getSimpleName();
-		}
-
-		@Override
 		public void restoreFromBundle( Bundle bundle ) {
 		}
 
 		@Override
 		public void storeInBundle( Bundle bundle ) {
+		}
+
+		@Override
+		public String getEntityKind() {
+			return getClass().getSimpleName();
 		}
 
 		@Override

@@ -85,8 +85,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     private static int width;
     private static int height;
 
-    public static String version;
-    public static int versionCode;
+    public static String version = Utils.EMPTY_STRING;
+    public static int versionCode = 0;
     public PlayGames playGames;
     public Iap iap;
 
@@ -233,9 +233,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         try {
             version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
             versionCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
-        } catch (NameNotFoundException e) {
-            version = "???";
-            versionCode = 0;
+        } catch (NameNotFoundException ignored) {
         }
 
         setVolumeControlStream(AudioManager.STREAM_MUSIC);

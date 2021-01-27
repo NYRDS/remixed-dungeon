@@ -1,11 +1,11 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.PseudoItem;
 
 import org.jetbrains.annotations.NotNull;
 
-class ItemPlaceholder extends Item {
+class ItemPlaceholder extends PseudoItem {
 
     public static final int RIGHT_HAND = 0;
     public static final int BODY = 1;

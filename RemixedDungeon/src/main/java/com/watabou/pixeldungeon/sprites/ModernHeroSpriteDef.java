@@ -306,10 +306,10 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	private String armorShoulderDescriptor(EquipableItem armor, EquipableItem item, String hand) {
 		if(item==null || item.blockSlot()==Belongings.Slot.NONE) {
-			return "hero_modern/armor/shoulders/" + armor.getClassName() + "_" + hand + ".png";
+			return "hero_modern/armor/shoulders/" + armor.getEntityKind() + "_" + hand + ".png";
 		}
 
-		return "hero_modern/armor/shoulders/" + armor.getClassName() + "_" + item.getAttackAnimationClass() + ".png";
+		return "hero_modern/armor/shoulders/" + armor.getEntityKind() + "_" + item.getAttackAnimationClass() + ".png";
 	}
 
 
@@ -335,14 +335,14 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	private String helmetDescriptor(EquipableItem armor, Hero hero) {
 		if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()){
-			return "hero_modern/armor/helmet/" +armor.getClass().getSimpleName()+".png";
+			return "hero_modern/armor/helmet/" +armor.getEntityKind()+".png";
 		}
 		return HERO_EMPTY_PNG;
 	}
 
 	private String collarDescriptor(EquipableItem armor, Hero hero) {
 		if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasCollar()){
-			return "hero_modern/armor/collar/" +armor.getClass().getSimpleName()+".png";
+			return "hero_modern/armor/collar/" +armor.getEntityKind()+".png";
 		}
 		return HERO_EMPTY_PNG;
 	}

@@ -67,7 +67,7 @@ public class Weapon extends KindOfWeapon {
 
 	protected boolean enchatable = true;
 
-	private int gender = Utils.genderFromString(getClassParam("Gender","neuter",true));
+	private final int gender = Utils.genderFromString(getClassParam("Gender","neuter",true));
 
 	
 	public enum Imbue {
@@ -87,7 +87,7 @@ public class Weapon extends KindOfWeapon {
 			Badges.validateItemLevelAcquired(this);
 		}
 	}
-	
+
 	@Override
 	public void attackProc(Char attacker, Char defender, int damage ) {
 		
@@ -260,7 +260,6 @@ public class Weapon extends KindOfWeapon {
 			return getEntityKind();
 		}
 
-		@Override
 		public String getEntityKind() {
 			return getClass().getSimpleName();
 		}

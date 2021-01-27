@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.gltextures.SmartTexture;
@@ -203,7 +203,7 @@ public class WndHero extends WndTabbed {
 				
 				pos += GAP + icon.height;
 			} else {
-				if(BuildConfig.DEBUG) {
+				if(Util.isDebug()) {
 					Text txt = PixelScene.createText(buff.name(), GuiProperties.regularFontSize());
 					txt.x = GAP;
 					txt.y = pos + (int) (16 - txt.baseLine()) / 2;

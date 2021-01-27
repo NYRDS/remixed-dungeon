@@ -185,7 +185,7 @@ public class Shopkeeper extends NPC {
 
 	public void addItem(Item item) {
 		if(item instanceof Bag && Dungeon.hero != null) {
-			if(Dungeon.hero.getItem(item.getClassName()).valid()) {
+            if(Dungeon.hero.getItem(item.getEntityKind()).valid()) {
 				return;
 			}
 		}

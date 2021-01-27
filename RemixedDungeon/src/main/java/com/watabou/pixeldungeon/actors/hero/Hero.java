@@ -182,9 +182,7 @@ public class Hero extends Char {
 	}
 
 	public int effectiveSTR() {
-		int str = Scrambler.descramble(STR);
-
-		return hasBuff(Weakness.class) ? str - 2 : str;
+		return STR() - 2*buffLevel(Weakness.class);
 	}
 
 	public void STR(int sTR) {
@@ -201,7 +199,6 @@ public class Hero extends Char {
 	private static final String DIFFICULTY = "difficulty";
 	private static final String SP = "sp";
 	private static final String MAX_SP = "maxsp";
-	private static final String IS_SPELL_USER = "isspelluser";
 	private static final String MAGIC_LEVEL = "magicLvl";
 
 	@Override
