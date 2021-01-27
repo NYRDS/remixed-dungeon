@@ -48,7 +48,7 @@ public class ArmoredStatue extends Statue {
 	@NotNull
     @Override
 	public EquipableItem getItem() {
-		if(getBelongings().getItemFromSlot(Belongings.Slot.ARMOR) == ItemsList.DUMMY) {
+		if(getItemFromSlot(Belongings.Slot.ARMOR) == ItemsList.DUMMY) {
 			Item armorCandidate;
 			do {
 				armorCandidate = Treasury.getLevelTreasury().random(Treasury.Category.ARMOR);
@@ -67,6 +67,6 @@ public class ArmoredStatue extends Statue {
 
 			armor.doEquip(this);
 		}
-		return getBelongings().getItemFromSlot(Belongings.Slot.ARMOR);
+		return getItemFromSlot(Belongings.Slot.ARMOR);
 	}
 }

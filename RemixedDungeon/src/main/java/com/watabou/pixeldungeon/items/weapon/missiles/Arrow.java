@@ -69,7 +69,7 @@ public abstract class Arrow extends MissileWeapon {
 				return;
 			}
 
-			firedFrom = (KindOfBow) thrower.getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
+			firedFrom = (KindOfBow) thrower.getItemFromSlot(Belongings.Slot.WEAPON);
 
 			MAX = (int) (baseMax * firedFrom.dmgFactor());
 			MIN = (int) (baseMin * firedFrom.dmgFactor());

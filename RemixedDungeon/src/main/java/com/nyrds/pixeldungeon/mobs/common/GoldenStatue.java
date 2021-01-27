@@ -28,12 +28,12 @@ public class GoldenStatue extends Statue {
 	@NotNull
     @Override
 	public EquipableItem getItem() {
-		if(getBelongings().getItemFromSlot(Belongings.Slot.WEAPON) == ItemsList.DUMMY) {
+		if(getItemFromSlot(Belongings.Slot.WEAPON) == ItemsList.DUMMY) {
 			Weapon weapon = new GoldenSword();
 			weapon.identify();
 			weapon.upgrade(4);
 			weapon.doEquip(this);
 		}
-		return getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
+		return getItemFromSlot(Belongings.Slot.WEAPON);
 	}
 }

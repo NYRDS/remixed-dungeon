@@ -78,7 +78,7 @@ public class Monk extends Mob {
 	public int attackProc(@NotNull Char enemy, int damage ) {
 		
 		if (Random.Int( 6 ) == 0) {
-			EquipableItem weapon = enemy.getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
+			EquipableItem weapon = enemy.getItemFromSlot(Belongings.Slot.WEAPON);
 
 			if (!(weapon instanceof Knuckles) && !weapon.isCursed() && enemy.getBelongings().drop(weapon)) {
 				GLog.w( Game.getVar(R.string.Monk_Disarm), getName(), weapon.name() );

@@ -370,7 +370,7 @@ public abstract class Mob extends Char {
 			//TODO we should move this block out of Mob class ( in script for example )
 			if (hero.getHeroClass() == HeroClass.NECROMANCER){
 				if (hero.isAlive()) {
-					if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR) instanceof NecromancerRobe){
+					if(hero.getItemFromSlot(Belongings.Slot.ARMOR) instanceof NecromancerRobe){
 						hero.accumulateSkillPoints();
 					}
 				}

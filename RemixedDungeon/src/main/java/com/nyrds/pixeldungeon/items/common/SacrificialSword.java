@@ -34,7 +34,7 @@ public class SacrificialSword extends MeleeWeapon {
 	}
 
 	private double baseChance(Char hero) {
-		double armorPenalty = hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() / 8.f;
+		double armorPenalty = hero.getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() / 8.f;
 
 		double classBonus = 1;
 		if(hero.getSubClass() == HeroSubClass.WARDEN ) {

@@ -123,7 +123,7 @@ public class Statue extends Mob {
 
 	@NotNull
 	public EquipableItem getItem() {
-		if(getBelongings().getItemFromSlot(Belongings.Slot.WEAPON) == ItemsList.DUMMY) {
+		if(getItemFromSlot(Belongings.Slot.WEAPON) == ItemsList.DUMMY) {
 			Item weaponCandidate;
 			do {
 				weaponCandidate = Treasury.getLevelTreasury().random(Treasury.Category.WEAPON );
@@ -142,6 +142,6 @@ public class Statue extends Mob {
 
 			chosenItem.doEquip(this);
 		}
-		return getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
+		return getItemFromSlot(Belongings.Slot.WEAPON);
 	}
 }

@@ -285,13 +285,13 @@ public class Hero extends Char {
 
 	@Override
 	public int dr() {
-		return Math.max(getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr(), 0);
+		return Math.max(getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr(), 0);
 	}
 
 	@Override
 	public float speed() {
 
-		int aEnc = getBelongings().getItemFromSlot(Belongings.Slot.ARMOR) != ItemsList.DUMMY ? getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).requiredSTR() - effectiveSTR() : 0;
+		int aEnc = getItemFromSlot(Belongings.Slot.ARMOR) != ItemsList.DUMMY ? getItemFromSlot(Belongings.Slot.ARMOR).requiredSTR() - effectiveSTR() : 0;
 		if (aEnc > 0) {
 			return (float) (super.speed() * Math.pow(1.3, -aEnc));
 		} else {

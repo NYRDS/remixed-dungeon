@@ -348,7 +348,7 @@ public class Potion extends Item implements UnknownItem {
 		if(quantity <= maxQuantity){
 			Char owner = getOwner();
 
-			if(item.equals(owner.getBelongings().getItemFromSlot(Belongings.Slot.WEAPON))) {
+			if(item.equals(owner.getItemFromSlot(Belongings.Slot.WEAPON))) {
 				owner.getBelongings().setItemForSlot(ItemsList.DUMMY, Belongings.Slot.WEAPON);
 			} else {
 				item.detachAll( owner.getBelongings().backpack );

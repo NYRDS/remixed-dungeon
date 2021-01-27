@@ -18,7 +18,7 @@ public class Attack extends CharAction {
         if (target.isAlive() && !hero.pacified) {
 
             if (hero.bowEquipped()) {
-                if (hero.adjacent(target) && hero.getBelongings().getItemFromSlot(Belongings.Slot.WEAPON).goodForMelee()) {
+                if (hero.adjacent(target) && hero.getItemFromSlot(Belongings.Slot.WEAPON).goodForMelee()) {
                     return hero.actMeleeAttack(target);
                 }
                 return hero.actBowAttack(target);

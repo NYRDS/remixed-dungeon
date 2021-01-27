@@ -419,7 +419,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
 	public boolean bowEquipped() {
-		return getBelongings().getItemFromSlot(Belongings.Slot.WEAPON) instanceof KindOfBow;
+		return getItemFromSlot(Belongings.Slot.WEAPON) instanceof KindOfBow;
 	}
 
 	public int attackSkill(Char target) {
@@ -450,7 +450,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			evasion /= 2;
 		}
 
-		int aEnc = getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).requiredSTR() - effectiveSTR();
+		int aEnc = getItemFromSlot(Belongings.Slot.ARMOR).requiredSTR() - effectiveSTR();
 
 		if (aEnc > 0) {
 			return (int) (defenseSkill * evasion / Math.pow(1.5, aEnc));
@@ -488,7 +488,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public int dr() {
-		return getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr();
+		return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr();
 	}
 
 	protected boolean inFury() {
@@ -508,7 +508,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public boolean actBowAttack(Char enemy) {
 
-		KindOfBow kindOfBow = (KindOfBow) getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
+		KindOfBow kindOfBow = (KindOfBow) getItemFromSlot(Belongings.Slot.WEAPON);
 
 		Class<? extends Arrow> arrowType = kindOfBow.arrowType();
 
@@ -564,7 +564,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		int dr = defenceRoll(enemy);
 		final int[] damage = {baseDamage - dr};
 		forEachBuff(b->damage[0] = b.defenceProc(this, enemy, damage[0]));
-		return getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).defenceProc(enemy, this, damage[0]);
+		return getItemFromSlot(Belongings.Slot.ARMOR).defenceProc(enemy, this, damage[0]);
 	}
 
 	@NotNull
@@ -573,12 +573,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return rangedWeapon;
 		}
 
-		return getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
+		return getItemFromSlot(Belongings.Slot.WEAPON);
 	}
 
 	@NotNull
 	public EquipableItem getSecondaryWeapon() {
-		EquipableItem leftItem = getBelongings().getItemFromSlot(Belongings.Slot.LEFT_HAND);
+		EquipableItem leftItem = getItemFromSlot(Belongings.Slot.LEFT_HAND);
 
 	    if(leftItem.goodForMelee()) {
 	        return leftItem;
@@ -938,10 +938,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public void onAttackComplete() {
 		Char enemy = getEnemy();
-		getBelongings().getItemFromSlot(Belongings.Slot.WEAPON).preAttack(enemy);
+		getItemFromSlot(Belongings.Slot.WEAPON).preAttack(enemy);
 
 		if (attack(enemy)) {
-			getBelongings().getItemFromSlot(Belongings.Slot.WEAPON).postAttack(enemy);
+			getItemFromSlot(Belongings.Slot.WEAPON).postAttack(enemy);
 		}
 
 		curAction = null;
@@ -1488,7 +1488,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return true;
 		}
 
-		var weapon = getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
+		var weapon = getItemFromSlot(Belongings.Slot.WEAPON);
 
 		if(weapon.range() > 1) {
 			Ballistica.cast(getPos(), enemy.getPos(), false, true);
@@ -1501,7 +1501,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			}
 		}
 
-		if(getBelongings().getItemFromSlot(Belongings.Slot.WEAPON) instanceof KindOfBow) {
+		if(getItemFromSlot(Belongings.Slot.WEAPON) instanceof KindOfBow) {
 			if(getBelongings().getItem(Arrow.class)!=null) {
 				return enemy.getPos() == Ballistica.cast(getPos(), enemy.getPos(), false, true);
 			}
@@ -1603,6 +1603,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@NotNull
 	public EquipableItem getItemFromSlot(@NotNull String slot) {
 		return getBelongings().getItemFromSlot(Belongings.Slot.valueOf(slot));
+	}
+
+	@NotNull
+	public EquipableItem getItemFromSlot(Belongings.Slot slot) {
+		return getBelongings().getItemFromSlot(slot);
 	}
 
 	protected void fx(int cell, Callback callback) { }
