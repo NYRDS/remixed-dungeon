@@ -293,7 +293,10 @@ local RPD = {
         Dungeon.hero:teleportTo(position)
     end,
 
+    ---@param handler function
     chooseOption = function(handler, title, text, ...)
+        assert(type(handler)=='function', "chooseOption handler must be a function")
+
         local wnd = luajava.newInstance(Objects.Ui.WndOptionsLua, handler, title, text, {...})
         GameScene:show(wnd)
     end,
