@@ -20,13 +20,14 @@ return spell.init{
             targetingType = "char",
             level         = 1,
             castTime      = 0.1,
-            spellCost     = 1
+            spellCost     = 5,
+            cooldown      = 1
         }
     end,
 
     castOnChar = function(self, spell, caster, victim)
 
-        RPD.zapEffect(caster:getPos(),victim:getPos(),"CommonArrow")
+        RPD.zapEffect(caster:getPos(),victim:getPos(),"magic_arrow")
         victim:damage(math.max(math.random(1,caster:ht()/2)), caster)
 
         return true

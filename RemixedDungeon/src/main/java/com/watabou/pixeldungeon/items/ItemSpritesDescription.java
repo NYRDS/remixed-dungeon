@@ -14,7 +14,7 @@ import java.util.Map;
 public class ItemSpritesDescription {
 	private static final String SPRITES_DESC_ITEMS_JSON = "spritesDesc/items.json";
 
-	static private Map<String, ItemSpritesDescription> m_descMap = new HashMap<>();
+	static private final Map<String, ItemSpritesDescription> m_descMap = new HashMap<>();
 
 	private String imageFile;
 	private int imageIndex;
