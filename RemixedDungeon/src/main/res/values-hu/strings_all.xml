@@ -2573,6 +2573,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
   <string name="KunaiThrow_Name">Kunai Dobás</string>
   <string name="KunaiThrow_Info">A Halálos Kunai-dobás olyan extrém gyors, hogy még a célpontot sem tudod kiválasztani.\n\nAz igazi Kunai Mesterek több Kunai-t is tudnak dobni egyszerre.</string>
   <string name="Haste_Name">Extrém Gyorsaság</string>
+  <string name="Haste_Info">A Gyorsaság lehetővé teszi végrehajtójának, hogy rendkívüli sebességgel mozogjon, míg körülötte minden mozdulatlan marad. A Gyorsaság sok energiát felemészt, ezért csak rövid ideig használható. Egy képzett mester több ideig képes használni a Gyorsaságot.</string>
   <string name="Welcome_Text_29_5">
     remix.29.5\n
     - Játékmenet:\n
@@ -2584,4 +2585,34 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
   <string name="Char_Stole_0">%1$s ellopta: %2$s innen: %3$s !</string>
   <string name="Char_Stole_1">%1$s ellopta: %2$s innen: %3$s !</string>
   <string name="Char_Stole_2">%1$s ellopta: %2$s innen: %3$s !</string>
+  <string name="ScrollOfTeleportation_Teleport2">Egy szempillantás alatt %s elteleportált
+egy másik helyre a szinten. </string>
+  <string name="ScrollOfTeleportation_NoTeleport2">Az itteni erős mágikus aura megakadályozza %s
+hogy teleportáljon</string>
+  <string name="WndModInstall_InstallingMod">Mod telepítése</string>
+  <string name="WndModInstall_Version">verzió</string>
+  <string name="WndModInstall_PleaseUpdate">Kérlek frissítsd a Remixed Pixel Dungeon-t mielőtt telepítenéd a modot.</string>
+  <string name="Wnd_Button_Ok">Rendben</string>
+  <string name="CharAction_Taunt">kigúnyol</string>
+  <string name="CharAction_Push">megtol</string>
+  <string name="CharAction_Steal">ellop</string>
+  <string name="CharAction_Charm">elbűvöl</string>
+  <string name="CharAction_Order">parancsol</string>
+  <string name="CharAction_Give">odaad</string>
+  <string name="CharAction_Take">elvesz</string>
+  <string name="CharAction_Scare">megijeszt</string>
+  <string name="CharAction_Hit">megüt</string>
+  <string name="Stun_Info">Kábult</string>
+  <string name="Char_StaStunned">kábult</string>
+  <string name="Mob_ReadyForOrder">%skészen áll a parancsodra.</string>
+  <string name="Mob_CantDoIt">Nem tudom megtenni. Tappancsaim vannak.</string>
+  <string name="Welcome_Text_29_6">
+remix.29.6
+- Játék:
+-- További lényeken végrehajtható akciók
+- Modok:
+-- Tárgy jelzők!
+-- Különleges fegyver tulajdonságok!
+-- Még több csoportosítatlan cucc!
+- Bugok megjavítva</string>
 </resources>
