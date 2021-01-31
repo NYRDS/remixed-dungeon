@@ -59,14 +59,14 @@ public class Toolbar extends Component {
     @Nullable
     private final Tool btnSpells;
 
-    private InventoryTool btnInventory;
+    private final InventoryTool btnInventory;
 
     private Component toolbar = new Component();
 
-    private ArrayList<QuickslotTool> slots = new ArrayList<>();
+    private final ArrayList<QuickslotTool> slots = new ArrayList<>();
     final private Hero hero;
 
-    public Toolbar(final Hero hero, float maxWidth) {
+    public Toolbar(final Hero hero) {
         super();
 
         this.hero = hero;
@@ -232,7 +232,7 @@ public class Toolbar extends Component {
         add(toolbar);
     }
 
-    private static CellSelector.Listener informer = new CellSelector.Listener() {
+    private static final CellSelector.Listener informer = new CellSelector.Listener() {
         @Override
         public void onSelect(Integer cell, @NotNull Char selector) {
             if (cell == null) {

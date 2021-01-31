@@ -38,8 +38,8 @@ public class FogOfWar extends Image {
 	
 	private int[] pixels;
 	
-	private int pWidth;
-	private int pHeight;
+	private final int pWidth;
+	private final int pHeight;
 	
 	private int width2;
 	private int height2;

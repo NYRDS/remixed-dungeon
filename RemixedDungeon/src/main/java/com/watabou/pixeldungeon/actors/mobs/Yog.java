@@ -65,7 +65,7 @@ public class Yog extends Boss {
 		spriteClass = YogSprite.class;
 
 		hp(ht(1000));
-
+		movable = false;
 		exp = 50;
 
 		setState(MobAi.getStateByClass(Passive.class));

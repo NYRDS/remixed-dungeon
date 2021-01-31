@@ -26,6 +26,7 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.Visual;
+import com.watabou.utils.SystemTime;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -42,12 +43,14 @@ public class Flare extends Visual {
 	
 	private boolean lightMode = true;
 	
-	private SmartTexture texture;
+	private final SmartTexture texture;
 	
-	private FloatBuffer vertices;
-	private ShortBuffer indices;
+	private final FloatBuffer vertices;
+	private final ShortBuffer indices;
 	
-	private int nRays;
+	private final int nRays;
+
+	private boolean permanent = false;
 
 	@LuaInterface
 	public Flare( int nRays, float radius ) {
@@ -56,7 +59,7 @@ public class Flare extends Visual {
 
 		texture = TextureCache.getOrCreate(Flare.class, () ->
 		{
-			int gradient[] = {0xFFFFFFFF, 0x00FFFFFF};
+			int[] gradient = {0xFFFFFFFF, 0x00FFFFFF};
 			return new Gradient(gradient);
 		});
 
@@ -75,7 +78,7 @@ public class Flare extends Visual {
 			order( ByteOrder.nativeOrder() ).
 			asShortBuffer();
 		
-		float v[] = new float[4];
+		float[] v = new float[4];
 		
 		v[0] = 0;
 		v[1] = 0;
@@ -106,6 +109,11 @@ public class Flare extends Visual {
 		indices.position( 0 );
 	}
 
+	public Flare permanent() {
+		permanent = true;
+		return this;
+	}
+
 	@LuaInterface
 	public Flare color( int color, boolean lightMode ) {
 		this.lightMode = lightMode;
@@ -118,7 +126,7 @@ public class Flare extends Visual {
 	public Flare show( Visual visual, float duration ) {
 		point( visual.center() );
 		visual.getParent().addToBack( this );
-		
+
 		lifespan = this.duration = duration;
 		
 		return this;
@@ -134,9 +142,17 @@ public class Flare extends Visual {
 		super.update();
 		
 		if (duration > 0) {
-			if ((lifespan -= Game.elapsed) > 0) {
-				
-				float p = 1 - lifespan / duration;	// 0 -> 1
+			if (lifespan > 0) {
+
+				float p;
+
+				if(! permanent) {
+					lifespan -= Game.elapsed;
+					p = 1 - lifespan / duration;    // 0 -> 1
+				} else {
+					p = (float) Math.pow(Math.sin(SystemTime.now()/1000.f),2) + 0.1f;
+				}
+
 				p =  p < 0.25f ? p * 4 : (1 - p) * 1.333f;
 				scale.set( p );
 				alpha( p );

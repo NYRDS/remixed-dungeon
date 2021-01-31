@@ -35,10 +35,10 @@ import lombok.SneakyThrows;
 
 public class TextureCache {
 
-	private static Map<Object, SmartTexture> all = new HashMap<>();
+	private static final Map<Object, SmartTexture> all = new HashMap<>();
 
 	// No dithering, no scaling, 32 bits per pixel
-	private static BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
+	private static final BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
 	static {
 		bitmapOptions.inScaled = false;
 		bitmapOptions.inDither = false;
@@ -105,12 +105,6 @@ public class TextureCache {
 			txt.delete();
 		}
 		all.clear();
-	}
-
-	public static void reload() {
-		for (SmartTexture tx : all.values()) {
-			tx.reload();
-		}
 	}
 
 	@SneakyThrows

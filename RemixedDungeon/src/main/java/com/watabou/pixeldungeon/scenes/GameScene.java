@@ -323,7 +323,7 @@ public class GameScene extends PixelScene {
         statusPane.setSize(uiCamera.width, 0);
         add(statusPane);
 
-        toolbar = new Toolbar(hero, uiCamera.width);
+        toolbar = new Toolbar(hero);
         toolbar.camera = uiCamera;
         toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
         add(toolbar);
@@ -783,8 +783,13 @@ public class GameScene extends PixelScene {
 
     public static void selectCell(CellSelector.Listener listener, Char selector) {
         if(isSceneReady()) {
+            if (cellSelector != null && cellSelector.listener != null && cellSelector.listener != defaultCellListener) {
+                cellSelector.listener.onSelect( null, cellSelector.selector);
+            }
+
             cellSelector.listener = listener;
             cellSelector.selector = selector;
+
             scene.prompt(listener.prompt());
             script.runOptional("selectCell");
         }
@@ -858,7 +863,7 @@ public class GameScene extends PixelScene {
             if(reset) {
                 toolbar.destroy();
 
-                toolbar = new Toolbar(Dungeon.hero,uiCamera.width);
+                toolbar = new Toolbar(Dungeon.hero);
                 toolbar.camera = uiCamera;
             }
 

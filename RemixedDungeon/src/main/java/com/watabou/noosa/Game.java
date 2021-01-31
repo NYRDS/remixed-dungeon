@@ -419,7 +419,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 
         SystemText.invalidate();
-        TextureCache.reload();
+        TextureCache.clear();
 
         paused = false;
 

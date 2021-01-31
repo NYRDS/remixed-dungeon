@@ -8,11 +8,9 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -94,49 +92,12 @@ public class Spell implements NamedEntityKind {
         }
 
         if (targetingType.equals(SpellHelper.TARGET_CELL)) {
-            chr.selectCell(new CellSelector.Listener() {
-                @Override
-                public void onSelect(Integer cell, @NotNull Char selector) {
-                    if (cell != null) {
-                        cast(chr, cell);
-
-                        chr.spend(castTime);
-                        chr.busy();
-                        chr.getSprite().zap(chr.getPos());
-                    }
-                }
-
-                @Override
-                public String prompt() {
-                    return Game.getVar(R.string.Spell_SelectACell);
-                }
-            });
+            chr.selectCell(new SpellCellSelector(this, chr));
             return false;
         }
 
         if (targetingType.equals(SpellHelper.TARGET_CHAR)) {
-            chr.selectCell(new CellSelector.Listener() {
-                @Override
-                public void onSelect(Integer cell, @NotNull Char selector) {
-                    if (cell != null) {
-                        Char target = Actor.findChar(cell);
-
-                        if(target!=null) {
-
-                            cast(chr, target);
-
-                            chr.spend(castTime);
-                            chr.busy();
-                            chr.getSprite().zap(chr.getPos());
-                        }
-                    }
-                }
-
-                @Override
-                public String prompt() {
-                    return Game.getVar(R.string.Spell_SelectAChar);
-                }
-            });
+            chr.selectCell(new SpellCharSelector(this, chr));
             return false;
         }
 
@@ -275,4 +236,5 @@ public class Spell implements NamedEntityKind {
     public abstract static class SpellItem extends Item {
             abstract public Spell spell();
     }
+
 }
