@@ -17,15 +17,15 @@ return spell.init{
             info          = "HideInGrassSpell_Info",
             magicAffinity = "Elf",
             targetingType = "self",
-            level         = 1,
+            level         = 2,
             spellCost     = 5,
-            cooldown      = 20,
-            castTime      = 0.5
+            cooldown      = 10,
+            castTime      = 0.1
         }
     end,
 
     cast = function(self, spell, caster)
-        RPD.topEffect(caster:getPos(),"cloak")
+        RPD.topEffect(caster:getPos(),"hide_in_grass")
         local duration = caster:skillLevel() * 5
 
         local terrain = caster:level().map[caster:getPos()+1]
