@@ -38,17 +38,17 @@ public class StringsManager {
 
 	@SuppressLint("UseSparseArrays")
 	@NotNull
-	private static Map<Integer, String>   stringMap  = new HashMap<>();
+	private static final Map<Integer, String>   stringMap  = new HashMap<>();
 	@SuppressLint("UseSparseArrays")
 	@NotNull
-	private static Map<Integer, String[]> stringsMap = new HashMap<>();
+	private static final Map<Integer, String[]> stringsMap = new HashMap<>();
 
-	private static Map<String, String>   sStringMap  = new HashMap<>();
-	private static Map<String, String[]> sStringsMap = new HashMap<>();
+	private static final Map<String, String>   sStringMap  = new HashMap<>();
+	private static final Map<String, String[]> sStringsMap = new HashMap<>();
 
-	private static Map<String, Integer> keyToInt = new HashMap<>();
+	private static final Map<String, Integer> keyToInt = new HashMap<>();
 
-    private static Set<String> nonModdable = new HashSet<>();
+    private static final Set<String> nonModdable = new HashSet<>();
 
 
     public static Set<String> missingStrings = new HashSet<>();
@@ -69,7 +69,7 @@ public class StringsManager {
 	}
 
 	@SneakyThrows
-	private static void addMappingForClass(Class<?> clazz) {
+	private static void addMappingForClass(@NotNull Class<?> clazz) {
 		for (Field f : clazz.getDeclaredFields()) {
 			if (f.isSynthetic()) {
 				continue;

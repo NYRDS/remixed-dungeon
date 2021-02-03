@@ -25,12 +25,12 @@ return spell.init{
     end,
 
     cast = function(self, spell, caster)
-        RPD.topEffect(caster:getPos(),"hide_in_grass")
         local duration = caster:skillLevel() * 5
 
         local terrain = caster:level().map[caster:getPos()+1]
 
         if terrain == RPD.Terrain.GRASS or terrain == RPD.Terrain.HIGH_GRASS then
+            RPD.topEffect(caster:getPos(),"hide_in_grass")
             RPD.affectBuff(caster,"Cloak", duration)
             return true
         end

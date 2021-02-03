@@ -19,17 +19,21 @@ return spell.init{
             info          = "SummonBeast_Info",
             magicAffinity = "Huntress",
             targetingType = "self",
-            level         = 1,
-            castTime      = 0,
-            spellCost     = 1
+            level         = 4,
+            castTime      = 1,
+            spellCost     = 20
         }
     end,
 
     cast = function(self, spell, caster)
+        local skillLevel = caster:skillLevel()
+
         RPD.forCellsAround(caster:getPos(), function(cell)
             if not RPD.Actor:findChar(cell) then
-                local beast = beasts[math.min(1,math.max(math.random(caster:skillLevel()/2, caster:skillLevel()), #beasts))]
-                RPD.spawnMob(beast, cell):makePet(caster)
+                if math.random() > 1/skillLevel then
+                    local beast = beasts[math.min(1,  math.max(math.random(skillLevel/2, skillLevel), #beasts))]
+                    RPD.spawnMob(beast, cell):makePet(caster)
+                end
             end
 
         end)

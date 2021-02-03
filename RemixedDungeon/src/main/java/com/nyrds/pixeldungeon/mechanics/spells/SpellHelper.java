@@ -19,10 +19,13 @@ public class SpellHelper {
     public static final String AFFINITY_SHADOW      = "Shadow";
     public static final String AFFINITY_COMMON      = "Common";
 
-    public static final String TARGET_SELF = "self";
-    public static final String TARGET_CELL = "cell";
-    public static final String TARGET_CHAR = "char";
-    public static final String TARGET_NONE = "none";
+    public static final String TARGET_SELF          = "self";
+    public static final String TARGET_CELL          = "cell";
+    public static final String TARGET_CHAR          = "char";
+    public static final String TARGET_CHAR_NOT_SELF = "char_not_self";
+    public static final String TARGET_ALLY          = "ally";
+    public static final String TARGET_ENEMY         = "enemy";
+    public static final String TARGET_NONE          = "none";
 
     private static final Map<String, Integer> affinityToIcon = new HashMap<>();
 

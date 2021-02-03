@@ -18,9 +18,9 @@ return spell.init{
             info          = "Charm_Info",
             magicAffinity = "Huntress",
             targetingType = "char",
-            level         = 1,
+            level         = 2,
             castTime      = 0,
-            spellCost     = 1
+            spellCost     = 3
         }
     end,
 

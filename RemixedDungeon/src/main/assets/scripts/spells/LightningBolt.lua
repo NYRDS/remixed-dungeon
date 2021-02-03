@@ -19,9 +19,10 @@ return spell.init{
             info          = "LightningBolt_Info",
             magicAffinity = "Witchcraft",
             targetingType = "cell",
-            level         = 1,
-            castTime      = 0,
-            spellCost     = 1
+            level         = 2,
+            castTime      = 1,
+            spellCost     = 5,
+            cooldown      = 2
         }
     end,
 

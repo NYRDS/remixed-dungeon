@@ -21,14 +21,20 @@ return spell.init{
             targetingType = "char",
             level         = 1,
             castTime      = 1,
-            spellCost     = 1
+            spellCost     = 5
         }
     end,
 
-    castOnChar = function(self, spell, caster, tgt)
+    castOnChar = function(self, spell, caster, victim)
         RPD.zapEffect(caster:getPos(),tgt:getPos(),"Boomerang")
         RPD.affectBuff(tgt, RPD.Buffs.Blindness, caster:skillLevel())
-        tgt:damage(math.max(math.random(1,tgt:ht()/2),caster:ht()), caster)
+
+        local weapon = caster:getBelongings().weapon
+        local damage = math.sqrt(caster:skillLevel()) * weapon:damageRoll(caster)
+
+        victim:damage(damage, caster)
+        RPD.Sfx.Wound:hit(victim)
+
         return true
     end
 }

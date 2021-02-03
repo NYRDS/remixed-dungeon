@@ -55,10 +55,10 @@ public class Invisibility extends FlavourBuff {
 		return Game.getVar(R.string.Invisibility_Info);
 	}
 	
-	public static void dispel(Char tgt) {
-		Invisibility buff = tgt.buff( Invisibility.class );
-		if (buff != null && tgt.visibleEnemies() > 0) {
-			buff.detach();
+	public static void dispel(@NotNull Char tgt) {
+		if(tgt.visibleEnemies() > 0) {
+			detach(tgt, Invisibility.class);
+			detach(tgt, "Cloak");
 		}
 	}
 
