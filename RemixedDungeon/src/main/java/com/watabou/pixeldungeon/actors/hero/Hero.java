@@ -379,6 +379,8 @@ public class Hero extends Char {
 			busy();
 		}
 
+		GLog.debug("action: %s", curAction);
+
 		return curAction.act(this);
 	}
 
@@ -594,7 +596,7 @@ public class Hero extends Char {
 			moveSprite(oldPos,getPos());
 
 			if (wallWalkerBuff != null) {
-				int dmg = hp() / 2 > 2 ? hp() / 2 : 2;
+				int dmg = Math.max(hp() / 2, 2);
 				damage(dmg, wallWalkerBuff);
 			}
 
@@ -837,7 +839,7 @@ public class Hero extends Char {
 
 		if (!isFlying()) {
 
-			if (Dungeon.level.water[getPos()]) {
+			if (level().water[getPos()]) {
 				Sample.INSTANCE.play(Assets.SND_WATER, 1, 1, Random.Float(0.8f, 1.25f));
 			} else {
 				Sample.INSTANCE.play(Assets.SND_STEP);

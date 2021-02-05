@@ -205,7 +205,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
                 turnTo(from, to);
 
-                if (getVisible() && Dungeon.level.water[from] && !chr.isFlying()) {
+                if (getVisible() && chr.level().water[from] && !chr.isFlying()) {
                     GameScene.ripple(from);
                 }
             }
@@ -425,7 +425,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public boolean doingSomething() {
-        return curAnim != null && curAnim != idle;
+        return (curAnim != null && curAnim != idle && curAnim != run) || isMoving;
     }
 
     @Override
@@ -541,14 +541,18 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 if (anim == attack) {
                     chr.onAttackComplete();
                     idle();
+                    return;
                 } else if (anim == zap) {
                     chr.onZapComplete();
                     idle();
+                    return;
                 } else if (anim == operate) {
                     chr.onOperateComplete();
                     idle();
+                    return;
                 }
             }
+            curAnim = null;
         });
     }
 
