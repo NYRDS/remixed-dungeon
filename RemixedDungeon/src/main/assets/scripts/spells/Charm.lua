@@ -14,8 +14,8 @@ return spell.init{
         return {
             image         = 2,
             imageFile     = "spellsIcons/hunting.png",
-            name          = "Charm_Name",
-            info          = "Charm_Info",
+            name          = "CharmSpell_Name",
+            info          = "CharmSpell_Info",
             magicAffinity = "Huntress",
             targetingType = "char",
             level         = 2,

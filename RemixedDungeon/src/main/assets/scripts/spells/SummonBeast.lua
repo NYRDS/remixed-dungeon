@@ -33,6 +33,7 @@ return spell.init{
                 if math.random() > 1/skillLevel then
                     local beast = beasts[math.min(1,  math.max(math.random(skillLevel/2, skillLevel), #beasts))]
                     RPD.spawnMob(beast, cell):makePet(caster)
+                    beast:say('SummonBeast_AtYourCommand')
                 end
             end
 

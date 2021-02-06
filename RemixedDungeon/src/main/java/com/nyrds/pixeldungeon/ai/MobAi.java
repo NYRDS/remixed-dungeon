@@ -32,6 +32,8 @@ public abstract class MobAi implements AiState {
         registerAiState(Horrified.class);
         registerAiState(RunningAmok.class);
         registerAiState(ControlledAi.class);
+        registerAiState(MoveOrder.class);
+        registerAiState(KillOrder.class);
     }
 
     @Override

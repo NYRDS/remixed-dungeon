@@ -7,29 +7,19 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
-public class Hunting extends MobAi implements AiState {
+public class KillOrder extends MobAi implements AiState {
 
-    public Hunting() { }
+    public KillOrder() { }
 
     @Override
     public void act(Mob me) {
-
-        if(returnToOwnerIfTooFar(me, 4)) {
-            return;
-        }
-
         final Char enemy = me.getEnemy();
 
-        if(enemy.invalid()) {
-            me.setEnemy(chooseEnemy(me,1.0f));
+        if(enemy.invalid() || !enemy.isAlive()) {
+            me.setState(getStateByClass(Hunting.class));
         }
 
-        if(me.friendly(enemy)) {
-            me.setState(getStateByClass(Wandering.class));
-            return;
-        }
-
-        me.enemySeen = me.isEnemyInFov();
+        me.enemySeen = true;
 
         if (me.enemySeen && me.canAttack(enemy)) {
             me.doAttack(enemy);
@@ -39,8 +29,7 @@ public class Hunting extends MobAi implements AiState {
             }
 
             if(!me.doStepTo(me.getTarget())) {
-                me.setTarget(me.level().randomDestination());
-                me.setState(getStateByClass(Wandering.class));
+                me.setState(getStateByClass(Hunting.class));
             }
         }
     }

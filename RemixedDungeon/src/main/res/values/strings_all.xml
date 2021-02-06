@@ -2617,9 +2617,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
     - Bugs fixed\n
     </string>
 
-
-
-  masculine
   <string name="InnKeeperNPC_Name">inn keeper</string>
   <string name="InnKeeperNPC_Name_Objective">inn keeper</string>
   <string name="InnKeeperNPC_Gender">masculine</string>
@@ -2643,6 +2640,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ServantNPC_Gender">feminine</string>
   <string name="ServantNPC_Desc"></string>
 
+
+  <string name="BardNPC_Name">bard</string>
+  <string name="BardNPC_Name_Objective">bard</string>
+  <string name="BardNPC_Gender">>masculine</string>
+  <string name="BardNPC_Desc"></string>
+
   <string name="Welcome_Text_30">
     remix.29.6\n
     - Gameplay:\n
@@ -2653,23 +2656,49 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
 
   <string name="Roar_Name">Roar</string>
-  <string name="Roar_Info">NIY</string>
+  <string name="Roar_Info">Mighty roar which for sure terrify your enemies and inspire allies.</string>
 
   <string name="LightningBolt_Name">Lighting Bolt</string>
-  <string name="LightningBolt_Info">NIY</string>
+  <string name="LightningBolt_Info">Classic spell from ancient shamans lore will shock your enemies, twice as effective if they stupid enough to be on water tile.</string>
 
   <string name="Heal_Name">Heal</string>
-  <string name="Heal_Info">NIY</string>
+  <string name="Heal_Info">A pretty useful spell in Dungeon, right?</string>
 
   <string name="Order_Name">Order</string>
-  <string name="Order_Info">NIY</string>
+  <string name="Order_Info">With proper concentration your orders are almost irresistible.</string>
   <string name="Order_Resist">How you ever dare to try it?!!</string>
 
-  <string name="BardNPC_Name">bard</string>
-  <string name="BardNPC_Name_Objective">bard</string>
-  <string name="BardNPC_Gender">>masculine</string>
-  <string name="BardNPC_Desc"></string>
-
   <string name="Spell_SelectAChar">Select a target being.</string>
+
+  <string name="Calm_Name">Calm</string>
+  <string name="Calm_Info">There is a lot stressed and angry creatures around, lets help them a bit.</string>
+
+  <string name="CharmSpell_Name">Charm</string>
+  <string name="CharmSpell_Info">Anyone deserve some love, right?</string>
+
+  <string name="HideInGrassSpell_Name">HideInGrassSpell</string>
+  <string name="HideInGrassSpell_Info">You perfected your Hide-and-seek mastery.</string>
+  <string name="HideInGrassSpell_NeedGrassToHide">Even I can\'t hide in plain sight.</string>
+
+
+  <string name="MagicArrow_Name">Magic Arrow</string>
+  <string name="MagicArrow_Info">Good old magic arrow.</string>
+
+  <string name="NatureArmorSpell_Name">Nature Armor</string>
+  <string name="NatureArmorSpell_Info">Elves cloud be tough too, especially when protected by Mother Nature itself.</string>
+
+  <string name="ShootInEye_Name">Shoot In Eye</string>
+  <string name="ShootInEye_Info">Use your exceptional marksmanship skills to damage enemy eyes if any.</string>
+
+
+  <string name="Sprout_Name">Sprout</string>
+  <string name="Sprout_Info">Call hidden seeds to awake.\nThey should be already here however for this spell to succeed.</string>
+
+
+  <string name="SummonBeast_Name">Beast Call</string>
+  <string name="SummonBeast_Info">Attempt to summon horde of mighty beasts to your command.\nActual results may vary.</string>
+  <string name="SummonBeast_AtYourCommand">At your command!</string>
+
+  don't update to transidex yet
 
 </resources>
