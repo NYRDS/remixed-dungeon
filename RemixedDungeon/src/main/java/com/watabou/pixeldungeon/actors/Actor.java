@@ -202,9 +202,10 @@ public abstract class Actor implements Bundlable {
 				return;
 			}
 
+			current = actor;
+
 			if (actor.act() || !Dungeon.hero.isAlive()) {
 				Log.i("Main loop", String.format("%s next",actor.getClass().getSimpleName()));
-
 				actor.next();
 			} else {
 				Log.i("Main loop", String.format("%s break",actor.getClass().getSimpleName()));
