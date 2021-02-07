@@ -50,6 +50,17 @@ public class WndSettingsInGame extends WndMenuCommon {
 				WndSettingsInGame.this.add(new WndInGameUiSettings());
 			}
 		});
+
+		if(Game.instance().playGames.isConnected()) {
+			menuItems.add(new MenuButton(Game.getVar(R.string.WndSettings_RecordVideo)) {
+				@Override
+				protected void onClick() {
+					super.onClick();
+					Game.instance().playGames.showVideoOverlay();
+
+				}
+			});
+		}
 	}
 
 	private Selector createZoomButtons() {
