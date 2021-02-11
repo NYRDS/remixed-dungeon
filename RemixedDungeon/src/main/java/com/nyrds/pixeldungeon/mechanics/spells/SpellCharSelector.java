@@ -32,7 +32,7 @@ class SpellCharSelector implements CellSelector.Listener {
 
             if(level.fieldOfView[pos]) {
                 GLog.debug("%s: visible: %s", spell.getEntityKind(), chr.getEntityKind());
-                flares.add(new Flare(5, 24).color(0x7777aa, true).show(chr.getSprite(), 4).permanent());
+                flares.add(new Flare(5, 16).color(0x7777aa, true).show(chr.getSprite(), 4).permanent());
             }
         }
     }
