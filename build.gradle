@@ -2,7 +2,6 @@
 buildscript {
     repositories {
         google()
-        jcenter()
         maven { url 'http://developer.huawei.com/repo/' }
     }
     dependencies {
@@ -26,9 +25,7 @@ allprojects {
         flatDir {
             dirs 'lib'
         }
-
-        jcenter()
-
+        
         maven { url "https://artifactory.appodeal.com/appodeal" }
         maven { url 'http://developer.huawei.com/repo/' }
     }
