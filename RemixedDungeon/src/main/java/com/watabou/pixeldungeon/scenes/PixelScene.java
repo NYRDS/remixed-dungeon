@@ -22,6 +22,7 @@ import android.opengl.GLES20;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.windows.WndHelper;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.ColorBlock;
@@ -37,7 +38,6 @@ import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.BitmapCache;
 
 import javax.microedition.khronos.opengles.GL10;
 
@@ -104,19 +104,17 @@ public class PixelScene extends Scene {
 	}
 
 	static private void createFonts() {
-		if (font1x == null) {
-			// 3x5 (6)
-			font1x = Font.colorMarked(BitmapCache.get(Assets.FONTS1X),
-					0x00000000, Font.LATIN_FULL);
-			font1x.baseLine = 6;
-			font1x.tracking = -1;
-			
-			// 7x12 (15)
-			font25x = Font.colorMarked( 
-				BitmapCache.get( Assets.FONTS25X ), 17, 0x00000000, Font.ALL_CHARS);
-			font25x.baseLine = 13;
-			font25x.tracking = -1;
-		}
+		// 3x5 (6)
+		font1x = Font.colorMarked(TextureCache.get(Assets.FONTS1X),
+				0x00000000, Font.LATIN_FULL);
+		font1x.baseLine = 6;
+		font1x.tracking = -1;
+
+		// 7x12 (15)
+		font25x = Font.colorMarked(
+			TextureCache.get( Assets.FONTS25X ), 17, 0x00000000, Font.ALL_CHARS);
+		font25x.baseLine = 13;
+		font25x.tracking = -1;
 	}
 
 	@Override
