@@ -2,11 +2,13 @@ package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
+import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.CellSelector;
+import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
@@ -14,12 +16,14 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
+import lombok.var;
+
 class SpellCharSelector implements CellSelector.Listener {
     private final Spell spell;
     private @NotNull
     final Char caster;
 
-    private final Set<Flare> flares = new HashSet<>();
+    private final Set<Image> markers = new HashSet<>();
 
     public SpellCharSelector(Spell spell, @NotNull Char caster) {
         this.spell = spell;
@@ -32,7 +36,12 @@ class SpellCharSelector implements CellSelector.Listener {
 
             if(level.fieldOfView[pos]) {
                 GLog.debug("%s: visible: %s", spell.getEntityKind(), chr.getEntityKind());
-                flares.add(new Flare(5, 16).color(0x7777aa, true).show(chr.getSprite(), 4).permanent());
+
+                var marker = Icons.TARGET.get();
+                chr.getSprite().getParent().add(marker);
+
+                marker.point(DungeonTilemap.tileToWorld(pos));
+                markers.add(marker);
             }
         }
     }
@@ -52,8 +61,8 @@ class SpellCharSelector implements CellSelector.Listener {
             }
         }
 
-        for(Flare flare:flares) {
-            flare.killAndErase();
+        for(var marker: markers) {
+            marker.killAndErase();
         }
     }
 

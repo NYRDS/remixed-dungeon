@@ -122,6 +122,17 @@ public class Flare extends Visual {
 		return this;
 	}
 
+
+	@LuaInterface
+	public Flare showOnTop( Visual visual, float duration ) {
+		point( visual.center() );
+		visual.getParent().add( this );
+
+		lifespan = this.duration = duration;
+
+		return this;
+	}
+
 	@LuaInterface
 	public Flare show( Visual visual, float duration ) {
 		point( visual.center() );
