@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.items.wands;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -33,5 +34,10 @@ class Zapper implements CellSelector.Listener {
     @Override
     public String prompt() {
         return Game.getVar(R.string.Wand_Prompt);
+    }
+
+    @Override
+    public Image icon() {
+        return null;
     }
 }

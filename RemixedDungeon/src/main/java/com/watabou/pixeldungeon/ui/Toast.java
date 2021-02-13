@@ -18,67 +18,77 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.windows.HBox;
+import com.nyrds.pixeldungeon.windows.VBox;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 
+import org.jetbrains.annotations.Nullable;
+
 public class Toast extends Component {
 
-	private static final float MARGIN_HOR	= 2;
-	private static final float MARGIN_VER	= 2;
+	private static final float MARGIN_HOR	= 4;
+	private static final float MARGIN_VER	= 4;
 
 	protected NinePatch bg;
 	protected SimpleButton close;
 	protected Text text;
-	
-	public Toast( String text ) {
-		super();
-		text( text );
-		
-		width = this.text.width() + close.width() + bg.marginHor() + MARGIN_HOR * 3;
-		height = Math.max( this.text.height(), close.height() ) + bg.marginVer() + MARGIN_VER * 2;
+
+	@Nullable
+	protected Image icon;
+
+	HBox hBox;
+
+	public Toast( String text) {
+		this(text, null);
 	}
-	
-	@Override
-	protected void createChildren() {
-		super.createChildren();
-		
+
+	public Toast( String text, @Nullable Image icon) {
+		super();
+
+		hBox = new HBox(Window.STD_WIDTH);
+
+		hBox.setAlign(VBox.Align.Center);
+		hBox.setGap((int) MARGIN_HOR);
+
 		bg = Chrome.get( Chrome.Type.TOAST_TR );
 		add( bg );
-		
+
+		if(icon!=null) {
+			this.icon = icon;
+			hBox.add(icon);
+		}
+
+		this.text = PixelScene.createText(text, GuiProperties.regularFontSize());
+		hBox.add( this.text );
+
 		close = new SimpleButton( Icons.get( Icons.CLOSE ) ) {
 			protected void onClick() {
 				onClose();
 			}
 		};
-		add( close );
-		
-		text = PixelScene.createText(GuiProperties.regularFontSize());
-		add( text );
+
+		hBox.add( close );
+		add(hBox);
+
+		width = hBox.width() + MARGIN_HOR * 2;
+		height = hBox.height() + MARGIN_VER * 2;
 	}
-	
+
+
 	@Override
 	protected void layout() {
 		super.layout();
-		
+
 		bg.x = x;
 		bg.y = y;
 		bg.size( width, height );
-		
-		close.setPos( 
-			bg.x + bg.width() - bg.marginHor() / 2 - MARGIN_HOR - close.width(),
-			y + (height - close.height()) / 2 );
-		
-		text.x = close.left() - MARGIN_HOR - text.width();
-		text.y = y + (height - text.height()) / 2;
-		PixelScene.align( text );
+		hBox.setPos(x + MARGIN_HOR, y + MARGIN_VER);
 	}
-	
-	public void text( String txt ) {
-		text.text( txt );
-	}
-	
+
 	protected void onClose() {}
 }

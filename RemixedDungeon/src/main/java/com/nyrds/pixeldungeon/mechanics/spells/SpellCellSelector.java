@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 
@@ -31,5 +32,10 @@ class SpellCellSelector implements CellSelector.Listener {
     @Override
     public String prompt() {
         return Game.getVar(R.string.Spell_SelectACell);
+    }
+
+    @Override
+    public Image icon() {
+        return spell.image(caster);
     }
 }

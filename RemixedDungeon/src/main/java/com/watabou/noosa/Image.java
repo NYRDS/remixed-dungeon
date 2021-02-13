@@ -20,6 +20,7 @@ package com.watabou.noosa;
 import android.graphics.RectF;
 
 import com.nyrds.android.util.ModError;
+import com.nyrds.pixeldungeon.windows.IPlaceable;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
@@ -27,7 +28,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import java.nio.FloatBuffer;
 
-public class Image extends Visual {
+public class Image extends Visual implements IPlaceable {
 
 	public SmartTexture texture;
 	protected RectF frame;
@@ -36,7 +37,7 @@ public class Image extends Visual {
 	public boolean flipVertical;
 	
 	protected float[] vertices;
-	private FloatBuffer verticesBuffer;
+	private final FloatBuffer verticesBuffer;
 	
 	protected boolean dirty;
 	

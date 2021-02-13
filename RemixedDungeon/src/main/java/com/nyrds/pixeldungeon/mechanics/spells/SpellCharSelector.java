@@ -75,4 +75,9 @@ class SpellCharSelector implements CellSelector.Listener {
     public String prompt() {
         return Game.getVar(R.string.Spell_SelectAChar);
     }
+
+    @Override
+    public Image icon() {
+        return spell.image(caster);
+    }
 }

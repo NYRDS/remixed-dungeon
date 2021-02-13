@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.watabou.noosa.Gizmo;
-import com.watabou.noosa.ui.Component;
 
 /**
  * Created by mike on 01.05.2018.
@@ -39,7 +38,7 @@ public class HBox extends BasicBox {
         this.vAlign = vAlgin;
     }
 
-    private float yAlign(Component c) {
+    private float yAlign(IPlaceable c) {
         switch (vAlign) {
             case Top:
                 return top();
@@ -59,9 +58,9 @@ public class HBox extends BasicBox {
         float pos = x;
 
         for(Gizmo g :members) {
-            if (g instanceof Component) {
-                ((Component) g).setPos(pos, yAlign((Component) g));
-                pos += ((Component) g).width() + gap;
+            if (g instanceof IPlaceable) {
+                ((IPlaceable) g).setPos(pos, yAlign((IPlaceable) g));
+                pos += ((IPlaceable) g).width() + gap;
             }
         }
     }
@@ -70,9 +69,9 @@ public class HBox extends BasicBox {
         float pos = x + maxWidth;
 
         for(Gizmo g :members) {
-            if (g instanceof Component) {
-                ((Component) g).setPos(pos - ((Component) g).width() - gap, yAlign((Component) g));
-                pos -= ((Component) g).width() + gap;
+            if (g instanceof IPlaceable) {
+                ((IPlaceable) g).setPos(pos - ((IPlaceable) g).width() - gap, yAlign((IPlaceable) g));
+                pos -= ((IPlaceable) g).width() + gap;
             }
         }
     }
@@ -81,8 +80,8 @@ public class HBox extends BasicBox {
         float childsWidth = 0;
 
         for(Gizmo g :members) {
-            if (g instanceof Component) {
-                childsWidth += ((Component) g).width() + gap;
+            if (g instanceof IPlaceable) {
+                childsWidth += ((IPlaceable) g).width() + gap;
             }
         }
         return childsWidth;
@@ -93,9 +92,9 @@ public class HBox extends BasicBox {
         float pos = x + (maxWidth - childsWidth()) / 2;
 
         for(Gizmo g :members) {
-            if (g instanceof Component) {
-                ((Component) g).setPos(pos, yAlign((Component) g));
-                pos += ((Component) g).width() + gap;
+            if (g instanceof IPlaceable) {
+                ((IPlaceable) g).setPos(pos, yAlign((IPlaceable) g));
+                pos += ((IPlaceable) g).width() + gap;
             }
         }
     }
@@ -115,9 +114,9 @@ public class HBox extends BasicBox {
         height = 0;
 
         for(Gizmo g :members) {
-            if (g instanceof Component) {
-                width += ((Component) g).width() + gap;
-                height = Math.max(height,((Component) g).height());
+            if (g instanceof IPlaceable) {
+                width += ((IPlaceable) g).width() + gap;
+                height = Math.max(height,((IPlaceable) g).height());
             }
         }
     }

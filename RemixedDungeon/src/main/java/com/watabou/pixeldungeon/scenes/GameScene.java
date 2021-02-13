@@ -565,7 +565,7 @@ public class GameScene extends PixelScene {
             }
     }
 
-    public void prompt(String text) {
+    public void prompt(String text, Image icon) {
 
         if (prompt != null) {
             prompt.killAndErase();
@@ -573,7 +573,7 @@ public class GameScene extends PixelScene {
         }
 
         if (text != null) {
-            prompt = new Toast(text) {
+            prompt = new Toast(text, icon) {
                 @Override
                 protected void onClose() {
                     cancel();
@@ -790,7 +790,7 @@ public class GameScene extends PixelScene {
             cellSelector.listener = listener;
             cellSelector.selector = selector;
 
-            scene.prompt(listener.prompt());
+            scene.prompt(listener.prompt(), listener.icon());
             script.runOptional("selectCell");
         }
     }
@@ -844,18 +844,7 @@ public class GameScene extends PixelScene {
         QuickSlot.cancel();
     }
 
-    private static final CellSelector.Listener defaultCellListener = new CellSelector.Listener() {
-        @Override
-        public void onSelect(Integer cell, @NotNull Char selector) {
-            selector.handle(cell);
-            selector.next();
-        }
-
-        @Override
-        public String prompt() {
-            return null;
-        }
-    };
+    private static final CellSelector.Listener defaultCellListener = new DefaultCellListener();
 
     public void updateToolbar(boolean reset) {
         if (toolbar != null) {
@@ -912,4 +901,5 @@ public class GameScene extends PixelScene {
 
         return scene.logicTiles.tile(cell);
     }
+
 }

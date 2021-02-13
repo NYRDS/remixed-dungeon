@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.input.Touchscreen.Touch;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.RemixedDungeon;
@@ -154,5 +155,6 @@ public class CellSelector extends TouchArea {
 	public interface Listener {
 		void onSelect(Integer cell, @NotNull Char selector);
 		String prompt();
-	}
+        Image icon();
+    }
 }

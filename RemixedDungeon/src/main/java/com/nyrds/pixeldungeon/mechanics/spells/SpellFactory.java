@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.utils.Random;
 
@@ -15,11 +16,11 @@ import lombok.var;
 
 public class SpellFactory {
 
-	static private Map<String, Class<? extends Spell>> mSpellsList = new HashMap<>();
+	static private final Map<String, Class<? extends Spell>> mSpellsList = new HashMap<>();
 
-	static private LuaScript script = new LuaScript("scripts/spells/SpellsByAffinity", null);
+	static private final LuaScript script = new LuaScript("scripts/spells/SpellsByAffinity", null);
 
-	static private Map<String,ArrayList<String>> mSpellsByAffinity = new HashMap<>();
+	static private final Map<String,ArrayList<String>> mSpellsByAffinity = new HashMap<>();
 
 	static {
 		initSpellsMap();
@@ -106,5 +107,10 @@ public class SpellFactory {
 		}
 
 		return spellList;
+	}
+
+	@LuaInterface
+	Spell getRandomSpell() {
+		return getSpellByName(Random.element(getAllSpells()));
 	}
 }

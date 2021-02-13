@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -32,40 +33,7 @@ public class Kusarigama extends MeleeWeapon {
         imageFile = "items/kusarigama.png";
     }
 
-    private static CellSelector.Listener impaler = new CellSelector.Listener() {
-        @Override
-        public void onSelect(Integer target, @NotNull Char selector) {
-
-            if (target != null) {
-                selector.spendAndNext(TIME_TO_IMPALE);
-                int hitCell = Ballistica.cast(selector.getPos(), target, false, true);
-
-                if (hitCell == selector.getPos()) {
-                    return;
-                }
-
-                if (Dungeon.level.distance(selector.getPos(), hitCell) < 4) {
-                    Char chr = Actor.findChar(hitCell);
-
-                    if (chr != null && chr.isMovable()) {
-                        chr.placeTo(Ballistica.trace[1]);
-                        chr.getSprite().move(chr.getPos(), Ballistica.trace[1]);
-
-                        Dungeon.observe();
-                    }
-
-                    drawChain(hitCell, selector);
-                } else {
-                    drawChain(Ballistica.trace[4], selector);
-                }
-            }
-        }
-
-        @Override
-        public String prompt() {
-            return Game.getVar(R.string.Item_DirThrow);
-        }
-    };
+    private static final CellSelector.Listener impaler = new KusarigamaCellListener();
 
     private static void drawChain(int tgt, Char caster) {
         caster.getSprite().zap(tgt);
@@ -112,5 +80,45 @@ public class Kusarigama extends MeleeWeapon {
     @Override
     public int range() {
         return 2;
+    }
+
+    private static class KusarigamaCellListener implements CellSelector.Listener {
+        @Override
+        public void onSelect(Integer target, @NotNull Char selector) {
+
+            if (target != null) {
+                selector.spendAndNext(TIME_TO_IMPALE);
+                int hitCell = Ballistica.cast(selector.getPos(), target, false, true);
+
+                if (hitCell == selector.getPos()) {
+                    return;
+                }
+
+                if (selector.level().distance(selector.getPos(), hitCell) < 4) {
+                    Char chr = Actor.findChar(hitCell);
+
+                    if (chr != null && chr.isMovable()) {
+                        chr.placeTo(Ballistica.trace[1]);
+                        chr.getSprite().move(chr.getPos(), Ballistica.trace[1]);
+
+                        Dungeon.observe();
+                    }
+
+                    drawChain(hitCell, selector);
+                } else {
+                    drawChain(Ballistica.trace[4], selector);
+                }
+            }
+        }
+
+        @Override
+        public String prompt() {
+            return Game.getVar(R.string.Item_DirThrow);
+        }
+
+        @Override
+        public Image icon() {
+            return null;
+        }
     }
 }
