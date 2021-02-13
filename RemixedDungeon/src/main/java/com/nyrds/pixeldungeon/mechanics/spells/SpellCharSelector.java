@@ -25,13 +25,18 @@ class SpellCharSelector implements CellSelector.Listener {
 
     private final Set<Image> markers = new HashSet<>();
 
-    public SpellCharSelector(Spell spell, @NotNull Char caster) {
+    public SpellCharSelector(Spell spell, @NotNull Char caster, String mode) {
         this.spell = spell;
         this.caster = caster;
 
         Level level = caster.level();
 
         for(Char chr: Actor.chars.values()) {
+
+            if(mode.equals(SpellHelper.TARGET_CHAR_NOT_SELF) && chr == caster) {
+                continue;
+            }
+
             int pos = chr.getPos();
 
             if(level.fieldOfView[pos]) {

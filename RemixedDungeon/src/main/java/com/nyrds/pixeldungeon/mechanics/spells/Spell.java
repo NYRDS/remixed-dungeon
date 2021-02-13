@@ -96,8 +96,10 @@ public class Spell implements NamedEntityKind {
             return false;
         }
 
-        if (targetingType.equals(SpellHelper.TARGET_CHAR)) {
-            chr.selectCell(new SpellCharSelector(this, chr));
+        if (       targetingType.equals(SpellHelper.TARGET_CHAR)
+                || targetingType.equals(SpellHelper.TARGET_CHAR_NOT_SELF)
+            ) {
+            chr.selectCell(new SpellCharSelector(this, chr, targetingType));
             return false;
         }
 

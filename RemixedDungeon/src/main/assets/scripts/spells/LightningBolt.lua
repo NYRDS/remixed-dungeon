@@ -18,7 +18,7 @@ return spell.init{
             name          = "LightningBolt_Name",
             info          = "LightningBolt_Info",
             magicAffinity = "Witchcraft",
-            targetingType = "cell",
+            targetingType = "char_not_self",
             level         = 2,
             castTime      = 1,
             spellCost     = 5,

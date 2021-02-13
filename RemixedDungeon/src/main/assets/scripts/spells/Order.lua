@@ -18,7 +18,7 @@ return spell.init{
             name          = "Order_Name",
             info          = "Order_Info",
             magicAffinity = "Witchcraft",
-            targetingType = "char",
+            targetingType = "char_not_self",
             level         = 3,
             castTime      = 1,
             spellCost     = 10

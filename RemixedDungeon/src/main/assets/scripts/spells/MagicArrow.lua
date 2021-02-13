@@ -17,7 +17,7 @@ return spell.init{
             name          = "MagicArrow_Name",
             info          = "MagicArrow_Info",
             magicAffinity = "Elf",
-            targetingType = "char",
+            targetingType = "char_not_self",
             level         = 1,
             castTime      = 0.1,
             spellCost     = 5,

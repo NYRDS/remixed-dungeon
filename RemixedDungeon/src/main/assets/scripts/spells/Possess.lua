@@ -17,7 +17,7 @@ return spell.init{
             name          = "Possess_Name",
             info          = "Possess_Info",
             magicAffinity = "Necromancy",
-            targetingType = "char",
+            targetingType = "char_not_self",
             level         = 4,
             spellCost     = 15,
             castTime      = 0.5
@@ -25,11 +25,6 @@ return spell.init{
     end,
 
     castOnChar = function(self, spell, caster, target)
-
-        if target == caster then
-            RPD.glogn("Possess_CantPossessSelf",target:getName())
-            return true
-        end
 
         if not target:canBePet() then
             RPD.glogn("Possess_PossessionFailed",target:getName())

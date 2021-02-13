@@ -17,7 +17,7 @@ return spell.init{
             name          = "CharmSpell_Name",
             info          = "CharmSpell_Info",
             magicAffinity = "Huntress",
-            targetingType = "char",
+            targetingType = "char_not_self",
             level         = 2,
             castTime      = 0,
             spellCost     = 3
@@ -26,7 +26,7 @@ return spell.init{
 
     castOnChar = function(self, spell, caster, chr)
 
-        RPD.affectBuff(chr, RPD.Buffs.Charm, math.sqrt(caster:skillLevel() * caster:lvl()) + 5 ):setSource(caster)
+        RPD.affectBuff(chr, "Charm", math.sqrt(caster:skillLevel() * caster:lvl()) + 5 ):setSource(caster)
 
         return true
     end

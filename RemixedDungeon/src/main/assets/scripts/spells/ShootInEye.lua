@@ -18,7 +18,7 @@ return spell.init{
             name          = "ShootInEye_Name",
             info          = "ShootInEye_Info",
             magicAffinity = "Huntress",
-            targetingType = "char",
+            targetingType = "char_not_self",
             level         = 1,
             castTime      = 1,
             spellCost     = 5

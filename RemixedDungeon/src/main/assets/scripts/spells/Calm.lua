@@ -17,7 +17,7 @@ return spell.init{
             name          = "Calm_Name",
             info          = "Calm_Info",
             magicAffinity = "Huntress",
-            targetingType = "char",
+            targetingType = "char_not_self",
             level         = 2,
             castTime      = 0,
             spellCost     = 2

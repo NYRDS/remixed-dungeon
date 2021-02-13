@@ -43,7 +43,6 @@ public class Charm extends FlavourBuff {
 			if(GameScene.isSceneReady()) {
 				target.getSprite().centerEmitter().start(Speck.factory(Speck.HEART), 0.2f, 5);
 				Sample.INSTANCE.play(Assets.SND_CHARMS);
-
 			}
 			target.pacified = true;
 			return true;
@@ -68,7 +67,7 @@ public class Charm extends FlavourBuff {
 		return Game.getVar(R.string.Charm_Info);
 	}
 	
-	public static float durationFactor( Char ch ) {
+	public static float durationFactor(@NotNull Char ch ) {
 
 		if(ch.hasBuff(DriedRose.OneWayLoveBuff.class)) {
 			return 0;
