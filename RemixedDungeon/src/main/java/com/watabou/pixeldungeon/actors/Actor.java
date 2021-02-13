@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.actors;
 
 import android.annotation.SuppressLint;
-import android.util.Log;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
@@ -184,19 +183,19 @@ public abstract class Actor implements Bundlable {
 
 		// action still in progress
 		if (current != null && !current.timeout()) {
-			Log.i("Main loop", String.format("skip: %s %4.1f", current, current.time));
+//			Log.i("Main loop", String.format("skip: %s %4.1f", current, current.time));
 			return;
 		}
 
 		Actor actor;
 
-		Log.i("Main loop", "start");
+//		Log.i("Main loop", "start");
 		while ((actor=getNextActor(Float.MAX_VALUE)) != null) {
 
-			Log.i("Main loop", String.format("%s %4.2f",actor.getClass().getSimpleName(),actor.time));
+//			Log.i("Main loop", String.format("%s %4.2f",actor.getClass().getSimpleName(),actor.time));
 
 			if (actor instanceof Char && ((Char)actor).getSprite().doingSomething()) {
-				Log.i("Main loop", "in action");
+//				Log.i("Main loop", "in action");
 				// If it's character's turn to act, but its sprite
 				// is moving, wait till the movement is over
 				return;
@@ -205,16 +204,16 @@ public abstract class Actor implements Bundlable {
 			current = actor;
 
 			if (actor.act() || !Dungeon.hero.isAlive()) {
-				Log.i("Main loop", String.format("%s next",actor.getClass().getSimpleName()));
+//				Log.i("Main loop", String.format("%s next",actor.getClass().getSimpleName()));
 				actor.next();
 			} else {
-				Log.i("Main loop", String.format("%s break",actor.getClass().getSimpleName()));
+//				Log.i("Main loop", String.format("%s break",actor.getClass().getSimpleName()));
 
 				break;
 			}
 
 			if(SystemTime.timeSinceTick() > 40) {
-				Log.i("Main loop", String.format("%s timeout",actor.getClass().getSimpleName()));
+//				Log.i("Main loop", String.format("%s timeout",actor.getClass().getSimpleName()));
 
 				break;
 			}
