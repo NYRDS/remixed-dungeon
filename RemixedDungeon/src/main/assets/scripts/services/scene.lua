@@ -75,7 +75,8 @@ local function levelsTestModeOnStep(self, scene)
 
     if scene == "TitleScene" and framesOnScene > 2 then
         levels = RPD.DungeonGenerator:getLevelsList()
-        GameControl:startNewGame("WARRIOR", 2, true)
+        local classes = {"WARRIOR","MAGE","ROGUE","HUNTRESS","ELF","NECROMANCER","GNOLL"}
+        GameControl:startNewGame(classes[math.random(1, #classes)], 2, true)
     end
 end
 
