@@ -673,16 +673,19 @@ public class Hero extends Char {
 			getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Hero_LevelUp));
 			Sample.INSTANCE.play(Assets.SND_LEVELUP);
 
-			if (this.getSkillPointsMax() > 0) {
-				this.setMaxSkillPoints(getSkillPointsMax() + 1);
-				this.accumulateSkillPoints(getSkillPointsMax() / 3);
+			if (getSkillPointsMax() > 0) {
+				setMaxSkillPoints(getSkillPointsMax() + 1);
+				accumulateSkillPoints(getSkillPointsMax() / 3);
+			}
+
+			if(lvl()%5 == 0 && heroClass == HeroClass.GNOLL) {
+				skillLevelUp();
 			}
 
 			Badges.validateLevelReached();
 		}
 
 		if (subClass == HeroSubClass.WARLOCK) {
-
 			int value = Math.min(ht() - hp(), 1 + (Dungeon.depth - 1) / 5);
 			heal(value, this);
 			hunger().satisfy(10);
