@@ -2516,11 +2516,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ShieldBuffReady_Name">Ready</string>
   <string name="ShieldBuffNotReady_Name">Not Ready</string>
   <string name="WoodenShield_name">Wooden Shield</string>
-  <string name="WoodenShield_desc">A crude made wooden shield is the simplest shield available. It is round and can block some damage from time to time.</string>
+  <string name="WoodenShield_desc">A crudely made wooden shield is the simplest shield available. It is round and can block some damage from time to time.</string>
   <string name="ToughShield_name">Leather Reinforced Shield</string>
-  <string name="ToughShield_desc">This shield reinforced with leather straps looks tougher than wooden one. It can block more damage for sure.</string>
+  <string name="ToughShield_desc">This shield reinforced with leather straps looks tougher than a wooden one. It can certanly block more damage.</string>
   <string name="StrongShield_name">Bronze Plated Shield</string>
-  <string name="StrongShield_desc">This rectangular shield plated with bronze sheets and decorated with colored cloth. It is significantly heavier, but can block much more damage.</string>
+  <string name="StrongShield_desc">This rectangular shield is plated with bronze sheets and decorated with colored cloth. It is significantly heavier, but can block much more incoming damage.</string>
   <string name="RoyalShield_name">Royal Shield</string>
   <string name="RoyalShield_desc">A full metal shield. Yes, it\'s heavy, but only it can provide you the best protection.</string>
   <string name="ShieldInfoTemplate">This shield will block up to %1$d of incoming damage.  With %2$d %% chance. It will take %3$3.1f seconds to recover after successful block.</string>
@@ -2550,9 +2550,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
         NYRDS team in no way responsible for mods content, quality or stability.\n
         Download them on your own risk and have fun!\n
     </string>
-  <string name="ShieldWeaponInfo">When used as weapon this shield will inflict %1$d damage on average.</string>
+  <string name="ShieldWeaponInfo">When used as a weapon this shield will inflict %1$d damage on average.</string>
   <string name="TownPortal_Name">Town Portal</string>
-  <string name="TownPortal_Info">This spell allows you instantly return to safety. However, powerful magic source nearby may prevent it from work as intended.</string>
+  <string name="TownPortal_Info">This spell allows you to instantly return to safety. However, powerful magic sources nearby may prevent it from working as intended.</string>
   <string name="MedicineMask_Name">Surgical mask</string>
   <string name="MedicineMask_Info">A surgical mask is designed to catch microorganisms shed in liquid droplets and aerosols from the wearer\'s mouth and nose.
   \n\nWearing a mask means you care about others.</string>
@@ -2569,11 +2569,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Backstab_Name">Backstab</string>
   <string name="Backstab_Info">Silent hit in the back. Dishonest, but extremely effective, backstab damage will grow with performer skill level.\n\nSuccessful backstab will completely ignore victim armor or special defense abilities.</string>
   <string name="Backstab_TooFar">Victim too far for successful hit.</string>
-  <string name="Backstab_Aware">Victim shouldn\'t be aware of you for good backstab.</string>
+  <string name="Backstab_Aware">Victim shouldn\'t be aware of you for a good backstab.</string>
   <string name="KunaiThrow_Name">Kunai Throw</string>
-  <string name="KunaiThrow_Info">Deadly Kunai throw will be done extremely fast, so fast that you even won\'t be able to select target.\n\nTrue Masters able to throw more than one Kunai at once.</string>
+  <string name="KunaiThrow_Info">This Deadly Kunai throw will be done extremely fast, so fast that you won\'t even be able to select a target.\n\nTrue Masters able to throw more than one Kunai at once.</string>
   <string name="Haste_Name">Extreme Haste</string>
-  <string name="Haste_Info">Haste will allow performer to move with extreme speed than everything around him will appear static. Such haste will consume a lot of energy so possible only for short periods of times.\n\nSkilled master able to act in haste for longer period of time.</string>
+  <string name="Haste_Info">Haste will allow the performer to move with such extreme speed, that everything around him will appear static. Such haste will consume a lot of energy so using it is possible for only a short period of time.\n\nSkilled masters are able to stay hasted for a longer period of time.</string>
   <string name="Welcome_Text_29_5">
     remix.29.5\n
     - Gameplay:\n
@@ -2605,7 +2605,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Stun_Info">Stunned</string>
   <string name="Char_StaStunned">stunned</string>
   <string name="Mob_ReadyForOrder">%s ready for your order.</string>
-  <string name="Mob_CantDoIt">I can\'t do it. I have a paws.</string>
+  <string name="Mob_CantDoIt">I can\'t do it. I have little paws.</string>
   <string name="Welcome_Text_29_6">
     remix.29.6\n
     - Gameplay:\n
@@ -2620,7 +2620,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="InnKeeperNPC_Name">inn keeper</string>
   <string name="InnKeeperNPC_Name_Objective">inn keeper</string>
   <string name="InnKeeperNPC_Gender">masculine</string>
-  <string name="InnKeeperNPC_Desc">Proud inn keeper.</string>
+  <string name="InnKeeperNPC_Desc">The inn keeper is proud of himself.</string>
 
 
   <string name="DrunkardNPC_Name">drunkard</string>
@@ -2638,43 +2638,43 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ServantNPC_Name">inn servant</string>
   <string name="ServantNPC_Name_Objective">inn servant</string>
   <string name="ServantNPC_Gender">feminine</string>
-  <string name="ServantNPC_Desc">Very busy inn servant.</string>
+  <string name="ServantNPC_Desc">A very busy inn servant.</string>
 
 
   <string name="BardNPC_Name">bard</string>
   <string name="BardNPC_Name_Objective">bard</string>
   <string name="BardNPC_Gender">>masculine</string>
-  <string name="BardNPC_Desc">Town bard playing his lute.</string>
+  <string name="BardNPC_Desc">The town bard is playing his lute.</string>
 
   <string name="Welcome_Text_30">
     remix.29.6\n
     - Gameplay:\n
     -- Abilities for everyone!\n
-    -- Inn are opened now!\n
+    -- Inn is opened now!\n
     - Bugs fixed\n
     </string>
 
 
   <string name="Roar_Name">Roar</string>
-  <string name="Roar_Info">Mighty roar which for sure terrify your enemies and inspire allies.</string>
+  <string name="Roar_Info">The mighty roar will surely terrify your enemies and inspire allies.</string>
 
   <string name="LightningBolt_Name">Lighting Bolt</string>
-  <string name="LightningBolt_Info">Classic spell from ancient shamans lore will shock your enemies, twice as effective if they stupid enough to be on water tile.</string>
+  <string name="LightningBolt_Info">A spell that is shared among ancient shamans, that will shock your enemies twice as effectively, especially if they are foolish enough to be on standing on water.</string>
 
   <string name="Heal_Name">Heal</string>
   <string name="Heal_Info">A pretty useful spell in Dungeon, right?</string>
 
   <string name="Order_Name">Order</string>
-  <string name="Order_Info">With proper concentration your orders are almost irresistible.</string>
-  <string name="Order_Resist">How you ever dare to try it?!!</string>
+  <string name="Order_Info">With proper concentration, your orders are almost undeniable.</string>
+  <string name="Order_Resist">How dare you?!!</string>
 
   <string name="Spell_SelectAChar">Select a target being.</string>
 
   <string name="Calm_Name">Calm</string>
-  <string name="Calm_Info">There is a lot stressed and angry creatures around, lets help them a bit.</string>
+  <string name="Calm_Info">There are a lot of aggravated creatures around, let us help them.</string>
 
   <string name="CharmSpell_Name">Charm</string>
-  <string name="CharmSpell_Info">Anyone deserve some love, right?</string>
+  <string name="CharmSpell_Info">Everyone deserve some love, right?</string>
 
   <string name="HideInGrassSpell_Name">HideInGrassSpell</string>
   <string name="HideInGrassSpell_Info">You perfected your Hide-and-seek mastery.</string>
@@ -2682,21 +2682,21 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
 
   <string name="MagicArrow_Name">Magic Arrow</string>
-  <string name="MagicArrow_Info">Good old magic arrow.</string>
+  <string name="MagicArrow_Info">Good old magic arrow, the right choice when you run out of ammo.</string>
 
   <string name="NatureArmorSpell_Name">Nature Armor</string>
-  <string name="NatureArmorSpell_Info">Elves cloud be tough too, especially when protected by Mother Nature itself.</string>
+  <string name="NatureArmorSpell_Info">Elves can be tough as well, especially when protected by Mother Nature itself.</string>
 
   <string name="ShootInEye_Name">Shoot In Eye</string>
-  <string name="ShootInEye_Info">Use your exceptional marksmanship skills to damage enemy eyes if any.</string>
+  <string name="ShootInEye_Info">Use your exceptional marksmanship skills to shoot the enemy right in the eye, if he has any of course.</string>
 
 
   <string name="Sprout_Name">Sprout</string>
-  <string name="Sprout_Info">Call hidden seeds to awake.\nThey should be already here however for this spell to succeed.</string>
+  <string name="Sprout_Info">Awaken the dormant seeds.\However, there should be some greenery on the ground for this spell to succeed.</string>
 
 
   <string name="SummonBeast_Name">Beast Call</string>
-  <string name="SummonBeast_Info">Attempt to summon horde of mighty beasts to your command.\nActual results may vary.</string>
+  <string name="SummonBeast_Info">Attempt to summon a horde of mighty beasts to your command.\nActual results may vary.</string>
   <string name="SummonBeast_AtYourCommand">At your command!</string>
 
   <string name="WndSettings_RecordVideo">Video recording</string>>
