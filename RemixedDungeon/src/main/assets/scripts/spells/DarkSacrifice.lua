@@ -23,8 +23,8 @@ return spell.init{
             castTime      = 0.5
         }
     end,
-    castOnCell = function(self, spell, caster, cell)
-        local sacrifice = RPD.Actor:findChar(cell)
+
+    castOnChar = function(self, spell, caster, sacrifice)
 
         local goodSacrifice = false
 

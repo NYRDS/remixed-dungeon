@@ -50,10 +50,8 @@ local function levelsTestModeOnStep(self, scene)
         hero:ht(10000)
         hero:hp(hero:ht())
 
-        RPD.glog("...")
-
         if hero:myMove() then
-            RPD.glog("myMove")
+           --RPD.glog("myMove")
             autoTestAi.step()
         end
 
