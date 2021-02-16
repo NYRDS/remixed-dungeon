@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.android.util.Unzip;
 import com.nyrds.android.util.UnzipStateListener;
 import com.nyrds.android.util.UnzipTask;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -19,10 +20,6 @@ import com.watabou.pixeldungeon.windows.WndModInstall;
 import com.watabou.pixeldungeon.windows.WndModSelect;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.microedition.khronos.opengles.GL10;
 
@@ -115,35 +112,15 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, @N
             shutdown();
         }
 
-        Map<String, String> installModInfo = new HashMap<>();
+        var modStream = getContentResolver().openInputStream(data);
+        var modDesc = Unzip.inspectMod(modStream);
 
-        installModInfo.put("path", data.getPath());
-        installModInfo.put("intent", data.toString());
+        EventCollector.logEvent("ManualModInstall", modDesc.name, String.valueOf(modDesc.version));
 
-        EventCollector.logEvent("InstallMod", installModInfo);
-
-        GLog.i("Install mod: %s", installModInfo);
-        // https://stackoverflow.com/questions/36128077/android-opening-a-file-with-action-get-content-results-into-different-uris
-        String [] pathSegments = data.getPath().split(":");
-        if(pathSegments.length>1) {
-            modFileName = pathSegments[1];
-        } else {
-            modFileName = pathSegments[0];
-        }
-
-
-        File  modFile = new File(modFileName);
-        modFileName = modFile.getCanonicalPath();
-
-
-        GLog.i("Install mod: %s", modFileName);
-
-        GLog.debug("%s", modFileName);
-
-        modUnzipTask = new UnzipTask(this, modFileName, false);
-        var modDesc = modUnzipTask.previewMod();
-        modUnzipTask.setTgtDir(FileSystem.getExternalStorageFileName(modDesc.name));
-        WndModInstall wndModInstall = new WndModInstall(modDesc, () -> Game.execute(modUnzipTask));
+        WndModInstall wndModInstall = new WndModInstall(modDesc,
+                () -> Game.execute(
+                        () -> Unzip.unzipStream(modStream, FileSystem.getExternalStorageFileName(modDesc.name), null)));
         scene.add(wndModInstall);
+
     }
 }

@@ -1633,4 +1633,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public void execute(Char chr, String action) {
 		CharUtils.execute(this, chr, action);
 	}
+
+	public float getAttentionFactor() {
+		return 1f;
+	}
 }
