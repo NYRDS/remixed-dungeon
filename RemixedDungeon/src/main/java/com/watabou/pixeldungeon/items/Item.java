@@ -749,4 +749,9 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		return getOwner().getBelongings().getSelectedItem() == this;
 	}
 
+	@LuaInterface
+	@Deprecated
+	String getClassName() { //for old mods compatibility
+		return getEntityKind();
+	}
 }

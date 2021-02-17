@@ -30,7 +30,7 @@ return trap.init(
 
         for i = 0, totalItems - 1 do
             local item = items:get(i)
-            local itemName = item:getClassName()
+            local itemName = item:getEntityKind()
 
             if recipe[itemName] == false then
                 table.insert(elements, item)
