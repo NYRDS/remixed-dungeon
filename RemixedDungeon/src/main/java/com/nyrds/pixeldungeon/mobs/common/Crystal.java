@@ -1,6 +1,8 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.nyrds.pixeldungeon.items.chaos.ChaosCommon;
 import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -148,5 +150,13 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	protected int zapProc(@NotNull Char enemy, int damage) {
 		ensureWand().mobWandUse(this, enemy.getPos());
 		return 0;
+	}
+
+	@Override
+	public void onActionTarget(String action, Char actor) {
+		if(action.equals(CommonActions.MAC_STEAL)) {
+			ChaosCommon.doChaosMark(getPos(), Dungeon.depth * 3);
+			die(actor);
+		}
 	}
 }

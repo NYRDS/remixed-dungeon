@@ -114,12 +114,11 @@ public class CharUtils {
         }
 
         Item item = victim.getBelongings().randomUnequipped();
-
         GLog.w( Game.getVars(R.array.Char_Stole)[thief.getGender()], thief.getName(), item.name(), victim.getName_objective() );
-
         item.detachAll( victim.getBelongings().backpack );
-
         thief.collect(item);
+
+        victim.onActionTarget(CommonActions.MAC_STEAL, thief);
 
         return true;
     }
