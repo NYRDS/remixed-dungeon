@@ -149,8 +149,9 @@ ai.step = function()
 
     doorCell = level:getRandomVisibleTerrainCell(RPD.Terrain.LOCKED_DOOR)
 
-    if level:cellValid(doorCell) and hero:getItem("IronKey"):valid() then
+    if level:cellValid(doorCell) and hero:getItem("IronKey"):valid() and not explorationCache:get(doorCell) then
         hero:handle(doorCell)
+        explorationCache:set(doorCell, true)
         return
     end
 
