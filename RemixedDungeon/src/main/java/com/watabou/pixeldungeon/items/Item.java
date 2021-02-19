@@ -701,6 +701,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		this.defaultAction = newDefaultAction;
 	}
 
+	@LuaInterface
 	@Override
 	public String getEntityKind() {
 		return ItemFactory.itemNameByClass(getClass());

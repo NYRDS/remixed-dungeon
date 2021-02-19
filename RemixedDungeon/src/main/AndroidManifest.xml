@@ -72,14 +72,6 @@
             android:name="com.nyrds.android.QuickModTest"
             android:exported="true" />
 
-
-        <receiver android:name="com.nyrds.pixeldungeon.support.GooglePlayReferrer"
-            android:enabled="true">
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
-            </intent-filter>
-        </receiver>
-
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="${admob_app_id}"/>

@@ -557,7 +557,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
     }
 
-    public void onRequestPermissionsResult(int requestCode, @NotNull String[] permissions, @NotNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NotNull String @NotNull [] permissions, @NotNull int @NotNull [] grantResults) {
         boolean res = true;
 
         if (permissions.length == 0) {
