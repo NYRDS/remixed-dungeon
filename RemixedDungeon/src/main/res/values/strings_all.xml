@@ -2699,8 +2699,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="SummonBeast_Info">Attempt to summon a horde of mighty beasts to your command.\nActual results may vary.</string>
   <string name="SummonBeast_AtYourCommand">At your command!</string>
 
-  <string name="WndSettings_RecordVideo">Video recording</string>>
-
-  don't update to transifex yet
+  <string name="WndSettings_RecordVideo">Video recording</string>
 
 </resources>
