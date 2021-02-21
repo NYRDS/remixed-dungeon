@@ -8,9 +8,19 @@ local RPD = require "scripts/lib/commonClasses"
 
 local mob = require"scripts/lib/mob"
 
+local target
 
 return mob.init({
     interact = function(self, chr)
         self:say("Hello, ready to order something?")
-    end
+    end,
+
+    act = function(self)
+        if not target or target==self:getPos() then
+            target = RPD.Dungeon.level:randomDestination()
+            self:say("going to %d", target)
+            self:getCloser(target)
+        end
+    end,
+
 })

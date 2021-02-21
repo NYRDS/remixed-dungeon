@@ -1,5 +1,5 @@
 {
-   "baseSpeed"		 :0,
+   "baseSpeed"	   :0,
    "spriteDesc"    :"spritesDesc/BardNPC.json",
    "scriptFile"    :"scripts/npc/Bard",
    "friendly"      :true,

@@ -8,14 +8,17 @@ local RPD = require "scripts/lib/commonClasses"
 
 local mob = require"scripts/lib/mob"
 
+local speckAdded = false
 
 return mob.init({
     interact = function(self, chr)
         self:say("La-la-lA")
     end,
     act = function(self)
-        local factory = RPD.speckEffectFactory(RPD.Sfx.Speck.NOTE, RPD.Sfx.Speck.UP)
-        RPD.pourSpeck(self:getSprite():emitter(), factory, 10)
-    end
-
+        if not speckAdded then
+            local factory = RPD.speckEffectFactory(RPD.Sfx.Speck.NOTE, RPD.Sfx.Speck.UP)
+            RPD.pourSpeck(self:getSprite():emitter(), factory, 10)
+            speckAdded = true
+        end
+    end,
 })

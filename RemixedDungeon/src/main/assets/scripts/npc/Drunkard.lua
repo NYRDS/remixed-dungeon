@@ -12,5 +12,11 @@ local mob = require"scripts/lib/mob"
 return mob.init({
     interact = function(self, chr)
         self:say("Wanna drink?")
+    end,
+
+    act = function(self)
+        if math.random()<0.1 then
+            self:say("More Booozeeee Pleaaseeeee")
+        end
     end
 })
