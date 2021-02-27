@@ -4,7 +4,6 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.Dungeon;
@@ -50,7 +49,7 @@ public class WndMovieTheatre extends WndQuest implements InterstitialPoint{
 		Game.softPaused = true;
 
 		Game.instance().runOnUiThread(() -> {
-			AdsUtils.removeTopBanner();
+			Ads.removeEasyModeBanner();
 			Ads.showRewardVideo(this);
 		});
 	}

@@ -47,7 +47,6 @@ import com.nyrds.android.util.ReportingExecutor;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.glscripts.Script;
@@ -122,12 +121,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     // Accumulated key events
     private final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
 
-    private Executor executor = new ReportingExecutor();
+    private final Executor executor = new ReportingExecutor();
     public Executor serviceExecutor = new ReportingExecutor();
 
     private Runnable doOnResume;
 
-    private ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
+    private final ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
 
     public Game(Class<? extends Scene> c) {
         super();
@@ -256,7 +255,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public static void syncAdsState() {
 
         if(RemixedDungeon.donated() > 0) {
-            AdsUtils.removeTopBanner();
+            Ads.removeEasyModeBanner();
             return;
         }
 
@@ -265,7 +264,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
 
         if (getDifficulty() >= 2) {
-            AdsUtils.removeTopBanner();
+            Ads.removeEasyModeBanner();
         }
 
     }

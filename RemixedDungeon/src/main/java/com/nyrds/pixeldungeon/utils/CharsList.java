@@ -17,7 +17,7 @@ public class CharsList {
     // Unreachable target
     public static final Char DUMMY = new DummyChar();
 
-    private static ConcurrentHashMap<Integer, Char> charsMap = new ConcurrentHashMap<>();
+    private static final ConcurrentHashMap<Integer, Char> charsMap = new ConcurrentHashMap<>();
 
     static public List<Mob> emptyMobList = Collections.unmodifiableList(new ArrayList<>());
 

@@ -104,7 +104,7 @@ public class AdMobComboProvider implements AdsUtilsCommon.IInterstitialProvider,
 
         @Override
         public void onAdLoaded() {
-            AdsUtils.updateBanner(adView);
+            Ads.updateBanner(adView);
         }
 
         @Override

@@ -71,17 +71,17 @@ import lombok.var;
 
 public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWithId {
 
-	private static final String TXT_TO_STRING       = "%s";
-	private static final String TXT_TO_STRING_X     = "%s x%d";
-	private static final String TXT_TO_STRING_LVL   = "%s%+d";
+	private static final String TXT_TO_STRING = "%s";
+	private static final String TXT_TO_STRING_X = "%s x%d";
+	private static final String TXT_TO_STRING_LVL = "%s%+d";
 	private static final String TXT_TO_STRING_LVL_X = "%s%+d x%d";
 
 
-	private static final   float TIME_TO_THROW   = 1.0f;
+	private static final float TIME_TO_THROW = 1.0f;
 	protected static final float TIME_TO_PICK_UP = 1.0f;
-	private static final   float TIME_TO_DROP    = 0.5f;
+	private static final float TIME_TO_DROP = 0.5f;
 
-	private static final   String AC_DROP  = "Item_ACDrop";
+	private static final String AC_DROP = "Item_ACDrop";
 	protected static final String AC_THROW = "Item_ACThrow";
 
 	@NotNull
@@ -103,11 +103,11 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	static private final String overlayFile = "items/overlays.png";
 	protected String imageFile;
 
-	public  boolean stackable = false;
+	public boolean stackable = false;
 
-	private int     quantity  = Scrambler.scramble(1);
+	private int quantity = Scrambler.scramble(1);
 
-	private int     level      = Scrambler.scramble(0);
+	private int level = Scrambler.scramble(0);
 
 	@Packable
 	@Getter
@@ -128,6 +128,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	@Getter
 	@Packable(defaultValue = "-1")
 	private int quickSlotIndex = -1;
+
 
 	private static final Comparator<Item> itemComparator = (lhs, rhs) -> {
 

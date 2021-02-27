@@ -5,7 +5,6 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 
-import com.nyrds.android.RemixedDungeonApp;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
@@ -256,6 +255,6 @@ public class StringsManager {
 	}
 
 	public static Resources getResources() {
-		return RemixedDungeonApp.getContext().getResources();
+		return Game.instance().getResources();
 	}
 }

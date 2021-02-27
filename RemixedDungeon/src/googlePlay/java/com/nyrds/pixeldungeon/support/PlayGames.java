@@ -59,7 +59,7 @@ public class PlayGames {
 
 	private GoogleSignInAccount signedInAccount;
 
-	private GoogleSignInOptions signInOptions;
+	private final GoogleSignInOptions signInOptions;
 
 	private boolean connecting = false;
 

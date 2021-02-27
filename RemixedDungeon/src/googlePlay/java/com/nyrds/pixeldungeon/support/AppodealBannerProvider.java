@@ -37,7 +37,7 @@ class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
             AdsUtilsCommon.bannerFailed(AppodealBannerProvider.this);
             return;
         }
-        AdsUtils.updateBanner(adView);
+        Ads.updateBanner(adView);
     }
 
     @Override
@@ -48,7 +48,7 @@ class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
     private class AppodealBannerCallbacks implements BannerCallbacks {
         @Override
         public void onBannerLoaded(int i, boolean b) {
-            AdsUtils.updateBanner(adView);
+            Ads.updateBanner(adView);
         }
 
         @Override
