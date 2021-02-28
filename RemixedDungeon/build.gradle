@@ -131,9 +131,12 @@ dependencies {
 
     googlePlayImplementation 'com.android.billingclient:billing:3.0.2'
 
-    googlePlayImplementation 'com.google.firebase:firebase-ads:19.7.0'
-    googlePlayImplementation 'com.google.firebase:firebase-analytics:18.0.2'
-    googlePlayImplementation 'com.google.firebase:firebase-crashlytics:17.3.1'
+    googlePlayImplementation platform('com.google.firebase:firebase-bom:26.5.0')
+
+
+    googlePlayImplementation 'com.google.firebase:firebase-ads'
+    googlePlayImplementation 'com.google.firebase:firebase-analytics'
+    googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
 
     huaweiImplementation 'com.huawei.hms:ads-lite:13.4.30.301'
     huaweiImplementation 'com.huawei.hms:hianalytics:5.0.0.300'

@@ -56,7 +56,13 @@ return buff.init{
                                 buff:level(),
                                 buff.target:effectiveSTR()))
 
-                return math.max(damage - shields.blockDamage(lvl,buff:getSource():level()), 0)
+                local buffLevel = buff:getSource():level()
+
+                if type(buffLevel) ~= 'number' then
+                    buffLevel = 1 --non item source somehow
+                end
+
+                return math.max(damage - shields.blockDamage(lvl,buffLevel), 0)
             else
                 RPD.topEffect(buff.target:getPos(),"shield_broken")
                 RPD.playSound("snd_shatter")
