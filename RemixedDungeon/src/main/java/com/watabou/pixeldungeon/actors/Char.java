@@ -1640,4 +1640,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public void onActionTarget(String action ,Char actor) {
 	}
+
+	@Override
+	public void generateNewItem() {
+	}
 }

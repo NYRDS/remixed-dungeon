@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.actors;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -32,6 +33,7 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
+import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
@@ -50,6 +52,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
+
+import lombok.var;
 
 public class CharUtils {
     static public boolean isVisible(@Nullable Char ch) {
@@ -315,5 +319,30 @@ public class CharUtils {
         }
 
         WandOfBlink.appear(chr, cell);
+    }
+
+    public static void generateNewItem(Char shopkeeper)
+    {
+        Item newItem = Treasury.getLevelTreasury().random();
+
+        if(newItem instanceof Gold) {
+            return;
+        }
+
+        if(newItem.isCursed()) {
+            return;
+        }
+
+        var supply = shopkeeper.getItem(newItem.getEntityKind());
+
+        if(!newItem.stackable && supply.valid()) {
+            return;
+        }
+
+        if(newItem.stackable && supply.valid() && supply.price() > 100) {
+            return;
+        }
+
+        shopkeeper.collect(newItem);
     }
 }

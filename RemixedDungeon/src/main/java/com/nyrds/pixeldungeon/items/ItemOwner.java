@@ -10,4 +10,6 @@ public interface ItemOwner {
     Belongings getBelongings();
     boolean collect(Item item);
     boolean useBags();
+
+    void generateNewItem();
 }

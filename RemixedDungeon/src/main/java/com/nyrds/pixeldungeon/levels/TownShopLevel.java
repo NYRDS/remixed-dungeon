@@ -67,26 +67,26 @@ public class TownShopLevel extends Level {
 
 	static public void fillInventory(Shopkeeper shopkeeper)
 	{
-		shopkeeper.addItem( new LeatherArmor().identify() );
-		shopkeeper.addItem( new Dagger().identify() );
-		shopkeeper.addItem( new Knuckles().identify() );
-		shopkeeper.addItem( new Sword().identify() );
-		shopkeeper.addItem( new Quarterstaff().identify() );
-		shopkeeper.addItem( new TomeOfKnowledge().identify() );
+		shopkeeper.collect( new LeatherArmor().identify() );
+		shopkeeper.collect( new Dagger().identify() );
+		shopkeeper.collect( new Knuckles().identify() );
+		shopkeeper.collect( new Sword().identify() );
+		shopkeeper.collect( new Quarterstaff().identify() );
+		shopkeeper.collect( new TomeOfKnowledge().identify() );
 
 		for (int i = 0; i <3; i++){
-			shopkeeper.addItem( new OverpricedRation() );
-			shopkeeper.addItem( new Dart(5).identify() );
-			shopkeeper.addItem( new CommonArrow(25) );
-			shopkeeper.addItem( new Torch().identify() );
+			shopkeeper.collect( new OverpricedRation() );
+			shopkeeper.collect( new Dart(5).identify() );
+			shopkeeper.collect( new CommonArrow(25) );
+			shopkeeper.collect( new Torch().identify() );
 		}
 
-		shopkeeper.addItem( new Keyring());
-		shopkeeper.addItem( new ScrollHolder());
-		shopkeeper.addItem( new PotionBelt());
-		shopkeeper.addItem( new SeedPouch());
-		shopkeeper.addItem( new Quiver());
-		shopkeeper.addItem( new WandHolster());
+		shopkeeper.collect( new Keyring());
+		shopkeeper.collect( new ScrollHolder());
+		shopkeeper.collect( new PotionBelt());
+		shopkeeper.collect( new SeedPouch());
+		shopkeeper.collect( new Quiver());
+		shopkeeper.collect( new WandHolster());
 	}
 
 	@Override

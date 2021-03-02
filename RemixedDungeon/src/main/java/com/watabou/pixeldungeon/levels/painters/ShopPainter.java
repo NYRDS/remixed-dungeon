@@ -88,75 +88,75 @@ public class ShopPainter extends Painter {
 		switch (Dungeon.depth) {
 
 			case 6:
-				shopkeeper.addItem( (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
-				shopkeeper.addItem( new LeatherArmor().identify() );
-				shopkeeper.addItem( new Weightstone() );
-				shopkeeper.addItem( new TomeOfKnowledge().identify() );
+				shopkeeper.collect( (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
+				shopkeeper.collect( new LeatherArmor().identify() );
+				shopkeeper.collect( new Weightstone() );
+				shopkeeper.collect( new TomeOfKnowledge().identify() );
 				break;
 
 			case 11:
-				shopkeeper.addItem( (Random.Int( 2 ) == 0 ? new Sword() : new Mace()).identify() );
-				shopkeeper.addItem( new MailArmor().identify() );
-				shopkeeper.addItem( new Weightstone() );
-				shopkeeper.addItem( new TomeOfKnowledge().identify() );
+				shopkeeper.collect( (Random.Int( 2 ) == 0 ? new Sword() : new Mace()).identify() );
+				shopkeeper.collect( new MailArmor().identify() );
+				shopkeeper.collect( new Weightstone() );
+				shopkeeper.collect( new TomeOfKnowledge().identify() );
 				break;
 
 			case 16:
-				shopkeeper.addItem( (Random.Int( 2 ) == 0 ? new Longsword() : new BattleAxe()).identify() );
-				shopkeeper.addItem( new ScaleArmor().identify() );
-				shopkeeper.addItem( new Weightstone() );
-				shopkeeper.addItem( new TomeOfKnowledge().identify() );
+				shopkeeper.collect( (Random.Int( 2 ) == 0 ? new Longsword() : new BattleAxe()).identify() );
+				shopkeeper.collect( new ScaleArmor().identify() );
+				shopkeeper.collect( new Weightstone() );
+				shopkeeper.collect( new TomeOfKnowledge().identify() );
 				break;
 
 			case 21:
 				switch (Random.Int( 3 )) {
 					case 0:
-						shopkeeper.addItem( new Glaive().identify() );
+						shopkeeper.collect( new Glaive().identify() );
 						break;
 					case 1:
-						shopkeeper.addItem( new WarHammer().identify() );
+						shopkeeper.collect( new WarHammer().identify() );
 						break;
 					case 2:
-						shopkeeper.addItem( new PlateArmor().identify() );
+						shopkeeper.collect( new PlateArmor().identify() );
 						break;
 				}
-				shopkeeper.addItem( new Weightstone() );
-				shopkeeper.addItem( new Torch() );
-				shopkeeper.addItem( new Torch() );
+				shopkeeper.collect( new Weightstone() );
+				shopkeeper.collect( new Torch() );
+				shopkeeper.collect( new Torch() );
 				break;
 
 			case 27:
 				switch (Random.Int( 3 )) {
 					case 0:
-						shopkeeper.addItem( new Claymore().identify() );
+						shopkeeper.collect( new Claymore().identify() );
 						break;
 					case 1:
-						shopkeeper.addItem( new Halberd().identify() );
+						shopkeeper.collect( new Halberd().identify() );
 						break;
 					case 2:
-						shopkeeper.addItem( new GothicArmor().identify() );
+						shopkeeper.collect( new GothicArmor().identify() );
 						break;
 				}
-				shopkeeper.addItem( new PotionOfHealing() );
-				shopkeeper.addItem( new PotionOfExperience());
-				shopkeeper.addItem( new PotionOfMight());
+				shopkeeper.collect( new PotionOfHealing() );
+				shopkeeper.collect( new PotionOfExperience());
+				shopkeeper.collect( new PotionOfMight());
 				break;
 		}
 
-		shopkeeper.addItem( new PotionOfHealing() );
+		shopkeeper.collect( new PotionOfHealing() );
 		for (int i=0; i < 2; i++) {
-			shopkeeper.addItem( Treasury.getLevelTreasury().random( Treasury.Category.POTION ) );
+			shopkeeper.collect( Treasury.getLevelTreasury().random( Treasury.Category.POTION ) );
 		}
 
-		shopkeeper.addItem( new ScrollOfIdentify() );
-		shopkeeper.addItem( new ScrollOfRemoveCurse() );
-		shopkeeper.addItem( new ScrollOfMagicMapping() );
-		shopkeeper.addItem( Treasury.getLevelTreasury().random( Treasury.Category.SCROLL ) );
+		shopkeeper.collect( new ScrollOfIdentify() );
+		shopkeeper.collect( new ScrollOfRemoveCurse() );
+		shopkeeper.collect( new ScrollOfMagicMapping() );
+		shopkeeper.collect( Treasury.getLevelTreasury().random( Treasury.Category.SCROLL ) );
 
-		shopkeeper.addItem( new OverpricedRation() );
-		shopkeeper.addItem( new OverpricedRation() );
+		shopkeeper.collect( new OverpricedRation() );
+		shopkeeper.collect( new OverpricedRation() );
 
-		shopkeeper.addItem( new Ankh() );
+		shopkeeper.collect( new Ankh() );
 
 
 		level.mobs.add( shopkeeper );

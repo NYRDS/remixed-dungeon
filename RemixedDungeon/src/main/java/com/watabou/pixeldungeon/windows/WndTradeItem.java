@@ -18,13 +18,13 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
@@ -45,15 +45,15 @@ public class WndTradeItem extends Window {
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
 
-	private VBox vbox = new VBox();
+	private final VBox vbox = new VBox();
 
 	@NotNull
-	private Shopkeeper shopkeeper;
-	private Hero       customer;
+	private final ItemOwner shopkeeper;
+	private final Hero       customer;
 
 	private static final int[] tradeQuantity = {1, 5, 10, 50, 100, 500, 1000};
 
-	public WndTradeItem(final Item item, @NotNull Shopkeeper shopkeeper, boolean buy) {
+	public WndTradeItem(final Item item, @NotNull ItemOwner shopkeeper, boolean buy) {
 
 		super();
 
