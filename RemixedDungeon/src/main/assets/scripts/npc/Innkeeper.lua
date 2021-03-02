@@ -11,6 +11,11 @@ local mob = require"scripts/lib/mob"
 
 
 return mob.init({
+    spawn = function(self, level)
+        self:collect(RPD.createItem("FriedFish"))
+    end,
+
     interact = function(self, chr)
+        RPD.showTradeWindow(self, chr)
     end
 })

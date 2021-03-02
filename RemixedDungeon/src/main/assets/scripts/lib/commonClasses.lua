@@ -87,10 +87,11 @@ local Bundle           = "com.watabou.utils.Bundle"
 
 local Objects = {
     Ui = {
-        WndMessage    = "com.watabou.pixeldungeon.windows.WndMessage",
-        WndStory      = "com.watabou.pixeldungeon.windows.WndStory",
-        WndQuest      = "com.watabou.pixeldungeon.windows.WndQuest",
-        WndOptionsLua = "com.nyrds.pixeldungeon.windows.WndOptionsLua",
+        WndMessage     = "com.watabou.pixeldungeon.windows.WndMessage",
+        WndStory       = "com.watabou.pixeldungeon.windows.WndStory",
+        WndQuest       = "com.watabou.pixeldungeon.windows.WndQuest",
+        WndOptionsLua  = "com.nyrds.pixeldungeon.windows.WndOptionsLua",
+        WndShopOptions = "com.nyrds.pixeldungeon.windows.WndShopOptions"
     },
 
     Actors = {
@@ -303,6 +304,11 @@ local RPD = {
 
     showStoryWindow = function(story_id)
         local wnd = luajava.newInstance(Objects.Ui.WndStory,story_id)
+        GameScene:show(wnd)
+    end,
+
+    showTradeWindow = function(shopkeeper,client)
+        local wnd = luajava.newInstance(Objects.Ui.WndShopOptions, shopkeeper, client )
         GameScene:show(wnd)
     end,
 

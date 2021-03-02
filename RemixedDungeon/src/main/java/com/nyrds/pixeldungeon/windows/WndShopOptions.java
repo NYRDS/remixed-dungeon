@@ -11,13 +11,13 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
-public class WndShopkeeperOptions extends WndOptions {
+public class WndShopOptions extends WndOptions {
     private final Char client;
     private final Bag backpack;
 
     private final Char shopkeeper;
 
-    public WndShopkeeperOptions(Char shopkeeper, Char client) {
+    public WndShopOptions(Char shopkeeper, Char client) {
         super(Utils.capitalize(shopkeeper.getName()),
                 Game.getVar(R.string.Shopkeeper_text),
                 Game.getVar(R.string.Shopkeeper_SellPrompt),

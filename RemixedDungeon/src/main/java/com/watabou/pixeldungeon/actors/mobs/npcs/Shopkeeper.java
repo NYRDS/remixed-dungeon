@@ -21,7 +21,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.windows.WndShopkeeperOptions;
+import com.nyrds.pixeldungeon.windows.WndShopOptions;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -73,16 +73,12 @@ public class Shopkeeper extends NPC {
 	
 	@Override
 	public void damage(int dmg, @NotNull NamedEntityKind src ) {
-		flee();
-	}
-
-	private void flee() {
 		destroy();
-		
+
 		getSprite().killAndErase();
 		CellEmitter.get( getPos() ).burst( ElmoParticle.FACTORY, 6 );
 	}
-	
+
 	@Override
 	public boolean reset() {
 		return true;
@@ -111,7 +107,7 @@ public class Shopkeeper extends NPC {
 		Collections.shuffle(backpack.items);
 
 		GameScene.show(
-				new WndShopkeeperOptions(this, hero));
+				new WndShopOptions(this, hero));
 		return true;
 	}
 
