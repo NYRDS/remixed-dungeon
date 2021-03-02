@@ -110,7 +110,8 @@ public class Shopkeeper extends NPC {
 
 		Collections.shuffle(backpack.items);
 
-		GameScene.show(new WndShopkeeperOptions(this, hero, backpack));
+		GameScene.show(
+				new WndShopkeeperOptions(this, hero));
 		return true;
 	}
 

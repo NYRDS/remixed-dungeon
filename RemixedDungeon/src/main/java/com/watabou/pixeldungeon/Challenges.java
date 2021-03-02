@@ -47,7 +47,7 @@ public class Challenges {
 	};
 
 	@SuppressLint("UseSparseArrays")
-	private static Map<Integer, ArrayList<String>> forbiddenCategories = new HashMap<>();
+	private static final Map<Integer, ArrayList<String>> forbiddenCategories = new HashMap<>();
 
 	static {
 		for(Integer mask:MASKS) {
