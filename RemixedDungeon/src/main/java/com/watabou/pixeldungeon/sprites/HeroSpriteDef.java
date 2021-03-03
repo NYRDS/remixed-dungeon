@@ -167,4 +167,9 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
         turnTo(from, to);
         play(fly);
     }
+
+    @Override
+    public boolean doingSomething() {
+        return (curAnim != null && curAnim != idle && curAnim != run && curAnim != fly) || isMoving;
+    }
 }
