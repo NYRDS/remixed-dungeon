@@ -2700,5 +2700,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="SummonBeast_AtYourCommand">At your command!</string>
 
   <string name="WndSettings_RecordVideo">Video recording</string>
+  <string name="Dungeon_saveIoError">When trying to create save file:</string>
 
 </resources>

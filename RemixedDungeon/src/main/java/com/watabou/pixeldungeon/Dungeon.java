@@ -66,6 +66,7 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -81,8 +82,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Collection;
-import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashSet;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -106,7 +108,7 @@ public class Dungeon {
     public static String levelId;
 
     public static  int depth;
-    private static AtomicInteger loading = new AtomicInteger();
+    private static final AtomicInteger loading = new AtomicInteger();
     private static long lastSaveTimestamp;
 
     public static  String  gameId;
@@ -272,7 +274,7 @@ public class Dungeon {
 
         EventCollector.collectSessionData("level",level.levelId);
 
-        nightMode = new Date().getHours() < 7;
+        nightMode =new GregorianCalendar().get(Calendar.HOUR_OF_DAY) < 7;
 
         Actor.init(level);
 
@@ -378,7 +380,7 @@ public class Dungeon {
         bundle.put(CHALLENGES, getChallenges());
 
         int count = 0;
-        int ids[] = new int[chapters.size()];
+        int[] ids = new int[chapters.size()];
         for (Integer id : chapters) {
             ids[count++] = id;
         }
@@ -466,7 +468,8 @@ public class Dungeon {
 
                 SaveUtils.copySaveToSlot(SaveUtils.getAutoSave(), heroClass);
             } catch (IOException e) {
-                throw new TrackedRuntimeException("cannot write save", e);
+                GameScene.show(new WndError(Game.getVar(R.string.Dungeon_saveIoError) + "\n" + e.getLocalizedMessage()));
+                EventCollector.logException(new Exception("cannot write save", e));
             }
 
             GamesInProgress.set(hero.getHeroClass(), depth, hero.lvl());
@@ -723,7 +726,7 @@ public class Dungeon {
         }
     }
 
-    private static void markActorsAsUnpassable(Hero ch, boolean[] visible) {
+    private static void markActorsAsUnpassable(Char ch, boolean[] visible) {
         for (Char actor : Actor.chars.values()) {
             int pos = actor.getPos();
 
@@ -734,14 +737,14 @@ public class Dungeon {
 
             if (visible[pos]) {
                 if (actor instanceof Mob) {
-                    passable[pos] = passable[pos] && !level.avoid[pos] && ((Mob) actor).isPet();
+                    passable[pos] = passable[pos] && !level.avoid[pos] && actor.getOwnerId() == ch.getId();
                 }
             }
         }
     }
 
 
-    public static int findPath(@NotNull Hero ch, int to, boolean pass[], boolean[] visible) {
+    public static int findPath(@NotNull Hero ch, int to, boolean[] pass, boolean[] visible) {
 
         int from  = ch.getPos();
 
@@ -775,7 +778,7 @@ public class Dungeon {
     }
 
 
-    public static int findPath(@NotNull Char ch, int to, boolean pass[]) {
+    public static int findPath(@NotNull Char ch, int to, boolean[] pass) {
 
         int from = ch.getPos();
 
@@ -802,7 +805,7 @@ public class Dungeon {
 
     }
 
-    public static int flee(Char ch,  int from, boolean pass[]) {
+    public static int flee(Char ch, int from, boolean[] pass) {
 
         int cur = ch.getPos();
 
