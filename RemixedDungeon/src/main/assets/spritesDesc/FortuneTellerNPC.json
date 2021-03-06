@@ -1,30 +1,10 @@
 {
-   "texture" : "mobs/fortuneteller_npc.png",
-   "width" : 16,
-   "height" : 16,
-   "idle" : {
-      "fps" : 2,
-      "looped" : true,
-      "frames" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-   },
-   "run" : {
-      "fps" : 8,
-      "looped" : true,
-      "frames" : [0, 1, 2, 3]
-   },
-   "attack" : {
-      "fps" : 8,
-      "looped" : true,
-      "frames" : [0, 1, 2, 3]
-   },
-   "die" : {
-      "fps" : 8,
-      "looped" : true,
-      "frames" : [0, 1, 2, 3]
-   }
-
+  "texture" : "mobs/fortuneteller_npc.png",
+  "width"  : 16,
+  "height" : 16,
+  "idle"   : { "fps" : 5, "looped" : true,     "frames" : [0,0,0,1,2,3,4,5,6,7,8,9,10,11,12,13] },
+  "run"    : { "fps" : 1, "looped" : true,     "frames" : [0,0,0] },
+  "attack" : { "fps" : 1, "looped" : false,    "frames" : [0,0,0] },
+  "die"    : { "fps" : 1, "looped" : false,    "frames" : [0,0,0] },
+  "bloodColor" : "0xCC0000"
 }
-
-
-
-
