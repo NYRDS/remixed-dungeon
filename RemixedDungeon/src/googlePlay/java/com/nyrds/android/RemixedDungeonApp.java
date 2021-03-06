@@ -13,7 +13,6 @@ import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.RemixedDungeon;
 
 import java.util.concurrent.ThreadPoolExecutor;
@@ -64,8 +63,9 @@ public class RemixedDungeonApp extends MultiDexApplication {
         //Log.i("Game", Utils.format("own signature %s", Util.getSignature(this)));
         if(Util.isDebug()) {
             return true;
-        };
-        return Util.getSignature(getContext()).equals(StringsManager.getVar(R.string.ownSignature));
+        }
+
+        return Util.getSignature(getContext()).equals(getContext().getResources().getString(R.string.ownSignature));
     }
 
     @Override
