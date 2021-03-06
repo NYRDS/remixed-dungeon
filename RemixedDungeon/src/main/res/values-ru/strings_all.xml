@@ -1673,7 +1673,7 @@
   <string name="town_deco_floor_name">Пол</string>
   <string name="town_deco_floor_desc">Этот пол выполнен из деревянных досок. Что ты надеешься тут увидеть?</string>
   <string name="town_deco_carpet_name">Ковёр</string>
-  <string name="town_deco_carpet_desc">Роскошный красный ковёр, приготовленный для почётный гостей</string>
+  <string name="town_deco_carpet_desc">Роскошный красный ковёр, приготовленный для почётных гостей</string>
   <string name="town_deco_movies_door_name">Дверь</string>
   <string name="town_deco_movies_door_desc">Эта дверь выглядит крайне изысканно. Скорее всего она ведёт в удивительнейшее место.</string>
   <string name="WndDonate_royal">царский</string>
@@ -2643,4 +2643,52 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Кое-что ещё!\n
     - Исправление ошибок\n
     </string>
+
+    <string name="town_table_fortune_ball_name">Хрустальный шар</string>
+    <string name="town_table_fortune_ball_desc">Хрустальный шар, с загадочной дымкой внутри.</string>
+    <string name="town_deco_shelf_full_name">Полка</string>
+    <string name="town_deco_shelf_full_desc">На этой полке расположились разные безделушки.</string>
+    <string name="town_deco_skulls_name">Черепа</string>
+    <string name="town_deco_skulls_desc">Отполированные до блеска черепа, принадлежащие существам из подземелья.</string>
+    <string name="town_deco_urn_name">Урна</string>
+    <string name="town_deco_urn_desc">Глиняная урна, возможно с чьим то прахом.</string>
+    <string name="town_deco_crate_name">Ящик</string>
+    <string name="town_deco_crate_desc">Крепкий деревянный ящик хранит в себе свои секреты.</string>
+    <string name="town_deco_crate_scrolls_name">Ящик со свитками</string>
+    <string name="town_deco_crate_scrolls_desc">Этот ящик доверху забит тайными знаниями.</string>
+    <string name="town_deco_cabinet_name">Шкафчик</string>
+    <string name="town_deco_cabinet_desc">Вместительный шкафчик с множеством дверей и полок.</string>
+    <string name="town_deco_clock_name">Настенные часы</string>
+    <string name="town_deco_clock_desc">Стрелки на них уже давно застыли в одном положении.</string>
+    <string name="town_deco_poster_name">Плакат</string>
+    <string name="town_deco_poster_desc">Листовки с объявлениями о предстоящих сеансах.</string>
+    <string name="town_deco_ladder_name">Приставная лестница</string>
+    <string name="town_deco_ladder_desc">Ветхая лестница, ненадежная на вид.</string>
+    <string name="town_deco_weaponrack_name">Оружейный стойка</string>
+    <string name="town_deco_weaponrack_desc">На этой стойке расположилось оружие, которое явно Вам не по карману.</string>
+    <string name="town_deco_church_sign_name">Вывеска церкви</string>
+    <string name="town_deco_church_sign_desc">Вероятно, в этом здании находится церковь.</string>
+    <string name="town_deco_statue_water_name">Статуя ангела</string>
+    <string name="town_deco_statue_water_desc">Величественная статуя ангела держит чашу с водой.</string>
+    <string name="town_deco_statue_blood_name">Статуя ангела</string>
+    <string name="town_deco_statue_blood_desc">Величественная статуя ангела держит чашу с кровью.</string>
+    <string name="town_deco_vat_name">Чан</string>
+    <string name="town_deco_vat_desc">Этот каменный чан до краев наполнен святой водой.</string>
+    <string name="town_deco_armorstand_leather_name">Кожаный доспех</string>
+    <string name="town_deco_armorstand_leather_desc">Надежный кожаный доспех будет отличным приобретением перед походом в подземелье.</string>
+    <string name="town_deco_armorstand_scale_name">Чешуйчатый доспех</string>
+    <string name="town_deco_armorstand_scale_desc">Позолоченные пластины этого чешуйчатого доспеха выглядят совсем новыми.</string>
+    <string name="town_deco_armorstand_plate_name">Латный доспех</string>
+    <string name="town_deco_armorstand_plate_desc">По словам торговца, этот тяжелый латный доспех некогда принадлежал великому воину.</string>
+    <string name="town_deco_red_carpet_name">Ковер</string>
+    <string name="town_deco_red_carpet_desc">По слухам, такие же красные ковры украшают залы метрополя дворфов.</string>
+    <string name="town_deco_beige_carpet_name">Ковер</string>
+    <string name="town_deco_beige_carpet_desc">Элегантный бежевый ковер, сотканный из мягкой шерсти гнолла.</string>
+    <string name="town_deco_brown_carpet_name">Ковер</string>
+    <string name="town_deco_brown_carpet_desc">Коричневый ковер, который был истоптан ногами множества авантюристов, бродяг и случайных прохожих.</string>
+    <string name="town_deco_charcoal_carpet_name">Ковер</string>
+    <string name="town_deco_charcoal_carpet_desc">Заботясь о комфорте гостей, администрация кинотеатра выбрала самые качественные ковры угольно-черного цвета.</string>
+    <string name="town_deco_magenta_carpet_name">Ковер</string>
+    <string name="town_deco_magenta_carpet_desc">Пурпурный оттенок этого ковра, навевает мысли о городском вине.</string>
+
 </resources>
