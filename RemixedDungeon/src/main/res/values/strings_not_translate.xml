@@ -49,13 +49,6 @@
     <string name="TacticalCrossbow_Name" translatable="false">Tactical Crossbow</string>
     <string name="TacticalCrossbow_Info" translatable="false">It just a crossbow, but tactical. Usable in melee. Fireproof. Tactical.</string>
 
-    <string name="town_deco_clock_name" translatable="false">Antique clock</string>
-    <string name="town_deco_clock_desc" translatable="false">It seems that this clock shows the wrong time</string>
     <string name="town_deco_keyholder_name" translatable="false">Keyholder</string>
     <string name="town_deco_keyholder_desc" translatable="false">You can see some keys on this keyholder</string>
-
-    <string name="town_deco_journal_name" translatable="false">INN journal</string>
-    <string name="town_deco_journal_desc" translatable="false">You can see some records in it</string>
-    <string name="town_deco_bar_name" translatable="false">Bar</string>
-    <string name="town_deco_bar_desc" translatable="false">This bar contain some alcohol</string>
 </resources>
