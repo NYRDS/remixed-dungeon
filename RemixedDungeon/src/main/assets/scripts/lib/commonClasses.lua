@@ -312,6 +312,17 @@ local RPD = {
         GameScene:show(wnd)
     end,
 
+    showBuyWindow = function(shopkeeper,client)
+        local wnd = luajava.newInstance(Objects.Ui.WndShopOptions, shopkeeper, client )
+        wnd: showBuyWnd()
+    end,
+
+    showSellWindow = function(shopkeeper,client)
+        local wnd = luajava.newInstance(Objects.Ui.WndShopOptions, shopkeeper, client )
+        wnd: showSellWnd()
+    end,
+
+
     zapEffect = function (from, to, zapEffect)
         GameScene:zapEffect(from, to, zapEffect)
     end,

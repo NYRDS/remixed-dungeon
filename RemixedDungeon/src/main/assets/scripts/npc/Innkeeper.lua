@@ -16,6 +16,6 @@ return mob.init({
     end,
 
     interact = function(self, chr)
-        RPD.showTradeWindow(self, chr)
+        RPD.showBuyWindow(self, chr)
     end
 })

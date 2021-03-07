@@ -31,22 +31,30 @@ public class WndShopOptions extends WndOptions {
     public void onSelect(int index) {
         switch (index) {
             case 0:
-                GameScene.show(
-                        new WndBag(client.getBelongings(),
-                                    client.getBelongings().backpack,
-                                    new SellItemSelector(shopkeeper),
-                                    WndBag.Mode.FOR_SALE,
-                                    Game.getVar(R.string.Shopkeeper_Sell)));
+                showSellWnd();
                 break;
             case 1:
-                GameScene.show(
-                    new WndBag(shopkeeper.getBelongings(),
-                                backpack,
-                                new BuyItemSelector(shopkeeper),
-                                WndBag.Mode.FOR_BUY,
-                                Game.getVar(R.string.Shopkeeper_Buy)));
+                showBuyWnd();
                 break;
         }
 
+    }
+
+    public void showBuyWnd() {
+        GameScene.show(
+            new WndBag(shopkeeper.getBelongings(),
+                        backpack,
+                        new BuyItemSelector(shopkeeper),
+                        WndBag.Mode.FOR_BUY,
+                        Game.getVar(R.string.Shopkeeper_Buy)));
+    }
+
+    public void showSellWnd() {
+        GameScene.show(
+                new WndBag(client.getBelongings(),
+                            client.getBelongings().backpack,
+                            new SellItemSelector(shopkeeper),
+                            WndBag.Mode.FOR_SALE,
+                            Game.getVar(R.string.Shopkeeper_Sell)));
     }
 }
