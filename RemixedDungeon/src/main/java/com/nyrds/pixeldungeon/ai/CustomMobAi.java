@@ -10,7 +10,7 @@ public class CustomMobAi extends MobAi implements AiState {
 
     String scriptFile;
 
-    private LuaScript script;
+    private final LuaScript script;
 
     CustomMobAi(String scriptFile) {
         this.scriptFile = scriptFile;

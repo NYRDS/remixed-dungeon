@@ -16,6 +16,10 @@ public class Passive extends MobAi implements AiState {
     public void act(Mob me) {
         me.enemySeen = false;
         me.spend(Actor.TICK);
+
+        if(Math.random()<0.33) {
+            me.getSprite().idle();
+        }
     }
 
     @Override

@@ -21,7 +21,7 @@ public class KillOrder extends MobAi implements AiState {
 
         me.enemySeen = true;
 
-        if (me.enemySeen && me.canAttack(enemy)) {
+        if (me.canAttack(enemy)) {
             me.doAttack(enemy);
         } else {
             if (me.enemySeen) {
