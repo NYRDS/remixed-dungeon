@@ -114,7 +114,6 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
   <string name="Possess_Info">Die dunkle Kunst der Gedankenkontrolle erlaubt dem Nutzer, den Willen der meisten Kreaturen zu bändigen.</string>
   <string name="Possess_PossessionFailed">Der Wille von %s ist zu stark.</string>
   <string name="Possess_Possessed">%s wartet auf deine Anweisungen.</string>
-  <string name="Possess_MustTargetChar">Nur Kreaturen können das Ziel von Besitzergreifung sein</string>
   <string name="Possess_CantPossessSelf">Du kannst nicht Besitz von dir selbst ergreifen</string>
   <string name="Mob_StaControlledStatus">Diese/r/s %s ist in unheiligem Besitz</string>
   <string name="BlackCat_AiStatus">Diese Katze macht ganz normale Katzensachen.</string>
@@ -151,6 +150,26 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
   <string name="town_deco_pedestal_desc">Ein Podest mit einem heiligen Buch darauf.</string>
   <string name="town_deco_shelf_name">Regale</string>
   <string name="town_deco_shelf_desc">Leere Regale</string>
+  <string name="town_deco_banner_name">Banner</string>
+  <string name="town_deco_banner_desc">Ein elegantes Banner, dass das Symbol dieser Taverne darstellt.</string>
+  <string name="town_deco_inn_bed_name">Bett</string>
+  <string name="town_deco_inn_bed_desc">Sieht wie ein gemütliches Bett aus.</string>
+  <string name="town_deco_furnace_name">Ofen</string>
+  <string name="town_deco_furnace_desc">Ein verlässlicher Backofen, der nach traditionellem Schema erbaut wurde.</string>
+  <string name="town_deco_skullboard_name">Trophäenregal</string>
+  <string name="town_deco_skullboard_desc">Dieser Schädel fängt das Moment des unerwarteten Horrors perfekt ein.</string>
+  <string name="town_deco_stool_sturdy_name">Stuhl</string>
+  <string name="town_deco_stool_sturdy_desc">Ein normaler Stuhl aus belastbarem Holz.</string>
+  <string name="town_deco_stool_broken_name">Zerbrochener Stuhl.</string>
+  <string name="town_deco_stool_broken_desc">Dieser Stuhl hat schon bessere Tage gesehen.</string>
+  <string name="town_deco_shelving_name">Gestell</string>
+  <string name="town_deco_shelving_desc">Ein beeindruckend großes Gestell, in dessen Regalen du verschiedene Getränke und Snacks findest.</string>
+  <string name="town_deco_barrel_wine_name">Weinfass</string>
+  <string name="town_deco_barrel_wine_desc">Wird benutzt um wertvolle Getränke wie Wein aufzubewahren.</string>
+  <string name="town_deco_crate_bottles_name">Bierkasten</string>
+  <string name="town_deco_crate_bottles_desc">Flaschenbier ist eine beliebte Beschäftigung unter Wirten geworden.</string>
+  <string name="town_deco_wall_brazier_name">Kohleofen</string>
+  <string name="town_deco_wall_brazier_desc">Der Dampf, der aus der schwelenden Glut kommt, erfüllt den Raum mit angenehmen Aromen.</string>
   <string name="WndPriest_Instruction2_m">Wilkommen mein Sohn, willkommen in der heiligen Kirche des großen Santa dem Tiefenfürst!</string>
   <string name="WndPriest_Instruction2_f">Wilkommen meine Tochter, willkommen in der heiligen Kirche des großen Santa dem Tiefenfürst!</string>
   <string name="WndPriest_Instruction2">Wenn du Hilfe brauchst, kann ich dir eine Heilung für nur %d Goldmünzen anbieten! Falls du jedoch auf der Suche nach heiligen Segen bist, oder gar verflucht worden bist, triff dich bitte mit dem Bischof in unserer Kirche.</string>
@@ -1609,6 +1628,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
   <string name="WndMovieTheatre_Watch">Schaue einen Film</string>
   <string name="WndMovieTheatre_No">Verlassen</string>
   <string name="WndMovieTheatre_Bye">Komm jederzeit zurück, wir freuen uns auf dich!</string>
+  <string name="WndMovieTheatre_Instruction">Hallo und herzlich willkommen in unserem Kino! Wir bieten einen speziellen Service an, wo du ein kostenloses Video anschauen kannst. Wenn du es zu Ende gesehen hast, erhältst du %dGoldmünze.</string>
   <string name="WndMovieTheatre_Title">Kino</string>
   <string name="WndMovieTheatre_Thank_You">Danke, dass du teilgenommen hast!</string>
   <string name="WndPriest_Heal">Heilen -%d Gold</string>
@@ -2511,16 +2531,6 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
   <string name="town_deco_stone_wall_broken_desc">Alte Steinwand, in schlechtem Zustand.</string>
   <string name="Challenges_Names_6">Verbotene Runen</string>
   <string name="Challenges_Names_7">Pazifismus</string>
-  <string name="Welcome_Text_29_2">
-remix.29.2\n
-- Spielmechaniken:\n
--- Neue Herausforderungen:\n
---- Verbotene Runen\n
---- Pazifismus\n
-- Modding:\n
--- Benutzerdefinierte Artefakte\n
-- Bugs behoben\n
-</string>
   <string name="town_deco_crossroad_name">Kreuzungsschild</string>
   <string name="town_deco_crossroad_desc">Grobe Holzsäule mit pfeilförmigen Platten, auf denen der Text vor langer Zeit verblasst ist, wahrscheinlich aufgrund der rauen Wetterbedingungen.</string>
   <string name="ShieldBuffReady_Name">Bereit</string>
@@ -2543,4 +2553,215 @@ remix.29.3\n
 -- Benutzerdefinierte Schilde!\n
 - Bugs behoben\n
 </string>
+  <string name="ShieldStrTemplate">Träger von diesem Schild sollten mindestens %1$dPunkt Stärke besitzen, um ihn richtig zu benutzen.</string>
+  <string name="town_deco_flowerinthepot_name">Blume in einer Vase</string>
+  <string name="town_deco_flowerinthepot_desc">Dekorative Blume mit süßem Geruch</string>
+  <string name="Welcome_Text_29_4">
+remix.29.4\n
+- Spielmechaniken:\n
+--  Kampf mit zwei Waffen!\n
+- Modding:\n
+- Benutzerdefinierte Waffen!\n
+- Bugs behoben\n </string>
+  <string name="Mods_Disclaimer">
+Mods werden von Spielern für Spieler erstellt.\n
+Mods werden manchmal das Spielauf unvorhersehbare oder seltsame Weise verändert, du wurdest gewarnt!\n
+Das NYRDS-Team ist in keiner Weise für den Inhalt, die Qualität oder die Stabilität der Mods verantwortlich.\n
+Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
+  <string name="ShieldWeaponInfo">Bei Verwendung als Waffe verursacht dieser Schild durchschnittlich %1$dSchaden.</string>
+  <string name="TownPortal_Name">Stadtportal</string>
+  <string name="TownPortal_Info">Mit diesem Zauber kannst du sofort in Sicherheit zurückkehren. Mächtige magische Quellen in der Nähe können jedoch verhindern, dass es wie beabsichtigt funktioniert.</string>
+  <string name="MedicineMask_Name">OP-Maske</string>
+  <string name="MedicineMask_Info">Eine OP-Maske dient dazu, Mikroorganismen, die sich in Flüssigkeitströpfchen und Aerosolen befinden, aus Mund und Nase des Trägers abzuhalten.
+\n\nEine Maske zu tragen heißt, dass dir andere nicht egal sind.</string>
+  <string name="MedicineMask_Obtained">OP-Maske erhalten</string>
+  <string name="PlagueDoctorNPC_After_Quest_2">Du bist immernoch da? Hier! Nimm das.</string>
+  <string name="FilteredMask_Name">N95-Maske</string>
+  <string name="FilteredMask_Info">Ein Atemschutzgerät ist ein Gerät, das den Träger vor dem Einatmen gefährlicher Substanzen wie Dämpfe, Gase und Partikel wie Stäube und Mikroorganismen in der Luft schützt.
+\n\nDiese Maske jedoch dient nur zu dekorativen Zwecken.</string>
+  <string name="FullFaceMask_Name">Gasmaske</string>
+  <string name="FullFaceMask_Info">Eine Gasmaske ist eine Maske, die den Träger vor dem Einatmen von Luftschadstoffen und giftigen Gasen schützt. Die Maske bildet eine versiegelte Abdeckung über Nase, Mund und Augen.
+\n\nDieser Maske fehlen Filter, aber sie sieht trotzdem cool aus.</string>
+  <string name="StartScene_DifficultyEasyNoAds">Leicht</string>
+  <string name="StartScene_DifficultyNormalWithSavesNoAds">Normal mit Speichern</string>
+  <string name="Backstab_Name">Meucheln</string>
+  <string name="Backstab_Info">Stiller Schlag in den Rücken. Unehrlicher, aber äußerst effektiv. Meuchel-Schaden wächst mit der Fähigkeitsstufe.\n\nErfolgreiches Meucheln ignoriert die Rüstung des Opfers oder spezielle Verteidigungsfähigkeiten vollständig.</string>
+  <string name="Backstab_TooFar">Opfer zu weit entfernt für einen erfolgreichen Treffer.</string>
+  <string name="Backstab_Aware">Das Opfer sollte dich nicht bemerken, um erfolgreich gemeuchelt zu werden.</string>
+  <string name="KunaiThrow_Name">Kunaiwurf</string>
+  <string name="KunaiThrow_Info">Dieser tödliche Kunai-Wurf wird extrem schnell ausgeführt, so schnell, dass du nicht einmal ein Ziel auswählen kannst.\n\nWahre Meister können mehr als einen Kunai gleichzeitig werfen.</string>
+  <string name="Haste_Name">Eilen</string>
+  <string name="Haste_Info">Die Eile ermöglicht es dem Nutzer, sich mit solch extremer Geschwindigkeit zu bewegen, dass alles um ihn herum statisch erscheint. Eine solche Eile wird viel Energie verbrauchen, so dass eine Nutzung nur für kurze Zeit möglich ist.\n\nErfahrene Meister können über einen längeren Zeitraum in Eile bleiben.</string>
+  <string name="Welcome_Text_29_5">
+remix.29.5\n
+- Spielmechaniken:\n
+-- Fähigkeiten vom Schurken!\n
+- Modding:\n
+- Benutzerdefinierte Rüstung!\n
+- Bugs behoben\n </string>
+  <string name="Char_Stole_0">%1$shat%2$svon%3$sgestohlen!</string>
+  <string name="Char_Stole_1">%1$shat%2$svon%3$sgestohlen!</string>
+  <string name="Char_Stole_2">%1$shat%2$svon%3$sgestohlen!</string>
+  <string name="ScrollOfTeleportation_Teleport2">Innerhalb eines Augenblickes wurde%s zu
+ einer andere Stelle dieses Levels teleportiert.</string>
+  <string name="ScrollOfTeleportation_NoTeleport2">Die starke magische Aura dieses Ortes hindert %sdaran,
+ dich zu Teleportieren.</string>
+  <string name="WndModInstall_InstallingMod">Mod wird installiert</string>
+  <string name="WndModInstall_Version">Version</string>
+  <string name="WndModInstall_PleaseUpdate">Bitte aktualisiere Remixed Dungeon bevor du diesen Mod installierst</string>
+  <string name="Wnd_Button_Ok">Ok</string>
+  <string name="CharAction_Taunt">verspotten</string>
+  <string name="CharAction_Push">stoßen</string>
+  <string name="CharAction_Steal">stehlen</string>
+  <string name="CharAction_Charm">bezaubern</string>
+  <string name="CharAction_Order">befehlen</string>
+  <string name="CharAction_Give">geben</string>
+  <string name="CharAction_Take">nehmen</string>
+  <string name="CharAction_Scare">erschrecken</string>
+  <string name="CharAction_Hit">schlagen</string>
+  <string name="Stun_Info">Betäubt</string>
+  <string name="Char_StaStunned">betäubt</string>
+  <string name="Mob_ReadyForOrder">%sfür deine Bestellung bereit.</string>
+  <string name="Mob_CantDoIt">Ich kann das nicht machen. Ich habe kleine Pfoten.</string>
+  <string name="Welcome_Text_29_6">
+remix.29.6\n
+- Spielmechaniken:\n
+-- Zusätzliche Aktionen für Mobs!\n
+- Modding:\n
+-- Item actors
+-- Spezielle Waffeneigenschaften!\n
+-- Mehr nicht kategorisiertes Zeug!\n
+- Bugs behoben\n </string>
+
+  <string name="InnKeeperNPC_Name">Tavernenwirt</string>
+  <string name="InnKeeperNPC_Name_Objective">Tavernenwirt</string>
+  <string name="InnKeeperNPC_Gender">männlich</string>
+  <string name="InnKeeperNPC_Desc">Der Tavernenwirt ist stolz aud sich selbst.</string>
+
+
+  <string name="DrunkardNPC_Name">Betrunkener</string>
+  <string name="DrunkardNPC_Name_Objective">Betrunkener</string>
+  <string name="DrunkardNPC_Gender">männlich</string>
+  <string name="DrunkardNPC_Desc">Regelmäßiger Tavernengast in natürlichem Zustand.</string>
+
+
+  <string name="MercenaryNPC_Name">Söldner</string>
+  <string name="MercenaryNPC_Name_Objective">Söldner</string>
+  <string name="MercenaryNPC_Gender">>männlich</string>
+  <string name="MercenaryNPC_Desc">Robust aussehender Mann</string>
+
+
+  <string name="ServantNPC_Name">Kellner</string>
+  <string name="ServantNPC_Name_Objective">Kellner</string>
+  <string name="ServantNPC_Gender">geschlechtslos</string>
+  <string name="ServantNPC_Desc">Ein sehr beschäftigter Kellner.</string>
+
+
+  <string name="BardNPC_Name">Barde</string>
+  <string name="BardNPC_Name_Objective">Barde</string>
+  <string name="BardNPC_Gender">>männlich</string>
+  <string name="BardNPC_Desc">Der Barde der Stadt spielt seine Laute.</string>
+
+  <string name="Welcome_Text_30">
+remix.29.6\n
+- Spielmechaniken:\n
+-- Fähigkeiten für jeden!\n
+--Taverne ist jetzt geöffnet!\n
+- Bugs behoben\n </string>
+
+
+  <string name="Roar_Name">Schrei</string>
+  <string name="Roar_Info">Ein machtvoller Schrei wird mit Sicherheit Gegner erschrecken und Verbündete inspirieren.</string>
+
+  <string name="LightningBolt_Name">Blitzschlag</string>
+  <string name="LightningBolt_Info">Ein Zauberspruch wird unter uralten Schamanen geteilt, der deine Gegner doppelt so effektiv schockt. Vor allem, wenn sie in Wasser stehen.</string>
+
+  <string name="Heal_Name">Heilung</string>
+  <string name="Heal_Info">Ein ziemlich nützlicher Zauberspruch im Dungeon, oder?</string>
+
+  <string name="Order_Name">Befehlen</string>
+  <string name="Order_Info">Mit guter Konzentration werden deine Befehle fast unbestreitbar.</string>
+  <string name="Order_Resist">Wie kannst du es wagen?!!</string>
+
+  <string name="Spell_SelectAChar">Wähle ein Lebewesen als Ziel aus.</string>
+
+  <string name="Calm_Name">Beruhigen</string>
+  <string name="Calm_Info">Es gibt viele verärgerte Kreaturen in der Umgebung, lass uns ihnen helfen.</string>
+
+  <string name="CharmSpell_Name">Bezaubern</string>
+  <string name="CharmSpell_Info">Jeder verdient etwas Liebe, oder nicht?</string>
+
+  <string name="HideInGrassSpell_Name">Im Gras vertecken</string>
+  <string name="HideInGrassSpell_Info">Du hast deine Versteck-Künste gemeistert.</string>
+  <string name="HideInGrassSpell_NeedGrassToHide">Nicht einmal ich kann mich bei voller Sichtbarkeit verstecken.</string>
+
+
+  <string name="MagicArrow_Name">Magischer Pfeil</string>
+  <string name="MagicArrow_Info">Der gute alte Magische Pfeil, die richtige Entscheidung wenn dir die Munition ausgeht.</string>
+
+  <string name="NatureArmorSpell_Name">Natur-Rüstung</string>
+  <string name="NatureArmorSpell_Info">Elfen können auch zäh sein, vor allem wenn sie von Mutter Natur selbst beschützt werden.</string>
+
+  <string name="ShootInEye_Name">Augenschuss</string>
+  <string name="ShootInEye_Info">Nutze deine außergewöhnliche Treffsicherheit, um dem Feind direkt ins Auge zu schießen Wenn er welche hat, natürlich.</string>
+
+
+  <string name="Sprout_Name">Sprießen</string>
+  <string name="Sprout_Info">Erwecke die ruhenden Samen. \ Der Boden sollte jedoch etwas bewachsen sein, damit der Zauber erfolgreich ist.</string>
+
+
+  <string name="SummonBeast_Name">Tierruf</string>
+  <string name="SummonBeast_Info">Versuche, eine Horde mächtiger Bestien zu deinem Befehl zu rufen.\nTatsächliche Ergebnisse können variieren.</string>
+  <string name="SummonBeast_AtYourCommand">Zu Befehl!</string>
+
+  <string name="WndSettings_RecordVideo">Videoaufnahme</string>
+  <string name="Dungeon_saveIoError">Beim Erstellen der Speicherdatei:</string>
+
+  <string name="town_table_fortune_ball_name">Kristallkugel</string>
+  <string name="town_table_fortune_ball_desc">kristallkugel mit mysteriösem Dunst in ihr.</string>
+  <string name="town_deco_shelf_full_name">Regal</string>
+  <string name="town_deco_shelf_full_desc">In diesem Regal befinden sich verschiedene Schmuckstücke.</string>
+  <string name="town_deco_skulls_name">Schädel</string>
+  <string name="town_deco_skulls_desc">Polierte Schädel von Kreaturen aus diesem Dungeon.</string>
+  <string name="town_deco_urn_name">Urne</string>
+  <string name="town_deco_urn_desc">Tonurne, vielleicht mit Asche.</string>
+  <string name="town_deco_crate_name">Holzkiste</string>
+  <string name="town_deco_crate_desc">Eine robuste Holzkiste, die ihre Geheimnisse im Inneren bewahrt.</string>
+  <string name="town_deco_crate_scrolls_name">Holzkiste mit Schriftrollen</string>
+  <string name="town_deco_crate_scrolls_desc">Diese Holzkiste ist bis zum Rand mit geheimem Wissen gefüllt.</string>
+  <string name="town_deco_cabinet_name">Kabinett</string>
+  <string name="town_deco_cabinet_desc">Ein geräumiges Kabinett mit vielen Türen und Regalen.</string>
+  <string name="town_deco_clock_name">Uhr</string>
+  <string name="town_deco_clock_desc">Die Uhrzeiger sind seit langem in einer Position eingefroren.</string>
+  <string name="town_deco_poster_name">Poster</string>
+  <string name="town_deco_poster_desc">Flyer für die Ankündigung bevorstehender Vorstellungen im Kino.</string>
+  <string name="town_deco_ladder_name">Leiter</string>
+  <string name="town_deco_ladder_desc">Eine alte Leiter, die unzuverlässig aussieht.</string>
+  <string name="town_deco_weaponrack_name">Waffenregal</string>
+  <string name="town_deco_weaponrack_desc">Auf diesem Regal befinden sich Waffen, die dir eindeutig zu teuer sind.</string>
+  <string name="town_deco_church_sign_name">Kirchenschild</string>
+  <string name="town_deco_church_sign_desc">Es scheint so, als ob sich in diesem Gebäude eine Kirche befindet.</string>
+  <string name="town_deco_statue_water_name">Statue eines Engels</string>
+  <string name="town_deco_statue_water_desc">Eine majestätische Statue eines Engels, der eine Schüssel Wasser hält.</string>
+  <string name="town_deco_statue_blood_name">Statue eines Engels</string>
+  <string name="town_deco_statue_blood_desc">Eine majestätische Statue eines Engels, der eine Schüssel Blut hält.</string>
+  <string name="town_deco_vat_name">Bottich</string>
+  <string name="town_deco_vat_desc">Dieser steinerne Bottich ist randvoll mit Weihwasser gefüllt.</string>
+  <string name="town_deco_armorstand_leather_name">Lederrüstung</string>
+  <string name="town_deco_armorstand_leather_desc">Zuverlässige Lederrüstungen sind ein guter Kauf, bevor du dich in den Dungeon wagst.</string>
+  <string name="town_deco_armorstand_scale_name">Schuppenrüstung</string>
+  <string name="town_deco_armorstand_scale_desc">Die vergoldeten Platten dieser Schuppenrüstung sehen brandneu aus.</string>
+  <string name="town_deco_armorstand_plate_name">Plattenrüstung</string>
+  <string name="town_deco_armorstand_plate_desc">Nach Angaben des Händlers gehörte diese schwere Plattenrüstung einst einem großen Krieger.</string>
+  <string name="town_deco_red_carpet_name">Teppich</string>
+  <string name="town_deco_red_carpet_desc">Gerüchten zufolge schmücken ähnliche rote Teppiche die Hallen der Zwergenmetropole.</string>
+  <string name="town_deco_beige_carpet_name">Teppich</string>
+  <string name="town_deco_beige_carpet_desc">Ein eleganter beiger Teppich, der aus weicher Gnollwolle gewebt wurde.</string>
+  <string name="town_deco_brown_carpet_name">Teppich</string>
+  <string name="town_deco_brown_carpet_desc">Dieser braune Teppich wurde von vielen Abenteurern, Vagabunden und Außenstehenden mit Füßen getreten.</string>
+  <string name="town_deco_charcoal_carpet_name">Teppich</string>
+  <string name="town_deco_charcoal_carpet_desc">Um den Gästen Komfort zu bieten, wählte die Verwaltung des Kinos Teppiche von höchster Qualität in der Farbe von Holzkohle.</string>
+  <string name="town_deco_magenta_carpet_name">Teppich</string>
+  <string name="town_deco_magenta_carpet_desc">Der Farbton dieses Teppichs erinnert an lokalen Wein.</string>
+
 </resources>
