@@ -125,7 +125,7 @@ public class ModdingMode {
 	public static boolean isSoundExists(String id) {
 		String resourceId = "sound/"+id;
 		String foundId = getSoundById(resourceId);
-		return  !foundId.equals(resourceId);
+		return  foundId.equals(resourceId);
 	}
 
 	public static boolean isAssetExist(String resName) {

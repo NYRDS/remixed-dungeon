@@ -179,7 +179,7 @@ public class GameScene extends PixelScene {
         createGameScene(level, hero);
     }
 
-    public void createGameScene(Level level, Hero hero) {
+    public void createGameScene(@NotNull Level level, @NotNull Hero hero) {
         playLevelMusic();
 
         RemixedDungeon.lastClass(hero.getHeroClass().classIndex());
