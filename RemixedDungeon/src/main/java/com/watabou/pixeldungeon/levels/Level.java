@@ -256,6 +256,10 @@ public abstract class Level implements Bundlable {
 			return music;
 		}
 
+		if(ModdingMode.isSoundExists(levelId)) {
+			return levelId;
+		}
+
 		return Assets.TUNE;
 	}
 
