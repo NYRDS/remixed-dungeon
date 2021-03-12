@@ -657,17 +657,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			}
 		}
 
-        if(dmg<0) {
+        if(dmg<=0) {
         	return;
 		}
 
 		hp(hp() - dmg);
-		if (dmg > 0 || src instanceof Char) {
-			getSprite().showStatus(hp() > ht() / 2 ?
-							CharSprite.WARNING :
-							CharSprite.NEGATIVE,
-					Integer.toString(dmg));
-		}
+
+		getSprite().showStatus(hp() > ht() / 2 ?
+						CharSprite.WARNING :
+						CharSprite.NEGATIVE,
+				Integer.toString(dmg));
+
 		if (hp()<=0) {
 			die(src);
 		}
