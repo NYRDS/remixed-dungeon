@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.NotNull;
@@ -307,7 +308,13 @@ public abstract class Actor implements Bundlable {
 			all.remove( actor );
 		}
 	}
-	
+
+	@LuaInterface
+	public static Char getRandomChar(int pos) {
+		return Random.element(chars.values());
+	}
+
+	@LuaInterface
 	public static Char findChar(int pos) {
 		return chars.get(pos);
 	}

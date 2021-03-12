@@ -624,4 +624,14 @@ public abstract class Mob extends Char {
 			collect(item);
 		}
 	}
+
+	@Override
+	public int priceBuy(Item item) {
+		return script.run("priceBuy", item, super.priceBuy(item)).toint();
+	}
+
+	@Override
+	public int priceSell(Item item) {
+		return script.run("priceSell", item, super.priceBuy(item)).toint();
+	}
 }

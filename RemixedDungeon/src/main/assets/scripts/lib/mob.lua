@@ -134,5 +134,19 @@ mob.executeAction = function(self, mob, hero, action)
     return self.execute(mob, hero, action)
 end
 
+mob.priceSell = function(self, mob, item, defaultPrice)
+    if not self.priceForSell then
+        return defaultPrice
+    end
+    return self.priceForSell(mob, item)
+end
+
+mob.priceBuy = function(self, mob, item, defaultPrice)
+    if not self.priceForBuy then
+        return defaultPrice
+    end
+    return self.priceForBuy(mob, item)
+end
+
 
 return mob

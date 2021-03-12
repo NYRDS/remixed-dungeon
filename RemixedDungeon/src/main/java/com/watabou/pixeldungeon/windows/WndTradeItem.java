@@ -221,17 +221,17 @@ public class WndTradeItem extends Window {
 	}
 
 	private int price( @NotNull  Item item, boolean buying) {
-		int price = item.price();
 		if(buying) {
-			price *=  5 * (Dungeon.depth / 5 + 1);
+			int price = shopkeeper.priceSell(item);
 			if (Dungeon.hero.hasBuff(RingOfHaggler.Haggling.class) && price >= 2) {
 				price /= 2;
 			}
+			return price;
 		}
-		else {
-			if(Dungeon.hero.hasBuff(RingOfHaggler.Haggling.class)) {
-				price *= 1.5f;
-			}
+
+		int price = shopkeeper.priceBuy(item);
+		if(Dungeon.hero.hasBuff(RingOfHaggler.Haggling.class)) {
+			price *= 1.5f;
 		}
 		return price;
 	}

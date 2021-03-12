@@ -12,4 +12,7 @@ public interface ItemOwner {
     boolean useBags();
 
     void generateNewItem();
+
+    int priceSell(Item item);
+    int priceBuy(Item item);
 }

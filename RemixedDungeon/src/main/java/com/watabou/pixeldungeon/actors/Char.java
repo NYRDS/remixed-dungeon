@@ -1644,4 +1644,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@Override
 	public void generateNewItem() {
 	}
+
+	@Override
+	public int priceSell(Item item) {
+		return item.price() *  5 * (Dungeon.depth / 5 + 1) ;
+	}
+
+	@Override
+	public int priceBuy(Item item) {
+		return item.price();
+	}
 }

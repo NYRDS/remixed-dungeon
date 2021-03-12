@@ -16,9 +16,8 @@ return mob.init({
     end,
 
     act = function(self)
-        if not target or target==self:getPos() then
-            target = RPD.Dungeon.level:randomDestination()
-            self:say("going to %d", target)
+        if not target or RPD.Dungeon.level:distance(target,self:getPos()) < 2 then
+            target = RPD.Actor:getRandomChar():getPos()
             self:getCloser(target)
         end
     end,
