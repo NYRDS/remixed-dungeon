@@ -73,10 +73,8 @@ public class YogsBrain extends Mob implements IZapper {
 
     @Override
     protected int zapProc(@NotNull Char enemy, int damage) {
-
-
         CharUtils.lightningProc(this, enemy.getPos(), damage);
-        return damage;
+        return 0;
     }
 
     @Override

@@ -8,17 +8,20 @@ local RPD = require "scripts/lib/commonClasses"
 
 local mob = require"scripts/lib/mob"
 
-local target
-
 return mob.init({
     interact = function(self, chr)
         self:say("Hello, ready to order something?")
     end,
 
     act = function(self)
-        if not target or RPD.Dungeon.level:distance(target,self:getPos()) < 2 then
-            target = RPD.Actor:getRandomChar():getPos()
-            self:getCloser(target)
+        if RPD.Dungeon.level:distance(self:getTarget(),self:getPos()) < 2 then
+            local targetChar = RPD.Actor:getRandomChar()
+            if targetChar == self then
+                self:say("Let rest a bit")
+                return
+            end
+            self:say("Going to "..targetChar:getEntityKind())
+            self:setTarget(targetChar:getPos())
         end
     end,
 

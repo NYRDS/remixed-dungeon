@@ -35,6 +35,7 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class WandOfLightning extends SimpleWand  {
@@ -99,7 +100,7 @@ public class WandOfLightning extends SimpleWand  {
 			points[nPoints++] = cell;
 			CellEmitter.center( cell ).burst( SparkParticle.FACTORY, 3 );
 		}
-		getOwner().getSprite().getParent().add( new Lightning( points, callback ) );
+		getOwner().getSprite().getParent().add( new Lightning(Arrays.copyOfRange(points,0, nPoints), callback ) );
 	}
 	
 	@Override
