@@ -22,6 +22,6 @@ return mob.init({
     end,
 
     priceForSell = function(self, item)
-        return item:price() * 2
+        return item:price() * 10
     end
 })
