@@ -1,0 +1,6 @@
+{
+  "texture" : "items/ammo.png",
+  "width"  : 16,
+  "height" : 16,
+  "anim"   : { "fps" : 25,  "looped" : true,    "frames" : [18] }
+}

@@ -16,6 +16,6 @@ public class BlinkAwayFromChar implements cellCondition {
 
     @Override
     public boolean pass(Level level, int cell) {
-        return level.distance(cell, ((Char) enemy).getPos()) > dist && (level.passable[cell] || level.avoid[cell]) && Actor.findChar(cell) == null;
+        return level.distance(cell, enemy.getPos()) > dist && (level.passable[cell] || level.avoid[cell]) && Actor.findChar(cell) == null;
     }
 }

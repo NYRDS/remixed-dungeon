@@ -28,7 +28,7 @@ return ai.init{
         if heap then
             local item = heap:peek()
 
-            if edible[item:getClassName()] then
+            if edible[item:getEntityKind()] then
                 heap:pickUp()
                 RPD.Sfx.SpellSprite:show(me, RPD.Sfx.SpellSprite.FOOD)
                 RPD.playSound("snd_eat")
@@ -48,7 +48,7 @@ return ai.init{
 
             if level.fieldOfView[itemPos] then --visible heap
                 local item = heap:peek()
-                if edible[item:getClassName()] then
+                if edible[item:getEntityKind()] then
 
                     if RPD.Actor:findChar(itemPos) then
                         RPD.Wands.wandOfTelekinesis:mobWandUse(me, itemPos)
@@ -58,7 +58,7 @@ return ai.init{
                     break
                 end
 
-                if raw[item:getClassName()] then
+                if raw[item:getEntityKind()] then
 
                     if level:adjacent(itemPos, me:getPos()) then
                         RPD.Wands.wandOfFirebolt:mobWandUse(me, itemPos)

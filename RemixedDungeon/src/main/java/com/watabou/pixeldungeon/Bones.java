@@ -20,13 +20,15 @@ package com.watabou.pixeldungeon;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.actors.hero.Belongings;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -42,30 +44,15 @@ public class Bones {
 	private static int depth = -1;
 	private static Item item;
 	
-	public static void leave() {
+	public static void leave(@NotNull Char hero) {
 		
 		item = ItemsList.DUMMY;
 
-		switch (Random.Int( 4 )) {
-		case 0:
-			item = Dungeon.hero.getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
-			break;
-		case 1:
-			item = Dungeon.hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR);
-			break;
-		case 2:
-			item = Dungeon.hero.getBelongings().getItemFromSlot(Belongings.Slot.ARTIFACT);
-			break;
-		case 3:
-			item = Dungeon.hero.getBelongings().getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT);
-			break;
-		}
+		item = hero.getBelongings().randomEquipped();
+
 		if (item == ItemsList.DUMMY || (item instanceof Artifact && !(item instanceof Ring))) {
-			if (Dungeon.hero.gold() > 0) {
-				item = new Gold( Random.IntRange( 1, Dungeon.hero.gold()) );
-			} else {
-				item = new Gold( 1 );
-			}
+			int gold = Math.max(1, hero.gold());
+			item = new Gold( Random.IntRange( 1, gold) );
 		}
 		
 		depth = Dungeon.depth;
@@ -79,7 +66,6 @@ public class Bones {
 			Bundle.write( bundle, output );
 			output.close();
 		} catch (IOException ignored) {
-
 		}
 	}
 	
@@ -102,7 +88,11 @@ public class Bones {
 			if (depth == Dungeon.depth) {
 				Game.instance().deleteFile( BONES_FILE );
 				depth = 0;
-				
+
+				if(item==null) {
+					return ItemsList.DUMMY;
+				}
+
 				if (!item.stackable) {
 					item.setCursed(true);
 					item.setCursedKnown(true);

@@ -25,14 +25,14 @@ public class Sleeping extends MobAi implements AiState {
         if (me.isEnemyInFov() ){
 
             huntEnemy(me);
-
             me.spend(Mob.TIME_TO_WAKE_UP);
-
         } else {
-
             me.enemySeen = false;
             me.spend(Actor.TICK);
 
+            if(Math.random()<0.2) {
+                me.getSprite().idle();
+            }
         }
     }
 

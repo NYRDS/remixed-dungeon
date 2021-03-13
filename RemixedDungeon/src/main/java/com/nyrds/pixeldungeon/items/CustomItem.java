@@ -5,12 +5,14 @@ import androidx.annotation.Keep;
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.CellSelector;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.NotNull;
@@ -26,7 +28,7 @@ import java.util.ArrayList;
 public class CustomItem extends EquipableItem {
 
     @Packable
-    private String scriptFile;
+    private String scriptFile = Utils.EMPTY_STRING;
 
     private boolean upgradable;
     private boolean identified;
@@ -131,20 +133,7 @@ public class CustomItem extends EquipableItem {
     }
 
     public void selectCell(String action,String prompt) {
-        CellSelector.Listener cellSelectorListener= new CellSelector.Listener(){
-
-            @Override
-            public void onSelect(Integer cell, @NotNull Char selector) {
-                if(cell!=null) {
-                    script.run("cellSelected", action, cell);
-                }
-            }
-
-            @Override
-            public String prompt() {
-                return StringsManager.maybeId(prompt);
-            }
-        };
+        CellSelector.Listener cellSelectorListener = new CustomItemCellListener(action, prompt);
 
         getOwner().selectCell(cellSelectorListener);
     }
@@ -199,7 +188,7 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public String getClassName() {
+    public String getEntityKind() {
         return scriptFile;
     }
 
@@ -350,5 +339,33 @@ public class CustomItem extends EquipableItem {
     @Override
     public void ownerTakesDamage(int damage) {
         script.runOptionalNoRet("ownerTakesDamage",damage);
+    }
+
+    private class CustomItemCellListener implements CellSelector.Listener {
+
+        private final String action;
+        private final String prompt;
+
+        public CustomItemCellListener(String action, String prompt) {
+            this.action = action;
+            this.prompt = prompt;
+        }
+
+        @Override
+        public void onSelect(Integer cell, @NotNull Char selector) {
+            if(cell!=null) {
+                script.run("cellSelected", action, cell);
+            }
+        }
+
+        @Override
+        public String prompt() {
+            return StringsManager.maybeId(prompt);
+        }
+
+        @Override
+        public Image icon() {
+            return null;
+        }
     }
 }

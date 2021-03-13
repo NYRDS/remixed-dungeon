@@ -9,27 +9,19 @@ local RPD = require "scripts/lib/commonClasses"
 
 local mob = require"scripts/lib/mob"
 
-local dialog = function(index)
-    if index == 0 then
-        local hero = RPD.Dungeon.hero
-        local pos = RPD.getXy(hero)
-        RPD.Dungeon.hero:handle(RPD.Dungeon.level:cell(pos[1],pos[2]-3))
-        return
-    end
-
-    if index == 1 then
-        RPD.glog("okay...")
-
-    end
-end
-
 
 return mob.init({
+    spawn = function(self, level)
+        self:collect(RPD.createItem("FriedFish",{quantity=10}))
+        self:collect(RPD.createItem("ChargrilledMeat",{quantity=10}))
+        self:collect(RPD.createItem("FrozenCarpaccio",{quantity=10}))
+    end,
+
     interact = function(self, chr)
-        RPD.chooseOption( dialog,
-                "Test title",
-                "Go back",
-                "Yes",
-                "No")
+        RPD.showBuyWindow(self, chr)
+    end,
+
+    priceForSell = function(self, item)
+        return item:price() * 2
     end
 })

@@ -46,15 +46,17 @@ public class MovieClip extends Image {
     }
 
     private void updateAnimation() {
-        if (curAnim != null && curAnim.delay > 0 && (curAnim.looped || !finished)) {
+        Animation anim = curAnim;
+        
+        if (anim != null && anim.delay > 0 && (anim.looped || !finished)) {
 
             int lastFrame = curFrame;
 
             frameTimer += Game.elapsed;
-            while (frameTimer > curAnim.delay) {
-                frameTimer -= curAnim.delay;
-                if (curFrame == curAnim.frames.length - 1) {
-                    if (curAnim.looped) {
+            while (frameTimer > anim.delay) {
+                frameTimer -= anim.delay;
+                if (curFrame == anim.frames.length - 1) {
+                    if (anim.looped) {
                         curFrame = 0;
                     }
                     finishAnimation();
@@ -65,7 +67,7 @@ public class MovieClip extends Image {
             }
 
             if (curFrame != lastFrame) {
-                frame(curAnim.frames[curFrame]);
+                frame(anim.frames[curFrame]);
             }
 
         }

@@ -18,14 +18,22 @@ return spell.init{
             name          = "Order_Name",
             info          = "Order_Info",
             magicAffinity = "Witchcraft",
-            targetingType = "self",
-            level         = 1,
-            castTime      = 0,
-            spellCost     = 1
+            targetingType = "char_not_self",
+            level         = 3,
+            castTime      = 1,
+            spellCost     = 10
         }
     end,
 
-    cast = function(self, spell, caster)
+    castOnChar = function(self, spell, caster, target)
+
+        if not target:canBePet() then
+            target:yell("Order_Resist")
+            return false
+        end
+
+        target:execute(caster, RPD.Actions.ch_order)
+
         return true
     end
 }

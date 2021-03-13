@@ -17,25 +17,20 @@ return spell.init{
             name          = "DarkSacrifice_Name",
             info          = "DarkSacrifice_Info",
             magicAffinity = "Necromancy",
-            targetingType = "cell",
+            targetingType = "char",
             level         = 3,
             spellCost     = 3,
             castTime      = 0.5
         }
     end,
-    castOnCell = function(self, spell, caster, cell)
-        local sacrifice = RPD.Actor:findChar(cell)
+
+    castOnChar = function(self, spell, caster, sacrifice)
 
         local goodSacrifice = false
 
         if sacrifice then
             if sacrifice:getOwnerId()==caster:getId() then
                 sacrifice:yell("DarkSacrifice_Ok")
-                goodSacrifice = true
-            end
-
-            if caster == sacrifice then
-                sacrifice:yell("DarkSacrifice_Self")
                 goodSacrifice = true
             end
 

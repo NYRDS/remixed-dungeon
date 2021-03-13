@@ -47,7 +47,6 @@ import com.nyrds.android.util.ReportingExecutor;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.glscripts.Script;
@@ -85,8 +84,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     private static int width;
     private static int height;
 
-    public static String version;
-    public static int versionCode;
+    public static String version = Utils.EMPTY_STRING;
+    public static int versionCode = 0;
     public PlayGames playGames;
     public Iap iap;
 
@@ -122,12 +121,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     // Accumulated key events
     private final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
 
-    private Executor executor = new ReportingExecutor();
+    private final Executor executor = new ReportingExecutor();
     public Executor serviceExecutor = new ReportingExecutor();
 
     private Runnable doOnResume;
 
-    private ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
+    private final ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
 
     public Game(Class<? extends Scene> c) {
         super();
@@ -233,9 +232,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         try {
             version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
             versionCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
-        } catch (NameNotFoundException e) {
-            version = "???";
-            versionCode = 0;
+        } catch (NameNotFoundException ignored) {
         }
 
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
@@ -258,7 +255,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public static void syncAdsState() {
 
         if(RemixedDungeon.donated() > 0) {
-            AdsUtils.removeTopBanner();
+            Ads.removeEasyModeBanner();
             return;
         }
 
@@ -267,7 +264,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
 
         if (getDifficulty() >= 2) {
-            AdsUtils.removeTopBanner();
+            Ads.removeEasyModeBanner();
         }
 
     }
@@ -421,7 +418,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 
         SystemText.invalidate();
-        TextureCache.reload();
+        TextureCache.clear();
 
         paused = false;
 
@@ -559,7 +556,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
     }
 
-    public void onRequestPermissionsResult(int requestCode, @NotNull String[] permissions, @NotNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NotNull String @NotNull [] permissions, @NotNull int @NotNull [] grantResults) {
         boolean res = true;
 
         if (permissions.length == 0) {

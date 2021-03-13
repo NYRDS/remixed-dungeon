@@ -22,6 +22,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.FrostArrow;
@@ -68,10 +69,10 @@ public class PotionOfFrost extends UpgradablePotion {
 	}
 	
 	@Override
-	protected void moistenArrow(Arrow arrow) {
+	protected void moistenArrow(Arrow arrow, Char owner) {
 		int quantity = reallyMoistArrows(arrow);
 		
 		FrostArrow moistenArrows = new FrostArrow(quantity);
-		getOwner().collect(moistenArrows);
+		owner.collect(moistenArrows);
 	}
 }

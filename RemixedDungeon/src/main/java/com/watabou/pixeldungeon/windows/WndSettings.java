@@ -58,7 +58,7 @@ public class WndSettings extends WndMenuCommon {
 
 							@Override
 							protected void onSelect(int index) {
-								String lang[] = {"en", "ru", "fr", "pl", "es", "ko", "pt_BR", "it", "de", "zh", /*"ja",*/ "tr", "uk","ms","hu"};
+								String[] lang = {"en", "ru", "fr", "pl", "es", "ko", "pt_BR", "it", "de", "zh", /*"ja",*/ "tr", "uk","ms","hu"};
 								if (!Utils.canUseClassicFont(lang[index])) {
 									RemixedDungeon.classicFont(false);
 								}

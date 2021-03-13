@@ -18,22 +18,24 @@ public class Hunting extends MobAi implements AiState {
             return;
         }
 
-        if(me.getEnemy().invalid()) {
+        final Char enemy = me.getEnemy();
+
+        if(enemy.invalid()) {
             me.setEnemy(chooseEnemy(me,1.0f));
         }
 
-        if(me.friendly(me.getEnemy())) {
+        if(me.friendly(enemy)) {
             me.setState(getStateByClass(Wandering.class));
             return;
         }
 
         me.enemySeen = me.isEnemyInFov();
 
-        if (me.enemySeen && me.canAttack(me.getEnemy())) {
-            me.doAttack(me.getEnemy());
+        if (me.enemySeen && me.canAttack(enemy)) {
+            me.doAttack(enemy);
         } else {
             if (me.enemySeen) {
-                me.setTarget(me.getEnemy().getPos());
+                me.setTarget(enemy.getPos());
             }
 
             if(!me.doStepTo(me.getTarget())) {

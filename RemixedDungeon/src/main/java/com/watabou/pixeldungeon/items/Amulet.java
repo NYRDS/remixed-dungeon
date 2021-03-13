@@ -67,9 +67,9 @@ public class Amulet extends Item {
 			}
 			
 			return true;
-		} else {
-			return false;
 		}
+
+		return false;
 	}
 	
 	private void showAmuletScene( boolean showText ) {

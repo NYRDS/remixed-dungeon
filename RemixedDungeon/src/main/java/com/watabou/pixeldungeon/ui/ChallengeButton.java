@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -51,7 +51,7 @@ public class ChallengeButton extends Button {
 
     @Override
     protected void onClick() {
-        if (Badges.isUnlocked(Badges.Badge.VICTORY) || BuildConfig.DEBUG) {
+        if (Badges.isUnlocked(Badges.Badge.VICTORY) || Util.isDebug()) {
             parentScene.add(new WndChallenges(
                     RemixedDungeon.challenges(), true) {
                 public void onBackPressed() {

@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.nyrds.Packable;
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -54,12 +53,6 @@ public class MimicAmulet extends Mob {
 	@Override
 	public int attackSkill( Char target ) {
 		return 9 + level;
-	}
-	
-	@Override
-	public void die(NamedEntityKind cause) {
-		level().animatedDrop(new SkeletonKey(), getPos());
-		super.die(cause);
 	}
 
 	@Override

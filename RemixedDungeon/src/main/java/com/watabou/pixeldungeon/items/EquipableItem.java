@@ -133,7 +133,7 @@ public abstract class EquipableItem extends Item {
 	}
 
 	public String getVisualName() {
-		return getClassName();
+		return getEntityKind();
 	}
 
 	public abstract Belongings.Slot slot(Belongings belongings);

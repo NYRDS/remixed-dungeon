@@ -18,14 +18,18 @@ return spell.init{
             name          = "LightningBolt_Name",
             info          = "LightningBolt_Info",
             magicAffinity = "Witchcraft",
-            targetingType = "cell",
-            level         = 1,
-            castTime      = 0,
-            spellCost     = 1
+            targetingType = "char_not_self",
+            level         = 2,
+            castTime      = 1,
+            spellCost     = 5,
+            cooldown      = 2
         }
     end,
 
-    cast = function(self, spell, caster)
+    castOnCell = function(self, spell, caster, cell)
+        local damage = math.random(caster:lvl(),caster:skillLevel() * caster:lvl())
+        RPD.CharUtils:lightningProc(caster, cell, damage)
+
         return true
     end
 }

@@ -50,21 +50,25 @@ public class Lightning extends Group {
 		int cells[] = new int[2];
 		cells[0] = from;
 		cells[1] = to;
-		init(cells,2,callback);
+		init(cells,callback);
 	}
 
-	public Lightning( int[] cells, int length, Callback callback ) {
-		init(cells, length, callback);
+	public Lightning( int[] cells) {
+		init(cells, null);
 	}
 
-	private void init ( int[] cells, int length, Callback callback ) {
+	public Lightning( int[] cells, Callback callback ) {
+		init(cells, callback);
+	}
+
+	private void init ( int[] cells, Callback callback ) {
 		this.callback = callback;
 		
 		Image proto = Effects.get( Effects.Type.LIGHTNING );
 		float ox = 0;
 		float oy = proto.height / 2;
 		
-		this.length = length;
+		this.length = cells.length;
 		cx = new float[length];
 		cy = new float[length];
 		

@@ -6,7 +6,7 @@ Ve kasaba, can vermiş maceracıların ve zavallı ruhlarının dolup taştığ�
 Oyun özellikleri:
 - Bu oyun kullanıcılar tarafından yapılmış modları destekler! Bu özellik geliştirildikçe sen de Remixed Dungeon'ın içinde yepyeni bir oyun yapabileceksin!
 - Ekstrem roguelike deneyimi!
-- 7 seçilebilir karakter sınıfı
+- Seçilebilir 7 kahraman sınıfı
 - Kasaba merkezi sizi maceranıza hazırlayacak ve oyun dünyasını tanıtacak
 - 6 türe ayrılmış 30'u aşkın zindan türü
 - 3 isteğe bağlı zindan: Örümcek İni, Ölü kent, Buz Mağaraları

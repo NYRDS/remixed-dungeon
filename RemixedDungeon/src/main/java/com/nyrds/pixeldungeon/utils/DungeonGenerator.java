@@ -4,6 +4,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.levels.FakeLastLevel;
 import com.nyrds.pixeldungeon.levels.GutsLevel;
 import com.nyrds.pixeldungeon.levels.IceCavesBossLevel;
@@ -15,7 +16,6 @@ import com.nyrds.pixeldungeon.levels.RandomLevel;
 import com.nyrds.pixeldungeon.levels.ShadowLordLevel;
 import com.nyrds.pixeldungeon.levels.TestLevel;
 import com.nyrds.pixeldungeon.levels.TownShopLevel;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
 import com.watabou.pixeldungeon.Dungeon;
@@ -83,9 +83,8 @@ public class DungeonGenerator {
 	}
 
 	private static void initLevelsMap() {
-		if (BuildConfig.DEBUG && !ModdingMode.inMod()) {
+		if (Util.isDebug() && !ModdingMode.inMod()) {
 			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon_debug.json");
-			//mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon.json");
 		} else {
 			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon.json");
 		}

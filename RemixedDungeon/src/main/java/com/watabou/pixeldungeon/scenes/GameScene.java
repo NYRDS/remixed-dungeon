@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.LuaInterface;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.effects.EffectsFactory;
 import com.nyrds.pixeldungeon.effects.ParticleEffect;
@@ -27,7 +28,6 @@ import com.nyrds.pixeldungeon.effects.ZapEffect;
 import com.nyrds.pixeldungeon.levels.TestLevel;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -55,6 +55,7 @@ import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.BannerSprites;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
@@ -169,13 +170,19 @@ public class GameScene extends PixelScene {
             throw new TrackedRuntimeException("Trying to create GameScene when level is nil!");
         }
 
-        if(Dungeon.hero==null) {
+        Hero hero = Dungeon.hero;
+
+        if(hero==null) {
             throw new TrackedRuntimeException("Trying to create GameScene when hero is nil!");
         }
 
+        createGameScene(level, hero);
+    }
+
+    public void createGameScene(@NotNull Level level, @NotNull Hero hero) {
         playLevelMusic();
 
-        RemixedDungeon.lastClass(Dungeon.hero.getHeroClass().classIndex());
+        RemixedDungeon.lastClass(hero.getHeroClass().classIndex());
 
         super.create();
 
@@ -233,7 +240,7 @@ public class GameScene extends PixelScene {
         }
 
         level.addVisuals(this);
-        
+
         heaps = new Group();
         add(heaps);
 
@@ -267,7 +274,9 @@ public class GameScene extends PixelScene {
 
         for (Mob mob : level.mobs) {
             if (Statistics.amuletObtained) {
-                mob.beckon(Dungeon.hero.getPos());
+                if(!mob.friendly(hero)) {
+                    mob.beckon(hero.getPos());
+                }
             }
         }
 
@@ -281,7 +290,6 @@ public class GameScene extends PixelScene {
             blob.emitter = null;
             addBlobSprite(blob);
         }
-
 
         fog = new FogOfWar(level.getWidth(), level.getHeight());
 
@@ -310,12 +318,12 @@ public class GameScene extends PixelScene {
 
         add(cellSelector = new CellSelector(baseTiles));
 
-        statusPane = new StatusPane(Dungeon.hero, level);
+        statusPane = new StatusPane(hero, level);
         statusPane.camera = uiCamera;
         statusPane.setSize(uiCamera.width, 0);
         add(statusPane);
 
-        toolbar = new Toolbar(Dungeon.hero, uiCamera.width);
+        toolbar = new Toolbar(hero);
         toolbar.camera = uiCamera;
         toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
         add(toolbar);
@@ -376,12 +384,12 @@ public class GameScene extends PixelScene {
         //it is a chance for another level change right here if level entrance is at CHASM for example
         switch (appearMode) {
             case RESURRECT:
-                Dungeon.hero.regenSprite();
-                WandOfBlink.appear(Dungeon.hero, level.entrance);
-                new Flare(8, 32).color(0xFFFF66, true).show(Dungeon.hero.getHeroSprite(), 2f);
+                hero.regenSprite();
+                WandOfBlink.appear(hero, level.entrance);
+                new Flare(8, 32).color(0xFFFF66, true).show(hero.getHeroSprite(), 2f);
                 break;
             case RETURN:
-                WandOfBlink.appear(Dungeon.hero, Dungeon.hero.getPos());
+                WandOfBlink.appear(hero, hero.getPos());
                 break;
             case FALL:
                 Chasm.heroLand();
@@ -390,28 +398,28 @@ public class GameScene extends PixelScene {
 
                 DungeonGenerator.showStory(level);
 
-                if (Dungeon.hero.isAlive() && !level.isSafe() && Dungeon.depth != 22 && Dungeon.depth != 1) {
+                if (hero.isAlive() && !level.isSafe() && Dungeon.depth != 22 && Dungeon.depth != 1) {
                     Badges.validateNoKilling();
                 }
                 break;
             default:
         }
 
-        Camera.main.target = Dungeon.hero.getHeroSprite();
+        Camera.main.target = hero.getHeroSprite();
 
         level.activateScripts();
 
         fadeIn();
 
         Dungeon.observe();
-        Dungeon.hero.updateSprite();
-        Dungeon.hero.readyAndIdle();
+        hero.updateSprite();
+        hero.readyAndIdle();
 
         doSelfTest();
     }
 
     private void doSelfTest() {
-        if(BuildConfig.DEBUG) {
+        if(Util.isDebug()) {
             for (int i = 0; i< Dungeon.level.map.length; ++i) {
                 Dungeon.level.tileDescByCell(i);
                 Dungeon.level.tileNameByCell(i);
@@ -557,7 +565,7 @@ public class GameScene extends PixelScene {
             }
     }
 
-    public void prompt(String text) {
+    public void prompt(String text, Image icon) {
 
         if (prompt != null) {
             prompt.killAndErase();
@@ -565,7 +573,7 @@ public class GameScene extends PixelScene {
         }
 
         if (text != null) {
-            prompt = new Toast(text) {
+            prompt = new Toast(text, icon) {
                 @Override
                 protected void onClose() {
                     cancel();
@@ -775,9 +783,14 @@ public class GameScene extends PixelScene {
 
     public static void selectCell(CellSelector.Listener listener, Char selector) {
         if(isSceneReady()) {
+            if (cellSelector != null && cellSelector.listener != null && cellSelector.listener != defaultCellListener) {
+                cellSelector.listener.onSelect( null, cellSelector.selector);
+            }
+
             cellSelector.listener = listener;
             cellSelector.selector = selector;
-            scene.prompt(listener.prompt());
+
+            scene.prompt(listener.prompt(), listener.icon());
             script.runOptional("selectCell");
         }
     }
@@ -831,18 +844,7 @@ public class GameScene extends PixelScene {
         QuickSlot.cancel();
     }
 
-    private static final CellSelector.Listener defaultCellListener = new CellSelector.Listener() {
-        @Override
-        public void onSelect(Integer cell, @NotNull Char selector) {
-            selector.handle(cell);
-            selector.next();
-        }
-
-        @Override
-        public String prompt() {
-            return null;
-        }
-    };
+    private static final CellSelector.Listener defaultCellListener = new DefaultCellListener();
 
     public void updateToolbar(boolean reset) {
         if (toolbar != null) {
@@ -850,7 +852,7 @@ public class GameScene extends PixelScene {
             if(reset) {
                 toolbar.destroy();
 
-                toolbar = new Toolbar(Dungeon.hero,uiCamera.width);
+                toolbar = new Toolbar(Dungeon.hero);
                 toolbar.camera = uiCamera;
             }
 
@@ -899,4 +901,5 @@ public class GameScene extends PixelScene {
 
         return scene.logicTiles.tile(cell);
     }
+
 }

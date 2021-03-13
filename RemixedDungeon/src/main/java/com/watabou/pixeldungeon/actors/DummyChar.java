@@ -58,15 +58,10 @@ public class DummyChar extends Char {
     }
 
     public void add(Buff buff) {
-
-        GLog.debug("%s added to %s", buff.getEntityKind(), getEntityKind());
-
-        //buffs.add(buff);
+        GLog.debug("%s (%s) added to %s", buff.getEntityKind(), buff.getSource().getEntityKind(), getEntityKind());
     }
 
     public void remove(@Nullable Buff buff) {
-        //buffs.remove(buff);
-
         if(buff!=null) {
             GLog.debug("%s removed from %s", buff.getEntityKind(), getEntityKind());
         }

@@ -10,4 +10,9 @@ public interface ItemOwner {
     Belongings getBelongings();
     boolean collect(Item item);
     boolean useBags();
+
+    void generateNewItem();
+
+    int priceSell(Item item);
+    int priceBuy(Item item);
 }

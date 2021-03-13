@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items.armor;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -71,46 +72,57 @@ public class WarriorArmor extends ClassArmor {
 		return Game.getVar(R.string.WarriorArmor_Desc);
 	}
 
-	protected static CellSelector.Listener leaper = new  CellSelector.Listener() {
-		
+	protected static CellSelector.Listener leaper = new LeaperCellListener();
+
+	private static class LeaperCellListener implements CellSelector.Listener {
+
 		@Override
 		public void onSelect(Integer target, @NotNull Char selector) {
-			if (target != null && target != selector.getPos()) {
-				
-				int cell = Ballistica.cast( selector.getPos(), target, false, true, true );
-				if (Actor.findChar( cell ) != null && cell != selector.getPos()) {
-					cell = Ballistica.trace[Ballistica.distance - 2];
-				}
-				
-				selector.checkIfFurious();
-				
-				Invisibility.dispel(selector);
-				
-				final int dest = cell;
-				selector.busy();
-				((HeroSpriteDef) selector.getSprite()).jump( selector.getPos(), cell, () -> {
-					selector.placeTo( dest );
-					Dungeon.level.press( dest, selector );
-					Dungeon.observe();
+			if (target != null) {
+				final int pos = selector.getPos();
 
-					for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
-						Char mob = Actor.findChar( selector.getPos() + Level.NEIGHBOURS8[i] );
-						if (mob != null && mob != selector) {
-							Buff.prolong( mob, Paralysis.class, SHOCK_TIME );
-						}
+				if (target != pos) {
+
+					int cell = Ballistica.cast(pos, target, false, true, true);
+					if (Actor.findChar(cell) != null && cell != pos) {
+						cell = Ballistica.trace[Ballistica.distance - 2];
 					}
 
-					CellEmitter.center( dest ).burst( Speck.factory( Speck.DUST ), 10 );
-					Camera.main.shake( 2, 0.5f );
+					selector.checkIfFurious();
 
-					selector.spendAndNext( LEAP_TIME );
-				});
+					Invisibility.dispel(selector);
+
+					final int dest = cell;
+					selector.busy();
+					((HeroSpriteDef) selector.getSprite()).jump(pos, cell, () -> {
+						selector.placeTo(dest);
+						selector.level().press(dest, selector);
+						Dungeon.observe();
+
+						for (int i = 0; i < Level.NEIGHBOURS8.length; i++) {
+							Char mob = Actor.findChar(pos + Level.NEIGHBOURS8[i]);
+							if (mob != null && mob != selector) {
+								Buff.prolong(mob, Paralysis.class, SHOCK_TIME);
+							}
+						}
+
+						CellEmitter.center(dest).burst(Speck.factory(Speck.DUST), 10);
+						Camera.main.shake(2, 0.5f);
+
+						selector.spendAndNext(LEAP_TIME);
+					});
+				}
 			}
 		}
-		
+
 		@Override
 		public String prompt() {
 			return Game.getVar(R.string.WarriorArmor_Prompt);
 		}
-	};
+
+		@Override
+		public Image icon() {
+			return null;
+		}
+	}
 }

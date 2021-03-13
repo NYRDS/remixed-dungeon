@@ -5,13 +5,31 @@
       "identified": true
     },
     "items": [
+      {
+        "kind": "PotionOfLevitation"
+      },
+      {
+        "kind": "FireArrow"
+      },
+      {
+        "kind": "ScrollOfUpgrade"
+      },
+      {
+        "kind": "SpellBook"
+      },
+      {
+        "kind": "WoodenShield"
+      },
+      {
+        "kind": "ScrollOfTerror"
+      }
     ],
     "str": 10,
     "hp": 20000000,
     "magicAffinity": "Common",
-    "sp": 10,
-    "maxSp": 10,
-    "sl" : 2
+    "sp": 100000,
+    "maxSp": 100000,
+    "sl" : 20
   },
   "non_expert": {
     "items": [
@@ -35,7 +53,6 @@
         "kind": "PotionOfStrength"
       }
     ],
-    "isSpellUser": true,
     "magicAffinity": "Combat"
   },
   "MAGE": {
@@ -57,7 +74,6 @@
     ],
     "maxSp":15,
     "sp":15,
-    "isSpellUser": true,
     "magicAffinity": "Elemental"
   },
   "ROGUE": {
@@ -71,7 +87,6 @@
         "kind": "ScrollOfMagicMapping"
       }
     ],
-    "isSpellUser": true,
     "magicAffinity": "Rogue"
   },
   "HUNTRESS": {
@@ -86,6 +101,7 @@
         "kind": "Boomerang"
       }
     ],
+    "magicAffinity": "Huntress",
     "hp": 15
   },
   "ELF": {
@@ -114,7 +130,7 @@
     "immunities": [
       "Roots"
     ],
-
+    "magicAffinity": "Elf",
     "str": 9,
     "hp": 15
   },
@@ -136,7 +152,6 @@
         "kind": "PotionOfHealing"
       }
     ],
-    "isSpellUser": true,
     "magicAffinity": "Necromancy"
   },
   "GNOLL": {
@@ -154,7 +169,6 @@
         "quantity": 8
       }
     ],
-    "isSpellUser": true,
     "magicAffinity": "Witchcraft",
     "quickslot": [
       {

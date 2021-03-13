@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.windows.elements.Tool;
 
 class QuickslotTool extends Tool {
 
-    private QuickSlot slot;
+    private final QuickSlot slot;
 
     protected ColorBlock cooldownMeter;
 

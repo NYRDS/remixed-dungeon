@@ -50,7 +50,7 @@ return spell.init{
 
         local weapon = caster:getBelongings().weapon
         local secondaryWeapon = caster:getBelongings().leftHand
-        local damage = caster:skillLevel() * (weapon:damageRoll(caster) + secondaryWeapon:damageRoll(caster))
+        local damage = math.sqrt(caster:skillLevel()) * (weapon:damageRoll(caster) + secondaryWeapon:damageRoll(caster))
 
         victim:damage(damage, caster)
         RPD.Sfx.Wound:hit(victim)

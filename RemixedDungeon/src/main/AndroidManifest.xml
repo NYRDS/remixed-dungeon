@@ -35,8 +35,8 @@
         android:networkSecurityConfig="@xml/network_security_config"
         tools:replace="android:fullBackupContent"
         android:fullBackupContent="@xml/backup_descriptor"
-        android:requestLegacyExternalStorage="true"
-        >
+        android:requestLegacyExternalStorage="true">
+
 
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
 
@@ -71,14 +71,6 @@
         <activity
             android:name="com.nyrds.android.QuickModTest"
             android:exported="true" />
-
-
-        <receiver android:name="com.nyrds.pixeldungeon.support.GooglePlayReferrer"
-            android:enabled="true">
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
-            </intent-filter>
-        </receiver>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

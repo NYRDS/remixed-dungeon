@@ -4,6 +4,7 @@ package com.nyrds.pixeldungeon.ai;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -20,7 +21,7 @@ import java.util.Map;
 
 public abstract class MobAi implements AiState {
 
-    private static Map<String, AiState> aiStateInstances = new HashMap<>();
+    private static final Map<String, AiState> aiStateInstances = new HashMap<>();
 
     static {
         registerAiState(Passive.class);
@@ -32,6 +33,8 @@ public abstract class MobAi implements AiState {
         registerAiState(Horrified.class);
         registerAiState(RunningAmok.class);
         registerAiState(ControlledAi.class);
+        registerAiState(MoveOrder.class);
+        registerAiState(KillOrder.class);
     }
 
     @Override
@@ -94,6 +97,9 @@ public abstract class MobAi implements AiState {
 
 
     protected Char chooseEnemy(@NotNull Mob me, float attentionFactor) {
+
+        attentionFactor *= me.getAttentionFactor();
+        attentionFactor *= Game.getDifficultyFactor();
 
         Char bestEnemy = CharsList.DUMMY;
         int dist = me.level().getLength();

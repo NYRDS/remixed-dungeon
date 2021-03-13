@@ -25,6 +25,7 @@ import com.nyrds.android.util.ModdingMode;
 import com.watabou.glwrap.Texture;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.InputStream;
 import java.util.HashMap;
@@ -34,10 +35,10 @@ import lombok.SneakyThrows;
 
 public class TextureCache {
 
-	private static Map<Object, SmartTexture> all = new HashMap<>();
+	private static final Map<Object, SmartTexture> all = new HashMap<>();
 
 	// No dithering, no scaling, 32 bits per pixel
-	private static BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
+	private static final BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
 	static {
 		bitmapOptions.inScaled = false;
 		bitmapOptions.inDither = false;
@@ -67,23 +68,35 @@ public class TextureCache {
 		all.put(key, tx);
 	}
 
+	@Nullable
+	public static SmartTexture rawget(@NotNull Object src) {
+		return all.get(src);
+	}
+
+	@Nullable
+	public static SmartTexture getOrCreate(@NotNull Object src, SmartTextureFactory factory) {
+		SmartTexture ret = rawget(src);
+		if(ret!=null) {
+			return ret;
+		}
+
+		ret = factory.create();
+		add(src, ret);
+
+		return ret;
+	}
+
 	public static SmartTexture get(@NotNull Object src) {
-
-		if (all.containsKey(src)) {
-
-			return all.get(src);
-
+		SmartTexture ret = rawget(src);
+		if (ret!=null) {
+			return ret;
 		} else if (src instanceof SmartTexture) {
-
 			return (SmartTexture) src;
-
 		} else {
-
 			SmartTexture tx = new SmartTexture(getBitmap(src));
 			all.put(src, tx);
 			return tx;
 		}
-
 	}
 
 	public static void clear() {
@@ -92,13 +105,6 @@ public class TextureCache {
 			txt.delete();
 		}
 		all.clear();
-
-	}
-
-	public static void reload() {
-		for (SmartTexture tx : all.values()) {
-			tx.reload();
-		}
 	}
 
 	@SneakyThrows
@@ -117,6 +123,10 @@ public class TextureCache {
 
 	public static boolean contains(Object key) {
 		return all.containsKey(key);
+	}
+
+	public interface SmartTextureFactory {
+		SmartTexture create();
 	}
 
 }

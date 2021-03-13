@@ -5,6 +5,7 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.CustomItem;
+import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
@@ -210,8 +211,8 @@ import java.util.Map;
 
 public class ItemFactory {
 
-    static private Map<String, Class<? extends Item>> mItemsList = new HashMap<>();
-    static private Map<Class<? extends Item>, String> mNamesList = new HashMap<>();
+    static private final Map<String, Class<? extends Item>> mItemsList = new HashMap<>();
+    static private final Map<Class<? extends Item>, String> mNamesList = new HashMap<>();
 
     static {
         initItemsMap();
@@ -432,6 +433,8 @@ public class ItemFactory {
         registerItemClass(AmokArrow.class);
         registerItemClass(CandyOfDeath.class);
         //registerItemClass(TacticalCrossbow.class); // no item pic
+
+        registerItemClass(DummyItem.class);
     }
 
     public static boolean isValidItemClass(String itemClass) {

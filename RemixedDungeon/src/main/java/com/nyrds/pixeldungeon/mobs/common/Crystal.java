@@ -1,6 +1,8 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.nyrds.pixeldungeon.items.chaos.ChaosCommon;
 import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -13,6 +15,7 @@ import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.wands.SimpleWand;
 import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -123,14 +126,15 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	public void die(NamedEntityKind cause) {
 		int pos = getPos();
 
-		if (Dungeon.level.map[pos] == Terrain.PEDESTAL) {
-			Dungeon.level.set(pos, Terrain.EMBERS);
+		Level level = level();
+		if (level.map[pos] == Terrain.PEDESTAL) {
+			level.set(pos, Terrain.EMBERS);
 			int x, y;
-			x = Dungeon.level.cellX(pos);
-			y = Dungeon.level.cellY(pos);
+			x = level.cellX(pos);
+			y = level.cellY(pos);
 
-			Dungeon.level.clearAreaFrom(Darkness.class, x - 2, y - 2, 5, 5);
-			Dungeon.level.fillAreaWith(Foliage.class, x - 2, y - 2, 5, 5, 1);
+			level.clearAreaFrom(Darkness.class, x - 2, y - 2, 5, 5);
+			level.fillAreaWith(Foliage.class, x - 2, y - 2, 5, 5, 1);
 
 			GameScene.updateMap();
 		}
@@ -146,5 +150,13 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	protected int zapProc(@NotNull Char enemy, int damage) {
 		ensureWand().mobWandUse(this, enemy.getPos());
 		return 0;
+	}
+
+	@Override
+	public void onActionTarget(String action, Char actor) {
+		if(action.equals(CommonActions.MAC_STEAL)) {
+			ChaosCommon.doChaosMark(getPos(), Dungeon.depth * 3);
+			die(actor);
+		}
 	}
 }

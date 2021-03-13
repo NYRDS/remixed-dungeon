@@ -39,9 +39,9 @@ import java.util.HashSet;
 
 public class WandOfLightning extends SimpleWand  {
 	
-	private ArrayList<Char> affected = new ArrayList<>();
+	private final ArrayList<Char> affected = new ArrayList<>();
 	
-	private int[] points = new int[20];
+	private final int[] points = new int[20];
 	private int nPoints;
 	
 	@Override
@@ -92,18 +92,14 @@ public class WandOfLightning extends SimpleWand  {
 		
 		Char ch = Actor.findChar( cell );
 		if (ch != null) {
-			
 			affected.clear();
 			int lvl = effectiveLevel();
 			hit( ch, Random.Int( 5 + lvl / 2, 10 + lvl ) );
-
 		} else {
-			
 			points[nPoints++] = cell;
 			CellEmitter.center( cell ).burst( SparkParticle.FACTORY, 3 );
-			
 		}
-		getOwner().getSprite().getParent().add( new Lightning( points, nPoints, callback ) );
+		getOwner().getSprite().getParent().add( new Lightning( points, callback ) );
 	}
 	
 	@Override

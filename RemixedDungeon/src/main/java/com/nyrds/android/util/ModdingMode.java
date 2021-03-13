@@ -3,6 +3,7 @@ package com.nyrds.android.util;
 import com.nyrds.android.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.RemixedDungeon;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -36,10 +37,10 @@ public class ModdingMode {
 
 	public static boolean useRetroHeroSprites = false;
 
-	private static Set<String> pathsChecked = new HashSet<>();
-	private static Map<String, Boolean> assetsExistenceCache = new HashMap<>();
+	private static final Set<String> pathsChecked = new HashSet<>();
+	private static final Map<String, Boolean> assetsExistenceCache = new HashMap<>();
 
-	private static Map<String, String> resourcesRemap = new HashMap<>();
+	private static final Map<String, String> resourcesRemap = new HashMap<>();
 
 	static {
 		trustedMods.add("Maze");
@@ -119,13 +120,13 @@ public class ModdingMode {
 			return getSoundById(id.replace(".ogg",""));
 		}
 
-		return id;
+		return Utils.EMPTY_STRING;
 	}
 
 	public static boolean isSoundExists(String id) {
 		String resourceId = "sound/"+id;
 		String foundId = getSoundById(resourceId);
-		return  !foundId.equals(resourceId);
+		return foundId.equals(resourceId);
 	}
 
 	public static boolean isAssetExist(String resName) {

@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.utils;
 
-import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
@@ -93,14 +93,14 @@ public class Utils {
     }
 
     public static String getClassParam(String className, String paramName, String defaultValue, boolean warnIfAbsent) {
-        if (className.isEmpty()) {
+        if (className==null || className.isEmpty()) {
             return defaultValue;
         }
 
         try {
             return Game.getVar(strings.getField(className + "_" + paramName).getInt(null));
         } catch (NoSuchFieldException e) {
-            if (BuildConfig.DEBUG && warnIfAbsent) {
+            if (Util.isDebug() && warnIfAbsent) {
                 GLog.w("no definition for  %s_%s :(", className, paramName);
             }
         } catch (Exception e) {

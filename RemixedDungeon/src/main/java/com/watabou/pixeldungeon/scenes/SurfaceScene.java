@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.gltextures.Gradient;
 import com.watabou.gltextures.SmartTexture;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
 import com.watabou.input.Touchscreen.Touch;
@@ -185,13 +186,13 @@ public class SurfaceScene extends PixelScene {
 		private static final int[] day		= {0xFF4488FF, 0xFFCCEEFF};
 		private static final int[] night	= {0xFF001155, 0xFF335980};
 		
-		private SmartTexture texture;
-		private FloatBuffer verticesBuffer;
+		private final SmartTexture texture;
+		private final FloatBuffer verticesBuffer;
 		
 		public Sky( boolean dayTime ) {
 			super( 0, 0, 1, 1 );
 
-			texture = new Gradient( dayTime ? day : night );
+			texture = TextureCache.getOrCreate( Sky.class, () -> new Gradient( dayTime ? day : night ));
 			
 			float[] vertices = new float[16];
 			verticesBuffer = Quad.create();

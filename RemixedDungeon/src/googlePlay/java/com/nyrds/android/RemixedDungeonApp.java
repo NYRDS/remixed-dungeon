@@ -11,10 +11,8 @@ import androidx.multidex.MultiDexApplication;
 import com.google.firebase.FirebaseApp;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.RemixedDungeon;
 
 import java.util.concurrent.ThreadPoolExecutor;
@@ -44,7 +42,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
             ModdingMode.selectMod(RemixedDungeon.activeMod());
             Class.forName("android.os.AsyncTask");
         } catch (Throwable ignore) {
-            if(BuildConfig.DEBUG) {
+            if(Util.isDebug()) {
                 Log.d("Classes", ignore.getMessage());
             }
         }
@@ -53,7 +51,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
     @Override
     public void registerActivityLifecycleCallbacks(ActivityLifecycleCallbacks callback) {
-        if(BuildConfig.DEBUG) {
+        if(Util.isDebug()) {
             Log.d("Callbacks", callback.getClass().getName());
         }
 //        if (!callback.getClass().getName().startsWith("com.google.android.gms.measurement.")) {
@@ -63,10 +61,11 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
     static public boolean checkOwnSignature() {
         //Log.i("Game", Utils.format("own signature %s", Util.getSignature(this)));
-        if(BuildConfig.DEBUG) {
+        if(Util.isDebug()) {
             return true;
-        };
-        return Util.getSignature(getContext()).equals(StringsManager.getVar(R.string.ownSignature));
+        }
+
+        return Util.getSignature(getContext()).equals(getContext().getResources().getString(R.string.ownSignature));
     }
 
     @Override

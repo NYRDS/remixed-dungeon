@@ -4,9 +4,9 @@ import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
 import com.nyrds.android.util.ModError;
+import com.nyrds.android.util.Util;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -47,7 +47,7 @@ public class CustomBuff extends Buff {
         try {
             this.scriptFile = scriptFile;
 
-            if(BuildConfig.DEBUG) {
+            if(Util.isDebug()) {
                 GLog.debug("Loading buff %s", scriptFile);
             }
 

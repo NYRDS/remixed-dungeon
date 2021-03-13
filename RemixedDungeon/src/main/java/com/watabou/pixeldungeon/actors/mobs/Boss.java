@@ -65,7 +65,7 @@ abstract public class Boss extends Mob {
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
 
-		if(getBelongings().getItem(SkeletonKey.class)==null) {
+		if(getBelongings().getItem(SkeletonKey.class)==null) { //FIXUP for old saves
 			collect(new SkeletonKey());
 		}
 	}

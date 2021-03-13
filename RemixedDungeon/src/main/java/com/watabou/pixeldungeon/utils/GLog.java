@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.utils;
 import android.util.Log;
 
 import com.nyrds.android.util.FileSystem;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.android.util.Util;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.utils.Signal;
@@ -102,7 +102,7 @@ public class GLog {
 			return;
 		}
 
-		if(BuildConfig.DEBUG) {
+		if(Util.isDebug()) {
 			Log.i(TAG, text);
 		}
 
@@ -132,7 +132,7 @@ public class GLog {
 	}
 
 	public static void debug( String text, Object... args ) {
-		if(BuildConfig.DEBUG) {
+		if(Util.isDebug()) {
 			glog(text, args);
 		}
 	}

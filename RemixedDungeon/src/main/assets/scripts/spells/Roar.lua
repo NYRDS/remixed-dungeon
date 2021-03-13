@@ -26,6 +26,17 @@ return spell.init{
     end,
 
     cast = function(self, spell, caster)
+        RPD.Sfx.Flare:attach( 6, 32, 0xFF0000, true, caster:getSprite(), 2);
+        RPD.playSound("snd_challenge")
+
+        local duration = caster:lvl()
+        for _ = 1, caster:skillLevel() do
+            local tgt = caster:randomEnemy()
+
+            RPD.Sfx.Flare:attach( 4, 16, 0xFF0000, true, tgt:getSprite(), 2);
+            RPD.affectBuff(tgt, RPD.Buffs.Terror, duration):setSource(caster)
+        end
+
         return true
     end
 }

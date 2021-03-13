@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.items.chaos;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -53,26 +54,7 @@ public class ChaosCrystal extends UsableArtifact {
 		return new Glowing((int) (Math.random() * 0xffffff));
 	}
 
-	private CellSelector.Listener chaosMark = new CellSelector.Listener() {
-		@Override
-		public void onSelect(Integer cell, @NotNull Char selector) {
-			if (cell != null) {
-
-				if (isCursed()) {
-					cell = selector.getPos();
-				}
-
-				ChaosCommon.doChaosMark(cell, charge);
-				charge = 0;
-			}
-			selector.spendAndNext(TIME_TO_USE);
-		}
-
-		@Override
-		public String prompt() {
-			return Game.getVar(R.string.ChaosCrystal_Prompt);
-		}
-	};
+	private final CellSelector.Listener chaosMark = new ChaosMarkListener();
 
 	private final WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null) {
@@ -216,6 +198,32 @@ public class ChaosCrystal extends UsableArtifact {
 			if (charge > 0) {
 				ChaosCommon.doChaosMark(getOwner().getPos(), charge);
 			}
+		}
+	}
+
+	private class ChaosMarkListener implements CellSelector.Listener {
+		@Override
+		public void onSelect(Integer cell, @NotNull Char selector) {
+			if (cell != null) {
+
+				if (isCursed()) {
+					cell = selector.getPos();
+				}
+
+				ChaosCommon.doChaosMark(cell, charge);
+				charge = 0;
+			}
+			selector.spendAndNext(TIME_TO_USE);
+		}
+
+		@Override
+		public String prompt() {
+			return Game.getVar(R.string.ChaosCrystal_Prompt);
+		}
+
+		@Override
+		public Image icon() {
+			return null;
 		}
 	}
 }

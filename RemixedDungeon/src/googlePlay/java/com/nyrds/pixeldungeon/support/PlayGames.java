@@ -50,6 +50,8 @@ public class PlayGames {
 	private static final int RC_SIGN_IN          = 42353;
 	private static final int RC_SHOW_BADGES      = 67584;
 	private static final int RC_SHOW_LEADERBOARD = 96543;
+	private static final int RC_VIDEO_OVERLAY    = 9011;
+
 
 	private static final String PROGRESS = "Progress";
 
@@ -57,7 +59,7 @@ public class PlayGames {
 
 	private GoogleSignInAccount signedInAccount;
 
-	private GoogleSignInOptions signInOptions;
+	private final GoogleSignInOptions signInOptions;
 
 	private boolean connecting = false;
 
@@ -385,6 +387,15 @@ return filename.startsWith("game_") && filename.endsWith(".dat");
 					);
 		}
 	}
+
+	public void showVideoOverlay() {
+		if(isConnected()) {
+			Games.getVideosClient(Game.instance(), signedInAccount)
+					.getCaptureOverlayIntent()
+					.addOnSuccessListener(intent -> Game.instance().startActivityForResult(intent, RC_VIDEO_OVERLAY));
+		}
+	}
+
 
 	public interface IResult {
 		void status(boolean status);

@@ -71,17 +71,17 @@ import lombok.var;
 
 public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWithId {
 
-	private static final String TXT_TO_STRING       = "%s";
-	private static final String TXT_TO_STRING_X     = "%s x%d";
-	private static final String TXT_TO_STRING_LVL   = "%s%+d";
+	private static final String TXT_TO_STRING = "%s";
+	private static final String TXT_TO_STRING_X = "%s x%d";
+	private static final String TXT_TO_STRING_LVL = "%s%+d";
 	private static final String TXT_TO_STRING_LVL_X = "%s%+d x%d";
 
 
-	private static final   float TIME_TO_THROW   = 1.0f;
+	private static final float TIME_TO_THROW = 1.0f;
 	protected static final float TIME_TO_PICK_UP = 1.0f;
-	private static final   float TIME_TO_DROP    = 0.5f;
+	private static final float TIME_TO_DROP = 0.5f;
 
-	private static final   String AC_DROP  = "Item_ACDrop";
+	private static final String AC_DROP = "Item_ACDrop";
 	protected static final String AC_THROW = "Item_ACThrow";
 
 	@NotNull
@@ -103,11 +103,11 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	static private final String overlayFile = "items/overlays.png";
 	protected String imageFile;
 
-	public  boolean stackable = false;
+	public boolean stackable = false;
 
-	private int     quantity  = Scrambler.scramble(1);
+	private int quantity = Scrambler.scramble(1);
 
-	private int     level      = Scrambler.scramble(0);
+	private int level = Scrambler.scramble(0);
 
 	@Packable
 	@Getter
@@ -129,7 +129,8 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	@Packable(defaultValue = "-1")
 	private int quickSlotIndex = -1;
 
-	private static Comparator<Item> itemComparator = (lhs, rhs) -> {
+
+	private static final Comparator<Item> itemComparator = (lhs, rhs) -> {
 
 		if(lhs.isIdentified() &&  !rhs.isIdentified()) {
 			return -1;
@@ -291,7 +292,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 					QuickSlot.refresh(getOwner());
 				}
 
-				Item detached = ItemFactory.itemByName(getClassName());
+				Item detached = ItemFactory.itemByName(getEntityKind());
 				detached.quantity(n);
 				detached.level(level());
 				detached.onDetach();
@@ -558,7 +559,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	private Char owner = CharsList.DUMMY;
 
 	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
-		return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, warnIfAbsent);
+		return Utils.getClassParam(getEntityKind(), paramName, defaultValue, warnIfAbsent);
 	}
 
 	@SneakyThrows
@@ -666,10 +667,6 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		return 0;
 	}
 
-	public String getClassName() {
-		return ItemFactory.itemNameByClass(getClass());
-	}
-
 	public Item quickSlotContent() {
 		if(!stackable) {
 			return this;
@@ -679,11 +676,11 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 			return this;
 		}
 
-		return ItemFactory.virtual(getClassName());
+		return ItemFactory.virtual(getEntityKind());
 	}
 
 	public boolean usableByHero() {
-		return quantity() >= 1 && (Dungeon.hero.getItem(getClassName()).valid() || isEquipped(Dungeon.hero));
+		return quantity() >= 1 && (Dungeon.hero.getItem(getEntityKind()).valid() || isEquipped(Dungeon.hero));
 	}
 
 	public boolean announcePickUp() {
@@ -705,9 +702,10 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		this.defaultAction = newDefaultAction;
 	}
 
+	@LuaInterface
 	@Override
 	public String getEntityKind() {
-		return getClassName();
+		return ItemFactory.itemNameByClass(getClass());
 	}
 
 	public int overlayIndex() {
@@ -753,4 +751,9 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		return getOwner().getBelongings().getSelectedItem() == this;
 	}
 
+	@LuaInterface
+	@Deprecated
+	String getClassName() { //for old mods compatibility
+		return getEntityKind();
+	}
 }

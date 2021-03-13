@@ -51,7 +51,7 @@ return spell.init{
     end,
 
     image = function(self, spell, caster)
-        local lvl2img = {1,4,5}
+        local lvl2img = {1,9,17}
         return lvl2img[spellTier(caster)]
     end
 }

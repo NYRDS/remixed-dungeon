@@ -27,16 +27,14 @@ import android.view.View;
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.support.AdsUtils;
+import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.items.ItemSpritesDescription;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -95,9 +93,12 @@ public class RemixedDungeon extends Game {
 	}
 
     public static boolean isAlpha() {
-        return version.contains("alpha");
+        return version.contains("alpha") || version.contains("in_dev");
     }
 
+	public static boolean isDev() {
+		return version.contains("in_dev");
+	}
 
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -105,24 +106,26 @@ public class RemixedDungeon extends Game {
 
 		EuConsent.check(this);
 		playGames = new PlayGames();
+    }
+
+	@Override
+	public void onResume() {
+		super.onResume();
 
 		RemixedDungeon.activeMod(ModdingMode.activeMod());
 
 		if(!Utils.canUseClassicFont(uiLanguage())) {
 			RemixedDungeon.classicFont(false);
 		}
-		
+
 		ModdingMode.setClassicTextRenderingMode(RemixedDungeon.classicFont());
 
-		EventCollector.collectSessionData("font", String.valueOf(RemixedDungeon.classicFont()));
-
 		setSelectedLanguage();
-		ItemSpritesDescription.readItemsDesc();
 
 		updateImmersiveMode();
 
 		DisplayMetrics metrics = new DisplayMetrics();
-		instance().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+		getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		boolean landscape = metrics.widthPixels > metrics.heightPixels;
 
 		if (Preferences.INSTANCE.getBoolean(Preferences.KEY_LANDSCAPE, false) != landscape) {
@@ -131,11 +134,7 @@ public class RemixedDungeon extends Game {
 
 		Music.INSTANCE.enable(music());
 		Sample.INSTANCE.enable(soundFx());
-    }
 
-	@Override
-	public void onResume() {
-		super.onResume();
 		if (Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)) {
 			playGames.connect();
 		}
@@ -177,7 +176,7 @@ public class RemixedDungeon extends Game {
 	}
 
 	public static boolean canDonate() {
-		return Flavours.haveDonations() && Game.instance().iap.isReady() || BuildConfig.DEBUG;
+		return Flavours.haveDonations() && Game.instance().iap.isReady() || Util.isDebug();
 	}
 	
 	/*
@@ -396,7 +395,7 @@ public class RemixedDungeon extends Game {
 	static public void setDonationLevel(int level) {
 		
 		if(level > 0) {
-			AdsUtils.removeTopBanner();
+			Ads.removeEasyModeBanner();
 		}
 		
 		if (level < donated()) {

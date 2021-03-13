@@ -92,6 +92,14 @@ public class WndPlayGames extends Window {
             }
         });
 
+        addButton(new RedButton(Game.getVar(R.string.WndSettings_RecordVideo)) {
+            @Override
+            protected void onClick() {
+                super.onClick();
+                Game.instance().playGames.showVideoOverlay();
+            }
+        });
+
         resize(width, y);
     }
 
@@ -103,7 +111,7 @@ public class WndPlayGames extends Window {
 
     public static class ResultHandler implements PlayGames.IResult {
 
-        private WndMessage working;
+        private final WndMessage working;
         ResultHandler() {
             working = new WndMessage(Game.getVar(R.string.WndPlayGames_WorkInCloud));
             Game.addToScene(working);

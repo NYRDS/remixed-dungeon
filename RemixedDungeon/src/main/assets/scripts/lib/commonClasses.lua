@@ -34,11 +34,13 @@ local Buffs  = {
     MindVision   = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.MindVision"),
     Necrotism    = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.buffs.Necrotism"),
     RageBuff     = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.buffs.RageBuff"),
+    Terror       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Terror"),
     Amok         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Amok"),
     Awareness    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Awareness"),
     Barkskin     = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Barkskin"),
     Sleep        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Sleep"),
-    Slow         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Slow")
+    Slow         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Slow"),
+    Blindness    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Blindness")
 }
 
 local Blobs = {
@@ -73,17 +75,23 @@ local actions = {
     drink = "Drink_ACDrink",
     equip ="EquipableItem_ACEquip",
     throw ="Item_ACThrow",
-    drop ="Item_ACDrop"
+    drop ="Item_ACDrop",
+    ch_steal = "CharAction_Steal",
+    ch_taunt = "CharAction_Taunt",
+    ch_push = "CharAction_Push",
+    ch_order = "CharAction_Order",
+    ch_hit = "CharAction_Hit"
 }
 
 local Bundle           = "com.watabou.utils.Bundle"
 
 local Objects = {
     Ui = {
-        WndMessage    = "com.watabou.pixeldungeon.windows.WndMessage",
-        WndStory      = "com.watabou.pixeldungeon.windows.WndStory",
-        WndQuest      = "com.watabou.pixeldungeon.windows.WndQuest",
-        WndOptionsLua = "com.nyrds.pixeldungeon.windows.WndOptionsLua",
+        WndMessage     = "com.watabou.pixeldungeon.windows.WndMessage",
+        WndStory       = "com.watabou.pixeldungeon.windows.WndStory",
+        WndQuest       = "com.watabou.pixeldungeon.windows.WndQuest",
+        WndOptionsLua  = "com.nyrds.pixeldungeon.windows.WndOptionsLua",
+        WndShopOptions = "com.nyrds.pixeldungeon.windows.WndShopOptions"
     },
 
     Actors = {
@@ -149,6 +157,7 @@ local Sfx = {
     SpellSprite = luajava.bindClass("com.watabou.pixeldungeon.effects.SpellSprite"),
     DeathStroke= luajava.bindClass("com.nyrds.pixeldungeon.effects.DeathStroke"),
     Wound = luajava.bindClass("com.watabou.pixeldungeon.effects.Wound"),
+    Flare = luajava.bindClass("com.watabou.pixeldungeon.effects.Flare")
 }
 
 local Badges = luajava.bindClass("com.watabou.pixeldungeon.Badges")
@@ -285,7 +294,10 @@ local RPD = {
         Dungeon.hero:teleportTo(position)
     end,
 
+    ---@param handler function
     chooseOption = function(handler, title, text, ...)
+        assert(type(handler)=='function', "chooseOption handler must be a function")
+
         local wnd = luajava.newInstance(Objects.Ui.WndOptionsLua, handler, title, text, {...})
         GameScene:show(wnd)
     end,
@@ -294,6 +306,22 @@ local RPD = {
         local wnd = luajava.newInstance(Objects.Ui.WndStory,story_id)
         GameScene:show(wnd)
     end,
+
+    showTradeWindow = function(shopkeeper,client)
+        local wnd = luajava.newInstance(Objects.Ui.WndShopOptions, shopkeeper, client )
+        GameScene:show(wnd)
+    end,
+
+    showBuyWindow = function(shopkeeper,client)
+        local wnd = luajava.newInstance(Objects.Ui.WndShopOptions, shopkeeper, client )
+        wnd: showBuyWnd()
+    end,
+
+    showSellWindow = function(shopkeeper,client)
+        local wnd = luajava.newInstance(Objects.Ui.WndShopOptions, shopkeeper, client )
+        wnd: showSellWnd()
+    end,
+
 
     zapEffect = function (from, to, zapEffect)
         GameScene:zapEffect(from, to, zapEffect)
@@ -333,8 +361,16 @@ local RPD = {
 
     createItem = function(itemClass, itemDesc)
         local json = require("scripts/lib/json")
-        local item = ItemFactory:createItem(itemClass, json.encode(itemDesc))
+        local item = ItemFactory:createItem(itemClass, json.encode(itemDesc or {_=""}))
         return item
+    end,
+
+    spawnMob = function(mobClass, cell, mobDesc)
+        local mob = MobFactory:mobByName(mobClass)
+        mob:setPos(cell)
+        mob:fromJson(json.encode(mobDesc or {_=""}))
+        Dungeon.level:spawnMob(mob)
+        return mob
     end,
 
     levelObject = function(objectClass, cell)
@@ -428,6 +464,8 @@ local RPD = {
         return string.format(fmt, table.unpack(order))
     end
 }
+
+RPD.creteItem = RPD.createItem -- for old Epic
 
 return RPD
 

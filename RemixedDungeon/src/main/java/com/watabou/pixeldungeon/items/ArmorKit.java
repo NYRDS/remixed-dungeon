@@ -84,7 +84,7 @@ public class ArmorKit extends Item {
 		GLog.w( Game.getVar(R.string.ArmorKit_Upgraded), armor.name() );
 		
 		Armor classArmor = ClassArmor.upgrade( owner, armor );
-		if (owner.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR) == armor) {
+		if (owner.getItemFromSlot(Belongings.Slot.ARMOR) == armor) {
 			owner.getBelongings().setItemForSlot(classArmor, Belongings.Slot.ARMOR);
 			owner.updateSprite();
 		} else {

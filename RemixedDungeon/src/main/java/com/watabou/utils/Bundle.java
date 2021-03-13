@@ -18,8 +18,8 @@
 package com.watabou.utils;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.android.util.Util;
 import com.nyrds.generated.BundleHelper;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 
 import org.jetbrains.annotations.NotNull;
@@ -251,6 +251,12 @@ public class Bundle {
             value = Float.MAX_VALUE;
             EventCollector.logException(key+" is infinity");
         }
+
+        if(Float.isNaN(value)) {
+            value = Float.MAX_VALUE;
+            EventCollector.logException(key+" is NaN");
+        }
+
         data.put(key, value);
     }
 
@@ -406,7 +412,7 @@ public class Bundle {
 
     @SneakyThrows
     public static void write(Bundle bundle, OutputStream stream) {
-        if(BuildConfig.DEBUG) { //cleartext for debugging
+        if(Util.isDebug()) { //cleartext for debugging
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(stream));
             writer.write(bundle.data.toString(2));
             writer.close();

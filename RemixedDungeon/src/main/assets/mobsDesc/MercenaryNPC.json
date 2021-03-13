@@ -1,6 +1,7 @@
 {
-   "baseSpeed"		 :0,
+   "baseSpeed"	   :0,
    "spriteDesc"    :"spritesDesc/MercenaryNPC.json",
+   "scriptFile"    :"scripts/npc/Mercenary",
    "friendly"      :true,
    "movable"       :false,
    "aiState"       :"Passive",

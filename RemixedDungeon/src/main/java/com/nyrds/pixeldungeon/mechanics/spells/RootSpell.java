@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 public class RootSpell extends Spell{
 
 	RootSpell() {
-		targetingType = SpellHelper.TARGET_CELL;
+		targetingType = SpellHelper.TARGET_CHAR;
 		magicAffinity = SpellHelper.AFFINITY_ELEMENTAL;
 
 		level = 2;

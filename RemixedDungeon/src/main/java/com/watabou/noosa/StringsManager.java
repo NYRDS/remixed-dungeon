@@ -5,9 +5,8 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 
-import com.nyrds.android.RemixedDungeonApp;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -38,17 +37,17 @@ public class StringsManager {
 
 	@SuppressLint("UseSparseArrays")
 	@NotNull
-	private static Map<Integer, String>   stringMap  = new HashMap<>();
+	private static final Map<Integer, String>   stringMap  = new HashMap<>();
 	@SuppressLint("UseSparseArrays")
 	@NotNull
-	private static Map<Integer, String[]> stringsMap = new HashMap<>();
+	private static final Map<Integer, String[]> stringsMap = new HashMap<>();
 
-	private static Map<String, String>   sStringMap  = new HashMap<>();
-	private static Map<String, String[]> sStringsMap = new HashMap<>();
+	private static final Map<String, String>   sStringMap  = new HashMap<>();
+	private static final Map<String, String[]> sStringsMap = new HashMap<>();
 
-	private static Map<String, Integer> keyToInt = new HashMap<>();
+	private static final Map<String, Integer> keyToInt = new HashMap<>();
 
-    private static Set<String> nonModdable = new HashSet<>();
+    private static final Set<String> nonModdable = new HashSet<>();
 
 
     public static Set<String> missingStrings = new HashSet<>();
@@ -69,7 +68,7 @@ public class StringsManager {
 	}
 
 	@SneakyThrows
-	private static void addMappingForClass(Class<?> clazz) {
+	private static void addMappingForClass(@NotNull Class<?> clazz) {
 		for (Field f : clazz.getDeclaredFields()) {
 			if (f.isSynthetic()) {
 				continue;
@@ -148,7 +147,7 @@ public class StringsManager {
 		Configuration config = getResources().getConfiguration();
 
 		if(!getResources().getConfiguration().locale.equals(userSelectedLocale)) {
-			if(BuildConfig.DEBUG){
+			if(Util.isDebug()){
 				GLog.i("Locale is messed up! Restoring");
 			}
 			config.locale = userSelectedLocale;
@@ -256,6 +255,6 @@ public class StringsManager {
 	}
 
 	public static Resources getResources() {
-		return RemixedDungeonApp.getContext().getResources();
+		return Game.instance().getResources();
 	}
 }

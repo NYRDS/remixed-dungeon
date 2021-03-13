@@ -19,13 +19,11 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
-import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -33,20 +31,11 @@ public class Terror extends FlavourBuff {
 
 	public static final float DURATION = 10f;
 
-	public Char source;
-	
 	@Override
 	public int icon() {
 		return BuffIndicator.TERROR;
 	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		// It's not really correct...
-		source = Dungeon.hero;
-	}
-	
+
 	@Override
 	public String name() {
 		return "Terror";

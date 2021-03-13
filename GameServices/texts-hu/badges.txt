@@ -1,29 +1,32 @@
-1. Goo levágva
-A terror a csatornában nincs többé.
+1. Ragacs legyőzve
+Nincs többé terror a csatornákban. 
 
-2. Tengu levágva
-Az ördögi szellem többé nem fog kínozni senkit.
+2. Tengu legyőzve
+Az ördögi lélek többé senkit sem fog kínozni.
 
 3. DM-300 levágva
 A gép amely elvesztette célját deaktiválva lett.
 
 4. A Király levágva
-A halott birodalom ősi királya végre nyugovóra tért.
+Egy halott birodalom ősi királya végre nyugovóra tért.
 
-5. Lidérc levágva
-Még a halál maga is a végéhez ér egyszer.
+5. Lich legyőzve
+Még maga a halál is bevégeztetett.
 
-6. Jég Örző levágva
-A mágiák csodája legyőzetett!
+6. Jég Őrző legyőzve
+A varázslatos mágiák csodája legyőzetett!
 
-7. Pókkirálynő levágva
+7. Pókkirálynő legyőzve
 Egy másik királyság is elvesztette az uralkodóját.
 
-8. Árnéyk Úr levágva
+8. Árnyék Fejedelem legyőzve
 A sötétség valódi megtestesülése elpusztítva!
 
-9. Az Ösi Isten levágva
-Yog-Dzewa és a borzalmai nincsenek többé.
+9. Az Ősi Isten legyőzve
+Yog-Dzewa és borzalmai nincsenek többé.
 
 10. Új Gnoll a városban!
 Bátorság, Kedvesség, néhány arany érme, és még egy brutális Gnoll is csatlakozik a kalandhoz.
+
+Sebészi maszk megszerezve
+A maszk viselése azt jelzi, hogy törődsz másokkal.

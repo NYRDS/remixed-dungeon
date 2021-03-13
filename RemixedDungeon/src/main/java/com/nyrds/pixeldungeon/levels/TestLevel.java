@@ -82,7 +82,7 @@ public class TestLevel extends RegularLevel {
 		for(Item item:items) {
 			int cell = randomRespawnCell(passable);
 			if(!cellValid(cell)) {
-				GLog.debug("no cell for %s", item.getClassName());
+				GLog.debug("no cell for %s", item.getEntityKind());
 				continue;
 			}
 			drop(item,cell);

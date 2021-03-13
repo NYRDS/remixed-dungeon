@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.utils.GameControl;
@@ -61,7 +61,7 @@ public class StartScene extends PixelScene {
     private static final float WIDTH_L = 224;
     private static final float HEIGHT_L = 124;
 
-    private ArrayList<ClassShield> shields = new ArrayList<>();
+    private final ArrayList<ClassShield> shields = new ArrayList<>();
 
     private float buttonX;
     private float buttonY;
@@ -271,7 +271,7 @@ public class StartScene extends PixelScene {
         curShield.highlight(true);
 
 
-        if (!BuildConfig.DEBUG) {
+        if (!Util.isDebug()) {
             if (curShield.cl == HeroClass.HUNTRESS && !huntressUnlocked) {
                 updateUnlockLabel(Game.getVar(R.string.StartScene_Unlock));
                 return;

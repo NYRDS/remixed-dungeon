@@ -18,14 +18,19 @@ return spell.init{
             name          = "Heal_Name",
             info          = "Heal_Info",
             magicAffinity = "Witchcraft",
-            targetingType = "self",
-            level         = 1,
-            castTime      = 0,
-            spellCost     = 1
+            targetingType = "char",
+            level         = 2,
+            castTime      = 1,
+            spellCost     = 5,
+            cooldown      = 2
         }
     end,
 
-    cast = function(self, spell, caster)
+    castOnChar = function(self, spell, caster, target)
+        if target then
+            local heal = target:ht() / 5. * caster:skillLevel()
+            target:heal(math.max(1, heal), caster)
+        end
         return true
     end
 }

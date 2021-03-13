@@ -5,7 +5,7 @@ import android.os.Build;
 
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.utils.Log;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.RemixedDungeon;
@@ -40,7 +40,7 @@ public class AppodealAdapter {
         Appodeal.disableLocationPermissionCheck();
 
 
-        if (BuildConfig.DEBUG) {
+        if (Util.isDebug()) {
             Appodeal.setLogLevel(Log.LogLevel.verbose);
             Appodeal.setTesting(true);
         }

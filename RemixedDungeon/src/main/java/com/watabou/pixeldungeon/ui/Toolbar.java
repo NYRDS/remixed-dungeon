@@ -18,33 +18,19 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.RemixedDungeon;
-import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.windows.WndHero;
-import com.watabou.pixeldungeon.windows.WndInfoCell;
-import com.watabou.pixeldungeon.windows.WndInfoItem;
-import com.watabou.pixeldungeon.windows.WndInfoMob;
-import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
@@ -59,14 +45,14 @@ public class Toolbar extends Component {
     @Nullable
     private final Tool btnSpells;
 
-    private InventoryTool btnInventory;
+    private final InventoryTool btnInventory;
 
     private Component toolbar = new Component();
 
-    private ArrayList<QuickslotTool> slots = new ArrayList<>();
+    private final ArrayList<QuickslotTool> slots = new ArrayList<>();
     final private Hero hero;
 
-    public Toolbar(final Hero hero, float maxWidth) {
+    public Toolbar(final Hero hero) {
         super();
 
         this.hero = hero;
@@ -162,7 +148,7 @@ public class Toolbar extends Component {
         actionBox.setAlign(VBox.Align.Bottom);
 
         VHBox inventoryBox = new VHBox(width());
-        if (hero.spellUser) {
+        if (hero.isSpellUser()) {
             inventoryBox.add(btnSpells);
         }
         inventoryBox.add(btnInventory);
@@ -232,52 +218,7 @@ public class Toolbar extends Component {
         add(toolbar);
     }
 
-    private static CellSelector.Listener informer = new CellSelector.Listener() {
-        @Override
-        public void onSelect(Integer cell, @NotNull Char selector) {
-            if (cell == null) {
-                return;
-            }
-
-            Level level = selector.level();
-
-            if (!level.cellValid(cell)
-                    || (!level.visited[cell] && !level.mapped[cell])) {
-                GameScene.show(new WndMessage(Game
-                        .getVar(R.string.Toolbar_Info1)));
-                return;
-            }
-
-            if (!Dungeon.visible[cell]) {
-                GameScene.show(new WndInfoCell(cell));
-                return;
-            }
-
-            if (cell == Dungeon.hero.getPos()) {
-                GameScene.show(new WndHero());
-                return;
-            }
-
-            Mob mob = (Mob) Actor.findChar(cell);
-            if (mob != null) {
-                GameScene.show(new WndInfoMob(mob, selector));
-                return;
-            }
-
-            Heap heap = level.getHeap(cell);
-            if (heap != null) {
-                GameScene.show(new WndInfoItem(heap));
-                return;
-            }
-
-            GameScene.show(new WndInfoCell(cell));
-        }
-
-        @Override
-        public String prompt() {
-            return Game.getVar(R.string.Toolbar_Info2);
-        }
-    };
+    private static final CellSelector.Listener informer = new InformerCellListener();
 
     public void pickup(Item item) {
         btnInventory.pickUp(item);

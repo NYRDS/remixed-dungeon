@@ -43,7 +43,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 			LAYER_DEATH
 	};
 
-	private Map<String,String> layersDesc = new HashMap<>();
+	private final Map<String,String> layersDesc = new HashMap<>();
 
 	public RetroHeroSpriteDef(String[] lookDesc){
 		super(HERO_SPRITES_DESC_HERO_JSON,0);
@@ -75,9 +75,9 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 			facialHairDescriptor = "hero/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
 		}
 
-		if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()){
-			helmetDescriptor = helmetDescriptor(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR), hero);
-			if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).isCoveringHair()){
+		if(hero.getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()){
+			helmetDescriptor = helmetDescriptor(hero.getItemFromSlot(Belongings.Slot.ARMOR), hero);
+			if(hero.getItemFromSlot(Belongings.Slot.ARMOR).isCoveringHair()){
 				drawHair = false;
 			}
 		}
@@ -85,10 +85,10 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 		if (drawHair){ hairDescriptor = "hero/head/hair/" + classDescriptor + "_HAIR.png"; }
 
 		layersDesc.put(LAYER_BODY,bodyDescriptor(hero));
-		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR), hero));
+		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.getItemFromSlot(Belongings.Slot.ARMOR), hero));
 		layersDesc.put(LAYER_HEAD, "hero/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_HAIR, hairDescriptor);
-		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR)));
+		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.getItemFromSlot(Belongings.Slot.ARMOR)));
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 		layersDesc.put(LAYER_DEATH, "hero/death/" +deathDescriptor+".png");
@@ -126,16 +126,16 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 	}
 
 	private String helmetDescriptor(EquipableItem armor, Hero hero) {
-		if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()){
-			return "hero/armor/helmet/" +armor.getClass().getSimpleName()+".png";
+		if(hero.getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()){
+			return "hero/armor/helmet/" +armor.getVisualName()+".png";
 		}
 		return HERO_EMPTY_PNG;
 	}
 
 	private String collarDescriptor(EquipableItem armor, Hero hero) {
 
-		if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasCollar()){
-			return "hero/armor/collar/" +armor.getClass().getSimpleName()+".png";
+		if(hero.getItemFromSlot(Belongings.Slot.ARMOR).hasCollar()){
+			return "hero/armor/collar/" +armor.getVisualName()+".png";
 		}
 		return HERO_EMPTY_PNG;
 	}

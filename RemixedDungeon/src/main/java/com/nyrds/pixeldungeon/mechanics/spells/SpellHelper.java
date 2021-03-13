@@ -19,11 +19,15 @@ public class SpellHelper {
     public static final String AFFINITY_SHADOW      = "Shadow";
     public static final String AFFINITY_COMMON      = "Common";
 
-    public static final String TARGET_SELF = "self";
-    public static final String TARGET_CELL = "cell";
-    public static final String TARGET_NONE = "none";
+    public static final String TARGET_SELF          = "self";
+    public static final String TARGET_CELL          = "cell";
+    public static final String TARGET_CHAR          = "char";
+    public static final String TARGET_CHAR_NOT_SELF = "char_not_self";
+    public static final String TARGET_ALLY          = "ally";
+    public static final String TARGET_ENEMY         = "enemy";
+    public static final String TARGET_NONE          = "none";
 
-    private static Map<String, Integer> affinityToIcon = new HashMap<>();
+    private static final Map<String, Integer> affinityToIcon = new HashMap<>();
 
 
     static {
@@ -33,6 +37,9 @@ public class SpellHelper {
         affinityToIcon.put(AFFINITY_COMMON, 6);
         affinityToIcon.put("Combat", 15);
         affinityToIcon.put("Rogue", 16);
+        affinityToIcon.put("Witchcraft", 17);
+        affinityToIcon.put("Huntress", 18);
+        affinityToIcon.put("Elf", 19);
     }
 
     public static int iconIdByAffinity(String affinity) {

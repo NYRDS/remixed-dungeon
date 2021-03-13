@@ -2,13 +2,14 @@ package com.watabou.noosa;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.windows.IPlaceable;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.regex.Pattern;
 
-public abstract class Text extends Visual {
+public abstract class Text extends Visual implements IPlaceable {
 
 	@NotNull
 	protected String text= Utils.EMPTY_STRING;

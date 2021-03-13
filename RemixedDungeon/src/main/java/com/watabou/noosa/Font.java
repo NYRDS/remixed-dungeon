@@ -5,7 +5,6 @@ import android.graphics.RectF;
 import android.opengl.GLES20;
 
 import com.watabou.gltextures.SmartTexture;
-import com.watabou.gltextures.TextureCache;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
 
@@ -47,6 +46,7 @@ public class Font extends TextureFilm {
 		
 		texture = tx;
 		texture.filter(GLES20.GL_LINEAR,GLES20.GL_NEAREST);
+		texture.reload();
 	}
 
 	private int findNextEmptyLine(Bitmap bitmap, int startFrom, int color){
@@ -107,7 +107,7 @@ public class Font extends TextureFilm {
 	}
 	
 	
-	protected void splitBy( Bitmap bitmap, int height, int color, String chars ) {
+	protected void splitBy(Bitmap bitmap, int color, String chars) {
 		
 		autoUppercase = chars.equals( LATIN_UPPER );
 		int length    = chars.length();
@@ -131,7 +131,7 @@ public class Font extends TextureFilm {
 			
 			endOfRow = false;
 			while (! endOfRow){
-				if(charsProcessed == length){
+				if(charsProcessed == length) {
 					break;
 				}
 				
@@ -164,16 +164,16 @@ public class Font extends TextureFilm {
 		lineHeight = baseLine = height( frames.get( chars.charAt( 0 ) ) );
 	}
 
-	public static Font colorMarked( Bitmap bmp, int color, String chars ) {
-		Font font = new Font( TextureCache.get( bmp ) );
+	public static Font colorMarked(SmartTexture tex, int color, String chars ) {
+		Font font = new Font( tex );
 
-		font.splitBy( bmp, bmp.getHeight(), color, chars );
+		font.splitBy( tex.bitmap, color, chars );
 		return font;
 	}
 	 
-	public static Font colorMarked( Bitmap bmp, int height, int color, String chars ) {
-		Font font = new Font( TextureCache.get( bmp ) );
-		font.splitBy( bmp, height, color, chars );
+	public static Font colorMarked(SmartTexture tex, int height, int color, String chars ) {
+		Font font = new Font( tex );
+		font.splitBy( tex.bitmap, color, chars );
 		return font;
 	}
 

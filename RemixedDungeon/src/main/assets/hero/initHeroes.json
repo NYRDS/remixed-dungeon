@@ -70,7 +70,6 @@
         "kind": "ScrollOfMagicMapping"
       }
     ],
-    "isSpellUser": true,
     "magicAffinity": "Rogue"
   },
   "HUNTRESS": {
@@ -85,7 +84,8 @@
         "kind": "Boomerang"
       }
     ],
-    "hp": 15
+    "hp": 15,
+    "magicAffinity": "Huntress"
   },
   "ELF": {
     "weapon": {
@@ -113,7 +113,7 @@
     "immunities": [
       "Roots"
     ],
-
+    "magicAffinity": "Elf",
     "str": 9,
     "hp": 15
   },
@@ -135,7 +135,6 @@
         "kind": "PotionOfHealing"
       }
     ],
-    "isSpellUser": true,
     "magicAffinity": "Necromancy"
   },
   "GNOLL": {
@@ -153,7 +152,6 @@
         "quantity": 8
       }
     ],
-    "isSpellUser": true,
     "magicAffinity": "Witchcraft",
     "quickslot": [
       {

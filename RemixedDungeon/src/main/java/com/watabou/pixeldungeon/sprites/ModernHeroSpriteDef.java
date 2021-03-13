@@ -141,10 +141,10 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		}
 
 		if (accessory == null){
-			if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()) {
-				helmetDescriptor = helmetDescriptor(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR), hero);
+			if(hero.getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()) {
+				helmetDescriptor = helmetDescriptor(hero.getItemFromSlot(Belongings.Slot.ARMOR), hero);
             }
-			if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).isCoveringHair()){
+			if(hero.getItemFromSlot(Belongings.Slot.ARMOR).isCoveringHair()){
                 drawHair = false;
             }
 		} else {
@@ -159,19 +159,19 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		String bodyType = bodyDescriptor(hero);
 
 		layersDesc.put(LAYER_BODY, "hero_modern/body/" +bodyType+".png" );
-		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR), hero));
+		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.getItemFromSlot(Belongings.Slot.ARMOR), hero));
 		layersDesc.put(LAYER_HEAD, "hero_modern/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_HAIR, hairDescriptor);
-		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR)));
+		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.getItemFromSlot(Belongings.Slot.ARMOR)));
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
-		EquipableItem armor = hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR);
+		EquipableItem armor = hero.getItemFromSlot(Belongings.Slot.ARMOR);
 
-		EquipableItem weapon = hero.getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
+		EquipableItem weapon = hero.getItemFromSlot(Belongings.Slot.WEAPON);
 		String weaponAnimationClassRight  = weapon.getAttackAnimationClass();
 
-		EquipableItem leftHand = hero.getBelongings().getItemFromSlot(Belongings.Slot.LEFT_HAND);
+		EquipableItem leftHand = hero.getItemFromSlot(Belongings.Slot.LEFT_HAND);
 		String weaponAnimationClassLeft = leftHand.getAttackAnimationClass();
 
 		layersDesc.put(LAYER_LEFT_HAND, "hero_modern/body/hands/" + bodyType + "_" + weaponAnimationClassLeft + "_left.png");
@@ -239,8 +239,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		}
 
 		if(!weapon_anims.isEmpty()) { //old mods compatibility
-			EquipableItem weapon = hero.getBelongings().getItemFromSlot(Belongings.Slot.WEAPON);
-			EquipableItem leftHand = hero.getBelongings().getItemFromSlot(Belongings.Slot.LEFT_HAND);
+			EquipableItem weapon = hero.getItemFromSlot(Belongings.Slot.WEAPON);
+			EquipableItem leftHand = hero.getItemFromSlot(Belongings.Slot.LEFT_HAND);
 
 			boolean right = weapon.goodForMelee();
 			boolean left  = leftHand.goodForMelee();
@@ -306,10 +306,10 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	private String armorShoulderDescriptor(EquipableItem armor, EquipableItem item, String hand) {
 		if(item==null || item.blockSlot()==Belongings.Slot.NONE) {
-			return "hero_modern/armor/shoulders/" + armor.getClassName() + "_" + hand + ".png";
+			return "hero_modern/armor/shoulders/" + armor.getVisualName() + "_" + hand + ".png";
 		}
 
-		return "hero_modern/armor/shoulders/" + armor.getClassName() + "_" + item.getAttackAnimationClass() + ".png";
+		return "hero_modern/armor/shoulders/" + armor.getVisualName() + "_" + item.getAttackAnimationClass() + ".png";
 	}
 
 
@@ -334,15 +334,15 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 
 	private String helmetDescriptor(EquipableItem armor, Hero hero) {
-		if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()){
-			return "hero_modern/armor/helmet/" +armor.getClass().getSimpleName()+".png";
+		if(hero.getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()){
+			return "hero_modern/armor/helmet/" +armor.getVisualName()+".png";
 		}
 		return HERO_EMPTY_PNG;
 	}
 
 	private String collarDescriptor(EquipableItem armor, Hero hero) {
-		if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).hasCollar()){
-			return "hero_modern/armor/collar/" +armor.getClass().getSimpleName()+".png";
+		if(hero.getItemFromSlot(Belongings.Slot.ARMOR).hasCollar()){
+			return "hero_modern/armor/collar/" +armor.getVisualName()+".png";
 		}
 		return HERO_EMPTY_PNG;
 	}

@@ -128,11 +128,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		return friendly || super.friendly(chr);
 	}
 
-	public void execute(Char chr, String action) {
-		CharUtils.execute(this, chr, action);
-		script.run("executeAction", chr, action);
-	}
-
 
 	public ArrayList<String> actions(Char hero) {
 		ArrayList<String> actions = CharUtils.actions(this, hero);

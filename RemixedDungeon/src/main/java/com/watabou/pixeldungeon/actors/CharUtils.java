@@ -1,7 +1,9 @@
 package com.watabou.pixeldungeon.actors;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.cellCondition;
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.Ascend;
@@ -22,15 +24,16 @@ import com.nyrds.pixeldungeon.ml.actions.Unlock;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.CommonActions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
+import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
+import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
@@ -49,6 +52,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
+
+import lombok.var;
 
 public class CharUtils {
     static public boolean isVisible(@Nullable Char ch) {
@@ -72,9 +77,18 @@ public class CharUtils {
         }
     }
 
-    public static void lightningProc(@NotNull Char enemy, int damage) {
+    public static void lightningProc(@NotNull Char caster, int targetCell, int damage) {
 
-        if (Dungeon.level.water[enemy.getPos()] && !enemy.isFlying()) {
+        int [] points = {caster.getPos(), targetCell};
+        caster.getSprite().getParent().add( new Lightning(points) );
+
+        Char enemy = Actor.findChar(targetCell);
+
+        if(enemy == null) {
+            return;
+        }
+
+        if (enemy.level().water[enemy.getPos()] && !enemy.isFlying()) {
             damage *= 2f;
         }
 
@@ -104,17 +118,16 @@ public class CharUtils {
         }
 
         Item item = victim.getBelongings().randomUnequipped();
-
         GLog.w( Game.getVars(R.array.Char_Stole)[thief.getGender()], thief.getName(), item.name(), victim.getName_objective() );
-
         item.detachAll( victim.getBelongings().backpack );
-
         thief.collect(item);
+
+        victim.onActionTarget(CommonActions.MAC_STEAL, thief);
 
         return true;
     }
 
-    public static void teleportRandom(Char ch ) {
+    public static void teleportRandom(@NotNull Char ch ) {
         Level level = ch.level();
         if(level.isBossLevel() || !ch.isMovable()) {
             GLog.w( Utils.format(R.string.ScrollOfTeleportation_NoTeleport2, ch.getName_objective()) );
@@ -184,8 +197,7 @@ public class CharUtils {
                     return new Attack(target);
                 } else {
 
-                    Set<String> actions = new HashSet<>();
-                    actions.addAll(actions(target, actor));
+                    Set<String> actions = new HashSet<>(actions(target, actor));
 
                     actions.remove(CommonActions.MAC_HIT);
                     actions.remove(CommonActions.MAC_TAUNT);
@@ -248,6 +260,8 @@ public class CharUtils {
             hero.nextAction(new Order(target));
             return;
         }
+
+        hero.getScript().run("executeAction", target, action);
     }
 
     public static @NotNull ArrayList<String> actions(@NotNull Char target, Char hero) {
@@ -295,5 +309,40 @@ public class CharUtils {
             chr.fx(chr.getPos(), () -> WandOfBlink.appear(ch, tgt));
         }
         Dungeon.observe();
+    }
+
+    public static void blinkTo(@NotNull Char chr, int target) {
+        int cell = Ballistica.cast(chr.getPos(), target, true, true);
+
+        if (Actor.findChar(cell) != null && Ballistica.distance > 1) {
+            cell = Ballistica.trace[Ballistica.distance - 2];
+        }
+
+        WandOfBlink.appear(chr, cell);
+    }
+
+    public static void generateNewItem(Char shopkeeper)
+    {
+        Item newItem = Treasury.getLevelTreasury().random();
+
+        if(newItem instanceof Gold) {
+            return;
+        }
+
+        if(newItem.isCursed()) {
+            return;
+        }
+
+        var supply = shopkeeper.getItem(newItem.getEntityKind());
+
+        if(!newItem.stackable && supply.valid()) {
+            return;
+        }
+
+        if(newItem.stackable && supply.valid() && supply.price() > 100) {
+            return;
+        }
+
+        shopkeeper.collect(newItem);
     }
 }

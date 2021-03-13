@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.NotNull;
@@ -88,7 +89,7 @@ public abstract class Actor implements Bundlable {
 	// **********************
 	// *** Static members ***
 	
-	private static HashSet<Actor> all = new HashSet<>();
+	private static final HashSet<Actor> all = new HashSet<>();
 	private static Actor current;
 	
 	private static float now = 0;
@@ -183,35 +184,38 @@ public abstract class Actor implements Bundlable {
 
 		// action still in progress
 		if (current != null && !current.timeout()) {
-			//Log.i("Main loop", String.format("current: %s %4.1f", current, current.time));
+//			Log.i("Main loop", String.format("skip: %s %4.1f", current, current.time));
 			return;
 		}
 
 		Actor actor;
 
+//		Log.i("Main loop", "start");
 		while ((actor=getNextActor(Float.MAX_VALUE)) != null) {
 
-			//Log.i("Main loop", String.format("%s %4.2f",actor.getClass().getSimpleName(),actor.time));
+//			Log.i("Main loop", String.format("%s %4.2f",actor.getClass().getSimpleName(),actor.time));
 
-			if (actor instanceof Char &&
-					((Char)actor).getSprite().isMoving &&
-					((Char)actor).getSprite().doingSomething()) {
+			if (actor instanceof Char && ((Char)actor).getSprite().doingSomething()) {
+//				Log.i("Main loop", "in action");
 				// If it's character's turn to act, but its sprite
 				// is moving, wait till the movement is over
-				//Log.i("Main loop","skipped");
 				return;
 			}
 
-			//Log.i("Main loop", "act");
-
 			current = actor;
+
 			if (actor.act() || !Dungeon.hero.isAlive()) {
+//				Log.i("Main loop", String.format("%s next",actor.getClass().getSimpleName()));
 				actor.next();
 			} else {
+//				Log.i("Main loop", String.format("%s break",actor.getClass().getSimpleName()));
+
 				break;
 			}
 
 			if(SystemTime.timeSinceTick() > 40) {
+//				Log.i("Main loop", String.format("%s timeout",actor.getClass().getSimpleName()));
+
 				break;
 			}
 		}
@@ -304,7 +308,13 @@ public abstract class Actor implements Bundlable {
 			all.remove( actor );
 		}
 	}
-	
+
+	@LuaInterface
+	public static Char getRandomChar(int pos) {
+		return Random.element(chars.values());
+	}
+
+	@LuaInterface
 	public static Char findChar(int pos) {
 		return chars.get(pos);
 	}

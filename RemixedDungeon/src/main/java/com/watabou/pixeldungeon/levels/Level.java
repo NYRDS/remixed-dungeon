@@ -256,6 +256,10 @@ public abstract class Level implements Bundlable {
 			return music;
 		}
 
+		if(ModdingMode.isSoundExists(levelId)) {
+			return levelId;
+		}
+
 		return Assets.TUNE;
 	}
 
@@ -1890,5 +1894,15 @@ public abstract class Level implements Bundlable {
 	@LuaInterface
 	public int getNearestVisibleLevelObject(int cell) {
 		return getNearestTerrain(cell, (level, cell1) -> level.fieldOfView[cell1] && (level.getLevelObject(cell1)!=null));
+	}
+
+	@LuaInterface
+	public boolean isPlainTile(int cell) {
+		var baseLayer = customLayers.get(LayerId.Base);
+		if(baseLayer == null) {
+			return true;
+		}
+
+		return baseLayer[cell] < 0;
 	}
 }

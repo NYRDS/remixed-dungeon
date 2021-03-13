@@ -32,6 +32,8 @@ public abstract class InventoryScroll extends Scroll {
 	protected String inventoryTitle = Game.getVar(R.string.InventoryScroll_Title);
 	protected WndBag.Mode mode = WndBag.Mode.ALL;
 
+	private Char reader;
+
 	@Override
 	protected void doRead(@NotNull Char reader) {
 		
@@ -41,7 +43,9 @@ public abstract class InventoryScroll extends Scroll {
 		} else {
 			identifiedByUse = false;
 		}
-		
+
+		this.reader = reader;
+
 		GameScene.selectItem(reader, new ScrollUse(this).invoke(), mode, inventoryTitle);
 	}
 	
@@ -58,7 +62,7 @@ public abstract class InventoryScroll extends Scroll {
 					identifiedByUse = false;
 					break;
 				case 1:
-					GameScene.selectItem(getOwner(), new ScrollUse(InventoryScroll.this).invoke(), mode, inventoryTitle);
+					GameScene.selectItem(reader, new ScrollUse(InventoryScroll.this).invoke(), mode, inventoryTitle);
 					break;
 				}
 			}

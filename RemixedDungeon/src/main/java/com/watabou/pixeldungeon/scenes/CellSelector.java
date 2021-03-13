@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.input.Touchscreen.Touch;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.RemixedDungeon;
@@ -58,7 +59,7 @@ public class CellSelector extends TouchArea {
 	
 	public void select( int cell ) {
 		if (enabled && listener != null && cell != Level.INVALID_CELL) {
-			GLog.debug("%s -> %d", listener, cell);
+			GLog.debug("%s -> %d", listener.getClass().getSimpleName(), cell);
 			listener.onSelect( cell, selector);
 			GameScene.ready();
 		} else {
@@ -112,7 +113,7 @@ public class CellSelector extends TouchArea {
 	}	
 	
 	private boolean dragging = false;
-	private PointF lastPos = new PointF();
+	private final PointF lastPos = new PointF();
 	
 	@Override
 	protected void onDrag( Touch t ) {
@@ -154,5 +155,6 @@ public class CellSelector extends TouchArea {
 	public interface Listener {
 		void onSelect(Integer cell, @NotNull Char selector);
 		String prompt();
-	}
+        Image icon();
+    }
 }

@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -44,9 +43,13 @@ public class Spell implements NamedEntityKind {
         return true;
     }
 
+    protected boolean cast(Char chr, Char target) {
+        return true;
+    }
+
     public boolean canCast(@NotNull final Char chr, boolean reallyCast) {
 
-        float timeToCast = chr.spellCooldown(getClassName())-cooldown;
+        float timeToCast = chr.spellCooldown(getEntityKind())-cooldown;
         if(timeToCast < 0) {
 
             if(reallyCast) {
@@ -56,7 +59,7 @@ public class Spell implements NamedEntityKind {
             return false;
         }
 
-        if (chr instanceof Hero) {
+        if (chr == Dungeon.hero) {
             final Hero hero = (Hero) chr;
 
             if(hero.getControlTarget().getId()!=hero.getId()) {
@@ -88,43 +91,27 @@ public class Spell implements NamedEntityKind {
             return false;
         }
 
-        if (chr instanceof Hero) {
-            final Hero hero = (Hero) chr;
-
-            if (targetingType.equals(SpellHelper.TARGET_CELL)) {
-                chr.selectCell(new CellSelector.Listener() {
-                    @Override
-                    public void onSelect(Integer cell, @NotNull Char selector) {
-                        if (cell != null) {
-                            cast(chr, cell);
-
-                            hero.spend(castTime);
-                            hero.busy();
-                            hero.getSprite().zap(hero.getPos());
-                        }
-                    }
-
-                    @Override
-                    public String prompt() {
-                        return Game.getVar(R.string.Spell_SelectACell);
-                    }
-                });
-                return false;
-            }
-            hero.spend(castTime);
-            hero.busy();
-            hero.getSprite().zap(hero.getPos());
+        if (targetingType.equals(SpellHelper.TARGET_CELL)) {
+            chr.selectCell(new SpellCellSelector(this, chr));
+            return false;
         }
+
+        if (       targetingType.equals(SpellHelper.TARGET_CHAR)
+                || targetingType.equals(SpellHelper.TARGET_CHAR_NOT_SELF)
+            ) {
+            chr.selectCell(new SpellCharSelector(this, chr, targetingType));
+            return false;
+        }
+
+        chr.spend(castTime);
+        chr.busy();
+        chr.getSprite().zap(chr.getPos());
         return true;
     }
 
     protected void castCallback(Char chr) {
-        chr.spellCasted(getClassName());
+        chr.spellCasted(getEntityKind());
         chr.spendSkillPoints(spellCost());
-    }
-
-    public String getClassName() {
-        return getClass().getSimpleName();
     }
 
     public String name() {
@@ -158,14 +145,14 @@ public class Spell implements NamedEntityKind {
 
     public int spellCost() {
         if(spellCost==0) {
-            ModError.doReport("Spell cost for "+ getClassName() + "must be > 1", new Exception("spell cost is 0"));
+            ModError.doReport("Spell cost for "+ getEntityKind() + "must be > 1", new Exception("spell cost is 0"));
             spellCost = 1;
         }
         return spellCost;
     }
 
     private String getClassParam(String paramName, String defaultValue) {
-        return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, false);
+        return Utils.getClassParam(getEntityKind(), paramName, defaultValue, false);
     }
 
     public int level() {
@@ -210,8 +197,8 @@ public class Spell implements NamedEntityKind {
                 }
 
                 @Override
-                public String getClassName() {
-                    return Spell.this.getClassName();
+                public String getEntityKind() {
+                    return Spell.this.getEntityKind();
                 }
 
                 @Override
@@ -236,7 +223,7 @@ public class Spell implements NamedEntityKind {
     }
 
     public float getCooldownFactor(Char chr) {
-        float chrCooldown = chr.spellCooldown(getClassName());
+        float chrCooldown = chr.spellCooldown(getEntityKind());
         if(chrCooldown > cooldown) {
             return 1;
         }
@@ -245,10 +232,11 @@ public class Spell implements NamedEntityKind {
 
     @Override
     public String getEntityKind() {
-        return getClassName();
+        return getClass().getSimpleName();
     }
 
     public abstract static class SpellItem extends Item {
             abstract public Spell spell();
     }
+
 }

@@ -25,7 +25,7 @@ import java.util.Map;
 
 public class GamesInProgress {
 
-	private static Map<HeroClass, Info> state = new HashMap<>();
+	private static final Map<HeroClass, Info> state = new HashMap<>();
 	
 	public static Info checkFile(String file) {
 		Info info;

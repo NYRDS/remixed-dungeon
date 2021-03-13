@@ -28,7 +28,7 @@ class AAdsComboProvider implements AdsUtilsCommon.IBannerProvider, AdsUtilsCommo
         adView.setWebViewClient(new WebViewClient() {
 
             public void onPageFinished(WebView view, String url) {
-                AdsUtils.updateBanner(adView);
+                Ads.updateBanner(adView);
             }
 
             @Override

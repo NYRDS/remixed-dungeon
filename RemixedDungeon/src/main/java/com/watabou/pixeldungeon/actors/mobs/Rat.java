@@ -58,8 +58,7 @@ public class Rat extends Mob {
 			setState(MobAi.getStateByClass(Fleeing.class));
 			if(!hasBuff(Terror.class)) {
 				new Flare(5, 32).color(0xFF0000, true).show(getSprite(), 2f);
-				Terror terror = Buff.affect(this, Terror.class, Terror.DURATION);
-				terror.source = enemy;
+				Buff.affect(this, Terror.class, Terror.DURATION);
 				return false;
 			}
 		}

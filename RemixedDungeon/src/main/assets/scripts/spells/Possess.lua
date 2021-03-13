@@ -17,35 +17,25 @@ return spell.init{
             name          = "Possess_Name",
             info          = "Possess_Info",
             magicAffinity = "Necromancy",
-            targetingType = "cell",
+            targetingType = "char_not_self",
             level         = 4,
             spellCost     = 15,
             castTime      = 0.5
         }
     end,
-    castOnCell = function(self, spell, caster, cell)
-        local target = RPD.Actor:findChar(cell)
 
-        if target ~= nil then
+    castOnChar = function(self, spell, caster, target)
 
-            if target == caster then
-                RPD.glogn("Possess_CantPossessSelf",target:getName())
-                return true
-            end
-
-            if not target:canBePet() then
-                RPD.glogn("Possess_PossessionFailed",target:getName())
-                return true
-            end
-
-            RPD.Mob:makePet(target, caster)
-            target:setState(RPD.MobAi:getStateByTag("ControlledAi"))
-            RPD.Dungeon.hero:setControlTarget(target)
-            RPD.glogp("Possess_Possessed",target:getName())
+        if not target:canBePet() then
+            RPD.glogn("Possess_PossessionFailed",target:getName())
             return true
         end
 
-        RPD.glog("Possess_MustTargetChar")
-        return false
+        RPD.Mob:makePet(target, caster)
+        target:setState(RPD.MobAi:getStateByTag("ControlledAi"))
+        RPD.Dungeon.hero:setControlTarget(target)
+        RPD.glogp("Possess_Possessed",target:getName())
+        return true
+
     end
 }

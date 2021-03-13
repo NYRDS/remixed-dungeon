@@ -140,6 +140,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         }
 
         buff.spend(duration);
+        GLog.debug("%s cooldown %3.2f", buff.getEntityKind(), buff.cooldown());
         return buff;
     }
 
@@ -147,6 +148,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     public static <T extends Buff> T affect(Char target, Class<T> buffClass, float duration) {
         T buff = affect(target, buffClass);
         buff.spend(duration);
+        GLog.debug("%s cooldown %3.2f", buff.getEntityKind(), buff.cooldown());
         return buff;
     }
 
@@ -301,7 +303,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
             Item srcItem = item.detach(target.getBelongings().backpack);
 
             if (srcItem == null) {
-                EventCollector.logException(item.getClassName());
+                EventCollector.logException(item.getEntityKind());
                 continue;
             }
 

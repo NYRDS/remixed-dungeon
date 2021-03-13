@@ -20,10 +20,10 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
@@ -78,16 +78,16 @@ public enum HeroClass implements CharModifier {
     private final Class<? extends ClassArmor> armorClass;
 
     @Getter
-    private Set<String> forbiddenActions = new HashSet<>();
-    private Set<String> friendlyMobs     = new HashSet<>();
-    private Set<String> immunities       = new HashSet<>();
-    private Set<String> resistances      = new HashSet<>();
+    private final Set<String> forbiddenActions = new HashSet<>();
+    private final Set<String> friendlyMobs     = new HashSet<>();
+    private final Set<String> immunities       = new HashSet<>();
+    private final Set<String> resistances      = new HashSet<>();
 
 
-    private Integer    titleId;
-    static public final JSONObject initHeroes = JsonHelper.readJsonFromAsset(BuildConfig.DEBUG && !ModdingMode.inMod()? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
+    private final Integer    titleId;
+    static public final JSONObject initHeroes = JsonHelper.readJsonFromAsset(Util.isDebug() && !ModdingMode.inMod()? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
 
-    private String  magicAffinity;
+    private String  magicAffinity = Utils.EMPTY_STRING;
 
     HeroClass(Integer titleId, Class<? extends ClassArmor> armorClass) {
         this.titleId = titleId;
@@ -127,9 +127,9 @@ public enum HeroClass implements CharModifier {
                     JSONArray quickslots = classDesc.getJSONArray("quickslot");
                     for (int i = 0; i < quickslots.length(); ++i) {
                         Item item = ItemFactory.createItemFromDesc(quickslots.getJSONObject(i));
-                        if(item!=null) {
-                            item = hero.getBelongings().getItem(item.getClass());
-                            if (item != null) {
+                        if(item.valid()) {
+                            item = hero.getItem(item.getEntityKind());
+                            if (item.valid()) {
                                 QuickSlot.selectItem(item, slot);
                                 slot++;
                             }
@@ -154,11 +154,10 @@ public enum HeroClass implements CharModifier {
 
                 hero.STR(classDesc.optInt("str", hero.STR()));
                 hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
-                hero.spellUser = classDesc.optBoolean("isSpellUser", false);
-                hero.getHeroClass().setMagicAffinity(classDesc.optString("magicAffinity", "Common"));
+                hero.getHeroClass().setMagicAffinity(classDesc.optString("magicAffinity", magicAffinity));
                 hero.setMaxSkillPoints(classDesc.optInt("maxSp", hero.getSkillPointsMax()));
                 hero.setSkillLevel(classDesc.optInt("sl",hero.skillLevel()));
-                hero.setSkillPoints(classDesc.optInt("sp",classDesc.optInt("startingSp", 0)));
+                hero.setSkillPoints(classDesc.optInt("sp",classDesc.optInt("startingSp", hero.getSkillPoints())));
 
             } catch (JSONException e) {
                 throw ModdingMode.modException("bad InitHero.json",e);

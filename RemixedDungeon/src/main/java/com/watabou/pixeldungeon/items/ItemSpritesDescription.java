@@ -14,7 +14,7 @@ import java.util.Map;
 public class ItemSpritesDescription {
 	private static final String SPRITES_DESC_ITEMS_JSON = "spritesDesc/items.json";
 
-	static private Map<String, ItemSpritesDescription> m_descMap = new HashMap<>();
+	static private final Map<String, ItemSpritesDescription> m_descMap = new HashMap<>();
 
 	private String imageFile;
 	private int imageIndex;
@@ -29,7 +29,7 @@ public class ItemSpritesDescription {
 	}
 
 	static public String getImageFile(Item item) {
-		ItemSpritesDescription entry = m_descMap.get(item.getClass().getSimpleName());
+		ItemSpritesDescription entry = m_descMap.get(item.getEntityKind());
 		if (entry != null) {
 			return entry.imageFile;
 		}
@@ -37,7 +37,7 @@ public class ItemSpritesDescription {
 	}
 
 	static public Integer getImageIndex(Item item) {
-		ItemSpritesDescription entry = m_descMap.get(item.getClass().getSimpleName());
+		ItemSpritesDescription entry = m_descMap.get(item.getEntityKind());
 		if (entry != null) {
 			return entry.imageIndex;
 		}
@@ -45,7 +45,7 @@ public class ItemSpritesDescription {
 	}
 
 	static public boolean isFliesStraight(Item item) {
-		ItemSpritesDescription entry = m_descMap.get(item.getClass().getSimpleName());
+		ItemSpritesDescription entry = m_descMap.get(item.getEntityKind());
 		if (entry != null) {
 			return entry.fliesStraight;
 		}
@@ -53,14 +53,14 @@ public class ItemSpritesDescription {
 	}
 
 	static public boolean isFliesFastRotating(Item item) {
-		ItemSpritesDescription entry = m_descMap.get(item.getClass().getSimpleName());
+		ItemSpritesDescription entry = m_descMap.get(item.getEntityKind());
 		if (entry != null) {
 			return entry.fliesFastRotating;
 		}
 		return false;
 	}
 
-	static public void readItemsDesc() {
+	static {
 		if (ModdingMode.isResourceExist(SPRITES_DESC_ITEMS_JSON)) {
 			JSONObject itemsDesc = JsonHelper.readJsonFromAsset(SPRITES_DESC_ITEMS_JSON);
 

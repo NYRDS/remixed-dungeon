@@ -1,4 +1,4 @@
-package com.watabou.pixeldungeon;
+package com.nyrds.pixeldungeon.mechanics;
 
 /**
  * Created by mike on 17.01.2018.

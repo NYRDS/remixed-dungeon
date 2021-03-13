@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.support.Google.GoogleIapCheck;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -199,7 +200,7 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
             return mSkuDetails.get(skuLowerCase).getPrice();
         } else {
             EventCollector.logException(sku);
-            return "";
+            return Utils.EMPTY_STRING;
         }
     }
 

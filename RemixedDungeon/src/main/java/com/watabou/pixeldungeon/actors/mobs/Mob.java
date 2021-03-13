@@ -34,7 +34,6 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
-import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
@@ -89,11 +88,6 @@ public abstract class Mob extends Char {
 
 	private static final float SPLIT_DELAY = 1f;
 
-	private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
-
-	@NotNull
-	protected LuaScript script = new LuaScript(DEFAULT_MOB_SCRIPT, this);
-
 	protected Object spriteClass;
 
 	protected int exp    = 1;
@@ -123,6 +117,12 @@ public abstract class Mob extends Char {
 	@NotNull
 	public static Mob makePet(@NotNull Mob pet, @NotNull Char owner) {
 		return makePet(pet,owner.getId());
+	}
+
+	@LuaInterface
+	@NotNull
+	public Mob makePet(@NotNull Char owner) {
+		return Mob.makePet(this, owner);
 	}
 
 	@NotNull
@@ -370,7 +370,7 @@ public abstract class Mob extends Char {
 			//TODO we should move this block out of Mob class ( in script for example )
 			if (hero.getHeroClass() == HeroClass.NECROMANCER){
 				if (hero.isAlive()) {
-					if(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARMOR) instanceof NecromancerRobe){
+					if(hero.getItemFromSlot(Belongings.Slot.ARMOR) instanceof NecromancerRobe){
 						hero.accumulateSkillPoints();
 					}
 				}
@@ -623,5 +623,15 @@ public abstract class Mob extends Char {
 			}
 			collect(item);
 		}
+	}
+
+	@Override
+	public int priceBuy(Item item) {
+		return script.run("priceBuy", item, super.priceBuy(item)).toint();
+	}
+
+	@Override
+	public int priceSell(Item item) {
+		return script.run("priceSell", item, super.priceBuy(item)).toint();
 	}
 }

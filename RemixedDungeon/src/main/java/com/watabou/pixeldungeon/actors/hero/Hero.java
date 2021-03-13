@@ -65,7 +65,6 @@ import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.SpellSprite;
@@ -125,8 +124,6 @@ public class Hero extends Char {
 	private HeroClass heroClass = HeroClass.ROGUE;
 	private HeroSubClass subClass = HeroSubClass.NONE;
 
-	public boolean spellUser;
-
 	private boolean    ready      = false;
 
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
@@ -185,9 +182,7 @@ public class Hero extends Char {
 	}
 
 	public int effectiveSTR() {
-		int str = Scrambler.descramble(STR);
-
-		return hasBuff(Weakness.class) ? str - 2 : str;
+		return STR() - 2*buffLevel(Weakness.class);
 	}
 
 	public void STR(int sTR) {
@@ -204,7 +199,6 @@ public class Hero extends Char {
 	private static final String DIFFICULTY = "difficulty";
 	private static final String SP = "sp";
 	private static final String MAX_SP = "maxsp";
-	private static final String IS_SPELL_USER = "isspelluser";
 	private static final String MAGIC_LEVEL = "magicLvl";
 
 	@Override
@@ -224,7 +218,6 @@ public class Hero extends Char {
 		bundle.put(SP, getSkillPoints());
 		bundle.put(MAX_SP, getSkillPointsMax());
 
-		bundle.put(IS_SPELL_USER, spellUser);
 		bundle.put(MAGIC_LEVEL, skillLevel());
 	}
 
@@ -250,8 +243,6 @@ public class Hero extends Char {
 		maxSp = Scrambler.scramble(bundle.optInt(MAX_SP, 10));
 
 		gender = heroClass.getGender();
-
-		spellUser = bundle.optBoolean(IS_SPELL_USER, false);
 
 		setSkillLevel(bundle.getInt(MAGIC_LEVEL));
 	}
@@ -294,13 +285,13 @@ public class Hero extends Char {
 
 	@Override
 	public int dr() {
-		return Math.max(getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr(), 0);
+		return Math.max(getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr(), 0);
 	}
 
 	@Override
 	public float speed() {
 
-		int aEnc = getBelongings().getItemFromSlot(Belongings.Slot.ARMOR) != ItemsList.DUMMY ? getBelongings().getItemFromSlot(Belongings.Slot.ARMOR).requiredSTR() - effectiveSTR() : 0;
+		int aEnc = getItemFromSlot(Belongings.Slot.ARMOR) != ItemsList.DUMMY ? getItemFromSlot(Belongings.Slot.ARMOR).requiredSTR() - effectiveSTR() : 0;
 		if (aEnc > 0) {
 			return (float) (super.speed() * Math.pow(1.3, -aEnc));
 		} else {
@@ -388,6 +379,8 @@ public class Hero extends Char {
 			busy();
 		}
 
+		GLog.debug("action: %s", curAction);
+
 		return curAction.act(this);
 	}
 
@@ -443,22 +436,6 @@ public class Hero extends Char {
 			getSprite().showStatus(CharSprite.DEFAULT, Game.getVar(R.string.Hero_Wait));
 		}
 		restoreHealth = tillHealthy;
-	}
-
-	@Override
-	public int attackProc(@NotNull Char enemy, int damage) {
-
-		damage = super.attackProc(enemy,damage);
-
-		if (!(enemy instanceof NPC)) {
-			for (Item item : getBelongings()) {
-				if (item.isEquipped(this)) {
-					item.ownerDoesDamage(damage);
-				}
-			}
-		}
-
-		return damage;
 	}
 
 	@Override
@@ -619,7 +596,7 @@ public class Hero extends Char {
 			moveSprite(oldPos,getPos());
 
 			if (wallWalkerBuff != null) {
-				int dmg = hp() / 2 > 2 ? hp() / 2 : 2;
+				int dmg = Math.max(hp() / 2, 2);
 				damage(dmg, wallWalkerBuff);
 			}
 
@@ -696,16 +673,19 @@ public class Hero extends Char {
 			getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Hero_LevelUp));
 			Sample.INSTANCE.play(Assets.SND_LEVELUP);
 
-			if (this.getSkillPointsMax() > 0) {
-				this.setMaxSkillPoints(getSkillPointsMax() + 1);
-				this.accumulateSkillPoints(getSkillPointsMax() / 3);
+			if (getSkillPointsMax() > 0) {
+				setMaxSkillPoints(getSkillPointsMax() + 1);
+				accumulateSkillPoints(getSkillPointsMax() / 3);
+			}
+
+			if(lvl()%5 == 0 && heroClass == HeroClass.GNOLL) {
+				skillLevelUp();
 			}
 
 			Badges.validateLevelReached();
 		}
 
 		if (subClass == HeroSubClass.WARLOCK) {
-
 			int value = Math.min(ht() - hp(), 1 + (Dungeon.depth - 1) / 5);
 			heal(value, this);
 			hunger().satisfy(10);
@@ -781,7 +761,7 @@ public class Hero extends Char {
 		deathDesc.put("class", heroClass.name());
 		deathDesc.put("subClass", subClass.name());
 		deathDesc.put("level", Dungeon.level.levelId);
-		deathDesc.put("cause", cause.getClass().getSimpleName());
+		deathDesc.put("cause", cause.getEntityKind());
 		deathDesc.put("duration", Float.toString(Statistics.duration));
 
 		deathDesc.put("difficulty", Integer.toString(Game.getDifficulty()));
@@ -814,7 +794,7 @@ public class Hero extends Char {
 				this.setSkillPoints(0);
 				GameScene.show(new WndResurrect(null, cause));
 			} else {
-				reallyDie(cause);
+				reallyDie(this, cause);
 			}
 		} else {
 			while (getBelongings().removeItem(ankh)) {
@@ -828,14 +808,14 @@ public class Hero extends Char {
 		lastAction = null;
 	}
 
-	private static void reallyReallyDie(Object cause) {
+	private static void reallyReallyDie(Hero hero,Object cause) {
 		Dungeon.level.discover();
 
-		Bones.leave();
+		Bones.leave(hero);
 
 		Dungeon.observe();
 
-		Dungeon.hero.getBelongings().identify();
+		hero.getBelongings().identify();
 
 		GameScene.gameOver();
 
@@ -846,14 +826,14 @@ public class Hero extends Char {
 		Dungeon.gameOver();
 	}
 
-	public static void reallyDie(final Object cause) {
+	public static void reallyDie(Hero hero,final Object cause) {
 
-		if (Dungeon.hero.getDifficulty() < 2 && !Game.isPaused()) {
+		if (hero.getDifficulty() < 2 && !Game.isPaused()) {
 			GameScene.show(new WndSaveSlotSelect(false, Game.getVar(R.string.Hero_AnotherTry)));
 			return;
 		}
 
-		reallyReallyDie(cause);
+		reallyReallyDie(hero,cause);
 	}
 
 	@Override
@@ -862,7 +842,7 @@ public class Hero extends Char {
 
 		if (!isFlying()) {
 
-			if (Dungeon.level.water[getPos()]) {
+			if (level().water[getPos()]) {
 				Sample.INSTANCE.play(Assets.SND_WATER, 1, 1, Random.Float(0.8f, 1.25f));
 			} else {
 				Sample.INSTANCE.play(Assets.SND_STEP);
@@ -1257,5 +1237,9 @@ public class Hero extends Char {
 		if(!Dungeon.isLoading()) {
 			level().visited[pos] = true;
 		}
+	}
+
+	public boolean isSpellUser() {
+		return !heroClass.getMagicAffinity().isEmpty();
 	}
 }

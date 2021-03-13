@@ -1,10 +1,11 @@
 package com.nyrds.pixeldungeon.ml.actions;
 
-import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.ai.KillOrder;
 import com.nyrds.pixeldungeon.ai.MobAi;
-import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.ai.MoveOrder;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.scenes.CellSelector;
@@ -40,14 +41,14 @@ public class Order extends CharAction {
             CharAction action = CharUtils.actionForCell(target, cell,target.level());
 
             if(action instanceof Move) {
-                target.setState(MobAi.getStateByClass(Wandering.class));
+                target.setState(MobAi.getStateByClass(MoveOrder.class));
                 target.setTarget(cell);
                 return;
             }
 
             if(action instanceof Attack) {
                 Attack attack = (Attack)action;
-                target.setState(MobAi.getStateByClass(Hunting.class));
+                target.setState(MobAi.getStateByClass(KillOrder.class));
                 target.setEnemy(attack.target);
                 return;
             }
@@ -58,6 +59,11 @@ public class Order extends CharAction {
         @Override
         public String prompt() {
             return Utils.capitalize(Utils.format(Game.getVar(R.string.Mob_ReadyForOrder), target.name()));
+        }
+
+        @Override
+        public Image icon() {
+            return null;
         }
     }
 }

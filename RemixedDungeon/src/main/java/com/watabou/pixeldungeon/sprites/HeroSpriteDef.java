@@ -65,7 +65,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 
             if (tweener == jumpTweener) {
                 ch.ifPresent(chr -> {
-                    if (getVisible() && Dungeon.level.water[chr.getPos()] && !chr.isFlying()) {
+                    if (getVisible() && chr.level().water[chr.getPos()] && !chr.isFlying()) {
                         GameScene.ripple(chr.getPos());
                     }
                 });
@@ -166,5 +166,10 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 
         turnTo(from, to);
         play(fly);
+    }
+
+    @Override
+    public boolean doingSomething() {
+        return (curAnim != null && curAnim != idle && curAnim != run && curAnim != fly) || isMoving;
     }
 }
