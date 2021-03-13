@@ -8,7 +8,7 @@
         "fortune_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Fortune.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
         "library_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Library.json","noFogOfWar":"true", "isSafe":true,  "music":"ost_town_1"},
         "inn_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Inn.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
-        "shop_town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Shop_Town.json",
+        "shop_town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Shop.json",
             "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","treasury":"TownShopTreasury.json"},
 
         "testLevel":{"kind":"TestLevel", "depth":0, "size":[32,32]},

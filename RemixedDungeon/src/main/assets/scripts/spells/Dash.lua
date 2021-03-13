@@ -11,7 +11,7 @@ local spell = require "scripts/lib/spell"
 return spell.init{
     desc  = function ()
         return {
-            image         = 1,
+            image         = 2,
             imageFile     = "spellsIcons/warrior.png",
             name          = "DashSpell_Name",
             info          = "DashSpell_Info",
