@@ -47,7 +47,7 @@ public class Lightning extends Group {
 	private Callback callback;
 
 	public Lightning (int from, int to, Callback callback) {
-		int cells[] = new int[2];
+		int[] cells = new int[2];
 		cells[0] = from;
 		cells[1] = to;
 		init(cells,callback);
