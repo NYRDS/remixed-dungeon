@@ -246,6 +246,11 @@ public abstract class Level implements Bundlable {
 
 	@NotNull
 	public String music() {
+
+		if(ModdingMode.isSoundExists(levelId)) {
+			return levelId;
+		}
+
 		String music = DungeonGenerator.getLevelProperty(levelId, "music", ModdingMode.NO_FILE);
 		if(ModdingMode.isSoundExists(music)) {
 			return music;
@@ -254,10 +259,6 @@ public abstract class Level implements Bundlable {
 		music = DungeonGenerator.getLevelProperty(levelId, "fallbackMusic", ModdingMode.NO_FILE);
 		if(ModdingMode.isSoundExists(music)) {
 			return music;
-		}
-
-		if(ModdingMode.isSoundExists(levelId)) {
-			return levelId;
 		}
 
 		return Assets.TUNE;
