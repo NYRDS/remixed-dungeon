@@ -18,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class SpiderMindAmber extends MultiKindMob {
 
-	private static Class<?> BuffsForEnemy[] = {
+	private static final Class<?>[] BuffsForEnemy = {
 		Blindness.class,
 		Slow.class,
 		Weakness.class
@@ -73,7 +73,7 @@ public class SpiderMindAmber extends MultiKindMob {
 
 	@Override
 	public void die(NamedEntityKind cause) {
-		super.die( cause );
 		Badges.validateRare( this );
+		super.die( cause );
 	}
 }
