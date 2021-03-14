@@ -100,7 +100,7 @@ ai.step = function()
         end
     end
 
-    if hero:getSkillPoints() > 0 and math.random() < 0.05 then
+    if hero:getSkillPoints() > 0 and math.random() < 0.01 then
         RPD.SpellFactory:getRandomSpell():castOnRandomTarget(hero)
         return
     end
