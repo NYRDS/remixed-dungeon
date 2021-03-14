@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class SpiderMind extends Mob {
 
-	private static Class<?>[] BuffsForEnemy = {
+	private static final Class<?>[] BuffsForEnemy = {
 			Blindness.class,
 			Slow.class,
 			Weakness.class
@@ -26,7 +26,7 @@ public class SpiderMind extends Mob {
 		hp(ht(5));
 		baseDefenseSkill = 1;
 		baseAttackSkill  = 10;
-		baseSpeed = 1f;
+		baseSpeed = 1.5f;
 		
 		exp = 6;
 		maxLvl = 9;
@@ -44,7 +44,7 @@ public class SpiderMind extends Mob {
 		Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(BuffsForEnemy);
 		Buff.prolong( enemy, buffClass, 3 );
 
-		return damage;
+		return 0;
 	}
 	
 	@Override
