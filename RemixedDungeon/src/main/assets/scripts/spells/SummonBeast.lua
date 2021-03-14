@@ -29,7 +29,7 @@ return spell.init{
         local skillLevel = caster:skillLevel()
 
         RPD.forCellsAround(caster:getPos(), function(cell)
-            if not RPD.Actor:findChar(cell) then
+            if not RPD.Actor:findChar(cell) and caster:level():isPassable(cell) then
                 if math.random() > 1/skillLevel then
                     local beast = beasts[math.min(1,  math.max(math.random(skillLevel/2, skillLevel), #beasts))]
                     if beast then

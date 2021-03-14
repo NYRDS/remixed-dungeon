@@ -80,6 +80,12 @@ ai.step = function()
     if hero:buffLevel('Charm') == 0 then
         local enemyPos = hero:getNearestEnemy():getPos()
         if level:cellValid(enemyPos) and level:adjacent(enemyPos, heroPos) then
+
+            if hero:getSkillPoints() > 0 and math.random() < 0.25 then
+                RPD.SpellFactory:getRandomSpell():castOnRandomTarget(hero)
+                return
+            end
+
             hero:handle(enemyPos)
             return
         end

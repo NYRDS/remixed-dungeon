@@ -1908,4 +1908,9 @@ public abstract class Level implements Bundlable {
 
 		return baseLayer[cell] < 0;
 	}
+
+	@LuaInterface
+	public boolean isPassable(int cell) {
+		return passable[cell];
+	}
 }
