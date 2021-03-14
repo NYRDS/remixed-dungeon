@@ -1,9 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
-import com.nyrds.pixeldungeon.ai.MobAi;
-import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 
@@ -33,13 +30,7 @@ public class SpiderNest extends Mob {
     public boolean act(){
 		super.act();
 
-		Mob newSpider = MobSpawner.spawnRandomMob(Dungeon.level, getPos());
-		
-		if(isPet()) {
-			Mob.makePet(newSpider, getOwnerId());
-		}
-		setState(MobAi.getStateByClass(Sleeping.class));
-
+		MobSpawner.spawnRandomMob(level(), getPos(), 10);
 		postpone(20);
 		
 		return true;
