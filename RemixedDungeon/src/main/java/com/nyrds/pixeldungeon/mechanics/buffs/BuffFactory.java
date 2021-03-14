@@ -57,9 +57,9 @@ import lombok.SneakyThrows;
 import lombok.var;
 
 public class BuffFactory {
-    static private Map<String, Class<? extends Buff>> buffList = new HashMap<>();
+    static private final Map<String, Class<? extends Buff>> buffList = new HashMap<>();
 
-    static private Set<String> customBuffs = new HashSet<>();
+    static private final Set<String> customBuffs = new HashSet<>();
 
     public static final String GASES_IMMUNITY = "GasesImmunity";
 

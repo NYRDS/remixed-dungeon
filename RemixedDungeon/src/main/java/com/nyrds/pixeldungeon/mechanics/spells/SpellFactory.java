@@ -16,16 +16,11 @@ import lombok.var;
 
 public class SpellFactory {
 
-	static private final Map<String, Class<? extends Spell>> mSpellsList = new HashMap<>();
+	static private Map<String, Class<? extends Spell>> mSpellsList;
+	static private Map<String,ArrayList<String>> mSpellsByAffinity;
 
 	static private final LuaScript script = new LuaScript("scripts/spells/SpellsByAffinity", null);
 
-	static private final Map<String,ArrayList<String>> mSpellsByAffinity = new HashMap<>();
-
-	static {
-		initSpellsMap();
-		script.run("loadSpells",null);
-	}
 
 	@SneakyThrows
 	private static void registerSpellClass(Class<? extends Spell> spellClass) {
@@ -38,23 +33,12 @@ public class SpellFactory {
 				mSpellsByAffinity.put(affinity, new ArrayList<>());
 			}
 
-			mSpellsByAffinity.get(affinity).add(spellClass.getSimpleName());
+		mSpellsByAffinity.get(affinity).add(spellClass.getSimpleName());
 	}
 
-	private static void initSpellsMap() {
-		registerSpellClass(SummonDeathling.class);
-
-		registerSpellClass(WindGust.class);
-		registerSpellClass(Ignite.class);
-		registerSpellClass(RootSpell.class);
-		registerSpellClass(FreezeGlobe.class);
-
-		registerSpellClass(MagicTorch.class);
-		registerSpellClass(Healing.class);
-	}
 
 	public static boolean hasSpellForName (String name) {
-		if (mSpellsList.get(name) != null) {
+		if (getSpellsList().get(name) != null) {
 			return true;
 		}
 
@@ -65,7 +49,7 @@ public class SpellFactory {
 	@SneakyThrows
 	public static Spell getSpellByName(String name) {
 		if(hasSpellForName(name)) {
-			Class<? extends Spell> spellClass = mSpellsList.get(name);
+			Class<? extends Spell> spellClass = getSpellsList().get(name);
 			if (spellClass == null) {
 				return new CustomSpell(name);
 			}
@@ -81,8 +65,8 @@ public class SpellFactory {
 
 		ArrayList<String> spellList = new ArrayList<>();
 
-		if(mSpellsByAffinity.containsKey(affinity)) {
-			spellList.addAll(mSpellsByAffinity.get(affinity));
+		if(getSpellsByAffinity().containsKey(affinity)) {
+			spellList.addAll(getSpellsByAffinity().get(affinity));
 		}
 
 		for (int i = 1;i<=luaList.length();i++) {
@@ -98,7 +82,7 @@ public class SpellFactory {
 
 		ArrayList<String> spellList = new ArrayList<>();
 
-		for(var aff: mSpellsByAffinity.values()) {
+		for(var aff: getSpellsByAffinity().values()) {
 			spellList.addAll(aff);
 		}
 
@@ -110,7 +94,34 @@ public class SpellFactory {
 	}
 
 	@LuaInterface
-	Spell getRandomSpell() {
+	public static Spell getRandomSpell() {
 		return getSpellByName(Random.element(getAllSpells()));
+	}
+
+	private static Map<String, ArrayList<String>> getSpellsByAffinity() {
+		getSpellsList();
+		return mSpellsByAffinity;
+	}
+
+	private static Map<String, Class<? extends Spell>> getSpellsList() {
+
+		if(mSpellsList == null) {
+			mSpellsList = new HashMap<>();
+			mSpellsByAffinity = new HashMap<>();
+
+			registerSpellClass(SummonDeathling.class);
+
+			registerSpellClass(WindGust.class);
+			registerSpellClass(Ignite.class);
+			registerSpellClass(RootSpell.class);
+			registerSpellClass(FreezeGlobe.class);
+
+			registerSpellClass(MagicTorch.class);
+			registerSpellClass(Healing.class);
+
+			script.run("loadSpells",null);
+		}
+
+		return mSpellsList;
 	}
 }

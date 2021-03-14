@@ -124,6 +124,7 @@ local ItemFactory     = luajava.bindClass("com.nyrds.pixeldungeon.items.common.I
 local MobFactory      = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobFactory")
 local EffectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.effects.EffectsFactory")
 local LevelObjectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory")
+local SpellFactory = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.spells.SpellFactory")
 
 
 local Tweeners = {
@@ -192,6 +193,7 @@ local RPD = {
     MobFactory = MobFactory,
     ItemFactory = ItemFactory,
     EffectsFactory = EffectsFactory,
+    SpellFactory = SpellFactory,
     Journal = luajava.bindClass("com.watabou.pixeldungeon.Journal"),
     Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
     Mob   = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Mob"),

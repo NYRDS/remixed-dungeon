@@ -1635,15 +1635,12 @@ public abstract class Level implements Bundlable {
 		return minima;
 	}
 
-	public int getRandomTerrain(int cell, cellCondition condition) {
-		if(!cellValid(cell)) {
-			return INVALID_CELL;
-		}
+	public int getRandomTerrain(cellCondition condition) {
 
 		ArrayList<Integer> candidates = new ArrayList<>();
 
 		for (int i = 0; i < getLength(); i++) {
-			if (i != cell && condition.pass(this, i)) {
+			if (condition.pass(this, i)) {
 				candidates.add(i);
 			}
 		}
@@ -1895,6 +1892,11 @@ public abstract class Level implements Bundlable {
 	@LuaInterface
 	public int getNearestVisibleLevelObject(int cell) {
 		return getNearestTerrain(cell, (level, cell1) -> level.fieldOfView[cell1] && (level.getLevelObject(cell1)!=null));
+	}
+
+	@LuaInterface
+	public int getRandomVisibleCell() {
+		return getRandomTerrain((level, cell) -> level.fieldOfView[cell]);
 	}
 
 	@LuaInterface

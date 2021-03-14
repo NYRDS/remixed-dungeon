@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
@@ -13,8 +14,10 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.TestOnly;
 
 import lombok.val;
 import lombok.var;
@@ -47,6 +50,7 @@ public class Spell implements NamedEntityKind {
         return true;
     }
 
+    @LuaInterface
     public boolean canCast(@NotNull final Char chr, boolean reallyCast) {
 
         float timeToCast = chr.spellCooldown(getEntityKind())-cooldown;
@@ -96,7 +100,7 @@ public class Spell implements NamedEntityKind {
             return false;
         }
 
-        if (       targetingType.equals(SpellHelper.TARGET_CHAR)
+        if (targetingType.equals(SpellHelper.TARGET_CHAR)
                 || targetingType.equals(SpellHelper.TARGET_CHAR_NOT_SELF)
             ) {
             chr.selectCell(new SpellCharSelector(this, chr, targetingType));
@@ -107,6 +111,31 @@ public class Spell implements NamedEntityKind {
         chr.busy();
         chr.getSprite().zap(chr.getPos());
         return true;
+    }
+
+    @LuaInterface
+    @TestOnly
+    public void castOnRandomTarget(@NotNull Char caster) {
+        if(targetingType.equals(SpellHelper.TARGET_SELF)) {
+            cast(caster);
+            return;
+        }
+
+        if(targetingType.equals(SpellHelper.TARGET_CELL)) {
+            int cell = caster.level().getRandomVisibleCell();
+
+            if (caster.level().cellValid(cell)) {
+                cast(caster, caster.level().getRandomVisibleCell());
+            }
+            return;
+        }
+
+        if (targetingType.equals(SpellHelper.TARGET_CHAR)
+                || targetingType.equals(SpellHelper.TARGET_CHAR_NOT_SELF)
+        ) {
+            cast(caster, Random.oneOf(caster.level().getCopyOfMobsArray()));
+            return;
+        }
     }
 
     protected void castCallback(Char chr) {
