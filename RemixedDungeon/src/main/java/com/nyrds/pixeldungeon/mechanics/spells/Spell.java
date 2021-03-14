@@ -133,7 +133,10 @@ public class Spell implements NamedEntityKind {
         if (targetingType.equals(SpellHelper.TARGET_CHAR)
                 || targetingType.equals(SpellHelper.TARGET_CHAR_NOT_SELF)
         ) {
-            cast(caster, Random.oneOf(caster.level().getCopyOfMobsArray()));
+            var candidates = caster.level().getCopyOfMobsArray();
+            if(candidates.length>0) {
+                cast(caster, Random.oneOf(candidates));
+            }
             return;
         }
     }
