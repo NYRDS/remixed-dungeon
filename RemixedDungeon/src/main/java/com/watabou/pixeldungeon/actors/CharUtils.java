@@ -194,7 +194,7 @@ public class CharUtils {
             if (target.friendly(actor.getControlTarget())) {
                 return new Interact(target);
             } else {
-                if(target.state instanceof Sleeping) {
+                if(!(target.state instanceof Sleeping)) {
                     return new Attack(target);
                 } else {
 
