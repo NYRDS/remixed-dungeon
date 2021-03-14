@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.actors;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
@@ -193,7 +194,7 @@ public class CharUtils {
             if (target.friendly(actor.getControlTarget())) {
                 return new Interact(target);
             } else {
-                if(target.getEnemy() == actor) {
+                if(target.state instanceof Sleeping) {
                     return new Attack(target);
                 } else {
 
