@@ -1,15 +1,12 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
-import android.util.SparseBooleanArray;
-
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 
 public class SpiderEgg extends Mob {
-
-	private static SparseBooleanArray eggsLaid = new SparseBooleanArray();
 
 	public SpiderEgg() {
 		hp(ht(2));
@@ -27,22 +24,21 @@ public class SpiderEgg extends Mob {
 	}
 
 	public static void lay(int pos) {
-		eggsLaid.append(pos, true);
 		SpiderSpawner.spawnEgg(Dungeon.level, pos);
 	}
 
-	public static boolean laid(int pos) {
-		return eggsLaid.get(pos, false);
-	}
-	
 	@Override
     public boolean act() {
 		super.act();
 
-		MobSpawner.spawnRandomMob(Dungeon.level,getPos());
+		Char newSpider = MobSpawner.spawnRandomMob(level(), getPos(), 15);
 
-		remove();
-		eggsLaid.delete(getPos());
+		if(newSpider.valid()) {
+			remove();
+			return true;
+		}
+
+		postpone(20);
 
 		return true;
 	}

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
@@ -16,7 +17,11 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 
 public class SpiderQueen extends Boss {
-	
+
+
+	@Packable
+	private int lastEggPos = -1;
+
 	public SpiderQueen() {
 		hp(ht(120));
 		baseDefenseSkill = 18;
@@ -37,8 +42,9 @@ public class SpiderQueen extends Boss {
 	
 	@Override
     public boolean act(){
-		if(Random.Int(0, 20) == 0 && !SpiderEgg.laid(getPos())) {
+		if(Random.Int(0, 20) == 0 && lastEggPos != getPos()) {
 			SpiderEgg.lay(getPos());
+			lastEggPos = getPos();
 		}
 		
 		return super.act();
@@ -64,10 +70,8 @@ public class SpiderQueen extends Boss {
 			if (getState() instanceof Hunting && level().distance(getPos(), target) < 5) {
 				return getFurther(target);
 			}
-			return super.getCloser(target);
-		} else {
-			return super.getCloser( target );
 		}
+		return super.getCloser(target);
 	}
 	
 	@Override
@@ -82,7 +86,7 @@ public class SpiderQueen extends Boss {
 
 	@Override
 	public void die(NamedEntityKind cause) {
-		super.die(cause);
 		Badges.validateBossSlain(Badges.Badge.SPIDER_QUEEN_SLAIN);
+		super.die(cause);
 	}
 }
