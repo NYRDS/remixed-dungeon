@@ -60,9 +60,9 @@ public class LuaEngine implements ResourceFinder {
 
     static private      LuaEngine engine              = new LuaEngine();
 
-    private LuaValue stp;
+    private final LuaValue stp;
 
-	private Globals globals;
+	private final Globals globals;
 
 	public static void reset() {
 		engine = new LuaEngine();

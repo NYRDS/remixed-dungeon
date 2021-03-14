@@ -43,7 +43,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
             Class.forName("android.os.AsyncTask");
         } catch (Throwable ignore) {
             if(Util.isDebug()) {
-                Log.d("Classes", ignore.getMessage());
+                Log.d("Classes", ignore.toString());
             }
         }
 

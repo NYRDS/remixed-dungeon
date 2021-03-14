@@ -100,6 +100,11 @@ ai.step = function()
         end
     end
 
+    if hero:getSkillPoints() > 0 and math.random() < 0.05 then
+        RPD.SpellFactory:getRandomSpell():castOnRandomTarget(hero)
+        return
+    end
+
     local objectPos = level:getNearestVisibleLevelObject(heroPos)
 
     if level:cellValid(objectPos) then
