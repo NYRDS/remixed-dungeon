@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.effects.emitters.WaterSink;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.watabou.noosa.Game;
@@ -25,7 +26,6 @@ import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
-import com.nyrds.pixeldungeon.effects.emitters.WaterSink;
 import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.utils.Random;
 
@@ -97,7 +97,7 @@ public class SewerLevel extends RegularLevel {
 		}
 
 		placeEntranceSign();
-		placeBarrels(Random.Int(5));
+		placeBarrels(Random.Int(2));
 
 	}
 
