@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
@@ -108,11 +109,14 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import lombok.var;
 
 
 public class MobFactory {
@@ -287,6 +291,13 @@ public class MobFactory {
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(selectedMobClass,e);
 		}
+	}
+
+	@NotNull
+	public static Mob createMob(String selectedMobClass, String jsonDesc) throws JSONException, IllegalAccessException, InstantiationException {
+		var mob = mobByName(selectedMobClass);
+		mob.fromJson(JsonHelper.readJsonFromString(jsonDesc));
+		return mob;
 	}
 
 	public static List<Mob> allMobs() {

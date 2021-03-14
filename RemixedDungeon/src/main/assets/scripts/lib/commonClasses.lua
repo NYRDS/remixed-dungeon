@@ -5,6 +5,8 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
+local json = require("scripts/lib/json")
+
 local GLog  = luajava.bindClass("com.watabou.pixeldungeon.utils.GLog")
 
 local RemixedDungeon = luajava.bindClass("com.watabou.pixeldungeon.RemixedDungeon")
@@ -362,28 +364,28 @@ local RPD = {
     end,
 
     createItem = function(itemClass, itemDesc)
-        local json = require("scripts/lib/json")
         local item = ItemFactory:createItem(itemClass, json.encode(itemDesc or {_=""}))
+        assert(item, "can't create item "..itemClass)
         return item
     end,
 
     spawnMob = function(mobClass, cell, mobDesc)
-        local mob = MobFactory:mobByName(mobClass)
+        local mob = MobFactory:createMob(mobClass, json.encode(mobDesc or {_=""}))
         mob:setPos(cell)
-        mob:fromJson(json.encode(mobDesc or {_=""}))
+        assert(mob, "can't spawn mob "..mobClass)
         Dungeon.level:spawnMob(mob)
         return mob
     end,
 
     levelObject = function(objectClass, cell)
         local object = LevelObjectsFactory:objectByName(objectClass)
+        assert(object, "can't create object "..objectClass)
         object:setPos(cell)
         Dungeon.level:addLevelObject(object)
         return object
     end,
 
     createLevelObject = function(desc, cell)
-        local json = require("scripts/lib/json")
         desc.x = Dungeon.level:cellX(cell)
         desc.y = Dungeon.level:cellY(cell)
 
@@ -443,14 +445,12 @@ local RPD = {
     end,
 
     toLua = function(entity)
-        local json = require("scripts/lib/json")
         local bundle = luajava.newInstance(Bundle)
         bundle:putEntity("entity",entity)
         return json.decode(bundle:serialize())["entity"]
     end,
 
     fromLua = function(entityDesc)
-        local json = require("scripts/lib/json")
         local jsonDesc = json.encode({entity = entityDesc})
         return luajava.newInstance(Bundle, jsonDesc):get("entity")
     end,
