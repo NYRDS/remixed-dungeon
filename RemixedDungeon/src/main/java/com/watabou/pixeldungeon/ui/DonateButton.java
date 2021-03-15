@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.windows.WndDonate;
 
 public class DonateButton extends ImageButton {
 
-	private Group parentWnd;
+	private final Group parentWnd;
 
 	public DonateButton(Group wnd) {
 		super(Icons.SUPPORT.get());
