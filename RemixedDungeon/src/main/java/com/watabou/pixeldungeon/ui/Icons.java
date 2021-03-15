@@ -129,7 +129,7 @@ public enum Icons {
                 icon.frame(icon.texture.uvRect(22, 45, 30, 53));
                 break;
             case SUPPORT:
-                icon.frame(icon.texture.uvRect(30, 45, 46, 61));
+                icon.frame(icon.texture.uvRect(78, 74, 94, 88));
                 break;
             case SUPPORTED:
                 icon.frame(icon.texture.uvRect(46, 45, 62, 61));
