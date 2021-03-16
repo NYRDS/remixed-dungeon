@@ -2749,4 +2749,14 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="town_deco_magenta_carpet_name">Carpet</string>
   <string name="town_deco_magenta_carpet_desc">The magenta hue of this carpet wafs thoughts of local wine.</string>
 
+  <string name="InnServant_Phrase_1"></string>
+  <string name="InnServant_Phrase_2"></string>
+  <string name="InnServant_Phrase_3"></string>
+  <string name="InnServant_Phrase_4"></string>
+
+  <string name="Drunkard_Phrase_1"></string>
+  <string name="Drunkard_Phrase_2"></string>
+  <string name="Drunkard_Phrase_3"></string>
+  <string name="Drunkard_Phrase_4"></string>
+
 </resources>

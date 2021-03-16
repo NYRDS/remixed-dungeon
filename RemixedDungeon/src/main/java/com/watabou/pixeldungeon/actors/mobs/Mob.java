@@ -172,7 +172,8 @@ public abstract class Mob extends Char {
 		}
 	}
 
-	protected void setState(String state) {
+	@LuaInterface
+	public void setState(String state) {
 		setState(MobAi.getStateByTag(state));
 	}
 

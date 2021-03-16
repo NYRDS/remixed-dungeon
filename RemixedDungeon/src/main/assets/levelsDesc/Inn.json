@@ -19,17 +19,17 @@
          "y":10
         }, 
         {
-         "kind":"MercenaryNPC",
+         "kind":"DrunkardNPC",
          "x":17,
          "y":7
-        }, 
+        },
         {
          "kind":"ServantNPC",
          "x":14,
          "y":12
         }, 
         {
-         "kind":"BardNPC",
+         "kind":"ServantNPC",
          "x":21,
          "y":9
         }],

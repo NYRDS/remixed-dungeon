@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -310,8 +311,10 @@ public abstract class Actor implements Bundlable {
 	}
 
 	@LuaInterface
-	public static Char getRandomChar(int pos) {
-		return Random.element(chars.values());
+	public static Char getRandomChar() {
+		var ret = Random.element(chars.values());
+		GLog.debug("selected %s at %d", ret.getEntityKind(),ret.getPos());
+		return ret;
 	}
 
 	@LuaInterface

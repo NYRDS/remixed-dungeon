@@ -8,21 +8,32 @@ local RPD = require "scripts/lib/commonClasses"
 
 local mob = require"scripts/lib/mob"
 
+local phrases = {
+    "InnServant_Phrase_1",
+    "InnServant_Phrase_2",
+    "InnServant_Phrase_3",
+    "InnServant_Phrase_4"
+}
+
 return mob.init({
     interact = function(self, chr)
-        self:say("Hello, ready to order something?")
+        self:say(phrases[math.random(1,#phrases)])
     end,
 
     act = function(self)
-        if RPD.Dungeon.level:distance(self:getTarget(),self:getPos()) < 2 then
+
+        self:setState("MoveOrder")
+
+        local level = RPD.Dungeon.level
+        local myTarget = self:getTarget()
+
+        if  level:distance(myTarget,self:getPos()) < 2 or not level:cellValid(myTarget) then
             local targetChar = RPD.Actor:getRandomChar()
-            if targetChar == self then
-                self:say("Let rest a bit")
+            if targetChar:getEntityKind() == self:getEntityKind() then
                 return
             end
-            self:say("Going to "..targetChar:getEntityKind())
+
             self:setTarget(targetChar:getPos())
         end
-    end,
-
+    end
 })

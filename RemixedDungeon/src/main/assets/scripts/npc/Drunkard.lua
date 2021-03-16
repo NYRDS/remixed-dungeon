@@ -8,15 +8,19 @@ local RPD = require "scripts/lib/commonClasses"
 
 local mob = require"scripts/lib/mob"
 
+local phrases = {
+    "Drunkard_Phrase_1",
+    "Drunkard_Phrase_2",
+    "Drunkard_Phrase_3",
+    "Drunkard_Phrase_4"
+}
 
 return mob.init({
     interact = function(self, chr)
-        self:say("Wanna drink?")
+        self:say(phrases[math.random(1,#phrases)])
     end,
 
     act = function(self)
-        if math.random()<0.1 then
-            self:say("More Booozeeee Pleaaseeeee")
-        end
+        self:setState("Sleeping")
     end
 })
