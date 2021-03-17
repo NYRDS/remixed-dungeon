@@ -81,6 +81,7 @@ public class WndModInstall extends Window {
             var ok = new RedButton(R.string.Wnd_Button_Yes) {
                 @Override
                 protected void onClick() {
+                    hide();
                     action.onAgreed();
                 }
             };

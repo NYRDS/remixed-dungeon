@@ -57,7 +57,7 @@ public class Unzip {
 		return ret;
 	}
 
-	static public boolean unzipStream(InputStream fin, String tgtDir, @Nullable UnzipProgress listener) {
+	static public boolean unzipStream(InputStream fin, String tgtDir, @Nullable UnzipStateListener listener) {
 		FileSystem.ensureDir(tgtDir);
 		try {
 			ZipInputStream zin = new ZipInputStream(fin);
@@ -70,7 +70,7 @@ public class Unzip {
 			while ((ze = zin.getNextEntry()) != null) {
 				entriesProcessed = entriesProcessed + 1;
 				if(listener!=null) {
-					listener.progress(entriesProcessed);
+					listener.UnzipProgress(entriesProcessed);
 				}
 
 				GLog.debug( "Unzipping " + ze.getName());
@@ -92,8 +92,16 @@ public class Unzip {
 				}
 			}
 			zin.close();
+
+			if(listener!=null) {
+				listener.UnzipComplete(true);
+			}
+
 		} catch (Exception e) {
 			EventCollector.logException(e);
+			if(listener!=null) {
+				listener.UnzipComplete(false);
+			}
 			return false;
 		}
 
@@ -110,15 +118,11 @@ public class Unzip {
 		return exPath;
 	}
 
-	static public boolean unzip(String zipFile, String tgtDir, @Nullable UnzipProgress listener) {
+	static public boolean unzip(String zipFile, String tgtDir, @Nullable UnzipStateListener listener) {
 		try {
 			return unzipStream(new FileInputStream(zipFile), tgtDir, listener);
 		} catch (FileNotFoundException e) {
 			return false;
 		}
-	}
-
-	interface UnzipProgress {
-		void progress(int unpacked);
 	}
 }
