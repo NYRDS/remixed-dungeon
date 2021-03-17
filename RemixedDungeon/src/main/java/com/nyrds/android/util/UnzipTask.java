@@ -40,7 +40,7 @@ public class UnzipTask implements Runnable {
 
 			if (Unzip.unzip(m_zipFile,
 					FileSystem.getExternalStorageFile(tmpDirName).getAbsolutePath(),
-					m_listener::UnzipProgress)) {
+					m_listener)) {
 
 				File[] unpackedList = tmpDirFile.listFiles();
 

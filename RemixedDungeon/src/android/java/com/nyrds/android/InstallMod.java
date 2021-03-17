@@ -7,7 +7,6 @@ import android.net.Uri;
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.Unzip;
 import com.nyrds.android.util.UnzipStateListener;
-import com.nyrds.android.util.UnzipTask;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -19,16 +18,12 @@ import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndModInstall;
 import com.watabou.pixeldungeon.windows.WndModSelect;
 
-import org.jetbrains.annotations.NotNull;
-
 import javax.microedition.khronos.opengles.GL10;
 
 import lombok.SneakyThrows;
 import lombok.var;
 
-public class InstallMod extends RemixedDungeon implements UnzipStateListener, @NotNull InterstitialPoint {
-
-    private UnzipTask modUnzipTask;
+public class InstallMod extends RemixedDungeon implements UnzipStateListener, InterstitialPoint{
 
     private boolean permissionsRequested = false;
 
@@ -115,11 +110,13 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, @N
         var modStream = getContentResolver().openInputStream(data);
         var modDesc = Unzip.inspectMod(modStream);
 
+        modFileName = modDesc.name;
+
         EventCollector.logEvent("ManualModInstall", modDesc.name, String.valueOf(modDesc.version));
 
         WndModInstall wndModInstall = new WndModInstall(modDesc,
                 () -> Game.execute(
-                        () -> Unzip.unzipStream(modStream, FileSystem.getExternalStorageFileName(modDesc.name), null)));
+                        () -> Unzip.unzipStream(modStream, FileSystem.getExternalStorageFileName(modDesc.name), this)));
         scene.add(wndModInstall);
 
     }
