@@ -7,7 +7,6 @@ import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.levels.Level;
@@ -59,22 +58,22 @@ public class Sign extends LevelObject {
 	@Override
 	public void burn() {
 		remove();
-		Dungeon.level.set(getPos(),Terrain.EMBERS);
+		level().set(getPos(),Terrain.EMBERS);
 		GameScene.discoverTile(getPos());
 	}
 
 	@Override
 	public String desc() {
-		return Dungeon.level.tileDesc(Terrain.SIGN);
+		return level().tileDesc(Terrain.SIGN);
 	}
 
 	@Override
 	public String name() {
-		return Dungeon.level.tileName(Terrain.SIGN);
+		return level().tileName(Terrain.SIGN);
 	}
 
 	@Override
-	public int image() {
-		return 0;
+	public int image() { //TODO use variety
+		return 16;
 	}
 }
