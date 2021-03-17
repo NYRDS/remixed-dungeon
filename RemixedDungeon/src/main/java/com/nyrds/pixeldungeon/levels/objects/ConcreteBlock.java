@@ -30,7 +30,7 @@ public class ConcreteBlock extends LevelObject {
 
 	public ConcreteBlock(int pos) {
 		super(pos);
-		imageIndex = 8;
+		imageIndex = 0;
 	}
 
 	public ConcreteBlock(int pos, int str) {

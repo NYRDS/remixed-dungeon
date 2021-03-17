@@ -37,7 +37,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndStory;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -283,8 +282,7 @@ public class DungeonGenerator {
 		}
 	}
 
-	@Nullable
-	public static Position descend(Position current) {
+	public static @NotNull Position descend(Position current) {
 		return descendOrAscend(current, true);
 	}
 
