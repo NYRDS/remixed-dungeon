@@ -2691,4 +2691,14 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_magenta_carpet_name">Ковер</string>
     <string name="town_deco_magenta_carpet_desc">Пурпурный оттенок этого ковра, навевает мысли о городском вине.</string>
 
+    <string name="InnServant_Phrase_1">Тьфу, еще столько нужно сделать!</string>
+    <string name="InnServant_Phrase_2">Этот пьяница сводит меня с ума!</string>
+    <string name="InnServant_Phrase_3">Вроде бы чисто</string>
+    <string name="InnServant_Phrase_4">Ой, сегодня так много гостей</string>
+
+    <string name="Drunkard_Phrase_1">НАЛЕЙТЕ КА МНЕ ЕЩЁ!</string>
+    <string name="Drunkard_Phrase_2">Зачем вода, когда есть пиво!</string>
+    <string name="Drunkard_Phrase_3">Это пиво или грязь?</string>
+    <string name="Drunkard_Phrase_4">Zzzzzz...</string>
+
 </resources>
