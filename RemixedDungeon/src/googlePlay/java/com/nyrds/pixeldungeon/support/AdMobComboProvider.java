@@ -59,6 +59,7 @@ public class AdMobComboProvider implements AdsUtilsCommon.IInterstitialProvider,
                 @Override
                 public void onAdDismissedFullScreenContent() {
                     mInterstitialAd = null;
+                    requestNewInterstitial();
                     ret.returnToWork(true);
                 }
             };

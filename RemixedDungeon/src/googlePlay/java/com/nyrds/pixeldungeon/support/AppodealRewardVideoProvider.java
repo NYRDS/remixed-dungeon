@@ -10,7 +10,7 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
     private static InterstitialPoint returnTo;
 
-    public static void init() {
+    public AppodealRewardVideoProvider() {
 
         Game.instance().runOnUiThread(() -> {
             AppodealAdapter.init();
@@ -26,6 +26,7 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
                 @Override
                 public void onRewardedVideoFailedToLoad() {
+                    AdsUtilsCommon.rewardVideoFailed(AppodealRewardVideoProvider.this);
                 }
 
                 @Override
