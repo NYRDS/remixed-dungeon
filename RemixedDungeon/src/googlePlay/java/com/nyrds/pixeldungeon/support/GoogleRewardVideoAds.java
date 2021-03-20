@@ -1,9 +1,10 @@
 package com.nyrds.pixeldungeon.support;
 
 import androidx.annotation.MainThread;
+import androidx.annotation.NonNull;
 
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.OnUserEarnedRewardListener;
 import com.google.android.gms.ads.rewarded.RewardItem;
 import com.google.android.gms.ads.rewarded.RewardedAd;
@@ -46,7 +47,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 					@Override
 					public void onAdDismissedFullScreenContent() {
 						mCinemaRewardAd = null;
-						GLog.debug("reward state "+ String.valueOf(rewardEarned));
+						GLog.debug("reward state "+ rewardEarned);
 						returnTo.returnToWork(rewardEarned);
 						rewardEarned = false;
 					}
@@ -54,12 +55,17 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 		RewardedAd.load(Game.instance(),
 				Game.getVar(R.string.cinemaRewardAdUnitId),
-				new AdRequest.Builder().build(),
+				AdMob.makeAdRequest(),
 				new RewardedAdLoadCallback() {
 					@Override
 					public void onAdLoaded(@NotNull RewardedAd ad) {
 						mCinemaRewardAd = ad;
 						mCinemaRewardAd.setFullScreenContentCallback(fullScreenContentCallback);
+					}
+
+					@Override
+					public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+						super.onAdFailedToLoad(loadAdError);
 					}
 				});
 	}
@@ -84,6 +90,8 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 					}
 
 			);
+		} else {
+
 		}
 	}
 }

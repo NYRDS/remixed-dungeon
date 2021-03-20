@@ -22,6 +22,10 @@ class AdsUtilsCommon {
         //tryNextInterstitial(retTo);
     }
 
+    static void rewardVideoFailed(IRewardVideoProvider provider) {
+        incFailCount(AdsUtils.rewardVideoFails, provider);
+    }
+
     private static <T> void incFailCount(Map<T,Integer> map, T provider) {
         Integer failCount = map.get(provider);
         if(failCount!=null) {
