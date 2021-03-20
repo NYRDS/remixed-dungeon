@@ -9,7 +9,7 @@
         "kind": "PotionOfLevitation"
       },
       {
-        "kind": "FireArrow"
+        "kind": "test/TestItem"
       },
       {
         "kind": "ScrollOfUpgrade"
@@ -21,8 +21,12 @@
         "kind": "WoodenShield"
       },
       {
-        "kind": "WandOfLightning"
+        "kind": "ScrollOfCurse"
+      },
+      {
+        "kind": "CommonArrow"
       }
+
     ],
     "str": 10,
     "hp": 20000000,
