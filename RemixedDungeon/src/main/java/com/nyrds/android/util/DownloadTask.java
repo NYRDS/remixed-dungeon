@@ -12,7 +12,6 @@ import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 
 import info.guardianproject.netcipher.NetCipher;
-import info.guardianproject.netcipher.client.TlsOnlySocketFactory;
 
 public class DownloadTask implements Runnable {
 
@@ -38,7 +37,7 @@ public class DownloadTask implements Runnable {
 
             HttpsURLConnection ucon = NetCipher.getCompatibleHttpsURLConnection(url);
 
-            ucon.setSSLSocketFactory(new TlsOnlySocketFactory());
+            //ucon.setSSLSocketFactory((SSLSocketFactory) SSLCertificateSocketFactory.getDefault());
 
             ucon.setReadTimeout(2500);
             ucon.setInstanceFollowRedirects(true);

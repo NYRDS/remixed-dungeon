@@ -2,13 +2,18 @@ package com.nyrds.pixeldungeon.support;
 
 import androidx.annotation.MainThread;
 
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.reward.RewardItem;
-import com.google.android.gms.ads.reward.RewardedVideoAd;
-import com.google.android.gms.ads.reward.RewardedVideoAdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.OnUserEarnedRewardListener;
+import com.google.android.gms.ads.rewarded.RewardItem;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;
+import com.watabou.pixeldungeon.utils.GLog;
+
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by mike on 30.01.2017.
@@ -17,8 +22,10 @@ import com.watabou.noosa.InterstitialPoint;
 
 public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider {
 
-	private static RewardedVideoAd mCinemaRewardAd;
+	private static RewardedAd mCinemaRewardAd;
 	private static InterstitialPoint returnTo;
+
+	private static boolean rewardEarned = false;
 
 
 	public GoogleRewardVideoAds() {
@@ -28,72 +35,55 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 	@MainThread
 	private void loadNextVideo() {
-		mCinemaRewardAd = MobileAds.getRewardedVideoAdInstance(Game.instance());
-		mCinemaRewardAd.setRewardedVideoAdListener(new RewardVideoAdListener());
-		mCinemaRewardAd.loadAd(Game.getVar(R.string.cinemaRewardAdUnitId), AdMob.makeAdRequest());
+
+		FullScreenContentCallback fullScreenContentCallback =
+				new FullScreenContentCallback() {
+					@Override
+					public void onAdShowedFullScreenContent() {
+						rewardEarned = false;
+					}
+
+					@Override
+					public void onAdDismissedFullScreenContent() {
+						mCinemaRewardAd = null;
+						GLog.debug("reward state "+ String.valueOf(rewardEarned));
+						returnTo.returnToWork(rewardEarned);
+						rewardEarned = false;
+					}
+				};
+
+		RewardedAd.load(Game.instance(),
+				Game.getVar(R.string.cinemaRewardAdUnitId),
+				new AdRequest.Builder().build(),
+				new RewardedAdLoadCallback() {
+					@Override
+					public void onAdLoaded(@NotNull RewardedAd ad) {
+						mCinemaRewardAd = ad;
+						mCinemaRewardAd.setFullScreenContentCallback(fullScreenContentCallback);
+					}
+				});
 	}
 
 	@MainThread
 	public  boolean isReady() {
-		return mCinemaRewardAd != null && mCinemaRewardAd.isLoaded();
+		return mCinemaRewardAd != null;
 	}
 
 	@Override
 	public void showRewardVideo(InterstitialPoint ret) {
 		returnTo = ret;
-		mCinemaRewardAd.show();
-	}
+		if(mCinemaRewardAd!=null) {
+			mCinemaRewardAd.show(Game.instance(),
+					new OnUserEarnedRewardListener() {
+						@Override
+						public void onUserEarnedReward(RewardItem rewardItem) {
+							rewardEarned = true;
+							GLog.debug("reward: %s %d", rewardItem.getType(), rewardItem.getAmount());
+							returnTo.returnToWork(true);
+						}
+					}
 
-	private class RewardVideoAdListener implements RewardedVideoAdListener {
-
-		private boolean rewarded = false;
-
-		@Override
-		public void onRewardedVideoAdLoaded() {
-			//GLog.i("onRewardedVideoAdLoaded");
-		}
-
-		@Override
-		public void onRewardedVideoAdOpened() {
-			rewarded = false;
-			//GLog.i("onRewardedVideoAdOpened");
-		}
-
-		@Override
-		public void onRewardedVideoStarted() {
-			rewarded = false;
-			//GLog.i("onRewardedVideoStarted");
-		}
-
-		@Override
-		public void onRewardedVideoAdClosed() {
-			Game.instance().runOnUiThread(GoogleRewardVideoAds.this::loadNextVideo);
-			returnTo.returnToWork(rewarded);
-		}
-
-		@Override
-		public void onRewarded(RewardItem rewardItem) {
-			//GLog.i("onRewarded %s", rewardItem);
-			returnTo.returnToWork(true);
-		}
-
-		@Override
-		public void onRewardedVideoAdLeftApplication() {
-			//GLog.i("onRewardedVideoAdLeftApplication");
-			returnTo.returnToWork(true);
-		}
-
-		@Override
-		public void onRewardedVideoAdFailedToLoad(int i) {
-			//GLog.i("onRewardedVideoFailedToLoad %d", i);
-		}
-
-		@Override
-		public void onRewardedVideoCompleted()
-		{
-			rewarded = true;
-			//GLog.i("onRewardedVideoCompleted");
+			);
 		}
 	}
-
 }
