@@ -70,6 +70,7 @@ public class ScrollOfCurse extends Scroll {
 		for(Item item:items) {
 			if(!item.isCursed()) {
 				item.setCursed(true);
+				item.setCursedKnown(true);
 				if(item.isCursed()) {
 					procced = true;
 				}
