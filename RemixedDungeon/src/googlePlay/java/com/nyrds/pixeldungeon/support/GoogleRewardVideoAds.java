@@ -65,7 +65,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 					@Override
 					public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-						super.onAdFailedToLoad(loadAdError);
+						AdsUtilsCommon.rewardVideoFailed(GoogleRewardVideoAds.this);
 					}
 				});
 	}
@@ -90,8 +90,6 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 					}
 
 			);
-		} else {
-
 		}
 	}
 }
