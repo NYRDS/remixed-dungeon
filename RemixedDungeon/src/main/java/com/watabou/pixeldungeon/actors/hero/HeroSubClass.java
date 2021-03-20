@@ -176,7 +176,7 @@ public enum HeroSubClass implements CharModifier {
 				}
 				break;
 			case SNIPER:
-				if (attacker.rangedWeapon != null) {
+				if (attacker.rangedWeapon.valid()) {
 					Buff.prolong(defender, SnipersMark.class, attacker.attackDelay() * 1.1f);
 				}
 				break;

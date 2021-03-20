@@ -1187,7 +1187,7 @@ public class Hero extends Char {
 
 	@Override
 	public boolean ignoreDr() {
-		return rangedWeapon != null && subClass == HeroSubClass.SNIPER;
+		return rangedWeapon.valid() && subClass == HeroSubClass.SNIPER;
 	}
 
 	@Override

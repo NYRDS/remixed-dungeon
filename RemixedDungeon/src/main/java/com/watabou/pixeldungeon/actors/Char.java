@@ -121,7 +121,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public static final String IMMUNITIES        = "immunities";
 	public static final String RESISTANCES       = "resistances";
 	private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
-	public MissileWeapon rangedWeapon = null;
+	public EquipableItem rangedWeapon = ItemsList.DUMMY;
 
 	public CharAction  lastAction = null;
 	@Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
@@ -413,7 +413,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         rangedWeapon = wep;
         boolean result = attack(enemy);
-        rangedWeapon = null;
+        rangedWeapon = ItemsList.DUMMY;
 
         return result;
     }
@@ -428,7 +428,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		float accuracy = (float) Math.pow(1.4, bonus);
 
-		if (rangedWeapon != null && level().distance(getPos(), target.getPos()) == 1) {
+		if (rangedWeapon.valid() && level().distance(getPos(), target.getPos()) == 1) {
 			accuracy *= 0.5f;
 		}
 
@@ -549,7 +549,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		int d = level().distance(getPos(), enemy.getPos());
 
-		if(d<=getActiveWeapon().range()) {
+		if(d<=getActiveWeapon().range() || rangedWeapon.valid()) {
 			getActiveWeapon().attackProc(this, enemy, damage);
 		}
 
@@ -569,7 +569,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@NotNull
 	public EquipableItem getActiveWeapon() {
-		if(rangedWeapon!=null) {
+		if(rangedWeapon.valid()) {
 			return rangedWeapon;
 		}
 
@@ -592,7 +592,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		dmg += getActiveWeapon().damageRoll(this);
 
-		if(rangedWeapon!=null) {
+		if(!rangedWeapon.valid()) {
 			dmg += getSecondaryWeapon().damageRoll(this);
 		}
 
