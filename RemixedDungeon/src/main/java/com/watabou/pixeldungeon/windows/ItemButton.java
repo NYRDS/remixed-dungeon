@@ -26,8 +26,8 @@ class ItemButton extends ItemSlot {
     private static final int NORMAL		= 0xFF4A4D44;
     private static final int EQUIPPED	= 0xFF63665B;
 
-    private WndBag wndBag;
-    private Item item;
+    private final WndBag wndBag;
+    private final Item item;
     private ColorBlock bg;
     
     public ItemButton(WndBag wndBag, Item item) {

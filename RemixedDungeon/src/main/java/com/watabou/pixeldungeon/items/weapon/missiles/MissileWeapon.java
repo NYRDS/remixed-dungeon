@@ -148,16 +148,18 @@ public class MissileWeapon extends Weapon {
 		info.append(Utils.format(Game.getVar(R.string.MissileWeapon_Info1),MIN + (MAX - MIN) / 2));
 		info.append(" ");
 
-		if (Dungeon.hero.getBelongings().backpack.items.contains( this )) {
-			if (STR > Dungeon.hero.effectiveSTR()) {
+		final Char hero = Dungeon.hero;
+
+		if (hero.getBelongings().backpack.items.contains( this )) {
+			if (STR > hero.effectiveSTR()) {
 				info.append(Utils.format(Game.getVar(R.string.MissileWeapon_Info2), name));
 			}
-			if (STR < Dungeon.hero.effectiveSTR()) {
+			if (STR < hero.effectiveSTR()) {
 				info.append(Utils.format(Game.getVar(R.string.MissileWeapon_Info3), name));
 			}
 		}
 		
-		if (isEquipped( Dungeon.hero )) {
+		if (isEquipped(hero)) {
 			info.append(Utils.format(Game.getVar(R.string.MissileWeapon_Info4), name));
 		}
 		
