@@ -58,7 +58,7 @@ public class Order extends CharAction {
 
         @Override
         public String prompt() {
-            return Utils.capitalize(Utils.format(Game.getVar(R.string.Mob_ReadyForOrder), target.name()));
+            return Utils.capitalize(Utils.format(Game.getVar(R.string.Mob_ReadyForOrder), target.getName()));
         }
 
         @Override

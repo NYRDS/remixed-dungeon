@@ -1259,7 +1259,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@Override
 	public String name() {
-		return getName_objective();
+		return getName();
 	}
 
 	@LuaInterface
