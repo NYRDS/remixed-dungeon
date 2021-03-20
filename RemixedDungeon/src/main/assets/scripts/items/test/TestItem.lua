@@ -108,7 +108,8 @@ return item.init{
 
         if action == "action1" then
             --RPD.affectBuff(hero, RPD.Buffs.Invisibility ,200)
-            item:selectCell("action1","Please select cell for action 1")
+            --item:selectCell("action1","Please select cell for action 1")
+            RPD.playMusic("surface",true);
         end
 
         if action == "action2" then

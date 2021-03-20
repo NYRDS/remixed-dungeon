@@ -252,11 +252,11 @@ local RPD = {
     end,
 
     playMusic = function(music, looped)
-        Music:play(music, looped)
+        Music.INSTANCE:play(music, looped)
     end,
 
     stopMusic = function()
-        Music:stop()
+        Music.INSTANCE:stop()
     end,
 
     textById = function(id)
