@@ -161,7 +161,7 @@ public class Weapon extends KindOfWeapon {
 		int exStr = hero.effectiveSTR() - STR;
 
 		if(exStr > 0) {
-			if ((hero.rangedWeapon != null) == (hero.getHeroClass() == HeroClass.HUNTRESS)) {
+			if (hero.rangedWeapon.valid()  && (hero.getHeroClass() == HeroClass.HUNTRESS)) {
 				damage += Random.IntRange(0, exStr);
 			}
 
