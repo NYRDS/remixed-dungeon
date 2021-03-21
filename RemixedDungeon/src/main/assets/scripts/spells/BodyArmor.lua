@@ -11,7 +11,7 @@ local spell = require "scripts/lib/spell"
 return spell.init{
     desc  = function ()
         return {
-            image         = 1,
+            image         = 0,
             imageFile     = "spellsIcons/warrior.png",
             name          = "BodyArmorSpell_Name",
             info          = "BodyArmorSpell_Info",
