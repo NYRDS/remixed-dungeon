@@ -13,7 +13,7 @@ local spellLevel = 2
 return spell.init{
     desc  = function ()
         return {
-            image         = 0,
+            image         = 1,
             imageFile     = "spellsIcons/warrior.png",
             name          = "DieHardSpell_Name",
             info          = "DieHardSpell_Info",
