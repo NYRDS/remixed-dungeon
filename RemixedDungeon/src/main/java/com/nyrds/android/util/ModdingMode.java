@@ -3,6 +3,7 @@ package com.nyrds.android.util;
 import com.nyrds.android.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.RemixedDungeon;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -126,7 +127,8 @@ public class ModdingMode {
 	public static boolean isSoundExists(String id) {
 		String resourceId = "sound/"+id;
 		String foundId = getSoundById(resourceId);
-		return foundId.equals(resourceId);
+		GLog.debug("sound: %s -> %s", id, foundId);
+		return !foundId.isEmpty();
 	}
 
 	public static boolean isAssetExist(String resName) {
