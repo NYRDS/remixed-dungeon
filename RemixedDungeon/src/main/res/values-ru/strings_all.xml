@@ -112,7 +112,6 @@
   <string name="Possess_Info">Тёмное искусство контроля над разумом позволит заклинателю сломить волю большинства существ.</string>
   <string name="Possess_PossessionFailed">Воля %s слишком сильна</string>
   <string name="Possess_Possessed">%s ожидает твоих приказов</string>
-  <string name="Possess_MustTargetChar">Только существа могут быть целью для Одержимости.</string>
   <string name="Possess_CantPossessSelf">Ты не можешь овладеть самим собой</string>
   <string name="Mob_StaControlledStatus">Воля существа %s сломлена одержимостью </string>
   <string name="BlackCat_AiStatus">Эта кошка делает обычные кошачьи дела</string>
@@ -2528,16 +2527,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="town_deco_stone_wall_broken_desc">Старая стена, в довольно плохом состоянии</string>
   <string name="Challenges_Names_6">Запретные Руны</string>
   <string name="Challenges_Names_7">Пацифизм</string>
-  <string name="Welcome_Text_29_2">
-    remix.29.2\n
-    - Геймплей:\n
-    -- Новые испытания:\n
-    --- Запретные Руны\n
-    --- Пацифизм\n
-    - Моддинг:\n
-    -- Ксатомизируемые Артефакты\n
-    - Исправления ошибок\n
-    </string>
   <string name="town_deco_crossroad_name">Дорожный указатель</string>
   <string name="town_deco_crossroad_desc">Грубо сделанный деревянный столб с приколоченными дощечками в форме стрелок, текст на них давно выцвел, похоже что из-за суровой погоды.</string>
   <string name="ShieldBuffReady_Name">Готов</string>
@@ -2644,61 +2633,147 @@ No, there was no place for her in the light, not anymore. She turned from the me
     - Исправление ошибок\n
     </string>
 
-    <string name="town_table_fortune_ball_name">Хрустальный шар</string>
-    <string name="town_table_fortune_ball_desc">Хрустальный шар, с загадочной дымкой внутри.</string>
-    <string name="town_deco_shelf_full_name">Полка</string>
-    <string name="town_deco_shelf_full_desc">На этой полке расположились разные безделушки.</string>
-    <string name="town_deco_skulls_name">Черепа</string>
-    <string name="town_deco_skulls_desc">Отполированные до блеска черепа, принадлежащие существам из подземелья.</string>
-    <string name="town_deco_urn_name">Урна</string>
-    <string name="town_deco_urn_desc">Глиняная урна, возможно с чьим то прахом.</string>
-    <string name="town_deco_crate_name">Ящик</string>
-    <string name="town_deco_crate_desc">Крепкий деревянный ящик хранит в себе свои секреты.</string>
-    <string name="town_deco_crate_scrolls_name">Ящик со свитками</string>
-    <string name="town_deco_crate_scrolls_desc">Этот ящик доверху забит тайными знаниями.</string>
-    <string name="town_deco_cabinet_name">Шкафчик</string>
-    <string name="town_deco_cabinet_desc">Вместительный шкафчик с множеством дверей и полок.</string>
-    <string name="town_deco_clock_name">Настенные часы</string>
-    <string name="town_deco_clock_desc">Стрелки на них уже давно застыли в одном положении.</string>
-    <string name="town_deco_poster_name">Плакат</string>
-    <string name="town_deco_poster_desc">Листовки с объявлениями о предстоящих сеансах.</string>
-    <string name="town_deco_ladder_name">Приставная лестница</string>
-    <string name="town_deco_ladder_desc">Ветхая лестница, ненадежная на вид.</string>
-    <string name="town_deco_weaponrack_name">Оружейный стойка</string>
-    <string name="town_deco_weaponrack_desc">На этой стойке расположилось оружие, которое явно Вам не по карману.</string>
-    <string name="town_deco_church_sign_name">Вывеска церкви</string>
-    <string name="town_deco_church_sign_desc">Вероятно, в этом здании находится церковь.</string>
-    <string name="town_deco_statue_water_name">Статуя ангела</string>
-    <string name="town_deco_statue_water_desc">Величественная статуя ангела держит чашу с водой.</string>
-    <string name="town_deco_statue_blood_name">Статуя ангела</string>
-    <string name="town_deco_statue_blood_desc">Величественная статуя ангела держит чашу с кровью.</string>
-    <string name="town_deco_vat_name">Чан</string>
-    <string name="town_deco_vat_desc">Этот каменный чан до краев наполнен святой водой.</string>
-    <string name="town_deco_armorstand_leather_name">Кожаный доспех</string>
-    <string name="town_deco_armorstand_leather_desc">Надежный кожаный доспех будет отличным приобретением перед походом в подземелье.</string>
-    <string name="town_deco_armorstand_scale_name">Чешуйчатый доспех</string>
-    <string name="town_deco_armorstand_scale_desc">Позолоченные пластины этого чешуйчатого доспеха выглядят совсем новыми.</string>
-    <string name="town_deco_armorstand_plate_name">Латный доспех</string>
-    <string name="town_deco_armorstand_plate_desc">По словам торговца, этот тяжелый латный доспех некогда принадлежал великому воину.</string>
-    <string name="town_deco_red_carpet_name">Ковер</string>
-    <string name="town_deco_red_carpet_desc">По слухам, такие же красные ковры украшают залы метрополя дворфов.</string>
-    <string name="town_deco_beige_carpet_name">Ковер</string>
-    <string name="town_deco_beige_carpet_desc">Элегантный бежевый ковер, сотканный из мягкой шерсти гнолла.</string>
-    <string name="town_deco_brown_carpet_name">Ковер</string>
-    <string name="town_deco_brown_carpet_desc">Коричневый ковер, который был истоптан ногами множества авантюристов, бродяг и случайных прохожих.</string>
-    <string name="town_deco_charcoal_carpet_name">Ковер</string>
-    <string name="town_deco_charcoal_carpet_desc">Заботясь о комфорте гостей, администрация кинотеатра выбрала самые качественные ковры угольно-черного цвета.</string>
-    <string name="town_deco_magenta_carpet_name">Ковер</string>
-    <string name="town_deco_magenta_carpet_desc">Пурпурный оттенок этого ковра, навевает мысли о городском вине.</string>
+  <string name="InnKeeperNPC_Name">хозяин таверны</string>
+  <string name="InnKeeperNPC_Name_Objective">хозяина таверны</string>
+  <string name="InnKeeperNPC_Gender">masculine</string>
+  <string name="InnKeeperNPC_Desc">Весьма самодовольный трактирщик.</string>
 
-    <string name="InnServant_Phrase_1">Тьфу, еще столько нужно сделать!</string>
-    <string name="InnServant_Phrase_2">Этот пьяница сводит меня с ума!</string>
-    <string name="InnServant_Phrase_3">Вроде бы чисто</string>
-    <string name="InnServant_Phrase_4">Ой, сегодня так много гостей</string>
 
-    <string name="Drunkard_Phrase_1">НАЛЕЙТЕ КА МНЕ ЕЩЁ!</string>
-    <string name="Drunkard_Phrase_2">Зачем вода, когда есть пиво!</string>
-    <string name="Drunkard_Phrase_3">Это пиво или грязь?</string>
-    <string name="Drunkard_Phrase_4">Zzzzzz...</string>
+  <string name="DrunkardNPC_Name">пьяница</string>
+  <string name="DrunkardNPC_Name_Objective">пьяницу</string>
+  <string name="DrunkardNPC_Gender">masculine</string>
+  <string name="DrunkardNPC_Desc">Завсегдатай трактира в своём обычном состоянии. </string>
+
+
+  <string name="MercenaryNPC_Name">наёмник</string>
+  <string name="MercenaryNPC_Name_Objective">наёмника</string>
+  <string name="MercenaryNPC_Gender">masculine</string>
+  <string name="MercenaryNPC_Desc">Крепко сбитый малый.</string>
+
+
+  <string name="ServantNPC_Name">официантка</string>
+  <string name="ServantNPC_Name_Objective">официантку</string>
+  <string name="ServantNPC_Gender">feminine</string>
+  <string name="ServantNPC_Desc">Очень занятая официантка.</string>
+
+
+  <string name="BardNPC_Name">бард</string>
+  <string name="BardNPC_Name_Objective">барда</string>
+  <string name="BardNPC_Gender">masculine</string>
+  <string name="BardNPC_Desc">Городской бард играет на лютне.</string>
+
+  <string name="Welcome_Text_30">
+    remix.30.0\n
+    - Геймплей:\n
+    -- Способности для всех классов!\n
+    -- Гостиница открылась!\n
+    - Исправление ошибок\n
+    </string>
+
+
+  <string name="Roar_Name">Рёв</string>
+  <string name="Roar_Info">Этот могучий рёв вне всяких сомнений ужаснёт врагов и воодушевит друзей.</string>
+
+  <string name="LightningBolt_Name">Молния</string>
+  <string name="LightningBolt_Info">Заклятье известное ещё древнейшим шаманам вдарит по твоим врагам. 
+Эффект удвоится, если враги окажутся достаточно глупы, чтобы стоять на воде.</string>
+
+  <string name="Heal_Name">Исцеление</string>
+  <string name="Heal_Info">Довольно полезное заклятье в Подземелье, верно?</string>
+
+  <string name="Order_Name">Приказ</string>
+  <string name="Order_Info">При должной концентрации твои приказы почти неоспоримы.</string>
+  <string name="Order_Resist">Да как ты смеешь?!!</string>
+
+  <string name="Spell_SelectAChar">Выбери цель (существо).</string>
+
+  <string name="Calm_Name">Успокоение</string>
+  <string name="Calm_Info">Вокруг так много злобы и агрессии, давайте поможем им.</string>
+
+  <string name="CharmSpell_Name">Очарование</string>
+  <string name="CharmSpell_Info">Каждый нужно немного любви, ведь так?</string>
+
+  <string name="HideInGrassSpell_Name">Прятки</string>
+  <string name="HideInGrassSpell_Info">Твоё искусство игры в прятки совершенно.</string>
+  <string name="HideInGrassSpell_NeedGrassToHide">Даже я не могу спрятаться на пустом месте.</string>
+
+
+  <string name="MagicArrow_Name">Волшебная стрела</string>
+  <string name="MagicArrow_Info">Старая добрая волшебная стрела, отличный выбор когда закончились боеприпасы.</string>
+
+  <string name="NatureArmorSpell_Name">Природная Броня</string>
+  <string name="NatureArmorSpell_Info">Эльфы тоже могут танковать, особенно когда они под защитой самой Матери Природы.</string>
+
+  <string name="ShootInEye_Name">Раз и в Глаз</string>
+  <string name="ShootInEye_Info">Используй свои исключительные способности, чтобы засадить врагу прямо в глаз, если он у него есть конечно же.</string>
+
+
+  <string name="Sprout_Name">Росток</string>
+  <string name="Sprout_Info">Пробуди спящие семена.\nОднако, для успеха этого заклятья нужно чтобы в земле присутствовала растительная жизнь.</string>
+
+
+  <string name="SummonBeast_Name">Зов Зверя</string>
+  <string name="SummonBeast_Info">Попытка призвать орду свирепых зверей под твоё начало.\nУспех не гарантирован.</string>
+  <string name="SummonBeast_AtYourCommand">Слушаю и повинуюсь!</string>
+
+  <string name="WndSettings_RecordVideo">Запись видео</string>
+  <string name="Dungeon_saveIoError">При попытке создать файл сохранения:</string>
+
+  <string name="town_table_fortune_ball_name">Хрустальный шар</string>
+  <string name="town_table_fortune_ball_desc">Хрустальный шар, с загадочной дымкой внутри.</string>
+  <string name="town_deco_shelf_full_name">Полка</string>
+  <string name="town_deco_shelf_full_desc">На этой полке расположились разные безделушки.</string>
+  <string name="town_deco_skulls_name">Черепа</string>
+  <string name="town_deco_skulls_desc">Отполированные до блеска черепа, принадлежащие существам из подземелья.</string>
+  <string name="town_deco_urn_name">Урна</string>
+  <string name="town_deco_urn_desc">Глиняная урна, возможно с чьим то прахом.</string>
+  <string name="town_deco_crate_name">Ящик</string>
+  <string name="town_deco_crate_desc">Крепкий деревянный ящик хранит в себе свои секреты.</string>
+  <string name="town_deco_crate_scrolls_name">Ящик со свитками</string>
+  <string name="town_deco_crate_scrolls_desc">Этот ящик доверху забит тайными знаниями.</string>
+  <string name="town_deco_cabinet_name">Шкафчик</string>
+  <string name="town_deco_cabinet_desc">Вместительный шкафчик с множеством дверей и полок.</string>
+  <string name="town_deco_clock_name">Настенные часы</string>
+  <string name="town_deco_clock_desc">Стрелки на них уже давно застыли в одном положении.</string>
+  <string name="town_deco_poster_name">Плакат</string>
+  <string name="town_deco_poster_desc">Листовки с объявлениями о предстоящих сеансах.</string>
+  <string name="town_deco_ladder_name">Приставная лестница</string>
+  <string name="town_deco_ladder_desc">Ветхая лестница, ненадежная на вид.</string>
+  <string name="town_deco_weaponrack_name">Оружейный стойка</string>
+  <string name="town_deco_weaponrack_desc">На этой стойке расположилось оружие, которое явно Вам не по карману.</string>
+  <string name="town_deco_church_sign_name">Вывеска церкви</string>
+  <string name="town_deco_church_sign_desc">Вероятно, в этом здании находится церковь.</string>
+  <string name="town_deco_statue_water_name">Статуя ангела</string>
+  <string name="town_deco_statue_water_desc">Величественная статуя ангела держит чашу с водой.</string>
+  <string name="town_deco_statue_blood_name">Статуя ангела</string>
+  <string name="town_deco_statue_blood_desc">Величественная статуя ангела держит чашу с кровью.</string>
+  <string name="town_deco_vat_name">Чан</string>
+  <string name="town_deco_vat_desc">Этот каменный чан до краев наполнен святой водой.</string>
+  <string name="town_deco_armorstand_leather_name">Кожаный доспех</string>
+  <string name="town_deco_armorstand_leather_desc">Надежный кожаный доспех будет отличным приобретением перед походом в подземелье.</string>
+  <string name="town_deco_armorstand_scale_name">Чешуйчатый доспех</string>
+  <string name="town_deco_armorstand_scale_desc">Позолоченные пластины этого чешуйчатого доспеха выглядят совсем новыми.</string>
+  <string name="town_deco_armorstand_plate_name">Латный доспех</string>
+  <string name="town_deco_armorstand_plate_desc">По словам торговца, этот тяжелый латный доспех некогда принадлежал великому воину.</string>
+  <string name="town_deco_red_carpet_name">Ковер</string>
+  <string name="town_deco_red_carpet_desc">По слухам, такие же красные ковры украшают залы метрополя дворфов.</string>
+  <string name="town_deco_beige_carpet_name">Ковер</string>
+  <string name="town_deco_beige_carpet_desc">Элегантный бежевый ковер, сотканный из мягкой шерсти гнолла.</string>
+  <string name="town_deco_brown_carpet_name">Ковер</string>
+  <string name="town_deco_brown_carpet_desc">Коричневый ковер, который был истоптан ногами множества авантюристов, бродяг и случайных прохожих.</string>
+  <string name="town_deco_charcoal_carpet_name">Ковер</string>
+  <string name="town_deco_charcoal_carpet_desc">Заботясь о комфорте гостей, администрация кинотеатра выбрала самые качественные ковры угольно-черного цвета.</string>
+  <string name="town_deco_magenta_carpet_name">Ковер</string>
+  <string name="town_deco_magenta_carpet_desc">Пурпурный оттенок этого ковра, навевает мысли о городском вине.</string>
+  
+  <string name="InnServant_Phrase_1">Тьфу, еще столько нужно сделать!</string>
+  <string name="InnServant_Phrase_2">Этот пьяница сводит меня с ума!</string>
+  <string name="InnServant_Phrase_3">Вроде бы чисто</string>
+  <string name="InnServant_Phrase_4">Ой, сегодня так много гостей</string>
+
+  <string name="Drunkard_Phrase_1">НАЛЕЙТЕ КА МНЕ ЕЩЁ!</string>
+  <string name="Drunkard_Phrase_2">Зачем вода, когда есть пиво!</string>
+  <string name="Drunkard_Phrase_3">Это пиво или грязь?</string>
+  <string name="Drunkard_Phrase_4">Zzzzzz...</string>
 
 </resources>
