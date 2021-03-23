@@ -6,11 +6,11 @@
 
 local RPD = require "scripts/lib/commonClasses"
 
-local gameScene = require "scripts/services/gameScene"
+local gameScene = require "scripts.userServices.gameScene"
 
 local GameControl = luajava.bindClass("com.nyrds.pixeldungeon.utils.GameControl")
 
-local autoTestAi = require "scripts/services/autoTestAi"
+local autoTestAi = require "scripts.userServices.autoTestAi"
 
 local levels = RPD.DungeonGenerator:getLevelsList()
 local levelsSize = levels:size()

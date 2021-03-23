@@ -2631,7 +2631,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
   <string name="MercenaryNPC_Name">mercenary</string>
   <string name="MercenaryNPC_Name_Objective">mercenary</string>
-  <string name="MercenaryNPC_Gender">>masculine</string>
+  <string name="MercenaryNPC_Gender">masculine</string>
   <string name="MercenaryNPC_Desc">Sturdy looking man.</string>
 
 
@@ -2643,7 +2643,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
   <string name="BardNPC_Name">bard</string>
   <string name="BardNPC_Name_Objective">bard</string>
-  <string name="BardNPC_Gender">>masculine</string>nh
+  <string name="BardNPC_Gender">masculine</string>
   <string name="BardNPC_Desc">The town bard is playing his lute.</string>
 
   <string name="Welcome_Text_30">
