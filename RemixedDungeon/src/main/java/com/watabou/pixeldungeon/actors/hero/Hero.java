@@ -484,21 +484,6 @@ public class Hero extends Char {
 		AttackIndicator.updateState(this);
 	}
 
-	@NotNull
-	public Char getNearestEnemy() {
-
-		Char nearest = CharsList.DUMMY;
-		int dist = Integer.MAX_VALUE;
-		for (Char mob : visibleEnemies) {
-			int mobDist = level().distance(getPos(), mob.getPos());
-			if (mobDist < dist) {
-				dist = mobDist;
-				nearest = mob;
-			}
-		}
-		return nearest;
-	}
-
 	public boolean getCloser(final int target) {
 
 		if (hasBuff(Roots.class)) {

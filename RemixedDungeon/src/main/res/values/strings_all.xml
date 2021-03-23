@@ -2692,7 +2692,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
 
   <string name="Sprout_Name">Sprout</string>
-  <string name="Sprout_Info">Awaken the dormant seeds.\However, there should be some greenery on the ground for this spell to succeed.</string>
+  <string name="Sprout_Info">Awaken the dormant seeds.\nHowever, there should be some greenery on the ground for this spell to succeed.</string>
 
 
   <string name="SummonBeast_Name">Beast Call</string>
