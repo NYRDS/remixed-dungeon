@@ -465,7 +465,12 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             if (emo != null) {
                 emo.setVisible(visible);
             }
+
+            if(visible && curAnim == null && Math.random() < 0.004) {
+                idle();
+            }
         });
+
     }
 
     private void showSleep() {

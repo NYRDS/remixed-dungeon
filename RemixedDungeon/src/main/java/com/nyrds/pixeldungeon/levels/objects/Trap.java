@@ -204,8 +204,8 @@ public class Trap extends LevelObject {
 	}
 
 	static class ScriptTrap implements ITrigger {
-		private String scriptFile;
-		private String data;
+		private final String scriptFile;
+		private final String data;
 
 		ScriptTrap(String _scriptFile, String _data) {
 			scriptFile = _scriptFile;

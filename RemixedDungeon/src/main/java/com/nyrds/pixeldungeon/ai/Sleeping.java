@@ -29,10 +29,6 @@ public class Sleeping extends MobAi implements AiState {
         } else {
             me.enemySeen = false;
             me.spend(Actor.TICK);
-
-            if(Math.random()<0.2) {
-                me.getSprite().idle();
-            }
         }
     }
 
