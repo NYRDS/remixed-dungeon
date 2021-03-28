@@ -39,7 +39,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class Viscosity extends Glyph {
 
-	private static ItemSprite.Glowing PURPLE = new ItemSprite.Glowing( 0x8844CC );
+	private static final ItemSprite.Glowing PURPLE = new ItemSprite.Glowing( 0x8844CC );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage ) {
