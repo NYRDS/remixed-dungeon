@@ -15,7 +15,7 @@
         "kind": "ScrollOfUpgrade"
       },
       {
-        "kind": "SpellBook"
+        "kind": "test/TestItem"
       },
       {
         "kind": "WoodenShield"
