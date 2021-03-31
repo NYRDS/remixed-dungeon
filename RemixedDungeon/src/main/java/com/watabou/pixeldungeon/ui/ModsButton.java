@@ -77,7 +77,7 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
 
     @Override
     protected void onClick() {
-        String[] requiredPermissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.INTERNET};
+        String[] requiredPermissions = {Manifest.permission.INTERNET};
         Game.instance().doPermissionsRequest(this, requiredPermissions);
     }
 
