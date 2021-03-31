@@ -1,6 +1,5 @@
 package com.nyrds.android;
 
-import android.Manifest;
 import android.content.Intent;
 import android.net.Uri;
 
@@ -40,7 +39,7 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, In
         if(!permissionsRequested) {
             permissionsRequested = true;
 
-            String[] requiredPermissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
+            String[] requiredPermissions = {};
             Game.instance().doPermissionsRequest(this, requiredPermissions);
         }
     }
