@@ -753,7 +753,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
 	@LuaInterface
 	@Deprecated
-	String getClassName() { //for old mods compatibility
+	public String getClassName() { //for old mods compatibility
 		return getEntityKind();
 	}
 }
