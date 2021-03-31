@@ -27,8 +27,8 @@ import org.jetbrains.annotations.Nullable;
 
 public class TextureFilm {
 
-	private int texWidth;
-	private int texHeight;
+	private final int texWidth;
+	private final int texHeight;
 	
 	protected SparseArray<RectF> frames = new SparseArray<>();
 	
