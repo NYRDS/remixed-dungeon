@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels.objects.sprites;
 
+import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.MovieClip;
@@ -10,9 +11,14 @@ import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
+
+import org.jetbrains.annotations.NotNull;
+
+import lombok.var;
 
 public class LevelObjectSprite extends MovieClip implements Tweener.Listener, MovieClip.Listener {
 
@@ -48,7 +54,7 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 		y = p.y + centerShift.y;
 	}
 
-	public void reset(LevelObject object) {
+	public void reset(@NotNull LevelObject object) {
 		revive();
 
 		texture(object.texture());
@@ -60,7 +66,14 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 		centerShift = new PointF(-(xs - DungeonTilemap.SIZE) / 2.f, -(ys-DungeonTilemap.SIZE) / 2.f);
 		origin.set(xs / 2.f, ys / 2.f);
 
-		reset(object.image());
+		int image = object.image();
+		var frame = frames.get(image);
+
+		if (frame == null) {
+			throw new ModError(Utils.format("bad index %d in image %s for %s", image, texture.toString(), object.getEntityKind()));
+		}
+
+		reset(image);
 		alpha(1f);
 
 		setLevelPos(object.getPos());
