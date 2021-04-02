@@ -249,6 +249,20 @@ public class ModdingMode {
 		return resource.toString();
 	}
 
+	public static @NotNull InputStream getInputStreamBuiltIn(String resName) {
+		try {
+
+			if(resourcesRemap.containsKey(resName)) {
+				resName = resourcesRemap.get(resName);
+			}
+
+			return RemixedDungeonApp.getContext().getAssets().open(resName);
+		} catch (IOException e) {
+			throw new ModError("Missing file: "+resName + " in Remixed",e);
+		}
+	}
+
+
 	public static @NotNull InputStream getInputStream(String resName) {
 		try {
 			if (!mActiveMod.equals(REMIXED) && isModdingAllowed(resName)) {
@@ -258,11 +272,7 @@ public class ModdingMode {
 				}
 			}
 
-			if(resourcesRemap.containsKey(resName)) {
-				resName = resourcesRemap.get(resName);
-			}
-
-			return RemixedDungeonApp.getContext().getAssets().open(resName);
+			return getInputStreamBuiltIn(resName);
 		} catch (IOException e) {
 			throw new ModError("Missing file: "+resName + " in: " + activeMod() + " " + activeModVersion(),e);
 		}
