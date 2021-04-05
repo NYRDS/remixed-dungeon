@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -9,6 +10,8 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import lombok.var;
 
 public class Horrified extends MobAi implements AiState{
 
@@ -24,8 +27,15 @@ public class Horrified extends MobAi implements AiState{
         Terror terror = me.buff(Terror.class);
         NamedEntityKind src = terror.getSource();
 
-        if(src instanceof Char) {
-            me.doStepFrom(((Char) src).getPos());
+        var sourceOfFear = CharsList.DUMMY;
+
+        if(src instanceof Char && ((Char) src).valid()) {
+            sourceOfFear = ((Char) src);
+        } else {
+            sourceOfFear = me.getNearestEnemy();
+        }
+
+        if(!me.doStepFrom(sourceOfFear.getPos())) {
             me.spend(Actor.TICK);
         }
     }

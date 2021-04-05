@@ -4,5 +4,6 @@
    "scriptFile"    :"scripts/npc/BlackCat",
    "aiState"       :"Passive",
    "fraction"      :"NEUTRAL",
-   "friendly"      :true
+   "friendly"      :true,
+   "immortal"      :true
 }

@@ -276,7 +276,7 @@ public class CharUtils {
             actions.add(CommonActions.MAC_TAUNT);
         }
 
-        if(target.adjacent(hero) && hero.stealth() > 2) {
+        if(target.adjacent(hero) && hero.stealth() > 2 && hero.friendly(target)) {
             actions.add(CommonActions.MAC_STEAL);
         }
 

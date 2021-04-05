@@ -28,8 +28,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 999
-        versionName "30.0.rc.4"
+        versionCode 1000
+        versionName "30.0.fix.1"
 
         buildToolsVersion = '29.0.2'
         targetSdkVersion 30
@@ -112,13 +112,13 @@ dependencies {
 
     implementation 'commons-io:commons-io:2.6'
 
-    implementation 'com.appodeal.ads.sdk:core:2.8.1'
-    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.8.1.8'
-    implementation 'com.appodeal.ads.sdk.networks:applovin:2.8.1.9'
-    implementation 'com.appodeal.ads.sdk.networks:bidmachine:2.8.1.3'
-    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.8.1.8'
-    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.8.1.7'
-    implementation 'com.appodeal.ads.sdk.networks:vungle:2.8.1.5'
+    implementation 'com.appodeal.ads.sdk:core:2.9.2'
+    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.9.2.11'
+    implementation 'com.appodeal.ads.sdk.networks:applovin:2.9.2.12'
+    implementation 'com.appodeal.ads.sdk.networks:bidmachine:2.9.2.7'
+    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.9.2.11'
+    implementation 'com.appodeal.ads.sdk.networks:my_target:2.9.2.11'
+    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.9.2.8'
 
     implementation 'org.jetbrains:annotations:15.0'
 

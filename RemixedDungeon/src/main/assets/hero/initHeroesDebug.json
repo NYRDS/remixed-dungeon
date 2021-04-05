@@ -18,15 +18,19 @@
         "kind": "test/TestItem"
       },
       {
-        "kind": "WoodenShield"
+        "kind": "ScrollOfIdentify"
       },
       {
         "kind": "ScrollOfCurse"
       },
       {
-        "kind": "CommonArrow"
+        "kind": "ScrollOfWeaponUpgrade",
+        "quantity": 1000
+      },
+      {
+        "kind": "PotionOfToxicGas",
+        "quantity": 1000
       }
-
     ],
     "str": 10,
     "hp": 20000000,

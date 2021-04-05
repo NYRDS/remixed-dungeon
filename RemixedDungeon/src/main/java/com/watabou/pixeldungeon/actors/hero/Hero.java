@@ -103,7 +103,6 @@ import com.watabou.utils.SystemTime;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -342,8 +341,6 @@ public class Hero extends Char {
 			return false;
 		}
 
-		checkVisibleEnemies();
-
 		if(controlTargetId != getId()) {
 			curAction = null;
 		}
@@ -460,28 +457,17 @@ public class Hero extends Char {
 		}
 	}
 
-	public void checkVisibleEnemies() {
-		ArrayList<Char> visible = new ArrayList<>();
-
-		boolean newMob = false;
-
-		for (Mob m : level().mobs) {
-			if (level().fieldOfView[m.getPos()] && !m.friendly(this) && m.invisible <= 0) {
-				visible.add(m);
-				if (!visibleEnemies.contains(m)) {
-					newMob = true;
-				}
-			}
-		}
+	@Override
+	public boolean checkVisibleEnemies() {
+		boolean newMob = super.checkVisibleEnemies();
 
 		if (newMob) {
 			interrupt();
 			restoreHealth = false;
 		}
 
-		visibleEnemies = visible;
-
 		AttackIndicator.updateState(this);
+		return newMob;
 	}
 
 	public boolean getCloser(final int target) {

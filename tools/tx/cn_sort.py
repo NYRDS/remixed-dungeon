@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-import json
 import os
 import pprint
 import re
-from lxml.etree import SubElement
-
-from lxml import etree as ElementTree
 from langdetect import detect
-from langdetect import detect_langs
+from lxml import etree as ElementTree
 from lxml.etree import Element
+from lxml.etree import SubElement
+from mafan import text
 
 dstDir = "../../RemixedDungeon/src/main/res/"
 
 xml_ext = '.xml'
 translations_dir = 'translations/'
+
+
 
 source_locales = {"zh", "zh-Hans", "zh_CN", "zh_HK", "zh_TW"}
 #source_locales = {"zh"}
@@ -64,7 +64,7 @@ def lang(arg):
     ret = None
     try:
         ret = detect(for_detect)
-        print(arg, "->", detect(for_detect))
+        print(arg, "->", ret, text.identify(for_detect))
     except LangDetectException as e:
         print(arg, "->", e)
     return ret
@@ -126,7 +126,7 @@ for _, _, files in os.walk(translations_dir + dir_name):
                 entry.text = process_text(entry.text)
                 lang_code = lang(entry.text)
 
-                if lang_code == 'zh-cn':
+                if lang_code == 'zh-cn' or lang_code == 'zh':
                     outEntry = SubElement(zh_cn, entry.tag, {'name': entry.get('name')})
                     outEntry.text = entry.text
                 if lang_code == 'zh-tw':
