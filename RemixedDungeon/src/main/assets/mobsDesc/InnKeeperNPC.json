@@ -7,5 +7,6 @@
    "friendly"      :true,
    "movable"       :false,
    "aiState"       :"Passive",
-   "fraction"      :"NEUTRAL"
+   "fraction"      :"NEUTRAL",
+   "immortal"      :true
 }

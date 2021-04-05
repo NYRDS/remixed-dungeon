@@ -220,9 +220,30 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		next();
 	}
 
+	public boolean checkVisibleEnemies() {
+		ArrayList<Char> visible = new ArrayList<>();
+
+		boolean newMob = false;
+
+		for (Mob m : level().mobs) {
+			if (level().fieldOfView[m.getPos()] && !m.friendly(this) && m.invisible <= 0) {
+				visible.add(m);
+				if (!visibleEnemies.contains(m)) {
+					newMob = true;
+				}
+			}
+		}
+
+		visibleEnemies = visible;
+
+		return newMob;
+	}
+
 	@Override
 	public boolean act() {
 		level().updateFieldOfView(this);
+
+		checkVisibleEnemies();
 
 		forEachBuff(CharModifier::charAct);
 
