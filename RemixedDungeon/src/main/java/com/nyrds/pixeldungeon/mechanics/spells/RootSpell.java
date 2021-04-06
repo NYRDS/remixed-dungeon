@@ -2,18 +2,15 @@ package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.effects.particles.EarthParticle;
-import com.watabou.pixeldungeon.mechanics.Ballistica;
 
 public class RootSpell extends Spell{
 
 	RootSpell() {
-		targetingType = SpellHelper.TARGET_CHAR;
+		targetingType = SpellHelper.TARGET_CHAR_NOT_SELF;
 		magicAffinity = SpellHelper.AFFINITY_ELEMENTAL;
 
 		level = 2;
@@ -22,22 +19,17 @@ public class RootSpell extends Spell{
 	}
 
 	@Override
-	public boolean cast(Char chr, int cell){
+	public boolean cast(Char chr, Char target){
 
-		if(Dungeon.level.cellValid(cell)) {
-			if(Ballistica.cast(chr.getPos(), cell, false, true) == cell) {
-				Char ch = Actor.findChar( cell );
-				if (ch != null) {
-					ch.getSprite().emitter().burst( EarthParticle.FACTORY, 5 );
-					ch.getSprite().burst( 0xFF99FFFF, 3 );
+		if(target.valid()) {
+			target.getSprite().emitter().burst( EarthParticle.FACTORY, 5 );
+			target.getSprite().burst( 0xFF99FFFF, 3 );
 
-					Buff.prolong( ch, Roots.class, 10 );
-					Sample.INSTANCE.play( Assets.SND_PUFF );
-				}
+			Buff.prolong( target, Roots.class, 10 );
+			Sample.INSTANCE.play( Assets.SND_PUFF );
 
-				castCallback(chr);
-				return true;
-			}
+			castCallback(chr);
+			return true;
 		}
 		return false;
 	}
