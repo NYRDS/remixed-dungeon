@@ -1791,9 +1791,7 @@ public abstract class Level implements Bundlable {
 		customLayers = new HashMap<>();
 		for(LayerId layerId: LayerId.values()) {
 			int [] layer = new int[getLength()];
-			for (int i = 0; i < map.length; ++i) {
-				layer[i] = Random.Int(0, Integer.MAX_VALUE);
-			}
+			Arrays.fill(layer,-1);
 			customLayers.put(layerId, layer);
 		}
 	}
@@ -1901,12 +1899,7 @@ public abstract class Level implements Bundlable {
 
 	@LuaInterface
 	public boolean isPlainTile(int cell) {
-		var baseLayer = customLayers.get(LayerId.Base);
-		if(baseLayer == null) {
-			return true;
-		}
-
-		return baseLayer[cell] < 0;
+		return true;
 	}
 
 	@LuaInterface

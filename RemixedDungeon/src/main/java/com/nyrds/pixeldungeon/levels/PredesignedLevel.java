@@ -21,6 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import lombok.SneakyThrows;
+import lombok.var;
 
 public class PredesignedLevel extends CustomLevel {
 
@@ -261,5 +262,15 @@ public class PredesignedLevel extends CustomLevel {
 	@Override
 	public boolean customTiles() {
 		return useCustomTiles;
+	}
+
+	@Override
+	public boolean isPlainTile(int cell) {
+		var baseLayer = getTileLayer(LayerId.Base);
+		if(baseLayer == null) {
+			return true;
+		}
+
+		return baseLayer[cell] < 0;
 	}
 }
