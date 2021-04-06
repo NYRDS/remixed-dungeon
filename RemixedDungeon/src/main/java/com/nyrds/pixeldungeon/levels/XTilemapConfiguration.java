@@ -23,9 +23,9 @@ import lombok.var;
 
 public class XTilemapConfiguration {
 
-	private Map<Integer,TileDesc> tilemapConfiguration = new HashMap<>();
+	private final Map<Integer,TileDesc> tilemapConfiguration = new HashMap<>();
 
-	private static Map<String, Integer> terrainMapping = new HashMap<>();
+	private static final Map<String, Integer> terrainMapping = new HashMap<>();
 
 	private static void createTerrainMapping() {
 		if(terrainMapping.isEmpty()) {

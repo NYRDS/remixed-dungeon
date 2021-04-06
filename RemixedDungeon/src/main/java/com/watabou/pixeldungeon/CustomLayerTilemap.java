@@ -24,11 +24,11 @@ import java.util.Arrays;
 
 public class CustomLayerTilemap extends DungeonTilemap {
 
-    private ArrayList<CustomLayerTilemap> mLayers     = new ArrayList<>();
+    private final ArrayList<CustomLayerTilemap> mLayers     = new ArrayList<>();
     private boolean                       transparent = false;
 
-    private FloatBuffer mask;
-    private float       maskData[];
+    private final FloatBuffer mask;
+    private final float[] maskData;
 
     public CustomLayerTilemap(Level level, Level.LayerId layerId) {
         super(level, level.getTilesetForLayer(layerId));

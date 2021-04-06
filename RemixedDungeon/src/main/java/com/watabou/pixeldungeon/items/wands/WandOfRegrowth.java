@@ -25,6 +25,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.effects.MagicMissile;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -35,20 +36,22 @@ public class WandOfRegrowth extends SimpleWand  {
 	
 	@Override
 	protected void onZap( int cell ) {
-		
-		for (int i=1; i < Ballistica.distance-1; i++) {
+
+		final Level level = Dungeon.level;
+
+		for (int i = 1; i < Ballistica.distance-1; i++) {
 			int p = Ballistica.trace[i];
-			int c = Dungeon.level.map[p];
+			int c = level.map[p];
 			if (c == Terrain.EMPTY || 
 				c == Terrain.EMBERS || 
 				c == Terrain.EMPTY_DECO) {
 				
-				Dungeon.level.set( p, Terrain.GRASS );
+				level.set( p, Terrain.GRASS );
 				
 			}
 		}
 		
-		int c = Dungeon.level.map[cell];
+		int c = level.map[cell];
 		if (c == Terrain.EMPTY || 
 			c == Terrain.EMBERS || 
 			c == Terrain.EMPTY_DECO || 
