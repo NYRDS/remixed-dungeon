@@ -6,7 +6,7 @@
     },
     "items": [
       {
-        "kind": "PotionOfLevitation"
+        "kind":  "WandOfRegrowth"
       },
       {
         "kind": "test/TestItem"
