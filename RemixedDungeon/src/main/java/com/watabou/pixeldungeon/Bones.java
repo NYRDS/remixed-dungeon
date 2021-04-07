@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.android.util.FileSystem;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
@@ -109,7 +110,7 @@ public class Bones {
 					((Ring)item).syncGem();
 				}
 				
-				return item;
+				return Treasury.getLevelTreasury().check(item);
 			} else {
 				return ItemsList.DUMMY;
 			}
