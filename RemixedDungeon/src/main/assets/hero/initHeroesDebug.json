@@ -6,7 +6,7 @@
     },
     "items": [
       {
-        "kind":  "WandOfRegrowth"
+        "kind": "WandOfRegrowth"
       },
       {
         "kind": "test/TestItem"
@@ -18,13 +18,10 @@
         "kind": "test/TestItem"
       },
       {
-        "kind": "ScrollOfIdentify"
+        "kind": "WandOfIcebolt"
       },
       {
-        "kind": "ScrollOfCurse"
-      },
-      {
-        "kind": "ScrollOfWeaponUpgrade",
+        "kind": "PotionOfFrost",
         "quantity": 1000
       },
       {
@@ -33,7 +30,7 @@
       }
     ],
     "str": 10,
-    "hp": 20000000,
+    "hp": 2,
     "magicAffinity": "Common",
     "sp": 100000,
     "maxSp": 100000,
@@ -154,7 +151,6 @@
         "depth": "7"
       }
     ],
-    "hp": 15000000,
     "knownItems": [
       {
         "kind": "PotionOfHealing"

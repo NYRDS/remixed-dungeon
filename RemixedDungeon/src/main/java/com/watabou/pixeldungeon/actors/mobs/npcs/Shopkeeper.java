@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.items.Item;
@@ -111,9 +112,12 @@ public class Shopkeeper extends NPC {
 		return true;
 	}
 
+
 	@Override
 	public boolean collect(@NotNull Item item) {
-		if(item instanceof Bag && Dungeon.hero != null) {
+		final Hero hero = Dungeon.hero;
+
+		if(item instanceof Bag && hero != null) {
 			if(Dungeon.hero.getItem(item.getEntityKind()).valid()) {
 				return false;
 			}
