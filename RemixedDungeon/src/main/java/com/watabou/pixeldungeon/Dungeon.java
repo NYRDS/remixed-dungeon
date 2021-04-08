@@ -66,7 +66,6 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -468,7 +467,7 @@ public class Dungeon {
 
                 SaveUtils.copySaveToSlot(SaveUtils.getAutoSave(), heroClass);
             } catch (IOException e) {
-                GameScene.show(new WndError(Game.getVar(R.string.Dungeon_saveIoError) + "\n" + e.getLocalizedMessage()));
+                Game.toast(Game.getVar(R.string.Dungeon_saveIoError) + "\n" + e.getLocalizedMessage());
                 EventCollector.logException(new Exception("cannot write save", e));
             }
 
