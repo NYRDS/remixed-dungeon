@@ -22,6 +22,7 @@ import android.annotation.SuppressLint;
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -41,7 +42,7 @@ import java.util.Map;
 
 import lombok.var;
 
-public abstract class Actor implements Bundlable {
+public abstract class Actor implements Bundlable, NamedEntityKind {
 	
 	public static final float TICK	= 1f;
 	private static float realTimeMultiplier = 1f;
@@ -191,13 +192,13 @@ public abstract class Actor implements Bundlable {
 
 		Actor actor;
 
-//		Log.i("Main loop", "start");
+		//Log.i("Main loop", "start");
 		while ((actor=getNextActor(Float.MAX_VALUE)) != null) {
 
-//			Log.i("Main loop", String.format("%s %4.2f",actor.getClass().getSimpleName(),actor.time));
+			//Log.i("Main loop", String.format("%s %4.2f %x",actor.getEntityKind(),actor.time, actor.hashCode()));
 
 			if (actor instanceof Char && ((Char)actor).getSprite().doingSomething()) {
-//				Log.i("Main loop", "in action");
+				//Log.i("Main loop", "in action");
 				// If it's character's turn to act, but its sprite
 				// is moving, wait till the movement is over
 				return;
@@ -206,16 +207,16 @@ public abstract class Actor implements Bundlable {
 			current = actor;
 
 			if (actor.act() || !Dungeon.hero.isAlive()) {
-//				Log.i("Main loop", String.format("%s next",actor.getClass().getSimpleName()));
+				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
 				actor.next();
 			} else {
-//				Log.i("Main loop", String.format("%s break",actor.getClass().getSimpleName()));
+				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
 
 				break;
 			}
 
 			if(SystemTime.timeSinceTick() > 40) {
-//				Log.i("Main loop", String.format("%s timeout",actor.getClass().getSimpleName()));
+				//Log.i("Main loop", String.format("%s timeout %x",actor.getEntityKind(), actor.hashCode()));
 
 				break;
 			}
@@ -339,5 +340,15 @@ public abstract class Actor implements Bundlable {
 	@LuaInterface
 	static public float localTime() {
 		return now;
+	}
+
+	@Override
+	public String name() {
+		return getEntityKind();
+	}
+
+	@Override
+	public String getEntityKind() {
+		return getClass().getSimpleName();
 	}
 }
