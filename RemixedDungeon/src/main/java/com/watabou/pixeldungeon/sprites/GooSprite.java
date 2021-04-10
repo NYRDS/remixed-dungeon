@@ -23,7 +23,7 @@ import com.watabou.pixeldungeon.Assets;
 
 public class GooSprite extends MobSprite {
 	
-	private Animation pump;
+	private final Animation pump;
 	
 	public GooSprite() {
 		super();

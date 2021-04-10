@@ -25,12 +25,12 @@
         "quantity": 1000
       },
       {
-        "kind": "PotionOfToxicGas",
+        "kind": "CurareDart",
         "quantity": 1000
       }
     ],
     "str": 10,
-    "hp": 2,
+    "hp": 200000,
     "magicAffinity": "Common",
     "sp": 100000,
     "maxSp": 100000,
@@ -97,7 +97,7 @@
   "HUNTRESS": {
     "items": [
       {
-        "kind": "Boomerang",
+        "kind": "CurareDart",
         "identified": true
       }
     ],
