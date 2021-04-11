@@ -401,26 +401,50 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	public void setupFromJson(@NotNull JSONObject desc) throws JSONException {
 		try {
+			Item item;
 			if (desc.has("armor")) {
-				setItemForSlot((EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("armor")), Slot.ARMOR);
+				item = ItemFactory.createItemFromDesc(desc.getJSONObject("armor"));
+				if(item instanceof EquipableItem) {
+					setItemForSlot((EquipableItem)item, Slot.ARMOR);
+				} else {
+					collect(item);
+				}
 			}
 
 			if (desc.has("weapon")) {
-				setItemForSlot((EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("weapon")), Slot.WEAPON);
+				item = ItemFactory.createItemFromDesc(desc.getJSONObject("weapon"));
+				if(item instanceof EquipableItem) {
+					setItemForSlot((EquipableItem)item, Slot.WEAPON);
+				} else {
+					collect(item);
+				}
 			}
 
 			if (desc.has("left_hand")) {
-				setItemForSlot((EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("left_hand")), Slot.LEFT_HAND);
+				item = ItemFactory.createItemFromDesc(desc.getJSONObject("left_hand"));
+				if(item instanceof EquipableItem) {
+					setItemForSlot((EquipableItem)item, Slot.LEFT_HAND);
+				} else {
+					collect(item);
+				}
 			}
 
 			if (desc.has("ring1")) {
-				EquipableItem ring11 = (EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("ring1"));
-				setItemForSlot(ring11, Slot.ARTIFACT);
-				this.ring1 = ring11;
+				item = ItemFactory.createItemFromDesc(desc.getJSONObject("ring1"));
+				if(item instanceof EquipableItem) {
+					setItemForSlot((EquipableItem)item, Slot.ARTIFACT);
+				} else {
+					collect(item);
+				}
 			}
 
 			if (desc.has("ring2")) {
-				setItemForSlot((EquipableItem) ItemFactory.createItemFromDesc(desc.getJSONObject("ring2")), Slot.LEFT_ARTIFACT);
+				item = ItemFactory.createItemFromDesc(desc.getJSONObject("ring2"));
+				if(item instanceof EquipableItem) {
+					setItemForSlot((EquipableItem)item, Slot.LEFT_ARTIFACT);
+				} else {
+					collect(item);
+				}
 			}
 		} catch (ClassCastException e) {
 			throw ModdingMode.modException(e);

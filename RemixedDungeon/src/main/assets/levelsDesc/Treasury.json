@@ -44,7 +44,9 @@
       "RottenPumpkinPie": 0,
       "RawFish": 0,
       "FriedFish": 0,
-      "RottenFish": 0
+      "RottenFish": 0,
+      "FrozenCarpaccio": 0,
+      "ChargrilledMeat": 0
     },
     "RANGED": {
       "CompoundBow": 3,
