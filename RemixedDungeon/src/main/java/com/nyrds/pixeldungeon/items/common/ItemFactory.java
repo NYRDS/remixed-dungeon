@@ -485,14 +485,14 @@ public class ItemFactory {
     public static Item createItemFromDesc(@NotNull JSONObject itemDesc) throws  JSONException {
         String kind = itemDesc.getString("kind");
 
-        if (kind.equals("NoItem") || Treasury.get().isForbidden(kind)) {
+        if (kind.equals("NoItem")) {
             return ItemsList.DUMMY;
         }
 
         Item item = ItemFactory.itemByName(kind);
         item.fromJson(itemDesc);
 
-        return item;
+        return Treasury.get().check(item);
     }
 
     public static Item virtual(String cl) {

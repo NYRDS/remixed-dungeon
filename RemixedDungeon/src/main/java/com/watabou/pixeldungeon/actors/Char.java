@@ -27,6 +27,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.items.ItemOwner;
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
@@ -1108,6 +1109,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public boolean collect(@NotNull Item item) {
+		item = Treasury.get().check(item);
+
 		if (!item.collect(this)) {
 			if (level() != null && level().cellValid(getPos())) {
 				level().animatedDrop(item, getPos());
