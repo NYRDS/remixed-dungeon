@@ -5,8 +5,6 @@ import androidx.annotation.NonNull;
 
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.OnUserEarnedRewardListener;
-import com.google.android.gms.ads.rewarded.RewardItem;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.nyrds.pixeldungeon.ml.R;
@@ -80,13 +78,10 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 		returnTo = ret;
 		if(mCinemaRewardAd!=null) {
 			mCinemaRewardAd.show(Game.instance(),
-					new OnUserEarnedRewardListener() {
-						@Override
-						public void onUserEarnedReward(RewardItem rewardItem) {
-							rewardEarned = true;
-							GLog.debug("reward: %s %d", rewardItem.getType(), rewardItem.getAmount());
-							returnTo.returnToWork(true);
-						}
+					rewardItem -> {
+						rewardEarned = true;
+						GLog.debug("reward: %s %d", rewardItem.getType(), rewardItem.getAmount());
+						returnTo.returnToWork(true);
 					}
 
 			);
