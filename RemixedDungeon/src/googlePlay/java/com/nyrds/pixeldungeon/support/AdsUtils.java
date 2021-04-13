@@ -21,8 +21,8 @@ public class AdsUtils {
             AdsUtils.initializationStatus = initializationStatus;
             initializationStatus.getAdapterStatusMap();
 
-            bannerFails.put(new AdMobComboProvider(),-2);
-            interstitialFails.put(new AdMobComboProvider(), -2);
+            bannerFails.put(new AdMobBannerProvider(),-2);
+            interstitialFails.put(new AdMobInterstitialProvider(), -2);
         });
 
 
@@ -49,7 +49,7 @@ public class AdsUtils {
         if(AppodealAdapter.usable()) {
             rewardVideoFails.put(new AppodealRewardVideoProvider(), -1);
         }
-        rewardVideoFails.put(new GoogleRewardVideoAds(), -2);
+        rewardVideoFails.put(new GoogleRewardVideoAds(), -2000);
     }
 
 }
