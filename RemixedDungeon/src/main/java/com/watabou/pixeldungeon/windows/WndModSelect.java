@@ -33,7 +33,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 	private String selectedMod;
 	private String downloadTo;
 
-	private Map<String, Mods.ModDesc> modsList;
+	private final Map<String, Mods.ModDesc> modsList;
 
 	public WndModSelect() {
 		super();

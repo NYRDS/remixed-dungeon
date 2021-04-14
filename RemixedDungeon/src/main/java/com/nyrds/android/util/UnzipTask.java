@@ -35,7 +35,7 @@ public class UnzipTask implements Runnable {
 		try {
 			File tmpDirFile = FileSystem.getExternalStorageFile(tmpDirName);
 			if (tmpDirFile.exists()) {
-				tmpDirFile.delete();
+				FileSystem.deleteRecursive(tmpDirFile);
 			}
 
 			if (Unzip.unzip(m_zipFile,
@@ -43,11 +43,16 @@ public class UnzipTask implements Runnable {
 					m_listener)) {
 
 				File[] unpackedList = tmpDirFile.listFiles();
-
 				File zipFile = new File(m_zipFile);
 
 				if (tgtDir.isEmpty()) {
-					tgtDir = FileSystem.getExternalStorageFileName(zipFile.getName().split("\\.")[0]);
+					final String zipFileName = zipFile.getName();
+
+					if(zipFileName.contains(".")) {
+						tgtDir = zipFileName.substring(0, zipFileName.lastIndexOf('.'));
+					} else {
+						tgtDir = zipFileName;
+					}
 				}
 
 				for (File file : unpackedList) {
