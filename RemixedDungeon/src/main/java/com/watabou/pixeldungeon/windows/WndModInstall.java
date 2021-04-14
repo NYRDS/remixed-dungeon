@@ -5,8 +5,8 @@ import android.net.Uri;
 
 import com.nyrds.android.InstallMod;
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.android.util.Mods;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.watabou.input.Touchscreen;
@@ -21,7 +21,7 @@ import lombok.var;
 
 public class WndModInstall extends Window {
 
-    public WndModInstall(Mods.ModDesc desc, onAgree action) {
+    public WndModInstall(ModDesc desc, onAgree action) {
         super();
         resizeLimited(120);
 
