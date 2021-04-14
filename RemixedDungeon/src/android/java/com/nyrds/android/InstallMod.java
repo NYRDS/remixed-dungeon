@@ -17,6 +17,8 @@ import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndModInstall;
 import com.watabou.pixeldungeon.windows.WndModSelect;
 
+import java.io.FileNotFoundException;
+
 import javax.microedition.khronos.opengles.GL10;
 
 import lombok.SneakyThrows;
@@ -106,16 +108,22 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, In
             shutdown();
         }
 
-        var modStream = getContentResolver().openInputStream(data);
-        var modDesc = Unzip.inspectMod(modStream);
+        toast("Checking %s", String.valueOf(data.getPath()));
 
+        var modDesc = Unzip.inspectMod(getContentResolver().openInputStream(data));
         modFileName = modDesc.name;
 
         EventCollector.logEvent("ManualModInstall", modDesc.name, String.valueOf(modDesc.version));
 
         WndModInstall wndModInstall = new WndModInstall(modDesc,
                 () -> Game.execute(
-                        () -> Unzip.unzipStream(modStream, FileSystem.getExternalStorageFileName(modDesc.name), this)));
+                        () -> {
+                            try {
+                                Unzip.unzipStream(getContentResolver().openInputStream(data), FileSystem.getExternalStorageFileName("./"), this);
+                            } catch (FileNotFoundException e) {
+                                EventCollector.logException(e);
+                            }
+                        }));
         scene.add(wndModInstall);
 
     }
