@@ -114,8 +114,16 @@ public class TextureCache {
 
 			Bitmap modAsset = BitmapFactory.decodeStream(ModdingMode.getInputStream(resName));
 
+			if(modAsset==null) {
+				throw new ModError("Bad bitmap: "+ resName);
+			}
+
 			if(ModdingMode.isAssetExist(resName)) {
 				Bitmap baseAsset = BitmapFactory.decodeStream(ModdingMode.getInputStreamBuiltIn(resName));
+
+				if(baseAsset==null) {
+					throw new ModError("Bad builtin bitmap: "+ resName);
+				}
 
 				if (modAsset.getHeight() * modAsset.getWidth() < baseAsset.getWidth() * baseAsset.getHeight()) {
 					RemixedDungeon.toast("%s image in %s smaller than in Remixed, using base version", resName, ModdingMode.activeMod());
