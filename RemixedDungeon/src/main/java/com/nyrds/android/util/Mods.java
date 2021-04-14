@@ -1,8 +1,8 @@
 package com.nyrds.android.util;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.watabou.pixeldungeon.RemixedDungeon;
-import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -21,7 +21,7 @@ public class Mods {
 
 	public static final String MODS_COMMON_JSON = "mods_common.json";
 
-	static public Map<String, ModDesc> buildModsList() {
+	static public @NotNull Map<String, ModDesc> buildModsList() {
 		Map<String, ModDesc> modsList = new HashMap<>();
 		try {
 			Map<String, ModDesc> installedMods = getInstalledModsList();
@@ -61,8 +61,8 @@ public class Mods {
 			EventCollector.logException(e);
 		}
 
-		Mods.ModDesc Remixed = new Mods.ModDesc();
-		Remixed.name = ModdingMode.REMIXED;
+		ModDesc Remixed = new ModDesc();
+		Remixed.installDir = Remixed.name = ModdingMode.REMIXED;
 		Remixed.needUpdate = false;
 		Remixed.installed = true;
 		modsList.put(ModdingMode.REMIXED, Remixed);
@@ -79,14 +79,15 @@ public class Mods {
 		for (File file : extList) {
 			if (file.isDirectory()) {
 				ModDesc desc = new ModDesc();
-				desc.name = file.getName();
+				desc.installDir = desc.name = file.getName();
 
 				JSONObject versionInfo = JsonHelper.readJsonFromFile(new File(file.getAbsolutePath() + "/version.json"));
 				if (versionInfo.has("version")) {
-					desc.version = versionInfo.getInt("version");
+
+					ModDesc.fromJson(desc, versionInfo);
 
 					desc.installed = true;
-					installedMods.put(desc.name, desc);
+					installedMods.put(desc.installDir, desc);
 				}
 			}
 		}
@@ -113,16 +114,16 @@ public class Mods {
 		for (int i = 0; i < mods.length(); ++i) {
 			ModDesc desc = new ModDesc();
 			JSONObject jsonDesc = mods.getJSONObject(i);
-			desc.name = jsonDesc.getString("name");
+			desc.installDir = desc.name = jsonDesc.getString("name");
 			desc.version = jsonDesc.getInt("version");
 			desc.url = jsonDesc.getString("url");
 			desc.rpdVersion = jsonDesc.optInt("rpdVersion");
 
-			availableMods.put(desc.name, desc);
+			availableMods.put(desc.installDir, desc);
 		}
 	}
 
-	private static Map<String, ModDesc> getAvailableModsList() throws JSONException {
+	private static @NotNull Map<String, ModDesc> getAvailableModsList() throws JSONException {
 		Map<String, ModDesc> availableMods = new HashMap<>();
 
 		updateAvailableModsList("common", availableMods);
@@ -130,20 +131,4 @@ public class Mods {
 		return availableMods;
 	}
 
-	static public class ModDesc {
-		public String  url         = Utils.EMPTY_STRING;
-		public String  name        = Utils.EMPTY_STRING;
-		public String  author      = Utils.EMPTY_STRING;
-		public String  hrVersion   = Utils.EMPTY_STRING;
-		public String  description = Utils.EMPTY_STRING;
-		public String  installTo   = Utils.EMPTY_STRING;
-		public int     version;
-		public int     rpdVersion;
-		public boolean needUpdate = false;
-		public boolean installed  = false;
-
-		public boolean isCompatible() {
-			return rpdVersion <= (RemixedDungeon.versionCode % 2000);
-		}
-	}
 }

@@ -1,6 +1,7 @@
 package com.nyrds.android.util;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.io.File;
@@ -26,7 +27,7 @@ public class UnzipTask implements Runnable {
 	}
 
 	@SneakyThrows
-	public Mods.ModDesc previewMod() {
+	public ModDesc previewMod() {
 		return Unzip.inspectMod(new FileInputStream(m_zipFile));
 	}
 
