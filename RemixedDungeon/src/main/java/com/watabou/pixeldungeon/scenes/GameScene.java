@@ -624,7 +624,7 @@ public class GameScene extends PixelScene {
     }
 
     public static boolean isSceneReady() {
-        return scene != null && !Dungeon.isLoading();
+        return scene != null && !Game.isPaused() && !Dungeon.isLoading();
     }
 
     public static void add(EmoIcon icon) {
