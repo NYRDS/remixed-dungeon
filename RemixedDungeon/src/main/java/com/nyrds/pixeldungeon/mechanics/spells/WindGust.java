@@ -10,6 +10,8 @@ import com.watabou.pixeldungeon.effects.particles.WindParticle;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 
+import org.jetbrains.annotations.NotNull;
+
 public class WindGust extends Spell{
 
 	public WindGust() {
@@ -22,7 +24,7 @@ public class WindGust extends Spell{
 	}
 
 	@Override
-	public boolean cast(Char chr, int cell)  {
+	public boolean cast(@NotNull Char chr, int cell)  {
 		Level level = chr.level();
 
 		if (level.cellValid(cell)) {

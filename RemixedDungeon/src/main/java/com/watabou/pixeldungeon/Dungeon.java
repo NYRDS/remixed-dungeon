@@ -512,7 +512,8 @@ public class Dungeon {
 
     private static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
 
-        if(!bundle.optString("mod","Remixed").equals(ModdingMode.activeMod())) {
+        if(fullLoad &&
+                !bundle.optString(MOD,ModdingMode.REMIXED).equals(ModdingMode.activeMod())) {
             EventCollector.logException(new Exception("loading save from another mod"));
         }
 

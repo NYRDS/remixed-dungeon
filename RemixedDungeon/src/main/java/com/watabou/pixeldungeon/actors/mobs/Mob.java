@@ -535,6 +535,7 @@ public abstract class Mob extends Char {
 		return !this.fraction.isEnemy(chr.fraction);
 	}
 
+	@Override
 	public boolean canBePet() {
 		return true;
 	}

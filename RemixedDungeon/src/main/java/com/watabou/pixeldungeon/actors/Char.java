@@ -450,6 +450,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		float accuracy = (float) Math.pow(1.4, bonus);
 
+		if(target == null) { // Mainly to mask bug in Remixed RPG
+			target = CharsList.DUMMY;
+		}
+
 		if (rangedWeapon.valid() && level().distance(getPos(), target.getPos()) == 1) {
 			accuracy *= 0.5f;
 		}
@@ -1381,6 +1385,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		if (level().map[getPos()] == Terrain.DOOR) {
 			Door.enter(getPos());
 		}
+	}
+
+	public boolean canBePet() {
+		return false;
 	}
 
 	public boolean interact(Char chr) {

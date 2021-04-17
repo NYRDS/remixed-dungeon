@@ -7,6 +7,8 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.effects.particles.EarthParticle;
 
+import org.jetbrains.annotations.NotNull;
+
 public class RootSpell extends Spell{
 
 	RootSpell() {
@@ -19,7 +21,7 @@ public class RootSpell extends Spell{
 	}
 
 	@Override
-	public boolean cast(Char chr, Char target){
+	public boolean cast(@NotNull Char chr, @NotNull Char target){
 
 		if(target.valid()) {
 			target.getSprite().emitter().burst( EarthParticle.FACTORY, 5 );
