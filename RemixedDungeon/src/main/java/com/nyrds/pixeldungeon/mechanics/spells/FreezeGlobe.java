@@ -11,6 +11,8 @@ import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 
+import org.jetbrains.annotations.NotNull;
+
 public class FreezeGlobe extends Spell{
 
 	FreezeGlobe() {
@@ -23,7 +25,7 @@ public class FreezeGlobe extends Spell{
 	}
 
 	@Override
-	public boolean cast(Char chr, int cell){
+	public boolean cast(@NotNull Char chr, int cell){
 		if(!Dungeon.level.cellValid(cell)) {
 			return false;
 		}

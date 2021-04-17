@@ -57,6 +57,10 @@ public class Poison extends Buff implements Doom {
 	}
 
 	public static float durationFactor(Char ch ) {
+		if(ch==null) { //primary to mask bug in Remixed Additions
+			return 1;
+		}
+
 		Resistance r = ch.buff( Resistance.class );
 		return r != null ? r.durationFactor() : 1;
 	}
