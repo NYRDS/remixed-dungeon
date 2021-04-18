@@ -4,7 +4,7 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -16,6 +16,7 @@ import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
@@ -93,14 +94,17 @@ public class YogsBrain extends Mob implements IZapper {
             return super.act();
         }
 
-        int nightmarePos = Dungeon.level.getEmptyCellNextTo(getPos());
+
+        final Level level = level();
+
+        int nightmarePos = level.getEmptyCellNextTo(getPos());
 
         spend( TIME_TO_SUMMON );
 
-        if (Dungeon.level.cellValid(nightmarePos)) {
+        if (level.cellValid(nightmarePos) && level.countMobsOfKind("Nightmare") < 10 * RemixedDungeon.getDifficultyFactor()) {
             Nightmare nightmare = new Nightmare();
             nightmare.setPos(nightmarePos);
-            Dungeon.level.spawnMob(nightmare, 0,getPos());
+            level.spawnMob(nightmare, 0,getPos());
 
             Sample.INSTANCE.play(Assets.SND_CURSED);
         }
