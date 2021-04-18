@@ -22,6 +22,8 @@ import com.nyrds.pixeldungeon.ml.actions.Push;
 import com.nyrds.pixeldungeon.ml.actions.Steal;
 import com.nyrds.pixeldungeon.ml.actions.Taunt;
 import com.nyrds.pixeldungeon.ml.actions.Unlock;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -345,5 +347,20 @@ public class CharUtils {
         }
 
         shopkeeper.collect(newItem);
+    }
+
+    @NotNull
+    public static Char spawnOnNextCell(@NotNull Char src ,String mobClass, int limit) {
+        final Level level = src.level();
+        int pos = level.getEmptyCellNextTo(src.getPos());
+
+        if (level.cellValid(pos) && level.countMobsOfKind(mobClass) < limit) {
+            Mob mob = MobFactory.mobByName(mobClass);
+            mob.setPos(pos);
+            level.spawnMob(mob, 0, src.getPos());
+            return mob;
+        }
+
+        return CharsList.DUMMY;
     }
 }

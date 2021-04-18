@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 
@@ -21,10 +20,6 @@ public class SpiderEgg extends Mob {
 		loot(Treasury.Category.SEED, 0.2f);
 
 		movable = false;
-	}
-
-	public static void lay(int pos) {
-		SpiderSpawner.spawnEgg(Dungeon.level, pos);
 	}
 
 	@Override

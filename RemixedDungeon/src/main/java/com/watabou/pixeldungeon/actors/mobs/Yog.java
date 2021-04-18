@@ -28,8 +28,10 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -122,14 +124,7 @@ public class Yog extends Boss {
 
 	@Override
 	public int defenseProc(Char enemy, int damage) {
-
-		int larvaPos = Dungeon.level.getEmptyCellNextTo(getPos());
-		
-		if (Dungeon.level.cellValid(larvaPos)) {
-			Larva larva = new Larva();
-			larva.setPos(larvaPos);
-			Dungeon.level.spawnMob(larva, 0, getPos());
-		}
+		CharUtils.spawnOnNextCell(this, "Larva", (int) (10 * RemixedDungeon.getDifficultyFactor()));
 
 		return super.defenseProc(enemy, damage);
 	}

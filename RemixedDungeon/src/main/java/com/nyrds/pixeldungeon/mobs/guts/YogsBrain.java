@@ -16,12 +16,13 @@ import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
+
+import lombok.var;
 
 /**
  * Created by DeadDie on 12.02.2016
@@ -94,18 +95,10 @@ public class YogsBrain extends Mob implements IZapper {
             return super.act();
         }
 
+        var spawn = CharUtils.spawnOnNextCell(this, "Nightmare", (int) (10 * RemixedDungeon.getDifficultyFactor()));
 
-        final Level level = level();
-
-        int nightmarePos = level.getEmptyCellNextTo(getPos());
-
-        spend( TIME_TO_SUMMON );
-
-        if (level.cellValid(nightmarePos) && level.countMobsOfKind("Nightmare") < 10 * RemixedDungeon.getDifficultyFactor()) {
-            Nightmare nightmare = new Nightmare();
-            nightmare.setPos(nightmarePos);
-            level.spawnMob(nightmare, 0,getPos());
-
+        if(spawn.valid()) {
+            spend( TIME_TO_SUMMON );
             Sample.INSTANCE.play(Assets.SND_CURSED);
         }
 

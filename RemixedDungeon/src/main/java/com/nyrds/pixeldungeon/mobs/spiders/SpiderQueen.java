@@ -1,12 +1,13 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
-import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
@@ -18,9 +19,6 @@ import org.jetbrains.annotations.NotNull;
 
 public class SpiderQueen extends Boss {
 
-
-	@Packable
-	private int lastEggPos = -1;
 
 	public SpiderQueen() {
 		hp(ht(120));
@@ -42,9 +40,8 @@ public class SpiderQueen extends Boss {
 	
 	@Override
     public boolean act(){
-		if(Random.Int(0, 20) == 0 && lastEggPos != getPos()) {
-			SpiderEgg.lay(getPos());
-			lastEggPos = getPos();
+		if(Random.Int(0, 20) == 0) {
+			CharUtils.spawnOnNextCell(this, "SpiderEgg", (int) (100 * RemixedDungeon.getDifficultyFactor()));
 		}
 		
 		return super.act();
