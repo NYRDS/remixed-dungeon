@@ -237,6 +237,11 @@ public class Treasury {
             if(names.get(i).equals(categoryOrItem)) {
                 probs.set(i,probs.get(i)/decayFactor);
                 CategoryItems category = items.get(i);
+
+                if(category.probs.isEmpty()) {
+                    return ItemFactory.itemByName("Gold");
+                }
+
                 int itemIndex = Random.chances(category.probs);
                 String itemName = category.names.get(itemIndex);
                 return randomItem(itemName);
