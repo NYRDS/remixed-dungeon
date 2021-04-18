@@ -15,8 +15,8 @@ translations_dir = 'translations/'
 
 
 
-source_locales = {"zh", "zh-Hans", "zh_CN", "zh_HK", "zh_TW"}
-#source_locales = {"zh"}
+#source_locales = {"zh", "zh-Hans", "zh_CN", "zh_HK", "zh_TW"}
+source_locales = {"zh"}
 
 
 locale_remap = {}
@@ -124,15 +124,15 @@ for _, _, files in os.walk(translations_dir + dir_name):
                 totalCounter[locale_code] += 1
 
                 entry.text = process_text(entry.text)
-                lang_code = lang(entry.text)
 
-                if lang_code == 'zh-cn' or lang_code == 'zh':
+                if entry.text is not None:
                     outEntry = SubElement(zh_cn, entry.tag, {'name': entry.get('name')})
-                    outEntry.text = entry.text
-                if lang_code == 'zh-tw':
-                    outEntry = SubElement(zh_tw, entry.tag, {'name': entry.get('name')})
-                    outEntry.text = entry.text
+                    outEntry.text = text.simplify(entry.text)
 
+                    outEntry = SubElement(zh_tw, entry.tag, {'name': entry.get('name')})
+                    outEntry.text = text.tradify(entry.text)
+                else:
+                    print(entry.tag, entry.text)
 
             indent(zh_cn)
             ElementTree.ElementTree(zh_cn).write('zh_CN.xml', encoding="utf-8",
