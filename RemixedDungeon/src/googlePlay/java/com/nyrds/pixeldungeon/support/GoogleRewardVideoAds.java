@@ -46,6 +46,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 					public void onAdDismissedFullScreenContent() {
 						mCinemaRewardAd = null;
 						GLog.debug("reward state "+ rewardEarned);
+						Game.instance().runOnUiThread(GoogleRewardVideoAds.this::loadNextVideo);
 						returnTo.returnToWork(rewardEarned);
 						rewardEarned = false;
 					}
