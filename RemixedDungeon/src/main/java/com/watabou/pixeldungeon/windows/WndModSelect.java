@@ -127,7 +127,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 			if (desc.needUpdate) {
 				FileSystem.deleteRecursive(FileSystem.getExternalStorageFile(desc.installDir));
 				selectedMod = desc.installDir;
-				downloadTo = FileSystem.getExternalStorageFile(selectedMod + ".zip").getAbsolutePath();
+				downloadTo = FileSystem.getExternalStorageFile(selectedMod+".tmp").getAbsolutePath();
 				desc.needUpdate = false;
 
 				Game.execute(new DownloadTask(new DownloadProgressWindow(Utils.format("Downloading %s", selectedMod),this),
