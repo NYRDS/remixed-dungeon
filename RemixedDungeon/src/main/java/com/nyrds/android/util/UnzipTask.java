@@ -1,14 +1,11 @@
 package com.nyrds.android.util;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.io.File;
-import java.io.FileInputStream;
 
 import lombok.Setter;
-import lombok.SneakyThrows;
 
 public class UnzipTask implements Runnable {
 
@@ -24,11 +21,6 @@ public class UnzipTask implements Runnable {
 		m_listener = listener;
 		m_zipFile = zipFile;
 		m_deleteSrc = deleteSrc;
-	}
-
-	@SneakyThrows
-	public ModDesc previewMod() {
-		return Unzip.inspectMod(new FileInputStream(m_zipFile));
 	}
 
 	@Override
@@ -58,7 +50,7 @@ public class UnzipTask implements Runnable {
 
 				for (File file : unpackedList) {
 					if (file.isDirectory()) {
-						if (file.renameTo(new File(tgtDir))) {
+						if (file.renameTo(new File(FileSystem.getExternalStorageFileName(tgtDir)))) {
 							FileSystem.deleteRecursive(tmpDirFile);
 							if (m_deleteSrc) {
 								FileSystem.deleteRecursive(zipFile);
