@@ -273,8 +273,8 @@ public class ModdingMode {
 			}
 
 			return getInputStreamBuiltIn(resName);
-		} catch (IOException e) {
-			throw new ModError("Missing file: "+resName + " in: " + activeMod() + " " + activeModVersion(),e);
+		} catch (IOException | ModError e) {
+			throw new ModError("Missing file: " + resName + " in: " + activeMod() + " " + activeModVersion(),e);
 		}
 	}
 

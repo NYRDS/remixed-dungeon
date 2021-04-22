@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.items;
 
 
 import com.nyrds.Packable;
-import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
@@ -191,9 +190,10 @@ public class Heap implements Bundlable, NamedEntityKind {
 	}
 
 	public void pickUpFailed() {
-		Item item = items.removeFirst();
-		items.addLast(item);
-
+		if(!isEmpty()) {
+			Item item = items.removeFirst();
+			items.addLast(item);
+		}
 		updateHeap();
 	}
 
@@ -203,8 +203,8 @@ public class Heap implements Bundlable, NamedEntityKind {
 	
 	public void drop(@NotNull Item item ) {
 
-		if(item instanceof DummyItem) {
-			EventCollector.logException("DummyItem");
+		if(!item.valid()) {
+			EventCollector.logException("Invalid item");
 			return;
 		}
 

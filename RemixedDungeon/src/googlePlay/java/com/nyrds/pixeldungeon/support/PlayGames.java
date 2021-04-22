@@ -219,12 +219,17 @@ public class PlayGames {
 					return null;
 				})
 				.addOnCompleteListener(task -> {
-					result.status(
-							Unzip.unzipStream(
-									new ByteArrayInputStream(
-											task.getResult()),
-											readTo.getAbsolutePath(),
-											null));
+					try {
+						result.status(
+								Unzip.unzipStream(
+										new ByteArrayInputStream(
+												task.getResult()),
+										readTo.getAbsolutePath(),
+										null));
+					} catch (Exception e) {
+						EventCollector.logException(e);
+						result.status(false);
+					}
 				});
 	}
 
