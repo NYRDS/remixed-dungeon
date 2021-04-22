@@ -287,6 +287,11 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     protected void applyToCarriedItems(ItemAction action) {
+
+        if(Dungeon.isLoading()) { // already applied
+            return;
+        }
+
         int n = 1;
 
         if (Game.getDifficulty() >= 3) {

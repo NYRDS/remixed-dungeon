@@ -305,6 +305,11 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	protected void splash( int cell ) {
+
+		if(!GameScene.isSceneReady()) {
+			return;
+		}
+
 		final int color = ItemSprite.pick( image, 8, 10 );
 		Splash.at( cell, color, 5 );
 	}
