@@ -271,7 +271,7 @@ public class Dungeon {
 
     public static void switchLevel(@NotNull final Level level, int pos, Collection<Mob> followers) {
 
-        EventCollector.collectSessionData("level",level.levelId);
+        EventCollector.setSessionData("level",level.levelId);
 
         nightMode =new GregorianCalendar().get(Calendar.HOUR_OF_DAY) < 7;
 
@@ -855,7 +855,7 @@ public class Dungeon {
     }
 
     public static void setChallenges(int challenges) {
-        EventCollector.collectSessionData("challenges",String.valueOf(challenges));
+        EventCollector.setSessionData("challenges",String.valueOf(challenges));
         Dungeon.challenges = challenges;
     }
 

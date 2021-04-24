@@ -165,7 +165,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     }
 
     public void useLocale(String lang) {
-        EventCollector.collectSessionData("Locale", lang);
+        EventCollector.setSessionData("Locale", lang);
 
         Locale locale;
         if (lang.equals("pt_BR")) {
@@ -487,12 +487,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Camera.reset();
 
         if (scene != null) {
-            EventCollector.collectSessionData("pre_scene",scene.getClass().getSimpleName());
+            EventCollector.setSessionData("pre_scene",scene.getClass().getSimpleName());
             scene.destroy();
         }
         scene = requestedScene;
         scene.create();
-        EventCollector.collectSessionData("scene",scene.getClass().getSimpleName());
+        EventCollector.setSessionData("scene",scene.getClass().getSimpleName());
 
         Game.elapsed = 0f;
         Game.timeScale = 1f;
