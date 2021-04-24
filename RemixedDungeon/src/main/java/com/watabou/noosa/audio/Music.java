@@ -121,7 +121,7 @@ public enum Music implements MediaPlayer.OnPreparedListener,
 
 	@Override
 	public boolean onError(MediaPlayer mp, int what, int extra) {
-		EventCollector.collectSessionData("Music", Utils.format("%d %d",what, extra));
+		EventCollector.logException("Music:" + Utils.format("%d %d",what, extra));
 		if (player != null) {
 			player.release();
 			player = null;

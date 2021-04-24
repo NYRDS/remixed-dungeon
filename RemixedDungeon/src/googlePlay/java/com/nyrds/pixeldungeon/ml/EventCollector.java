@@ -159,7 +159,7 @@ public class EventCollector {
 		}
 	}
 
-	public static void collectSessionData(String key, String value) {
+	public static void setSessionData(String key, String value) {
 		if(!mDisabled) {
 			FirebaseCrashlytics.getInstance().setCustomKey(key, value);
 		}

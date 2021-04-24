@@ -23,6 +23,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -172,6 +173,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 			//float timeBefore = next.time;
 
 			current = next;
+			EventCollector.setSessionData("actor", next.getEntityKind());
 			next.act();
 /*
 			if(!(next.time>timeBefore)) {
@@ -205,6 +207,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 			}
 
 			current = actor;
+
+			EventCollector.setSessionData("actor", actor.getEntityKind());
 
 			if (actor.act() || !Dungeon.hero.isAlive()) {
 				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
