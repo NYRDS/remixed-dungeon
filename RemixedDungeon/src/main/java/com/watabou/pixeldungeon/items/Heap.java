@@ -23,6 +23,7 @@ import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -396,13 +397,13 @@ public class Heap implements Bundlable, NamedEntityKind {
 					try {
 						return itemClass.newInstance();
 					} catch (Exception e) {
-						return null;
+						return ItemsList.DUMMY;
 					}
 				}
 			}		
 			
 		} else {
-			return null;
+			return ItemsList.DUMMY;
 		}
 	}
 	
