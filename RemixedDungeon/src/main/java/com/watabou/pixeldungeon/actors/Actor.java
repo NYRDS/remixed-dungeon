@@ -21,7 +21,9 @@ import android.annotation.SuppressLint;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
@@ -208,6 +210,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 			current = actor;
 
+			float timeBefore = actor.time;
+
 			EventCollector.setSessionData("actor", actor.getEntityKind());
 
 			if (actor.act() || !Dungeon.hero.isAlive()) {
@@ -215,8 +219,17 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 				actor.next();
 			} else {
 				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
-
 				break;
+			}
+
+			if(actor.time == timeBefore) {
+				var error = String.format("actor %s has same timestamp after act!", actor.getEntityKind());
+				if(Util.isDebug()) {
+					throw new ModError(error);
+				} else {
+					actor.spend(1);
+					EventCollector.logException(error);
+				}
 			}
 
 			if(SystemTime.timeSinceTick() > 40) {
