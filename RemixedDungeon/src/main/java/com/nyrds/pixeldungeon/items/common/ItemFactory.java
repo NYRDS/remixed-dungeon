@@ -66,6 +66,7 @@ import com.watabou.pixeldungeon.items.armor.ElfArmor;
 import com.watabou.pixeldungeon.items.armor.FreeRunnerArmor;
 import com.watabou.pixeldungeon.items.armor.GladiatorArmor;
 import com.watabou.pixeldungeon.items.armor.GnollArmor;
+import com.watabou.pixeldungeon.items.armor.GuardianArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
@@ -79,6 +80,7 @@ import com.watabou.pixeldungeon.items.armor.SniperArmor;
 import com.watabou.pixeldungeon.items.armor.WardenArmor;
 import com.watabou.pixeldungeon.items.armor.WarlockArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
+import com.watabou.pixeldungeon.items.armor.WitchdoctorArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
 import com.watabou.pixeldungeon.items.bags.Quiver;
@@ -435,6 +437,9 @@ public class ItemFactory {
         //registerItemClass(TacticalCrossbow.class); // no item pic
 
         registerItemClass(DummyItem.class);
+        registerItemClass(GuardianArmor.class);
+        registerItemClass(WitchdoctorArmor.class);
+
     }
 
     public static boolean isValidItemClass(String itemClass) {
