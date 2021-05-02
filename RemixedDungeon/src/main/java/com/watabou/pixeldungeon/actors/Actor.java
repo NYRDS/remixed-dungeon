@@ -368,4 +368,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	public String getEntityKind() {
 		return getClass().getSimpleName();
 	}
+
+	public boolean testAct() {
+		return act();
+	}
 }

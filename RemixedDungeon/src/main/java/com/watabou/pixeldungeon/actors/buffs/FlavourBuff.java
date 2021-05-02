@@ -22,6 +22,7 @@ public class FlavourBuff extends Buff {
 	
 	@Override
 	public boolean act() {
+		deactivateActor();;
 		detach();
 		return true;
 	}
