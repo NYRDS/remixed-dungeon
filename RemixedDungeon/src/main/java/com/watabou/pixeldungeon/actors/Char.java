@@ -632,12 +632,18 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return speed[0];
 	}
 
+	@LuaInterface
+	public void heal(int heal) {
+		heal(heal, CharsList.DUMMY, false);
+	}
 
-	public void heal(int heal, NamedEntityKind src) {
+	@LuaInterface
+	public void heal(int heal, @NotNull NamedEntityKind src) {
 		heal(heal, src, false);
 	}
 
-	public void heal(int heal, NamedEntityKind src, boolean noAnim) {
+	@LuaInterface
+	public void heal(int heal, @NotNull NamedEntityKind src, boolean noAnim) {
         if (!isAlive()) {
             return;
         }
