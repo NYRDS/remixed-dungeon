@@ -1029,6 +1029,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void regenSprite() {
+		if(sprite!=null) {
+			sprite.killAndErase();
+		}
 		sprite = null;
 	}
 

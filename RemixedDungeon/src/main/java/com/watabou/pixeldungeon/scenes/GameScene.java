@@ -419,21 +419,22 @@ public class GameScene extends PixelScene {
     }
 
     private void doSelfTest() {
+        final Level level = Dungeon.level;
         if(Util.isDebug()) {
-            for (int i = 0; i< Dungeon.level.map.length; ++i) {
-                Dungeon.level.tileDescByCell(i);
-                Dungeon.level.tileNameByCell(i);
+            for (int i = 0; i< level.map.length; ++i) {
+                level.tileDescByCell(i);
+                level.tileNameByCell(i);
             }
 
             GLog.debug(Dungeon.hero.immunities().toString());
             //GLog.toFile(StringsManager.missingStrings.toString());
         }
 
-        if(Dungeon.level instanceof TestLevel) {
-            TestLevel level = (TestLevel)Dungeon.level;
-            level.runEquipTest();
-            level.runMobsTest();
-            level.reset();
+        if(level instanceof TestLevel) {
+            TestLevel testLevel = (TestLevel) level;
+            testLevel.runEquipTest();
+            testLevel.runMobsTest();
+            testLevel.reset();
         }
     }
 
