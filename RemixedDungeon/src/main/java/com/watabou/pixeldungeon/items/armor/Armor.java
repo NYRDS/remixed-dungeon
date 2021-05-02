@@ -55,9 +55,10 @@ import lombok.SneakyThrows;
 
 public class Armor extends EquipableItem {
 
-	protected boolean hasHelmet;
-	protected boolean hasCollar;
-	protected boolean coverHair;
+	protected boolean hasHelmet = false;
+	protected boolean hasCollar = false;
+	protected boolean coverHair = false;
+	protected boolean coverFacialHair = false;
 
 	public int tier;
 
@@ -70,10 +71,6 @@ public class Armor extends EquipableItem {
 		imageFile = "items/armor.png";
 
 		this.tier = tier;
-
-		hasHelmet = false;
-		hasCollar = false;
-		coverHair = false;
 	}
 	
 	private static final String GLYPH	= "glyph";
@@ -230,6 +227,10 @@ public class Armor extends EquipableItem {
 
 	public boolean isCoveringHair() {
 		return coverHair;
+	}
+
+	public boolean isCoveringFacialHair() {
+		return coverFacialHair;
 	}
 
 	@Override

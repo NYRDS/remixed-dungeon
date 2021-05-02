@@ -12,8 +12,12 @@
         "kind": "test/TestItem"
       },
       {
-        "kind": "Wands/WandOfLightBolt"
+        "kind": "WitchdoctorArmor"
       },
+      {
+        "kind": "GuardianArmor"
+      },
+
       {
         "kind": "SpellBook"
       },
