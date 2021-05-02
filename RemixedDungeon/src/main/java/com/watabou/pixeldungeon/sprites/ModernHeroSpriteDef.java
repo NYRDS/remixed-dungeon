@@ -140,11 +140,17 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			}
 		}
 
+		final EquipableItem armor = hero.getItemFromSlot(Belongings.Slot.ARMOR);
+
+		if(armor.isCoveringFacialHair()) {
+			facialHairDescriptor = HERO_EMPTY_PNG;
+		}
+
 		if (accessory == null){
-			if(hero.getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()) {
-				helmetDescriptor = helmetDescriptor(hero.getItemFromSlot(Belongings.Slot.ARMOR), hero);
+			if(armor.hasHelmet()) {
+				helmetDescriptor = helmetDescriptor(armor, hero);
             }
-			if(hero.getItemFromSlot(Belongings.Slot.ARMOR).isCoveringHair()){
+			if(armor.isCoveringHair()){
                 drawHair = false;
             }
 		} else {
@@ -159,14 +165,13 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		String bodyType = bodyDescriptor(hero);
 
 		layersDesc.put(LAYER_BODY, "hero_modern/body/" +bodyType+".png" );
-		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.getItemFromSlot(Belongings.Slot.ARMOR), hero));
+		layersDesc.put(LAYER_COLLAR, collarDescriptor(armor, hero));
 		layersDesc.put(LAYER_HEAD, "hero_modern/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_HAIR, hairDescriptor);
-		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.getItemFromSlot(Belongings.Slot.ARMOR)));
+		layersDesc.put(LAYER_ARMOR, armorDescriptor(armor));
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
-		EquipableItem armor = hero.getItemFromSlot(Belongings.Slot.ARMOR);
 
 		EquipableItem weapon = hero.getItemFromSlot(Belongings.Slot.WEAPON);
 		String weaponAnimationClassRight  = weapon.getAttackAnimationClass();

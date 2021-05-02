@@ -209,14 +209,13 @@ public abstract class EquipableItem extends Item {
 	public boolean hasHelmet(){
 		return false;
 	}
-
 	public boolean hasCollar() {
 		return false;
 	}
-
 	public boolean isCoveringHair() {
 		return false;
 	}
+	public boolean isCoveringFacialHair() {return false;}
 
 	//former SpecialWeapon
 	public int range() {
