@@ -301,6 +301,11 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
+    public boolean isCoveringFacialHair() {
+        return script.runOptional("isCoveringFacialHair",super.isCoveringHair());
+    }
+
+    @Override
     public float heapScale() {
         return heapScale;
     }

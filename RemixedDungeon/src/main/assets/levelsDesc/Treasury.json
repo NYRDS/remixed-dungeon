@@ -68,7 +68,8 @@
       "ClothArmor": 1,
       "MailArmor": 1,
       "RatArmor": 0,
-      "SpiderArmor":0
+      "SpiderArmor":0,
+      "ChaosArmor":0
     },
     "RING": {
       "RingOfElements": 1,
