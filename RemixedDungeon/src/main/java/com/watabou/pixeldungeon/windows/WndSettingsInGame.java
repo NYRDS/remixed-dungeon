@@ -23,6 +23,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.utils.GLog;
 
 public class WndSettingsInGame extends WndMenuCommon {
 
@@ -61,6 +62,14 @@ public class WndSettingsInGame extends WndMenuCommon {
 				}
 			});
 		}
+
+		menuItems.add( new MenuCheckBox("Glog",GLog.enabled) {
+			@Override
+			protected void onClick() {
+				super.onClick();
+				GLog.enabled = checked();
+			}
+		});
 	}
 
 	private Selector createZoomButtons() {

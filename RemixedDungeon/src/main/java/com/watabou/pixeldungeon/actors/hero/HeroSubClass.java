@@ -65,12 +65,12 @@ public enum HeroSubClass implements CharModifier {
 	WITCHDOCTOR(R.string.HeroSubClass_NameWitchdoctor,   R.string.HeroSubClass_DescWitchdoctor, "WitchdoctorArmor"),
 	GUARDIAN(R.string.HeroSubClass_NameGuardian,   R.string.HeroSubClass_DescGuardian, "GuardianArmor");
 
-	private Integer                     titleId;
-	private Integer                     descId;
-	private String                      armorClass;
+	private final Integer                     titleId;
+	private final Integer                     descId;
+	private final String                      armorClass;
 
-	private Set<String> immunities       = new HashSet<>();
-	private Set<String> resistances      = new HashSet<>();
+	private final Set<String> immunities       = new HashSet<>();
+	private final Set<String> resistances      = new HashSet<>();
 
 	HeroSubClass(Integer titleId, Integer descId, String armorClass) {
 		this.titleId = titleId;
