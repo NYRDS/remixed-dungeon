@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
@@ -40,7 +41,7 @@ public class WndClass extends WndTabbed {
 
 	private static final int TAB_WIDTH = 50;
 
-	private HeroClass cl;
+	private final HeroClass cl;
 
 	public WndClass(HeroClass cl) {
 
@@ -57,7 +58,7 @@ public class WndClass extends WndTabbed {
 		tab.setSize(TAB_WIDTH, tabHeight());
 		add(tab);
 
-		if (Badges.isUnlocked(cl.masteryBadge())) {
+		if (Badges.isUnlocked(cl.masteryBadge()) || Util.isDebug()) {
 			MasteryTab tabMastery = new MasteryTab();
 			add(tabMastery);
 
@@ -129,9 +130,6 @@ public class WndClass extends WndTabbed {
 
 		private static final int MARGIN = 4;
 
-		private Text normal;
-		private Text highlighted;
-
 		public float height;
 		public float width;
 
@@ -158,11 +156,14 @@ public class WndClass extends WndTabbed {
 				case NECROMANCER:
 					text = HeroSubClass.LICH.desc();
 					break;
+				case GNOLL:
+					text = HeroSubClass.GUARDIAN.desc() + "\n\n" + HeroSubClass.WITCHDOCTOR.desc();
+					break;
 			}
 
 			Highlighter hl = new Highlighter(text);
 
-			normal = PixelScene.createMultiline(hl.text, GuiProperties.regularFontSize());
+			Text normal = PixelScene.createMultiline(hl.text, GuiProperties.regularFontSize());
 			if (hl.isHighlighted()) {
 				normal.mask = hl.inverted();
 			}
@@ -172,7 +173,7 @@ public class WndClass extends WndTabbed {
 			add(normal);
 
 			if (hl.isHighlighted()) {
-				highlighted = PixelScene.createMultiline(hl.text, GuiProperties.regularFontSize());
+				Text highlighted = PixelScene.createMultiline(hl.text, GuiProperties.regularFontSize());
 				highlighted.mask = hl.mask;
 
 				highlighted.maxWidth(normal.getMaxWidth());
