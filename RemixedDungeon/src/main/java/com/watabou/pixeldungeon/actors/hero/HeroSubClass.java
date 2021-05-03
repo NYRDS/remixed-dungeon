@@ -62,8 +62,8 @@ public enum HeroSubClass implements CharModifier {
 	SCOUT(     R.string.HeroSubClass_NameScout,  R.string.HeroSubClass_DescScout, "ScoutArmor"),
 	SHAMAN(    R.string.HeroSubClass_NameShaman, R.string.HeroSubClass_DescShaman, "ShamanArmor"),
 	LICH(      R.string.HeroSubClass_NameLich,   R.string.BlackSkullOfMastery_BecomeLichDesc, "NecromancerArmor"),
-	WITCHDOCTOR(R.string.HeroSubClass_NameWitchdoctor,   R.string.Gnoll_BecomeWitchdoctorDesc, "WitchdoctorArmor"),
-	GUARDIAN(R.string.HeroSubClass_NameGuardian,   R.string.Gnoll_BecomeGuardianDesc, "GuardianArmor");
+	WITCHDOCTOR(R.string.HeroSubClass_NameWitchdoctor,   R.string.HeroSubClass_DescWitchdoctor, "WitchdoctorArmor"),
+	GUARDIAN(R.string.HeroSubClass_NameGuardian,   R.string.HeroSubClass_DescGuardian, "GuardianArmor");
 
 	private Integer                     titleId;
 	private Integer                     descId;

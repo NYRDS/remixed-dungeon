@@ -2758,9 +2758,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Drunkard_Phrase_2">Who neids water when yau hav beir</string>
   <string name="Drunkard_Phrase_3">This beir tastes lik dirt</string>
   <string name="Drunkard_Phrase_4">Zzzzzz...</string>
-    <string name="HeroSubClass_NameWitchdoctor">witchdoctor</string>
+  <string name="HeroSubClass_NameWitchdoctor">witchdoctor</string>
   <string name="HeroSubClass_NameGuardian">guardian</string>
-  <string name="Gnoll_BecomeWitchdoctorDesc" />
-  <string name="Gnoll_BecomeGuardianDesc" />
+  <string name="Gnoll_BecomeWitchdoctorDesc"></string>
+  <string name="Gnoll_BecomeGuardianDesc"></string>
+  <string name="HeroSubClass_DescWitchdoctor"></string>
+  <string name="HeroSubClass_DescGuardian"></string>
 
 </resources>
