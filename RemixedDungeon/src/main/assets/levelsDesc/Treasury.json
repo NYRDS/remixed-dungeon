@@ -122,7 +122,8 @@
       "ScrollOfTeleportation": 10,
       "ScrollOfIdentify": 30,
       "ScrollOfCurse": 6,
-      "ScrollOfWeaponUpgrade": 0
+      "ScrollOfWeaponUpgrade": 0,
+      "ScrollOfUpgrade": 0
     },
     "POTION": {
       "PotionOfInvisibility": 10,

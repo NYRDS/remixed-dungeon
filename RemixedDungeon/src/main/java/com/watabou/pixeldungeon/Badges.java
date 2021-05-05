@@ -283,7 +283,7 @@ public class Badges {
 	}
 
 	public static void saveGlobal() {
-		if (ModdingMode.inMod()) {
+		if (ModdingMode.inMod() && !ModdingMode.inDlc()) {
 			return;
 		}
 
