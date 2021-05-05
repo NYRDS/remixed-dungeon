@@ -35,6 +35,7 @@ public class ModdingMode {
 	public static final String NO_FILE = "___no_file";
 
 	private static final Set<String> trustedMods = new HashSet<>();
+	private static final Set<String> dlcSet = new HashSet<>();
 
 	public static boolean useRetroHeroSprites = false;
 
@@ -46,6 +47,8 @@ public class ModdingMode {
 	static {
 		trustedMods.add("Maze");
 		trustedMods.add("Conundrum");
+
+		dlcSet.add("HiFi DLC");
 
 		resourcesRemap.put("spellsIcons/elemental(new).png", "spellsIcons/elemental_all.png");
 	}
@@ -153,6 +156,8 @@ public class ModdingMode {
 	public static boolean inMod() {
 		return !mActiveMod.equals(REMIXED);
 	}
+
+	public static boolean inDlc() {return dlcSet.contains(mActiveMod); }
 
 	public static boolean isResourceExists(String resName) {
 		return isAssetExist(resName) || isResourceExistInMod(resName);
