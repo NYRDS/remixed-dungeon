@@ -141,22 +141,39 @@ public enum HeroSubClass implements CharModifier {
 
 	@Override
 	public int defenceProc(Char defender, Char enemy, int damage) {
-		return damage;
+		EquipableItem primaryItem = defender.getActiveWeapon();
+		EquipableItem secondaryItem = defender.getItemFromSlot(Belongings.Slot.LEFT_HAND);
+
+		switch (this) {
+			case GUARDIAN:
+				if(primaryItem.getEntityKind().contains("Shield")) {
+					damage -= Random.Int(0, defender.skillLevel());
+				}
+
+				if(secondaryItem.getEntityKind().contains("Shield")) {
+					damage -= Random.Int(0, defender.skillLevel());
+				}
+				break;
+			default:
+		}
+
+		return Math.max(damage,0);
 	}
 
 	@Override
 	public int attackProc(Char attacker, Char defender, int damage) {
-		EquipableItem wep = attacker.getActiveWeapon();
+		EquipableItem primaryItem = attacker.getActiveWeapon();
+		EquipableItem secondaryItem = attacker.getItemFromSlot(Belongings.Slot.LEFT_HAND);
 
 		switch (this) {
 			case GLADIATOR:
-				if (wep instanceof MeleeWeapon) {
+				if (primaryItem instanceof MeleeWeapon) {
 					damage += Buff.affect(attacker, Combo.class).hit(defender, damage);
 				}
 				break;
 			case BATTLEMAGE:
-				if (wep instanceof Wand) {
-					Wand wand = (Wand) wep;
+				if (primaryItem instanceof Wand) {
+					Wand wand = (Wand) primaryItem;
 					if (wand.curCharges() < wand.maxCharges() && damage > 0) {
 
 						wand.curCharges(wand.curCharges() + 1);
@@ -173,14 +190,23 @@ public enum HeroSubClass implements CharModifier {
 				}
 				break;
 			case SHAMAN:
-				if (wep instanceof Wand) {
-					Wand wand = (Wand) wep;
+				if (primaryItem instanceof Wand) {
+					Wand wand = (Wand) primaryItem;
 					if (wand.affectTarget()) {
 						if (Random.Int(4) == 0) {
 							wand.zapCell(attacker, defender.getPos());
 						}
 					}
 				}
+				break;
+			case GUARDIAN:
+					if(primaryItem.getEntityKind().contains("Shield")) {
+						damage += Random.IntRange(0, damage);
+					}
+
+					if(secondaryItem.getEntityKind().contains("Shield")) {
+						damage += Random.IntRange(0, damage);;
+					}
 				break;
 			default:
 		}
