@@ -22,6 +22,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.ItemsList;
@@ -45,7 +46,7 @@ import java.util.Set;
 import lombok.SneakyThrows;
 import lombok.var;
 
-public class Buff extends Actor implements NamedEntityKind, CharModifier {
+public class  Buff extends Actor implements NamedEntityKind, CharModifier {
 
     protected final Set<String> EMPTY_STRING_SET = new HashSet<>();
     public Char target = CharsList.DUMMY;
@@ -251,6 +252,11 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
     @Override
     public void charAct() {
+    }
+
+    @Override
+    public void spellCasted(Char caster, Spell spell) {
+
     }
 
     @Override

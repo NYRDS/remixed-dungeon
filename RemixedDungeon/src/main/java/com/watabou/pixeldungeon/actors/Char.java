@@ -36,6 +36,7 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
@@ -1273,8 +1274,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return 0;
     }
 
-	public void spellCasted(String spellName) {
-		spellsUsage.put(spellName, 0.f);
+	public void spellCasted(Spell spell) {
+		getSubClass().spellCasted(this, spell);
+		getHeroClass().spellCasted(this, spell);
+
+		forEachBuff( (buff) -> buff.spellCasted(this, spell));
+
+		spellsUsage.put(spell.getEntityKind(), 0.f);
 	}
 
     public float spellCooldown(String spellName) {
