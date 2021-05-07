@@ -142,7 +142,7 @@ public class Spell implements NamedEntityKind {
     }
 
     protected void castCallback(Char chr) {
-        chr.spellCasted(getEntityKind());
+        chr.spellCasted(this);
         chr.spendSkillPoints(spellCost());
     }
 

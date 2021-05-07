@@ -24,6 +24,7 @@ import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
@@ -325,6 +326,11 @@ public enum HeroClass implements CharModifier {
     }
 
     @Override
+    public void spellCasted(Char caster, Spell spell) {
+
+    }
+
+    @Override
     public int dewBonus() {
         switch (this) {
             case HUNTRESS:
@@ -365,7 +371,7 @@ public enum HeroClass implements CharModifier {
     }
 
     @Override
-    public Object textureLarge() {
+    public String textureLarge() {
         return Assets.BUFFS_LARGE;
     }
 

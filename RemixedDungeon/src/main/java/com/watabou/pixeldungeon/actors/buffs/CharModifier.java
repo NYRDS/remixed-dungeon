@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 
@@ -14,6 +15,7 @@ public interface CharModifier {
 
     int regenerationBonus();
     void charAct();
+    void spellCasted(Char caster, Spell spell);
 
     int dewBonus();
 
@@ -23,10 +25,7 @@ public interface CharModifier {
     CharSprite.State charSpriteStatus();
 
     int icon();
-
     String name();
-
     String textureSmall();
-
-    Object textureLarge();
+    String textureLarge();
 }
