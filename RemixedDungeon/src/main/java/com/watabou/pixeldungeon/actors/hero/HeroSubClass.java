@@ -142,17 +142,14 @@ public enum HeroSubClass implements CharModifier {
 
 	@Override
 	public int defenceProc(Char defender, Char enemy, int damage) {
-		EquipableItem primaryItem = defender.getActiveWeapon();
+		EquipableItem primaryItem =  defender.getItemFromSlot(Belongings.Slot.WEAPON);
 		EquipableItem secondaryItem = defender.getItemFromSlot(Belongings.Slot.LEFT_HAND);
 
 		switch (this) {
 			case GUARDIAN:
-				if(primaryItem.getEntityKind().contains("Shield")) {
-					damage -= Random.Int(0, defender.skillLevel());
-				}
-
-				if(secondaryItem.getEntityKind().contains("Shield")) {
-					damage -= Random.Int(0, defender.skillLevel());
+				final int skillLevel = defender.skillLevel();
+				if(primaryItem.getEntityKind().contains("Shield") || secondaryItem.getEntityKind().contains("Shield")) {
+					enemy.damage((int) (Random.Float(1, skillLevel+1)/(skillLevel+3) * damage), defender);
 				}
 				break;
 			default:
@@ -199,15 +196,6 @@ public enum HeroSubClass implements CharModifier {
 						}
 					}
 				}
-				break;
-			case GUARDIAN:
-					if(primaryItem.getEntityKind().contains("Shield")) {
-						damage += Random.IntRange(0, damage);
-					}
-
-					if(secondaryItem.getEntityKind().contains("Shield")) {
-						damage += Random.IntRange(0, damage);
-					}
 				break;
 			default:
 		}
