@@ -214,6 +214,10 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
+		if (Random.Float() < 0.01) {
+			lvl(lvl()+1);
+		}
+
 		script.runOptional("onAct");
 		getState().act(this);
 		return true;
@@ -398,7 +402,7 @@ public abstract class Mob extends Char {
 				}
 
 				if (!(cause instanceof Mob) || hero.getHeroClass() == HeroClass.NECROMANCER) {
-					if (hero.lvl() <= maxLvl && exp > 0) {
+					if (hero.lvl() <= (maxLvl + lvl()) && exp > 0) {
 						hero.earnExp(exp);
 					}
 				}
@@ -608,7 +612,7 @@ public abstract class Mob extends Char {
 
 	public void loot(Object loot, float lootChance) {
 
-		if(Dungeon.hero.lvl() > maxLvl + 2) {
+		if(Dungeon.hero.lvl() > maxLvl + 2 + lvl()) {
 			return;
 		}
 

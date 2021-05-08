@@ -193,7 +193,6 @@ public class Hero extends Char {
 	}
 
 	private static final String STRENGTH = "STR";
-	private static final String LEVEL = "lvl";
 	private static final String EXPERIENCE = "exp";
 	private static final String DIFFICULTY = "difficulty";
 	private static final String SP = "sp";
@@ -209,7 +208,6 @@ public class Hero extends Char {
 
 		bundle.put(STRENGTH, STR());
 
-		bundle.put(LEVEL, lvl());
 		bundle.put(EXPERIENCE, getExp());
 		bundle.put(DIFFICULTY, getDifficulty());
 
@@ -234,7 +232,6 @@ public class Hero extends Char {
 		STR(bundle.getInt(STRENGTH));
 		updateAwareness();
 
-		lvl(bundle.getInt(LEVEL));
 		setExp(bundle.getInt(EXPERIENCE));
 		setDifficulty(bundle.optInt(DIFFICULTY, 2));
 

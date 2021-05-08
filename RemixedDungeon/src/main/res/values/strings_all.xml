@@ -2771,6 +2771,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Potion_Colors_14">onyx</string>
   <string name="Potion_Colors_15">pearl</string>
 
-  <string name="MagicShield_Buff">Magic Shield</string>
+  <string name="ManaShieldBuff_Name">Magic Shield</string>
+  <string name="ManaShieldBuff_Info">Magic Shield</string>
 
 </resources>

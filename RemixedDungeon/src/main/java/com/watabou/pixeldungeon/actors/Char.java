@@ -122,6 +122,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public static final String IMMUNITIES        = "immunities";
 	public static final String RESISTANCES       = "resistances";
+	protected static final String LEVEL = "lvl";
 	private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
 	public EquipableItem rangedWeapon = ItemsList.DUMMY;
 
@@ -172,7 +173,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@Getter
 	protected String name_objective = Game.getVar(R.string.Char_Name_Objective);
 
-	@Getter
 	protected String description = Game.getVar(R.string.Mob_Desc);
 	@Getter
 	protected String defenceVerb = null;
@@ -203,7 +203,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public CharAction curAction = null;
 
-	//TODO store&restore it for all chars
 	private int lvl = Scrambler.scramble(1);
 
 	public Char() {
@@ -269,6 +268,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		bundle.put(TAG_HT, ht());
 		bundle.put(BUFFS, buffs);
 		bundle.put(SPELLS_USAGE, spellsUsage);
+		bundle.put(LEVEL, lvl());
 
 		getBelongings().storeInBundle(bundle);
 	}
@@ -284,6 +284,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		hp(bundle.getInt(TAG_HP));
 		ht(bundle.getInt(TAG_HT));
+		lvl(bundle.getInt(LEVEL));
 
 		for (Buff b : bundle.getCollection(BUFFS, Buff.class)) {
 			b.attachTo(this);
@@ -1715,5 +1716,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@Override
 	public int priceBuy(Item item) {
 		return item.price();
+	}
+
+	public String getDescription() {
+		return description + "\n\n" + String.format("This is level %d %s.", lvl(), name());
 	}
 }

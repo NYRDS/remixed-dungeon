@@ -9,7 +9,7 @@ local buff = require "scripts/lib/buff"
 return buff.init{
     desc  = function ()
         return {
-            icon          = 45,
+            icon          = 49,
             name          = "ManaShieldBuff_Name",
             info          = "ManaShieldBuff_Info",
         }

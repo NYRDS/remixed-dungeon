@@ -280,5 +280,9 @@
     <item>@string/Potion_Colors_9</item>
     <item>@string/Potion_Colors_10</item>
     <item>@string/Potion_Colors_11</item>
+    <item>@string/Potion_Colors_12</item>
+    <item>@string/Potion_Colors_13</item>
+    <item>@string/Potion_Colors_14</item>
+    <item>@string/Potion_Colors_15</item>
   </string-array>
 </resources>

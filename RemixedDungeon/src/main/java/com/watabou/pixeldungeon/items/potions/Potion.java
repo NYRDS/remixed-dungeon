@@ -90,7 +90,7 @@ public class Potion extends Item implements UnknownItem {
 	
 	private static ItemStatusHandler<Potion> handler;
 	
-	private String color;
+	private final String color;
 	
 	{	
 		stackable = true;
