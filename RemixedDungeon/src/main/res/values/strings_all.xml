@@ -2748,7 +2748,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="town_deco_charcoal_carpet_desc">In pursuit of comfort for guests, the administration of the cinema chose the highest quality carpets of a charcoal color.</string>
   <string name="town_deco_magenta_carpet_name">Carpet</string>
   <string name="town_deco_magenta_carpet_desc">The magenta hue of this carpet wafs thoughts of local wine.</string>
-  
+
   <string name="InnServant_Phrase_1">Ugh, still so much to do!</string>
   <string name="InnServant_Phrase_2">This drunkard drives me mad!</string>
   <string name="InnServant_Phrase_3">Looks clean to me</string>
@@ -2758,11 +2758,19 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Drunkard_Phrase_2">Who neids water when yau hav beir</string>
   <string name="Drunkard_Phrase_3">This beir tastes lik dirt</string>
   <string name="Drunkard_Phrase_4">Zzzzzz...</string>
+
   <string name="HeroSubClass_NameWitchdoctor">witchdoctor</string>
   <string name="HeroSubClass_NameGuardian">guardian</string>
-  <string name="Gnoll_BecomeWitchdoctorDesc"></string>
-  <string name="Gnoll_BecomeGuardianDesc"></string>
-  <string name="HeroSubClass_DescWitchdoctor"></string>
-  <string name="HeroSubClass_DescGuardian"></string>
+  <string name="Gnoll_BecomeWitchdoctorDesc">Become a Witch-Doctor</string>
+  <string name="Gnoll_BecomeGuardianDesc">Become a Guardian</string>
+  <string name="HeroSubClass_DescWitchdoctor">Spellcasting endows the _Witchdoctor_ with a magic shield that completely protects him from incoming damage.</string>
+  <string name="HeroSubClass_DescGuardian">Skillful defensive knowledge allows the Guardian to counterattack with a shield, making him a formidable foe for those who dare to attack this walking bastion.</string>
+
+  <string name="Potion_Colors_12">epidot</string>
+  <string name="Potion_Colors_13">quartz</string>
+  <string name="Potion_Colors_14">onyx</string>
+  <string name="Potion_Colors_15">pearl</string>
+
+  <string name="MagicShield_Buff">Magic Shield</string>
 
 </resources>
