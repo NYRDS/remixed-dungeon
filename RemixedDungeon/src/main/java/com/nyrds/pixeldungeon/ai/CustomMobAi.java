@@ -6,6 +6,8 @@ import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 
+import org.jetbrains.annotations.NotNull;
+
 public class CustomMobAi extends MobAi implements AiState {
 
     String scriptFile;
@@ -18,7 +20,7 @@ public class CustomMobAi extends MobAi implements AiState {
     }
 
     @Override
-    public void act(Mob me) {
+    public void act(@NotNull Mob me) {
         script.run("act",me);
     }
 

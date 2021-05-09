@@ -8,10 +8,12 @@ import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class RunningAmok extends MobAi implements AiState {
 
     @Override
-    public void act(Mob me) {
+    public void act(@NotNull Mob me) {
 
         if(!me.hasBuff(Amok.class)) {
             me.setState(MobAi.getStateByClass(Wandering.class));

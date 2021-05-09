@@ -1005,6 +1005,7 @@ public class Hero extends Char {
 		Badges.validateFoodEaten();
 	}
 
+	@Override
 	public void setControlTarget(Char controlTarget) {
 		if(getControlTarget() instanceof Mob) {
 			Mob controlledMob = (Mob) getControlTarget();

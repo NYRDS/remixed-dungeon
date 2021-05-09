@@ -8,12 +8,14 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Wandering extends MobAi implements AiState {
 
     public Wandering(){ }
 
     @Override
-    public void act(Mob me) {
+    public void act(@NotNull Mob me) {
 
         if(returnToOwnerIfTooFar(me, 2)) {
             return;

@@ -191,6 +191,6 @@ public abstract class MobAi implements AiState {
     }
 
     @Override
-    public void onDie() { // do nothing, we are dead already...
+    public void onDie(@NotNull Mob me) { // do nothing, we are dead already...
     }
 }

@@ -9,13 +9,15 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ThiefFleeing extends MobAi implements AiState {
 
     public ThiefFleeing() {
     }
 
     @Override
-    public void act(Mob me) {
+    public void act(@NotNull Mob me) {
         me.enemySeen = me.isEnemyInFov();
         if (me.enemySeen) {
             me.setTarget(me.getEnemy().getPos());

@@ -11,12 +11,14 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 import lombok.var;
 
 public class Horrified extends MobAi implements AiState{
 
     @Override
-    public void act(Mob me) {
+    public void act(@NotNull Mob me) {
 
         if(!me.hasBuff(Terror.class)) {
             me.getSprite().showStatus(CharSprite.NEGATIVE, Mob.TXT_RAGE);

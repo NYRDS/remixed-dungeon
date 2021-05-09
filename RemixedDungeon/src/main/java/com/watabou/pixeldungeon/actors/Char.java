@@ -1721,4 +1721,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public String getDescription() {
 		return description + "\n\n" + String.format("This is level %d %s.", lvl(), name());
 	}
+
+	public void setControlTarget(Char controlTarget) {
+	}
 }
