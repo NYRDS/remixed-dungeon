@@ -746,12 +746,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public float attackDelay() {
-		float delayFactor = 1;
-
-		delayFactor = getActiveWeapon().impactDelayFactor(this,delayFactor);
+		float delayFactor = getActiveWeapon().impactDelayFactor(this, 0);
 		delayFactor = getSecondaryWeapon().impactDelayFactor(this, delayFactor);
 
-		return _attackDelay() * delayFactor;
+		return _attackDelay() * Math.max(delayFactor, 0.05f);
 	}
 
 	@Override
