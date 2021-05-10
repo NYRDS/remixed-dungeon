@@ -114,6 +114,8 @@ public class  Buff extends Actor implements NamedEntityKind, CharModifier {
         if (buff == null) {
             buff = buffClass.newInstance();
             buff.attachTo(target);
+        } else {
+            buff.level++;
         }
         return buff;
     }
@@ -139,6 +141,8 @@ public class  Buff extends Actor implements NamedEntityKind, CharModifier {
         if (buff == null) {
             buff = BuffFactory.getBuffByName(buffClass);
             buff.attachTo(target);
+        } else {
+            buff.level++;
         }
 
         buff.spend(duration);
