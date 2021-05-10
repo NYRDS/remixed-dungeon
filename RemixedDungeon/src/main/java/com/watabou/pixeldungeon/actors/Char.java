@@ -460,10 +460,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			accuracy *= 0.5f;
 		}
 
-		accuracy = getActiveWeapon().impactAccuracyFactor(this, accuracy);
-		accuracy = getSecondaryWeapon().impactAccuracyFactor(this, accuracy);
+		float accuracyFactor = getActiveWeapon().impactAccuracyFactor(this, 20f);
+		accuracyFactor = getSecondaryWeapon().impactAccuracyFactor(this, accuracyFactor);
 
-		return (int) ((baseAttackSkill + lvl()) * accuracy);
+		return (int) ((baseAttackSkill + lvl()) * accuracy * accuracyFactor);
 	}
 
 	public int defenseSkill(Char enemy) {
