@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
-import com.watabou.utils.Random;
 
 public class Crab extends Mob {
 
@@ -32,20 +31,13 @@ public class Crab extends Mob {
 		
 		exp = 3;
 		maxLvl = 9;
-		
+		dmgMin = 3;
+		dmgMax = 6;
+		dr = 4;
+
 		loot(MysteryMeat.class, 0.314f);
 	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 3, 6 );
-	}
 
-	@Override
-	public int dr() {
-		return 4;
-	}
-	
 	@Override
 	public void die(NamedEntityKind cause) {
 		Ghost.Quest.process( getPos() );

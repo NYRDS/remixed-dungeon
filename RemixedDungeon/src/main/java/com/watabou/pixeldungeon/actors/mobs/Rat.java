@@ -28,7 +28,6 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.items.quest.RatSkull;
-import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -38,18 +37,11 @@ public class Rat extends Mob {
 		hp(ht(8));
 		baseDefenseSkill = 3;
 		baseAttackSkill  = 8;
+		dmgMin = 1;
+		dmgMax = 5;
+		dr = 1;
 
 		maxLvl = 7;
-	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 1, 5 );
-	}
-
-	@Override
-	public int dr() {
-		return 1;
 	}
 
 	@Override

@@ -18,6 +18,9 @@ public class SpiderGuard extends MultiKindMob {
 		baseDefenseSkill = 15;
 		baseAttackSkill  = 17;
 		baseSpeed = 1.2f;
+		dmgMin = 8;
+		dmgMax = 14;
+		dr = 7;
 		
 		exp = 4;
 		maxLvl = 10;
@@ -33,16 +36,6 @@ public class SpiderGuard extends MultiKindMob {
 			Buff.prolong( enemy, Stun.class, 3);
 		}
 		return damage;
-	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 8, 14 );
-	}
-	
-	@Override
-	public int dr() {
-		return 7;
 	}
 
 	@Override

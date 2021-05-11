@@ -13,17 +13,15 @@ public class SpiderNest extends Mob {
 
 		exp = 0;
 		maxLvl = 9;
+		dmgMin = 0;
+		dmgMax = 0;
+		dr = 0;
 		
 		postpone(20);
 		
 		loot(new PotionOfHealing(), 0.2f);
 
 		movable = false;
-	}
-	
-	@Override
-	public int damageRoll() {
-		return 0;
 	}
 
 	@Override
@@ -34,11 +32,6 @@ public class SpiderNest extends Mob {
 		postpone(20);
 		
 		return true;
-	}
-	
-	@Override
-	public int dr() {
-		return 0;
 	}
 
 	@Override

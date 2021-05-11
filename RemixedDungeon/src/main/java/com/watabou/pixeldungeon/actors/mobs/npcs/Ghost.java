@@ -351,6 +351,9 @@ public class Ghost extends NPC {
 			hp(ht(15));
 			baseDefenseSkill = 5;
 			baseAttackSkill  = 12;
+			dmgMin = 2;
+			dmgMax = 6;
+			dr = 2;
 			
 			exp = 0;
 			
@@ -359,17 +362,7 @@ public class Ghost extends NPC {
 			collect( new RatSkull() );
 			addImmunity( Paralysis.class );
 		}
-		
-		@Override
-		public int damageRoll() {
-			return Random.NormalIntRange( 2, 6 );
-		}
-		
-		@Override
-		public int dr() {
-			return 2;
-		}
-		
+
 		@Override
 		public int defenseProc( Char enemy, int damage ) {
 			GameScene.add( Blob.seed( getPos(), 20, ParalyticGas.class ) );

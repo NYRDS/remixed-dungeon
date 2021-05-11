@@ -21,7 +21,6 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.Gold;
-import com.watabou.utils.Random;
 
 public class Gnoll extends Mob {
 	
@@ -29,23 +28,16 @@ public class Gnoll extends Mob {
 		hp(ht(12));
 		baseDefenseSkill = 4;
 		baseAttackSkill  = 11;
-		
+		dmgMin = 2;
+		dmgMax = 5;
+		dr = 2;
+
 		exp = 2;
 		maxLvl = 12;
 		
 		loot(Gold.class, 0.5f);
 	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 2, 5 );
-	}
 
-	@Override
-	public int dr() {
-		return 2;
-	}
-	
 	@Override
 	public void die(NamedEntityKind cause) {
 		ScarecrowNPC.Quest.process( getPos() );

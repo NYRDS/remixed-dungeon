@@ -45,6 +45,7 @@ public class Goo extends Boss {
 		hp(ht(68));
 		exp = 9;
 		baseDefenseSkill = 12;
+		dr = 2;
 		spriteClass = GooSprite.class;
 
 		loot(Treasury.Category.POTION, 0.8f);
@@ -71,12 +72,7 @@ public class Goo extends Boss {
 	public int attackSkill( Char target ) {
 		return pumpedUp ? 26 : 11;
 	}
-	
-	@Override
-	public int dr() {
-		return 2;
-	}
-	
+
 	@Override
 	public boolean act() {
 		

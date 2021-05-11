@@ -16,6 +16,9 @@ public class SpiderServant extends MultiKindMob {
 		baseDefenseSkill = 5;
 		baseAttackSkill  = 11;
 		baseSpeed = 1.1f;
+		dmgMin = 4;
+		dmgMax = 6;
+		dr = 5;
 		
 		exp = 2;
 		maxLvl = 9;
@@ -30,15 +33,4 @@ public class SpiderServant extends MultiKindMob {
 		}
 		return damage;
 	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 4, 6 );
-	}
-
-	@Override
-	public int dr() {
-		return 5;
-	}
-
 }

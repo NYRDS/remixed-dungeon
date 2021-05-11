@@ -31,11 +31,8 @@ public class Senior extends Monk {
 
 	{
 		spriteClass = SeniorSprite.class;
-	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 12, 20 );
+		dmgMin = 12;
+		dmgMax = 20;
 	}
 	
 	@Override

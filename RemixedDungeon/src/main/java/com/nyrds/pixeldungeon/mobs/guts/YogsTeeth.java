@@ -25,6 +25,9 @@ public class YogsTeeth extends Mob {
         hp(ht(350));
         baseDefenseSkill = 44;
         baseAttackSkill  = 46;
+        dmgMin = 50;
+        dmgMax = 80;
+        dr = 21;
 
         exp = 26;
 
@@ -36,7 +39,6 @@ public class YogsTeeth extends Mob {
         addImmunity(Terror.class);
         addImmunity(Burning.class);
     }
-
 
     @Override
     public int attackProc(@NotNull Char enemy, int damage ) {
@@ -58,14 +60,6 @@ public class YogsTeeth extends Mob {
         }
         return damage;
     }
-
-    @Override
-    public int damageRoll() {
-        return Random.NormalIntRange(50, 80);
-    }
-
-    @Override
-    public int dr() { return 21; }
 
     @Override
     public boolean canBePet() {

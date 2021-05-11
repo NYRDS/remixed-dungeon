@@ -35,10 +35,6 @@ import lombok.SneakyThrows;
 
 public class CustomMob extends MultiKindMob implements IZapper {
 
-	private int dmgMin, dmgMax;
-	private int attackSkill;
-	private int dr;
-
 	private float attackDelay = 1;
 
 	@Packable

@@ -29,7 +29,10 @@ public class SpiderMindAmber extends MultiKindMob {
 		baseDefenseSkill = 5;
 		baseAttackSkill  = 15;
 		baseSpeed = 0.9f;
-		
+		dmgMin = 1;
+		dmgMax = 1;
+		dr = 10;
+
 		exp = 9;
 		maxLvl = 10;
 
@@ -59,16 +62,6 @@ public class SpiderMindAmber extends MultiKindMob {
 		} else {
 			return super.getCloser( target );
 		}
-	}
-	
-	@Override
-	public int damageRoll() {
-		return 1;
-	}
-
-	@Override
-	public int dr() {
-		return 10;
 	}
 
 	@Override

@@ -31,7 +31,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
-import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -44,23 +43,16 @@ public class RatKing extends NPC {
 		setState(MobAi.getStateByClass(Sleeping.class));
 		baseDefenseSkill = 20;
 		baseAttackSkill  = 15;
+		dmgMin = 4;
+		dmgMax = 10;
+		dr = 5;
 		
 		hp(ht(30));
 		exp = 1;
 
 		collect(new RatKingCrown() );
 	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 4, 10 );
-	}
 
-	@Override
-	public int dr() {
-		return 5;
-	}
-	
 	@Override
 	public boolean friendly(@NotNull Char chr){
 		if(chr instanceof Hero) {

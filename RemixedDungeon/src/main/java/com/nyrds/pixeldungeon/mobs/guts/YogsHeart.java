@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.utils.Random;
 
 /**
  * Created by DeadDie on 12.02.2016
@@ -21,6 +20,9 @@ public class YogsHeart extends Mob {
         hp(ht(450));
         baseDefenseSkill = 40;
         baseAttackSkill  = 26;
+        dmgMin = 35;
+        dmgMax = 45;
+        dr = 22;
 
         exp = 12;
 
@@ -30,16 +32,6 @@ public class YogsHeart extends Mob {
         addImmunity(Sleep.class);
         addImmunity(Terror.class);
         addImmunity(Burning.class);
-    }
-
-    @Override
-    public int damageRoll() {
-        return Random.NormalIntRange(35, 45);
-    }
-
-    @Override
-    public int dr() {
-        return 22;
     }
 
     @Override

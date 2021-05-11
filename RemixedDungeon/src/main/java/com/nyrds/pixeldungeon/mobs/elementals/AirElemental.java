@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 public class AirElemental extends Mob implements IDepthAdjustable {
 
 
-	private static WindGust windGust = new WindGust();
+	private static final WindGust windGust = new WindGust();
 
 	public AirElemental() {
 
@@ -40,6 +40,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 		baseDefenseSkill = depth * 2 + 1;
 		exp = depth + 1;
 		maxLvl = depth + 2;
+		dr = exp / 5;
 	}
 
 	@Override
@@ -50,11 +51,6 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 	@Override
 	public int attackSkill(Char target) {
 		return baseDefenseSkill * 2;
-	}
-
-	@Override
-	public int dr() {
-		return exp / 5;
 	}
 
 	@Override

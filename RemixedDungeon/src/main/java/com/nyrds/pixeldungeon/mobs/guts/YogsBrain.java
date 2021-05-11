@@ -36,6 +36,9 @@ public class YogsBrain extends Mob implements IZapper {
         hp(ht(350));
         baseDefenseSkill = 30;
         baseAttackSkill  = 31;
+        dmgMin = 15;
+        dmgMax = 25;
+        dr = 12;
 
         exp = 25;
 
@@ -56,16 +59,6 @@ public class YogsBrain extends Mob implements IZapper {
             Buff.affect(enemy, Stun.class);
         }
         return damage;
-    }
-
-    @Override
-    public int damageRoll() {
-        return Random.NormalIntRange(15, 25);
-    }
-
-    @Override
-    public int dr() {
-        return 12;
     }
 
     @Override

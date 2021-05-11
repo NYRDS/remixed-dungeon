@@ -21,8 +21,6 @@ import com.nyrds.Packable;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
 
 public class Swarm extends Mob {
 
@@ -32,7 +30,10 @@ public class Swarm extends Mob {
 		hp(ht(80));
 		baseDefenseSkill = 5;
 		baseAttackSkill  = 12;
-		
+
+		dmgMin = 1;
+		dmgMax = 4;
+
 		maxLvl = 10;
 		
 		flying = true;
@@ -43,21 +44,6 @@ public class Swarm extends Mob {
 	@Packable
 	private int generation = 0;
 
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-		super.storeInBundle( bundle );
-	}
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle(bundle);
-	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 1, 4 );
-	}
-	
 	@Override
 	public int defenseProc( Char enemy, int damage ) {
 

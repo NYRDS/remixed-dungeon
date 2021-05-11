@@ -32,7 +32,6 @@ import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
 
 public class Skeleton extends UndeadMob {
 
@@ -40,6 +39,9 @@ public class Skeleton extends UndeadMob {
 		hp(ht(25));
 		baseDefenseSkill = 9;
 		baseAttackSkill  = 12;
+		dmgMin = 3;
+		dmgMax = 8;
+		dr = 5;
 		
 		exp = 5;
 		maxLvl = 10;
@@ -55,11 +57,6 @@ public class Skeleton extends UndeadMob {
 		return null;
 	}
 
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 3, 8 );
-	}
-	
 	@Override
 	public void die(NamedEntityKind cause) {
 		
@@ -85,10 +82,5 @@ public class Skeleton extends UndeadMob {
 			Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB), Utils.indefinite( getName() ), Dungeon.depth ) );
 			GLog.n( Game.getVar(R.string.Skeleton_Killed) );
 		}
-	}
-
-	@Override
-	public int dr() {
-		return 5;
 	}
 }

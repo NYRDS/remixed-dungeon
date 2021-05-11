@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
-import com.watabou.utils.Random;
 
 public class IceGuardian extends MultiKindMob {
 
@@ -20,6 +19,9 @@ public class IceGuardian extends MultiKindMob {
 		exp = 5;
 		baseDefenseSkill = 30;
 		baseAttackSkill  = 31;
+		dmgMin = 10;
+		dmgMax = 15;
+		dr = 14;
 
 		kind = 1;
 
@@ -36,18 +38,6 @@ public class IceGuardian extends MultiKindMob {
 		addImmunity( Blindness.class );
 		addImmunity( Sleep.class );
 	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 10, 15 );
-	}
-
-	
-	@Override
-	public int dr() {
-		return 14;
-	}
-
 
 	@Override
 	public void die(NamedEntityKind cause) {

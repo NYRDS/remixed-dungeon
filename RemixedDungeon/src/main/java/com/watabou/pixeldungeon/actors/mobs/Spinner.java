@@ -39,6 +39,9 @@ public class Spinner extends Mob {
 		hp(ht(50));
 		baseDefenseSkill = 14;
 		baseAttackSkill  = 20;
+		dmgMin = 12;
+		dmgMax = 16;
+		dr = 6;
 		
 		exp = 9;
 		maxLvl = 16;
@@ -48,17 +51,7 @@ public class Spinner extends Mob {
 		addResistance( Poison.class );
 		addImmunity( Roots.class );
 	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 12, 16 );
-	}
 
-	@Override
-	public int dr() {
-		return 6;
-	}
-	
 	@Override
     public boolean act() {
 		boolean result = super.act();

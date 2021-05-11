@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -38,6 +37,9 @@ public class Thief extends Mob {
 		hp(ht(20));
 		baseDefenseSkill = 12;
 		baseAttackSkill  = 12;
+		dmgMin = 1;
+		dmgMax = 7;
+		dr = 3;
 
 		exp = 5;
 		maxLvl = 10;
@@ -46,20 +48,10 @@ public class Thief extends Mob {
 	}
 
 	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 1, 7 );
-	}
-	
-	@Override
 	protected float _attackDelay() {
 		return 0.5f;
 	}
 
-	@Override
-	public int dr() {
-		return 3;
-	}
-	
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (CharUtils.steal(this, enemy )) {

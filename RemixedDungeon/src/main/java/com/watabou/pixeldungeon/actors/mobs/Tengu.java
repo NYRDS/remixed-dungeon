@@ -58,7 +58,10 @@ public class Tengu extends Boss implements IZapper {
 		exp = 20;
 		baseDefenseSkill = 20;
 		baseAttackSkill  = 20;
-		
+		dmgMin = 8;
+		dmgMax = 15;
+		dr = 5;
+
 		addResistance( ToxicGas.class );
 		addResistance( Poison.class );
 
@@ -69,17 +72,7 @@ public class Tengu extends Boss implements IZapper {
 	}
 	
 	private int timeToJump = JUMP_DELAY;
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 8, 15 );
-	}
 
-	@Override
-	public int dr() {
-		return 5;
-	}
-	
 	@Override
 	public void die(NamedEntityKind cause) {
 		super.die(cause);

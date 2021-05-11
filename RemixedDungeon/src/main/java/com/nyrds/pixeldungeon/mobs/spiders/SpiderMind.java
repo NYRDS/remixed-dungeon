@@ -29,6 +29,9 @@ public class SpiderMind extends Mob {
 		baseDefenseSkill = 1;
 		baseAttackSkill  = 10;
 		baseSpeed = 0.5f;
+		dmgMin = 0;
+		dmgMax = 0;
+		dr = 0;
 		
 		exp = 6;
 		maxLvl = 9;
@@ -56,15 +59,5 @@ public class SpiderMind extends Mob {
 		} else {
 			return super.getCloser( target );
 		}
-	}
-	
-	@Override
-	public int damageRoll() {
-		return 0;
-	}
-
-	@Override
-	public int dr() {
-		return 0;
 	}
 }

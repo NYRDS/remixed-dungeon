@@ -42,6 +42,9 @@ public class Monk extends Mob {
 		hp(ht(70));
 		baseDefenseSkill = 30;
 		baseAttackSkill  = 30;
+		dmgMin = 12;
+		dmgMax = 16;
+		dr = 2;
 		
 		exp = 11;
 		maxLvl = 21;
@@ -51,22 +54,13 @@ public class Monk extends Mob {
 		addImmunity( Amok.class );
 		addImmunity( Terror.class );
 	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 12, 16 );
-	}
+
 	
 	@Override
 	protected float _attackDelay() {
 		return 0.5f;
 	}
-	
-	@Override
-	public int dr() {
-		return 2;
-	}
-	
+
 	@Override
 	public void die(NamedEntityKind cause) {
 		Imp.Quest.process( this );

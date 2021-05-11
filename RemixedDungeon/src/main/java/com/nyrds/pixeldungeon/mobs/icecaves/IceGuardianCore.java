@@ -14,7 +14,6 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
-import com.watabou.utils.Random;
 
 public class IceGuardianCore extends Boss {
 
@@ -23,6 +22,9 @@ public class IceGuardianCore extends Boss {
 		exp = 5;
 		baseDefenseSkill = 10;
 		baseAttackSkill  = 26;
+		dmgMin = 13;
+		dmgMax = 23;
+		dr = 11;
 
 		baseSpeed = 0.5f;
 		collect(new WandOfIcebolt().upgrade(1));
@@ -38,16 +40,6 @@ public class IceGuardianCore extends Boss {
 		collect(new SkeletonKey());
 		collect(new IceKey());
 
-	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 13, 23 );
-	}
-
-	@Override
-	public int dr() {
-		return 11;
 	}
 
 	@Override

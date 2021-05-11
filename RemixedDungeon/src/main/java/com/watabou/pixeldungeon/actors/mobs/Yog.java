@@ -166,6 +166,10 @@ public class Yog extends Boss {
 
 			exp = 0;
 
+			dmgMin = 34;
+			dmgMax = 46;
+			dr = 15;
+
 			setState(MobAi.getStateByClass(Wandering.class));
 
 			addResistance(ToxicGas.class);
@@ -179,16 +183,6 @@ public class Yog extends Boss {
 		}
 
 		public RottingFist() {
-		}
-
-		@Override
-		public int damageRoll() {
-			return Random.NormalIntRange(34, 46);
-		}
-
-		@Override
-		public int dr() {
-			return 15;
 		}
 
 		@Override
@@ -233,6 +227,10 @@ public class Yog extends Boss {
 
 			exp = 0;
 
+			dmgMin = 40;
+			dmgMax = 62;
+			dr = 15;
+
 			setState(MobAi.getStateByClass(Wandering.class));
 
 			addResistance(ToxicGas.class);
@@ -244,16 +242,6 @@ public class Yog extends Boss {
 		}
 
 		public BurningFist() {
-		}
-
-		@Override
-		public int damageRoll() {
-			return Random.NormalIntRange(40, 62);
-		}
-
-		@Override
-		public int dr() {
-			return 15;
 		}
 
 		@Override
@@ -302,19 +290,12 @@ public class Yog extends Boss {
 			baseDefenseSkill = 20;
 			baseAttackSkill  = 30;
 
+			dmgMin = 25;
+			dmgMax = 30;
+			dr = 8;
 			exp = 0;
 
 			setState(MobAi.getStateByClass(Hunting.class));
-		}
-
-		@Override
-		public int damageRoll() {
-			return Random.NormalIntRange(25, 30);
-		}
-
-		@Override
-		public int dr() {
-			return 8;
 		}
 
 		@Override

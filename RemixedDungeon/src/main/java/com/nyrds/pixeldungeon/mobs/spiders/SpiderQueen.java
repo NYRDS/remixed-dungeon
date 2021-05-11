@@ -26,6 +26,11 @@ public class SpiderQueen extends Boss {
 		baseAttackSkill  = 21;
 		exp = 11;
 
+		dmgMin = 12;
+		dmgMax = 20;
+		dr = 10;
+
+
 		float dice = Random.Float();
 		if( dice < 0.33 ) {
 			collect(new ChaosCrystal());
@@ -37,7 +42,7 @@ public class SpiderQueen extends Boss {
 
 		collect(new SkeletonKey());
 	}
-	
+
 	@Override
     public boolean act(){
 		if(Random.Int(0, 20) == 0) {
@@ -69,16 +74,6 @@ public class SpiderQueen extends Boss {
 			}
 		}
 		return super.getCloser(target);
-	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 12, 20 );
-	}
-
-	@Override
-	public int dr() {
-		return 10;
 	}
 
 	@Override

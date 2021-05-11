@@ -21,12 +21,14 @@ import com.watabou.utils.Random;
  * Created by DeadDie on 12.02.2016
  */
 
-//TODO: Monster must not rise if he had been burned at least once. Maybe change sprite to "kind 2", which will suggest that he burned
 public class ZombieGnoll extends Mob {
     {
         hp(ht(210));
         baseDefenseSkill = 27;
         baseAttackSkill  = 25;
+        dmgMin = 15;
+        dmgMax = 35;
+        dr = 20;
 
         exp = 7;
         maxLvl = 35;
@@ -35,16 +37,6 @@ public class ZombieGnoll extends Mob {
 
         addImmunity(Paralysis.class);
         addImmunity(ToxicGas.class);
-    }
-
-    @Override
-    public int damageRoll() {
-        return Random.NormalIntRange(15, 35);
-    }
-
-    @Override
-    public int dr() {
-        return 20;
     }
 
     @Override

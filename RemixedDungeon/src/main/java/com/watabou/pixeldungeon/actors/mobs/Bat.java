@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
-import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -31,7 +30,10 @@ public class Bat extends Mob {
 		baseDefenseSkill = 15;
 		baseAttackSkill  = 16;
 		baseSpeed = 2f;
-		
+
+		dmgMin = 6;
+		dmgMax = 12;
+
 		exp = 7;
 		maxLvl = 15;
 		
@@ -41,12 +43,7 @@ public class Bat extends Mob {
 
 		addResistance( Leech.class );
 	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 6, 12 );
-	}
-	
+
 	@Override
 	public int dr() {
 		return 4;

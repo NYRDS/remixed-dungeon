@@ -11,6 +11,7 @@ public class JarOfSouls extends UndeadMob {
 	public JarOfSouls() {
 		hp(ht(70));
 		baseDefenseSkill = 5;
+		dr = 0;
 
 		pacified = true;
 		
@@ -48,11 +49,6 @@ public class JarOfSouls extends UndeadMob {
 		MobSpawner.spawnRandomMob(Dungeon.level,getPos(), -1);
 
 		postpone(15);
-	}
-
-	@Override
-	public int dr() {
-		return 0;
 	}
 
 	@Override

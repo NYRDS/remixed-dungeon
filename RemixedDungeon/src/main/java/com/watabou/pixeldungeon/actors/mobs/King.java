@@ -62,6 +62,9 @@ public class King extends Boss {
 		exp = 40;
 		baseDefenseSkill = 25;
 		baseAttackSkill  = 32;
+		dmgMin = 20;
+		dmgMax = 38;
+		dr = 14;
 
 		lastPedestal   = -1;
 		targetPedestal = -1;
@@ -76,18 +79,6 @@ public class King extends Boss {
 		collect(new ArmorKit());
 	}
 
-
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 20, 38 );
-	}
-	
-	@Override
-	public int dr() {
-		return 14;
-	}
-	
-	
 	@Override
 	public boolean getCloser(int target) {
 
@@ -186,15 +177,14 @@ public class King extends Boss {
 			hp(ht(28));
 			baseDefenseSkill = 15;
 			baseAttackSkill  = 16;
+
+			dmgMin = 12;
+			dmgMax = 16;
+			dr = 5;
 			
 			exp = 0;
 			
 			setState(MobAi.getStateByClass(Wandering.class));
-		}
-
-		@Override
-		public int damageRoll() {
-			return Random.NormalIntRange( 12, 16 );
 		}
 
 		@Override
@@ -222,10 +212,6 @@ public class King extends Boss {
 				Sample.INSTANCE.play( Assets.SND_BONES );
 			}
 		}
-		
-		@Override
-		public int dr() {
-			return 5;
-		}
+
 	}
 }

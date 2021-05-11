@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.utils.Random;
 
 public class Wraith extends Mob implements IDepthAdjustable {
 
@@ -44,17 +43,14 @@ public class Wraith extends Mob implements IDepthAdjustable {
 		flying = true;
 
 		level = Dungeon.depth;
+		dmgMin = 1;
+		dmgMax = 3 + level;
 
 		addImmunity( Death.class );
 		addImmunity( Terror.class );
 		adjustStats( level );
 	}
 
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 1, 3 + level );
-	}
-	
 	@Override
 	public int attackSkill( Char target ) {
 		return 10 + level;

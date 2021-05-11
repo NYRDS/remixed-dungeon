@@ -102,8 +102,12 @@ public abstract class Mob extends Char {
 
 	private static final String STATE      = "state";
 	private static final String FRACTION   = "fraction";
+    protected int dmgMin = 0;
+    protected int dmgMax = 0;
+    protected int attackSkill = 0;
+    protected int dr = 0;
 
-	public Mob() {
+    public Mob() {
 		super();
 		setupCharData();
 	}
@@ -639,5 +643,23 @@ public abstract class Mob extends Char {
 	@Override
 	public int priceSell(Item item) {
 		return script.run("priceSell", item, super.priceSell(item)).toint();
+	}
+
+	@Override
+	public int damageRoll() {
+		int dmg = Random.NormalIntRange(dmgMin, dmgMax);
+
+		dmg += getActiveWeapon().damageRoll(this);
+
+		if(!rangedWeapon.valid()) {
+			dmg += getSecondaryWeapon().damageRoll(this);
+		}
+
+		return dmg;
+	}
+
+	@Override
+	public int dr() {
+		return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() + dr;
 	}
 }

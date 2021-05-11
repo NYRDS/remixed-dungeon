@@ -26,6 +26,9 @@ public class SpiderExploding extends MultiKindMob {
         baseDefenseSkill = 1;
         baseAttackSkill  = 125;
         baseSpeed = 2f;
+        dmgMin = 3;
+        dmgMax = 6;
+        dr = 0;
 
         exp = 3;
         maxLvl = 9;
@@ -47,15 +50,5 @@ public class SpiderExploding extends MultiKindMob {
             return true;
         }
         return false;
-    }
-
-    @Override
-    public int damageRoll() {
-        return Random.NormalIntRange(3, 6);
-    }
-
-    @Override
-    public int dr() {
-        return 0;
     }
 }

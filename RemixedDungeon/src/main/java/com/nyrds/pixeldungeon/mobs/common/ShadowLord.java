@@ -30,7 +30,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Callback;
-import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -49,6 +48,9 @@ public class ShadowLord extends Boss implements IZapper {
 		hp(ht(260));
 		baseDefenseSkill = 40;
 		baseAttackSkill  = 30;
+		dmgMin = 30;
+		dmgMax = 40;
+		dr = 40;
 
 		exp = 60;
 
@@ -180,16 +182,6 @@ public class ShadowLord extends Boss implements IZapper {
 		}
 
 		return super.act();
-	}
-
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange(30, 40);
-	}
-
-	@Override
-	public int dr() {
-		return 40;
 	}
 
 	@Override

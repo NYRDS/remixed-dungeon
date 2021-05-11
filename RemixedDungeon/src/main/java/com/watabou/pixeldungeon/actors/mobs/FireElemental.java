@@ -40,7 +40,10 @@ public class FireElemental extends Mob {
 		
 		exp = 10;
 		maxLvl = 20;
-		
+		dmgMin = 16;
+		dmgMax = 20;
+		dr = 5;
+
 		flying = true;
 		
 		loot(PotionOfLiquidFlame.class, 0.1f);
@@ -50,17 +53,7 @@ public class FireElemental extends Mob {
 		addImmunity( ScrollOfPsionicBlast.class );
 		addImmunity( Bleeding.class );
 	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 16, 20 );
-	}
 
-	@Override
-	public int dr() {
-		return 5;
-	}
-	
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {
@@ -75,12 +68,13 @@ public class FireElemental extends Mob {
 		if (buff instanceof Burning) {
 		    heal(Random.NormalIntRange( 1, ht() * 4 ), buff);
 			return;
-		} else {
-			if (buff instanceof Frost) {
-				damage( Random.NormalIntRange( 1, ht() * 2 / 3 ), buff );
-				return;
-			}
 		}
+
+		if (buff instanceof Frost) {
+			damage( Random.NormalIntRange( 1, ht() * 2 / 3 ), buff );
+			return;
+		}
+
 		super.add( buff );
 	}	
 }
