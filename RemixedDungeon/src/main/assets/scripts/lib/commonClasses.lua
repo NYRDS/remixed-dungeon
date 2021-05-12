@@ -93,7 +93,8 @@ local Objects = {
         WndStory       = "com.watabou.pixeldungeon.windows.WndStory",
         WndQuest       = "com.watabou.pixeldungeon.windows.WndQuest",
         WndOptionsLua  = "com.nyrds.pixeldungeon.windows.WndOptionsLua",
-        WndShopOptions = "com.nyrds.pixeldungeon.windows.WndShopOptions"
+        WndShopOptions = "com.nyrds.pixeldungeon.windows.WndShopOptions",
+        WndChooseWay   = "com.watabou.pixeldungeon.windows.WndChooseWay"
     },
 
     Actors = {

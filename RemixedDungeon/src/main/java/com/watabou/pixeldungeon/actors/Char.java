@@ -1434,6 +1434,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return HeroSubClass.NONE;
 	}
 
+	@LuaInterface
+	static public HeroSubClass getSubClassByName(String subClassName) {
+		return HeroSubClass.valueOf(subClassName);
+	}
+
 	public int countPets() {
 		int ret = 0;
 		for(Mob mob : level().mobs) {

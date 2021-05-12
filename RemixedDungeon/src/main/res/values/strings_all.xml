@@ -2764,7 +2764,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Gnoll_BecomeWitchdoctorDesc">Become a Witch-Doctor</string>
   <string name="Gnoll_BecomeGuardianDesc">Become a Guardian</string>
   <string name="HeroSubClass_DescWitchdoctor">Spellcasting endows the _Witchdoctor_ with a magic shield that completely protects him from incoming damage.</string>
-  <string name="HeroSubClass_DescGuardian">Skillful defensive knowledge allows the Guardian to counterattack with a shield, making him a formidable foe for those who dare to attack this walking bastion.</string>
+  <string name="HeroSubClass_DescGuardian">Skillful defensive knowledge allows the _Guardian_ to counterattack with a shield, making him a formidable foe for those who dare to attack this walking bastion.</string>
 
   <string name="Potion_Colors_12">epidot</string>
   <string name="Potion_Colors_13">quartz</string>
@@ -2773,5 +2773,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
   <string name="ManaShieldBuff_Name">Magic Shield</string>
   <string name="ManaShieldBuff_Info">Magic Shield</string>
+
+  <string name="TenguLiver_Name">Tengu Liver</string>
+  <string name="TenguLiver_Info">Tengu Liver description</string>
 
 </resources>

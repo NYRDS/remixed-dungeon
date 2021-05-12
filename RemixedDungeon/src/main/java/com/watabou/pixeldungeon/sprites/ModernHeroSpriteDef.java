@@ -13,6 +13,7 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -130,13 +131,11 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		String helmetDescriptor = HERO_EMPTY_PNG;
 
 		if(accessory == null || !accessory.isCoverFacialHair()) {
-			if (classDescriptor.equals("MAGE_WARLOCK")
-					|| classDescriptor.equals("MAGE_BATTLEMAGE")
-					|| classDescriptor.equals("WARRIOR_BERSERKER")
-					|| classDescriptor.equals("NECROMANCER_NONE")
-					|| classDescriptor.equals("GNOLL_NONE"))
-			{
-				facialHairDescriptor = "hero_modern/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
+			facialHairDescriptor = "hero_modern/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
+			GLog.i(facialHairDescriptor);
+			if(! ModdingMode.isResourceExist(facialHairDescriptor)) {
+				GLog.i("not found");
+				facialHairDescriptor = HERO_EMPTY_PNG;
 			}
 		}
 
