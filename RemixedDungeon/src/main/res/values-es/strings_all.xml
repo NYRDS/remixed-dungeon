@@ -112,7 +112,6 @@
   <string name="Possess_Info">El oscuro arte del control mental permite al lanzador doblar la voluntad de la mayoría de las criaturas</string>
   <string name="Possess_PossessionFailed">La voluntad de %s es muy fuerte.</string>
   <string name="Possess_Possessed">%s espera tus órdenes.</string>
-  <string name="Possess_MustTargetChar">Solo puedes usar Posesión con criaturas.</string>
   <string name="Possess_CantPossessSelf">No puedes poseerte a tí mismo.</string>
   <string name="Mob_StaControlledStatus">Este %s esta bajo posesión impía.</string>
   <string name="BlackCat_AiStatus">Este gato está haciendo cosas ordinarias de gato.</string>
@@ -149,6 +148,26 @@
   <string name="town_deco_pedestal_desc">Un pedestal con un libro santo en él.</string>
   <string name="town_deco_shelf_name">Estantes</string>
   <string name="town_deco_shelf_desc">Unos estantes vacíos.</string>
+  <string name="town_deco_banner_name">Estandarte</string>
+  <string name="town_deco_banner_desc">Un elegante estandarte con los símbolos de esta taberna.</string>
+  <string name="town_deco_inn_bed_name">Cama</string>
+  <string name="town_deco_inn_bed_desc">Parece una cama muy cómoda.</string>
+  <string name="town_deco_furnace_name">Horno</string>
+  <string name="town_deco_furnace_desc">Un horno de cocción fiable, que fue montado según los esquemas tradicionales.</string>
+  <string name="town_deco_skullboard_name">Estante de trofeos</string>
+  <string name="town_deco_skullboard_desc">Esta calavera capta perfectamente el momento del horror inesperado.</string>
+  <string name="town_deco_stool_sturdy_name">Taburete</string>
+  <string name="town_deco_stool_sturdy_desc">Un taburete normal de madera resistente.</string>
+  <string name="town_deco_stool_broken_name">Taburete roto</string>
+  <string name="town_deco_stool_broken_desc">Este taburete ha visto días mejores.</string>
+  <string name="town_deco_shelving_name">Estantería</string>
+  <string name="town_deco_shelving_desc">Una estantería de tamaño impresionante, en cuyos estantes se pueden encontrar diversas bebidas y aperitivos.</string>
+  <string name="town_deco_barrel_wine_name">Barril de vino</string>
+  <string name="town_deco_barrel_wine_desc">Se utiliza para almacenar una bebida tan valiosa como el vino.</string>
+  <string name="town_deco_crate_bottles_name">Cajón de cerveza</string>
+  <string name="town_deco_crate_bottles_desc">Embotellar cerveza se ha convertido en un pasatiempo muy popular entre los hosteleros.</string>
+  <string name="town_deco_wall_brazier_name">Brasero</string>
+  <string name="town_deco_wall_brazier_desc">El vapor que sale de las brasas humeantes llena la habitación de agradables aromas.</string>
   <string name="WndPriest_Instruction2_m">Bienvenido hijo mío, bienvenido a la santa iglesia del gran Santa el Profundo Señor!</string>
   <string name="WndPriest_Instruction2_f">Bienvenida hija mía, bienvenida a la santa iglesia del gran Santa el Profundo Señor!</string>
   <string name="WndPriest_Instruction2">Si buscas auxilio, puedo proveerte servicio de curación por solo %d monedas de oro!\nSi estas en busca de Bendición, el perdón del Señor o estas maldecido,  por favor, reúnete con el Obispo en nuestra humilde iglesia.</string>
@@ -2503,26 +2522,16 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
   <string name="town_deco_stone_wall_broken_desc">Viejo muro de piedra, en mal estado</string>
   <string name="Challenges_Names_6">Runas Prohibidas</string>
   <string name="Challenges_Names_7">Pacifismo</string>
-  <string name="Welcome_Text_29_2">
-    remix.29.2\n
-    - Como se juega:\n
-    -- Nuevos Desafios:\n
-    --- Runas Prohibidas\n
-    --- Pacifismo\n
-    - Modding:\n
-    -- Artefactos Personalizables\n
-    - Errores corregidos\n
-    </string>
   <string name="town_deco_crossroad_name">Señal de encrucijada</string>
   <string name="town_deco_crossroad_desc">Pilar de madera en bruto con placas en forma de flecha con texto que se desvaneció hace mucho tiempo probablemente debido a las duras condiciones climáticas.</string>
   <string name="ShieldBuffReady_Name">Listo</string>
   <string name="ShieldBuffNotReady_Name">no Listo</string>
   <string name="WoodenShield_name">Escudo de madera</string>
-  <string name="WoodenShield_desc">Un escudo de madera cruda es el escudo más simple disponible. Es redondo y puede bloquear algunos daños de vez en cuando.</string>
+  <string name="WoodenShield_desc">Un escudo de madera cruda es el escudo más sencillo que existe. Es redondo y puede bloquear algún daño de vez en cuando.</string>
   <string name="ToughShield_name">Escudo reforzado de cuero</string>
-  <string name="ToughShield_desc">Este escudo reforzado con correas de cuero se ve más resistente que el de madera. Puede bloquear más daños con seguridad.</string>
+  <string name="ToughShield_desc">Este escudo reforzado con correas de cuero parece más resistente que uno de madera. Sin duda puede bloquear más daño.</string>
   <string name="StrongShield_name">Escudo chapado en bronce</string>
-  <string name="StrongShield_desc">Este escudo rectangular chapado con láminas de bronce y decorado con tela de colores. Es significativamente más pesado, pero puede bloquear mucho más daño.</string>
+  <string name="StrongShield_desc">Este escudo rectangular está chapado con láminas de bronce y decorado con telas de colores. Es significativamente más pesado, pero puede bloquear mucho más daño entrante.</string>
   <string name="RoyalShield_name">Escudo real</string>
   <string name="RoyalShield_desc">Un escudo de metal completo. Sí, es pesado, pero puede brindarle la mejor protección.</string>
   <string name="ShieldInfoTemplate">Este escudo bloqueará hasta un %1$d de daño recibido. Con %2$d %% de posibilidad. Tardará %3$3.1f segundos en recuperarse después de un bloqueo existoso.</string>
@@ -2538,5 +2547,245 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
   <string name="ShieldStrTemplate">El portador del escudo debe tener al menos %1$d puntos de Fuerza para usarlo apropiadamente.</string>
   <string name="town_deco_flowerinthepot_name">Flor en una maceta</string>
   <string name="town_deco_flowerinthepot_desc">Flor decorativa con sabor dulce</string>
+  <string name="Welcome_Text_29_4">
+remix.29.4\n
+- Gameplay:\n
+ -- ¡Doble empuñadura!\n
+- Modding:\n
+ -- ¡Armas personalizables!\n
+- Bugs arreglados\n
+</string>
+  <string name="Mods_Disclaimer">
+        Los mods son creados por los jugadores para los jugadores.\n
+         Los mods a veces cambian el juego de manera impredecible o extraña, ¡estás avisado!\n
+         El equipo de NYRDS no es responsable del contenido, la calidad o la estabilidad de los mods.\n
+         ¡Descárgalos bajo su propia responsabilidad y disfrute!.\n
+    </string>
+  <string name="ShieldWeaponInfo">Cuando se utiliza como arma, este escudo inflige una media de %1$d de daño.</string>
   <string name="TownPortal_Name">Portal a la ciudad.</string>
+  <string name="TownPortal_Info">Este hechizo te permite regresar instantáneamente a un lugar seguro. Sin embargo, las fuentes mágicas poderosas cercanas pueden impedir que funcione como se esperaba.</string>
+  <string name="MedicineMask_Name">Mascarilla quirúrgica</string>
+  <string name="MedicineMask_Info">Una mascarilla quirúrgica está diseñada para atrapar los microorganismos que se desprenden en gotas líquidas y aerosoles de la boca y la nariz del usuario.
+\n\nLlevar una máscara significa que te preocupas por los demás.</string>
+  <string name="MedicineMask_Obtained">Mascarilla quirúrgica obtenida</string>
+  <string name="PlagueDoctorNPC_After_Quest_2">¿Todavía estás aquí? Ten, toma esto.</string>
+  <string name="FilteredMask_Name">Máscara N95</string>
+  <string name="FilteredMask_Info">Un respirador es un dispositivo diseñado para proteger al usuario de la inhalación de atmósferas peligrosas, incluyendo humos, vapores, gases y partículas como polvos y microorganismos en el aire.
+  \n\nSin embargo, esta máscara sólo tiene una función decorativa.</string>
+  <string name="FullFaceMask_Name">Máscara de gas</string>
+  <string name="FullFaceMask_Info">Una máscara de gas es una máscara utilizada para proteger al usuario de la inhalación de contaminantes y gases tóxicos en el aire. La máscara forma una cubierta sellada sobre la nariz, la boca y los ojos.
+  \n\nEn esta máscara faltan los filtros, pero a pesar de ello queda muy bien.</string>
+  <string name="StartScene_DifficultyEasyNoAds">Fácil</string>
+  <string name="StartScene_DifficultyNormalWithSavesNoAds">Normal con guardados</string>
+  <string name="Backstab_Name">Puñalada por la espalda</string>
+  <string name="Backstab_Info">Golpe silencioso por la espalda. Deshonesto, pero extremadamente efectivo, el daño de la puñalada por la espalda crecerá con el nivel de habilidad del ejecutante.\n\nUna puñalada por la espalda exitosa ignorará por completo la armadura de la víctima o las habilidades de defensa especiales.</string>
+  <string name="Backstab_TooFar">La víctima está demasiado lejos para que el golpe sea exitoso.</string>
+  <string name="Backstab_Aware">La víctima no debería estar al tanto de ti para una buena puñalada por la espalda.</string>
+  <string name="KunaiThrow_Name">Lanzamiento de Kunai</string>
+  <string name="KunaiThrow_Info">Este lanzamiento de Kunai mortal se hará extremadamente rápido, tanto que ni siquiera podrás seleccionar un objetivo.\n\nLos verdaderos maestros son capaces de lanzar más de un Kunai a la vez.</string>
+  <string name="Haste_Name">Prisa extrema</string>
+  <string name="Haste_Info">La prisa permitirá al ejecutante moverse con una velocidad tan extrema, que todo a su alrededor parecerá estático. Dicha prisa consumirá mucha energía, por lo que su uso solo es posible durante un breve periodo de tiempo.\n\nLos maestros expertos son capaces de mantenerse apurados durante más tiempo.</string>
+  <string name="Welcome_Text_29_5">
+    remix.29.5\n
+    - Gameplay:\n
+    -- ¡Habilidades de Rogue!\n
+    - Modding:\n
+    -- ¡Armaduras personalizables!\n
+    - Bugs arreglados\n
+    </string>
+  <string name="Char_Stole_0">%1$s robó %2$s de %3$s!</string>
+  <string name="Char_Stole_1">%1$s robó %2$s de %3$s!</string>
+  <string name="Char_Stole_2">%1$s robó %2$s de %3$s!</string>
+  <string name="ScrollOfTeleportation_Teleport2">En un abrir y cerrar de ojos %s fue teletransportado a
+otro lugar del nivel.</string>
+  <string name="ScrollOfTeleportation_NoTeleport2">¡El fuerte aura mágica de este lugar impide a %s
+    que se teletransporte!</string>
+  <string name="WndModInstall_InstallingMod">Instalando mod</string>
+  <string name="WndModInstall_Version">versión</string>
+  <string name="WndModInstall_PleaseUpdate">Por favor, actualice Remixed Dungeon antes de instalar este mod</string>
+  <string name="Wnd_Button_Ok">Ok</string>
+  <string name="CharAction_Taunt">provocar</string>
+  <string name="CharAction_Push">empujar</string>
+  <string name="CharAction_Steal">robar</string>
+  <string name="CharAction_Charm">encanto</string>
+  <string name="CharAction_Order">pedir</string>
+  <string name="CharAction_Give">dar</string>
+  <string name="CharAction_Take">tomar</string>
+  <string name="CharAction_Scare">asustar</string>
+  <string name="CharAction_Hit">golpear</string>
+  <string name="Stun_Info">Aturdido</string>
+  <string name="Char_StaStunned">aturdido</string>
+  <string name="Mob_ReadyForOrder">%slisto para usarse.</string>
+  <string name="Mob_CantDoIt">No puedo hacer esto. Tengo patas pequeñas.</string>
+  <string name="Welcome_Text_29_6">
+    remix.29.6\n
+    - Gameplay:\n
+    -- ¡Acciones adicionales para realizar en los mobs!\n
+    - Modding:\n
+    -- ¡Actores de artículos!\n
+    -- ¡Armas con propiedades especiales!\n
+    -- ¡Más cosas sin categorizar!\n
+    - Bugs arreglados\n
+    </string>
+
+  <string name="InnKeeperNPC_Name">encargado de la posada</string>
+  <string name="InnKeeperNPC_Name_Objective">encargado de la posada</string>
+  <string name="InnKeeperNPC_Gender">masculino</string>
+  <string name="InnKeeperNPC_Desc">El encargado de la posada está orgulloso de sí mismo.</string>
+
+
+  <string name="DrunkardNPC_Name">borracho</string>
+  <string name="DrunkardNPC_Name_Objective">borracho</string>
+  <string name="DrunkardNPC_Gender">masculino</string>
+  <string name="DrunkardNPC_Desc">Cliente habitual de la posada en estado natural.</string>
+
+
+  <string name="MercenaryNPC_Name">mercenario</string>
+  <string name="MercenaryNPC_Name_Objective">mercenario</string>
+  <string name="MercenaryNPC_Gender">masculino</string>
+  <string name="MercenaryNPC_Desc">Un hombre de aspecto robusto.</string>
+
+
+  <string name="ServantNPC_Name">servidor de la posada</string>
+  <string name="ServantNPC_Name_Objective">servidor de la posada</string>
+  <string name="ServantNPC_Gender">femenino</string>
+  <string name="ServantNPC_Desc">Un servidor de la posada muy ocupado.</string>
+
+
+  <string name="BardNPC_Name">bardo</string>
+  <string name="BardNPC_Name_Objective">bardo</string>
+  <string name="BardNPC_Gender">masculino</string>
+  <string name="BardNPC_Desc">El bardo del pueblo está tocando su laúd.</string>
+
+  <string name="Welcome_Text_30">
+    remix.30.0\n
+    - Gameplay:\n
+    -- ¡Habilidades para todos!\n
+    -- ¡La posada ahora está abierta!\n
+    - Bugs arreglados\n
+    </string>
+
+
+  <string name="Roar_Name">Rugido</string>
+  <string name="Roar_Info">El poderoso rugido seguramente aterrorizará a tus enemigos e inspirará a los aliados.</string>
+
+  <string name="LightningBolt_Name">Rayo de luz</string>
+  <string name="LightningBolt_Info">Un hechizo que comparten los antiguos chamanes, que conmocionará a tus enemigos con el doble de efectividad, especialmente si son lo suficientemente tontos como para estar sobre el agua.</string>
+
+  <string name="Heal_Name">Curar</string>
+  <string name="Heal_Info">Un hechizo bastante útil en las mazmorras, ¿verdad?</string>
+
+  <string name="Order_Name">Ordenar</string>
+  <string name="Order_Info">Con la concentración adecuada, tus órdenes son casi innegables.</string>
+  <string name="Order_Resist">¡¿Cómo te atreves?!</string>
+
+  <string name="Spell_SelectAChar">Selecciona un ser objetivo.</string>
+
+  <string name="Calm_Name">Calma</string>
+  <string name="Calm_Info">Hay muchas criaturas enfadadas por ahí, ayudémoslas.</string>
+
+  <string name="CharmSpell_Name">Encanto</string>
+  <string name="CharmSpell_Info">Todo el mundo se merece un poco de amor, ¿verdad?</string>
+
+  <string name="HideInGrassSpell_Name">Hechizo Hide-In-Grass</string>
+  <string name="HideInGrassSpell_Info">Has perfeccionado tu dominio del escondite.</string>
+  <string name="HideInGrassSpell_NeedGrassToHide">Ni siquiera yo puedo esconderme a la vista.</string>
+
+
+  <string name="MagicArrow_Name">Flecha mágica</string>
+  <string name="MagicArrow_Info">La buena y vieja flecha mágica, la elección correcta cuando te quedas sin munición.</string>
+
+  <string name="NatureArmorSpell_Name">Armadura natural</string>
+  <string name="NatureArmorSpell_Info">Los elfos también pueden ser duros, especialmente cuando están protegidos por la propia Madre Naturaleza.</string>
+
+  <string name="ShootInEye_Name">Disparo al ojo</string>
+  <string name="ShootInEye_Info">Utiliza tu excepcional puntería para disparar al enemigo justo en el ojo, si es que tiene alguno, por supuesto.</string>
+
+
+  <string name="Sprout_Name">Brote</string>
+  <string name="Sprout_Info">Despiertan las semillas dormidas.\nSin embargo, debe haber algo de vegetación en el suelo para que este hechizo tenga éxito.</string>
+
+
+  <string name="SummonBeast_Name">Llamada de la Bestia</string>
+  <string name="SummonBeast_Info">Intenta convocar una horda de poderosas bestias a tus órdenes.\nLos resultados reales pueden variar.</string>
+  <string name="SummonBeast_AtYourCommand">¡A sus órdenes!</string>
+
+  <string name="WndSettings_RecordVideo">Grabación de vídeo</string>
+  <string name="Dungeon_saveIoError">Al intentar crear un archivo de guardado:</string>
+
+  <string name="town_table_fortune_ball_name">Bola de cristal</string>
+  <string name="town_table_fortune_ball_desc">Una bola de cristal, con una niebla misteriosa en su interior.</string>
+  <string name="town_deco_shelf_full_name">Estante</string>
+  <string name="town_deco_shelf_full_desc">En esta estantería se colocan diversas baratijas.</string>
+  <string name="town_deco_skulls_name">Calaveras</string>
+  <string name="town_deco_skulls_desc">Calaveras pulidas pertenecientes a criaturas de la mazmorra.</string>
+  <string name="town_deco_urn_name">Urna</string>
+  <string name="town_deco_urn_desc">Una urna de barro, quizás con las cenizas de alguien.</string>
+  <string name="town_deco_crate_name">Cajón</string>
+  <string name="town_deco_crate_desc">Un robusto cajón de madera que guarda sus secretos en su interior.</string>
+  <string name="town_deco_crate_scrolls_name">Cajón con pergaminos</string>
+  <string name="town_deco_crate_scrolls_desc">Este cajón está lleno de conocimientos secretos.</string>
+  <string name="town_deco_cabinet_name">Gabinete</string>
+  <string name="town_deco_cabinet_desc">Un gabinete espacioso con muchas puertas y estantes.</string>
+  <string name="town_deco_clock_name">Reloj</string>
+  <string name="town_deco_clock_desc">Las flechas de este se han congelado durante mucho tiempo en una posición.</string>
+  <string name="town_deco_poster_name">Afiche</string>
+  <string name="town_deco_poster_desc">Folletos para anunciar las próximas sesiones en el cine.</string>
+  <string name="town_deco_ladder_name">Escalera</string>
+  <string name="town_deco_ladder_desc">Una vieja escalera, de aspecto poco fiable.</string>
+  <string name="town_deco_weaponrack_name">Estante de armas</string>
+  <string name="town_deco_weaponrack_desc">En este estante hay armas que son claramente demasiado caras para ti.</string>
+  <string name="town_deco_church_sign_name">Cartel de la iglesia</string>
+  <string name="town_deco_church_sign_desc">Parece que hay una iglesia dentro de ese edificio.</string>
+  <string name="town_deco_statue_water_name">Estatua de ángel</string>
+  <string name="town_deco_statue_water_desc">Una majestuosa estatua de un ángel que sostiene un cuenco de agua.</string>
+  <string name="town_deco_statue_blood_name">Estatua de ángel</string>
+  <string name="town_deco_statue_blood_desc">Una majestuosa estatua de un ángel que sostiene un cuenco de sangre.</string>
+  <string name="town_deco_vat_name">Vasija</string>
+  <string name="town_deco_vat_desc">Esta vasija de piedra está llena de agua bendita hasta el borde.</string>
+  <string name="town_deco_armorstand_leather_name">Armadura de cuero</string>
+  <string name="town_deco_armorstand_leather_desc">Una armadura de cuero fiable será una gran compra antes de aventurarse en la mazmorra.</string>
+  <string name="town_deco_armorstand_scale_name">Armadura de escamas</string>
+  <string name="town_deco_armorstand_scale_desc">Las placas doradas de esta armadura a escamas parecen nuevas.</string>
+  <string name="town_deco_armorstand_plate_name">Armadura de placas</string>
+  <string name="town_deco_armorstand_plate_desc">Según el comerciante, esta pesada armadura de placas perteneció en su día a un gran guerrero.</string>
+  <string name="town_deco_red_carpet_name">Alfombra</string>
+  <string name="town_deco_red_carpet_desc">Se rumorea que esas alfombras rojas similares adornan los salones de la metrópoli enana.</string>
+  <string name="town_deco_beige_carpet_name">Alfombra</string>
+  <string name="town_deco_beige_carpet_desc">Una elegante alfombra beige tejida con suave lana gnoll.</string>
+  <string name="town_deco_brown_carpet_name">Alfombra</string>
+  <string name="town_deco_brown_carpet_desc">Esta alfombra marrón ha sido pisoteada por muchos aventureros, vagabundos y transeúntes.</string>
+  <string name="town_deco_charcoal_carpet_name">Alfombra</string>
+  <string name="town_deco_charcoal_carpet_desc">En busca de la comodidad de los huéspedes, la administración del cine eligió alfombras de la más alta calidad de color carbón.</string>
+  <string name="town_deco_magenta_carpet_name">Alfombra</string>
+  <string name="town_deco_magenta_carpet_desc">El tono magenta de esta alfombra hace pensar en el vino local.</string>
+
+  <string name="InnServant_Phrase_1">¡Uff, todavía hay mucho que hacer!</string>
+  <string name="InnServant_Phrase_2">¡Este borracho me vuelve loco!</string>
+  <string name="InnServant_Phrase_3">A mí me parece que está limpio</string>
+  <string name="InnServant_Phrase_4">Oh mi d..., muchos invitados hoy</string>
+
+  <string name="Drunkard_Phrase_1">¡OTRA BO-BOTELLA, POR FAVOR!</string>
+  <string name="Drunkard_Phrase_2">Para güé el agua, si hay cerveza</string>
+  <string name="Drunkard_Phrase_3">Esta pinta tiene sabor a mugre</string>
+  <string name="Drunkard_Phrase_4">Zzzzzz...</string>
+
+  <string name="HeroSubClass_NameWitchdoctor">médico brujo</string>
+  <string name="HeroSubClass_NameGuardian">guardián</string>
+  <string name="Gnoll_BecomeWitchdoctorDesc">Conviértete en médico brujo</string>
+  <string name="Gnoll_BecomeGuardianDesc">Conviértete en guardián</string>
+  <string name="HeroSubClass_DescWitchdoctor">El hechizo otorga al _Médico brujo_ un escudo mágico que le protege completamente del daño recibido.</string>
+  <string name="HeroSubClass_DescGuardian">Un hábil conocimiento defensivo permite al _Guardián_ contraatacar con un escudo, lo que le convierte en un enemigo formidable para quienes se atreven a atacar este bastión andante.</string>
+
+  <string name="Potion_Colors_12">epidota</string>
+  <string name="Potion_Colors_13">de cuarzo</string>
+  <string name="Potion_Colors_14">de ónix</string>
+  <string name="Potion_Colors_15">perlada</string>
+
+  <string name="ManaShieldBuff_Name">Escudo mágico</string>
+  <string name="ManaShieldBuff_Info">Escudo mágico</string>
+
+  <string name="TenguLiver_Name">Hígado de Tengu</string>
+  <string name="TenguLiver_Info">Descripción del hígado de Tengu</string>
+
 </resources>
