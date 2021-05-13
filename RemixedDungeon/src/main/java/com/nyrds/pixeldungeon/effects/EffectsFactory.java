@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class EffectsFactory {
 
-    private static Map<String, JSONObject> effects = new HashMap<>();
+    private static final Map<String, JSONObject> effects = new HashMap<>();
 
     static {
         for(String effectFile: ModdingMode.listResources("effects", (dir, name) -> name.endsWith(".json"))) {

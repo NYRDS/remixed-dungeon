@@ -447,12 +447,15 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             if (burning != null) {
                 burning.setVisible(visible);
             }
+
             if (levitation != null) {
                 levitation.setVisible(visible);
             }
+
             if (iceBlock != null) {
                 iceBlock.setVisible(visible);
             }
+
             if (sleeping && visible) {
                 showSleep();
             } else {
@@ -467,7 +470,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 emo.setVisible(visible);
             }
 
-            if (visible && curAnim == null && Math.random() < 0.004) {
+            if (visible && curAnim == null && Math.random() < 0.1) {
                 idle();
             }
         });
