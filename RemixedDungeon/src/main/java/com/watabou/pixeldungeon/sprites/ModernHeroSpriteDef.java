@@ -132,9 +132,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 		if(accessory == null || !accessory.isCoverFacialHair()) {
 			facialHairDescriptor = "hero_modern/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
-			GLog.i(facialHairDescriptor);
-			if(! ModdingMode.isResourceExist(facialHairDescriptor)) {
-				GLog.i("not found");
+			if(!ModdingMode.isResourceExist(facialHairDescriptor)) {
 				facialHairDescriptor = HERO_EMPTY_PNG;
 			}
 		}
@@ -295,6 +293,10 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		for(int i = 0;i<layersOrder.length && i<lookDesc.length;++i){
 			if(ModdingMode.isResourceExists(lookDesc[i])) {
 				addLayer(layersOrder[i], TextureCache.get(lookDesc[i]));
+			} else {
+				if(Util.isDebug()) {
+					GLog.n("Missing file %s", lookDesc[i]);
+				}
 			}
 		}
 		deathEffect = new CustomClipEffect(deathEffectDesc, (int)width, (int)height);
