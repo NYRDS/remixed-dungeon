@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
@@ -65,9 +66,16 @@ public class Tengu extends Boss implements IZapper {
 		addResistance( ToxicGas.class );
 		addResistance( Poison.class );
 
-		if ( Dungeon.heroClass != HeroClass.NECROMANCER && Dungeon.heroClass != HeroClass.GNOLL){
+		final HeroClass heroClass = Dungeon.heroClass;
+
+		if ( heroClass != HeroClass.NECROMANCER && heroClass != HeroClass.GNOLL){
 			collect(new TomeOfMastery());
 		}
+
+		if( heroClass == HeroClass.GNOLL) {
+			collect(ItemFactory.itemByName("TenguLiver"));
+		}
+
 		collect(new SkeletonKey());
 	}
 	
