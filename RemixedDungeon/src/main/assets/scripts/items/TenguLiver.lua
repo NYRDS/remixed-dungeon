@@ -12,13 +12,12 @@ local item = require "scripts/lib/item"
 return item.init{
     desc  = function ()
         return {
-            image     = 12,
-            imageFile = "items/food.png",
+            image     = 1,
+            imageFile = "items/mastery_items.png",
             name      = "TenguLiver_Name",
             info      = "TenguLiver_Info",
-            stackable = true,
             defaultAction = "Food_ACEat",
-            price         = 7
+            price         = 0
         }
     end,
     actions = function() return {RPD.Actions.eat} end,
