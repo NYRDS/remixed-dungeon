@@ -2777,4 +2777,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="TenguLiver_Name">Tengu Liver</string>
   <string name="TenguLiver_Info">Tengu Liver description</string>
 
+  <string name="PotionOfMana_Name">Mana Potion</string>
+  <string name="PotionOfMana_Info">This potion will restore your spiritual energy.</string>
+
 </resources>

@@ -37,7 +37,6 @@ import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
@@ -71,34 +70,31 @@ public class Potion extends Item implements UnknownItem {
 		PotionOfPurity.class,
 		PotionOfInvisibility.class,
 		PotionOfMight.class,
-		PotionOfFrost.class
+		PotionOfFrost.class,
+		PotionOfMana.class
 	};
 
-	private static final Integer[] images = {
-		ItemSpriteSheet.POTION_TURQUOISE, 
-		ItemSpriteSheet.POTION_CRIMSON, 
-		ItemSpriteSheet.POTION_AZURE, 
-		ItemSpriteSheet.POTION_JADE, 
-		ItemSpriteSheet.POTION_GOLDEN, 
-		ItemSpriteSheet.POTION_MAGENTA, 
-		ItemSpriteSheet.POTION_CHARCOAL, 
-		ItemSpriteSheet.POTION_IVORY, 
-		ItemSpriteSheet.POTION_AMBER, 
-		ItemSpriteSheet.POTION_BISTRE, 
-		ItemSpriteSheet.POTION_INDIGO, 
-		ItemSpriteSheet.POTION_SILVER};
-	
+	private static final Integer[] images;
+
 	private static ItemStatusHandler<Potion> handler;
 	
 	private final String color;
-	
+
+	static {
+		images = new Integer[13];
+		for (int i = 0;i<13;i++) {
+			images[i] = 32 + i;
+		}
+	}
+
 	{	
 		stackable = true;
 		setDefaultAction(AC_DRINK);
+		imageFile = "items/potions.png";
 	}
 	
 	
-	private boolean shatterd = false;
+	private boolean shattered = false;
 
 	@SuppressWarnings("unchecked")
 	public static void initColors() {
@@ -116,7 +112,7 @@ public class Potion extends Item implements UnknownItem {
 	
 	public Potion() {
 		image = handler.index( this );
-		color = Game.getVars(R.array.Potion_Colors)[ItemStatusHandler.indexByImage(image,images)];
+		color = Game.getVars(R.array.Potion_Colors)[ItemStatusHandler.indexByImage(image, images)];
 	}
 	
 	@Override
@@ -176,7 +172,8 @@ public class Potion extends Item implements UnknownItem {
 			this instanceof PotionOfMindVision ||
 			this instanceof PotionOfStrength ||
 			this instanceof PotionOfInvisibility || 
-			this instanceof PotionOfMight)) {
+			this instanceof PotionOfMight ||
+			this instanceof PotionOfMana)) {
 		
 			GameScene.show( 
 				new WndOptions( Game.getVar(R.string.Potion_Beneficial),
@@ -208,7 +205,7 @@ public class Potion extends Item implements UnknownItem {
 		Sample.INSTANCE.play( Assets.SND_DRINK );
 		
 		hero.getSprite().operate( hero.getPos(), null);
-		shatterd = false;
+		shattered = false;
 	}
 	
 	private void moisten(Char hero) {
@@ -237,8 +234,8 @@ public class Potion extends Item implements UnknownItem {
 	}
 
 	protected boolean canShatter() {
-		if(!shatterd) {
-			shatterd = true;
+		if(!shattered) {
+			shattered = true;
 			return true;
 		}
 		return false;

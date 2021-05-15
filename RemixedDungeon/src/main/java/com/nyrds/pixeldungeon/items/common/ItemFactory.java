@@ -106,6 +106,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
+import com.watabou.pixeldungeon.items.potions.PotionOfMana;
 import com.watabou.pixeldungeon.items.potions.PotionOfMight;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.potions.PotionOfParalyticGas;
@@ -439,6 +440,7 @@ public class ItemFactory {
         registerItemClass(DummyItem.class);
         registerItemClass(GuardianArmor.class);
         registerItemClass(WitchdoctorArmor.class);
+        registerItemClass(PotionOfMana.class);
 
     }
 

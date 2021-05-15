@@ -20,6 +20,8 @@ package com.watabou.pixeldungeon.items;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -27,10 +29,10 @@ import java.util.HashSet;
 
 public class ItemStatusHandler<T extends Item> {
 
-	private Class<? extends T>[] items;
+	private final Class<? extends T>[] items;
 	
-	private HashMap<Class<? extends T>, Integer> images;
-	private HashSet<Class<? extends T>>          known;
+	private final HashMap<Class<? extends T>, Integer> images;
+	private final HashSet<Class<? extends T>>          known;
 	
 	public ItemStatusHandler( Class<? extends T>[] items, Integer[] allImages ) {
 		
@@ -43,10 +45,7 @@ public class ItemStatusHandler<T extends Item> {
 
 		for (Class<? extends T> item : items) {
 
-			int index = Random.Int(imagesLeft.size());
-
-			images.put(item, imagesLeft.get(index));
-			imagesLeft.remove(index);
+			assignRandomImage(imagesLeft, item);
 		}
 	}
 	
@@ -80,20 +79,29 @@ public class ItemStatusHandler<T extends Item> {
 
 			if (bundle.contains(itemName + PFX_IMAGE)) {
 				Integer image = bundle.getInt(itemName + PFX_IMAGE);
-				images.put(item, image);
-				imagesLeft.remove(image);
 
+				if(imagesLeft.contains(image)) {
+
+					images.put(item, image);
+					imagesLeft.remove(image);
+				} else {
+					assignRandomImage(imagesLeft, (Class<? extends T>) item);
+				}
 				if (bundle.getBoolean(itemName + PFX_KNOWN)) {
 					known.add(item);
 				}
 
 			} else {
-				int index = Random.Int(imagesLeft.size());
-
-				images.put(item, imagesLeft.get(index));
-				imagesLeft.remove(index);
+				assignRandomImage(imagesLeft, item);
 			}
 		}
+	}
+
+	private void assignRandomImage(@NotNull ArrayList<Integer> imagesLeft, Class<? extends T> item) {
+		int index = Random.Int(imagesLeft.size());
+
+		images.put(item, imagesLeft.get(index));
+		imagesLeft.remove(index);
 	}
 
 	public int index (T item ) {return images.get( item.getClass() );}

@@ -136,7 +136,7 @@
       "PotionOfPurity": 12,
       "PotionOfToxicGas": 15,
       "PotionOfHealing": 45,
-      "ManaPotion": 40
+      "PotionOfMana": 40
     },
     "WEAPON": {
       "AmokDart": 0.1,

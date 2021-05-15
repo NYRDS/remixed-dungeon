@@ -79,21 +79,7 @@ public class ItemSpriteSheet {
 	public static final int RING_AGATE		= 75;
 	public static final int RING_OF_STONE_WALKING = 133;
 	public static final int SPIDER_CHARM          = 146;
-	
-	// Potions
-	public static final int POTION_TURQUOISE	= 56;
-	public static final int POTION_CRIMSON		= 57;
-	public static final int POTION_AZURE		= 58;
-	public static final int POTION_JADE			= 59;
-	public static final int POTION_GOLDEN		= 60;
-	public static final int POTION_MAGENTA		= 61;
-	public static final int POTION_CHARCOAL		= 62;
-	public static final int POTION_IVORY		= 63;
-	public static final int POTION_AMBER		= 64;
-	public static final int POTION_BISTRE		= 65;
-	public static final int POTION_INDIGO		= 66;
-	public static final int POTION_SILVER		= 67;
-	
+
 	// Scrolls
 	public static final int SCROLL_BLANK	= 125;
 	public static final int SCROLL_KAUNAN	= 40;
