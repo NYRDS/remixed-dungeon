@@ -2788,4 +2788,7 @@ otro lugar del nivel.</string>
   <string name="TenguLiver_Name">Hígado de Tengu</string>
   <string name="TenguLiver_Info">Descripción del hígado de Tengu</string>
 
+  <string name="PotionOfMana_Name">Poción de Mana</string>
+  <string name="PotionOfMana_Info">Esta poción restablece tu energía espiritual.</string>
+
 </resources>
