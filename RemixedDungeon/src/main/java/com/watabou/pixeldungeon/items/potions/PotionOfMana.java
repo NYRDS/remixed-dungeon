@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class PotionOfMana extends Potion {
 
 	{
-		labelIndex = -1;
+		labelIndex = 12;
 	}
 
 	@Override
