@@ -2779,5 +2779,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
   <string name="PotionOfMana_Name">Mana Potion</string>
   <string name="PotionOfMana_Info">This potion will restore your spiritual energy.</string>
+  <string name="WndFortuneTeller_IdentifyAll">All</string>
 
 </resources>

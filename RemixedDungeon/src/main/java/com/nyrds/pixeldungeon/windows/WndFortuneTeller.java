@@ -19,7 +19,7 @@ public class WndFortuneTeller extends WndQuest {
 	private static final int GOLD_COST  = 50;
 	private static int goldCost;
 
-	private Char hero;
+	private final Char hero;
 
 	static private String instructions(final Char hero) {
 		goldCost = (int) (GOLD_COST * Game.getDifficultyFactor());
@@ -37,25 +37,30 @@ public class WndFortuneTeller extends WndQuest {
 
 		this.hero = hero;
 
-		float y = height + 2*GAP;
+		float y = height + 2 * GAP;
 
-		RedButton btnYes = new RedButton( Game.getVar(R.string.Wnd_Button_Yes) + " ( "+ goldCost + " )" ) {
+		int unknownItemsCount = 0;
+
+		for (Item item : hero.getBelongings()){
+			if (!item.isIdentified()){
+				unknownItemsCount++;
+			}
+		}
+
+		int finalUnknownItemsCount = unknownItemsCount;
+
+		RedButton btnYes = new RedButton( Game.getVar(R.string.Wnd_Button_Yes) + " ( " + goldCost + " )" ) {
 			@Override
 			protected void onClick() {
-				boolean hasTarget = false;
-
-				for (Item item : hero.getBelongings()){
-					if (!item.isIdentified()){
-						hasTarget = true;
-						break;
-					}
-				}
-
-				if (hasTarget) {
-					identify();
+				if (finalUnknownItemsCount > 0) {
+					GameScene.selectItem(WndFortuneTeller.this.hero, (item, selector) -> {
+						if (item != null) {
+							ScrollOfIdentify.identify(WndFortuneTeller.this.hero, item);
+						}
+					}, WndBag.Mode.UNIDENTIFED, Game.getVar(R.string.ScrollOfIdentify_InvTitle));
 					hide();
 					hero.spendGold(goldCost);
-				} else{
+				} else {
 					hide();
 					GameScene.show(new WndQuest(fortuneTellerNPC, Game.getVar(R.string.WndFortuneTeller_No_Item)));
 				}
@@ -66,25 +71,37 @@ public class WndFortuneTeller extends WndQuest {
 		add( btnYes );
 		btnYes.enable(!(hero.gold()< goldCost));
 
+		y += BUTTON_HEIGHT;
+
+		if(finalUnknownItemsCount > 0) {
+			final int identifyAllCost = goldCost * finalUnknownItemsCount;
+			RedButton btnAll = new RedButton(Game.getVar(R.string.WndFortuneTeller_IdentifyAll) + " ( " + identifyAllCost + " )") {
+				@Override
+				protected void onClick() {
+					hero.getBelongings().identify();
+					hide();
+					hero.spendGold(goldCost);
+				}
+			};
+
+			btnAll.setRect( 0, y, STD_WIDTH, BUTTON_HEIGHT );
+			add( btnAll );
+			btnYes.enable(!(hero.gold() < identifyAllCost));
+			y += BUTTON_HEIGHT ;
+		}
+
+
 		RedButton btnNo = new RedButton( Game.getVar(R.string.Wnd_Button_No) ) {
 			@Override
 			protected void onClick() {
 				hide();
 			}
 		};
-		btnNo.setRect( 0, btnYes.bottom(), STD_WIDTH, BUTTON_HEIGHT );
+
+		btnNo.setRect( 0, y, STD_WIDTH, BUTTON_HEIGHT );
 		add( btnNo );
 		
 		resize( STD_WIDTH, (int)btnNo.bottom() );
 	}
 
-	public WndBag identify() {
-		return GameScene.selectItem(hero, itemSelector, WndBag.Mode.UNIDENTIFED, Game.getVar(R.string.ScrollOfIdentify_InvTitle));
-	}
-
-	private WndBag.Listener itemSelector = (item, selector) -> {
-		if (item != null) {
-			ScrollOfIdentify.identify(hero,item);
-		}
-	};
 }

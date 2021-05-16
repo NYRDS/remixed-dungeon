@@ -200,7 +200,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		//Log.i("Main loop", "start");
 		while ((actor=getNextActor(Float.MAX_VALUE)) != null) {
 
-			//Log.i("Main loop", String.format("%s %4.2f %x",actor.getEntityKind(),actor.time, actor.hashCode()));
+			GLog.debug("Main actor loop: %s %4.2f %x",actor.getEntityKind(), actor.time, actor.hashCode());
 
 			if (actor instanceof Char && ((Char)actor).getSprite().doingSomething()) {
 				//Log.i("Main loop", "in action");

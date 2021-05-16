@@ -29,6 +29,14 @@
         "quantity": 1000
       },
       {
+        "kind": "PotionOfMana",
+        "quantity": 1000
+      },
+      {
+        "kind": "PotionOfLiquidFlame",
+        "quantity": 1000
+      },
+      {
         "kind": "CurareDart",
         "quantity": 1000
       }

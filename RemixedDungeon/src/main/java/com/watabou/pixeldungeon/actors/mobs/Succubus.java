@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -83,7 +84,7 @@ public class Succubus extends Mob {
 		if (level().fieldOfView[target] && level().distance(getPos(), target) > 2 && delay <= 0) {
 			CharUtils.blinkTo(this, target);
 			delay = BLINK_DELAY;
-			spend(-1 / speed());
+			spend(-1 / speed() - Actor.MICRO_TICK);
 			return true;
 		} else {
 			delay--;
