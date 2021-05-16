@@ -464,7 +464,9 @@ public class GameScene extends PixelScene {
             return;
         }
 
-        if (Dungeon.hero == null) {
+        final Hero hero = Dungeon.hero;
+
+        if (hero == null) {
             return;
         }
 
@@ -472,7 +474,7 @@ public class GameScene extends PixelScene {
             return;
         }
 
-        if(!Dungeon.level.cellValid(Dungeon.hero.getPos())){
+        if(!Dungeon.level.cellValid(hero.getPos())){
             return;
         }
 
@@ -482,14 +484,14 @@ public class GameScene extends PixelScene {
 
         Actor.process(Game.elapsed);
 
-        if (Dungeon.hero.isReady() && !Dungeon.hero.paralysed) {
+        if (hero.isReady() && !hero.paralysed) {
             log.newLine();
         }
 
         if (!Dungeon.realtime()) {
-            cellSelector.enabled = Dungeon.hero.isReady();
+            cellSelector.enabled = hero.isReady();
         } else {
-            cellSelector.enabled = Dungeon.hero.isAlive();
+            cellSelector.enabled = hero.isAlive();
         }
 
         if(observeRequested) {

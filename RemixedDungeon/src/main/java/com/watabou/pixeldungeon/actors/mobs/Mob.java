@@ -223,14 +223,16 @@ public abstract class Mob extends Char {
 		}
 
 		script.runOptional("onAct");
+		GLog.debug("%s is %s", getEntityKind(), getState().getTag());
 		getState().act(this);
 		return true;
 	}
 
 
 	public boolean isEnemyInFov(){
-	    return getEnemy().isAlive() && level().cellValid(getEnemy().getPos()) && level().fieldOfView[getEnemy().getPos()]
-                && getEnemy().invisible <= 0;
+		final Char enemy = getEnemy();
+		return enemy.valid() && enemy.isAlive() && level().cellValid(enemy.getPos()) && level().fieldOfView[enemy.getPos()]
+                && enemy.invisible <= 0;
     }
 
 	public void moveSprite(int from, int to) {
