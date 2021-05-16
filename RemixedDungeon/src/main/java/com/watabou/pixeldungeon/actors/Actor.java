@@ -48,6 +48,7 @@ import lombok.var;
 public abstract class Actor implements Bundlable, NamedEntityKind {
 	
 	public static final float TICK	= 1f;
+	public static final float MICRO_TICK	= 0.001f;
 	private static float realTimeMultiplier = 1f;
 
 	@Packable

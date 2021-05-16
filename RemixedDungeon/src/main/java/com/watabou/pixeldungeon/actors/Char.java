@@ -1181,7 +1181,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			GLog.debug("%s now will %s, was doing %s before", getEntityKind(), this.state.getTag(), state.getTag());
 			this.state = state;
 		}
-		spend(Actor.TICK/100.f);
+		spend(Actor.MICRO_TICK);
 	}
 
 	public boolean friendly(@NotNull Char chr){
@@ -1494,7 +1494,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void setEnemy(@NotNull Char enemy) {
-
 		if(enemy == this) {
 			EventCollector.logException(enemy.getEntityKind() + " gonna suicidal");
 		}
@@ -1512,6 +1511,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 
 		enemyId = enemy.getId();
+		spend(Actor.MICRO_TICK);
 	}
 
 	@NotNull
