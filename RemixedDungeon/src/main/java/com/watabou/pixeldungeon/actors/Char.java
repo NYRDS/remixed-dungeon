@@ -460,10 +460,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			accuracy *= 0.5f;
 		}
 
-		float accuracyFactor = getActiveWeapon().impactAccuracyFactor(this, 20f);
-		accuracyFactor = getSecondaryWeapon().impactAccuracyFactor(this, accuracyFactor);
+		float mainAccuracyFactor = getActiveWeapon().accuracyFactor(this);
+		float secondaryAccuracyFactor = getSecondaryWeapon().accuracyFactor(this);
 
-		return (int) ((baseAttackSkill + lvl()) * accuracy * accuracyFactor);
+		float skillFactor = Utils.min(20, mainAccuracyFactor, secondaryAccuracyFactor);
+
+		int aSkill = (int) ((baseAttackSkill + lvl()) * accuracy * skillFactor);
+
+		GLog.debug("%s attacking %s with factor %2.2f, resulting skill %d", getEntityKind(), target.getEntityKind(), skillFactor, aSkill);
+
+		return aSkill;
 	}
 
 	public int defenseSkill(Char enemy) {
@@ -746,10 +752,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public float attackDelay() {
-		float delayFactor = getActiveWeapon().impactDelayFactor(this, 0);
-		delayFactor = getSecondaryWeapon().impactDelayFactor(this, delayFactor);
+		float mainDelayFactor = getActiveWeapon().attackDelayFactor(this);
+		float secondaryDelayFactor = getSecondaryWeapon().attackDelayFactor(this);
 
-		return _attackDelay() * Math.max(delayFactor, 0.05f);
+		float delayFactor= Utils.max(1, mainDelayFactor, secondaryDelayFactor);
+		final float aDelay = _attackDelay() * delayFactor;
+
+
+		GLog.debug("%s attackDelay factor %2.2f final delay %2.2f", getEntityKind(), delayFactor, aDelay);
+
+		return aDelay;
 	}
 
 	@Override

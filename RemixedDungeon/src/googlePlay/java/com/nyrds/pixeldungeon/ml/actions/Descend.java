@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.ml.actions;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 
 public class Descend extends CharAction {
@@ -13,10 +14,12 @@ public class Descend extends CharAction {
     @Override
     public boolean act(Char hero) {
 
-        if (hero.getPos() == dst && Dungeon.level.isExit(hero.getPos())) {
-            Dungeon.level.onHeroDescend(hero.getPos());
+        final Level level = Dungeon.level;
+
+        if (hero.getPos() == dst && level.isExit(hero.getPos())) {
+            level.onHeroDescend(hero.getPos());
             hero.clearActions();
-            if (!Dungeon.level.isSafe()) {
+            if (!level.isSafe()) {
                 hero.hunger().satisfy(-Hunger.STARVING / 10);
             }
             InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
