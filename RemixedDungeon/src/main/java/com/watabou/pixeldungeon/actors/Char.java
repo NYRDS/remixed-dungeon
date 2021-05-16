@@ -1179,9 +1179,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public void setState(@NotNull AiState state) {
 		if(!state.equals(this.state)) {
 			GLog.debug("%s now will %s, was doing %s before", getEntityKind(), this.state.getTag(), state.getTag());
-			spend(Actor.TICK/10.f);
 			this.state = state;
 		}
+		spend(Actor.TICK/100.f);
 	}
 
 	public boolean friendly(@NotNull Char chr){
