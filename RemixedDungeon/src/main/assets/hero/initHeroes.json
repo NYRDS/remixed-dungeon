@@ -8,9 +8,6 @@
       {
         "kind": "Gold",
         "quantity": 100
-      },
-      {
-        "kind": "Wands/WandOfLightBolt"
       }
     ],
     "str": 10,
