@@ -130,18 +130,21 @@ public abstract class MobAi implements AiState {
 
     protected void huntEnemy(@NotNull Mob me) {
 
-        if (me.getEnemy().valid()) {
-            me.enemySeen = true;
-            me.setTarget(me.getEnemy().getPos());
+        final Char enemy = me.getEnemy();
 
+        if (enemy.valid()) {
+            me.enemySeen = true;
+            final int enemyPos = enemy.getPos();
+
+            me.setTarget(enemyPos);
             me.notice();
             me.setState(getStateByClass(Hunting.class));
 
             if (me.getOwnerId()==me.getId() && Dungeon.isChallenged(Challenges.SWARM_INTELLIGENCE)) {
-                for (Mob mob : me.level().mobs) {
-                    if (me != mob && mob.getOwnerId() != me.getEnemy().getId()) {
-                        mob.setEnemy(me.getEnemy());
-                        mob.setTarget(me.getEnemy().getPos());
+                for (Mob mob : me.level().getCopyOfMobsArray()) {
+                    if (me != mob && !mob.friendly(enemy)) {
+                        mob.setEnemy(enemy);
+                        mob.setTarget(enemyPos);
                         mob.notice();
                         mob.setState(getStateByClass(Hunting.class));
                     }

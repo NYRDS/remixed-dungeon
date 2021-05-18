@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.windows.WndEuConsent;
@@ -34,6 +35,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
+import com.watabou.pixeldungeon.Logbook;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.BannerSprites;
@@ -230,6 +232,9 @@ public class StartScene extends PixelScene {
             updateShield(shields.get(0));
         }
 
+        Logbook.logbookEntries.clear();    // Clear the log book before starting a new game
+        ServiceManNPC.resetLimit();
+
         fadeIn();
     }
 
@@ -370,7 +375,7 @@ public class StartScene extends PixelScene {
         private static final int HEIGHT = 28;
         private static final float SCALE = 1.5f;
 
-        private HeroClass cl;
+        private final HeroClass cl;
 
         private Image avatar;
         private Text name;
@@ -378,8 +383,8 @@ public class StartScene extends PixelScene {
 
         private float brightness;
 
-        private int normal;
-        private int highlighted;
+        private final int normal;
+        private final int highlighted;
 
         public ClassShield(HeroClass cl) {
             super();

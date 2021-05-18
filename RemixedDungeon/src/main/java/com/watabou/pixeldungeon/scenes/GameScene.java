@@ -414,6 +414,8 @@ public class GameScene extends PixelScene {
         Dungeon.observe();
         hero.updateSprite();
         hero.readyAndIdle();
+        QuickSlot.refresh(hero);
+
 
         doSelfTest();
     }

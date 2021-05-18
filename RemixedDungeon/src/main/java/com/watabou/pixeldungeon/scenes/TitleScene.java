@@ -75,10 +75,6 @@ public class TitleScene extends PixelScene {
 			title.y = -(title.height() * 0.05f);
 		}
 
-		//placeTorch(title.x + title.width/2 + 3, title.y + title.height/2 - 3);
-		//placeTorch(title.x + title.width/2 - 5, title.y + title.height/2 + 5);
-		//placeTorch(title.x + title.width/2 - 14, title.y + title.height/2 + 14) ;
-
 		DashboardItem btnBadges = new DashboardItem(Game.getVar(R.string.TitleScene_Badges), 3) {
 			@Override
 			protected void onClick() {

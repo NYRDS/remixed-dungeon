@@ -99,6 +99,13 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 	@Override
+	public void beckon(int cell) {
+		if(!friendly && movable) {
+			super.beckon(cell);
+		}
+	}
+
+	@Override
 	public String getEntityKind() {
 		return mobClass;
 	}
