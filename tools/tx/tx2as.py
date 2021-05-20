@@ -10,10 +10,10 @@ dstDir = "../../RemixedDungeon/src/main/res/"
 xml_ext = '.xml'
 translations_dir = 'translations/'
 
-source_locales = {"en","tr","ko","hu","it",'de_DE', 'es', 'fr_FR', 'pl_PL', 'ru_RU',
-                  'uk_UA', 'pt_BR', "ms_MY","zh"}
+source_locales = {"en","tr","ko","hu","it",'de_DE', 'es', 'fr_FR', 'pl_PL', 'ru',
+                  'uk_UA', 'pt_BR', "ms_MY","zh_CN", "zh_TW", "vi"}
 
-locale_remap = {'de_DE': 'de', 'fr_FR': 'fr', 'pl_PL': 'pl', 'nl_NL': 'nl', 'ro_RO': 'ro', 'ru_RU': 'ru',
+locale_remap = {'de_DE': 'de', 'fr_FR': 'fr', 'pl_PL': 'pl', 'nl_NL': 'nl', 'ro_RO': 'ro',
                 'uk_UA': 'uk', 'pt_BR': 'pt-rBR', 'pt_PT': 'pt-rPT', 'es_MX': 'es-rMX', "ms_MY": "ms"}
 
 counters = {}

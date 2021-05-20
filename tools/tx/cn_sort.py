@@ -13,11 +13,8 @@ dstDir = "../../RemixedDungeon/src/main/res/"
 xml_ext = '.xml'
 translations_dir = 'translations/'
 
-
-
-#source_locales = {"zh", "zh-Hans", "zh_CN", "zh_HK", "zh_TW"}
-source_locales = {"zh"}
-
+# source_locales = {"zh", "zh-Hans", "zh_CN", "zh_HK", "zh_TW"}
+source_locales = {"zh_CN"}
 
 locale_remap = {}
 
@@ -55,7 +52,6 @@ def unescape(arg):
 
 
 def lang(arg):
-
     if arg is None:
         return None
 
@@ -82,6 +78,8 @@ def process_text(arg):
 
 zh_cn = Element('resources')
 zh_tw = Element('resources')
+
+used_names = {}
 
 for _, _, files in os.walk(translations_dir + dir_name):
 
@@ -120,27 +118,36 @@ for _, _, files in os.walk(translations_dir + dir_name):
                 if entry.tag not in ["string", "string-array"]:
                     continue
 
+                entryName = None
+
+                entryName = entry.get('name')
+
+                if entryName in used_names.keys():
+                    continue
+
+                used_names[entryName] = True
+
                 counters[resource_name][locale_code] += 1
                 totalCounter[locale_code] += 1
 
                 entry.text = process_text(entry.text)
 
                 if entry.text is not None:
-                    outEntry = SubElement(zh_cn, entry.tag, {'name': entry.get('name')})
+                    outEntry = SubElement(zh_cn, entry.tag, {'name': entryName})
                     outEntry.text = text.simplify(entry.text)
 
-                    outEntry = SubElement(zh_tw, entry.tag, {'name': entry.get('name')})
+                    outEntry = SubElement(zh_tw, entry.tag, {'name': entryName})
                     outEntry.text = text.tradify(entry.text)
                 else:
                     print(entry.tag, entry.text)
 
             indent(zh_cn)
             ElementTree.ElementTree(zh_cn).write('zh_CN.xml', encoding="utf-8",
-                                                         method="xml")
+                                                 method="xml")
 
             indent(zh_tw)
             ElementTree.ElementTree(zh_tw).write('zh_TW.xml', encoding="utf-8",
-                                                         method="xml")
+                                                 method="xml")
 
         except ElementTree.ParseError as error:
             print("shit happens with " + currentFilePath)
