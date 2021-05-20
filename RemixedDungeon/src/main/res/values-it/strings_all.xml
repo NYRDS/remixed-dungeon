@@ -112,7 +112,6 @@
   <string name="Possess_Info">L\'oscura arte del controllo mentale permette al lanciatore di piegare il volere di molte creature</string>
   <string name="Possess_PossessionFailed">La volontà di %s è troppo forte</string>
   <string name="Possess_Possessed">%s sta attendendo i tuoi comandi</string>
-  <string name="Possess_MustTargetChar">Solo le creature possono essere bersaglio di Possessione</string>
   <string name="Possess_CantPossessSelf">Non puoi possederti da solo</string>
   <string name="Mob_StaControlledStatus">Questo %s è sotto una possessione maledetta</string>
   <string name="BlackCat_AiStatus">Questo gatto fa classiche cose da gatto</string>
@@ -149,6 +148,7 @@
   <string name="town_deco_pedestal_desc">Piedistallo con sopra un libro sacro.</string>
   <string name="town_deco_shelf_name">Scaffali</string>
   <string name="town_deco_shelf_desc">Scaffali vuoti.</string>
+  <string name="town_deco_inn_bed_name">Letto</string>
   <string name="WndPriest_Instruction2_m">Benvenuto figlio mio, benvenuto nella santa chiesa del Grande Santa, il Signore delle Profondità!</string>
   <string name="WndPriest_Instruction2_f">Benvenuta figlia mia, benvenuta nella santa chiesa del Grande Santa, il Signore delle Profondità!</string>
   <string name="WndPriest_Instruction2">Se desideri aiuto, posso fornire servizi di guarigione per %d monete d\'oro! Se cerchi la santa Benedizione, o, Signore non voglia, sei stato maledetto, per favore dirigiti dal Vescovo nella nostra umile chiesa.</string>
@@ -2194,4 +2194,18 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
   <string name="Potion_Colors_9">bistre</string>
   <string name="Potion_Colors_10">indaco</string>
   <string name="Potion_Colors_11">argento</string>
+  <string name="InnKeeperNPC_Gender">mascolino</string>
+  <string name="DrunkardNPC_Gender">mascolino</string>
+  <string name="MercenaryNPC_Gender">mascolino</string>
+  <string name="ServantNPC_Gender">Femmina</string>
+  <string name="BardNPC_Gender">mascolino</string>
+  <string name="town_deco_red_carpet_name">Tappeto</string>
+  <string name="town_deco_beige_carpet_name">Tappeto</string>
+  <string name="town_deco_brown_carpet_name">Tappeto</string>
+  <string name="town_deco_charcoal_carpet_name">Tappeto</string>
+  <string name="town_deco_magenta_carpet_name">Tappeto</string>
+  <string name="Potion_Colors_13">quarzo</string>
+  <string name="Potion_Colors_14">onice</string>
+  <string name="PotionOfMana_Name">Pozione del Mana</string>
+  <string name="PotionOfMana_Info">Questa pozione ripristina la tua energia spirituale.</string>
 </resources>

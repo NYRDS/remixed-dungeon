@@ -178,6 +178,13 @@ public class TitleScene extends PixelScene {
             }
         });
 
+		leftGroup.add(new ImageButton(Icons.DISCORD.get()){
+			@Override
+			protected void onClick() {
+				Game.instance().openUrl("Let talk on Discord", "https://discord.gg/AMXrhQZ");
+			}
+		});
+
         Image img = new Image(Assets.DASHBOARD,DashboardItem.IMAGE_SIZE,1);
 
         img.setScale(0.45f,0.45f);

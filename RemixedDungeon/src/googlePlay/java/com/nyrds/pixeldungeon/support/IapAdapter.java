@@ -39,13 +39,13 @@ import lombok.var;
 public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResponseListener, ConsumeResponseListener {
 
     private final Map<String, Purchase> mPurchases = new HashMap<>();
-    private BillingClient mBillingClient;
+    private final BillingClient mBillingClient;
     private boolean mIsServiceConnected;
-    private IPurchasesUpdated mPurchasesUpdatedListener;
+    private final IPurchasesUpdated mPurchasesUpdatedListener;
     private Map<String, SkuDetails> mSkuDetails = new HashMap<>();
     private boolean mIsServiceConnecting;
 
-    private ConcurrentLinkedQueue<Runnable> mRequests = new ConcurrentLinkedQueue<>();
+    private final ConcurrentLinkedQueue<Runnable> mRequests = new ConcurrentLinkedQueue<>();
 
     public IapAdapter(Context context, IPurchasesUpdated purchasesUpdatedListener) {
         mBillingClient = BillingClient.newBuilder(context)
@@ -113,16 +113,18 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
                 });
             }
 
-            mPurchases.put(purchase.getSku().toLowerCase(Locale.ROOT), purchase);
+            for(var sku: purchase.getSkus()) {
+                mPurchases.put(sku.toLowerCase(Locale.ROOT), purchase);
 
-            String orderId = purchase.getOrderId();
-            String purchaseData = purchase.getOrderId() +","
-                    + purchase.getPackageName() + ","
-                    + purchase.getSku() + ","
-                    + purchase.getPurchaseToken();
-            if( !Preferences.INSTANCE.getBoolean(orderId,false) ) {
-                EventCollector.logEvent("iap_data", purchaseData);
-                Preferences.INSTANCE.put(orderId,true);
+                String orderId = purchase.getOrderId();
+                String purchaseData = purchase.getOrderId() + ","
+                        + purchase.getPackageName() + ","
+                        + sku + ","
+                        + purchase.getPurchaseToken();
+                if (!Preferences.INSTANCE.getBoolean(orderId, false)) {
+                    EventCollector.logEvent("iap_data", purchaseData);
+                    Preferences.INSTANCE.put(orderId, true);
+                }
             }
         }
 

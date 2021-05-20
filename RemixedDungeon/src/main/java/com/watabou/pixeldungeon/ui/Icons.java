@@ -72,6 +72,7 @@ public enum Icons {
     GNOLL,
     VK,
     FB,
+    DISCORD,
     PLUS,
     MINUS;
 
@@ -226,6 +227,9 @@ public enum Icons {
                 break;
             case FB:
                 icon.frame(icon.texture.uvRect(28, 87, 42, 101));
+                break;
+            case DISCORD:
+                icon.frame(icon.texture.uvRect(26, 102, 44, 118));
                 break;
             case PLUS:
                 icon.frame(icon.texture.uvRect(14, 114, 22, 122));

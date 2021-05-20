@@ -112,7 +112,6 @@
   <string name="Possess_Info">정신을 지배하는 흑마법은 시전자로 하여금 대부분의 생명체의 의지를 제 뜻대로 조종할 수 있게 한다</string>
   <string name="Possess_PossessionFailed">%s의 의지는 조종당하기엔 너무 강했습니다!</string>
   <string name="Possess_Possessed">%s는 당신의 명령을 기다리고 있습니다.</string>
-  <string name="Possess_MustTargetChar">정신 지배의 대상으로는 생명체만을 지정할 수 있습니다.</string>
   <string name="Possess_CantPossessSelf">자신을 목표로 할 수 없습니다.</string>
   <string name="Mob_StaControlledStatus">이 %s는 사악한 존재에게 정신을 지배당하고 있습니다.</string>
   <string name="BlackCat_AiStatus">이 고양이는 고양이가 할 법한 행동을 하고 있습니다.</string>
@@ -144,6 +143,7 @@
   <string name="town_deco_covered_table_name">탁자</string>
   <string name="town_deco_pedestal_name">받침대</string>
   <string name="town_deco_pedestal_desc">성서가 놓여있는 제단이다.</string>
+  <string name="town_deco_inn_bed_name">침대</string>
   <string name="Item_Info2">무언가</string>
   <string name="NecromancerArmor_Info2">이 갑옷을 입는다면 강령술사는 \"네크로티즘\" 기술을 사용해 마법의 독을 뿌려서 근처의 모든 생물체에게 죽던 살던 강력한  영향을 끼칠 것입니다.</string>
   <string name="NecromancerRobe_Info2">이 로브는 흑마법으로 가득 차 있어서 강령술사에게 쓰러진 몬스터들의 영혼을 흡수할 수 있게 해 줄 것입니다.</string>
@@ -2355,4 +2355,18 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Belongings_CantWearBoth">%1$s와 %2$s는 동시에 착용할 수 없습니다!</string>
   <string name="ShieldStrTemplate">이 방패를 제대로 사용하기 위해서는 착용자에게 최소한 %1$d의 힘 수치가 필요합니다.</string>
   <string name="PlagueDoctorNPC_After_Quest_2">아직까지 여기 있었던거야? 자! 받아.</string>
+  <string name="InnKeeperNPC_Gender">남성적인</string>
+  <string name="DrunkardNPC_Gender">남성적인</string>
+  <string name="MercenaryNPC_Gender">남성적인</string>
+  <string name="ServantNPC_Gender">여성스런</string>
+  <string name="BardNPC_Gender">남성적인</string>
+  <string name="town_deco_red_carpet_name">카펫</string>
+  <string name="town_deco_beige_carpet_name">카펫</string>
+  <string name="town_deco_brown_carpet_name">카펫</string>
+  <string name="town_deco_charcoal_carpet_name">카펫</string>
+  <string name="town_deco_magenta_carpet_name">카펫</string>
+  <string name="Potion_Colors_13">석영</string>
+  <string name="Potion_Colors_14">줄마노</string>
+  <string name="PotionOfMana_Name">마나 회복의 물약</string>
+  <string name="PotionOfMana_Info">이 물약은 당신의 정신력을 회복시켜 줄 것입니다.</string>
 </resources>

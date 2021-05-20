@@ -112,7 +112,6 @@
   <string name="Possess_Info">Темне мистецтво контролю розуму дозволяє творцю закляття підкорити волю більшості істот. </string>
   <string name="Possess_PossessionFailed">%s має досить сильну волю</string>
   <string name="Possess_Possessed">%s очікує ваших наказів</string>
-  <string name="Possess_MustTargetChar">Лише на істоту можна накласти одержимість</string>
   <string name="Possess_CantPossessSelf">Ви не можете зачаклувати самого себе</string>
   <string name="Mob_StaControlledStatus">Цей %s під нечестивим контролем</string>
   <string name="BlackCat_AiStatus">Цей кіт робить свою звичні котячі справи</string>
@@ -149,6 +148,7 @@
   <string name="town_deco_pedestal_desc">П\'єдестал із священною книгою.</string>
   <string name="town_deco_shelf_name">Полиці</string>
   <string name="town_deco_shelf_desc">Порожні полиці.</string>
+  <string name="town_deco_inn_bed_name">Ліжко</string>
   <string name="WndPriest_Instruction2_m">Ласкаво просимо, сину мій, до святої церкви Санти - Лорда Глибин!</string>
   <string name="WndPriest_Instruction2_f">Ласкаво просимо, донька моя, до святої церкви Санти - Лорда Глибин!</string>
   <string name="WndPriest_Instruction2">Якщо тобі потрібна допомога, то за скромну платню, в %d золотих, я вилікую твої рани.\nА якщо ти в пошуку святого благословіння, або ж, нехай Санта тебе береже, прокляли, то навідайся до Епископа в нашій скромній церквушці.</string>
@@ -2540,26 +2540,13 @@
   <string name="town_deco_stone_wall_broken_desc">Стара камʼяна стіна, в поганому стані</string>
   <string name="Challenges_Names_6">Заборонені руни</string>
   <string name="Challenges_Names_7">Пацифізм</string>
-  <string name="Welcome_Text_29_2">
-    remix.29.2\n
-    - Ігровий процес:\n
-    -- Нові досягнення:\n
-    --- Заборонені руни\n
-    --- Пацифізм\n
-    - Модифікації:\n
-    -- Налаштовані артефакти\n
-    - Правка вад\n
-    </string>
   <string name="town_deco_crossroad_name">Вказівник на роздоріжжі</string>
   <string name="town_deco_crossroad_desc">Грубо зроблений стовп із прибитими дощечками у вигляді стрілок, текст на них давно вигорів, схоже через погані погодні умови.</string>
   <string name="ShieldBuffReady_Name">Готовий</string>
   <string name="ShieldBuffNotReady_Name">Не готовий</string>
   <string name="WoodenShield_name">Деревʼяний щит</string>
-  <string name="WoodenShield_desc">Деревʼяний щит із сирої деревини, найпростіший із щитів. Він круглий і час від часу може блокувати деяку шкоду.</string>
   <string name="ToughShield_name">Шкіряний армований щит</string>
-  <string name="ToughShield_desc">Щит посилено шкіряними ремінцями, виглядає ліпше за дерев’яний. Він може блокувати більше шкоди.</string>
   <string name="StrongShield_name">Бронзовий щит</string>
-  <string name="StrongShield_desc">Прямокутний щит, обшитий бронзовими листами та прикрашений кольоровою тканиною. Він значно важчий, але може блокувати набагато більше шкоди.</string>
   <string name="RoyalShield_name">Королівський щит</string>
   <string name="RoyalShield_desc">Цілометалевий щит. Так, він важелезний, але лише він може забезпечити найкращий захист.</string>
   <string name="ShieldInfoTemplate">Цей щит блокує до %1$d заданої шкоди. Із %2$d %% шансом. Потребує %3$3.1fсекунд на відновлення після успішного блокування.</string>
@@ -2580,9 +2567,7 @@
  Моди іноді змінюють ігровий процес у непередбачуваній або дивній манері, вас попереджали! \ n
  Команда NYRDS жодним чином не відповідає за вміст, якість та стабільність модифікації. \ n
 Завантажте їх на власний ризик і отримуйте задоволення! \ n</string>
-  <string name="ShieldWeaponInfo">При використанні в якості зброї цей щит завдасть %1$d шкоди в середньому.</string>
   <string name="TownPortal_Name">Міський портал</string>
-  <string name="TownPortal_Info">Це заклинання дозволяє миттєво повернутися до безпечного місця. Однак потужне магічне джерело поблизу може перешкодити йому працювати правильно.</string>
   <string name="MedicineMask_Name">Хірургічна маска</string>
   <string name="MedicineMask_Info">Хірургічна маска призначена для вловлювання мікроорганізмів, що потрапляють у краплі рідини та аерозолі з рота та носа користувача. 
 \n\nНосіння маски означає, що ви дбаєте про інших.</string>
@@ -2596,4 +2581,18 @@
 \ n \ nФільтри відсутні в цій масці, але це виглядає круто.</string>
   <string name="StartScene_DifficultyEasyNoAds">Легко</string>
   <string name="StartScene_DifficultyNormalWithSavesNoAds">Звичайний із збереженнями</string>
+  <string name="InnKeeperNPC_Gender">masculine</string>
+  <string name="DrunkardNPC_Gender">masculine</string>
+  <string name="MercenaryNPC_Gender">masculine</string>
+  <string name="ServantNPC_Gender">masculine</string>
+  <string name="BardNPC_Gender">masculine</string>
+  <string name="town_deco_red_carpet_name">Килим</string>
+  <string name="town_deco_beige_carpet_name">Килим</string>
+  <string name="town_deco_brown_carpet_name">Килим</string>
+  <string name="town_deco_charcoal_carpet_name">Килим</string>
+  <string name="town_deco_magenta_carpet_name">Килим</string>
+  <string name="Potion_Colors_13">кварцом</string>
+  <string name="Potion_Colors_14">оніксом</string>
+  <string name="PotionOfMana_Name">Зілля мани</string>
+  <string name="PotionOfMana_Info">Це зілля відновить твої духовну енергію.</string>
 </resources>

@@ -112,7 +112,6 @@
   <string name="Possess_Info">Mroczna sztuka kontroli umysłu pozwala rzucającemu nagiąć wolę większości istot</string>
   <string name="Possess_PossessionFailed">Wola  \"%s\"  jest zbyt silna</string>
   <string name="Possess_Possessed">%s czeka na twoje rozkazy</string>
-  <string name="Possess_MustTargetChar">Tylko istoty mogą być opętane</string>
   <string name="Possess_CantPossessSelf">Nie możesz sam siebie opętać</string>
   <string name="Mob_StaControlledStatus">Ten %s jest opętany przez nieludzką siłę</string>
   <string name="BlackCat_AiStatus">Ten kot robi to co koty lubią najbardziej.</string>
@@ -149,6 +148,7 @@
   <string name="town_deco_pedestal_desc">Piedestał z świętą księgą.</string>
   <string name="town_deco_shelf_name">Półki</string>
   <string name="town_deco_shelf_desc">Puste półki</string>
+  <string name="town_deco_inn_bed_name">Łóżko</string>
   <string name="WndPriest_Instruction2_m">Witaj synu, Witaj w świętym kościele Świętego Władcy Podziemi!</string>
   <string name="WndPriest_Instruction2_f">Witaj Córko, Witaj w świętym kościele Świętego Władcy podziemi!</string>
   <string name="WndPriest_Instruction2">Jeśli szukasz pomocy, Ja mogę zapewnić ci leczenie tylko za %dzłotych monet! jeśli szukasz błogosławieństwa albo nie daj boże masz klątwę, Proszę spotkaj się z biskupem w naszym pokornym kościele.</string>
@@ -2512,26 +2512,13 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="town_deco_stone_wall_broken_desc">Stara , uszkodzona kamienna ściana.</string>
   <string name="Challenges_Names_6">Zapomniane runy</string>
   <string name="Challenges_Names_7">Pacyfizm</string>
-  <string name="Welcome_Text_29_2">
-remix.29.2\n
--Rozgrywka:\n
---Nowe wyzwania\n
----Zapomniane runy:\n
----Pacyfizm:\n
--Modowanie\n
---Niestandardowe artefakty\n
--Naprawy błędów\n
-</string>
   <string name="town_deco_crossroad_name">Tabliczka na rozdrożu </string>
   <string name="town_deco_crossroad_desc">Szorstki drewniany słup z tekstem w kształcie strzałek, na którym już dawno wyblakły, prawdopodobnie z powodu trudnych warunków pogodowych.</string>
   <string name="ShieldBuffReady_Name">Gotowy</string>
   <string name="ShieldBuffNotReady_Name">Nie gotowy</string>
   <string name="WoodenShield_name">Drewniana Tarcza</string>
-  <string name="WoodenShield_desc">Drewniana tarcza jest najprostszą dostępną tarczą. Jest okrągłą i może zablokować niektóre ataki , czasami...</string>
   <string name="ToughShield_name">Wzmocniona skórzana tarcza</string>
-  <string name="ToughShield_desc">Ta tarcza wzmocniona skórzanymi paskami tarcza wygląda mocniej niż drewniana. Na pewno może zablokować więcej obrażeń.</string>
   <string name="StrongShield_name">Płytowa brązowa tarcza</string>
-  <string name="StrongShield_desc">Ta prostokątna tarcza pokryta brązowymi płytami i ozdobiona kolorową tkaniną. Jest znacznie cięższa, ale może blokować znacznie więcej obrażeń.</string>
   <string name="RoyalShield_name">Królewska Tarcza</string>
   <string name="RoyalShield_desc">W pełni metalowa tarcza. Tak, jest ciężka ale tylko w ona zapewni ci najlepszą ochronę.</string>
   <string name="ShieldInfoTemplate">Ta tarcza zablokuje atak o sile %1$d z %2$d%% szansą.  Podniesienie gardy zajmie %3$3.1f sekund po udanym bloku.</string>
@@ -2561,9 +2548,7 @@ remix.29.3/n
         Zespół NYRDS w żaden sposób nie jest odpowiedzialny za zawartość, jakość lub stabilność modów.\n
         Pobieraj je na swoją własną odpowiedzialność i baw się dobrze!\n
     </string>
-  <string name="ShieldWeaponInfo">Kiedy użyte jako broń ta tarcza pochłonie średnio%1$d obrażeń. </string>
   <string name="TownPortal_Name">Portal miejski</string>
-  <string name="TownPortal_Info">To zaklęcie pozwala ci natychmiast powrócić do bezpiecznego miejsca. Jednak potężne źródło magii w pobliżu może uniemożliwić jego działanie zgodnie z przeznaczeniem.</string>
   <string name="MedicineMask_Name">Maska Chirurgiczna</string>
   <string name="MedicineMask_Info">Maska chirurgiczna przeznaczona jest do wychwytywania mikroorganizmów wydychanych  z ust i nosa użytkownika.
 \n\n Noszenie maski oznacza, że ​​zależy Ci na innych.</string>
@@ -2580,11 +2565,8 @@ remix.29.3/n
   <string name="Backstab_Name">Cios w plecy</string>
   <string name="Backstab_Info">Cichy cios w plecy. Nieuczciwy ale ekstremalnie efektywny, obrażenia będą rosnąc razem z poziom postaci.n\n Udany cios ignoruje pancerz  i specjalne umiejętności obronne ofiary.</string>
   <string name="Backstab_TooFar">Ofiara jest za daleko.</string>
-  <string name="Backstab_Aware">Ofiara nie powinna się spodziewać twojego ciosu</string>
   <string name="KunaiThrow_Name">Rzut Kunai</string>
-  <string name="KunaiThrow_Info">Śmiercionośny rzut kunai będzie wykonany ekstremalnie szybko, tak szybko że nawet nie będziesz w stanie wybrać celu.\n\nPrawdziwi mistrzowie są zdolni rzucić więcej niż jednym Kunai jednocześnie.</string>
   <string name="Haste_Name">Ekstremalny Pośpiech</string>
-  <string name="Haste_Info">Pośpiech pozwoli poruszać się z ekstremalną prędkością, wszystko wokół niego będzie się wydawać statyczne. Taki pośpiech zużywa dużo energii, więc jest to możliwe tylko przez krótki okres czasu.\n\nUzdolniony mistrz jest w stanie działać w pośpiechu przez dłuższy czas.</string>
   <string name="Welcome_Text_29_5"> remix.29.5\n
 - Rozgrywka:\n
 -- Nowe umięjetności Łotra!!\n
@@ -2612,7 +2594,6 @@ remix.29.3/n
   <string name="Stun_Info">Ogłuszony</string>
   <string name="Char_StaStunned">ogłuszony</string>
   <string name="Mob_ReadyForOrder">%s gotowy na twoje rozkazy</string>
-  <string name="Mob_CantDoIt">Nie mogę tego zrobić, Mam łapy</string>
   <string name="Welcome_Text_29_6">
 remix.29.6\n
 -Rozgrywka:\n
@@ -2622,4 +2603,18 @@ remix.29.6\n
 -- Więcej różnych rzeczy!:\n
 -Poprawki błędów:\n
 </string>
+  <string name="InnKeeperNPC_Gender">meski</string>
+  <string name="DrunkardNPC_Gender">meski</string>
+  <string name="MercenaryNPC_Gender">meski</string>
+  <string name="ServantNPC_Gender">damski</string>
+  <string name="BardNPC_Gender">meski</string>
+  <string name="town_deco_red_carpet_name">Dywan</string>
+  <string name="town_deco_beige_carpet_name">Dywan</string>
+  <string name="town_deco_brown_carpet_name">Dywan</string>
+  <string name="town_deco_charcoal_carpet_name">Dywan</string>
+  <string name="town_deco_magenta_carpet_name">Dywan</string>
+  <string name="Potion_Colors_13">kwarcowy</string>
+  <string name="Potion_Colors_14">onyksowy</string>
+  <string name="PotionOfMana_Name">Mikstura Many</string>
+  <string name="PotionOfMana_Info">Ta mikstura odnowi twoją duchową energię.</string>
 </resources>

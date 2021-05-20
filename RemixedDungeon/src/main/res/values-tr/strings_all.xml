@@ -112,7 +112,6 @@
   <string name="Possess_Info">Zihin kontrolünün karanlık sanatı büyüleyen kişinin birçoğu yaratığın iradesine hükmetmesini sağlar.</string>
   <string name="Possess_PossessionFailed">%s yaratığının iradesi çok güçlü</string>
   <string name="Possess_Possessed">%s emirlerinizi bekliyor</string>
-  <string name="Possess_MustTargetChar">Yalnızca yaratıklar Zilliyet için hedef olarak gösterilebilir</string>
   <string name="Possess_CantPossessSelf">Kendinizi zilliyet altına alamazsınız</string>
   <string name="Mob_StaControlledStatus">Bu %s kötücül ruhların zilliyeti altında</string>
   <string name="BlackCat_AiStatus">Bu kedi normal kedi hareketleri sergiliyor</string>
@@ -149,6 +148,10 @@
   <string name="town_deco_pedestal_desc">Üzerinde kutsal kitap olan kürsü.</string>
   <string name="town_deco_shelf_name">Raflar</string>
   <string name="town_deco_shelf_desc">Bomboş raflar işte...</string>
+  <string name="town_deco_banner_name">Bayrak </string>
+  <string name="town_deco_inn_bed_name">Yatak</string>
+  <string name="town_deco_inn_bed_desc">Oldukça rahat bir yatak gibi görünüyor</string>
+  <string name="town_deco_furnace_name">Ocak </string>
   <string name="WndPriest_Instruction2_m">Hoş geldin oğlum, Derinlerin Efendisi Noel Baba\'nın Kutsal Kilisesi\'ne hoş geldin!</string>
   <string name="WndPriest_Instruction2_f">Hoş geldin kızım, Derinlerin Efendisi Noel Baba\'nın Kutsal Kilisesi\'ne hoş geldin!</string>
   <string name="WndPriest_Instruction2">Olur da yardımım gerekirse sadece %d altın sikke karşılığında seni iyileştirebilirim!\n
@@ -285,7 +288,7 @@ Görüşlerinizi önemsiyoruz!</string>
   <string name="town_deco_wooden_chair_desc">Bildiğin ahşap işte.</string>
   <string name="town_deco_snowy_plate_name">Karlı levha</string>
   <string name="town_deco_snowy_plate_desc">Bu kadim levha sebebi bilinmeyen bir şekilde karla kaplanmış</string>
-  <string name="DogeMask_Name">Köpek Maskesi</string>
+  <string name="DogeMask_Name">Köpek maskesi</string>
   <string name="DogeMask_Info">Bu maskeyi taktığın anda dünyadaki en meşhur köpeğe dönüşüyormuşsun.</string>
   <string name="IntroScene_Txt">Her türden kahraman senden önce bu zindana girmeye cesaret etti. Bazıları hazineler ve senin adını ile bilmediğin sihirli eserlerle geri döndüler. Ama kimse zindanın derinliklerinde olduğu söylenen Yendor\'un Tılsımını almayı başaramadı. \n\n Kendinizi meydan okumaya hazır olarak görüyorsunuz, ama en önemlisi, bu talihin size gülümsediğini hissediyorsunuz. Şimdi kendi maceranıza başlama zamanı!</string>
   <string name="AmuletScene_Exit">Bugünlük bu kadar yeter</string>
@@ -421,7 +424,7 @@ Görüşlerinizi önemsiyoruz!</string>
   <string name="Item_DirThrow">Fırlatılacak yeri seçin</string>
   <string name="EquipableItem_ACEquip">KUŞAN</string>
   <string name="EquipableItem_ACUnequip">ÇIKART</string>
-  <string name="EquipableItem_Unequip">%s lanetli çıkartamıyorsun !</string>
+  <string name="EquipableItem_Unequip">Lanetli %s öğesini çıkartamıyorsun!</string>
   <string name="Heap_Mimic">Bu bir Mimik!</string>
   <string name="Amulet_Name">Yendor Muskası</string>
   <string name="Amulet_ACEnd">OYUNUN SONU</string>
@@ -687,7 +690,7 @@ Görüşlerinizi önemsiyoruz!</string>
   <string name="Necromancy_NotEnoughSouls">\"%1$s\" büyüsünü yapmak için yeterli manan yok.</string>
   <string name="Necromancy_SoulsCountLabel">ruhlar</string>
   <string name="Necromancer_ACSpecial">kara büyü</string>
-  <string name="Necromancy_ReincarnationName">reenkarnasyon</string>
+  <string name="Necromancy_ReincarnationName">Ruh göçü</string>
   <string name="Necromancy_ReincarnationTriggered">Güçlerin, bizzat ölümü reddediyor. Ancak, ne yazık ki, topladığın tüm eşyaların ve ruhların yok oldu</string>
   <string name="Necromancy_SummonDeathlingName">Ölümsüzü Çağır</string>
   <string name="Necromancy_BecameALich">Kara Büyücü oldun! Güçlerin gelişti ve maksimum ruh kapasiten ikiye katlandı! Ancak %1$d güç kaybettin</string>
@@ -727,7 +730,7 @@ Görüşlerinizi önemsiyoruz!</string>
   <string name="gdpr_text">Remixed Dungeon, Admob ve Appodeal gibi birtakım kuruluşlarla çalışarak reklam deneyiminizi kişiselleştirir. Reklamcılar ve iş ortakları cihaz kimliklerini, demografik ve ilgisel verileri, size uygun bir reklam akışı  sağlamak için toplayabilir ve işleyebilir. Buna rıza göstererek reklam geliştiricilerinin ve iş ortaklarının size uygun gördüğü reklamlara rastlayacaksınız. \n\nBunu kabul ederek 16 yaşınızdan büyük olduğunuzu ve kişiselleştirilmiş bir reklam deneyimi istediğinizi onaylamış olursunuz.\n\n</string>
   <string name="gdpr_agree">Evet, kabul ediyorum</string>
   <string name="gdpr_disagree">Hayır, teşekkür ederim</string>
-  <string name="gdpr_choose">Lütfen bir seçim yapın</string>
+  <string name="gdpr_choose">Lütfen seçiminizi yapın</string>
   <string name="Mob_StaHuntingStatus2">Bu %1$s, %2$savlıyor.</string>
   <string name="Mob_StaFleeingStatus2">Bu %1$s,%2$s\'den/dan kaçıyor.</string>
   <string name="Mob_StaTerrorStatus">Bu %1$s korkmuş</string>
@@ -804,7 +807,7 @@ Görüşlerinizi önemsiyoruz!</string>
   <string name="RabbitEars_Info">Tavşanların şanslı hayvanlar olduğu çok bilinen bir inançtır, ve şansları vücudunun bir parçasına sahip olanlara da geçtiği söylenmektedir. Bir bakıma kulaklarının dekorasyon olarak kullanılması için öldürülmek pekte şans işi değil.</string>
   <string name="Pumpkin_Name">balkabağı</string>
   <string name="Pumpkin_Info">Back in a day Pumpkin people were proud and prosperous nation. But after humans came everything ended up in ruins. And severed carved heads of long gone Pumpkin tribes serves as remainder of those terrible events.</string>
-  <string name="Nightcap_Name">Nightcap</string>
+  <string name="Nightcap_Name">Takke</string>
   <string name="Nightcap_Info">Conquering dungeons in the night must be a very tiring business. How about put on a warm, cosy hat and relax, so that all your worries would go away.</string>
   <string name="WizardHat_Name">büyücü şapkası</string>
   <string name="WizardHat_Info">A beautiful silk hat decorated with star ornaments. Back in the old, some believed that the greatest wizards wore specially crafted clothing that increased their power. But it doesn\'t actually buffs your magical capabilities, but it\'s sure feels like it.</string>
@@ -943,7 +946,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
   <string name="KoboldIcemancer_Gender">erkek</string>
   <string name="KoboldIcemancer_Name_Objective">cüce buzbüyücüsü</string>
   <string name="KoboldIcemancer_Desc">Kobold Buzbükücüleri toplumun elitleriydi. Kayda değer savaşçılar, büyücüler ve en önemlisi, biliminsanlarıydı. Antik buz efendileri buz kontrolü sanatını ele geçirmişlerdi ve kompleks makineler özel büyülerle güçlendirilmişti.</string>
-  <string name="KoboldIcemancer_Killed">%s\'nin buz oku seni öldürdü.</string>
+  <string name="KoboldIcemancer_Killed">%s seni buzul oku ile öldürdü...</string>
   <string name="ColdSpirit_Name">soğuk ruh</string>
   <string name="ColdSpirit_Gender">erkek</string>
   <string name="ColdSpirit_Name_Objective">soğuk ruh</string>
@@ -1034,7 +1037,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
   <string name="Dagger_Gender">erkeksi</string>
   <string name="Glaive_Name">uzun saplı pala</string>
   <string name="Glaive_Info">Uzun bir sopa ve ucunda keskin bir kılıç olan bir silah.</string>
-  <string name="Glaive_Gender">erkeksi</string>
+  <string name="Glaive_Gender">dişi</string>
   <string name="Knuckles_Name">muşta</string>
   <string name="Knuckles_Info">Parmak eklemlerin uyacak şekilde şekillendirilmiş demirden bir parça.</string>
   <string name="Knuckles_Gender">erkeksi</string>
@@ -1046,7 +1049,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
   <string name="Mace_Gender">kadınsı</string>
   <string name="Quarterstaff_Name">sopa</string>
   <string name="Quarterstaff_Info">Sert ağaçtan bu sopa iki ucunda demir parçalarla güçlendirilmiş.</string>
-  <string name="Quarterstaff_Gender">erkeksi</string>
+  <string name="Quarterstaff_Gender">erkek</string>
   <string name="ShortSword_Name">kısa kılıç</string>
   <string name="ShortSword_Info">Gerçekten kısa, bir hançerden birkaç santim daha uzundur herhalde.</string>
   <string name="ShortSword_ACReforge">DÖV</string>
@@ -1079,7 +1082,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
   <string name="CurareDart_Gender">erkeksi</string>
   <string name="Dart_Name">dart</string>
   <string name="Dart_Info">Bu metal oklar bir bilek hareketiyle havada süzülmesi için dizayn edilmiş</string>
-  <string name="Dart_Gender">erkeksi</string>
+  <string name="Dart_Gender">erkek</string>
   <string name="IncendiaryDart_Name">yakıcı ok</string>
   <string name="IncendiaryDart_Info">Hedefini parlak ve büyük bir ateşle yakan ok.</string>
   <string name="IncendiaryDart_Gender">erkeksi</string>
@@ -1132,7 +1135,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
   <string name="Albino_Desc">Keseli sıçanlar argesif, ama zayıf lağım sakinleridir. Sadece büyük sayılarda tehlikeli olabilirler. Bu sıçan albinoya benziyor. Bu arada anormal derecede keskin dişleri var. </string>
   <string name="Bandit_Name">Çılgın Haydut</string>
   <string name="Bandit_Gender">erkeksi</string>
-  <string name="Bandit_Name_Objective">Çılgın Haydut</string>
+  <string name="Bandit_Name_Objective">çılgın haydut</string>
   <string name="Bandit_Desc">Zindanın derin seviyeleri her zaman her türden suçlular için bir saklanma noktası olmuştur. Bazıları gün ışığından uzaktaki uzun sürelerde berrak bir zihinle düşünmeyi başaramamıştır. Uzun süre önce, bu çılgın hırsız ve haydutlar kim olduğunu ve niye çaldıklarını unuttular. Bu haydut belli ki hançerini bir şey ile kaplamış!</string>
   <string name="Bat_Name">vampir yarasa</string>
   <string name="Bat_Gender">erkeksi</string>
@@ -1142,7 +1145,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
   <string name="Brute_Name">gnoll kabadayı</string>
   <string name="Brute_Name_Objective">gnoll kabadayı</string>
   <string name="Brute_Desc">Yabaniler en büyük ve güçlü gnoll türüdür.  Çok kötü yaralandıklarında çılgına döner ve düşmanlarına çok büyük zarar verebilir.</string>
-  <string name="Brute_Gender">erkeksi</string>
+  <string name="Brute_Gender">erkek</string>
   <string name="Brute_Enraged">%s çıldırdı!</string>
   <string name="Brute_StaEnraged">kudurmuş</string>
   <string name="Crab_Name">lağım yengeci</string>
@@ -1190,7 +1193,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="King_Desc">Cücelerin son kralı , hayat ve ölüm üzerindeki büyük bilgisi ile tanınırdı.Sarayındaki tebasını sonsuz gençlik vaadi ile bu çalışmalarına katılmak için ikna etmişti. Bunun sonunda sadece kendisi bu ödülü kazandı, ek olarakta bir ölümsüzler ordusuna kavuştu.</string>
   <string name="King_Defense">savuşturdu</string>
   <string name="King_Info1">Benim öldüremezsin, %s... Ben... ölümsüzüm...</string>
-  <string name="King_Info2">Köleler , kalkın!</string>
+  <string name="King_Info2">Köleler, kalkın!</string>
   <string name="King_Info3">Ne cüretle!</string>
   <string name="Undead_Name">Ölümsüz Cüce</string>
   <string name="Undead_Gender">masculine</string>
@@ -1216,7 +1219,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Piranha_Name_Objective">dev pirana</string>
   <string name="Piranha_Desc">Bu etobur balıklar yeraltı sularının doğal canlıları değildir, hazineleri korumak için özel olarak üretilmişlerdir.</string>
   <string name="Rat_Name">keseli sıçan</string>
-  <string name="Rat_Gender">erkek</string>
+  <string name="Rat_Gender">dişi</string>
   <string name="Rat_Name_Objective">keseli sıçan</string>
   <string name="Rat_Desc">Keseli sıçanlar lağımların sinirli ancak zayıf müdavimleridir.Çok fazla sayıda olduklarında tehlikeli olabilirler.</string>
   <string name="Scorpio_Name">akrep</string>
@@ -1320,7 +1323,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="SpiderExploding_Gender">masculine</string>
   <string name="SpiderExploding_Name_Objective">işçi örümcek</string>
   <string name="SpiderExploding_Desc">Normal zamanda çok çalışkan olan bu örümcekler , düşmanlarına saldırmakta ve kendilerini canlı bomba gibi kullanmakta hiç tereddüt etmezler.</string>
-  <string name="SpiderMind_Name">Psi-örümcek</string>
+  <string name="SpiderMind_Name">Ruhani Örümcek</string>
   <string name="SpiderMind_Gender">masculine</string>
   <string name="SpiderMind_Name_Objective">Psi-örümcek</string>
   <string name="SpiderMind_Desc">Bu kırılgan örümcekler tüm koloniyi kontrol edebilen benzersiz zihinsel güçlere sahiptirler. Psi-örümcek\'ler yaşayan herşeyi kontrol edebilme yeteneğine de sahiptir, ama bu biraz korkak gibi.</string>
@@ -1356,7 +1359,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="SoulShard_Info">Bu Ruh Vazosuna ait bir vazo kırığı. Mistik bir enerji ile parlıyor. Belki buralarda bunun gibi ilginç şeylere ilgi dyan birileri olabilir</string>
   <string name="SoulShard_Gender">erkeksi</string>
   <string name="DeathKnight_Name">ölü şövalye</string>
-  <string name="DeathKnight_Gender">erkeksi</string>
+  <string name="DeathKnight_Gender">erkek</string>
   <string name="DeathKnight_Name_Objective">ölü şövalye</string>
   <string name="DeathKnight_Desc">Şöyle bir bakınca, ağır zırhlı ve haşmetli bir savaşçı gibi dursa da suratındaki pis ve ölüm kokan sırıtışı onu ele veriyor. Ölüm Şövalyesi, yeminini gerçekleştirememiş bir şövalyenin ruhunun tezahürüdür. Ve bu lanetli durumdayken, mütemadiyen savaşlarda kendini arındırmaya çalışacak, masumları öldürecek ve asla kimi korumak uğruna ant içtiğini hatırlayamayacak.</string>
   <string name="DreadKnight_Name">dehşet şovalyesi</string>
@@ -1374,7 +1377,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="JarOfSouls_Name">ruhlar kavanozu</string>
   <string name="JarOfSouls_Gender">erkeksi</string>
   <string name="JarOfSouls_Name_Objective">ruhlar kavanozu</string>
-  <string name="JarOfSouls_Desc">Bu eski kavonozda tasvir edilen kurukafanın parlayan gözleri, garip bir enerji yaydığı sürece seni rahatsız edecek.</string>
+  <string name="JarOfSouls_Desc">Bu eski kavanozda tasvir edilen kafatasının parlayan gözleri ve yaydığı garip enerji seni rahatsız ediyor.</string>
   <string name="Lich_Name">lich</string>
   <string name="Lich_Gender">erkeksi</string>
   <string name="Lich_Name_Objective">lich</string>
@@ -1397,7 +1400,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="IceGuardianCoreModule_Info">Büyüsel buzdan yapılmış karışık bir yapı. Bu fevkalade buluşun içinde parlayan bir taş bulunuyor.</string>
   <string name="RingOfFrost_Name">Donukluğun Yüzüğü</string>
   <string name="RingOfFrost_Info">Bu yüzük büyüsel buzdan oyularak yapıldı. Bu yüzüğü kuşanan kişi donukluğun aurası tarafından korunacaktır, düşmanları yavaşlatır ve hasar verir.</string>
-  <string name="SpiderQueenCarapace_Name">Kraliçe Örümcek Kabuğu</string>
+  <string name="SpiderQueenCarapace_Name">Örümcek Kraliçe Kabuğu</string>
   <string name="SpiderQueenCarapace_Info">Örümcek Kraliçe\'nin kabuğundan bir parça. Eğer dikkatli bakacak olursan içinde bir miktar örümcek bezesi görürsün, neredeyse canlı gibi duruyor.</string>
   <string name="LibrarianNPC_Message_Instruction">M-merhaba. Kütüphaneye hoşgeldin. Burada zindanda bulunabilecek herşeyle ilgili bilgi bulabilirsin... aslında maceracılar tarafından keşfedilen bilgileri bulabilirsin sadece. Bu... birazcık utanç verici. Bu yüzden her ziyaretinizde, büyük ihtimalle okunacak yeni şeyler bulunabilir.</string>
   <string name="LibraryBook_Name">Kütüphane kitabı</string>
@@ -1593,8 +1596,8 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="HealerNPC_Gender">erkeksi</string>
   <string name="HealerNPC_Name_Objective">köy papazı</string>
   <string name="HealerNPC_Desc">yaşlı bir adam,asa yapabilecek biri gibi duruyor </string>
-  <string name="HealerNPC_Message1">Her Maceracı İçin Bedava Tedavi !</string>
-  <string name="HealerNPC_Message2">ne zaman hasta ya da aç hissedersen geri gel </string>
+  <string name="HealerNPC_Message1">Her maceracı için ücretsiz tedavi!</string>
+  <string name="HealerNPC_Message2">Ne zaman hasta veya aç hissedersen geri gel!</string>
   <string name="HealerNPC_Message3">Kilise neden şapka takmaya izin vermiyor, bir türlü anlamıyorum. Dışarısı epey soğuk.</string>
   <string name="ServiceManNPC_Name">eleman </string>
   <string name="ServiceManNPC_Gender">erkeksi</string>
@@ -1613,7 +1616,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="WndPriest_Instruction_f">Hoş geldin kızım! Yüceler yücesi, Derinlerin Efendisi Noel Baba\'nın mukaddes kilisesine hoş geldin! Maalesef, henüz geçmene müsaade edemem, zira restorasyon çalışmaları sürüyor. Ancak \"Yardım ederim!\" diyorsan başka, belki o zaman %d altın sikke karşılığında seni iyileştirebilir ve biraz sana yiyecek temin edebilirim.</string>
   <string name="WndPriest_Title">köy papazı</string>
   <string name="town_deco_roof_name">çatı</string>
-  <string name="town_deco_roof_desc">basit fayans çatı </string>
+  <string name="town_deco_roof_desc">Basit kiremit çatı.</string>
   <string name="town_deco_wall_name">Duvar</string>
   <string name="town_deco_wall_desc">ağaçlardan yapılmış basit bir duvar </string>
   <string name="town_deco_snow_name">kar</string>
@@ -1629,7 +1632,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="town_deco_window_name">pencere </string>
   <string name="town_deco_window_desc">klasik camdan pencere. özel bir şey yok</string>
   <string name="town_deco_door_name">kapı</string>
-  <string name="town_deco_door_desc">basit ahşap kapı</string>
+  <string name="town_deco_door_desc">Basit ahşap kapı.</string>
   <string name="town_deco_locked_door_name">kilitli kapı</string>
   <string name="town_deco_locked_door_desc">acaba bu kapının arkasında neler olabilir ?</string>
   <string name="town_deco_snowman_name">Kardan adam</string>
@@ -1703,7 +1706,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="ScrollOfTerror_Info3">Parşömen parlak bir kırmızı ışık yaydı ve yaratıklar kaçmaya başladı!</string>
   <string name="ScrollOfUpgrade_Name">geliştirme parşömeni</string>
   <string name="ScrollOfUpgrade_Info">Bu parşömen tek bir nesnenin kalitesini yükseltir. Bir asanın güç ve şarj sayısı, bir silahın gücü veya hedefi bulma yeteneği artar. Zırhların koruma seviyesi yükselir. Yüzüklerin takan kişiye yaptığı etki güçlenir.Ayrıca silah ve zırhların kullanılması için gereken güç miktarı azalır,  üzerlerinde kötü büyüler kalkar.</string>
-  <string name="ScrollOfUpgrade_InvTitle">geliştirmek için bir eşya seç</string>
+  <string name="ScrollOfUpgrade_InvTitle">Geliştirmek için bir eşya seçin</string>
   <string name="ScrollOfUpgrade_LooksBetter">%s şu anda çok daha iyi görünüyor</string>
   <string name="ScrollOfWeaponUpgrade_Name">silah geliştirme parşömeni</string>
   <string name="ScrollOfWeaponUpgrade_Info">Bu parşömen silahın kalitesini yükseltir ve Yükseltme Parşömeni gibi silahtaki efsunu yok etmez aksine rastgele bir efsun aşılar.</string>
@@ -1792,7 +1795,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Shopkeeper_Name">mağaza sahib</string>
   <string name="Shopkeeper_Desc">Bu sağlam adam bu zindan gibi yerler yerine büyük bir şehirde olmaya daha uygun görünüyor. Fiyatları neden burada olmak istediğini açıklıyor.</string>
   <string name="Shopkeeper_Sell">Satmak için bir eşya seç</string>
-  <string name="WandMaker_Name">Yaşlı Asa ustası</string>
+  <string name="WandMaker_Name">yaşlı asa ustası</string>
   <string name="WandMaker_Desc">Bu yaşlı ama dinç beyefendi, oldukça şaşkın bir ifadeye sahip. Sihirli bir alan ile korunuyor.</string>
   <string name="WandMaker_Defense">absorbe edildi</string>
   <string name="WandMaker_Berry1">Oo, sizin gibi nazik biri ile bu gibi bir yerde karşılaşmak ne güzel bir sürpriz.Buraya zor bulunan bir malzeme için geldim : _Çürük Dut tohumu_. Bir büyücü olarak buradaki yaratıklara karşı kendimi savunabilirim, fakat zamanım çok kısıtlı. Muhtemelen bana yardım edebilirsin. Sana hizmetinin karşılığını en iyi asalarımdan biri ile ödeyebilirim.</string>
@@ -1814,7 +1817,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="MimicAmulet_Gender">erkeksi</string>
   <string name="MimicAmulet_Name_Objective">taklitçi</string>
   <string name="MimicAmulet_Desc">Macera kariyerindeki en heyacanlı an bir tuzağa dönüyor.</string>
-  <string name="Nightmare_Name">Kabus</string>
+  <string name="Nightmare_Name">kabus</string>
   <string name="Nightmare_Gender">erkeksi</string>
   <string name="Nightmare_Name_Objective">kabus</string>
   <string name="Nightmare_Desc">Titreşen dokunaçlardan yapılmış karabasanlar Eski Tanrının uğursuz düşüncelerinin göstergesi gibidir.</string>
@@ -1895,7 +1898,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Armor_Identify">%1$s ile aşina olduğundan dolayı %2$s olduğunu anlıyorsun.</string>
   <string name="Armor_ToString">%1$s :%2$d</string>
   <string name="Armor_Incompatible">Farklı büyü tipleri ile etkileşimin zırhtaki kabartmayı sildi!</string>
-  <string name="Armor_Info1">Bu %1$s aldığın hasarın \"%2$d\" puanını emiyor.</string>
+  <string name="Armor_Info1">Bu %1$s aldığın her hasarın \"%2$d\" puanını emiyor.</string>
   <string name="Armor_Info2">
 \n\nYetersiz gücünden dolayı hareket hızın ve savunma yeteneğin düştü.</string>
   <string name="Armor_Info3">
@@ -2116,7 +2119,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="PotionOfHealing_Apply">Yaraların tamamen iyileşti.</string>
   <string name="PotionOfInvisibility_Name">Görünmezlik İksiri</string>
   <string name="PotionOfInvisibility_Info">Bu iksiri içmek seni geçici olarak görünmez kılacakGörünmez olduğunda düşmanların seni onlara herhangi bir saldırı yapana kadar göremeyecektir.</string>
-  <string name="PotionOfInvisibility_Apply">Ellerinin görünmez olduğunu görüyorsun!</string>
+  <string name="PotionOfInvisibility_Apply">Ellerinin görünmez oluşunu görüyorsun!</string>
   <string name="PotionOfLevitation_Name">Süzülme İksiri</string>
   <string name="PotionOfLevitation_Info">Bu garip iksir senin havada süzülmeni sağlar, tuzaklardan bu yolla kurtulabilirsin ancak zehirli gazlar havada da seni ekileyecektir.</string>
   <string name="PotionOfLevitation_Apply">Havada süzülüyorsun!</string>
@@ -2125,7 +2128,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="PotionOfMight_Name">Kudret İksiri</string>
   <string name="PotionOfMight_Info">Bu iksir ile gücün bir puan ve sağlığın beş puan yükselecek.</string>
   <string name="PotionOfMight_Apply">Yeni bulduğun gün vücudundan taşıyor.</string>
-  <string name="PotionOfMight_StaApply">+1 güç, +5 sağlık</string>
+  <string name="PotionOfMight_StaApply">+1 güç, +5 can</string>
   <string name="PotionOfMindVision_Name">Görüş İksiri</string>
   <string name="PotionOfMindVision_Info">Bunu içtikten sonra zihnin bu zindandaki yaratıkların fiziksel özelliklerin sezme yeteneğine kavuşacak onları bu seviyede nerede olursa olsun görebileceksin.</string>
   <string name="PotionOfMindVision_Apply1">Bir şekilde diğer yaratıkların zihinlerini okuyabiliyorsun!</string>
@@ -2157,7 +2160,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Potion_ACMoisten">NEMLENDİR</string>
   <string name="Potion_SelectForMoisten">Nemlendirmek istediğin eşyayı seç</string>
   <string name="Potion_MoistenUseless">Görünüşe göre bu iksiri mundar ettin.</string>
-  <string name="Potion_RuneDissaperaed">Yazıtlar %s öğesinden kayboldu.</string>
+  <string name="Potion_RuneDissaperaed">Büyülü yazıt %s öğesinden kayboldu.</string>
   <string name="Potion_ArrowMoisten">Okları başarıyla nemlendirdin.</string>
   <string name="Potion_ItemFliesAway">%s elinden uçup gitti.</string>
   <string name="Potion_FoodRefreshed">%s artık yenebilir gibi görünüyor</string>
@@ -2498,12 +2501,8 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
   <string name="ShieldBuffReady_Name">Hazır</string>
   <string name="ShieldBuffNotReady_Name">Hazır Değil</string>
   <string name="WoodenShield_name">Tahta kalkan</string>
-  <string name="WoodenShield_desc">Kabaca yapılmış tahta kalkan bulabileceğin en basit kalkan.
-Yuvarlak ve bazen biraz hasar soğurabilir.</string>
   <string name="ToughShield_name">Güçlendirilmiş Deri Kalkan</string>
-  <string name="ToughShield_desc">Bu deri kayışlarla güçlendirilmiş kalkan tahta olandan daha güçlü duruyor. Daha fazla hasar engelleyebileceği şüphesiz.</string>
   <string name="StrongShield_name">Tunç Kaplamalı Kalkan</string>
-  <string name="StrongShield_desc">Bu dikdörtgen kalkan tunç levhalar ile kaplanmış ve kumaşla renklendirilip süslenmiş. Daha ağır, fakat çok daha fazla hasarı engelleyebilir.</string>
   <string name="RoyalShield_name">Kraliyet Kalkanı</string>
   <string name="RoyalShield_desc">Tamamen metal bir kalkan. Evet, ağır, fakat en iyi korumayı yalnızca bu sağlayabilir.</string>
   <string name="ShieldInfoTemplate">Bu kalkan gelen hasarın en fazla %1$d kadarını engelleyebilir. %%%2$d ihtimalle. Başarılı bir engelleme sonrasında geri toparlanması için %3$3.1f saniye gerektirir.</string>
@@ -2525,9 +2524,7 @@ Modlar bazen oynanışı tahmin edilemeyen veya garip bir biçimde değiştirebi
 NYRDS takımının modların içeriği, kalitesi ve stabilizasyonu ile hiçbir alakası yoktur.\n
 Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
 </string>
-  <string name="ShieldWeaponInfo">Silah olarak kullanıldığında bu kalkan ortalama %1$d hasar soğuracak.</string>
   <string name="TownPortal_Name">Kasaba Portalı</string>
-  <string name="TownPortal_Info">Bu büyü aniden güvenliğe dönmeni sağlar. Fakat yakınındaki güçlü bir büyü kaynağı düzgün çalışmasını engelleyebilir.</string>
   <string name="MedicineMask_Name">Ameliyat maskesi</string>
   <string name="MedicineMask_Info">Ameliyat maskesi giyen kişinin ağzından ve burnundan çıkan sıvı damlacıklarında ve havada gizlenen mikroorganizmaları yakalamak için tasarlanmıştır.
 \n\nMaske giymek diğer insanları umursadığınızı gösterir. Evde kalın!</string>
@@ -2542,4 +2539,18 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
   <string name="Char_Stole_0">%1$s%3$sden %2$s çaldı!</string>
   <string name="Char_Stole_1">%1$s%3$sden %2$s çaldı!</string>
   <string name="Char_Stole_2">%1$s%3$sden %2$s çaldı!</string>
+  <string name="InnKeeperNPC_Gender">erkek</string>
+  <string name="DrunkardNPC_Gender">erkek</string>
+  <string name="MercenaryNPC_Gender">erkek</string>
+  <string name="ServantNPC_Gender">dişi</string>
+  <string name="BardNPC_Gender">erkek</string>
+  <string name="town_deco_red_carpet_name">Halı</string>
+  <string name="town_deco_beige_carpet_name">Halı</string>
+  <string name="town_deco_brown_carpet_name">Halı</string>
+  <string name="town_deco_charcoal_carpet_name">Halı</string>
+  <string name="town_deco_magenta_carpet_name">Halı</string>
+  <string name="Potion_Colors_13">kuvars</string>
+  <string name="Potion_Colors_14">oniks</string>
+  <string name="PotionOfMana_Name">Mana İksiri</string>
+  <string name="PotionOfMana_Info">Bu iksir ruhsal enerjini yenileyecek.</string>
 </resources>

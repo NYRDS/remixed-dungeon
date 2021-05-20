@@ -112,7 +112,6 @@
   <string name="Possess_Info">A arte sombria de controlar a mente permite que o conjurador do feitiço altere a vontade da maioria das criaturas.</string>
   <string name="Possess_PossessionFailed">%s possui uma vontade muito forte</string>
   <string name="Possess_Possessed">%s aguarda duas ordens</string>
-  <string name="Possess_MustTargetChar">Apenas criaturas podem der atingidas pela Possessão</string>
   <string name="Possess_CantPossessSelf">Você não pode possuir a si mesmo</string>
   <string name="Mob_StaControlledStatus">Este %s está sob possessão maligna</string>
   <string name="BlackCat_AiStatus">Este gato está fazendo coisas comuns de gato</string>
@@ -149,6 +148,7 @@
   <string name="town_deco_pedestal_desc">Pedestal com o livro sagrado em cima.</string>
   <string name="town_deco_shelf_name">Prateleiras</string>
   <string name="town_deco_shelf_desc">Prateleiras vazias.</string>
+  <string name="town_deco_inn_bed_name">Cama</string>
   <string name="WndPriest_Instruction2_m">Bem-vindo meu filho, bem-vindo à santa igreja do grande Papai Noel o Senhor das Profundezas!</string>
   <string name="WndPriest_Instruction2_f">Bem-vinda minha filha, bem-vinda à santa igreja do grande Papai Noel o Senhor das Profundezas! </string>
   <string name="WndPriest_Instruction2">Se você estiver procurando ajuda, eu posso lhe fornecer serviço de cura e comida por apenas %d moedas de ouro!\nSe você está em busca da Bênção Sagrada, ou, pelo Senhor proibido, foi amaldiçoado, por favor, fale com o Bispo em nossa humilde igreja.</string>
@@ -2494,26 +2494,13 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
   <string name="town_deco_stone_wall_broken_desc">Velho muro de pedra, em mau estado</string>
   <string name="Challenges_Names_6">Runas Proibidas</string>
   <string name="Challenges_Names_7">Pacifismo</string>
-  <string name="Welcome_Text_29_2">
-    remix.29.2\n
-    - Jogabilidade:\n
-    -- Novos desafios:\n
-    --- Runas Proibidas\n
-    --- Pacifismo\n
-    - Modding:\n
-    -- Artefatos Customizados\n
-    - Defeitos consertados\n
-    </string>
   <string name="town_deco_crossroad_name">Sinal de encruzilhada</string>
   <string name="town_deco_crossroad_desc">Pilar de madeira bruto com texto em placas em forma de flecha, desbotado há muito tempo, provavelmente devido a condições climáticas adversas.</string>
   <string name="ShieldBuffReady_Name">Pronto</string>
   <string name="ShieldBuffNotReady_Name">Não está Pronto</string>
   <string name="WoodenShield_name">Escudo de Madeira</string>
-  <string name="WoodenShield_desc">Um escudo bruto feito de madeira é o escudo mais simples disponível. É redondo e pode bloquear alguns danos de tempos em tempos.</string>
   <string name="ToughShield_name">Escudo Reforçado em Couro</string>
-  <string name="ToughShield_desc">Este escudo reforçado com tiras de couro parece mais resistente que o de madeira. Pode bloquear mais danos, com certeza.</string>
   <string name="StrongShield_name">Escudo Chapeado em Bronze</string>
-  <string name="StrongShield_desc">Escudo retangular revestido com chapas de bronze e decorado com pano colorido. É significativamente mais pesado, mas pode bloquear muito mais danos.</string>
   <string name="RoyalShield_name">Escudo Real</string>
   <string name="RoyalShield_desc">Um escudo cheio de metal. Sim, é pesado, mas somente ele pode fornecer a melhor proteção.</string>
   <string name="ShieldInfoTemplate">Esse escudo bloqueará até %1$d do dano recebido. Com %2$d %% de chance. Levará %3$3.1f segundos para recuperar após o bloqueio bem-sucedido.</string>
@@ -2543,9 +2530,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
         A equipe NYRDS não é de forma alguma responsável pelo conteúdo, qualidade ou estabilidade dos mods.\n
         Baixe por sua conta e risco e divirta-se!\n
     </string>
-  <string name="ShieldWeaponInfo">Quando usado como arma, este escudo irá infligir %1$d danos em média.</string>
   <string name="TownPortal_Name">Portal da Cidade</string>
-  <string name="TownPortal_Info">Este feitiço permite-lhe regressar instantaneamente à segurança. No entanto, uma fonte mágica poderosa nas proximidades pode impedi-lo de funcionar como pretendido.</string>
   <string name="MedicineMask_Name">Máscara cirúrgica</string>
   <string name="MedicineMask_Info">Uma máscara cirúrgica é projetada para capturar microorganismos lançados em gotas e aerossóis da boca e nariz do usuário.
 \n\nUsar uma máscara significa que você se importa com os outros.</string>
@@ -2562,11 +2547,8 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
   <string name="Backstab_Name">Apunhalar</string>
   <string name="Backstab_Info">Um golpe silencioso nas costas. Desonesto, mas extremamente eficaz, o dano de apunhalar irá aumentar com o nível de habilidade do usuário.\n\nUma punhalada bem sucedida irá ignorar completamente a armadura ou habilidades defensivas da vítima.</string>
   <string name="Backstab_TooFar">A vítima está muito longe para conseguir acertar.</string>
-  <string name="Backstab_Aware">A vítima não deve perceber você para conseguir a apunhalar</string>
   <string name="KunaiThrow_Name">Arremesso de Kunai</string>
-  <string name="KunaiThrow_Info">O arremesso mortal de kunai será feito extremamente rápido, tão rápido que você nem será nem capaz de selecionar um alvo.\n\nVerdadeiros mestres são capazes de jogar mais de uma kunai por vez.</string>
   <string name="Haste_Name">Pressa Extrema</string>
-  <string name="Haste_Info">A Pressa permitirá que o usuário se mova com extrema velocidade, pois tudo ao seu redor irá parecer estático. Essa pressa consumirá muita energia então só é possível apenas por curtos períodos de tempo.\ n\nUm mestre habilidoso  será capaz de agir com pressa por um período mais longo.</string>
   <string name="Welcome_Text_29_5">
     remix.29.5\n
     - Jogabilidade:\n
@@ -2578,4 +2560,51 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
   <string name="Char_Stole_0">%1$s roubou %2$s de  %3$s!</string>
   <string name="Char_Stole_1">%1$s roubou %2$s de  %3$s!</string>
   <string name="Char_Stole_2">%1$s roubou %2$s de  %3$s!</string>
+  <string name="InnKeeperNPC_Name">dono da pousada</string>
+  <string name="InnKeeperNPC_Name_Objective">dono da pousada</string>
+  <string name="InnKeeperNPC_Gender">Feminino</string>
+  <string name="InnKeeperNPC_Desc">O dono da pousada está orgulhoso de si mesmo</string>
+  <string name="DrunkardNPC_Name">bêbado</string>
+  <string name="DrunkardNPC_Name_Objective">bêbado</string>
+  <string name="DrunkardNPC_Gender">Feminino</string>
+  <string name="DrunkardNPC_Desc">cliente regular da pousada em estado natural</string>
+  <string name="MercenaryNPC_Name">mercenário</string>
+  <string name="MercenaryNPC_Name_Objective">mercenário</string>
+  <string name="MercenaryNPC_Gender">Feminino</string>
+  <string name="MercenaryNPC_Desc">Homem de aparência robusta</string>
+  <string name="ServantNPC_Name">serva da pousada</string>
+  <string name="ServantNPC_Name_Objective">serva da pousada</string>
+  <string name="ServantNPC_Gender">feminino</string>
+  <string name="ServantNPC_Desc">Uma serva da pousada bem ocupada</string>
+  <string name="BardNPC_Name">bardo</string>
+  <string name="BardNPC_Name_Objective">bardo</string>
+  <string name="BardNPC_Gender">masculino</string>
+  <string name="Heal_Name">Cura</string>
+  <string name="Heal_Info">Um feitiço bem útil em Calabouços, certo?</string>
+  <string name="MagicArrow_Name">Flecha Mágica</string>
+  <string name="MagicArrow_Info">Boa e velha flecha mágica, a escolha certa se você estiver sem munição</string>
+  <string name="ShootInEye_Name">Atirar no Olho</string>
+  <string name="ShootInEye_Info">Use suas habilidades de arquearia excepcionais para atirar bem no olho do inimigo, se ele tiver um, é claro</string>
+  <string name="town_deco_urn_name">Urna</string>
+  <string name="town_deco_urn_desc">Urna de argila, talvez com cinzas dentro</string>
+  <string name="town_deco_crate_name">Caixa</string>
+  <string name="town_deco_crate_desc">Uma caixa de madeira robusta que mantém seus segredos dentro</string>
+  <string name="town_deco_crate_scrolls_name">Caixa com pergaminhos</string>
+  <string name="town_deco_crate_scrolls_desc">Essa caixa está cheia até a boca com conhecimento secreto</string>
+  <string name="town_deco_clock_name">Relógio</string>
+  <string name="town_deco_red_carpet_name">Tapete</string>
+  <string name="town_deco_beige_carpet_name">Tapete</string>
+  <string name="town_deco_brown_carpet_name">Tapete</string>
+  <string name="town_deco_charcoal_carpet_name">Tapete</string>
+  <string name="town_deco_magenta_carpet_name">Tapete</string>
+  <string name="InnServant_Phrase_2">Esse bêbado está me irritando</string>
+  <string name="InnServant_Phrase_3">Parece limpo para mim</string>
+  <string name="InnServant_Phrase_4">Ah nossa, tantos pedidos hoje</string>
+  <string name="Drunkard_Phrase_2">Quem precisa de água quando ocê tem cerveja?</string>
+  <string name="Drunkard_Phrase_3">Essa cerveja tem gosto de terra</string>
+  <string name="Drunkard_Phrase_4">Zzzzzz...</string>
+  <string name="Potion_Colors_13">quartzo</string>
+  <string name="Potion_Colors_14">ônix</string>
+  <string name="PotionOfMana_Name">Poção de Mana</string>
+  <string name="PotionOfMana_Info">Essa poção vai restaurar sua energia espiritual.</string>
 </resources>
