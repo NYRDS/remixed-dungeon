@@ -55,7 +55,6 @@ public class ChaosSword extends MeleeWeapon {
 			charge++;
 			if(charge > chargeForLevel()) {
 				upgrade(true);
-				upgrade(true);
 				selectImage();
 				charge = 0;
 			}
