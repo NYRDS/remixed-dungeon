@@ -54,7 +54,7 @@ public class WndSettings extends WndMenuCommon {
 			protected void onClick() {
 				RemixedDungeon.scene().add(
 						new WndSelectLanguage(selectLanguage, "English",
-								"Русский", "Français", "Polski", "Español", "한국말", "Português brasileiro", "Italiano", "Deutsch", "汉语","漢語", "Türkçe", "Украї́нська","Bahasa Melayu","Magyar Nyelv") {
+								"Русский", "Français", "Polski", "Español", "한국말", "Português brasileiro", "Italiano", "Deutsch", "简体中文","繁體中文", "Türkçe", "Украї́нська","Bahasa Melayu","Magyar Nyelv") {
 
 							@Override
 							protected void onSelect(int index) {
