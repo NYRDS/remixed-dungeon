@@ -61,6 +61,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	protected abstract boolean act();
 
 	public void spend( float time ) {
+		GLog.debug("%s spend %2.2f", getEntityKind(), time);
 		this.time += time;
 	}
 
