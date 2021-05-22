@@ -2740,7 +2740,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ManaShieldBuff_Name">Magic Shield</string>
   <string name="ManaShieldBuff_Info">Magic Shield</string>
   <string name="TenguLiver_Name">Tengu Liver</string>
-  <string name="TenguLiver_Info">This liver belongs to a mighty foe. Just by looking at it, your feral instincts take over and you feel the urge to consume it.</string>
+  <string name="TenguLiver_Info">This liver belongs to a mighty foe. Just by looking at it, your feral instincts take over, and you feel the urge to consume it.</string>
   <string name="PotionOfMana_Name">Mana Potion</string>
   <string name="PotionOfMana_Info">This potion will restore your spiritual energy.</string>
   <string name="WndFortuneTeller_IdentifyAll">All</string>
