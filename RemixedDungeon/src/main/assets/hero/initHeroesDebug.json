@@ -39,6 +39,10 @@
       {
         "kind": "CurareDart",
         "quantity": 1000
+      },
+      {
+        "kind": "Gold",
+        "quantity" : 100000
       }
     ],
     "str": 10,
