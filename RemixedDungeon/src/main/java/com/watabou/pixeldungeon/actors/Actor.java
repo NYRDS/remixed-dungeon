@@ -61,7 +61,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	protected abstract boolean act();
 
 	public void spend( float time ) {
-		GLog.debug("%s spend %2.2f", getEntityKind(), time);
+		GLog.debug("%s spend %2.4f", getEntityKind(), time);
 		this.time += time;
 	}
 
@@ -201,14 +201,14 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		//Log.i("Main loop", "start");
 		while ((actor=getNextActor(Float.MAX_VALUE)) != null) {
 
-			GLog.debug("Main actor loop: %s %4.2f %x",actor.getEntityKind(), actor.time, actor.hashCode());
-
 			if (actor instanceof Char && ((Char)actor).getSprite().doingSomething()) {
 				//Log.i("Main loop", "in action");
 				// If it's character's turn to act, but its sprite
 				// is moving, wait till the movement is over
 				return;
 			}
+
+			GLog.debug("Main actor loop: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
 
 			current = actor;
 
