@@ -2627,36 +2627,26 @@ otro lugar del nivel.</string>
     -- ¡Más cosas sin categorizar!\n
     - Bugs arreglados\n
     </string>
-
   <string name="InnKeeperNPC_Name">encargado de la posada</string>
   <string name="InnKeeperNPC_Name_Objective">encargado de la posada</string>
   <string name="InnKeeperNPC_Gender">masculino</string>
   <string name="InnKeeperNPC_Desc">El encargado de la posada está orgulloso de sí mismo.</string>
-
-
   <string name="DrunkardNPC_Name">borracho</string>
   <string name="DrunkardNPC_Name_Objective">borracho</string>
   <string name="DrunkardNPC_Gender">masculino</string>
   <string name="DrunkardNPC_Desc">Cliente habitual de la posada en estado natural.</string>
-
-
   <string name="MercenaryNPC_Name">mercenario</string>
   <string name="MercenaryNPC_Name_Objective">mercenario</string>
   <string name="MercenaryNPC_Gender">masculino</string>
   <string name="MercenaryNPC_Desc">Un hombre de aspecto robusto.</string>
-
-
   <string name="ServantNPC_Name">servidor de la posada</string>
   <string name="ServantNPC_Name_Objective">servidor de la posada</string>
   <string name="ServantNPC_Gender">femenino</string>
   <string name="ServantNPC_Desc">Un servidor de la posada muy ocupado.</string>
-
-
   <string name="BardNPC_Name">bardo</string>
   <string name="BardNPC_Name_Objective">bardo</string>
   <string name="BardNPC_Gender">masculino</string>
   <string name="BardNPC_Desc">El bardo del pueblo está tocando su laúd.</string>
-
   <string name="Welcome_Text_30">
     remix.30.0\n
     - Gameplay:\n
@@ -2664,55 +2654,36 @@ otro lugar del nivel.</string>
     -- ¡La posada ahora está abierta!\n
     - Bugs arreglados\n
     </string>
-
-
   <string name="Roar_Name">Rugido</string>
   <string name="Roar_Info">El poderoso rugido seguramente aterrorizará a tus enemigos e inspirará a los aliados.</string>
-
   <string name="LightningBolt_Name">Rayo de luz</string>
   <string name="LightningBolt_Info">Un hechizo que comparten los antiguos chamanes, que conmocionará a tus enemigos con el doble de efectividad, especialmente si son lo suficientemente tontos como para estar sobre el agua.</string>
-
   <string name="Heal_Name">Curar</string>
   <string name="Heal_Info">Un hechizo bastante útil en las mazmorras, ¿verdad?</string>
-
   <string name="Order_Name">Ordenar</string>
   <string name="Order_Info">Con la concentración adecuada, tus órdenes son casi innegables.</string>
   <string name="Order_Resist">¡¿Cómo te atreves?!</string>
-
   <string name="Spell_SelectAChar">Selecciona un ser objetivo.</string>
-
   <string name="Calm_Name">Calma</string>
   <string name="Calm_Info">Hay muchas criaturas enfadadas por ahí, ayudémoslas.</string>
-
   <string name="CharmSpell_Name">Encanto</string>
   <string name="CharmSpell_Info">Todo el mundo se merece un poco de amor, ¿verdad?</string>
-
   <string name="HideInGrassSpell_Name">Hechizo Hide-In-Grass</string>
   <string name="HideInGrassSpell_Info">Has perfeccionado tu dominio del escondite.</string>
   <string name="HideInGrassSpell_NeedGrassToHide">Ni siquiera yo puedo esconderme a la vista.</string>
-
-
   <string name="MagicArrow_Name">Flecha mágica</string>
   <string name="MagicArrow_Info">La buena y vieja flecha mágica, la elección correcta cuando te quedas sin munición.</string>
-
   <string name="NatureArmorSpell_Name">Armadura natural</string>
   <string name="NatureArmorSpell_Info">Los elfos también pueden ser duros, especialmente cuando están protegidos por la propia Madre Naturaleza.</string>
-
   <string name="ShootInEye_Name">Disparo al ojo</string>
   <string name="ShootInEye_Info">Utiliza tu excepcional puntería para disparar al enemigo justo en el ojo, si es que tiene alguno, por supuesto.</string>
-
-
   <string name="Sprout_Name">Brote</string>
   <string name="Sprout_Info">Despiertan las semillas dormidas.\nSin embargo, debe haber algo de vegetación en el suelo para que este hechizo tenga éxito.</string>
-
-
   <string name="SummonBeast_Name">Llamada de la Bestia</string>
   <string name="SummonBeast_Info">Intenta convocar una horda de poderosas bestias a tus órdenes.\nLos resultados reales pueden variar.</string>
   <string name="SummonBeast_AtYourCommand">¡A sus órdenes!</string>
-
   <string name="WndSettings_RecordVideo">Grabación de vídeo</string>
   <string name="Dungeon_saveIoError">Al intentar crear un archivo de guardado:</string>
-
   <string name="town_table_fortune_ball_name">Bola de cristal</string>
   <string name="town_table_fortune_ball_desc">Una bola de cristal, con una niebla misteriosa en su interior.</string>
   <string name="town_deco_shelf_full_name">Estante</string>
@@ -2759,36 +2730,29 @@ otro lugar del nivel.</string>
   <string name="town_deco_charcoal_carpet_desc">En busca de la comodidad de los huéspedes, la administración del cine eligió alfombras de la más alta calidad de color carbón.</string>
   <string name="town_deco_magenta_carpet_name">Alfombra</string>
   <string name="town_deco_magenta_carpet_desc">El tono magenta de esta alfombra hace pensar en el vino local.</string>
-
   <string name="InnServant_Phrase_1">¡Uff, todavía hay mucho que hacer!</string>
   <string name="InnServant_Phrase_2">¡Este borracho me vuelve loco!</string>
   <string name="InnServant_Phrase_3">A mí me parece que está limpio</string>
   <string name="InnServant_Phrase_4">Oh mi d..., muchos invitados hoy</string>
-
   <string name="Drunkard_Phrase_1">¡OTRA BO-BOTELLA, POR FAVOR!</string>
   <string name="Drunkard_Phrase_2">Para güé el agua, si hay cerveza</string>
   <string name="Drunkard_Phrase_3">Esta pinta tiene sabor a mugre</string>
   <string name="Drunkard_Phrase_4">Zzzzzz...</string>
-
   <string name="HeroSubClass_NameWitchdoctor">médico brujo</string>
   <string name="HeroSubClass_NameGuardian">guardián</string>
   <string name="Gnoll_BecomeWitchdoctorDesc">Conviértete en médico brujo</string>
   <string name="Gnoll_BecomeGuardianDesc">Conviértete en guardián</string>
   <string name="HeroSubClass_DescWitchdoctor">El hechizo otorga al _Médico brujo_ un escudo mágico que le protege completamente del daño recibido.</string>
   <string name="HeroSubClass_DescGuardian">Un hábil conocimiento defensivo permite al _Guardián_ contraatacar con un escudo, lo que le convierte en un enemigo formidable para quienes se atreven a atacar este bastión andante.</string>
-
   <string name="Potion_Colors_12">epidota</string>
   <string name="Potion_Colors_13">de cuarzo</string>
   <string name="Potion_Colors_14">de ónix</string>
   <string name="Potion_Colors_15">perlada</string>
-
   <string name="ManaShieldBuff_Name">Escudo mágico</string>
   <string name="ManaShieldBuff_Info">Escudo mágico</string>
-
   <string name="TenguLiver_Name">Hígado de Tengu</string>
-  <string name="TenguLiver_Info">Descripción del hígado de Tengu</string>
-
+  <string name="TenguLiver_Info">Este hígado pertenece a un poderoso enemigo. Sólo con mirarlo, tus instintos salvajes se apoderan de ti y sientes el impulso de consumirlo.</string>
   <string name="PotionOfMana_Name">Poción de Mana</string>
   <string name="PotionOfMana_Info">Esta poción restablece tu energía espiritual.</string>
-
+  <string name="WndFortuneTeller_IdentifyAll">Todo</string>
 </resources>
