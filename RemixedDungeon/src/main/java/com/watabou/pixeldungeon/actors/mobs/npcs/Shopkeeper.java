@@ -92,7 +92,7 @@ public class Shopkeeper extends NPC {
 
 		final Bag backpack = getBelongings().backpack;
 
-		if(!ModdingMode.inMod() && Game.getDifficulty() < 2) {
+		if(ModdingMode.inRemixed() && Game.getDifficulty() < 2) {
 			if (countFood(backpack) < 3) {
 				var foodSupply = new OverpricedRation();
 				foodSupply.quantity(5);

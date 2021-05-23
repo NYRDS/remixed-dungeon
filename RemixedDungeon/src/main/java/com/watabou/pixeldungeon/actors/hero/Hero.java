@@ -261,7 +261,7 @@ public class Hero extends Char {
 
 		float skillFactor = 1;
 		if (getDifficulty()==0) {
-			skillFactor = 1.2f;
+			skillFactor *= 1.2f;
 		}
 
 		return (int) (super.defenseSkill(enemy) * skillFactor);

@@ -49,6 +49,7 @@ public class ModdingMode {
 		trustedMods.add("Conundrum");
 
 		dlcSet.add("HiFi DLC");
+		dlcSet.add(REMIXED);
 
 		resourcesRemap.put("spellsIcons/elemental(new).png", "spellsIcons/elemental_all.png");
 	}
@@ -157,7 +158,7 @@ public class ModdingMode {
 		return !mActiveMod.equals(REMIXED);
 	}
 
-	public static boolean inDlc() {return dlcSet.contains(mActiveMod); }
+	public static boolean inRemixed() {return dlcSet.contains(mActiveMod); }
 
 	public static boolean isResourceExists(String resName) {
 		return isAssetExist(resName) || isResourceExistInMod(resName);

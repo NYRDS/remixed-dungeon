@@ -89,7 +89,7 @@ public enum Rankings {
 
 		EventCollector.logEvent("gameover", resDesc);
 
-		if (!ModdingMode.inMod()){
+		if (ModdingMode.inRemixed()){
 			Game.instance().playGames.submitScores(Game.getDifficulty(), rec.score);
 		}
 
