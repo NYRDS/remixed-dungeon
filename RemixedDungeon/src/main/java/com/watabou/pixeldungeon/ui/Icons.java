@@ -231,9 +231,6 @@ public enum Icons {
             case DISCORD:
                 icon.frame(icon.texture.uvRect(45, 94, 61, 110));
                 break;
-            case DISCORD:
-                icon.frame(icon.texture.uvRect(26, 102, 44, 118));
-                break;
             case PLUS:
                 icon.frame(icon.texture.uvRect(14, 114, 22, 122));
                 break;
