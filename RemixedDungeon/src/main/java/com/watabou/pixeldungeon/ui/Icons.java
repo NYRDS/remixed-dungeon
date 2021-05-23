@@ -223,10 +223,13 @@ public enum Icons {
                 icon.frame(icon.texture.uvRect(110, 78, 126, 94));
                 break;
             case VK:
-                icon.frame(icon.texture.uvRect(28, 73, 42, 86));
+                icon.frame(icon.texture.uvRect(62, 94, 78, 110));
                 break;
             case FB:
-                icon.frame(icon.texture.uvRect(28, 87, 42, 101));
+                icon.frame(icon.texture.uvRect(79, 94, 95, 110));
+                break;
+            case DISCORD:
+                icon.frame(icon.texture.uvRect(45, 94, 61, 110));
                 break;
             case DISCORD:
                 icon.frame(icon.texture.uvRect(26, 102, 44, 118));
