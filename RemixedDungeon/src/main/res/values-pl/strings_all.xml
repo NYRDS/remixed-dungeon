@@ -2755,7 +2755,7 @@ remix.29.6\n
   <string name="ManaShieldBuff_Name">Magiczna Tarcza</string>
   <string name="ManaShieldBuff_Info">Magiczna Tarcza</string>
   <string name="TenguLiver_Name">Wątroba Tengu</string>
-  <string name="TenguLiver_Info">Opis Wątroby Tengu</string>
+  <string name="TenguLiver_Info">Ta wątroba należy do potężnego wroga. Widząc ją , twój dziki instynkt przejmuje kontrolę i czujesz chęć, by ją skomsumować.</string>
   <string name="PotionOfMana_Name">Mikstura Many</string>
   <string name="PotionOfMana_Info">Ta mikstura odnowi twoją duchową energię.</string>
   <string name="WndFortuneTeller_IdentifyAll">Wszystko</string>
