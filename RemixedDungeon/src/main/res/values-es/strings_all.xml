@@ -2751,7 +2751,16 @@ otro lugar del nivel.</string>
   <string name="ManaShieldBuff_Name">Escudo mágico</string>
   <string name="ManaShieldBuff_Info">Escudo mágico</string>
   <string name="TenguLiver_Name">Hígado de Tengu</string>
-  <string name="TenguLiver_Info">Descripción del hígado de Tengu</string>
+  <string name="TenguLiver_Info">Este hígado pertenece a un poderoso enemigo. Sólo con mirarlo, tus instintos salvajes se apoderan de ti y sientes el impulso de consumirlo.</string>
   <string name="PotionOfMana_Name">Poción de Mana</string>
   <string name="PotionOfMana_Info">Esta poción restablece tu energía espiritual.</string>
+  <string name="WndFortuneTeller_IdentifyAll">Todo</string>
+  <string name="Snail_Name">Caracol</string>
+  <string name="Snail_Gender">masculino</string>
+  <string name="Snail_Name_Objective">Caracol</string>
+  <string name="Snail_Desc">Este pequeño molusco ha crecido bastante al alimentarse de aguas residuales, pero sigue siendo muy lento, lo que le convierte en un enemigo fácil de enfrentar.</string>
+  <string name="DeepSnail_Name">Caracol de profundidad</string>
+  <string name="DeepSnail_Gender">masculino</string>
+  <string name="DeepSnail_Name_Objective">Caracol de profundidad</string>
+  <string name="DeepSnail_Desc">Este tipo de molusco suele verse cerca de las fuentes de agua y es mucho más rápido que el caracol común. Sin embargo, hay que tener cuidado con las picaduras, ya que pueden tener un efecto desagradable en la piel.</string>
 </resources>
