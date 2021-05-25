@@ -9,7 +9,7 @@
   <string name="SummonDeathling_Info">Przyzywa nieumarłego kompana.Życie nieumarłego oraz jego obrażenie rosną wraz z poziomem bohatera. \n\nLimit przywoływanych jednostek:%1$d(+ 1 na każdy poziom Magi )</string>
   <string name="Ignite_Name">Podpalenie</string>
   <string name="Ignite_Info">Podpala zaznaczoną komórkę,Może być użyty do podpalania traw, postaci oraz obiektów</string>
-  <string name="RootSpell_Name">Oplecienie</string>
+  <string name="RootSpell_Name">Oplecenie</string>
   <string name="RootSpell_Info">Oplata wybraną postać, sprawia że nie może się poruszać przez krótki okres czasu.</string>
   <string name="WindGust_Name">Powiew wiatru</string>
   <string name="WindGust_Info">Tworzy podmuch który odpycha wybraną postać.</string>
@@ -2759,4 +2759,12 @@ remix.29.6\n
   <string name="PotionOfMana_Name">Mikstura Many</string>
   <string name="PotionOfMana_Info">Ta mikstura odnowi twoją duchową energię.</string>
   <string name="WndFortuneTeller_IdentifyAll">Wszystko</string>
+  <string name="Snail_Name">Ślimak</string>
+  <string name="Snail_Gender">meski</string>
+  <string name="Snail_Name_Objective">Ślimak</string>
+  <string name="Snail_Desc">Przebywanie w ściekach sprawiło iż ten maly mięczak wyrósł do niespotykanych rozmiarów,  jest on jednak dość łatwym przeciwnikiem z uwagi na jego ślamazarność.</string>
+  <string name="DeepSnail_Name">Ślimak Rogaty</string>
+  <string name="DeepSnail_Gender">meski</string>
+  <string name="DeepSnail_Name_Objective">Ślimak Rogaty.</string>
+  <string name="DeepSnail_Desc">Spotykany w pobliżu zbiorników wodnych, mięczaków ten przewyższa typowego ślimaka, jest szybszy ,groźniejszy, a jego ugryzienia owodują nieprzyjemne efekty na skórze ofiary.</string>
 </resources>
