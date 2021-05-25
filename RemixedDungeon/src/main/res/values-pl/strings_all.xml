@@ -109,7 +109,7 @@
   <string name="deco_candle_name">Świeczka</string>
   <string name="deco_candle_desc">Duża świeczka</string>
   <string name="Possess_Name">Opętanie</string>
-  <string name="Possess_Info">Mroczna sztuka kontroli umysłu pozwala rzucającemu nagiąć wolę większości istot</string>
+  <string name="Possess_Info">Ta mroczna sztuka kontroli umysłu jest w stanie pozbawić wolnej woli większość istot.</string>
   <string name="Possess_PossessionFailed">Wola  \"%s\"  jest zbyt silna</string>
   <string name="Possess_Possessed">%s czeka na twoje rozkazy</string>
   <string name="Possess_CantPossessSelf">Nie możesz sam siebie opętać</string>
