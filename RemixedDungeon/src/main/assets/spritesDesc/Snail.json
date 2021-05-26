@@ -1,5 +1,5 @@
 {
-  "texture" : "snail.png",
+  "texture" : "mobs/snail.png",
   "width"  : 16,
   "height" : 16,
   "idle"   : { "fps" : 2,  "looped" : true,     "frames" : [0,0,0,1] },

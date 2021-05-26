@@ -1,9 +1,9 @@
 {
    "SewerLevel":{
-      "1":{"Rat":1,"Albino":0.03},
-      "2":{"Rat":1,"Gnoll":1,"Albino":0.03},
-      "3":{"Rat":1,"Gnoll":2,"Crab":1,"Swarm":0.02,"Albino":0.03},
-      "4":{"Rat":1,"Gnoll":2,"Crab":1,"Swarm":0.02,"Skeleton":0.01,"Thief":0.01,"Albino":0.03}
+      "1":{"Snail":1},
+      "2":{"Snail":1,"Rat":1,"Albino":0.03},
+      "3":{"Rat":1,"Gnoll":1,"Crab":0.5,"Swarm":0.02},
+      "4":{"Rat":1,"Gnoll":2,"Crab":1,"Thief":0.01}
    },
    "SewerBossLevel":{
       "any":{"Goo":1}
