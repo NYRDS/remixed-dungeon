@@ -4,26 +4,29 @@ Il terrore delle fogne non esiste più.
 2. Tengu è stato sconfitto
 Lo spirito demoniaco non tormenterà più nessuno.
 
-3. DM-300 è stato sconfitto
+3. DM-300 è stato distrutto
 Una macchina che ha perso il suo scopo è stata disattivata.
 
-4. Il re è stato sconfitto
-L'antico re di un regno morto è stato finalmente messo a riposo.
+4. Il Re è stato sconfitto
+L'antico re di un regno fantasma ora può finalmente riposare.
 
 5. Il lich è stato sconfitto
 Anche la morte stessa ha trovato la sua fine.
 
-6. Il guardiano di ghiaccio è stato sconfitto
-La meraviglia della tecnologia magica è stata sconfitta!
+6. Il guardiano dei ghiacci è stato sconfitto
+La meraviglia della tecnologia magica è stata distrutta!
 
-7. La regina ragno è stata sconfitta
-Un altro regno ha perso il suo monarca.
+7. La regina ragno è stata uccisa
+Ancora una volta, un altro regno ha perso il suo monarca.
 
-8. Il re delle ombre è stato sconfitto
+8. Il signore delle ombre è stato ucciso
 La manifestazione dell'oscurità è stata distrutta!
 
-9. L'antico Dio è stato sconfitto
+9. L'antico Dio è stato ucciso
 Yog-Dzewa e i suoi orrori non saranno più un problema.
 
-10. Un nuovo Gnoll è arrivato in città!
-Coraggio, gentilezza ed un paio di monete d'oro, ed anche il brutale Gnoll entrerà a far parte del tuo gruppo.
+10. Nuovo Gnoll in città!
+Coraggio, gentilezza e qualche moneta d'oro, e perfino lo gnoll più spietato entrerà a far parte delle tue avventure
+
+11. Maschera chirurgica ottenuta
+Indossare una maschera significa che tieni agli altri.
