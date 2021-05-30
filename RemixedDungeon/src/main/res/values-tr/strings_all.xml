@@ -2553,4 +2553,6 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
   <string name="Potion_Colors_14">oniks</string>
   <string name="PotionOfMana_Name">Mana İksiri</string>
   <string name="PotionOfMana_Info">Bu iksir ruhsal enerjini yenileyecek.</string>
+  <string name="Snail_Gender">erkek</string>
+  <string name="DeepSnail_Gender">erkek</string>
 </resources>

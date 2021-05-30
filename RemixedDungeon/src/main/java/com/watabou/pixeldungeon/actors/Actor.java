@@ -29,6 +29,7 @@ import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -62,6 +63,15 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 	public void spend( float time ) {
 		GLog.debug("%s spend %2.4f", getEntityKind(), time);
+		if(Util.isDebug() && current!=this) {
+			if(this instanceof Char) {
+				GLog.debug("%s spends time on %s move!", getEntityKind(), current!=null?current.getEntityKind():"no one");
+				//throw new TrackedRuntimeException(String.format("%s spends time on %s move!", getEntityKind(), current!=null?current.getEntityKind():"no one"));
+			}
+			if(this instanceof Hero && time > 5) {
+				GLog.debug("hero long spend!");
+			}
+		}
 		this.time += time;
 	}
 

@@ -2595,4 +2595,6 @@
   <string name="Potion_Colors_14">оніксом</string>
   <string name="PotionOfMana_Name">Зілля мани</string>
   <string name="PotionOfMana_Info">Це зілля відновить твої духовну енергію.</string>
+  <string name="Snail_Gender">masculine</string>
+  <string name="DeepSnail_Gender">masculine</string>
 </resources>

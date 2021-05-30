@@ -2731,4 +2731,6 @@ remix.29.6\n
   <string name="Potion_Colors_14">Onyx</string>
   <string name="PotionOfMana_Name">Mana Trank</string>
   <string name="PotionOfMana_Info">Dieser Trank wird deine spirituelle Energie wiederherstellen.</string>
+  <string name="Snail_Gender">männlich</string>
+  <string name="DeepSnail_Gender">männlich</string>
 </resources>

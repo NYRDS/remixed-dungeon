@@ -2610,4 +2610,6 @@ remix.29.5\n
   <string name="Potion_Colors_14">缟玛瑙</string>
   <string name="PotionOfMana_Name">魔法药水</string>
   <string name="PotionOfMana_Info">这药水会为你恢复的少量魔法值。</string>
+  <string name="Snail_Gender">男孩</string>
+  <string name="DeepSnail_Gender">男孩</string>
 </resources>

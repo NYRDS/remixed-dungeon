@@ -2617,4 +2617,6 @@ remix.29.3\n
   <string name="Potion_Colors_14">onyx</string>
   <string name="PotionOfMana_Name">Potion de mana</string>
   <string name="PotionOfMana_Info">Cette potion va régénerer votre énergie spirituelle.</string>
+  <string name="Snail_Gender">masculine</string>
+  <string name="DeepSnail_Gender">masculine</string>
 </resources>

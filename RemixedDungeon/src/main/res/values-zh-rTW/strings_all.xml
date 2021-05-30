@@ -2614,8 +2614,9 @@ remix.29.5\n
   <string name="ManaShieldBuff_Name">魔法屏障</string>
   <string name="ManaShieldBuff_Info">魔法屏障</string>
   <string name="TenguLiver_Name">天狗肝臟</string>
-  <string name="TenguLiver_Info">天狗肝臟描述</string>
   <string name="PotionOfMana_Name">魔法藥水</string>
   <string name="PotionOfMana_Info">這藥水會為你恢復的少量魔法值。</string>
   <string name="WndFortuneTeller_IdentifyAll">全部</string>
+  <string name="Snail_Gender">男孩</string>
+  <string name="DeepSnail_Gender">男孩</string>
 </resources>

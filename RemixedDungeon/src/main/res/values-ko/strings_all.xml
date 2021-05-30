@@ -2369,4 +2369,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Potion_Colors_14">줄마노</string>
   <string name="PotionOfMana_Name">마나 회복의 물약</string>
   <string name="PotionOfMana_Info">이 물약은 당신의 정신력을 회복시켜 줄 것입니다.</string>
+  <string name="Snail_Gender">남성적인</string>
+  <string name="DeepSnail_Gender">남성적인</string>
 </resources>

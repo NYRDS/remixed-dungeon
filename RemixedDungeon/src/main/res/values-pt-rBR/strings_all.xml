@@ -2607,4 +2607,6 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
   <string name="Potion_Colors_14">ônix</string>
   <string name="PotionOfMana_Name">Poção de Mana</string>
   <string name="PotionOfMana_Info">Essa poção vai restaurar sua energia espiritual.</string>
+  <string name="Snail_Gender">masculino</string>
+  <string name="DeepSnail_Gender">masculino</string>
 </resources>

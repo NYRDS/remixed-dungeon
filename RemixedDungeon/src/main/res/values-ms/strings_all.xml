@@ -2504,4 +2504,6 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
   <string name="Potion_Colors_14">oniks</string>
   <string name="PotionOfMana_Name">Posyen Mana</string>
   <string name="PotionOfMana_Info">Posyen ini dapat memulihkan tenaga rohani anda.</string>
+  <string name="Snail_Gender">feminin</string>
+  <string name="DeepSnail_Gender">feminin</string>
 </resources>

@@ -2748,4 +2748,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Potion_Colors_14">ониксом</string>
   <string name="PotionOfMana_Name">Зелье Маны</string>
   <string name="PotionOfMana_Info">Это зелье восстановит твою духовную энергию.</string>
+  <string name="Snail_Gender">masculine</string>
+  <string name="DeepSnail_Gender">masculine</string>
 </resources>
