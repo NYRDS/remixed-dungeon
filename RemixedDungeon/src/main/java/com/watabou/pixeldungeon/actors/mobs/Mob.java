@@ -371,6 +371,7 @@ public abstract class Mob extends Char {
 
 	public void die(NamedEntityKind cause) {
 
+    	spend(Actor.MICRO_TICK);
 		getState().onDie(this);
 
 		script.run("onDie", cause);
