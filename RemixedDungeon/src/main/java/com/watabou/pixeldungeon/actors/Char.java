@@ -766,7 +766,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@Override
 	public void spend(float time) {
-
 		float timeScale = 1f;
 		timeScale *= 1.f/(1+buffLevel(Slow.class));
 		timeScale *= (1 + buffLevel(Speed.class));
@@ -778,6 +777,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 
 		super.spend(scaledTime);
+		if(curAction!=null) {
+			GLog.debug("%s", curAction.toString());
+		}
 	}
 
 	public Set<Buff> buffs() {

@@ -17,11 +17,12 @@ public class Push extends CharAction {
 
     @Override
     public boolean act(Char hero) {
-        target.setState(MobAi.getStateByClass(Hunting.class));
-        target.setTarget(hero.getPos());
-        target.setEnemy(hero);
-        target.notice();
-        
+        if(!(target.getOwnerId() == hero.getId())) {
+            target.setState(MobAi.getStateByClass(Hunting.class));
+            target.setTarget(hero.getPos());
+            target.setEnemy(hero);
+            target.notice();
+        }
         target.push(hero);
 
         hero.spend(Actor.TICK);

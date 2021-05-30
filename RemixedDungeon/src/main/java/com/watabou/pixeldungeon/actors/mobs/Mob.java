@@ -218,7 +218,7 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
-		if (Random.Float() < 0.01) {
+		if (Random.Float() < 0.01/lvl()) {
 			lvl(lvl()+1);
 		}
 

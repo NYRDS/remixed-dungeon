@@ -631,10 +631,8 @@ public class Belongings implements Iterable<Item>, Bundlable {
 					EquipableItem ring11 = (EquipableItem) item.detach(backpack);
 					setItemForSlot(ring11, Slot.ARTIFACT);
 					this.ring1 = ring11;
-					;
 				} else {
 					setItemForSlot((EquipableItem) item.detach(backpack), Slot.LEFT_ARTIFACT);
-					;
 				}
 			}
 		}

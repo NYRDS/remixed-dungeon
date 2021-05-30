@@ -32,9 +32,15 @@ public class TrackedRuntimeException extends RuntimeException {
 	public TrackedRuntimeException( String s,Exception e) {
 		super(s,e);
 		GLog.toFile(s);
-		GLog.toFile(e.getMessage());
+		String message = e.getMessage();
+
+		if(message==null) {
+			message=Utils.EMPTY_STRING;
+		}
+
+		GLog.toFile(message);
 		EventCollector.logException(this,s);
-		Notifications.displayNotification(this.getClass().getSimpleName(), s, e.getMessage());
+		Notifications.displayNotification(this.getClass().getSimpleName(), s, message);
 	}
 
 }
