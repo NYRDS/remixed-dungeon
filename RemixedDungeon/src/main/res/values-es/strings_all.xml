@@ -2763,4 +2763,5 @@ otro lugar del nivel.</string>
   <string name="DeepSnail_Gender">masculino</string>
   <string name="DeepSnail_Name_Objective">Caracol de profundidad</string>
   <string name="DeepSnail_Desc">Este tipo de molusco suele verse cerca de las fuentes de agua y es mucho más rápido que el caracol común. Sin embargo, hay que tener cuidado con las picaduras, ya que pueden tener un efecto desagradable en la piel.</string>
+  <string name="CharInfo_Level">Esto es un nivel %d%s.</string>
 </resources>
