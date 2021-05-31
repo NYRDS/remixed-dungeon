@@ -80,13 +80,13 @@ public class WndFortuneTeller extends WndQuest {
 				protected void onClick() {
 					hero.getBelongings().identify();
 					hide();
-					hero.spendGold(goldCost);
+					hero.spendGold(identifyAllCost);
 				}
 			};
 
 			btnAll.setRect( 0, y, STD_WIDTH, BUTTON_HEIGHT );
 			add( btnAll );
-			btnYes.enable(!(hero.gold() < identifyAllCost));
+			btnAll.enable(!(hero.gold() < identifyAllCost));
 			y += BUTTON_HEIGHT ;
 		}
 
