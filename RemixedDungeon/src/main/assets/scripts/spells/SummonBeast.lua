@@ -8,7 +8,7 @@ local RPD = require "scripts/lib/commonClasses"
 
 local spell = require "scripts/lib/spell"
 
-local beasts = {"Rat", "Crab", "Swarm", "Bat", "Spinner", "Scorpio", "Worm"}
+local beasts = {"Snail", "Rat", "Crab", "Swarm", "Bat", "Spinner", "Scorpio", "Worm"}
 
 return spell.init{
     desc  = function ()
@@ -31,7 +31,7 @@ return spell.init{
         RPD.forCellsAround(caster:getPos(), function(cell)
             if not RPD.Actor:findChar(cell) and caster:level():isPassable(cell) then
                 if math.random() > 1/skillLevel then
-                    local beast = beasts[math.min(1,  math.max(math.random(skillLevel/2, skillLevel), #beasts))]
+                    local beast = beasts[math.min(1,  math.max(math.random(skillLevel/2, skillLevel+1), #beasts))]
                     if beast then
                         beast = RPD.spawnMob(beast, cell):makePet(caster)
                         beast:say('SummonBeast_AtYourCommand')
