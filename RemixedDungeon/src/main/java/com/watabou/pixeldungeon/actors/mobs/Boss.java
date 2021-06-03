@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mobs.common.ShadowLord;
 import com.watabou.noosa.audio.Music;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
@@ -65,8 +66,10 @@ abstract public class Boss extends Mob {
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
 
-		if(getBelongings().getItem(SkeletonKey.class)==null) { //FIXUP for old saves
-			collect(new SkeletonKey());
+		if(!(this instanceof ShadowLord)) {
+			if (getBelongings().getItem(SkeletonKey.class) == null) { //FIXUP for old saves
+				collect(new SkeletonKey());
+			}
 		}
 	}
 }
