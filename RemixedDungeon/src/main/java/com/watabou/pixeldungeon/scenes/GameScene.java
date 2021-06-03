@@ -80,6 +80,7 @@ import com.watabou.pixeldungeon.ui.Banner;
 import com.watabou.pixeldungeon.ui.BusyIndicator;
 import com.watabou.pixeldungeon.ui.GameLog;
 import com.watabou.pixeldungeon.ui.HealthIndicator;
+import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.ui.ResumeIndicator;
 import com.watabou.pixeldungeon.ui.StatusPane;
@@ -87,9 +88,11 @@ import com.watabou.pixeldungeon.ui.Toast;
 import com.watabou.pixeldungeon.ui.Toolbar;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndBag.Mode;
 import com.watabou.pixeldungeon.windows.WndGame;
+import com.watabou.pixeldungeon.windows.WndTitledMessage;
 import com.watabou.utils.Random;
 import com.watabou.utils.SparseArray;
 
@@ -418,6 +421,29 @@ public class GameScene extends PixelScene {
 
 
         doSelfTest();
+
+        final double moveTimeout = Dungeon.moveTimeout();
+        final boolean realtime = Dungeon.realtime();
+
+        if(realtime || moveTimeout < Double.POSITIVE_INFINITY) {
+
+            String msg = "";
+            if(realtime) {
+                msg += Game.getVar(R.string.WrnExperimental_realtime);
+            } else {
+                if (moveTimeout < Double.POSITIVE_INFINITY) {
+                    msg += Utils.format(R.string.WrnExperimental_moveTimeout, moveTimeout);
+                }
+            }
+
+            msg += "\n\n";
+            msg += Game.getVar(R.string.WnrExperimental_hint);
+
+            add(new WndTitledMessage(Icons.get(Icons.ALERT),
+                    Game.getVar(R.string.WrnExperimental_title),
+                    msg
+            ));
+        }
     }
 
     private void doSelfTest() {

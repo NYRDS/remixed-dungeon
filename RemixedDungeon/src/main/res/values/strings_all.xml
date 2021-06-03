@@ -2753,4 +2753,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="DeepSnail_Name_Objective">Deep Snail</string>
   <string name="DeepSnail_Desc">This type of mollusk can often be seen near water sources and is much faster than your ordinary snail. Beware of the bites however, they can have an unpleasant effect on your skin.</string>
   <string name="CharInfo_Level">This is a level %d %s.</string>
+  <string name="WrnExperimental_realtime">Realtime! mode enabled: this is realtime roguelike now, tap fast or die.\nWant to check inventory?\nGood luck to do so while sewer crab was checking your guts.</string>
+  <string name="WrnExperimental_moveTimeout">Move timeout set to %d milliseconds, think fast!</string>
+  <string name="WnrExperimental_hint">If this strange and twisted world too harsh for you please disable those options using\nStart Screen->Options->Gameplay\nmenu and start new game or load another save.</string>
+  <string name="WrnExperimental_title">Experimental options enabled!</string>
 </resources>
