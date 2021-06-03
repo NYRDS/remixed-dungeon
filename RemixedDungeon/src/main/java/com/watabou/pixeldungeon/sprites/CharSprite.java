@@ -565,7 +565,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                     return;
                 }
             }
-            curAnim = null;
+            //curAnim = null;
         });
     }
 
