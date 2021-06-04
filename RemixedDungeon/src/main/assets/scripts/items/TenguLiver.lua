@@ -20,6 +20,7 @@ return item.init{
             price         = 0
         }
     end,
+
     actions = function() return {RPD.Actions.eat} end,
 
     execute = function(self, item, hero, action)
@@ -29,4 +30,7 @@ return item.init{
         end
     end,
 
+    onPickUp = function(self, item, chr)
+        RPD.Badges:validateMastery(chr:getHeroClass())
+    end
 }

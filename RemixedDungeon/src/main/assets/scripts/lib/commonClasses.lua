@@ -172,6 +172,8 @@ local RPD = {
     Dungeon = Dungeon,
     DungeonGenerator = DungeonGenerator,
     PathFinder = PathFinder,
+    Badges = Badges,
+
 
     CharsList = CharsList,
     CharUtils = CharUtils,

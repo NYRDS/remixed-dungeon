@@ -64,9 +64,8 @@ public class TomeOfMastery extends MasteryItem {
 
 	@Override
 	public boolean doPickUp(@NotNull Char hero ) {
-		if (hero.getHeroClass() != HeroClass.NECROMANCER)
-		{
-			Badges.validateMastery();
+		if (hero.getHeroClass() != HeroClass.NECROMANCER) {
+			Badges.validateMastery(hero.getHeroClass());
 		}
 		return super.doPickUp( hero );
 	}

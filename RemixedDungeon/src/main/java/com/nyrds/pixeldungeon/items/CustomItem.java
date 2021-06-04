@@ -346,6 +346,12 @@ public class CustomItem extends EquipableItem {
         script.runOptionalNoRet("ownerTakesDamage",damage);
     }
 
+    @Override
+    public boolean doPickUp(@NotNull Char hero) {
+        script.runOptionalNoRet("onPickUp", hero);
+        return super.doPickUp(hero);
+    }
+
     private class CustomItemCellListener implements CellSelector.Listener {
 
         private final String action;

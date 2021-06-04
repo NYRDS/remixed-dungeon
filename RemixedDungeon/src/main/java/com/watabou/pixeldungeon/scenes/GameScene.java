@@ -432,7 +432,7 @@ public class GameScene extends PixelScene {
                 msg += Game.getVar(R.string.WrnExperimental_realtime);
             } else {
                 if (moveTimeout < Double.POSITIVE_INFINITY) {
-                    msg += Utils.format(R.string.WrnExperimental_moveTimeout, moveTimeout);
+                    msg += Utils.format(R.string.WrnExperimental_moveTimeout, (int)moveTimeout);
                 }
             }
 

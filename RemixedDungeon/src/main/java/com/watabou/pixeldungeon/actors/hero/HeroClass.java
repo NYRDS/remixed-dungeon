@@ -188,6 +188,8 @@ public enum HeroClass implements CharModifier {
                 return Badges.Badge.MASTERY_ELF;
             case NECROMANCER:
                 return Badges.Badge.MASTERY_NECROMANCER;
+            case GNOLL:
+                return Badges.Badge.MASTERY_GNOLL;
         }
         return null;
     }
