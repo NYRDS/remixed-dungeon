@@ -2525,14 +2525,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="RoyalShield_desc">A full metal shield. Yes, it\'s heavy, but only it can provide you the best protection.</string>
   <string name="ShieldInfoTemplate">This shield will block up to %1$d of incoming damage.  With %2$d %% chance. It will take %3$3.1f seconds to recover after successful block.</string>
   <string name="Belongings_CantWearBoth">You can\'t equip %1$s and %2$s at same time!</string>
-  <string name="Welcome_Text_29_3">
-    remix.29.3\n
-    - Gameplay:\n
-    -- Shields!\n
-    - Modding:\n
-    -- Custom Shields!\n
-    - Bugs fixed\n
-    </string>
   <string name="ShieldStrTemplate">Wearer of the shield should have at least %1$d points of Strength to use it properly.</string>
   <string name="town_deco_flowerinthepot_name">Flower in a pot</string>
   <string name="town_deco_flowerinthepot_desc">Decorative flower with sweet flavor</string>
@@ -2752,9 +2744,19 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="DeepSnail_Gender">masculine</string>
   <string name="DeepSnail_Name_Objective">Deep Snail</string>
   <string name="DeepSnail_Desc">This type of mollusk can often be seen near water sources and is much faster than your ordinary snail. Beware of the bites however, they can have an unpleasant effect on your skin.</string>
-  <string name="CharInfo_Level">This is a level %d %s.</string>
+  <string name="CharInfo_Level">This is a level %1$d %2$s.</string>
   <string name="WrnExperimental_realtime">Realtime! mode enabled: this is realtime roguelike now, tap fast or die.\nWant to check inventory?\nGood luck to do so while sewer crab was checking your guts.</string>
   <string name="WrnExperimental_moveTimeout">Move timeout set to %d milliseconds, think fast!</string>
   <string name="WnrExperimental_hint">If this strange and twisted world too harsh for you please disable those options using\nStart Screen->Options->Gameplay\nmenu and start new game or load another save.</string>
   <string name="WrnExperimental_title">Experimental options enabled!</string>
+  <string name="Welcome_Text_30_1">
+    remix.30.1\n
+    - Gameplay:\n
+    -- Gnoll Subclasses!\n
+    -- Snails!\n
+    -- Chaos Items progression nerfed.\n
+    -- Mana Potion is regular potion from now.\n
+    -- Badges now obtainable when playing DLC\'s (but not mods).\n
+    - Bugs fixed\n
+    </string>
 </resources>
