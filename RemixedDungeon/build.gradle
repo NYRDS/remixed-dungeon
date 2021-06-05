@@ -28,8 +28,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1017
-        versionName "30.1.alpha.10"
+        versionCode 1018
+        versionName "30.1.alpha.11"
         buildToolsVersion = '29.0.2'
         targetSdkVersion 30
         minSdkVersion 16

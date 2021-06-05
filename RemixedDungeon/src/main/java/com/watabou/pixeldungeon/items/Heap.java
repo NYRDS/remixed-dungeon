@@ -96,6 +96,13 @@ public class Heap implements Bundlable, NamedEntityKind {
 		regularHeaps.put(Type.HEAP,14f);
 	}
 
+	public static Map<Type, Float> sageHeaps = new HashMap<>();
+	static {
+		sageHeaps.put(Type.SKELETON,1f);
+		sageHeaps.put(Type.CHEST,4f);
+		sageHeaps.put(Type.HEAP,14f);
+	}
+
 	@Packable
 	public int pos = Level.INVALID_CELL;
 
