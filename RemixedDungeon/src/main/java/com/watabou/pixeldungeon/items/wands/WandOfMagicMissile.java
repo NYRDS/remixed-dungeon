@@ -127,6 +127,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 				collect( selector.getBelongings().backpack );
 			}
 		}
+		selector.updateSprite();
 		QuickSlot.refresh(selector);
 	};
 }
