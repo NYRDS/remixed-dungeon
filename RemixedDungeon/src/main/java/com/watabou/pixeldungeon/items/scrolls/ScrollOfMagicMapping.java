@@ -35,6 +35,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 
+import lombok.var;
+
 public class ScrollOfMagicMapping extends Scroll {
 
 	@Override
@@ -66,9 +68,19 @@ public class ScrollOfMagicMapping extends Scroll {
 				}
 			}
 		}
+
+		for(var lo : level.getAllLevelObjects()) {
+			if(lo.secret()) {
+				lo.discover();
+				discover(lo.getPos());
+				noticed = true;
+			}
+		}
+
 		Dungeon.observe();
 		
 		GLog.i( Game.getVar(R.string.ScrollOfMagicMapping_Layout) );
+
 		if (noticed) {
 			Sample.INSTANCE.play( Assets.SND_SECRET );
 		}

@@ -62,33 +62,36 @@ public class SewerLevel extends RegularLevel {
 	@Override
 	protected void decorate() {
 
-		for (int i = 0; i < getWidth(); i++) {
+		final int width = getWidth();
+		for (int i = 0; i < width; i++) {
 			if (map[i] == Terrain.WALL &&
-					map[i + getWidth()] == Terrain.WATER &&
+					map[i + width] == Terrain.WATER &&
 					Random.Int(4) == 0) {
 
 				map[i] = Terrain.WALL_DECO;
 			}
 		}
 
-		for (int i = getWidth(); i < getLength() - getWidth(); i++) {
+		final int length = getLength();
+
+		for (int i = width; i < length - width; i++) {
 			if (map[i] == Terrain.WALL &&
-					map[i - getWidth()] == Terrain.WALL &&
-					map[i + getWidth()] == Terrain.WATER &&
+					map[i - width] == Terrain.WALL &&
+					map[i + width] == Terrain.WATER &&
 					Random.Int(2) == 0) {
 
 				map[i] = Terrain.WALL_DECO;
 			}
 		}
 
-		for (int i = getWidth() + 1; i < getLength() - getWidth() - 1; i++) {
+		for (int i = width + 1; i < length - width - 1; i++) {
 			if (map[i] == Terrain.EMPTY) {
 
 				int count =
 						(map[i + 1] == Terrain.WALL ? 1 : 0) +
 						(map[i - 1] == Terrain.WALL ? 1 : 0) +
-						(map[i + getWidth()] == Terrain.WALL ? 1 : 0) +
-						(map[i - getWidth()] == Terrain.WALL ? 1 : 0);
+						(map[i + width] == Terrain.WALL ? 1 : 0) +
+						(map[i - width] == Terrain.WALL ? 1 : 0);
 
 				if (Random.Int(16) < count * count) {
 					map[i] = Terrain.EMPTY_DECO;
@@ -98,7 +101,6 @@ public class SewerLevel extends RegularLevel {
 
 		placeEntranceSign();
 		placeBarrels(Random.Int(2));
-
 	}
 
 	@Override

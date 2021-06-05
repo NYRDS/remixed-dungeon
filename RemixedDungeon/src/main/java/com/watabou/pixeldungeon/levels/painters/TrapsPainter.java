@@ -29,6 +29,14 @@ import com.watabou.utils.Random;
 
 public class TrapsPainter extends Painter {
 
+//	public static Map<String, Float> traps = new HashMap<>();
+//	static {
+//		traps.put("ToxicTrap",3f);
+//		traps.put("ParalyticTrap",2f);
+//		traps.put("SummoningTrap",1f);
+//		traps.put("Chasm",1f);
+//	}
+
 	public static void paint( Level level, Room room ) {
 		 
 		Integer traps[] = {

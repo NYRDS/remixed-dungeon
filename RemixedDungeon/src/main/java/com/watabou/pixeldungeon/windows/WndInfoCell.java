@@ -56,7 +56,9 @@ public class WndInfoCell extends Window {
 		}
 
 		String title = level.tileNameByCell( cell );
-		if(obj != null) {
+		final boolean haveVisibleObject = obj != null && !obj.secret();
+
+		if(haveVisibleObject) {
 			title = obj.name();
 		}
 
@@ -73,7 +75,7 @@ public class WndInfoCell extends Window {
 
 		final char newLine = '\n';
 
-		if(obj != null) {
+		if(haveVisibleObject) {
 			LevelObjectSprite sprite = new LevelObjectSprite();
 			sprite.reset(obj);
 			float xs = obj.getSpriteXS();

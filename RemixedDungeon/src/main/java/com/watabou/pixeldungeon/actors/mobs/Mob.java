@@ -360,6 +360,8 @@ public abstract class Mob extends Char {
 	@Override
 	public void destroy() {
 
+    	spend(MICRO_TICK);
+
 		super.destroy();
 
 		level().mobs.remove(this);
