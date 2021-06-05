@@ -21,11 +21,16 @@ public class Input {
     }
 
     @LuaInterface
-    static public void showInputDialog(String title, String message) {
+    static public void showInputDialog(String title, String message, String defaultValue) {
         Activity activity = Game.instance();
         activity.runOnUiThread(() -> {
                     AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                     final EditText input = new EditText(activity);
+
+                    if(defaultValue!=null) {
+                        input.setText(defaultValue);
+                    }
+
                     builder
                             .setTitle(title)
                             .setMessage(message)
