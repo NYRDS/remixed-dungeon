@@ -2541,14 +2541,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="RoyalShield_desc">Цельнометаллический щит. О да, он тяжел, но только он может обеспечить максимальную защиту.</string>
   <string name="ShieldInfoTemplate">Этот щит заблокирует до %1$d очков урона. С шансом %2$d %%. Потребуется %3$3.1f секунд что бы привести его в готовность после успешного блока. </string>
   <string name="Belongings_CantWearBoth">Ты не можешь использовать %1$s и %2$s одновременно!</string>
-  <string name="Welcome_Text_29_3">
-    remix.29.3\n
-    - Геймплей:\n
-    -- Щиты!\n
-    - Моддинг:\n
-    -- Полностью моддабельные щиты!\n
-    - Багофиксы\n
-    </string>
   <string name="ShieldStrTemplate">Чтобы использовать этот щит как следует, его обладателю потребуется не меньше чем %1$d очков Силы.</string>
   <string name="town_deco_flowerinthepot_name">Цветок в горшке</string>
   <string name="town_deco_flowerinthepot_desc">Декоративное растение в милом горшке</string>
@@ -2632,36 +2624,26 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Кое-что ещё!\n
     - Исправление ошибок\n
     </string>
-
   <string name="InnKeeperNPC_Name">хозяин таверны</string>
   <string name="InnKeeperNPC_Name_Objective">хозяина таверны</string>
   <string name="InnKeeperNPC_Gender">masculine</string>
   <string name="InnKeeperNPC_Desc">Весьма самодовольный трактирщик.</string>
-
-
   <string name="DrunkardNPC_Name">пьяница</string>
   <string name="DrunkardNPC_Name_Objective">пьяницу</string>
   <string name="DrunkardNPC_Gender">masculine</string>
   <string name="DrunkardNPC_Desc">Завсегдатай трактира в своём обычном состоянии. </string>
-
-
   <string name="MercenaryNPC_Name">наёмник</string>
   <string name="MercenaryNPC_Name_Objective">наёмника</string>
   <string name="MercenaryNPC_Gender">masculine</string>
   <string name="MercenaryNPC_Desc">Крепко сбитый малый.</string>
-
-
   <string name="ServantNPC_Name">официантка</string>
   <string name="ServantNPC_Name_Objective">официантку</string>
   <string name="ServantNPC_Gender">feminine</string>
   <string name="ServantNPC_Desc">Очень занятая официантка.</string>
-
-
   <string name="BardNPC_Name">бард</string>
   <string name="BardNPC_Name_Objective">барда</string>
   <string name="BardNPC_Gender">masculine</string>
   <string name="BardNPC_Desc">Городской бард играет на лютне.</string>
-
   <string name="Welcome_Text_30">
     remix.30.0\n
     - Геймплей:\n
@@ -2669,56 +2651,37 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Гостиница открылась!\n
     - Исправление ошибок\n
     </string>
-
-
   <string name="Roar_Name">Рёв</string>
   <string name="Roar_Info">Этот могучий рёв вне всяких сомнений ужаснёт врагов и воодушевит друзей.</string>
-
   <string name="LightningBolt_Name">Молния</string>
   <string name="LightningBolt_Info">Заклятье известное ещё древнейшим шаманам вдарит по твоим врагам. 
 Эффект удвоится, если враги окажутся достаточно глупы, чтобы стоять на воде.</string>
-
   <string name="Heal_Name">Исцеление</string>
   <string name="Heal_Info">Довольно полезное заклятье в Подземелье, верно?</string>
-
   <string name="Order_Name">Приказ</string>
   <string name="Order_Info">При должной концентрации твои приказы почти неоспоримы.</string>
   <string name="Order_Resist">Да как ты смеешь?!!</string>
-
   <string name="Spell_SelectAChar">Выбери цель (существо).</string>
-
   <string name="Calm_Name">Успокоение</string>
   <string name="Calm_Info">Вокруг так много злобы и агрессии, давайте поможем им.</string>
-
   <string name="CharmSpell_Name">Очарование</string>
   <string name="CharmSpell_Info">Каждый нужно немного любви, ведь так?</string>
-
   <string name="HideInGrassSpell_Name">Прятки</string>
   <string name="HideInGrassSpell_Info">Твоё искусство игры в прятки совершенно.</string>
   <string name="HideInGrassSpell_NeedGrassToHide">Даже я не могу спрятаться на пустом месте.</string>
-
-
   <string name="MagicArrow_Name">Волшебная стрела</string>
   <string name="MagicArrow_Info">Старая добрая волшебная стрела, отличный выбор когда закончились боеприпасы.</string>
-
   <string name="NatureArmorSpell_Name">Природная Броня</string>
   <string name="NatureArmorSpell_Info">Эльфы тоже могут танковать, особенно когда они под защитой самой Матери Природы.</string>
-
   <string name="ShootInEye_Name">Раз и в Глаз</string>
   <string name="ShootInEye_Info">Используй свои исключительные способности, чтобы засадить врагу прямо в глаз, если он у него есть конечно же.</string>
-
-
   <string name="Sprout_Name">Росток</string>
   <string name="Sprout_Info">Пробуди спящие семена.\nОднако, для успеха этого заклятья нужно чтобы в земле присутствовала растительная жизнь.</string>
-
-
   <string name="SummonBeast_Name">Зов Зверя</string>
   <string name="SummonBeast_Info">Попытка призвать орду свирепых зверей под твоё начало.\nУспех не гарантирован.</string>
   <string name="SummonBeast_AtYourCommand">Слушаю и повинуюсь!</string>
-
   <string name="WndSettings_RecordVideo">Запись видео</string>
   <string name="Dungeon_saveIoError">При попытке создать файл сохранения:</string>
-
   <string name="town_table_fortune_ball_name">Хрустальный шар</string>
   <string name="town_table_fortune_ball_desc">Хрустальный шар, с загадочной дымкой внутри.</string>
   <string name="town_deco_shelf_full_name">Полка</string>
@@ -2765,15 +2728,52 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="town_deco_charcoal_carpet_desc">Заботясь о комфорте гостей, администрация кинотеатра выбрала самые качественные ковры угольно-черного цвета.</string>
   <string name="town_deco_magenta_carpet_name">Ковер</string>
   <string name="town_deco_magenta_carpet_desc">Пурпурный оттенок этого ковра, навевает мысли о городском вине.</string>
-  
   <string name="InnServant_Phrase_1">Тьфу, еще столько нужно сделать!</string>
   <string name="InnServant_Phrase_2">Этот пьяница сводит меня с ума!</string>
   <string name="InnServant_Phrase_3">Вроде бы чисто</string>
   <string name="InnServant_Phrase_4">Ой, сегодня так много гостей</string>
-
   <string name="Drunkard_Phrase_1">НАЛЕЙТЕ КА МНЕ ЕЩЁ!</string>
   <string name="Drunkard_Phrase_2">Зачем вода, когда есть пиво!</string>
   <string name="Drunkard_Phrase_3">Это пиво или грязь?</string>
   <string name="Drunkard_Phrase_4">Zzzzzz...</string>
-
+  <string name="HeroSubClass_NameWitchdoctor">знахарь</string>
+  <string name="HeroSubClass_NameGuardian">страж</string>
+  <string name="Gnoll_BecomeWitchdoctorDesc">Стать Знахарем</string>
+  <string name="Gnoll_BecomeGuardianDesc">Стать Стражем</string>
+  <string name="HeroSubClass_DescWitchdoctor">Использование заклятий наделяет _Знахаря_ магическим щитом полностью блокирующим урон.</string>
+  <string name="HeroSubClass_DescGuardian">Непревзойденное мастерство защиты позволяет _Стражам_ контратаковать щитом, и горе тем кто посмеет атаковать такую крепость.</string>
+  <string name="Potion_Colors_12">эпидотовое</string>
+  <string name="Potion_Colors_13">кварцем</string>
+  <string name="Potion_Colors_14">ониксом</string>
+  <string name="Potion_Colors_15">жемчужное</string>
+  <string name="ManaShieldBuff_Name">Магический щит</string>
+  <string name="ManaShieldBuff_Info">Магический щит</string>
+  <string name="TenguLiver_Name">Печень Тенгу</string>
+  <string name="TenguLiver_Info">Печень могучего врага. Один только взгляд на неё пробуждает в тебе животное начало: вонзить, разорвать, поглотить.</string>
+  <string name="PotionOfMana_Name">Зелье Маны</string>
+  <string name="PotionOfMana_Info">Это зелье восстановит твою духовную энергию.</string>
+  <string name="WndFortuneTeller_IdentifyAll">Всё</string>
+  <string name="Snail_Name">Улитка</string>
+  <string name="Snail_Gender">masculine</string>
+  <string name="Snail_Name_Objective">Улитку</string>
+  <string name="Snail_Desc">Этот моллюск неплохо откормился на сточных водах, скорости это ему однако не прибавило. Лёгкая добыча.</string>
+  <string name="DeepSnail_Name">Пещерная Улитка</string>
+  <string name="DeepSnail_Gender">masculine</string>
+  <string name="DeepSnail_Name_Objective">Улитку</string>
+  <string name="DeepSnail_Desc">Этот вид моллюсков чаще всего можно встретить вблизи источников и они куда резвее обычных улиток. А ещё они больно кусаются и покрыты слегка ядовитой слизью.</string>
+  <string name="CharInfo_Level">Это существо: %2$sуровня %1$d.</string>
+  <string name="WrnExperimental_realtime">Включен режим Realtime!: это теперь ниразу не пошаговый рогалик, тапай быстро или умри\nХочешь покопаться в рюкзаке?\nСмелее, но учти краб тем временем покопается в твоих кишках.</string>
+  <string name="WrnExperimental_moveTimeout">На ход отведено не более %dмиллисекунд, думай быстро!</string>
+  <string name="WnrExperimental_hint">Если этот странный и безумный мир слишком суров для вас, отключите эти параметры: \ nСтартовый экран-> Параметры-> Геймплей \ nи запустите новую игру или загрузите другое сохранение. </string>
+  <string name="WrnExperimental_title">Включены экспериментальные опции!</string>
+  <string name="Welcome_Text_30_1">
+    remix.30.1\n
+    - Геймплей:\n
+    -- Подклассы Гнолла!\n
+    -- Улитки!\n
+    -- Понерфлена скорость апгрейда предметов Хаоса.\n
+    -- Зелье маны - теперь обычное зелье.\n
+    -- Добывать значки, и открывать классы теперь можно и в официальных DLC (но не в модах). \n
+    - Исправлены ошибки\n
+    </string>
 </resources>
