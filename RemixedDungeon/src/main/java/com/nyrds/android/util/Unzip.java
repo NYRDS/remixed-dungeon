@@ -1,6 +1,7 @@
 package com.nyrds.android.util;
 
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -21,8 +22,8 @@ public class Unzip {
 
 	private static final int    BUFFER_SIZE = 16384;
 
-	static public Mods.ModDesc inspectMod(InputStream fin) {
-		Mods.ModDesc ret = new Mods.ModDesc();
+	static public ModDesc inspectMod(InputStream fin) {
+		ModDesc ret = new ModDesc();
 		ret.name = Utils.EMPTY_STRING;
 
 		try {
@@ -31,18 +32,12 @@ public class Unzip {
 
 			while ((ze = zin.getNextEntry()) != null) {
 
-				if (ze.isDirectory() && ret.installTo.isEmpty()) {
-					ret.installTo = ze.getName().replace("/","");
+				if (ze.isDirectory() && ret.installDir.isEmpty()) {
+					ret.installDir = ze.getName().replace("/","");
 				} else {
 					if(ze.getName().contains("version.json")) {
 						var modVersion = JsonHelper.readJsonFromStream(zin);
-						ret.version   = modVersion.getInt("version");
-						ret.author    = modVersion.optString("author", "Unknown");
-						ret.description = modVersion.optString("description", "");
-						ret.name      = modVersion.optString("name", ret.installTo);
-						ret.url       = modVersion.optString("url", "");
-						ret.hrVersion = modVersion.optString("hr_version", String.valueOf(ret.version));
-						ret.rpdVersion = modVersion.optInt("rpd_version", 0);
+						ModDesc.fromJson(ret, modVersion);
 					}
 					zin.closeEntry();
 				}

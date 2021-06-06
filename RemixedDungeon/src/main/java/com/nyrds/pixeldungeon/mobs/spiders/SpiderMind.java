@@ -14,6 +14,8 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
+import lombok.val;
+
 public class SpiderMind extends Mob {
 
 	private static final Class<?>[] BuffsForEnemy = {
@@ -26,7 +28,10 @@ public class SpiderMind extends Mob {
 		hp(ht(5));
 		baseDefenseSkill = 1;
 		baseAttackSkill  = 10;
-		baseSpeed = 1.5f;
+		baseSpeed = 0.5f;
+		dmgMin = 0;
+		dmgMax = 0;
+		dr = 0;
 		
 		exp = 6;
 		maxLvl = 9;
@@ -41,7 +46,7 @@ public class SpiderMind extends Mob {
 	
 	@Override
 	public int zapProc(@NotNull Char enemy, int damage ) {
-		Class <? extends FlavourBuff> buffClass = (Class<? extends FlavourBuff>) Random.oneOf(BuffsForEnemy);
+		val buffClass = (Class<? extends FlavourBuff>) Random.oneOf(BuffsForEnemy);
 		Buff.prolong( enemy, buffClass, 3 );
 
 		return 0;
@@ -54,15 +59,5 @@ public class SpiderMind extends Mob {
 		} else {
 			return super.getCloser( target );
 		}
-	}
-	
-	@Override
-	public int damageRoll() {
-		return 0;
-	}
-
-	@Override
-	public int dr() {
-		return 0;
 	}
 }

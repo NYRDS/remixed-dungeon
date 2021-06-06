@@ -9,7 +9,7 @@
   <string name="SummonDeathling_Info">Przyzywa nieumarłego kompana.Życie nieumarłego oraz jego obrażenie rosną wraz z poziomem bohatera. \n\nLimit przywoływanych jednostek:%1$d(+ 1 na każdy poziom Magi )</string>
   <string name="Ignite_Name">Podpalenie</string>
   <string name="Ignite_Info">Podpala zaznaczoną komórkę,Może być użyty do podpalania traw, postaci oraz obiektów</string>
-  <string name="RootSpell_Name">Oplecienie</string>
+  <string name="RootSpell_Name">Oplecenie</string>
   <string name="RootSpell_Info">Oplata wybraną postać, sprawia że nie może się poruszać przez krótki okres czasu.</string>
   <string name="WindGust_Name">Powiew wiatru</string>
   <string name="WindGust_Info">Tworzy podmuch który odpycha wybraną postać.</string>
@@ -21,11 +21,11 @@
   <string name="Healing_Info">To zaklęcie jest niezwykle istotne dla każdego podróżnika. Odnawia ono 1/3 życia rzucającego.</string>
   <string name="ClassArmor_LowMana">Za mało many!</string>
   <string name="Drink_ACDrink">PIJ</string>
-  <string name="Drink_Message">Ten napój był orzeźwiający. </string>
+  <string name="Drink_Message">Orzeźwiające!</string>
   <string name="TomeOfKnowledge_Name">Księga Wiedzy</string>
   <string name="TomeOfKnowledge_Info">Ta tajemnicza księga wypełniona jest tajemniczymi zagadkami i tajemnicami !  Może i jest trudna do przeczytania, ale jeśli zdołasz ją przeczytać, na pewno zwiększysz swoją moc magiczną.</string>
   <string name="SpellBook_Name">Księga zaklęć</string>
-  <string name="SpellBook_Info">Wygląda to bardziej na zbiór kartek zszytych ze sobą ,niż na książkę.  Być może coś z tego wykombinujesz jeśli dostatecznie się skupisz.</string>
+  <string name="SpellBook_Info">\"Książka\" ta z wyglądu bardziej przypomina zbiór losowy stron, jednak  jeśli odpowiednio się nad nią skupisz może będziesz w stanie coś z niej zrozumieć.</string>
   <string name="SpellBook_Info_Identified">Pośród kartek odnalazłeś pełny tekst zaklęcia \"%1$s\".\n\" %2$s \"</string>
   <string name="ManaPotion_Name">Mikstura Many</string>
   <string name="ManaPotion_Info">Ta mikstura odnowi twoją duchową energię.</string>
@@ -75,17 +75,17 @@
   <string name="ChaosCrystal_Name">Dziwny kryształ</string>
   <string name="ChaosCrystal_Name_1">Chaotyczny kryształ</string>
   <string name="ChaosCrystal_Name_2">Kryształ chaosu</string>
-  <string name="ChaosCrystal_Info">Kiedy go trzymasz czujesz przepływy energii biegnące po twoich dłoniach.</string>
-  <string name="ChaosCrystal_Info_1">Chaotyczne moce płyną przez ten kryształ. Być może będzie przydatny. </string>
+  <string name="ChaosCrystal_Info">Trzymając go w dłoniach odczuwasz przepływ dźiwnej energii.</string>
+  <string name="ChaosCrystal_Info_1">Moce chaosu wypełniają ten krzyształ. Wygląda na to że może się ci na coś przydać.</string>
   <string name="ChaosCrystal_Info_2">TAK! Teraz już wiesz że możesz go połączyć z jednym ze swoich przedmiotów, ale co dalej ?</string>
   <string name="ChaosCrystal_Use">UŻYJ</string>
   <string name="ChaosCrystal_Fuse">POŁĄCZ</string>
   <string name="ChaosCrystal_Prompt">Wybierz miejsce aby ustawić Maskę Chaosu</string>
   <string name="ChaosCrystal_SelectForFuse">Wybierz przedmiot z którym połączy Kryształ Chaosu</string>
-  <string name="ChaosCrystal_ScrollFused">Kryształ pochłonięty przez runy zapisane na tym zwoju, teraz jest %s</string>
-  <string name="ChaosCrystal_SwordFused">Kryształ pochłoną twoją bron i przybrał formę Miecza</string>
-  <string name="ChaosCrystal_BowFused">Kryształ pochłoną twój łuk i przybrał formę Łuku</string>
-  <string name="ChaosCrystal_StaffFused">Kryształ pochłoną twoją różdżkę i przybrał formę Laski</string>
+  <string name="ChaosCrystal_ScrollFused">Kryształ został pochłonięty przez runy zapisane na tym zwoju, i stał się teraz %s</string>
+  <string name="ChaosCrystal_SwordFused">Po pochłonięciu twojej broni, kryształ przybrał formę Miecza.</string>
+  <string name="ChaosCrystal_BowFused">Po pochłonięciu twego łuku , kryształ przybrał formę Łuku.</string>
+  <string name="ChaosCrystal_StaffFused">Po pochłonięciu twojej różdżki, kryształ przybrał formę Laski Magicznej.</string>
   <string name="CorpseDust_Buff">Żądza krwi</string>
   <string name="DriedRose_Buff">Czarujący</string>
   <string name="DriedRose_CursedBuff">Zakochany</string>
@@ -109,26 +109,25 @@
   <string name="deco_candle_name">Świeczka</string>
   <string name="deco_candle_desc">Duża świeczka</string>
   <string name="Possess_Name">Opętanie</string>
-  <string name="Possess_Info">Mroczna sztuka kontroli umysłu pozwala rzucającemu nagiąć wolę większości istot</string>
+  <string name="Possess_Info">Ta mroczna sztuka kontroli umysłu jest w stanie pozbawić wolnej woli większość istot.</string>
   <string name="Possess_PossessionFailed">Wola  \"%s\"  jest zbyt silna</string>
   <string name="Possess_Possessed">%s czeka na twoje rozkazy</string>
-  <string name="Possess_MustTargetChar">Tylko istoty mogą być opętane</string>
   <string name="Possess_CantPossessSelf">Nie możesz sam siebie opętać</string>
   <string name="Mob_StaControlledStatus">Ten %s jest opętany przez nieludzką siłę</string>
   <string name="BlackCat_AiStatus">Ten kot robi to co koty lubią najbardziej.</string>
   <string name="Shopkeeper_Buy">Wybierz przedmiot do kupienia</string>
   <string name="Shopkeeper_title">Sklep</string>
-  <string name="Shopkeeper_text">Witamy w lolalnym Pixel-Mart\'cie \nW czym mogę pomóc ?</string>
-  <string name="Shopkeeper_SellPrompt">Chciałbym sprzedać trochę rzeczy.</string>
+  <string name="Shopkeeper_text">Witamy w Pixel-Mart\'cie! \nW czym mogę pomóc ?</string>
+  <string name="Shopkeeper_SellPrompt">Mam kilka rzeczy na sprzedaż</string>
   <string name="Shopkeeper_BuyPrompt">Pokaż mi swoje towary.</string>
   <string name="WndTradeItem_BuyN">Kup %1$d za %2$dg</string>
   <string name="WndTradeItem_BuyAll">Kup wszystko za %dg</string>
   <string name="WndTradeItem_SellN">Sprzedaj %1$d za %2$dg</string>
   <string name="WndBag_BuySubtitle">Zebrałeś %d złota</string>
   <string name="town_deco_weaponboard_name">Broń</string>
-  <string name="town_deco_weaponboard_desc">Jakaś broń wisząca na desce.</string>
+  <string name="town_deco_weaponboard_desc">Broń wisząca na desce.</string>
   <string name="town_deco_shieldboard_name">Tarcze</string>
-  <string name="town_deco_shieldboard_desc">Różnorakie tarcze wiszące na desce. Jeszcze nie na sprzedaż.</string>
+  <string name="town_deco_shieldboard_desc">Różnorakie tarcze wiszące na tablicy. Nie nie możesz ich kupić.</string>
   <string name="town_deco_armoronhanger_name">Zbroja</string>
   <string name="town_deco_armoronhanger_desc">Jakaś zbroja wisząca na wieszaku.</string>
   <string name="town_deco_potions_name">Mikstury.</string>
@@ -149,6 +148,26 @@
   <string name="town_deco_pedestal_desc">Piedestał z świętą księgą.</string>
   <string name="town_deco_shelf_name">Półki</string>
   <string name="town_deco_shelf_desc">Puste półki</string>
+  <string name="town_deco_banner_name">Szyld</string>
+  <string name="town_deco_banner_desc">Na tym zdobionym szyldzie widnieje symbol tawerny.</string>
+  <string name="town_deco_inn_bed_name">Łóżko</string>
+  <string name="town_deco_inn_bed_desc">Wygląda na bardzo wygodne.</string>
+  <string name="town_deco_furnace_name">Piec</string>
+  <string name="town_deco_furnace_desc">Ten piec piekarski został złożony korzystając z tradycyjnych schematów</string>
+  <string name="town_deco_skullboard_name">Półka na trofea</string>
+  <string name="town_deco_skullboard_desc">Czaszka ta wspaniale odzwierciedla niespodziewany moment grozy.</string>
+  <string name="town_deco_stool_sturdy_name">Taboret</string>
+  <string name="town_deco_stool_sturdy_desc">Zwyczajny taboret wykonany z niezwykle wytrzymałego drewna.</string>
+  <string name="town_deco_stool_broken_name">Zniszczony taboret.</string>
+  <string name="town_deco_stool_broken_desc">Lata świetnośći tego taboretu są już za nami.</string>
+  <string name="town_deco_shelving_name">Regały</string>
+  <string name="town_deco_shelving_desc">Niesamowicie duży regał, na jego półkach możesz znaleźć różnorakie napoje oraz przekąski.</string>
+  <string name="town_deco_barrel_wine_name">Beczka wina</string>
+  <string name="town_deco_barrel_wine_desc">Używana do przechowywania szlachetnych trunków takich jak wino.</string>
+  <string name="town_deco_crate_bottles_name">Zgrzewka piwa.</string>
+  <string name="town_deco_crate_bottles_desc">Butelkowane piwo stało się niewzykle popularne wśród karczmarzy.</string>
+  <string name="town_deco_wall_brazier_name">Ozdobne metalowe palenisko</string>
+  <string name="town_deco_wall_brazier_desc">Para unosząca się z tlącego się żaru wypałnia pokój przyjemnymi aromatami.</string>
   <string name="WndPriest_Instruction2_m">Witaj synu, Witaj w świętym kościele Świętego Władcy Podziemi!</string>
   <string name="WndPriest_Instruction2_f">Witaj Córko, Witaj w świętym kościele Świętego Władcy podziemi!</string>
   <string name="WndPriest_Instruction2">Jeśli szukasz pomocy, Ja mogę zapewnić ci leczenie tylko za %dzłotych monet! jeśli szukasz błogosławieństwa albo nie daj boże masz klątwę, Proszę spotkaj się z biskupem w naszym pokornym kościele.</string>
@@ -2512,26 +2531,16 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="town_deco_stone_wall_broken_desc">Stara , uszkodzona kamienna ściana.</string>
   <string name="Challenges_Names_6">Zapomniane runy</string>
   <string name="Challenges_Names_7">Pacyfizm</string>
-  <string name="Welcome_Text_29_2">
-remix.29.2\n
--Rozgrywka:\n
---Nowe wyzwania\n
----Zapomniane runy:\n
----Pacyfizm:\n
--Modowanie\n
---Niestandardowe artefakty\n
--Naprawy błędów\n
-</string>
   <string name="town_deco_crossroad_name">Tabliczka na rozdrożu </string>
   <string name="town_deco_crossroad_desc">Szorstki drewniany słup z tekstem w kształcie strzałek, na którym już dawno wyblakły, prawdopodobnie z powodu trudnych warunków pogodowych.</string>
   <string name="ShieldBuffReady_Name">Gotowy</string>
   <string name="ShieldBuffNotReady_Name">Nie gotowy</string>
   <string name="WoodenShield_name">Drewniana Tarcza</string>
-  <string name="WoodenShield_desc">Drewniana tarcza jest najprostszą dostępną tarczą. Jest okrągłą i może zablokować niektóre ataki , czasami...</string>
+  <string name="WoodenShield_desc">Ta niestarannie wykonana tarcza jest najogólniej dostępną tarczą na rynku. Jest okrągła i może gdy się postarasz zablokujesz jakiś atak, może...</string>
   <string name="ToughShield_name">Wzmocniona skórzana tarcza</string>
-  <string name="ToughShield_desc">Ta tarcza wzmocniona skórzanymi paskami tarcza wygląda mocniej niż drewniana. Na pewno może zablokować więcej obrażeń.</string>
+  <string name="ToughShield_desc">Tarcza wygląd na wiele solidniejszą od drewnianiej, została wzmocniona z użyciem skórzanych ścięgien. Z pewnością będziesz w stanie zablokować więcej ciosów.</string>
   <string name="StrongShield_name">Płytowa brązowa tarcza</string>
-  <string name="StrongShield_desc">Ta prostokątna tarcza pokryta brązowymi płytami i ozdobiona kolorową tkaniną. Jest znacznie cięższa, ale może blokować znacznie więcej obrażeń.</string>
+  <string name="StrongShield_desc">Ta dekorowana kolorową tkaniną prostokątna tarcza wzmocniona została płytami z brazu. Pomimo jej znaczącej wagi jesteś pewien że jest on w stanie zablokować o wiele więcej ciosów. </string>
   <string name="RoyalShield_name">Królewska Tarcza</string>
   <string name="RoyalShield_desc">W pełni metalowa tarcza. Tak, jest ciężka ale tylko w ona zapewni ci najlepszą ochronę.</string>
   <string name="ShieldInfoTemplate">Ta tarcza zablokuje atak o sile %1$d z %2$d%% szansą.  Podniesienie gardy zajmie %3$3.1f sekund po udanym bloku.</string>
@@ -2561,9 +2570,9 @@ remix.29.3/n
         Zespół NYRDS w żaden sposób nie jest odpowiedzialny za zawartość, jakość lub stabilność modów.\n
         Pobieraj je na swoją własną odpowiedzialność i baw się dobrze!\n
     </string>
-  <string name="ShieldWeaponInfo">Kiedy użyte jako broń ta tarcza pochłonie średnio%1$d obrażeń. </string>
+  <string name="ShieldWeaponInfo">Gdy tarcza ta używana jest jako broń, zada ona  %1$d średnich obrażeń.</string>
   <string name="TownPortal_Name">Portal miejski</string>
-  <string name="TownPortal_Info">To zaklęcie pozwala ci natychmiast powrócić do bezpiecznego miejsca. Jednak potężne źródło magii w pobliżu może uniemożliwić jego działanie zgodnie z przeznaczeniem.</string>
+  <string name="TownPortal_Info">Zaklęcie to pozwoli natychmiastowo powrócić od schronienia. Jednakże, niezwykle potężnie źródła magii, mogą zaburzyć jego prawidłowe działanie.</string>
   <string name="MedicineMask_Name">Maska Chirurgiczna</string>
   <string name="MedicineMask_Info">Maska chirurgiczna przeznaczona jest do wychwytywania mikroorganizmów wydychanych  z ust i nosa użytkownika.
 \n\n Noszenie maski oznacza, że ​​zależy Ci na innych.</string>
@@ -2580,11 +2589,11 @@ remix.29.3/n
   <string name="Backstab_Name">Cios w plecy</string>
   <string name="Backstab_Info">Cichy cios w plecy. Nieuczciwy ale ekstremalnie efektywny, obrażenia będą rosnąc razem z poziom postaci.n\n Udany cios ignoruje pancerz  i specjalne umiejętności obronne ofiary.</string>
   <string name="Backstab_TooFar">Ofiara jest za daleko.</string>
-  <string name="Backstab_Aware">Ofiara nie powinna się spodziewać twojego ciosu</string>
+  <string name="Backstab_Aware">Ofiara nie powinna się spodziewać dobrego dźganka w plecy.</string>
   <string name="KunaiThrow_Name">Rzut Kunai</string>
-  <string name="KunaiThrow_Info">Śmiercionośny rzut kunai będzie wykonany ekstremalnie szybko, tak szybko że nawet nie będziesz w stanie wybrać celu.\n\nPrawdziwi mistrzowie są zdolni rzucić więcej niż jednym Kunai jednocześnie.</string>
+  <string name="KunaiThrow_Info">Ten Śmiercionośny Rzut Kunai jest wykonywany tak szybko, że nie zdążysz nawet wybrać swojego celu.\n\nPrawdziwy Mistrz jest w stanie wykonać więcej niż jeden rzut na raz.</string>
   <string name="Haste_Name">Ekstremalny Pośpiech</string>
-  <string name="Haste_Info">Pośpiech pozwoli poruszać się z ekstremalną prędkością, wszystko wokół niego będzie się wydawać statyczne. Taki pośpiech zużywa dużo energii, więc jest to możliwe tylko przez krótki okres czasu.\n\nUzdolniony mistrz jest w stanie działać w pośpiechu przez dłuższy czas.</string>
+  <string name="Haste_Info">Używająć Pośpiechu zyskuje się niesamowite prędkości, takie aż wszytko wokół zamiera w miejscu .Wykorzystuje ono jednak dużo energii, więc można go urzywać jedynie przez krótki okres czasu.\n\nMistrzowie Pośpiechu są w stanie zostać w nim dłużej.</string>
   <string name="Welcome_Text_29_5"> remix.29.5\n
 - Rozgrywka:\n
 -- Nowe umięjetności Łotra!!\n
@@ -2612,7 +2621,7 @@ remix.29.3/n
   <string name="Stun_Info">Ogłuszony</string>
   <string name="Char_StaStunned">ogłuszony</string>
   <string name="Mob_ReadyForOrder">%s gotowy na twoje rozkazy</string>
-  <string name="Mob_CantDoIt">Nie mogę tego zrobić, Mam łapy</string>
+  <string name="Mob_CantDoIt">Nie mogę tego zrobić. Mam drobne łapy.</string>
   <string name="Welcome_Text_29_6">
 remix.29.6\n
 -Rozgrywka:\n
@@ -2622,4 +2631,140 @@ remix.29.6\n
 -- Więcej różnych rzeczy!:\n
 -Poprawki błędów:\n
 </string>
+  <string name="InnKeeperNPC_Name">Karczmarz</string>
+  <string name="InnKeeperNPC_Name_Objective">karczmarz</string>
+  <string name="InnKeeperNPC_Gender">meski</string>
+  <string name="InnKeeperNPC_Desc">Karczmarz jest dumny z siebie.</string>
+  <string name="DrunkardNPC_Name">pijaczyna</string>
+  <string name="DrunkardNPC_Name_Objective">pijaczyna</string>
+  <string name="DrunkardNPC_Gender">meski</string>
+  <string name="DrunkardNPC_Desc">Stały bywalec karczmy, jak zwykle pijany...</string>
+  <string name="MercenaryNPC_Name">najemnik</string>
+  <string name="MercenaryNPC_Name_Objective">najemnik</string>
+  <string name="MercenaryNPC_Gender">meski</string>
+  <string name="MercenaryNPC_Desc">Krzepko wyglądający mężczyzna.</string>
+  <string name="ServantNPC_Name">Służący</string>
+  <string name="ServantNPC_Name_Objective">Służący</string>
+  <string name="ServantNPC_Gender">damski</string>
+  <string name="ServantNPC_Desc">Bardzo zajęty służący.</string>
+  <string name="BardNPC_Name">bard</string>
+  <string name="BardNPC_Name_Objective">bard</string>
+  <string name="BardNPC_Gender">meski</string>
+  <string name="BardNPC_Desc">Miejski bard gra na swojej lutni.</string>
+  <string name="Welcome_Text_30">
+    remix.30.0\n
+    - Rozgrywka:\n
+    -- Umiejętności dla Wszystkich!\n
+    -- Karczma rozpoczyna działalność!\n
+    - Naprawa blędów\n
+    </string>
+  <string name="Roar_Name">Ryk</string>
+  <string name="Roar_Info">Ten donośny ryk wzbudza grozę wsród twych przeciwników jednocześnie inspirując kompanów.</string>
+  <string name="LightningBolt_Name">Piorun</string>
+  <string name="LightningBolt_Info">To przekazywane wsród starożytnych szamanów zaklęcie porazi twoich przeciwników z zdwojoną mocą, szczególnie jeśli są na tyle głupi aby stać w wodzie.</string>
+  <string name="Heal_Name">Leczenie</string>
+  <string name="Heal_Info">Bez niego do Podziemi ani rusz, prawda ?</string>
+  <string name="Order_Name">Rozkaz</string>
+  <string name="Order_Info">Przy odpowiednim skupieniu twoje rozkazy są niemal niepodważalne!</string>
+  <string name="Order_Resist">Jak śmiesz?!!</string>
+  <string name="Spell_SelectAChar">Wybierz istotę jako cel.</string>
+  <string name="Calm_Name">Spokój</string>
+  <string name="Calm_Info">Sporo tu  rozwścieczonych istot, pomóżmy im.</string>
+  <string name="CharmSpell_Name">Urok</string>
+  <string name="CharmSpell_Info">Każdy zasługuje na odrobinę miłośći. Nie?</string>
+  <string name="HideInGrassSpell_Name">ZaklęcieSchowajWTrawie</string>
+  <string name="HideInGrassSpell_Info">Jesteś teraz mistrzem chowanego.</string>
+  <string name="HideInGrassSpell_NeedGrassToHide">Gdzie jest ta trawa kiedy jej potrzebuję!</string>
+  <string name="MagicArrow_Name">Magiczna Strzała </string>
+  <string name="MagicArrow_Info">Stara dobra magiczna strzała. idealna kiedy nie masz już amunicji.</string>
+  <string name="NatureArmorSpell_Name">Zbroja Przyrody.</string>
+  <string name="NatureArmorSpell_Info">Elfy też potrafią być twarde! Szczególnie kiedy Matka Natura sama sprawuje nad nimi pieczę.</string>
+  <string name="ShootInEye_Name">Strzał W Oko</string>
+  <string name="ShootInEye_Info">Z urzyciem twoich niezwykłych zdolności strzeleckich strzel wroga prosto w oko, jeśli jakieś ma...</string>
+  <string name="Sprout_Name">Kiełkowanie</string>
+  <string name="Sprout_Info">Pobódz nasiona.\nJednakże, aby zaklęcie zadziałało na ziemi musi znajdować się jakegoś typu roślinność.</string>
+  <string name="SummonBeast_Name">Przyzwanie Bestii</string>
+  <string name="SummonBeast_Info">Przyzwił hordę potężnych bestii pod twoją kontrolę.\nWynik zaklęcia jest zmienny.</string>
+  <string name="SummonBeast_AtYourCommand">NA ROZKAZ !</string>
+  <string name="WndSettings_RecordVideo">Nagranie wideo.</string>
+  <string name="Dungeon_saveIoError">Przy próbie zapisu wystąpił:</string>
+  <string name="town_table_fortune_ball_name">Kryształowa kula</string>
+  <string name="town_table_fortune_ball_desc">Kryształowa kula wypełniona jest tajemniczą mgłą.</string>
+  <string name="town_deco_shelf_full_name">Półka</string>
+  <string name="town_deco_shelf_full_desc">Na półce zauważyć można róźnorakie drobiazgi.</string>
+  <string name="town_deco_skulls_name">Czaszki</string>
+  <string name="town_deco_skulls_desc">Wypolerowane czaszki należące do poczwar zamieszkujących podziemia.</string>
+  <string name="town_deco_urn_name">Urna</string>
+  <string name="town_deco_urn_desc">Gliniana urna, prawdopodomnie wypełniona prochami zmarłego.</string>
+  <string name="town_deco_crate_name">Skrzynia</string>
+  <string name="town_deco_crate_desc">Wytrzymała skrzynia która wewnątrz skrywaja sekrety.</string>
+  <string name="town_deco_crate_scrolls_name">Skrznia ze zwojami</string>
+  <string name="town_deco_crate_scrolls_desc">Tajemnicze zwoje wypełniają skyrznię po brzegi.</string>
+  <string name="town_deco_cabinet_name">Gablota</string>
+  <string name="town_deco_cabinet_desc">Przepastna gablota z wieloma drzwiczkami oraz półkami.</string>
+  <string name="town_deco_clock_name">Zegar</string>
+  <string name="town_deco_clock_desc">Wskazówki pozostają w bezruchu od wielu lat.</string>
+  <string name="town_deco_poster_name">Plakat</string>
+  <string name="town_deco_poster_desc">Ulotki reklamujące przyszłe seanse kinowe.</string>
+  <string name="town_deco_ladder_name">Drabina</string>
+  <string name="town_deco_ladder_desc">Stara drabina, jej wygląd daje wiele do życzenia.</string>
+  <string name="town_deco_weaponrack_name">Stojak na broń</string>
+  <string name="town_deco_weaponrack_desc">Bronie się tu znajdujące są o wiele za drogie na twoją kieszeń.</string>
+  <string name="town_deco_church_sign_name">Znak kościoła </string>
+  <string name="town_deco_church_sign_desc">Wygląda na to że znajduje się tu kościół.</string>
+  <string name="town_deco_statue_water_name">Pomnik anioła </string>
+  <string name="town_deco_statue_water_desc">Majestatyczny pomink anioła który trzyma w swych dłoniach misę z wodą.</string>
+  <string name="town_deco_statue_blood_name">Pomnik anioła </string>
+  <string name="town_deco_statue_blood_desc">Majestatyczny pomink anioła który trzyma w swych dłoniach misę z krwią.</string>
+  <string name="town_deco_vat_name">Kadź</string>
+  <string name="town_deco_vat_desc">Kadź ta wypełniona jest po brzegi wodą święconą.</string>
+  <string name="town_deco_armorstand_leather_name">Skurzana zbroja</string>
+  <string name="town_deco_armorstand_leather_desc">Niezawodna zbroja skurzana jest wspaniałym zakupem przed wyprawą w podziemia.</string>
+  <string name="town_deco_armorstand_scale_name">Zbroja łuskowa</string>
+  <string name="town_deco_armorstand_scale_desc">Zbroja składa się z pozłacancyh łusek które wyglądają jak nowe.</string>
+  <string name="town_deco_armorstand_plate_name">Zbroja Płytowa</string>
+  <string name="town_deco_armorstand_plate_desc">Według handłarza, ta ciężka zbroja płyto należała nieraz do wspaniałego wojownika.</string>
+  <string name="town_deco_red_carpet_name">Dywan</string>
+  <string name="town_deco_red_carpet_desc">Wedlóg plotek podobny czerwony dywan zdobi hale krasnludzkiej metropoli.</string>
+  <string name="town_deco_beige_carpet_name">Dywan</string>
+  <string name="town_deco_beige_carpet_desc">Ten berzowy dywan upleciony został z delikatnej gnolej wełny.</string>
+  <string name="town_deco_brown_carpet_name">Dywan</string>
+  <string name="town_deco_brown_carpet_desc">Ten brązowy dywan widział niejednego podróżnika czy włóczęgę.</string>
+  <string name="town_deco_charcoal_carpet_name">Dywan</string>
+  <string name="town_deco_charcoal_carpet_desc">Aby zapewnić konfort goścom, zarząd kina wybrał najwyższej jakości dywan o kolorze węgla</string>
+  <string name="town_deco_magenta_carpet_name">Dywan</string>
+  <string name="town_deco_magenta_carpet_desc">Dywan swym magentowym odcieniem sprawia że od razu przychodzi ci na myśl miejscowe wino.</string>
+  <string name="InnServant_Phrase_1">Ugh, wciąż tyle do zrobienia!</string>
+  <string name="InnServant_Phrase_2">Ten pijak doprowadza mnie do szału.</string>
+  <string name="InnServant_Phrase_3">Jak dla mnie to wygląda na czyste.</string>
+  <string name="InnServant_Phrase_4">Ojej, ale dzisaj ruch</string>
+  <string name="Drunkard_Phrase_1">Prosz wincyj goszały !</string>
+  <string name="Drunkard_Phrase_2">Kto potszepuje wody kierdy masz pifo.</string>
+  <string name="Drunkard_Phrase_3">To pifo smakje jak ziemia</string>
+  <string name="Drunkard_Phrase_4">Zzzzzz...</string>
+  <string name="HeroSubClass_NameWitchdoctor">szaman</string>
+  <string name="HeroSubClass_NameGuardian">obrońca</string>
+  <string name="Gnoll_BecomeWitchdoctorDesc">Zostań Szamanem</string>
+  <string name="Gnoll_BecomeGuardianDesc">Zostań Obrońcą</string>
+  <string name="HeroSubClass_DescWitchdoctor">Podczas rzucania zaklęć _Szaman_ chroniony jest magiczna tarczą która chron go przed wszelkimi obrażeniami.</string>
+  <string name="HeroSubClass_DescGuardian">Nabyta wiedza o obronie pozwoliła _Obrońcy_ na kontrę z użyciem tarczy, stał się więc on więc grożny  przeciwnikem dla tych co śmią atakować tę chodzącą fortecę. </string>
+  <string name="Potion_Colors_12">epidotowa</string>
+  <string name="Potion_Colors_13">kwarcowy</string>
+  <string name="Potion_Colors_14">onyksowy</string>
+  <string name="Potion_Colors_15">perłowa</string>
+  <string name="ManaShieldBuff_Name">Magiczna Tarcza</string>
+  <string name="ManaShieldBuff_Info">Magiczna Tarcza</string>
+  <string name="TenguLiver_Name">Wątroba Tengu</string>
+  <string name="TenguLiver_Info">Ta wątroba należy do potężnego wroga. Widząc ją , twój dziki instynkt przejmuje kontrolę i czujesz chęć, by ją skonsumować.</string>
+  <string name="PotionOfMana_Name">Mikstura Many</string>
+  <string name="PotionOfMana_Info">Ta mikstura odnowi twoją duchową energię.</string>
+  <string name="WndFortuneTeller_IdentifyAll">Wszystko</string>
+  <string name="Snail_Name">Ślimak</string>
+  <string name="Snail_Gender">meski</string>
+  <string name="Snail_Name_Objective">Ślimak</string>
+  <string name="Snail_Desc">Przebywanie w ściekach sprawiło iż ten maly mięczak wyrósł do niespotykanych rozmiarów,  jest on jednak dość łatwym przeciwnikiem z uwagi na jego ślamazarność.</string>
+  <string name="DeepSnail_Name">Ślimak Rogaty</string>
+  <string name="DeepSnail_Gender">meski</string>
+  <string name="DeepSnail_Name_Objective">Ślimak Rogaty.</string>
+  <string name="DeepSnail_Desc">Spotykany w pobliżu zbiorników wodnych, mięczaków ten przewyższa typowego ślimaka, jest szybszy ,groźniejszy, a jego ugryzienia owodują nieprzyjemne efekty na skórze ofiary.</string>
 </resources>

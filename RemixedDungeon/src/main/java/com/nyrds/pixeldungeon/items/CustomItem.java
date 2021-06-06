@@ -301,6 +301,11 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
+    public boolean isCoveringFacialHair() {
+        return script.runOptional("isCoveringFacialHair",super.isCoveringHair());
+    }
+
+    @Override
     public float heapScale() {
         return heapScale;
     }
@@ -339,6 +344,12 @@ public class CustomItem extends EquipableItem {
     @Override
     public void ownerTakesDamage(int damage) {
         script.runOptionalNoRet("ownerTakesDamage",damage);
+    }
+
+    @Override
+    public boolean doPickUp(@NotNull Char hero) {
+        script.runOptionalNoRet("onPickUp", hero);
+        return super.doPickUp(hero);
     }
 
     private class CustomItemCellListener implements CellSelector.Listener {

@@ -40,7 +40,9 @@ public class Brute extends Mob {
 
 		exp = 8;
 		maxLvl = 15;
-		
+
+		dr = 8;
+
 		loot(Gold.class, 0.5f);
 		
 		addImmunity( Terror.class );
@@ -61,11 +63,6 @@ public class Brute extends Mob {
 			Random.NormalIntRange( 8, 18 );
 	}
 
-	@Override
-	public int dr() {
-		return 8;
-	}
-	
 	@Override
 	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 		super.damage( dmg, src );

@@ -39,12 +39,12 @@ public class WndChooseWay extends Window {
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
 
-	public WndChooseWay(final MasteryItem item, final HeroSubClass way){
+	public WndChooseWay(final Item item, final HeroSubClass way){
 		super();
 		chooseWay( item, way, null );
 	}
 
-	public WndChooseWay( final MasteryItem item, final HeroSubClass way1, final HeroSubClass way2 ) {
+	public WndChooseWay( final Item item, final HeroSubClass way1, final HeroSubClass way2 ) {
 		super();
 		chooseWay( item, way1, way2 );
 	}
@@ -62,7 +62,7 @@ public class WndChooseWay extends Window {
 		return desc;
 	}
 
-	private void chooseWay(final MasteryItem item, final HeroSubClass way1, final HeroSubClass way2) {
+	private void chooseWay(final Item item, final HeroSubClass way1, final HeroSubClass way2) {
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite( item ) );
 		titlebar.label( item.name() );
@@ -97,7 +97,7 @@ public class WndChooseWay extends Window {
 			@Override
 			protected void onClick() {
 				hide();
-				item.choose( way1 );
+				MasteryItem.choose(item, way1 );
 			}
 		};
 		btnWay1.setRect( 0, normal.y + normal.height() + GAP, (WIDTH - GAP) / 2, BTN_HEIGHT );
@@ -108,7 +108,7 @@ public class WndChooseWay extends Window {
 				@Override
 				protected void onClick() {
 					hide();
-					item.choose( way2 );
+					MasteryItem.choose(item, way2 );
 				}
 			};
 			btnWay2.setRect( btnWay1.right() + GAP, btnWay1.top(), btnWay1.width(), BTN_HEIGHT );

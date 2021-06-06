@@ -32,6 +32,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 		baseDefenseSkill = depth * 2 + 1;
 		exp = depth + 1;
 		maxLvl = depth + 2;
+		dr = exp/3;
 		
 		addImmunity( Frost.class );
 		addImmunity( ScrollOfPsionicBlast.class );
@@ -47,12 +48,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	public int attackSkill( Char target ) {
 		return baseDefenseSkill / 2;
 	}
-	
-	@Override
-	public int dr() {
-		return exp / 3;
-	}
-	
+
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {

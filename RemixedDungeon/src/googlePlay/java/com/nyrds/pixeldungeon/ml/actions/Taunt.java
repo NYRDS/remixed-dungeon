@@ -25,7 +25,7 @@ public class Taunt extends CharAction {
 
         Sample.INSTANCE.play(Assets.SND_MIMIC);
 
-        hero.spend(Actor.TICK/10);
+        hero.spend(Actor.MICRO_TICK);
         hero.readyAndIdle();
 
         return false;

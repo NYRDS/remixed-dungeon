@@ -44,6 +44,9 @@ public class Warlock extends Mob implements IZapper {
 		hp(ht(70));
 		baseDefenseSkill = 18;
 		baseAttackSkill  = 25;
+		dmgMin = 12;
+		dmgMax = 20;
+		dr = 8;
 
 		exp = 11;
 		maxLvl = 21;
@@ -51,16 +54,6 @@ public class Warlock extends Mob implements IZapper {
 		loot(Treasury.Category.POTION, 0.83f);
 
 		addResistance(Death.class);
-	}
-
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange(12, 20);
-	}
-
-	@Override
-	public int dr() {
-		return 8;
 	}
 
 	protected void fx( int cell, Callback callback ) {

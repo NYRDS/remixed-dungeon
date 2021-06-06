@@ -1,0 +1,23 @@
+{
+   "defenseSkill"  :3,
+   "attackSkill"   :8,
+   "exp"           :2,
+   "maxLvl"        :4,
+   "dmgMin"        :1,
+   "dmgMax"        :4,
+   "dr"            :1,
+   "baseSpeed"     :1,
+   "attackDelay"   :1,
+   "ht"            :10,
+   "viewDistance"  :3,
+   "lootChance"    :0,
+   "name"          :"DeepSnail_Name",
+   "name_objective":"DeepSnail_Name_Objective",
+   "description"   :"DeepSnail_Desc",
+   "gender"        :"DeepSnail_Gender",
+   "spriteDesc"    :"spritesDesc/DeepSnail.json",
+   "walkingType"   :"NORMAL",
+   "canBePet"	     : true,
+   "flying"		     : false,
+   "friendly"	     : false
+}

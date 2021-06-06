@@ -16,7 +16,7 @@ import org.luaj.vm2.lib.jse.CoerceLuaToJava;
  */
 public class LuaScript {
 
-    private String scriptFile;
+    private final String scriptFile;
     private boolean scriptLoaded = false;
     private boolean asInstance = false;
     private LuaTable script;
@@ -25,7 +25,7 @@ public class LuaScript {
     private final LuaValue[] onlyParentArgs = new LuaValue[1];
 
     @Nullable
-    private Object   parent;
+    private final Object   parent;
 
     public LuaScript(String scriptFile, @Nullable Object parent)
     {
@@ -104,10 +104,14 @@ public class LuaScript {
     }
 
     public void runOptional(String method) {
-        if(!getScript().get(method).isfunction()) {
+        if(!hasMethod(method)) {
             return;
         }
         run(method);
+    }
+
+    public boolean hasMethod(String method) {
+        return getScript().get(method).isfunction();
     }
 
     public void runOptionalNoRet(String method, Object... args) {
@@ -116,7 +120,7 @@ public class LuaScript {
 
     public <T> T runOptional(String method, T defaultValue, Object... args) {
         try {
-            if (!getScript().get(method).isfunction()) {
+            if (!hasMethod(method)) {
                 return defaultValue;
             }
 

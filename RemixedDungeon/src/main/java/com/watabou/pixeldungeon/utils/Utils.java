@@ -147,6 +147,17 @@ public class Utils {
     public static int max(int a, int b, int c) {
         return Math.max(a,Math.max(b,c));
     }
+    public static int min(int a, int b, int c) {
+        return Math.min(a,Math.min(b,c));
+    }
+
+
+    public static float max(float a, float b, float c) {
+        return Math.max(a,Math.max(b,c));
+    }
+    public static float min(float a, float b, float c) {
+        return Math.min(a,Math.min(b,c));
+    }
 
     public static boolean differentVersions(String v1, String v2) {
         try {

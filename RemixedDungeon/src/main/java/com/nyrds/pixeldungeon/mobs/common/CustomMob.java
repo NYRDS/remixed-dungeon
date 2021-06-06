@@ -7,6 +7,7 @@ import com.nyrds.android.util.JsonHelper;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
@@ -34,10 +35,6 @@ import lombok.SneakyThrows;
 
 public class CustomMob extends MultiKindMob implements IZapper {
 
-	private int dmgMin, dmgMax;
-	private int attackSkill;
-	private int dr;
-
 	private float attackDelay = 1;
 
 	@Packable
@@ -48,6 +45,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	private int     attackRange     = 1;
 
 	private boolean friendly;
+	private boolean immortal = false;
 
 	//For restoreFromBundle
 	@Keep
@@ -101,6 +99,13 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 	@Override
+	public void beckon(int cell) {
+		if(!friendly && movable) {
+			super.beckon(cell);
+		}
+	}
+
+	@Override
 	public String getEntityKind() {
 		return mobClass;
 	}
@@ -138,6 +143,14 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		return actions;
 	}
 
+	@Override
+	public void damage(int dmg, @NotNull NamedEntityKind src) {
+		if(immortal) {
+			return;
+		}
+
+		super.damage(dmg, src);
+	}
 
 	@SneakyThrows
 	private void fillMobStats(boolean restoring) {
@@ -189,6 +202,8 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 		friendly = classDesc.optBoolean("friendly",friendly);
 		movable = classDesc.optBoolean("movable",movable);
+		immortal = classDesc.optBoolean("immortal",immortal);
+
 
 		JsonHelper.readStringSet(classDesc, Char.IMMUNITIES, immunities);
 		JsonHelper.readStringSet(classDesc, Char.RESISTANCES, resistances);

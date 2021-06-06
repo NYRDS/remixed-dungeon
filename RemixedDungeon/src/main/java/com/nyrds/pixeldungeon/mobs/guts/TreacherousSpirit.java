@@ -19,6 +19,9 @@ public class TreacherousSpirit extends Mob {
         hp(ht(200));
         baseDefenseSkill = 35;
         baseAttackSkill  = 35;
+        dmgMin = 30;
+        dmgMax = 45;
+        dr = 25;
 
         exp = 45;
         maxLvl = 30;
@@ -40,16 +43,6 @@ public class TreacherousSpirit extends Mob {
             }
         }
         return damage;
-    }
-
-    @Override
-    public int damageRoll() {
-        return Random.NormalIntRange(30, 45);
-    }
-
-    @Override
-    public int dr() {
-        return 25;
     }
 
     @Override

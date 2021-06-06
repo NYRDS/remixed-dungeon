@@ -112,7 +112,6 @@
   <string name="Possess_Info">L\'art sombre du contrôle de l\'esprit permet au sorcier de plier la volonté de la plupart des créatures</string>
   <string name="Possess_PossessionFailed">La volonté du %s est trop forte</string>
   <string name="Possess_Possessed">%s attends vos ordres</string>
-  <string name="Possess_MustTargetChar">Seules les créatures peuvent devenir possédées.</string>
   <string name="Possess_CantPossessSelf">Vous ne pouvez vous posséder vous-même</string>
   <string name="Mob_StaControlledStatus">Ce %s est sous votre possession sacrilège</string>
   <string name="BlackCat_AiStatus">Ce chat noir domestique ne fait rien de plus qu\'un chat ordinaire</string>
@@ -149,6 +148,26 @@
   <string name="town_deco_pedestal_desc">Pupitre supportant un saint livre.</string>
   <string name="town_deco_shelf_name">Étagères</string>
   <string name="town_deco_shelf_desc">Étagères vides.</string>
+  <string name="town_deco_banner_name">Bannière</string>
+  <string name="town_deco_banner_desc">Une élégante bannière représentant les symboles de cette taverne.</string>
+  <string name="town_deco_inn_bed_name">Lit</string>
+  <string name="town_deco_inn_bed_desc">Ca semble être un lit très confortable.</string>
+  <string name="town_deco_furnace_name">Four</string>
+  <string name="town_deco_furnace_desc">Un four de cuisine fonctionnel, assemblé selon la tradition.</string>
+  <string name="town_deco_skullboard_name">Etagère à trophées</string>
+  <string name="town_deco_skullboard_desc">Ce crâne capture parfaitement l\'instant d\'une horreur inattendue.</string>
+  <string name="town_deco_stool_sturdy_name">Tabouret</string>
+  <string name="town_deco_stool_sturdy_desc">Un tabouret standard fait de bois durable.</string>
+  <string name="town_deco_stool_broken_name">Tabouret cassé</string>
+  <string name="town_deco_stool_broken_desc">Ce tabouret a connu de meilleurs jours.</string>
+  <string name="town_deco_shelving_name">Etagères</string>
+  <string name="town_deco_shelving_desc">Un rangement d\'une taille impressionnante, sur les étagères duquel vous pouvez voir diverses boissons et snacks.</string>
+  <string name="town_deco_barrel_wine_name">Fût de vin</string>
+  <string name="town_deco_barrel_wine_desc">Utilisé pour stocker des boissons précieuses comme le vin.</string>
+  <string name="town_deco_crate_bottles_name">Caisse de bières</string>
+  <string name="town_deco_crate_bottles_desc">La mise en bouteille de la bière est devenue un passe-temps très populaire chez les aubergistes.</string>
+  <string name="town_deco_wall_brazier_name">Brasero</string>
+  <string name="town_deco_wall_brazier_desc">La vapeur qui s\'échappe des braises remplit la pièce d\'un parfum agréable. </string>
   <string name="WndPriest_Instruction2_m">Bienvenue, mon fils, bienvenue à la Sainte Église du grand Saint Seigneur des Profondeurs !</string>
   <string name="WndPriest_Instruction2_f">Bienvenue, ma fille, bienvenue à la Sainte Église du grand Saint Seigneur des Profondeurs !</string>
   <string name="WndPriest_Instruction2">Si tu as besoin d\'aide, je peux te fournir des soins de guérison pour seulement %d pièces d\'or !\nSi tu as besoin d\'une sainte bénédiction, ou, Dieu m\'en préserve, si tu es ensorcelé, entre dans notre humble église pour rencontrer l\'évêque.</string>
@@ -2500,25 +2519,13 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="town_deco_stone_wall_broken_desc">Mur d\'anciennes pierres en mauvais état</string>
   <string name="Challenges_Names_6">Runes interdites</string>
   <string name="Challenges_Names_7">Pacifisme</string>
-  <string name="Welcome_Text_29_2">
-remix.29.2\n
-- Gameplay:\n
--- Nouveaux défis:\n
---- Runes oubliées\n
---- Pacifisme\n
-- Modding:\n
--- Artéfacts customisé\n
-- Bugs fixé</string>
   <string name="town_deco_crossroad_name">Panneau de direction</string>
   <string name="town_deco_crossroad_desc">Pilier en bois brut avec un texte de plaques en forme de flèche sur lequel s\'est délavé il y a longtemps, probablement en raison des conditions météorologiques difficiles.</string>
   <string name="ShieldBuffReady_Name">Prêt</string>
   <string name="ShieldBuffNotReady_Name">Pas prêt</string>
   <string name="WoodenShield_name">Bouclier en bois</string>
-  <string name="WoodenShield_desc">Un bouclier en bois brut est le bouclier le plus simple disponible. Il est rond et peut parfois bloquer certains dégâts.</string>
   <string name="ToughShield_name">Bouclier en cuir renforcé</string>
-  <string name="ToughShield_desc">Ce bouclier renforcé avec des lanières en cuir semble plus résistant que celui en bois. Il peut bloquer plus de dégâts à coup sûr.</string>
   <string name="StrongShield_name">Bouclier de bronze</string>
-  <string name="StrongShield_desc">Ce bouclier rectangulaire est plaqué de feuilles de bronze et décoré de tissu coloré. Il est beaucoup plus lourd, mais peut bloquer beaucoup plus de dégâts.</string>
   <string name="RoyalShield_name">Bouclier royal</string>
   <string name="RoyalShield_desc">Un bouclier complètement en métal. Oui, c\'est lourd, mais il vous propose la meilleure protection.</string>
   <string name="ShieldInfoTemplate">Ce bouclier bloquera jusqu\'à %1$d des dégâts entrants. Avec %2$d %% de chances. Il faudra %3$3.1f secondes pour récupérer après un blocage réussi.</string>
@@ -2547,9 +2554,7 @@ remix.29.3\n
         L\'équipe de NYRDS n\'est en aucun cas responsable du contenu des mods, de leur qualité ou de leur stabilité.\n
         Téléchargez-les à vos risques et amusez-vous !!\n
     </string>
-  <string name="ShieldWeaponInfo">Utilisé comme une arme, ce bouclier infligera %1$d points de dégâts en moyenne.</string>
   <string name="TownPortal_Name">Portail de Ville</string>
-  <string name="TownPortal_Info">Ce sort vous permet de revenir instantanément à un endroit sûr. Cependant, une source puissante de magie dans les environs peut l\'empêcher de fonctionner comme prévu.</string>
   <string name="MedicineMask_Name">Masque chirurgical</string>
   <string name="MedicineMask_Info">Un masque chirurgical est fait pour bloquer les micro-organismes rejetés dans les gouttelettes de liquide et les aérosols par la bouche et le nez du porteur.
  \n\nPorter un masque, c\'est prendre soin des autres. </string>
@@ -2566,11 +2571,8 @@ remix.29.3\n
   <string name="Backstab_Name">Coup dans le dos</string>
   <string name="Backstab_Info">Un coup en douce dans le dos. Traître, mais très efficace, les dégâts du coup dans le dos grandiront avec le niveau de compétence.\n\nUn coup dans le dos réalisé avec succès ignorera totalement l\'armure de la victime ou ses capacités spéciales de défense.</string>
   <string name="Backstab_TooFar">La victime est trop loin pour réussir un coup.</string>
-  <string name="Backstab_Aware">La victime ne doit pas vous détecter pour un bon coup dans le dos.</string>
   <string name="KunaiThrow_Name">Lancer de Kunai</string>
-  <string name="KunaiThrow_Info">Un lancer mortel de Kunai sera extrêmement rapide, tellement rapide que vous ne pourrez même pas choisir votre cible.\n\nLes véritables maîtres sont capables de lancer plusieurs Kunai à la fois.</string>
   <string name="Haste_Name">Célérité extrême</string>
-  <string name="Haste_Info">La Célérité vous permet de bouger à une telle vitesse extrême que tout autour paraît immobile. Une telle célérité consommera beaucoup d\'énergie et ne sera possible que pendant de courts instants.\n\nLes maîtres les plus compétents peuvent agir en célérité plus longtemps.</string>
   <string name="Welcome_Text_29_5">
     remix.29.5\n
     - Gameplay:\n
@@ -2601,4 +2603,20 @@ remix.29.3\n
   <string name="CharAction_Hit">frapper</string>
   <string name="Stun_Info">Etourdi</string>
   <string name="Char_StaStunned">étourdi</string>
+  <string name="InnKeeperNPC_Gender">masculine</string>
+  <string name="DrunkardNPC_Gender">masculine</string>
+  <string name="MercenaryNPC_Gender">masculine</string>
+  <string name="ServantNPC_Gender">feminine</string>
+  <string name="BardNPC_Gender">masculine</string>
+  <string name="town_deco_red_carpet_name">Tapis</string>
+  <string name="town_deco_beige_carpet_name">Tapis</string>
+  <string name="town_deco_brown_carpet_name">Tapis</string>
+  <string name="town_deco_charcoal_carpet_name">Tapis</string>
+  <string name="town_deco_magenta_carpet_name">Tapis</string>
+  <string name="Potion_Colors_13">quartz</string>
+  <string name="Potion_Colors_14">onyx</string>
+  <string name="PotionOfMana_Name">Potion de mana</string>
+  <string name="PotionOfMana_Info">Cette potion va régénerer votre énergie spirituelle.</string>
+  <string name="Snail_Gender">masculine</string>
+  <string name="DeepSnail_Gender">masculine</string>
 </resources>

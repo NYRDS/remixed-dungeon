@@ -21,6 +21,10 @@ public class Nightmare extends Mob {
         hp(ht(80));
         baseDefenseSkill = 24;
         baseAttackSkill  = 26;
+        dmgMin = 20;
+        dmgMax = 25;
+        dr = 10;
+
         flying = true;
         exp = 0;
     }
@@ -37,14 +41,6 @@ public class Nightmare extends Mob {
         }
         return damage;
     }
-
-    @Override
-    public int damageRoll() {
-        return Random.NormalIntRange(20, 25);
-    }
-
-    @Override
-    public int dr() { return 10; }
 
     @Override
     public boolean act(){

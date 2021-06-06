@@ -20,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class EnslavedSoul extends UndeadMob {
 
-    static Class<?> BuffsForEnemy[] = {
+    static Class<?>[] BuffsForEnemy = {
             Blindness.class,
             Charm.class,
             Roots.class,
@@ -36,6 +36,10 @@ public class EnslavedSoul extends UndeadMob {
         baseDefenseSkill = 11;
         baseAttackSkill  = 10;
         flying = true;
+
+        dmgMin = 5;
+        dmgMax = 8;
+        dr = 10;
 
         exp = 5;
         maxLvl = 15;
@@ -55,15 +59,5 @@ public class EnslavedSoul extends UndeadMob {
         }
 
         return damage;
-    }
-
-    @Override
-    public int damageRoll() {
-        return Random.NormalIntRange(5, 8);
-    }
-
-    @Override
-    public int dr() {
-        return 10;
     }
 }

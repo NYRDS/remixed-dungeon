@@ -8,18 +8,16 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Passive extends MobAi implements AiState {
 
     public Passive(){}
 
     @Override
-    public void act(Mob me) {
+    public void act(@NotNull Mob me) {
         me.enemySeen = false;
         me.spend(Actor.TICK);
-
-        if(Math.random()<0.33) {
-            me.getSprite().idle();
-        }
     }
 
     @Override

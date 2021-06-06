@@ -47,6 +47,8 @@ public class GLog {
 	private static FileWriter logWriter;
 	private static boolean readonlySd = false;
 
+	public static boolean enabled = true;
+
 
 	public static synchronized void toFile(String text, Object... args) {
 		debug(text,args);
@@ -94,6 +96,10 @@ public class GLog {
 	}
 
 	private static void glog( String text, Object... args ) {
+		if(!enabled) {
+			return;
+		}
+
 		if (args.length > 0) {
 			text = Utils.format( text, args );
 		}

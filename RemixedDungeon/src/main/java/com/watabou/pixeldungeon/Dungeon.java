@@ -66,7 +66,6 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -272,7 +271,7 @@ public class Dungeon {
 
     public static void switchLevel(@NotNull final Level level, int pos, Collection<Mob> followers) {
 
-        EventCollector.collectSessionData("level",level.levelId);
+        EventCollector.setSessionData("level",level.levelId);
 
         nightMode =new GregorianCalendar().get(Calendar.HOUR_OF_DAY) < 7;
 
@@ -468,7 +467,7 @@ public class Dungeon {
 
                 SaveUtils.copySaveToSlot(SaveUtils.getAutoSave(), heroClass);
             } catch (IOException e) {
-                GameScene.show(new WndError(Game.getVar(R.string.Dungeon_saveIoError) + "\n" + e.getLocalizedMessage()));
+                Game.toast(Game.getVar(R.string.Dungeon_saveIoError) + "\n" + e.getLocalizedMessage());
                 EventCollector.logException(new Exception("cannot write save", e));
             }
 
@@ -513,7 +512,8 @@ public class Dungeon {
 
     private static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
 
-        if(!bundle.optString("mod","Remixed").equals(ModdingMode.activeMod())) {
+        if(fullLoad &&
+                !bundle.optString(MOD,ModdingMode.REMIXED).equals(ModdingMode.activeMod())) {
             EventCollector.logException(new Exception("loading save from another mod"));
         }
 
@@ -855,7 +855,7 @@ public class Dungeon {
     }
 
     public static void setChallenges(int challenges) {
-        EventCollector.collectSessionData("challenges",String.valueOf(challenges));
+        EventCollector.setSessionData("challenges",String.valueOf(challenges));
         Dungeon.challenges = challenges;
     }
 

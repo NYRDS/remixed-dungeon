@@ -44,13 +44,14 @@ import java.util.List;
 import java.util.Set;
 
 import lombok.SneakyThrows;
+import lombok.var;
 
 public abstract class RegularLevel extends CustomLevel {
 
 	@NotNull
 	protected HashSet<Room> rooms = new HashSet<>();
 
-	private ArrayList<Room> exits = new ArrayList<>();
+	private final ArrayList<Room> exits = new ArrayList<>();
 
 	protected Room roomEntrance;
 
@@ -657,8 +658,13 @@ public abstract class RegularLevel extends CustomLevel {
 			nItems++;
 		}
 
+		var heaps = Heap.regularHeaps;
+		if(Dungeon.depth < 2) {
+			heaps = Heap.sageHeaps;
+		}
+
 		for (int i = 0; i < nItems; i++) {
-			drop(Treasury.getLevelTreasury().random(), randomDropCell(),Random.chances(Heap.regularHeaps));
+			drop(Treasury.getLevelTreasury().random(), randomDropCell(),Random.chances(heaps));
 		}
 
 		for (Item item : itemsToSpawn) {

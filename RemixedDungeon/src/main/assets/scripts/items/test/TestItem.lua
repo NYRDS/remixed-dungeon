@@ -21,6 +21,14 @@ local chest =
     object_desc="chest_3"
 }
 
+local trap =
+{
+    kind="Trap",
+    uses=10,
+    trapKind="scriptFile",
+    script="scripts/traps/Spawner"
+}
+
 
 return item.init{
     desc  = function (self, item)
@@ -84,18 +92,19 @@ return item.init{
                 RPD.placeBlob(RPD.Blobs.ToxicGas,cell, 50)
             end
 
+            --[[
             local tgt = RPD.forEachCellOnRay(owner:getPos(),
                                              cell,
                                              false,
                                              true,
                                              true,
                                              cellAction)
-
+]]
             RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
             RPD.zapEffect(thisItem:getOwner():getPos(), cell, "Lightning")
             --local book = RPD.creteItem("PotionOfHealing", {text="Test codex"})
             --RPD.Dungeon.level:drop(book, cell)
-            RPD.createLevelObject(chest, cell)
+            RPD.createLevelObject(trap, cell)
             --RPD.GameScene:particleEffect("BloodSink", cell);
             end
     end,
@@ -108,8 +117,8 @@ return item.init{
 
         if action == "action1" then
             --RPD.affectBuff(hero, RPD.Buffs.Invisibility ,200)
-            --item:selectCell("action1","Please select cell for action 1")
-            RPD.playMusic("surface",true);
+            item:selectCell("action1","Please select cell for action 1")
+            --RPD.playMusic("surface",true);
         end
 
         if action == "action2" then
@@ -134,7 +143,7 @@ return item.init{
         end
 
         if action == "inputText" then
-            --RPD.System.Input:showInputDialog("Text title", "Text subtitle")
+            --RPD.System.Input:showInputDialog("Text title", "Text subtitle","defaultText")
         end
 
         if action == "checkText" then

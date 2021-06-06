@@ -69,6 +69,10 @@ public class Lich extends Boss {
         baseDefenseSkill = 23;
         baseAttackSkill  = 35;
 
+        dmgMin = 12;
+        dmgMax = 20;
+        dr = 15;
+
         addImmunity( Paralysis.class );
         addImmunity( ToxicGas.class );
         addImmunity( Terror.class );
@@ -218,11 +222,6 @@ public class Lich extends Boss {
 
 
     @Override
-    public int damageRoll() {
-        return Random.NormalIntRange( 12, 20 );
-    }
-
-    @Override
     public int defenseProc(Char enemy, int damage) {
         if (activatedSkull != null)
         {
@@ -236,11 +235,6 @@ public class Lich extends Boss {
         }
 
         return damage;
-    }
-
-    @Override
-    public int dr() {
-        return 15;
     }
 
     @Override

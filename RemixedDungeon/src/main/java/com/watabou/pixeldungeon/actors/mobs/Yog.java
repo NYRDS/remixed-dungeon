@@ -28,8 +28,10 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -122,14 +124,7 @@ public class Yog extends Boss {
 
 	@Override
 	public int defenseProc(Char enemy, int damage) {
-
-		int larvaPos = Dungeon.level.getEmptyCellNextTo(getPos());
-		
-		if (Dungeon.level.cellValid(larvaPos)) {
-			Larva larva = new Larva();
-			larva.setPos(larvaPos);
-			Dungeon.level.spawnMob(larva, 0, getPos());
-		}
+		CharUtils.spawnOnNextCell(this, "Larva", (int) (10 * RemixedDungeon.getDifficultyFactor()));
 
 		return super.defenseProc(enemy, damage);
 	}
@@ -171,6 +166,10 @@ public class Yog extends Boss {
 
 			exp = 0;
 
+			dmgMin = 34;
+			dmgMax = 46;
+			dr = 15;
+
 			setState(MobAi.getStateByClass(Wandering.class));
 
 			addResistance(ToxicGas.class);
@@ -184,16 +183,6 @@ public class Yog extends Boss {
 		}
 
 		public RottingFist() {
-		}
-
-		@Override
-		public int damageRoll() {
-			return Random.NormalIntRange(34, 46);
-		}
-
-		@Override
-		public int dr() {
-			return 15;
 		}
 
 		@Override
@@ -238,6 +227,10 @@ public class Yog extends Boss {
 
 			exp = 0;
 
+			dmgMin = 40;
+			dmgMax = 62;
+			dr = 15;
+
 			setState(MobAi.getStateByClass(Wandering.class));
 
 			addResistance(ToxicGas.class);
@@ -249,16 +242,6 @@ public class Yog extends Boss {
 		}
 
 		public BurningFist() {
-		}
-
-		@Override
-		public int damageRoll() {
-			return Random.NormalIntRange(40, 62);
-		}
-
-		@Override
-		public int dr() {
-			return 15;
 		}
 
 		@Override
@@ -307,19 +290,12 @@ public class Yog extends Boss {
 			baseDefenseSkill = 20;
 			baseAttackSkill  = 30;
 
+			dmgMin = 25;
+			dmgMax = 30;
+			dr = 8;
 			exp = 0;
 
 			setState(MobAi.getStateByClass(Hunting.class));
-		}
-
-		@Override
-		public int damageRoll() {
-			return Random.NormalIntRange(25, 30);
-		}
-
-		@Override
-		public int dr() {
-			return 8;
 		}
 
 		@Override

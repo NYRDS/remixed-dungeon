@@ -6,30 +6,47 @@
     },
     "items": [
       {
-        "kind": "PotionOfLevitation"
+        "kind": "WandOfRegrowth"
       },
       {
-        "kind": "test/TestItem"
+        "kind": "TenguLiver"
       },
       {
-        "kind": "ScrollOfUpgrade"
+        "kind": "WitchdoctorArmor"
       },
       {
-        "kind": "SpellBook"
+        "kind": "GuardianArmor"
       },
-      {
-        "kind": "WoodenShield"
-      },
-      {
-        "kind": "ScrollOfCurse"
-      },
-      {
-        "kind": "CommonArrow"
-      }
 
+      {
+        "kind": "PotionOfToxicGas"
+      },
+      {
+        "kind": "WandOfIcebolt"
+      },
+      {
+        "kind": "ScrollOfMagicMapping",
+        "quantity": 1000
+      },
+      {
+        "kind": "PotionOfMana",
+        "quantity": 1000
+      },
+      {
+        "kind": "PotionOfLiquidFlame",
+        "quantity": 1000
+      },
+      {
+        "kind": "CurareDart",
+        "quantity": 1000
+      },
+      {
+        "kind": "Gold",
+        "quantity" : 100000
+      }
     ],
     "str": 10,
-    "hp": 20000000,
+    "hp": 200000,
     "magicAffinity": "Common",
     "sp": 100000,
     "maxSp": 100000,
@@ -96,7 +113,7 @@
   "HUNTRESS": {
     "items": [
       {
-        "kind": "Boomerang",
+        "kind": "CurareDart",
         "identified": true
       }
     ],
@@ -150,7 +167,6 @@
         "depth": "7"
       }
     ],
-    "hp": 15000000,
     "knownItems": [
       {
         "kind": "PotionOfHealing"

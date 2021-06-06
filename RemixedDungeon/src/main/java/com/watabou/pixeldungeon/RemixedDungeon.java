@@ -352,8 +352,8 @@ public class RemixedDungeon extends Game {
 
 		RemixedDungeon.instance().setSelectedLanguage();
 
-		EventCollector.collectSessionData("RPD_active_mod", ModdingMode.activeMod());
-		EventCollector.collectSessionData("active_mod_version", Integer.toString(ModdingMode.activeModVersion()));
+		EventCollector.setSessionData("RPD_active_mod", ModdingMode.activeMod());
+		EventCollector.setSessionData("active_mod_version", Integer.toString(ModdingMode.activeModVersion()));
 		ModsButton.modUpdated();
 	}
 	

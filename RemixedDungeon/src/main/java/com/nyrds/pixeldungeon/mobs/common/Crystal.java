@@ -67,6 +67,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 		baseDefenseSkill = depth * 2 + 1;
 		exp = depth + 1;
 		maxLvl = depth + 2;
+		dr = exp/3;
 
 		addImmunity(ScrollOfPsionicBlast.class);
 		addImmunity(ToxicGas.class);
@@ -98,13 +99,6 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 			return 35;
 		}
 	}
-
-	@Override
-	public int dr() {
-		return exp / 3;
-	}
-
-
 
 	@Override
 	public boolean attack(@NotNull Char enemy) {

@@ -21,6 +21,9 @@ public class Worm extends Mob {
         hp(ht(195));
         baseDefenseSkill = 15;
         baseAttackSkill  = 20;
+        dmgMin = 22;
+        dmgMax = 45;
+        dr = 50;
 
         exp = 18;
         maxLvl = 35;
@@ -43,15 +46,5 @@ public class Worm extends Mob {
             Buff.affect( enemy, Poison.class, Random.Int( 7, 9 ) * Poison.durationFactor( enemy ) );
         }
         return damage;
-    }
-
-    @Override
-    public int damageRoll() {
-        return Random.NormalIntRange(22, 45);
-    }
-
-    @Override
-    public int dr() {
-        return 50;
     }
 }

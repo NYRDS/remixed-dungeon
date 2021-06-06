@@ -5,6 +5,9 @@ import androidx.annotation.Keep;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Util;
 import com.nyrds.lua.LuaEngine;
+import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -19,6 +22,7 @@ import com.watabou.pixeldungeon.levels.traps.PoisonTrap;
 import com.watabou.pixeldungeon.levels.traps.SummoningTrap;
 import com.watabou.pixeldungeon.levels.traps.ToxicTrap;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.luaj.vm2.LuaTable;
@@ -74,6 +78,17 @@ public class Trap extends LevelObject {
 		textureFile = "levelObjects/traps.png";
 
 		layer = -1;
+	}
+
+	static public @NotNull Trap makeSimpleTrap(int pos, String kind, boolean secret) {
+		Trap ret = new Trap(pos);
+
+		ret.kind = kind;
+		ret.secret = secret;
+		ret.uses = 1;
+		ret.targetCell = ret.pos;
+
+		return ret;
 	}
 
 	@Override
@@ -170,12 +185,12 @@ public class Trap extends LevelObject {
 
 	@Override
 	public String desc() {
-		return "Trap";
+		return Game.getVar(R.string.Level_TileDescTrap);
 	}
 
 	@Override
 	public String name() {
-		return "Trap";
+		return StringsManager.maybeId("Level_Tile"+kind);
 	}
 
 	@Override
@@ -203,9 +218,14 @@ public class Trap extends LevelObject {
 		return !secret && uses > 0;
 	}
 
+	@Override
+	public String getEntityKind() {
+		return kind;
+	}
+
 	static class ScriptTrap implements ITrigger {
-		private String scriptFile;
-		private String data;
+		private final String scriptFile;
+		private final String data;
 
 		ScriptTrap(String _scriptFile, String _data) {
 			scriptFile = _scriptFile;

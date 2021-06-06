@@ -80,6 +80,7 @@ import com.watabou.pixeldungeon.ui.Banner;
 import com.watabou.pixeldungeon.ui.BusyIndicator;
 import com.watabou.pixeldungeon.ui.GameLog;
 import com.watabou.pixeldungeon.ui.HealthIndicator;
+import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.ui.ResumeIndicator;
 import com.watabou.pixeldungeon.ui.StatusPane;
@@ -87,9 +88,11 @@ import com.watabou.pixeldungeon.ui.Toast;
 import com.watabou.pixeldungeon.ui.Toolbar;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndBag.Mode;
 import com.watabou.pixeldungeon.windows.WndGame;
+import com.watabou.pixeldungeon.windows.WndTitledMessage;
 import com.watabou.utils.Random;
 import com.watabou.utils.SparseArray;
 
@@ -381,10 +384,10 @@ public class GameScene extends PixelScene {
         InterlevelScene.Mode appearMode = InterlevelScene.mode;
         InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
 
+        hero.regenSprite();
         //it is a chance for another level change right here if level entrance is at CHASM for example
         switch (appearMode) {
             case RESURRECT:
-                hero.regenSprite();
                 WandOfBlink.appear(hero, level.entrance);
                 new Flare(8, 32).color(0xFFFF66, true).show(hero.getHeroSprite(), 2f);
                 break;
@@ -414,26 +417,52 @@ public class GameScene extends PixelScene {
         Dungeon.observe();
         hero.updateSprite();
         hero.readyAndIdle();
+        QuickSlot.refresh(hero);
+
 
         doSelfTest();
+
+        final double moveTimeout = Dungeon.moveTimeout();
+        final boolean realtime = Dungeon.realtime();
+
+        if(realtime || moveTimeout < Double.POSITIVE_INFINITY) {
+
+            String msg = "";
+            if(realtime) {
+                msg += Game.getVar(R.string.WrnExperimental_realtime);
+            } else {
+                if (moveTimeout < Double.POSITIVE_INFINITY) {
+                    msg += Utils.format(R.string.WrnExperimental_moveTimeout, (int)moveTimeout);
+                }
+            }
+
+            msg += "\n\n";
+            msg += Game.getVar(R.string.WnrExperimental_hint);
+
+            add(new WndTitledMessage(Icons.get(Icons.ALERT),
+                    Game.getVar(R.string.WrnExperimental_title),
+                    msg
+            ));
+        }
     }
 
     private void doSelfTest() {
+        final Level level = Dungeon.level;
         if(Util.isDebug()) {
-            for (int i = 0; i< Dungeon.level.map.length; ++i) {
-                Dungeon.level.tileDescByCell(i);
-                Dungeon.level.tileNameByCell(i);
+            for (int i = 0; i< level.map.length; ++i) {
+                level.tileDescByCell(i);
+                level.tileNameByCell(i);
             }
 
             GLog.debug(Dungeon.hero.immunities().toString());
             //GLog.toFile(StringsManager.missingStrings.toString());
         }
 
-        if(Dungeon.level instanceof TestLevel) {
-            TestLevel level = (TestLevel)Dungeon.level;
-            level.runEquipTest();
-            level.runMobsTest();
-            level.reset();
+        if(level instanceof TestLevel) {
+            TestLevel testLevel = (TestLevel) level;
+            testLevel.runEquipTest();
+            testLevel.runMobsTest();
+            testLevel.reset();
         }
     }
 
@@ -463,7 +492,9 @@ public class GameScene extends PixelScene {
             return;
         }
 
-        if (Dungeon.hero == null) {
+        final Hero hero = Dungeon.hero;
+
+        if (hero == null) {
             return;
         }
 
@@ -471,7 +502,7 @@ public class GameScene extends PixelScene {
             return;
         }
 
-        if(!Dungeon.level.cellValid(Dungeon.hero.getPos())){
+        if(!Dungeon.level.cellValid(hero.getPos())){
             return;
         }
 
@@ -481,14 +512,14 @@ public class GameScene extends PixelScene {
 
         Actor.process(Game.elapsed);
 
-        if (Dungeon.hero.isReady() && !Dungeon.hero.paralysed) {
+        if (hero.isReady() && !hero.paralysed) {
             log.newLine();
         }
 
         if (!Dungeon.realtime()) {
-            cellSelector.enabled = Dungeon.hero.isReady();
+            cellSelector.enabled = hero.isReady();
         } else {
-            cellSelector.enabled = Dungeon.hero.isAlive();
+            cellSelector.enabled = hero.isAlive();
         }
 
         if(observeRequested) {
@@ -624,7 +655,7 @@ public class GameScene extends PixelScene {
     }
 
     public static boolean isSceneReady() {
-        return scene != null && !Dungeon.isLoading();
+        return scene != null && !Game.isPaused() && !Dungeon.isLoading();
     }
 
     public static void add(EmoIcon icon) {
@@ -739,9 +770,10 @@ public class GameScene extends PixelScene {
     public static void afterObserve() {
         if (isSceneReady() && scene.sceneCreated) {
 
-            scene.fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
+            final Level level = Dungeon.level;
+            scene.fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
 
-            for (Mob mob : Dungeon.level.mobs) {
+            for (Mob mob : level.mobs) {
                 mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
             }
         }

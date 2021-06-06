@@ -1,0 +1,9 @@
+{
+  "texture" : "mobs/snail.png",
+  "width"  : 16,
+  "height" : 16,
+  "idle"   : { "fps" : 2,  "looped" : true,     "frames" : [16,16,16,17] },
+  "run"    : { "fps" : 14, "looped" : true,     "frames" : [18,19,20,21,22] },
+  "attack" : { "fps" : 11, "looped" : false,    "frames" : [23,24,25,26,27] },
+  "die"    : { "fps" : 11, "looped" : false,    "frames" : [28,29,30,31] }
+}

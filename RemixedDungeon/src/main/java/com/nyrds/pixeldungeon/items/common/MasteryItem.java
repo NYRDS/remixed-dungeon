@@ -24,7 +24,7 @@ public class MasteryItem extends Item {
 	@Override
 	public boolean doPickUp(@NotNull Char hero ) {
 		if(givesMasteryTo(hero)) {
-			Badges.validateMastery();
+			Badges.validateMastery(hero.getHeroClass());
 		}
 		return super.doPickUp( hero );
 	}
@@ -43,19 +43,15 @@ public class MasteryItem extends Item {
 		return true;
 	}
 
-	private void specialChooseMessage(int penalty){
-		GLog.w(Utils.format(Game.getVar(R.string.Necromancy_BecameALich), penalty) );
-	}
+	public static void choose(Item masteryItem, HeroSubClass way) {
 
-	public void choose( HeroSubClass way ) {
-
-		Char owner = getOwner();
+		Char owner = masteryItem.getOwner();
 		if(! (owner instanceof Hero) ) {
 			throw new TrackedRuntimeException("Mobs can't subclass yet");
 		}
 
 		Hero hero = (Hero)owner;
-		detach( hero.getBelongings().backpack );
+		masteryItem.detach( hero.getBelongings().backpack );
 
 		hero.setSubClass(way);
 
@@ -66,7 +62,7 @@ public class MasteryItem extends Item {
 		hero.getSprite().emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
 		if (way == HeroSubClass.LICH) {
 			int penalty = 2;
-			specialChooseMessage(penalty);
+			GLog.w(Utils.format(Game.getVar(R.string.Necromancy_BecameALich), penalty) );
 			hero.STR(hero.STR() - penalty);
 			hero.setMaxSkillPoints(hero.getSkillPointsMax() * 2);
 		}

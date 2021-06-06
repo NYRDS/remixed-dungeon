@@ -103,7 +103,6 @@ import com.watabou.utils.SystemTime;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -194,7 +193,6 @@ public class Hero extends Char {
 	}
 
 	private static final String STRENGTH = "STR";
-	private static final String LEVEL = "lvl";
 	private static final String EXPERIENCE = "exp";
 	private static final String DIFFICULTY = "difficulty";
 	private static final String SP = "sp";
@@ -210,7 +208,6 @@ public class Hero extends Char {
 
 		bundle.put(STRENGTH, STR());
 
-		bundle.put(LEVEL, lvl());
 		bundle.put(EXPERIENCE, getExp());
 		bundle.put(DIFFICULTY, getDifficulty());
 
@@ -235,7 +232,6 @@ public class Hero extends Char {
 		STR(bundle.getInt(STRENGTH));
 		updateAwareness();
 
-		lvl(bundle.getInt(LEVEL));
 		setExp(bundle.getInt(EXPERIENCE));
 		setDifficulty(bundle.optInt(DIFFICULTY, 2));
 
@@ -265,7 +261,7 @@ public class Hero extends Char {
 
 		float skillFactor = 1;
 		if (getDifficulty()==0) {
-			skillFactor = 1.2f;
+			skillFactor *= 1.2f;
 		}
 
 		return (int) (super.defenseSkill(enemy) * skillFactor);
@@ -341,8 +337,6 @@ public class Hero extends Char {
 			spendAndNext(TICK);
 			return false;
 		}
-
-		checkVisibleEnemies();
 
 		if(controlTargetId != getId()) {
 			curAction = null;
@@ -460,28 +454,17 @@ public class Hero extends Char {
 		}
 	}
 
-	public void checkVisibleEnemies() {
-		ArrayList<Char> visible = new ArrayList<>();
-
-		boolean newMob = false;
-
-		for (Mob m : level().mobs) {
-			if (level().fieldOfView[m.getPos()] && !m.friendly(this) && m.invisible <= 0) {
-				visible.add(m);
-				if (!visibleEnemies.contains(m)) {
-					newMob = true;
-				}
-			}
-		}
+	@Override
+	public boolean checkVisibleEnemies() {
+		boolean newMob = super.checkVisibleEnemies();
 
 		if (newMob) {
 			interrupt();
 			restoreHealth = false;
 		}
 
-		visibleEnemies = visible;
-
 		AttackIndicator.updateState(this);
+		return newMob;
 	}
 
 	public boolean getCloser(final int target) {
@@ -1022,6 +1005,7 @@ public class Hero extends Char {
 		Badges.validateFoodEaten();
 	}
 
+	@Override
 	public void setControlTarget(Char controlTarget) {
 		if(getControlTarget() instanceof Mob) {
 			Mob controlledMob = (Mob) getControlTarget();

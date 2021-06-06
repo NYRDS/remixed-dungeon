@@ -39,6 +39,9 @@ public class Scorpio extends Mob implements IZapper {
 		hp(ht(95));
 		baseDefenseSkill = 24;
 		baseAttackSkill  = 36;
+		dmgMin = 20;
+		dmgMax = 32;
+		dr = 16;
 		
 		exp = 14;
 		maxLvl = 25;
@@ -60,16 +63,6 @@ public class Scorpio extends Mob implements IZapper {
 		setViewDistance(level.getViewDistance() + 1);
 	}
 
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 20, 32 );
-	}
-
-	@Override
-	public int dr() {
-		return 16;
-	}
-	
 	@Override
     public boolean canAttack(@NotNull Char enemy) {
 		return CharUtils.canDoOnlyRangedAttack(this, enemy);

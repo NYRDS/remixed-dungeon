@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -41,6 +42,9 @@ public class Succubus extends Mob {
 		hp(ht(80));
 		baseDefenseSkill = 25;
 		baseAttackSkill  = 40;
+		dmgMin = 15;
+		dmgMax = 25;
+		dr = 10;
 
 		exp = 12;
 		maxLvl = 25;
@@ -55,11 +59,6 @@ public class Succubus extends Mob {
 	public void onSpawn(Level level) {
 		super.onSpawn(level);
 		setViewDistance(level.getViewDistance() + 1);
-	}
-
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange(15, 25);
 	}
 
 	@Override
@@ -86,16 +85,12 @@ public class Succubus extends Mob {
 			CharUtils.blinkTo(this, target);
 			delay = BLINK_DELAY;
 			spend(-1 / speed());
+			spend(Actor.MICRO_TICK);
 			return true;
 		} else {
 			delay--;
 			return super.getCloser(target);
 
 		}
-	}
-
-	@Override
-	public int dr() {
-		return 10;
 	}
 }

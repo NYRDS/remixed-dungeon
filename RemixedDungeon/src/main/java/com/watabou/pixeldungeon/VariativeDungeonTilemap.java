@@ -16,13 +16,13 @@ import org.json.JSONException;
  */
 
 public class VariativeDungeonTilemap extends DungeonTilemap {
-    private Tilemap mDecoLayer;
+    private final Tilemap mDecoLayer;
 
-    private XTilemapConfiguration xTilemapConfiguration;
+    private final XTilemapConfiguration xTilemapConfiguration;
 
-    private Level level;
+    private final Level level;
 
-    private int[] mDecoMap;
+    private final int[] mDecoMap;
 
     public VariativeDungeonTilemap(Level level, String tiles) {
         super(level, tiles);

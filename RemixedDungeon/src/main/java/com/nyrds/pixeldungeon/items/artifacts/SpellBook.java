@@ -4,13 +4,11 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
-import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -31,13 +29,9 @@ public class SpellBook extends Artifact {
 	}
 
 	public Spell spell(){
-		if(spell == null || spell.equals("")) {
-			identify();
-
-			ArrayList<String> spells = SpellFactory.getSpellsByAffinity(SpellHelper.AFFINITY_COMMON);
-			spell(Random.element(spells));
-		}
-		return SpellFactory.getSpellByName(spell);
+		Spell retSpell = SpellFactory.getSpellByName(spell);
+		spell = retSpell.getEntityKind();
+		return retSpell;
 	}
 
 	@Override

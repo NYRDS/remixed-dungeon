@@ -48,16 +48,18 @@ public class Treasury {
         ArrayList<Float>  probs = new ArrayList<>();
     }
 
-    private ArrayList<String>        names = new ArrayList<>();
-    private ArrayList<CategoryItems> items = new ArrayList<>();
-    private ArrayList<Float>         probs = new ArrayList<>();
+    private final ArrayList<String>        names = new ArrayList<>();
+    private final ArrayList<CategoryItems> items = new ArrayList<>();
+    private final ArrayList<Float>         probs = new ArrayList<>();
 
     private float decayFactor = 1;
 
-    private Set<String> forbidden = new HashSet<>();
+    private final Map<String, String> itemToCategory = new HashMap<>();
+
+    private final Set<String> forbidden = new HashSet<>();
 
     private static Treasury defaultTreasury;
-    private static Map<String, Treasury> tresurySet = new HashMap<>();
+    private static final Map<String, Treasury> treasurySet = new HashMap<>();
 
     public static void reset() {
         defaultTreasury = null;
@@ -74,11 +76,11 @@ public class Treasury {
     public static Treasury getLevelTreasury() {
         String id = Dungeon.levelId;
 
-        if(!tresurySet.containsKey(id)) {
-            tresurySet.put(id, create(DungeonGenerator.getLevelProperty(id, "treasury","Treasury.json")));
+        if(!treasurySet.containsKey(id)) {
+            treasurySet.put(id, create(DungeonGenerator.getLevelProperty(id, "treasury","Treasury.json")));
         }
 
-        return tresurySet.get(id);
+        return treasurySet.get(id);
     }
 
     public static Treasury create(String file) {
@@ -146,6 +148,7 @@ public class Treasury {
                 if(ItemFactory.isValidItemClass(item)) {
                     currentCategory.names.add(item);
                     currentCategory.probs.add((float) catData.getDouble(item));
+                    itemToCategory.put(item, cat);
                 } else {
                     ModError.doReport(item,new Exception("Treasury: unknown item: "+ item));
                 }
@@ -192,11 +195,19 @@ public class Treasury {
     }
 
     public boolean isForbidden(@NotNull String itemClass) {
-        return forbidden.contains(itemClass);
+        if(forbidden.contains(itemClass)) {
+            return true;
+        }
+
+        if(itemToCategory.containsKey(itemClass)) {
+            return forbidden.contains(itemToCategory.get(itemClass));
+        }
+
+        return false;
     }
 
     public Item check(@NotNull Item item) {
-        if(forbidden.contains(item.getEntityKind())) {
+        if(isForbidden(item.getEntityKind())) {
             GLog.debug("Forbidden item: %s",item.getEntityKind());
             return ItemFactory.itemByName("Gold").quantity(item.price());
         }
@@ -226,6 +237,11 @@ public class Treasury {
             if(names.get(i).equals(categoryOrItem)) {
                 probs.set(i,probs.get(i)/decayFactor);
                 CategoryItems category = items.get(i);
+
+                if(category.probs.isEmpty()) {
+                    return ItemFactory.itemByName("Gold");
+                }
+
                 int itemIndex = Random.chances(category.probs);
                 String itemName = category.names.get(itemIndex);
                 return randomItem(itemName);

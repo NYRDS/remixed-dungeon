@@ -11,19 +11,30 @@ import java.util.Map;
 
 class AdsUtilsCommon {
 
+    static int bannerAttempts;
+    static int interstitialAttempts;
+    static int rvAttempts;
+
     static void bannerFailed(IBannerProvider provider) {
         incFailCount(AdsUtils.bannerFails,provider);
-        //tryNextBanner();
+        //if(bannerAttempts-- > 0) {
+        //    tryNextBanner();
+        //}
     }
 
     static void interstitialFailed(IInterstitialProvider provider, InterstitialPoint retTo) {
         incFailCount(AdsUtils.interstitialFails,provider);
-        retTo.returnToWork(false);
-        //tryNextInterstitial(retTo);
+        if(interstitialAttempts-- > 0) {
+            tryNextInterstitial(retTo);
+        } else {
+            retTo.returnToWork(false);
+        }
     }
 
     static void rewardVideoFailed(IRewardVideoProvider provider) {
-        incFailCount(AdsUtils.rewardVideoFails, provider);
+        if(rvAttempts-- > 0) {
+            incFailCount(AdsUtils.rewardVideoFails, provider);
+        }
     }
 
     private static <T> void incFailCount(Map<T,Integer> map, T provider) {
@@ -92,6 +103,7 @@ class AdsUtilsCommon {
     }
 
     static void showInterstitial(InterstitialPoint retTo) {
+        interstitialAttempts = 3;
         tryNextInterstitial(retTo);
     }
 

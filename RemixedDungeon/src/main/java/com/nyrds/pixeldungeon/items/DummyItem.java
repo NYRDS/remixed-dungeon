@@ -13,16 +13,6 @@ public class DummyItem extends EquipableItem {
     }
 
     @Override
-    public float impactDelayFactor(Char user, float delayFactor) {
-        return delayFactor;
-    }
-
-    @Override
-    public float impactAccuracyFactor(Char user, float accuracyFactor) {
-        return accuracyFactor;
-    }
-
-    @Override
     public boolean dontPack() {
         return true;
     }

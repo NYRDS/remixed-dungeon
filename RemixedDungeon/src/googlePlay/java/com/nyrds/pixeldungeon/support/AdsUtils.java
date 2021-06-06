@@ -4,15 +4,15 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.nyrds.android.RemixedDungeonApp;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 //This is flavor specific class
 public class AdsUtils {
 
-    static Map<AdsUtilsCommon.IBannerProvider, Integer> bannerFails = new HashMap<>();
-    static Map<AdsUtilsCommon.IInterstitialProvider, Integer> interstitialFails = new HashMap<>();
-    static Map<AdsUtilsCommon.IRewardVideoProvider, Integer> rewardVideoFails = new HashMap<>();
+    static Map<AdsUtilsCommon.IBannerProvider, Integer> bannerFails = new ConcurrentHashMap<>();
+    static Map<AdsUtilsCommon.IInterstitialProvider, Integer> interstitialFails = new ConcurrentHashMap<>();
+    static Map<AdsUtilsCommon.IRewardVideoProvider, Integer> rewardVideoFails = new ConcurrentHashMap<>();
 
     static InitializationStatus initializationStatus;
 
@@ -21,8 +21,8 @@ public class AdsUtils {
             AdsUtils.initializationStatus = initializationStatus;
             initializationStatus.getAdapterStatusMap();
 
-            bannerFails.put(new AdMobComboProvider(),-2);
-            interstitialFails.put(new AdMobComboProvider(), -2);
+            bannerFails.put(new AdMobBannerProvider(),-2);
+            interstitialFails.put(new AdMobInterstitialProvider(), -2);
         });
 
 
@@ -49,7 +49,7 @@ public class AdsUtils {
         if(AppodealAdapter.usable()) {
             rewardVideoFails.put(new AppodealRewardVideoProvider(), -1);
         }
-        rewardVideoFails.put(new GoogleRewardVideoAds(), -2);
+        rewardVideoFails.put(new GoogleRewardVideoAds(), -2000);
     }
 
 }

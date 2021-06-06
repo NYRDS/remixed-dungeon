@@ -66,6 +66,7 @@ import com.watabou.pixeldungeon.items.armor.ElfArmor;
 import com.watabou.pixeldungeon.items.armor.FreeRunnerArmor;
 import com.watabou.pixeldungeon.items.armor.GladiatorArmor;
 import com.watabou.pixeldungeon.items.armor.GnollArmor;
+import com.watabou.pixeldungeon.items.armor.GuardianArmor;
 import com.watabou.pixeldungeon.items.armor.HuntressArmor;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.armor.MageArmor;
@@ -79,6 +80,7 @@ import com.watabou.pixeldungeon.items.armor.SniperArmor;
 import com.watabou.pixeldungeon.items.armor.WardenArmor;
 import com.watabou.pixeldungeon.items.armor.WarlockArmor;
 import com.watabou.pixeldungeon.items.armor.WarriorArmor;
+import com.watabou.pixeldungeon.items.armor.WitchdoctorArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
 import com.watabou.pixeldungeon.items.bags.Quiver;
@@ -104,6 +106,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
+import com.watabou.pixeldungeon.items.potions.PotionOfMana;
 import com.watabou.pixeldungeon.items.potions.PotionOfMight;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
 import com.watabou.pixeldungeon.items.potions.PotionOfParalyticGas;
@@ -435,6 +438,10 @@ public class ItemFactory {
         //registerItemClass(TacticalCrossbow.class); // no item pic
 
         registerItemClass(DummyItem.class);
+        registerItemClass(GuardianArmor.class);
+        registerItemClass(WitchdoctorArmor.class);
+        registerItemClass(PotionOfMana.class);
+
     }
 
     public static boolean isValidItemClass(String itemClass) {
@@ -485,14 +492,14 @@ public class ItemFactory {
     public static Item createItemFromDesc(@NotNull JSONObject itemDesc) throws  JSONException {
         String kind = itemDesc.getString("kind");
 
-        if (kind.equals("NoItem") || Treasury.get().isForbidden(kind)) {
+        if (kind.equals("NoItem")) {
             return ItemsList.DUMMY;
         }
 
         Item item = ItemFactory.itemByName(kind);
         item.fromJson(itemDesc);
 
-        return item;
+        return Treasury.get().check(item);
     }
 
     public static Item virtual(String cl) {

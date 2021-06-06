@@ -66,6 +66,19 @@ public class Pushing extends Actor {
 				return;
 			}
 
+			if(!ch.valid()) {
+				EventCollector.logException("pushing dummy char");
+				Actor.remove( Pushing.this );
+				return;
+			}
+
+			if(ch.getSprite().getParent()==null) {
+				EventCollector.logException("pushing orphaned char");
+				Actor.remove( Pushing.this );
+				return;
+			}
+
+
 			point( ch.getSprite().worldToCamera( from ) );
 			end = ch.getSprite().worldToCamera( to );
 			

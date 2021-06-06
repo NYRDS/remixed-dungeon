@@ -112,7 +112,6 @@
   <string name="Possess_Info">Seni kegelapan mengawal minda yang membolehkan penyihir mengawal kehendak kebanyakan makhluk</string>
   <string name="Possess_PossessionFailed">Semangat  %s terlalu kuat</string>
   <string name="Possess_Possessed">%s menunggu perintah anda</string>
-  <string name="Possess_MustTargetChar">Hanya makhluk boleh menjadi sasaran Rasuk</string>
   <string name="Possess_CantPossessSelf">Anda tidak boleh merasuki diri anda sendiri</string>
   <string name="Mob_StaControlledStatus">%s ini di bawah pengaruhi kegelapan</string>
   <string name="BlackCat_AiStatus">Kucing ini dengan tingkah laku kucing biasa</string>
@@ -149,6 +148,7 @@
   <string name="town_deco_pedestal_desc">Rehal dengan kitab suci di atasnya.</string>
   <string name="town_deco_shelf_name">Para</string>
   <string name="town_deco_shelf_desc">Para kosong.</string>
+  <string name="town_deco_inn_bed_name">Katil</string>
   <string name="WndPriest_Instruction2_m">Selamat datang ke gereja suci Santa Penguasa Bawah Tanah!</string>
   <string name="WndPriest_Instruction2_f">Selamat datang ke gereja suci Santa Penguasa Bawah Tanah!</string>
   <string name="WndPriest_Instruction2">Jika anda perlukan bantuan, saya boleh bantu merawat anda dengan kos sebanyak %d syiling emas!\nJika anda mahu dirahmati dengan kuasa suci, atau terkena sumpahan, sila berjumpa dengan Uskup dalam gereja kecil kami ini.</string>
@@ -2490,4 +2490,20 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
   <string name="town_deco_stone_wall_broken_name">Dinding rosak</string>
   <string name="town_deco_stone_wall_broken_desc">Dinding batu lama, dalam keadaan rosak</string>
   <string name="town_deco_crossroad_name">Tanda simpang</string>
+  <string name="InnKeeperNPC_Gender">feminin</string>
+  <string name="DrunkardNPC_Gender">feminin</string>
+  <string name="MercenaryNPC_Gender">feminin</string>
+  <string name="ServantNPC_Gender">feminin</string>
+  <string name="BardNPC_Gender">feminin</string>
+  <string name="town_deco_red_carpet_name">Permaidani</string>
+  <string name="town_deco_beige_carpet_name">Permaidani</string>
+  <string name="town_deco_brown_carpet_name">Permaidani</string>
+  <string name="town_deco_charcoal_carpet_name">Permaidani</string>
+  <string name="town_deco_magenta_carpet_name">Permaidani</string>
+  <string name="Potion_Colors_13">kuarza</string>
+  <string name="Potion_Colors_14">oniks</string>
+  <string name="PotionOfMana_Name">Posyen Mana</string>
+  <string name="PotionOfMana_Info">Posyen ini dapat memulihkan tenaga rohani anda.</string>
+  <string name="Snail_Gender">feminin</string>
+  <string name="DeepSnail_Gender">feminin</string>
 </resources>

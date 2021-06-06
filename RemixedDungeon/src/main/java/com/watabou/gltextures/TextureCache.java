@@ -23,11 +23,11 @@ import android.graphics.BitmapFactory;
 import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
 import com.watabou.glwrap.Texture;
+import com.watabou.pixeldungeon.RemixedDungeon;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -108,12 +108,30 @@ public class TextureCache {
 	}
 
 	@SneakyThrows
-	private static Bitmap getBitmap(Object src) {
+	private static @NotNull Bitmap getBitmap(Object src) {
 		if (src instanceof String) {
 			String resName = (String) src;
-			try(InputStream is = ModdingMode.getInputStream(resName)) {
-				return BitmapFactory.decodeStream(is);
+
+			Bitmap modAsset = BitmapFactory.decodeStream(ModdingMode.getInputStream(resName));
+
+			if(modAsset==null) {
+				throw new ModError("Bad bitmap: "+ resName);
 			}
+
+			if(ModdingMode.isAssetExist(resName)) {
+				Bitmap baseAsset = BitmapFactory.decodeStream(ModdingMode.getInputStreamBuiltIn(resName));
+
+				if(baseAsset==null) {
+					throw new ModError("Bad builtin bitmap: "+ resName);
+				}
+
+				if (modAsset.getHeight() * modAsset.getWidth() < baseAsset.getWidth() * baseAsset.getHeight()) {
+					RemixedDungeon.toast("%s image in %s smaller than in Remixed, using base version", resName, ModdingMode.activeMod());
+					return baseAsset;
+				}
+			}
+
+			return modAsset;
 		} else if (src instanceof Bitmap) {
 			return (Bitmap) src;
 		}

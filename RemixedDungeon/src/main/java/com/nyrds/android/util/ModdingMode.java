@@ -35,6 +35,7 @@ public class ModdingMode {
 	public static final String NO_FILE = "___no_file";
 
 	private static final Set<String> trustedMods = new HashSet<>();
+	private static final Set<String> dlcSet = new HashSet<>();
 
 	public static boolean useRetroHeroSprites = false;
 
@@ -46,6 +47,9 @@ public class ModdingMode {
 	static {
 		trustedMods.add("Maze");
 		trustedMods.add("Conundrum");
+
+		dlcSet.add("HiFi DLC");
+		dlcSet.add(REMIXED);
 
 		resourcesRemap.put("spellsIcons/elemental(new).png", "spellsIcons/elemental_all.png");
 	}
@@ -154,6 +158,8 @@ public class ModdingMode {
 		return !mActiveMod.equals(REMIXED);
 	}
 
+	public static boolean inRemixed() {return dlcSet.contains(mActiveMod); }
+
 	public static boolean isResourceExists(String resName) {
 		return isAssetExist(resName) || isResourceExistInMod(resName);
 	}
@@ -249,6 +255,20 @@ public class ModdingMode {
 		return resource.toString();
 	}
 
+	public static @NotNull InputStream getInputStreamBuiltIn(String resName) {
+		try {
+
+			if(resourcesRemap.containsKey(resName)) {
+				resName = resourcesRemap.get(resName);
+			}
+
+			return RemixedDungeonApp.getContext().getAssets().open(resName);
+		} catch (IOException e) {
+			throw new ModError("Missing file: "+resName + " in Remixed",e);
+		}
+	}
+
+
 	public static @NotNull InputStream getInputStream(String resName) {
 		try {
 			if (!mActiveMod.equals(REMIXED) && isModdingAllowed(resName)) {
@@ -258,13 +278,9 @@ public class ModdingMode {
 				}
 			}
 
-			if(resourcesRemap.containsKey(resName)) {
-				resName = resourcesRemap.get(resName);
-			}
-
-			return RemixedDungeonApp.getContext().getAssets().open(resName);
-		} catch (IOException e) {
-			throw new ModError("Missing file: "+resName + " in: " + activeMod() + " " + activeModVersion(),e);
+			return getInputStreamBuiltIn(resName);
+		} catch (IOException | ModError e) {
+			throw new ModError("Missing file: " + resName + " in: " + activeMod() + " " + activeModVersion(),e);
 		}
 	}
 

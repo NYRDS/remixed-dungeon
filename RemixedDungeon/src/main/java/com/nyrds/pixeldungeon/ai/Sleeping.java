@@ -8,12 +8,14 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Sleeping extends MobAi implements AiState {
 
     public Sleeping(){}
 
     @Override
-    public void act(Mob me) {
+    public void act(@NotNull Mob me) {
 
         if(returnToOwnerIfTooFar(me, 3)) {
             return;
@@ -29,10 +31,6 @@ public class Sleeping extends MobAi implements AiState {
         } else {
             me.enemySeen = false;
             me.spend(Actor.TICK);
-
-            if(Math.random()<0.2) {
-                me.getSprite().idle();
-            }
         }
     }
 

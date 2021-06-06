@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
-import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -14,6 +13,10 @@ public class ExplodingSkull extends UndeadMob {
         hp(ht(10));
         baseDefenseSkill = 1;
         baseAttackSkill  = 125;
+
+        dmgMin = 25;
+        dmgMax = 45;
+        dr = 1;
 
         baseSpeed = 1.5f;
 
@@ -31,16 +34,4 @@ public class ExplodingSkull extends UndeadMob {
         }
         return false;
     }
-
-    @Override
-    public int damageRoll() {
-        return Random.NormalIntRange(25, 45);
-    }
-
-    @Override
-    public int dr() {
-        return 1;
-    }
-
-
 }

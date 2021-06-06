@@ -11,7 +11,6 @@ rootDir = '../../RemixedDungeon/src/main/assets/hero_modern'
 def get_frame(img, fn):
     x = xs * fn
     y = 0
-
     return img.crop((x, y, x + xs, y + ys))
 
 

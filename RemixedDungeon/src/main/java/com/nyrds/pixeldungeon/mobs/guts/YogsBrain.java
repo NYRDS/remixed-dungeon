@@ -4,7 +4,7 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -22,6 +22,8 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
+import lombok.var;
+
 /**
  * Created by DeadDie on 12.02.2016
  */
@@ -34,6 +36,9 @@ public class YogsBrain extends Mob implements IZapper {
         hp(ht(350));
         baseDefenseSkill = 30;
         baseAttackSkill  = 31;
+        dmgMin = 15;
+        dmgMax = 25;
+        dr = 12;
 
         exp = 25;
 
@@ -54,16 +59,6 @@ public class YogsBrain extends Mob implements IZapper {
             Buff.affect(enemy, Stun.class);
         }
         return damage;
-    }
-
-    @Override
-    public int damageRoll() {
-        return Random.NormalIntRange(15, 25);
-    }
-
-    @Override
-    public int dr() {
-        return 12;
     }
 
     @Override
@@ -93,15 +88,10 @@ public class YogsBrain extends Mob implements IZapper {
             return super.act();
         }
 
-        int nightmarePos = Dungeon.level.getEmptyCellNextTo(getPos());
+        var spawn = CharUtils.spawnOnNextCell(this, "Nightmare", (int) (10 * RemixedDungeon.getDifficultyFactor()));
 
-        spend( TIME_TO_SUMMON );
-
-        if (Dungeon.level.cellValid(nightmarePos)) {
-            Nightmare nightmare = new Nightmare();
-            nightmare.setPos(nightmarePos);
-            Dungeon.level.spawnMob(nightmare, 0,getPos());
-
+        if(spawn.valid()) {
+            spend( TIME_TO_SUMMON );
             Sample.INSTANCE.play(Assets.SND_CURSED);
         }
 

@@ -10,6 +10,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
@@ -129,18 +130,21 @@ public abstract class MobAi implements AiState {
 
     protected void huntEnemy(@NotNull Mob me) {
 
-        if (me.getEnemy().valid()) {
-            me.enemySeen = true;
-            me.setTarget(me.getEnemy().getPos());
+        final Char enemy = me.getEnemy();
 
+        if (enemy.valid()) {
+            me.enemySeen = true;
+            final int enemyPos = enemy.getPos();
+
+            me.setTarget(enemyPos);
             me.notice();
             me.setState(getStateByClass(Hunting.class));
 
             if (me.getOwnerId()==me.getId() && Dungeon.isChallenged(Challenges.SWARM_INTELLIGENCE)) {
-                for (Mob mob : me.level().mobs) {
-                    if (me != mob && mob.getOwnerId() != me.getEnemy().getId()) {
-                        mob.setEnemy(me.getEnemy());
-                        mob.setTarget(me.getEnemy().getPos());
+                for (Mob mob : me.level().getCopyOfMobsArray()) {
+                    if (me != mob && !mob.friendly(enemy)) {
+                        mob.setEnemy(enemy);
+                        mob.setTarget(enemyPos);
                         mob.notice();
                         mob.setState(getStateByClass(Hunting.class));
                     }
@@ -150,10 +154,13 @@ public abstract class MobAi implements AiState {
     }
 
     public boolean returnToOwnerIfTooFar(@NotNull Mob me, int maxDist) {
-        if(     me.level().distance(me.getPos(),me.getOwnerPos())>maxDist
-            &&  me.level().distance(me.getTarget(),  me.getOwnerPos())>maxDist
+        final Level level = me.level();
+        final int ownerPos = me.getOwnerPos();
+
+        if(     level.distance(me.getPos(), ownerPos)>maxDist
+            &&  level.distance(me.getTarget(), ownerPos)>maxDist
         ) {
-            me.setTarget(me.getOwnerPos());
+            me.setTarget(ownerPos);
             me.setState(getStateByClass(Wandering.class));
             return true;
         }
@@ -191,6 +198,6 @@ public abstract class MobAi implements AiState {
     }
 
     @Override
-    public void onDie() { // do nothing, we are dead already...
+    public void onDie(@NotNull Mob me) { // do nothing, we are dead already...
     }
 }

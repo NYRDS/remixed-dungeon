@@ -115,7 +115,6 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \"%1$s\" \n\" %2$s \"</
   <string name="Possess_Info">A sötét művészete a gondolat irányításnak lehetővé teszi a varázslat használóját hogy a legtöbb lény elméjét irányítsa</string>
   <string name="Possess_PossessionFailed">%s akarata túl erős</string>
   <string name="Possess_Possessed">%s a parancsodra vár</string>
-  <string name="Possess_MustTargetChar">Csak teremtmények célozhatók Megszállással</string>
   <string name="Possess_CantPossessSelf">Nem szállhatod meg magad</string>
   <string name="Mob_StaControlledStatus"> %s - átkozott megszállás alatt</string>
   <string name="BlackCat_AiStatus">Ez a macska normális macska dolgokat csinál</string>
@@ -152,6 +151,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \"%1$s\" \n\" %2$s \"</
   <string name="town_deco_pedestal_desc">Szent könyv egy talpazaton.</string>
   <string name="town_deco_shelf_name">Polcok</string>
   <string name="town_deco_shelf_desc">Üres polcok</string>
+  <string name="town_deco_inn_bed_name">Ágy</string>
   <string name="WndPriest_Instruction2_m">Isten hozott fiam, a hatalmas Mélység Ura Mikulásának szent templomában!</string>
   <string name="WndPriest_Instruction2_f">Isten hozott lányom, a hatalmas Mélység Ura Mikulásának szent templomában!</string>
   <string name="WndPriest_Instruction2">Ha segítség kell, gyógyítással szolgálhatok, csupán %d aranyért!\nHa szent Áldást keresel, vagy Isten bocsássa, átok ül rajtad, a Püspököt szerény templomunkban találhatod.</string>
@@ -2505,25 +2505,13 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
   <string name="town_deco_stone_wall_broken_desc">Egy régi kőfal, rossz állapotban</string>
   <string name="Challenges_Names_6">Tiltott Rúnák</string>
   <string name="Challenges_Names_7">Békesség</string>
-  <string name="Welcome_Text_29_2">
-remix.29.2
-- Játék:
--- Új Kihívások:
---- Tiltott Rúnák
---- Békesség
-- Modok:
--- Egyéni Kincsek
-- Bugok megjavítva</string>
   <string name="town_deco_crossroad_name">Útkereszteződést jelző tábla</string>
   <string name="town_deco_crossroad_desc">Egy durva fából készült oszlop, amin nyíl alakú táblák mutatják az irányt. A szöveg rajtuk már rég elmosódott, valószínűleg a kemény környezeti hatások miatt.</string>
   <string name="ShieldBuffReady_Name">Készen áll</string>
   <string name="ShieldBuffNotReady_Name">Nem áll készen</string>
   <string name="WoodenShield_name">Fapajzs</string>
-  <string name="WoodenShield_desc">Egy durva fapajzs a legegyszerűbb formájában. Kör alakú és időről időre felfog pár ütést.</string>
   <string name="ToughShield_name">Bőrrel Megerősített Pajzs</string>
-  <string name="ToughShield_desc">Ez a bőrpántokkal megerősített pajzs keményebbnek tűnik, mint a fából készült változat. Annyi biztos, hogy több sebzést felfog.</string>
   <string name="StrongShield_name">Bronzzal Bevont Pajzs</string>
-  <string name="StrongShield_desc">Ezt a téglalap alakú pajzsot bronz lemezekkel vonták be, majd kidíszítették színes rongyokkal. Jelentősen nehezebb, de sokkal több sebzést fel is fog.</string>
   <string name="RoyalShield_name">Királyi Pajzs</string>
   <string name="RoyalShield_desc">Egy teljesen fémből készült pajzs. Igen, elég nehéz, de egyedül ez képes a legtöbb védelmet nyújtani neked.</string>
   <string name="ShieldInfoTemplate">Ez a pajzs maximum %1$d -át fogja fel a kapott sebzésnek. %2$d%% eséllyel. %3$3.1f másodpercbe fog telni, hogy kiheverd a sikeres védekezést.</string>
@@ -2550,9 +2538,7 @@ A modokat egymásnak készítik a játékosok.
 A modok időnként kiszámíthatatlanul és furcsán működnek, mi figyelmeztettünk!
 Az NYRDS csapata semmilyen módon nem felelős a modok tartalmáért, minőségéért és stabilitásáért.
 Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
-  <string name="ShieldWeaponInfo">Ha fegyverként használod ezt a pajzsot, átlagosan %1$d sebzést fog okozni.</string>
   <string name="TownPortal_Name">Hazajutási Portál</string>
-  <string name="TownPortal_Info">Ez a varázslat lehetővé teszi, hogy azonnal visszatérj biztonságba. Azonban egy közeli, erős varázslat forrása megakadályozhatja, hogy megfelelően működjön.</string>
   <string name="MedicineMask_Name">Sebészi maszk</string>
   <string name="MedicineMask_Info">A Sebészi maszk arra lett kitalálva, hogy megállítsa a viselő szájából kijövő, cseppfolyós mikroorganizmusokat és aeroszolokat.
 Ennek a viselése azt jelenti, hogy odafigyelsz másokra.</string>
@@ -2569,11 +2555,8 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
   <string name="Backstab_Name">Hátbaszúrás</string>
   <string name="Backstab_Info">Nesztelen hátbadöfés. Sunyi, de extrém hatásos, a hátbadöfés hatékonysága a végrehajtó szintjével nő.\n\nEgy sikeres döfés teljesen lényegtelenné teszi, hogy az áldozat milyen páncélt visel vagy milyen speciális védelme van.</string>
   <string name="Backstab_TooFar">Az áldozat túl messze van egy sikeres támadáshoz.</string>
-  <string name="Backstab_Aware">Az áldozat nem tudhat rólad, hogy sikeresen hátbadöfhesd.</string>
   <string name="KunaiThrow_Name">Kunai Dobás</string>
-  <string name="KunaiThrow_Info">A Halálos Kunai-dobás olyan extrém gyors, hogy még a célpontot sem tudod kiválasztani.\n\nAz igazi Kunai Mesterek több Kunai-t is tudnak dobni egyszerre.</string>
   <string name="Haste_Name">Extrém Gyorsaság</string>
-  <string name="Haste_Info">A Gyorsaság lehetővé teszi végrehajtójának, hogy rendkívüli sebességgel mozogjon, míg körülötte minden mozdulatlan marad. A Gyorsaság sok energiát felemészt, ezért csak rövid ideig használható. Egy képzett mester több ideig képes használni a Gyorsaságot.</string>
   <string name="Welcome_Text_29_5">
     remix.29.5\n
     - Játékmenet:\n
@@ -2605,7 +2588,6 @@ hogy teleportáljon</string>
   <string name="Stun_Info">Kábult</string>
   <string name="Char_StaStunned">kábult</string>
   <string name="Mob_ReadyForOrder">%skészen áll a parancsodra.</string>
-  <string name="Mob_CantDoIt">Nem tudom megtenni. Tappancsaim vannak.</string>
   <string name="Welcome_Text_29_6">
 remix.29.6
 - Játék:
@@ -2615,4 +2597,20 @@ remix.29.6
 -- Különleges fegyver tulajdonságok!
 -- Még több csoportosítatlan cucc!
 - Bugok megjavítva</string>
+  <string name="InnKeeperNPC_Gender">hím</string>
+  <string name="DrunkardNPC_Gender">hím</string>
+  <string name="MercenaryNPC_Gender">hím</string>
+  <string name="ServantNPC_Gender">nőnemű</string>
+  <string name="BardNPC_Gender">hím</string>
+  <string name="town_deco_red_carpet_name">Szőnyeg</string>
+  <string name="town_deco_beige_carpet_name">Szőnyeg</string>
+  <string name="town_deco_brown_carpet_name">Szőnyeg</string>
+  <string name="town_deco_charcoal_carpet_name">Szőnyeg</string>
+  <string name="town_deco_magenta_carpet_name">Szőnyeg</string>
+  <string name="Potion_Colors_13">kvarc</string>
+  <string name="Potion_Colors_14">ónix</string>
+  <string name="PotionOfMana_Name">Mana Főzet</string>
+  <string name="PotionOfMana_Info">Ez a főzet újratölti a spirituális energiádat.</string>
+  <string name="Snail_Gender">hím</string>
+  <string name="DeepSnail_Gender">hím</string>
 </resources>

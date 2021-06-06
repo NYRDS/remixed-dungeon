@@ -2525,14 +2525,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="RoyalShield_desc">A full metal shield. Yes, it\'s heavy, but only it can provide you the best protection.</string>
   <string name="ShieldInfoTemplate">This shield will block up to %1$d of incoming damage.  With %2$d %% chance. It will take %3$3.1f seconds to recover after successful block.</string>
   <string name="Belongings_CantWearBoth">You can\'t equip %1$s and %2$s at same time!</string>
-  <string name="Welcome_Text_29_3">
-    remix.29.3\n
-    - Gameplay:\n
-    -- Shields!\n
-    - Modding:\n
-    -- Custom Shields!\n
-    - Bugs fixed\n
-    </string>
   <string name="ShieldStrTemplate">Wearer of the shield should have at least %1$d points of Strength to use it properly.</string>
   <string name="town_deco_flowerinthepot_name">Flower in a pot</string>
   <string name="town_deco_flowerinthepot_desc">Decorative flower with sweet flavor</string>
@@ -2616,36 +2608,26 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- More uncategorized stuff!\n
     - Bugs fixed\n
     </string>
-
   <string name="InnKeeperNPC_Name">inn keeper</string>
   <string name="InnKeeperNPC_Name_Objective">inn keeper</string>
   <string name="InnKeeperNPC_Gender">masculine</string>
   <string name="InnKeeperNPC_Desc">The inn keeper is proud of himself.</string>
-
-
   <string name="DrunkardNPC_Name">drunkard</string>
   <string name="DrunkardNPC_Name_Objective">drunkard</string>
   <string name="DrunkardNPC_Gender">masculine</string>
   <string name="DrunkardNPC_Desc">Regular inn customer in natural state.</string>
-
-
   <string name="MercenaryNPC_Name">mercenary</string>
   <string name="MercenaryNPC_Name_Objective">mercenary</string>
   <string name="MercenaryNPC_Gender">masculine</string>
   <string name="MercenaryNPC_Desc">Sturdy looking man.</string>
-
-
   <string name="ServantNPC_Name">inn servant</string>
   <string name="ServantNPC_Name_Objective">inn servant</string>
   <string name="ServantNPC_Gender">feminine</string>
   <string name="ServantNPC_Desc">A very busy inn servant.</string>
-
-
   <string name="BardNPC_Name">bard</string>
   <string name="BardNPC_Name_Objective">bard</string>
   <string name="BardNPC_Gender">masculine</string>
   <string name="BardNPC_Desc">The town bard is playing his lute.</string>
-
   <string name="Welcome_Text_30">
     remix.30.0\n
     - Gameplay:\n
@@ -2653,55 +2635,36 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Inn is opened now!\n
     - Bugs fixed\n
     </string>
-
-
   <string name="Roar_Name">Roar</string>
   <string name="Roar_Info">The mighty roar will surely terrify your enemies and inspire allies.</string>
-
   <string name="LightningBolt_Name">Lighting Bolt</string>
   <string name="LightningBolt_Info">A spell that is shared among ancient shamans, that will shock your enemies twice as effectively, especially if they are foolish enough to be on standing on water.</string>
-
   <string name="Heal_Name">Heal</string>
   <string name="Heal_Info">A pretty useful spell in Dungeon, right?</string>
-
   <string name="Order_Name">Order</string>
   <string name="Order_Info">With proper concentration, your orders are almost undeniable.</string>
   <string name="Order_Resist">How dare you?!!</string>
-
   <string name="Spell_SelectAChar">Select a target being.</string>
-
   <string name="Calm_Name">Calm</string>
   <string name="Calm_Info">There are a lot of aggravated creatures around, let us help them.</string>
-
   <string name="CharmSpell_Name">Charm</string>
   <string name="CharmSpell_Info">Everyone deserve some love, right?</string>
-
   <string name="HideInGrassSpell_Name">HideInGrassSpell</string>
   <string name="HideInGrassSpell_Info">You perfected your Hide-and-seek mastery.</string>
   <string name="HideInGrassSpell_NeedGrassToHide">Even I can\'t hide in plain sight.</string>
-
-
   <string name="MagicArrow_Name">Magic Arrow</string>
   <string name="MagicArrow_Info">Good old magic arrow, the right choice when you run out of ammo.</string>
-
   <string name="NatureArmorSpell_Name">Nature Armor</string>
   <string name="NatureArmorSpell_Info">Elves can be tough as well, especially when protected by Mother Nature itself.</string>
-
   <string name="ShootInEye_Name">Shoot In Eye</string>
   <string name="ShootInEye_Info">Use your exceptional marksmanship skills to shoot the enemy right in the eye, if he has any of course.</string>
-
-
   <string name="Sprout_Name">Sprout</string>
   <string name="Sprout_Info">Awaken the dormant seeds.\nHowever, there should be some greenery on the ground for this spell to succeed.</string>
-
-
   <string name="SummonBeast_Name">Beast Call</string>
   <string name="SummonBeast_Info">Attempt to summon a horde of mighty beasts to your command.\nActual results may vary.</string>
   <string name="SummonBeast_AtYourCommand">At your command!</string>
-
   <string name="WndSettings_RecordVideo">Video recording</string>
   <string name="Dungeon_saveIoError">When trying to create save file:</string>
-
   <string name="town_table_fortune_ball_name">Crystal ball</string>
   <string name="town_table_fortune_ball_desc">Crystal ball, with a mysterious haze inside.</string>
   <string name="town_deco_shelf_full_name">Shelf</string>
@@ -2748,15 +2711,52 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="town_deco_charcoal_carpet_desc">In pursuit of comfort for guests, the administration of the cinema chose the highest quality carpets of a charcoal color.</string>
   <string name="town_deco_magenta_carpet_name">Carpet</string>
   <string name="town_deco_magenta_carpet_desc">The magenta hue of this carpet wafs thoughts of local wine.</string>
-  
   <string name="InnServant_Phrase_1">Ugh, still so much to do!</string>
   <string name="InnServant_Phrase_2">This drunkard drives me mad!</string>
   <string name="InnServant_Phrase_3">Looks clean to me</string>
   <string name="InnServant_Phrase_4">Oh my, so many guests today</string>
-
   <string name="Drunkard_Phrase_1">MOR BOOZ PLEAS!</string>
   <string name="Drunkard_Phrase_2">Who neids water when yau hav beir</string>
   <string name="Drunkard_Phrase_3">This beir tastes lik dirt</string>
   <string name="Drunkard_Phrase_4">Zzzzzz...</string>
-
+  <string name="HeroSubClass_NameWitchdoctor">witchdoctor</string>
+  <string name="HeroSubClass_NameGuardian">guardian</string>
+  <string name="Gnoll_BecomeWitchdoctorDesc">Become a Witch-Doctor</string>
+  <string name="Gnoll_BecomeGuardianDesc">Become a Guardian</string>
+  <string name="HeroSubClass_DescWitchdoctor">Spellcasting endows the _Witchdoctor_ with a magic shield that completely protects him from incoming damage.</string>
+  <string name="HeroSubClass_DescGuardian">Skillful defensive knowledge allows the _Guardian_ to counterattack with a shield, making him a formidable foe for those who dare to attack this walking bastion.</string>
+  <string name="Potion_Colors_12">epidot</string>
+  <string name="Potion_Colors_13">quartz</string>
+  <string name="Potion_Colors_14">onyx</string>
+  <string name="Potion_Colors_15">pearl</string>
+  <string name="ManaShieldBuff_Name">Magic Shield</string>
+  <string name="ManaShieldBuff_Info">Magic Shield</string>
+  <string name="TenguLiver_Name">Tengu Liver</string>
+  <string name="TenguLiver_Info">This liver belongs to a mighty foe. Just by looking at it, your feral instincts take over, and you feel the urge to consume it.</string>
+  <string name="PotionOfMana_Name">Mana Potion</string>
+  <string name="PotionOfMana_Info">This potion will restore your spiritual energy.</string>
+  <string name="WndFortuneTeller_IdentifyAll">All</string>
+  <string name="Snail_Name">Snail</string>
+  <string name="Snail_Gender">masculine</string>
+  <string name="Snail_Name_Objective">Snail</string>
+  <string name="Snail_Desc">This small mollusk has grown quite big by feeding on sewage, but he is still really slow which makes him an easy foe to face.</string>
+  <string name="DeepSnail_Name">Deep Snail</string>
+  <string name="DeepSnail_Gender">masculine</string>
+  <string name="DeepSnail_Name_Objective">Deep Snail</string>
+  <string name="DeepSnail_Desc">This type of mollusk can often be seen near water sources and is much faster than your ordinary snail. Beware of the bites however, they can have an unpleasant effect on your skin.</string>
+  <string name="CharInfo_Level">This is a level %1$d %2$s.</string>
+  <string name="WrnExperimental_realtime">Realtime! mode enabled: this is realtime roguelike now, tap fast or die.\nWant to check inventory?\nGood luck to do so while sewer crab was checking your guts.</string>
+  <string name="WrnExperimental_moveTimeout">Move timeout set to %d milliseconds, think fast!</string>
+  <string name="WnrExperimental_hint">If this strange and twisted world too harsh for you please disable those options using\nStart Screen->Options->Gameplay\nmenu and start new game or load another save.</string>
+  <string name="WrnExperimental_title">Experimental options enabled!</string>
+  <string name="Welcome_Text_30_1">
+    remix.30.1\n
+    - Gameplay:\n
+    -- Gnoll Subclasses!\n
+    -- Snails!\n
+    -- Chaos Items progression nerfed.\n
+    -- Mana Potion is regular potion from now.\n
+    -- Badges now obtainable when playing DLC\'s (but not mods).\n
+    - Bugs fixed\n
+    </string>
 </resources>

@@ -102,8 +102,12 @@ public abstract class Mob extends Char {
 
 	private static final String STATE      = "state";
 	private static final String FRACTION   = "fraction";
+    protected int dmgMin = 0;
+    protected int dmgMax = 0;
+    protected int attackSkill = 0;
+    protected int dr = 0;
 
-	public Mob() {
+    public Mob() {
 		super();
 		setupCharData();
 	}
@@ -214,15 +218,21 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
+		if (Random.Float() < 0.01/lvl()) {
+			lvl(lvl()+1);
+		}
+
 		script.runOptional("onAct");
+		GLog.debug("%s is %s", getEntityKind(), getState().getTag());
 		getState().act(this);
 		return true;
 	}
 
 
 	public boolean isEnemyInFov(){
-	    return getEnemy().isAlive() && level().cellValid(getEnemy().getPos()) && level().fieldOfView[getEnemy().getPos()]
-                && getEnemy().invisible <= 0;
+		final Char enemy = getEnemy();
+		return enemy.valid() && enemy.isAlive() && level().cellValid(enemy.getPos()) && level().fieldOfView[enemy.getPos()]
+                && enemy.invisible <= 0;
     }
 
 	public void moveSprite(int from, int to) {
@@ -350,6 +360,8 @@ public abstract class Mob extends Char {
 	@Override
 	public void destroy() {
 
+    	spend(MICRO_TICK);
+
 		super.destroy();
 
 		level().mobs.remove(this);
@@ -361,7 +373,8 @@ public abstract class Mob extends Char {
 
 	public void die(NamedEntityKind cause) {
 
-		getState().onDie();
+    	spend(Actor.MICRO_TICK);
+		getState().onDie(this);
 
 		script.run("onDie", cause);
 
@@ -398,7 +411,7 @@ public abstract class Mob extends Char {
 				}
 
 				if (!(cause instanceof Mob) || hero.getHeroClass() == HeroClass.NECROMANCER) {
-					if (hero.lvl() <= maxLvl && exp > 0) {
+					if (hero.lvl() <= (maxLvl + lvl()) && exp > 0) {
 						hero.earnExp(exp);
 					}
 				}
@@ -535,6 +548,7 @@ public abstract class Mob extends Char {
 		return !this.fraction.isEnemy(chr.fraction);
 	}
 
+	@Override
 	public boolean canBePet() {
 		return true;
 	}
@@ -607,7 +621,7 @@ public abstract class Mob extends Char {
 
 	public void loot(Object loot, float lootChance) {
 
-		if(Dungeon.hero.lvl() > maxLvl + 2) {
+		if(Dungeon.hero.lvl() > maxLvl + 2 + lvl()) {
 			return;
 		}
 
@@ -634,5 +648,23 @@ public abstract class Mob extends Char {
 	@Override
 	public int priceSell(Item item) {
 		return script.run("priceSell", item, super.priceSell(item)).toint();
+	}
+
+	@Override
+	public int damageRoll() {
+		int dmg = Random.NormalIntRange(dmgMin, dmgMax);
+
+		dmg += getActiveWeapon().damageRoll(this);
+
+		if(!rangedWeapon.valid()) {
+			dmg += getSecondaryWeapon().damageRoll(this);
+		}
+
+		return dmg;
+	}
+
+	@Override
+	public int dr() {
+		return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() + dr;
 	}
 }

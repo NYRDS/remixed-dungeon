@@ -53,7 +53,6 @@ public class ChaosArmor extends Armor {
 			charge++;
 			if(charge > chargeForLevel()) {
 				upgrade(true);
-				upgrade(true);
 				selectImage();
 				charge = 0;
 			}

@@ -7,6 +7,7 @@ import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.Util;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -148,6 +149,11 @@ public class CustomBuff extends Buff {
     @Override
     public int attackProc(Char attacker, Char defender, int damage) {
         return script.runOptional("attackProc", damage, defender, damage);
+    }
+
+    @Override
+    public void spellCasted(Char caster, Spell spell) {
+        script.runOptionalNoRet("spellCasted", caster, spell);
     }
 
     @Override

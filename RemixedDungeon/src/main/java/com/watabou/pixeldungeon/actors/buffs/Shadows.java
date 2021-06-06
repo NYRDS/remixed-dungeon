@@ -53,10 +53,9 @@ public class Shadows extends Invisibility {
 	
 	@Override
 	public boolean act() {
+		spend( TICK * 2 );
+
 		if (target.isAlive()) {
-			
-			spend( TICK * 2 );
-			
 			if (--left <= 0 || target.visibleEnemies() > 0) {
 				detach();
 			}

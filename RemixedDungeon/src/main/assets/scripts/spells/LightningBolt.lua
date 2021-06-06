@@ -27,7 +27,8 @@ return spell.init{
     end,
 
     castOnChar = function(self, spell, caster, victim)
-        local damage = math.random(caster:lvl(),caster:skillLevel() * caster:lvl())
+        local lvl = caster:lvl()
+        local damage = math.random(lvl,caster:skillLevel() * math.sqrt(lvl) + lvl)
         RPD.CharUtils:lightningProc(caster, victim:getPos(), damage)
 
         return true

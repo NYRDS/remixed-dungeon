@@ -10,6 +10,7 @@ import com.nyrds.android.util.UnzipStateListener;
 import com.nyrds.android.util.UnzipTask;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.nyrds.pixeldungeon.windows.ScrollableList;
 import com.nyrds.pixeldungeon.windows.WndHelper;
@@ -33,7 +34,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 	private String selectedMod;
 	private String downloadTo;
 
-	private Map<String, Mods.ModDesc> modsList;
+	private final Map<String, ModDesc> modsList;
 
 	public WndModSelect() {
 		super();
@@ -54,14 +55,14 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 		add(list);
 
         float pos = 0;
-		for (Map.Entry<String, Mods.ModDesc> entry : modsList.entrySet()) {
-			final Mods.ModDesc desc = entry.getValue();
+		for (Map.Entry<String, ModDesc> entry : modsList.entrySet()) {
+			final ModDesc desc = entry.getValue();
 			float additionalMargin = Icons.get(Icons.CLOSE).width() + GAP;
 
 			if (desc.installed && !ModdingMode.REMIXED.equals(desc.name)) {
 				SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
 					protected void onClick() {
-						onDelete(desc.name);
+						onDelete(desc.installDir);
 					}
 				};
 				deleteBtn.setPos(width - deleteBtn.width() - GAP, pos + (BUTTON_HEIGHT - deleteBtn.height())/2);
@@ -79,7 +80,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 					@Override
 					protected void onClick() {
 						hide();
-						onSelect(desc.name);
+						onSelect(desc.installDir);
 					}
 				};
 
@@ -120,13 +121,13 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 
 	protected void onSelect(String option) {
 
-		Mods.ModDesc desc = modsList.get(option);
+		ModDesc desc = modsList.get(option);
 		if (!option.equals(ModdingMode.REMIXED) || desc.needUpdate) {
 
 			if (desc.needUpdate) {
-				FileSystem.deleteRecursive(FileSystem.getExternalStorageFile(desc.name));
-				selectedMod = desc.name;
-				downloadTo = FileSystem.getExternalStorageFile(selectedMod + ".zip").getAbsolutePath();
+				FileSystem.deleteRecursive(FileSystem.getExternalStorageFile(desc.installDir));
+				selectedMod = desc.installDir;
+				downloadTo = FileSystem.getExternalStorageFile(selectedMod+".tmp").getAbsolutePath();
 				desc.needUpdate = false;
 
 				Game.execute(new DownloadTask(new DownloadProgressWindow(Utils.format("Downloading %s", selectedMod),this),

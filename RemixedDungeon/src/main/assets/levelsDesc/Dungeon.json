@@ -2,7 +2,7 @@
    "Levels":{
       "0":{"kind":"SewerLevel", "depth":0, "size":[0,0]},
 
-      "town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","script": "scripts/actors/town/Compass"},
+      "town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town_2021_03.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","script": "scripts/actors/town/Compass"},
 	  "cinema_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Cinema_2021_03.json", "noFogOfWar":"true",  "isSafe":true, "music":"ost_town_1"},
 	  "church_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Church_2021_03.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
 	  "fortune_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Fortune_2021_03.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
@@ -35,10 +35,10 @@
       "ice4":{"kind":"IceCavesLevel", "depth":18,     "size":[32,32], "music":"ost_ice_caves", "maxBrightness":1.05},
       "ice5":{"kind":"IceCavesBossLevel", "depth":19, "size":[32,32], "music":"ost_boss_1_ambient", "fallbackMusic":"ost_boss_ambient", "maxBrightness":1.05},
 
-      "1":{"kind":"SewerLevel", "depth":1,        "size":[32,32], "music":"ost_sewer"},
-      "2":{"kind":"SewerLevel", "depth":2,        "size":[32,32], "music":"ost_sewer"},
-      "3":{"kind":"SewerLevel", "depth":3,        "size":[32,32], "music":"ost_sewer"},
-      "4":{"kind":"SewerLevel", "depth":4,        "size":[32,32], "music":"ost_sewer"},
+      "1":{"kind":"SewerLevel", "depth":1,        "size":[24,24], "music":"ost_sewer"},
+      "2":{"kind":"SewerLevel", "depth":2,        "size":[24,24], "music":"ost_sewer"},
+      "3":{"kind":"SewerLevel", "depth":3,        "size":[24,24], "music":"ost_sewer"},
+      "4":{"kind":"SewerLevel", "depth":4,        "size":[24,24], "music":"ost_sewer"},
       "5":{"kind":"SewerBossLevel", "depth":5,    "size":[32,32], "music":"ost_boss_1_ambient", "fallbackMusic":"ost_boss_ambient"},
       "6":{"kind":"PrisonLevel", "depth":6,       "size":[32,32], "music":"ost_prison"},
       "7":{"kind":"PrisonLevel", "depth":7,       "size":[32,32], "music":"ost_prison"},
@@ -72,7 +72,7 @@
    "Graph":{
     "0":[["town_2"],[]],
 
-    "town_2":[["church_2","cinema_2","1","library_2","shop_town_2","inn_2","fortune_2"],[]],
+    "town_2":[["church_2","cinema_2","1","library_2","shop_town_2","fortune_2","inn_2"],[]],
     "inn_2":[[],["town_2"]],
 	  "church_2":[[],["town_2"]],
 	  "shop_town_2":[[],["town_2"]],

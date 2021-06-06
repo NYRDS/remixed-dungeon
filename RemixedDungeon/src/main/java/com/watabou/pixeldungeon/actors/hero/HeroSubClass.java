@@ -19,7 +19,8 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
@@ -29,17 +30,7 @@ import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.actors.buffs.Combo;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.items.EquipableItem;
-import com.watabou.pixeldungeon.items.armor.AssasinArmor;
-import com.watabou.pixeldungeon.items.armor.BattleMageArmor;
-import com.watabou.pixeldungeon.items.armor.BerserkArmor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
-import com.watabou.pixeldungeon.items.armor.FreeRunnerArmor;
-import com.watabou.pixeldungeon.items.armor.GladiatorArmor;
-import com.watabou.pixeldungeon.items.armor.ScoutArmor;
-import com.watabou.pixeldungeon.items.armor.ShamanArmor;
-import com.watabou.pixeldungeon.items.armor.SniperArmor;
-import com.watabou.pixeldungeon.items.armor.WardenArmor;
-import com.watabou.pixeldungeon.items.armor.WarlockArmor;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
@@ -60,27 +51,29 @@ import lombok.SneakyThrows;
 
 public enum HeroSubClass implements CharModifier {
 
-	NONE( null, null,ClassArmor.class),
-	GLADIATOR( R.string.HeroSubClass_NameGlad,   R.string.HeroSubClass_DescGlad, GladiatorArmor.class),
-	BERSERKER( R.string.HeroSubClass_NameBers,   R.string.HeroSubClass_DescBers, BerserkArmor.class),
-	WARLOCK(   R.string.HeroSubClass_NameWarL,   R.string.HeroSubClass_DescWarL, WarlockArmor.class),
-	BATTLEMAGE(R.string.HeroSubClass_NameBatM,   R.string.HeroSubClass_DescBatM, BattleMageArmor.class),
-	ASSASSIN(  R.string.HeroSubClass_NameAssa,   R.string.HeroSubClass_DescAssa, AssasinArmor.class),
-	FREERUNNER(R.string.HeroSubClass_NameFreR,   R.string.HeroSubClass_DescFreR, FreeRunnerArmor.class),
-	SNIPER(    R.string.HeroSubClass_NameSnip,   R.string.HeroSubClass_DescSnip, SniperArmor.class),
-	WARDEN(    R.string.HeroSubClass_NameWard,   R.string.HeroSubClass_DescWard, WardenArmor.class),
-	SCOUT(     R.string.HeroSubClass_NameScout,  R.string.HeroSubClass_DescScout, ScoutArmor.class),
-	SHAMAN(    R.string.HeroSubClass_NameShaman, R.string.HeroSubClass_DescShaman, ShamanArmor.class),
-	LICH(      R.string.HeroSubClass_NameLich,   R.string.BlackSkullOfMastery_BecomeLichDesc, NecromancerArmor.class);
+	NONE( null, null,"ClassArmor"),
+	GLADIATOR( R.string.HeroSubClass_NameGlad,   R.string.HeroSubClass_DescGlad, "GladiatorArmor"),
+	BERSERKER( R.string.HeroSubClass_NameBers,   R.string.HeroSubClass_DescBers, "BerserkArmor"),
+	WARLOCK(   R.string.HeroSubClass_NameWarL,   R.string.HeroSubClass_DescWarL, "WarlockArmor"),
+	BATTLEMAGE(R.string.HeroSubClass_NameBatM,   R.string.HeroSubClass_DescBatM, "BattleMageArmor"),
+	ASSASSIN(  R.string.HeroSubClass_NameAssa,   R.string.HeroSubClass_DescAssa, "AssasinArmor"),
+	FREERUNNER(R.string.HeroSubClass_NameFreR,   R.string.HeroSubClass_DescFreR, "FreeRunnerArmor"),
+	SNIPER(    R.string.HeroSubClass_NameSnip,   R.string.HeroSubClass_DescSnip, "SniperArmor"),
+	WARDEN(    R.string.HeroSubClass_NameWard,   R.string.HeroSubClass_DescWard, "WardenArmor"),
+	SCOUT(     R.string.HeroSubClass_NameScout,  R.string.HeroSubClass_DescScout, "ScoutArmor"),
+	SHAMAN(    R.string.HeroSubClass_NameShaman, R.string.HeroSubClass_DescShaman, "ShamanArmor"),
+	LICH(      R.string.HeroSubClass_NameLich,   R.string.BlackSkullOfMastery_BecomeLichDesc, "NecromancerArmor"),
+	WITCHDOCTOR(R.string.HeroSubClass_NameWitchdoctor,   R.string.HeroSubClass_DescWitchdoctor, "WitchdoctorArmor"),
+	GUARDIAN(R.string.HeroSubClass_NameGuardian,   R.string.HeroSubClass_DescGuardian, "GuardianArmor");
 
-	private Integer                     titleId;
-	private Integer                     descId;
-	private Class<? extends ClassArmor> armorClass;
+	private final Integer                     titleId;
+	private final Integer                     descId;
+	private final String                      armorClass;
 
-	private Set<String> immunities       = new HashSet<>();
-	private Set<String> resistances      = new HashSet<>();
+	private final Set<String> immunities       = new HashSet<>();
+	private final Set<String> resistances      = new HashSet<>();
 
-	HeroSubClass(Integer titleId, Integer descId, Class<? extends ClassArmor> armorClass) {
+	HeroSubClass(Integer titleId, Integer descId, String armorClass) {
 		this.titleId = titleId;
 		this.descId  = descId;
 		this.armorClass = armorClass;
@@ -129,7 +122,7 @@ public enum HeroSubClass implements CharModifier {
 
 	@SneakyThrows
 	public ClassArmor classArmor() {
-		return armorClass.newInstance();
+		return (ClassArmor) ItemFactory.itemByName(armorClass);
 	}
 
 	@Override
@@ -149,22 +142,36 @@ public enum HeroSubClass implements CharModifier {
 
 	@Override
 	public int defenceProc(Char defender, Char enemy, int damage) {
-		return damage;
+		EquipableItem primaryItem =  defender.getItemFromSlot(Belongings.Slot.WEAPON);
+		EquipableItem secondaryItem = defender.getItemFromSlot(Belongings.Slot.LEFT_HAND);
+
+		switch (this) {
+			case GUARDIAN:
+				final int skillLevel = defender.skillLevel();
+				if(primaryItem.getEntityKind().contains("Shield") || secondaryItem.getEntityKind().contains("Shield")) {
+					enemy.damage((int) (Random.Float(1, skillLevel+1)/(skillLevel+3) * damage), defender);
+				}
+				break;
+			default:
+		}
+
+		return Math.max(damage,0);
 	}
 
 	@Override
 	public int attackProc(Char attacker, Char defender, int damage) {
-		EquipableItem wep = attacker.getActiveWeapon();
+		EquipableItem primaryItem = attacker.getActiveWeapon();
+		EquipableItem secondaryItem = attacker.getItemFromSlot(Belongings.Slot.LEFT_HAND);
 
 		switch (this) {
 			case GLADIATOR:
-				if (wep instanceof MeleeWeapon) {
+				if (primaryItem instanceof MeleeWeapon) {
 					damage += Buff.affect(attacker, Combo.class).hit(defender, damage);
 				}
 				break;
 			case BATTLEMAGE:
-				if (wep instanceof Wand) {
-					Wand wand = (Wand) wep;
+				if (primaryItem instanceof Wand) {
+					Wand wand = (Wand) primaryItem;
 					if (wand.curCharges() < wand.maxCharges() && damage > 0) {
 
 						wand.curCharges(wand.curCharges() + 1);
@@ -181,8 +188,8 @@ public enum HeroSubClass implements CharModifier {
 				}
 				break;
 			case SHAMAN:
-				if (wep instanceof Wand) {
-					Wand wand = (Wand) wep;
+				if (primaryItem instanceof Wand) {
+					Wand wand = (Wand) primaryItem;
 					if (wand.affectTarget()) {
 						if (Random.Int(4) == 0) {
 							wand.zapCell(attacker, defender.getPos());
@@ -204,6 +211,16 @@ public enum HeroSubClass implements CharModifier {
 	@Override
 	public void charAct() {
 
+	}
+
+	@Override
+	public void spellCasted(Char caster, Spell spell) {
+		switch (this) {
+			case WITCHDOCTOR:
+				Buff.affect(caster, "ManaShield", caster.skillLevel());
+				break;
+			default:
+		}
 	}
 
 	@Override
@@ -243,7 +260,7 @@ public enum HeroSubClass implements CharModifier {
 	}
 
 	@Override
-	public Object textureLarge() {
+	public String textureLarge() {
 		return Assets.BUFFS_LARGE;
 	}
 

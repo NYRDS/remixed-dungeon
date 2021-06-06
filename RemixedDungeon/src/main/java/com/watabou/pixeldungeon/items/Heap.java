@@ -19,11 +19,11 @@ package com.watabou.pixeldungeon.items;
 
 
 import com.nyrds.Packable;
-import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -94,6 +94,13 @@ public class Heap implements Bundlable, NamedEntityKind {
 		regularHeaps.put(Type.CHEST,4f);
 		regularHeaps.put(Type.MIMIC,1f);
 		regularHeaps.put(Type.HEAP,14f);
+	}
+
+	public static Map<Type, Float> sageHeaps = new HashMap<>();
+	static {
+		sageHeaps.put(Type.SKELETON,1f);
+		sageHeaps.put(Type.CHEST,4f);
+		sageHeaps.put(Type.HEAP,14f);
 	}
 
 	@Packable
@@ -191,9 +198,10 @@ public class Heap implements Bundlable, NamedEntityKind {
 	}
 
 	public void pickUpFailed() {
-		Item item = items.removeFirst();
-		items.addLast(item);
-
+		if(!isEmpty()) {
+			Item item = items.removeFirst();
+			items.addLast(item);
+		}
 		updateHeap();
 	}
 
@@ -203,8 +211,8 @@ public class Heap implements Bundlable, NamedEntityKind {
 	
 	public void drop(@NotNull Item item ) {
 
-		if(item instanceof DummyItem) {
-			EventCollector.logException("DummyItem");
+		if(!item.valid()) {
+			EventCollector.logException("Invalid item");
 			return;
 		}
 
@@ -396,13 +404,13 @@ public class Heap implements Bundlable, NamedEntityKind {
 					try {
 						return itemClass.newInstance();
 					} catch (Exception e) {
-						return null;
+						return ItemsList.DUMMY;
 					}
 				}
 			}		
 			
 		} else {
-			return null;
+			return ItemsList.DUMMY;
 		}
 	}
 	

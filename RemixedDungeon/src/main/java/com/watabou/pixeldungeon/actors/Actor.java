@@ -21,10 +21,15 @@ import android.annotation.SuppressLint;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -41,9 +46,10 @@ import java.util.Map;
 
 import lombok.var;
 
-public abstract class Actor implements Bundlable {
+public abstract class Actor implements Bundlable, NamedEntityKind {
 	
 	public static final float TICK	= 1f;
+	public static final float MICRO_TICK	= 0.001f;
 	private static float realTimeMultiplier = 1f;
 
 	@Packable
@@ -56,6 +62,16 @@ public abstract class Actor implements Bundlable {
 	protected abstract boolean act();
 
 	public void spend( float time ) {
+		GLog.debug("%s spend %2.4f", getEntityKind(), time);
+		if(Util.isDebug() && current!=this) {
+			if(this instanceof Char) {
+				GLog.debug("%s spends time on %s move!", getEntityKind(), current!=null?current.getEntityKind():"no one");
+				//throw new TrackedRuntimeException(String.format("%s spends time on %s move!", getEntityKind(), current!=null?current.getEntityKind():"no one"));
+			}
+			if(this instanceof Hero && time > 5) {
+				GLog.debug("hero long spend!");
+			}
+		}
 		this.time += time;
 	}
 
@@ -171,6 +187,7 @@ public abstract class Actor implements Bundlable {
 			//float timeBefore = next.time;
 
 			current = next;
+			EventCollector.setSessionData("actor", next.getEntityKind());
 			next.act();
 /*
 			if(!(next.time>timeBefore)) {
@@ -191,31 +208,44 @@ public abstract class Actor implements Bundlable {
 
 		Actor actor;
 
-//		Log.i("Main loop", "start");
+		//Log.i("Main loop", "start");
 		while ((actor=getNextActor(Float.MAX_VALUE)) != null) {
 
-//			Log.i("Main loop", String.format("%s %4.2f",actor.getClass().getSimpleName(),actor.time));
-
 			if (actor instanceof Char && ((Char)actor).getSprite().doingSomething()) {
-//				Log.i("Main loop", "in action");
+				//Log.i("Main loop", "in action");
 				// If it's character's turn to act, but its sprite
 				// is moving, wait till the movement is over
 				return;
 			}
 
+			GLog.debug("Main actor loop: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
+
 			current = actor;
 
+			float timeBefore = actor.time;
+
+			EventCollector.setSessionData("actor", actor.getEntityKind());
+
 			if (actor.act() || !Dungeon.hero.isAlive()) {
-//				Log.i("Main loop", String.format("%s next",actor.getClass().getSimpleName()));
+				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
 				actor.next();
 			} else {
-//				Log.i("Main loop", String.format("%s break",actor.getClass().getSimpleName()));
-
+				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
 				break;
 			}
 
+			if(actor.time == timeBefore) {
+				var error = String.format("actor %s has same timestamp after act!", actor.getEntityKind());
+				if(Util.isDebug()) {
+					throw new ModError(error);
+				} else {
+					actor.spend(1);
+					EventCollector.logException(error);
+				}
+			}
+
 			if(SystemTime.timeSinceTick() > 40) {
-//				Log.i("Main loop", String.format("%s timeout",actor.getClass().getSimpleName()));
+				//Log.i("Main loop", String.format("%s timeout %x",actor.getEntityKind(), actor.hashCode()));
 
 				break;
 			}
@@ -339,5 +369,19 @@ public abstract class Actor implements Bundlable {
 	@LuaInterface
 	static public float localTime() {
 		return now;
+	}
+
+	@Override
+	public String name() {
+		return getEntityKind();
+	}
+
+	@Override
+	public String getEntityKind() {
+		return getClass().getSimpleName();
+	}
+
+	public boolean testAct() {
+		return act();
 	}
 }

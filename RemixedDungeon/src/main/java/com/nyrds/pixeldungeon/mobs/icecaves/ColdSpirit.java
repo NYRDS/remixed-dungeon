@@ -23,6 +23,9 @@ public class ColdSpirit extends Mob {
 
         exp = 8;
         maxLvl = 20;
+        dmgMin = 12;
+        dmgMax = 15;
+        dr = 22;
 
         loot(Gold.class, 0.02f);
     }
@@ -34,15 +37,5 @@ public class ColdSpirit extends Mob {
             Freezing.affect( enemy.getPos());
         }
         return damage;
-    }
-
-    @Override
-    public int damageRoll() {
-        return Random.NormalIntRange(12, 15);
-    }
-
-    @Override
-    public int dr() {
-        return 22;
     }
 }

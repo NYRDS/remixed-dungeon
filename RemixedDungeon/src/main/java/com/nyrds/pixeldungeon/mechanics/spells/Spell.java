@@ -42,11 +42,11 @@ public class Spell implements NamedEntityKind {
 
     private SpellItem spellItem;
 
-    protected boolean cast(Char chr, int cell) {
+    protected boolean cast(@NotNull Char chr, int cell) {
         return true;
     }
 
-    protected boolean cast(Char chr, Char target) {
+    protected boolean cast(@NotNull Char chr, @NotNull Char target) {
         return true;
     }
 
@@ -142,7 +142,7 @@ public class Spell implements NamedEntityKind {
     }
 
     protected void castCallback(Char chr) {
-        chr.spellCasted(getEntityKind());
+        chr.spellCasted(this);
         chr.spendSkillPoints(spellCost());
     }
 

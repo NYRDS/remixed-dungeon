@@ -22,6 +22,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.ItemsList;
@@ -45,7 +46,7 @@ import java.util.Set;
 import lombok.SneakyThrows;
 import lombok.var;
 
-public class Buff extends Actor implements NamedEntityKind, CharModifier {
+public class  Buff extends Actor implements NamedEntityKind, CharModifier {
 
     protected final Set<String> EMPTY_STRING_SET = new HashSet<>();
     public Char target = CharsList.DUMMY;
@@ -93,6 +94,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     public void detach() {
+        deactivateActor();
         target.remove(this);
     }
 
@@ -112,6 +114,8 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         if (buff == null) {
             buff = buffClass.newInstance();
             buff.attachTo(target);
+        } else {
+            buff.level++;
         }
         return buff;
     }
@@ -137,6 +141,8 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         if (buff == null) {
             buff = BuffFactory.getBuffByName(buffClass);
             buff.attachTo(target);
+        } else {
+            buff.level++;
         }
 
         buff.spend(duration);
@@ -253,6 +259,11 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     @Override
+    public void spellCasted(Char caster, Spell spell) {
+
+    }
+
+    @Override
     public int dewBonus() {
         return 0;
     }
@@ -287,6 +298,11 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     protected void applyToCarriedItems(ItemAction action) {
+
+        if(Dungeon.isLoading()) { // already applied
+            return;
+        }
+
         int n = 1;
 
         if (Game.getDifficulty() >= 3) {

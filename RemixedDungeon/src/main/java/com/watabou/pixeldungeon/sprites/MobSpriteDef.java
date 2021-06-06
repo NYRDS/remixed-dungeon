@@ -32,7 +32,7 @@ public class MobSpriteDef extends MobSprite {
 	private int      kind;
 	private String   zapEffect;
 
-	private Set<State> initialState = new HashSet<>();
+	private final Set<State> initialState = new HashSet<>();
 
 	private float visualWidth;
 	private float visualHeight;
@@ -41,7 +41,7 @@ public class MobSpriteDef extends MobSprite {
 	private float visualOffsetY;
 
 
-	static private Map<String, JSONObject> defMap = new HashMap<>();
+	static private final Map<String, JSONObject> defMap = new HashMap<>();
 
 	private String name;
 	private String deathEffect;

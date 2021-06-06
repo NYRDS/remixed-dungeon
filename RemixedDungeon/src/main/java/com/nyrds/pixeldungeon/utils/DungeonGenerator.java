@@ -320,7 +320,6 @@ public class DungeonGenerator {
 
 		try {
 			if (levelClass == null) {
-				EventCollector.collectSessionData("unknown level kind", newLevelKind);
 				ModError.doReport(newLevelKind, new Exception("unknown level kind"));
 				levelClass = DeadEndLevel.class;
 			}

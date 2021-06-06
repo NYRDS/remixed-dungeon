@@ -3,6 +3,7 @@ import json
 import os
 import pprint
 import re
+from langdetect import detect
 from lxml import etree as ElementTree
 
 dstDir = "../../RemixedDungeon/src/main/res/"
@@ -10,11 +11,13 @@ dstDir = "../../RemixedDungeon/src/main/res/"
 xml_ext = '.xml'
 translations_dir = 'translations/'
 
-source_locales = {"en","tr","ko","hu","it",'de_DE', 'es', 'fr_FR', 'pl_PL', 'ru_RU',
-                  'uk_UA', 'pt_BR', "ms_MY","zh"}
 
-locale_remap = {'de_DE': 'de', 'fr_FR': 'fr', 'pl_PL': 'pl', 'nl_NL': 'nl', 'ro_RO': 'ro', 'ru_RU': 'ru',
-                'uk_UA': 'uk', 'pt_BR': 'pt-rBR', 'pt_PT': 'pt-rPT', 'es_MX': 'es-rMX', "ms_MY": "ms"}
+source_locales = {"en","tr","ko","hu","it",'de_DE', 'es', 'fr_FR', 'pl_PL', 'ru',
+                  'uk_UA', 'pt_BR', "ms_MY","zh_CN", "zh_TW"}
+
+locale_remap = {'de_DE': 'de', 'fr_FR': 'fr', 'pl_PL': 'pl', 'nl_NL': 'nl', 'ro_RO': 'ro',
+                'uk_UA': 'uk', 'pt_BR': 'pt-rBR', 'pt_PT': 'pt-rPT', 'es_MX': 'es-rMX', "ms_MY": "ms", "zh_CN":'zh-rCN',
+                "zh_TW":'zh-rTW'}
 
 counters = {}
 totalCounter = {}
@@ -47,6 +50,20 @@ def indent(elem, level=0):
 
 def unescape(arg):
     return arg.replace("\\\\", "\\").replace("\\\\", "\\")
+
+
+def lang(arg):
+    if arg is None:
+        return None
+
+    for_detect = arg.replace("%d", "").replace("%s", "").replace("%1$s", "").replace("%2$s", "")
+    from langdetect.lang_detect_exception import LangDetectException
+    ret = None
+    try:
+        ret = detect(for_detect)
+    except LangDetectException as e:
+        print(arg, "->", e)
+    return ret
 
 
 def processText(arg):
@@ -99,36 +116,17 @@ for _, _, files in os.walk(translations_dir + dir_name):
                 if entry.tag not in ["string", "string-array"]:
                     continue
 
+                #detectedLang = lang(entry.text)
+                #print(entry.text, detectedLang)
+
+
                 counters[resource_name][locale_code] += 1
                 totalCounter[locale_code] += 1
 
                 if entry.tag == "string":
+
                     jsonData.write(unescape(json.dumps([entry.get("name"), entry.text], ensure_ascii=False)))
                     jsonData.write("\n")
-
-                # if entry.tag == "string-array":
-                #     arrayDesc = [entry.get("name")]
-                #     arrayIndex = 0
-                #     for arrayItem in entry:
-                #         arrayItemText = processText(arrayItem.text)
-                #         arrayDesc.append(arrayItemText)
-                #
-                #         newEntry = ElementTree.Element("string")
-                #
-                #         stringItemName = entry.get("name") + "_" + str(arrayIndex)
-                #
-                #         newEntry.set("name", stringItemName)
-                #         newEntry.text = arrayItemText
-                #         transifexData.append(newEntry)
-                #
-                #         arrayIndex = arrayIndex + 1
-                #         arrayItem.text = "@string/"+stringItemName
-                #
-                #     jsonData.write(unescape(json.dumps(arrayDesc, ensure_ascii=False)))
-                #     jsonData.write("\n")
-                #     transifexData.remove(entry)
-                #     if locale_code == 'en':
-                #         arrays.append(entry)
 
                 entry.text = processText(entry.text)
 

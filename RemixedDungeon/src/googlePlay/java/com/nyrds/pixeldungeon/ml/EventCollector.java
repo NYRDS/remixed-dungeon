@@ -77,7 +77,7 @@ public class EventCollector {
 	}
 
 	static public void levelUp(String character, long level) {
-		if(!mDisabled && !ModdingMode.inMod()) {
+		if(!mDisabled && ModdingMode.inRemixed()) {
 			Bundle bundle = new Bundle();
 			bundle.putString(FirebaseAnalytics.Param.CHARACTER, character);
 			bundle.putLong(FirebaseAnalytics.Param.LEVEL, level);
@@ -86,7 +86,7 @@ public class EventCollector {
 	}
 
 	static public void badgeUnlocked(String badgeId) {
-		if(!mDisabled && !ModdingMode.inMod()) {
+		if(!mDisabled && ModdingMode.inRemixed()) {
 			Bundle bundle = new Bundle();
 			bundle.putString(FirebaseAnalytics.Param.ACHIEVEMENT_ID, badgeId);
 			mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.UNLOCK_ACHIEVEMENT, bundle);
@@ -159,7 +159,7 @@ public class EventCollector {
 		}
 	}
 
-	public static void collectSessionData(String key, String value) {
+	public static void setSessionData(String key, String value) {
 		if(!mDisabled) {
 			FirebaseCrashlytics.getInstance().setCustomKey(key, value);
 		}

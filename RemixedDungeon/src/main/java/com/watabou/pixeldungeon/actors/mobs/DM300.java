@@ -55,6 +55,9 @@ public class DM300 extends Boss {
 		exp = 30;
 		baseDefenseSkill = 18;
 		baseAttackSkill  = 28;
+		dmgMin = 18;
+		dmgMax = 24;
+		dr = 10;
 
 		float dice = Random.Float();
 		if( dice < 0.5 ) {
@@ -68,17 +71,7 @@ public class DM300 extends Boss {
 
 		collect(new SkeletonKey());
 	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 18, 24 );
-	}
 
-	@Override
-	public int dr() {
-		return 10;
-	}
-	
 	@Override
 	public boolean act() {
 

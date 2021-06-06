@@ -116,6 +116,7 @@ import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.var;
 
+
 public abstract class Level implements Bundlable {
 
 	private static final String SCRIPTS = "scripts";
@@ -564,7 +565,7 @@ public abstract class Level implements Bundlable {
 				addItemToSpawn(Treasury.getLevelTreasury().random(Treasury.Category.RANGED));
 			}
 
-			if (Random.Int(15) == 0) {
+			if (Random.Int(15) == 0 && Dungeon.depth > 5) {
 				addItemToSpawn(new PseudoPasty());
 			}
 
@@ -574,7 +575,7 @@ public abstract class Level implements Bundlable {
 
 			feeling = DungeonGenerator.getLevelFeeling(levelId);
 			if (! isBossLevel() && feeling == Feeling.UNDEFINED) {
-				if (Dungeon.depth > 1) {
+				if (Dungeon.depth > 2) {
 					switch (Random.Int(10)) {
 						case 0:
 							feeling = Feeling.CHASM;
@@ -1791,9 +1792,7 @@ public abstract class Level implements Bundlable {
 		customLayers = new HashMap<>();
 		for(LayerId layerId: LayerId.values()) {
 			int [] layer = new int[getLength()];
-			for (int i = 0; i < map.length; ++i) {
-				layer[i] = Random.Int(0, Integer.MAX_VALUE);
-			}
+			Arrays.fill(layer,-1);
 			customLayers.put(layerId, layer);
 		}
 	}
@@ -1901,12 +1900,7 @@ public abstract class Level implements Bundlable {
 
 	@LuaInterface
 	public boolean isPlainTile(int cell) {
-		var baseLayer = customLayers.get(LayerId.Base);
-		if(baseLayer == null) {
-			return true;
-		}
-
-		return baseLayer[cell] < 0;
+		return true;
 	}
 
 	@LuaInterface

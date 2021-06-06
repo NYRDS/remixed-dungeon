@@ -1,0 +1,23 @@
+{
+   "defenseSkill"  :2,
+   "attackSkill"   :6,
+   "exp"           :1,
+   "maxLvl"        :2,
+   "dmgMin"        :1,
+   "dmgMax"        :3,
+   "dr"            :1,
+   "baseSpeed"     :0.5,
+   "attackDelay"   :1,
+   "ht"            :6,
+   "viewDistance"  :3,
+   "lootChance"    :0,
+   "name"          :"Snail_Name",
+   "name_objective":"Snail_Name_Objective",
+   "description"   :"Snail_Desc",
+   "gender"        :"Snail_Gender",
+   "spriteDesc"    :"spritesDesc/Snail.json",
+   "walkingType"   :"NORMAL",
+   "canBePet"	     : true,
+   "flying"		     : false,
+   "friendly"	     : false
+}

@@ -28,7 +28,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -40,6 +39,9 @@ public class Shaman extends Mob implements IZapper {
 		hp(ht(18));
 		baseDefenseSkill = 8;
 		baseAttackSkill  = 11;
+		dmgMin = 2;
+		dmgMax = 6;
+		dr = 4;
 
 		exp = 6;
 		maxLvl = 14;
@@ -47,16 +49,6 @@ public class Shaman extends Mob implements IZapper {
 		loot(Treasury.Category.SCROLL, 0.33f);
 
 		addResistance(LightningTrap.Electricity.class);
-	}
-
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange(2, 6);
-	}
-
-	@Override
-	public int dr() {
-		return 4;
 	}
 
 	@Override

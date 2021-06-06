@@ -131,6 +131,10 @@ public class TestLevel extends RegularLevel {
 			GLog.i("unequipped");
 			testItemActions(hero, item);
 
+			for(int i =0;i<5;i++) {
+				item.testAct();
+			}
+
 			if(item instanceof EquipableItem) {
 
 				EquipableItem equipableItem = (EquipableItem)item;

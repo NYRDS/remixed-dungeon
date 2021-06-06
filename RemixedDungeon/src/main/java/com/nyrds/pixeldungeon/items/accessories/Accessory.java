@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.ArrayList;
@@ -128,8 +129,6 @@ public class Accessory {
         for (String item : allAccessoriesList.keySet()) {
             getByName(item).ownIt(iap.checkPurchase(item));
         }
-
-
     }
 
     public boolean haveIt() {
@@ -154,7 +153,10 @@ public class Accessory {
         }
 
         Preferences.INSTANCE.put(Accessory.class.getSimpleName(), getClass().getSimpleName());
-        Dungeon.hero.updateSprite();
+
+        if(GameScene.isSceneReady()) {
+            Dungeon.hero.updateSprite();
+        }
     }
 
     public static void unequip() {

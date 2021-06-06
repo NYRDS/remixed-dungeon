@@ -44,7 +44,9 @@
       "RottenPumpkinPie": 0,
       "RawFish": 0,
       "FriedFish": 0,
-      "RottenFish": 0
+      "RottenFish": 0,
+      "FrozenCarpaccio": 0,
+      "ChargrilledMeat": 0
     },
     "RANGED": {
       "CompoundBow": 3,
@@ -66,7 +68,8 @@
       "ClothArmor": 1,
       "MailArmor": 1,
       "RatArmor": 0,
-      "SpiderArmor":0
+      "SpiderArmor":0,
+      "ChaosArmor":0
     },
     "RING": {
       "RingOfElements": 1,
@@ -119,7 +122,8 @@
       "ScrollOfTeleportation": 10,
       "ScrollOfIdentify": 30,
       "ScrollOfCurse": 6,
-      "ScrollOfWeaponUpgrade": 0
+      "ScrollOfWeaponUpgrade": 0,
+      "ScrollOfUpgrade": 0
     },
     "POTION": {
       "PotionOfInvisibility": 10,
@@ -132,7 +136,7 @@
       "PotionOfPurity": 12,
       "PotionOfToxicGas": 15,
       "PotionOfHealing": 45,
-      "ManaPotion": 40
+      "PotionOfMana": 40
     },
     "WEAPON": {
       "AmokDart": 0.1,

@@ -13,6 +13,7 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -130,21 +131,23 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		String helmetDescriptor = HERO_EMPTY_PNG;
 
 		if(accessory == null || !accessory.isCoverFacialHair()) {
-			if (classDescriptor.equals("MAGE_WARLOCK")
-					|| classDescriptor.equals("MAGE_BATTLEMAGE")
-					|| classDescriptor.equals("WARRIOR_BERSERKER")
-					|| classDescriptor.equals("NECROMANCER_NONE")
-					|| classDescriptor.equals("GNOLL_NONE"))
-			{
-				facialHairDescriptor = "hero_modern/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
+			facialHairDescriptor = "hero_modern/head/facial_hair/" + classDescriptor + "_FACIAL_HAIR.png";
+			if(!ModdingMode.isResourceExist(facialHairDescriptor)) {
+				facialHairDescriptor = HERO_EMPTY_PNG;
 			}
 		}
 
+		final EquipableItem armor = hero.getItemFromSlot(Belongings.Slot.ARMOR);
+
+		if(armor.isCoveringFacialHair()) {
+			facialHairDescriptor = HERO_EMPTY_PNG;
+		}
+
 		if (accessory == null){
-			if(hero.getItemFromSlot(Belongings.Slot.ARMOR).hasHelmet()) {
-				helmetDescriptor = helmetDescriptor(hero.getItemFromSlot(Belongings.Slot.ARMOR), hero);
+			if(armor.hasHelmet()) {
+				helmetDescriptor = helmetDescriptor(armor, hero);
             }
-			if(hero.getItemFromSlot(Belongings.Slot.ARMOR).isCoveringHair()){
+			if(armor.isCoveringHair()){
                 drawHair = false;
             }
 		} else {
@@ -159,14 +162,13 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		String bodyType = bodyDescriptor(hero);
 
 		layersDesc.put(LAYER_BODY, "hero_modern/body/" +bodyType+".png" );
-		layersDesc.put(LAYER_COLLAR, collarDescriptor(hero.getItemFromSlot(Belongings.Slot.ARMOR), hero));
+		layersDesc.put(LAYER_COLLAR, collarDescriptor(armor, hero));
 		layersDesc.put(LAYER_HEAD, "hero_modern/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_HAIR, hairDescriptor);
-		layersDesc.put(LAYER_ARMOR, armorDescriptor(hero.getItemFromSlot(Belongings.Slot.ARMOR)));
+		layersDesc.put(LAYER_ARMOR, armorDescriptor(armor));
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
-		EquipableItem armor = hero.getItemFromSlot(Belongings.Slot.ARMOR);
 
 		EquipableItem weapon = hero.getItemFromSlot(Belongings.Slot.WEAPON);
 		String weaponAnimationClassRight  = weapon.getAttackAnimationClass();
@@ -291,6 +293,10 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		for(int i = 0;i<layersOrder.length && i<lookDesc.length;++i){
 			if(ModdingMode.isResourceExists(lookDesc[i])) {
 				addLayer(layersOrder[i], TextureCache.get(lookDesc[i]));
+			} else {
+				if(Util.isDebug()) {
+					GLog.n("Missing file %s", lookDesc[i]);
+				}
 			}
 		}
 		deathEffect = new CustomClipEffect(deathEffectDesc, (int)width, (int)height);

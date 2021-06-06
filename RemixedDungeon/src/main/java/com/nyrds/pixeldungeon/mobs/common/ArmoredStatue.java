@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
-import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -20,13 +19,14 @@ import lombok.val;
 
 public class ArmoredStatue extends Statue {
 
-	public ArmoredStatue() {
-		baseDefenseSkill = 4 + Dungeon.depth*2;
+
+	{
+		dmgMin = 4;
+		dmgMax = 8;
 	}
 
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 4, 8 );
+	public ArmoredStatue() {
+		baseDefenseSkill = 4 + Dungeon.depth*2;
 	}
 
 	@Override

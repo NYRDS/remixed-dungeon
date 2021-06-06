@@ -28,5 +28,5 @@ return spell.init{
         RPD.topEffect(caster:getPos(),"cloak")
 
         RPD.affectBuff(caster, RPD.Buffs.Barkskin, caster:skillLevel() * caster:lvl())
-        return false
+        return true
     end}

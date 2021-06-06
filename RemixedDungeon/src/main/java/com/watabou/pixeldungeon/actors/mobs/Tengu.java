@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
@@ -58,28 +59,28 @@ public class Tengu extends Boss implements IZapper {
 		exp = 20;
 		baseDefenseSkill = 20;
 		baseAttackSkill  = 20;
-		
+		dmgMin = 8;
+		dmgMax = 15;
+		dr = 5;
+
 		addResistance( ToxicGas.class );
 		addResistance( Poison.class );
 
-		if ( Dungeon.heroClass != HeroClass.NECROMANCER && Dungeon.heroClass != HeroClass.GNOLL){
+		final HeroClass heroClass = Dungeon.heroClass;
+
+		if ( heroClass != HeroClass.NECROMANCER && heroClass != HeroClass.GNOLL){
 			collect(new TomeOfMastery());
 		}
+
+		if( heroClass == HeroClass.GNOLL) {
+			collect(ItemFactory.itemByName("TenguLiver"));
+		}
+
 		collect(new SkeletonKey());
 	}
 	
 	private int timeToJump = JUMP_DELAY;
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 8, 15 );
-	}
 
-	@Override
-	public int dr() {
-		return 5;
-	}
-	
 	@Override
 	public void die(NamedEntityKind cause) {
 		super.die(cause);

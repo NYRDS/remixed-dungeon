@@ -75,10 +75,6 @@ public class TitleScene extends PixelScene {
 			title.y = -(title.height() * 0.05f);
 		}
 
-		//placeTorch(title.x + title.width/2 + 3, title.y + title.height/2 - 3);
-		//placeTorch(title.x + title.width/2 - 5, title.y + title.height/2 + 5);
-		//placeTorch(title.x + title.width/2 - 14, title.y + title.height/2 + 14) ;
-
 		DashboardItem btnBadges = new DashboardItem(Game.getVar(R.string.TitleScene_Badges), 3) {
 			@Override
 			protected void onClick() {
@@ -181,6 +177,13 @@ public class TitleScene extends PixelScene {
                 Game.instance().openUrl("Visit us on social network", useVk ? "https://vk.com/pixel_dungeon_remix" : "https://fb.me/RemixedDungeon");
             }
         });
+
+		leftGroup.add(new ImageButton(Icons.DISCORD.get()){
+			@Override
+			protected void onClick() {
+				Game.instance().openUrl("Let talk on Discord", "https://discord.gg/AMXrhQZ");
+			}
+		});
 
         Image img = new Image(Assets.DASHBOARD,DashboardItem.IMAGE_SIZE,1);
 

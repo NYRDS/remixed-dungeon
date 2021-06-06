@@ -2632,91 +2632,55 @@ remix.29.6\n
 -- Spezielle Waffeneigenschaften!\n
 -- Mehr nicht kategorisiertes Zeug!\n
 - Bugs behoben\n </string>
-
   <string name="InnKeeperNPC_Name">Tavernenwirt</string>
   <string name="InnKeeperNPC_Name_Objective">Tavernenwirt</string>
   <string name="InnKeeperNPC_Gender">männlich</string>
   <string name="InnKeeperNPC_Desc">Der Tavernenwirt ist stolz aud sich selbst.</string>
-
-
   <string name="DrunkardNPC_Name">Betrunkener</string>
   <string name="DrunkardNPC_Name_Objective">Betrunkener</string>
   <string name="DrunkardNPC_Gender">männlich</string>
   <string name="DrunkardNPC_Desc">Regelmäßiger Tavernengast in natürlichem Zustand.</string>
-
-
   <string name="MercenaryNPC_Name">Söldner</string>
   <string name="MercenaryNPC_Name_Objective">Söldner</string>
-  <string name="MercenaryNPC_Gender">>männlich</string>
+  <string name="MercenaryNPC_Gender">männlich</string>
   <string name="MercenaryNPC_Desc">Robust aussehender Mann</string>
-
-
   <string name="ServantNPC_Name">Kellner</string>
   <string name="ServantNPC_Name_Objective">Kellner</string>
   <string name="ServantNPC_Gender">geschlechtslos</string>
   <string name="ServantNPC_Desc">Ein sehr beschäftigter Kellner.</string>
-
-
   <string name="BardNPC_Name">Barde</string>
   <string name="BardNPC_Name_Objective">Barde</string>
-  <string name="BardNPC_Gender">>männlich</string>
+  <string name="BardNPC_Gender">männlich</string>
   <string name="BardNPC_Desc">Der Barde der Stadt spielt seine Laute.</string>
-
-  <string name="Welcome_Text_30">
-remix.30.0\n
-- Spielmechaniken:\n
--- Fähigkeiten für jeden!\n
---Taverne ist jetzt geöffnet!\n
-- Bugs behoben\n </string>
-
-
   <string name="Roar_Name">Schrei</string>
   <string name="Roar_Info">Ein machtvoller Schrei wird mit Sicherheit Gegner erschrecken und Verbündete inspirieren.</string>
-
   <string name="LightningBolt_Name">Blitzschlag</string>
   <string name="LightningBolt_Info">Ein Zauberspruch wird unter uralten Schamanen geteilt, der deine Gegner doppelt so effektiv schockt. Vor allem, wenn sie in Wasser stehen.</string>
-
   <string name="Heal_Name">Heilung</string>
   <string name="Heal_Info">Ein ziemlich nützlicher Zauberspruch im Dungeon, oder?</string>
-
   <string name="Order_Name">Befehlen</string>
   <string name="Order_Info">Mit guter Konzentration werden deine Befehle fast unbestreitbar.</string>
   <string name="Order_Resist">Wie kannst du es wagen?!!</string>
-
   <string name="Spell_SelectAChar">Wähle ein Lebewesen als Ziel aus.</string>
-
   <string name="Calm_Name">Beruhigen</string>
   <string name="Calm_Info">Es gibt viele verärgerte Kreaturen in der Umgebung, lass uns ihnen helfen.</string>
-
   <string name="CharmSpell_Name">Bezaubern</string>
   <string name="CharmSpell_Info">Jeder verdient etwas Liebe, oder nicht?</string>
-
   <string name="HideInGrassSpell_Name">Im Gras vertecken</string>
   <string name="HideInGrassSpell_Info">Du hast deine Versteck-Künste gemeistert.</string>
   <string name="HideInGrassSpell_NeedGrassToHide">Nicht einmal ich kann mich bei voller Sichtbarkeit verstecken.</string>
-
-
   <string name="MagicArrow_Name">Magischer Pfeil</string>
   <string name="MagicArrow_Info">Der gute alte Magische Pfeil, die richtige Entscheidung wenn dir die Munition ausgeht.</string>
-
   <string name="NatureArmorSpell_Name">Natur-Rüstung</string>
   <string name="NatureArmorSpell_Info">Elfen können auch zäh sein, vor allem wenn sie von Mutter Natur selbst beschützt werden.</string>
-
   <string name="ShootInEye_Name">Augenschuss</string>
   <string name="ShootInEye_Info">Nutze deine außergewöhnliche Treffsicherheit, um dem Feind direkt ins Auge zu schießen Wenn er welche hat, natürlich.</string>
-
-
   <string name="Sprout_Name">Sprießen</string>
-  <string name="Sprout_Info">Erwecke die ruhenden Samen. \ Der Boden sollte jedoch etwas bewachsen sein, damit der Zauber erfolgreich ist.</string>
-
-
   <string name="SummonBeast_Name">Tierruf</string>
   <string name="SummonBeast_Info">Versuche, eine Horde mächtiger Bestien zu deinem Befehl zu rufen.\nTatsächliche Ergebnisse können variieren.</string>
   <string name="SummonBeast_AtYourCommand">Zu Befehl!</string>
-
   <string name="WndSettings_RecordVideo">Videoaufnahme</string>
   <string name="Dungeon_saveIoError">Beim Erstellen der Speicherdatei:</string>
-
   <string name="town_table_fortune_ball_name">Kristallkugel</string>
   <string name="town_table_fortune_ball_desc">kristallkugel mit mysteriösem Dunst in ihr.</string>
   <string name="town_deco_shelf_full_name">Regal</string>
@@ -2763,5 +2727,10 @@ remix.30.0\n
   <string name="town_deco_charcoal_carpet_desc">Um den Gästen Komfort zu bieten, wählte die Verwaltung des Kinos Teppiche von höchster Qualität in der Farbe von Holzkohle.</string>
   <string name="town_deco_magenta_carpet_name">Teppich</string>
   <string name="town_deco_magenta_carpet_desc">Der Farbton dieses Teppichs erinnert an lokalen Wein.</string>
-
+  <string name="Potion_Colors_13">Quarz</string>
+  <string name="Potion_Colors_14">Onyx</string>
+  <string name="PotionOfMana_Name">Mana Trank</string>
+  <string name="PotionOfMana_Info">Dieser Trank wird deine spirituelle Energie wiederherstellen.</string>
+  <string name="Snail_Gender">männlich</string>
+  <string name="DeepSnail_Gender">männlich</string>
 </resources>

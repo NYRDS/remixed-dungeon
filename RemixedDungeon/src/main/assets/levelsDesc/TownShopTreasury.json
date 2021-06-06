@@ -29,7 +29,7 @@
     "categoryChance": 10,
     "PotionOfPurity": 1,
     "PotionOfHealing": 1,
-    "ManaPotion": 1
+    "PotionOfMana": 1
   },
   "WEAPON": {
     "categoryChance": 5,
