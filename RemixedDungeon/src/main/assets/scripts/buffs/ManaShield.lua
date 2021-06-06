@@ -6,6 +6,8 @@
 
 local buff = require "scripts/lib/buff"
 
+local RPD  = require "scripts/lib/commonClasses"
+
 return buff.init{
     desc  = function ()
         return {
@@ -16,6 +18,8 @@ return buff.init{
     end,
 
     defenceProc = function(self, buff, enemy, damage)
+        RPD.topEffect(buff.target:getPos(),"mana_shield_effect")
+        RPD.playSound("body_armor")
         buff:detach()
         return 0
     end
