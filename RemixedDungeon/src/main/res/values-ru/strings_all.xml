@@ -2541,14 +2541,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="RoyalShield_desc">Цельнометаллический щит. О да, он тяжел, но только он может обеспечить максимальную защиту.</string>
   <string name="ShieldInfoTemplate">Этот щит заблокирует до %1$d очков урона. С шансом %2$d %%. Потребуется %3$3.1f секунд что бы привести его в готовность после успешного блока. </string>
   <string name="Belongings_CantWearBoth">Ты не можешь использовать %1$s и %2$s одновременно!</string>
-  <string name="Welcome_Text_29_3">
-    remix.29.3\n
-    - Геймплей:\n
-    -- Щиты!\n
-    - Моддинг:\n
-    -- Полностью моддабельные щиты!\n
-    - Багофиксы\n
-    </string>
   <string name="ShieldStrTemplate">Чтобы использовать этот щит как следует, его обладателю потребуется не меньше чем %1$d очков Силы.</string>
   <string name="town_deco_flowerinthepot_name">Цветок в горшке</string>
   <string name="town_deco_flowerinthepot_desc">Декоративное растение в милом горшке</string>
@@ -2744,10 +2736,44 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Drunkard_Phrase_2">Зачем вода, когда есть пиво!</string>
   <string name="Drunkard_Phrase_3">Это пиво или грязь?</string>
   <string name="Drunkard_Phrase_4">Zzzzzz...</string>
+  <string name="HeroSubClass_NameWitchdoctor">знахарь</string>
+  <string name="HeroSubClass_NameGuardian">страж</string>
+  <string name="Gnoll_BecomeWitchdoctorDesc">Стать Знахарем</string>
+  <string name="Gnoll_BecomeGuardianDesc">Стать Стражем</string>
+  <string name="HeroSubClass_DescWitchdoctor">Использование заклятий наделяет _Знахаря_ магическим щитом полностью блокирующим урон.</string>
+  <string name="HeroSubClass_DescGuardian">Непревзойденное мастерство защиты позволяет _Стражам_ контратаковать щитом, и горе тем кто посмеет атаковать такую крепость.</string>
+  <string name="Potion_Colors_12">эпидотовое</string>
   <string name="Potion_Colors_13">кварцем</string>
   <string name="Potion_Colors_14">ониксом</string>
+  <string name="Potion_Colors_15">жемчужное</string>
+  <string name="ManaShieldBuff_Name">Магический щит</string>
+  <string name="ManaShieldBuff_Info">Магический щит</string>
+  <string name="TenguLiver_Name">Печень Тенгу</string>
+  <string name="TenguLiver_Info">Печень могучего врага. Один только взгляд на неё пробуждает в тебе животное начало: вонзить, разорвать, поглотить.</string>
   <string name="PotionOfMana_Name">Зелье Маны</string>
   <string name="PotionOfMana_Info">Это зелье восстановит твою духовную энергию.</string>
+  <string name="WndFortuneTeller_IdentifyAll">Всё</string>
+  <string name="Snail_Name">Улитка</string>
   <string name="Snail_Gender">masculine</string>
+  <string name="Snail_Name_Objective">Улитку</string>
+  <string name="Snail_Desc">Этот моллюск неплохо откормился на сточных водах, скорости это ему однако не прибавило. Лёгкая добыча.</string>
+  <string name="DeepSnail_Name">Пещерная Улитка</string>
   <string name="DeepSnail_Gender">masculine</string>
+  <string name="DeepSnail_Name_Objective">Улитку</string>
+  <string name="DeepSnail_Desc">Этот вид моллюсков чаще всего можно встретить вблизи источников и они куда резвее обычных улиток. А ещё они больно кусаются и покрыты слегка ядовитой слизью.</string>
+  <string name="CharInfo_Level">Это существо: %2$sуровня %1$d.</string>
+  <string name="WrnExperimental_realtime">Включен режим Realtime!: это теперь ниразу не пошаговый рогалик, тапай быстро или умри\nХочешь покопаться в рюкзаке?\nСмелее, но учти краб тем временем покопается в твоих кишках.</string>
+  <string name="WrnExperimental_moveTimeout">На ход отведено не более %dмиллисекунд, думай быстро!</string>
+  <string name="WnrExperimental_hint">Если этот странный и безумный мир слишком суров для вас, отключите эти параметры: \ nСтартовый экран-> Параметры-> Геймплей \ nи запустите новую игру или загрузите другое сохранение. </string>
+  <string name="WrnExperimental_title">Включены экспериментальные опции!</string>
+  <string name="Welcome_Text_30_1">
+    remix.30.1\n
+    - Геймплей:\n
+    -- Подклассы Гнолла!\n
+    -- Улитки!\n
+    -- Понерфлена скорость апгрейда предметов Хаоса.\n
+    -- Зелье маны - теперь обычное зелье.\n
+    -- Добывать значки, и открывать классы теперь можно и в официальных DLC (но не в модах). \n
+    - Исправлены ошибки\n
+    </string>
 </resources>
