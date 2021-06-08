@@ -502,9 +502,10 @@ public class ItemFactory {
         return Treasury.get().check(item);
     }
 
-    public static Item virtual(String cl) {
-        Item item = itemByName(cl);
+    public static Item virtual(Item sourceItem) {
+        Item item = itemByName(sourceItem.getEntityKind());
         item.quantity(0);
+        item.setImage(sourceItem.image());
         return item;
     }
 

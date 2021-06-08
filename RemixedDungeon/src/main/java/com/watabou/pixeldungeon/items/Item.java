@@ -676,7 +676,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 			return this;
 		}
 
-		return ItemFactory.virtual(getEntityKind());
+		return ItemFactory.virtual(this);
 	}
 
 	public boolean usableByHero() {
@@ -755,5 +755,9 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	@Deprecated
 	public String getClassName() { //for old mods compatibility
 		return getEntityKind();
+	}
+
+	public void setImage(int image) {
+		this.image = image;
 	}
 }
