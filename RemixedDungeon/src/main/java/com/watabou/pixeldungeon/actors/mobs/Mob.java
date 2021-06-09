@@ -20,8 +20,10 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.android.util.JsonHelper;
+import com.nyrds.android.util.ModError;
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Horrified;
 import com.nyrds.pixeldungeon.ai.Hunting;
@@ -81,6 +83,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import lombok.SneakyThrows;
+import lombok.var;
 
 public abstract class Mob extends Char {
 
@@ -222,9 +225,22 @@ public abstract class Mob extends Char {
 			lvl(lvl()+1);
 		}
 
+		float timeBeforeAct = actorTime();
+
 		script.runOptional("onAct");
 		GLog.debug("%s is %s", getEntityKind(), getState().getTag());
 		getState().act(this);
+
+		if(actorTime() - timeBeforeAct <= 0 && Util.isDebug()) {
+			var error = String.format("actor %s has same timestamp after %s act!", getEntityKind(), getState().getTag());
+			if(Util.isDebug()) {
+				throw new ModError(error);
+			} else {
+				spend(TICK);
+				EventCollector.logException(error);
+			}
+		}
+
 		return true;
 	}
 

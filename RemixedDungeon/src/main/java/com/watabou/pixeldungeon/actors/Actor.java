@@ -239,7 +239,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 				if(Util.isDebug()) {
 					throw new ModError(error);
 				} else {
-					actor.spend(1);
+					actor.spend(TICK);
 					EventCollector.logException(error);
 				}
 			}
