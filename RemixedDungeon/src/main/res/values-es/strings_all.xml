@@ -2536,14 +2536,6 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
   <string name="RoyalShield_desc">Un escudo de metal completo. Sí, es pesado, pero puede brindarle la mejor protección.</string>
   <string name="ShieldInfoTemplate">Este escudo bloqueará hasta un %1$d de daño recibido. Con %2$d %% de posibilidad. Tardará %3$3.1f segundos en recuperarse después de un bloqueo existoso.</string>
   <string name="Belongings_CantWearBoth">No puedes equiparte %1$s y %2$s al mismo tiempo!</string>
-  <string name="Welcome_Text_29_3">
-    remix.29.3\n
-    - Como se juega:\n
-    -- Escudos!\n
-    - Modding:\n
-    -- Escudos Personalizables!\n
-    - Errores corregidos\n
-    </string>
   <string name="ShieldStrTemplate">El portador del escudo debe tener al menos %1$d puntos de Fuerza para usarlo apropiadamente.</string>
   <string name="town_deco_flowerinthepot_name">Flor en una maceta</string>
   <string name="town_deco_flowerinthepot_desc">Flor decorativa con sabor dulce</string>
@@ -2763,5 +2755,19 @@ otro lugar del nivel.</string>
   <string name="DeepSnail_Gender">masculino</string>
   <string name="DeepSnail_Name_Objective">Caracol de profundidad</string>
   <string name="DeepSnail_Desc">Este tipo de molusco suele verse cerca de las fuentes de agua y es mucho más rápido que el caracol común. Sin embargo, hay que tener cuidado con las picaduras, ya que pueden tener un efecto desagradable en la piel.</string>
-  <string name="CharInfo_Level">Esto es un nivel %d%s.</string>
+  <string name="CharInfo_Level">Esto es un nivel %1$d%2$s.</string>
+  <string name="WrnExperimental_realtime">Modo Real-time! habilitado: ahora esto es roguelike en tiempo real, toca rápido o muere.\n¿Quieres revisar tu inventario?\nBuena suerte para hacerlo mientras un cangrejo te revisaba las tripas.</string>
+  <string name="WrnExperimental_moveTimeout">El tiempo de espera del movimiento se fija en %d milisegundos, ¡piensa rápido!</string>
+  <string name="WnrExperimental_hint">Si este extraño y retorcido mundo es demasiado duro para ti, por favor, desactiva esas opciones usando el menú Pantalla de Inicio -> Opciones -> Juego y empieza una nueva partida o carga otro guardado.</string>
+  <string name="WrnExperimental_title">¡Opciones experimentales habilitadas!</string>
+  <string name="Welcome_Text_30_1">
+    remix.30.1\n
+    - Gameplay:\n
+    -- ¡Sub-clases para Gnoll!\n
+    -- ¡Caracoles!\n
+    -- Progresión en los items del Caos nerfeada.\n
+    -- Desde ahora las pociones de Mana son pociones regulares.\n
+    -- Ahora puedes obtener los logros cuando juegas con DLC\'s (pero no mods).\n
+    - Errores corregidos.\n
+    </string>
 </resources>
