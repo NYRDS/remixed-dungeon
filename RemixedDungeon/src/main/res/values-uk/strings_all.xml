@@ -2551,14 +2551,6 @@
   <string name="RoyalShield_desc">Цілометалевий щит. Так, він важелезний, але лише він може забезпечити найкращий захист.</string>
   <string name="ShieldInfoTemplate">Цей щит блокує до %1$d заданої шкоди. Із %2$d %% шансом. Потребує %3$3.1fсекунд на відновлення після успішного блокування.</string>
   <string name="Belongings_CantWearBoth">Ви не можете одягти %1$s та %2$s одночасно!</string>
-  <string name="Welcome_Text_29_3">
-    remix.29.3\n
-    - Ігровий процес:\n
-    -- Щити!\n
-    - Модифікації:\n
-    -- Налаштовані щити!\n
-    - Виправлення вад\n
-    </string>
   <string name="ShieldStrTemplate">Для правильного використання щита необхідно мати хоча б %1$dсили.</string>
   <string name="town_deco_flowerinthepot_name">Квітка в Горщику</string>
   <string name="town_deco_flowerinthepot_desc">Декоративна квітка з солодким запахом</string>

@@ -2545,14 +2545,6 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="RoyalShield_desc">W pełni metalowa tarcza. Tak, jest ciężka ale tylko w ona zapewni ci najlepszą ochronę.</string>
   <string name="ShieldInfoTemplate">Ta tarcza zablokuje atak o sile %1$d z %2$d%% szansą.  Podniesienie gardy zajmie %3$3.1f sekund po udanym bloku.</string>
   <string name="Belongings_CantWearBoth">Nie możesz założyć %1$s i %2$s jednocześnie!</string>
-  <string name="Welcome_Text_29_3">
-remix.29.3/n
--Rozgrywka:\n
---Tarcze!!\n
--Modowanie:\n
---modyfikowalne tarcze!:\n
--Naprawy błędów\n
-</string>
   <string name="ShieldStrTemplate">Osoba nosząca tarczę powinna mieć co najmniej %1$d punktów Siły, aby prawidłowo z niej korzystać.</string>
   <string name="town_deco_flowerinthepot_name">Kwiat w doniczce</string>
   <string name="town_deco_flowerinthepot_desc">Dekoracyjny kwiat ze słodkim aromatem</string>
@@ -2759,12 +2751,12 @@ remix.29.6\n
   <string name="PotionOfMana_Name">Mikstura Many</string>
   <string name="PotionOfMana_Info">Ta mikstura odnowi twoją duchową energię.</string>
   <string name="WndFortuneTeller_IdentifyAll">Wszystko</string>
-  <string name="Snail_Name">Ślimak</string>
+  <string name="Snail_Name">slimak</string>
   <string name="Snail_Gender">meski</string>
-  <string name="Snail_Name_Objective">Ślimak</string>
+  <string name="Snail_Name_Objective">slimak</string>
   <string name="Snail_Desc">Przebywanie w ściekach sprawiło iż ten maly mięczak wyrósł do niespotykanych rozmiarów,  jest on jednak dość łatwym przeciwnikiem z uwagi na jego ślamazarność.</string>
-  <string name="DeepSnail_Name">Ślimak Rogaty</string>
+  <string name="DeepSnail_Name">slimak rogaty</string>
   <string name="DeepSnail_Gender">meski</string>
-  <string name="DeepSnail_Name_Objective">Ślimak Rogaty.</string>
+  <string name="DeepSnail_Name_Objective">slimak rogaty</string>
   <string name="DeepSnail_Desc">Spotykany w pobliżu zbiorników wodnych, mięczaków ten przewyższa typowego ślimaka, jest szybszy ,groźniejszy, a jego ugryzienia owodują nieprzyjemne efekty na skórze ofiary.</string>
 </resources>

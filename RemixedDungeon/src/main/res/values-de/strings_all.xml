@@ -2545,14 +2545,6 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
   <string name="RoyalShield_desc">Ein Schild vollständig aus Metall. Ja, er ist schwer, aber nur er bietet den besten Schutz.</string>
   <string name="ShieldInfoTemplate">Dieser Schild blockiert bis zu %1$d des eingehenden Schadens. Mit einer Chance von %2$d %% . Es wird %3$3.1f Sekunden dauern, um sich nach erfolgreicher Blockade zu erholen.</string>
   <string name="Belongings_CantWearBoth">Du kannst %1$s und %2$s nicht gleichzeitig tragen!</string>
-  <string name="Welcome_Text_29_3">
-remix.29.3\n
-- Spielmechaniken:\n
--- Schilde!\n
-- Modding:\n
--- Benutzerdefinierte Schilde!\n
-- Bugs behoben\n
-</string>
   <string name="ShieldStrTemplate">Träger von diesem Schild sollten mindestens %1$dPunkt Stärke besitzen, um ihn richtig zu benutzen.</string>
   <string name="town_deco_flowerinthepot_name">Blume in einer Vase</string>
   <string name="town_deco_flowerinthepot_desc">Dekorative Blume mit süßem Geruch</string>

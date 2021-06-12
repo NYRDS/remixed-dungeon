@@ -2505,14 +2505,6 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
   <string name="RoyalShield_desc">Um escudo cheio de metal. Sim, é pesado, mas somente ele pode fornecer a melhor proteção.</string>
   <string name="ShieldInfoTemplate">Esse escudo bloqueará até %1$d do dano recebido. Com %2$d %% de chance. Levará %3$3.1f segundos para recuperar após o bloqueio bem-sucedido.</string>
   <string name="Belongings_CantWearBoth">Você não pode equipar %1$s e %2$s ao mesmo tempo!</string>
-  <string name="Welcome_Text_29_3">
-    remix.29.3\n
-    - Jogabilidade:\n
-    -- Escudos!!\n
-    - Modding:\n
-    -- Escudos Personalizados!:\n
-    - Defeitos consertados\n
-    </string>
   <string name="ShieldStrTemplate">O usuário do escudo deve ter pelo menos %1$d pontos de força para usá-lo corretamente.</string>
   <string name="town_deco_flowerinthepot_name">Flor em vaso</string>
   <string name="town_deco_flowerinthepot_desc">Flor decorativa com sabor doce</string>

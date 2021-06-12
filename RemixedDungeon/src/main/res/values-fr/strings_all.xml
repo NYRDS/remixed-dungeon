@@ -2530,13 +2530,6 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="RoyalShield_desc">Un bouclier complètement en métal. Oui, c\'est lourd, mais il vous propose la meilleure protection.</string>
   <string name="ShieldInfoTemplate">Ce bouclier bloquera jusqu\'à %1$d des dégâts entrants. Avec %2$d %% de chances. Il faudra %3$3.1f secondes pour récupérer après un blocage réussi.</string>
   <string name="Belongings_CantWearBoth">Vous ne pouvez pas équipez %1$s et %2$s en même temps!</string>
-  <string name="Welcome_Text_29_3">
-remix.29.3\n
-- Gameplay:\n
--- Boucliers!\n
-- Modding:\n
--- Boucliers customisé!\n
-- Bugs fixé</string>
   <string name="ShieldStrTemplate">L\'utilisateur du bouclier doit avoir au moins %1$d points de force pour l\'utiliser correctement.</string>
   <string name="town_deco_flowerinthepot_name">Fleur en pot</string>
   <string name="town_deco_flowerinthepot_desc">Fleur décorative avec une senteur douce</string>
