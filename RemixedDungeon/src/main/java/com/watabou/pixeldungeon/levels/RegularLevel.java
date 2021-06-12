@@ -671,7 +671,7 @@ public abstract class RegularLevel extends CustomLevel {
 			int cell = randomDropCell();
 			if (item instanceof ScrollOfUpgrade) {
 
-				while (map[cell] == Terrain.FIRE_TRAP || map[cell] == Terrain.SECRET_FIRE_TRAP) {
+				while (!isCellSafeForPrize(cell)) {
 					cell = randomDropCell();
 				}
 			}

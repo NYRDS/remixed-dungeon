@@ -1202,6 +1202,22 @@ public abstract class Level implements Bundlable {
 		return false;
 	}
 
+	protected boolean isCellSafeForPrize(int cell) {
+		if(map[cell] == Terrain.FIRE_TRAP) {
+			return false;
+		}
+
+		if(map[cell] == Terrain.SECRET_FIRE_TRAP) {
+			return false;
+		}
+
+		if(getTopLevelObject(cell)!=null) {
+			return false;
+		}
+
+		return true;
+	}
+
 	public int pitCell() {
 		return randomRespawnCell();
 	}

@@ -212,8 +212,7 @@ public class SpiderLevel extends CommonLevel {
 			int cell = randomRespawnCell();
 			if (item instanceof ScrollOfUpgrade) {
 
-				while (map[cell] == Terrain.FIRE_TRAP
-						|| map[cell] == Terrain.SECRET_FIRE_TRAP) {
+				while (!isCellSafeForPrize(cell)) {
 					cell = randomRespawnCell();
 				}
 			}
