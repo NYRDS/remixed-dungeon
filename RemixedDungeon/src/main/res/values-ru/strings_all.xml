@@ -2753,13 +2753,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="PotionOfMana_Name">Зелье Маны</string>
   <string name="PotionOfMana_Info">Это зелье восстановит твою духовную энергию.</string>
   <string name="WndFortuneTeller_IdentifyAll">Всё</string>
-  <string name="Snail_Name">Улитка</string>
+  <string name="Snail_Name">улитка</string>
   <string name="Snail_Gender">masculine</string>
-  <string name="Snail_Name_Objective">Улитку</string>
+  <string name="Snail_Name_Objective">улитка</string>
   <string name="Snail_Desc">Этот моллюск неплохо откормился на сточных водах, скорости это ему однако не прибавило. Лёгкая добыча.</string>
-  <string name="DeepSnail_Name">Пещерная Улитка</string>
+  <string name="DeepSnail_Name">пещерная улитка</string>
   <string name="DeepSnail_Gender">masculine</string>
-  <string name="DeepSnail_Name_Objective">Улитку</string>
+  <string name="DeepSnail_Name_Objective">пещерная улитка</string>
   <string name="DeepSnail_Desc">Этот вид моллюсков чаще всего можно встретить вблизи источников и они куда резвее обычных улиток. А ещё они больно кусаются и покрыты слегка ядовитой слизью.</string>
   <string name="CharInfo_Level">Это существо: %2$sуровня %1$d.</string>
   <string name="WrnExperimental_realtime">Включен режим Realtime!: это теперь ниразу не пошаговый рогалик, тапай быстро или умри\nХочешь покопаться в рюкзаке?\nСмелее, но учти краб тем временем покопается в твоих кишках.</string>
