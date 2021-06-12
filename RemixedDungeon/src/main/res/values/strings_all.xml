@@ -2736,13 +2736,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="PotionOfMana_Name">Mana Potion</string>
   <string name="PotionOfMana_Info">This potion will restore your spiritual energy.</string>
   <string name="WndFortuneTeller_IdentifyAll">All</string>
-  <string name="Snail_Name">Snail</string>
+  <string name="Snail_Name">snail</string>
   <string name="Snail_Gender">masculine</string>
-  <string name="Snail_Name_Objective">Snail</string>
+  <string name="Snail_Name_Objective">snail</string>
   <string name="Snail_Desc">This small mollusk has grown quite big by feeding on sewage, but he is still really slow which makes him an easy foe to face.</string>
-  <string name="DeepSnail_Name">Deep Snail</string>
+  <string name="DeepSnail_Name">deep snail</string>
   <string name="DeepSnail_Gender">masculine</string>
-  <string name="DeepSnail_Name_Objective">Deep Snail</string>
+  <string name="DeepSnail_Name_Objective">deep snail</string>
   <string name="DeepSnail_Desc">This type of mollusk can often be seen near water sources and is much faster than your ordinary snail. Beware of the bites however, they can have an unpleasant effect on your skin.</string>
   <string name="CharInfo_Level">This is a level %1$d %2$s.</string>
   <string name="WrnExperimental_realtime">Realtime! mode enabled: this is realtime roguelike now, tap fast or die.\nWant to check inventory?\nGood luck to do so while sewer crab was checking your guts.</string>

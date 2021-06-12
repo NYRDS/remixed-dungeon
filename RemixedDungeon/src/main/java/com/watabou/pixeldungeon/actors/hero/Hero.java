@@ -889,9 +889,10 @@ public class Hero extends Char {
 							smthFound = true;
 						}
 
-						LevelObject obj = level.getLevelObject(p);
+						LevelObject obj = level.getTopLevelObject(p);
 						if (obj != null && obj.secret()) {
 							obj.discover();
+							ScrollOfMagicMapping.discover(p);
 							smthFound = true;
 						}
 					}
