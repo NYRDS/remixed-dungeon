@@ -58,6 +58,7 @@ import java.util.Set;
 
 import lombok.Getter;
 import lombok.SneakyThrows;
+import lombok.var;
 
 public enum HeroClass implements CharModifier {
 
@@ -108,8 +109,9 @@ public enum HeroClass implements CharModifier {
 
         if (Badges.isUnlocked(masteryBadge()) && hero.getDifficulty() < 3) {
             {
-                if (hero.getHeroClass() != HeroClass.NECROMANCER) {
-                    new TomeOfMastery().collect(hero);
+                var tomeOfMastery = new TomeOfMastery();
+                if(tomeOfMastery.givesMasteryTo(hero)){
+                    tomeOfMastery.collect(hero);
                 }
             }
         }

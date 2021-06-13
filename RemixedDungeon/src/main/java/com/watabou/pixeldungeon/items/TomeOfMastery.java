@@ -23,7 +23,6 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
-import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -52,7 +51,7 @@ public class TomeOfMastery extends MasteryItem {
 	}
 
 	@Override
-	protected boolean givesMasteryTo(Char hero) {
+	public boolean givesMasteryTo(Char hero) {
 		switch (hero.getHeroClass()) {
 			case NECROMANCER:
 			case GNOLL:
@@ -64,7 +63,7 @@ public class TomeOfMastery extends MasteryItem {
 
 	@Override
 	public boolean doPickUp(@NotNull Char hero ) {
-		if (hero.getHeroClass() != HeroClass.NECROMANCER) {
+		if(givesMasteryTo(hero)) {
 			Badges.validateMastery(hero.getHeroClass());
 		}
 		return super.doPickUp( hero );

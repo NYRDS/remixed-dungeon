@@ -29,7 +29,7 @@ public class MasteryItem extends Item {
 		return super.doPickUp( hero );
 	}
 
-	protected boolean givesMasteryTo(Char hero) {
+	public boolean givesMasteryTo(Char hero) {
 		return false;
 	}
 
