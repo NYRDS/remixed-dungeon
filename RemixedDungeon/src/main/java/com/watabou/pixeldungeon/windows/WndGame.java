@@ -18,12 +18,12 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.GameControl;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.RankingsScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.ui.Icons;
@@ -50,7 +50,9 @@ public class WndGame extends WndMenuCommon {
 		} );
 
 
-		if(hero.getDifficulty() < 2 && hero.isAlive()) {
+		final int difficulty = hero.getDifficulty();
+
+		if(difficulty < 2 && hero.isAlive()) {
 			menuItems.add( new MenuButton( Game.getVar(R.string.WndGame_Save) ) {
 				@Override
 				protected void onClick() {
@@ -59,7 +61,7 @@ public class WndGame extends WndMenuCommon {
 			} );
 		}
 
-		if(hero.getDifficulty() < 2) {
+		if(difficulty < 2) {
 			menuItems.add( new MenuButton( Game.getVar(R.string.WndGame_Load) ) {
 				@Override
 				protected void onClick() {
@@ -68,27 +70,27 @@ public class WndGame extends WndMenuCommon {
 			} );
 		}
 
-		if (Dungeon.getChallenges() > 0) {
+		final int challenges = Dungeon.getChallenges();
+
+		if (challenges > 0) {
 			menuItems.add( new MenuButton(Game
                     .getVar(R.string.WndGame_Challenges)) {
 				@Override
 				protected void onClick() {
 					hide();
-					GameScene.show( new WndChallenges(Dungeon.getChallenges(), false ) );
+					GameScene.show( new WndChallenges(challenges, false ) );
 				}
 			} );
 		}
 
-		if (!Dungeon.hero.isAlive()) {
+		if (!hero.isAlive()) {
 
-			menuItems.add(new MenuButton(Game.getVar(R.string.WndGame_Start),Icons.get(hero.getHeroClass()) ) {
+			final HeroClass heroClass = hero.getHeroClass();
+
+			menuItems.add(new MenuButton(Game.getVar(R.string.WndGame_Start),Icons.get(heroClass) ) {
 				@Override
 				protected void onClick() {
-					Dungeon.hero = null;
-					RemixedDungeon.challenges(Dungeon.getChallenges());
-
-					InterlevelScene.noStory = true;
-					InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
+					GameControl.startNewGame(heroClass.name(), difficulty, false);
 				}
 			});
 
