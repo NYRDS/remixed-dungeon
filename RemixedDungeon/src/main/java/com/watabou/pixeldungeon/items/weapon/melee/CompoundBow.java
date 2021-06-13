@@ -1,7 +1,6 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.nyrds.pixeldungeon.items.guts.weapon.ranged.Bow;
-import com.watabou.pixeldungeon.items.Item;
 
 public class CompoundBow extends Bow {
 
@@ -9,12 +8,7 @@ public class CompoundBow extends Bow {
 		super( 3, 0.8f, 1.5f );
 		image = 2;
 	}
-	
-	@Override
-	public Item burn(int cell) {
-		return null;
-	}
-	
+
 	@Override
 	public double acuFactor() {
 		return 1 + level() * 0.2;
