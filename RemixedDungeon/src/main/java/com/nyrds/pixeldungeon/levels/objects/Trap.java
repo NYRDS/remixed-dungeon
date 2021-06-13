@@ -87,6 +87,7 @@ public class Trap extends LevelObject {
 		ret.secret = secret;
 		ret.uses = 1;
 		ret.targetCell = ret.pos;
+		ret.activatedByItem = true;
 
 		return ret;
 	}

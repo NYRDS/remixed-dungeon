@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.levels.objects.ConcreteBlock;
-import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
@@ -79,18 +78,13 @@ public abstract class BossLevel extends RegularLevel {
             GameScene.updateMap(arenaDoor);
         }
 
-        LevelObject obj;
-        if(cellValid(entrance)) {
-            while ((obj = getLevelObject(entrance))!=null) {
-                CellEmitter.get(entrance).start(Speck.factory(Speck.ROCK), 0.07f, 10);
-                obj.remove();
-            }
-        }
 
-        for(var cell: exitMap.values()) {
-            while ((obj = getLevelObject(cell))!=null) {
-                CellEmitter.get(cell).start(Speck.factory(Speck.ROCK), 0.07f, 10);
-                obj.remove();
+        for(var obj: getAllLevelObjects()) {
+            if(obj instanceof ConcreteBlock) {
+                ConcreteBlock block = (ConcreteBlock)obj;
+                if (block.getRequiredStr() == 50) {
+                    obj.remove();
+                }
             }
         }
 
@@ -148,5 +142,11 @@ public abstract class BossLevel extends RegularLevel {
     @Override
     protected void createItems() {
         dropBones();
+    }
+
+    @Override
+    public void onHeroLeavesLevel() {
+        unseal();
+        super.onHeroLeavesLevel();
     }
 }

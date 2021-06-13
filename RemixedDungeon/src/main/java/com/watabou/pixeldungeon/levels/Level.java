@@ -242,6 +242,10 @@ public abstract class Level implements Bundlable {
 		objectsLayer.put(levelObject.getPos(), levelObject);
 	}
 
+	public void onHeroLeavesLevel() {
+
+	}
+
 	public void onHeroDescend(int cell) {
 	}
 

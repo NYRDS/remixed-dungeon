@@ -868,4 +868,11 @@ public class Dungeon {
         return visible[cell];
     }
 
+
+    public static void onHeroLeaveLevel() {
+        if(level==null) {
+            level.unseal();
+        }
+    }
+
 }

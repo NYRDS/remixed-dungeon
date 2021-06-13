@@ -441,6 +441,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         if (flashTime > 0 && (flashTime -= Game.elapsed) <= 0) {
             resetColor();
         }
+
         ch.ifPresent(chr -> {
             boolean visible = getVisible() && chr.invisible <= 0;
 
@@ -470,7 +471,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 emo.setVisible(visible);
             }
 
-            if (visible && curAnim == null && Math.random() < 0.1) {
+            if (visible && curAnim == null) {
                 idle();
             }
         });
