@@ -127,6 +127,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     private Runnable doOnResume;
 
     private final ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
+    private int framesSinceInit;
 
     public Game(Class<? extends Scene> c) {
         super();
@@ -366,10 +367,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @Override
     public void onDrawFrame(GL10 gl) {
         if (instance() == null || width() == 0 || height() == 0) {
+            framesSinceInit = 0;
             return;
         }
 
         if (paused) {
+            framesSinceInit = 0;
             return;
         }
 
@@ -378,29 +381,34 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         step = Math.min((now == 0 ? 0 : rightNow - now),250);
         now = rightNow;
 
-        Runnable task;
-        while ((task = uiTasks.poll()) != null && !isFinishing()) {
-            task.run();
-        }
+        framesSinceInit++;
 
-        if (!softPaused) {
-            try {
-                step();
-            } catch (LuaError e) {
-                throw ModdingMode.modException(e);
-            } catch (Exception e) {
-                throw new TrackedRuntimeException(e);
+
+        if (framesSinceInit>2) {
+            Runnable task;
+            while ((task = uiTasks.poll()) != null && !isFinishing()) {
+                task.run();
             }
-        }
 
-        NoosaScript.get().resetCamera();
+            if (!softPaused) {
+                try {
+                    step();
+                } catch (LuaError e) {
+                    throw ModdingMode.modException(e);
+                } catch (Exception e) {
+                    throw new TrackedRuntimeException(e);
+                }
+            }
 
-        GLES20.glScissor(0, 0, width(), height());
-        GLES20.glClearColor(0, 0, 0, 0.0f);
-        GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
+            NoosaScript.get().resetCamera();
 
-        if (scene != null) {
-            scene.draw();
+            GLES20.glScissor(0, 0, width(), height());
+            GLES20.glClearColor(0, 0, 0, 0.0f);
+            GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
+
+            if (scene != null) {
+                scene.draw();
+            }
         }
     }
 

@@ -16,7 +16,7 @@ public class Hunting extends MobAi implements AiState {
     @Override
     public void act(@NotNull Mob me) {
 
-        if(returnToOwnerIfTooFar(me, 4)) {
+        if(returnToOwnerIfTooFar(me, 6)) {
             return;
         }
 

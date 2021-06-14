@@ -52,7 +52,7 @@ public abstract class MobAi implements AiState {
             me.setEnemy((Char) src);
         } else {
             if(!me.getEnemy().valid()) {
-                me.setEnemy(chooseEnemy(me, 1.0f));
+                me.setEnemy(chooseEnemy(me, 1.25f));
             }
         }
 

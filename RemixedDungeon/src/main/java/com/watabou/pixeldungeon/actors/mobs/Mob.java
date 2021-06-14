@@ -551,16 +551,14 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
+		if(getOwnerId() == chr.getOwnerId()) {
+			return true;
+		}
+
 		if(chr instanceof Hero) {
 			return chr.getHeroClass().friendlyTo(getEntityKind());
 		}
 
-		if(chr instanceof Mob) {
-			Mob mob = (Mob)chr;
-			if(getOwnerId() == mob.getOwnerId()) {
-				return true;
-			}
-		}
 
 		return !this.fraction.isEnemy(chr.fraction);
 	}
