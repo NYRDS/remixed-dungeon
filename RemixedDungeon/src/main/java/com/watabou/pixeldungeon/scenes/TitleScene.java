@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.effects.NewFireball;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.pixeldungeon.windows.VBox;
@@ -81,13 +80,15 @@ public class TitleScene extends PixelScene {
 				RemixedDungeon.switchNoFade(BadgesScene.class);
 			}
 		};
-		btnBadges.setPos(w / 2 - btnBadges.width(), (h + height) / 2
+		final int w_center = w / 2;
+
+		btnBadges.setPos(w_center - btnBadges.width(), (h + height) / 2
 				- DashboardItem.SIZE);
 		add(btnBadges);
 
 
 		ModsButton btnMods = new ModsButton();
-		btnMods.setPos(w / 2, (h + height) / 2 - DashboardItem.SIZE);
+		btnMods.setPos(w_center, (h + height) / 2 - DashboardItem.SIZE);
 		add(btnMods);
 
 		DashboardItem btnPlay = new DashboardItem(Game.getVar(R.string.TitleScene_Play), 0) {
@@ -96,7 +97,7 @@ public class TitleScene extends PixelScene {
 				RemixedDungeon.switchNoFade(StartScene.class);
 			}
 		};
-		btnPlay.setPos(w / 2 - btnPlay.width(), btnMods.top()
+		btnPlay.setPos(w_center - btnPlay.width(), btnMods.top()
 				- DashboardItem.SIZE);
 		add(btnPlay);
 
@@ -106,7 +107,7 @@ public class TitleScene extends PixelScene {
 				RemixedDungeon.switchNoFade(RankingsScene.class);
 			}
 		};
-		btnHighscores.setPos(w / 2, btnPlay.top());
+		btnHighscores.setPos(w_center, btnPlay.top());
 		add(btnHighscores);
 
 		btnDonate = new DonateButton(this);
@@ -122,16 +123,16 @@ public class TitleScene extends PixelScene {
 		float dashBaseline = btnDonate.top() - DashboardItem.SIZE;
 
 		if (RemixedDungeon.landscape()) {
-			btnPlay.setPos(w / 2 - btnPlay.width() * 2, dashBaseline);
-			btnHighscores.setPos(w / 2 - btnHighscores.width(), dashBaseline + btnHighscores.height()/3);
-			btnBadges.setPos(w / 2, dashBaseline + btnBadges.height()/3);
+			btnPlay.setPos(w_center - btnPlay.width() * 2, dashBaseline);
+			btnHighscores.setPos(w_center - btnHighscores.width(), dashBaseline + btnHighscores.height()/3);
+			btnBadges.setPos(w_center, dashBaseline + btnBadges.height()/3);
 			btnMods.setPos(btnBadges.right(), dashBaseline);
 		} else {
-			btnPlay.setPos(w / 2 - btnPlay.width(), btnMods.top()
+			btnPlay.setPos(w_center - btnPlay.width(), btnMods.top()
 					- DashboardItem.SIZE + 5);
-			btnHighscores.setPos(w / 2, btnPlay.top());
-			btnBadges.setPos(w / 2 - btnBadges.width(), dashBaseline + 5);
-			btnMods.setPos(w / 2, dashBaseline + 5);
+			btnHighscores.setPos(w_center, btnPlay.top());
+			btnBadges.setPos(w_center - btnBadges.width(), dashBaseline + 5);
+			btnMods.setPos(w_center, dashBaseline + 5);
 		}
 
 		Archs archs = new Archs();
@@ -146,14 +147,14 @@ public class TitleScene extends PixelScene {
 		float freeInternalStorage = Util.getAvailableInternalMemorySize();
 
 		if (freeInternalStorage < 2) {
-			Text lowInteralStorageWarning = PixelScene
+			Text lowInternalStorageWarning = PixelScene
 					.createMultiline(GuiProperties.regularFontSize());
-			lowInteralStorageWarning.text(Game
+			lowInternalStorageWarning.text(Game
 					.getVar(R.string.TitleScene_InternalStorageLow));
-			lowInteralStorageWarning.setPos(0,
-					h - lowInteralStorageWarning.height());
-			lowInteralStorageWarning.hardlight(0.95f, 0.1f, 0.1f);
-			add(lowInteralStorageWarning);
+			lowInternalStorageWarning.setPos(0,
+					h - lowInternalStorageWarning.height());
+			lowInternalStorageWarning.hardlight(0.95f, 0.1f, 0.1f);
+			add(lowInternalStorageWarning);
 		}
 
 		VBox leftGroup = new VBox();
@@ -220,8 +221,6 @@ public class TitleScene extends PixelScene {
 		btnStats.setPos(w - btnStats.width(), btnChangelog.bottom() + 2);
 		add(btnStats);
 
-
-
 		fadeIn();
 	}
 
@@ -247,11 +246,4 @@ public class TitleScene extends PixelScene {
 		}
 
 	}
-
-	private void placeTorch(float x, float y) {
-		NewFireball fb = new NewFireball();
-		fb.setPos(x, y);
-		add(fb);
-	}
-
 }

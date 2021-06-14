@@ -247,7 +247,8 @@ public abstract class Mob extends Char {
 
 	public boolean isEnemyInFov(){
 		final Char enemy = getEnemy();
-		return enemy.valid() && enemy.isAlive() && level().cellValid(enemy.getPos()) && level().fieldOfView[enemy.getPos()]
+		final int enemyPos = enemy.getPos();
+		return enemy.valid() && enemy.isAlive() && level().cellValid(enemyPos) && level().fieldOfView[enemyPos]
                 && enemy.invisible <= 0;
     }
 
