@@ -91,6 +91,14 @@ android {
         android {
             dimension "platform"
         }
+
+        desktop {
+            dimension "platform"
+        }
+
+        none {
+            dimension "market"
+        }
     }
 }
 
