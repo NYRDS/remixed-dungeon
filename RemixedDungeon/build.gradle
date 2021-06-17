@@ -112,20 +112,25 @@ dependencies {
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
 
-    implementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
 
-    implementation 'androidx.multidex:multidex:2.0.1'
+    //desktopImplementation 'com.fancydep.desktop:1.0.7'
+
+
+    androidImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
+
+
+    androidImplementation 'androidx.multidex:multidex:2.0.1'
 
     implementation 'commons-io:commons-io:2.6'
 
-    implementation 'com.appodeal.ads.sdk:core:2.9.2'
-    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.9.2.11'
-    implementation 'com.appodeal.ads.sdk.networks:applovin:2.9.2.12'
-    implementation 'com.appodeal.ads.sdk.networks:bidmachine:2.9.2.7'
-    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.9.2.11'
-    implementation 'com.appodeal.ads.sdk.networks:my_target:2.9.2.11'
-    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.9.2.8'
+    androidImplementation 'com.appodeal.ads.sdk:core:2.9.2'
+    androidImplementation 'com.appodeal.ads.sdk.networks:adcolony:2.9.2.11'
+    androidImplementation 'com.appodeal.ads.sdk.networks:applovin:2.9.2.12'
+    androidImplementation 'com.appodeal.ads.sdk.networks:bidmachine:2.9.2.7'
+    androidImplementation 'com.appodeal.ads.sdk.networks:ironsource:2.9.2.11'
+    androidImplementation 'com.appodeal.ads.sdk.networks:my_target:2.9.2.11'
+    androidImplementation 'com.appodeal.ads.sdk.networks:unity_ads:2.9.2.8'
 
     implementation 'org.jetbrains:annotations:15.0'
 
