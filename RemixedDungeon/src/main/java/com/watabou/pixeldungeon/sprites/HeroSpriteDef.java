@@ -1,8 +1,8 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
+import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.TextureFilm;

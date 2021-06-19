@@ -2,7 +2,7 @@ package com.watabou.pixeldungeon.sprites;
 
 import android.opengl.GLES20;
 
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.effects.Halo;
 import com.watabou.utils.PointF;
 

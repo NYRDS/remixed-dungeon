@@ -20,8 +20,8 @@ package com.watabou.pixeldungeon.effects;
 import android.graphics.RectF;
 import android.opengl.GLES20;
 
+import com.nyrds.platform.game.Game;
 import com.watabou.glwrap.Texture;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.particles.Emitter;

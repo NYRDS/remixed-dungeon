@@ -3,11 +3,11 @@ package com.nyrds.pixeldungeon.levels;
 import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
-import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Patch;

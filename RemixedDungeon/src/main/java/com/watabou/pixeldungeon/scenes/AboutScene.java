@@ -19,16 +19,16 @@ package com.watabou.pixeldungeon.scenes;
 
 import android.content.Intent;
 
-import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.util.GuiProperties;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;

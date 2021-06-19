@@ -17,7 +17,7 @@
 
 package com.watabou.noosa.tweeners;
 
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Gizmo;
 
 abstract public class Tweener extends Gizmo {

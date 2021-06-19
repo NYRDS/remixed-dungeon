@@ -17,6 +17,8 @@
 
 package com.watabou.noosa;
 
+import com.nyrds.platform.game.Game;
+
 public class MovieClip extends Image {
 
     protected Animation curAnim;

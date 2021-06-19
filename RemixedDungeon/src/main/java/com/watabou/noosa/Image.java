@@ -19,8 +19,8 @@ package com.watabou.noosa;
 
 import android.graphics.RectF;
 
-import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.windows.IPlaceable;
+import com.nyrds.util.ModError;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;

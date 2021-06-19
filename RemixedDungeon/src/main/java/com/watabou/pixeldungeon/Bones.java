@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon;
 
-import com.nyrds.android.util.FileSystem;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.FileSystem;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;

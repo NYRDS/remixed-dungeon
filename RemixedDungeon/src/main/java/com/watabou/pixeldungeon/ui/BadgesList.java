@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.android.util.GuiProperties;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;

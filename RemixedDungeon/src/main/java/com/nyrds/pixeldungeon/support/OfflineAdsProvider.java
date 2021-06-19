@@ -5,9 +5,9 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
 
-import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.Util;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.Utils;
 

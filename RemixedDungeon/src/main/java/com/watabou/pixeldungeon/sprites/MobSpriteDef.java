@@ -1,8 +1,8 @@
 package com.watabou.pixeldungeon.sprites;
 
-import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.effects.ZapEffect;
+import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.JsonHelper;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;

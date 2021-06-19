@@ -19,6 +19,7 @@ package com.watabou.noosa;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.windows.IPlaceable;
+import com.nyrds.platform.game.Game;
 import com.watabou.glwrap.Matrix;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.Point;

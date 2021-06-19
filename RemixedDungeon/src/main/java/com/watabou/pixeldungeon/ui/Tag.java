@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Chrome;

@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.elements.Tab;

@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;

@@ -1,10 +1,10 @@
 package com.nyrds.pixeldungeon.mechanics.buffs;
 
-import com.nyrds.android.util.ModError;
-import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
+import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Awareness;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;

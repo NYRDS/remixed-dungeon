@@ -8,7 +8,7 @@ import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.LoadAdError;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 
 public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
     private AdView adView;

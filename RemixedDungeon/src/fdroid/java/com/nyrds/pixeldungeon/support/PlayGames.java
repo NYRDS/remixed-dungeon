@@ -64,6 +64,9 @@ public class PlayGames {
     public void unpackSnapshotTo(String snapshotId, File readTo, IResult result) {
     }
 
+    public void showVideoOverlay() {
+    }
+
 
     public interface IResult {
         void status(final boolean status);

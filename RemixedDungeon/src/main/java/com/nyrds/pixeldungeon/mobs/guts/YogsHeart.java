@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
-import com.watabou.pixeldungeon.RemixedDungeon;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;

@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
+import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.Text;

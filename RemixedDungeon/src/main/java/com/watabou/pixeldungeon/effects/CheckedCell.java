@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.effects;
 
+import com.nyrds.platform.game.Game;
 import com.watabou.gltextures.TextureCache;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.DungeonTilemap;
 

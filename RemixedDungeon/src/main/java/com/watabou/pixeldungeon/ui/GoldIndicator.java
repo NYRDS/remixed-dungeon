@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 

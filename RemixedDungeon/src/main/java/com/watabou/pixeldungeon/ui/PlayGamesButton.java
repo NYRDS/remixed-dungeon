@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.utils.SystemTime;
 
 public class PlayGamesButton extends ImageButton {

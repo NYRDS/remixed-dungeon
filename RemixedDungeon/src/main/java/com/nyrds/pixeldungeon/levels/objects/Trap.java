@@ -3,10 +3,10 @@ package com.nyrds.pixeldungeon.levels.objects;
 import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
-import com.nyrds.android.util.Util;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.Util;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;

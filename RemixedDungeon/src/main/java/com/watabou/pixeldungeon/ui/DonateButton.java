@@ -1,9 +1,9 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.noosa.Group;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.windows.WndDonate;
 
 public class DonateButton extends ImageButton {

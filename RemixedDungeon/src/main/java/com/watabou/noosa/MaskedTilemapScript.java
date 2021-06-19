@@ -19,6 +19,7 @@ package com.watabou.noosa;
 
 import android.opengl.GLES20;
 
+import com.nyrds.platform.game.Game;
 import com.watabou.glscripts.Script;
 import com.watabou.glwrap.Attribute;
 import com.watabou.glwrap.Quad;

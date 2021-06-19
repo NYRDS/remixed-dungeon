@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.pixeldungeon.RemixedDungeon;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.AllowStatisticsCollectionScene;
 
 public class StatisticsButton extends ImageButton {

@@ -1,8 +1,8 @@
 package com.nyrds.pixeldungeon.levels;
 
-import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.ModdingMode;
 import com.nyrds.lua.LuaEngine;
+import com.nyrds.util.JsonHelper;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.levels.CommonLevel;
 import com.watabou.utils.Bundle;
 

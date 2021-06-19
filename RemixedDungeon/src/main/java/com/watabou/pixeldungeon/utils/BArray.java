@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.utils;
 
-import androidx.annotation.Nullable;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class BArray {
 

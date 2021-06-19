@@ -17,12 +17,12 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.effects.emitters.Smoke;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
-import com.nyrds.pixeldungeon.effects.emitters.Smoke;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.utils.Random;
 

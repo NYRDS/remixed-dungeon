@@ -18,11 +18,11 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;

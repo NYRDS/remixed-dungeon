@@ -8,8 +8,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;
 
 class AAdsComboProvider implements AdsUtilsCommon.IBannerProvider, AdsUtilsCommon.IInterstitialProvider {

@@ -17,8 +17,8 @@
 
 package com.watabou.noosa.ui;
 
+import com.nyrds.platform.game.Game;
 import com.watabou.input.Touchscreen.Touch;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.TouchArea;
 
 public class Button extends Component {

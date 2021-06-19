@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.windows;
 
-import com.nyrds.android.util.DownloadStateListener;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.DownloadStateListener;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
 

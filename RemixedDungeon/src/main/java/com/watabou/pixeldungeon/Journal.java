@@ -18,9 +18,9 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.Packable;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;

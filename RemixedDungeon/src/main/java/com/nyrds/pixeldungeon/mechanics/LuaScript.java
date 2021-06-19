@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics;
 
-import com.nyrds.android.util.ModError;
 import com.nyrds.lua.LuaEngine;
+import com.nyrds.util.ModError;
 
 import org.jetbrains.annotations.Nullable;
 import org.luaj.vm2.LuaError;

@@ -20,8 +20,8 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndGameplaySettings;
 import com.nyrds.pixeldungeon.windows.WndUiSettings;
-import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.RemixedDungeon;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndSettings extends WndMenuCommon {

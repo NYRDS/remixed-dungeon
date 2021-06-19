@@ -17,6 +17,7 @@
 
 package com.watabou.noosa;
 
+import com.nyrds.platform.game.Game;
 import com.watabou.glwrap.Matrix;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;

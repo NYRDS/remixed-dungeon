@@ -1,10 +1,10 @@
 package com.nyrds.pixeldungeon.effects;
 
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Visual;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.tweeners.PosTweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;

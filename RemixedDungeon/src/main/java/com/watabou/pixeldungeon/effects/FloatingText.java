@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.effects;
 
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;

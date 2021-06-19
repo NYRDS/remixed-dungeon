@@ -2,8 +2,8 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.RemixedDungeon;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.Selector;
 import com.watabou.pixeldungeon.windows.WndMenuCommon;

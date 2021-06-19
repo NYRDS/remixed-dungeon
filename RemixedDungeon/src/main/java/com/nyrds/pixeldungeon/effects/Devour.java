@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.effects;
 
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;

@@ -1,12 +1,12 @@
 package com.watabou.pixeldungeon.windows.elements;
 
+import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Chrome;
-import com.watabou.pixeldungeon.RemixedDungeon;
 
 public class Tool extends Button {
 

@@ -1,9 +1,9 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.items.ItemUtils;
+import com.nyrds.platform.audio.Sample;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.ColorBlock;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Gold;

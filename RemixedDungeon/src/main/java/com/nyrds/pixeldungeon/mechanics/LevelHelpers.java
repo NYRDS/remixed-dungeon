@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics;
 
-import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 

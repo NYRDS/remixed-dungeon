@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.android.util.Flavours;
+import com.nyrds.market.MarketOptions;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
@@ -168,7 +168,7 @@ public class StatusPane extends Component {
 
         btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
 
-        if (!Flavours.haveHats()) {
+        if (!MarketOptions.haveHats()) {
             btnHats.enable(false);
         }
 

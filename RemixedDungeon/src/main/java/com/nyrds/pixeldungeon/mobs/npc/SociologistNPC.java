@@ -2,14 +2,14 @@ package com.nyrds.pixeldungeon.mobs.npc;
 
 import android.Manifest;
 
-import com.nyrds.android.util.DownloadStateListener;
-import com.nyrds.android.util.DownloadTask;
-import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.JsonHelper;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.nyrds.pixeldungeon.windows.WndSurvey;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.util.DownloadStateListener;
+import com.nyrds.util.DownloadTask;
+import com.nyrds.util.JsonHelper;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.windows.WndError;

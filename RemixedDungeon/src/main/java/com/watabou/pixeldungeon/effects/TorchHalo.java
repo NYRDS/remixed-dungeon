@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.effects;
 
 import android.opengl.GLES20;
 
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 
 import javax.microedition.khronos.opengles.GL10;

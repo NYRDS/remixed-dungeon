@@ -2,7 +2,7 @@ package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Trap;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.platform.EventCollector;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.utils.Random;

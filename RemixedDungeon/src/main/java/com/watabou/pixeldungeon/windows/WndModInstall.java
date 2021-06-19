@@ -3,14 +3,14 @@ package com.watabou.pixeldungeon.windows;
 import android.content.Intent;
 import android.net.Uri;
 
-import com.nyrds.android.InstallMod;
-import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.InstallMod;
+import com.nyrds.util.GuiProperties;
 import com.watabou.input.Touchscreen;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.scenes.PixelScene;

@@ -21,7 +21,7 @@ import android.annotation.SuppressLint;
 import android.util.Pair;
 
 import com.nyrds.LuaInterface;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.particles.Emitter;

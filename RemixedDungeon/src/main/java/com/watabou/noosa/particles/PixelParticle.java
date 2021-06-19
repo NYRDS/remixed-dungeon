@@ -17,7 +17,7 @@
 
 package com.watabou.noosa.particles;
 
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.PseudoPixel;
 
 public class PixelParticle extends PseudoPixel {

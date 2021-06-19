@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.effects;
 
-import com.watabou.noosa.Game;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.utils.PointF;
 

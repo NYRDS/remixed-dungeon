@@ -1,8 +1,8 @@
 package com.watabou.pixeldungeon.effects;
 
-import com.nyrds.android.util.GuiProperties;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.SystemText;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.gfx.SystemText;
+import com.nyrds.util.GuiProperties;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;

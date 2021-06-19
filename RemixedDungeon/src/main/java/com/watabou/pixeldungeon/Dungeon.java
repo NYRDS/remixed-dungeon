@@ -18,10 +18,6 @@ t * Pixel Dungeon
 package com.watabou.pixeldungeon;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.android.util.Util;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
@@ -30,7 +26,6 @@ import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.IceCavesLevel;
 import com.nyrds.pixeldungeon.levels.NecroLevel;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
@@ -40,7 +35,13 @@ import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.Position;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Rankings.gameOver;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -89,7 +90,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import lombok.SneakyThrows;
 
-import static com.watabou.pixeldungeon.RemixedDungeon.MOVE_TIMEOUTS;
+import static com.nyrds.platform.game.RemixedDungeon.MOVE_TIMEOUTS;
 
 public class Dungeon {
 

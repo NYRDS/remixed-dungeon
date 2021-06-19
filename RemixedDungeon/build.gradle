@@ -92,7 +92,7 @@ android {
             dimension "platform"
         }
 
-        desktop {
+        libgdx {
             dimension "platform"
         }
 
@@ -114,7 +114,7 @@ dependencies {
 
 
 
-    //desktopImplementation 'com.fancydep.desktop:1.0.7'
+    //libgdxImplementation 'com.fancydep.desktop:1.0.7'
 
 
     androidImplementation 'com.google.android.ads.consent:consent-library:1.0.8'

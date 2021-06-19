@@ -2,9 +2,9 @@ package com.nyrds.pixeldungeon.support;
 
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.InterstitialCallbacks;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.platform.EventCollector;
 import com.watabou.noosa.InterstitialPoint;
-import com.watabou.pixeldungeon.RemixedDungeon;
+import com.nyrds.platform.game.RemixedDungeon;
 
 class AppodealInterstitialProvider implements AdsUtilsCommon.IInterstitialProvider {
 

@@ -19,7 +19,7 @@ package com.watabou.noosa.particles;
 
 import android.opengl.GLES20;
 
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Visual;
 import com.watabou.utils.PointF;

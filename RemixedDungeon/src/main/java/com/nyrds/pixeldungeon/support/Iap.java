@@ -3,9 +3,9 @@ package com.nyrds.pixeldungeon.support;
 import android.app.Activity;
 
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.RemixedDungeon;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
 
 import org.jetbrains.annotations.NotNull;
 

@@ -5,10 +5,10 @@ package com.nyrds.lua;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-import com.nyrds.android.lua.MultiDexLuajavaLib;
-import com.nyrds.android.util.ModError;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.lua.PlatformLuajavaLib;
+import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import org.apache.commons.io.input.BOMInputStream;
@@ -129,7 +129,7 @@ public class LuaEngine implements ResourceFinder {
 		globals.load(new JseMathLib());
 		globals.load(new JseIoLib());
 		globals.load(new JseOsLib());
-		globals.load(new MultiDexLuajavaLib());
+		globals.load(new PlatformLuajavaLib());
 		globals.load(new DebugLib());
 
 		LoadState.install(globals);

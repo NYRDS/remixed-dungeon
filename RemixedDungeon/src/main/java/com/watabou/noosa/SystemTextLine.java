@@ -31,8 +31,8 @@ public class SystemTextLine extends Visual {
 	private SmartTexture texture;
 	private RectF frame;
 	
-	private float[] vertices;
-	private FloatBuffer verticesBuffer;
+	private final float[] vertices;
+	private final FloatBuffer verticesBuffer;
 	
 	private boolean dirty;
 
