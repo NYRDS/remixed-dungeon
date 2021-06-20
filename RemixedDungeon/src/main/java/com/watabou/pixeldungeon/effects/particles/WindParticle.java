@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.effects.particles;
 
-import com.nyrds.platform.game.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.Emitter.Factory;
@@ -96,7 +96,7 @@ public class WindParticle extends PixelParticle {
 				
 				super.update();
 				
-				if ((delay -= Game.elapsed) <= 0) {
+				if ((delay -= GameLoop.elapsed) <= 0) {
 					
 					delay = Random.Float( 5 );
 					

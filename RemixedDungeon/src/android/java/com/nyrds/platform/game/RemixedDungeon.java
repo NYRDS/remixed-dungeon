@@ -24,31 +24,22 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.market.MarketOptions;
-import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.support.PlayGames;
-import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
-import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.scenes.InterlevelScene;
+import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
-import com.watabou.pixeldungeon.ui.ModsButton;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.elements.Tool;
-
-import java.util.Locale;
-
-import javax.microedition.khronos.opengles.GL10;
 
 public class RemixedDungeon extends Game {
 
@@ -114,15 +105,15 @@ public class RemixedDungeon extends Game {
 	public void onResume() {
 		super.onResume();
 
-		RemixedDungeon.activeMod(ModdingMode.activeMod());
+		GamePreferences.activeMod(ModdingMode.activeMod());
 
-		if(!Utils.canUseClassicFont(uiLanguage())) {
-			RemixedDungeon.classicFont(false);
+		if(!Utils.canUseClassicFont(GamePreferences.uiLanguage())) {
+			GamePreferences.classicFont(false);
 		}
 
-		ModdingMode.setClassicTextRenderingMode(RemixedDungeon.classicFont());
+		ModdingMode.setClassicTextRenderingMode(GamePreferences.classicFont());
 
-		setSelectedLanguage();
+		GamePreferences.setSelectedLanguage();
 
 		updateImmersiveMode();
 
@@ -134,16 +125,12 @@ public class RemixedDungeon extends Game {
 			landscape(!landscape);
 		}
 
-		Music.INSTANCE.enable(music());
-		Sample.INSTANCE.enable(soundFx());
+		Music.INSTANCE.enable(GamePreferences.music());
+		Sample.INSTANCE.enable(GamePreferences.soundFx());
 
 		if (Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)) {
 			playGames.connect();
 		}
-	}
-
-	public void setSelectedLanguage() {
-		useLocale(uiLanguage());
 	}
 
 	@Override
@@ -174,7 +161,7 @@ public class RemixedDungeon extends Game {
 
 	public static void switchNoFade(Class<? extends PixelScene> c) {
 		PixelScene.noFade = true;
-		switchScene(c);
+		GameLoop.switchScene(c);
 	}
 
 	public static boolean canDonate() {
@@ -182,7 +169,7 @@ public class RemixedDungeon extends Game {
 	}
 	
 	/*
-	 * ---> Preferences
+	 * ---> Android Preferences
 	 */
 
 	public static void landscape(boolean value) {
@@ -200,15 +187,6 @@ public class RemixedDungeon extends Game {
 		return width() > height();
 	}
 
-	@Override
-	public void onSurfaceChanged(GL10 gl, int width, int height) {
-		super.onSurfaceChanged(gl, width, height);
-
-		if (needSceneRestart && !(scene instanceof InterlevelScene)) {
-			requestedReset = true;
-			setNeedSceneRestart(false);
-		}
-	}
 
 	@SuppressLint("NewApi")
 	public static void updateImmersiveMode() {
@@ -217,7 +195,7 @@ public class RemixedDungeon extends Game {
 				instance().getWindow()
 						.getDecorView()
 						.setSystemUiVisibility(
-								immersed() ? View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+								GamePreferences.immersed() ? View.SYSTEM_UI_FLAG_LAYOUT_STABLE
 										| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 										| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
 										| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
@@ -228,244 +206,15 @@ public class RemixedDungeon extends Game {
 		}
 	}
 
-	public static void zoom(double value) {
-		Preferences.INSTANCE.put(Preferences.KEY_ZOOM, value);
+	//Still here for lua scripts compatibility
+	@LuaInterface
+	public static Scene scene() {
+		return GameLoop.scene();
 	}
 
-	public static double zoom() {
-		return Preferences.INSTANCE.getDouble(Preferences.KEY_ZOOM, 0);
-	}
-
-	public static void music(boolean value) {
-		Music.INSTANCE.enable(value);
-		Preferences.INSTANCE.put(Preferences.KEY_MUSIC, value);
-	}
-
-	public static boolean music() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_MUSIC, true);
-	}
-
-	public static void soundFx(boolean value) {
-		Sample.INSTANCE.enable(value);
-		Preferences.INSTANCE.put(Preferences.KEY_SOUND_FX, value);
-	}
-
-	public static boolean soundFx() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_SOUND_FX, true);
-	}
-
-	public static void brightness(boolean value) {
-		Preferences.INSTANCE.put(Preferences.KEY_BRIGHTNESS, value);
-		if (scene() instanceof GameScene) {
-			((GameScene) scene()).brightness(value);
-		}
-	}
-
-	public static boolean brightness() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_BRIGHTNESS,
-				false);
-	}
-
-	private static void donated(int value) {
-		Preferences.INSTANCE.put(Preferences.KEY_DONATED, value);
-	}
-
-	public static int donated() {
-		return Preferences.INSTANCE.getInt(Preferences.KEY_DONATED, 0);
-	}
-
-	public static void lastClass(int value) {
-		Preferences.INSTANCE.put(Preferences.KEY_LAST_CLASS, value);
-	}
-
-	public static int lastClass() {
-		return Preferences.INSTANCE.getInt(Preferences.KEY_LAST_CLASS, 0);
-	}
-
-	public static void challenges(int value) {
-		Preferences.INSTANCE.put(Preferences.KEY_CHALLENGES, value);
-	}
-
-	public static int challenges() {
-		return Preferences.INSTANCE.getInt(Preferences.KEY_CHALLENGES, 0);
-	}
-
-	public static void intro(boolean value) {
-		Preferences.INSTANCE.put(Preferences.KEY_INTRO, value);
-	}
-
-	public static boolean intro() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_INTRO, true);
-	}
-
-	public static String uiLanguage() {
-		String deviceLocale = Locale.getDefault().getLanguage();
-		return Preferences.INSTANCE.getString(Preferences.KEY_LOCALE,
-				deviceLocale);
-	}
-
-	public static void uiLanguage(String lang) {
-		Preferences.INSTANCE.put(Preferences.KEY_LOCALE, lang);
-
-		instance().setSelectedLanguage();
-		resetScene();
-	}
-
-	public static void version( int value)  {
-        Preferences.INSTANCE.put( Preferences.KEY_VERSION, value );
-    }
-
-    public static int version() {
-        return Preferences.INSTANCE.getInt( Preferences.KEY_VERSION, 0 );
-    }
-
-
-	public static void versionString( String value)  {
-		Preferences.INSTANCE.put( Preferences.KEY_VERSION_STRING, value );
-	}
-
-	public static String versionString() {
-		return Preferences.INSTANCE.getString( Preferences.KEY_VERSION_STRING, Utils.UNKNOWN);
-	}
-
-	public static void fontScale(int value) {
-		Preferences.INSTANCE.put(Preferences.KEY_FONT_SCALE, value);
-		SystemText.updateFontScale();
-	}
-
-	public static int fontScale() {
-		return Preferences.INSTANCE.getInt(Preferences.KEY_FONT_SCALE, 0);
-	}
-	
-	public static boolean classicFont() {
-		boolean val = Preferences.INSTANCE.getBoolean(Preferences.KEY_CLASSIC_FONT, false);
-		ModdingMode.setClassicTextRenderingMode(val);
-		return val;
-	}
-
-	public static void classicFont(boolean value) {
-		ModdingMode.setClassicTextRenderingMode(value);
-		Preferences.INSTANCE.put(Preferences.KEY_CLASSIC_FONT, value);
-	}
-
-	public static void activeMod(String mod) {
-		Preferences.INSTANCE.put(Preferences.KEY_ACTIVE_MOD, mod);
-		ModdingMode.selectMod(RemixedDungeon.activeMod());
-
-		RemixedDungeon.instance().setSelectedLanguage();
-
-		EventCollector.setSessionData("RPD_active_mod", ModdingMode.activeMod());
-		EventCollector.setSessionData("active_mod_version", Integer.toString(ModdingMode.activeModVersion()));
-		ModsButton.modUpdated();
-	}
-	
-	public static String activeMod() {
-		return Preferences.INSTANCE.getString(Preferences.KEY_ACTIVE_MOD, ModdingMode.REMIXED);
-	}
-
-	public static boolean realtime() {
-			return Preferences.INSTANCE.getBoolean(Preferences.KEY_REALTIME, false);
-	}
-
-	public static void realtime(boolean value) {
-		Preferences.INSTANCE.put(Preferences.KEY_REALTIME, value);
-	}
-
-	// *** IMMERSIVE MODE ****
-	@SuppressLint("NewApi")
-	public static void immerse(boolean value) {
-		Preferences.INSTANCE.put(Preferences.KEY_IMMERSIVE, value);
-
-		instance().runOnUiThread(() -> {
-			updateImmersiveMode();
-			setNeedSceneRestart(true);
-		});
-	}
-
-	public static boolean immersed() {
-		return Preferences.INSTANCE
-				.getBoolean(Preferences.KEY_IMMERSIVE, true);
-	}
-
-	/*
-	 * <--- Preferences
-	 */
-
-	/*
-	 * <---Purchases
-	 */
-	static public void setDonationLevel(int level) {
-		
-		if(level > 0) {
-			Ads.removeEasyModeBanner();
-		}
-		
-		if (level < donated()) {
-			return;
-		}
-		
-		if (donated() == 0 && level != 0) {
-			pushUiTask(() -> {
-				Sample.INSTANCE.play(Assets.SND_GOLD);
-				Badges.validateSupporter();
-			});
-		}
-		donated(level);
-	}
-
-	public static void setDifficulty(int _difficulty) {
-		difficulty = _difficulty;
-		syncAdsState();
-	}
-
-	//--- Move timeouts
-	public static int moveTimeout() {
-		return Preferences.INSTANCE.getInt(Preferences.KEY_MOVE_TIMEOUT, Integer.MAX_VALUE);
-	}
-
-	public static void moveTimeout(int value) {
-		Preferences.INSTANCE.put(Preferences.KEY_MOVE_TIMEOUT,value);
-	}
-
-	public static int limitTimeoutIndex(int value) {
-		return 	Math.max(Math.min(value, MOVE_TIMEOUTS.length-1),0);
-	}
-
-	public static double getMoveTimeout() {
-		return MOVE_TIMEOUTS[limitTimeoutIndex(moveTimeout())];
-	}
-
-    public static int quickSlots() {
-	    return Preferences.INSTANCE.getInt(Preferences.KEY_QUICKSLOTS, -1);
-    }
-
-	public static void quickSlots(int slots) {
-		Preferences.INSTANCE.put(Preferences.KEY_QUICKSLOTS, slots);
-		if (scene() instanceof GameScene) {
-			((GameScene) scene()).updateToolbar(false);
-		}
-	}
-
-	public static String toolStyle() {
-		return Preferences.INSTANCE.getString(Preferences.KEY_TOOL_STYLE, Tool.Size.Std.name());
-	}
-
-	public static void toolStyle(String style) {
-		Preferences.INSTANCE.put(Preferences.KEY_TOOL_STYLE, style);
-		if (scene() instanceof GameScene) {
-			((GameScene) scene()).updateToolbar(true);
-		}
-	}
-
-	public static Boolean handedness() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_HANDEDNESS, false);
-	}
-
-	public static void handedness(Boolean left) {
-		Preferences.INSTANCE.put(Preferences.KEY_HANDEDNESS, left);
-		if (scene() instanceof GameScene) {
-			((GameScene) scene()).updateToolbar(false);
-		}
+	@LuaInterface
+	public static float getDifficultyFactor() {
+		return GameLoop.getDifficultyFactor();
 	}
 
 }

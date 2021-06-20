@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.utils.CharsList;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TouchArea;
@@ -101,7 +101,7 @@ public class CellSelector extends TouchArea {
 			
 			int zoom = Math.round( camera.zoom );
 			camera.zoom( zoom );
-			RemixedDungeon.zoom(zoom - PixelScene.defaultZoom);
+			GamePreferences.zoom(zoom - PixelScene.defaultZoom);
 
 			dragging = true;
 			if (t == touch) {

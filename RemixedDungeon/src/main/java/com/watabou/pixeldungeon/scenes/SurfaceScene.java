@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.game.Game;
@@ -155,7 +156,7 @@ public class SurfaceScene extends PixelScene {
 		
 		RedButton gameOver = new RedButton( Game.getVar(R.string.SurfaceScene_GameOver) ) {
 			protected void onClick() {
-				Game.switchScene( TitleScene.class );
+				GameLoop.switchScene( TitleScene.class );
 			}
 		};
 		gameOver.setSize( WIDTH - 10, 20 );
@@ -367,7 +368,7 @@ public class SurfaceScene extends PixelScene {
 		@Override
 		public void update() {
 			super.update();
-			a += Random.Float(Game.elapsed * 5);
+			a += Random.Float(GameLoop.elapsed * 5);
 			angle = (2 + Math.cos(a)) * (forward ? +0.2 : -0.2);
 
 			scale.y = (float) Math.cos(angle);

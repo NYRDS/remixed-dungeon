@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.game.Game;
@@ -106,7 +107,7 @@ public class RankingsScene extends PixelScene {
                         startFrom -= recordsPerPage;
                     }
 
-                    switch (RemixedDungeon.donated()) {
+                    switch (GamePreferences.donated()) {
                         case 0:
                             if (startFrom > 10) {
                                 startFrom = 10;

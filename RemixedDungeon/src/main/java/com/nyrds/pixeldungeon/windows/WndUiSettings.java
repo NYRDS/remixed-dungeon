@@ -1,6 +1,7 @@
 
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -14,16 +15,16 @@ public class WndUiSettings extends WndMenuCommon {
 	protected void createItems() {
 
 		if (android.os.Build.VERSION.SDK_INT >= 19) {
-			menuItems.add( new MenuCheckBox(Game.getVar(R.string.WndSettings_Immersive),RemixedDungeon.immersed()) {
+			menuItems.add( new MenuCheckBox(Game.getVar(R.string.WndSettings_Immersive), GamePreferences.immersed()) {
 				@Override
 				protected void onClick() {
 					super.onClick();
-					RemixedDungeon.immerse(checked());
+					GamePreferences.immerse(checked());
 				}
 			});
 		}
 
-		if(!RemixedDungeon.classicFont()){
+		if(!GamePreferences.classicFont()){
 			menuItems.add(createTextScaleButtons());
 		}
 
@@ -38,13 +39,13 @@ public class WndUiSettings extends WndMenuCommon {
 				Game.getVar(R.string.WndSettings_ClassicFont)
 		};
 
-		if (Utils.canUseClassicFont(RemixedDungeon.uiLanguage())) {
-			final int index = RemixedDungeon.classicFont() ? 0 : 1;
+		if (Utils.canUseClassicFont(GamePreferences.uiLanguage())) {
+			final int index = GamePreferences.classicFont() ? 0 : 1;
 
 			menuItems.add( new MenuButton(texts[index]) {
 				@Override
 				protected void onClick() {
-					RemixedDungeon.classicFont(!RemixedDungeon.classicFont());
+					GamePreferences.classicFont(!GamePreferences.classicFont());
 					WndUiSettings.this.getParent().add(new WndUiSettings());
 					hide();
 				}
@@ -57,19 +58,19 @@ public class WndUiSettings extends WndMenuCommon {
 				.getVar(R.string.WndSettings_TextScaleDefault), new Selector.PlusMinusDefault() {
 			@Override
 			public void onPlus(Selector s) {
-				RemixedDungeon.fontScale(RemixedDungeon.fontScale() + 1);
+				GamePreferences.fontScale(GamePreferences.fontScale() + 1);
 				s.regen();
 			}
 
 			@Override
 			public void onMinus(Selector s) {
-				RemixedDungeon.fontScale(RemixedDungeon.fontScale() - 1);
+				GamePreferences.fontScale(GamePreferences.fontScale() - 1);
 				s.regen();
 			}
 
 			@Override
 			public void onDefault(Selector s) {
-				RemixedDungeon.fontScale(0);
+				GamePreferences.fontScale(0);
 				s.regen();
 			}
 		});

@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.platform.game.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 
@@ -38,7 +38,7 @@ class PickedUpItem extends ItemSprite {
     public void update() {
         super.update();
 
-        if ((left -= Game.elapsed) <= 0) {
+        if ((left -= GameLoop.elapsed) <= 0) {
             setVisible(active = false);
         } else {
             float p = left / DURATION;

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.ml.actions;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
@@ -37,7 +38,7 @@ public class Ascend extends CharAction {
                 } else {
                     Dungeon.win(ResultDescriptions.getDescription(ResultDescriptions.Reason.WIN), Rankings.gameOver.WIN_HAPPY);
                     Dungeon.gameOver();
-                    Game.switchScene(SurfaceScene.class);
+                    GameLoop.switchScene(SurfaceScene.class);
                 }
             } else {
                 hero.clearActions();

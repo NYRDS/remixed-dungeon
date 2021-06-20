@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
@@ -175,7 +176,7 @@ public class SaveUtils {
 	}
 
 	static public String buildSlotFromTag(String tag) {
-		return ModdingMode.activeMod() + "_" + tag + "_" + Game.getDifficulty();
+		return ModdingMode.activeMod() + "_" + tag + "_" + GameLoop.getDifficulty();
 	}
 
 	public static String getAutoSave() {

@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.effects;
 
 import android.opengl.GLES20;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
@@ -105,7 +105,7 @@ public class Lightning extends Group {
 	public void update() {
 		super.update();
 		
-		if ((life -= Game.elapsed) < 0) {
+		if ((life -= GameLoop.elapsed) < 0) {
 			
 			killAndErase();
 			if (callback != null) {

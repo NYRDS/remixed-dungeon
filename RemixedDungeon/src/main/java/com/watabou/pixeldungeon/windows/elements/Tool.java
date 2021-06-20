@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.windows.elements;
 
-import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.NinePatch;
@@ -20,7 +20,7 @@ public class Tool extends Button {
     private   NinePatch bg;
 
     public Tool(int index, Chrome.Type chrome) {
-        this(Size.valueOf(RemixedDungeon.toolStyle()),index, chrome);
+        this(Size.valueOf(GamePreferences.toolStyle()),index, chrome);
     }
 
     public Tool(Size size, int index, Chrome.Type chrome) {

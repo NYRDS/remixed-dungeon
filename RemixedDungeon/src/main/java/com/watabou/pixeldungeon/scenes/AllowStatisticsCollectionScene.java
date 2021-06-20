@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
@@ -66,7 +67,7 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				Preferences.INSTANCE.put(Preferences.KEY_COLLECT_STATS, 100);
-				Game.switchScene(TitleScene.class);
+				GameLoop.switchScene(TitleScene.class);
 			}
 		};
 
@@ -74,7 +75,7 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				Preferences.INSTANCE.put(Preferences.KEY_COLLECT_STATS, -100);
-				Game.switchScene(TitleScene.class);
+				GameLoop.switchScene(TitleScene.class);
 			}
 		};
 

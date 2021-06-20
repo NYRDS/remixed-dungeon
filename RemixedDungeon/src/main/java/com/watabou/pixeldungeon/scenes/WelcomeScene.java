@@ -1,8 +1,9 @@
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
@@ -86,13 +87,13 @@ public class WelcomeScene extends PixelScene {
 		RedButton okay = new RedButton(Game.getVar(R.string.Welcome_Ok)) {
 			@Override
 			protected void onClick() {
-				RemixedDungeon.version(Game.versionCode);
-				RemixedDungeon.versionString(Game.version);
+				GamePreferences.version(Game.versionCode);
+				GamePreferences.versionString(Game.version);
 
 				if (Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS, 1) == 0) {
-					Game.switchScene(AllowStatisticsCollectionScene.class);
+					GameLoop.switchScene(AllowStatisticsCollectionScene.class);
 				} else {
-					Game.switchScene(TitleScene.class);
+					GameLoop.switchScene(TitleScene.class);
 				}
 			}
 		};

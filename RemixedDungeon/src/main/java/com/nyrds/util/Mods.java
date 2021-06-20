@@ -1,8 +1,8 @@
 package com.nyrds.util;
 
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.FileSystem;
 
 import org.jetbrains.annotations.NotNull;
@@ -128,7 +128,7 @@ public class Mods {
 		Map<String, ModDesc> availableMods = new HashMap<>();
 
 		updateAvailableModsList("common", availableMods);
-		updateAvailableModsList(RemixedDungeon.uiLanguage(), availableMods);
+		updateAvailableModsList(GamePreferences.uiLanguage(), availableMods);
 		return availableMods;
 	}
 

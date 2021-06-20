@@ -3,6 +3,7 @@ package com.nyrds.platform.game;
 import android.content.Intent;
 import android.net.Uri;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.Unzip;
@@ -48,16 +49,16 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, In
 
     @Override
     public void UnzipComplete(final Boolean result) {
-        Game.pushUiTask(() -> {
+        GameLoop.pushUiTask(() -> {
             if(unzipProgress!=null) {
                 unzipProgress.hide();
                 unzipProgress = null;
             }
 
             if (result) {
-                Game.addToScene(new WndModSelect());
+                GameLoop.addToScene(new WndModSelect());
             } else {
-                Game.addToScene(new WndError(Utils.format("unzipping %s failed", modFileName)));
+                GameLoop.addToScene(new WndError(Utils.format("unzipping %s failed", modFileName)));
             }
         });
 
@@ -65,12 +66,12 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, In
 
     @Override
     public void UnzipProgress(Integer unpacked) {
-        Game.pushUiTask(() -> {
+        GameLoop.pushUiTask(() -> {
             if (unzipProgress == null) {
                 unzipProgress = new WndMessage(Utils.EMPTY_STRING);
-                Game.addToScene(unzipProgress);
+                GameLoop.addToScene(unzipProgress);
             }
-            if (unzipProgress.getParent() == Game.scene()) {
+            if (unzipProgress.getParent() == GameLoop.scene()) {
                 unzipProgress.setText(Utils.format("Unpacking: %d", unpacked));
             }
         });
@@ -95,7 +96,7 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, In
             return;
         }
 
-        if(scene == null) {
+        if(gameLoop.scene == null) {
             return;
         }
 
@@ -114,7 +115,7 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, In
         EventCollector.logEvent("ManualModInstall", modDesc.name, String.valueOf(modDesc.version));
 
         WndModInstall wndModInstall = new WndModInstall(modDesc,
-                () -> Game.execute(
+                () -> GameLoop.execute(
                         () -> {
                             try {
                                 Unzip.unzipStream(getContentResolver().openInputStream(data), FileSystem.getExternalStorageFileName("./"), this);
@@ -122,7 +123,6 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, In
                                 EventCollector.logException(e);
                             }
                         }));
-        scene.add(wndModInstall);
-
+        gameLoop.scene.add(wndModInstall);
     }
 }

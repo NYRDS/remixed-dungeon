@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.utils;
 
 import android.util.Log;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.Util;
@@ -113,7 +114,7 @@ public class GLog {
 		}
 
 		final String finalText = text;
-		Game.pushUiTask(() -> update.dispatch(finalText)
+		GameLoop.pushUiTask(() -> update.dispatch(finalText)
 		);
 	}
 

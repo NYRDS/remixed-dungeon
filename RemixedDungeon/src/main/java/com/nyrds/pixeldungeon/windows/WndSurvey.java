@@ -1,9 +1,10 @@
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
@@ -37,7 +38,7 @@ public class WndSurvey extends Window {
     public WndSurvey(final JSONObject survey) {
         super();
 
-        String lang = RemixedDungeon.uiLanguage();
+        String lang = GamePreferences.uiLanguage();
 
         if (!survey.has(lang)) {
             lang = "en";
@@ -47,7 +48,7 @@ public class WndSurvey extends Window {
             String surveyId = survey.getString("survey_id");
 
             if (Preferences.INSTANCE.getString(SURVEY_TAKEN, Utils.EMPTY_STRING).equals(surveyId)) {
-                Game.addToScene(new WndMessage(Game.getVar(R.string.SociologistNPC_AlreadyTaken)));
+                GameLoop.addToScene(new WndMessage(Game.getVar(R.string.SociologistNPC_AlreadyTaken)));
                 super.hide();
                 return;
             }

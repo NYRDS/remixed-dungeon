@@ -18,9 +18,9 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -50,7 +50,7 @@ public class Hunger extends Buff implements Doom {
 	public boolean act() {
 		if (target.isAlive()) {
 
-			int difficulty = Game.getDifficulty();
+			int difficulty = GameLoop.getDifficulty();
 
 			if (!target.level().isSafe() && isStarving()) {
 
@@ -83,7 +83,7 @@ public class Hunger extends Buff implements Doom {
 
 				float delta = Math.max(STEP - bonus, 1);
 
-				delta *= RemixedDungeon.getDifficultyFactor() / 1.5f;
+				delta *= GameLoop.getDifficultyFactor() / 1.5f;
 
 				if(target.level().isSafe()){
 					delta = 0;

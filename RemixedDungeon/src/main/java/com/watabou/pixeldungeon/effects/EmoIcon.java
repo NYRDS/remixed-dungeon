@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.effects;
 
-import com.nyrds.platform.game.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -50,13 +50,14 @@ public class EmoIcon extends Image {
 			x = owner.x + owner.width - owner.visualOffsetX() - width / 2;
 			y = owner.y + owner.visualOffsetY() - height;
 
+			final float elapsed = GameLoop.elapsed;
 			if (growing) {
-				scale.set( scale.x + Game.elapsed * timeScale );
+				scale.set( scale.x + elapsed * timeScale );
 				if (scale.x > maxSize) {
 					growing = false;
 				}
 			} else {
-				scale.set( scale.x - Game.elapsed * timeScale );
+				scale.set( scale.x - elapsed * timeScale );
 				if (scale.x < 1) {
 					growing = true;
 				}

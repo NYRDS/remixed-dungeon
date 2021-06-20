@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Challenges;
@@ -81,7 +81,7 @@ public class WndChallenges extends Window {
 					value |= Challenges.MASKS[i];
 				}
 			}	
-			RemixedDungeon.challenges( value );
+			GamePreferences.challenges( value );
 		}
 		
 		super.onBackPressed();

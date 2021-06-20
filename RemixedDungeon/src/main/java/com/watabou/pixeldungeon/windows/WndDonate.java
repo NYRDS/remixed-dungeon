@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.EventCollector;
@@ -73,7 +74,7 @@ public class WndDonate extends WndTabbed {
 
 			pos += GAP;
 
-			if (RemixedDungeon.donated() < level) {
+			if (GamePreferences.donated() < level) {
 				String price = RemixedDungeon.instance().iap.getDonationPriceString(level);
 				String btnText;
 				if( !price.isEmpty() ) {

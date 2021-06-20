@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.pixeldungeon.scenes.WelcomeScene;
 
 public class ChangelogButton extends ImageButton {
@@ -11,6 +11,6 @@ public class ChangelogButton extends ImageButton {
 
 	@Override
 	protected void onClick() {
-		RemixedDungeon.switchScene(WelcomeScene.class);
+		GameLoop.switchScene(WelcomeScene.class);
 	}
 }

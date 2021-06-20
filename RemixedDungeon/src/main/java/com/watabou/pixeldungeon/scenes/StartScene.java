@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.EuConsent;
@@ -213,16 +215,16 @@ public class StartScene extends PixelScene {
         unlock = PixelScene.createMultiline(GuiProperties.titleFontSize());
         add(unlock);
 
-        huntressUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_3) || (RemixedDungeon.donated() >= 1);
-        elfUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4) || (RemixedDungeon.donated() >= 2);
-        gnollUnlocked = Badges.isUnlocked(Badges.Badge.GNOLL_UNLOCKED) || (RemixedDungeon.donated() >= 3);
+        huntressUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_3) || (GamePreferences.donated() >= 1);
+        elfUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4) || (GamePreferences.donated() >= 2);
+        gnollUnlocked = Badges.isUnlocked(Badges.Badge.GNOLL_UNLOCKED) || (GamePreferences.donated() >= 3);
 
         ExitButton btnExit = new ExitButton();
         btnExit.setPos(Camera.main.width - btnExit.width(), 0);
         add(btnExit);
 
         for (ClassShield shield : shields) {
-            if (shield.cl.classIndex() == RemixedDungeon.lastClass()) {
+            if (shield.cl.classIndex() == GamePreferences.lastClass()) {
                 updateShield(shield);
                 return;
             }
@@ -328,15 +330,15 @@ public class StartScene extends PixelScene {
     private void selectDifficulty() {
 
         WndOptions difficultyOptions = new WndOptions(Game.getVar(R.string.StartScene_DifficultySelect), Utils.EMPTY_STRING,
-                Game.getVar(RemixedDungeon.donated() > 0 ? R.string.StartScene_DifficultyEasyNoAds : R.string.StartScene_DifficultyEasy),
-                Game.getVar(RemixedDungeon.donated() > 0 ? R.string.StartScene_DifficultyNormalWithSavesNoAds : R.string.StartScene_DifficultyNormalWithSaves),
+                Game.getVar(GamePreferences.donated() > 0 ? R.string.StartScene_DifficultyEasyNoAds : R.string.StartScene_DifficultyEasy),
+                Game.getVar(GamePreferences.donated() > 0 ? R.string.StartScene_DifficultyNormalWithSavesNoAds : R.string.StartScene_DifficultyNormalWithSaves),
                 Game.getVar(R.string.StartScene_DifficultyNormal),
                 Game.getVar(R.string.StartScene_DifficultyExpert)) {
             @Override
             public void onSelect(final int index) {
 
                 if (index < 2 && EuConsent.getConsentLevel() < EuConsent.NON_PERSONALIZED) {
-                    Game.addToScene(new WndEuConsent() {
+                    GameLoop.addToScene(new WndEuConsent() {
                         @Override
                         public void done() {
                             startNewGame(index);
@@ -453,7 +455,7 @@ public class StartScene extends PixelScene {
             super.update();
 
             if (brightness < 1.0f && brightness > MIN_BRIGHTNESS) {
-                if ((brightness -= Game.elapsed) <= MIN_BRIGHTNESS) {
+                if ((brightness -= GameLoop.elapsed) <= MIN_BRIGHTNESS) {
                     brightness = MIN_BRIGHTNESS;
                 }
                 updateBrightness();

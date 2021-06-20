@@ -18,9 +18,10 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -68,7 +69,7 @@ public enum Rankings {
 		rec.win		    = winLevel  != gameOver.LOSE;
 		rec.heroClass	= hero.getHeroClass();
 		rec.score	    = score(winLevel);
-		rec.mod			= RemixedDungeon.activeMod();
+		rec.mod			= GamePreferences.activeMod();
 		rec.gameId      = Dungeon.gameId;
 
 
@@ -82,16 +83,16 @@ public enum Rankings {
 		resDesc.put("resDesc",  resultDescription);
 		resDesc.put("duration", Float.toString(Statistics.duration));
 
-		resDesc.put("difficulty", Integer.toString(Game.getDifficulty()));
+		resDesc.put("difficulty", Integer.toString(GameLoop.getDifficulty()));
 		resDesc.put("version",   Game.version);
 		resDesc.put("mod",       ModdingMode.activeMod());
 		resDesc.put("modVersion",Integer.toString(ModdingMode.activeModVersion()));
-		resDesc.put("donation",  Integer.toString(RemixedDungeon.donated()));
+		resDesc.put("donation",  Integer.toString(GamePreferences.donated()));
 
 		EventCollector.logEvent("gameover", resDesc);
 
 		if (ModdingMode.inRemixed()){
-			Game.instance().playGames.submitScores(Game.getDifficulty(), rec.score);
+			Game.instance().playGames.submitScores(GameLoop.getDifficulty(), rec.score);
 		}
 
 		String gameFile = Utils.format( DETAILS_FILE, SystemTime.now() );
@@ -159,7 +160,7 @@ public enum Rankings {
 
 		double winC        = Math.pow(1.4f, win.ordinal());
 		double challengesC = Math.pow(1.3f, Integer.bitCount(Dungeon.getChallenges()));
-		double difficultyC = Math.pow(1.4f, Game.getDifficulty());
+		double difficultyC = Math.pow(1.4f, GameLoop.getDifficulty());
 
 		return (int) (difficultyC * challengesC * winC * ( Statistics.goldCollected
 									+ (Dungeon.hero.lvl() * Statistics.deepestFloor * 100)

@@ -5,6 +5,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.Util;
 import com.watabou.noosa.InterstitialPoint;
@@ -39,7 +40,7 @@ class OfflineAds {
 
 					adView.loadDataWithBaseURL(null, Utils.format(adTemplate, "Рекламко"), "text/html", "utf-8", null);
 					Game.instance().getLayout().addView(adView, 0);
-					Game.setNeedSceneRestart(true);
+					GameLoop.setNeedSceneRestart();
 				}
 			});
 		}

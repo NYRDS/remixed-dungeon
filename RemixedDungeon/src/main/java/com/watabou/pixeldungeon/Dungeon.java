@@ -21,6 +21,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.IceCavesLevel;
@@ -37,7 +38,6 @@ import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
@@ -148,7 +148,7 @@ public class Dungeon {
         LuaEngine.reset();
         Treasury.reset();
 
-        setChallenges(RemixedDungeon.challenges());
+        setChallenges(GamePreferences.challenges());
 
         Scroll.initLabels();
         Potion.initColors();
@@ -187,8 +187,8 @@ public class Dungeon {
 
         hero.levelId = DungeonGenerator.getEntryLevel();
 
-        realtime = RemixedDungeon.realtime();
-        moveTimeoutIndex = RemixedDungeon.limitTimeoutIndex(RemixedDungeon.moveTimeout());
+        realtime = GamePreferences.realtime();
+        moveTimeoutIndex = GamePreferences.limitTimeoutIndex(GamePreferences.moveTimeout());
     }
 
     @Contract(pure = true)
@@ -590,7 +590,7 @@ public class Dungeon {
         Logbook.restoreFromBundle(bundle);
         LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
 
-        moveTimeoutIndex = RemixedDungeon.limitTimeoutIndex(bundle.optInt(MOVE_TIMEOUT, Integer.MAX_VALUE));
+        moveTimeoutIndex = GamePreferences.limitTimeoutIndex(bundle.optInt(MOVE_TIMEOUT, Integer.MAX_VALUE));
     }
 
     private static void loadGame(String fileName, boolean fullLoad) throws IOException {
@@ -832,7 +832,7 @@ public class Dungeon {
 
     public static void setDifficulty(int _difficulty) {
         difficulty = _difficulty;
-        RemixedDungeon.setDifficulty(difficulty);
+        GamePreferences.setDifficulty(difficulty);
     }
 
     public static boolean isLoading() {

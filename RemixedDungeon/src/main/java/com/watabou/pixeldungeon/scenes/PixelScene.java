@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.scenes;
 
 import android.opengl.GLES20;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -205,7 +206,7 @@ public class PixelScene extends Scene {
 	}
 
 	public static void showBadge(Badges.Badge badge) {
-		if(!(Game.scene() instanceof GameScene)) {
+		if(!(GameLoop.scene() instanceof GameScene)) {
 			return;
 		}
 		
@@ -216,7 +217,7 @@ public class PixelScene extends Scene {
 					(banner.camera.width - banner.width) / 2);
 			banner.y = align(banner.camera,
 					(banner.camera.height - banner.height) / 3);
-			Game.addToScene(banner);
+			GameLoop.addToScene(banner);
 		}
 	}
 
@@ -252,7 +253,7 @@ public class PixelScene extends Scene {
 
 			super.update();
 
-			if ((time -= Game.elapsed) <= 0) {
+			if ((time -= GameLoop.elapsed) <= 0) {
 				alpha(0f);
 				getParent().remove(this);
 			} else {

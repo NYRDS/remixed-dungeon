@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items.accessories;
 
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.platform.EventCollector;
@@ -132,7 +133,7 @@ public class Accessory {
     }
 
     public boolean haveIt() {
-        return RemixedDungeon.donated() == 4 || Preferences.INSTANCE.getString(prefProperty(), Utils.EMPTY_STRING).equals(getClass().getSimpleName());
+        return GamePreferences.donated() == 4 || Preferences.INSTANCE.getString(prefProperty(), Utils.EMPTY_STRING).equals(getClass().getSimpleName());
     }
 
     public void ownIt(boolean reallyOwn) {

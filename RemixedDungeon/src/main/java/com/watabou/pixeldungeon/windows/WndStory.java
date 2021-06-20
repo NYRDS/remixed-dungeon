@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.GuiProperties;
@@ -94,7 +95,7 @@ public class WndStory extends Window {
 	}
 
 	public static void showCustomStory( @NotNull String text ) {
-			Game.addToScene( new WndStory( text ) );
+			GameLoop.addToScene( new WndStory( text ) );
 	}
 	
 	public static void showChapter( int id ) {
@@ -107,7 +108,7 @@ public class WndStory extends Window {
 		if (text != null) {
 			WndStory wnd = new WndStory( text );
 			
-			Game.addToScene( wnd );
+			GameLoop.addToScene( wnd );
 			
 			Dungeon.chapters.add( id );
 		}

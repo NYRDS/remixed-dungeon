@@ -1,6 +1,7 @@
 
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
 import com.nyrds.pixeldungeon.utils.CharsList;
@@ -87,8 +88,8 @@ public class WndPriest extends WndQuest {
 	}
 
 	private static String instructions(Char hero) {
-		goldCostPerMinion = (int) (GOLD_COST_PER_MINION * Game.getDifficultyFactor());
-		goldCost          = (int) (GOLD_COST * Game.getDifficultyFactor());
+		goldCostPerMinion = (int) (GOLD_COST_PER_MINION * GameLoop.getDifficultyFactor());
+		goldCost          = (int) (GOLD_COST * GameLoop.getDifficultyFactor());
 
 		if (hero.hasBuff(RingOfHaggler.Haggling.class ))
 		{

@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.AdsUtils;
@@ -8,7 +9,6 @@ import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -43,7 +43,7 @@ public class ServiceManNPC extends ImmortalNPC {
     public boolean interact(final Char hero) {
 
         if (EuConsent.getConsentLevel() < EuConsent.NON_PERSONALIZED) {
-            Game.addToScene(new WndEuConsent() {
+            GameLoop.addToScene(new WndEuConsent() {
                 @Override
                 public void done() {
                     AdsUtils.initRewardVideo();
@@ -67,7 +67,7 @@ public class ServiceManNPC extends ImmortalNPC {
         Game.instance().runOnUiThread(() ->
         {
             boolean result = Ads.isRewardVideoReady();
-            RemixedDungeon.pushUiTask(() -> {
+            GameLoop.pushUiTask(() -> {
                         if (result) {
                             GameScene.show(new WndMovieTheatre(this, filmsSeen, getLimit(), getReward()));
                         } else {

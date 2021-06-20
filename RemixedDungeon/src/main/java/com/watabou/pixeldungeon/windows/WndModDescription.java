@@ -3,6 +3,8 @@ package com.watabou.pixeldungeon.windows;
 import android.content.Intent;
 import android.net.Uri;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -28,7 +30,7 @@ public class WndModDescription extends Window {
 
 		this.prevMod = prevMod;
 
-		RemixedDungeon.activeMod(option);
+		GamePreferences.activeMod(option);
 
 		yPos = 0;
 		
@@ -129,11 +131,11 @@ public class WndModDescription extends Window {
 	@Override
 	public void hide() {
 		super.hide();
-		RemixedDungeon.activeMod(prevMod);
+		GamePreferences.activeMod(prevMod);
 	}
 
 	public void onBackPressed() {
 		hide();
-		Game.addToScene(new WndModSelect());
+		GameLoop.addToScene(new WndModSelect());
 	}
 }

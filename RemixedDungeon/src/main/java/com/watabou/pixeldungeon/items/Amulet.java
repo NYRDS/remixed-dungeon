@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Badges;
@@ -75,7 +76,7 @@ public class Amulet extends Item {
 	private void showAmuletScene( boolean showText ) {
 		Dungeon.save(false);
 		AmuletScene.noText = !showText;
-		Game.switchScene( AmuletScene.class );
+		GameLoop.switchScene( AmuletScene.class );
 	}
 	
 	@Override

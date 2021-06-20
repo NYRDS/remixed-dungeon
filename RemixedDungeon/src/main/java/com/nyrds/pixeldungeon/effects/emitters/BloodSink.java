@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.effects.emitters;
 
-import com.nyrds.platform.game.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Dungeon;
@@ -42,7 +42,7 @@ public class BloodSink extends Emitter {
 
             super.update();
 
-            if ((rippleDelay -= Game.elapsed) <= 0) {
+            if ((rippleDelay -= GameLoop.elapsed) <= 0) {
                 GameScene.ripple(pos + Dungeon.level.getWidth()).y -= DungeonTilemap.SIZE / 2;
                 rippleDelay = Random.Float( 0.2f, 0.3f );
             }

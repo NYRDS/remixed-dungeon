@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
@@ -106,17 +108,17 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 			FileSystem.deleteRecursive(modDir);
 		}
 
-		if (RemixedDungeon.activeMod().equals(name)) {
+		if (GamePreferences.activeMod().equals(name)) {
 			SaveUtils.deleteGameAllClasses();
 			SaveUtils.copyAllClassesFromSlot(ModdingMode.REMIXED);
-			RemixedDungeon.activeMod(ModdingMode.REMIXED);
+			GamePreferences.activeMod(ModdingMode.REMIXED);
 			RemixedDungeon.instance().doRestart();
 		}
 
 		if (getParent() != null) {
 			hide();
 		}
-		Game.addToScene(new WndModSelect());
+		GameLoop.addToScene(new WndModSelect());
 	}
 
 	protected void onSelect(String option) {
@@ -130,7 +132,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 				downloadTo = FileSystem.getExternalStorageFile(selectedMod+".tmp").getAbsolutePath();
 				desc.needUpdate = false;
 
-				Game.execute(new DownloadTask(new DownloadProgressWindow(Utils.format("Downloading %s", selectedMod),this),
+				GameLoop.execute(new DownloadTask(new DownloadProgressWindow(Utils.format("Downloading %s", selectedMod),this),
 						desc.url,
 						downloadTo));
 
@@ -138,7 +140,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 			}
 		}
 
-		String prevMod = RemixedDungeon.activeMod();
+		String prevMod = GamePreferences.activeMod();
 
 		if (option.equals(prevMod)) {
 			return;
@@ -147,17 +149,17 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 		if (getParent() != null) {
 			hide();
 		}
-		Game.addToScene(new WndModDescription(option, prevMod));
+		GameLoop.addToScene(new WndModDescription(option, prevMod));
 	}
 
 
 	@Override
 	public void DownloadComplete(String url, final Boolean result) {
-		Game.pushUiTask(() -> {
+		GameLoop.pushUiTask(() -> {
 			if (result) {
-				Game.execute(new UnzipTask(WndModSelect.this, downloadTo, true));
+				GameLoop.execute(new UnzipTask(WndModSelect.this, downloadTo, true));
 			} else {
-				Game.addToScene(new WndError(Utils.format("Downloading %s failed", selectedMod)));
+				GameLoop.addToScene(new WndError(Utils.format("Downloading %s failed", selectedMod)));
 			}
 		});
 	}
@@ -167,16 +169,16 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 
 	@Override
 	public void UnzipComplete(final Boolean result) {
-		Game.pushUiTask(() -> {
+		GameLoop.pushUiTask(() -> {
 			if(unzipProgress!=null) {
 				unzipProgress.hide();
 				unzipProgress = null;
 			}
 
 			if (result) {
-				Game.addToScene(new WndModSelect());
+				GameLoop.addToScene(new WndModSelect());
 			} else {
-				Game.addToScene(new WndError(Utils.format("unzipping %s failed", downloadTo)));
+				GameLoop.addToScene(new WndError(Utils.format("unzipping %s failed", downloadTo)));
 			}
 		});
 
@@ -184,12 +186,12 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 
 	@Override
 	public void UnzipProgress(Integer unpacked) {
-		Game.pushUiTask(() -> {
+		GameLoop.pushUiTask(() -> {
 			if (unzipProgress == null) {
 				unzipProgress = new WndMessage(Utils.EMPTY_STRING);
-				Game.addToScene(unzipProgress);
+				GameLoop.addToScene(unzipProgress);
 			}
-			if (unzipProgress.getParent() == Game.scene()) {
+			if (unzipProgress.getParent() == GameLoop.scene()) {
 				unzipProgress.setText(Utils.format("Unpacking: %d", unpacked));
 			}
 		});

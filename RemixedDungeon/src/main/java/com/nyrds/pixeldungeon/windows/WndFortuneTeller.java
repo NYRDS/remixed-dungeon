@@ -1,6 +1,7 @@
 
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.FortuneTellerNPC;
 import com.nyrds.platform.game.Game;
@@ -22,7 +23,7 @@ public class WndFortuneTeller extends WndQuest {
 	private final Char hero;
 
 	static private String instructions(final Char hero) {
-		goldCost = (int) (GOLD_COST * Game.getDifficultyFactor());
+		goldCost = (int) (GOLD_COST * GameLoop.getDifficultyFactor());
 
 		if (hero.hasBuff(RingOfHaggler.Haggling.class ))
 		{

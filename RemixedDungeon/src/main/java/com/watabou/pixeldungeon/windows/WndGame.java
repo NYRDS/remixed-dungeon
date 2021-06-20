@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.platform.game.Game;
@@ -36,7 +37,7 @@ public class WndGame extends WndMenuCommon {
 		Hero hero = Dungeon.hero;
 
 		if (hero == null) {
-			Game.switchScene(TitleScene.class);
+			GameLoop.switchScene(TitleScene.class);
 			return;
 		}
 
@@ -98,7 +99,7 @@ public class WndGame extends WndMenuCommon {
                     .getVar(R.string.WndGame_Ranking)) {
 				@Override
 				protected void onClick() {
-					Game.switchScene( RankingsScene.class );
+					GameLoop.switchScene( RankingsScene.class );
 				}
 			} );
 		}
@@ -107,7 +108,7 @@ public class WndGame extends WndMenuCommon {
 			@Override
 			protected void onClick() {
 				Dungeon.save(false);
-				Game.switchScene( TitleScene.class );
+				GameLoop.switchScene( TitleScene.class );
 			}
 		} );
 

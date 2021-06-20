@@ -17,12 +17,12 @@
 
 package com.watabou.utils;
 
-import com.nyrds.platform.game.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 
 public class GameMath {
 	
 	public static float speed( float speed, float acc ) {
-		return speed + acc * Game.elapsed;
+		return speed + acc * GameLoop.elapsed;
 	}
 	
 	public static float gate( float min, float value, float max ) {

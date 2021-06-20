@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -113,7 +113,7 @@ public class BadgesList extends ScrollPane {
 		public boolean onClick( float x, float y ) {
 			if (inside( x, y )) {
 				Sample.INSTANCE.play( Assets.SND_CLICK, 0.7f, 0.7f, 1.2f );
-				Game.addToScene( new WndBadge( badge ) );
+				GameLoop.addToScene( new WndBadge( badge ) );
 				return true;
 			} else {
 				return false;

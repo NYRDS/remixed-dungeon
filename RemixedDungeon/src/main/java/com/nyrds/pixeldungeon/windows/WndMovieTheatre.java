@@ -1,6 +1,7 @@
 
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.Ads;
@@ -60,12 +61,12 @@ public class WndMovieTheatre extends WndQuest implements InterstitialPoint{
 		Hero.movieRewardPending = result;
 		Dungeon.save(true);
 
-		RemixedDungeon.pushUiTask(() -> {
+		GameLoop.pushUiTask(() -> {
 			Game.softPaused = false;
 			Hero.doOnNextAction = new MovieRewardTask(result);
 
 			RemixedDungeon.landscape(RemixedDungeon.storedLandscape());
-			RemixedDungeon.setNeedSceneRestart(true);
+			GameLoop.setNeedSceneRestart();
 		});
 
 	}

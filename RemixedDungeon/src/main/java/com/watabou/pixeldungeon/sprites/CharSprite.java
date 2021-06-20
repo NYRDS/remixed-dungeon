@@ -18,9 +18,9 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.nyrds.util.WeakOptional;
@@ -438,7 +438,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             listener.onComplete(curAnim);
         }
 
-        if (flashTime > 0 && (flashTime -= Game.elapsed) <= 0) {
+        if (flashTime > 0 && (flashTime -= GameLoop.elapsed) <= 0) {
             resetColor();
         }
 

@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.sprites;
 
 import android.graphics.Bitmap;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
 import com.nyrds.util.ModError;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
@@ -193,7 +193,8 @@ public class ItemSprite extends MovieClip {
 		setVisible(heap == null || Dungeon.visible[heap.pos]);
 
 		// Dropping
-		if (dropInterval > 0 && (dropInterval -= Game.elapsed) <= 0) {
+		final float elapsed = GameLoop.elapsed;
+		if (dropInterval > 0 && (dropInterval -= elapsed) <= 0) {
 
 			speed.set(0);
 			acc.set(0);
@@ -206,10 +207,10 @@ public class ItemSprite extends MovieClip {
 
 		if (getVisible())
 			if (glowing != null) {
-				if (glowUp && (phase += Game.elapsed) > glowing.period) {
+				if (glowUp && (phase += elapsed) > glowing.period) {
 					glowUp = false;
 					phase = glowing.period;
-				} else if (!glowUp && (phase -= Game.elapsed) < 0) {
+				} else if (!glowUp && (phase -= elapsed) < 0) {
 					glowUp = true;
 					phase = 0;
 				}

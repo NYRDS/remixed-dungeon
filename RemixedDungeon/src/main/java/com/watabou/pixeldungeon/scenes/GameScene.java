@@ -22,6 +22,8 @@ import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.effects.EffectsFactory;
 import com.nyrds.pixeldungeon.effects.ParticleEffect;
 import com.nyrds.pixeldungeon.effects.ZapEffect;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.levels.TestLevel;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
@@ -32,7 +34,6 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
@@ -185,11 +186,11 @@ public class GameScene extends PixelScene {
     public void createGameScene(@NotNull Level level, @NotNull Hero hero) {
         playLevelMusic();
 
-        RemixedDungeon.lastClass(hero.getHeroClass().classIndex());
+        GamePreferences.lastClass(hero.getHeroClass().classIndex());
 
         super.create();
 
-        Camera.main.zoom((float) (defaultZoom + RemixedDungeon.zoom()));
+        Camera.main.zoom((float) (defaultZoom + GamePreferences.zoom()));
 
         scene = this;
 
@@ -307,7 +308,7 @@ public class GameScene extends PixelScene {
         fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
         add(fog);
 
-        brightness(RemixedDungeon.brightness());
+        brightness(GamePreferences.brightness());
 
         spells = new Group();
         add(spells);
@@ -508,9 +509,9 @@ public class GameScene extends PixelScene {
 
         super.update();
 
-        water.offset(waterSx * Game.elapsed, waterSy * Game.elapsed);
+        water.offset(waterSx * GameLoop.elapsed, waterSy * GameLoop.elapsed);
 
-        Actor.process(Game.elapsed);
+        Actor.process(GameLoop.elapsed);
 
         if (hero.isReady() && !hero.paralysed) {
             log.newLine();

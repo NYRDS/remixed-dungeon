@@ -1,8 +1,8 @@
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.noosa.Group;
 import com.watabou.pixeldungeon.windows.WndDonate;
 
@@ -22,7 +22,7 @@ public class DonateButton extends ImageButton {
 			remove(image);
 		}
 		
-		switch (RemixedDungeon.donated()) {
+		switch (GamePreferences.donated()) {
 		default:
 		case 0:
 			image = Icons.SUPPORT.get();
@@ -46,7 +46,7 @@ public class DonateButton extends ImageButton {
 	}
 
 	public String getText() {
-		switch (RemixedDungeon.donated()) {
+		switch (GamePreferences.donated()) {
 		case 1:
 		case 2:
 		case 3:

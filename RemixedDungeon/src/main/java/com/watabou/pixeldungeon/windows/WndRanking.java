@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
@@ -115,7 +116,7 @@ public class WndRanking extends WndTabbed {
 
 	private void reportError() {
 		hide();
-		Game.addToScene( new WndError( Game.getVar(R.string.WndRanking_Error) + "\n" + error ) );
+		GameLoop.addToScene( new WndError( Game.getVar(R.string.WndRanking_Error) + "\n" + error ) );
 	}
 
 	private void createControls() {
@@ -164,7 +165,7 @@ public class WndRanking extends WndTabbed {
 				RedButton btnCatalogus = new RedButton( Game.getVar(R.string.WndRanking_StaChallenges) ) {
 					@Override
 					protected void onClick() {
-						Game.addToScene( new WndChallenges(Dungeon.getChallenges(), false ) );
+						GameLoop.addToScene( new WndChallenges(Dungeon.getChallenges(), false ) );
 					}
 				};
 				btnCatalogus.setRect( 0, pos + GAP, btnCatalogus.reqWidth() + 2, btnCatalogus.reqHeight() + 2 );
@@ -360,7 +361,7 @@ public class WndRanking extends WndTabbed {
 
 		@Override
 		protected void onClick() {
-			Game.addToScene( new WndItem( null, item ) );
+			GameLoop.addToScene( new WndItem( null, item ) );
 		}
 	}
 }

@@ -8,8 +8,8 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.text.TextPaint;
 
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.watabou.glwrap.Matrix;
 import com.watabou.noosa.Group;
@@ -106,7 +106,7 @@ public class SystemText extends Text {
 	}
 
 	public static void updateFontScale() {
-		float scale = 0.5f + 0.01f * RemixedDungeon.fontScale();
+		float scale = 0.5f + 0.01f * GamePreferences.fontScale();
 
 		scale *= 1.2f;
 

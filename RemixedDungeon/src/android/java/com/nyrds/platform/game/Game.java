@@ -40,7 +40,8 @@ import android.widget.Toast;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.PermissionChecker;
 
-import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
@@ -49,36 +50,23 @@ import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gfx.SystemText;
-import com.nyrds.platform.util.TrackedRuntimeException;
-import com.nyrds.util.ModdingMode;
 import com.nyrds.util.ReportingExecutor;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.input.Keys;
-import com.watabou.input.Touchscreen;
-import com.watabou.noosa.Camera;
-import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.InterstitialPoint;
-import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
-import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.NotNull;
-import org.luaj.vm2.LuaError;
 
-import java.util.ArrayList;
-import java.util.Locale;
-import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
-
-import lombok.SneakyThrows;
 
 @SuppressLint("Registered")
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
@@ -95,22 +83,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public PlayGames playGames;
     public Iap iap;
 
-    // Current scene
-    protected Scene scene;
-    // true if scene switch is requested
-    protected boolean requestedReset = true;
-    protected static boolean needSceneRestart = false;
-
-    // New scene class
-    private Class<? extends Scene> sceneClass;
-
-    // Current time in milliseconds
-    private long now;
-    // Milliseconds passed since previous update
-    private long step;
-
-    private static float timeScale = 1f;
-    public static float elapsed = 0f;
 
     private GLSurfaceView view;
     private LinearLayout layout;
@@ -119,76 +91,15 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public static volatile boolean softPaused = false;
 
-    protected static int difficulty = Integer.MAX_VALUE;
 
-    // Accumulated touch events
-    private final ArrayList<MotionEvent> motionEvents = new ArrayList<>();
-
-    // Accumulated key events
-    private final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
-
-    private final Executor executor = new ReportingExecutor();
     public Executor serviceExecutor = new ReportingExecutor();
 
-    private Runnable doOnResume;
-
-    private final ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
-    private int framesSinceInit;
+    protected GameLoop gameLoop;
 
     public Game(Class<? extends Scene> c) {
         super();
         instance = this;
-        sceneClass = c;
-    }
-
-    public static void setNeedSceneRestart(boolean needSceneRestart) {
-        Game.needSceneRestart = needSceneRestart;
-    }
-
-    public static float getDifficultyFactor() {
-        switch (getDifficulty()) {
-            case 0:
-                return 1f;
-            case 1:
-            case 2:
-                return 1.5f;
-            case 3:
-                return 2;
-            default:
-                return 1;
-        }
-    }
-
-    @LuaInterface
-    public static int getDifficulty() {
-        return difficulty;
-    }
-
-    public static void addToScene(Gizmo gizmo) {
-        Scene scene = scene();
-        if(scene!=null) {
-            scene.add(gizmo);
-        }
-    }
-
-    public void useLocale(String lang) {
-        EventCollector.setSessionData("Locale", lang);
-
-        Locale locale = new Locale(lang);
-
-        if (lang.equals("pt_BR")) {
-            locale = new Locale("pt", "BR");
-        }
-
-        if (lang.equals("zh_CN")) {
-            locale = new Locale("zh", "CN");
-        }
-
-        if (lang.equals("zh_TW")) {
-            locale = new Locale("zh", "TW");
-        }
-
-        StringsManager.useLocale(locale, lang);
+        gameLoop = new GameLoop(c);
     }
 
     public void doRestart() {
@@ -207,10 +118,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public static void shutdown() {
         paused = true;
-        if (instance().scene != null) {
-            instance().scene.pause();
-            instance().scene.destroy();
-        }
+        instance().gameLoop.shutdown();
+
         instance().finish();
         System.exit(0);
     }
@@ -268,16 +177,16 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public static void syncAdsState() {
 
-        if(RemixedDungeon.donated() > 0) {
+        if(GamePreferences.donated() > 0) {
             Ads.removeEasyModeBanner();
             return;
         }
 
-        if (getDifficulty() == 0) {
+        if (GameLoop.getDifficulty() == 0) {
             Ads.displayEasyModeBanner();
         }
 
-        if (getDifficulty() >= 2) {
+        if (GameLoop.getDifficulty() >= 2) {
             Ads.removeEasyModeBanner();
         }
 
@@ -287,23 +196,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public void onResume() {
         super.onResume();
 
-        now = 0;
-
-        SystemTime.tick();
-        SystemTime.updateLastActionTime();
-
         view.onResume();
 
-        Music.INSTANCE.resume();
-        Sample.INSTANCE.resume();
-
-        if (doOnResume != null) {
-            Game.pushUiTask( () -> {
-                doOnResume.run();
-                doOnResume = null;
-                }
-            );
-        }
+        gameLoop.onResume();
     }
 
     @Override
@@ -312,8 +207,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         paused = true;
         view.onPause();
 
-        if (scene != null) { // view.onPause will wait for gl thread, so it safe to access scene here
-            scene.pause();
+        if (gameLoop.scene != null) { // view.onPause will wait for gl thread, so it safe to access scene here
+            gameLoop.scene.pause();
         }
 
         Music.INSTANCE.pause();
@@ -326,9 +221,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public void onDestroy() {
         super.onDestroy();
 
-        if (scene != null) { // view.onPause will wait for gl thread, so it safe to access scene here
-            scene.destroy();
-            scene = null;
+        if (gameLoop.scene != null) { // view.onPause will wait for gl thread, so it safe to access scene here
+            gameLoop.scene.destroy();
+            gameLoop.scene = null;
         }
 
         Music.INSTANCE.mute();
@@ -338,8 +233,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @SuppressLint({"Recycle", "ClickableViewAccessibility"})
     @Override
     public boolean onTouch(View view, MotionEvent event) {
-        synchronized (motionEvents) {
-            motionEvents.add(MotionEvent.obtain(event));
+        synchronized (gameLoop.motionEvents) {
+            gameLoop.motionEvents.add(MotionEvent.obtain(event));
         }
         return true;
     }
@@ -351,8 +246,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
             return super.onKeyDown(keyCode, event);
         }
 
-        synchronized (keysEvents) {
-            keysEvents.add(event);
+        synchronized (gameLoop.keysEvents) {
+            gameLoop.keysEvents.add(event);
         }
         return true;
     }
@@ -364,8 +259,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
             return super.onKeyUp(keyCode, event);
         }
 
-        synchronized (keysEvents) {
-            keysEvents.add(event);
+        synchronized (gameLoop.keysEvents) {
+            gameLoop.keysEvents.add(event);
         }
         return true;
     }
@@ -373,49 +268,20 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @Override
     public void onDrawFrame(GL10 gl) {
         if (instance() == null || width() == 0 || height() == 0) {
-            framesSinceInit = 0;
+            gameLoop.framesSinceInit = 0;
             return;
         }
 
         if (paused) {
-            framesSinceInit = 0;
+            gameLoop.framesSinceInit = 0;
             return;
         }
 
-        SystemTime.tick();
-        long rightNow = SystemTime.now();
-        step = Math.min((now == 0 ? 0 : rightNow - now),250);
-        now = rightNow;
-
-        framesSinceInit++;
-
-
-        if (framesSinceInit>2) {
-            Runnable task;
-            while ((task = uiTasks.poll()) != null && !isFinishing()) {
-                task.run();
-            }
-
-            if (!softPaused) {
-                try {
-                    step();
-                } catch (LuaError e) {
-                    throw ModdingMode.modException(e);
-                } catch (Exception e) {
-                    throw new TrackedRuntimeException(e);
-                }
-            }
-
-            NoosaScript.get().resetCamera();
-
-            GLES20.glScissor(0, 0, width(), height());
-            GLES20.glClearColor(0, 0, 0, 0.0f);
-            GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
-
-            if (scene != null) {
-                scene.draw();
-            }
+        if(!isFinishing()) {
+            gameLoop.onFrame();
         }
+
+
     }
 
     @Override
@@ -427,7 +293,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Game.width(width);
         Game.height(height);
 
-        setNeedSceneRestart(true);
+        GameLoop.setNeedSceneRestart();
     }
 
     @Override
@@ -443,8 +309,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
         paused = false;
 
-        if (scene != null) {
-            scene.resume();
+        if (gameLoop.scene != null) {
+            gameLoop.scene.resume();
         }
     }
 
@@ -452,74 +318,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         return paused;
     }
 
-    @LuaInterface
-    public static void resetScene() {
-        switchScene(instance().sceneClass);
-    }
-
-    public static void switchScene(Class<? extends Scene> c) {
-        instance().sceneClass = c;
-        instance().requestedReset = true;
-    }
-
-    public static Scene scene() {
-        return instance().scene;
-    }
-
-    private final ArrayList<MotionEvent> motionEventsCopy = new ArrayList<>();
-    private final ArrayList<KeyEvent>    keyEventsCopy    = new ArrayList<>();
-
-    @SneakyThrows
-    protected void step() {
-
-        if (requestedReset) {
-            requestedReset = false;
-            switchScene(sceneClass.newInstance());
-            return;
-       }
-
-        Game.elapsed = Game.timeScale * step * 0.001f;
-
-        synchronized (motionEvents) {
-            motionEventsCopy.addAll(motionEvents);
-            motionEvents.clear();
-        }
-
-        Touchscreen.processTouchEvents(motionEventsCopy);
-        motionEventsCopy.clear();
-
-
-        synchronized (keysEvents) {
-            keyEventsCopy.addAll(keysEvents);
-            keysEvents.clear();
-        }
-
-        Keys.processTouchEvents(keyEventsCopy);
-        keyEventsCopy.clear();
-
-
-        scene.update();
-        Camera.updateAll();
-    }
-
-    private void switchScene(Scene requestedScene) {
-
-        SystemText.invalidate();
-        Camera.reset();
-
-        if (scene != null) {
-            EventCollector.setSessionData("pre_scene",scene.getClass().getSimpleName());
-            scene.destroy();
-        }
-        scene = requestedScene;
-        scene.create();
-        EventCollector.setSessionData("scene",scene.getClass().getSimpleName());
-
-        Game.elapsed = 0f;
-        Game.timeScale = 1f;
-
-        syncAdsState();
-    }
 
     public static void vibrate(int milliseconds) {
         ((Vibrator) instance().getSystemService(VIBRATOR_SERVICE)).vibrate(milliseconds);
@@ -592,7 +390,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
 
         final boolean result = res;
-        doOnResume = () -> {
+        gameLoop.doOnResume = () -> {
             if(permissionsPoint == null) {
                 EventCollector.logException("permissionsPoint was not set");
                 return;
@@ -609,16 +407,5 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public void openUrl(String prompt, String address) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(address));
         Game.instance().startActivity(Intent.createChooser(intent, prompt));
-    }
-
-    public void setSelectedLanguage() {
-    }
-
-    static public void pushUiTask(Runnable task) {
-        instance().uiTasks.add(task);
-    }
-
-    static public void execute(Runnable task) {
-        instance().executor.execute(task);
     }
 }

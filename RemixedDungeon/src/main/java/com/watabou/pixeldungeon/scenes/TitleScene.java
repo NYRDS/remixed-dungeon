@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.pixeldungeon.windows.VBox;
@@ -160,7 +162,7 @@ public class TitleScene extends PixelScene {
 		VBox leftGroup = new VBox();
 
 		leftGroup.add(new PrefsButton());
-        if (RemixedDungeon.donated() > 0) {
+        if (GamePreferences.donated() > 0) {
             leftGroup.add(new PremiumPrefsButton());
         }
 
@@ -168,7 +170,7 @@ public class TitleScene extends PixelScene {
 			leftGroup.add(new PlayGamesButton());
 		}
 
-        String lang = RemixedDungeon.uiLanguage();
+        String lang = GamePreferences.uiLanguage();
         final boolean useVk = lang.equals("ru");
 
         Icons social =  useVk ? Icons.VK : Icons.FB;
@@ -206,8 +208,8 @@ public class TitleScene extends PixelScene {
 		btnExit.setPos(w - btnExit.width(), 0);
 		add(btnExit);
 
-		if (RemixedDungeon.version() != Game.versionCode) {
-			if(Utils.differentVersions(RemixedDungeon.versionString(),Game.version)) {
+		if (GamePreferences.version() != Game.versionCode) {
+			if(Utils.differentVersions(GamePreferences.versionString(),Game.version)) {
 				changelogUpdated = true;
 			}
 		}
@@ -229,7 +231,7 @@ public class TitleScene extends PixelScene {
 	@Override
 	public void update() {
 		super.update();
-		time += Game.elapsed;
+		time += GameLoop.elapsed;
 		float cl = (float) Math.sin(time) * 0.5f + 0.5f;
 		if(!donationAdded) {
 			if (RemixedDungeon.canDonate()) {

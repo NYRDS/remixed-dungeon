@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.effects;
 
-import com.nyrds.platform.game.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -31,7 +31,7 @@ public class DeathStroke extends Image {
 	public void update() {
 		super.update();
 		
-		if ((time -= Game.elapsed) <= 0) {
+		if ((time -= GameLoop.elapsed) <= 0) {
 			kill();
 		} else {
 			float p = time / TIME_TO_FADE;

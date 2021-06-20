@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.effects;
 
-import com.nyrds.platform.game.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
@@ -92,7 +92,7 @@ public class SpellSprite extends Image {
 			break;
 		}
 		
-		if ((passed += Game.elapsed) > duration) {
+		if ((passed += GameLoop.elapsed) > duration) {
 			switch (phase) {
 			case FADE_IN:
 				phase = Phase.STATIC;

@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.effects;
 
 import android.opengl.GLES20;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -65,7 +65,7 @@ public class DeathRay extends Image {
 		alpha( p );
 		scale.set( scale.x, p );
 		
-		if ((timeLeft -= Game.elapsed) <= 0) {
+		if ((timeLeft -= GameLoop.elapsed) <= 0) {
 			killAndErase();
 		}
 	}

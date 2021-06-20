@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.GuiProperties;
@@ -62,7 +63,7 @@ public class AmuletScene extends PixelScene {
 			protected void onClick() {
 				Dungeon.win( ResultDescriptions.getDescription(ResultDescriptions.Reason.WIN), Rankings.gameOver.WIN_AMULET );
 				Dungeon.gameOver();
-				Game.switchScene( noText ? TitleScene.class : RankingsScene.class );
+				GameLoop.switchScene( noText ? TitleScene.class : RankingsScene.class );
 			}
 		};
 		btnExit.setSize( WIDTH, BTN_HEIGHT );
@@ -116,7 +117,7 @@ public class AmuletScene extends PixelScene {
 	public void update() {
 		super.update();
 		
-		if ((timer -= Game.elapsed) < 0) {
+		if ((timer -= GameLoop.elapsed) < 0) {
 			timer = Random.Float( 0.5f, 5f );
 			
 			Speck star = (Speck)recycle( Speck.class );

@@ -9,8 +9,8 @@ import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 
 import com.nyrds.market.MarketApp;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 
@@ -37,7 +37,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
         }
 
         try {
-            ModdingMode.selectMod(RemixedDungeon.activeMod());
+            ModdingMode.selectMod(GamePreferences.activeMod());
             Class.forName("android.os.AsyncTask");
         } catch (Throwable ignore) {
             if(Util.isDebug()) {

@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.effects;
 
-import com.nyrds.platform.game.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.util.GuiProperties;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -33,7 +33,7 @@ public class SystemFloatingText extends SystemText {
 	public void update() {
 		super.update();
 
-		if ((timeLeft -= Game.elapsed) <= 0) {
+		if ((timeLeft -= GameLoop.elapsed) <= 0) {
 			killAndErase();
 		} else {
 			float p = timeLeft / LIFESPAN;

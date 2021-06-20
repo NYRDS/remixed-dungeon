@@ -21,6 +21,8 @@ import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Sleeping;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -34,7 +36,6 @@ import com.nyrds.pixeldungeon.windows.MovieRewardTask;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Scrambler;
 import com.watabou.noosa.Camera;
@@ -732,12 +733,12 @@ public class Hero extends Char {
 		deathDesc.put("cause", cause.getEntityKind());
 		deathDesc.put("duration", Float.toString(Statistics.duration));
 
-		deathDesc.put("difficulty", Integer.toString(Game.getDifficulty()));
+		deathDesc.put("difficulty", Integer.toString(GameLoop.getDifficulty()));
 		deathDesc.put("version", Game.version);
 		deathDesc.put("mod", ModdingMode.activeMod());
 		deathDesc.put("modVersion",Integer.toString(ModdingMode.activeModVersion()));
 
-		deathDesc.put("donation",Integer.toString(RemixedDungeon.donated()));
+		deathDesc.put("donation",Integer.toString(GamePreferences.donated()));
 		deathDesc.put("heroLevel", Integer.toString(lvl()));
 		deathDesc.put("gameId",    Dungeon.gameId);
 
