@@ -13,6 +13,8 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -165,7 +167,7 @@ public class Accessory {
         Dungeon.hero.updateSprite();
     }
 
-    static public Accessory equipped() {
+    static public @Nullable Accessory equipped() {
         String itemName = Preferences.INSTANCE.getString(Accessory.class.getSimpleName(), Utils.EMPTY_STRING);
         if (!itemName.equals(Utils.EMPTY_STRING)) {
             return getByName(itemName);

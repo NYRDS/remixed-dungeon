@@ -1,8 +1,8 @@
 package com.nyrds.util;
 
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.storage.Assets;
 import com.nyrds.platform.storage.FileSystem;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -143,16 +143,9 @@ public class ModdingMode {
 			return isExist;
 		}
 
-		InputStream str;
-		try {
-			str = RemixedDungeonApp.getContext().getAssets().open(resName);
-			str.close();
-			assetsExistenceCache.put(resName, true);
-			return true;
-		} catch (IOException e) {
-			assetsExistenceCache.put(resName, false);
-			return false;
-		}
+		boolean res = Assets.isAssetExits(resName);
+		assetsExistenceCache.put(resName, res);
+		return res;
 	}
 
 	public static boolean inMod() {
@@ -196,7 +189,8 @@ public class ModdingMode {
 
 		Set<String> resList = new HashSet<>();
 
-		String[] fullList = RemixedDungeonApp.getContext().getAssets().list(path);
+		String[] fullList = Assets.listAssets(path);
+
 		collectResources(path, filter, resList, fullList);
 
 		if(inMod()) {
@@ -258,12 +252,11 @@ public class ModdingMode {
 
 	public static @NotNull InputStream getInputStreamBuiltIn(String resName) {
 		try {
-
 			if(resourcesRemap.containsKey(resName)) {
 				resName = resourcesRemap.get(resName);
 			}
 
-			return RemixedDungeonApp.getContext().getAssets().open(resName);
+			return Assets.getStream(resName);
 		} catch (IOException e) {
 			throw new ModError("Missing file: "+resName + " in Remixed",e);
 		}
