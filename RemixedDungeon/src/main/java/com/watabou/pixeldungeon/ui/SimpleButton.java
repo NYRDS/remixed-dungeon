@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.input.Touchscreen.Touch;
+import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TouchArea;
 import com.watabou.noosa.ui.Component;

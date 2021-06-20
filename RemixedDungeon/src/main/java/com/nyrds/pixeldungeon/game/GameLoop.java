@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.game;
 
-import android.opengl.GLES20;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 
@@ -10,11 +9,12 @@ import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.gfx.SystemText;
+import com.nyrds.platform.gl.Gl;
+import com.nyrds.platform.input.Keys;
+import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.ReportingExecutor;
-import com.watabou.input.Keys;
-import com.watabou.input.Touchscreen;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.NoosaScript;
@@ -185,9 +185,7 @@ public class GameLoop {
 
             NoosaScript.get().resetCamera();
 
-            GLES20.glScissor(0, 0, Game.width(), Game.height());
-            GLES20.glClearColor(0, 0, 0, 0.0f);
-            GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
+            Gl.clear();
 
             if (scene != null) {
                 scene.draw();

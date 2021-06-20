@@ -18,7 +18,7 @@
 package com.watabou.noosa;
 
 import com.nyrds.platform.compatibility.RectF;
-import com.watabou.glwrap.Texture;
+import com.nyrds.platform.gl.Texture;
 
 public class SkinnedBlock extends Image {
 

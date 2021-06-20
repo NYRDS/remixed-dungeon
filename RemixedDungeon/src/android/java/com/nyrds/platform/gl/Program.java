@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.watabou.glwrap;
+package com.nyrds.platform.gl;
 
 import android.opengl.GLES20;
 
@@ -45,11 +45,11 @@ public class Program {
 		}
 	}
 	
-	public Attribute attribute( String name ) {
+	public Attribute attribute(String name ) {
 		return new Attribute( GLES20.glGetAttribLocation( handle, name ) );
 	}
 	
-	public Uniform uniform( String name ) {
+	public Uniform uniform(String name ) {
 		return new Uniform( GLES20.glGetUniformLocation( handle, name ) );
 	}
 	

@@ -20,10 +20,10 @@ package com.watabou.noosa;
 import android.opengl.GLES20;
 
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.gl.Attribute;
+import com.nyrds.platform.gl.Uniform;
 import com.watabou.glscripts.Script;
-import com.watabou.glwrap.Attribute;
 import com.watabou.glwrap.Quad;
-import com.watabou.glwrap.Uniform;
 
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;

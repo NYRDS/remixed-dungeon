@@ -20,9 +20,9 @@ package com.watabou.noosa;
 import android.graphics.Bitmap;
 
 import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gl.Texture;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.glwrap.Quad;
-import com.watabou.glwrap.Texture;
 
 import java.nio.FloatBuffer;
 

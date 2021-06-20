@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.market.MarketOptions;
-import com.watabou.input.Touchscreen.Touch;
+import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;

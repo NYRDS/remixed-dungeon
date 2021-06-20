@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.watabou.glwrap;
+package com.nyrds.platform.gl;
 
 import android.graphics.Bitmap;
 import android.opengl.GLES20;

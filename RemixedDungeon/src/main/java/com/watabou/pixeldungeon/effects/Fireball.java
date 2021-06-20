@@ -21,7 +21,7 @@ import android.opengl.GLES20;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.compatibility.RectF;
-import com.watabou.glwrap.Texture;
+import com.nyrds.platform.gl.Texture;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.particles.Emitter;
