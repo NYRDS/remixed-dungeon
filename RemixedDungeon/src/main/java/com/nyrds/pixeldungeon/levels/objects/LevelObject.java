@@ -7,7 +7,7 @@ import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
 import com.nyrds.pixeldungeon.mechanics.LevelHelpers;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.utils.Position;
-import com.watabou.noosa.StringsManager;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;

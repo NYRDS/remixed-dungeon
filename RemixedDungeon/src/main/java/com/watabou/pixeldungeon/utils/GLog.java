@@ -22,8 +22,8 @@ import android.util.Log;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
-import com.watabou.noosa.StringsManager;
 import com.watabou.utils.Signal;
 
 import java.io.File;

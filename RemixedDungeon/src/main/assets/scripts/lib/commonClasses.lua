@@ -16,7 +16,7 @@ local PathFinder       = luajava.bindClass("com.watabou.utils.PathFinder")
 
 local Sample           = luajava.bindClass("com.nyrds.platform.audio.Sample")
 local Music            = luajava.bindClass("com.nyrds.platform.audio.Music")
-local StringsManager   = luajava.bindClass("com.watabou.noosa.StringsManager")
+local StringsManager   = luajava.bindClass("com.nyrds.platform.util.StringsManager")
 local CharUtils        = luajava.bindClass("com.watabou.pixeldungeon.actors.CharUtils")
 
 local Buffs  = {

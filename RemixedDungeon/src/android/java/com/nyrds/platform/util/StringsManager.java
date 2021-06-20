@@ -1,4 +1,4 @@
-package com.watabou.noosa;
+package com.nyrds.platform.util;
 
 import android.annotation.SuppressLint;
 import android.content.res.Configuration;
@@ -34,6 +34,8 @@ import lombok.SneakyThrows;
 /**
  * Created by mike on 08.03.2016.
  */
+
+//TODO Split this is class by platform dependency later
 public class StringsManager {
 
 	@SuppressLint("UseSparseArrays")

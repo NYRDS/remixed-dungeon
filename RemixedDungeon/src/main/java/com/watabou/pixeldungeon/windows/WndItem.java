@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
-import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CompositeImage extends Image {
 
-    private ArrayList<Image> mLayers = new ArrayList<>();
+    private final ArrayList<Image> mLayers = new ArrayList<>();
 
     public CompositeImage() {
         super();
