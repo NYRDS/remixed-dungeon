@@ -17,10 +17,10 @@
  */
 package com.nyrds.pixeldungeon.effects;
 
-import android.graphics.RectF;
 import android.opengl.GLES20;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.compatibility.RectF;
 import com.watabou.glwrap.Texture;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;

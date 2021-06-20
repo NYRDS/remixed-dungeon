@@ -1,7 +1,6 @@
 package com.watabou.pixeldungeon.windows;
 
-import android.graphics.RectF;
-
+import com.nyrds.platform.compatibility.RectF;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.bags.Keyring;

@@ -1,9 +1,9 @@
 package com.watabou.noosa;
 
 import android.graphics.Bitmap;
-import android.graphics.RectF;
 import android.opengl.GLES20;
 
+import com.nyrds.platform.compatibility.RectF;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
@@ -150,9 +150,9 @@ public class Font extends TextureFilm {
 				
 				//GLog.w("addeded: %d %d %d %d %d",(int)chars.charAt(charsProcessed) ,charColumn, lineTop, glyphBorder, lineBottom);
 				add(chars.charAt(charsProcessed),
-					new RectF( (float)(charColumn)/bWidth, 
-							   (float)lineTop/bHeight, 
-							   (float)(glyphBorder)/bWidth, 
+					new RectF( (float)(charColumn)/bWidth,
+							   (float)lineTop/bHeight,
+							   (float)(glyphBorder)/bWidth,
 							   (float)lineBottom/bHeight ) );
 				++charsProcessed;
 				charColumn = charBorder;

@@ -1,6 +1,6 @@
 package com.watabou.noosa;
 
-import android.graphics.RectF;
+import com.nyrds.platform.compatibility.RectF;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;

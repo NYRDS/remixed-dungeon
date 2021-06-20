@@ -1,7 +1,6 @@
 package com.watabou.pixeldungeon;
 
-import android.graphics.RectF;
-
+import com.nyrds.platform.compatibility.RectF;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Texture;
 import com.watabou.noosa.CompositeImage;
