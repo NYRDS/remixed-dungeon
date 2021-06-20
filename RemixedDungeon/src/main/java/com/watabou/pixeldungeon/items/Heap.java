@@ -205,8 +205,16 @@ public class Heap implements Bundlable, NamedEntityKind {
 		updateHeap();
 	}
 
+	@LuaInterface
+	@NotNull
 	public Item peek() {
-		return items.peek();
+		Item item = items.peek();
+
+		if(item != null && item.valid()) {
+			return item;
+		}
+
+		return ItemsList.DUMMY;
 	}
 	
 	public void drop(@NotNull Item item ) {
