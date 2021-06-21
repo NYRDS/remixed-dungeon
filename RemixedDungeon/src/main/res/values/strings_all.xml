@@ -2752,4 +2752,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="DeepSnail_Gender">masculine</string>
   <string name="DeepSnail_Name_Objective">Deep Snail</string>
   <string name="DeepSnail_Desc">This type of mollusk can often be seen near water sources and is much faster than your ordinary snail. Beware of the bites however, they can have an unpleasant effect on your skin.</string>
+  <string name="ShamanElder_Name">Elder Shaman</string>
+  <string name="ShamanElder_Gender">masculine</string>
+  <string name="ShamanElder_Name_Objective">Elder Shaman</string>
+  <string name="ShamanElder_Desc">This particular gnoll looks much older than other shamans and surely has a higher status in the tribe. A strange aura slowly forms around him, which seems to reflect all that touches it.</string>
+  <string name="Bee_Name">Bee</string>
+  <string name="Bee_Gender">masculine</string>
+  <string name="Bee_Name_Objective">Bee</string>
+  <string name="Bee_Desc">Despite their small size,  bees tend to protect their hive fiercely. They don\'t live long though.</string>
 </resources>

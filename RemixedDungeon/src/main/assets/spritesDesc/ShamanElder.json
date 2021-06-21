@@ -1,0 +1,12 @@
+{
+  "texture" : "shaman.png",
+  "width"  : 16,
+  "height" : 16,
+  "zapEffect" : "Lightning",
+  "idle"   : { "fps" : 2,  "looped" : true,     "frames" : [16, 16, 16, 17, 16, 16, 17, 17] },
+  "run"    : { "fps" : 12, "looped" : true,     "frames" : [20,21,22,23] },
+  "attack" : { "fps" : 12, "looped" : false,    "frames" : [18,19,16] },
+  "zap"    : { "fps" : 12, "looped" : false,    "frames" : [18,19,16] },
+  "die"    : { "fps" : 12, "looped" : false,    "frames" : [24,25,26] },
+  "bloodColor": "0xffbb0000"
+}
