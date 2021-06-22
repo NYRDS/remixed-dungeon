@@ -40,7 +40,7 @@ public class HuntressArmor extends ClassArmor {
 		coverHair = true;
 	}
 	
-	private HashMap<Callback, Mob> targets = new HashMap<>();
+	private final HashMap<Callback, Mob> targets = new HashMap<>();
 	
 	@Override
 	public String special() {

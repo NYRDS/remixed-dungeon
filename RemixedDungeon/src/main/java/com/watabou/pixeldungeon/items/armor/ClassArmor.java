@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
 abstract public class ClassArmor extends Armor {
 
-	private int specialCostModifier = 3;
+	private final int specialCostModifier = 3;
 
 	@Packable
 	public int STR;
