@@ -17,6 +17,7 @@ public class Hunting extends MobAi implements AiState {
     public void act(@NotNull Mob me) {
 
         if(returnToOwnerIfTooFar(me, 6)) {
+            me.spend(Actor.MICRO_TICK);
             return;
         }
 
