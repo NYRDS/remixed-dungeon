@@ -1,6 +1,5 @@
 package com.watabou.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.nyrds.platform.EventCollector;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -33,8 +32,7 @@ abstract public class CommonLevel extends Level {
 			int trapPos = Random.Int( getLength() );
 			
 			if (map[trapPos] == Terrain.EMPTY) {
-				LevelObject trap = Trap.makeSimpleTrap(trapPos, Random.chances(traps), true);
-				addLevelObject(trap);
+				addLevelObject(Trap.makeSimpleTrap(trapPos, Random.chances(traps), true));
 			}
 		}
 	}

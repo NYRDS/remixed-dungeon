@@ -2759,12 +2759,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Badges now obtainable when playing DLC\'s (but not mods).\n
     - Bugs fixed\n
     </string>
-  <string name="ShamanElder_Name">Elder Shaman</string>
+  <string name="ShamanElder_Name">elder shaman</string>
   <string name="ShamanElder_Gender">masculine</string>
-  <string name="ShamanElder_Name_Objective">Elder Shaman</string>
+  <string name="ShamanElder_Name_Objective">elder shaman</string>
   <string name="ShamanElder_Desc">This particular gnoll looks much older than other shamans and surely has a higher status in the tribe. A strange aura slowly forms around him, which seems to reflect all that touches it.</string>
-  <string name="Bee_Name">Bee</string>
+  <string name="Bee_Name">bee</string>
   <string name="Bee_Gender">masculine</string>
-  <string name="Bee_Name_Objective">Bee</string>
+  <string name="Bee_Name_Objective">bee</string>
   <string name="Bee_Desc">Despite their small size,  bees tend to protect their hive fiercely. They don\'t live long though.</string>
 </resources>

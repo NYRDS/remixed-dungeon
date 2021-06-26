@@ -70,4 +70,9 @@ public class GnollArmor extends ClassArmor {
             return false;
         }
     }
+
+    @Override
+    public String desc() {
+        return Game.getVar(R.string.GnollArmor_Info);
+    }
 }

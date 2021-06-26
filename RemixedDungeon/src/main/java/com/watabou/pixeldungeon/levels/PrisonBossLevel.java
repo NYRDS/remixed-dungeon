@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Scene;
@@ -170,7 +171,7 @@ public class PrisonBossLevel extends BossLevel {
 			int trapPos = Random.Int( getLength() );
 			
 			if (map[trapPos] == Terrain.EMPTY) {
-				map[trapPos] = Terrain.POISON_TRAP;
+				addLevelObject(Trap.makeSimpleTrap(trapPos, "PoisonTrap", true));
 			}
 		}
 	}

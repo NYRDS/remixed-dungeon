@@ -546,9 +546,9 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
-		if(hasBuff(Amok.class) || chr.hasBuff(Amok.class)) {return false;}
-
-		if(getEnemy() == chr) {return false;}
+		if(hasBuff(Amok.class) || chr.hasBuff(Amok.class)) {
+			return false;
+		}
 
 		if(getOwnerId() == chr.getId()) {
 			return true;
@@ -558,10 +558,17 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
+		if(getEnemy() == chr) {
+			return false;
+		}
+
+		if(getOwnerId()!=getId() && getOwner().friendly(chr)) {
+			return true;
+		}
+
 		if(chr instanceof Hero) {
 			return chr.getHeroClass().friendlyTo(getEntityKind());
 		}
-
 
 		return !this.fraction.isEnemy(chr.fraction);
 	}

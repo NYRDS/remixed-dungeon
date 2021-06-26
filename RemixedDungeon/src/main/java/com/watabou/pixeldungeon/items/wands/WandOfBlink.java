@@ -30,6 +30,7 @@ import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Callback;
 
 import org.jetbrains.annotations.NotNull;
@@ -74,8 +75,10 @@ public class WandOfBlink extends Wand {
 
 		Level level = ch.level();
 
+		final CharSprite chSprite = ch.getSprite();
+
 		if(level.cellValid(ch.getPos())) { //ch already on level
-			ch.getSprite().interruptMotion();
+			chSprite.interruptMotion();
 			ch.placeTo(pos);
 		} else { // brand new ch
 			ch.setPos(pos);
@@ -84,14 +87,16 @@ public class WandOfBlink extends Wand {
 			}
 		}
 
-		ch.getSprite().place( pos );
+		chSprite.place( pos );
 
 		if (ch.invisible == 0) {
-			ch.getSprite().alpha( 0 );
-			ch.getSprite().getParent().add( new AlphaTweener( ch.getSprite(), 1, 0.4f ) );
+			chSprite.alpha( 0 );
+			if(chSprite.hasParent()) {
+				chSprite.getParent().add(new AlphaTweener(chSprite, 1, 0.4f));
+			}
 		}
 
-		ch.getSprite().emitter().start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
+		chSprite.emitter().start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 		Sample.INSTANCE.play( Assets.SND_TELEPORT );
 	}
 
