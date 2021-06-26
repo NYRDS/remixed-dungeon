@@ -57,8 +57,9 @@ public class DummyChar extends Char {
         return Level.INVALID_CELL;
     }
 
-    public void add(Buff buff) {
+    public boolean add(Buff buff) {
         GLog.debug("%s (%s) added to %s", buff.getEntityKind(), buff.getSource().getEntityKind(), getEntityKind());
+        return false;
     }
 
     public void remove(@Nullable Buff buff) {

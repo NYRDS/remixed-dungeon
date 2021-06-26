@@ -885,9 +885,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		getControlTarget().curAction = curAction;
 	}
 
-	public void add(Buff buff) {
+	public boolean add(Buff buff) {
 		if(!isAlive()) {
-			return;
+			return false;
 		}
 
 		GLog.debug("%s (%s) added to %s", buff.getEntityKind(), buff.getSource().getEntityKind(), getEntityKind());
@@ -896,10 +896,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		Actor.add(buff);
 
 		if (!GameScene.isSceneReady()) {
-			return;
+			return true;
 		}
 
 		buff.attachVisual();
+		return true;
 	}
 
 	public void remove(@Nullable Buff buff) {

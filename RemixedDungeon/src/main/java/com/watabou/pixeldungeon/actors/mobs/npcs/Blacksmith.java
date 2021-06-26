@@ -214,8 +214,9 @@ public class Blacksmith extends NPC {
 	}
 	
 	@Override
-	public void add( Buff buff ) {
-	}
+	public boolean add(Buff buff ) {
+        return false;
+    }
 	
 	@Override
 	public boolean reset() {

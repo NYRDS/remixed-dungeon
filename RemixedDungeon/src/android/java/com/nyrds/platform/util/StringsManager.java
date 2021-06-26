@@ -183,7 +183,6 @@ public class StringsManager {
 		} else if (ModdingMode.isResourceExistInMod("strings_en.json")) {
 			parseStrings("strings_en.json");
 		}
-
 	}
 
 	public static String getVar(int id) {
@@ -200,13 +199,20 @@ public class StringsManager {
 		return Utils.EMPTY_STRING;
 	}
 
-	public static String[] getVars(int id) {
+	public static String @NotNull [] getVars(int id) {
+		String[] baseArray = getResources().getStringArray(id);
+		String[] modStrings = Utils.EMPTY_STRING_ARRAY;
 
 		if (stringsMap.containsKey(id)) {
-			return stringsMap.get(id);
+			modStrings = stringsMap.get(id);
 		}
-		ensureCorrectLocale();
-		return getResources().getStringArray(id);
+
+		if(baseArray.length > modStrings.length) {
+			ensureCorrectLocale();
+			return baseArray;
+		}
+
+		return modStrings;
 	}
 
 	public static String getVar(String id) {
@@ -245,16 +251,23 @@ public class StringsManager {
 		return ret;
 	}
 
-	public static String[] getVars(String id) {
+	public static String @NotNull [] getVars(String id) {
+		String[] modStrings = Utils.EMPTY_STRING_ARRAY;
+		String[] baseStrings = Utils.EMPTY_STRING_ARRAY;
+
 		if (sStringsMap.containsKey(id)) {
-			return sStringsMap.get(id);
+			modStrings = sStringsMap.get(id);
 		}
 
 		if(keyToInt.containsKey(id)) {
-			return getVars(keyToInt.get(id));
+			baseStrings =  getVars(keyToInt.get(id));
 		}
 
-		return new String[0];
+		if(baseStrings.length > modStrings.length) {
+			return baseStrings;
+		}
+
+		return modStrings;
 	}
 
 	public static Resources getResources() {

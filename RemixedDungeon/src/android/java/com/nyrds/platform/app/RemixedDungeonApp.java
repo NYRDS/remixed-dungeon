@@ -1,10 +1,14 @@
 package com.nyrds.platform.app;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 
@@ -26,6 +30,8 @@ public class RemixedDungeonApp extends MultiDexApplication {
         super.onCreate();
 
         remixedDungeonApp = this;
+
+        registerActivityLifecycleCallbacks(new RemixedActivityLifecycleCallbacks());
 
         if(AsyncTask.THREAD_POOL_EXECUTOR instanceof ThreadPoolExecutor) {
             ThreadPoolExecutor defaultExecutor = (ThreadPoolExecutor) AsyncTask.THREAD_POOL_EXECUTOR;
@@ -74,5 +80,42 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
     static public Context getContext() {
         return remixedDungeonApp.getApplicationContext();
+    }
+
+    private class RemixedActivityLifecycleCallbacks implements ActivityLifecycleCallbacks {
+        @Override
+        public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle savedInstanceState) {
+            remixedDungeonApp = RemixedDungeonApp.this;
+        }
+
+        @Override
+        public void onActivityStarted(@NonNull Activity activity) {
+            remixedDungeonApp = RemixedDungeonApp.this;
+        }
+
+        @Override
+        public void onActivityResumed(@NonNull Activity activity) {
+            remixedDungeonApp = RemixedDungeonApp.this;
+        }
+
+        @Override
+        public void onActivityPaused(@NonNull Activity activity) {
+
+        }
+
+        @Override
+        public void onActivityStopped(@NonNull Activity activity) {
+
+        }
+
+        @Override
+        public void onActivitySaveInstanceState(@NonNull Activity activity, @NonNull Bundle outState) {
+
+        }
+
+        @Override
+        public void onActivityDestroyed(@NonNull Activity activity) {
+
+        }
     }
 }

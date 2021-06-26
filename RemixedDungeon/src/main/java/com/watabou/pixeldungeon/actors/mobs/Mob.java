@@ -263,11 +263,11 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	public void add(Buff buff) {
+	public boolean add(Buff buff) {
 		super.add(buff);
 
 		if (!GameScene.isSceneReady()) {
-			return;
+			return true;
 		}
 
 		if (buff instanceof Amok) {
@@ -280,6 +280,7 @@ public abstract class Mob extends Char {
 			setState(MobAi.getStateByClass(Sleeping.class));
 			postpone(Sleep.SWS);
 		}
+		return true;
 	}
 
 	public boolean canAttack(@NotNull Char enemy) {
