@@ -34,6 +34,8 @@ public class Utils {
 
     public static final String UNKNOWN = "unknown";
     public static final String EMPTY_STRING = "";
+    public static final String[] EMPTY_STRING_ARRAY = new String[0];
+
 
     @NotNull
     private static final Class<?> strings = getR_Field("string");
