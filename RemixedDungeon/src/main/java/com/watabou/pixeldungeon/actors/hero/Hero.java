@@ -23,7 +23,6 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
@@ -76,7 +75,6 @@ import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
-import com.watabou.pixeldungeon.items.rings.RingOfHaste;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
@@ -295,30 +293,6 @@ public class Hero extends Char {
 			float speed = super.speed();
 			return getHeroSprite().sprint(subClass == HeroSubClass.FREERUNNER && !isStarving()) ? 1.6f * speed : speed;
 		}
-	}
-
-	@Override
-	public void spend(float time) {
-		int hasteLevel = 0;
-
-		if (heroClass == HeroClass.ELF) {
-			hasteLevel++;
-			if (subClass == HeroSubClass.SCOUT) {
-				hasteLevel++;
-			}
-		}
-
-		hasteLevel+= buffLevel(RingOfHaste.Haste.class);
-
-		for (Item item : getBelongings()) {
-			if (item instanceof IActingItem && item.isEquipped(this)) {
-				((IActingItem) item).spend(this, time);
-			}
-		}
-
-		QuickSlot.refresh(this);
-
-		super.spend(hasteLevel == 0 ? time : (float) (time * Math.pow(1.1, -hasteLevel)));
 	}
 
 	@Override

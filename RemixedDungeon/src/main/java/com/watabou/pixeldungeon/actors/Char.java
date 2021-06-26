@@ -25,6 +25,7 @@ import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
@@ -82,6 +83,7 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
+import com.watabou.pixeldungeon.items.rings.RingOfHaste;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -94,6 +96,7 @@ import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
@@ -766,17 +769,37 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@Override
 	public void spend(float time) {
-		float timeScale = 1f;
-		timeScale *= 1.f/(1+buffLevel(Slow.class));
-		timeScale *= (1 + buffLevel(Speed.class));
+		for (Item item : getBelongings()) {
+			if (item instanceof IActingItem && item.isEquipped(this)) {
+				((IActingItem) item).spend(this, time);
+			}
+		}
 
-		float scaledTime = time / timeScale;
+		int hasteLevel = 0;
+
+		if (getHeroClass() == HeroClass.ELF) {
+			hasteLevel++;
+			if (getSubClass() == HeroSubClass.SCOUT) {
+				hasteLevel++;
+			}
+		}
+
+		hasteLevel+= buffLevel(RingOfHaste.Haste.class);
+
+		float timeScale = (1.f + buffLevel(Speed.class)) / (1.f + buffLevel(Slow.class));
+
+		float scaledTime = (float) (time * Math.pow(1.1f, -hasteLevel) / timeScale);
 
 		for(Map.Entry<String,Number> spell:spellsUsage.entrySet()) {
 			spell.setValue(spell.getValue().floatValue()+scaledTime);
 		}
 
+		scaledTime = Math.min(time * 3, scaledTime);
+
 		super.spend(scaledTime);
+
+		QuickSlot.refresh(this);
+
 		if(curAction!=null) {
 			GLog.debug("%s", curAction.toString());
 		}
