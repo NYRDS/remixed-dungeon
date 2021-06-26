@@ -27,6 +27,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
@@ -1084,6 +1085,22 @@ public abstract class Level implements Bundlable {
 		}
 
 		if(item == ItemsList.DUMMY) {
+			return;
+		}
+
+		if(!item.stackable && item.quantity()>1) { // Hack for Maze
+			int quantity = item.quantity();
+
+			Bundle bundle = new Bundle();
+
+			item.quantity(1);
+			item.storeInBundle(bundle);
+
+			for (int i = 0;i< quantity;i++) {
+				Item separateItem = ItemFactory.itemByName(item.getEntityKind());
+				separateItem.restoreFromBundle(bundle);
+				drop(separateItem,cell);
+			}
 			return;
 		}
 
