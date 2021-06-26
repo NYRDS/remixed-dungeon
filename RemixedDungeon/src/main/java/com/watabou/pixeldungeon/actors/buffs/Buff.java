@@ -88,9 +88,8 @@ public class  Buff extends Actor implements NamedEntityKind, CharModifier {
         }
 
         this.target = target;
-        target.add(this);
 
-        return true;
+        return target.add(this);
     }
 
     public void detach() {

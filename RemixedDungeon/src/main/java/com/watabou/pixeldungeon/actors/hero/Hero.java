@@ -647,11 +647,11 @@ public class Hero extends Char {
 	}
 
 	@Override
-	public void add(Buff buff) {
+	public boolean add(Buff buff) {
 		super.add(buff);
 
 		if (!GameScene.isSceneReady()) {
-			return;
+			return false;
 		}
 
 		if (buff instanceof Burning) {
@@ -686,6 +686,7 @@ public class Hero extends Char {
 		}
 
 		BuffIndicator.refreshHero();
+		return true;
 	}
 
 	@Override

@@ -77,11 +77,12 @@ public class RatKing extends NPC {
 	}
 	
 	@Override
-	public void add( Buff buff ) {
+	public boolean add(Buff buff ) {
 		if (!friendly(Dungeon.hero)) {
-			super.add(buff);
+			return super.add(buff);
 		}
-	}
+        return false;
+    }
 	
 	@Override
 	public boolean reset() {

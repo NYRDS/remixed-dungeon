@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.FrostArrow;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.PathFinder;
 
@@ -43,10 +44,12 @@ public class PotionOfFrost extends UpgradablePotion {
 		if( !canShatter() ) {
 			return;
 		}
-		
-		PathFinder.buildDistanceMap( cell, BArray.not( Dungeon.level.losBlocking, null ), (int) (DISTANCE * qualityFactor()));
 
-		for (int i=0; i < Dungeon.level.getLength(); i++) {
+		final Level level = Dungeon.level;
+
+		PathFinder.buildDistanceMap( cell, BArray.not( level.losBlocking, null ), (int) (DISTANCE * qualityFactor()));
+
+		for (int i = 0; i < level.getLength(); i++) {
 			if (PathFinder.distance[i] < Integer.MAX_VALUE) {
 				Freezing.affect( i );
 			}
