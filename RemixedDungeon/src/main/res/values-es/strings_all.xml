@@ -2770,4 +2770,12 @@ otro lugar del nivel.</string>
     -- Ahora puedes obtener los logros cuando juegas con DLC\'s (pero no mods).\n
     - Errores corregidos.\n
     </string>
+  <string name="ShamanElder_Name">Chamán anciano</string>
+  <string name="ShamanElder_Gender">masculino</string>
+  <string name="ShamanElder_Name_Objective">Chamán anciano</string>
+  <string name="ShamanElder_Desc">Este gnoll en particular parece mucho más viejo que otros chamanes y seguramente tiene un estatus más alto en la tribu. A su alrededor se forma lentamente una extraña aura que parece reflejar todo lo que la toca.</string>
+  <string name="Bee_Name">Abeja</string>
+  <string name="Bee_Gender">masculino</string>
+  <string name="Bee_Name_Objective">Abeja</string>
+  <string name="Bee_Desc">A pesar de su pequeño tamaño, las abejas tienden a proteger su colmena ferozmente. Sin embargo, no viven mucho tiempo.</string>
 </resources>
