@@ -1766,4 +1766,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public void setControlTarget(Char controlTarget) {
 	}
+
+	@LuaInterface
+	public Position getPosition(){
+    	return new Position(level().levelId, getPos());
+	}
 }

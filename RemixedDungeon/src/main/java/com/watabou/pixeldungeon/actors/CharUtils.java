@@ -192,8 +192,10 @@ public class CharUtils {
         }
 
         Char target;
-        if (level.fieldOfView[cell] && (target = Actor.findChar(cell)) != null && target != actor.getControlTarget()) {
-            if (target.friendly(actor.getControlTarget())) {
+        final Char controlTarget = actor.getControlTarget();
+
+        if (level.fieldOfView[cell] && (target = Actor.findChar(cell)) != null && target != controlTarget) {
+            if (target.friendly(controlTarget)) {
                 return new Interact(target);
             } else {
                 if(!(target.state instanceof Sleeping)) {

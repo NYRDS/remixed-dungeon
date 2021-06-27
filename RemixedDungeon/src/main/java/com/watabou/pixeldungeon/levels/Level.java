@@ -351,13 +351,15 @@ public abstract class Level implements Bundlable {
 
 	public static Collection<Mob> mobsFollowLevelChange(InterlevelScene.Mode changeMode) {
 
-		if(Dungeon.level==null) { //first level
+		final Level level = Dungeon.level;
+
+		if(level ==null) { //first level
 			return CharsList.emptyMobList;
 		}
 
 		ArrayList<Mob> mobsToNextLevel = new ArrayList<>();
 
-		Iterator<Mob> it = Dungeon.level.mobs.iterator();
+		Iterator<Mob> it = level.mobs.iterator();
 		while(it.hasNext()) {
 			Mob mob = it.next();
 			if(mob.followOnLevelChanged(changeMode)) {

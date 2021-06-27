@@ -555,9 +555,9 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
-		if(getOwnerId() == chr.getOwnerId()) {
-			return true;
-		}
+		//if(getOwnerId() == chr.getOwnerId()) {
+		//	return true;
+		//}
 
 		if(getEnemy() == chr) {
 			return false;

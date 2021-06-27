@@ -85,7 +85,7 @@ public class Chasm implements Doom {
 		jumpConfirmed = false;
 
 		Sample.INSTANCE.play( Assets.SND_FALLING );
-		hero.releasePets();
+		//hero.releasePets();
 
 		if (hero.isAlive()) {
 			hero.clearActions();
