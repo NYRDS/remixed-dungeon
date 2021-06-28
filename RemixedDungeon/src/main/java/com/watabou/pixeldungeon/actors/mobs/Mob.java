@@ -37,7 +37,7 @@ import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModError;
@@ -448,7 +448,7 @@ public abstract class Mob extends Char {
 		}
 
 		if (hero.isAlive() && !CharUtils.isVisible(this)) {
-			GLog.i(Game.getVar(R.string.Mob_Died));
+			GLog.i(StringsManager.getVar(R.string.Mob_Died));
 		}
 	}
 
