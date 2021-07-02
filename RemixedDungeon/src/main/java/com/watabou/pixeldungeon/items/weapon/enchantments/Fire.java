@@ -22,13 +22,12 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.utils.Random;
 
 public class Fire extends Weapon.Enchantment {
 	
-	private static ItemSprite.Glowing ORANGE = new ItemSprite.Glowing( 0xFF4400 );
+	private static Glowing ORANGE = new Glowing( 0xFF4400 );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

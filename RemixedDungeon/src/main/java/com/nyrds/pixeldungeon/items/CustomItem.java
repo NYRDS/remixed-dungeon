@@ -12,6 +12,7 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.CellSelector;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
@@ -67,6 +68,11 @@ public class CustomItem extends EquipableItem {
         price        = desc.rawget("price").checkint();
         equipable    = desc.rawget("equipable").checkjstring();
         heapScale    = (float) desc.rawget("heapScale").optdouble(1.);
+    }
+
+    @Override
+    public Glowing glowing () {
+        return script.runOptional("glowing", Glowing.NO_GLOWING);
     }
 
     @Override

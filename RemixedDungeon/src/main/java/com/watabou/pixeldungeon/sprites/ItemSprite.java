@@ -206,7 +206,7 @@ public class ItemSprite extends MovieClip {
 		}
 
 		if (getVisible())
-			if (glowing != null) {
+			if (glowing != null && glowing != Glowing.NO_GLOWING) {
 				if (glowUp && (phase += elapsed) > glowing.period) {
 					glowUp = false;
 					phase = glowing.period;
@@ -245,25 +245,4 @@ public class ItemSprite extends MovieClip {
 		return bmp.getPixel(col * SIZE + x, row * SIZE + y);
 	}
 
-	public static class Glowing {
-
-		public static final Glowing WHITE = new Glowing(0xFFFFFF, 0.6f);
-
-		public float red;
-		public float green;
-		public float blue;
-		public float period;
-
-		public Glowing(int color) {
-			this(color, 1f);
-		}
-
-		public Glowing(int color, float period) {
-			red = (color >> 16) / 255f;
-			green = ((color >> 8) & 0xFF) / 255f;
-			blue = (color & 0xFF) / 255f;
-
-			this.period = period;
-		}
-	}
 }

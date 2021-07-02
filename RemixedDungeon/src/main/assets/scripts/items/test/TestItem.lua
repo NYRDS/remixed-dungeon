@@ -7,7 +7,7 @@
 
 local RPD = require "scripts/lib/commonClasses"
 
-local item = require "scripts/lib/item"
+local itemLib = require "scripts/lib/item"
 
 local candle =
 {
@@ -30,7 +30,7 @@ local trap =
 }
 
 
-return item.init{
+return itemLib.init{
     desc  = function (self, item)
 
         RPD.glog("Created item with id:"..tostring(item:getId()))
@@ -143,7 +143,7 @@ return item.init{
         end
 
         if action == "inputText" then
-            --RPD.System.Input:showInputDialog("Text title", "Text subtitle","defaultText")
+            RPD.System.Input:showInputDialog("Text title", "Text subtitle")
         end
 
         if action == "checkText" then
@@ -175,7 +175,12 @@ return item.init{
         self.data.counter = (self.data.counter or 0) + 1
         item:getOwner():getSprite():showStatus( 0xFF00FF, tostring(self.data.counter))
         item:spend(1)
-    end
+    end,
+
+    glowing = function(self, item)
+        return itemLib.makeGlowing(0xFF7A792B, 1)
+    end,
+
 --[[
     bag = function(self, item)
         return "SeedPouch"

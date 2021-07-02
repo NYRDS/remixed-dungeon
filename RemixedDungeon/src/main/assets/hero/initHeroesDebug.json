@@ -6,7 +6,8 @@
     },
     "items": [
       {
-        "kind": "WandOfRegrowth"
+        "kind": "WandOfRegrowth",
+        "identified": true
       },
       {
         "kind": "TenguLiver"
@@ -19,22 +20,27 @@
       },
 
       {
-        "kind": "PotionOfToxicGas"
+        "kind": "PotionOfToxicGas",
+        "identified": true
       },
       {
-        "kind": "WandOfIcebolt"
+        "kind": "WandOfIcebolt",
+        "identified": true
       },
       {
         "kind": "ScrollOfMagicMapping",
-        "quantity": 1000
+        "quantity": 1000,
+        "identified": true
       },
       {
         "kind": "PotionOfMana",
-        "quantity": 1000
+        "quantity": 1000,
+        "identified": true
       },
       {
         "kind": "PotionOfFrost",
-        "quantity": 1000
+        "quantity": 1000,
+        "identified": true
       },
       {
         "kind": "CurareDart",
@@ -43,6 +49,9 @@
       {
         "kind": "Gold",
         "quantity" : 100000
+      },
+      {
+        "kind": "test/TestItem"
       }
     ],
     "str": 10,
@@ -58,7 +67,8 @@
         "kind": "Ration"
       },
       {
-        "kind": "SpellBook"
+        "kind": "SpellBook",
+        "identified": true
       }
     ]
   },
