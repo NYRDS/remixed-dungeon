@@ -143,7 +143,7 @@ return item.init{
         end
 
         if action == "inputText" then
-            --RPD.System.Input:showInputDialog("Text title", "Text subtitle","defaultText")
+            RPD.System.Input:showInputDialog("Text title", "Text subtitle")
         end
 
         if action == "checkText" then
@@ -175,6 +175,20 @@ return item.init{
         self.data.counter = (self.data.counter or 0) + 1
         item:getOwner():getSprite():showStatus( 0xFF00FF, tostring(self.data.counter))
         item:spend(1)
+    end,
+
+    glowColor = function(self, item)
+        if self.data.activationCount == 1 then
+            return 0xFF7A792B
+        end
+        return nil
+    end,
+
+    glowTime = function(self, item)
+        if self.data.activationCount == 1 then
+            return 1
+        end
+        return nil
     end
 --[[
     bag = function(self, item)
