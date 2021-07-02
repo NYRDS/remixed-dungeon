@@ -1079,6 +1079,13 @@ public abstract class Level implements Bundlable {
 		pit[cell] = (flags & TerrainFlags.PIT) != 0;
 		water[cell] = terrain == Terrain.WATER
 				|| terrain >= Terrain.WATER_TILES;
+
+		if(solid[cell] || pit[cell]) {
+			LevelObject obj;
+			while((obj=getTopLevelObject(cell))!=null) {
+				remove(obj);
+			}
+		}
 	}
 
 	public void drop(Item item, int cell, Heap.Type type) {
