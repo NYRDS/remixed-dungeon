@@ -21,13 +21,12 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.utils.Random;
 
 public class Paralysis extends Weapon.Enchantment {
 	
-	private static ItemSprite.Glowing YELLOW = new ItemSprite.Glowing( 0xCCAA44 );
+	private static Glowing YELLOW = new Glowing( 0xCCAA44 );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

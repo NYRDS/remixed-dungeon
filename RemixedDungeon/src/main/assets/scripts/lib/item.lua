@@ -107,4 +107,8 @@ item.init = function(desc)
     return desc
 end
 
+function item.makeGlowing(color, period)
+    return luajava.newInstance('com.watabou.pixeldungeon.sprites.Glowing', 0xFF7A792B, 1)
+end
+
 return item

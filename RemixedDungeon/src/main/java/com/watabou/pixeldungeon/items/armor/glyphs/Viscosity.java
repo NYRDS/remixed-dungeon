@@ -28,8 +28,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -39,7 +38,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class Viscosity extends Glyph {
 
-	private static final ItemSprite.Glowing PURPLE = new ItemSprite.Glowing( 0x8844CC );
+	private static final Glowing PURPLE = new Glowing( 0x8844CC );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage ) {

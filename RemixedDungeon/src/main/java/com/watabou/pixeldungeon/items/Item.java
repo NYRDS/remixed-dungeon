@@ -46,7 +46,7 @@ import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -415,7 +415,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		return name;
 	}
 
-	public ItemSprite.Glowing glowing() {
+	public Glowing glowing() {
 		return null;
 	}
 
