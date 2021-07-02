@@ -20,13 +20,12 @@ package com.watabou.pixeldungeon.items.weapon.enchantments;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.utils.Random;
 
 public class Slow extends Weapon.Enchantment {
 	
-	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x0044FF );
+	private static Glowing BLUE = new Glowing( 0x0044FF );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

@@ -44,7 +44,7 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Swing;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
@@ -217,7 +217,7 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	@Override
-	public ItemSprite.Glowing glowing() {
+	public Glowing glowing() {
 		return getEnchantment() != null ? getEnchantment().glowing() : null;
 	}
 	
@@ -276,8 +276,8 @@ public class Weapon extends KindOfWeapon {
 			return false;
 		}
 		
-		public ItemSprite.Glowing glowing() {
-			return ItemSprite.Glowing.WHITE;
+		public Glowing glowing() {
+			return Glowing.WHITE;
 		}
 		
 		@SuppressWarnings("unchecked")

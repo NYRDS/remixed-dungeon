@@ -28,14 +28,13 @@ import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class AntiEntropy extends Glyph {
 
-	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x0000FF );
+	private static Glowing BLUE = new Glowing( 0x0000FF );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {

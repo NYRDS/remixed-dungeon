@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.items.material;
 
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.sprites.Glowing;
 
 public class IceGuardianCoreModule extends Item {
 	public IceGuardianCoreModule() {
@@ -12,7 +12,7 @@ public class IceGuardianCoreModule extends Item {
 	}
 
 	@Override
-	public ItemSprite.Glowing glowing() {
-		return new ItemSprite.Glowing( 0x00FFFF );
+	public Glowing glowing() {
+		return new Glowing( 0x00FFFF );
 	}
 }

@@ -45,6 +45,7 @@ import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Seed;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -148,7 +149,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 		}
 	}
 	
-	public ItemSprite.Glowing glowing() {
+	public Glowing glowing() {
 		return (type == Type.HEAP) && items.size() > 0 ? items.peek().glowing() : null;
 	}
 	

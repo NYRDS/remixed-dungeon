@@ -24,15 +24,14 @@ import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Metabolism extends Glyph {
 
-	private static ItemSprite.Glowing RED = new ItemSprite.Glowing( 0xCC0000 );
+	private static Glowing RED = new Glowing( 0xCC0000 );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {

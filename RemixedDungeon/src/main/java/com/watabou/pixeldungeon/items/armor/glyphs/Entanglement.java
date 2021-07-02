@@ -28,14 +28,13 @@ import com.watabou.pixeldungeon.effects.particles.EarthParticle;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.plants.Earthroot;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Entanglement extends Glyph {
 	
-	private static ItemSprite.Glowing GREEN = new ItemSprite.Glowing( 0x448822 );
+	private static Glowing GREEN = new Glowing( 0x448822 );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage ) {

@@ -25,14 +25,13 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Stench extends Glyph {
 
-	private static ItemSprite.Glowing GREEN = new ItemSprite.Glowing( 0x22CC44 );
+	private static Glowing GREEN = new Glowing( 0x22CC44 );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {

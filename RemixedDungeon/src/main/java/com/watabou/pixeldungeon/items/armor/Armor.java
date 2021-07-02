@@ -40,7 +40,7 @@ import com.watabou.pixeldungeon.items.armor.glyphs.Multiplicity;
 import com.watabou.pixeldungeon.items.armor.glyphs.Potential;
 import com.watabou.pixeldungeon.items.armor.glyphs.Stench;
 import com.watabou.pixeldungeon.items.armor.glyphs.Viscosity;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
@@ -213,7 +213,7 @@ public class Armor extends EquipableItem {
 	}
 
 	@Override
-	public ItemSprite.Glowing glowing() {
+	public Glowing glowing() {
 		return glyph != null ? glyph.glowing() : null;
 	}
 
@@ -289,8 +289,8 @@ public class Armor extends EquipableItem {
 			return false;
 		}
 		
-		public ItemSprite.Glowing glowing() {
-			return ItemSprite.Glowing.WHITE;
+		public Glowing glowing() {
+			return Glowing.WHITE;
 		}
 		
 		public void checkOwner( Char owner ) {
