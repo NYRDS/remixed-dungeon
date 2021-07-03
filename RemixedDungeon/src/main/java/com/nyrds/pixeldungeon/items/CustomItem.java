@@ -111,7 +111,7 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public void deactivate(Char ch) {
+    public void deactivate(@NotNull Char ch) {
         script.run("deactivate", ch);
         super.deactivate(ch);
     }

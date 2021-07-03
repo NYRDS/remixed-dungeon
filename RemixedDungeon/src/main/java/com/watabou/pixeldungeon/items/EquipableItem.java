@@ -92,7 +92,7 @@ public abstract class EquipableItem extends Item {
 		equipedTo = ch.getBelongings().itemSlot(this);
 	}
 
-	public void deactivate(Char ch) {
+	public void deactivate(@NotNull Char ch) {
 		equipedTo = Belongings.Slot.NONE;
 		Buff.detachAllBySource(ch,this);
 	}
