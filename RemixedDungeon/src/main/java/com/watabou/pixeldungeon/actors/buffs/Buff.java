@@ -190,6 +190,11 @@ public class  Buff extends Actor implements NamedEntityKind, CharModifier {
 
     @LuaInterface
     public static void detachAllBySource(@NotNull Char target, NamedEntityKindWithId source) {
+
+        if(target==null) { // mods may not honor @NotNull
+            return;
+        }
+
         var buffsToRemove = new HashSet<Buff>();
         for(Buff buff:target.buffs()) {
             if(buff.getSourceId() == source.getId()) {
