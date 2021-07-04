@@ -16,6 +16,7 @@
    "description"   :"DeepSnail_Desc",
    "gender"        :"DeepSnail_Gender",
    "spriteDesc"    :"spritesDesc/DeepSnail.json",
+   "scriptFile"    :"scripts/mobs/DeepSnail",
    "walkingType"   :"NORMAL",
    "canBePet"	     : true,
    "flying"		     : false,
