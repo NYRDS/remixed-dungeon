@@ -35,9 +35,13 @@ public class Combo extends Buff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Combo_Info);
+		return Game.getVar(R.string.ComboBuff_Name);
 	}
-	
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.ComboBuff_Info);
+	}
 	public int hit( Char enemy, int damage ) {
 		
 		count++;

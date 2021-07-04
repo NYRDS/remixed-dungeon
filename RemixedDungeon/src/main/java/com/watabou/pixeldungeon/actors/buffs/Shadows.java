@@ -77,7 +77,12 @@ public class Shadows extends Invisibility {
 
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Shadows_Info);
+		return Game.getVar(R.string.ShadowsBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.ShadowsBuff_Info);
 	}
 
 	@Override

@@ -151,9 +151,18 @@ public class Hunger extends Buff implements Doom {
 	@Override
 	public String name() {
 		if (hungerLevel < STARVING) {
-			return Game.getVar(R.string.Hunger_Info1);
+			return Game.getVar(R.string.HungerBuff_Name1);
 		} else {
-			return Game.getVar(R.string.Hunger_Info2);
+			return Game.getVar(R.string.HungerBuff_Name2);
+		}
+	}
+
+	@Override
+	public String desc() {
+		if (hungerLevel < STARVING) {
+			return Game.getVar(R.string.HungerBuff_Info1);
+		} else {
+			return Game.getVar(R.string.HungerBuff_Info2);
 		}
 	}
 

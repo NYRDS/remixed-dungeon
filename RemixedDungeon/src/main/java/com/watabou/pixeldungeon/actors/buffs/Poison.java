@@ -41,7 +41,12 @@ public class Poison extends Buff implements Doom {
 
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Poison_Info);
+		return Game.getVar(R.string.PoisonBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.PoisonBuff_Info);
 	}
 
 	@Override

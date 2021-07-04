@@ -40,7 +40,12 @@ public class Necrotism extends Buff implements Doom {
 
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Necrotism_Info);
+		return Game.getVar(R.string.NecrotismBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.NecrotismBuff_Info);
 	}
 
 	@Override

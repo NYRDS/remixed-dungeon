@@ -53,7 +53,12 @@ public class Paralysis extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Paralysis_Info);
+		return Game.getVar(R.string.ParalysisBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.ParalysisBuff_Info);
 	}
 	
 	public static float duration( Char ch ) {

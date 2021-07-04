@@ -35,7 +35,12 @@ public class Slow extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Slow_Info);
+		return Game.getVar(R.string.SlowBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.SlowBuff_Info);
 	}
 	
 	public static float duration( Char ch ) {

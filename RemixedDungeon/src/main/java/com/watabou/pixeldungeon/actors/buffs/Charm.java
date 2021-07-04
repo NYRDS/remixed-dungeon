@@ -64,7 +64,12 @@ public class Charm extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Charm_Info);
+		return Game.getVar(R.string.CharmBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.CharmBuff_Info);
 	}
 	
 	public static float durationFactor(@NotNull Char ch ) {

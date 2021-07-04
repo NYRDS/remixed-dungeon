@@ -53,7 +53,12 @@ public class Stun extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Stun_Info);
+		return Game.getVar(R.string.StunBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.StunBuff_Info);
 	}
 	
 	public static float duration( Char ch ) {

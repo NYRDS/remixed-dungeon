@@ -43,7 +43,12 @@ public class Roots extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Roots_Info);
+		return Game.getVar(R.string.RootsBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.RootsBuff_Info);
 	}
 
 	@Override
