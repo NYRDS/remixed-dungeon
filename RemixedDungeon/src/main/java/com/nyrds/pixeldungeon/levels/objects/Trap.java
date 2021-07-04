@@ -88,6 +88,7 @@ public class Trap extends LevelObject {
 		ret.uses = 1;
 		ret.targetCell = ret.pos;
 		ret.activatedByItem = true;
+		ret.activatedByMob = true;
 
 		return ret;
 	}
