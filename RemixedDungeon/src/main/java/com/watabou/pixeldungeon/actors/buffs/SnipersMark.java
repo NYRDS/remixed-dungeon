@@ -30,6 +30,11 @@ public class SnipersMark extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.SnipersMark_Info);
+		return Game.getVar(R.string.SnipersMarkBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.SnipersMarkBuff_Info);
 	}
 }

@@ -365,6 +365,9 @@ public enum HeroClass implements CharModifier {
         return BuffIndicator.NONE;
     }
 
+    @Override
+    public String desc() { return name(); }
+
     public int classIndex() {
         return ordinal() - 1;
     }

@@ -38,7 +38,12 @@ public class Terror extends FlavourBuff {
 
 	@Override
 	public String name() {
-		return "Terror";
+		return Game.getVar(R.string.TerrorBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.TerrorBuff_Info);
 	}
 	
 	public static void recover( Char target ) {

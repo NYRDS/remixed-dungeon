@@ -55,7 +55,12 @@ public class Levitation extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Levitation_Info);
+		return Game.getVar(R.string.LevitationBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.InvisibilityBuff_Info);
 	}
 
 	@Override

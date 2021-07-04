@@ -43,6 +43,11 @@ public class Fury extends Buff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Fury_Info);
+		return Game.getVar(R.string.FuryBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.FuryBuff_Info);
 	}
 }

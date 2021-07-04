@@ -32,9 +32,13 @@ public class RingOfStoneWalking extends Artifact{
 
 		@Override
 		public String name() {
-			return Game.getVar(R.string.StoneBlood_Buff);
+			return Game.getVar(R.string.StoneBloodBuff_Name);
 		}
 
+		@Override
+		public String desc() {
+			return Game.getVar(R.string.StoneBloodBuff_Info);
+		}
 		@Override
 		public void onDeath() {
 			Badges.validateDeathInStone();

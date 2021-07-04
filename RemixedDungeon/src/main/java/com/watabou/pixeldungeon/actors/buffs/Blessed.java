@@ -13,6 +13,11 @@ public class Blessed extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Blessed_Info);
+		return Game.getVar(R.string.BlessedBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.BlessedBuff_Info);
 	}
 }

@@ -75,7 +75,12 @@ public class Frost extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Frost_Info);
+		return Game.getVar(R.string.FrostBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.FrostBuff_Info);
 	}
 	
 	public static float duration( Char ch ) {

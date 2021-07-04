@@ -178,9 +178,11 @@ return itemLib.init{
     end,
 
     glowing = function(self, item)
-        return itemLib.makeGlowing(0xFF7A792B, 1)
-    end,
-
+        if self.data.activationCount >= 1 then
+            return itemLib.makeGlowing(0xFF7A792B, 1)
+        end
+        return nil
+    end
 --[[
     bag = function(self, item)
         return "SeedPouch"

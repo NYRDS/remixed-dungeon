@@ -38,9 +38,13 @@ public class Bleeding extends Buff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Bleeding_Info);
+		return Game.getVar(R.string.BleedingBuff_Name);
 	}
-	
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.BleedingBuff_Info);
+	}
 	@Override
 	public boolean act() {
 		if (target.isAlive()) {

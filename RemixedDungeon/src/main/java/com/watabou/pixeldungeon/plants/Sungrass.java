@@ -117,7 +117,12 @@ public class Sungrass extends Plant {
 
 		@Override
 		public String name() {
-			return Game.getVar(R.string.Sungrass_Buff);
+			return Game.getVar(R.string.SungrassBuff_Name);
+		}
+
+		@Override
+		public String desc() {
+			return Game.getVar(R.string.SungrassBuff_Info);
 		}
 	}
 }

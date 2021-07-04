@@ -244,5 +244,4 @@ public class ItemSprite extends MovieClip {
 		int col = index % rows;
 		return bmp.getPixel(col * SIZE + x, row * SIZE + y);
 	}
-
 }

@@ -27,7 +27,7 @@ import lombok.var;
 public class CustomBuff extends Buff {
 
     private String name;
-    private String info;
+    private String desc;
 
     private int icon;
 
@@ -55,11 +55,11 @@ public class CustomBuff extends Buff {
             script = new LuaScript("scripts/buffs/" + scriptFile, this);
             script.asInstance();
 
-            LuaTable desc = script.run("buffDesc").checktable();
+            LuaTable Desc = script.run("buffDesc").checktable();
 
-            icon = desc.rawget("icon").checkint();
-            name = StringsManager.maybeId(desc.rawget("name").checkjstring());
-            info = StringsManager.maybeId(desc.rawget("info").checkjstring());
+            icon = Desc.rawget("icon").checkint();
+            name = StringsManager.maybeId(Desc.rawget("name").checkjstring());
+            desc = StringsManager.maybeId(Desc.rawget("info").checkjstring());
         } catch (Exception e){
             throw new ModError("Buff",e);
         }
@@ -161,6 +161,8 @@ public class CustomBuff extends Buff {
         return StringsManager.maybeId(script.runOptional("name",name));
     }
 
+    @Override
+    public String desc() { return StringsManager.maybeId(script.runOptional("info", desc)); }
     @Override
     public boolean dontPack() {
         return script.runOptional("dontPack", false);

@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.windows.WndBuffInfo;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.Util;
@@ -193,12 +194,24 @@ public class WndHero extends WndTabbed {
 			if (index != BuffIndicator.NONE) {
 				Image icon = new Image( TextureCache.get(buff.textureLarge()) );
 				icon.frame( film.get( index ) );
+				icon.x = GAP - 1;
 				icon.y = pos;
-				add( icon );
 				
 				Text txt = PixelScene.createText( buff.name(), GuiProperties.regularFontSize() );
-				txt.x = icon.width + GAP;
+				txt.x = icon.width + (GAP * 2);
 				txt.y = pos + (int)(icon.height - txt.baseLine()) / 2;
+
+				RedButton buffInf = new RedButton("") {
+					@Override
+					protected void onClick() {
+						hide();
+						GameScene.show(new WndBuffInfo(buff));
+					}
+				};
+				buffInf.setRect( 0, pos - 1, icon.width + (GAP * 3) + txt.width, icon.height + (GAP) );
+
+				add( buffInf );
+				add( icon );
 				add( txt );
 				
 				pos += GAP + icon.height;
@@ -207,7 +220,18 @@ public class WndHero extends WndTabbed {
 					Text txt = PixelScene.createText(buff.name(), GuiProperties.regularFontSize());
 					txt.x = GAP;
 					txt.y = pos + (int) (16 - txt.baseLine()) / 2;
-					add(txt);
+
+					RedButton buffInf = new RedButton("") {
+						@Override
+						protected void onClick() {
+							hide();
+							GameScene.show( new WndBuffInfo(buff));
+						}
+					};
+					buffInf.setRect( 0, pos + (int)(GAP * 1.5), (GAP * 2) + txt.width, txt.height + (GAP * 2) );
+
+					add( buffInf );
+					add( txt );
 
 					pos += GAP + 16;
 				}
