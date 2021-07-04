@@ -234,6 +234,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        instance = this;
 
         iap = new Iap(this);
 
@@ -280,6 +281,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @Override
     public void onResume() {
         super.onResume();
+        instance = this;
 
         now = 0;
 
