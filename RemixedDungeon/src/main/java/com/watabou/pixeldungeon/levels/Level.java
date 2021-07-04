@@ -75,7 +75,6 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.levels.features.Door;
 import com.watabou.pixeldungeon.levels.features.HighGrass;
-import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.levels.traps.AlarmTrap;
 import com.watabou.pixeldungeon.levels.traps.FireTrap;
 import com.watabou.pixeldungeon.levels.traps.GrippingTrap;
@@ -1067,7 +1066,13 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void set(int cell, int terrain) {
-		Painter.set(this, cell, terrain);
+
+		if(!cellValid(cell)) {
+			EventCollector.logEvent(Utils.format("Attempt set invalid cell %d on %s to %d", cell, levelId, terrain));
+			return;
+		}
+
+		map[cell] = terrain;
 
 		int flags = TerrainFlags.flags[terrain];
 		passable[cell] = (flags & TerrainFlags.PASSABLE) != 0;

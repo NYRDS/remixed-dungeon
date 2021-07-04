@@ -30,7 +30,7 @@ public class Painter {
 	protected static int pasHeight;
 
 	public static void set(Level level, int cell, int value) {
-		level.map[cell] = value;
+		level.set(cell, value);
 	}
 
 	public static void set(Level level, int x, int y, int value) {
