@@ -10,7 +10,7 @@ import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.rings.UsableArtifact;
 import com.watabou.pixeldungeon.plants.Sungrass.Health;
-import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 import org.jetbrains.annotations.NotNull;

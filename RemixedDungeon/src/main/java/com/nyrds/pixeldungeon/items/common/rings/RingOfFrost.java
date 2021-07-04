@@ -26,7 +26,7 @@ import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.utils.Random;
 
@@ -39,8 +39,8 @@ public class RingOfFrost extends Artifact {
 	}
 
 	@Override
-	public ItemSprite.Glowing glowing() {
-		return new ItemSprite.Glowing( 0x00FFFF );
+	public Glowing glowing() {
+		return new Glowing( 0x00FFFF );
 	}
 
 	@Override
@@ -75,7 +75,12 @@ public class RingOfFrost extends Artifact {
 
 		@Override
 		public String name() {
-			return Game.getVar(R.string.FrostAura_Buff);
+			return Game.getVar(R.string.FrostAuraBuff_Name);
+		}
+
+		@Override
+		public String desc() {
+			return Game.getVar(R.string.FrostAuraBuff_Info);
 		}
 	}
 

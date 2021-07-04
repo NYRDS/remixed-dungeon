@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.items;
 
-import android.util.Log;
-
 import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
@@ -13,9 +11,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.scenes.CellSelector;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
@@ -75,14 +72,7 @@ public class CustomItem extends EquipableItem {
 
     @Override
     public Glowing glowing () {
-        return script.runOptional("glowing");
-        /*try {
-            int color = script.run("glowColor").checkint();
-            float period = script.runOptional("glowTime", 1f);
-            return new Glowing(color, period);
-        } catch (Exception e) {
-            return null;
-        }*/
+        return script.runOptional("glowing", Glowing.NO_GLOWING);
     }
 
     @Override

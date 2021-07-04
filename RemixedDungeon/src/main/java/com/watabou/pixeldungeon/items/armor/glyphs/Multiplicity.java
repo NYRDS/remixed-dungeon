@@ -26,14 +26,13 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Multiplicity extends Glyph {
 
-	private static ItemSprite.Glowing PINK = new ItemSprite.Glowing( 0xCCAA88 );
+	private static Glowing PINK = new Glowing( 0xCCAA88 );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {

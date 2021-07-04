@@ -7,7 +7,7 @@
 
 local RPD = require "scripts/lib/commonClasses"
 
-local item = require "scripts/lib/item"
+local itemLib = require "scripts/lib/item"
 
 local candle =
 {
@@ -30,7 +30,7 @@ local trap =
 }
 
 
-return item.init{
+return itemLib.init{
     desc  = function (self, item)
 
         RPD.glog("Created item with id:"..tostring(item:getId()))
@@ -177,16 +177,9 @@ return item.init{
         item:spend(1)
     end,
 
-    glowColor = function(self, item)
-        if self.data.activationCount == 1 then
-            return 0xFF7A792B
-        end
-        return nil
-    end,
-
-    glowTime = function(self, item)
-        if self.data.activationCount == 1 then
-            return 1
+    glowing = function(self, item)
+        if self.data.activationCount >= 1 then
+            return itemLib.makeGlowing(0xFF7A792B, 1)
         end
         return nil
     end
