@@ -5,10 +5,10 @@ import android.os.Build;
 
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.utils.Log;
-import com.nyrds.android.util.Util;
+import com.nyrds.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.RemixedDungeon;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
 
 
 /**

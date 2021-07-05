@@ -19,10 +19,10 @@ package com.watabou.pixeldungeon;
 
 import android.graphics.Bitmap;
 
-import com.nyrds.android.util.Util;
+import com.nyrds.platform.gl.Texture;
+import com.nyrds.util.Util;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
-import com.watabou.glwrap.Texture;
 import com.watabou.noosa.Image;
 
 import java.util.Arrays;

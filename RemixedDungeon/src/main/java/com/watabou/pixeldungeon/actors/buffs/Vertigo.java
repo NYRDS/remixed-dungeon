@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -35,7 +35,12 @@ public class Vertigo extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Vertigo_Info);
+		return Game.getVar(R.string.VertigoBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.VertigoBuff_Info);
 	}
 	
 	public static float duration( Char ch ) {

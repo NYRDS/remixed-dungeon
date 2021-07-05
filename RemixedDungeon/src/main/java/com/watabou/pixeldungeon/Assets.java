@@ -18,7 +18,8 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.Preferences;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 

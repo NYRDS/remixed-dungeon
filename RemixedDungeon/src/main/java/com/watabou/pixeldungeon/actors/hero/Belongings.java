@@ -19,14 +19,14 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
-import com.nyrds.android.util.ModdingMode;
 import com.nyrds.generated.BundleHelper;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Amulet;
@@ -631,10 +631,8 @@ public class Belongings implements Iterable<Item>, Bundlable {
 					EquipableItem ring11 = (EquipableItem) item.detach(backpack);
 					setItemForSlot(ring11, Slot.ARTIFACT);
 					this.ring1 = ring11;
-					;
 				} else {
 					setItemForSlot((EquipableItem) item.detach(backpack), Slot.LEFT_ARTIFACT);
-					;
 				}
 			}
 		}

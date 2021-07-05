@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -56,7 +56,9 @@ public class WndInfoCell extends Window {
 		}
 
 		String title = level.tileNameByCell( cell );
-		if(obj != null) {
+		final boolean haveVisibleObject = obj != null && !obj.secret();
+
+		if(haveVisibleObject) {
 			title = obj.name();
 		}
 
@@ -73,7 +75,7 @@ public class WndInfoCell extends Window {
 
 		final char newLine = '\n';
 
-		if(obj != null) {
+		if(haveVisibleObject) {
 			LevelObjectSprite sprite = new LevelObjectSprite();
 			sprite.reset(obj);
 			float xs = obj.getSpriteXS();

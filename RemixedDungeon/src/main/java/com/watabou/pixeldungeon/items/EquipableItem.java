@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -92,7 +92,7 @@ public abstract class EquipableItem extends Item {
 		equipedTo = ch.getBelongings().itemSlot(this);
 	}
 
-	public void deactivate(Char ch) {
+	public void deactivate(@NotNull Char ch) {
 		equipedTo = Belongings.Slot.NONE;
 		Buff.detachAllBySource(ch,this);
 	}

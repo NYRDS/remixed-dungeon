@@ -1,9 +1,9 @@
 package com.nyrds.pixeldungeon.items.common;
 
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
@@ -24,12 +24,12 @@ public class MasteryItem extends Item {
 	@Override
 	public boolean doPickUp(@NotNull Char hero ) {
 		if(givesMasteryTo(hero)) {
-			Badges.validateMastery();
+			Badges.validateMastery(hero.getHeroClass());
 		}
 		return super.doPickUp( hero );
 	}
 
-	protected boolean givesMasteryTo(Char hero) {
+	public boolean givesMasteryTo(Char hero) {
 		return false;
 	}
 

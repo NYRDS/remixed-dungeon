@@ -21,7 +21,7 @@ import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -86,8 +86,9 @@ public class Imp extends NPC {
 	}
 	
 	@Override
-	public void add( Buff buff ) {
-	}
+	public boolean add(Buff buff ) {
+        return false;
+    }
 	
 	@Override
 	public boolean reset() {

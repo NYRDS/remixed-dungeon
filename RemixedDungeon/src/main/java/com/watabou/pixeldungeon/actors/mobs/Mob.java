@@ -19,9 +19,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
-import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Horrified;
 import com.nyrds.pixeldungeon.ai.Hunting;
@@ -35,12 +32,17 @@ import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.util.StringsManager;
+import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.JsonHelper;
+import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
@@ -81,6 +83,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import lombok.SneakyThrows;
+import lombok.var;
 
 public abstract class Mob extends Char {
 
@@ -218,20 +221,34 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
-		if (Random.Float() < 0.01) {
+		if (Random.Float() < 0.01/lvl()) {
 			lvl(lvl()+1);
 		}
+
+		float timeBeforeAct = actorTime();
 
 		script.runOptional("onAct");
 		GLog.debug("%s is %s", getEntityKind(), getState().getTag());
 		getState().act(this);
+
+		if(actorTime() - timeBeforeAct <= 0 && Util.isDebug()) {
+			var error = String.format("actor %s has same timestamp after %s act!", getEntityKind(), getState().getTag());
+			if(Util.isDebug()) {
+				throw new ModError(error);
+			} else {
+				spend(TICK);
+				EventCollector.logException(error);
+			}
+		}
+
 		return true;
 	}
 
 
 	public boolean isEnemyInFov(){
 		final Char enemy = getEnemy();
-		return enemy.valid() && enemy.isAlive() && level().cellValid(enemy.getPos()) && level().fieldOfView[enemy.getPos()]
+		final int enemyPos = enemy.getPos();
+		return enemy.valid() && enemy.isAlive() && level().cellValid(enemyPos) && level().fieldOfView[enemyPos]
                 && enemy.invisible <= 0;
     }
 
@@ -246,11 +263,11 @@ public abstract class Mob extends Char {
 	}
 
 	@Override
-	public void add(Buff buff) {
+	public boolean add(Buff buff) {
 		super.add(buff);
 
 		if (!GameScene.isSceneReady()) {
-			return;
+			return true;
 		}
 
 		if (buff instanceof Amok) {
@@ -263,6 +280,7 @@ public abstract class Mob extends Char {
 			setState(MobAi.getStateByClass(Sleeping.class));
 			postpone(Sleep.SWS);
 		}
+		return true;
 	}
 
 	public boolean canAttack(@NotNull Char enemy) {
@@ -300,15 +318,18 @@ public abstract class Mob extends Char {
 
 		spend(attackDelay());
 
-		if (level().distance( getPos(), enemy.getPos() ) <= 1) {
-			if(Dungeon.visible[getPos()]) {
-				getSprite().attack(enemy.getPos());
+		final int pos = getPos();
+		final int enemyPos = enemy.getPos();
+
+		if (level().distance(pos, enemyPos) <= 1) {
+			if(Dungeon.visible[pos]) {
+				getSprite().attack(enemyPos);
 			} else {
 				onAttackComplete();
 			}
 		} else {
-			if (Dungeon.isPathVisible(getPos(), enemy.getPos())) {
-				getSprite().zap(enemy.getPos());
+			if (Dungeon.isPathVisible(pos, enemyPos)) {
+				getSprite().zap(enemyPos);
 			} else {
 				onZapComplete();
 			}
@@ -360,6 +381,8 @@ public abstract class Mob extends Char {
 	@Override
 	public void destroy() {
 
+    	spend(MICRO_TICK);
+
 		super.destroy();
 
 		level().mobs.remove(this);
@@ -371,6 +394,7 @@ public abstract class Mob extends Char {
 
 	public void die(NamedEntityKind cause) {
 
+    	spend(Actor.MICRO_TICK);
 		getState().onDie(this);
 
 		script.run("onDie", cause);
@@ -424,7 +448,7 @@ public abstract class Mob extends Char {
 		}
 
 		if (hero.isAlive() && !CharUtils.isVisible(this)) {
-			GLog.i(Game.getVar(R.string.Mob_Died));
+			GLog.i(StringsManager.getVar(R.string.Mob_Died));
 		}
 	}
 
@@ -523,23 +547,28 @@ public abstract class Mob extends Char {
 			return true;
 		}
 
-		if(hasBuff(Amok.class) || chr.hasBuff(Amok.class)) {return false;}
-
-		if(getEnemy() == chr) {return false;}
+		if(hasBuff(Amok.class) || chr.hasBuff(Amok.class)) {
+			return false;
+		}
 
 		if(getOwnerId() == chr.getId()) {
 			return true;
 		}
 
-		if(chr instanceof Hero) {
-			return chr.getHeroClass().friendlyTo(getEntityKind());
+		//if(getOwnerId() == chr.getOwnerId()) {
+		//	return true;
+		//}
+
+		if(getEnemy() == chr) {
+			return false;
 		}
 
-		if(chr instanceof Mob) {
-			Mob mob = (Mob)chr;
-			if(getOwnerId() == mob.getOwnerId()) {
-				return true;
-			}
+		if(getOwnerId()!=getId() && getOwner().friendly(chr)) {
+			return true;
+		}
+
+		if(chr instanceof Hero) {
+			return chr.getHeroClass().friendlyTo(getEntityKind());
 		}
 
 		return !this.fraction.isEnemy(chr.fraction);

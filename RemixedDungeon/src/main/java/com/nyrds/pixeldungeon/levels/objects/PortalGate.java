@@ -1,11 +1,11 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.Packable;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Animation;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;

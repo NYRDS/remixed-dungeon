@@ -17,14 +17,14 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.nyrds.android.util.GuiProperties;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.util.GuiProperties;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.scenes.PixelScene;

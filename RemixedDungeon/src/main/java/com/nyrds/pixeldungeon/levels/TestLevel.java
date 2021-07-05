@@ -1,8 +1,8 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -146,9 +146,9 @@ public class TestLevel extends RegularLevel {
 				GLog.i("equipped");
 				testItemActions(hero, equipableItem);
 
-				int itemDialog = Game.scene().findByClass(WndOptions.class,0);
+				int itemDialog = GameLoop.scene().findByClass(WndOptions.class,0);
 				if( itemDialog > 0) {
-					WndOptions dialog = (WndOptions) Game.scene().getMember(itemDialog);
+					WndOptions dialog = (WndOptions) GameLoop.scene().getMember(itemDialog);
 					dialog.onSelect(0);  // skip warning in MissileWeapon
 					dialog.hide();
 				}

@@ -2,14 +2,15 @@ package com.nyrds.pixeldungeon.mobs.npc;
 
 import android.Manifest;
 
-import com.nyrds.android.util.DownloadStateListener;
-import com.nyrds.android.util.DownloadTask;
-import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.JsonHelper;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.nyrds.pixeldungeon.windows.WndSurvey;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.util.DownloadStateListener;
+import com.nyrds.util.DownloadTask;
+import com.nyrds.util.JsonHelper;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.windows.WndError;
@@ -35,7 +36,7 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
 
     public boolean interact(Char hero) {
 
-        Game.addToScene(new WndOptions(this.name,
+        GameLoop.addToScene(new WndOptions(this.name,
                 Game.getVar(R.string.SociologistNPC_Hi),
                 Game.getVar(R.string.Wnd_Button_Yes), Game.getVar(R.string.Wnd_Button_No)
         ) {
@@ -54,14 +55,14 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
 
     @Override
     public void DownloadComplete(String file, final Boolean result) {
-        Game.pushUiTask(() -> {
+        GameLoop.pushUiTask(() -> {
             if (!result) {
                 reportError();
             } else {
                 try {
                     survey = JsonHelper.readJsonFromFile(FileSystem.getInternalStorageFile(SURVEY_JSON));
 
-                    Game.addToScene(new WndSurvey(survey));
+                    GameLoop.addToScene(new WndSurvey(survey));
 
                 } catch (JSONException e) {
                     reportError();
@@ -71,7 +72,7 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
     }
 
     private void reportError() {
-        Game.addToScene(new WndError(Game.getVar(R.string.SociologistNPC_DownloadError)));
+        GameLoop.addToScene(new WndError(Game.getVar(R.string.SociologistNPC_DownloadError)));
     }
 
     @Override

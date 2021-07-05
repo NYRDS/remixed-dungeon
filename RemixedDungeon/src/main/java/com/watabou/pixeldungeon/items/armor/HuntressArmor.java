@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -40,7 +40,7 @@ public class HuntressArmor extends ClassArmor {
 		coverHair = true;
 	}
 	
-	private HashMap<Callback, Mob> targets = new HashMap<>();
+	private final HashMap<Callback, Mob> targets = new HashMap<>();
 	
 	@Override
 	public String special() {

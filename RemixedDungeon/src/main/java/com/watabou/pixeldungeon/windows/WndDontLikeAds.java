@@ -1,9 +1,9 @@
 package com.watabou.pixeldungeon.windows;
 
-import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.ui.IconButton;
 import com.watabou.pixeldungeon.ui.Icons;

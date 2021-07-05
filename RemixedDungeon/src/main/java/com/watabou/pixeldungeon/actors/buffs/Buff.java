@@ -19,14 +19,14 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -68,6 +68,9 @@ public class  Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     @Override
+    public String desc() { return getEntityKind(); }
+
+    @Override
     public String textureSmall() {
         return Assets.BUFFS_SMALL;
     }
@@ -88,9 +91,8 @@ public class  Buff extends Actor implements NamedEntityKind, CharModifier {
         }
 
         this.target = target;
-        target.add(this);
 
-        return true;
+        return target.add(this);
     }
 
     public void detach() {
@@ -305,7 +307,7 @@ public class  Buff extends Actor implements NamedEntityKind, CharModifier {
 
         int n = 1;
 
-        if (Game.getDifficulty() >= 3) {
+        if (GameLoop.getDifficulty() >= 3) {
             n = 5;
         }
 

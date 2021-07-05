@@ -77,18 +77,19 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	}
 	
 	@Override
-	public void add( Buff buff ) {
+	public boolean add(Buff buff ) {
 		if (buff instanceof Frost) {
 			if (hp() < ht()) {
 				heal(exp, buff);
 			}
+			return false;
 		} else {
 			if(!Dungeon.isLoading()) {
 				if (buff instanceof Burning) {
 					damage(Random.NormalIntRange(1, ht() / 3), buff);
 				}
 			}
-			super.add( buff );
+			return super.add( buff );
 		}
 	}
 }

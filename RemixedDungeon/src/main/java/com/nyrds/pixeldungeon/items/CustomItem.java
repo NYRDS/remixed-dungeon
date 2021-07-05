@@ -5,12 +5,13 @@ import androidx.annotation.Keep;
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
-import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
@@ -70,6 +71,11 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
+    public Glowing glowing () {
+        return script.runOptional("glowing", Glowing.NO_GLOWING);
+    }
+
+    @Override
     public boolean isUpgradable() {
         return upgradable;
     }
@@ -105,7 +111,7 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    public void deactivate(Char ch) {
+    public void deactivate(@NotNull Char ch) {
         script.run("deactivate", ch);
         super.deactivate(ch);
     }
@@ -344,6 +350,12 @@ public class CustomItem extends EquipableItem {
     @Override
     public void ownerTakesDamage(int damage) {
         script.runOptionalNoRet("ownerTakesDamage",damage);
+    }
+
+    @Override
+    public boolean doPickUp(@NotNull Char hero) {
+        script.runOptionalNoRet("onPickUp", hero);
+        return super.doPickUp(hero);
     }
 
     private class CustomItemCellListener implements CellSelector.Listener {

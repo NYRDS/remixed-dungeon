@@ -1,11 +1,11 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -46,7 +46,7 @@ public class SpiderQueen extends Boss {
 	@Override
     public boolean act(){
 		if(Random.Int(0, 20) == 0) {
-			CharUtils.spawnOnNextCell(this, "SpiderEgg", (int) (100 * RemixedDungeon.getDifficultyFactor()));
+			CharUtils.spawnOnNextCell(this, "SpiderEgg", (int) (100 * GameLoop.getDifficultyFactor()));
 		}
 		
 		return super.act();

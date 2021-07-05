@@ -21,28 +21,29 @@ import android.annotation.SuppressLint;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
-import com.nyrds.android.util.ModError;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.lua.LuaUtils;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Scene;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Challenges;
@@ -115,6 +116,7 @@ import java.util.Set;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.var;
+
 
 public abstract class Level implements Bundlable {
 
@@ -241,6 +243,10 @@ public abstract class Level implements Bundlable {
 		objectsLayer.put(levelObject.getPos(), levelObject);
 	}
 
+	public void onHeroLeavesLevel() {
+
+	}
+
 	public void onHeroDescend(int cell) {
 	}
 
@@ -345,13 +351,15 @@ public abstract class Level implements Bundlable {
 
 	public static Collection<Mob> mobsFollowLevelChange(InterlevelScene.Mode changeMode) {
 
-		if(Dungeon.level==null) { //first level
+		final Level level = Dungeon.level;
+
+		if(level ==null) { //first level
 			return CharsList.emptyMobList;
 		}
 
 		ArrayList<Mob> mobsToNextLevel = new ArrayList<>();
 
-		Iterator<Mob> it = Dungeon.level.mobs.iterator();
+		Iterator<Mob> it = level.mobs.iterator();
 		while(it.hasNext()) {
 			Mob mob = it.next();
 			if(mob.followOnLevelChanged(changeMode)) {
@@ -564,7 +572,7 @@ public abstract class Level implements Bundlable {
 				addItemToSpawn(Treasury.getLevelTreasury().random(Treasury.Category.RANGED));
 			}
 
-			if (Random.Int(15) == 0) {
+			if (Random.Int(15) == 0 && Dungeon.depth > 5) {
 				addItemToSpawn(new PseudoPasty());
 			}
 
@@ -574,7 +582,7 @@ public abstract class Level implements Bundlable {
 
 			feeling = DungeonGenerator.getLevelFeeling(levelId);
 			if (! isBossLevel() && feeling == Feeling.UNDEFINED) {
-				if (Dungeon.depth > 1) {
+				if (Dungeon.depth > 2) {
 					switch (Random.Int(10)) {
 						case 0:
 							feeling = Feeling.CHASM;
@@ -1071,6 +1079,13 @@ public abstract class Level implements Bundlable {
 		pit[cell] = (flags & TerrainFlags.PIT) != 0;
 		water[cell] = terrain == Terrain.WATER
 				|| terrain >= Terrain.WATER_TILES;
+
+		if(solid[cell] || pit[cell]) {
+			LevelObject obj;
+			while((obj=getTopLevelObject(cell))!=null) {
+				remove(obj);
+			}
+		}
 	}
 
 	public void drop(Item item, int cell, Heap.Type type) {
@@ -1079,6 +1094,22 @@ public abstract class Level implements Bundlable {
 		}
 
 		if(item == ItemsList.DUMMY) {
+			return;
+		}
+
+		if(!item.stackable && item.quantity()>1) { // Hack for Maze
+			int quantity = item.quantity();
+
+			Bundle bundle = new Bundle();
+
+			item.quantity(1);
+			item.storeInBundle(bundle);
+
+			for (int i = 0;i< quantity;i++) {
+				Item separateItem = ItemFactory.itemByName(item.getEntityKind());
+				separateItem.restoreFromBundle(bundle);
+				drop(separateItem,cell);
+			}
 			return;
 		}
 
@@ -1199,6 +1230,22 @@ public abstract class Level implements Bundlable {
 			return true;
 		}
 		return false;
+	}
+
+	protected boolean isCellSafeForPrize(int cell) {
+		if(map[cell] == Terrain.FIRE_TRAP) {
+			return false;
+		}
+
+		if(map[cell] == Terrain.SECRET_FIRE_TRAP) {
+			return false;
+		}
+
+		if(getTopLevelObject(cell)!=null) {
+			return false;
+		}
+
+		return true;
 	}
 
 	public int pitCell() {

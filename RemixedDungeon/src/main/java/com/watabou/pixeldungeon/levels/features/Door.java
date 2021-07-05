@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.features;
 
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.Terrain;

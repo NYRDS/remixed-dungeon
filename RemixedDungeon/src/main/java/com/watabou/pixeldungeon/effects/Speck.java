@@ -21,7 +21,7 @@ import android.annotation.SuppressLint;
 import android.util.Pair;
 
 import com.nyrds.LuaInterface;
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.particles.Emitter;
@@ -332,7 +332,7 @@ public class Speck extends Image {
     public void update() {
         super.update();
 
-        left -= Game.elapsed;
+        left -= GameLoop.elapsed;
         if (left <= 0) {
 
             kill();

@@ -1,16 +1,16 @@
 package com.watabou.pixeldungeon.windows;
 
-import com.nyrds.android.util.GuiProperties;
-import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.gfx.SystemText;
+import com.nyrds.util.GuiProperties;
+import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Image;
-import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;

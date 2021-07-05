@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.items.guts;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.rings.Artifact;
@@ -34,7 +34,12 @@ public class HeartOfDarkness extends Artifact {
 
 		@Override
 		public String name() {
-			return Game.getVar(R.string.DarkVeil_Buff);
+			return Game.getVar(R.string.DarkVeilBuff_Name);
+		}
+
+		@Override
+		public String desc() {
+			return  Game.getVar(R.string.DarkVeilBuff_Info);
 		}
 
 		@Override

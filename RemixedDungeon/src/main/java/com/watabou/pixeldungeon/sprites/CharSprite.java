@@ -18,16 +18,16 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.Util;
-import com.nyrds.android.util.WeakOptional;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
+import com.nyrds.util.WeakOptional;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.CompositeMovieClip;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.MovieClip;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.noosa.tweeners.FallTweener;
@@ -438,9 +438,10 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             listener.onComplete(curAnim);
         }
 
-        if (flashTime > 0 && (flashTime -= Game.elapsed) <= 0) {
+        if (flashTime > 0 && (flashTime -= GameLoop.elapsed) <= 0) {
             resetColor();
         }
+
         ch.ifPresent(chr -> {
             boolean visible = getVisible() && chr.invisible <= 0;
 
@@ -470,7 +471,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 emo.setVisible(visible);
             }
 
-            if (visible && curAnim == null && Math.random() < 0.1) {
+            if (visible && curAnim == null) {
                 idle();
             }
         });
@@ -565,7 +566,10 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                     return;
                 }
             }
-            curAnim = null;
+
+            if(curAnim!=run) {
+                curAnim = null;
+            }
         });
     }
 

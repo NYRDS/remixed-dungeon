@@ -18,12 +18,12 @@
 package com.watabou.pixeldungeon.items.weapon;
 
 import com.nyrds.Packable;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -44,7 +44,7 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Swing;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
@@ -217,7 +217,7 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	@Override
-	public ItemSprite.Glowing glowing() {
+	public Glowing glowing() {
 		return getEnchantment() != null ? getEnchantment().glowing() : null;
 	}
 	
@@ -276,8 +276,8 @@ public class Weapon extends KindOfWeapon {
 			return false;
 		}
 		
-		public ItemSprite.Glowing glowing() {
-			return ItemSprite.Glowing.WHITE;
+		public Glowing glowing() {
+			return Glowing.WHITE;
 		}
 		
 		@SuppressWarnings("unchecked")

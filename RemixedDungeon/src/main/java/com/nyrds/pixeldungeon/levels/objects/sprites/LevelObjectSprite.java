@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.levels.objects.sprites;
 
-import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.util.ModError;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;

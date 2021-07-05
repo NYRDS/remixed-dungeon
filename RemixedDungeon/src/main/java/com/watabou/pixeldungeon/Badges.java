@@ -17,15 +17,15 @@
  */
 package com.watabou.pixeldungeon;
 
-import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.StringsManager;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
@@ -51,6 +51,8 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -189,7 +191,8 @@ public class Badges {
 		MASTERY_ELF, VICTORY_ELF, BOSS_SLAIN_1_ELF, BOSS_SLAIN_3_SHAMAN, BOSS_SLAIN_3_SCOUT,
 		MASTERY_NECROMANCER, VICTORY_NECROMANCER, BOSS_SLAIN_1_NECROMANCER, BOSS_SLAIN_3_LICH, VICTORY_GNOLL, BOSS_SLAIN_1_GNOLL,
 		GNOLL_UNLOCKED(Game.getVar(R.string.Badges_GnollUnlocked),72, true),
-		DOCTOR_QUEST_COMPLETED(Game.getVar(R.string.MedicineMask_Obtained),81);
+		DOCTOR_QUEST_COMPLETED(Game.getVar(R.string.MedicineMask_Obtained),81),
+		MASTERY_GNOLL;
 
 		public boolean meta;
 
@@ -283,7 +286,7 @@ public class Badges {
 	}
 
 	public static void saveGlobal() {
-		if (ModdingMode.inMod() && !ModdingMode.inDlc()) {
+		if (!ModdingMode.inRemixed()) {
 			return;
 		}
 
@@ -674,10 +677,10 @@ public class Badges {
 		}
 	}
 
-	public static void validateMastery() {
+	public static void validateMastery(@NotNull HeroClass heroClass) {
 
 		Badge badge = null;
-		switch (Dungeon.hero.getHeroClass()) {
+		switch (heroClass) {
 			case WARRIOR:
 				badge = Badge.MASTERY_WARRIOR;
 				break;
@@ -695,6 +698,9 @@ public class Badges {
 				break;
 			case NECROMANCER:
 				badge = Badge.MASTERY_NECROMANCER;
+				break;
+			case GNOLL:
+				badge = Badge.MASTERY_GNOLL;
 				break;
 		}
 
@@ -904,7 +910,7 @@ public class Badges {
 	}
 
 	private static void unlockPlayGamesBadge(Badge badge) {
-		if (!ModdingMode.inMod()) {
+		if (ModdingMode.inRemixed()) {
 			String achievementCode = StringsManager.getVar("achievement_" + badge.name().toLowerCase(Locale.ROOT));
 
 			if(achievementCode.isEmpty()) {

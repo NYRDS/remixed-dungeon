@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -102,7 +102,12 @@ public class Burning extends Buff implements Doom {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Burning_Info);
+		return Game.getVar(R.string.BurningBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.BurningBuff_Info);
 	}
 
 	public static float duration( Char ch ) {

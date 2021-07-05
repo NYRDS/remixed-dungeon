@@ -17,7 +17,7 @@
 
 package com.watabou.gltextures;
 
-import android.graphics.RectF;
+import com.nyrds.platform.compatibility.RectF;
 
 import java.util.HashMap;
 import java.util.Map;

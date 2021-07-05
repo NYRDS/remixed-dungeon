@@ -17,12 +17,12 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Challenges;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.Window;
@@ -81,7 +81,7 @@ public class WndChallenges extends Window {
 					value |= Challenges.MASKS[i];
 				}
 			}	
-			RemixedDungeon.challenges( value );
+			GamePreferences.challenges( value );
 		}
 		
 		super.onBackPressed();

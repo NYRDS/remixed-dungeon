@@ -18,14 +18,15 @@
 package com.watabou.pixeldungeon.items;
 
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -44,6 +45,7 @@ import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Seed;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -96,6 +98,13 @@ public class Heap implements Bundlable, NamedEntityKind {
 		regularHeaps.put(Type.HEAP,14f);
 	}
 
+	public static Map<Type, Float> sageHeaps = new HashMap<>();
+	static {
+		sageHeaps.put(Type.SKELETON,1f);
+		sageHeaps.put(Type.CHEST,4f);
+		sageHeaps.put(Type.HEAP,14f);
+	}
+
 	@Packable
 	public int pos = Level.INVALID_CELL;
 
@@ -140,7 +149,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 		}
 	}
 	
-	public ItemSprite.Glowing glowing() {
+	public Glowing glowing() {
 		return (type == Type.HEAP) && items.size() > 0 ? items.peek().glowing() : null;
 	}
 	
@@ -198,8 +207,16 @@ public class Heap implements Bundlable, NamedEntityKind {
 		updateHeap();
 	}
 
+	@LuaInterface
+	@NotNull
 	public Item peek() {
-		return items.peek();
+		Item item = items.peek();
+
+		if(item != null && item.valid()) {
+			return item;
+		}
+
+		return ItemsList.DUMMY;
 	}
 	
 	public void drop(@NotNull Item item ) {

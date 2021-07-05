@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.items.wands;
 
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -127,6 +127,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 				collect( selector.getBelongings().backpack );
 			}
 		}
+		selector.updateSprite();
 		QuickSlot.refresh(selector);
 	};
 }

@@ -9,7 +9,7 @@
   <string name="SummonDeathling_Info">Przyzywa nieumarłego kompana.Życie nieumarłego oraz jego obrażenie rosną wraz z poziomem bohatera. \n\nLimit przywoływanych jednostek:%1$d(+ 1 na każdy poziom Magi )</string>
   <string name="Ignite_Name">Podpalenie</string>
   <string name="Ignite_Info">Podpala zaznaczoną komórkę,Może być użyty do podpalania traw, postaci oraz obiektów</string>
-  <string name="RootSpell_Name">Oplecienie</string>
+  <string name="RootSpell_Name">Oplecenie</string>
   <string name="RootSpell_Info">Oplata wybraną postać, sprawia że nie może się poruszać przez krótki okres czasu.</string>
   <string name="WindGust_Name">Powiew wiatru</string>
   <string name="WindGust_Info">Tworzy podmuch który odpycha wybraną postać.</string>
@@ -21,11 +21,11 @@
   <string name="Healing_Info">To zaklęcie jest niezwykle istotne dla każdego podróżnika. Odnawia ono 1/3 życia rzucającego.</string>
   <string name="ClassArmor_LowMana">Za mało many!</string>
   <string name="Drink_ACDrink">PIJ</string>
-  <string name="Drink_Message">Ten napój był orzeźwiający. </string>
+  <string name="Drink_Message">Orzeźwiające!</string>
   <string name="TomeOfKnowledge_Name">Księga Wiedzy</string>
   <string name="TomeOfKnowledge_Info">Ta tajemnicza księga wypełniona jest tajemniczymi zagadkami i tajemnicami !  Może i jest trudna do przeczytania, ale jeśli zdołasz ją przeczytać, na pewno zwiększysz swoją moc magiczną.</string>
   <string name="SpellBook_Name">Księga zaklęć</string>
-  <string name="SpellBook_Info">Wygląda to bardziej na zbiór kartek zszytych ze sobą ,niż na książkę.  Być może coś z tego wykombinujesz jeśli dostatecznie się skupisz.</string>
+  <string name="SpellBook_Info">\"Książka\" ta z wyglądu bardziej przypomina zbiór losowy stron, jednak  jeśli odpowiednio się nad nią skupisz może będziesz w stanie coś z niej zrozumieć.</string>
   <string name="SpellBook_Info_Identified">Pośród kartek odnalazłeś pełny tekst zaklęcia \"%1$s\".\n\" %2$s \"</string>
   <string name="ManaPotion_Name">Mikstura Many</string>
   <string name="ManaPotion_Info">Ta mikstura odnowi twoją duchową energię.</string>
@@ -75,17 +75,17 @@
   <string name="ChaosCrystal_Name">Dziwny kryształ</string>
   <string name="ChaosCrystal_Name_1">Chaotyczny kryształ</string>
   <string name="ChaosCrystal_Name_2">Kryształ chaosu</string>
-  <string name="ChaosCrystal_Info">Kiedy go trzymasz czujesz przepływy energii biegnące po twoich dłoniach.</string>
-  <string name="ChaosCrystal_Info_1">Chaotyczne moce płyną przez ten kryształ. Być może będzie przydatny. </string>
+  <string name="ChaosCrystal_Info">Trzymając go w dłoniach odczuwasz przepływ dźiwnej energii.</string>
+  <string name="ChaosCrystal_Info_1">Moce chaosu wypełniają ten krzyształ. Wygląda na to że może się ci na coś przydać.</string>
   <string name="ChaosCrystal_Info_2">TAK! Teraz już wiesz że możesz go połączyć z jednym ze swoich przedmiotów, ale co dalej ?</string>
   <string name="ChaosCrystal_Use">UŻYJ</string>
   <string name="ChaosCrystal_Fuse">POŁĄCZ</string>
   <string name="ChaosCrystal_Prompt">Wybierz miejsce aby ustawić Maskę Chaosu</string>
   <string name="ChaosCrystal_SelectForFuse">Wybierz przedmiot z którym połączy Kryształ Chaosu</string>
-  <string name="ChaosCrystal_ScrollFused">Kryształ pochłonięty przez runy zapisane na tym zwoju, teraz jest %s</string>
-  <string name="ChaosCrystal_SwordFused">Kryształ pochłoną twoją bron i przybrał formę Miecza</string>
-  <string name="ChaosCrystal_BowFused">Kryształ pochłoną twój łuk i przybrał formę Łuku</string>
-  <string name="ChaosCrystal_StaffFused">Kryształ pochłoną twoją różdżkę i przybrał formę Laski</string>
+  <string name="ChaosCrystal_ScrollFused">Kryształ został pochłonięty przez runy zapisane na tym zwoju, i stał się teraz %s</string>
+  <string name="ChaosCrystal_SwordFused">Po pochłonięciu twojej broni, kryształ przybrał formę Miecza.</string>
+  <string name="ChaosCrystal_BowFused">Po pochłonięciu twego łuku , kryształ przybrał formę Łuku.</string>
+  <string name="ChaosCrystal_StaffFused">Po pochłonięciu twojej różdżki, kryształ przybrał formę Laski Magicznej.</string>
   <string name="CorpseDust_Buff">Żądza krwi</string>
   <string name="DriedRose_Buff">Czarujący</string>
   <string name="DriedRose_CursedBuff">Zakochany</string>
@@ -109,7 +109,7 @@
   <string name="deco_candle_name">Świeczka</string>
   <string name="deco_candle_desc">Duża świeczka</string>
   <string name="Possess_Name">Opętanie</string>
-  <string name="Possess_Info">Mroczna sztuka kontroli umysłu pozwala rzucającemu nagiąć wolę większości istot</string>
+  <string name="Possess_Info">Ta mroczna sztuka kontroli umysłu jest w stanie pozbawić wolnej woli większość istot.</string>
   <string name="Possess_PossessionFailed">Wola  \"%s\"  jest zbyt silna</string>
   <string name="Possess_Possessed">%s czeka na twoje rozkazy</string>
   <string name="Possess_CantPossessSelf">Nie możesz sam siebie opętać</string>
@@ -117,17 +117,17 @@
   <string name="BlackCat_AiStatus">Ten kot robi to co koty lubią najbardziej.</string>
   <string name="Shopkeeper_Buy">Wybierz przedmiot do kupienia</string>
   <string name="Shopkeeper_title">Sklep</string>
-  <string name="Shopkeeper_text">Witamy w lolalnym Pixel-Mart\'cie \nW czym mogę pomóc ?</string>
-  <string name="Shopkeeper_SellPrompt">Chciałbym sprzedać trochę rzeczy.</string>
+  <string name="Shopkeeper_text">Witamy w Pixel-Mart\'cie! \nW czym mogę pomóc ?</string>
+  <string name="Shopkeeper_SellPrompt">Mam kilka rzeczy na sprzedaż</string>
   <string name="Shopkeeper_BuyPrompt">Pokaż mi swoje towary.</string>
   <string name="WndTradeItem_BuyN">Kup %1$d za %2$dg</string>
   <string name="WndTradeItem_BuyAll">Kup wszystko za %dg</string>
   <string name="WndTradeItem_SellN">Sprzedaj %1$d za %2$dg</string>
   <string name="WndBag_BuySubtitle">Zebrałeś %d złota</string>
   <string name="town_deco_weaponboard_name">Broń</string>
-  <string name="town_deco_weaponboard_desc">Jakaś broń wisząca na desce.</string>
+  <string name="town_deco_weaponboard_desc">Broń wisząca na desce.</string>
   <string name="town_deco_shieldboard_name">Tarcze</string>
-  <string name="town_deco_shieldboard_desc">Różnorakie tarcze wiszące na desce. Jeszcze nie na sprzedaż.</string>
+  <string name="town_deco_shieldboard_desc">Różnorakie tarcze wiszące na tablicy. Nie nie możesz ich kupić.</string>
   <string name="town_deco_armoronhanger_name">Zbroja</string>
   <string name="town_deco_armoronhanger_desc">Jakaś zbroja wisząca na wieszaku.</string>
   <string name="town_deco_potions_name">Mikstury.</string>
@@ -2545,14 +2545,6 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="RoyalShield_desc">W pełni metalowa tarcza. Tak, jest ciężka ale tylko w ona zapewni ci najlepszą ochronę.</string>
   <string name="ShieldInfoTemplate">Ta tarcza zablokuje atak o sile %1$d z %2$d%% szansą.  Podniesienie gardy zajmie %3$3.1f sekund po udanym bloku.</string>
   <string name="Belongings_CantWearBoth">Nie możesz założyć %1$s i %2$s jednocześnie!</string>
-  <string name="Welcome_Text_29_3">
-remix.29.3/n
--Rozgrywka:\n
---Tarcze!!\n
--Modowanie:\n
---modyfikowalne tarcze!:\n
--Naprawy błędów\n
-</string>
   <string name="ShieldStrTemplate">Osoba nosząca tarczę powinna mieć co najmniej %1$d punktów Siły, aby prawidłowo z niej korzystać.</string>
   <string name="town_deco_flowerinthepot_name">Kwiat w doniczce</string>
   <string name="town_deco_flowerinthepot_desc">Dekoracyjny kwiat ze słodkim aromatem</string>
@@ -2755,8 +2747,16 @@ remix.29.6\n
   <string name="ManaShieldBuff_Name">Magiczna Tarcza</string>
   <string name="ManaShieldBuff_Info">Magiczna Tarcza</string>
   <string name="TenguLiver_Name">Wątroba Tengu</string>
-  <string name="TenguLiver_Info">Opis Wątroby Tengu</string>
+  <string name="TenguLiver_Info">Ta wątroba należy do potężnego wroga. Widząc ją , twój dziki instynkt przejmuje kontrolę i czujesz chęć, by ją skonsumować.</string>
   <string name="PotionOfMana_Name">Mikstura Many</string>
   <string name="PotionOfMana_Info">Ta mikstura odnowi twoją duchową energię.</string>
   <string name="WndFortuneTeller_IdentifyAll">Wszystko</string>
+  <string name="Snail_Name">slimak</string>
+  <string name="Snail_Gender">meski</string>
+  <string name="Snail_Name_Objective">slimak</string>
+  <string name="Snail_Desc">Przebywanie w ściekach sprawiło iż ten maly mięczak wyrósł do niespotykanych rozmiarów,  jest on jednak dość łatwym przeciwnikiem z uwagi na jego ślamazarność.</string>
+  <string name="DeepSnail_Name">slimak rogaty</string>
+  <string name="DeepSnail_Gender">meski</string>
+  <string name="DeepSnail_Name_Objective">slimak rogaty</string>
+  <string name="DeepSnail_Desc">Spotykany w pobliżu zbiorników wodnych, mięczaków ten przewyższa typowego ślimaka, jest szybszy ,groźniejszy, a jego ugryzienia owodują nieprzyjemne efekty na skórze ofiary.</string>
 </resources>

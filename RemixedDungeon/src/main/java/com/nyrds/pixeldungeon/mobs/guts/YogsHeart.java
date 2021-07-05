@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
-import com.watabou.pixeldungeon.RemixedDungeon;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -36,7 +36,7 @@ public class YogsHeart extends Mob {
 
     @Override
     public int defenseProc(Char enemy, int damage) {
-        CharUtils.spawnOnNextCell(this, "Larva", (int) (10 * RemixedDungeon.getDifficultyFactor()));
+        CharUtils.spawnOnNextCell(this, "Larva", (int) (10 * GameLoop.getDifficultyFactor()));
 
         return super.defenseProc(enemy, damage);
     }

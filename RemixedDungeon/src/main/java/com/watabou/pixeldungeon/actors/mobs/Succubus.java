@@ -84,7 +84,8 @@ public class Succubus extends Mob {
 		if (level().fieldOfView[target] && level().distance(getPos(), target) > 2 && delay <= 0) {
 			CharUtils.blinkTo(this, target);
 			delay = BLINK_DELAY;
-			spend(-1 / speed() - Actor.MICRO_TICK);
+			spend(-1 / speed());
+			spend(Actor.MICRO_TICK);
 			return true;
 		} else {
 			delay--;

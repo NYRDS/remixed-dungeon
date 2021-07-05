@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
 abstract public class ClassArmor extends Armor {
 
-	private int specialCostModifier = 3;
+	private final int specialCostModifier = 3;
 
 	@Packable
 	public int STR;

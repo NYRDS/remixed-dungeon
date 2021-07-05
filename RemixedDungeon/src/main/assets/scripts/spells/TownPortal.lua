@@ -28,6 +28,8 @@ return spell.init{
             RPD.glogn("ScrollOfTeleportation_NoTeleport")
             return false
         end
+
+        caster:setPortalLevelCoordinates(caster:getPosition())
         RPD.teleportTo("town_2", 15,11)
         return true
     end

@@ -18,8 +18,8 @@
 package com.watabou.pixeldungeon.items.scrolls;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -47,7 +47,7 @@ public class ScrollOfTerror extends Scroll {
 		int count = 0;
 		Mob affected = null;
 		for (Mob mob : level.getCopyOfMobsArray()) {
-			if (level.fieldOfView[mob.getPos()]) {
+			if (level.fieldOfView[mob.getPos()] && mob.getOwnerId() != reader.getId()) {
 				Buff.affect( mob, Terror.class, Terror.DURATION ).setSource(reader);
 				count++;
 				affected = mob;

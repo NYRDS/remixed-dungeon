@@ -20,13 +20,12 @@ package com.watabou.pixeldungeon.items.weapon.enchantments;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.utils.Random;
 
 public class Poison extends Weapon.Enchantment {
 	
-	private static ItemSprite.Glowing PURPLE = new ItemSprite.Glowing( 0x4400AA );
+	private static Glowing PURPLE = new Glowing( 0x4400AA );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

@@ -1,12 +1,12 @@
 package com.watabou.pixeldungeon.sprites;
 
-import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.utils.ItemsList;
+import com.nyrds.util.JsonHelper;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;

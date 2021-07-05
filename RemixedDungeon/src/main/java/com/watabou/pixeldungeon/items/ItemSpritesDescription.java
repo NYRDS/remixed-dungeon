@@ -1,8 +1,8 @@
 package com.watabou.pixeldungeon.items;
 
-import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.ModdingMode;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.JsonHelper;
+import com.nyrds.util.ModdingMode;
 
 import org.json.JSONException;
 import org.json.JSONObject;

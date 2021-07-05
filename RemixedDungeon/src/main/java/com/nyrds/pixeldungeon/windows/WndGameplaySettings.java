@@ -1,9 +1,9 @@
 
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.RemixedDungeon;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.windows.Selector;
 import com.watabou.pixeldungeon.windows.WndMenuCommon;
 
@@ -13,11 +13,11 @@ public class WndGameplaySettings extends WndMenuCommon {
 
     @Override
     protected void createItems() {
-        menuItems.add(new MenuCheckBox("Realtime!",RemixedDungeon.realtime()) {
+        menuItems.add(new MenuCheckBox("Realtime!", GamePreferences.realtime()) {
             @Override
             protected void onClick() {
                 super.onClick();
-                RemixedDungeon.realtime(checked());
+                GamePreferences.realtime(checked());
                 moveTimeoutSelector.enable(!checked());
             }
         });
@@ -29,22 +29,22 @@ public class WndGameplaySettings extends WndMenuCommon {
 
         return new Selector( WIDTH, BUTTON_HEIGHT, moveTimeoutText(), new Selector.PlusMinusDefault() {
 
-            private int selectedTimeout = RemixedDungeon.limitTimeoutIndex(RemixedDungeon.moveTimeout());
+            private int selectedTimeout = GamePreferences.limitTimeoutIndex(GamePreferences.moveTimeout());
 
             private void update(Selector s) {
-                RemixedDungeon.moveTimeout(selectedTimeout);
+                GamePreferences.moveTimeout(selectedTimeout);
                 s.setText(moveTimeoutText());
             }
 
             @Override
             public void onPlus(Selector s) {
-                selectedTimeout = RemixedDungeon.limitTimeoutIndex(selectedTimeout+1);
+                selectedTimeout = GamePreferences.limitTimeoutIndex(selectedTimeout+1);
                 update(s);
             }
 
             @Override
             public void onMinus(Selector s) {
-                selectedTimeout = RemixedDungeon.limitTimeoutIndex(selectedTimeout-1);
+                selectedTimeout = GamePreferences.limitTimeoutIndex(selectedTimeout-1);
                 update(s);
             }
 
@@ -55,6 +55,6 @@ public class WndGameplaySettings extends WndMenuCommon {
     }
 
     private String moveTimeoutText() {
-        return String.format(Game.getVar(R.string.WndSettings_moveTimeout),Double.toString(RemixedDungeon.getMoveTimeout()/1000));
+        return String.format(Game.getVar(R.string.WndSettings_moveTimeout),Double.toString(GamePreferences.getMoveTimeout()/1000));
     }
 }

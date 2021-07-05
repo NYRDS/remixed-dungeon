@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;

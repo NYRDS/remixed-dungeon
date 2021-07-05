@@ -17,12 +17,12 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.effects.emitters.Vein;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
-import com.nyrds.pixeldungeon.effects.emitters.Vein;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.utils.Random;
@@ -84,28 +84,28 @@ public class CavesLevel extends RegularLevel {
 			if (Random.Int( s ) > 8) {
 				int corner = (room.left + 1) + (room.top + 1) * getWidth();
 				if (map[corner - 1] == Terrain.WALL && map[corner - getWidth()] == Terrain.WALL) {
-					map[corner] = Terrain.WALL;
+					set(corner, Terrain.WALL);
 				}
 			}
 			
 			if (Random.Int( s ) > 8) {
 				int corner = (room.right - 1) + (room.top + 1) * getWidth();
 				if (map[corner + 1] == Terrain.WALL && map[corner - getWidth()] == Terrain.WALL) {
-					map[corner] = Terrain.WALL;
+					set(corner, Terrain.WALL);
 				}
 			}
 			
 			if (Random.Int( s ) > 8) {
 				int corner = (room.left + 1) + (room.bottom - 1) * getWidth();
 				if (map[corner - 1] == Terrain.WALL && map[corner + getWidth()] == Terrain.WALL) {
-					map[corner] = Terrain.WALL;
+					set(corner, Terrain.WALL);
 				}
 			}
 			
 			if (Random.Int( s ) > 8) {
 				int corner = (room.right - 1) + (room.bottom - 1) * getWidth();
 				if (map[corner + 1] == Terrain.WALL && map[corner + getWidth()] == Terrain.WALL) {
-					map[corner] = Terrain.WALL;
+					set(corner, Terrain.WALL);
 				}
 			}
 
@@ -139,7 +139,7 @@ public class CavesLevel extends RegularLevel {
 		
 		for (int i=0; i < getLength(); i++) {
 			if (map[i] == Terrain.WALL && Random.Int( 12 ) == 0) {
-				map[i] = Terrain.WALL_DECO;
+				set(i, Terrain.WALL_DECO);
 			}
 		}
 

@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.support;
 
 import androidx.annotation.MainThread;
 
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;
 
 import org.jetbrains.annotations.Nullable;
@@ -97,7 +97,7 @@ class AdsUtilsCommon {
     }
 
     static void displayTopBanner() {
-        if(Ads.bannerIndex()<0) {
+        if(AdsUtils.bannerIndex() <0) {
             tryNextBanner();
         }
     }

@@ -21,8 +21,8 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
@@ -137,7 +137,12 @@ public class Earthroot extends Plant {
 		
 		@Override
 		public String name() {
-			return Game.getVar(R.string.Earthroot_Buff);
+			return Game.getVar(R.string.EarthrootBuff_Name);
+		}
+
+		@Override
+		public String desc() {
+			return Game.getVar(R.string.EarthrootBuff_Info);
 		}
 	}
 }

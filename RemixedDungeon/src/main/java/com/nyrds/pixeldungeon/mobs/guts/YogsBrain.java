@@ -1,10 +1,10 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -88,7 +88,7 @@ public class YogsBrain extends Mob implements IZapper {
             return super.act();
         }
 
-        var spawn = CharUtils.spawnOnNextCell(this, "Nightmare", (int) (10 * RemixedDungeon.getDifficultyFactor()));
+        var spawn = CharUtils.spawnOnNextCell(this, "Nightmare", (int) (10 * GameLoop.getDifficultyFactor()));
 
         if(spawn.valid()) {
             spend( TIME_TO_SUMMON );

@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.items.necropolis;
 
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
-import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
+import com.watabou.pixeldungeon.sprites.Glowing;
 
 //This weapon supposed to cast projectiles towards target enemy, so that they would hit first thing in they're path
 public class BladeOfSouls extends MeleeWeapon {

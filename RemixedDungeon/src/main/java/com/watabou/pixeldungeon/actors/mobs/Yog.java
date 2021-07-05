@@ -21,14 +21,14 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
@@ -88,7 +88,7 @@ public class Yog extends Boss {
         String [] secondaryBossArray = {"RottingFist", "BurningFist", "YogsBrain", "YogsHeart", "YogsTeeth"};
         var names = new ArrayList<String>();
 
-        int organsCount = Game.getDifficulty() > 2 ? 3 : 2;
+        int organsCount = GameLoop.getDifficulty() > 2 ? 3 : 2;
 
         do {
 			var candidate = Random.oneOf(secondaryBossArray);
@@ -124,7 +124,7 @@ public class Yog extends Boss {
 
 	@Override
 	public int defenseProc(Char enemy, int damage) {
-		CharUtils.spawnOnNextCell(this, "Larva", (int) (10 * RemixedDungeon.getDifficultyFactor()));
+		CharUtils.spawnOnNextCell(this, "Larva", (int) (10 * GameLoop.getDifficultyFactor()));
 
 		return super.defenseProc(enemy, damage);
 	}

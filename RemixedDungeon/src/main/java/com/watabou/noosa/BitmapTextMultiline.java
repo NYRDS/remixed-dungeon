@@ -17,8 +17,7 @@
 
 package com.watabou.noosa;
 
-import android.graphics.RectF;
-
+import com.nyrds.platform.compatibility.RectF;
 import com.watabou.glwrap.Quad;
 import com.watabou.utils.PointF;
 

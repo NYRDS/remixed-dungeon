@@ -64,17 +64,17 @@ public class FireElemental extends Mob {
 	}
 	
 	@Override
-	public void add( Buff buff ) {
+	public boolean add(Buff buff ) {
 		if (buff instanceof Burning) {
 		    heal(Random.NormalIntRange( 1, ht() * 4 ), buff);
-			return;
+			return false;
 		}
 
 		if (buff instanceof Frost) {
 			damage( Random.NormalIntRange( 1, ht() * 2 / 3 ), buff );
-			return;
+			return false;
 		}
 
-		super.add( buff );
-	}	
+		return super.add( buff );
+	}
 }

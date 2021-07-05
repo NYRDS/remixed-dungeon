@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.utils;
 
-import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.Util;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -34,6 +34,8 @@ public class Utils {
 
     public static final String UNKNOWN = "unknown";
     public static final String EMPTY_STRING = "";
+    public static final String[] EMPTY_STRING_ARRAY = new String[0];
+
 
     @NotNull
     private static final Class<?> strings = getR_Field("string");

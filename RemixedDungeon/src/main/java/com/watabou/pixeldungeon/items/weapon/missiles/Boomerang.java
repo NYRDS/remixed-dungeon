@@ -96,7 +96,7 @@ public class Boomerang extends MissileWeapon {
 				.recycle(MissileSprite.class)).reset(from, owner.getPos(),
 				this, ()-> {
 					if (throwSlot != Belongings.Slot.NONE) {
-						owner.spend(-TIME_TO_EQUIP);
+						owner.spend(-time2equip(owner));
 						owner.getBelongings().setItemForSlot(this, throwSlot);
 					} else {
 						owner.collect(this);
@@ -110,6 +110,9 @@ public class Boomerang extends MissileWeapon {
 	@Override
 	public void cast(@NotNull Char user, int dst ) {
 		throwSlot = getOwner().getBelongings().itemSlot(this);
+		if (throwSlot != Belongings.Slot.NONE) {
+			user.spend(-time2equip(user));
+		}
 		super.cast( user, dst );
 	}
 

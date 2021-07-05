@@ -17,19 +17,20 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import com.nyrds.android.util.GuiProperties;
-import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.effects.NewFireball;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.pixeldungeon.windows.VBox;
+import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.util.GuiProperties;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
-import com.watabou.noosa.audio.Music;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ChangelogButton;
 import com.watabou.pixeldungeon.ui.DashboardItem;
@@ -81,13 +82,15 @@ public class TitleScene extends PixelScene {
 				RemixedDungeon.switchNoFade(BadgesScene.class);
 			}
 		};
-		btnBadges.setPos(w / 2 - btnBadges.width(), (h + height) / 2
+		final int w_center = w / 2;
+
+		btnBadges.setPos(w_center - btnBadges.width(), (h + height) / 2
 				- DashboardItem.SIZE);
 		add(btnBadges);
 
 
 		ModsButton btnMods = new ModsButton();
-		btnMods.setPos(w / 2, (h + height) / 2 - DashboardItem.SIZE);
+		btnMods.setPos(w_center, (h + height) / 2 - DashboardItem.SIZE);
 		add(btnMods);
 
 		DashboardItem btnPlay = new DashboardItem(Game.getVar(R.string.TitleScene_Play), 0) {
@@ -96,7 +99,7 @@ public class TitleScene extends PixelScene {
 				RemixedDungeon.switchNoFade(StartScene.class);
 			}
 		};
-		btnPlay.setPos(w / 2 - btnPlay.width(), btnMods.top()
+		btnPlay.setPos(w_center - btnPlay.width(), btnMods.top()
 				- DashboardItem.SIZE);
 		add(btnPlay);
 
@@ -106,7 +109,7 @@ public class TitleScene extends PixelScene {
 				RemixedDungeon.switchNoFade(RankingsScene.class);
 			}
 		};
-		btnHighscores.setPos(w / 2, btnPlay.top());
+		btnHighscores.setPos(w_center, btnPlay.top());
 		add(btnHighscores);
 
 		btnDonate = new DonateButton(this);
@@ -122,16 +125,16 @@ public class TitleScene extends PixelScene {
 		float dashBaseline = btnDonate.top() - DashboardItem.SIZE;
 
 		if (RemixedDungeon.landscape()) {
-			btnPlay.setPos(w / 2 - btnPlay.width() * 2, dashBaseline);
-			btnHighscores.setPos(w / 2 - btnHighscores.width(), dashBaseline + btnHighscores.height()/3);
-			btnBadges.setPos(w / 2, dashBaseline + btnBadges.height()/3);
+			btnPlay.setPos(w_center - btnPlay.width() * 2, dashBaseline);
+			btnHighscores.setPos(w_center - btnHighscores.width(), dashBaseline + btnHighscores.height()/3);
+			btnBadges.setPos(w_center, dashBaseline + btnBadges.height()/3);
 			btnMods.setPos(btnBadges.right(), dashBaseline);
 		} else {
-			btnPlay.setPos(w / 2 - btnPlay.width(), btnMods.top()
+			btnPlay.setPos(w_center - btnPlay.width(), btnMods.top()
 					- DashboardItem.SIZE + 5);
-			btnHighscores.setPos(w / 2, btnPlay.top());
-			btnBadges.setPos(w / 2 - btnBadges.width(), dashBaseline + 5);
-			btnMods.setPos(w / 2, dashBaseline + 5);
+			btnHighscores.setPos(w_center, btnPlay.top());
+			btnBadges.setPos(w_center - btnBadges.width(), dashBaseline + 5);
+			btnMods.setPos(w_center, dashBaseline + 5);
 		}
 
 		Archs archs = new Archs();
@@ -146,20 +149,20 @@ public class TitleScene extends PixelScene {
 		float freeInternalStorage = Util.getAvailableInternalMemorySize();
 
 		if (freeInternalStorage < 2) {
-			Text lowInteralStorageWarning = PixelScene
+			Text lowInternalStorageWarning = PixelScene
 					.createMultiline(GuiProperties.regularFontSize());
-			lowInteralStorageWarning.text(Game
+			lowInternalStorageWarning.text(Game
 					.getVar(R.string.TitleScene_InternalStorageLow));
-			lowInteralStorageWarning.setPos(0,
-					h - lowInteralStorageWarning.height());
-			lowInteralStorageWarning.hardlight(0.95f, 0.1f, 0.1f);
-			add(lowInteralStorageWarning);
+			lowInternalStorageWarning.setPos(0,
+					h - lowInternalStorageWarning.height());
+			lowInternalStorageWarning.hardlight(0.95f, 0.1f, 0.1f);
+			add(lowInternalStorageWarning);
 		}
 
 		VBox leftGroup = new VBox();
 
 		leftGroup.add(new PrefsButton());
-        if (RemixedDungeon.donated() > 0) {
+        if (GamePreferences.donated() > 0) {
             leftGroup.add(new PremiumPrefsButton());
         }
 
@@ -167,7 +170,7 @@ public class TitleScene extends PixelScene {
 			leftGroup.add(new PlayGamesButton());
 		}
 
-        String lang = RemixedDungeon.uiLanguage();
+        String lang = GamePreferences.uiLanguage();
         final boolean useVk = lang.equals("ru");
 
         Icons social =  useVk ? Icons.VK : Icons.FB;
@@ -205,8 +208,8 @@ public class TitleScene extends PixelScene {
 		btnExit.setPos(w - btnExit.width(), 0);
 		add(btnExit);
 
-		if (RemixedDungeon.version() != Game.versionCode) {
-			if(Utils.differentVersions(RemixedDungeon.versionString(),Game.version)) {
+		if (GamePreferences.version() != Game.versionCode) {
+			if(Utils.differentVersions(GamePreferences.versionString(),Game.version)) {
 				changelogUpdated = true;
 			}
 		}
@@ -220,8 +223,6 @@ public class TitleScene extends PixelScene {
 		btnStats.setPos(w - btnStats.width(), btnChangelog.bottom() + 2);
 		add(btnStats);
 
-
-
 		fadeIn();
 	}
 
@@ -230,7 +231,7 @@ public class TitleScene extends PixelScene {
 	@Override
 	public void update() {
 		super.update();
-		time += Game.elapsed;
+		time += GameLoop.elapsed;
 		float cl = (float) Math.sin(time) * 0.5f + 0.5f;
 		if(!donationAdded) {
 			if (RemixedDungeon.canDonate()) {
@@ -247,11 +248,4 @@ public class TitleScene extends PixelScene {
 		}
 
 	}
-
-	private void placeTorch(float x, float y) {
-		NewFireball fb = new NewFireball();
-		fb.setPos(x, y);
-		add(fb);
-	}
-
 }

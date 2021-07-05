@@ -18,8 +18,8 @@
 package com.watabou.pixeldungeon.items.scrolls;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -34,6 +34,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
+
+import lombok.var;
 
 public class ScrollOfMagicMapping extends Scroll {
 
@@ -66,9 +68,19 @@ public class ScrollOfMagicMapping extends Scroll {
 				}
 			}
 		}
+
+		for(var lo : level.getAllLevelObjects()) {
+			if(lo.secret()) {
+				lo.discover();
+				discover(lo.getPos());
+				noticed = true;
+			}
+		}
+
 		Dungeon.observe();
 		
 		GLog.i( Game.getVar(R.string.ScrollOfMagicMapping_Layout) );
+
 		if (noticed) {
 			Sample.INSTANCE.play( Assets.SND_SECRET );
 		}

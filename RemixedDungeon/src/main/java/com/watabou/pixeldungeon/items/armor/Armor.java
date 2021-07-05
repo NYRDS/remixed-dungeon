@@ -18,11 +18,11 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.Packable;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -40,7 +40,7 @@ import com.watabou.pixeldungeon.items.armor.glyphs.Multiplicity;
 import com.watabou.pixeldungeon.items.armor.glyphs.Potential;
 import com.watabou.pixeldungeon.items.armor.glyphs.Stench;
 import com.watabou.pixeldungeon.items.armor.glyphs.Viscosity;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
@@ -213,7 +213,7 @@ public class Armor extends EquipableItem {
 	}
 
 	@Override
-	public ItemSprite.Glowing glowing() {
+	public Glowing glowing() {
 		return glyph != null ? glyph.glowing() : null;
 	}
 
@@ -289,8 +289,8 @@ public class Armor extends EquipableItem {
 			return false;
 		}
 		
-		public ItemSprite.Glowing glowing() {
-			return ItemSprite.Glowing.WHITE;
+		public Glowing glowing() {
+			return Glowing.WHITE;
 		}
 		
 		public void checkOwner( Char owner ) {

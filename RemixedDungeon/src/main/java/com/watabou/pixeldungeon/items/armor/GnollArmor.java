@@ -1,8 +1,8 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -69,5 +69,10 @@ public class GnollArmor extends ClassArmor {
             GLog.w( Game.getVar(R.string.GnollArmor_NotGnoll) );
             return false;
         }
+    }
+
+    @Override
+    public String desc() {
+        return Game.getVar(R.string.GnollArmor_Info);
     }
 }

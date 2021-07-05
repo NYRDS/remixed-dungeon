@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.SkinnedBlock;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
@@ -59,7 +59,7 @@ public class Archs extends Component {
 		
 		super.update();
 		
-		float shift = Game.elapsed * SCROLL_SPEED;
+		float shift = GameLoop.elapsed * SCROLL_SPEED;
 		if (reversed) {
 			shift = -shift;
 		}

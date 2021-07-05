@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.effects.Splash;
@@ -38,9 +38,13 @@ public class Bleeding extends Buff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Bleeding_Info);
+		return Game.getVar(R.string.BleedingBuff_Name);
 	}
-	
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.BleedingBuff_Info);
+	}
 	@Override
 	public boolean act() {
 		if (target.isAlive()) {
@@ -48,9 +52,11 @@ public class Bleeding extends Buff {
 			if ((level = Random.Int( level / 2, level )) > 0) {
 				
 				target.damage( level, this );
-				if (target.getSprite().getVisible()) {
-					Splash.at( target.getSprite().center(), -PointF.PI / 2, PointF.PI / 6, 
-							target.getSprite().blood(), Math.min( 10 * level / target.ht(), 10 ) );
+				final CharSprite targetSprite = target.getSprite();
+
+				if (targetSprite.getVisible()) {
+					Splash.at( targetSprite.center(), -PointF.PI / 2, PointF.PI / 6,
+							targetSprite.blood(), Math.min( 10 * level / target.ht(), 10 ) );
 				}
 				
 				if (target == Dungeon.hero && !target.isAlive()) {

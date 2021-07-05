@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.effects;
 
-import com.nyrds.android.util.JsonHelper;
+import com.nyrds.util.JsonHelper;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;

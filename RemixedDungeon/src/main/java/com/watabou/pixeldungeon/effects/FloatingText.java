@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.effects;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -49,7 +49,7 @@ public class FloatingText extends BitmapText {
 		super.update();
 		
 		if (timeLeft > 0) {
-			if ((timeLeft -= Game.elapsed) <= 0) {
+			if ((timeLeft -= GameLoop.elapsed) <= 0) {
 				kill();
 			} else {
 				float p = timeLeft / LIFESPAN;

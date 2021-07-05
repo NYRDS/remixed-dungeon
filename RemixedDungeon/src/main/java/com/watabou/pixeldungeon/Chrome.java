@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon;
 
-import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.platform.util.TrackedRuntimeException;
 import com.watabou.noosa.NinePatch;
 
 public class Chrome {

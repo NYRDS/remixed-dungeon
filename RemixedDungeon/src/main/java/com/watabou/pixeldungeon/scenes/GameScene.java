@@ -18,29 +18,32 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.effects.EffectsFactory;
 import com.nyrds.pixeldungeon.effects.ParticleEffect;
 import com.nyrds.pixeldungeon.effects.ZapEffect;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.levels.TestLevel;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.SkinnedBlock;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
-import com.watabou.noosa.audio.Music;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.DummyEmitter;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
@@ -50,7 +53,6 @@ import com.watabou.pixeldungeon.CustomLayerTilemap;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.FogOfWar;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -80,6 +82,7 @@ import com.watabou.pixeldungeon.ui.Banner;
 import com.watabou.pixeldungeon.ui.BusyIndicator;
 import com.watabou.pixeldungeon.ui.GameLog;
 import com.watabou.pixeldungeon.ui.HealthIndicator;
+import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.ui.ResumeIndicator;
 import com.watabou.pixeldungeon.ui.StatusPane;
@@ -87,9 +90,11 @@ import com.watabou.pixeldungeon.ui.Toast;
 import com.watabou.pixeldungeon.ui.Toolbar;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndBag.Mode;
 import com.watabou.pixeldungeon.windows.WndGame;
+import com.watabou.pixeldungeon.windows.WndTitledMessage;
 import com.watabou.utils.Random;
 import com.watabou.utils.SparseArray;
 
@@ -97,6 +102,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
+
+import lombok.var;
 
 public class GameScene extends PixelScene {
 
@@ -182,11 +189,11 @@ public class GameScene extends PixelScene {
     public void createGameScene(@NotNull Level level, @NotNull Hero hero) {
         playLevelMusic();
 
-        RemixedDungeon.lastClass(hero.getHeroClass().classIndex());
+        GamePreferences.lastClass(hero.getHeroClass().classIndex());
 
         super.create();
 
-        Camera.main.zoom((float) (defaultZoom + RemixedDungeon.zoom()));
+        Camera.main.zoom((float) (defaultZoom + GamePreferences.zoom()));
 
         scene = this;
 
@@ -304,7 +311,7 @@ public class GameScene extends PixelScene {
         fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
         add(fog);
 
-        brightness(RemixedDungeon.brightness());
+        brightness(GamePreferences.brightness());
 
         spells = new Group();
         add(spells);
@@ -418,6 +425,29 @@ public class GameScene extends PixelScene {
 
 
         doSelfTest();
+
+        final double moveTimeout = Dungeon.moveTimeout();
+        final boolean realtime = Dungeon.realtime();
+
+        if(realtime || moveTimeout < Double.POSITIVE_INFINITY) {
+
+            String msg = "";
+            if(realtime) {
+                msg += Game.getVar(R.string.WrnExperimental_realtime);
+            } else {
+                if (moveTimeout < Double.POSITIVE_INFINITY) {
+                    msg += Utils.format(R.string.WrnExperimental_moveTimeout, (int)moveTimeout);
+                }
+            }
+
+            msg += "\n\n";
+            msg += Game.getVar(R.string.WnrExperimental_hint);
+
+            add(new WndTitledMessage(Icons.get(Icons.ALERT),
+                    Game.getVar(R.string.WrnExperimental_title),
+                    msg
+            ));
+        }
     }
 
     private void doSelfTest() {
@@ -430,6 +460,17 @@ public class GameScene extends PixelScene {
 
             GLog.debug(Dungeon.hero.immunities().toString());
             //GLog.toFile(StringsManager.missingStrings.toString());
+
+            for (var lo : level.getAllLevelObjects()) {
+                int pos = lo.getPos();
+                if(level.solid[pos]) {
+                    throw new ModError(Utils.format("%s on a solid cell %d", lo.getEntityKind(), pos));
+                }
+
+                if(level.pit[pos]) {
+                    throw new ModError(Utils.format("%s on a pit cell %d", lo.getEntityKind(), pos));
+                }
+            }
         }
 
         if(level instanceof TestLevel) {
@@ -482,9 +523,9 @@ public class GameScene extends PixelScene {
 
         super.update();
 
-        water.offset(waterSx * Game.elapsed, waterSy * Game.elapsed);
+        water.offset(waterSx * GameLoop.elapsed, waterSy * GameLoop.elapsed);
 
-        Actor.process(Game.elapsed);
+        Actor.process(GameLoop.elapsed);
 
         if (hero.isReady() && !hero.paralysed) {
             log.newLine();
@@ -744,9 +785,10 @@ public class GameScene extends PixelScene {
     public static void afterObserve() {
         if (isSceneReady() && scene.sceneCreated) {
 
-            scene.fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
+            final Level level = Dungeon.level;
+            scene.fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
 
-            for (Mob mob : Dungeon.level.mobs) {
+            for (Mob mob : level.mobs) {
                 mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
             }
         }

@@ -20,8 +20,8 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -214,8 +214,9 @@ public class Blacksmith extends NPC {
 	}
 	
 	@Override
-	public void add( Buff buff ) {
-	}
+	public boolean add(Buff buff ) {
+        return false;
+    }
 	
 	@Override
 	public boolean reset() {

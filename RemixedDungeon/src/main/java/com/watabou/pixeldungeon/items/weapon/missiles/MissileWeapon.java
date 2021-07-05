@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -54,11 +54,11 @@ public class MissileWeapon extends Weapon {
 
 	@Override
 	protected void onThrow(int cell, @NotNull Char thrower) {
-		Char enemy = Actor.findChar( cell );
-		if (enemy == null || enemy == thrower) {
+		Char target = Actor.findChar( cell );
+		if (target == null || !target.valid() || target == thrower) {
 			super.onThrow( cell, thrower);
 		} else {
-			if (!thrower.shoot( enemy, this )) {
+			if (!thrower.shoot( target, this )) {
 				miss( cell,thrower );
 			}
 		}

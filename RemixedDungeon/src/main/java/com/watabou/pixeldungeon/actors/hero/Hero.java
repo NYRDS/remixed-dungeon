@@ -19,30 +19,30 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Sleeping;
-import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.pixeldungeon.windows.MovieRewardTask;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Scrambler;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -75,7 +75,6 @@ import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
-import com.watabou.pixeldungeon.items.rings.RingOfHaste;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
@@ -261,7 +260,7 @@ public class Hero extends Char {
 
 		float skillFactor = 1;
 		if (getDifficulty()==0) {
-			skillFactor = 1.2f;
+			skillFactor *= 1.2f;
 		}
 
 		return (int) (super.defenseSkill(enemy) * skillFactor);
@@ -294,30 +293,6 @@ public class Hero extends Char {
 			float speed = super.speed();
 			return getHeroSprite().sprint(subClass == HeroSubClass.FREERUNNER && !isStarving()) ? 1.6f * speed : speed;
 		}
-	}
-
-	@Override
-	public void spend(float time) {
-		int hasteLevel = 0;
-
-		if (heroClass == HeroClass.ELF) {
-			hasteLevel++;
-			if (subClass == HeroSubClass.SCOUT) {
-				hasteLevel++;
-			}
-		}
-
-		hasteLevel+= buffLevel(RingOfHaste.Haste.class);
-
-		for (Item item : getBelongings()) {
-			if (item instanceof IActingItem && item.isEquipped(this)) {
-				((IActingItem) item).spend(this, time);
-			}
-		}
-
-		QuickSlot.refresh(this);
-
-		super.spend(hasteLevel == 0 ? time : (float) (time * Math.pow(1.1, -hasteLevel)));
 	}
 
 	@Override
@@ -673,11 +648,11 @@ public class Hero extends Char {
 	}
 
 	@Override
-	public void add(Buff buff) {
+	public boolean add(Buff buff) {
 		super.add(buff);
 
 		if (!GameScene.isSceneReady()) {
-			return;
+			return false;
 		}
 
 		if (buff instanceof Burning) {
@@ -712,6 +687,7 @@ public class Hero extends Char {
 		}
 
 		BuffIndicator.refreshHero();
+		return true;
 	}
 
 	@Override
@@ -732,12 +708,12 @@ public class Hero extends Char {
 		deathDesc.put("cause", cause.getEntityKind());
 		deathDesc.put("duration", Float.toString(Statistics.duration));
 
-		deathDesc.put("difficulty", Integer.toString(Game.getDifficulty()));
+		deathDesc.put("difficulty", Integer.toString(GameLoop.getDifficulty()));
 		deathDesc.put("version", Game.version);
 		deathDesc.put("mod", ModdingMode.activeMod());
 		deathDesc.put("modVersion",Integer.toString(ModdingMode.activeModVersion()));
 
-		deathDesc.put("donation",Integer.toString(RemixedDungeon.donated()));
+		deathDesc.put("donation",Integer.toString(GamePreferences.donated()));
 		deathDesc.put("heroLevel", Integer.toString(lvl()));
 		deathDesc.put("gameId",    Dungeon.gameId);
 
@@ -889,9 +865,10 @@ public class Hero extends Char {
 							smthFound = true;
 						}
 
-						LevelObject obj = level.getLevelObject(p);
+						LevelObject obj = level.getTopLevelObject(p);
 						if (obj != null && obj.secret()) {
 							obj.discover();
+							ScrollOfMagicMapping.discover(p);
 							smthFound = true;
 						}
 					}

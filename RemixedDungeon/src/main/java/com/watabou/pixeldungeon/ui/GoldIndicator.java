@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
@@ -59,7 +59,7 @@ public class GoldIndicator extends Component {
 		
 		if (getVisible()) {
 			
-			time -= Game.elapsed;
+			time -= GameLoop.elapsed;
 			if (time > 0) {
 				tf.alpha( time > TIME / 2 ? 1f : time * 2 / TIME );
 			} else {
@@ -70,7 +70,7 @@ public class GoldIndicator extends Component {
 
 		int gold = Dungeon.hero.gold();
 
-		if (gold != lastValue && !RemixedDungeon.toolStyle().equals(Tool.Size.Tiny.name())) {
+		if (gold != lastValue && !GamePreferences.toolStyle().equals(Tool.Size.Tiny.name())) {
 			
 			lastValue = gold;
 			

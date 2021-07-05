@@ -21,14 +21,15 @@ import android.annotation.SuppressLint;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
-import com.nyrds.android.util.ModError;
-import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.ModError;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -62,6 +63,15 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 	public void spend( float time ) {
 		GLog.debug("%s spend %2.4f", getEntityKind(), time);
+		if(Util.isDebug() && current!=this) {
+			if(this instanceof Char) {
+				GLog.debug("%s spends time on %s move!", getEntityKind(), current!=null?current.getEntityKind():"no one");
+				//throw new TrackedRuntimeException(String.format("%s spends time on %s move!", getEntityKind(), current!=null?current.getEntityKind():"no one"));
+			}
+			if(this instanceof Hero && time > 5) {
+				GLog.debug("hero long spend!");
+			}
+		}
 		this.time += time;
 	}
 
@@ -229,7 +239,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 				if(Util.isDebug()) {
 					throw new ModError(error);
 				} else {
-					actor.spend(1);
+					actor.spend(TICK);
 					EventCollector.logException(error);
 				}
 			}

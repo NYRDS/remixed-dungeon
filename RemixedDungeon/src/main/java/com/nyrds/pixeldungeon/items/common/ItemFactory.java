@@ -1,9 +1,6 @@
 package com.nyrds.pixeldungeon.items.common;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.pixeldungeon.items.CustomItem;
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
@@ -40,9 +37,12 @@ import com.nyrds.pixeldungeon.items.material.SoulShard;
 import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.JsonHelper;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
@@ -502,9 +502,10 @@ public class ItemFactory {
         return Treasury.get().check(item);
     }
 
-    public static Item virtual(String cl) {
-        Item item = itemByName(cl);
+    public static Item virtual(Item sourceItem) {
+        Item item = itemByName(sourceItem.getEntityKind());
         item.quantity(0);
+        item.setImage(sourceItem.image());
         return item;
     }
 

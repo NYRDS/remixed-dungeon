@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -38,7 +38,12 @@ public class Terror extends FlavourBuff {
 
 	@Override
 	public String name() {
-		return "Terror";
+		return Game.getVar(R.string.TerrorBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.TerrorBuff_Info);
 	}
 	
 	public static void recover( Char target ) {

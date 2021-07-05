@@ -1,12 +1,12 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.effects.emitters.Candle;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.nyrds.pixeldungeon.effects.emitters.Candle;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Patch;
 import com.watabou.pixeldungeon.levels.RegularLevel;

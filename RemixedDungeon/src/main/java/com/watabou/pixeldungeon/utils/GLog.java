@@ -19,10 +19,11 @@ package com.watabou.pixeldungeon.utils;
 
 import android.util.Log;
 
-import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.Util;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.StringsManager;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.Util;
 import com.watabou.utils.Signal;
 
 import java.io.File;
@@ -113,7 +114,7 @@ public class GLog {
 		}
 
 		final String finalText = text;
-		Game.pushUiTask(() -> update.dispatch(finalText)
+		GameLoop.pushUiTask(() -> update.dispatch(finalText)
 		);
 	}
 

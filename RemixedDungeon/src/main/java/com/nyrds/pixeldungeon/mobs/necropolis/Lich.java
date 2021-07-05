@@ -1,14 +1,14 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.nyrds.Packable;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -253,10 +253,10 @@ public class Lich extends Boss {
 
     private void spawnSkulls(){
         int nSkulls = SKULLS_BY_DEFAULT;
-        if(Game.getDifficulty() == 0){
+        if(GameLoop.getDifficulty() == 0){
             nSkulls = 2;
         }
-        else if(Game.getDifficulty() > 2){
+        else if(GameLoop.getDifficulty() > 2){
             nSkulls = SKULLS_MAX;
         }
 

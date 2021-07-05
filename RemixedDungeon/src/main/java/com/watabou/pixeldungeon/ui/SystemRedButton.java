@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.android.util.GuiProperties;
-import com.watabou.noosa.SystemText;
+import com.nyrds.platform.gfx.SystemText;
+import com.nyrds.util.GuiProperties;
 import com.watabou.pixeldungeon.Chrome;
 
 public class SystemRedButton extends TextButton{

@@ -1,8 +1,8 @@
 package com.watabou.pixeldungeon.effects;
 
-import com.nyrds.android.util.GuiProperties;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.SystemText;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.gfx.SystemText;
+import com.nyrds.util.GuiProperties;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -33,7 +33,7 @@ public class SystemFloatingText extends SystemText {
 	public void update() {
 		super.update();
 
-		if ((timeLeft -= Game.elapsed) <= 0) {
+		if ((timeLeft -= GameLoop.elapsed) <= 0) {
 			killAndErase();
 		} else {
 			float p = timeLeft / LIFESPAN;

@@ -26,7 +26,7 @@ public class BlackSkullOfMastery extends MasteryItem {
 	}
 
 	@Override
-	protected boolean givesMasteryTo(Char hero) {
+    public boolean givesMasteryTo(Char hero) {
 		return hero.getHeroClass() == HeroClass.NECROMANCER;
 	}
 

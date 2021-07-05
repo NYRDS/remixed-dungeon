@@ -3,14 +3,16 @@ package com.watabou.pixeldungeon.windows;
 import android.content.Intent;
 import android.net.Uri;
 
-import com.nyrds.android.util.GuiProperties;
-import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.input.Touchscreen.Touch;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.input.Touchscreen.Touch;
+import com.nyrds.util.GuiProperties;
+import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -28,7 +30,7 @@ public class WndModDescription extends Window {
 
 		this.prevMod = prevMod;
 
-		RemixedDungeon.activeMod(option);
+		GamePreferences.activeMod(option);
 
 		yPos = 0;
 		
@@ -129,11 +131,11 @@ public class WndModDescription extends Window {
 	@Override
 	public void hide() {
 		super.hide();
-		RemixedDungeon.activeMod(prevMod);
+		GamePreferences.activeMod(prevMod);
 	}
 
 	public void onBackPressed() {
 		hide();
-		Game.addToScene(new WndModSelect());
+		GameLoop.addToScene(new WndModSelect());
 	}
 }

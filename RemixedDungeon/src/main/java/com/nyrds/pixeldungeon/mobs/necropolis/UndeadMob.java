@@ -38,13 +38,13 @@ public class UndeadMob extends Mob {
 	}
 
 	@Override
-	public void add(Buff buff) {
+	public boolean add(Buff buff) {
 		if (!Dungeon.isLoading()) {
 			if (buff instanceof Burning) {
 				damage(Random.NormalIntRange(1, ht() / 8), buff);
 			}
 		}
 
-		super.add(buff);
-	}
+		return super.add(buff);
+    }
 }

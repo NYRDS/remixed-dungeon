@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.windows.elements;
 
+import com.nyrds.platform.audio.Sample;
 import com.watabou.noosa.NinePatch;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Chrome;

@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -32,9 +32,13 @@ public class RingOfStoneWalking extends Artifact{
 
 		@Override
 		public String name() {
-			return Game.getVar(R.string.StoneBlood_Buff);
+			return Game.getVar(R.string.StoneBloodBuff_Name);
 		}
 
+		@Override
+		public String desc() {
+			return Game.getVar(R.string.StoneBloodBuff_Info);
+		}
 		@Override
 		public void onDeath() {
 			Badges.validateDeathInStone();

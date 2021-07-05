@@ -19,7 +19,7 @@ package com.watabou.noosa.particles;
 
 import android.opengl.GLES20;
 
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Visual;
 import com.watabou.utils.PointF;
@@ -99,7 +99,7 @@ public class Emitter extends Group {
 	public void update() {
 		
 		if (on) {
-			time += Game.elapsed;
+			time += GameLoop.elapsed;
 			while (time > interval) {
 				time -= interval;
 				emit( count );

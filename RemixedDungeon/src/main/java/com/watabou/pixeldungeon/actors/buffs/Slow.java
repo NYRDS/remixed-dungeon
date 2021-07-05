@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -35,7 +35,12 @@ public class Slow extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Slow_Info);
+		return Game.getVar(R.string.SlowBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.SlowBuff_Info);
 	}
 	
 	public static float duration( Char ch ) {

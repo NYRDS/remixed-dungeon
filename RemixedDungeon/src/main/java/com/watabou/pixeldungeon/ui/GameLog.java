@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.android.util.GuiProperties;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
 import com.watabou.noosa.ui.Component;

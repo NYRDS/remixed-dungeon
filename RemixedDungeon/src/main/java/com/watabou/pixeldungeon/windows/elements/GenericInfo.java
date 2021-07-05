@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.windows.elements;
 
-import com.nyrds.android.util.GuiProperties;
+import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;

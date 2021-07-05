@@ -2,12 +2,12 @@ package com.nyrds.pixeldungeon.items.common;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.JsonHelper;
+import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;

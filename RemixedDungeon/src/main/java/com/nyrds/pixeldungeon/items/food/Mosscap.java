@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.items.food;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.actors.Char;
 
 abstract public class Mosscap extends Mushroom {

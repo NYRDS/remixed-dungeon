@@ -17,17 +17,20 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.nyrds.android.util.GuiProperties;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.windows.WndBuffInfo;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.input.Touchscreen;
+import com.nyrds.util.GuiProperties;
+import com.nyrds.util.Util;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
@@ -37,10 +40,13 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
+import com.watabou.pixeldungeon.ui.ImageButton;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.LabeledTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
+
+import lombok.val;
 
 public class WndHero extends WndTabbed {
 	private static final int WIDTH		= 100;
@@ -191,23 +197,37 @@ public class WndHero extends WndTabbed {
 			int index = buff.icon();
 			
 			if (index != BuffIndicator.NONE) {
-				Image icon = new Image( TextureCache.get(buff.textureLarge()) );
-				icon.frame( film.get( index ) );
-				icon.y = pos;
-				add( icon );
-				
+				val icon = new ImageButton( new Image(TextureCache.get(buff.textureLarge()),16, index) ) {
+					@Override
+					protected void onClick() {
+						GameScene.show( new WndBuffInfo(buff));
+					}
+				};
+				icon.setPos(GAP - 1, pos);
+
 				Text txt = PixelScene.createText( buff.name(), GuiProperties.regularFontSize() );
-				txt.x = icon.width + GAP;
-				txt.y = pos + (int)(icon.height - txt.baseLine()) / 2;
+				txt.x = icon.width() + (GAP * 2);
+				txt.y = pos + (int)(icon.height() - txt.baseLine()) / 2;
+
+				add( icon );
 				add( txt );
 				
-				pos += GAP + icon.height;
+				pos += GAP + icon.height();
 			} else {
 				if(Util.isDebug()) {
 					Text txt = PixelScene.createText(buff.name(), GuiProperties.regularFontSize());
 					txt.x = GAP;
 					txt.y = pos + (int) (16 - txt.baseLine()) / 2;
-					add(txt);
+
+
+					val txtTouch = new TouchArea(txt) {
+						@Override
+						protected void onClick(Touchscreen.Touch touch) {
+							GameScene.show( new WndBuffInfo(buff));
+						}
+					};
+					add(txtTouch);
+					add( txt );
 
 					pos += GAP + 16;
 				}

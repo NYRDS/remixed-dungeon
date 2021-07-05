@@ -17,8 +17,7 @@
 
 package com.watabou.noosa;
 
-import android.graphics.RectF;
-
+import com.nyrds.platform.compatibility.RectF;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;

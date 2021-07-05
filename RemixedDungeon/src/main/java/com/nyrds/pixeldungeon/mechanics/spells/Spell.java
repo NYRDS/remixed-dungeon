@@ -1,11 +1,11 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.ModError;
 import com.watabou.gltextures.TextureCache;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Dungeon;

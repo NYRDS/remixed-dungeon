@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
-import com.watabou.noosa.StringsManager;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 
 import org.jetbrains.annotations.NotNull;

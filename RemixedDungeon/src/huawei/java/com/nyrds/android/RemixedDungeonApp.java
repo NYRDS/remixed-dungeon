@@ -8,8 +8,8 @@ import android.util.Log;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.Util;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.StringsManager;

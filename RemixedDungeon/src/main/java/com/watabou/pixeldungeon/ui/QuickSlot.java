@@ -19,13 +19,14 @@ package com.watabou.pixeldungeon.ui;
 
 import android.annotation.SuppressLint;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Dungeon;
@@ -166,7 +167,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     private void updateSlotBySelection() {
         selectItem(objectForSlot, index);
         objectForSlot = null;
-        Game.scene().remove(prompt);
+        GameLoop.scene().remove(prompt);
     }
 
     @Override
@@ -246,7 +247,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
             if(item.valid()) {
                 quickslotItem = item.quickSlotContent();
             } else {
-                quickslotItem = ItemFactory.virtual(quickslotItem.getEntityKind());
+                quickslotItem = ItemFactory.virtual(quickslotItem);
             }
         }
 
@@ -391,7 +392,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         prompt = new Toast(Game.getVar(R.string.QuickSlot_SelectSlot)) {
             @Override
             protected void onClose() {
-                Game.scene().remove(this);
+                GameLoop.scene().remove(this);
                 objectForSlot = null;
 
             }
@@ -399,7 +400,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         prompt.camera = uiCamera;
         prompt.setPos((uiCamera.width - prompt.width()) / 2, uiCamera.height - 60);
 
-        Game.addToScene(prompt);
+        GameLoop.addToScene(prompt);
     }
 
     public Item getQuickslotItem() {

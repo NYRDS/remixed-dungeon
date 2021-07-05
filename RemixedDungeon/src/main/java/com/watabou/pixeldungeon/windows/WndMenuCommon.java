@@ -17,13 +17,13 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.VBox;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Image;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
@@ -53,21 +53,21 @@ public abstract class WndMenuCommon extends Window {
 
     protected void addSoundControls(VBox menuItems) {
         menuItems.add(new MenuCheckBox(Game
-                .getVar(R.string.WndSettings_Music), RemixedDungeon.music()) {
+                .getVar(R.string.WndSettings_Music), GamePreferences.music()) {
             @Override
             protected void onClick() {
                 super.onClick();
-                RemixedDungeon.music(checked());
+                GamePreferences.music(checked());
             }
         });
 
 
         menuItems.add(new MenuCheckBox(Game
-                .getVar(R.string.WndSettings_Sound),RemixedDungeon.soundFx()) {
+                .getVar(R.string.WndSettings_Sound), GamePreferences.soundFx()) {
             @Override
             protected void onClick() {
                 super.onClick();
-                RemixedDungeon.soundFx(checked());
+                GamePreferences.soundFx(checked());
                 Sample.INSTANCE.play(Assets.SND_CLICK);
             }
         });

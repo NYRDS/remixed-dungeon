@@ -25,6 +25,13 @@ return buff.init{
         return "ShieldBuffNotReady_Name"
     end,
 
+    desc = function(self, buff)
+        if self.data.state then
+            return "ShieldBuffReady_Info"
+        end
+        return "ShieldBuffNotReady_Info"
+    end,
+
     attachTo = function(self, buff, target)
         self.data.state = self.data.state or false
         return true

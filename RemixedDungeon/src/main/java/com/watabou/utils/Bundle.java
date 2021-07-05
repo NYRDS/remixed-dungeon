@@ -18,9 +18,9 @@
 package com.watabou.utils;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.android.util.Util;
 import com.nyrds.generated.BundleHelper;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.util.Util;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

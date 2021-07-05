@@ -2516,13 +2516,6 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
   <string name="RoyalShield_desc">Egy teljesen fémből készült pajzs. Igen, elég nehéz, de egyedül ez képes a legtöbb védelmet nyújtani neked.</string>
   <string name="ShieldInfoTemplate">Ez a pajzs maximum %1$d -át fogja fel a kapott sebzésnek. %2$d%% eséllyel. %3$3.1f másodpercbe fog telni, hogy kiheverd a sikeres védekezést.</string>
   <string name="Belongings_CantWearBoth">Nem tudod egyszerre %1$s és %2$s felszerelni!</string>
-  <string name="Welcome_Text_29_3">
-remix.29.3
-- Játék:
--- Pajzsok
-- Modok:
--- Egyéni Pajzsok!
-- Bugok megjavítva</string>
   <string name="ShieldStrTemplate">A pajzs tulajdonosának legalább %1$d Erő ponttal kell rendelkeznie, ahhoz, hogy megfelelően tudja használni.</string>
   <string name="town_deco_flowerinthepot_name">Cserepes virág</string>
   <string name="town_deco_flowerinthepot_desc">Dekoratív, finom illatú virág</string>
@@ -2611,4 +2604,6 @@ remix.29.6
   <string name="Potion_Colors_14">ónix</string>
   <string name="PotionOfMana_Name">Mana Főzet</string>
   <string name="PotionOfMana_Info">Ez a főzet újratölti a spirituális energiádat.</string>
+  <string name="Snail_Gender">hím</string>
+  <string name="DeepSnail_Gender">hím</string>
 </resources>

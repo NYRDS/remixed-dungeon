@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon;
 
-import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.levels.XTilemapConfiguration;
+import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;

@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Blessed extends FlavourBuff {
@@ -13,6 +13,11 @@ public class Blessed extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Blessed_Info);
+		return Game.getVar(R.string.BlessedBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.BlessedBuff_Info);
 	}
 }

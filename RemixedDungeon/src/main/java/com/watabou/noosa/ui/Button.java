@@ -17,8 +17,9 @@
 
 package com.watabou.noosa.ui;
 
-import com.watabou.input.Touchscreen.Touch;
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.TouchArea;
 
 public class Button extends Component {
@@ -71,7 +72,7 @@ public class Button extends Component {
 		
 		hotArea.active = getVisible();
 
-		if (pressed && ((pressTime += Game.elapsed) >= longClick)) {
+		if (pressed && ((pressTime += GameLoop.elapsed) >= longClick)) {
 			pressed = false;
 			if (onLongClick()) {
 

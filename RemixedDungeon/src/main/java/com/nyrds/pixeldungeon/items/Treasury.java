@@ -1,10 +1,10 @@
 package com.nyrds.pixeldungeon.items;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.util.JsonHelper;
+import com.nyrds.util.ModError;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Gold;

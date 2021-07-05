@@ -17,11 +17,12 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndGameplaySettings;
 import com.nyrds.pixeldungeon.windows.WndUiSettings;
-import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.RemixedDungeon;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndSettings extends WndMenuCommon {
@@ -52,7 +53,7 @@ public class WndSettings extends WndMenuCommon {
 		menuItems.add(new MenuButton(selectLanguage) {
 			@Override
 			protected void onClick() {
-				RemixedDungeon.scene().add(
+				GameLoop.scene().add(
 						new WndSelectLanguage(selectLanguage, "English",
 								"Русский", "Français", "Polski", "Español", "한국말", "Português brasileiro", "Italiano", "Deutsch", "简体中文","繁體中文", "Türkçe", "Украї́нська","Bahasa Melayu","Magyar Nyelv") {
 
@@ -60,9 +61,9 @@ public class WndSettings extends WndMenuCommon {
 							protected void onSelect(int index) {
 								String[] lang = {"en", "ru", "fr", "pl", "es", "ko", "pt_BR", "it", "de", "zh_CN", "zh_TW", "tr", "uk","ms","hu"};
 								if (!Utils.canUseClassicFont(lang[index])) {
-									RemixedDungeon.classicFont(false);
+									GamePreferences.classicFont(false);
 								}
-								RemixedDungeon.uiLanguage(lang[index]);
+								GamePreferences.uiLanguage(lang[index]);
 							}
 						});
 			}

@@ -19,15 +19,13 @@ package com.watabou.pixeldungeon.actors;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
-import com.nyrds.android.util.Scrambler;
-import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
@@ -37,7 +35,6 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.ml.actions.Move;
@@ -46,9 +43,13 @@ import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.utils.Position;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.StringsManager;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
+import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.Scrambler;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -82,6 +83,7 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
+import com.watabou.pixeldungeon.items.rings.RingOfHaste;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -94,6 +96,7 @@ import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
@@ -766,18 +769,40 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@Override
 	public void spend(float time) {
+		for (Item item : getBelongings()) {
+			if (item instanceof IActingItem && item.isEquipped(this)) {
+				((IActingItem) item).spend(this, time);
+			}
+		}
 
-		float timeScale = 1f;
-		timeScale *= 1.f/(1+buffLevel(Slow.class));
-		timeScale *= (1 + buffLevel(Speed.class));
+		int hasteLevel = 0;
 
-		float scaledTime = time / timeScale;
+		if (getHeroClass() == HeroClass.ELF) {
+			hasteLevel++;
+			if (getSubClass() == HeroSubClass.SCOUT) {
+				hasteLevel++;
+			}
+		}
+
+		hasteLevel+= buffLevel(RingOfHaste.Haste.class);
+
+		float timeScale = (1.f + buffLevel(Speed.class)) / (1.f + buffLevel(Slow.class));
+
+		float scaledTime = (float) (time * Math.pow(1.1f, -hasteLevel) / timeScale);
 
 		for(Map.Entry<String,Number> spell:spellsUsage.entrySet()) {
 			spell.setValue(spell.getValue().floatValue()+scaledTime);
 		}
 
+		scaledTime = Math.min(time * 3, scaledTime);
+
 		super.spend(scaledTime);
+
+		QuickSlot.refresh(this);
+
+		if(curAction!=null) {
+			GLog.debug("%s", curAction.toString());
+		}
 	}
 
 	public Set<Buff> buffs() {
@@ -860,9 +885,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		getControlTarget().curAction = curAction;
 	}
 
-	public void add(Buff buff) {
+	public boolean add(Buff buff) {
 		if(!isAlive()) {
-			return;
+			return false;
 		}
 
 		GLog.debug("%s (%s) added to %s", buff.getEntityKind(), buff.getSource().getEntityKind(), getEntityKind());
@@ -871,10 +896,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		Actor.add(buff);
 
 		if (!GameScene.isSceneReady()) {
-			return;
+			return true;
 		}
 
 		buff.attachVisual();
+		return true;
 	}
 
 	public void remove(@Nullable Buff buff) {
@@ -1735,9 +1761,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public String getDescription() {
-		return description + "\n\n" + String.format("This is level %d %s.", lvl(), name());
+		return description + "\n\n" + String.format(Game.getVar(R.string.CharInfo_Level), lvl(), name());
 	}
 
 	public void setControlTarget(Char controlTarget) {
+	}
+
+	@LuaInterface
+	public Position getPosition(){
+    	return new Position(level().levelId, getPos());
 	}
 }

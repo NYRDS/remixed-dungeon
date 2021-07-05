@@ -18,11 +18,11 @@
 package com.watabou.noosa;
 
 import android.graphics.Bitmap;
-import android.graphics.RectF;
 
+import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gl.Texture;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.glwrap.Quad;
-import com.watabou.glwrap.Texture;
 
 import java.nio.FloatBuffer;
 
@@ -31,8 +31,8 @@ public class SystemTextLine extends Visual {
 	private SmartTexture texture;
 	private RectF frame;
 	
-	private float[] vertices;
-	private FloatBuffer verticesBuffer;
+	private final float[] vertices;
+	private final FloatBuffer verticesBuffer;
 	
 	private boolean dirty;
 

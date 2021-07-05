@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.utils;
 
-import com.watabou.pixeldungeon.RemixedDungeon;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;

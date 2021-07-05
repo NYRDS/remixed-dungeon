@@ -1,8 +1,8 @@
 package com.nyrds.pixeldungeon.items;
 
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.platform.audio.Sample;
 import com.watabou.noosa.ColorBlock;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;

@@ -17,17 +17,19 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.gltextures.Gradient;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
-import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.ColorBlock;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.MovieClip;
@@ -35,7 +37,6 @@ import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.TouchArea;
 import com.watabou.noosa.Visual;
-import com.watabou.noosa.audio.Music;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -155,7 +156,7 @@ public class SurfaceScene extends PixelScene {
 		
 		RedButton gameOver = new RedButton( Game.getVar(R.string.SurfaceScene_GameOver) ) {
 			protected void onClick() {
-				Game.switchScene( TitleScene.class );
+				GameLoop.switchScene( TitleScene.class );
 			}
 		};
 		gameOver.setSize( WIDTH - 10, 20 );
@@ -367,7 +368,7 @@ public class SurfaceScene extends PixelScene {
 		@Override
 		public void update() {
 			super.update();
-			a += Random.Float(Game.elapsed * 5);
+			a += Random.Float(GameLoop.elapsed * 5);
 			angle = (2 + Math.cos(a)) * (forward ? +0.2 : -0.2);
 
 			scale.y = (float) Math.cos(angle);

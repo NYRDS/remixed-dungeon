@@ -19,20 +19,20 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
-import com.nyrds.android.util.Scrambler;
 import com.nyrds.lua.LuaUtils;
 import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.Scrambler;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
@@ -46,7 +46,7 @@ import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -415,7 +415,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		return name;
 	}
 
-	public ItemSprite.Glowing glowing() {
+	public Glowing glowing() {
 		return null;
 	}
 
@@ -676,7 +676,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 			return this;
 		}
 
-		return ItemFactory.virtual(getEntityKind());
+		return ItemFactory.virtual(this);
 	}
 
 	public boolean usableByHero() {
@@ -755,5 +755,9 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	@Deprecated
 	public String getClassName() { //for old mods compatibility
 		return getEntityKind();
+	}
+
+	public void setImage(int image) {
+		this.image = image;
 	}
 }

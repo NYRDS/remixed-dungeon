@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
@@ -104,6 +104,7 @@ public class ShortSword extends MeleeWeapon {
 				collect( selector.getBelongings().backpack );
 			}
 		}
+		selector.updateSprite();
 		QuickSlot.refresh(selector);
 	};
 }
