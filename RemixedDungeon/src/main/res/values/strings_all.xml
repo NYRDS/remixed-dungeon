@@ -716,7 +716,7 @@
   <string name="HeartOfDarkness_Info">Black pulsating heart of the Treacherous Spirit.</string>
   <string name="HeartOfDarkness_Gender">neuter</string>
   <string name="DarkVeilBuff_Name">Dark veil</string>
-  <string name="DarkVeilBuff_Info">You have a veil of darkness over you summoning a spirit evey time you take damage.</string>
+  <string name="DarkVeilBuff_Info">A veil of darkness surrounds you summoning a spirit every time you take damage.</string>
   <string name="Badges_Yog_Slain">Yog-Dzewa slain</string>
   <string name="Badges_ShadowLord_Slain">Shadow Lord slain</string>
   <string name="Badges_SpiderQueen_Slain">Spider Queen slain</string>
@@ -2238,7 +2238,7 @@
   <string name="CloakSpell_Info">Step into the shadows to become unseen. Greatly reduce your chances of being detected. Can\'t be used while enemies are nearby.</string>
   <string name="CloakSpell_EnemiesNearby">You can\'t step into the shadows while enemies are nearby.</string>
   <string name="CloakBuff_Name">Cloaked</string>
-  <string name="CloakBuff_Info">You have a dark cloak concealing yourself in the shadows.</string>
+  <string name="CloakBuff_Info">You have a dark cloak that conceals yourself in the shadows, making you less visible to enemies.</string>
   <string name="TitleScene_Mods">Mods</string>
   <string name="WndHero_Stealth">Stealth</string>
   <string name="WndHero_Awareness">Awareness</string>
@@ -2818,5 +2818,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Bee_Name">bee</string>
   <string name="Bee_Gender">masculine</string>
   <string name="Bee_Name_Objective">bee</string>
-  <string name="Bee_Desc">Despite their small size,  bees tend to protect their hive fiercely. They don\'t live long though.</string>
+  <string name="Bee_Desc">Despite their small size, bees tend to protect their hive fiercely. They don\'t live long though.</string>
+  <string name="Moongrace_Name">Moongrace</string>
+  <string name="Moongrace_Desc">These plants grow in small numbers and are known as a source of natural magic.</string>
+  <string name="MoongraceBuff_Name">Heavenly manna</string>
+  <string name="MoongraceBuff_Info">The air around you becomes more saturated, which allows for better concentration and restoration of your magical reserves.</string>
 </resources>
