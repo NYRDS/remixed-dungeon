@@ -107,12 +107,12 @@ public class GLog {
 		if(text.isEmpty()) {
 			return;
 		}
+		final String finalText = text;
 
 		if(Util.isDebug()) {
 			Log.i(TAG, text);
 		}
 
-		final String finalText = text;
 		Game.pushUiTask(() -> update.dispatch(finalText)
 		);
 	}
@@ -139,7 +139,15 @@ public class GLog {
 
 	public static void debug( String text, Object... args ) {
 		if(Util.isDebug()) {
-			glog(text, args);
+			if (args.length > 0) {
+				text = Utils.format( text, args );
+			}
+
+			if(text.isEmpty()) {
+				return;
+			}
+
+			Log.i(TAG, text);
 		}
 	}
 
