@@ -6,6 +6,8 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.nyrds.android.RemixedDungeonApp;
 import com.nyrds.android.util.ModdingMode;
+import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Util;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -145,6 +147,10 @@ public class EventCollector {
 			FirebaseCrashlytics.getInstance().log(Utils.EMPTY_STRING+System.currentTimeMillis()+":"+e.getMessage() + ":"+ baos.toString());
 
 			GLog.toFile(baos.toString());
+
+			if(Util.isDebug()) {
+				throw new TrackedRuntimeException(new Exception(e));
+			}
 		}
 	}
 

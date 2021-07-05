@@ -952,22 +952,26 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void placeTo(int cell) {
-		if (level().map[getPos()] == Terrain.OPEN_DOOR) {
-			Door.leave(getPos());
+
+		final int oldPos = getPos();
+		if(level().cellValid(oldPos)) {
+			if (level().map[oldPos] == Terrain.OPEN_DOOR) {
+				Door.leave(oldPos);
+			}
 		}
 
 		setPos(cell);
 
 		if (!isFlying()) {
-			level().press(getPos(),this);
+			level().press(cell,this);
 		}
 
-		if (isFlying() && level().map[getPos()] == Terrain.DOOR) {
+		if (isFlying() && level().map[cell] == Terrain.DOOR) {
 			Door.enter(getPos());
 		}
 
 		if (this != Dungeon.hero) {
-			getSprite().setVisible(Dungeon.visible[getPos()] && invisible >= 0);
+			getSprite().setVisible(Dungeon.visible[cell] && invisible >= 0);
 		}
 	}
 

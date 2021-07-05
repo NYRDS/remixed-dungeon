@@ -30,10 +30,11 @@ import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Callback;
 
 import org.jetbrains.annotations.NotNull;
+
+import lombok.var;
 
 public class WandOfBlink extends Wand {
 
@@ -75,18 +76,17 @@ public class WandOfBlink extends Wand {
 
 		Level level = ch.level();
 
-		final CharSprite chSprite = ch.getSprite();
-
-		if(level.cellValid(ch.getPos())) { //ch already on level
-			chSprite.interruptMotion();
-			ch.placeTo(pos);
-		} else { // brand new ch
+		if(!level.cellValid(ch.getPos())) { //ch not on level yet
 			ch.setPos(pos);
 			if(ch instanceof Mob) {
 				level.spawnMob((Mob)ch);
 			}
 		}
 
+		ch.placeTo(pos);
+		var chSprite = ch.getSprite();
+
+		chSprite.interruptMotion();
 		chSprite.place( pos );
 
 		if (ch.invisible == 0) {
