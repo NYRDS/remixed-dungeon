@@ -179,7 +179,8 @@ public class Hero extends Char {
 	}
 
 	public int effectiveSTR() {
-		return STR() - 2*buffLevel(Weakness.class);
+		int weaknessLevel = buffLevel(Weakness.class);
+		return (int) Math.min(STR() - Math.log(Math.pow(weaknessLevel+1,RemixedDungeon.getDifficultyFactor())), 1);
 	}
 
 	public void STR(int sTR) {
