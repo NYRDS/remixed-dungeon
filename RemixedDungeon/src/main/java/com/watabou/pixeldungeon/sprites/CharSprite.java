@@ -516,8 +516,8 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     @Override
     public void kill() {
+        removeAllStates();
         super.kill();
-        removeEmo();
     }
 
     @Override
