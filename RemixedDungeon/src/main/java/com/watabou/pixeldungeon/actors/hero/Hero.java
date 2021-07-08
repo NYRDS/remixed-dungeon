@@ -1049,7 +1049,7 @@ public class Hero extends Char {
 		this.gender = gender;
 	}
 
-	private void setDifficulty(int difficulty) {
+	public void setDifficulty(int difficulty) {
 		this.difficulty = difficulty;
 		Dungeon.setDifficulty(difficulty);
 	}
