@@ -221,8 +221,9 @@ public class InterlevelScene extends PixelScene {
             }
         } else {
             Dungeon.onHeroLeaveLevel();
-            followers = Level.mobsFollowLevelChange(Mode.DESCEND);
             Dungeon.save(false);
+            followers = Level.mobsFollowLevelChange(Mode.DESCEND);
+
         }
 
         Position next;
@@ -253,7 +254,6 @@ public class InterlevelScene extends PixelScene {
         Dungeon.save(false); // for auto save
 
         Collection<Mob> followers = Level.mobsFollowLevelChange(Mode.FALL);
-        Dungeon.saveCurrentLevel();
 
         Position next = DungeonGenerator.descend(Dungeon.currentPosition());
         Dungeon.depth = DungeonGenerator.getLevelDepth(next.levelId);
@@ -268,9 +268,9 @@ public class InterlevelScene extends PixelScene {
     private void ascend() {
         Actor.fixTime();
 
-        Collection<Mob> followers = Level.mobsFollowLevelChange(Mode.ASCEND);
         Dungeon.onHeroLeaveLevel();
         Dungeon.save(false);
+        Collection<Mob> followers = Level.mobsFollowLevelChange(Mode.ASCEND);
 
         Position next = DungeonGenerator.ascend(Dungeon.currentPosition());
 
@@ -289,9 +289,10 @@ public class InterlevelScene extends PixelScene {
 
         Actor.fixTime();
 
-        Collection<Mob> followers = Level.mobsFollowLevelChange(Mode.RETURN);
         Dungeon.onHeroLeaveLevel();
         Dungeon.save(false);
+        Collection<Mob> followers = Level.mobsFollowLevelChange(Mode.RETURN);
+
 
         Dungeon.depth = DungeonGenerator.getLevelDepth(returnTo.levelId);
 

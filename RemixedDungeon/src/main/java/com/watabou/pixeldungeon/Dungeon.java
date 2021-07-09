@@ -88,6 +88,7 @@ import java.util.HashSet;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import lombok.SneakyThrows;
+import lombok.var;
 
 import static com.watabou.pixeldungeon.RemixedDungeon.MOVE_TIMEOUTS;
 
@@ -270,7 +271,6 @@ public class Dungeon {
     }
 
     public static void switchLevel(@NotNull final Level level, int pos, Collection<Mob> followers) {
-
         EventCollector.setSessionData("level",level.levelId);
 
         nightMode =new GregorianCalendar().get(Calendar.HOUR_OF_DAY) < 7;
@@ -609,7 +609,14 @@ public class Dungeon {
         try {
             loading.incrementAndGet();
             levelId = next.levelId;
-            Dungeon.level = null;
+
+            if(Dungeon.level!=null) {
+                for(var mob:Dungeon.level.mobs) {
+                    CharsList.remove(mob.getId());
+                }
+                Dungeon.level = null;
+            }
+
             DungeonGenerator.loadingLevel(next);
 
             String loadFrom = SaveUtils.depthFileForLoad(heroClass,

@@ -265,6 +265,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
+		getId(); // Ensure id
 		super.storeInBundle(bundle);
 
 		bundle.put(TAG_HP, hp());
@@ -282,8 +283,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		super.restoreFromBundle(bundle);
 
 		if(id!=EntityIdSource.INVALID_ID) {
-            CharsList.add(this, id);
+            if(!CharsList.add(this, id)) {
+            	id = EntityIdSource.DUPLICATE_ID;
+			}
         }
+
+		getId(); // ensure id
 
 		hp(bundle.getInt(TAG_HP));
 		ht(bundle.getInt(TAG_HT));
@@ -735,6 +740,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
 		Actor.freeCell(getPos());
+        CharsList.remove(getId());
 	}
 
 	public void die(NamedEntityKind src) {
@@ -1224,7 +1230,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@LuaInterface
 	public boolean valid(){
-	    return !(this instanceof DummyChar);
+	    return !(this instanceof DummyChar) && id > EntityIdSource.INVALID_ID;
     }
 
     @LuaInterface

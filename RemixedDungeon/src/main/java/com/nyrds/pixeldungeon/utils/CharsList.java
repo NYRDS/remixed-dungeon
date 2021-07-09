@@ -31,8 +31,12 @@ public class CharsList {
         return ret;
     }
 
-    static public void add(Char mob, int id) {
+    static public boolean add(Char mob, int id) {
+        if(charsMap.containsKey(id)) {
+            return false;
+        }
         charsMap.put(id,mob);
+        return true;
     }
 
     static public void remove(int id) {
