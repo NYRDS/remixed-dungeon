@@ -29,7 +29,7 @@ public class PickUp extends CharAction {
                         if (!heap.isEmpty()) {
                             GLog.i(Game.getVar(R.string.Hero_SomethingElse));
                         }
-                        hero.curAction = null;
+                        hero.readyAndIdle();
                     } else {
                         Heap newHeap = hero.level().drop(item, hero.getPos());
 
