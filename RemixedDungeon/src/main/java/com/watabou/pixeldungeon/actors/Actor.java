@@ -234,7 +234,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 				break;
 			}
 
-			if(actor.time == timeBefore) {
+			if(actor.time == timeBefore && all.contains(actor)) { // don't need this check for removed actors
 				var error = String.format("actor %s has same timestamp after act!", actor.getEntityKind());
 				if(Util.isDebug()) {
 					throw new ModError(error);

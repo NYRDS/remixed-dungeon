@@ -247,6 +247,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public boolean act() {
 		level().updateFieldOfView(this);
 
+		if(sprite == null) {
+			if(Util.isDebug()) {
+				throw new TrackedRuntimeException(Utils.format("%s act on %s without sprite", getEntityKind(), level().levelId));
+			}
+		}
+
 		checkVisibleEnemies();
 
 		forEachBuff(CharModifier::charAct);
