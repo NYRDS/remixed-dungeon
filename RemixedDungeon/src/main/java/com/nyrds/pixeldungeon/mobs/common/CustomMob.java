@@ -180,10 +180,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 		float lootChance = (float) classDesc.optDouble("lootChance", 1);
 
-		if (classDesc.has("loot")) {
-			loot(ItemFactory.createItemFromDesc(classDesc.getJSONObject("loot")), lootChance);
-		}
-
 		setViewDistance(classDesc.optInt("viewDistance", getViewDistance()));
 
 		walkingType = Enum.valueOf(WalkingType.class, classDesc.optString("walkingType","NORMAL"));
@@ -209,6 +205,10 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		JsonHelper.readStringSet(classDesc, Char.RESISTANCES, resistances);
 
 		if(!restoring) {
+			if (classDesc.has("loot")) {
+				loot(ItemFactory.createItemFromDesc(classDesc.getJSONObject("loot")), lootChance);
+			}
+
 			setFraction(Enum.valueOf(Fraction.class, classDesc.optString("fraction","DUNGEON")));
 			hp(ht(classDesc.optInt("ht", 1)));
 			fromJson(classDesc);
