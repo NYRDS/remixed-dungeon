@@ -69,7 +69,6 @@ public class ChaosCrystal extends UsableArtifact {
 
 			selector.getSprite().operate(selector.getPos(), null);
 			selector.spend(TIME_TO_FUSE);
-			selector.busy();
 
 			if (item instanceof Scroll) {
 				Item newItem = new ScrollOfWeaponUpgrade();
@@ -213,7 +212,7 @@ public class ChaosCrystal extends UsableArtifact {
 				ChaosCommon.doChaosMark(cell, charge);
 				charge = 0;
 			}
-			selector.spendAndNext(TIME_TO_USE);
+			selector.spend(TIME_TO_USE);
 		}
 
 		@Override

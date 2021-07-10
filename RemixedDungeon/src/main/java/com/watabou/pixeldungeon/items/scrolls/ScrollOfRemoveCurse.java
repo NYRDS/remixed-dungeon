@@ -56,7 +56,7 @@ public class ScrollOfRemoveCurse extends Scroll {
 
 		setKnown();
 
-		reader.spendAndNext(TIME_TO_READ);
+		reader.spend(TIME_TO_READ);
 	}
 
 	public static void uncurse(Char hero, Item ... items) {

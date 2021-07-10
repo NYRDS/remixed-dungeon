@@ -60,8 +60,7 @@ public class Torch extends Item {
 		if (action.equals(AC_LIGHT)) {
 			
 			chr.spend( TIME_TO_LIGHT );
-			chr.busy();
-			
+
 			chr.getSprite().operate( chr.getPos(), null);
 			
 			detach( chr.getBelongings().backpack );

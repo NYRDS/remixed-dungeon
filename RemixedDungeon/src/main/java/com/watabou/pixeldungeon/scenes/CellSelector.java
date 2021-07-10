@@ -21,9 +21,11 @@ import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TouchArea;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.GameMath;
@@ -45,7 +47,11 @@ public class CellSelector extends TouchArea {
 		camera = map.camera();
 		dragThreshold = PixelScene.defaultZoom * DungeonTilemap.SIZE / 2;
 	}
-	
+
+	public boolean defaultListner() {
+		return listener instanceof DefaultCellListener;
+	}
+
 	@Override
 	protected void onClick( Touch touch ) {
 		if (dragging) {
@@ -58,11 +64,34 @@ public class CellSelector extends TouchArea {
 	}
 	
 	public void select( int cell ) {
-		if (enabled && listener != null && cell != Level.INVALID_CELL) {
-			GLog.debug("%s -> %d", listener.getClass().getSimpleName(), cell);
-			listener.onSelect( cell, selector);
-			GameScene.ready();
+
+		Hero hero = Dungeon.hero;
+
+		if (!Dungeon.realtime()) {
+			enabled = hero.isReady();
 		} else {
+			enabled = hero.isAlive();
+		}
+
+
+		boolean defaultListener = listener instanceof DefaultCellListener;
+		if(hero.myMove() && !defaultListener) {
+			enabled = true;
+		}
+
+		GLog.debug("CellSelector %b, %s",  enabled, listener.toString());
+		if (enabled && listener != null && cell != Level.INVALID_CELL) {
+			GLog.debug("CellSelector %s -> %d", listener.getClass().getSimpleName(), cell);
+			listener.onSelect( cell, selector);
+
+			if(!defaultListener) {
+				selector.readyAndIdle();
+			}
+
+			GameScene.ready();
+
+		} else {
+			GLog.debug("canceled CellSelector %s -> %d", listener.getClass().getSimpleName(), cell);
 			GameScene.cancel();
 		}
 	}

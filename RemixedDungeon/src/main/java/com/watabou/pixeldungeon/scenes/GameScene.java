@@ -463,11 +463,11 @@ public class GameScene extends PixelScene {
             for (var lo : level.getAllLevelObjects()) {
                 int pos = lo.getPos();
                 if(level.solid[pos]) {
-                    throw new ModError(Utils.format("%s on a solid cell %d", lo.getEntityKind(), pos));
+                    throw new ModError(Utils.format("%s on a solid cell %d. level %s", lo.getEntityKind(), pos, level.levelId ));
                 }
 
                 if(level.pit[pos]) {
-                    throw new ModError(Utils.format("%s on a pit cell %d", lo.getEntityKind(), pos));
+                    throw new ModError(Utils.format("%s on a pit cell %d. level %s", lo.getEntityKind(), pos, level.levelId));
                 }
             }
         }
@@ -528,12 +528,6 @@ public class GameScene extends PixelScene {
 
         if (hero.isReady() && !hero.paralysed) {
             log.newLine();
-        }
-
-        if (!Dungeon.realtime()) {
-            cellSelector.enabled = hero.isReady();
-        } else {
-            cellSelector.enabled = hero.isAlive();
         }
 
         if(observeRequested) {
@@ -828,7 +822,13 @@ public class GameScene extends PixelScene {
     }
 
     public static void selectCell(CellSelector.Listener listener, Char selector) {
+
+        if(listener == cellSelector.listener && selector == cellSelector.selector) {
+            return;
+        }
+
         if(isSceneReady()) {
+
             if (cellSelector != null && cellSelector.listener != null && cellSelector.listener != defaultCellListener) {
                 cellSelector.listener.onSelect( null, cellSelector.selector);
             }
@@ -876,9 +876,11 @@ public class GameScene extends PixelScene {
     }
 
     static public boolean cancel() {
-        if (Dungeon.hero != null && (Dungeon.hero.curAction != null || Dungeon.hero.restoreHealth)) {
-            Dungeon.hero.curAction = null;
-            Dungeon.hero.restoreHealth = false;
+        Hero hero = Dungeon.hero;
+
+        if (hero != null && (hero.curAction != null || hero.restoreHealth)) {
+            hero.curAction = null;
+            hero.restoreHealth = false;
             return true;
         } else {
             return cancelCellSelector();
@@ -946,6 +948,13 @@ public class GameScene extends PixelScene {
         }
 
         return scene.logicTiles.tile(cell);
+    }
+
+    static public boolean defaultCellSelector() {
+        if(isSceneReady()) {
+            return scene.cellSelector.defaultListner();
+        }
+        return true;
     }
 
 }

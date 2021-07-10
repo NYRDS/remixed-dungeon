@@ -93,7 +93,6 @@ public class WarriorArmor extends ClassArmor {
 					Invisibility.dispel(selector);
 
 					final int dest = cell;
-					selector.busy();
 					((HeroSpriteDef) selector.getSprite()).jump(pos, cell, () -> {
 						selector.placeTo(dest);
 						selector.level().press(dest, selector);
@@ -109,7 +108,7 @@ public class WarriorArmor extends ClassArmor {
 						CellEmitter.center(dest).burst(Speck.factory(Speck.DUST), 10);
 						Camera.main.shake(2, 0.5f);
 
-						selector.spendAndNext(LEAP_TIME);
+						selector.spend(LEAP_TIME);
 					});
 				}
 			}

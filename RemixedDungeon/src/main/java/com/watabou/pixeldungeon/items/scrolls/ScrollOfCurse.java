@@ -60,7 +60,7 @@ public class ScrollOfCurse extends Scroll {
 		reader.getBelongings().curseEquipped();
 
 		setKnown();
-		reader.spendAndNext( TIME_TO_READ );
+		reader.spend( TIME_TO_READ );
 	}
 
 

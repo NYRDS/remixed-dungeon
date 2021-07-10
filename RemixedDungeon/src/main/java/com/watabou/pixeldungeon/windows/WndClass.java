@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.ui.Highlighter;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.RankingTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;

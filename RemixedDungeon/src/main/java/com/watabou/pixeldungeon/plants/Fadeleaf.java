@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -78,9 +79,9 @@ public class Fadeleaf extends Plant {
 			super._execute(chr, action );
 			
 			if (action.equals( CommonActions.AC_EAT )) {
+				chr.interrupt();
 				CharUtils.teleportRandom(chr);
-				chr.spendAndNext(1);
-				chr.curAction = null;
+				chr.spend(Actor.TICK);
 				Buff.affect(chr, Vertigo.class, Vertigo.DURATION * 2);
 			}
 		}

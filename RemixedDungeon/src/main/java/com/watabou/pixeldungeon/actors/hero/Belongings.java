@@ -646,7 +646,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		QuickSlot.refresh(owner);
 		owner.updateSprite();
 
-		owner.spendAndNext(item.time2equip(owner));
+		owner.spend(item.time2equip(owner));
 
 		return true;
 	}

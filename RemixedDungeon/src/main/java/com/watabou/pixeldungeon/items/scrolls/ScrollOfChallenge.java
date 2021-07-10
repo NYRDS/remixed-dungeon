@@ -36,6 +36,6 @@ public class ScrollOfChallenge extends Scroll {
 		GLog.w(Game.getVar(R.string.ScrollOfChallenge_Info1));
 		setKnown();
 
-		reader.spendAndNext( TIME_TO_READ );
+		reader.spend( TIME_TO_READ );
 	}
 }

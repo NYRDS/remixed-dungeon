@@ -130,7 +130,8 @@ public class Potion extends Item implements UnknownItem {
 				if (isKnown() && (
 						this instanceof PotionOfLiquidFlame ||
 								this instanceof PotionOfToxicGas ||
-								this instanceof PotionOfParalyticGas)) {
+								this instanceof PotionOfParalyticGas ||
+								this instanceof PotionOfFrost)) {
 
 					GameScene.show(
 							new WndOptions(Game.getVar(R.string.Potion_Harmfull),
@@ -199,7 +200,6 @@ public class Potion extends Item implements UnknownItem {
 		detach( hero.getBelongings().backpack );
 		
 		hero.spend( TIME_TO_DRINK );
-		hero.busy();
 		onThrow( hero.getPos(), hero);
 		
 		Sample.INSTANCE.play( Assets.SND_DRINK );
@@ -210,9 +210,8 @@ public class Potion extends Item implements UnknownItem {
 	
 	private void moisten(Char hero) {
 		
-		hero.spend( TIME_TO_MOISTEN);
-		hero.busy();
-		
+		hero.spend(TIME_TO_MOISTEN);
+
 		GameScene.selectItem(hero, itemSelector, WndBag.Mode.MOISTABLE, Game.getVar(R.string.Potion_SelectForMoisten));
 		
 		hero.getSprite().operate( hero.getPos(), null);
@@ -392,7 +391,6 @@ public class Potion extends Item implements UnknownItem {
 		GLog.i(Game.getVar(R.string.Potion_MoistenUseless));
 		owner.getSprite().operate( owner.getPos(), null);
 		owner.spend( TIME_TO_MOISTEN );
-		owner.busy();
 	}
 	
 	protected void moistenEffective() {
@@ -402,7 +400,6 @@ public class Potion extends Item implements UnknownItem {
 		identify();
 		owner.getSprite().operate( owner.getPos(), null);
 		owner.spend( TIME_TO_MOISTEN );
-		owner.busy();
 	}
 
 	@Override

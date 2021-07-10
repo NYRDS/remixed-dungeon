@@ -16,7 +16,7 @@ class ScrollUse {
         return (item, selector) -> {
             if (item != null) {
                 inventoryScroll.onItemSelected( item, selector );
-                selector.spendAndNext( Scroll.TIME_TO_READ );
+                selector.spend( Scroll.TIME_TO_READ );
 
                 Sample.INSTANCE.play( Assets.SND_READ );
                 Invisibility.dispel(selector);

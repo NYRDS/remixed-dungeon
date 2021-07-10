@@ -282,7 +282,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		curCharges(curCharges() - 1);
         QuickSlot.refresh(getOwner());
 
-        getOwner().spendAndNext(TIME_TO_ZAP);
+        getOwner().spend(TIME_TO_ZAP);
 	}
 
 	@Override
@@ -329,8 +329,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		QuickSlot.target(this, Actor.findChar(cell));
 
 		if (curCharges() > 0) {
-			selector.busy();
-
 			fx(cell, () -> {
 				onZap(cell);
 				wandUsed();
@@ -339,7 +337,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 			Invisibility.dispel(selector);
 		} else {
 
-			selector.spendAndNext(TIME_TO_ZAP);
+			selector.spend(TIME_TO_ZAP);
 			GLog.w(Game.getVar(R.string.Wand_Fizzles));
 			setLevelKnown(true);
 

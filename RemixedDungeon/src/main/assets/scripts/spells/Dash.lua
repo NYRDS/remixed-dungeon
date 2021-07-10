@@ -45,7 +45,7 @@ return spell.init{
 
         local char = RPD.Actor:findChar(dst)
 
-        if char then
+        if char and char ~= caster then
             RPD.affectBuff(char, RPD.Buffs.Vertigo, caster:skillLevel())
             local newPos = char:getPos()
             if char:push(caster) then

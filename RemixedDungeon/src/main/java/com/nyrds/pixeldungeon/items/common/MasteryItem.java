@@ -72,7 +72,6 @@ public class MasteryItem extends Item {
 		hero.checkIfFurious();
 		hero.updateSprite();
 
-		hero.spendAndNext( TIME_TO_READ );
-		hero.busy();
+		hero.spend( TIME_TO_READ );
 	}
 }

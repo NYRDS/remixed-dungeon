@@ -24,8 +24,7 @@ public class TomeOfKnowledge extends Book {
 		user.getSprite().showStatus( CharSprite.BLUE, "+ 1");
 		Sample.INSTANCE.play( Assets.SND_READ );
 
-		user.spendAndNext( TIME_TO_READ );
-		user.busy();
+		user.spend( TIME_TO_READ );
 		user.skillLevelUp();
 	}
 

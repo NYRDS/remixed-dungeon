@@ -36,7 +36,7 @@ public class ScrollOfTeleportation extends Scroll {
 		CharUtils.teleportRandom( reader);
 		setKnown();
 
-		reader.spendAndNext( TIME_TO_READ );
+		reader.spend( TIME_TO_READ );
 	}
 
 	@Override

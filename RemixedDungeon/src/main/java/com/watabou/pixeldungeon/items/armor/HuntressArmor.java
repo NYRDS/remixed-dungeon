@@ -61,7 +61,7 @@ public class HuntressArmor extends ClassArmor {
 						user.attack( targets.get( this ) );
 						targets.remove( this );
 						if (targets.isEmpty()) {
-							user.spendAndNext( user.attackDelay() );
+							user.spend( user.attackDelay() );
 						}
 					}
 				};
@@ -79,7 +79,6 @@ public class HuntressArmor extends ClassArmor {
 		}
 
 		user.getSprite().zap( user.getPos() );
-		user.busy();
 	}
 	
 	@Override

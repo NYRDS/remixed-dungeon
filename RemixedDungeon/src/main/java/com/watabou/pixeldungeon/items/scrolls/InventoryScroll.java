@@ -58,7 +58,7 @@ public abstract class InventoryScroll extends Scroll {
 			public void onSelect(int index) {
 				switch (index) {
 				case 0:
-					getOwner().spendAndNext( TIME_TO_READ );
+					getOwner().spend( TIME_TO_READ );
 					identifiedByUse = false;
 					break;
 				case 1:

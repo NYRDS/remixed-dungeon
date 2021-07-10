@@ -65,7 +65,7 @@ public class ScrollOfLullaby extends Scroll {
 		}
 		setKnown();
 
-		reader.spendAndNext( TIME_TO_READ );
+		reader.spend( TIME_TO_READ );
 	}
 
 	@Override

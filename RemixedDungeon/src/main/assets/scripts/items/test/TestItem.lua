@@ -173,7 +173,11 @@ return itemLib.init{
 
     act = function(self,item)
         self.data.counter = (self.data.counter or 0) + 1
-        item:getOwner():getSprite():showStatus( 0xFF00FF, tostring(self.data.counter))
+
+        if item:getOwner():valid() then
+            item:getOwner():getSprite():showStatus( 0xFF00FF, tostring(self.data.counter))
+        end
+
         item:spend(1)
     end,
 

@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.ml.actions.UseItem;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
 import com.watabou.noosa.StringsManager;
@@ -75,9 +76,9 @@ public class WndItem extends Window {
 				RedButton btn = new RedButton(StringsManager.maybeId(action) ) {
 					@Override
 					protected void onClick() {
-						item.execute( owner, action );
 						hide();
 						bag.hide();
+						owner.nextAction(new UseItem(item, action));
 					}
 				};
 				btn.setSize( Math.max( BUTTON_WIDTH, btn.reqWidth() ), BUTTON_HEIGHT );

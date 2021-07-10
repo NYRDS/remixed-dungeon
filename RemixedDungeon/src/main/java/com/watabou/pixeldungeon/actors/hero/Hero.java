@@ -355,6 +355,7 @@ public class Hero extends Char {
 
 	@Override
 	public void busy() {
+		GLog.debug("busy");
 		ready = false;
 	}
 

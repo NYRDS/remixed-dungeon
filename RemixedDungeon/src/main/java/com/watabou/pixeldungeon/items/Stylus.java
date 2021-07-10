@@ -99,7 +99,6 @@ public class Stylus extends Item {
 		Sample.INSTANCE.play( Assets.SND_BURNING );
 		
 		owner.spend( TIME_TO_INSCRIBE );
-		owner.busy();
 	}
 	
 	private void inscribeArmor ( Armor armor ) {

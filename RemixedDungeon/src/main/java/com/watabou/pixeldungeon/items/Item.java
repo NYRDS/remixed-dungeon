@@ -165,7 +165,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		if (collect(hero.getBelongings().backpack)) {
 			GameScene.pickUp(this);
 			Sample.INSTANCE.play(Assets.SND_ITEM);
-			hero.spendAndNext(TIME_TO_PICK_UP);
+			hero.spend(TIME_TO_PICK_UP);
 			return true;
 		} else {
 			return false;
@@ -173,7 +173,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	}
 
 	public void doDrop(@NotNull Char chr) {
-		chr.spendAndNext(TIME_TO_DROP);
+		chr.spend(TIME_TO_DROP);
 		int pos = chr.getPos();
 		chr.level().animatedDrop(detachAll(chr.getBelongings().backpack), pos);
 	}
@@ -524,7 +524,6 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
 		final int cell = Ballistica.cast(pos, dst, false, true);
 		user.getSprite().zap(cell);
-		user.busy();
 
 		Char enemy = Actor.findChar(cell);
 		QuickSlot.target(this, enemy);
@@ -548,7 +547,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 				recycle(MissileSprite.class));
 
 		sprite.reset(pos, cell, this, () -> {
-					user.spendAndNext(finalDelay);
+					user.spend(finalDelay);
 					item.onThrow(cell, user);
 				});
 	}

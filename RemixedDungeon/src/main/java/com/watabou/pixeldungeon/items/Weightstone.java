@@ -95,7 +95,6 @@ public class Weightstone extends Item {
 		Sample.INSTANCE.play( Assets.SND_MISS );
 		
 		owner.spend( TIME_TO_APPLY );
-		owner.busy();
 	}
 	
 	@Override

@@ -117,7 +117,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 			GLog.w( Game.getVar(R.string.WandOfMagicMissile_Desinchanted), item.name() );
 
 			item.upgrade();
-			selector.spendAndNext( TIME_TO_DISENCHANT );
+			selector.spend( TIME_TO_DISENCHANT );
 
 			Badges.validateItemLevelAcquired( item );
 		} else {

@@ -87,7 +87,7 @@ public class Kusarigama extends MeleeWeapon {
         public void onSelect(Integer target, @NotNull Char selector) {
 
             if (target != null) {
-                selector.spendAndNext(TIME_TO_IMPALE);
+                selector.spend(TIME_TO_IMPALE);
                 int hitCell = Ballistica.cast(selector.getPos(), target, false, true);
 
                 if (hitCell == selector.getPos()) {

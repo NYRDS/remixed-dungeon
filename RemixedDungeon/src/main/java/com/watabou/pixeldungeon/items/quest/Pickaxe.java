@@ -90,8 +90,7 @@ public class Pickaxe extends Weapon {
 				if (Dungeon.level.map[pos] == Terrain.WALL_DECO) {
 				
 					chr.spend( TIME_TO_MINE );
-					chr.busy();
-					
+
 					chr.getSprite().attack( pos, () -> {
 
 						CellEmitter.center( pos ).burst( Speck.factory( Speck.STAR ), 7 );

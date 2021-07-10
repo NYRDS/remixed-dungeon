@@ -53,7 +53,7 @@ class TeleportCellListener implements CellSelector.Listener {
             level.press( target, selector );
             Dungeon.observe();
 
-            selector.spendAndNext( Actor.TICK );
+            selector.spend( Actor.TICK );
         }
     }
 

@@ -143,20 +143,15 @@ public abstract class Scroll extends Item implements UnknownItem {
 	@Override
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_READ )) {
-			
 			if (chr.hasBuff( Blindness.class )) {
 				GLog.w( Game.getVar(R.string.Scroll_Blinded) );
 			} else {
-				chr.getBelongings().setSelectedItem(this);
 				detach( chr.getBelongings().backpack );
-				
 				doRead(chr);
 			}
-			
+			chr.readyAndIdle();
 		} else {
-		
 			super._execute(chr, action );
-			
 		}
 	}
 	

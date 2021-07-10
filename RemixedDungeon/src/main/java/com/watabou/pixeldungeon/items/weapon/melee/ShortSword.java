@@ -89,14 +89,11 @@ public class ShortSword extends MeleeWeapon {
 			GLog.w( Game.getVar(R.string.ShortSword_Reforged), item.name() );
 
 			((MeleeWeapon)item).safeUpgrade();
-			selector.spendAndNext( TIME_TO_REFORGE );
+			selector.spend( TIME_TO_REFORGE );
 
 			Badges.validateItemLevelAcquired( item );
 
 		} else {
-			if (item instanceof Boomerang) {
-				GLog.w( Game.getVar(R.string.ShortSword_NotBoomerang) );
-			}
 
 			if (equipedTo != Slot.NONE) {
 				selector.getBelongings().equip(ShortSword.this, equipedTo);

@@ -79,8 +79,7 @@ public class ArmorKit extends Item {
 
 		owner.getSprite().centerEmitter().start( Speck.factory( Speck.KIT ), 0.05f, 10 );
 		owner.spend( TIME_TO_UPGRADE );
-		owner.busy();
-		
+
 		GLog.w( Game.getVar(R.string.ArmorKit_Upgraded), armor.name() );
 		
 		Armor classArmor = ClassArmor.upgrade( owner, armor );
