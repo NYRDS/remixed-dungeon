@@ -62,9 +62,9 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	public float speed() {
 		if(TerrainFlags.is(level().map[getPos()], TerrainFlags.LIQUID)) {
 			return super.speed() * 2f;
-		} else {
-			return super.speed() * 0.5f;
 		}
+
+		return super.speed() * 0.5f;
 	}
 
 	@Override
