@@ -175,8 +175,12 @@ public class DungeonGenerator {
 			JSONArray nextLevelSet = currentLevel.getJSONArray(descend ? 0 : 1);
 
 			if (index >= nextLevelSet.length()) {
+				EventCollector.logException(
+						Utils.format("wrong next level index %d from %s on %s",
+								index,
+								nextLevelSet.toString(),
+								current.levelId));
 				index = 0;
-				EventCollector.logException("wrong next level index on: "+current.levelId);
 			}
 
 			mCurrentLevelId = nextLevelSet.optString(index,"0");
@@ -187,7 +191,6 @@ public class DungeonGenerator {
 			}
 
 			JSONObject nextLevelDesc = mLevels.getJSONObject(mCurrentLevelId);
-
 
 			next.levelId = mCurrentLevelId;
 

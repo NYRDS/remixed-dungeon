@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.mechanics.spells;
 import com.nyrds.LuaInterface;
 import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
@@ -94,6 +95,8 @@ public class Spell implements NamedEntityKind {
         if(!canCast(chr, true)) {
             return false;
         }
+
+        EventCollector.setSessionData("spell", getEntityKind());
 
         if (targetingType.equals(SpellHelper.TARGET_CELL)) {
             chr.selectCell(new SpellCellSelector(this, chr));

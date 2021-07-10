@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items.wands;
 import com.nyrds.Packable;
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
+import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
@@ -260,6 +261,12 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	public void mobWandUse(Char user, final int tgt) {
+
+		if (user.invalid()) {
+			EventCollector.logException(Utils.format("%s attempt of use by invalid char", getEntityKind()));
+			return;
+		}
+
 		setOwner(user);
 		final int cell = getDestinationCell(user.getPos(),tgt);
 		fx(cell, () -> onZap(cell));
