@@ -231,12 +231,12 @@ public abstract class Mob extends Char {
 		GLog.debug("%s is %s", getEntityKind(), getState().getTag());
 		getState().act(this);
 
-		if(actorTime() - timeBeforeAct <= 0 && Util.isDebug()) {
+		if(actorTime() == timeBeforeAct && Util.isDebug()) {
 			var error = String.format("actor %s has same timestamp after %s act!", getEntityKind(), getState().getTag());
 			if(Util.isDebug()) {
 				throw new ModError(error);
 			} else {
-				spend(TICK);
+				spend(MICRO_TICK);
 				EventCollector.logException(error);
 			}
 		}
