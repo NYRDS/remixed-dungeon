@@ -490,6 +490,7 @@ public abstract class Mob extends Char {
 				Actor.addDelayed(new Pushing(new_mob, parent.getPos(), new_mob.getPos()), -1);
 			}
 			level().spawnMob(new_mob);
+			level().press(spawnPos, new_mob);
 		}
 	}
 

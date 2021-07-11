@@ -28,8 +28,7 @@ public class Regeneration extends Buff {
     @Override
     public boolean act() {
         if (target.isAlive()) {
-            if (target.isStarving() || target.level().isSafe()) {
-            } else {
+            if (!target.isStarving() && !target.level().isSafe()) {
                 target.heal(1,this);
             }
 
