@@ -1,0 +1,185 @@
+{
+  "version":1,
+  "settings": {
+    "decayFactor":2,
+    "probabilities" : {
+      "SHIELD" : 8,
+      "WEAPON" : 15,
+      "ARMOR"  : 10,
+      "POTION" : 50,
+      "SCROLL" : 40,
+      "WAND"   : 4,
+      "RING"   : 2,
+      "SEED"   : 5,
+      "FOOD"   : 1,
+      "GOLD"   : 50,
+      "RANGED" : 2,
+      "BULLETS": 5,
+      "UNIQUE" : 2
+    }
+  },
+  "categories": {
+    "BULLETS": {
+      "AmokArrow": 2,
+      "HealthArrow": 2,
+      "CommonArrow": 10,
+      "PoisonArrow": 2,
+      "ParalysisArrow": 2,
+      "FireArrow": 2
+    },
+    "UNIQUE": {
+      "Torch": 4,
+      "SpellBook": 1
+    },
+    "FOOD": {
+      "MysteryMeat": 0,
+      "Pasty": 1,
+      "ChristmasTurkey": 0.1,
+      "PumpkinPie": 0.1,
+      "Ration": 4,
+      "OverpricedRation": 0.1,
+      "RottenMeat": 0,
+      "RottenRation": 0,
+      "RottenPasty": 0,
+      "RottenPumpkinPie": 0,
+      "RawFish": 0,
+      "FriedFish": 0,
+      "RottenFish": 0,
+      "FrozenCarpaccio": 0,
+      "ChargrilledMeat": 0
+    },
+    "RANGED": {
+      "CompoundBow": 3,
+      "CompositeCrossbow": 3,
+      "RubyCrossbow": 1,
+      "WoodenBow": 3,
+      "WoodenCrossbow": 4,
+      "RubyBow": 1,
+      "ElvenBow": 0
+    },
+    "GOLD": {
+      "Gold": 1
+    },
+    "ARMOR": {
+      "PlateArmor": 1,
+      "ScaleArmor": 1,
+      "GothicArmor": 1,
+      "LeatherArmor": 1,
+      "ClothArmor": 1,
+      "MailArmor": 1,
+      "RatArmor": 0,
+      "SpiderArmor":0,
+      "ChaosArmor":0
+    },
+    "RING": {
+      "RingOfElements": 1,
+      "RingOfDetection": 1,
+      "RingOfEvasion": 1,
+      "RingOfHaste": 1,
+      "RingOfSatiety": 1,
+      "RingOfShadows": 1,
+      "RingOfHerbalism": 1,
+      "RingOfPower": 1,
+      "RingOfAccuracy": 1,
+      "RingOfMending": 1
+    },
+    "WAND": {
+      "WandOfSlowness": 10,
+      "WandOfFirebolt": 15,
+      "WandOfTelekinesis": 6,
+      "WandOfMagicMissile": 0,
+      "WandOfPoison": 10,
+      "WandOfAvalanche": 5,
+      "WandOfAmok": 10,
+      "WandOfFlock": 10,
+      "WandOfRegrowth": 6,
+      "WandOfBlink": 11,
+      "WandOfTeleportation": 10,
+      "WandOfLightning": 15,
+      "WandOfDisintegration": 5
+    },
+    "SEED": {
+      "Dreamweed.Seed": 1,
+      "Sorrowmoss.Seed": 1,
+      "Icecap.Seed": 1,
+      "Earthroot.Seed": 1,
+      "Sungrass.Seed": 1,
+      "Fadeleaf.Seed": 1
+    },
+    "SCROLL": {
+      "ScrollOfDomination": 8,
+      "ScrollOfRemoveCurse": 15,
+      "ScrollOfTerror": 8,
+      "ScrollOfRecharging": 10,
+      "ScrollOfMirrorImage": 6,
+      "ScrollOfChallenge": 12,
+      "BlankScroll": 10,
+      "ScrollOfPsionicBlast": 4,
+      "ScrollOfSummoning": 4,
+      "ScrollOfLullaby": 8,
+      "ScrollOfMagicMapping": 15,
+      "ScrollOfTeleportation": 10,
+      "ScrollOfIdentify": 30,
+      "ScrollOfCurse": 6,
+      "ScrollOfWeaponUpgrade": 0,
+      "ScrollOfUpgrade": 0
+    },
+    "POTION": {
+      "PotionOfInvisibility": 10,
+      "PotionOfMindVision": 20,
+      "PotionOfLiquidFlame": 15,
+      "PotionOfParalyticGas": 10,
+      "PotionOfExperience": 4,
+      "PotionOfLevitation": 10,
+      "PotionOfFrost": 10,
+      "PotionOfPurity": 12,
+      "PotionOfToxicGas": 15,
+      "PotionOfHealing": 45,
+      "PotionOfMana": 40
+    },
+    "WEAPON": {
+      "AmokDart": 0.1,
+      "Dart": 1,
+      "Sword": 1,
+      "SacrificialSword": 0.1,
+      "Knuckles": 1,
+      "Javelin": 1,
+      "Claymore": 1,
+      "Mace": 1,
+      "Boomerang": 0,
+      "HealthDart": 0.1,
+      "Kusarigama": 0.1,
+      "Shuriken": 1,
+      "GoldenSword": 0.1,
+      "Halberd": 1,
+      "Glaive": 1,
+      "Tamahawk": 1,
+      "IncendiaryDart": 1,
+      "Spear": 1,
+      "BattleAxe": 1,
+      "Quarterstaff": 1,
+      "WarHammer": 1,
+      "ShortSword": 0,
+      "Longsword": 1,
+      "CurareDart": 1,
+      "Dagger": 1,
+      "ElvenDagger": 0,
+      "GnollTamahawk":0
+    },
+    "THROWABLE": {
+      "Dart": 1,
+      "Shuriken": 1,
+      "Javelin": 1,
+      "Tamahawk": 1,
+      "GnollTamahawk":0,
+      "CurareDart": 1,
+      "IncendiaryDart": 1
+    },
+    "SHIELD": {
+      "WoodenShield": 1,
+      "ToughShield" : 0.5,
+      "StrongShield": 0.25,
+      "RoyalShield":  0.125
+    }
+  }
+}

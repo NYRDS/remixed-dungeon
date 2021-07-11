@@ -17,11 +17,11 @@
       "portal_room_lvl25":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
       "portal_room_lvl31":{"kind":"PredesignedLevel", "depth":31, "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
 
-      "6s":{"kind":"SpiderLevel", "depth":6,      "size":[16,16], "music":"ost_spider"},
-      "7s":{"kind":"SpiderLevel", "depth":7,      "size":[32,32], "music":"ost_spider"},
-      "8s":{"kind":"SpiderLevel", "depth":8,      "size":[40,40], "music":"ost_spider"},
-      "9s":{"kind":"SpiderLevel", "depth":9,      "size":[48,48], "music":"ost_spider"},
-      "10s":{"kind":"SpiderLevel", "depth":10,    "size":[64,64], "music":"ost_boss_spider_ambient", "fallbackMusic":"ost_boss_ambient"},
+      "6s":{"kind":"SpiderLevel", "depth":6,      "size":[16,16], "music":"ost_spider", "treasury":"SpidersTreasury.json"},
+      "7s":{"kind":"SpiderLevel", "depth":7,      "size":[32,32], "music":"ost_spider", "treasury":"SpidersTreasury.json"},
+      "8s":{"kind":"SpiderLevel", "depth":8,      "size":[40,40], "music":"ost_spider", "treasury":"SpidersTreasury.json"},
+      "9s":{"kind":"SpiderLevel", "depth":9,      "size":[48,48], "music":"ost_spider", "treasury":"SpidersTreasury.json"},
+      "10s":{"kind":"SpiderLevel", "depth":10,    "size":[64,64], "music":"ost_boss_spider_ambient", "fallbackMusic":"ost_boss_ambient", "treasury":"SpidersTreasury.json"},
 
       "necro1":{"kind":"NecroLevel", "depth":8,      "size":[32,32], "music":"ost_necro"},
       "necro2":{"kind":"NecroLevel", "depth":9,      "size":[32,32], "music":"ost_necro"},

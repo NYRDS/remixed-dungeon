@@ -83,23 +83,25 @@ public class Chamber {
 	}
 
 	private void decorateCell(Level level, int cellId) {
-		
-		level.map[cellId] = Terrain.EMPTY;
+
+		int[] map = level.map;
+
+		map[cellId] = Terrain.EMPTY;
 		
 		switch(interior){
 			case 0:		//simple cave
 				switch(Random.Int(3)){
 				case 0:
-					level.map[cellId] = Terrain.WATER;
+					map[cellId] = Terrain.WATER;
 				break;
 				case 1:
-					level.map[cellId] = Terrain.HIGH_GRASS;
+					map[cellId] = Terrain.HIGH_GRASS;
 				break;
 				}
 			break;
 			
 			case 1:		//garden
-				level.map[cellId] = Terrain.HIGH_GRASS;
+				map[cellId] = Terrain.HIGH_GRASS;
 				if(Random.Int(5)==0) {
 					Item seedCandidate = Treasury.getLevelTreasury().random(Treasury.Category.SEED);
 					if(seedCandidate instanceof Seed) {
@@ -109,9 +111,9 @@ public class Chamber {
 			break;
 			
 			case 2:		//water
-				level.map[cellId] = Terrain.WATER;
+				map[cellId] = Terrain.WATER;
 				if(Random.Int(5)==0) {
-					level.map[cellId] = Terrain.GRASS;
+					map[cellId] = Terrain.GRASS;
 				}
 			break;
 		}
