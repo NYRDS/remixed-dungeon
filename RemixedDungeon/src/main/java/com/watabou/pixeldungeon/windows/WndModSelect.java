@@ -67,7 +67,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 						onDelete(desc.installDir);
 					}
 				};
-				deleteBtn.setPos(width - deleteBtn.width() - GAP, pos + (BUTTON_HEIGHT - deleteBtn.height())/2);
+				deleteBtn.setPos(width - (deleteBtn.width() * 2) - GAP, pos + (BUTTON_HEIGHT - deleteBtn.height())/2);
 				list.content().add(deleteBtn);
 			}
 
@@ -86,7 +86,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 					}
 				};
 
-				btn.setRect(GAP, pos, width - GAP * 2 - additionalMargin, BUTTON_HEIGHT);
+				btn.setRect(GAP, pos, width - GAP * 2 - (additionalMargin * 2), BUTTON_HEIGHT);
                 list.content().add(btn);
 
 				pos += BUTTON_HEIGHT + GAP;
