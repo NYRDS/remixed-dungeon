@@ -293,6 +293,16 @@ public class Dungeon {
         }
 
         for(Mob mob : followers) {
+                var dup = CharsList.getById(mob.getId());
+
+                if(dup.valid()) {
+                    GLog.debug("Removing dup: %s, %d", dup.getEntityKind(), dup.getId());
+                    Actor.remove(dup);
+                    Actor.freeCell(dup.getPos());
+                    CharsList.remove(dup.getId());
+                    level.mobs.remove(dup);
+                }
+
                 int cell = level.getEmptyCellNextTo(hero.getPos());
                 if (!level.cellValid(cell)) {
                     cell = hero.getPos();
@@ -611,6 +621,7 @@ public class Dungeon {
             levelId = next.levelId;
 
             if(Dungeon.level!=null) {
+                CharsList.remove(Dungeon.hero.getId());
                 for(var mob:Dungeon.level.mobs) {
                     CharsList.remove(mob.getId());
                 }

@@ -1000,8 +1000,7 @@ public class Hero extends Char {
 	public Char getControlTarget() {
 
 		Char controlTarget = CharsList.getById(controlTargetId);
-		if(controlTarget.getId() == EntityIdSource.INVALID_ID) {
-            EventCollector.logException("invalid control target");
+		if(controlTarget.invalid()) {
             controlTargetId = getId();
             return this;
 		}

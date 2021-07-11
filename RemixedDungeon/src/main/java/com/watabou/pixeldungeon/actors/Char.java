@@ -294,6 +294,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			}
         }
 
+		if(this instanceof Hero && id == EntityIdSource.DUPLICATE_ID) { //Hack for 30.1.fix.[9,10] saves
+			id=EntityIdSource.INVALID_ID;
+		}
+
 		getId(); // ensure id
 
 		hp(bundle.getInt(TAG_HP));
@@ -1097,6 +1101,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@LuaInterface
 	public CharSprite getSprite() {
+
+		if(invalid()) {
+			throw new TrackedRuntimeException(Utils.format("Attempt to get sprite for invalid char %s, id %d", getEntityKind(), getId()));
+		}
+
 		if (sprite == null) {
 
 			if(!GameScene.mayCreateSprites()) {
@@ -1777,7 +1786,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public String getDescription() {
-		return description + "\n\n" + String.format(Game.getVar(R.string.CharInfo_Level), lvl(), name());
+    	if(!Util.isDebug()) {
+			return description + "\n\n" + String.format(Game.getVar(R.string.CharInfo_Level), lvl(), name());
+		}
+		return description + "\n\n"
+				+ String.format(Game.getVar(R.string.CharInfo_Level), lvl(), name()) + "\n\n"
+				+ Utils.format("id: %d owner: %d", getId(), getOwnerId());
 	}
 
 	public void setControlTarget(Char controlTarget) {

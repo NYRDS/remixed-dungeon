@@ -325,6 +325,7 @@ public class InterlevelScene extends PixelScene {
 
     private void restoreAtPosition(@Nullable Position restorePos) {
         Actor.fixTime();
+        Actor.clearActors();
 
         try {
             Dungeon.loadGame();

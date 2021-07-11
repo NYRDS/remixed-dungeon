@@ -508,7 +508,7 @@ public class GameScene extends PixelScene {
 
         final Hero hero = Dungeon.hero;
 
-        if (hero == null) {
+        if (hero == null || hero.invalid()) {
             return;
         }
 
@@ -921,7 +921,6 @@ public class GameScene extends PixelScene {
     @Override
     public void resume() {
         super.resume();
-
         InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
     }
 

@@ -1,9 +1,13 @@
 package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.android.util.TrackedRuntimeException;
+import com.nyrds.android.util.Util;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.DummyChar;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -33,6 +37,10 @@ public class CharsList {
 
     static public boolean add(Char mob, int id) {
         if(charsMap.containsKey(id)) {
+            GLog.debug("%s is duplicate, %s already here with id %d", mob.getEntityKind(), charsMap.get(id).getEntityKind(), id);
+            if(Util.isDebug() && mob instanceof Hero) {
+                throw new TrackedRuntimeException("dubbed Hero");
+            }
             return false;
         }
         charsMap.put(id,mob);
@@ -41,5 +49,9 @@ public class CharsList {
 
     static public void remove(int id) {
         charsMap.remove(id);
+    }
+
+    static public void reset() {
+        charsMap.clear();
     }
 }

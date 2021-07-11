@@ -226,6 +226,9 @@ public class StatusPane extends Component {
         super.update();
 
         Char chr = hero.getControlTarget();
+        if(chr.invalid()) {
+            return;
+        }
 
         int hp = chr.hp();
         int ht = chr.ht();

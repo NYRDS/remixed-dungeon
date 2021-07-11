@@ -26,6 +26,7 @@ import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -119,6 +120,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		chars.clear();
 		all.clear();
 
+		CharsList.reset();
 		current = null;
 	}
 	
@@ -219,6 +221,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 			}
 
 			GLog.debug("Main actor loop: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
+			if(actor instanceof Char) {
+				GLog.debug("%s %d action %s",actor.getEntityKind(), ((Char) actor).getId(),((Char) actor).curAction);
+			}
 
 			current = actor;
 
@@ -320,6 +325,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 		if (actor instanceof Char) {
 			Char ch = (Char)actor;
+
+			CharsList.add(ch,ch.getId());
+
 			chars.put(ch.getPos(), ch);
 			all.addAll(ch.buffs());
 
