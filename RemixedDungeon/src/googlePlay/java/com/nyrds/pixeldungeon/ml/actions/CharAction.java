@@ -14,6 +14,13 @@ public abstract class CharAction {
 	@Override
 	public String toString() {
 		Level level = Dungeon.level;
+
+		if (level==null) {
+			return   getClass().getSimpleName() +
+					"{dst=" + dst +
+					'}';
+		}
+
 		return   getClass().getSimpleName() +
 				"{dst=" + dst +
 				  "("+ level.tileNameByCell(dst) + "," +
