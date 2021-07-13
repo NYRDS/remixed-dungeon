@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.ml.actions.UseSpell;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -45,7 +46,7 @@ public class WndSpellInfo extends Window {
 			protected void onClick() {
 				hide();
 				owner.hide();
-				spell.cast(hero);
+				hero.nextAction(new UseSpell(spell));
 			}
 		};
 

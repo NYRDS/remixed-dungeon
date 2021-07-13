@@ -1103,7 +1103,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public CharSprite getSprite() {
 
 		if(invalid()) {
-			throw new TrackedRuntimeException(Utils.format("Attempt to get sprite for invalid char %s, id %d", getEntityKind(), getId()));
+			if( Util.isDebug()) {
+				throw new TrackedRuntimeException(Utils.format("Attempt to get sprite for invalid char %s, id %d", getEntityKind(), getId()));
+			}
 		}
 
 		if (sprite == null) {

@@ -86,6 +86,7 @@ public class CellSelector extends TouchArea {
 
 			if(!defaultListener) {
 				selector.readyAndIdle();
+				selector.next();
 			}
 
 			GameScene.ready();

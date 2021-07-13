@@ -33,8 +33,10 @@ return spell.init{
         for _ = 1, caster:skillLevel() do
             local tgt = caster:randomEnemy()
 
-            RPD.Sfx.Flare:attach( 4, 16, 0xFF0000, true, tgt:getSprite(), 2);
-            RPD.affectBuff(tgt, RPD.Buffs.Terror, duration):setSource(caster)
+            if tgt:valid() then
+                RPD.Sfx.Flare:attach( 4, 16, 0xFF0000, true, tgt:getSprite(), 2);
+                RPD.affectBuff(tgt, RPD.Buffs.Terror, duration):setSource(caster)
+            end
         end
 
         return true

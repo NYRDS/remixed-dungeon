@@ -28,6 +28,7 @@ import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.ml.actions.UseItem;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.ItemsList;
@@ -198,12 +199,14 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	}
 
 	public void execute(@NotNull Char hero) {
-		if(hero.getHeroClass().forbidden(getDefaultAction())){
+		String defaultAction = getDefaultAction();
+
+		if(hero.getHeroClass().forbidden(defaultAction)){
 			setDefaultAction(AC_THROW);
 		}
 
-		if(actions(hero).contains(getDefaultAction())) {
-			execute(hero, getDefaultAction());
+		if(actions(hero).contains(defaultAction)) {
+			hero.nextAction(new UseItem(this, defaultAction));
 		}
 	}
 

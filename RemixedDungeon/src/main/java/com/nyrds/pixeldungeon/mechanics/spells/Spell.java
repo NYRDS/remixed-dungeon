@@ -5,6 +5,7 @@ import com.nyrds.android.util.ModError;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.ml.actions.UseSpell;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -214,7 +215,7 @@ public class Spell implements NamedEntityKind {
 
                 @Override
                 public void execute(@NotNull Char hero) {
-                    Spell.this.cast(hero);
+                    hero.nextAction(new UseSpell(Spell.this));
                 }
 
                 @Override

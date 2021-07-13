@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.ml.actions.UseSpell;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
@@ -49,7 +50,7 @@ public class SpellBook extends Artifact {
 	@Override
 	public void _execute(@NotNull final Char ch, @NotNull String action) {
 		if (action.equals(CommonActions.AC_READ)) {
-			spell().cast(ch);
+			ch.nextAction(new UseSpell(spell()));
 		} else {
 			super._execute(ch, action);
 		}
