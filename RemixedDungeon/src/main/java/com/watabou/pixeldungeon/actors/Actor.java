@@ -239,7 +239,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 				break;
 			}
 
-			if(actor.time == timeBefore && all.contains(actor)) { // don't need this check for removed actors
+/*			if(actor.time == timeBefore && all.contains(actor)) { // don't need this check for removed actors
 				var error = String.format("actor %s has same timestamp after act!", actor.getEntityKind());
 				if(Util.isDebug()) {
 					throw new ModError(error);
@@ -247,11 +247,13 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 					actor.spend(TICK);
 					EventCollector.logException(error);
 				}
-			}
+			}*/
 
-			if(SystemTime.timeSinceTick() > 40) {
-				//Log.i("Main loop", String.format("%s timeout %x",actor.getEntityKind(), actor.hashCode()));
-
+			if(SystemTime.timeSinceTick() > 200) {
+				var error = String.format("%s timeout", actor.getEntityKind());
+				if(Util.isDebug()) {
+					throw new ModError(error);
+				}
 				break;
 			}
 		}
