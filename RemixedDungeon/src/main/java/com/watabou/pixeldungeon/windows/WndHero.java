@@ -208,8 +208,14 @@ public class WndHero extends WndTabbed {
 				Text txt = PixelScene.createText( buff.name(), GuiProperties.regularFontSize() );
 				txt.x = icon.width() + (GAP * 2);
 				txt.y = pos + (int)(icon.height() - txt.baseLine()) / 2;
-
+				val txtTouch = new TouchArea(txt) {
+					@Override
+					protected void onClick(Touchscreen.Touch touch) {
+						GameScene.show( new WndBuffInfo(buff));
+					}
+				};
 				add( icon );
+				add(txtTouch);
 				add( txt );
 				
 				pos += GAP + icon.height();
