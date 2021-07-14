@@ -975,12 +975,12 @@
   <string name="Hero_LockedChest">宝箱已上锁，等你有钥匙时再回来吧</string>
   <string name="Hero_LockedDoor">您没有相配的钥匙</string>
   <string name="Hero_NoticedSmth">您眼角一转，发现前方有点异常。</string>
-  <string name="Hero_Wait">人生的意义是甚麽呢?...</string>
+  <string name="Hero_Wait">我是谁？我从哪里来？我要到哪里去？……</string>
   <string name="Hero_Search">搜索</string>
   <string name="Hero_StaBurning">您着火了！</string>
   <string name="Hero_StaParalysis">你瘫痪了！</string>
   <string name="Hero_StaPoison">您中毒了！</string>
-  <string name="Hero_StaOoze">具腐蚀性的软泥吞噬你的身体。快找水洗掉！！！</string>
+  <string name="Hero_StaOoze">腐蚀污泥正在侵蚀你的身体。快找水洗掉！！！</string>
   <string name="Hero_StaRoots">你无法移动！</string>
   <string name="Hero_StaWeakness">您感觉自己变虚弱了！</string>
   <string name="Hero_StaBlindness">您暂时瞎了！</string>
@@ -1016,7 +1016,7 @@
   <string name="HeroSubClass_NameShaman">萨满</string>
   <string name="HeroSubClass_DescShaman">精灵_萨满_能够将法杖作为近战武器使用。近战攻击命中将有机会对敌人释放法杖的能量，且不捎耗充能。</string>
   <string name="SantaHat_Name">圣诞帽</string>
-  <string name="SantaHat_Info">谁说牢诞盛行深渊霸主Santa的红丝帽？</string>
+  <string name="SantaHat_Info">没有什么比圣诞老人——深渊之主的红绸帽更能让你进入“地牢”的状态。</string>
   <string name="Rudolph_Name">鹿角帽加红鼻</string>
   <string name="Rudolph_Info">还有什么比红鼻子更喜庆的呢？包括鹿角，当然。</string>
   <string name="Kobold_Name">狗头人</string>
