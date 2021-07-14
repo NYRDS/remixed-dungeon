@@ -325,7 +325,7 @@
   <string name="AmuletScene_Stay">我还有未做之事</string>
   <string name="AmuletScene_Txt">你终于拿到了Yendor护符。借助它的力量你可以统治这个世界，给他人带来和平与繁荣或是其它的事。不论如何，你的一生已经被永久改变，游戏也会在此处终结。当然你可以作为一个普通人在这里多逗留一会。</string>
   <string name="GameScene_Welcome">欢迎来到混合的像素地牢的第%d层！</string>
-  <string name="GameScene_WelcomeBack">欢迎回到溷合的像素地牢的第%d层！</string>
+  <string name="GameScene_WelcomeBack">欢迎回到混合的像素地牢的第%d层！</string>
   <string name="GameScene_NightMode">一定要多加小心，地牢在夜间会更加危险！</string>
   <string name="GameScene_Chasm">你的脚步声回荡在地牢中。</string>
   <string name="GameScene_Water">你听见周围水花四溅的声音。</string>
