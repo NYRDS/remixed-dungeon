@@ -2686,7 +2686,7 @@ remix.29.5
   <string name="ScrollOfTeleportation_NoTeleport2">这里强大的魔法光环阻止%s传送！</string>
   <string name="WndModInstall_InstallingMod">安装MOD</string>
   <string name="WndModInstall_Version">版本</string>
-  <string name="WndModInstall_PleaseUpdate">请在安装这个mod之前更新混合地牢</string>
+  <string name="WndModInstall_PleaseUpdate">请在安装这个MOD之前更新混合地牢</string>
   <string name="Wnd_Button_Ok">好的</string>
   <string name="CharAction_Taunt">嘲讽</string>
   <string name="CharAction_Push">推</string>
