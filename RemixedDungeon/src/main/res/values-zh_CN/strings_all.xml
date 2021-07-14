@@ -46,13 +46,13 @@
   <string name="Ring_BuffKnown">这一枚%s</string>
   <string name="RingOfAccuracy_Name">精准之戒</string>
   <string name="RingOfAccuracy_Info">这枚戒指能够提高你的精准度</string>
-  <string name="RingOfDetection_Name">侦查戒指</string>
+  <string name="RingOfDetection_Name">侦测戒指</string>
   <string name="RingOfDetection_Info">戴上这枚戒指能让佩戴者自发地侦测到隐藏门和陷阱而不是发时间去搜寻。负等级的探查戒指会使你的感知变得迟钝，甚至有时你主动探查都无法注意到隐藏门和陷阱。</string>
   <string name="RingOfElements_Name">元素戒指</string>
   <string name="RingOfElements_Info">这枚戒指能够提升佩戴者对不同元素例如火，电，毒气等的抗性，同时减少负面效果持续的时间</string>
   <string name="RingOfEvasion_Name">闪避戒指</string>
   <string name="RingOfEvasion_Info">这枚戒指能够增加你闪避敌人攻击的几率。</string>
-  <string name="RingOfHaggler_Name">讨价戒指</string>
+  <string name="RingOfHaggler_Name">还价戒指</string>
   <string name="RingOfHaggler_Info">事实上这枚戒指并不能提供任何魔法效果，但是它能向商人证明你是盗贼工会的一员。他们会很愿意用商品的折扣来换临时的保护。升级这枚戒指并不会带来额外增益。</string>
   <string name="RingOfHaste_Name">急速戒指</string>
   <string name="RingOfHaste_Info">这枚戒指能够加速佩戴者身上的时间流速，使他的一切动作都快一些。</string>
@@ -60,16 +60,16 @@
   <string name="RingOfHerbalism_Info">这枚戒指能够提升你从踩倒的高草获取露珠和种子的几率。</string>
   <string name="RingOfMending_Name">代谢戒指</string>
   <string name="RingOfMending_Info">这枚戒指能提高佩戴者的身体再生速率，使他们能更快的回复损失的生命值。负向等级的愈合之戒会使佩戴者的自然再生速度减慢甚至停止。</string>
-  <string name="RingOfPower_Name">威能戒指</string>
+  <string name="RingOfPower_Name">力量戒指</string>
   <string name="RingOfPower_Info">你的法杖在戒指中辐射出来的能量场里更加强大，负等级的戒指会削弱你的法杖。</string>
-  <string name="RingOfSatiety_Name">饱足戒指</string>
+  <string name="RingOfSatiety_Name">饱腹戒指</string>
   <string name="RingOfSatiety_Info">佩戴这枚戒指会提升你对饥饿的忍耐度，负等级的戒指则会造成相反的效果</string>
   <string name="RingOfShadows_Name">暗影戒指</string>
   <string name="RingOfShadows_Info">当你佩戴这枚戒指时敌人会更难注意到你，负等级的戒指会使附近的敌人更容易发现你的存在</string>
   <string name="RingOfThorns_Name">荆棘戒指</string>
   <string name="RingOfThorns_Info">这枚戒指不会提供真正的荆棘，但他会把你受到的伤害的一小部分反馈给攻击方，升级这枚戒指不会给予任何额外加成。</string>
   <string name="RingOfStoneWalking_Name">血石戒指</string>
-  <string name="RingOfStoneWalking_Info">这枚奇怪的戒指是由某种坚硬的石头制作的，你一开始想到的是红宝石但实际上是被固定住的液态血液！在它里面，你可以看到箭头指向一堵带着一颗破碎之心的墙···这是拿来做什么的？</string>
+  <string name="RingOfStoneWalking_Info">这枚奇怪的戒指是由某种坚硬的石头制作的，你一开始想到的是红宝石但实际上是被固定住的液态血液！在它里面，你可以看到箭头指向一堵带着一颗破碎之心的墙……这是拿来做什么的？</string>
   <string name="RingOfStoneWalking_ImmuredInStone">你被困在石头里了。永远。</string>
   <string name="SpiderCharm_Name">蜘蛛挂坠</string>
   <string name="SpiderCharm_Info">这个奇异的小饰品被神秘的灵光围绕着。戴着它的人会发生什么事？</string>
@@ -1483,7 +1483,7 @@
   <string name="IceGuardianCoreModule_Name">冰霜守卫的核心装置</string>
   <string name="IceGuardianCoreModule_Info">这是一个由魔冰形成的複杂结构。一颗闪闪发光的宝石在这个奇特的装置的正中。</string>
   <string name="RingOfFrost_Name">寒冰指环</string>
-  <string name="RingOfFrost_Info">此指环由凋刻魔冰而成。穿戴者将受到寒冰护罩之保护，并且对施加攻击的敌人造成伤害和缓速。</string>
+  <string name="RingOfFrost_Info">此戒指由凋刻魔冰而成。穿戴者将受到寒冰护罩之保护，并且对施加攻击的敌人造成伤害和缓速。</string>
   <string name="SpiderQueenCarapace_Name">蜘蛛女王盔甲</string>
   <string name="SpiderQueenCarapace_Info">蜘蛛皇后的甲壳上一块碎片。内窥可见一条网腺，看上去尚有生命迹象。</string>
   <string name="LibrarianNPC_Message_Instruction">您、您好。欢迎来到图书馆。阁下能在此找到形形色色，有关地牢中各种事物的资讯。说老实，我们只能提供由冒险者，即是阁下所採探的资讯。这、这确实有点尴尬。因此，每次阁下莅临本馆，也许，这里有新的资讯供阁下查阅。</string>
@@ -1512,7 +1512,7 @@
   <string name="Badges_AllScrolls">大学者：鉴定所有卷轴</string>
   <string name="Badges_AllRings">鉴定所有戒指</string>
   <string name="Badges_AllWands">鉴定所有法杖</string>
-  <string name="Badges_AllItems">无所不知:鉴定所有药水，卷轴，戒指，法杖</string>
+  <string name="Badges_AllItems">无所不知：鉴定所有药水，卷轴，戒指，法杖</string>
   <string name="Badges_AllBags">全包裹购入</string>
   <string name="Badges_DeathFire">死于烈焰</string>
   <string name="Badges_DeathPoison">死于中毒</string>
@@ -1527,8 +1527,8 @@
   <string name="Badges_BossSlain4">消灭第4个BOSS</string>
   <string name="Badges_BossSlain1All">分别使用战士，法师，盗贼和女猎手斩杀第1个BOSS</string>
   <string name="Badges_BossSlain3All">分别使用角斗士，狂战士，术士，战斗法师，疾行者，刺客，狙击手和守望者斩杀第3个BOSS</string>
-  <string name="Badges_RingHaggler">入手砍价指环</string>
-  <string name="Badges_RingThorns">入手荆棘指环</string>
+  <string name="Badges_RingHaggler">获得还价戒指</string>
+  <string name="Badges_RingThorns">获得荆棘戒指</string>
   <string name="Badges_StrengthAttained1">获得13点力量</string>
   <string name="Badges_StrengthAttained2">获得15点力量</string>
   <string name="Badges_StrengthAttained3">获得17点力量</string>
@@ -1632,7 +1632,7 @@
   <string name="LibrarianNPC_Name">图书管理员</string>
   <string name="LibrarianNPC_Gender">男性</string>
   <string name="LibrarianNPC_Name_Objective">图书管理员</string>
-  <string name="LibrarianNPC_Desc">很害羞的人,厚重的眼镜和难看的毛衣证明了这点。</string>
+  <string name="LibrarianNPC_Desc">很害羞的人，厚重的眼镜和难看的毛衣证明了这点。</string>
   <string name="LibrarianNPC_Message_Not_Ready">抱...抱歉,图-图书馆现在还没开放。</string>
   <string name="TownsfolkSilentNPC_Name">城镇居民</string>
   <string name="TownsfolkSilentNPC_Gender">男性</string>
@@ -2247,7 +2247,7 @@
   <string name="PotionOfStrength_Apply">新生的力量从你身体中喷涌而出。</string>
   <string name="PotionOfStrength_StaApply">+1力量</string>
   <string name="PotionOfToxicGas_Name">毒气药水</string>
-  <string name="PotionOfToxicGas_Info">打开或摔碎这个密封的药瓶将导致内容物爆发成一团致命的的绿色毒云。你应该选择从远处将这瓶药剂扔向敌人，而不是手动开封。</string>
+  <string name="PotionOfToxicGas_Info">打开或摔碎这个密封的药瓶将导致内容物爆发成一团致命的的绿色毒云。你应该选择从远处将这瓶药水扔向敌人，而不是手动开封。</string>
   <string name="WndSettings_Quickslots">快捷栏</string>
   <string name="Abilities_Default">精通</string>
   <string name="Abilities_Common">普通法术</string>
@@ -2487,8 +2487,8 @@
   <string name="HeroClass_MagPerks_3">法师能将法杖作为近战武器使用。</string>
   <string name="HeroClass_MagPerks_4">法师能使用魔法值释放元素魔法。</string>
   <string name="HeroClass_MagPerks_5">鉴定卷轴在游戏开始时就已经鉴定了</string>
-  <string name="HeroClass_RogPerks_0">盗贼起始拥有一枚+1的暗影指环。</string>
-  <string name="HeroClass_RogPerks_1">盗贼在装备指环时能自动鉴定其类型。</string>
+  <string name="HeroClass_RogPerks_0">盗贼起始拥有一枚+1的暗影戒指。</string>
+  <string name="HeroClass_RogPerks_1">盗贼在装备戒指时能自动鉴定其类型。</string>
   <string name="HeroClass_RogPerks_2">盗贼穿起轻甲时灵巧得很，将更容易躲避攻击。</string>
   <string name="HeroClass_RogPerks_3">盗贼于侦测隐藏门与陷阱。</string>
   <string name="HeroClass_RogPerks_4">盗贼更加耐饿。</string>
@@ -2563,14 +2563,14 @@
   <string name="Codex_Story_23">这本书是用矮人语写的</string>
   <string name="Codex_Story_24">这本书是用精灵语写的</string>
   <string name="Codex_Story_25">她在厚重的橡木门前停下，如被冻住一般。门框边闪烁的微光吸引了她的眼球，令她逐渐回想起了一些被遗忘的往事。
-\"光...\"她喃呢着。过去了多久?在永远黑暗的地牢中,她早就忘记去记录时间了。这微光使她回想起了过去。她想起了她过去的练习,长时间的挥舞和穿刺,以及对地图和事件的记录训练。她想起她曾经用祈祷和知识来使她能在未知的地方保留一点点的理智。但是她想不起，也记不起，那些她遇见过的人。
+\"光……\"她喃呢着。过去了多久？在永远黑暗的地牢中，她早就忘记去记录时间了。这微光使她回想起了过去。她想起了她过去的练习，长时间的挥舞和穿刺，以及对地图和事件的记录训练。她想起她曾经用祈祷和知识来使她能在未知的地方保留一点点的理智。但是她想不起，也记不起，那些她遇见过的人。
 她回想起了他们声音，他们的指令，他们的警告，但记不起他们的脸，他们的触感。
 疼痛使她成长，记住危机，面对危险。险恶之地，险象丛生。发狂的动物、不灭的亡灵、疯颠的盗贼、狡诈的忍者在她面前一一倒下。烧、砍、刺、毒，她想尽一切办法击败一切阻挡她的物体。恶魔倒下了，魔像倒下了，术士倒下了，最后连神也在她面前倒下了。
 一路前行，穿越天堂和地狱，她追寻着古神的足迹。即便万物早已安宁，邪音早已停歇，她也知道她依然有工作要去做。古神不过是一个更加神秘而且强大的邪恶的仆人。
 所以她想更进一步，继续深入。老贤者的魔法日志指引她前往目的地点。那是在一个野蛮的大陆,一片巨大的森林，一座微小的村庄中。在那，邪恶的源头向她招手，引诱着她去征服。
-现在，凭借着这微光,她在一滩积水边查看了她的容貌。魔法改变了她。她的皮肤，粗糙如男，苍白微透，满是尘垢。她的饰品富可敌国，她的魔力足以灭军，她的武器力能弑神。说真的,她早已成为了这片充满绝望的黑暗荒原中的主宰者。
-她无惧邪恶，四处追猎邪恶,但她已对正常的生活感到害怕。人类会接纳她吗?如果不呢?她应该怎么和正常人一起生活?天杀的,时间早已流逝，她理应过世,任由冰冷的死神将其带走。
-不，她已经不再属于光了,不再是了。背朝微光,遁入黑暗,她永不回头。
+现在，凭借着这微光,她在一滩积水边查看了她的容貌。魔法改变了她。她的皮肤，粗糙如男，苍白微透，满是尘垢。她的饰品富可敌国，她的魔力足以灭军，她的武器力能弑神。说真的，她早已成为了这片充满绝望的黑暗荒原中的主宰者。
+她无惧邪恶，四处追猎邪恶,但她已对正常的生活感到害怕。人类会接纳她吗？如果不呢？她应该怎么和正常人一起生活？天杀的，时间早已流逝，她理应过世，任由冰冷的死神将其带走。
+不，她已经不再属于光了，不再是了。背朝微光，遁入黑暗，她永不回头。
 by drazool from reddit
 
 </string>
@@ -2849,7 +2849,7 @@ remix.30.0
   <string name="DeepSnail_Gender">男孩</string>
   <string name="DeepSnail_Name_Objective">深色蜗牛</string>
   <string name="DeepSnail_Desc">这种软体动物经常在水源附近出没，速度比普通蜗牛快得多。但是要小心被咬伤，它们会对你的皮肤产生令人不快的影响。</string>
-  <string name="CharInfo_Level">这是一个%1$d级的%2$s。</string>
+  <string name="CharInfo_Level">这是一只%1$d级的%2$s。</string>
   <string name="WrnExperimental_realtime">实时！模式启用：现在是实时的roguelike，快速点击或死亡。
 想要查看库存？
 祝你好运，当下水道蟹正在检查你的内脏时，你可以这样做。</string>
