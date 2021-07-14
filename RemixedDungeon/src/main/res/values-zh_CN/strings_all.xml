@@ -2555,7 +2555,7 @@
   <string name="Codex_Story_14">紊乱武器 - 成功命中后，可以应用任何随机附魔的效果。</string>
   <string name="Codex_Story_15">吸血武器 - 击中时，几率获得对敌人造成的伤害的一部分的生命回复。</string>
   <string name="Codex_Story_16">幸运武器 - 经常无视怪物的护甲，造成更多的伤害。</string>
-  <string name="Codex_Story_17">重击武器-攻击成功时，几率击晕敌人。</string>
+  <string name="Codex_Story_17">重击武器 - 攻击成功时，几率击晕敌人。</string>
   <string name="Codex_Story_18">穿刺武器-攻击成功时，几率伤害敌人背后的目标。</string>
   <string name="Codex_Story_19">淬毒武器-攻击成功时，几率使敌人中毒。</string>
   <string name="Codex_Story_20">寒冰武器 - 攻击成功时，几率减速敌人，熄灭它身上的火。</string>
