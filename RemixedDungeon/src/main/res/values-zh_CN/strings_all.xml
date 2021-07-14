@@ -2438,7 +2438,7 @@
   <string name="Char_StaDodged_2">闪避</string>
   <string name="Dungeon_Tips_0">对于使用武器、防具要量力而为。</string>
   <string name="Dungeon_Tips_1">地牢里的门不会明摆在你面前。如果你被困住了，尝试去寻找隐藏门。</string>
-  <string name="Dungeon_Tips_2">记住，提升你的力量值不是唯一让你能正常用一件装备的方法。你也可以尝试升级它们来让它们更轻更好用。 </string>
+  <string name="Dungeon_Tips_2">记住，提升你的力量并不是获得更好装备的唯一方法，你也可以通过升级卷轴来降低它的力量需求。 </string>
   <string name="Dungeon_Tips_3">你可以把你的金币用在城镇或地牢的商店或服务上。</string>
   <string name="Dungeon_Tips_4">小心黏咕！</string>
   <string name="Dungeon_Tips_5">像素市场。对你的冒险帮助很大!</string>
