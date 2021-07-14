@@ -46,7 +46,7 @@
   <string name="Ring_BuffKnown">这一枚%s</string>
   <string name="RingOfAccuracy_Name">精准之戒</string>
   <string name="RingOfAccuracy_Info">这枚戒指能够提高你的精准度</string>
-  <string name="RingOfDetection_Name">侦查戒指</string>
+  <string name="RingOfDetection_Name">侦测戒指</string>
   <string name="RingOfDetection_Info">戴上这枚戒指能让佩戴者自发地侦测到隐藏门和陷阱而不是发时间去搜寻。负等级的探查戒指会使你的感知变得迟钝，甚至有时你主动探查都无法注意到隐藏门和陷阱。</string>
   <string name="RingOfElements_Name">元素戒指</string>
   <string name="RingOfElements_Info">这枚戒指能够提升佩戴者对不同元素例如火，电，毒气等的抗性，同时减少负面效果持续的时间</string>
@@ -60,9 +60,9 @@
   <string name="RingOfHerbalism_Info">这枚戒指能够提升你从踩倒的高草获取露珠和种子的几率。</string>
   <string name="RingOfMending_Name">代谢戒指</string>
   <string name="RingOfMending_Info">这枚戒指能提高佩戴者的身体再生速率，使他们能更快的回复损失的生命值。负向等级的愈合之戒会使佩戴者的自然再生速度减慢甚至停止。</string>
-  <string name="RingOfPower_Name">威能戒指</string>
+  <string name="RingOfPower_Name">力量戒指</string>
   <string name="RingOfPower_Info">你的法杖在戒指中辐射出来的能量场里更加强大，负等级的戒指会削弱你的法杖。</string>
-  <string name="RingOfSatiety_Name">饱足戒指</string>
+  <string name="RingOfSatiety_Name">饱腹戒指</string>
   <string name="RingOfSatiety_Info">佩戴这枚戒指会提升你对饥饿的忍耐度，负等级的戒指则会造成相反的效果</string>
   <string name="RingOfShadows_Name">暗影戒指</string>
   <string name="RingOfShadows_Info">当你佩戴这枚戒指时敌人会更难注意到你，负等级的戒指会使附近的敌人更容易发现你的存在</string>
