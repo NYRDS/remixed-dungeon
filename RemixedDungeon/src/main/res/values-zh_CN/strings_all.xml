@@ -30,7 +30,7 @@
   <string name="SpellBook_Info_Identified">阅读完这些页面你发现\"%1$s\"术式的全文.\" %2$s \"</string>
   <string name="ManaPotion_Name">魔力药水</string>
   <string name="ManaPotion_Info">这瓶药水会为你回复少量法力</string>
-  <string name="Mushroom_Eat_Message">这个蘑菰吃起来很怪！</string>
+  <string name="Mushroom_Eat_Message">那个蘑菇吃起来很怪！</string>
   <string name="Torch_Info2">地牢的组成要素之一，极差的基础照明。</string>
   <string name="WndSpells_Title">技能</string>
   <string name="WndSpells_Level">法术强度：</string>
@@ -46,13 +46,13 @@
   <string name="Ring_BuffKnown">这一枚%s</string>
   <string name="RingOfAccuracy_Name">精准之戒</string>
   <string name="RingOfAccuracy_Info">这枚戒指能够提高你的精准度</string>
-  <string name="RingOfDetection_Name">侦查戒指</string>
+  <string name="RingOfDetection_Name">侦测戒指</string>
   <string name="RingOfDetection_Info">戴上这枚戒指能让佩戴者自发地侦测到隐藏门和陷阱而不是发时间去搜寻。负等级的探查戒指会使你的感知变得迟钝，甚至有时你主动探查都无法注意到隐藏门和陷阱。</string>
   <string name="RingOfElements_Name">元素戒指</string>
   <string name="RingOfElements_Info">这枚戒指能够提升佩戴者对不同元素例如火，电，毒气等的抗性，同时减少负面效果持续的时间</string>
   <string name="RingOfEvasion_Name">闪避戒指</string>
   <string name="RingOfEvasion_Info">这枚戒指能够增加你闪避敌人攻击的几率。</string>
-  <string name="RingOfHaggler_Name">讨价戒指</string>
+  <string name="RingOfHaggler_Name">还价戒指</string>
   <string name="RingOfHaggler_Info">事实上这枚戒指并不能提供任何魔法效果，但是它能向商人证明你是盗贼工会的一员。他们会很愿意用商品的折扣来换临时的保护。升级这枚戒指并不会带来额外增益。</string>
   <string name="RingOfHaste_Name">急速戒指</string>
   <string name="RingOfHaste_Info">这枚戒指能够加速佩戴者身上的时间流速，使他的一切动作都快一些。</string>
@@ -60,16 +60,16 @@
   <string name="RingOfHerbalism_Info">这枚戒指能够提升你从踩倒的高草获取露珠和种子的几率。</string>
   <string name="RingOfMending_Name">代谢戒指</string>
   <string name="RingOfMending_Info">这枚戒指能提高佩戴者的身体再生速率，使他们能更快的回复损失的生命值。负向等级的愈合之戒会使佩戴者的自然再生速度减慢甚至停止。</string>
-  <string name="RingOfPower_Name">威能戒指</string>
+  <string name="RingOfPower_Name">力量戒指</string>
   <string name="RingOfPower_Info">你的法杖在戒指中辐射出来的能量场里更加强大，负等级的戒指会削弱你的法杖。</string>
-  <string name="RingOfSatiety_Name">饱足戒指</string>
+  <string name="RingOfSatiety_Name">饱腹戒指</string>
   <string name="RingOfSatiety_Info">佩戴这枚戒指会提升你对饥饿的忍耐度，负等级的戒指则会造成相反的效果</string>
   <string name="RingOfShadows_Name">暗影戒指</string>
   <string name="RingOfShadows_Info">当你佩戴这枚戒指时敌人会更难注意到你，负等级的戒指会使附近的敌人更容易发现你的存在</string>
   <string name="RingOfThorns_Name">荆棘戒指</string>
   <string name="RingOfThorns_Info">这枚戒指不会提供真正的荆棘，但他会把你受到的伤害的一小部分反馈给攻击方，升级这枚戒指不会给予任何额外加成。</string>
   <string name="RingOfStoneWalking_Name">血石戒指</string>
-  <string name="RingOfStoneWalking_Info">这枚奇怪的戒指是由某种坚硬的石头制作的，你一开始想到的是红宝石但实际上是被固定住的液态血液！在它里面，你可以看到箭头指向一堵带着一颗破碎之心的墙···这是拿来做什么的？</string>
+  <string name="RingOfStoneWalking_Info">这枚奇怪的戒指是由某种坚硬的石头制作的，你一开始想到的是红宝石但实际上是被固定住的液态血液！在它里面，你可以看到箭头指向一堵带着一颗破碎之心的墙……这是拿来做什么的？</string>
   <string name="RingOfStoneWalking_ImmuredInStone">你被困在石头里了。永远。</string>
   <string name="SpiderCharm_Name">蜘蛛挂坠</string>
   <string name="SpiderCharm_Info">这个奇异的小饰品被神秘的灵光围绕着。戴着它的人会发生什么事？</string>
@@ -205,16 +205,16 @@
   <string name="WandOfAmok_Name">狂乱法杖</string>
   <string name="WandOfAmok_Info">这根法杖施放的紫色光芒会使目标陷入狂乱状态，并随机攻击它附近的生物。</string>
   <string name="WandOfAmok_Info1">什么事也没有发生</string>
-  <string name="WandOfAvalanche_Name">冲崩法杖</string>
+  <string name="WandOfAvalanche_Name">崩塌法杖</string>
   <string name="WandOfAvalanche_Info">当这根法杖释放的能量击中了墙壁 ( 或者其他坚固的障碍物 ) 时，它会造成岩石下塌，对那片区域的生物造成麻痹及伤害。</string>
-  <string name="WandOfAvalanche_Info1">您挥动了落石法杖，没想到周边的石头砸死了您...</string>
-  <string name="WandOfBlink_Name">闪瞬法杖</string>
+  <string name="WandOfAvalanche_Info1">您挥动了崩塌法杖，没想到周边的石头砸死了您……</string>
+  <string name="WandOfBlink_Name">瞬移法杖</string>
   <string name="WandOfBlink_Info">这根法杖会让你传送至目标地点，碰到生物和非生物障碍皆会令传送中止。</string>
-  <string name="WandOfDisintegration_Name">瓦解法杖</string>
+  <string name="WandOfDisintegration_Name">裂解法杖</string>
   <string name="WandOfDisintegration_Info">这根法杖释放的毁灭性射线会对路径上的所有生物造成伤害。其穿透的目标数愈多，造成的伤害则愈大。</string>
-  <string name="WandOfFirebolt_Name">火球法杖</string>
+  <string name="WandOfFirebolt_Name">火弹法杖</string>
   <string name="WandOfFirebolt_Info">这根法杖可以释放出爆裂性的火焰。它会使可燃的地形燃烧，对击中的生物造成伤害并点燃他们。</string>
-  <string name="WandOfFirebolt_Info1">您挥动了火球法杖，没想到引火自焚...</string>
+  <string name="WandOfFirebolt_Info1">您挥动了火弹法杖，没想到引火自焚...</string>
   <string name="WandOfFlock_Name">羊群法杖</string>
   <string name="WandOfFlock_Info">使用这根法杖可以召唤一群魔法绵羊来充当暂时存在且不可通的障碍物。</string>
   <string name="Sheep_Name">魔法绵羊</string>
@@ -227,16 +227,16 @@
   <string name="WandOfMagicMissile_Name">魔弹法杖</string>
   <string name="WandOfMagicMissile_Info">这根法杖可以发射具有魔法能量的飞弹，对目标生物造成中级的伤害。</string>
   <string name="WandOfMagicMissile_ACDisenchant">褪魔</string>
-  <string name="WandOfMagicMissile_Info1">您挥动了魔弹法杖，没想到自己魔弹会撞牆反弹...</string>
+  <string name="WandOfMagicMissile_Info1">您挥动了魔弹法杖，没想到自己魔弹会撞墙反弹……</string>
   <string name="WandOfMagicMissile_SelectWand">选择强化一根法杖</string>
   <string name="WandOfMagicMissile_Desinchanted">您抽取了魔弹法杖的强化，并将其转移到了您的%s上</string>
-  <string name="WandOfPoison_Name">剧毒法杖</string>
+  <string name="WandOfPoison_Name">毒咒法杖</string>
   <string name="WandOfPoison_Info">这根法杖会对目标灌注致命的剧毒。生物会在剧毒作用下受到持续伤害直到效果结束。剧毒的持续回合会随着法杖等级而提升。</string>
   <string name="WandOfPoison_Info1">什么事也没有发生</string>
-  <string name="WandOfRegrowth_Name">再生法杖</string>
+  <string name="WandOfRegrowth_Name">蔓生法杖</string>
   <string name="WandOfRegrowth_Info">“枯木逢春，始渡终，终启始，永生永存！”</string>
   <string name="WandOfRegrowth_Info1">什么事也没有发生</string>
-  <string name="WandOfSlowness_Name">缓速法杖</string>
+  <string name="WandOfSlowness_Name">减速法杖</string>
   <string name="WandOfSlowness_Info">这根法杖会使目标行动迟钝，从而降低其移动力及攻速，直到效果结束。</string>
   <string name="WandOfSlowness_Info1">什么事也没有发生</string>
   <string name="WandOfTelekinesis_Name">念动法杖</string>
@@ -293,10 +293,10 @@
   <string name="town_deco_INN_sign_desc">里面是酒馆</string>
   <string name="HealthDart_Name">治疗飞镖</string>
   <string name="HealthDart_Gender">男性</string>
-  <string name="HealthDart_Info">治疗药水制作的飞镖。</string>
+  <string name="HealthDart_Info">这个飞镖的镖尖上沾有治疗药水。</string>
   <string name="HealthArrow_Name">治疗箭</string>
   <string name="HealthArrow_Gender">女人味</string>
-  <string name="HealthArrow_Info">治疗药水做的箭</string>
+  <string name="HealthArrow_Info">这支箭的箭尖上沾有治疗药水。</string>
   <string name="AmokDart_Name">疯狂飞镖</string>
   <string name="AmokDart_Gender">男性</string>
   <string name="AmokDart_Info">这个飞镖尖端的诅咒将使任何生物变得无情、狂暴。</string>
@@ -324,8 +324,8 @@
   <string name="AmuletScene_Exit">让这一切结束吧</string>
   <string name="AmuletScene_Stay">我还有未做之事</string>
   <string name="AmuletScene_Txt">你终于拿到了Yendor护符。借助它的力量你可以统治这个世界，给他人带来和平与繁荣或是其它的事。不论如何，你的一生已经被永久改变，游戏也会在此处终结。当然你可以作为一个普通人在这里多逗留一会。</string>
-  <string name="GameScene_Welcome">欢迎来到混合像素地牢的第%d层！</string>
-  <string name="GameScene_WelcomeBack">欢迎回到混合像素地牢的第%d层！</string>
+  <string name="GameScene_Welcome">欢迎来到混合地牢的第%d层！</string>
+  <string name="GameScene_WelcomeBack">欢迎回到混合地牢的第%d层！</string>
   <string name="GameScene_NightMode">一定要多加小心，地牢在夜间会更加危险！</string>
   <string name="GameScene_Chasm">你的脚步声回荡在地牢中。</string>
   <string name="GameScene_Water">你听见周围水花四溅的声音。</string>
@@ -376,7 +376,7 @@
   <string name="WndGame_Ranking">排名</string>
   <string name="WndGame_Start">开始新游戏</string>
   <string name="WndGame_menu">主菜单</string>
-  <string name="WndGame_Exit">关闭混合像素地牢</string>
+  <string name="WndGame_Exit">关闭混合地牢</string>
   <string name="WndGame_Return">回到游戏</string>
   <string name="WndGame_Save">保存</string>
   <string name="WndGame_Load">读取</string>
@@ -472,7 +472,7 @@
   <string name="Dewdrop_Name">露珠</string>
   <string name="Dewdrop_Info">一颗透亮的露珠。</string>
   <string name="DewVial_Name">露珠瓶</string>
-  <string name="DewVial_ACDRINK">饮品</string>
+  <string name="DewVial_ACDRINK">饮用</string>
   <string name="DewVial_Info">你可以把额外的露珠装进这个小瓶储存起来以供之后饮用。如果露珠瓶满了，在你濒死的那一刻它就会自动消耗露珠救活你。</string>
   <string name="DewVial_AutoDrink">空露珠瓶没法用来治疗伤口</string>
   <string name="DewVial_Collected">你将一颗露珠收集到露珠瓶里</string>
@@ -491,12 +491,12 @@
   <string name="LloidsBeacon_Creatures">附近生物的精神干扰阻止了你的时空信标生效</string>
   <string name="LloidsBeacon_Return">设置成功，现在你可以随时返回这儿了</string>
   <string name="LloidsBeacon_Set">
-这个传送信标被设置在混合像素地牢的%d层的某个地方。</string>
+这个传送信标被设置在混合地牢的%d层的某个地方。</string>
   <string name="Stylus_Name">奥术刻笔</string>
   <string name="Stylus_ACInscribe">镌刻</string>
-  <string name="Stylus_Info">这支奥术刻笔用某种漆黑的坚硬岩石制成。你可以用它来给装备附魔。不过你力量不足，无法决定附魔的种类，刻笔会替你做出决定</string>
+  <string name="Stylus_Info">这支奥术刻笔用某种漆黑的坚硬岩石制成。你可以用它来给装备刻纹。不过你力量不足，无法决定刻纹的种类，刻笔会替你做出决定。</string>
   <string name="Stylus_SelectArmor">选择一件物品来附魔</string>
-  <string name="Stylus_Inscribed">你凋刻了%1$s在你的%2$s上</string>
+  <string name="Stylus_Inscribed">你雕刻了%1$s在你的%2$s上</string>
   <string name="TomeOfMastery_Name">精通之书</string>
   <string name="TomeOfMastery_ACRead">阅读</string>
   <string name="TomeOfMastery_Info">这本精装书籍并不算厚，但你隐约觉得自己能从中获益良多。要记住，读完这本书需要花费一段时间</string>
@@ -524,7 +524,7 @@
   <string name="SeedPouch_Info">这个小天鹅绒袋允许你在里面储存任何数量的种子，非常的方便。</string>
   <string name="WandHolster_Name">法杖套</string>
   <string name="WandHolster_Info">这个精致的法杖套是用一种珍稀动物的皮毛制成的。它最多可以放进%d支法杖</string>
-  <string name="PotionBelt_Info">这条坚韧的挎带可以装进你所有的药水，并且保护它们不被冻碎</string>
+  <string name="PotionBelt_Info">这条坚韧的挎带可以装进你所有的药水，并且保护它们不被冻碎。</string>
   <string name="PotionBelt_Name">药水背带</string>
   <string name="GoldenKey_Name">金钥匙</string>
   <string name="GoldenKey_Info">这把金钥匙的凸凹纹路很精密，也许能解开些宝箱的锁？</string>
@@ -642,7 +642,7 @@
   <string name="TitleScene_Badges">成就</string>
   <string name="TitleScene_About">关于我们</string>
   <string name="TitleScene_InternalStorageLow">手机内部存储空间不足，你的进度可能会丢失！</string>
-  <string name="AboutScene_Txt_Intro">混合像素地牢是由NYRDS以Watabou的像素地牢源码为基础制作的。</string>
+  <string name="AboutScene_Txt_Intro">混合地牢是由NYRDS以Watabou的像素地牢源码为基础制作的。</string>
   <string name="AboutScene_Code">源码:</string>
   <string name="AboutScene_Graphics">图画：</string>
   <string name="AboutScene_Music">音乐：</string>
@@ -773,7 +773,7 @@
   <string name="WndSadGhostNecro_Text">“这个幽灵似乎被它的诅咒所困住了。看来它想要我的某样东西。如果我用我死灵术的力量，我就能让它认为它已经有了它所需要的东西，并进一步控制它，这样我就不用在这里浪费我的时间了。我该不该控制它呢？”</string>
   <string name="WndSadGhostNecro_Yes">是的，将其控制。</string>
   <string name="WndSadGhostNecro_No">不，让它继续。</string>
-  <string name="WndSadGhostNecro_Persuaded">悲伤的幽灵已被你控制！</string>
+  <string name="WndSadGhostNecro_Persuaded">悲伤幽灵已被你控制！</string>
   <string name="WndSettings_UiScale">用户界面调整</string>
   <string name="DarkSacrifice_Name">黑暗献祭</string>
   <string name="DarkSacrifice_Info">牺牲你控制的单位造成爆炸。爆炸所覆盖的区域将取决于单位的剩余血量和您的技能水平。</string>
@@ -828,7 +828,7 @@
   <string name="WndDonate_rubyDonate">红宝石级捐献</string>
   <string name="WndDonate_silverDonateText">任何捐献皆作此游戏之开发用途。</string>
   <string name="WndDonate_goldDonateText">感谢您的帮助！</string>
-  <string name="WndDonate_rubyDonateText">您的慷慨将会帮助我们改善混合像素地牢！</string>
+  <string name="WndDonate_rubyDonateText">您的慷慨将会帮助我们改善混合地牢！</string>
   <string name="WndDonate_silverDonateText2">且会使所有模式的广告失效，并从一开始就解锁女猎手职业。</string>
   <string name="WndDonate_goldDonateText2">更从一开始就解锁精灵职业。</string>
   <string name="WndDonate_rubyDonateText2"/>
@@ -975,7 +975,7 @@
   <string name="Hero_LockedChest">宝箱已上锁，等你有钥匙时再回来吧</string>
   <string name="Hero_LockedDoor">您没有相配的钥匙</string>
   <string name="Hero_NoticedSmth">您眼角一转，发现前方有点异常。</string>
-  <string name="Hero_Wait">我是谁？我从哪里来？我要到哪里去？……</string>
+  <string name="Hero_Wait">……</string>
   <string name="Hero_Search">搜索</string>
   <string name="Hero_StaBurning">您着火了！</string>
   <string name="Hero_StaParalysis">你瘫痪了！</string>
@@ -1010,7 +1010,7 @@
   <string name="HeroSubClass_NameSnip">狙击手</string>
   <string name="HeroSubClass_DescSnip">_狙击手_见微知着，能够找出敌人护甲的脆弱点，使用远程武器攻击时，能有效地无视敌人护甲打出伤害。</string>
   <string name="HeroSubClass_NameWard">守望者</string>
-  <string name="HeroSubClass_DescWard">跟自然之力强大的联繫让_守望者_能从植物中收集露珠和种子，并且在踩踏高草时获得短暂的根甲保护。</string>
+  <string name="HeroSubClass_DescWard">跟自然之力强大的联系让_守望者_能从植物中收集露珠和种子，并且在踩踏高草时获得短暂的根甲保护。</string>
   <string name="HeroSubClass_NameScout">斥候</string>
   <string name="HeroSubClass_DescScout">精灵_斥候_是隐匿大师，踩踏高草会让他们获得一个短暂的隐身状态。此外，他们比通常的精灵更快更灵敏。</string>
   <string name="HeroSubClass_NameShaman">萨满</string>
@@ -1059,7 +1059,7 @@
   <string name="IceCaves_TileGrass">带霜的草地。</string>
   <string name="IceCaves_TileDescHighGrass">带霜的植被阻挡了视线。</string>
   <string name="IceCaves_TileStatue">被冻结的豺狼人</string>
-  <string name="IceCaves_TileDescStatue">又一个奇怪的凋像...等等，那是被冻住的豺狼人。</string>
+  <string name="IceCaves_TileDescStatue">又一个奇怪的雕像...等等，那是被冻住的豺狼人。</string>
   <string name="ChristmasTurkey_Name">节日火鸡</string>
   <string name="ChristmasTurkey_Info">最好的庆祝圣诞的方式，就是来一只超大的火鸡。所以呢，在这天你可以以荣耀的名义，吸引大量的冒险者来这里探险、杀怪，同时促进这里的旅游业和商业的发展。</string>
   <string name="IceKey_Name">冰霜钥匙</string>
@@ -1071,9 +1071,9 @@
   <string name="GoldenSword_Name">黄金剑</string>
   <string name="GoldenSword_Info">通常用这种柔软的金属制造而成的武器只会被视为装饰品，尽管它的剑刃看起来能轻易的切断物品。</string>
   <string name="GoldenSword_Gender">男性</string>
-  <string name="GoldenStatue_Name">金制凋像</string>
+  <string name="GoldenStatue_Name">黄金雕像</string>
   <string name="GoldenStatue_Gender">女人味</string>
-  <string name="GoldenStatue_Name_Objective">金制凋像</string>
+  <string name="GoldenStatue_Name_Objective">黄金雕像</string>
   <string name="GoldenStatue_Desc">虽然难以置信，但这尊瑰丽的雕像不仅仅是个装饰品，而是对掉以轻心的冒险者怀有深深恶意的生物。你发誓当你第一眼看到它时，那把_%s_只是它手臂的一部分。</string>
   <string name="NecromancerNPC_Name">死灵法师</string>
   <string name="NecromancerNPC_Gender">男性</string>
@@ -1185,7 +1185,7 @@
   <string name="ChaosSword_Name">混沌剑</string>
   <string name="ChaosSword_Info">混乱为刃，力量蕴内。刀身发颤，砍山分洪，力无不逮。唯有强者，方能使用。</string>
   <string name="ChaosSword_Gender">男性</string>
-  <string name="ChaosBow_Name">溷沌弓</string>
+  <string name="ChaosBow_Name">混沌弓</string>
   <string name="ChaosBow_Info">一把充斥着混沌之力的骇人魔弓，每一发从它这里射出的箭矢都会携带有一些混沌能量。但万一失手……</string>
   <string name="ChaosBow_Gender">男性</string>
   <string name="ChaosStaff_Name">混沌法杖</string>
@@ -1246,7 +1246,7 @@
   <string name="FireElemental_Name">火元素</string>
   <string name="FireElemental_Gender">男性</string>
   <string name="FireElemental_Name_Objective">火元素</string>
-  <string name="FireElemental_Desc">这些游荡的火元素是在召唤某种更强大存在时的副产品。由于其特性太过溷乱，以至于最强大的恶魔学者都无法驱使。</string>
+  <string name="FireElemental_Desc">这些游荡的火元素是在召唤某种更强大存在时的副产品。由于其特性太过混乱，以至于最强大的恶魔学者都无法驱使。</string>
   <string name="Eye_Name">邪眼</string>
   <string name="Eye_Gender">中性</string>
   <string name="Eye_Name_Objective">邪眼</string>
@@ -1332,7 +1332,7 @@
   <string name="Skeleton_Desc">骷髅是从那些悲惨的冒险者及地牢原住民尸骨的聚合物产生的，来自下层地牢的邪恶力量将它们从死亡中唤起。在吸收了足够的伤害之后，它们就会在骨头的爆炸中消解。</string>
   <string name="Skeleton_Defense">格挡</string>
   <string name="Skeleton_Killed">你被骨头的爆炸杀死了……</string>
-  <string name="Spinner_Name">洞穴纺织者</string>
+  <string name="Spinner_Name">洞穴蜘蛛</string>
   <string name="Spinner_Gender">男性</string>
   <string name="Spinner_Name_Objective">洞穴蜘蛛</string>
   <string name="Spinner_Desc">这些有着许多绿色绒毛的洞穴蜘蛛会试着去躲避直接的战斗，它们更喜欢在远处等待其猎物卷入蜘网，在毒素中慢慢死去。</string>
@@ -1375,7 +1375,7 @@
   <string name="Yog_Name">犹格-德泽瓦</string>
   <string name="Yog_Gender">男性</string>
   <string name="Yog_Name_Objective">犹格-德泽瓦</string>
-  <string name="Yog_Desc">犹格-德泽瓦是一位上古之神，来源于溷沌中的强大存在。一个世纪前，古代矮人们虽然勉强赢得了与恶魔军团的战争，却无法将古神杀死。作为替代方案，矮人们将它封印在城市下的大堂中，并相信虚弱的它无法再度复苏。</string>
+  <string name="Yog_Desc">犹格-德泽瓦是一位上古之神，来源于混沌中的强大存在。一个世纪前，古代矮人们虽然勉强赢得了与恶魔军团的战争，却无法将古神杀死。作为替代方案，矮人们将它封印在城市下的大堂中，并相信虚弱的它无法再度复苏。</string>
   <string name="Yog_Info1">……</string>
   <string name="Yog_Info2">希望的存在只是幻觉……</string>
   <string name="RottingFist_Name">腐烂之拳</string>
@@ -1483,7 +1483,7 @@
   <string name="IceGuardianCoreModule_Name">冰霜守卫的核心装置</string>
   <string name="IceGuardianCoreModule_Info">这是一个由魔冰形成的複杂结构。一颗闪闪发光的宝石在这个奇特的装置的正中。</string>
   <string name="RingOfFrost_Name">寒冰指环</string>
-  <string name="RingOfFrost_Info">此指环由凋刻魔冰而成。穿戴者将受到寒冰护罩之保护，并且对施加攻击的敌人造成伤害和缓速。</string>
+  <string name="RingOfFrost_Info">此戒指由凋刻魔冰而成。穿戴者将受到寒冰护罩之保护，并且对施加攻击的敌人造成伤害和缓速。</string>
   <string name="SpiderQueenCarapace_Name">蜘蛛女王盔甲</string>
   <string name="SpiderQueenCarapace_Info">蜘蛛皇后的甲壳上一块碎片。内窥可见一条网腺，看上去尚有生命迹象。</string>
   <string name="LibrarianNPC_Message_Instruction">您、您好。欢迎来到图书馆。阁下能在此找到形形色色，有关地牢中各种事物的资讯。说老实，我们只能提供由冒险者，即是阁下所採探的资讯。这、这确实有点尴尬。因此，每次阁下莅临本馆，也许，这里有新的资讯供阁下查阅。</string>
@@ -1512,13 +1512,13 @@
   <string name="Badges_AllScrolls">大学者：鉴定所有卷轴</string>
   <string name="Badges_AllRings">鉴定所有戒指</string>
   <string name="Badges_AllWands">鉴定所有法杖</string>
-  <string name="Badges_AllItems">无所不知:鉴定所有药水，卷轴，戒指，法杖</string>
+  <string name="Badges_AllItems">无所不知：鉴定所有药水，卷轴，戒指，法杖</string>
   <string name="Badges_AllBags">全包裹购入</string>
   <string name="Badges_DeathFire">死于烈焰</string>
   <string name="Badges_DeathPoison">死于中毒</string>
   <string name="Badges_DeathGas">死于毒雾</string>
   <string name="Badges_DeathHunger">死于饥饿</string>
-  <string name="Badges_DeathGlyph">死于铭文</string>
+  <string name="Badges_DeathGlyph">死于刻纹</string>
   <string name="Badges_DeathFalling">摔死</string>
   <string name="Badges_Yasd">花式作死</string>
   <string name="Badges_BossSlain1">消灭第1个BOSS</string>
@@ -1527,8 +1527,8 @@
   <string name="Badges_BossSlain4">消灭第4个BOSS</string>
   <string name="Badges_BossSlain1All">分别使用战士，法师，盗贼和女猎手斩杀第1个BOSS</string>
   <string name="Badges_BossSlain3All">分别使用角斗士，狂战士，术士，战斗法师，疾行者，刺客，狙击手和守望者斩杀第3个BOSS</string>
-  <string name="Badges_RingHaggler">入手砍价指环</string>
-  <string name="Badges_RingThorns">入手荆棘指环</string>
+  <string name="Badges_RingHaggler">获得还价戒指</string>
+  <string name="Badges_RingThorns">获得荆棘戒指</string>
   <string name="Badges_StrengthAttained1">获得13点力量</string>
   <string name="Badges_StrengthAttained2">获得15点力量</string>
   <string name="Badges_StrengthAttained3">获得17点力量</string>
@@ -1545,10 +1545,10 @@
   <string name="Badges_Victory">获得尼德罗护符</string>
   <string name="Badges_VictoryAll">使用所有人物获得尼德罗护符</string>
   <string name="Badges_MasteryCombo">7连击</string>
-  <string name="Badges_PotionsCooked1">熬出3瓶药剂</string>
-  <string name="Badges_PotionsCooked2">熬出6瓶药剂</string>
-  <string name="Badges_PotionsCooked3">熬出9瓶药剂</string>
-  <string name="Badges_PotionsCooked4">熬出12瓶药剂</string>
+  <string name="Badges_PotionsCooked1">熬出3瓶药水</string>
+  <string name="Badges_PotionsCooked2">熬出6瓶药水</string>
+  <string name="Badges_PotionsCooked3">熬出9瓶药水</string>
+  <string name="Badges_PotionsCooked4">熬出12瓶药水</string>
   <string name="Badges_NoMonsterSlain">在不杀死任何怪物的情况下升级</string>
   <string name="Badges_GrimWepon">即死一个怪物</string>
   <string name="Badges_Piranhas">美味的鱼肉，击杀6只食人鱼</string>
@@ -1605,11 +1605,11 @@
   <string name="Mods_CreatedBy">创建者：</string>
   <string name="Mods_AuthorSite">创建网页：</string>
   <string name="Mods_AuthorEmail">创建者电邮地址：</string>
-  <string name="Mods_RestartRequired">需重新开启游戏</string>
+  <string name="Mods_RestartRequired">需要重启游戏</string>
   <string name="Spells_NotTooFast">%s 没有准备好使用</string>
   <string name="ElvenBow_Name">精灵长弓</string>
   <string name="ElvenBow_Gender">男性</string>
-  <string name="ElvenBow_Info">精灵手工的一个代表，比普通木弓更强，更准。</string>
+  <string name="ElvenBow_Info">精灵工艺的一个特例。它显然比普通的木弓更有效、更准确。</string>
   <string name="RatHide_Name">老鼠腿</string>
   <string name="RatHide_Info">又脏又臭的带毛肉皮，这真的有用吗？</string>
   <string name="RatArmor_Name">鼠甲</string>
@@ -1632,7 +1632,7 @@
   <string name="LibrarianNPC_Name">图书管理员</string>
   <string name="LibrarianNPC_Gender">男性</string>
   <string name="LibrarianNPC_Name_Objective">图书管理员</string>
-  <string name="LibrarianNPC_Desc">很害羞的人,厚重的眼镜和难看的毛衣证明了这点。</string>
+  <string name="LibrarianNPC_Desc">很害羞的人，厚重的眼镜和难看的毛衣证明了这点。</string>
   <string name="LibrarianNPC_Message_Not_Ready">抱...抱歉,图-图书馆现在还没开放。</string>
   <string name="TownsfolkSilentNPC_Name">城镇居民</string>
   <string name="TownsfolkSilentNPC_Gender">男性</string>
@@ -1647,12 +1647,12 @@
   <string name="BellaNPC_Name_Objective">贝拉</string>
   <string name="BellaNPC_Desc">漂亮的大姐姐,对所有人都好的那种。</string>
   <string name="BellaNPC_Message">抱歉,你是个好人!</string>
-  <string name="BellaNPC_Amulet_M">但是你的那个护符...我们约会吧!</string>
-  <string name="BellaNPC_Amulet_F">但是你的那个护符...我们百合吧!</string>
-  <string name="BellaNPC_Angry">流氓,滚!</string>
-  <string name="BellaNPC_Yes_End_Game">好啊(结束游戏)</string>
+  <string name="BellaNPC_Amulet_M">你好啊，帅哥，你怎么在那里。啊，好精致的护身符！而你......与任何人相比，你的光芒都是那么耀眼。我们出去走走，讨论我们共同的未来如何？</string>
+  <string name="BellaNPC_Amulet_F">你好，小可爱，你怎么在那里。啊，好精致的护身符！而你......与任何人相比，你的光芒都是那么耀眼。我们出去走走，讨论我们共同的未来，怎么样？</string>
+  <string name="BellaNPC_Angry">你怎么敢......你这个平民！</string>
+  <string name="BellaNPC_Yes_End_Game">好啊（结束游戏）</string>
   <string name="BellaNPC_No">过去对我爱搭不理,今天让你高攀不起</string>
-  <string name="ServiceManNPC_NoConnection">对不起，您现在不能使用我们的服务(需要互联网连接)</string>
+  <string name="ServiceManNPC_NoConnection">对不起，您现在不能使用我们的服务（需要互联网连接）</string>
   <string name="town_deco_common_door_name">门</string>
   <string name="town_deco_common_door_desc">有礼的冒险家不应不请自来。</string>
   <string name="town_deco_dungeon_door_name">入口</string>
@@ -1667,8 +1667,8 @@
   <string name="Codex_ACRead">阅读</string>
   <string name="Codex_Info">在任何图书馆都能找到的书中的一本</string>
   <string name="Codex_Blinded">处于失明状态</string>
-  <string name="WandOfShadowbolt_Name">暗影魔杖</string>
-  <string name="WandOfShadowbolt_Info">此魔杖散发着黑暗，阴毒的能量。</string>
+  <string name="WandOfShadowbolt_Name">暗影法杖</string>
+  <string name="WandOfShadowbolt_Info">此法杖散发着黑暗、阴毒的能量。</string>
   <string name="TownGuardNPC_Name">城镇守卫</string>
   <string name="TownGuardNPC_Gender">男性</string>
   <string name="TownGuardNPC_Name_Objective">城镇守卫</string>
@@ -1687,10 +1687,10 @@
   <string name="HealerNPC_Name">城镇牧师</string>
   <string name="HealerNPC_Gender">男性</string>
   <string name="HealerNPC_Name_Objective">城镇牧师</string>
-  <string name="HealerNPC_Desc">虚无缥缈的直觉告诉我，眼前的老人懂得如何弄法杖。</string>
+  <string name="HealerNPC_Desc">虚无缥缈的直觉告诉我，眼前的老人懂得如何制作法杖。</string>
   <string name="HealerNPC_Message1">免费为冒险者治疗！</string>
   <string name="HealerNPC_Message2">当您受伤或飢饿时欢迎回来！</string>
-  <string name="HealerNPC_Message3">奇怪，为甚麽教会不允许我们戴帽子…外面真的很冷。</string>
+  <string name="HealerNPC_Message3">奇怪，为什么教会不允许我们戴帽子…外面真的很冷。</string>
   <string name="ServiceManNPC_Name">职员</string>
   <string name="ServiceManNPC_Gender">男性</string>
   <string name="ServiceManNPC_Name_Objective">职员</string>
@@ -1748,7 +1748,7 @@
   <string name="WndDonate_royalDonateText">我不想令您反感，但这样做的话，开发者只会好逸恶劳。</string>
   <string name="WndDonate_royalDonateText2">此外，如果您这麽做，便可以戴上所有！所有的帽子！！！１</string>
   <string name="WndPremiumSettings_royal">王族级</string>
-  <string name="Scroll_Name">\"%s\"卷轴</string>
+  <string name="Scroll_Name">“%s”卷轴</string>
   <string name="Scroll_Info">这张羊皮纸上写满了难以破译的文字，并带有%s的符文。高声朗诵它时不知会有甚麽神奇的事发生呢？</string>
   <string name="Scroll_ACRead">阅读</string>
   <string name="Scroll_Blinded">您暂时失明，不能阅读</string>
@@ -1761,7 +1761,7 @@
   <string name="BlankScroll_ReallyBlank">这张卷轴是空白的。</string>
   <string name="ScrollOfChallenge_Name">挑战卷轴</string>
   <string name="ScrollOfChallenge_Info">当你大声吟诵时，这张捲轴将会释放出一声挑衅的咆哮，这声咆哮将会唤醒所有怪物并指示他们导向吟诵者之处。</string>
-  <string name="ScrollOfChallenge_Info1">捲轴发出的挑衅怒吼在地牢中迴盪！</string>
+  <string name="ScrollOfChallenge_Info1">卷轴发出的挑衅怒吼在地牢中回荡！</string>
   <string name="ScrollOfIdentify_Name">鉴定卷轴</string>
   <string name="ScrollOfIdentify_Info">永久的揭示一件物品的所有秘密。</string>
   <string name="ScrollOfIdentify_InvTitle">选择你要鉴定的物品</string>
@@ -1777,11 +1777,11 @@
   <string name="ScrollOfMirrorImage_Name">镜像卷轴</string>
   <string name="ScrollOfMirrorImage_Info">创造几个自身的镜像，攻击它们遇见的敌人。</string>
   <string name="ScrollOfPsionicBlast_Name">灵能爆破卷轴</string>
-  <string name="ScrollOfPsionicBlast_Info">致盲所以视野中的生物并对敌对生物造成伤害。</string>
+  <string name="ScrollOfPsionicBlast_Info">这个卷轴含有破坏性的能量，可以通过灵能引导对视野范围内的所有生物造成巨大伤害。随之而来的闪光会暂时性地使效果范围内的所有人失明，包括卷轴的阅读者。</string>
   <string name="ScrollOfRecharging_Name">充能卷轴</string>
   <string name="ScrollOfRecharging_Info"> 阅读后将你的法杖充满能量。</string>
   <string name="ScrollOfRecharging_Info1a">一股能量涌入了的背包，使法杖充能</string>
-  <string name="ScrollOfRecharging_Info1b">一股能量喷涌而出，你的法杖们能量满了</string>
+  <string name="ScrollOfRecharging_Info1b">一股能量流经你的背包，为你的魔杖充能</string>
   <string name="ScrollOfRecharging_Info2">一股能量喷涌而出，但什么也没发生</string>
   <string name="ScrollOfRemoveCurse_Name">除咒卷轴</string>
   <string name="ScrollOfRemoveCurse_Info">驱除你的背包中的所有诅咒。</string>
@@ -1824,9 +1824,9 @@
   <string name="RubyCrossbow_Info">这个致命的武器确实是矮人工程师的杰作。</string>
   <string name="RubyCrossbow_Gender">男性</string>
   <string name="GothicArmor_Name">哥特盔甲</string>
-  <string name="GothicArmor_Info">哥特式的盔甲是铠甲锻造艺术的顶峰。</string>
-  <string name="ChaosArmor_Name">溷沌护甲</string>
-  <string name="ChaosArmor_Info">这件盔甲的血红色金属板被暗红的铁链缝接在一起，当你触碰它时会迸发出溷沌能量。</string>
+  <string name="GothicArmor_Info">哥特式盔甲是铠甲锻造艺术的顶峰。</string>
+  <string name="ChaosArmor_Name">混沌护甲</string>
+  <string name="ChaosArmor_Info">这件盔甲的血红色金属板被暗红的铁链缝接在一起，当你触碰它时会迸发出混沌能量。</string>
   <string name="ChaosCrystal_ArmorFused">水晶吸收了你的护甲，并化成了复合盔甲的形态。</string>
   <string name="Blacksmith_Name">巨魔铁匠</string>
   <string name="Blacksmith_Desc">这只巨魔看起来和任何其他巨魔一样：又高又瘦，皮肤的色泽和纹理看起来就像石头一样。这位巨魔铁匠正拿着一把与他体型不相称的小锤子不停地修补。</string>
@@ -1879,7 +1879,7 @@
   <string name="MirrorImage_Name">镜像</string>
   <string name="MirrorImage_Name_Objective">镜像</string>
   <string name="MirrorImage_Gender">男性</string>
-  <string name="MirrorImage_Desc">这个镜像与你十分相似，但是它更黯澹且在微微震颤。</string>
+  <string name="MirrorImage_Desc">这个镜像与你十分相似，但是它更苍白，还有点抽搐。</string>
   <string name="RatKing_Name">鼠王</string>
   <string name="RatKing_Desc">这只老鼠比普通的老鼠更大，并且头上戴着一个小小的皇冠。</string>
   <string name="RatKing_Info1">我可没在睡觉</string>
@@ -1905,7 +1905,7 @@
   <string name="Guts_TileDescEntrance">天花板上的大洞是通往上层的</string>
   <string name="Guts_TileDescExit">地上的大洞会通往更深层</string>
   <string name="Guts_TileDescDeco">看上去这块地方...被摧毁得很严重啊</string>
-  <string name="Guts_TileDescBookshelf">这个书架完全被肥厚的网给覆盖，没法从中那出书了</string>
+  <string name="Guts_TileDescBookshelf">这个书架完全被肥厚的网给覆盖，没法够到上面的任何一本书。</string>
   <string name="WndStory_Guts">碎成渣但还没被完全摧毁的古神被封印在地牢的最深处。但是这封印已经被破坏了，恶魔巢穴的大门正式向你敞开。这些如噩梦的怪物是古神在睡梦中创造的，它们无法逃脱，只能在这个怪诞的大厅里相互融合。当你走如这个活着的大厅时，你可以感觉到古神的心脏的跳动。</string>
   <string name="MimicAmulet_Name">拟形怪</string>
   <string name="MimicAmulet_Gender">男性</string>
@@ -1986,12 +1986,12 @@
   <string name="ResultDescriptions_Ooze">在第 %d 层被腐蚀淤泥杀死</string>
   <string name="ResultDescriptions_Fall">在第 %d 层摔死</string>
   <string name="ResultDescriptions_Win">获得尼德罗护符</string>
-  <string name="ResultDescriptions_Immured">在第%d层被囚禁于牆中</string>
+  <string name="ResultDescriptions_Immured">在第%d层被囚禁于墙中</string>
   <string name="ResultDescriptions_Unknown">在神秘情况下死亡 %d</string>
   <string name="Armor_EquipCursed">你的%s紧裹在你身上，使你感到很疼。</string>
   <string name="Armor_Identify">你已经足够熟悉你的%1$s，你能够鉴定出它是%2$s。</string>
   <string name="Armor_ToString">%1$s : %2$d</string>
-  <string name="Armor_Incompatible">不同类型魔法的相互作用抹去了盔甲上的铭文！</string>
+  <string name="Armor_Incompatible">不同类型魔法的相互作用抹去了盔甲上的刻纹！</string>
   <string name="Armor_Info1">这件%1$s在每次受到物理伤害时可以平均抵挡%2$d点的伤害。</string>
   <string name="Armor_Info2">
 
@@ -2009,7 +2009,7 @@
   <string name="Armor_Info7b">，并且因为它被诅咒了，你的力量不足以把它脱下来。</string>
   <string name="Armor_Info8">
 您能感受到 %s 中潜伏着一股恶意的魔力。</string>
-  <string name="Armor_Glyph">象形文字</string>
+  <string name="Armor_Glyph">刻纹</string>
   <string name="ClassArmor_Desc">这个东西看起来很棒！</string>
   <string name="ClassArmor_LowHealt">你的血量太低了！</string>
   <string name="ClassArmor_NotEquipped">你必须穿上这件防具才能使用它的特殊能力！</string>
@@ -2020,10 +2020,10 @@
   <string name="ElfArmor_ACSpecial">自然的呼唤</string>
   <string name="ElfArmor_NotElf">只有精灵才能使用这件护甲！</string>
   <string name="HuntressArmor_Name">女猎人斗篷</string>
-  <string name="HuntressArmor_Desc">穿戴这种披风的女猎可以创造一个幽灵剑阵。每片刀刃都会锁定女猎视野内的任意一个敌人，其伤害取决于她当前所装备的进展武器。</string>
+  <string name="HuntressArmor_Desc">穿戴这种披风的女猎可以创造一个幽灵剑阵。每片刀刃都会锁定女猎视野内的任意一个敌人，其伤害取决于她当前所装备的近战武器。</string>
   <string name="HuntressArmor_ACSpecial">光刃</string>
   <string name="HuntressArmor_NoEnemies">没有看到任何敌人</string>
-  <string name="HuntressArmor_NotHuntress">只有女猎人可以穿上这件护甲!</string>
+  <string name="HuntressArmor_NotHuntress">只有女猎人可以穿上这件护甲！</string>
   <string name="LeatherArmor_Name">皮革护甲</string>
   <string name="LeatherArmor_Desc">由兽皮鞣制而成的护甲。它没有布甲那么轻，但提供了更优秀的防御。</string>
   <string name="MageArmor_Name">法师长袍</string>
@@ -2035,12 +2035,12 @@
   <string name="PlateArmor_Name">金属板甲</string>
   <string name="PlateArmor_Desc">巨大的金属板接合成的装甲，给予那些强壮到足够负担它惊人重量的冒险家以无可匹敌的防护。</string>
   <string name="RogueArmor_Name">盗贼外套</string>
-  <string name="RogueArmor_Desc">穿上这个深色的衣服，盗贼可以表演一个酷炫的把戏，叫做\"烟雾弹\"(尽管没有真正的爆炸)：他会致盲看到他的敌人并且跳到一边去。</string>
+  <string name="RogueArmor_Desc">穿上这个深色的衣服，盗贼可以表演一个酷炫的把戏，叫做“烟雾弹”（尽管没有真正的爆炸）：他会致盲看到他的敌人并且跳到一边去。</string>
   <string name="RogueArmor_ACSpecial">烟雾爆弹</string>
   <string name="RogueArmor_NotRogue">只有盗贼能使用贼这件护甲！</string>
   <string name="RogueArmor_Fov">你只能跳到你视野中的一个空位</string>
   <string name="RogueArmor_Prompt">选个你要跳到的地方</string>
-  <string name="ScaleArmor_Name">鳞片护甲</string>
+  <string name="ScaleArmor_Name">鳞甲</string>
   <string name="ScaleArmor_Desc">用铁鳞片缝在皮背心上造就了一个灵活却可靠的护甲</string>
   <string name="WarriorArmor_Name">勇士战甲</string>
   <string name="WarriorArmor_Desc">尽管这护甲看起来笨重，但它能让战士使用英勇一跃跳向目标地点，砰地砸晕周围的敌人</string>
@@ -2067,7 +2067,7 @@
 %2$s</string>
   <string name="Plant_Seed">%s种子</string>
   <string name="Dreamweed_Name">致幻草</string>
-  <string name="Dreamweed_Desc">一旦接触到致幻草，它将隐秘地释放出一片闪光的溷乱气体云。</string>
+  <string name="Dreamweed_Desc">一旦接触到致幻草，它将隐秘地释放出一片闪光的混乱气体云。</string>
   <string name="Earthroot_Name"> 地缚根</string>
   <string name="Earthroot_Desc">当碰到地缚种后，它的根系会在你周边形成某种无法移动的天然护甲。</string>
   <string name="EarthrootBuff_Name">植被护甲</string>
@@ -2076,7 +2076,7 @@
   <string name="Fadeleaf_Desc">触碰到消逝草的任何生物都会被传送至当前层的一个随机地点。</string>
   <string name="Firebloom_Name">烈焰花</string>
   <string name="Firebloom_Desc">烈焰花被任何物品触碰到时，都会化为一团火焰。</string>
-  <string name="Icecap_Name">冰盖花</string>
+  <string name="Icecap_Name">冰冠花</string>
   <string name="Icecap_Desc">冰冠花在被接触到时会喷射出一团能够冰冻周围任何东西的花粉。</string>
   <string name="Sorrowmoss_Name">断肠苔</string>
   <string name="Sorrowmoss_Desc">断肠苔并不是一种苔藓，而是一种有极强毒性，花瓣利如刀片的花。</string>
@@ -2111,7 +2111,7 @@
   <string name="Level_TileSign">告示牌</string>
   <string name="Level_TileWell">水井</string>
   <string name="Level_TileEmptyWell">空荡荡的水井</string>
-  <string name="Level_TileStatue">凋像</string>
+  <string name="Level_TileStatue">雕像</string>
   <string name="Level_TileToxicTrap">毒气陷阱</string>
   <string name="Level_TileFireTrap">烈焰陷阱</string>
   <string name="Level_TileParalyticTrap">麻痹气体陷阱</string>
@@ -2153,7 +2153,7 @@
   <string name="City_TileDescExit">通向下一层的斜坡。</string>
   <string name="City_TileDescDeco">这里的地面少了几块地砖。</string>
   <string name="City_TileDescEmptySP">厚重的地毯遮盖了地板</string>
-  <string name="City_TileDescStatue">这座凋像展示了一些摆出英勇姿态的矮人。</string>
+  <string name="City_TileDescStatue">这座雕像展示了一些摆出英勇姿态的矮人。</string>
   <string name="City_TileDescBookshelf">不同学科的书排满了书架。</string>
   <string name="Halls_TileWater">冷岩浆</string>
   <string name="Halls_TileGrass">灰烬苔藓</string>
@@ -2199,14 +2199,14 @@
   <string name="GnollTamahawk_Gender">男性</string>
   <string name="WndPlayGames_BackupProgress">备份游戏进程</string>
   <string name="WndPlayGames_RestoreProgress">恢复游戏进程</string>
-  <string name="WndPlayGames_WorkInCloud">上传中...请等待</string>
+  <string name="WndPlayGames_WorkInCloud">上传中……请等待</string>
   <string name="StartScene_UnlockGnoll">控制一只豺狼暴徒，并且带它回小镇找牧师治疗解锁</string>
   <string name="WndPriest_Heal_Minions">治疗你所有的随从 - 只需%d金币!</string>
   <string name="Badges_GnollUnlocked">豺狼人解锁</string>
   <string name="Potion_Name">%s药水</string>
   <string name="Potion_Info">这个瓶子里装着不断旋转的%s液体。谁知道饮用或投掷它时会怎么样呢？</string>
-  <string name="Potion_ACDrink">饮品</string>
-  <string name="Potion_Harmfull">这个药水是有害的！</string>
+  <string name="Potion_ACDrink">饮用</string>
+  <string name="Potion_Harmfull">药水有害！</string>
   <string name="Potion_Beneficial">增益药水</string>
   <string name="Potion_Yes">是的，我知道我在做什么</string>
   <string name="Potion_No">不，我改变主意了</string>
@@ -2247,7 +2247,7 @@
   <string name="PotionOfStrength_Apply">新生的力量从你身体中喷涌而出。</string>
   <string name="PotionOfStrength_StaApply">+1力量</string>
   <string name="PotionOfToxicGas_Name">毒气药水</string>
-  <string name="PotionOfToxicGas_Info">打开或摔碎这个密封的药瓶将导致内容物爆发成一团致命的的绿色毒云。你应该选择从远处将这瓶药剂扔向敌人，而不是手动开封。</string>
+  <string name="PotionOfToxicGas_Info">打开或摔碎这个密封的药瓶将导致内容物爆发成一团致命的的绿色毒云。你应该选择从远处将这瓶药水扔向敌人，而不是手动开封。</string>
   <string name="WndSettings_Quickslots">快捷栏</string>
   <string name="Abilities_Default">精通</string>
   <string name="Abilities_Common">普通法术</string>
@@ -2264,7 +2264,7 @@
   <string name="Potion_SelectForMoisten">选择你要浸润的物品</string>
   <string name="Potion_MoistenUseless">看起来你只是在浪费这瓶药水。</string>
   <string name="Potion_RuneDissaperaed">符文从%s中消失了。</string>
-  <string name="Potion_ArrowMoisten">你成功的浸润了这些箭。</string>
+  <string name="Potion_ArrowMoisten">你成功地浸润了这些箭。</string>
   <string name="Potion_ItemFliesAway">%s从你的手中飘走了。</string>
   <string name="Potion_FoodRefreshed">%s现在看起来能吃了。</string>
   <string name="KindOfBow_SelectArrowKind">我应该使用哪些箭头？</string>
@@ -2441,7 +2441,7 @@
   <string name="Dungeon_Tips_3">你可以把你的金币用在城镇或地牢的商店服务上。</string>
   <string name="Dungeon_Tips_4">小心黏咕!</string>
   <string name="Dungeon_Tips_5">像素市场。对你的冒险帮助很大!</string>
-  <string name="Dungeon_Tips_6">尽早鉴定药水和卷轴。有备无患。</string>
+  <string name="Dungeon_Tips_6">尽快识别你的药水和卷轴。不要推迟到你真正需要它们的时候。</string>
   <string name="Dungeon_Tips_7">人在饥饿的时候不会痛，但人在饥饿难耐的时候会很痛。</string>
   <string name="Dungeon_Tips_8">袭击必中。比如说，你可以躲在门后来给下一个开门的敌人一个惊喜。</string>
   <string name="Dungeon_Tips_9">别让天狗跑了!</string>
@@ -2453,7 +2453,7 @@
   <string name="Dungeon_Tips_15">像素市场。 地牢里的安全房。</string>
   <string name="Dungeon_Tips_16">升级附魔过的装备会有损坏附魔的可能。</string>
   <string name="Dungeon_Tips_17">你可以从嬗化之井里获得平时无法获得的物品。</string>
-  <string name="Dungeon_Tips_18">唯一附魔武器的方法-使用武器升级卷轴。</string>
+  <string name="Dungeon_Tips_18">唯一附魔武器的方法——使用武器升级卷轴。</string>
   <string name="Dungeon_Tips_19">上朝觐见严禁刀具!</string>
   <string name="Dungeon_Tips_20">像素市场。给与恶魔猎手最好的优惠!</string>
   <string name="Dungeon_Tips_21">这是用恶魔语写的。</string>
@@ -2481,14 +2481,14 @@
   <string name="HeroClass_WarPerks_2">战士不擅长于远程武器。</string>
   <string name="HeroClass_WarPerks_3">战士每次进食都会回复少许生命值。</string>
   <string name="HeroClass_WarPerks_4">力量药水在游戏开始时就已经鉴定好了。</string>
-  <string name="HeroClass_MagPerks_0">法师初始时拥有一把独特的魔法飞弹法杖。这把法杖在之后能够“祛魔”以升级其他法杖</string>
+  <string name="HeroClass_MagPerks_0">法师初始时拥有一把独特的魔弹法杖。这把法杖在之后能够“褪魔”以升级其他法杖。</string>
   <string name="HeroClass_MagPerks_1">法师能更快的为他的法杖充能。</string>
   <string name="HeroClass_MagPerks_2">法师每次进食都会为他们包裹里的所有的法杖恢复1点充能。</string>
   <string name="HeroClass_MagPerks_3">法师能将法杖作为近战武器使用。</string>
   <string name="HeroClass_MagPerks_4">法师能使用魔法值释放元素魔法。</string>
   <string name="HeroClass_MagPerks_5">鉴定卷轴在游戏开始时就已经鉴定了</string>
-  <string name="HeroClass_RogPerks_0">盗贼起始拥有一枚+1的暗影指环。</string>
-  <string name="HeroClass_RogPerks_1">盗贼在装备指环时能自动鉴定其类型。</string>
+  <string name="HeroClass_RogPerks_0">盗贼起始拥有一枚+1的暗影戒指。</string>
+  <string name="HeroClass_RogPerks_1">盗贼在装备戒指时能自动鉴定其类型。</string>
   <string name="HeroClass_RogPerks_2">盗贼穿起轻甲时灵巧得很，将更容易躲避攻击。</string>
   <string name="HeroClass_RogPerks_3">盗贼于侦测隐藏门与陷阱。</string>
   <string name="HeroClass_RogPerks_4">盗贼更加耐饿。</string>
@@ -2538,16 +2538,16 @@
   <string name="Swing_Name_1">野蛮%s</string>
   <string name="Swing_Name_2">野蛮%s</string>
   <string name="Codex_Story_0">创造像素地牢的watabou看着他的像素地牢，说：这真是个好游戏!</string>
-  <string name="Codex_Story_1">反弹刻印-弹退敌人。</string>
-  <string name="Codex_Story_2">魅惑刻印-魅惑住敌人和自己，但作为英雄对魅惑有抗性。</string>
-  <string name="Codex_Story_3">反熵刻印-燃烧自己，冻住敌人。</string>
+  <string name="Codex_Story_1">反弹刻纹 - 弹退敌人。</string>
+  <string name="Codex_Story_2">魅惑刻纹 - 敌人会被迷住几个回合，而英雄也会被迷住几个回合，但回合数不会超过敌人。</string>
+  <string name="Codex_Story_3">反熵刻纹 - 燃烧自己，冻住敌人。</string>
   <string name="Codex_Story_4">分身刻印-用生命制造分身，可致死。</string>
-  <string name="Codex_Story_5">电势刻印-电击双方，但英雄只受一半的伤害。</string>
+  <string name="Codex_Story_5">电势刻纹 - 这将释放出一个闪电式的爆炸，对攻击玩家的敌人造成伤害，对英雄的伤害平均为敌人的一半。</string>
   <string name="Codex_Story_6">代谢刻印-用饱食度换取生命，前提是你有饱食度。</string>
-  <string name="Codex_Story_7">恶臭刻印-施放毒气。</string>
-  <string name="Codex_Story_8">粘稠刻印-将一次的伤害转化为多次、每次1点的伤害。伤害总量不变。</string>
-  <string name="Codex_Story_9">位移刻印-转移英雄位置。在boss层无效。</string>
-  <string name="Codex_Story_10">缠绕刻印-缠绕英雄，获得防御。</string>
+  <string name="Codex_Story_7">恶臭刻纹 - 当被击中时，英雄会释放一团有毒气体。</string>
+  <string name="Codex_Story_8">迟滞刻纹 - 英雄将获得伤害延迟debuff，这将使英雄每回合受到1点伤害，而不是一次得到全部伤害。</string>
+  <string name="Codex_Story_9">位移刻印纹 - 每当英雄被击中时，都有几率将英雄传送到一个随机可见的格子上。此刻纹在Boss地层失效。 </string>
+  <string name="Codex_Story_10">缠结刻纹 - 缠绕英雄，获得防御。</string>
   <string name="Codex_Story_11">冷酷武器-攻击成功时，几率秒杀敌人(对boss则将秒杀效果改为造成2倍伤害)。</string>
   <string name="Codex_Story_12">炽烈武器-攻击成功时，几率造成额外伤害，几率点燃敌人。</string>
   <string name="Codex_Story_13">可怖武器-攻击成功时，几率使敌人恐惧。</string>
@@ -2563,14 +2563,14 @@
   <string name="Codex_Story_23">这本书是用矮人语写的</string>
   <string name="Codex_Story_24">这本书是用精灵语写的</string>
   <string name="Codex_Story_25">她在厚重的橡木门前停下，如被冻住一般。门框边闪烁的微光吸引了她的眼球，令她逐渐回想起了一些被遗忘的往事。
-\"光...\"她喃呢着。过去了多久?在永远黑暗的地牢中,她早就忘记去记录时间了。这微光使她回想起了过去。她想起了她过去的练习,长时间的挥舞和穿刺,以及对地图和事件的记录训练。她想起她曾经用祈祷和知识来使她能在未知的地方保留一点点的理智。但是她想不起，也记不起，那些她遇见过的人。
+\"光……\"她喃呢着。过去了多久？在永远黑暗的地牢中，她早就忘记去记录时间了。这微光使她回想起了过去。她想起了她过去的练习，长时间的挥舞和穿刺，以及对地图和事件的记录训练。她想起她曾经用祈祷和知识来使她能在未知的地方保留一点点的理智。但是她想不起，也记不起，那些她遇见过的人。
 她回想起了他们声音，他们的指令，他们的警告，但记不起他们的脸，他们的触感。
 疼痛使她成长，记住危机，面对危险。险恶之地，险象丛生。发狂的动物、不灭的亡灵、疯颠的盗贼、狡诈的忍者在她面前一一倒下。烧、砍、刺、毒，她想尽一切办法击败一切阻挡她的物体。恶魔倒下了，魔像倒下了，术士倒下了，最后连神也在她面前倒下了。
 一路前行，穿越天堂和地狱，她追寻着古神的足迹。即便万物早已安宁，邪音早已停歇，她也知道她依然有工作要去做。古神不过是一个更加神秘而且强大的邪恶的仆人。
 所以她想更进一步，继续深入。老贤者的魔法日志指引她前往目的地点。那是在一个野蛮的大陆,一片巨大的森林，一座微小的村庄中。在那，邪恶的源头向她招手，引诱着她去征服。
-现在，凭借着这微光,她在一滩积水边查看了她的容貌。魔法改变了她。她的皮肤，粗糙如男，苍白微透，满是尘垢。她的饰品富可敌国，她的魔力足以灭军，她的武器力能弑神。说真的,她早已成为了这片充满绝望的黑暗荒原中的主宰者。
-她无惧邪恶，四处追猎邪恶,但她已对正常的生活感到害怕。人类会接纳她吗?如果不呢?她应该怎么和正常人一起生活?天杀的,时间早已流逝，她理应过世,任由冰冷的死神将其带走。
-不，她已经不再属于光了,不再是了。背朝微光,遁入黑暗,她永不回头。
+现在，凭借着这微光,她在一滩积水边查看了她的容貌。魔法改变了她。她的皮肤，粗糙如男，苍白微透，满是尘垢。她的饰品富可敌国，她的魔力足以灭军，她的武器力能弑神。说真的，她早已成为了这片充满绝望的黑暗荒原中的主宰者。
+她无惧邪恶，四处追猎邪恶,但她已对正常的生活感到害怕。人类会接纳她吗？如果不呢？她应该怎么和正常人一起生活？天杀的，时间早已流逝，她理应过世，任由冰冷的死神将其带走。
+不，她已经不再属于光了，不再是了。背朝微光，遁入黑暗，她永不回头。
 by drazool from reddit
 
 </string>
@@ -2685,13 +2685,13 @@ remix.29.5
   <string name="ScrollOfTeleportation_NoTeleport2">这里强大的魔法光环阻止%s传送！</string>
   <string name="WndModInstall_InstallingMod">安装mod</string>
   <string name="WndModInstall_Version">版本</string>
-  <string name="WndModInstall_PleaseUpdate">请在安装这个mod之前更新Remixed Dungeon</string>
+  <string name="WndModInstall_PleaseUpdate">请在安装这个mod之前更新混合地牢</string>
   <string name="Wnd_Button_Ok">好的</string>
   <string name="CharAction_Taunt">嘲讽</string>
   <string name="CharAction_Push">推</string>
   <string name="CharAction_Steal">偷</string>
   <string name="CharAction_Charm">魅惑</string>
-  <string name="CharAction_Order">订单</string>
+  <string name="CharAction_Order">命令</string>
   <string name="CharAction_Give">给</string>
   <string name="CharAction_Take">拿</string>
   <string name="CharAction_Scare">恐惧</string>
@@ -2699,7 +2699,7 @@ remix.29.5
   <string name="StunBuff_Name">眩晕</string>
   <string name="StunBuff_Info">你被眩晕了！</string>
   <string name="Char_StaStunned">眩晕</string>
-  <string name="Mob_ReadyForOrder">%s准备好接受您的订单</string>
+  <string name="Mob_ReadyForOrder">%s已准备执行您的命令</string>
   <string name="Mob_CantDoIt">我做不到。我的手太小了。</string>
   <string name="Welcome_Text_29_6">
 Remix.29.6
@@ -2794,9 +2794,7 @@ remix.30.0
   <string name="town_deco_church_sign_desc">那栋楼里好像有座教堂。</string>
   <string name="town_deco_statue_water_name">天使雕像</string>
   <string name="town_deco_statue_water_desc">一尊雄伟的天使雕像，手持一碗水。</string>
-  <string name="town_deco_statue_blood_name">天使雕像
-
-</string>
+  <string name="town_deco_statue_blood_name">天使雕像</string>
   <string name="town_deco_statue_blood_desc">一尊雄伟的天使雕像，手持一碗血。</string>
   <string name="town_deco_vat_name">大缸</string>
   <string name="town_deco_vat_desc">这个石缸里装满了圣水。</string>
@@ -2849,7 +2847,7 @@ remix.30.0
   <string name="DeepSnail_Gender">男孩</string>
   <string name="DeepSnail_Name_Objective">深色蜗牛</string>
   <string name="DeepSnail_Desc">这种软体动物经常在水源附近出没，速度比普通蜗牛快得多。但是要小心被咬伤，它们会对你的皮肤产生令人不快的影响。</string>
-  <string name="CharInfo_Level">这是一个%1$d级的%2$s。</string>
+  <string name="CharInfo_Level">这是一只%1$d级的%2$s。</string>
   <string name="WrnExperimental_realtime">实时！模式启用：现在是实时的roguelike，快速点击或死亡。
 想要查看库存？
 祝你好运，当下水道蟹正在检查你的内脏时，你可以这样做。</string>
