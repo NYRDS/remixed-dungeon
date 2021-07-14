@@ -276,7 +276,7 @@
   <string name="SociologistNPC_Name">调研员</string>
   <string name="SociologistNPC_Gender">男性</string>
   <string name="SociologistNPC_Name_Objective">调研员</string>
-  <string name="SociologistNPC_Desc">这位调研员专门收集你对这款溷合地牢的意见和建议</string>
+  <string name="SociologistNPC_Desc">这位调研员专门收集你对这款像素地牢的意见和建议</string>
   <string name="SociologistNPC_AlreadyTaken">你已经反馈过了。请稍后再来</string>
   <string name="SociologistNPC_Hi">你好
 你有什么意见和建议想对像素地牢作者说吗（请确保网络顺畅）
