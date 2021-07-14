@@ -60,7 +60,7 @@
   <string name="RingOfHerbalism_Info">这枚戒指能够提升你从踩倒的高草获取露珠和种子的几率。</string>
   <string name="RingOfMending_Name">代谢戒指</string>
   <string name="RingOfMending_Info">这枚戒指能提高佩戴者的身体再生速率，使他们能更快的回复损失的生命值。负向等级的愈合之戒会使佩戴者的自然再生速度减慢甚至停止。</string>
-  <string name="RingOfPower_Name">威能戒指</string>
+  <string name="RingOfPower_Name">力量戒指</string>
   <string name="RingOfPower_Info">你的法杖在戒指中辐射出来的能量场里更加强大，负等级的戒指会削弱你的法杖。</string>
   <string name="RingOfSatiety_Name">饱足戒指</string>
   <string name="RingOfSatiety_Info">佩戴这枚戒指会提升你对饥饿的忍耐度，负等级的戒指则会造成相反的效果</string>
