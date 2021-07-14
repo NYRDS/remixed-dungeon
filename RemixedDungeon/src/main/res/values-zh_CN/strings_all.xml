@@ -1071,7 +1071,7 @@
   <string name="GoldenSword_Name">黄金剑</string>
   <string name="GoldenSword_Info">通常用这种柔软的金属制造而成的武器只会被视为装饰品，尽管它的剑刃看起来能轻易的切断物品。</string>
   <string name="GoldenSword_Gender">男性</string>
-  <string name="GoldenStatue_Name">金制凋像</string>
+  <string name="GoldenStatue_Name">金制雕像</string>
   <string name="GoldenStatue_Gender">女人味</string>
   <string name="GoldenStatue_Name_Objective">金制凋像</string>
   <string name="GoldenStatue_Desc">虽然难以置信，但这尊瑰丽的雕像不仅仅是个装饰品，而是对掉以轻心的冒险者怀有深深恶意的生物。你发誓当你第一眼看到它时，那把_%s_只是它手臂的一部分。</string>
