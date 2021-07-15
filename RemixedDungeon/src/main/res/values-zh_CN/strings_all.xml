@@ -1101,12 +1101,12 @@
   <string name="RatKing_Gender">男性</string>
   <string name="Weapon_Identify">你已足够熟悉你的%1$s，鉴定出它是%2$s。</string>
   <string name="Weapon_Incompatible">不同属性魔法的冲突使得这把武器的附魔失去了效力！</string>
-  <string name="MeleeWeapon_Info1a">这把%1$s是%2$s的%3$d阶近战武器。</string>
+  <string name="MeleeWeapon_Info1a">这把%1$s是%2$s%3$d阶的近战武器。</string>
   <string name="MeleeWeapon_Info1b">一把</string>
   <string name="MeleeWeapon_Info1c">一把升级过的</string>
   <string name="MeleeWeapon_Info1d">一把负等级的</string>
   <string name="MeleeWeapon_Info2a">它的平均伤害是%d点。</string>
-  <string name="MeleeWeapon_Info2b">一般情况下这把武器每次攻击能造成平均%1$d点伤害，并需要 %2$d 点力量才能正常使用。</string>
+  <string name="MeleeWeapon_Info2b">一般情况下这把武器每次攻击能造成平均%1$d点伤害，并需要%2$d点力量才能正常使用。</string>
   <string name="MeleeWeapon_Info2c">也许这把武器对你来说太重了。</string>
   <string name="MeleeWeapon_Info3a">这是一把比较%s的武器。</string>
   <string name="MeleeWeapon_Info3b">快速</string>
@@ -2080,7 +2080,7 @@
   <string name="Potential_Txt">电势之%s</string>
   <string name="Stench_Txt">恶臭 %s</string>
   <string name="Viscosity_Txt">粘稠之%s</string>
-  <string name="Viscosity_Status">延缓 %d 点伤害</string>
+  <string name="Viscosity_Status">延缓%d点伤害</string>
   <string name="DeferedDamageBuff_Name">延时伤害 (%d)</string>
   <string name="DeferedDamageBuff_Info">你的疼痛已经变成了一种缓慢的疼痛，使你一次受到的伤害减少。
 待承受的伤害%d</string>
@@ -2659,7 +2659,7 @@ by drazool from reddit
   <string name="StrongShield_desc">这面长方形的盾牌用青铜片镀成，并以彩布装饰。它明显更重，但可以抵挡更多的伤害。</string>
   <string name="RoyalShield_name">皇家盾牌</string>
   <string name="RoyalShield_desc">全金属制盾牌。因此，它很重，但只有它能给你最好的保护。</string>
-  <string name="ShieldInfoTemplate">这面盾牌最多可以格挡%1$d伤害。  格挡几率为%2$d %% 。 成功格挡后需要%3$3.1f秒来恢复。</string>
+  <string name="ShieldInfoTemplate">这面盾牌最多可以格挡%1$d伤害。格挡几率为%2$d%%。成功格挡后需要%3$3.1f秒来恢复。</string>
   <string name="Belongings_CantWearBoth">你不能同时装备%1$s和%2$s！</string>
   <string name="ShieldStrTemplate">盾牌的佩戴者应至少具有%1$d力量才能正常使用它。</string>
   <string name="town_deco_flowerinthepot_name">花盆</string>
