@@ -2275,7 +2275,7 @@
   <string name="WndSettings_Quickslots">快捷栏</string>
   <string name="Abilities_Default">精通</string>
   <string name="Abilities_Common">普通咒语</string>
-  <string name="Abilities_Elemental">元素法术</string>
+  <string name="Abilities_Elemental">元素咒语</string>
   <string name="Abilities_Necromancy">死灵法术</string>
   <string name="WndSettings_UiSettings">界面设置</string>
   <string name="WndSettings_ActionButtonSize">按钮大小</string>
