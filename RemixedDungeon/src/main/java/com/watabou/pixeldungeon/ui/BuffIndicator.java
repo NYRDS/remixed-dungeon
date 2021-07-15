@@ -30,7 +30,9 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.SparseArray;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import lombok.val;
 
@@ -90,9 +92,9 @@ public class BuffIndicator extends Component {
 
 	private TextureFilm film;
 	
-	private SparseArray<Image> icons = new SparseArray<>();
+	private Map<Integer, Image> icons = new HashMap<>();
 	
-	private Char ch;
+	private final Char ch;
 	
 	public BuffIndicator( Char ch ) {
 		super();
@@ -122,7 +124,8 @@ public class BuffIndicator extends Component {
 	protected void layout() {
 		clear();
 		
-		SparseArray<Image> newIcons = new SparseArray<>();
+		val newIcons = new HashMap<Integer, Image>();
+		final int[] iconCounter = {0};
 
 		ch.forEachBuff(b->
 		{
@@ -130,8 +133,9 @@ public class BuffIndicator extends Component {
 			if (icon != NONE) {
 				Image img = new Image(TextureCache.get(b.textureSmall()));
 				img.frame(film.get(icon));
-				img.x = x + members.size() * (ICON_SIZE + 2);
+				img.x = x + iconCounter[0] * (ICON_SIZE+1);
 				img.y = y;
+				iconCounter[0] +=1;
 				img.setScale(ICON_SIZE/SIZE,ICON_SIZE/SIZE);
 				val imgTouch = new TouchArea(img) {
 					@Override
@@ -146,7 +150,7 @@ public class BuffIndicator extends Component {
 			}
 		});
 
-		for (Integer key : icons.keyArray()) {
+		for (Integer key : icons.keySet()) {
 			if (newIcons.get( key ) == null) {
 				Image icon = icons.get( key );
 				icon.origin.set( ICON_SIZE / 2 );
