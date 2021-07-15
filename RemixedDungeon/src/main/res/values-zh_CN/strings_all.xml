@@ -257,7 +257,7 @@
   <string name="WndPortal_Warning_Info">在此楼层中，你并没有使用过传送门。离开此层后，你将没法再使用它！
 你确定要离开吗？</string>
   <string name="PortalGate_Name">传送门</string>
-  <string name="PortalGate_Desc">传送门表面凋有一串奇妙的图样。它看上去好像带你跨越一大段距离，到达遥远的某处。然而，从侧面看的话，能十分明显地看出那表面比纸更平。</string>
+  <string name="PortalGate_Desc">传送门表面雕有一串奇妙的图样。它看上去好像带你跨越一大段距离，到达遥远的某处。然而，从侧面看的话，能十分明显地看出那表面比纸更平。</string>
   <string name="PortalGate_Desc_Activated">传送门中散发出某种隐隐发光的物体。门本身不会移动，但涟漪却一直在中央盪漾着。</string>
   <string name="PortalGate_Activated">远古传送门已经苏醒！</string>
   <string name="PortalGate_Used">你触碰了传送门……门没有任何反应。</string>
