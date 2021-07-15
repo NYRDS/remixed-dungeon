@@ -2646,7 +2646,7 @@ by drazool from reddit
         NYRDS团队对MOD的内容、质量或稳定性不负任何责任。
         MOD需要独立下载，祝你玩得开心！
     </string>
-  <string name="ShieldWeaponInfo">当作为武器使用时，这枚盾牌平均会造成%1$d的伤害。</string>
+  <string name="ShieldWeaponInfo">当作为武器使用时，这面盾牌平均会造成%1$d的伤害。</string>
   <string name="TownPortal_Name">回城卷轴</string>
   <string name="TownPortal_Info">这道法术可以让你立即回到安全的地方。然而，附近强大的魔法源可能会阻止它如期发挥作用。</string>
   <string name="MedicineMask_Name">医用口罩</string>
