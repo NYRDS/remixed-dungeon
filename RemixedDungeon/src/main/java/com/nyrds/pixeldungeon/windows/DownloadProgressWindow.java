@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.windows;
 
-import com.nyrds.android.util.DownloadStateListener;
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.util.DownloadStateListener;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
 
@@ -23,12 +23,12 @@ public class DownloadProgressWindow implements DownloadStateListener {
 
     @Override
     public void DownloadProgress(final String file, final Integer bytes) {
-        Game.pushUiTask(() -> {
+        GameLoop.pushUiTask(() -> {
             if (progress == null) {
                 progress = new WndMessage(Utils.EMPTY_STRING);
-                Game.addToScene(progress);
+                GameLoop.addToScene(progress);
             }
-            if (progress.getParent() == Game.scene()) {
+            if (progress.getParent() == GameLoop.scene()) {
                 progress.setText(Utils.format("%s  %4.2fMb", prefix, bytes / 1024f / 1024f));
             }
         });
@@ -36,7 +36,7 @@ public class DownloadProgressWindow implements DownloadStateListener {
 
     @Override
     public void DownloadComplete(final String file, final Boolean result) {
-        Game.pushUiTask(() -> {
+        GameLoop.pushUiTask(() -> {
             if (progress != null) {
                 progress.hide();
                 progress = null;

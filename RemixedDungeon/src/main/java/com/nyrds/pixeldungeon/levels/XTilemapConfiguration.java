@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
-import com.nyrds.android.util.JsonHelper;
+import com.nyrds.util.JsonHelper;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.utils.GLog;

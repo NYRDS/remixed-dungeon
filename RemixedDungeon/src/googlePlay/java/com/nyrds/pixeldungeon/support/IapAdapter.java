@@ -16,11 +16,11 @@ import com.android.billingclient.api.PurchaseHistoryResponseListener;
 import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.Google.GoogleIapCheck;
-import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Preferences;
+import com.nyrds.market.GoogleIapCheck;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.Preferences;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 

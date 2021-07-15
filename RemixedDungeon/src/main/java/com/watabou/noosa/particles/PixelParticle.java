@@ -17,7 +17,7 @@
 
 package com.watabou.noosa.particles;
 
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.PseudoPixel;
 
 public class PixelParticle extends PseudoPixel {
@@ -49,7 +49,7 @@ public class PixelParticle extends PseudoPixel {
 	public void update() {
 		super.update();
 
-		if ((left -= Game.elapsed) <= 0) {
+		if ((left -= GameLoop.elapsed) <= 0) {
 			kill();
 		}
 	}

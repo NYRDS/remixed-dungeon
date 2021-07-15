@@ -21,7 +21,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -117,7 +117,12 @@ public class Sungrass extends Plant {
 
 		@Override
 		public String name() {
-			return Game.getVar(R.string.Sungrass_Buff);
+			return Game.getVar(R.string.SungrassBuff_Name);
+		}
+
+		@Override
+		public String desc() {
+			return Game.getVar(R.string.SungrassBuff_Info);
 		}
 	}
 }

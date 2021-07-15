@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Image;
 
 public class Banner extends Image {
@@ -63,7 +63,7 @@ public class Banner extends Image {
 	public void update() {
 		super.update();
 		
-		time -= Game.elapsed;
+		time -= GameLoop.elapsed;
 		if (time >= 0) {
 			
 			float p = time / fadeTime;

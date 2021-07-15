@@ -5,10 +5,10 @@ import android.content.Context;
 import com.google.ads.consent.ConsentInfoUpdateListener;
 import com.google.ads.consent.ConsentInformation;
 import com.google.ads.consent.ConsentStatus;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Preferences;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.Preferences;
 
 /**
  * Created by mike on 21.06.2018.

@@ -18,6 +18,7 @@
 package com.watabou.noosa;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.windows.IPlaceable;
 import com.watabou.glwrap.Matrix;
 import com.watabou.utils.GameMath;
@@ -127,7 +128,7 @@ public class Visual extends Gizmo implements IPlaceable{
 	
 	protected void updateMotion() {
 		
-		float elapsed = Game.elapsed;
+		float elapsed = GameLoop.elapsed;
 		
 		float d = (GameMath.speed( speed.x, acc.x ) - speed.x) / 2;
 		speed.x += d;

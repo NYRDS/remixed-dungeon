@@ -1,10 +1,10 @@
 package com.nyrds.pixeldungeon.ai;
 
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.utils.CharsList;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -100,7 +100,7 @@ public abstract class MobAi implements AiState {
     protected Char chooseEnemy(@NotNull Mob me, float attentionFactor) {
 
         attentionFactor *= me.getAttentionFactor();
-        attentionFactor *= Game.getDifficultyFactor();
+        attentionFactor *= GameLoop.getDifficultyFactor();
 
         Char bestEnemy = CharsList.DUMMY;
         int dist = me.level().getLength();

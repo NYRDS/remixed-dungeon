@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.effects.emitters;
 
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Dungeon;
@@ -29,7 +29,7 @@ public class IceVein extends Group {
 
             super.update();
 
-            if ((delay -= Game.elapsed) <= 0) {
+            if ((delay -= GameLoop.elapsed) <= 0) {
 
                 delay = Random.Float();
 

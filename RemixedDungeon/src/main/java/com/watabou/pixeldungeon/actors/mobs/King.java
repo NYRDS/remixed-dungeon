@@ -20,11 +20,12 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -133,7 +134,7 @@ public class King extends Boss {
 	}
 	
 	private int maxArmySize() {
-		return (int) (1 + MAX_ARMY_SIZE * (ht() - hp()) / ht() * Game.getDifficultyFactor());
+		return (int) (1 + MAX_ARMY_SIZE * (ht() - hp()) / ht() * GameLoop.getDifficultyFactor());
 	}
 
 	@Override

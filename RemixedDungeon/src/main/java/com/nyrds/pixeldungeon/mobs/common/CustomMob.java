@@ -3,14 +3,14 @@ package com.nyrds.pixeldungeon.mobs.common;
 import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
-import com.nyrds.android.util.JsonHelper;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.StringsManager;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.JsonHelper;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;

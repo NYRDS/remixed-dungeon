@@ -1,11 +1,12 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.PlayGames;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.Preferences;
+import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
-import com.watabou.pixeldungeon.Preferences;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndMessage;
 
@@ -44,7 +45,7 @@ public class WndPlayGames extends Window {
 
                 if (value) {
                     Game.instance().playGames.connectExplicit();
-                    Game.addToScene(new WndMessage(Game.getVar(R.string.WndPlayGames_Connecting)));
+                    GameLoop.addToScene(new WndMessage(Game.getVar(R.string.WndPlayGames_Connecting)));
                 } else {
                     Game.instance().playGames.disconnect();
                 }
@@ -114,14 +115,14 @@ public class WndPlayGames extends Window {
         private final WndMessage working;
         ResultHandler() {
             working = new WndMessage(Game.getVar(R.string.WndPlayGames_WorkInCloud));
-            Game.addToScene(working);
+            GameLoop.addToScene(working);
         }
         @Override
         public void status(final boolean status) {
-            Game.pushUiTask(() -> {
+            GameLoop.pushUiTask(() -> {
                 working.hide();
                 String msg = Game.getVar(status ? R.string.WndPlayGames_Show_Ok : R.string.WndPlayGames_Show_Error );
-                Game.addToScene(new WndMessage(msg));
+                GameLoop.addToScene(new WndMessage(msg));
             }
             );
         }

@@ -1,16 +1,19 @@
 package com.nyrds.pixeldungeon.items.accessories;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.storage.Preferences;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.Preferences;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -132,7 +135,7 @@ public class Accessory {
     }
 
     public boolean haveIt() {
-        return RemixedDungeon.donated() == 4 || Preferences.INSTANCE.getString(prefProperty(), Utils.EMPTY_STRING).equals(getClass().getSimpleName());
+        return GamePreferences.donated() == 4 || Preferences.INSTANCE.getString(prefProperty(), Utils.EMPTY_STRING).equals(getClass().getSimpleName());
     }
 
     public void ownIt(boolean reallyOwn) {
@@ -164,7 +167,7 @@ public class Accessory {
         Dungeon.hero.updateSprite();
     }
 
-    static public Accessory equipped() {
+    static public @Nullable Accessory equipped() {
         String itemName = Preferences.INSTANCE.getString(Accessory.class.getSimpleName(), Utils.EMPTY_STRING);
         if (!itemName.equals(Utils.EMPTY_STRING)) {
             return getByName(itemName);

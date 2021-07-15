@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.sprites;
 
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 
 public class DiscardedItemSprite extends ItemSprite {
 	
@@ -41,7 +41,7 @@ public class DiscardedItemSprite extends ItemSprite {
 		super.update();
 		
 		scale.set( scale.x * 0.9f );
-		if ((am -= Game.elapsed) <= 0) {
+		if ((am -= GameLoop.elapsed) <= 0) {
 			remove();
 		}
 	}

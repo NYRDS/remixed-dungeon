@@ -17,6 +17,8 @@
 
 package com.watabou.noosa;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.game.Game;
 import com.watabou.glwrap.Matrix;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
@@ -174,7 +176,7 @@ public class Camera extends Gizmo {
 			focusOn( target );
 		}
 		
-		if ((shakeTime -= Game.elapsed) > 0) {
+		if ((shakeTime -= GameLoop.elapsed) > 0) {
 			float damping = shakeTime / shakeDuration;
 			shakeX = Random.Float( -shakeMagX, +shakeMagX ) * damping;
 			shakeY = Random.Float( -shakeMagY, +shakeMagY ) * damping;

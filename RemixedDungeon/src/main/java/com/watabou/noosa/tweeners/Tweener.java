@@ -17,7 +17,7 @@
 
 package com.watabou.noosa.tweeners;
 
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Gizmo;
 
 abstract public class Tweener extends Gizmo {
@@ -40,7 +40,7 @@ abstract public class Tweener extends Gizmo {
 	
 	@Override
 	public void update() {
-		elapsed += Game.elapsed;
+		elapsed += GameLoop.elapsed;
 		if (elapsed >= interval) {
 			updateValues( 1 );
 			onComplete();

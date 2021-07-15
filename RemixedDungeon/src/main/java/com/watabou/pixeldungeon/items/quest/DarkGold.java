@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
-import com.watabou.noosa.audio.Sample;
+import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;

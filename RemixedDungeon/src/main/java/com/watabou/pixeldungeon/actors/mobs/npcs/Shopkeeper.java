@@ -17,12 +17,12 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.windows.WndShopOptions;
-import com.watabou.noosa.Game;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
@@ -92,7 +92,7 @@ public class Shopkeeper extends NPC {
 
 		final Bag backpack = getBelongings().backpack;
 
-		if(ModdingMode.inRemixed() && Game.getDifficulty() < 2) {
+		if(ModdingMode.inRemixed() && GameLoop.getDifficulty() < 2) {
 			if (countFood(backpack) < 3) {
 				var foodSupply = new OverpricedRation();
 				foodSupply.quantity(5);

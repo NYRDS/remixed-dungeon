@@ -17,6 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.game.Game;
+
 public class Sleep extends FlavourBuff {
 	
 	public static final float SWS	= 1.5f;
@@ -24,5 +27,15 @@ public class Sleep extends FlavourBuff {
 	@Override
 	public void attachVisual() {
 		target.getSprite().idle();
+	}
+
+	@Override
+	public String name() {
+		return Game.getVar(R.string.SleepBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.SleepBuff_Info);
 	}
 }

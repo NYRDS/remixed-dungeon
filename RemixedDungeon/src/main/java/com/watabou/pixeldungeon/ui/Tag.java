@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Chrome;
@@ -67,7 +67,7 @@ public class Tag extends Button {
 		super.update();
 		
 		if (getVisible() && lightness > 0.5) {
-			if ((lightness -= Game.elapsed) > 0.5) {
+			if ((lightness -= GameLoop.elapsed) > 0.5) {
 				bg.ra = bg.ga = bg.ba = 2 * lightness - 1;
 				bg.rm = 2 * r * (1 - lightness);
 				bg.gm = 2 * g * (1 - lightness);

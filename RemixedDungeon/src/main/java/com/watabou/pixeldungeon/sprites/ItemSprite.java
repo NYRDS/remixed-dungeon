@@ -19,14 +19,14 @@ package com.watabou.pixeldungeon.sprites;
 
 import android.graphics.Bitmap;
 
-import com.nyrds.android.util.ModError;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.util.ModError;
 import com.watabou.gltextures.TextureCache;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.TextureFilm;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -193,7 +193,8 @@ public class ItemSprite extends MovieClip {
 		setVisible(heap == null || Dungeon.visible[heap.pos]);
 
 		// Dropping
-		if (dropInterval > 0 && (dropInterval -= Game.elapsed) <= 0) {
+		final float elapsed = GameLoop.elapsed;
+		if (dropInterval > 0 && (dropInterval -= elapsed) <= 0) {
 
 			speed.set(0);
 			acc.set(0);
@@ -206,10 +207,10 @@ public class ItemSprite extends MovieClip {
 
 		if (getVisible())
 			if (glowing != null && glowing != Glowing.NO_GLOWING) {
-				if (glowUp && (phase += Game.elapsed) > glowing.period) {
+				if (glowUp && (phase += elapsed) > glowing.period) {
 					glowUp = false;
 					phase = glowing.period;
-				} else if (!glowUp && (phase -= Game.elapsed) < 0) {
+				} else if (!glowUp && (phase -= elapsed) < 0) {
 					glowUp = true;
 					phase = 0;
 				}
@@ -243,5 +244,4 @@ public class ItemSprite extends MovieClip {
 		int col = index % rows;
 		return bmp.getPixel(col * SIZE + x, row * SIZE + y);
 	}
-
 }

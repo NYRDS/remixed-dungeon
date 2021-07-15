@@ -18,15 +18,21 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.windows.WndBuffInfo;
+import com.nyrds.platform.input.Touchscreen;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.noosa.TouchArea;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.SparseArray;
+
+import lombok.val;
 
 public class BuffIndicator extends Component {
 
@@ -122,12 +128,19 @@ public class BuffIndicator extends Component {
 		{
 			int icon = b.icon();
 			if (icon != NONE) {
-				Image img = new Image( TextureCache.get( b.textureSmall()) );
-				img.frame( film.get( icon ) );
+				Image img = new Image(TextureCache.get(b.textureSmall()));
+				img.frame(film.get(icon));
 				img.x = x + members.size() * (ICON_SIZE + 2);
 				img.y = y;
 				img.setScale(ICON_SIZE/SIZE,ICON_SIZE/SIZE);
-				add( img );
+				val imgTouch = new TouchArea(img) {
+					@Override
+					protected void onClick(Touchscreen.Touch touch) {
+						GameScene.show( new WndBuffInfo(b));
+					}
+				};
+				add(imgTouch);
+				add(img);
 
 				newIcons.put( icon, img );
 			}

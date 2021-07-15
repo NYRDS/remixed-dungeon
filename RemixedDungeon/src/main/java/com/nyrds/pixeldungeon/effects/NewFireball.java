@@ -17,11 +17,11 @@
  */
 package com.nyrds.pixeldungeon.effects;
 
-import android.graphics.RectF;
 import android.opengl.GLES20;
 
-import com.watabou.glwrap.Texture;
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gl.Texture;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.particles.Emitter;
@@ -101,7 +101,7 @@ public class NewFireball extends Component {
 		
 		super.update();
 		
-		if (Random.Float() < Game.elapsed) {
+		if (Random.Float() < GameLoop.elapsed) {
 			PixelParticle spark = (PixelParticle)sparks.recycle( PixelParticle.Shrinking.class );
 			spark.reset( x, y, ColorMath.random( 0x000000, COLOR ), 2, Random.Float( 0.5f, 1.0f ) );
 			spark.speed.set( 
@@ -148,7 +148,7 @@ public class NewFireball extends Component {
 			
 			super.update();
 			
-			if ((timeLeft -= Game.elapsed) <= 0) {
+			if ((timeLeft -= GameLoop.elapsed) <= 0) {
 				
 				kill();
 				

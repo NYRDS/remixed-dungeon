@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -52,9 +52,14 @@ public class Invisibility extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Invisibility_Info);
+		return Game.getVar(R.string.InvisibilityBuff_Name);
 	}
-	
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.InvisibilityBuff_Info);
+	}
+
 	public static void dispel(@NotNull Char tgt) {
 		if(tgt.visibleEnemies() > 0) {
 			detach(tgt, Invisibility.class);

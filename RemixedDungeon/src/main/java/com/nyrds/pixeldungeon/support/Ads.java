@@ -1,14 +1,10 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.LinearLayout;
 
-import com.appodeal.ads.Appodeal;
-import com.appodeal.ads.BannerView;
-import com.google.android.gms.ads.AdView;
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;
 
 /**
@@ -40,43 +36,20 @@ public class Ads {
 
     public static void removeEasyModeBanner() {
         Game.instance().runOnUiThread(() -> {
-            int index = bannerIndex();
+            int index = AdsUtils.bannerIndex();
             if (index >= 0) {
 
                 View adview = Game.instance().getLayout().getChildAt(index);
-                removeBannerView(index, adview);
+                AdsUtils.removeBannerView(index, adview);
+
             }
         });
-    }
-
-    static void removeBannerView(int index, View adview) {
-        if (adview instanceof BannerView) {
-            Appodeal.hide(Game.instance(), Appodeal.BANNER);
-        }
-        if (adview instanceof AdView) {
-            ((AdView) adview).destroy();
-        }
-
-        Game.instance().getLayout().removeViewAt(index);
-    }
-
-    static int bannerIndex() {
-        final LinearLayout layout = Game.instance().getLayout();
-
-        int childs = layout.getChildCount();
-        for (int i = 0; i < childs; ++i) {
-            View view = layout.getChildAt(i);
-            if (view instanceof AdView || view instanceof WebView || view instanceof BannerView) {
-                return i;
-            }
-        }
-        return -1;
     }
 
     static void updateBanner(final View view) {
         Game.instance().runOnUiThread(() -> {
 
-            int index = bannerIndex();
+            int index = AdsUtils.bannerIndex();
             final LinearLayout layout = Game.instance().getLayout();
 
             if (index >= 0) {
@@ -86,7 +59,8 @@ public class Ads {
                     return;
                 }
 
-                removeBannerView(index, adview);
+                AdsUtils.removeBannerView(index, adview);
+
             }
 
             try {

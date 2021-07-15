@@ -20,10 +20,10 @@ package com.watabou.pixeldungeon.effects;
 import android.opengl.GLES20;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.gltextures.Gradient;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.Visual;
 import com.watabou.utils.SystemTime;
@@ -158,7 +158,7 @@ public class Flare extends Visual {
 				float p;
 
 				if(! permanent) {
-					lifespan -= Game.elapsed;
+					lifespan -= GameLoop.elapsed;
 					p = 1 - lifespan / duration;    // 0 -> 1
 				} else {
 					p = (float) Math.pow(Math.sin(SystemTime.now()/1000.f),2) + 0.1f;

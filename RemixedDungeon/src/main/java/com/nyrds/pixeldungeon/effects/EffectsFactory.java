@@ -1,8 +1,8 @@
 package com.nyrds.pixeldungeon.effects;
 
-import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.ModError;
-import com.nyrds.android.util.ModdingMode;
+import com.nyrds.util.JsonHelper;
+import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.json.JSONException;

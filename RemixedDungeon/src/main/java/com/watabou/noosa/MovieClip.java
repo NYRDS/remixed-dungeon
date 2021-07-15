@@ -17,6 +17,8 @@
 
 package com.watabou.noosa;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
+
 public class MovieClip extends Image {
 
     protected Animation curAnim;
@@ -52,7 +54,7 @@ public class MovieClip extends Image {
 
             int lastFrame = curFrame;
 
-            frameTimer += Game.elapsed;
+            frameTimer += GameLoop.elapsed;
             while (frameTimer > anim.delay) {
                 frameTimer -= anim.delay;
                 if (curFrame == anim.frames.length - 1) {

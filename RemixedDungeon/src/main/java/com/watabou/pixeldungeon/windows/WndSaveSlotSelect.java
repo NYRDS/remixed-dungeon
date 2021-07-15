@@ -1,21 +1,23 @@
 package com.watabou.pixeldungeon.windows;
 
-import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.GuiProperties;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.WndHelper;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.util.GuiProperties;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.ReturnOnlyOnce;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -66,8 +68,8 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                         }
                     };
 
-                    Game.addToScene(refreshing);
-                    Game.instance().playGames.loadSnapshots(() -> Game.pushUiTask(() -> {
+                    GameLoop.addToScene(refreshing);
+                    Game.instance().playGames.loadSnapshots(() -> GameLoop.pushUiTask(() -> {
                         refreshing.hide();
                         refreshWindow();
                     }));
@@ -141,7 +143,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                                     } else {
                                         Game.instance().playGames.unpackSnapshotTo(snapshotId,
                                                 FileSystem.getInternalStorageFile(modernSlotDir),
-                                                res -> Game.pushUiTask(() -> showActionResult(res)));
+                                                res -> GameLoop.pushUiTask(() -> showActionResult(res)));
                                     }
                                 }
                             };
@@ -215,7 +217,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
             bottomRow.add(autoLoadButton);
         }
 
-        if (RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
+        if (GamePreferences.donated() == 0 && RemixedDungeon.canDonate()) {
             DonateButton btn = new DonateButton(this);
             bottomRow.add(btn);
         }
@@ -257,7 +259,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
     }
 
     private static String windowText() {
-        if (RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
+        if (GamePreferences.donated() == 0 && RemixedDungeon.canDonate()) {
             return Game.getVar(R.string.WndSaveSlotSelect_dontLike);
         }
         return Utils.EMPTY_STRING;
@@ -298,7 +300,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
         Game.softPaused = true;
 
-        if (RemixedDungeon.donated() < 1) {
+        if (GamePreferences.donated() < 1) {
             Ads.displaySaveAndLoadAd(new ReturnOnlyOnce(this));
         } else {
             returnToWork(true);
@@ -309,9 +311,9 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
         refreshWindow();
 
         if (res) {
-            Game.addToScene(new WndMessage("ok!"));
+            GameLoop.addToScene(new WndMessage("ok!"));
         } else {
-            Game.addToScene(new WndMessage("something went wrong..."));
+            GameLoop.addToScene(new WndMessage("something went wrong..."));
         }
     }
 
@@ -319,18 +321,18 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
     public void returnToWork(boolean res) {
         Game.softPaused = false;
 
-        Game.pushUiTask(() -> {
+        GameLoop.pushUiTask(() -> {
             if (!saving) {
                 SaveUtils.loadGame(slot, Dungeon.hero.getHeroClass());
             } else {
-                if (RemixedDungeon.donated() == 0 && RemixedDungeon.canDonate()) {
+                if (GamePreferences.donated() == 0 && RemixedDungeon.canDonate()) {
 
                     if (Math.random() < 0.1) {
-                        Game.pushUiTask(() -> {
+                        GameLoop.pushUiTask(() -> {
                             Iap iap = Game.instance().iap;
                             if (iap != null && iap.isReady() || Util.isDebug()) {
                                 EventCollector.logEvent(Util.SAVE_ADS_EXPERIMENT, "DialogShown");
-                                Hero.doOnNextAction = () -> Game.addToScene(new WndDontLikeAds());
+                                Hero.doOnNextAction = () -> GameLoop.addToScene(new WndDontLikeAds());
                             } else {
                                 EventCollector.logEvent(Util.SAVE_ADS_EXPERIMENT, "DialogNotShownIapNotReady");
                             }

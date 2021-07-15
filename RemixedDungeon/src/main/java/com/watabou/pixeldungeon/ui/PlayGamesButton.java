@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.game.Game;
 import com.watabou.utils.SystemTime;
 
 public class PlayGamesButton extends ImageButton {
@@ -31,6 +32,6 @@ public class PlayGamesButton extends ImageButton {
 
 	@Override
 	protected void onClick() {
-		Game.addToScene(new WndPlayGames());
+		GameLoop.addToScene(new WndPlayGames());
 	}
 }

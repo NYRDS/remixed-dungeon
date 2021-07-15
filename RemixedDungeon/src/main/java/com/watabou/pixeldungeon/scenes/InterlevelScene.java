@@ -17,16 +17,17 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
-import com.watabou.noosa.audio.Music;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -103,7 +104,7 @@ public class InterlevelScene extends PixelScene {
 
     static public void Do(InterlevelScene.Mode mode) {
 
-        if(Game.scene() instanceof GameScene && Dungeon.level!=null && Dungeon.hero!=null) { // not game start
+        if(GameLoop.scene() instanceof GameScene && Dungeon.level!=null && Dungeon.hero!=null) { // not game start
             Dungeon.hero.getSprite().completeForce();
             for(Mob mob:Dungeon.level.getCopyOfMobsArray()) {
                 mob.getSprite().completeForce();
@@ -111,7 +112,7 @@ public class InterlevelScene extends PixelScene {
         }
 
         InterlevelScene.mode = mode;
-        Game.switchScene(InterlevelScene.class);
+        GameLoop.switchScene(InterlevelScene.class);
     }
 
     @Override
@@ -149,7 +150,7 @@ public class InterlevelScene extends PixelScene {
         timeLeft = TIME_TO_FADE;
 
         levelChanger = new FutureTask<>(new LevelChanger(), true);
-        Game.execute(levelChanger);
+        GameLoop.execute(levelChanger);
     }
 
     @Override
@@ -166,7 +167,7 @@ public class InterlevelScene extends PixelScene {
             add(new WndError(error) {
                 public void onBackPressed() {
                     super.onBackPressed();
-                    Game.switchScene(TitleScene.class);
+                    GameLoop.switchScene(TitleScene.class);
                 }
             });
             phase = Phase.ERROR;
@@ -177,7 +178,7 @@ public class InterlevelScene extends PixelScene {
 
             case FADE_IN:
                 message.alpha(1 - p);
-                if ((timeLeft -= Game.elapsed) <= 0) {
+                if ((timeLeft -= GameLoop.elapsed) <= 0) {
                     if (error == null && levelChanger.isDone()) {
                         phase = Phase.FADE_OUT;
                         timeLeft = TIME_TO_FADE;
@@ -194,8 +195,8 @@ public class InterlevelScene extends PixelScene {
                         || (mode == Mode.DESCEND && Dungeon.depth == 1)) {
                     Music.INSTANCE.volume(p);
                 }
-                if ((timeLeft -= Game.elapsed) <= 0) {
-                    Game.switchScene(GameScene.class);
+                if ((timeLeft -= GameLoop.elapsed) <= 0) {
+                    GameLoop.switchScene(GameScene.class);
                 }
                 break;
 
@@ -314,7 +315,7 @@ public class InterlevelScene extends PixelScene {
             if(SaveUtils.slotUsed(SaveUtils.getPrevSave(), Dungeon.heroClass)) {
                 SaveUtils.loadGame(SaveUtils.getPrevSave(), Dungeon.heroClass);
             } else {
-                Game.switchScene(TitleScene.class);
+                GameLoop.switchScene(TitleScene.class);
             }
             return;
         }

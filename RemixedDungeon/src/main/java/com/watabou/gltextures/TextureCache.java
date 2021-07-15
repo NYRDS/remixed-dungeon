@@ -20,10 +20,10 @@ package com.watabou.gltextures;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-import com.nyrds.android.util.ModError;
-import com.nyrds.android.util.ModdingMode;
-import com.watabou.glwrap.Texture;
-import com.watabou.pixeldungeon.RemixedDungeon;
+import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.gl.Texture;
+import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingMode;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

@@ -18,30 +18,32 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.android.util.ModError;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.effects.EffectsFactory;
 import com.nyrds.pixeldungeon.effects.ParticleEffect;
 import com.nyrds.pixeldungeon.effects.ZapEffect;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.levels.TestLevel;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.SkinnedBlock;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
-import com.watabou.noosa.audio.Music;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.DummyEmitter;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
@@ -51,7 +53,6 @@ import com.watabou.pixeldungeon.CustomLayerTilemap;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.FogOfWar;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -188,11 +189,11 @@ public class GameScene extends PixelScene {
     public void createGameScene(@NotNull Level level, @NotNull Hero hero) {
         playLevelMusic();
 
-        RemixedDungeon.lastClass(hero.getHeroClass().classIndex());
+        GamePreferences.lastClass(hero.getHeroClass().classIndex());
 
         super.create();
 
-        Camera.main.zoom((float) (defaultZoom + RemixedDungeon.zoom()));
+        Camera.main.zoom((float) (defaultZoom + GamePreferences.zoom()));
 
         scene = this;
 
@@ -310,7 +311,7 @@ public class GameScene extends PixelScene {
         fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
         add(fog);
 
-        brightness(RemixedDungeon.brightness());
+        brightness(GamePreferences.brightness());
 
         spells = new Group();
         add(spells);
@@ -524,9 +525,9 @@ public class GameScene extends PixelScene {
 
         super.update();
 
-        water.offset(waterSx * Game.elapsed, waterSy * Game.elapsed);
+        water.offset(waterSx * GameLoop.elapsed, waterSy * GameLoop.elapsed);
 
-        Actor.process(Game.elapsed);
+        Actor.process(GameLoop.elapsed);
 
         if (hero.isReady() && !hero.paralysed) {
             log.newLine();

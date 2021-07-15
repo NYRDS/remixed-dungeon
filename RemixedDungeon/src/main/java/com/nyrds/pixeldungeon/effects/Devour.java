@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.effects;
 
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
@@ -32,7 +32,7 @@ public class Devour extends Image {
 	public void update() {
 		super.update();
 		
-		if ((time -= Game.elapsed) <= 0) {
+		if ((time -= GameLoop.elapsed) <= 0) {
 			kill();
 		} else {
 			float p = time / TIME_TO_FADE;

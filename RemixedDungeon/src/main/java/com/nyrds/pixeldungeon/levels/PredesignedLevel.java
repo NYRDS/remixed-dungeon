@@ -2,12 +2,12 @@ package com.nyrds.pixeldungeon.levels;
 
 import androidx.annotation.Keep;
 
-import com.nyrds.android.util.ModError;
-import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.watabou.noosa.StringsManager;
+import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;

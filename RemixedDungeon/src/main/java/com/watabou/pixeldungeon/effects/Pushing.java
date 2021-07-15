@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.effects;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.EventCollector;
 import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -94,7 +94,7 @@ public class Pushing extends Actor {
 		public void update() {
 			super.update();
 			
-			if ((delay += Game.elapsed) < DELAY) {
+			if ((delay += GameLoop.elapsed) < DELAY) {
 
 				ch.getSprite().x = x;
 				ch.getSprite().y = y;

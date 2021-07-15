@@ -1,13 +1,14 @@
 package com.watabou.pixeldungeon.windows;
 
-import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndHelper;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Text;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.SystemRedButton;
@@ -73,7 +74,7 @@ public class WndDonate extends WndTabbed {
 
 			pos += GAP;
 
-			if (RemixedDungeon.donated() < level) {
+			if (GamePreferences.donated() < level) {
 				String price = RemixedDungeon.instance().iap.getDonationPriceString(level);
 				String btnText;
 				if( !price.isEmpty() ) {

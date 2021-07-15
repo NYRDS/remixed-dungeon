@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.effects.Splash;
@@ -38,9 +38,13 @@ public class Bleeding extends Buff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Bleeding_Info);
+		return Game.getVar(R.string.BleedingBuff_Name);
 	}
-	
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.BleedingBuff_Info);
+	}
 	@Override
 	public boolean act() {
 		if (target.isAlive()) {

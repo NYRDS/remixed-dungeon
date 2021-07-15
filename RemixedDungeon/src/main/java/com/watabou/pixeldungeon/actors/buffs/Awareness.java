@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Dungeon;
 
 public class Awareness extends FlavourBuff {
@@ -27,5 +29,15 @@ public class Awareness extends FlavourBuff {
 	public void detach() {
 		super.detach();
 		Dungeon.observe();
+	}
+
+	@Override
+	public String name() {
+		return Game.getVar(R.string.AwarenessBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.AwarenessBuff_Info);
 	}
 }

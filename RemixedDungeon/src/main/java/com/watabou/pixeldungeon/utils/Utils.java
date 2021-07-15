@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.utils;
 
-import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.Util;
 
 import org.jetbrains.annotations.NotNull;
 

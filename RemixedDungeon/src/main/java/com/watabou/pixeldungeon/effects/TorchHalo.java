@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.effects;
 
 import android.opengl.GLES20;
 
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 
 import javax.microedition.khronos.opengles.GL10;
@@ -39,16 +39,17 @@ public class TorchHalo extends Halo {
 	@Override
 	public void update() {
 		super.update();
-		
+
+		final float elapsed = GameLoop.elapsed;
 		if (phase < 0) {
-			if ((phase += Game.elapsed) >= 0) {
+			if ((phase += elapsed) >= 0) {
 				killAndErase();
 			} else {
 				scale.set( (2 + phase) * radius / RADIUS );
 				am = -phase * brightness;
 			}
 		} else if (phase < 1) {
-			if ((phase += Game.elapsed) >= 1) {
+			if ((phase += elapsed) >= 1) {
 				phase = 1;
 			}
 			scale.set( phase * radius / RADIUS );

@@ -1,8 +1,7 @@
 package com.watabou.noosa;
 
-import android.graphics.RectF;
-
-import com.watabou.glwrap.Texture;
+import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gl.Texture;
 
 import java.util.ArrayList;
 

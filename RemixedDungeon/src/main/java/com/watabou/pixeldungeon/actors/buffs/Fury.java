@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Fury extends Buff {
@@ -43,6 +43,11 @@ public class Fury extends Buff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Fury_Info);
+		return Game.getVar(R.string.FuryBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.FuryBuff_Info);
 	}
 }

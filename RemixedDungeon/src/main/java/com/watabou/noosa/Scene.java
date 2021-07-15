@@ -19,7 +19,8 @@ package com.watabou.noosa;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
-import com.watabou.input.Keys;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.input.Keys;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.utils.Signal;
 

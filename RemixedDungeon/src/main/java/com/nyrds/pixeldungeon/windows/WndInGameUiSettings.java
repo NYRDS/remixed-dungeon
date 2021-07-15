@@ -1,10 +1,11 @@
 
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Preferences;
-import com.watabou.pixeldungeon.RemixedDungeon;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.Preferences;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.Selector;
@@ -23,11 +24,11 @@ public class WndInGameUiSettings extends WndMenuCommon {
 			protected void onClick() {
 				super.onClick();
 
-				int ordinal = Tool.Size.valueOf(RemixedDungeon.toolStyle()).ordinal();
+				int ordinal = Tool.Size.valueOf(GamePreferences.toolStyle()).ordinal();
 				ordinal++;
 				ordinal %= Tool.Size.values().length;
 				Tool.Size size = Tool.Size.values()[ordinal];
-				RemixedDungeon.toolStyle(size.name());
+				GamePreferences.toolStyle(size.name());
 			}
 		});
 
@@ -35,7 +36,7 @@ public class WndInGameUiSettings extends WndMenuCommon {
 			@Override
 			protected void onClick() {
 				super.onClick();
-				RemixedDungeon.handedness(!RemixedDungeon.handedness());
+				GamePreferences.handedness(!GamePreferences.handedness());
 			}
 		});
 	}
@@ -46,18 +47,18 @@ public class WndInGameUiSettings extends WndMenuCommon {
 
 			@Override
 			public void onPlus(Selector s) {
-				RemixedDungeon.quickSlots(Math.abs(RemixedDungeon.quickSlots())+1);
+				GamePreferences.quickSlots(Math.abs(GamePreferences.quickSlots())+1);
 			}
 
 			@Override
 			public void onMinus(Selector s) {
 
-				RemixedDungeon.quickSlots(Math.max(Math.abs(RemixedDungeon.quickSlots())-1,0));
+				GamePreferences.quickSlots(Math.max(Math.abs(GamePreferences.quickSlots())-1,0));
 			}
 
 			@Override
 			public void onDefault(Selector s) {
-				RemixedDungeon.quickSlots(-1);
+				GamePreferences.quickSlots(-1);
 			}
 		});
 	}
@@ -82,7 +83,7 @@ public class WndInGameUiSettings extends WndMenuCommon {
 
 			private void uiZoom(float value, Selector s) {
 				PixelScene.uiCamera.updateFullscreenCameraZoom(value);
-				((GameScene) Game.scene()).updateUiCamera();
+				((GameScene) GameLoop.scene()).updateUiCamera();
 				Preferences.INSTANCE.put(Preferences.KEY_UI_ZOOM, value);
 
 				float zoom = PixelScene.uiCamera.zoom;

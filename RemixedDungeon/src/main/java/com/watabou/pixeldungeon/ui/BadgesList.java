@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.android.util.GuiProperties;
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
@@ -113,7 +113,7 @@ public class BadgesList extends ScrollPane {
 		public boolean onClick( float x, float y ) {
 			if (inside( x, y )) {
 				Sample.INSTANCE.play( Assets.SND_CLICK, 0.7f, 0.7f, 1.2f );
-				Game.addToScene( new WndBadge( badge ) );
+				GameLoop.addToScene( new WndBadge( badge ) );
 				return true;
 			} else {
 				return false;

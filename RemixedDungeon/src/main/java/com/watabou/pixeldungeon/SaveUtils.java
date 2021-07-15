@@ -1,8 +1,9 @@
 package com.watabou.pixeldungeon;
 
-import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.ModdingMode;
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.GamesInProgress.Info;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
@@ -175,7 +176,7 @@ public class SaveUtils {
 	}
 
 	static public String buildSlotFromTag(String tag) {
-		return ModdingMode.activeMod() + "_" + tag + "_" + Game.getDifficulty();
+		return ModdingMode.activeMod() + "_" + tag + "_" + GameLoop.getDifficulty();
 	}
 
 	public static String getAutoSave() {

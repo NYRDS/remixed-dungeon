@@ -2,12 +2,12 @@ package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
-import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.ModError;
-import com.nyrds.android.util.Util;
+import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.JsonHelper;
+import com.nyrds.util.ModError;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Group;
-import com.watabou.noosa.StringsManager;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;

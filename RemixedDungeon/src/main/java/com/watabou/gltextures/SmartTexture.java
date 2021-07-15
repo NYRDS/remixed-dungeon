@@ -18,9 +18,9 @@
 package com.watabou.gltextures;
 
 import android.graphics.Bitmap;
-import android.graphics.RectF;
 
-import com.watabou.glwrap.Texture;
+import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gl.Texture;
 
 import org.jetbrains.annotations.NotNull;
 

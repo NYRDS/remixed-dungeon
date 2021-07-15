@@ -17,8 +17,20 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.game.Game;
+
 public class Speed extends FlavourBuff {
 	
 	public static final float DURATION = 10f;
-	
+
+	@Override
+	public String name() {
+		return Game.getVar(R.string.SpeedBuff_Name);
+	}
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.SpeedBuff_Info);
+	}
 }

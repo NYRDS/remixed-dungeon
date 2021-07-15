@@ -2,23 +2,24 @@ package com.watabou.pixeldungeon.ui;
 
 import android.Manifest;
 
-import com.nyrds.android.util.DownloadStateListener;
-import com.nyrds.android.util.DownloadTask;
-import com.nyrds.android.util.FileSystem;
-import com.nyrds.android.util.GuiProperties;
-import com.nyrds.android.util.Mods;
-import com.nyrds.android.util.Util;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.gfx.SystemText;
+import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.util.DownloadStateListener;
+import com.nyrds.util.DownloadTask;
+import com.nyrds.util.GuiProperties;
+import com.nyrds.util.Mods;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
-import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndModSelect;
@@ -41,7 +42,7 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
         add(text);
 
         text2 = new SystemText(GuiProperties.titleFontSize());
-        text2.text(RemixedDungeon.activeMod());
+        text2.text(GamePreferences.activeMod());
         add(text2);
 
         setSize(DashboardItem.SIZE, DashboardItem.SIZE);
@@ -55,7 +56,7 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
     public void update() {
         if (needUpdate) {
             needUpdate = false;
-            text2.text(RemixedDungeon.activeMod());
+            text2.text(GamePreferences.activeMod());
         }
         super.update();
     }
@@ -85,7 +86,7 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
     public void returnToWork(final boolean result) {
         final Group parent = getParent();
 
-        Scene scene = Game.scene();
+        Scene scene = GameLoop.scene();
 
         if(scene==null) {
             return;
@@ -95,14 +96,14 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
                              @Override
                              public void hide() {
                                  super.hide();
-                                 Game.pushUiTask(() -> {
+                                 GameLoop.pushUiTask(() -> {
                                      if (result) {
                                          if (Util.isConnectedToInternet()) {
                                              File modsCommon = FileSystem.getExternalStorageFile(Mods.MODS_COMMON_JSON);
                                              modsCommon.delete();
                                              String downloadTo = modsCommon.getAbsolutePath();
 
-                                             Game.execute(new DownloadTask(new DownloadProgressWindow("Downloading", ModsButton.this),
+                                             GameLoop.execute(new DownloadTask(new DownloadProgressWindow("Downloading", ModsButton.this),
                                                      "https://nyrds.github.io/NYRDS/mods.json",
                                                      downloadTo));
 
@@ -124,8 +125,8 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
 
     @Override
     public void DownloadComplete(String file, final Boolean result) {
-        Game.pushUiTask(() -> {
-            Game.addToScene(new WndModSelect());
+        GameLoop.pushUiTask(() -> {
+            GameLoop.addToScene(new WndModSelect());
 
             if (!result) {
                 Game.toast("Mod list download failed :(");

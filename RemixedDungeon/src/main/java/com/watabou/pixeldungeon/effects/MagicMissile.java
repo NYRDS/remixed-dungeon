@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.effects;
 
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.PixelParticle;
@@ -165,7 +165,7 @@ public class MagicMissile extends Emitter {
 	public void update() {
 		super.update();
 		if (on) {
-			float d = Game.elapsed;
+			float d = GameLoop.elapsed;
 			x += sx * d;
 			y += sy * d;
 			if ((time -= d) <= 0) {

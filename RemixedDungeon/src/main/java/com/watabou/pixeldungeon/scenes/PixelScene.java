@@ -19,23 +19,24 @@ package com.watabou.pixeldungeon.scenes;
 
 import android.opengl.GLES20;
 
-import com.nyrds.android.util.GuiProperties;
-import com.nyrds.android.util.ModdingMode;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.windows.WndHelper;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.gfx.SystemText;
+import com.nyrds.platform.input.Touchscreen;
+import com.nyrds.platform.storage.Preferences;
+import com.nyrds.util.GuiProperties;
+import com.nyrds.util.ModdingMode;
 import com.watabou.gltextures.TextureCache;
-import com.watabou.input.Touchscreen;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Font;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
-import com.watabou.noosa.SystemText;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Preferences;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -205,7 +206,7 @@ public class PixelScene extends Scene {
 	}
 
 	public static void showBadge(Badges.Badge badge) {
-		if(!(Game.scene() instanceof GameScene)) {
+		if(!(GameLoop.scene() instanceof GameScene)) {
 			return;
 		}
 		
@@ -216,7 +217,7 @@ public class PixelScene extends Scene {
 					(banner.camera.width - banner.width) / 2);
 			banner.y = align(banner.camera,
 					(banner.camera.height - banner.height) / 3);
-			Game.addToScene(banner);
+			GameLoop.addToScene(banner);
 		}
 	}
 
@@ -252,7 +253,7 @@ public class PixelScene extends Scene {
 
 			super.update();
 
-			if ((time -= Game.elapsed) <= 0) {
+			if ((time -= GameLoop.elapsed) <= 0) {
 				alpha(0f);
 				getParent().remove(this);
 			} else {

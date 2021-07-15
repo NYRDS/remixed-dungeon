@@ -32,6 +32,9 @@ public class
 PdAnnotationProcessor extends AbstractProcessor{
 
 
+	public static final String COM_NYRDS_PLATFORM_UTIL = "com.nyrds.platform.util";
+	public static final String TRACKED_RUNTIME_EXCEPTION = "TrackedRuntimeException";
+
 	@Override
 	public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
 
@@ -175,15 +178,15 @@ PdAnnotationProcessor extends AbstractProcessor{
 		}
 
 		pack = pack.toBuilder().nextControlFlow("catch ($T e)", NoSuchFieldException.class)
-				.addStatement("throw new $T(e)",ClassName.get("com.nyrds.android.util","TrackedRuntimeException"))
+				.addStatement("throw new $T(e)",ClassName.get(COM_NYRDS_PLATFORM_UTIL, TRACKED_RUNTIME_EXCEPTION))
 				.nextControlFlow("catch ($T e)", IllegalAccessException.class)
-				.addStatement("throw new $T(e)",ClassName.get("com.nyrds.android.util","TrackedRuntimeException"))
+				.addStatement("throw new $T(e)",ClassName.get(COM_NYRDS_PLATFORM_UTIL, TRACKED_RUNTIME_EXCEPTION))
 				.endControlFlow().build();
 
 		unpack = unpack.toBuilder().nextControlFlow("catch ($T e)", NoSuchFieldException.class)
-				.addStatement("throw new $T(e)",ClassName.get("com.nyrds.android.util","TrackedRuntimeException"))
+				.addStatement("throw new $T(e)",ClassName.get(COM_NYRDS_PLATFORM_UTIL, TRACKED_RUNTIME_EXCEPTION))
 				.nextControlFlow("catch ($T e)", IllegalAccessException.class)
-				.addStatement("throw new $T(e)",ClassName.get("com.nyrds.android.util","TrackedRuntimeException"))
+				.addStatement("throw new $T(e)",ClassName.get(COM_NYRDS_PLATFORM_UTIL, TRACKED_RUNTIME_EXCEPTION))
 				.endControlFlow().build();
 
 		BundleHelper = BundleHelper.toBuilder()

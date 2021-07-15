@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
@@ -24,7 +25,6 @@ import com.nyrds.pixeldungeon.windows.VHBox;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.CellSelector;
@@ -111,7 +111,7 @@ public class Toolbar extends Component {
         toolbar.removeAll();
         toolbar.destroy();
 
-        int active_slots = RemixedDungeon.quickSlots();
+        int active_slots = GamePreferences.quickSlots();
 
         HBox slotBox = new HBox(width());
         slotBox.setAlign(HBox.Align.Center);
@@ -119,7 +119,7 @@ public class Toolbar extends Component {
         if(active_slots<0) {
             int slotsCanFit = (int) (width()/slots.get(0).width());
             if(Math.abs(active_slots)!=slotsCanFit) {
-                RemixedDungeon.quickSlots(-slotsCanFit);
+                GamePreferences.quickSlots(-slotsCanFit);
                 return;
             }
             active_slots = slotsCanFit;
@@ -136,7 +136,7 @@ public class Toolbar extends Component {
         }
 
         if (slotBox.width() > width()) {
-            RemixedDungeon.quickSlots(active_slots - 1);
+            GamePreferences.quickSlots(active_slots - 1);
             return;
         }
 
@@ -154,7 +154,7 @@ public class Toolbar extends Component {
         inventoryBox.add(btnInventory);
         inventoryBox.setAlign(VBox.Align.Bottom);
 
-        boolean handness = RemixedDungeon.handedness();
+        boolean handness = GamePreferences.handedness();
 
         actionBox.setAlign(handness ? HBox.Align.Right : HBox.Align.Left);
         inventoryBox.setAlign(handness ? HBox.Align.Right : HBox.Align.Left);

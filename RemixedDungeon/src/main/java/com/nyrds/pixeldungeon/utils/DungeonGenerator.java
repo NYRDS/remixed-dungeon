@@ -1,10 +1,6 @@
 package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.android.util.JsonHelper;
-import com.nyrds.android.util.ModError;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.levels.FakeLastLevel;
 import com.nyrds.pixeldungeon.levels.GutsLevel;
 import com.nyrds.pixeldungeon.levels.IceCavesBossLevel;
@@ -16,8 +12,12 @@ import com.nyrds.pixeldungeon.levels.RandomLevel;
 import com.nyrds.pixeldungeon.levels.ShadowLordLevel;
 import com.nyrds.pixeldungeon.levels.TestLevel;
 import com.nyrds.pixeldungeon.levels.TownShopLevel;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.util.JsonHelper;
+import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.CavesBossLevel;
 import com.watabou.pixeldungeon.levels.CavesLevel;

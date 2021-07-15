@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -103,7 +103,12 @@ public class Viscosity extends Glyph {
 		
 		@Override
 		public String name() {
-			return Utils.format( Game.getVar(R.string.DeferedDamage_Defered_Txt), damage );
+			return Game.getVar(R.string.DeferedDamageBuff_Name);
+		}
+
+		@Override
+		public String desc() {
+			return Utils.format(Game.getVar(R.string.DeferedDamageBuff_Info), damage);
 		}
 		
 		@Override

@@ -3,11 +3,10 @@ package com.nyrds.pixeldungeon.support;
 import android.view.View;
 import android.webkit.WebView;
 
-import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerView;
-import com.nyrds.android.RemixedDungeonApp;
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.app.RemixedDungeonApp;
+import com.nyrds.platform.game.Game;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -77,10 +76,7 @@ public class AdsUtils {
         });
     }
 
-    private static void removeBannerView(int index, View adview) {
-        if (adview instanceof BannerView) {
-        }
-
+    public static void removeBannerView(int index, View adview) {
         Game.instance().getLayout().removeViewAt(index);
     }
 }

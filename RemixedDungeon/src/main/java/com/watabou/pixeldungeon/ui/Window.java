@@ -18,16 +18,16 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.windows.WndHelper;
-import com.watabou.input.Keys;
-import com.watabou.input.Keys.Key;
-import com.watabou.input.Touchscreen.Touch;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.input.Keys;
+import com.nyrds.platform.input.Keys.Key;
+import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.Chrome;
-import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.utils.Signal;
 

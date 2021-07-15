@@ -2,7 +2,7 @@ package com.watabou.pixeldungeon.sprites;
 
 import android.opengl.GLES20;
 
-import com.watabou.noosa.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.pixeldungeon.effects.Halo;
 import com.watabou.utils.PointF;
 
@@ -29,7 +29,7 @@ public class ManaShield extends Halo {
         super.update();
 
         if (phase < 1) {
-            if ((phase -= Game.elapsed) <= 0) {
+            if ((phase -= GameLoop.elapsed) <= 0) {
                 killAndErase();
             } else {
                 scale.set( (2 - phase) * radius / RADIUS );

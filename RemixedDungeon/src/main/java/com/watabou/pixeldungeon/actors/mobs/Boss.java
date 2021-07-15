@@ -1,10 +1,10 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.nyrds.android.util.ModdingMode;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.ShadowLord;
-import com.watabou.noosa.audio.Music;
+import com.nyrds.platform.audio.Music;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;

@@ -1,11 +1,12 @@
 package com.nyrds.pixeldungeon.windows;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.Ads;
-import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.RemixedDungeon;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndMessage;
@@ -40,8 +41,8 @@ public class MovieRewardTask implements Runnable {
                     serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Sorry));
                 }
 
-                if (RemixedDungeon.donated() == 0) {
-                    if (RemixedDungeon.getDifficulty() == 0) {
+                if (GamePreferences.donated() == 0) {
+                    if (GameLoop.getDifficulty() == 0) {
                         Ads.displayEasyModeBanner();
                     }
                 }

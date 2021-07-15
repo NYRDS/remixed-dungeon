@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.Game;
+import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -35,9 +35,13 @@ public class Combo extends Buff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.Combo_Info);
+		return Game.getVar(R.string.ComboBuff_Name);
 	}
-	
+
+	@Override
+	public String desc() {
+		return Game.getVar(R.string.ComboBuff_Info);
+	}
 	public int hit( Char enemy, int damage ) {
 		
 		count++;

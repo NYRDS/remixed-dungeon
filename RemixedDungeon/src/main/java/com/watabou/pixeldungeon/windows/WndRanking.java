@@ -17,19 +17,20 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.nyrds.android.util.GuiProperties;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.windows.ScrollableList;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.ColorBlock;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
@@ -115,7 +116,7 @@ public class WndRanking extends WndTabbed {
 
 	private void reportError() {
 		hide();
-		Game.addToScene( new WndError( Game.getVar(R.string.WndRanking_Error) + "\n" + error ) );
+		GameLoop.addToScene( new WndError( Game.getVar(R.string.WndRanking_Error) + "\n" + error ) );
 	}
 
 	private void createControls() {
@@ -164,7 +165,7 @@ public class WndRanking extends WndTabbed {
 				RedButton btnCatalogus = new RedButton( Game.getVar(R.string.WndRanking_StaChallenges) ) {
 					@Override
 					protected void onClick() {
-						Game.addToScene( new WndChallenges(Dungeon.getChallenges(), false ) );
+						GameLoop.addToScene( new WndChallenges(Dungeon.getChallenges(), false ) );
 					}
 				};
 				btnCatalogus.setRect( 0, pos + GAP, btnCatalogus.reqWidth() + 2, btnCatalogus.reqHeight() + 2 );
@@ -360,7 +361,7 @@ public class WndRanking extends WndTabbed {
 
 		@Override
 		protected void onClick() {
-			Game.addToScene( new WndItem( null, item ) );
+			GameLoop.addToScene( new WndItem( null, item ) );
 		}
 	}
 }

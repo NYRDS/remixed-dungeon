@@ -1,9 +1,9 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.android.util.GuiProperties;
+import com.nyrds.platform.audio.Sample;
+import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.scenes.PixelScene;
