@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class SpiderExploding extends MultiKindMob {
 
-    private static String[] PlantClasses = {
+    private static final String[] PlantClasses = {
             "Firebloom",
             "Icecap",
             "Sorrowmoss",

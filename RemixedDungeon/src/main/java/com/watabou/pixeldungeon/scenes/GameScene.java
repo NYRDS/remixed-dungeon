@@ -460,14 +460,16 @@ public class GameScene extends PixelScene {
             GLog.debug(Dungeon.hero.immunities().toString());
             //GLog.toFile(StringsManager.missingStrings.toString());
 
-            for (var lo : level.getAllLevelObjects()) {
-                int pos = lo.getPos();
-                if(level.solid[pos]) {
-                    throw new ModError(Utils.format("%s on a solid cell %d. level %s", lo.getEntityKind(), pos, level.levelId ));
-                }
+            if(!(level instanceof TestLevel)) {
+                for (var lo : level.getAllLevelObjects()) {
+                    int pos = lo.getPos();
+                    if (level.solid[pos]) {
+                        throw new ModError(Utils.format("%s on a solid cell %d. level %s", lo.getEntityKind(), pos, level.levelId));
+                    }
 
-                if(level.pit[pos]) {
-                    throw new ModError(Utils.format("%s on a pit cell %d. level %s", lo.getEntityKind(), pos, level.levelId));
+                    if (level.pit[pos]) {
+                        throw new ModError(Utils.format("%s on a pit cell %d. level %s", lo.getEntityKind(), pos, level.levelId));
+                    }
                 }
             }
         }

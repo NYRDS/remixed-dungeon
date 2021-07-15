@@ -9,10 +9,12 @@ import com.watabou.pixeldungeon.RemixedDungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Fire;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -41,6 +43,9 @@ public class SpiderQueen extends Boss {
 		}
 
 		collect(new SkeletonKey());
+
+		addImmunity( Fire.class );
+		addImmunity( Burning.class );
 	}
 
 	@Override

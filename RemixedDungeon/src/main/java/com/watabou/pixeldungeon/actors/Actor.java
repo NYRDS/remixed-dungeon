@@ -249,7 +249,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 				}
 			}*/
 
-			if(SystemTime.timeSinceTick() > 200) {
+			if(SystemTime.timeSinceTick() > 5000) {
 				var error = String.format("%s timeout", actor.getEntityKind());
 				if(Util.isDebug()) {
 					throw new ModError(error);
