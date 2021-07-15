@@ -58,7 +58,7 @@ public class PotionOfInvisibility extends UpgradablePotion {
 		
 		GLog.i(Game.getVar(R.string.Potion_RuneDissaperaed), scroll.name());
 		
-		moistenEffective();
+		moistenEffective(owner);
 		
 		BlankScroll moistenScroll = new BlankScroll();
 		moistenScroll.quantity(quantity);

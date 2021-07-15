@@ -57,7 +57,7 @@ public class PotionOfParalyticGas extends UpgradablePotion {
 
 	@Override
 	protected void moistenArrow(Arrow arrow, Char owner) {
-		int quantity = reallyMoistArrows(arrow);
+		int quantity = reallyMoistArrows(arrow,owner);
 		
 		ParalysisArrow moistenArrows = new ParalysisArrow(quantity);
 		owner.collect(moistenArrows);

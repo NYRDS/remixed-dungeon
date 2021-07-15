@@ -94,11 +94,9 @@ public class Stylus extends Item {
 		
 		detach( owner.getBelongings().backpack );
 
-		owner.getSprite().operate( owner.getPos(), null);
+		owner.doOperate(TIME_TO_INSCRIBE );
 		owner.getSprite().centerEmitter().start( PurpleParticle.BURST, 0.05f, 10 );
 		Sample.INSTANCE.play( Assets.SND_BURNING );
-		
-		owner.spend( TIME_TO_INSCRIBE );
 	}
 	
 	private void inscribeArmor ( Armor armor ) {

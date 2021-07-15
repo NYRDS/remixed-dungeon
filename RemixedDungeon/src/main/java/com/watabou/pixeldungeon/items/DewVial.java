@@ -82,11 +82,9 @@ public class DewVial extends Item {
 				}
 				
 				setVolume(0);
-				
-				chr.spend( TIME_TO_DRINK );
 
 				Sample.INSTANCE.play( Assets.SND_DRINK );
-				chr.getSprite().operate( chr.getPos(), null);
+				chr.doOperate(TIME_TO_DRINK);
 
                 QuickSlot.refresh(chr);
 

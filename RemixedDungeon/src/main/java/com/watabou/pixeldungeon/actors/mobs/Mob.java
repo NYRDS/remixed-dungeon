@@ -309,30 +309,6 @@ public abstract class Mob extends Char {
 		super.move(step);
 	}
 
-	public void doAttack(Char enemy) {
-
-		setEnemy(enemy);
-
-		spend(attackDelay());
-
-		final int pos = getPos();
-		final int enemyPos = enemy.getPos();
-
-		if (level().distance(pos, enemyPos) <= 1) {
-			if(Dungeon.visible[pos]) {
-				getSprite().attack(enemyPos);
-			} else {
-				onAttackComplete();
-			}
-		} else {
-			if (Dungeon.isPathVisible(pos, enemyPos)) {
-				getSprite().zap(enemyPos);
-			} else {
-				onZapComplete();
-			}
-		}
-	}
-
 	@Override
 	public final void onZapComplete() {
 		zap(getEnemy());

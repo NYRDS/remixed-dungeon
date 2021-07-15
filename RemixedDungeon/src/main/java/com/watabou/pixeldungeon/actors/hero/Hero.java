@@ -808,8 +808,6 @@ public class Hero extends Char {
 		super.onAttackComplete();
 
 		AttackIndicator.target(getEnemy());
-
-		curAction = null;
 		setEnemy(CharsList.DUMMY);
 	}
 
@@ -879,13 +877,13 @@ public class Hero extends Char {
 
 		if (intentional) {
 			getSprite().showStatus(CharSprite.DEFAULT, Game.getVar(R.string.Hero_Search));
-			getSprite().operate(getPos(), null);
+
+			float time = TIME_TO_SEARCH;
 			if (smthFound) {
-				spendAndNext(Random.Float() < searchLevel ? TIME_TO_SEARCH : TIME_TO_SEARCH * 2);
-			} else {
-				spendAndNext(TIME_TO_SEARCH);
+				time = Random.Float() < searchLevel ? TIME_TO_SEARCH : TIME_TO_SEARCH * 2;
 			}
 
+			doOperate(time);
 		}
 
 		if (smthFound) {
@@ -972,12 +970,10 @@ public class Hero extends Char {
             break;
         }
 
-		getSprite().operate( getPos(), null);
-		busy();
+        doOperate(Food.TIME_TO_EAT);
+
 		SpellSprite.show(this, SpellSprite.FOOD );
 		Sample.INSTANCE.play( Assets.SND_EAT );
-
-		spend( Food.TIME_TO_EAT );
 
 		Statistics.foodEaten++;
 		Badges.validateFoodEaten();

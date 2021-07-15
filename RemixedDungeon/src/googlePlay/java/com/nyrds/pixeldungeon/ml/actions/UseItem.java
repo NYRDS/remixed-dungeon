@@ -19,11 +19,10 @@ public class UseItem extends CharAction{
     public boolean act(Char hero) {
         item.execute(hero, action);
 
-        if(GameScene.defaultCellSelector()) {
-            hero.readyAndIdle();
+
+        hero.curAction = null;
+        if(GameScene.defaultCellSelector() && ! hero.getSprite().doingSomething()) {
             hero.next();
-        } else {
-            hero.curAction = null;
         }
 
         return false;

@@ -55,11 +55,12 @@ public class MasteryItem extends Item {
 
 		hero.setSubClass(way);
 
-		hero.getSprite().operate( hero.getPos(), null);
+		hero.doOperate(TIME_TO_READ);
 		Sample.INSTANCE.play( Assets.SND_MASTERY );
 
 		SpellSprite.show(hero, SpellSprite.MASTERY );
 		hero.getSprite().emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
+
 		if (way == HeroSubClass.LICH) {
 			int penalty = 2;
 			GLog.w(Utils.format(Game.getVar(R.string.Necromancy_BecameALich), penalty) );
@@ -71,7 +72,5 @@ public class MasteryItem extends Item {
 
 		hero.checkIfFurious();
 		hero.updateSprite();
-
-		hero.spend( TIME_TO_READ );
 	}
 }

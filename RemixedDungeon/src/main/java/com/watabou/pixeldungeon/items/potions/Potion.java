@@ -24,7 +24,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.effects.Splash;
@@ -34,6 +33,7 @@ import com.watabou.pixeldungeon.items.bags.PotionBelt;
 import com.watabou.pixeldungeon.items.food.RottenFood;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -198,33 +198,31 @@ public class Potion extends Item implements UnknownItem {
 	protected void drink(Char hero ) {
 		
 		detach( hero.getBelongings().backpack );
-		
-		hero.spend( TIME_TO_DRINK );
+
 		onThrow( hero.getPos(), hero);
 		
 		Sample.INSTANCE.play( Assets.SND_DRINK );
 		
-		hero.getSprite().operate( hero.getPos(), null);
+		hero.doOperate(TIME_TO_DRINK);
 		shattered = false;
 	}
 	
 	private void moisten(Char hero) {
-		
-		hero.spend(TIME_TO_MOISTEN);
-
 		GameScene.selectItem(hero, itemSelector, WndBag.Mode.MOISTABLE, Game.getVar(R.string.Potion_SelectForMoisten));
-		
-		hero.getSprite().operate( hero.getPos(), null);
+		hero.doOperate(TIME_TO_MOISTEN);
 	}
 	
 	@Override
 	protected void onThrow(int cell, @NotNull Char thrower) {
 		if (thrower.getPos() == cell) {
 			apply( thrower );
-		} else if (Dungeon.level.map[cell] == Terrain.WELL || Dungeon.level.pit[cell]) {
-			super.onThrow( cell, thrower);
-		} else  {
-			shatter( cell );
+		} else {
+			Level level = thrower.level();
+			if (level.map[cell] == Terrain.WELL || level.pit[cell]) {
+				super.onThrow( cell, thrower);
+			} else  {
+				shatter( cell );
+			}
 		}
 	}
 	
@@ -365,41 +363,36 @@ public class Potion extends Item implements UnknownItem {
 		return 1;
 	}
 
-	protected int reallyMoistArrows(Arrow arrow) {
+	protected int reallyMoistArrows(Arrow arrow,Char owner) {
 		int quantity = detachMoistenItems(arrow, (int) (10*qualityFactor()));
-		moistenEffective();
+		moistenEffective(owner);
 		GLog.i(Game.getVar(R.string.Potion_ArrowMoisten));
 		return quantity;
 	}
 
 	protected void moistenRottenFood(RottenFood scroll, Char owner) {
-		moistenUseless();
+		moistenUseless(owner);
 	}
 	
 	protected void moistenScroll(Scroll scroll, Char owner) {
-		moistenUseless();
+		moistenUseless(owner);
 	}
 	
 	protected void moistenArrow(Arrow arrow, Char owner) {
-		moistenUseless();
+		moistenUseless(owner);
 	}
 	
-	private void moistenUseless() {
-		Char owner = getOwner();
+	private void moistenUseless(@NotNull Char owner) {
 
 		detach(owner.getBelongings().backpack );
 		GLog.i(Game.getVar(R.string.Potion_MoistenUseless));
-		owner.getSprite().operate( owner.getPos(), null);
-		owner.spend( TIME_TO_MOISTEN );
+		owner.doOperate(TIME_TO_MOISTEN );
 	}
 	
-	protected void moistenEffective() {
-		Char owner = getOwner();
-
+	protected void moistenEffective(@NotNull Char owner) {
 		detach(owner.getBelongings().backpack );
 		identify();
-		owner.getSprite().operate( owner.getPos(), null);
-		owner.spend( TIME_TO_MOISTEN );
+		owner.doOperate(TIME_TO_MOISTEN );
 	}
 
 	@Override

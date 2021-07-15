@@ -16,11 +16,11 @@ public class UseSpell extends CharAction{
     public boolean act(Char hero) {
         spell.cast(hero);
 
-        if(GameScene.defaultCellSelector()) {
-            hero.readyAndIdle();
+        hero.curAction = null;
+
+        hero.curAction = null;
+        if(GameScene.defaultCellSelector() && ! hero.getSprite().doingSomething()) {
             hero.next();
-        } else {
-            hero.curAction = null;
         }
 
         return false;

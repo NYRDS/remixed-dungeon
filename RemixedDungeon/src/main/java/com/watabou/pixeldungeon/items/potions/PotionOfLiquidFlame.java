@@ -58,7 +58,7 @@ public class PotionOfLiquidFlame extends UpgradablePotion {
 
 	@Override
 	protected void moistenArrow(Arrow arrow, Char owner) {
-		int quantity = reallyMoistArrows(arrow);
+		int quantity = reallyMoistArrows(arrow,owner);
 		
 		FireArrow moistenArrows = new FireArrow(quantity);
 		owner.collect(moistenArrows);

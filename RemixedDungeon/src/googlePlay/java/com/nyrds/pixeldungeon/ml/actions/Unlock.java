@@ -35,25 +35,22 @@ public class Unlock extends CharAction {
             }
 
             if (theKey != null) {
-                hero.spend(Key.TIME_TO_UNLOCK);
-                Key finalTheKey = theKey;
-                hero.getSprite().operate(dst, () -> {
-                    finalTheKey.removeItemFrom(hero);
+                theKey.removeItemFrom(hero);
 
-                    switch (door) {
-                        case Terrain.LOCKED_DOOR:
-                            level.set(dst, Terrain.DOOR);
-                            break;
-                        case Terrain.LOCKED_EXIT:
-                            level.set(dst, Terrain.UNLOCKED_EXIT);
-                            break;
-                        default:
-                            EventCollector.logException("trying to unlock tile:" + door);
-                    }
-                    GameScene.updateMap(dst);
+                switch (door) {
+                    case Terrain.LOCKED_DOOR:
+                        level.set(dst, Terrain.DOOR);
+                        break;
+                    case Terrain.LOCKED_EXIT:
+                        level.set(dst, Terrain.UNLOCKED_EXIT);
+                        break;
+                    default:
+                        EventCollector.logException("trying to unlock tile:" + door);
+                }
+                GameScene.updateMap(dst);
 
-                    hero.readyAndIdle();
-                });
+                hero.doOperate(Key.TIME_TO_UNLOCK, dst);
+
                 Sample.INSTANCE.play(Assets.SND_UNLOCK);
             } else {
                 GLog.w(Game.getVar(R.string.Hero_LockedDoor));

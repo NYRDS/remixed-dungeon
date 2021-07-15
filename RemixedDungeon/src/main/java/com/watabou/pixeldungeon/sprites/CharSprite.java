@@ -245,11 +245,8 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         });
     }
 
-    public void operate(int cell, @Nullable Callback callback) {
+    public void operate(int cell) {
         ch.ifPresent(chr -> {
-            if (callback != null) {
-                animCallback = callback;
-            }
             turnTo(chr.getPos(), cell);
             play(operate);
         });
@@ -547,21 +544,29 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 return;
             }
 
+            final boolean realtime = Dungeon.realtime();
+
             if (animCallback != null) {
                 val callback = animCallback;
                 animCallback = null;
                 callback.call();
             } else {
                 if (anim == attack) {
-                    chr.onAttackComplete();
+                    if(!realtime) {
+                        chr.onAttackComplete();
+                    }
                     idle();
                     return;
                 } else if (anim == zap) {
-                    chr.onZapComplete();
+                    if(!realtime) {
+                        chr.onZapComplete();
+                    }
                     idle();
                     return;
                 } else if (anim == operate) {
-                    chr.onOperateComplete();
+                    if(!realtime) {
+                        chr.onOperateComplete();
+                    }
                     idle();
                     return;
                 }

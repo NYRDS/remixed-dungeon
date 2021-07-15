@@ -87,10 +87,8 @@ public class LloydsBeacon extends Item {
 		if (action.equals(AC_SET)) {
 			
 			returnTo = Dungeon.currentPosition();
-			
-			chr.spend( LloydsBeacon.TIME_TO_USE );
 
-			chr.getSprite().operate( chr.getPos(), null);
+			chr.doOperate(TIME_TO_USE);
 			Sample.INSTANCE.play( Assets.SND_BEACON );
 			
 			GLog.i( Game.getVar(R.string.LloidsBeacon_Return) );

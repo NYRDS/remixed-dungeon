@@ -83,7 +83,7 @@ public class PotionOfHealing extends Potion {
 
 	@Override
 	protected void moistenArrow(Arrow arrow, Char owner) {
-		int quantity = reallyMoistArrows(arrow);
+		int quantity = reallyMoistArrows(arrow,owner);
 
 		HealthArrow moistenArrows = new HealthArrow(quantity);
 		owner.collect(moistenArrows);

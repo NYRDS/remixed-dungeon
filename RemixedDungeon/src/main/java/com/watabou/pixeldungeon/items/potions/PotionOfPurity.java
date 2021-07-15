@@ -129,7 +129,7 @@ public class PotionOfPurity extends UpgradablePotion{
 	@Override
 	protected void moistenRottenFood(RottenFood rfood, Char owner) {
 		detachMoistenItems(rfood, (int) (1*qualityFactor()));
-		moistenEffective();
+		moistenEffective(owner);
 		GLog.i(Game.getVar(R.string.Potion_FoodRefreshed), rfood.name());
 
 		owner.collect(rfood.purify());
@@ -137,7 +137,7 @@ public class PotionOfPurity extends UpgradablePotion{
 
 	@Override
 	protected void moistenArrow(Arrow arrow, Char owner) {
-		int quantity = reallyMoistArrows(arrow);
+		int quantity = reallyMoistArrows(arrow,owner);
 
 		CommonArrow moistenArrows = new CommonArrow(quantity);
 		owner.collect(moistenArrows);

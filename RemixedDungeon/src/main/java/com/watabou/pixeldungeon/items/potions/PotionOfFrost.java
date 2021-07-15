@@ -73,7 +73,7 @@ public class PotionOfFrost extends UpgradablePotion {
 	
 	@Override
 	protected void moistenArrow(Arrow arrow, Char owner) {
-		int quantity = reallyMoistArrows(arrow);
+		int quantity = reallyMoistArrows(arrow, owner);
 		
 		FrostArrow moistenArrows = new FrostArrow(quantity);
 		owner.collect(moistenArrows);

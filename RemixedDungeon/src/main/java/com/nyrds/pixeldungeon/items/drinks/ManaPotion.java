@@ -29,12 +29,10 @@ public class ManaPotion extends Drink {
 			GLog.i( Game.getVar(R.string.Drink_Message) );
 
 			chr.setSkillPoints(chr.getSkillPoints() + chr.getSkillPointsMax()/3);
-			chr.getSprite().operate( chr.getPos(), null);
+			chr.doOperate(TIME_TO_DRINK );
 
 			SpellSprite.show(chr, SpellSprite.FOOD );
 			Sample.INSTANCE.play( Assets.SND_DRINK );
-
-			chr.spend( TIME_TO_DRINK );
 		} else {
 			super._execute(chr, action );
 		}

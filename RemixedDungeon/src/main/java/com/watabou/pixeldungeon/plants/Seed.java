@@ -56,21 +56,16 @@ public class Seed extends Item {
     @Override
     public void _execute(@NotNull Char chr, @NotNull String action) {
         if (action.equals(AC_PLANT)) {
-
-            chr.spend(TIME_TO_PLANT);
             ((Seed) detach(chr.getBelongings().backpack)).onThrow(chr.getPos(), chr);
-
-            chr.getSprite().operate(chr.getPos(), null);
+            chr.doOperate(TIME_TO_PLANT);
 
         } else if (action.equals(CommonActions.AC_EAT)) {
             detach(chr.getBelongings().backpack);
 
-            chr.getSprite().operate(chr.getPos(), null);
+            chr.doOperate(Food.TIME_TO_EAT);
 
             SpellSprite.show(chr, SpellSprite.FOOD);
             Sample.INSTANCE.play(Assets.SND_EAT);
-
-            chr.spend(Food.TIME_TO_EAT);
         }
 
         super._execute(chr, action);

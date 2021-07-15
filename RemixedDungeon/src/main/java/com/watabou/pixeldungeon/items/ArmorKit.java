@@ -78,7 +78,6 @@ public class ArmorKit extends Item {
 		detach( owner.getBelongings().backpack );
 
 		owner.getSprite().centerEmitter().start( Speck.factory( Speck.KIT ), 0.05f, 10 );
-		owner.spend( TIME_TO_UPGRADE );
 
 		GLog.w( Game.getVar(R.string.ArmorKit_Upgraded), armor.name() );
 		
@@ -90,8 +89,9 @@ public class ArmorKit extends Item {
 			armor.detach( owner.getBelongings().backpack );
 			owner.collect(classArmor);
 		}
-		
-		owner.getSprite().operate( owner.getPos(), null);
+
+		owner.doOperate(TIME_TO_UPGRADE);
+
 		Sample.INSTANCE.play( Assets.SND_EVOKE );
 	}
 	
