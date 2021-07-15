@@ -466,7 +466,7 @@
   <string name="EquipableItem_ACUnequip">取下</string>
   <string name="EquipableItem_Unequip">你不能取下被诅咒的%s！</string>
   <string name="Heap_Mimic">它是拟形怪！</string>
-  <string name="Amulet_Name">尼德罗护符</string>
+  <string name="Amulet_Name">Yendor护符</string>
   <string name="Amulet_ACEnd">结束游戏</string>
   <string name="Amulet_Info">Yendor护符是来自未知领域中最强大的且最著名的神器。据说它能够实现持有者的一切愿望，只要持有者具备足够的力量来“说服”它去做。</string>
   <string name="Ankh_Name">十字架</string>
@@ -1558,7 +1558,7 @@
   <string name="Badges_ItemLvl3">获得9级物品</string>
   <string name="Badges_ItemLvl4">获得12级物品</string>
   <string name="Badges_RareAll">全稀有怪物斩获</string>
-  <string name="Badges_Victory">获得尼德罗护符</string>
+  <string name="Badges_Victory">获得Yendor护符</string>
   <string name="Badges_VictoryAll">使用所有人物获得Yendor护符</string>
   <string name="Badges_MasteryCombo">7连击</string>
   <string name="Badges_PotionsCooked1">熬出3瓶药水</string>
