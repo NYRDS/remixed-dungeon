@@ -2844,7 +2844,7 @@ remix.30.0
   <string name="Snail_Name">蜗牛</string>
   <string name="Snail_Gender">男孩</string>
   <string name="Snail_Name_Objective">蜗牛</string>
-  <string name="Snail_Desc">这个小软体动物通过吸食污水已经长得相当大了，但他仍然非常缓慢，这使他成为一个容易面对的敌人。</string>
+  <string name="Snail_Desc">这只小软体动物通过吸食污水已经长得相当大了，但他仍然非常缓慢，这使他成为一个容易面对的敌人。</string>
   <string name="DeepSnail_Name">深色蜗牛</string>
   <string name="DeepSnail_Gender">男孩</string>
   <string name="DeepSnail_Name_Objective">深色蜗牛</string>
