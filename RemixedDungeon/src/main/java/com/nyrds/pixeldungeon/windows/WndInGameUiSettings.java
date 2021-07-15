@@ -4,8 +4,8 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.Selector;
@@ -19,7 +19,7 @@ public class WndInGameUiSettings extends WndMenuCommon {
 
 		menuItems.add(createUiZoomButtons());
 		menuItems.add(createQuickSlotsSelector());
-		menuItems.add(new MenuButton(Game.getVar(R.string.WndSettings_ActionButtonSize)){
+        menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_ActionButtonSize)){
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -32,7 +32,7 @@ public class WndInGameUiSettings extends WndMenuCommon {
 			}
 		});
 
-		menuItems.add(new MenuButton(Game.getVar(R.string.WndSettings_Handedness)){
+        menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_Handedness)){
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -42,8 +42,7 @@ public class WndInGameUiSettings extends WndMenuCommon {
 	}
 
 	private Selector createQuickSlotsSelector() {
-		return new Selector(WIDTH, BUTTON_HEIGHT, Game
-				.getVar(R.string.WndSettings_Quickslots), new Selector.PlusMinusDefault() {
+        return new Selector(WIDTH, BUTTON_HEIGHT, StringsManager.getVar(R.string.WndSettings_Quickslots), new Selector.PlusMinusDefault() {
 
 			@Override
 			public void onPlus(Selector s) {
@@ -64,7 +63,7 @@ public class WndInGameUiSettings extends WndMenuCommon {
 	}
 
 	private Selector createUiZoomButtons() {
-		return new Selector(WIDTH, BUTTON_HEIGHT, Game.getVar(R.string.WndSettings_UiScale), new Selector.PlusMinusDefault() {
+        return new Selector(WIDTH, BUTTON_HEIGHT, StringsManager.getVar(R.string.WndSettings_UiScale), new Selector.PlusMinusDefault() {
 
 			@Override
 			public void onPlus(Selector s) {

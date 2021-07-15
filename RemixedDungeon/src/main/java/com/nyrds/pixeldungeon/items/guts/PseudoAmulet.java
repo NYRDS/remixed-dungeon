@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.MimicAmulet;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -19,8 +19,8 @@ public class PseudoAmulet extends Item {
 	public PseudoAmulet() {
 
 		image  = ItemSpriteSheet.AMULET;
-		name = Game.getVar(R.string.Amulet_Name);
-		info = Game.getVar(R.string.Amulet_Info);
+        name = StringsManager.getVar(R.string.Amulet_Name);
+        info = StringsManager.getVar(R.string.Amulet_Info);
 	}
 	
 	@Override

@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.items.Item;
 
 
@@ -31,8 +31,8 @@ public class ClothArmor extends Armor {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.ClothArmor_Desc);
-	}
+        return StringsManager.getVar(R.string.ClothArmor_Desc);
+    }
 	
 	@Override
 	public Item burn(int cell){

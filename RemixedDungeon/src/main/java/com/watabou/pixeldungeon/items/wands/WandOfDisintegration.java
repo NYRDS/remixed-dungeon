@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.wands;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -104,6 +104,6 @@ public class WandOfDisintegration extends SimpleWand  {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.WandOfDisintegration_Info);
-	}
+        return StringsManager.getVar(R.string.WandOfDisintegration_Info);
+    }
 }

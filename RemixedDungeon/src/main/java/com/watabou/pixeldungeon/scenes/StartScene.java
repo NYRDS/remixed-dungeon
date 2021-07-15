@@ -25,8 +25,8 @@ import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Camera;
@@ -122,14 +122,12 @@ public class StartScene extends PixelScene {
         buttonX = left;
         buttonY = bottom - BUTTON_HEIGHT;
 
-        btnNewGame = new GameButton(Game.getVar(R.string.StartScene_New)) {
+        btnNewGame = new GameButton(StringsManager.getVar(R.string.StartScene_New)) {
             @Override
             protected void onClick() {
                 if (GamesInProgress.check(curShield.cl) != null) {
-                    StartScene.this.add(new WndOptions(Game
-                            .getVar(R.string.StartScene_Really), Game
-                            .getVar(R.string.StartScene_Warning),
-                            Game.getVar(R.string.StartScene_Yes), Game.getVar(R.string.StartScene_No)) {
+                    StartScene.this.add(new WndOptions(StringsManager.getVar(R.string.StartScene_Really), StringsManager.getVar(R.string.StartScene_Warning),
+                            StringsManager.getVar(R.string.StartScene_Yes), StringsManager.getVar(R.string.StartScene_No)) {
                         @Override
                         public void onSelect(int index) {
                             if (index == 0) {
@@ -145,8 +143,7 @@ public class StartScene extends PixelScene {
         };
         add(btnNewGame);
 
-        btnLoad = new GameButton(Game
-                .getVar(R.string.StartScene_Load)) {
+        btnLoad = new GameButton(StringsManager.getVar(R.string.StartScene_Load)) {
             @Override
             protected void onClick() {
                 Dungeon.hero = null;
@@ -280,17 +277,17 @@ public class StartScene extends PixelScene {
 
         if (!Util.isDebug()) {
             if (curShield.cl == HeroClass.HUNTRESS && !huntressUnlocked) {
-                updateUnlockLabel(Game.getVar(R.string.StartScene_Unlock));
+                updateUnlockLabel(StringsManager.getVar(R.string.StartScene_Unlock));
                 return;
             }
 
             if (curShield.cl == HeroClass.ELF && !elfUnlocked) {
-                updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockElf));
+                updateUnlockLabel(StringsManager.getVar(R.string.StartScene_UnlockElf));
                 return;
             }
 
             if (curShield.cl == HeroClass.GNOLL && !gnollUnlocked) {
-                updateUnlockLabel(Game.getVar(R.string.StartScene_UnlockGnoll));
+                updateUnlockLabel(StringsManager.getVar(R.string.StartScene_UnlockGnoll));
                 return;
             }
 
@@ -302,13 +299,11 @@ public class StartScene extends PixelScene {
         if (info != null) {
 
             btnLoad.setVisible(true);
-            btnLoad.secondary(Utils.format(Game
-                            .getVar(R.string.StartScene_Depth), info.depth,
+            btnLoad.secondary(Utils.format(StringsManager.getVar(R.string.StartScene_Depth), info.depth,
                     info.level));
 
             btnNewGame.setVisible(true);
-            btnNewGame.secondary(Game
-                    .getVar(R.string.StartScene_Erase));
+            btnNewGame.secondary(StringsManager.getVar(R.string.StartScene_Erase));
 
             float w = (Camera.main.width - GAP) / 2 - buttonX;
 
@@ -329,11 +324,13 @@ public class StartScene extends PixelScene {
 
     private void selectDifficulty() {
 
-        WndOptions difficultyOptions = new WndOptions(Game.getVar(R.string.StartScene_DifficultySelect), Utils.EMPTY_STRING,
-                Game.getVar(GamePreferences.donated() > 0 ? R.string.StartScene_DifficultyEasyNoAds : R.string.StartScene_DifficultyEasy),
-                Game.getVar(GamePreferences.donated() > 0 ? R.string.StartScene_DifficultyNormalWithSavesNoAds : R.string.StartScene_DifficultyNormalWithSaves),
-                Game.getVar(R.string.StartScene_DifficultyNormal),
-                Game.getVar(R.string.StartScene_DifficultyExpert)) {
+        int id = GamePreferences.donated() > 0 ? R.string.StartScene_DifficultyNormalWithSavesNoAds : R.string.StartScene_DifficultyNormalWithSaves;
+        int id1 = GamePreferences.donated() > 0 ? R.string.StartScene_DifficultyEasyNoAds : R.string.StartScene_DifficultyEasy;
+        WndOptions difficultyOptions = new WndOptions(StringsManager.getVar(R.string.StartScene_DifficultySelect), Utils.EMPTY_STRING,
+                StringsManager.getVar(id1),
+                StringsManager.getVar(id),
+                StringsManager.getVar(R.string.StartScene_DifficultyNormal),
+                StringsManager.getVar(R.string.StartScene_DifficultyExpert)) {
             @Override
             public void onSelect(final int index) {
 

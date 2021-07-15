@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.wands;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -102,8 +102,8 @@ public class WandOfBlink extends Wand {
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.WandOfBlink_Info);
-	}
+        return StringsManager.getVar(R.string.WandOfBlink_Info);
+    }
 	
 	@Override
 	public boolean affectTarget() {

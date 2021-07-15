@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -58,7 +58,7 @@ public class Metabolism extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return Utils.format( Game.getVar(R.string.Metabolism_Txt), weaponName );
+        return Utils.format(StringsManager.getVar(R.string.Metabolism_Txt), weaponName );
 	}
 
 	@Override

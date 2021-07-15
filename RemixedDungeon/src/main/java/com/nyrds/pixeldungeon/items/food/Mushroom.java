@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.items.food;
 
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -13,7 +13,7 @@ abstract public class Mushroom extends Food {
 	{
 		imageFile = "items/shrooms";
 		stackable = true;
-		message = Game.getVar(R.string.Mushroom_Eat_Message);
+        message = StringsManager.getVar(R.string.Mushroom_Eat_Message);
 	}
 
 	@Override

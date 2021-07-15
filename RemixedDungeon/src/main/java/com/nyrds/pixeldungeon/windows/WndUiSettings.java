@@ -3,8 +3,8 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.Selector;
 import com.watabou.pixeldungeon.windows.WndMenuCommon;
@@ -15,7 +15,7 @@ public class WndUiSettings extends WndMenuCommon {
 	protected void createItems() {
 
 		if (android.os.Build.VERSION.SDK_INT >= 19) {
-			menuItems.add( new MenuCheckBox(Game.getVar(R.string.WndSettings_Immersive), GamePreferences.immersed()) {
+            menuItems.add( new MenuCheckBox(StringsManager.getVar(R.string.WndSettings_Immersive), GamePreferences.immersed()) {
 				@Override
 				protected void onClick() {
 					super.onClick();
@@ -35,8 +35,8 @@ public class WndUiSettings extends WndMenuCommon {
 			}
 		});
 
-		final String[] texts = {Game.getVar(R.string.WndSettings_ExperementalFont),
-				Game.getVar(R.string.WndSettings_ClassicFont)
+        final String[] texts = {StringsManager.getVar(R.string.WndSettings_ExperementalFont),
+                StringsManager.getVar(R.string.WndSettings_ClassicFont)
 		};
 
 		if (Utils.canUseClassicFont(GamePreferences.uiLanguage())) {
@@ -54,8 +54,7 @@ public class WndUiSettings extends WndMenuCommon {
 	}
 
 	private Selector createTextScaleButtons() {
-		return new Selector(WIDTH,BUTTON_HEIGHT,Game
-				.getVar(R.string.WndSettings_TextScaleDefault), new Selector.PlusMinusDefault() {
+        return new Selector(WIDTH,BUTTON_HEIGHT, StringsManager.getVar(R.string.WndSettings_TextScaleDefault), new Selector.PlusMinusDefault() {
 			@Override
 			public void onPlus(Selector s) {
 				GamePreferences.fontScale(GamePreferences.fontScale() + 1);
@@ -77,8 +76,6 @@ public class WndUiSettings extends WndMenuCommon {
 	}
 
 	private String orientationText() {
-		return RemixedDungeon.landscape() ? Game
-				.getVar(R.string.WndSettings_SwitchPort) : Game
-				.getVar(R.string.WndSettings_SwitchLand);
+        return RemixedDungeon.landscape() ? StringsManager.getVar(R.string.WndSettings_SwitchPort) : StringsManager.getVar(R.string.WndSettings_SwitchLand);
 	}
 }

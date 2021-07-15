@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.items.common.armor;
 import com.nyrds.pixeldungeon.mechanics.buffs.Necrotism;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -47,7 +47,7 @@ public class NecromancerArmor extends ClassArmor {
 		if (hero.getHeroClass() == HeroClass.NECROMANCER) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( Game.getVar(R.string.NecromancerArmor_NotNecromancer) );
+            GLog.w(StringsManager.getVar(R.string.NecromancerArmor_NotNecromancer));
 			return false;
 		}
 	}

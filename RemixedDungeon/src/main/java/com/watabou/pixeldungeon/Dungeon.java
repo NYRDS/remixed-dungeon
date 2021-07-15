@@ -39,6 +39,7 @@ import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
@@ -240,10 +241,10 @@ public class Dungeon {
     public static String tip(Level _level) {
         if (_level instanceof DeadEndLevel) {
 
-            return Game.getVar(R.string.Dungeon_DeadEnd);
+            return StringsManager.getVar(R.string.Dungeon_DeadEnd);
 
         } else {
-            String[] tips = Game.getVars(R.array.Dungeon_Tips);
+            String[] tips = StringsManager.getVars(R.array.Dungeon_Tips);
             int index = depth - 1;
 
             if (index == -1) {
@@ -253,7 +254,7 @@ public class Dungeon {
             if (index < tips.length) {
                 return tips[index];
             } else {
-                return Game.getVar(R.string.Dungeon_NoTips);
+                return StringsManager.getVar(R.string.Dungeon_NoTips);
             }
         }
     }
@@ -478,7 +479,7 @@ public class Dungeon {
 
                 SaveUtils.copySaveToSlot(SaveUtils.getAutoSave(), heroClass);
             } catch (IOException e) {
-                Game.toast(Game.getVar(R.string.Dungeon_saveIoError) + "\n" + e.getLocalizedMessage());
+                Game.toast(StringsManager.getVar(R.string.Dungeon_saveIoError) + "\n" + e.getLocalizedMessage());
                 EventCollector.logException(new Exception("cannot write save", e));
             }
 

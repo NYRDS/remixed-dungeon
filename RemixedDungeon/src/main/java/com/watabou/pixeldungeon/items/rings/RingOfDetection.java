@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 
@@ -43,7 +43,7 @@ public class RingOfDetection extends Ring {
 	
 	@Override
 	public String desc() {
-		return isKnown() ? Game.getVar(R.string.RingOfDetection_Info) : super.desc();
+        return isKnown() ? StringsManager.getVar(R.string.RingOfDetection_Info) : super.desc();
 	}
 	
 	public class Detection extends RingBuff {

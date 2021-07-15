@@ -21,7 +21,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -90,7 +90,7 @@ public class Armor extends EquipableItem {
 		
 		if (glyph != null) {
 			if (!inscribe && Random.Int( level() ) > 0 && !Dungeon.isLoading()) {
-				GLog.w( Game.getVar(R.string.Armor_Incompatible) );
+                GLog.w(StringsManager.getVar(R.string.Armor_Incompatible));
 				inscribe( null );
 			}
 		} else {
@@ -110,7 +110,7 @@ public class Armor extends EquipableItem {
 		if (!isLevelKnown()) {
 			if (--hitsToKnow <= 0) {
 				setLevelKnown(true);
-				GLog.w( Game.getVar(R.string.Armor_Identify), name(), toString() );
+                GLog.w(StringsManager.getVar(R.string.Armor_Identify), name(), toString() );
 				Badges.validateItemLevelAcquired( this );
 			}
 		}
@@ -121,7 +121,7 @@ public class Armor extends EquipableItem {
 	@NotNull
     @Override
 	public String toString() {
-		return isLevelKnown() ? Utils.format( Game.getVar(R.string.Armor_ToString), super.toString(), requiredSTR() ) : super.toString();
+        return isLevelKnown() ? Utils.format(StringsManager.getVar(R.string.Armor_ToString), super.toString(), requiredSTR() ) : super.toString();
 	}
 	
 	@Override
@@ -139,33 +139,33 @@ public class Armor extends EquipableItem {
 		
 		if (isLevelKnown()) {
 			info.append(p);
-			info.append(Utils.capitalize(Utils.format(Game.getVar(R.string.Armor_Info1), name, Math.max( effectiveDr(), 0 ))));
+            info.append(Utils.capitalize(Utils.format(StringsManager.getVar(R.string.Armor_Info1), name, Math.max( effectiveDr(), 0 ))));
 			
 			if (requiredSTR() > Dungeon.hero.effectiveSTR()) {
 				if (isEquipped( Dungeon.hero )) {
-					info.append(Game.getVar(R.string.Armor_Info2));
+                    info.append(StringsManager.getVar(R.string.Armor_Info2));
 				} else {
-					info.append(Game.getVar(R.string.Armor_Info3));
+                    info.append(StringsManager.getVar(R.string.Armor_Info3));
 				}
 			}
 		} else {
-			info.append(Utils.format(Game.getVar(R.string.Armor_Info4), name, typicalDR(), typicalSTR()));
+            info.append(Utils.format(StringsManager.getVar(R.string.Armor_Info4), name, typicalDR(), typicalSTR()));
 			if (typicalSTR() > Dungeon.hero.effectiveSTR()) {
 				info.append(" ");
-				info.append(Game.getVar(R.string.Armor_Info5));
+                info.append(StringsManager.getVar(R.string.Armor_Info5));
 			}
 		}
 		info.append(" ");
 		if (glyph != null) {
-			info.append(Game.getVar(R.string.Armor_Info6));
+            info.append(StringsManager.getVar(R.string.Armor_Info6));
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
-			info.append(Utils.format(Game.getVar(R.string.Armor_Info7a), name,
-				(isCursed() ? Game.getVar(R.string.Armor_Info7b) : Utils.EMPTY_STRING) ));
+            info.append(Utils.format(StringsManager.getVar(R.string.Armor_Info7a), name,
+				(isCursed() ? StringsManager.getVar(R.string.Armor_Info7b) : Utils.EMPTY_STRING) ));
 		} else {
 			if (isCursedKnown() && isCursed()) {
-				info.append(Utils.format(Game.getVar(R.string.Armor_Info8), name));
+                info.append(Utils.format(StringsManager.getVar(R.string.Armor_Info8), name));
 			}
 		}
 		
@@ -244,7 +244,7 @@ public class Armor extends EquipableItem {
 
 	@Override
 	public void equippedCursed() {
-		GLog.n( Game.getVar(R.string.Armor_EquipCursed), name() );
+        GLog.n(StringsManager.getVar(R.string.Armor_EquipCursed), name() );
 	}
 
 	@Override
@@ -264,7 +264,7 @@ public class Armor extends EquipableItem {
 		public abstract int defenceProc(Armor armor, Char attacker, Char defender, int damage );
 		
 		public String name() {
-			return name( Game.getVar(R.string.Armor_Glyph));
+            return name(StringsManager.getVar(R.string.Armor_Glyph));
 		}
 		
 		public String name( String armorName ) {

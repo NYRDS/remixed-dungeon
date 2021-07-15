@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.potions;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -92,7 +92,7 @@ public class PotionOfPurity extends UpgradablePotion{
 			setKnown();
 
 			if (heroAffected) {
-				GLog.p(Game.getVar(R.string.PotionOfPurity_Freshness));
+                GLog.p(StringsManager.getVar(R.string.PotionOfPurity_Freshness));
 			}
 
 		} else {
@@ -100,7 +100,7 @@ public class PotionOfPurity extends UpgradablePotion{
 			super.shatter(cell);
 
 			if (heroAffected) {
-				GLog.i(Game.getVar(R.string.PotionOfPurity_Freshness));
+                GLog.i(StringsManager.getVar(R.string.PotionOfPurity_Freshness));
 				setKnown();
 			}
 
@@ -109,7 +109,7 @@ public class PotionOfPurity extends UpgradablePotion{
 
 	@Override
 	protected void apply(Char hero) {
-		GLog.w(Game.getVar(R.string.PotionOfPurity_NoSmell));
+        GLog.w(StringsManager.getVar(R.string.PotionOfPurity_NoSmell));
 
 		Buff.prolong(hero, BuffFactory.GASES_IMMUNITY, (float) (5 * qualityFactor()));
 
@@ -118,8 +118,8 @@ public class PotionOfPurity extends UpgradablePotion{
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.PotionOfPurity_Info);
-	}
+        return StringsManager.getVar(R.string.PotionOfPurity_Info);
+    }
 
 	@Override
 	public int basePrice() {
@@ -130,7 +130,7 @@ public class PotionOfPurity extends UpgradablePotion{
 	protected void moistenRottenFood(RottenFood rfood, Char owner) {
 		detachMoistenItems(rfood, (int) (1*qualityFactor()));
 		moistenEffective(owner);
-		GLog.i(Game.getVar(R.string.Potion_FoodRefreshed), rfood.name());
+        GLog.i(StringsManager.getVar(R.string.Potion_FoodRefreshed), rfood.name());
 
 		owner.collect(rfood.purify());
 	}

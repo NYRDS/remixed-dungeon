@@ -25,6 +25,7 @@ import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Camera;
@@ -76,7 +77,7 @@ public class TitleScene extends PixelScene {
 			title.y = -(title.height() * 0.05f);
 		}
 
-		DashboardItem btnBadges = new DashboardItem(Game.getVar(R.string.TitleScene_Badges), 3) {
+        DashboardItem btnBadges = new DashboardItem(StringsManager.getVar(R.string.TitleScene_Badges), 3) {
 			@Override
 			protected void onClick() {
 				RemixedDungeon.switchNoFade(BadgesScene.class);
@@ -93,7 +94,7 @@ public class TitleScene extends PixelScene {
 		btnMods.setPos(w_center, (h + height) / 2 - DashboardItem.SIZE);
 		add(btnMods);
 
-		DashboardItem btnPlay = new DashboardItem(Game.getVar(R.string.TitleScene_Play), 0) {
+        DashboardItem btnPlay = new DashboardItem(StringsManager.getVar(R.string.TitleScene_Play), 0) {
 			@Override
 			protected void onClick() {
 				RemixedDungeon.switchNoFade(StartScene.class);
@@ -103,7 +104,7 @@ public class TitleScene extends PixelScene {
 				- DashboardItem.SIZE);
 		add(btnPlay);
 
-		DashboardItem btnHighscores = new DashboardItem(Game.getVar(R.string.TitleScene_Highscores), 2) {
+        DashboardItem btnHighscores = new DashboardItem(StringsManager.getVar(R.string.TitleScene_Highscores), 2) {
 			@Override
 			protected void onClick() {
 				RemixedDungeon.switchNoFade(RankingsScene.class);
@@ -151,8 +152,7 @@ public class TitleScene extends PixelScene {
 		if (freeInternalStorage < 2) {
 			Text lowInternalStorageWarning = PixelScene
 					.createMultiline(GuiProperties.regularFontSize());
-			lowInternalStorageWarning.text(Game
-					.getVar(R.string.TitleScene_InternalStorageLow));
+            lowInternalStorageWarning.text(StringsManager.getVar(R.string.TitleScene_InternalStorageLow));
 			lowInternalStorageWarning.setPos(0,
 					h - lowInternalStorageWarning.height());
 			lowInternalStorageWarning.hardlight(0.95f, 0.1f, 0.1f);

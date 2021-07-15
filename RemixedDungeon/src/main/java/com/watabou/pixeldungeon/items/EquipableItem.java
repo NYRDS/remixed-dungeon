@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -105,7 +105,7 @@ public abstract class EquipableItem extends Item {
 	protected boolean doUnequip(Char hero, boolean collect, boolean single) {
 		
 		if (isCursed()) {
-			GLog.w( Game.getVar(R.string.EquipableItem_Unequip), name() );
+            GLog.w(StringsManager.getVar(R.string.EquipableItem_Unequip), name() );
 			return false;
 		}
 
@@ -169,7 +169,7 @@ public abstract class EquipableItem extends Item {
 	}
 
 	public void equippedCursed() {
-		GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), name() );
+        GLog.n(StringsManager.getVar(R.string.KindOfWeapon_EquipCursed), name() );
 	}
 
 	public int requiredSTR() {

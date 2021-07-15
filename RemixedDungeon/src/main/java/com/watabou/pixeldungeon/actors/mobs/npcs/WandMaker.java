@@ -23,7 +23,7 @@ import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -114,11 +114,11 @@ public class WandMaker extends NPC {
 			if (item != null) {
 				GameScene.show( new WndWandmaker( this, item ) );
 			} else {
-				tell( Quest.alternative ? Game.getVar(R.string.WandMaker_Dust2) : Game.getVar(R.string.WandMaker_Berry2), hero.className() );
+                tell( Quest.alternative ? StringsManager.getVar(R.string.WandMaker_Dust2) : StringsManager.getVar(R.string.WandMaker_Berry2), hero.className() );
 			}
 			
 		} else {
-			tell( Quest.alternative ? Game.getVar(R.string.WandMaker_Dust1) : Game.getVar(R.string.WandMaker_Berry1) );
+            tell( Quest.alternative ? StringsManager.getVar(R.string.WandMaker_Dust1) : StringsManager.getVar(R.string.WandMaker_Berry1));
 			Quest.given = true;
 			
 			Quest.placeItem();
@@ -297,8 +297,8 @@ public class WandMaker extends NPC {
 
 		@Override
 		public String name() {
-			return Game.getVar(R.string.WandMaker_RotberryName);
-		}
+            return StringsManager.getVar(R.string.WandMaker_RotberryName);
+        }
 
 		@Override
 		public void effect(int pos, Presser ch) {
@@ -313,14 +313,14 @@ public class WandMaker extends NPC {
 
 		@Override
 		public String desc() {
-			return Game.getVar(R.string.WandMaker_RotberryDesc);
-		}
+            return StringsManager.getVar(R.string.WandMaker_RotberryDesc);
+        }
 		
 		public static class Seed extends com.watabou.pixeldungeon.plants.Seed {
 			{
-				plantName = Game.getVar(R.string.WandMaker_RotberryName);
-				
-				name = Utils.format(Game.getVar(R.string.Plant_Seed), plantName);
+                plantName = StringsManager.getVar(R.string.WandMaker_RotberryName);
+
+                name = Utils.format(StringsManager.getVar(R.string.Plant_Seed), plantName);
 				image = ItemSpriteSheet.SEED_ROTBERRY;
 				
 				plantClass = Rotberry.class;
@@ -349,7 +349,7 @@ public class WandMaker extends NPC {
 
 					CharUtils.challengeAllMobs(getOwner(), Assets.SND_CHALLENGE);
 					if(getOwner()==Dungeon.hero) {
-						GLog.w(Game.getVar(R.string.WandMaker_RotberryInfo));
+                        GLog.w(StringsManager.getVar(R.string.WandMaker_RotberryInfo));
 					}
 					return true;
 				} else {
@@ -359,8 +359,8 @@ public class WandMaker extends NPC {
 			
 			@Override
 			public String desc() {
-				return Game.getVar(R.string.WandMaker_RotberryDesc);
-			}
+                return StringsManager.getVar(R.string.WandMaker_RotberryDesc);
+            }
 		}
 	}
 }

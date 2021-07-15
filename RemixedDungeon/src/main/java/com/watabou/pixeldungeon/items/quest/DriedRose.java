@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.quest;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -46,7 +46,7 @@ public class DriedRose extends Artifact {
 
 	@Override
 	public String info() {
-		return super.info() + "\n\n" + Game.getVar(R.string.DriedRose_Info2);
+        return super.info() + "\n\n" + StringsManager.getVar(R.string.DriedRose_Info2);
 	}
 
 	public static class OneWayLoveBuff extends ArtifactBuff {
@@ -57,13 +57,13 @@ public class DriedRose extends Artifact {
 
 		@Override
 		public String name() {
-			return Game.getVar(R.string.DriedRoseBuff_Name);
-		}
+            return StringsManager.getVar(R.string.DriedRoseBuff_Name);
+        }
 
 		@Override
 		public String desc() {
-			return Game.getVar(R.string.DriedRoseBuff_Info);
-		}
+            return StringsManager.getVar(R.string.DriedRoseBuff_Info);
+        }
 	}
 
 	public static class OneWayCursedLoveBuff extends ArtifactBuff {
@@ -74,12 +74,12 @@ public class DriedRose extends Artifact {
 
 		@Override
 		public String name() {
-			return Game.getVar(R.string.DriedRoseCursedBuff_Name);
-		}
+            return StringsManager.getVar(R.string.DriedRoseCursedBuff_Name);
+        }
 
 		@Override
 		public String desc() {
-			return Game.getVar(R.string.DriedRoseCursedBuff_Info);
-		}
+            return StringsManager.getVar(R.string.DriedRoseCursedBuff_Info);
+        }
 	}
 }

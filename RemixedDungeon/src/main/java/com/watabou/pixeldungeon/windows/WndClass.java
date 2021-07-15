@@ -18,8 +18,8 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Group;
@@ -63,7 +63,7 @@ public class WndClass extends WndTabbed {
 			MasteryTab tabMastery = new MasteryTab();
 			add(tabMastery);
 
-			tab = new RankingTab(this, Game.getVar(R.string.WndClass_Mastery), tabMastery);
+            tab = new RankingTab(this, StringsManager.getVar(R.string.WndClass_Mastery), tabMastery);
 			tab.setSize(TAB_WIDTH, tabHeight());
 			add(tab);
 

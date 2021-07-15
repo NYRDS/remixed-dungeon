@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -53,13 +53,13 @@ public class Paralysis extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.ParalysisBuff_Name);
-	}
+        return StringsManager.getVar(R.string.ParalysisBuff_Name);
+    }
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.ParalysisBuff_Info);
-	}
+        return StringsManager.getVar(R.string.ParalysisBuff_Info);
+    }
 	
 	public static float duration( Char ch ) {
 		Resistance r = ch.buff( Resistance.class );
@@ -74,6 +74,6 @@ public class Paralysis extends FlavourBuff {
 	@Override
 	public void attachVisual() {
 		target.getSprite().add(CharSprite.State.PARALYSED);
-		target.getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaParalysed));
+        target.getSprite().showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaParalysed));
 	}
 }

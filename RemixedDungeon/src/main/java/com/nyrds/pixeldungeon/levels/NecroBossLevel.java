@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -99,13 +99,13 @@ public class NecroBossLevel extends BossLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return Game.getVar(R.string.Prison_TileWater);
-		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.City_TileHighGrass);
-		case Terrain.UNLOCKED_EXIT:
+            return StringsManager.getVar(R.string.Prison_TileWater);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.City_TileHighGrass);
+            case Terrain.UNLOCKED_EXIT:
 		case Terrain.LOCKED_EXIT:
-			return Game.getVar(R.string.PortalGate_Name);
-		default:
+            return StringsManager.getVar(R.string.PortalGate_Name);
+            default:
 			return super.tileName( tile );
 		}
 	}
@@ -114,9 +114,9 @@ public class NecroBossLevel extends BossLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.BOOKSHELF:
-			return Game.getVar(R.string.Halls_TileDescBookshelf);
-		case Terrain.UNLOCKED_EXIT:
-			return Utils.format(Game.getVar(R.string.PortalExit_Desc), Game.getVar(R.string.PortalExit_Desc_Necropolis));
+            return StringsManager.getVar(R.string.Halls_TileDescBookshelf);
+            case Terrain.UNLOCKED_EXIT:
+                return Utils.format(StringsManager.getVar(R.string.PortalExit_Desc), StringsManager.getVar(R.string.PortalExit_Desc_Necropolis));
 		default:
 			return super.tileDesc( tile );
 		}

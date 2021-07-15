@@ -25,7 +25,7 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -129,8 +129,8 @@ public class King extends Boss {
 		super.die( cause );
 		
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_4);
-		
-		yell(Utils.format(Game.getVar(R.string.King_Info1), Dungeon.hero.getHeroClass().title()));
+
+        yell(Utils.format(StringsManager.getVar(R.string.King_Info1), Dungeon.hero.getHeroClass().title()));
 	}
 	
 	private int maxArmySize() {
@@ -163,13 +163,13 @@ public class King extends Boss {
 				new Flare(3, 32).color(0x000000, false).show(servant.getSprite(), 2f);
 			}
 		}
-		yell(Game.getVar(R.string.King_Info2));
+        yell(StringsManager.getVar(R.string.King_Info2));
 	}
 	
 	@Override
 	public void notice() {
 		super.notice();
-		yell(Game.getVar(R.string.King_Info3));
+        yell(StringsManager.getVar(R.string.King_Info3));
 	}
 	
 	public static class Undead extends UndeadMob {

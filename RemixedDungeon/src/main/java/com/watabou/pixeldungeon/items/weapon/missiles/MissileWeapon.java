@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -102,11 +102,11 @@ public class MissileWeapon extends Weapon {
 	@Override
 	public boolean doEquip(@NotNull final Char hero ) {
 		if(notUsableInMelee()) {
-			GameScene.show(
-					new WndOptions(Game.getVar(R.string.MissileWeapon_Missiles),
-							Game.getVar(R.string.MissileWeapon_Sure),
-							Game.getVar(R.string.MissileWeapon_Yes),
-							Game.getVar(R.string.MissileWeapon_No)) {
+            GameScene.show(
+					new WndOptions(StringsManager.getVar(R.string.MissileWeapon_Missiles),
+                            StringsManager.getVar(R.string.MissileWeapon_Sure),
+                            StringsManager.getVar(R.string.MissileWeapon_Yes),
+                            StringsManager.getVar(R.string.MissileWeapon_No)) {
 						@Override
 						public void onSelect(int index) {
 							if (index == 0) {
@@ -144,23 +144,23 @@ public class MissileWeapon extends Weapon {
 	public String info() {
 		
 		StringBuilder info = new StringBuilder( desc() );
-		
-		info.append(Utils.format(Game.getVar(R.string.MissileWeapon_Info1),MIN + (MAX - MIN) / 2));
+
+        info.append(Utils.format(StringsManager.getVar(R.string.MissileWeapon_Info1),MIN + (MAX - MIN) / 2));
 		info.append(" ");
 
 		final Char hero = Dungeon.hero;
 
 		if (hero.getBelongings().backpack.items.contains( this )) {
 			if (STR > hero.effectiveSTR()) {
-				info.append(Utils.format(Game.getVar(R.string.MissileWeapon_Info2), name));
+                info.append(Utils.format(StringsManager.getVar(R.string.MissileWeapon_Info2), name));
 			}
 			if (STR < hero.effectiveSTR()) {
-				info.append(Utils.format(Game.getVar(R.string.MissileWeapon_Info3), name));
+                info.append(Utils.format(StringsManager.getVar(R.string.MissileWeapon_Info3), name));
 			}
 		}
 		
 		if (isEquipped(hero)) {
-			info.append(Utils.format(Game.getVar(R.string.MissileWeapon_Info4), name));
+            info.append(Utils.format(StringsManager.getVar(R.string.MissileWeapon_Info4), name));
 		}
 		
 		return info.toString();

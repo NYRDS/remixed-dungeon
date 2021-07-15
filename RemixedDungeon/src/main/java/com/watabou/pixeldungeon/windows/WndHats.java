@@ -3,9 +3,9 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.gfx.SystemText;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -44,7 +44,7 @@ public class WndHats extends Window {
 
 		//"Equipped Accessory" slot
 		//Title
-		Text slotTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_SlotTitle) + equippedName, GuiProperties.titleFontSize());
+        Text slotTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.WndHats_SlotTitle) + equippedName, GuiProperties.titleFontSize());
 		slotTitle.hardlight(0xFFFFFF);
 		slotTitle.maxWidth(WIDTH - GAP * 2);
 		slotTitle.x = (WIDTH - slotTitle.width()) / 2;
@@ -56,7 +56,7 @@ public class WndHats extends Window {
 		add(slot);
 
 		//Unequip Button
-		TextButton sb = new RedButton(Game.getVar(R.string.WndHats_UnequipButton)) {
+        TextButton sb = new RedButton(StringsManager.getVar(R.string.WndHats_UnequipButton)) {
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -72,7 +72,7 @@ public class WndHats extends Window {
 
 		//List of Accessories
 		//Title
-		Text listTitle = PixelScene.createMultiline(Game.getVar(R.string.WndHats_ListTitle), GuiProperties.titleFontSize());
+        Text listTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.WndHats_ListTitle), GuiProperties.titleFontSize());
 		listTitle.hardlight(TITLE_COLOR);
 		listTitle.maxWidth(WIDTH - GAP * 2);
 		listTitle.x = (WIDTH - listTitle.width()) / 2;
@@ -92,7 +92,7 @@ public class WndHats extends Window {
 			String price = Utils.EMPTY_STRING;
 
 			if (accessory.haveIt()) {
-				price = Game.getVar(R.string.WndHats_Purchased);
+                price = StringsManager.getVar(R.string.WndHats_Purchased);
 			} else if(!accessory.nonIap()) {
 				price = RemixedDungeon.instance().iap.getSkuPrice(item);
 			}
@@ -126,11 +126,11 @@ public class WndHats extends Window {
 
 			content.add(priceTag);
 
-			String buttonText = Game.getVar(R.string.WndHats_InfoButton);
+            String buttonText = StringsManager.getVar(R.string.WndHats_InfoButton);
 			final Accessory finalAccessory = accessory;
 
 			if (accessory.haveIt() && accessory.usableBy(Dungeon.hero)) {
-				buttonText = Game.getVar(R.string.WndHats_EquipButton);
+                buttonText = StringsManager.getVar(R.string.WndHats_EquipButton);
 			}
 
 			final Window currentWindow = this;

@@ -21,7 +21,7 @@ import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
@@ -91,7 +91,7 @@ public class DM300 extends Boss {
 			getSprite().emitter().burst( ElmoParticle.FACTORY, 5 );
 			
 			if (CharUtils.isVisible(this) && Dungeon.hero.isAlive()) {
-				GLog.n(Game.getVar(R.string.DM300_Info1));
+                GLog.n(StringsManager.getVar(R.string.DM300_Info1));
 			}
 		}
 		
@@ -121,13 +121,13 @@ public class DM300 extends Boss {
 		super.die( cause );
 
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);
-		
-		yell(Game.getVar(R.string.DM300_Info2));
+
+        yell(StringsManager.getVar(R.string.DM300_Info2));
 	}
 	
 	@Override
 	public void notice() {
 		super.notice();
-		yell(Game.getVar(R.string.DM300_Info3));
+        yell(StringsManager.getVar(R.string.DM300_Info3));
 	}
 }

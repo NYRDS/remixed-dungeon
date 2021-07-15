@@ -33,6 +33,8 @@ import com.watabou.utils.PointF;
 
 import org.jetbrains.annotations.NotNull;
 
+import lombok.var;
+
 public class CellSelector extends TouchArea {
 
 	public Listener listener = null;
@@ -64,7 +66,6 @@ public class CellSelector extends TouchArea {
 	}
 	
 	public void select( int cell ) {
-
 		Hero hero = Dungeon.hero;
 
 		if (!Dungeon.realtime()) {
@@ -72,7 +73,6 @@ public class CellSelector extends TouchArea {
 		} else {
 			enabled = hero.isAlive();
 		}
-
 
 		boolean defaultListener = listener instanceof DefaultCellListener;
 		if(hero.myMove() && !defaultListener) {
@@ -82,10 +82,12 @@ public class CellSelector extends TouchArea {
 		GLog.debug("CellSelector %b, %s",  enabled, listener.toString());
 		if (enabled && listener != null && cell != Level.INVALID_CELL) {
 			GLog.debug("CellSelector %s -> %d", listener.getClass().getSimpleName(), cell);
+
+			var oldListener = listener;
+
 			listener.onSelect( cell, selector);
 
-			if(!defaultListener) {
-				selector.readyAndIdle();
+			if(!defaultListener && oldListener == listener) {
 				selector.next();
 			}
 

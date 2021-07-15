@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.actors.buffs;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -57,7 +57,7 @@ public class Hunger extends Buff implements Doom {
 				if (Random.Float() < 0.3f && (target.hp() > 1 || !target.paralysed)) {
 
 					if(target==Dungeon.hero) {
-						GLog.n(Game.getVars(R.array.Hunger_Starving)[target.getGender()]);
+						GLog.n(StringsManager.getVars(R.array.Hunger_Starving)[target.getGender()]);
 					}
 
 					if(difficulty >= 3) {
@@ -95,11 +95,11 @@ public class Hunger extends Buff implements Doom {
 					boolean statusUpdated = false;
 					if (newLevel >= STARVING) {
 
-						GLog.n(Game.getVars(R.array.Hunger_Starving)[target.getGender()]);
+						GLog.n(StringsManager.getVars(R.array.Hunger_Starving)[target.getGender()]);
 						statusUpdated = true;
 
 					} else if (newLevel >= HUNGRY && hungerLevel < HUNGRY) {
-						GLog.w(Game.getVars(R.array.Hunger_Hungry)[target.getGender()]);
+						GLog.w(StringsManager.getVars(R.array.Hunger_Hungry)[target.getGender()]);
 						statusUpdated = true;
 
 					}
@@ -151,19 +151,19 @@ public class Hunger extends Buff implements Doom {
 	@Override
 	public String name() {
 		if (hungerLevel < STARVING) {
-			return Game.getVar(R.string.HungerBuff_Name1);
-		} else {
-			return Game.getVar(R.string.HungerBuff_Name2);
-		}
+            return StringsManager.getVar(R.string.HungerBuff_Name1);
+        } else {
+            return StringsManager.getVar(R.string.HungerBuff_Name2);
+        }
 	}
 
 	@Override
 	public String desc() {
 		if (hungerLevel < STARVING) {
-			return Game.getVar(R.string.HungerBuff_Info1);
-		} else {
-			return Game.getVar(R.string.HungerBuff_Info2);
-		}
+            return StringsManager.getVar(R.string.HungerBuff_Info1);
+        } else {
+            return StringsManager.getVar(R.string.HungerBuff_Info2);
+        }
 	}
 
 	@Override
@@ -177,7 +177,7 @@ public class Hunger extends Buff implements Doom {
 		Badges.validateDeathFromHunger();
 		
 		Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.HUNGER), Dungeon.depth ) );
-		GLog.n( Game.getVar(R.string.Hunger_Death) );
+        GLog.n(StringsManager.getVar(R.string.Hunger_Death));
 	}
 
 	public float getHungerLevel() {

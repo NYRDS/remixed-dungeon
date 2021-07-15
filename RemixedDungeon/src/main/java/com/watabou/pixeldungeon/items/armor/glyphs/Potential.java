@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -60,7 +60,7 @@ public class Potential extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return Utils.format( Game.getVar(R.string.Potential_Txt), weaponName );
+        return Utils.format(StringsManager.getVar(R.string.Potential_Txt), weaponName );
 	}
 
 	@Override

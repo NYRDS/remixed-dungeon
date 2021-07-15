@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
@@ -62,15 +62,15 @@ public class WarriorArmor extends ClassArmor {
 		if (hero.getHeroClass() == HeroClass.WARRIOR) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( Game.getVar(R.string.WarriorArmor_NotWarrior) );
+            GLog.w(StringsManager.getVar(R.string.WarriorArmor_NotWarrior));
 			return false;
 		}
 	}
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.WarriorArmor_Desc);
-	}
+        return StringsManager.getVar(R.string.WarriorArmor_Desc);
+    }
 
 	protected static CellSelector.Listener leaper = new LeaperCellListener();
 
@@ -116,8 +116,8 @@ public class WarriorArmor extends ClassArmor {
 
 		@Override
 		public String prompt() {
-			return Game.getVar(R.string.WarriorArmor_Prompt);
-		}
+            return StringsManager.getVar(R.string.WarriorArmor_Prompt);
+        }
 
 		@Override
 		public Image icon() {

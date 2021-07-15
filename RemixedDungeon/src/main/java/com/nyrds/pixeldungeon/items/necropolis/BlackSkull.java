@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.items.necropolis;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.rings.Artifact;
@@ -40,16 +40,16 @@ public class BlackSkull extends Artifact {
 		if (mob.canBePet()) {
 			if (activated) {
 				mob.resurrect(hero);
-				GLog.w( Game.getVar(R.string.BlackSkull_Ressurrect) );
+                GLog.w(StringsManager.getVar(R.string.BlackSkull_Ressurrect));
 				charge = charge - RESURRECTION_COST;
 				if (charge <= 0) {
-					GLog.w( Game.getVar(R.string.BlackSkull_Deactivated) );
+                    GLog.w(StringsManager.getVar(R.string.BlackSkull_Deactivated));
 					activated = false;
 				}
 			} else {
 				charge++;
 				if (charge >= MAXIMUM_CHARGE) {
-					GLog.w( Game.getVar(R.string.BlackSkull_Activated) );
+                    GLog.w(StringsManager.getVar(R.string.BlackSkull_Activated));
 					activated = true;
 				}
 			}
@@ -68,18 +68,18 @@ public class BlackSkull extends Artifact {
 	@Override
 	public String info() {
 		if (activated) {
-			return Game.getVar(R.string.BlackSkull_Info_Awakened);
-		} else {
-			return Game.getVar(R.string.BlackSkull_Info);
-		}
+            return StringsManager.getVar(R.string.BlackSkull_Info_Awakened);
+        } else {
+            return StringsManager.getVar(R.string.BlackSkull_Info);
+        }
 	}
 
 	@Override
 	public String name() {
 		if (activated) {
-			return Game.getVar(R.string.BlackSkull_Name_Awakened);
-		} else {
-			return Game.getVar(R.string.BlackSkull_Name);
-		}
+            return StringsManager.getVar(R.string.BlackSkull_Name_Awakened);
+        } else {
+            return StringsManager.getVar(R.string.BlackSkull_Name);
+        }
 	}
 }

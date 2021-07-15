@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.scrolls;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
@@ -41,11 +41,11 @@ public class ScrollOfRecharging extends Scroll {
 		Invisibility.dispel(reader);
 		
 		if (count > 0) {
-			GLog.i((count > 1 ? Game.getVar(R.string.ScrollOfRecharging_Info1b) 
-					          : Game.getVar(R.string.ScrollOfRecharging_Info1a)) );
+            GLog.i((count > 1 ? StringsManager.getVar(R.string.ScrollOfRecharging_Info1b)
+					          : StringsManager.getVar(R.string.ScrollOfRecharging_Info1a)) );
 			SpellSprite.show( reader, SpellSprite.CHARGE );
 		} else {
-			GLog.i(Game.getVar(R.string.ScrollOfRecharging_Info2));
+            GLog.i(StringsManager.getVar(R.string.ScrollOfRecharging_Info2));
 		}
 		setKnown();
 

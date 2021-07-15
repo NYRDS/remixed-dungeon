@@ -21,7 +21,7 @@ import android.opengl.GLES20;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.particles.PixelParticle;
@@ -111,15 +111,15 @@ public class HallsLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return Game.getVar(R.string.Halls_TileWater);
-		case Terrain.GRASS:
-			return Game.getVar(R.string.Halls_TileGrass);
-		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.Halls_TileHighGrass);
-		case Terrain.STATUE:
+            return StringsManager.getVar(R.string.Halls_TileWater);
+            case Terrain.GRASS:
+                return StringsManager.getVar(R.string.Halls_TileGrass);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.Halls_TileHighGrass);
+            case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return Game.getVar(R.string.Halls_TileStatue);
-		default:
+            return StringsManager.getVar(R.string.Halls_TileStatue);
+            default:
 			return super.tileName( tile );
 		}
 	}
@@ -128,13 +128,13 @@ public class HallsLevel extends RegularLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.WATER:
-			return Game.getVar(R.string.Halls_TileDescWater);
-		case Terrain.STATUE:
+            return StringsManager.getVar(R.string.Halls_TileDescWater);
+            case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return Game.getVar(R.string.Halls_TileDescStatue);
-		case Terrain.BOOKSHELF:
-			return Game.getVar(R.string.Halls_TileDescBookshelf);
-		default:
+            return StringsManager.getVar(R.string.Halls_TileDescStatue);
+            case Terrain.BOOKSHELF:
+                return StringsManager.getVar(R.string.Halls_TileDescBookshelf);
+            default:
 			return super.tileDesc( tile );
 		}
 	}

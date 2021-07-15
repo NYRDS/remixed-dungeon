@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.levels;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
@@ -196,12 +196,12 @@ public class CavesBossLevel extends BossLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.GRASS:
-			return Game.getVar(R.string.Caves_TileGrass);
-		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.Caves_TileHighGrass);
-		case Terrain.WATER:
-			return Game.getVar(R.string.Caves_TileWater);
-		default:
+            return StringsManager.getVar(R.string.Caves_TileGrass);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.Caves_TileHighGrass);
+            case Terrain.WATER:
+                return StringsManager.getVar(R.string.Caves_TileWater);
+            default:
 			return super.tileName( tile );
 		}
 	}
@@ -210,14 +210,14 @@ public class CavesBossLevel extends BossLevel {
 	public String tileDesc( int tile ) {
 		switch (tile) {
 		case Terrain.ENTRANCE:
-			return Game.getVar(R.string.Caves_TileDescEntrance);
-		case Terrain.EXIT:
-			return Game.getVar(R.string.Caves_TileDescExit);
-		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.Caves_TileDescHighGrass);
-		case Terrain.WALL_DECO:
-			return Game.getVar(R.string.Caves_TileDescDeco);
-		default:
+            return StringsManager.getVar(R.string.Caves_TileDescEntrance);
+            case Terrain.EXIT:
+                return StringsManager.getVar(R.string.Caves_TileDescExit);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.Caves_TileDescHighGrass);
+            case Terrain.WALL_DECO:
+                return StringsManager.getVar(R.string.Caves_TileDescDeco);
+            default:
 			return super.tileDesc( tile );
 		}
 	}

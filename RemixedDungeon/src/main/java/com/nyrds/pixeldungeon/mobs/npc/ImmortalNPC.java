@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
@@ -23,8 +23,8 @@ public class ImmortalNPC extends NPC {
 	
 	@Override
 	public String defenseVerb() {
-		return Game.getVar(R.string.Ghost_Defense);
-	}
+        return StringsManager.getVar(R.string.Ghost_Defense);
+    }
 	
 	@Override
 	public float speed() {

@@ -21,7 +21,7 @@ import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.Journal.Feature;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
@@ -242,6 +242,6 @@ public class WaterOfTransmutation extends WellWater {
 	
 	@Override
 	public String tileDesc() {
-		return Game.getVar(R.string.WaterOfTransmutation_Info);
-	}
+        return StringsManager.getVar(R.string.WaterOfTransmutation_Info);
+    }
 }

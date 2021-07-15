@@ -4,8 +4,8 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Text;
@@ -26,11 +26,11 @@ public class WndDonate extends WndTabbed {
 
 		resize(WndHelper.getFullscreenWidth(), WndHelper.getFullscreenHeight() - tabHeight() - 2*GAP);
 
-		String[] labels = {
-				Game.getVar(R.string.WndDonate_silver),
-				Game.getVar(R.string.WndDonate_gold),
-				Game.getVar(R.string.WndDonate_ruby),
-				Game.getVar(R.string.WndDonate_royal)
+        String[] labels = {
+                StringsManager.getVar(R.string.WndDonate_silver),
+                StringsManager.getVar(R.string.WndDonate_gold),
+                StringsManager.getVar(R.string.WndDonate_ruby),
+                StringsManager.getVar(R.string.WndDonate_royal)
 		};
 		Group[] pages = {	new DonateTab(1),
 							new DonateTab(2),
@@ -58,11 +58,11 @@ public class WndDonate extends WndTabbed {
 
 		DonateTab(final int level) {
 
-			final String[] title = {
-					Game.getVar(R.string.WndDonate_silverDonate),
-					Game.getVar(R.string.WndDonate_goldDonate),
-					Game.getVar(R.string.WndDonate_rubyDonate),
-					Game.getVar(R.string.WndDonate_royalDonate)
+            final String[] title = {
+                    StringsManager.getVar(R.string.WndDonate_silverDonate),
+                    StringsManager.getVar(R.string.WndDonate_goldDonate),
+                    StringsManager.getVar(R.string.WndDonate_rubyDonate),
+                    StringsManager.getVar(R.string.WndDonate_royalDonate)
 			};
 
 			IconTitle tabTitle = new IconTitle(Icons.get(icons[level - 1]),
@@ -78,9 +78,9 @@ public class WndDonate extends WndTabbed {
 				String price = RemixedDungeon.instance().iap.getDonationPriceString(level);
 				String btnText;
 				if( !price.isEmpty() ) {
-					btnText = Game.getVar(R.string.WndDonate_donate) + " " + price;
+                    btnText = StringsManager.getVar(R.string.WndDonate_donate) + " " + price;
 				} else {
-					btnText = Game.getVar(R.string.WndDonate_notConnected);
+                    btnText = StringsManager.getVar(R.string.WndDonate_notConnected);
 				}
 				SystemRedButton donate = new SystemRedButton(btnText) {
 					@Override
@@ -97,18 +97,18 @@ public class WndDonate extends WndTabbed {
 				add(donate.setRect(0 ,height - BUTTON_HEIGHT, width, BUTTON_HEIGHT));
 			}
 
-			Text commonText = PixelScene.createMultiline(
-					Game.getVar(R.string.WndDonate_commonDonateText), GuiProperties.regularFontSize());
+            Text commonText = PixelScene.createMultiline(
+                    StringsManager.getVar(R.string.WndDonate_commonDonateText), GuiProperties.regularFontSize());
 			commonText.maxWidth(width);
 			commonText.setPos(0, pos);
 			add(commonText);
 			pos += commonText.height() + GAP;
 
-			final String[] text = {
-					Game.getVar(R.string.WndDonate_silverDonateText),
-					Game.getVar(R.string.WndDonate_goldDonateText),
-					Game.getVar(R.string.WndDonate_rubyDonateText),
-					Game.getVar(R.string.WndDonate_royalDonateText)
+            final String[] text = {
+                    StringsManager.getVar(R.string.WndDonate_silverDonateText),
+                    StringsManager.getVar(R.string.WndDonate_goldDonateText),
+                    StringsManager.getVar(R.string.WndDonate_rubyDonateText),
+                    StringsManager.getVar(R.string.WndDonate_royalDonateText)
 			};
 
 			Text tabText = PixelScene.createMultiline(
@@ -120,11 +120,11 @@ public class WndDonate extends WndTabbed {
 			
 			pos += tabText.height() + GAP;
 
-			final String[] text2 = {
-					Game.getVar(R.string.WndDonate_silverDonateText2),
-					Game.getVar(R.string.WndDonate_goldDonateText2),
-					Game.getVar(R.string.WndDonate_rubyDonateText2),
-					Game.getVar(R.string.WndDonate_royalDonateText2)
+            final String[] text2 = {
+                    StringsManager.getVar(R.string.WndDonate_silverDonateText2),
+                    StringsManager.getVar(R.string.WndDonate_goldDonateText2),
+                    StringsManager.getVar(R.string.WndDonate_rubyDonateText2),
+                    StringsManager.getVar(R.string.WndDonate_royalDonateText2)
 			};
 
 			Text tabText2 = PixelScene.createMultiline(

@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -33,7 +33,7 @@ public class Dewdrop extends Item {
 	private static final String TXT_VALUE	= "%+dHP";
 	
 	{
-		name = Game.getVar(R.string.Dewdrop_Name);
+        name = StringsManager.getVar(R.string.Dewdrop_Name);
 		image = ItemSpriteSheet.DEWDROP;
 		
 		stackable = true;

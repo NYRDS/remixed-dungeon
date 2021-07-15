@@ -22,7 +22,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -51,8 +51,8 @@ public class LloydsBeacon extends Item {
 	public LloydsBeacon() {
 		image = ItemSpriteSheet.BEACON;
 		returnTo.cellId = -1;
-		
-		name = Game.getVar(R.string.LloidsBeacon_Name);
+
+        name = StringsManager.getVar(R.string.LloidsBeacon_Name);
 	}
 
 	@Override
@@ -72,13 +72,13 @@ public class LloydsBeacon extends Item {
 			
 			if (Dungeon.bossLevel()) {
 				chr.spend( LloydsBeacon.TIME_TO_USE );
-				GLog.w( Game.getVar(R.string.LloidsBeacon_Preventing) );
+                GLog.w(StringsManager.getVar(R.string.LloidsBeacon_Preventing));
 				return;
 			}
 			
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 				if (Actor.findChar( chr.getPos() + Level.NEIGHBOURS8[i] ) != null) {
-					GLog.w( Game.getVar(R.string.LloidsBeacon_Creatures) );
+                    GLog.w(StringsManager.getVar(R.string.LloidsBeacon_Creatures));
 					return;
 				}
 			}
@@ -90,8 +90,8 @@ public class LloydsBeacon extends Item {
 
 			chr.doOperate(TIME_TO_USE);
 			Sample.INSTANCE.play( Assets.SND_BEACON );
-			
-			GLog.i( Game.getVar(R.string.LloidsBeacon_Return) );
+
+            GLog.i(StringsManager.getVar(R.string.LloidsBeacon_Return));
 			
 		} else if (action.equals(AC_RETURN)) {
 			Position target = new Position(returnTo);
@@ -125,6 +125,6 @@ public class LloydsBeacon extends Item {
 	
 	@Override
 	public String info() {
-		return Game.getVar(R.string.LloidsBeacon_Info) + (returnTo.cellId == -1 ? Utils.EMPTY_STRING : Utils.format( Game.getVar(R.string.LloidsBeacon_Set), DungeonGenerator.getLevelDepth(returnTo.levelId) ) );
+        return StringsManager.getVar(R.string.LloidsBeacon_Info) + (returnTo.cellId == -1 ? Utils.EMPTY_STRING : Utils.format(StringsManager.getVar(R.string.LloidsBeacon_Set), DungeonGenerator.getLevelDepth(returnTo.levelId) ) );
 	}
 }

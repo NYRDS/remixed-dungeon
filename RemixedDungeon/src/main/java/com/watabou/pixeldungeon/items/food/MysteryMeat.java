@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.food;
 
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -40,7 +40,7 @@ public class MysteryMeat extends Food {
 	{
 		image   = ItemSpriteSheet.MEAT;
 		energy  = Hunger.STARVING - Hunger.HUNGRY;
-		message = Game.getVar(R.string.MysteryMeat_Message);
+        message = StringsManager.getVar(R.string.MysteryMeat_Message);
 	}
 	
 	@Override
@@ -52,19 +52,19 @@ public class MysteryMeat extends Food {
 			
 			switch (Random.Int( 5 )) {
 			case 0:
-				GLog.w(Game.getVar(R.string.MysteryMeat_Info1));
+                GLog.w(StringsManager.getVar(R.string.MysteryMeat_Info1));
 				Buff.affect(chr, Burning.class ).reignite(chr);
 				break;
 			case 1:
-				GLog.w(Game.getVar(R.string.MysteryMeat_Info2));
+                GLog.w(StringsManager.getVar(R.string.MysteryMeat_Info2));
 				Buff.prolong(chr, Roots.class, Stun.duration(chr) );
 				break;
 			case 2:
-				GLog.w(Game.getVar(R.string.MysteryMeat_Info3));
+                GLog.w(StringsManager.getVar(R.string.MysteryMeat_Info3));
 				Buff.affect(chr, Poison.class,Poison.durationFactor(chr) * chr.ht() / 5 );
 				break;
 			case 3:
-				GLog.w(Game.getVar(R.string.MysteryMeat_Info4));
+                GLog.w(StringsManager.getVar(R.string.MysteryMeat_Info4));
 				Buff.prolong(chr, Slow.class, Slow.duration(chr) );
 				break;
 			}

@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -47,13 +47,13 @@ public class WndWandmaker extends Window {
 		titlebar.label( Utils.capitalize( item.name() ) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
-		
-		Text message = PixelScene.createMultiline( Game.getVar(R.string.WndWandmaker_Message), GuiProperties.regularFontSize() );
+
+        Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndWandmaker_Message), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.y = titlebar.bottom() + GAP;
 		add( message );
-		
-		RedButton btnBattle = new RedButton( Game.getVar(R.string.WndWandmaker_Battle) ) {
+
+        RedButton btnBattle = new RedButton(StringsManager.getVar(R.string.WndWandmaker_Battle)) {
 			@Override
 			protected void onClick() {
 				selectReward( wandmaker, item, WandMaker.makeBattleWand() );
@@ -61,8 +61,8 @@ public class WndWandmaker extends Window {
 		};
 		btnBattle.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnBattle );
-		
-		RedButton btnNonBattle = new RedButton( Game.getVar(R.string.WndWandmaker_NonBattle) ) {
+
+        RedButton btnNonBattle = new RedButton(StringsManager.getVar(R.string.WndWandmaker_NonBattle)) {
 			@Override
 			protected void onClick() {
 				selectReward( wandmaker, item, WandMaker.makeNonBattleWand() );
@@ -85,8 +85,8 @@ public class WndWandmaker extends Window {
 		} else {
 			reward.doDrop(wandmaker);
 		}
-		
-		wandmaker.say(Utils.format( Game.getVar(R.string.WndWandmaker_Farawell), Dungeon.hero.className() ) );
+
+        wandmaker.say(Utils.format(StringsManager.getVar(R.string.WndWandmaker_Farawell), Dungeon.hero.className() ) );
 		wandmaker.destroy();
 		
 		wandmaker.getSprite().die();

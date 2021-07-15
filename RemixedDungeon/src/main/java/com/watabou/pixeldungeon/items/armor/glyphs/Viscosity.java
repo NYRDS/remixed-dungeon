@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -57,8 +57,8 @@ public class Viscosity extends Glyph {
 				debuff.attachTo( defender );
 			}
 			debuff.prolong( damage );
-			
-			defender.getSprite().showStatus( CharSprite.WARNING, Game.getVar(R.string.Viscosity_Status), damage );
+
+            defender.getSprite().showStatus( CharSprite.WARNING, StringsManager.getVar(R.string.Viscosity_Status), damage );
 			
 			return 0;
 			
@@ -69,7 +69,7 @@ public class Viscosity extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return Utils.format( Game.getVar(R.string.Viscosity_Txt), weaponName );
+        return Utils.format(StringsManager.getVar(R.string.Viscosity_Txt), weaponName );
 	}
 
 	@Override
@@ -103,12 +103,12 @@ public class Viscosity extends Glyph {
 		
 		@Override
 		public String name() {
-			return Game.getVar(R.string.DeferedDamageBuff_Name);
-		}
+            return StringsManager.getVar(R.string.DeferedDamageBuff_Name);
+        }
 
 		@Override
 		public String desc() {
-			return Utils.format(Game.getVar(R.string.DeferedDamageBuff_Info), damage);
+            return Utils.format(StringsManager.getVar(R.string.DeferedDamageBuff_Info), damage);
 		}
 		
 		@Override
@@ -120,7 +120,7 @@ public class Viscosity extends Glyph {
 					// FIXME
 					Glyph glyph = new Viscosity();
 					Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.GLYPH), glyph.name(), Dungeon.depth ) );
-					GLog.n( Game.getVar(R.string.DeferedDamage_Killed_Txt), glyph.name() );
+                    GLog.n(StringsManager.getVar(R.string.DeferedDamage_Killed_Txt), glyph.name() );
 					
 					Badges.validateDeathFromGlyph();
 				}

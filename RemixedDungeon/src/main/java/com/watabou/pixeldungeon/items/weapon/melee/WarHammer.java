@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
@@ -34,8 +34,8 @@ public class WarHammer extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.WarHammer_Info);
-	}
+        return StringsManager.getVar(R.string.WarHammer_Info);
+    }
 
 	@Override
 	public Belongings.Slot slot(Belongings belongings) {

@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.levels.traps;
 import com.nyrds.pixeldungeon.levels.objects.ITrigger;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -44,7 +44,7 @@ public class AlarmTrap implements ITrigger {
 		}
 		
 		if (Dungeon.visible[pos]) {
-			GLog.w(Game.getVar(R.string.AlarmTrap_Desc));
+            GLog.w(StringsManager.getVar(R.string.AlarmTrap_Desc));
 			CellEmitter.center( pos ).start( Speck.factory( Speck.SCREAM ), 0.3f, 3 );
 		}
 		

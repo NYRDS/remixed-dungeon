@@ -1,26 +1,25 @@
 package com.nyrds.pixeldungeon.ml.actions;
 
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
-public class UseItem extends CharAction{
+public class UseSpell extends CharAction{
 
-    public Item item;
-    public String action;
+    public Spell spell;
 
-    public UseItem(Item item, String action ) {
-        this.item = item;
-        this.action = action;
-        dst = item.getOwner().getPos();
+    public UseSpell(Spell spell) {
+        this.spell = spell;
     }
 
     @Override
     public boolean act(Char hero) {
-        item.execute(hero, action);
+        spell.cast(hero);
 
+        if(hero.curAction == this) {
+            hero.curAction = null;
+        }
 
-        hero.curAction = null;
         if(GameScene.defaultCellSelector() && ! hero.getSprite().doingSomething()) {
             hero.next();
         }

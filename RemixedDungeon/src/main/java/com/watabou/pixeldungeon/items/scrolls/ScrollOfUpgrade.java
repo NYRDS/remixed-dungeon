@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.scrolls;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.windows.WndBag;
 public class ScrollOfUpgrade extends InventoryScroll {
 
 	{
-		inventoryTitle = Game.getVar(R.string.ScrollOfUpgrade_InvTitle);
+        inventoryTitle = StringsManager.getVar(R.string.ScrollOfUpgrade_InvTitle);
 		mode = WndBag.Mode.UPGRADEABLE;
 	}
 	
@@ -38,8 +38,8 @@ public class ScrollOfUpgrade extends InventoryScroll {
 
 		ScrollOfRemoveCurse.uncurse( selector, item );
 		item.upgrade();
-		
-		GLog.p( Game.getVar(R.string.ScrollOfUpgrade_LooksBetter), item.name() );
+
+        GLog.p(StringsManager.getVar(R.string.ScrollOfUpgrade_LooksBetter), item.name() );
 		
 		Badges.validateItemLevelAcquired( item );
 		

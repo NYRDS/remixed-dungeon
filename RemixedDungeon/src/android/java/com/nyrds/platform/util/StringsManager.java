@@ -1,14 +1,15 @@
-package com.watabou.noosa;
+package com.nyrds.platform.util;
 
 import android.annotation.SuppressLint;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 
-import com.nyrds.android.RemixedDungeonApp;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.app.RemixedDungeonApp;
+import com.nyrds.platform.game.Game;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 

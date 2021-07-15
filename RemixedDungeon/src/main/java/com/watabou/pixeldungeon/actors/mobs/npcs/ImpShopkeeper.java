@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.sprites.ImpSprite;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -35,7 +35,7 @@ public class ImpShopkeeper extends Shopkeeper {
     public boolean act() {
 
 		if (!seenBefore && CharUtils.isVisible(this)) {
-			say( Utils.format( Game.getVar(R.string.ImpShopkeeper_Greetings) ) );
+            say( Utils.format(StringsManager.getVar(R.string.ImpShopkeeper_Greetings)) );
 			seenBefore = true;
 		}
 		

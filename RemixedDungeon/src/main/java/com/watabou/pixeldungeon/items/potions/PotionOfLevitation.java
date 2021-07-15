@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.potions;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
@@ -37,13 +37,13 @@ public class PotionOfLevitation extends UpgradablePotion {
 	protected void apply(Char hero ) {
 		setKnown();
 		Buff.affect( hero, Levitation.class, (float) (Levitation.DURATION *qualityFactor()));
-		GLog.i(Game.getVar(R.string.PotionOfLevitation_Apply));
+        GLog.i(StringsManager.getVar(R.string.PotionOfLevitation_Apply));
 	}
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.PotionOfLevitation_Info);
-	}
+        return StringsManager.getVar(R.string.PotionOfLevitation_Info);
+    }
 
 	@Override
 	public int basePrice() {
@@ -53,22 +53,22 @@ public class PotionOfLevitation extends UpgradablePotion {
 	@Override
 	protected void moistenArrow(Arrow arrow, Char owner) {
 		detachMoistenItems(arrow, (int) (10*qualityFactor()));
-		GLog.i(Game.getVar(R.string.Potion_ItemFliesAway) , arrow.name());
+        GLog.i(StringsManager.getVar(R.string.Potion_ItemFliesAway), arrow.name());
 		moistenEffective(owner);
 	}
 	
 	@Override
 	protected void moistenScroll(Scroll scroll, Char owner) {
 		detachMoistenItems(scroll, (int) (3*qualityFactor()));
-		GLog.i(Game.getVar(R.string.Potion_ItemFliesAway) , scroll.name());
+        GLog.i(StringsManager.getVar(R.string.Potion_ItemFliesAway), scroll.name());
 		moistenEffective(owner);
 	}
 	
 	@Override
 	protected void moistenRottenFood(RottenFood rfood, Char owner) {
 		detachMoistenItems(rfood, (int) (1*qualityFactor()));
-		
-		GLog.i(Game.getVar(R.string.Potion_ItemFliesAway) , rfood.name());
+
+        GLog.i(StringsManager.getVar(R.string.Potion_ItemFliesAway), rfood.name());
 		moistenEffective(owner);
 	}
 }

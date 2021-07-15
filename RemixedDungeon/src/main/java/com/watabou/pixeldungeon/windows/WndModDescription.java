@@ -9,6 +9,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.input.Touchscreen.Touch;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Text;
@@ -37,22 +38,22 @@ public class WndModDescription extends Window {
 		if (!option.equals(ModdingMode.REMIXED)) {
 			Text title = PixelScene.createMultiline(GuiProperties.titleFontSize());
 			title.maxWidth(width);
-			title.text(Game.getVar(R.string.Mod_Name) + "\n ");
+            title.text(StringsManager.getVar(R.string.Mod_Name) + "\n ");
 			title.hardlight(Window.TITLE_COLOR);
 
 			place(title);
 
 			Text author = PixelScene.createMultiline(GuiProperties.regularFontSize());
 			author.maxWidth(width);
-			author.text(Game.getVar(R.string.Mods_CreatedBy) + "\n" + Game.getVar(R.string.Mod_Author) + "\n ");
+            author.text(StringsManager.getVar(R.string.Mods_CreatedBy) + "\n" + StringsManager.getVar(R.string.Mod_Author) + "\n ");
 
 			place(author);
 
-			final String siteUrl = Game.getVar(R.string.Mod_Link);
+            final String siteUrl = StringsManager.getVar(R.string.Mod_Link);
 			if (siteUrl.length() > 0) {
 				Text site = PixelScene.createMultiline(GuiProperties.regularFontSize());
 				site.maxWidth(width);
-				site.text(Game.getVar(R.string.Mods_AuthorSite) + "\n" + siteUrl + "\n ");
+                site.text(StringsManager.getVar(R.string.Mods_AuthorSite) + "\n" + siteUrl + "\n ");
 				place(site);
 
 				TouchArea siteTouch = new TouchArea(site) {
@@ -66,12 +67,12 @@ public class WndModDescription extends Window {
 				add(siteTouch);
 			}
 
-			final String emailUri = Game.getVar(R.string.Mod_Email);
+            final String emailUri = StringsManager.getVar(R.string.Mod_Email);
 
 			if (emailUri.length() > 0) {
 				Text email = PixelScene.createMultiline(GuiProperties.regularFontSize());
 				email.maxWidth(width);
-				email.text(Game.getVar(R.string.Mods_AuthorEmail) + emailUri + "\n ");
+                email.text(StringsManager.getVar(R.string.Mods_AuthorEmail) + emailUri + "\n ");
 				place(email);
 
 				TouchArea emailTouch = new TouchArea(email) {
@@ -80,7 +81,7 @@ public class WndModDescription extends Window {
 						Intent intent = new Intent(Intent.ACTION_SEND);
 						intent.setType("message/rfc822");
 						intent.putExtra(Intent.EXTRA_EMAIL, new String[] { emailUri });
-						intent.putExtra(Intent.EXTRA_SUBJECT, Game.getVar(R.string.app_name)+":"+Game.getVar(R.string.Mod_Name));
+                        intent.putExtra(Intent.EXTRA_SUBJECT, StringsManager.getVar(R.string.app_name) +":"+ StringsManager.getVar(R.string.Mod_Name));
 
 						Game.instance().startActivity(Intent.createChooser(intent, emailUri));
 					}
@@ -90,11 +91,11 @@ public class WndModDescription extends Window {
 
 			Text description = PixelScene.createMultiline(GuiProperties.regularFontSize());
 			description.maxWidth(width);
-			description.text(Game.getVar(R.string.Mod_Description) + "\n ");
+            description.text(StringsManager.getVar(R.string.Mod_Description) + "\n ");
 			place(description);
 		}
-		
-		RedButton btn = new RedButton(Game.getVar(R.string.Mods_RestartRequired)) {
+
+        RedButton btn = new RedButton(StringsManager.getVar(R.string.Mods_RestartRequired)) {
 			@Override
 			protected void onClick() {
 				switchSaves(option, prevMod);

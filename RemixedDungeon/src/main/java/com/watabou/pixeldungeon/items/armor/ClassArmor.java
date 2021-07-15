@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -93,11 +93,11 @@ abstract public class ClassArmor extends Armor {
 			int cost = chr.getSkillPointsMax()/specialCostModifier;
 
 			if (chr.getSkillPoints() < cost) {
-				GLog.w( Game.getVar(R.string.ClassArmor_LowMana) );
+                GLog.w(StringsManager.getVar(R.string.ClassArmor_LowMana));
 				return;
 			}
 			if (!isEquipped(chr)) {
-				GLog.w( Game.getVar(R.string.ClassArmor_NotEquipped) );
+                GLog.w(StringsManager.getVar(R.string.ClassArmor_NotEquipped));
 				return;
 			}
 

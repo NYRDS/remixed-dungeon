@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.blobs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -93,8 +93,8 @@ public class ToxicGas extends Blob implements Doom {
 	
 	@Override
 	public String tileDesc() {
-		return Game.getVar(R.string.ToxicGas_Info);
-	}
+        return StringsManager.getVar(R.string.ToxicGas_Info);
+    }
 	
 	@Override
 	public void onDeath() {
@@ -102,6 +102,6 @@ public class ToxicGas extends Blob implements Doom {
 		Badges.validateDeathFromGas();
 		
 		Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.GAS), Dungeon.depth ) );
-		GLog.n(Game.getVar(R.string.ToxicGas_Info1));
+        GLog.n(StringsManager.getVar(R.string.ToxicGas_Info1));
 	}
 }

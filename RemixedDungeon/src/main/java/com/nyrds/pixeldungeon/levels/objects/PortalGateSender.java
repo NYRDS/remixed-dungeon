@@ -4,7 +4,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.pixeldungeon.windows.WndPortal;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.levels.Level;
@@ -31,7 +31,7 @@ public class PortalGateSender extends PortalGate {
 				}
 			}
 		} else{
-			GLog.w( Game.getVar(R.string.PortalGate_Used) );
+            GLog.w(StringsManager.getVar(R.string.PortalGate_Used));
 		}
 		return false;
 	}

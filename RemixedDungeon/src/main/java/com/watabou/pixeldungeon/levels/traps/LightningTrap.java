@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.levels.traps;
 import com.nyrds.pixeldungeon.levels.objects.ITrigger;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -50,8 +50,8 @@ public class LightningTrap implements ITrigger{
 				Camera.main.shake( 2, 0.3f );
 				
 				if (!ch.isAlive()) {
-					Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.TRAP), Game.getVar(R.string.LightningTrap_Name), Dungeon.depth ) );
-					GLog.n(Game.getVar(R.string.LightningTrap_Desc));
+                    Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.TRAP), StringsManager.getVar(R.string.LightningTrap_Name), Dungeon.depth ) );
+                    GLog.n(StringsManager.getVar(R.string.LightningTrap_Desc));
 				} else {
 					ch.getBelongings().charge( false );
 				}

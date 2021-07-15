@@ -32,7 +32,7 @@ import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Scrambler;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
@@ -92,13 +92,13 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	private int id = EntityIdSource.INVALID_ID;
 
 	@NotNull
-	protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name), false);
-	@NotNull
-	protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info), false);
-	@NotNull
-	protected String info2 = getClassParam("Info2", Game.getVar(R.string.Item_Info2), false);
+	protected String name = getClassParam("Name", StringsManager.getVar(R.string.Item_Name), false);
+    @NotNull
+	protected String info = getClassParam("Info", StringsManager.getVar(R.string.Item_Info), false);
+    @NotNull
+	protected String info2 = getClassParam("Info2", StringsManager.getVar(R.string.Item_Info2), false);
 
-	protected int image = 0;
+    protected int image = 0;
 	protected int overlayIndex = -1;
 
 	static private final String overlayFile = "items/overlays.png";
@@ -265,7 +265,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		}
 
 		if (owner == Dungeon.hero && owner.isAlive()) {
-			GLog.n(Game.getVar(R.string.Item_PackFull), name());
+            GLog.n(StringsManager.getVar(R.string.Item_PackFull), name());
 		}
 
 		setOwner(CharsList.DUMMY);

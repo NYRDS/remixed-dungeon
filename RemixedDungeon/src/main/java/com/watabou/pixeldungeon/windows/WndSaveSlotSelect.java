@@ -11,6 +11,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
@@ -41,7 +42,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
     private String slot;
 
     public WndSaveSlotSelect(final boolean _saving) {
-        this(_saving, Game.getVar(R.string.WndSaveSlotSelect_SelectSlot));
+        this(_saving, StringsManager.getVar(R.string.WndSaveSlotSelect_SelectSlot));
     }
 
     public WndSaveSlotSelect(final boolean _saving, String title) {
@@ -160,9 +161,9 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                     SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
                         protected void onClick() {
                             final int slotIndex = index;
-                            WndOptions reallyDelete = new WndOptions(Game.getVar(R.string.WndSaveSlotSelect_Delete_Title), Utils.EMPTY_STRING,
-                                    Game.getVar(R.string.WndSaveSlotSelect_Delete_Yes),
-                                    Game.getVar(R.string.WndSaveSlotSelect_Delete_No)) {
+                            WndOptions reallyDelete = new WndOptions(StringsManager.getVar(R.string.WndSaveSlotSelect_Delete_Title), Utils.EMPTY_STRING,
+                                    StringsManager.getVar(R.string.WndSaveSlotSelect_Delete_Yes),
+                                    StringsManager.getVar(R.string.WndSaveSlotSelect_Delete_No)) {
                                 @Override
                                 public void onSelect(int index) {
                                     if (index == 0) {
@@ -260,7 +261,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
     private static String windowText() {
         if (GamePreferences.donated() == 0 && RemixedDungeon.canDonate()) {
-            return Game.getVar(R.string.WndSaveSlotSelect_dontLike);
+            return StringsManager.getVar(R.string.WndSaveSlotSelect_dontLike);
         }
         return Utils.EMPTY_STRING;
     }

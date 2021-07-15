@@ -2,7 +2,7 @@ package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -50,13 +50,13 @@ public class ElfArmor extends ClassArmor {
 		if (hero.getHeroClass() == HeroClass.ELF) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( Game.getVar(R.string.ElfArmor_NotElf) );
+            GLog.w(StringsManager.getVar(R.string.ElfArmor_NotElf));
 			return false;
 		}
 	}
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.ElfArmor_Desc);
-	}
+        return StringsManager.getVar(R.string.ElfArmor_Desc);
+    }
 }

@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -30,8 +30,7 @@ class InformerCellListener implements CellSelector.Listener {
 
         if (!level.cellValid(cell)
                 || (!level.visited[cell] && !level.mapped[cell])) {
-            GameScene.show(new WndMessage(Game
-                    .getVar(R.string.Toolbar_Info1)));
+            GameScene.show(new WndMessage(StringsManager.getVar(R.string.Toolbar_Info1)));
             return;
         }
 
@@ -62,7 +61,7 @@ class InformerCellListener implements CellSelector.Listener {
 
     @Override
     public String prompt() {
-        return Game.getVar(R.string.Toolbar_Info2);
+        return StringsManager.getVar(R.string.Toolbar_Info2);
     }
 
     @Override

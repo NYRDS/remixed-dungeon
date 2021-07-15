@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.items.common;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
@@ -63,12 +63,12 @@ public class MasteryItem extends Item {
 
 		if (way == HeroSubClass.LICH) {
 			int penalty = 2;
-			GLog.w(Utils.format(Game.getVar(R.string.Necromancy_BecameALich), penalty) );
+            GLog.w(Utils.format(StringsManager.getVar(R.string.Necromancy_BecameALich), penalty) );
 			hero.STR(hero.STR() - penalty);
 			hero.setMaxSkillPoints(hero.getSkillPointsMax() * 2);
 		}
 
-		GLog.w(Game.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
+        GLog.w(StringsManager.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
 
 		hero.checkIfFurious();
 		hero.updateSprite();

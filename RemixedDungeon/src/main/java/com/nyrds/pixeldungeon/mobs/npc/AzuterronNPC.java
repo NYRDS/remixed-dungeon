@@ -4,7 +4,7 @@ import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.TreacherousSpirit;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
@@ -34,8 +34,8 @@ public class AzuterronNPC extends Shopkeeper {
 	
 	@Override
 	public String defenseVerb() {
-		return Game.getVar(R.string.Ghost_Defense);
-	}
+        return StringsManager.getVar(R.string.Ghost_Defense);
+    }
 	
 	@Override
 	public float speed() {
@@ -71,13 +71,13 @@ public class AzuterronNPC extends Shopkeeper {
 			
 			if (exchangeItem(hero,"HeartOfDarkness", "PotionOfMight")) {
 				Quest.complete();
-				GameScene.show( new WndQuest( this, Game.getVar(R.string.AzuterronNPC_Quest_End) ) );
+                GameScene.show( new WndQuest( this, StringsManager.getVar(R.string.AzuterronNPC_Quest_End)) );
 			} else {
-				GameScene.show( new WndQuest( this, Game.getVar(R.string.AzuterronNPC_Quest_Reminder) ) );
+                GameScene.show( new WndQuest( this, StringsManager.getVar(R.string.AzuterronNPC_Quest_Reminder)) );
 			}
 			
 		} else {
-			GameScene.show( new WndQuest( this, Game.getVar(R.string.AzuterronNPC_Quest_Start) ) );
+            GameScene.show( new WndQuest( this, StringsManager.getVar(R.string.AzuterronNPC_Quest_Start)) );
 			Quest.given = true;
 			Quest.process();
 			Journal.add( Journal.Feature.AZUTERRON.desc() );

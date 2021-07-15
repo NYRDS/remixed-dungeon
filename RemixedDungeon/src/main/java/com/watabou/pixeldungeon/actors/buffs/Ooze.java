@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -36,13 +36,13 @@ public class Ooze extends Buff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.OozeBuff_Name);
-	}
+        return StringsManager.getVar(R.string.OozeBuff_Name);
+    }
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.OozeBuff_Info);
-	}
+        return StringsManager.getVar(R.string.OozeBuff_Info);
+    }
 	
 	@Override
 	public boolean act() {
@@ -50,7 +50,7 @@ public class Ooze extends Buff {
 			target.damage( damage, this );
 			if (!target.isAlive() && target == Dungeon.hero) {
 				Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.OOZE), Dungeon.depth ) );
-				GLog.n( Game.getVar(R.string.Ooze_Death), name() );
+                GLog.n(StringsManager.getVar(R.string.Ooze_Death), name() );
 			}
 			spend( TICK );
 		}

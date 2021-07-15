@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.BuyItemSelector;
 import com.nyrds.pixeldungeon.utils.SellItemSelector;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -19,9 +19,9 @@ public class WndShopOptions extends WndOptions {
 
     public WndShopOptions(Char shopkeeper, Char client) {
         super(Utils.capitalize(shopkeeper.getName()),
-                Game.getVar(R.string.Shopkeeper_text),
-                Game.getVar(R.string.Shopkeeper_SellPrompt),
-                Game.getVar(R.string.Shopkeeper_BuyPrompt));
+                StringsManager.getVar(R.string.Shopkeeper_text),
+                StringsManager.getVar(R.string.Shopkeeper_SellPrompt),
+                StringsManager.getVar(R.string.Shopkeeper_BuyPrompt));
         this.client = client;
         this.backpack = shopkeeper.getBelongings().backpack;
         this.shopkeeper = shopkeeper;
@@ -46,7 +46,7 @@ public class WndShopOptions extends WndOptions {
                         backpack,
                         new BuyItemSelector(shopkeeper),
                         WndBag.Mode.FOR_BUY,
-                        Game.getVar(R.string.Shopkeeper_Buy)));
+                    StringsManager.getVar(R.string.Shopkeeper_Buy)));
     }
 
     public void showSellWnd() {
@@ -55,6 +55,6 @@ public class WndShopOptions extends WndOptions {
                             client.getBelongings().backpack,
                             new SellItemSelector(shopkeeper),
                             WndBag.Mode.FOR_SALE,
-                            Game.getVar(R.string.Shopkeeper_Sell)));
+                        StringsManager.getVar(R.string.Shopkeeper_Sell)));
     }
 }

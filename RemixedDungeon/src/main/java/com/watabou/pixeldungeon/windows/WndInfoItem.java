@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
@@ -51,20 +51,20 @@ public class WndInfoItem extends Window {
 			String info;
 			
 			if (heap.type == Type.CHEST || heap.type == Type.MIMIC) {
-				title = Game.getVar(R.string.WndInfoItem_Chest);
-				info = Game.getVar(R.string.WndInfoItem_WontKnow);
+                title = StringsManager.getVar(R.string.WndInfoItem_Chest);
+                info = StringsManager.getVar(R.string.WndInfoItem_WontKnow);
 			} else if (heap.type == Type.TOMB) {
-				title = Game.getVar(R.string.WndInfoItem_Tomb);
-				info = Game.getVar(R.string.WndInfoItem_Owner);
+                title = StringsManager.getVar(R.string.WndInfoItem_Tomb);
+                info = StringsManager.getVar(R.string.WndInfoItem_Owner);
 			} else if (heap.type == Type.SKELETON) {
-				title = Game.getVar(R.string.WndInfoItem_Skeleton);
-				info = Game.getVar(R.string.WndInfoItem_Remains);
+                title = StringsManager.getVar(R.string.WndInfoItem_Skeleton);
+                info = StringsManager.getVar(R.string.WndInfoItem_Remains);
 			} else if (heap.type == Type.CRYSTAL_CHEST) {
-				title = Game.getVar(R.string.WndInfoItem_CrystalChest);
-				info = Utils.format( Game.getVar(R.string.WndInfoItem_Inside), Utils.indefinite( heap.peek().name() ) );
+                title = StringsManager.getVar(R.string.WndInfoItem_CrystalChest);
+                info = Utils.format(StringsManager.getVar(R.string.WndInfoItem_Inside), Utils.indefinite( heap.peek().name() ) );
 			} else {
-				title = Game.getVar(R.string.WndInfoItem_LockedChest);
-				info = Game.getVar(R.string.WndInfoItem_WontKnow) +" "+ Game.getVar(R.string.WndInfoItem_NeedKey);
+                title = StringsManager.getVar(R.string.WndInfoItem_LockedChest);
+                info = StringsManager.getVar(R.string.WndInfoItem_WontKnow) +" "+ StringsManager.getVar(R.string.WndInfoItem_NeedKey);
 			}
 
 			GenericInfo.makeInfo(this,

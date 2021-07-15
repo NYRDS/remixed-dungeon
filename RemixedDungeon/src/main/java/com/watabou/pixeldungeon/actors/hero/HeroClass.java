@@ -23,7 +23,7 @@ import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
@@ -198,7 +198,7 @@ public enum HeroClass implements CharModifier {
 
 
     public String title() {
-        return Game.getVar(titleId);
+        return StringsManager.getVar(titleId);
     }
 
     @NotNull
@@ -206,27 +206,20 @@ public enum HeroClass implements CharModifier {
 
         switch (this) {
             case WARRIOR:
-                return Game
-                        .getVars(R.array.HeroClass_WarPerks);
+                return StringsManager.getVars(R.array.HeroClass_WarPerks);
             case MAGE:
-                return Game
-                        .getVars(R.array.HeroClass_MagPerks);
+                return StringsManager.getVars(R.array.HeroClass_MagPerks);
             case ROGUE:
             default:
-                return Game
-                        .getVars(R.array.HeroClass_RogPerks);
+                return StringsManager.getVars(R.array.HeroClass_RogPerks);
             case HUNTRESS:
-                return Game
-                        .getVars(R.array.HeroClass_HunPerks);
+                return StringsManager.getVars(R.array.HeroClass_HunPerks);
             case ELF:
-                return Game
-                        .getVars(R.array.HeroClass_ElfPerks);
+                return StringsManager.getVars(R.array.HeroClass_ElfPerks);
             case NECROMANCER:
-                return Game
-                        .getVars(R.array.HeroClass_NecromancerPerks);
+                return StringsManager.getVars(R.array.HeroClass_NecromancerPerks);
             case GNOLL:
-                return Game
-                        .getVars(R.array.HeroClass_GnollPerks);
+                return StringsManager.getVars(R.array.HeroClass_GnollPerks);
         }
     }
 

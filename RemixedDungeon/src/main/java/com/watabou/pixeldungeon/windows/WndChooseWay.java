@@ -21,7 +21,7 @@ import com.nyrds.pixeldungeon.items.common.MasteryItem;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -56,10 +56,10 @@ public class WndChooseWay extends Window {
 			desc = desc + "\n\n" + way2.desc();
 		}
 		if (way1 == HeroSubClass.LICH){
-			desc = Game.getVar(R.string.BlackSkullOfMastery_Title) + "\n\n"
-					+ desc + "\n\n" + Game.getVar(R.string.BlackSkullOfMastery_RemainHumanDesc);
+            desc = StringsManager.getVar(R.string.BlackSkullOfMastery_Title) + "\n\n"
+					+ desc + "\n\n" + StringsManager.getVar(R.string.BlackSkullOfMastery_RemainHumanDesc);
 		}
-		desc = desc + "\n\n" + Game.getVar(R.string.WndChooseWay_Message);
+        desc = desc + "\n\n" + StringsManager.getVar(R.string.WndChooseWay_Message);
 		return desc;
 	}
 
@@ -118,7 +118,7 @@ public class WndChooseWay extends Window {
 			btnBreakSpell(btnWay1);
 		}
 
-		RedButton btnCancel = new RedButton( Game.getVar(R.string.WndChooseWay_Cancel) ) {
+        RedButton btnCancel = new RedButton(StringsManager.getVar(R.string.WndChooseWay_Cancel)) {
 			@Override
 			protected void onClick() {
 				hide();
@@ -131,7 +131,7 @@ public class WndChooseWay extends Window {
 	}
 
 	private void btnBreakSpell(RedButton btnWay1){
-		RedButton btnWay2 = new RedButton( Utils.capitalize( Game.getVar(R.string.BlackSkullOfMastery_Necromancer) ) ) {
+        RedButton btnWay2 = new RedButton( Utils.capitalize(StringsManager.getVar(R.string.BlackSkullOfMastery_Necromancer)) ) {
 			@Override
 			protected void onClick() {
 				hide();

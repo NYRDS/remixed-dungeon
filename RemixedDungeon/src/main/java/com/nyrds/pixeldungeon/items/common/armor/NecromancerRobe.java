@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.items.common.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -25,7 +25,7 @@ public class NecromancerRobe extends Armor {
 		if (hero.getHeroClass() == HeroClass.NECROMANCER) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( Game.getVar(R.string.NecromancerArmor_NotNecromancer) );
+            GLog.w(StringsManager.getVar(R.string.NecromancerArmor_NotNecromancer));
 			return false;
 		}
 	}

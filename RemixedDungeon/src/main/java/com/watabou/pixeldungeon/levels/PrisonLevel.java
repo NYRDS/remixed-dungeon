@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.levels;
 import com.nyrds.pixeldungeon.effects.emitters.Torch;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.NecromancerNPC;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -166,8 +166,8 @@ public class PrisonLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return Game.getVar(R.string.Prison_TileWater);
-		default:
+            return StringsManager.getVar(R.string.Prison_TileWater);
+            default:
 			return super.tileName( tile );
 		}
 	}
@@ -176,10 +176,10 @@ public class PrisonLevel extends RegularLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.EMPTY_DECO:
-			return Game.getVar(R.string.Prison_TileDescDeco);
-		case Terrain.BOOKSHELF:
-			return Game.getVar(R.string.Prison_TileDescBookshelf);
-		default:
+            return StringsManager.getVar(R.string.Prison_TileDescDeco);
+            case Terrain.BOOKSHELF:
+                return StringsManager.getVar(R.string.Prison_TileDescBookshelf);
+            default:
 			return super.tileDesc( tile );
 		}
 	}

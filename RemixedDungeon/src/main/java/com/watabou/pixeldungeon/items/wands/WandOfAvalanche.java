@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.wands;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -82,7 +82,7 @@ public class WandOfAvalanche extends SimpleWand {
 		
 		if ((getOwner() instanceof Hero)  && !getOwner().isAlive()) {
 			Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );
-			GLog.n(Game.getVar(R.string.WandOfAvalanche_Info1));
+            GLog.n(StringsManager.getVar(R.string.WandOfAvalanche_Info1));
 		}
 	}
 	
@@ -93,6 +93,6 @@ public class WandOfAvalanche extends SimpleWand {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.WandOfAvalanche_Info);
-	}
+        return StringsManager.getVar(R.string.WandOfAvalanche_Info);
+    }
 }

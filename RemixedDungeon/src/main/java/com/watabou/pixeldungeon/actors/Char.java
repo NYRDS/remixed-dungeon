@@ -45,7 +45,6 @@ import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.Scrambler;
@@ -172,11 +171,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	protected CharSprite sprite;
 
 	@Getter
-	protected String name = Game.getVar(R.string.Char_Name);
+	protected String name = StringsManager.getVar(R.string.Char_Name);
 	@Getter
-	protected String name_objective = Game.getVar(R.string.Char_Name_Objective);
+	protected String name_objective = StringsManager.getVar(R.string.Char_Name_Objective);
 
-	protected String description = Game.getVar(R.string.Mob_Desc);
+	protected String description = StringsManager.getVar(R.string.Mob_Desc);
 	@Getter
 	protected String defenceVerb = null;
 	@Getter
@@ -347,22 +346,22 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@LuaInterface
 	public void yell(String str) {
-		GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
+		GLog.n(StringsManager.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
 	}
 
 	@LuaInterface
 	public void say(String str) {
-		GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
+		GLog.i(StringsManager.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
 	}
 
 	@LuaInterface
 	public void yell(String str, int index) {
-		GLog.n(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str, index));
+		GLog.n(StringsManager.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str, index));
 	}
 
 	@LuaInterface
 	public void say(String str, int index) {
-		GLog.i(Game.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str, index));
+		GLog.i(StringsManager.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str, index));
 	}
 
 	public boolean ignoreDr() {
@@ -386,7 +385,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		if (CharUtils.hit(this, enemy, false)) {
 
 			if (visibleFight) {
-				GLog.i(Game.getVars(R.array.Char_Hit)[gender], name, enemy.getName_objective());
+				GLog.i(StringsManager.getVars(R.array.Char_Hit)[gender], name, enemy.getName_objective());
 			}
 
 			int dmg = damageRoll();
@@ -416,7 +415,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 					if (hero.killerGlyph != null) {
 
 						Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.GLYPH), hero.killerGlyph.name(), Dungeon.depth));
-						GLog.n(Game.getVars(R.array.Char_Kill)[hero.gender], hero.killerGlyph.name());
+						GLog.n(StringsManager.getVars(R.array.Char_Kill)[hero.gender], hero.killerGlyph.name());
 
 					} else {
 						if (this instanceof Boss) {
@@ -426,11 +425,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 									Utils.indefinite(name), Dungeon.depth));
 						}
 
-						GLog.n(Game.getVars(R.array.Char_Kill)[gender], name);
+						GLog.n(StringsManager.getVars(R.array.Char_Kill)[gender], name);
 					}
 
 				} else {
-					GLog.i(Game.getVars(R.array.Char_Defeat)[gender], name, enemy.getName_objective());
+					GLog.i(StringsManager.getVars(R.array.Char_Defeat)[gender], name, enemy.getName_objective());
 				}
 			}
 			return true;
@@ -440,9 +439,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 				String defense = enemy.defenseVerb();
 				enemy.getSprite().showStatus(CharSprite.NEUTRAL, defense);
 				if (this == Dungeon.hero) {
-					GLog.i(Game.getVar(R.string.Char_YouMissed), enemy.name, defense);
+					GLog.i(StringsManager.getVar(R.string.Char_YouMissed), enemy.name, defense);
 				} else {
-					GLog.i(Game.getVar(R.string.Char_SmbMissed), enemy.name, defense, name);
+					GLog.i(StringsManager.getVar(R.string.Char_SmbMissed), enemy.name, defense, name);
 				}
 
 				Sample.INSTANCE.play(Assets.SND_MISS);
@@ -525,7 +524,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		if (defenceVerb != null) {
 			return defenceVerb;
 		}
-		return Game.getVars(R.array.Char_StaDodged)[gender];
+		return StringsManager.getVars(R.array.Char_StaDodged)[gender];
 	}
 
 
@@ -710,7 +709,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			if (Random.Int(dmg) >= Random.Int(hp())) {
 				Buff.detach(this, Paralysis.class);
 				if (CharUtils.isVisible(this)) {
-					GLog.i(Game.getVar(R.string.Char_OutParalysis), getName_objective());
+					GLog.i(StringsManager.getVar(R.string.Char_OutParalysis), getName_objective());
 				}
 			}
 		}
@@ -1839,10 +1838,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public String getDescription() {
     	if(!Util.isDebug()) {
-			return description + "\n\n" + String.format(Game.getVar(R.string.CharInfo_Level), lvl(), name());
+			return description + "\n\n" + String.format(StringsManager.getVar(R.string.CharInfo_Level), lvl(), name());
 		}
 		return description + "\n\n"
-				+ String.format(Game.getVar(R.string.CharInfo_Level), lvl(), name()) + "\n\n"
+				+ String.format(StringsManager.getVar(R.string.CharInfo_Level), lvl(), name()) + "\n\n"
 				+ Utils.format("id: %d owner: %d", getId(), getOwnerId());
 	}
 

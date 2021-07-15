@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -138,10 +138,10 @@ public class CityBossLevel extends BossLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return Game.getVar(R.string.City_TileWater);
-		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.City_TileHighGrass);
-		default:
+            return StringsManager.getVar(R.string.City_TileWater);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.City_TileHighGrass);
+            default:
 			return super.tileName( tile );
 		}
 	}
@@ -150,20 +150,20 @@ public class CityBossLevel extends BossLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.ENTRANCE:
-			return Game.getVar(R.string.City_TileDescEntrance);
-		case Terrain.EXIT:
-			return Game.getVar(R.string.City_TileDescExit);
-		case Terrain.WALL_DECO:
+            return StringsManager.getVar(R.string.City_TileDescEntrance);
+            case Terrain.EXIT:
+                return StringsManager.getVar(R.string.City_TileDescExit);
+            case Terrain.WALL_DECO:
 		case Terrain.EMPTY_DECO:
-			return Game.getVar(R.string.City_TileDescDeco);
-		case Terrain.EMPTY_SP:
-			return Game.getVar(R.string.City_TileDescEmptySP);
-		case Terrain.STATUE:
+            return StringsManager.getVar(R.string.City_TileDescDeco);
+            case Terrain.EMPTY_SP:
+                return StringsManager.getVar(R.string.City_TileDescEmptySP);
+            case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return Game.getVar(R.string.City_TileDescStatue);
-		case Terrain.BOOKSHELF:
-			return Game.getVar(R.string.City_TileDescBookshelf);
-		default:
+            return StringsManager.getVar(R.string.City_TileDescStatue);
+            case Terrain.BOOKSHELF:
+                return StringsManager.getVar(R.string.City_TileDescBookshelf);
+            default:
 			return super.tileDesc( tile );
 		}
 	}

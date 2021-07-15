@@ -9,6 +9,7 @@ import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -52,8 +53,8 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 					}
 				};
 
-		RewardedAd.load(Game.instance(),
-				Game.getVar(R.string.cinemaRewardAdUnitId),
+        RewardedAd.load(Game.instance(),
+                StringsManager.getVar(R.string.cinemaRewardAdUnitId),
 				AdMob.makeAdRequest(),
 				new RewardedAdLoadCallback() {
 					@Override

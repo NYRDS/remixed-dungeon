@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.potions;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -45,7 +45,7 @@ public class PotionOfHealing extends Potion {
 	protected void apply(Char hero ) {
 		setKnown();
 		heal( Dungeon.hero, 1f );
-		GLog.p(Game.getVar(R.string.PotionOfHealing_Apply));
+        GLog.p(StringsManager.getVar(R.string.PotionOfHealing_Apply));
 	}
 	
 	public static void heal( Char ch, float portion ) {
@@ -58,8 +58,8 @@ public class PotionOfHealing extends Potion {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.PotionOfHealing_Info);
-	}
+        return StringsManager.getVar(R.string.PotionOfHealing_Info);
+    }
 	
 	@Override
 	public int price() {

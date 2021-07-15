@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -49,16 +49,16 @@ public class WndSadGhost extends Window {
 		titlebar.label( Utils.capitalize( item.name() ) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
-		
-		Text message = PixelScene.createMultiline(
-				item instanceof DriedRose ? Game.getVar(R.string.WndSadGhost_Rose) : Game.getVar(R.string.WndSadGhost_Rat),
+
+        Text message = PixelScene.createMultiline(
+				item instanceof DriedRose ? StringsManager.getVar(R.string.WndSadGhost_Rose) : StringsManager.getVar(R.string.WndSadGhost_Rat),
 				GuiProperties.regularFontSize()
 		);
 		message.maxWidth(WIDTH);
 		message.y = titlebar.bottom() + GAP;
 		add( message );
-		
-		RedButton btnWeapon = new RedButton( Game.getVar(R.string.WndSadGhost_Wepon) ) {
+
+        RedButton btnWeapon = new RedButton(StringsManager.getVar(R.string.WndSadGhost_Wepon)) {
 			@Override
 			protected void onClick() {
 				selectReward( ghost, item, Ghost.Quest.getWeapon());
@@ -66,8 +66,8 @@ public class WndSadGhost extends Window {
 		};
 		btnWeapon.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnWeapon );
-		
-		RedButton btnArmor = new RedButton( Game.getVar(R.string.WndSadGhost_Armor) ) {
+
+        RedButton btnArmor = new RedButton(StringsManager.getVar(R.string.WndSadGhost_Armor)) {
 			@Override
 			protected void onClick() {
 				selectReward( ghost, item, Ghost.Quest.getArmor());
@@ -89,8 +89,8 @@ public class WndSadGhost extends Window {
 		} else {
 			reward.doDrop(ghost);
 		}
-		
-		ghost.say( Game.getVar(R.string.WndSadGhost_Farewell) );
+
+        ghost.say(StringsManager.getVar(R.string.WndSadGhost_Farewell));
 		ghost.die( null );
 		
 		Ghost.Quest.complete();

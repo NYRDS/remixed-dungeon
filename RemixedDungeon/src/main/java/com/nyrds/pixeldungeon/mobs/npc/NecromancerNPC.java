@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
@@ -63,7 +63,7 @@ public class NecromancerNPC extends ImmortalNPC {
 		getSprite().turnTo(getPos(), hero.getPos());
 
 		if (!introduced) {
-			GameScene.show(new WndQuest(this, Game.getVar(R.string.NecromancerNPC_Intro2)));
+            GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.NecromancerNPC_Intro2)));
 			introduced = true;
 
 			SkeletonKey key = new SkeletonKey();

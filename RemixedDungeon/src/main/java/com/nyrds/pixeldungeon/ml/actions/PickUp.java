@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.ml.actions;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Heap;
@@ -27,7 +27,7 @@ public class PickUp extends CharAction {
                         hero.itemPickedUp(item);
 
                         if (!heap.isEmpty()) {
-                            GLog.i(Game.getVar(R.string.Hero_SomethingElse));
+                            GLog.i(StringsManager.getVar(R.string.Hero_SomethingElse));
                         }
                         hero.readyAndIdle();
                     } else {

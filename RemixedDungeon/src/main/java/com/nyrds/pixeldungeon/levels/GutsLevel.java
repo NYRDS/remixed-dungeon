@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.effects.emitters.BloodSink;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -88,12 +88,12 @@ public class GutsLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.GRASS:
-			return Game.getVar(R.string.Guts_TileGrass);
-		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.Guts_TileHighGrass);
-		case Terrain.WATER:
-			return Game.getVar(R.string.Guts_TileWater);
-		default:
+            return StringsManager.getVar(R.string.Guts_TileGrass);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.Guts_TileHighGrass);
+            case Terrain.WATER:
+                return StringsManager.getVar(R.string.Guts_TileWater);
+            default:
 			return super.tileName( tile );
 		}
 	}
@@ -102,16 +102,16 @@ public class GutsLevel extends RegularLevel {
 	public String tileDesc( int tile ) {
 		switch (tile) {
 		case Terrain.ENTRANCE:
-			return Game.getVar(R.string.Guts_TileDescEntrance);
-		case Terrain.EXIT:
-			return Game.getVar(R.string.Guts_TileDescExit);
-		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.Guts_TileHighGrass);
-		case Terrain.WALL_DECO:
-			return Game.getVar(R.string.Guts_TileDescDeco);
-		case Terrain.BOOKSHELF:
-			return Game.getVar(R.string.Guts_TileDescBookshelf);
-		default:
+            return StringsManager.getVar(R.string.Guts_TileDescEntrance);
+            case Terrain.EXIT:
+                return StringsManager.getVar(R.string.Guts_TileDescExit);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.Guts_TileHighGrass);
+            case Terrain.WALL_DECO:
+                return StringsManager.getVar(R.string.Guts_TileDescDeco);
+            case Terrain.BOOKSHELF:
+                return StringsManager.getVar(R.string.Guts_TileDescBookshelf);
+            default:
 			return super.tileDesc( tile );
 		}
 	}

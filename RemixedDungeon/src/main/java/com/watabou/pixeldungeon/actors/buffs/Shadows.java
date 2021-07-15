@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.actors.buffs;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -77,13 +77,13 @@ public class Shadows extends Invisibility {
 
 	@Override
 	public String name() {
-		return Game.getVar(R.string.ShadowsBuff_Name);
-	}
+        return StringsManager.getVar(R.string.ShadowsBuff_Name);
+    }
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.ShadowsBuff_Info);
-	}
+        return StringsManager.getVar(R.string.ShadowsBuff_Info);
+    }
 
 	@Override
 	public CharSprite.State charSpriteStatus() {

@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.quest;
 
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -45,7 +45,7 @@ public class CorpseDust extends Artifact {
 
 	@Override
 	public String info() {
-		return super.info() + "\n\n" + Game.getVar(R.string.CorpseDust_Info2);
+        return super.info() + "\n\n" + StringsManager.getVar(R.string.CorpseDust_Info2);
 	}
 
 }

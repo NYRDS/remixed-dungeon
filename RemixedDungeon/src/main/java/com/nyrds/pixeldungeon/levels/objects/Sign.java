@@ -5,7 +5,6 @@ import androidx.annotation.Keep;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -47,7 +46,7 @@ public class Sign extends LevelObject {
 	public boolean interact(Char hero) {
 		if(!hero.getHeroClass().forbidden(CommonActions.AC_READ)) {
 			if (hero.hasBuff(Blindness.class )) {
-				GLog.w(Game.getVar(R.string.Codex_Blinded));
+				GLog.w(StringsManager.getVar(R.string.Codex_Blinded));
 			} else {
 				GameScene.show(new WndMessage(text));
 			}

@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -37,12 +37,12 @@ public class Torch extends Item {
 	public static final float TIME_TO_LIGHT = 1;
 	
 	{
-		name = Game.getVar(R.string.Torch_Name);
+        name = StringsManager.getVar(R.string.Torch_Name);
 		image = ItemSpriteSheet.TORCH;
 		
 		stackable = true;
 
-		info = Game.getVar(R.string.Torch_Info2);
+        info = StringsManager.getVar(R.string.Torch_Info2);
 
 		setDefaultAction(AC_LIGHT);
 	}

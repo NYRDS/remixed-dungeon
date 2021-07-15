@@ -12,7 +12,7 @@ import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.noosa.StringsManager;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.RemixedDungeon;
 
 import java.util.concurrent.ThreadPoolExecutor;

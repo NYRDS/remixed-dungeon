@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.potions;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -38,14 +38,14 @@ public class PotionOfInvisibility extends UpgradablePotion {
 	protected void apply(Char hero ) {
 		setKnown();
 		Buff.affect( hero, Invisibility.class, (float) (Invisibility.DURATION * qualityFactor()));
-		GLog.i(Game.getVar(R.string.PotionOfInvisibility_Apply));
+        GLog.i(StringsManager.getVar(R.string.PotionOfInvisibility_Apply));
 		Sample.INSTANCE.play( Assets.SND_MELD );
 	}
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.PotionOfInvisibility_Info);
-	}
+        return StringsManager.getVar(R.string.PotionOfInvisibility_Info);
+    }
 
 	@Override
 	public int basePrice() {
@@ -55,8 +55,8 @@ public class PotionOfInvisibility extends UpgradablePotion {
 	@Override
 	protected void moistenScroll(Scroll scroll, Char owner) {
 		int quantity = detachMoistenItems(scroll, (int) (3*qualityFactor()));
-		
-		GLog.i(Game.getVar(R.string.Potion_RuneDissaperaed), scroll.name());
+
+        GLog.i(StringsManager.getVar(R.string.Potion_RuneDissaperaed), scroll.name());
 		
 		moistenEffective(owner);
 		

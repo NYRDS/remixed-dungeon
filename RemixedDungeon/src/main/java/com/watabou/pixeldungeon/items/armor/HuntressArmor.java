@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -74,7 +74,7 @@ public class HuntressArmor extends ClassArmor {
 		}
 		
 		if (targets.size() == 0) {
-			GLog.w( Game.getVar(R.string.HuntressArmor_NoEnemies) );
+            GLog.w(StringsManager.getVar(R.string.HuntressArmor_NoEnemies));
 			return;
 		}
 
@@ -86,13 +86,13 @@ public class HuntressArmor extends ClassArmor {
 		if (hero.getHeroClass() == HeroClass.HUNTRESS) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( Game.getVar(R.string.HuntressArmor_NotHuntress) );
+            GLog.w(StringsManager.getVar(R.string.HuntressArmor_NotHuntress));
 			return false;
 		}
 	}
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.HuntressArmor_Desc);
-	}
+        return StringsManager.getVar(R.string.HuntressArmor_Desc);
+    }
 }

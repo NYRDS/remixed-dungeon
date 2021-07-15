@@ -4,7 +4,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -35,7 +35,7 @@ class TeleportCellListener implements CellSelector.Listener {
                 !(level.passable[target] || level.avoid[target]) ||
                 Actor.findChar( target ) != null || level.getLevelObject(target) != null) {
 
-                GLog.w( Game.getVar(R.string.RogueArmor_Fov) );
+                GLog.w(StringsManager.getVar(R.string.RogueArmor_Fov));
                 return;
             }
 
@@ -59,7 +59,7 @@ class TeleportCellListener implements CellSelector.Listener {
 
     @Override
     public String prompt() {
-        return Game.getVar(R.string.RogueArmor_Prompt);
+        return StringsManager.getVar(R.string.RogueArmor_Prompt);
     }
 
     @Override

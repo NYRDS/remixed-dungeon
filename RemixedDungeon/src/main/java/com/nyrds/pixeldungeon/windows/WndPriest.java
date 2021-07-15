@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
 import com.nyrds.pixeldungeon.utils.CharsList;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
@@ -123,6 +123,6 @@ public class WndPriest extends WndQuest {
 			}
 		}
 
-		priest.say(Game.getVar(R.string.HealerNPC_Message2));
+        priest.say(StringsManager.getVar(R.string.HealerNPC_Message2));
 	}
 }

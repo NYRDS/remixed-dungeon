@@ -5,10 +5,10 @@ import android.os.Build;
 
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.utils.Log;
-import com.nyrds.util.Util;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.Util;
 
 
 /**
@@ -31,7 +31,7 @@ public class AppodealAdapter {
         final int toInitialize = Appodeal.INTERSTITIAL | Appodeal.BANNER | Appodeal.REWARDED_VIDEO;
         final int toCache = Appodeal.INTERSTITIAL | Appodeal.BANNER;
 
-        String appKey = Game.getVar(R.string.appodealRewardAdUnitId);
+        String appKey = StringsManager.getVar(R.string.appodealRewardAdUnitId);
 
         if(appKey.isEmpty()) {
             return;

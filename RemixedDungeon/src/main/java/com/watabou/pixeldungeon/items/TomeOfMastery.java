@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.pixeldungeon.items.common.MasteryItem;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -74,12 +74,12 @@ public class TomeOfMastery extends MasteryItem {
 		if (action.equals( AC_READ )) {
 			
 			if (chr.hasBuff( Blindness.class )) {
-				GLog.w( Game.getVar(R.string.TomeOfMastery_Blinded) );
+                GLog.w(StringsManager.getVar(R.string.TomeOfMastery_Blinded));
 				return;
 			}
 
 			if(chr.getSubClass() != HeroSubClass.NONE) {
-				GLog.w( Game.getVar(R.string.TomeOfMastery_WayAlreadyChosen) );
+                GLog.w(StringsManager.getVar(R.string.TomeOfMastery_WayAlreadyChosen));
 				return;
 			}
 
@@ -107,7 +107,7 @@ public class TomeOfMastery extends MasteryItem {
 				way2 = HeroSubClass.SHAMAN;
 				break;
 			default:
-				GLog.w( Game.getVar(R.string.TomeOfMastery_WayAlreadyChosen) );
+                GLog.w(StringsManager.getVar(R.string.TomeOfMastery_WayAlreadyChosen));
 				return;
 			}
 			GameScene.show( new WndChooseWay( this, way1, way2 ) );

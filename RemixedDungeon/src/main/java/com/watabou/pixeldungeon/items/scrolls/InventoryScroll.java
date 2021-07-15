@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.scrolls;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -29,8 +29,8 @@ import org.jetbrains.annotations.NotNull;
 
 public abstract class InventoryScroll extends Scroll {
 
-	protected String inventoryTitle = Game.getVar(R.string.InventoryScroll_Title);
-	protected WndBag.Mode mode = WndBag.Mode.ALL;
+	protected String inventoryTitle = StringsManager.getVar(R.string.InventoryScroll_Title);
+    protected WndBag.Mode mode = WndBag.Mode.ALL;
 
 	private Char reader;
 
@@ -50,10 +50,10 @@ public abstract class InventoryScroll extends Scroll {
 	}
 	
 	void confirmCancellation() {
-		GameScene.show( new WndOptions( name(),
-										Game.getVar(R.string.InventoryScroll_Warning),
-										Game.getVar(R.string.InventoryScroll_Yes),
-										Game.getVar(R.string.InventoryScroll_No) ) {
+        GameScene.show( new WndOptions( name(),
+                StringsManager.getVar(R.string.InventoryScroll_Warning),
+                StringsManager.getVar(R.string.InventoryScroll_Yes),
+                StringsManager.getVar(R.string.InventoryScroll_No)) {
 			@Override
 			public void onSelect(int index) {
 				switch (index) {

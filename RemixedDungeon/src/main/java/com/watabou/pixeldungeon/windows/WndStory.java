@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
@@ -55,13 +54,13 @@ public class WndStory extends Window {
 	private static final SparseArray<String> CHAPTERS = new SparseArray<>();
 	
 	static {
-		CHAPTERS.put(ID_SEWERS,     Game.getVar(R.string.WndStory_Sewers));
-		CHAPTERS.put(ID_PRISON,     Game.getVar(R.string.WndStory_Prision));
-		CHAPTERS.put(ID_CAVES,      Game.getVar(R.string.WndStory_Caves));
-		CHAPTERS.put(ID_METROPOLIS, Game.getVar(R.string.WndStory_Metropolis));
-		CHAPTERS.put(ID_HALLS,      Game.getVar(R.string.WndStory_Halls));
-		CHAPTERS.put(ID_SPIDERS,    Game.getVar(R.string.WndStory_Spiders));
-		CHAPTERS.put(ID_GUTS,       Game.getVar(R.string.WndStory_Guts));
+		CHAPTERS.put(ID_SEWERS, StringsManager.getVar(R.string.WndStory_Sewers));
+		CHAPTERS.put(ID_PRISON, StringsManager.getVar(R.string.WndStory_Prision));
+		CHAPTERS.put(ID_CAVES, StringsManager.getVar(R.string.WndStory_Caves));
+		CHAPTERS.put(ID_METROPOLIS, StringsManager.getVar(R.string.WndStory_Metropolis));
+		CHAPTERS.put(ID_HALLS, StringsManager.getVar(R.string.WndStory_Halls));
+		CHAPTERS.put(ID_SPIDERS, StringsManager.getVar(R.string.WndStory_Spiders));
+		CHAPTERS.put(ID_GUTS, StringsManager.getVar(R.string.WndStory_Guts));
 	}
 
 	public WndStory( String text ) {

@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.wands;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -74,7 +74,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 			
 			if (ch == getOwner() && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );
-				GLog.n(Game.getVar(R.string.WandOfMagicMissile_Info1));
+                GLog.n(StringsManager.getVar(R.string.WandOfMagicMissile_Info1));
 			}
 		}
 	}
@@ -83,7 +83,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_DISENCHANT )) {
 			chr.getBelongings().setSelectedItem(this);
-			GameScene.selectItem(chr, itemSelector, WndBag.Mode.WAND, Game.getVar(R.string.WandOfMagicMissile_SelectWand));
+            GameScene.selectItem(chr, itemSelector, WndBag.Mode.WAND, StringsManager.getVar(R.string.WandOfMagicMissile_SelectWand));
 		} else {
 			super._execute(chr, action );
 		}
@@ -104,8 +104,8 @@ public class WandOfMagicMissile extends SimpleWand  {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.WandOfMagicMissile_Info);
-	}
+        return StringsManager.getVar(R.string.WandOfMagicMissile_Info);
+    }
 	
 	private final WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null) {
@@ -114,7 +114,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 			ScrollOfUpgrade.upgrade( selector );
 			ItemUtils.evoke( selector );
 
-			GLog.w( Game.getVar(R.string.WandOfMagicMissile_Desinchanted), item.name() );
+            GLog.w(StringsManager.getVar(R.string.WandOfMagicMissile_Desinchanted), item.name() );
 
 			item.upgrade();
 			selector.spend( TIME_TO_DISENCHANT );

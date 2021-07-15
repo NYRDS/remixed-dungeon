@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.wands;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -37,14 +37,14 @@ public class WandOfTeleportation extends Wand {
 		int pos = ch.level().randomRespawnCell();
 		
 		if(!ch.level().cellValid(pos)) {
-			GLog.i(Game.getVar(R.string.WandOfTeleportation_Info2));
+            GLog.i(StringsManager.getVar(R.string.WandOfTeleportation_Info2));
 			return;
 		}
 		
 		ch.setPos(pos);
 		ch.getSprite().place(ch.getPos());
 		ch.getSprite().setVisible(Dungeon.visible[pos]);
-		GLog.i(Utils.format(Game.getVar(R.string.WandOfTeleportation_Info1), caster.getName(),
+        GLog.i(Utils.format(StringsManager.getVar(R.string.WandOfTeleportation_Info1), caster.getName(),
 				ch.getName_objective()));
 	}
 
@@ -59,7 +59,7 @@ public class WandOfTeleportation extends Wand {
 		} else if (ch != null && ! (ch instanceof Boss) && ch.isMovable() ) {
 			teleport(ch, getOwner());
 		} else {
-			GLog.i(Game.getVar(R.string.WandOfTeleportation_Info2));
+            GLog.i(StringsManager.getVar(R.string.WandOfTeleportation_Info2));
 		}
 	}
 
@@ -70,6 +70,6 @@ public class WandOfTeleportation extends Wand {
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.WandOfTeleportation_Info);
-	}
+        return StringsManager.getVar(R.string.WandOfTeleportation_Info);
+    }
 }

@@ -23,7 +23,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
@@ -90,7 +90,7 @@ public class Shaman extends Mob implements IZapper {
 
 		CharUtils.lightningProc(this ,enemy.getPos(), dmg);
 
-		CharUtils.checkDeathReport(this, enemy, Game.getVar(R.string.Shaman_Killed));
+        CharUtils.checkDeathReport(this, enemy, StringsManager.getVar(R.string.Shaman_Killed));
 		return 0;
 	}
 }

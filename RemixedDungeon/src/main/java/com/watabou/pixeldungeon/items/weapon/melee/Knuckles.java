@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Knuckles extends MeleeWeapon {
@@ -32,6 +32,6 @@ public class Knuckles extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.Knuckles_Info);
-	}
+        return StringsManager.getVar(R.string.Knuckles_Info);
+    }
 }

@@ -2,9 +2,11 @@ package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.UseSpell;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.ModError;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
@@ -35,8 +37,8 @@ public class Spell implements NamedEntityKind {
 
     protected String imageFile = "spellsIcons/common.png";
 
-    protected String name = getClassParam("Name", Game.getVar(R.string.Item_Name));
-    protected String info = getClassParam("Info", Game.getVar(R.string.Item_Info));
+    protected String name = getClassParam("Name", StringsManager.getVar(R.string.Item_Name));
+    protected String info = getClassParam("Info", StringsManager.getVar(R.string.Item_Info));
 
     protected int image = 0;
 

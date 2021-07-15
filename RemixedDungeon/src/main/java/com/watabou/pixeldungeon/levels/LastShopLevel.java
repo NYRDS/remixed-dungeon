@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -169,10 +169,10 @@ public class LastShopLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return Game.getVar(R.string.LastShopLevel_TileWater);
-		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.LastShopLevel_TileHighGrass);
-		default:
+            return StringsManager.getVar(R.string.LastShopLevel_TileWater);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.LastShopLevel_TileHighGrass);
+            default:
 			return super.tileName( tile );
 		}
 	}
@@ -181,15 +181,15 @@ public class LastShopLevel extends RegularLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.ENTRANCE:
-			return Game.getVar(R.string.LastShopLevel_TileDescEntrance);
-		case Terrain.EXIT:
-			return Game.getVar(R.string.LastShopLevel_TileDescExit);
-		case Terrain.WALL_DECO:
+            return StringsManager.getVar(R.string.LastShopLevel_TileDescEntrance);
+            case Terrain.EXIT:
+                return StringsManager.getVar(R.string.LastShopLevel_TileDescExit);
+            case Terrain.WALL_DECO:
 		case Terrain.EMPTY_DECO:
-			return Game.getVar(R.string.LastShopLevel_TileDescDeco);
-		case Terrain.EMPTY_SP:
-			return Game.getVar(R.string.LastShopLevel_TileDescEmptySP);
-		default:
+            return StringsManager.getVar(R.string.LastShopLevel_TileDescDeco);
+            case Terrain.EMPTY_SP:
+                return StringsManager.getVar(R.string.LastShopLevel_TileDescEmptySP);
+            default:
 			return super.tileDesc( tile );
 		}
 	}

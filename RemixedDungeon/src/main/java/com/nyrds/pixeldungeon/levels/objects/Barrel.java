@@ -4,7 +4,7 @@ import androidx.annotation.Keep;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
@@ -68,20 +68,20 @@ public class Barrel extends LevelObject {
 	public String desc() {
 
 		if (ModdingMode.isHalloweenEvent()) {
-			return Game.getVar(R.string.Barrel_Pumpkin_Desc);
-		} else {
-			return Game.getVar(R.string.Barrel_Desc);
-		}
+            return StringsManager.getVar(R.string.Barrel_Pumpkin_Desc);
+        } else {
+            return StringsManager.getVar(R.string.Barrel_Desc);
+        }
 
 	}
 
 	@Override
 	public String name() {
 		if (ModdingMode.isHalloweenEvent()) {
-			return Game.getVar(R.string.Barrel_Pumpkin_Name);
-		} else {
-			return Game.getVar(R.string.Barrel_Name);
-		}
+            return StringsManager.getVar(R.string.Barrel_Pumpkin_Name);
+        } else {
+            return StringsManager.getVar(R.string.Barrel_Name);
+        }
 	}
 
 	@Override

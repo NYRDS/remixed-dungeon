@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.spiders.levels;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderSpawner;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -228,8 +228,8 @@ public class SpiderLevel extends CommonLevel {
 		switch (tile) {
 			case Terrain.UNLOCKED_EXIT:
 			case Terrain.LOCKED_EXIT:
-				return Game.getVar(R.string.PortalGate_Name);
-			default:
+                return StringsManager.getVar(R.string.PortalGate_Name);
+            default:
 				return super.tileName( tile );
 		}
 	}
@@ -238,7 +238,7 @@ public class SpiderLevel extends CommonLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 			case Terrain.UNLOCKED_EXIT:
-				return Utils.format(Game.getVar(R.string.PortalExit_Desc), Game.getVar(R.string.PortalExit_Desc_SpiderNest));
+                return Utils.format(StringsManager.getVar(R.string.PortalExit_Desc), StringsManager.getVar(R.string.PortalExit_Desc_SpiderNest));
 			default:
 				return super.tileDesc( tile );
 		}

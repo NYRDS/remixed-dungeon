@@ -18,16 +18,17 @@ import com.google.android.gms.games.snapshot.Snapshot;
 import com.google.android.gms.games.snapshot.SnapshotMetadata;
 import com.google.android.gms.games.snapshot.SnapshotMetadataChange;
 import com.google.android.gms.tasks.Task;
+import com.nyrds.pixeldungeon.items.common.Library;
+import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
+import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModError;
 import com.nyrds.util.Unzip;
-import com.nyrds.pixeldungeon.items.common.Library;
-import com.nyrds.platform.EventCollector;
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.nyrds.platform.storage.Preferences;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -378,8 +379,8 @@ return filename.startsWith("game_") && filename.endsWith(".dat");
 
 	public  void submitScores(int level, int scores) {
 		if (isConnected()) {
-			Games.getLeaderboardsClient(Game.instance(),signedInAccount).
-					submitScore(Game.getVar(boards[level]), scores);
+            Games.getLeaderboardsClient(Game.instance(),signedInAccount).
+					submitScore(StringsManager.getVar(boards[level]), scores);
 		}
 	}
 

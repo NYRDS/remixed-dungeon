@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.items.artifacts;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.CandleOfMindVisionBuff;
@@ -95,13 +95,13 @@ public class CandleOfMindVision extends Artifact implements IActingItem {
 	@Override
 	public String desc() {
 		if(!activated) {
-			return Game.getVar(R.string.CandleOfMindVision_Info);
-		} else {
+            return StringsManager.getVar(R.string.CandleOfMindVision_Info);
+        } else {
 			if(charges>0) {
-				return Game.getVar(R.string.CandleOfMindVision_Info_Lighted);
-			} else {
-				return Game.getVar(R.string.CandleOfMindVision_Info_Exhausted);
-			}
+                return StringsManager.getVar(R.string.CandleOfMindVision_Info_Lighted);
+            } else {
+                return StringsManager.getVar(R.string.CandleOfMindVision_Info_Exhausted);
+            }
 		}
 	}
 

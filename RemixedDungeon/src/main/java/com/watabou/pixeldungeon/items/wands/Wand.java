@@ -19,10 +19,10 @@ package com.watabou.pixeldungeon.items.wands;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
-import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Scrambler;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
@@ -110,7 +110,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		
 		try {
 			image = handler.index(this);
-			wood = Game.getVars(R.array.Wand_Wood_Types)[ItemStatusHandler.indexByImage(image,images)];
+			wood = StringsManager.getVars(R.array.Wand_Wood_Types)[ItemStatusHandler.indexByImage(image,images)];
 
 		} catch (Exception e) {
 			// Wand of Magic Missile or Wand of Icebolt
@@ -215,7 +215,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 			if (isLevelKnown()) {
 				info.append(Utils.format(R.string.Wand_Damage, MIN + (MAX - MIN) / 2));
 			} else {
-				info.append(Game.getVar(R.string.Wand_Weapon));
+                info.append(StringsManager.getVar(R.string.Wand_Weapon));
 			}
 		}
 		return info.toString();
@@ -338,7 +338,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 		} else {
 
 			selector.spend(TIME_TO_ZAP);
-			GLog.w(Game.getVar(R.string.Wand_Fizzles));
+            GLog.w(StringsManager.getVar(R.string.Wand_Fizzles));
 			setLevelKnown(true);
 
 			if (Random.Int(5) == 0) {

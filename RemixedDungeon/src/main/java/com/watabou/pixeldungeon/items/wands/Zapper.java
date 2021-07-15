@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.items.wands;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.CellSelector;
@@ -21,7 +21,7 @@ class Zapper implements CellSelector.Listener {
 
         if (target != null) {
             if (target == selector.getPos()) {
-                GLog.i(Game.getVar(R.string.Wand_SelfTarget));
+                GLog.i(StringsManager.getVar(R.string.Wand_SelfTarget));
                 return;
             }
 
@@ -33,7 +33,7 @@ class Zapper implements CellSelector.Listener {
 
     @Override
     public String prompt() {
-        return Game.getVar(R.string.Wand_Prompt);
+        return StringsManager.getVar(R.string.Wand_Prompt);
     }
 
     @Override

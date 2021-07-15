@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.NinePatch;
@@ -23,12 +24,12 @@ public class WelcomeScene extends PixelScene {
 	public void create() {
 		super.create();
 
-		String[] upds = {
-				Game.getVar(R.string.Welcome_Text_29_4),
-				Game.getVar(R.string.Welcome_Text_29_5),
-				Game.getVar(R.string.Welcome_Text_29_6),
-				Game.getVar(R.string.Welcome_Text_30),
-				Game.getVar(R.string.Welcome_Text_30_1)
+        String[] upds = {
+                StringsManager.getVar(R.string.Welcome_Text_29_4),
+                StringsManager.getVar(R.string.Welcome_Text_29_5),
+                StringsManager.getVar(R.string.Welcome_Text_29_6),
+                StringsManager.getVar(R.string.Welcome_Text_30),
+                StringsManager.getVar(R.string.Welcome_Text_30_1)
 
 		};
 
@@ -40,7 +41,7 @@ public class WelcomeScene extends PixelScene {
 			updTexts[i] = createMultiline(GuiProperties.regularFontSize());
 		}
 
-		Text title = createMultiline(Game.getVar(R.string.Welcome_Title), GuiProperties.bigTitleFontSize());
+        Text title = createMultiline(StringsManager.getVar(R.string.Welcome_Title), GuiProperties.bigTitleFontSize());
 
 		int w = Camera.main.width;
 		int h = Camera.main.height;
@@ -84,7 +85,7 @@ public class WelcomeScene extends PixelScene {
 
 		content.setSize(panel.innerWidth(), yPos);
 
-		RedButton okay = new RedButton(Game.getVar(R.string.Welcome_Ok)) {
+        RedButton okay = new RedButton(StringsManager.getVar(R.string.Welcome_Ok)) {
 			@Override
 			protected void onClick() {
 				GamePreferences.version(Game.versionCode);

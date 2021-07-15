@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.actors.blobs;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -68,8 +68,8 @@ public class WaterOfAwareness extends WellWater {
 		Dungeon.observe();
 
 		hero.interrupt();
-	
-		GLog.p( Game.getVar(R.string.WaterOfAwareness_Procced) );
+
+        GLog.p(StringsManager.getVar(R.string.WaterOfAwareness_Procced));
 
 		Journal.remove( Feature.WELL_OF_AWARENESS.desc() );
 		
@@ -100,6 +100,6 @@ public class WaterOfAwareness extends WellWater {
 	
 	@Override
 	public String tileDesc() {
-		return Game.getVar(R.string.WaterOfAwareness_Info);
-	}
+        return StringsManager.getVar(R.string.WaterOfAwareness_Info);
+    }
 }

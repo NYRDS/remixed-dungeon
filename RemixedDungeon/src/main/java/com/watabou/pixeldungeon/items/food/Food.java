@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.food;
 
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 
@@ -32,9 +32,9 @@ abstract public class Food extends Item {
 	public static final float TIME_TO_EAT	= 3f;
 
 	public float energy   = 0;
-	public String message = Game.getVar(R.string.Food_Message);
-	
-	{
+	public String message = StringsManager.getVar(R.string.Food_Message);
+
+    {
 		stackable = true;
 		setDefaultAction(CommonActions.AC_EAT);
 	}

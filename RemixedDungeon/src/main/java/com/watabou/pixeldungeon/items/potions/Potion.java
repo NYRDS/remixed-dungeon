@@ -21,7 +21,7 @@ import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
@@ -112,7 +112,7 @@ public class Potion extends Item implements UnknownItem {
 	
 	public Potion() {
 		image = handler.index( this );
-		color = Game.getVars(R.array.Potion_Colors)[ItemStatusHandler.indexByImage(image, images)];
+		color = StringsManager.getVars(R.array.Potion_Colors)[ItemStatusHandler.indexByImage(image, images)];
 	}
 	
 	@Override
@@ -133,11 +133,11 @@ public class Potion extends Item implements UnknownItem {
 								this instanceof PotionOfParalyticGas ||
 								this instanceof PotionOfFrost)) {
 
-					GameScene.show(
-							new WndOptions(Game.getVar(R.string.Potion_Harmfull),
-									Game.getVar(R.string.Potion_SureDrink),
-									Game.getVar(R.string.Potion_Yes),
-									Game.getVar(R.string.Potion_No)) {
+                    GameScene.show(
+							new WndOptions(StringsManager.getVar(R.string.Potion_Harmfull),
+                                    StringsManager.getVar(R.string.Potion_SureDrink),
+                                    StringsManager.getVar(R.string.Potion_Yes),
+                                    StringsManager.getVar(R.string.Potion_No)) {
 								@Override
 								public void onSelect(int index) {
 									if (index == 0) {
@@ -175,12 +175,12 @@ public class Potion extends Item implements UnknownItem {
 			this instanceof PotionOfInvisibility || 
 			this instanceof PotionOfMight ||
 			this instanceof PotionOfMana)) {
-		
-			GameScene.show( 
-				new WndOptions( Game.getVar(R.string.Potion_Beneficial),
-						Game.getVar(R.string.Potion_SureThrow),
-						Game.getVar(R.string.Potion_Yes),
-						Game.getVar(R.string.Potion_No) ) {
+
+            GameScene.show(
+				new WndOptions(StringsManager.getVar(R.string.Potion_Beneficial),
+                        StringsManager.getVar(R.string.Potion_SureThrow),
+                        StringsManager.getVar(R.string.Potion_Yes),
+                        StringsManager.getVar(R.string.Potion_No)) {
 					@Override
 					public void onSelect(int index) {
 						if (index == 0) {
@@ -208,7 +208,7 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	private void moisten(Char hero) {
-		GameScene.selectItem(hero, itemSelector, WndBag.Mode.MOISTABLE, Game.getVar(R.string.Potion_SelectForMoisten));
+        GameScene.selectItem(hero, itemSelector, WndBag.Mode.MOISTABLE, StringsManager.getVar(R.string.Potion_SelectForMoisten));
 		hero.doOperate(TIME_TO_MOISTEN);
 	}
 	
@@ -239,7 +239,7 @@ public class Potion extends Item implements UnknownItem {
 	}
 
 	public void shatter( int cell ) {
-		GLog.i(Utils.format(Game.getVar(R.string.Potion_Shatter), color()));
+        GLog.i(Utils.format(StringsManager.getVar(R.string.Potion_Shatter), color()));
 		Sample.INSTANCE.play( Assets.SND_SHATTER );
 		splash( cell );
 	}
@@ -268,12 +268,12 @@ public class Potion extends Item implements UnknownItem {
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : Utils.format(Game.getVar(R.string.Potion_Name), color);
+        return isKnown() ? name : Utils.format(StringsManager.getVar(R.string.Potion_Name), color);
 	}
 	
 	@Override
 	public String info() {
-		return isKnown() ? desc() : Utils.format(Game.getVar(R.string.Potion_Info), color);
+        return isKnown() ? desc() : Utils.format(StringsManager.getVar(R.string.Potion_Info), color);
 	}
 	
 	@Override
@@ -366,7 +366,7 @@ public class Potion extends Item implements UnknownItem {
 	protected int reallyMoistArrows(Arrow arrow,Char owner) {
 		int quantity = detachMoistenItems(arrow, (int) (10*qualityFactor()));
 		moistenEffective(owner);
-		GLog.i(Game.getVar(R.string.Potion_ArrowMoisten));
+        GLog.i(StringsManager.getVar(R.string.Potion_ArrowMoisten));
 		return quantity;
 	}
 
@@ -385,7 +385,7 @@ public class Potion extends Item implements UnknownItem {
 	private void moistenUseless(@NotNull Char owner) {
 
 		detach(owner.getBelongings().backpack );
-		GLog.i(Game.getVar(R.string.Potion_MoistenUseless));
+        GLog.i(StringsManager.getVar(R.string.Potion_MoistenUseless));
 		owner.doOperate(TIME_TO_MOISTEN );
 	}
 	

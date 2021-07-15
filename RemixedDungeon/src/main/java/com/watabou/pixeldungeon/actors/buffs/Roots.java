@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -43,16 +43,16 @@ public class Roots extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.RootsBuff_Name);
-	}
+        return StringsManager.getVar(R.string.RootsBuff_Name);
+    }
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.RootsBuff_Info);
-	}
+        return StringsManager.getVar(R.string.RootsBuff_Info);
+    }
 
 	@Override
 	public void attachVisual() {
-		target.getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaRooted));
+        target.getSprite().showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaRooted));
 	}
 }

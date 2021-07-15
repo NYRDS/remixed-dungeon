@@ -2,7 +2,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.ui.IconButton;
@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.ui.Icons;
 class WndDontLikeAds extends WndQuest {
 
     public WndDontLikeAds() {
-        super(new Shopkeeper(), Game.getVar(R.string.WndSaveSlotSelect_dontLike));
+        super(new Shopkeeper(), StringsManager.getVar(R.string.WndSaveSlotSelect_dontLike));
 
         float y = height;
 

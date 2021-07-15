@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -26,27 +26,27 @@ public class WndSadGhostNecro extends Window {
 		
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite( new BlackSkull()) );
-		titlebar.label( Utils.capitalize( Game.getVar(R.string.Necromancy_Title) ) );
+        titlebar.label( Utils.capitalize(StringsManager.getVar(R.string.Necromancy_Title)) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
-		
-		Text message = PixelScene.createMultiline( Game.getVar(R.string.WndSadGhostNecro_Text), GuiProperties.regularFontSize() );
+
+        Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndSadGhostNecro_Text), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.y = titlebar.bottom() + GAP;
 		add( message );
-		
-		RedButton btnWeapon = new RedButton( Game.getVar(R.string.WndSadGhostNecro_Yes) ) {
+
+        RedButton btnWeapon = new RedButton(StringsManager.getVar(R.string.WndSadGhostNecro_Yes)) {
 			@Override
 			protected void onClick() {
-				GLog.w( Game.getVar(R.string.WndSadGhostNecro_Persuaded) );
+                GLog.w(StringsManager.getVar(R.string.WndSadGhostNecro_Persuaded));
 				persuade = true;
 				hide();
 			}
 		};
 		btnWeapon.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnWeapon );
-		
-		RedButton btnArmor = new RedButton( Game.getVar(R.string.WndSadGhostNecro_No) ) {
+
+        RedButton btnArmor = new RedButton(StringsManager.getVar(R.string.WndSadGhostNecro_No)) {
 			@Override
 			protected void onClick() {
 				persuade = false;

@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.food;
 
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
@@ -52,22 +52,22 @@ public class FrozenCarpaccio extends Food {
 			
 			switch (Random.Int( 5 )) {
 			case 0:
-				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info1));
+                GLog.i(StringsManager.getVar(R.string.FrozenCarpaccio_Info1));
 				Buff.affect(chr, Invisibility.class, Invisibility.DURATION );
 				break;
 			case 1:
-				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info2));
+                GLog.i(StringsManager.getVar(R.string.FrozenCarpaccio_Info2));
 				Buff.affect(chr, Barkskin.class ).level( chr.ht() / 4 );
 				break;
 			case 2:
-				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info3));
+                GLog.i(StringsManager.getVar(R.string.FrozenCarpaccio_Info3));
 				Buff.detach(chr, Poison.class );
 				Buff.detach(chr, Cripple.class );
 				Buff.detach(chr, Weakness.class );
 				Buff.detach(chr, Bleeding.class );
 				break;
 			case 3:
-				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info4));
+                GLog.i(StringsManager.getVar(R.string.FrozenCarpaccio_Info4));
 				chr.heal(chr.hp() + chr.ht() / 4, this);
 				break;
 			}

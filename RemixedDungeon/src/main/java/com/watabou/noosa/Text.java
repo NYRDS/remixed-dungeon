@@ -2,8 +2,8 @@ package com.watabou.noosa;
 
 import com.nyrds.pixeldungeon.windows.IPlaceable;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.gfx.SystemText;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -110,7 +110,7 @@ public abstract class Text extends Visual implements IPlaceable {
 
 
 	public void text(int id) {
-		text(Game.getVar(id));
+        text(StringsManager.getVar(id));
 	}
 
 	public void text(@NotNull String str) {

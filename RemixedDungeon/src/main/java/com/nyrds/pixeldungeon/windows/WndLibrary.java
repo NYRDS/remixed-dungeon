@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -24,8 +24,8 @@ public class WndLibrary extends Window {
 	private static Map<String,String> categoriesMap = new HashMap<>();
 
 	static {
-		categoriesMap.put(Library.ITEM,Game.getVar(R.string.WndLibrary_Items_Btn));
-		categoriesMap.put(Library.MOB,Game.getVar(R.string.WndLibrary_Mobs_Btn));
+        categoriesMap.put(Library.ITEM, StringsManager.getVar(R.string.WndLibrary_Items_Btn));
+        categoriesMap.put(Library.MOB, StringsManager.getVar(R.string.WndLibrary_Mobs_Btn));
 		/*
 		categoriesMap.put(Library.CODEX,Game.getVar(R.string.WndLibrary_Codex_Btn));
 		categoriesMap.put(Library.CHAPTERS,Game.getVar(R.string.WndLibrary_Levels_Btn));
@@ -37,7 +37,7 @@ public class WndLibrary extends Window {
 		super();
 
 		//Title text
-		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.WndLibrary_Catalogue_Title), GuiProperties.mediumTitleFontSize());
+        Text tfTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.WndLibrary_Catalogue_Title), GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - GAP);
 		tfTitle.x = (WIDTH - tfTitle.width())/2;
@@ -45,7 +45,7 @@ public class WndLibrary extends Window {
 		add(tfTitle);
 
 		//Instruction text
-		Text message = PixelScene.createMultiline( Game.getVar(R.string.WndLibrary_Catalogue_Instruction), GuiProperties.mediumTitleFontSize() );
+        Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndLibrary_Catalogue_Instruction), GuiProperties.mediumTitleFontSize() );
 		message.maxWidth(WIDTH);
 		message.y = tfTitle.bottom()+ GAP;
 		add( message );
@@ -90,7 +90,7 @@ public class WndLibrary extends Window {
 		}
 
 		//Back Button
-		TextButton back = new RedButton(Game.getVar(R.string.Wnd_Button_Back)) {
+        TextButton back = new RedButton(StringsManager.getVar(R.string.Wnd_Button_Back)) {
 			@Override
 			protected void onClick() {
 				super.onClick();

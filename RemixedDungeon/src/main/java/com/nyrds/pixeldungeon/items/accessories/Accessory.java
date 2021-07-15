@@ -4,9 +4,9 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -110,11 +110,11 @@ public class Accessory {
     }
 
     public String desc() {
-        return getClassParam("Info", Game.getVar(R.string.Item_Info));
+        return getClassParam("Info", StringsManager.getVar(R.string.Item_Info));
     }
 
     public String name() {
-        return getClassParam("Name", Game.getVar(R.string.Item_Name));
+        return getClassParam("Name", StringsManager.getVar(R.string.Item_Name));
     }
 
     private String prefProperty() {

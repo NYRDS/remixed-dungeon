@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -20,7 +20,7 @@ public class WndPortalWarning extends Window {
 		super();
 
 		//Title text
-		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.WndPortal_Warning_Title), GuiProperties.mediumTitleFontSize());
+        Text tfTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.WndPortal_Warning_Title), GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - GAP);
 		tfTitle.x = (WIDTH - tfTitle.width())/2;
@@ -28,7 +28,7 @@ public class WndPortalWarning extends Window {
 		add(tfTitle);
 
 		//Instruction text
-		Text message = PixelScene.createMultiline(Game.getVar(R.string.WndPortal_Warning_Info), GuiProperties.regularFontSize() );
+        Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndPortal_Warning_Info), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.y = tfTitle.bottom()+ GAP;
 		add( message );
@@ -37,7 +37,7 @@ public class WndPortalWarning extends Window {
 
 
 		//Yes Button
-		TextButton btnYes = new RedButton(Game.getVar(R.string.Wnd_Button_Yes)) {
+        TextButton btnYes = new RedButton(StringsManager.getVar(R.string.Wnd_Button_Yes)) {
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -51,7 +51,7 @@ public class WndPortalWarning extends Window {
 		buttonY = (int) btnYes.bottom()+ GAP;
 
 		//No Button
-		TextButton btnNo = new RedButton(Game.getVar(R.string.Wnd_Button_No)) {
+        TextButton btnNo = new RedButton(StringsManager.getVar(R.string.Wnd_Button_No)) {
 			@Override
 			protected void onClick() {
 				super.onClick();

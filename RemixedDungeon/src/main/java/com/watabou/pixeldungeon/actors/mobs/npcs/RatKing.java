@@ -25,7 +25,7 @@ import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -99,17 +99,17 @@ public class RatKing extends NPC {
 		
 		if (getState() instanceof Sleeping) {
 			notice();
-			say(Game.getVar(R.string.RatKing_Info1));
+            say(StringsManager.getVar(R.string.RatKing_Info1));
 			setState(MobAi.getStateByClass(Wandering.class));
 		} else {
 			anger++;
 			if(friendly(hero)) {
-				say(Game.getVar(R.string.RatKing_Info2));
+                say(StringsManager.getVar(R.string.RatKing_Info2));
 			} else {
 				setFraction(Fraction.DUNGEON);
 
 				setState(MobAi.getStateByClass(Hunting.class));
-				yell(Game.getVar(R.string.RatKing_Info3));
+                yell(StringsManager.getVar(R.string.RatKing_Info3));
 			}
 		}
 		return true;
@@ -117,7 +117,7 @@ public class RatKing extends NPC {
 	
 	@Override
 	public void die(NamedEntityKind cause) {
-		say(Game.getVar(R.string.RatKing_Died));
+        say(StringsManager.getVar(R.string.RatKing_Died));
 		super.die(cause);
 	}
 

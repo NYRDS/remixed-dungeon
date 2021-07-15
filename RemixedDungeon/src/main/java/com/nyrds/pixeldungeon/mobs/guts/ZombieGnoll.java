@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.mobs.guts;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -49,8 +49,8 @@ public class ZombieGnoll extends Mob {
             CellEmitter.center(this.getPos()).start(Speck.factory(Speck.BONE), 0.3f, 3);
             Sample.INSTANCE.play(Assets.SND_DEATH);
             if (CharUtils.isVisible(this)) {
-                getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
-                GLog.n(Game.getVar(R.string.ZombieGnoll_Info));
+                getSprite().showStatus( CharSprite.NEGATIVE, StringsManager.getVar(R.string.Goo_StaInfo1));
+                GLog.n(StringsManager.getVar(R.string.ZombieGnoll_Info));
             }
 
         }

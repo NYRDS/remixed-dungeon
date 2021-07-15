@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -47,8 +47,8 @@ public class MageArmor extends ClassArmor {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.MageArmor_Desc);
-	}
+        return StringsManager.getVar(R.string.MageArmor_Desc);
+    }
 	
 	@Override
 	public void doSpecial(@NotNull Char user) {
@@ -73,7 +73,7 @@ public class MageArmor extends ClassArmor {
 		if (hero.getHeroClass() == HeroClass.MAGE) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( Game.getVar(R.string.MageArmor_NotMage) );
+            GLog.w(StringsManager.getVar(R.string.MageArmor_NotMage));
 			return false;
 		}
 	}

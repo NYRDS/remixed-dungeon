@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
@@ -33,20 +32,20 @@ public class Journal {
 
 	@Deprecated
 	public enum Feature {
-		WELL_OF_HEALTH			(Game.getVar(R.string.Journal_WellHealt)),
-		WELL_OF_AWARENESS		(Game.getVar(R.string.Journal_WellAwareness)),
-		WELL_OF_TRANSMUTATION	(Game.getVar(R.string.Journal_WellTransmut)),
-		ALCHEMY					(Game.getVar(R.string.Journal_Alchemy)),
-		GARDEN					(Game.getVar(R.string.Journal_Garden)),
+		WELL_OF_HEALTH			(StringsManager.getVar(R.string.Journal_WellHealt)),
+		WELL_OF_AWARENESS		(StringsManager.getVar(R.string.Journal_WellAwareness)),
+		WELL_OF_TRANSMUTATION	(StringsManager.getVar(R.string.Journal_WellTransmut)),
+		ALCHEMY					(StringsManager.getVar(R.string.Journal_Alchemy)),
+		GARDEN					(StringsManager.getVar(R.string.Journal_Garden)),
 
-		GHOST					(Game.getVar(R.string.Journal_Ghost)),
-		WANDMAKER				(Game.getVar(R.string.Journal_Wandmaker)),
-		TROLL					(Game.getVar(R.string.Journal_Troll)),
-		IMP						(Game.getVar(R.string.Journal_Imp)),
-		AZUTERRON				(Game.getVar(R.string.Journal_Azuterron)),
-		CAGEDKOBOLD				(Game.getVar(R.string.Journal_Caged_Kobold)),
-		SCARECROW				(Game.getVar(R.string.Journal_ScarecrowNPC)),
-		PLAGUEDOCTOR			(Game.getVar(R.string.Journal_PlagueDoctorNPC));
+		GHOST					(StringsManager.getVar(R.string.Journal_Ghost)),
+		WANDMAKER				(StringsManager.getVar(R.string.Journal_Wandmaker)),
+		TROLL					(StringsManager.getVar(R.string.Journal_Troll)),
+		IMP						(StringsManager.getVar(R.string.Journal_Imp)),
+		AZUTERRON				(StringsManager.getVar(R.string.Journal_Azuterron)),
+		CAGEDKOBOLD				(StringsManager.getVar(R.string.Journal_Caged_Kobold)),
+		SCARECROW				(StringsManager.getVar(R.string.Journal_ScarecrowNPC)),
+		PLAGUEDOCTOR			(StringsManager.getVar(R.string.Journal_PlagueDoctorNPC));
 
 
 		private String desc;
@@ -130,7 +129,7 @@ public class Journal {
 	}
 
 	public static void add (int featureResourceId) {
-		add(Game.getVar(featureResourceId));
+		add(StringsManager.getVar(featureResourceId));
 	}
 
 	public static void add( String feature ) {
@@ -146,7 +145,7 @@ public class Journal {
 	}
 
 	public static void remove( int featureResourceId) {
-		remove(Game.getVar(featureResourceId));
+		remove(StringsManager.getVar(featureResourceId));
 	}
 
 	public static void remove( String feature ) {

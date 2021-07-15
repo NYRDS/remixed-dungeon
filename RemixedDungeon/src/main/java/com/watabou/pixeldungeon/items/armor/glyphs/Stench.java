@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -47,7 +47,7 @@ public class Stench extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return Utils.format( Game.getVar(R.string.Stench_Txt), weaponName );
+        return Utils.format(StringsManager.getVar(R.string.Stench_Txt), weaponName );
 	}
 	
 	@Override

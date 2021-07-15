@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -67,7 +67,7 @@ public class KindOfWeapon extends EquipableItem {
 
 	@Override
 	public void equippedCursed() {
-		GLog.n(Game.getVar(R.string.KindOfWeapon_EquipCursed), name());
+        GLog.n(StringsManager.getVar(R.string.KindOfWeapon_EquipCursed), name());
 	}
 
 	@Override

@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.ai;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
@@ -56,12 +56,12 @@ public class Horrified extends MobAi implements AiState{
                 NamedEntityKind src = terror.getSource();
 
                 if (src instanceof Char) {
-                    return Utils.format(Game.getVar(R.string.Mob_StaTerrorStatus2),
+                    return Utils.format(StringsManager.getVar(R.string.Mob_StaTerrorStatus2),
                             me.getName(), ((Char) src).getName_objective());
                 }
         }
 
-        return Utils.format(Game.getVar(R.string.Mob_StaTerrorStatus),
+        return Utils.format(StringsManager.getVar(R.string.Mob_StaTerrorStatus),
                 me.getName());
     }
 }

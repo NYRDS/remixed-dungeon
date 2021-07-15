@@ -20,8 +20,8 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Music;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Touchscreen.Touch;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.gltextures.Gradient;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
@@ -153,8 +153,8 @@ public class SurfaceScene extends PixelScene {
 		frame.x = vx - 4;
 		frame.y = vy - 9;
 		add( frame );
-		
-		RedButton gameOver = new RedButton( Game.getVar(R.string.SurfaceScene_GameOver) ) {
+
+        RedButton gameOver = new RedButton(StringsManager.getVar(R.string.SurfaceScene_GameOver)) {
 			protected void onClick() {
 				GameLoop.switchScene( TitleScene.class );
 			}

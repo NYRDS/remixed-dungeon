@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.items.accessories.MedicineMask;
 import com.nyrds.pixeldungeon.items.common.RatArmor;
 import com.nyrds.pixeldungeon.items.common.RatHide;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -43,7 +43,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 				return true;
 			}
 
-			GameScene.show(new WndQuest(this, Game.getVar(R.string.PlagueDoctorNPC_After_Quest)));
+            GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.PlagueDoctorNPC_After_Quest)));
 			return true;
 		}
 
@@ -62,15 +62,15 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 					reward.doDrop(hero);
 				}
 				Quest.complete();
-				GameScene.show(new WndQuest(this, Game.getVar(R.string.PlagueDoctorNPC_Quest_End)));
+                GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.PlagueDoctorNPC_Quest_End)));
 			} else {
-				GameScene.show(new WndQuest(this, (Utils.format(Game.getVar(R.string.PlagueDoctorNPC_Quest_Reminder), 5)) ) );
+                GameScene.show(new WndQuest(this, (Utils.format(StringsManager.getVar(R.string.PlagueDoctorNPC_Quest_Reminder), 5)) ) );
 			}
 
 		} else {
-			String txtQuestStart = Utils.format(Game.getVar(R.string.PlagueDoctorNPC_Quest_Start_Male), 5);
+            String txtQuestStart = Utils.format(StringsManager.getVar(R.string.PlagueDoctorNPC_Quest_Start_Male), 5);
 			if (hero.getGender() == Utils.FEMININE) {
-				txtQuestStart = Utils.format(Game.getVar(R.string.PlagueDoctorNPC_Quest_Start_Female), 5);
+                txtQuestStart = Utils.format(StringsManager.getVar(R.string.PlagueDoctorNPC_Quest_Start_Female), 5);
 			}
 			GameScene.show(new WndQuest(this, txtQuestStart));
 			Quest.process(hero.getPos());

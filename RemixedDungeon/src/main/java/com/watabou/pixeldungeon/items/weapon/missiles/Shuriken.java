@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Random;
@@ -46,8 +46,8 @@ public class Shuriken extends MissileWeapon {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.Shuriken_Info);
-	}
+        return StringsManager.getVar(R.string.Shuriken_Info);
+    }
 	
 	@Override
 	public Item random() {

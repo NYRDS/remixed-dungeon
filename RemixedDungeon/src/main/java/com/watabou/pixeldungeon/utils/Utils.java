@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.utils;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 
 import org.jetbrains.annotations.NotNull;
@@ -55,7 +55,7 @@ public class Utils {
     }
 
     public static String format(int StringFormatId, Object... args) {
-        return String.format(Locale.ENGLISH, Game.getVar(StringFormatId), args);
+        return String.format(Locale.ENGLISH, StringsManager.getVar(StringFormatId), args);
     }
 
     public static String format(String format, Object... args) {
@@ -64,7 +64,7 @@ public class Utils {
 
     public static String indefinite(String noun) {
         //In a pt_BR language(and another), there is no specific rule.
-        if (Game.getVar(R.string.Utils_IsIndefinte).equals("0")) {
+        if (StringsManager.getVar(R.string.Utils_IsIndefinte).equals("0")) {
             return noun;
         }
 
@@ -84,7 +84,7 @@ public class Utils {
         }
 
         try {
-            return Game.getVars(stringArrays.getField(className + "_" + paramName).getInt(null));
+            return StringsManager.getVars(stringArrays.getField(className + "_" + paramName).getInt(null));
         } catch (NoSuchFieldException e) {
             if (warnIfAbsent) {
                 GLog.w("no definition for  %s_%s :(", className, paramName);
@@ -100,7 +100,7 @@ public class Utils {
         }
 
         try {
-            return Game.getVar(strings.getField(className + "_" + paramName).getInt(null));
+            return StringsManager.getVar(strings.getField(className + "_" + paramName).getInt(null));
         } catch (NoSuchFieldException e) {
             if (Util.isDebug() && warnIfAbsent) {
                 GLog.w("no definition for  %s_%s :(", className, paramName);

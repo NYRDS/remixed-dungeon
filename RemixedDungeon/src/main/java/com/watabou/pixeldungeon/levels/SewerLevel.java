@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.levels;
 import com.nyrds.pixeldungeon.effects.emitters.WaterSink;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
@@ -145,8 +145,8 @@ public class SewerLevel extends RegularLevel {
 	public String tileName(int tile) {
 		switch (tile) {
 			case Terrain.WATER:
-				return Game.getVar(R.string.Sewer_TileWater);
-			default:
+                return StringsManager.getVar(R.string.Sewer_TileWater);
+            default:
 				return super.tileName(tile);
 		}
 	}
@@ -155,10 +155,10 @@ public class SewerLevel extends RegularLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 			case Terrain.EMPTY_DECO:
-				return Game.getVar(R.string.Sewer_TileDescDeco);
-			case Terrain.BOOKSHELF:
-				return Game.getVar(R.string.Sewer_TileDescBookshelf);
-			default:
+                return StringsManager.getVar(R.string.Sewer_TileDescDeco);
+            case Terrain.BOOKSHELF:
+                return StringsManager.getVar(R.string.Sewer_TileDescBookshelf);
+            default:
 				return super.tileDesc(tile);
 		}
 	}

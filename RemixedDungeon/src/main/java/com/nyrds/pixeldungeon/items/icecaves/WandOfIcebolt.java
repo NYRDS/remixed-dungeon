@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.items.icecaves;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -45,7 +45,7 @@ public class WandOfIcebolt extends Wand {
 
 			if (ch == getOwner() && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );
-				GLog.n(Game.getVar(R.string.WandOfIcebolt_Info1));
+                GLog.n(StringsManager.getVar(R.string.WandOfIcebolt_Info1));
 			}
 		}
 	}
@@ -57,8 +57,8 @@ public class WandOfIcebolt extends Wand {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.WandOfIcebolt_Info);
-	}
+        return StringsManager.getVar(R.string.WandOfIcebolt_Info);
+    }
 
 	@Override
 	public boolean isKnown() {

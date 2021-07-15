@@ -25,7 +25,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
@@ -592,7 +592,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		}
 
 		if(blockingItem!= ItemsList.DUMMY) {
-			GLog.w(Game.getVar(R.string.Belongings_CantWearBoth),
+            GLog.w(StringsManager.getVar(R.string.Belongings_CantWearBoth),
 					item.name(),
 					blockingItem.name());
 			return false;
@@ -624,7 +624,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		if(slot==Slot.ARTIFACT || slot==Slot.LEFT_ARTIFACT) {
 			if (getItemFromSlot(Slot.ARTIFACT) != ItemsList.DUMMY && getItemFromSlot(Slot.LEFT_ARTIFACT) != ItemsList.DUMMY) {
-				GLog.w(Game.getVar(R.string.Artifact_Limit));
+                GLog.w(StringsManager.getVar(R.string.Artifact_Limit));
 				return false;
 			} else {
 				if (getItemFromSlot(Slot.ARTIFACT) == ItemsList.DUMMY) {

@@ -51,7 +51,6 @@ import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.input.Keys;
-import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ReportingExecutor;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
@@ -323,14 +322,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public static void vibrate(int milliseconds) {
         ((Vibrator) instance().getSystemService(VIBRATOR_SERVICE)).vibrate(milliseconds);
-    }
-
-    public static String getVar(int id) {
-        return StringsManager.getVar(id);
-    }
-
-    public static String[] getVars(int id) {
-        return StringsManager.getVars(id);
     }
 
     public synchronized static Game instance() {

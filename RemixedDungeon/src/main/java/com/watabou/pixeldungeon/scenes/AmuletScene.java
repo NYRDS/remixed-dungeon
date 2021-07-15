@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
@@ -50,15 +50,15 @@ public class AmuletScene extends PixelScene {
 		
 		Text text = null;
 		if (!noText) {
-			text = createMultiline( Game.getVar(R.string.AmuletScene_Txt), GuiProperties.regularFontSize() );
+            text = createMultiline(StringsManager.getVar(R.string.AmuletScene_Txt), GuiProperties.regularFontSize() );
 			text.maxWidth(WIDTH);
 			add( text );
 		}
 		
 		amulet = new Image( Assets.AMULET );
 		add( amulet );
-		
-		RedButton btnExit = new RedButton( Game.getVar(R.string.AmuletScene_Exit) ) {
+
+        RedButton btnExit = new RedButton(StringsManager.getVar(R.string.AmuletScene_Exit)) {
 			@Override
 			protected void onClick() {
 				Dungeon.win( ResultDescriptions.getDescription(ResultDescriptions.Reason.WIN), Rankings.gameOver.WIN_AMULET );
@@ -68,8 +68,8 @@ public class AmuletScene extends PixelScene {
 		};
 		btnExit.setSize( WIDTH, BTN_HEIGHT );
 		add( btnExit );
-		
-		RedButton btnStay = new RedButton( Game.getVar(R.string.AmuletScene_Stay) ) {
+
+        RedButton btnStay = new RedButton(StringsManager.getVar(R.string.AmuletScene_Stay)) {
 			@Override
 			protected void onClick() {
 				onBackPressed();

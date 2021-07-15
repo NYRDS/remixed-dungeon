@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -104,7 +104,7 @@ public class Eye extends Mob {
                         CellEmitter.center(pos).burst(PurpleParticle.BURST, Random.IntRange(1, 2));
                     }
 
-                    CharUtils.checkDeathReport(this ,victim, Game.getVar(R.string.Eye_Kill));
+                    CharUtils.checkDeathReport(this ,victim, StringsManager.getVar(R.string.Eye_Kill));
                 } else {
                     victim.getSprite().showStatus(CharSprite.NEUTRAL, victim.defenseVerb());
                 }

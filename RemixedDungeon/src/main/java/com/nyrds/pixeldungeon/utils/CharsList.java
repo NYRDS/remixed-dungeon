@@ -1,8 +1,8 @@
 package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.android.util.Util;
+import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.DummyChar;
 import com.watabou.pixeldungeon.actors.hero.Hero;

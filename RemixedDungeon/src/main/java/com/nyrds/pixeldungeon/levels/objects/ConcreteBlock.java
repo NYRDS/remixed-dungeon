@@ -4,7 +4,7 @@ import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 
@@ -60,13 +60,13 @@ public class ConcreteBlock extends LevelObject {
 
 	@Override
 	public String desc() {
-		return String.format(Game.getVar(R.string.ConcreteBlock_Description), requiredStr);
+        return String.format(StringsManager.getVar(R.string.ConcreteBlock_Description), requiredStr);
 	}
 
 	@Override
 	public String name() {
-		return Game.getVar(R.string.ConcreteBlock_Name);
-	}
+        return StringsManager.getVar(R.string.ConcreteBlock_Name);
+    }
 
 	@Override
 	public boolean affectLevelObjects() {

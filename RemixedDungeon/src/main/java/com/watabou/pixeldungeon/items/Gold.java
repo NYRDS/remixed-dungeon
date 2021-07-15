@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -84,11 +84,11 @@ public class Gold extends Item {
 	public String info() {
 		switch (quantity()) {
 		case 0:
-			return Game.getVar(R.string.Gold_Collect);
-		case 1:
-			return Game.getVar(R.string.Gold_Info1)+" "+Game.getVar(R.string.Gold_Collect);
+            return StringsManager.getVar(R.string.Gold_Collect);
+            case 1:
+                return StringsManager.getVar(R.string.Gold_Info1) +" "+ StringsManager.getVar(R.string.Gold_Collect);
 		default:
-			return Utils.format( Game.getVar(R.string.Gold_Info)+" "+Game.getVar(R.string.Gold_Collect), quantity() );
+            return Utils.format( StringsManager.getVar(R.string.Gold_Info) +" "+ StringsManager.getVar(R.string.Gold_Collect), quantity() );
 		}
 	}
 

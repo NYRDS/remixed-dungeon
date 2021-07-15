@@ -3,7 +3,7 @@ package com.watabou.pixeldungeon.plants;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -102,7 +102,7 @@ public class Seed extends Item {
 
     @Override
     public String info() {
-        return Utils.format(Game.getVar(R.string.Plant_Info), Utils.indefinite(plantName), desc());
+        return Utils.format(StringsManager.getVar(R.string.Plant_Info), Utils.indefinite(plantName), desc());
     }
 
     @Override

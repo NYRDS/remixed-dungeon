@@ -4,7 +4,7 @@ import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.food.Candy;
 import com.nyrds.pixeldungeon.items.food.PumpkinPie;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
@@ -61,15 +61,15 @@ public class ScarecrowNPC extends ImmortalNPC {
 					level().animatedDrop(reward, hero.getPos());
 				}
 				Quest.complete();
-				GameScene.show(new WndQuest(this, Game.getVar(R.string.ScarecrowNPC_Quest_End)));
+                GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.ScarecrowNPC_Quest_End)));
 			} else {
-				GameScene.show(new WndQuest(this, Game.getVar(R.string.ScarecrowNPC_Quest_Reminder)));
+                GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.ScarecrowNPC_Quest_Reminder)));
 			}
 
 		} else {
-			String txtQuestStart = Game.getVar(R.string.ScarecrowNPC_Quest_Start_Male);
+            String txtQuestStart = StringsManager.getVar(R.string.ScarecrowNPC_Quest_Start_Male);
 			if (Dungeon.hero.getGender() == Utils.FEMININE) {
-				txtQuestStart = Game.getVar(R.string.ScarecrowNPC_Quest_Start_Female);
+                txtQuestStart = StringsManager.getVar(R.string.ScarecrowNPC_Quest_Start_Female);
 			}
 			GameScene.show(new WndQuest(this, txtQuestStart));
 			Quest.given = true;

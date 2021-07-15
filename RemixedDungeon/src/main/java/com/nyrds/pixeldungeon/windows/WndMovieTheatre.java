@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -17,12 +18,12 @@ import com.watabou.pixeldungeon.windows.WndQuest;
 public class WndMovieTheatre extends WndQuest implements InterstitialPoint{
 
 	public WndMovieTheatre(final ServiceManNPC npc, int filmsSeen, int limit, int goldReward) {
-		
-		super(npc, Utils.format(Game.getVar(R.string.WndMovieTheatre_Instruction), goldReward) + "\n\n" + Utils.format(Game.getVar(R.string.WndMovieTheatre_Instruction_2), filmsSeen, limit));
+
+		super(npc, Utils.format(StringsManager.getVar(R.string.WndMovieTheatre_Instruction), goldReward) + "\n\n" + Utils.format(StringsManager.getVar(R.string.WndMovieTheatre_Instruction_2), filmsSeen, limit));
 
 		float y = height + 2*GAP;
 
-		RedButton btnYes = new RedButton( Game.getVar(R.string.WndMovieTheatre_Watch) ) {
+		RedButton btnYes = new RedButton(StringsManager.getVar(R.string.WndMovieTheatre_Watch)) {
 			@Override
 			protected void onClick() {
 				showAd( );
@@ -31,10 +32,10 @@ public class WndMovieTheatre extends WndQuest implements InterstitialPoint{
 		btnYes.setRect( 0, y + GAP, STD_WIDTH, BUTTON_HEIGHT);
 		add( btnYes );
 
-		RedButton btnNo = new RedButton( Game.getVar(R.string.WndMovieTheatre_No) ) {
+		RedButton btnNo = new RedButton(StringsManager.getVar(R.string.WndMovieTheatre_No)) {
 			@Override
 			protected void onClick() {
-				npc.say( Game.getVar(R.string.WndMovieTheatre_Bye) );
+				npc.say(StringsManager.getVar(R.string.WndMovieTheatre_Bye));
 				hide();
 			}
 		};

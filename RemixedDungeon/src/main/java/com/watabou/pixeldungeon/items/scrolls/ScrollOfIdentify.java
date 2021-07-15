@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.scrolls;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Identification;
@@ -32,7 +32,7 @@ import org.jetbrains.annotations.NotNull;
 public class ScrollOfIdentify extends InventoryScroll {
 
 	{
-		inventoryTitle = Game.getVar(R.string.ScrollOfIdentify_InvTitle);
+        inventoryTitle = StringsManager.getVar(R.string.ScrollOfIdentify_InvTitle);
 		mode = WndBag.Mode.UNIDENTIFED;
 	}
 
@@ -40,7 +40,7 @@ public class ScrollOfIdentify extends InventoryScroll {
 		ch.getSprite().getParent().add( new Identification( ch.getSprite().center().offset( 0, -16 ) ) );
 
 		item.identify();
-		GLog.i(Utils.format(Game.getVar(R.string.ScrollOfIdentify_Info1), item));
+        GLog.i(Utils.format(StringsManager.getVar(R.string.ScrollOfIdentify_Info1), item));
 
 		Badges.validateItemLevelAcquired( item );
 	}

@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -47,13 +47,13 @@ public class WndImp extends Window {
 		titlebar.label( Utils.capitalize( tokens.name() ) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
-		
-		Text message = PixelScene.createMultiline( Game.getVar(R.string.WndImp_Message), GuiProperties.regularFontSize() );
+
+        Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndImp_Message), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.y = titlebar.bottom() + GAP;
 		add( message );
-		
-		RedButton btnReward = new RedButton( Game.getVar(R.string.WndImp_Reward) ) {
+
+        RedButton btnReward = new RedButton(StringsManager.getVar(R.string.WndImp_Reward)) {
 			@Override
 			protected void onClick() {
 				takeReward( imp, tokens, Imp.Quest.reward );

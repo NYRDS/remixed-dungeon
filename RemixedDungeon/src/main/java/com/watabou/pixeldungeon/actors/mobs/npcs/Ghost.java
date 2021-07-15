@@ -26,7 +26,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndSadGhostNecro;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -98,8 +98,8 @@ public class Ghost extends NPC {
 	
 	@Override
 	public String defenseVerb() {
-		return Game.getVar(R.string.Ghost_Defense);
-	}
+        return StringsManager.getVar(R.string.Ghost_Defense);
+    }
 	
 	@Override
 	public float speed() {
@@ -153,7 +153,7 @@ public class Ghost extends NPC {
 			if (persuade || item != null) {
 				GameScene.show( new WndSadGhost( this, item ) );
 			} else {
-				GameScene.show( new WndQuest( this, Quest.alternative ? Game.getVar(R.string.Ghost_Rat2): Game.getVar(R.string.Ghost_Rose2) ) );
+                GameScene.show( new WndQuest( this, Quest.alternative ? StringsManager.getVar(R.string.Ghost_Rat2) : StringsManager.getVar(R.string.Ghost_Rose2)) );
 				
 				int newPos = -1;
 				for (int i=0; i < 10; i++) {
@@ -174,7 +174,7 @@ public class Ghost extends NPC {
 			}
 			
 		} else {
-			GameScene.show( new WndQuest( this, Quest.alternative ? Game.getVar(R.string.Ghost_Rat1): Game.getVar(R.string.Ghost_Rose1) ) );
+            GameScene.show( new WndQuest( this, Quest.alternative ? StringsManager.getVar(R.string.Ghost_Rat1) : StringsManager.getVar(R.string.Ghost_Rose1)) );
 			Quest.given = true;
 			
 			Journal.add( Journal.Feature.GHOST.desc() );

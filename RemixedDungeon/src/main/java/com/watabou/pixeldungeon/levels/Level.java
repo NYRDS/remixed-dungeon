@@ -39,7 +39,7 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
@@ -1259,7 +1259,7 @@ public abstract class Level implements Bundlable {
 
 	protected void pressHero(int cell, Hero hero) {
 		if (TerrainFlags.is(map[cell], TerrainFlags.TRAP)) {
-			GLog.i(Game.getVar(R.string.Level_HiddenPlate));
+            GLog.i(StringsManager.getVar(R.string.Level_HiddenPlate));
 			set(cell, Terrain.discover(map[cell]));
 			TrapHelper.heroPressed();
 		}
@@ -1477,8 +1477,8 @@ public abstract class Level implements Bundlable {
 	public String tileName(int tile) {
 
 		if (tile >= Terrain.WATER_TILES) {
-			return Game.getVar(R.string.Level_TileWater);
-		}
+            return StringsManager.getVar(R.string.Level_TileWater);
+        }
 
 		if (tile != Terrain.CHASM && (TerrainFlags.flags[tile] & TerrainFlags.PIT) != 0) {
 			return tileName(Terrain.CHASM);
@@ -1486,8 +1486,8 @@ public abstract class Level implements Bundlable {
 
 		switch (tile) {
 			case Terrain.CHASM:
-				return Game.getVar(R.string.Level_TileChasm);
-			case Terrain.EMPTY:
+                return StringsManager.getVar(R.string.Level_TileChasm);
+            case Terrain.EMPTY:
 			case Terrain.EMPTY_SP:
 			case Terrain.EMPTY_DECO:
 			case Terrain.SECRET_TOXIC_TRAP:
@@ -1496,96 +1496,96 @@ public abstract class Level implements Bundlable {
 			case Terrain.SECRET_POISON_TRAP:
 			case Terrain.SECRET_ALARM_TRAP:
 			case Terrain.SECRET_LIGHTNING_TRAP:
-				return Game.getVar(R.string.Level_TileFloor);
-			case Terrain.GRASS:
-				return Game.getVar(R.string.Level_TileGrass);
-			case Terrain.WALL:
+                return StringsManager.getVar(R.string.Level_TileFloor);
+            case Terrain.GRASS:
+                return StringsManager.getVar(R.string.Level_TileGrass);
+            case Terrain.WALL:
 			case Terrain.WALL_DECO:
 			case Terrain.SECRET_DOOR:
-				return Game.getVar(R.string.Level_TileWall);
-			case Terrain.DOOR:
-				return Game.getVar(R.string.Level_TileClosedDoor);
-			case Terrain.OPEN_DOOR:
-				return Game.getVar(R.string.Level_TileOpenDoor);
-			case Terrain.ENTRANCE:
-				return Game.getVar(R.string.Level_TileEntrance);
-			case Terrain.EXIT:
-				return Game.getVar(R.string.Level_TileExit);
-			case Terrain.EMBERS:
-				return Game.getVar(R.string.Level_TileEmbers);
-			case Terrain.LOCKED_DOOR:
-				return Game.getVar(R.string.Level_TileLockedDoor);
-			case Terrain.PEDESTAL:
-				return Game.getVar(R.string.Level_TilePedestal);
-			case Terrain.BARRICADE:
-				return Game.getVar(R.string.Level_TileBarricade);
-			case Terrain.HIGH_GRASS:
-				return Game.getVar(R.string.Level_TileHighGrass);
-			case Terrain.LOCKED_EXIT:
-				return Game.getVar(R.string.Level_TileLockedExit);
-			case Terrain.UNLOCKED_EXIT:
-				return Game.getVar(R.string.Level_TileUnlockedExit);
-			case Terrain.SIGN:
-				return Game.getVar(R.string.Level_TileSign);
-			case Terrain.WELL:
-				return Game.getVar(R.string.Level_TileWell);
-			case Terrain.EMPTY_WELL:
-				return Game.getVar(R.string.Level_TileEmptyWell);
-			case Terrain.STATUE:
+                return StringsManager.getVar(R.string.Level_TileWall);
+            case Terrain.DOOR:
+                return StringsManager.getVar(R.string.Level_TileClosedDoor);
+            case Terrain.OPEN_DOOR:
+                return StringsManager.getVar(R.string.Level_TileOpenDoor);
+            case Terrain.ENTRANCE:
+                return StringsManager.getVar(R.string.Level_TileEntrance);
+            case Terrain.EXIT:
+                return StringsManager.getVar(R.string.Level_TileExit);
+            case Terrain.EMBERS:
+                return StringsManager.getVar(R.string.Level_TileEmbers);
+            case Terrain.LOCKED_DOOR:
+                return StringsManager.getVar(R.string.Level_TileLockedDoor);
+            case Terrain.PEDESTAL:
+                return StringsManager.getVar(R.string.Level_TilePedestal);
+            case Terrain.BARRICADE:
+                return StringsManager.getVar(R.string.Level_TileBarricade);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.Level_TileHighGrass);
+            case Terrain.LOCKED_EXIT:
+                return StringsManager.getVar(R.string.Level_TileLockedExit);
+            case Terrain.UNLOCKED_EXIT:
+                return StringsManager.getVar(R.string.Level_TileUnlockedExit);
+            case Terrain.SIGN:
+                return StringsManager.getVar(R.string.Level_TileSign);
+            case Terrain.WELL:
+                return StringsManager.getVar(R.string.Level_TileWell);
+            case Terrain.EMPTY_WELL:
+                return StringsManager.getVar(R.string.Level_TileEmptyWell);
+            case Terrain.STATUE:
 			case Terrain.STATUE_SP:
-				return Game.getVar(R.string.Level_TileStatue);
-			case Terrain.TOXIC_TRAP:
-				return Game.getVar(R.string.Level_TileToxicTrap);
-			case Terrain.FIRE_TRAP:
-				return Game.getVar(R.string.Level_TileFireTrap);
-			case Terrain.PARALYTIC_TRAP:
-				return Game.getVar(R.string.Level_TileParalyticTrap);
-			case Terrain.POISON_TRAP:
-				return Game.getVar(R.string.Level_TilePoisonTrap);
-			case Terrain.ALARM_TRAP:
-				return Game.getVar(R.string.Level_TileAlarmTrap);
-			case Terrain.LIGHTNING_TRAP:
-				return Game.getVar(R.string.Level_TileLightningTrap);
-			case Terrain.GRIPPING_TRAP:
-				return Game.getVar(R.string.Level_TileGrippingTrap);
-			case Terrain.SUMMONING_TRAP:
-				return Game.getVar(R.string.Level_TileSummoningTrap);
-			case Terrain.INACTIVE_TRAP:
-				return Game.getVar(R.string.Level_TileInactiveTrap);
-			case Terrain.BOOKSHELF:
-				return Game.getVar(R.string.Level_TileBookshelf);
-			case Terrain.ALCHEMY:
-				return Game.getVar(R.string.Level_TileAlchemy);
-			default:
-				return Game.getVar(R.string.Level_TileDefault);
-		}
+                return StringsManager.getVar(R.string.Level_TileStatue);
+            case Terrain.TOXIC_TRAP:
+                return StringsManager.getVar(R.string.Level_TileToxicTrap);
+            case Terrain.FIRE_TRAP:
+                return StringsManager.getVar(R.string.Level_TileFireTrap);
+            case Terrain.PARALYTIC_TRAP:
+                return StringsManager.getVar(R.string.Level_TileParalyticTrap);
+            case Terrain.POISON_TRAP:
+                return StringsManager.getVar(R.string.Level_TilePoisonTrap);
+            case Terrain.ALARM_TRAP:
+                return StringsManager.getVar(R.string.Level_TileAlarmTrap);
+            case Terrain.LIGHTNING_TRAP:
+                return StringsManager.getVar(R.string.Level_TileLightningTrap);
+            case Terrain.GRIPPING_TRAP:
+                return StringsManager.getVar(R.string.Level_TileGrippingTrap);
+            case Terrain.SUMMONING_TRAP:
+                return StringsManager.getVar(R.string.Level_TileSummoningTrap);
+            case Terrain.INACTIVE_TRAP:
+                return StringsManager.getVar(R.string.Level_TileInactiveTrap);
+            case Terrain.BOOKSHELF:
+                return StringsManager.getVar(R.string.Level_TileBookshelf);
+            case Terrain.ALCHEMY:
+                return StringsManager.getVar(R.string.Level_TileAlchemy);
+            default:
+                return StringsManager.getVar(R.string.Level_TileDefault);
+        }
 	}
 
 	public String tileDesc(int tile) {
 
 		switch (tile) {
 			case Terrain.CHASM:
-				return Game.getVar(R.string.Level_TileDescChasm);
-			case Terrain.WATER:
-				return Game.getVar(R.string.Level_TileDescWater);
-			case Terrain.ENTRANCE:
-				return Game.getVar(R.string.Level_TileDescEntrance);
-			case Terrain.EXIT:
+                return StringsManager.getVar(R.string.Level_TileDescChasm);
+            case Terrain.WATER:
+                return StringsManager.getVar(R.string.Level_TileDescWater);
+            case Terrain.ENTRANCE:
+                return StringsManager.getVar(R.string.Level_TileDescEntrance);
+            case Terrain.EXIT:
 			case Terrain.UNLOCKED_EXIT:
-				return Game.getVar(R.string.Level_TileDescExit);
-			case Terrain.EMBERS:
-				return Game.getVar(R.string.Level_TileDescEmbers);
-			case Terrain.HIGH_GRASS:
-				return Game.getVar(R.string.Level_TileDescHighGrass);
-			case Terrain.LOCKED_DOOR:
-				return Game.getVar(R.string.Level_TileDescLockedDoor);
-			case Terrain.LOCKED_EXIT:
-				return Game.getVar(R.string.Level_TileDescLockedExit);
-			case Terrain.BARRICADE:
-				return Game.getVar(R.string.Level_TileDescBarricade);
-			case Terrain.SIGN:
-				return Game.getVar(R.string.Level_TileDescSign);
-			case Terrain.TOXIC_TRAP:
+                return StringsManager.getVar(R.string.Level_TileDescExit);
+            case Terrain.EMBERS:
+                return StringsManager.getVar(R.string.Level_TileDescEmbers);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.Level_TileDescHighGrass);
+            case Terrain.LOCKED_DOOR:
+                return StringsManager.getVar(R.string.Level_TileDescLockedDoor);
+            case Terrain.LOCKED_EXIT:
+                return StringsManager.getVar(R.string.Level_TileDescLockedExit);
+            case Terrain.BARRICADE:
+                return StringsManager.getVar(R.string.Level_TileDescBarricade);
+            case Terrain.SIGN:
+                return StringsManager.getVar(R.string.Level_TileDescSign);
+            case Terrain.TOXIC_TRAP:
 			case Terrain.FIRE_TRAP:
 			case Terrain.PARALYTIC_TRAP:
 			case Terrain.POISON_TRAP:
@@ -1593,17 +1593,17 @@ public abstract class Level implements Bundlable {
 			case Terrain.LIGHTNING_TRAP:
 			case Terrain.GRIPPING_TRAP:
 			case Terrain.SUMMONING_TRAP:
-				return Game.getVar(R.string.Level_TileDescTrap);
-			case Terrain.INACTIVE_TRAP:
-				return Game.getVar(R.string.Level_TileDescInactiveTrap);
-			case Terrain.STATUE:
+                return StringsManager.getVar(R.string.Level_TileDescTrap);
+            case Terrain.INACTIVE_TRAP:
+                return StringsManager.getVar(R.string.Level_TileDescInactiveTrap);
+            case Terrain.STATUE:
 			case Terrain.STATUE_SP:
-				return Game.getVar(R.string.Level_TileDescStatue);
-			case Terrain.ALCHEMY:
-				return Game.getVar(R.string.Level_TileDescAlchemy);
-			case Terrain.EMPTY_WELL:
-				return Game.getVar(R.string.Level_TileDescEmptyWell);
-			default:
+                return StringsManager.getVar(R.string.Level_TileDescStatue);
+            case Terrain.ALCHEMY:
+                return StringsManager.getVar(R.string.Level_TileDescAlchemy);
+            case Terrain.EMPTY_WELL:
+                return StringsManager.getVar(R.string.Level_TileDescEmptyWell);
+            default:
 				if (tile >= Terrain.WATER_TILES) {
 					return tileDesc(Terrain.WATER);
 				}

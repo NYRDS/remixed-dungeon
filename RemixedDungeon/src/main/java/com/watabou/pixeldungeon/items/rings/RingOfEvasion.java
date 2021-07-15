@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 
 public class RingOfEvasion extends Ring {
 	
@@ -29,7 +29,7 @@ public class RingOfEvasion extends Ring {
 	
 	@Override
 	public String desc() {
-		return isKnown() ? Game.getVar(R.string.RingOfEvasion_Info) : super.desc();
+        return isKnown() ? StringsManager.getVar(R.string.RingOfEvasion_Info) : super.desc();
 	}
 	
 	public class Evasion extends RingBuff {	

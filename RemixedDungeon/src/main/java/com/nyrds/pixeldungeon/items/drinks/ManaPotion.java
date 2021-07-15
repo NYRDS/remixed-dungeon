@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.items.drinks;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.SpellSprite;
@@ -26,7 +26,7 @@ public class ManaPotion extends Drink {
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_DRINK )) {
 			detach( chr.getBelongings().backpack );
-			GLog.i( Game.getVar(R.string.Drink_Message) );
+            GLog.i(StringsManager.getVar(R.string.Drink_Message));
 
 			chr.setSkillPoints(chr.getSkillPoints() + chr.getSkillPointsMax()/3);
 			chr.doOperate(TIME_TO_DRINK );

@@ -3,7 +3,7 @@ package com.watabou.pixeldungeon.ui;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Scene;
@@ -61,8 +61,7 @@ public class ChallengeButton extends Button {
                 }
             });
         } else {
-            parentScene.add(new WndMessage(Game
-                    .getVar(R.string.StartScene_WinGame)));
+            parentScene.add(new WndMessage(StringsManager.getVar(R.string.StartScene_WinGame)));
         }
     }
 

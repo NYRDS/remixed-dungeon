@@ -21,7 +21,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -59,9 +59,9 @@ public class Earthroot extends Plant {
 
 	public static class Seed extends com.watabou.pixeldungeon.plants.Seed {
 		{
-			plantName = Game.getVar(R.string.Earthroot_Name);
-			
-			name = Utils.format(Game.getVar(R.string.Plant_Seed), plantName);
+            plantName = StringsManager.getVar(R.string.Earthroot_Name);
+
+            name = Utils.format(StringsManager.getVar(R.string.Plant_Seed), plantName);
 			image = ItemSpriteSheet.SEED_EARTHROOT;
 			
 			plantClass = Earthroot.class;
@@ -70,8 +70,8 @@ public class Earthroot extends Plant {
 		
 		@Override
 		public String desc() {
-			return Game.getVar(R.string.Earthroot_Desc);
-		}
+            return StringsManager.getVar(R.string.Earthroot_Desc);
+        }
 		
 		@Override
 		public void _execute(@NotNull Char chr, @NotNull String action ) {
@@ -137,12 +137,12 @@ public class Earthroot extends Plant {
 		
 		@Override
 		public String name() {
-			return Game.getVar(R.string.EarthrootBuff_Name);
-		}
+            return StringsManager.getVar(R.string.EarthrootBuff_Name);
+        }
 
 		@Override
 		public String desc() {
-			return Game.getVar(R.string.EarthrootBuff_Info);
-		}
+            return StringsManager.getVar(R.string.EarthrootBuff_Info);
+        }
 	}
 }

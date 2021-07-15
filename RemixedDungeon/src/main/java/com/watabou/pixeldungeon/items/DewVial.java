@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -89,7 +89,7 @@ public class DewVial extends Item {
                 QuickSlot.refresh(chr);
 
             } else {
-				GLog.w( Game.getVar(R.string.DewVial_Empty) );
+                GLog.w(StringsManager.getVar(R.string.DewVial_Empty));
 			}
 			
 		} else {
@@ -112,12 +112,12 @@ public class DewVial extends Item {
 	}
 	
 	public void collectDew(@NotNull Dewdrop dew ) {
-		
-		GLog.i( Game.getVar(R.string.DewVial_Collected) );
+
+        GLog.i(StringsManager.getVar(R.string.DewVial_Collected));
 		setVolume(getVolume() + dew.quantity());
 		if (getVolume() >= MAX_VOLUME) {
 			setVolume(MAX_VOLUME);
-			GLog.p( Game.getVar(R.string.DewVial_Full) );
+            GLog.p(StringsManager.getVar(R.string.DewVial_Full));
 		}
 
         QuickSlot.refresh(getOwner());
@@ -135,8 +135,8 @@ public class DewVial extends Item {
 			hero.hp(1);//resurrect Hero because simple heal can't
 			vial.execute( hero );
 			hero.getSprite().emitter().start( ShaftParticle.FACTORY, 0.2f, 3 );
-			
-			GLog.w( Game.getVar(R.string.DewVial_AutoDrink) );
+
+            GLog.w(StringsManager.getVar(R.string.DewVial_AutoDrink));
 		}
 	}
 	

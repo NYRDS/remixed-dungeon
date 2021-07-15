@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.ml.actions;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -36,7 +36,7 @@ public class OpenChest extends CharAction {
                     theKey[0] = hero.getBelongings().getKey(GoldenKey.class, Dungeon.depth, level.levelId);
 
                     if (theKey[0] == null) {
-                        GLog.w(Game.getVar(R.string.Hero_LockedChest));
+                        GLog.w(StringsManager.getVar(R.string.Hero_LockedChest));
                         hero.readyAndIdle();
                         return false;
                     }

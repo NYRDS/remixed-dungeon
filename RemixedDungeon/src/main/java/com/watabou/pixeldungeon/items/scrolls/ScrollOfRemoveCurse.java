@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.scrolls;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
@@ -48,10 +48,10 @@ public class ScrollOfRemoveCurse extends Scroll {
 		Weakness.detach(reader, Weakness.class);
 
 		if (procced) {
-			GLog.p(Game.getVar(R.string.ScrollOfRemoveCurse_Proced));
+            GLog.p(StringsManager.getVar(R.string.ScrollOfRemoveCurse_Proced));
 			reader.getSprite().emitter().start(ShadowParticle.UP, 0.05f, 10);
 		} else {
-			GLog.i(Game.getVar(R.string.ScrollOfRemoveCurse_NoProced));
+            GLog.i(StringsManager.getVar(R.string.ScrollOfRemoveCurse_NoProced));
 		}
 
 		setKnown();

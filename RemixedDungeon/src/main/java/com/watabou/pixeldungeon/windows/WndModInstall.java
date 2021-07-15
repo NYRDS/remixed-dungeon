@@ -10,6 +10,7 @@ import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.InstallMod;
 import com.nyrds.platform.input.Touchscreen;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
@@ -29,13 +30,13 @@ public class WndModInstall extends Window {
 
         Text title = PixelScene.createMultiline(GuiProperties.mediumTitleFontSize());
         title.maxWidth(width);
-        title.text(Game.getVar(R.string.WndModInstall_InstallingMod)+"\n\n");
+        title.text(StringsManager.getVar(R.string.WndModInstall_InstallingMod) +"\n\n");
         title.hardlight(Window.TITLE_COLOR);
         mainLayout.add(title);
 
         Text modInfo = PixelScene.createMultiline(GuiProperties.titleFontSize());
         modInfo.maxWidth(width);
-        modInfo.text("\""+desc.name + "\" " + Game.getVar(R.string.WndModInstall_Version) + " " + desc.hrVersion +  "\n\n");
+        modInfo.text("\""+desc.name + "\" " + StringsManager.getVar(R.string.WndModInstall_Version) + " " + desc.hrVersion +  "\n\n");
         mainLayout.add(modInfo);
 
         Text description = PixelScene.createMultiline();
@@ -45,7 +46,7 @@ public class WndModInstall extends Window {
 
         Text author = PixelScene.createMultiline();
         author.maxWidth(width);
-        author.text(Game.getVar(R.string.Mods_CreatedBy) + "\n" +  desc.author + "\n\n");
+        author.text(StringsManager.getVar(R.string.Mods_CreatedBy) + "\n" +  desc.author + "\n\n");
 
         mainLayout.add(author);
 
@@ -54,7 +55,7 @@ public class WndModInstall extends Window {
         if (!siteUrl.isEmpty()) {
             Text siteTitle = PixelScene.createMultiline();
             siteTitle.maxWidth(width);
-            siteTitle.text(Game.getVar(R.string.Mods_AuthorSite) + "\n");
+            siteTitle.text(StringsManager.getVar(R.string.Mods_AuthorSite) + "\n");
 
             mainLayout.add(siteTitle);
 
@@ -106,7 +107,7 @@ public class WndModInstall extends Window {
         } else {
             Text pleaseUpdate = PixelScene.createMultiline(GuiProperties.titleFontSize());
             pleaseUpdate.maxWidth(width);
-            pleaseUpdate.text(Game.getVar(R.string.WndModInstall_PleaseUpdate) + "\n\n");
+            pleaseUpdate.text(StringsManager.getVar(R.string.WndModInstall_PleaseUpdate) + "\n\n");
 
             mainLayout.add(pleaseUpdate);
 

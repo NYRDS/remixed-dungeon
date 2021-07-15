@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
@@ -36,7 +36,7 @@ public class Amulet extends Item {
 	private static final String AC_END = "Amulet_ACEnd";
 	
 	{
-		name = Game.getVar(R.string.Amulet_Name);
+        name = StringsManager.getVar(R.string.Amulet_Name);
 		image = ItemSpriteSheet.AMULET;
 	}
 	

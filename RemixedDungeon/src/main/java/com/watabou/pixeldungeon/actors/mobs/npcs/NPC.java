@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
@@ -80,7 +80,7 @@ public abstract class NPC extends Mob {
 
 	public void sayRandomPhrase(int ...phrases) {
 		int index = Random.Int(0, phrases.length);
-		say(Game.getVar(phrases[index]));
+        say(StringsManager.getVar(phrases[index]));
 	}
 
 	public boolean exchangeItem(@NotNull Char hero , String itemClass, String rewardClass) {

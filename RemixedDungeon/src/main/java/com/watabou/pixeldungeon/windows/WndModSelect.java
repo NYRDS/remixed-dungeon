@@ -7,9 +7,9 @@ import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.nyrds.pixeldungeon.windows.ScrollableList;
 import com.nyrds.pixeldungeon.windows.WndHelper;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.DownloadStateListener;
 import com.nyrds.util.DownloadTask;
 import com.nyrds.util.GuiProperties;
@@ -47,7 +47,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 
 		boolean haveInternet = Util.isConnectedToInternet();
 
-		Text tfTitle = PixelScene.createMultiline(Game.getVar(R.string.ModsButton_SelectMod), GuiProperties.titleFontSize());
+        Text tfTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.ModsButton_SelectMod), GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.x = tfTitle.y = GAP;
 		tfTitle.maxWidth(width - GAP * 2);

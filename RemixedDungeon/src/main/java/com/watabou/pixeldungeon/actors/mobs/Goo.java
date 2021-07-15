@@ -21,7 +21,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
@@ -114,8 +114,8 @@ public class Goo extends Boss {
 			((GooSprite)getSprite()).pumpUp();
 			
 			if (CharUtils.isVisible(this)) {
-				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
-				GLog.n(Game.getVar(R.string.Goo_Info1));
+                getSprite().showStatus( CharSprite.NEGATIVE, StringsManager.getVar(R.string.Goo_StaInfo1));
+                GLog.n(StringsManager.getVar(R.string.Goo_Info1));
 			}
 		}
 	}
@@ -138,14 +138,14 @@ public class Goo extends Boss {
 		super.die( cause );
 
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_1);
-		
-		yell(Game.getVar(R.string.Goo_Info2));
+
+        yell(StringsManager.getVar(R.string.Goo_Info2));
 	}
 	
 	@Override
 	public void notice() {
 		super.notice();
-		yell(Game.getVar(R.string.Goo_Info3));
+        yell(StringsManager.getVar(R.string.Goo_Info3));
 	}
 
 	@Override

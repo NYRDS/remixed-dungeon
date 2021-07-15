@@ -20,8 +20,8 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.windows.WndBuffInfo;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Touchscreen;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.Util;
 import com.watabou.gltextures.SmartTexture;
@@ -69,14 +69,14 @@ public class WndHero extends WndTabbed {
 		
 		buffs = new BuffsTab();
 		add( buffs );
-		
-		add( new LabeledTab( this, Game.getVar(R.string.WndHero_Stats)) {
+
+        add( new LabeledTab( this, StringsManager.getVar(R.string.WndHero_Stats)) {
 			public void select( boolean value ) {
 				super.select( value );
 				stats.setVisible(stats.active = selected);
 			}
 		} );
-		add( new LabeledTab( this, Game.getVar(R.string.WndHero_Buffs)) {
+        add( new LabeledTab( this, StringsManager.getVar(R.string.WndHero_Buffs)) {
 			public void select( boolean value ) {
 				super.select( value );
 				buffs.setVisible(buffs.active = selected);
@@ -130,30 +130,30 @@ public class WndHero extends WndTabbed {
 			
 			pos = btnCatalogus.bottom() + GAP;
 
-			statSlot(Game.getVar(R.string.WndHero_Health), hero.hp() + "/" + hero.ht() );
-			statSlot(Game.getVar(R.string.Mana_Title), hero.getSkillPoints() + "/" + hero.getSkillPointsMax() );
+            statSlot(StringsManager.getVar(R.string.WndHero_Health), hero.hp() + "/" + hero.ht() );
+            statSlot(StringsManager.getVar(R.string.Mana_Title), hero.getSkillPoints() + "/" + hero.getSkillPointsMax() );
 
 			Hunger hunger = hero.hunger();
 
-			statSlot(Game.getVar(R.string.WndHero_Satiety),
+            statSlot(StringsManager.getVar(R.string.WndHero_Satiety),
 					Utils.EMPTY_STRING+((int)((Hunger.STARVING - hunger.getHungerLevel())/ Hunger.STARVING * 100))+"%");
 
-			statSlot(Game.getVar(R.string.WndHero_Stealth), hero.stealth());
+            statSlot(StringsManager.getVar(R.string.WndHero_Stealth), hero.stealth());
 
-			statSlot(Game.getVar(R.string.WndHero_Awareness), Utils.EMPTY_STRING+(int)(hero.getAwareness() * 100)+"%");
+            statSlot(StringsManager.getVar(R.string.WndHero_Awareness), Utils.EMPTY_STRING+(int)(hero.getAwareness() * 100)+"%");
 
-			statSlot(Game.getVar(R.string.WndHero_AttackSkill),  hero.attackSkill(CharsList.DUMMY));
-			statSlot(Game.getVar(R.string.WndHero_DefenceSkill), hero.defenseSkill(CharsList.DUMMY));
+            statSlot(StringsManager.getVar(R.string.WndHero_AttackSkill),  hero.attackSkill(CharsList.DUMMY));
+            statSlot(StringsManager.getVar(R.string.WndHero_DefenceSkill), hero.defenseSkill(CharsList.DUMMY));
 
 
-			statSlot(Game.getVar(R.string.WndHero_Exp), hero.getExp() + "/" + hero.maxExp() );
+            statSlot(StringsManager.getVar(R.string.WndHero_Exp), hero.getExp() + "/" + hero.maxExp() );
 
 			pos += GAP;
-			statSlot(Game.getVar(R.string.WndHero_Str), hero.effectiveSTR() );
-			statSlot(Game.getVar(R.string.WndHero_SkillLevel), hero.skillLevel());
+            statSlot(StringsManager.getVar(R.string.WndHero_Str), hero.effectiveSTR() );
+            statSlot(StringsManager.getVar(R.string.WndHero_SkillLevel), hero.skillLevel());
 
-			statSlot(Game.getVar(R.string.WndHero_Gold), Statistics.goldCollected );
-			statSlot(Game.getVar(R.string.WndHero_Depth), Statistics.deepestFloor );
+            statSlot(StringsManager.getVar(R.string.WndHero_Gold), Statistics.goldCollected );
+            statSlot(StringsManager.getVar(R.string.WndHero_Depth), Statistics.deepestFloor );
 
 
 			pos += GAP;

@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.items.guts.PseudoAmulet;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.levels.HallsLevel;
@@ -89,15 +89,15 @@ public class FakeLastLevel extends Level {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return Game.getVar(R.string.LastLevel_TileWater);
-		case Terrain.GRASS:
-			return Game.getVar(R.string.LastLevel_TileGrass);
-		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.LastLevel_TileHighGrass);
-		case Terrain.STATUE:
+            return StringsManager.getVar(R.string.LastLevel_TileWater);
+            case Terrain.GRASS:
+                return StringsManager.getVar(R.string.LastLevel_TileGrass);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.LastLevel_TileHighGrass);
+            case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return Game.getVar(R.string.LastLevel_TileStatue);
-		default:
+            return StringsManager.getVar(R.string.LastLevel_TileStatue);
+            default:
 			return super.tileName( tile );
 		}
 	}
@@ -106,11 +106,11 @@ public class FakeLastLevel extends Level {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.WATER:
-			return Game.getVar(R.string.LastLevel_TileDescWater);
-		case Terrain.STATUE:
+            return StringsManager.getVar(R.string.LastLevel_TileDescWater);
+            case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return Game.getVar(R.string.LastLevel_TileDescStatue);
-		default:
+            return StringsManager.getVar(R.string.LastLevel_TileDescStatue);
+            default:
 			return super.tileDesc(tile);
 		}
 	}

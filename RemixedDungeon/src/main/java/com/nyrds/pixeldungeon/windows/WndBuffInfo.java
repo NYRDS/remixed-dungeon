@@ -1,18 +1,16 @@
 package com.nyrds.pixeldungeon.windows;
 
-import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
-import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
+import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.IconTitle;
 
 import org.jetbrains.annotations.NotNull;

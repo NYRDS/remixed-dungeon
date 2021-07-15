@@ -35,6 +35,8 @@ import com.nyrds.pixeldungeon.windows.MovieRewardTask;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Scrambler;
 import com.watabou.noosa.Camera;
@@ -154,8 +156,8 @@ public class Hero extends Char {
 	public Hero() {
 		super();
 		setupCharData();
-		name = Game.getVar(R.string.Hero_Name);
-		name_objective = Game.getVar(R.string.Hero_Name_Objective);
+		name = StringsManager.getVar(R.string.Hero_Name);
+		name_objective = StringsManager.getVar(R.string.Hero_Name_Objective);
 
 		fraction = Fraction.HEROES;
 
@@ -181,7 +183,7 @@ public class Hero extends Char {
 
 	public int effectiveSTR() {
 		int weaknessLevel = buffLevel(Weakness.class);
-		return (int) Math.max(STR() - Math.log(Math.pow(weaknessLevel+1,RemixedDungeon.getDifficultyFactor())), 1);
+		return (int) Math.max(STR() - Math.log(Math.pow(weaknessLevel+1, RemixedDungeon.getDifficultyFactor())), 1);
 	}
 
 	public void STR(int sTR) {
@@ -389,7 +391,7 @@ public class Hero extends Char {
 		if (item.announcePickUp()) {
 			if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade) item).isKnown())
 					|| (item instanceof PotionOfStrength && ((PotionOfStrength) item).isKnown())) {
-				GLog.p(Game.getVar(R.string.Hero_YouNowHave), item.name());
+				GLog.p(StringsManager.getVar(R.string.Hero_YouNowHave), item.name());
 			} else {
 				GLog.i(getHeroYouNowHave(), item.name());
 			}
@@ -404,7 +406,7 @@ public class Hero extends Char {
 	public void rest(boolean tillHealthy) {
 		spendAndNext(TIME_TO_REST);
 		if (!tillHealthy) {
-			getSprite().showStatus(CharSprite.DEFAULT, Game.getVar(R.string.Hero_Wait));
+			getSprite().showStatus(CharSprite.DEFAULT, StringsManager.getVar(R.string.Hero_Wait));
 		}
 		restoreHealth = tillHealthy;
 	}
@@ -614,8 +616,8 @@ public class Hero extends Char {
 
 		if (levelUp) {
 
-			GLog.p(Game.getVar(R.string.Hero_NewLevel), lvl());
-			getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Hero_LevelUp));
+			GLog.p(StringsManager.getVar(R.string.Hero_NewLevel), lvl());
+			getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Hero_LevelUp));
 			Sample.INSTANCE.play(Assets.SND_LEVELUP);
 
 			if (getSkillPointsMax() > 0) {
@@ -658,33 +660,33 @@ public class Hero extends Char {
 		}
 
 		if (buff instanceof Burning) {
-			GLog.w(Game.getVar(R.string.Hero_StaBurning));
+			GLog.w(StringsManager.getVar(R.string.Hero_StaBurning));
 			interrupt();
 		} else if (buff instanceof Paralysis) {
-			GLog.w(Game.getVar(R.string.Hero_StaParalysis));
+			GLog.w(StringsManager.getVar(R.string.Hero_StaParalysis));
 			interrupt();
 		} else if (buff instanceof Poison) {
-			GLog.w(Game.getVar(R.string.Hero_StaPoison));
+			GLog.w(StringsManager.getVar(R.string.Hero_StaPoison));
 			interrupt();
 		} else if (buff instanceof Ooze) {
-			GLog.w(Game.getVar(R.string.Hero_StaOoze));
+			GLog.w(StringsManager.getVar(R.string.Hero_StaOoze));
 		} else if (buff instanceof Roots) {
-			GLog.w(Game.getVar(R.string.Hero_StaRoots));
+			GLog.w(StringsManager.getVar(R.string.Hero_StaRoots));
 		} else if (buff instanceof Weakness) {
-			GLog.w(Game.getVar(R.string.Hero_StaWeakness));
+			GLog.w(StringsManager.getVar(R.string.Hero_StaWeakness));
 		} else if (buff instanceof Blindness) {
-			GLog.w(Game.getVar(R.string.Hero_StaBlindness));
+			GLog.w(StringsManager.getVar(R.string.Hero_StaBlindness));
 		} else if (buff instanceof Fury) {
-			GLog.w(Game.getVar(R.string.Hero_StaFury));
-			getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Hero_StaFurious));
+			GLog.w(StringsManager.getVar(R.string.Hero_StaFury));
+			getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Hero_StaFurious));
 		} else if (buff instanceof Charm) {
-			GLog.w(Game.getVar(R.string.Hero_StaCharm));
+			GLog.w(StringsManager.getVar(R.string.Hero_StaCharm));
 		} else if (buff instanceof Cripple) {
-			GLog.w(Game.getVar(R.string.Hero_StaCripple));
+			GLog.w(StringsManager.getVar(R.string.Hero_StaCripple));
 		} else if (buff instanceof Bleeding) {
-			GLog.w(Game.getVar(R.string.Hero_StaBleeding));
+			GLog.w(StringsManager.getVar(R.string.Hero_StaBleeding));
 		} else if (buff instanceof Vertigo) {
-			GLog.w(Game.getVar(R.string.Hero_StaVertigo));
+			GLog.w(StringsManager.getVar(R.string.Hero_StaVertigo));
 			interrupt();
 		}
 
@@ -775,7 +777,7 @@ public class Hero extends Char {
 	public static void reallyDie(Hero hero,final Object cause) {
 
 		if (hero.getDifficulty() < 2 && !Game.isPaused()) {
-			GameScene.show(new WndSaveSlotSelect(false, Game.getVar(R.string.Hero_AnotherTry)));
+			GameScene.show(new WndSaveSlotSelect(false, StringsManager.getVar(R.string.Hero_AnotherTry)));
 			return;
 		}
 
@@ -877,7 +879,7 @@ public class Hero extends Char {
 		}
 
 		if (intentional) {
-			getSprite().showStatus(CharSprite.DEFAULT, Game.getVar(R.string.Hero_Search));
+			getSprite().showStatus(CharSprite.DEFAULT, StringsManager.getVar(R.string.Hero_Search));
 
 			float time = TIME_TO_SEARCH;
 			if (smthFound) {
@@ -888,7 +890,7 @@ public class Hero extends Char {
 		}
 
 		if (smthFound) {
-			GLog.w(Game.getVar(R.string.Hero_NoticedSmth));
+			GLog.w(StringsManager.getVar(R.string.Hero_NoticedSmth));
 			Sample.INSTANCE.play(Assets.SND_SECRET);
 			interrupt();
 		}
@@ -938,7 +940,7 @@ public class Hero extends Char {
 	}
 
 	public static String getHeroYouNowHave() {
-		return Game.getVar(R.string.Hero_YouNowHave);
+		return StringsManager.getVar(R.string.Hero_YouNowHave);
 	}
 
 	public int getExp() {

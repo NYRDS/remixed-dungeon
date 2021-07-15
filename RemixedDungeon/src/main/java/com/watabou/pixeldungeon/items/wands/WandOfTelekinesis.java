@@ -21,7 +21,7 @@ import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -140,8 +140,8 @@ public class WandOfTelekinesis extends Wand {
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.WandOfTelekinesis_Info);
-	}
+        return StringsManager.getVar(R.string.WandOfTelekinesis_Info);
+    }
 
 	public static class Effect implements Presser {
 		@Override

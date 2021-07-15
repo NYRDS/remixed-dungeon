@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.items.common;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Rat;
@@ -34,13 +34,13 @@ public class RatKingCrown extends Artifact {
 
 		@Override
 		public String name() {
-			return Game.getVar(R.string.RatKingCrownBuff_Name);
-		}
+            return StringsManager.getVar(R.string.RatKingCrownBuff_Name);
+        }
 
 		@Override
 		public String desc() {
-			return Game.getVar(R.string.RatKingCrownBuff_Info);
-		}
+            return StringsManager.getVar(R.string.RatKingCrownBuff_Info);
+        }
 
 		@Override
 		public int attackProc(Char attacker, Char defender, int damage) {

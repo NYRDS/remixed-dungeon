@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.Text;
@@ -58,8 +58,8 @@ public class WndBlacksmith extends Window {
 		titlebar.label( Utils.capitalize( troll.getName() ) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
-		
-		Text message = PixelScene.createMultiline( Game.getVar(R.string.WndBlacksmith_Prompt), GuiProperties.regularFontSize());
+
+        Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndBlacksmith_Prompt), GuiProperties.regularFontSize());
 		message.maxWidth(WIDTH);
 		message.y = titlebar.bottom() + GAP;
 		add( message );
@@ -68,7 +68,7 @@ public class WndBlacksmith extends Window {
 			@Override
 			protected void onClick() {
 				btnPressed = btnItem1;
-				GameScene.selectItem(Dungeon.hero, itemSelector, WndBag.Mode.UPGRADEABLE, Game.getVar(R.string.WndBlacksmith_Select));
+                GameScene.selectItem(Dungeon.hero, itemSelector, WndBag.Mode.UPGRADEABLE, StringsManager.getVar(R.string.WndBlacksmith_Select));
 			}
 		};
 		btnItem1.setRect( (WIDTH - BTN_GAP) / 2 - BTN_SIZE, message.y + message.height() + BTN_GAP, BTN_SIZE, BTN_SIZE );
@@ -78,13 +78,13 @@ public class WndBlacksmith extends Window {
 			@Override
 			protected void onClick() {
 				btnPressed = btnItem2;
-				GameScene.selectItem(Dungeon.hero, itemSelector, WndBag.Mode.UPGRADEABLE, Game.getVar(R.string.WndBlacksmith_Select));
+                GameScene.selectItem(Dungeon.hero, itemSelector, WndBag.Mode.UPGRADEABLE, StringsManager.getVar(R.string.WndBlacksmith_Select));
 			}
 		};
 		btnItem2.setRect( btnItem1.right() + BTN_GAP, btnItem1.top(), BTN_SIZE, BTN_SIZE );
 		add( btnItem2 );
-		
-		btnReforge = new RedButton( Game.getVar(R.string.WndBlacksmith_Reforge) ) {
+
+        btnReforge = new RedButton(StringsManager.getVar(R.string.WndBlacksmith_Reforge)) {
 			@Override
 			protected void onClick() {
 				Blacksmith.upgrade( btnItem1.item, btnItem2.item );

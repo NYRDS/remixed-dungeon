@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -94,7 +94,7 @@ public class Ring extends Artifact implements UnknownItem{
 	
 	public void syncGem() {
 		image = handler.index( this );
-		gem   = Game.getVars(R.array.Ring_Gems)[ItemStatusHandler.indexByImage(image,images)];
+		gem   = StringsManager.getVars(R.array.Ring_Gems)[ItemStatusHandler.indexByImage(image,images)];
 	}
 	
 	@Override
@@ -126,20 +126,20 @@ public class Ring extends Artifact implements UnknownItem{
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : Utils.format(Game.getVar(R.string.Ring_Name), gem);
+        return isKnown() ? name : Utils.format(StringsManager.getVar(R.string.Ring_Name), gem);
 	}
 	
 	@Override
 	public String desc() {
-		return Utils.format(Game.getVar(R.string.Ring_Info), gem);
+        return Utils.format(StringsManager.getVar(R.string.Ring_Info), gem);
 	}
 	
 	@Override
 	public String info() {
 		if (isEquipped( Dungeon.hero )) {
-			return Utils.format(Game.getVar(R.string.Ring_Info3a), desc(), name(), (isCursed() ? Game.getVar(R.string.Ring_Info3b) : "."));
+            return Utils.format(StringsManager.getVar(R.string.Ring_Info3a), desc(), name(), (isCursed() ? StringsManager.getVar(R.string.Ring_Info3b) : "."));
 		} else if (isCursed() && isCursedKnown()) {
-			return Utils.format(Game.getVar(R.string.Ring_Info4), desc(), name());
+            return Utils.format(StringsManager.getVar(R.string.Ring_Info4), desc(), name());
 		} else {
 			return desc();
 		}
@@ -191,7 +191,7 @@ public class Ring extends Artifact implements UnknownItem{
 	
 			if (target.getHeroClass() == HeroClass.ROGUE && !isKnown()) {
 				setKnown();
-				GLog.i( Game.getVar(R.string.Ring_BuffKnown), Ring.this.trueName() );
+                GLog.i(StringsManager.getVar(R.string.Ring_BuffKnown), Ring.this.trueName() );
 				Badges.validateItemLevelAcquired( Ring.this );
 			}
 			
@@ -204,7 +204,7 @@ public class Ring extends Artifact implements UnknownItem{
 			if (!isIdentified() && --ticksToKnow <= 0) {
 				String gemName = Ring.this.name();
 				identify();
-				GLog.w( Game.getVar(R.string.Ring_Identify), gemName, Ring.this.trueName() );
+                GLog.w(StringsManager.getVar(R.string.Ring_Identify), gemName, Ring.this.trueName() );
 				Badges.validateItemLevelAcquired( Ring.this );
 			}
 			

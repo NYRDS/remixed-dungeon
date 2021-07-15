@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.nyrds.pixeldungeon.windows.WndSurvey;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.DownloadStateListener;
 import com.nyrds.util.DownloadTask;
 import com.nyrds.util.JsonHelper;
@@ -37,8 +38,8 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
     public boolean interact(Char hero) {
 
         GameLoop.addToScene(new WndOptions(this.name,
-                Game.getVar(R.string.SociologistNPC_Hi),
-                Game.getVar(R.string.Wnd_Button_Yes), Game.getVar(R.string.Wnd_Button_No)
+                StringsManager.getVar(R.string.SociologistNPC_Hi),
+                StringsManager.getVar(R.string.Wnd_Button_Yes), StringsManager.getVar(R.string.Wnd_Button_No)
         ) {
 
             @Override
@@ -72,7 +73,7 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
     }
 
     private void reportError() {
-        GameLoop.addToScene(new WndError(Game.getVar(R.string.SociologistNPC_DownloadError)));
+        GameLoop.addToScene(new WndError(StringsManager.getVar(R.string.SociologistNPC_DownloadError)));
     }
 
     @Override
@@ -86,7 +87,7 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
                     "https://github.com/NYRDS/pixel-dungeon-remix-survey/raw/master/survey.json",
                     downloadTo);
         } else {
-            say(Game.getVar(R.string.SociologistNPC_InternetRequired));
+            say(StringsManager.getVar(R.string.SociologistNPC_InternetRequired));
         }
     }
 }

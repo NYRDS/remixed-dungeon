@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.weapon.melee;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
@@ -68,7 +68,7 @@ public class ShortSword extends MeleeWeapon {
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_REFORGE)) {
 			chr.getBelongings().setSelectedItem(this);
-			GameScene.selectItem(chr, itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.ShortSword_Select));
+            GameScene.selectItem(chr, itemSelector, WndBag.Mode.WEAPON, StringsManager.getVar(R.string.ShortSword_Select));
 		} else {
 			super._execute(chr, action );
 		}
@@ -76,8 +76,8 @@ public class ShortSword extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.ShortSword_Info);
-	}
+        return StringsManager.getVar(R.string.ShortSword_Info);
+    }
 	
 	private final WndBag.Listener itemSelector = (item, selector) -> {
 		if (item != null && !(item instanceof Boomerang)) {
@@ -86,7 +86,7 @@ public class ShortSword extends MeleeWeapon {
 			ScrollOfUpgrade.upgrade( selector );
 			ItemUtils.evoke( selector );
 
-			GLog.w( Game.getVar(R.string.ShortSword_Reforged), item.name() );
+            GLog.w(StringsManager.getVar(R.string.ShortSword_Reforged), item.name() );
 
 			((MeleeWeapon)item).safeUpgrade();
 			selector.spend( TIME_TO_REFORGE );

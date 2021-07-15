@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.windows.WndStory;
 
 public class IntroScene extends PixelScene {
@@ -26,8 +26,8 @@ public class IntroScene extends PixelScene {
 	@Override
 	public void create() {
 		super.create();
-		
-		add( new WndStory( Game.getVar(R.string.IntroScene_Txt) ) {
+
+        add( new WndStory(StringsManager.getVar(R.string.IntroScene_Txt)) {
 			@Override
 			public void hide() {
 				super.hide();

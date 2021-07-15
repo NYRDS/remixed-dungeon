@@ -1,10 +1,9 @@
 package com.nyrds.pixeldungeon.windows;
 
-import com.nyrds.android.util.GuiProperties;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.UseSpell;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -38,7 +37,7 @@ public class WndSpellInfo extends Window {
 
 		Text txtCost;
 
-		txtCost = PixelScene.createText( Game.getVar(R.string.Mana_Cost) + spell.spellCost(), GuiProperties.regularFontSize());
+        txtCost = PixelScene.createText( StringsManager.getVar(R.string.Mana_Cost) + spell.spellCost(), GuiProperties.regularFontSize());
 		txtCost.x = 0;
 		txtCost.y = info.bottom() + GAP;
 		add(txtCost);

@@ -18,8 +18,8 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
@@ -190,15 +190,15 @@ public class Assets {
     public static String getBanners() {
         switch (bannersType) {
             default:
-                return "ui/" + Game.getVar(R.string.Assets_Prefix) + "banners.png";
+                return "ui/" + StringsManager.getVar(R.string.Assets_Prefix) + "banners.png";
             case 1:
-                return "ui/" + Game.getVar(R.string.Assets_Prefix) + "banners_supporter_1.png";
+                return "ui/" + StringsManager.getVar(R.string.Assets_Prefix) + "banners_supporter_1.png";
             case 2:
-                return "ui/" + Game.getVar(R.string.Assets_Prefix) + "banners_supporter_2.png";
+                return "ui/" + StringsManager.getVar(R.string.Assets_Prefix) + "banners_supporter_2.png";
             case 3:
-                return "ui/" + Game.getVar(R.string.Assets_Prefix) + "banners_supporter_3.png";
+                return "ui/" + StringsManager.getVar(R.string.Assets_Prefix) + "banners_supporter_3.png";
             case 4:
-                return "ui/" + Game.getVar(R.string.Assets_Prefix) + "banners_supporter_4.png";
+                return "ui/" + StringsManager.getVar(R.string.Assets_Prefix) + "banners_supporter_4.png";
         }
     }
 

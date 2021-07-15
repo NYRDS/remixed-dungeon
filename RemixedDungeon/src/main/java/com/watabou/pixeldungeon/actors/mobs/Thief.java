@@ -21,7 +21,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.ThiefFleeing;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.items.Gold;
@@ -72,10 +72,10 @@ public class Thief extends Mob {
 
 	@Override
 	public String getDescription() {
-		String desc = Game.getVar(R.string.Thief_Desc);
+        String desc = StringsManager.getVar(R.string.Thief_Desc);
 		val item = getBelongings().randomUnequipped();
 		if (item != ItemsList.DUMMY) {
-			desc += Utils.format( Game.getVar(R.string.Thief_Carries),
+            desc += Utils.format(StringsManager.getVar(R.string.Thief_Carries),
 						Utils.capitalize( this.getName() ), item.name() );
 		}
 		

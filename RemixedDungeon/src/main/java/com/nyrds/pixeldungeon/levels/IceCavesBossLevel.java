@@ -4,7 +4,7 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -120,18 +120,18 @@ public class IceCavesBossLevel extends BossLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 			case Terrain.GRASS:
-				return Game.getVar(R.string.IceCaves_TileGrass);
-			case Terrain.HIGH_GRASS:
-				return Game.getVar(R.string.IceCaves_TileHighGrass);
-			case Terrain.WATER:
-				return Game.getVar(R.string.Caves_TileWater);
-			case Terrain.STATUE:
+                return StringsManager.getVar(R.string.IceCaves_TileGrass);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.IceCaves_TileHighGrass);
+            case Terrain.WATER:
+                return StringsManager.getVar(R.string.Caves_TileWater);
+            case Terrain.STATUE:
 			case Terrain.STATUE_SP:
-				return Game.getVar(R.string.IceCaves_TileStatue);
-			case Terrain.UNLOCKED_EXIT:
+                return StringsManager.getVar(R.string.IceCaves_TileStatue);
+            case Terrain.UNLOCKED_EXIT:
 			case Terrain.LOCKED_EXIT:
-				return Game.getVar(R.string.PortalGate_Name);
-			default:
+                return StringsManager.getVar(R.string.PortalGate_Name);
+            default:
 				return super.tileName( tile );
 		}
 	}
@@ -140,20 +140,20 @@ public class IceCavesBossLevel extends BossLevel {
 	public String tileDesc( int tile ) {
 		switch (tile) {
 			case Terrain.ENTRANCE:
-				return Game.getVar(R.string.Caves_TileDescEntrance);
-			case Terrain.EXIT:
-				return Game.getVar(R.string.Caves_TileDescExit);
-			case Terrain.HIGH_GRASS:
-				return Game.getVar(R.string.IceCaves_TileDescHighGrass);
-			case Terrain.WALL_DECO:
-				return Game.getVar(R.string.IceCaves_TileDescDeco);
-			case Terrain.BOOKSHELF:
-				return Game.getVar(R.string.Caves_TileDescBookshelf);
-			case Terrain.STATUE:
+                return StringsManager.getVar(R.string.Caves_TileDescEntrance);
+            case Terrain.EXIT:
+                return StringsManager.getVar(R.string.Caves_TileDescExit);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.IceCaves_TileDescHighGrass);
+            case Terrain.WALL_DECO:
+                return StringsManager.getVar(R.string.IceCaves_TileDescDeco);
+            case Terrain.BOOKSHELF:
+                return StringsManager.getVar(R.string.Caves_TileDescBookshelf);
+            case Terrain.STATUE:
 			case Terrain.STATUE_SP:
-				return Game.getVar(R.string.IceCaves_TileDescStatue);
-			case Terrain.UNLOCKED_EXIT:
-				return Utils.format(Game.getVar(R.string.PortalExit_Desc), Game.getVar(R.string.PortalExit_Desc_IceCaves));
+                return StringsManager.getVar(R.string.IceCaves_TileDescStatue);
+            case Terrain.UNLOCKED_EXIT:
+                return Utils.format(StringsManager.getVar(R.string.PortalExit_Desc), StringsManager.getVar(R.string.PortalExit_Desc_IceCaves));
 			default:
 				return super.tileDesc( tile );
 		}

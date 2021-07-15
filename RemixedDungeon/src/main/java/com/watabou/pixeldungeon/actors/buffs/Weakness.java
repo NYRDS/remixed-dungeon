@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -36,13 +36,13 @@ public class Weakness extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.WeaknessBuff_Name);
-	}
+        return StringsManager.getVar(R.string.WeaknessBuff_Name);
+    }
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.WeaknessBuff_Info);
-	}
+        return StringsManager.getVar(R.string.WeaknessBuff_Info);
+    }
 	
 	@Override
 	public boolean attachTo(@NotNull Char target ) {

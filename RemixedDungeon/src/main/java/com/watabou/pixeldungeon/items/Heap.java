@@ -26,7 +26,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -157,7 +157,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 		switch (type) {
 		case MIMIC:
 			if (Mimic.spawnAt( pos, items ) != null) {
-				GLog.n( Game.getVar(R.string.Heap_Mimic) );
+                GLog.n(StringsManager.getVar(R.string.Heap_Mimic));
 				destroy();
 			} else {
 				type = Type.CHEST;

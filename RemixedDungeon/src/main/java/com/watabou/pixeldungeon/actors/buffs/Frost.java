@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
@@ -41,7 +41,7 @@ public class Frost extends FlavourBuff {
 
 		public String actionText(Item srcItem) {
 			if(srcItem instanceof Potion) {
-				return Utils.format(Game.getVar(R.string.Frost_Shatter), srcItem.toString());
+                return Utils.format(StringsManager.getVar(R.string.Frost_Shatter), srcItem.toString());
 			}
 			return null;
 		}
@@ -75,13 +75,13 @@ public class Frost extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.FrostBuff_Name);
-	}
+        return StringsManager.getVar(R.string.FrostBuff_Name);
+    }
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.FrostBuff_Info);
-	}
+        return StringsManager.getVar(R.string.FrostBuff_Info);
+    }
 	
 	public static float duration( Char ch ) {
 		Resistance r = ch.buff( Resistance.class );

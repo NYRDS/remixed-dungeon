@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.items.food;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.SpellSprite;
@@ -25,7 +25,7 @@ public class Candy extends Food {
 
 			detach( chr.getBelongings().backpack );
 
-			GLog.w(Game.getVar(R.string.Candy_Warning_1));
+            GLog.w(StringsManager.getVar(R.string.Candy_Warning_1));
 
 			chr.doOperate( TIME_TO_EAT);
 			SpellSprite.show(chr, SpellSprite.FOOD );

@@ -23,7 +23,7 @@ import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -106,11 +106,11 @@ public class Statue extends Mob {
 		val item = getItem();
 
 		if(ItemUtils.usableAsWeapon(item)) {
-			return Utils.format(Game.getVar(R.string.Statue_Desc), getItem().name());
+            return Utils.format(StringsManager.getVar(R.string.Statue_Desc), getItem().name());
 		}
 
 		if(ItemUtils.usableAsArmor(item)) {
-			return Utils.format(Game.getVar(R.string.ArmoredStatue_Desc), getItem().name());
+            return Utils.format(StringsManager.getVar(R.string.ArmoredStatue_Desc), getItem().name());
 		}
 
 		throw new TrackedRuntimeException("Can't equip statue with " + item.getEntityKind());

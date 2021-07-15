@@ -4,7 +4,7 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -33,7 +33,7 @@ public class Ascend extends CharAction {
             if (nextLevel.levelId.equals("0")) {
 
                 if (hero.getBelongings().getItem(Amulet.class) == null) {
-                    GameScene.show(new WndMessage(Game.getVar(R.string.Hero_Leave)));
+                    GameScene.show(new WndMessage(StringsManager.getVar(R.string.Hero_Leave)));
                     hero.readyAndIdle();
                 } else {
                     Dungeon.win(ResultDescriptions.getDescription(ResultDescriptions.Reason.WIN), Rankings.gameOver.WIN_HAPPY);

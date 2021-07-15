@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.potions;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 
@@ -39,8 +39,8 @@ public class PotionOfExperience extends Potion {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.PotionOfExperience_Info);
-	}
+        return StringsManager.getVar(R.string.PotionOfExperience_Info);
+    }
 	
 	@Override
 	public int price() {

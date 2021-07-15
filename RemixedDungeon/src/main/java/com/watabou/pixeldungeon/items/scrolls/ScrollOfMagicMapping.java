@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.scrolls;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -78,8 +78,8 @@ public class ScrollOfMagicMapping extends Scroll {
 		}
 
 		Dungeon.observe();
-		
-		GLog.i( Game.getVar(R.string.ScrollOfMagicMapping_Layout) );
+
+        GLog.i(StringsManager.getVar(R.string.ScrollOfMagicMapping_Layout));
 
 		if (noticed) {
 			Sample.INSTANCE.play( Assets.SND_SECRET );

@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.ml.actions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -53,7 +53,7 @@ public class Unlock extends CharAction {
 
                 Sample.INSTANCE.play(Assets.SND_UNLOCK);
             } else {
-                GLog.w(Game.getVar(R.string.Hero_LockedDoor));
+                GLog.w(StringsManager.getVar(R.string.Hero_LockedDoor));
                 hero.readyAndIdle();
             }
             return false;

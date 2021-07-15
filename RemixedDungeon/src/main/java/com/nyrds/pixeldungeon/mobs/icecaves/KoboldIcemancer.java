@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.mobs.icecaves;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -45,7 +45,7 @@ public class KoboldIcemancer extends Mob implements IZapper {
 				Buff.prolong( enemy, Slow.class, 1 );
 			}
 
-			CharUtils.checkDeathReport(this ,enemy, Game.getVar(R.string.KoboldIcemancer_Killed));
+            CharUtils.checkDeathReport(this ,enemy, StringsManager.getVar(R.string.KoboldIcemancer_Killed));
 			return true;
 		}
 		return false;

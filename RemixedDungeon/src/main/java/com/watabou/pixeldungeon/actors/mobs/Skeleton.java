@@ -23,7 +23,7 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -80,7 +80,7 @@ public class Skeleton extends UndeadMob {
 		
 		if (heroKilled) {
 			Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB), Utils.indefinite( getName() ), Dungeon.depth ) );
-			GLog.n( Game.getVar(R.string.Skeleton_Killed) );
+            GLog.n(StringsManager.getVar(R.string.Skeleton_Killed));
 		}
 	}
 }

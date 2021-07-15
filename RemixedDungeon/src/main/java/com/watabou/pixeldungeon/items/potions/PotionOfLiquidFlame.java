@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.potions;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -48,8 +48,8 @@ public class PotionOfLiquidFlame extends UpgradablePotion {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.PotionOfLiquidFlame_Info);
-	}
+        return StringsManager.getVar(R.string.PotionOfLiquidFlame_Info);
+    }
 
 	@Override
 	public int basePrice() {

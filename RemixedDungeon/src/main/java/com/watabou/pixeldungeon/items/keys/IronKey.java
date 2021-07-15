@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.keys;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
@@ -72,6 +72,6 @@ public class IronKey extends Key {
 	@NotNull
     @Override
 	public String toString() {
-		return Utils.format( Game.getVar(R.string.IronKey_FromDepth), getDepth());
+        return Utils.format(StringsManager.getVar(R.string.IronKey_FromDepth), getDepth());
 	}
 }

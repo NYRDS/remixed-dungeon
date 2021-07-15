@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -53,13 +53,13 @@ public class Light extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.LightBuff_Name);
-	}
+        return StringsManager.getVar(R.string.LightBuff_Name);
+    }
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.LightBuff_Info);
-	}
+        return StringsManager.getVar(R.string.LightBuff_Info);
+    }
 
 	@Override
 	public CharSprite.State charSpriteStatus() {

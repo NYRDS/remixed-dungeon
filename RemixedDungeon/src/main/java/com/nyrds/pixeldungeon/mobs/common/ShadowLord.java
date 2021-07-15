@@ -8,7 +8,7 @@ import com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
@@ -168,7 +168,7 @@ public class ShadowLord extends Boss implements IZapper {
 					spawnShadow();
 				}
 
-				yell(Game.getVar(R.string.ShadowLord_Intro));
+                yell(StringsManager.getVar(R.string.ShadowLord_Intro));
 			}
 		}
 
@@ -187,7 +187,7 @@ public class ShadowLord extends Boss implements IZapper {
 	@Override
 	public void die(NamedEntityKind cause) {
 		super.die(cause);
-		yell(Game.getVar(R.string.ShadowLord_Death));
+        yell(StringsManager.getVar(R.string.ShadowLord_Death));
 		Tools.makeEmptyLevel(level(), false);
 		level().unseal();
 		Badges.validateBossSlain(Badges.Badge.SHADOW_LORD_SLAIN);

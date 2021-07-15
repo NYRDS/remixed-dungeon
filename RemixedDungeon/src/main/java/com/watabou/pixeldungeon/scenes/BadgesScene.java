@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Music;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.NinePatch;
@@ -60,8 +60,8 @@ public class BadgesScene extends PixelScene {
 		panel.x = (w - pw) / 2;
 		panel.y = (h - ph) / 2;
 		add( panel );
-		
-		Text title = PixelScene.createText( Game.getVar(R.string.BadgesScene_Title), GuiProperties.titleFontSize());
+
+        Text title = PixelScene.createText(StringsManager.getVar(R.string.BadgesScene_Title), GuiProperties.titleFontSize());
 		title.hardlight( Window.TITLE_COLOR );
 		title.x = align( (w - title.width()) / 2 );
 		title.y = align( (panel.y - title.baseLine()) / 2 );

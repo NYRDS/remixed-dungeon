@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.levels.features;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
@@ -107,7 +107,7 @@ public class Chasm implements Doom {
 		Badges.validateDeathFromFalling();
 
 		Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.FALL), Dungeon.depth ) );
-		GLog.n(Game.getVar(R.string.Chasm_Info));
+        GLog.n(StringsManager.getVar(R.string.Chasm_Info));
 	}
 
 	@Override

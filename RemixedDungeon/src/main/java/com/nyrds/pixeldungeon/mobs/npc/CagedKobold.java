@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
@@ -56,7 +56,7 @@ public class CagedKobold extends ImmortalNPC {
 
 			if (exchangeItem(hero,"IceKey", "CandleOfMindVision")) {
 				Quest.complete();
-				GameScene.show( new WndQuest( this, Game.getVar(R.string.CagedKobold_Quest_End) ) );
+                GameScene.show( new WndQuest( this, StringsManager.getVar(R.string.CagedKobold_Quest_End)) );
 
 				CellEmitter.get( getPos() ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 				getSprite().killAndErase();
@@ -68,7 +68,7 @@ public class CagedKobold extends ImmortalNPC {
 			}
 			
 		} else {
-			GameScene.show( new WndQuest( this, Game.getVar(R.string.CagedKobold_Intro)) );
+            GameScene.show( new WndQuest( this, StringsManager.getVar(R.string.CagedKobold_Intro)) );
 			Quest.given = true;
 			Quest.process();
 			Journal.add( Journal.Feature.CAGEDKOBOLD.desc() );

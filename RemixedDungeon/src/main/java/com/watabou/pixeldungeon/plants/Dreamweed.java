@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.plants;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -47,9 +47,9 @@ public class Dreamweed extends Plant {
 
 	public static class Seed extends com.watabou.pixeldungeon.plants.Seed {
 		{
-			plantName = Game.getVar(R.string.Dreamweed_Name);
-			
-			name = Utils.format(Game.getVar(R.string.Plant_Seed), plantName);
+            plantName = StringsManager.getVar(R.string.Dreamweed_Name);
+
+            name = Utils.format(StringsManager.getVar(R.string.Plant_Seed), plantName);
 			image = ItemSpriteSheet.SEED_DREAMWEED;
 			
 			plantClass = Dreamweed.class;
@@ -58,8 +58,8 @@ public class Dreamweed extends Plant {
 		
 		@Override
 		public String desc() {
-			return Game.getVar(R.string.Dreamweed_Desc);
-		}
+            return StringsManager.getVar(R.string.Dreamweed_Desc);
+        }
 		
 		@Override
 		public void _execute(@NotNull Char chr, @NotNull String action ) {

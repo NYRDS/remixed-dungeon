@@ -11,8 +11,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.scenes.CellSelector;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 

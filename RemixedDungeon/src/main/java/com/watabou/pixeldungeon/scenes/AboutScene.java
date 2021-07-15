@@ -23,6 +23,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.input.Touchscreen.Touch;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
@@ -38,17 +39,17 @@ import com.watabou.pixeldungeon.ui.Window;
 public class AboutScene extends PixelScene {
 
 	private static String getTXT() {
-		return Game.getVar(R.string.AboutScene_Txt_Intro) + "\n\n"
-				+ Game.getVar(R.string.AboutScene_Code) + " " + Game.getVar(R.string.AboutScene_Code_Names) + "\n\n"
-				+ Game.getVar(R.string.AboutScene_Graphics) + " " + Game.getVar(R.string.AboutScene_Graphics_Names) + "\n\n"
-				+ Game.getVar(R.string.AboutScene_Music) + " " + Game.getVar(R.string.AboutScene_Music_Names) + "\n\n"
-				+ Game.getVar(R.string.AboutScene_Sound) + " " + Game.getVar(R.string.AboutScene_Sound_Names) + "\n\n"
-				+ Game.getVar(R.string.AboutScene_Thanks) + " " + Game.getVar(R.string.AboutScene_Thanks_Names) + "\n\n"
-				+ Game.getVar(R.string.AboutScene_Email_Us);
+        return StringsManager.getVar(R.string.AboutScene_Txt_Intro) + "\n\n"
+				+ StringsManager.getVar(R.string.AboutScene_Code) + " " + StringsManager.getVar(R.string.AboutScene_Code_Names) + "\n\n"
+				+ StringsManager.getVar(R.string.AboutScene_Graphics) + " " + StringsManager.getVar(R.string.AboutScene_Graphics_Names) + "\n\n"
+				+ StringsManager.getVar(R.string.AboutScene_Music) + " " + StringsManager.getVar(R.string.AboutScene_Music_Names) + "\n\n"
+				+ StringsManager.getVar(R.string.AboutScene_Sound) + " " + StringsManager.getVar(R.string.AboutScene_Sound_Names) + "\n\n"
+				+ StringsManager.getVar(R.string.AboutScene_Thanks) + " " + StringsManager.getVar(R.string.AboutScene_Thanks_Names) + "\n\n"
+				+ StringsManager.getVar(R.string.AboutScene_Email_Us);
 	}
 
 	private static String getTRN() {
-		return Game.getVar(R.string.AboutScene_Translation) + "\n\t" + Game.getVar(R.string.AboutScene_Translation_Names);
+        return StringsManager.getVar(R.string.AboutScene_Translation) + "\n\t" + StringsManager.getVar(R.string.AboutScene_Translation_Names);
 	}
 
 	private Text createTouchEmail(final String address, Text text2)
@@ -62,9 +63,9 @@ public class AboutScene extends PixelScene {
 				Intent intent = new Intent( Intent.ACTION_SEND);
 				intent.setType("message/rfc822");
 				intent.putExtra(Intent.EXTRA_EMAIL, new String[]{address} );
-				intent.putExtra(Intent.EXTRA_SUBJECT, Game.getVar(R.string.app_name) );
+                intent.putExtra(Intent.EXTRA_SUBJECT, StringsManager.getVar(R.string.app_name));
 
-				Game.instance().startActivity( Intent.createChooser(intent, Game.getVar(R.string.AboutScene_Snd)) );
+                Game.instance().startActivity( Intent.createChooser(intent, StringsManager.getVar(R.string.AboutScene_Snd)) );
 			}
 		};
 		add(area);
@@ -79,7 +80,7 @@ public class AboutScene extends PixelScene {
 		TouchArea area = new TouchArea( text ) {
 			@Override
 			protected void onClick( Touch touch ) {
-				Game.instance().openUrl(Game.getVar(R.string.AboutScene_OurSite), address);
+                Game.instance().openUrl(StringsManager.getVar(R.string.AboutScene_OurSite), address);
 			}
 		};
 		add(area);
@@ -113,12 +114,12 @@ public class AboutScene extends PixelScene {
 		
 		text.x = align( (Camera.main.width - text.width()) / 2 );
 		text.y = align( (Camera.main.height - text.height()) / 3 );
-		
 
-		Text email = createTouchEmail(Game.getVar(R.string.AboutScene_Mail), text);
 
-		Text visit = createText(Game.getVar(R.string.AboutScene_OurSite), email);
-		Text site  = createTouchLink(Game.getVar(R.string.AboutScene_Lnk), visit);
+        Text email = createTouchEmail(StringsManager.getVar(R.string.AboutScene_Mail), text);
+
+        Text visit = createText(StringsManager.getVar(R.string.AboutScene_OurSite), email);
+        Text site  = createTouchLink(StringsManager.getVar(R.string.AboutScene_Lnk), visit);
 		
 		createText("\n"+ getTRN(), site);
 		

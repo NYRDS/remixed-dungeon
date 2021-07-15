@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.windows.Selector;
 import com.watabou.pixeldungeon.windows.WndMenuCommon;
 
@@ -55,6 +55,6 @@ public class WndGameplaySettings extends WndMenuCommon {
     }
 
     private String moveTimeoutText() {
-        return String.format(Game.getVar(R.string.WndSettings_moveTimeout),Double.toString(GamePreferences.getMoveTimeout()/1000));
+        return String.format(StringsManager.getVar(R.string.WndSettings_moveTimeout),Double.toString(GamePreferences.getMoveTimeout()/1000));
     }
 }

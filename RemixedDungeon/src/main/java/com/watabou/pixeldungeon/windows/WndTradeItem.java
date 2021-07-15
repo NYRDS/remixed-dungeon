@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.VBox;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -77,7 +77,7 @@ public class WndTradeItem extends Window {
 
 		if (item.quantity() == 1) {
 
-			RedButton btn = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_Sell), priceAll ) ) {
+            RedButton btn = new RedButton( Utils.format(StringsManager.getVar(R.string.WndTradeItem_Sell), priceAll ) ) {
 				@Override
 				protected void onClick() {
 					sell( item,1 );
@@ -92,7 +92,7 @@ public class WndTradeItem extends Window {
 				if (item.quantity() > tradeQuantity[i]) {
 					final int finalI = i;
 					final int priceFor = priceAll/item.quantity() * tradeQuantity[i];
-					RedButton btnSellN = new RedButton(Utils.format(Game.getVar(R.string.WndTradeItem_SellN),
+                    RedButton btnSellN = new RedButton(Utils.format(StringsManager.getVar(R.string.WndTradeItem_SellN),
 							tradeQuantity[finalI],
 							priceFor))
 					{
@@ -106,7 +106,7 @@ public class WndTradeItem extends Window {
 				}
 			}
 
-			RedButton btnSellAll = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_SellAll), priceAll ) ) {
+            RedButton btnSellAll = new RedButton( Utils.format(StringsManager.getVar(R.string.WndTradeItem_SellAll), priceAll ) ) {
 				@Override
 				protected void onClick() {
 					sell( item, item.quantity() );
@@ -116,7 +116,7 @@ public class WndTradeItem extends Window {
 			vbox.add( btnSellAll );
 		}
 
-		RedButton btnCancel = new RedButton( Game.getVar(R.string.WndTradeItem_Cancel) ) {
+        RedButton btnCancel = new RedButton(StringsManager.getVar(R.string.WndTradeItem_Cancel)) {
 			@Override
 			protected void onClick() {
 				hide();
@@ -139,7 +139,7 @@ public class WndTradeItem extends Window {
 
 		if (item.quantity() == 1) {
 
-			RedButton btnBuy = new RedButton( Utils.format( Game.getVar(R.string.WndTradeItem_Buy), priceAll ) ) {
+            RedButton btnBuy = new RedButton( Utils.format(StringsManager.getVar(R.string.WndTradeItem_Buy), priceAll ) ) {
 				@Override
 				protected void onClick() {
 					buy( item,1 );
@@ -154,7 +154,7 @@ public class WndTradeItem extends Window {
 				if (item.quantity() > tradeQuantity[i]) {
 					final int priceFor = priceAll / item.quantity() * tradeQuantity[i];
 					final int finalI = i;
-					RedButton btnBuyN = new RedButton(Utils.format(Game.getVar(R.string.WndTradeItem_BuyN),
+                    RedButton btnBuyN = new RedButton(Utils.format(StringsManager.getVar(R.string.WndTradeItem_BuyN),
 							tradeQuantity[finalI],
 							priceFor)) {
 						@Override
@@ -168,7 +168,7 @@ public class WndTradeItem extends Window {
 				}
 			}
 
-			RedButton btnBuyAll = new RedButton(Utils.format(Game.getVar(R.string.WndTradeItem_BuyAll), priceAll)) {
+            RedButton btnBuyAll = new RedButton(Utils.format(StringsManager.getVar(R.string.WndTradeItem_BuyAll), priceAll)) {
 				@Override
 				protected void onClick() {
 					buy(item, item.quantity());
@@ -179,7 +179,7 @@ public class WndTradeItem extends Window {
 			btnBuyAll.enable(priceAll <= customer.gold());
 			vbox.add(btnBuyAll);
 		}
-		RedButton btnCancel = new RedButton(Game.getVar(R.string.WndTradeItem_Cancel)) {
+        RedButton btnCancel = new RedButton(StringsManager.getVar(R.string.WndTradeItem_Cancel)) {
 			@Override
 			protected void onClick() {
 				hide();
@@ -197,8 +197,8 @@ public class WndTradeItem extends Window {
 		// Title
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite( item ) );
-		titlebar.label( buying ?
-			Utils.format( Game.getVar(R.string.WndTradeItem_Sale), item.toString(), price( item, true ) ) :
+        titlebar.label( buying ?
+			Utils.format(StringsManager.getVar(R.string.WndTradeItem_Sale), item.toString(), price( item, true ) ) :
 			Utils.capitalize( item.toString() ) );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
@@ -242,7 +242,7 @@ public class WndTradeItem extends Window {
 		int price = price( boughtItem, true );
 		customer.spendGold(price);
 
-		GLog.i( Game.getVar(R.string.WndTradeItem_Bought), boughtItem.name(), price );
+        GLog.i(StringsManager.getVar(R.string.WndTradeItem_Bought), boughtItem.name(), price );
 
 		if (!boughtItem.doPickUp( customer )) {
 			boughtItem.doDrop(customer);
@@ -271,7 +271,7 @@ public class WndTradeItem extends Window {
 
 		new Gold( price ).doPickUp( customer );
 		hide();
-		GLog.i( Game.getVar(R.string.WndTradeItem_Sold), soldItem.name(), price );
+        GLog.i(StringsManager.getVar(R.string.WndTradeItem_Sold), soldItem.name(), price );
 
 		if(soldItem!=item) {
 			GameScene.show(new WndTradeItem(item,shopkeeper,false));

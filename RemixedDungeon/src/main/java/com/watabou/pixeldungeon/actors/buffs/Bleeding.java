@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.effects.Splash;
@@ -38,13 +38,13 @@ public class Bleeding extends Buff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.BleedingBuff_Name);
-	}
+        return StringsManager.getVar(R.string.BleedingBuff_Name);
+    }
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.BleedingBuff_Info);
-	}
+        return StringsManager.getVar(R.string.BleedingBuff_Info);
+    }
 	@Override
 	public boolean act() {
 		if (target.isAlive()) {
@@ -61,7 +61,7 @@ public class Bleeding extends Buff {
 				
 				if (target == Dungeon.hero && !target.isAlive()) {
 					Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.BLEEDING), Dungeon.depth ) );
-					GLog.n(Game.getVar(R.string.Bleeding_Death));
+                    GLog.n(StringsManager.getVar(R.string.Bleeding_Death));
 				}
 				
 				spend( TICK );
@@ -76,6 +76,6 @@ public class Bleeding extends Buff {
 
 	@Override
 	public void attachVisual() {
-		target.getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaBleeding));
+        target.getSprite().showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaBleeding));
 	}
 }

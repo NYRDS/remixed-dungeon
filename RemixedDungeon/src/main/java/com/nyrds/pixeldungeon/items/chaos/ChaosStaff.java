@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.items.chaos;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -106,11 +106,11 @@ public class ChaosStaff extends Wand {
 
     @Override
     public String name() {
-        return Game.getVar(R.string.ChaosStaff_Name);
+        return StringsManager.getVar(R.string.ChaosStaff_Name);
     }
 
     @Override
     public String info() {
-        return Game.getVar(R.string.ChaosStaff_Info);
+        return StringsManager.getVar(R.string.ChaosStaff_Info);
     }
 }

@@ -26,7 +26,7 @@ import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Dungeon;
@@ -177,7 +177,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
             return;
         }
 
-        GameScene.selectItem(Dungeon.hero, this, WndBag.Mode.QUICKSLOT, Game.getVar(R.string.QuickSlot_SelectedItem));
+        GameScene.selectItem(Dungeon.hero, this, WndBag.Mode.QUICKSLOT, StringsManager.getVar(R.string.QuickSlot_SelectedItem));
     }
 
     @Override
@@ -185,7 +185,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         if (Dungeon.hero.isSpellUser()) {
             GameScene.selectSpell(this);
         } else {
-            GameScene.selectItem(Dungeon.hero, this, WndBag.Mode.QUICKSLOT, Game.getVar(R.string.QuickSlot_SelectedItem));
+            GameScene.selectItem(Dungeon.hero, this, WndBag.Mode.QUICKSLOT, StringsManager.getVar(R.string.QuickSlot_SelectedItem));
         }
         return true;
     }
@@ -389,7 +389,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     static public void selectSlotFor(Item item) {
         objectForSlot = item;
-        prompt = new Toast(Game.getVar(R.string.QuickSlot_SelectSlot)) {
+        prompt = new Toast(StringsManager.getVar(R.string.QuickSlot_SelectSlot)) {
             @Override
             protected void onClose() {
                 GameLoop.scene().remove(this);

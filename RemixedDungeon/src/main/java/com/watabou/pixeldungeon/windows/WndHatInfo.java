@@ -6,6 +6,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.gfx.SystemText;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Image;
@@ -66,9 +67,9 @@ public class WndHatInfo extends Window {
 		add(info);
 
 		//Button
-		String buttonText = Game.getVar(R.string.WndHats_BuyButton);
+        String buttonText = StringsManager.getVar(R.string.WndHats_BuyButton);
 		if(item.haveIt() || price.isEmpty()) {
-			buttonText = Game.getVar(R.string.WndHats_BackButton);
+            buttonText = StringsManager.getVar(R.string.WndHats_BackButton);
 		}
 
 		TextButton rb = new RedButton(buttonText) {

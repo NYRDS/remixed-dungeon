@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.quest;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
@@ -110,7 +110,7 @@ public class Pickaxe extends Weapon {
 					return;
 				}
 			}
-			GLog.w( Game.getVar(R.string.Pickaxe_NoVein) );
+            GLog.w(StringsManager.getVar(R.string.Pickaxe_NoVein));
 			
 		} else {
 			super._execute(chr, action );
@@ -142,6 +142,6 @@ public class Pickaxe extends Weapon {
 	
 	@Override
 	public String info() {
-		return Game.getVar(R.string.Pickaxe_Info);
-	}
+        return StringsManager.getVar(R.string.Pickaxe_Info);
+    }
 }

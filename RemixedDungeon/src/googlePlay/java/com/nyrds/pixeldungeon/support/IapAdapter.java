@@ -16,11 +16,12 @@ import com.android.billingclient.api.PurchaseHistoryResponseListener;
 import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
-import com.nyrds.platform.EventCollector;
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.market.GoogleIapCheck;
+import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -184,7 +185,7 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
 
     private boolean verifySignature(String signedData, String signature) {
         try {
-            return GoogleIapCheck.verifyPurchase(Game.getVar(R.string.iapKey), signedData, signature);
+            return GoogleIapCheck.verifyPurchase(StringsManager.getVar(R.string.iapKey), signedData, signature);
         } catch (IOException e) {
             EventCollector.logException(e, "GoogleIap.verifySignature");
             return false;

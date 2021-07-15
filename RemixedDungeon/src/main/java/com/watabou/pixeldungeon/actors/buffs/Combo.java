@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -35,13 +35,13 @@ public class Combo extends Buff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.ComboBuff_Name);
-	}
+        return StringsManager.getVar(R.string.ComboBuff_Name);
+    }
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.ComboBuff_Info);
-	}
+        return StringsManager.getVar(R.string.ComboBuff_Info);
+    }
 	public int hit( Char enemy, int damage ) {
 		
 		count++;
@@ -49,8 +49,8 @@ public class Combo extends Buff {
 		if (count >= 3) {
 			
 			Badges.validateMasteryCombo( count );
-			
-			GLog.p( Game.getVar(R.string.Combo_Combo), count );
+
+            GLog.p(StringsManager.getVar(R.string.Combo_Combo), count );
 			postpone( 1.41f - count / 10f );
 			return (int)(damage * (count - 2) / 5f);
 			

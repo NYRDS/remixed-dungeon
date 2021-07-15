@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -68,7 +68,7 @@ public class Bounce extends Glyph {
 	
 	@Override
 	public String name( String armorName) {
-		return Utils.format( Game.getVar(R.string.Bounce_Txt), armorName );
+        return Utils.format(StringsManager.getVar(R.string.Bounce_Txt), armorName );
 	}
 
 }

@@ -1,13 +1,13 @@
 package com.nyrds.pixeldungeon.items.food;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 
 abstract public class Milkberry extends Mushroom {
 	{
 		image = 4;
-		message = Game.getVar(R.string.Mushroom_Eat_Message);
+        message = StringsManager.getVar(R.string.Mushroom_Eat_Message);
 	}
 
 	@Override

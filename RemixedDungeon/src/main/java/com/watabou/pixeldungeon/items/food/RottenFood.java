@@ -3,7 +3,7 @@ package com.watabou.pixeldungeon.items.food;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -24,7 +24,7 @@ import org.jetbrains.annotations.NotNull;
 abstract public class RottenFood extends Food{
 	{
 		energy  = (Hunger.STARVING - Hunger.HUNGRY)/2;
-		message = Game.getVar(R.string.RottenFood_Message);
+        message = StringsManager.getVar(R.string.RottenFood_Message);
 	}
 	
 	private boolean molder(int cell){

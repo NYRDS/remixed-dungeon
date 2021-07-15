@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -12,7 +12,7 @@ public class ShamanArmor extends ElfArmor {
 
 	public ShamanArmor()
 	{
-		name = Game.getVar(R.string.ElfArmor_Name);
+        name = StringsManager.getVar(R.string.ElfArmor_Name);
 		image = 19;
 		hasHelmet = true;
 		coverHair = true;
@@ -22,7 +22,7 @@ public class ShamanArmor extends ElfArmor {
 		if (hero.getSubClass() == HeroSubClass.SHAMAN) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( Game.getVar(R.string.ElfArmor_NotElf) );
+            GLog.w(StringsManager.getVar(R.string.ElfArmor_NotElf));
 			return false;
 		}
 	}

@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.CellSelector;
@@ -47,15 +47,15 @@ public class RogueArmor extends ClassArmor {
 		if (hero.getHeroClass() == HeroClass.ROGUE) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( Game.getVar(R.string.RogueArmor_NotRogue) );
+            GLog.w(StringsManager.getVar(R.string.RogueArmor_NotRogue));
 			return false;
 		}
 	}
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.RogueArmor_Desc);
-	}
+        return StringsManager.getVar(R.string.RogueArmor_Desc);
+    }
 
 	protected static CellSelector.Listener teleporter = new TeleportCellListener();
 

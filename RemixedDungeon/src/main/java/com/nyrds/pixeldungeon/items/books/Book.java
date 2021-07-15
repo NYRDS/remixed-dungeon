@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.items.books;
 
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.items.Item;
@@ -33,7 +33,7 @@ abstract public class Book extends Item {
 		if (action.equals( CommonActions.AC_READ )) {
 
 			if (chr.hasBuff( Blindness.class )) {
-				GLog.w(Game.getVar(R.string.Codex_Blinded));
+                GLog.w(StringsManager.getVar(R.string.Codex_Blinded));
 			} else {
 				doRead(chr);
 			}

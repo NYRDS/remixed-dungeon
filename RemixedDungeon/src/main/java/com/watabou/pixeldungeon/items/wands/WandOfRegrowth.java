@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.wands;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -61,7 +61,7 @@ public class WandOfRegrowth extends SimpleWand  {
 			GameScene.add( Blob.seed( cell, (effectiveLevel() + 2) * 20, Regrowth.class ) );
 			
 		} else {
-			GLog.i(Game.getVar(R.string.WandOfRegrowth_Info1));
+            GLog.i(StringsManager.getVar(R.string.WandOfRegrowth_Info1));
 		}
 	}
 	
@@ -72,6 +72,6 @@ public class WandOfRegrowth extends SimpleWand  {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.WandOfRegrowth_Info);
-	}
+        return StringsManager.getVar(R.string.WandOfRegrowth_Info);
+    }
 }

@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Challenges;
@@ -41,8 +41,8 @@ public class WndChallenges extends Window {
 		super();
 		
 		this.editable = editable;
-		
-		Text title = PixelScene.createText( Game.getVar(R.string.WndChallenges_Title), GuiProperties.titleFontSize() );
+
+        Text title = PixelScene.createText(StringsManager.getVar(R.string.WndChallenges_Title), GuiProperties.titleFontSize() );
 		title.hardlight( TITLE_COLOR );
 		title.x = PixelScene.align( camera, (WIDTH - title.width()) / 2 );
 		add( title );
@@ -50,7 +50,7 @@ public class WndChallenges extends Window {
 		boxes = new ArrayList<>();
 		
 		float pos = title.height() + GAP;
-		final String[] challenges = Game.getVars(R.array.Challenges_Names);
+		final String[] challenges = StringsManager.getVars(R.array.Challenges_Names);
 
 		for (int i=0; i < Challenges.MASKS.length; i++) {
 

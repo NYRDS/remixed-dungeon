@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -73,7 +73,7 @@ class SpellCharSelector implements CellSelector.Listener {
 
     @Override
     public String prompt() {
-        return Game.getVar(R.string.Spell_SelectAChar);
+        return StringsManager.getVar(R.string.Spell_SelectAChar);
     }
 
     @Override

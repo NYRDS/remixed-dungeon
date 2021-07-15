@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.scrolls;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -124,7 +124,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 		}
 
 		image = handler.index( this );
-		rune  = Game.getVars(R.array.Scroll_Runes)[ItemStatusHandler.indexByImage(image,images)];
+		rune  = StringsManager.getVars(R.array.Scroll_Runes)[ItemStatusHandler.indexByImage(image,images)];
 	}
 
 	@NotNull
@@ -144,7 +144,7 @@ public abstract class Scroll extends Item implements UnknownItem {
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_READ )) {
 			if (chr.hasBuff( Blindness.class )) {
-				GLog.w( Game.getVar(R.string.Scroll_Blinded) );
+                GLog.w(StringsManager.getVar(R.string.Scroll_Blinded));
 			} else {
 				detach( chr.getBelongings().backpack );
 				doRead(chr);
@@ -177,12 +177,12 @@ public abstract class Scroll extends Item implements UnknownItem {
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : Utils.format(Game.getVar(R.string.Scroll_Name), rune);
+        return isKnown() ? name : Utils.format(StringsManager.getVar(R.string.Scroll_Name), rune);
 	}
 	
 	@Override
 	public String info() {
-		return isKnown() ? desc() : Utils.format(Game.getVar(R.string.Scroll_Info), rune);
+        return isKnown() ? desc() : Utils.format(StringsManager.getVar(R.string.Scroll_Info), rune);
 	}
 	
 	@Override

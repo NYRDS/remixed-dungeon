@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.actors.hero;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Assets;
@@ -90,12 +90,12 @@ public enum HeroSubClass implements CharModifier {
 	}
 
 	public String title() {
-		return Game.getVar(titleId);
-	}
+        return StringsManager.getVar(titleId);
+    }
 
 	public String desc() {
-		return Game.getVar(descId);
-	}
+        return StringsManager.getVar(descId);
+    }
 
 	private static final String SUBCLASS = "subClass";
 

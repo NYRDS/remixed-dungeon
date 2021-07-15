@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.Attack;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.ml.actions.Move;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -86,6 +86,6 @@ public class ControlledAi extends MobAi implements AiState {
 
     @Override
     public String status(Char me) {
-        return Utils.format(Game.getVar(R.string.Mob_StaControlledStatus), me.name());
+        return Utils.format(StringsManager.getVar(R.string.Mob_StaControlledStatus), me.name());
     }
 }

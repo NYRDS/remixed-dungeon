@@ -22,7 +22,7 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Badges.Badge;
@@ -87,7 +87,7 @@ public class Tengu extends Boss implements IZapper {
 		
 		Badges.validateBossSlain(Badge.BOSS_SLAIN_2);
 
-		say(Game.getVar(R.string.Tengu_Info1));
+        say(StringsManager.getVar(R.string.Tengu_Info1));
 	}
 	
 	@Override
@@ -163,9 +163,9 @@ public class Tengu extends Boss implements IZapper {
 	@Override
 	public void notice() {
 		super.notice();
-		String tenguYell = Game.getVar(R.string.Tengu_Info2);
+        String tenguYell = StringsManager.getVar(R.string.Tengu_Info2);
 		if (Dungeon.hero.getHeroClass().getGender() == Utils.FEMININE) {
-			tenguYell = Game.getVar(R.string.Tengu_Info3);
+            tenguYell = StringsManager.getVar(R.string.Tengu_Info3);
 		}
 		yell(Utils.format(tenguYell, Dungeon.hero.getHeroClass().title()));
 	}	

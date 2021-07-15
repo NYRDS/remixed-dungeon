@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndInGameUiSettings;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -33,8 +34,7 @@ public class WndSettingsInGame extends WndMenuCommon {
 	{
 		addSoundControls(menuItems);
 
-		menuItems.add( new MenuCheckBox(Game
-				.getVar(R.string.WndSettings_Brightness), GamePreferences.brightness()) {
+        menuItems.add( new MenuCheckBox(StringsManager.getVar(R.string.WndSettings_Brightness), GamePreferences.brightness()) {
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -44,8 +44,7 @@ public class WndSettingsInGame extends WndMenuCommon {
 
 		menuItems.add(createZoomButtons());
 
-		menuItems.add(new MenuButton(Game
-				.getVar(R.string.WndSettings_InGameUiSettings)){
+        menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_InGameUiSettings)){
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -54,7 +53,7 @@ public class WndSettingsInGame extends WndMenuCommon {
 		});
 
 		if(Game.instance().playGames.isConnected()) {
-			menuItems.add(new MenuButton(Game.getVar(R.string.WndSettings_RecordVideo)) {
+            menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_RecordVideo)) {
 				@Override
 				protected void onClick() {
 					super.onClick();
@@ -74,8 +73,7 @@ public class WndSettingsInGame extends WndMenuCommon {
 	}
 
 	private Selector createZoomButtons() {
-		return new Selector(WIDTH, BUTTON_HEIGHT, Game
-				.getVar(R.string.WndSettings_ZoomDef), new Selector.PlusMinusDefault() {
+        return new Selector(WIDTH, BUTTON_HEIGHT, StringsManager.getVar(R.string.WndSettings_ZoomDef), new Selector.PlusMinusDefault() {
 
 			@Override
 			public void onPlus(Selector s) {

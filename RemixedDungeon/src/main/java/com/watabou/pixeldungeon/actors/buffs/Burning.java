@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -54,7 +54,7 @@ public class Burning extends Buff implements Doom {
 		}
 		@Override
 		public String actionText(Item srcItem) {
-			return Utils.format(Game.getVar(R.string.Burning_Burns), srcItem.toString());
+            return Utils.format(StringsManager.getVar(R.string.Burning_Burns), srcItem.toString());
 		}
 	}
 		
@@ -102,13 +102,13 @@ public class Burning extends Buff implements Doom {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.BurningBuff_Name);
-	}
+        return StringsManager.getVar(R.string.BurningBuff_Name);
+    }
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.BurningBuff_Info);
-	}
+        return StringsManager.getVar(R.string.BurningBuff_Info);
+    }
 
 	public static float duration( Char ch ) {
 		Resistance r = ch.buff( Resistance.class );
@@ -121,7 +121,7 @@ public class Burning extends Buff implements Doom {
 		Badges.validateDeathFromFire();
 		
 		Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.BURNING), Dungeon.depth ) );
-		GLog.n( Game.getVar(R.string.Burning_Death) );
+        GLog.n(StringsManager.getVar(R.string.Burning_Death));
 	}
 
 	@Override

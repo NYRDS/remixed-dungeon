@@ -4,7 +4,7 @@ import com.nyrds.pixeldungeon.ai.KillOrder;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.MoveOrder;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
@@ -26,7 +26,8 @@ public class Order extends CharAction {
     @Override
     public boolean act(Char hero) {
         hero.spend(TICK/10);
-        hero.readyAndIdle();
+        hero.curAction = null;
+        hero.busy();
         hero.selectCell(new OrderCellSelector());
         return false;
     }
@@ -34,6 +35,8 @@ public class Order extends CharAction {
     private class OrderCellSelector implements CellSelector.Listener {
         @Override
         public void onSelect(Integer cell, @NotNull Char selector) {
+            selector.next();
+
             if(cell == null) {
                 return;
             }
@@ -53,12 +56,12 @@ public class Order extends CharAction {
                 return;
             }
 
-            target.say(Utils.format(Game.getVar(R.string.Mob_CantDoIt)));
+            target.say(Utils.format(StringsManager.getVar(R.string.Mob_CantDoIt)));
         }
 
         @Override
         public String prompt() {
-            return Utils.capitalize(Utils.format(Game.getVar(R.string.Mob_ReadyForOrder), target.getName()));
+            return Utils.capitalize(Utils.format(StringsManager.getVar(R.string.Mob_ReadyForOrder), target.getName()));
         }
 
         @Override

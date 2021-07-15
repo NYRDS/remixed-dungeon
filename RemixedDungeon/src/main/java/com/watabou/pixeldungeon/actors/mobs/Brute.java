@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.Gold;
@@ -71,8 +71,8 @@ public class Brute extends Mob {
 			enraged = true;
 			spend( TICK );
 			if (CharUtils.isVisible(this)) {
-				GLog.w( Game.getVar(R.string.Brute_Enraged), getName() );
-				getSprite().showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Brute_StaEnraged));
+                GLog.w(StringsManager.getVar(R.string.Brute_Enraged), getName() );
+                getSprite().showStatus( CharSprite.NEGATIVE, StringsManager.getVar(R.string.Brute_StaEnraged));
 			}
 		}
 	}

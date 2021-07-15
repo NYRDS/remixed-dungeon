@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -42,7 +42,7 @@ public class ArmorKit extends Item {
 	private static final String AC_APPLY = "ArmorKit_ACAplly";
 	
 	{
-		name = Game.getVar(R.string.ArmorKit_Name);
+        name = StringsManager.getVar(R.string.ArmorKit_Name);
 		image = ItemSpriteSheet.KIT;
 	}
 	
@@ -56,7 +56,7 @@ public class ArmorKit extends Item {
 	@Override
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_APPLY)) {
-			GameScene.selectItem(chr, itemSelector, WndBag.Mode.ARMOR, Game.getVar(R.string.ArmorKit_SelectArmor));
+            GameScene.selectItem(chr, itemSelector, WndBag.Mode.ARMOR, StringsManager.getVar(R.string.ArmorKit_SelectArmor));
 		} else {
 			super._execute(chr, action );
 		}
@@ -79,7 +79,7 @@ public class ArmorKit extends Item {
 
 		owner.getSprite().centerEmitter().start( Speck.factory( Speck.KIT ), 0.05f, 10 );
 
-		GLog.w( Game.getVar(R.string.ArmorKit_Upgraded), armor.name() );
+        GLog.w(StringsManager.getVar(R.string.ArmorKit_Upgraded), armor.name() );
 		
 		Armor classArmor = ClassArmor.upgrade( owner, armor );
 		if (owner.getItemFromSlot(Belongings.Slot.ARMOR) == armor) {

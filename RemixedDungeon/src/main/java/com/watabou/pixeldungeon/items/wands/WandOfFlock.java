@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.wands;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -98,8 +98,8 @@ public class WandOfFlock extends SimpleWand  {
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.WandOfFlock_Info);
-	}
+        return StringsManager.getVar(R.string.WandOfFlock_Info);
+    }
 
 	public static class Sheep extends NPC {
 		
@@ -133,7 +133,7 @@ public class WandOfFlock extends SimpleWand  {
 
 		@Override
 		public boolean interact(final Char hero) {
-			say( Random.element(Game.getVars(R.array.WandOfFlock_SheepBaa)) );
+            say( Random.element(StringsManager.getVars(R.array.WandOfFlock_SheepBaa)) );
 			return false;
 		}
 	}

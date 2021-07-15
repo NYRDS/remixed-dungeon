@@ -34,6 +34,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
@@ -351,30 +352,30 @@ public class GameScene extends PixelScene {
         add(log);
 
         if (Dungeon.depth < Statistics.deepestFloor) {
-            GLog.i(Game.getVar(R.string.GameScene_WelcomeBack), Dungeon.depth);
+            GLog.i(StringsManager.getVar(R.string.GameScene_WelcomeBack), Dungeon.depth);
         } else {
-            GLog.i(Game.getVar(R.string.GameScene_Welcome), Dungeon.depth);
+            GLog.i(StringsManager.getVar(R.string.GameScene_Welcome), Dungeon.depth);
             Sample.INSTANCE.play(Assets.SND_DESCEND);
         }
         switch (level.getFeeling()) {
             case CHASM:
-                GLog.w(Game.getVar(R.string.GameScene_Chasm));
+                GLog.w(StringsManager.getVar(R.string.GameScene_Chasm));
                 break;
             case WATER:
-                GLog.w(Game.getVar(R.string.GameScene_Water));
+                GLog.w(StringsManager.getVar(R.string.GameScene_Water));
                 break;
             case GRASS:
-                GLog.w(Game.getVar(R.string.GameScene_Grass));
+                GLog.w(StringsManager.getVar(R.string.GameScene_Grass));
                 break;
             default:
         }
 
         if (level instanceof RegularLevel
                 && ((RegularLevel) level).secretDoors > Random.IntRange(3, 4)) {
-            GLog.w(Game.getVar(R.string.GameScene_Secrets));
+            GLog.w(StringsManager.getVar(R.string.GameScene_Secrets));
         }
         if (Dungeon.nightMode && !Dungeon.bossLevel()) {
-            GLog.w(Game.getVar(R.string.GameScene_NightMode));
+            GLog.w(StringsManager.getVar(R.string.GameScene_NightMode));
         }
 
         busy = new BusyIndicator();
@@ -433,7 +434,7 @@ public class GameScene extends PixelScene {
 
             String msg = "";
             if(realtime) {
-                msg += Game.getVar(R.string.WrnExperimental_realtime);
+                msg += StringsManager.getVar(R.string.WrnExperimental_realtime);
             } else {
                 if (moveTimeout < Double.POSITIVE_INFINITY) {
                     msg += Utils.format(R.string.WrnExperimental_moveTimeout, (int)moveTimeout);
@@ -441,10 +442,10 @@ public class GameScene extends PixelScene {
             }
 
             msg += "\n\n";
-            msg += Game.getVar(R.string.WnrExperimental_hint);
+            msg += StringsManager.getVar(R.string.WnrExperimental_hint);
 
             add(new WndTitledMessage(Icons.get(Icons.ALERT),
-                    Game.getVar(R.string.WrnExperimental_title),
+                    StringsManager.getVar(R.string.WrnExperimental_title),
                     msg
             ));
         }

@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -48,6 +48,6 @@ public class Artifact extends EquipableItem {
 
 	@Override
 	public void equippedCursed() {
-		GLog.n(Utils.format(Game.getVar(R.string.Ring_Info2), name()));
+        GLog.n(Utils.format(StringsManager.getVar(R.string.Ring_Info2), name()));
 	}
 }

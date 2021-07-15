@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -41,13 +41,13 @@ public class Poison extends Buff implements Doom {
 
 	@Override
 	public String name() {
-		return Game.getVar(R.string.PoisonBuff_Name);
-	}
+        return StringsManager.getVar(R.string.PoisonBuff_Name);
+    }
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.PoisonBuff_Info);
-	}
+        return StringsManager.getVar(R.string.PoisonBuff_Info);
+    }
 
 	@Override
 	public void charAct() {
@@ -75,12 +75,12 @@ public class Poison extends Buff implements Doom {
 		Badges.validateDeathFromPoison();
 		
 		Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.POISON), Dungeon.depth ) );
-		GLog.n(Game.getVar(R.string.Poison_Death));
+        GLog.n(StringsManager.getVar(R.string.Poison_Death));
 	}
 
 	@Override
 	public void attachVisual() {
 		CellEmitter.center(target.getPos()).burst(PoisonParticle.SPLASH, 5);
-		target.getSprite().showStatus(CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaPoisoned));
+        target.getSprite().showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaPoisoned));
 	}
 }

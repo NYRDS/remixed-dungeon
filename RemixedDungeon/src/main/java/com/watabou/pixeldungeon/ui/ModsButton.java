@@ -9,6 +9,7 @@ import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.DownloadStateListener;
 import com.nyrds.util.DownloadTask;
 import com.nyrds.util.GuiProperties;
@@ -92,7 +93,7 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
             return;
         }
 
-        scene.add(new WndMessage(Game.getVar(R.string.Mods_Disclaimer)) {
+        scene.add(new WndMessage(StringsManager.getVar(R.string.Mods_Disclaimer)) {
                              @Override
                              public void hide() {
                                  super.hide();

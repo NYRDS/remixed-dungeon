@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class WitchdoctorArmor extends GnollArmor {
 	
 	{
-		name = Game.getVar(R.string.GnollArmor_Name);
+        name = StringsManager.getVar(R.string.GnollArmor_Name);
 		image = 27;
 		hasHelmet = true;
 		coverHair = true;
@@ -25,7 +25,7 @@ public class WitchdoctorArmor extends GnollArmor {
 		if (hero.getHeroClass() == HeroClass.GNOLL) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( Game.getVar(R.string.GnollArmor_NotGnoll) );
+            GLog.w(StringsManager.getVar(R.string.GnollArmor_NotGnoll));
 			return false;
 		}
 	}

@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 
 
 public class MailArmor extends Armor {
@@ -30,6 +30,6 @@ public class MailArmor extends Armor {
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.MailArmor_Desc);
-	}
+        return StringsManager.getVar(R.string.MailArmor_Desc);
+    }
 }

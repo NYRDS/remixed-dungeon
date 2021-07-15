@@ -6,24 +6,49 @@ trigger_map:
 - push_branch: "*"
   workflow: primary
 - pull_request_source_branch: "*"
-  workflow: primary
+  workflow: PR
+- tag: "*fix*"
+  workflow: fix
+- tag: "*"
+  workflow: deploy
 workflows:
   primary:
     steps:
-    - activate-ssh-key@3.1.1:
+    - activate-ssh-key:
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-    - git-clone@4.0.5: {}
-    - cache-pull@2.0.1: {}
-    - install-missing-android-tools@2.0.6: {}
-    - gradle-runner@1.8.0:
+    - git-clone: {}
+    - script:
+        inputs:
+        - content: |+
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+            rm RemixedDungeon/google-services.json
+            curl $BITRISEIO_GOOGLE_SERVICES_URL -o RemixedDungeon/google-services.json
+            cd RemixedDungeon/src/main/res/values
+            rm strings_api_signature.xml
+            curl $BITRISEIO_API_SIGNATURES_URL -o strings_api_signature.xml
+
+
+    - cache-pull: {}
+    - install-missing-android-tools:
+        inputs:
+        - ndk_revision: ''
+        is_always_run: true
+    - gradle-runner:
         inputs:
         - gradle_file: "$GRADLE_BUILD_FILE_PATH"
-        - gradle_task: assembleRelease
+        - gradle_task: assembleAndroidGooglePlayRelease
         - gradlew_path: "$GRADLEW_PATH"
-    - sign-apk@1.2.0:
+    - sign-apk:
         inputs:
+        - use_apk_signer: 'true'
+        - signer_scheme: v3
+        - debuggable_permitted: 'false'
         - apk_path: "$BITRISE_APK_PATH_LIST"
-    - script@1.1.5:
+    - script:
         inputs:
         - working_dir: "$BITRISE_DEPLOY_DIR"
         - content: |-
@@ -35,25 +60,66 @@ workflows:
 
             # write your script here
             rm $(ls -I "*signed*" )
-    - deploy-to-bitrise-io@1.3.10: {}
-    - cache-push@2.0.3: {}
+    - deploy-to-bitrise-io: {}
+    - script:
+        inputs:
+        - content: |+
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+            url="https://discordapp.com/api/webhooks/$DISCORD_CI_HOOK"
+
+            msg=$(printf '{"username": "CI bot", "content": "Commit <%s> was built successfully"}' "$GIT_CLONE_COMMIT_MESSAGE_SUBJECT")
+
+            curl -H "Content-Type: application/json" -X POST -d "$msg" $url
+
+            vkmsg=$(printf 'Сборка коммита <%s> прошла успешно' "$GIT_CLONE_COMMIT_MESSAGE_SUBJECT")
+
+            curl -G --data-urlencode "message=$vkmsg" \
+            --data-urlencode "v=5.103" \
+            --data-urlencode "access_token=$VK_TOKEN" \
+            --data-urlencode "group_id=126542810" \
+            --data-urlencode "topic_id=40961760" \
+            --data-urlencode "from_group=true" \
+            https://api.vk.com/method/board.createComment
+
+    - cache-push: {}
     description: Release build
   deploy:
     steps:
-    - activate-ssh-key@3.1.1:
+    - activate-ssh-key:
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-    - git-clone@4.0.5: {}
-    - cache-pull@2.0.1: {}
-    - install-missing-android-tools@2.0.6: {}
-    - gradle-runner@1.8.0:
+    - git-clone: {}
+    - script:
         inputs:
-        - gradle_file: "$GRADLE_BUILD_FILE_PATH"
-        - gradle_task: assembleGooglePlayRelease
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+            rm RemixedDungeon/google-services.json
+            curl $BITRISEIO_GOOGLE_SERVICES_URL -o RemixedDungeon/google-services.json
+            cd RemixedDungeon/src/main/res/values
+            rm strings_api_signature.xml
+            curl $BITRISEIO_API_SIGNATURES_URL -o strings_api_signature.xml
+    - cache-pull: {}
+    - install-missing-android-tools:
+        inputs:
+        - ndk_revision: ''
+    - gradle-runner:
+        inputs:
+        - gradle_file: ''
+        - gradle_task: assembleAndroidGooglePlayRelease
         - gradlew_path: "$GRADLEW_PATH"
-    - sign-apk@1.2.0:
+    - sign-apk:
         inputs:
+        - use_apk_signer: 'true'
         - apk_path: "$BITRISE_APK_PATH_LIST"
-    - script@1.1.5:
+    - script@1:
         inputs:
         - working_dir: "$BITRISE_DEPLOY_DIR"
         - content: |-
@@ -65,13 +131,135 @@ workflows:
 
             # write your script here
             rm $(ls -I "*signed*" )
-    - deploy-to-bitrise-io@1.3.10: {}
-    - google-play-deploy@1.4.1:
+    - deploy-to-bitrise-io: {}
+    - google-play-deploy:
         inputs:
         - service_account_json_key_path: "$BITRISEIO_PLAY_JSON_URL"
-        - user_fraction: '0.05'
+        - user_fraction: ''
         - package_name: com.nyrds.pixeldungeon.ml
-    - cache-push@2.0.3: {}
+    - script@1:
+        inputs:
+        - content: |
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+            url="https://discordapp.com/api/webhooks/$DISCORD_CI_HOOK"
+
+            msg=$(printf '{"username": "CI bot", "content": "%s was build and will be available to alpha testers on Google Play soon", "embeds": [{"title":"Download APK","url":"%s"}]}' "$BITRISE_GIT_TAG" "$BITRISE_PUBLIC_INSTALL_PAGE_URL")
+
+            curl -H "Content-Type: application/json" -X POST -d "$msg" $url
+
+            vkmsg=$(printf 'Сборка <%s> заливается на альфа канал, APK можно скачать прямо сейчас по ссылке: %s' "$BITRISE_GIT_TAG" "$BITRISE_PUBLIC_INSTALL_PAGE_URL")
+
+            curl -G --data-urlencode "message=$vkmsg" \
+            --data-urlencode "v=5.103" \
+            --data-urlencode "access_token=$VK_TOKEN" \
+            --data-urlencode "group_id=84207769" \
+            --data-urlencode "topic_id=40319275" \
+            --data-urlencode "from_group=true" \
+            https://api.vk.com/method/board.createComment
+    - cache-push: {}
+    description: Release build
+  PR:
+    steps:
+    - activate-ssh-key:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone: {}
+    - cache-pull: {}
+    - install-missing-android-tools:
+        inputs:
+        - ndk_revision: '18'
+    - gradle-runner:
+        inputs:
+        - gradle_file: "$GRADLE_BUILD_FILE_PATH"
+        - gradle_task: assembleAndroidGooglePlayRelease
+        - gradlew_path: "$GRADLEW_PATH"
+    - deploy-to-bitrise-io: {}
+    - cache-push: {}
+    description: Release build
+  fix:
+    steps:
+    - activate-ssh-key:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone: {}
+    - script:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+            rm RemixedDungeon/google-services.json
+            curl $BITRISEIO_GOOGLE_SERVICES_URL -o RemixedDungeon/google-services.json
+            cd RemixedDungeon/src/main/res/values
+            rm strings_api_signature.xml
+            curl $BITRISEIO_API_SIGNATURES_URL -o strings_api_signature.xml
+
+            envman add --key DEPLOY_TRACK --value "alpha"
+            if [[ $BITRISE_GIT_TAG == *"fix"* ]]; then
+              envman add --key DEPLOY_TRACK --value "fix"
+            fi
+    - cache-pull: {}
+    - install-missing-android-tools:
+        inputs:
+        - ndk_revision: ''
+    - gradle-runner:
+        inputs:
+        - gradle_file: ''
+        - gradle_task: assembleAndroidGooglePlayRelease
+        - gradlew_path: "$GRADLEW_PATH"
+    - sign-apk@1.7:
+        inputs:
+        - use_apk_signer: 'true'
+        - apk_path: "$BITRISE_APK_PATH_LIST"
+    - script@1:
+        inputs:
+        - working_dir: "$BITRISE_DEPLOY_DIR"
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+            # write your script here
+            rm $(ls -I "*signed*" )
+    - deploy-to-bitrise-io: {}
+    - google-play-deploy:
+        inputs:
+        - service_account_json_key_path: "$BITRISEIO_PLAY_JSON_URL"
+        - user_fraction: ''
+        - track: "$DEPLOY_TRACK"
+        - package_name: com.nyrds.pixeldungeon.ml
+    - script@1:
+        inputs:
+        - content: |
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+            url="https://discordapp.com/api/webhooks/$DISCORD_CI_HOOK"
+
+            msg=$(printf '{"username": "CI bot", "content": "%s was build and will be available to alpha testers on Google Play soon", "embeds": [{"title":"Download APK","url":"%s"}]}' "$BITRISE_GIT_TAG" "$BITRISE_PUBLIC_INSTALL_PAGE_URL")
+
+            curl -H "Content-Type: application/json" -X POST -d "$msg" $url
+
+            vkmsg=$(printf 'Сборка <%s> заливается на альфа канал, APK можно скачать прямо сейчас по ссылке: %s' "$BITRISE_GIT_TAG" "$BITRISE_PUBLIC_INSTALL_PAGE_URL")
+
+            curl -G --data-urlencode "message=$vkmsg" \
+            --data-urlencode "v=5.103" \
+            --data-urlencode "access_token=$VK_TOKEN" \
+            --data-urlencode "group_id=84207769" \
+            --data-urlencode "topic_id=40319275" \
+            --data-urlencode "from_group=true" \
+            https://api.vk.com/method/board.createComment
+    - cache-push: {}
     description: Release build
 app:
   envs:

@@ -25,6 +25,7 @@ import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.input.Touchscreen;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
@@ -47,13 +48,13 @@ public class WndSelectLanguage extends Window {
 		tfTitle.maxWidth(maxW);
 		add(tfTitle);
 
-		Text pleaseHelpTranslate = PixelScene.createMultiline(Game.getVar(R.string.WndSelectLanguage_ImproveTranslation), GuiProperties.titleFontSize());
+        Text pleaseHelpTranslate = PixelScene.createMultiline(StringsManager.getVar(R.string.WndSelectLanguage_ImproveTranslation), GuiProperties.titleFontSize());
 		pleaseHelpTranslate.maxWidth(maxW);
 		pleaseHelpTranslate.x = GAP;
 		pleaseHelpTranslate.y = tfTitle.y + tfTitle.height() + GAP;
 		add(pleaseHelpTranslate);
 
-		Text translateLink = PixelScene.createMultiline(Game.getVar(R.string.WndSelectLanguage_LinkToTranslationSite), GuiProperties.titleFontSize());
+        Text translateLink = PixelScene.createMultiline(StringsManager.getVar(R.string.WndSelectLanguage_LinkToTranslationSite), GuiProperties.titleFontSize());
 		translateLink.hardlight(TITLE_COLOR);
 		translateLink.maxWidth(maxW);
 		translateLink.x = GAP;
@@ -63,9 +64,9 @@ public class WndSelectLanguage extends Window {
 		TouchArea area = new TouchArea(translateLink) {
 			@Override
 			protected void onClick(Touchscreen.Touch touch) {
-				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Game.getVar(R.string.WndSelectLanguage_TranslationLink)));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(StringsManager.getVar(R.string.WndSelectLanguage_TranslationLink)));
 
-				Game.instance().startActivity(Intent.createChooser(intent, Game.getVar(R.string.WndSelectLanguage_TranslationLink)));
+                Game.instance().startActivity(Intent.createChooser(intent, StringsManager.getVar(R.string.WndSelectLanguage_TranslationLink)));
 			}
 		};
 		add(area);

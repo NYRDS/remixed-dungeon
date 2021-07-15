@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.scrolls;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -56,13 +56,13 @@ public class ScrollOfTerror extends Scroll {
 		
 		switch (count) {
 		case 0:
-			GLog.i(Game.getVar(R.string.ScrollOfTerror_Info1));
+            GLog.i(StringsManager.getVar(R.string.ScrollOfTerror_Info1));
 			break;
 		case 1:
-			GLog.i(Utils.format(Game.getVar(R.string.ScrollOfTerror_Info2), affected.getName()));
+            GLog.i(Utils.format(StringsManager.getVar(R.string.ScrollOfTerror_Info2), affected.getName()));
 			break;
 		default:
-			GLog.i(Game.getVar(R.string.ScrollOfTerror_Info3));
+            GLog.i(StringsManager.getVar(R.string.ScrollOfTerror_Info3));
 		}
 		setKnown();
 
@@ -71,8 +71,8 @@ public class ScrollOfTerror extends Scroll {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.ScrollOfTerror_Info);
-	}
+        return StringsManager.getVar(R.string.ScrollOfTerror_Info);
+    }
 	
 	@Override
 	public int price() {

@@ -8,7 +8,6 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.JsonHelper;
 import com.watabou.pixeldungeon.actors.Char;
@@ -184,7 +183,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 		walkingType = Enum.valueOf(WalkingType.class, classDesc.optString("walkingType","NORMAL"));
 
-		defenceVerb = StringsManager.maybeId(classDesc.optString("defenceVerb", Game.getVars(R.array.Char_StaDodged)[gender]));
+        defenceVerb = StringsManager.maybeId(classDesc.optString("defenceVerb", StringsManager.getVars(R.array.Char_StaDodged)[gender]));
 
 		canBePet = classDesc.optBoolean("canBePet",canBePet);
 

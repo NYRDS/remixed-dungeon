@@ -9,6 +9,7 @@ import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -55,12 +56,12 @@ public class ServiceManNPC extends ImmortalNPC {
         getSprite().turnTo(getPos(), hero.getPos());
 
         if (!Util.isConnectedToInternet()) {
-            GameScene.show(new WndQuest(this, Game.getVar(R.string.ServiceManNPC_NoConnection)));
+            GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.ServiceManNPC_NoConnection)));
             return true;
         }
 
         if (filmsSeen >= getLimit()) {
-            GameScene.show(new WndQuest(this, Utils.format(Game.getVar(R.string.ServiceManNPC_Limit_Reached), getLimit())));
+            GameScene.show(new WndQuest(this, Utils.format(StringsManager.getVar(R.string.ServiceManNPC_Limit_Reached), getLimit())));
             return true;
         }
 
@@ -71,7 +72,7 @@ public class ServiceManNPC extends ImmortalNPC {
                         if (result) {
                             GameScene.show(new WndMovieTheatre(this, filmsSeen, getLimit(), getReward()));
                         } else {
-                            say(Game.getVar(R.string.ServiceManNPC_NotReady));
+                            say(StringsManager.getVar(R.string.ServiceManNPC_NotReady));
                         }
                     }
             );

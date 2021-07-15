@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -22,7 +22,7 @@ public class MoveOrder extends MobAi implements AiState {
 
     @Override
     public String status(Char me) {
-        return Utils.format(Game.getVar(R.string.Mob_StaWanderingStatus),
+        return Utils.format(StringsManager.getVar(R.string.Mob_StaWanderingStatus),
                 me.getName());
     }
 

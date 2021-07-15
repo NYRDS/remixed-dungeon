@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class AssasinArmor extends RogueArmor {
 
 	{
-        name = Game.getVar(R.string.RogueArmor_Name);
+        name = StringsManager.getVar(R.string.RogueArmor_Name);
 		image = 10;
 	}
 
@@ -20,7 +20,7 @@ public class AssasinArmor extends RogueArmor {
 		if (hero.getSubClass() == HeroSubClass.ASSASSIN) {
 			return super.doEquip( hero );
 		} else {
-			GLog.w( Game.getVar(R.string.RogueArmor_NotRogue) );
+            GLog.w(StringsManager.getVar(R.string.RogueArmor_NotRogue));
 			return false;
 		}
 	}

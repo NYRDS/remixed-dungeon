@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
@@ -55,7 +55,7 @@ public class Affection extends Glyph {
 
 	@Override
 	public String name(String weaponName) {
-		return Utils.format(Game.getVar(R.string.Affection_Txt), weaponName);
+        return Utils.format(StringsManager.getVar(R.string.Affection_Txt), weaponName);
 	}
 
 	@Override

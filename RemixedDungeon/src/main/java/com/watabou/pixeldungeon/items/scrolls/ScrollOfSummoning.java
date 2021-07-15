@@ -2,7 +2,7 @@ package com.watabou.pixeldungeon.items.scrolls;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -32,7 +32,7 @@ public class ScrollOfSummoning extends Scroll {
 
 		if(level.cellValid(cell)){
 			Mob mob = Bestiary.mob( level );
-			GLog.i(Game.getVar(R.string.ScrollOfSummoning_Info_2));
+            GLog.i(StringsManager.getVar(R.string.ScrollOfSummoning_Info_2));
 			if(mob.canBePet()){
 				Mob.makePet(mob, reader.getId());
 			} else {
@@ -40,7 +40,7 @@ public class ScrollOfSummoning extends Scroll {
 			}
 			WandOfBlink.appear( mob, cell );
 		} else {
-			GLog.w(Game.getVar(R.string.No_Valid_Cell));
+            GLog.w(StringsManager.getVar(R.string.No_Valid_Cell));
 		}
 
 		setKnown();

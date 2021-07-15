@@ -2,8 +2,8 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.NinePatch;
@@ -22,7 +22,7 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 	public void create() {
 		super.create();
 
-		Text title = createMultiline( Game.getVar(R.string.AllowStatisticsCollectionScene_Title), GuiProperties.bigTitleFontSize());
+        Text title = createMultiline(StringsManager.getVar(R.string.AllowStatisticsCollectionScene_Title), GuiProperties.bigTitleFontSize());
 
 		int w = Camera.main.width;
 		int h = Camera.main.height;
@@ -55,7 +55,7 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 		content.clear();
 
 		float yPos = 0;
-		Text text = createMultiline(Game.getVar(R.string.AllowStatisticsCollectionScene_Request), GuiProperties.regularFontSize());
+        Text text = createMultiline(StringsManager.getVar(R.string.AllowStatisticsCollectionScene_Request), GuiProperties.regularFontSize());
 		text.maxWidth((int) panel.innerWidth());
 
 		content.add(text);
@@ -63,7 +63,7 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 
 		content.setSize(panel.innerWidth(), yPos);
 
-		RedButton allow = new RedButton(Game.getVar(R.string.AllowStatisticsCollectionScene_Allow)) {
+        RedButton allow = new RedButton(StringsManager.getVar(R.string.AllowStatisticsCollectionScene_Allow)) {
 			@Override
 			protected void onClick() {
 				Preferences.INSTANCE.put(Preferences.KEY_COLLECT_STATS, 100);
@@ -71,7 +71,7 @@ public class AllowStatisticsCollectionScene extends PixelScene {
 			}
 		};
 
-		RedButton deny = new RedButton(Game.getVar(R.string.AllowStatisticsCollectionScene_Deny)) {
+        RedButton deny = new RedButton(StringsManager.getVar(R.string.AllowStatisticsCollectionScene_Deny)) {
 			@Override
 			protected void onClick() {
 				Preferences.INSTANCE.put(Preferences.KEY_COLLECT_STATS, -100);

@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.actors.blobs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
@@ -98,6 +98,6 @@ public class LiquidFlame extends Blob {
 
 	@Override
 	public String tileDesc() {
-		return Game.getVar(R.string.Fire_Info);
-	}
+        return StringsManager.getVar(R.string.Fire_Info);
+    }
 }

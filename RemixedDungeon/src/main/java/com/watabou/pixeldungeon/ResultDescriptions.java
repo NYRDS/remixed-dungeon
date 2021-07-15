@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 
 import java.util.HashMap;
 
@@ -71,6 +71,6 @@ public final class ResultDescriptions {
 			reason = Reason.UNKNOWN;	// This one is definitely in the map. Returning UNKNOWN.
 		}
 
-		return Game.getVar(descriptionsMap.get(reason));
-	}
+        return StringsManager.getVar(descriptionsMap.get(reason));
+    }
 }

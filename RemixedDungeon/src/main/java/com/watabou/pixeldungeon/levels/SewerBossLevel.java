@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -182,8 +182,8 @@ public class SewerBossLevel extends BossLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return Game.getVar(R.string.Sewer_TileWater);
-		default:
+            return StringsManager.getVar(R.string.Sewer_TileWater);
+            default:
 			return super.tileName( tile );
 		}
 	}
@@ -192,8 +192,8 @@ public class SewerBossLevel extends BossLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.EMPTY_DECO:
-			return Game.getVar(R.string.Sewer_TileDescDeco);
-		default:
+            return StringsManager.getVar(R.string.Sewer_TileDescDeco);
+            default:
 			return super.tileDesc( tile );
 		}
 	}

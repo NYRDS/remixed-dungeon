@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.ScrollableList;
 import com.nyrds.pixeldungeon.windows.WndHelper;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
@@ -50,7 +50,7 @@ public class WndCatalogus extends WndTabbed {
 
 		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - tabHeight() - MARGIN);
 
-		txtTitle = PixelScene.createText(Game.getVar(R.string.WndCatalogus_Title), GuiProperties.titleFontSize());
+        txtTitle = PixelScene.createText(StringsManager.getVar(R.string.WndCatalogus_Title), GuiProperties.titleFontSize());
 		txtTitle.hardlight(Window.TITLE_COLOR);
 		add(txtTitle);
 
@@ -60,15 +60,15 @@ public class WndCatalogus extends WndTabbed {
 		list.setRect(0, txtTitle.height(), width, height - txtTitle.height());
 
 		boolean showPotions = WndCatalogus.showPotions;
-		Tab[] tabs = {
-				new LabeledTab(this, Game.getVar(R.string.WndCatalogus_Potions)) {
+        Tab[] tabs = {
+				new LabeledTab(this, StringsManager.getVar(R.string.WndCatalogus_Potions)) {
 					public void select(boolean value) {
 						super.select(value);
 						WndCatalogus.showPotions = value;
 						updateList();
 					}
 				},
-				new LabeledTab(this, Game.getVar(R.string.WndCatalogus_Scrolls)) {
+				new LabeledTab(this, StringsManager.getVar(R.string.WndCatalogus_Scrolls)) {
 					public void select(boolean value) {
 						super.select(value);
 						WndCatalogus.showPotions = !value;
@@ -86,8 +86,8 @@ public class WndCatalogus extends WndTabbed {
 
 	private void updateList() {
 
-		txtTitle.text(Utils.format(Game.getVar(R.string.WndCatalogus_Title), showPotions ?
-				Game.getVar(R.string.WndCatalogus_Potions) : Game.getVar(R.string.WndCatalogus_Scrolls)));
+        txtTitle.text(Utils.format(StringsManager.getVar(R.string.WndCatalogus_Title), showPotions ?
+                StringsManager.getVar(R.string.WndCatalogus_Potions) : StringsManager.getVar(R.string.WndCatalogus_Scrolls)));
 		txtTitle.x = PixelScene.align(PixelScene.uiCamera, (width - txtTitle.width()) / 2);
 
 		Component content = list.content();

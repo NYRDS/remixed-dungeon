@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.levels.objects;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndPortalReturn;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -21,7 +21,7 @@ public class PortalGateReceiver extends PortalGate {
 				}
 			}
 		} else{
-			GLog.w( Game.getVar(R.string.PortalGate_Used) );
+            GLog.w(StringsManager.getVar(R.string.PortalGate_Used));
 		}
 		return false;
 	}

@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
@@ -21,7 +21,7 @@ public class SellItemSelector implements WndBag.Listener {
         if (item != null) {
 
             if(item instanceof Bag && !((Bag)item).items.isEmpty()) {
-                GameScene.selectItemFromBag(this, (Bag)item , WndBag.Mode.FOR_SALE, Game.getVar(R.string.Shopkeeper_Sell));
+                GameScene.selectItemFromBag(this, (Bag)item , WndBag.Mode.FOR_SALE, StringsManager.getVar(R.string.Shopkeeper_Sell));
                 return;
             }
 

@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -32,19 +32,19 @@ public class RingOfStoneWalking extends Artifact{
 
 		@Override
 		public String name() {
-			return Game.getVar(R.string.StoneBloodBuff_Name);
-		}
+            return StringsManager.getVar(R.string.StoneBloodBuff_Name);
+        }
 
 		@Override
 		public String desc() {
-			return Game.getVar(R.string.StoneBloodBuff_Info);
-		}
+            return StringsManager.getVar(R.string.StoneBloodBuff_Info);
+        }
 		@Override
 		public void onDeath() {
 			Badges.validateDeathInStone();
 			
 			Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.IMMURED), Dungeon.depth ) );
-			GLog.n( Game.getVar(R.string.RingOfStoneWalking_ImmuredInStone));
+            GLog.n(StringsManager.getVar(R.string.RingOfStoneWalking_ImmuredInStone));
 			
 		}
 	}

@@ -26,7 +26,7 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -144,13 +144,13 @@ public class Yog extends Boss {
 		Badges.validateBossSlain(Badges.Badge.YOG_SLAIN);
 		super.die(cause);
 
-		yell(Game.getVar(R.string.Yog_Info1));
+        yell(StringsManager.getVar(R.string.Yog_Info1));
 	}
 
 	@Override
 	public void notice() {
 		super.notice();
-		yell(Game.getVar(R.string.Yog_Info2));
+        yell(StringsManager.getVar(R.string.Yog_Info2));
 	}
 
 	public static class RottingFist extends Mob {
@@ -208,8 +208,8 @@ public class Yog extends Boss {
 
 		@Override
 		public String getDescription() {
-			return Game.getVar(R.string.Yog_Desc);
-		}
+            return StringsManager.getVar(R.string.Yog_Desc);
+        }
 
 		@Override
 		public boolean canBePet() {
@@ -272,8 +272,8 @@ public class Yog extends Boss {
 
 		@Override
 		public String getDescription() {
-			return Game.getVar(R.string.Yog_Desc);
-		}
+            return StringsManager.getVar(R.string.Yog_Desc);
+        }
 
 		@Override
 		public boolean canBePet() {
@@ -300,8 +300,8 @@ public class Yog extends Boss {
 
 		@Override
 		public String getDescription() {
-			return Game.getVar(R.string.Yog_Desc);
+            return StringsManager.getVar(R.string.Yog_Desc);
 
-		}
+        }
 	}
 }

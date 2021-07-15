@@ -25,7 +25,7 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -121,7 +121,7 @@ public class CharUtils {
         }
 
         Item item = victim.getBelongings().randomUnequipped();
-        GLog.w( Game.getVars(R.array.Char_Stole)[thief.getGender()], thief.getName(), item.name(), victim.getName_objective() );
+        GLog.w( StringsManager.getVars(R.array.Char_Stole)[thief.getGender()], thief.getName(), item.name(), victim.getName_objective() );
         item.detachAll( victim.getBelongings().backpack );
         thief.collect(item);
 

@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.quest;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -42,7 +42,7 @@ public class RatSkull extends Artifact {
 
 	@Override
 	public String info() {
-		return super.info() + "\n\n" + Game.getVar(R.string.RatSkull_Info2);
+        return super.info() + "\n\n" + StringsManager.getVar(R.string.RatSkull_Info2);
 	}
 
 	public static class RatterAura extends ArtifactBuff {
@@ -53,13 +53,13 @@ public class RatSkull extends Artifact {
 
 		@Override
 		public String name() {
-			return Game.getVar(R.string.RatSkullBuff_Name);
-		}
+            return StringsManager.getVar(R.string.RatSkullBuff_Name);
+        }
 
 		@Override
 		public String desc() {
-			return Game.getVar(R.string.RatSkullBuff_Info);
-		}
+            return StringsManager.getVar(R.string.RatSkullBuff_Info);
+        }
 	}
 
 	@Override

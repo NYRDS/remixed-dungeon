@@ -18,14 +18,14 @@
 package com.watabou.pixeldungeon.items;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Ankh extends Item {
 
 	{
 		stackable = true;
-		name = Game.getVar(R.string.Ankh_Name);
+        name = StringsManager.getVar(R.string.Ankh_Name);
 		image = ItemSpriteSheet.ANKH;
 	}
 	

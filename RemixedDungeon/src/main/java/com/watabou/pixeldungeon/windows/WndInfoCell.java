@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -96,7 +96,7 @@ public class WndInfoCell extends Window {
 			}
 		}
 
-		info.text( desc.length() > 0 ? desc.toString() : Game.getVar(R.string.WndInfoCell_Nothing) );
+        info.text( desc.length() > 0 ? desc.toString() : StringsManager.getVar(R.string.WndInfoCell_Nothing));
 		info.maxWidth(WIDTH);
 		info.x = titlebar.left();
 		info.y = yPos + GAP;

@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -62,24 +62,24 @@ public class Hedgehog extends NPC {
 		switch (action)
 		{
 			case 0:
-				say(Game.getVar(R.string.Hedgehog_Info1));
+                say(StringsManager.getVar(R.string.Hedgehog_Info1));
 			break;
 		
 			case 1:
-				say(Game.getVar(R.string.Hedgehog_Info2));
+                say(StringsManager.getVar(R.string.Hedgehog_Info2));
 			break;
 			
 			case 2:
-				say(Game.getVar(R.string.Hedgehog_Info3));
+                say(StringsManager.getVar(R.string.Hedgehog_Info3));
 			break;
 			
 			case 3:
-				say(Game.getVar(R.string.Hedgehog_Info4));
+                say(StringsManager.getVar(R.string.Hedgehog_Info4));
 				new Pasty().doDrop(this);
 			break;
 			
 			default:
-				say(Game.getVar(R.string.Hedgehog_ImLate));
+                say(StringsManager.getVar(R.string.Hedgehog_ImLate));
 				action = 4;
 				speed  = 3;
 		}

@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Glaive extends Polearm {
@@ -30,6 +30,6 @@ public class Glaive extends Polearm {
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.Glaive_Info);
-	}
+        return StringsManager.getVar(R.string.Glaive_Info);
+    }
 }

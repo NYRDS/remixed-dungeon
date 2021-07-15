@@ -20,8 +20,8 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Music;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
@@ -85,7 +85,7 @@ public class RankingsScene extends PixelScene {
 
             float top = align(rowHeight / 2);
 
-            Text title = PixelScene.createText(Game.getVar(R.string.RankingsScene_Title), GuiProperties.titleFontSize());
+            Text title = PixelScene.createText(StringsManager.getVar(R.string.RankingsScene_Title), GuiProperties.titleFontSize());
             title.hardlight(Window.TITLE_COLOR);
             title.x = align((w - title.width()) / 2);
             title.y = align(top - title.height() - GAP);
@@ -150,7 +150,7 @@ public class RankingsScene extends PixelScene {
 
             createRecords();
 
-            Text label = PixelScene.createText(Game.getVar(R.string.RankingsScene_Total), GuiProperties.titleFontSize());
+            Text label = PixelScene.createText(StringsManager.getVar(R.string.RankingsScene_Total), GuiProperties.titleFontSize());
             label.hardlight(DEFAULT_COLOR);
             add(label);
 
@@ -177,7 +177,7 @@ public class RankingsScene extends PixelScene {
 
         } else {
 
-            Text title = PixelScene.createText(Game.getVar(R.string.RankingsScene_NoGames), GuiProperties.titleFontSize());
+            Text title = PixelScene.createText(StringsManager.getVar(R.string.RankingsScene_NoGames), GuiProperties.titleFontSize());
             title.hardlight(DEFAULT_COLOR);
             title.x = align((w - title.width()) / 2);
             title.y = align((h - title.height()) / 2);
@@ -319,7 +319,7 @@ public class RankingsScene extends PixelScene {
             if (rec.gameFile.length() > 0) {
                 getParent().add(new WndRanking(rec.gameFile));
             } else {
-                getParent().add(new WndError(Game.getVar(R.string.RankingsScene_NoInfo)));
+                getParent().add(new WndError(StringsManager.getVar(R.string.RankingsScene_NoInfo)));
             }
         }
     }

@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -32,9 +32,9 @@ public class MindVision extends FlavourBuff {
 	static public void reportMindVisionEffect() {
 		Dungeon.observe();
 		if (Dungeon.level.mobs.size() > 0) {
-			GLog.i(Game.getVar(R.string.PotionOfMindVision_Apply1));
+            GLog.i(StringsManager.getVar(R.string.PotionOfMindVision_Apply1));
 		} else {
-			GLog.i(Game.getVar(R.string.PotionOfMindVision_Apply2));
+            GLog.i(StringsManager.getVar(R.string.PotionOfMindVision_Apply2));
 		}
 	}
 
@@ -45,13 +45,13 @@ public class MindVision extends FlavourBuff {
 	
 	@Override
 	public String name() {
-		return Game.getVar(R.string.MindVisionBuff_Name);
-	}
+        return StringsManager.getVar(R.string.MindVisionBuff_Name);
+    }
 
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.MindVisionBuff_Info);
-	}
+        return StringsManager.getVar(R.string.MindVisionBuff_Info);
+    }
 
 	@Override
 	public void detach() {
@@ -61,7 +61,7 @@ public class MindVision extends FlavourBuff {
 
 	@Override
 	public void attachVisual() {
-		target.getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Char_StaMind));
-		target.getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.Char_StaVision));
+        target.getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Char_StaMind));
+        target.getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Char_StaVision));
 	}
 }

@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.mobs.common;
 import com.nyrds.pixeldungeon.items.common.GoldenSword;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
@@ -22,7 +22,7 @@ public class GoldenStatue extends Statue {
 
 	@Override
 	public String getDescription() {
-		return Utils.format(Game.getVar(R.string.GoldenStatue_Desc), getItem().name());
+        return Utils.format(StringsManager.getVar(R.string.GoldenStatue_Desc), getItem().name());
 	}
 
 	@NotNull

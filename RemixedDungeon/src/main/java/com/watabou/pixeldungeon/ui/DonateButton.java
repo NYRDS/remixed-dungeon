@@ -2,7 +2,7 @@ package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Group;
 import com.watabou.pixeldungeon.windows.WndDonate;
 
@@ -51,10 +51,10 @@ public class DonateButton extends ImageButton {
 		case 2:
 		case 3:
 		case 4:
-			return Game.getVar(R.string.DonateButton_thanks);
-		default:
-			return Game.getVar(R.string.DonateButton_pleaseDonate);
-		}
+            return StringsManager.getVar(R.string.DonateButton_thanks);
+            default:
+                return StringsManager.getVar(R.string.DonateButton_pleaseDonate);
+        }
 	}
 
 	@Override

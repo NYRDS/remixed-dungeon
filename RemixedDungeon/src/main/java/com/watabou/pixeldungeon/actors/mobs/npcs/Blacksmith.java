@@ -21,7 +21,7 @@ import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -66,11 +66,11 @@ public class Blacksmith extends NPC {
 		getSprite().turnTo( getPos(), hero.getPos() );
 		
 		if (!Quest.given) {
-			
-			GameScene.show( new WndQuest( this, 
+
+            GameScene.show( new WndQuest( this,
 				Quest.alternative ?
-						Game.getVar(R.string.Blacksmith_Blood1) :
-						Game.getVar(R.string.Blacksmith_Gold1) )
+                        StringsManager.getVar(R.string.Blacksmith_Blood1) :
+                        StringsManager.getVar(R.string.Blacksmith_Gold1))
 			{
 				
 				@Override
@@ -96,15 +96,15 @@ public class Blacksmith extends NPC {
 				
 				Pickaxe pick = hero.getBelongings().getItem( Pickaxe.class );
 				if (pick == null) {
-					tell( Game.getVar(R.string.Blacksmith_Txt2) );
+                    tell(StringsManager.getVar(R.string.Blacksmith_Txt2));
 				} else if (!pick.bloodStained) {
-					tell( Game.getVar(R.string.Blacksmith_Txt4) );
+                    tell(StringsManager.getVar(R.string.Blacksmith_Txt4));
 				} else {
 					if (pick.isEquipped( hero )) {
 						pick.doUnequip( hero, false );
 					}
 					pick.detach( hero.getBelongings().backpack );
-					tell( Game.getVar(R.string.Blacksmith_Completed) );
+                    tell(StringsManager.getVar(R.string.Blacksmith_Completed));
 					
 					Quest.completed = true;
 					Quest.reforged = false;
@@ -115,16 +115,16 @@ public class Blacksmith extends NPC {
 				Pickaxe pick = hero.getBelongings().getItem( Pickaxe.class );
 				DarkGold gold = hero.getBelongings().getItem( DarkGold.class );
 				if (pick == null) {
-					tell( Game.getVar(R.string.Blacksmith_Txt2) );
+                    tell(StringsManager.getVar(R.string.Blacksmith_Txt2));
 				} else if (gold == null || gold.quantity() < 15) {
-					tell( Game.getVar(R.string.Blacksmith_Txt3) );
+                    tell(StringsManager.getVar(R.string.Blacksmith_Txt3));
 				} else {
 					if (pick.isEquipped( hero )) {
 						pick.doUnequip( hero, false );
 					}
 					pick.detach( hero.getBelongings().backpack );
 					gold.detachAll( hero.getBelongings().backpack );
-					tell( Game.getVar(R.string.Blacksmith_Completed) );
+                    tell(StringsManager.getVar(R.string.Blacksmith_Completed));
 					
 					Quest.completed = true;
 					Quest.reforged = false;
@@ -133,7 +133,7 @@ public class Blacksmith extends NPC {
 		} else if (!Quest.reforged) {
 			GameScene.show( new WndBlacksmith( this) );
 		} else {
-			tell( Game.getVar(R.string.Blacksmith_GetLost) );
+            tell(StringsManager.getVar(R.string.Blacksmith_GetLost));
 		}
 		return true;
 	}
@@ -145,28 +145,28 @@ public class Blacksmith extends NPC {
 	public static String verify( Item item1, Item item2 ) {
 		
 		if (item1 == item2) {
-			return Game.getVar(R.string.Blacksmith_Verify1);
-		}
+            return StringsManager.getVar(R.string.Blacksmith_Verify1);
+        }
 		
 		if (item1.getClass() != item2.getClass()) {
-			return Game.getVar(R.string.Blacksmith_Verify2);
-		}
+            return StringsManager.getVar(R.string.Blacksmith_Verify2);
+        }
 		
 		if (!item1.isIdentified() || !item2.isIdentified()) {
-			return Game.getVar(R.string.Blacksmith_Verify3);
-		}
+            return StringsManager.getVar(R.string.Blacksmith_Verify3);
+        }
 		
 		if (item1.isCursed() || item2.isCursed()) {
-			return Game.getVar(R.string.Blacksmith_Verify4);
-		}
+            return StringsManager.getVar(R.string.Blacksmith_Verify4);
+        }
 		
 		if (item1.level() < 0 || item2.level() < 0) {
-			return Game.getVar(R.string.Blacksmith_Verify5);
-		}
+            return StringsManager.getVar(R.string.Blacksmith_Verify5);
+        }
 		
 		if (!item1.isUpgradable() || !item2.isUpgradable()) {
-			return Game.getVar(R.string.Blacksmith_Verify6);
-		}
+            return StringsManager.getVar(R.string.Blacksmith_Verify6);
+        }
 		
 		return null;
 	}
@@ -190,7 +190,7 @@ public class Blacksmith extends NPC {
 			((EquipableItem)first).doUnequip( Dungeon.hero, true );
 		}
 		first.upgrade();
-		GLog.p( Game.getVar(R.string.Blacksmith_LooksBetter), first.name() );
+        GLog.p(StringsManager.getVar(R.string.Blacksmith_LooksBetter), first.name() );
 		Dungeon.hero.spendAndNext( 2f );
 		Badges.validateItemLevelAcquired( first );
 		

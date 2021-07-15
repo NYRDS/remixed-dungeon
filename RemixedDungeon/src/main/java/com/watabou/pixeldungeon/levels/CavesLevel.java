@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.effects.emitters.Vein;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
@@ -178,12 +178,12 @@ public class CavesLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.GRASS:
-			return Game.getVar(R.string.Caves_TileGrass);
-		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.Caves_TileHighGrass);
-		case Terrain.WATER:
-			return Game.getVar(R.string.Caves_TileWater);
-		default:
+            return StringsManager.getVar(R.string.Caves_TileGrass);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.Caves_TileHighGrass);
+            case Terrain.WATER:
+                return StringsManager.getVar(R.string.Caves_TileWater);
+            default:
 			return super.tileName( tile );
 		}
 	}
@@ -192,16 +192,16 @@ public class CavesLevel extends RegularLevel {
 	public String tileDesc( int tile ) {
 		switch (tile) {
 		case Terrain.ENTRANCE:
-			return Game.getVar(R.string.Caves_TileDescEntrance);
-		case Terrain.EXIT:
-			return Game.getVar(R.string.Caves_TileDescExit);
-		case Terrain.HIGH_GRASS:
-			return Game.getVar(R.string.Caves_TileDescHighGrass);
-		case Terrain.WALL_DECO:
-			return Game.getVar(R.string.Caves_TileDescDeco);
-		case Terrain.BOOKSHELF:
-			return Game.getVar(R.string.Caves_TileDescBookshelf);
-		default:
+            return StringsManager.getVar(R.string.Caves_TileDescEntrance);
+            case Terrain.EXIT:
+                return StringsManager.getVar(R.string.Caves_TileDescExit);
+            case Terrain.HIGH_GRASS:
+                return StringsManager.getVar(R.string.Caves_TileDescHighGrass);
+            case Terrain.WALL_DECO:
+                return StringsManager.getVar(R.string.Caves_TileDescDeco);
+            case Terrain.BOOKSHELF:
+                return StringsManager.getVar(R.string.Caves_TileDescBookshelf);
+            default:
 			return super.tileDesc( tile );
 		}
 	}

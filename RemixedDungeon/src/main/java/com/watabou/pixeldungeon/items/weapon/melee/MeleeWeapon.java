@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
@@ -91,57 +91,57 @@ public class MeleeWeapon extends Weapon {
 		
 		StringBuilder info = new StringBuilder( desc() );
 
-		String typical  = Game.getVar(R.string.MeleeWeapon_Info1b);
-		String upgraded = Game.getVar(R.string.MeleeWeapon_Info1c);
-		String degraded = Game.getVar(R.string.MeleeWeapon_Info1d);
+        String typical  = StringsManager.getVar(R.string.MeleeWeapon_Info1b);
+        String upgraded = StringsManager.getVar(R.string.MeleeWeapon_Info1c);
+        String degraded = StringsManager.getVar(R.string.MeleeWeapon_Info1d);
 		String quality = isLevelKnown() && level() != 0 ? (level() > 0 ? upgraded : degraded) : typical;
 		info.append(p);
-		info.append(Utils.capitalize(Utils.format(Game.getVar(R.string.MeleeWeapon_Info1a), name, quality, tier)));
+        info.append(Utils.capitalize(Utils.format(StringsManager.getVar(R.string.MeleeWeapon_Info1a), name, quality, tier)));
 		info.append(" ");
 		
 		if (isLevelKnown()) {
-			info.append(Utils.format(Game.getVar(R.string.MeleeWeapon_Info2a), (MIN + (MAX - MIN) / 2)));
+            info.append(Utils.format(StringsManager.getVar(R.string.MeleeWeapon_Info2a), (MIN + (MAX - MIN) / 2)));
 		} else {
-			info.append(Utils.format(Game.getVar(R.string.MeleeWeapon_Info2b), (min() + (max() - min()) / 2), typicalSTR()));
+            info.append(Utils.format(StringsManager.getVar(R.string.MeleeWeapon_Info2b), (min() + (max() - min()) / 2), typicalSTR()));
 			if (typicalSTR() > Dungeon.hero.effectiveSTR()) {
-				info.append(" ").append(Game.getVar(R.string.MeleeWeapon_Info2c));
+                info.append(" ").append(StringsManager.getVar(R.string.MeleeWeapon_Info2c));
 			}
 		}
 
 		quality = Utils.EMPTY_STRING;
 		info.append(" ");
 		if (DLY != 1f) {
-			quality += (DLY < 1f ? Game.getVar(R.string.MeleeWeapon_Info3b) : Game.getVar(R.string.MeleeWeapon_Info3c));
+            quality += (DLY < 1f ? StringsManager.getVar(R.string.MeleeWeapon_Info3b) : StringsManager.getVar(R.string.MeleeWeapon_Info3c));
 			if (ACU != 1f) {
 				quality += " ";
 				if ((ACU > 1f) == (DLY < 1f)) {
-					quality += Game.getVar(R.string.MeleeWeapon_Info3d);
+                    quality += StringsManager.getVar(R.string.MeleeWeapon_Info3d);
 				} else {
-					quality += Game.getVar(R.string.MeleeWeapon_Info3e);
+                    quality += StringsManager.getVar(R.string.MeleeWeapon_Info3e);
 				}
 				quality += " ";
-				quality += ACU > 1f ? Game.getVar(R.string.MeleeWeapon_Info3f) : Game.getVar(R.string.MeleeWeapon_Info3g);
+                quality += ACU > 1f ? StringsManager.getVar(R.string.MeleeWeapon_Info3f) : StringsManager.getVar(R.string.MeleeWeapon_Info3g);
 			}
-			info.append(Utils.format(Game.getVar(R.string.MeleeWeapon_Info3a), quality));
+            info.append(Utils.format(StringsManager.getVar(R.string.MeleeWeapon_Info3a), quality));
 		} else if (ACU != 1f) {
-			quality += ACU > 1f ? Game.getVar(R.string.MeleeWeapon_Info3f) : Game.getVar(R.string.MeleeWeapon_Info3g);
-			info.append(Utils.format(Game.getVar(R.string.MeleeWeapon_Info3a), quality));
+            quality += ACU > 1f ? StringsManager.getVar(R.string.MeleeWeapon_Info3f) : StringsManager.getVar(R.string.MeleeWeapon_Info3g);
+            info.append(Utils.format(StringsManager.getVar(R.string.MeleeWeapon_Info3a), quality));
 		}
 
 		info.append(" ");
 		switch (imbue) {
 		case SPEED:
-			info.append(Game.getVar(R.string.MeleeWeapon_Info4a));
+            info.append(StringsManager.getVar(R.string.MeleeWeapon_Info4a));
 			break;
 		case ACCURACY:
-			info.append(Game.getVar(R.string.MeleeWeapon_Info4b));
+            info.append(StringsManager.getVar(R.string.MeleeWeapon_Info4b));
 			break;
 		case NONE:
 		}
 
 		info.append(" ");
 		if (getEnchantment() != null) {
-			info.append(Game.getVar(R.string.MeleeWeapon_Info5));
+            info.append(StringsManager.getVar(R.string.MeleeWeapon_Info5));
 		}
 
 		if (isLevelKnown() && Dungeon.hero.getBelongings().backpack.items.contains( this )) {
@@ -156,7 +156,7 @@ public class MeleeWeapon extends Weapon {
 		
 		if (isEquipped( Dungeon.hero )) {
 			info.append(p);
-			info.append(Utils.format(R.string.MeleeWeapon_Info7a, name, (isCursed() ? Game.getVar(R.string.MeleeWeapon_Info7b) : Utils.EMPTY_STRING)) );
+            info.append(Utils.format(R.string.MeleeWeapon_Info7a, name, (isCursed() ? StringsManager.getVar(R.string.MeleeWeapon_Info7b) : Utils.EMPTY_STRING)) );
 		} else {
 			if (isCursedKnown() && isCursed()) {
 				info.append(p);

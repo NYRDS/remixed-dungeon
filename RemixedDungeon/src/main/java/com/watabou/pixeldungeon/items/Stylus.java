@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -59,7 +59,7 @@ public class Stylus extends Item {
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_INSCRIBE)) {
 
-			GameScene.selectItem(chr,
+            GameScene.selectItem(chr,
                     (item, selector) -> {
                         if (item != null) {
                             if(item instanceof Armor){
@@ -70,7 +70,7 @@ public class Stylus extends Item {
                             }
                         }
                     },
-                    WndBag.Mode.INSCRIBABLE, Game.getVar(R.string.Stylus_SelectArmor));
+                    WndBag.Mode.INSCRIBABLE, StringsManager.getVar(R.string.Stylus_SelectArmor));
 			
 		} else {
 			
@@ -106,8 +106,8 @@ public class Stylus extends Item {
 		while (glyph.getClass() == oldGlyphClass) {
 			glyph = Armor.Glyph.random();
 		}
-		
-		GLog.w( Game.getVar(R.string.Stylus_Inscribed), glyph.name(), armor.name() );
+
+        GLog.w(StringsManager.getVar(R.string.Stylus_Inscribed), glyph.name(), armor.name() );
 		
 		armor.inscribe( glyph );
 		

@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.potions;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -35,8 +35,8 @@ public class PotionOfMight extends PotionOfStrength {
 			hero.STR(hero.STR() + 1);
 			hero.ht(hero.ht() + 5);
 			hero.heal(5, this);
-			hero.getSprite().showStatus(CharSprite.POSITIVE, Game.getVar(R.string.PotionOfMight_StaApply));
-			GLog.p(Game.getVar(R.string.PotionOfMight_Apply));
+            hero.getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.PotionOfMight_StaApply));
+            GLog.p(StringsManager.getVar(R.string.PotionOfMight_Apply));
 
 			Badges.validateStrengthAttained(hero);
 		}
@@ -44,8 +44,8 @@ public class PotionOfMight extends PotionOfStrength {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.PotionOfMight_Info);
-	}
+        return StringsManager.getVar(R.string.PotionOfMight_Info);
+    }
 
 	@Override
 	public int basePrice() {

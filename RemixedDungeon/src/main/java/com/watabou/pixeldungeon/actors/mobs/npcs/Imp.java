@@ -21,7 +21,7 @@ import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -59,7 +59,7 @@ public class Imp extends NPC {
 		
 		if (!Quest.given && CharUtils.isVisible(this)) {
 			if (!seenBefore) {
-				say( Utils.format( Game.getVar(R.string.Imp_Hey), Dungeon.hero.className() ) );
+                say( Utils.format(StringsManager.getVar(R.string.Imp_Hey), Dungeon.hero.className() ) );
 			}
 			seenBefore = true;
 		} else {
@@ -78,8 +78,8 @@ public class Imp extends NPC {
 	
 	@Override
 	public String defenseVerb() {
-		return Game.getVar(R.string.Imp_Defense);
-	}
+        return StringsManager.getVar(R.string.Imp_Defense);
+    }
 	
 	@Override
 	public void damage(int dmg, @NotNull NamedEntityKind src ) {
@@ -105,11 +105,11 @@ public class Imp extends NPC {
 			if (tokens != null && (tokens.quantity() >= 8 || (!Quest.alternative && tokens.quantity() >= 6))) {
 				GameScene.show( new WndImp( this, tokens ) );
 			} else {
-				tell( Quest.alternative ? Game.getVar(R.string.Imp_Monks2) : Game.getVar(R.string.Imp_Golems2), hero.className() );
+                tell( Quest.alternative ? StringsManager.getVar(R.string.Imp_Monks2) : StringsManager.getVar(R.string.Imp_Golems2), hero.className() );
 			}
 			
 		} else {
-			tell( Quest.alternative ? Game.getVar(R.string.Imp_Monks1) : Game.getVar(R.string.Imp_Golems1) );
+            tell( Quest.alternative ? StringsManager.getVar(R.string.Imp_Monks1) : StringsManager.getVar(R.string.Imp_Golems1));
 			Quest.given = true;
 			Quest.completed = false;
 			
@@ -125,8 +125,8 @@ public class Imp extends NPC {
 	}
 	
 	public void flee() {
-		
-		say( Utils.format( Game.getVar(R.string.Imp_Cya), Dungeon.hero.className() ) );
+
+        say( Utils.format(StringsManager.getVar(R.string.Imp_Cya), Dungeon.hero.className() ) );
 		
 		destroy();
 		getSprite().die();

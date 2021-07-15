@@ -23,7 +23,7 @@ import com.nyrds.pixeldungeon.mobs.common.BlinkAwayFromChar;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -95,7 +95,7 @@ public class Warlock extends Mob implements IZapper {
 				Buff.prolong(getEnemy(), Weakness.class, Weakness.duration(getEnemy()));
 			}
 
-			CharUtils.checkDeathReport(this, enemy, Game.getVar(R.string.Warlock_Killed));
+            CharUtils.checkDeathReport(this, enemy, StringsManager.getVar(R.string.Warlock_Killed));
 
 			return true;
 		}

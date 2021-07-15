@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.levels.objects;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Animation;
 import com.watabou.pixeldungeon.actors.Char;
@@ -83,8 +83,8 @@ public abstract class PortalGate extends Deco {
 	@Override
 	public String desc() {
 		if(activated){
-			return Game.getVar(R.string.PortalGate_Desc_Activated);
-		}
+            return StringsManager.getVar(R.string.PortalGate_Desc_Activated);
+        }
 		return super.desc();
 	}
 
@@ -96,7 +96,7 @@ public abstract class PortalGate extends Deco {
 			playActiveLoop();
 			activated = true;
 			animationRunning = false;
-			GLog.w(Game.getVar(R.string.PortalGate_Activated));
+            GLog.w(StringsManager.getVar(R.string.PortalGate_Activated));
 		});
 	}
 

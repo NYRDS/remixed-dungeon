@@ -4,7 +4,7 @@ import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -32,7 +32,7 @@ public class WndHeroSpells extends Window {
 
         String affinity = hero.getHeroClass().getMagicAffinity();
 
-        Text title = PixelScene.createText(Game.getVar(R.string.WndHero_SkillLevel) + ": " + hero.skillLevel(), GuiProperties.titleFontSize());
+        Text title = PixelScene.createText(StringsManager.getVar(R.string.WndHero_SkillLevel) + ": " + hero.skillLevel(), GuiProperties.titleFontSize());
         title.hardlight(Window.TITLE_COLOR);
         title.setPos(width - title.width(), 0);
         add(title);

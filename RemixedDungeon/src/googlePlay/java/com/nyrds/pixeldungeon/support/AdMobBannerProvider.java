@@ -9,6 +9,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.LoadAdError;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 
 public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
     private AdView adView;
@@ -19,7 +20,7 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
     @Override
     public void displayBanner() {
         adView = new AdView(Game.instance());
-        adView.setAdUnitId(Game.getVar(R.string.easyModeAdUnitId));
+        adView.setAdUnitId(StringsManager.getVar(R.string.easyModeAdUnitId));
         adView.setBackgroundColor(Color.TRANSPARENT);
         adView.setAdListener(new AdmobBannerListener());
         adView.setAdSize(AdSize.SMART_BANNER);

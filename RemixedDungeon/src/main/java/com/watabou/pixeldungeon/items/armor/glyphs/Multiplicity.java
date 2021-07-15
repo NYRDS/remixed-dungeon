@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -64,7 +64,7 @@ public class Multiplicity extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-		return Utils.format( Game.getVar(R.string.Multiplicity_Txt), weaponName );
+        return Utils.format(StringsManager.getVar(R.string.Multiplicity_Txt), weaponName );
 	}
 
 	@Override

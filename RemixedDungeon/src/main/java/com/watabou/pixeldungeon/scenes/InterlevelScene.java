@@ -24,7 +24,7 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Music;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Text;
@@ -122,22 +122,22 @@ public class InterlevelScene extends PixelScene {
         String text = Utils.EMPTY_STRING;
         switch (mode) {
             case DESCEND:
-                text = Game.getVar(R.string.InterLevelScene_Descending);
+                text = StringsManager.getVar(R.string.InterLevelScene_Descending);
                 break;
             case ASCEND:
-                text = Game.getVar(R.string.InterLevelScene_Ascending);
+                text = StringsManager.getVar(R.string.InterLevelScene_Ascending);
                 break;
             case CONTINUE:
-                text = Game.getVar(R.string.InterLevelScene_Loading);
+                text = StringsManager.getVar(R.string.InterLevelScene_Loading);
                 break;
             case RESURRECT:
-                text = Game.getVar(R.string.InterLevelScene_Resurrecting);
+                text = StringsManager.getVar(R.string.InterLevelScene_Resurrecting);
                 break;
             case RETURN:
-                text = Game.getVar(R.string.InterLevelScene_Returning);
+                text = StringsManager.getVar(R.string.InterLevelScene_Returning);
                 break;
             case FALL:
-                text = Game.getVar(R.string.InterLevelScene_Falling);
+                text = StringsManager.getVar(R.string.InterLevelScene_Falling);
                 break;
         }
 

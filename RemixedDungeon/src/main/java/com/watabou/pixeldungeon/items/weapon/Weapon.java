@@ -22,7 +22,7 @@ import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -83,7 +83,7 @@ public class Weapon extends KindOfWeapon {
 	public void usedForHit() {
 		if (!isLevelKnown() && --hitsToKnow <= 0) {
 			setLevelKnown(true);
-			GLog.i(Game.getVar(R.string.Weapon_Identify), name(), toString());
+            GLog.i(StringsManager.getVar(R.string.Weapon_Identify), name(), toString());
 			Badges.validateItemLevelAcquired(this);
 		}
 	}
@@ -175,7 +175,7 @@ public class Weapon extends KindOfWeapon {
 	public Item upgrade( boolean enchant ) {		
 		if (getEnchantment() != null) {
 			if (!enchant && Random.Int( level() ) > 0 && !Dungeon.isLoading()) {
-				GLog.w(Game.getVar(R.string.Weapon_Incompatible));
+                GLog.w(StringsManager.getVar(R.string.Weapon_Incompatible));
 				enchant( null );
 			}
 		} else {

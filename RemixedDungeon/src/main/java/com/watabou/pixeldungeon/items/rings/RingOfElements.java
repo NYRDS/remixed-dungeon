@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -41,7 +41,7 @@ public class RingOfElements extends Ring {
 	
 	@Override
 	public String desc() {
-		return isKnown() ? Game.getVar(R.string.RingOfElements_Info) : super.desc();
+        return isKnown() ? StringsManager.getVar(R.string.RingOfElements_Info) : super.desc();
 	}
 
 

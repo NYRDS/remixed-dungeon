@@ -6,7 +6,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndMessage;
@@ -22,7 +22,7 @@ public class MovieRewardTask implements Runnable {
 
     @Override
     public void run() {
-        GameScene.show(new WndMessage(Game.getVar(R.string.WndMovieTheatre_Thank_You) ) {
+        GameScene.show(new WndMessage(StringsManager.getVar(R.string.WndMovieTheatre_Thank_You)) {
 
             @Override
             public void destroy() {
@@ -32,13 +32,13 @@ public class MovieRewardTask implements Runnable {
                 Hero.movieRewardPending = false;
 
                 if(needReward) {
-                    serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Ok));
+                    serviceMan.say(StringsManager.getVar(R.string.WndMovieTheatre_Ok));
                     ServiceManNPC.reward();
                     EventCollector.logCountedEvent("ad_reward5",  6);
                     EventCollector.logCountedEvent("ad_reward10", 11);
                     needReward = false;
                 } else {
-                    serviceMan.say(Game.getVar(R.string.WndMovieTheatre_Sorry));
+                    serviceMan.say(StringsManager.getVar(R.string.WndMovieTheatre_Sorry));
                 }
 
                 if (GamePreferences.donated() == 0) {

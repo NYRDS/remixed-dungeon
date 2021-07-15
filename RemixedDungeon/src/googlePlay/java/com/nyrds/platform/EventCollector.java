@@ -1,14 +1,14 @@
-package com.nyrds.pixeldungeon.ml;
+package com.nyrds.platform;
 
 import android.os.Bundle;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
-import com.nyrds.android.RemixedDungeonApp;
-import com.nyrds.android.util.ModdingMode;
-import com.nyrds.android.util.Util;
-import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Preferences;
+import com.nyrds.platform.app.RemixedDungeonApp;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.Preferences;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 

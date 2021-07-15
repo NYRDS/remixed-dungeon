@@ -4,7 +4,7 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.FortuneTellerNPC;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
@@ -29,7 +29,7 @@ public class WndFortuneTeller extends WndQuest {
 		{
 			goldCost = (int) (goldCost * 0.9);
 		}
-		return Utils.format(Game.getVar(R.string.WndFortuneTeller_Instruction), goldCost);
+        return Utils.format(StringsManager.getVar(R.string.WndFortuneTeller_Instruction), goldCost);
 	}
 
 	public WndFortuneTeller(FortuneTellerNPC fortuneTellerNPC, final Char hero) {
@@ -50,20 +50,20 @@ public class WndFortuneTeller extends WndQuest {
 
 		int finalUnknownItemsCount = unknownItemsCount;
 
-		RedButton btnYes = new RedButton( Game.getVar(R.string.Wnd_Button_Yes) + " ( " + goldCost + " )" ) {
+        RedButton btnYes = new RedButton( StringsManager.getVar(R.string.Wnd_Button_Yes) + " ( " + goldCost + " )" ) {
 			@Override
 			protected void onClick() {
 				if (finalUnknownItemsCount > 0) {
-					GameScene.selectItem(WndFortuneTeller.this.hero, (item, selector) -> {
+                    GameScene.selectItem(WndFortuneTeller.this.hero, (item, selector) -> {
 						if (item != null) {
 							ScrollOfIdentify.identify(WndFortuneTeller.this.hero, item);
 						}
-					}, WndBag.Mode.UNIDENTIFED, Game.getVar(R.string.ScrollOfIdentify_InvTitle));
+					}, WndBag.Mode.UNIDENTIFED, StringsManager.getVar(R.string.ScrollOfIdentify_InvTitle));
 					hide();
 					hero.spendGold(goldCost);
 				} else {
 					hide();
-					GameScene.show(new WndQuest(fortuneTellerNPC, Game.getVar(R.string.WndFortuneTeller_No_Item)));
+                    GameScene.show(new WndQuest(fortuneTellerNPC, StringsManager.getVar(R.string.WndFortuneTeller_No_Item)));
 				}
 			}
 		};
@@ -76,7 +76,7 @@ public class WndFortuneTeller extends WndQuest {
 
 		if(finalUnknownItemsCount > 0) {
 			final int identifyAllCost = goldCost * finalUnknownItemsCount;
-			RedButton btnAll = new RedButton(Game.getVar(R.string.WndFortuneTeller_IdentifyAll) + " ( " + identifyAllCost + " )") {
+            RedButton btnAll = new RedButton(StringsManager.getVar(R.string.WndFortuneTeller_IdentifyAll) + " ( " + identifyAllCost + " )") {
 				@Override
 				protected void onClick() {
 					hero.getBelongings().identify();
@@ -92,7 +92,7 @@ public class WndFortuneTeller extends WndQuest {
 		}
 
 
-		RedButton btnNo = new RedButton( Game.getVar(R.string.Wnd_Button_No) ) {
+        RedButton btnNo = new RedButton(StringsManager.getVar(R.string.Wnd_Button_No)) {
 			@Override
 			protected void onClick() {
 				hide();

@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.items.chaos;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
@@ -72,37 +72,37 @@ public class ChaosCrystal extends UsableArtifact {
 			if (item instanceof Scroll) {
 				Item newItem = new ScrollOfWeaponUpgrade();
 				selector.collect(newItem);
-				GLog.p(Game.getVar(R.string.ChaosCrystal_ScrollFused), newItem.name());
+                GLog.p(StringsManager.getVar(R.string.ChaosCrystal_ScrollFused), newItem.name());
 				return;
 			}
 
 			if (item instanceof KindOfBow) {
 				selector.collect(new ChaosBow());
-				GLog.p(Game.getVar(R.string.ChaosCrystal_BowFused));
+                GLog.p(StringsManager.getVar(R.string.ChaosCrystal_BowFused));
 				return;
 			}
 
 			if (item instanceof MeleeWeapon) {
 				selector.collect(new ChaosSword());
-				GLog.p(Game.getVar(R.string.ChaosCrystal_SwordFused));
+                GLog.p(StringsManager.getVar(R.string.ChaosCrystal_SwordFused));
 				return;
 			}
 
 			if (item instanceof Armor) {
 				selector.collect(new ChaosArmor());
-				GLog.p(Game.getVar(R.string.ChaosCrystal_ArmorFused));
+                GLog.p(StringsManager.getVar(R.string.ChaosCrystal_ArmorFused));
 				return;
 			}
 
 			if (item instanceof Wand) {
 				selector.collect(new ChaosStaff());
-				GLog.p(Game.getVar(R.string.ChaosCrystal_StaffFused));
+                GLog.p(StringsManager.getVar(R.string.ChaosCrystal_StaffFused));
 			}
 		}
 	};
 
 	private void fuse(Char hero) {
-		GameScene.selectItem(hero, itemSelector, WndBag.Mode.FUSEABLE, Game.getVar(R.string.ChaosCrystal_SelectForFuse));
+        GameScene.selectItem(hero, itemSelector, WndBag.Mode.FUSEABLE, StringsManager.getVar(R.string.ChaosCrystal_SelectForFuse));
 		hero.doOperate();
 	}
 
@@ -148,10 +148,10 @@ public class ChaosCrystal extends UsableArtifact {
 			default:
 				return super.name();
 			case 1:
-				return Game.getVar(R.string.ChaosCrystal_Name_1);
-			case 2:
-				return Game.getVar(R.string.ChaosCrystal_Name_2);
-		}
+                return StringsManager.getVar(R.string.ChaosCrystal_Name_1);
+            case 2:
+                return StringsManager.getVar(R.string.ChaosCrystal_Name_2);
+        }
 	}
 
 	@Override
@@ -160,10 +160,10 @@ public class ChaosCrystal extends UsableArtifact {
 			default:
 				return super.info();
 			case 1:
-				return Game.getVar(R.string.ChaosCrystal_Info_1);
-			case 2:
-				return Game.getVar(R.string.ChaosCrystal_Info_2);
-		}
+                return StringsManager.getVar(R.string.ChaosCrystal_Info_1);
+            case 2:
+                return StringsManager.getVar(R.string.ChaosCrystal_Info_2);
+        }
 	}
 
 	@Override
@@ -216,8 +216,8 @@ public class ChaosCrystal extends UsableArtifact {
 
 		@Override
 		public String prompt() {
-			return Game.getVar(R.string.ChaosCrystal_Prompt);
-		}
+            return StringsManager.getVar(R.string.ChaosCrystal_Prompt);
+        }
 
 		@Override
 		public Image icon() {

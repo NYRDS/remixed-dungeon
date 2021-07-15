@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -25,7 +25,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 public class RedButton extends TextButton {
 
 	public RedButton( int labelStringId ) {
-		this(Game.getVar(labelStringId));
+        this(StringsManager.getVar(labelStringId));
 	}
 
 	public RedButton( String label ) {

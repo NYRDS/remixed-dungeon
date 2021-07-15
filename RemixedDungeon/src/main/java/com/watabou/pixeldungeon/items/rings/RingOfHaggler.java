@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
@@ -54,7 +54,7 @@ public class RingOfHaggler extends Ring {
 	
 	@Override
 	public String desc() {
-		return isKnown() ? Game.getVar(R.string.RingOfHaggler_Info) : super.desc();
+        return isKnown() ? StringsManager.getVar(R.string.RingOfHaggler_Info) : super.desc();
 	}
 	
 	public class Haggling extends RingBuff {	

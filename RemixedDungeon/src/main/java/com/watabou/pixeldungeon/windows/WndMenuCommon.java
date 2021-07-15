@@ -21,7 +21,7 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.ui.CheckBox;
@@ -52,8 +52,7 @@ public abstract class WndMenuCommon extends Window {
 	}
 
     protected void addSoundControls(VBox menuItems) {
-        menuItems.add(new MenuCheckBox(Game
-                .getVar(R.string.WndSettings_Music), GamePreferences.music()) {
+        menuItems.add(new MenuCheckBox(StringsManager.getVar(R.string.WndSettings_Music), GamePreferences.music()) {
             @Override
             protected void onClick() {
                 super.onClick();
@@ -62,8 +61,7 @@ public abstract class WndMenuCommon extends Window {
         });
 
 
-        menuItems.add(new MenuCheckBox(Game
-                .getVar(R.string.WndSettings_Sound), GamePreferences.soundFx()) {
+        menuItems.add(new MenuCheckBox(StringsManager.getVar(R.string.WndSettings_Sound), GamePreferences.soundFx()) {
             @Override
             protected void onClick() {
                 super.onClick();

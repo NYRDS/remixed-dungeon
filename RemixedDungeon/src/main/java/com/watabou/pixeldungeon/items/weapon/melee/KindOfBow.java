@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -36,7 +36,7 @@ public abstract class KindOfBow extends MeleeWeapon {
 	
 	@Override
 	public String info() {
-		return Game.getVar(R.string.Bow_Info1) + desc();
+        return StringsManager.getVar(R.string.Bow_Info1) + desc();
 	}
 	
 	@Override
@@ -78,7 +78,7 @@ public abstract class KindOfBow extends MeleeWeapon {
 	@Override
 	public void _execute(@NotNull Char chr, @NotNull String action) {
 		if(AC_CHOOSE_ARROWS.equals(action)) {
-			GameScene.selectItem(chr,
+            GameScene.selectItem(chr,
                     (item, selector) -> {
                                 if (item != null) {
                                     if(item instanceof Arrow){
@@ -86,7 +86,7 @@ public abstract class KindOfBow extends MeleeWeapon {
                                     }
                                 }
                             },
-                    WndBag.Mode.ARROWS, Game.getVar(R.string.KindOfBow_SelectArrowKind));
+                    WndBag.Mode.ARROWS, StringsManager.getVar(R.string.KindOfBow_SelectArrowKind));
 			return;
 		}
 		super._execute(chr, action);

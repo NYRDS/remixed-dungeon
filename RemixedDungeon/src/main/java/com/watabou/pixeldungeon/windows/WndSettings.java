@@ -22,7 +22,7 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndGameplaySettings;
 import com.nyrds.pixeldungeon.windows.WndUiSettings;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndSettings extends WndMenuCommon {
@@ -31,7 +31,7 @@ public class WndSettings extends WndMenuCommon {
 	protected void createItems() {
 		addSoundControls(menuItems);
 
-		menuItems.add(new MenuButton(Game.getVar(R.string.WndSettings_UiSettings)){
+        menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_UiSettings)){
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -39,7 +39,7 @@ public class WndSettings extends WndMenuCommon {
 			}
 		});
 
-		menuItems.add(new MenuButton(Game.getVar(R.string.WndSettings_GameplaySettings)){
+        menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_GameplaySettings)){
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -48,7 +48,7 @@ public class WndSettings extends WndMenuCommon {
 		});
 
 
-		final String selectLanguage = Game.getVar(R.string.WndSettings_SelectLanguage);
+        final String selectLanguage = StringsManager.getVar(R.string.WndSettings_SelectLanguage);
 
 		menuItems.add(new MenuButton(selectLanguage) {
 			@Override

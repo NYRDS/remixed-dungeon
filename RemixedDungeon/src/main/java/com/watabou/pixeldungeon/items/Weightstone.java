@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Assets;
@@ -46,7 +46,7 @@ public class Weightstone extends Item {
 	private static final String AC_APPLY = "Weightstone_ACApply";
 	
 	{
-		name = Game.getVar(R.string.Weightstone_Name);
+        name = StringsManager.getVar(R.string.Weightstone_Name);
 		image = ItemSpriteSheet.WEIGHT;
 		
 		stackable = true;
@@ -62,7 +62,7 @@ public class Weightstone extends Item {
 	@Override
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_APPLY)) {
-			GameScene.selectItem(chr, itemSelector, WndBag.Mode.WEAPON, Game.getVar(R.string.Weightstone_Select));
+            GameScene.selectItem(chr, itemSelector, WndBag.Mode.WEAPON, StringsManager.getVar(R.string.Weightstone_Select));
 		} else {
 			super._execute(chr, action );
 		}
@@ -85,10 +85,10 @@ public class Weightstone extends Item {
 		
 		if (forSpeed) {
 			weapon.imbue = Weapon.Imbue.SPEED;
-			GLog.p( Game.getVar(R.string.Weightstone_Fast), weapon.name() );
+            GLog.p(StringsManager.getVar(R.string.Weightstone_Fast), weapon.name() );
 		} else {
 			weapon.imbue = Weapon.Imbue.ACCURACY;
-			GLog.p( Game.getVar(R.string.Weightstone_Accurate), weapon.name() );
+            GLog.p(StringsManager.getVar(R.string.Weightstone_Accurate), weapon.name() );
 		}
 		
 		owner.doOperate(TIME_TO_APPLY);
@@ -117,8 +117,8 @@ public class Weightstone extends Item {
 			IconTitle titlebar = new IconTitle( weapon );
 			titlebar.setRect( 0, 0, WIDTH, 0 );
 			add( titlebar );
-			
-			Text tfMesage = PixelScene.createMultiline( Utils.format( Game.getVar(R.string.Weightstone_WndChoice), weapon.name() ), GuiProperties.regularFontSize());
+
+            Text tfMesage = PixelScene.createMultiline( Utils.format(StringsManager.getVar(R.string.Weightstone_WndChoice), weapon.name() ), GuiProperties.regularFontSize());
 			tfMesage.maxWidth(WIDTH - GAP * 2);
 			tfMesage.x = GAP;
 			tfMesage.y = titlebar.bottom() + GAP;
@@ -127,7 +127,7 @@ public class Weightstone extends Item {
 			float pos = tfMesage.y + tfMesage.height();
 			
 			if (weapon.imbue != Weapon.Imbue.SPEED) {
-				RedButton btnSpeed = new RedButton( Game.getVar(R.string.Weightstone_WndSpeed) ) {
+                RedButton btnSpeed = new RedButton(StringsManager.getVar(R.string.Weightstone_WndSpeed)) {
 					@Override
 					protected void onClick() {
 						hide();
@@ -141,7 +141,7 @@ public class Weightstone extends Item {
 			}
 			
 			if (weapon.imbue != Weapon.Imbue.ACCURACY) {
-				RedButton btnAccuracy = new RedButton( Game.getVar(R.string.Weightstone_WndAccuracy) ) {
+                RedButton btnAccuracy = new RedButton(StringsManager.getVar(R.string.Weightstone_WndAccuracy)) {
 					@Override
 					protected void onClick() {
 						hide();
@@ -153,8 +153,8 @@ public class Weightstone extends Item {
 				
 				pos = btnAccuracy.bottom();
 			}
-			
-			RedButton btnCancel = new RedButton( Game.getVar(R.string.Weightstone_WndCancel) ) {
+
+            RedButton btnCancel = new RedButton(StringsManager.getVar(R.string.Weightstone_WndCancel)) {
 				@Override
 				protected void onClick() {
 					hide();

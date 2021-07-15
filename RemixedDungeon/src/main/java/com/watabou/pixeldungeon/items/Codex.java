@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.items;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.books.Book;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.windows.WndStory;
@@ -47,7 +46,7 @@ public class Codex extends Book {
 		if(text != null && !text.isEmpty() && !text.equals("Unknown")) {
 			WndStory.showCustomStory(text);
 		} else {
-			WndStory.showCustomStory(Game.getVars(R.array.Codex_Story)[getCodexId()]);
+            WndStory.showCustomStory(StringsManager.getVars(R.array.Codex_Story)[getCodexId()]);
 		}
 	}
 
@@ -74,7 +73,7 @@ public class Codex extends Book {
 
 	private int getCodexId()
 	{
-		int maxId = Game.getVars(R.array.Codex_Story).length;
+        int maxId = StringsManager.getVars(R.array.Codex_Story).length;
 		if(codexId < 0) {
 			codexId = Random.Int(maxId);
 		}

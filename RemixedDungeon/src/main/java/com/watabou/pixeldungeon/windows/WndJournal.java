@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndHelper;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -48,7 +48,7 @@ public class WndJournal extends WndTabbed {
 
         resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - tabHeight() - MARGIN);
 
-        Text txtTitle = PixelScene.createText(Game.getVar(R.string.WndJournal_Title), GuiProperties.titleFontSize());
+        Text txtTitle = PixelScene.createText(StringsManager.getVar(R.string.WndJournal_Title), GuiProperties.titleFontSize());
         txtTitle.hardlight(Window.TITLE_COLOR);
         txtTitle.x = PixelScene.align(PixelScene.uiCamera, (width - txtTitle.width()) / 2);
         add(txtTitle);
@@ -174,7 +174,7 @@ public class WndJournal extends WndTabbed {
 
     private class JournalTab extends ContentTab {
         JournalTab() {
-            super(WndJournal.this, Game.getVar(R.string.WndJournal_Levels));
+            super(WndJournal.this, StringsManager.getVar(R.string.WndJournal_Levels));
         }
 
         @Override
@@ -198,7 +198,7 @@ public class WndJournal extends WndTabbed {
 
     private class LogbookTab extends ContentTab {
         LogbookTab() {
-            super(WndJournal.this, Game.getVar(R.string.WndJournal_Logbook));
+            super(WndJournal.this, StringsManager.getVar(R.string.WndJournal_Logbook));
         }
 
         @Override

@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.actors.blobs;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -49,8 +49,8 @@ public class WaterOfHealth extends WellWater {
 		CellEmitter.get( pos ).start( ShaftParticle.FACTORY, 0.2f, 3 );
 
 		Dungeon.hero.interrupt();
-	
-		GLog.p( Game.getVar(R.string.WaterOfHealth_Procced) );
+
+        GLog.p(StringsManager.getVar(R.string.WaterOfHealth_Procced));
 		
 		Journal.remove( Feature.WELL_OF_HEALTH.desc() );
 		
@@ -76,6 +76,6 @@ public class WaterOfHealth extends WellWater {
 	
 	@Override
 	public String tileDesc() {
-		return Game.getVar(R.string.WaterOfHealth_Info);
-	}
+        return StringsManager.getVar(R.string.WaterOfHealth_Info);
+    }
 }

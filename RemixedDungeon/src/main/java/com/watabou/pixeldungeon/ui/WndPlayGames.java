@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -24,7 +25,7 @@ public class WndPlayGames extends Window {
         boolean playGamesConnected = Game.instance().playGames.isConnected();
         resizeLimited(120);
 
-        Text listTitle = PixelScene.createMultiline(Game.getVar(R.string.WndPlayGames_Title), GuiProperties.mediumTitleFontSize());
+        Text listTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.WndPlayGames_Title), GuiProperties.mediumTitleFontSize());
         listTitle.hardlight(TITLE_COLOR);
         listTitle.maxWidth(width - GAP * 2);
         listTitle.x = (width - listTitle.width()) / 2;
@@ -34,7 +35,7 @@ public class WndPlayGames extends Window {
 
         y += listTitle.height() + GAP;
 
-        CheckBox usePlayGames = new CheckBox(Game.getVar(R.string.WndPlayGames_Use),
+        CheckBox usePlayGames = new CheckBox(StringsManager.getVar(R.string.WndPlayGames_Use),
                 Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)
                 && Game.instance().playGames.isConnected()
                 )
@@ -45,7 +46,7 @@ public class WndPlayGames extends Window {
 
                 if (value) {
                     Game.instance().playGames.connectExplicit();
-                    GameLoop.addToScene(new WndMessage(Game.getVar(R.string.WndPlayGames_Connecting)));
+                    GameLoop.addToScene(new WndMessage(StringsManager.getVar(R.string.WndPlayGames_Connecting)));
                 } else {
                     Game.instance().playGames.disconnect();
                 }
@@ -61,7 +62,7 @@ public class WndPlayGames extends Window {
             return;
         }
 
-        addButton(new RedButton(Game.getVar(R.string.WndPlayGames_Show_Badges)) {
+        addButton(new RedButton(StringsManager.getVar(R.string.WndPlayGames_Show_Badges)) {
             @Override
             protected void onClick() {
                 super.onClick();
@@ -69,7 +70,7 @@ public class WndPlayGames extends Window {
             }
         });
 
-        addButton(new RedButton(Game.getVar(R.string.WndPlayGames_Show_Leaderboards)) {
+        addButton(new RedButton(StringsManager.getVar(R.string.WndPlayGames_Show_Leaderboards)) {
             @Override
             protected void onClick() {
                 super.onClick();
@@ -77,7 +78,7 @@ public class WndPlayGames extends Window {
             }
         });
 
-        addButton(new RedButton(Game.getVar(R.string.WndPlayGames_BackupProgress)) {
+        addButton(new RedButton(StringsManager.getVar(R.string.WndPlayGames_BackupProgress)) {
             @Override
             protected void onClick() {
                 super.onClick();
@@ -85,7 +86,7 @@ public class WndPlayGames extends Window {
             }
         });
 
-        addButton(new RedButton(Game.getVar(R.string.WndPlayGames_RestoreProgress)) {
+        addButton(new RedButton(StringsManager.getVar(R.string.WndPlayGames_RestoreProgress)) {
             @Override
             protected void onClick() {
                 super.onClick();
@@ -93,7 +94,7 @@ public class WndPlayGames extends Window {
             }
         });
 
-        addButton(new RedButton(Game.getVar(R.string.WndSettings_RecordVideo)) {
+        addButton(new RedButton(StringsManager.getVar(R.string.WndSettings_RecordVideo)) {
             @Override
             protected void onClick() {
                 super.onClick();
@@ -114,14 +115,15 @@ public class WndPlayGames extends Window {
 
         private final WndMessage working;
         ResultHandler() {
-            working = new WndMessage(Game.getVar(R.string.WndPlayGames_WorkInCloud));
+            working = new WndMessage(StringsManager.getVar(R.string.WndPlayGames_WorkInCloud));
             GameLoop.addToScene(working);
         }
         @Override
         public void status(final boolean status) {
             GameLoop.pushUiTask(() -> {
                 working.hide();
-                String msg = Game.getVar(status ? R.string.WndPlayGames_Show_Ok : R.string.WndPlayGames_Show_Error );
+                        int id = status ? R.string.WndPlayGames_Show_Ok : R.string.WndPlayGames_Show_Error;
+                        String msg = StringsManager.getVar(id);
                 GameLoop.addToScene(new WndMessage(msg));
             }
             );

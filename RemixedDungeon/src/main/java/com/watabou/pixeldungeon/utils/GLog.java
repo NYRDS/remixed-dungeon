@@ -114,7 +114,7 @@ public class GLog {
 			Log.i(TAG, text);
 		}
 
-		Game.pushUiTask(() -> update.dispatch(finalText)
+		GameLoop.pushUiTask(() -> update.dispatch(finalText)
 		);
 	}
 
