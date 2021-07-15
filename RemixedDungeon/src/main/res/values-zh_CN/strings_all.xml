@@ -1101,7 +1101,7 @@
   <string name="RatKing_Gender">男性</string>
   <string name="Weapon_Identify">你已足够熟悉你的%1$s，鉴定出它是%2$s。</string>
   <string name="Weapon_Incompatible">不同属性魔法的冲突使得这把武器的附魔失去了效力！</string>
-  <string name="MeleeWeapon_Info1a">这把%1$s是%2$s的%3$d阶近战武器。</string>
+  <string name="MeleeWeapon_Info1a">这把%1$s是%2$s%3$d阶的近战武器。</string>
   <string name="MeleeWeapon_Info1b">一把</string>
   <string name="MeleeWeapon_Info1c">一把升级过的</string>
   <string name="MeleeWeapon_Info1d">一把负等级的</string>
