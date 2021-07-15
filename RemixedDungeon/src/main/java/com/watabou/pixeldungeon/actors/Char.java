@@ -1044,7 +1044,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public void playAttack(int cell) {
 		final boolean realtime = Dungeon.realtime();
 
-		if(Dungeon.visible[pos] && !realtime) {
+		if(Dungeon.visible[cell] && !realtime) {
 			getSprite().dummyAttack(cell);
 		} else {
 			next();

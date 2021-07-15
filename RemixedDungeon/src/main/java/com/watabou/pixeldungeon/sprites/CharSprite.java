@@ -240,7 +240,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public void dummyAttack(int cell) {
         ch.ifPresent(chr -> {
             if (Dungeon.visible[chr.getPos()]) {
-                attack(cell, this::idle);
+                attack(cell, () -> ch.ifPresent(Actor::next));
             }
         });
     }
