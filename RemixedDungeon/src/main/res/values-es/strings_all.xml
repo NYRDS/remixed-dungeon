@@ -313,8 +313,8 @@
   <string name="AmuletScene_Exit">Es hora de volver a casa</string>
   <string name="AmuletScene_Stay">Aún no he acabado</string>
   <string name="AmuletScene_Txt">Finalmente tienes el Amuleto de Yendor en tus manos. Usando su poder puedes dominar el mundo, traer prosperidad y paz a le gente o lo que sea. En cualquier caso, tu vida cambiará para siempre y este juego acabará aquí. O puedes seguir siendo un simple mortal un poco más.</string>
-  <string name="GameScene_Welcome">Bienvenido al nivel %d de Remixed Dungeon!</string>
-  <string name="GameScene_WelcomeBack">Bienvenido de vuelta al nivel %d de Remixed Dungeon!</string>
+  <string name="GameScene_Welcome">¡Bienvenido al nivel %d de Remixed Dungeon!</string>
+  <string name="GameScene_WelcomeBack">¡Bienvenido de vuelta al nivel %d de Remixed Dungeon!</string>
   <string name="GameScene_NightMode">¡Ten cuidado, ya que la mazmorra es aún más peligrosa de noche!</string>
   <string name="GameScene_Chasm">Tus pasos resuenan por la mazmorra</string>
   <string name="GameScene_Water">Oyes el agua salpicando a tu alrededor.</string>
@@ -2596,8 +2596,7 @@ remix.29.4\n
  -- ¡Doble empuñadura!\n
 - Modding:\n
  -- ¡Armas personalizables!\n
-- Bugs arreglados\n
-</string>
+- Bugs arreglados\n</string>
   <string name="Mods_Disclaimer">
         Los mods son creados por los jugadores para los jugadores.\n
          Los mods a veces cambian el juego de manera impredecible o extraña, ¡estás avisado!\n
@@ -2820,7 +2819,7 @@ otro lugar del nivel.</string>
     -- Progresión en los items del Caos nerfeada.\n
     -- Desde ahora las pociones de Mana son pociones regulares.\n
     -- Ahora puedes obtener los logros cuando juegas con DLC\'s (pero no mods).\n
-    - Errores corregidos.\n
+    - Bugs arreglados.\n
     </string>
   <string name="ShamanElder_Name">chamán anciano</string>
   <string name="ShamanElder_Gender">masculino</string>
@@ -2830,7 +2829,7 @@ otro lugar del nivel.</string>
   <string name="Bee_Gender">masculino</string>
   <string name="Bee_Name_Objective">abeja</string>
   <string name="Bee_Desc">A pesar de su pequeño tamaño, las abejas tienden a proteger su colmena ferozmente. Sin embargo, no viven mucho tiempo.</string>
-  <string name="Moongrace_Name">Gracia Lunar</string>
+  <string name="Moongrace_Name">Lucirón</string>
   <string name="Moongrace_Desc">Estas plantas crecen en pequeñas cantidades y son conocidas como una fuente de magia natural.</string>
   <string name="MoongraceBuff_Name">Maná celestial</string>
   <string name="MoongraceBuff_Info">El aire que te rodea se vuelve más saturado, lo que permite una mejor concentración y restauración de tus reservas mágicas.</string>
