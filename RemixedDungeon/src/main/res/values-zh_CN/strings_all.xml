@@ -47,7 +47,7 @@
   <string name="Ring_Info3b">，同时因为它被诅咒了，你无力将其摘下。</string>
   <string name="Ring_Info4">%1$s
 
-你能感受到%2$s中潜伏着一股恶毒的魔力</string>
+你能感受到%2$s中潜伏着一股恶毒的魔力。</string>
   <string name="Ring_BuffKnown">这一枚%s</string>
   <string name="RingOfAccuracy_Name">精准之戒</string>
   <string name="RingOfAccuracy_Info">这枚戒指增加你击中敌人的几率。</string>
