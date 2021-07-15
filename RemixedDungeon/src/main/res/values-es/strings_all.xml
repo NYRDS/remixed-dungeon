@@ -716,7 +716,7 @@
   <string name="HeartOfDarkness_Info">Palpitante corazón negro del Espíritu Traicionero.</string>
   <string name="HeartOfDarkness_Gender">neutral</string>
   <string name="DarkVeilBuff_Name">Velo oscuro</string>
-  <string name="DarkVeilBuff_Info">Tienes un velo de oscuridad sobre ti que invoca un espíritu cada vez que recibes daño.</string>
+  <string name="DarkVeilBuff_Info">Un velo de oscuridad te rodea invocando un espíritu cada vez que recibes daño.</string>
   <string name="Badges_Yog_Slain">Yog-Dzewa asesinado</string>
   <string name="Badges_ShadowLord_Slain">Maestro de las Sombras asesinado</string>
   <string name="Badges_SpiderQueen_Slain">Reina Araña asesinada</string>
@@ -2249,7 +2249,7 @@
   <string name="CloakSpell_Info">Adéntrate en las sombras para volverte invisible. Reduce increíblemente tus probabilidades de ser detectado. No se puede usar mientras haya enemigos cerca.</string>
   <string name="CloakSpell_EnemiesNearby">No puedes adentrarte en las sombras mientras haya enemigos cerca.</string>
   <string name="CloakBuff_Name">Oculto</string>
-  <string name="CloakBuff_Info">Tienes una capa oscura que te oculta en las sombras.</string>
+  <string name="CloakBuff_Info">Tienes una capa oscura que te oculta en las sombras, haciéndote menos visible para los enemigos.</string>
   <string name="TitleScene_Mods">Mods</string>
   <string name="WndHero_Stealth">Sigilo</string>
   <string name="WndHero_Awareness">Conciencia</string>
@@ -2830,4 +2830,8 @@ otro lugar del nivel.</string>
   <string name="Bee_Gender">masculino</string>
   <string name="Bee_Name_Objective">abeja</string>
   <string name="Bee_Desc">A pesar de su pequeño tamaño, las abejas tienden a proteger su colmena ferozmente. Sin embargo, no viven mucho tiempo.</string>
+  <string name="Moongrace_Name">Gracia Lunar</string>
+  <string name="Moongrace_Desc">Estas plantas crecen en pequeñas cantidades y son conocidas como una fuente de magia natural.</string>
+  <string name="MoongraceBuff_Name">Maná celestial</string>
+  <string name="MoongraceBuff_Info">El aire que te rodea se vuelve más saturado, lo que permite una mejor concentración y restauración de tus reservas mágicas.</string>
 </resources>
