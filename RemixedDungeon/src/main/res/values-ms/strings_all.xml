@@ -86,11 +86,11 @@
   <string name="ChaosCrystal_SwordFused">Kristal menyerap masuk ke dalam senjata anda, dan membentuk Pedang</string>
   <string name="ChaosCrystal_BowFused">Kristal menyerap masuk ke dalam busur anda, dan membentuk Busur</string>
   <string name="ChaosCrystal_StaffFused">Kristal menyerap masuk ke dalam tongkat sakti anda, dan membentuk Tongkat</string>
-  <string name="CorpseDust_Buff">Gila Darah</string>
-  <string name="DriedRose_Buff">Memukau</string>
-  <string name="DriedRose_CursedBuff">Birahi</string>
-  <string name="RatSkull_Buff">Ratter</string>
-  <string name="RatKingCrown_Buff">Ratness</string>
+  <string name="CorpseDustBuff_Name">Gila Darah</string>
+  <string name="DriedRoseBuff_Name">Memukau</string>
+  <string name="DriedRoseCursedBuff_Name">Birahi</string>
+  <string name="RatSkullBuff_Name">Ratter</string>
+  <string name="RatKingCrownBuff_Name">Ratness</string>
   <string name="RatKingCrown_Name">Mahkota raja tikus</string>
   <string name="RatKingCrown_Info">Mahkota emas Raja Tikus, simbol kekuasaan Raja Tikus</string>
   <string name="BishopNPC_Name">Uskup</string>
@@ -105,7 +105,6 @@
   <string name="Bishop_not_interested">Keluar</string>
   <string name="Bishop_no_money">Anda tidak mampu membayarnbya.</string>
   <string name="Bishop_bye">Saya akan mendoakan kesejahteraan kamu.</string>
-  <string name="Blessed_Info">Dirahmati oleh pendeta yang benar</string>
   <string name="deco_candle_name">Lilin</string>
   <string name="deco_candle_desc">Lilin besar</string>
   <string name="Possess_Name">Rasuk</string>
@@ -148,15 +147,34 @@
   <string name="town_deco_pedestal_desc">Rehal dengan kitab suci di atasnya.</string>
   <string name="town_deco_shelf_name">Para</string>
   <string name="town_deco_shelf_desc">Para kosong.</string>
+  <string name="town_deco_banner_name">Sepanduk</string>
+  <string name="town_deco_banner_desc">Satu sepanduk yang elegan menonjolkan simbol kedai makan ini.</string>
   <string name="town_deco_inn_bed_name">Katil</string>
+  <string name="town_deco_inn_bed_desc">Katil yang sangat selesa.</string>
+  <string name="town_deco_furnace_name">Relau</string>
+  <string name="town_deco_furnace_desc">Relau membakar yang dipercayai, telah dibina berdasarkan rekaan tradisional.</string>
+  <string name="town_deco_skullboard_name">Rak trofi</string>
+  <string name="town_deco_skullboard_desc">Tengkorak ini memang menarik perhatian yang mengejutkan.</string>
+  <string name="town_deco_stool_sturdy_name">Bangku</string>
+  <string name="town_deco_stool_sturdy_desc">Sebuah bangku biasa yang diperbuat daripada kayu tahan lasak.</string>
+  <string name="town_deco_stool_broken_name">Bangku rosak</string>
+  <string name="town_deco_stool_broken_desc">Bangku ini telah bertahan dalam tempoh yang lama.</string>
+  <string name="town_deco_shelving_name">Para</string>
+  <string name="town_deco_shelving_desc">Rak yang mengagumkan, di atas para anda dapati terdapat pelbagai jenis minuman dan snek.</string>
+  <string name="town_deco_barrel_wine_name">Tong arak</string>
+  <string name="town_deco_barrel_wine_desc">Digunakan untuk menyimpan minuman berharga seperti arak.</string>
+  <string name="town_deco_crate_bottles_name">Pak bir</string>
+  <string name="town_deco_crate_bottles_desc">Bir dalam botol telah menjadi satu fenomena pada masa dahulu dalam kalangan tuan punya rumah penginapan.</string>
+  <string name="town_deco_wall_brazier_name">Perapian</string>
+  <string name="town_deco_wall_brazier_desc">Wap yang keluar dari bara membara telah memenuhi bilik dengan aroma yang harum baunya.</string>
   <string name="WndPriest_Instruction2_m">Selamat datang ke gereja suci Santa Penguasa Bawah Tanah!</string>
   <string name="WndPriest_Instruction2_f">Selamat datang ke gereja suci Santa Penguasa Bawah Tanah!</string>
   <string name="WndPriest_Instruction2">Jika anda perlukan bantuan, saya boleh bantu merawat anda dengan kos sebanyak %d syiling emas!\nJika anda mahu dirahmati dengan kuasa suci, atau terkena sumpahan, sila berjumpa dengan Uskup dalam gereja kecil kami ini.</string>
   <string name="WndDontLikeAds_NotThisTime">Bukan sekarang</string>
   <string name="Item_Info2">ada sesuatu</string>
-  <string name="NecromancerArmor_Info2">Jika memakai perisai ini necromancer dapat guna keupayaan \"Necrotisme\", berupaya menyebarkan  wabak magik, menjangkiti makhluk disekitar, sama ada yang telah mati atau masih hidup.</string>
-  <string name="NecromancerRobe_Info2">Jubah ini diselaputi dengan magik kegelapan yang membolehkan Necromancer berupaya menelan roh raksaksa yang tewas atau mati.</string>
-  <string name="Necrotism_Info">Necrotisma</string>
+  <string name="NecromancerArmor_Info2">Jika memakai perisai ini pembangkit mayat dapat guna keupayaan \"Necrotisme\", berupaya menyebarkan  wabak magik, menjangkiti makhluk disekitar, sama ada yang telah mati atau masih hidup.</string>
+  <string name="NecromancerRobe_Info2">Jubah ini diselaputi dengan magik kegelapan yang membolehkan Pembangkit mayat berupaya menelan roh raksaksa yang tewas atau mati.</string>
+  <string name="NecrotismBuff_Name">Necrotisma</string>
   <string name="Necrotism_ACSpecial">NECROTISMA</string>
   <string name="ResultDescriptions_Necrotism">Mati disebabkan Necrotisma pada aras %d</string>
   <string name="Necrotism_Death">Anda mati disebabkan necrostima...</string>
@@ -230,8 +248,8 @@
   <string name="PortalExit_Desc_SpiderNest">Sarang Lelabah</string>
   <string name="PortalExit_Desc_Necropolis">Nekropolis</string>
   <string name="PortalExit_Desc_IceCaves">Gua Ais</string>
-  <string name="Devour_Buff">Baham</string>
-  <string name="StoneBlood_Buff">Darah batu</string>
+  <string name="DevourBuff_Name">Baham</string>
+  <string name="StoneBloodBuff_Name">Darah batu</string>
   <string name="Welcome_Ok">Baiklah!</string>
   <string name="Welcome_Title">Selamat Datang!</string>
   <string name="BlackCat_Name">Kucing hitam</string>
@@ -521,40 +539,36 @@
   <string name="WaterOfHealth_Procced">Bilamana anda menghirupnya, luka anda telah sembuh sepenuhnya.</string>
   <string name="WaterOfTransmutation_Info">Kuasa pertukaran memancar keluar dari air perigi ini. Lempar atau item ke dalam perigi untuk jelmakannya menjadi benda lain.</string>
   <string name="Web_Info">Segalanya di sini diliputi dengan sawang yang tebal.</string>
-  <string name="Amok_Info">Mengamok</string>
-  <string name="Barkskin_Info">Kulit kayu</string>
-  <string name="Bleeding_Info">Berdarah</string>
+  <string name="AmokBuff_Name">Mengamok</string>
+  <string name="BarkskinBuff_Name">Kulit kayu</string>
+  <string name="BleedingBuff_Name">Berdarah</string>
   <string name="Bleeding_Death">Anda mati kerana pendarahan...</string>
-  <string name="Blindness_Info">Menjadi Buta</string>
-  <string name="Burning_Info">Terbakar</string>
+  <string name="BlindnessBuff_Name">Menjadi Buta</string>
+  <string name="BurningBuff_Name">Terbakar</string>
   <string name="Burning_Burns">%s terbakar!</string>
   <string name="Burning_Death">Anda mati kerana terbakar...</string>
-  <string name="Charm_Info">Dipukau</string>
-  <string name="Combo_Info">Kombo</string>
+  <string name="CharmBuff_Name">Dipukau</string>
+  <string name="ComboBuff_Name">Kombo</string>
   <string name="Combo_Combo">Kombo %d-pukulan!</string>
-  <string name="Cripple_Info">Dilumpuhkan</string>
-  <string name="Frost_Info">Membeku</string>
+  <string name="CrippleBuff_Name">Dilumpuhkan</string>
+  <string name="FrostBuff_Name">Membeku</string>
   <string name="Frost_Shatter">Kesejukan ini menyebabkan %s mula pecah berkecai!</string>
-  <string name="Fury_Info">Keberangan</string>
-  <string name="GasesImmunity_Info">kebal gas</string>
+  <string name="FuryBuff_Name">Keberangan</string>
   <string name="Hunger_Death">Anda mati kerana kelaparan...</string>
-  <string name="Hunger_Info1">Lapar</string>
-  <string name="Hunger_Info2">Kebuluran</string>
-  <string name="Invisibility_Info">Halimunan</string>
-  <string name="Levitation_Info">Terapung</string>
-  <string name="Light_Info">Bercahaya</string>
-  <string name="MindVision_Info">Penglihatan minda</string>
-  <string name="Ooze_Info">Ooz kaustik</string>
+  <string name="HungerBuff_Name1">Lapar</string>
+  <string name="HungerBuff_Name2">Kebuluran</string>
+  <string name="InvisibilityBuff_Name">Halimunan</string>
+  <string name="LevitationBuff_Name">Terapung</string>
+  <string name="LightBuff_Name">Bercahaya</string>
   <string name="Ooze_Death">%s telah membunuh anda...</string>
-  <string name="Paralysis_Info">Lumpuh</string>
-  <string name="Poison_Info">Terkena Racun</string>
+  <string name="PoisonBuff_Name">Terkena Racun</string>
   <string name="Poison_Death">Anda mati disebabkan keracunan...</string>
-  <string name="Roots_Info">Diakarkan</string>
-  <string name="Shadows_Info">Shadowmelded</string>
-  <string name="Slow_Info">Menjadi Lembab</string>
-  <string name="SnipersMark_Info">Sasaran penembak hendap</string>
-  <string name="Vertigo_Info">Pening Gayat</string>
-  <string name="Weakness_Info">Lemah</string>
+  <string name="RootsBuff_Name">Diakarkan</string>
+  <string name="ShadowsBuff_Name">Shadowmelded</string>
+  <string name="SlowBuff_Name">Menjadi Lembab</string>
+  <string name="VertigoBuff_Name">Pening Gayat</string>
+  <string name="WeaknessBuff_Name">Lemah</string>
+  <string name="AwarenessBuff_Name">Kesedaran</string>
   <string name="Belongings_Name">beg galas</string>
   <string name="ItemSprite_Info1">buang: %1$.1f %2$.1f</string>
   <string name="Toolbar_Info1">Anda tidak tahu apa yang ada di sana.</string>
@@ -652,27 +666,27 @@
   <string name="HeartOfDarkness_Name">Hati kegelapan</string>
   <string name="HeartOfDarkness_Info">Hati hitam Hantu Khianat yang berdenyut-denyut </string>
   <string name="HeartOfDarkness_Gender">neuter</string>
-  <string name="DarkVeil_Buff">Selubung gelap</string>
+  <string name="DarkVeilBuff_Name">Selubung gelap</string>
   <string name="Badges_Yog_Slain">Yog-Dzewa telah dibunuh</string>
   <string name="Badges_ShadowLord_Slain">Penguasa bayang telah dibunuh</string>
   <string name="Badges_SpiderQueen_Slain">Ratu Lelabah telah dibunuh</string>
   <string name="TomeOfMastery_WayAlreadyChosen">Anda tidak boleh ubah laluan anda!</string>
   <string name="BlackSkullOfMastery_Name">Pengutip Roh</string>
-  <string name="BlackSkullOfMastery_Info">Merupakan artifak purba, direka oleh necromancer pertama untuk mengutip roh orang mati. Dapat mengesan keupayaan necromantik anda ia melindungi dirinya dengan mantera yang perkasa. Oleh kerana mantera lama, struktur primitifnya dapat dilerai dengan mudah.</string>
+  <string name="BlackSkullOfMastery_Info">Merupakan artifak purba, direka oleh pembangkit mayat pertama untuk mengutip roh orang mati. Dapat mengesan keupayaan necromantik anda ia melindungi dirinya dengan mantera yang perkasa. Oleh kerana mantera lama, struktur primitifnya dapat dilerai dengan mudah.</string>
   <string name="BlackSkullOfMastery_Title">Anda boleh tawarkan mantera. Atau anda boleh manipulasi formula ajaib supaya anda boleh telan kedua-dua mantera dan artifak tersebut, membolehkan diri anda menjadi Lich.</string>
   <string name="BlackSkullOfMastery_Lich">Jadi Lich</string>
   <string name="BlackSkullOfMastery_Necromancer">Tawarkan mantera</string>
-  <string name="BlackSkullOfMastery_BecomeLichDesc">_Lich merupakan seorang necromancer yang mencapai puncak keupayaannya. Wujud diantara kehidupan dan kematian _Lich_ cemerlang dalam necromancy, tetapi kemahiran tempurnya sangat rendah.</string>
+  <string name="BlackSkullOfMastery_BecomeLichDesc">_Lich merupakan seorang pembangkit mayat yang mencapai puncak keupayaannya. Wujud diantara kehidupan dan kematian _Lich_ cemerlang dalam necromancy, tetapi kemahiran tempurnya sangat rendah.</string>
   <string name="BlackSkullOfMastery_RemainHumanDesc">Jika anda _tawarkan mantera_ anda akan dapat guna artifak ini seperti biasa.</string>
   <string name="BlackSkull_Activated">Tengkorak Hitam telah dibangunkan!</string>
   <string name="BlackSkull_Ressurrect">Tengkorak Hitam telah memanggil raksaksa kematian berkhidmat untuk anda!</string>
   <string name="BlackSkull_Deactivated">Tengkorak Hitam tidur kembali...</string>
   <string name="NecromancerArmor_Name">Perisai tulang</string>
-  <string name="NecromancerArmor_Info">Perisai ini membolehkan Necormancer memanggil sehingga 2 unit Makhluk Kematian pada kos 5 roh setiap satu. Pembantu hidup semula ini akan mengikut tuannya dan menyerang musuh tuan. Makhluk kematian ini menjadi semakin kuat jika tahap adiwira meningkat.</string>
-  <string name="NecromancerArmor_NotNecromancer">Hanya necromancer boleh guna perisai ini!</string>
-  <string name="NecromancerRobe_Name">jubah necromancer</string>
-  <string name="NecromancerRobe_Info">Jubah ini membolehkan Necormancer memanggil  satu unit Makhluk Kematian pada kos 5 roh setiap satu. Makhluk kematian ini adalah pengikut hidup semula yang menjadi semakin kuat mengikut kekuatan tuannya.</string>
-  <string name="HeroClass_Necromancer">necromancer</string>
+  <string name="NecromancerArmor_Info">Perisai ini membolehkan Pembangkit mayat memanggil sehingga 2 unit Makhluk Kematian pada kos 5 roh setiap satu. Pembantu hidup semula ini akan mengikut tuannya dan menyerang musuh tuan. Makhluk kematian ini menjadi semakin kuat jika tahap adiwira meningkat.</string>
+  <string name="NecromancerArmor_NotNecromancer">Hanya pembangkit mayat boleh guna perisai ini!</string>
+  <string name="NecromancerRobe_Name">jubah pembangkit mayat</string>
+  <string name="NecromancerRobe_Info">Jubah ini membolehkan Pembangkit mayat memanggil  satu unit Makhluk Kematian pada kos 5 roh setiap satu. Makhluk kematian ini adalah pengikut hidup semula yang menjadi semakin kuat mengikut kekuatan tuannya.</string>
+  <string name="HeroClass_Necromancer">pembangkit mayat</string>
   <string name="HeroSubClass_NameLich">lich</string>
   <string name="Deathling_Name">makhluk kematian</string>
   <string name="Deathling_Gender">maskulin</string>
@@ -986,11 +1000,11 @@
   <string name="GoldenStatue_Gender">feminin</string>
   <string name="GoldenStatue_Name_Objective">patung emas</string>
   <string name="GoldenStatue_Desc">Sukar dipercayai, patung yang indah dan mengagumkan ini bukan hanya hiasan, tetapi seekor makhluk jahat yang memperdaya penggembara. Sekali pandang anda percaya ia adalah _%s_ yang merupakan sebahagian dari lengannya.</string>
-  <string name="NecromancerNPC_Name">necromancer</string>
+  <string name="NecromancerNPC_Name">pembangkit mayat</string>
   <string name="NecromancerNPC_Gender">maskulin</string>
-  <string name="NecromancerNPC_Name_Objective">necromancer</string>
+  <string name="NecromancerNPC_Name_Objective">pembangkit mayat</string>
   <string name="NecromancerNPC_Desc">Lelaki pertengahan usia ini kelihatan menjengkelkan dan teruja pada masa yang sama. Dia memakai perisai komposit yang diperbuat dari cebisan tulang.</string>
-  <string name="NecromancerNPC_Intro">Hmm! sungguh jarang berlaku! Ada rakan pengembara yang masih hidup. Hebat! Alamak... Maafkan saya, kadangkala saya selalu teruja. Baiklah, saya adalah seorang necromancer. Mengkaji perihal kematian dan makhluk tersebut dan juga sebagai mata pencarian saya, hari-hari lihat benda yang sama, sangat membosankan. Sebab itulah saya kemari. Berdasarkan pengiraan saya berada di sini selama beberapa minggu, disuatu tempat dalam kurungan bawah tanah ini, ada perkara yang hebat akan berlau. Sebuah _Nekropolis_, iaitu bandar kematian purba akan membuka pintu masuknya. Setakat ini... yang saya tahu, alamak rugi masa saya mencerita perkara ini. Saya perlu bersiap siaga, _akan kembali lagi_.</string>
+  <string name="NecromancerNPC_Intro">Hmm! sungguh jarang berlaku! Ada rakan pengembara yang masih hidup. Hebat! Alamak... Maafkan saya, kadang kala saya selalu teruja. Baiklah, saya ialah pembangkit mayat. Mengkaji perihal kematian dan makhluk tersebut dan juga sebagai mata pencarian saya, hari-hari lihat benda yang sama, sangat membosankan. Sebab itulah saya kemari. Berdasarkan pengiraan saya berada di sini selama beberapa minggu, disuatu tempat dalam kurungan bawah tanah ini, ada perkara yang hebat akan berlau. Sebuah _Nekropolis_, iaitu bandar kematian purba akan membuka pintu masuknya. Setakat ini... yang saya tahu, alamak rugi masa saya mencerita perkara ini. Saya perlu bersiap siaga, _akan kembali lagi_.</string>
   <string name="NecromancerNPC_Message1">Hmm singkatnya masa, singkatnya masa...</string>
   <string name="NecromancerNPC_Message2">Saya mesti sentiasa bersedia.</string>
   <string name="NecromancerNPC_Message3">Saya dapat mendengar panggilan orang mati.</string>
@@ -1372,7 +1386,7 @@
   <string name="Lich_Name">lich</string>
   <string name="Lich_Gender">maskulin</string>
   <string name="Lich_Name_Objective">lich</string>
-  <string name="Lich_Desc">Necromancer telah menemui ajalnya di dalam Necropolis, dan tenaga kejahatan tempat ini telah masuk ke dalam jasadnya, dia menjelma sebagai Lich. Iaitu ahli sihir hidup semula, patung hidup tanpa kemahuan, yang dikawal oleh kuasa jahat.</string>
+  <string name="Lich_Desc">Pembangkit mayat telah menemui ajalnya di dalam Necropolis, dan tenaga kejahatan tempat ini telah masuk ke dalam jasadnya, dia menjelma sebagai Lich. Iaitu ahli sihir hidup semula, patung hidup tanpa kemahuan, yang dikawal oleh kuasa jahat.</string>
   <string name="RunicSkull_Name">tengkorak runik</string>
   <string name="RunicSkull_Gender">maskulin</string>
   <string name="RunicSkull_Name_Objective">tengkorak runik</string>
@@ -1381,9 +1395,9 @@
   <string name="Zombie_Gender">maskulin</string>
   <string name="Zombie_Name_Objective">zombi</string>
   <string name="Zombie_Desc">Kurungan bawah tanah adalah tempat merbahaya dan ramai pengembara telah menemui maut di dalamnya. Yang paling malang menemui ajal di Nekropolis, kini mereka kekal di dalam kurungan bawah tanah dalam bentuk mayat hidup yang mereput.</string>
-  <string name="NecromancerNPC_Intro2">Hmm! Ada rakan pengembara yang masih hidup. Hebat! Alamak... Maafkan saya, saya adalah seorang necromancer. Mengkaji perihal kematian dan makhluk tersebut dan juga sebagai mata pencarian saya, hari-hari lihat benda yang sama, sangat membosankan. Sebab itulah saya ke mari. Berdasarkan pengiraan saya berada di sini selama beberapa minggu, disuatu tempat dalam kurungan bawah tanah ini, ada perkara yang hebat akan berlaku. Sebuah _Nekropolis_, iaitu bandar kematian purba akan membuka pintu masuknya. Setakat ini... yang saya tahu, kita berada betul-betul di hadapan pintu masuk. Baiklah, ambil kunci ini dan pergi dulu, maksud saya awak suka cabaran dan khazanah di dalamnya? Saya ikut di belakang awak, cuma saya perlu bersiap siaga.</string>
+  <string name="NecromancerNPC_Intro2">Hmm! Ada rakan pengembara yang masih hidup. Hebat! Alamak... Maafkan saya, saya ialah seorang pembangkit mayat. Mengkaji perihal kematian dan makhluk tersebut dan juga sebagai mata pencarian saya, hari-hari lihat benda yang sama, sangat membosankan. Sebab itulah saya ke mari. Berdasarkan pengiraan saya berada di sini selama beberapa minggu, disuatu tempat dalam kurungan bawah tanah ini, ada perkara yang hebat akan berlaku. Sebuah _Nekropolis_, iaitu bandar kematian purba akan membuka pintu masuknya. Setakat ini... yang saya tahu, kita berada betul-betul di hadapan pintu masuk. Baiklah, ambil kunci ini dan pergi dulu, maksud saya awak suka cabaran dan khazanah di dalamnya? Saya ikut di belakang awak, cuma saya perlu bersiap siaga.</string>
   <string name="Badges_Lich_Slain">Lich telah dibunuh</string>
-  <string name="FrostAura_Buff">Aura Fros</string>
+  <string name="FrostAuraBuff_Name">Aura Fros</string>
   <string name="ElvenDagger_Name">pisau bunian</string>
   <string name="ElvenDagger_Info">Senjata ini diperbuat dari aloi logam istimewa, menjadikannya lebih ringan berbanding pisau biasa.</string>
   <string name="ElvenDagger_Gender">maskulin</string>
@@ -1597,6 +1611,7 @@
   <string name="WndMovieTheatre_Watch">tonton cereka</string>
   <string name="WndMovieTheatre_No">keluar</string>
   <string name="WndMovieTheatre_Bye">Sila datang lagi, kami sentiasa menunggu kehadiran anda!</string>
+  <string name="WndMovieTheatre_Instruction">Selamat datang ke panggung wayang kami! Kami menyediakan satu perkhidmatan istimewa, iaitu anda boleh tonton cereka secara percuma, dan jika anda melihat sehingga tamat, anda akan diberi hadiah iaitu sebanyak %d syiling emas!</string>
   <string name="WndMovieTheatre_Title">Panggung Wayang</string>
   <string name="WndMovieTheatre_Thank_You">Terima kasih atas sumbangan anda!</string>
   <string name="WndPriest_Heal">sembuh - %d emas</string>
@@ -1944,7 +1959,6 @@
   <string name="Stench_Txt">%s berbau busuk</string>
   <string name="Viscosity_Txt">%s kelikatan</string>
   <string name="Viscosity_Status">ditangguh %d</string>
-  <string name="DeferedDamage_Defered_Txt">Kecederaan tertangguh (%d)</string>
   <string name="DeferedDamage_Killed_Txt">%s telah membunuh anda...</string>
   <string name="Plant_ACPlant">TUMBUHAN</string>
   <string name="Plant_Info">Lempar benih ini ke tempat yang mahu tanam %1$s.\n\n%2$s</string>
@@ -1953,7 +1967,7 @@
   <string name="Dreamweed_Desc">Sebaik sahaja menyentuh Rumpai Mimpi ia akan semburkan gas bergemerlapan yang mengelirukan</string>
   <string name="Earthroot_Name">Akar Tanah</string>
   <string name="Earthroot_Desc">Sebaik sahaja seseorang menyentuh Akar Tanah, akarnya akan membentuk perisai alamiah disekelilingnya.</string>
-  <string name="Earthroot_Buff">Perisai Herba</string>
+  <string name="EarthrootBuff_Name">Perisai Herba</string>
   <string name="Fadeleaf_Name">Daun Lenyap</string>
   <string name="Fadeleaf_Desc">Menyentuh Daun Lenyap akan pindahkan sesiapa sahaja ke lokasi secara rawak dalam aras yang sama</string>
   <string name="Firebloom_Name">Bebunga Api</string>
@@ -1964,7 +1978,7 @@
   <string name="Sorrowmoss_Desc">Lumut Duka ialah sejenis bunga (bukan lumut) dengan kelopak berduri, mengandungi racun berbisa  yang boleh membawa maut.</string>
   <string name="Sungrass_Name">Rumput Suria</string>
   <string name="Sungrass_Desc">Rumput Suria dikenali dengan lelehan getahnya yang berkhasiat dalam penyembuhan.</string>
-  <string name="Sungrass_Buff">Penyembuhan herba</string>
+  <string name="SungrassBuff_Name">Penyembuhan herba</string>
   <string name="WndPlayGames_Title">Permainan Google Play</string>
   <string name="WndPlayGames_Use">guna Permainan Google Play</string>
   <string name="WndPlayGames_Connecting">Menyambung ke Permainan Google Play, sila tunggu sebentar</string>
@@ -2169,7 +2183,6 @@
   <string name="CloakSpell_Info">Gerak langkah dibalik bayang menjadikan anda halimunan. Dapat mengurangkan secara mendadak peluang anda dikesan oleh pihak musuh. Tidak boleh digunakan ketika pihak musuh berhampiran anda.</string>
   <string name="CloakSpell_EnemiesNearby">Anda tidak boleh melangkah dalam bayang ketika pihak musuh berhampiran anda.</string>
   <string name="CloakBuff_Name">Berselubung</string>
-  <string name="CloakBuff_Info">Diselubungi bayang.</string>
   <string name="TitleScene_Mods">Mod</string>
   <string name="WndHero_Stealth">Selinap</string>
   <string name="WndHero_Awareness">Kesedaran</string>
@@ -2352,10 +2365,10 @@
   <string name="Hunger_Starving_0">Anda kebuluran!</string>
   <string name="Hunger_Starving_1">Anda kebuluran!</string>
   <string name="Hunger_Starving_2">Anda kebuluran!</string>
-  <string name="HeroClass_NecromancerPerks_0">Necromancer bermula dengan 15 mata hayat.</string>
-  <string name="HeroClass_NecromancerPerks_1">Necromancer guna mana untuk menyihir mantera Kematian.</string>
-  <string name="HeroClass_NecromancerPerks_2">Necromancer bermula dengan jubah Necromancer yang unik, ia dapat menjana 1 mata mana bagi setiap makhluk yang dibunuh oleh pemakainya.</string>
-  <string name="HeroClass_NecromancerPerks_3">Necromancer bermula dengan kunci rangka aras 7.</string>
+  <string name="HeroClass_NecromancerPerks_0">Pembangkit mayat bermula dengan 15 mata hayat.</string>
+  <string name="HeroClass_NecromancerPerks_1">Pembangkit mayat guna mana untuk menyihir mantera Kematian.</string>
+  <string name="HeroClass_NecromancerPerks_2">Pembangkit mayat bermula dengan jubah Pembangkit mayat yang unik, ia dapat menjana 1 mata mana bagi setiap makhluk yang dibunuh oleh pemakainya.</string>
+  <string name="HeroClass_NecromancerPerks_3">Pembangkit mayat bermula dengan kunci rangka aras 7.</string>
   <string name="HeroClass_NecromancerPerks_4">Posyen Penyembuhan dapat dikenal pasti pada awal pengembaraan.</string>
   <string name="HeroClass_WarPerks_0">Satria bermula dengan 11 mata Kekuatan.</string>
   <string name="HeroClass_WarPerks_1">Satria bermula dengan pedang pendek yang unik. Pedang ini boleh \"ditempa semula\" kemudian untuk ditatar menjadi senjata tempur yang lain.</string>
@@ -2446,7 +2459,7 @@
   <string name="Codex_Story_25">Dia berhenti seketika, kaku, di pintu besar oak, matanya meliar pada cahaya yang menembusi bingkai pintu. Dipenjuru minda beliau, mengatakan.\n
 \"Cahaya Matahari..\" dia berbisik sendirian. Berapa lamakah beliau di sini? Dalam kegelapan Kurungan Bawah Tanah, sudah lama tidak mengetahui hari-hari yang telah berlalu. Cahaya yang berpancaran itu mengimbau ingatan lampaunya. Dia teringat latihan sukar yang dilaluinya, hari-hari berlatih dengan \'senjata\', membaca, dan melukis peta. Teringat juga mantera dan disiplin yang membolehkan beliau kekal waras di dalam kegelapan. Apa yang tidak diingatinya ialah, orang yang disekitar sebelum ini.\n
 Dia masih mengingati suara mereka, perintah mereka, dan amaran mereka, tetapi bukannya wajah mereka, mahupun sentuhan mereka.\n
-Kesakitan telah melatih dia, Mengingati bahaya, senantiasa bahaya. Haiwan gila, orang hidup semula, penyamun gila, dan ninja licik semuanya tersungkur kalah. Dia telah menghadapi luka-luka, terbakar, ditikam, dan terkena racun sepanjang pengembaraan merempuhi makhluk dibenci, setan, dan necromancer gila. Dewa pun telah beliau kalahkan.\n
+Kesakitan telah melatih dia, Mengingati bahaya, senantiasa bahaya. Haiwan gila, orang hidup semula, penyamun gila, dan ninja licik semuanya tersungkur kalah. Dia telah menghadapi luka-luka, terbakar, ditikam, dan terkena racun sepanjang pengembaraan merempuhi makhluk dibenci, setan, dan pembangkit mayat gila. Dewa pun telah beliau kalahkan.\n
 Dia telah berjaya menjejak Yog dalam neraka dunia, sebelum menidurkannya buat selama-lamanya. Yog sebenarnya adalah hamba bagi salah satu kuasa ghaib yang lebih hebat darinya.\n
 Oleh itu dia telah cuba mendalami. Jurnal ahli sihir tua, yang masih mempunyai sisa-sisa kuasa, didalamnya telah menunjukkan kepadanya suatu laluan. Dengan kuasa ajaib di dalam buku ini, dia telah mengembara ke dunia liar yang serba baharu, iaitu sebuah kampung kecil yang diselubungi dengan hutan belantara yang tebal. Di sana, dia telah berjaya menjejak kejahatan dan sumber asalnya, sekali lagi beliau telah berjaya membenteras kejahatan tersebut.\n
 Kini, dalam panahan cahaya siang yang samar-samar, dia melihat bayangan dirinya di permukaan kolam gua. Badannya yang dilitupi kuasa ajaib hampir sukar dikenali. Kulitnya menjadi putih, hampir-hampir lutsinar itu telah dikotori dengan debu, asap dan jelaga. Barisan koleksi cincinnya sangat-sangat bernilai, dan koleksi tongkat sakti boleh menghancurkan sekumpulan besar tentera sekaligus, Dia memegang erat senjata-senjata itu, yang pernah menewaskan makhluk sekuat dewa. Memang benar, beliau sememangnya telah menguasai dunia kegelapan ini, tanah terbiar yang tandus ini.\n
@@ -2490,6 +2503,29 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
   <string name="town_deco_stone_wall_broken_name">Dinding rosak</string>
   <string name="town_deco_stone_wall_broken_desc">Dinding batu lama, dalam keadaan rosak</string>
   <string name="town_deco_crossroad_name">Tanda simpang</string>
+  <string name="town_deco_flowerinthepot_name">Bunga dalam pasu</string>
+  <string name="town_deco_flowerinthepot_desc">Bunga hiasan yang berbau manis</string>
+  <string name="Welcome_Text_29_4">
+    remix.29.4\n
+    - Permainan:\n
+    -- Dwi-guna!\n
+    - Pengemodan:\n
+    -- Senjata Suai!\n
+    - Pepijat dibaiki\n
+    </string>
+  <string name="Mods_Disclaimer">
+        Mod-mod dicipta oleh pemain untuk pemain.\n
+        Mod-mod ini kadang kala menyebabkan pola permainan menjadi tidak dijangka atau berkelakuan pelik, anda telah diberi amaran berkenaan ini!\n
+        Pasukan NYRDS tidak bertanggungjawab ke atas kandungan mod, kualitinya atau kestabilannya.\n
+        Muat turun ia atas risiko anda sendiri dan nikmatilah!\n
+    </string>
+  <string name="TownPortal_Name">Portal Pekan</string>
+  <string name="MedicineMask_Name">Topeng muka juru bedah</string>
+  <string name="PlagueDoctorNPC_After_Quest_2">Kenapa awak masih di sini? Ambil ini!</string>
+  <string name="FilteredMask_Name">Topeng muka N95</string>
+  <string name="FullFaceMask_Name">Topeng gas</string>
+  <string name="StartScene_DifficultyEasyNoAds">Mudah</string>
+  <string name="StartScene_DifficultyNormalWithSavesNoAds">Biasa boleh simpan</string>
   <string name="InnKeeperNPC_Gender">feminin</string>
   <string name="DrunkardNPC_Gender">feminin</string>
   <string name="MercenaryNPC_Gender">feminin</string>
@@ -2506,4 +2542,6 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
   <string name="PotionOfMana_Info">Posyen ini dapat memulihkan tenaga rohani anda.</string>
   <string name="Snail_Gender">feminin</string>
   <string name="DeepSnail_Gender">feminin</string>
+  <string name="ShamanElder_Gender">feminin</string>
+  <string name="Bee_Gender">feminin</string>
 </resources>
