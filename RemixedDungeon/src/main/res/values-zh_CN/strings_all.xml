@@ -2006,7 +2006,7 @@
   <string name="ResultDescriptions_Trap">在第 %2$d 层被%1$s的雷电击杀</string>
   <string name="ResultDescriptions_Burning">在第 %d 层燃为灰烬</string>
   <string name="ResultDescriptions_Hunger">在第 %d 层饥饿致死</string>
-  <string name="ResultDescriptions_Poison">在%d层被毒气杀死</string>
+  <string name="ResultDescriptions_Poison">在第 %d 层被毒气杀死</string>
   <string name="ResultDescriptions_Gas">在第 %d 层死于毒气</string>
   <string name="ResultDescriptions_Bleeding">在第 %d 层流血而死</string>
   <string name="ResultDescriptions_Ooze">在第 %d 层被腐蚀淤泥杀死</string>
