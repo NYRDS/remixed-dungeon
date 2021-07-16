@@ -2917,7 +2917,7 @@ remix.30.0
   <string name="Snail_Desc">这只小软体动物通过吸食污水已经长得相当大了，但他仍然非常缓慢，这使他成为一个容易面对的敌人。</string>
   <string name="DeepSnail_Name">深色大蜗牛</string>
   <string name="DeepSnail_Gender">男孩</string>
-  <string name="DeepSnail_Name_Objective">深色蜗牛</string>
+  <string name="DeepSnail_Name_Objective">深色大蜗牛</string>
   <string name="DeepSnail_Desc">这种软体动物经常在水源附近出没，速度比普通蜗牛快得多。但是要小心被咬伤，它们会对你的皮肤产生令人不快的影响。</string>
   <string name="CharInfo_Level">这是一只%1$d级%2$s。</string>
   <string name="WrnExperimental_realtime">实时！模式启用：现在是实时的roguelike，快速点击或死亡。
