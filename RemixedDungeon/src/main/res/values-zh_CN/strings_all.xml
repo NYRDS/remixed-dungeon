@@ -137,7 +137,7 @@
   <string name="WndTradeItem_BuyN">购买%1$d，付出 %2$d 枚金币</string>
   <string name="WndTradeItem_BuyAll">购买全部物品 %d 枚金币</string>
   <string name="WndTradeItem_SellN">卖出%1$d获得 %2$d 枚金币</string>
-  <string name="WndBag_BuySubtitle">（你拥有%d 金币）</string>
+  <string name="WndBag_BuySubtitle">（你拥有%d 枚金币）</string>
   <string name="town_deco_weaponboard_name">武器</string>
   <string name="town_deco_weaponboard_desc">各式各样的武器挂在武器架上</string>
   <string name="town_deco_shieldboard_name">防具</string>
