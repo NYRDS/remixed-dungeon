@@ -920,7 +920,7 @@
   <string name="FortuneTellerNPC_Desc">此女身穿一袭色彩鲜艳的长袍。对于一位已精通算命奥术的算命家来说，她算是年少有为。你一步一步地靠近，隐约能听到她微声低语。然而，她只是目不转晴地盯着水晶球。</string>
   <string name="ServiceManNPC_Limit_Reached">抱歉，目前你已达界限，但每升一级，你便可以再次享用我们的服务！</string>
   <string name="WndFortuneTeller_Instruction">我可以为你揭开任何道具的神秘面纱！
-每次只收 %d 金币。</string>
+每次只收 %d 枚金币。</string>
   <string name="WndFortuneTeller_No_Item">看来你身上并没有尚未鉴定的道具，你确定你真要送钱给我花吗？</string>
   <string name="WndFortuneTeller_Title">算命家</string>
   <string name="Wnd_Button_Yes">同意</string>
