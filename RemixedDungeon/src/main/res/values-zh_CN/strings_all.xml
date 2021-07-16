@@ -826,9 +826,7 @@
   <string name="DonateButton_pleaseDonate">请考虑捐献</string>
   <string name="DonateButton_thanks">感谢你的支持</string>
   <string name="WndSaveSlotSelect_dontLike">不喜欢广告？进行捐献吧！广告会永远的消失。</string>
-  <string name="Bow_Info1">这是一件远程武器。除了精灵，其他人无法在近距离正常使用。装备好弓后，你便能够发射箭矢。
-
-</string>
+  <string name="Bow_Info1">这是一件远程武器。除了精灵，其他人无法在近距离正常使用。装备好弓后，你便能够发射箭矢。\n\n</string>
   <string name="WoodenBow_Name">木弓</string>
   <string name="WoodenBow_Info">如果你能找到一些箭，这把简单的木制弓也许很有用。</string>
   <string name="WoodenBow_Gender">男性</string>
