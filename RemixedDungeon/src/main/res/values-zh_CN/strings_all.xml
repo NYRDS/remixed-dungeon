@@ -135,7 +135,7 @@
   <string name="Shopkeeper_SellPrompt">我有东西要卖</string>
   <string name="Shopkeeper_BuyPrompt">让我看看东西</string>
   <string name="WndTradeItem_BuyN">购买%1$d，付出 %2$d 金币</string>
-  <string name="WndTradeItem_BuyAll">购买全部物品 %d g</string>
+  <string name="WndTradeItem_BuyAll">购买全部物品 %d 金币</string>
   <string name="WndTradeItem_SellN">卖出%1$d获得 %2$d 金币</string>
   <string name="WndBag_BuySubtitle">（你拥有%d g）</string>
   <string name="town_deco_weaponboard_name">武器</string>
