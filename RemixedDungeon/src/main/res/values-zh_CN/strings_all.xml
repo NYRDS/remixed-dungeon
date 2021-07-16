@@ -2711,8 +2711,7 @@ remix.30.0
   <string name="ShootInEye_Name">直射眼睛</string>
   <string name="ShootInEye_Info">使用你出色的射击技巧，直接射击敌人的眼睛，当然如果他有眼睛的话。</string>
   <string name="Sprout_Name">发芽</string>
-  <string name="Sprout_Info">唤醒休眠的种子。
-然而，地面上应该有一些绿色植物，才能让这个咒语成功。</string>
+  <string name="Sprout_Info">唤醒休眠的种子。\n然而，地面上应该有一些绿色植物，才能让这个咒语成功。</string>
   <string name="SummonBeast_Name">野兽召唤</string>
   <string name="SummonBeast_Info">尝试召唤一群强大的野兽听从你的指挥。
 实际结果可能会有所不同。</string>
