@@ -445,7 +445,7 @@
   <string name="WndStory_Spiders">许多年前，这是一座充满了魔法石的富裕矿山。但随着矿脉的枯竭，矿工们纷纷离去，留下了大量的坑道网络。最后这个地方被蜘蛛占领了。虽然这些危险的生物在黑暗中潜伏，但是这吓不倒一些疯狂而勇敢的寻宝者和冒险者们，因为传言里面的魔法神器的价值值得他们为之冒险。据说有一个为了逃避追捕的女巫进入了这个矿洞，追捕她的士兵由于畏惧黑暗而不敢靠近，只能派人在矿洞门口看守。结果到他们放弃后女巫也没出现。没准她找到另一个出口？亦或是趁看守不注意时跑了？或者……死在了矿洞深处，与蜘蛛们融为一体。</string>
   <string name="WndTradeItem_Sale">出售：%1$s— %2$d 枚金币</string>
   <string name="WndTradeItem_Buy">以 %d 枚金币买入</string>
-  <string name="WndTradeItem_Sell">以%d枚金币卖出</string>
+  <string name="WndTradeItem_Sell">以 %d 枚金币卖出</string>
   <string name="WndTradeItem_Sell1">以 %d 枚金币卖出 1 个</string>
   <string name="WndTradeItem_SellAll">以 %d 枚金币卖出全部</string>
   <string name="WndTradeItem_Cancel">算了</string>
