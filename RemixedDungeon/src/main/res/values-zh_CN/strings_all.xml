@@ -449,7 +449,7 @@
   <string name="WndTradeItem_Sell1">以 %d 枚金币卖出 1 个</string>
   <string name="WndTradeItem_SellAll">以 %d 枚金币卖出全部</string>
   <string name="WndTradeItem_Cancel">算了</string>
-  <string name="WndTradeItem_Sold">你出售了你的%1$s，得到了%2$d金币</string>
+  <string name="WndTradeItem_Sold">你出售了你的%1$s，得到了%2$d枚金币</string>
   <string name="WndTradeItem_Bought">你购买了%1$s花费%2$d枚金币</string>
   <string name="WndWandmaker_Message">噢你成功了！希望我的请求没让你费太多周折。如我所言，你可以从这两把高质量法杖里挑一把带走。</string>
   <string name="WndWandmaker_Battle">战斗法杖</string>
