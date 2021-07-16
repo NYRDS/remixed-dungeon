@@ -2619,9 +2619,7 @@
   <string name="KunaiThrow_Name">投掷苦无</string>
   <string name="KunaiThrow_Info">这个致命苦无的投掷将以极快的速度完成，快到你甚至无法选择目标。\n\n真正的大师能够同时投掷多个苦无。</string>
   <string name="Haste_Name">急速</string>
-  <string name="Haste_Info">急速会让实行者以极快的速度移动，他周围的一切都会显得静止。如此急速会消耗大量的能量，所以只能在很短的时间内使用。
-
-熟练的大师能够在较长的时间内保持急速。</string>
+  <string name="Haste_Info">急速会让实行者以极快的速度移动，他周围的一切都会显得静止。如此急速会消耗大量的能量，所以只能在很短的时间内使用。\n\n熟练的大师能够在较长的时间内保持急速。</string>
   <string name="Welcome_Text_29_5">
 remix.29.5\n
 ——游戏性：\n
