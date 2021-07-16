@@ -480,7 +480,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		float mainAccuracyFactor = getActiveWeapon().accuracyFactor(this);
 		float secondaryAccuracyFactor = getSecondaryWeapon().accuracyFactor(this);
 
-		float skillFactor = Utils.min(20, mainAccuracyFactor, secondaryAccuracyFactor);
+		float skillFactor = Utils.min(0.05f, mainAccuracyFactor, secondaryAccuracyFactor);
 
 		int aSkill = (int) ((baseAttackSkill + lvl()) * accuracy * skillFactor);
 
@@ -773,7 +773,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		float mainDelayFactor = getActiveWeapon().attackDelayFactor(this);
 		float secondaryDelayFactor = getSecondaryWeapon().attackDelayFactor(this);
 
-		float delayFactor = Utils.max(1, mainDelayFactor, secondaryDelayFactor);
+		float delayFactor = Utils.max(0.05f, mainDelayFactor, secondaryDelayFactor);
 		final float aDelay = _attackDelay() * delayFactor;
 
 
