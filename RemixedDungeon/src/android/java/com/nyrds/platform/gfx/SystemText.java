@@ -262,7 +262,7 @@ public class SystemText extends Text {
 
 					SystemTextLine line = new SystemTextLine(bitmap);
 					line.setVisible(getVisible());
-					lineImage.add(line);
+					lineImage.add(line); //TODO add global lines cache
 				} else {
 					lineImage.add(new SystemTextLine());
 				}
