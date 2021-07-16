@@ -72,7 +72,7 @@
   <string name="RingOfShadows_Name">暗影戒指</string>
   <string name="RingOfShadows_Info">当你佩戴这枚戒指时敌人会更难注意到你，负等级的戒指会使附近的敌人更容易发现你的存在。</string>
   <string name="RingOfThorns_Name">荆棘戒指</string>
-  <string name="RingOfThorns_Info">这枚戒指不会提供真正的荆棘，但他会把你受到的伤害的一小部分反馈给攻击方，升级这枚戒指不会给予任何额外加成。</string>
+  <string name="RingOfThorns_Info">这枚戒指不会提供真正的荆棘，但它会把你受到的伤害的一小部分反馈给攻击方，升级这枚戒指不会给予任何额外加成。</string>
   <string name="RingOfStoneWalking_Name">血石戒指</string>
   <string name="RingOfStoneWalking_Info">这枚奇怪的戒指是由某种坚硬的石头制作的，你一开始想到的是红宝石但实际上是被固定住的液态血液！在它里面，你可以看到箭头指向一堵带着一颗破碎之心的墙……这是拿来做什么的？</string>
   <string name="RingOfStoneWalking_ImmuredInStone">你被困在石头里了。永远。</string>
@@ -111,9 +111,9 @@
   <string name="BishopNPC_Name_Objective">主教</string>
   <string name="Bishop_title">主教</string>
   <string name="Bishop_text">我的孩子，我不分昼夜地为你祈祷。</string>
-  <string name="Bishop_lesser_bless">诚信默祈！ —%d g</string>
-  <string name="Bishop_great_bless">大声赞颂！！ —%d g</string>
-  <string name="Bishop_remove_curse">诅咒移除 —%d g</string>
+  <string name="Bishop_lesser_bless">诚信默祈！ —%d 金币</string>
+  <string name="Bishop_great_bless">大声赞颂！！ —%d 金币</string>
+  <string name="Bishop_remove_curse">诅咒移除 — %d 金币</string>
   <string name="Bishop_not_interested">离开</string>
   <string name="Bishop_no_money">你钱不够。</string>
   <string name="Bishop_bye">我的孩子，我会为你祈祷。</string>
@@ -134,10 +134,10 @@
 有什么需要吗？</string>
   <string name="Shopkeeper_SellPrompt">我有东西要卖</string>
   <string name="Shopkeeper_BuyPrompt">让我看看东西</string>
-  <string name="WndTradeItem_BuyN">购买%1$d，付出%2$d金币</string>
-  <string name="WndTradeItem_BuyAll">购买全部物品%dg</string>
-  <string name="WndTradeItem_SellN">卖出 %1$d 获得 %2$d金币</string>
-  <string name="WndBag_BuySubtitle">（你拥有%d g）</string>
+  <string name="WndTradeItem_BuyN">购买%1$d，付出 %2$d 枚金币</string>
+  <string name="WndTradeItem_BuyAll">购买全部物品 %d 金币</string>
+  <string name="WndTradeItem_SellN">卖出%1$d获得 %2$d 枚金币</string>
+  <string name="WndBag_BuySubtitle">（你拥有%d 金币）</string>
   <string name="town_deco_weaponboard_name">武器</string>
   <string name="town_deco_weaponboard_desc">各式各样的武器挂在武器架上</string>
   <string name="town_deco_shieldboard_name">防具</string>
@@ -193,7 +193,7 @@
   <string name="NecrotismBuff_Name">坏死</string>
   <string name="NecrotismBuff_Info">你散发着死亡的恶臭，导致其他人也发出恶臭。</string>
   <string name="Necrotism_ACSpecial">天灾</string>
-  <string name="ResultDescriptions_Necrotism">在%d死亡</string>
+  <string name="ResultDescriptions_Necrotism">在第 %d 层死于坏死</string>
   <string name="Necrotism_Death">你死于坏死……</string>
   <string name="Badges_DeathNecrotism">死于瘟疫</string>
   <string name="Spell_SelectACell">选择一个位置</string>
@@ -202,7 +202,7 @@
   <string name="Wand_Name">%s法杖</string>
   <string name="Wand_ACZap">施放</string>
   <string name="Wand_Wood">这根%s法杖摸上去很暖和。谁能知道使用它会发生什么事？</string>
-  <string name="Wand_Damage">当这支法杖用于近战时，它的平均伤害是%d点。</string>
+  <string name="Wand_Damage">当这支法杖用于近战时，它的平均伤害是每次攻击 %d 点。</string>
   <string name="Wand_Weapon">你可以将这根法杖当近战武器使用。</string>
   <string name="Wand_Fizzles">你的法杖滋滋作响：一定是没能量了</string>
   <string name="Wand_SelfTarget">你不能以自己为施法目标。</string>
@@ -329,9 +329,9 @@
 你认为你已经准备好面对这个挑战了，更重要的是，你感觉到命运女神正向你投以一丝微笑。现在，是时候展开属于你的冒险了！</string>
   <string name="AmuletScene_Exit">让这一切结束吧</string>
   <string name="AmuletScene_Stay">我还没完呢</string>
-  <string name="AmuletScene_Txt">你终于拿到了Yendor护符。借助它的力量你可以统治这个世界，给他人带来和平与繁荣或是其它的事。不论如何，你的一生已经被永久改变，游戏也会在此处终结。当然你可以作为一名普通人在这里多逗留一会。</string>
-  <string name="GameScene_Welcome">欢迎来到混合地牢的第%d层！</string>
-  <string name="GameScene_WelcomeBack">欢迎回到混合地牢的第%d层！</string>
+  <string name="AmuletScene_Txt">你终于拿到了Yendor护符。借助它的力量你可以统治这个世界，给他人带来和平与繁荣或是其他的事。不论如何，你的一生已经被永久改变，游戏也会在此处终结。当然你可以作为一名普通人在这里多逗留一会。</string>
+  <string name="GameScene_Welcome">欢迎来到混合地牢第%d层！</string>
+  <string name="GameScene_WelcomeBack">欢迎回到混合地牢第%d层！</string>
   <string name="GameScene_NightMode">一定要多加小心，地牢在夜间会更加危险！</string>
   <string name="GameScene_Chasm">你的脚步声回荡在地牢中。</string>
   <string name="GameScene_Water">你听见周围水花四溅的声音。</string>
@@ -444,12 +444,12 @@
 很少有冒险家能深入到这种地方……</string>
   <string name="WndStory_Spiders">许多年前，这是一座充满了魔法石的富裕矿山。但随着矿脉的枯竭，矿工们纷纷离去，留下了大量的坑道网络。最后这个地方被蜘蛛占领了。虽然这些危险的生物在黑暗中潜伏，但是这吓不倒一些疯狂而勇敢的寻宝者和冒险者们，因为传言里面的魔法神器的价值值得他们为之冒险。据说有一个为了逃避追捕的女巫进入了这个矿洞，追捕她的士兵由于畏惧黑暗而不敢靠近，只能派人在矿洞门口看守。结果到他们放弃后女巫也没出现。没准她找到另一个出口？亦或是趁看守不注意时跑了？或者……死在了矿洞深处，与蜘蛛们融为一体。</string>
   <string name="WndTradeItem_Sale">出售：%1$s-%2$d金币</string>
-  <string name="WndTradeItem_Buy">以%d金币买入</string>
+  <string name="WndTradeItem_Buy">以 %d 金币买入</string>
   <string name="WndTradeItem_Sell">以%d金币卖出</string>
-  <string name="WndTradeItem_Sell1">以%d金币卖出1个</string>
-  <string name="WndTradeItem_SellAll">以%d金币卖出全部</string>
+  <string name="WndTradeItem_Sell1">以 %d 枚金币卖出 1 个</string>
+  <string name="WndTradeItem_SellAll">以 %d 枚金币卖出全部</string>
   <string name="WndTradeItem_Cancel">算了</string>
-  <string name="WndTradeItem_Sold">你出售了你的%1$s，得到了%2$dg</string>
+  <string name="WndTradeItem_Sold">你出售了你的%1$s，得到了%2$d金币</string>
   <string name="WndTradeItem_Bought">你购买了%1$s花费%2$d金币</string>
   <string name="WndWandmaker_Message">噢你成功了！希望我的请求没让你费太多周折。如我所言，你可以从这两把高质量法杖里挑一把带走。</string>
   <string name="WndWandmaker_Battle">战斗法杖</string>
@@ -487,7 +487,7 @@
   <string name="DewVial_Empty">你的露珠瓶空了！</string>
   <string name="Gold_Name">金币</string>
   <string name="Gold_Collect">收集金币以便在之后的商店里消费</string>
-  <string name="Gold_Info">一堆金币，总共%d个</string>
+  <string name="Gold_Info">一堆金币，总共 %d 个</string>
   <string name="Gold_Info1">一块金币</string>
   <string name="KindOfWeapon_EquipCursed">你畏缩了，因为你的手不由自主地握紧了你的%s</string>
   <string name="LloidsBeacon_Name">时空信标</string>
@@ -499,7 +499,7 @@
   <string name="LloidsBeacon_Return">设置成功，现在你可以随时返回这儿了</string>
   <string name="LloidsBeacon_Set">
 
-这个传送信标被设置在混合地牢的%d层的某个地方。</string>
+这个传送信标被设置在混合地牢第 %d 层的某个地方。</string>
   <string name="Stylus_Name">奥术刻笔</string>
   <string name="Stylus_ACInscribe">镌刻</string>
   <string name="Stylus_Info">这支奥术刻笔用某种漆黑的坚硬岩石制成。你可以用它来给装备刻纹。不过你力量不足，无法决定刻纹的种类，刻笔会替你做出决定。</string>
@@ -538,7 +538,7 @@
   <string name="GoldenKey_Info">这把金钥匙的凸凹纹路很精密，也许能解开些宝箱的锁？</string>
   <string name="IronKey_Name">铁钥匙</string>
   <string name="IronKey_Info">这把古老的铁钥匙上的凹口磨损得很厉害，它的皮制挂绳因为年岁太长快断掉了。它是打开哪扇门的？</string>
-  <string name="IronKey_FromDepth">%d层铁钥匙</string>
+  <string name="IronKey_FromDepth">第 %d 层铁钥匙</string>
   <string name="SkeletonKey_Name">骷髅钥匙</string>
   <string name="SkeletonKey_Info">这把钥匙看起来很严肃：它上半部分形状像块头骨。也许它能打开一扇正经的门。</string>
   <string name="CorpseDust_Name">尸尘</string>
@@ -656,11 +656,11 @@
   <string name="AboutScene_Music">音乐：</string>
   <string name="AboutScene_Sound">音效：</string>
   <string name="AboutScene_Thanks">特别感谢：</string>
-  <string name="AboutScene_Email_Us">寄电邮予我们：</string>
+  <string name="AboutScene_Email_Us">给我们发邮件：</string>
   <string name="AboutScene_OurSite">我们的网址：</string>
   <string name="AboutScene_Snd">发送邮件</string>
   <string name="AboutScene_Translation">本地化的功臣：</string>
-  <string name="AboutScene_Translation_Names">NYRDS &amp；Omen267901；丘比</string>
+  <string name="AboutScene_Translation_Names">丘比</string>
   <string name="RankingsScene_Title">最高纪录</string>
   <string name="RankingsScene_Total">总游戏次数</string>
   <string name="RankingsScene_NoGames">还没进行过游戏</string>
@@ -775,7 +775,7 @@
   <string name="Necromancy_ReincarnationName">转生</string>
   <string name="Necromancy_ReincarnationTriggered">你的力量使你从死亡中归来！但你失去了所有已收集的灵魂和所有物。</string>
   <string name="Necromancy_SummonDeathlingName">召唤死灵</string>
-  <string name="Necromancy_BecameALich">你成为了巫妖！你的身体正在变化，同时你的灵魂容量提升了一倍！但是你失去了 %1$d 点力量。</string>
+  <string name="Necromancy_BecameALich">你成为了巫妖！你的身体正在变化，同时你的灵魂容量提升了一倍！但是你失去了%1$d点力量。</string>
   <string name="StartScene_UnlockNecromancer">使用其他角色击败巫妖来解锁此角色。</string>
   <string name="Necromancy_Title">死灵术</string>
   <string name="WndSadGhostNecro_Text">“这个幽灵似乎被它的诅咒所困住了。看来它想要我的某样东西。如果我用我死灵术的力量，我就能让它认为它已经有了它所需要的东西，并进一步控制它，这样我就不用在这里浪费我的时间了。我该不该控制它呢？”</string>
@@ -817,10 +817,10 @@
   <string name="gdpr_agree">是的，我同意</string>
   <string name="gdpr_disagree">不，谢谢</string>
   <string name="gdpr_choose">请做你的选择</string>
-  <string name="Mob_StaHuntingStatus2">这个%1$s正在追猎%2$s</string>
+  <string name="Mob_StaHuntingStatus2">这个%1$s正在追杀%2$s</string>
   <string name="Mob_StaFleeingStatus2">这个 %1$s 正在逃离 %2$s</string>
   <string name="Mob_StaTerrorStatus">这个 %1$s 吓坏了</string>
-  <string name="Mob_StaTerrorStatus2">这个 %1$s 被 %2$s 吓坏了</string>
+  <string name="Mob_StaTerrorStatus2">这个%1$s被%2$s吓坏了</string>
   <string name="Mob_StaAmokStatus">这个 %1$s 正在发狂</string>
   <string name="WndSaveSlotSelect_LoadAutoSave">加载自动保存</string>
   <string name="TownScript_NeedWeapon">我不会赤手空拳去地牢！
@@ -911,7 +911,7 @@
   <string name="WndHats_BackButton">返回</string>
   <string name="WndHats_BuyButton">购买</string>
   <string name="WndHats_EquipButton">装备</string>
-  <string name="WndHats_InfoButton">检查</string>
+  <string name="WndHats_InfoButton">查看</string>
   <string name="WndHats_UnequipButton">取下</string>
   <string name="Artifact_Limit">你最多只能同时佩戴2件饰品。</string>
   <string name="FortuneTellerNPC_Name">占卜师</string>
@@ -920,7 +920,7 @@
   <string name="FortuneTellerNPC_Desc">此女身穿一袭色彩鲜艳的长袍。对于一位已精通算命奥术的算命家来说，她算是年少有为。你一步一步地靠近，隐约能听到她微声低语。然而，她只是目不转晴地盯着水晶球。</string>
   <string name="ServiceManNPC_Limit_Reached">抱歉，目前你已达界限，但每升一级，你便可以再次享用我们的服务！</string>
   <string name="WndFortuneTeller_Instruction">我可以为你揭开任何道具的神秘面纱！
-每次只收 %d 金币。</string>
+每次只收 %d 枚金币。</string>
   <string name="WndFortuneTeller_No_Item">看来你身上并没有尚未鉴定的道具，你确定你真要送钱给我花吗？</string>
   <string name="WndFortuneTeller_Title">算命家</string>
   <string name="Wnd_Button_Yes">同意</string>
@@ -940,7 +940,7 @@
   <string name="town_table_fortune_name">桌子</string>
   <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
   <string name="ConcreteBlock_Name">重型混凝土块</string>
-  <string name="ConcreteBlock_Description">看来你需要 %d 点力量才能推得动这块混凝土</string>
+  <string name="ConcreteBlock_Description">看来你需要%d点力量才能推得动这块混凝土</string>
   <string name="Hero_AnotherTry">你与残酷无情的人间告别了。
 想再回去吃苦头吗？</string>
   <string name="ShadowLord_Name">暗影领主</string>
@@ -951,10 +951,15 @@
   <string name="ShadowLord_Death">不……</string>
   <string name="AllowStatisticsCollectionScene_Title">使用数据收集</string>
   <string name="AllowStatisticsCollectionScene_Request">如果你允许，混合地牢将收集使用情况统计信息。 该数据将用于：
+
      —发现并修复各种小故障（对于致命错误，你将明确要求发送报告）
+
      —游戏平衡改进
+
      —修复设备特定的性能问题
+
      —不时发布有趣的统计数据
+
      你可以随时更改决定（单击标题屏幕上的图表图标）</string>
   <string name="AllowStatisticsCollectionScene_Allow">允许</string>
   <string name="AllowStatisticsCollectionScene_Deny">否定</string>
@@ -968,7 +973,7 @@
   <string name="SpiderGuard_Name">蜘蛛守卫</string>
   <string name="SpiderGuard_Gender">男性</string>
   <string name="SpiderGuard_Name_Objective">蜘蛛守卫</string>
-  <string name="SpiderGuard_Desc">就像士兵一样，蜘蛛守卫誓死保卫自己的王国。守卫的毒液用来使他们的目标瘫痪，使他们成为容易的猎物。</string>
+  <string name="SpiderGuard_Desc">就像士兵一样，蜘蛛守卫誓死保卫自己的王国。守卫的毒液用来麻痹它们的目标，使他们成为容易的猎物。</string>
   <string name="SpiderMindAmber_Name">琥珀蜘蛛</string>
   <string name="SpiderMindAmber_Gender">男性</string>
   <string name="SpiderMindAmber_Name_Objective">琥珀蜘蛛</string>
@@ -991,7 +996,7 @@
   <string name="Hero_Wait">……</string>
   <string name="Hero_Search">搜索</string>
   <string name="Hero_StaBurning">你着火了！</string>
-  <string name="Hero_StaParalysis">你瘫痪了！</string>
+  <string name="Hero_StaParalysis">你被麻痹了！</string>
   <string name="Hero_StaPoison">你中毒了！</string>
   <string name="Hero_StaOoze">腐蚀污泥正在侵蚀你的身体。快找水洗掉！！！</string>
   <string name="Hero_StaRoots">你无法移动！</string>
@@ -1056,7 +1061,7 @@
   <string name="IceGuardianCore_Name">冰霜巨人</string>
   <string name="IceGuardianCore_Gender">男性</string>
   <string name="IceGuardianCore_Name_Objective">冰霜巨人</string>
-  <string name="IceGuardianCore_Desc">冰霜巨人是被狗头人所建造的为保护它们的洞穴的古老产物。它的核心允许其它冰霜巨人在接受足够的能量后重生。</string>
+  <string name="IceGuardianCore_Desc">冰霜巨人是被狗头人所建造的为保护它们的洞穴的古老产物。它的核心允许其他冰霜巨人在接受足够的能量后重生。</string>
   <string name="CagedKobold_Name">被囚禁的狗头人</string>
   <string name="CagedKobold_Gender">男性</string>
   <string name="CagedKobold_Name_Objective">被囚禁的狗头人</string>
@@ -1101,12 +1106,12 @@
   <string name="RatKing_Gender">男性</string>
   <string name="Weapon_Identify">你已足够熟悉你的%1$s，鉴定出它是%2$s。</string>
   <string name="Weapon_Incompatible">不同属性魔法的冲突使得这把武器的附魔失去了效力！</string>
-  <string name="MeleeWeapon_Info1a">这把%1$s是%2$s%3$d阶的近战武器。</string>
+  <string name="MeleeWeapon_Info1a">这把%1$s是%2$s%3$d阶近战武器。</string>
   <string name="MeleeWeapon_Info1b">一把</string>
   <string name="MeleeWeapon_Info1c">一把升级过的</string>
   <string name="MeleeWeapon_Info1d">一把负等级的</string>
-  <string name="MeleeWeapon_Info2a">它的平均伤害是%d点。</string>
-  <string name="MeleeWeapon_Info2b">一般情况下这把武器每次攻击能造成平均%1$d点伤害，并需要%2$d点力量才能正常使用。</string>
+  <string name="MeleeWeapon_Info2a">它的平均伤害是每次攻击 %d 点。</string>
+  <string name="MeleeWeapon_Info2b">一般情况下这把武器每次攻击能造成平均 %1$d 点伤害，并需要 %2$d 点力量才能正常使用。</string>
   <string name="MeleeWeapon_Info2c">也许这把武器对你来说太重了。</string>
   <string name="MeleeWeapon_Info3a">这是一把比较%s的武器。</string>
   <string name="MeleeWeapon_Info3b">快速</string>
@@ -1166,7 +1171,7 @@
   <string name="MissileWeapon_Sure">你确定要将其用作近战武器？</string>
   <string name="MissileWeapon_Info1">
 
-这件武器平均能造成%d点伤害。</string>
+这件武器平均每次攻击能造成 %d 点伤害。</string>
   <string name="MissileWeapon_Info2">因为你的力量不足，你在使用这把%s攻击时，精准度和攻速因而下降。</string>
   <string name="MissileWeapon_Info3">因为你的力量已远远高过武器所需，你在使用这把%s攻击时伤害会增加。</string>
   <string name="MissileWeapon_Info4">
@@ -1188,7 +1193,7 @@
   <string name="Javelin_Info">经德国认证，枪头能稳定俯前，直至击中目标。</string>
   <string name="Javelin_Gender">中性</string>
   <string name="Shuriken_Name">手里剑</string>
-  <string name="Shuriken_Info">星形铁片，配上尖锐刀锋，轻巧得来伤害又高，据说只有加 ‧ 藤鹰忍士才能完美驾驭此物。</string>
+  <string name="Shuriken_Info">星形铁片，配上尖锐刀锋，轻巧得很伤害又高，据说只有加藤鹰忍士才能完美驾驭此物。</string>
   <string name="Shuriken_Gender">男性</string>
   <string name="Tamahawk_Name">飞斧</string>
   <string name="Tamahawk_Info">看上去这柄飞斧并不重，但它依然需要足够的力量来能有效发挥作用。</string>
@@ -1212,7 +1217,7 @@
   <string name="ScrollOfSummoning_Name">召唤卷轴</string>
   <string name="ScrollOfSummoning_Info">当大声朗读时，这张卷轴将召唤当前地牢同一级别的一只怪物。如果怪物的意志足够软弱，它就会成为你的仆人。</string>
   <string name="ScrollOfSummoning_Info_2">这只怪物归你了</string>
-  <string name="Using_Failed_Because_Magic">强大魔力阻止使用“%s”。</string>
+  <string name="Using_Failed_Because_Magic">强大的魔力阻止你使用“%s”。</string>
   <string name="Using_Failed_Because_Blind">失明状态下“%s”无法使用</string>
   <string name="Mob_Cannot_Be_Pet">你没法控制住“%s”！</string>
   <string name="No_Valid_Cell">没有召唤的空间</string>
@@ -1220,7 +1225,7 @@
   <string name="Mob_Died">远处传来死亡的声音。</string>
   <string name="Mob_StaSleepingStatus">这个%s正在睡觉</string>
   <string name="Mob_StaWanderingStatus">这个%s正在游荡</string>
-  <string name="Mob_StaHuntingStatus">这个%s正在追猎</string>
+  <string name="Mob_StaHuntingStatus">这个%s正在追杀</string>
   <string name="Mob_StaFleeingStatus">这个%s正在逃跑</string>
   <string name="Mob_StaPassiveStatus">这个%s是平和的</string>
   <string name="Acidic_Name">酸蚀蝎子</string>
@@ -1242,7 +1247,7 @@
   <string name="Bat_Defense">回避</string>
   <string name="Brute_Name">豺狼暴徒</string>
   <string name="Brute_Name_Objective">豺狼暴徒</string>
-  <string name="Brute_Desc">暴徒是豺狼人中体型最为巨大，最为强壮，最为坚韧的。当受到严重的伤害时，他们会变得狂暴，对他们的敌人造成大量伤害。</string>
+  <string name="Brute_Desc">暴徒是豺狼人中体型最为巨大，最为强壮，最为坚韧的。当受到严重的伤害时，它们会变得狂暴，对它们的敌人造成大量伤害。</string>
   <string name="Brute_Gender">男性</string>
   <string name="Brute_Enraged">%s被激怒了！</string>
   <string name="Brute_StaEnraged">激怒</string>
@@ -1270,7 +1275,7 @@
   <string name="Gnoll_Name">豺狼斥候</string>
   <string name="Gnoll_Gender">男性</string>
   <string name="Gnoll_Name_Objective">豺狼斥候</string>
-  <string name="Gnoll_Desc">豺狼人是像鬣狗一样的人型生物。他们居住在下水道和地牢中，不时向上突袭试图向地表发起进攻。豺狼斥候是它们种群里最普通的一员，它们不像暴徒们那样强壮，也没有萨满们那么聪明。</string>
+  <string name="Gnoll_Desc">豺狼人是像鬣狗一样的人型生物。它们居住在下水道和地牢中，不时向上突袭试图向地表发起进攻。豺狼斥候是它们种群里最普通的一员，它们不像暴徒们那样强壮，也没有萨满们那么聪明。</string>
   <string name="Golem_Name">魔像</string>
   <string name="Golem_Gender">男性</string>
   <string name="Golem_Name_Objective">魔像</string>
@@ -1340,7 +1345,7 @@
   <string name="Shielded_Gender">男性</string>
   <string name="Shielded_Name_Objective">持盾暴徒</string>
   <string name="Shielded_Defense">格挡</string>
-  <string name="Shielded_Desc">暴徒是豺狼人中体型最为巨大，最为强壮，最为坚韧的。当受到严重的伤害时，他们会变得狂暴，对他们的敌人造成大量伤害。这个豺狼暴徒举着一面巨型盾牌！</string>
+  <string name="Shielded_Desc">暴徒是豺狼人中体型最为巨大，最为强壮，最为坚韧的。当受到严重的伤害时，它们会变得狂暴，对它们的敌人造成大量伤害。这个豺狼暴徒举着一面巨型盾牌！</string>
   <string name="Skeleton_Name">骷髅</string>
   <string name="Skeleton_Gender">男性</string>
   <string name="Skeleton_Name_Objective">骷髅</string>
@@ -1417,7 +1422,7 @@
   <string name="SpiderServant_Name">蜘蛛士兵</string>
   <string name="SpiderServant_Gender">男性</string>
   <string name="SpiderServant_Name_Objective">蜘蛛士兵</string>
-  <string name="SpiderServant_Desc">蜘蛛士兵是蜘蛛巢穴中最为常见的单位，保护它们的领土是他们天生的使命。士兵的前肢进化出了毒腺来使它们的敌人中毒。</string>
+  <string name="SpiderServant_Desc">蜘蛛士兵是蜘蛛巢穴中最为常见的单位，保护它们的领土是它们天生的使命。士兵的前肢进化出了毒腺来使它们的敌人中毒。</string>
   <string name="SpiderExploding_Name">蜘蛛工人</string>
   <string name="SpiderExploding_Gender">男性</string>
   <string name="SpiderExploding_Name_Objective">蜘蛛工人</string>
@@ -1516,7 +1521,7 @@
   <string name="Badges_MonsterSlain2">消灭50个敌人</string>
   <string name="Badges_MonsterSlain3">消灭150个敌人</string>
   <string name="Badges_MonsterSlain4">消灭250个敌人</string>
-  <string name="Badges_GoldColleted1">收集100金币</string>
+  <string name="Badges_GoldColleted1">收集100枚金币</string>
   <string name="Badges_GoldColleted2">收集500金币</string>
   <string name="Badges_GoldColleted3">收集2500金币</string>
   <string name="Badges_GoldColleted4">收集7500金币</string>
@@ -1623,7 +1628,7 @@
   <string name="Journal_ScarecrowNPC">稻草人</string>
   <string name="Mods_CreatedBy">创建者：</string>
   <string name="Mods_AuthorSite">创建网页：</string>
-  <string name="Mods_AuthorEmail">创建者电邮地址：</string>
+  <string name="Mods_AuthorEmail">创建者邮箱：</string>
   <string name="Mods_RestartRequired">需要重启游戏</string>
   <string name="Spells_NotTooFast">%s 没有准备好使用</string>
   <string name="ElvenBow_Name">精灵长弓</string>
@@ -1637,9 +1642,9 @@
   <string name="PlagueDoctorNPC_Gender">男性</string>
   <string name="PlagueDoctorNPC_Name_Objective">瘟疫巫医</string>
   <string name="PlagueDoctorNPC_Desc">散发奇怪味道的……皮革？下面应该是个人吧……</string>
-  <string name="PlagueDoctorNPC_Quest_Start_Male">呸！你信吗？那些白痴还没意识到这该死的下水道有多危险！像警卫和冒险家可以保护城市免除疾病吗！没有武器可以阻止疾病蔓延。但我需要证据，你能帮助我吗？给我拿%d张老鼠皮，这样我就可以做一些额外的测试了。</string>
+  <string name="PlagueDoctorNPC_Quest_Start_Male">呸！你信吗？那些白痴还没意识到这该死的下水道有多危险！像警卫和冒险家可以保护城市免除疾病吗！没有武器可以阻止疾病蔓延。但我需要证据，你能帮助我吗？给我拿 %d 张老鼠皮，这样我就可以做一些额外的测试了。</string>
   <string name="PlagueDoctorNPC_Quest_Start_Female">呸！你信吗？那些白痴还没意识到这该死的下水道有多危险！像警卫和冒险家可以保护城市免除疾病吗！没有武器可以阻止疾病蔓延。但我需要证据，你能帮助我吗？给我拿%d张老鼠皮，这样我就可以做一些额外的测试了。</string>
-  <string name="PlagueDoctorNPC_Quest_Reminder">给我%d张老鼠皮。</string>
+  <string name="PlagueDoctorNPC_Quest_Reminder">给我 %d 张老鼠皮。</string>
   <string name="PlagueDoctorNPC_Quest_End">啊，谢谢，我希望我能找到病原体。过去我什么都没找到。所以我在等你的时候为你做了这个。</string>
   <string name="PlagueDoctorNPC_After_Quest">我会证明的，我会证明给他们看！</string>
   <string name="Journal_PlagueDoctorNPC">瘟疫巫医</string>
@@ -1719,7 +1724,7 @@
   <string name="WndMovieTheatre_Watch">观看影片</string>
   <string name="WndMovieTheatre_No">离开</string>
   <string name="WndMovieTheatre_Bye">想回来的时候就回来，我们对你的到来而感到高兴！</string>
-  <string name="WndMovieTheatre_Instruction">欢迎来到我们的电影院！我们正在提供一项特别服务，你可以免费观看“电影”。如果你成功看完，将得到%d枚金币的奖励！</string>
+  <string name="WndMovieTheatre_Instruction">欢迎来到我们的电影院！我们正在提供一项特别服务，你可以免费观看“电影”。如果你成功看完，将得到 %d 枚金币的奖励！</string>
   <string name="WndMovieTheatre_Title">戏院</string>
   <string name="WndMovieTheatre_Thank_You">感谢你的参与！</string>
   <string name="WndPriest_Heal">治疗-花费%d金币</string>
@@ -1995,25 +2000,25 @@
   <string name="PseudoPasty_Name">馅饼</string>
   <string name="PseudoPasty_Info">这是块正宗康沃尔馅饼，里面填满了传统的牛肉和土豆馅料。</string>
   <string name="ResultDescriptions_Mob">在第 %2$d 层被 %1$s 杀死了</string>
-  <string name="ResultDescriptions_Boss">在%2$d级被%1$s杀死</string>
-  <string name="ResultDescriptions_Wand">在第 %2$d 层被你的 %1$s 杀死了</string>
-  <string name="ResultDescriptions_Glyph">在%2$d级被%1$s杀死</string>
+  <string name="ResultDescriptions_Boss">在第%2$d层被%1$s杀死</string>
+  <string name="ResultDescriptions_Wand">在第 %2$d 层被你的%1$s杀死了</string>
+  <string name="ResultDescriptions_Glyph">在第 %2$d 层被%1$s杀死</string>
   <string name="ResultDescriptions_Trap">在第 %2$d 层被 %1$s 的雷电击杀</string>
   <string name="ResultDescriptions_Burning">在第 %d 层燃为灰烬</string>
   <string name="ResultDescriptions_Hunger">在第 %d 层饥饿致死</string>
-  <string name="ResultDescriptions_Poison">在%d级被毒气杀死</string>
+  <string name="ResultDescriptions_Poison">在%d层被毒气杀死</string>
   <string name="ResultDescriptions_Gas">在第 %d 层死于毒气</string>
   <string name="ResultDescriptions_Bleeding">在第 %d 层流血而死</string>
   <string name="ResultDescriptions_Ooze">在第 %d 层被腐蚀淤泥杀死</string>
   <string name="ResultDescriptions_Fall">在第 %d 层摔死</string>
   <string name="ResultDescriptions_Win">获得Yendor护符</string>
-  <string name="ResultDescriptions_Immured">在第%d层被囚禁于墙中</string>
-  <string name="ResultDescriptions_Unknown">在神秘情况下死亡 %d</string>
+  <string name="ResultDescriptions_Immured">在第 %d 层被囚禁于墙中</string>
+  <string name="ResultDescriptions_Unknown">在第 %d 层神秘死亡</string>
   <string name="Armor_EquipCursed">你的%s紧裹在你身上，使你感到很疼。</string>
   <string name="Armor_Identify">你已足够熟悉你的%1$s，鉴定出它是%2$s。</string>
   <string name="Armor_ToString">%1$s ： %2$d</string>
   <string name="Armor_Incompatible">不同类型魔法的相互作用抹去了盔甲上的刻纹！</string>
-  <string name="Armor_Info1">这件%1$s在每次受到物理伤害时平均可以抵挡%2$d点伤害。</string>
+  <string name="Armor_Info1">这件%1$s在每次受到物理伤害时平均可以抵挡 %2$d 点伤害。</string>
   <string name="Armor_Info2">
 
 由于力量不足，你的移动速度和防御能力都下降了。</string>
@@ -2022,7 +2027,7 @@
 因为你的力量不足，穿这件盔甲会降低你的移动速度和防御技能。</string>
   <string name="Armor_Info4">
 
-一般情况下 %1$s 对于受到的物理攻击提供平均 %2$d 点减伤，并需要 %3$d 点力量才能正常使用。</string>
+一般情况下%1$s对于受到的物理攻击提供平均 %2$d 点减伤，并需要 %3$d 点力量才能正常使用。</string>
   <string name="Armor_Info5">这件护甲对你来说也许太重了。</string>
   <string name="Armor_Info6">它被刻印了。</string>
   <string name="Armor_Info7a">
@@ -2073,14 +2078,14 @@
   <string name="Affection_Txt">魅惑 %s</string>
   <string name="AntiEntropy_Txt">反熵 %s</string>
   <string name="Bounce_Txt">反弹 %s</string>
-  <string name="Displacement_Txt">位移 %s</string>
+  <string name="Displacement_Txt">位移%s</string>
   <string name="Entanglement_Txt">缠绕之%s</string>
   <string name="Metabolism_Txt">代谢 %s</string>
   <string name="Multiplicity_Txt">分身 %s</string>
   <string name="Potential_Txt">电势之%s</string>
-  <string name="Stench_Txt">恶臭 %s</string>
+  <string name="Stench_Txt">恶臭%s</string>
   <string name="Viscosity_Txt">粘稠之%s</string>
-  <string name="Viscosity_Status">延缓%d点伤害</string>
+  <string name="Viscosity_Status">延缓 %d 点伤害</string>
   <string name="DeferedDamageBuff_Name">延时伤害 (%d)</string>
   <string name="DeferedDamageBuff_Info">你的疼痛已经变成了一种缓慢的疼痛，使你一次受到的伤害减少。
 待承受的伤害%d</string>
@@ -2217,7 +2222,7 @@
   <string name="GnollArmor_ACSpecial">号召</string>
   <string name="GnollArmor_NotGnoll">只有豺狼才能穿豺狼甲！</string>
   <string name="GnollArmor_Name">豺狼首领甲</string>
-  <string name="GnollArmor_Info">豺狼首领甲的拥有者以其说服能力强，甚至极端愤怒和无思想的怪物都能被他说服成为他的手下而闻名。</string>
+  <string name="GnollArmor_Info">豺狼首领甲的拥有者以其说服能力强，甚至极端愤怒和无思想的怪物都能被它说服成为它的手下而闻名。</string>
   <string name="GnollTamahawk_Name">豺狼战斧</string>
   <string name="GnollTamahawk_Info">一种传统的战斧，由豺狼工匠创造，每支部落都有自己独特的设计。这种战斧比同类战斧轻一些，更适合于投掷。</string>
   <string name="GnollTamahawk_Gender">男性</string>
@@ -2316,8 +2321,8 @@
   <string name="TitleScene_Mods">MOD</string>
   <string name="WndHero_Stealth">潜行</string>
   <string name="WndHero_Awareness">察觉</string>
-  <string name="WndHero_AttackSkill">攻击技能</string>
-  <string name="WndHero_DefenceSkill">防御技能</string>
+  <string name="WndHero_AttackSkill">攻击力</string>
+  <string name="WndHero_DefenceSkill">防御力</string>
   <string name="town_deco_grave_name">坟墓</string>
   <string name="town_deco_grave_desc">一座标准的坟墓，经受了风化的考验。</string>
   <string name="town_deco_pillar_name">台柱</string>
@@ -2393,7 +2398,7 @@
   <string name="town_deco_glass_stained_name">彩色玻璃</string>
   <string name="town_deco_glass_stained_desc">这块玻璃的制作者肯定在它身上投入了很多的精力。</string>
   <string name="town_deco_glass_name">宽窗口</string>
-  <string name="town_deco_glass_desc">这一个比其它的更宽，当然可以让更多的光线进入。</string>
+  <string name="town_deco_glass_desc">这一个比其他的更宽，当然可以让更多的光线进入。</string>
   <string name="town_deco_counter_name">柜台</string>
   <string name="town_deco_counter_desc">让你和站在它后面的人保持良好的距离。</string>
   <string name="town_deco_library_books_name">阅读物</string>
@@ -2628,7 +2633,7 @@ by drazool from reddit
   <string name="HeroClass_GnollPerks_1">豺狼人初始只拥有5点生命上限。</string>
   <string name="HeroClass_GnollPerks_2">豺狼人初始没有基础护甲，但有一把独特的战斧和一些飞镖。</string>
   <string name="HeroClass_GnollPerks_3">豺狼人既不会读也不会写。</string>
-  <string name="HeroClass_GnollPerks_4">其它豺狼在被激怒之前不会主动攻击豺狼人。</string>
+  <string name="HeroClass_GnollPerks_4">其他豺狼在被激怒之前不会主动攻击豺狼人。</string>
   <string name="Potion_Colors_0">青绿</string>
   <string name="Potion_Colors_1">猩红</string>
   <string name="Potion_Colors_2">湛青</string>
@@ -2666,11 +2671,16 @@ by drazool from reddit
   <string name="town_deco_flowerinthepot_desc">当地特色装饰花</string>
   <string name="Welcome_Text_29_4">
     remix.29.4
+
     ——新增：
+
     —双手系统！
+
     ——修改：
+
     —常用武器！
-    ——修复了一些Bug
+
+    ——修复错误
     </string>
   <string name="Mods_Disclaimer">
         MOD是由玩家为玩家创建的。
@@ -2682,7 +2692,7 @@ by drazool from reddit
         MOD需要独立下载，祝你玩得开心！
 
     </string>
-  <string name="ShieldWeaponInfo">当作为武器使用时，这面盾牌平均会造成%1$d的伤害。</string>
+  <string name="ShieldWeaponInfo">当作为武器使用时，这面盾牌平均会造成 %1$d 点伤害。</string>
   <string name="TownPortal_Name">回城卷轴</string>
   <string name="TownPortal_Info">这道咒语可以让你立即回到安全的地方。然而，附近强大的魔法源可能会阻止它如期发挥作用。</string>
   <string name="MedicineMask_Name">医用口罩</string>
@@ -2719,11 +2729,16 @@ by drazool from reddit
 熟练的大师能够在较长的时间内保持急速。</string>
   <string name="Welcome_Text_29_5">
 remix.29.5
+
 ——游戏性：
+
 —盗贼技能！
+
 ——修改：
+
 —盔甲贴图！
-——修复了一些Bug</string>
+
+——修复错误</string>
   <string name="Char_Stole_0">%1$s 从%3$s身上偷走了%2$s！</string>
   <string name="Char_Stole_1">%1$s把%3$s的%2$s偷窃了！</string>
   <string name="Char_Stole_2">%1$s把%3$s的%2$s偷窃了！</string>
@@ -2749,12 +2764,19 @@ remix.29.5
   <string name="Mob_CantDoIt">我做不到。我的手太小了。</string>
   <string name="Welcome_Text_29_6">
 Remix.29.6
+
 ——游戏性：
+
 —对怪物们执行额外行动！
+
 ——修改：
+
 —角色项目！
+
 —特殊武器属性！
+
 —更多未分类的东西！
+
 ——修复错误</string>
   <string name="InnKeeperNPC_Name">旅店老板</string>
   <string name="InnKeeperNPC_Name_Objective">旅店老板</string>
@@ -2778,9 +2800,13 @@ Remix.29.6
   <string name="BardNPC_Desc">镇上的吟游诗人正在弹他的琵琶。</string>
   <string name="Welcome_Text_30">
 remix.30.0
+
 ——游戏性：
+
 —面向每个人的技能！
+
 —旅店现在开张了！
+
 ——修复错误</string>
   <string name="Roar_Name">咆哮</string>
   <string name="Roar_Info">强有力的咆哮肯定会吓坏你的敌人，激励你的盟友。</string>
@@ -2893,7 +2919,7 @@ remix.30.0
   <string name="DeepSnail_Gender">男孩</string>
   <string name="DeepSnail_Name_Objective">深色蜗牛</string>
   <string name="DeepSnail_Desc">这种软体动物经常在水源附近出没，速度比普通蜗牛快得多。但是要小心被咬伤，它们会对你的皮肤产生令人不快的影响。</string>
-  <string name="CharInfo_Level">这是一只%1$d级的%2$s。</string>
+  <string name="CharInfo_Level">这是一只%1$d级%2$s。</string>
   <string name="WrnExperimental_realtime">实时！模式启用：现在是实时的roguelike，快速点击或死亡。
 想要查看库存？
 祝你好运，当下水道蟹正在检查你的内脏时，你可以这样做。</string>
@@ -2904,12 +2930,19 @@ remix.30.0
   <string name="WrnExperimental_title">实验选项已启用！</string>
   <string name="Welcome_Text_30_1">
 remix.30.1
+
 ——游戏性
+
 —豺狼人的子类！
+
 —蜗牛！
+
 —混沌物品的进展被削弱了。
+
 —从现在开始，魔力药水是普通药水。
+
 —现在玩DLC（但不是mod）时可以获得徽章。
+
 ——修复错误</string>
   <string name="ShamanElder_Name">年长的萨满</string>
   <string name="ShamanElder_Gender">男孩</string>
