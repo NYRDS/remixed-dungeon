@@ -2317,7 +2317,7 @@
   <string name="WndHero_Stealth">潜行</string>
   <string name="WndHero_Awareness">察觉</string>
   <string name="WndHero_AttackSkill">攻击力</string>
-  <string name="WndHero_DefenceSkill">防御技能</string>
+  <string name="WndHero_DefenceSkill">防御力</string>
   <string name="town_deco_grave_name">坟墓</string>
   <string name="town_deco_grave_desc">一座标准的坟墓，经受了风化的考验。</string>
   <string name="town_deco_pillar_name">台柱</string>
