@@ -72,7 +72,7 @@
   <string name="RingOfShadows_Name">暗影戒指</string>
   <string name="RingOfShadows_Info">当你佩戴这枚戒指时敌人会更难注意到你，负等级的戒指会使附近的敌人更容易发现你的存在。</string>
   <string name="RingOfThorns_Name">荆棘戒指</string>
-  <string name="RingOfThorns_Info">这枚戒指不会提供真正的荆棘，但他会把你受到的伤害的一小部分反馈给攻击方，升级这枚戒指不会给予任何额外加成。</string>
+  <string name="RingOfThorns_Info">这枚戒指不会提供真正的荆棘，但它会把你受到的伤害的一小部分反馈给攻击方，升级这枚戒指不会给予任何额外加成。</string>
   <string name="RingOfStoneWalking_Name">血石戒指</string>
   <string name="RingOfStoneWalking_Info">这枚奇怪的戒指是由某种坚硬的石头制作的，你一开始想到的是红宝石但实际上是被固定住的液态血液！在它里面，你可以看到箭头指向一堵带着一颗破碎之心的墙……这是拿来做什么的？</string>
   <string name="RingOfStoneWalking_ImmuredInStone">你被困在石头里了。永远。</string>
@@ -134,7 +134,7 @@
 有什么需要吗？</string>
   <string name="Shopkeeper_SellPrompt">我有东西要卖</string>
   <string name="Shopkeeper_BuyPrompt">让我看看东西</string>
-  <string name="WndTradeItem_BuyN">购买%1$d，付出%2$d金币</string>
+  <string name="WndTradeItem_BuyN">购买%1$d，付出 %2$d 金币</string>
   <string name="WndTradeItem_BuyAll">购买全部物品%dg</string>
   <string name="WndTradeItem_SellN">卖出 %1$d 获得 %2$d金币</string>
   <string name="WndBag_BuySubtitle">（你拥有%d g）</string>
@@ -193,7 +193,7 @@
   <string name="NecrotismBuff_Name">坏死</string>
   <string name="NecrotismBuff_Info">你散发着死亡的恶臭，导致其他人也发出恶臭。</string>
   <string name="Necrotism_ACSpecial">天灾</string>
-  <string name="ResultDescriptions_Necrotism">在%d死亡</string>
+  <string name="ResultDescriptions_Necrotism">在第%d层死于坏死</string>
   <string name="Necrotism_Death">你死于坏死……</string>
   <string name="Badges_DeathNecrotism">死于瘟疫</string>
   <string name="Spell_SelectACell">选择一个位置</string>
@@ -329,9 +329,9 @@
 你认为你已经准备好面对这个挑战了，更重要的是，你感觉到命运女神正向你投以一丝微笑。现在，是时候展开属于你的冒险了！</string>
   <string name="AmuletScene_Exit">让这一切结束吧</string>
   <string name="AmuletScene_Stay">我还没完呢</string>
-  <string name="AmuletScene_Txt">你终于拿到了Yendor护符。借助它的力量你可以统治这个世界，给他人带来和平与繁荣或是其它的事。不论如何，你的一生已经被永久改变，游戏也会在此处终结。当然你可以作为一名普通人在这里多逗留一会。</string>
-  <string name="GameScene_Welcome">欢迎来到混合地牢的第%d层！</string>
-  <string name="GameScene_WelcomeBack">欢迎回到混合地牢的第%d层！</string>
+  <string name="AmuletScene_Txt">你终于拿到了Yendor护符。借助它的力量你可以统治这个世界，给他人带来和平与繁荣或是其他的事。不论如何，你的一生已经被永久改变，游戏也会在此处终结。当然你可以作为一名普通人在这里多逗留一会。</string>
+  <string name="GameScene_Welcome">欢迎来到混合地牢第%d层！</string>
+  <string name="GameScene_WelcomeBack">欢迎回到混合地牢第%d层！</string>
   <string name="GameScene_NightMode">一定要多加小心，地牢在夜间会更加危险！</string>
   <string name="GameScene_Chasm">你的脚步声回荡在地牢中。</string>
   <string name="GameScene_Water">你听见周围水花四溅的声音。</string>
@@ -656,11 +656,11 @@
   <string name="AboutScene_Music">音乐：</string>
   <string name="AboutScene_Sound">音效：</string>
   <string name="AboutScene_Thanks">特别感谢：</string>
-  <string name="AboutScene_Email_Us">寄电邮予我们：</string>
+  <string name="AboutScene_Email_Us">给我们发邮件：</string>
   <string name="AboutScene_OurSite">我们的网址：</string>
   <string name="AboutScene_Snd">发送邮件</string>
   <string name="AboutScene_Translation">本地化的功臣：</string>
-  <string name="AboutScene_Translation_Names">NYRDS &amp；Omen267901；丘比</string>
+  <string name="AboutScene_Translation_Names">丘比</string>
   <string name="RankingsScene_Title">最高纪录</string>
   <string name="RankingsScene_Total">总游戏次数</string>
   <string name="RankingsScene_NoGames">还没进行过游戏</string>
@@ -775,7 +775,7 @@
   <string name="Necromancy_ReincarnationName">转生</string>
   <string name="Necromancy_ReincarnationTriggered">你的力量使你从死亡中归来！但你失去了所有已收集的灵魂和所有物。</string>
   <string name="Necromancy_SummonDeathlingName">召唤死灵</string>
-  <string name="Necromancy_BecameALich">你成为了巫妖！你的身体正在变化，同时你的灵魂容量提升了一倍！但是你失去了 %1$d 点力量。</string>
+  <string name="Necromancy_BecameALich">你成为了巫妖！你的身体正在变化，同时你的灵魂容量提升了一倍！但是你失去了%1$d点力量。</string>
   <string name="StartScene_UnlockNecromancer">使用其他角色击败巫妖来解锁此角色。</string>
   <string name="Necromancy_Title">死灵术</string>
   <string name="WndSadGhostNecro_Text">“这个幽灵似乎被它的诅咒所困住了。看来它想要我的某样东西。如果我用我死灵术的力量，我就能让它认为它已经有了它所需要的东西，并进一步控制它，这样我就不用在这里浪费我的时间了。我该不该控制它呢？”</string>
@@ -911,7 +911,7 @@
   <string name="WndHats_BackButton">返回</string>
   <string name="WndHats_BuyButton">购买</string>
   <string name="WndHats_EquipButton">装备</string>
-  <string name="WndHats_InfoButton">检查</string>
+  <string name="WndHats_InfoButton">查看</string>
   <string name="WndHats_UnequipButton">取下</string>
   <string name="Artifact_Limit">你最多只能同时佩戴2件饰品。</string>
   <string name="FortuneTellerNPC_Name">占卜师</string>
@@ -934,13 +934,13 @@
   <string name="WndLibrary_Items_Btn">道具</string>
   <string name="WndLibrary_Codex_Btn">故事</string>
   <string name="WndLibrary_Levels_Btn">地牢</string>
-  <string name="WndMovieTheatre_Instruction_2">你累计最多可看 %2$d 次，而你已经观看了 %1$d 次。每当你升一级，你便可获得额外一次欣赏电影的机会。</string>
+  <string name="WndMovieTheatre_Instruction_2">你累计最多可看%2$d次，而你已经观看了%1$d次。每当你升一级，你便可获得额外一次欣赏电影的机会。</string>
   <string name="town_deco_blue_carpet_name">地毯</string>
   <string name="town_deco_blue_carpet_desc">一块用紫丝绣出花纹的精致地毯。</string>
   <string name="town_table_fortune_name">桌子</string>
   <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
   <string name="ConcreteBlock_Name">重型混凝土块</string>
-  <string name="ConcreteBlock_Description">看来你需要 %d 点力量才能推得动这块混凝土</string>
+  <string name="ConcreteBlock_Description">看来你需要%d点力量才能推得动这块混凝土</string>
   <string name="Hero_AnotherTry">你与残酷无情的人间告别了。
 想再回去吃苦头吗？</string>
   <string name="ShadowLord_Name">暗影领主</string>
@@ -951,10 +951,15 @@
   <string name="ShadowLord_Death">不……</string>
   <string name="AllowStatisticsCollectionScene_Title">使用数据收集</string>
   <string name="AllowStatisticsCollectionScene_Request">如果你允许，混合地牢将收集使用情况统计信息。 该数据将用于：
+
      —发现并修复各种小故障（对于致命错误，你将明确要求发送报告）
+
      —游戏平衡改进
+
      —修复设备特定的性能问题
+
      —不时发布有趣的统计数据
+
      你可以随时更改决定（单击标题屏幕上的图表图标）</string>
   <string name="AllowStatisticsCollectionScene_Allow">允许</string>
   <string name="AllowStatisticsCollectionScene_Deny">否定</string>
@@ -968,7 +973,7 @@
   <string name="SpiderGuard_Name">蜘蛛守卫</string>
   <string name="SpiderGuard_Gender">男性</string>
   <string name="SpiderGuard_Name_Objective">蜘蛛守卫</string>
-  <string name="SpiderGuard_Desc">就像士兵一样，蜘蛛守卫誓死保卫自己的王国。守卫的毒液用来使他们的目标瘫痪，使他们成为容易的猎物。</string>
+  <string name="SpiderGuard_Desc">就像士兵一样，蜘蛛守卫誓死保卫自己的王国。守卫的毒液用来麻痹它们的目标，使他们成为容易的猎物。</string>
   <string name="SpiderMindAmber_Name">琥珀蜘蛛</string>
   <string name="SpiderMindAmber_Gender">男性</string>
   <string name="SpiderMindAmber_Name_Objective">琥珀蜘蛛</string>
@@ -991,7 +996,7 @@
   <string name="Hero_Wait">……</string>
   <string name="Hero_Search">搜索</string>
   <string name="Hero_StaBurning">你着火了！</string>
-  <string name="Hero_StaParalysis">你瘫痪了！</string>
+  <string name="Hero_StaParalysis">你被麻痹了！</string>
   <string name="Hero_StaPoison">你中毒了！</string>
   <string name="Hero_StaOoze">腐蚀污泥正在侵蚀你的身体。快找水洗掉！！！</string>
   <string name="Hero_StaRoots">你无法移动！</string>
@@ -1056,7 +1061,7 @@
   <string name="IceGuardianCore_Name">冰霜巨人</string>
   <string name="IceGuardianCore_Gender">男性</string>
   <string name="IceGuardianCore_Name_Objective">冰霜巨人</string>
-  <string name="IceGuardianCore_Desc">冰霜巨人是被狗头人所建造的为保护它们的洞穴的古老产物。它的核心允许其它冰霜巨人在接受足够的能量后重生。</string>
+  <string name="IceGuardianCore_Desc">冰霜巨人是被狗头人所建造的为保护它们的洞穴的古老产物。它的核心允许其他冰霜巨人在接受足够的能量后重生。</string>
   <string name="CagedKobold_Name">被囚禁的狗头人</string>
   <string name="CagedKobold_Gender">男性</string>
   <string name="CagedKobold_Name_Objective">被囚禁的狗头人</string>
@@ -1101,7 +1106,7 @@
   <string name="RatKing_Gender">男性</string>
   <string name="Weapon_Identify">你已足够熟悉你的%1$s，鉴定出它是%2$s。</string>
   <string name="Weapon_Incompatible">不同属性魔法的冲突使得这把武器的附魔失去了效力！</string>
-  <string name="MeleeWeapon_Info1a">这把%1$s是%2$s%3$d阶的近战武器。</string>
+  <string name="MeleeWeapon_Info1a">这把%1$s是%2$s%3$d阶近战武器。</string>
   <string name="MeleeWeapon_Info1b">一把</string>
   <string name="MeleeWeapon_Info1c">一把升级过的</string>
   <string name="MeleeWeapon_Info1d">一把负等级的</string>
@@ -1188,7 +1193,7 @@
   <string name="Javelin_Info">经德国认证，枪头能稳定俯前，直至击中目标。</string>
   <string name="Javelin_Gender">中性</string>
   <string name="Shuriken_Name">手里剑</string>
-  <string name="Shuriken_Info">星形铁片，配上尖锐刀锋，轻巧得来伤害又高，据说只有加 ‧ 藤鹰忍士才能完美驾驭此物。</string>
+  <string name="Shuriken_Info">星形铁片，配上尖锐刀锋，轻巧得很伤害又高，据说只有加藤鹰忍士才能完美驾驭此物。</string>
   <string name="Shuriken_Gender">男性</string>
   <string name="Tamahawk_Name">飞斧</string>
   <string name="Tamahawk_Info">看上去这柄飞斧并不重，但它依然需要足够的力量来能有效发挥作用。</string>
@@ -1242,7 +1247,7 @@
   <string name="Bat_Defense">回避</string>
   <string name="Brute_Name">豺狼暴徒</string>
   <string name="Brute_Name_Objective">豺狼暴徒</string>
-  <string name="Brute_Desc">暴徒是豺狼人中体型最为巨大，最为强壮，最为坚韧的。当受到严重的伤害时，他们会变得狂暴，对他们的敌人造成大量伤害。</string>
+  <string name="Brute_Desc">暴徒是豺狼人中体型最为巨大，最为强壮，最为坚韧的。当受到严重的伤害时，它们会变得狂暴，对它们的敌人造成大量伤害。</string>
   <string name="Brute_Gender">男性</string>
   <string name="Brute_Enraged">%s被激怒了！</string>
   <string name="Brute_StaEnraged">激怒</string>
@@ -1270,7 +1275,7 @@
   <string name="Gnoll_Name">豺狼斥候</string>
   <string name="Gnoll_Gender">男性</string>
   <string name="Gnoll_Name_Objective">豺狼斥候</string>
-  <string name="Gnoll_Desc">豺狼人是像鬣狗一样的人型生物。他们居住在下水道和地牢中，不时向上突袭试图向地表发起进攻。豺狼斥候是它们种群里最普通的一员，它们不像暴徒们那样强壮，也没有萨满们那么聪明。</string>
+  <string name="Gnoll_Desc">豺狼人是像鬣狗一样的人型生物。它们居住在下水道和地牢中，不时向上突袭试图向地表发起进攻。豺狼斥候是它们种群里最普通的一员，它们不像暴徒们那样强壮，也没有萨满们那么聪明。</string>
   <string name="Golem_Name">魔像</string>
   <string name="Golem_Gender">男性</string>
   <string name="Golem_Name_Objective">魔像</string>
@@ -1340,7 +1345,7 @@
   <string name="Shielded_Gender">男性</string>
   <string name="Shielded_Name_Objective">持盾暴徒</string>
   <string name="Shielded_Defense">格挡</string>
-  <string name="Shielded_Desc">暴徒是豺狼人中体型最为巨大，最为强壮，最为坚韧的。当受到严重的伤害时，他们会变得狂暴，对他们的敌人造成大量伤害。这个豺狼暴徒举着一面巨型盾牌！</string>
+  <string name="Shielded_Desc">暴徒是豺狼人中体型最为巨大，最为强壮，最为坚韧的。当受到严重的伤害时，它们会变得狂暴，对它们的敌人造成大量伤害。这个豺狼暴徒举着一面巨型盾牌！</string>
   <string name="Skeleton_Name">骷髅</string>
   <string name="Skeleton_Gender">男性</string>
   <string name="Skeleton_Name_Objective">骷髅</string>
@@ -1417,7 +1422,7 @@
   <string name="SpiderServant_Name">蜘蛛士兵</string>
   <string name="SpiderServant_Gender">男性</string>
   <string name="SpiderServant_Name_Objective">蜘蛛士兵</string>
-  <string name="SpiderServant_Desc">蜘蛛士兵是蜘蛛巢穴中最为常见的单位，保护它们的领土是他们天生的使命。士兵的前肢进化出了毒腺来使它们的敌人中毒。</string>
+  <string name="SpiderServant_Desc">蜘蛛士兵是蜘蛛巢穴中最为常见的单位，保护它们的领土是它们天生的使命。士兵的前肢进化出了毒腺来使它们的敌人中毒。</string>
   <string name="SpiderExploding_Name">蜘蛛工人</string>
   <string name="SpiderExploding_Gender">男性</string>
   <string name="SpiderExploding_Name_Objective">蜘蛛工人</string>
@@ -1623,7 +1628,7 @@
   <string name="Journal_ScarecrowNPC">稻草人</string>
   <string name="Mods_CreatedBy">创建者：</string>
   <string name="Mods_AuthorSite">创建网页：</string>
-  <string name="Mods_AuthorEmail">创建者电邮地址：</string>
+  <string name="Mods_AuthorEmail">创建者邮箱：</string>
   <string name="Mods_RestartRequired">需要重启游戏</string>
   <string name="Spells_NotTooFast">%s 没有准备好使用</string>
   <string name="ElvenBow_Name">精灵长弓</string>
@@ -1995,13 +2000,13 @@
   <string name="PseudoPasty_Name">馅饼</string>
   <string name="PseudoPasty_Info">这是块正宗康沃尔馅饼，里面填满了传统的牛肉和土豆馅料。</string>
   <string name="ResultDescriptions_Mob">在第 %2$d 层被 %1$s 杀死了</string>
-  <string name="ResultDescriptions_Boss">在%2$d级被%1$s杀死</string>
+  <string name="ResultDescriptions_Boss">在第%2$d层被%1$s杀死</string>
   <string name="ResultDescriptions_Wand">在第 %2$d 层被你的 %1$s 杀死了</string>
-  <string name="ResultDescriptions_Glyph">在%2$d级被%1$s杀死</string>
+  <string name="ResultDescriptions_Glyph">在第%2$d层被%1$s杀死</string>
   <string name="ResultDescriptions_Trap">在第 %2$d 层被 %1$s 的雷电击杀</string>
   <string name="ResultDescriptions_Burning">在第 %d 层燃为灰烬</string>
   <string name="ResultDescriptions_Hunger">在第 %d 层饥饿致死</string>
-  <string name="ResultDescriptions_Poison">在%d级被毒气杀死</string>
+  <string name="ResultDescriptions_Poison">在%d层被毒气杀死</string>
   <string name="ResultDescriptions_Gas">在第 %d 层死于毒气</string>
   <string name="ResultDescriptions_Bleeding">在第 %d 层流血而死</string>
   <string name="ResultDescriptions_Ooze">在第 %d 层被腐蚀淤泥杀死</string>
@@ -2217,7 +2222,7 @@
   <string name="GnollArmor_ACSpecial">号召</string>
   <string name="GnollArmor_NotGnoll">只有豺狼才能穿豺狼甲！</string>
   <string name="GnollArmor_Name">豺狼首领甲</string>
-  <string name="GnollArmor_Info">豺狼首领甲的拥有者以其说服能力强，甚至极端愤怒和无思想的怪物都能被他说服成为他的手下而闻名。</string>
+  <string name="GnollArmor_Info">豺狼首领甲的拥有者以其说服能力强，甚至极端愤怒和无思想的怪物都能被它说服成为它的手下而闻名。</string>
   <string name="GnollTamahawk_Name">豺狼战斧</string>
   <string name="GnollTamahawk_Info">一种传统的战斧，由豺狼工匠创造，每支部落都有自己独特的设计。这种战斧比同类战斧轻一些，更适合于投掷。</string>
   <string name="GnollTamahawk_Gender">男性</string>
@@ -2316,8 +2321,8 @@
   <string name="TitleScene_Mods">MOD</string>
   <string name="WndHero_Stealth">潜行</string>
   <string name="WndHero_Awareness">察觉</string>
-  <string name="WndHero_AttackSkill">攻击技能</string>
-  <string name="WndHero_DefenceSkill">防御技能</string>
+  <string name="WndHero_AttackSkill">攻击力</string>
+  <string name="WndHero_DefenceSkill">防御力</string>
   <string name="town_deco_grave_name">坟墓</string>
   <string name="town_deco_grave_desc">一座标准的坟墓，经受了风化的考验。</string>
   <string name="town_deco_pillar_name">台柱</string>
@@ -2393,7 +2398,7 @@
   <string name="town_deco_glass_stained_name">彩色玻璃</string>
   <string name="town_deco_glass_stained_desc">这块玻璃的制作者肯定在它身上投入了很多的精力。</string>
   <string name="town_deco_glass_name">宽窗口</string>
-  <string name="town_deco_glass_desc">这一个比其它的更宽，当然可以让更多的光线进入。</string>
+  <string name="town_deco_glass_desc">这一个比其他的更宽，当然可以让更多的光线进入。</string>
   <string name="town_deco_counter_name">柜台</string>
   <string name="town_deco_counter_desc">让你和站在它后面的人保持良好的距离。</string>
   <string name="town_deco_library_books_name">阅读物</string>
@@ -2628,7 +2633,7 @@ by drazool from reddit
   <string name="HeroClass_GnollPerks_1">豺狼人初始只拥有5点生命上限。</string>
   <string name="HeroClass_GnollPerks_2">豺狼人初始没有基础护甲，但有一把独特的战斧和一些飞镖。</string>
   <string name="HeroClass_GnollPerks_3">豺狼人既不会读也不会写。</string>
-  <string name="HeroClass_GnollPerks_4">其它豺狼在被激怒之前不会主动攻击豺狼人。</string>
+  <string name="HeroClass_GnollPerks_4">其他豺狼在被激怒之前不会主动攻击豺狼人。</string>
   <string name="Potion_Colors_0">青绿</string>
   <string name="Potion_Colors_1">猩红</string>
   <string name="Potion_Colors_2">湛青</string>
@@ -2666,11 +2671,16 @@ by drazool from reddit
   <string name="town_deco_flowerinthepot_desc">当地特色装饰花</string>
   <string name="Welcome_Text_29_4">
     remix.29.4
+
     ——新增：
+
     —双手系统！
+
     ——修改：
+
     —常用武器！
-    ——修复了一些Bug
+
+    ——修复错误
     </string>
   <string name="Mods_Disclaimer">
         MOD是由玩家为玩家创建的。
@@ -2719,11 +2729,16 @@ by drazool from reddit
 熟练的大师能够在较长的时间内保持急速。</string>
   <string name="Welcome_Text_29_5">
 remix.29.5
+
 ——游戏性：
+
 —盗贼技能！
+
 ——修改：
+
 —盔甲贴图！
-——修复了一些Bug</string>
+
+——修复错误</string>
   <string name="Char_Stole_0">%1$s 从%3$s身上偷走了%2$s！</string>
   <string name="Char_Stole_1">%1$s把%3$s的%2$s偷窃了！</string>
   <string name="Char_Stole_2">%1$s把%3$s的%2$s偷窃了！</string>
@@ -2749,12 +2764,19 @@ remix.29.5
   <string name="Mob_CantDoIt">我做不到。我的手太小了。</string>
   <string name="Welcome_Text_29_6">
 Remix.29.6
+
 ——游戏性：
+
 —对怪物们执行额外行动！
+
 ——修改：
+
 —角色项目！
+
 —特殊武器属性！
+
 —更多未分类的东西！
+
 ——修复错误</string>
   <string name="InnKeeperNPC_Name">旅店老板</string>
   <string name="InnKeeperNPC_Name_Objective">旅店老板</string>
@@ -2778,9 +2800,13 @@ Remix.29.6
   <string name="BardNPC_Desc">镇上的吟游诗人正在弹他的琵琶。</string>
   <string name="Welcome_Text_30">
 remix.30.0
+
 ——游戏性：
+
 —面向每个人的技能！
+
 —旅店现在开张了！
+
 ——修复错误</string>
   <string name="Roar_Name">咆哮</string>
   <string name="Roar_Info">强有力的咆哮肯定会吓坏你的敌人，激励你的盟友。</string>
@@ -2893,7 +2919,7 @@ remix.30.0
   <string name="DeepSnail_Gender">男孩</string>
   <string name="DeepSnail_Name_Objective">深色蜗牛</string>
   <string name="DeepSnail_Desc">这种软体动物经常在水源附近出没，速度比普通蜗牛快得多。但是要小心被咬伤，它们会对你的皮肤产生令人不快的影响。</string>
-  <string name="CharInfo_Level">这是一只%1$d级的%2$s。</string>
+  <string name="CharInfo_Level">这是一只%1$d级%2$s。</string>
   <string name="WrnExperimental_realtime">实时！模式启用：现在是实时的roguelike，快速点击或死亡。
 想要查看库存？
 祝你好运，当下水道蟹正在检查你的内脏时，你可以这样做。</string>
@@ -2904,12 +2930,19 @@ remix.30.0
   <string name="WrnExperimental_title">实验选项已启用！</string>
   <string name="Welcome_Text_30_1">
 remix.30.1
+
 ——游戏性
+
 —豺狼人的子类！
+
 —蜗牛！
+
 —混沌物品的进展被削弱了。
+
 —从现在开始，魔力药水是普通药水。
+
 —现在玩DLC（但不是mod）时可以获得徽章。
+
 ——修复错误</string>
   <string name="ShamanElder_Name">年长的萨满</string>
   <string name="ShamanElder_Gender">男孩</string>
