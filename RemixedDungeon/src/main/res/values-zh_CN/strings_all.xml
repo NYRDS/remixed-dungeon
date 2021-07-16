@@ -660,7 +660,7 @@
   <string name="AboutScene_OurSite">我们的网址：</string>
   <string name="AboutScene_Snd">发送邮件</string>
   <string name="AboutScene_Translation">本地化的功臣：</string>
-  <string name="AboutScene_Translation_Names">NYRDS &amp；Omen267901；丘比</string>
+  <string name="AboutScene_Translation_Names">丘比</string>
   <string name="RankingsScene_Title">最高纪录</string>
   <string name="RankingsScene_Total">总游戏次数</string>
   <string name="RankingsScene_NoGames">还没进行过游戏</string>
@@ -911,7 +911,7 @@
   <string name="WndHats_BackButton">返回</string>
   <string name="WndHats_BuyButton">购买</string>
   <string name="WndHats_EquipButton">装备</string>
-  <string name="WndHats_InfoButton">检查</string>
+  <string name="WndHats_InfoButton">查看</string>
   <string name="WndHats_UnequipButton">取下</string>
   <string name="Artifact_Limit">你最多只能同时佩戴2件饰品。</string>
   <string name="FortuneTellerNPC_Name">占卜师</string>
@@ -951,10 +951,15 @@
   <string name="ShadowLord_Death">不……</string>
   <string name="AllowStatisticsCollectionScene_Title">使用数据收集</string>
   <string name="AllowStatisticsCollectionScene_Request">如果你允许，混合地牢将收集使用情况统计信息。 该数据将用于：
+
      —发现并修复各种小故障（对于致命错误，你将明确要求发送报告）
+
      —游戏平衡改进
+
      —修复设备特定的性能问题
+
      —不时发布有趣的统计数据
+
      你可以随时更改决定（单击标题屏幕上的图表图标）</string>
   <string name="AllowStatisticsCollectionScene_Allow">允许</string>
   <string name="AllowStatisticsCollectionScene_Deny">否定</string>
@@ -968,7 +973,7 @@
   <string name="SpiderGuard_Name">蜘蛛守卫</string>
   <string name="SpiderGuard_Gender">男性</string>
   <string name="SpiderGuard_Name_Objective">蜘蛛守卫</string>
-  <string name="SpiderGuard_Desc">就像士兵一样，蜘蛛守卫誓死保卫自己的王国。守卫的毒液用来使他们的目标瘫痪，使他们成为容易的猎物。</string>
+  <string name="SpiderGuard_Desc">就像士兵一样，蜘蛛守卫誓死保卫自己的王国。守卫的毒液用来麻痹他们的目标，使他们成为容易的猎物。</string>
   <string name="SpiderMindAmber_Name">琥珀蜘蛛</string>
   <string name="SpiderMindAmber_Gender">男性</string>
   <string name="SpiderMindAmber_Name_Objective">琥珀蜘蛛</string>
@@ -991,7 +996,7 @@
   <string name="Hero_Wait">……</string>
   <string name="Hero_Search">搜索</string>
   <string name="Hero_StaBurning">你着火了！</string>
-  <string name="Hero_StaParalysis">你瘫痪了！</string>
+  <string name="Hero_StaParalysis">你被麻痹了！</string>
   <string name="Hero_StaPoison">你中毒了！</string>
   <string name="Hero_StaOoze">腐蚀污泥正在侵蚀你的身体。快找水洗掉！！！</string>
   <string name="Hero_StaRoots">你无法移动！</string>
@@ -1101,7 +1106,7 @@
   <string name="RatKing_Gender">男性</string>
   <string name="Weapon_Identify">你已足够熟悉你的%1$s，鉴定出它是%2$s。</string>
   <string name="Weapon_Incompatible">不同属性魔法的冲突使得这把武器的附魔失去了效力！</string>
-  <string name="MeleeWeapon_Info1a">这把%1$s是%2$s%3$d阶的近战武器。</string>
+  <string name="MeleeWeapon_Info1a">这把%1$s是%2$s%3$d阶近战武器。</string>
   <string name="MeleeWeapon_Info1b">一把</string>
   <string name="MeleeWeapon_Info1c">一把升级过的</string>
   <string name="MeleeWeapon_Info1d">一把负等级的</string>
@@ -1188,7 +1193,7 @@
   <string name="Javelin_Info">经德国认证，枪头能稳定俯前，直至击中目标。</string>
   <string name="Javelin_Gender">中性</string>
   <string name="Shuriken_Name">手里剑</string>
-  <string name="Shuriken_Info">星形铁片，配上尖锐刀锋，轻巧得来伤害又高，据说只有加 ‧ 藤鹰忍士才能完美驾驭此物。</string>
+  <string name="Shuriken_Info">星形铁片，配上尖锐刀锋，轻巧得很伤害又高，据说只有加藤鹰忍士才能完美驾驭此物。</string>
   <string name="Shuriken_Gender">男性</string>
   <string name="Tamahawk_Name">飞斧</string>
   <string name="Tamahawk_Info">看上去这柄飞斧并不重，但它依然需要足够的力量来能有效发挥作用。</string>
@@ -2316,8 +2321,8 @@
   <string name="TitleScene_Mods">MOD</string>
   <string name="WndHero_Stealth">潜行</string>
   <string name="WndHero_Awareness">察觉</string>
-  <string name="WndHero_AttackSkill">攻击技能</string>
-  <string name="WndHero_DefenceSkill">防御技能</string>
+  <string name="WndHero_AttackSkill">攻击力</string>
+  <string name="WndHero_DefenceSkill">防御力</string>
   <string name="town_deco_grave_name">坟墓</string>
   <string name="town_deco_grave_desc">一座标准的坟墓，经受了风化的考验。</string>
   <string name="town_deco_pillar_name">台柱</string>
@@ -2666,11 +2671,16 @@ by drazool from reddit
   <string name="town_deco_flowerinthepot_desc">当地特色装饰花</string>
   <string name="Welcome_Text_29_4">
     remix.29.4
+
     ——新增：
+
     —双手系统！
+
     ——修改：
+
     —常用武器！
-    ——修复了一些Bug
+
+    ——修复错误
     </string>
   <string name="Mods_Disclaimer">
         MOD是由玩家为玩家创建的。
@@ -2719,11 +2729,16 @@ by drazool from reddit
 熟练的大师能够在较长的时间内保持急速。</string>
   <string name="Welcome_Text_29_5">
 remix.29.5
+
 ——游戏性：
+
 —盗贼技能！
+
 ——修改：
+
 —盔甲贴图！
-——修复了一些Bug</string>
+
+——修复错误</string>
   <string name="Char_Stole_0">%1$s 从%3$s身上偷走了%2$s！</string>
   <string name="Char_Stole_1">%1$s把%3$s的%2$s偷窃了！</string>
   <string name="Char_Stole_2">%1$s把%3$s的%2$s偷窃了！</string>
@@ -2749,12 +2764,19 @@ remix.29.5
   <string name="Mob_CantDoIt">我做不到。我的手太小了。</string>
   <string name="Welcome_Text_29_6">
 Remix.29.6
+
 ——游戏性：
+
 —对怪物们执行额外行动！
+
 ——修改：
+
 —角色项目！
+
 —特殊武器属性！
+
 —更多未分类的东西！
+
 ——修复错误</string>
   <string name="InnKeeperNPC_Name">旅店老板</string>
   <string name="InnKeeperNPC_Name_Objective">旅店老板</string>
@@ -2778,9 +2800,13 @@ Remix.29.6
   <string name="BardNPC_Desc">镇上的吟游诗人正在弹他的琵琶。</string>
   <string name="Welcome_Text_30">
 remix.30.0
+
 ——游戏性：
+
 —面向每个人的技能！
+
 —旅店现在开张了！
+
 ——修复错误</string>
   <string name="Roar_Name">咆哮</string>
   <string name="Roar_Info">强有力的咆哮肯定会吓坏你的敌人，激励你的盟友。</string>
@@ -2904,12 +2930,19 @@ remix.30.0
   <string name="WrnExperimental_title">实验选项已启用！</string>
   <string name="Welcome_Text_30_1">
 remix.30.1
+
 ——游戏性
+
 —豺狼人的子类！
+
 —蜗牛！
+
 —混沌物品的进展被削弱了。
+
 —从现在开始，魔力药水是普通药水。
+
 —现在玩DLC（但不是mod）时可以获得徽章。
+
 ——修复错误</string>
   <string name="ShamanElder_Name">年长的萨满</string>
   <string name="ShamanElder_Gender">男孩</string>
