@@ -113,7 +113,7 @@
   <string name="Bishop_text">我的孩子，我不分昼夜地为你祈祷。</string>
   <string name="Bishop_lesser_bless">诚信默祈！ —%d 金币</string>
   <string name="Bishop_great_bless">大声赞颂！！ —%d 金币</string>
-  <string name="Bishop_remove_curse">诅咒移除 — %d 金币</string>
+  <string name="Bishop_remove_curse">诅咒移除 — %d 枚金币</string>
   <string name="Bishop_not_interested">离开</string>
   <string name="Bishop_no_money">你钱不够。</string>
   <string name="Bishop_bye">我的孩子，我会为你祈祷。</string>
