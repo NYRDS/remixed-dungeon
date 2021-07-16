@@ -23,7 +23,6 @@ import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.Glowing;
@@ -32,6 +31,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -71,32 +72,36 @@ public class DewVial extends Item {
 	@Override
 	public void _execute(@NotNull final Char chr, @NotNull String action ) {
 		if (action.equals( AC_DRINK )) {
-			
-			if (getVolume() > 0) {
 
-				int value = (int)Math.ceil( Math.pow( getVolume(), POW ) / NUM * chr.ht() );
-				int effect = Math.min( chr.ht() - chr.hp(), value );
-				if (effect > 0) {
-					chr.heal(effect,this);
-					chr.getSprite().showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
-				}
-				
-				setVolume(0);
+			doDrink(chr);
 
-				Sample.INSTANCE.play( Assets.SND_DRINK );
-				chr.doOperate(TIME_TO_DRINK);
-
-                QuickSlot.refresh(chr);
-
-            } else {
-                GLog.w(StringsManager.getVar(R.string.DewVial_Empty));
-			}
-			
 		} else {
 			super._execute(chr, action );
 		}
 	}
-	
+
+	public void doDrink(@NotNull Char chr) {
+		if (getVolume() > 0) {
+
+			int value = (int) Math.ceil(Math.pow(getVolume(), POW) / NUM * chr.ht());
+			int effect = Math.min(chr.ht() - chr.hp(), value);
+			if (effect > 0) {
+				chr.heal(effect, this);
+				chr.getSprite().showStatus(CharSprite.POSITIVE, TXT_VALUE, effect);
+			}
+
+			setVolume(0);
+
+			Sample.INSTANCE.play(Assets.SND_DRINK);
+			chr.doOperate(TIME_TO_DRINK);
+
+			QuickSlot.refresh(chr);
+
+		} else {
+			GLog.w(StringsManager.getVar(R.string.DewVial_Empty));
+		}
+	}
+
 	@Override
 	public boolean isUpgradable() {
 		return false;
@@ -128,12 +133,14 @@ public class DewVial extends Item {
         QuickSlot.refresh(getOwner());
     }
 	
-	public static void autoDrink(@NotNull Hero hero ) {
-		DewVial vial = hero.getBelongings().getItem( DewVial.class );
+	public static void autoDrink(@NotNull Char hero ) {
+		DewVial vial = hero.getBelongings().getItem( DewVial.class);
 		if (vial != null && vial.isFull()) {
 
 			hero.hp(1);//resurrect Hero because simple heal can't
-			vial.execute( hero );
+
+			vial.doDrink(hero);
+
 			hero.getSprite().emitter().start( ShaftParticle.FACTORY, 0.2f, 3 );
 
             GLog.w(StringsManager.getVar(R.string.DewVial_AutoDrink));
@@ -168,6 +175,12 @@ public class DewVial extends Item {
 			return  2;
 		}
 		return  3;
+	}
+
+	@Override
+	public void fromJson(JSONObject itemDesc) throws JSONException {
+		super.fromJson(itemDesc);
+		volume = itemDesc.optInt("volume", 0);
 	}
 
 	private int getVolume() {

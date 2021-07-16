@@ -6,8 +6,8 @@
     },
     "items": [
       {
-        "kind": "WandOfRegrowth",
-        "identified": true
+        "kind": "DewVial",
+        "volume": 10
       },
       {
         "kind": "Pickaxe"
