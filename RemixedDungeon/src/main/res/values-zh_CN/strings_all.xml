@@ -660,7 +660,7 @@
   <string name="AboutScene_OurSite">我们的网址：</string>
   <string name="AboutScene_Snd">发送邮件</string>
   <string name="AboutScene_Translation">本地化的功臣：</string>
-  <string name="AboutScene_Translation_Names">NYRDS &amp；Omen267901；丘比</string>
+  <string name="AboutScene_Translation_Names">丘比</string>
   <string name="RankingsScene_Title">最高纪录</string>
   <string name="RankingsScene_Total">总游戏次数</string>
   <string name="RankingsScene_NoGames">还没进行过游戏</string>
@@ -911,7 +911,7 @@
   <string name="WndHats_BackButton">返回</string>
   <string name="WndHats_BuyButton">购买</string>
   <string name="WndHats_EquipButton">装备</string>
-  <string name="WndHats_InfoButton">检查</string>
+  <string name="WndHats_InfoButton">查看</string>
   <string name="WndHats_UnequipButton">取下</string>
   <string name="Artifact_Limit">你最多只能同时佩戴2件饰品。</string>
   <string name="FortuneTellerNPC_Name">占卜师</string>
@@ -968,7 +968,7 @@
   <string name="SpiderGuard_Name">蜘蛛守卫</string>
   <string name="SpiderGuard_Gender">男性</string>
   <string name="SpiderGuard_Name_Objective">蜘蛛守卫</string>
-  <string name="SpiderGuard_Desc">就像士兵一样，蜘蛛守卫誓死保卫自己的王国。守卫的毒液用来使他们的目标瘫痪，使他们成为容易的猎物。</string>
+  <string name="SpiderGuard_Desc">就像士兵一样，蜘蛛守卫誓死保卫自己的王国。守卫的毒液用来麻痹他们的目标，使他们成为容易的猎物。</string>
   <string name="SpiderMindAmber_Name">琥珀蜘蛛</string>
   <string name="SpiderMindAmber_Gender">男性</string>
   <string name="SpiderMindAmber_Name_Objective">琥珀蜘蛛</string>
@@ -991,7 +991,7 @@
   <string name="Hero_Wait">……</string>
   <string name="Hero_Search">搜索</string>
   <string name="Hero_StaBurning">你着火了！</string>
-  <string name="Hero_StaParalysis">你瘫痪了！</string>
+  <string name="Hero_StaParalysis">你被麻痹了！</string>
   <string name="Hero_StaPoison">你中毒了！</string>
   <string name="Hero_StaOoze">腐蚀污泥正在侵蚀你的身体。快找水洗掉！！！</string>
   <string name="Hero_StaRoots">你无法移动！</string>
@@ -1101,7 +1101,7 @@
   <string name="RatKing_Gender">男性</string>
   <string name="Weapon_Identify">你已足够熟悉你的%1$s，鉴定出它是%2$s。</string>
   <string name="Weapon_Incompatible">不同属性魔法的冲突使得这把武器的附魔失去了效力！</string>
-  <string name="MeleeWeapon_Info1a">这把%1$s是%2$s%3$d阶的近战武器。</string>
+  <string name="MeleeWeapon_Info1a">这把%1$s是%2$s%3$d阶近战武器。</string>
   <string name="MeleeWeapon_Info1b">一把</string>
   <string name="MeleeWeapon_Info1c">一把升级过的</string>
   <string name="MeleeWeapon_Info1d">一把负等级的</string>
@@ -1188,7 +1188,7 @@
   <string name="Javelin_Info">经德国认证，枪头能稳定俯前，直至击中目标。</string>
   <string name="Javelin_Gender">中性</string>
   <string name="Shuriken_Name">手里剑</string>
-  <string name="Shuriken_Info">星形铁片，配上尖锐刀锋，轻巧得来伤害又高，据说只有加 ‧ 藤鹰忍士才能完美驾驭此物。</string>
+  <string name="Shuriken_Info">星形铁片，配上尖锐刀锋，轻巧得很伤害又高，据说只有加藤鹰忍士才能完美驾驭此物。</string>
   <string name="Shuriken_Gender">男性</string>
   <string name="Tamahawk_Name">飞斧</string>
   <string name="Tamahawk_Info">看上去这柄飞斧并不重，但它依然需要足够的力量来能有效发挥作用。</string>
@@ -2316,8 +2316,8 @@
   <string name="TitleScene_Mods">MOD</string>
   <string name="WndHero_Stealth">潜行</string>
   <string name="WndHero_Awareness">察觉</string>
-  <string name="WndHero_AttackSkill">攻击技能</string>
-  <string name="WndHero_DefenceSkill">防御技能</string>
+  <string name="WndHero_AttackSkill">攻击力</string>
+  <string name="WndHero_DefenceSkill">防御力</string>
   <string name="town_deco_grave_name">坟墓</string>
   <string name="town_deco_grave_desc">一座标准的坟墓，经受了风化的考验。</string>
   <string name="town_deco_pillar_name">台柱</string>
@@ -2719,11 +2719,16 @@ by drazool from reddit
 熟练的大师能够在较长的时间内保持急速。</string>
   <string name="Welcome_Text_29_5">
 remix.29.5
+
 ——游戏性：
+
 —盗贼技能！
+
 ——修改：
+
 —盔甲贴图！
-——修复了一些Bug</string>
+
+——修复错误</string>
   <string name="Char_Stole_0">%1$s 从%3$s身上偷走了%2$s！</string>
   <string name="Char_Stole_1">%1$s把%3$s的%2$s偷窃了！</string>
   <string name="Char_Stole_2">%1$s把%3$s的%2$s偷窃了！</string>
