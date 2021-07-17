@@ -102,10 +102,7 @@ public class SmartTexture extends Texture {
 	
 	@Override
 	public void delete() {
-		
 		super.delete();
-		
-		bitmap.recycle();
 		bitmap = null;
 	}
 	

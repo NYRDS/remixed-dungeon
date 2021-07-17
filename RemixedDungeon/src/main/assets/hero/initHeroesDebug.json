@@ -18,9 +18,6 @@
         "kind": "Pickaxe"
       },
       {
-        "kind": "Amulet"
-      },
-      {
         "kind": "Icecap.Seed"
       },
 
@@ -54,9 +51,6 @@
       {
         "kind": "Gold",
         "quantity" : 100000
-      },
-      {
-        "kind": "test/TestItem"
       }
     ],
     "str": 10,

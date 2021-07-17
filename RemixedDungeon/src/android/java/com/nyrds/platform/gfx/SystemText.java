@@ -11,11 +11,13 @@ import android.text.TextPaint;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.LRUCache;
 import com.watabou.glwrap.Matrix;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.SystemTextLine;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -44,6 +46,11 @@ public class SystemText extends Text {
 	private final boolean needWidth;
 
 	private static float fontScale = Float.NaN;
+
+	private static final LRUCache<String, Bitmap> bitmapCache = new LRUCache<>(256);
+
+	private static int cacheHits = 0;
+	private static int cacheMiss = 0;
 
 	public SystemText(float baseLine) {
 		this(Utils.EMPTY_STRING, baseLine, false);
@@ -220,6 +227,8 @@ public class SystemText extends Text {
 		return offset;
 	}
 
+
+
 	@SuppressLint("NewApi")
 	private void createText() {
 		if (needWidth && maxWidth == Integer.MAX_VALUE) {
@@ -248,21 +257,30 @@ public class SystemText extends Text {
 					lineWidth += 1;
 					width = Math.max(lineWidth, width);
 
-					Bitmap bitmap = Bitmap.createBitmap(
-							(int) (lineWidth * oversample),
-							(int) (fontHeight * oversample),
-							Bitmap.Config.ARGB_4444);
-
-					Canvas canvas = new Canvas(bitmap);
-
 					currentLine = text.substring(startLine,nextLine);
 
-					drawTextLine(charIndex, canvas, contourPaint);
-					charIndex = drawTextLine(charIndex, canvas, textPaint);
+					String key = Utils.format("%fx%f_%s", lineWidth, fontHeight, currentLine);
 
-					SystemTextLine line = new SystemTextLine(bitmap);
+					if(!bitmapCache.containsKey(key)) {
+						Bitmap bitmap = Bitmap.createBitmap(
+								(int) (lineWidth * oversample),
+								(int) (fontHeight * oversample),
+								Bitmap.Config.ARGB_4444);
+						bitmapCache.put(key, bitmap);
+
+						Canvas canvas = new Canvas(bitmap);
+						drawTextLine(charIndex, canvas, contourPaint);
+						charIndex = drawTextLine(charIndex, canvas, textPaint);
+						cacheMiss++;
+					} else {
+						cacheHits++;
+					}
+
+					GLog.debug("text cache hits %d miss: %d", cacheHits, cacheMiss, bitmapCache.size());
+
+					SystemTextLine line = new SystemTextLine(bitmapCache.get(key));
 					line.setVisible(getVisible());
-					lineImage.add(line); //TODO add global lines cache
+					lineImage.add(line);
 				} else {
 					lineImage.add(new SystemTextLine());
 				}
@@ -402,5 +420,6 @@ public class SystemText extends Text {
 			txt.dirty = true;
 			txt.destroyLines();
 		}
+		bitmapCache.clear();
 	}
 }
