@@ -31,6 +31,7 @@ import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -104,9 +105,12 @@ public class InterlevelScene extends PixelScene {
 
     static public void Do(InterlevelScene.Mode mode) {
 
-        if(GameLoop.scene() instanceof GameScene && Dungeon.level!=null && Dungeon.hero!=null) { // not game start
-            Dungeon.hero.getSprite().completeForce();
-            for(Mob mob:Dungeon.level.getCopyOfMobsArray()) {
+        Level level = Dungeon.level;
+        Hero hero = Dungeon.hero;
+
+        if(GameLoop.scene() instanceof GameScene && level !=null && hero !=null) { // not game start
+            hero.getSprite().completeForce();
+            for(Mob mob: level.getCopyOfMobsArray()) {
                 mob.getSprite().completeForce();
             }
         }
@@ -350,12 +354,14 @@ public class InterlevelScene extends PixelScene {
 
         Actor.fixTime();
 
+        Hero hero = Dungeon.hero;
+
         if (Dungeon.bossLevel()) {
-            Dungeon.hero.resurrect(Dungeon.depth);
+            hero.resurrect();
             Level level = Dungeon.newLevel(Dungeon.currentPosition());
             Dungeon.switchLevel(level, level.entrance, CharsList.emptyMobList);
         } else {
-            Dungeon.hero.resurrect(-1);
+            hero.resurrect();
             Dungeon.resetLevel();
         }
     }

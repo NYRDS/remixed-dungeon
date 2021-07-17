@@ -25,7 +25,6 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.TrackedRuntimeException;
-import com.nyrds.util.ModError;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
@@ -125,8 +124,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	}
 	
 	public static void fixTime() {
-		
-		if (Dungeon.hero != null && all.contains( Dungeon.hero )) {
+		Hero hero = Dungeon.hero;
+
+		if (hero != null && all.contains(hero)) {
 			Statistics.duration += now;
 		}
 		
@@ -231,15 +231,17 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 			EventCollector.setSessionData("actor", actor.getEntityKind());
 
-			if (actor.act() || !Dungeon.hero.isAlive()) {
+
+
+			if (actor.act() && Dungeon.hero.isAlive()) {
 				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
 				actor.next();
 			} else {
 				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
 				break;
 			}
-
-/*			if(actor.time == timeBefore && all.contains(actor)) { // don't need this check for removed actors
+/*
+			if(actor.time == timeBefore && all.contains(actor)) { // don't need this check for removed actors
 				var error = String.format("actor %s has same timestamp after act!", actor.getEntityKind());
 				if(Util.isDebug()) {
 					throw new ModError(error);
@@ -247,13 +249,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 					actor.spend(TICK);
 					EventCollector.logException(error);
 				}
-			}*/
-
-			if(SystemTime.timeSinceTick() > 5000) {
-				var error = String.format("%s timeout", actor.getEntityKind());
-				if(Util.isDebug()) {
-					throw new ModError(error);
-				}
+			}
+*/
+			if(SystemTime.timeSinceTick() > 50) {
 				break;
 			}
 		}

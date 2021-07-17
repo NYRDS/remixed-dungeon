@@ -68,7 +68,6 @@ import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.effects.CheckedCell;
-import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.DewVial;
@@ -726,28 +725,23 @@ public class Hero extends Char {
 
 		clearActions();
 
-		DewVial.autoDrink(this);
-		if (isAlive()) {
-			new Flare(8, 32).color(0xFFFF66, true).show(getSprite(), 2f);
+		if (DewVial.autoDrink(this)) {
+			resurrectAnim();
+			return;
+		}
+
+		if ( getSubClass() == HeroSubClass.LICH &&  getSkillPoints() ==  getSkillPointsMax()) {
+			setSkillPoints(0);
+			GameScene.show(new WndResurrect(null, cause));
 			return;
 		}
 
 		Actor.fixTime();
 		super.die(cause);
 
-		Ankh ankh = getBelongings().getItem(Ankh.class);
-
-		if (ankh == null) {
-			if (this.subClass == HeroSubClass.LICH && this.getSkillPoints() == this.getSkillPointsMax()) {
-				this.setSkillPoints(0);
-				GameScene.show(new WndResurrect(null, cause));
-			} else {
-				reallyDie(this, cause);
-			}
-		} else {
-			while (getBelongings().removeItem(ankh)) {
-			}
-			GameScene.show(new WndResurrect(ankh, cause));
+		if(!Ankh.resurrect(this, cause)) {
+			Dungeon.deleteGame(false);
+			Hero.reallyDie(this, cause);
 		}
 	}
 
@@ -756,7 +750,7 @@ public class Hero extends Char {
 		lastAction = null;
 	}
 
-	private static void reallyReallyDie(Hero hero,Object cause) {
+	private static void reallyReallyDie(Hero hero, NamedEntityKind cause) {
 		Dungeon.level.discover();
 
 		Bones.leave(hero);
@@ -774,7 +768,7 @@ public class Hero extends Char {
 		Dungeon.gameOver();
 	}
 
-	public static void reallyDie(Hero hero,final Object cause) {
+	public static void reallyDie(Hero hero,final NamedEntityKind cause) {
 
 		if (hero.getDifficulty() < 2 && !Game.isPaused()) {
 			GameScene.show(new WndSaveSlotSelect(false, StringsManager.getVar(R.string.Hero_AnotherTry)));
@@ -898,9 +892,7 @@ public class Hero extends Char {
 		return smthFound;
 	}
 
-	public void resurrect(int resetLevel) {
-		getBelongings().resurrect(resetLevel);
-
+	public void resurrect() {
 		hp(ht());
 		setExp(0);
 

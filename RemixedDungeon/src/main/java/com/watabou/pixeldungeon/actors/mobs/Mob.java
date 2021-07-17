@@ -237,7 +237,6 @@ public abstract class Mob extends Char {
 				EventCollector.logException(error);
 			}
 		}*/
-
 		return true;
 	}
 
@@ -447,21 +446,20 @@ public abstract class Mob extends Char {
 		return clone;
 	}
 
-	protected void resurrect() {
+	public void resurrect() {
 		resurrect(this);
 	}
 
 	public void resurrect(Char parent) {
+    	resurrectAnim();
 
 		int spawnPos = level().getEmptyCellNextTo(parent.getPos());
 		Mob new_mob = MobFactory.mobByName(getMobClassName());
 
 		if (level().cellValid(spawnPos)) {
 			new_mob.setPos(spawnPos);
-			if (parent instanceof Hero) {
-				Mob.makePet(new_mob, parent.getId());
-				Actor.addDelayed(new Pushing(new_mob, parent.getPos(), new_mob.getPos()), -1);
-			}
+			Mob.makePet(new_mob, parent.getId());
+			Actor.addDelayed(new Pushing(new_mob, parent.getPos(), new_mob.getPos()), -1);
 			level().spawnMob(new_mob);
 			level().press(spawnPos, new_mob);
 		}

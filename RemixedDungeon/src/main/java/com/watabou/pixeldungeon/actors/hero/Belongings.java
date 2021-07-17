@@ -29,7 +29,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
@@ -351,23 +350,6 @@ public class Belongings implements Iterable<Item>, Bundlable {
 		return backpack.remove(itemToRemove);
 	}
 
-	public void resurrect( int depth ) {
-
-		for (Item item : backpack.items.toArray(new Item[0])) {
-			if (item instanceof Key) {
-				if (((Key) item).getDepth() == depth) {
-					item.detachAll(backpack);
-				}
-			} else if (item instanceof Amulet) {
-
-			} else if (!item.isEquipped(owner)) {
-				item.detachAll(backpack);
-			}
-		}
-
-		uncurseEquipped();
-	}
-	
 	public int charge( boolean full) {
 		
 		int count = 0;

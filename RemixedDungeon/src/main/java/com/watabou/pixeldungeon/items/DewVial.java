@@ -133,7 +133,7 @@ public class DewVial extends Item {
         QuickSlot.refresh(getOwner());
     }
 	
-	public static void autoDrink(@NotNull Char hero ) {
+	public static boolean autoDrink(@NotNull Char hero ) {
 		DewVial vial = hero.getBelongings().getItem( DewVial.class);
 		if (vial != null && vial.isFull()) {
 
@@ -144,7 +144,9 @@ public class DewVial extends Item {
 			hero.getSprite().emitter().start( ShaftParticle.FACTORY, 0.2f, 3 );
 
             GLog.w(StringsManager.getVar(R.string.DewVial_AutoDrink));
+            return true;
 		}
+		return false;
 	}
 	
 	private static final Glowing WHITE = new Glowing( 0xFFFFCC );

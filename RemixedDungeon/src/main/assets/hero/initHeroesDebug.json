@@ -10,6 +10,11 @@
         "volume": 10
       },
       {
+        "kind": "DewVial",
+        "volume": 10
+      },
+
+      {
         "kind": "Pickaxe"
       },
       {
@@ -33,7 +38,7 @@
         "identified": true
       },
       {
-        "kind": "PotionOfInvisibility",
+        "kind": "PotionOfMana",
         "quantity": 1000,
         "identified": true
       },

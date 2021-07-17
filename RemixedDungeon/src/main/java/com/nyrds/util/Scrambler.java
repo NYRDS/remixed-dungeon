@@ -5,10 +5,16 @@ public class Scrambler {
 
 	
 	static public int scramble(int in) {
+		if(Util.isDebug()) {
+			return in;
+		}
 		return in  ^ k ^ UserKey.someValue();
 	}
 	
 	static public int descramble(int in) {
+		if(Util.isDebug()) {
+			return in;
+		}
 		return in ^ UserKey.someValue() ^ k;
 	}
 	

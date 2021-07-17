@@ -20,7 +20,7 @@ public class UseSpell extends CharAction{
             hero.curAction = null;
         }
 
-        if(GameScene.defaultCellSelector() && ! hero.getSprite().doingSomething()) {
+        if(GameScene.defaultCellSelector() && !hero.getSprite().doingSomething()) {
             hero.next();
         }
 

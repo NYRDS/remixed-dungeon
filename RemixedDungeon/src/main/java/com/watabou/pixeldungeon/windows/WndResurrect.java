@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.util.StringsManager;
@@ -39,9 +40,9 @@ public class WndResurrect extends Window {
 	private static final int BTN_HEIGHT	= 18;
 
 	public static WndResurrect instance;
-	public static Object causeOfDeath;
+	public static NamedEntityKind causeOfDeath;
 
-	public WndResurrect( final Ankh ankh, Object causeOfDeath ) {
+	public WndResurrect( final Ankh ankh, NamedEntityKind causeOfDeath ) {
 		super();
 
 		width = WndHelper.getFullscreenWidth();
@@ -70,9 +71,9 @@ public class WndResurrect extends Window {
 			@Override
 			protected void onClick() {
 				hide();
-				
-				Statistics.ankhsUsed++;
-
+				if(ankh!=null && ankh.valid()) {
+					Statistics.ankhsUsed++;
+				}
 				InterlevelScene.Do(InterlevelScene.Mode.RESURRECT);
 			}
 		};

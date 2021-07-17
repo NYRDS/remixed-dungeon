@@ -48,6 +48,9 @@ public class DummyChar extends Char {
     }
 
     @Override
+    public void resurrect() { }
+
+    @Override
     public boolean dontPack() {
         return true;
     }

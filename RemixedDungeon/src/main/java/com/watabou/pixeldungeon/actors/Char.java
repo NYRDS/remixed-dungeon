@@ -76,6 +76,7 @@ import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
+import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
@@ -1852,4 +1853,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public Position getPosition(){
     	return new Position(level().levelId, getPos());
 	}
+
+	public void resurrectAnim() {
+		new Flare(8, 32).color(0xFFFF66, true).show(getSprite(), 2f);
+	}
+
+	public abstract void resurrect();
 }
