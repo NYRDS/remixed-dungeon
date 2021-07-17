@@ -480,7 +480,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		float mainAccuracyFactor = getActiveWeapon().accuracyFactor(this);
 		float secondaryAccuracyFactor = getSecondaryWeapon().accuracyFactor(this);
 
-		float skillFactor = Utils.min(0.05f, mainAccuracyFactor, secondaryAccuracyFactor);
+		float skillFactor = Utils.min(20f, mainAccuracyFactor, secondaryAccuracyFactor);
 
 		int aSkill = (int) ((baseAttackSkill + lvl()) * accuracy * skillFactor);
 
