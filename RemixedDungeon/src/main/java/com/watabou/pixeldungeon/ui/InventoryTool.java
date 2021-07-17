@@ -2,6 +2,8 @@ package com.watabou.pixeldungeon.ui;
 
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndBag;
@@ -13,8 +15,8 @@ import com.watabou.pixeldungeon.windows.elements.Tool;
  * This file is part of Remixed Pixel Dungeon.
  */
 class InventoryTool extends Tool {
-    private GoldIndicator gold = new GoldIndicator();
-    private PickedUpItem  pickedUpItem = new PickedUpItem();
+    private final GoldIndicator gold = new GoldIndicator();
+    private final PickedUpItem  pickedUpItem = new PickedUpItem();
 
     public InventoryTool() {
         super(10, Chrome.Type.ACTION_BUTTON);
@@ -25,8 +27,12 @@ class InventoryTool extends Tool {
 
     @Override
     protected void onClick() {
-        GameScene.show(new WndBag(Dungeon.hero.getBelongings(), Dungeon.hero.getBelongings().backpack,
-                null, WndBag.Mode.ALL, null));
+        Hero hero = Dungeon.hero;
+        if(hero.isReady()) {
+            Belongings belongings = hero.getBelongings();
+            GameScene.show(new WndBag(belongings, belongings.backpack,
+                    null, WndBag.Mode.ALL, null));
+        }
     }
 
     protected boolean onLongClick() {
