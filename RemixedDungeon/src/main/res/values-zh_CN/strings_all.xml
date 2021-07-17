@@ -944,7 +944,7 @@
   <string name="Hero_Name_Objective">你</string>
   <string name="Hero_Leave">没有人会轻易地离开混合地牢。</string>
   <string name="Hero_LevelUp">升级！</string>
-  <string name="Hero_NewLevel">恭喜你升到了 %d 级！\n你的生命值提高了，并且更加专注。这让你更容易命中敌人和躲避敌人攻击。</string>
+  <string name="Hero_NewLevel">恭喜你升到了 %d 级！\n你的生命值提高了，并且更加专注。这让你更容易命中敌人和闪避敌人攻击。</string>
   <string name="Hero_YouNowHave">你获得了%s</string>
   <string name="Hero_SomethingElse">这里还有其他东西</string>
   <string name="Hero_LockedChest">宝箱已上锁，等你有钥匙时再回来吧</string>
