@@ -28,7 +28,7 @@
   <string name="SpellBook_Info">它看起来更像是一个拼凑在一起的各种页面的汇编，而不是一本真正的书。如果你足够注意的话，也许能从中得到一些东西。</string>
   <string name="SpellBook_Info_Identified">阅读完这些页面你发现\"%1$s\"咒语的全文。\n\"%2$s\"</string>
   <string name="ManaPotion_Name">魔力药水</string>
-  <string name="ManaPotion_Info">这瓶药水会为你回复少量法力。</string>
+  <string name="ManaPotion_Info">这瓶药水会为你回复少量魔力。</string>
   <string name="Mushroom_Eat_Message">那朵蘑菇吃起来很怪！</string>
   <string name="Torch_Info2">地牢的组成要素之一，极差的基础照明。</string>
   <string name="WndSpells_Title">咒语</string>
