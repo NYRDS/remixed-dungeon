@@ -371,6 +371,8 @@ public abstract class Mob extends Char {
 
 		script.run("onDie", cause);
 
+		Badges.validateRare( this );
+
 		Hero hero = Dungeon.hero;
 
 		{

@@ -19,8 +19,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.ThiefFleeing;
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
@@ -44,11 +42,5 @@ public class Bandit extends Thief {
 			}
 		}
 		return damage;
-	}
-
-	@Override
-	public void die(NamedEntityKind cause) {
-		super.die( cause );
-		Badges.validateRare( this );
 	}
 }

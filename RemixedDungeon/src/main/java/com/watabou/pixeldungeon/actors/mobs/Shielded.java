@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.watabou.pixeldungeon.Badges;
-
 public class Shielded extends Brute {
 
 	{
@@ -29,11 +26,5 @@ public class Shielded extends Brute {
 	@Override
 	public int dr() {
 		return 10;
-	}
-	
-	@Override
-	public void die(NamedEntityKind cause) {
-		super.die( cause );
-		Badges.validateRare( this );
 	}
 }

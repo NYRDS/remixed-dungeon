@@ -11,7 +11,10 @@
    "attackRange"   :6,
    "ht"            :48,
    "viewDistance"  :6,
-   "lootChance"    :0,
+   "loot"          : {
+      "kind": "SpellBook"
+   },
+   "lootChance"    :1,
    "name"          :"ShamanElder_Name",
    "name_objective":"ShamanElder_Name_Objective",
    "description"   :"ShamanElder_Desc",

@@ -1,9 +1,9 @@
 {
    "SewerLevel":{
       "1":{"Snail":1},
-      "2":{"Snail":1,"Rat":1,"Albino":0.03},
-      "3":{"Rat":1,"Gnoll":1,"Crab":0.5,"Swarm":0.02},
-      "4":{"Rat":1,"Gnoll":2,"Crab":1,"Thief":0.01}
+      "2":{"Snail":1,"Rat":1, "DeepSnail":0.03},
+      "3":{"Rat":1,"Gnoll":1,"Crab":0.5,"Albino":0.03,"Swarm":0.02},
+      "4":{"Rat":1,"Gnoll":2,"Crab":1,"DeepSnail":0.1,"Thief":0.01}
    },
    "SewerBossLevel":{
       "any":{"Goo":1}
@@ -20,8 +20,8 @@
    "CavesLevel":{
       "11":{"Bat":1,"Brute":0.2},
       "12":{"Bat":1,"Brute":1,"Spinner":0.2,"Shielded":0.03},
-      "13":{"Bat":1,"Brute":3,"Spinner":1,"Shaman":1,"FireElemental":0.02,"Shielded":0.1},
-      "14":{"Bat":1,"Brute":3,"Spinner":4,"Shaman":1,"FireElemental":0.02,"Monk":0.01,"Shielded":0.1}
+      "13":{"Bat":1,"Brute":3,"Spinner":1,"Shaman":1,"ShamanElder":0.01,"FireElemental":0.02,"Shielded":0.01},
+      "14":{"Bat":1,"Brute":3,"Spinner":4,"Shaman":1,"ShamanElder":0.1,"FireElemental":0.02,"Monk":0.01,"Shielded":0.1}
    },
    "CavesBossLevel":{
       "any":{"DM300":1}

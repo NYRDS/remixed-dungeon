@@ -1,8 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
-import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Stun;
@@ -37,11 +35,4 @@ public class SpiderGuard extends MultiKindMob {
 		}
 		return damage;
 	}
-
-	@Override
-	public void die(NamedEntityKind cause) {
-		super.die( cause );
-		Badges.validateRare( this );
-	}
-
 }

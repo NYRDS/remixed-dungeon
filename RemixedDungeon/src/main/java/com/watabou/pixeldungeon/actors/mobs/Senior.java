@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Stun;
@@ -41,11 +39,5 @@ public class Senior extends Monk {
 			Buff.prolong( enemy, Stun.class, 1.1f );
 		}
 		return super.attackProc( enemy, damage );
-	}
-	
-	@Override
-	public void die(NamedEntityKind cause) {
-		super.die( cause );
-		Badges.validateRare( this );
 	}
 }

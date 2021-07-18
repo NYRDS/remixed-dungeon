@@ -155,6 +155,8 @@ public class Badges {
 		RARE_SPIDER_SOLDIER,
 		RARE_SPIDER_MIND,
 		RARE_DREAD_KNIGHT,
+		RARE_DEEP_SNAIL,
+		RARE_SHAMAN_ELDER,
 		RARE(StringsManager.getVar(R.string.Badges_RareAll), 37, true),
 		VICTORY_WARRIOR,
 		VICTORY_MAGE,
@@ -753,6 +755,10 @@ public class Badges {
 			badge = Badge.RARE_SPIDER_MIND;
 		} else if (mob instanceof DreadKnight) {
 			badge = Badge.RARE_DREAD_KNIGHT;
+		} else if (mob.getEntityKind().equals("DeepSnail")) {
+			badge = Badge.RARE_DEEP_SNAIL;
+		} else if (mob.getEntityKind().equals("ShamanElder")) {
+			badge = Badge.RARE_SHAMAN_ELDER;
 		}
 		if (!global.contains(badge)) {
 			global.add(badge);
@@ -766,7 +772,9 @@ public class Badges {
 				global.contains(Badge.RARE_ACIDIC) &&
 				global.contains(Badge.RARE_SPIDER_SOLDIER) &&
 				global.contains(Badge.RARE_SPIDER_MIND) &&
-				global.contains(Badge.RARE_DREAD_KNIGHT)) {
+				global.contains(Badge.RARE_DREAD_KNIGHT) &&
+				global.contains(Badge.RARE_DEEP_SNAIL) &&
+				global.contains(Badge.RARE_SHAMAN_ELDER)) {
 
 			badge = Badge.RARE;
 			displayBadge(badge);

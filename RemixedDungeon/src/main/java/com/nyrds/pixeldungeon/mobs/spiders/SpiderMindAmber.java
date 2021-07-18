@@ -1,9 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.MultiKindMob;
-import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -62,11 +60,5 @@ public class SpiderMindAmber extends MultiKindMob {
 		} else {
 			return super.getCloser( target );
 		}
-	}
-
-	@Override
-	public void die(NamedEntityKind cause) {
-		Badges.validateRare( this );
-		super.die( cause );
 	}
 }

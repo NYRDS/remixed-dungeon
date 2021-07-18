@@ -167,7 +167,8 @@
       "Gnoll",
       "Shaman",
       "Brute",
-      "Shielded"
+      "Shielded",
+      "ShamanElder"
     ],
     "str": 15,
     "hp": 5
