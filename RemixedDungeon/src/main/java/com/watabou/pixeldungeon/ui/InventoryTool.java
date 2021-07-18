@@ -28,11 +28,11 @@ class InventoryTool extends Tool {
     @Override
     protected void onClick() {
         Hero hero = Dungeon.hero;
-        if(hero.isReady()) {
+        //if(hero.isReady()) {
             Belongings belongings = hero.getBelongings();
             GameScene.show(new WndBag(belongings, belongings.backpack,
                     null, WndBag.Mode.ALL, null));
-        }
+        //}
     }
 
     protected boolean onLongClick() {
