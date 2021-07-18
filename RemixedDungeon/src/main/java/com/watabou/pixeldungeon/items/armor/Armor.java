@@ -136,13 +136,15 @@ public class Armor extends EquipableItem {
 		StringBuilder info = new StringBuilder( desc() );
 		
 		String name = name();
-		
+
+		final Char hero = Dungeon.hero;
+
 		if (isLevelKnown()) {
 			info.append(p);
             info.append(Utils.capitalize(Utils.format(StringsManager.getVar(R.string.Armor_Info1), name, Math.max( effectiveDr(), 0 ))));
 			
-			if (requiredSTR() > Dungeon.hero.effectiveSTR()) {
-				if (isEquipped( Dungeon.hero )) {
+			if (requiredSTR() > hero.effectiveSTR()) {
+				if (isEquipped(hero)) {
                     info.append(StringsManager.getVar(R.string.Armor_Info2));
 				} else {
                     info.append(StringsManager.getVar(R.string.Armor_Info3));
@@ -150,7 +152,7 @@ public class Armor extends EquipableItem {
 			}
 		} else {
             info.append(Utils.format(StringsManager.getVar(R.string.Armor_Info4), name, typicalDR(), typicalSTR()));
-			if (typicalSTR() > Dungeon.hero.effectiveSTR()) {
+			if (typicalSTR() > hero.effectiveSTR()) {
 				info.append(" ");
                 info.append(StringsManager.getVar(R.string.Armor_Info5));
 			}
@@ -160,7 +162,7 @@ public class Armor extends EquipableItem {
             info.append(StringsManager.getVar(R.string.Armor_Info6));
 		}
 		
-		if (isEquipped( Dungeon.hero )) {
+		if (isEquipped(hero)) {
             info.append(Utils.format(StringsManager.getVar(R.string.Armor_Info7a), name,
 				(isCursed() ? StringsManager.getVar(R.string.Armor_Info7b) : Utils.EMPTY_STRING) ));
 		} else {

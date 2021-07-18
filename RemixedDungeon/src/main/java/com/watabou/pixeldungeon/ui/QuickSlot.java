@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
@@ -172,20 +173,32 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     @Override
     protected void onClick() {
+        Hero hero = Dungeon.hero;
+
+        if(!hero.isReady()) {
+            return;
+        }
+
         if (objectForSlot != null) {
             updateSlotBySelection();
             return;
         }
 
-        GameScene.selectItem(Dungeon.hero, this, WndBag.Mode.QUICKSLOT, StringsManager.getVar(R.string.QuickSlot_SelectedItem));
+        GameScene.selectItem(hero, this, WndBag.Mode.QUICKSLOT, StringsManager.getVar(R.string.QuickSlot_SelectedItem));
     }
 
     @Override
     protected boolean onLongClick() {
-        if (Dungeon.hero.isSpellUser()) {
+        Hero hero = Dungeon.hero;
+
+        if(!hero.isReady()) {
+            return true;
+        }
+
+        if (hero.isSpellUser()) {
             GameScene.selectSpell(this);
         } else {
-            GameScene.selectItem(Dungeon.hero, this, WndBag.Mode.QUICKSLOT, StringsManager.getVar(R.string.QuickSlot_SelectedItem));
+            GameScene.selectItem(hero, this, WndBag.Mode.QUICKSLOT, StringsManager.getVar(R.string.QuickSlot_SelectedItem));
         }
         return true;
     }

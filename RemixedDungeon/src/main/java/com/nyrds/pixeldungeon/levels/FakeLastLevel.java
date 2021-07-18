@@ -68,11 +68,7 @@ public class FakeLastLevel extends Level {
 
 	@Override
 	protected void createMobs() {
-		/*MimicAmulet mimic = new MimicAmulet();
-		mimic.setPos(pedestal);
-		mimic.adjustStats(25);
-		mobs.add(mimic);
-		mimic.getSprite().turnTo(pedestal, Dungeon.hero.getPos());*/
+
 	}
 
 	@Override
