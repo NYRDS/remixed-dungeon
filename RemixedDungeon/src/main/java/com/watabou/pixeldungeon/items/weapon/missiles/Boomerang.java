@@ -34,7 +34,7 @@ public class Boomerang extends MissileWeapon {
 	{
 		image = ItemSpriteSheet.BOOMERANG;
 		
-		STR = 10;
+		setSTR(10);
 		
 		MIN = 1;
 		MAX = 4;

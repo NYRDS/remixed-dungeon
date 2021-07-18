@@ -461,12 +461,19 @@ local RPD = {
     format = function(fmt, ...)
         local args, order = {...}, {}
 
+        fmt = StringsManager:maybeId(fmt)
+
         fmt = fmt:gsub('%%(%d+)%$', function(i)
             table.insert(order, args[tonumber(i)])
             return '%'
         end)
 
-        return string.format(fmt, table.unpack(order))
+
+        if #order > 0 then
+            return string.format(fmt, table.unpack(order))
+        else
+            return string.format(fmt, table.unpack(args))
+        end
     end
 }
 

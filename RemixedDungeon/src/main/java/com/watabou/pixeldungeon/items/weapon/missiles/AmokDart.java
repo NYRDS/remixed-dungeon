@@ -36,7 +36,7 @@ public class AmokDart extends Dart {
 
 		image = 16;
 		
-		STR = 14;
+		setSTR(14);
 		
 		MIN = 1;
 		MAX = 3;

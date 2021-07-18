@@ -36,7 +36,7 @@ public class CurareDart extends Dart {
 		
 		image = 4;
 		
-		STR = 14;
+		setSTR(14);
 		
 		MIN = 1;
 		MAX = 3;

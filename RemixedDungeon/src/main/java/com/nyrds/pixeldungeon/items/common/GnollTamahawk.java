@@ -27,7 +27,7 @@ public class GnollTamahawk extends Tamahawk {
     }
 
     public GnollTamahawk(int quantity) {
-        STR = 15;
+        setSTR(15);
 
         MIN = 3;
         MAX = 17;

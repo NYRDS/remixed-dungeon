@@ -39,7 +39,7 @@ public class MeleeWeapon extends Weapon {
 		ACU = acu;
 		DLY = dly;
 		
-		STR = typicalSTR();
+		setSTR(typicalSTR());
 		
 		MIN = min();
 		MAX = max();
@@ -59,7 +59,7 @@ public class MeleeWeapon extends Weapon {
 	}
 	
 	public Item upgrade( boolean enchant ) {
-		STR = Math.max(2, STR-1);
+		setSTR(Math.max(2, this.requiredSTR() -1));
 
 		MIN++;
 		MAX += tier;
@@ -73,7 +73,7 @@ public class MeleeWeapon extends Weapon {
 	
 	@Override
 	public Item degrade() {		
-		STR++;
+		setSTR(this.requiredSTR() + 1);
 
 		MIN = Math.max(MIN-1, 0);
 		MAX = Math.max(MAX-tier, 1);
@@ -146,10 +146,10 @@ public class MeleeWeapon extends Weapon {
 
 		if (isLevelKnown() && Dungeon.hero.getBelongings().backpack.items.contains( this )) {
 			info.append(p);
-			if (STR > Dungeon.hero.effectiveSTR()) {
+			if (this.requiredSTR() > Dungeon.hero.effectiveSTR()) {
 				info.append(Utils.format(R.string.MeleeWeapon_Info6a, name));
 			}
-			if (STR < Dungeon.hero.effectiveSTR()) {
+			if (this.requiredSTR() < Dungeon.hero.effectiveSTR()) {
 				info.append(Utils.format(R.string.MeleeWeapon_Info6b, name));
 			}
 		}
@@ -185,10 +185,5 @@ public class MeleeWeapon extends Weapon {
 			enchant( Enchantment.random() );
 		}
 		return this;
-	}
-
-	@Override
-	public int requiredSTR() {
-		return STR;
 	}
 }

@@ -280,7 +280,19 @@ public class Belongings implements Iterable<Item>, Bundlable {
 			item.identify();
 		}
 	}
-	
+
+	public Item encumbranceCheck() {
+		var itemIterator = iterator();
+
+		while (itemIterator.hasNextEquipped()) {
+			EquipableItem item = (EquipableItem) itemIterator.next();
+			if(item.requiredSTR() > owner.effectiveSTR()) {
+				return item;
+			}
+		}
+		return ItemsList.DUMMY;
+	}
+
 	public void observe() {
 		var itemIterator = iterator();
 
@@ -457,9 +469,9 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 		private int index = 0;
 		
-		private Iterator<Item> backpackIterator = backpack.iterator();
+		private final Iterator<Item> backpackIterator = backpack.iterator();
 		
-		private EquipableItem[] equipped = {getItemFromSlot(Slot.WEAPON), getItemFromSlot(Slot.ARMOR), getItemFromSlot(Slot.LEFT_HAND), getItemFromSlot(Slot.ARTIFACT), getItemFromSlot(Slot.LEFT_ARTIFACT)};
+		private final EquipableItem[] equipped = {getItemFromSlot(Slot.WEAPON), getItemFromSlot(Slot.ARMOR), getItemFromSlot(Slot.LEFT_HAND), getItemFromSlot(Slot.ARTIFACT), getItemFromSlot(Slot.LEFT_ARTIFACT)};
 
 		public boolean hasNextEquipped(){
 			for (int i = index; i < equipped.length; i++) {

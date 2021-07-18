@@ -34,7 +34,7 @@ public class Tamahawk extends MissileWeapon {
 		super();
 		image = ItemSpriteSheet.TOMAHAWK;
 		
-		STR = 17;
+		setSTR(17);
 		
 		MIN = 4;
 		MAX = 20;

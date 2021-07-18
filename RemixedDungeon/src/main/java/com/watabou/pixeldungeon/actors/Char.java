@@ -261,6 +261,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			item.charAct();
 		}
 
+		if(getBelongings().encumbranceCheck().valid()) {
+			Buff.permanent(this, "Encumbrance");
+		} else {
+			Buff.detach(this, "Encumbrance");
+		}
+
 		return false;
 	}
 

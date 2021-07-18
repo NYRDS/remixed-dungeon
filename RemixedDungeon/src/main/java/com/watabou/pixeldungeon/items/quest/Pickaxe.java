@@ -55,7 +55,7 @@ public class Pickaxe extends Weapon {
 
 		setDefaultAction(AC_MINE);
 		
-		STR = 14;
+		setSTR(14);
 		MIN = 3;
 		MAX = 12;
 		animation_class = SWORD_ATTACK;

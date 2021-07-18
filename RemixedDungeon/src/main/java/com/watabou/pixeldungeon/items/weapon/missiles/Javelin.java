@@ -37,7 +37,7 @@ public class Javelin extends MissileWeapon {
 
 		image = ItemSpriteSheet.JAVELIN;
 		
-		STR = 15;
+		setSTR(15);
 		
 		MIN = 2;
 		MAX = 15;

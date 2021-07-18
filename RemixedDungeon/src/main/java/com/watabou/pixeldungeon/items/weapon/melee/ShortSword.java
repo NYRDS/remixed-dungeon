@@ -51,7 +51,7 @@ public class ShortSword extends MeleeWeapon {
 		super( 1, 1f, 1f );
 		animation_class = SWORD_ATTACK;
 		
-		STR = 11;
+		setSTR(11);
 		MAX = 12;
 	}
 	

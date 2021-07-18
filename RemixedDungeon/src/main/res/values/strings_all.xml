@@ -2823,4 +2823,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Moongrace_Desc">These plants grow in small numbers and are known as a source of natural magic.</string>
   <string name="MoongraceBuff_Name">Heavenly manna</string>
   <string name="MoongraceBuff_Info">The air around you becomes more saturated, which allows for better concentration and restoration of your magical reserves.</string>
+
+  <string name="Encumbrance_Name">Burden</string>
+  <string name="Encumbrance_Info">You have not enough strength to use %s effectively.</string>
 </resources>

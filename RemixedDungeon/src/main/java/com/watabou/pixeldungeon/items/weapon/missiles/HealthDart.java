@@ -16,7 +16,7 @@ public class HealthDart extends Dart {
 
 		image = 14;
 		
-		STR = 8;
+		setSTR(8);
 		
 		MIN = 1;
 		MAX = 3;

@@ -55,10 +55,10 @@
       }
     ],
     "str": 10,
-    "hp": 200000,
+    "hp": 2000,
     "magicAffinity": "Common",
-    "sp": 100000,
-    "maxSp": 100000,
+    "sp": 100,
+    "maxSp": 100,
     "sl" : 20
   },
   "non_expert": {

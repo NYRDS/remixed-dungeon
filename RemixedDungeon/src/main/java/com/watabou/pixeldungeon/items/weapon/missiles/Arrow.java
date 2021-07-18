@@ -33,7 +33,7 @@ public abstract class Arrow extends MissileWeapon {
 
 	public Arrow(int number) {
 		super();
-		STR = 9;
+		setSTR(9);
 		quantity(number);
 
 	}
@@ -76,7 +76,7 @@ public abstract class Arrow extends MissileWeapon {
 			ACU = (float) (baseAcu * firedFrom.acuFactor());
 			DLY = (float) (baseDly * firedFrom.dlyFactor());
 
-			float sDelta = thrower.effectiveSTR() - firedFrom.STR;
+			float sDelta = thrower.effectiveSTR() - firedFrom.requiredSTR();
 
 			if (sDelta > 2) {
 				MAX += MIN + sDelta;

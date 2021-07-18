@@ -40,7 +40,7 @@ public class IncendiaryDart extends Dart {
 		
 		image = 3;
 		
-		STR = 12;
+		setSTR(12);
 		
 		MIN = 1;
 		MAX = 2;

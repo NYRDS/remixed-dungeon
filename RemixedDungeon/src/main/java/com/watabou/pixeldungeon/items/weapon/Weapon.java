@@ -61,7 +61,7 @@ import lombok.SneakyThrows;
 @EqualsAndHashCode(callSuper = true)
 public class Weapon extends KindOfWeapon {
 
-	public int		STR	= 10;
+	private int		STR	= 10;
 	public float	ACU	= 1;
 	public float	DLY	= 1f;
 
@@ -69,7 +69,16 @@ public class Weapon extends KindOfWeapon {
 
 	private final int gender = Utils.genderFromString(getClassParam("Gender","neuter",true));
 
-	
+	@Override
+	public int requiredSTR() {
+		return STR;
+	}
+
+	public void setSTR(int STR) {
+		this.STR = STR;
+	}
+
+
 	public enum Imbue {
 		NONE, SPEED, ACCURACY
 	}

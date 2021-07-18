@@ -29,7 +29,6 @@ import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
-import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.pixeldungeon.windows.MovieRewardTask;
 import com.nyrds.platform.EventCollector;
@@ -288,7 +287,7 @@ public class Hero extends Char {
 	@Override
 	public float speed() {
 
-		int aEnc = getItemFromSlot(Belongings.Slot.ARMOR) != ItemsList.DUMMY ? getItemFromSlot(Belongings.Slot.ARMOR).requiredSTR() - effectiveSTR() : 0;
+		int aEnc = getItemFromSlot(Belongings.Slot.ARMOR).requiredSTR() - effectiveSTR();
 		if (aEnc > 0) {
 			return (float) (super.speed() * Math.pow(1.3, -aEnc));
 		} else {
