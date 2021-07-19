@@ -82,7 +82,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	protected static final float TIME_TO_PICK_UP = 1.0f;
 	private static final float TIME_TO_DROP = 0.5f;
 
-	private static final String AC_DROP = "Item_ACDrop";
+	protected static final String AC_DROP = "Item_ACDrop";
 	protected static final String AC_THROW = "Item_ACThrow";
 
 	@NotNull

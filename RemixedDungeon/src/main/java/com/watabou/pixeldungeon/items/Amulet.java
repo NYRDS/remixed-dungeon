@@ -43,6 +43,8 @@ public class Amulet extends Item {
 	@Override
 	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
+		actions.remove(AC_THROW);
+		actions.remove(AC_DROP);
 		actions.add( AC_END );
 		return actions;
 	}
