@@ -2833,4 +2833,7 @@ otro lugar del nivel.</string>
   <string name="Moongrace_Desc">Estas plantas crecen en pequeñas cantidades y son conocidas como una fuente de magia natural.</string>
   <string name="MoongraceBuff_Name">Maná celestial</string>
   <string name="MoongraceBuff_Info">El aire que te rodea se vuelve más saturado, lo que permite una mejor concentración y restauración de tus reservas mágicas.</string>
+
+  <string name="Encumbrance_Name">Carga</string>
+  <string name="Encumbrance_Info">No tienes suficiente fuerza para usar %s efectivamente.</string>
 </resources>
