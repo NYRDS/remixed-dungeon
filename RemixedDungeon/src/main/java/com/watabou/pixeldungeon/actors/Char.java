@@ -1097,8 +1097,19 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		spend(time);
 		getSprite().operate(cell);
 
-		if(!Dungeon.realtime()) {
+		if(Dungeon.realtime()) {
 			onOperateComplete();
+		}
+	}
+
+	public void doOperate(float time, int cell, Callback onComplete) {
+		spend(time);
+
+		if(Dungeon.realtime()) {
+			getSprite().operate(cell);
+			onComplete.call();
+		} else {
+			getSprite().operate(cell, onComplete);
 		}
 	}
 

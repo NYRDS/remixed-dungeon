@@ -25,7 +25,7 @@ public class OpenChest extends CharAction {
 
         if (level.adjacent(heroPos, dst) || heroPos == dst) {
 
-            Heap heap = level.getHeap(dst);
+            final Heap heap = level.getHeap(dst);
             if (heap != null && (heap.type == Heap.Type.CHEST || heap.type == Heap.Type.TOMB || heap.type == Heap.Type.SKELETON
                     || heap.type == Heap.Type.LOCKED_CHEST || heap.type == Heap.Type.CRYSTAL_CHEST || heap.type == Heap.Type.MIMIC)) {
 
@@ -42,32 +42,25 @@ public class OpenChest extends CharAction {
                     }
                 }
 
-                switch (heap.type) {
-                    case TOMB:
-                        Sample.INSTANCE.play(Assets.SND_TOMB);
-                        Camera.main.shake(1, 0.5f);
-                        break;
-                    case SKELETON:
-                        break;
-                    default:
-                        Sample.INSTANCE.play(Assets.SND_UNLOCK);
-                }
-
-                hero.doOperate(Key.TIME_TO_UNLOCK);
-
                 if (theKey[0] != null) {
                     theKey[0].removeItemFrom(hero);
                 }
 
-                Heap OpenedHeap = level.getHeap(dst);
-                if (OpenedHeap != null) {
-                    if (OpenedHeap.type == Heap.Type.SKELETON) {
-                        Sample.INSTANCE.play(Assets.SND_BONES);
+                hero.doOperate(Key.TIME_TO_UNLOCK, dst, () -> {
+                    switch (heap.type) {
+                        case TOMB:
+                            Sample.INSTANCE.play(Assets.SND_TOMB);
+                            Camera.main.shake(1, 0.5f);
+                            break;
+                        case SKELETON:
+                            Sample.INSTANCE.play(Assets.SND_BONES);
+                            break;
+                        default:
+                            Sample.INSTANCE.play(Assets.SND_UNLOCK);
                     }
-                    OpenedHeap.open(hero);
-                }
-
-
+                    heap.open(hero);
+                    hero.next();
+                });
             } else {
                 hero.readyAndIdle();
             }

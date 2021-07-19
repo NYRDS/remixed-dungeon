@@ -47,9 +47,11 @@ public class Unlock extends CharAction {
                     default:
                         EventCollector.logException("trying to unlock tile:" + door);
                 }
-                GameScene.updateMap(dst);
 
-                hero.doOperate(Key.TIME_TO_UNLOCK, dst);
+                hero.doOperate(Key.TIME_TO_UNLOCK, dst, () -> {
+                    GameScene.updateMap(dst);
+                    hero.next();
+                });
 
                 Sample.INSTANCE.play(Assets.SND_UNLOCK);
                 hero.curAction = null;
