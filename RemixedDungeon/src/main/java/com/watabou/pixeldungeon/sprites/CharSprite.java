@@ -245,6 +245,16 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         });
     }
 
+
+    @LuaInterface
+    public void operate() { //used by Epic
+        ch.ifPresent(chr -> {
+            turnTo(chr.getPos(), chr.getPos());
+            play(operate);
+        });
+    }
+
+
     public void operate(int cell) {
         ch.ifPresent(chr -> {
             turnTo(chr.getPos(), cell);
