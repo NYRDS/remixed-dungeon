@@ -118,6 +118,7 @@ public class GameLoop {
         }
     }
 
+    @LuaInterface
     public static Scene scene() {
         return instance().scene;
     }

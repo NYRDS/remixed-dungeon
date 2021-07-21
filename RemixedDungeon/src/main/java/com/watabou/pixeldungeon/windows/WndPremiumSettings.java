@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class WndPremiumSettings extends Window {
 
-	private static Map<String, Integer> material2level = new HashMap<>();
+	private static final Map<String, Integer> material2level = new HashMap<>();
 
 	static {
         material2level.put(StringsManager.getVar(R.string.WndPremiumSettings_std),0);

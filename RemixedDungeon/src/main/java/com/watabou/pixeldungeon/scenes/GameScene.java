@@ -462,7 +462,7 @@ public class GameScene extends PixelScene {
             GLog.debug(Dungeon.hero.immunities().toString());
             //GLog.toFile(StringsManager.missingStrings.toString());
 
-            if(!(level instanceof TestLevel)) {
+            if(!(level instanceof TestLevel) && !ModdingMode.inMod()) {
                 for (var lo : level.getAllLevelObjects()) {
                     int pos = lo.getPos();
                     if (!level.passable[pos]) {

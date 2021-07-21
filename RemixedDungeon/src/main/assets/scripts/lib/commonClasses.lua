@@ -11,6 +11,8 @@ local GLog  = luajava.bindClass("com.watabou.pixeldungeon.utils.GLog")
 
 local RemixedDungeon = luajava.bindClass("com.nyrds.platform.game.RemixedDungeon")
 
+local GameLoop = luajava.bindClass("com.nyrds.pixeldungeon.game.GameLoop")
+
 local DungeonGenerator = luajava.bindClass("com.nyrds.pixeldungeon.utils.DungeonGenerator")
 local PathFinder       = luajava.bindClass("com.watabou.utils.PathFinder")
 
@@ -168,6 +170,7 @@ local Badges = luajava.bindClass("com.watabou.pixeldungeon.Badges")
 
 local RPD = {
     RemixedDungeon = RemixedDungeon,
+    GameLoop = GameLoop,
     GameScene = GameScene,
     Dungeon = Dungeon,
     DungeonGenerator = DungeonGenerator,

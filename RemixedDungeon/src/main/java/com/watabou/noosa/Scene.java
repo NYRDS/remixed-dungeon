@@ -29,7 +29,7 @@ import java.util.ArrayList;
 public class Scene extends Group {
 	
 	private Signal.Listener<Keys.Key> keyListener;
-	private ArrayList<Window> activeWindows = new ArrayList<>();
+	private final ArrayList<Window> activeWindows = new ArrayList<>();
 
 	static protected LuaScript script = new LuaScript("scripts/services/scene", null);
 

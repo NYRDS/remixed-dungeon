@@ -217,4 +217,9 @@ public class RemixedDungeon extends Game {
 		return GameLoop.getDifficultyFactor();
 	}
 
+	@LuaInterface
+	public static void resetScene() {
+		GameLoop.resetScene();
+	}
+
 }
