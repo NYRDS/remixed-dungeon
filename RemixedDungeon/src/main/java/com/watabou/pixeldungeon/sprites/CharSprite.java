@@ -236,6 +236,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         });
     }
 
+    @Deprecated
     @LuaInterface
     public void dummyAttack(int cell) {
         ch.ifPresent(chr -> {

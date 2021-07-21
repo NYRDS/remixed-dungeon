@@ -77,12 +77,12 @@ public class Pickaxe extends Weapon {
 		if (action.equals(AC_MINE)) {
 
 			Level level = chr.level();
-
-/*			if (!(level instanceof CavesLevel || level instanceof CavesBossLevel) ) {
-				GLog.w( Game.getVar(R.string.Pickaxe_NoVein) );
+/*
+			if (!(level instanceof CavesLevel || level instanceof CavesBossLevel) ) {
+				GLog.w( StringsManager.getVar(R.string.Pickaxe_NoVein) );
 				return;
-			}*/
-			
+			}
+*/
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 				
 				final int pos = chr.getPos() + Level.NEIGHBOURS8[i];
