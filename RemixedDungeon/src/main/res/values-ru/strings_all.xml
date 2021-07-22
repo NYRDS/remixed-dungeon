@@ -86,11 +86,24 @@
   <string name="ChaosCrystal_SwordFused">Кристалл слился с твоим оружием и принял форму Меча</string>
   <string name="ChaosCrystal_BowFused">Кристалл слился с твоим оружием и принял форму Лука</string>
   <string name="ChaosCrystal_StaffFused">Кристалл слился с твоим оружием и принял форму Посоха</string>
+<<<<<<< Updated upstream
+  <string name="CorpseDust_Buff">Жажда крови</string>
+  <string name="DriedRose_Buff">Очаровательный</string>
+  <string name="DriedRose_CursedBuff">Влюбчивый</string>
+  <string name="RatSkull_Buff">Крысобой</string>
+  <string name="RatKingCrown_Buff">Крыссность</string>
+=======
   <string name="CorpseDustBuff_Name">Жажда крови</string>
+  <string name="CorpseDustBuff_Info">Жажда крови наполняет атаки, делая их особенно опасными.</string>
   <string name="DriedRoseBuff_Name">Очаровательный</string>
+  <string name="DriedRoseBuff_Info">Эта роза выглядит так очаровательна, что просто невозможно отвести взгляд!</string>
   <string name="DriedRoseCursedBuff_Name">Влюбчивый</string>
+  <string name="DriedRoseCursedBuff_Info">Эта роза не так красива, но глядя на неё возникает чувство влюблености!</string>
   <string name="RatSkullBuff_Name">Крысобой</string>
+  <string name="RatSkullBuff_Info">Едкая вонь распугивает всех окружающих грызунов, заставляя их спасаться бегством от владельца черепа.</string>
   <string name="RatKingCrownBuff_Name">Крыссность</string>
+  <string name="RatKingCrownBuff_Info">Приветствуйте крысиного лорда, каждая крыса должна повиноваться и восхвалять великую крысность!</string>
+>>>>>>> Stashed changes
   <string name="RatKingCrown_Name">Корона крысиного короля</string>
   <string name="RatKingCrown_Info">Золотая корона Его Крыссности, символ его власти </string>
   <string name="BishopNPC_Name">Епископ</string>
@@ -105,6 +118,12 @@
   <string name="Bishop_not_interested">Уйти</string>
   <string name="Bishop_no_money">Ты не можешь заплатить за это.</string>
   <string name="Bishop_bye">Я буду молиться за тебя, дитя моё.</string>
+<<<<<<< Updated upstream
+  <string name="Blessed_Info">Благословлен праведным священиком</string>
+=======
+  <string name="BlessedBuff_Name">Благословлён</string>
+  <string name="BlessedBuff_Info">Да прибудет точность и уклонение для тех, кого коснулось благословение!</string>
+>>>>>>> Stashed changes
   <string name="deco_candle_name">Свеча</string>
   <string name="deco_candle_desc">Большая свеча</string>
   <string name="Possess_Name">Одержимость</string>
@@ -174,7 +193,12 @@
   <string name="Item_Info2">нечто</string>
   <string name="NecromancerArmor_Info2">В этой броне некромант может призвать \"Некротизм\", ужасающую болезнь поражающую любое существо в поле зрения, мертвое или живое.</string>
   <string name="NecromancerRobe_Info2">Это роба напитана темной магией позволяющей Некроманту пленять души падших от его руки существ.</string>
+<<<<<<< Updated upstream
+  <string name="Necrotism_Info">Некротизм</string>
+=======
   <string name="NecrotismBuff_Name">Некротизм</string>
+  <string name="NecrotismBuff_Info">Метка смерти, смрад от которой поражает всех вокруг и заставляет их разделить ту же учесть.</string>
+>>>>>>> Stashed changes
   <string name="Necrotism_ACSpecial">НЕКРОТИЗМ</string>
   <string name="ResultDescriptions_Necrotism">Умер от Некротизма на уровне %d</string>
   <string name="Necrotism_Death">Вы умерли от некротизма...</string>
@@ -248,8 +272,15 @@
   <string name="PortalExit_Desc_SpiderNest">Паучье Логово</string>
   <string name="PortalExit_Desc_Necropolis">Некрополь</string>
   <string name="PortalExit_Desc_IceCaves">Ледяные Пещеры</string>
+<<<<<<< Updated upstream
+  <string name="Devour_Buff">Пожирание</string>
+  <string name="StoneBlood_Buff">Каменная Кровь</string>
+=======
   <string name="DevourBuff_Name">Пожирание</string>
+  <string name="DevourBuff_Info"></string>
   <string name="StoneBloodBuff_Name">Каменная Кровь</string>
+  <string name="StoneBloodBuff_Info">Кровь превращается в камень, вязкость которой подстраивается под близлежащие стены и значительно облегчает прохождение через них, но какой ценой.</string>
+>>>>>>> Stashed changes
   <string name="Welcome_Ok">Ладушки!</string>
   <string name="Welcome_Title">Добро пожаловать!</string>
   <string name="BlackCat_Name">Чёрная кошка</string>
@@ -539,36 +570,117 @@
   <string name="WaterOfHealth_Procced">Сделав глоток, ты чувствуешь, как твои раны исцеляются.</string>
   <string name="WaterOfTransmutation_Info">Вода этого источника излучает силу перемен. Брось в воду предмет, чтобы он превратился в нечто иное.</string>
   <string name="Web_Info">Здесь всё покрыто паутиной.</string>
+<<<<<<< Updated upstream
+  <string name="Amok_Info">Буйство</string>
+  <string name="Barkskin_Info">Кожа-кора</string>
+  <string name="Bleeding_Info">Кровотечение</string>
+  <string name="Bleeding_Death">Ты истёк кровью...</string>
+  <string name="Blindness_Info">Ослеплён</string>
+  <string name="Burning_Info">В огне</string>
+  <string name="Burning_Burns">%s в огне!</string>
+  <string name="Burning_Death">Ты сгорел заживо...</string>
+  <string name="Charm_Info">Зачарован</string>
+  <string name="Combo_Info">Комбо</string>
+  <string name="Combo_Combo">%d-ударное комбо!</string>
+  <string name="Cripple_Info">Травмирован</string>
+  <string name="Frost_Info">Заморожен</string>
+  <string name="Frost_Shatter">%s лопается от холода!</string>
+  <string name="Fury_Info">В ярости</string>
+  <string name="GasesImmunity_Info">Иммунитет к газам</string>
+  <string name="Hunger_Death">Тебя настигла смерть от голода.</string>
+  <string name="Hunger_Info1">Голоден</string>
+  <string name="Hunger_Info2">Истощение</string>
+  <string name="Invisibility_Info">Невидимый</string>
+  <string name="Levitation_Info">Левитирующий</string>
+  <string name="Light_Info">Светящийся</string>
+  <string name="MindVision_Info">Ясновидение</string>
+  <string name="Ooze_Info">Едкая слизь</string>
+  <string name="Ooze_Death">%s сжирает тебя...</string>
+  <string name="Paralysis_Info">Парализован</string>
+  <string name="Poison_Info">Отравлен</string>
+  <string name="Poison_Death">Ты умер от яда...</string>
+  <string name="Roots_Info">Опутан</string>
+  <string name="Shadows_Info">Слился с тенью</string>
+  <string name="Slow_Info">Замедлен</string>
+  <string name="SnipersMark_Info">Метка снайпера</string>
+  <string name="Vertigo_Info">Завихрение</string>
+  <string name="Weakness_Info">Ослаблен</string>
+=======
   <string name="AmokBuff_Name">Буйство</string>
+  <string name="AmokBuff_Info">Почувствуйте буйство, уносящее жизни несчастных.</string>
   <string name="BarkskinBuff_Name">Кожа-кора</string>
+  <string name="BarkskinBuff_Info">Тело покрыто твёрдой корой, которая блокирует некоторый урон.</string>
   <string name="BleedingBuff_Name">Кровотечение</string>
+  <string name="BleedingBuff_Info">Раны быстро кровоточат.</string>
   <string name="Bleeding_Death">Ты истёк кровью...</string>
   <string name="BlindnessBuff_Name">Ослеплён</string>
+  <string name="BlindnessBuff_Info">Полностью ослеплен, разве что слышны звуки вокруг.</string>
   <string name="BurningBuff_Name">В огне</string>
+  <string name="BurningBuff_Info">Тело охвачено бушующим пламенем!</string>
   <string name="Burning_Burns">%s в огне!</string>
   <string name="Burning_Death">Ты сгорел заживо...</string>
   <string name="CharmBuff_Name">Зачарован</string>
+  <string name="CharmBuff_Info">Очарование помутняет разум.</string>
   <string name="ComboBuff_Name">Комбо</string>
+  <string name="ComboBuff_Info">Следующая атака будет комбо-атакой.</string>
   <string name="Combo_Combo">%d-ударное комбо!</string>
   <string name="CrippleBuff_Name">Травмирован</string>
+  <string name="CrippleBuff_Info">Тело искалечено, но борьба продолжается.</string>
   <string name="FrostBuff_Name">Заморожен</string>
+  <string name="FrostBuff_Info">Ледяная корка покрывает тело, не позволяющая совершать каких-либо действий.</string>
   <string name="Frost_Shatter">%s лопается от холода!</string>
-  <string name="FuryBuff_Name">В ярости</string>
+  <string name="FuryBuff_Name">Ярость</string>
+  <string name="FuryBuff_Info">Глаза налились кровью от внутренней ярости!</string>
+  <string name="GasImmuneBuff_Name">Иммунитет к газам</string>
+  <string name="GasImmuneBuff_Info">Невосприимчив ко всем газам.</string>
   <string name="Hunger_Death">Тебя настигла смерть от голода.</string>
-  <string name="HungerBuff_Name1">Голоден</string>
+  <string name="HungerBuff_Name1">Голод</string>
+  <string name="HungerBuff_Info1">Ты голоден!</string>
   <string name="HungerBuff_Name2">Истощение</string>
+  <string name="HungerBuff_Info2">Ты истощён!</string>
   <string name="InvisibilityBuff_Name">Невидимый</string>
+  <string name="InvisibilityBuff_Info">Полная невидимость, за счет которой можно избежать опасностей, либо стать таковой.</string>
   <string name="LevitationBuff_Name">Левитирующий</string>
+  <string name="LevitationBuff_Info">Тело парит над землей, позволяя избежать ловушек и других земных опасностей.</string>
   <string name="LightBuff_Name">Светящийся</string>
+  <string name="LightBuff_Info">Свет исходит от тела, освещая все вокруг.</string>
+  <string name="MindVisionBuff_Name">Ясновидение</string>
+  <string name="MindVisionBuff_Info">Внутреннее озарение позволяет отчетливо видеть движение всех существ на этаже.</string>
+  <string name="OozeBuff_Name">Едкая слизь</string>
+  <string name="OozeBuff_Info">Едкая слизь разъедает плоть!</string>
   <string name="Ooze_Death">%s сжирает тебя...</string>
+  <string name="ParalysisBuff_Name">Паралич</string>
+  <string name="ParalysisBuff_Info">Полностью парализован, какое же жалкое зрелище!</string>
   <string name="PoisonBuff_Name">Отравлен</string>
+  <string name="PoisonBuff_Info">Яд медленно, но верно распространяется по телу, тем самым убивая его!</string>
   <string name="Poison_Death">Ты умер от яда...</string>
+  <string name="RegenerationBuff_Name">Естественная регенерация</string>
+  <string name="RegenerationBuff_Info">Функция естественной регенерации реализована в форме баффа, дабы упростить работу.</string>
   <string name="RootsBuff_Name">Опутан</string>
+  <string name="RootsBuff_Info">Прорастающие из земли корни опутывают тело, не позволяя сдвинуться с места.</string>
   <string name="ShadowsBuff_Name">Слился с тенью</string>
-  <string name="SlowBuff_Name">Замедлен</string>
+  <string name="ShadowsBuff_Info">Среди теней довольно трудно что-то разглядеть.</string>
+  <string name="SlowBuff_Name">Замедление</string>
+  <string name="SlowBuff_Info">Ощущение вялости делает тело медленнее обычного.</string>
+  <string name="SleepBuff_Name">Сон</string>
+  <string name="SleepBuff_Info">Полностью погружен в сон.</string>
+  <string name="SnipersMarkBuff_Name">Метка снайпера</string>
+  <string name="SnipersMarkBuff_Info">Эта метка была оставлена снайпером.</string>
+  <string name="SpeedBuff_Name">Ускорение/string>
+  <string name="SpeedBuff_Info">От тела исходит заряд бодрости и энергии, а движения ощущаются быстрее обычного.</string>
+  <string name="TerrorBuff_Name">Ужас</string>
+  <string name="TerrorBuff_Info">Похоже, кто-то очень сильно напуган.</string>
   <string name="VertigoBuff_Name">Завихрение</string>
+  <string name="VertigoBuff_Info">Ощущение головокружения значительно затрудняет дальнейшее движение!</string>
   <string name="WeaknessBuff_Name">Ослаблен</string>
+  <string name="WeaknessBuff_Info">Слабость охватывает тело, делая цель легкой добычей.</string>
   <string name="AwarenessBuff_Name">Внимательность</string>
+  <string name="AwarenessBuff_Info">Чувства обострились, что позволяет получить больше информации об окружении.</string>
+  <string name="DarkVeilBuff_Name">Тёмная вуаль</string>
+  <string name="DarkVeilBuff_Info">Пелена тьмы окружает владельца, призывающая духа каждый раз при получении урона.</string>
+  <string name="FrostAuraBuff_Name">Морозная Аура</string>
+  <string name="FrostAuraBuff_Info">Тело окружает мороз, который замедляет все, что находится поблизости.</string>
+>>>>>>> Stashed changes
   <string name="Belongings_Name">рюкзак</string>
   <string name="ItemSprite_Info1">выбросить: %1$.1f %2$.1f</string>
   <string name="Toolbar_Info1">Ты не знаешь, что там.</string>
@@ -666,7 +778,10 @@
   <string name="HeartOfDarkness_Name">Сердце тьмы</string>
   <string name="HeartOfDarkness_Info">Чёрное пульсирующее сердце Предательского духа.</string>
   <string name="HeartOfDarkness_Gender">бесполый</string>
-  <string name="DarkVeilBuff_Name">Тёмная вуаль</string>
+<<<<<<< Updated upstream
+  <string name="DarkVeil_Buff">Тёмная вуаль</string>
+=======
+>>>>>>> Stashed changes
   <string name="Badges_Yog_Slain">Йог-Джева побеждён</string>
   <string name="Badges_ShadowLord_Slain">Владыка Теней побеждён</string>
   <string name="Badges_SpiderQueen_Slain">Королева Пауков побеждена</string>
@@ -1398,7 +1513,10 @@
   <string name="Zombie_Desc">Подземелья всегда были опасным местом и многие путешественники встретили здесь свою судьбу. Но путь тех, кому посчастливилось меньше всего, обрывался в Некрополе. И теперь они обречены слоняться по этим коридорам в виде гниющего трупа.</string>
   <string name="NecromancerNPC_Intro2">А! Собрат приключенец не являющийся бездыханным трупом! Верится с трудом! Кхм... извиняюсь, иногда я становлюсь слишком заносчивым. Я, видите ли, некромант. И не смотря на то, что изучение мертвецов и самой смерти у нас в почёте, всё это серое однообразие рано или поздно кому угодно наскучит. Но с другой стороны я здесь, как раз из-за этого. Намедни случилось нечто грандиозное! _Некрополь_, древний город мёртвых открыл нашему взору свои двери. Честно говоря, мы стоим прямо подле этих дверей. И... знаешь что, возьми-ка ключ и иди первый, ты же любишь всякие приключения, да? А я пойду следом... только сначала подготовлюсь.</string>
   <string name="Badges_Lich_Slain">Лич побеждён</string>
-  <string name="FrostAuraBuff_Name">Морозная Аура</string>
+<<<<<<< Updated upstream
+  <string name="FrostAura_Buff">Морозная Аура</string>
+=======
+>>>>>>> Stashed changes
   <string name="ElvenDagger_Name">эльфийский кинжал</string>
   <string name="ElvenDagger_Info">Это оружие выполнено из особого металлического сплава, что делает его легче по сравнению с обычным кинжалом.</string>
   <string name="ElvenDagger_Gender">masculine</string>
@@ -1862,7 +1980,7 @@
   <string name="YogsHeart_Name_Objective">сердце Йога</string>
   <string name="YogsHeart_Desc">Испокон веков люди верили, что лишь бессердечные создания способны на по-настоящему злые поступки. Вопреки этому, ты видишь перед собой огромное бьющееся сердце Старого Бога.</string>
   <string name="YogsTeeth_Name">пасть Йога</string>
-  <string name="YogsTeeth_Gender">feminine</string>
+  <string name="YogsTeeth_Gender">femenine</string>
   <string name="YogsTeeth_Name_Objective">пасть Йога</string>
   <string name="YogsTeeth_Desc">Гигантская пасть Старого Бога усеяна бритвенно-острыми зубами. Весьма подходящее воплощение его жажды к разрушению и поглощению всего и вся.</string>
   <string name="Food_ACEat">СЪЕСТЬ</string>
@@ -1975,6 +2093,12 @@
   <string name="Stench_Txt">%s зловония</string>
   <string name="Viscosity_Txt">%s вязкости</string>
   <string name="Viscosity_Status">отложено %d</string>
+<<<<<<< Updated upstream
+  <string name="DeferedDamage_Defered_Txt">Отложенный урон (%d)</string>
+=======
+  <string name="DeferedDamageBuff_Name">Отложенный урон (%d)</string>
+  <string name="DeferedDamageBuff_Info">Боль заметно растянулась, что значительно уменьшило одновременно получаемый урон. \nУрона осталось получить %d</string>
+>>>>>>> Stashed changes
   <string name="DeferedDamage_Killed_Txt">%s убивает тебя...</string>
   <string name="Plant_ACPlant">ПОСАДИТЬ</string>
   <string name="Plant_Info">Посади эти семена в то место, где ты хочешь вырастить %1$s.\n\n%2$s</string>
@@ -1983,7 +2107,12 @@
   <string name="Dreamweed_Desc">При прикосновении Дурман-трава испускает сияющее облачко ошеломляющего газа.</string>
   <string name="Earthroot_Name">Земляной Корень</string>
   <string name="Earthroot_Desc">Когда существо касается Земляного Корня, его окутывает природная броня.</string>
+<<<<<<< Updated upstream
+  <string name="Earthroot_Buff">Растительная броня</string>
+=======
   <string name="EarthrootBuff_Name">Растительная броня</string>
+  <string name="EarthrootBuff_Info">Из земли проросли корни, прочность которых легко заменяет броню.</string>
+>>>>>>> Stashed changes
   <string name="Fadeleaf_Name">Бледнолист</string>
   <string name="Fadeleaf_Desc">Касание Бледнолиста телепортирует любое существо в случайную точку текущего уровня.</string>
   <string name="Firebloom_Name">Огнецвет</string>
@@ -1994,7 +2123,12 @@
   <string name="Sorrowmoss_Desc">Грустномох - это цветок (а не мох) с бритвенно острыми лепестками, покрытыми смертельным ядом.</string>
   <string name="Sungrass_Name">Солнечник</string>
   <string name="Sungrass_Desc">Солнечник славится целебными свойствами своего сока.</string>
+<<<<<<< Updated upstream
+  <string name="Sungrass_Buff">Растительное исцеление</string>
+=======
   <string name="SungrassBuff_Name">Растительное исцеление</string>
+  <string name="SungrassBuff_Info">Из земли проросли корни, на кромке которых расцвели лечебные травы.</string>
+>>>>>>> Stashed changes
   <string name="WndPlayGames_Title">Google Play Games</string>
   <string name="WndPlayGames_Use">вкл. Google Play Games</string>
   <string name="WndPlayGames_Connecting">Соединение с Google Play Games, пожалуйста подождите</string>
@@ -2187,7 +2321,7 @@
   <string name="DieHardSpell_Name">Крепкий Орешек</string>
   <string name="DieHardSpell_Info">Временно повышает регенерацию делая тебя настоящим Крепким Орешком.</string>
   <string name="DieHardBuff_Name">Крепкий Орешек</string>
-  <string name="DieHardBuff_Info">Скорость регенерации увеличена </string>
+  <string name="DieHardBuff_Info">Скорость регенерации увеличена.</string>
   <string name="SmashSpell_Name">Сокрушительный Удар</string>
   <string name="SmashSpell_Info">Прыгает вверх, с силой врезается в землю, оглушая противников вокруг и нанося физический урон.</string>
   <string name="SmashSpell_NeedWeapon">Необходимо оружие для данного действия.</string>
@@ -2199,6 +2333,11 @@
   <string name="CloakSpell_Info">Шагните в тень, чтобы остаться незамеченным. Значительно уменьшит ваши шансы быть обнаруженным. Не может быть использовано, когда рядом враги.</string>
   <string name="CloakSpell_EnemiesNearby">Когда враги рядом,вы не можете уйти в тень</string>
   <string name="CloakBuff_Name">Укрыт</string>
+<<<<<<< Updated upstream
+  <string name="CloakBuff_Info">Укрыт в тени</string>
+=======
+  <string name="CloakBuff_Info">Темный плащ скрывает вас в тени, делая вас менее заметным для врагов.</string>
+>>>>>>> Stashed changes
   <string name="TitleScene_Mods">Моды</string>
   <string name="WndHero_Stealth">Скрытность</string>
   <string name="WndHero_Awareness">Внимательность</string>
@@ -2522,6 +2661,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Challenges_Names_7">Пацифизм</string>
   <string name="town_deco_crossroad_name">Дорожный указатель</string>
   <string name="town_deco_crossroad_desc">Грубо сделанный деревянный столб с приколоченными дощечками в форме стрелок, текст на них давно выцвел, похоже что из-за суровой погоды.</string>
+  <string name="ShieldBuffReady_Name">Готов</string>
+  <string name="ShieldBuffNotReady_Name">Не Готов</string>
   <string name="WoodenShield_name">Деревянный щит</string>
   <string name="WoodenShield_desc">Грубо сделанный деревянный щит - самый простой из доступных вариантов. Он круглый и время от времени может заблокировать немного урона.</string>
   <string name="ToughShield_name">Усиленный кожаный щит</string>
@@ -2601,7 +2742,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="CharAction_Take">взять</string>
   <string name="CharAction_Scare">напугать</string>
   <string name="CharAction_Hit">ударить</string>
+<<<<<<< Updated upstream
+  <string name="Stun_Info">Оглушён</string>
+=======
   <string name="StunBuff_Name">Оглушён</string>
+  <string name="StunBuff_Info">Оглушён!</string>
+>>>>>>> Stashed changes
   <string name="Char_StaStunned">oглушён</string>
   <string name="Mob_ReadyForOrder">Субъект %s готов к вашим указаниям.</string>
   <string name="Mob_CantDoIt">Я это не умею. У меня лапки.</string>
@@ -2645,7 +2791,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Roar_Name">Рёв</string>
   <string name="Roar_Info">Этот могучий рёв вне всяких сомнений ужаснёт врагов и воодушевит друзей.</string>
   <string name="LightningBolt_Name">Молния</string>
-  <string name="LightningBolt_Info">Заклятье известное ещё древнейшим шаманам вдарит по твоим врагам. 
+  <string name="LightningBolt_Info">Заклятье известное ещё древнейшим шаманам вдарит по твоим врагам.
 Эффект удвоится, если враги окажутся достаточно глупы, чтобы стоять на воде.</string>
   <string name="Heal_Name">Исцеление</string>
   <string name="Heal_Info">Довольно полезное заклятье в Подземелье, верно?</string>
@@ -2738,23 +2884,28 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Potion_Colors_14">ониксом</string>
   <string name="Potion_Colors_15">жемчужное</string>
   <string name="ManaShieldBuff_Name">Магический щит</string>
+<<<<<<< Updated upstream
+  <string name="ManaShieldBuff_Info">Магический щит</string>
+=======
+  <string name="ManaShieldBuff_Info">Образовался магический щит, который полностью поглотит последующий входящий урон.</string>
+>>>>>>> Stashed changes
   <string name="TenguLiver_Name">Печень Тенгу</string>
   <string name="TenguLiver_Info">Печень могучего врага. Один только взгляд на неё пробуждает в тебе животное начало: вонзить, разорвать, поглотить.</string>
   <string name="PotionOfMana_Name">Зелье Маны</string>
   <string name="PotionOfMana_Info">Это зелье восстановит твою духовную энергию.</string>
   <string name="WndFortuneTeller_IdentifyAll">Всё</string>
   <string name="Snail_Name">улитка</string>
-  <string name="Snail_Gender">feminine</string>
-  <string name="Snail_Name_Objective">улитку</string>
+  <string name="Snail_Gender">masculine</string>
+  <string name="Snail_Name_Objective">улитка</string>
   <string name="Snail_Desc">Этот моллюск неплохо откормился на сточных водах, скорости это ему однако не прибавило. Лёгкая добыча.</string>
   <string name="DeepSnail_Name">пещерная улитка</string>
-  <string name="DeepSnail_Gender">feminine</string>
-  <string name="DeepSnail_Name_Objective">пещерную улитку</string>
+  <string name="DeepSnail_Gender">masculine</string>
+  <string name="DeepSnail_Name_Objective">пещерная улитка</string>
   <string name="DeepSnail_Desc">Этот вид моллюсков чаще всего можно встретить вблизи источников и они куда резвее обычных улиток. А ещё они больно кусаются и покрыты слегка ядовитой слизью.</string>
   <string name="CharInfo_Level">Это существо: %2$s уровня %1$d.</string>
   <string name="WrnExperimental_realtime">Включен режим Realtime!: это теперь ниразу не пошаговый рогалик, тапай быстро или умри\nХочешь покопаться в рюкзаке?\nСмелее, но учти краб тем временем покопается в твоих кишках.</string>
   <string name="WrnExperimental_moveTimeout">На ход отведено не более %dмиллисекунд, думай быстро!</string>
-  <string name="WnrExperimental_hint">Если этот странный и безумный мир слишком суров для вас, отключите эти параметры: \ nСтартовый экран-&gt; Параметры-&gt; Геймплей \ nи запустите новую игру или загрузите другое сохранение. </string>
+  <string name="WnrExperimental_hint">Если этот странный и безумный мир слишком суров для вас, отключите эти параметры: \ nСтартовый экран-> Параметры-> Геймплей \ nи запустите новую игру или загрузите другое сохранение. </string>
   <string name="WrnExperimental_title">Включены экспериментальные опции!</string>
   <string name="Welcome_Text_30_1">
     remix.30.1\n
@@ -2766,6 +2917,22 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Добывать значки, и открывать классы теперь можно и в официальных DLC (но не в модах). \n
     - Исправлены ошибки\n
     </string>
-  <string name="ShamanElder_Gender">masculine</string>
-  <string name="Bee_Gender">masculine</string>
+<<<<<<< Updated upstream
+=======
+    <string name="ShamanElder_Name"></string>
+    <string name="ShamanElder_Gender">masculine</string>
+    <string name="ShamanElder_Name_Objective"></string>
+    <string name="ShamanElder_Desc"></string>
+    <string name="Bee_Name"></string>
+    <string name="Bee_Gender">masculine</string>
+    <string name="Bee_Name_Objective"></string>
+    <string name="Bee_Desc"></string>
+    <string name="Moongrace_Name"></string>
+    <string name="Moongrace_Desc"></string>
+    <string name="MoongraceBuff_Name">Манна небесная</string>
+    <string name="MoongraceBuff_Info">Воздух вокруг становится более насыщенным, что позволяет лучше концентрироваться и восстанавливать магические резервы.</string>
+
+    <string name="EncumbranceBuff_Name">Тяжесть</string>
+    <string name="EncumbranceBuff_Info">Недостаточно силы чтобы использовать %s эффективно.</string>
+>>>>>>> Stashed changes
 </resources>
