@@ -2843,5 +2843,5 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MoongraceBuff_Info">Воздух вокруг становится более насыщенным, что позволяет лучше концентрироваться и восстанавливать магические резервы.</string>
 
     <string name="EncumbranceBuff_Name">Тяжесть</string>
-    <string name="EncumbranceBuff_Info">Недостаточно силы чтобы использовать %s эффективно.</string>
+    <string name="EncumbranceBuff_Info">Недостаточно силы чтобы использовать предмет %s эффективно.</string>
 </resources>

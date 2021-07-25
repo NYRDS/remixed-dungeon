@@ -912,10 +912,12 @@ public class GameScene extends PixelScene {
             add(toolbar);
 
             if(attack != null) {
+                attack.camera = uiCamera;
                 attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
                 attack.update();
             }
             if(resume != null) {
+                resume.camera = uiCamera;
                 resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
                 resume.update();
             }

@@ -72,8 +72,8 @@ public class StatusPane extends Component {
     private MenuButton btnHats;
 
 
-    private Level currentLevel;
-    private Hero  hero;
+    private final Level currentLevel;
+    private final Hero  hero;
 
     public StatusPane(Hero hero, Level level) {
         super(true);
