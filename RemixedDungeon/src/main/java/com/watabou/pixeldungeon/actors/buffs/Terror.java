@@ -36,16 +36,6 @@ public class Terror extends FlavourBuff {
 		return BuffIndicator.TERROR;
 	}
 
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.TerrorBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.TerrorBuff_Info);
-    }
-	
 	public static void recover( Char target ) {
 		Terror terror = target.buff( Terror.class );
 		if (terror != null && terror.cooldown() < DURATION) {

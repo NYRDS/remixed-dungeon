@@ -40,16 +40,6 @@ public class Poison extends Buff implements Doom {
 	}
 
 	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.PoisonBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.PoisonBuff_Info);
-    }
-
-	@Override
 	public void charAct() {
 		float timeLeft = cooldown();
 		target.damage( (int)(timeLeft / 3) + 1, this );

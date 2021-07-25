@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class SnipersMark extends FlavourBuff {
@@ -27,14 +25,4 @@ public class SnipersMark extends FlavourBuff {
 	public int icon() {
 		return BuffIndicator.MARK;
 	}
-	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.SnipersMarkBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.SnipersMarkBuff_Info);
-    }
 }

@@ -14,8 +14,8 @@ return buff.init{
     desc  = function ()
         return {
             icon          = 25,
-            name          = "GasImmune_Name",
-            info          = "GasImmune_Info",
+            name          = "GasImmuneBuff_Name",
+            info          = "GasImmuneBuff_Info",
         }
     end,
 

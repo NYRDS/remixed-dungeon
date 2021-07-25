@@ -103,12 +103,12 @@ public class Viscosity extends Glyph {
 		
 		@Override
 		public String name() {
-            return StringsManager.getVar(R.string.DeferedDamageBuff_Name);
+            return Utils.format(super.name(), damage);
         }
 
 		@Override
 		public String desc() {
-            return Utils.format(StringsManager.getVar(R.string.DeferedDamageBuff_Info), damage);
+            return Utils.format(super.desc(), damage);
 		}
 		
 		@Override

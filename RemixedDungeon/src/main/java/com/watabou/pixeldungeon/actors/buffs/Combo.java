@@ -32,16 +32,7 @@ public class Combo extends Buff {
 	public int icon() {
 		return BuffIndicator.COMBO;
 	}
-	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.ComboBuff_Name);
-    }
 
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.ComboBuff_Info);
-    }
 	public int hit( Char enemy, int damage ) {
 		
 		count++;

@@ -99,16 +99,6 @@ public class Burning extends Buff implements Doom {
 	public int icon() {
 		return BuffIndicator.FIRE;
 	}
-	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.BurningBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.BurningBuff_Info);
-    }
 
 	public static float duration( Char ch ) {
 		Resistance r = ch.buff( Resistance.class );

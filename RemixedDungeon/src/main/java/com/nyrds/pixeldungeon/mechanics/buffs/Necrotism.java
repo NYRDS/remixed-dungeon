@@ -39,16 +39,6 @@ public class Necrotism extends Buff implements Doom {
 	}
 
 	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.NecrotismBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.NecrotismBuff_Info);
-    }
-
-	@Override
 	public boolean act() {
 		if (target.isAlive()) {
 

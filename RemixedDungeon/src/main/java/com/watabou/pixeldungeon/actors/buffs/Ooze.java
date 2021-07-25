@@ -33,17 +33,7 @@ public class Ooze extends Buff {
 	public int icon() {
 		return BuffIndicator.OOZE;
 	}
-	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.OozeBuff_Name);
-    }
 
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.OozeBuff_Info);
-    }
-	
 	@Override
 	public boolean act() {
 		if (target.isAlive()) {

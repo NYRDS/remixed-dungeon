@@ -27,6 +27,9 @@ import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.util.StringsManager;
+import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -37,6 +40,7 @@ import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -64,11 +68,26 @@ public class  Buff extends Actor implements NamedEntityKind, CharModifier {
 
     @Override
     public String name() {
-        return getEntityKind();
+        String id = getEntityKind() + "Buff_Name";
+        if(Util.isDebug()) {
+            if(StringsManager.getVar(id).equals(Utils.EMPTY_STRING)) {
+                throw new TrackedRuntimeException(Utils.format("missing Buff_Name for %s", getEntityKind()));
+            }
+        }
+        return StringsManager.maybeId(id);
     }
 
     @Override
-    public String desc() { return getEntityKind(); }
+    public String desc() {
+        String id = getEntityKind() + "Buff_Info";
+        if(Util.isDebug()) {
+            if(StringsManager.getVar(id).equals(Utils.EMPTY_STRING)) {
+                throw new TrackedRuntimeException(Utils.format("missing Buff_Info for %s", getEntityKind()));
+            }
+        }
+
+        return StringsManager.maybeId(id);
+    }
 
     @Override
     public String textureSmall() {

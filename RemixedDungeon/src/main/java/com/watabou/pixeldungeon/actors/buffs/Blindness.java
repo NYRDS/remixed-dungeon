@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
@@ -34,14 +32,4 @@ public class Blindness extends FlavourBuff {
 	public int icon() {
 		return BuffIndicator.BLINDNESS;
 	}
-	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.BlindnessBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.BlindnessBuff_Info);
-    }
 }

@@ -2823,12 +2823,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Moongrace_Name">Moongrace</string>
   <string name="Moongrace_Desc">These plants grow in small numbers and are known as a source of natural magic.</string>
   <string name="MoongraceBuff_Name">Heavenly manna</string>
-<<<<<<< Updated upstream
-  <string name="MoongraceBuff_Info">The air around you becomes more saturated, which allows for better concentration and restoration of your magical reserves.</string>
-=======
+
   <string name="MoongraceBuff_Info">The air around becomes more saturated, which allows for better concentration and restoration of magical reserves.</string>
 
   <string name="EncumbranceBuff_Name">Burden</string>
   <string name="EncumbranceBuff_Info">Not enough strength to use %s effectively.</string>
->>>>>>> Stashed changes
+
 </resources>

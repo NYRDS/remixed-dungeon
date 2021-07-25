@@ -40,16 +40,6 @@ public class Roots extends FlavourBuff {
 	public int icon() {
 		return BuffIndicator.ROOTS;
 	}
-	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.RootsBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.RootsBuff_Info);
-    }
 
 	@Override
 	public void attachVisual() {

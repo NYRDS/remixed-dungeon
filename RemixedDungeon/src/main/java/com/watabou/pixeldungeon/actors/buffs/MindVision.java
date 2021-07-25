@@ -42,16 +42,6 @@ public class MindVision extends FlavourBuff {
 	public int icon() {
 		return BuffIndicator.MIND_VISION;
 	}
-	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.MindVisionBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.MindVisionBuff_Info);
-    }
 
 	@Override
 	public void detach() {

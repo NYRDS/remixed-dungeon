@@ -28,16 +28,6 @@ public class Amok extends FlavourBuff {
 	public int icon() {
 		return BuffIndicator.AMOK;
 	}
-	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.AmokBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.AmokBuff_Info);
-    }
 
 	@Override
 	public void attachVisual() {

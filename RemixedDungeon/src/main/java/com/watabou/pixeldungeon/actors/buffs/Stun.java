@@ -50,17 +50,7 @@ public class Stun extends FlavourBuff {
 	public int icon() {
 		return BuffIndicator.PARALYSIS;
 	}
-	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.StunBuff_Name);
-    }
 
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.StunBuff_Info);
-    }
-	
 	public static float duration( Char ch ) {
 		Resistance r = ch.buff( Resistance.class );
 		return r != null ? r.durationFactor() * DURATION : DURATION;

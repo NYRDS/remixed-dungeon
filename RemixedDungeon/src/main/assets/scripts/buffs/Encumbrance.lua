@@ -14,12 +14,13 @@ return buff.init{
     end,
 
     name = function(self, buff)
-        return "Encumbrance_Name"
+        return "EncumbranceBuff_Name"
+
     end,
 
     info = function(self, buff)
         return  RPD.format(
-                    "Encumbrance_Info",
+                    "EncumbranceBuff_Info",
                     buff.target:
                     getBelongings():
                     encumbranceCheck():

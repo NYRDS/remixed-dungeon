@@ -37,16 +37,6 @@ public class Cripple extends FlavourBuff {
 	}
 
 	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.CrippleBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.CrippleBuff_Info);
-    }
-
-	@Override
 	public void attachVisual() {
         target.getSprite().showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaCrippled));
 	}

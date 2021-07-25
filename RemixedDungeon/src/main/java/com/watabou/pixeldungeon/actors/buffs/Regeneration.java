@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 
 import org.jetbrains.annotations.NotNull;
@@ -48,15 +46,5 @@ public class Regeneration extends Buff {
 	@Override
 	public boolean attachTo(@NotNull Char target ) {
         return target.hasBuff(Regeneration.class) || super.attachTo(target);
-    }
-
-    @Override
-    public String name() {
-        return StringsManager.getVar(R.string.RegenerationBuff_Name);
-    }
-
-    @Override
-    public String desc() {
-        return StringsManager.getVar(R.string.RegenerationBuff_Info);
     }
 }

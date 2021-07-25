@@ -35,16 +35,7 @@ public class Bleeding extends Buff {
 	public int icon() {
 		return BuffIndicator.BLEEDING;
 	}
-	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.BleedingBuff_Name);
-    }
 
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.BleedingBuff_Info);
-    }
 	@Override
 	public boolean act() {
 		if (target.isAlive()) {

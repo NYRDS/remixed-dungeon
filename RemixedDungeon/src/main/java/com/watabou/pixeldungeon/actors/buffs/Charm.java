@@ -17,9 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -61,17 +59,7 @@ public class Charm extends FlavourBuff {
 	public int icon() {
 		return BuffIndicator.HEART;
 	}
-	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.CharmBuff_Name);
-    }
 
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.CharmBuff_Info);
-    }
-	
 	public static float durationFactor(@NotNull Char ch ) {
 
 		if(ch.hasBuff(DriedRose.OneWayLoveBuff.class)) {

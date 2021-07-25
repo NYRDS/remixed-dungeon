@@ -50,16 +50,6 @@ public class RatSkull extends Artifact {
 		public int icon() {
 			return BuffIndicator.RAT_SKULL;
 		}
-
-		@Override
-		public String name() {
-            return StringsManager.getVar(R.string.RatSkullBuff_Name);
-        }
-
-		@Override
-		public String desc() {
-            return StringsManager.getVar(R.string.RatSkullBuff_Info);
-        }
 	}
 
 	@Override

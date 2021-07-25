@@ -33,16 +33,6 @@ public class Vertigo extends FlavourBuff {
 		return BuffIndicator.VERTIGO;
 	}
 	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.VertigoBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.VertigoBuff_Info);
-    }
-	
 	public static float duration( Char ch ) {
 		Resistance r = ch.buff( Resistance.class );
 		return r != null ? r.durationFactor() * DURATION : DURATION;

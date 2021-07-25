@@ -73,16 +73,6 @@ public class Frost extends FlavourBuff {
 		return BuffIndicator.FROST;
 	}
 	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.FrostBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.FrostBuff_Info);
-    }
-	
 	public static float duration( Char ch ) {
 		Resistance r = ch.buff( Resistance.class );
 		return r != null ? r.durationFactor() * DURATION : DURATION;

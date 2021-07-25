@@ -49,16 +49,6 @@ public class Invisibility extends FlavourBuff {
 	public int icon() {
 		return BuffIndicator.INVISIBLE;
 	}
-	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.InvisibilityBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.InvisibilityBuff_Info);
-    }
 
 	public static void dispel(@NotNull Char tgt) {
 		if(tgt.visibleEnemies() > 0) {

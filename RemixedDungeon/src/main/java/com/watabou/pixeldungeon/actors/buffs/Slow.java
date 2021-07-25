@@ -32,17 +32,7 @@ public class Slow extends FlavourBuff {
 	public int icon() {
 		return BuffIndicator.SLOW;
 	}
-	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.SlowBuff_Name);
-    }
 
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.SlowBuff_Info);
-    }
-	
 	public static float duration( Char ch ) {
 		Resistance r = ch.buff( Resistance.class );
 		return r != null ? r.durationFactor() * DURATION : DURATION;

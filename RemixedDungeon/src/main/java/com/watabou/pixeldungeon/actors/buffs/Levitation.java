@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -52,16 +50,6 @@ public class Levitation extends FlavourBuff {
 	public int icon() {
 		return BuffIndicator.LEVITATION;
 	}
-	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.LevitationBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.LevitationBuff_Info);
-    }
 
 	@Override
 	public CharSprite.State charSpriteStatus() {

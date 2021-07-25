@@ -51,16 +51,6 @@ public class Paralysis extends FlavourBuff {
 		return BuffIndicator.PARALYSIS;
 	}
 	
-	@Override
-	public String name() {
-        return StringsManager.getVar(R.string.ParalysisBuff_Name);
-    }
-
-	@Override
-	public String desc() {
-        return StringsManager.getVar(R.string.ParalysisBuff_Info);
-    }
-	
 	public static float duration( Char ch ) {
 		Resistance r = ch.buff( Resistance.class );
 		return r != null ? r.durationFactor() * DURATION : DURATION;
