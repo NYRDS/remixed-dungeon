@@ -36,44 +36,55 @@
 
 package com.nyrds.pixeldungeon.networking;
 
+import android.os.AsyncTask;
+
 import com.nyrds.LuaInterface;
 
-// Not removed yet so old Epic users do not crash
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 @LuaInterface
 public class SClientLua {
+    private String ip;
+    private int port;
+    private SClient mTcpClient;
+    private ConcurrentLinkedQueue<String> buffer = new ConcurrentLinkedQueue<>();
 
     public SClientLua(String f_ip, int f_port){
+        ip = f_ip;
+        port = f_port;
     }
 
     @LuaInterface
     public static SClientLua createNew(String ip, int port){ return new SClientLua(ip, port); } //Function for lua...
 
     public SClientLua connect(){ //Connect to server
-/*        mTcpClient = new SClient(msg -> buffer.add(msg), ip, port);
+        mTcpClient = new SClient(msg -> buffer.add(msg), ip, port);
 
         new SClientTask().execute("");
 
-        while (!mTcpClient.isInitialized.get()){}*/
+        while (!mTcpClient.isInitialized.get()){}
 
         return this;
     }
 
-    public void stop(){
-    //    mTcpClient.stopClient();
-    }
+    public void stop(){mTcpClient.stopClient();}
 
     public void sendMessage(String message){ //Send message to server
-        //mTcpClient.sendMessage(message);
+        mTcpClient.sendMessage(message);
     }
 
     public String receiveMessage(){ //Get message from buffer
-        //return buffer.poll();
-        return null;
+        return buffer.poll();
     }
 
-    public boolean canReceive(){
-        return false;
-        //return (buffer.size() != 0);
+    public boolean canReceive(){ return (buffer.size() != 0); }
+
+    public class SClientTask extends AsyncTask<String, String, SClient> {
+        @Override
+        protected SClient doInBackground(String... message) {
+            mTcpClient.run();
+
+            return null;
+        }
     }
 }
