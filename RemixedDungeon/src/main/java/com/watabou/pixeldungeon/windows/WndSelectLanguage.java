@@ -99,7 +99,7 @@ public class WndSelectLanguage extends Window {
 
 				lastButtonBottom = (int) btn.bottom();
 			}
-			pos += BUTTON_HEIGHT + GAP;
+			pos += BUTTON_HEIGHT;
 		}
 
 		resize(WIDTH, lastButtonBottom + GAP);
