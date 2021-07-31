@@ -50,7 +50,7 @@ public class BlackSkullOfMastery extends MasteryItem {
 				GLog.w("Error: How did you get this item?! You're not supposed to be able to obtain it!!");
 				return;
 			}
-			GameScene.show( new WndChooseWay( this, way ) );
+			GameScene.show( new WndChooseWay(chr,  this, way ) );
 		} else {
 			super._execute(chr, action );
 		}

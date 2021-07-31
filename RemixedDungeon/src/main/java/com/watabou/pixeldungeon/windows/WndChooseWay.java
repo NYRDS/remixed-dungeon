@@ -25,6 +25,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.Item;
@@ -35,19 +36,21 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class WndChooseWay extends Window {
 	
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
 
-	public WndChooseWay(final Item item, final HeroSubClass way){
+	public WndChooseWay(@NotNull Char chr,final Item item, final HeroSubClass way){
 		super();
-		chooseWay( item, way, null );
+		chooseWay(chr, item, way, null );
 	}
 
-	public WndChooseWay( final Item item, final HeroSubClass way1, final HeroSubClass way2 ) {
+	public WndChooseWay(@NotNull Char chr , final Item item, final HeroSubClass way1, final HeroSubClass way2 ) {
 		super();
-		chooseWay( item, way1, way2 );
+		chooseWay(chr, item, way1, way2 );
 	}
 
 	private String getWayDesc(final HeroSubClass way1, final HeroSubClass way2){
@@ -63,7 +66,7 @@ public class WndChooseWay extends Window {
 		return desc;
 	}
 
-	private void chooseWay(final Item item, final HeroSubClass way1, final HeroSubClass way2) {
+	private void chooseWay(@NotNull Char chr, final Item item, final HeroSubClass way1, final HeroSubClass way2) {
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite( item ) );
 		titlebar.label( item.name() );
@@ -98,7 +101,7 @@ public class WndChooseWay extends Window {
 			@Override
 			protected void onClick() {
 				hide();
-				MasteryItem.choose(item, way1 );
+				MasteryItem.choose(chr, item, way1 );
 			}
 		};
 		btnWay1.setRect( 0, normal.y + normal.height() + GAP, (WIDTH - GAP) / 2, BTN_HEIGHT );
@@ -109,7 +112,7 @@ public class WndChooseWay extends Window {
 				@Override
 				protected void onClick() {
 					hide();
-					MasteryItem.choose(item, way2 );
+					MasteryItem.choose(chr, item, way2 );
 				}
 			};
 			btnWay2.setRect( btnWay1.right() + GAP, btnWay1.top(), btnWay1.width(), BTN_HEIGHT );

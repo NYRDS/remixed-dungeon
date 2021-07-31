@@ -110,7 +110,7 @@ public class TomeOfMastery extends MasteryItem {
                 GLog.w(StringsManager.getVar(R.string.TomeOfMastery_WayAlreadyChosen));
 				return;
 			}
-			GameScene.show( new WndChooseWay( this, way1, way2 ) );
+			GameScene.show( new WndChooseWay(chr,  this, way1, way2 ) );
 			
 		} else {
 			super._execute(chr, action );
