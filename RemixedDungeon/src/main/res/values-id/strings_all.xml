@@ -222,7 +222,7 @@
   <string name="WandOfLightning_Info1">Kau menyerang dirimu sendiri dengan Tongkat Petirmu sendiri...</string>
   <string name="WandOfMagicMissile_Name">Tongkat Rudal Ajaib</string>
   <string name="WandOfMagicMissile_Info">Tongkat ini meluncurkan rudal energi magis murni, memberikan kerusakan sedang pada target.</string>
-  <string name="WandOfMagicMissile_ACDisenchant">MENYADARKAN</string>
+  <string name="WandOfMagicMissile_ACDisenchant">NONSIHIR</string>
   <string name="WandOfMagicMissile_Info1">Anda membunuh diri sendiri dengan Rudal Tongkat Sihir Anda sendiri...</string>
   <string name="WandOfMagicMissile_SelectWand">pilih tongkat untuk di tingkatkan</string>
   <string name="WandOfMagicMissile_Desinchanted">Anda menghancurkan Tongkat Sihir Rudal dan menggunakan esensinya untuk meningkatkan %s</string>
