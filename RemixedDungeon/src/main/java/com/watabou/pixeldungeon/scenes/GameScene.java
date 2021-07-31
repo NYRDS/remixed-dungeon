@@ -846,7 +846,7 @@ public class GameScene extends PixelScene {
     }
 
     public static boolean cancelCellSelector() {
-        if (cellSelector != null && cellSelector.listener != null && cellSelector.listener != defaultCellListener) {
+        if (cellSelector != null) {
             cellSelector.cancel();
             return true;
         } else {
@@ -882,13 +882,18 @@ public class GameScene extends PixelScene {
     static public boolean cancel() {
         Hero hero = Dungeon.hero;
 
-        if (hero != null && (hero.curAction != null || hero.restoreHealth)) {
-            hero.curAction = null;
-            hero.restoreHealth = false;
-            return true;
-        } else {
-            return cancelCellSelector();
+        if(hero!=null) {
+            hero.next();
+            if (hero.curAction != null || hero.restoreHealth) {
+
+                hero.curAction = null;
+                hero.restoreHealth = false;
+                return true;
+            } else {
+                return cancelCellSelector();
+            }
         }
+        return false;
     }
 
     public static void ready() {

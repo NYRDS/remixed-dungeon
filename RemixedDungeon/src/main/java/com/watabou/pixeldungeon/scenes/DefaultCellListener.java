@@ -8,7 +8,9 @@ import org.jetbrains.annotations.NotNull;
 class DefaultCellListener implements CellSelector.Listener {
     @Override
     public void onSelect(Integer cell, @NotNull Char selector) {
-        selector.handle(cell);
+        if(cell!=null) {
+            selector.handle(cell);
+        }
         selector.next();
     }
 
