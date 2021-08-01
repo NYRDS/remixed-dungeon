@@ -12,7 +12,7 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 import org.jetbrains.annotations.NotNull;
 
-public class ManaRegen extends Buff {
+public class Moongrace extends Buff {
 
     private static final float STEP = 5f;
 

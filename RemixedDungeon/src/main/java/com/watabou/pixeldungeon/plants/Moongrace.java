@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.plants;
 
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
-import com.nyrds.pixeldungeon.mechanics.buffs.ManaRegen;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
@@ -44,7 +43,7 @@ public class Moongrace extends Plant {
 
 	public void effect(int pos, Presser ch) {
 		if (ch instanceof Char) {
-			Buff.affect((Char)(ch), ManaRegen.class);
+			Buff.affect((Char)(ch), com.nyrds.pixeldungeon.mechanics.buffs.Moongrace.class);
 		}
 
 		if(ch instanceof Mob) {
