@@ -15,7 +15,7 @@
       },
 
       {
-        "kind": "Pickaxe"
+        "kind": "test/TestItem"
       },
       {
         "kind": "Icecap.Seed",

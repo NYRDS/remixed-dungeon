@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
+import com.nyrds.lua.LuaUtils;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
@@ -106,6 +107,7 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.TestOnly;
+import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -1581,6 +1583,18 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			}
 		}
 		return ret;
+	}
+
+	@LuaInterface
+	@NotNull
+	public LuaTable getPets_l() {
+		ArrayList<Char> pets = new ArrayList<>();
+
+		for(Integer id: getPets()) {
+			pets.add(CharsList.getById(id));
+		}
+
+		return LuaUtils.CollectionToTable(pets);
 	}
 
 	@NotNull

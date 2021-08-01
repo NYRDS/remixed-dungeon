@@ -73,6 +73,7 @@ return itemLib.init{
                     "inputText",
                     "checkText",
                     "runAsCommand",
+                    "listPets",
                     tostring(item:getId()),
                     tostring(self.data.activationCount),
                     tostring(self)
@@ -156,6 +157,13 @@ return itemLib.init{
             local res, ret = pcall(load(userText, nil,nil, RPD))
             if not res then
                 RPD.glogn(ret)
+            end
+        end
+
+        if action == "listPets" then
+            local pets = hero:getPets_l()
+            for i,v in ipairs(pets) do
+                RPD.glog(v:getEntityKind())
             end
         end
     end,
