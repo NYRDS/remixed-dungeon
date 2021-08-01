@@ -197,6 +197,7 @@ import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.plants.Fadeleaf;
 import com.watabou.pixeldungeon.plants.Firebloom;
 import com.watabou.pixeldungeon.plants.Icecap;
+import com.watabou.pixeldungeon.plants.Moongrace;
 import com.watabou.pixeldungeon.plants.Sorrowmoss;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -411,6 +412,7 @@ public class ItemFactory {
         registerItemClassByName(Sorrowmoss.Seed.class, "Sorrowmoss.Seed");
         registerItemClassByName(Icecap.Seed.class, "Icecap.Seed");
         registerItemClassByName(Fadeleaf.Seed.class, "Fadeleaf.Seed");
+        registerItemClassByName(Moongrace.Seed.class, "Moongrace.Seed");
 
         registerItemClass(DwarfToken.class);
         registerItemClass(RatArmor.class);

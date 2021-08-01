@@ -1048,6 +1048,7 @@ public class Hero extends Char {
 		accumulateSkillPoints(1);
 	}
 
+	@Override
 	public void accumulateSkillPoints(int n) {
 		setSkillPoints(Math.min(Scrambler.descramble(sp)+n, getSkillPointsMax()));
 	}

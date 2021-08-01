@@ -1903,4 +1903,5 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return effectiveSTR();
 	}
 
+	public void accumulateSkillPoints(int n) {}
 }
