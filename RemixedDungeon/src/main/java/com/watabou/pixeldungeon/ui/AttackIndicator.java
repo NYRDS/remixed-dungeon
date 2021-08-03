@@ -60,7 +60,10 @@ public class AttackIndicator extends Tag {
 		if (sprite != null) {
 			sprite.x = x + (width - sprite.width()) / 2;
 			sprite.y = y + (height - sprite.height()) / 2;
-			PixelScene.align( sprite );
+
+			if(sprite.camera()!= null) {
+				PixelScene.align(sprite);
+			}
 		}
 	}	
 	
