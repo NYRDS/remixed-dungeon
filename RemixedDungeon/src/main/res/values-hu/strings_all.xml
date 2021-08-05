@@ -234,6 +234,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \"%1$s\" \n\" %2$s \"</
   <string name="PortalExit_Desc_Necropolis">Necropolisz</string>
   <string name="PortalExit_Desc_IceCaves">Jégbarlangok</string>
   <string name="DevourBuff_Name">Felfalás</string>
+  <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">Kő vér</string>
   <string name="Welcome_Ok">Oké!</string>
   <string name="Welcome_Title">Üdv!</string>
@@ -555,6 +556,8 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
   <string name="VertigoBuff_Name">Szédülés</string>
   <string name="WeaknessBuff_Name">Legyengült</string>
   <string name="AwarenessBuff_Name">Éberség</string>
+  <string name="DarkVeilBuff_Name">Sötét fátyol</string>
+  <string name="FrostAuraBuff_Name">Fagyos Aura</string>
   <string name="Belongings_Name">hátizsák</string>
   <string name="ItemSprite_Info1">dobd félre: %1$.1f%2$.1f</string>
   <string name="Toolbar_Info1">Nem tudod mi van ott.</string>
@@ -652,7 +655,6 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
   <string name="HeartOfDarkness_Name">A Sötétség Szíve</string>
   <string name="HeartOfDarkness_Info">Az Áruló Lélek fekete lüktető szíve.</string>
   <string name="HeartOfDarkness_Gender">semleges</string>
-  <string name="DarkVeilBuff_Name">Sötét fátyol</string>
   <string name="Badges_Yog_Slain">Yog-Dzewa lemészárolva</string>
   <string name="Badges_ShadowLord_Slain">Árnyék Úr levágva</string>
   <string name="Badges_SpiderQueen_Slain">Pókkirálynő levágva</string>
@@ -1384,7 +1386,6 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
   <string name="Zombie_Desc">A kazamatát mindig is egy veszélyes helynek tartották, számos kalandor vesztette itt életét. De a legszerencsétlenebbek a Temetőben végezték és most az a sorsuk, hogy rothadó hullákként járják a város termeit.</string>
   <string name="NecromancerNPC_Intro2">Nahát, egy kalandortárs, aki nemcsak egy élettelen hulla! Alig hiszem el! Ó bocsánat, néha túlságosan izgulok. Hát tudod, egy nekromata vagyok. Emiatt ugye a halott testek tanulmányozása és a halál maga, értékes számunkra, minden monotómiájával együtt - előbb utóbb bárki elunná. Másrészt persze pont ezért vagyok itt. A minap valami naggggyon figyelemreméltó történt! A _Nekropolis_, a holtak ősi városa megnyitotta ajtaját, hogy megpillanthassuk. Bizony, itt állunk az ajtaja előtt. És izé... tudod mit, fogd ezt a kulcsot és menj csak be Te először, te imádod az ilyen kalandokat, ugye? Aztán persze megyek én is ... csak egy kicsit még felkészülök.</string>
   <string name="Badges_Lich_Slain">Lidérc levágva</string>
-  <string name="FrostAuraBuff_Name">Fagyos Aura</string>
   <string name="ElvenDagger_Name">elf tőr</string>
   <string name="ElvenDagger_Info">Ez a fegyver valami nagyszerű ötvözetből készült, sokkal könnyebb mint a hasonló tőrök.</string>
   <string name="ElvenDagger_Gender">hím</string>
@@ -2165,7 +2166,6 @@ Ezért nagy jutalomban lesz részed!</string>
   <string name="DieHardSpell_Name">Kemény halál</string>
   <string name="DieHardSpell_Info">Ideiglenesen megnöveli a regenerációs képességedet, igazán kemény fickót csinál belőled.</string>
   <string name="DieHardBuff_Name">Kemény halál</string>
-  <string name="DieHardBuff_Info">Regenerációs ráta megnőtt.</string>
   <string name="SmashSpell_Name">Összezúzás</string>
   <string name="SmashSpell_Info">Ugorj fel, hogy visszaérkezéskor nagy erővel sújts le a földre. Ez a mozdulat egyszerre bénítja meg ideiglenesen az ellenségeket és okoz sebzést körülötted.</string>
   <string name="SmashSpell_NeedWeapon">Szükségem van egy fegyverre ehhez a lépéshez.</string>

@@ -249,6 +249,7 @@
   <string name="PortalExit_Desc_Necropolis">Nekropolia </string>
   <string name="PortalExit_Desc_IceCaves">Lodowe Jaskinie</string>
   <string name="DevourBuff_Name">Pożerać ?</string>
+  <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">Kamienna Krew.</string>
   <string name="Welcome_Ok">Dobra!</string>
   <string name="Welcome_Title">Witaj!</string>
@@ -570,6 +571,8 @@
   <string name="VertigoBuff_Name">Zawroty głowy</string>
   <string name="WeaknessBuff_Name">Osłabiony</string>
   <string name="AwarenessBuff_Name">Świadomość</string>
+  <string name="DarkVeilBuff_Name">Czarny welon</string>
+  <string name="FrostAuraBuff_Name">Lodowa Poświata</string>
   <string name="Belongings_Name">plecak</string>
   <string name="ItemSprite_Info1">wyrzuć: %1$.1f %2$.1f</string>
   <string name="Toolbar_Info1">Nie wiesz co tam się znajduje.</string>
@@ -672,7 +675,6 @@ assassynkk32
   <string name="HeartOfDarkness_Name">Serce ciemności</string>
   <string name="HeartOfDarkness_Info">Czane, pulsujące serce Zdradliwego Ducha.</string>
   <string name="HeartOfDarkness_Gender">kastrat</string>
-  <string name="DarkVeilBuff_Name">Czarny welon</string>
   <string name="Badges_Yog_Slain">Yog-Dzewa zabity!</string>
   <string name="Badges_ShadowLord_Slain">Władca Cieni zabity!</string>
   <string name="Badges_SpiderQueen_Slain">Królowa pająków zabita!</string>
@@ -1403,7 +1405,6 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Zombie_Desc">Loch to niebezpieczne miejsce i wielu awanturników dokonało tutaj swoich żywotów. Jednakże większość z tych pechowych, których spotkała śmierć w Nekropolii są zmuszeni do poruszania się po jej salach jako żywe, gnijące ścierwa.</string>
   <string name="NecromancerNPC_Intro2">Ach! Awanturnik, który nie jest martwy. Niesamowite! Och, proszę o wybaczenie. Jak widzisz, sam jestem nekromantą. I mimo, że studiowaniem natury zmarłych i samej śmierci, zarabiam na życie, oglądanie tej samej rzeczy w kółko staje się potwornie nudne. Z drugiej strony jest to powód, dla którego tutaj jestem. Zdarzyło się coś spektakularnego... _Nekropolia_, starożytne miasto umarłych, w końcu otworzyła swoje podwoje. Po fakcie, stoimy tuż obok wejścia. I... wiesz co? Weź ten klucz i wejdź pierwszy, znaczy się - lubisz przygody i tego typu sprawy? Pójdę zaraz za tobą, po prostu muszę się przygotować.</string>
   <string name="Badges_Lich_Slain">Pokonano Licza</string>
-  <string name="FrostAuraBuff_Name">Lodowa Poświata</string>
   <string name="ElvenDagger_Name">elficki sztylet</string>
   <string name="ElvenDagger_Info">Broń tą wykonano ze specyficznego stopu metali, sprawiając że jest dużo lżejszy w porównaniu do zwykłego sztyletu.</string>
   <string name="ElvenDagger_Gender">męski</string>
@@ -2193,7 +2194,6 @@ W zamian za to, dostaniesz strawę porządną!</string>
   <string name="DieHardSpell_Name">Nie do zdarcia</string>
   <string name="DieHardSpell_Info">Tymczasowo zwiększysz swoją regenerację, co sprawi, że będziesz naprawdę trudny do zabicia.</string>
   <string name="DieHardBuff_Name">Nie do zdarcia</string>
-  <string name="DieHardBuff_Info">Regeneracja wzrosła!</string>
   <string name="SmashSpell_Name">Rozbij</string>
   <string name="SmashSpell_Info">Skocz w górę i stwórz potężne uderzenie które wbije przeciwników w podłogę tymczasowo ich ogłuszając i zadając obrażenia.</string>
   <string name="SmashSpell_NeedWeapon">Potrzebuje broni do tego ruchu.</string>

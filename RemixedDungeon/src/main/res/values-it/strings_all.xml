@@ -249,6 +249,7 @@
   <string name="PortalExit_Desc_Necropolis">Necropoli</string>
   <string name="PortalExit_Desc_IceCaves">Caverne di ghiaccio</string>
   <string name="DevourBuff_Name">Divorare</string>
+  <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">Sangue di pietra</string>
   <string name="Welcome_Ok">Vabbene!</string>
   <string name="Welcome_Title">Benvenuto!</string>
@@ -569,6 +570,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="SlowBuff_Name">Rallentato</string>
   <string name="VertigoBuff_Name">Vertigini</string>
   <string name="WeaknessBuff_Name">Indebolito</string>
+  <string name="DarkVeilBuff_Name">Velo scuro</string>
   <string name="Belongings_Name">zaino</string>
   <string name="ItemSprite_Info1">fai cadere/abbassare: %1$.1f %2$.1f</string>
   <string name="Toolbar_Info1">Non sai cosa ci sia.</string>
@@ -664,7 +666,6 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="HeartOfDarkness_Name">Cuore tenebroso</string>
   <string name="HeartOfDarkness_Info">Cuore nero pulsante dello Spirito Sleale.</string>
   <string name="HeartOfDarkness_Gender">neutro</string>
-  <string name="DarkVeilBuff_Name">Velo scuro</string>
   <string name="Badges_Yog_Slain">Yog-Dzewa ucciso</string>
   <string name="Badges_ShadowLord_Slain">Signore Dell\'Ombra ucciso</string>
   <string name="Badges_SpiderQueen_Slain">Ragno Regina uccisa</string>

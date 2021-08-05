@@ -229,6 +229,7 @@
   <string name="PortalExit_Desc_Necropolis">네크로폴리스</string>
   <string name="PortalExit_Desc_IceCaves">얼음 동굴</string>
   <string name="DevourBuff_Name">포식</string>
+  <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">혈석</string>
   <string name="Welcome_Ok">알겠습니다!</string>
   <string name="Welcome_Title">환영합니다!</string>
@@ -546,6 +547,8 @@
   <string name="SlowBuff_Name">느려짐</string>
   <string name="VertigoBuff_Name">어지러움</string>
   <string name="WeaknessBuff_Name">쇠약해짐</string>
+  <string name="DarkVeilBuff_Name">암흑의 덮개</string>
+  <string name="FrostAuraBuff_Name">냉기의 기운</string>
   <string name="Belongings_Name">가방</string>
   <string name="ItemSprite_Info1">drop aside: %1$.1f %2$.1f</string>
   <string name="Toolbar_Info1">그곳에 무엇이 있는지 알 수 없습니다.</string>
@@ -641,7 +644,6 @@
   <string name="HeartOfDarkness_Name">어둠의 심장</string>
   <string name="HeartOfDarkness_Info">무서운 영혼의 검은 고동치는 심장</string>
   <string name="HeartOfDarkness_Gender">중성</string>
-  <string name="DarkVeilBuff_Name">암흑의 덮개</string>
   <string name="Badges_Yog_Slain">요그제바 처치</string>
   <string name="Badges_ShadowLord_Slain">그림자 군주 처치</string>
   <string name="Badges_SpiderQueen_Slain">거미 여왕 처치</string>
@@ -1355,7 +1357,6 @@
   <string name="Zombie_Desc">던전은 위험한 장소이고 많은 모험가들이 이곳에서 죽었습니다. 가장 불운한 모험가들이 네크로폴리스에서 운명을 맞이하게 되었고, 그들은 이제 썩어가는 시체의 형태로 복도를 돌아다니는 운명을 맞이하게 되었습니다.</string>
   <string name="NecromancerNPC_Intro2">아! 보기 드문 광경이군! 죽지 않은 동료 모험가라니. 대단하군! 아... 실례하게 되었네.  보시다시피 나는 강령술사라네. 시체와 죽음을 연구하는 것은 내가 살면서 하는 것이지만, 같은 것을 계속 보다보니 결국 질려버리고 말았지. 그래서 내가 여기에 있네.최근에 광장한 일이 일어났네.  죽음의 고대 도시인 _네크로폴리스_의 문이 마침내 열렸다는 사건이지. 사실, 바로 옆에 있는 것이 입구라네. 그리고.. 이 열쇠를 가지고 먼저 가게, 모험과 물건들을 좋아하지 않은가? 나는 준비할 필요가 있으므로 자네를 뒤따라 가겠네.</string>
   <string name="Badges_Lich_Slain">리치 처치</string>
-  <string name="FrostAuraBuff_Name">냉기의 기운</string>
   <string name="ElvenDagger_Name">엘프제 단검</string>
   <string name="ElvenDagger_Info">이 무기는 특수한 합금으로 만들어졌기 때문에 통상의 단검보다 훨씬 가볍다.</string>
   <string name="ElvenDagger_Gender">남성</string>

@@ -87,9 +87,13 @@
   <string name="ChaosCrystal_BowFused">Kristal menyerap masuk ke dalam busur anda, dan membentuk Busur</string>
   <string name="ChaosCrystal_StaffFused">Kristal menyerap masuk ke dalam tongkat sakti anda, dan membentuk Tongkat</string>
   <string name="CorpseDustBuff_Name">Gila Darah</string>
+  <string name="CorpseDustBuff_Info">Serangan sangat meningkat bagi mereka yang dipenuhi dengan haus darah, menjadikannya sangat berbahaya.</string>
   <string name="DriedRoseBuff_Name">Memukau</string>
+  <string name="DriedRoseBuff_Info">Mawar kelihatan sangat menawan.</string>
   <string name="DriedRoseCursedBuff_Name">Birahi</string>
+  <string name="DriedRoseCursedBuff_Info">Mawar kelihatan cantik tetapi tidak begitu menawan.</string>
   <string name="RatSkullBuff_Name">Ratter</string>
+  <string name="RatSkullBuff_Info">Bau tajam menakutkan semua tikus lain di sekitarnya, membuat mereka melarikan diri dari pembawa tengkorak.</string>
   <string name="RatKingCrownBuff_Name">Ratness</string>
   <string name="RatKingCrown_Name">Mahkota raja tikus</string>
   <string name="RatKingCrown_Info">Mahkota emas Raja Tikus, simbol kekuasaan Raja Tikus</string>
@@ -105,6 +109,7 @@
   <string name="Bishop_not_interested">Keluar</string>
   <string name="Bishop_no_money">Anda tidak mampu membayarnbya.</string>
   <string name="Bishop_bye">Saya akan mendoakan kesejahteraan kamu.</string>
+  <string name="BlessedBuff_Name">Diberkati</string>
   <string name="deco_candle_name">Lilin</string>
   <string name="deco_candle_desc">Lilin besar</string>
   <string name="Possess_Name">Rasuk</string>
@@ -249,6 +254,7 @@
   <string name="PortalExit_Desc_Necropolis">Nekropolis</string>
   <string name="PortalExit_Desc_IceCaves">Gua Ais</string>
   <string name="DevourBuff_Name">Baham</string>
+  <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">Darah batu</string>
   <string name="Welcome_Ok">Baiklah!</string>
   <string name="Welcome_Title">Selamat Datang!</string>
@@ -569,6 +575,8 @@
   <string name="VertigoBuff_Name">Pening Gayat</string>
   <string name="WeaknessBuff_Name">Lemah</string>
   <string name="AwarenessBuff_Name">Kesedaran</string>
+  <string name="DarkVeilBuff_Name">Selubung gelap</string>
+  <string name="FrostAuraBuff_Name">Aura Fros</string>
   <string name="Belongings_Name">beg galas</string>
   <string name="ItemSprite_Info1">buang: %1$.1f %2$.1f</string>
   <string name="Toolbar_Info1">Anda tidak tahu apa yang ada di sana.</string>
@@ -666,7 +674,6 @@
   <string name="HeartOfDarkness_Name">Hati kegelapan</string>
   <string name="HeartOfDarkness_Info">Hati hitam Hantu Khianat yang berdenyut-denyut </string>
   <string name="HeartOfDarkness_Gender">neuter</string>
-  <string name="DarkVeilBuff_Name">Selubung gelap</string>
   <string name="Badges_Yog_Slain">Yog-Dzewa telah dibunuh</string>
   <string name="Badges_ShadowLord_Slain">Penguasa bayang telah dibunuh</string>
   <string name="Badges_SpiderQueen_Slain">Ratu Lelabah telah dibunuh</string>
@@ -1397,7 +1404,6 @@
   <string name="Zombie_Desc">Kurungan bawah tanah adalah tempat merbahaya dan ramai pengembara telah menemui maut di dalamnya. Yang paling malang menemui ajal di Nekropolis, kini mereka kekal di dalam kurungan bawah tanah dalam bentuk mayat hidup yang mereput.</string>
   <string name="NecromancerNPC_Intro2">Hmm! Ada rakan pengembara yang masih hidup. Hebat! Alamak... Maafkan saya, saya ialah seorang pembangkit mayat. Mengkaji perihal kematian dan makhluk tersebut dan juga sebagai mata pencarian saya, hari-hari lihat benda yang sama, sangat membosankan. Sebab itulah saya ke mari. Berdasarkan pengiraan saya berada di sini selama beberapa minggu, disuatu tempat dalam kurungan bawah tanah ini, ada perkara yang hebat akan berlaku. Sebuah _Nekropolis_, iaitu bandar kematian purba akan membuka pintu masuknya. Setakat ini... yang saya tahu, kita berada betul-betul di hadapan pintu masuk. Baiklah, ambil kunci ini dan pergi dulu, maksud saya awak suka cabaran dan khazanah di dalamnya? Saya ikut di belakang awak, cuma saya perlu bersiap siaga.</string>
   <string name="Badges_Lich_Slain">Lich telah dibunuh</string>
-  <string name="FrostAuraBuff_Name">Aura Fros</string>
   <string name="ElvenDagger_Name">pisau bunian</string>
   <string name="ElvenDagger_Info">Senjata ini diperbuat dari aloi logam istimewa, menjadikannya lebih ringan berbanding pisau biasa.</string>
   <string name="ElvenDagger_Gender">maskulin</string>
@@ -2171,7 +2177,6 @@
   <string name="DieHardSpell_Name">Sukar Mati</string>
   <string name="DieHardSpell_Info">Akan meningkatkan kadar penjanaan semula buat sementara yang menyebabkan anda Sukar Mati.</string>
   <string name="DieHardBuff_Name">Sukar Mati</string>
-  <string name="DieHardBuff_Info">Kadar penjanaan semula meningkat</string>
   <string name="SmashSpell_Name">Hentaman</string>
   <string name="SmashSpell_Info">Lompat ke atas dan hentam dengan kuat ketika menjejak tanah, menyebabkan pihak musuh di sekitar menjadi pengsan, pada masa yang sama menghasilkan kecederaan fizikal.</string>
   <string name="SmashSpell_NeedWeapon">Saya perlukan satu senjata untuk gerakan ini.</string>

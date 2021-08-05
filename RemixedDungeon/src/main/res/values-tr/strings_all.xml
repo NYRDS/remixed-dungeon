@@ -235,6 +235,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
   <string name="PortalExit_Desc_Necropolis">Ölü Diyarı</string>
   <string name="PortalExit_Desc_IceCaves">Buz Mağaraları</string>
   <string name="DevourBuff_Name">Obur</string>
+  <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">Delikanlı</string>
   <string name="Welcome_Ok">Tamamdır!</string>
   <string name="Welcome_Title">Hoşgeldiniz!</string>
@@ -558,6 +559,8 @@ Görüşlerinizi önemsiyoruz!</string>
   <string name="VertigoBuff_Name">Baş dönmesi</string>
   <string name="WeaknessBuff_Name">Zayıf</string>
   <string name="AwarenessBuff_Name">Farkındalık</string>
+  <string name="DarkVeilBuff_Name">Kara maske</string>
+  <string name="FrostAuraBuff_Name">Donmuş Buhar</string>
   <string name="Belongings_Name">sırt çantası</string>
   <string name="ItemSprite_Info1">kenara bırak: %1$.1f %2$.1f</string>
   <string name="Toolbar_Info1">Burada ne var bilmiyorsun.</string>
@@ -655,7 +658,6 @@ Görüşlerinizi önemsiyoruz!</string>
   <string name="HeartOfDarkness_Name">Karanlığın kalbi</string>
   <string name="HeartOfDarkness_Info">Hain ruhun hala atan siyah kalbi.</string>
   <string name="HeartOfDarkness_Gender">nötr</string>
-  <string name="DarkVeilBuff_Name">Kara maske</string>
   <string name="Badges_Yog_Slain">Yog-Dzewa öldürüldü</string>
   <string name="Badges_ShadowLord_Slain">Gölgelerin Efendisi öldü.</string>
   <string name="Badges_SpiderQueen_Slain">Örümcek Kraliçe öldürüldü</string>
@@ -1387,7 +1389,6 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Zombie_Desc">Zindan bir çok maceracı için tehlikeli bir yerdir. Birçok maceracı burada felaketleri ile buluşmuştur. Onların en şanssızları ise Necropolis\'te ölenlerdir.Burada çürüyen bir vücut içinde dolaşmakla lanetlenmişlerdir.</string>
   <string name="NecromancerNPC_Intro2">Ah! Yaşayan bir maceracı. Olağanüstü. Özürlerimi sunarım. Gördüğün gibi bendeniz bir necromancer\'im. Ölüm üzerinde çalışmak benim yaşamk için yaptığım şey, aynı şeyleri sürekli görmek olağanüstü sıkıcı. Diğer taraftan benim burada bulunma sebebim bu. Kısa zaman önce muhteşem bir şey oldu. Bir Necropolis (ölülerin antik şehri) ortaya çıktı. Gerçeği istersen oranın girişinin hemen yanında duruyoruz. Vee.. şunu söyleyeyim, bu anahtarı al ve önce sen gir, kastettiğim sen şu macera şeylerini seversin di mi? Ve ben hemen arkanda olacağım. Sadece hazır olmaya ihtiyacım var.</string>
   <string name="Badges_Lich_Slain">Lich öldürüldü</string>
-  <string name="FrostAuraBuff_Name">Donmuş Buhar</string>
   <string name="ElvenDagger_Name">elf hançeri</string>
   <string name="ElvenDagger_Info">Bu silah özel bir metal alaşımdan yapılmıştır ve normal hançerlerle karşılaştırıldığında çok daha hafiftir.</string>
   <string name="ElvenDagger_Gender">erkeksi</string>
@@ -2167,7 +2168,6 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="DieHardSpell_Name">Ölümü Zor (Ya \"die hard\" ne diye çevrilir ki a*k)</string>
   <string name="DieHardSpell_Info">Geçici olarak yenilenme hızını arttıracak ve seni zor ölen birisi yapacak.</string>
   <string name="DieHardBuff_Name">Ölümü Zor (Ya \"die hard\" ne diye çevrilir ki a*k)</string>
-  <string name="DieHardBuff_Info">Yenilenme hızı arttı</string>
   <string name="SmashSpell_Name">Ez</string>
   <string name="SmashSpell_Info">Yukarı zıpla ve yere çarptığında etraftaki düşmanları sersemletip, fiziksel hasar veren bir darbe yap. </string>
   <string name="SmashSpell_NeedWeapon">Bu eylem için bir silaha ihtiyacım var. </string>

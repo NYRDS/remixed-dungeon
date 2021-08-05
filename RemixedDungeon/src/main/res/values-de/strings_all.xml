@@ -251,6 +251,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
   <string name="PortalExit_Desc_Necropolis">Nekropole</string>
   <string name="PortalExit_Desc_IceCaves">Eis Höhle</string>
   <string name="DevourBuff_Name">Verschlingen</string>
+  <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">Steinblut</string>
   <string name="Welcome_Ok">Okay!</string>
   <string name="Welcome_Title">Herzlich willkommen!</string>
@@ -574,6 +575,8 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
   <string name="VertigoBuff_Name">Schwindelig</string>
   <string name="WeaknessBuff_Name">geschwächt </string>
   <string name="AwarenessBuff_Name">Aufmerksamkeit</string>
+  <string name="DarkVeilBuff_Name">Dunkler Schleier</string>
+  <string name="FrostAuraBuff_Name">Frostaura</string>
   <string name="Belongings_Name">Rucksack</string>
   <string name="ItemSprite_Info1">Falle zurseite: %1$.1f %2$.1f</string>
   <string name="Toolbar_Info1">Du weißt nicht, was dort ist.</string>
@@ -671,7 +674,6 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
   <string name="HeartOfDarkness_Name">Herz der Dunkelheit</string>
   <string name="HeartOfDarkness_Info">Das schwarz pulsierende Herz des heimtückischen Geistes.</string>
   <string name="HeartOfDarkness_Gender">männlich</string>
-  <string name="DarkVeilBuff_Name">Dunkler Schleier</string>
   <string name="Badges_Yog_Slain">Yog-Dzewa getötet </string>
   <string name="Badges_ShadowLord_Slain">Schattenherr getötet</string>
   <string name="Badges_SpiderQueen_Slain">Spinnenkönigin getötet</string>
@@ -1407,7 +1409,6 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
   <string name="Zombie_Desc">Der Dungeon ist ein gefährlicher Platz und viele Abenteurer haben ihr Verhängnis in diesem Platz gefunden. Aber die Unglücklichsten haben ihr Ende in der Nekropole gefunden, wo sie nun als verrottende Leiche herumwandern.</string>
   <string name="NecromancerNPC_Intro2">Ah! Ein Abenteurer, der nicht tot ist. Hervorragend! Oh ... ich bitte um Verzeihung. Sie sehen, ich bin selbst ein Nekromant. Und auch wenn die Toten und selbst der Tod ist, was ich ein Leben lang studieren werde, sehen gleiche Sachen immer und immer wieder extrem langweilig aus. Auf der anderen Seite, das ist genau, warum ich hier bin. Etwas spektakuläres ist vor kurzem passiert. Eine Nekropole, eine alte Stadt der Toten hat endlich seine Türen geöffnet. In der Tat stehen wir direkt neben dem Eingang. Und ... Weißt du was, nimm diesen Schlüssel und geh zuerst, ich meine, du magst Abenteuer und so? Und ich werde direkt nach dir kommen, ich muss mich nur noch fertig machen.</string>
   <string name="Badges_Lich_Slain">Lich erschlagen</string>
-  <string name="FrostAuraBuff_Name">Frostaura</string>
   <string name="ElvenDagger_Name">Elfendolch</string>
   <string name="ElvenDagger_Info">Diese Waffe ist aus einer speziellen Metalllegierung, die es viel leichter als einen normalen Dolch macht.</string>
   <string name="ElvenDagger_Gender">männlich</string>
@@ -2191,7 +2192,6 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="DieHardSpell_Name">Hartnäckig</string>
   <string name="DieHardSpell_Info">Wird temporär deine Regeration erhöhen um dich sehr widerstandsfähig zu machen.</string>
   <string name="DieHardBuff_Name">Stirb Hart</string>
-  <string name="DieHardBuff_Info">Regenerationsrate erhöht</string>
   <string name="SmashSpell_Name">Zerschmettern</string>
   <string name="SmashSpell_Info">Springe aufwärts und erzeuge einen kraftvollen Schlag nachdem der Boden getroffen ist, was temporär Gegner in der Nähe betäubt und ihnen physischen Schaden zufügt.</string>
   <string name="SmashSpell_NeedWeapon">Ich brauche eine Waffe für diese Aktion.</string>

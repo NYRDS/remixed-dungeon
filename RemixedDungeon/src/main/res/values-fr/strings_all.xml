@@ -87,15 +87,15 @@
   <string name="ChaosCrystal_BowFused">Le cristal a absorbé votre arme, et a pris la forme d\'un arc.</string>
   <string name="ChaosCrystal_StaffFused">Le cristal a absorbé votre arme, et à pris la forme d\'un bâton.</string>
   <string name="CorpseDustBuff_Name">Bloodlust</string>
-  <string name="CorpseDustBuff_Info">Vous êtes rempli d\'une soif de sang améliorant vos attaques</string>
+  <string name="CorpseDustBuff_Info">Les attaques sont considérablement augmentées pour ceux qui sont enragés, ce qui les rend particulièrement dangereux.</string>
   <string name="DriedRoseBuff_Name">Charmant</string>
   <string name="DriedRoseBuff_Info">La rose est très charmante</string>
   <string name="DriedRoseCursedBuff_Name">Amoureux</string>
   <string name="DriedRoseCursedBuff_Info">La rose est magnifique mais n\'est pas très charmante</string>
   <string name="RatSkullBuff_Name">Ratier</string>
-  <string name="RatSkullBuff_Info">La puanteur du crâne du plus formidable rat des égouts terrifie tout les autres rats</string>
+  <string name="RatSkullBuff_Info">La puanteur âcre terrifie tous les autres rongeurs alentour, les faisant fuir devant le porteur du crâne.</string>
   <string name="RatKingCrownBuff_Name">Ratitude</string>
-  <string name="RatKingCrownBuff_Info">Vous êtes désormais le roi des rats. Tout les rats doivent vous obéir.</string>
+  <string name="RatKingCrownBuff_Info">Saluez le Seigneur des rats, que chaque rat obéisse et l\'acclame.</string>
   <string name="RatKingCrown_Name">Couronne du Roi des rats</string>
   <string name="RatKingCrown_Info">Couronne d\'or de sa Ratitude, symbole de Puissance infinirate</string>
   <string name="BishopNPC_Name">Évêque</string>
@@ -111,7 +111,7 @@
   <string name="Bishop_no_money">Vous n\'avez pas assez d\'argent pour cela.</string>
   <string name="Bishop_bye">Je prierai pour vous, mon enfant.</string>
   <string name="BlessedBuff_Name">Béni</string>
-  <string name="BlessedBuff_Info">Vous avez été béni. Votre précision et votre évasion ont été améliorés.</string>
+  <string name="BlessedBuff_Info">Que la précision et l\'évasion viennent pour ceux qui sont touchés par la bénédiction !</string>
   <string name="deco_candle_name">Bougie</string>
   <string name="deco_candle_desc">Grand cierge</string>
   <string name="Possess_Name">Possession</string>
@@ -182,7 +182,7 @@
   <string name="NecromancerArmor_Info2">En portant cette armure, le nécromancier devient capable d\'employer la capacité \"Nécrotisme\", diffusant une fléau magique qui peut infectuer toute créature à proximité, morte ou vivante. </string>
   <string name="NecromancerRobe_Info2">Cette robe est imprégnée de magie noire et permet au nécromancier d\'absorber les âmes des monstres trépassés. </string>
   <string name="NecrotismBuff_Name">Nécrotisme</string>
-  <string name="NecrotismBuff_Info">Tu pue la mort, fesant puer les autres</string>
+  <string name="NecrotismBuff_Info">La marque de la mort elle-même, dont la puanteur affecte ceux qui se trouvent à proximité et les amène à partager le même sort.</string>
   <string name="Necrotism_ACSpecial">NECROTISME</string>
   <string name="ResultDescriptions_Necrotism">Mort de Nécrotisme à l\'étage %d</string>
   <string name="Necrotism_Death">Le Nécrotisme vous a tué(e)...</string>
@@ -257,8 +257,9 @@
   <string name="PortalExit_Desc_Necropolis"> Nécropolis</string>
   <string name="PortalExit_Desc_IceCaves">s Caves glacées</string>
   <string name="DevourBuff_Name">Dévorer</string>
+  <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">Pierre de sang</string>
-  <string name="StoneBloodBuff_Info">Ton sang s\'est transformé en pierre, te rendant capable de marcher à travers les murs mais à un prix</string>
+  <string name="StoneBloodBuff_Info">Le sang se transforme en pierre qui fusionne avec les murs voisins et permet de les traverser beaucoup plus facilement, mais à quel prix.</string>
   <string name="Welcome_Ok">Okey!</string>
   <string name="Welcome_Title">Bienvenue!</string>
   <string name="BlackCat_Name">Chat noir</string>
@@ -551,50 +552,79 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
   <string name="WaterOfTransmutation_Info">Le pouvoir du changement rayonne de l\'eau de ce puits. Jetez y un objet pour le transformer en autre chose.</string>
   <string name="Web_Info">Tout est couvert d\'une toile épaisse ici</string>
   <string name="AmokBuff_Name">perte de contrôle</string>
-  <string name="AmokBuff_Info">Tu deviens fou</string>
+  <string name="AmokBuff_Info">Ressentez l\'amok, en prenant la vie de ces malheureux.</string>
   <string name="BarkskinBuff_Name">peau de bois</string>
-  <string name="BarkskinBuff_Info">Ton corps est recouvert d\'écorces pour bloquer quelques dégats</string>
+  <string name="BarkskinBuff_Info">Le corps est recouvert d\'une écorce qui bloque une partie des dégâts subis.</string>
   <string name="BleedingBuff_Name">hémorragie</string>
-  <string name="BleedingBuff_Info">Vous saignez</string>
+  <string name="BleedingBuff_Info">Les blessures saignent rapidement.</string>
   <string name="Bleeding_Death">L\'hémorragie vous a fait perdre trop de sang...</string>
   <string name="BlindnessBuff_Name">Aveuglé</string>
-  <string name="BlindnessBuff_Info">Vous êtes aveuglé</string>
+  <string name="BlindnessBuff_Info">Complètement aveuglé, seuls les bruits environnants peuvent êtres perçus.</string>
   <string name="BurningBuff_Name">Brûlé</string>
-  <string name="BurningBuff_Info">Tu est en feu</string>
+  <string name="BurningBuff_Info">Le corps est englouti dans des flammes déchaînées !</string>
   <string name="Burning_Burns">%s prend feu !</string>
   <string name="Burning_Death">Vous êtes incinéré...</string>
   <string name="CharmBuff_Name">Charmé</string>
-  <string name="CharmBuff_Info">Vous avez été charmé!</string>
+  <string name="CharmBuff_Info">Le corps et l\'esprit ont été charmés !</string>
   <string name="ComboBuff_Name">Combo</string>
-  <string name="ComboBuff_Info">Votre prochaine attaque sera une attaque combo</string>
+  <string name="ComboBuff_Info">La prochaine attaque sera une attaque combo.</string>
   <string name="Combo_Combo">Combo de %d coups !</string>
   <string name="CrippleBuff_Name">Estropié</string>
-  <string name="CrippleBuff_Info">Vous êtes estropié!</string>
+  <string name="CrippleBuff_Info">Le corps est mutilé mais le combat continue.</string>
   <string name="FrostBuff_Name">Gelé</string>
-  <string name="FrostBuff_Info">Tu est gelé, te rendant incapable de faire quoi que ce soit</string>
+  <string name="FrostBuff_Info">Le gel complet empêche de faire quoi que ce soit.</string>
   <string name="Frost_Shatter">Le froid fait éclater %s !</string>
   <string name="FuryBuff_Name">Furieux</string>
-  <string name="FuryBuff_Info">Vous êtes enragé</string>
-  <string name="GasImmune_Name">Immunité aux gaz</string>
-  <string name="GasImmune_Info">Vous êtes immunisés à tout les gaz</string>
+  <string name="FuryBuff_Info">Les yeux sont devenus rouges sang de toute cette colère rentrée.</string>
+  <string name="GasImmuneBuff_Name">Immunité aux gaz</string>
+  <string name="GasImmuneBuff_Info">Immunisé à tous les gaz.</string>
   <string name="Hunger_Death">Vous êtes mort de faim...</string>
   <string name="HungerBuff_Name1">A faim</string>
   <string name="HungerBuff_Info1">Vous avez faim!</string>
   <string name="HungerBuff_Name2">Meurt de faim</string>
   <string name="HungerBuff_Info2">Vous êtes affamé! Vous avez besoin de manger de la nourriture!</string>
   <string name="InvisibilityBuff_Name">Invisible</string>
-  <string name="InvisibilityBuff_Info">Vous êtes invisible</string>
+  <string name="InvisibilityBuff_Info">Complètement invisible, ce qui peut aider à éviter le danger, ou à en devenir un.</string>
   <string name="LevitationBuff_Name">En lévitation</string>
+  <string name="LevitationBuff_Info">Le corps flotte au-dessus du sol, évitant les pièges et autres dangers terrestres.</string>
   <string name="LightBuff_Name">Illuminé</string>
+  <string name="LightBuff_Info">De la lumière émane du corps, illuminant les environs.</string>
+  <string name="MindVisionBuff_Name">Vision spirituelle</string>
+  <string name="MindVisionBuff_Info">La vision intérieure permet de voir clairement toutes les actions des êtres vivants de l\'étage.</string>
+  <string name="OozeBuff_Name">Suintement caustique</string>
+  <string name="OozeBuff_Info">Le suintement caustique dévore la chair !</string>
   <string name="Ooze_Death">%s vous a tué...</string>
+  <string name="ParalysisBuff_Name">Paralysé</string>
+  <string name="ParalysisBuff_Info">Complètement paralysé !</string>
   <string name="PoisonBuff_Name">Empoisonné</string>
+  <string name="PoisonBuff_Info">Le corps meurt lentement du poison !</string>
   <string name="Poison_Death">Vous succombez au poison...</string>
+  <string name="RegenerationBuff_Name">Régénération naturelle</string>
+  <string name="RegenerationBuff_Info">La fonction de régénération naturelle est sous forme de buff pour faciliter les choses.</string>
   <string name="RootsBuff_Name">Enraciné</string>
+  <string name="RootsBuff_Info">Des racines jaillissant du sol enchevêtrent le corps, ne permettant pas de faire un seul pas.</string>
   <string name="ShadowsBuff_Name">Ombre fondue</string>
+  <string name="ShadowsBuff_Info">Il est plus difficile de voir quelque chose dans les ombres.</string>
   <string name="SlowBuff_Name">Ralenti</string>
+  <string name="SlowBuff_Info">La lourdeur rend l\'individu plus lent que d\'habitude.</string>
+  <string name="SleepBuff_Name">En train de dormir</string>
+  <string name="SleepBuff_Info">Complètement endormi.</string>
+  <string name="SnipersMarkBuff_Name">Marque du tireur d\'élite</string>
+  <string name="SnipersMarkBuff_Info">La marque a été faite par un tireur d\'élite.</string>
+  <string name="SpeedBuff_Name">Vitesse</string>
+  <string name="SpeedBuff_Info">Vivacité et énergie émanent du corps, et les mouvement semblent plus rapides que la normale.</string>
+  <string name="TerrorBuff_Name">Terrifié</string>
+  <string name="TerrorBuff_Info">On dirait que quelqu\'un a eu très peur.</string>
   <string name="VertigoBuff_Name">Vertige</string>
+  <string name="VertigoBuff_Info">La tête légère rend difficile le fait de marcher droit !</string>
   <string name="WeaknessBuff_Name">Affaibli</string>
+  <string name="WeaknessBuff_Info">La faiblesse enveloppe le corps, faisant devenir une cible facile.</string>
   <string name="AwarenessBuff_Name">Conscience</string>
+  <string name="AwarenessBuff_Info">Les sens se sont aiguisés, donnant plus de conscience des environs.</string>
+  <string name="DarkVeilBuff_Name">Voile sombre</string>
+  <string name="DarkVeilBuff_Info">Un voile de ténèbres encercle le porteur, invoquant un esprit chaque fois qu\'un dégât est reçu.</string>
+  <string name="FrostAuraBuff_Name">Aura glacée</string>
+  <string name="FrostAuraBuff_Info">Le froid encercle le corps, ralentissant tout ce qui se trouve à portée.</string>
   <string name="Belongings_Name">sac à dos</string>
   <string name="ItemSprite_Info1">posé à côté : %1$.1f %2$.1f</string>
   <string name="Toolbar_Info1">Vous ne savez pas ce qu\'il y\'a ici.</string>
@@ -692,7 +722,6 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
   <string name="HeartOfDarkness_Name">Coeur des ténébres</string>
   <string name="HeartOfDarkness_Info">Le coeur noir et palpitant de l\'Esprit perfide.</string>
   <string name="HeartOfDarkness_Gender">masuculine</string>
-  <string name="DarkVeilBuff_Name">Voile sombre</string>
   <string name="Badges_Yog_Slain">Yog-Dzewa tué</string>
   <string name="Badges_ShadowLord_Slain">Seigneur de l\'Ombre tué</string>
   <string name="Badges_SpiderQueen_Slain">Reine des Araignées tuée</string>
@@ -1428,7 +1457,6 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="Zombie_Desc">Le donjon est un endroit dangereux dans lequel bien des aventuriers ont trépassé. Mais les plus infortunés d\'entre eux sont ceux qui sont morts dans la Nécropole. Ils sont désormais condamnés à errer dans ces couloirs sous la forme de corps pourrisants.</string>
   <string name="NecromancerNPC_Intro2">Ah ! Un aventurier bel et bien vivant ! A peine croyable ! Oh... Je vous demande pardon, je suis parfois si excité. Voyez-vous, je suis moi-même un nécromancien. Et même si étudier les morts et la mort elle-même est notre vocation, voir et revoir les mêmes choses finit par être lassant. D\'autre part, c\'est exactement pour cela que je suis ici. L\'autre jour quelque chose de grandiose est arrivé ! _Nécropolis_, une ancienne cité de la Mort a fait apparaître ses portes juste ici. Et... vous savez quoi, prenez cette clé et entrez le premier. Vous appréciez l\'aventure et tout ce genre de chose, non ? Alors, allez s\'y, passez devant... je vous suis dans quelques instants, juste le temps que vous mour... pardon, juste le temps que je me prépare.</string>
   <string name="Badges_Lich_Slain">Liche tuée</string>
-  <string name="FrostAuraBuff_Name">Aura glacée</string>
   <string name="ElvenDagger_Name">Dague Elfique</string>
   <string name="ElvenDagger_Info">Cette arme est faite d\'un alliage spécial, la rendant plus légère qu\'une dague classique.</string>
   <string name="ElvenDagger_Gender">feminine</string>
@@ -1990,6 +2018,8 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="Stench_Txt">%s fétide</string>
   <string name="Viscosity_Txt">%s visqueuse</string>
   <string name="Viscosity_Status">%d différée</string>
+  <string name="DeferedDamageBuff_Name">Dégâts différés (%d)</string>
+  <string name="DeferedDamageBuff_Info">La douleur a été changée en douleur sourde, atténuant les dégâts reçus en une fois.\n%d dégâts restants à recevoir</string>
   <string name="DeferedDamage_Killed_Txt">%s vous a tué...</string>
   <string name="Plant_ACPlant">PLANTER</string>
   <string name="Plant_Info">Lancez cette graine à l\'endroit voulu pour faire pousser un %1$s.
@@ -2000,6 +2030,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="Earthroot_Name">Terracine</string>
   <string name="Earthroot_Desc">Quand une créature touche une Terracine, ses racines créent une sorte d\'armure autour d\'elle. </string>
   <string name="EarthrootBuff_Name">Armure végétale</string>
+  <string name="EarthrootBuff_Info">Des racines ont jailli du sol, fournissant une armure naturelle.</string>
   <string name="Fadeleaf_Name">Pâlefeuille</string>
   <string name="Fadeleaf_Desc">Toucher une Pâlefeuille téléportera n\'importe quelle créature à un endroit aléatoire de l\'étage actuel. </string>
   <string name="Firebloom_Name">Fleur de feu</string>
@@ -2011,6 +2042,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="Sungrass_Name">Herbesoleil</string>
   <string name="Sungrass_Desc">L\'Herbesoleil est renommée pour les propriétés curatives de sa sève.</string>
   <string name="SungrassBuff_Name">Soin végétal</string>
+  <string name="SungrassBuff_Info">Des racines ont poussé dans le sol, fournissant des des herbes médicinales.</string>
   <string name="WndPlayGames_Title">Google Play Games</string>
   <string name="WndPlayGames_Use">Utiliser Google Play Games</string>
   <string name="WndPlayGames_Connecting">Connexion à Google Play Games, veuillez attendre un peu</string>
@@ -2204,7 +2236,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="DieHardSpell_Name">Die Hard</string>
   <string name="DieHardSpell_Info">Augmentera temporairement votre régénération, faisant de vous un véritable dur à cuire.</string>
   <string name="DieHardBuff_Name">Die Hard</string>
-  <string name="DieHardBuff_Info">Taux de régénération augmenté</string>
+  <string name="DieHardBuff_Info">Taux de régénération augmenté.</string>
   <string name="SmashSpell_Name">Smash</string>
   <string name="SmashSpell_Info">Sautez en l\'air et créez une puissante onde de choc lorsque vous touchez le sol. Elle étourdit temporairement vos ennemis et leur inflige des dégâts physiques.</string>
   <string name="SmashSpell_NeedWeapon">J\'ai besoin d\'une arme pour ce mouvement.</string>
@@ -2216,6 +2248,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="CloakSpell_Info">Entrez dans l\'ombre pour devenir invisible. Réduis considérablement vos chances d\'être détecté. Ne peut pas être utilisé tant que les ennemis sont à proximité.</string>
   <string name="CloakSpell_EnemiesNearby">Vous ne pouvez pas entrer dans l\'ombre tant que des ennemis sont à proximité.</string>
   <string name="CloakBuff_Name">Furtif</string>
+  <string name="CloakBuff_Info">Une cape sombre vous scelle dans les ombres, vous rendant moins visible pour les ennemis.</string>
   <string name="TitleScene_Mods">Mods</string>
   <string name="WndHero_Stealth">Furtivité</string>
   <string name="WndHero_Awareness">Conscience</string>
@@ -2538,9 +2571,16 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="Challenges_Names_7">Pacifisme</string>
   <string name="town_deco_crossroad_name">Panneau de direction</string>
   <string name="town_deco_crossroad_desc">Pilier en bois brut avec un texte de plaques en forme de flèche sur lequel s\'est délavé il y a longtemps, probablement en raison des conditions météorologiques difficiles.</string>
+  <string name="ShieldBuffReady_Name">Bouclier prêt</string>
+  <string name="ShieldBuffReady_Info">Votre bouclier est prêt à parer la prochaine attaque.</string>
+  <string name="ShieldBuffNotReady_Name">Bouclier non-prêt</string>
+  <string name="ShieldBuffNotReady_Info">Votre bouclier n\'est pas prêt à parer la prochaine attaque.</string>
   <string name="WoodenShield_name">Bouclier en bois</string>
+  <string name="WoodenShield_desc">Un bouclier en bois fabriqué grossièrement est le plus simple des boucliers disponibles. Il est rond et peut bloquer quelques dégâts de temps en temps.</string>
   <string name="ToughShield_name">Bouclier en cuir renforcé</string>
+  <string name="ToughShield_desc">Ce bouclier renforcé par des lanières de cuir semble plus solide qu\'un bouclier en bois. Il peut certainement bloquer plus de dégâts.</string>
   <string name="StrongShield_name">Bouclier de bronze</string>
+  <string name="StrongShield_desc">Ce bouclier rectangulaire est plaqué de feuilles de bronze et décoré de tissus colorés. Il est nettement plus lourd, mais peut bloquer beaucoup plus de dégâts entrants.</string>
   <string name="RoyalShield_name">Bouclier royal</string>
   <string name="RoyalShield_desc">Un bouclier complètement en métal. Oui, c\'est lourd, mais il vous propose la meilleure protection.</string>
   <string name="ShieldInfoTemplate">Ce bouclier bloquera jusqu\'à %1$d des dégâts entrants. Avec %2$d %% de chances. Il faudra %3$3.1f secondes pour récupérer après un blocage réussi.</string>
@@ -2562,7 +2602,9 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
         L\'équipe de NYRDS n\'est en aucun cas responsable du contenu des mods, de leur qualité ou de leur stabilité.\n
         Téléchargez-les à vos risques et amusez-vous !!\n
     </string>
+  <string name="ShieldWeaponInfo">Lorsqu\'il est utilisé comme une arme, ce bouclier inflige en moyenne %1$d dégâts.</string>
   <string name="TownPortal_Name">Portail de Ville</string>
+  <string name="TownPortal_Info">Ce sort vous permet de vous mettre instantanément en sécurité. Cependant, de puissantes sources de magie à proximité peuvent l\'empêcher de fonctionner comme prévu.</string>
   <string name="MedicineMask_Name">Masque chirurgical</string>
   <string name="MedicineMask_Info">Un masque chirurgical est fait pour bloquer les micro-organismes rejetés dans les gouttelettes de liquide et les aérosols par la bouche et le nez du porteur.
  \n\nPorter un masque, c\'est prendre soin des autres. </string>
@@ -2579,8 +2621,11 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="Backstab_Name">Coup dans le dos</string>
   <string name="Backstab_Info">Un coup en douce dans le dos. Traître, mais très efficace, les dégâts du coup dans le dos grandiront avec le niveau de compétence.\n\nUn coup dans le dos réalisé avec succès ignorera totalement l\'armure de la victime ou ses capacités spéciales de défense.</string>
   <string name="Backstab_TooFar">La victime est trop loin pour réussir un coup.</string>
+  <string name="Backstab_Aware">La victime ne devrait pas être consciente de vous pour un bon coup de poignard dans le dos.</string>
   <string name="KunaiThrow_Name">Lancer de Kunai</string>
+  <string name="KunaiThrow_Info">Ce lancer de kunai mortel sera effectué extrêmement rapidement, si rapidement que vous ne pourrez même pas choisir une cible.\n\nLes véritables maîtres sont capable de lancer plus d\'un kunai à la fois.</string>
   <string name="Haste_Name">Célérité extrême</string>
+  <string name="Haste_Info">La hâte permet à l\'utilisateur de se déplacer à une vitesse si extrême que tout ce qui l\'entoure semble statique. Cette hâte consomme beaucoup d\'énergie et ne peut donc être utilisée que pendant une courte période.\n\nLes maîtres expérimentés sont capables de rester hâtifs pendant une plus longue période.</string>
   <string name="Welcome_Text_29_5">
     remix.29.5\n
     - Gameplay:\n
@@ -2610,23 +2655,183 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="CharAction_Scare">effrayer</string>
   <string name="CharAction_Hit">frapper</string>
   <string name="StunBuff_Name">Etourdi</string>
+  <string name="StunBuff_Info">Étourdi !</string>
   <string name="Char_StaStunned">étourdi</string>
+  <string name="Mob_ReadyForOrder">%s attend votre ordre.</string>
+  <string name="Mob_CantDoIt">Je ne peux pas le faire. J\'ai des petites pattes.</string>
+  <string name="Welcome_Text_29_6">
+    remix.29.6\n
+    - Jouabilité:\n
+    -- Actions supplémentaires à effectuer sur les monstres !\n
+    - Modification :\n
+    -- Acteurs d\'objets !\n
+    -- Propriétés spéciales des armes !\n
+    -- Plus de choses non catégorisées !\n
+    - Bugs corrigés.\n
+    </string>
+  <string name="InnKeeperNPC_Name">Aubergiste</string>
+  <string name="InnKeeperNPC_Name_Objective">Aubergiste</string>
   <string name="InnKeeperNPC_Gender">masculine</string>
+  <string name="InnKeeperNPC_Desc">L\'aubergiste est fier de lui.</string>
+  <string name="DrunkardNPC_Name">ivrogne</string>
+  <string name="DrunkardNPC_Name_Objective">ivrogne</string>
   <string name="DrunkardNPC_Gender">masculine</string>
+  <string name="DrunkardNPC_Desc">Client régulier de l\'auberge à l\'état naturel.</string>
+  <string name="MercenaryNPC_Name">mercenaire</string>
+  <string name="MercenaryNPC_Name_Objective">mercenaire</string>
   <string name="MercenaryNPC_Gender">masculine</string>
+  <string name="MercenaryNPC_Desc">Homme à l\'allure robuste.</string>
+  <string name="ServantNPC_Name">Serveur de l\'auberge</string>
+  <string name="ServantNPC_Name_Objective">serveuse de l\'auberge</string>
   <string name="ServantNPC_Gender">feminine</string>
+  <string name="ServantNPC_Desc">Une serveuse de l\'auberge très occupée.</string>
+  <string name="BardNPC_Name">barde</string>
+  <string name="BardNPC_Name_Objective">barde</string>
   <string name="BardNPC_Gender">masculine</string>
+  <string name="BardNPC_Desc">Le barde de la ville joue de son luth.</string>
+  <string name="Welcome_Text_30">
+    remix.30.0\n
+    - Jouabilité:\n
+    -- Capacités pour tout le monde !\n
+    -- L\'auberge est désormais ouverte !\n
+    - Des bugs ont été corrigés\n
+    </string>
+  <string name="Roar_Name">Rugissement</string>
+  <string name="Roar_Info">Ce puissant rugissement ne manquera pas de terrifier vos ennemis et d\'inspirer vos alliés.</string>
+  <string name="LightningBolt_Name">Trait de foudre</string>
+  <string name="LightningBolt_Info">Un sort partagé par les anciens chamans, qui choquera vos ennemis deux fois plus efficacement, surtout s\'ils sont assez fous pour se tenir sur l\'eau.</string>
+  <string name="Heal_Name">Soin</string>
+  <string name="Heal_Info">Un sort plutôt utile dans un Donjon, pas vrai ?</string>
+  <string name="Order_Name">Ordre</string>
+  <string name="Order_Info">Avec une bonne concentration, vos ordres sont presque indéniables.</string>
+  <string name="Order_Resist">Comment osez-vous !?</string>
+  <string name="Spell_SelectAChar">Sélectionnez une cible.</string>
+  <string name="Calm_Name">Calme</string>
+  <string name="Calm_Info">Il y a beaucoup de créatures exaspérées dans le coin, aidons-les.</string>
+  <string name="CharmSpell_Name">Charmer</string>
+  <string name="CharmSpell_Info">Tout le monde mérite un peu d\'amour, non ?</string>
+  <string name="HideInGrassSpell_Name">Cacher dans l\'herbe</string>
+  <string name="HideInGrassSpell_Info">Vous avez maitrisé vos techniques de cache-cache.</string>
+  <string name="HideInGrassSpell_NeedGrassToHide">Même moi, je ne peux pas me cacher à la vue de tous.</string>
+  <string name="MagicArrow_Name">Flèche magique</string>
+  <string name="MagicArrow_Info">La bonne vieille flèche magique, le bon choix quand on est à court de munitions.</string>
+  <string name="NatureArmorSpell_Name">Armure naturelle</string>
+  <string name="NatureArmorSpell_Info">Les elfes peuvent aussi être coriaces, surtout lorsqu\'ils sont protégés par Mère Nature elle-même.</string>
+  <string name="ShootInEye_Name">Tir dans l\'oeil</string>
+  <string name="ShootInEye_Info">Utilisez vos talents exceptionnels de tireur d\'élite pour tirer sur l\'ennemi en plein dans les yeux, s\'il en a bien sûr.</string>
+  <string name="Sprout_Name">Floraison</string>
+  <string name="Sprout_Info">Réveille les graines dormantes.\nCependant, il doit y avoir de la verdure sur le sol pour que ce sort réussisse.</string>
+  <string name="SummonBeast_Name">Appel de bêtes</string>
+  <string name="SummonBeast_Info">Essayez d\'invoquer une horde de bêtes puissantes à votre commandement.\nLes résultats peuvent varier.</string>
+  <string name="SummonBeast_AtYourCommand">À vos ordres !</string>
+  <string name="WndSettings_RecordVideo">Enregistrement vidéo</string>
+  <string name="Dungeon_saveIoError">En essayant de créer un fichier de sauvegarde :</string>
+  <string name="town_table_fortune_ball_name">Boule de cristal</string>
+  <string name="town_table_fortune_ball_desc">Boule de cristal, avec une brume mystérieuse à l\'intérieur.</string>
+  <string name="town_deco_shelf_full_name">Étagère</string>
+  <string name="town_deco_shelf_full_desc">Des objets variés sont disposés sur cette étagère.</string>
+  <string name="town_deco_skulls_name">Crânes</string>
+  <string name="town_deco_skulls_desc">Crânes polis appartenant à des créatures du donjon.</string>
+  <string name="town_deco_urn_name">Urne</string>
+  <string name="town_deco_urn_desc">Urne en argile, peut-être avec les cendres de quelqu\'un.</string>
+  <string name="town_deco_crate_name">Caisse</string>
+  <string name="town_deco_crate_desc">Une solide caisse en bois qui garde ses secrets à l\'intérieur.</string>
+  <string name="town_deco_crate_scrolls_name">Caisse de parchemins</string>
+  <string name="town_deco_crate_scrolls_desc">Cette caisse est remplie à ras bord de connaissances secrètes.</string>
+  <string name="town_deco_cabinet_name">armoire</string>
+  <string name="town_deco_cabinet_desc">Une armoire spacieuse avec de nombreuses portes et étagères.</string>
+  <string name="town_deco_clock_name">Pendule</string>
+  <string name="town_deco_clock_desc">Ça fait bien longtemps que les aiguilles prennent la poussière sans bouger.</string>
+  <string name="town_deco_poster_name">Tapisserie</string>
+  <string name="town_deco_poster_desc">Des prospectus annonçant les prochaines séances du cinéma.</string>
+  <string name="town_deco_ladder_name">Échelle</string>
+  <string name="town_deco_ladder_desc">Une vieille échelle, d\'apparence peu sûre.</string>
+  <string name="town_deco_weaponrack_name">Râtelier d\'armes</string>
+  <string name="town_deco_weaponrack_desc">Sur ce râtelier se trouvent des armes clairement trop chères pour vous.</string>
+  <string name="town_deco_church_sign_name">Symbole d\'église</string>
+  <string name="town_deco_church_sign_desc">On dirait qu\'il y a une église dans ce bâtiment.</string>
+  <string name="town_deco_statue_water_name">Statue d\'ange</string>
+  <string name="town_deco_statue_water_desc">Une statue majestueuse d\'un ange tenant un bol d\'eau.</string>
+  <string name="town_deco_statue_blood_name">Statue d\'ange</string>
+  <string name="town_deco_statue_blood_desc">Une statue majestueuse d\'un ange tenant un bol de sang</string>
+  <string name="town_deco_vat_name">Bac</string>
+  <string name="town_deco_vat_desc">Ce bac de pierre est rempli à ras bord d\'eau bénite.</string>
+  <string name="town_deco_armorstand_leather_name">Armure de cuir</string>
+  <string name="town_deco_armorstand_leather_desc">Une armure de cuir de confiance sera un bon investissement avant de s\'aventurer dans le donjon.</string>
+  <string name="town_deco_armorstand_scale_name">Armure d\'écailles</string>
+  <string name="town_deco_armorstand_scale_desc">Les plaques dorées de cette armure d\'écailles semblent neuves.</string>
+  <string name="town_deco_armorstand_plate_name">Armure de plates</string>
+  <string name="town_deco_armorstand_plate_desc">D\'après le marchand, cette lourde armure de plates a autrefois appartenu à un grand guerrier.</string>
   <string name="town_deco_red_carpet_name">Tapis</string>
+  <string name="town_deco_red_carpet_desc">La rumeur veut que des tapis rouges similaires ornent les halls de la métropole naine.</string>
   <string name="town_deco_beige_carpet_name">Tapis</string>
+  <string name="town_deco_beige_carpet_desc">Un élégant tapis beige tissé de laine de gnoll douce.</string>
   <string name="town_deco_brown_carpet_name">Tapis</string>
+  <string name="town_deco_brown_carpet_desc">Ce tapis brun a été piétiné par de nombreux aventuriers, vagabonds et passants.</string>
   <string name="town_deco_charcoal_carpet_name">Tapis</string>
+  <string name="town_deco_charcoal_carpet_desc">Afin d\'assurer le confort de ses clients, l\'administration du cinéma a choisi la plus haute qualité de carpette couleur charbon.</string>
   <string name="town_deco_magenta_carpet_name">Tapis</string>
+  <string name="town_deco_magenta_carpet_desc">La teinte magenta de cette carpette tranche avec le vin local.</string>
+  <string name="InnServant_Phrase_1">Erf, encore tellement à faire !</string>
+  <string name="InnServant_Phrase_2">Cet ivrogne me rend folle !</string>
+  <string name="InnServant_Phrase_3">Ça m\'a l\'air propre</string>
+  <string name="InnServant_Phrase_4">Eh bien, tellement de clients aujourd\'hui</string>
+  <string name="Drunkard_Phrase_1">PLUCH DE BINOUUUUUUZEUUUUUHH !</string>
+  <string name="Drunkard_Phrase_2">Qui qu\'à b\'soin d\'eau quand qu\'t\'as d\'la bibiiiiineuh ?</string>
+  <string name="Drunkard_Phrase_3">Cette biéééére goûte comme de la teeeeerre</string>
+  <string name="Drunkard_Phrase_4">Zzzzzz...</string>
+  <string name="HeroSubClass_NameWitchdoctor">Sorcier-docteur</string>
+  <string name="HeroSubClass_NameGuardian">gardien</string>
+  <string name="Gnoll_BecomeWitchdoctorDesc">Devenir Sorcier-docteur</string>
+  <string name="Gnoll_BecomeGuardianDesc">Devenir Gardien</string>
+  <string name="HeroSubClass_DescWitchdoctor">La pratique de la magie confère au _Sorcier-docteur_ un bouclier magique qui le protège complètement des dégâts qu\'il reçoit.</string>
+  <string name="HeroSubClass_DescGuardian">Ses connaissances défensives habiles permettent au _Gardien_ de contre-attaquer avec un bouclier, ce qui en fait un ennemi redoutable pour ceux qui osent attaquer ce bastion ambulant.</string>
+  <string name="Potion_Colors_12">épidote</string>
   <string name="Potion_Colors_13">quartz</string>
   <string name="Potion_Colors_14">onyx</string>
+  <string name="Potion_Colors_15">perle</string>
+  <string name="ManaShieldBuff_Name">Bouclier magique</string>
+  <string name="ManaShieldBuff_Info">Un bouclier de magie est apparu, annulant complètement les dégâts de la prochaine attaque entrante.</string>
+  <string name="TenguLiver_Name">Foie de Tengu</string>
+  <string name="TenguLiver_Info">Ce foie appartient à un ennemi valeureux. Juste à le regarder, vos instincts primaires prennent le dessus, et vous ressentez le besoin de le consommer.</string>
   <string name="PotionOfMana_Name">Potion de mana</string>
   <string name="PotionOfMana_Info">Cette potion va régénerer votre énergie spirituelle.</string>
+  <string name="WndFortuneTeller_IdentifyAll">Tout</string>
+  <string name="Snail_Name">escargot</string>
   <string name="Snail_Gender">masculine</string>
+  <string name="Snail_Name_Objective">escargot</string>
+  <string name="Snail_Desc">Ce petit mollusque a bien grandi en se nourrissant des égouts, mais il reste toujours très lent ce qui en fait un adversaire facile à affronter.</string>
+  <string name="DeepSnail_Name">escargot des profondeurs</string>
   <string name="DeepSnail_Gender">masculine</string>
+  <string name="DeepSnail_Name_Objective">escargot des profondeurs</string>
+  <string name="DeepSnail_Desc">Ce type de mollusque peut souvent être observé près des sources d\'eau et est beaucoup plus rapide que votre escargot ordinaire. Attention toutefois aux piqûres, elles peuvent avoir un effet désagréable sur votre peau.</string>
+  <string name="CharInfo_Level">%2$sest au niveau %1$d.</string>
+  <string name="WrnExperimental_realtime">Mode temps réel activé : c\'est un roguelike en temps réel, tapez vite ou mourez.\nVous voulez vérifier votre inventaire ?\nBonne chance pour le faire alors que le crabe des égouts examine vos entrailles.</string>
+  <string name="WrnExperimental_moveTimeout">Délai de mouvement réglé sur %d millisecondes, pensez vite !</string>
+  <string name="WnrExperimental_hint">Si ce monde étrange et tordu est trop dur pour vous, désactivez ces options en utilisant le menu\nÉcran de démarrage-&gt;Options-&gt;Jouabilité\net recommencez une nouvelle partie ou chargez une autre sauvegarde.</string>
+  <string name="WrnExperimental_title">Options expérimentales activées !</string>
+  <string name="Welcome_Text_30_1">
+    remix.30.1\n
+    - Jouabilité :\n
+    -- Sous-classes pour le Gnoll !\n
+    -- Escargots !\n
+    -- Nerf de la progression des objets du chaos.\n
+    -- La potion de mana est désormais une potion standard.\n
+    -- Les badges peuvent désormais être obtenus en jouant les DLCs (mais pas les mods).\n
+    - Correction de bugs\n
+    </string>
+  <string name="ShamanElder_Name">chaman ancien</string>
   <string name="ShamanElder_Gender">masculine</string>
+  <string name="ShamanElder_Name_Objective">chaman ancien</string>
+  <string name="ShamanElder_Desc">Ce gnoll particulier semble beaucoup plus âgé que les autres chamans et a sûrement un statut plus élevé dans la tribu. Une étrange aura se forme lentement autour de lui, qui semble refléter tout ce qui la touche.</string>
+  <string name="Bee_Name">abeille</string>
   <string name="Bee_Gender">masculine</string>
+  <string name="Bee_Name_Objective">abeille</string>
+  <string name="Bee_Desc">malgré leur petite taille, les abeilles tendent à protéger leur ruche férocement. Elles ne vivent pas longtemps par contre.</string>
+  <string name="Moongrace_Name">Grâcelune</string>
+  <string name="Moongrace_Desc">Ces plantes grandissent par petit nombre, et sont connues pour être une source naturel de magie.</string>
+  <string name="MoongraceBuff_Name">Mana paradisiaque</string>
+  <string name="MoongraceBuff_Info">L\'air ambiant devient plus saturé, ce qui permet une meilleure concentration et restauration des réserves magiques.</string>
+  <string name="EncumbranceBuff_Name">Fardeau</string>
+  <string name="EncumbranceBuff_Info">Pas assez de force pour utiliser efficacement : %s.</string>
 </resources>

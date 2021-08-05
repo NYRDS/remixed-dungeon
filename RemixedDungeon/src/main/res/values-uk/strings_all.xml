@@ -230,6 +230,7 @@
   <string name="PortalExit_Desc_Necropolis">Некрополіс</string>
   <string name="PortalExit_Desc_IceCaves">Крижані печери</string>
   <string name="DevourBuff_Name">Поглинання</string>
+  <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">Кам\'яна кров</string>
   <string name="Welcome_Ok">Добре!</string>
   <string name="Welcome_Title">Ласкаво просимо!</string>
@@ -556,6 +557,8 @@
   <string name="VertigoBuff_Name">Запаморочений</string>
   <string name="WeaknessBuff_Name">Послаблений</string>
   <string name="AwarenessBuff_Name">Обізнаність</string>
+  <string name="DarkVeilBuff_Name">Темна вуаль</string>
+  <string name="FrostAuraBuff_Name">Морозна аура</string>
   <string name="Belongings_Name">рюкзак</string>
   <string name="ItemSprite_Info1">викинути в сторону: %1$.1f %2$.1f</string>
   <string name="Toolbar_Info1">Ти не знаєш, що там.</string>
@@ -654,7 +657,6 @@
   <string name="HeartOfDarkness_Name">Серце темряви</string>
   <string name="HeartOfDarkness_Info">Чорне пульсуюче серце Підступного духа.</string>
   <string name="HeartOfDarkness_Gender">neuter</string>
-  <string name="DarkVeilBuff_Name">Темна вуаль</string>
   <string name="Badges_Yog_Slain">Йог-Джева вбитий</string>
   <string name="Badges_ShadowLord_Slain">Лорд Тіней вбитий</string>
   <string name="Badges_SpiderQueen_Slain">Королева Павуків вбита</string>
@@ -1388,7 +1390,6 @@
   <string name="Zombie_Desc">Підземелля завжди були небезпечним місцем, і багато шукачів пригод зустріли свою долю тут. Але шлях тих, кому поталанило менше за інших, обірвався тут, в Некрополісі. І тепер вони приречені блукати по коридорам у вигляді трупа.</string>
   <string name="NecromancerNPC_Intro2">Ти гляди! Яке рідкісне видовище! Шукач пригод, який не є мертвяком. Неймовірно! Ох... Прошу вибачення, іноді мене заносить. Бачите, я некромант. І не дивлячись на те, що вивчення мерців та самої смерті у нас в пошані, вся ця одноманітність кому завгодно набридне. Але з іншого боку, я тут якраз через це. Сталося щось неймовірне! _Некрополь_, древнє місто мертвих, відкрив нашому погляду свої двері. чесно кажучи, ми стоїмо прямо на порозі цих дверей. І... Знаєш що, візьми-но ключ, і йди першим, тобі ж подобаються всілякі пригоди, так? А я піду за тобою... але спочатку підготуюсь.</string>
   <string name="Badges_Lich_Slain">Ліча подолано</string>
-  <string name="FrostAuraBuff_Name">Морозна аура</string>
   <string name="ElvenDagger_Name">ельфійський кинджал</string>
   <string name="ElvenDagger_Info">Цю зброю виготовлено з особливого сплаву, що робить його легшим за звичайний кинджал.</string>
   <string name="ElvenDagger_Gender">masculine</string>
@@ -2191,7 +2192,6 @@
   <string name="DieHardSpell_Name">Міцний горішок</string>
   <string name="DieHardSpell_Info">Тимчасово прискорює регенерацію і робить з тебе справжнього Міцного Горішка.</string>
   <string name="DieHardBuff_Name">Міцний горішок</string>
-  <string name="DieHardBuff_Info">Швидкість регенерації прискорено</string>
   <string name="SmashSpell_Name">Приголомшливий удар</string>
   <string name="SmashSpell_Info">Підстрибує, і з силою врізається у землю, приголомшуючи противників навколо, та наносячи фізичну шкоду.</string>
   <string name="SmashSpell_NeedWeapon">Мені необхідна зброя для цього прийому.</string>

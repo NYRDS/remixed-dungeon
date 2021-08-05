@@ -230,6 +230,7 @@
   <string name="PortalExit_Desc_Necropolis">Necrópole</string>
   <string name="PortalExit_Desc_IceCaves">Cavernas de Gelo</string>
   <string name="DevourBuff_Name">Devorar</string>
+  <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">Sangue de pedra</string>
   <string name="Welcome_Ok">Ok!</string>
   <string name="Welcome_Title">Bem-vindo!</string>
@@ -550,6 +551,8 @@
   <string name="VertigoBuff_Name">Vertigem</string>
   <string name="WeaknessBuff_Name">Enfraquecido</string>
   <string name="AwarenessBuff_Name">Consciência</string>
+  <string name="DarkVeilBuff_Name">Véu negro</string>
+  <string name="FrostAuraBuff_Name">Aura Gelada</string>
   <string name="Belongings_Name">mochila</string>
   <string name="ItemSprite_Info1">caiu: %1$.1f %2$.1f</string>
   <string name="Toolbar_Info1">Você não sabe o que tem ali.</string>
@@ -647,7 +650,6 @@
   <string name="HeartOfDarkness_Name">Coração da escuridão</string>
   <string name="HeartOfDarkness_Info">Coração negro pulsante do Espírito Traçoeiro</string>
   <string name="HeartOfDarkness_Gender">neutro</string>
-  <string name="DarkVeilBuff_Name">Véu negro</string>
   <string name="Badges_Yog_Slain">Matador do Yog-Dzewa</string>
   <string name="Badges_ShadowLord_Slain">Matador do Lorde das Sombras</string>
   <string name="Badges_SpiderQueen_Slain">Matador da Aranha Rainha</string>
@@ -1378,7 +1380,6 @@
   <string name="Zombie_Desc">Calabouço é um lugar perigoso e muitos aventureiros morreram aqui. Mas os mais azarados de todos encontraram seu fim em Necropolis, e agora eles estão condenados a vagar nesses salões na forma de corpos apodres.</string>
   <string name="NecromancerNPC_Intro2">Ah! Um companheiro aventureiro que não está morto. Excepcional! Oh ... Me desculpe. Como pode ver, eu sou um necromante. Apesar de estudar os mortos e a morte ser minha maneira de ganhar a vida, ver a mesma coisa várias e várias vezes, é extremamente chato. Entretanto, é exatamente por isso que estou aqui. A _Necropolis_, uma antiga cidade dos mortos, vai abrir as suas portas. E... falo com você depois, pegue esta chave e vá na frente, quero dizer, você gosta de aventuras, não é? Eu vou depois de você, tenho que me preparar antes.</string>
   <string name="Badges_Lich_Slain">Lich derrotado</string>
-  <string name="FrostAuraBuff_Name">Aura Gelada</string>
   <string name="ElvenDagger_Name">adaga élfica </string>
   <string name="ElvenDagger_Info">Esta arma é feita de liga de metálica especial, tornando-a muito mais leve em comparação a uma adaga comum.</string>
   <string name="ElvenDagger_Gender">masculino</string>
@@ -2154,7 +2155,6 @@ Parede
   <string name="DieHardSpell_Name">Duro de Matar</string>
   <string name="DieHardSpell_Info">Aumentará temporariamente a regeneração fazendo você realmente seja Duro de Matar</string>
   <string name="DieHardBuff_Name">Duro de Matar</string>
-  <string name="DieHardBuff_Info">Taxa de regeneração aumentada</string>
   <string name="SmashSpell_Name">Pulo Esmagador</string>
   <string name="SmashSpell_Info">Pula e cai com muita força no chão, esmagando e atordoando os inimigos em volta, ao mesmo tempo que os causa dano físico.</string>
   <string name="SmashSpell_NeedWeapon">Eu preciso de uma arma para fazer isso.</string>

@@ -257,7 +257,7 @@
   <string name="PortalExit_Desc_Necropolis">Necropolis</string>
   <string name="PortalExit_Desc_IceCaves">Ice Caves</string>
   <string name="DevourBuff_Name">Devour</string>
-  <string name="DevourBuff_Info"></string>
+  <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">Stone blood</string>
   <string name="StoneBloodBuff_Info">The blood turns stone which merges with the walls nearby and makes traversing them much easier, but at what cost.</string>
   <string name="Welcome_Ok">Okay!</string>
@@ -2800,7 +2800,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="CharInfo_Level">This is a level %1$d %2$s.</string>
   <string name="WrnExperimental_realtime">Realtime! mode enabled: this is realtime roguelike now, tap fast or die.\nWant to check inventory?\nGood luck to do so while sewer crab was checking your guts.</string>
   <string name="WrnExperimental_moveTimeout">Move timeout set to %d milliseconds, think fast!</string>
-  <string name="WnrExperimental_hint">If this strange and twisted world too harsh for you please disable those options using\nStart Screen->Options->Gameplay\nmenu and start new game or load another save.</string>
+  <string name="WnrExperimental_hint">If this strange and twisted world too harsh for you please disable those options using\nStart Screen-&gt;Options-&gt;Gameplay\nmenu and start new game or load another save.</string>
   <string name="WrnExperimental_title">Experimental options enabled!</string>
   <string name="Welcome_Text_30_1">
     remix.30.1\n
@@ -2823,10 +2823,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Moongrace_Name">Moongrace</string>
   <string name="Moongrace_Desc">These plants grow in small numbers and are known as a source of natural magic.</string>
   <string name="MoongraceBuff_Name">Heavenly manna</string>
-
   <string name="MoongraceBuff_Info">The air around becomes more saturated, which allows for better concentration and restoration of magical reserves.</string>
-
   <string name="EncumbranceBuff_Name">Burden</string>
   <string name="EncumbranceBuff_Info">Not enough strength to use %s effectively.</string>
-
 </resources>

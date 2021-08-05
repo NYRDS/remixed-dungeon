@@ -257,7 +257,7 @@
   <string name="PortalExit_Desc_Necropolis">Necrópolis</string>
   <string name="PortalExit_Desc_IceCaves">Cuevas de Hielo</string>
   <string name="DevourBuff_Name">Devorar</string>
-  <string name="DevourBuff_Info"></string>
+  <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">Piedra Sangrienta</string>
   <string name="StoneBloodBuff_Info">La sangre se convierte en piedra que se funde con las paredes cercanas y hace que atravesarlas sea mucho más fácil, pero a qué precio.</string>
   <string name="Welcome_Ok">¡Muy bien!</string>
@@ -2833,10 +2833,7 @@ otro lugar del nivel.</string>
   <string name="Moongrace_Name">Lucirón</string>
   <string name="Moongrace_Desc">Estas plantas crecen en pequeñas cantidades y son conocidas como una fuente de magia natural.</string>
   <string name="MoongraceBuff_Name">Maná celestial</string>
-
   <string name="MoongraceBuff_Info">El aire que lo rodea se vuelve más saturado, lo que permite una mejor concentración y restauración de las reservas mágicas.</string>
-
   <string name="EncumbranceBuff_Name">Carga</string>
   <string name="EncumbranceBuff_Info">No hay suficiente fuerza para usar %s efectivamente.</string>
-
 </resources>

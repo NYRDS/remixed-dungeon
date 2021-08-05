@@ -86,7 +86,6 @@
   <string name="ChaosCrystal_SwordFused">Кристалл слился с твоим оружием и принял форму Меча</string>
   <string name="ChaosCrystal_BowFused">Кристалл слился с твоим оружием и принял форму Лука</string>
   <string name="ChaosCrystal_StaffFused">Кристалл слился с твоим оружием и принял форму Посоха</string>
-
   <string name="CorpseDustBuff_Name">Жажда крови</string>
   <string name="CorpseDustBuff_Info">Жажда крови наполняет атаки, делая их особенно опасными.</string>
   <string name="DriedRoseBuff_Name">Очаровательный</string>
@@ -111,10 +110,8 @@
   <string name="Bishop_not_interested">Уйти</string>
   <string name="Bishop_no_money">Ты не можешь заплатить за это.</string>
   <string name="Bishop_bye">Я буду молиться за тебя, дитя моё.</string>
-
   <string name="BlessedBuff_Name">Благословлён</string>
   <string name="BlessedBuff_Info">Да прибудет точность и уклонение для тех, кого коснулось благословение!</string>
-
   <string name="deco_candle_name">Свеча</string>
   <string name="deco_candle_desc">Большая свеча</string>
   <string name="Possess_Name">Одержимость</string>
@@ -260,7 +257,7 @@
   <string name="PortalExit_Desc_Necropolis">Некрополь</string>
   <string name="PortalExit_Desc_IceCaves">Ледяные Пещеры</string>
   <string name="DevourBuff_Name">Пожирание</string>
-  <string name="DevourBuff_Info"></string>
+  <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">Каменная Кровь</string>
   <string name="StoneBloodBuff_Info">Кровь превращается в камень, вязкость которой подстраивается под близлежащие стены и значительно облегчает прохождение через них, но какой ценой.</string>
   <string name="Welcome_Ok">Ладушки!</string>
@@ -622,7 +619,9 @@
   <string name="WeaknessBuff_Info">Слабость охватывает тело, делая цель легкой добычей.</string>
   <string name="AwarenessBuff_Name">Внимательность</string>
   <string name="AwarenessBuff_Info">Чувства обострились, что позволяет получить больше информации об окружении.</string>
+  <string name="DarkVeilBuff_Name">Тёмная вуаль</string>
   <string name="DarkVeilBuff_Info">Пелена тьмы окружает владельца, призывающая духа каждый раз при получении урона.</string>
+  <string name="FrostAuraBuff_Name">Морозная Аура</string>
   <string name="FrostAuraBuff_Info">Тело окружает мороз, который замедляет все, что находится поблизости.</string>
   <string name="Belongings_Name">рюкзак</string>
   <string name="ItemSprite_Info1">выбросить: %1$.1f %2$.1f</string>
@@ -721,7 +720,6 @@
   <string name="HeartOfDarkness_Name">Сердце тьмы</string>
   <string name="HeartOfDarkness_Info">Чёрное пульсирующее сердце Предательского духа.</string>
   <string name="HeartOfDarkness_Gender">бесполый</string>
-  <string name="DarkVeilBuff_Name">Тёмная вуаль</string>
   <string name="Badges_Yog_Slain">Йог-Джева побеждён</string>
   <string name="Badges_ShadowLord_Slain">Владыка Теней побеждён</string>
   <string name="Badges_SpiderQueen_Slain">Королева Пауков побеждена</string>
@@ -1452,7 +1450,6 @@
   <string name="Zombie_Desc">Подземелья всегда были опасным местом и многие путешественники встретили здесь свою судьбу. Но путь тех, кому посчастливилось меньше всего, обрывался в Некрополе. И теперь они обречены слоняться по этим коридорам в виде гниющего трупа.</string>
   <string name="NecromancerNPC_Intro2">А! Собрат приключенец не являющийся бездыханным трупом! Верится с трудом! Кхм... извиняюсь, иногда я становлюсь слишком заносчивым. Я, видите ли, некромант. И не смотря на то, что изучение мертвецов и самой смерти у нас в почёте, всё это серое однообразие рано или поздно кому угодно наскучит. Но с другой стороны я здесь, как раз из-за этого. Намедни случилось нечто грандиозное! _Некрополь_, древний город мёртвых открыл нашему взору свои двери. Честно говоря, мы стоим прямо подле этих дверей. И... знаешь что, возьми-ка ключ и иди первый, ты же любишь всякие приключения, да? А я пойду следом... только сначала подготовлюсь.</string>
   <string name="Badges_Lich_Slain">Лич побеждён</string>
-  <string name="FrostAuraBuff_Name">Морозная Аура</string>
   <string name="ElvenDagger_Name">эльфийский кинжал</string>
   <string name="ElvenDagger_Info">Это оружие выполнено из особого металлического сплава, что делает его легче по сравнению с обычным кинжалом.</string>
   <string name="ElvenDagger_Gender">masculine</string>
@@ -2817,7 +2814,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="CharInfo_Level">Это существо: %2$s уровня %1$d.</string>
   <string name="WrnExperimental_realtime">Включен режим Realtime!: это теперь ниразу не пошаговый рогалик, тапай быстро или умри\nХочешь покопаться в рюкзаке?\nСмелее, но учти краб тем временем покопается в твоих кишках.</string>
   <string name="WrnExperimental_moveTimeout">На ход отведено не более %dмиллисекунд, думай быстро!</string>
-  <string name="WnrExperimental_hint">Если этот странный и безумный мир слишком суров для вас, отключите эти параметры: \nСтартовый экран-> Параметры-> Геймплей \nи запустите новую игру или загрузите другое сохранение. </string>
+  <string name="WnrExperimental_hint">Если этот странный и безумный мир слишком суров для вас, отключите эти параметры: \nСтартовый экран-&gt; Параметры-&gt; Геймплей \nи запустите новую игру или загрузите другое сохранение. </string>
   <string name="WrnExperimental_title">Включены экспериментальные опции!</string>
   <string name="Welcome_Text_30_1">
     remix.30.1\n
@@ -2829,19 +2826,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Добывать значки, и открывать классы теперь можно и в официальных DLC (но не в модах). \n
     - Исправлены ошибки\n
     </string>
-    <string name="ShamanElder_Name"></string>
-    <string name="ShamanElder_Gender">masculine</string>
-    <string name="ShamanElder_Name_Objective"></string>
-    <string name="ShamanElder_Desc"></string>
-    <string name="Bee_Name"></string>
-    <string name="Bee_Gender">masculine</string>
-    <string name="Bee_Name_Objective"></string>
-    <string name="Bee_Desc"></string>
-    <string name="Moongrace_Name"></string>
-    <string name="Moongrace_Desc"></string>
-    <string name="MoongraceBuff_Name">Манна небесная</string>
-    <string name="MoongraceBuff_Info">Воздух вокруг становится более насыщенным, что позволяет лучше концентрироваться и восстанавливать магические резервы.</string>
-
-    <string name="EncumbranceBuff_Name">Тяжесть</string>
-    <string name="EncumbranceBuff_Info">Недостаточно силы чтобы использовать предмет %s эффективно.</string>
+  <string name="ShamanElder_Gender">masculine</string>
+  <string name="Bee_Gender">masculine</string>
+  <string name="MoongraceBuff_Name">Манна небесная</string>
+  <string name="MoongraceBuff_Info">Воздух вокруг становится более насыщенным, что позволяет лучше концентрироваться и восстанавливать магические резервы.</string>
+  <string name="EncumbranceBuff_Name">Тяжесть</string>
+  <string name="EncumbranceBuff_Info">Недостаточно силы чтобы использовать предмет %s эффективно.</string>
 </resources>
