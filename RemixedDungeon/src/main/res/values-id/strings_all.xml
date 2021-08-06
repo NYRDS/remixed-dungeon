@@ -257,7 +257,7 @@
   <string name="PortalExit_Desc_Necropolis">pekuburan</string>
   <string name="PortalExit_Desc_IceCaves">Gua Es</string>
   <string name="DevourBuff_Name">Melahap</string>
-  <string name="DevourBuff_Info"></string>
+  <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">darah batu</string>
   <string name="StoneBloodBuff_Info">Darah berubah menjadi batu yang menyatu dengan dinding di dekatnya dan membuat perjalanan lebih mudah, tetapi berapa biayanya.</string>
   <string name="Welcome_Ok">Ok!</string>
@@ -2798,7 +2798,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
   <string name="CharInfo_Level">Ini adalah level %1$d %2$s.</string>
   <string name="WrnExperimental_realtime">Waktu sebenarnya! mode diaktifkan: ini adalah roguelike realtime sekarang, ketuk cepat atau mati.\Ingin memeriksa inventaris?\Semoga berhasil melakukannya saat kepiting selokan memeriksa nyali Anda.</string>
   <string name="WrnExperimental_moveTimeout">Pindahkan batas waktu yang disetel ke %d milidetik, pikirkan cepat!</string>
-  <string name="WnrExperimental_hint">Jika dunia yang aneh dan bengkok ini terlalu keras untuk Anda, nonaktifkan opsi tersebut menggunakan\nLayar Mulai->Opsi->Gameplay\nmenu dan mulai permainan baru atau muat simpanan lain.</string>
+  <string name="WnrExperimental_hint"><br>If this strange and twisted world too harsh for you please disable those options using\nStart Screen-&gt;Options-&gt;Gameplay\nmenu and start new game or load another save.</string>
   <string name="WrnExperimental_title">Opsi eksperimental diaktifkan!</string>
   <string name="Welcome_Text_30_1">
   remix.30.1\n 
@@ -2821,10 +2821,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
   <string name="Moongrace_Name">Moongrace</string>
   <string name="Moongrace_Desc">Tumbuhan ini tumbuh dalam jumlah kecil dan dikenal sebagai sumber keajaiban alam.</string>
   <string name="MoongraceBuff_Name">Manna surgawi</string>
-
   <string name="MoongraceBuff_Info">Udara di sekitar menjadi lebih jenuh, yang memungkinkan konsentrasi yang lebih baik dan pemulihan cadangan magis.</string>
-
   <string name="EncumbranceBuff_Name">Beban</string>
   <string name="EncumbranceBuff_Info">Tidak cukup kekuatan untuk menggunakan %s secara efektif.</string>
-
 </resources>
