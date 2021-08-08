@@ -2814,7 +2814,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="CharInfo_Level">Это существо: %2$s уровня %1$d.</string>
   <string name="WrnExperimental_realtime">Включен режим Realtime!: это теперь ниразу не пошаговый рогалик, тапай быстро или умри\nХочешь покопаться в рюкзаке?\nСмелее, но учти краб тем временем покопается в твоих кишках.</string>
   <string name="WrnExperimental_moveTimeout">На ход отведено не более %dмиллисекунд, думай быстро!</string>
-  <string name="WnrExperimental_hint">Если этот странный и безумный мир слишком суров для вас, отключите эти параметры: \nСтартовый экран-&gt; Параметры-&gt; Геймплей \nи запустите новую игру или загрузите другое сохранение. </string>
   <string name="WrnExperimental_title">Включены экспериментальные опции!</string>
   <string name="Welcome_Text_30_1">
     remix.30.1\n

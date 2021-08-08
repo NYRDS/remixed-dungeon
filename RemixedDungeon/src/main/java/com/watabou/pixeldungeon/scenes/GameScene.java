@@ -442,7 +442,7 @@ public class GameScene extends PixelScene {
             }
 
             msg += "\n\n";
-            msg += StringsManager.getVar(R.string.WnrExperimental_hint);
+            msg += StringsManager.getVar(R.string.WrnExperimental_hint);
 
             add(new WndTitledMessage(Icons.get(Icons.ALERT),
                     StringsManager.getVar(R.string.WrnExperimental_title),

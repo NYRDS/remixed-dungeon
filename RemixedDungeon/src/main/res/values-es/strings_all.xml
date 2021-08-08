@@ -2810,7 +2810,7 @@ otro lugar del nivel.</string>
   <string name="CharInfo_Level">Esto es un nivel %1$d%2$s.</string>
   <string name="WrnExperimental_realtime">Modo Real-time! habilitado: ahora esto es roguelike en tiempo real, toca rápido o muere.\n¿Quieres revisar tu inventario?\nBuena suerte para hacerlo mientras un cangrejo te revisaba las tripas.</string>
   <string name="WrnExperimental_moveTimeout">El tiempo de espera del movimiento se fija en %d milisegundos, ¡piensa rápido!</string>
-  <string name="WnrExperimental_hint">Si este extraño y retorcido mundo es demasiado duro para ti, por favor, desactiva esas opciones usando el menú Pantalla de Inicio -&gt; Opciones -&gt; Juego y empieza una nueva partida o carga otro guardado.</string>
+  <string name="WnrExperimental_hint">Si este extraño y retorcido mundo es demasiado duro para usted, por favor, desactive esas opciones usando\nPantalla de inicio-&gt;Opciones-&gt;Gameplay\nMenu y empieza una nueva partida o carga otro guardado.</string>
   <string name="WrnExperimental_title">¡Opciones experimentales habilitadas!</string>
   <string name="Welcome_Text_30_1">
     remix.30.1\n

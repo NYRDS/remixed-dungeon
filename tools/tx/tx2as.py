@@ -49,7 +49,7 @@ def indent(elem, level=0):
 
 
 def unescape(arg):
-    return arg.replace("\\\\", "\\").replace("\\\\", "\\")
+    return arg.replace("\\\\", "\\").replace("\\\\", "\\").replace("&gt", ">")
 
 
 def lang(arg):
@@ -129,7 +129,7 @@ for _, _, files in os.walk(translations_dir + dir_name):
                     jsonData.write("\n")
 
                 entry.text = processText(entry.text)
-
+                print(entry.text)
             indent(transifexData)
             ElementTree.ElementTree(transifexData).write(resource_dir + "/" + resource_name, encoding="utf-8", method="xml")
             jsonData.close()

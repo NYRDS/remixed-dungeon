@@ -2755,7 +2755,6 @@ remix.30.0\n
   <string name="CharInfo_Level">这是一只%1$d级%2$s。</string>
   <string name="WrnExperimental_realtime">实时！模式启用：现在是实时的roguelike，快速点击或死亡。\n想要查看库存？\n祝你好运，当下水道蟹正在检查你的内脏时，你可以这样做。</string>
   <string name="WrnExperimental_moveTimeout">移动超时设置为 %d 毫秒，请快速思考！</string>
-  <string name="WnrExperimental_hint">如果这个奇怪而扭曲的世界对你来说太残酷了，请用以下方法禁用这些选项：\n开始屏幕—&gt;选项—&gt;游戏设置\n菜单，然后开始新的游戏或加载另一个存档。</string>
   <string name="WrnExperimental_title">实验选项已启用！</string>
   <string name="Welcome_Text_30_1">
 remix.30.1\n
