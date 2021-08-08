@@ -25,7 +25,7 @@ return item.init{
 
     execute = function(self, item, hero, action)
         if action == RPD.Actions.eat then
-            local wnd = luajava.newInstance(RPD.Objects.Ui.WndChooseWay, item, hero:getSubClassByName("GUARDIAN"), hero:getSubClassByName("WITCHDOCTOR") )
+            local wnd = luajava.newInstance(RPD.Objects.Ui.WndChooseWay, hero, item, hero:getSubClassByName("GUARDIAN"), hero:getSubClassByName("WITCHDOCTOR") )
             RPD.GameScene:show(wnd)
         end
     end,
