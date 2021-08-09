@@ -11,6 +11,7 @@ import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.plants.Fadeleaf;
 import com.watabou.pixeldungeon.plants.Firebloom;
 import com.watabou.pixeldungeon.plants.Icecap;
+import com.watabou.pixeldungeon.plants.Moongrace;
 import com.watabou.pixeldungeon.plants.Sorrowmoss;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -53,6 +54,7 @@ public class LevelObjectsFactory {
 		registerObjectClass(WandMaker.Rotberry.class);
 		registerObjectClass(Sorrowmoss.class);
 		registerObjectClass(Sungrass.class);
+		registerObjectClass(Moongrace.class);
 	}
 
 	public static boolean isValidObjectClass(String objectClass) {
