@@ -2579,7 +2579,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="town_deco_crossroad_name">Дорожный указатель</string>
   <string name="town_deco_crossroad_desc">Грубо сделанный деревянный столб с приколоченными дощечками в форме стрелок, текст на них давно выцвел, похоже что из-за суровой погоды.</string>
   <string name="ShieldBuffReady_Name">Готов</string>
+  <string name="ShieldBuffReady_Info">Твой щит готов блокировать следующую атаку.</string>
   <string name="ShieldBuffNotReady_Name">Не Готов</string>
+  <string name="ShieldBuffNotReady_Info">Твой щит не готов блокировать следующую атаку.</string>
   <string name="WoodenShield_name">Деревянный щит</string>
   <string name="WoodenShield_desc">Грубо сделанный деревянный щит - самый простой из доступных вариантов. Он круглый и время от времени может заблокировать немного урона.</string>
   <string name="ToughShield_name">Усиленный кожаный щит</string>
@@ -2826,8 +2828,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Добывать значки, и открывать классы теперь можно и в официальных DLC (но не в модах). \n
     - Исправлены ошибки\n
     </string>
+  <string name="ShamanElder_Name">старший шаман</string>
   <string name="ShamanElder_Gender">masculine</string>
+  <string name="ShamanElder_Name_Objective">шамана</string>
+  <string name="ShamanElder_Desc">Это гнолл выглядит куда старше других шаманов, наверняка он кто-то важный в племени. Вокруг него мерцает странная аура, похоже она отражает все что приближается к ней.</string>
   <string name="Bee_Gender">masculine</string>
+  <string name="Moongrace_Name">Благолунка</string>
+  <string name="Moongrace_Desc">Эти растения встречаются весьма редко, но весьма ценятся как природный источник волшебства.</string>
   <string name="MoongraceBuff_Name">Манна небесная</string>
   <string name="MoongraceBuff_Info">Воздух вокруг становится более насыщенным, что позволяет лучше концентрироваться и восстанавливать магические резервы.</string>
   <string name="EncumbranceBuff_Name">Тяжесть</string>
