@@ -2798,7 +2798,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
   <string name="CharInfo_Level">Ini adalah level %1$d %2$s.</string>
   <string name="WrnExperimental_realtime">Waktu sebenarnya! mode diaktifkan: ini adalah roguelike realtime sekarang, ketuk cepat atau mati.\Ingin memeriksa inventaris?\Semoga berhasil melakukannya saat kepiting selokan memeriksa nyali Anda.</string>
   <string name="WrnExperimental_moveTimeout">Pindahkan batas waktu yang disetel ke %d milidetik, pikirkan cepat!</string>
-  <string name="WnrExperimental_hint">Jika dunia yang aneh dan bengkok ini terlalu keras untuk Anda, harap nonaktifkan opsi tersebut menggunakan\nmenu Mulai Layar-&gt;Opsi-&gt;Gameplay\ndan mulai permainan baru atau muat simpanan lain.</string>
+  <string name="WrnExperimental_hint">Jika dunia yang aneh dan bengkok ini terlalu keras untuk Anda, nonaktifkan opsi tersebut menggunakan\nLayar Mulai->Opsi->Gameplay\nmenu dan mulai permainan baru atau muat simpanan lain.</string>
   <string name="WrnExperimental_title">Opsi eksperimental diaktifkan!</string>
   <string name="Welcome_Text_30_1">
   remix.30.1\n 
