@@ -2808,6 +2808,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="CharInfo_Level">%2$sest au niveau %1$d.</string>
   <string name="WrnExperimental_realtime">Mode temps réel activé : c\'est un roguelike en temps réel, tapez vite ou mourez.\nVous voulez vérifier votre inventaire ?\nBonne chance pour le faire alors que le crabe des égouts examine vos entrailles.</string>
   <string name="WrnExperimental_moveTimeout">Délai de mouvement réglé sur %d millisecondes, pensez vite !</string>
+  <string name="WrnExperimental_hint">Si ce monde étrange et tordu est trop dur pour vous, désactivez ces options en utilisant le menu\nÉcran de démarrage->Options->Jouabilité\net recommencez une nouvelle partie ou chargez une autre sauvegarde.</string>
   <string name="WrnExperimental_title">Options expérimentales activées !</string>
   <string name="Welcome_Text_30_1">
     remix.30.1\n

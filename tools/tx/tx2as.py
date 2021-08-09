@@ -13,7 +13,7 @@ translations_dir = 'translations/'
 
 
 source_locales = {"en","tr","ko","hu","it",'de_DE', 'es', 'fr_FR', 'pl_PL', 'ru',
-                  'uk_UA', 'pt_BR', "ms_MY","zh_CN", "zh_TW"}
+                  'uk_UA', 'pt_BR', "ms_MY","zh_CN", "zh_TW", "id"}
 
 locale_remap = {'de_DE': 'de', 'fr_FR': 'fr', 'pl_PL': 'pl', 'nl_NL': 'nl', 'ro_RO': 'ro',
                 'uk_UA': 'uk', 'pt_BR': 'pt-rBR', 'pt_PT': 'pt-rPT', 'es_MX': 'es-rMX', "ms_MY": "ms", "zh_CN":'zh-rCN',
@@ -49,7 +49,10 @@ def indent(elem, level=0):
 
 
 def unescape(arg):
-    return arg.replace("\\\\", "\\").replace("\\\\", "\\").replace("&gt", ">")
+    return arg.replace("\\\\", "\\")\
+        .replace("\\\\", "\\")\
+        .replace("&gt;", ">")\
+        .replace("&lt;", "<")
 
 
 def lang(arg):
@@ -131,12 +134,17 @@ for _, _, files in os.walk(translations_dir + dir_name):
                 entry.text = processText(entry.text)
 
             indent(transifexData)
-            ElementTree.ElementTree(transifexData).write(resource_dir + "/" + resource_name, encoding="utf-8", method="xml")
+
             jsonData.close()
 
-            # if locale_code == 'en':
-            #     indent(arrays)
-            #     ElementTree.ElementTree(arrays).write(resource_dir + "/string_arrays.xml", encoding="utf-8", method="xml")
+            xml_out_name = resource_dir + "/" + resource_name
+            ElementTree.ElementTree(transifexData).write(xml_out_name, encoding="utf-8", method="xml")
+
+            with open(xml_out_name, "r") as fi:
+                lines = fi.readlines()
+                with open(xml_out_name, "w") as fo:
+                    for line in lines:
+                        fo.write(unescape(line))
 
         except ElementTree.ParseError as error:
             print("shit happens with " + currentFilePath)
