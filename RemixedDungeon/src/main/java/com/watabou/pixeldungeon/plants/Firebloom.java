@@ -32,7 +32,6 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -61,7 +60,8 @@ public class Firebloom extends Plant {
             plantName = StringsManager.getVar(R.string.Firebloom_Name);
 
             name = Utils.format(StringsManager.getVar(R.string.Plant_Seed), plantName);
-			image = ItemSpriteSheet.SEED_FIREBLOOM;
+
+			image = 0;
 
 			plantClass = Firebloom.class;
 			alchemyClass = PotionOfLiquidFlame.class;

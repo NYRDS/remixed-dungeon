@@ -56,7 +56,6 @@ import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.sprites.WandmakerSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -321,7 +320,7 @@ public class WandMaker extends NPC {
                 plantName = StringsManager.getVar(R.string.WandMaker_RotberryName);
 
                 name = Utils.format(StringsManager.getVar(R.string.Plant_Seed), plantName);
-				image = ItemSpriteSheet.SEED_ROTBERRY;
+				image = 7;
 				
 				plantClass = Rotberry.class;
 				alchemyClass = PotionOfStrength.class;

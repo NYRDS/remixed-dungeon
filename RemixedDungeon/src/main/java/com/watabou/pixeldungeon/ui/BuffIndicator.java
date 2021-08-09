@@ -65,7 +65,6 @@ public class BuffIndicator extends Component {
 	public static final int LIGHT		= 22;
 	public static final int CRIPPLE		= 23;
 	public static final int BARKSKIN	= 24;
-	public static final int IMMUNITY	= 25;
 	public static final int BLEEDING	= 26;
 	public static final int MARK		= 27;
 	public static final int DEFERRED	= 28;
@@ -78,10 +77,10 @@ public class BuffIndicator extends Component {
 	public static final int DARKVEIL    = 35;
 	public static final int FROSTAURA   = 36;
 	public static final int STONEBLOOD  = 37;
-	public static final int DEVOUR   	= 38;
 	public static final int NECROTISM	= 39;
 
 	public static final int BLEESSED    = 42;
+	public static final int MOONGRACE   = 51;
 
 	
 	//public static final int   SIZE	= 16;

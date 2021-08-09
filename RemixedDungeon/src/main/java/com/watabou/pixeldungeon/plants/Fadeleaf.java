@@ -30,7 +30,6 @@ import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -62,7 +61,7 @@ public class Fadeleaf extends Plant {
             plantName = StringsManager.getVar(R.string.Fadeleaf_Name);
 
             name = Utils.format(StringsManager.getVar(R.string.Plant_Seed), plantName);
-			image = ItemSpriteSheet.SEED_FADELEAF;
+			image = 6;
 			
 			plantClass = Fadeleaf.class;
 			alchemyClass = PotionOfMindVision.class;

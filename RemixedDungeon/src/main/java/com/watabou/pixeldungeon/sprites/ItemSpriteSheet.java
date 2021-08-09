@@ -98,18 +98,7 @@ public class ItemSpriteSheet {
 	public static final int SCROLL_IWAZ 	= 129;
 	public static final int SCROLL_ALGIZ	= 130;
 	public static final int SCROLL_DAGAZ	= 131;
-	
-	// Seeds
-	public static final int SEED_FIREBLOOM	= 88;
-	public static final int SEED_ICECAP		= 89;
-	public static final int SEED_SORROWMOSS	= 90;
-	public static final int SEED_DREAMWEED	= 91;
-	public static final int SEED_SUNGRASS	= 92;
-	public static final int SEED_EARTHROOT	= 93;
-	public static final int SEED_FADELEAF	= 94;
-	public static final int SEED_ROTBERRY	= 95;
-	public static final int SEED_MOONGRACE	= 96;
-	
+
 	// Quest items
 	public static final int ROSE	= 100;
 	public static final int PICKAXE	= 101;

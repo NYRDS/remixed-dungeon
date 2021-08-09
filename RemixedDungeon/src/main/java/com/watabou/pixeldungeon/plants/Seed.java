@@ -5,12 +5,12 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.food.Food;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -29,6 +29,7 @@ public class Seed extends Item {
     {
         stackable = true;
         setDefaultAction(AC_THROW);
+        imageFile = "items/seeds.png";
     }
 
     protected Class<? extends Plant> plantClass;
@@ -46,10 +47,12 @@ public class Seed extends Item {
 
     @Override
     protected void onThrow(int cell, @NotNull Char thrower) {
-        if (Dungeon.level.map[cell] == Terrain.ALCHEMY || Dungeon.level.pit[cell]) {
+        Level level = thrower.level();
+
+        if (level.map[cell] == Terrain.ALCHEMY || level.pit[cell]) {
             super.onThrow(cell, thrower);
         } else {
-            Dungeon.level.plant(this, cell);
+            level.plant(this, cell);
         }
     }
 

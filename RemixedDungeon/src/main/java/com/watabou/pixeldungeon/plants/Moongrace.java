@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfMana;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
@@ -38,7 +37,7 @@ import org.jetbrains.annotations.NotNull;
 public class Moongrace extends Plant {
 
 	public Moongrace() {
-		imageIndex = 4;
+		imageIndex = 8;
 	}
 
 	public void effect(int pos, Presser ch) {
@@ -51,7 +50,7 @@ public class Moongrace extends Plant {
 
 			int cell = level().getEmptyCellNextTo(pos);
 			if (level().cellValid(cell)) {
-				mob.split(pos,0);
+				mob.split(cell,0);
 			}
 		}
 
@@ -65,7 +64,7 @@ public class Moongrace extends Plant {
             plantName = StringsManager.getVar(R.string.Moongrace_Name);
 
             name = Utils.format(StringsManager.getVar(R.string.Plant_Seed), plantName);
-			image = ItemSpriteSheet.SEED_MOONGRACE;
+			image = 8;
 
 			plantClass = Moongrace.class;
 			alchemyClass = PotionOfMana.class;
@@ -82,10 +81,8 @@ public class Moongrace extends Plant {
 			super._execute(chr, action);
 
 			if (action.equals(CommonActions.AC_EAT)) {
-
 				Buff.affect(chr, Charm.class, Charm.durationFactor(chr) * Random.IntRange(10, 15));
-
-				chr.accumulateSkillPoints(Random.Int(0, Math.max((chr.ht() - chr.hp()) / 4, 15)));
+				chr.accumulateSkillPoints(Random.Int(0, Math.max((chr.getSkillPointsMax() - chr.getSkillPoints()) / 4, 15)));
 			}
 		}
 	}

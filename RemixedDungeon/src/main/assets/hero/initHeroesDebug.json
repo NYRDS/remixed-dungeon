@@ -18,7 +18,7 @@
         "kind": "test/TestItem"
       },
       {
-        "kind": "Icecap.Seed",
+        "kind": "Moongrace.Seed",
         "quantity": 1000
       },
 

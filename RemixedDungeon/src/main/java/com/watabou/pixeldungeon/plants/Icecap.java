@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PathFinder;
@@ -57,7 +56,7 @@ public class Icecap extends Plant {
             plantName = StringsManager.getVar(R.string.Icecap_Name);
 
             name = Utils.format(StringsManager.getVar(R.string.Plant_Seed), plantName);
-			image = ItemSpriteSheet.SEED_ICECAP;
+			image = 1;
 			
 			plantClass = Icecap.class;
 			alchemyClass = PotionOfFrost.class;

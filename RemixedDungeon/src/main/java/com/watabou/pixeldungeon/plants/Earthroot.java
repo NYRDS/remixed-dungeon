@@ -31,7 +31,6 @@ import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.EarthParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfParalyticGas;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -62,7 +61,7 @@ public class Earthroot extends Plant {
             plantName = StringsManager.getVar(R.string.Earthroot_Name);
 
             name = Utils.format(StringsManager.getVar(R.string.Plant_Seed), plantName);
-			image = ItemSpriteSheet.SEED_EARTHROOT;
+			image = 5;
 			
 			plantClass = Earthroot.class;
 			alchemyClass = PotionOfParalyticGas.class;

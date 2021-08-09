@@ -30,7 +30,6 @@ import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -50,7 +49,7 @@ public class Dreamweed extends Plant {
             plantName = StringsManager.getVar(R.string.Dreamweed_Name);
 
             name = Utils.format(StringsManager.getVar(R.string.Plant_Seed), plantName);
-			image = ItemSpriteSheet.SEED_DREAMWEED;
+			image = 3;
 			
 			plantClass = Dreamweed.class;
 			alchemyClass = PotionOfInvisibility.class;

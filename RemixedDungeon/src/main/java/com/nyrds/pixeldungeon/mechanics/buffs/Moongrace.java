@@ -42,7 +42,7 @@ public class Moongrace extends Buff {
 
     @Override
     public int icon() {
-        return BuffIndicator.HEALING;
+        return BuffIndicator.MOONGRACE;
     }
 
     @Override
