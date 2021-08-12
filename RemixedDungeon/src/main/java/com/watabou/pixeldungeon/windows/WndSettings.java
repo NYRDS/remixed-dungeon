@@ -55,11 +55,11 @@ public class WndSettings extends WndMenuCommon {
 			protected void onClick() {
 				GameLoop.scene().add(
 						new WndSelectLanguage(selectLanguage, "English",
-								"Русский", "Français", "Polski", "Español", "한국말", "Português brasileiro", "Italiano", "Deutsch", "简体中文","繁體中文", "Türkçe", "Украї́нська","Bahasa Melayu","Magyar Nyelv","bahasa Indonesia") {
+								"Русский", "Français", "Polski", "Español", "한국말", "Português brasileiro", "Italiano", "Deutsch", "简体中文","繁體中文", "Türkçe", "Украї́нська","Bahasa Melayu","Magyar Nyelv","Bahasa Indonesia") {
 
 							@Override
 							protected void onSelect(int index) {
-								String[] lang = {"en", "ru", "fr", "pl", "es", "ko", "pt_BR", "it", "de", "zh_CN", "zh_TW", "tr", "uk","ms","hu","id"};
+								String[] lang = {"en", "ru", "fr", "pl", "es", "ko", "pt_BR", "it", "de", "zh_CN", "zh_TW", "tr", "uk","ms","hu","in"};
 								if (!Utils.canUseClassicFont(lang[index])) {
 									GamePreferences.classicFont(false);
 								}
