@@ -183,7 +183,7 @@ public class SystemText extends Text {
 
 		float symbolWidth = 0;
 
-		for (; offset < length; ) {
+		while (offset < length) {
 
 			int codepoint = text.codePointAt(offset);
 			int codepointCharCount = Character.charCount(codepoint);
@@ -260,6 +260,10 @@ public class SystemText extends Text {
 					currentLine = text.substring(startLine,nextLine);
 
 					String key = Utils.format("%fx%f_%s", lineWidth, fontHeight, currentLine);
+
+					if(mask!= null) {
+						key += mask.toString();
+					}
 
 					if(!bitmapCache.containsKey(key)) {
 						Bitmap bitmap = Bitmap.createBitmap(
