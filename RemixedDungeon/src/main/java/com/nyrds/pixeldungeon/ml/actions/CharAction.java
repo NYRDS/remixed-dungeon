@@ -21,6 +21,12 @@ public abstract class CharAction {
 					'}';
 		}
 
+		if(!level.cellValid(dst)) {
+			return   getClass().getSimpleName() +
+					"{dst=" + dst +
+					'}';
+		}
+
 		return   getClass().getSimpleName() +
 				"{dst=" + dst +
 				  "("+ level.tileNameByCell(dst) + "," +
