@@ -23,6 +23,7 @@ public class PlatformLuajavaLib extends LuajavaLib {
 		classRemap.put("com.watabou.noosa.audio.Sample", "com.nyrds.platform.audio.Sample");
 		classRemap.put("com.watabou.noosa.audio.Music", "com.nyrds.platform.audio.Music");
 		classRemap.put("com.watabou.noosa.StringsManager", "com.nyrds.platform.util.StringsManager");
+		classRemap.put("com.nyrds.platform.Input", "com.nyrds.platform.app.Input");
 	}
 
 	public PlatformLuajavaLib() {
