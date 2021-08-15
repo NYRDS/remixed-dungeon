@@ -1,14 +1,11 @@
 package com.watabou.pixeldungeon;
 
-import com.nyrds.pixeldungeon.levels.XyzTilemapConfiguration;
-import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
 import com.watabou.pixeldungeon.levels.Level;
-
-import org.json.JSONException;
+import com.watabou.pixeldungeon.levels.Terrain;
 
 /**
  * Created by mike on 15.02.2018.
@@ -22,7 +19,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     private final Tilemap mCornersLayer;
     private final Tilemap mDoorsLayer;
 
-    private final XyzTilemapConfiguration xyzTilemapConfiguration;
+    //private final XyzTilemapConfiguration xyzTilemapConfiguration;
 
     private final Level level;
 
@@ -35,8 +32,9 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         super(level, tiles);
         this.level = level;
 
-        int mSize = level.getWidth() * level.getHeight();
-
+        final int width = level.getWidth();
+        int mSize = width * level.getHeight();
+/*
         try {
             String tilemapConfig = "tilemapDesc/" + tiles.replace(".png", ".json");
             if (!ModdingMode.isResourceExist(tilemapConfig)) {
@@ -46,9 +44,9 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         } catch (JSONException e) {
             throw ModdingMode.modException(e);
         }
-
-        data = new int[level.getWidth()*level.getHeight()];
-        map(buildGroundMap(),level.getWidth());
+*/
+        data = new int[mSize];
+        map(buildGroundMap(), width);
 
         mWallsLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
         mRoofLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));;
@@ -60,25 +58,41 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         mCornersMap = new int[mSize];
         mDoorsMap = new int[mSize];
 
-        mWallsLayer.map(buildWallsMap(), level.getWidth());
-        mRoofLayer.map(buildRoofMap(), level.getWidth());
-        mCornersLayer.map(buildCornersMap(), level.getWidth());
-        mDoorsLayer.map(buildDoordMap(), level.getWidth());
+        mWallsLayer.map(buildWallsMap(), width);
+        mRoofLayer.map(buildRoofMap(), width);
+        mCornersLayer.map(buildCornersMap(), width);
+        mDoorsLayer.map(buildDoordMap(), width);
     }
 
     private int[] buildDoordMap() {
+        for (int i = 0; i < mDoorsMap.length; i++) {
+            mDoorsMap[i] = currentDoorsCell(i);
+        }
+
         return mDoorsMap;
     }
 
     private int[] buildCornersMap() {
+        for (int i = 0; i < mCornersMap.length; i++) {
+            mCornersMap[i] = currentCornersCell(i);
+        }
+
         return mCornersMap;
     }
 
     private int[] buildRoofMap() {
+        for (int i = 0; i < mRoofMap.length; i++) {
+            mRoofMap[i] = currentRoofCell(i);
+        }
+
         return mRoofMap;
     }
 
     private int[] buildWallsMap() {
+        for (int i = 0; i < mWallsMap.length; i++) {
+            mWallsMap[i] = currentWallsCell(i);
+        }
+
         return mWallsMap;
     }
 
@@ -87,28 +101,21 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         CompositeImage img = new CompositeImage(getTexture());
         img.frame(getTileset().get(data[pos]));
 
-        Image deco = new Image(getTexture());
-        deco.frame(getTileset().get(mDecoMap[pos]));
-
-        img.addLayer(deco);
-
         return img;
     }
 
-    private int currentDecoCell(int cell) {
-        return xyzTilemapConfiguration.decoTile(level, cell);
-    }
-
-    private int[] buildDecoMap() {
-        for (int i = 0; i < mDecoMap.length; i++) {
-            mDecoMap[i] = currentDecoCell(i);
-        }
-
-        return mDecoMap;
-    }
 
     private int currentBaseCell(int cell) {
-        return xyzTilemapConfiguration.baseTile(level, cell);
+
+        switch (level.map[cell]) {
+            case Terrain.EMPTY:
+                return 49;
+            case Terrain.EMBERS:
+                return 50;
+            default:
+                return 173;
+        }
+
     }
 
     private int[] buildGroundMap() {
@@ -123,14 +130,18 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     public void draw() {
         super.draw();
         mWallsLayer.draw();
-        mRoofLayer.draw();
-        mCornersLayer.draw();
-        mDoorsLayer.draw();
+        //mRoofLayer.draw();
+        //mCornersLayer.draw();
+        //mDoorsLayer.draw();
     }
 
     public void updateAll() {
         buildGroundMap();
-        buildDecoMap();
+        buildWallsMap();
+        buildRoofMap();
+        buildCornersMap();
+        buildRoofMap();
+
         final int width = level.getWidth();
         final int height = level.getHeight();
 
@@ -147,14 +158,32 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         int y = level.cellY(cell);
 
         data[cell] = currentBaseCell(cell);
-        mDecoMap[cell] = currentDecoCell(cell);
+        mWallsMap[cell] = currentWallsCell(cell);
+        mRoofMap[cell] = currentRoofCell(cell);
+        mCornersMap[cell] = currentCornersCell(cell);
+        mDoorsMap[cell] = currentDoorsCell(cell);
 
         updateRegion().union(x, y);
-
         mWallsLayer.updateRegion().union(x, y);
         mRoofLayer.updateRegion().union(x, y);
         mCornersLayer.updateRegion().union(x, y);
         mDoorsLayer.updateRegion().union(x, y);
+    }
+
+    private int currentDoorsCell(int cell) {
+        return 173;
+    }
+
+    private int currentCornersCell(int cell) {
+        return 173;
+    }
+
+    private int currentRoofCell(int cell) {
+        return 173;
+    }
+
+    private int currentWallsCell(int cell) {
+        return 173;
     }
 
     @Override
