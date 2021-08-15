@@ -775,6 +775,9 @@ public abstract class Level implements Bundlable {
 	}
 
 	public String getTilesTex() {
+
+		return tilesTexXyz();
+		/*
 		String tiles = DungeonGenerator.getLevelProperty(levelId, "tiles", null);
 		if (tiles != null) {
 			return tiles;
@@ -790,6 +793,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		return tilesTexEx();
+		 */
 	}
 
 	public String tilesTex() {
@@ -798,6 +802,10 @@ public abstract class Level implements Bundlable {
 
 	protected String tilesTexEx() {
 		return null;
+	}
+
+	protected String tilesTexXyz() {
+		return Assets.TILES_SEWERS_XYZ;
 	}
 
 	@NotNull

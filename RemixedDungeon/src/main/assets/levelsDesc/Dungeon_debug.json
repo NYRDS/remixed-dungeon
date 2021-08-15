@@ -72,7 +72,7 @@
     },
 
     "Graph":{
-        "0":[["7"],[]],
+        "0":[["1"],[]],
         "testLevel":[[],[]],
         "town_2":[["church_2","cinema_2","1","library_2","shop_town_2","fortune_2","inn_2"],["0"]],
         "inn_2":[[],["town_2"]],

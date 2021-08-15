@@ -25,6 +25,8 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class DungeonTilemap extends Tilemap {
@@ -34,15 +36,20 @@ public abstract class DungeonTilemap extends Tilemap {
 	static protected Level level;
 
 
-	public DungeonTilemap(Level level, String tiles ) {
+	public DungeonTilemap(@NotNull Level level, String tiles ) {
 		super(tiles, new TextureFilm(tiles, SIZE, SIZE));
 		DungeonTilemap.level = level;
 
 		map(level.map, level.getWidth());
 	}
 
-	static public DungeonTilemap factory(Level level, String tiles) {
+	@Contract("_, _ -> new")
+	static public @NotNull DungeonTilemap factory(Level level, String tiles) {
 		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
+
+		if(tiles.contains("_xyz")) {
+			return new XyzDungeonTilemap(level, tiles);
+		}
 
 		if(probe.size() == 256) {
 			return new VariativeDungeonTilemap(level, tiles);
@@ -92,7 +99,8 @@ public abstract class DungeonTilemap extends Tilemap {
 		return new PointF(level.cellX(pos), level.cellY(pos)).scale(SIZE);
 	}
 
-	public static PointF tileCenterToWorld(int pos) {
+	@Contract("_ -> new")
+	public static @NotNull PointF tileCenterToWorld(int pos) {
 		return new PointF((level.cellX(pos) + 0.5f) * SIZE,
 				(level.cellY(pos) + 0.5f) * SIZE);
 	}
