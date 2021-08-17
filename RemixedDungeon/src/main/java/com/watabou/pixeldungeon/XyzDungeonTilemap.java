@@ -221,9 +221,39 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             return VerticalWallKind.Right;
         }
 
-
         return VerticalWallKind.None;
     }
+
+
+    private Integer[] roofNTiles      = {11,27};
+    private Integer[] roofNTilesRight  = {9,25};
+    private Integer[] roofNTilesLeft = {10,26};
+    private Integer[] roofNTilesCross = {8,24};
+
+
+    private int currentRoofCell(int cell) {
+        int cellS = cell + level.getWidth();
+
+        if(isWallCell(cellS)) {
+            if(cellNEmpty(cellS)) {
+                if(isWallCell(cellS + 1) && isWallCell(cellS - 1)) {
+                    return Random.oneOf(roofNTilesCross);
+                }
+
+                if(isWallCell(cellS - 1)) {
+                    return Random.oneOf(roofNTilesLeft);
+                }
+
+                if(isWallCell(cellS + 1)) {
+                    return Random.oneOf(roofNTilesRight);
+                }
+
+                return Random.oneOf(roofNTiles);
+            }
+        }
+        return 173;
+    }
+
 
     private boolean cellSEmpty(int cell) {
         int cellN = cell + level.getWidth();
@@ -306,10 +336,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     private int currentCornersCell(int cell) {
-        return 173;
-    }
-
-    private int currentRoofCell(int cell) {
         return 173;
     }
 
