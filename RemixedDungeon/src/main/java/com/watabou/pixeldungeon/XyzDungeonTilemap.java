@@ -225,10 +225,10 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
 
-    private Integer[] roofNTiles      = {11,27};
-    private Integer[] roofNTilesRight  = {9,25};
-    private Integer[] roofNTilesLeft = {10,26};
-    private Integer[] roofNTilesCross = {8,24};
+    private final Integer[] roofNTiles      = {11,27};
+    private final Integer[] roofNTilesRight  = {9,25};
+    private final Integer[] roofNTilesLeft = {10,26};
+    private final Integer[] roofNTilesCross = {8,24};
 
 
     private int currentRoofCell(int cell) {
@@ -254,6 +254,37 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         return 173;
     }
 
+
+    private int currentCornersCell(int cell) {
+        if(isWallCell(cell)) {
+            boolean csle = cellSEmpty(cell-1);
+            boolean csre = cellSEmpty(cell+1);
+
+            if(cellSEmpty(cell)) {
+                if (csle && csre) {
+                    return 30;
+                }
+                if (csle) {
+                    return 28;
+                }
+                if (csre) {
+                    return 29;
+                }
+            }
+            if(cellNEmpty(cell)) {
+                if(csle && csre) {
+                    return 14;
+                }
+                if(csle) {
+                    return 12;
+                }
+                if(csre) {
+                    return 13;
+                }
+            }
+        }
+        return 173;
+    }
 
     private boolean cellSEmpty(int cell) {
         int cellN = cell + level.getWidth();
@@ -335,9 +366,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         return 173;
     }
 
-    private int currentCornersCell(int cell) {
-        return 173;
-    }
 
     @Override
     public void brightness(float value) {
