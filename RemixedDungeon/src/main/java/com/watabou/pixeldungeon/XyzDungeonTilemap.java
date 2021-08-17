@@ -6,6 +6,8 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.levels.TerrainFlags;
+import com.watabou.utils.Random;
 
 /**
  * Created by mike on 15.02.2018.
@@ -18,8 +20,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     private final Tilemap mRoofLayer;
     private final Tilemap mCornersLayer;
     private final Tilemap mDoorsLayer;
-
-    //private final XyzTilemapConfiguration xyzTilemapConfiguration;
 
     private final Level level;
 
@@ -34,17 +34,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
         final int width = level.getWidth();
         int mSize = width * level.getHeight();
-/*
-        try {
-            String tilemapConfig = "tilemapDesc/" + tiles.replace(".png", ".json");
-            if (!ModdingMode.isResourceExist(tilemapConfig)) {
-                tilemapConfig = "tilemapDesc/tiles_xyz_default.json";
-            }
-            xyzTilemapConfiguration = XyzTilemapConfiguration.readConfig(tilemapConfig);
-        } catch (JSONException e) {
-            throw ModdingMode.modException(e);
-        }
-*/
+
         data = new int[mSize];
         map(buildGroundMap(), width);
 
@@ -101,21 +91,162 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         CompositeImage img = new CompositeImage(getTexture());
         img.frame(getTileset().get(data[pos]));
 
+        Image wall = new Image(getTexture());
+        wall.frame(getTileset().get(mWallsMap[pos]));
+
+        img.addLayer(wall);
+
         return img;
     }
 
+
+    private final Integer[] floorTiles = {48,49,50};
+    private final Integer[] floorSpTiles = {112,113,114};
 
     private int currentBaseCell(int cell) {
 
         switch (level.map[cell]) {
             case Terrain.EMPTY:
-                return 49;
             case Terrain.EMBERS:
-                return 50;
+            case Terrain.STATUE:
+            case Terrain.EMPTY_DECO:
+            case Terrain.WELL:
+            case Terrain.ENTRANCE:
+            case Terrain.GRASS:
+            case Terrain.PEDESTAL:
+            case Terrain.BARRICADE:
+            case Terrain.EMPTY_WELL:
+            case Terrain.HIGH_GRASS:
+            case Terrain.BOOKSHELF:
+                return Random.oneOf(floorTiles);
+            case Terrain.EMPTY_SP:
+            case Terrain.STATUE_SP:
+                return Random.oneOf(floorSpTiles);
             default:
                 return 173;
         }
+    }
 
+    private final Integer[] wallSTiles = {32,33,34};
+    private final Integer[] wallNTiles = {179};
+    private final Integer[] wallVerticalTiles = {0,16};
+
+    private final Integer[] wallVerticalCrossTiles = {3,19};
+    private final Integer[] wallVerticalLeftTiles = {2,18};
+    private final Integer[] wallVerticalRightTiles = {1,17};
+
+    private final Integer[] wallVerticalCrossSolidTiles = {128};
+    private final Integer[] wallVerticalLeftSolidTiles = {5,21};
+    private final Integer[] wallVerticalRightSolidTiles = {4,20};
+
+    enum VerticalWallKind {None, Cross, Left, Right, CrossSolid, LeftSolid, RightSolid};
+
+    private int currentWallsCell(int cell) {
+        if(isWallCell(cell)) {
+                if(cellSEmpty(cell)) {
+                    return Random.oneOf(wallSTiles);
+                }
+
+                switch (cellVerticalKind(cell)) {
+                    case Cross:
+                        return Random.oneOf(wallVerticalCrossTiles);
+                    case Left:
+                        return Random.oneOf(wallVerticalLeftTiles);
+                    case Right:
+                        return Random.oneOf(wallVerticalRightTiles);
+                    case CrossSolid:
+                        return Random.oneOf(wallVerticalCrossSolidTiles);
+                    case LeftSolid:
+                        return Random.oneOf(wallVerticalLeftSolidTiles);
+                    case RightSolid:
+                        return Random.oneOf(wallVerticalRightSolidTiles);
+
+                    case None:
+                        return Random.oneOf(wallVerticalTiles);
+                }
+
+
+        }
+        return 173;
+    }
+
+    boolean isWallCell(int cell) {
+        if(!level.cellValid(cell)) {
+            return true;
+        }
+
+        switch (level.map[cell]) {
+            case Terrain.WALL:
+            case Terrain.WALL_DECO:
+            case Terrain.SECRET_DOOR:
+                return true;
+        }
+        return false;
+    }
+
+    private VerticalWallKind cellVerticalKind(int cell) {
+        int cellL = cell - 1;
+        int cellR = cell + 1;
+
+        boolean cellLS = false;
+        boolean cellRS = false;
+
+        if(isWallCell(cellL) ) {
+            cellLS = true;
+        }
+
+        if(isWallCell(cellR) ) {
+            cellRS = true;
+        }
+
+        if(cellLS && cellRS) {
+            if(isWallCell(cellL + level.getWidth()) || isWallCell(cellR + level.getWidth())) {
+                return VerticalWallKind.CrossSolid;
+            }
+            return VerticalWallKind.Cross;
+        }
+
+        if(cellLS) {
+            if(isWallCell(cellL + level.getWidth())) {
+                return VerticalWallKind.LeftSolid;
+            }
+            return VerticalWallKind.Left;
+        }
+
+        if(cellRS) {
+            if(isWallCell(cellR + level.getWidth())) {
+                return VerticalWallKind.RightSolid;
+            }
+
+            return VerticalWallKind.Right;
+        }
+
+
+        return VerticalWallKind.None;
+    }
+
+    private boolean cellSEmpty(int cell) {
+        int cellN = cell + level.getWidth();
+        if(!level.cellValid(cellN)) {
+            return false;
+        }
+
+        if(TerrainFlags.is(level.map[cellN], TerrainFlags.PASSABLE)) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean cellNEmpty(int cell) {
+        int cellN = cell - level.getWidth();
+        if(!level.cellValid(cellN)) {
+            return false;
+        }
+
+        if(TerrainFlags.is(level.map[cellN], TerrainFlags.PASSABLE)) {
+            return true;
+        }
+        return false;
     }
 
     private int[] buildGroundMap() {
@@ -130,9 +261,9 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     public void draw() {
         super.draw();
         mWallsLayer.draw();
-        //mRoofLayer.draw();
-        //mCornersLayer.draw();
-        //mDoorsLayer.draw();
+        mRoofLayer.draw();
+        mCornersLayer.draw();
+        mDoorsLayer.draw();
     }
 
     public void updateAll() {
@@ -179,10 +310,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     private int currentRoofCell(int cell) {
-        return 173;
-    }
-
-    private int currentWallsCell(int cell) {
         return 173;
     }
 
