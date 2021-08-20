@@ -39,11 +39,12 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         map(buildGroundMap(), width);
 
         mWallsLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
-        mRoofLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));;
+        mRoofLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
+        ;
         mCornersLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
         mDoorsLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
 
-        mWallsMap= new int[mSize];
+        mWallsMap = new int[mSize];
         mRoofMap = new int[mSize];
         mCornersMap = new int[mSize];
         mDoorsMap = new int[mSize];
@@ -110,8 +111,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
 
-    private final Integer[] floorTiles = {48,49,50};
-    private final Integer[] floorSpTiles = {112,113,114};
+    private final Integer[] floorTiles = {48, 49, 50};
+    private final Integer[] floorSpTiles = {112, 113, 114};
 
     private int currentBaseCell(int cell) {
 
@@ -137,86 +138,91 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         }
     }
 
-    private final Integer[] wallSTiles = {32,33,34};
+    private final Integer[] wallSTiles = {32, 33, 34};
     private final Integer[] wallNTiles = {179};
-    private final Integer[] wallVerticalTiles = {0,16};
+    private final Integer[] wallVerticalTiles = {0, 16};
 
-    private final Integer[] wallVerticalCrossTiles = {3,19};
-    private final Integer[] wallVerticalLeftTiles = {2,18};
-    private final Integer[] wallVerticalRightTiles = {1,17};
+    private final Integer[] wallVerticalCrossTiles = {3, 19};
+    private final Integer[] wallVerticalLeftTiles = {2, 18};
+    private final Integer[] wallVerticalRightTiles = {1, 17};
 
     private final Integer[] wallVerticalCrossSolidTiles = {128};
-    private final Integer[] wallVerticalLeftSolidTiles = {5,21};
-    private final Integer[] wallVerticalRightSolidTiles = {4,20};
+    private final Integer[] wallVerticalLeftSolidTiles = {5, 21};
+    private final Integer[] wallVerticalRightSolidTiles = {4, 20};
 
-    private final Integer[] w7_23 = {7,23};
-    private final Integer[] w6_22 = {6,22};
+    private final Integer[] w7_23 = {7, 23};
+    private final Integer[] w6_22 = {6, 22};
 
     private int currentWallsCell(int cell) {
-        if(isWallCell(cell)) {
-                if(cellSEmpty(cell)) {
-                    return Random.oneOf(wallSTiles);
-                }
+        if (isWallCell(cell)) {
+            final int width = level.getWidth();
+            final boolean c_plus_w = isWallCell(cell + width);
+
+            if (!c_plus_w) {
+                return Random.oneOf(wallSTiles);
+            }
+
+            final boolean c_plus_w_minus_1 = isWallCell(cell + width - 1);
+            final boolean c_plus_w_plus_1 = isWallCell(cell + width + 1);
+
+            final boolean c_minus_1 = isWallCell(cell - 1);
+            final boolean c_plus_1 = isWallCell(cell + 1);
+
+            if (c_plus_w_minus_1 && c_plus_w_plus_1
+                    && !c_minus_1 && !c_plus_1
+            ) {
+
+                return Random.oneOf(wallVerticalCrossTiles);
+            }
+
+            if (c_plus_w_minus_1 && c_plus_w_plus_1
+                    && !c_minus_1 && c_plus_1
+            ) {
+                return Random.oneOf(w6_22);
+            }
+
+            if (c_plus_w_minus_1 && c_plus_w_plus_1
+                    && !c_plus_1 && c_minus_1
+            ) {
+                return Random.oneOf(w7_23);
+            }
+
+            if (!c_plus_w_minus_1 && !c_plus_w_plus_1) {
+                return Random.oneOf(wallVerticalTiles);
+            }
 
 
-               if(isWallCell(cell+level.getWidth()-1) && isWallCell(cell+level.getWidth()+1)
-                        && !isWallCell(cell-1) && !isWallCell(cell + 1)
-                ) {
-                    return Random.oneOf(wallVerticalCrossTiles);
-                }
-
-                if(isWallCell(cell+level.getWidth()-1) && isWallCell(cell+level.getWidth()+1)
-                        && !isWallCell(cell-1) && isWallCell(cell + 1)
-                ) {
-                    return Random.oneOf(w6_22);
-                }
-
-                if(isWallCell(cell+level.getWidth()-1) && isWallCell(cell+level.getWidth()+1)
-                        && !isWallCell(cell+1) && isWallCell(cell - 1)
-                ) {
-                    return Random.oneOf(w7_23);
-                }
-
-                if(isWallCell(cell+1) && !isWallCell(cell + level.getWidth() + 1)
-                ) {
-                    if(isWallCell(cell-1)) {
-                        return Random.oneOf(wallVerticalLeftSolidTiles);
-                        //return Random.oneOf(w7_23);
-                    }
-                    return Random.oneOf(wallVerticalLeftTiles);
-                }
-
-                if(isWallCell(cell-1) && !isWallCell(cell + level.getWidth() - 1)
-                ) {
-                    if(isWallCell(cell+1)) {
-                        return Random.oneOf(wallVerticalRightSolidTiles);
-                        //return Random.oneOf(w6_22);
-                    }
-                    return Random.oneOf(wallVerticalRightTiles);
-                }
-
-                if(!isWallCell(cell-1) && !isWallCell(cell + 1)) {
-                    return Random.oneOf(wallVerticalTiles );
-                }
-
-
-                if(isWallCell(cell-1) && !isWallCell(cell + 1)) {
-                    return Random.oneOf(wallVerticalLeftSolidTiles);
-                }
-
-                if(!isWallCell(cell-1) && isWallCell(cell + 1)) {
+            if (!c_plus_w_minus_1 && c_plus_w_plus_1) {
+                if (c_plus_1) {
                     return Random.oneOf(wallVerticalRightSolidTiles);
                 }
+                return Random.oneOf(wallVerticalRightTiles);
+            }
 
-                if(isWallCell(cell-1) && isWallCell(cell + 1)) {
-                    return Random.oneOf(wallVerticalCrossSolidTiles);
+            if (c_plus_w_minus_1 && !c_plus_w_plus_1) {
+                if (c_minus_1) {
+                    return Random.oneOf(wallVerticalLeftSolidTiles);
                 }
+                return Random.oneOf(wallVerticalLeftTiles);
+            }
+
+            if (c_minus_1 && !c_plus_1) {
+                return Random.oneOf(wallVerticalLeftSolidTiles);
+            }
+
+            if (!c_minus_1 && c_plus_1) {
+                return Random.oneOf(wallVerticalRightSolidTiles);
+            }
+
+            if (c_minus_1 && c_plus_1) {
+                return Random.oneOf(wallVerticalCrossSolidTiles);
+            }
         }
         return 173;
     }
 
     boolean isWallCell(int cell) {
-        if(!level.cellValid(cell)) {
+        if (!level.cellValid(cell)) {
             return true;
         }
 
@@ -230,26 +236,26 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
 
-    private final Integer[] roofNTiles      = {11,27};
-    private final Integer[] roofNTilesRight  = {9,25};
-    private final Integer[] roofNTilesLeft = {10,26};
-    private final Integer[] roofNTilesCross = {8,24};
+    private final Integer[] roofNTiles = {11, 27};
+    private final Integer[] roofNTilesRight = {9, 25};
+    private final Integer[] roofNTilesLeft = {10, 26};
+    private final Integer[] roofNTilesCross = {8, 24};
 
 
     private int currentRoofCell(int cell) {
         int cellS = cell + level.getWidth();
 
-        if(isWallCell(cellS)) {
-            if(cellNEmpty(cellS)) {
-                if(isWallCell(cellS + 1) && isWallCell(cellS - 1)) {
+        if (isWallCell(cellS)) {
+            if (cellNEmpty(cellS)) {
+                if (isWallCell(cellS + 1) && isWallCell(cellS - 1)) {
                     return Random.oneOf(roofNTilesCross);
                 }
 
-                if(isWallCell(cellS - 1)) {
+                if (isWallCell(cellS - 1)) {
                     return Random.oneOf(roofNTilesLeft);
                 }
 
-                if(isWallCell(cellS + 1)) {
+                if (isWallCell(cellS + 1)) {
                     return Random.oneOf(roofNTilesRight);
                 }
 
@@ -261,11 +267,11 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
 
     private int currentCornersCell(int cell) {
-        if(isWallCell(cell)) {
-            boolean csle = cellSEmpty(cell-1);
-            boolean csre = cellSEmpty(cell+1);
+        if (isWallCell(cell)) {
+            boolean csle = cellSEmpty(cell - 1);
+            boolean csre = cellSEmpty(cell + 1);
 
-            if(cellSEmpty(cell)) {
+            if (cellSEmpty(cell)) {
                 if (csle && csre) {
                     return 30;
                 }
@@ -283,15 +289,15 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             final boolean c_minus_1 = isWallCell(cell - 1);
             final boolean c_minus_1_plus_w = isWallCell(cell - 1 + level.getWidth());
 
-            if(c_plus_1 && c_plus_w && !c_plus_1_plus_w && c_minus_1 && !c_minus_1_plus_w) {
+            if (c_plus_1 && c_plus_w && !c_plus_1_plus_w && c_minus_1 && !c_minus_1_plus_w) {
                 return 14;
             }
 
-            if(c_plus_1 && c_plus_w && !c_plus_1_plus_w) {
+            if (c_plus_1 && c_plus_w && !c_plus_1_plus_w) {
                 return 13;
             }
 
-            if(c_minus_1 && c_plus_w && !c_minus_1_plus_w) {
+            if (c_minus_1 && c_plus_w && !c_minus_1_plus_w) {
                 return 12;
             }
         }
@@ -300,11 +306,11 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private boolean cellSEmpty(int cell) {
         int cellN = cell + level.getWidth();
-        if(!level.cellValid(cellN)) {
+        if (!level.cellValid(cellN)) {
             return false;
         }
 
-        if(TerrainFlags.is(level.map[cellN], TerrainFlags.PASSABLE)) {
+        if (TerrainFlags.is(level.map[cellN], TerrainFlags.PASSABLE)) {
             return true;
         }
         return false;
@@ -312,11 +318,11 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private boolean cellNEmpty(int cell) {
         int cellN = cell - level.getWidth();
-        if(!level.cellValid(cellN)) {
+        if (!level.cellValid(cellN)) {
             return false;
         }
 
-        if(TerrainFlags.is(level.map[cellN], TerrainFlags.PASSABLE)) {
+        if (TerrainFlags.is(level.map[cellN], TerrainFlags.PASSABLE)) {
             return true;
         }
         return false;
@@ -353,7 +359,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         mWallsLayer.updateRegion().set(0, 0, width, height);
         mRoofLayer.updateRegion().set(0, 0, width, height);
         mCornersLayer.updateRegion().set(0, 0, width, height);
-        mDoorsLayer.updateRegion().set(0, 0, width, height);;
+        mDoorsLayer.updateRegion().set(0, 0, width, height);
+        ;
 
     }
 
