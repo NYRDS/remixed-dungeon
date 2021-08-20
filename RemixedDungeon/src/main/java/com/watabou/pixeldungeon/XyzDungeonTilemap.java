@@ -175,14 +175,12 @@ public class XyzDungeonTilemap extends DungeonTilemap {
                 return Random.oneOf(wallVerticalCrossTiles);
             }
 
-            if (c_plus_w_minus_1 && c_plus_w_plus_1
-                    && !c_minus_1 && c_plus_1
+            if (c_plus_w_minus_1 && c_plus_w_plus_1 && !c_minus_1
             ) {
                 return Random.oneOf(w6_22);
             }
 
-            if (c_plus_w_minus_1 && c_plus_w_plus_1
-                    && !c_plus_1 && c_minus_1
+            if (c_plus_w_minus_1 && c_plus_w_plus_1 && !c_plus_1
             ) {
                 return Random.oneOf(w7_23);
             }
@@ -191,32 +189,21 @@ public class XyzDungeonTilemap extends DungeonTilemap {
                 return Random.oneOf(wallVerticalTiles);
             }
 
-
-            if (!c_plus_w_minus_1 && c_plus_w_plus_1) {
+            if (!c_plus_w_minus_1) {
                 if (c_plus_1) {
                     return Random.oneOf(wallVerticalRightSolidTiles);
                 }
                 return Random.oneOf(wallVerticalRightTiles);
             }
 
-            if (c_plus_w_minus_1 && !c_plus_w_plus_1) {
+            if (!c_plus_w_plus_1) {
                 if (c_minus_1) {
                     return Random.oneOf(wallVerticalLeftSolidTiles);
                 }
                 return Random.oneOf(wallVerticalLeftTiles);
             }
 
-            if (c_minus_1 && !c_plus_1) {
-                return Random.oneOf(wallVerticalLeftSolidTiles);
-            }
-
-            if (!c_minus_1 && c_plus_1) {
-                return Random.oneOf(wallVerticalRightSolidTiles);
-            }
-
-            if (c_minus_1 && c_plus_1) {
-                return Random.oneOf(wallVerticalCrossSolidTiles);
-            }
+            return Random.oneOf(wallVerticalCrossSolidTiles);
         }
         return 173;
     }
