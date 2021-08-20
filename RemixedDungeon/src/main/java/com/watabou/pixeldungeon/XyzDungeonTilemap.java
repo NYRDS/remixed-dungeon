@@ -96,6 +96,16 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
         img.addLayer(wall);
 
+        Image roof = new Image(getTexture());
+        roof.frame(getTileset().get(mRoofMap[pos]));
+
+        img.addLayer(roof);
+
+        Image corner = new Image(getTexture());
+        corner.frame(getTileset().get(mCornersMap[pos]));
+
+        img.addLayer(corner);
+
         return img;
     }
 
@@ -139,7 +149,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     private final Integer[] wallVerticalLeftSolidTiles = {5,21};
     private final Integer[] wallVerticalRightSolidTiles = {4,20};
 
-    enum VerticalWallKind {None, Cross, Left, Right, CrossSolid, LeftSolid, RightSolid};
+    private final Integer[] w7_23 = {7,23};
+    private final Integer[] w6_22 = {6,22};
 
     private int currentWallsCell(int cell) {
         if(isWallCell(cell)) {
@@ -147,25 +158,59 @@ public class XyzDungeonTilemap extends DungeonTilemap {
                     return Random.oneOf(wallSTiles);
                 }
 
-                switch (cellVerticalKind(cell)) {
-                    case Cross:
-                        return Random.oneOf(wallVerticalCrossTiles);
-                    case Left:
-                        return Random.oneOf(wallVerticalLeftTiles);
-                    case Right:
-                        return Random.oneOf(wallVerticalRightTiles);
-                    case CrossSolid:
-                        return Random.oneOf(wallVerticalCrossSolidTiles);
-                    case LeftSolid:
-                        return Random.oneOf(wallVerticalLeftSolidTiles);
-                    case RightSolid:
-                        return Random.oneOf(wallVerticalRightSolidTiles);
 
-                    case None:
-                        return Random.oneOf(wallVerticalTiles);
+               if(isWallCell(cell+level.getWidth()-1) && isWallCell(cell+level.getWidth()+1)
+                        && !isWallCell(cell-1) && !isWallCell(cell + 1)
+                ) {
+                    return Random.oneOf(wallVerticalCrossTiles);
+                }
+
+                if(isWallCell(cell+level.getWidth()-1) && isWallCell(cell+level.getWidth()+1)
+                        && !isWallCell(cell-1) && isWallCell(cell + 1)
+                ) {
+                    return Random.oneOf(w6_22);
+                }
+
+                if(isWallCell(cell+level.getWidth()-1) && isWallCell(cell+level.getWidth()+1)
+                        && !isWallCell(cell+1) && isWallCell(cell - 1)
+                ) {
+                    return Random.oneOf(w7_23);
+                }
+
+                if(isWallCell(cell+1) && !isWallCell(cell + level.getWidth() + 1)
+                ) {
+                    if(isWallCell(cell-1)) {
+                        return Random.oneOf(wallVerticalLeftSolidTiles);
+                        //return Random.oneOf(w7_23);
+                    }
+                    return Random.oneOf(wallVerticalLeftTiles);
+                }
+
+                if(isWallCell(cell-1) && !isWallCell(cell + level.getWidth() - 1)
+                ) {
+                    if(isWallCell(cell+1)) {
+                        return Random.oneOf(wallVerticalRightSolidTiles);
+                        //return Random.oneOf(w6_22);
+                    }
+                    return Random.oneOf(wallVerticalRightTiles);
+                }
+
+                if(!isWallCell(cell-1) && !isWallCell(cell + 1)) {
+                    return Random.oneOf(wallVerticalTiles );
                 }
 
 
+                if(isWallCell(cell-1) && !isWallCell(cell + 1)) {
+                    return Random.oneOf(wallVerticalLeftSolidTiles);
+                }
+
+                if(!isWallCell(cell-1) && isWallCell(cell + 1)) {
+                    return Random.oneOf(wallVerticalRightSolidTiles);
+                }
+
+                if(isWallCell(cell-1) && isWallCell(cell + 1)) {
+                    return Random.oneOf(wallVerticalCrossSolidTiles);
+                }
         }
         return 173;
     }
@@ -182,46 +227,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
                 return true;
         }
         return false;
-    }
-
-    private VerticalWallKind cellVerticalKind(int cell) {
-        int cellL = cell - 1;
-        int cellR = cell + 1;
-
-        boolean cellLS = false;
-        boolean cellRS = false;
-
-        if(isWallCell(cellL) ) {
-            cellLS = true;
-        }
-
-        if(isWallCell(cellR) ) {
-            cellRS = true;
-        }
-
-        if(cellLS && cellRS) {
-            if(isWallCell(cellL + level.getWidth()) || isWallCell(cellR + level.getWidth())) {
-                return VerticalWallKind.CrossSolid;
-            }
-            return VerticalWallKind.Cross;
-        }
-
-        if(cellLS) {
-            if(isWallCell(cellL + level.getWidth())) {
-                return VerticalWallKind.LeftSolid;
-            }
-            return VerticalWallKind.Left;
-        }
-
-        if(cellRS) {
-            if(isWallCell(cellR + level.getWidth())) {
-                return VerticalWallKind.RightSolid;
-            }
-
-            return VerticalWallKind.Right;
-        }
-
-        return VerticalWallKind.None;
     }
 
 
@@ -271,16 +276,23 @@ public class XyzDungeonTilemap extends DungeonTilemap {
                     return 29;
                 }
             }
-            if(cellNEmpty(cell)) {
-                if(csle && csre) {
-                    return 14;
-                }
-                if(csle) {
-                    return 12;
-                }
-                if(csre) {
-                    return 13;
-                }
+
+            final boolean c_plus_w = isWallCell(cell + level.getWidth());
+            final boolean c_plus_1 = isWallCell(cell + 1);
+            final boolean c_plus_1_plus_w = isWallCell(cell + 1 + level.getWidth());
+            final boolean c_minus_1 = isWallCell(cell - 1);
+            final boolean c_minus_1_plus_w = isWallCell(cell - 1 + level.getWidth());
+
+            if(c_plus_1 && c_plus_w && !c_plus_1_plus_w && c_minus_1 && !c_minus_1_plus_w) {
+                return 14;
+            }
+
+            if(c_plus_1 && c_plus_w && !c_plus_1_plus_w) {
+                return 13;
+            }
+
+            if(c_minus_1 && c_plus_w && !c_minus_1_plus_w) {
+                return 12;
             }
         }
         return 173;

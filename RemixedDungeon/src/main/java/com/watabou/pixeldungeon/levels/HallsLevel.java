@@ -51,7 +51,12 @@ public class HallsLevel extends RegularLevel {
 		addItemToSpawn( new Torch() );
 		super.create();
 	}
-	
+
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_HALLS_XYZ;
+	}
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_HALLS;

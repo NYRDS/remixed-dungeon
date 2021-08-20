@@ -36,7 +36,12 @@ public class CavesLevel extends RegularLevel {
 		
 		viewDistance = 6;
 	}
-	
+
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_CAVES_XYZ;
+	}
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_CAVES;

@@ -22,6 +22,11 @@ public class GutsLevel extends RegularLevel {
 	}
 
 	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_GUTS_XYZ;
+	}
+
+	@Override
 	public String tilesTexEx() {
 		return Assets.TILES_GUTS;
 	}

@@ -301,9 +301,9 @@ public class GameScene extends PixelScene {
 
         fog = new FogOfWar(level.getWidth(), level.getHeight());
 
-        if (level.noFogOfWar()) {
+        //if (level.noFogOfWar()) {
             level.reveal();
-        }
+       // }
 
         if(roofTiles!=null) {
             add(roofTiles);

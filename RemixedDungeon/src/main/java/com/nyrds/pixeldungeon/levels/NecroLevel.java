@@ -24,6 +24,11 @@ public class NecroLevel extends RegularLevel {
 	}
 
 	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_NECRO_XYZ;
+	}
+
+	@Override
 	public String tilesTex() {
 		return Assets.TILES_NECRO;
 	}

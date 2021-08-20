@@ -27,6 +27,11 @@ public class IceCavesLevel extends RegularLevel {
 	}
 
 	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_ICE_CAVES_XYZ;
+	}
+
+	@Override
 	public String tilesTexEx() {
 		return Assets.TILES_ICE_CAVES_X;
 	}

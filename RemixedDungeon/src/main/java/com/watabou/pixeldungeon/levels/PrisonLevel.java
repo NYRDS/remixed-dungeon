@@ -39,7 +39,12 @@ public class PrisonLevel extends RegularLevel {
 		color1 = 0x6a723d;
 		color2 = 0x88924c;
 	}
-	
+
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_PRISON_XYZ;
+	}
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_PRISON;

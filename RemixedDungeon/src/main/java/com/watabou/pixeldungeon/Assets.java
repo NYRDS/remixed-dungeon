@@ -76,20 +76,28 @@ public class Assets {
     public static final String PLANTS = "plants.png";
 
     public static final String TILES_SPIDER_NEST_X         = "tiles_spiders_nest_x.png";
+    public static final String TILES_SPIDER_NEST_XYZ       = "tilesets/tiles_spider_caves_xyz.png";
     public static final String TILES_SEWERS                = "tiles0.png";
     public static final String TILES_SEWERS_X              = "tiles0_x.png";
     public static final String TILES_SEWERS_XYZ            = "tilesets/tiles_sewers_xyz.png";
     public static final String TILES_PRISON                = "tiles1.png";
     public static final String TILES_PRISON_X              = "tiles1_x.png";
+    public static final String TILES_PRISON_XYZ            = "tilesets/tiles_prison_xyz.png";
     public static final String TILES_PRISON_BOSS           = "tiles1_boss.png";
     public static final String TILES_CAVES                 = "tiles2.png";
     public static final String TILES_CAVES_X               = "tiles2_x.png";
+    public static final String TILES_CAVES_XYZ             = "tilesets/tiles_caves_xyz.png";
     public static final String TILES_CITY                  = "tiles3.png";
+    public static final String TILES_CITY_XYZ              = "tilesets/tiles_metropolis_xyz.png";
     public static final String TILES_HALLS                 = "tiles4.png";
+    public static final String TILES_HALLS_XYZ             = "tilesets/tiles_halls_xyz.png";
     public static final String TILES_SHADOW_LORD           = "tiles_shadow_lord.png";
     public static final String TILES_GUTS                  = "tiles_guts_x.png";
+    public static final String TILES_GUTS_XYZ              = "tilesets/tiles_guts_xyz.png";
     public static final String TILES_NECRO                 = "tiles_necropolis.png";
+    public static final String TILES_NECRO_XYZ             = "tilesets/tiles_necropolis_xyz.png";
     public static final String TILES_ICE_CAVES_X           = "tiles_ice_caves_x.png";
+    public static final String TILES_ICE_CAVES_XYZ         = "tilesets/tiles_ice_caves_xyz.png";
     public static final String TILES_GENERIC_TOWN_INTERIOR = "tiles_standalone_interior.png";
 
     public static final String WATER_SEWERS    = "water0.png";
