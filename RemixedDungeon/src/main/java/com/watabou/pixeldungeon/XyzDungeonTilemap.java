@@ -140,6 +140,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         switch (level.map[cell]) {
             case Terrain.EMPTY_SP:
             case Terrain.STATUE_SP:
+            case Terrain.ALCHEMY:
                 return Random.oneOf(floorSpTiles);
 
             default:
@@ -214,6 +215,34 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
             return Random.oneOf(wallVerticalCrossSolidTiles);
         }
+
+        switch (level.map[cell]) {
+            case Terrain.ENTRANCE:
+                return 133;
+            case Terrain.EXIT:
+                return 134;
+            case Terrain.LOCKED_EXIT:
+                return 136;
+            case Terrain.UNLOCKED_EXIT:
+                return 135;
+            case Terrain.CHASM:
+                return 128;
+            case Terrain.CHASM_WALL:
+                return 129;
+            case Terrain.CHASM_FLOOR:
+                return 130;
+            case Terrain.CHASM_FLOOR_SP:
+                return 131;
+            case Terrain.CHASM_WATER:
+                return 132;
+            case Terrain.EMBERS:
+                return Random.oneOf(192, 193,194);
+            case Terrain.GRASS:
+                return Random.oneOf(195, 196, 197);
+            case Terrain.HIGH_GRASS:
+                return Random.oneOf(198, 199, 200);
+        }
+
         return 173;
     }
 
