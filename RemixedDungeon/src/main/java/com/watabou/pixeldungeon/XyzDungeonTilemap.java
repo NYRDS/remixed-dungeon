@@ -116,25 +116,28 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private int currentBaseCell(int cell) {
 
+        if(level.map[cell] >= Terrain.WATER_TILES) {
+            int tile = 208;
+            for (int j = 0; j < Level.NEIGHBOURS4.length; j++) {
+                if ((TerrainFlags.flags[level.map[cell + Level.NEIGHBOURS4[j]]] & TerrainFlags.LIQUID) != 0) {
+                    tile += 1 << j;
+                }
+            }
+
+            return tile;
+        }
+
+        if(TerrainFlags.is(level.map[cell], TerrainFlags.PIT)) {
+            return 173;
+        }
+
         switch (level.map[cell]) {
-            case Terrain.EMPTY:
-            case Terrain.EMBERS:
-            case Terrain.STATUE:
-            case Terrain.EMPTY_DECO:
-            case Terrain.WELL:
-            case Terrain.ENTRANCE:
-            case Terrain.GRASS:
-            case Terrain.PEDESTAL:
-            case Terrain.BARRICADE:
-            case Terrain.EMPTY_WELL:
-            case Terrain.HIGH_GRASS:
-            case Terrain.BOOKSHELF:
-                return Random.oneOf(floorTiles);
             case Terrain.EMPTY_SP:
             case Terrain.STATUE_SP:
                 return Random.oneOf(floorSpTiles);
+
             default:
-                return 173;
+                return Random.oneOf(floorTiles);
         }
     }
 
