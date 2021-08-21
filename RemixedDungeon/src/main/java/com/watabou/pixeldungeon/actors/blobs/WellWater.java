@@ -119,12 +119,13 @@ public class WellWater extends Blob {
 		Class<?>[] waters = {WaterOfHealth.class, WaterOfAwareness.class, WaterOfTransmutation.class};
 		
 		for (Class<?>waterClass : waters) {
-			WellWater water = (WellWater)Dungeon.level.blobs.get( waterClass );
+			final Level level = Dungeon.level;
+			WellWater water = (WellWater) level.blobs.get( waterClass );
 			if (water != null && 
 				water.volume > 0 && 
 				water.pos == cell && 
 				water.affect()) {
-					Dungeon.level.set( cell, Terrain.EMPTY_WELL );
+					level.set( cell, Terrain.EMPTY_WELL );
 					GameScene.updateMap( cell );
 					return;
 			}

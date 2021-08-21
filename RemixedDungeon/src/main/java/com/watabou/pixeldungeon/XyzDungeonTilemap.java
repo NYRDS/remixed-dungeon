@@ -17,6 +17,7 @@ import com.watabou.utils.Random;
 public class XyzDungeonTilemap extends DungeonTilemap {
 
     private final Tilemap mWallsLayer;
+    private final Tilemap mDecoLayer;
     private final Tilemap mRoofLayer;
     private final Tilemap mCornersLayer;
     private final Tilemap mDoorsLayer;
@@ -24,6 +25,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     private final Level level;
 
     private final int[] mWallsMap;
+    private final int[] mDecoMap;
     private final int[] mRoofMap;
     private final int[] mCornersMap;
     private final int[] mDoorsMap;
@@ -39,20 +41,31 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         map(buildGroundMap(), width);
 
         mWallsLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
+        mDecoLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
         mRoofLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
-        ;
+
         mCornersLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
         mDoorsLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
 
         mWallsMap = new int[mSize];
+        mDecoMap = new int[mSize];
         mRoofMap = new int[mSize];
         mCornersMap = new int[mSize];
         mDoorsMap = new int[mSize];
 
         mWallsLayer.map(buildWallsMap(), width);
+        mDecoLayer.map(buildDecoMap(), width);
         mRoofLayer.map(buildRoofMap(), width);
         mCornersLayer.map(buildCornersMap(), width);
         mDoorsLayer.map(buildDoordMap(), width);
+    }
+
+    private int[] buildDecoMap() {
+        for (int i = 0; i < mDecoMap.length; i++) {
+            mDecoMap[i] = currentDecoCell(i);
+        }
+
+        return mDecoMap;
     }
 
     private int[] buildDoordMap() {
@@ -96,6 +109,11 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         wall.frame(getTileset().get(mWallsMap[pos]));
 
         img.addLayer(wall);
+
+        Image deco = new Image(getTexture());
+        deco.frame(getTileset().get(mDecoMap[pos]));
+
+        img.addLayer(deco);
 
         Image roof = new Image(getTexture());
         roof.frame(getTileset().get(mRoofMap[pos]));
@@ -216,33 +234,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             return Random.oneOf(wallVerticalCrossSolidTiles);
         }
 
-        switch (level.map[cell]) {
-            case Terrain.ENTRANCE:
-                return 133;
-            case Terrain.EXIT:
-                return 134;
-            case Terrain.LOCKED_EXIT:
-                return 136;
-            case Terrain.UNLOCKED_EXIT:
-                return 135;
-            case Terrain.CHASM:
-                return 128;
-            case Terrain.CHASM_WALL:
-                return 129;
-            case Terrain.CHASM_FLOOR:
-                return 130;
-            case Terrain.CHASM_FLOOR_SP:
-                return 131;
-            case Terrain.CHASM_WATER:
-                return 132;
-            case Terrain.EMBERS:
-                return Random.oneOf(192, 193,194);
-            case Terrain.GRASS:
-                return Random.oneOf(195, 196, 197);
-            case Terrain.HIGH_GRASS:
-                return Random.oneOf(198, 199, 200);
-        }
-
         return 173;
     }
 
@@ -345,8 +336,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         return false;
     }
 
-
-
     private int currentDoorsCell(int cell) {
         if(isDoorCell(cell)) {
             if (isWallCell(cell + 1) && isWallCell(cell - 1)) {
@@ -401,6 +390,40 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         return 173;
     }
 
+    private int currentDecoCell(int cell) {
+        switch (level.map[cell]) {
+            case Terrain.ENTRANCE:
+                return 133;
+            case Terrain.EXIT:
+                return 134;
+            case Terrain.LOCKED_EXIT:
+                return 136;
+            case Terrain.UNLOCKED_EXIT:
+                return 135;
+            case Terrain.CHASM:
+                return 128;
+            case Terrain.CHASM_WALL:
+                return 129;
+            case Terrain.CHASM_FLOOR:
+                return 130;
+            case Terrain.CHASM_FLOOR_SP:
+                return 131;
+            case Terrain.CHASM_WATER:
+                return 132;
+            case Terrain.EMBERS:
+                return Random.oneOf(192, 193,194);
+            case Terrain.GRASS:
+                return Random.oneOf(195, 196, 197);
+            case Terrain.HIGH_GRASS:
+                return Random.oneOf(198, 199, 200);
+            case Terrain.EMPTY_DECO:
+                return Random.oneOf(144, 145, 146);
+            case Terrain.WALL_DECO:
+                return Random.oneOf(160, 161, 162);
+        }
+        return 173;
+    }
+
     private int[] buildGroundMap() {
         for (int i = 0; i < data.length; i++) {
             data[i] = currentBaseCell(i);
@@ -409,10 +432,14 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         return data;
     }
 
+
+
+
     @Override
     public void draw() {
         super.draw();
         mWallsLayer.draw();
+        mDecoLayer.draw();
         mRoofLayer.draw();
         mCornersLayer.draw();
         mDoorsLayer.draw();
@@ -430,6 +457,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
         updateRegion().set(0, 0, width, height);
         mWallsLayer.updateRegion().set(0, 0, width, height);
+        mDecoLayer.updateRegion().set(0, 0, width, height);
         mRoofLayer.updateRegion().set(0, 0, width, height);
         mCornersLayer.updateRegion().set(0, 0, width, height);
         mDoorsLayer.updateRegion().set(0, 0, width, height);
@@ -441,12 +469,14 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
         data[cell] = currentBaseCell(cell);
         mWallsMap[cell] = currentWallsCell(cell);
+        mDecoMap[cell] = currentDecoCell(cell);
         mRoofMap[cell] = currentRoofCell(cell);
         mCornersMap[cell] = currentCornersCell(cell);
         mDoorsMap[cell] = currentDoorsCell(cell);
 
         updateRegion().union(x, y);
         mWallsLayer.updateRegion().union(x, y);
+        mDecoLayer.updateRegion().union(x, y);
         mRoofLayer.updateRegion().union(x, y);
         mCornersLayer.updateRegion().union(x, y);
         mDoorsLayer.updateRegion().union(x, y);

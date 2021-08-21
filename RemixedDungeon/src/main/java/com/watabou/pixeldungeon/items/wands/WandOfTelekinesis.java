@@ -101,6 +101,7 @@ public class WandOfTelekinesis extends Wand {
 			if (before == Terrain.OPEN_DOOR && Actor.findChar(c) == null) {
 				level.set(c, Terrain.DOOR);
 				GameScene.updateMap(c);
+				GameScene.updateMap(c - level.getWidth());
 			} else if (level.water[c]) {
 				GameScene.ripple(c);
 			}

@@ -766,6 +766,17 @@ public class GameScene extends PixelScene {
         }
     }
 
+    public static void updateMapPair(int cell) {
+        if (isSceneReady()) {
+            final Level level = Dungeon.level;
+            scene.baseTiles.updateCell(cell, level);
+            final int cellN = cell - level.getWidth();
+            if(level.cellValid(cellN)) {
+                scene.baseTiles.updateCell(cellN, level);
+            }
+        }
+    }
+
     public static void discoverTile(int pos) {
         if (isSceneReady()) {
             scene.baseTiles.discover(pos);

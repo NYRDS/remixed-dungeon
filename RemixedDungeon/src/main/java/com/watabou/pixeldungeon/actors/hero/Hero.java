@@ -855,7 +855,7 @@ public class Hero extends Char {
 							int oldValue = level.map[p];
 							GameScene.discoverTile(p);
 							level.set(p, Terrain.discover(oldValue));
-							GameScene.updateMap(p);
+							GameScene.updateMapPair(p);
 							ScrollOfMagicMapping.discover(p);
 							smthFound = true;
 						}

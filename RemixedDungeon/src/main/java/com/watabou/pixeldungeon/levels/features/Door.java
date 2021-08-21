@@ -29,12 +29,8 @@ public class Door {
 	public static void enter( int pos ) {
 		final Level level = Dungeon.level;
 		level.set( pos, Terrain.OPEN_DOOR );
-		GameScene.updateMap( pos );
+		GameScene.updateMapPair( pos );
 
-		final int cellN = pos - level.getWidth();
-		if(level.cellValid(cellN)) {
-			GameScene.updateMap(cellN);
-		}
 		Dungeon.observe();
 		
 		if (Dungeon.visible[pos]) {
@@ -47,12 +43,8 @@ public class Door {
 
 		if (level.getHeap( pos ) == null) {
 			level.set( pos, Terrain.DOOR );
-			GameScene.updateMap( pos );
+			GameScene.updateMapPair( pos );
 
-			final int cellN = pos - level.getWidth();
-			if(level.cellValid(cellN)) {
-				GameScene.updateMap(cellN);
-			}
 			Dungeon.observe();
 		}
 	}

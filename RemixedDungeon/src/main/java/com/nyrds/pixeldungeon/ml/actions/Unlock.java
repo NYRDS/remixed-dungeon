@@ -49,7 +49,7 @@ public class Unlock extends CharAction {
                 }
 
                 hero.doOperate(Key.TIME_TO_UNLOCK, dst, () -> {
-                    GameScene.updateMap(dst);
+                    GameScene.updateMapPair(dst);
                     hero.next();
                 });
 

@@ -17,9 +17,10 @@ public class LiquidFlame extends Blob {
 	@Override
 	protected void evolve() {
 
-		boolean[] flammable = Dungeon.level.flammable;
+		final Level level = Dungeon.level;
+		boolean[] flammable = level.flammable;
 
-		boolean[] notBlocking = BArray.not(BArray.or(Dungeon.level.solid, Dungeon.level.water, null), null);
+		boolean[] notBlocking = BArray.not(BArray.or(level.solid, level.water, null), null);
 
 		boolean observe = false;
 
@@ -37,10 +38,10 @@ public class LiquidFlame extends Blob {
 						cur[cell] += 10;
 						burn(cell);
 
-						Dungeon.level.set( cell, Terrain.EMBERS );
+						level.set( cell, Terrain.EMBERS );
 
 						observe = true;
-						GameScene.updateMap( cell );
+						GameScene.updateMapPair(cell);
 						if (Dungeon.visible[cell]) {
 							GameScene.discoverTile( cell);
 						}
