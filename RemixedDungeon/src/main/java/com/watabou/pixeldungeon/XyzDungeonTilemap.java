@@ -236,7 +236,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         int cellS = cell + level.getWidth();
 
         if (isWallCell(cellS)) {
-            if (cellNEmpty(cellS)) {
+            if (!isWallCell(cell)) {
                 if (isWallCell(cellS + 1) && isWallCell(cellS - 1)) {
                     return Random.oneOf(roofNTilesCross);
                 }
@@ -258,26 +258,28 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private int currentCornersCell(int cell) {
         if (isWallCell(cell)) {
-            boolean csle = cellSEmpty(cell - 1);
-            boolean csre = cellSEmpty(cell + 1);
 
-            if (cellSEmpty(cell)) {
-                if (csle && csre) {
+            final int width = level.getWidth();
+
+            final boolean c_plus_w = isWallCell(cell + width);
+            final boolean c_plus_1 = isWallCell(cell + 1);
+            final boolean c_plus_1_plus_w = isWallCell(cell + 1 + width);
+            final boolean c_minus_1 = isWallCell(cell - 1);
+            final boolean c_minus_1_plus_w = isWallCell(cell - 1 + width);
+
+
+            if (!c_plus_w) {
+                if (!c_minus_1_plus_w && !c_plus_1_plus_w) {
                     return 30;
                 }
-                if (csle) {
+                if (!c_minus_1_plus_w) {
                     return 28;
                 }
-                if (csre) {
+                if (!c_plus_1_plus_w) {
                     return 29;
                 }
             }
 
-            final boolean c_plus_w = isWallCell(cell + level.getWidth());
-            final boolean c_plus_1 = isWallCell(cell + 1);
-            final boolean c_plus_1_plus_w = isWallCell(cell + 1 + level.getWidth());
-            final boolean c_minus_1 = isWallCell(cell - 1);
-            final boolean c_minus_1_plus_w = isWallCell(cell - 1 + level.getWidth());
 
             if (c_plus_1 && c_plus_w && !c_plus_1_plus_w && c_minus_1 && !c_minus_1_plus_w) {
                 return 14;
@@ -293,6 +295,20 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         }
         return 173;
     }
+
+
+
+    private int currentDoorsCell(int cell) {
+        switch (level.map[cell]) {
+            case Terrain.DOOR:
+            case Terrain.OPEN_DOOR:
+            case Terrain.LOCKED_DOOR:
+
+                break;
+        }
+        return 173;
+    }
+
 
     private boolean cellSEmpty(int cell) {
         int cellN = cell + level.getWidth();
@@ -350,8 +366,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         mRoofLayer.updateRegion().set(0, 0, width, height);
         mCornersLayer.updateRegion().set(0, 0, width, height);
         mDoorsLayer.updateRegion().set(0, 0, width, height);
-        ;
-
     }
 
     public void updateCell(int cell, Level level) {
@@ -369,10 +383,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         mRoofLayer.updateRegion().union(x, y);
         mCornersLayer.updateRegion().union(x, y);
         mDoorsLayer.updateRegion().union(x, y);
-    }
-
-    private int currentDoorsCell(int cell) {
-        return 173;
     }
 
 
