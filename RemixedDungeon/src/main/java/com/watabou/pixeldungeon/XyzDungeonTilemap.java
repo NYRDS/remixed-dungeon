@@ -107,6 +107,12 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
         img.addLayer(corner);
 
+        Image doors = new Image(getTexture());
+        doors.frame(getTileset().get(mDoorsMap[pos]));
+
+        img.addLayer(doors);
+
+
         return img;
     }
 
@@ -296,42 +302,74 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         return 173;
     }
 
+    private boolean isDoorCell(int cell) {
+        if(!level.cellValid(cell)) {
+            return false;
+        }
 
-
-    private int currentDoorsCell(int cell) {
         switch (level.map[cell]) {
             case Terrain.DOOR:
             case Terrain.OPEN_DOOR:
             case Terrain.LOCKED_DOOR:
-
-                break;
+                return true;
         }
+        return false;
+    }
+
+
+
+    private int currentDoorsCell(int cell) {
+        if(isDoorCell(cell)) {
+            if (isWallCell(cell + 1) && isWallCell(cell - 1)) {
+                switch (level.map[cell]) {
+                    case Terrain.DOOR:
+                        return 56;
+                    case Terrain.OPEN_DOOR:
+                        return 58;
+                    case Terrain.LOCKED_DOOR:
+                        return 57;
+                }
+            }
+
+            if (isWallCell(cell + level.getWidth()) && isWallCell(cell - level.getWidth())) {
+                switch (level.map[cell]) {
+                    case Terrain.DOOR:
+                        return 59;
+                    case Terrain.OPEN_DOOR:
+                        return 61;
+                    case Terrain.LOCKED_DOOR:
+                        return 60;
+                }
+            }
+        }
+
+        int cellS = cell + level.getWidth();
+
+        if(isDoorCell(cellS)) {
+            if (isWallCell(cellS +  1) && isWallCell(cellS - 1)) {
+                switch (level.map[cellS]) {
+                    case Terrain.DOOR:
+                        return 40;
+                    case Terrain.OPEN_DOOR:
+                        return 42;
+                    case Terrain.LOCKED_DOOR:
+                        return 41;
+                }
+            }
+
+            if (isWallCell(cellS + level.getWidth())  && isWallCell(cellS - level.getWidth())) {
+                switch (level.map[cellS]) {
+                    case Terrain.DOOR:
+                        return 43;
+                    case Terrain.OPEN_DOOR:
+                        return 45;
+                    case Terrain.LOCKED_DOOR:
+                        return 44;
+                }
+            }
+        }
+
         return 173;
-    }
-
-
-    private boolean cellSEmpty(int cell) {
-        int cellN = cell + level.getWidth();
-        if (!level.cellValid(cellN)) {
-            return false;
-        }
-
-        if (TerrainFlags.is(level.map[cellN], TerrainFlags.PASSABLE)) {
-            return true;
-        }
-        return false;
-    }
-
-    private boolean cellNEmpty(int cell) {
-        int cellN = cell - level.getWidth();
-        if (!level.cellValid(cellN)) {
-            return false;
-        }
-
-        if (TerrainFlags.is(level.map[cellN], TerrainFlags.PASSABLE)) {
-            return true;
-        }
-        return false;
     }
 
     private int[] buildGroundMap() {
