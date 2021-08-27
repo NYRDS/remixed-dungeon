@@ -5,6 +5,7 @@ import androidx.annotation.Keep;
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundle;
 
@@ -58,4 +59,13 @@ public class CustomObject extends Deco {
         return true;
     }
 
+    @Override
+    public boolean stepOn(Char hero) {
+        return script.runOptional("stepOn", false, hero);
+    }
+
+    @Override
+    public boolean interact(Char hero) {
+        return script.runOptional("interact", false, hero);
+    }
 }

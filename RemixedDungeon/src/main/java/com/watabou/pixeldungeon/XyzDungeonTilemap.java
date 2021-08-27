@@ -156,11 +156,14 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         }
 
         switch (level.map[cell]) {
+            case Terrain.ALCHEMY:
+                return 138;
+            case Terrain.WELL:
+                return 137;
+
             case Terrain.EMPTY_SP:
             case Terrain.STATUE_SP:
-            case Terrain.ALCHEMY:
                 return Random.oneOf(floorSpTiles);
-
             default:
                 return Random.oneOf(floorTiles);
         }
