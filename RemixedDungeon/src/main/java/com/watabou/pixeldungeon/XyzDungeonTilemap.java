@@ -9,6 +9,8 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.Nullable;
+
 /**
  * Created by mike on 15.02.2018.
  * This file is part of Remixed Pixel Dungeon.
@@ -184,62 +186,93 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     private final Integer[] w7_23 = {7, 23};
     private final Integer[] w6_22 = {6, 22};
 
+    interface isTileKind {
+        boolean is(int cell);
+    }
+    
     private int currentWallsCell(int cell) {
+
         if (isWallCell(cell)) {
-            final int width = level.getWidth();
-            final boolean c_plus_w = isWallCell(cell + width);
-
-            if (!c_plus_w) {
-                return Random.oneOf(wallSTiles);
-            }
-
-            final boolean c_plus_w_minus_1 = isWallCell(cell + width - 1);
-            final boolean c_plus_w_plus_1 = isWallCell(cell + width + 1);
-
-            final boolean c_minus_1 = isWallCell(cell - 1);
-            final boolean c_plus_1 = isWallCell(cell + 1);
-
-            if (c_plus_w_minus_1 && c_plus_w_plus_1
-                    && !c_minus_1 && !c_plus_1
-            ) {
-
-                return Random.oneOf(wallVerticalCrossTiles);
-            }
-
-            if (c_plus_w_minus_1 && c_plus_w_plus_1 && !c_minus_1
-            ) {
-                return Random.oneOf(w6_22);
-            }
-
-            if (c_plus_w_minus_1 && c_plus_w_plus_1 && !c_plus_1
-            ) {
-                return Random.oneOf(w7_23);
-            }
-
-            if (!c_plus_w_minus_1 && !c_plus_w_plus_1) {
-                return Random.oneOf(wallVerticalTiles);
-            }
-
-            if (!c_plus_w_minus_1) {
-                if (c_plus_1) {
-                    return Random.oneOf(wallVerticalRightSolidTiles);
-                }
-                return Random.oneOf(wallVerticalRightTiles);
-            }
-
-            if (!c_plus_w_plus_1) {
-                if (c_minus_1) {
-                    return Random.oneOf(wallVerticalLeftSolidTiles);
-                }
-                return Random.oneOf(wallVerticalLeftTiles);
-            }
-
-            return Random.oneOf(wallVerticalCrossSolidTiles);
+            return wallTileKind(cell, this::isAnyWallCell);
         }
+
+
+        if(isSpWallCell(cell)) {
+            int ret = wallTileKind(cell, this::isAnyWallCell);
+            if(ret != 128) {
+                return ret + 64;
+            }
+            return ret;
+        }
+
 
         return 173;
     }
 
+    private int wallTileKind(int cell, isTileKind is) {
+        final int width = level.getWidth();
+        final boolean c_plus_w = is.is(cell + width);
+
+        if (!c_plus_w) {
+            return Random.oneOf(wallSTiles);
+        }
+
+        final boolean c_plus_w_minus_1 = is.is(cell + width - 1);
+        final boolean c_plus_w_plus_1 = is.is(cell + width + 1);
+
+        final boolean c_minus_1 = is.is(cell - 1);
+        final boolean c_plus_1 = is.is(cell + 1);
+
+        if (c_plus_w_minus_1 && c_plus_w_plus_1
+                && !c_minus_1 && !c_plus_1
+        ) {
+
+            return Random.oneOf(wallVerticalCrossTiles);
+        }
+
+        if (c_plus_w_minus_1 && c_plus_w_plus_1 && !c_minus_1
+        ) {
+            return Random.oneOf(w6_22);
+        }
+
+        if (c_plus_w_minus_1 && c_plus_w_plus_1 && !c_plus_1
+        ) {
+            return Random.oneOf(w7_23);
+        }
+
+        if (!c_plus_w_minus_1 && !c_plus_w_plus_1) {
+            return Random.oneOf(wallVerticalTiles);
+        }
+
+        if (!c_plus_w_minus_1) {
+            if (c_plus_1) {
+                return Random.oneOf(wallVerticalRightSolidTiles);
+            }
+            return Random.oneOf(wallVerticalRightTiles);
+        }
+
+        if (!c_plus_w_plus_1) {
+            if (c_minus_1) {
+                return Random.oneOf(wallVerticalLeftSolidTiles);
+            }
+            return Random.oneOf(wallVerticalLeftTiles);
+        }
+
+        return Random.oneOf(wallVerticalCrossSolidTiles);
+    }
+
+    boolean isAnyWallCell(int cell) {
+        return isSpWallCell(cell) || isWallCell(cell);
+    }
+
+    boolean isSpWallCell(int cell) {
+        if (!level.cellValid(cell)) {
+            return true;
+        }
+
+        return level.map[cell] == Terrain.BOOKSHELF;
+    }
+    
     boolean isWallCell(int cell) {
         if (!level.cellValid(cell)) {
             return true;
@@ -265,64 +298,87 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         int cellS = cell + level.getWidth();
 
         if (isWallCell(cellS)) {
-            if (!isWallCell(cell)) {
-                if (isWallCell(cellS + 1) && isWallCell(cellS - 1)) {
-                    return Random.oneOf(roofNTilesCross);
-                }
+            if (!isAnyWallCell(cell)) {
+                return roofCellKind(cellS);
+            }
+        }
 
-                if (isWallCell(cellS - 1)) {
-                    return Random.oneOf(roofNTilesLeft);
-                }
+        if (isSpWallCell(cellS)) {
+            if (!isAnyWallCell(cell)) {
+                return roofCellKind(cellS) + 64;
+            }
+        }
 
-                if (isWallCell(cellS + 1)) {
-                    return Random.oneOf(roofNTilesRight);
-                }
+        return 173;
+    }
 
-                return Random.oneOf(roofNTiles);
+    private int roofCellKind(int cellS) {
+        if (isAnyWallCell(cellS + 1) && isAnyWallCell(cellS - 1)) {
+            return Random.oneOf(roofNTilesCross);
+        }
+
+        if (isAnyWallCell(cellS - 1)) {
+            return Random.oneOf(roofNTilesLeft);
+        }
+
+        if (isAnyWallCell(cellS + 1)) {
+            return Random.oneOf(roofNTilesRight);
+        }
+
+        return Random.oneOf(roofNTiles);
+    }
+
+
+    private int currentCornersCell(int cell) {
+        final int width = level.getWidth();
+
+        final boolean c_plus_w = isAnyWallCell(cell + width);
+        final boolean c_plus_1 = isAnyWallCell(cell + 1);
+        final boolean c_plus_1_plus_w = isAnyWallCell(cell + 1 + width);
+        final boolean c_minus_1 = isAnyWallCell(cell - 1);
+        final boolean c_minus_1_plus_w = isAnyWallCell(cell - 1 + width);
+
+        Integer x = cornerCellKind(c_plus_w, c_plus_1, c_plus_1_plus_w, c_minus_1, c_minus_1_plus_w);
+
+        if(x!= null) {
+            if (isWallCell(cell)) {
+                return x;
+            }
+
+            if (isSpWallCell(cell)) {
+                return x + 64;
             }
         }
         return 173;
     }
 
-
-    private int currentCornersCell(int cell) {
-        if (isWallCell(cell)) {
-
-            final int width = level.getWidth();
-
-            final boolean c_plus_w = isWallCell(cell + width);
-            final boolean c_plus_1 = isWallCell(cell + 1);
-            final boolean c_plus_1_plus_w = isWallCell(cell + 1 + width);
-            final boolean c_minus_1 = isWallCell(cell - 1);
-            final boolean c_minus_1_plus_w = isWallCell(cell - 1 + width);
-
-
-            if (!c_plus_w) {
-                if (!c_minus_1_plus_w && !c_plus_1_plus_w) {
-                    return 30;
-                }
-                if (!c_minus_1_plus_w) {
-                    return 28;
-                }
-                if (!c_plus_1_plus_w) {
-                    return 29;
-                }
+    @Nullable
+    private Integer cornerCellKind(boolean c_plus_w, boolean c_plus_1, boolean c_plus_1_plus_w, boolean c_minus_1, boolean c_minus_1_plus_w) {
+        if (!c_plus_w) {
+            if (!c_minus_1_plus_w && !c_plus_1_plus_w) {
+                return 30;
             }
-
-
-            if (c_plus_1 && c_plus_w && !c_plus_1_plus_w && c_minus_1 && !c_minus_1_plus_w) {
-                return 14;
+            if (!c_minus_1_plus_w) {
+                return 28;
             }
-
-            if (c_plus_1 && c_plus_w && !c_plus_1_plus_w) {
-                return 13;
-            }
-
-            if (c_minus_1 && c_plus_w && !c_minus_1_plus_w) {
-                return 12;
+            if (!c_plus_1_plus_w) {
+                return 29;
             }
         }
-        return 173;
+
+
+        if (c_plus_1 && c_plus_w && !c_plus_1_plus_w && c_minus_1 && !c_minus_1_plus_w) {
+            return 14;
+        }
+
+        if (c_plus_1 && c_plus_w && !c_plus_1_plus_w) {
+            return 13;
+        }
+
+        if (c_minus_1 && c_plus_w && !c_minus_1_plus_w) {
+            return 12;
+        }
+        return null;
     }
 
     private boolean isDoorCell(int cell) {
