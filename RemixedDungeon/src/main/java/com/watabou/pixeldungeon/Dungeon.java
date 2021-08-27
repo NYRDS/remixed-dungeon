@@ -430,6 +430,7 @@ public class Dungeon {
                 LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("serializeGameData").call().checkjstring());
 
         bundle.put(LAST_USED_ID, EntityIdSource.getNextId());
+        CharsList.storeInBundle(bundle);
         bundle.put(MOD, ModdingMode.activeMod());
 
         OutputStream output = FileSystem.getOutputStream(fileName);
@@ -531,6 +532,7 @@ public class Dungeon {
 
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
         EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID,1));
+        CharsList.restoreFromBundle(bundle);
 
         Treasury.reset();
 

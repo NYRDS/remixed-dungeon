@@ -705,7 +705,7 @@ public abstract class Level implements Bundlable {
 		var loadedMobs = bundle.getCollection(MOBS, Mob.class);
 
 		for (Mob mob : loadedMobs) {
-			if (mob != null && mob.valid() && cellValid(mob.getPos())) {
+			if (mob != null && mob.valid() && cellValid(mob.getPos()) && !CharsList.isDestroyed(mob.getId())) {
 				GLog.debug("load: %s %d", mob.getEntityKind(), mob.getId());
 				mobs.add(mob);
 			} else {
