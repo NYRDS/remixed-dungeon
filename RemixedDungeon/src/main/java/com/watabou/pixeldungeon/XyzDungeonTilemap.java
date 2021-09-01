@@ -9,8 +9,6 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.utils.Random;
 
-import org.jetbrains.annotations.Nullable;
-
 /**
  * Created by mike on 15.02.2018.
  * This file is part of Remixed Pixel Dungeon.
@@ -338,30 +336,32 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         final boolean c_minus_1 = isAnyWallCell(cell - 1);
         final boolean c_minus_1_plus_w = isAnyWallCell(cell - 1 + width);
 
-        Integer x = cornerCellKind(c_plus_w, c_plus_1, c_plus_1_plus_w, c_minus_1, c_minus_1_plus_w);
-
-        if(x!= null) {
-            if (isWallCell(cell)) {
-                return x;
-            }
-
-            if (isSpWallCell(cell)) {
-                return x + 64;
-            }
+        int x = cornerCellKind(c_plus_w, c_plus_1, c_plus_1_plus_w, c_minus_1, c_minus_1_plus_w);
+        if(x==173) {
+            return 173;
         }
+
+        if (isWallCell(cell)) {
+            return x;
+        }
+
+        if (isSpWallCell(cell)) {
+            return x + 64;
+        }
+
         return 173;
     }
 
-    @Nullable
-    private Integer cornerCellKind(boolean c_plus_w, boolean c_plus_1, boolean c_plus_1_plus_w, boolean c_minus_1, boolean c_minus_1_plus_w) {
+
+    private int cornerCellKind(boolean c_plus_w, boolean c_plus_1, boolean c_plus_1_plus_w, boolean c_minus_1, boolean c_minus_1_plus_w) {
         if (!c_plus_w) {
-            if (!c_minus_1_plus_w && !c_plus_1_plus_w) {
+            if (!c_minus_1 && !c_plus_1) {
                 return 30;
             }
-            if (!c_minus_1_plus_w) {
+            if (!c_minus_1) {
                 return 28;
             }
-            if (!c_plus_1_plus_w) {
+            if (!c_plus_1) {
                 return 29;
             }
         }
@@ -378,7 +378,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         if (c_minus_1 && c_plus_w && !c_minus_1_plus_w) {
             return 12;
         }
-        return null;
+        return 173;
     }
 
     private boolean isDoorCell(int cell) {
