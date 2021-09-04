@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.levels.objects;
 
 import androidx.annotation.Keep;
 
-import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.pixeldungeon.actors.Char;
@@ -12,22 +11,33 @@ import com.watabou.utils.Bundle;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import lombok.SneakyThrows;
+
 public class CustomObject extends Deco {
-    @Packable
-    private String scriptFile;
 
     private LuaScript script;
 
     @Keep
     CustomObject() {
+        super(Level.INVALID_CELL);
     }
 
-    public CustomObject(String scriptFile) {
-        this.scriptFile = scriptFile;
-        initObject();
+    @Keep
+    public CustomObject(int cell) {
+        super(cell);
     }
 
+    @SneakyThrows
     private void initObject() {
+        String scriptFile = defMap.get(objectDesc).getString("script");
+        script = new LuaScript("scripts/items/"+ scriptFile, this);
+        script.asInstance();
+    }
+
+    protected void readObjectDesc() throws JSONException {
+        super.readObjectDesc();
+
+        initObject();
     }
 
     @Override

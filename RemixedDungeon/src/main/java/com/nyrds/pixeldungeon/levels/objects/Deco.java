@@ -31,7 +31,7 @@ import lombok.SneakyThrows;
 public class Deco extends LevelObject {
 
 	private static final String ANIMATIONS = "animations";
-	static private Map<String, JSONObject> defMap = new HashMap<>();
+	static protected final Map<String, JSONObject> defMap = new HashMap<>();
 
 	private JSONObject animations;
 
@@ -86,7 +86,12 @@ public class Deco extends LevelObject {
 		readObjectDesc();
 	}
 
-	private void readObjectDesc() throws JSONException {
+	@Override
+	public String getEntityKind() {
+		return objectDesc;
+	}
+
+	protected void readObjectDesc() throws JSONException {
 		if (!defMap.containsKey(objectDesc)) {
 			defMap.put(objectDesc, JsonHelper.readJsonFromAsset("levelObjects/"+ objectDesc +".json"));
 		}

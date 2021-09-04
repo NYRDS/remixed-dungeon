@@ -55,6 +55,7 @@ public class LevelObjectsFactory {
 		registerObjectClass(Sorrowmoss.class);
 		registerObjectClass(Sungrass.class);
 		registerObjectClass(Moongrace.class);
+		registerObjectClass(CustomObject.class);
 	}
 
 	public static boolean isValidObjectClass(String objectClass) {
