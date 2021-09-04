@@ -26,6 +26,7 @@ public class WndHeroSpells extends Window {
 
     public WndHeroSpells(Listener listener) {
         super();
+
         resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - WINDOW_MARGIN);
         this.listener = listener;
         this.hero = Dungeon.hero;
