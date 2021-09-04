@@ -11,7 +11,7 @@ class DefaultCellListener implements CellSelector.Listener {
         if(cell!=null) {
             selector.handle(cell);
         }
-        selector.next();
+        //selector.next();
     }
 
     @Override
