@@ -86,11 +86,16 @@
   <string name="ChaosCrystal_SwordFused">Po pochłonięciu twojej broni, kryształ przybrał formę Miecza.</string>
   <string name="ChaosCrystal_BowFused">Po pochłonięciu twego łuku , kryształ przybrał formę Łuku.</string>
   <string name="ChaosCrystal_StaffFused">Po pochłonięciu twojej różdżki, kryształ przybrał formę Laski Magicznej.</string>
-  <string name="CorpseDust_Buff">Żądza krwi</string>
-  <string name="DriedRose_Buff">Czarujący</string>
-  <string name="DriedRose_CursedBuff">Zakochany</string>
-  <string name="RatSkull_Buff">Szczurzec</string>
-  <string name="RatKingCrown_Buff">Szczurowość</string>
+  <string name="CorpseDustBuff_Name">Żądza krwi</string>
+  <string name="CorpseDustBuff_Info">Ataki są znacznie zwiększone dla wypełnionych rządzą krwi, co czyni ich nadzwyczaj niebezpiecznymi.</string>
+  <string name="DriedRoseBuff_Name">Czarujący</string>
+  <string name="DriedRoseBuff_Info">Ta róża wygląda nadzwyczaj czarująco.</string>
+  <string name="DriedRoseCursedBuff_Name">Zakochany</string>
+  <string name="DriedRoseCursedBuff_Info">Róża wygląda pięknie, acz niezbyt czarująco.</string>
+  <string name="RatSkullBuff_Name">Szczurzec</string>
+  <string name="RatSkullBuff_Info">Porażający smród przeraża wszystkie poczwary w okolicy i sprawia że uciekają przed nosicielem czaszki.</string>
+  <string name="RatKingCrownBuff_Name">Szczurowość</string>
+  <string name="RatKingCrownBuff_Info">Chwała władcy szczurów, każdy gryzoń oddaje splendor i cześć.</string>
   <string name="RatKingCrown_Name">Korona króla szczurów </string>
   <string name="RatKingCrown_Info">Złota korona jego szczurowości, symbol wiecznej Mocy</string>
   <string name="BishopNPC_Name">Biskup</string>
@@ -105,7 +110,8 @@
   <string name="Bishop_not_interested">Wyjdź</string>
   <string name="Bishop_no_money">Nie możesz za to zapłacić </string>
   <string name="Bishop_bye">Będę się za ciebie modlił moje dziecko.</string>
-  <string name="Blessed_Info">Pobłogosławiony przez prawowitego księdza</string>
+  <string name="BlessedBuff_Name">Pobłogosławiony</string>
+  <string name="BlessedBuff_Info">Niechaj finezja i zwinność nawiedzi tych, dotkniętych błogosławieństwem!</string>
   <string name="deco_candle_name">Świeczka</string>
   <string name="deco_candle_desc">Duża świeczka</string>
   <string name="Possess_Name">Opętanie</string>
@@ -175,7 +181,8 @@
   <string name="Item_Info2">coś</string>
   <string name="NecromancerArmor_Info2">Wyposażenie tej zbroi pozwala nekromancie na użycie umiejętności \"Nekrozy\", rozsiewa ona magiczną plagę, która może zarazić każde stworzenie w pobliżu, nieważne czy martwe czy też żywe.</string>
   <string name="NecromancerRobe_Info2">Szata ta wypełniona jest czarną magią i pozwala nekromancie na pochłanianie dusz poległych.</string>
-  <string name="Necrotism_Info">Nekroza</string>
+  <string name="NecrotismBuff_Name">Nekroza</string>
+  <string name="NecrotismBuff_Info">Znak śmierci rozpościera swe odziaływanie, powoduje to że wszystkie istoty wokół podzielają marny los.</string>
   <string name="Necrotism_ACSpecial">NEKROZA</string>
   <string name="ResultDescriptions_Necrotism">Umarłeś na wskutek nekrozy na poziomie %d</string>
   <string name="Necrotism_Death">Umarłeś od nekrozy...</string>
@@ -249,8 +256,10 @@
   <string name="PortalExit_Desc_SpiderNest">Leżę Pająków</string>
   <string name="PortalExit_Desc_Necropolis">Nekropolia </string>
   <string name="PortalExit_Desc_IceCaves">Lodowe Jaskinie</string>
-  <string name="Devour_Buff">Pożerać ?</string>
-  <string name="StoneBlood_Buff">Kamienna Krew.</string>
+  <string name="DevourBuff_Name">Pożerać ?</string>
+  <string name="DevourBuff_Info"/>
+  <string name="StoneBloodBuff_Name">Kamienna Krew.</string>
+  <string name="StoneBloodBuff_Info">Twa krew przemienia się w kamień umożliwiając łatwiejsze przenikanie przez sąsiadujące ściany, co niestety pociąga za sobą konsekwencje.</string>
   <string name="Welcome_Ok">Dobra!</string>
   <string name="Welcome_Title">Witaj!</string>
   <string name="BlackCat_Name">Czarny kot</string>
@@ -529,11 +538,11 @@
   <string name="RatSkull_Name">Ogromna czaszka szczura</string>
   <string name="RatSkull_Info">Ta czaszka mogłaby być niezłym trofeum, ale zbyt mocno śmierdzi by powiesić ją na ścianie.</string>
   <string name="RatSkull_Info2">Z drugiej strony, pokazuje, że właściciel jest w stanie zabijać szczury, nawet te największe i najsmrodliwsze.</string>
-  <string name="ConfusionGas_Info">Chmura narkotycznego gazu tutaj się unosi.</string>
+  <string name="ConfusionGas_Info">Chmura dezorientującego gazu unosi się w tym miejscu.</string>
   <string name="Fire_Info">Ogień tutaj szaleje.</string>
   <string name="Foliage_Info">Snopy światła oświetlają pogrążony w mroku ogród.</string>
-  <string name="ParalyticGas_Info">Chmura gazu paraliżującego tutaj się unosi.</string>
-  <string name="ToxicGas_Info">Chmura gazu toksycznego się tutaj unosi.</string>
+  <string name="ParalyticGas_Info">Chmura gazu paraliżującego unosi się w tym miejscu.</string>
+  <string name="ToxicGas_Info">Chmura toksycznego gazu unosi się w tym miejscu.</string>
   <string name="ToxicGas_Info1">Zabił cię trujący gaz...</string>
   <string name="WaterOfAwareness_Info">Potęga wiedzy emanuje z wody tej studni. Weź z niej łyk by poznać sekrety założonych przedmiotów.</string>
   <string name="WaterOfAwareness_Procced">Gdy tylko wziąłeś łyk wody z tej studni, czujesz jak wiedza wypełnia twój umysł. Teraz wiesz wszystko o używanych przez ciebie przedmiotach. Możesz też wyczuć inne przedmioty na tym poziomie, oraz znasz wszystkie jego sekrety.</string>
@@ -541,40 +550,80 @@
   <string name="WaterOfHealth_Procced">Gdy tylko bierzesz łyk z tej studni, czujesz jak twoje rany goją się całkowicie.</string>
   <string name="WaterOfTransmutation_Info">Potęga zmiany emanuje z wody tej studni. Wrzuć przedmiot do studni by zmienić go w coś innego.</string>
   <string name="Web_Info">Wszystko jest tutaj pokryte grubą siecią.</string>
-  <string name="Amok_Info">Amok</string>
-  <string name="Barkskin_Info">Twarda Skóra</string>
-  <string name="Bleeding_Info">Krwotok</string>
+  <string name="AmokBuff_Name">Amok</string>
+  <string name="AmokBuff_Info">Popadnij w szał poprzez wydzieranie życia z nieszczęśników.</string>
+  <string name="BarkskinBuff_Name">Twarda Skóra</string>
+  <string name="BarkskinBuff_Info">Twe ciało pokrywa się korą, co umożliwia sparowanie niektórych ciosów.</string>
+  <string name="BleedingBuff_Name">Krwotok</string>
+  <string name="BleedingBuff_Info">Rany wartko się wykrwawiają.</string>
   <string name="Bleeding_Death">Wykrwawiasz się na śmierć...</string>
-  <string name="Blindness_Info">Ślepota</string>
-  <string name="Burning_Info">Pożoga</string>
+  <string name="BlindnessBuff_Name">Ślepota</string>
+  <string name="BlindnessBuff_Info">Kompletnie ślepy, tylko słychać dźwięki dookoła</string>
+  <string name="BurningBuff_Name">Pożoga</string>
+  <string name="BurningBuff_Info">Twe ciało pochłaniają płomienie!</string>
   <string name="Burning_Burns">%s spala się!</string>
   <string name="Burning_Death">Spaliłeś się na śmierć...</string>
-  <string name="Charm_Info">Zauroczony</string>
-  <string name="Combo_Info">Kombinacja</string>
+  <string name="CharmBuff_Name">Zauroczony</string>
+  <string name="CharmBuff_Info">Twój umysł i ciało zostały zaklęte!</string>
+  <string name="ComboBuff_Name">Kombinacja</string>
+  <string name="ComboBuff_Info">Następny atak będzie atakiem combo.</string>
   <string name="Combo_Combo">Udało ci się wykonać kombinację %d ciosów!</string>
-  <string name="Cripple_Info">Sponiewierany </string>
-  <string name="Frost_Info">Zamrożony </string>
+  <string name="CrippleBuff_Name">Sponiewierany </string>
+  <string name="CrippleBuff_Info">Twe ciało jest pokryte rozlicznymi ranami, lecz to jeszcze nie koniec walki.</string>
+  <string name="FrostBuff_Name">Zamrożony </string>
+  <string name="FrostBuff_Info">Bryła lodu uniemożliwia podjęcia żadnej akcji.</string>
   <string name="Frost_Shatter">Zimno sprawia, że %s roztrzaskuje się!</string>
-  <string name="Fury_Info">Furia</string>
-  <string name="GasesImmunity_Info">Odporny na gazy</string>
+  <string name="FuryBuff_Name">Furia</string>
+  <string name="FuryBuff_Info">Oczy nabiegają krwistą czerwienią, co jest omenem całej tej furii, która cię wypełnia.</string>
+  <string name="GasImmuneBuff_Name">Odporność na gazy</string>
+  <string name="GasImmuneBuff_Info">Odporność na wszystkie gazy</string>
   <string name="Hunger_Death">Zostałeś zagłodzony na śmierć...</string>
-  <string name="Hunger_Info1">Głodny</string>
-  <string name="Hunger_Info2">Wygłodzony</string>
-  <string name="Invisibility_Info">Niewidzialny</string>
-  <string name="Levitation_Info">Lewitacja</string>
-  <string name="Light_Info">Oświecony</string>
-  <string name="MindVision_Info">Wizja Telepatyczna</string>
-  <string name="Ooze_Info">Żrący śluz</string>
+  <string name="HungerBuff_Name1">Głodny</string>
+  <string name="HungerBuff_Info1">Jesteś głodny!</string>
+  <string name="HungerBuff_Name2">Wygłodzony</string>
+  <string name="HungerBuff_Info2">Zdychasz z głodu, musisz coś zjeść!</string>
+  <string name="InvisibilityBuff_Name">Niewidzialny</string>
+  <string name="InvisibilityBuff_Info">Zupełna niewidzialność, pozwala na unikanie zagrożeń lub stanie się zagrożeniem.</string>
+  <string name="LevitationBuff_Name">Lewitacja</string>
+  <string name="LevitationBuff_Info">Ciało unosi się nad podłożem, możesz teraz uniknąć pułapek i innych tego typu zagrożeń.</string>
+  <string name="LightBuff_Name">Oświecony</string>
+  <string name="LightBuff_Info">Światło wydziela się z ciała, rozjaśniając wszystko wokół.</string>
+  <string name="MindVisionBuff_Name">Kontrola Umysłu</string>
+  <string name="MindVisionBuff_Info">Twa podświadomość jasno obrazuje ci położenie wszystkich żywych istot na piętrze. </string>
+  <string name="OozeBuff_Name">Toksyczny Szlam</string>
+  <string name="OozeBuff_Info">Toksyczny Szlam pożera ścierwo!</string>
   <string name="Ooze_Death">%s zabił Cię...</string>
-  <string name="Paralysis_Info">Sparaliżowany</string>
-  <string name="Poison_Info">Zatruty</string>
+  <string name="ParalysisBuff_Name">Sparaliżowany</string>
+  <string name="ParalysisBuff_Info">Zupełnie sparaliżowany!</string>
+  <string name="PoisonBuff_Name">Zatruty</string>
+  <string name="PoisonBuff_Info">Organizm jest powoli wykańczany przez truciznę!</string>
   <string name="Poison_Death">Trucizna ciebie zabiła...</string>
-  <string name="Roots_Info">Unieruchomiony</string>
-  <string name="Shadows_Info">Stopiony z cieniem</string>
-  <string name="Slow_Info">Spowolniony</string>
-  <string name="SnipersMark_Info">Znak Snajpera</string>
-  <string name="Vertigo_Info">Zawroty głowy</string>
-  <string name="Weakness_Info">Osłabiony</string>
+  <string name="RegenerationBuff_Name">Naturalna Regeneracja</string>
+  <string name="RegenerationBuff_Info">Mechanika naturalnej regeneracji istnieje w formie efektu, co ma na celu uczynienie umiejętności klarowniejszymi.</string>
+  <string name="RootsBuff_Name">Unieruchomiony</string>
+  <string name="RootsBuff_Info">Korzenie wyłaniają się z ziemi owijając się wokół twego ciała i uniemożliwiając uczynienie nawet najmniejszego kroku.</string>
+  <string name="ShadowsBuff_Name">Stopiony z cieniem</string>
+  <string name="ShadowsBuff_Info">Trudniej jest cokolwiek dostrzec pośród cieni.</string>
+  <string name="SlowBuff_Name">Spowolniony</string>
+  <string name="SlowBuff_Info">Uczucie ospałości powoduje że twoje działania są znacznie powolniejsze niż zazwyczaj.</string>
+  <string name="SleepBuff_Name">Śpiący</string>
+  <string name="SleepBuff_Info">Kompletnie pogrążony we śnie</string>
+  <string name="SnipersMarkBuff_Name">Znacznik Snajpera</string>
+  <string name="SnipersMarkBuff_Info">Znacznik został utworzony przez snajpera.</string>
+  <string name="SpeedBuff_Name">Szybkość</string>
+  <string name="SpeedBuff_Info">Rześkość i energia emanują z ciała, czyniąc ruchy szybszymi niż zazwyczaj.</string>
+  <string name="TerrorBuff_Name">Przerażony</string>
+  <string name="TerrorBuff_Info">Wygląda na to że ktoś tu obsrał zbroję.</string>
+  <string name="VertigoBuff_Name">Zawroty głowy</string>
+  <string name="VertigoBuff_Info">Uczucie oszołomienia powoduje trudności z objęciem prostej trajektorii chodu!</string>
+  <string name="WeaknessBuff_Name">Osłabiony</string>
+  <string name="WeaknessBuff_Info">Osłabienie spowija twe ciało czyniąc cię łatwiejszym celem dla wrogów.</string>
+  <string name="AwarenessBuff_Name">Świadomość</string>
+  <string name="AwarenessBuff_Info">Zmysły wyostrzają się, dając ci szerszy pogląd sytuacyjny.</string>
+  <string name="DarkVeilBuff_Name">Czarny welon</string>
+  <string name="DarkVeilBuff_Info">Welon mroku spowija właściciela, za każdym razem gdy otrzymane zostaną obrażenia przyzwana zostaje dusza. </string>
+  <string name="FrostAuraBuff_Name">Lodowa Poświata</string>
+  <string name="FrostAuraBuff_Info">Mróz otacza twe ciało powodując że każda istota która znajdzie się w pobliżu twojej postaci zostaje spowolniona.</string>
   <string name="Belongings_Name">plecak</string>
   <string name="ItemSprite_Info1">wyrzuć: %1$.1f %2$.1f</string>
   <string name="Toolbar_Info1">Nie wiesz co tam się znajduje.</string>
@@ -677,7 +726,6 @@ assassynkk32
   <string name="HeartOfDarkness_Name">Serce ciemności</string>
   <string name="HeartOfDarkness_Info">Czane, pulsujące serce Zdradliwego Ducha.</string>
   <string name="HeartOfDarkness_Gender">kastrat</string>
-  <string name="DarkVeil_Buff">Czarny welon</string>
   <string name="Badges_Yog_Slain">Yog-Dzewa zabity!</string>
   <string name="Badges_ShadowLord_Slain">Władca Cieni zabity!</string>
   <string name="Badges_SpiderQueen_Slain">Królowa pająków zabita!</string>
@@ -947,7 +995,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="HeroSubClass_NameWard">Strażniczka</string>
   <string name="HeroSubClass_DescWard"> _Strażniczki_ czują silną więź z mocami natury. Fakt ten pozwala im na częstsze pozyskiwanie Kropel Rosy i nasion z roślin. Ponadto, chodzenie po wysokiej trawie daje im tymczasową premię do pancerza.</string>
   <string name="HeroSubClass_NameScout">zwiadowca</string>
-  <string name="HeroSubClass_DescScout">Elficcy _Zwiadowcy_ są mistrzami skradania się. Chodzenie po wysokiej trawie daje im tymczasową premię Niewidzialności. Poruszają się też szybciej od zwykłych Elfów</string>
+  <string name="HeroSubClass_DescScout">Elficcy _Zwiadowcy_ są mistrzami skradania się. Chodzenie po wysokiej trawie daje im tymczasową umiejętność Niewidzialności. Poruszają się one również znacznie szybciej od zwykłych Elfów</string>
   <string name="HeroSubClass_NameShaman">Szaman</string>
   <string name="HeroSubClass_DescShaman">Elf _Szaman_ może używać różdżki jako broń do walki wręcz ! Ma duże szanse na uderzenie wroga nie ponosząc straty ładunków!</string>
   <string name="SantaHat_Name">Czapka Mikołaja</string>
@@ -1408,7 +1456,6 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Zombie_Desc">Loch to niebezpieczne miejsce i wielu awanturników dokonało tutaj swoich żywotów. Jednakże większość z tych pechowych, których spotkała śmierć w Nekropolii są zmuszeni do poruszania się po jej salach jako żywe, gnijące ścierwa.</string>
   <string name="NecromancerNPC_Intro2">Ach! Awanturnik, który nie jest martwy. Niesamowite! Och, proszę o wybaczenie. Jak widzisz, sam jestem nekromantą. I mimo, że studiowaniem natury zmarłych i samej śmierci, zarabiam na życie, oglądanie tej samej rzeczy w kółko staje się potwornie nudne. Z drugiej strony jest to powód, dla którego tutaj jestem. Zdarzyło się coś spektakularnego... _Nekropolia_, starożytne miasto umarłych, w końcu otworzyła swoje podwoje. Po fakcie, stoimy tuż obok wejścia. I... wiesz co? Weź ten klucz i wejdź pierwszy, znaczy się - lubisz przygody i tego typu sprawy? Pójdę zaraz za tobą, po prostu muszę się przygotować.</string>
   <string name="Badges_Lich_Slain">Pokonano Licza</string>
-  <string name="FrostAura_Buff">Lodowa Poświata</string>
   <string name="ElvenDagger_Name">elficki sztylet</string>
   <string name="ElvenDagger_Info">Broń tą wykonano ze specyficznego stopu metali, sprawiając że jest dużo lżejszy w porównaniu do zwykłego sztyletu.</string>
   <string name="ElvenDagger_Gender">męski</string>
@@ -1986,7 +2033,8 @@ W zamian za to, dostaniesz strawę porządną!</string>
   <string name="Stench_Txt">%s smrodu</string>
   <string name="Viscosity_Txt">%s cierpienia</string>
   <string name="Viscosity_Status">rozłożone %d</string>
-  <string name="DeferedDamage_Defered_Txt">Rozłożone obrażenia (%d)</string>
+  <string name="DeferedDamageBuff_Name">Opóźnione Obrażenia (%d)</string>
+  <string name="DeferedDamageBuff_Info">Ból został zamieniony w spowolniony ból, zmniejszając otrzymywane obrażenia. \nDamage wobec %d.</string>
   <string name="DeferedDamage_Killed_Txt">%s zabił cię...</string>
   <string name="Plant_ACPlant">ZASADŹ</string>
   <string name="Plant_Info">Rzuć nasieniem w miejsce, gdzie chcesz żeby wyrosła roślina: %1$s.\n\n%2$s</string>
@@ -1995,7 +2043,8 @@ W zamian za to, dostaniesz strawę porządną!</string>
   <string name="Dreamweed_Desc">Dotknięcie Sennego Ziela wyzwala migoczącą chmurę gazu, który ma właściwości narkotyzujące. Senne Ziele jest wykorzystywane jako środek nasenny lub narkotyk.</string>
   <string name="Earthroot_Name">Ziemiokorzeń</string>
   <string name="Earthroot_Desc">Kiedy istota dotknie Ziemiokorzenia, oplata ją grubymi korzeniami, tworząc coś na kształt naturalnego pancerza wokół niej.</string>
-  <string name="Earthroot_Buff">Zbroja Natury</string>
+  <string name="EarthrootBuff_Name">Zbroja Natury</string>
+  <string name="EarthrootBuff_Info">Korzenie wyłoniły się z ziemi zapewniając naturalną zbroję.</string>
   <string name="Fadeleaf_Name">Znikoliść</string>
   <string name="Fadeleaf_Desc">Sok ze Znikoliścia jest wykorzystywany przy tworzeniu teleportów, ponieważ powoduje on przemieszczenie w losowe miejsce. Oczywiście portale wykorzystują specjalnie przygotowany sok ze Znikoliścia, mogąc ukierunkować trasę teleportacji, lecz dzikie odmiany są niestabilne.</string>
   <string name="Firebloom_Name">Ogniokwiat</string>
@@ -2006,7 +2055,8 @@ W zamian za to, dostaniesz strawę porządną!</string>
   <string name="Sorrowmoss_Desc">Jadomech to kwiat (a nie mech), który posiada ostre jak brzytwa płatki, pokryte śmiertelnym jadem.</string>
   <string name="Sungrass_Name">Herba Solis</string>
   <string name="Sungrass_Desc">Herba Solis (dosł. Trawa Słońca) jest znana ze swych właściwości leczniczych, co czyni ją podstawowym składnikiem mikstur leczniczych.</string>
-  <string name="Sungrass_Buff">Błogosławieństwo Natury</string>
+  <string name="SungrassBuff_Name">Błogosławieństwo Natury</string>
+  <string name="SungrassBuff_Info">Korzenie wyłoniły się z ziemi zapewniając lecznicze zioła.</string>
   <string name="WndPlayGames_Title">Gry Google Play</string>
   <string name="WndPlayGames_Use">użyj Gier Google Play</string>
   <string name="WndPlayGames_Connecting">Łączenie z Grami Google Play. Proszę czekać.</string>
@@ -2199,7 +2249,7 @@ W zamian za to, dostaniesz strawę porządną!</string>
   <string name="DieHardSpell_Name">Nie do zdarcia</string>
   <string name="DieHardSpell_Info">Tymczasowo zwiększysz swoją regenerację, co sprawi, że będziesz naprawdę trudny do zabicia.</string>
   <string name="DieHardBuff_Name">Nie do zdarcia</string>
-  <string name="DieHardBuff_Info">Regeneracja wzrosła!</string>
+  <string name="DieHardBuff_Info">Prędkość regeneracji została zwiększona.</string>
   <string name="SmashSpell_Name">Rozbij</string>
   <string name="SmashSpell_Info">Skocz w górę i stwórz potężne uderzenie które wbije przeciwników w podłogę tymczasowo ich ogłuszając i zadając obrażenia.</string>
   <string name="SmashSpell_NeedWeapon">Potrzebuje broni do tego ruchu.</string>
@@ -2211,7 +2261,7 @@ W zamian za to, dostaniesz strawę porządną!</string>
   <string name="CloakSpell_Info">Ukryj się w cieniu żeby stać się niewidzialnym. Zmniejszy to szanse zostania wykrytym. Nie może zostać użyte gdy przeciwnicy są blisko.</string>
   <string name="CloakSpell_EnemiesNearby">Nie możesz ukryć się w cieniu gdy przeciwnicy są blisko.</string>
   <string name="CloakBuff_Name">Zamaskowany</string>
-  <string name="CloakBuff_Info">Ukryty  w cieniu</string>
+  <string name="CloakBuff_Info">Mroczny płaszcz pomaga ukryć ci się w ciemnościach, czyniąc cię mniej zauważalnym dla wrogów.</string>
   <string name="TitleScene_Mods">Mody</string>
   <string name="WndHero_Stealth">Podstęp</string>
   <string name="WndHero_Awareness">Świadomość</string>
@@ -2533,8 +2583,10 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="Challenges_Names_7">Pacyfizm</string>
   <string name="town_deco_crossroad_name">Tabliczka na rozdrożu </string>
   <string name="town_deco_crossroad_desc">Szorstki drewniany słup z tekstem w kształcie strzałek, na którym już dawno wyblakły, prawdopodobnie z powodu trudnych warunków pogodowych.</string>
-  <string name="ShieldBuffReady_Name">Gotowy</string>
-  <string name="ShieldBuffNotReady_Name">Nie gotowy</string>
+  <string name="ShieldBuffReady_Name">Tarcza gotowa do użytku</string>
+  <string name="ShieldBuffReady_Info">Twa tarcza jest gotowa by sparować następny atak.</string>
+  <string name="ShieldBuffNotReady_Name">Tarcza nie jest gotowa do użytku</string>
+  <string name="ShieldBuffNotReady_Info">Tarcza nie zapewni ci ochrony przed następnym atakiem.</string>
   <string name="WoodenShield_name">Drewniana Tarcza</string>
   <string name="WoodenShield_desc">Ta niestarannie wykonana tarcza jest najogólniej dostępną tarczą na rynku. Jest okrągła i może gdy się postarasz zablokujesz jakiś atak, może...</string>
   <string name="ToughShield_name">Wzmocniona skórzana tarcza</string>
@@ -2545,14 +2597,6 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="RoyalShield_desc">W pełni metalowa tarcza. Tak, jest ciężka ale tylko w ona zapewni ci najlepszą ochronę.</string>
   <string name="ShieldInfoTemplate">Ta tarcza zablokuje atak o sile %1$d z %2$d%% szansą.  Podniesienie gardy zajmie %3$3.1f sekund po udanym bloku.</string>
   <string name="Belongings_CantWearBoth">Nie możesz założyć %1$s i %2$s jednocześnie!</string>
-  <string name="Welcome_Text_29_3">
-remix.29.3/n
--Rozgrywka:\n
---Tarcze!!\n
--Modowanie:\n
---modyfikowalne tarcze!:\n
--Naprawy błędów\n
-</string>
   <string name="ShieldStrTemplate">Osoba nosząca tarczę powinna mieć co najmniej %1$d punktów Siły, aby prawidłowo z niej korzystać.</string>
   <string name="town_deco_flowerinthepot_name">Kwiat w doniczce</string>
   <string name="town_deco_flowerinthepot_desc">Dekoracyjny kwiat ze słodkim aromatem</string>
@@ -2618,7 +2662,8 @@ remix.29.3/n
   <string name="CharAction_Take">weź</string>
   <string name="CharAction_Scare">wystrasz</string>
   <string name="CharAction_Hit">uderz</string>
-  <string name="Stun_Info">Ogłuszony</string>
+  <string name="StunBuff_Name">Ogłuszony</string>
+  <string name="StunBuff_Info">Ogłuszony!</string>
   <string name="Char_StaStunned">ogłuszony</string>
   <string name="Mob_ReadyForOrder">%s gotowy na twoje rozkazy</string>
   <string name="Mob_CantDoIt">Nie mogę tego zrobić. Mam drobne łapy.</string>
@@ -2753,18 +2798,46 @@ remix.29.6\n
   <string name="Potion_Colors_14">onyksowy</string>
   <string name="Potion_Colors_15">perłowa</string>
   <string name="ManaShieldBuff_Name">Magiczna Tarcza</string>
-  <string name="ManaShieldBuff_Info">Magiczna Tarcza</string>
+  <string name="ManaShieldBuff_Info">Pojawia się magiczna bariera, zapewni ona całkowitą ochronę przed następnym atakiem.</string>
   <string name="TenguLiver_Name">Wątroba Tengu</string>
   <string name="TenguLiver_Info">Ta wątroba należy do potężnego wroga. Widząc ją , twój dziki instynkt przejmuje kontrolę i czujesz chęć, by ją skonsumować.</string>
   <string name="PotionOfMana_Name">Mikstura Many</string>
   <string name="PotionOfMana_Info">Ta mikstura odnowi twoją duchową energię.</string>
   <string name="WndFortuneTeller_IdentifyAll">Wszystko</string>
-  <string name="Snail_Name">Ślimak</string>
+  <string name="Snail_Name">slimak</string>
   <string name="Snail_Gender">meski</string>
-  <string name="Snail_Name_Objective">Ślimak</string>
+  <string name="Snail_Name_Objective">slimak</string>
   <string name="Snail_Desc">Przebywanie w ściekach sprawiło iż ten maly mięczak wyrósł do niespotykanych rozmiarów,  jest on jednak dość łatwym przeciwnikiem z uwagi na jego ślamazarność.</string>
-  <string name="DeepSnail_Name">Ślimak Rogaty</string>
+  <string name="DeepSnail_Name">slimak rogaty</string>
   <string name="DeepSnail_Gender">meski</string>
-  <string name="DeepSnail_Name_Objective">Ślimak Rogaty.</string>
+  <string name="DeepSnail_Name_Objective">slimak rogaty</string>
   <string name="DeepSnail_Desc">Spotykany w pobliżu zbiorników wodnych, mięczaków ten przewyższa typowego ślimaka, jest szybszy ,groźniejszy, a jego ugryzienia owodują nieprzyjemne efekty na skórze ofiary.</string>
+  <string name="CharInfo_Level">To jest poziom %1$d %2$s</string>
+  <string name="WrnExperimental_realtime">Rozgrywka w czasie rzeczywistym została włączona! Klikaj albo zdychaj. Chcesz sprawdzić ekwipunek? Powodzenia z ściekowym krabem, który będzie wtedy rozpruwać twoje wnętrzności.</string>
+  <string name="WrnExperimental_moveTimeout">Limit czasu ruchu został ustawiony na %d milisekund, myśl szybko!</string>
+  <string name="WrnExperimental_hint">Jeśli ten dziwny i pokręcony świat jest dla ciebie zbyt dużym wyzwaniem, proszę wyłączyć podane ustawienia używając\nStart Screen->Options->Gameplay\nmenu i rozpocząć nową rozgrywkę lub załadować poprzedni zapis.</string>
+  <string name="WrnExperimental_title">Ustawienia Eksperymentalne zostały włączone!</string>
+  <string name="Welcome_Text_30_1"> 
+ remix.30.1\n
+- Rozgrywka:\n
+-- Podklasy Gnolla!\n
+-- Ślimaki!\n
+-- Rozwój przedmiotów chaosu zbalansowany.\n
+-- Potka many jest od teraz normalnym eliksirem.\n
+-- Odznaki od teraz możliwe do zdobycia podczas gry w  DLC (lecz nie mody).\n
+- Poprawki błędów\n</string>
+  <string name="ShamanElder_Name">starszy szaman</string>
+  <string name="ShamanElder_Gender">meski</string>
+  <string name="ShamanElder_Name_Objective">starszy szaman</string>
+  <string name="ShamanElder_Desc">Ten właśnie gnoll wygląda znacznie starzej niż inni szamani i z pewnością piastuje wyższą rangę w stadzie. Dziwna energia formuje się wokół niego, można odnieść wrażenie że widać w niej odbicia wszystkich istot które ośmieliły się go tknąć.</string>
+  <string name="Bee_Name">pszczoła</string>
+  <string name="Bee_Gender">meski</string>
+  <string name="Bee_Name_Objective">pszczoła</string>
+  <string name="Bee_Desc">Pomimo ich małego rozmiaru, pszczoły przejawiają tendencję do zaciekłej ochrony swojego ula. Niestety nie są obdarzone zbytnio długim życiem.</string>
+  <string name="Moongrace_Name">Księżycznik Wdzięczny</string>
+  <string name="Moongrace_Desc">Te rośliny są nadzwyczaj rzadkie i znane od są szerzej jako źródło naturalnej magii.</string>
+  <string name="MoongraceBuff_Name">manna z Niebios</string>
+  <string name="MoongraceBuff_Info">Powietrze wokół gęstnieje od unoszącej się w nim magii, co ułatwia łatwiejszą koncetrację i odnowę zasobów magicznych. </string>
+  <string name="EncumbranceBuff_Name">Obciążenie</string>
+  <string name="EncumbranceBuff_Info">Zbyt mało siły by efektywnie użyć %s.</string>
 </resources>
