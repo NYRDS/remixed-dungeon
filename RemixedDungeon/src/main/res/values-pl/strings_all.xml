@@ -24,7 +24,7 @@
   <string name="Drink_Message">Orzeźwiające!</string>
   <string name="TomeOfKnowledge_Name">Księga Wiedzy</string>
   <string name="TomeOfKnowledge_Info">Ta tajemnicza księga wypełniona jest tajemniczymi zagadkami i tajemnicami!  Może i jest trudna do przeczytania, ale jeśli podołasz zadaniu, z pewnością zwiększysz swe moce magiczne.</string>
-  <string name="SpellBook_Name">Księga zaklęć</string>
+  <string name="SpellBook_Name">Księga Zaklęć</string>
   <string name="SpellBook_Info">\"Książka\" ta z wyglądu bardziej przypomina zbiór losowy stron, jednak  jeśli odpowiednio się nad nią skupisz może będziesz w stanie coś z niej zrozumieć.</string>
   <string name="SpellBook_Info_Identified">Pośród kartek odnalazłeś pełny tekst zaklęcia \"%1$s\".\n\" %2$s \"</string>
   <string name="ManaPotion_Name">Mikstura Many</string>
