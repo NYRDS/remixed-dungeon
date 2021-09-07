@@ -805,7 +805,7 @@ Lufix
   <string name="WndSaveSlotSelect_LoadAutoSave">Wczytaj auto-zapis</string>
   <string name="TownScript_NeedWeapon">Nie pójdę do lochu z gołymi rękami! \ Może warto najpierw odwiedzić sklep miejski?</string>
   <string name="WndDonate_silver">Srebro</string>
-  <string name="WndDonate_gold">Złoto</string>
+  <string name="WndDonate_gold">złoto</string>
   <string name="WndDonate_ruby">rubin</string>
   <string name="WndDonate_donate">podaruj:</string>
   <string name="WndDonate_notConnected">brak połączenia sieciowego :(</string>
