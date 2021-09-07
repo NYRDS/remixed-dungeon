@@ -5,7 +5,7 @@
   <string name="Mana_Title">Mana</string>
   <string name="Mana_Cost">Koszt Many:</string>
   <string name="Spells_NotEnoughSP">Nie masz wystarczająco punktów many aby rzucić zaklęcie  \"%1$s\" .</string>
-  <string name="SummonDeathling_Name">Przyzwij nieumarłego</string>
+  <string name="SummonDeathling_Name">Przyzwij truposza</string>
   <string name="SummonDeathling_Info">Przyzywa nieumarłego kompana.Życie nieumarłego oraz jego obrażenie rosną wraz z poziomem bohatera. \n\nLimit przywoływanych jednostek:%1$d(+ 1 na każdy poziom Magi )</string>
   <string name="Ignite_Name">Podpalenie</string>
   <string name="Ignite_Info">Podpala zaznaczoną komórkę,Może być użyty do podpalania traw, postaci oraz obiektów</string>
