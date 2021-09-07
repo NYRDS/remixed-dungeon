@@ -83,7 +83,8 @@
   <string name="ChaosCrystal_Prompt">Wybierz miejsce aby ustawić Znacznik Chaosu</string>
   <string name="ChaosCrystal_SelectForFuse">Wybierz przedmiot z którym chcesz połączyć Kryształ Chaosu</string>
   <string name="ChaosCrystal_ScrollFused">Kryształ został wchłonięty przez runy zapisane na tym zwoju, i stał się teraz %s</string>
-  <string name="ChaosCrystal_SwordFused">Kryształ został wchłonięty przez twoją broń i przyjął formę Miecza.</string>
+  <string name="ChaosCrystal_SwordFused">Kryształ został wchłonięty przez twoją broń i przyjął formę Miecza.
+</string>
   <string name="ChaosCrystal_BowFused">Kryształ został wchłonięty przez twój łuk i przyjął formę Łuku</string>
   <string name="ChaosCrystal_StaffFused">Kryształ został wchłonięty przez twoją różdżkę i przyjął formę Różdżki</string>
   <string name="CorpseDustBuff_Name">Żądza krwi</string>
