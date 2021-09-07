@@ -2030,7 +2030,7 @@
   <string name="DeferedDamageBuff_Info">Боль заметно растянулась, что значительно уменьшило одновременно получаемый урон. \nУрона осталось получить %d</string>
   <string name="DeferedDamage_Killed_Txt">%s убивает тебя...</string>
   <string name="Plant_ACPlant">ПОСАДИТЬ</string>
-  <string name="Plant_Info">Посади эти семена в то место, где ты хочешь вырастить %1$s.\n\n%2$s</string>
+  <string name="Plant_Info">Посади эти семена в то место, где ты хочешь вырастить растение %1$s.\n\n%2$s</string>
   <string name="Plant_Seed">семена растения %s</string>
   <string name="Dreamweed_Name">Дурман-трава</string>
   <string name="Dreamweed_Desc">При прикосновении Дурман-трава испускает сияющее облачко ошеломляющего газа.</string>
