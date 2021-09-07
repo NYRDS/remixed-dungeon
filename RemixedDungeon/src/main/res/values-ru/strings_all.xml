@@ -2030,7 +2030,7 @@
   <string name="DeferedDamageBuff_Info">Боль заметно растянулась, что значительно уменьшило одновременно получаемый урон. \nУрона осталось получить %d</string>
   <string name="DeferedDamage_Killed_Txt">%s убивает тебя...</string>
   <string name="Plant_ACPlant">ПОСАДИТЬ</string>
-  <string name="Plant_Info">Посади эти семена в то место, где ты хочешь вырастить %1$s.\n\n%2$s</string>
+  <string name="Plant_Info">Посади эти семена в то место, где ты хочешь вырастить растение %1$s.\n\n%2$s</string>
   <string name="Plant_Seed">семена растения %s</string>
   <string name="Dreamweed_Name">Дурман-трава</string>
   <string name="Dreamweed_Desc">При прикосновении Дурман-трава испускает сияющее облачко ошеломляющего газа.</string>
@@ -2832,7 +2832,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ShamanElder_Gender">masculine</string>
   <string name="ShamanElder_Name_Objective">шамана</string>
   <string name="ShamanElder_Desc">Это гнолл выглядит куда старше других шаманов, наверняка он кто-то важный в племени. Вокруг него мерцает странная аура, похоже она отражает все что приближается к ней.</string>
+  <string name="Bee_Name">пчела</string>
   <string name="Bee_Gender">masculine</string>
+  <string name="Bee_Name_Objective">пчела</string>
+  <string name="Bee_Desc">Несмотря на свой небольшой размер, пчелы стремятся яростно защищать свой улей. Но живут они недолго.</string>
   <string name="Moongrace_Name">Благолунка</string>
   <string name="Moongrace_Desc">Эти растения встречаются весьма редко, но весьма ценятся как природный источник волшебства.</string>
   <string name="MoongraceBuff_Name">Манна небесная</string>
