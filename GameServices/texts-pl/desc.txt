@@ -8,7 +8,7 @@ Cechy gry:
 - Hardkorowa gra z gatunku roguelike! 
 - 7 klas postaci do wyboru
 - Centrum miasta, które przygotuje Cię do podróży i wprowadzi Cię w świat gry
-- Ponad 30 poziomów głównego lochu podzielone na 6 rodzai
+- Ponad 30 poziomów głównego lochu podzielonego na 6 rodzajów
 - 3 opcjonalne lochy: Leże pająków, Nekropolia i Lodowe jaskinie
 - Dziesiątki przedmiotów i potworów
 - Przeróżni  bossowie
