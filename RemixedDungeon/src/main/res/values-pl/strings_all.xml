@@ -982,7 +982,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="HeroSubClass_NameGlad">gladiator</string>
   <string name="HeroSubClass_DescGlad">Udany atak bronią krótkodystansową  _gladiatora_ rozpoczyna kombinację, w której ilość obrażeń wzrasta wraz z każdym kolejnym uderzeniem.</string>
   <string name="HeroSubClass_NameBers">berserk</string>
-  <string name="HeroSubClass_DescBers">Kiedy _berserk_ zostaje ciężko ranny wkracza w stan dzikiej furii która znacząco zwiększa zadawane przez niego obrażenia.</string>
+  <string name="HeroSubClass_DescBers">Kiedy _Berserk_ zostaje ciężko ranny wkracza w stan dzikiej furii która znacząco zwiększa zadawane przez niego obrażenia.</string>
   <string name="HeroSubClass_NameWarL">czarnoksiężnik</string>
   <string name="HeroSubClass_DescWarL">Po zabiciu wroga _Czarnoksiężnik_ wchłania jego duszę. Leczy ona poniesione obrażenia i syci jego głód.</string>
   <string name="HeroSubClass_NameBatM">mag bitewny</string>
