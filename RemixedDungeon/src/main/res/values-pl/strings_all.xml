@@ -877,7 +877,7 @@ Lufix
   <string name="Nightcap_Info">Podbój lochów w nocy musi być bardzo wyczerpującym zajęciem. Co ty na to by przywdziać tę ciepłą i wygodną czapkę, po prostu się zrelaksować i zamknąć wobec Świata.</string>
   <string name="WizardHat_Name">Czapka Czarnoksiężnika</string>
   <string name="WizardHat_Info">Przepiękny, jedwabny kapelusz, przyozdobiony gwiezdnymi ornamentami. W dawnych czasach, niektórzy wierzyli, że najwięksi czarodzieje przywdziewali specjalnie wykonane ubrania, które wzmacniały ich potęgę. To nakrycie głowy nie wzmacnia ciebie w żaden sposób, ale czujesz, że tak jest gdy je nosisz.</string>
-  <string name="WndHats_ListTitle">Lista akcesoriów</string>
+  <string name="WndHats_ListTitle">Lista Rekwizytów</string>
   <string name="WndHats_SlotTitle">Założone</string>
   <string name="WndHats_NoConnectionMsg">Nie można się połączyć do Sklepu Play.</string>
   <string name="WndHats_Purchased">Jasne!</string>
