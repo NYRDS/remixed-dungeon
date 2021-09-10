@@ -284,7 +284,7 @@
   <string name="town_deco_INN_sign_name">Szyld Tawerny</string>
   <string name="town_deco_INN_sign_desc">Wygląda na to że w środku tego budynku znajduje się tawerna</string>
   <string name="HealthDart_Name">Uzdrawiająca Rzutka </string>
-  <string name="HealthDart_Gender">męska</string>
+  <string name="HealthDart_Gender">męski</string>
   <string name="HealthDart_Info">Czubek tej rzutki pokryty jest leczniczym eliksirem</string>
   <string name="HealthArrow_Name">Uzdrawiająca Strzała</string>
   <string name="HealthArrow_Gender">żeński</string>
