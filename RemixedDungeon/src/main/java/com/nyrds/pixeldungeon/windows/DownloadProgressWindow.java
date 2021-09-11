@@ -13,8 +13,8 @@ import org.jetbrains.annotations.NotNull;
  */
 public class DownloadProgressWindow implements DownloadStateListener {
     private WndMessage        progress;
-    private String            prefix;
-    private IDownloadComplete onComplete;
+    private final String            prefix;
+    private final IDownloadComplete onComplete;
 
     public DownloadProgressWindow(@NotNull String prefix, @NotNull IDownloadComplete onComplete) {
         this.prefix = prefix;
@@ -25,7 +25,10 @@ public class DownloadProgressWindow implements DownloadStateListener {
     public void DownloadProgress(final String file, final Integer bytes) {
         GameLoop.pushUiTask(() -> {
             if (progress == null) {
-                progress = new WndMessage(Utils.EMPTY_STRING);
+                progress = new WndMessage(Utils.format("%s ...", prefix)) {
+                    @Override
+                    public void onBackPressed() { }
+                };
                 GameLoop.addToScene(progress);
             }
             if (progress.getParent() == GameLoop.scene()) {

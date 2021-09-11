@@ -39,13 +39,14 @@ public class DownloadTask implements Runnable {
 
             //ucon.setSSLSocketFactory((SSLSocketFactory) SSLCertificateSocketFactory.getDefault());
 
-            ucon.setReadTimeout(2500);
+            ucon.setReadTimeout(10000);
             ucon.setInstanceFollowRedirects(true);
             ucon.connect();
 
             int repCode = ucon.getResponseCode();
 
             if (repCode == HttpURLConnection.HTTP_OK) {
+                m_listener.DownloadProgress(m_url, 0);
                 int bytesTotal = ucon.getContentLength();
 
                 GLog.debug("bytes in file: " + bytesTotal);
@@ -55,10 +56,12 @@ public class DownloadTask implements Runnable {
                     byte[] buffer = new byte[16384];
                     int count;
                     int bytesDownloaded = 0;
+
                     while ((count = is.read(buffer)) != -1) {
                         fos.write(buffer, 0, count);
                         bytesDownloaded += count;
                         m_listener.DownloadProgress(m_url, bytesDownloaded);
+                        Thread.yield();
                     }
                 }
 

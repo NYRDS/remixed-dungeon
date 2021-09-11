@@ -86,6 +86,7 @@ public class Unzip {
 					zin.closeEntry();
 					fout.close();
 				}
+				Thread.yield();
 			}
 			zin.close();
 
