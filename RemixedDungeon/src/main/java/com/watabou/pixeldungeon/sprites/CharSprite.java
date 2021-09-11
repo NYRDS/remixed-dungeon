@@ -82,7 +82,9 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         origin.set(width / 2, height - DungeonTilemap.SIZE / 2);
         angularSpeed = Random.Int(2) == 0 ? -720 : 720;
 
-        getParent().add(new FallTweener(this));
+        if (hasParent()) {
+            getParent().add(new FallTweener(this));
+        }
         die();
     }
 
