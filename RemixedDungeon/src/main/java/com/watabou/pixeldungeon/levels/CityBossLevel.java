@@ -124,7 +124,7 @@ public class CityBossLevel extends BossLevel {
 			} while (
 					!passable[pos] ||
 							!outsideEntranceRoom(pos ) ||
-							Dungeon.visible[pos]);
+							Dungeon.isCellVisible(pos));
 
 			spawnBoss(pos);
 		}

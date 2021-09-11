@@ -995,7 +995,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 
 		if (this != Dungeon.hero) {
-			getSprite().setVisible(Dungeon.visible[cell] && invisible >= 0);
+			getSprite().setVisible(Dungeon.isCellVisible(cell) && invisible >= 0);
 		}
 	}
 
@@ -1052,7 +1052,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public void playAttack(int cell) {
 		final boolean realtime = Dungeon.realtime();
 
-		if(Dungeon.visible[cell] && !realtime) {
+		if(Dungeon.isCellVisible(cell) && !realtime) {
 			getSprite().dummyAttack(cell);
 		} else {
 			next();
@@ -1069,7 +1069,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		final boolean realtime = Dungeon.realtime();
 
 		if (level().distance(pos, enemyPos) <= 1) {
-			if(Dungeon.visible[pos] && !realtime) {
+			if(Dungeon.isCellVisible(enemyPos) && !realtime) {
 				getSprite().attack(enemyPos);
 			} else {
 				onAttackComplete();
@@ -1154,7 +1154,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	private void updateSprite(CharSprite sprite){
 		if(level().cellValid(getPos())) {
-			sprite.setVisible(Dungeon.visible[getPos()] && invisible >= 0);
+			sprite.setVisible(Dungeon.isCellVisible(getPos()) && invisible >= 0);
 		} else {
 			EventCollector.logException("invalid pos for:"+toString()+":"+getClass().getCanonicalName());
 		}

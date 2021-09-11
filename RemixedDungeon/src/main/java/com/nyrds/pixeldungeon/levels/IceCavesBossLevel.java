@@ -98,12 +98,13 @@ public class IceCavesBossLevel extends BossLevel {
 
 			for (int i = 0; i < 2; i++){
 				mob.setState(MobAi.getStateByClass(Hunting.class));
+				final int mobPos = mob.getPos();
 				do {
 					mob.setPos(Random.Int( getLength() ));
 				} while (
-						!passable[mob.getPos()] ||
-								!outsideEntranceRoom( mob.getPos() ) ||
-								Dungeon.visible[mob.getPos()]);
+						!passable[mobPos] ||
+								!outsideEntranceRoom(mobPos) ||
+								Dungeon.isCellVisible(mobPos));
 				spawnMob(mob);
 				mob = guard;
 			}

@@ -843,7 +843,7 @@ public class Hero extends Char {
 		for (int y = ay; y <= by; y++) {
 			for (int x = ax, p = ax + y * level.getWidth(); x <= bx; x++, p++) {
 
-				if (Dungeon.visible[p]) {
+				if (Dungeon.isCellVisible(p)) {
 
 					if (intentional) {
 						getSprite().getParent().addToBack(new CheckedCell(p));

@@ -240,7 +240,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     @LuaInterface
     public void dummyAttack(int cell) {
         ch.ifPresent(chr -> {
-            if (Dungeon.visible[chr.getPos()]) {
+            if (Dungeon.isCellVisible(chr.getPos())) {
                 attack(cell, () -> ch.ifPresent(Actor::next));
             }
         });
@@ -619,7 +619,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 return;
             }
 
-            if (!Dungeon.visible[chr.getPos()]) {
+            if (!Dungeon.isCellVisible(chr.getPos())) {
                 onComplete(anim);
                 skipAnim[0] = true;
             }

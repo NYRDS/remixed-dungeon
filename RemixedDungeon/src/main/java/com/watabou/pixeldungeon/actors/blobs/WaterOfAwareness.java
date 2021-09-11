@@ -58,7 +58,7 @@ public class WaterOfAwareness extends WellWater {
 				level.set( i, Terrain.discover( terr ) );
 				GameScene.updateMap( i );
 				
-				if (Dungeon.visible[i]) {
+				if (Dungeon.isCellVisible(i)) {
 					GameScene.discoverTile( i);
 				}
 			}

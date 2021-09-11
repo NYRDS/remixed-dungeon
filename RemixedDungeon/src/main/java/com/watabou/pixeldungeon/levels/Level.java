@@ -927,7 +927,7 @@ public abstract class Level implements Bundlable {
 			cell = Random.Int(getLength());
 		}
 		while (!selectFrom[cell]
-				|| Dungeon.visible[cell]
+				|| Dungeon.isCellVisible(cell)
 				|| Actor.findChar(cell) != null
 				|| getTopLevelObject(cell) != null
 				|| cell == entrance);
@@ -1362,7 +1362,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		if (TerrainFlags.is(map[cell], TerrainFlags.TRAP)) {
-			if (Dungeon.visible[cell]) {
+			if (Dungeon.isCellVisible(cell)) {
 				Sample.INSTANCE.play(Assets.SND_TRAP);
 			}
 
@@ -1753,7 +1753,7 @@ public abstract class Level implements Bundlable {
 		ArrayList<Integer> candidates = new ArrayList<>();
 
 		for (int i = 0; i < getLength(); i++) {
-			if (map[i] == terrainType && Dungeon.visible[i]) {
+			if (map[i] == terrainType && Dungeon.isCellVisible(i)) {
 				candidates.add(i);
 			}
 		}

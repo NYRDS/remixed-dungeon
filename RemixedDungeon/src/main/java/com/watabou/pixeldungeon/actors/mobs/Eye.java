@@ -99,7 +99,7 @@ public class Eye extends Mob {
                     victim.damage(Random.NormalIntRange(14, 20), this);
                     int pos = victim.getPos();
 
-                    if (Dungeon.visible[pos]) {
+                    if (Dungeon.isCellVisible(pos)) {
                         victim.getSprite().flash();
                         CellEmitter.center(pos).burst(PurpleParticle.BURST, Random.IntRange(1, 2));
                     }

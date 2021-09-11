@@ -43,7 +43,7 @@ public class AlarmTrap implements ITrigger {
 			}
 		}
 		
-		if (Dungeon.visible[pos]) {
+		if (Dungeon.isCellVisible(pos)) {
             GLog.w(StringsManager.getVar(R.string.AlarmTrap_Desc));
 			CellEmitter.center( pos ).start( Speck.factory( Speck.SCREAM ), 0.3f, 3 );
 		}

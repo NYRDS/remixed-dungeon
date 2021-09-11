@@ -30,7 +30,7 @@ public class Door {
 		GameScene.updateMap( pos );
 		Dungeon.observe();
 		
-		if (Dungeon.visible[pos]) {
+		if (Dungeon.isCellVisible(pos)) {
 			Sample.INSTANCE.play( Assets.SND_OPEN );
 		}
 	}

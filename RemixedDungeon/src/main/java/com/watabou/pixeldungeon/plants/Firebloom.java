@@ -45,7 +45,7 @@ public class Firebloom extends Plant {
 	public void effect(int pos, Presser ch) {
 		GameScene.add(Blob.seed(pos, 2, Fire.class));
 
-		if (Dungeon.visible[pos]) {
+		if (Dungeon.isCellVisible(pos)) {
 			CellEmitter.get(pos).burst(FlameParticle.FACTORY, 5);
 		}
 	}

@@ -45,7 +45,7 @@ public class Alchemy extends Blob {
 	protected void evolve() {
 		volume = off[pos] = cur[pos];
 		
-		if (Dungeon.visible[pos]) {
+		if (Dungeon.isCellVisible(pos)) {
 			Journal.add( Journal.Feature.ALCHEMY.desc() );
 		}
 	}
