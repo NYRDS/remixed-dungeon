@@ -44,14 +44,16 @@ public class Hedgehog extends NPC {
 
 	public static void spawn( RegularLevel level ) {
 		if (!spawned && Dungeon.depth == 23) {
-			Hedgehog hedgehog = new Hedgehog();
-			do {
-				hedgehog.setPos(level.randomRespawnCell());
-			} while (hedgehog.getPos() == -1);
-			level.mobs.add( hedgehog );
-			Actor.occupyCell( hedgehog );
-			
-			spawned = true;
+			int mobPos = level.randomRespawnCell();
+
+			if(level.cellValid(mobPos)) {
+				Hedgehog hedgehog = new Hedgehog();
+				hedgehog.setPos(mobPos);
+				level.mobs.add(hedgehog);
+				Actor.occupyCell(hedgehog);
+
+				spawned = true;
+			}
 		}
 	}
 
