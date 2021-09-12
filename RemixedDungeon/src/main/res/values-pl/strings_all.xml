@@ -1266,7 +1266,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Undead_Desc">Te nieumarłe krasnoludy, wskrzeszone przez wolę Króla Krasnoludów, byli kiedyś członkami jego dworu. Pojawiają się jako szkielety ze zdumiewającej wielkości brodą.</string>
   <string name="Undead_Defense">blok</string>
   <string name="Mimic_Name">mimik</string>
-  <string name="Mimic_Gender">męski</string>
+  <string name="Mimic_Gender">masculine</string>
   <string name="Mimic_Name_Objective">mimik</string>
   <string name="Mimic_Desc">Mimiki są magicznymi stworzeniami, które mogą przybrać dowolny kształt. W lochach prawie zawsze przybierają kształt skrzyni ze skarbami ponieważ wiedzą jak zmylić poszukiwacza przygód. </string>
   <string name="MimicPie_Name">mimik</string>
