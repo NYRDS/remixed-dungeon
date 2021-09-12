@@ -849,7 +849,7 @@ Lufix
   <string name="CommonArrow_Gender">feminine</string>
   <string name="FireArrow_Name">ognista strzała</string>
   <string name="FireArrow_Info">Ta strzała wygląda na zupełnie zwyczajną, rzecz jasna poza ciepłym czerwonym światłem emanującym z jej grotu.</string>
-  <string name="FireArrow_Gender">żeński</string>
+  <string name="FireArrow_Gender">feminine</string>
   <string name="PoisonArrow_Name">zatruta strzała</string>
   <string name="PoisonArrow_Info">Błyszcząca kropla trucizny połyskuje na grocie tej strzały.</string>
   <string name="PoisonArrow_Gender">żeński</string>
