@@ -1014,7 +1014,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="KoboldIcemancer_Killed">1%s zabił ciebie lodowym kolcem...</string>
   <string name="ColdSpirit_Name">duch mrozu</string>
   <string name="ColdSpirit_Gender">męski</string>
-  <string name="ColdSpirit_Name_Objective">duch mrozu</string>
+  <string name="ColdSpirit_Name_Objective">duch zimna</string>
   <string name="ColdSpirit_Desc">Duchy mrozu są manifestacją zimna w jego najczystszej formie. Są zaledwie żywymi, bezmyślnymi, lodowymi skorupami, stworzonymi za pomocą magii, które za pomocą najprostszych instynktów i odruchów służą swoim twórcom.</string>
   <string name="IceElemental_Name">żywiołak lodu</string>
   <string name="IceElemental_Gender">męski</string>
