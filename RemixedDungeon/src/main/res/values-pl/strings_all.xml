@@ -1280,7 +1280,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Monk_Defense">sparowano</string>
   <string name="Monk_Disarm">%1$s wytrącił %2$s z Twoich dłoni!</string>
   <string name="Piranha_Name">Ogromna Pirania</string>
-  <string name="Piranha_Gender">żeński</string>
+  <string name="Piranha_Gender">feminine</string>
   <string name="Piranha_Name_Objective">Ogromna Pirania</string>
   <string name="Piranha_Desc">Te mięsożerne ryby nie są naturalnymi mieszkańcami podziemnych basenów. Zostały tutaj umieszczone specjalnie, by bronić zalanych skarbnic.</string>
   <string name="Rat_Name">ściekoszczur</string>
