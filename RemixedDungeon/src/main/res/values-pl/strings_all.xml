@@ -1320,7 +1320,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Spinner_Name_Objective">jaskiniowy tkacz</string>
   <string name="Spinner_Desc">Te zielonkawe, futrzane, jaskiniowe pająki w miarę możliwości próbują unikać bliskiego kontaktu, woląc czekać nieopodal, podczas gdy ich ofiara, splątana w grubej pajęczynie powoli umiera w wyniku powikłań ich trującego ugryzienia.</string>
   <string name="Statue_Name">żywy posąg</string>
-  <string name="Statue_Gender">żeński</string>
+  <string name="Statue_Gender">feminine</string>
   <string name="Statue_Name_Objective">żywy posąg</string>
   <string name="Statue_Desc">Myślisz że to kolejny brzydki posąg w Lochu, ale jego świecące, czerwone oczy natychmiast podpowiadają, że z nim jest coś nie tak. I ten  _%s_, który dzierży w swych dłoniach jest podejrzanie prawdziwy.</string>
   <string name="Succubus_Name">sukkub</string>
