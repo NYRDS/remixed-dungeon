@@ -1432,7 +1432,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="DreadKnight_Name_Objective">Rycerz Grozy</string>
   <string name="DreadKnight_Desc">Rycerz Grozy jest starożytnym wojownikiem, którego całe życie było zhańbione złem, którego notorycznie dokonywał. Za jego grzechy został przeklęty i skazany na nieżycie w połamanym nieumarłym ciele na wieczność. Każdy moment jego potępionego istnienia jest przepełniony cierpieniem, gniewem i strachem, który wywoływał w sercach swych ofiar.</string>
   <string name="EnslavedSoul_Name">Zniewolona Dusza</string>
-  <string name="EnslavedSoul_Gender">żeński</string>
+  <string name="EnslavedSoul_Gender">feminine</string>
   <string name="EnslavedSoul_Name_Objective">Zniewolona Dusza</string>
   <string name="EnslavedSoul_Desc">Jesteś niemalże przejrzeć przez jej widmowe ciało. Mimo iż wygląda jak czaszka, wydaje się, że przez ułamek sekundy pojawia się na niej twarz, pełna cierpienia i rozpaczy.</string>
   <string name="ExplodingSkull_Name">Wybuchająca Czaszka</string>
