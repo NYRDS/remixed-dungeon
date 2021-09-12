@@ -846,7 +846,7 @@ Lufix
   <string name="Quiver_Gender">masculine</string>
   <string name="CommonArrow_Name">strzała</string>
   <string name="CommonArrow_Info">Zwykła drewniana strzała z żelaznym grotem</string>
-  <string name="CommonArrow_Gender">żeński</string>
+  <string name="CommonArrow_Gender">feminine</string>
   <string name="FireArrow_Name">ognista strzała</string>
   <string name="FireArrow_Info">Ta strzała wygląda na zupełnie zwyczajną, rzecz jasna poza ciepłym czerwonym światłem emanującym z jej grotu.</string>
   <string name="FireArrow_Gender">żeński</string>
