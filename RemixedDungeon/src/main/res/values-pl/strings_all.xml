@@ -852,7 +852,7 @@ Lufix
   <string name="FireArrow_Gender">feminine</string>
   <string name="PoisonArrow_Name">zatruta strzała</string>
   <string name="PoisonArrow_Info">Błyszcząca kropla trucizny połyskuje na grocie tej strzały.</string>
-  <string name="PoisonArrow_Gender">żeński</string>
+  <string name="PoisonArrow_Gender">feminine</string>
   <string name="ParalysisArrow_Name">strzała paraliżująca</string>
   <string name="ParalysisArrow_Info">Ta strzała pokryta jest kurarą, rośliną znaną z paraliżowania układu nerwowego ofiary.</string>
   <string name="ParalysisArrow_Gender">feminine</string>
