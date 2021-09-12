@@ -1142,7 +1142,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
 \n\nTrzymasz %s w pogotowiu.</string>
   <string name="Boomerang_Name">bumerang</string>
   <string name="Boomerang_Info">Rzucony we wroga, ten kawałek zakrzywionego drewna wróci z powrotem do rąk swego właściciela.</string>
-  <string name="Boomerang_Gender">męski</string>
+  <string name="Boomerang_Gender">masculine</string>
   <string name="CurareDart_Name">trująca rzutka</string>
   <string name="CurareDart_Info">Te małe, złowrogie rzutki nie zadają dużo obrażeń, ale mogą sparaliżować cel, pozostawiając go bezbronnym i unieruchomionym na pewien czas.</string>
   <string name="CurareDart_Gender">męski</string>
