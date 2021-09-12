@@ -1236,7 +1236,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Eye_Desc">Jedno z imion tego demona brzmi \"kula nienawiści\", ponieważ gdy widzi wroga używa bezmyślnie swego Wzroku Śmierci, często ignorując swoich sojuszników i raniąc ich dotkliwie.</string>
   <string name="Eye_Kill">%s\'s Wzrok Śmierci zabił ciebie...</string>
   <string name="Gnoll_Name">Zwiadowca Gnolli</string>
-  <string name="Gnoll_Gender">męski</string>
+  <string name="Gnoll_Gender">masculine</string>
   <string name="Gnoll_Name_Objective">Zwiadowca Gnolli</string>
   <string name="Gnoll_Desc">Gnolle są hienopodobnymi humanoidami. Ukrywają się w kanałach i lochach wybierając się na powierzchnię od czasu do czasu by zaatakować Miasto. Zwiadowcy Gnolli to podstawowi członkowie ich klanu, nie są tak silni jak siepacze i nie tak inteligentni jak szamani.</string>
   <string name="Golem_Name">golem</string>
