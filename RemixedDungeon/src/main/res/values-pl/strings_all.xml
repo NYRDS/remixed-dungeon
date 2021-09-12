@@ -2828,7 +2828,7 @@ remix.29.6\n
 -- Odznaki od teraz możliwe do zdobycia podczas gry w  DLC (lecz nie mody).\n
  - Błędy poprawione</string>
   <string name="ShamanElder_Name">starszy szaman</string>
-  <string name="ShamanElder_Gender">męski</string>
+  <string name="ShamanElder_Gender">masculine</string>
   <string name="ShamanElder_Name_Objective">starszy szaman</string>
   <string name="ShamanElder_Desc">Ten właśnie gnoll wygląda znacznie starzej niż inni szamani i z pewnością piastuje wyższą rangę w stadzie. Dziwna energia formuje się wokół niego, można odnieść wrażenie że widać w niej odbicia wszystkich istot które ośmieliły się go tknąć.</string>
   <string name="Bee_Name">pszczoła</string>
