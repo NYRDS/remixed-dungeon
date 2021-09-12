@@ -287,7 +287,7 @@
   <string name="HealthDart_Gender">feminine</string>
   <string name="HealthDart_Info">Czubek tej rzutki pokryty jest leczniczym eliksirem</string>
   <string name="HealthArrow_Name">Uzdrawiająca Strzała</string>
-  <string name="HealthArrow_Gender">żeński</string>
+  <string name="HealthArrow_Gender">feminine</string>
   <string name="HealthArrow_Info">Grot tej strzały pokryty jest leczniczym eliksirem</string>
   <string name="AmokDart_Name">Rzutka Szału</string>
   <string name="AmokDart_Gender">feminine</string>
