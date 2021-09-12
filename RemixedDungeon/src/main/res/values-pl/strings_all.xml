@@ -1339,7 +1339,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Tengu_Info1">Wolny... Nareszcie...</string>
   <string name="Tengu_Info2">Mam cię, %s!</string>
   <string name="Thief_Name">szalony złodziej</string>
-  <string name="Thief_Gender">męski</string>
+  <string name="Thief_Gender">masculine</string>
   <string name="Thief_Name_Objective">szalony złodziej</string>
   <string name="Thief_Desc">Niższe poziomy lochu zawsze były kryjówką dla kryminalistów wszelkiego sortu. Nie wszyscy mogli zachować jasność umysłu po tak długim okresie przebywania z dala od słońca. Dawno temu ci szaleni złodzieje i bandyci zapomnieli kim są i dlaczego kradną.</string>
   <string name="Thief_Stole">%1$s ukradł ci %2$s z twojego plecaka!</string>
