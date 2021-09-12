@@ -1127,7 +1127,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Spear_Gender">nijaki</string>
   <string name="Sword_Name">miecz</string>
   <string name="Sword_Info">Ostre jak brzytwa stalowe ostrze błyszczy dumnie w ciemności.</string>
-  <string name="Sword_Gender">męski</string>
+  <string name="Sword_Gender">masculine</string>
   <string name="WarHammer_Name">młot wojenny</string>
   <string name="WarHammer_Info">Niewiele stworzeń jest w stanie wytrzymać miażdżące ciosy tego ogromnego młota wykonanego z ołowiu i stali, ale tylko najsilniejsi poszukiwacze przygód mogą go używać efektywnie.</string>
   <string name="WarHammer_Gender">męski</string>
