@@ -1012,9 +1012,9 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="KoboldIcemancer_Name_Objective">koboldzi kriomanta</string>
   <string name="KoboldIcemancer_Desc">Koboldy Kriomanci należeli do elity swojej społeczności. Znakomici wojownicy, magowie, a przede wszystkim - naukowcy. Starożytni kriomanci doprowadzili sztukę formowania lodu do perfekcji, tworząc skomplikowane, lodowe mechanizmy, które następnie wzmacniali z pomocą specjalnych zaklęć.</string>
   <string name="KoboldIcemancer_Killed">1%s zabił ciebie lodowym kolcem...</string>
-  <string name="ColdSpirit_Name">duch mrozu</string>
+  <string name="ColdSpirit_Name">duch zimna</string>
   <string name="ColdSpirit_Gender">męski</string>
-  <string name="ColdSpirit_Name_Objective">duch mrozu</string>
+  <string name="ColdSpirit_Name_Objective">duch zimna</string>
   <string name="ColdSpirit_Desc">Duchy mrozu są manifestacją zimna w jego najczystszej formie. Są zaledwie żywymi, bezmyślnymi, lodowymi skorupami, stworzonymi za pomocą magii, które za pomocą najprostszych instynktów i odruchów służą swoim twórcom.</string>
   <string name="IceElemental_Name">żywiołak lodu</string>
   <string name="IceElemental_Gender">męski</string>
