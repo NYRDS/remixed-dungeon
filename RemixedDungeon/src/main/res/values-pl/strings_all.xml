@@ -834,7 +834,7 @@ Lufix
   <string name="Bow_Info1">Jest to broń dystansowa. Jako broń krótkodystansowa zupełnie bezużyteczna, za wyjątkiem że jesteś elfem. Posiadanie założonego łuku umożliwia ci szycie strzałami.\n\n</string>
   <string name="WoodenBow_Name">drewniany łuk</string>
   <string name="WoodenBow_Info">Ten prosty, drewniany łuk może być użyteczny, o ile znajdziesz jakieś strzały</string>
-  <string name="WoodenBow_Gender">męski</string>
+  <string name="WoodenBow_Gender">masculine</string>
   <string name="CompoundBow_Name">łuk kompozytowy</string>
   <string name="CompoundBow_Info">Strzały wystrzelone z łuku kompozytowego zadają ogromne obrażenia i są niezwykle celne, kosztem szybkości strzału</string>
   <string name="CompoundBow_Gender">masculine</string>
