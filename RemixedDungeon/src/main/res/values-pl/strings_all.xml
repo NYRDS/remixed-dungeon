@@ -1328,7 +1328,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Succubus_Name_Objective">sukkub</string>
   <string name="Succubus_Desc">Sukkuby to demony, które wyglądają jak pociągające (w nieco gotyckim stylu) dziewczyny. Używając piekielnej magii, mogą oczarować bohatera, który nie może zaatakować niczego dopóki urok się nie ulotni. </string>
   <string name="Swarm_Name">Rój Much</string>
-  <string name="Swarm_Gender">męski</string>
+  <string name="Swarm_Gender">masculine</string>
   <string name="Swarm_Name_Objective">Rój Much</string>
   <string name="Swarm_Desc">Ten śmiertelnie groźny rój much wściekle bzyczy. Każdy niemagiczny atak podzieli go na dwa mniejsze, ale równie niebezpieczne roje.</string>
   <string name="Swarm_Defense">unik</string>
