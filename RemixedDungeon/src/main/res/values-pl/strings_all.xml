@@ -1599,7 +1599,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="TownsfolkMovieNPC_Name_Objective">mieszczanin</string>
   <string name="TownsfolkMovieNPC_Desc">Jeden z lokalsów. Mimo, że wygląda nadzwyczaj zwyczajnie, przyodziany jest w drogo wyglądające szaty.</string>
   <string name="TownsfolkMovieNPC_Message">Słyszałeś już o nowej usłudze zapewnianej przez lokalny \"teatr filmowy\"? Niestety przy wejściu pytają o jakieś dziwne \"internety\", a o takowych nigdy nie słyszałem.</string>
-  <string name="LibrarianNPC_Name">Bibliotekarz</string>
+  <string name="LibrarianNPC_Name">bibliotekarz</string>
   <string name="LibrarianNPC_Gender">masculine</string>
   <string name="LibrarianNPC_Name_Objective">Bibliotekarz</string>
   <string name="LibrarianNPC_Desc">Bardzo nieśmiała osoba, nosząca dziwaczny sweter i bardzo duże okulary.</string>
