@@ -1397,7 +1397,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="SpiderQueen_Desc">Ciało pięknej kobiety skrzyżowane z ohydnym pająkiem. Każda żyjąca istota w tym legowisku jest jej służącym. Spotkanie tej niezwykłej damy może zmienić się w śmiertelne doświadczenie. Jesteś bowiem intruzem!</string>
   <string name="WaterElemental_Name">żywiołak wody</string>
   <string name="WaterElemental_Gender">masculine</string>
-  <string name="WaterElemental_Name_Objective">Żywiołak wody</string>
+  <string name="WaterElemental_Name_Objective">żywiołak wody</string>
   <string name="WaterElemental_Desc">Wodne żywiołaki mogą być znalezione w pobliżu dużych skupisk wodnych. Zazwyczaj te magicznie złączone fale tylko przechadzają się w pobliżu.</string>
   <string name="AirElemental_Name">Żywiołak powietrza</string>
   <string name="AirElemental_Gender">masculine</string>
