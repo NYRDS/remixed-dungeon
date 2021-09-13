@@ -1242,7 +1242,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Golem_Gender">masculine</string>
   <string name="Golem_Name_Objective">golem</string>
   <string name="Golem_Desc">Krasnoludy próbowały połączyć swą wiedzę o mechanizmach oraz nowo odkrytą umiejętność przędzenia żywiołów. Jako źródło zasilania do mechanicznego ciała golema, istoty mającej być najbardziej podległa woli stwórcy, służyła \"dusza\" wykonana z duchów ziemi. Mimo wielu środków ostrożności, najmniejszy nawet błąd w przeprowadzaniu rytuału mógłby skutkować zupełnym kataklizmem.</string>
-  <string name="Golem_Defense">zablokowane</string>
+  <string name="Golem_Defense">blok</string>
   <string name="Goo_Name">Szlam</string>
   <string name="Goo_Gender">masculine</string>
   <string name="Goo_Name_Objective">Szlam</string>
