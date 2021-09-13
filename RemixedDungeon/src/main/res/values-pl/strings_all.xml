@@ -1663,7 +1663,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="HealerNPC_Message3">Ciekawe czemu kościół nie pozwala nam nosić tu czapek... Wewnątrz jest naprawdę zimno.</string>
   <string name="ServiceManNPC_Name">pracownik</string>
   <string name="ServiceManNPC_Gender">masculine</string>
-  <string name="ServiceManNPC_Name_Objective">Pracownik</string>
+  <string name="ServiceManNPC_Name_Objective">pracownik</string>
   <string name="ServiceManNPC_Desc">Zwykły pracownik jednego z miejscowych przybytków.</string>
   <string name="TownShopkeeper_Name">Kupiec</string>
   <string name="TownShopkeeper_Desc">Ta osoba jest typowym handlarzem. Możesz śmiało powiedzieć, że już zdołał ciebie wycenić.</string>
