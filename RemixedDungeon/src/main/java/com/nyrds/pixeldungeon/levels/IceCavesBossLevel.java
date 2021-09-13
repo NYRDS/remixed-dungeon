@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.BossLevel;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -99,9 +98,9 @@ public class IceCavesBossLevel extends BossLevel {
 
 			for (int i = 0; i < 2; i++){
 				mob.setState(MobAi.getStateByClass(Hunting.class));
-				int mobPos = Level.INVALID_CELL;
+				int mobPos;
 				do {
-					mobPos = randomRespawnCell();
+					mobPos = Random.Int( getLength() );
 				} while (
 						!passable[mobPos] ||
 								!outsideEntranceRoom(mobPos) ||
