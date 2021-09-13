@@ -61,7 +61,7 @@ public class Fire extends Blob {
 					observe = true;
 					GameScene.updateMapPair(pos);
 
-					if (Dungeon.visible[pos]) {
+					if (Dungeon.isCellVisible(pos)) {
 						GameScene.discoverTile( pos);
 					}
 				}

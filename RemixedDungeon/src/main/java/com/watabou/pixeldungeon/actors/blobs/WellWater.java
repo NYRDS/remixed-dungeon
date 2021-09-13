@@ -49,7 +49,7 @@ public class WellWater extends Blob {
 	protected void evolve() {
 		volume = off[pos] = cur[pos];
 		
-		if (Dungeon.visible[pos]) {
+		if (Dungeon.isCellVisible(pos)) {
 			if (this instanceof WaterOfAwareness) {
 				Journal.add( Feature.WELL_OF_AWARENESS.desc() );
 			} else if (this instanceof WaterOfHealth) {

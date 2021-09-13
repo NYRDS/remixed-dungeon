@@ -762,7 +762,12 @@ public class GameScene extends PixelScene {
 
     public static void updateMap(int cell) {
         if (isSceneReady()) {
-            scene.baseTiles.updateCell(cell, Dungeon.level);
+            final Level level = Dungeon.level;
+            if(level.cellValid(cell)) {
+                scene.baseTiles.updateCell(cell, level);
+            } else {
+                EventCollector.logException(Utils.format("Attempt to update invalid %d on %s", cell, level.levelId));
+            }
         }
     }
 

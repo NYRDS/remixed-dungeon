@@ -31,7 +31,7 @@ public class ZapEffect {
         Level level = Dungeon.level;
         if (zapEffect != null && level.cellValid(from) && level.cellValid(to)) {
             
-            if (!Dungeon.visible[from] && !Dungeon.visible[to]){
+            if (!Dungeon.isCellVisible(from) && !Dungeon.isCellVisible(to)){
                 return;
             }
 
@@ -83,7 +83,7 @@ public class ZapEffect {
         Level level = Dungeon.level;
         if (effect != null && level.cellValid(pos)) {
 
-            if (!Dungeon.visible[pos]) {
+            if (!Dungeon.isCellVisible(pos)) {
                 return;
             }
 

@@ -69,7 +69,7 @@ public class CharUtils {
             return false;
         }
 
-        return Dungeon.visible[ch.getPos()];
+        return Dungeon.isCellVisible(ch.getPos());
     }
 
     public static void checkDeathReport(Char attacker, @NotNull Char victim, String desc) {

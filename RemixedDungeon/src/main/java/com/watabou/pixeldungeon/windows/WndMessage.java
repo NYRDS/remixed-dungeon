@@ -25,7 +25,7 @@ import com.watabou.pixeldungeon.ui.Window;
 public class WndMessage extends Window {
 
 	private static final int WIDTH = 120;
-	private Text info;
+	private final Text info;
 
 	public WndMessage(String text) {
 

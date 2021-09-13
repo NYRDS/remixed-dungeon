@@ -188,7 +188,10 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 	public void UnzipProgress(Integer unpacked) {
 		GameLoop.pushUiTask(() -> {
 			if (unzipProgress == null) {
-				unzipProgress = new WndMessage(Utils.EMPTY_STRING);
+				unzipProgress = new WndMessage("Unpacking ..."){
+					@Override
+					public void onBackPressed() { }
+				};
 				GameLoop.addToScene(unzipProgress);
 			}
 			if (unzipProgress.getParent() == GameLoop.scene()) {

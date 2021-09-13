@@ -88,7 +88,7 @@ public class Plant extends LevelObject {
 		Dungeon.level.remove(this);
 
 		sprite.kill();
-		if (Dungeon.visible[pos]) {
+		if (Dungeon.isCellVisible(pos)) {
 			CellEmitter.get(pos).burst(LeafParticle.GENERAL, 6);
 		}
 	}

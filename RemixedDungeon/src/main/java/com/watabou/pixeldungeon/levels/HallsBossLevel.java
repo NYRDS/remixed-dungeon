@@ -127,7 +127,7 @@ public class HallsBossLevel extends BossLevel {
 				boss.setPos(Random.Int( getLength() ));
 			} while (
 				!passable[boss.getPos()] ||
-				Dungeon.visible[boss.getPos()]);
+				Dungeon.isCellVisible(boss.getPos()));
 			spawnMob(boss);
 			boss.spawnFists();
 		}

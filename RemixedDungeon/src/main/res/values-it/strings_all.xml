@@ -401,7 +401,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="WndRanking_StaFood">Cibo mangiato</string>
   <string name="WndRanking_StaAlchemy">Pozioni cotte</string>
   <string name="WndRanking_StaAnkhs">Ankh Usato</string>
-  <string name="WndResurrect_Message">Sei morto, ma è stata data un\'altra possibilità di sconfiggere questo dungeon. Vuoi riprendere?</string>
+  <string name="WndResurrect_Message">Sei morto, ma ti è stata data un\'altra possibilità di sconfiggere questo dungeon. Vuoi riprendere?</string>
   <string name="WndResurrect_Yes">Sì, mi batterò!</string>
   <string name="WndResurrect_No">No, mi arrendo</string>
   <string name="WndSadGhost_Rose">Sì! Sì!!! è questo! Si prega di darlo a me! E si può prendere uno di questi elementi, forse sarà utile a voi nel vostro viaggio...</string>
@@ -442,7 +442,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="Amulet_ACEnd">FINE DEL GIOCO</string>
   <string name="Amulet_Info">L\' Amuleto di Yendor è il più potente artefatto conosciuto di origini ignote. Si dice che l\'amuleto sia in grado di esaudire qualunque desiderio se la forza di volontà del suo proprietario è forte abbastanza da \"persuaderlo\" a farlo.</string>
   <string name="Ankh_Name">Ankh</string>
-  <string name="Ankh_Info">Questo antico simbolo di immortalità garantisce una capacità di tornare in vita dopo la morte. Al momento della resurrezione tutti gli oggetti non equipaggiati andranno persi.</string>
+  <string name="Ankh_Info">Questo antico simbolo di immortalità garantisce una capacità di tornare in vita dopo la morte. Al momento della risurrezione tutti gli oggetti non equipaggiati andranno persi.</string>
   <string name="ArmorKit_Name">Kit per armature</string>
   <string name="ArmorKit_ACAplly">APPLICA</string>
   <string name="ArmorKit_Info">Utilizzando questo kit di piccoli attrezzi e materiali chiunque può trasformare una qualunque armatura in un\' \"armatura epica\", che manterrà tutte le proprietà dell\'armatura originale, ma inoltre fornirà al suo indossatore un\'abilità speciale a seconda della classe. Non sono richieste abilità in sartoria, conciatura o metallurgia.</string>
@@ -1525,7 +1525,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="BlankScroll_ReallyBlank">Questa pergamena è vuota</string>
   <string name="ScrollOfChallenge_Name">Pergamena della Sfida</string>
   <string name="ScrollOfChallenge_Info">Quando si legge ad alta voce, questa pergamena scatenerà un boato impegnativo che risveglierà tutti i mostri e li avvisa della posizione del lettore.</string>
-  <string name="ScrollOfChallenge_Info1">la pergamena emette un ruggito impegnativo, che riecheggia in tutto il Dungeon!</string>
+  <string name="ScrollOfChallenge_Info1">La pergamena emette un ruggito impegnativo, che riecheggia in tutto il Dungeon!</string>
   <string name="ScrollOfIdentify_Name">Pergamena dell\'identità</string>
   <string name="ScrollOfIdentify_Info">rivela definitivamente tutti i segreti di un singolo elemento.</string>
   <string name="ScrollOfIdentify_InvTitle">Seleziona un item da identificare</string>
@@ -1536,7 +1536,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="ScrollOfLullaby_Info2">la pergamena emette una melodia rilassante e %s si addormenta!</string>
   <string name="ScrollOfLullaby_Info3">la pergamena emette una melodia rilassante e i mostri si addormentano!</string>
   <string name="ScrollOfMagicMapping_Name">Pergamena della Magia Mappata</string>
-  <string name="ScrollOfMagicMapping_Info">Quando questa pergamena viene letta, l\'immagine di una chiarezza cristallina rimarrà impressa nella vostra memoria, per segnalare la disposizione precisa del livello e rivelando tutti i segreti nascosti. Le posizioni di oggetti e creature rimarranno sconosciute.</string>
+  <string name="ScrollOfMagicMapping_Info">Quando questa pergamena viene letta, un\'immagine di una chiarezza cristallina rimarrà impressa nella vostra memoria, per segnalare la disposizione precisa del livello e rivelando tutti i segreti nascosti. Le posizioni di oggetti e creature rimarranno sconosciute.</string>
   <string name="ScrollOfMagicMapping_Layout">Ora siete a conoscenza del layout del livello</string>
   <string name="ScrollOfMirrorImage_Name">Pergamena dell\'immagine riflessa</string>
   <string name="ScrollOfMirrorImage_Info">L\'incantesimo su questa pergamena creerà gemelli illusori, che inseguiranno i suoi nemici.</string>
@@ -2101,7 +2101,7 @@ Potrebbe bruciare?</string>
   <string name="Dungeon_Tips_10">Pixel-Mart. Spendi soldi, vivi più a lungo.</string>
   <string name="Dungeon_Tips_11">Quando sei sotto attacco da più mostri alla volta, prova a ritirarti dietro una porta.</string>
   <string name="Dungeon_Tips_12">Se bruci e lieviti allo stesso tempo non puoi estinguere le fiamme nell\'acqua</string>
-  <string name="Dungeon_Tips_13">Non ha senso avere più di un Ankh alla volta, siccome li perderesti a seguito della resurrezione.</string>
+  <string name="Dungeon_Tips_13">Non ha senso avere più di un Ankh alla volta, siccome li perderesti a seguito della risurrezione.</string>
   <string name="Dungeon_Tips_14">PERICOLO! I macchinari pesanti possono causare infortuni, perdita di arti o addirittura morte!</string>
   <string name="Dungeon_Tips_15">Pixel-Mart. Una vita più tranquilla nel dungeon.</string>
   <string name="Dungeon_Tips_16">Quando migliori un\'arma incantata c\'è la possibilità che l\'incantesimo venga spezzato.</string>

@@ -887,9 +887,16 @@ public class Dungeon {
 
     @LuaInterface
     public static boolean isCellVisible(int cell) {
+        if(level == null) {
+            return false;
+        }
+
+        if(!level.cellValid(cell)) {
+            EventCollector.logException(Utils.format("visibility check on %d", cell));
+            return false;
+        }
         return visible[cell];
     }
-
 
     public static void onHeroLeaveLevel() {
         if(level==null) {

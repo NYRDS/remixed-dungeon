@@ -310,7 +310,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 		
 		if (burnt || evaporated) {
 			
-			if (Dungeon.visible[pos]) {
+			if (Dungeon.isCellVisible(pos)) {
 				if (burnt) {
 					burnFX( pos );
 				} else {

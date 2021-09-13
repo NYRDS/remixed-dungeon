@@ -245,7 +245,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     }
 
     private void updateTargetingState() {
-        targeting = lastTarget.valid() && lastTarget.isAlive() && Dungeon.visible[lastTarget.getPos()];
+        targeting = lastTarget.valid() && lastTarget.isAlive() && Dungeon.isCellVisible(lastTarget.getPos());
     }
 
     private void refreshSelf() {

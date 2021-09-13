@@ -33,7 +33,7 @@ public class Door {
 
 		Dungeon.observe();
 		
-		if (Dungeon.visible[pos]) {
+		if (Dungeon.isCellVisible(pos)) {
 			Sample.INSTANCE.play( Assets.SND_OPEN );
 		}
 	}

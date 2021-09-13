@@ -10,6 +10,7 @@ import com.nyrds.platform.lua.PlatformLuajavaLib;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.apache.commons.io.input.BOMInputStream;
 import org.jetbrains.annotations.NotNull;
@@ -76,7 +77,7 @@ public class LuaEngine implements ResourceFinder {
 			LuaValue methodForData = globals.get(method);
 			return methodForData.call(CoerceJavaToLua.coerce(arg1));
 		} catch (LuaError err) {
-			throw new ModError( String.format("Error when calling %s", method), err);
+			throw new ModError( Utils.format("Error when calling %s", method), err);
 		}
 	}
 

@@ -63,7 +63,9 @@ public class NecroLevel extends RegularLevel {
 			while(Actor.findChar(pos) != null) {
 				pos = randomRespawnCell();
 			}
-			MobSpawner.spawnJarOfSouls(this, pos);
+			if(cellValid(pos)) {
+				MobSpawner.spawnJarOfSouls(this, pos);
+			}
 		super.createMobs();
 	}
 

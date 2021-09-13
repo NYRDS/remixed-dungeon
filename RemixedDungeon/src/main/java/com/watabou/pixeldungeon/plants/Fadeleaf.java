@@ -46,7 +46,7 @@ public class Fadeleaf extends Plant {
 			CharUtils.teleportRandom((Char) ch);
 		}
 
-		if (Dungeon.visible[pos]) {
+		if (Dungeon.isCellVisible(pos)) {
 			CellEmitter.get( pos ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 		}		
 	}

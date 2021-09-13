@@ -199,7 +199,15 @@ public class DungeonGenerator {
 					int exitIndex = currentLevel.getJSONArray(2).getInt(0);
 					next.cellId = -exitIndex;
 				} else { // new way
-					JSONArray nextLevelExits = mGraph.getJSONArray(next.levelId).getJSONArray(0);
+
+
+					JSONArray nextLevelExits = mGraph.optJSONArray(next.levelId).getJSONArray(0);
+
+					if(nextLevelExits == null) {
+						ModError.doReport("Dungeon.json", new Exception("There is no connectivity defined for "+ next.levelId ));
+						return current;
+					}
+
 					for (int i = 0;i<nextLevelExits.length();++i) {
 						if(nextLevelExits.getString(i).equals(current.levelId)) {
 							next.cellId = -(i+1);

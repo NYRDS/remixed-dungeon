@@ -619,7 +619,7 @@ public abstract class RegularLevel extends CustomLevel {
 			}
 
 			cell = room.random(this);
-			if (!Dungeon.visible[cell] && Actor.findChar(cell) == null && passable[cell]) {
+			if (!Dungeon.isCellVisible(cell) && Actor.findChar(cell) == null && passable[cell]) {
 				return cell;
 			}
 
