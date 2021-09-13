@@ -721,7 +721,7 @@ Görüşlerinizi önemsiyoruz!</string>
   <string name="PseudoRat_Gender">kadınsı</string>
   <string name="PseudoRat_Name_Objective">Sahte sıçan</string>
   <string name="PseudoRat_Desc">Korkuç bir yaratık , bir sıçan cesedi ile daha önce görmediğin bir kemirgenin birleşiminden oluşuyor.Vücudunun büyük bölümünü oluşturan muazzam ağzı keskin dişlerle dolu.</string>
-  <string name="ZombieGnoll_Info">Gnoll zombi diriliyor!</string>
+  <string name="ZombieGnoll_Info">Akpli dayı diriliyor!</string>
   <string name="HeartOfDarkness_Name">Karanlığın kalbi</string>
   <string name="HeartOfDarkness_Info">Hain ruhun hala atan siyah kalbi.</string>
   <string name="HeartOfDarkness_Gender">nötr</string>
@@ -1885,7 +1885,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Nightmare_Name_Objective">kabus</string>
   <string name="Nightmare_Desc">Titreşen dokunaçlardan yapılmış karabasanlar Eski Tanrının uğursuz düşüncelerinin göstergesi gibidir.</string>
   <string name="Tengu_Info3">Yakaladım, %s!</string>
-  <string name="ZombieGnoll_Name">gnoll-zombi</string>
+  <string name="ZombieGnoll_Name">Akpli Dayı</string>
   <string name="ZombieGnoll_Gender">erkeksi</string>
   <string name="ZombieGnoll_Name_Objective">gnoll-zombi</string>
   <string name="ZombieGnoll_Desc">Bükülmü ve kırılmış vücudu artık insansı veya sırtlansı görünümünden uzaktır.Zombi gnoll öldürme ve tüketme dürtüsü ile varolan bir kemik ve et yığını gibidir</string>
