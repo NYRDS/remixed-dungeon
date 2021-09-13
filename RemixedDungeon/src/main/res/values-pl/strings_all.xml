@@ -1381,7 +1381,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="SpiderNest_Desc">Ten kokon jest zrobiony z najcieńszego jedwabiu i okrywa coś żywego.</string>
   <string name="SpiderServant_Name">pajęczy żołnierz</string>
   <string name="SpiderServant_Gender">masculine</string>
-  <string name="SpiderServant_Name_Objective">Pajęczy żołnierz</string>
+  <string name="SpiderServant_Name_Objective">pajęczy żołnierz</string>
   <string name="SpiderServant_Desc">Żołnierze są najliczniejszą grupą w łożu pająków, zrodzeni by chronić ich terytorium. Szczękoczułki żołnierzy wykształciły trujące gruczoły by zatruwać ich przeciwników.</string>
   <string name="SpiderExploding_Name">Pająk robotnik</string>
   <string name="SpiderExploding_Gender">feminine</string>
