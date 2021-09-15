@@ -5,6 +5,7 @@ import androidx.annotation.Keep;
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModError;
@@ -202,5 +203,10 @@ public class CustomBuff extends Buff {
     @Override
     public CharSprite.State charSpriteStatus() {
         return CharSprite.State.valueOf(script.runOptional("charSpriteStatus",super.charSpriteStatus().name()));
+    }
+
+    @Override
+    public int damage(int damage, NamedEntityKind src) {
+        return  script.runOptional("damage",super.damage(damage, src), damage, src);
     }
 }

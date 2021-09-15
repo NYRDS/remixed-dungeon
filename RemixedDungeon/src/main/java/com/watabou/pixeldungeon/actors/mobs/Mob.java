@@ -41,6 +41,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
@@ -207,6 +208,10 @@ public abstract class Mob extends Char {
 
 	@Override
 	public boolean act() {
+
+    	if(Util.isDebug()) {
+    		assert (baseAttackSkill > 0 && baseDefenseSkill > 0);
+		}
 
 		super.act(); //Calculate FoV
 

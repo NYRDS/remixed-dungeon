@@ -59,6 +59,8 @@ public class Statue extends Mob {
 		hp(ht(15 + Dungeon.depth * 5));
 		baseDefenseSkill = 4 + Dungeon.depth;
 
+		baseStr = 18;
+
 		addImmunity( ToxicGas.class );
 		addImmunity( Poison.class );
 		addResistance( Death.class );

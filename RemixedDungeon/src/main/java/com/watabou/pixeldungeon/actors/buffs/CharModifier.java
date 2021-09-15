@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -12,6 +13,8 @@ public interface CharModifier {
     float speedMultiplier();
     int defenceProc(Char defender, Char enemy, int damage);
     int attackProc(Char attacker, Char defender, int damage );
+
+    int damage(int damage, NamedEntityKind src);
 
     int regenerationBonus();
     void charAct();

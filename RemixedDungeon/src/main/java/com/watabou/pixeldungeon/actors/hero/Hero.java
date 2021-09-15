@@ -134,8 +134,6 @@ public class Hero extends Char {
 
 	public boolean restoreHealth = false;
 
-	private int STR;
-
 	private float awareness;
 
 	private int magicLvl = Scrambler.scramble(1);
@@ -185,11 +183,11 @@ public class Hero extends Char {
 	}
 
 	public void STR(int sTR) {
-		STR = Scrambler.scramble(sTR);
+		baseStr = Scrambler.scramble(sTR);
 	}
 
 	public int STR() {
-		return Scrambler.descramble(STR);
+		return Scrambler.descramble(baseStr);
 	}
 
 	private static final String STRENGTH = "STR";
@@ -415,8 +413,6 @@ public class Hero extends Char {
 		super.damage(dmg, src);
 
 		setControlTarget(this);
-
-		checkIfFurious();
 
 		if(!myMove()) {
 			interrupt();

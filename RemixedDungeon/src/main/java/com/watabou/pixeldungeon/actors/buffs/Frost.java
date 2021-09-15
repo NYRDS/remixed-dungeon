@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
@@ -67,7 +68,13 @@ public class Frost extends FlavourBuff {
 		target.paralyse(false);
 		super.detach();
 	}
-	
+
+	@Override
+	public int damage(int damage, NamedEntityKind src) {
+		detach();
+		return super.damage(damage, src);
+	}
+
 	@Override
 	public int icon() {
 		return BuffIndicator.FROST;

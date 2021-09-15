@@ -34,7 +34,6 @@ import com.nyrds.pixeldungeon.mechanics.LevelHelpers;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
-import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
@@ -57,13 +56,11 @@ import com.watabou.pixeldungeon.actors.buffs.Blessed;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
-import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Light;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Speed;
@@ -139,6 +136,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@Getter
 	@NotNull
 	protected LuaScript script = new LuaScript(DEFAULT_MOB_SCRIPT, this);
+	protected int baseStr;
 
 
 	@Packable(defaultValue = "-1")//Level.INVALID_CELL
@@ -399,10 +397,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 			int dmg = damageRoll();
 
-			if (inFury()) {
-				dmg *= 1.5f;
-			}
-
 			int effectiveDamage = Math.max(dmg, 0);
 
 			effectiveDamage = attackProc(enemy, effectiveDamage);
@@ -551,12 +545,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr();
 	}
 
-	protected boolean inFury() {
-		return (hasBuff(Fury.class) || hasBuff(RageBuff.class));
-	}
 
 	public boolean actMeleeAttack(Char enemy) {
-
 		if (canAttack(enemy)) {
 			spend(attackDelay());
 			getSprite().attack(enemy.getPos());
@@ -602,7 +592,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		if (!(enemy instanceof NPC)) {
 			for (Item item : getBelongings()) {
 				if (item.isEquipped(this)) {
-					item.ownerDoesDamage(damage);
+					item.ownerDoesDamage(dmg[0]);
 				}
 			}
 		}
@@ -610,11 +600,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		int d = level().distance(getPos(), enemy.getPos());
 
 		if (d <= getActiveWeapon().range() || rangedWeapon.valid()) {
-			getActiveWeapon().attackProc(this, enemy, damage);
+			getActiveWeapon().attackProc(this, enemy, dmg[0]);
 		}
 
 		if (d <= getSecondaryWeapon().range()) {
-			getSecondaryWeapon().attackProc(this, enemy, damage);
+			getSecondaryWeapon().attackProc(this, enemy, dmg[0]);
 		}
 
 		return dmg[0];
@@ -710,18 +700,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return;
 		}
 
-		Buff.detach(this, Frost.class);
-
-		dmg = resist(dmg, src);
-
-		if (hasBuff(Paralysis.class)) {
-			if (Random.Int(dmg) >= Random.Int(hp())) {
-				Buff.detach(this, Paralysis.class);
-				if (CharUtils.isVisible(this)) {
-					GLog.i(StringsManager.getVar(R.string.Char_OutParalysis), getName_objective());
-				}
+		if (getSubClass() == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
+			if (!hasBuff(Fury.class)) {
+				Buff.affect(this, Fury.class);
 			}
 		}
+
+		final int[] dmg_ = {dmg};
+		forEachBuff(b -> dmg_[0] = b.damage( dmg_[0], src));
+		dmg = dmg_[0];
+
+		dmg = resist(dmg, src);
 
 		if (dmg <= 0) {
 			return;
@@ -1365,14 +1354,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return Random.element(visibleEnemies);
 	}
 
-	public void checkIfFurious() {
-		if (getSubClass() == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
-			if (!hasBuff(Fury.class)) {
-				Buff.affect(this, Fury.class);
-			}
-		}
-	}
-
 	@LuaInterface
 	@NotNull
 	public Char getNearestEnemy() {
@@ -1617,7 +1598,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public int effectiveSTR() {
-		return 10;
+		return baseStr + lvl() / 5;
 	}
 
 	public void busy(){}

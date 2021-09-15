@@ -32,6 +32,11 @@ public class RageBuff extends ArtifactBuff {
     }
 
     @Override
+    public int attackProc(Char attacker, Char defender, int damage) {
+        return damage * 2;
+    }
+
+    @Override
     public int icon() {
         return BuffIndicator.BLOODLUST;
     }

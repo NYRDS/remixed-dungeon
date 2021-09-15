@@ -61,7 +61,6 @@ public class MasteryItem extends Item {
 
         GLog.w(StringsManager.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
 
-		hero.checkIfFurious();
 		hero.updateSprite();
 	}
 }

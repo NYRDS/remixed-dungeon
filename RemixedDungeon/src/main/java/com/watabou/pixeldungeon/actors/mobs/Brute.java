@@ -17,26 +17,19 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
-import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
+import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.Gold;
-import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
-
-import org.jetbrains.annotations.NotNull;
 
 public class Brute extends Mob {
 
 	public Brute() {
 
 		hp(ht(40));
-		baseDefenseSkill = 15;
+		baseAttackSkill = 15;
 		baseDefenseSkill = 20;
+		dmgMin = 8;
+		dmgMax = 18;
 
 		exp = 8;
 		maxLvl = 15;
@@ -47,33 +40,9 @@ public class Brute extends Mob {
 		
 		addImmunity( Terror.class );
 	}
-	
-	private boolean enraged = false;
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		enraged = hp() < ht() / 4;
-	}
-	
-	@Override
-	public int damageRoll() {
-		return enraged ?
-			Random.NormalIntRange( 10, 40 ) :	
-			Random.NormalIntRange( 8, 18 );
-	}
 
 	@Override
-	public void damage(int dmg, @NotNull NamedEntityKind src ) {
-		super.damage( dmg, src );
-		
-		if (isAlive() && !enraged && hp() < ht() / 4) {
-			enraged = true;
-			spend( TICK );
-			if (CharUtils.isVisible(this)) {
-                GLog.w(StringsManager.getVar(R.string.Brute_Enraged), getName() );
-                getSprite().showStatus( CharSprite.NEGATIVE, StringsManager.getVar(R.string.Brute_StaEnraged));
-			}
-		}
+	public HeroSubClass getSubClass() {
+		return HeroSubClass.BERSERKER;
 	}
 }

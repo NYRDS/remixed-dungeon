@@ -21,6 +21,7 @@ package com.watabou.pixeldungeon.actors.hero;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -309,6 +310,11 @@ public enum HeroClass implements CharModifier {
 
     @Override
     public int attackProc(Char attacker, Char defender, int damage) {
+        return damage;
+    }
+
+    @Override
+    public int damage(int damage, NamedEntityKind src) {
         return damage;
     }
 
