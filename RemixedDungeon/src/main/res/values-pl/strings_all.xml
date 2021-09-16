@@ -1730,7 +1730,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="BlankScroll_Info">To po prostu pusty zwój. Może można na nim coś napisać?</string>
   <string name="BlankScroll_ReallyBlank">Ten zwój jest pusty</string>
   <string name="ScrollOfChallenge_Name">Zwój Wyzwania</string>
-  <string name="ScrollOfChallenge_Info">Kiedy zostanie przeczytany na głos, ten zwój wyzwoli wyzywający ryk, który obudzi wszystkie potwory i przywoła je do miejsca, gdzie został aktywowany. Ten zwój zmusi również pobliskich handlarzy do natychmiastowego zamknięcia sklepu i teleportacji z powrotem do Miasta w celu uratowania swoich czterech liter.</string>
+  <string name="ScrollOfChallenge_Info">Kiedy zostanie przeczytany na głos, ten zwój wyzwoli wyzywający ryk, który obudzi wszystkie potwory i przywoła je do miejsca, gdzie został aktywowany.</string>
   <string name="ScrollOfChallenge_Info1">Zwój wyzwala wyzywający ryk, który rozchodzi się echem po lochu!</string>
   <string name="ScrollOfIdentify_Name">Zwój Identyfikacji</string>
   <string name="ScrollOfIdentify_Info">Permanentnie ujawnia sekrety jednego z przedmiotów.</string>
