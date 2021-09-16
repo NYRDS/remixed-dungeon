@@ -1730,7 +1730,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="BlankScroll_Info">To po prostu pusty zwój. Może można na nim coś napisać?</string>
   <string name="BlankScroll_ReallyBlank">Ten zwój jest pusty</string>
   <string name="ScrollOfChallenge_Name">Zwój Wyzwania</string>
-  <string name="ScrollOfChallenge_Info">Kiedy zostanie przeczytany na głos, ten zwój wyzwoli wyzywający ryk, który obudzi wszystkie potwory i przywoła je do miejsca, gdzie został aktywowany. Ten zwój zmusi również pobliskich handlarzy do natychmiastowego zamknięcia sklepu i teleportacji z powrotem do Miasta w celu uratowania swoich czterech liter.</string>
+  <string name="ScrollOfChallenge_Info">Kiedy zostanie przeczytany na głos, ten zwój wyzwoli wyzywający ryk, który obudzi wszystkie potwory i przywoła je do miejsca, gdzie został aktywowany.</string>
   <string name="ScrollOfChallenge_Info1">Zwój wyzwala wyzywający ryk, który rozchodzi się echem po lochu!</string>
   <string name="ScrollOfIdentify_Name">Zwój Identyfikacji</string>
   <string name="ScrollOfIdentify_Info">Permanentnie ujawnia sekrety jednego z przedmiotów.</string>
@@ -1831,7 +1831,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Hedgehog_Info2">Jak tam się miewa Koń we mgle?</string>
   <string name="Hedgehog_Info3">Lubisz herbatkę z dżemem malinowym?</string>
   <string name="Hedgehog_Info4">Weź to ciastko.</string>
-  <string name="Hedgehog_ImLate">Jestem spóźniony! Okropnie spóźniony...</string>
+  <string name="Hedgehog_ImLate">Jestem spóźniony, okropnie spóźniony...</string>
   <string name="Imp_Name">ambitny imp</string>
   <string name="Imp_Desc">Impy to pomniejsze demony. Nie są podziwiane ze względu na ich siłę czy talent magiczny, lecz ich inteligencję i zdolności retoryczne. Wiele impów woli żyć pośród nie-demonów.</string>
   <string name="Imp_Defense">unik</string>
@@ -1857,7 +1857,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Shopkeeper_Name">handlarz</string>
   <string name="Shopkeeper_Desc">Ten starszy jegomość wygląda na kogoś, kto pasowałby bardziej do dystryktu handlowego w dużym mieście niż tej klitki w lochu. Jego ceny wyjaśniają czemu woli prowadzić swój interes w takim miejscu.</string>
   <string name="Shopkeeper_Sell">Wybierz przedmiot do sprzedaży</string>
-  <string name="WandMaker_Name">Stary kosturnik</string>
+  <string name="WandMaker_Name">stary kosturnik</string>
   <string name="WandMaker_Desc">Ten stary, ale żwawy pan jest nieco zdezorientowany. Jest chroniony przez magiczną tarczę.</string>
   <string name="WandMaker_Defense">wchłonięto</string>
   <string name="WandMaker_Berry1">Och, cóż za miła niespodzianka, spotkać prawdziwego człowieka w takim miejscu! Przybyłem tutaj po rzadki składnik - _nasiono Pętjagody_. Ponieważ potrafię używać magii, mogę chronić się przed lokalnymi potworami, ale gubię się w braku czasu, co jest bardzo irytujące. Może mógłbyś mi pomóc? Będę zadowolony mogąc zaoferować ci jeden z mych najlepszych kosturów.</string>
@@ -2824,7 +2824,7 @@ remix.29.6\n
   <string name="Bee_Gender">feminine</string>
   <string name="Bee_Name_Objective">pszczoła</string>
   <string name="Bee_Desc">Pomimo ich małego rozmiaru, pszczoły przejawiają tendencję do zaciekłej ochrony swojego ula. Niestety nie są obdarzone zbytnio długim życiem.</string>
-  <string name="Moongrace_Name">Poświaty Księżycowej</string>
+  <string name="Moongrace_Name">Księżycowy Wdzięk</string>
   <string name="Moongrace_Desc">Te nadzwyczaj rzadkie rośliny są wykorzystywane jako źródło naturalnej magii.</string>
   <string name="MoongraceBuff_Name">manna z Niebios</string>
   <string name="MoongraceBuff_Info">Powietrze wokół gęstnieje od unoszącej się w nim magii, co ułatwia łatwiejszą koncetrację i odnowę zasobów magicznych. </string>
