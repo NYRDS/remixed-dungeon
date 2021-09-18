@@ -2007,7 +2007,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="ScaleArmor_Desc">Przyszyte do skórzanej zbroi łuski tworzą elastyczny, acz dobrze chroniący pancerz.</string>
   <string name="WarriorArmor_Name">zbroja wojownika</string>
   <string name="WarriorArmor_Desc">Mimo iż ta zbroja wygląda na ciężką, pozwala wojownikowi przygotować heroiczny sus polegający na tąpnięciu ogłuszającym wszystkich wrogów wokół.</string>
-  <string name="WarriorArmor_ACSpecial">HEROICZNY SKOK</string>
+  <string name="WarriorArmor_ACSpecial">HEROICZNY SUS</string>
   <string name="WarriorArmor_NotWarrior">Tylko Wojownicy mogą użyć tej zbroi!</string>
   <string name="WarriorArmor_Prompt">Wybierz kierunek skoku</string>
   <string name="Affection_Txt">%s uroku</string>
