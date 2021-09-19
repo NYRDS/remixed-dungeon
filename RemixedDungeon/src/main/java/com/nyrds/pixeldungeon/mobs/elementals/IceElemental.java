@@ -30,21 +30,15 @@ public class IceElemental extends Mob implements IDepthAdjustable {
 		exp = depth + 1;
 		maxLvl = depth + 2;
 		dr = exp;
-		
+		baseAttackSkill = baseDefenseSkill / 3;
+		dmgMin = hp()/6;
+		dmgMax = hp()/6;
+
+
 		addImmunity(Roots.class);
 		addImmunity(Paralysis.class);
 		addImmunity(Stun.class);
 		addImmunity(ToxicGas.class);
-	}
-
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange(hp() / 6, ht() / 6);
-	}
-
-	@Override
-	public int attackSkill(Char target) {
-		return baseDefenseSkill / 3;
 	}
 
 	@Override

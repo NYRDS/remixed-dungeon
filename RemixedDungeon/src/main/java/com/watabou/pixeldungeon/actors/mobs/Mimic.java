@@ -51,16 +51,6 @@ public class Mimic extends Mob implements IDepthAdjustable {
 	}
 
 	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange(ht() / 10, ht() / 4);
-	}
-
-	@Override
-	public int attackSkill(Char target) {
-		return 9 + level;
-	}
-
-	@Override
 	public int attackProc(@NotNull Char enemy, int damage) {
 		if (enemy == Dungeon.hero && Random.Int(3) == 0) {
 			int gp = Random.Int(1, hp());
@@ -77,6 +67,9 @@ public class Mimic extends Mob implements IDepthAdjustable {
 		hp(ht((3 + level) * 4));
 		exp = 2 + 2 * (level - 1) / 5;
 		baseDefenseSkill = attackSkill(null) / 2;
+		baseAttackSkill = 9 + level;
+		dmgMin = ht()/10;
+		dmgMax = ht()/4;
 
 		enemySeen = true;
 	}

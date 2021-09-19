@@ -358,6 +358,11 @@ public class CustomItem extends EquipableItem {
         return super.doPickUp(hero);
     }
 
+    @Override
+    public float time2equipBase() {
+        return script.runOptional("time2equip",super.time2equipBase());
+    }
+
     private class CustomItemCellListener implements CellSelector.Listener {
 
         private final String action;

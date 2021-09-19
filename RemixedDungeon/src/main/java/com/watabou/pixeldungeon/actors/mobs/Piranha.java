@@ -22,14 +22,12 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.sprites.PiranhaSprite;
-import com.watabou.utils.Random;
 
 public class Piranha extends Mob {
 	
@@ -40,6 +38,12 @@ public class Piranha extends Mob {
 
 		hp(ht(10 + Dungeon.depth * 5));
 		baseDefenseSkill = 10 + Dungeon.depth * 2;
+		baseAttackSkill = 20 + Dungeon.depth * 2;
+
+		dr = Dungeon.depth;
+
+		dmgMin = Dungeon.depth;
+		dmgMax = 4 + Dungeon.depth * 2;
 
 		baseSpeed = 2f;
 		
@@ -56,29 +60,14 @@ public class Piranha extends Mob {
 	
 	@Override
     public boolean act() {
-		if (!Dungeon.level.water[getPos()]) {
+		if (!level().water[getPos()]) {
 			die( null );
 			return true;
 		} else {
 			return super.act();
 		}
 	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( Dungeon.depth, 4 + Dungeon.depth * 2 );
-	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 20 + Dungeon.depth * 2;
-	}
-	
-	@Override
-	public int dr() {
-		return Dungeon.depth;
-	}
-	
+
 	@Override
 	public void die(NamedEntityKind cause) {
 		super.die( cause );

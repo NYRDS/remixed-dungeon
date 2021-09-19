@@ -59,6 +59,7 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
+import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
@@ -70,6 +71,7 @@ import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -209,8 +211,10 @@ public abstract class Mob extends Char {
 	@Override
 	public boolean act() {
 
-    	if(Util.isDebug()) {
-    		assert (baseAttackSkill > 0 && baseDefenseSkill > 0);
+    	if(Util.isDebug() && !(this instanceof NPC)) {
+    		if(!(baseAttackSkill > 0 && baseDefenseSkill > 0)) {
+    			throw new RuntimeException(Utils.format("bad params for %s", getEntityKind()));
+			}
 		}
 
 		super.act(); //Calculate FoV

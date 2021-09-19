@@ -43,8 +43,6 @@ public class Wraith extends Mob implements IDepthAdjustable {
 		flying = true;
 
 		level = Dungeon.depth;
-		dmgMin = 1;
-		dmgMax = 3 + level;
 
 		addImmunity( Death.class );
 		addImmunity( Terror.class );
@@ -58,6 +56,11 @@ public class Wraith extends Mob implements IDepthAdjustable {
 	
 	public void adjustStats( int level ) {
 		this.level = level;
+
+		dmgMin = 1;
+		dmgMax = 3 + level;
+
+		baseAttackSkill = 10 + level;
 		baseDefenseSkill = attackSkill( null ) * 5;
 		enemySeen = true;
 	}

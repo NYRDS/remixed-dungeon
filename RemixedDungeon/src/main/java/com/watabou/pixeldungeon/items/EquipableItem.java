@@ -73,7 +73,12 @@ public abstract class EquipableItem extends Item {
 	}
 
 	public float time2equip(@NotNull Char hero ) {
-		return 1f/(hero.speed()+0.01f);
+		return time2equipBase()/(hero.speed()+0.01f);
+	}
+
+
+	public float time2equipBase() {
+		return 1;
 	}
 
 	@Override

@@ -68,11 +68,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 	@Override
-	public int attackSkill(Char target) {
-		return attackSkill;
-	}
-
-	@Override
 	public int dr() {
 		return dr;
 	}
@@ -156,7 +151,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		JSONObject classDesc = getClassDef();
 
 		baseDefenseSkill = classDesc.optInt("defenseSkill", baseDefenseSkill);
-		attackSkill = classDesc.optInt("attackSkill", attackSkill);
+		baseAttackSkill = classDesc.optInt("attackSkill", attackSkill);
 
 		exp = classDesc.optInt("exp", exp);
 		maxLvl = classDesc.optInt("maxLvl", maxLvl);
