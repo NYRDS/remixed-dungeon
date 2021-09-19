@@ -224,8 +224,8 @@ public class Hero extends Char {
 			controlTargetId = getId();
 		}
 
-		heroClass = HeroClass.restoreFromBundle(bundle);
-		subClass = HeroSubClass.restoreFromBundle(bundle);
+		setHeroClass(HeroClass.restoreFromBundle(bundle));
+		setSubClass(HeroSubClass.restoreFromBundle(bundle));
 
 		STR(bundle.getInt(STRENGTH));
 		updateAwareness();
@@ -1004,6 +1004,7 @@ public class Hero extends Char {
     }
 
     public void setHeroClass(HeroClass heroClass) {
+		EventCollector.setSessionData("class", heroClass.name());
         this.heroClass = heroClass;
     }
 
@@ -1013,6 +1014,7 @@ public class Hero extends Char {
     }
 
     public void setSubClass(HeroSubClass subClass) {
+		EventCollector.setSessionData("subClass", heroClass.name());
         this.subClass = subClass;
     }
 
