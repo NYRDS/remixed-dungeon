@@ -2060,7 +2060,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Level_TileWall">Ściana</string>
   <string name="Level_TileClosedDoor">Zamknięte drzwi</string>
   <string name="Level_TileOpenDoor">Otwarte drzwi</string>
-  <string name="Level_TileEntrance">Przejście w górę</string>
+  <string name="Level_TileEntrance">Wejście w górę</string>
   <string name="Level_TileExit">Zejście do podziemi</string>
   <string name="Level_TileEmbers">Rozżarzone węgielki</string>
   <string name="Level_TileLockedDoor">Zablokowane drzwi</string>
