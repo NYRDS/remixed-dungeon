@@ -9,6 +9,9 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 /**
  * Created by mike on 15.02.2018.
  * This file is part of Remixed Pixel Dungeon.
@@ -29,6 +32,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     private final int[] mRoofMap;
     private final int[] mCornersMap;
     private final int[] mDoorsMap;
+
+    private DungeonTilemap roofTilemap;
 
     public XyzDungeonTilemap(Level level, String tiles) {
         super(level, tiles);
@@ -58,6 +63,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         mRoofLayer.map(buildRoofMap(), width);
         mCornersLayer.map(buildCornersMap(), width);
         mDoorsLayer.map(buildDoordMap(), width);
+
+        roofTilemap = new XyzRoofTileMap(level, tiles);
     }
 
     private int[] buildDecoMap() {
@@ -492,8 +499,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
 
-
-
     @Override
     public void draw() {
         super.draw();
@@ -550,5 +555,34 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         mRoofLayer.brightness(value);
         mCornersLayer.brightness(value);
         mDoorsLayer.brightness(value);
+    }
+
+    public DungeonTilemap roofTilemap() {
+        return roofTilemap;
+    }
+
+    class XyzRoofTileMap extends DungeonTilemap {
+
+        public XyzRoofTileMap(@NotNull Level level, String tiles) {
+            super(level, tiles);
+        }
+
+        @Override
+        public @Nullable Image tile(int pos) {
+            return null;
+        }
+
+        @Override
+        public void updateCell(int cell, Level level) { }
+
+        @Override
+        public void updateAll() { }
+
+        @Override
+        public void draw() {
+            mRoofLayer.draw();
+            mCornersLayer.draw();
+            mDoorsLayer.draw();
+        }
     }
 }

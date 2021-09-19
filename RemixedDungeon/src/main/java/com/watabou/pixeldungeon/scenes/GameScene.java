@@ -55,6 +55,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.FogOfWar;
 import com.watabou.pixeldungeon.Statistics;
+import com.watabou.pixeldungeon.XyzDungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -221,6 +222,11 @@ public class GameScene extends PixelScene {
 
         if (!level.customTiles()) {
             baseTiles = DungeonTilemap.factory(level, level.getTilesetForLayer(Level.LayerId.Base));
+
+            if(baseTiles instanceof XyzDungeonTilemap) {
+                roofTiles = ((XyzDungeonTilemap)baseTiles).roofTilemap();
+            }
+
         } else {
             CustomLayerTilemap tiles = new CustomLayerTilemap(level, Level.LayerId.Base);
             tiles.addLayer(Level.LayerId.Deco);
