@@ -515,7 +515,7 @@ public abstract class RegularLevel extends CustomLevel {
 					map[door] = Terrain.SECRET_DOOR;
 					break;
 				case BARRICADE:
-					putLevelObject(LevelObjectsFactory.createObject(this, "barricade", door));
+					putLevelObject(LevelObjectsFactory.createCustomObject(this,"barricade", door));
 					break;
 				case LOCKED:
 					map[door] = Terrain.LOCKED_DOOR;

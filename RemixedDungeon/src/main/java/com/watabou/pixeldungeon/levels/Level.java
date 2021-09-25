@@ -678,7 +678,7 @@ public abstract class Level implements Bundlable {
 			switch (map[i]) { // old saves compatibility
 				case Terrain.BARRICADE:
 					map[i] = Terrain.EMPTY;
-					putLevelObject(LevelObjectsFactory.createObject(this,"barricade", i));
+					putLevelObject(LevelObjectsFactory.createCustomObject(this,"barricade", i));
 				break;
 			}
 		}

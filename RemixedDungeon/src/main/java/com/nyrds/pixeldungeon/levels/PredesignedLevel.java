@@ -96,7 +96,7 @@ public class PredesignedLevel extends CustomLevel {
 
 			for (int i = 0; i < objects.length(); i++) {
 				JSONObject object = objects.getJSONObject(i);
-				addLevelObject(LevelObjectsFactory.createObject(this, object));
+				addLevelObject(LevelObjectsFactory.createLevelObject(this, object));
 			}
 		}
 	}

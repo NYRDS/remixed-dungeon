@@ -21,6 +21,8 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
+import lombok.SneakyThrows;
+
 /**
  * Created by mike on 05.07.2016.
  */
@@ -62,19 +64,27 @@ public class LevelObjectsFactory {
 		return mObjectsList.containsKey(objectClass);
 	}
 
+	@SneakyThrows
 	@LuaInterface
-	public static LevelObject createObject(Level level, String jsonDesc) throws JSONException {
-		return createObject(level, JsonHelper.readJsonFromString(jsonDesc));
+	public static LevelObject createObject(Level level, String jsonDesc) {
+		return createLevelObject(level, JsonHelper.readJsonFromString(jsonDesc));
 	}
 
 
-	public static LevelObject createObject(Level level, String kind, int cell) {
-		LevelObject obj = objectByName(kind);
+	@SneakyThrows
+	@LuaInterface
+	public static LevelObject createCustomObject(Level level, String kind, int cell) {
+		LevelObject obj = objectByName("CustomObject");
+		JSONObject desc = new JSONObject();
+
+		desc.put("object_kind", kind);
+		obj.setupFromJson(level, desc);
 		obj.setPos(cell);
+
 		return obj;
 	}
 
-	public static LevelObject createObject(Level level, JSONObject desc) throws JSONException {
+	public static LevelObject createLevelObject(Level level, JSONObject desc) throws JSONException {
 
 		String objectKind = desc.getString("kind");
 
