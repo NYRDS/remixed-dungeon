@@ -477,7 +477,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             case Terrain.CHASM_WATER:
                 return 132;
             case Terrain.EMBERS:
-                return Random.oneOf(192, 193,194);
+                return Random.oneOf(16*12, 16*12 + 1,16*12 +2);
             case Terrain.GRASS:
                 return Random.oneOf(195, 196, 197);
             case Terrain.HIGH_GRASS:
@@ -504,9 +504,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         super.draw();
         mWallsLayer.draw();
         mDecoLayer.draw();
-        mRoofLayer.draw();
-        mCornersLayer.draw();
-        mDoorsLayer.draw();
     }
 
     public void updateAll() {

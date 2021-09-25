@@ -27,7 +27,12 @@ return object.init{
         object:remove()
 
         RPD.Effects:burnFX(pos)
+        RPD.GameScene:updateMap(pos)
         RPD.Dungeon:observe()
+    end,
+
+    losBlocker = function(self, object)
+        return true
     end,
 
     image = function(self, object)

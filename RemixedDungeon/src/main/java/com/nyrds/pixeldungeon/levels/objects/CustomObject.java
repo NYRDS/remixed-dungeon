@@ -88,4 +88,9 @@ public class CustomObject extends Deco {
     public void burn() {
         script.runOptional("burn");
     }
+
+    @Override
+    public boolean losBlocker() {
+        return script.runOptional("losBlocker", super.losBlocker());
+    }
 }

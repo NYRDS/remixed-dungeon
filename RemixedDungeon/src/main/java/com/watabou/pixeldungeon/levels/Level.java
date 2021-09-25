@@ -240,6 +240,10 @@ public abstract class Level implements Bundlable {
 		}
 
 		objectsLayer.put(levelObject.getPos(), levelObject);
+
+		if(levelObject.losBlocker()) {
+			losBlocking[levelObject.getPos()] = true;
+		}
 	}
 
 	public void onHeroLeavesLevel() {
@@ -1243,6 +1247,9 @@ public abstract class Level implements Bundlable {
 
 		if (index >= 0) {
 			objectsLayer.remove(objectsLayer.keyAt(index));
+			if(levelObject.losBlocker()) {
+				losBlocking[levelObject.getPos()] = false;
+			}
 			return true;
 		}
 		return false;
