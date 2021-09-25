@@ -51,6 +51,7 @@ import com.watabou.pixeldungeon.items.wands.WandOfPoison;
 import com.watabou.pixeldungeon.items.wands.WandOfRegrowth;
 import com.watabou.pixeldungeon.items.wands.WandOfSlowness;
 import com.watabou.pixeldungeon.items.wands.WandOfTelekinesis;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.PrisonLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -207,7 +208,6 @@ public class WandMaker extends NPC {
 			if (spawned) {
 				
 				node.put( ALTERNATIVE, alternative );
-				
 				node.put(GIVEN, given );
 				
 			}
@@ -252,10 +252,12 @@ public class WandMaker extends NPC {
 		}
 		
 		public static void placeItem() {
+			final Level level = Dungeon.level;
+
 			if (alternative) {
 				
 				ArrayList<Heap> candidates = new ArrayList<>();
-				for (Heap heap : Dungeon.level.allHeaps()) {
+				for (Heap heap : level.allHeaps()) {
 					if (heap.type == Heap.Type.SKELETON && !Dungeon.isCellVisible(heap.pos)) {
 						candidates.add( heap );
 					}
@@ -264,21 +266,21 @@ public class WandMaker extends NPC {
 				if (candidates.size() > 0) {
 					Random.element( candidates ).drop( new CorpseDust() );
 				} else {
-					int pos = Dungeon.level.randomRespawnCell();
-					while (Dungeon.level.getHeap( pos ) != null) {
-						pos = Dungeon.level.randomRespawnCell();
+					int pos = level.randomRespawnCell();
+					while (level.getHeap( pos ) != null) {
+						pos = level.randomRespawnCell();
 					}
 					
-					Dungeon.level.drop( new CorpseDust(), pos, Heap.Type.SKELETON );
+					level.drop( new CorpseDust(), pos, Heap.Type.SKELETON );
 				}
 				
 			} else {
 				
-				int shrubPos = Dungeon.level.randomRespawnCell();
-				while (Dungeon.level.getHeap( shrubPos ) != null) {
-					shrubPos = Dungeon.level.randomRespawnCell();
+				int shrubPos = level.randomRespawnCell();
+				while (level.getHeap( shrubPos ) != null) {
+					shrubPos = level.randomRespawnCell();
 				}
-				Dungeon.level.plant( new Rotberry.Seed(), shrubPos );
+				level.plant( new Rotberry.Seed(), shrubPos );
 				
 			}
 		}
