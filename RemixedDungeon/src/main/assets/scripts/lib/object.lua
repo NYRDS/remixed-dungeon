@@ -25,6 +25,9 @@ function object.freeze(self, object, cell)
     return object
 end
 
+function object.interact(self, object, char)
+    return object
+end
 
 function object.saveData(self)
     return serpent.dump(self.data or {})
@@ -77,3 +80,5 @@ object.init = function(desc)
     setmetatable(desc, object)
     return desc
 end
+
+return object

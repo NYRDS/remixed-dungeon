@@ -4,7 +4,7 @@
  "maxBrightness":1.05,
  "mobs":[
         {
-         "kind":"InnkeeperNPC",
+         "kind":"InnKeeperNPC",
          "x":5,
          "y":8
         }, 

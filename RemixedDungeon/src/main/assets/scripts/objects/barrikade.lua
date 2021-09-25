@@ -6,19 +6,13 @@
 
 local RPD = require "scripts/lib/commonClasses"
 
-local item = require "scripts.lib.object"
+local object = require "scripts.lib.object"
 
 
-return item.init{
+return object.init{
     desc  = function ()
         return {
-            image         = 13,
-            imageFile     = "items/food.png",
-            name          = "FriedFish_Name",
-            info          = "FriedFish_Info",
-            stackable     = true,
-            defaultAction = "Food_ACEat",
-            price         = 30
+
         }
     end,
 
