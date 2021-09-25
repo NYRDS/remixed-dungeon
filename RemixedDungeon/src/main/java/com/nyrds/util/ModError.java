@@ -35,7 +35,7 @@ public class ModError extends RuntimeException {
                 fields = elements[i].split("function");
                 String method = "unknown";
 
-                if(fields[1] != null) {
+                if(fields.length > 1 && fields[1] != null) {
                     method = fields[1].replace('\'',' ').trim();
                 }
 
