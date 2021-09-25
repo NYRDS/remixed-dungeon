@@ -1969,4 +1969,9 @@ public abstract class Level implements Bundlable {
 	public boolean isPassable(int cell) {
 		return passable[cell];
 	}
+
+	@LuaInterface
+	public int objectsKind() {
+		return 0;
+	}
 }

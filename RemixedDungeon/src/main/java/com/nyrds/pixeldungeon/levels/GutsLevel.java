@@ -135,4 +135,8 @@ public class GutsLevel extends RegularLevel {
 		}
 	}
 
+	@Override
+	public int objectsKind() {
+		return 5;
+	}
 }

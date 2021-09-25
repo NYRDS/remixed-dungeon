@@ -78,4 +78,14 @@ public class CustomObject extends Deco {
     public boolean interact(Char hero) {
         return script.runOptional("interact", false, hero);
     }
+
+    @Override
+    public int image() {
+        return script.runOptional("image", super.image());
+    }
+
+    @Override
+    public void burn() {
+        script.runOptional("burn");
+    }
 }

@@ -137,4 +137,8 @@ public class CityLevel extends RegularLevel {
 		}
 	}
 
+	@Override
+	public int objectsKind() {
+		return 3;
+	}
 }

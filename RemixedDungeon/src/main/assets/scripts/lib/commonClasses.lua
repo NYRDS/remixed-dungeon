@@ -131,6 +131,7 @@ local EffectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.effects.Effect
 local LevelObjectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory")
 local SpellFactory = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.spells.SpellFactory")
 
+local Effects = luajava.bindClass("com.watabou.pixeldungeon.effects.Effects")
 
 local Tweeners = {
     PosTweener  = luajava.bindClass("com.watabou.noosa.tweeners.PosTweener"),
@@ -176,7 +177,7 @@ local RPD = {
     DungeonGenerator = DungeonGenerator,
     PathFinder = PathFinder,
     Badges = Badges,
-
+    Effects = Effects,
 
     CharsList = CharsList,
     CharUtils = CharUtils,

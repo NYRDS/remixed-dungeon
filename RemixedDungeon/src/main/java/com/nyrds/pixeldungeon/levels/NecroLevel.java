@@ -151,4 +151,8 @@ public class NecroLevel extends RegularLevel {
 		}
 	}
 
+	@Override
+	public int objectsKind() {
+		return 7;
+	}
 }

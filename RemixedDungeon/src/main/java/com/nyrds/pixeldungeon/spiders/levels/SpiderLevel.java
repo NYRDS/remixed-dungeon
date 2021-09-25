@@ -248,4 +248,9 @@ public class SpiderLevel extends CommonLevel {
 				return super.tileDesc( tile );
 		}
 	}
+
+	@Override
+	public int objectsKind() {
+		return 6;
+	}
 }

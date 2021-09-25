@@ -225,4 +225,8 @@ public class CavesLevel extends RegularLevel {
 		}
 	}
 
+	@Override
+	public int objectsKind() {
+		return 2;
+	}
 }

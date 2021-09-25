@@ -38,9 +38,9 @@ import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.CellEmitter;
+import com.watabou.pixeldungeon.effects.Effects;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Splash;
-import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.levels.Level;
@@ -312,9 +312,9 @@ public class Heap implements Bundlable, NamedEntityKind {
 			
 			if (Dungeon.isCellVisible(pos)) {
 				if (burnt) {
-					burnFX( pos );
+					Effects.burnFX( pos );
 				} else {
-					evaporateFX( pos );
+					Effects.evaporateFX( pos );
 				}
 			}
 		}
@@ -423,16 +423,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 			return ItemsList.DUMMY;
 		}
 	}
-	
-	public static void burnFX( int pos ) {
-		CellEmitter.get( pos ).burst( ElmoParticle.FACTORY, 6 );
-		Sample.INSTANCE.play( Assets.SND_BURNING );
-	}
-	
-	private static void evaporateFX(int pos) {
-		CellEmitter.get( pos ).burst( Speck.factory( Speck.STEAM ), 5 );
-	}
-	
+
 	public boolean isEmpty() {
 		return items.isEmpty();
 	}

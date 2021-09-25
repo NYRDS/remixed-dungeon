@@ -203,4 +203,8 @@ public class PrisonLevel extends RegularLevel {
 		}
 	}
 
+	@Override
+	public int objectsKind() {
+		return 1;
+	}
 }

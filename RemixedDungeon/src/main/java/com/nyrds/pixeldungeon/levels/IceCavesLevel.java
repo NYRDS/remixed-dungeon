@@ -217,4 +217,8 @@ public class IceCavesLevel extends RegularLevel {
 		}
 	}
 
+	@Override
+	public int objectsKind() {
+		return 8;
+	}
 }

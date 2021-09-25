@@ -236,4 +236,9 @@ public class HallsLevel extends RegularLevel {
 			am = p > 0.8f ? (1 - p) * 5 : 1;
 		}
 	}
+
+	@Override
+	public int objectsKind() {
+		return 3;
+	}
 }

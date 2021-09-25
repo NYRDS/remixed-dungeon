@@ -28,7 +28,7 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.effects.Effects;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -50,7 +50,7 @@ public class Burning extends Buff implements Doom {
 			return srcItem.burn(target.getPos());
 		}
 		public void carrierFx(){
-			Heap.burnFX( target.getPos() );
+			Effects.burnFX( target.getPos() );
 		}
 		@Override
 		public String actionText(Item srcItem) {

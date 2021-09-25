@@ -168,4 +168,8 @@ public class SewerLevel extends RegularLevel {
 		}
 	}
 
+	@Override
+	public int objectsKind() {
+		return 0;
+	}
 }
