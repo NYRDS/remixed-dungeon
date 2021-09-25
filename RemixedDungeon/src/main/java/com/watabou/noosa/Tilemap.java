@@ -23,6 +23,8 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
 import com.watabou.utils.Rect;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.nio.FloatBuffer;
 import java.util.Arrays;
 
@@ -35,6 +37,7 @@ public class Tilemap extends Visual {
 	@Setter
 	private SmartTexture texture;
 
+	@NotNull
 	@Getter
 	private final TextureFilm tileset;
 

@@ -33,7 +33,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     private final int[] mCornersMap;
     private final int[] mDoorsMap;
 
-    private DungeonTilemap roofTilemap;
+    private final DungeonTilemap roofTilemap;
 
     public XyzDungeonTilemap(Level level, String tiles) {
         super(level, tiles);
