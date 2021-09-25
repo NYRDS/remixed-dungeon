@@ -1,6 +1,8 @@
 {
-   "baseSpeed"		 :0,
-   "attackDelay"	 :1,
+   "defenseSkill"  :3,
+   "attackSkill"   :8,
+   "baseSpeed"	   :0,
+   "attackDelay"   :1,
    "ht"            :5,
    "spriteDesc"    :"spritesDesc/InnKeeperNPC.json",
    "scriptFile"    :"scripts/npc/Innkeeper",

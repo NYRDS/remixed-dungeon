@@ -30,7 +30,7 @@ public class CustomObject extends Deco {
     @SneakyThrows
     private void initObject() {
         String scriptFile = defMap.get(objectDesc).getString("script");
-        script = new LuaScript("scripts/items/"+ scriptFile, this);
+        script = new LuaScript("scripts/objects/"+ scriptFile, this);
         script.asInstance();
     }
 

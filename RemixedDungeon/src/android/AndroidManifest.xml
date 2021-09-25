@@ -81,6 +81,10 @@
             android:name="com.nyrds.platform.game.QuickModTest"
             android:exported="true" />
 
+        <activity
+            android:name="com.nyrds.platform.game.PlayTest"
+            android:exported="true" />
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="${admob_app_id}"/>

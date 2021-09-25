@@ -22,8 +22,8 @@
          "y":3
         }, 
         {
-         "kind":"Deco",
-         "object_desc":"candle",
+         "kind":"CustomObject",
+         "object_desc":"barrikade",
          "x":6,
          "y":3
         }, 

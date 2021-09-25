@@ -380,5 +380,4 @@ public enum HeroClass implements CharModifier {
     public String textureLarge() {
         return Assets.BUFFS_LARGE;
     }
-
 }

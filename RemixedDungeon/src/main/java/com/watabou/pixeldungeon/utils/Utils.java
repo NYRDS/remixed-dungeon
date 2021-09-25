@@ -25,6 +25,7 @@ import com.nyrds.util.Util;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Locale;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -181,5 +182,10 @@ public class Utils {
             EventCollector.logException(e);
         }
         return false;
+    }
+
+    public static <T extends Enum<?>> T randomEnum(Class<T> clazz){
+        int x = new Random().nextInt(clazz.getEnumConstants().length);
+        return clazz.getEnumConstants()[x];
     }
 }
