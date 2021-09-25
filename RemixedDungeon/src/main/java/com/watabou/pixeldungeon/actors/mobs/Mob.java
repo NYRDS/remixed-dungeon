@@ -211,7 +211,7 @@ public abstract class Mob extends Char {
 	@Override
 	public boolean act() {
 
-    	if(Util.isDebug() && !(this instanceof NPC)) {
+    	if(Util.isDebug() && !(this instanceof NPC) && !getEntityKind().contains("NPC")) {
     		if(!(baseAttackSkill > 0 && baseDefenseSkill > 0)) {
     			throw new RuntimeException(Utils.format("bad params for %s", getEntityKind()));
 			}

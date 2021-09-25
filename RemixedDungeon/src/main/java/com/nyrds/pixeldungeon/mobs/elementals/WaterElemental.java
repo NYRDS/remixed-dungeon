@@ -33,7 +33,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 		exp = depth + 1;
 		maxLvl = depth + 2;
 		dr = exp/3;
-		baseAttackSkill = baseDefenseSkill / 2;
+		baseAttackSkill = baseDefenseSkill / 2 + 1;
 		dmgMin = ht()/2;
 		dmgMax = ht()/2;
 

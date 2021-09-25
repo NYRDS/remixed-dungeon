@@ -32,13 +32,13 @@ public class Terrain {
 	public static final int LOCKED_DOOR = 10;
 	public static final int PEDESTAL = 11;
 	public static final int WALL_DECO = 12;
-	public static final int BARRICADE = 13;
+	public static final int BARRICADE = 13; // deprecated
 	public static final int EMPTY_SP = 14;
 	public static final int HIGH_GRASS = 15;
 	public static final int EMPTY_DECO = 24;
 	public static final int LOCKED_EXIT = 25;
 	public static final int UNLOCKED_EXIT = 26;
-	public static final int SIGN = 29;
+	public static final int SIGN = 29; //deprecated
 	public static final int WELL = 34;
 	public static final int STATUE = 35;
 	public static final int STATUE_SP = 36;

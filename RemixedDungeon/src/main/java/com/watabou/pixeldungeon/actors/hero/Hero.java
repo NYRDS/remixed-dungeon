@@ -136,7 +136,6 @@ public class Hero extends Char {
 
 	private float awareness;
 
-	private int magicLvl = Scrambler.scramble(1);
 	private int exp = Scrambler.scramble(0);
 	private int sp = Scrambler.scramble(0);
 	private int maxSp = Scrambler.scramble(0);
@@ -1093,18 +1092,10 @@ public class Hero extends Char {
 		portalLevelPos = position;
 	}
 
-	public int skillLevel() {
-		return Scrambler.descramble(magicLvl);
-	}
-
 	@Override
 	protected void moveSprite(int oldPos, int pos) {
 		getSprite().move(oldPos, getPos());
 
-	}
-
-	public void setSkillLevel(int level) {
-		magicLvl = Scrambler.scramble(level);
 	}
 
 	public void skillLevelUp() {

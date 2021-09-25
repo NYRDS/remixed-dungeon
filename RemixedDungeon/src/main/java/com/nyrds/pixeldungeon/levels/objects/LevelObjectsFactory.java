@@ -67,6 +67,13 @@ public class LevelObjectsFactory {
 		return createObject(level, JsonHelper.readJsonFromString(jsonDesc));
 	}
 
+
+	public static LevelObject createObject(Level level, String kind, int cell) {
+		LevelObject obj = objectByName(kind);
+		obj.setPos(cell);
+		return obj;
+	}
+
 	public static LevelObject createObject(Level level, JSONObject desc) throws JSONException {
 
 		String objectKind = desc.getString("kind");

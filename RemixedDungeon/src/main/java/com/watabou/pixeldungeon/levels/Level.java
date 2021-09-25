@@ -31,6 +31,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.Tools;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
 import com.nyrds.pixeldungeon.ml.R;
@@ -672,6 +673,15 @@ public abstract class Level implements Bundlable {
 		initSizeDependentStuff();
 
 		map = bundle.getIntArray(MAP);
+
+		for(int i =0;i<map.length;++i){
+			switch (map[i]) { // old saves compatibility
+				case Terrain.BARRICADE:
+					map[i] = Terrain.EMPTY;
+					putLevelObject(LevelObjectsFactory.createObject(this,"barricade", i));
+				break;
+			}
+		}
 
 		for(LayerId layerId: LayerId.values()) {
 			int [] layer = bundle.getIntArray(layerId.name());

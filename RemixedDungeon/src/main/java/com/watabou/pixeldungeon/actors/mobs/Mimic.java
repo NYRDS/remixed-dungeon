@@ -66,7 +66,7 @@ public class Mimic extends Mob implements IDepthAdjustable {
 
 		hp(ht((3 + level) * 4));
 		exp = 2 + 2 * (level - 1) / 5;
-		baseDefenseSkill = attackSkill(null) / 2;
+		baseDefenseSkill = 9 + level / 2;
 		baseAttackSkill = 9 + level;
 		dmgMin = ht()/10;
 		dmgMax = ht()/4;

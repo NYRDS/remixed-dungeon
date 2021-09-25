@@ -27,17 +27,13 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 		loot(new PotionOfLevitation(),0.1f);
 
 		addImmunity(Bleeding.class);
-	}
-
-	@Override
-	public int skillLevel() {
-		return 3;
+		setSkillLevel(3 + lvl() / 10);
 	}
 
 	public void adjustStats(int depth) {
 		hp(ht(depth * 3 + 1));
 		baseDefenseSkill = depth * 2 + 1;
-		baseAttackSkill = baseDefenseSkill * 2;
+		baseAttackSkill = baseDefenseSkill * 2 + 1;
 		exp = depth + 1;
 		maxLvl = depth + 2;
 		dr = exp / 5;

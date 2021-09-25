@@ -207,6 +207,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public CharAction curAction = null;
 
 	private int lvl = Scrambler.scramble(1);
+	private int magicLvl = Scrambler.scramble(1);
 
 	public Char() {
 	}
@@ -1257,10 +1258,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return true;
 	}
 
-	public int skillLevel() {
-		return 10;
-	}
-
 	//backward compatibility with mods
 	@LuaInterface
 	public int magicLvl() {
@@ -1330,6 +1327,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return true;
 		}
 		return false;
+	}
+
+	public int skillLevel() {
+		return Scrambler.descramble(magicLvl);
 	}
 
 	protected abstract void moveSprite(int oldPos, int pos);
@@ -1706,6 +1707,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@LuaInterface
 	public void eat(Item food, float energy, String message) {
+	}
+
+	public void setSkillLevel(int level) {
+		magicLvl = Scrambler.scramble(level);
 	}
 
 	@LuaInterface
