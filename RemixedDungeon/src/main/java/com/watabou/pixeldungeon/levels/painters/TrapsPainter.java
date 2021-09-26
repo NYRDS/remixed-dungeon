@@ -30,14 +30,6 @@ import com.watabou.utils.Random;
 
 public class TrapsPainter extends Painter {
 
-//	public static Map<String, Float> traps = new HashMap<>();
-//	static {
-//		traps.put("ToxicTrap",3f);
-//		traps.put("ParalyticTrap",2f);
-//		traps.put("SummoningTrap",1f);
-//		traps.put("Chasm",1f);
-//	}
-
 	public static void paint( Level level, Room room ) {
 		 
 		Integer traps[] = {
@@ -78,8 +70,8 @@ public class TrapsPainter extends Painter {
 			}
 			level.drop( prize( level ), pos, Heap.Type.CHEST);
 		} else {
-			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "pedestal", pos));
-			//set( level, pos, Terrain.PEDESTAL );
+			set( level, pos, Terrain.EMPTY );
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.PEDESTAL, pos));
 			level.drop( prize( level ), pos, Heap.Type.HEAP );
 		}
 		

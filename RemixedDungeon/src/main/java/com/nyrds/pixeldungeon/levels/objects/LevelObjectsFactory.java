@@ -28,6 +28,9 @@ import lombok.SneakyThrows;
  */
 public class LevelObjectsFactory {
 
+    public static final String PEDESTAL = "pedestal";
+    public static final String STATUE = "statue";
+	public static final String BARRICADE = "barricade";
 	static private HashMap<String, Class<? extends LevelObject>> mObjectsList;
 
 	static  {

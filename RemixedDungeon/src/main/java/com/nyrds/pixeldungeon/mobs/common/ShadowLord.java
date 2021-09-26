@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.ai.Fleeing;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.levels.Tools;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
@@ -96,7 +97,7 @@ public class ShadowLord extends Boss implements IZapper {
 		}
 
 
-		int cell = level.getRandomLevelObjectPosition("pedestal");
+		int cell = level.getRandomLevelObjectPosition(LevelObjectsFactory.PEDESTAL);
 		if (level.cellValid(cell)) {
 			if (Actor.findChar(cell) == null) {
 				Mob mob = Crystal.makeShadowLordCrystal();

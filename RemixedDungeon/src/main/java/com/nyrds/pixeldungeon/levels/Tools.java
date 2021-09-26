@@ -41,7 +41,7 @@ public class Tools {
 				if ((i - 1) % roomStep == roomStep/2 && (j - 1) % roomStep == roomStep/2 ) {
 
 					if(level.get(i, j)==Terrain.EMPTY) {
-						level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "pedestal", level.cell(i,j)));
+						level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.PEDESTAL, level.cell(i,j)));
 						//level.set(i, j, Terrain.PEDESTAL);
 					}
 					continue;

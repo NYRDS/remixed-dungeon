@@ -17,7 +17,7 @@ import java.util.Arrays;
 public class FakeLastLevel extends Level {
 
 	private static final int SIZE = 9;
-	
+
 	{
 		color1 = 0x801500;
 		color2 = 0xa68521;
@@ -51,9 +51,9 @@ public class FakeLastLevel extends Level {
 
 		pedestal = (SIZE / 2 + 1) * (getWidth() + 1);
 
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, "pedestal", pedestal));
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, "statue", pedestal-1));
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, "statue", pedestal+1));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, pedestal));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, pedestal-1));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, pedestal+1));
 
 		setFeeling(Feeling.NONE);
 		

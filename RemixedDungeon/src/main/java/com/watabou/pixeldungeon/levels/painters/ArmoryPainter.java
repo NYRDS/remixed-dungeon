@@ -47,7 +47,7 @@ public class ArmoryPainter extends Painter {
 			statue = new Point( Random.Int( 2 ) == 0 ? room.left+1 : room.right-1, room.top+1 );
 		}
 		if (statue != null) {
-			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "statue", level.cell(statue.x, statue.y)));
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(statue.x, statue.y)));
 		}
 		
 		int n = Random.IntRange( 2, 3 );

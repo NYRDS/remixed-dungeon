@@ -162,7 +162,7 @@ public class StandardPainter extends Painter {
 		}
 		
 		Point roomCenter = room.center();
-		level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "pedestal", level.cell(roomCenter.x, roomCenter.y)));
+		level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.PEDESTAL, level.cell(roomCenter.x, roomCenter.y)));
 		//set( level, roomCenter, Terrain.PEDESTAL );
 		
 		if(Random.Float(1) < 0.25f) {

@@ -65,9 +65,10 @@ public class LastLevel extends Level {
 		//map[getExit(0)] = Terrain.LOCKED_EXIT;
 
 		pedestal = (SIZE / 2 + 1) * (getWidth() + 1);
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, "pedestal", pedestal));
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, "statue", pedestal-1));
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, "statue", pedestal+1));
+
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, pedestal));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, pedestal-1));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, pedestal+1));
 		setFeeling(Feeling.NONE);
 		
 		return true;

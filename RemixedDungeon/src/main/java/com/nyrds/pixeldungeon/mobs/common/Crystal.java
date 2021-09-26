@@ -24,6 +24,8 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
+import static com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.PEDESTAL;
+
 public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 	static private int ctr = 0;
@@ -127,7 +129,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 		LevelObject obj = level.getTopLevelObject(pos);
 
-		if (obj != null && obj.getEntityKind().equals("pedestal")) {
+		if (obj != null && obj.getEntityKind().equals(PEDESTAL)) {
 			level.remove(obj);
 
 			level.set(pos, Terrain.EMBERS);

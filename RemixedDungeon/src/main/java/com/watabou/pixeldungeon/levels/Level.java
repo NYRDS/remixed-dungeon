@@ -44,6 +44,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
@@ -234,17 +235,24 @@ public abstract class Level implements Bundlable {
 		return top;
 	}
 
-	public void putLevelObject(LevelObject levelObject) {
-		SparseArray<LevelObject> objectsLayer = objects.get(levelObject.getLayer());
+	public void putLevelObject(LevelObject lo) {
+		SparseArray<LevelObject> objectsLayer = objects.get(lo.getLayer());
 		if (objectsLayer == null) {
 			objectsLayer = new SparseArray<>();
-			objects.put(levelObject.getLayer(), objectsLayer);
+			objects.put(lo.getLayer(), objectsLayer);
 		}
 
-		objectsLayer.put(levelObject.getPos(), levelObject);
+		final int pos = lo.getPos();
+		objectsLayer.put(pos, lo);
 
-		if(levelObject.losBlocker()) {
-			losBlocking[levelObject.getPos()] = true;
+		if(Util.isDebug()) {
+			if (!passable[pos]) {
+				throw new ModError(Utils.format("%s on a non-passable cell %d (%d) . level %s", lo.getEntityKind(), pos, map[pos], levelId));
+			}
+		}
+
+		if(lo.losBlocker()) {
+			losBlocking[pos] = true;
 		}
 	}
 
@@ -679,12 +687,12 @@ public abstract class Level implements Bundlable {
 			switch (map[i]) { // old saves compatibility
 				case Terrain.BARRICADE:
 					map[i] = Terrain.EMPTY;
-					putLevelObject(LevelObjectsFactory.createCustomObject(this,"barricade", i));
+					putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.BARRICADE, i));
 				break;
 
 				case Terrain.PEDESTAL:
 					map[i] = Terrain.EMPTY;
-					putLevelObject(LevelObjectsFactory.createCustomObject(this,"pedestal", i));
+					putLevelObject(LevelObjectsFactory.createCustomObject(this,LevelObjectsFactory.PEDESTAL, i));
 				break;
 			}
 		}
