@@ -47,6 +47,7 @@ public class ArmoryPainter extends Painter {
 			statue = new Point( Random.Int( 2 ) == 0 ? room.left+1 : room.right-1, room.top+1 );
 		}
 		if (statue != null) {
+			set(level, statue, Terrain.EMPTY);
 			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(statue.x, statue.y)));
 		}
 		

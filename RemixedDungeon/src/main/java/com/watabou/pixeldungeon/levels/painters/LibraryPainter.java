@@ -65,9 +65,11 @@ public class LibraryPainter extends Painter {
 					Terrain.BOOKSHELF);
 		}
 		if (a != null && level.map[a.x + a.y * level.getWidth()] == Terrain.EMPTY) {
+			set(level, b, Terrain.EMPTY);
 			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "statue", level.cell(a.x,a.y)));
 		}
 		if (b != null && level.map[b.x + b.y * level.getWidth()] == Terrain.EMPTY) {
+			set(level, b, Terrain.EMPTY);
 			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "statue", level.cell(b.x,b.y)));
 		}
 
