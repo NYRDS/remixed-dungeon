@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.nyrds.platform.util.StringsManager;
@@ -16,6 +17,10 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
+
+import java.util.HashSet;
+
+import lombok.val;
 
 public class IceCavesBossLevel extends BossLevel {
 	
@@ -46,8 +51,23 @@ public class IceCavesBossLevel extends BossLevel {
 		Painter.fill( this, _Left(), TOP, HALL_WIDTH, HALL_HEIGHT, Terrain.EMPTY_SP );
 		Painter.fill( this, _Left(), TOP, HALL_WIDTH, TOP, Terrain.EMPTY );
 		Painter.fill( this, _Left(), HALL_HEIGHT, HALL_WIDTH, TOP, Terrain.EMPTY );
+
+
+		val statues = new HashSet<Integer>();
+
 		for (int i = 0; i < 10; i++) {
+
+			int pos = getRandomTerrainCell(Terrain.EMPTY_SP);
+
+			if(cellValid(pos)) {
+				statues.add(pos);
+			}
+
 			map[getRandomTerrainCell(Terrain.EMPTY_SP)] = Terrain.STATUE_SP;
+		}
+
+		for(val pos: statues) {
+			putLevelObject(LevelObjectsFactory.createCustomObject(this, "statue", pos));
 		}
 		
 		arenaDoor = (TOP + HALL_HEIGHT) * getWidth() + _Center();

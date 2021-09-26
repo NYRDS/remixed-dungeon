@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
@@ -46,7 +47,7 @@ public class ArmoryPainter extends Painter {
 			statue = new Point( Random.Int( 2 ) == 0 ? room.left+1 : room.right-1, room.top+1 );
 		}
 		if (statue != null) {
-			set( level, statue, Terrain.STATUE );
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "statue", level.cell(statue.x, statue.y)));
 		}
 		
 		int n = Random.IntRange( 2, 3 );

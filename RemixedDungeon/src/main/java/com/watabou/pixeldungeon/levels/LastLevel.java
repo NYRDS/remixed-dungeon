@@ -66,9 +66,8 @@ public class LastLevel extends Level {
 
 		pedestal = (SIZE / 2 + 1) * (getWidth() + 1);
 		putLevelObject(LevelObjectsFactory.createCustomObject(this, "pedestal", pedestal));
-		//map[pedestal] = Terrain.PEDESTAL;
-		map[pedestal-1] = map[pedestal+1] = Terrain.STATUE_SP;
-		
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, "statue", pedestal-1));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, "statue", pedestal+1));
 		setFeeling(Feeling.NONE);
 		
 		return true;

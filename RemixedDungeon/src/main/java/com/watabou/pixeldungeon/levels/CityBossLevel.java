@@ -58,8 +58,8 @@ public class CityBossLevel extends BossLevel {
 		
 		int y = TOP + 1;
 		while (y < TOP + HALL_HEIGHT) {
-			map[y * getWidth() + _Center() - 2] = Terrain.STATUE_SP;
-			map[y * getWidth() + _Center() + 2] = Terrain.STATUE_SP;
+			putLevelObject(LevelObjectsFactory.createCustomObject(this, "statue", y * getWidth() + _Center() - 2));
+			putLevelObject(LevelObjectsFactory.createCustomObject(this, "statue", y * getWidth() + _Center() + 2));
 			y += 2;
 		}
 

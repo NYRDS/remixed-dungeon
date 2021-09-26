@@ -48,22 +48,22 @@ public class StatuePainter extends Painter {
 		
 		if (door.x == room.left) {
 			
-			fill( level, room.right - 1, room.top + 1, 1, room.height() - 1 , Terrain.STATUE );
+			fill( level, room.right - 1, room.top + 1, 1, room.height() - 1 , "statue");
 			cx = room.right - 2;
 			
 		} else if (door.x == room.right) {
 			
-			fill( level, room.left + 1, room.top + 1, 1, room.height() - 1 , Terrain.STATUE );
+			fill( level, room.left + 1, room.top + 1, 1, room.height() - 1 , "statue" );
 			cx = room.left + 2;
 			
 		} else if (door.y == room.top) {
 			
-			fill( level, room.left + 1, room.bottom - 1, room.width() - 1, 1 , Terrain.STATUE );
+			fill( level, room.left + 1, room.bottom - 1, room.width() - 1, 1 , "statue" );
 			cy = room.bottom - 2;
 			
 		} else if (door.y == room.bottom) {
 			
-			fill( level, room.left + 1, room.top + 1, room.width() - 1, 1 , Terrain.STATUE );
+			fill( level, room.left + 1, room.top + 1, room.width() - 1, 1 , "statue" );
 			cy = room.top + 2;
 			
 		}

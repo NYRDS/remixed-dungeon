@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.pixeldungeon.items.Codex;
 import com.watabou.pixeldungeon.items.Heap;
@@ -64,10 +65,10 @@ public class LibraryPainter extends Painter {
 					Terrain.BOOKSHELF);
 		}
 		if (a != null && level.map[a.x + a.y * level.getWidth()] == Terrain.EMPTY) {
-			set(level, a, Terrain.STATUE);
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "statue", level.cell(a.x,a.y)));
 		}
 		if (b != null && level.map[b.x + b.y * level.getWidth()] == Terrain.EMPTY) {
-			set(level, b, Terrain.STATUE);
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "statue", level.cell(b.x,b.y)));
 		}
 
 		int n = Random.IntRange(2, 3);

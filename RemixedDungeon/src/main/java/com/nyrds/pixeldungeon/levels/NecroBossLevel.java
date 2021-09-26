@@ -42,8 +42,8 @@ public class NecroBossLevel extends BossLevel {
 		
 		int y = TOP + 1;
 		while (y < TOP + HALL_HEIGHT) {
-			map[y * getWidth() + _Center() - 3] = Terrain.STATUE;
-			map[y * getWidth() + _Center() + 3] = Terrain.STATUE;
+			putLevelObject(LevelObjectsFactory.createCustomObject(this, "statue", y * getWidth() + _Center() - 3));
+			putLevelObject(LevelObjectsFactory.createCustomObject(this, "statue", y * getWidth() + _Center() + 3));
 			y += 2;
 		}
 

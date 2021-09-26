@@ -40,8 +40,8 @@ public class Terrain {
 	public static final int UNLOCKED_EXIT = 26;
 	public static final int SIGN = 29; //deprecated
 	public static final int WELL = 34;
-	public static final int STATUE = 35;
-	public static final int STATUE_SP = 36;
+	public static final int STATUE = 35; //deprecated
+	public static final int STATUE_SP = 36; //deprecated
 	public static final int BOOKSHELF = 41;
 	public static final int ALCHEMY = 42;
 	public static final int CHASM_FLOOR = 43;
