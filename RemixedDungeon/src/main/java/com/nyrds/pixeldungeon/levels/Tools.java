@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -40,7 +41,8 @@ public class Tools {
 				if ((i - 1) % roomStep == roomStep/2 && (j - 1) % roomStep == roomStep/2 ) {
 
 					if(level.get(i, j)==Terrain.EMPTY) {
-						level.set(i, j, Terrain.PEDESTAL);
+						level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "pedestal", level.cell(i,j)));
+						//level.set(i, j, Terrain.PEDESTAL);
 					}
 					continue;
 				}

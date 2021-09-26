@@ -77,7 +77,7 @@ public class LevelObjectsFactory {
 		LevelObject obj = objectByName("CustomObject");
 		JSONObject desc = new JSONObject();
 
-		desc.put("object_kind", kind);
+		desc.put("object_desc", kind);
 		obj.setupFromJson(level, desc);
 		obj.setPos(cell);
 

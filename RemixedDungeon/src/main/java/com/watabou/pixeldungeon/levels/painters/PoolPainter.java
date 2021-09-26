@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Piranha;
 import com.watabou.pixeldungeon.items.Heap;
@@ -67,7 +68,9 @@ public class PoolPainter extends Painter {
 		
 		int pos = x + y * level.getWidth();
 		level.drop( prize( level ), pos, Random.Int( 3 ) == 0 ? Heap.Type.CHEST : Heap.Type.HEAP);
-		set( level, pos, Terrain.PEDESTAL );
+
+		level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "pedestal", pos));
+		//set( level, pos, Terrain.PEDESTAL );
 		
 		level.addItemToSpawn( new PotionOfInvisibility() );
 		

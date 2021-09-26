@@ -31,9 +31,9 @@ public class MimicPie extends Mob implements IDepthAdjustable {
 
 		hp(ht((3 + level) * 5));
 		exp = 2 + 2 * (level - 1) / 5;
-		baseDefenseSkill = 2 * attackSkill( null ) / 3;
-
 		baseAttackSkill = 9 + level;
+		baseDefenseSkill = 2 * baseAttackSkill / 3;
+
 		dmgMin = ht()/10;
 		dmgMax = ht()/4;
 

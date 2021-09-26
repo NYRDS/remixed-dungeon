@@ -115,6 +115,7 @@ import java.util.Set;
 
 import lombok.Getter;
 import lombok.SneakyThrows;
+import lombok.val;
 import lombok.var;
 
 
@@ -679,6 +680,11 @@ public abstract class Level implements Bundlable {
 				case Terrain.BARRICADE:
 					map[i] = Terrain.EMPTY;
 					putLevelObject(LevelObjectsFactory.createCustomObject(this,"barricade", i));
+				break;
+
+				case Terrain.PEDESTAL:
+					map[i] = Terrain.EMPTY;
+					putLevelObject(LevelObjectsFactory.createCustomObject(this,"pedestal", i));
 				break;
 			}
 		}
@@ -1970,6 +1976,30 @@ public abstract class Level implements Bundlable {
 	@LuaInterface
 	public int getNearestVisibleLevelObject(int cell) {
 		return getNearestTerrain(cell, (level, cell1) -> level.fieldOfView[cell1] && (level.getLevelObject(cell1)!=null));
+	}
+
+	@LuaInterface
+	public int getNearestLevelObject(int cell, String kind) {
+		return getNearestTerrain(cell, (level, cell1) -> (level.getLevelObject(cell1)!=null && level.getLevelObject(cell1).getEntityKind().equals(kind) ));
+	}
+
+	@LuaInterface
+	public int getRandomLevelObjectPosition(String kind) {
+		val objects = getAllLevelObjects();
+		List<Integer> candidates = new ArrayList<>();
+
+		for (val object : objects) {
+			if(object.getEntityKind().equals(kind)) {
+				candidates.add(object.getPos());
+			}
+		}
+
+		Integer ret = Random.element(candidates);
+		if(ret == null) {
+			ret = Level.INVALID_CELL;
+		}
+
+		return ret;
 	}
 
 	@LuaInterface

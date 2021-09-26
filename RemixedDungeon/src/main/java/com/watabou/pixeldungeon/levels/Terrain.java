@@ -30,7 +30,7 @@ public class Terrain {
 	public static final int EXIT = 8;
 	public static final int EMBERS = 9;
 	public static final int LOCKED_DOOR = 10;
-	public static final int PEDESTAL = 11;
+	public static final int PEDESTAL = 11; //deprecated
 	public static final int WALL_DECO = 12;
 	public static final int BARRICADE = 13; // deprecated
 	public static final int EMPTY_SP = 14;

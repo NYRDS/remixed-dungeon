@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
@@ -77,7 +78,8 @@ public class TrapsPainter extends Painter {
 			}
 			level.drop( prize( level ), pos, Heap.Type.CHEST);
 		} else {
-			set( level, pos, Terrain.PEDESTAL );
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "pedestal", pos));
+			//set( level, pos, Terrain.PEDESTAL );
 			level.drop( prize( level ), pos, Heap.Type.HEAP );
 		}
 		

@@ -70,6 +70,9 @@ public class Yog extends Boss {
 		movable = false;
 		exp = 50;
 
+		baseDefenseSkill = 20;
+		baseAttackSkill  = 20;
+
 		setState(MobAi.getStateByClass(Passive.class));
 
 		addImmunity(Death.class);

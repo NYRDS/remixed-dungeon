@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.items.chaos.ChaosCommon;
 import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Dungeon;
@@ -122,7 +123,13 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 		int pos = getPos();
 
 		Level level = level();
-		if (level.map[pos] == Terrain.PEDESTAL) {
+
+
+		LevelObject obj = level.getTopLevelObject(pos);
+
+		if (obj != null && obj.getEntityKind().equals("pedestal")) {
+			level.remove(obj);
+
 			level.set(pos, Terrain.EMBERS);
 			int x, y;
 			x = level.cellX(pos);

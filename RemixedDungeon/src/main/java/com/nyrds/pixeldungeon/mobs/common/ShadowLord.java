@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Callback;
 
@@ -96,7 +95,8 @@ public class ShadowLord extends Boss implements IZapper {
 			levelCreated = true;
 		}
 
-		int cell = level.getRandomTerrainCell(Terrain.PEDESTAL);
+
+		int cell = level.getRandomLevelObjectPosition("pedestal");
 		if (level.cellValid(cell)) {
 			if (Actor.findChar(cell) == null) {
 				Mob mob = Crystal.makeShadowLordCrystal();
@@ -192,5 +192,4 @@ public class ShadowLord extends Boss implements IZapper {
 		level().unseal();
 		Badges.validateBossSlain(Badges.Badge.SHADOW_LORD_SLAIN);
 	}
-
 }

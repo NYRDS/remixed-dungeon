@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.GoldenKey;
@@ -58,7 +59,8 @@ public class VaultPainter extends Painter {
 			
 		case 2:
 			level.drop( prize(level), c, Type.HEAP );
-			set( level, c, Terrain.PEDESTAL );
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "pedestal", c));
+			//set( level, c, Terrain.PEDESTAL );
 			break;
 		}
 		

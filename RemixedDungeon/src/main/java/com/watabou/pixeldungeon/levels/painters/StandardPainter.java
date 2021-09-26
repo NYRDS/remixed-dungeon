@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mobs.common.Crystal;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Gold;
@@ -161,8 +162,8 @@ public class StandardPainter extends Painter {
 		}
 		
 		Point roomCenter = room.center();
-		
-		set( level, roomCenter, Terrain.PEDESTAL );
+		level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "pedestal", level.cell(roomCenter.x, roomCenter.y)));
+		//set( level, roomCenter, Terrain.PEDESTAL );
 		
 		if(Random.Float(1) < 0.25f) {
 			Crystal crystal = new Crystal();

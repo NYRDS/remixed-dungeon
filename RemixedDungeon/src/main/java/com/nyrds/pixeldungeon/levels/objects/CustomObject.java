@@ -93,4 +93,9 @@ public class CustomObject extends Deco {
     public boolean losBlocker() {
         return script.runOptional("losBlocker", super.losBlocker());
     }
+
+    @Override
+    public String getEntityKind() {
+        return objectDesc;
+    }
 }

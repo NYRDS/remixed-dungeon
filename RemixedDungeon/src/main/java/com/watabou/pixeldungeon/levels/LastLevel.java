@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
@@ -64,7 +65,8 @@ public class LastLevel extends Level {
 		//map[getExit(0)] = Terrain.LOCKED_EXIT;
 
 		pedestal = (SIZE / 2 + 1) * (getWidth() + 1);
-		map[pedestal] = Terrain.PEDESTAL;
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, "pedestal", pedestal));
+		//map[pedestal] = Terrain.PEDESTAL;
 		map[pedestal-1] = map[pedestal+1] = Terrain.STATUE_SP;
 		
 		setFeeling(Feeling.NONE);

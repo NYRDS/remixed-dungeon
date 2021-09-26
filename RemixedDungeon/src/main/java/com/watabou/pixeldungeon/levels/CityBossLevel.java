@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -64,7 +65,11 @@ public class CityBossLevel extends BossLevel {
 
 		int left = pedestal( true );
 		int right = pedestal( false );
-		map[left] = map[right] = Terrain.PEDESTAL;
+
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, "pedestal", left));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, "pedestal", right));
+
+		//map[left] = map[right] = Terrain.PEDESTAL;
 		for (int i=left+1; i < right; i++) {
 			map[i] = Terrain.EMPTY_SP;
 		}

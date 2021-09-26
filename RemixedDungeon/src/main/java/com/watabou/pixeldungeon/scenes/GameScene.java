@@ -472,7 +472,7 @@ public class GameScene extends PixelScene {
                 for (var lo : level.getAllLevelObjects()) {
                     int pos = lo.getPos();
                     if (!level.passable[pos]) {
-                        throw new ModError(Utils.format("%s on a non-passable cell %d. level %s", lo.getEntityKind(), pos, level.levelId));
+                        throw new ModError(Utils.format("%s on a non-passable cell %d (%d) . level %s", lo.getEntityKind(), pos, level.map[pos], level.levelId));
                     }
 
                     if (level.pit[pos]) {

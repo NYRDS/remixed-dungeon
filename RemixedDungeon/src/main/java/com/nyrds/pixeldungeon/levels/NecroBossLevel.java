@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
@@ -51,7 +52,12 @@ public class NecroBossLevel extends BossLevel {
 		int pedestal_3 = (TOP + HALL_HEIGHT / 4) * getWidth() + _Center() + 2;
 		int pedestal_4 = (TOP + HALL_HEIGHT / 2 + HALL_HEIGHT / 4) * getWidth() + _Center() + 2;
 
-		map[pedestal_1] = map[pedestal_2] = map[pedestal_3] = map[pedestal_4] = Terrain.PEDESTAL;
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, "pedestal", pedestal_1));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, "pedestal", pedestal_2));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, "pedestal", pedestal_3));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, "pedestal", pedestal_4));
+
+		//map[pedestal_1] = map[pedestal_2] = map[pedestal_3] = map[pedestal_4] = Terrain.PEDESTAL;
 		
 		setExit((TOP - 1) * getWidth() + _Center(),0);
 		

@@ -1,0 +1,15 @@
+{
+  "kind":"CustomObject",
+
+  "script": "statue",
+  "appearance": {
+    "desc": {
+      "desc": "Level_TileDescStatue",
+      "name": "Level_TileStatue"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/objects.png",
+      "imageIndex" : 0
+    }
+  }
+}

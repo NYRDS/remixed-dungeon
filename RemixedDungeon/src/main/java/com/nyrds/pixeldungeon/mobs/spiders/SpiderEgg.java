@@ -9,7 +9,8 @@ public class SpiderEgg extends Mob {
 
 	public SpiderEgg() {
 		hp(ht(2));
-		baseDefenseSkill = 0;
+		baseDefenseSkill = 1;
+		baseAttackSkill = 1;
 		baseSpeed = 0f;
 
 		exp = 0;

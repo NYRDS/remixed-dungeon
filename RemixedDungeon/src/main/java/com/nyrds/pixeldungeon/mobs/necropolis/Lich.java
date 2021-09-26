@@ -32,7 +32,6 @@ import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
@@ -42,6 +41,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+
+import lombok.val;
 
 /**
  * Created by DeadDie on 12.02.2016
@@ -261,7 +262,16 @@ public class Lich extends Boss {
         }
 
         Level level = Dungeon.level;
-        ArrayList<Integer> pedestals = level.getAllTerrainCells(Terrain.PEDESTAL);
+
+        val objects = level.getAllLevelObjects();
+
+        ArrayList<Integer> pedestals = new ArrayList<>();
+
+        for(val object: objects) {
+            if(object.getEntityKind().equals("pedestal")) {
+                pedestals.add(object.getPos());
+            }
+        }
 
         Collections.shuffle(pedestals);
 
