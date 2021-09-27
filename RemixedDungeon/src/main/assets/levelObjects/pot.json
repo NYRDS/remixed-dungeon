@@ -1,0 +1,15 @@
+{
+  "kind":"CustomObject",
+
+  "script": "pot",
+  "appearance": {
+    "desc": {
+      "desc": "Level_TileDescWell",
+      "name": "Level_TileWell"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/objects.png",
+      "imageIndex" : 0
+    }
+  }
+}

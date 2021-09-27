@@ -21,6 +21,6 @@ return object.init{
     end,
 
     image = function(self, object)
-        return 16 * 7 + object:level():objectsKind()
+        return 16 * 8 + object:level():objectsKind()
     end
 }

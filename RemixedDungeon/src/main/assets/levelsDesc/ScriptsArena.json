@@ -28,8 +28,8 @@
          "y":3
         }, 
         {
-         "kind":"Deco",
-         "object_desc":"candle",
+          "kind":"CustomObject",
+          "object_desc":"statue",
          "x":4,
          "y":5
         }, 

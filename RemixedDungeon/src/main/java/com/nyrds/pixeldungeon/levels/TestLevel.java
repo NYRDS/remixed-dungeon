@@ -122,7 +122,7 @@ public class TestLevel extends RegularLevel {
 		int oldDifficulty = Dungeon.hero.getDifficulty();
 
 		Hero hero = new Hero(2);
-		hero.setPos(entrance+1);
+		hero.setPos(randomRespawnCell());
 
 		hero.spend(-10000);
 
