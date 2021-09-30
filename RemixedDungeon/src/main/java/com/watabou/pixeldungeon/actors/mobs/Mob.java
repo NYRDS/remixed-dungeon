@@ -458,18 +458,26 @@ public abstract class Mob extends Char {
 	}
 
 	public void resurrect() {
-		resurrect(this);
-	}
+		resurrectAnim();
 
-	public void resurrect(Char parent) {
-    	resurrectAnim();
-
-		int spawnPos = level().getEmptyCellNextTo(parent.getPos());
+		int spawnPos = getPos();
 		Mob new_mob = MobFactory.mobByName(getMobClassName());
 
 		if (level().cellValid(spawnPos)) {
 			new_mob.setPos(spawnPos);
-			Mob.makePet(new_mob, parent.getId());
+			level().spawnMob(new_mob);
+			level().press(spawnPos, new_mob);
+		}
+	}
+
+	public void resurrect(Char parent) {
+
+		int spawnPos = getPos();
+		Mob new_mob = MobFactory.mobByName(getMobClassName());
+
+		if (level().cellValid(spawnPos)) {
+			new_mob.setPos(spawnPos);
+			Mob.makePet(this, parent.getId());
 			Actor.addDelayed(new Pushing(new_mob, parent.getPos(), new_mob.getPos()), -1);
 			level().spawnMob(new_mob);
 			level().press(spawnPos, new_mob);

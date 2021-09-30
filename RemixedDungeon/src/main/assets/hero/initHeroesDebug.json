@@ -28,7 +28,8 @@
       },
       {
         "kind": "WandOfIcebolt",
-        "identified": true
+        "identified": true,
+        "level" : 200
       },
       {
         "kind": "ScrollOfTeleportation",
@@ -75,7 +76,7 @@
   "WARRIOR": {
     "weapon": {
       "kind": "ShortSword",
-      "level" : 2,
+      "level" : 200,
       "identified": true
     },
     "str": 11,
