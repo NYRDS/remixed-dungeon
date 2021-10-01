@@ -59,11 +59,9 @@ public class IceCavesBossLevel extends BossLevel {
 
 			int pos = getRandomTerrainCell(Terrain.EMPTY_SP);
 
-			if(cellValid(pos)) {
+			if(cellValid(pos) && !statues.contains(pos)) {
 				statues.add(pos);
 			}
-
-			map[getRandomTerrainCell(Terrain.EMPTY_SP)] = Terrain.STATUE_SP;
 		}
 
 		for(val pos: statues) {
