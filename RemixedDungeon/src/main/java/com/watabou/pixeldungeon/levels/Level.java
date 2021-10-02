@@ -33,6 +33,7 @@ import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
@@ -696,8 +697,20 @@ public abstract class Level implements Bundlable {
 				break;
 
 				case Terrain.STATUE:
+					map[i] = Terrain.EMPTY;
 				case Terrain.STATUE_SP:
+					map[i] = Terrain.EMPTY_SP;
 					putLevelObject(LevelObjectsFactory.createCustomObject(this,LevelObjectsFactory.STATUE, i));
+				break;
+
+				case Terrain.FIRE_TRAP:
+					map[i] = Terrain.EMPTY;
+					putLevelObject(Trap.makeSimpleTrap(i, "FireTrap", false));
+				break;
+
+				case Terrain.SECRET_FIRE_TRAP:
+					map[i] = Terrain.EMPTY;
+					putLevelObject(Trap.makeSimpleTrap(i, "FireTrap", true));
 				break;
 			}
 		}

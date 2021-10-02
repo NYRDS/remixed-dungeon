@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
+import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.nyrds.pixeldungeon.mobs.common.Crystal;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Gold;
@@ -99,10 +100,10 @@ public class StandardPainter extends Painter {
 					t = Terrain.EMPTY;
 					break;
 				case 1:
-					t = Terrain.FIRE_TRAP;
+					level.putLevelObject(Trap.makeSimpleTrap(t, "FireTrap", false));
 					break;
 				case 2:
-					t = Terrain.SECRET_FIRE_TRAP;
+					level.putLevelObject(Trap.makeSimpleTrap(t, "FireTrap", true));
 					break;
 				case 3:
 					t = Terrain.INACTIVE_TRAP;

@@ -23,8 +23,9 @@
       },
 
       {
-        "kind": "WandOfPoison",
-        "identified": true
+        "kind": "CorpseDust",
+        "identified": true,
+        "cursed": true
       },
       {
         "kind": "WandOfIcebolt",
