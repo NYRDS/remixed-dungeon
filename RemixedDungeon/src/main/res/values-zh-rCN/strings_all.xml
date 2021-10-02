@@ -93,6 +93,7 @@
   <string name="DriedRoseCursedBuff_Info">玫瑰看起来很漂亮，但不太迷人。</string>
   <string name="RatSkullBuff_Name">菁英老鼠</string>
   <string name="RatKingCrownBuff_Name">鼠王殿下</string>
+  <string name="RatKingCrownBuff_Info">你现在是老鼠之王了。每只老鼠都会臣服于你。</string>
   <string name="RatKingCrown_Name">鼠王之冠</string>
   <string name="RatKingCrown_Info">鼠王的金冠，统治所有老鼠的权力象征</string>
   <string name="BishopNPC_Name">主教</string>
@@ -254,6 +255,7 @@
   <string name="DevourBuff_Name">吞噬</string>
   <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">石中血</string>
+  <string name="StoneBloodBuff_Info">你的血液能够和墙壁融合在一起，使你能够穿过墙壁，但这要付出一些代价</string>
   <string name="Welcome_Ok">棒极了！</string>
   <string name="Welcome_Title">欢迎！</string>
   <string name="BlackCat_Name">黑猫</string>
@@ -547,19 +549,23 @@
   <string name="AmokBuff_Name">狂乱</string>
   <string name="BarkskinBuff_Name">树肤</string>
   <string name="BleedingBuff_Name">流血</string>
+  <string name="BleedingBuff_Info">你的伤口血流不止</string>
   <string name="Bleeding_Death">你失血过多身亡…</string>
   <string name="BlindnessBuff_Name">目盲</string>
+  <string name="BlindnessBuff_Info">你什么都看不见了，只能听见附近的声音</string>
   <string name="BurningBuff_Name">燃烧</string>
   <string name="Burning_Burns">%s被烧掉了！</string>
   <string name="Burning_Death">你被烧成灰了……</string>
   <string name="CharmBuff_Name">魅惑</string>
   <string name="ComboBuff_Name">连击</string>
+  <string name="ComboBuff_Info">你的下一次攻击将是一次二连击</string>
   <string name="Combo_Combo">%d连击！</string>
   <string name="CrippleBuff_Name">残疾</string>
   <string name="FrostBuff_Name">冰冻</string>
   <string name="Frost_Shatter">寒气使%s瓶碎裂了！</string>
   <string name="FuryBuff_Name">暴怒</string>
   <string name="GasImmuneBuff_Name">气体免疫</string>
+  <string name="GasImmuneBuff_Info">对气体免疫</string>
   <string name="Hunger_Death">你饿死了……</string>
   <string name="HungerBuff_Name1">饥饿</string>
   <string name="HungerBuff_Info1">你饿了！</string>
@@ -580,6 +586,7 @@
   <string name="ShadowsBuff_Name">暗影融合</string>
   <string name="SlowBuff_Name">缓速</string>
   <string name="SleepBuff_Name">昏睡</string>
+  <string name="SleepBuff_Info">你陷入沉睡</string>
   <string name="SnipersMarkBuff_Name">狙击标记</string>
   <string name="SpeedBuff_Name">速度</string>
   <string name="TerrorBuff_Name">惊恐</string>
@@ -2606,6 +2613,7 @@ remix.29.5\n
   <string name="CharAction_Scare">恐惧</string>
   <string name="CharAction_Hit">击打</string>
   <string name="StunBuff_Name">眩晕</string>
+  <string name="StunBuff_Info">你被眩晕了！</string>
   <string name="Char_StaStunned">眩晕</string>
   <string name="Mob_ReadyForOrder">%s已准备执行你的命令</string>
   <string name="Mob_CantDoIt">我做不到。我的手太小了。</string>

@@ -20,6 +20,7 @@ package com.watabou.utils;
 import com.nyrds.LuaInterface;
 import com.nyrds.generated.BundleHelper;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.Util;
 
 import org.jetbrains.annotations.NotNull;
@@ -132,6 +133,9 @@ public class Bundle {
             return object;
 
         } catch (Exception e) {
+            if(Util.isDebug()) {
+                throw new TrackedRuntimeException(e);
+            }
             EventCollector.logException(e, clName);
             return null;
         }
@@ -329,19 +333,23 @@ public class Bundle {
         data.put(key, jsonArray);
     }
 
-    @SneakyThrows
+
     public void put(String key, Collection<? extends Bundlable> collection) {
-        JSONArray array = new JSONArray();
-        for (Bundlable object : collection) {
-            if (!object.dontPack()) {
-                Bundle bundle = new Bundle();
-                bundle.put(CLASS_NAME, object.getClass().getName());
-                object.storeInBundle(bundle);
-                BundleHelper.Pack(object, bundle);
-                array.put(bundle.data);
+        try {
+            JSONArray array = new JSONArray();
+            for (Bundlable object : collection) {
+                if (!object.dontPack()) {
+                    Bundle bundle = new Bundle();
+                    bundle.put(CLASS_NAME, object.getClass().getName());
+                    object.storeInBundle(bundle);
+                    BundleHelper.Pack(object, bundle);
+                    array.put(bundle.data);
+                }
             }
+            data.put(key, array);
+        } catch (Exception e) {
+            EventCollector.logException(e);
         }
-        data.put(key, array);
     }
 
     @SneakyThrows

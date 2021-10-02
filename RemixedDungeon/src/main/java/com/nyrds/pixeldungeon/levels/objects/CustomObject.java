@@ -18,7 +18,7 @@ public class CustomObject extends Deco {
     private LuaScript script;
 
     @Keep
-    CustomObject() {
+    public CustomObject() {
         super(Level.INVALID_CELL);
     }
 

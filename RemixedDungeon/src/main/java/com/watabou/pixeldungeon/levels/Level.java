@@ -694,6 +694,11 @@ public abstract class Level implements Bundlable {
 					map[i] = Terrain.EMPTY;
 					putLevelObject(LevelObjectsFactory.createCustomObject(this,LevelObjectsFactory.PEDESTAL, i));
 				break;
+
+				case Terrain.STATUE:
+				case Terrain.STATUE_SP:
+					putLevelObject(LevelObjectsFactory.createCustomObject(this,LevelObjectsFactory.STATUE, i));
+				break;
 			}
 		}
 
