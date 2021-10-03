@@ -39,6 +39,10 @@ public class Image extends Visual implements IPlaceable {
 	private final FloatBuffer verticesBuffer;
 	
 	protected boolean dirty;
+	public boolean isometricShift;
+
+	static public float isometricModeShift = 0;
+
 	
 	public Image() {
 		super( 0, 0, 0, 0 );
@@ -189,5 +193,13 @@ public class Image extends Visual implements IPlaceable {
 
 	public FloatBuffer getVerticesBuffer() {
 		return verticesBuffer;
+	}
+
+	@Override
+	public float visualOffsetY() {
+		if(isometricShift) {
+			return super.visualOffsetY() + isometricModeShift;
+		}
+		return super.visualOffsetY();
 	}
 }

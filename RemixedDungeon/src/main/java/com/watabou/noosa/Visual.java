@@ -81,7 +81,7 @@ public class Visual extends Gizmo implements IPlaceable{
 	
 	protected void updateMatrix() {
 		Matrix.setIdentity( matrix );
-		Matrix.translate( matrix, x, y );
+		Matrix.translate( matrix, x, y + visualOffsetY() );
 		Matrix.translate( matrix, origin.x, origin.y );
 		if (angle != 0) {
 			Matrix.rotate( matrix, angle );

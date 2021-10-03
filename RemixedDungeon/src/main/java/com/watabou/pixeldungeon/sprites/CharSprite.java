@@ -125,6 +125,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public CharSprite() {
         super();
         listener = this;
+        isometricShift = true;
     }
 
     public void link(Char owner) {
@@ -149,7 +150,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         final int csize = DungeonTilemap.SIZE;
         PointF point = point();
         point.x = (point.x + width * 0.5f) / csize - 0.5f;
-        point.y = (point.y + height - visualOffsetY()) / csize - 1.0f;
+        point.y = (point.y + height ) / csize - 1.0f;
         return point;
     }
 
@@ -158,7 +159,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
         return new PointF(
                 (Dungeon.level.cellX(cell) + 0.5f) * csize - width * 0.5f,
-                (Dungeon.level.cellY(cell) + 1.0f) * csize - height + visualOffsetY()
+                (Dungeon.level.cellY(cell) + 1.0f) * csize - height
         );
     }
 

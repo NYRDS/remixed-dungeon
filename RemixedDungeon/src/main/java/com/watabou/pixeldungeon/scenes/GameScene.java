@@ -191,6 +191,7 @@ public class GameScene extends PixelScene {
     public void createGameScene(@NotNull Level level, @NotNull Hero hero) {
         playLevelMusic();
 
+        level.upgradeMap();
         GamePreferences.lastClass(hero.getHeroClass().classIndex());
 
         super.create();
@@ -307,9 +308,9 @@ public class GameScene extends PixelScene {
 
         fog = new FogOfWar(level.getWidth(), level.getHeight());
 
-        //if (level.noFogOfWar()) {
+        if (level.noFogOfWar()) {
             level.reveal();
-       // }
+        }
 
         if(roofTiles!=null) {
             add(roofTiles);
@@ -597,13 +598,16 @@ public class GameScene extends PixelScene {
         ItemSprite sprite = heap.sprite = (ItemSprite) heaps.recycle(ItemSprite.class);
         sprite.revive();
         sprite.link(heap);
+        sprite.isometricShift = true;
         heaps.add(sprite);
     }
 
     private void addDiscardedSprite(@NotNull Heap heap) {
         heap.sprite = (DiscardedItemSprite) heaps.recycle(DiscardedItemSprite.class);
+        heap.sprite.isometricShift = true;
         heap.sprite.revive();
         heap.sprite.link(heap);
+        heap.sprite.isometricShift = true;
         heaps.add(heap.sprite);
     }
 

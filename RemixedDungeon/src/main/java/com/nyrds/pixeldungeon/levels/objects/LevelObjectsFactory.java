@@ -31,7 +31,16 @@ public class LevelObjectsFactory {
     public static final String PEDESTAL = "pedestal";
     public static final String STATUE = "statue";
 	public static final String BARRICADE = "barricade";
-	static private HashMap<String, Class<? extends LevelObject>> mObjectsList;
+    public static final String FIRE_TRAP = "FireTrap";
+    public static final String TOXIC_TRAP = "ToxicTrap";
+    public static final String PARALYTIC_TRAP = "ParalyticTrap";
+    public static final String POISON_TRAP = "PoisonTrap";
+    public static final String ALARM_TRAP = "AlarmTrap";
+    public static final String LIGHTNING_TRAP = "LightningTrap";
+    public static final String GRIPPING_TRAP = "GrippingTrap";
+    public static final String SUMMONING_TRAP = "SummoningTrap";
+
+    static private HashMap<String, Class<? extends LevelObject>> mObjectsList;
 
 	static  {
 		initObjectsMap();

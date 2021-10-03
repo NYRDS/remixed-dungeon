@@ -26,7 +26,10 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 	private Callback    onAnimComplete;
 	private PointF      centerShift;
 
-	public LevelObjectSprite() {}
+	public LevelObjectSprite()
+	{
+		isometricShift = true;
+	}
 
 	public void move(int from, int to) {
 		if (getParent() != null) {
