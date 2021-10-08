@@ -16,7 +16,7 @@ return object.init{
         }
     end,
 
-    stepOn = function(self, object, hero)
+    nonPassable = function(self, object, hero)
         return true
     end,
 

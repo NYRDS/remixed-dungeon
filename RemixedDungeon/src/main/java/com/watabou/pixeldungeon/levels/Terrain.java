@@ -22,7 +22,7 @@ public class Terrain {
 	public static final int CHASM = 0;
 	public static final int EMPTY = 1;
 	public static final int GRASS = 2;
-	public static final int EMPTY_WELL = 3;
+	public static final int EMPTY_WELL = 3; //deprecated
 	public static final int WALL = 4;
 	public static final int DOOR = 5;
 	public static final int OPEN_DOOR = 6;
@@ -42,8 +42,8 @@ public class Terrain {
 	public static final int WELL = 34; //deprecated
 	public static final int STATUE = 35; //deprecated
 	public static final int STATUE_SP = 36; //deprecated
-	public static final int BOOKSHELF = 41;
-	public static final int ALCHEMY = 42;
+	public static final int BOOKSHELF = 41; //Alternative wall actually
+	public static final int ALCHEMY = 42; //deprecated
 	public static final int CHASM_FLOOR = 43;
 	public static final int CHASM_FLOOR_SP = 44;
 	public static final int CHASM_WALL = 45;

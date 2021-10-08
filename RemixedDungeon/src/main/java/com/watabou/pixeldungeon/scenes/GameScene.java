@@ -75,6 +75,7 @@ import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
+import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.DiscardedItemSprite;
@@ -472,7 +473,7 @@ public class GameScene extends PixelScene {
             if(!(level instanceof TestLevel) && !ModdingMode.inMod()) {
                 for (var lo : level.getAllLevelObjects()) {
                     int pos = lo.getPos();
-                    if (!level.passable[pos]) {
+                    if (!TerrainFlags.is(level.map[pos],TerrainFlags.PASSABLE)) {
                         throw new ModError(Utils.format("%s on a non-passable cell %d (%d) . level %s", lo.getEntityKind(), pos, level.map[pos], level.levelId));
                     }
 

@@ -4,8 +4,8 @@
   "script": "pot",
   "appearance": {
     "desc": {
-      "desc": "Level_TileDescWell",
-      "name": "Level_TileWell"
+      "desc": "Level_TileDescAlchemy",
+      "name": "Level_TileAlchemy"
     },
     "sprite":{
       "textureFile": "levelObjects/objects.png",

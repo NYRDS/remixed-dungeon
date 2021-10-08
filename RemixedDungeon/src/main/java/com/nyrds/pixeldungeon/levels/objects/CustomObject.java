@@ -75,6 +75,11 @@ public class CustomObject extends Deco {
     }
 
     @Override
+    public boolean nonPassable(Char ch) {
+        return script.runOptional("nonPassable", false, ch);
+    }
+
+    @Override
     public boolean interact(Char hero) {
         return script.runOptional("interact", false, hero);
     }
@@ -91,7 +96,7 @@ public class CustomObject extends Deco {
 
     @Override
     public boolean losBlocker() {
-        return script.runOptional("losBlocker", super.losBlocker());
+        return script.runOptional("losBlocker", false);
     }
 
     @Override

@@ -16,8 +16,8 @@ return object.init{
         }
     end,
 
-    stepOn = function(self, object, hero)
-        return false
+    nonPassable = function(self, object, hero)
+        return true
     end,
 
     burn = function(self, object)

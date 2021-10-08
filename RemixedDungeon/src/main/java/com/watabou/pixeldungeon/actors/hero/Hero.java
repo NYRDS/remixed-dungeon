@@ -485,6 +485,10 @@ public class Hero extends Char {
 						return false;
 					}
 				}
+				if(obj!=null && obj.nonPassable(this)) {
+					interrupt();
+					return false;
+				}
 			}
 
 		} else {

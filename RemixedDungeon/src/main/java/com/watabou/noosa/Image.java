@@ -41,7 +41,7 @@ public class Image extends Visual implements IPlaceable {
 	protected boolean dirty;
 	public boolean isometricShift;
 
-	static public float isometricModeShift = 0;
+	static public float isometricModeShift = -7;
 
 	
 	public Image() {
