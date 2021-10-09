@@ -105,6 +105,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
 
+import lombok.val;
 import lombok.var;
 
 public class GameScene extends PixelScene {
@@ -247,10 +248,9 @@ public class GameScene extends PixelScene {
         objects = new Group();
         add(objects);
 
-        for (int i = 0; i < level.objects.size(); i++) {
-            var objectLayer = level.objects.get(i);
-            for (int j = 0; j < objectLayer.size(); j++) {
-                addLevelObjectSprite(objectLayer.get(j));
+        for (val objectLayer: level.objects.values()) {
+            for (val object: objectLayer.values()) {
+                addLevelObjectSprite(object);
             }
         }
 

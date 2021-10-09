@@ -26,7 +26,6 @@ import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.IceCavesLevel;
 import com.nyrds.pixeldungeon.levels.NecroLevel;
-import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
@@ -89,6 +88,7 @@ import java.util.HashSet;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import lombok.SneakyThrows;
+import lombok.val;
 import lombok.var;
 
 import static com.nyrds.platform.game.RemixedDungeon.MOVE_TIMEOUTS;
@@ -730,13 +730,11 @@ public class Dungeon {
     }
 
     private static void markObjects(Char ch) {
-        for (int i = 0; i < level.objects.size(); i++) {
-            var objectLayer = level.objects.get(i);
-            for (int j = 0; j < objectLayer.size(); j++) {
-                LevelObject object = objectLayer.get(j);
+        for (val objectLayer: level.objects.values()) {
+            for (val object : objectLayer.values()) {
                 int pos = object.getPos();
                 if(!level.cellValid(pos)) {
-                    EventCollector.logException("Invalid object "+object.getEntityKind() + "pos in layer "+ i);
+                    EventCollector.logException("Invalid object "+object.getEntityKind());
                     level.remove(object);
                     continue;
                 }

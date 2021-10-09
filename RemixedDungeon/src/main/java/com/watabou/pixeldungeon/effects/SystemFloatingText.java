@@ -7,9 +7,10 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.SparseArray;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SystemFloatingText extends SystemText {
 
@@ -20,7 +21,7 @@ public class SystemFloatingText extends SystemText {
 
 	private int key = -1;
 
-	private static SparseArray<ArrayList<SystemFloatingText>> stacks = new SparseArray<>();
+	private static Map<Integer, ArrayList<SystemFloatingText>> stacks = new HashMap<>();
 
 	public SystemFloatingText() {
 		super(Utils.EMPTY_STRING, GuiProperties.mediumTitleFontSize(), false);

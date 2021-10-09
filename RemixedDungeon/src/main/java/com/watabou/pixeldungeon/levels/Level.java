@@ -208,8 +208,7 @@ public abstract class Level implements Bundlable {
 	public List<LevelObject> getAllLevelObjects() {
 		ArrayList<LevelObject> ret = new ArrayList<>();
 
-		for (int i = 0; i < objects.size(); i++) {
-			var objectLayer = objects.get(i);
+		for (val objectLayer: objects.values()) {
 			ret.addAll(objectLayer.values());
 		}
 
@@ -220,9 +219,7 @@ public abstract class Level implements Bundlable {
 	public LevelObject getTopLevelObject(int pos) {
 		LevelObject top = null;
 
-		for (int i = 0; i < objects.size(); i++) {
-			var objectLayer = objects.get(i);
-
+		for (val objectLayer: objects.values()) {
 			LevelObject candidate = objectLayer.get(pos);
 			if (top == null) {
 				top = candidate;
@@ -865,16 +862,7 @@ public abstract class Level implements Bundlable {
 
 		bundle.put(HEAPS, heaps.values());
 
-		ArrayList<LevelObject> objectsArray = new ArrayList<>();
-
-		for (int i = 0; i < objects.size(); i++) {
-			var objectLayer = objects.get(i);
-			for (int j = 0; j < objectLayer.size(); j++) {
-				objectsArray.add(objectLayer.get(j));
-			}
-		}
-
-		bundle.put(OBJECTS, objectsArray);
+		bundle.put(OBJECTS, getAllLevelObjects());
 
 		bundle.put(MOBS, mobs);
 		bundle.put(BLOBS, blobs.values());
