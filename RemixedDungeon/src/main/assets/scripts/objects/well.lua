@@ -16,6 +16,12 @@ return object.init{
         }
     end,
 
+    initObject = function(self, object, data)
+
+
+
+    end,
+
     stepOn = function(self, object, hero)
         return true
     end,

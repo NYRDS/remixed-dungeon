@@ -29,9 +29,15 @@ public class CustomObject extends Deco {
 
     @SneakyThrows
     private void initObject() {
-        String scriptFile = defMap.get(objectDesc).getString("script");
+        final JSONObject objectDef = defMap.get(objectDesc);
+        String scriptFile = objectDef.getString("script");
         script = new LuaScript("scripts/objects/"+ scriptFile, this);
         script.asInstance();
+
+        if(objectDef.has("data")) {
+            String data = objectDef.getString("data");
+            script.runOptionalNoRet("init", data);
+        }
     }
 
     protected void readObjectDesc() throws JSONException {
