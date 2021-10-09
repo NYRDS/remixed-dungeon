@@ -97,7 +97,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-import com.watabou.utils.SparseArray;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -194,7 +193,7 @@ public abstract class Level implements Bundlable {
 
 	@Nullable
 	public LevelObject getLevelObject(int pos, int layer) {
-		SparseArray<LevelObject> objectsLayer = objects.get(layer);
+		var objectsLayer = objects.get(layer);
 		if (objectsLayer == null) {
 			return null;
 		}
@@ -210,7 +209,7 @@ public abstract class Level implements Bundlable {
 		ArrayList<LevelObject> ret = new ArrayList<>();
 
 		for (int i = 0; i < objects.size(); i++) {
-			SparseArray<LevelObject> objectLayer = objects.valueAt(i);
+			var objectLayer = objects.get(i);
 			ret.addAll(objectLayer.values());
 		}
 
@@ -222,7 +221,7 @@ public abstract class Level implements Bundlable {
 		LevelObject top = null;
 
 		for (int i = 0; i < objects.size(); i++) {
-			SparseArray<LevelObject> objectLayer = objects.valueAt(i);
+			var objectLayer = objects.get(i);
 
 			LevelObject candidate = objectLayer.get(pos);
 			if (top == null) {
@@ -237,9 +236,9 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void putLevelObject(LevelObject lo) {
-		SparseArray<LevelObject> objectsLayer = objects.get(lo.getLayer());
+		var objectsLayer = objects.get(lo.getLayer());
 		if (objectsLayer == null) {
-			objectsLayer = new SparseArray<>();
+			objectsLayer = new HashMap<>();
 			objects.put(lo.getLayer(), objectsLayer);
 		}
 
@@ -448,8 +447,8 @@ public abstract class Level implements Bundlable {
 	private Set<ScriptedActor>                    scripts = new HashSet<>();
 	public  Set<Mob>                              mobs    = new HashSet<>();
 	public  Map<Class<? extends Blob>, Blob>      blobs   = new HashMap<>();
-	private SparseArray<Heap>                     heaps   = new SparseArray<>();
-	public  SparseArray<SparseArray<LevelObject>> objects = new SparseArray<>();
+	private Map<Integer, Heap>                    heaps   = new HashMap<>();
+	public  Map<Integer,Map<Integer,LevelObject>> objects = new HashMap<>();
 
 	protected ArrayList<Item> itemsToSpawn = new ArrayList<>();
 
@@ -494,7 +493,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public List<Heap> allHeaps() {
-		return heaps.values();
+		return new ArrayList<>(heaps.values());
 	}
 
 	public int cell(int i, int j) {
@@ -674,7 +673,7 @@ public abstract class Level implements Bundlable {
 
 		scripts = new HashSet<>();
 		mobs = new HashSet<>();
-		heaps = new SparseArray<>();
+		heaps = new HashMap<>();
 		blobs = new HashMap<>();
 
 		width = bundle.optInt(WIDTH, 32); // old levels compat
@@ -869,9 +868,9 @@ public abstract class Level implements Bundlable {
 		ArrayList<LevelObject> objectsArray = new ArrayList<>();
 
 		for (int i = 0; i < objects.size(); i++) {
-			SparseArray<LevelObject> objectLayer = objects.valueAt(i);
+			var objectLayer = objects.get(i);
 			for (int j = 0; j < objectLayer.size(); j++) {
-				objectsArray.add(objectLayer.valueAt(j));
+				objectsArray.add(objectLayer.get(j));
 			}
 		}
 
@@ -1353,22 +1352,19 @@ public abstract class Level implements Bundlable {
 
 	public boolean remove(@NotNull LevelObject levelObject) {
 
-		SparseArray<LevelObject> objectsLayer = objects.get(levelObject.getLayer());
+		var objectsLayer = objects.get(levelObject.getLayer());
 
 		if (objectsLayer == null) {
 			return false;
 		}
 
-		int index = objectsLayer.indexOfValue(levelObject);
+		final int levelObjectPos = levelObject.getPos();
 
-		if (index >= 0) {
-			objectsLayer.remove(objectsLayer.keyAt(index));
-			if(levelObject.losBlocker()) {
-				losBlocking[levelObject.getPos()] = false;
-			}
-			return true;
+		if(levelObject.losBlocker() && cellValid(levelObjectPos)) {
+			losBlocking[levelObjectPos] = false;
 		}
-		return false;
+
+		return objectsLayer.values().remove(levelObject);
 	}
 
 	protected boolean isCellSafeForPrize(int cell) {

@@ -99,7 +99,6 @@ import com.watabou.pixeldungeon.windows.WndBag.Mode;
 import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 import com.watabou.utils.Random;
-import com.watabou.utils.SparseArray;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -249,9 +248,9 @@ public class GameScene extends PixelScene {
         add(objects);
 
         for (int i = 0; i < level.objects.size(); i++) {
-            SparseArray<LevelObject> objectLayer = level.objects.valueAt(i);
+            var objectLayer = level.objects.get(i);
             for (int j = 0; j < objectLayer.size(); j++) {
-                addLevelObjectSprite(objectLayer.valueAt(j));
+                addLevelObjectSprite(objectLayer.get(j));
             }
         }
 

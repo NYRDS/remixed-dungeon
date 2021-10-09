@@ -72,7 +72,6 @@ import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
-import com.watabou.utils.SparseArray;
 import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.Contract;
@@ -732,9 +731,9 @@ public class Dungeon {
 
     private static void markObjects(Char ch) {
         for (int i = 0; i < level.objects.size(); i++) {
-            SparseArray<LevelObject> objectLayer = level.objects.valueAt(i);
+            var objectLayer = level.objects.get(i);
             for (int j = 0; j < objectLayer.size(); j++) {
-                LevelObject object = objectLayer.valueAt(j);
+                LevelObject object = objectLayer.get(j);
                 int pos = object.getPos();
                 if(!level.cellValid(pos)) {
                     EventCollector.logException("Invalid object "+object.getEntityKind() + "pos in layer "+ i);
