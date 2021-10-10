@@ -109,6 +109,7 @@ public class WellWater extends Blob {
 	
 	@Override
 	public void seed( int cell, int amount ) {
+		checkSeedCell(cell);
 		cur[pos] = 0;
 		pos = cell;
 		volume = cur[pos] = amount;

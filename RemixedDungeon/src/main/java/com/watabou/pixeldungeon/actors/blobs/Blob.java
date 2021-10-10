@@ -19,11 +19,13 @@ package com.watabou.pixeldungeon.actors.blobs;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.util.ModError;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.BArray;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import lombok.SneakyThrows;
@@ -164,6 +166,7 @@ public class Blob extends Actor implements NamedEntityKind {
 	}
 
 	public void seed(int cell, int amount) {
+		checkSeedCell(cell);
 		cur[cell] += amount;
 		volume += amount;
 	}
@@ -229,5 +232,11 @@ public class Blob extends Actor implements NamedEntityKind {
 	@Override
 	public String name() {
 		return getEntityKind();
+	}
+
+	protected void checkSeedCell(int cell) {
+		if(cell<0 || cell > this.cur.length) {
+			throw new ModError(Utils.format("Bad cell %d for blob %s", cell, getEntityKind()));
+		}
 	}
 }
