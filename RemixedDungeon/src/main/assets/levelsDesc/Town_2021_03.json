@@ -12,48 +12,48 @@
          "kind":"TownGuardNPC",
          "x":15,
          "y":21
-        }, 
+        },
         {
          "kind":"TownGuardNPC",
          "x":17,
          "y":21
-        }, 
+        },
         {
          "kind":"TownsfolkMovieNPC",
          "x":12,
          "y":15
-        }, 
+        },
         {
          "kind":"TownsfolkSilentNPC",
          "x":4,
          "y":10
-        }, 
+        },
         {
          "kind":"HealerNPC",
          "x":7,
          "y":10
-        }, 
+        },
         {
          "kind":"PlagueDoctorNPC",
          "x":14,
          "y":11
-        }, 
+        },
         {
          "kind":"TownsfolkNPC",
          "x":23,
          "y":7
-        }, 
+        },
         {
          "kind":"TownGuardNPC",
          "x":14,
          "y":5
-        }, 
+        },
         {
          "kind":"TownGuardNPC",
          "x":12,
          "y":5
         }],
- "multiexit":[[8, 9], [10, 15], [13, 4], [18, 4], [18, 16], [20, 10], [24, 13]],
+ "multiexit":[[8, 9], [10, 15], [13, 4], [18, 4], [18, 16], [24, 13], [20, 10]],
  "objects":[
         {
          "kind":"PortalGateReceiver",
