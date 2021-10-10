@@ -31,6 +31,8 @@ public class LevelObjectsFactory {
     public static final String PEDESTAL = "pedestal";
     public static final String STATUE = "statue";
 	public static final String BARRICADE = "barricade";
+	public static final String WELL = "well";
+	public static final String POT = "pot";
     public static final String FIRE_TRAP = "FireTrap";
     public static final String TOXIC_TRAP = "ToxicTrap";
     public static final String PARALYTIC_TRAP = "ParalyticTrap";

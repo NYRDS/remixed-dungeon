@@ -4,7 +4,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.Fleeing;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
-import com.nyrds.pixeldungeon.levels.Tools;
+import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
@@ -91,8 +91,8 @@ public class ShadowLord extends Boss implements IZapper {
 
 		if(!levelCreated)
 		{
-			Tools.makeEmptyLevel(level, false);
-			Tools.buildShadowLordMaze(level, 6);
+			LevelTools.makeEmptyLevel(level, false);
+			LevelTools.buildShadowLordMaze(level, 6);
 			levelCreated = true;
 		}
 
@@ -189,7 +189,7 @@ public class ShadowLord extends Boss implements IZapper {
 	public void die(NamedEntityKind cause) {
 		super.die(cause);
         yell(StringsManager.getVar(R.string.ShadowLord_Death));
-		Tools.makeEmptyLevel(level(), false);
+		LevelTools.makeEmptyLevel(level(), false);
 		level().unseal();
 		Badges.validateBossSlain(Badges.Badge.SHADOW_LORD_SLAIN);
 	}

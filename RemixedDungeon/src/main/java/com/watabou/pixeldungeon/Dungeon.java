@@ -207,7 +207,7 @@ public class Dungeon {
 
     @NotNull
     public static Level newLevel(@NotNull Position pos) {
-        try {
+
             loading.incrementAndGet();
             updateStatistics();
 
@@ -223,10 +223,8 @@ public class Dungeon {
 
             Statistics.qualifiedForNoKilling = !DungeonGenerator.getLevelProperty(level.levelId, "isSafe", false);
 
-            return level;
-        } finally {
             loading.decrementAndGet();
-        }
+            return level;
     }
 
     public static void resetLevel() {

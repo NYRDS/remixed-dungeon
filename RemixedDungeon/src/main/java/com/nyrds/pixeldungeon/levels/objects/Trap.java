@@ -92,6 +92,11 @@ public class Trap extends LevelObject {
 		return ret;
 	}
 
+	public void deactivate() {
+		uses = 0;
+		sprite.reset(usedImage());
+	}
+
 	@Override
 	public boolean stepOn(Char chr) {
 		interact(chr);

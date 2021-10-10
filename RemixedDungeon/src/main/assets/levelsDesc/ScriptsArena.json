@@ -42,6 +42,7 @@
        {
          "kind":"CustomObject",
          "object_desc":"well",
+         "data": "WaterOfAwareness",
          "x":4,
          "y":17
        },

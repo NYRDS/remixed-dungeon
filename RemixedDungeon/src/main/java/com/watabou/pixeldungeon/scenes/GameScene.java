@@ -24,6 +24,7 @@ import com.nyrds.pixeldungeon.effects.ParticleEffect;
 import com.nyrds.pixeldungeon.effects.ZapEffect;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.TestLevel;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
@@ -192,7 +193,7 @@ public class GameScene extends PixelScene {
     public void createGameScene(@NotNull Level level, @NotNull Hero hero) {
         playLevelMusic();
 
-        level.upgradeMap();
+        LevelTools.upgradeMap(level);
         GamePreferences.lastClass(hero.getHeroClass().classIndex());
 
         super.create();

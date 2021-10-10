@@ -329,32 +329,28 @@ public class DungeonGenerator {
 		String newLevelKind = getLevelKind(pos.levelId);
 		Class<? extends Level> levelClass = mLevelKindList.get(newLevelKind);
 
-		try {
-			if (levelClass == null) {
-				ModError.doReport(newLevelKind, new Exception("unknown level kind"));
-				levelClass = DeadEndLevel.class;
-			}
-
-			String levelId = pos.levelId;
-
-			Level ret = createFromId(levelId,levelClass);
-
-			JSONObject levelDesc = mLevels.getJSONObject(levelId);
-
-			int xs = 32;
-			int ys = 32;
-			if(levelDesc.has("size")) {
-				JSONArray levelSize = levelDesc.getJSONArray("size");
-				xs = levelSize.optInt(0, 32);
-				ys = levelSize.optInt(1, 32);
-			}
-
-			ret.create(xs, ys);
-
-			return ret;
-		} catch (JSONException e) {
-			throw ModdingMode.modException(e);
+		if (levelClass == null) {
+			ModError.doReport(newLevelKind, new Exception("unknown level kind"));
+			levelClass = DeadEndLevel.class;
 		}
+
+		String levelId = pos.levelId;
+
+		Level ret = createFromId(levelId,levelClass);
+
+		JSONObject levelDesc = mLevels.getJSONObject(levelId);
+
+		int xs = 32;
+		int ys = 32;
+		if(levelDesc.has("size")) {
+			JSONArray levelSize = levelDesc.getJSONArray("size");
+			xs = levelSize.optInt(0, 32);
+			ys = levelSize.optInt(1, 32);
+		}
+
+		ret.create(xs, ys);
+
+		return ret;
 	}
 
 	public static void showStory(Level level) {

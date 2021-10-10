@@ -172,6 +172,7 @@ local Sfx = {
 
 local Badges = luajava.bindClass("com.watabou.pixeldungeon.Badges")
 
+
 local RPD = {
     RemixedDungeon = RemixedDungeon,
     GameLoop = GameLoop,
@@ -253,8 +254,16 @@ local RPD = {
         blobClass:affect(cell)
     end,
 
-    placeBlob = function (blobClass, cell, amount)
-        GameScene:add( Blobs.Blob:seed(cell, amount, blobClass ) )
+    ---@param cell number
+    ---@param amount number
+    placeBlob = function (blobClass, cell, amount, level)
+        level = level or Dungeon.level
+
+        if not Dungeon.level then
+            Blobs.Blob:seed(level, cell, amount, blobClass )
+        else
+            GameScene:add( Blobs.Blob:seed(level, cell, amount, blobClass ) )
+        end
     end,
 
     playSound = function(sound)

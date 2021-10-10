@@ -28,12 +28,10 @@ import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.levels.Tools;
+import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
-import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
-import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
@@ -632,7 +630,7 @@ public abstract class Level implements Bundlable {
 
 	protected boolean noBuild() {
 		if(DungeonGenerator.getLevelProperty(levelId, "noBuild", false)) {
-			Tools.makeEmptyLevel(this, true);
+			LevelTools.makeEmptyLevel(this, true);
 			createScript();
 			buildFlagMaps();
 			cleanWalls();
@@ -680,7 +678,7 @@ public abstract class Level implements Bundlable {
 
 		map = bundle.getIntArray(MAP);
 
-		upgradeMap();
+		LevelTools.upgradeMap(this);
 
 		for(LayerId layerId: LayerId.values()) {
 			int [] layer = bundle.getIntArray(layerId.name());
@@ -736,109 +734,6 @@ public abstract class Level implements Bundlable {
 
 		buildFlagMaps();
 		cleanWalls();
-	}
-
-	public void upgradeMap() {
-		for(int i =0;i<map.length;++i){
-			switch (map[i]) { // old saves compatibility
-				case Terrain.BARRICADE:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.BARRICADE, i));
-				break;
-
-				case Terrain.PEDESTAL:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(LevelObjectsFactory.createCustomObject(this,LevelObjectsFactory.PEDESTAL, i));
-				break;
-
-				case Terrain.STATUE:
-					map[i] = Terrain.EMPTY;
-				case Terrain.STATUE_SP:
-					map[i] = Terrain.EMPTY_SP;
-					putLevelObject(LevelObjectsFactory.createCustomObject(this,LevelObjectsFactory.STATUE, i));
-				break;
-
-				case Terrain.TOXIC_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.TOXIC_TRAP, false));
-					break;
-
-				case Terrain.SECRET_TOXIC_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.TOXIC_TRAP, true));
-					break;
-
-				case Terrain.FIRE_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.FIRE_TRAP, false));
-					break;
-
-				case Terrain.SECRET_FIRE_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.FIRE_TRAP, true));
-					break;
-
-				case Terrain.PARALYTIC_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.PARALYTIC_TRAP, false));
-					break;
-
-				case Terrain.SECRET_PARALYTIC_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.PARALYTIC_TRAP, true));
-					break;
-
-				case Terrain.POISON_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.POISON_TRAP, false));
-					break;
-
-				case Terrain.SECRET_POISON_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.POISON_TRAP, true));
-					break;
-
-				case Terrain.ALARM_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.ALARM_TRAP, false));
-					break;
-
-				case Terrain.SECRET_ALARM_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.ALARM_TRAP, true));
-					break;
-
-				case Terrain.LIGHTNING_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.LIGHTNING_TRAP, false));
-					break;
-
-				case Terrain.SECRET_LIGHTNING_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.LIGHTNING_TRAP, true));
-					break;
-
-				case Terrain.GRIPPING_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.GRIPPING_TRAP, false));
-					break;
-
-				case Terrain.SECRET_GRIPPING_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.GRIPPING_TRAP, true));
-					break;
-
-				case Terrain.SUMMONING_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.SUMMONING_TRAP, false));
-					break;
-
-				case Terrain.SECRET_SUMMONING_TRAP:
-					map[i] = Terrain.EMPTY;
-					putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.SUMMONING_TRAP, true));
-					break;
-			}
-		}
 	}
 
 	@Override
@@ -1944,6 +1839,7 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
+	@LuaInterface
 	public int blobAmountAt(Class<? extends Blob> blobClass, int cell) {
 		Blob blob = blobs.get(blobClass);
 		if (blob == null) {

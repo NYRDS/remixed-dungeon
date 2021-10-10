@@ -30,7 +30,7 @@ public class EventCollector {
 	}
 
 	static public void init() {
-	    if(analyticsUsable()) {
+	    if(analyticsUsable() && !Util.isDebug()) {
             mFirebaseAnalytics = FirebaseAnalytics.getInstance(RemixedDungeonApp.getContext());
             mFirebaseAnalytics.setAnalyticsCollectionEnabled(true);
             mDisabled = false;

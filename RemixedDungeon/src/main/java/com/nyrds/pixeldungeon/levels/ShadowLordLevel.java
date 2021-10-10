@@ -25,7 +25,7 @@ public class ShadowLordLevel extends BossLevel {
 
 	@Override
 	protected boolean build() {
-		Tools.makeShadowLordLevel(this);
+		LevelTools.makeShadowLordLevel(this);
 		return true;
 	}
 

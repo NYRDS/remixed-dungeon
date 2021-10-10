@@ -33,11 +33,6 @@ public class CustomObject extends Deco {
         String scriptFile = objectDef.getString("script");
         script = new LuaScript("scripts/objects/"+ scriptFile, this);
         script.asInstance();
-
-        if(objectDef.has("data")) {
-            String data = objectDef.getString("data");
-            script.runOptionalNoRet("init", data);
-        }
     }
 
     protected void readObjectDesc() throws JSONException {
@@ -66,7 +61,10 @@ public class CustomObject extends Deco {
     @Override
     void setupFromJson(Level level, JSONObject obj) throws JSONException {
         super.setupFromJson(level, obj);
-
+        if(obj.has("data")) {
+            String data = obj.getString("data");
+            script.runOptionalNoRet("init", level, data);
+        }
     }
 
     @Override

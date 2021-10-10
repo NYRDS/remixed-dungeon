@@ -16,9 +16,24 @@ return object.init{
         }
     end,
 
-    initObject = function(self, object, data)
+    init = function(self, object,level, data)
+        local pos = object:getPos()
 
+        RPD.glog("level:".. tostring(level))
 
+        if level:blobAmountAt(RPD.Blobs.WaterOfAwareness, pos) > 0 then
+            return
+        end
+
+        if level:blobAmountAt(RPD.Blobs.WaterOfHealth, pos) > 0 then
+            return
+        end
+
+        if level:blobAmountAt(RPD.Blobs.WaterOfTransmutation, pos) > 0 then
+            return
+        end
+
+        RPD.placeBlob(RPD.Blobs[data],pos,1, level)
 
     end,
 
