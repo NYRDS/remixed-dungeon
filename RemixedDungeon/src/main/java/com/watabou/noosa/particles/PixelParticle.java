@@ -29,7 +29,7 @@ public class PixelParticle extends PseudoPixel {
 	
 	public PixelParticle() {
 		super();
-		
+		negativeIsometricShift = true;
 		origin.set( +0.5f );
 	}
 	
@@ -38,7 +38,7 @@ public class PixelParticle extends PseudoPixel {
 		
 		this.x = x;
 		this.y = y;
-		
+
 		color( color );
 		size( this.size = size );
 			

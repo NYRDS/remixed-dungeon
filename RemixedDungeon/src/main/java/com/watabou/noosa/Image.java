@@ -40,6 +40,7 @@ public class Image extends Visual implements IPlaceable {
 	
 	protected boolean dirty;
 	public boolean isometricShift;
+	public boolean negativeIsometricShift;
 
 	static public float isometricModeShift = -7;
 
@@ -200,6 +201,11 @@ public class Image extends Visual implements IPlaceable {
 		if(isometricShift) {
 			return super.visualOffsetY() + isometricModeShift;
 		}
+
+		if(negativeIsometricShift) {
+			return super.visualOffsetY() - isometricModeShift;
+		}
+
 		return super.visualOffsetY();
 	}
 }

@@ -68,34 +68,38 @@ public class WellWater extends Blob {
 			volume = off[pos] = cur[pos] = 0;
 			return true;
 			
-		} else if ((heap = Dungeon.level.getHeap( pos )) != null) {
-			
-			Item oldItem = heap.peek();
-			Item newItem = affectItem( oldItem );
+		} else {
+			final Level level = Dungeon.level;
 
-			if (newItem != null) {
-				if (newItem != oldItem) {
-					if (oldItem.quantity() > 1) {
-						oldItem.quantity( oldItem.quantity() - 1 );
-						heap.drop( newItem );
-					} else {
-						heap.replace( oldItem, newItem );
+			if ((heap = level.getHeap( pos )) != null) {
+
+				Item oldItem = heap.peek();
+				Item newItem = affectItem( oldItem );
+
+				if (newItem != null) {
+					if (newItem != oldItem) {
+						if (oldItem.quantity() > 1) {
+							oldItem.quantity( oldItem.quantity() - 1 );
+							heap.drop( newItem );
+						} else {
+							heap.replace( oldItem, newItem );
+						}
 					}
+					heap.sprite.link();
+					volume = off[pos] = cur[pos] = 0;
+					return true;
+				} else {
+					int newPlace;
+					do {
+						newPlace = pos + Level.NEIGHBOURS8[Random.Int( 8 )];
+					} while (!level.passable[newPlace] && !level.avoid[newPlace]);
+					level.animatedDrop( heap.pickUp(), newPlace );
+
+					return false;
 				}
-				heap.sprite.link();
-				volume = off[pos] = cur[pos] = 0;
-				return true;
 			} else {
-				int newPlace;
-				do {
-					newPlace = pos + Level.NEIGHBOURS8[Random.Int( 8 )];
-				} while (!Dungeon.level.passable[newPlace] && !Dungeon.level.avoid[newPlace]);
-				Dungeon.level.animatedDrop( heap.pickUp(), newPlace );
-				
 				return false;
 			}
-		} else {
-			return false;
 		}
 	}
 	

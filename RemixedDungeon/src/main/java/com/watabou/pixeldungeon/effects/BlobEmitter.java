@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.effects;
 
+import com.watabou.noosa.Image;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -49,6 +50,10 @@ public class BlobEmitter extends Emitter {
 			if (map[i] > 0 && Dungeon.isCellVisible(i)) {
 				float x = ((i % level.getWidth()) + Random.Float()) * size;
 				float y = ((i / level.getWidth()) + Random.Float()) * size;
+
+
+				y+= Image.isometricModeShift;
+
 				factory.emit( this, index, x, y );
 			}
 		}

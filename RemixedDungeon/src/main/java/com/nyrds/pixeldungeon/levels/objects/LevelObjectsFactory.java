@@ -92,9 +92,9 @@ public class LevelObjectsFactory {
 		JSONObject desc = new JSONObject();
 
 		desc.put("object_desc", kind);
-		obj.setupFromJson(level, desc);
 		obj.setPos(cell);
 
+		obj.setupFromJson(level, desc);
 		return obj;
 	}
 
@@ -106,9 +106,9 @@ public class LevelObjectsFactory {
 
 		int x = desc.getInt("x");
 		int y = desc.getInt("y");
+		obj.setPos(level.cell(x,y));
 
 		obj.setupFromJson(level, desc);
-		obj.setPos(level.cell(x,y));
 		return obj;
 	}
 

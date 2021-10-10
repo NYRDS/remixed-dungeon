@@ -177,7 +177,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     private final Integer[] wallSTiles = {32, 33, 34};
-    private final Integer[] wallNTiles = {179};
     private final Integer[] wallVerticalTiles = {0, 16};
 
     private final Integer[] wallVerticalCrossTiles = {3, 19};
@@ -275,7 +274,13 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             return true;
         }
 
-        return level.map[cell] == Terrain.BOOKSHELF;
+        switch (level.map[cell]) {
+            case Terrain.BOOKSHELF:
+            case Terrain.SECRET_DOOR:
+                return true;
+        }
+
+        return false;
     }
     
     boolean isWallCell(int cell) {
@@ -504,6 +509,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         super.draw();
         mWallsLayer.draw();
         mDecoLayer.draw();
+        mDoorsLayer.draw();
     }
 
     public void updateAll() {
@@ -579,7 +585,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         public void draw() {
             mRoofLayer.draw();
             mCornersLayer.draw();
-            mDoorsLayer.draw();
+
         }
     }
 }
