@@ -10,12 +10,6 @@ local object = require "scripts/lib/object"
 
 
 return object.init{
-    desc  = function ()
-        return {
-
-        }
-    end,
-
     init = function(self, object,level, data)
         local pos = object:getPos()
 

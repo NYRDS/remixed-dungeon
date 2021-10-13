@@ -107,4 +107,9 @@ public class CustomObject extends Deco {
     public String getEntityKind() {
         return objectDesc;
     }
+
+    @Override
+    public void bump(Presser presser) {
+        script.runOptionalNoRet("bump", presser);
+    }
 }

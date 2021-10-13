@@ -108,7 +108,7 @@ public class Plant extends LevelObject {
 
 	@Override
 	public boolean nonPassable(Char ch) {
-		return ch instanceof Hero;
+		return false;
 	}
 
 }

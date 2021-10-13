@@ -23,6 +23,7 @@ import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundle;
 
 public class Alchemy extends Blob {
@@ -59,12 +60,14 @@ public class Alchemy extends Blob {
 	}
 	
 	public static void transmute( int cell ) {
-		Heap heap = Dungeon.level.getHeap( cell );
+		final Level level = Dungeon.level;
+
+		Heap heap = level.getHeap( cell );
 		if (heap != null) {
 			
 			Item result = heap.transmute();
 			if (result != null) {
-				Dungeon.level.animatedDrop( result, cell );
+				level.animatedDrop( result, cell );
 			}
 		}
 	}

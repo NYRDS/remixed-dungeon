@@ -60,7 +60,8 @@ local Blobs = {
     Regrowth = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Regrowth"),
     WaterOfHealth = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.WaterOfHealth"),
     WaterOfTransmutation = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.WaterOfTransmutation"),
-    WaterOfAwareness = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.WaterOfAwareness")
+    WaterOfAwareness = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.WaterOfAwareness"),
+    Alchemy = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Alchemy")
 }
 
 local PseudoBlobs = {

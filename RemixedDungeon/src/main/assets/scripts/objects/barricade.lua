@@ -10,11 +10,6 @@ local object = require "scripts/lib/object"
 
 
 return object.init{
-    desc  = function ()
-        return {
-
-        }
-    end,
 
     nonPassable = function(self, object)
         return true

@@ -10,14 +10,25 @@ local object = require "scripts/lib/object"
 
 
 return object.init{
-    desc  = function ()
-        return {
 
-        }
+    init = function(self, object,level, data)
+        local pos = object:getPos()
+
+        if level:blobAmountAt(RPD.Blobs.Alchemy, pos) > 0 then
+            return
+        end
+
+        RPD.placeBlob(RPD.Blobs.Alchemy,pos,1, level)
+
     end,
 
     stepOn = function(self, object, hero)
         return true
+    end,
+
+    bump = function(self, object, presser)
+        RPD.glog("bump by :".. tostring(presser:getEntityKind()))
+        RPD.Blobs.Alchemy:transmute(object:getPos())
     end,
 
     image = function(self, object)

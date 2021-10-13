@@ -10,12 +10,6 @@ local object = require "scripts/lib/object"
 
 
 return object.init{
-    desc  = function ()
-        return {
-
-        }
-    end,
-
     stepOn = function(self, object, hero)
         return true
     end,
