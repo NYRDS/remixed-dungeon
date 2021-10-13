@@ -221,7 +221,10 @@ public class Trap extends LevelObject {
 
 	@Override
 	public boolean nonPassable(Char ch) {
-		return !secret && uses > 0;
+		if(ch instanceof Mob) {
+			return !secret && uses > 0;
+		}
+		return true;
 	}
 
 	@Override

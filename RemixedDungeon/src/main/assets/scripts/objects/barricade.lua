@@ -16,7 +16,7 @@ return object.init{
         }
     end,
 
-    nonPassable = function(self, object, hero)
+    nonPassable = function(self, object)
         return true
     end,
 

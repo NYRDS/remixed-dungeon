@@ -128,7 +128,7 @@ public abstract class PortalGate extends Deco {
 
 	@Override
 	public boolean nonPassable(Char ch) {
-		return true;
+		return false;
 	}
 
 	public abstract boolean portalInteract(Hero hero);

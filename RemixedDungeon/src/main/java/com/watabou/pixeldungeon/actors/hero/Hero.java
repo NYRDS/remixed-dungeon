@@ -479,15 +479,20 @@ public class Hero extends Char {
 				}
 
 				LevelObject obj = level.getTopLevelObject(target);
+
 				if (obj != null && obj.pushable(this)) {
-					interrupt();
-					if (!obj.push(this)) {
+
+					if(obj.pushable(this)) {
+						interrupt();
+						if (!obj.push(this)) {
+							return false;
+						}
+					}
+
+					if(obj.nonPassable(this)) {
+						interrupt();
 						return false;
 					}
-				}
-				if(obj!=null && obj.nonPassable(this)) {
-					interrupt();
-					return false;
 				}
 			}
 
@@ -511,6 +516,11 @@ public class Hero extends Char {
 
 			LevelObject obj = level.getTopLevelObject(step);
 			if (obj != null) {
+
+				if(obj.nonPassable(this)) {
+					interrupt();
+					return false;
+				}
 
 				if (step == target) {
 					interrupt();
