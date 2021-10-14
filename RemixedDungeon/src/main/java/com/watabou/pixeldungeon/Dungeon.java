@@ -488,7 +488,7 @@ public class Dungeon {
             WndResurrect.instance.hide();
             Hero.reallyDie(hero, WndResurrect.causeOfDeath);
         } else {
-            EventCollector.logException(new Exception("spurious save"));
+            EventCollector.logException(new Exception(Utils.format("spurious save: %s %s", String.valueOf(level), String.valueOf(hero))));
         }
     }
 
@@ -506,9 +506,9 @@ public class Dungeon {
             return;
         }
 
-        lastSaveTimestamp = SystemTime.now();
-
         saveAllImpl();
+
+        lastSaveTimestamp = SystemTime.now();
     }
 
 
