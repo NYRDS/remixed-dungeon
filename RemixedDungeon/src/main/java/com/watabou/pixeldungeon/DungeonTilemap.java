@@ -47,9 +47,11 @@ public abstract class DungeonTilemap extends Tilemap {
 	static public @NotNull DungeonTilemap factory(Level level, String tiles) {
 		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
 
-		if(tiles.contains("_xyz")) {
+
+		if (tiles.contains("_xyz")) {
 			return new XyzDungeonTilemap(level, tiles);
 		}
+
 
 		if(probe.size() == 256) {
 			return new VariativeDungeonTilemap(level, tiles);

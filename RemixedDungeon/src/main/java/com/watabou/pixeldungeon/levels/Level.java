@@ -39,6 +39,7 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModError;
@@ -778,8 +779,10 @@ public abstract class Level implements Bundlable {
 
 	public String getTilesTex() {
 
-		return tilesTexXyz();
-		/*
+		if(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false)) {
+			return tilesTexXyz();
+		}
+
 		String tiles = DungeonGenerator.getLevelProperty(levelId, "tiles", null);
 		if (tiles != null) {
 			return tiles;
@@ -795,7 +798,6 @@ public abstract class Level implements Bundlable {
 		}
 
 		return tilesTexEx();
-		 */
 	}
 
 	public String tilesTex() {

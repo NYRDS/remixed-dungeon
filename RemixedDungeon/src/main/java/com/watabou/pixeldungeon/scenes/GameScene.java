@@ -599,16 +599,16 @@ public class GameScene extends PixelScene {
         ItemSprite sprite = heap.sprite = (ItemSprite) heaps.recycle(ItemSprite.class);
         sprite.revive();
         sprite.link(heap);
-        sprite.isometricShift = true;
+        sprite.setIsometricShift(true);
         heaps.add(sprite);
     }
 
     private void addDiscardedSprite(@NotNull Heap heap) {
         heap.sprite = (DiscardedItemSprite) heaps.recycle(DiscardedItemSprite.class);
-        heap.sprite.isometricShift = true;
+        heap.sprite.setIsometricShift(true);
         heap.sprite.revive();
         heap.sprite.link(heap);
-        heap.sprite.isometricShift = true;
+        heap.sprite.setIsometricShift(true);
         heaps.add(heap.sprite);
     }
 

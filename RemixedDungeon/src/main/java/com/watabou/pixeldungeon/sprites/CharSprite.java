@@ -125,7 +125,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public CharSprite() {
         super();
         listener = this;
-        isometricShift = true;
+        setIsometricShift(true);
     }
 
     public void link(Char owner) {

@@ -78,7 +78,7 @@ public class ItemSprite extends MovieClip {
 
 	public ItemSprite(Heap heap) {
 		super();
-		isometricShift = true;
+		setIsometricShift(true);
 		link(heap);
 	}
 

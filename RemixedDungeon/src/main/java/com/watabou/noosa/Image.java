@@ -19,6 +19,7 @@ package com.watabou.noosa;
 
 import com.nyrds.pixeldungeon.windows.IPlaceable;
 import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.storage.Preferences;
 import com.nyrds.util.ModError;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
@@ -39,8 +40,8 @@ public class Image extends Visual implements IPlaceable {
 	private final FloatBuffer verticesBuffer;
 	
 	protected boolean dirty;
-	public boolean isometricShift;
-	public boolean negativeIsometricShift;
+	private boolean isometricShift;
+	private boolean negativeIsometricShift;
 
 	static public float isometricModeShift = -7;
 
@@ -207,5 +208,17 @@ public class Image extends Visual implements IPlaceable {
 		}
 
 		return super.visualOffsetY();
+	}
+
+	public void setIsometricShift(boolean isometricShift) {
+		if(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES,false)) {
+			this.isometricShift = isometricShift;
+		}
+	}
+
+	public void setNegativeIsometricShift(boolean negativeIsometricShift) {
+		if(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES,false)) {
+			this.negativeIsometricShift = negativeIsometricShift;
+		}
 	}
 }

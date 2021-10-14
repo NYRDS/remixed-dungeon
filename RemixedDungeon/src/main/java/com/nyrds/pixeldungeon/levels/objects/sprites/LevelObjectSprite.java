@@ -28,7 +28,7 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 
 	public LevelObjectSprite()
 	{
-		isometricShift = true;
+		setIsometricShift(true);
 	}
 
 	public void move(int from, int to) {
