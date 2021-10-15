@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -49,7 +48,7 @@ public class Seed extends Item {
     protected void onThrow(int cell, @NotNull Char thrower) {
         Level level = thrower.level();
 
-        if (level.map[cell] == Terrain.ALCHEMY || level.pit[cell]) {
+        if (level.pit[cell] || level.getTopLevelObject(cell) != null) {
             super.onThrow(cell, thrower);
         } else {
             level.plant(this, cell);

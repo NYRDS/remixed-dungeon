@@ -4,6 +4,8 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.cellCondition;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.Ascend;
@@ -187,7 +189,9 @@ public class CharUtils {
 
     @NotNull
     public static  CharAction actionForCell(Char actor, int cell, @NotNull Level level) {
-        if (level.map[cell] == Terrain.ALCHEMY && cell != actor.getPos()) {
+        final LevelObject topLevelObject = level.getTopLevelObject(cell);
+
+        if (cell != actor.getPos() && topLevelObject != null && topLevelObject.getEntityKind().equals(LevelObjectsFactory.POT) ){
             return new Cook(cell);
         }
 

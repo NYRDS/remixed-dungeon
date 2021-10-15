@@ -53,9 +53,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.RespawnerActor;
-import com.watabou.pixeldungeon.actors.blobs.Alchemy;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.blobs.WellWater;
 import com.watabou.pixeldungeon.actors.buffs.Awareness;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
@@ -1165,8 +1163,7 @@ public abstract class Level implements Bundlable {
 			}
 		}
 
-		if (((map[cell] == Terrain.ALCHEMY) && !(item instanceof Seed))
-				|| (Actor.findChar(cell) instanceof NPC)) {
+		if ( Actor.findChar(cell) instanceof NPC) {
 			int newCell = getEmptyCellNextTo(cell);
 			if (cellValid(newCell)) {
 				cell = newCell;
@@ -1361,14 +1358,6 @@ public abstract class Level implements Bundlable {
 			switch (map[cell]) {
 				case Terrain.HIGH_GRASS:
 					HighGrass.trample(this, cell, chr);
-					break;
-
-				case Terrain.WELL:
-					WellWater.affectCell(cell);
-					break;
-
-				case Terrain.ALCHEMY:
-					Alchemy.transmute(cell);
 					break;
 			}
 		}
