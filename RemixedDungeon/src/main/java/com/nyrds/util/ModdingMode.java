@@ -1,9 +1,11 @@
 package com.nyrds.util;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.Assets;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -328,5 +330,13 @@ public class ModdingMode {
 
 	public static RuntimeException modException(String s, JSONException e) {
 		return new ModError(mActiveMod + ":" + s, e);
+	}
+
+	public static String getRewardedVideoId() {
+		return StringsManager.getVar(R.string.cinemaRewardAdUnitId);
+	}
+
+	public static String getInterstitialId() {
+		return StringsManager.getVar(R.string.saveLoadAdUnitId);
 	}
 }

@@ -11,6 +11,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.utils.Bundle;
 
+import lombok.var;
+
 public class MimicAmulet extends Mob {
 
 	@Packable
@@ -28,7 +30,9 @@ public class MimicAmulet extends Mob {
 		addImmunity( Paralysis.class );
 		addImmunity( Stun.class );
 
-		collect(new SkeletonKey());
+		var prize = new SkeletonKey();
+		prize.levelId = "26";
+		collect(prize);
 	}
 
 	

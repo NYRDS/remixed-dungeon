@@ -6,9 +6,8 @@ import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.InterstitialPoint;
 
 public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialProvider {
@@ -26,7 +25,7 @@ public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialPr
 
         InterstitialAd.load(
                 Game.instance(),
-                StringsManager.getVar(R.string.saveLoadAdUnitId),
+                ModdingMode.getInterstitialId(),
                 AdMob.makeAdRequest(),
                 new InterstitialAdLoadCallback() {
                     @Override

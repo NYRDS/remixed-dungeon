@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.nyrds.LuaInterface;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
@@ -58,7 +59,8 @@ public class Alchemy extends Blob {
 		pos = cell;
 		volume = cur[pos] = amount;
 	}
-	
+
+	@LuaInterface
 	public static void transmute( int cell ) {
 		final Level level = Dungeon.level;
 

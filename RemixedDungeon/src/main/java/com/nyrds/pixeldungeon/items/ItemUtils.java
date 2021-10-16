@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.noosa.ColorBlock;
@@ -12,18 +13,23 @@ import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
 public class ItemUtils {
+
+    @LuaInterface
     public static void throwItemAway(int pos) {
-		Heap heap = Dungeon.level.getHeap( pos );
+        final Level level = Dungeon.level;
+
+        Heap heap = level.getHeap( pos );
 		if(heap!=null) {
 			Item item = heap.pickUp();
-			int cell = Dungeon.level.getEmptyCellNextTo(pos);
-			if (Dungeon.level.cellValid(cell)) {
-				Dungeon.level.animatedDrop(item,cell);
+			int cell = level.getEmptyCellNextTo(pos);
+			if (level.cellValid(cell)) {
+				level.animatedDrop(item,cell);
 			}
 		}
 	}

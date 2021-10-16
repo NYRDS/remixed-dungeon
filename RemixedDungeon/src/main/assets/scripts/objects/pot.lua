@@ -18,7 +18,7 @@ return object.init{
             return
         end
 
-        RPD.placeBlob(RPD.Blobs.Alchemy,pos,1, level)
+        RPD.placeBlob(RPD.Blobs.Alchemy, pos,1, level)
 
     end,
 
@@ -27,8 +27,15 @@ return object.init{
     end,
 
     bump = function(self, object, presser)
+        local pos = object:getPos()
+
+        if not presser.alchemyClass and presser.price then
+            local level = object:level()
+            RPD.ItemUtils:throwItemAway(pos)
+            return
+        end
         RPD.glog("bump by :".. tostring(presser:getEntityKind()))
-        RPD.Blobs.Alchemy:transmute(object:getPos())
+        RPD.Blobs.Alchemy:transmute(pos)
     end,
 
     image = function(self, object)

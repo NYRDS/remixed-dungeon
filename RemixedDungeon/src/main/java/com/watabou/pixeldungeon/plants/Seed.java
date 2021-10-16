@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
@@ -34,6 +35,7 @@ public class Seed extends Item {
     protected Class<? extends Plant> plantClass;
     protected String plantName;
 
+    @LuaInterface
     public Class<? extends Item> alchemyClass;
 
     @Override

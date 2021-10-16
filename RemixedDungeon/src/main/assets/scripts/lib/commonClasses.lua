@@ -172,7 +172,7 @@ local Sfx = {
 }
 
 local Badges = luajava.bindClass("com.watabou.pixeldungeon.Badges")
-
+local ItemUtils = luajava.bindClass("com.nyrds.pixeldungeon.items.ItemUtils")
 
 local RPD = {
     RemixedDungeon = RemixedDungeon,
@@ -183,6 +183,7 @@ local RPD = {
     PathFinder = PathFinder,
     Badges = Badges,
     Effects = Effects,
+    ItemUtils = ItemUtils,
 
     CharsList = CharsList,
     CharUtils = CharUtils,
