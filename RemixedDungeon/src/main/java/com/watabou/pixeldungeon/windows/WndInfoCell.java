@@ -85,6 +85,7 @@ public class WndInfoCell extends Window {
 			sprite.setIsometricShift(false);
 			add(sprite);
 
+			titlebar.icon(sprite);
 			desc = new StringBuilder(obj.desc());
 		}
 

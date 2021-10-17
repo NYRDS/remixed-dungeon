@@ -95,19 +95,20 @@ public class StandardPainter extends Painter {
 		for (int i=room.top + 1; i < room.bottom; i++) {
 			for (int j=room.left + 1; j < room.right; j++) {
 				int t = Terrain.EMBERS;
-				level.map[i * level.getWidth() + j] = t;
+				final int pos = i * level.getWidth() + j;
+				level.map[pos] = t;
 				switch (Random.Int( 5 )) {
 				case 1:
-					level.putLevelObject(Trap.makeSimpleTrap(t, "FireTrap", false));
+					level.putLevelObject(Trap.makeSimpleTrap(pos, "FireTrap", false));
 					break;
 				case 2:
-					level.putLevelObject(Trap.makeSimpleTrap(t, "FireTrap", true));
+					level.putLevelObject(Trap.makeSimpleTrap(pos, "FireTrap", true));
 					break;
 				case 3:
 					t = Terrain.INACTIVE_TRAP;
 					break;
 				}
-				level.map[i * level.getWidth() + j] = t;
+				level.map[pos] = t;
 			}
 		}
 	}

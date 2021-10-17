@@ -191,11 +191,17 @@ public class Trap extends LevelObject {
 
 	@Override
 	public String desc() {
+		if(uses <= 0) {
+			return StringsManager.getVar(R.string.Level_TileDescInactiveTrap);
+		}
 		return StringsManager.getVar(R.string.Level_TileDescTrap);
 	}
 
 	@Override
 	public String name() {
+		if(uses <= 0) {
+			return StringsManager.getVar(R.string.Level_TileInactiveTrap);
+		}
 		return StringsManager.maybeId("Level_Tile"+kind);
 	}
 
@@ -224,7 +230,7 @@ public class Trap extends LevelObject {
 		if(ch instanceof Mob) {
 			return !secret && uses > 0;
 		}
-		return true;
+		return false;
 	}
 
 	@Override
@@ -248,5 +254,12 @@ public class Trap extends LevelObject {
 			trap.get("setData").call(trap,LuaValue.valueOf(data));
 			trap.get("trigger").call(trap,LuaValue.valueOf(cell), CoerceJavaToLua.coerce(ch));
 		}
+	}
+
+	@Override
+	public void resetVisualState() {
+		super.resetVisualState();
+		sprite.setIsometricShift(false);
+		sprite.setNegativeIsometricShift(false);
 	}
 }
