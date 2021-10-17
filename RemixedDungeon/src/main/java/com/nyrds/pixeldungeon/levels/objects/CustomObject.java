@@ -112,4 +112,15 @@ public class CustomObject extends Deco {
     public void bump(Presser presser) {
         script.runOptionalNoRet("bump", presser);
     }
+
+    @Override
+    public String name() {
+        return script.runOptional("name", super.name(), level());
+    }
+
+    @Override
+    public String desc() {
+        return script.runOptional("info", super.desc(), level());
+    }
+
 }

@@ -2826,4 +2826,16 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="MoongraceBuff_Info">The air around becomes more saturated, which allows for better concentration and restoration of magical reserves.</string>
   <string name="EncumbranceBuff_Name">Burden</string>
   <string name="EncumbranceBuff_Info">Not enough strength to use %s effectively.</string>
+
+  <string name="Level_TileDescPedestal"> </string>
+  <string name="Level_TileDescWell"> </string>
+
+  <string name="Welcome_Text_30_2">
+    remix.30.2\n
+    - Gameplay:\n
+    -- Optional Isometric Mode!\n
+    - Modding:\n
+    -- Moddable Level Objects\n
+    - Bugs fixed\n
+    </string>
 </resources>

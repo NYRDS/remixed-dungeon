@@ -15,6 +15,14 @@ return object.init{
         return true
     end,
 
+    name = function(self, object, level)
+        return level:tileName(RPD.Terrain.STATUE)
+    end,
+
+    info = function(self, object, level)
+        return level:tileDesc(RPD.Terrain.STATUE)
+    end,
+
     image = function(self, object)
         return 16 * 8 + object:level():objectsKind()
     end

@@ -1491,6 +1491,7 @@ public abstract class Level implements Bundlable {
 				|| diff == getWidth() - 1;
 	}
 
+	@LuaInterface
 	public String tileName(int tile) {
 
 		if (tile >= Terrain.WATER_TILES) {
@@ -1578,6 +1579,7 @@ public abstract class Level implements Bundlable {
         }
 	}
 
+	@LuaInterface
 	public String tileDesc(int tile) {
 
 		switch (tile) {
