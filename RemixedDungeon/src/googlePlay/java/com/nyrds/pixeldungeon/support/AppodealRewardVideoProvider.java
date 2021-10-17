@@ -13,7 +13,6 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
     public AppodealRewardVideoProvider() {
 
         Game.instance().runOnUiThread(() -> {
-            Appodeal.setTesting(true);
             AppodealAdapter.init();
 
             Appodeal.cache(RemixedDungeon.instance(), Appodeal.REWARDED_VIDEO);
