@@ -1163,12 +1163,21 @@ public abstract class Level implements Bundlable {
 			}
 		}
 
+		final int emptyCellNextTo = getEmptyCellNextTo(cell);
 		if ( Actor.findChar(cell) instanceof NPC) {
-			int newCell = getEmptyCellNextTo(cell);
-			if (cellValid(newCell)) {
-				cell = newCell;
+			if (cellValid(emptyCellNextTo)) {
+				cell = emptyCellNextTo;
 			}
 		}
+
+		final LevelObject topLevelObject = getTopLevelObject(cell);
+
+		if ( topLevelObject != null && topLevelObject.nonPassable(CharsList.DUMMY)) {
+			if (cellValid(emptyCellNextTo)) {
+				cell = emptyCellNextTo;
+			}
+		}
+
 
 		Heap heap = heaps.get(cell);
 
