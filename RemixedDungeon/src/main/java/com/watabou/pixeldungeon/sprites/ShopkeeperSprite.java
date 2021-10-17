@@ -49,7 +49,14 @@ public class ShopkeeperSprite extends MobSprite {
 		ch.ifPresent((chr) -> {
 				if (getVisible() && anim == idle && !chr.isParalysed()) {
 					if (coin == null) {
-						coin = new PixelParticle();
+						coin = new PixelParticle() {
+							@Override
+							public void reset(float x, float y, int color, float size, float lifespan) {
+								super.reset(x, y, color, size, lifespan);
+								setNegativeIsometricShift(false);
+								setIsometricShift(true);
+							}
+						};
 						getParent().add( coin );
 					}
 					coin.reset( x + (flipHorizontal ? 0 : 13), y + 7, 0xFFFF00, 1, 0.5f );
