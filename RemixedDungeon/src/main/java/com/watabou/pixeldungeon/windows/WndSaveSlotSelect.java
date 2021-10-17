@@ -37,7 +37,7 @@ import lombok.var;
 
 public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
-    private boolean saving;
+    private final boolean saving;
 
     private String slot;
 

@@ -29,6 +29,7 @@ import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.pixeldungeon.windows.MovieRewardTask;
 import com.nyrds.platform.EventCollector;
@@ -129,6 +130,9 @@ public class Hero extends Char {
 
 	@Packable
 	public static boolean movieRewardPending;
+
+	@Packable
+	public static Item movieRewardPrize = ItemsList.DUMMY;
 
 	public Armor.Glyph killerGlyph = null;
 

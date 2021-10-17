@@ -14,6 +14,7 @@ import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndQuest;
@@ -23,7 +24,7 @@ public class ServiceManNPC extends ImmortalNPC {
     private static final int BASIC_GOLD_REWARD = 150;
 
     @Packable
-    private static int filmsSeen = 0;
+    public static int filmsSeen = 0;
 
     public ServiceManNPC() {
         if (EuConsent.getConsentLevel() > EuConsent.UNKNOWN) {
@@ -31,14 +32,10 @@ public class ServiceManNPC extends ImmortalNPC {
         }
     }
 
-    private static int getReward() {
-        return BASIC_GOLD_REWARD + (filmsSeen / 5) * 50;
+    public static Item getReward() {
+        return new Gold(BASIC_GOLD_REWARD + (filmsSeen / 5) * 50);
     }
 
-    public static void reward() {
-        Dungeon.hero.collect(new Gold(getReward()));
-        filmsSeen++;
-    }
 
     @Override
     public boolean interact(final Char hero) {
@@ -70,7 +67,7 @@ public class ServiceManNPC extends ImmortalNPC {
             boolean result = Ads.isRewardVideoReady();
             GameLoop.pushUiTask(() -> {
                         if (result) {
-                            GameScene.show(new WndMovieTheatre(this, filmsSeen, getLimit(), getReward()));
+                            GameScene.show(new WndMovieTheatre(this, filmsSeen, getLimit()));
                         } else {
                             say(StringsManager.getVar(R.string.ServiceManNPC_NotReady));
                         }

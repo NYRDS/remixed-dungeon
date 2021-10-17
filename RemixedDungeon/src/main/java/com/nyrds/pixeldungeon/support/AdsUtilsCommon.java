@@ -4,6 +4,7 @@ import androidx.annotation.MainThread;
 
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -35,6 +36,7 @@ class AdsUtilsCommon {
         if(rvAttempts-- > 0) {
             incFailCount(AdsUtils.rewardVideoFails, provider);
         }
+        GLog.debug("reward video load failed: %s", provider.getClass().getSimpleName());
     }
 
     private static <T> void incFailCount(Map<T,Integer> map, T provider) {
@@ -120,6 +122,11 @@ class AdsUtilsCommon {
             }
         }
         return false;
+    }
+
+    public static void rewardVideoLoaded(IRewardVideoProvider provider) {
+        GLog.debug("reward video loaded: %s", provider.getClass().getSimpleName());
+
     }
 
     interface IProvider {

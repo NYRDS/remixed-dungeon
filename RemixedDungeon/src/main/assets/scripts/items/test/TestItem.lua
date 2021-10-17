@@ -117,8 +117,16 @@ return itemLib.init{
         RPD.glog("execute owner: %s", tostring(owner))
 
         if action == "action1" then
+            local ads = require("scripts/lib/ads")
+            if ads.rewardVideoReady() then
+                ads.rewardVideoShow(RPD.createItem("Gold",'{"quantity":500}'))
+            else
+                RPD.glogn("Reward video not ready")
+            end
+
+
             --RPD.affectBuff(hero, RPD.Buffs.Invisibility ,200)
-            item:selectCell("action1","Please select cell for action 1")
+            --item:selectCell("action1","Please select cell for action 1")
             --RPD.playMusic("surface",true);
         end
 

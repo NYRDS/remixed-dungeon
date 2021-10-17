@@ -60,6 +60,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 					public void onAdLoaded(@NotNull RewardedAd ad) {
 						mCinemaRewardAd = ad;
 						mCinemaRewardAd.setFullScreenContentCallback(fullScreenContentCallback);
+						AdsUtilsCommon.rewardVideoLoaded(GoogleRewardVideoAds.this);
 					}
 
 					@Override
