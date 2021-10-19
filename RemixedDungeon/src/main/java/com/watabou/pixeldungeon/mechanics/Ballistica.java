@@ -22,6 +22,8 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.levels.Level;
 
+import lombok.val;
+
 public class Ballistica {
 
 	public static int[] trace = new int[32];
@@ -106,10 +108,17 @@ public class Ballistica {
 			if (!level.passable[cell] && !level.avoid[cell]) {
 				return trace[--distance - 1];
 			}
-			
+
+
+
 			if (level.losBlocking[cell]
 					|| (hitChars && Actor.findChar( cell ) != null)
 					|| (hitObjects && level.getLevelObject(cell) != null)) {
+				return cell;
+			}
+
+			val obj = level.getTopLevelObject(cell);
+			if(obj != null && obj.losBlocker()) {
 				return cell;
 			}
 		}
