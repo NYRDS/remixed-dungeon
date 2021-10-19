@@ -1,6 +1,6 @@
 {
     "Levels":{
-        "0":{"kind":"testLevel2y", "depth":0, "size":[0,0]},
+        "0":{"kind":"testLevel2", "depth":0, "size":[0,0]},
 
         "town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town_2021_03.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","script": "scripts/actors/town/Compass","maxBrightness":1.05},
         "cinema_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Cinema_2021_03.json", "noFogOfWar":"true",  "isSafe":true, "music":"ost_town_1","maxBrightness":1.05},
@@ -73,7 +73,7 @@
     },
 
     "Graph":{
-        "0":[["testLevel2"],[]],
+        "0":[["10"],[]],
         "testLevel":[[],[]],
         "testLevel2":[[],[]],
         "town_2":[["church_2","cinema_2","1","library_2","shop_town_2","fortune_2","inn_2"],["0"]],

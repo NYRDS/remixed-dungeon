@@ -5,10 +5,8 @@
 ---
 
 rewardVideo =  luajava.newInstance("com.nyrds.pixeldungeon.support.AdsRewardVideo")
-luaInterstitialPoint = luajava.bindClass("com.nyrds.lua.LuaInterstitialPoint")
 
 ads = {
-
     rewardVideoReady = function()
         return rewardVideo:isReady()
     end,
@@ -16,6 +14,8 @@ ads = {
     rewardVideoShow = function(prize)
         rewardVideo:show(prize)
     end,
+
+
 
 }
 

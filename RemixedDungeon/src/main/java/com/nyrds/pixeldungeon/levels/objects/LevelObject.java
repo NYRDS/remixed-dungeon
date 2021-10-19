@@ -16,6 +16,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -40,6 +41,7 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     @Packable(defaultValue = "")
     protected String data;
 
+    @Nullable
     public LevelObjectSprite sprite;
 
     public LevelObject(int pos) {
@@ -71,7 +73,9 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     @LuaInterface
     public void remove() {
         level().remove(this);
-        sprite.kill();
+        if (sprite != null) {
+            sprite.kill();
+        }
     }
 
     public void burn() {

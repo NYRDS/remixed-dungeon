@@ -94,7 +94,9 @@ public class Trap extends LevelObject {
 
 	public void deactivate() {
 		uses = 0;
-		sprite.reset(usedImage());
+		if(sprite!=null) {
+			sprite.reset(usedImage());
+		}
 	}
 
 	@Override
@@ -181,7 +183,9 @@ public class Trap extends LevelObject {
 	@Override
 	public void discover() {
 		secret = false;
-		sprite.setVisible(true);
+		if(sprite!=null) {
+			sprite.setVisible(true);
+		}
 	}
 
 	@Override
