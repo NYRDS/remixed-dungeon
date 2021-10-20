@@ -150,7 +150,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         if(level.map[cell] >= Terrain.WATER_TILES) {
             int tile = 208;
             for (int j = 0; j < Level.NEIGHBOURS4.length; j++) {
-                if ((TerrainFlags.flags[level.map[cell + Level.NEIGHBOURS4[j]]] & TerrainFlags.LIQUID) != 0) {
+                if ((TerrainFlags.flags[level.map[cell + Level.NEIGHBOURS4[j]]] & (TerrainFlags.LIQUID | TerrainFlags.PIT))!= 0) {
                     tile += 1 << j;
                 }
             }
