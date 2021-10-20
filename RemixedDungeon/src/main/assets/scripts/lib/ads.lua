@@ -5,6 +5,7 @@
 ---
 
 rewardVideo =  luajava.newInstance("com.nyrds.pixeldungeon.support.AdsRewardVideo")
+interstitial = luajava.newInstance("com.nyrds.pixeldungeon.support.AdsInterstitial")
 
 ads = {
     rewardVideoReady = function()
@@ -15,8 +16,9 @@ ads = {
         rewardVideo:show(prize)
     end,
 
-
-
+    interstitialShow = function() --may fail to show it
+        interstitial:show()
+    end
 }
 
 
