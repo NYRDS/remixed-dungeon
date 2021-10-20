@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.nyrds.LuaInterface;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.Journal.Feature;
@@ -24,8 +25,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -59,12 +58,15 @@ public class WellWater extends Blob {
 			}
 		}
 	}
-	
-	protected boolean affect() {
+
+	@LuaInterface
+	public boolean affect() {
 
 		Heap heap;
-		
-		if (pos == Dungeon.hero.getPos() && affectHero( Dungeon.hero )) {
+
+		final Hero hero = Dungeon.hero;
+
+		if (pos == hero.getPos() && affectHero(hero)) {
 			volume = off[pos] = cur[pos] = 0;
 			return true;
 			
@@ -117,23 +119,5 @@ public class WellWater extends Blob {
 		cur[pos] = 0;
 		pos = cell;
 		volume = cur[pos] = amount;
-	}
-	
-	public static void affectCell( int cell ) {
-		
-		Class<?>[] waters = {WaterOfHealth.class, WaterOfAwareness.class, WaterOfTransmutation.class};
-		
-		for (Class<?>waterClass : waters) {
-			final Level level = Dungeon.level;
-			WellWater water = (WellWater) level.blobs.get( waterClass );
-			if (water != null && 
-				water.volume > 0 && 
-				water.pos == cell && 
-				water.affect()) {
-					level.set( cell, Terrain.EMPTY_WELL );
-					GameScene.updateMap( cell );
-					return;
-			}
-		}
 	}
 }

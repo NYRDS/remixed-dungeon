@@ -2003,4 +2003,14 @@ public abstract class Level implements Bundlable {
 	public int objectsKind() {
 		return 0;
 	}
+
+	@LuaInterface
+	public Blob getBlobByName(String kind) {
+		for(Blob blob : blobs.values()) {
+			if(blob.getEntityKind().equals(kind)) {
+				return blob;
+			}
+		}
+		return null;
+	}
 }

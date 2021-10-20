@@ -11,9 +11,11 @@ local object = require "scripts/lib/object"
 
 return object.init{
     init = function(self, object,level, data)
-        local pos = object:getPos()
 
-        RPD.glog("level:".. tostring(level))
+        self:storeData({water = data})
+
+
+        local pos = object:getPos()
 
         if level:blobAmountAt(RPD.Blobs.WaterOfAwareness, pos) > 0 then
             return
@@ -29,6 +31,10 @@ return object.init{
 
         RPD.placeBlob(RPD.Blobs[data],pos,1, level)
 
+    end,
+
+    bump = function(self, object, presser)
+        object:level():getBlobByName(self.data.water):affect()
     end,
 
     stepOn = function(self, object, hero)
