@@ -86,15 +86,9 @@ public class IceCavesBossLevel extends BossLevel {
 	}
 	
 	@Override
-	protected void decorate() {	
-		
-		for (int i=0; i < getLength(); i++) {
-			if (map[i] == Terrain.EMPTY && Random.Int( 10 ) == 0) { 
-				map[i] = Terrain.EMPTY_DECO;
-			} else if (map[i] == Terrain.WALL && Random.Int( 8 ) == 0) { 
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
+	protected void decorate() {
+
+		LevelTools.northWallDecorate(this, 10, 5);
 	}
 	
 	public int pedestal( boolean left ) {

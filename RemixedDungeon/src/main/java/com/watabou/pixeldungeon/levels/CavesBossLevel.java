@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
@@ -147,12 +148,8 @@ public class CavesBossLevel extends BossLevel {
 				}
 			}
 		}
-		
-		for (int i=0; i < getLength(); i++) {
-			if (map[i] == Terrain.WALL && Random.Int( 8 ) == 0) {
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
+
+		LevelTools.northWallDecorate(this, 2, 6);
 		
 		int sign;
 		do {

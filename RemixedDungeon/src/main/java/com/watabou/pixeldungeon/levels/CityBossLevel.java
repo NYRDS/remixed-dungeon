@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
@@ -97,16 +98,10 @@ public class CityBossLevel extends BossLevel {
 	}
 	
 	@Override
-	protected void decorate() {	
-		
-		for (int i=0; i < getLength(); i++) {
-			if (map[i] == Terrain.EMPTY && Random.Int( 10 ) == 0) { 
-				map[i] = Terrain.EMPTY_DECO;
-			} else if (map[i] == Terrain.WALL && Random.Int( 8 ) == 0) { 
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
-		
+	protected void decorate() {
+
+		LevelTools.northWallDecorate(this, 10, 8);
+
 		int sign = arenaDoor + getWidth() + 1;
 		addLevelObject(new Sign(sign,Dungeon.tip(this)));
 	}

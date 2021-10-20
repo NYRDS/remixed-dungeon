@@ -119,12 +119,8 @@ public class IceCavesLevel extends RegularLevel {
 				}
 			}
 		}
-		
-		for (int i=0; i < getLength(); i++) {
-			if (map[i] == Terrain.WALL && Random.Int( 12 ) == 0) {
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
+
+		LevelTools.northWallDecorate(this, 10, 12);
 		
 		for (Room r : rooms) {
 			if (r.type == Type.STANDARD) {

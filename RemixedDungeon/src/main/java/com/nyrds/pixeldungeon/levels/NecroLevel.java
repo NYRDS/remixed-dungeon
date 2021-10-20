@@ -95,24 +95,7 @@ public class NecroLevel extends RegularLevel {
 			}
 		}
 
-		for (int i=0; i < getWidth(); i++) {
-			if (map[i] == Terrain.WALL &&
-					(map[i + getWidth()] == Terrain.EMPTY || map[i + getWidth()] == Terrain.EMPTY_SP) &&
-					Random.Int( 6 ) == 0) {
-
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
-
-		for (int i=getWidth(); i < getLength() - getWidth(); i++) {
-			if (map[i] == Terrain.WALL &&
-					map[i - getWidth()] == Terrain.WALL &&
-					(map[i + getWidth()] == Terrain.EMPTY || map[i + getWidth()] == Terrain.EMPTY_SP) &&
-					Random.Int( 3 ) == 0) {
-
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
+		LevelTools.northWallDecorate(this, 10, 4);
 	}
 
 	@Override

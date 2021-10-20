@@ -7,6 +7,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -290,4 +291,14 @@ public class LevelTools {
 			}
 		}
 	}
+
+    public static void northWallDecorate(Level level, int floorDecoRate, int wallDecoRate) {
+        for (int i = 0; i < level.getLength()- level.getWidth(); i++) {
+            if (level.map[i] == Terrain.EMPTY && Random.Int( floorDecoRate ) == 0) {
+                level.map[i] = Terrain.EMPTY_DECO;
+            } else if (level.map[i] == Terrain.WALL && TerrainFlags.is(level.map[i+ level.getWidth()],TerrainFlags.PASSABLE) && Random.Int( wallDecoRate ) == 0) {
+                level.map[i] = Terrain.WALL_DECO;
+            }
+        }
+    }
 }

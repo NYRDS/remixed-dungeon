@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -206,25 +207,8 @@ public class PrisonBossLevel extends BossLevel {
 				}
 			}
 		}
-		
-		for (int i=0; i < getWidth(); i++) {
-			if (map[i] == Terrain.WALL &&  
-				(map[i + getWidth()] == Terrain.EMPTY || map[i + getWidth()] == Terrain.EMPTY_SP) &&
-				Random.Int( 4 ) == 0) {
-				
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
-		
-		for (int i=getWidth(); i < getLength() - getWidth(); i++) {
-			if (map[i] == Terrain.WALL && 
-				map[i - getWidth()] == Terrain.WALL && 
-				(map[i + getWidth()] == Terrain.EMPTY || map[i + getWidth()] == Terrain.EMPTY_SP) &&
-				Random.Int( 2 ) == 0) {
-				
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
+
+		LevelTools.northWallDecorate(this, 10, 2);
 
 		placeEntranceSign();
 		

@@ -82,8 +82,8 @@ public class NecroBossLevel extends BossLevel {
 	@Override
 	protected void decorate() {
 
-		for (int i=0; i < getLength(); i++) {
-			if (map[i] == Terrain.WALL && Random.Int( 8 ) == 0) {
+		for (int i=0; i < getLength() - getWidth(); i++) {
+			if (map[i] == Terrain.WALL && map[i+getWidth()]==Terrain.EMPTY && Random.Int( 8 ) == 0) {
 				map[i] = Terrain.WALL_DECO;
 			}
 		}
