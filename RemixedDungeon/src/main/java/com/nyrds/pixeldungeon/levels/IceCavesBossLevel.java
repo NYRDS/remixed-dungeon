@@ -33,7 +33,12 @@ public class IceCavesBossLevel extends BossLevel {
 	private static final int HALL_WIDTH		= 11;
 	private static final int HALL_HEIGHT	= 9;
 	private static final int CHAMBER_HEIGHT	= 1;
-	
+
+
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_ICE_CAVES_XYZ;
+	}
 
 	@Override
 	public String tilesTex() {

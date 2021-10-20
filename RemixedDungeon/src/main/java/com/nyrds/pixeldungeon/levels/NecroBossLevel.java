@@ -26,6 +26,11 @@ public class NecroBossLevel extends BossLevel {
 	private static final int CHAMBER_HEIGHT	= 4;
 
 	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_NECRO_XYZ;
+	}
+
+	@Override
 	public String tilesTex() {
 		return Assets.TILES_NECRO;
 	}

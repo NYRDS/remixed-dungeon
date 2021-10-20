@@ -135,13 +135,13 @@ dependencies {
 
     implementation 'commons-io:commons-io:2.6'
 
-    androidImplementation 'com.appodeal.ads.sdk:core:2.9.2'
-    androidImplementation 'com.appodeal.ads.sdk.networks:adcolony:2.9.2.11'
-    androidImplementation 'com.appodeal.ads.sdk.networks:applovin:2.9.2.12'
-    androidImplementation 'com.appodeal.ads.sdk.networks:bidmachine:2.9.2.7'
-    androidImplementation 'com.appodeal.ads.sdk.networks:ironsource:2.9.2.11'
-    androidImplementation 'com.appodeal.ads.sdk.networks:my_target:2.9.2.11'
-    androidImplementation 'com.appodeal.ads.sdk.networks:unity_ads:2.9.2.8'
+    implementation 'com.appodeal.ads.sdk:core:2.10.2'
+    implementation 'com.appodeal.ads.sdk.networks:a4g:2.10.2.14'
+    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.10.2.15'
+    implementation 'com.appodeal.ads.sdk.networks:applovin:2.10.2.18'
+    implementation 'com.appodeal.ads.sdk.networks:bidmachine:2.10.2.14'
+    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.10.2.12'
+    implementation 'com.appodeal.ads.sdk.networks:vungle:2.10.2.9'
 
     implementation 'org.jetbrains:annotations:15.0'
 
@@ -149,15 +149,16 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.10'
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:17.6.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:19.0.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:19.2.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:21.0.0"
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:20.4.0'
+
 
     googlePlayImplementation 'com.android.billingclient:billing:4.0.0'
 
-    googlePlayImplementation platform('com.google.firebase:firebase-bom:26.5.0')
+    googlePlayImplementation platform('com.google.firebase:firebase-bom:28.4.2')
 
 
-    googlePlayImplementation 'com.google.firebase:firebase-ads'
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
 

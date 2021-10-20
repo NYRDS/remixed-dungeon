@@ -40,6 +40,11 @@ public class HallsBossLevel extends BossLevel {
 	}
 
 	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_HALLS_XYZ;
+	}
+
+	@Override
 	public String tilesTex() {
 		return Assets.TILES_HALLS;
 	}

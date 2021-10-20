@@ -40,6 +40,12 @@ public class CityBossLevel extends BossLevel {
 	private static final int HALL_HEIGHT	= 15;
 	private static final int CHAMBER_HEIGHT	= 3;
 
+
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_CITY_XYZ;
+	}
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_CITY;
