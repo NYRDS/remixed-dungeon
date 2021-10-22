@@ -214,6 +214,11 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
+    public String name() {
+        return StringsManager.maybeId(script.runOptional("name",name));
+    }
+
+    @Override
     public String bag() {
         return script.runOptional("bag",super.bag());
     }
