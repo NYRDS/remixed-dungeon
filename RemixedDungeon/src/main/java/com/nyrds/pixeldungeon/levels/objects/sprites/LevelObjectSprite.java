@@ -60,7 +60,7 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 	public void reset(@NotNull LevelObject object) {
 		revive();
 
-		texture(object.texture());
+		texture(object.getTextureFile());
 
 		int xs = object.getSpriteXS();
 		int ys = object.getSpriteYS();

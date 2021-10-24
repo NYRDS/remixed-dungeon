@@ -125,4 +125,8 @@ public class CustomObject extends Deco {
         return script.runOptional("info", super.desc(), level());
     }
 
+    @Override
+    public String getTextureFile() {
+        return script.runOptional("getTextureFile", super.getTextureFile(), level());
+    }
 }

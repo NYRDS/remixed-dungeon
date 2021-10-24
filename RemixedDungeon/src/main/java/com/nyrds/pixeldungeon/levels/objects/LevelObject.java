@@ -21,6 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import lombok.Getter;
+import lombok.Setter;
 
 public abstract class LevelObject extends Actor implements Bundlable, Presser, HasPositionOnLevel, NamedEntityKind {
 
@@ -31,6 +32,8 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     protected int layer = 0;
 
     @Packable(defaultValue = "levelObjects/objects.png")
+    @Getter
+    @Setter
     protected String textureFile = "levelObjects/objects.png";
 
     @Packable(defaultValue = "0")
@@ -125,10 +128,6 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     public abstract String desc();
 
     public abstract String name();
-
-    public String texture() {
-        return textureFile;
-    }
 
     public boolean pushable(Char hero) {
         return false;

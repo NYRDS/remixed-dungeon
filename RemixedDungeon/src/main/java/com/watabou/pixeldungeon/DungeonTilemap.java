@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon;
 
+import com.nyrds.LuaInterface;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
@@ -59,6 +60,25 @@ public abstract class DungeonTilemap extends Tilemap {
 
 		return new ClassicDungeonTilemap(level, tiles);
 	}
+
+
+	@LuaInterface
+	static public @NotNull String kind(String tiles) {
+		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
+
+
+		if (tiles.contains("_xyz")) {
+			return "xyz";
+		}
+
+
+		if(probe.size() == 256) {
+			return "x";
+		}
+
+		return "classic";
+	}
+
 
 	public int screenToTile(int x, int y) {
 		Point p = camera().screenToCamera(x, y).offset(this.point().negate()).invScale(SIZE).floor();
