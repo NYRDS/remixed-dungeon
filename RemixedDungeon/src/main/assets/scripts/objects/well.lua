@@ -34,13 +34,23 @@ return object.init{
     end,
 
     bump = function(self, object, presser)
-        object:level():getBlobByName(self.data.water):affect()
+        RPD.glog("This well full of %s", self.data.water )
+        if self.data.water then
+            object:level():getBlobByName(self.data.water):affect()
+            self.data.water = nil
+        end
     end,
 
     stepOn = function(self, object, hero)
         return true
     end,
 
+    --[[
+    interact = function(self, object, hero)
+        RPD.glog("This is a well %s", hero:name())
+        return false
+    end,
+]]
     image = function(self, object)
         return 16 * 5 + object:level():objectsKind()
     end

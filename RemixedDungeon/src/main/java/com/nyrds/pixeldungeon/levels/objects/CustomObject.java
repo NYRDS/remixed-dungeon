@@ -6,6 +6,7 @@ import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import org.json.JSONException;
@@ -61,10 +62,11 @@ public class CustomObject extends Deco {
     @Override
     void setupFromJson(Level level, JSONObject obj) throws JSONException {
         super.setupFromJson(level, obj);
+        String data = Utils.EMPTY_STRING;
         if(obj.has("data")) {
-            String data = obj.getString("data");
-            script.runOptionalNoRet("init", level, data);
+            data = obj.getString("data");
         }
+        script.runOptionalNoRet("init", level, data);
     }
 
     @Override
