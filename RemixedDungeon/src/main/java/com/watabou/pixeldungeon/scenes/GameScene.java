@@ -106,6 +106,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
 
+import lombok.Getter;
 import lombok.val;
 import lombok.var;
 
@@ -118,6 +119,9 @@ public class GameScene extends PixelScene {
     private SkinnedBlock water;
 
     private DungeonTilemap logicTiles;
+
+    @LuaInterface
+    @Getter
     private DungeonTilemap baseTiles;
 
     @Nullable

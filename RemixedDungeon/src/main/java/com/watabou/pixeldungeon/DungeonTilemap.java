@@ -61,6 +61,10 @@ public abstract class DungeonTilemap extends Tilemap {
 		return new ClassicDungeonTilemap(level, tiles);
 	}
 
+	@LuaInterface
+	public int getDecoTileForTerrain(int terrain) {
+		return terrain;
+	}
 
 	@LuaInterface
 	static public @NotNull String kind(String tiles) {

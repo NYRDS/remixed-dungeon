@@ -114,4 +114,9 @@ public class VariativeDungeonTilemap extends DungeonTilemap {
         super.brightness(value);
         mDecoLayer.brightness(value);
     }
+
+    @Override
+    public int getDecoTileForTerrain(int terrain) {
+        return xTilemapConfiguration.getDecoTileForTerrain(terrain);
+    }
 }
