@@ -39,7 +39,12 @@ public class LastLevel extends Level {
 	}
 	
 	private int pedestal;
-	
+
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_HALLS_XYZ;
+	}
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_HALLS;
