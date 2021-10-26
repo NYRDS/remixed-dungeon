@@ -12,24 +12,29 @@ local object = require "scripts/lib/object"
 return object.init{
     init = function(self, object,level, data)
 
-        self:storeData({water = data})
+        self.data.water = data
 
 
         local pos = object:getPos()
 
         if level:blobAmountAt(RPD.Blobs.WaterOfAwareness, pos) > 0 then
+            self.data.water = 'WaterOfAwareness'
             return
         end
 
         if level:blobAmountAt(RPD.Blobs.WaterOfHealth, pos) > 0 then
+            self.data.water = 'WaterOfHealth'
             return
         end
 
         if level:blobAmountAt(RPD.Blobs.WaterOfTransmutation, pos) > 0 then
+            self.data.water = 'WaterOfTransmutation'
             return
         end
 
-        RPD.placeBlob(RPD.Blobs[data],pos,1, level)
+        if self.data.water then
+            RPD.placeBlob(RPD.Blobs[data],pos,1, level)
+        end
 
     end,
 
