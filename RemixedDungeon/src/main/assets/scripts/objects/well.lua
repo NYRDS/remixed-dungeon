@@ -12,7 +12,8 @@ local object = require "scripts/lib/object"
 return object.init{
     init = function(self, object, level, data)
 
-        self.data.water = data
+
+        self.data = {water = data}
 
 
         local pos = object:getPos()
@@ -58,7 +59,7 @@ return object.init{
 ]]
     image = function(self, object)
 
-       RPD.glog(RPD.GameScene.getBaseTilemap():kind())
+       --RPD.glog(RPD.GameScene.getBaseTilemap():kind())
 
         return 16 * 5 + object:level():objectsKind()
     end
