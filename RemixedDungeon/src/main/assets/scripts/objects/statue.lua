@@ -23,7 +23,19 @@ return object.init{
         return level:tileDesc(RPD.Terrain.STATUE)
     end,
 
-    image = function(self, object)
-        return 16 * 8 + object:level():objectsKind()
+    textureFile = function(self, object, level)
+        if RPD.DungeonTilemap:kind(level) == 'xyz' then
+            return "levelObjects/objects.png"
+        else
+            return level:getTilesTex()
+        end
+    end,
+
+    image = function(self, object, level)
+        if RPD.DungeonTilemap:kind(level) == 'xyz' then
+            return 16 * 8 + level:objectsKind()
+        else
+            return  RPD.DungeonTilemap:getDecoTileForTerrain(level, object:getPos(), RPD.Terrain.STATUE)
+        end
     end
 }

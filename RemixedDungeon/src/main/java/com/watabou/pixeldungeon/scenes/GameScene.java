@@ -106,7 +106,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
 
-import lombok.Getter;
 import lombok.val;
 import lombok.var;
 
@@ -120,8 +119,6 @@ public class GameScene extends PixelScene {
 
     private DungeonTilemap logicTiles;
 
-    @LuaInterface
-    @Getter
     private DungeonTilemap baseTiles;
 
     @Nullable
@@ -228,7 +225,7 @@ public class GameScene extends PixelScene {
 		}
 
         if (!level.customTiles()) {
-            baseTiles = DungeonTilemap.factory(level, level.getTilesetForLayer(Level.LayerId.Base));
+            baseTiles = DungeonTilemap.factory(level);
 
             if(baseTiles instanceof XyzDungeonTilemap) {
                 roofTiles = ((XyzDungeonTilemap)baseTiles).roofTilemap();
@@ -996,6 +993,14 @@ public class GameScene extends PixelScene {
             return scene.cellSelector.defaultListner();
         }
         return true;
+    }
+
+    @LuaInterface
+    static DungeonTilemap getBaseTiles() {
+        if(isSceneReady()) {
+            return scene.baseTiles;
+        }
+        throw new IllegalStateException("Scene not ready");
     }
 
 }

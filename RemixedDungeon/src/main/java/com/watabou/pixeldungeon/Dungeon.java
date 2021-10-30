@@ -266,7 +266,9 @@ public class Dungeon {
     }
 
     public static boolean bossLevel() {
-        return Dungeon.level != null && Dungeon.level.isBossLevel();
+        final Level level = Dungeon.level;
+
+        return level != null && level.isBossLevel();
     }
 
     public static void switchLevel(@NotNull final Level level, int pos, Collection<Mob> followers) {

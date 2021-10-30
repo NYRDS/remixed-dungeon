@@ -1141,6 +1141,8 @@ public abstract class Level implements Bundlable {
 		}
 		var heap = drop(item,cell);
 
+		assert(heap!=null);
+		assert(heap.sprite!=null);
 		heap.sprite.drop();
 	}
 

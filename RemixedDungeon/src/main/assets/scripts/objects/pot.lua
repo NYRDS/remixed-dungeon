@@ -9,16 +9,16 @@ local RPD = require "scripts/lib/commonClasses"
 local object = require "scripts/lib/object"
 
 
-return object.init{
+return object.init {
 
-    init = function(self, object,level, data)
+    init = function(self, object, level, data)
         local pos = object:getPos()
 
         if level:blobAmountAt(RPD.Blobs.Alchemy, pos) > 0 then
             return
         end
 
-        RPD.placeBlob(RPD.Blobs.Alchemy, pos,1, level)
+        RPD.placeBlob(RPD.Blobs.Alchemy, pos, 1, level)
 
     end,
 
@@ -34,11 +34,23 @@ return object.init{
             RPD.ItemUtils:throwItemAway(pos)
             return
         end
-        RPD.glog("bump by :".. tostring(presser:getEntityKind()))
+        RPD.glog("bump by :" .. tostring(presser:getEntityKind()))
         RPD.Blobs.Alchemy:transmute(pos)
     end,
 
-    image = function(self, object)
-        return 16 * 3 + object:level():objectsKind()
+    textureFile = function(self, object, level)
+        if RPD.DungeonTilemap:kind(level) == 'xyz' then
+            return "levelObjects/objects.png"
+        else
+            return level:getTilesTex()
+        end
+    end,
+
+    image = function(self, object, level)
+        if RPD.DungeonTilemap:kind(level) == 'xyz' then
+            return 16 * 3 + object:level():objectsKind()
+        else
+            return RPD.DungeonTilemap:getDecoTileForTerrain(level, object:getPos(), RPD.Terrain.ALCHEMY)
+        end
     end
 }

@@ -10,15 +10,21 @@ import com.watabou.pixeldungeon.levels.Level;
 
 import org.json.JSONException;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by mike on 15.02.2018.
  * This file is part of Remixed Pixel Dungeon.
  */
 
 public class VariativeDungeonTilemap extends DungeonTilemap {
+    public static final String TILES_X_DEFAULT_JSON = "tilemapDesc/tiles_x_default.json";
     private final Tilemap mDecoLayer;
 
     private final XTilemapConfiguration xTilemapConfiguration;
+
+    static Map<String, XTilemapConfiguration> xTilemapConfigurationCache = new HashMap<>();
 
     private final Level level;
 
@@ -33,9 +39,15 @@ public class VariativeDungeonTilemap extends DungeonTilemap {
         try {
             String tilemapConfig = "tilemapDesc/" + tiles.replace(".png", ".json");
             if (!ModdingMode.isResourceExist(tilemapConfig)) {
-                tilemapConfig = "tilemapDesc/tiles_x_default.json";
+                tilemapConfig = TILES_X_DEFAULT_JSON;
             }
-            xTilemapConfiguration = XTilemapConfiguration.readConfig(tilemapConfig);
+
+            if(xTilemapConfigurationCache.containsKey(tilemapConfig)) {
+                xTilemapConfiguration = xTilemapConfigurationCache.get(tilemapConfig);
+            } else {
+                xTilemapConfiguration = XTilemapConfiguration.readConfig(tilemapConfig);
+                xTilemapConfigurationCache.put(tilemapConfig, xTilemapConfiguration);
+            }
         } catch (JSONException e) {
             throw ModdingMode.modException(e);
         }
@@ -115,8 +127,8 @@ public class VariativeDungeonTilemap extends DungeonTilemap {
         mDecoLayer.brightness(value);
     }
 
-    @Override
-    public int getDecoTileForTerrain(int terrain) {
-        return xTilemapConfiguration.getDecoTileForTerrain(terrain);
+
+    static public int getDecoTileForTerrain(Level level, int cell, int terrain) {
+        return xTilemapConfigurationCache.get(TILES_X_DEFAULT_JSON).getDecoTileForTerrain(cell, terrain);
     }
 }

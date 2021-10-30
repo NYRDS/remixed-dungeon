@@ -44,8 +44,10 @@ public abstract class DungeonTilemap extends Tilemap {
 		map(level.map, level.getWidth());
 	}
 
-	@Contract("_, _ -> new")
-	static public @NotNull DungeonTilemap factory(Level level, String tiles) {
+
+	static public @NotNull DungeonTilemap factory(Level level) {
+		String tiles = level.getTilesTex();
+
 		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
 
 
@@ -61,20 +63,29 @@ public abstract class DungeonTilemap extends Tilemap {
 		return new ClassicDungeonTilemap(level, tiles);
 	}
 
+
 	@LuaInterface
-	public int getDecoTileForTerrain(int terrain) {
+	static public int getDecoTileForTerrain(Level level, int cell, int terrain) {
+		String tiles = level.getTilesTex();
+
+		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
+
+		if(probe.size() == 256) {
+			return VariativeDungeonTilemap.getDecoTileForTerrain(level, cell, terrain);
+		}
+
 		return terrain;
 	}
 
 	@LuaInterface
-	static public @NotNull String kind(String tiles) {
-		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
+	static public @NotNull String kind(Level level) {
+		String tiles = level.getTilesTex();
 
+		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
 
 		if (tiles.contains("_xyz")) {
 			return "xyz";
 		}
-
 
 		if(probe.size() == 256) {
 			return "x";

@@ -57,10 +57,19 @@ return object.init{
         return false
     end,
 ]]
-    image = function(self, object)
+    textureFile = function(self, object, level)
+        if RPD.DungeonTilemap:kind(level) == 'xyz' then
+            return "levelObjects/objects.png"
+        else
+            return level:getTilesTex()
+        end
+    end,
 
-       --RPD.glog(RPD.GameScene.getBaseTilemap():kind())
-
-        return 16 * 5 + object:level():objectsKind()
+    image = function(self, object, level)
+        if RPD.DungeonTilemap:kind(level) == 'xyz' then
+            return 16 * 5 + object:level():objectsKind()
+        else
+            return RPD.DungeonTilemap:getDecoTileForTerrain(level, object:getPos(), RPD.Terrain.WELL)
+        end
     end
 }

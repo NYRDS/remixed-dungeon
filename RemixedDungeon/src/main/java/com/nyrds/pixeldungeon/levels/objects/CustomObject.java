@@ -92,7 +92,7 @@ public class CustomObject extends Deco {
 
     @Override
     public int image() {
-        return script.runOptional("image", super.image());
+        return script.runOptional("image", super.image(), level());
     }
 
     @Override
@@ -127,6 +127,6 @@ public class CustomObject extends Deco {
 
     @Override
     public String getTextureFile() {
-        return script.runOptional("getTextureFile", super.getTextureFile(), level());
+        return script.runOptional("textureFile", super.getTextureFile(), level());
     }
 }
