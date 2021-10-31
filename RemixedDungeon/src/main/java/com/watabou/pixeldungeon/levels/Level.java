@@ -858,6 +858,11 @@ public abstract class Level implements Bundlable {
 	public void spawnMob(Mob mob, float delay, int fromCell) {
 
 		if (!cellValid(mob.getPos())) {
+
+			if(Util.isDebug()) {
+				throw new RuntimeException(String.format(Locale.ROOT, "trying to spawn: %s on invalid cell: %d", mob.getEntityKind(), mob.getPos()));
+			}
+
 			EventCollector.logException(String.format(Locale.ROOT, "trying to spawn: %s on invalid cell: %d", mob.getEntityKind(), mob.getPos()));
 			return;
 		}
@@ -1142,8 +1147,11 @@ public abstract class Level implements Bundlable {
 		var heap = drop(item,cell);
 
 		assert(heap!=null);
-		assert(heap.sprite!=null);
-		heap.sprite.drop();
+
+		if(heap.sprite != null) {
+			//assert (heap.sprite != null);
+			heap.sprite.drop();
+		}
 	}
 
 

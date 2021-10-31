@@ -122,7 +122,14 @@ public class TestLevel extends RegularLevel {
 		int oldDifficulty = Dungeon.hero.getDifficulty();
 
 		Hero hero = new Hero(2);
-		hero.setPos(randomRespawnCell());
+
+		int pos;
+
+		do {
+			pos = randomDestination();
+		} while(!cellValid(pos));
+
+		hero.setPos(pos);
 
 		hero.spend(-10000);
 

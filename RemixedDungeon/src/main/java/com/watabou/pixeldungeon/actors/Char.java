@@ -1149,6 +1149,18 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			EventCollector.logException("invalid pos for:"+toString()+":"+getClass().getCanonicalName());
 		}
 		GameScene.addMobSpriteDirect(sprite);
+
+		if(GameScene.isSceneReady()) {
+			assert (sprite.getParent() != null);
+		}
+
+
+		if(sprite.getParent()==null) {
+			String err = String.format("sprite addition failed for %s %b", getEntityKind(), GameScene.isSceneReady());
+
+			GLog.debug(err);
+		}
+
 		sprite.link(this);
 	}
 
@@ -1158,6 +1170,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 		sprite = null;
 	}
+
+//	public Group getSpriteParent() {
+//		Group parent = getSprite()
+//	}
 
 	@LuaInterface
 	public CharSprite getSprite() {
@@ -1182,6 +1198,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		if(sprite.getParent()==null) {
 			updateSprite(sprite);
 		}
+
+		assert(sprite.getParent() != null);
 
 		return sprite;
 	}

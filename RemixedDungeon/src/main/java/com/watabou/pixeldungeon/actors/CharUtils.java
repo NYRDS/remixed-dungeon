@@ -311,9 +311,11 @@ public class CharUtils {
     }
 
     public static void blinkAway(@NotNull Char chr, cellCondition condition) {
-        int tgt = chr.level().getNearestTerrain(chr.getPos(), condition);
+        final Level level = chr.level();
 
-        if (chr.level().cellValid(tgt)) {
+        int tgt = level.getNearestTerrain(chr.getPos(), condition);
+
+        if (level.cellValid(tgt)) {
             final Char ch = chr;
             chr.fx(chr.getPos(), () -> WandOfBlink.appear(ch, tgt));
         }

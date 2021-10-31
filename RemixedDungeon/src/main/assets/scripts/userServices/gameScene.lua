@@ -16,7 +16,7 @@ gameScene.onStep = function()
     local time = RPD.Dungeon.hero:localTime()
 
     if time > prevTime then
-        --RPD.glog(string.format("local game time: %6.1f\n", time))
+        RPD.glog(string.format("local game time: %6.1f\n", time))
         prevTime = time
     end
 end

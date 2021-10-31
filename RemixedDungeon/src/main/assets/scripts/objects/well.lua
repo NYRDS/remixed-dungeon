@@ -12,9 +12,7 @@ local object = require "scripts/lib/object"
 return object.init{
     init = function(self, object, level, data)
 
-
         self.data = {water = data}
-
 
         local pos = object:getPos()
 
@@ -34,7 +32,7 @@ return object.init{
         end
 
         if self.data.water then
-            RPD.placeBlob(RPD.Blobs[data],pos,1, level)
+            RPD.placeBlob(RPD.Blobs[self.data.water],pos,1, level)
         end
 
     end,

@@ -611,7 +611,7 @@ public abstract class RegularLevel extends CustomLevel {
 
 		while (true) {
 
-			if (++count > 10) {
+			if (++count > 100) {
 				return INVALID_CELL;
 			}
 
