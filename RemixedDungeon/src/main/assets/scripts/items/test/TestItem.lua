@@ -119,12 +119,17 @@ return itemLib.init{
         if action == "action1" then
 
             local ads = require("scripts/lib/ads")
+
+
+            --[[
             if ads.rewardVideoReady() then
                 ads.rewardVideoShow(RPD.createItem("Gold",'{"quantity":500}'))
             else
                 RPD.glogn("Reward video not ready")
             end
+]]
 
+            ads.interstitialShow()
 
             --RPD.affectBuff(hero, RPD.Buffs.Invisibility ,200)
             --item:selectCell("action1","Please select cell for action 1")

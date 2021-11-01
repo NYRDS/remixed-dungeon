@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -164,9 +165,12 @@ public class Tengu extends Boss implements IZapper {
 	public void notice() {
 		super.notice();
         String tenguYell = StringsManager.getVar(R.string.Tengu_Info2);
-		if (Dungeon.hero.getHeroClass().getGender() == Utils.FEMININE) {
+		final Hero hero = Dungeon.hero;
+		final HeroClass heroClass = hero.getHeroClass();
+
+		if (heroClass.getGender() == Utils.FEMININE) {
             tenguYell = StringsManager.getVar(R.string.Tengu_Info3);
 		}
-		yell(Utils.format(tenguYell, Dungeon.hero.getHeroClass().title()));
+		yell(Utils.format(tenguYell, heroClass.title()));
 	}	
 }
