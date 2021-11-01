@@ -7,6 +7,7 @@ import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.InterstitialPoint;
@@ -28,7 +29,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 
 	public GoogleRewardVideoAds() {
-		Game.instance().runOnUiThread(this::loadNextVideo);
+		GameLoop.runOnMainThread(this::loadNextVideo);
 	}
 
 
@@ -46,7 +47,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 					public void onAdDismissedFullScreenContent() {
 						mCinemaRewardAd = null;
 						GLog.debug("reward state "+ rewardEarned);
-						Game.instance().runOnUiThread(GoogleRewardVideoAds.this::loadNextVideo);
+						GameLoop.runOnMainThread(GoogleRewardVideoAds.this::loadNextVideo);
 						returnTo.returnToWork(rewardEarned);
 						rewardEarned = false;
 					}

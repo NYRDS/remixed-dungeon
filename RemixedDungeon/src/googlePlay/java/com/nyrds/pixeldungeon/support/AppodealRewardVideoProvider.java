@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.support;
 
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.RewardedVideoCallbacks;
-import com.nyrds.platform.game.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.noosa.InterstitialPoint;
 
@@ -12,7 +12,7 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
     public AppodealRewardVideoProvider() {
 
-        Game.instance().runOnUiThread(() -> {
+        GameLoop.runOnMainThread(() -> {
             AppodealAdapter.init();
 
             Appodeal.cache(RemixedDungeon.instance(), Appodeal.REWARDED_VIDEO);

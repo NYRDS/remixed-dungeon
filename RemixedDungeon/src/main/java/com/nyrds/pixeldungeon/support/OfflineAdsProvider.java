@@ -35,7 +35,7 @@ class OfflineAdsProvider {
     static void displayBanner() {
         EventCollector.logEvent("OwnAds", "banner");
         if (Util.isDebug()) {
-            Game.instance().runOnUiThread(() -> {
+            GameLoop.runOnMainThread(() -> {
                 LinearLayout layout = Game.instance().getLayout();
                 if (layout.getChildCount() == 1) {
 
@@ -57,7 +57,7 @@ class OfflineAdsProvider {
     static void displayIsAd(final InterstitialPoint work) {
         EventCollector.logEvent("OwnAds", "is");
         if (Util.isDebug()) {
-            Game.instance().runOnUiThread(() -> {
+            GameLoop.runOnMainThread(() -> {
 
                 final AlertDialog.Builder alert = new AlertDialog.Builder(Game.instance());
 

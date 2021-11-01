@@ -133,6 +133,12 @@ public class GameLoop {
         switchScene(instance().sceneClass);
     }
 
+    static public void runOnMainThread(Runnable runnable) {
+        pushUiTask( () -> {
+            Game.instance().runOnUiThread(runnable);
+        });
+    }
+
     public void shutdown() {
         if (instance().scene != null) {
             instance().scene.pause();

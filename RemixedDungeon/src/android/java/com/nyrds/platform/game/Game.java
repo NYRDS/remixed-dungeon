@@ -124,7 +124,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     }
 
     public static void toast(final String text, final Object... args) {
-        instance().runOnUiThread(() -> {
+        GameLoop.runOnMainThread(() -> {
             String toastText = text;
 
             if (args.length > 0) {
@@ -401,4 +401,5 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(address));
         Game.instance().startActivity(Intent.createChooser(intent, prompt));
     }
+
 }

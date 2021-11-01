@@ -20,7 +20,8 @@ public class AdsRewardVideo implements InterstitialPoint {
         Game.softPaused = true;
         Dungeon.save(false);
 
-        Game.instance().runOnUiThread(() -> {
+
+        GameLoop.runOnMainThread(() -> {
             Ads.removeEasyModeBanner();
             Ads.showRewardVideo(this);
         });

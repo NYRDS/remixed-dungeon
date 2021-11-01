@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.support;
 
 import androidx.annotation.MainThread;
 
-import com.nyrds.platform.game.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -74,7 +74,7 @@ class AdsUtilsCommon {
         final IRewardVideoProvider chosenProvider = choseLessFailedFrom(AdsUtils.rewardVideoFails, Integer.MAX_VALUE);
 
         if(chosenProvider!=null) {
-            Game.instance().runOnUiThread(() -> chosenProvider.showRewardVideo(retTo));
+            GameLoop.runOnMainThread(() -> chosenProvider.showRewardVideo(retTo));
         } else {
             retTo.returnToWork(false);
         }
@@ -84,7 +84,7 @@ class AdsUtilsCommon {
         final IInterstitialProvider chosenProvider = choseLessFailedFrom(AdsUtils.interstitialFails, Integer.MAX_VALUE);
 
         if(chosenProvider!=null) {
-            Game.instance().runOnUiThread(() -> chosenProvider.showInterstitial(retTo));
+            GameLoop.runOnMainThread(() -> chosenProvider.showInterstitial(retTo));
         } else {
             retTo.returnToWork(false);
         }
@@ -94,7 +94,7 @@ class AdsUtilsCommon {
         IBannerProvider chosenProvider = choseLessFailedFrom(AdsUtils.bannerFails, Integer.MAX_VALUE);
 
         if(chosenProvider!=null) {
-            Game.instance().runOnUiThread(chosenProvider::displayBanner);
+            GameLoop.runOnMainThread(chosenProvider::displayBanner);
         }
     }
 
