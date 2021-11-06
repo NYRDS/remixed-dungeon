@@ -129,7 +129,7 @@ return itemLib.init{
             end
 ]]
 
-            ads.interstitialShow()
+            --ads.interstitialShow()
 
             --RPD.affectBuff(hero, RPD.Buffs.Invisibility ,200)
             --item:selectCell("action1","Please select cell for action 1")
@@ -158,7 +158,7 @@ return itemLib.init{
         end
 
         if action == "inputText" then
-            RPD.System.Input:showInputDialog("Text title", "Text subtitle")
+            --RPD.System.Input:showInputDialog("Text title", "Text subtitle")
         end
 
         if action == "checkText" then

@@ -31,7 +31,7 @@ return object.init{
             return
         end
 
-        if self.data.water then
+        if self.data.water and string.len(self.data.water) > 0 then
             RPD.glog("water |%s|", self.data.water)
             RPD.placeBlob(RPD.Blobs[self.data.water],pos,1, level)
         end
