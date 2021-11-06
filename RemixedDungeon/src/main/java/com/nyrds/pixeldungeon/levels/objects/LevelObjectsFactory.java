@@ -41,6 +41,7 @@ public class LevelObjectsFactory {
     public static final String LIGHTNING_TRAP = "LightningTrap";
     public static final String GRIPPING_TRAP = "GrippingTrap";
     public static final String SUMMONING_TRAP = "SummoningTrap";
+	public static final String PILE_OF_STONES = "pile_of_stones";
 
     static private HashMap<String, Class<? extends LevelObject>> mObjectsList;
 

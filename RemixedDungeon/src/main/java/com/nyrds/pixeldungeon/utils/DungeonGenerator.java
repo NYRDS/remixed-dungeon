@@ -42,6 +42,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -419,6 +420,8 @@ public class DungeonGenerator {
 			}
 			ret.add(levelIds.getString(i));
 		}
+
+		Collections.shuffle(ret);
 
 		return ret;
 	}

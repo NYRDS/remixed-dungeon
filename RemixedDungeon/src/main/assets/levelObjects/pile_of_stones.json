@@ -1,15 +1,15 @@
 {
   "kind":"CustomObject",
 
-  "script": "well",
+  "script": "pile_of_stones",
   "appearance": {
     "desc": {
-      "desc": "",
-      "name": "Level_TileWell"
+      "desc": "Level_TileDescPileOfStones",
+      "name": "Level_TilePileOfStones"
     },
     "sprite":{
       "textureFile": "levelObjects/objects.png",
-      "imageIndex" : 0
+      "imageIndex" : 2
     }
   }
 }
