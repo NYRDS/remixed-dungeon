@@ -2580,14 +2580,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ShieldStrTemplate">Wearer of the shield should have at least %1$d points of Strength to use it properly.</string>
   <string name="town_deco_flowerinthepot_name">Flower in a pot</string>
   <string name="town_deco_flowerinthepot_desc">Decorative flower with sweet flavor</string>
-  <string name="Welcome_Text_29_4">
-    remix.29.4\n
-    - Gameplay:\n
-    -- Dual Wielding!\n
-    - Modding:\n
-    -- Custom Weapons!\n
-    - Bugs fixed\n
-    </string>
   <string name="Mods_Disclaimer">
         Mods are created by players for players.\n
         Mods would sometimes change gameplay in unpredictable or weird manner, you have been warned!\n
@@ -2830,7 +2822,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Level_TileDescPedestal"> </string>
   <string name="Level_TileDescWell"> </string>
 
-  <string name="Welcome_Text_30_2">
+  <string name="Welcome_Text_31_0">
     remix.30.2\n
     - Gameplay:\n
     -- Optional Isometric Mode!\n
@@ -2838,4 +2830,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Moddable Level Objects\n
     - Bugs fixed\n
     </string>
+
+  <string name="Level_TilePileOfStones">A pile of Stones</string>
+  <string name="Level_TileDescPileOfStones">A pile of extremely heavy stones, looks unmovable.</string>
+
 </resources>
