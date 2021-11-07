@@ -62,7 +62,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         mDecoLayer.map(buildDecoMap(), width);
         mRoofLayer.map(buildRoofMap(), width);
         mCornersLayer.map(buildCornersMap(), width);
-        mDoorsLayer.map(buildDoordMap(), width);
+        mDoorsLayer.map(buildDoorsMap(), width);
 
         roofTilemap = new XyzRoofTileMap(level, tiles);
     }
@@ -75,7 +75,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         return mDecoMap;
     }
 
-    private int[] buildDoordMap() {
+    private int[] buildDoorsMap() {
         for (int i = 0; i < mDoorsMap.length; i++) {
             mDoorsMap[i] = currentDoorsCell(i);
         }
@@ -92,6 +92,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     private int[] buildRoofMap() {
+
         for (int i = 0; i < mRoofMap.length; i++) {
             mRoofMap[i] = currentRoofCell(i);
         }
@@ -305,7 +306,15 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
 
     private int currentRoofCell(int cell) {
+
+
         int cellS = cell + level.getWidth();
+
+        if(level.cellValid(cellS)) {
+            if (!level.mapped[cellS]) {
+                return 128;
+            }
+        }
 
         if (isWallCell(cellS)) {
             if (!isAnyWallCell(cell)) {
@@ -341,6 +350,14 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private int currentCornersCell(int cell) {
         final int width = level.getWidth();
+
+
+        if(level.cellValid(cell + width)) {
+            if (!level.mapped[cell + width]) {
+                return 128;
+            }
+        }
+
 
         final boolean c_plus_w = isAnyWallCell(cell + width);
         final boolean c_plus_1 = isAnyWallCell(cell + 1);
@@ -515,7 +532,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     public void updateAll() {
         buildGroundMap();
         buildWallsMap();
-        buildRoofMap();
+        buildDoorsMap();
         buildCornersMap();
         buildRoofMap();
 
