@@ -331,6 +331,7 @@ public abstract class Level implements Bundlable {
 				visited[cell] = mapped[cell] = true;
 			}
 		}
+		GameScene.updateMap();
 	}
 
 	public int getViewDistance() {

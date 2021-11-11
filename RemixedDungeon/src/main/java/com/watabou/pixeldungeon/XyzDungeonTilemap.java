@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon;
 
+import com.nyrds.util.SeededRandom;
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
@@ -7,7 +8,6 @@ import com.watabou.noosa.Tilemap;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
-import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -34,6 +34,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     private final int[] mDoorsMap;
 
     private final DungeonTilemap roofTilemap;
+    SeededRandom random = new SeededRandom();
 
     public XyzDungeonTilemap(Level level, String tiles) {
         super(level, tiles);
@@ -171,9 +172,9 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
             case Terrain.EMPTY_SP:
             case Terrain.STATUE_SP:
-                return Random.oneOf(floorSpTiles);
+                return random.oneOf(cell,floorSpTiles);
             default:
-                return Random.oneOf(floorTiles);
+                return random.oneOf(cell,floorTiles);
         }
     }
 
@@ -219,7 +220,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         final boolean c_plus_w = is.is(cell + width);
 
         if (!c_plus_w) {
-            return Random.oneOf(wallSTiles);
+            return random.oneOf(cell,wallSTiles);
         }
 
         final boolean c_plus_w_minus_1 = is.is(cell + width - 1);
@@ -232,38 +233,38 @@ public class XyzDungeonTilemap extends DungeonTilemap {
                 && !c_minus_1 && !c_plus_1
         ) {
 
-            return Random.oneOf(wallVerticalCrossTiles);
+            return random.oneOf(cell,wallVerticalCrossTiles);
         }
 
         if (c_plus_w_minus_1 && c_plus_w_plus_1 && !c_minus_1
         ) {
-            return Random.oneOf(w6_22);
+            return random.oneOf(cell,w6_22);
         }
 
         if (c_plus_w_minus_1 && c_plus_w_plus_1 && !c_plus_1
         ) {
-            return Random.oneOf(w7_23);
+            return random.oneOf(cell,w7_23);
         }
 
         if (!c_plus_w_minus_1 && !c_plus_w_plus_1) {
-            return Random.oneOf(wallVerticalTiles);
+            return random.oneOf(cell,wallVerticalTiles);
         }
 
         if (!c_plus_w_minus_1) {
             if (c_plus_1) {
-                return Random.oneOf(wallVerticalRightSolidTiles);
+                return random.oneOf(cell,wallVerticalRightSolidTiles);
             }
-            return Random.oneOf(wallVerticalRightTiles);
+            return random.oneOf(cell,wallVerticalRightTiles);
         }
 
         if (!c_plus_w_plus_1) {
             if (c_minus_1) {
-                return Random.oneOf(wallVerticalLeftSolidTiles);
+                return random.oneOf(cell,wallVerticalLeftSolidTiles);
             }
-            return Random.oneOf(wallVerticalLeftTiles);
+            return random.oneOf(cell,wallVerticalLeftTiles);
         }
 
-        return Random.oneOf(wallVerticalCrossSolidTiles);
+        return random.oneOf(cell,wallVerticalCrossSolidTiles);
     }
 
     boolean isAnyWallCell(int cell) {
@@ -311,7 +312,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         int cellS = cell + level.getWidth();
 
         if(level.cellValid(cellS)) {
-            if (!level.mapped[cellS]) {
+            if (!level.isCellMapped(cellS)) {
                 return 128;
             }
         }
@@ -333,18 +334,18 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private int roofCellKind(int cellS) {
         if (isAnyWallCell(cellS + 1) && isAnyWallCell(cellS - 1)) {
-            return Random.oneOf(roofNTilesCross);
+            return random.oneOf(cellS,roofNTilesCross);
         }
 
         if (isAnyWallCell(cellS - 1)) {
-            return Random.oneOf(roofNTilesLeft);
+            return random.oneOf(cellS,roofNTilesLeft);
         }
 
         if (isAnyWallCell(cellS + 1)) {
-            return Random.oneOf(roofNTilesRight);
+            return random.oneOf(cellS,roofNTilesRight);
         }
 
-        return Random.oneOf(roofNTiles);
+        return random.oneOf(cellS,roofNTiles);
     }
 
 
@@ -499,15 +500,15 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             case Terrain.CHASM_WATER:
                 return 132;
             case Terrain.EMBERS:
-                return Random.oneOf(16*12, 16*12 + 1,16*12 +2);
+                return random.oneOf(cell,16*12, 16*12 + 1,16*12 +2);
             case Terrain.GRASS:
-                return Random.oneOf(195, 196, 197);
+                return random.oneOf(cell,195, 196, 197);
             case Terrain.HIGH_GRASS:
-                return Random.oneOf(198, 199, 200);
+                return random.oneOf(cell,198, 199, 200);
             case Terrain.EMPTY_DECO:
-                return Random.oneOf(144, 145, 146);
+                return random.oneOf(cell,144, 145, 146);
             case Terrain.WALL_DECO:
-                return Random.oneOf(160, 161, 162);
+                return random.oneOf(cell,160, 161, 162);
         }
         return 173;
     }

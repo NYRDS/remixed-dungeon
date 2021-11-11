@@ -812,6 +812,7 @@ public class GameScene extends PixelScene {
 
             final Level level = Dungeon.level;
             scene.fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
+            GameScene.updateMap();
 
             for (Mob mob : level.mobs) {
                 mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
