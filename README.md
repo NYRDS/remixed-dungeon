@@ -23,7 +23,7 @@ Remixed Dungeon in [Google Play](https://play.google.com/store/apps/details?id=c
 
 Классический рогалик с пиксельной графикой и простым интерфейсом.
 
-Это форк Знаменитой Pixel Dungeon с Английской, Русской и множеством других локализацией.
+Это форк Знаменитой Pixel Dungeon с Английской, Русской и множеством других локализаций.
 
 Remixed Dungeon в [Google Play](https://play.google.com/store/apps/details?id=com.nyrds.pixeldungeon.ml&referrer=utm_source%3Dgithub%26utm_content%3Dreadme)
 
