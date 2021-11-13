@@ -17,5 +17,9 @@ return object.init{
 
     losBlocker = function(self, object)
         return true
+    end,
+
+    ignoreIsometricShift = function(self, object)
+        return true
     end
 }

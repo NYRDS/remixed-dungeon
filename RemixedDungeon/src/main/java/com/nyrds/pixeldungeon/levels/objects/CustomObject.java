@@ -129,4 +129,9 @@ public class CustomObject extends Deco {
     public String getTextureFile() {
         return script.runOptional("textureFile", super.getTextureFile(), level());
     }
+
+    @Override
+    public boolean ignoreIsometricShift() {
+        return script.runOptional("ignoreIsometricShift", super.ignoreIsometricShift());
+    }
 }

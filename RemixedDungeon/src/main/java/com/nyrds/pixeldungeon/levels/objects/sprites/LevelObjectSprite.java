@@ -27,9 +27,7 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 	private PointF      centerShift;
 
 	public LevelObjectSprite()
-	{
-		setIsometricShift(true);
-	}
+	{}
 
 	public void move(int from, int to) {
 		if (getParent() != null) {
@@ -59,6 +57,10 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 
 	public void reset(@NotNull LevelObject object) {
 		revive();
+
+		if(!object.ignoreIsometricShift()) {
+			setIsometricShift(true);
+		}
 
 		texture(object.getTextureFile());
 

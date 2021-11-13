@@ -213,4 +213,8 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     public boolean losBlocker() {
         return false;
     }
+
+    public boolean ignoreIsometricShift() {
+        return false;
+    }
 }
