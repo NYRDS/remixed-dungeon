@@ -39,8 +39,7 @@ return object.init{
     end,
 
     bump = function(self, object, presser)
-        RPD.glog("This well full of %s", self.data.water )
-        if self.data.water then
+        if self.data.water and string.len(self.data.water) > 0 then
             object:level():getBlobByName(self.data.water):affect()
             self.data.water = nil
         end
