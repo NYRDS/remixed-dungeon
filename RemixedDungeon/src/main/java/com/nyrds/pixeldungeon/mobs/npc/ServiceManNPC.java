@@ -63,7 +63,6 @@ public class ServiceManNPC extends ImmortalNPC {
         }
 
         GameLoop.pushUiTask( () -> {
-            Game.softPaused = true;
             GameLoop.runOnMainThread(() ->
             {
                 boolean result = Ads.isRewardVideoReady();
