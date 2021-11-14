@@ -47,9 +47,25 @@ public class ModdingMode {
 
 	private static final Map<String, String> resourcesRemap = new HashMap<>();
 
+	private static Map<String, String> rewardVideoIds = new HashMap<>();
+	private static Map<String, String> interstitialIds = new HashMap<>();
+
 	static {
 		trustedMods.add("Maze");
 		trustedMods.add("Conundrum");
+
+		trustedMods.add("Remixed Additions");
+		trustedMods.add("Remixed RPG");
+		trustedMods.add("The epic dungeon");
+
+
+		rewardVideoIds.put("The epic dungeon", "ca-app-pub-4791779564989579/1063117964");
+		rewardVideoIds.put("Remixed Additions", "ca-app-pub-4791779564989579/1515968557");
+		rewardVideoIds.put("Remixed RPG", "ca-app-pub-4791779564989579/6811870723");
+
+		interstitialIds.put("The epic dungeon", "ca-app-pub-4791779564989579/6507016335");
+		interstitialIds.put("Remixed Additions", "ca-app-pub-4791779564989579/9438034069");
+		interstitialIds.put("Remixed RPG", "ca-app-pub-4791779564989579/5368934724");
 
 		dlcSet.add("HiFi DLC");
 		dlcSet.add(REMIXED);
@@ -264,7 +280,6 @@ public class ModdingMode {
 		}
 	}
 
-
 	public static @NotNull InputStream getInputStream(String resName) {
 		try {
 			if (!mActiveMod.equals(REMIXED) && isModdingAllowed(resName)) {
@@ -333,10 +348,19 @@ public class ModdingMode {
 	}
 
 	public static String getRewardedVideoId() {
+
+		if(!Util.isDebug() && rewardVideoIds.containsKey(activeMod())) {
+			return rewardVideoIds.get(activeMod());
+		}
+
 		return StringsManager.getVar(R.string.cinemaRewardAdUnitId);
 	}
 
 	public static String getInterstitialId() {
+		if(!Util.isDebug() && interstitialIds.containsKey(activeMod())) {
+			return interstitialIds.get(activeMod());
+		}
+
 		return StringsManager.getVar(R.string.saveLoadAdUnitId);
 	}
 }

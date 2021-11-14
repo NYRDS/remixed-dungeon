@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
+import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Dungeon;
@@ -61,18 +62,21 @@ public class ServiceManNPC extends ImmortalNPC {
             return true;
         }
 
-        GameLoop.runOnMainThread(() ->
-        {
-            boolean result = Ads.isRewardVideoReady();
-            GameLoop.pushUiTask(() -> {
-                        if (result) {
-                            GameScene.show(new WndMovieTheatre(this, filmsSeen, getLimit()));
-                        } else {
-                            say(StringsManager.getVar(R.string.ServiceManNPC_NotReady));
+        GameLoop.pushUiTask( () -> {
+            Game.softPaused = true;
+            GameLoop.runOnMainThread(() ->
+            {
+                boolean result = Ads.isRewardVideoReady();
+                GameLoop.pushUiTask(() -> {
+                            if (result) {
+                                GameScene.show(new WndMovieTheatre(this, filmsSeen, getLimit()));
+                            } else {
+                                Game.softPaused = false;
+                                say(StringsManager.getVar(R.string.ServiceManNPC_NotReady));
+                            }
                         }
-                    }
-            );
-
+                );
+            });
         });
 
         return true;

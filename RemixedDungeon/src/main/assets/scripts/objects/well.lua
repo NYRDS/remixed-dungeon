@@ -68,7 +68,7 @@ return object.init{
         if RPD.DungeonTilemap:kind(level) == 'xyz' then
             return 16 * 5 + object:level():objectsKind()
         else
-            return RPD.DungeonTilemap:getDecoTileForTerrain(level, object:getPos(), RPD.Terrain.WELL)
+            return RPD.DungeonTilemap:getDecoTileForTerrain(level, object:getPos(), RPD.Terrain.EMPTY_WELL)
         end
     end
 }

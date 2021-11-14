@@ -152,7 +152,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         if(level.map[cell] >= Terrain.WATER_TILES) {
             int tile = 208;
             for (int j = 0; j < Level.NEIGHBOURS4.length; j++) {
-                if ((TerrainFlags.flags[level.map[cell + Level.NEIGHBOURS4[j]]] & (TerrainFlags.LIQUID | TerrainFlags.PIT))!= 0) {
+                final int mapTile = level.map[cell + Level.NEIGHBOURS4[j]];
+                if ((TerrainFlags.flags[mapTile] & (TerrainFlags.LIQUID | TerrainFlags.PIT | TerrainFlags.SOLID))!= 0 && !(mapTile == Terrain.DOOR || mapTile == Terrain.OPEN_DOOR)) {
                     tile += 1 << j;
                 }
             }
@@ -308,7 +309,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private int currentRoofCell(int cell) {
 
-
         int cellS = cell + level.getWidth();
 
         if(level.cellValid(cellS)) {
@@ -359,7 +359,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             }
         }
 
-
         final boolean c_plus_w = isAnyWallCell(cell + width);
         final boolean c_plus_1 = isAnyWallCell(cell + 1);
         final boolean c_plus_1_plus_w = isAnyWallCell(cell + 1 + width);
@@ -395,7 +394,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
                 return 29;
             }
         }
-
 
         if (c_plus_1 && c_plus_w && !c_plus_1_plus_w && c_minus_1 && !c_minus_1_plus_w) {
             return 14;

@@ -124,16 +124,19 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     }
 
     public static void toast(final String text, final Object... args) {
+        String toastText = text;
+
+        if (args.length > 0) {
+            toastText = Utils.format(text, args);
+        }
+
+        GLog.toFile("%s ",toastText);
+
+        String finalToastText = toastText;
+
         GameLoop.runOnMainThread(() -> {
-            String toastText = text;
 
-            if (args.length > 0) {
-                toastText = Utils.format(text, args);
-            }
-
-            GLog.toFile("%s ",toastText);
-
-            Toast toast = Toast.makeText(RemixedDungeonApp.getContext(), toastText,
+            Toast toast = Toast.makeText(RemixedDungeonApp.getContext(), finalToastText,
                     Toast.LENGTH_SHORT);
             toast.show();
         });
