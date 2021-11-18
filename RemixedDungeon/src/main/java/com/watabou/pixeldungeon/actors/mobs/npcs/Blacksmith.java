@@ -148,7 +148,7 @@ public class Blacksmith extends NPC {
             return StringsManager.getVar(R.string.Blacksmith_Verify1);
         }
 		
-		if (item1.getClass() != item2.getClass() || item1.getEntityKind() != item2.getEntityKind()) {
+		if (item1.getEntityKind() != item2.getEntityKind()) {
             return StringsManager.getVar(R.string.Blacksmith_Verify2);
         }
 		
