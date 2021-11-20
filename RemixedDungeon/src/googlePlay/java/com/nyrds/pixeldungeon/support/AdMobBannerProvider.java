@@ -22,7 +22,7 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
         adView = new AdView(Game.instance());
         adView.setAdUnitId(StringsManager.getVar(R.string.easyModeAdUnitId));
         adView.setBackgroundColor(Color.TRANSPARENT);
-        adView.setAdListener(new AdmobBannerListener());
+        adView.setAdListener(new AdMobBannerListener());
         adView.setAdSize(AdSize.SMART_BANNER);
         adView.loadAd(AdMob.makeAdRequest());
     }
@@ -32,7 +32,7 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
         return true;
     }
 
-    private class AdmobBannerListener extends AdListener {
+    private class AdMobBannerListener extends AdListener {
 
         @Override
         public void onAdLoaded() {

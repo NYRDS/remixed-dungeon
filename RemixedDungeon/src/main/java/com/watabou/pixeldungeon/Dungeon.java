@@ -38,6 +38,7 @@ import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
@@ -716,6 +717,14 @@ public class Dungeon {
     public static void observeImpl() {
         level.updateFieldOfView(hero.getControlTarget());
         System.arraycopy(level.fieldOfView, 0, visible, 0, visible.length);
+
+        if(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false)) {
+            for (int i = level.getWidth(); i < level.getLength() - level.getWidth(); i++) {
+                if (visible[i] && level.solid[i] && level.solid[i - level.getWidth()]) {
+                    visible[i - level.getWidth()] = true;
+                }
+            }
+        }
 
         BArray.or(level.mapped, visible, level.mapped);
 

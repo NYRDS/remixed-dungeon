@@ -269,7 +269,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     boolean isAnyWallCell(int cell) {
-        return isSpWallCell(cell) || isWallCell(cell);
+        return isSpWallCell(cell) || isWallCell(cell) || !level.isCellMapped(cell);
     }
 
     boolean isSpWallCell(int cell) {
@@ -311,7 +311,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
         int cellS = cell + level.getWidth();
 
-        if(level.cellValid(cellS)) {
+        if(level.cellValid(cellS) && !isAnyWallCell(cellS)) {
             if (!level.isCellMapped(cellS)) {
                 return 128;
             }
@@ -353,11 +353,12 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         final int width = level.getWidth();
 
 
-        if(level.cellValid(cell + width)) {
+        if(level.cellValid(cell + width) && !isAnyWallCell(cell+width)) {
             if (!level.mapped[cell + width]) {
                 return 128;
             }
         }
+
 
         final boolean c_plus_w = isAnyWallCell(cell + width);
         final boolean c_plus_1 = isAnyWallCell(cell + 1);
