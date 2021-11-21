@@ -74,6 +74,9 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         roofTilemap = new XyzRoofTileMap(level, tiles);
     }
 
+    public boolean mayPeek(int cell) {
+        return level.passable[cell];
+    }
 
     public void makeIsometricMap() {
         for(int i=0;i<mSize;i++) {
@@ -81,10 +84,10 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             int cellS = i + mWidth;
             if(level.mapped[i]) {
                 mIsometricMap[i] = level.map[i];
-            } else if(level.cellValid(cellN) && level.mapped[cellN] && !level.solid[i] && !level.solid[cellN]) {
+            } else if(level.cellValid(cellN) && level.mapped[cellN] && mayPeek(i) && mayPeek(cellN)) {
                 mIsometricMap[i] = level.map[i];
-            } else if(level.cellValid(cellS) && level.mapped[cellS] && level.solid[i] && level.solid[cellS]) {
-                mIsometricMap[i] = level.map[i];
+            //} else if(level.cellValid(cellS) && level.mapped[cellS] && mayPeek(i) && mayPeek(cellS)) {
+            //    mIsometricMap[i] = level.map[i];
             } else {
                 mIsometricMap[i] = Terrain.WALL;
             }

@@ -720,7 +720,7 @@ public class Dungeon {
 
         if(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false)) {
             for (int i = level.getWidth(); i < level.getLength() - level.getWidth(); i++) {
-                if (visible[i] && level.solid[i] && level.solid[i - level.getWidth()]) {
+                if (visible[i] && level.solid[i] && level.solid[i-level.getWidth()]) {
                     visible[i - level.getWidth()] = true;
                 }
             }
