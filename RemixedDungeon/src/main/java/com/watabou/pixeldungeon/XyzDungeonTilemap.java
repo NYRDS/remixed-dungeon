@@ -28,6 +28,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     private final Level level;
 
     private final int[] mIsometricMap;
+
     private final int[] mWallsMap;
     private final int[] mDecoMap;
     private final int[] mRoofMap;
@@ -36,18 +37,20 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private final DungeonTilemap roofTilemap;
     SeededRandom random = new SeededRandom();
+
     private final int mSize;
+    private final int mWidth;
 
     public XyzDungeonTilemap(Level level, String tiles) {
         super(level, tiles);
         this.level = level;
 
-        final int width = level.getWidth();
-        mSize = width * level.getHeight();
+        mWidth = level.getWidth();
+        mSize = mWidth * level.getHeight();
 
         data = new int[mSize];
         mIsometricMap = new int[mSize];
-        map(buildGroundMap(), width);
+        map(buildGroundMap(), mWidth);
 
         mWallsLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
         mDecoLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
@@ -62,11 +65,11 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         mCornersMap = new int[mSize];
         mDoorsMap = new int[mSize];
 
-        mWallsLayer.map(buildWallsMap(), width);
-        mDecoLayer.map(buildDecoMap(), width);
-        mRoofLayer.map(buildRoofMap(), width);
-        mCornersLayer.map(buildCornersMap(), width);
-        mDoorsLayer.map(buildDoorsMap(), width);
+        mWallsLayer.map(buildWallsMap(), mWidth);
+        mDecoLayer.map(buildDecoMap(), mWidth);
+        mRoofLayer.map(buildRoofMap(), mWidth);
+        mCornersLayer.map(buildCornersMap(), mWidth);
+        mDoorsLayer.map(buildDoorsMap(), mWidth);
 
         roofTilemap = new XyzRoofTileMap(level, tiles);
     }
@@ -74,10 +77,16 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     public void makeIsometricMap() {
         for(int i=0;i<mSize;i++) {
+            int cellN = i - mWidth;
+            int cellS = i + mWidth;
             if(level.mapped[i]) {
                 mIsometricMap[i] = level.map[i];
+            } else if(level.cellValid(cellN) && level.mapped[cellN] && !level.solid[i] && !level.solid[cellN]) {
+                mIsometricMap[i] = level.map[i];
+            } else if(level.cellValid(cellS) && level.mapped[cellS] && level.solid[i] && level.solid[cellS]) {
+                mIsometricMap[i] = level.map[i];
             } else {
-                mIsometricMap[i] = Terrain.EMPTY_DECO;
+                mIsometricMap[i] = Terrain.WALL;
             }
         }
     }
@@ -163,10 +172,10 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private int currentBaseCell(int cell) {
 
-        if(level.map[cell] >= Terrain.WATER_TILES) {
+        if(mIsometricMap[cell] >= Terrain.WATER_TILES) {
             int tile = 208;
             for (int j = 0; j < Level.NEIGHBOURS4.length; j++) {
-                final int mapTile = level.map[cell + Level.NEIGHBOURS4[j]];
+                final int mapTile = mIsometricMap[cell + Level.NEIGHBOURS4[j]];
                 if ((TerrainFlags.flags[mapTile] & (TerrainFlags.LIQUID | TerrainFlags.PIT | TerrainFlags.SOLID))!= 0 && !(mapTile == Terrain.DOOR || mapTile == Terrain.OPEN_DOOR)) {
                     tile += 1 << j;
                 }
@@ -175,11 +184,11 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             return tile;
         }
 
-        if(TerrainFlags.is(level.map[cell], TerrainFlags.PIT)) {
+        if(TerrainFlags.is(mIsometricMap[cell], TerrainFlags.PIT)) {
             return 173;
         }
 
-        switch (level.map[cell]) {
+        switch (mIsometricMap[cell]) {
             case Terrain.ALCHEMY:
                 return 138;
             case Terrain.WELL:
@@ -283,7 +292,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     boolean isAnyWallCell(int cell) {
-        return isSpWallCell(cell) || isWallCell(cell) || !level.isCellMapped(cell);
+        return isSpWallCell(cell) || isWallCell(cell) ;
     }
 
     boolean isSpWallCell(int cell) {
@@ -291,7 +300,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             return true;
         }
 
-        switch (level.map[cell]) {
+        switch (mIsometricMap[cell]) {
             case Terrain.BOOKSHELF:
             case Terrain.SECRET_DOOR:
                 return true;
@@ -305,7 +314,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             return true;
         }
 
-        switch (level.map[cell]) {
+        switch (mIsometricMap[cell]) {
             case Terrain.WALL:
             case Terrain.WALL_DECO:
             case Terrain.SECRET_DOOR:
@@ -324,12 +333,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     private int currentRoofCell(int cell) {
 
         int cellS = cell + level.getWidth();
-
-        if(level.cellValid(cellS) && !isAnyWallCell(cellS)) {
-            if (!level.isCellMapped(cellS)) {
-                return 128;
-            }
-        }
 
         if (isWallCell(cellS)) {
             if (!isAnyWallCell(cell)) {
@@ -365,14 +368,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private int currentCornersCell(int cell) {
         final int width = level.getWidth();
-
-
-        if(level.cellValid(cell + width) && !isAnyWallCell(cell+width)) {
-            if (!level.mapped[cell + width]) {
-                return 128;
-            }
-        }
-
 
         final boolean c_plus_w = isAnyWallCell(cell + width);
         final boolean c_plus_1 = isAnyWallCell(cell + 1);
@@ -429,7 +424,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             return false;
         }
 
-        switch (level.map[cell]) {
+        switch (mIsometricMap[cell]) {
             case Terrain.DOOR:
             case Terrain.OPEN_DOOR:
             case Terrain.LOCKED_DOOR:
@@ -441,7 +436,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     private int currentDoorsCell(int cell) {
         if(isDoorCell(cell)) {
             if (isWallCell(cell + 1) && isWallCell(cell - 1)) {
-                switch (level.map[cell]) {
+                switch (mIsometricMap[cell]) {
                     case Terrain.DOOR:
                         return 56;
                     case Terrain.OPEN_DOOR:
@@ -452,7 +447,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             }
 
             if (isWallCell(cell + level.getWidth()) && isWallCell(cell - level.getWidth())) {
-                switch (level.map[cell]) {
+                switch (mIsometricMap[cell]) {
                     case Terrain.DOOR:
                         return 59;
                     case Terrain.OPEN_DOOR:
@@ -467,7 +462,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
         if(isDoorCell(cellS)) {
             if (isWallCell(cellS +  1) && isWallCell(cellS - 1)) {
-                switch (level.map[cellS]) {
+                switch (mIsometricMap[cellS]) {
                     case Terrain.DOOR:
                         return 40;
                     case Terrain.OPEN_DOOR:
@@ -478,7 +473,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             }
 
             if (isWallCell(cellS + level.getWidth())  && isWallCell(cellS - level.getWidth())) {
-                switch (level.map[cellS]) {
+                switch (mIsometricMap[cellS]) {
                     case Terrain.DOOR:
                         return 43;
                     case Terrain.OPEN_DOOR:
@@ -493,7 +488,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     private int currentDecoCell(int cell) {
-        switch (level.map[cell]) {
+        switch (mIsometricMap[cell]) {
             case Terrain.ENTRANCE:
                 return 133;
             case Terrain.EXIT:
@@ -547,7 +542,9 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         makeIsometricMap();
 
         buildGroundMap();
+
         buildWallsMap();
+        buildDecoMap();
         buildDoorsMap();
         buildCornersMap();
         buildRoofMap();
@@ -566,6 +563,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     public void updateCell(int cell, Level level) {
         int x = level.cellX(cell);
         int y = level.cellY(cell);
+
         makeIsometricMap();
 
         data[cell] = currentBaseCell(cell);
