@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.effects;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.util.JsonHelper;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.MovieClip;
@@ -37,6 +38,12 @@ public class CustomClipEffect extends MovieClip implements MovieClip.Listener, I
 		PointF p = DungeonTilemap.tileToWorld(cell);
 		x = p.x + centerShift.x;
 		y = p.y + centerShift.y;
+	}
+
+	@LuaInterface
+	public void playWithOffset(int offset) {
+		Animation anim = curAnim.frames(offset, film, curAnim.framesIndexes);
+		play(anim, true);
 	}
 
 	public void playAnimOnce() {

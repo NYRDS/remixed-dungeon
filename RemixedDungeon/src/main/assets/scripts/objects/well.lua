@@ -42,6 +42,7 @@ return object.init{
         if self.data.water and string.len(self.data.water) > 0 then
             local effect = RPD.topEffect(object:getPos(), "waterwell_effect")
             effect:setIsometricShift(true)
+            effect:playWithOffset(object:level():objectsKind() * 16)
         end
     end,
 

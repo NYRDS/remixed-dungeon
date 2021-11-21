@@ -46,6 +46,13 @@ return object.init {
         end
     end,
 
+    addedToScene = function(self, object)
+        local effect = RPD.topEffect(object:getPos(), "cauldron_effect")
+        effect:setIsometricShift(true)
+        effect:playWithOffset(object:level():objectsKind() * 16)
+    end,
+
+
     image = function(self, object, level)
         if RPD.DungeonTilemap:kind(level) == 'xyz' then
             return 16 * 3 + object:level():objectsKind()
