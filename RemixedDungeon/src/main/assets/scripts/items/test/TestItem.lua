@@ -101,12 +101,20 @@ return itemLib.init{
                                              true,
                                              cellAction)
 ]]
-            RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
-            RPD.zapEffect(thisItem:getOwner():getPos(), cell, "Lightning")
+            --RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
+            --RPD.zapEffect(thisItem:getOwner():getPos(), cell, "Lightning")
             --local book = RPD.creteItem("PotionOfHealing", {text="Test codex"})
             --RPD.Dungeon.level:drop(book, cell)
-            RPD.createLevelObject(trap, cell)
+            --RPD.createLevelObject(trap, cell)
             --RPD.GameScene:particleEffect("BloodSink", cell);
+            local object = RPD.Dungeon.level:getTopLevelObject(cell)
+
+            if not object then
+                RPD.glog("no object in cell %d", cell)
+            else
+                RPD.glog("There is a %s in cell %d", object:getEntityKind(), cell)
+            end
+
             end
     end,
 
@@ -132,7 +140,7 @@ return itemLib.init{
             --ads.interstitialShow()
 
             --RPD.affectBuff(hero, RPD.Buffs.Invisibility ,200)
-            --item:selectCell("action1","Please select cell for action 1")
+            item:selectCell("action1","Please select cell for action 1")
             --RPD.playMusic("surface",true);
         end
 
