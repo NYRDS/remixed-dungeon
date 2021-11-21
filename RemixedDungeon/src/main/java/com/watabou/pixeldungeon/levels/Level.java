@@ -393,7 +393,7 @@ public abstract class Level implements Bundlable {
 	protected static final int MAX_VIEW_DISTANCE = 8;
 	public static final    int MIN_VIEW_DISTANCE = 3;
 
-	public int[]     map;
+	public int[]map;
 
 
 	public enum LayerId {

@@ -27,6 +27,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private final Level level;
 
+    private final int[] mIsometricMap;
     private final int[] mWallsMap;
     private final int[] mDecoMap;
     private final int[] mRoofMap;
@@ -35,15 +36,17 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private final DungeonTilemap roofTilemap;
     SeededRandom random = new SeededRandom();
+    private final int mSize;
 
     public XyzDungeonTilemap(Level level, String tiles) {
         super(level, tiles);
         this.level = level;
 
         final int width = level.getWidth();
-        int mSize = width * level.getHeight();
+        mSize = width * level.getHeight();
 
         data = new int[mSize];
+        mIsometricMap = new int[mSize];
         map(buildGroundMap(), width);
 
         mWallsLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
@@ -66,6 +69,17 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         mDoorsLayer.map(buildDoorsMap(), width);
 
         roofTilemap = new XyzRoofTileMap(level, tiles);
+    }
+
+
+    public void makeIsometricMap() {
+        for(int i=0;i<mSize;i++) {
+            if(level.mapped[i]) {
+                mIsometricMap[i] = level.map[i];
+            } else {
+                mIsometricMap[i] = Terrain.EMPTY_DECO;
+            }
+        }
     }
 
     private int[] buildDecoMap() {
@@ -530,6 +544,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     public void updateAll() {
+        makeIsometricMap();
+
         buildGroundMap();
         buildWallsMap();
         buildDoorsMap();
@@ -550,6 +566,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     public void updateCell(int cell, Level level) {
         int x = level.cellX(cell);
         int y = level.cellY(cell);
+        makeIsometricMap();
 
         data[cell] = currentBaseCell(cell);
         mWallsMap[cell] = currentWallsCell(cell);

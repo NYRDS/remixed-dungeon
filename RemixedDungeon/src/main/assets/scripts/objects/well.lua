@@ -38,6 +38,13 @@ return object.init{
 
     end,
 
+    addedToScene = function(self, object)
+        if self.data.water and string.len(self.data.water) > 0 then
+            local effect = RPD.topEffect(object:getPos(), "waterwell_effect")
+            effect:setIsometricShift(true)
+        end
+    end,
+
     bump = function(self, object, presser)
         if self.data.water and string.len(self.data.water) > 0 then
             object:level():getBlobByName(self.data.water):affect()

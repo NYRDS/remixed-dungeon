@@ -134,4 +134,10 @@ public class CustomObject extends Deco {
     public boolean ignoreIsometricShift() {
         return script.runOptional("ignoreIsometricShift", super.ignoreIsometricShift());
     }
+
+    @Override
+    public void addedToScene() {
+        script.runOptionalNoRet("addedToScene");
+        super.addedToScene();
+    }
 }

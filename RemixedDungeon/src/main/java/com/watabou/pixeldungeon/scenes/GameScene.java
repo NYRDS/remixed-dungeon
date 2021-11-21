@@ -426,13 +426,16 @@ public class GameScene extends PixelScene {
 
         level.activateScripts();
 
+        for (var lo: level.getAllLevelObjects()) {
+            lo.addedToScene();
+        }
+
         fadeIn();
 
         Dungeon.observe();
         hero.updateSprite();
         hero.readyAndIdle();
         QuickSlot.refresh(hero);
-
 
         doSelfTest();
 
@@ -494,6 +497,7 @@ public class GameScene extends PixelScene {
     }
 
     public void destroy() {
+        sceneCreated = false;
         scene = null;
         Badges.saveGlobal();
 
