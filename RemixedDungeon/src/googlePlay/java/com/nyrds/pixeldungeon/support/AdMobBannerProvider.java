@@ -8,6 +8,7 @@ import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.LoadAdError;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
 
@@ -41,6 +42,7 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
 
         @Override
         public void onAdFailedToLoad(LoadAdError reason) {
+            EventCollector.logEvent("Banner failed", reason.toString());
             AdsUtilsCommon.bannerFailed(AdMobBannerProvider.this);
         }
     }

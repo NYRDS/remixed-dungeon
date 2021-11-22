@@ -17,6 +17,7 @@ t * Pixel Dungeon
  */
 package com.watabou.pixeldungeon;
 
+import com.google.firebase.perf.metrics.AddTrace;
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.ai.MobAi;
@@ -452,6 +453,7 @@ public class Dungeon {
         output.close();
     }
 
+    @AddTrace(name = "Dungeon.saveAllImpl")
     private static void saveAllImpl() {
         float MBytesAvailable = Util.getAvailableInternalMemorySize() / 1024f / 1024f;
 
@@ -514,7 +516,7 @@ public class Dungeon {
         lastSaveTimestamp = SystemTime.now();
     }
 
-
+    @AddTrace(name = "Dungeon.loadGame")
     public static void loadGame() throws IOException {
         loadGame(SaveUtils.gameFile(heroClass), true);
     }
