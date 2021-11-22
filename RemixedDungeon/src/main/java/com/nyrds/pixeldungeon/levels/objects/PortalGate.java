@@ -41,6 +41,7 @@ public abstract class PortalGate extends Deco {
 
 	public PortalGate(int pos) {
 		super(pos);
+		layer = 2;
 	}
 
 
