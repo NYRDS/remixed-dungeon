@@ -33,8 +33,6 @@ public class AdsUtils {
             interstitialFails.put(new AdMobInterstitialProvider(), -2);
         });
 
-
-
         if(!RemixedDungeonApp.checkOwnSignature()) {
             bannerFails.put(new AAdsComboProvider(), 0);
             interstitialFails.put(new AAdsComboProvider(), 0);

@@ -140,4 +140,9 @@ public class CustomObject extends Deco {
         script.runOptionalNoRet("addedToScene");
         super.addedToScene();
     }
+
+    @Override
+    public int getLayer() {
+        return script.runOptional("getLayer", super.getLayer());
+    }
 }

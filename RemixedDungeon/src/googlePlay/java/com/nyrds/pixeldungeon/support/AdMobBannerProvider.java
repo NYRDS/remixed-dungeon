@@ -15,6 +15,8 @@ import com.nyrds.platform.util.StringsManager;
 public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
     private AdView adView;
 
+    private boolean loaded = false;
+
     AdMobBannerProvider(){ }
 
     @SuppressLint("MissingPermission")
@@ -30,7 +32,7 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
 
     @Override
     public boolean isReady() {
-        return true;
+        return loaded;
     }
 
     private class AdMobBannerListener extends AdListener {
@@ -38,11 +40,13 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
         @Override
         public void onAdLoaded() {
             Ads.updateBanner(adView);
+            loaded = true;
         }
 
         @Override
         public void onAdFailedToLoad(LoadAdError reason) {
             EventCollector.logEvent("Banner failed", reason.toString());
+            loaded = false;
             AdsUtilsCommon.bannerFailed(AdMobBannerProvider.this);
         }
     }

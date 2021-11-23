@@ -23,6 +23,7 @@ import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -54,7 +55,9 @@ public class WndGame extends WndMenuCommon {
 			}
 		});
 
-		menuItems.add(createIsometricShift());
+		if(Util.isDebug()) {
+			menuItems.add(createIsometricShift());
+		}
 
 		menuItems.add( new MenuButton(StringsManager.getVar(R.string.WndGame_Settings)) {
 			@Override
