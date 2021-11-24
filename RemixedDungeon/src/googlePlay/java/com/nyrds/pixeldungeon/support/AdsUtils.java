@@ -33,9 +33,11 @@ public class AdsUtils {
             var status = initializationStatus.getAdapterStatusMap();
 
             GLog.debug("admob status: %s", status.toString());
-            bannerFails.put(new AdMobBannerProvider(),-2);
-            interstitialFails.put(new AdMobInterstitialProvider(), -2);
         });
+
+        bannerFails.put(new AdMobBannerProvider(),-2);
+        interstitialFails.put(new AdMobInterstitialProvider(), -2);
+
 
         if(!RemixedDungeonApp.checkOwnSignature()) {
             bannerFails.put(new AAdsComboProvider(), 0);

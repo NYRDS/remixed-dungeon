@@ -28,12 +28,12 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1073
-        versionName "31.0.beta.1"
+        versionCode 1074
+        versionName "31.0.beta.2"
         buildToolsVersion = '29.0.2'
-        targetSdkVersion 29
+        targetSdkVersion 30
         minSdkVersion 16
-        compileSdkVersion = 29
+        compileSdkVersion = 30
 
         // Enabling multidex support.
         multiDexEnabled true

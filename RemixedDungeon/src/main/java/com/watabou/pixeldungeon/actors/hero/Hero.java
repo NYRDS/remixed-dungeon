@@ -1162,6 +1162,7 @@ public class Hero extends Char {
 	}
 
 	public static void performTests() {
+		int difficulty = GameLoop.getDifficulty();
 		var hero = new Hero(2);
 		var buffsNames = BuffFactory.getAllBuffsNames();
 
@@ -1173,6 +1174,7 @@ public class Hero extends Char {
 				GLog.toFile("Buffs auto-test: %s caused %s", buffName, e);
 			}
 		}
+		GameLoop.setDifficulty(difficulty);
 	}
 
 	@Override
