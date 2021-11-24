@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndInGameUiSettings;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -44,7 +45,16 @@ public class WndSettingsInGame extends WndMenuCommon {
 
 		menuItems.add(createZoomButtons());
 
-        menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_InGameUiSettings)){
+		menuItems.add( new MenuCheckBox(StringsManager.getVar(R.string.WndSettingsInGame_IsometricTiles), Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false)) {
+			@Override
+			protected void onClick() {
+				super.onClick();
+				Preferences.INSTANCE.put(Preferences.KEY_USE_ISOMETRIC_TILES, checked());
+				GameLoop.pushUiTask(GameLoop::resetScene);
+			}
+		});
+		
+		menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_InGameUiSettings)){
 			@Override
 			protected void onClick() {
 				super.onClick();

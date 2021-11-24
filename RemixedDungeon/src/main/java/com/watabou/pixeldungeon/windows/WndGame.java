@@ -21,7 +21,6 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Image;
@@ -45,15 +44,6 @@ public class WndGame extends WndMenuCommon {
 			GameLoop.switchScene(TitleScene.class);
 			return;
 		}
-
-		menuItems.add( new MenuCheckBox("Isometric Tiles", Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false)) {
-			@Override
-			protected void onClick() {
-				super.onClick();
-				Preferences.INSTANCE.put(Preferences.KEY_USE_ISOMETRIC_TILES, checked());
-				GameLoop.pushUiTask(GameLoop::resetScene);
-			}
-		});
 
 		if(Util.isDebug()) {
 			menuItems.add(createIsometricShift());

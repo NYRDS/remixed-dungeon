@@ -2833,5 +2833,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
   <string name="Level_TilePileOfStones">A pile of Stones</string>
   <string name="Level_TileDescPileOfStones">A pile of extremely heavy stones, looks unmovable.</string>
+  <string name="WndSettingsInGame_IsometricTiles">Isometric Tiles</string>
 
 </resources>

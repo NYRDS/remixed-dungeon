@@ -28,7 +28,8 @@ public class GameControl {
 
     @LuaInterface
     static public void startNewGame(String className, int difficulty, boolean testMode) {
-        Dungeon.setDifficulty(difficulty);
+        GameLoop.setDifficulty(difficulty);
+
         Dungeon.hero = null;
         Dungeon.level = null;
         Dungeon.heroClass = HeroClass.valueOf(className);

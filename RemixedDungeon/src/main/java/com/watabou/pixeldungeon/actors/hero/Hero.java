@@ -1056,7 +1056,7 @@ public class Hero extends Char {
 
 	public void setDifficulty(int difficulty) {
 		this.difficulty = difficulty;
-		Dungeon.setDifficulty(difficulty);
+		GameLoop.setDifficulty(difficulty);
 	}
 
 	public void accumulateSkillPoints() {

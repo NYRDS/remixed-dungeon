@@ -15,7 +15,7 @@ import com.nyrds.platform.util.StringsManager;
 public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
     private AdView adView;
 
-    private boolean loaded = false;
+    private boolean loaded = true;
 
     AdMobBannerProvider(){ }
 

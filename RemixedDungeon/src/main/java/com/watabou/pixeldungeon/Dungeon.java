@@ -22,6 +22,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.Library;
@@ -182,7 +183,7 @@ public class Dungeon {
 
         Room.shuffleTypes();
 
-        hero = new Hero(difficulty);
+        hero = new Hero(GameLoop.getDifficulty());
 
         Badges.reset();
 
@@ -857,12 +858,6 @@ public class Dungeon {
         return new Position(hero.levelId, hero.getPos());
     }
 
-    private static int difficulty;
-
-    public static void setDifficulty(int _difficulty) {
-        difficulty = _difficulty;
-        GamePreferences.setDifficulty(difficulty);
-    }
 
     public static boolean isLoading() {
         return hero==null || level == null || loading.get()>0;
