@@ -34,7 +34,6 @@ return object.init {
             RPD.ItemUtils:throwItemAway(pos)
             return
         end
-        RPD.glog("bump by :" .. tostring(presser:getEntityKind()))
         RPD.Blobs.Alchemy:transmute(pos)
     end,
 
@@ -47,7 +46,7 @@ return object.init {
     end,
 
     addedToScene = function(self, object)
-        local effect = RPD.topEffect(object:getPos(), "cauldron_effect")
+        local effect = RPD.objectEffect(object:getPos(), "cauldron_effect")
         effect:setIsometricShift(true)
         effect:playWithOffset(object:level():objectsKind() * 16)
     end,

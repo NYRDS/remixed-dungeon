@@ -32,7 +32,6 @@ return object.init{
         end
 
         if self.data.water and string.len(self.data.water) > 0 then
-            RPD.glog("water |%s|", self.data.water)
             RPD.placeBlob(RPD.Blobs[self.data.water],pos,1, level)
         end
 
@@ -40,7 +39,7 @@ return object.init{
 
     addedToScene = function(self, object)
         if self.data.water and string.len(self.data.water) > 0 then
-            local effect = RPD.topEffect(object:getPos(), "waterwell_effect")
+            local effect = RPD.objectEffect(object:getPos(), "waterwell_effect")
             effect:setIsometricShift(true)
             effect:playWithOffset(object:level():objectsKind() * 16)
         end

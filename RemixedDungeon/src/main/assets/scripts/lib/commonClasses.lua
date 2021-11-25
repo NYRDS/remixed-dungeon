@@ -357,6 +357,10 @@ local RPD = {
         return GameScene:clipEffect(cell,1,effectName)
     end,
 
+    objectEffect = function(cell,effectName)
+        return GameScene:clipEffect(cell,2,effectName)
+    end,
+
     bottomEffect = function(cell,effectName)
         return GameScene:clipEffect(cell,0,effectName)
     end,

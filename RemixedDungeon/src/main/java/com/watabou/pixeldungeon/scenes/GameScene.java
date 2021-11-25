@@ -131,6 +131,7 @@ public class GameScene extends PixelScene {
     private Group ripples;
     private Group bottomEffects;
     private Group objects;
+    private Group objectEffects;
     private Group heaps;
     private Group mobs;
     private Group emitters;
@@ -250,6 +251,9 @@ public class GameScene extends PixelScene {
         objects = new Group();
         add(objects);
 
+        objectEffects = new Group();
+        add(objectEffects);
+
         for (val objectLayer: level.objects.values()) {
             for (val object: objectLayer.values()) {
                 addLevelObjectSprite(object);
@@ -259,7 +263,6 @@ public class GameScene extends PixelScene {
         level.addVisuals(this);
 
         heaps = new Group();
-        add(heaps);
 
         for (Heap heap : level.allHeaps()) {
             addHeapSprite(heap);
@@ -726,6 +729,9 @@ public class GameScene extends PixelScene {
                     break;
                 case 1:
                     scene.effects.add(effect);
+                    break;
+                case 3:
+                    scene.objectEffects.add(effect);
                     break;
                 default:
                     GLog.n("Bad layer %d for %s", layer, effectName);
