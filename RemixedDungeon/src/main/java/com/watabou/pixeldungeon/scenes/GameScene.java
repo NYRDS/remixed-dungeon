@@ -263,6 +263,7 @@ public class GameScene extends PixelScene {
         level.addVisuals(this);
 
         heaps = new Group();
+        add(heaps);
 
         for (Heap heap : level.allHeaps()) {
             addHeapSprite(heap);
@@ -730,7 +731,7 @@ public class GameScene extends PixelScene {
                 case 1:
                     scene.effects.add(effect);
                     break;
-                case 3:
+                case 2:
                     scene.objectEffects.add(effect);
                     break;
                 default:
