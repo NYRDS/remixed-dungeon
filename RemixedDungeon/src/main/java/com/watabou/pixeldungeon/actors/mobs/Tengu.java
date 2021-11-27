@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
+import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
@@ -40,9 +42,8 @@ import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
-import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
@@ -119,12 +120,14 @@ public class Tengu extends Boss implements IZapper {
 	private void jump() {
 		timeToJump = JUMP_DELAY;
 
-		for (int i=0; i < 4; i++) {
-			int trapPos = level().getRandomTerrainCell(Terrain.INACTIVE_TRAP);
+		final Level level1 = level();
 
-			if (level().cellValid(trapPos)) {
-				level().set( trapPos, Terrain.POISON_TRAP );
-				GameScene.updateMap( trapPos );
+		for (int i = 0; i < 4; i++) {
+			int trapPos = level1.getRandomTerrain((level, cell) -> level.getTopLevelObject(cell) instanceof Trap);
+
+			if (level1.cellValid(trapPos)) {
+				Trap tr = (Trap) level1.getTopLevelObject(trapPos);
+				tr.reactivate(LevelObjectsFactory.POISON_TRAP, 1);
 				ScrollOfMagicMapping.discover( trapPos );
 			} else {
 				break;
@@ -133,10 +136,10 @@ public class Tengu extends Boss implements IZapper {
 
 		ArrayList<Integer> candidates = new ArrayList<>();
 		int enemyPos = getEnemy().getPos();
-		for(int i = 0;i<level().getLength();++i) {
-			if(level().fieldOfView[i]
-					&& level().passable[i]
-					&& !level().adjacent( i, enemyPos )
+		for(int i = 0; i< level1.getLength(); ++i) {
+			if(level1.fieldOfView[i]
+					&& level1.passable[i]
+					&& !level1.adjacent( i, enemyPos )
 					&& Actor.findChar(i) == null) {
 				candidates.add(i);
 			}

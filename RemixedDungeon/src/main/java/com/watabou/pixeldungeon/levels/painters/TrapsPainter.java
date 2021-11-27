@@ -32,7 +32,7 @@ public class TrapsPainter extends Painter {
 
 	public static void paint( Level level, Room room ) {
 		 
-		Integer traps[] = {
+		Integer[] traps = {
 			Terrain.TOXIC_TRAP, Terrain.TOXIC_TRAP, Terrain.TOXIC_TRAP, 
 			Terrain.PARALYTIC_TRAP, Terrain.PARALYTIC_TRAP, Terrain.CHASM, Terrain.SUMMONING_TRAP };
 		fill( level, room, Terrain.WALL );

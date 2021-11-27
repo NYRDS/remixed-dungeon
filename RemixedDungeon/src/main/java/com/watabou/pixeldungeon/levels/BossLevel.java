@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.levels.objects.ConcreteBlock;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -60,9 +61,12 @@ public abstract class BossLevel extends RegularLevel {
 
     }
 
-    private void sealCell(int entrance) {
-        CellEmitter.get(entrance).start(Speck.factory(Speck.ROCK), 0.07f, 10);
-        addLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PILE_OF_STONES, entrance));
+    private void sealCell(int cell) {
+        final LevelObject object = getTopLevelObject(cell);
+        if(object == null || !object.getEntityKind().equals(LevelObjectsFactory.PILE_OF_STONES)) {
+            CellEmitter.get(cell).start(Speck.factory(Speck.ROCK), 0.07f, 10);
+            addLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PILE_OF_STONES, cell));
+        }
     }
 
     public void unseal() {

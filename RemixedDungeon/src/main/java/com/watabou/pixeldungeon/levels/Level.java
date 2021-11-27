@@ -239,12 +239,16 @@ public abstract class Level implements Bundlable {
 		final int pos = lo.getPos();
 		objectsLayer.put(pos, lo);
 
-		if(!TerrainFlags.is(map[pos],TerrainFlags.PASSABLE)) {
-			map[pos] = Terrain.EMPTY;
-		}
+		clearCellForObject(pos);
 
 		if(lo.losBlocker()) {
 			losBlocking[pos] = true;
+		}
+	}
+
+	public void clearCellForObject(int pos) {
+		if(!TerrainFlags.is(map[pos],TerrainFlags.PASSABLE) || !TerrainFlags.is(map[pos],TerrainFlags.DEPRECATED)) {
+			map[pos] = Terrain.EMPTY;
 		}
 	}
 
@@ -1790,6 +1794,26 @@ public abstract class Level implements Bundlable {
 	@LuaInterface
 	public int getRandomTerrainCell(int terrainType) {
 		return oneCellFrom(getAllTerrainCells(terrainType));
+	}
+
+	@LuaInterface
+	public int getRandomObjectCell(String kind) {
+		var objects = getAllLevelObjects();
+
+		var retArray = new ArrayList<LevelObject>();
+
+		for (val obj : objects) {
+			if(obj.getEntityKind().equals(kind)) {
+				retArray.add(obj);
+			}
+		}
+
+		if(retArray.isEmpty()) {
+			return INVALID_CELL;
+		}
+
+		val obj = Random.oneOf(retArray.toArray(new LevelObject[0]));
+		return obj.getPos();
 	}
 
 	public int get(int i, int j) {
