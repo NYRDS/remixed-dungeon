@@ -384,6 +384,7 @@ public abstract class Mob extends Char {
 
 		Hero hero = Dungeon.hero;
 
+		if(!cause.getEntityKind().equals(Chasm.class.getSimpleName()))
 		{
 			//TODO we should move this block out of Mob class ( in script for example )
 			if (hero.getHeroClass() == HeroClass.NECROMANCER){

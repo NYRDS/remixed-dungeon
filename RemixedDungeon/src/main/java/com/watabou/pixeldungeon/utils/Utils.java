@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
+import com.watabou.noosa.InterstitialPoint;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -187,5 +188,13 @@ public class Utils {
     public static <T extends Enum<?>> T randomEnum(Class<T> clazz){
         int x = new Random().nextInt(clazz.getEnumConstants().length);
         return clazz.getEnumConstants()[x];
+    }
+
+    public static class SpuriousReturn implements InterstitialPoint {
+
+        @Override
+        public void returnToWork(boolean result) {
+            EventCollector.logException(new Exception(String.format("Spurious returnTo %b", result)));
+        }
     }
 }

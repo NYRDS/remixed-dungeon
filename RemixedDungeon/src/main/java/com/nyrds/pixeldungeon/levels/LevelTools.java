@@ -203,6 +203,9 @@ public class LevelTools {
 
                 case Terrain.STATUE:
                     level.map[i] = Terrain.EMPTY;
+                    level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, i));
+                    break;
+
                 case Terrain.STATUE_SP:
                     level.map[i] = Terrain.EMPTY_SP;
                     level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, i));

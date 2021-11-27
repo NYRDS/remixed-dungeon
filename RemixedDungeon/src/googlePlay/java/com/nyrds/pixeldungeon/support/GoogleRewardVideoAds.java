@@ -12,6 +12,7 @@ import com.nyrds.platform.game.Game;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -23,7 +24,7 @@ import org.jetbrains.annotations.NotNull;
 public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider {
 
 	private static RewardedAd mCinemaRewardAd;
-	private static InterstitialPoint returnTo;
+	private static InterstitialPoint returnTo = new Utils.SpuriousReturn();;
 
 	private static boolean rewardEarned = false;
 

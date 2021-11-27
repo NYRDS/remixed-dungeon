@@ -5,10 +5,11 @@ import com.appodeal.ads.RewardedVideoCallbacks;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.noosa.InterstitialPoint;
+import com.watabou.pixeldungeon.utils.Utils;
 
 class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider {
 
-    private static InterstitialPoint returnTo;
+    private static InterstitialPoint returnTo = new Utils.SpuriousReturn();
 
     public AppodealRewardVideoProvider() {
 

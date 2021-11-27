@@ -351,7 +351,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Game.height = height;
     }
 
-    private InterstitialPoint permissionsPoint;
+    private InterstitialPoint permissionsPoint = new Utils.SpuriousReturn();;
 
     public void doPermissionsRequest(@NotNull InterstitialPoint returnTo, String[] permissions) {
         boolean havePermissions = true;
