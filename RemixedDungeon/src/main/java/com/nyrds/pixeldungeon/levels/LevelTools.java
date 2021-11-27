@@ -192,119 +192,98 @@ public class LevelTools {
         for (int i = 0; i < level.map.length; ++i) {
             switch (level.map[i]) { // old saves compatibility
                 case Terrain.BARRICADE:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.BARRICADE, i));
                     break;
 
                 case Terrain.PEDESTAL:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.PEDESTAL, i));
                     break;
 
                 case Terrain.STATUE:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, i));
                     break;
 
                 case Terrain.STATUE_SP:
-                    level.map[i] = Terrain.EMPTY_SP;
                     level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, i));
+                    level.map[i] = Terrain.EMPTY_SP;
                     break;
 
                 case Terrain.TOXIC_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.TOXIC_TRAP, false));
                     break;
 
                 case Terrain.SECRET_TOXIC_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.TOXIC_TRAP, true));
                     break;
 
                 case Terrain.FIRE_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.FIRE_TRAP, false));
                     break;
 
                 case Terrain.SECRET_FIRE_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.FIRE_TRAP, true));
                     break;
 
                 case Terrain.PARALYTIC_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.PARALYTIC_TRAP, false));
                     break;
 
                 case Terrain.SECRET_PARALYTIC_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.PARALYTIC_TRAP, true));
                     break;
 
                 case Terrain.POISON_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.POISON_TRAP, false));
                     break;
 
                 case Terrain.SECRET_POISON_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.POISON_TRAP, true));
                     break;
 
                 case Terrain.ALARM_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.ALARM_TRAP, false));
                     break;
 
                 case Terrain.SECRET_ALARM_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.ALARM_TRAP, true));
                     break;
 
                 case Terrain.LIGHTNING_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.LIGHTNING_TRAP, false));
                     break;
 
                 case Terrain.SECRET_LIGHTNING_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.LIGHTNING_TRAP, true));
                     break;
 
                 case Terrain.GRIPPING_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.GRIPPING_TRAP, false));
                     break;
 
                 case Terrain.SECRET_GRIPPING_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.GRIPPING_TRAP, true));
                     break;
 
                 case Terrain.SUMMONING_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.SUMMONING_TRAP, false));
                     break;
 
                 case Terrain.SECRET_SUMMONING_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(Trap.makeSimpleTrap(i, LevelObjectsFactory.SUMMONING_TRAP, true));
                     break;
 
                 case Terrain.INACTIVE_TRAP:
-                    level.map[i] = Terrain.EMPTY;
                     var trap = Trap.makeSimpleTrap(i, LevelObjectsFactory.ALARM_TRAP, false);
                     trap.deactivate();
                     level.putLevelObject(trap);
                     break;
                 case Terrain.WELL:
                 case Terrain.EMPTY_WELL:
-                    level.map[i] = Terrain.EMPTY;
                     level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.WELL, i));
                     break;
                 case Terrain.ALCHEMY:
-                    level.map[i] = Terrain.EMPTY_SP;
                     level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.POT, i));
+                    level.map[i] = Terrain.EMPTY_SP;
                     break;
             }
         }

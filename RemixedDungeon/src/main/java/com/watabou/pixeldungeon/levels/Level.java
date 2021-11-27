@@ -239,10 +239,8 @@ public abstract class Level implements Bundlable {
 		final int pos = lo.getPos();
 		objectsLayer.put(pos, lo);
 
-		if(Util.isDebug()) {
-			if (!TerrainFlags.is(map[pos],TerrainFlags.PASSABLE)) {
-				throw new ModError(Utils.format("%s on a non-passable cell %d (%d) . level %s", lo.getEntityKind(), pos, map[pos], levelId));
-			}
+		if(!TerrainFlags.is(map[pos],TerrainFlags.PASSABLE)) {
+			map[pos] = Terrain.EMPTY;
 		}
 
 		if(lo.losBlocker()) {

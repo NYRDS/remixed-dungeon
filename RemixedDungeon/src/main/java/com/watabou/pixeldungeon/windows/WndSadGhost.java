@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
@@ -91,7 +92,7 @@ public class WndSadGhost extends Window {
 		}
 
         ghost.say(StringsManager.getVar(R.string.WndSadGhost_Farewell));
-		ghost.die( null );
+		ghost.die( CharsList.DUMMY );
 		
 		Ghost.Quest.complete();
 	}

@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
@@ -61,7 +62,7 @@ public class Piranha extends Mob {
 	@Override
     public boolean act() {
 		if (!level().water[getPos()]) {
-			die( null );
+			die(CharsList.DUMMY);
 			return true;
 		} else {
 			return super.act();

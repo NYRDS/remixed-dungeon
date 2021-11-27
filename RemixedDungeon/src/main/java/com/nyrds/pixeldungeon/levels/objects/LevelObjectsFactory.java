@@ -6,6 +6,8 @@ import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModError;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.plants.Dreamweed;
 import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.plants.Fadeleaf;
@@ -89,6 +91,11 @@ public class LevelObjectsFactory {
 	@SneakyThrows
 	@LuaInterface
 	public static LevelObject createCustomObject(Level level, String kind, int cell) {
+
+		if(!TerrainFlags.is(level.map[cell],TerrainFlags.PASSABLE)) {
+			level.map[cell] = Terrain.EMPTY;
+		}
+
 		LevelObject obj = objectByName("CustomObject");
 		JSONObject desc = new JSONObject();
 
