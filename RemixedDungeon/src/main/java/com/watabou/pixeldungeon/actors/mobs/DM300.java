@@ -17,7 +17,11 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
+import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
@@ -84,7 +88,12 @@ public class DM300 extends Boss {
 	public void move( int step ) {
 		super.move( step );
 
-		if (level().map[step] == Terrain.INACTIVE_TRAP && hp() < ht()) {
+		final LevelObject object = level().getTopLevelObject(step);
+
+		if (object instanceof Trap && hp() < ht()) {
+
+			Trap tr = (Trap) object;
+			tr.reactivate(LevelObjectsFactory.TOXIC_TRAP, GameLoop.getDifficulty() + 1);
 
 			heal(Random.Int( 1, ht() - hp() ), this, true);
 
