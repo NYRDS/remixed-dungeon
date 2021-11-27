@@ -139,7 +139,7 @@ public abstract class DungeonTilemap extends Tilemap {
 	@Contract("_ -> new")
 	public static @NotNull PointF tileCenterToWorld(int pos) {
 		return new PointF((level.cellX(pos) + 0.5f) * SIZE,
-				(level.cellY(pos) + 0.5f) * SIZE + Image.isometricModeShift );
+				(level.cellY(pos) + 0.5f) * SIZE + Image.isometricShift() );
 	}
 
 	@Override

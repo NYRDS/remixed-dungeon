@@ -25,6 +25,7 @@ import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.PointF;
 
 import java.nio.FloatBuffer;
 
@@ -43,7 +44,7 @@ public class Image extends Visual implements IPlaceable {
 	private boolean isometricShift;
 	private boolean negativeIsometricShift;
 
-	static public float isometricModeShift = -7;
+	static public int isometricModeShift = -7;
 
 	
 	public Image() {
@@ -197,6 +198,12 @@ public class Image extends Visual implements IPlaceable {
 		return verticesBuffer;
 	}
 
+
+	@Override
+	public PointF center() {
+		return new PointF( x + width / 2, y + height / 2 );
+	}
+
 	@Override
 	public float visualOffsetY() {
 		if(isometricShift) {
@@ -220,5 +227,12 @@ public class Image extends Visual implements IPlaceable {
 		if(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES,false)) {
 			this.negativeIsometricShift = negativeIsometricShift;
 		}
+	}
+
+	public static int isometricShift() {
+		if(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES,false)) {
+			return isometricModeShift;
+		}
+		return 0;
 	}
 }

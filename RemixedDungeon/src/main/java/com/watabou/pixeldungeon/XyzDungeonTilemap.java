@@ -75,7 +75,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     public boolean mayPeek(int cell) {
-        return level.passable[cell] || level.map[cell] == Terrain.DOOR;
+        return level.passable[cell] || level.map[cell] == Terrain.DOOR || level.map[cell] == Terrain.LOCKED_DOOR;
     }
 
     public void makeIsometricMap() {

@@ -27,7 +27,7 @@ import com.watabou.utils.Random;
 
 public class BlobEmitter extends Emitter {
 	
-	private Blob blob;
+	private final Blob blob;
 	
 	public BlobEmitter( Blob blob ) {
 		this.blob = blob;
@@ -52,7 +52,7 @@ public class BlobEmitter extends Emitter {
 				float y = ((i / level.getWidth()) + Random.Float()) * size;
 
 
-				y+= Image.isometricModeShift;
+				y+= Image.isometricShift();
 
 				factory.emit( this, index, x, y );
 			}
