@@ -58,7 +58,7 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
 
     @Deprecated
     @LuaInterface
-    deprecatedSprite sprite = new deprecatedSprite(); // it exists here because direct use by Epic
+    public deprecatedSprite sprite = new deprecatedSprite(); // it exists here because direct use by Epic
 
     public LevelObject(int pos) {
         this.pos = pos;
@@ -229,6 +229,9 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     }
 
     public boolean ignoreIsometricShift() {
+        if(level().isPlainTile(getPos())) {
+            return true;
+        }
         return false;
     }
 

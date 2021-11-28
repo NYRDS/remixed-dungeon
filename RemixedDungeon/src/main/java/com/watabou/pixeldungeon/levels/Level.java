@@ -349,13 +349,14 @@ public abstract class Level implements Bundlable {
 		return MAX_VIEW_DISTANCE;
 	}
 
+	@NotNull
 	public int[] getTileLayer(LayerId id) {
 		if(customLayers.containsKey(id)) {
 			return customLayers.get(id);
 		}
 
 		int [] ret = new int[getLength()];
-		Arrays.fill(ret,-1);
+		Arrays.fill(ret,INVALID_CELL);
 		return ret;
 	}
 

@@ -270,12 +270,7 @@ public class Trap extends LevelObject {
 	}
 
 	@Override
-	public void resetVisualState() {
-		super.resetVisualState();
-		lo_sprite.ifPresent(
-				sprite -> {
-					sprite.setIsometricShift(false);
-					sprite.setNegativeIsometricShift(false);
-				});
+	public boolean ignoreIsometricShift() {
+		return true;
 	}
 }

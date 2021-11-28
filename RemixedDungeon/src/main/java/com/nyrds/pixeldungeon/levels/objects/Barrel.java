@@ -50,7 +50,7 @@ public class Barrel extends LevelObject {
 
 		burned = true;
 
-		sprite.ifPresent(
+		lo_sprite.ifPresent(
 				sprite -> sprite.playAnim(10, false, this::remove, image() + 0, image() + 1, image() + 2, image() + 3, image() + 4));
 
 
