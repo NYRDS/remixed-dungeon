@@ -44,7 +44,7 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     @Packable(defaultValue = "")
     protected String data;
 
-    public WeakOptional<LevelObjectSprite> sprite;
+    public WeakOptional<LevelObjectSprite> sprite = WeakOptional.empty();
 
     public LevelObject(int pos) {
         this.pos = pos;

@@ -40,6 +40,7 @@ import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
+import com.nyrds.util.WeakOptional;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
@@ -601,7 +602,7 @@ public class GameScene extends PixelScene {
     }
 
     private void addLevelObjectSprite(@NotNull LevelObject obj) {
-        obj.sprite.of( (LevelObjectSprite)objects.recycle(LevelObjectSprite.class) );
+        obj.sprite = WeakOptional.of( (LevelObjectSprite)objects.recycle(LevelObjectSprite.class) );
         obj.sprite.ifPresent (sprite -> sprite.reset(obj));
     }
 
