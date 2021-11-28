@@ -92,17 +92,18 @@ public abstract class PortalGate extends Deco {
 
 	protected void playStartUpAnim(){
 		animationRunning = true;
-
-		sprite.playAnim(activation, () -> {
-			playActiveLoop();
-			activated = true;
-			animationRunning = false;
-            GLog.w(StringsManager.getVar(R.string.PortalGate_Activated));
-		});
+		sprite.ifPresent(
+				sprite -> sprite.playAnim(activation, () -> {
+					playActiveLoop();
+					activated = true;
+					animationRunning = false;
+					GLog.w(StringsManager.getVar(R.string.PortalGate_Activated));
+		}));
 	}
 
 	private void playActiveLoop(){
-		sprite.playAnim(activatedLoop, Util.nullCallback);
+		sprite.ifPresent(
+				sprite -> sprite.playAnim(activatedLoop, Util.nullCallback));
 	}
 
 	@Override

@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.mechanics.LevelHelpers;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.WeakOptional;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -16,7 +17,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 
-import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -44,8 +44,7 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     @Packable(defaultValue = "")
     protected String data;
 
-    @Nullable
-    public LevelObjectSprite sprite;
+    public WeakOptional<LevelObjectSprite> sprite;
 
     public LevelObject(int pos) {
         this.pos = pos;
@@ -76,9 +75,8 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     @LuaInterface
     public void remove() {
         level().remove(this);
-        if (sprite != null) {
-            sprite.kill();
-        }
+        sprite.ifPresent(
+                sprite -> sprite.kill());
     }
 
     public void burn() {
@@ -117,10 +115,11 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     }
 
     public void setPos(int pos) {
-        if (sprite != null) {
-            sprite.move(this.pos, pos);
-            level().levelObjectMoved(this);
-        }
+        sprite.ifPresent(
+            sprite -> {
+              sprite.move(this.pos, pos);
+              level().levelObjectMoved(this);
+        });
 
         this.pos = pos;
     }
@@ -166,9 +165,9 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     }
 
     public void fall() {
-        if (sprite != null) {
-            sprite.fall();
-        }
+        sprite.ifPresent(
+                sprite -> sprite.fall());
+
         level().remove(this);
     }
 
