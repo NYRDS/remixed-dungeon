@@ -164,7 +164,7 @@ public class Deco extends LevelObject {
 		if(basic==null) {
 			basic = loadAnimation("basic");
 		}
-		sprite.ifPresent(
+		lo_sprite.ifPresent(
 				sprite -> sprite.playAnim(basic, Util.nullCallback));
 		updateEffect();
 	}

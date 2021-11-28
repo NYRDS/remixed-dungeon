@@ -92,7 +92,7 @@ public abstract class PortalGate extends Deco {
 
 	protected void playStartUpAnim(){
 		animationRunning = true;
-		sprite.ifPresent(
+		lo_sprite.ifPresent(
 				sprite -> sprite.playAnim(activation, () -> {
 					playActiveLoop();
 					activated = true;
@@ -102,7 +102,7 @@ public abstract class PortalGate extends Deco {
 	}
 
 	private void playActiveLoop(){
-		sprite.ifPresent(
+		lo_sprite.ifPresent(
 				sprite -> sprite.playAnim(activatedLoop, Util.nullCallback));
 	}
 

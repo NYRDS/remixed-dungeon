@@ -602,8 +602,8 @@ public class GameScene extends PixelScene {
     }
 
     private void addLevelObjectSprite(@NotNull LevelObject obj) {
-        obj.sprite = WeakOptional.of( (LevelObjectSprite)objects.recycle(LevelObjectSprite.class) );
-        obj.sprite.ifPresent (sprite -> sprite.reset(obj));
+        obj.lo_sprite = WeakOptional.of( (LevelObjectSprite)objects.recycle(LevelObjectSprite.class) );
+        obj.lo_sprite.ifPresent (sprite -> sprite.reset(obj));
     }
 
     private void addHeapSprite(@NotNull Heap heap) {

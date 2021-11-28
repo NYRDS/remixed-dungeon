@@ -44,7 +44,21 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     @Packable(defaultValue = "")
     protected String data;
 
-    public WeakOptional<LevelObjectSprite> sprite = WeakOptional.empty();
+    public WeakOptional<LevelObjectSprite> lo_sprite = WeakOptional.empty();
+
+    class deprecatedSprite {
+
+        public deprecatedSprite() {}
+
+        public void kill() {
+            lo_sprite.ifPresent(
+                    sprite -> sprite.kill());
+        }
+    };
+
+    @Deprecated
+    @LuaInterface
+    deprecatedSprite sprite = new deprecatedSprite(); // it exists here because direct use by Epic
 
     public LevelObject(int pos) {
         this.pos = pos;
@@ -74,9 +88,10 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
 
     @LuaInterface
     public void remove() {
-        level().remove(this);
-        sprite.ifPresent(
+        lo_sprite.ifPresent(
                 sprite -> sprite.kill());
+
+        level().remove(this);
     }
 
     public void burn() {
@@ -115,7 +130,7 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     }
 
     public void setPos(int pos) {
-        sprite.ifPresent(
+        lo_sprite.ifPresent(
             sprite -> {
               sprite.move(this.pos, pos);
               level().levelObjectMoved(this);
@@ -165,7 +180,7 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     }
 
     public void fall() {
-        sprite.ifPresent(
+        lo_sprite.ifPresent(
                 sprite -> sprite.fall());
 
         level().remove(this);

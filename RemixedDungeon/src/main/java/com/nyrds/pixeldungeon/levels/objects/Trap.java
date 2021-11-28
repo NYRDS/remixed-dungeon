@@ -97,13 +97,13 @@ public class Trap extends LevelObject {
 	public void reactivate(String kind, int uses) {
 		this.kind = kind;
 		this.uses = uses;
-		sprite.ifPresent(
+		lo_sprite.ifPresent(
 				sprite -> sprite.reset(image()));
 	}
 
 	public void deactivate() {
 		uses = 0;
-		sprite.ifPresent(
+		lo_sprite.ifPresent(
 				sprite -> sprite.reset(usedImage()));
 
 	}
@@ -158,7 +158,7 @@ public class Trap extends LevelObject {
 				trigger.doTrigger(targetCell, hero);
 			}
 			if (uses == 0) {
-				sprite.ifPresent(
+				lo_sprite.ifPresent(
 						sprite -> sprite.reset(usedImage()));
 			}
 		}
@@ -193,7 +193,7 @@ public class Trap extends LevelObject {
 	@Override
 	public void discover() {
 		secret = false;
-		sprite.ifPresent(
+		lo_sprite.ifPresent(
 				sprite -> sprite.setVisible(true));
 	}
 
@@ -272,7 +272,7 @@ public class Trap extends LevelObject {
 	@Override
 	public void resetVisualState() {
 		super.resetVisualState();
-		sprite.ifPresent(
+		lo_sprite.ifPresent(
 				sprite -> {
 					sprite.setIsometricShift(false);
 					sprite.setNegativeIsometricShift(false);
