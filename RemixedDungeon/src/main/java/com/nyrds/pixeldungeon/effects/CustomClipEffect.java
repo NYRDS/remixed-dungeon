@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.effects;
 import com.nyrds.LuaInterface;
 import com.nyrds.util.JsonHelper;
 import com.watabou.noosa.Animation;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -37,7 +38,7 @@ public class CustomClipEffect extends MovieClip implements MovieClip.Listener, I
 	public void place(int cell) {
 		PointF p = DungeonTilemap.tileToWorld(cell);
 		x = p.x + centerShift.x;
-		y = p.y + centerShift.y;
+		y = p.y + centerShift.y + Image.isometricShift();
 	}
 
 	@LuaInterface
