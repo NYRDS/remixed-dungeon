@@ -96,6 +96,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private int[] buildDecoMap() {
         for (int i = 0; i < mDecoMap.length; i++) {
+
             mDecoMap[i] = currentDecoCell(i);
         }
 
@@ -519,7 +520,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             case Terrain.EMPTY_DECO:
                 return random.oneOf(cell,144, 145, 146);
             case Terrain.WALL_DECO:
-                return random.oneOf(cell,160, 161, 162);
+                return random.oneOf(cell, 160, 161, 162);
         }
         return 173;
     }

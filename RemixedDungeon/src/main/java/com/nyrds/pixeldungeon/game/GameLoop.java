@@ -15,7 +15,6 @@ import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.ReportingExecutor;
-import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.NoosaScript;
@@ -241,7 +240,6 @@ public class GameLoop {
     private void switchScene(Scene requestedScene) {
 
         SystemText.invalidate();
-        TextureCache.clear();
         Camera.reset();
 
         if (scene != null) {

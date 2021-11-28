@@ -57,11 +57,11 @@ public class Utils {
     }
 
     public static String format(int StringFormatId, Object... args) {
-        return String.format(Locale.ENGLISH, StringsManager.getVar(StringFormatId), args);
+        return String.format(Locale.ROOT, StringsManager.getVar(StringFormatId), args);
     }
 
     public static String format(String format, Object... args) {
-        return String.format(Locale.ENGLISH, format, args);
+        return String.format(Locale.ROOT, format, args);
     }
 
     public static String indefinite(String noun) {
