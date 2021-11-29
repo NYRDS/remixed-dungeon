@@ -265,10 +265,6 @@ public class PredesignedLevel extends CustomLevel {
 	@Override
 	public boolean isPlainTile(int cell) {
 		var baseLayer = getTileLayer(LayerId.Base);
-		if(baseLayer == null) {
-			return true;
-		}
-
-		return baseLayer[cell] < 0;
+		return baseLayer[cell] <= INVALID_CELL;
 	}
 }

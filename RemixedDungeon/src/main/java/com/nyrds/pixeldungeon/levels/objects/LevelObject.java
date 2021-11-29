@@ -229,10 +229,7 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     }
 
     public boolean ignoreIsometricShift() {
-        if(level().isPlainTile(getPos())) {
-            return true;
-        }
-        return false;
+        return level().isPlainTile(getPos());
     }
 
     public void addedToScene() {

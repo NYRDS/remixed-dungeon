@@ -288,7 +288,13 @@ public class Visual extends Gizmo implements IPlaceable{
 		return 0;
 	}
 
+
 	public float visualOffsetY() {
+		if(isometricShift) {
+			return isometricModeShift;
+		}
+
 		return 0;
 	}
+
 }

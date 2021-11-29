@@ -47,6 +47,7 @@ import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.effects.SystemFloatingText;
 import com.watabou.pixeldungeon.effects.TorchHalo;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
@@ -156,10 +157,11 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     public PointF worldToCamera(int cell) {
         final int csize = DungeonTilemap.SIZE;
+        final Level level = Dungeon.level;
 
         return new PointF(
-                (Dungeon.level.cellX(cell) + 0.5f) * csize - width * 0.5f,
-                (Dungeon.level.cellY(cell) + 1.0f) * csize - height
+                (level.cellX(cell) + 0.5f) * csize - width * 0.5f,
+                (level.cellY(cell) + 1.0f) * csize - height
         );
     }
 
@@ -292,8 +294,10 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public void turnTo(int from, int to) {
-        int fx = from % Dungeon.level.getWidth();
-        int tx = to % Dungeon.level.getWidth();
+        final Level level = Dungeon.level;
+
+        int fx = from % level.getWidth();
+        int tx = to % level.getWidth();
         if (tx > fx) {
             flipHorizontal = false;
         } else if (tx < fx) {

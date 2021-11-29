@@ -19,6 +19,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class XyzDungeonTilemap extends DungeonTilemap {
 
+    public static final int TRANSPARENT = 173;
     private final Tilemap mWallsLayer;
     private final Tilemap mDecoLayer;
     private final Tilemap mRoofLayer;
@@ -189,21 +190,13 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         }
 
         if(TerrainFlags.is(mIsometricMap[cell], TerrainFlags.PIT)) {
-            return 173;
+            return TRANSPARENT;
         }
 
-        switch (mIsometricMap[cell]) {
-            case Terrain.ALCHEMY:
-                return 138;
-            case Terrain.WELL:
-                return 137;
-
-            case Terrain.EMPTY_SP:
-            case Terrain.STATUE_SP:
-                return random.oneOf(cell,floorSpTiles);
-            default:
-                return random.oneOf(cell,floorTiles);
+        if (mIsometricMap[cell] == Terrain.EMPTY_SP) {
+            return random.oneOf(cell, floorSpTiles);
         }
+        return random.oneOf(cell, floorTiles);
     }
 
     private final Integer[] wallSTiles = {32, 33, 34};
@@ -240,7 +233,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         }
 
 
-        return 173;
+        return TRANSPARENT;
     }
 
     private int wallTileKind(int cell, isTileKind is) {
@@ -350,7 +343,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             }
         }
 
-        return 173;
+        return TRANSPARENT;
     }
 
     private int roofCellKind(int cellS) {
@@ -380,8 +373,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         final boolean c_minus_1_plus_w = isAnyWallCell(cell - 1 + width);
 
         int x = cornerCellKind(c_plus_w, c_plus_1, c_plus_1_plus_w, c_minus_1, c_minus_1_plus_w);
-        if(x==173) {
-            return 173;
+        if(x== TRANSPARENT) {
+            return TRANSPARENT;
         }
 
         if (isWallCell(cell)) {
@@ -392,7 +385,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             return x + 64;
         }
 
-        return 173;
+        return TRANSPARENT;
     }
 
 
@@ -420,7 +413,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         if (c_minus_1 && c_plus_w && !c_minus_1_plus_w) {
             return 12;
         }
-        return 173;
+        return TRANSPARENT;
     }
 
     private boolean isDoorCell(int cell) {
@@ -488,7 +481,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             }
         }
 
-        return 173;
+        return TRANSPARENT;
     }
 
     private int currentDecoCell(int cell) {
@@ -522,7 +515,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             case Terrain.WALL_DECO:
                 return random.oneOf(cell, 160, 161, 162);
         }
-        return 173;
+        return TRANSPARENT;
     }
 
     private int[] buildGroundMap() {

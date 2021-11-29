@@ -430,6 +430,7 @@ public class GameScene extends PixelScene {
         Camera.main.target = hero.getHeroSprite();
 
         level.activateScripts();
+        LevelTools.upgradeMap(level); // Epic level gen compatibility
 
         for (var lo: level.getAllLevelObjects()) {
             lo.addedToScene();
@@ -710,10 +711,12 @@ public class GameScene extends PixelScene {
         }
     }
 
+
     @LuaInterface
     public static Group particleEffect(String effectName, int cell) {
         if (isSceneReady()) {
             Group effect = ParticleEffect.addToCell(effectName, cell);
+            effect.setIsometricShift(Dungeon.isometricMode);
             scene.add(effect);
             return effect;
         }

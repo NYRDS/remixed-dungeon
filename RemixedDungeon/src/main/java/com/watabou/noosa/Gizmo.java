@@ -17,13 +17,19 @@
 
 package com.watabou.noosa;
 
+import com.watabou.pixeldungeon.Dungeon;
+
 import org.jetbrains.annotations.NotNull;
 
 public class Gizmo {
 
+	static public int isometricModeShift = -7;
 	public boolean exists;
 	public boolean alive;
 	public boolean active;
+
+    protected boolean isometricShift = false;
+
 	private boolean visible;
 	
 	private Group parent;
@@ -35,6 +41,13 @@ public class Gizmo {
 		alive	= true;
 		active	= true;
 		setVisible(true);
+	}
+
+	public static int isometricShift() {
+		if(Dungeon.isometricMode) {
+			return isometricModeShift;
+		}
+		return 0;
 	}
 
 	public boolean hasParent() {
@@ -117,5 +130,11 @@ public class Gizmo {
 	public boolean setVisible(boolean visible) {
 		this.visible = visible;
 		return visible;
+	}
+
+	public void setIsometricShift(boolean isometricShift) {
+		if(Dungeon.isometricMode) {
+			this.isometricShift = isometricShift;
+		}
 	}
 }

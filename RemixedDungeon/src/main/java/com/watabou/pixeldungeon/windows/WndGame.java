@@ -23,7 +23,7 @@ import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
-import com.watabou.noosa.Image;
+import com.watabou.noosa.Gizmo;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -137,20 +137,20 @@ public class WndGame extends WndMenuCommon {
 
 			@Override
 			public void onPlus(Selector s) {
-				Image.isometricModeShift += 1;
-				s.setText(Utils.format("Shift: %2.1f", Image.isometricModeShift));
+				Gizmo.isometricModeShift += 1;
+				s.setText(Utils.format("Shift: %2.1f", Gizmo.isometricModeShift));
 			}
 
 			@Override
 			public void onMinus(Selector s) {
-				Image.isometricModeShift -= 1;
-				s.setText(Utils.format("Shift: %2.1f", Image.isometricModeShift));
+				Gizmo.isometricModeShift -= 1;
+				s.setText(Utils.format("Shift: %2.1f", Gizmo.isometricModeShift));
 			}
 
 			@Override
 			public void onDefault(Selector s) {
-				Image.isometricModeShift = 0;
-				s.setText(Utils.format("Shift: %2.1f", Image.isometricModeShift));
+				Gizmo.isometricModeShift = 0;
+				s.setText(Utils.format("Shift: %2.1f", Gizmo.isometricModeShift));
 			}
 
 		});

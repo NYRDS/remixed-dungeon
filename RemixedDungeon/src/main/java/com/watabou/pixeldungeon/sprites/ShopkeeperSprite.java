@@ -53,7 +53,6 @@ public class ShopkeeperSprite extends MobSprite {
 							@Override
 							public void reset(float x, float y, int color, float size, float lifespan) {
 								super.reset(x, y, color, size, lifespan);
-								setNegativeIsometricShift(false);
 								setIsometricShift(true);
 							}
 						};

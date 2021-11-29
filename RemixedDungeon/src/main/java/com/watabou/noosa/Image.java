@@ -19,13 +19,11 @@ package com.watabou.noosa;
 
 import com.nyrds.pixeldungeon.windows.IPlaceable;
 import com.nyrds.platform.compatibility.RectF;
-import com.nyrds.platform.storage.Preferences;
 import com.nyrds.util.ModError;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.PointF;
 
 import java.nio.FloatBuffer;
 
@@ -41,12 +39,8 @@ public class Image extends Visual implements IPlaceable {
 	private final FloatBuffer verticesBuffer;
 	
 	protected boolean dirty;
-	private boolean isometricShift;
-	private boolean negativeIsometricShift;
 
-	static public int isometricModeShift = -7;
 
-	
 	public Image() {
 		super( 0, 0, 0, 0 );
 		
@@ -196,43 +190,5 @@ public class Image extends Visual implements IPlaceable {
 
 	public FloatBuffer getVerticesBuffer() {
 		return verticesBuffer;
-	}
-
-
-	@Override
-	public PointF center() {
-		return new PointF( x + width / 2, y + height / 2 );
-	}
-
-	@Override
-	public float visualOffsetY() {
-		if(isometricShift) {
-			return super.visualOffsetY() + isometricModeShift;
-		}
-
-		if(negativeIsometricShift) {
-			return super.visualOffsetY() - isometricModeShift;
-		}
-
-		return super.visualOffsetY();
-	}
-
-	public void setIsometricShift(boolean isometricShift) {
-		if(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES,false)) {
-			this.isometricShift = isometricShift;
-		}
-	}
-
-	public void setNegativeIsometricShift(boolean negativeIsometricShift) {
-		if(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES,false)) {
-			this.negativeIsometricShift = negativeIsometricShift;
-		}
-	}
-
-	public static int isometricShift() {
-		if(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES,false)) {
-			return isometricModeShift;
-		}
-		return 0;
 	}
 }

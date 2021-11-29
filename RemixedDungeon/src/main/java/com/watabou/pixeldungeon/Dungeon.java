@@ -132,6 +132,9 @@ public class Dungeon {
 
     public static HeroClass heroClass;
 
+    public static boolean isometricMode = false;
+    public static boolean isometricModeAllowed = false;
+
     public static void initSizeDependentStuff(int w, int h) {
         int size = w * h;
         Actor.clearActors();
@@ -276,6 +279,14 @@ public class Dungeon {
 
     public static void switchLevel(@NotNull final Level level, int pos, Collection<Mob> followers) {
         EventCollector.setSessionData("level",level.levelId);
+
+        isometricModeAllowed = level.isPlainTile(1); //TODO check entire level
+
+        if(isometricModeAllowed) {
+            isometricMode = Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false);
+        } else {
+            isometricMode = false;
+        }
 
         nightMode =new GregorianCalendar().get(Calendar.HOUR_OF_DAY) < 7;
 
@@ -721,7 +732,7 @@ public class Dungeon {
         level.updateFieldOfView(hero.getControlTarget());
         System.arraycopy(level.fieldOfView, 0, visible, 0, visible.length);
 
-        if(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false)) {
+        if(Dungeon.isometricMode) {
             for (int i = level.getWidth(); i < level.getLength() - level.getWidth(); i++) {
                 if (visible[i] && level.solid[i] && level.solid[i-level.getWidth()]) {
                     visible[i - level.getWidth()] = true;
