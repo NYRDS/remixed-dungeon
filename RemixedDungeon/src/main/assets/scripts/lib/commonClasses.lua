@@ -412,6 +412,16 @@ local RPD = {
     end,
 
     createLevelObject = function(desc, cell)
+        local level = Dungeon.level
+
+        if not level:cellValid(cell) then
+            local error_msg = "Trying to create %s on invalid cell %d"
+            GLog:toFile(error_msg,{desc, cell})
+            GLog:n(error_msg,{desc, cell})
+
+            return nil
+        end
+
         desc.x = Dungeon.level:cellX(cell)
         desc.y = Dungeon.level:cellY(cell)
 
