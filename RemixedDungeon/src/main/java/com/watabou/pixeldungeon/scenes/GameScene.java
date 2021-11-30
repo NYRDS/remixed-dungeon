@@ -513,7 +513,9 @@ public class GameScene extends PixelScene {
     @Override
     public synchronized void pause() {
         if(!Game.softPaused) {
-            Dungeon.save(false);
+            if(isSceneReady() && Dungeon.hero.isAlive()) {
+                Dungeon.save(false);
+            }
         }
     }
 

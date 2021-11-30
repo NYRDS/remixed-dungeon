@@ -281,6 +281,7 @@ public class LevelTools {
                 case Terrain.EMPTY_WELL:
                     level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.WELL, i));
                     break;
+
                 case Terrain.ALCHEMY:
                     level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.POT, i));
                     level.map[i] = Terrain.EMPTY_SP;

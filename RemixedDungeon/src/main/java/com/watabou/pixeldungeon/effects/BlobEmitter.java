@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.effects;
 
-import com.watabou.noosa.Image;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -52,7 +52,7 @@ public class BlobEmitter extends Emitter {
 				float y = ((i / level.getWidth()) + Random.Float()) * size;
 
 
-				y+= Image.isometricShift();
+				y+= Gizmo.isometricShift();
 
 				factory.emit( this, index, x, y );
 			}
