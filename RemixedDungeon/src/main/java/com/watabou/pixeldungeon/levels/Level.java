@@ -244,6 +244,9 @@ public abstract class Level implements Bundlable {
 		if(lo.losBlocker()) {
 			losBlocking[pos] = true;
 		}
+		if(lo.flammable()) {
+			flammable[pos] = true;
+		}
 	}
 
 	public void clearCellForObject(int pos) {
@@ -1265,8 +1268,14 @@ public abstract class Level implements Bundlable {
 
 		final int levelObjectPos = levelObject.getPos();
 
-		if(levelObject.losBlocker() && cellValid(levelObjectPos)) {
-			losBlocking[levelObjectPos] = false;
+		if(cellValid(levelObjectPos)) {
+			if(levelObject.losBlocker()) {
+				losBlocking[levelObjectPos] = false;
+			}
+
+			if(levelObject.flammable()) {
+				flammable[levelObjectPos] = false;
+			}
 		}
 
 		return objectsLayer.values().remove(levelObject);

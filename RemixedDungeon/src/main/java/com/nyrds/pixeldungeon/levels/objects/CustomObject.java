@@ -102,7 +102,12 @@ public class CustomObject extends Deco {
 
     @Override
     public boolean losBlocker() {
-        return script.runOptional("losBlocker", false);
+        return script.runOptional("losBlocker", super.losBlocker());
+    }
+
+    @Override
+    public boolean flammable() {
+        return script.runOptional("flammable", super.flammable());
     }
 
     @Override

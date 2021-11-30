@@ -228,6 +228,10 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
         return false;
     }
 
+    public boolean flammable() {
+        return false;
+    }
+
     public boolean ignoreIsometricShift() {
         return level().isPlainTile(getPos());
     }

@@ -106,4 +106,9 @@ public class Barrel extends LevelObject {
 		}
 		return false;
 	}
+
+	@Override
+	public boolean flammable() {
+		return true;
+	}
 }
