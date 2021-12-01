@@ -87,11 +87,13 @@
   <string name="ChaosCrystal_BowFused">水晶吸收了你的十字弩，并且变成了十字弩的形态</string>
   <string name="ChaosCrystal_StaffFused">水晶吸收了你的法杖，并且变成了法杖的形态</string>
   <string name="CorpseDustBuff_Name">嗜血</string>
+  <string name="CorpseDustBuff_Info">你充满了嗜血欲望，攻击增加，并使你变得十分危险。</string>
   <string name="DriedRoseBuff_Name">迷人</string>
   <string name="DriedRoseBuff_Info">这朵玫瑰看起来很迷人。</string>
   <string name="DriedRoseCursedBuff_Name">帅气</string>
   <string name="DriedRoseCursedBuff_Info">玫瑰看起来很漂亮，但不太迷人。</string>
   <string name="RatSkullBuff_Name">菁英老鼠</string>
+  <string name="RatSkullBuff_Info">下水道里最可怕的老鼠头盖骨所散发出的恶臭把所有的老鼠都吓坏了。</string>
   <string name="RatKingCrownBuff_Name">鼠王殿下</string>
   <string name="RatKingCrownBuff_Info">你现在是老鼠之王了。每只老鼠都会臣服于你。</string>
   <string name="RatKingCrown_Name">鼠王之冠</string>
@@ -109,6 +111,7 @@
   <string name="Bishop_no_money">你钱不够。</string>
   <string name="Bishop_bye">我的孩子，我会为你祈祷。</string>
   <string name="BlessedBuff_Name">祝福</string>
+  <string name="BlessedBuff_Info">祝愿那些被祝福的人们精准度和闪避增加！</string>
   <string name="deco_candle_name">蜡烛</string>
   <string name="deco_candle_desc">大蜡烛</string>
   <string name="Possess_Name">灵魂控制</string>
@@ -2549,14 +2552,6 @@
   <string name="ShieldStrTemplate">盾牌的佩戴者应至少具有 %1$d 力量才能正常使用它。</string>
   <string name="town_deco_flowerinthepot_name">花盆</string>
   <string name="town_deco_flowerinthepot_desc">当地特色装饰花</string>
-  <string name="Welcome_Text_29_4">
-    remix.29.4\n
-    ——新增：\n
-    —双手系统！\n
-    ——修改：\n
-    —常用武器！\n
-    ——修复错误\n
-    </string>
   <string name="Mods_Disclaimer">
         MOD是由玩家为玩家创建的。\n
         MOD有时会以不可预测或怪异的方式改变游戏规则，请注意说明！\n

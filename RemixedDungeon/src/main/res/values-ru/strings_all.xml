@@ -2834,7 +2834,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="MoongraceBuff_Info">Воздух вокруг становится более насыщенным, что позволяет лучше концентрироваться и восстанавливать магические резервы.</string>
   <string name="EncumbranceBuff_Name">Тяжесть</string>
   <string name="EncumbranceBuff_Info">Недостаточно силы чтобы использовать предмет %s эффективно.</string>
-
   <string name="Welcome_Text_31_0">
     remix.31.0\n
     - Геймплей:\n
@@ -2843,9 +2842,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Моддабельные объекты на уровнях\n
     - Исправление ошибок\n
     </string>
-
   <string name="Level_TilePileOfStones">Груда камней</string>
   <string name="Level_TileDescPileOfStones">Груда огромных камней, никак не сдвинуть. </string>
   <string name="WndSettingsInGame_IsometricTiles">Изометрические Тайлы</string>
-
 </resources>

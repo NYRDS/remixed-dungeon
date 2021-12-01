@@ -2550,14 +2550,6 @@
   <string name="ShieldStrTemplate">盾牌的佩戴者應至少具有%1$d力量才能正常的使用它。</string>
   <string name="town_deco_flowerinthepot_name">花盆</string>
   <string name="town_deco_flowerinthepot_desc">當地特色裝飾花</string>
-  <string name="Welcome_Text_29_4">
-    remix.29.4\n
-    - 新增:\n
-    -- 雙手系統!\n
-    - 修改:\n
-    -- 常用武器!\n
-    - 修復了一些Bug\n
-    </string>
   <string name="Mods_Disclaimer">
         模組是由玩家為玩家創建的.\n
         模組有時會以不可預測或怪異的方式改變遊戲規則，請註意說明！\n

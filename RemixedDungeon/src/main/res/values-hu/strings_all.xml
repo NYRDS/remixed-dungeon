@@ -2510,13 +2510,6 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
   <string name="ShieldStrTemplate">A pajzs tulajdonosának legalább %1$d Erő ponttal kell rendelkeznie, ahhoz, hogy megfelelően tudja használni.</string>
   <string name="town_deco_flowerinthepot_name">Cserepes virág</string>
   <string name="town_deco_flowerinthepot_desc">Dekoratív, finom illatú virág</string>
-  <string name="Welcome_Text_29_4">
-remix.29.4
-- Játék:
--- Kettős Fegyver!
-- Modok:
--- Egyéni Fegyverek!
-- Bugok megjavítva</string>
   <string name="Mods_Disclaimer">
 A modokat egymásnak készítik a játékosok.
 A modok időnként kiszámíthatatlanul és furcsán működnek, mi figyelmeztettünk!

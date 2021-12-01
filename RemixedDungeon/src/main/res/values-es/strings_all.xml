@@ -2591,13 +2591,6 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
   <string name="ShieldStrTemplate">El portador del escudo debe tener al menos %1$d puntos de Fuerza para usarlo apropiadamente.</string>
   <string name="town_deco_flowerinthepot_name">Flor en una maceta</string>
   <string name="town_deco_flowerinthepot_desc">Flor decorativa con sabor dulce</string>
-  <string name="Welcome_Text_29_4">
-remix.29.4\n
-- Gameplay:\n
- -- ¡Doble empuñadura!\n
-- Modding:\n
- -- ¡Armas personalizables!\n
-- Bugs arreglados\n</string>
   <string name="Mods_Disclaimer">
         Los mods son creados por los jugadores para los jugadores.\n
          Los mods a veces cambian el juego de manera impredecible o extraña, ¡estás avisado!\n

@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
   <string name="ChaosHelmet_Name">Kaos Miğferi</string>
   <string name="ChaosHelmet_Info">Kan kırmızısı miğfer, kaos savaşçısının vazgeçilmez bir sembolüdür.</string>
-  <string name="Spells_SummonLimitReached">%1$s: çağırma limiti doldu (Şuanki sınır: %2$d)!</string>
+  <string name="Spells_SummonLimitReached">%1$s: Yaratma limiti doldu! (Şuanki limit: %2$d)!</string>
   <string name="Mana_Title">Mana</string>
   <string name="Mana_Cost">Gereken Mana:</string>
   <string name="Spells_NotEnoughSP">%1$s büyüsünü kullanmak için yeterli manaya sahip değilsin.</string>
@@ -2436,7 +2436,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
   <string name="Hunger_Starving_1">Açlıktan ölüyorsun!</string>
   <string name="Hunger_Starving_2">Açlıktan ölüyorsun!</string>
   <string name="HeroClass_NecromancerPerks_0">Nekromensırlar 15 hp ile başlar</string>
-  <string name="HeroClass_NecromancerPerks_1">nekromensırlar seviye 7 iskelet anahtarı ile başlarlar </string>
+  <string name="HeroClass_NecromancerPerks_1">Ölüçağıranlar kara büyüler için mana harcar.</string>
   <string name="HeroClass_NecromancerPerks_2">iyileştirme potu başlangıçta tanımlıdır</string>
   <string name="HeroClass_NecromancerPerks_3">nekromensırlar seviye 7 iskelet anahtarı ile başlarlar </string>
   <string name="HeroClass_NecromancerPerks_4">iyileştirme potu başlangıçta tanımlıdır</string>
@@ -2591,14 +2591,6 @@ Hayır, ışıkta ona yer yoktu, artık değil. Zayıf ışıktan döndü ve bel
   <string name="ShieldStrTemplate">Düzgün kullanabilmek için kalkanı kuşananın en az %1$d güç puanına sahip olmalıdır.</string>
   <string name="town_deco_flowerinthepot_name">Saksıda çiçek</string>
   <string name="town_deco_flowerinthepot_desc">Hoş kokulu bir süs çiçeği</string>
-  <string name="Welcome_Text_29_4">
-remix.29.4\n
-- Oynanış:\n
--- Çift elli kullanım!\n
-- Modlama:\n
--- Özel Silahlar!\n
-- Hatalar düzeltildi\n
-</string>
   <string name="Mods_Disclaimer">
 Modlar oyuncular tarafından oyuncular için oluşturulur. \n
 Modlar bazen oynanışı tahmin edilemeyen veya garip bir biçimde değiştirebilir, uyarmadı demeyin!\n
