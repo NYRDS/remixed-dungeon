@@ -250,7 +250,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public void clearCellForObject(int pos) {
-		if(!TerrainFlags.is(map[pos],TerrainFlags.PASSABLE) || !TerrainFlags.is(map[pos],TerrainFlags.DEPRECATED)) {
+		if(!TerrainFlags.is(map[pos],TerrainFlags.PASSABLE) || TerrainFlags.is(map[pos],TerrainFlags.DEPRECATED)) {
 			map[pos] = Terrain.EMPTY;
 		}
 	}

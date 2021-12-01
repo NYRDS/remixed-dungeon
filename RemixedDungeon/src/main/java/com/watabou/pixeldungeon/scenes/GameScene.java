@@ -745,6 +745,7 @@ public class GameScene extends PixelScene {
                     GLog.n("Bad layer %d for %s", layer, effectName);
             }
         }
+        effect.setIsometricShift(true);
         effect.playAnimOnce();
         return effect;
     }

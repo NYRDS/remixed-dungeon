@@ -47,7 +47,7 @@ return object.init {
 
     addedToScene = function(self, object)
         local effect = RPD.objectEffect(object:getPos(), "cauldron_effect")
-        effect:setIsometricShift(true)
+        effect:setIsometricShift(false)
         effect:playWithOffset(object:level():objectsKind() * 16)
     end,
 
