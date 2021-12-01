@@ -2595,14 +2595,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ShieldStrTemplate">Чтобы использовать этот щит как следует, его обладателю потребуется не меньше чем %1$d очков Силы.</string>
   <string name="town_deco_flowerinthepot_name">Цветок в горшке</string>
   <string name="town_deco_flowerinthepot_desc">Декоративное растение в милом горшке</string>
-  <string name="Welcome_Text_29_4">
-    remix.29.4\n
-    - Геймплей:\n
-    -- Двуручность\n
-    - Моддинг:\n
-    -- Кастомизируемое оружие!\n
-    - Исправления ошибок\n
-    </string>
   <string name="Mods_Disclaimer">
         Моды создаются игроками для игроков\n
         Моды могут изменять игру непредсказуемым, и иногда странным образом, вас предупредили!\n
@@ -2842,4 +2834,18 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="MoongraceBuff_Info">Воздух вокруг становится более насыщенным, что позволяет лучше концентрироваться и восстанавливать магические резервы.</string>
   <string name="EncumbranceBuff_Name">Тяжесть</string>
   <string name="EncumbranceBuff_Info">Недостаточно силы чтобы использовать предмет %s эффективно.</string>
+
+  <string name="Welcome_Text_31_0">
+    remix.31.0\n
+    - Геймплей:\n
+    -- Опциональный Изометрический Режим!\n
+    - Моддинг:\n
+    -- Моддабельные объекты на уровнях\n
+    - Исправление ошибок\n
+    </string>
+
+  <string name="Level_TilePileOfStones">Груда камней</string>
+  <string name="Level_TileDescPileOfStones">Груда огромных камней, никак не сдвинуть. </string>
+  <string name="WndSettingsInGame_IsometricTiles">Изометрические Тайлы</string>
+
 </resources>
