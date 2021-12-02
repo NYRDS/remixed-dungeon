@@ -25,8 +25,11 @@ import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.GLog;
+
+import lombok.var;
 
 public class WndSettingsInGame extends WndMenuCommon {
 
@@ -45,14 +48,19 @@ public class WndSettingsInGame extends WndMenuCommon {
 
 		menuItems.add(createZoomButtons());
 
-		menuItems.add( new MenuCheckBox(StringsManager.getVar(R.string.WndSettingsInGame_IsometricTiles), Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false)) {
+		var isometricModeCheckBox = new MenuCheckBox(StringsManager.getVar(R.string.WndSettingsInGame_IsometricTiles), Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false)) {
 			@Override
 			protected void onClick() {
 				super.onClick();
 				Preferences.INSTANCE.put(Preferences.KEY_USE_ISOMETRIC_TILES, checked());
+				Dungeon.isometricMode = checked();
 				GameLoop.pushUiTask(GameLoop::resetScene);
 			}
-		});
+		};
+
+		isometricModeCheckBox.enable(Dungeon.isometricModeAllowed);
+		menuItems.add(isometricModeCheckBox);
+
 		
 		menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_InGameUiSettings)){
 			@Override

@@ -69,13 +69,14 @@ public class IconTitle extends Component {
 		tfLabel.x = PixelScene.align( PixelScene.uiCamera, imIcon.x + imIcon.visualOffsetX() + imIcon.visualWidth() + GAP );
 		tfLabel.maxWidth((int)(width - tfLabel.x));
 		tfLabel.y =  PixelScene.align( PixelScene.uiCamera,
-				imIcon.y + + imIcon.visualOffsetY() + (imIcon.visualHeight() - tfLabel.baseLine()) / 2 );
+				imIcon.y + imIcon.visualOffsetY() + (imIcon.visualHeight() - tfLabel.baseLine()) );
 				
-		height = Math.max( imIcon.y + imIcon.visualOffsetY() + imIcon.visualHeight(), tfLabel.y + tfLabel.height() );
+		height = Math.max( imIcon.y + imIcon.visualOffsetY() + imIcon.visualHeight() + GAP, tfLabel.y + tfLabel.height() );
 	}
 	
 	public void icon( Image icon ) {
 		remove( imIcon );
+		icon.setIsometricShift(false);
 		add( imIcon = icon );
 	}
 	
