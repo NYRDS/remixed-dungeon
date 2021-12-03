@@ -111,6 +111,12 @@ public class CustomObject extends Deco {
     }
 
     @Override
+    public boolean avoid() {
+        return script.runOptional("avoid", super.avoid());
+    }
+
+
+    @Override
     public String getEntityKind() {
         return objectDesc;
     }

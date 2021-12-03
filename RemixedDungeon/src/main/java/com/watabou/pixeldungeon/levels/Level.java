@@ -246,6 +246,9 @@ public abstract class Level implements Bundlable {
 		if(lo.flammable()) {
 			flammable[pos] = true;
 		}
+		if(lo.avoid()){
+			avoid[pos] = true;
+		}
 	}
 
 	public void clearCellForObject(int pos) {
@@ -1274,6 +1277,10 @@ public abstract class Level implements Bundlable {
 
 			if(levelObject.flammable()) {
 				flammable[levelObjectPos] = false;
+			}
+
+			if(levelObject.avoid()) {
+				avoid[levelObjectPos] = false;
 			}
 		}
 

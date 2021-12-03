@@ -247,6 +247,11 @@ public class Trap extends LevelObject {
 	}
 
 	@Override
+	public boolean avoid() {
+		return !secret && uses > 0;
+	}
+
+	@Override
 	public String getEntityKind() {
 		return kind;
 	}
