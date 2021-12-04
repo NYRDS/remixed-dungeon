@@ -108,8 +108,13 @@ public class Visual extends Gizmo implements IPlaceable{
 		return p;
 	}
 	
+//	public PointF center() {
+//		return new PointF( x + width / 2 + visualOffsetX(), y + height / 2 + visualOffsetY());
+//	}
+
+
 	public PointF center() {
-		return new PointF( x + width / 2 + visualOffsetX(), y + height / 2 + visualOffsetY());
+		return new PointF( x + width / 2, y + height / 2);
 	}
 
 	public float width() {

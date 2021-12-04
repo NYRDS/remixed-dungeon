@@ -257,6 +257,7 @@ public class GameScene extends PixelScene {
 
         for (val objectLayer: level.objects.values()) {
             for (val object: objectLayer.values()) {
+                object.lo_sprite.clear();
                 addLevelObjectSprite(object);
             }
         }
@@ -300,6 +301,7 @@ public class GameScene extends PixelScene {
                     mob.beckon(hero.getPos());
                 }
             }
+            mob.regenSprite();
         }
 
         add(emitters);
