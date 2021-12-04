@@ -468,7 +468,7 @@ public class Hero extends Char {
 						interrupt();
 						return false;
 					}
-					if (TrapHelper.isVisibleTrap(level.map[target]) && !isFlying() && !TrapHelper.stepConfirmed) {
+					if (TrapHelper.isVisibleTrap(level, target) && !isFlying() && !TrapHelper.stepConfirmed) {
 						TrapHelper.heroTriggerTrap(this);
 						interrupt();
 						return false;

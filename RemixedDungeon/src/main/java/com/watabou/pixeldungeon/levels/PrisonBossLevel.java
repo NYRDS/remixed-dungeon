@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.levels.LevelTools;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -177,7 +178,7 @@ public class PrisonBossLevel extends BossLevel {
 			int trapPos = Random.Int( getLength() );
 			
 			if (map[trapPos] == Terrain.EMPTY) {
-				addLevelObject(Trap.makeSimpleTrap(trapPos, "PoisonTrap", true));
+				addLevelObject(Trap.makeSimpleTrap(trapPos, LevelObjectsFactory.POISON_TRAP, true));
 			}
 		}
 	}
