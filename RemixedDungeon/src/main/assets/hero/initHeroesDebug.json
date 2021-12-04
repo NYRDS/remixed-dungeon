@@ -28,10 +28,16 @@
         "cursed": true
       },
       {
+        "kind": "WandOfBlink",
+        "identified": true,
+        "level" : 200
+      },
+      {
         "kind": "WandOfIcebolt",
         "identified": true,
         "level" : 200
       },
+
       {
         "kind": "ScrollOfTeleportation",
         "quantity": 1000,

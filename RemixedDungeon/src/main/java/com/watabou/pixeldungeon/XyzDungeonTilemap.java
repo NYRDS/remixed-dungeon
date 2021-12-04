@@ -97,7 +97,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private int[] buildDecoMap() {
         for (int i = 0; i < mDecoMap.length; i++) {
-
             mDecoMap[i] = currentDecoCell(i);
         }
 
@@ -529,7 +528,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     @Override
     public void draw() {
-        super.draw();
+        super.draw(); //floor
         mWallsLayer.draw();
         mDecoLayer.draw();
         mDoorsLayer.draw();
@@ -584,6 +583,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         super.brightness(value);
 
         mWallsLayer.brightness(value);
+        mDecoLayer.brightness(value);
         mRoofLayer.brightness(value);
         mCornersLayer.brightness(value);
         mDoorsLayer.brightness(value);

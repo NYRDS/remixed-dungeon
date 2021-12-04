@@ -191,4 +191,9 @@ public class IceCavesBossLevel extends BossLevel {
 	private int _Center() {
 		return _Left() + HALL_WIDTH / 2;
 	}
+
+	@Override
+	public int objectsKind() {
+		return 8;
+	}
 }

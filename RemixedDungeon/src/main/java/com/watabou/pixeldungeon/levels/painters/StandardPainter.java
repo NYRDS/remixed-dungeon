@@ -99,10 +99,10 @@ public class StandardPainter extends Painter {
 				level.map[pos] = t;
 				switch (Random.Int( 5 )) {
 				case 1:
-					level.putLevelObject(Trap.makeSimpleTrap(pos, "FireTrap", false));
+					level.putLevelObject(Trap.makeSimpleTrap(pos, LevelObjectsFactory.FIRE_TRAP, false));
 					break;
 				case 2:
-					level.putLevelObject(Trap.makeSimpleTrap(pos, "FireTrap", true));
+					level.putLevelObject(Trap.makeSimpleTrap(pos, LevelObjectsFactory.FIRE_TRAP, true));
 					break;
 				case 3:
 					t = Terrain.INACTIVE_TRAP;
@@ -163,8 +163,7 @@ public class StandardPainter extends Painter {
 		
 		Point roomCenter = room.center();
 		level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.PEDESTAL, level.cell(roomCenter.x, roomCenter.y)));
-		//set( level, roomCenter, Terrain.PEDESTAL );
-		
+
 		if(Random.Float(1) < 0.25f) {
 			Crystal crystal = new Crystal();
 			crystal.setPos(level.cell(roomCenter.x, roomCenter.y));

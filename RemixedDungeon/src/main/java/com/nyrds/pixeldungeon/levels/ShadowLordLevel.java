@@ -56,4 +56,9 @@ public class ShadowLordLevel extends BossLevel {
 	@Override
 	protected void createItems() {
 	}
+
+	@Override
+	public int objectsKind() {
+		return 4;
+	}
 }

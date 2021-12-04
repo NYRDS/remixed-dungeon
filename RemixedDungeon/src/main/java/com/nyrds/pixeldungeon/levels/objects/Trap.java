@@ -224,7 +224,7 @@ public class Trap extends LevelObject {
 			if(imageIndex >= 0) {
 				return imageIndex;
 			}
-			int nKind = Util.indexOf(traps, kind);
+			int nKind = Util.indexOf(traps, kind) + 16 * level().objectsKind();
 			return nKind + 1;
 		} else {
 			return usedImage();
@@ -235,7 +235,7 @@ public class Trap extends LevelObject {
 		if(usedImageIndex >= 0) {
 			return usedImageIndex;
 		}
-		return 0;
+		return 0 + 16 * level().objectsKind();
 	}
 
 	@Override

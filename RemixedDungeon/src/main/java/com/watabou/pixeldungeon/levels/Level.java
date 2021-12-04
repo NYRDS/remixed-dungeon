@@ -1294,7 +1294,11 @@ public abstract class Level implements Bundlable {
 		return objectsLayer.values().remove(levelObject);
 	}
 
-	protected boolean isCellSafeForPrize(int cell) {
+	public boolean isCellSafeForPrize(int cell) {
+		if(!TerrainFlags.is(map[cell],TerrainFlags.PASSABLE )) {
+			return false;
+		}
+
 		if(map[cell] == Terrain.FIRE_TRAP) {
 			return false;
 		}

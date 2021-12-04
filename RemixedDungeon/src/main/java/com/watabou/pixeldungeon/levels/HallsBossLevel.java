@@ -193,4 +193,9 @@ public class HallsBossLevel extends BossLevel {
 	private int _RoomBottom() {
 		return getHeight() / 2 + 1;
 	}
+
+	@Override
+	public int objectsKind() {
+		return 4;
+	}
 }

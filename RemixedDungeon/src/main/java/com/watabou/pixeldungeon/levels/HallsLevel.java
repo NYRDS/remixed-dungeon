@@ -239,6 +239,6 @@ public class HallsLevel extends RegularLevel {
 
 	@Override
 	public int objectsKind() {
-		return 3;
+		return 4;
 	}
 }

@@ -325,10 +325,6 @@ public class GameScene extends PixelScene {
             add(roofTiles);
         }
 
-        fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
-        add(fog);
-
-        brightness(GamePreferences.brightness());
 
         spells = new Group();
         add(spells);
@@ -337,6 +333,13 @@ public class GameScene extends PixelScene {
         add(statuses);
 
         add(emoicons);
+
+
+        fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
+        add(fog);
+
+        brightness(GamePreferences.brightness());
+
 
         add(new HealthIndicator());
 

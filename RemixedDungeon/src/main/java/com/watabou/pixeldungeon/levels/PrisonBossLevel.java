@@ -275,4 +275,9 @@ public class PrisonBossLevel extends BossLevel {
 	public void addVisuals( Scene scene ) {
 		PrisonLevel.addVisuals( this, scene );
 	}
+
+	@Override
+	public int objectsKind() {
+		return 1;
+	}
 }

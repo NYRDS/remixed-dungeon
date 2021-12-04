@@ -244,4 +244,10 @@ public class CavesBossLevel extends BossLevel {
 	private int _RoomBottom() {
 		return getHeight() / 2 + 2;
 	}
+
+
+	@Override
+	public int objectsKind() {
+		return 2;
+	}
 }
