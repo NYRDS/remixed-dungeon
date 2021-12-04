@@ -19,6 +19,7 @@ Remixed Dungeon in [Google Play](https://play.google.com/store/apps/details?id=c
 [Facebook](https://www.facebook.com/RemixedDungeon)
 [VK](https://vk.com/pixel_dungeon_remix)
 [Wiki](https://wiki.nyrds.net/)
+[YouTube](https://www.youtube.com/c/NYRDS)
 
 
 Классический рогалик с пиксельной графикой и простым интерфейсом.
@@ -32,3 +33,4 @@ Remixed Dungeon в [Google Play](https://play.google.com/store/apps/details?id=c
 [Facebook](https://www.facebook.com/RemixedDungeon)
 [VK](https://vk.com/pixel_dungeon_remix)
 [Wiki](https://wiki.nyrds.net/)
+[YouTube](https://www.youtube.com/c/NYRDS)
