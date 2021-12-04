@@ -182,8 +182,10 @@ public abstract class Level implements Bundlable {
 		throw new ModError("no exit at"+ levelId + "["+ pos +"]");
 	}
 
+	@Deprecated
 	@Nullable
 	public LevelObject getLevelObject(int pos) {
+		EventCollector.logException(new Exception("deprecated method used"));
 		return getLevelObject(pos, 0);
 	}
 
@@ -255,6 +257,11 @@ public abstract class Level implements Bundlable {
 		if(!TerrainFlags.is(map[pos],TerrainFlags.PASSABLE) || TerrainFlags.is(map[pos],TerrainFlags.DEPRECATED)) {
 			map[pos] = Terrain.EMPTY;
 		}
+	}
+
+	public boolean isCellNonOccupied(int cell) {
+		LevelObject lo = getTopLevelObject(cell);
+		return Actor.findChar(cell) == null && (lo == null || lo.getLayer() < 0);
 	}
 
 	public void onHeroLeavesLevel() {
@@ -2006,12 +2013,19 @@ public abstract class Level implements Bundlable {
 
 	@LuaInterface
 	public int getNearestVisibleLevelObject(int cell) {
-		return getNearestTerrain(cell, (level, cell1) -> level.fieldOfView[cell1] && (level.getLevelObject(cell1)!=null));
+		return getNearestTerrain(cell,
+				(level, cell1) -> {
+					LevelObject lo = level.getTopLevelObject(cell);
+					return level.fieldOfView[cell1] && (lo!=null && lo.secret());
+				});
 	}
 
 	@LuaInterface
 	public int getNearestLevelObject(int cell, String kind) {
-		return getNearestTerrain(cell, (level, cell1) -> (level.getLevelObject(cell1)!=null && level.getLevelObject(cell1).getEntityKind().equals(kind) ));
+		return getNearestTerrain(cell, (level, cell1) -> {
+			final LevelObject levelObject = level.getTopLevelObject(cell1);
+			return (levelObject !=null && levelObject.getEntityKind().equals(kind) );
+		});
 	}
 
 	@LuaInterface

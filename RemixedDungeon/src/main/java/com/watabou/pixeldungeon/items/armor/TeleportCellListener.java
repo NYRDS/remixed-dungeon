@@ -33,7 +33,7 @@ class TeleportCellListener implements CellSelector.Listener {
 
             if (!level.fieldOfView[target] ||
                 !(level.passable[target] || level.avoid[target]) ||
-                Actor.findChar( target ) != null || level.getLevelObject(target) != null) {
+                !level.isCellNonOccupied(target)) {
 
                 GLog.w(StringsManager.getVar(R.string.RogueArmor_Fov));
                 return;

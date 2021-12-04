@@ -125,7 +125,7 @@ public abstract class BossLevel extends RegularLevel {
     @Override
     protected void pressHero(int cell, Hero hero) {
         super.pressHero(cell, hero);
-        if (cell != entrance && (!enteredArena) && getLevelObject(entrance) == null) {
+        if (cell != entrance && (!enteredArena) && getTopLevelObject(entrance) == null) {
             sealEntrance();
         }
     }

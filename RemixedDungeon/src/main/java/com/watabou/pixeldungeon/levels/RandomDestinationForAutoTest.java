@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.levels.cellCondition;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 
 class RandomDestinationForAutoTest implements cellCondition {
 
@@ -9,7 +10,8 @@ class RandomDestinationForAutoTest implements cellCondition {
 
     @Override
     public boolean pass(Level level, int cell) {
-        if (level.getLevelObject(cell) != null) {
+        LevelObject lo = level.getTopLevelObject(cell);
+        if (lo != null && lo.getLayer() >= 0) {
             return false;
         }
 

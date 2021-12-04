@@ -87,18 +87,22 @@ public class Fire extends Blob {
 	}
 	
 	public static void burn( int pos ) {
+		//GLog.debug("Burn %d", pos);
 		Char ch = Actor.findChar( pos );
 		if (ch != null) {
 			Buff.affect( ch, Burning.class ).reignite( ch );
 		}
-		
-		Heap heap = Dungeon.level.getHeap( pos );
+
+		final Level level = Dungeon.level;
+
+		Heap heap = level.getHeap( pos );
 		if (heap != null) {
 			heap.burn();
 		}
 
-		LevelObject levelObject = Dungeon.level.getLevelObject(pos);
+		LevelObject levelObject = level.getTopLevelObject(pos);
 		if (levelObject != null) {
+			//GLog.debug("Obj %s %d", levelObject.getEntityKind(), pos);
 			levelObject.burn();
 		}
 	}
