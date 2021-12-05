@@ -693,14 +693,14 @@ public abstract class Level implements Bundlable {
 
 		map = bundle.getIntArray(MAP);
 
-		LevelTools.upgradeMap(this);
-
 		for(LayerId layerId: LayerId.values()) {
 			int [] layer = bundle.getIntArray(layerId.name());
 			if(layer.length == map.length) {
 				customLayers.put(layerId, layer);
 			}
 		}
+
+		LevelTools.upgradeMap(this);
 
 		visited = bundle.getBooleanArray(VISITED);
 		mapped = bundle.getBooleanArray(MAPPED);
