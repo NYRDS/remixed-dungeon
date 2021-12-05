@@ -43,8 +43,8 @@ public class TerrainFlags {
 		flags[Terrain.LOCKED_EXIT] = SOLID;
 		flags[Terrain.UNLOCKED_EXIT] = PASSABLE;
 		flags[Terrain.SIGN] = PASSABLE | FLAMMABLE | DEPRECATED;
-		flags[Terrain.WELL] = AVOID;
-		flags[Terrain.STATUE] = SOLID;
+		flags[Terrain.WELL] = AVOID | DEPRECATED;
+		flags[Terrain.STATUE] = SOLID | DEPRECATED;
 		flags[Terrain.STATUE_SP] = flags[Terrain.STATUE] | UNSTITCHABLE | DEPRECATED;
 		flags[Terrain.BOOKSHELF] = flags[Terrain.BARRICADE] | UNSTITCHABLE | DEPRECATED;
 		flags[Terrain.ALCHEMY] = PASSABLE | DEPRECATED;

@@ -56,12 +56,10 @@ return object.init{
         return true
     end,
 
-    --[[
-    interact = function(self, object, hero)
-        RPD.glog("This is a well %s", hero:name())
-        return false
+    affectItems = function(self, object)
+        return true
     end,
-]]
+
     textureFile = function(self, object, level)
         if RPD.DungeonTilemap:kind(level) == 'xyz' then
             return "levelObjects/objects.png"

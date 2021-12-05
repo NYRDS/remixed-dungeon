@@ -106,6 +106,10 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     public void bump(Presser presser) {
     }
 
+    public boolean affectItems() {
+        return false;
+    }
+
     public void discover() {
     }
 
@@ -240,7 +244,6 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
         return level().isPlainTile(getPos());
     }
 
-    public void addedToScene() {
-    }
+    public void addedToScene() { }
 
 }

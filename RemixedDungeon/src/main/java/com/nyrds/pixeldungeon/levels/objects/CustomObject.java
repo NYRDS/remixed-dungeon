@@ -156,4 +156,9 @@ public class CustomObject extends Deco {
     public int getLayer() {
         return script.runOptional("getLayer", 3);
     }
+
+    @Override
+    public boolean affectItems() {
+        return script.runOptional("affectItems", super.affectItems());
+    }
 }
