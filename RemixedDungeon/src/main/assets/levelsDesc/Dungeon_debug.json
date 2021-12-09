@@ -12,7 +12,7 @@
 
         "testLevel":{"kind":"TestLevel", "depth":0, "size":[32,32]},
         "testLevel2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/ScriptsArena.json"},
-        "testLevelRooms":{"kind":"RandomLevel", "depth":0, "file":"levelsDesc/TestLevelRandom.json", "noFogOfWar":"true"},
+        "testLevelRooms":{"kind":"RandomLevel", "depth":0, "file":"levelsDesc/TestLevelRandom.json"},
 
 
         "portal_room_lvl5":{"kind":"PredesignedLevel" , "depth":5 , "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
@@ -75,7 +75,7 @@
     },
 
     "Graph":{
-        "0":[["town_2"],[]],
+        "0":[["testLevel2"],[]],
         "testLevel":[[],[]],
         "testLevel2":[[],[]],
         "testLevelRooms":[[],[]],

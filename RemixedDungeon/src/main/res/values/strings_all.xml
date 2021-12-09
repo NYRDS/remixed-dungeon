@@ -2819,8 +2819,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="EncumbranceBuff_Name">Burden</string>
   <string name="EncumbranceBuff_Info">Not enough strength to use %s effectively.</string>
 
-  <string name="Level_TileDescPedestal"> </string>
-  <string name="Level_TileDescWell"> </string>
+  <string name="Level_TileDescPedestal">A small pedestal.</string>
+  <string name="Level_TileDescWell"></string>
 
   <string name="Welcome_Text_31_0">
     remix.31.0\n
