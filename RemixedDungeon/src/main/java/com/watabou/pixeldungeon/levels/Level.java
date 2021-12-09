@@ -1010,6 +1010,20 @@ public abstract class Level implements Bundlable {
 			pit[i] = (flags & TerrainFlags.PIT) != 0;
 		}
 
+		for(val lo:getAllLevelObjects()) {
+			int pos = lo.getPos();
+
+			if(lo.losBlocker()) {
+				losBlocking[pos] = true;
+			}
+			if(lo.flammable()) {
+				flammable[pos] = true;
+			}
+			if(lo.avoid()){
+				avoid[pos] = true;
+			}
+		}
+
 		int lastRow = getLength() - getWidth();
 		for (int i = 0; i < getWidth(); i++) {
 			passable[i] = avoid[i] = false;

@@ -329,14 +329,16 @@ public class GameScene extends PixelScene {
         spells = new Group();
         add(spells);
 
+        fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
+        add(fog);
+
         statuses = new Group();
         add(statuses);
 
         add(emoicons);
 
 
-        fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
-        add(fog);
+
 
         brightness(GamePreferences.brightness());
 
