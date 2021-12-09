@@ -47,8 +47,8 @@ public class ModdingMode {
 
 	private static final Map<String, String> resourcesRemap = new HashMap<>();
 
-	private static Map<String, String> rewardVideoIds = new HashMap<>();
-	private static Map<String, String> interstitialIds = new HashMap<>();
+	private static final Map<String, String> rewardVideoIds = new HashMap<>();
+	private static final Map<String, String> interstitialIds = new HashMap<>();
 
 	static {
 		trustedMods.add("Maze");

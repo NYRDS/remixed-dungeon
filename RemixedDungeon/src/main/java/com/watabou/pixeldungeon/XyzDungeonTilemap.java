@@ -8,6 +8,7 @@ import com.watabou.noosa.Tilemap;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -484,6 +485,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     private int currentDecoCell(int cell) {
+
+
         switch (mIsometricMap[cell]) {
             case Terrain.ENTRANCE:
                 return 133;
@@ -512,9 +515,13 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             case Terrain.EMPTY_DECO:
                 return random.oneOf(cell,144, 145, 146);
             case Terrain.WALL_DECO:
-                return random.oneOf(cell, 160, 161, 162);
+                if(Utils.isOneOf(mWallsMap[cell], wallSTiles)) {
+                    return random.oneOf(cell, 160, 161, 162);
+                }
+            break;
         }
         return TRANSPARENT;
+
     }
 
     private int[] buildGroundMap() {

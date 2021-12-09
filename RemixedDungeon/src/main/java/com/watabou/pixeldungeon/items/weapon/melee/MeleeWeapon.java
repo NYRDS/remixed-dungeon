@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items.weapon.melee;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -98,12 +99,13 @@ public class MeleeWeapon extends Weapon {
 		info.append(p);
         info.append(Utils.capitalize(Utils.format(StringsManager.getVar(R.string.MeleeWeapon_Info1a), name, quality, tier)));
 		info.append(" ");
-		
+
+		final Hero hero = Dungeon.hero;
 		if (isLevelKnown()) {
             info.append(Utils.format(StringsManager.getVar(R.string.MeleeWeapon_Info2a), (MIN + (MAX - MIN) / 2)));
 		} else {
             info.append(Utils.format(StringsManager.getVar(R.string.MeleeWeapon_Info2b), (min() + (max() - min()) / 2), typicalSTR()));
-			if (typicalSTR() > Dungeon.hero.effectiveSTR()) {
+			if (typicalSTR() > hero.effectiveSTR()) {
                 info.append(" ").append(StringsManager.getVar(R.string.MeleeWeapon_Info2c));
 			}
 		}
@@ -144,17 +146,17 @@ public class MeleeWeapon extends Weapon {
             info.append(StringsManager.getVar(R.string.MeleeWeapon_Info5));
 		}
 
-		if (isLevelKnown() && Dungeon.hero.getBelongings().backpack.items.contains( this )) {
+		if (isLevelKnown() && hero.getBelongings().backpack.items.contains( this )) {
 			info.append(p);
-			if (this.requiredSTR() > Dungeon.hero.effectiveSTR()) {
+			if (this.requiredSTR() > hero.effectiveSTR()) {
 				info.append(Utils.format(R.string.MeleeWeapon_Info6a, name));
 			}
-			if (this.requiredSTR() < Dungeon.hero.effectiveSTR()) {
+			if (this.requiredSTR() < hero.effectiveSTR()) {
 				info.append(Utils.format(R.string.MeleeWeapon_Info6b, name));
 			}
 		}
 		
-		if (isEquipped( Dungeon.hero )) {
+		if (isEquipped(hero)) {
 			info.append(p);
             info.append(Utils.format(R.string.MeleeWeapon_Info7a, name, (isCursed() ? StringsManager.getVar(R.string.MeleeWeapon_Info7b) : Utils.EMPTY_STRING)) );
 		} else {
