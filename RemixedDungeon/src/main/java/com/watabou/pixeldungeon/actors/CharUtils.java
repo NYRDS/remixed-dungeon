@@ -62,6 +62,11 @@ import lombok.var;
 
 public class CharUtils {
     static public boolean isVisible(@Nullable Char ch) {
+
+        if(Dungeon.isLoading()) {
+            return false;
+        }
+
         if(ch==null) {
             return false;
         }
