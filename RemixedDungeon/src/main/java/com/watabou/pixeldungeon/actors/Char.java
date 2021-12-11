@@ -1026,10 +1026,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public void onAttackComplete() {
 		Char enemy = getEnemy();
-		getItemFromSlot(Belongings.Slot.WEAPON).preAttack(enemy);
 
-		if (attack(enemy)) {
-			getItemFromSlot(Belongings.Slot.WEAPON).postAttack(enemy);
+		if(enemy.valid()) {
+			getItemFromSlot(Belongings.Slot.WEAPON).preAttack(enemy);
+
+			if (attack(enemy)) {
+				getItemFromSlot(Belongings.Slot.WEAPON).postAttack(enemy);
+			}
 		}
 
 		curAction = null;
