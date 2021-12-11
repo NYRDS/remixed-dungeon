@@ -59,7 +59,7 @@ return spell.init{
             return true
         end
 
-        local object = level:getLevelTopObject(dst)
+        local object = level:getTopLevelObject(dst)
 
         if object then
             local newPos = object:getPos()
