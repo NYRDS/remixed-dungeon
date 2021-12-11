@@ -351,6 +351,9 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 
 	protected int getDestinationCell(int src, int target) {
+		if(!Dungeon.level.cellValid(target)) {
+			return src;
+		}
 		return Ballistica.cast(src, target, directional, hitChars, hitObjects);
 	}
 
