@@ -45,7 +45,7 @@ public class TreasuryPainter extends Painter {
 			int pos;
 			do {
 				pos = room.random(level);
-			} while (level.map[pos] != Terrain.EMPTY || level.getHeap( pos ) != null);
+			} while (!level.isCellSafeForPrize(pos));
 			level.drop( new Gold().random(), pos, i == 0 && heapType == Heap.Type.CHEST ? Heap.Type.MIMIC : heapType);
 		}
 		
@@ -54,7 +54,7 @@ public class TreasuryPainter extends Painter {
 				int pos;
 				do {
 					pos = room.random(level);
-				} while (level.map[pos] != Terrain.EMPTY);
+				} while (!level.isCellSafeForPrize(pos));
 				level.drop( new Gold( Random.IntRange( 1, 3 ) ), pos, Heap.Type.HEAP );
 			}
 		}
