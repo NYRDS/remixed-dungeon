@@ -79,7 +79,7 @@ public class CellSelector extends TouchArea {
 			enabled = true;
 		}
 
-		GLog.debug("CellSelector %b, %s",  enabled, listener.toString());
+		GLog.debug("CellSelector %b, %s",  enabled, String.valueOf(listener));
 		if (enabled && listener != null && cell != Level.INVALID_CELL) {
 			GLog.debug("CellSelector %s -> %d", listener.getClass().getSimpleName(), cell);
 
