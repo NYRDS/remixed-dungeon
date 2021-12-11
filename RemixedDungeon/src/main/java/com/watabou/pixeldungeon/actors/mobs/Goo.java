@@ -135,7 +135,7 @@ public class Goo extends Boss {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		super.die( cause );
 
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_1);

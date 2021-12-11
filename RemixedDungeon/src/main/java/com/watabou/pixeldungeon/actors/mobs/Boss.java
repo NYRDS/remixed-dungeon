@@ -11,6 +11,7 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 abstract public class Boss extends Mob {
@@ -43,7 +44,7 @@ abstract public class Boss extends Mob {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		GameScene.playLevelMusic();
 		GameScene.bossSlain();
 

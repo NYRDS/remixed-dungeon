@@ -12,6 +12,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 
+import org.jetbrains.annotations.NotNull;
+
 public class IceGuardian extends MultiKindMob {
 
 	public IceGuardian() {
@@ -40,7 +42,7 @@ public class IceGuardian extends MultiKindMob {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		super.die(cause);
 		for (Mob mob : level().getCopyOfMobsArray()) {
 			if (mob instanceof IceGuardianCore) {

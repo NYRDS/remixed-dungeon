@@ -82,7 +82,7 @@ public class SpiderQueen extends Boss {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		Badges.validateBossSlain(Badges.Badge.SPIDER_QUEEN_SLAIN);
 		super.die(cause);
 	}

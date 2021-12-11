@@ -125,7 +125,7 @@ public class King extends Boss {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		super.die( cause );
 		
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_4);
@@ -206,7 +206,7 @@ public class King extends Boss {
 		}
 		
 		@Override
-		public void die(NamedEntityKind cause) {
+		public void die(@NotNull NamedEntityKind cause) {
 			super.die( cause );
 			
 			if (CharUtils.isVisible(this)) {

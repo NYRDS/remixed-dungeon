@@ -17,6 +17,8 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Created by DeadDie on 12.02.2016
  */
@@ -40,7 +42,7 @@ public class ZombieGnoll extends Mob {
     }
 
     @Override
-    public void die(NamedEntityKind cause) {
+    public void die(@NotNull NamedEntityKind cause) {
         super.die(cause);
 
         if (Random.Int(100) > 65 && !cause.getEntityKind().equals(Burning.class.getSimpleName())){

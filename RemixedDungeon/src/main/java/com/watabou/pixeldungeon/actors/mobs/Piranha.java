@@ -30,6 +30,8 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.sprites.PiranhaSprite;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Piranha extends Mob {
 	
 	public Piranha() {
@@ -70,7 +72,7 @@ public class Piranha extends Mob {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		super.die( cause );
 		
 		Statistics.piranhasKilled++;

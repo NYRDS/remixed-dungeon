@@ -50,6 +50,8 @@ import com.watabou.pixeldungeon.sprites.DM300Sprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
+import org.jetbrains.annotations.NotNull;
+
 public class DM300 extends Boss {
 	
 	public DM300() {
@@ -126,7 +128,7 @@ public class DM300 extends Boss {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		super.die( cause );
 
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_3);

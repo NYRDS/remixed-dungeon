@@ -373,10 +373,15 @@ public abstract class Mob extends Char {
 		super.die(this);
 	}
 
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 
     	spend(Actor.MICRO_TICK);
 		getState().onDie(this);
+
+		if(cause == null) {
+			cause = CharsList.DUMMY; //Mods may and will misbehave
+			EventCollector.logException("null_death_cause");
+		}
 
 		script.run("onDie", cause);
 

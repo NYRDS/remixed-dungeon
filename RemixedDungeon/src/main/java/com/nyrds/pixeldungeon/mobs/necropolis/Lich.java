@@ -239,7 +239,7 @@ public class Lich extends Boss {
     }
 
     @Override
-    public void die(NamedEntityKind cause) {
+    public void die(@NotNull NamedEntityKind cause) {
         super.die( cause );
 
         //Kill everything

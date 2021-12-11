@@ -84,7 +84,7 @@ public class Tengu extends Boss implements IZapper {
 	private int timeToJump = JUMP_DELAY;
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		super.die(cause);
 		
 		Badges.validateBossSlain(Badge.BOSS_SLAIN_2);

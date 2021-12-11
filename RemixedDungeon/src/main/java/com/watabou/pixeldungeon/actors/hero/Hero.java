@@ -713,7 +713,7 @@ public class Hero extends Char {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 
 		Map<String, String> deathDesc = new HashMap<>();
 

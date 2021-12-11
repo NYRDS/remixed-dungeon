@@ -121,7 +121,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		int pos = getPos();
 
 		Level level = level();

@@ -191,7 +191,7 @@ public class ShadowLord extends Boss implements IZapper {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		super.die(cause);
         yell(StringsManager.getVar(R.string.ShadowLord_Death));
 		LevelTools.makeEmptyLevel(level(), false);
