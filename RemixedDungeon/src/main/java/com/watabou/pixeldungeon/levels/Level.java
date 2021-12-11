@@ -794,7 +794,7 @@ public abstract class Level implements Bundlable {
 
 	public String getTilesTex() {
 
-		if(Dungeon.isometricMode) {
+		if(Dungeon.isIsometricMode()) {
 			return tilesTexXyz();
 		}
 

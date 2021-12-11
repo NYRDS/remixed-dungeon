@@ -725,7 +725,7 @@ public class GameScene extends PixelScene {
     public static Group particleEffect(String effectName, int cell) {
         if (isSceneReady()) {
             Group effect = ParticleEffect.addToCell(effectName, cell);
-            effect.setIsometricShift(Dungeon.isometricMode);
+            effect.setIsometricShift(Dungeon.isIsometricMode());
             scene.add(effect);
             return effect;
         }

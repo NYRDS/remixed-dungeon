@@ -44,7 +44,7 @@ public class Gizmo {
 	}
 
 	public static int isometricShift() {
-		if(Dungeon.isometricMode) {
+		if(Dungeon.isIsometricMode()) {
 			return isometricModeShift;
 		}
 		return 0;
@@ -133,7 +133,7 @@ public class Gizmo {
 	}
 
 	public void setIsometricShift(boolean isometricShift) {
-		if(Dungeon.isometricMode) {
+		if(Dungeon.isIsometricMode()) {
 			this.isometricShift = isometricShift;
 		}
 	}

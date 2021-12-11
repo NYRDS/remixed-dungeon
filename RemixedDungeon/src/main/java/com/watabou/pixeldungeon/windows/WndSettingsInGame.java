@@ -53,7 +53,7 @@ public class WndSettingsInGame extends WndMenuCommon {
 			protected void onClick() {
 				super.onClick();
 				Preferences.INSTANCE.put(Preferences.KEY_USE_ISOMETRIC_TILES, checked());
-				Dungeon.isometricMode = checked();
+				Dungeon.setIsometricMode(checked());
 				GameLoop.pushUiTask(GameLoop::resetScene);
 			}
 		};
