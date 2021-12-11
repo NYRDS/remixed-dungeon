@@ -493,13 +493,12 @@ public class Dungeon {
                 Library.saveLibrary();
 
                 SaveUtils.copySaveToSlot(SaveUtils.getAutoSave(), heroClass);
+
+                GamesInProgress.set(hero.getHeroClass(), depth, hero.lvl());
             } catch (IOException e) {
                 Game.toast(StringsManager.getVar(R.string.Dungeon_saveIoError) + "\n" + e.getLocalizedMessage());
                 EventCollector.logException(new Exception("cannot write save", e));
             }
-
-            GamesInProgress.set(hero.getHeroClass(), depth, hero.lvl());
-
         } else if (WndResurrect.instance != null) {
 
             WndResurrect.instance.hide();

@@ -32,6 +32,7 @@ import org.json.JSONTokener;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -413,6 +414,9 @@ public class Bundle {
 
             return new Bundle(json);
         } catch (Exception e) {
+            if (e instanceof IOException) {
+                EventCollector.logEvent("save_io_exception");
+            }
             EventCollector.logException(e);
             return new Bundle();
         }
