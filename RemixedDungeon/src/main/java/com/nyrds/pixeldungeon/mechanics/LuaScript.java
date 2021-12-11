@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics;
 
 import com.nyrds.lua.LuaEngine;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.util.ModError;
 
 import org.jetbrains.annotations.Nullable;
@@ -50,6 +51,8 @@ public class LuaScript {
         if(script == null) {
             throw new ModError("Can't load "+scriptFile, new Exception());
         }
+
+        EventCollector.setSessionData("script", scriptFile);
 
         return script;
     }
