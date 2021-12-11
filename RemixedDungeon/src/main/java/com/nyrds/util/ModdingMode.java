@@ -82,6 +82,8 @@ public class ModdingMode {
 
 	public static void selectMod(String mod) {
 		try {
+			useRetroHeroSprites = false;
+
 			assetsExistenceCache.clear();
 
 			File modPath = FileSystem.getExternalStorageFile(mod);
