@@ -7,17 +7,14 @@ package com.nyrds.lua;
 
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.lua.PlatformLuajavaLib;
-import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 
 import org.apache.commons.io.input.BOMInputStream;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.luaj.vm2.Globals;
 import org.luaj.vm2.LoadState;
-import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaString;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
@@ -44,14 +41,19 @@ import lombok.var;
 
 public class LuaEngine implements ResourceFinder {
 
-	class traceback extends VarArgFunction {
+	public class traceback extends VarArgFunction {
+
+		public static final String DetailsSeparator = "\n!!!!!!!!\n";
+
 		public Varargs invoke(Varargs args) {
 
+			String errMsg = args.arg1() + "\n" + globals.debuglib.traceback(1);
 			if(stp!=null) {
-				GLog.toFile("\n%s\n",LuaString.valueOf(args.arg1() + "\n" + stp.get("stacktrace").call()));
+				errMsg  += DetailsSeparator + stp.get("stacktrace").call();
 			}
+			GLog.toFile("\n%s\n",errMsg);
 
-			return LuaString.valueOf(args.arg1() + "\n" + globals.debuglib.traceback(1));
+			return LuaString.valueOf(errMsg);
 		}
 	}
 
@@ -73,12 +75,8 @@ public class LuaEngine implements ResourceFinder {
 	}
 
 	public LuaValue call(String method, Object arg1) {
-		try {
-			LuaValue methodForData = globals.get(method);
-			return methodForData.call(CoerceJavaToLua.coerce(arg1));
-		} catch (LuaError err) {
-			throw new ModError( Utils.format("Error when calling %s", method), err);
-		}
+		LuaValue methodForData = globals.get(method);
+		return methodForData.call(CoerceJavaToLua.coerce(arg1));
 	}
 
 	@Nullable
@@ -149,11 +147,7 @@ public class LuaEngine implements ResourceFinder {
 	}
 
 	public void runScriptFile(@NotNull String fileName) {
-		try {
-			globals.loadfile(fileName).call();
-		} catch (LuaError err) {
-			throw new ModError( String.format("Error when running %s", fileName), err);
-		}
+		globals.loadfile(fileName).call();
 	}
 
 	@Override

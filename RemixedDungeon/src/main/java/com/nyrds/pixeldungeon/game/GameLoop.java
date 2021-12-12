@@ -202,39 +202,34 @@ public class GameLoop {
 
     @SneakyThrows
     public void step() {
-
-        try {
-            if (requestedReset) {
-                requestedReset = false;
-                switchScene(sceneClass.newInstance());
-                return;
-            }
-
-            elapsed = timeScale * step * 0.001f;
-
-            synchronized (motionEvents) {
-                motionEventsCopy.addAll(motionEvents);
-                motionEvents.clear();
-            }
-
-            Touchscreen.processTouchEvents(motionEventsCopy);
-            motionEventsCopy.clear();
-
-
-            synchronized (keysEvents) {
-                keyEventsCopy.addAll(keysEvents);
-                keysEvents.clear();
-            }
-
-            Keys.processTouchEvents(keyEventsCopy);
-            keyEventsCopy.clear();
-
-
-            scene.update();
-            Camera.updateAll();
-        } catch (Exception e) {
-            throw new TrackedRuntimeException(e);
+        if (requestedReset) {
+            requestedReset = false;
+            switchScene(sceneClass.newInstance());
+            return;
         }
+
+        elapsed = timeScale * step * 0.001f;
+
+        synchronized (motionEvents) {
+            motionEventsCopy.addAll(motionEvents);
+            motionEvents.clear();
+        }
+
+        Touchscreen.processTouchEvents(motionEventsCopy);
+        motionEventsCopy.clear();
+
+
+        synchronized (keysEvents) {
+            keyEventsCopy.addAll(keysEvents);
+            keysEvents.clear();
+        }
+
+        Keys.processTouchEvents(keyEventsCopy);
+        keyEventsCopy.clear();
+
+
+        scene.update();
+        Camera.updateAll();
     }
 
     private void switchScene(Scene requestedScene) {

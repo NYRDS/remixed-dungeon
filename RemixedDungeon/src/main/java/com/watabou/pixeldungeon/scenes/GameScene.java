@@ -566,7 +566,6 @@ public class GameScene extends PixelScene {
             observeRequested = false;
             Dungeon.observeImpl();
         }
-
     }
 
     @Override
