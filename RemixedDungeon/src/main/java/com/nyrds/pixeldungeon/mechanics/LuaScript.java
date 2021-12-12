@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mechanics;
 
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.util.ModError;
 
 import org.jetbrains.annotations.Nullable;
 import org.luaj.vm2.LuaTable;
@@ -17,9 +16,7 @@ import org.luaj.vm2.lib.jse.CoerceLuaToJava;
 public class LuaScript {
 
     private final String scriptFile;
-    private boolean scriptLoaded = false;
     private boolean asInstance = false;
-    private LuaTable script;
 
     private static final LuaValue[] emptyArgs = new LuaValue[0];
     private final LuaValue[] onlyParentArgs = new LuaValue[1];
@@ -39,22 +36,12 @@ public class LuaScript {
     }
 
     private LuaTable getScript() {
-        if (!scriptLoaded) {
-            if(asInstance) {
-                script = LuaEngine.moduleInstance(scriptFile);
-            } else {
-                script = LuaEngine.module(scriptFile);
-            }
-            scriptLoaded = true;
-        }
-
-        if(script == null) {
-            throw new ModError("Can't load "+scriptFile, new Exception());
-        }
-
         EventCollector.setSessionData("script", scriptFile);
 
-        return script;
+        if(asInstance) {
+            return LuaEngine.moduleInstance(this, scriptFile);
+        }
+        return LuaEngine.require(scriptFile);
     }
 
     private LuaValue run(String method, LuaValue[] args) {

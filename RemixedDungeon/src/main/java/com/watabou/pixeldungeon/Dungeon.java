@@ -152,7 +152,8 @@ public class Dungeon {
 
         gameId = String.valueOf(SystemTime.now());
 
-        LuaEngine.reset();
+        GameLoop.pushUiTask(LuaEngine::reset);
+
         Treasury.reset();
 
         setChallenges(GamePreferences.challenges());
