@@ -70,6 +70,10 @@ return spell.init{
             end
         end
 
+        if not level:cellValid(dst) then
+            return true
+        end
+
         local items = caster:getBelongings()
 
         local function hitCell(cell)
