@@ -45,6 +45,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
+import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Rankings.gameOver;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -152,7 +153,9 @@ public class Dungeon {
 
         gameId = String.valueOf(SystemTime.now());
 
-        GameLoop.pushUiTask(LuaEngine::reset);
+        if(!Scene.sceneMode.equals(Scene.LEVELS_TEST)) {
+            GameLoop.pushUiTask(LuaEngine::reset);
+        }
 
         Treasury.reset();
 

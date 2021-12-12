@@ -10,6 +10,6 @@ public class QuickModTest extends RemixedDungeon{
     @Override
     public void onResume() {
         super.onResume();
-        Scene.setMode("levelsTest");
+        Scene.setMode(Scene.LEVELS_TEST);
     }
 }
