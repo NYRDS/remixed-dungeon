@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Callback;
 
@@ -108,9 +109,8 @@ public class ShadowLord extends Boss implements IZapper {
 				final CharSprite sprite = mob.getSprite();
 
 				sprite.alpha( 0 );
-				if(sprite.getParent()!=null) {
-					sprite.getParent().add(new AlphaTweener(sprite, 1, 0.4f));
-				}
+				GameScene.addToMobLayer(new AlphaTweener(sprite, 1, 0.4f));
+
 
 				sprite.emitter().start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 				Sample.INSTANCE.play( Assets.SND_TELEPORT );

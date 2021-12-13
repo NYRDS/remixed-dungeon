@@ -22,6 +22,7 @@ import com.watabou.noosa.Animation;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class MobSprite extends CharSprite {
 
@@ -46,14 +47,12 @@ public class MobSprite extends CharSprite {
 		
 		if (anim == die) {
 			final Group parent = getParent();
-			if(parent!=null) {
-				parent.add(new AlphaTweener(this, 0, FADE_TIME) {
+			GameScene.addToMobLayer(new AlphaTweener(this, 0, FADE_TIME) {
 					@Override
 					protected void onComplete() {
 						MobSprite.this.killAndErase();
 					}
 				});
-			}
 		}
 	}
 

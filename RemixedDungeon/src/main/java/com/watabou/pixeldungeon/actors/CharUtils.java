@@ -90,7 +90,7 @@ public class CharUtils {
     public static void lightningProc(@NotNull Char caster, int targetCell, int damage) {
 
         int [] points = {caster.getPos(), targetCell};
-        caster.getSprite().getParent().add( new Lightning(points) );
+        GameScene.addToMobLayer( new Lightning(points) );
 
         Char enemy = Actor.findChar(targetCell);
 

@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class Wraith extends Mob implements IDepthAdjustable {
 
@@ -89,7 +90,7 @@ public class Wraith extends Mob implements IDepthAdjustable {
 			Dungeon.level.spawnMob(w, SPAWN_DELAY );
 			
 			w.getSprite().alpha( 0 );
-			w.getSprite().getParent().add( new AlphaTweener( w.getSprite(), 1, 0.5f ) );
+			GameScene.addToMobLayer( new AlphaTweener( w.getSprite(), 1, 0.5f ) );
 			
 			w.getSprite().emitter().burst( ShadowParticle.CURSE, 5 );
 			

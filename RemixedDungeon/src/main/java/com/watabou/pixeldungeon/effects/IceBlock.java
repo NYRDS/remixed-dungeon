@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.noosa.Gizmo;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 
 public class IceBlock extends Gizmo {
@@ -57,12 +58,11 @@ public class IceBlock extends Gizmo {
 	}
 	
 	public static IceBlock freeze( CharSprite sprite ) {
-		
+
 		IceBlock iceBlock = new IceBlock( sprite );
-		
-		if(sprite.getParent() != null) {
-			sprite.getParent().add( iceBlock );
-		}
+
+		GameScene.addToMobLayer( iceBlock );
+
 		return iceBlock;
 	}
 }

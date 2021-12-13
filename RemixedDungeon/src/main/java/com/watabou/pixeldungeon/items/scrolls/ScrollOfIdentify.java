@@ -23,6 +23,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Identification;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
@@ -37,7 +38,7 @@ public class ScrollOfIdentify extends InventoryScroll {
 	}
 
 	static public void identify(@NotNull Char ch, @NotNull Item item) {
-		ch.getSprite().getParent().add( new Identification( ch.getSprite().center().offset( 0, -16 ) ) );
+		GameScene.addToMobLayer( new Identification( ch.getSprite().center().offset( 0, -16 ) ) );
 
 		item.identify();
         GLog.i(Utils.format(StringsManager.getVar(R.string.ScrollOfIdentify_Info1), item));

@@ -42,6 +42,7 @@ import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.nyrds.util.WeakOptional;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.SkinnedBlock;
@@ -992,6 +993,12 @@ public class GameScene extends PixelScene {
     public static void addMobSpriteDirect(CharSprite sprite) {
         if (isSceneReady()) {
             scene.mobs.add(sprite);
+        }
+    }
+
+    public static void addToMobLayer(Gizmo gizmo) {
+        if (isSceneReady()) {
+            scene.mobs.add(gizmo);
         }
     }
 

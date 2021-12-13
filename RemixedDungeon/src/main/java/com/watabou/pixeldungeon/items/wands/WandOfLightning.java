@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
@@ -100,7 +101,7 @@ public class WandOfLightning extends SimpleWand  {
 			points[nPoints++] = cell;
 			CellEmitter.center( cell ).burst( SparkParticle.FACTORY, 3 );
 		}
-		getOwner().getSprite().getParent().add( new Lightning(Arrays.copyOfRange(points,0, nPoints), callback ) );
+			GameScene.addToMobLayer(new Lightning(Arrays.copyOfRange(points, 0, nPoints), callback));
 	}
 	
 	@Override

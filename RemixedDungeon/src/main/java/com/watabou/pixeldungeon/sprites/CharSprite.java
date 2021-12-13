@@ -202,18 +202,17 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 play(run);
             }
 
-            if (getParent() != null) {
-                motion = new PosTweener(this, worldToCamera(to), MOVE_INTERVAL);
-                motion.listener = this;
-                getParent().add(motion);
 
-                isMoving = true;
+            motion = new PosTweener(this, worldToCamera(to), MOVE_INTERVAL);
+            motion.listener = this;
+            GameScene.addToMobLayer(motion);
 
-                turnTo(from, to);
+            isMoving = true;
 
-                if (getVisible() && chr.level().water[from] && !chr.isFlying()) {
-                    GameScene.ripple(from);
-                }
+            turnTo(from, to);
+
+            if (getVisible() && chr.level().water[from] && !chr.isFlying()) {
+                GameScene.ripple(from);
             }
         });
     }
@@ -374,7 +373,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                     float alpha = chr instanceof Hero ? INVISIBILITY_ALPHA : 0.0f;
 
                     if (hasParent()) {
-                        getParent().add(new AlphaTweener(this, alpha, 0.4f));
+                        GameScene.addToMobLayer( new AlphaTweener(this, alpha, 0.4f));
                     } else {
                         alpha(alpha);
                     }

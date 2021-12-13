@@ -21,6 +21,7 @@ import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class ShopkeeperSprite extends MobSprite {
 	
@@ -56,7 +57,7 @@ public class ShopkeeperSprite extends MobSprite {
 								setIsometricShift(true);
 							}
 						};
-						getParent().add( coin );
+						GameScene.addToMobLayer( coin );
 					}
 					coin.reset( x + (flipHorizontal ? 0 : 13), y + 7, 0xFFFF00, 1, 0.5f );
 					coin.speed.y = -40;
