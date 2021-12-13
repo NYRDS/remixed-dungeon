@@ -196,6 +196,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         if (mIsometricMap[cell] == Terrain.EMPTY_SP) {
             return random.oneOf(cell, floorSpTiles);
         }
+
         return random.oneOf(cell, floorTiles);
     }
 

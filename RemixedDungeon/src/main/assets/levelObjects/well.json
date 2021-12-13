@@ -2,6 +2,7 @@
   "kind":"CustomObject",
 
   "script": "well",
+  "layer" : 0,
   "appearance": {
     "desc": {
       "desc": "",

@@ -76,7 +76,6 @@ public class CityBossLevel extends BossLevel {
 		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, left));
 		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, right));
 
-		//map[left] = map[right] = Terrain.PEDESTAL;
 		for (int i=left+1; i < right; i++) {
 			map[i] = Terrain.EMPTY_SP;
 		}

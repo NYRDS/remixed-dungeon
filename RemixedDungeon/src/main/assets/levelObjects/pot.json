@@ -2,6 +2,7 @@
   "kind":"CustomObject",
 
   "script": "pot",
+  "layer" : 0,
   "appearance": {
     "desc": {
       "desc": "Level_TileDescAlchemy",

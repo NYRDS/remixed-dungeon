@@ -97,6 +97,9 @@ public class Deco extends LevelObject {
 		}
 
 		JSONObject objectDesc = defMap.get(this.objectDesc);
+
+		layer = objectDesc.optInt("layer",3);
+
 		JSONObject appearance  = objectDesc.getJSONObject("appearance");
 
 		effectName = appearance.optString("particles", effectName);

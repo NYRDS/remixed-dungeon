@@ -154,7 +154,7 @@ public class Dungeon {
         gameId = String.valueOf(SystemTime.now());
 
         if(!Scene.sceneMode.equals(Scene.LEVELS_TEST)) {
-            GameLoop.pushUiTask(LuaEngine::reset);
+            LuaEngine.reset();
         }
 
         Treasury.reset();

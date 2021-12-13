@@ -6,14 +6,12 @@ package com.nyrds.lua;
  */
 
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
-import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.lua.PlatformLuajavaLib;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import org.apache.commons.io.input.BOMInputStream;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.luaj.vm2.Globals;
 import org.luaj.vm2.LoadState;
 import org.luaj.vm2.LuaString;
@@ -40,6 +38,7 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
+import lombok.Synchronized;
 import lombok.var;
 
 public class LuaEngine implements ResourceFinder {
@@ -73,11 +72,13 @@ public class LuaEngine implements ResourceFinder {
 
 	private final Globals globals;
 
+	@Synchronized
 	public static void reset() {
 		engine = new LuaEngine();
 		modules.clear();
 		moduleInstance.clear();
 	}
+	
 	public LuaValue call(String method) {
 		return globals.get(method).call();
 	}
@@ -87,7 +88,7 @@ public class LuaEngine implements ResourceFinder {
 		return methodForData.call(CoerceJavaToLua.coerce(arg1));
 	}
 
-	@Nullable
+	@Synchronized
 	public static LuaTable moduleInstance(LuaScript script, String module) {
 		if(moduleInstance.containsKey(script)) {
 			return moduleInstance.get(script);
@@ -100,8 +101,7 @@ public class LuaEngine implements ResourceFinder {
 			return moduleInstance.get(script);
 		}
 
-		EventCollector.logException("failed to load instance of lua module: "+module);
-		return null;
+		throw new RuntimeException("failed to load instance of lua module: "+module);
 	}
 
 
@@ -111,6 +111,7 @@ public class LuaEngine implements ResourceFinder {
 		}
 	}
 
+	@Synchronized
 	public static LuaEngine getEngine() {
 		return engine;
 	}
@@ -141,6 +142,7 @@ public class LuaEngine implements ResourceFinder {
 		stp = call("require","scripts/lib/StackTracePlus");
 	}
 
+	@Synchronized
 	static public LuaTable require(String module) {
 		if(modules.containsKey(module)) {
 			return modules.get(module);
@@ -153,9 +155,7 @@ public class LuaEngine implements ResourceFinder {
 			return modules.get(module);
 		}
 
-		EventCollector.logException("failed to load lua module: "+ module);
-
-		return null;
+		throw new RuntimeException("failed to load lua module: "+ module);
 	}
 
 	public void runScriptFile(@NotNull String fileName) {

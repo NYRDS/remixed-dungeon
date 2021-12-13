@@ -2,6 +2,7 @@
   "kind":"CustomObject",
 
   "script": "statue",
+  "layer" : 0,
   "appearance": {
     "desc": {
       "desc": "Level_TileDescStatue",
