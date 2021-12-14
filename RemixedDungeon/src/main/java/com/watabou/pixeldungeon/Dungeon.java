@@ -89,7 +89,6 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.GregorianCalendar;
 import java.util.HashSet;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import lombok.SneakyThrows;
 import lombok.val;
@@ -113,7 +112,6 @@ public class Dungeon {
     public static String levelId;
 
     public static  int depth;
-    private static final AtomicInteger loading = new AtomicInteger();
     private static long lastSaveTimestamp;
 
     public static  String  gameId;
@@ -149,6 +147,8 @@ public class Dungeon {
     }
 
     public static void init() {
+        GameLoop.loadingOrSaving.incrementAndGet();
+
         SaveUtils.deleteLevels(heroClass);
 
         gameId = String.valueOf(SystemTime.now());
@@ -200,6 +200,8 @@ public class Dungeon {
 
         realtime = GamePreferences.realtime();
         moveTimeoutIndex = GamePreferences.limitTimeoutIndex(GamePreferences.moveTimeout());
+
+        GameLoop.loadingOrSaving.decrementAndGet();
     }
 
     @Contract(pure = true)
@@ -218,7 +220,7 @@ public class Dungeon {
     @NotNull
     public static Level newLevel(@NotNull Position pos) {
 
-            loading.incrementAndGet();
+            GameLoop.loadingOrSaving.incrementAndGet();
             updateStatistics();
 
             if (!DungeonGenerator.isLevelExist(pos.levelId)) {
@@ -233,7 +235,7 @@ public class Dungeon {
 
             Statistics.qualifiedForNoKilling = !DungeonGenerator.getLevelProperty(level.levelId, "isSafe", false);
 
-            loading.decrementAndGet();
+            GameLoop.loadingOrSaving.decrementAndGet();
             return level;
     }
 
@@ -525,8 +527,9 @@ public class Dungeon {
         if (!force && SystemTime.now() - lastSaveTimestamp < 1000) {
             return;
         }
-
+        GameLoop.loadingOrSaving.incrementAndGet();
         saveAllImpl();
+        GameLoop.loadingOrSaving.decrementAndGet();
 
         lastSaveTimestamp = SystemTime.now();
     }
@@ -625,12 +628,12 @@ public class Dungeon {
 
     private static void loadGame(String fileName, boolean fullLoad) throws IOException {
         try {
-            loading.incrementAndGet();
+            GameLoop.loadingOrSaving.incrementAndGet();
             Bundle bundle = gameBundle(fileName);
             loadGameFromBundle(bundle, fullLoad);
         }
         finally {
-            loading.decrementAndGet();
+            GameLoop.loadingOrSaving.decrementAndGet();
         }
     }
 
@@ -638,7 +641,7 @@ public class Dungeon {
     @SneakyThrows
     public static Level loadLevel(Position next) {
         try {
-            loading.incrementAndGet();
+            GameLoop.loadingOrSaving.incrementAndGet();
             levelId = next.levelId;
 
             if(Dungeon.level!=null) {
@@ -683,7 +686,7 @@ public class Dungeon {
                 return level;
             }
         } finally {
-            loading.decrementAndGet();
+            GameLoop.loadingOrSaving.decrementAndGet();
         }
     }
 
@@ -874,7 +877,7 @@ public class Dungeon {
 
 
     public static boolean isLoading() {
-        return hero==null || level == null || loading.get()>0;
+        return hero==null || level == null || GameLoop.loadingOrSaving.get()>0;
     }
 
     public static boolean realtime() {

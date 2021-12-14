@@ -78,7 +78,7 @@ public class LuaEngine implements ResourceFinder {
 		modules.clear();
 		moduleInstance.clear();
 	}
-	
+
 	public LuaValue call(String method) {
 		return globals.get(method).call();
 	}

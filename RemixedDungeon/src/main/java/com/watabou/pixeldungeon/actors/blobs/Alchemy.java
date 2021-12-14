@@ -25,39 +25,27 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.utils.Bundle;
 
 public class Alchemy extends Blob {
 
-	protected int pos;
-	
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		
-		for (int i=0; i < getLength(); i++) {
-			if (cur[i] > 0) {
-				pos = i;
-				break;
-			}
-		}
-	}
-	
 	@Override
 	protected void evolve() {
-		volume = off[pos] = cur[pos];
-		
-		if (Dungeon.isCellVisible(pos)) {
-			Journal.add( Journal.Feature.ALCHEMY.desc() );
+
+		volume = 0;
+		for (int i = 0;i<getLength();i++) {
+			volume += cur[i];
+			if (cur[i] > 0 && Dungeon.isCellVisible(i)) {
+				Journal.add(Journal.Feature.ALCHEMY.desc());
+			}
 		}
 	}
 	
 	@Override
 	public void seed( int cell, int amount ) {
 		checkSeedCell(cell);
-		cur[pos] = 0;
-		pos = cell;
-		volume = cur[pos] = amount;
+		cur[cell] = amount;
+		volume += amount;
+
 	}
 
 	@LuaInterface

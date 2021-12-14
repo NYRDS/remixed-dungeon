@@ -51,6 +51,18 @@
          "object_desc":"pot",
          "x":6,
          "y":17
+       },
+       {
+         "kind": "CustomObject",
+         "object_desc": "pot",
+         "x": 4,
+         "y": 19
+       },
+       {
+         "kind":"CustomObject",
+         "object_desc":"pot",
+         "x":6,
+         "y":19
        }
  ],
  "tiles":"tiles0_x.png",

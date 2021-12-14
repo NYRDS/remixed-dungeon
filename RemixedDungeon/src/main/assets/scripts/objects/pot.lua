@@ -30,7 +30,6 @@ return object.init {
         local pos = object:getPos()
 
         if not presser.alchemyClass and presser.price then
-            local level = object:level()
             RPD.ItemUtils:throwItemAway(pos)
             return
         end

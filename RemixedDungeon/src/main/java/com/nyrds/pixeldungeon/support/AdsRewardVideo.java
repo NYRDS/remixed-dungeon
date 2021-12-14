@@ -35,9 +35,10 @@ public class AdsRewardVideo implements InterstitialPoint {
     public void returnToWork(final boolean result) {
 
         Hero.movieRewardPending = result;
-        Dungeon.save(true);
 
         GameLoop.pushUiTask(() -> {
+
+            Dungeon.save(true);
             Game.softPaused = false;
             Hero.doOnNextAction = new MovieRewardTask(result);
 

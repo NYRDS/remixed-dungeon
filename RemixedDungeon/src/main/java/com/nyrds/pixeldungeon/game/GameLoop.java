@@ -27,10 +27,13 @@ import org.luaj.vm2.LuaError;
 import java.util.ArrayList;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import lombok.SneakyThrows;
 
 public class GameLoop {
+
+    public static final AtomicInteger loadingOrSaving = new AtomicInteger();
 
     private final Executor executor = new ReportingExecutor();
     private final ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
@@ -202,6 +205,11 @@ public class GameLoop {
 
     @SneakyThrows
     public void step() {
+
+        if(loadingOrSaving.get() > 0) {
+            return;
+        }
+
         if (requestedReset) {
             requestedReset = false;
             switchScene(sceneClass.newInstance());
