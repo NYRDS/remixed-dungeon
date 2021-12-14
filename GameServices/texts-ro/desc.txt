@@ -1,0 +1,31 @@
+Acesta este un joc roguelike cu sursă deschisă și grafică pixelată
+
+O dată ca niciodată, era un mic sat. Sătenii trăiau fericiți, dar erau atât de săraci încât nu își permiteau nici să meargă undeva plăcut de sărbători. Dar în ziua când orice speranță a fost abandonată, s-a întâmplat un miracol. Pământul dedesubtul satului s-a scuturat violent și de acolo au ieșit nenumărați monștrii josnici. De atunci, toți sătenii care au supraviețuit au trăit fericiți până la adânci bătrâneți. De ce? Pentru că temnița a atras toate tipurile de eroi și aventurieri. Ei i-au protejat pe inocenți și s-au dovedit a fi niște minunați cheltuitori, stimulând economia satului.
+Și acum micul sat înflorește, stând deasupra unei temnițe periculoase plină cu acenturieri morți și sufletele lor mizerabile.
+
+Caracteristicile jocului:
+- Acest joc suportă moduri create de utilizatori! Și deoarece continuăm să lucrăm la această caracteristică, în curând vei putea creea jocuri noi în întregime înăuntrul Remixed Dungeon!
+- Experiență roguelike agresivă!
+- 7 clase de eroi din care să alegi
+- Sat centru care te pregătește pentru călătorie și te introduce în lumea jocului
+- Peste 30 de nivele din temnița principală împărțite în 6 tipuri de temnițe
+- 3 temnițe opționale: Vizuina păianjenului, Necropolis, Peșterile de gheața
+- Zeci de articole și monștrii
+- Șefi diverși
+- Pălării! Toată lumea iubește pălăriile
+
+Alătură-te serverului nostru Discord:
+https://discordapp.com/invite/AMXrhQZ
+
+Urmărește-ne pe Twitter:
+https://twitter.com/nyrds
+
+Acest joc este un program cu sursă deschisă sub Licență GPLv3. Codul sursă al Remixed Dungeon poate fi găsit aici:
+https://github.com/NYRDS/remixed-dungeon
+
+Dacă dorești să participi la traducerea în alte limbi, te rugăm să vizitezi:
+https://www.transifex.com/projects/p/remixed-dungeon/
+
+Poți verifica
+http://wiki.nyrds.net/doku.php?id=rpd:changelog
+Pentru un istoric complet de modificări pe site-ul nostru wiki
