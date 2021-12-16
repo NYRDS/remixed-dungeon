@@ -55,8 +55,8 @@
         "identified": true
       },
       {
-        "kind": "CurareDart",
-        "quantity": 1000
+        "kind": "Dagger",
+        "cursed": true
       },
       {
         "kind": "Gold",

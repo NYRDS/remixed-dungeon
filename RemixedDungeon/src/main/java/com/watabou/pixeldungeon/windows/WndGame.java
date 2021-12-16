@@ -140,19 +140,19 @@ public class WndGame extends WndMenuCommon {
 			@Override
 			public void onPlus(Selector s) {
 				Gizmo.isometricModeShift += 1;
-				s.setText(Utils.format("Shift: %2.1f", Gizmo.isometricModeShift));
+				s.setText(Utils.format("Shift: %d", Gizmo.isometricModeShift));
 			}
 
 			@Override
 			public void onMinus(Selector s) {
 				Gizmo.isometricModeShift -= 1;
-				s.setText(Utils.format("Shift: %2.1f", Gizmo.isometricModeShift));
+				s.setText(Utils.format("Shift: %d", Gizmo.isometricModeShift));
 			}
 
 			@Override
 			public void onDefault(Selector s) {
 				Gizmo.isometricModeShift = 0;
-				s.setText(Utils.format("Shift: %2.1f", Gizmo.isometricModeShift));
+				s.setText(Utils.format("Shift: %d", Gizmo.isometricModeShift));
 			}
 
 		});
