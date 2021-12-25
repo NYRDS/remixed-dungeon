@@ -21,8 +21,6 @@ import android.view.KeyEvent;
 
 import com.watabou.utils.Signal;
 
-import java.util.ArrayList;
-
 public class Keys {
 	
 	public static final int BACK		= KeyEvent.KEYCODE_BACK;
@@ -32,19 +30,16 @@ public class Keys {
 
 	public static Signal<Key> event = new Signal<>(true);
 	
-	public static void processTouchEvents(ArrayList<KeyEvent> events) {
-
-		for (KeyEvent e : events) {
-			
-			switch (e.getAction()) {
-			case KeyEvent.ACTION_DOWN:
-				event.dispatch(new Key(e.getKeyCode(), true));
-				break;
-			case KeyEvent.ACTION_UP:
-				event.dispatch(new Key(e.getKeyCode(), false));
-				break;
-			}
+	public static void processEvent(KeyEvent e) {
+		switch (e.getAction()) {
+		case KeyEvent.ACTION_DOWN:
+			event.dispatch(new Key(e.getKeyCode(), true));
+			break;
+		case KeyEvent.ACTION_UP:
+			event.dispatch(new Key(e.getKeyCode(), false));
+			break;
 		}
+
 	}
 	
 	public static class Key {

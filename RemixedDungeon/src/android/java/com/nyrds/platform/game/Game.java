@@ -237,9 +237,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @SuppressLint({"Recycle", "ClickableViewAccessibility"})
     @Override
     public boolean onTouch(View view, MotionEvent event) {
-        synchronized (gameLoop.motionEvents) {
-            gameLoop.motionEvents.add(MotionEvent.obtain(event));
-        }
+        gameLoop.motionEvents.add(MotionEvent.obtain(event));
         return true;
     }
 
@@ -250,9 +248,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
             return super.onKeyDown(keyCode, event);
         }
 
-        synchronized (gameLoop.keysEvents) {
-            gameLoop.keysEvents.add(event);
-        }
+        gameLoop.keysEvents.add(event);
         return true;
     }
 

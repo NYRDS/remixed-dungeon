@@ -22,7 +22,6 @@ import android.view.MotionEvent;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Signal;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Touchscreen {
@@ -35,51 +34,46 @@ public class Touchscreen {
 	public static float y;
 	public static boolean touched;
 
-	public static void processTouchEvents( ArrayList<MotionEvent> events ) {
-		
-		int size = events.size();
-		for (int i=0; i < size; i++) {
-			
-			MotionEvent e = events.get( i );
-			Touch touch;
-			
-			switch (e.getAction() & MotionEvent.ACTION_MASK) {
-			
-			case MotionEvent.ACTION_DOWN:
-				touched = true;
-				touch = new Touch( e, 0 );
-				pointers.put( e.getPointerId( 0 ), touch );
-				event.dispatch( touch );
-				break;
-				
-			case MotionEvent.ACTION_POINTER_DOWN:
-				int index = e.getActionIndex();
-				touch = new Touch( e, index );
-				pointers.put( e.getPointerId( index ), touch );
-				event.dispatch( touch );
-				break;
-				
-			case MotionEvent.ACTION_MOVE:
-				int count = e.getPointerCount();
-				for (int j=0; j < count; j++) {		
-					pointers.get( e.getPointerId( j ) ).update( e, j );
-				}
-				event.dispatch( null );
-				break;
-				
-			case MotionEvent.ACTION_POINTER_UP:
-				event.dispatch( pointers.remove( e.getPointerId( e.getActionIndex() ) ).up() );
-				break;
-				
-			case MotionEvent.ACTION_UP:
-				touched = false;
-				event.dispatch( pointers.remove( e.getPointerId( 0 ) ).up() );
-				break;
-				
+	public static void processEvent(MotionEvent e ) {
+
+		Touch touch;
+
+		switch (e.getAction() & MotionEvent.ACTION_MASK) {
+
+		case MotionEvent.ACTION_DOWN:
+			touched = true;
+			touch = new Touch( e, 0 );
+			pointers.put( e.getPointerId( 0 ), touch );
+			event.dispatch( touch );
+			break;
+
+		case MotionEvent.ACTION_POINTER_DOWN:
+			int index = e.getActionIndex();
+			touch = new Touch( e, index );
+			pointers.put( e.getPointerId( index ), touch );
+			event.dispatch( touch );
+			break;
+
+		case MotionEvent.ACTION_MOVE:
+			int count = e.getPointerCount();
+			for (int j=0; j < count; j++) {
+				pointers.get( e.getPointerId( j ) ).update( e, j );
 			}
-			
-			e.recycle();
+			event.dispatch( null );
+			break;
+
+		case MotionEvent.ACTION_POINTER_UP:
+			event.dispatch( pointers.remove( e.getPointerId( e.getActionIndex() ) ).up() );
+			break;
+
+		case MotionEvent.ACTION_UP:
+			touched = false;
+			event.dispatch( pointers.remove( e.getPointerId( 0 ) ).up() );
+			break;
+
 		}
+
+		e.recycle();
 	}
 	
 	public static class Touch {

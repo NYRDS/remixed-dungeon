@@ -24,7 +24,6 @@ import com.watabou.utils.SystemTime;
 
 import org.luaj.vm2.LuaError;
 
-import java.util.ArrayList;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -63,13 +62,11 @@ public class GameLoop {
     public Runnable doOnResume;
 
     // Accumulated touch events
-    public final ArrayList<MotionEvent> motionEvents = new ArrayList<>();
+    public final ConcurrentLinkedQueue<MotionEvent> motionEvents = new ConcurrentLinkedQueue<>();
 
     // Accumulated key events
-    public final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
+    public final ConcurrentLinkedQueue<KeyEvent> keysEvents = new ConcurrentLinkedQueue<>();
 
-    private final ArrayList<MotionEvent> motionEventsCopy = new ArrayList<>();
-    private final ArrayList<KeyEvent>    keyEventsCopy    = new ArrayList<>();
 
     public GameLoop(Class<? extends Scene> c) {
         super();
@@ -218,23 +215,13 @@ public class GameLoop {
 
         elapsed = timeScale * step * 0.001f;
 
-        synchronized (motionEvents) {
-            motionEventsCopy.addAll(motionEvents);
-            motionEvents.clear();
+        while(!motionEvents.isEmpty()) {
+            Touchscreen.processEvent(motionEvents.poll());
         }
 
-        Touchscreen.processTouchEvents(motionEventsCopy);
-        motionEventsCopy.clear();
-
-
-        synchronized (keysEvents) {
-            keyEventsCopy.addAll(keysEvents);
-            keysEvents.clear();
+        while(!keysEvents.isEmpty()) {
+            Keys.processEvent(keysEvents.poll());
         }
-
-        Keys.processTouchEvents(keyEventsCopy);
-        keyEventsCopy.clear();
-
 
         scene.update();
         Camera.updateAll();
