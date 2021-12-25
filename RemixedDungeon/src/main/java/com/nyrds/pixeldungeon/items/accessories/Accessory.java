@@ -63,6 +63,7 @@ public class Accessory {
         registerAccessory(MedicineMask.class);
         registerAccessory(FilteredMask.class);
         registerAccessory(FullFaceMask.class);
+        registerAccessory(KrampusHead.class);
     }
 
     public static List<String> getAccessoriesList() {
