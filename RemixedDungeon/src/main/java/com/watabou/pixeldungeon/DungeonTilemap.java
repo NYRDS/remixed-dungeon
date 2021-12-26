@@ -150,4 +150,8 @@ public abstract class DungeonTilemap extends Tilemap {
 	public abstract void updateCell(int cell, Level level);
 
 	public abstract void updateAll();
+
+	public void updateFow(@NotNull FogOfWar fog) {
+		fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
+	}
 }

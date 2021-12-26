@@ -8,6 +8,7 @@ import com.watabou.noosa.Tilemap;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
+import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,6 +31,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     private final Level level;
 
     private final int[] mIsometricMap;
+    private final boolean[] mVisible;
+    private final boolean[] mMapped;
 
     private final int[] mWallsMap;
     private final int[] mDecoMap;
@@ -52,6 +55,9 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
         data = new int[mSize];
         mIsometricMap = new int[mSize];
+        mVisible = new boolean[mSize];
+        mMapped = new boolean[mSize];
+
         map(buildGroundMap(), mWidth);
 
         mWallsLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
@@ -77,7 +83,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     public boolean mayPeek(int cell) {
-        return level.passable[cell] || level.map[cell] == Terrain.DOOR || level.map[cell] == Terrain.LOCKED_DOOR;
+        return level.passable[cell] && level.map[cell] != Terrain.DOOR && level.map[cell] != Terrain.LOCKED_DOOR;
     }
 
     public void makeIsometricMap() {
@@ -601,6 +607,23 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         return roofTilemap;
     }
 
+    @Override
+    public void updateFow(@NotNull FogOfWar fog) {
+
+        System.arraycopy(Dungeon.visible, 0, mVisible, 0, mVisible.length);
+
+        //System.arraycopy(level.mapped, 0, mMapped, 0, mMapped.length);
+
+        for (int i = level.getWidth(); i < level.getLength() - level.getWidth(); i++) {
+            if (mVisible[i] && isWallCell(i) ) {
+                mVisible[i - level.getWidth()] = true;
+            }
+        }
+        BArray.or(mVisible, level.mapped, mMapped);
+
+        fog.updateVisibility(mVisible, level.visited, mMapped);
+    }
+
     class XyzRoofTileMap extends DungeonTilemap {
 
         public XyzRoofTileMap(@NotNull Level level, String tiles) {
@@ -622,7 +645,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         public void draw() {
             mRoofLayer.draw();
             mCornersLayer.draw();
-
         }
     }
 }

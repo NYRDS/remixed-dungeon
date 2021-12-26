@@ -43,11 +43,17 @@ public class FogOfWar extends Image {
 	
 	private int width2;
 	private int height2;
-	
+
+	private int mWidth;
+	private int mHeight;
+
 	public FogOfWar( int mapWidth, int mapHeight ) {
 		
 		super();
-		
+
+		mWidth = mapWidth;
+		mHeight = mapHeight;
+
 		pWidth = mapWidth + 1;
 		pHeight = mapHeight + 1;
 		
@@ -80,7 +86,25 @@ public class FogOfWar extends Image {
 			pixels = new int[width2 * height2];
 			Arrays.fill( pixels, INVISIBLE );
 		}
-		
+
+
+		for (int i=0; i < 1; i++) {
+			int pos = (mWidth) * i;
+			for (int j=1; j < mWidth; j++) {
+				pos++;
+				int c = INVISIBLE;
+
+				if (visible[pos + mWidth]) {
+					c = VISIBLE;
+				} else if (visited[pos +mWidth]) {
+					c = VISITED;
+				} else if (mapped[pos + mWidth]) {
+					c = MAPPED;
+				}
+				pixels[i * width2 + j] = c;
+			}
+		}
+
 		for (int i=1; i < pHeight - 1; i++) {
 			int pos = (pWidth - 1) * i;
 			for (int j=1; j < pWidth - 1; j++) {
@@ -114,6 +138,7 @@ public class FogOfWar extends Image {
 		
 		public FogTexture() {
 			super( Bitmap.createBitmap( width2, height2, Bitmap.Config.ARGB_8888 ) );
+			//filter( Texture.NEAREST, Texture.NEAREST );
 			filter( Texture.LINEAR, Texture.LINEAR );
 			TextureCache.add( FogOfWar.class, this );
 		}

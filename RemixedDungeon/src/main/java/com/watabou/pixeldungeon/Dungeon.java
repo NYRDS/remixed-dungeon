@@ -738,14 +738,6 @@ public class Dungeon {
         level.updateFieldOfView(hero.getControlTarget());
         System.arraycopy(level.fieldOfView, 0, visible, 0, visible.length);
 
-        if(Dungeon.isIsometricMode()) {
-            for (int i = level.getWidth(); i < level.getLength() - level.getWidth(); i++) {
-                if (visible[i] && level.solid[i] && level.solid[i-level.getWidth()]) {
-                    visible[i - level.getWidth()] = true;
-                }
-            }
-        }
-
         BArray.or(level.mapped, visible, level.mapped);
 
         GameScene.afterObserve();
