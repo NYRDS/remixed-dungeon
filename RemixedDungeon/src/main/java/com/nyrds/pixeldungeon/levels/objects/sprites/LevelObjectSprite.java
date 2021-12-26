@@ -25,6 +25,7 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 	private TextureFilm frames;
 	private Callback    onAnimComplete;
 	private PointF      centerShift;
+	private int 		cell;
 
 	public LevelObjectSprite()
 	{}
@@ -53,6 +54,7 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 		PointF p = DungeonTilemap.tileToWorld(cell);
 		x = p.x + centerShift.x;
 		y = p.y + centerShift.y;
+		this.cell = cell;
 	}
 
 	public void reset(@NotNull LevelObject object) {
@@ -89,6 +91,11 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 
 	public void reset(int image) {
 		frame(frames.get(image));
+	}
+
+	@Override
+	public boolean getVisible() {
+		return Dungeon.level.mapped[cell];
 	}
 
 	@Override
