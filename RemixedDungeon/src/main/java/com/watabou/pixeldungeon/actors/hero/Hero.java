@@ -762,7 +762,13 @@ public class Hero extends Char {
 		lastAction = null;
 	}
 
-	private static void reallyReallyDie(Hero hero, NamedEntityKind cause) {
+	public static void reallyDie(Hero hero,final NamedEntityKind cause) {
+
+		if (hero.getDifficulty() < 2 && !Game.isPaused()) {
+			GameScene.show(new WndSaveSlotSelect(false, StringsManager.getVar(R.string.Hero_AnotherTry)));
+			return;
+		}
+
 		Dungeon.level.discover();
 
 		Bones.leave(hero);
@@ -778,16 +784,6 @@ public class Hero extends Char {
 		}
 
 		Dungeon.gameOver();
-	}
-
-	public static void reallyDie(Hero hero,final NamedEntityKind cause) {
-
-		if (hero.getDifficulty() < 2 && !Game.isPaused()) {
-			GameScene.show(new WndSaveSlotSelect(false, StringsManager.getVar(R.string.Hero_AnotherTry)));
-			return;
-		}
-
-		reallyReallyDie(hero,cause);
 	}
 
 	@Override
