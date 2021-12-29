@@ -1,7 +1,7 @@
-Este es un juego roguelike de código abierto, con gráficos de píxeles
+ un jueguito rpg roguelike de código abierto con gráficos de estilo pixel bien chidos la neta.
 
-Había una vez un pequeño pueblo. Los habitantes de la ciudad vivían felices pero eran tan pobres que no podían permitirse ir a un lugar decente en vacaciones. Pero en el día, cuando todos abandonaron toda esperanza, ocurrió un milagro. El suelo debajo de la ciudad se sacudió violentamente y estalló una gran cantidad de monstruos despreciables. Y a partir de ese momento, todos los ciudadanos, que habían sobrevivido, vivieron felices para siempre. ¿Por qué? Porque la mazmorra ha atraído a todo tipo de héroes y aventureros. Protegieron a los inocentes y terminaron siendo realmente buenos gastadores, impulsando la economía de la ciudad.
-Y ahora el pueblo florece, mientras siga encima de una peligrosa mazmorra, llena de aventureros muertos y sus miserables almas.
+Érase una vez un pinche pueblito. La gente del pueblito vivía felizmente, pero eran la inflación de su moneda causó la pobreza de su reino. Pero el día en que todos pensabán en volverse socialistas, ocurrió un milagro. El suelo debajo de la ciudad se sacudió violentamente y estalló una pinche mazmorra llena de monstruos feos y chakas. A partir de ese momento, todos los habitantes del pueblo sobrexplotaron a los monsteuos convirtiendolo en un centro turístico . ¿Por qué? pues porque no hay chamba ademas estan bien feos la neta. El pinche pueblito se salvo de morir de hambre. Viva el capitalismo.
+Y ahora la pequeña ciudad prospera, ya que se encuentra en la cima de una peligrosa mazmorra llena de aventureros pendejos que murieron espero que no seas uno de ellos
 
 Características del juego:
 - ¡Este juego soporta mods creados por los usuarios! Y tan pronto como perfeccionemos esta característica, serás capaz de crear un juego completamente nuevo dentro de Remixed Dungeon.
@@ -13,6 +13,9 @@ Características del juego:
 - Docenas de objetos y monstruos
 - Diversos jefes
 ¡Sombreros! A todo el mundo le gustan los sombreros
+
+Unete al discord no seas puto
+https://discordapp.com/invite/AMXrhQZ
 
 Síguenos en Twitter:
 https://twitter.com/nyrds
