@@ -30,6 +30,7 @@ public class LevelObjectsFactory {
 
     public static final String PEDESTAL = "pedestal";
     public static final String STATUE = "statue";
+	public static final String STATUE_SP = "statue_sp";
 	public static final String BARRICADE = "barricade";
 	public static final String WELL = "well";
 	public static final String POT = "pot";
