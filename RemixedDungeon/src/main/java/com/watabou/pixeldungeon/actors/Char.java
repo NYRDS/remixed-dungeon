@@ -213,7 +213,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public boolean canSpawnAt(Level level, int cell) {
-		return walkingType.canSpawnAt(level, cell) && level.getTopLevelObject(cell) == null && level.map[cell] != Terrain.ENTRANCE;
+		boolean ret = walkingType.canSpawnAt(level, cell)
+				&& level.map[cell] != Terrain.ENTRANCE;
+		GLog.debug("%s %d %b", getEntityKind(), cell, ret);
+		return ret;
 	}
 
 	public int respawnCell(Level level) {
@@ -1774,7 +1777,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@LuaInterface
 	public boolean canStepOn() {
-    	return walkingType.canSpawnAt(level(),getPos()) && (Actor.findChar(pos) == null);
+    	return walkingType.canSpawnAt(level(),getPos());
 	}
 
 	public void setBelongings(Belongings belongings) {

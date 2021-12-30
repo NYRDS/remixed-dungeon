@@ -12,7 +12,6 @@ import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -125,10 +124,8 @@ public class Lich extends Boss {
             int newPos = Random.Int( level.getLength() );
 
             if(level.fieldOfView[newPos] &&
-                    level.passable[newPos] &&
                     !adjacent(getEnemy()) &&
-                    Actor.findChar( newPos ) == null)
-            {
+                    canSpawnAt(level, newPos)) {
                 getSprite().move( getPos(), newPos );
                 move( newPos );
 

@@ -242,6 +242,14 @@ public abstract class Level implements Bundlable {
 
 		clearCellForObject(pos);
 
+		markObjectFlags(lo, pos);
+	}
+
+	public void markObjectFlags(LevelObject lo, int pos) {
+		if(lo.nonPassable(CharsList.DUMMY)) {
+			passable[pos] = false;
+		}
+
 		if(lo.losBlocker()) {
 			losBlocking[pos] = true;
 		}
@@ -1013,16 +1021,7 @@ public abstract class Level implements Bundlable {
 
 		for(val lo:getAllLevelObjects()) {
 			int pos = lo.getPos();
-
-			if(lo.losBlocker()) {
-				losBlocking[pos] = true;
-			}
-			if(lo.flammable()) {
-				flammable[pos] = true;
-			}
-			if(lo.avoid()){
-				avoid[pos] = true;
-			}
+			markObjectFlags(lo, pos);
 		}
 
 		int lastRow = getLength() - getWidth();

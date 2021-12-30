@@ -23,13 +23,13 @@ import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 
 public class Wraith extends Mob implements IDepthAdjustable {
 
@@ -75,24 +75,25 @@ public class Wraith extends Mob implements IDepthAdjustable {
 	public static void spawnAround( int pos ) {
 		for (int n : Level.NEIGHBOURS4) {
 			int cell = pos + n;
-			if (Dungeon.level.passable[cell] && Actor.findChar( cell ) == null) {
 				spawnAt( cell );
-			}
 		}
 	}
 	
 	public static Wraith spawnAt( int pos ) {
-		if (Dungeon.level.passable[pos] && Actor.findChar( pos ) == null) {
-			
-			Wraith w = new Wraith();
+		final Level level = Dungeon.level;
+		Wraith w = new Wraith();
+
+		if (w.canSpawnAt(level, pos)) {
 			w.setPos(pos);
 			w.setState(MobAi.getStateByClass(Hunting.class));
-			Dungeon.level.spawnMob(w, SPAWN_DELAY );
+			level.spawnMob(w, SPAWN_DELAY );
+
+			final CharSprite sprite = w.getSprite();
+
+			sprite.alpha( 0 );
+			GameScene.addToMobLayer( new AlphaTweener(sprite, 1, 0.5f ) );
 			
-			w.getSprite().alpha( 0 );
-			GameScene.addToMobLayer( new AlphaTweener( w.getSprite(), 1, 0.5f ) );
-			
-			w.getSprite().emitter().burst( ShadowParticle.CURSE, 5 );
+			sprite.emitter().burst( ShadowParticle.CURSE, 5 );
 			
 			return w;
 		} else {

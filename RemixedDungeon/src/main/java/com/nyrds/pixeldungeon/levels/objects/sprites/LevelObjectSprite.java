@@ -95,7 +95,10 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 
 	@Override
 	public boolean getVisible() {
-		return Dungeon.level.mapped[cell];
+		if(Dungeon.level != null) {
+			return Dungeon.level.mapped[cell] && super.getVisible();
+		}
+		return false;
 	}
 
 	@Override
