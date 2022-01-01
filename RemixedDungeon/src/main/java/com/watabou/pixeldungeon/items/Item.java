@@ -45,6 +45,7 @@ import com.watabou.pixeldungeon.actors.hero.Backpack;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.Glowing;
@@ -68,6 +69,7 @@ import java.util.Comparator;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;
+import lombok.val;
 import lombok.var;
 
 public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWithId {
@@ -525,7 +527,16 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
 	    int pos = user.getPos();
 
-		final int cell = Ballistica.cast(pos, dst, false, true);
+		int cell = Ballistica.cast(pos, dst, false, true);
+
+		Level level = user.level();
+		if(level.distance(cell, dst) == 1) {
+			val lo = level.getTopLevelObject(dst);
+			if ( lo != null && lo.affectItems()) {
+				cell = dst;
+			}
+		}
+
 		user.getSprite().zap(cell);
 
 		Char enemy = Actor.findChar(cell);
@@ -549,9 +560,10 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 				getParent().
 				recycle(MissileSprite.class));
 
+		int finalCell = cell;
 		sprite.reset(pos, cell, this, () -> {
 					user.spend(finalDelay);
-					item.onThrow(cell, user);
+					item.onThrow(finalCell, user);
 				});
 	}
 

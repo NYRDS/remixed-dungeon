@@ -46,6 +46,7 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
 
     public WeakOptional<LevelObjectSprite> lo_sprite = WeakOptional.empty();
 
+
     class deprecatedSprite {
 
         public deprecatedSprite() {}

@@ -1210,15 +1210,6 @@ public abstract class Level implements Bundlable {
 			}
 		}
 
-		final LevelObject topLevelObject = getTopLevelObject(cell);
-
-		if ( topLevelObject != null && topLevelObject.nonPassable(CharsList.DUMMY)) {
-			if (cellValid(emptyCellNextTo)) {
-				cell = emptyCellNextTo;
-			}
-		}
-
-
 		Heap heap = heaps.get(cell);
 
 		if (heap != null && (heap.type == Heap.Type.LOCKED_CHEST

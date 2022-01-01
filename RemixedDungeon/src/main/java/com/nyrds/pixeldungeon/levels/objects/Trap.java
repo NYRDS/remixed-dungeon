@@ -256,6 +256,11 @@ public class Trap extends LevelObject {
 		return kind;
 	}
 
+	@Override
+	public boolean affectItems() {
+		return true;
+	}
+
 	static class ScriptTrap implements ITrigger {
 		private final String scriptFile;
 		private final String data;

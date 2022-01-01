@@ -44,6 +44,10 @@ return object.init {
         return true
     end,
 
+    affectItems = function(self, object)
+        return true
+    end,
+
 
     addedToScene = function(self, object)
         local effect = RPD.objectEffect(object:getPos(), "cauldron_effect")
