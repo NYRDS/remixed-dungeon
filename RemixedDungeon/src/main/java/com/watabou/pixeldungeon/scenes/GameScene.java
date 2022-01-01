@@ -108,7 +108,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
 
-import lombok.val;
 import lombok.var;
 
 public class GameScene extends PixelScene {
@@ -255,13 +254,6 @@ public class GameScene extends PixelScene {
 
         objectEffects = new Group();
         add(objectEffects);
-
-        for (val objectLayer: level.objects.values()) {
-            for (val object: objectLayer.values()) {
-                object.lo_sprite.clear();
-                addLevelObjectSprite(object);
-            }
-        }
 
         level.addVisuals(this);
 
@@ -438,6 +430,14 @@ public class GameScene extends PixelScene {
         LevelTools.upgradeMap(level); // Epic level gen compatibility
 
         for (var lo: level.getAllLevelObjects()) {
+            GLog.debug("creating lo: %s", lo.getEntityKind());
+
+            if(lo.getEntityKind().contains("ShadowTile")) {
+                GLog.debug("creating ShadowTile");
+            }
+
+            lo.lo_sprite.clear();
+            addLevelObjectSprite(lo);
             lo.addedToScene();
         }
 

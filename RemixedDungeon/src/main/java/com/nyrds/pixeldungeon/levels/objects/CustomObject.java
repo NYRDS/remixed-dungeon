@@ -148,8 +148,8 @@ public class CustomObject extends Deco {
 
     @Override
     public void addedToScene() {
+        //GLog.debug("%s - addedToScene", getEntityKind());
         script.runOptionalNoRet("addedToScene");
-        super.addedToScene();
     }
 
     @Override

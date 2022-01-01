@@ -111,4 +111,8 @@ public class Plant extends LevelObject {
 		return false;
 	}
 
+	@Override
+	public boolean affectItems() {
+		return true;
+	}
 }
