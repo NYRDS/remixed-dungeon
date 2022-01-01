@@ -22,10 +22,6 @@ return object.init {
 
     end,
 
-    stepOn = function(self, object, hero)
-        return true
-    end,
-
     bump = function(self, object, presser)
         local pos = object:getPos()
 
@@ -43,6 +39,11 @@ return object.init {
             return level:getTilesTex()
         end
     end,
+
+    nonPassable = function(self, object, hero)
+        return true
+    end,
+
 
     addedToScene = function(self, object)
         local effect = RPD.objectEffect(object:getPos(), "cauldron_effect")
