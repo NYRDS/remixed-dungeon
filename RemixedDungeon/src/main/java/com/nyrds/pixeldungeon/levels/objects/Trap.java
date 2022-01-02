@@ -160,6 +160,7 @@ public class Trap extends LevelObject {
 			if (uses == 0) {
 				lo_sprite.ifPresent(
 						sprite -> sprite.reset(usedImage()));
+				level().markObjectFlags(this, getPos());
 			}
 		}
 	}
@@ -195,6 +196,7 @@ public class Trap extends LevelObject {
 		secret = false;
 		lo_sprite.ifPresent(
 				sprite -> sprite.setVisible(true));
+		level().markObjectFlags(this, getPos());
 	}
 
 	@Override

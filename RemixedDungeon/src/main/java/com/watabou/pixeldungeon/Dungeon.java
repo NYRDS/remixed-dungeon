@@ -127,6 +127,7 @@ public class Dungeon {
 
     public static boolean nightMode;
 
+    // Current char passability map
     private static boolean[] passable;
 
     public static HeroClass heroClass;
@@ -751,17 +752,27 @@ public class Dungeon {
     }
 
     private static void markObjects(Char ch) {
+
+        boolean ignoreDanger = ignoreDanger(ch);
+
         for (val objectLayer: level.objects.values()) {
             for (val object : objectLayer.values()) {
                 int pos = object.getPos();
+
                 if(!level.cellValid(pos)) {
                     EventCollector.logException("Invalid object "+object.getEntityKind());
                     level.remove(object);
                     continue;
                 }
+
                 if (object.nonPassable(ch)) {
-                    passable[object.getPos()] = false;
+                    passable[pos] = false;
                 }
+
+                if(!ignoreDanger && object.avoid()) {
+                    passable[pos] = false;
+                }
+
             }
         }
     }
@@ -804,10 +815,10 @@ public class Dungeon {
             return chr == null ? to : Level.INVALID_CELL;
         }
 
-        if (ch.isFlying() || ch.hasBuff(Amok.class)) {
+        if (ignoreDanger(ch)) {
             BArray.or(pass, level.avoid, passable);
         } else {
-            System.arraycopy(pass, 0, passable, 0, level.getLength());
+            BArray.and_not(pass, level.avoid, passable);
         }
 
         markActorsAsUnpassable(ch, visible);
@@ -815,6 +826,10 @@ public class Dungeon {
         markObjects(ch);
 
         return PathFinder.getStep(from, to, passable);
+    }
+
+    public static boolean ignoreDanger(@NotNull Char ch) {
+        return ch.isFlying() || ch.hasBuff(Amok.class);
     }
 
 
@@ -834,7 +849,7 @@ public class Dungeon {
         if (ch.isFlying() || ch.hasBuff(Amok.class)) {
             BArray.or(pass, level.avoid, passable);
         } else {
-            System.arraycopy(pass, 0, passable, 0, level.getLength());
+            BArray.and_not(pass, level.avoid, passable);
         }
 
         markActorsAsUnpassableIgnoreFov();

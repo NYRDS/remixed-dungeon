@@ -258,6 +258,8 @@ public abstract class Level implements Bundlable {
 		}
 		if(lo.avoid()){
 			avoid[pos] = true;
+		}	else {
+			avoid[pos] = false;
 		}
 	}
 
@@ -1138,6 +1140,11 @@ public abstract class Level implements Bundlable {
 			while((obj=getTopLevelObject(cell))!=null) {
 				remove(obj);
 			}
+		}
+
+		val lo = getTopLevelObject(cell);
+		if (lo!=null) {
+			markObjectFlags(lo, cell);
 		}
 	}
 
