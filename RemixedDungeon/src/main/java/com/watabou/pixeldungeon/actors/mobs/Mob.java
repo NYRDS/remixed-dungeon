@@ -483,7 +483,7 @@ public abstract class Mob extends Char {
 
 		if (level().cellValid(spawnPos)) {
 			new_mob.setPos(spawnPos);
-			Mob.makePet(this, parent.getId());
+			Mob.makePet(new_mob, parent.getId());
 			Actor.addDelayed(new Pushing(new_mob, parent.getPos(), new_mob.getPos()), -1);
 			level().spawnMob(new_mob);
 			level().press(spawnPos, new_mob);
