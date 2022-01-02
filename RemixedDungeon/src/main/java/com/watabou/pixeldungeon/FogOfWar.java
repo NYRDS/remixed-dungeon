@@ -80,28 +80,27 @@ public class FogOfWar extends Image {
 		x = y = -size / 2;
 	}
 	
-	public void updateVisibility( boolean[] visible, boolean[] visited, boolean[] mapped ) {
+	public void updateVisibility( boolean[] visible, boolean[] visited, boolean[] mapped, boolean firstRowHack) {
 		
 		if (pixels == null) {
 			pixels = new int[width2 * height2];
 			Arrays.fill( pixels, INVISIBLE );
 		}
 
-
-		for (int i=0; i < 1; i++) {
-			int pos = (mWidth) * i;
+		if(firstRowHack) {
+			int pos = 0;
 			for (int j=1; j < mWidth; j++) {
 				pos++;
 				int c = INVISIBLE;
 
-				if (visible[pos + mWidth]) {
+				if (visible[pos + pWidth]) {
 					c = VISIBLE;
-				} else if (visited[pos +mWidth]) {
+				} else if (visited[pos + pWidth]) {
 					c = VISITED;
-				} else if (mapped[pos + mWidth]) {
+				} else if (mapped[pos + pWidth]) {
 					c = MAPPED;
 				}
-				pixels[i * width2 + j] = c;
+				pixels[j] = c;
 			}
 		}
 

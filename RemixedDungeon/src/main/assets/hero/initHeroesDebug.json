@@ -40,7 +40,7 @@
       },
 
       {
-        "kind": "ScrollOfTeleportation",
+        "kind": "BlackSkull",
         "quantity": 1000,
         "identified": true
       },

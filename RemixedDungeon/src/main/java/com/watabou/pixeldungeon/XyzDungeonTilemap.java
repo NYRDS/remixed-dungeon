@@ -83,7 +83,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     public boolean mayPeek(int cell) {
-        return level.passable[cell] && level.map[cell] != Terrain.DOOR && level.map[cell] != Terrain.LOCKED_DOOR;
+        return level.passable[cell] || level.map[cell] == Terrain.DOOR || level.map[cell] == Terrain.LOCKED_DOOR;
     }
 
     public void makeIsometricMap() {
@@ -614,14 +614,14 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
         //System.arraycopy(level.mapped, 0, mMapped, 0, mMapped.length);
 
-        for (int i = level.getWidth(); i < level.getLength() - level.getWidth(); i++) {
+        for (int i = mWidth; i < level.getLength() - mWidth; i++) {
             if (mVisible[i] && isWallCell(i) ) {
-                mVisible[i - level.getWidth()] = true;
+                mVisible[i - mWidth] = true;
             }
         }
         BArray.or(mVisible, level.mapped, mMapped);
 
-        fog.updateVisibility(mVisible, level.visited, mMapped);
+        fog.updateVisibility(mVisible, level.visited, mMapped, true);
     }
 
     class XyzRoofTileMap extends DungeonTilemap {
