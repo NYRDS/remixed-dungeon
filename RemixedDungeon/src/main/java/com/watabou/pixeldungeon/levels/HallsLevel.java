@@ -51,7 +51,12 @@ public class HallsLevel extends RegularLevel {
 		addItemToSpawn( new Torch() );
 		super.create();
 	}
-	
+
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_HALLS_XYZ;
+	}
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_HALLS;
@@ -177,7 +182,7 @@ public class HallsLevel extends RegularLevel {
 		@Override
 		public void update() {
 			
-			if (setVisible(Dungeon.visible[pos])) {
+			if (setVisible(Dungeon.isCellVisible(pos))) {
 				
 				super.update();
 				
@@ -230,5 +235,10 @@ public class HallsLevel extends RegularLevel {
 			float p = left / lifespan;
 			am = p > 0.8f ? (1 - p) * 5 : 1;
 		}
+	}
+
+	@Override
+	public int objectsKind() {
+		return 4;
 	}
 }

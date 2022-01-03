@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.items.chaos.ChaosCommon;
 import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.Dungeon;
@@ -22,6 +23,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
+
+import static com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.PEDESTAL;
 
 public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
@@ -64,7 +67,9 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 		kind = (ctr++) % 2;
 
 		hp(ht(depth * 4 + 1));
+
 		baseDefenseSkill = depth * 2 + 1;
+		baseAttackSkill = 35;
 		exp = depth + 1;
 		maxLvl = depth + 2;
 		dr = exp/3;
@@ -95,9 +100,8 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	public int attackSkill(Char target) {
 		if (kind < 2) {
 			return 1000;
-		} else {
-			return 35;
 		}
+		return super.attackSkill(target);
 	}
 
 	@Override
@@ -117,11 +121,17 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		int pos = getPos();
 
 		Level level = level();
-		if (level.map[pos] == Terrain.PEDESTAL) {
+
+
+		LevelObject obj = level.getTopLevelObject(pos);
+
+		if (obj != null && obj.getEntityKind().equals(PEDESTAL)) {
+			level.remove(obj);
+
 			level.set(pos, Terrain.EMBERS);
 			int x, y;
 			x = level.cellX(pos);

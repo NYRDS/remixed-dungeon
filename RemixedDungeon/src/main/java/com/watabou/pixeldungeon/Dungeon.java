@@ -17,16 +17,17 @@ t * Pixel Dungeon
  */
 package com.watabou.pixeldungeon;
 
+import com.google.firebase.perf.metrics.AddTrace;
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.IceCavesLevel;
 import com.nyrds.pixeldungeon.levels.NecroLevel;
-import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
@@ -39,10 +40,12 @@ import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
+import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Rankings.gameOver;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -72,7 +75,6 @@ import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
-import com.watabou.utils.SparseArray;
 import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.Contract;
@@ -87,9 +89,9 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.GregorianCalendar;
 import java.util.HashSet;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import lombok.SneakyThrows;
+import lombok.val;
 import lombok.var;
 
 import static com.nyrds.platform.game.RemixedDungeon.MOVE_TIMEOUTS;
@@ -110,7 +112,6 @@ public class Dungeon {
     public static String levelId;
 
     public static  int depth;
-    private static final AtomicInteger loading = new AtomicInteger();
     private static long lastSaveTimestamp;
 
     public static  String  gameId;
@@ -126,9 +127,13 @@ public class Dungeon {
 
     public static boolean nightMode;
 
+    // Current char passability map
     private static boolean[] passable;
 
     public static HeroClass heroClass;
+
+    private static boolean isometricMode = false;
+    public static boolean isometricModeAllowed = false;
 
     public static void initSizeDependentStuff(int w, int h) {
         int size = w * h;
@@ -143,11 +148,16 @@ public class Dungeon {
     }
 
     public static void init() {
+        GameLoop.loadingOrSaving.incrementAndGet();
+
         SaveUtils.deleteLevels(heroClass);
 
         gameId = String.valueOf(SystemTime.now());
 
-        LuaEngine.reset();
+        if(!Scene.sceneMode.equals(Scene.LEVELS_TEST)) {
+            LuaEngine.reset();
+        }
+
         Treasury.reset();
 
         setChallenges(GamePreferences.challenges());
@@ -181,7 +191,7 @@ public class Dungeon {
 
         Room.shuffleTypes();
 
-        hero = new Hero(difficulty);
+        hero = new Hero(GameLoop.getDifficulty());
 
         Badges.reset();
 
@@ -191,6 +201,8 @@ public class Dungeon {
 
         realtime = GamePreferences.realtime();
         moveTimeoutIndex = GamePreferences.limitTimeoutIndex(GamePreferences.moveTimeout());
+
+        GameLoop.loadingOrSaving.decrementAndGet();
     }
 
     @Contract(pure = true)
@@ -208,8 +220,8 @@ public class Dungeon {
 
     @NotNull
     public static Level newLevel(@NotNull Position pos) {
-        try {
-            loading.incrementAndGet();
+
+            GameLoop.loadingOrSaving.incrementAndGet();
             updateStatistics();
 
             if (!DungeonGenerator.isLevelExist(pos.levelId)) {
@@ -224,10 +236,8 @@ public class Dungeon {
 
             Statistics.qualifiedForNoKilling = !DungeonGenerator.getLevelProperty(level.levelId, "isSafe", false);
 
+            GameLoop.loadingOrSaving.decrementAndGet();
             return level;
-        } finally {
-            loading.decrementAndGet();
-        }
     }
 
     public static void resetLevel() {
@@ -269,11 +279,21 @@ public class Dungeon {
     }
 
     public static boolean bossLevel() {
-        return Dungeon.level != null && Dungeon.level.isBossLevel();
+        final Level level = Dungeon.level;
+
+        return level != null && level.isBossLevel();
     }
 
     public static void switchLevel(@NotNull final Level level, int pos, Collection<Mob> followers) {
         EventCollector.setSessionData("level",level.levelId);
+
+        isometricModeAllowed = level.isPlainTile(1); //TODO check entire level
+
+        if(isometricModeAllowed) {
+            setIsometricMode(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false));
+        } else {
+            setIsometricMode(false);
+        }
 
         nightMode =new GregorianCalendar().get(Calendar.HOUR_OF_DAY) < 7;
 
@@ -452,6 +472,7 @@ public class Dungeon {
         output.close();
     }
 
+    @AddTrace(name = "Dungeon.saveAllImpl")
     private static void saveAllImpl() {
         float MBytesAvailable = Util.getAvailableInternalMemorySize() / 1024f / 1024f;
 
@@ -479,19 +500,18 @@ public class Dungeon {
                 Library.saveLibrary();
 
                 SaveUtils.copySaveToSlot(SaveUtils.getAutoSave(), heroClass);
+
+                GamesInProgress.set(hero.getHeroClass(), depth, hero.lvl());
             } catch (IOException e) {
                 Game.toast(StringsManager.getVar(R.string.Dungeon_saveIoError) + "\n" + e.getLocalizedMessage());
                 EventCollector.logException(new Exception("cannot write save", e));
             }
-
-            GamesInProgress.set(hero.getHeroClass(), depth, hero.lvl());
-
         } else if (WndResurrect.instance != null) {
 
             WndResurrect.instance.hide();
             Hero.reallyDie(hero, WndResurrect.causeOfDeath);
         } else {
-            EventCollector.logException(new Exception("spurious save"));
+            EventCollector.logException(new Exception(Utils.format("spurious save: %s %s", String.valueOf(level), String.valueOf(hero))));
         }
     }
 
@@ -508,13 +528,14 @@ public class Dungeon {
         if (!force && SystemTime.now() - lastSaveTimestamp < 1000) {
             return;
         }
+        GameLoop.loadingOrSaving.incrementAndGet();
+        saveAllImpl();
+        GameLoop.loadingOrSaving.decrementAndGet();
 
         lastSaveTimestamp = SystemTime.now();
-
-        saveAllImpl();
     }
 
-
+    @AddTrace(name = "Dungeon.loadGame")
     public static void loadGame() throws IOException {
         loadGame(SaveUtils.gameFile(heroClass), true);
     }
@@ -608,12 +629,12 @@ public class Dungeon {
 
     private static void loadGame(String fileName, boolean fullLoad) throws IOException {
         try {
-            loading.incrementAndGet();
+            GameLoop.loadingOrSaving.incrementAndGet();
             Bundle bundle = gameBundle(fileName);
             loadGameFromBundle(bundle, fullLoad);
         }
         finally {
-            loading.decrementAndGet();
+            GameLoop.loadingOrSaving.decrementAndGet();
         }
     }
 
@@ -621,7 +642,7 @@ public class Dungeon {
     @SneakyThrows
     public static Level loadLevel(Position next) {
         try {
-            loading.incrementAndGet();
+            GameLoop.loadingOrSaving.incrementAndGet();
             levelId = next.levelId;
 
             if(Dungeon.level!=null) {
@@ -666,7 +687,7 @@ public class Dungeon {
                 return level;
             }
         } finally {
-            loading.decrementAndGet();
+            GameLoop.loadingOrSaving.decrementAndGet();
         }
     }
 
@@ -731,19 +752,27 @@ public class Dungeon {
     }
 
     private static void markObjects(Char ch) {
-        for (int i = 0; i < level.objects.size(); i++) {
-            SparseArray<LevelObject> objectLayer = level.objects.valueAt(i);
-            for (int j = 0; j < objectLayer.size(); j++) {
-                LevelObject object = objectLayer.valueAt(j);
+
+        boolean ignoreDanger = ignoreDanger(ch);
+
+        for (val objectLayer: level.objects.values()) {
+            for (val object : objectLayer.values()) {
                 int pos = object.getPos();
+
                 if(!level.cellValid(pos)) {
-                    EventCollector.logException("Invalid object "+object.getEntityKind() + "pos in layer "+ i);
+                    EventCollector.logException("Invalid object "+object.getEntityKind());
                     level.remove(object);
                     continue;
                 }
+
                 if (object.nonPassable(ch)) {
-                    passable[object.getPos()] = false;
+                    passable[pos] = false;
                 }
+
+                if(!ignoreDanger && object.avoid()) {
+                    passable[pos] = false;
+                }
+
             }
         }
     }
@@ -786,10 +815,10 @@ public class Dungeon {
             return chr == null ? to : Level.INVALID_CELL;
         }
 
-        if (ch.isFlying() || ch.hasBuff(Amok.class)) {
+        if (ignoreDanger(ch)) {
             BArray.or(pass, level.avoid, passable);
         } else {
-            System.arraycopy(pass, 0, passable, 0, level.getLength());
+            BArray.and_not(pass, level.avoid, passable);
         }
 
         markActorsAsUnpassable(ch, visible);
@@ -797,6 +826,10 @@ public class Dungeon {
         markObjects(ch);
 
         return PathFinder.getStep(from, to, passable);
+    }
+
+    public static boolean ignoreDanger(@NotNull Char ch) {
+        return ch.isFlying() || ch.hasBuff(Amok.class);
     }
 
 
@@ -816,7 +849,7 @@ public class Dungeon {
         if (ch.isFlying() || ch.hasBuff(Amok.class)) {
             BArray.or(pass, level.avoid, passable);
         } else {
-            System.arraycopy(pass, 0, passable, 0, level.getLength());
+            BArray.and_not(pass, level.avoid, passable);
         }
 
         markActorsAsUnpassableIgnoreFov();
@@ -849,15 +882,9 @@ public class Dungeon {
         return new Position(hero.levelId, hero.getPos());
     }
 
-    private static int difficulty;
-
-    public static void setDifficulty(int _difficulty) {
-        difficulty = _difficulty;
-        GamePreferences.setDifficulty(difficulty);
-    }
 
     public static boolean isLoading() {
-        return hero==null || level == null || loading.get()>0;
+        return hero==null || level == null || GameLoop.loadingOrSaving.get()>0;
     }
 
     public static boolean realtime() {
@@ -887,9 +914,16 @@ public class Dungeon {
 
     @LuaInterface
     public static boolean isCellVisible(int cell) {
+        if(level == null) {
+            return false;
+        }
+
+        if(!level.cellValid(cell)) {
+            EventCollector.logException(Utils.format("visibility check on %d", cell));
+            return false;
+        }
         return visible[cell];
     }
-
 
     public static void onHeroLeaveLevel() {
         if(level==null) {
@@ -897,4 +931,12 @@ public class Dungeon {
         }
     }
 
+    public static void setIsometricMode(boolean isometricMode) {
+        EventCollector.setSessionData("isometricMode", isometricMode);
+        Dungeon.isometricMode = isometricMode;
+    }
+
+    public static boolean isIsometricMode() {
+        return isometricMode;
+    }
 }

@@ -45,6 +45,7 @@ public class Goo extends Boss {
 		hp(ht(68));
 		exp = 9;
 		baseDefenseSkill = 12;
+		baseAttackSkill = 11;
 		dr = 2;
 		spriteClass = GooSprite.class;
 
@@ -134,7 +135,7 @@ public class Goo extends Boss {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		super.die( cause );
 
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_1);

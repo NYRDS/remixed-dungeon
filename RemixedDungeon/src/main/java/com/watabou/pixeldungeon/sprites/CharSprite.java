@@ -47,6 +47,7 @@ import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.effects.SystemFloatingText;
 import com.watabou.pixeldungeon.effects.TorchHalo;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
@@ -82,7 +83,9 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         origin.set(width / 2, height - DungeonTilemap.SIZE / 2);
         angularSpeed = Random.Int(2) == 0 ? -720 : 720;
 
-        getParent().add(new FallTweener(this));
+        if (hasParent()) {
+            getParent().add(new FallTweener(this));
+        }
         die();
     }
 
@@ -123,6 +126,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public CharSprite() {
         super();
         listener = this;
+        setIsometricShift(true);
     }
 
     public void link(Char owner) {
@@ -147,16 +151,17 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         final int csize = DungeonTilemap.SIZE;
         PointF point = point();
         point.x = (point.x + width * 0.5f) / csize - 0.5f;
-        point.y = (point.y + height - visualOffsetY()) / csize - 1.0f;
+        point.y = (point.y + height ) / csize - 1.0f;
         return point;
     }
 
     public PointF worldToCamera(int cell) {
         final int csize = DungeonTilemap.SIZE;
+        final Level level = Dungeon.level;
 
         return new PointF(
-                (Dungeon.level.cellX(cell) + 0.5f) * csize - width * 0.5f,
-                (Dungeon.level.cellY(cell) + 1.0f) * csize - height + visualOffsetY()
+                (level.cellX(cell) + 0.5f) * csize - width * 0.5f,
+                (level.cellY(cell) + 1.0f) * csize - height
         );
     }
 
@@ -197,18 +202,17 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 play(run);
             }
 
-            if (getParent() != null) {
-                motion = new PosTweener(this, worldToCamera(to), MOVE_INTERVAL);
-                motion.listener = this;
-                getParent().add(motion);
 
-                isMoving = true;
+            motion = new PosTweener(this, worldToCamera(to), MOVE_INTERVAL);
+            motion.listener = this;
+            GameScene.addToMobLayer(motion);
 
-                turnTo(from, to);
+            isMoving = true;
 
-                if (getVisible() && chr.level().water[from] && !chr.isFlying()) {
-                    GameScene.ripple(from);
-                }
+            turnTo(from, to);
+
+            if (getVisible() && chr.level().water[from] && !chr.isFlying()) {
+                GameScene.ripple(from);
             }
         });
     }
@@ -240,7 +244,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     @LuaInterface
     public void dummyAttack(int cell) {
         ch.ifPresent(chr -> {
-            if (Dungeon.visible[chr.getPos()]) {
+            if (Dungeon.isCellVisible(chr.getPos())) {
                 attack(cell, () -> ch.ifPresent(Actor::next));
             }
         });
@@ -289,8 +293,10 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public void turnTo(int from, int to) {
-        int fx = from % Dungeon.level.getWidth();
-        int tx = to % Dungeon.level.getWidth();
+        final Level level = Dungeon.level;
+
+        int fx = from % level.getWidth();
+        int tx = to % level.getWidth();
         if (tx > fx) {
             flipHorizontal = false;
         } else if (tx < fx) {
@@ -367,7 +373,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                     float alpha = chr instanceof Hero ? INVISIBILITY_ALPHA : 0.0f;
 
                     if (hasParent()) {
-                        getParent().add(new AlphaTweener(this, alpha, 0.4f));
+                        GameScene.addToMobLayer( new AlphaTweener(this, alpha, 0.4f));
                     } else {
                         alpha(alpha);
                     }
@@ -619,7 +625,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 return;
             }
 
-            if (!Dungeon.visible[chr.getPos()]) {
+            if (!Dungeon.isCellVisible(chr.getPos())) {
                 onComplete(anim);
                 skipAnim[0] = true;
             }

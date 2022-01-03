@@ -38,6 +38,11 @@ public class SewerBossLevel extends BossLevel {
 		color2 = 0x59994a;
 	}
 
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_SEWERS_XYZ;
+	}
+
     @Override
 	public String tilesTex() {
 		return Assets.TILES_SEWERS;

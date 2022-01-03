@@ -7,11 +7,12 @@ import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -23,13 +24,13 @@ import org.jetbrains.annotations.NotNull;
 public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider {
 
 	private static RewardedAd mCinemaRewardAd;
-	private static InterstitialPoint returnTo;
+	private static InterstitialPoint returnTo = new Utils.SpuriousReturn();;
 
 	private static boolean rewardEarned = false;
 
 
 	public GoogleRewardVideoAds() {
-		Game.instance().runOnUiThread(this::loadNextVideo);
+		GameLoop.runOnMainThread(this::loadNextVideo);
 	}
 
 
@@ -47,20 +48,21 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 					public void onAdDismissedFullScreenContent() {
 						mCinemaRewardAd = null;
 						GLog.debug("reward state "+ rewardEarned);
-						Game.instance().runOnUiThread(GoogleRewardVideoAds.this::loadNextVideo);
+						GameLoop.runOnMainThread(GoogleRewardVideoAds.this::loadNextVideo);
 						returnTo.returnToWork(rewardEarned);
 						rewardEarned = false;
 					}
 				};
 
         RewardedAd.load(Game.instance(),
-                StringsManager.getVar(R.string.cinemaRewardAdUnitId),
+				ModdingMode.getRewardedVideoId(),
 				AdMob.makeAdRequest(),
 				new RewardedAdLoadCallback() {
 					@Override
 					public void onAdLoaded(@NotNull RewardedAd ad) {
 						mCinemaRewardAd = ad;
 						mCinemaRewardAd.setFullScreenContentCallback(fullScreenContentCallback);
+						AdsUtilsCommon.rewardVideoLoaded(GoogleRewardVideoAds.this);
 					}
 
 					@Override

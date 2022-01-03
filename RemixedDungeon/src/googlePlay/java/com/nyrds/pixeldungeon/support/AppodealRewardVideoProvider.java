@@ -2,17 +2,18 @@ package com.nyrds.pixeldungeon.support;
 
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.RewardedVideoCallbacks;
-import com.nyrds.platform.game.Game;
-import com.watabou.noosa.InterstitialPoint;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.watabou.noosa.InterstitialPoint;
+import com.watabou.pixeldungeon.utils.Utils;
 
 class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider {
 
-    private static InterstitialPoint returnTo;
+    private static InterstitialPoint returnTo = new Utils.SpuriousReturn();
 
     public AppodealRewardVideoProvider() {
 
-        Game.instance().runOnUiThread(() -> {
+        GameLoop.runOnMainThread(() -> {
             AppodealAdapter.init();
 
             Appodeal.cache(RemixedDungeon.instance(), Appodeal.REWARDED_VIDEO);
@@ -22,6 +23,7 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
                 @Override
                 public void onRewardedVideoLoaded(boolean b) {
+                    AdsUtilsCommon.rewardVideoLoaded(AppodealRewardVideoProvider.this);
                 }
 
                 @Override

@@ -33,7 +33,7 @@ public class Smoke extends Emitter {
 
     @Override
     public void update() {
-        if (setVisible(Dungeon.visible[pos])) {
+        if (setVisible(Dungeon.isCellVisible(pos))) {
             super.update();
         }
     }

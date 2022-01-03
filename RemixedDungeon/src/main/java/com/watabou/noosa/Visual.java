@@ -81,7 +81,7 @@ public class Visual extends Gizmo implements IPlaceable{
 	
 	protected void updateMatrix() {
 		Matrix.setIdentity( matrix );
-		Matrix.translate( matrix, x, y );
+		Matrix.translate( matrix, x, y + visualOffsetY() );
 		Matrix.translate( matrix, origin.x, origin.y );
 		if (angle != 0) {
 			Matrix.rotate( matrix, angle );
@@ -108,16 +108,15 @@ public class Visual extends Gizmo implements IPlaceable{
 		return p;
 	}
 	
+//	public PointF center() {
+//		return new PointF( x + width / 2 + visualOffsetX(), y + height / 2 + visualOffsetY());
+//	}
+
+
 	public PointF center() {
-		return new PointF( x + width / 2, y + height / 2 );
+		return new PointF( x + width / 2, y + height / 2);
 	}
-	
-	public PointF center( PointF p ) {
-		x = p.x - width / 2;
-		y = p.y - height / 2;
-		return p;
-	}
-	
+
 	public float width() {
 		return width * scale.x;
 	}
@@ -294,7 +293,13 @@ public class Visual extends Gizmo implements IPlaceable{
 		return 0;
 	}
 
+
 	public float visualOffsetY() {
+		if(isometricShift) {
+			return isometricModeShift;
+		}
+
 		return 0;
 	}
+
 }

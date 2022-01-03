@@ -87,12 +87,15 @@
   <string name="ChaosCrystal_BowFused">水晶吸收了你的十字弩，并且变成了十字弩的形态</string>
   <string name="ChaosCrystal_StaffFused">水晶吸收了你的法杖，并且变成了法杖的形态</string>
   <string name="CorpseDustBuff_Name">嗜血</string>
+  <string name="CorpseDustBuff_Info">你充满了嗜血欲望，攻击增加，并使你变得十分危险。</string>
   <string name="DriedRoseBuff_Name">迷人</string>
   <string name="DriedRoseBuff_Info">这朵玫瑰看起来很迷人。</string>
   <string name="DriedRoseCursedBuff_Name">帅气</string>
   <string name="DriedRoseCursedBuff_Info">玫瑰看起来很漂亮，但不太迷人。</string>
   <string name="RatSkullBuff_Name">菁英老鼠</string>
+  <string name="RatSkullBuff_Info">下水道里最可怕的老鼠头盖骨所散发出的恶臭把所有的老鼠都吓坏了。</string>
   <string name="RatKingCrownBuff_Name">鼠王殿下</string>
+  <string name="RatKingCrownBuff_Info">你现在是老鼠之王了。每只老鼠都会臣服于你。</string>
   <string name="RatKingCrown_Name">鼠王之冠</string>
   <string name="RatKingCrown_Info">鼠王的金冠，统治所有老鼠的权力象征</string>
   <string name="BishopNPC_Name">主教</string>
@@ -108,6 +111,7 @@
   <string name="Bishop_no_money">你钱不够。</string>
   <string name="Bishop_bye">我的孩子，我会为你祈祷。</string>
   <string name="BlessedBuff_Name">祝福</string>
+  <string name="BlessedBuff_Info">祝愿那些被祝福的人们精准度和闪避增加！</string>
   <string name="deco_candle_name">蜡烛</string>
   <string name="deco_candle_desc">大蜡烛</string>
   <string name="Possess_Name">灵魂控制</string>
@@ -254,6 +258,7 @@
   <string name="DevourBuff_Name">吞噬</string>
   <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">石中血</string>
+  <string name="StoneBloodBuff_Info">你的血液能够和墙壁融合在一起，使你能够穿过墙壁，但这要付出一些代价</string>
   <string name="Welcome_Ok">棒极了！</string>
   <string name="Welcome_Title">欢迎！</string>
   <string name="BlackCat_Name">黑猫</string>
@@ -547,19 +552,23 @@
   <string name="AmokBuff_Name">狂乱</string>
   <string name="BarkskinBuff_Name">树肤</string>
   <string name="BleedingBuff_Name">流血</string>
+  <string name="BleedingBuff_Info">你的伤口血流不止</string>
   <string name="Bleeding_Death">你失血过多身亡…</string>
   <string name="BlindnessBuff_Name">目盲</string>
+  <string name="BlindnessBuff_Info">你什么都看不见了，只能听见附近的声音</string>
   <string name="BurningBuff_Name">燃烧</string>
   <string name="Burning_Burns">%s被烧掉了！</string>
   <string name="Burning_Death">你被烧成灰了……</string>
   <string name="CharmBuff_Name">魅惑</string>
   <string name="ComboBuff_Name">连击</string>
+  <string name="ComboBuff_Info">你的下一次攻击将是一次二连击</string>
   <string name="Combo_Combo">%d连击！</string>
   <string name="CrippleBuff_Name">残疾</string>
   <string name="FrostBuff_Name">冰冻</string>
   <string name="Frost_Shatter">寒气使%s瓶碎裂了！</string>
   <string name="FuryBuff_Name">暴怒</string>
   <string name="GasImmuneBuff_Name">气体免疫</string>
+  <string name="GasImmuneBuff_Info">对气体免疫</string>
   <string name="Hunger_Death">你饿死了……</string>
   <string name="HungerBuff_Name1">饥饿</string>
   <string name="HungerBuff_Info1">你饿了！</string>
@@ -580,6 +589,7 @@
   <string name="ShadowsBuff_Name">暗影融合</string>
   <string name="SlowBuff_Name">缓速</string>
   <string name="SleepBuff_Name">昏睡</string>
+  <string name="SleepBuff_Info">你陷入沉睡</string>
   <string name="SnipersMarkBuff_Name">狙击标记</string>
   <string name="SpeedBuff_Name">速度</string>
   <string name="TerrorBuff_Name">惊恐</string>
@@ -2542,14 +2552,6 @@
   <string name="ShieldStrTemplate">盾牌的佩戴者应至少具有 %1$d 力量才能正常使用它。</string>
   <string name="town_deco_flowerinthepot_name">花盆</string>
   <string name="town_deco_flowerinthepot_desc">当地特色装饰花</string>
-  <string name="Welcome_Text_29_4">
-    remix.29.4\n
-    ——新增：\n
-    —双手系统！\n
-    ——修改：\n
-    —常用武器！\n
-    ——修复错误\n
-    </string>
   <string name="Mods_Disclaimer">
         MOD是由玩家为玩家创建的。\n
         MOD有时会以不可预测或怪异的方式改变游戏规则，请注意说明！\n
@@ -2606,6 +2608,7 @@ remix.29.5\n
   <string name="CharAction_Scare">恐惧</string>
   <string name="CharAction_Hit">击打</string>
   <string name="StunBuff_Name">眩晕</string>
+  <string name="StunBuff_Info">你被眩晕了！</string>
   <string name="Char_StaStunned">眩晕</string>
   <string name="Mob_ReadyForOrder">%s已准备执行你的命令</string>
   <string name="Mob_CantDoIt">我做不到。我的手太小了。</string>

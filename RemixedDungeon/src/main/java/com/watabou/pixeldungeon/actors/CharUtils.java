@@ -4,6 +4,8 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.cellCondition;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.Ascend;
@@ -60,6 +62,11 @@ import lombok.var;
 
 public class CharUtils {
     static public boolean isVisible(@Nullable Char ch) {
+
+        if(Dungeon.isLoading()) {
+            return false;
+        }
+
         if(ch==null) {
             return false;
         }
@@ -69,7 +76,7 @@ public class CharUtils {
             return false;
         }
 
-        return Dungeon.visible[ch.getPos()];
+        return Dungeon.isCellVisible(ch.getPos());
     }
 
     public static void checkDeathReport(Char attacker, @NotNull Char victim, String desc) {
@@ -83,7 +90,7 @@ public class CharUtils {
     public static void lightningProc(@NotNull Char caster, int targetCell, int damage) {
 
         int [] points = {caster.getPos(), targetCell};
-        caster.getSprite().getParent().add( new Lightning(points) );
+        GameScene.addToMobLayer( new Lightning(points) );
 
         Char enemy = Actor.findChar(targetCell);
 
@@ -187,7 +194,9 @@ public class CharUtils {
 
     @NotNull
     public static  CharAction actionForCell(Char actor, int cell, @NotNull Level level) {
-        if (level.map[cell] == Terrain.ALCHEMY && cell != actor.getPos()) {
+        final LevelObject topLevelObject = level.getTopLevelObject(cell);
+
+        if (cell != actor.getPos() && topLevelObject != null && topLevelObject.getEntityKind().equals(LevelObjectsFactory.POT) ){
             return new Cook(cell);
         }
 
@@ -307,9 +316,11 @@ public class CharUtils {
     }
 
     public static void blinkAway(@NotNull Char chr, cellCondition condition) {
-        int tgt = chr.level().getNearestTerrain(chr.getPos(), condition);
+        final Level level = chr.level();
 
-        if (chr.level().cellValid(tgt)) {
+        int tgt = level.getNearestTerrain(chr.getPos(), condition);
+
+        if (level.cellValid(tgt)) {
             final Char ch = chr;
             chr.fx(chr.getPos(), () -> WandOfBlink.appear(ch, tgt));
         }

@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
@@ -30,7 +31,7 @@ public class EventCollector {
 	}
 
 	static public void init() {
-	    if(analyticsUsable()) {
+	    if(analyticsUsable() && !Util.isDebug()) {
             mFirebaseAnalytics = FirebaseAnalytics.getInstance(RemixedDungeonApp.getContext());
             mFirebaseAnalytics.setAnalyticsCollectionEnabled(true);
             mDisabled = false;
@@ -120,7 +121,7 @@ public class EventCollector {
 
 	static public void logScene(final String scene) {
 		if (!mDisabled) {
-			Game.instance().runOnUiThread(() -> mFirebaseAnalytics.setCurrentScreen(Game.instance(), scene, null));
+			GameLoop.runOnMainThread(() -> mFirebaseAnalytics.setCurrentScreen(Game.instance(), scene, null));
 		}
 	}
 
@@ -161,6 +162,12 @@ public class EventCollector {
 		if(!mDisabled) {
 			FirebaseCrashlytics.getInstance().log(desc);
 			logException(e, 0);
+		}
+	}
+
+	public static void setSessionData(String key, boolean value) {
+		if(!mDisabled) {
+			FirebaseCrashlytics.getInstance().setCustomKey(key, value);
 		}
 	}
 

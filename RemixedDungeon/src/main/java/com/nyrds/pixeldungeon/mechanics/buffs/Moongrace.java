@@ -32,7 +32,7 @@ public class Moongrace extends Buff {
         } else {
             target.accumulateSkillPoints( Math.max( target.getSkillPointsMax() / 10, 1) );
 
-            if (Dungeon.visible[pos]) {
+            if (Dungeon.isCellVisible(pos)) {
                 CellEmitter.get(pos).start(ShaftParticle.FACTORY, 0.2f, 3);
             }
         }

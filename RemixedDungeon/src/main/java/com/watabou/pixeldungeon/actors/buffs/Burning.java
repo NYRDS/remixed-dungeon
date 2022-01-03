@@ -28,9 +28,10 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.effects.Effects;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -50,7 +51,7 @@ public class Burning extends Buff implements Doom {
 			return srcItem.burn(target.getPos());
 		}
 		public void carrierFx(){
-			Heap.burnFX( target.getPos() );
+			Effects.burnFX( target.getPos() );
 		}
 		@Override
 		public String actionText(Item srcItem) {
@@ -73,8 +74,10 @@ public class Burning extends Buff implements Doom {
 		} else {
 			detach();
 		}
-		
-		if (Dungeon.level.flammable[target.getPos()]) {
+
+		final Level level = Dungeon.level;
+
+		if (level.flammable[target.getPos()]) {
 			GameScene.add( Blob.seed( target.getPos(), 4, Fire.class ) );
 		}
 		
@@ -83,7 +86,7 @@ public class Burning extends Buff implements Doom {
 		
 		if (left <= 0 ||
 			Random.Float() > (2 + (float)target.hp() / target.ht()) / 3 ||
-			(Dungeon.level.water[target.getPos()] && !target.isFlying())) {
+			(level.water[target.getPos()] && !target.isFlying())) {
 			
 			detach();
 		}

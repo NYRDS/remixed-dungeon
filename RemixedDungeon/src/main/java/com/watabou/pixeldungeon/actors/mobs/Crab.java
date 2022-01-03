@@ -21,6 +21,8 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Crab extends Mob {
 
 	{
@@ -39,7 +41,7 @@ public class Crab extends Mob {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		Ghost.Quest.process( getPos() );
 		super.die( cause );
 	}

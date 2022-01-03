@@ -161,7 +161,8 @@ public class Font extends TextureFilm {
 			lineTop = lineBottom+1;
 		}
 		
-		lineHeight = baseLine = height( frames.get( chars.charAt( 0 ) ) );
+		//lineHeight = baseLine = height( frames.get( chars.charAt( 0 ) ) );
+		lineHeight = baseLine = height( frames.values().iterator().next());
 	}
 
 	public static Font colorMarked(SmartTexture tex, int color, String chars ) {

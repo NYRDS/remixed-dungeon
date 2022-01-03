@@ -34,7 +34,6 @@ import com.nyrds.pixeldungeon.mechanics.LevelHelpers;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
-import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
@@ -57,13 +56,11 @@ import com.watabou.pixeldungeon.actors.buffs.Blessed;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
-import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Light;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Speed;
@@ -139,6 +136,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@Getter
 	@NotNull
 	protected LuaScript script = new LuaScript(DEFAULT_MOB_SCRIPT, this);
+	protected int baseStr;
 
 
 	@Packable(defaultValue = "-1")//Level.INVALID_CELL
@@ -209,12 +207,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public CharAction curAction = null;
 
 	private int lvl = Scrambler.scramble(1);
+	private int magicLvl = Scrambler.scramble(1);
 
 	public Char() {
 	}
 
 	public boolean canSpawnAt(Level level, int cell) {
-		return walkingType.canSpawnAt(level, cell) && level.getTopLevelObject(cell) == null && level.map[cell] != Terrain.ENTRANCE;
+		boolean ret = walkingType.canSpawnAt(level, cell)
+				&& level.map[cell] != Terrain.ENTRANCE;
+		GLog.debug("%s %d %b", getEntityKind(), cell, ret);
+		return ret;
 	}
 
 	public int respawnCell(Level level) {
@@ -399,10 +401,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 			int dmg = damageRoll();
 
-			if (inFury()) {
-				dmg *= 1.5f;
-			}
-
 			int effectiveDamage = Math.max(dmg, 0);
 
 			effectiveDamage = attackProc(enemy, effectiveDamage);
@@ -551,12 +549,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr();
 	}
 
-	protected boolean inFury() {
-		return (hasBuff(Fury.class) || hasBuff(RageBuff.class));
-	}
 
 	public boolean actMeleeAttack(Char enemy) {
-
 		if (canAttack(enemy)) {
 			spend(attackDelay());
 			getSprite().attack(enemy.getPos());
@@ -602,7 +596,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		if (!(enemy instanceof NPC)) {
 			for (Item item : getBelongings()) {
 				if (item.isEquipped(this)) {
-					item.ownerDoesDamage(damage);
+					item.ownerDoesDamage(dmg[0]);
 				}
 			}
 		}
@@ -610,11 +604,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		int d = level().distance(getPos(), enemy.getPos());
 
 		if (d <= getActiveWeapon().range() || rangedWeapon.valid()) {
-			getActiveWeapon().attackProc(this, enemy, damage);
+			getActiveWeapon().attackProc(this, enemy, dmg[0]);
 		}
 
 		if (d <= getSecondaryWeapon().range()) {
-			getSecondaryWeapon().attackProc(this, enemy, damage);
+			getSecondaryWeapon().attackProc(this, enemy, dmg[0]);
 		}
 
 		return dmg[0];
@@ -710,18 +704,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return;
 		}
 
-		Buff.detach(this, Frost.class);
-
-		dmg = resist(dmg, src);
-
-		if (hasBuff(Paralysis.class)) {
-			if (Random.Int(dmg) >= Random.Int(hp())) {
-				Buff.detach(this, Paralysis.class);
-				if (CharUtils.isVisible(this)) {
-					GLog.i(StringsManager.getVar(R.string.Char_OutParalysis), getName_objective());
-				}
+		if (getSubClass() == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
+			if (!hasBuff(Fury.class)) {
+				Buff.affect(this, Fury.class);
 			}
 		}
+
+		final int[] dmg_ = {dmg};
+		forEachBuff(b -> dmg_[0] = b.damage( dmg_[0], src));
+		dmg = dmg_[0];
+
+		dmg = resist(dmg, src);
 
 		if (dmg <= 0) {
 			return;
@@ -761,7 +754,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		CharsList.destroy(getId());
 	}
 
-	public void die(NamedEntityKind src) {
+	public void die(@NotNull NamedEntityKind src) {
 		if (level().pit[getPos()]) {
 			getSprite().fall();
 		} else {
@@ -995,7 +988,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 
 		if (this != Dungeon.hero) {
-			getSprite().setVisible(Dungeon.visible[cell] && invisible >= 0);
+			getSprite().setVisible(Dungeon.isCellVisible(cell) && invisible >= 0);
 		}
 	}
 
@@ -1036,10 +1029,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public void onAttackComplete() {
 		Char enemy = getEnemy();
-		getItemFromSlot(Belongings.Slot.WEAPON).preAttack(enemy);
 
-		if (attack(enemy)) {
-			getItemFromSlot(Belongings.Slot.WEAPON).postAttack(enemy);
+		if(enemy.valid()) {
+			getItemFromSlot(Belongings.Slot.WEAPON).preAttack(enemy);
+
+			if (attack(enemy)) {
+				getItemFromSlot(Belongings.Slot.WEAPON).postAttack(enemy);
+			}
 		}
 
 		curAction = null;
@@ -1052,7 +1048,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public void playAttack(int cell) {
 		final boolean realtime = Dungeon.realtime();
 
-		if(Dungeon.visible[cell] && !realtime) {
+		if(Dungeon.isCellVisible(cell) && !realtime) {
 			getSprite().dummyAttack(cell);
 		} else {
 			next();
@@ -1069,7 +1065,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		final boolean realtime = Dungeon.realtime();
 
 		if (level().distance(pos, enemyPos) <= 1) {
-			if(Dungeon.visible[pos] && !realtime) {
+			if(Dungeon.isCellVisible(enemyPos) && !realtime) {
 				getSprite().attack(enemyPos);
 			} else {
 				onAttackComplete();
@@ -1154,11 +1150,23 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	private void updateSprite(CharSprite sprite){
 		if(level().cellValid(getPos())) {
-			sprite.setVisible(Dungeon.visible[getPos()] && invisible >= 0);
+			sprite.setVisible(Dungeon.isCellVisible(getPos()) && invisible >= 0);
 		} else {
-			EventCollector.logException("invalid pos for:"+toString()+":"+getClass().getCanonicalName());
+			EventCollector.logException("invalid pos for:"+toString()+":"+getEntityKind());
 		}
 		GameScene.addMobSpriteDirect(sprite);
+
+		if(GameScene.isSceneReady()) {
+			assert (sprite.getParent() != null);
+		}
+
+
+		if(sprite.getParent()==null) {
+			String err = String.format("sprite addition failed for %s %b", getEntityKind(), GameScene.isSceneReady());
+
+			GLog.debug(err);
+		}
+
 		sprite.link(this);
 	}
 
@@ -1168,6 +1176,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 		sprite = null;
 	}
+
+//	public Group getSpriteParent() {
+//		Group parent = getSprite()
+//	}
 
 	@LuaInterface
 	public CharSprite getSprite() {
@@ -1192,6 +1204,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		if(sprite.getParent()==null) {
 			updateSprite(sprite);
 		}
+
+		assert(sprite.getParent() != null);
 
 		return sprite;
 	}
@@ -1268,10 +1282,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return true;
 	}
 
-	public int skillLevel() {
-		return 10;
-	}
-
 	//backward compatibility with mods
 	@LuaInterface
 	public int magicLvl() {
@@ -1343,6 +1353,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return false;
 	}
 
+	public int skillLevel() {
+		return Scrambler.descramble(magicLvl);
+	}
+
 	protected abstract void moveSprite(int oldPos, int pos);
 
 	public int visibleEnemies() {
@@ -1363,14 +1377,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return CharsList.DUMMY;
 		}
 		return Random.element(visibleEnemies);
-	}
-
-	public void checkIfFurious() {
-		if (getSubClass() == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
-			if (!hasBuff(Fury.class)) {
-				Buff.affect(this, Fury.class);
-			}
-		}
 	}
 
 	@LuaInterface
@@ -1468,7 +1474,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return false;
 		}
 
-		LevelObject lo = level().getLevelObject(nextCell);
+		LevelObject lo = level().getTopLevelObject(nextCell);
 
 		if (lo != null && !lo.push(this)) {
 			return false;
@@ -1617,7 +1623,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public int effectiveSTR() {
-		return 10;
+		return baseStr + lvl() / 5;
 	}
 
 	public void busy(){}
@@ -1727,6 +1733,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public void eat(Item food, float energy, String message) {
 	}
 
+	public void setSkillLevel(int level) {
+		magicLvl = Scrambler.scramble(level);
+	}
+
 	@LuaInterface
 	public void skillLevelUp() {
 	}
@@ -1767,7 +1777,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	@LuaInterface
 	public boolean canStepOn() {
-    	return walkingType.canSpawnAt(level(),getPos()) && (Actor.findChar(pos) == null);
+    	return walkingType.canSpawnAt(level(),getPos());
 	}
 
 	public void setBelongings(Belongings belongings) {

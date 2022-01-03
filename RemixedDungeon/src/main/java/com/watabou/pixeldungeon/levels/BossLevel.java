@@ -5,6 +5,8 @@ import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.levels.objects.ConcreteBlock;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
@@ -47,18 +49,24 @@ public abstract class BossLevel extends RegularLevel {
 
     private void sealEntrance() {
         if(cellValid(entrance)) {
-            CellEmitter.get(entrance).start(Speck.factory(Speck.ROCK), 0.07f, 10);
-            addLevelObject(new ConcreteBlock(entrance, 50));
+            sealCell(entrance);
         }
 
         for(var cell: exitMap.values()) {
             if (!cellValid(cell) || map[cell]==Terrain.LOCKED_EXIT) {
                 continue;
             }
-            CellEmitter.get(cell).start(Speck.factory(Speck.ROCK), 0.07f, 10);
-            addLevelObject(new ConcreteBlock(cell, 50));
+            sealCell(cell);
         }
 
+    }
+
+    private void sealCell(int cell) {
+        final LevelObject object = getTopLevelObject(cell);
+        if(object == null || !object.getEntityKind().equals(LevelObjectsFactory.PILE_OF_STONES)) {
+            CellEmitter.get(cell).start(Speck.factory(Speck.ROCK), 0.07f, 10);
+            addLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PILE_OF_STONES, cell));
+        }
     }
 
     public void unseal() {
@@ -80,11 +88,15 @@ public abstract class BossLevel extends RegularLevel {
 
 
         for(var obj: getAllLevelObjects()) {
-            if(obj instanceof ConcreteBlock) {
+            if(obj instanceof ConcreteBlock) { //backward compatibility, remove soon
                 ConcreteBlock block = (ConcreteBlock)obj;
                 if (block.getRequiredStr() == 50) {
                     obj.remove();
                 }
+            }
+
+            if(obj.getEntityKind().equals(LevelObjectsFactory.PILE_OF_STONES)) {
+                obj.remove();
             }
         }
 
@@ -113,7 +125,7 @@ public abstract class BossLevel extends RegularLevel {
     @Override
     protected void pressHero(int cell, Hero hero) {
         super.pressHero(cell, hero);
-        if (cell != entrance && (!enteredArena) && getLevelObject(entrance) == null) {
+        if (cell != entrance && (!enteredArena) && getTopLevelObject(entrance) == null) {
             sealEntrance();
         }
     }

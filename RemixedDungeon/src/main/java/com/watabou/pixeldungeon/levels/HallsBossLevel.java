@@ -40,6 +40,11 @@ public class HallsBossLevel extends BossLevel {
 	}
 
 	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_HALLS_XYZ;
+	}
+
+	@Override
 	public String tilesTex() {
 		return Assets.TILES_HALLS;
 	}
@@ -127,7 +132,7 @@ public class HallsBossLevel extends BossLevel {
 				boss.setPos(Random.Int( getLength() ));
 			} while (
 				!passable[boss.getPos()] ||
-				Dungeon.visible[boss.getPos()]);
+				Dungeon.isCellVisible(boss.getPos()));
 			spawnMob(boss);
 			boss.spawnFists();
 		}
@@ -187,5 +192,10 @@ public class HallsBossLevel extends BossLevel {
 
 	private int _RoomBottom() {
 		return getHeight() / 2 + 1;
+	}
+
+	@Override
+	public int objectsKind() {
+		return 4;
 	}
 }

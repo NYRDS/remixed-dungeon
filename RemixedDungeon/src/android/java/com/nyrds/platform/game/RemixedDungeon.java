@@ -28,6 +28,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.market.MarketOptions;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.audio.Music;
@@ -131,6 +132,8 @@ public class RemixedDungeon extends Game {
 		if (Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)) {
 			playGames.connect();
 		}
+
+		AdsUtils.initRewardVideo();
 	}
 
 	@Override

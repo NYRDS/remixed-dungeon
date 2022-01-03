@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.effects.emitters.Torch;
+import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.NecromancerNPC;
 import com.nyrds.platform.util.StringsManager;
@@ -39,7 +40,12 @@ public class PrisonLevel extends RegularLevel {
 		color1 = 0x6a723d;
 		color2 = 0x88924c;
 	}
-	
+
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_PRISON_XYZ;
+	}
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_PRISON;
@@ -114,25 +120,8 @@ public class PrisonLevel extends RegularLevel {
 				}
 			}
 		}
-		
-		for (int i=0; i < getWidth(); i++) {
-			if (map[i] == Terrain.WALL &&  
-				(map[i + getWidth()] == Terrain.EMPTY || map[i + getWidth()] == Terrain.EMPTY_SP) &&
-				Random.Int( 6 ) == 0) {
-				
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
-		
-		for (int i=getWidth(); i < getLength() - getWidth(); i++) {
-			if (map[i] == Terrain.WALL && 
-				map[i - getWidth()] == Terrain.WALL && 
-				(map[i + getWidth()] == Terrain.EMPTY || map[i + getWidth()] == Terrain.EMPTY_SP) &&
-				Random.Int( 3 ) == 0) {
-				
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
+
+		LevelTools.northWallDecorate(this, 10, 5);
 
 		placeEntranceSign();
 
@@ -198,4 +187,8 @@ public class PrisonLevel extends RegularLevel {
 		}
 	}
 
+	@Override
+	public int objectsKind() {
+		return 1;
+	}
 }

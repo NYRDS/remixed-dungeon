@@ -88,8 +88,6 @@ public class WarriorArmor extends ClassArmor {
 						cell = Ballistica.trace[Ballistica.distance - 2];
 					}
 
-					selector.checkIfFurious();
-
 					Invisibility.dispel(selector);
 
 					final int dest = cell;

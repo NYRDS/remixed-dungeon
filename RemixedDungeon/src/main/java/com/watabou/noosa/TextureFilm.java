@@ -17,20 +17,20 @@
 
 package com.watabou.noosa;
 
-import android.util.SparseArray;
-
 import com.nyrds.platform.compatibility.RectF;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 
 import org.jetbrains.annotations.Nullable;
 
+import java.util.HashMap;
+
 public class TextureFilm {
 
 	private final int texWidth;
 	private final int texHeight;
 	
-	protected SparseArray<RectF> frames = new SparseArray<>();
+	protected HashMap<Integer,RectF> frames = new HashMap<>();
 	
 	public TextureFilm( Object tx ) {
 		

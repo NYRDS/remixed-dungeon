@@ -23,7 +23,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.MagicMissile;
@@ -50,7 +49,7 @@ public class WandOfBlink extends Wand {
 
 		if (Ballistica.distance > wandLevel + 4) {
 			newCell = Ballistica.trace[wandLevel + 3];
-		} else if ( (Actor.findChar( newCell ) != null || getOwner().level().getLevelObject(newCell) != null  ) && Ballistica.distance > 1) {
+		} else if ( !getOwner().level().isCellNonOccupied(target) && Ballistica.distance > 1) {
 			newCell = Ballistica.trace[Ballistica.distance - 2];
 		}
 

@@ -15,6 +15,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 
+import org.jetbrains.annotations.NotNull;
+
 public class IceGuardianCore extends Boss {
 
 	public IceGuardianCore() {
@@ -43,7 +45,7 @@ public class IceGuardianCore extends Boss {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		super.die(cause);
 
 		for (Mob mob : level().getCopyOfMobsArray()) {

@@ -29,6 +29,11 @@ public class SpiderLevel extends CommonLevel {
 	}
 
 	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_SPIDER_NEST_XYZ;
+	}
+
+	@Override
 	public String tilesTexEx() {
 		return Assets.TILES_SPIDER_NEST_X;
 	}
@@ -242,5 +247,10 @@ public class SpiderLevel extends CommonLevel {
 			default:
 				return super.tileDesc( tile );
 		}
+	}
+
+	@Override
+	public int objectsKind() {
+		return 6;
 	}
 }

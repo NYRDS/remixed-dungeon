@@ -21,6 +21,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
@@ -42,7 +43,6 @@ import com.watabou.pixeldungeon.items.ArmorKit;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.wands.WandOfDisintegration;
-import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
@@ -84,7 +84,7 @@ public class King extends Boss {
 	public boolean getCloser(int target) {
 
  		targetPedestal = level().getNearestTerrain(getPos(),
-				(level, cell) -> cell != lastPedestal && level.map[cell] == Terrain.PEDESTAL);
+				(level, cell) -> cell != lastPedestal && level.getTopLevelObject(cell)!=null && level.getTopLevelObject(cell).equals(LevelObjectsFactory.PEDESTAL));
 
 		if(canTryToSummon()) {
 			return super.getCloser( targetPedestal );
@@ -125,7 +125,7 @@ public class King extends Boss {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		super.die( cause );
 		
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_4);
@@ -206,7 +206,7 @@ public class King extends Boss {
 		}
 		
 		@Override
-		public void die(NamedEntityKind cause) {
+		public void die(@NotNull NamedEntityKind cause) {
 			super.die( cause );
 			
 			if (CharUtils.isVisible(this)) {

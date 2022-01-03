@@ -1,34 +1,32 @@
 
 package com.nyrds.pixeldungeon.windows;
 
-import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
-import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.pixeldungeon.support.AdsRewardVideo;
 import com.nyrds.platform.util.StringsManager;
-import com.watabou.noosa.InterstitialPoint;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndQuest;
 
-public class WndMovieTheatre extends WndQuest implements InterstitialPoint{
+public class WndMovieTheatre extends WndQuest{
 
-	public WndMovieTheatre(final ServiceManNPC npc, int filmsSeen, int limit, int goldReward) {
+	private final AdsRewardVideo rewardVideo = new AdsRewardVideo();
 
-		super(npc, Utils.format(StringsManager.getVar(R.string.WndMovieTheatre_Instruction), goldReward) + "\n\n" + Utils.format(StringsManager.getVar(R.string.WndMovieTheatre_Instruction_2), filmsSeen, limit));
+	public WndMovieTheatre(final ServiceManNPC npc, int filmsSeen, int limit) {
+
+		super(npc, Utils.format(StringsManager.getVar(R.string.WndMovieTheatre_Instruction), ServiceManNPC.getReward().quantity()) + "\n\n" + Utils.format(StringsManager.getVar(R.string.WndMovieTheatre_Instruction_2), filmsSeen, limit));
 
 		float y = height + 2*GAP;
 
 		RedButton btnYes = new RedButton(StringsManager.getVar(R.string.WndMovieTheatre_Watch)) {
 			@Override
 			protected void onClick() {
-				showAd( );
+				hide();
+				rewardVideo.show(ServiceManNPC.getReward());
 			}
 		};
+
 		btnYes.setRect( 0, y + GAP, STD_WIDTH, BUTTON_HEIGHT);
 		add( btnYes );
 
@@ -45,31 +43,6 @@ public class WndMovieTheatre extends WndQuest implements InterstitialPoint{
 		resize( STD_WIDTH, (int)btnNo.bottom() );
 	}
 
-	private void showAd() {
-		hide();
 
-		Game.softPaused = true;
-
-		Game.instance().runOnUiThread(() -> {
-			Ads.removeEasyModeBanner();
-			Ads.showRewardVideo(this);
-		});
-	}
-
-	@Override
-	public void returnToWork(final boolean result) {
-
-		Hero.movieRewardPending = result;
-		Dungeon.save(true);
-
-		GameLoop.pushUiTask(() -> {
-			Game.softPaused = false;
-			Hero.doOnNextAction = new MovieRewardTask(result);
-
-			RemixedDungeon.landscape(RemixedDungeon.storedLandscape());
-			GameLoop.setNeedSceneRestart();
-		});
-
-	}
 
 }

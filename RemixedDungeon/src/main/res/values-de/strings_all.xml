@@ -2539,13 +2539,6 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
   <string name="ShieldStrTemplate">Träger von diesem Schild sollten mindestens %1$dPunkt Stärke besitzen, um ihn richtig zu benutzen.</string>
   <string name="town_deco_flowerinthepot_name">Blume in einer Vase</string>
   <string name="town_deco_flowerinthepot_desc">Dekorative Blume mit süßem Geruch</string>
-  <string name="Welcome_Text_29_4">
-remix.29.4\n
-- Spielmechaniken:\n
---  Kampf mit zwei Waffen!\n
-- Modding:\n
-- Benutzerdefinierte Waffen!\n
-- Bugs behoben\n </string>
   <string name="Mods_Disclaimer">
 Mods werden von Spielern für Spieler erstellt.\n
 Mods werden manchmal das Spielauf unvorhersehbare oder seltsame Weise verändert, du wurdest gewarnt!\n

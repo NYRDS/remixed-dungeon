@@ -4,7 +4,7 @@
  "maxBrightness":1.05,
  "mobs":[
         {
-         "kind":"InnkeeperNPC",
+         "kind":"InnKeeperNPC",
          "x":5,
          "y":8
         }, 
@@ -16,29 +16,55 @@
  "multiexit":[],
  "objects":[
         {
-         "kind":"Deco",
-         "object_desc":"candle",
+         "kind":"CustomObject",
+         "object_desc":"pedestal",
          "x":4,
-         "y":3
+         "y":13
+        }, 
+        {
+         "kind":"CustomObject",
+         "object_desc":"barricade",
+         "x":6,
+         "y":13
+        }, 
+        {
+          "kind":"CustomObject",
+          "object_desc":"statue",
+         "x":4,
+         "y":15
         }, 
         {
          "kind":"Deco",
          "object_desc":"candle",
          "x":6,
-         "y":3
-        }, 
-        {
-         "kind":"Deco",
-         "object_desc":"candle",
+         "y":15
+        },
+       {
+         "kind":"CustomObject",
+         "object_desc":"well",
+         "data": "WaterOfTransmutation",
          "x":4,
-         "y":5
-        }, 
-        {
-         "kind":"Deco",
-         "object_desc":"candle",
+         "y":17
+       },
+       {
+         "kind":"CustomObject",
+         "object_desc":"pot",
          "x":6,
-         "y":5
-        }],
+         "y":17
+       },
+       {
+         "kind": "CustomObject",
+         "object_desc": "pot",
+         "x": 4,
+         "y": 19
+       },
+       {
+         "kind":"CustomObject",
+         "object_desc":"pot",
+         "x":6,
+         "y":19
+       }
+ ],
  "tiles":"tiles0_x.png",
  "tiles_logic":"tiles0.png",
  "tiles_mobs":"Mobs.png",

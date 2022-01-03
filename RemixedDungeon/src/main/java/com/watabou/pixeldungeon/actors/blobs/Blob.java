@@ -17,11 +17,15 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.util.ModError;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.BArray;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import lombok.SneakyThrows;
@@ -162,6 +166,7 @@ public class Blob extends Actor implements NamedEntityKind {
 	}
 
 	public void seed(int cell, int amount) {
+		checkSeedCell(cell);
 		cur[cell] += amount;
 		volume += amount;
 	}
@@ -182,17 +187,22 @@ public class Blob extends Actor implements NamedEntityKind {
 	@SuppressWarnings("unchecked")
 	@SneakyThrows
 	public static <T extends Blob> T seed(int cell, int amount, Class<T> type) {
-		T gas = (T) Dungeon.level.blobs.get(type);
+		return seed(Dungeon.level, cell, amount, type);
+	}
+
+	@LuaInterface
+	@SneakyThrows
+	public static <T extends Blob> T seed(Level level, int cell, int amount, Class<T> type) {
+		T gas = (T) level.blobs.get(type);
 		if (gas == null) {
 			gas = type.newInstance();
-			Dungeon.level.blobs.put(type, gas);
+			level.blobs.put(type, gas);
 		}
 
 		gas.seed(cell, amount);
 
 		return gas;
 	}
-
 
 	public static void setWidth(int val) {
 		width = val;
@@ -222,5 +232,11 @@ public class Blob extends Actor implements NamedEntityKind {
 	@Override
 	public String name() {
 		return getEntityKind();
+	}
+
+	protected void checkSeedCell(int cell) {
+		if(cell<0 || cell > this.cur.length) {
+			throw new ModError(Utils.format("Bad cell %d for blob %s", cell, getEntityKind()));
+		}
 	}
 }

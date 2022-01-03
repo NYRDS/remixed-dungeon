@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.levels;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.CustomLevel;
 import com.nyrds.pixeldungeon.levels.objects.Barrel;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Dungeon;
@@ -514,7 +515,8 @@ public abstract class RegularLevel extends CustomLevel {
 					map[door] = Terrain.SECRET_DOOR;
 					break;
 				case BARRICADE:
-					map[door] = Random.Int(3) == 0 ? Terrain.BOOKSHELF : Terrain.BARRICADE;
+					map[door] = Terrain.EMPTY;
+					putLevelObject(LevelObjectsFactory.createCustomObject(this,LevelObjectsFactory.BARRICADE, door));
 					break;
 				case LOCKED:
 					map[door] = Terrain.LOCKED_DOOR;
@@ -609,7 +611,7 @@ public abstract class RegularLevel extends CustomLevel {
 
 		while (true) {
 
-			if (++count > 10) {
+			if (++count > 100) {
 				return INVALID_CELL;
 			}
 
@@ -619,7 +621,7 @@ public abstract class RegularLevel extends CustomLevel {
 			}
 
 			cell = room.random(this);
-			if (!Dungeon.visible[cell] && Actor.findChar(cell) == null && passable[cell]) {
+			if (!Dungeon.isCellVisible(cell) && Actor.findChar(cell) == null && passable[cell]) {
 				return cell;
 			}
 

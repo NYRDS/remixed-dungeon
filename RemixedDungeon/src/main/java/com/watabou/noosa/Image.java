@@ -39,7 +39,8 @@ public class Image extends Visual implements IPlaceable {
 	private final FloatBuffer verticesBuffer;
 	
 	protected boolean dirty;
-	
+
+
 	public Image() {
 		super( 0, 0, 0, 0 );
 		

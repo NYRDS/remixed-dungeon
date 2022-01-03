@@ -6,7 +6,7 @@
     },
     "items": [
       {
-        "kind": "Ankh",
+        "kind": "TomeOfMastery",
         "volume": 10
       },
       {
@@ -23,31 +23,40 @@
       },
 
       {
-        "kind": "TenguLiver",
-        "identified": true
+        "kind": "PotionOfStrength",
+        "identified": true,
+        "cursed": true,
+        "quantity": 1000
+      },
+      {
+        "kind": "WandOfBlink",
+        "identified": true,
+        "level" : 200
       },
       {
         "kind": "WandOfIcebolt",
-        "identified": true
+        "identified": true,
+        "level" : 200
       },
+
       {
-        "kind": "ScrollOfTeleportation",
+        "kind": "BlackSkull",
         "quantity": 1000,
         "identified": true
       },
       {
-        "kind": "PotionOfMana",
+        "kind": "ScrollOfMagicMapping",
         "quantity": 1000,
         "identified": true
       },
       {
-        "kind": "PotionOfFrost",
+        "kind": "PotionOfLiquidFlame",
         "quantity": 1000,
         "identified": true
       },
       {
-        "kind": "CurareDart",
-        "quantity": 1000
+        "kind": "Dagger",
+        "cursed": true
       },
       {
         "kind": "Gold",
@@ -75,7 +84,7 @@
   "WARRIOR": {
     "weapon": {
       "kind": "ShortSword",
-      "level" : 2,
+      "level" : 200,
       "identified": true
     },
     "str": 11,

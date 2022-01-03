@@ -17,10 +17,21 @@
  */
 package com.watabou.pixeldungeon.effects;
 
+import com.nyrds.platform.audio.Sample;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 
 public class Effects {
+
+	public static void burnFX( int pos ) {
+		CellEmitter.get( pos ).burst( ElmoParticle.FACTORY, 6 );
+		Sample.INSTANCE.play( Assets.SND_BURNING );
+	}
+
+	public static void evaporateFX(int pos) {
+		CellEmitter.get( pos ).burst( Speck.factory( Speck.STEAM ), 5 );
+	}
 
 	public enum  Type {
 		RIPPLE,

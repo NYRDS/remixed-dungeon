@@ -25,6 +25,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.DeathRay;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -58,17 +59,18 @@ public class WandOfDisintegration extends SimpleWand  {
 			if ((ch = Actor.findChar( c )) != null) {
 				chars.add( ch );
 			}
-			
-			int terr = Dungeon.level.map[c];
+
+			final Level level1 = Dungeon.level;
+			int terr = level1.map[c];
 			if (terr == Terrain.DOOR || terr == Terrain.BARRICADE) {
 				
-				Dungeon.level.set( c, Terrain.EMBERS );
-				GameScene.updateMap( c );
+				level1.set( c, Terrain.EMBERS );
+				GameScene.updateMapPair( c );
 				terrainAffected = true;
 				
 			} else if (terr == Terrain.HIGH_GRASS) {
 				
-				Dungeon.level.set( c, Terrain.GRASS );
+				level1.set( c, Terrain.GRASS );
 				GameScene.updateMap( c );
 				terrainAffected = true;
 				

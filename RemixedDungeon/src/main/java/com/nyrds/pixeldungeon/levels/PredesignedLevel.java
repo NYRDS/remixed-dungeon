@@ -40,28 +40,25 @@ public class PredesignedLevel extends CustomLevel {
 	}
 
 	@Override
+	@SneakyThrows
 	public void create(int w, int h) {
-		try {
-			width = mLevelDesc.getInt("width");
-			height = mLevelDesc.getInt("height");
+		width = mLevelDesc.getInt("width");
+		height = mLevelDesc.getInt("height");
 
-			initSizeDependentStuff();
+		initSizeDependentStuff();
 
-			JSONArray map = mLevelDesc.getJSONArray("map");
+		JSONArray map = mLevelDesc.getJSONArray("map");
 
-			for (int i = 0; i < map.length(); i++) {
-				set(i, map.getInt(i));
-			}
-
-			readLevelParams();
-
-			placeObjects();
-			
-			setupLinks();
-
-		} catch (JSONException e) {
-			throw ModdingMode.modException(e);
+		for (int i = 0; i < map.length(); i++) {
+			set(i, map.getInt(i));
 		}
+
+		readLevelParams();
+
+		placeObjects();
+
+		setupLinks();
+
 		buildFlagMaps();
 		cleanWalls();
 		createMobs();
@@ -90,13 +87,14 @@ public class PredesignedLevel extends CustomLevel {
 		}
 	}
 
-	private void placeObjects() throws JSONException {
+	@SneakyThrows
+	private void placeObjects() {
 		if(mLevelDesc.has("objects")) {
 			JSONArray objects = mLevelDesc.getJSONArray("objects");
 
 			for (int i = 0; i < objects.length(); i++) {
 				JSONObject object = objects.getJSONObject(i);
-				addLevelObject(LevelObjectsFactory.createObject(this, object));
+				addLevelObject(LevelObjectsFactory.createLevelObject(this, object));
 			}
 		}
 	}
@@ -267,10 +265,6 @@ public class PredesignedLevel extends CustomLevel {
 	@Override
 	public boolean isPlainTile(int cell) {
 		var baseLayer = getTileLayer(LayerId.Base);
-		if(baseLayer == null) {
-			return true;
-		}
-
-		return baseLayer[cell] < 0;
+		return baseLayer[cell] <= INVALID_CELL;
 	}
 }

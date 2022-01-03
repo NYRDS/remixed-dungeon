@@ -33,6 +33,8 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Skeleton extends UndeadMob {
 
 	public Skeleton() {
@@ -58,7 +60,7 @@ public class Skeleton extends UndeadMob {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		
 		super.die( cause );
 		

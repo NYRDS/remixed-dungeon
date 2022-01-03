@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.LevelTools;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -41,6 +43,11 @@ public class PrisonBossLevel extends BossLevel {
 	}
 	
 	private Room anteroom;
+
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_PRISON_XYZ;
+	}
 
 	@Override
 	public String tilesTex() {
@@ -171,7 +178,7 @@ public class PrisonBossLevel extends BossLevel {
 			int trapPos = Random.Int( getLength() );
 			
 			if (map[trapPos] == Terrain.EMPTY) {
-				addLevelObject(Trap.makeSimpleTrap(trapPos, "PoisonTrap", true));
+				addLevelObject(Trap.makeSimpleTrap(trapPos, LevelObjectsFactory.POISON_TRAP, true));
 			}
 		}
 	}
@@ -201,25 +208,8 @@ public class PrisonBossLevel extends BossLevel {
 				}
 			}
 		}
-		
-		for (int i=0; i < getWidth(); i++) {
-			if (map[i] == Terrain.WALL &&  
-				(map[i + getWidth()] == Terrain.EMPTY || map[i + getWidth()] == Terrain.EMPTY_SP) &&
-				Random.Int( 4 ) == 0) {
-				
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
-		
-		for (int i=getWidth(); i < getLength() - getWidth(); i++) {
-			if (map[i] == Terrain.WALL && 
-				map[i - getWidth()] == Terrain.WALL && 
-				(map[i + getWidth()] == Terrain.EMPTY || map[i + getWidth()] == Terrain.EMPTY_SP) &&
-				Random.Int( 2 ) == 0) {
-				
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
+
+		LevelTools.northWallDecorate(this, 10, 2);
 
 		placeEntranceSign();
 		
@@ -285,5 +275,10 @@ public class PrisonBossLevel extends BossLevel {
 	@Override
 	public void addVisuals( Scene scene ) {
 		PrisonLevel.addVisuals( this, scene );
+	}
+
+	@Override
+	public int objectsKind() {
+		return 1;
 	}
 }

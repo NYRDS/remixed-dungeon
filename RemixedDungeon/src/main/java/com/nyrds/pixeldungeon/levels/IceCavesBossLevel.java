@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.nyrds.platform.util.StringsManager;
@@ -17,6 +18,10 @@ import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
+import java.util.HashSet;
+
+import lombok.val;
+
 public class IceCavesBossLevel extends BossLevel {
 	
 	{
@@ -28,7 +33,12 @@ public class IceCavesBossLevel extends BossLevel {
 	private static final int HALL_WIDTH		= 11;
 	private static final int HALL_HEIGHT	= 9;
 	private static final int CHAMBER_HEIGHT	= 1;
-	
+
+
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_ICE_CAVES_XYZ;
+	}
 
 	@Override
 	public String tilesTex() {
@@ -46,8 +56,21 @@ public class IceCavesBossLevel extends BossLevel {
 		Painter.fill( this, _Left(), TOP, HALL_WIDTH, HALL_HEIGHT, Terrain.EMPTY_SP );
 		Painter.fill( this, _Left(), TOP, HALL_WIDTH, TOP, Terrain.EMPTY );
 		Painter.fill( this, _Left(), HALL_HEIGHT, HALL_WIDTH, TOP, Terrain.EMPTY );
+
+
+		val statues = new HashSet<Integer>();
+
 		for (int i = 0; i < 10; i++) {
-			map[getRandomTerrainCell(Terrain.EMPTY_SP)] = Terrain.STATUE_SP;
+
+			int pos = getRandomTerrainCell(Terrain.EMPTY_SP);
+
+			if(cellValid(pos) && !statues.contains(pos)) {
+				statues.add(pos);
+			}
+		}
+
+		for(val pos: statues) {
+			putLevelObject(LevelObjectsFactory.createCustomObject(this, "statue", pos));
 		}
 		
 		arenaDoor = (TOP + HALL_HEIGHT) * getWidth() + _Center();
@@ -63,15 +86,9 @@ public class IceCavesBossLevel extends BossLevel {
 	}
 	
 	@Override
-	protected void decorate() {	
-		
-		for (int i=0; i < getLength(); i++) {
-			if (map[i] == Terrain.EMPTY && Random.Int( 10 ) == 0) { 
-				map[i] = Terrain.EMPTY_DECO;
-			} else if (map[i] == Terrain.WALL && Random.Int( 8 ) == 0) { 
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
+	protected void decorate() {
+
+		LevelTools.northWallDecorate(this, 10, 5);
 	}
 	
 	public int pedestal( boolean left ) {
@@ -98,12 +115,15 @@ public class IceCavesBossLevel extends BossLevel {
 
 			for (int i = 0; i < 2; i++){
 				mob.setState(MobAi.getStateByClass(Hunting.class));
+				int mobPos;
 				do {
-					mob.setPos(Random.Int( getLength() ));
+					mobPos = Random.Int( getLength() );
 				} while (
-						!passable[mob.getPos()] ||
-								!outsideEntranceRoom( mob.getPos() ) ||
-								Dungeon.visible[mob.getPos()]);
+						!passable[mobPos] ||
+								!outsideEntranceRoom(mobPos) ||
+								Dungeon.isCellVisible(mobPos));
+
+				mob.setPos(mobPos);
 				spawnMob(mob);
 				mob = guard;
 			}
@@ -170,5 +190,10 @@ public class IceCavesBossLevel extends BossLevel {
 
 	private int _Center() {
 		return _Left() + HALL_WIDTH / 2;
+	}
+
+	@Override
+	public int objectsKind() {
+		return 8;
 	}
 }

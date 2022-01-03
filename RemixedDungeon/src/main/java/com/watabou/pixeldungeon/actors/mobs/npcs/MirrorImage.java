@@ -47,8 +47,10 @@ public class MirrorImage extends Mob {
 	public MirrorImage(@NotNull Hero hero) {
 		this();
 
-		attack = hero.attackSkill( hero );
-		damage = hero.damageRoll();
+		baseAttackSkill = hero.attackSkill(hero);
+		baseDefenseSkill = hero.defenseSkill(hero);
+		dmgMin = hero.damageRoll();
+		dmgMax = dmgMin * 2;
 
 		makePet(this, hero.getId());
 
@@ -56,24 +58,11 @@ public class MirrorImage extends Mob {
 	}
 
 	@Packable
-	private int                attack;
-	@Packable
-	private int                damage;
-	@Packable
 	private String[] look = new String[0];
 	@Packable
 	private String deathEffect;
 
-	@Override
-	public int attackSkill( Char target ) {
-		return attack;
-	}
-	
-	@Override
-	public int damageRoll() {
-		return damage;
-	}
-	
+
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
 		int dmg = super.attackProc( enemy, damage );

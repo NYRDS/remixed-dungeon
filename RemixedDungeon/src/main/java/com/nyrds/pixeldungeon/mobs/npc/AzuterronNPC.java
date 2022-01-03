@@ -12,6 +12,7 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
@@ -130,10 +131,14 @@ public class AzuterronNPC extends Shopkeeper {
 
 		public static void process() {
 			if (given && !processed) {
-				TreacherousSpirit enemy = new TreacherousSpirit();
-				enemy.setPos(Dungeon.level.randomRespawnCell());
-				if (enemy.getPos() != -1) {
-					Dungeon.level.spawnMob(enemy);
+				final Level level = Dungeon.level;
+
+				int mobPos = level.randomRespawnCell();
+
+				if (level.cellValid(mobPos)) {
+					TreacherousSpirit enemy = new TreacherousSpirit();
+					enemy.setPos(mobPos);
+					level.spawnMob(enemy);
 					processed = true;
 				}
 			}

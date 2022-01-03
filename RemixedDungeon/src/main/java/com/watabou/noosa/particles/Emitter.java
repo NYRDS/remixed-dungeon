@@ -20,8 +20,10 @@ package com.watabou.noosa.particles;
 import android.opengl.GLES20;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Visual;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
@@ -62,7 +64,7 @@ public class Emitter extends Group {
 	
 	public void pos( float x, float y, float width, float height ) {
 		this.x = x;
-		this.y = y;
+		this.y = y + (isometricShift ? Gizmo.isometricShift() : 0);
 		this.width = width;
 		this.height = height;
 		
@@ -70,7 +72,15 @@ public class Emitter extends Group {
 	}
 	
 	public void pos( Visual target ) {
-		this.target = target; 
+		this.target = target;
+		x = target.x;
+		y = target.y;
+	}
+
+	public void pos( Visual target, float ix, float iy, float width, float height ) {
+		this.target = target;
+		x = target.x;
+		y = target.y;
 	}
 	
 	public void burst( Factory factory, int quantity ) {
@@ -139,6 +149,12 @@ public class Emitter extends Group {
 			GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA );
 		} else {
 			super.draw();
+		}
+	}
+
+	public void setIsometricShift(boolean isometricShift) {
+		if(Dungeon.isIsometricMode()) {
+			this.isometricShift = isometricShift;
 		}
 	}
 

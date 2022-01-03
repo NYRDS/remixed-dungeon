@@ -21,10 +21,12 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
+import com.watabou.noosa.InterstitialPoint;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Locale;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -55,11 +57,11 @@ public class Utils {
     }
 
     public static String format(int StringFormatId, Object... args) {
-        return String.format(Locale.ENGLISH, StringsManager.getVar(StringFormatId), args);
+        return String.format(Locale.ROOT, StringsManager.getVar(StringFormatId), args);
     }
 
     public static String format(String format, Object... args) {
-        return String.format(Locale.ENGLISH, format, args);
+        return String.format(Locale.ROOT, format, args);
     }
 
     public static String indefinite(String noun) {
@@ -181,5 +183,18 @@ public class Utils {
             EventCollector.logException(e);
         }
         return false;
+    }
+
+    public static <T extends Enum<?>> T randomEnum(Class<T> clazz){
+        int x = new Random().nextInt(clazz.getEnumConstants().length);
+        return clazz.getEnumConstants()[x];
+    }
+
+    public static class SpuriousReturn implements InterstitialPoint {
+
+        @Override
+        public void returnToWork(boolean result) {
+            EventCollector.logException(new Exception(String.format("Spurious returnTo %b", result)));
+        }
     }
 }

@@ -24,13 +24,15 @@ import com.watabou.utils.SystemTime;
 
 import org.luaj.vm2.LuaError;
 
-import java.util.ArrayList;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import lombok.SneakyThrows;
 
 public class GameLoop {
+
+    public static final AtomicInteger loadingOrSaving = new AtomicInteger();
 
     private final Executor executor = new ReportingExecutor();
     private final ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
@@ -60,13 +62,11 @@ public class GameLoop {
     public Runnable doOnResume;
 
     // Accumulated touch events
-    public final ArrayList<MotionEvent> motionEvents = new ArrayList<>();
+    public final ConcurrentLinkedQueue<MotionEvent> motionEvents = new ConcurrentLinkedQueue<>();
 
     // Accumulated key events
-    public final ArrayList<KeyEvent> keysEvents = new ArrayList<>();
+    public final ConcurrentLinkedQueue<KeyEvent> keysEvents = new ConcurrentLinkedQueue<>();
 
-    private final ArrayList<MotionEvent> motionEventsCopy = new ArrayList<>();
-    private final ArrayList<KeyEvent>    keyEventsCopy    = new ArrayList<>();
 
     public GameLoop(Class<? extends Scene> c) {
         super();
@@ -133,6 +133,12 @@ public class GameLoop {
         switchScene(instance().sceneClass);
     }
 
+    static public void runOnMainThread(Runnable runnable) {
+        pushUiTask( () -> {
+            Game.instance().runOnUiThread(runnable);
+        });
+    }
+
     public void shutdown() {
         if (instance().scene != null) {
             instance().scene.pause();
@@ -197,38 +203,28 @@ public class GameLoop {
     @SneakyThrows
     public void step() {
 
-        try {
-            if (requestedReset) {
-                requestedReset = false;
-                switchScene(sceneClass.newInstance());
-                return;
-            }
-
-            elapsed = timeScale * step * 0.001f;
-
-            synchronized (motionEvents) {
-                motionEventsCopy.addAll(motionEvents);
-                motionEvents.clear();
-            }
-
-            Touchscreen.processTouchEvents(motionEventsCopy);
-            motionEventsCopy.clear();
-
-
-            synchronized (keysEvents) {
-                keyEventsCopy.addAll(keysEvents);
-                keysEvents.clear();
-            }
-
-            Keys.processTouchEvents(keyEventsCopy);
-            keyEventsCopy.clear();
-
-
-            scene.update();
-            Camera.updateAll();
-        } catch (Exception e) {
-            throw new TrackedRuntimeException(e);
+        if(loadingOrSaving.get() > 0) {
+            return;
         }
+
+        if (requestedReset) {
+            requestedReset = false;
+            switchScene(sceneClass.newInstance());
+            return;
+        }
+
+        elapsed = timeScale * step * 0.001f;
+
+        while(!motionEvents.isEmpty()) {
+            Touchscreen.processEvent(motionEvents.poll());
+        }
+
+        while(!keysEvents.isEmpty()) {
+            Keys.processEvent(keysEvents.poll());
+        }
+
+        scene.update();
+        Camera.updateAll();
     }
 
     private void switchScene(Scene requestedScene) {

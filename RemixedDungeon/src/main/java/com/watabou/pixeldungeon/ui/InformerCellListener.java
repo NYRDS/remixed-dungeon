@@ -34,7 +34,7 @@ class InformerCellListener implements CellSelector.Listener {
             return;
         }
 
-        if (!Dungeon.visible[cell]) {
+        if (!Dungeon.isCellVisible(cell)) {
             GameScene.show(new WndInfoCell(cell));
             return;
         }

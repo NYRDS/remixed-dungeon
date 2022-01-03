@@ -10,7 +10,6 @@ import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -28,29 +27,18 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 		loot(new PotionOfLevitation(),0.1f);
 
 		addImmunity(Bleeding.class);
-	}
-
-	@Override
-	public int skillLevel() {
-		return 3;
+		setSkillLevel(3 + lvl() / 10);
 	}
 
 	public void adjustStats(int depth) {
 		hp(ht(depth * 3 + 1));
 		baseDefenseSkill = depth * 2 + 1;
+		baseAttackSkill = baseDefenseSkill * 2 + 1;
 		exp = depth + 1;
 		maxLvl = depth + 2;
 		dr = exp / 5;
-	}
-
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange(0, ht() / 4);
-	}
-
-	@Override
-	public int attackSkill(Char target) {
-		return baseDefenseSkill * 2;
+		dmgMin = 0;
+		dmgMax = ht() / 4;
 	}
 
 	@Override

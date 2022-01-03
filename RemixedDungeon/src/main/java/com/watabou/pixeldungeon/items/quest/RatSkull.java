@@ -46,6 +46,17 @@ public class RatSkull extends Artifact {
 	}
 
 	public static class RatterAura extends ArtifactBuff {
+
+		@Override
+		public String name() {
+			return StringsManager.getVar(R.string.RatSkullBuff_Name);
+		}
+
+		@Override
+		public String desc() {
+			return StringsManager.getVar(R.string.RatSkullBuff_Info);
+		}
+
 		@Override
 		public int icon() {
 			return BuffIndicator.RAT_SKULL;

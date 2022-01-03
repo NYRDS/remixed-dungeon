@@ -42,6 +42,11 @@ local function handleWindow(hero)
 end
 
 local function handleItem(hero, item, ignoreAction)
+
+    if item:getEntityKind() == "Amulet" then
+        return
+    end
+
     local actions = item:actions_l(hero)
 
     if #actions > 0 then

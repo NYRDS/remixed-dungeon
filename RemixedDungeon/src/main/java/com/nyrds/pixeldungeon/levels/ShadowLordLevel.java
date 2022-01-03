@@ -14,6 +14,11 @@ public class ShadowLordLevel extends BossLevel {
 	}
 
 	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_HALLS_XYZ;
+	}
+
+	@Override
 	public String tilesTex() {
 		return Assets.TILES_SHADOW_LORD;
 	}
@@ -25,7 +30,7 @@ public class ShadowLordLevel extends BossLevel {
 
 	@Override
 	protected boolean build() {
-		Tools.makeShadowLordLevel(this);
+		LevelTools.makeShadowLordLevel(this);
 		return true;
 	}
 
@@ -50,5 +55,10 @@ public class ShadowLordLevel extends BossLevel {
 
 	@Override
 	protected void createItems() {
+	}
+
+	@Override
+	public int objectsKind() {
+		return 4;
 	}
 }

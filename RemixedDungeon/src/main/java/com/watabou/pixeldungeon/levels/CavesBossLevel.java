@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
@@ -39,6 +40,11 @@ public class CavesBossLevel extends BossLevel {
 		color2 = 0xb9d661;
 		
 		viewDistance = 6;
+	}
+
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_CAVES_XYZ;
 	}
 
 	@Override
@@ -142,12 +148,8 @@ public class CavesBossLevel extends BossLevel {
 				}
 			}
 		}
-		
-		for (int i=0; i < getLength(); i++) {
-			if (map[i] == Terrain.WALL && Random.Int( 8 ) == 0) {
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
+
+		LevelTools.northWallDecorate(this, 2, 6);
 		
 		int sign;
 		do {
@@ -172,7 +174,7 @@ public class CavesBossLevel extends BossLevel {
 			} while (
 					!passable[pos] ||
 					!outsideEntranceRoom(pos ) ||
-					Dungeon.visible[pos]);
+					Dungeon.isCellVisible(pos));
 
 			spawnBoss(pos);
 
@@ -241,5 +243,11 @@ public class CavesBossLevel extends BossLevel {
 
 	private int _RoomBottom() {
 		return getHeight() / 2 + 2;
+	}
+
+
+	@Override
+	public int objectsKind() {
+		return 2;
 	}
 }

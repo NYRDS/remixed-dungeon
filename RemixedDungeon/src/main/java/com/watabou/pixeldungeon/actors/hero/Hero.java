@@ -29,6 +29,7 @@ import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.pixeldungeon.windows.MovieRewardTask;
 import com.nyrds.platform.EventCollector;
@@ -130,15 +131,15 @@ public class Hero extends Char {
 	@Packable
 	public static boolean movieRewardPending;
 
+	@Packable
+	public static Item movieRewardPrize = ItemsList.DUMMY;
+
 	public Armor.Glyph killerGlyph = null;
 
 	public boolean restoreHealth = false;
 
-	private int STR;
-
 	private float awareness;
 
-	private int magicLvl = Scrambler.scramble(1);
 	private int exp = Scrambler.scramble(0);
 	private int sp = Scrambler.scramble(0);
 	private int maxSp = Scrambler.scramble(0);
@@ -185,11 +186,11 @@ public class Hero extends Char {
 	}
 
 	public void STR(int sTR) {
-		STR = Scrambler.scramble(sTR);
+		baseStr = Scrambler.scramble(sTR);
 	}
 
 	public int STR() {
-		return Scrambler.descramble(STR);
+		return Scrambler.descramble(baseStr);
 	}
 
 	private static final String STRENGTH = "STR";
@@ -226,8 +227,8 @@ public class Hero extends Char {
 			controlTargetId = getId();
 		}
 
-		heroClass = HeroClass.restoreFromBundle(bundle);
-		subClass = HeroSubClass.restoreFromBundle(bundle);
+		setHeroClass(HeroClass.restoreFromBundle(bundle));
+		setSubClass(HeroSubClass.restoreFromBundle(bundle));
 
 		STR(bundle.getInt(STRENGTH));
 		updateAwareness();
@@ -416,8 +417,6 @@ public class Hero extends Char {
 
 		setControlTarget(this);
 
-		checkIfFurious();
-
 		if(!myMove()) {
 			interrupt();
 		}
@@ -469,7 +468,7 @@ public class Hero extends Char {
 						interrupt();
 						return false;
 					}
-					if (TrapHelper.isVisibleTrap(level.map[target]) && !isFlying() && !TrapHelper.stepConfirmed) {
+					if (TrapHelper.isVisibleTrap(level, target) && !isFlying() && !TrapHelper.stepConfirmed) {
 						TrapHelper.heroTriggerTrap(this);
 						interrupt();
 						return false;
@@ -484,9 +483,18 @@ public class Hero extends Char {
 				}
 
 				LevelObject obj = level.getTopLevelObject(target);
+
 				if (obj != null && obj.pushable(this)) {
-					interrupt();
-					if (!obj.push(this)) {
+
+					if(obj.pushable(this)) {
+						interrupt();
+						if (!obj.push(this)) {
+							return false;
+						}
+					}
+
+					if(obj.nonPassable(this)) {
+						interrupt();
 						return false;
 					}
 				}
@@ -512,6 +520,11 @@ public class Hero extends Char {
 
 			LevelObject obj = level.getTopLevelObject(step);
 			if (obj != null) {
+
+				if(obj.nonPassable(this)) {
+					interrupt();
+					return false;
+				}
 
 				if (step == target) {
 					interrupt();
@@ -700,7 +713,7 @@ public class Hero extends Char {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 
 		Map<String, String> deathDesc = new HashMap<>();
 
@@ -749,7 +762,13 @@ public class Hero extends Char {
 		lastAction = null;
 	}
 
-	private static void reallyReallyDie(Hero hero, NamedEntityKind cause) {
+	public static void reallyDie(Hero hero,final NamedEntityKind cause) {
+
+		if (hero.getDifficulty() < 2 && !Game.isPaused()) {
+			GameScene.show(new WndSaveSlotSelect(false, StringsManager.getVar(R.string.Hero_AnotherTry)));
+			return;
+		}
+
 		Dungeon.level.discover();
 
 		Bones.leave(hero);
@@ -765,16 +784,6 @@ public class Hero extends Char {
 		}
 
 		Dungeon.gameOver();
-	}
-
-	public static void reallyDie(Hero hero,final NamedEntityKind cause) {
-
-		if (hero.getDifficulty() < 2 && !Game.isPaused()) {
-			GameScene.show(new WndSaveSlotSelect(false, StringsManager.getVar(R.string.Hero_AnotherTry)));
-			return;
-		}
-
-		reallyReallyDie(hero,cause);
 	}
 
 	@Override
@@ -843,7 +852,7 @@ public class Hero extends Char {
 		for (int y = ay; y <= by; y++) {
 			for (int x = ax, p = ax + y * level.getWidth(); x <= bx; x++, p++) {
 
-				if (Dungeon.visible[p]) {
+				if (Dungeon.isCellVisible(p)) {
 
 					if (intentional) {
 						getSprite().getParent().addToBack(new CheckedCell(p));
@@ -855,7 +864,7 @@ public class Hero extends Char {
 							int oldValue = level.map[p];
 							GameScene.discoverTile(p);
 							level.set(p, Terrain.discover(oldValue));
-							GameScene.updateMap(p);
+							GameScene.updateMapPair(p);
 							ScrollOfMagicMapping.discover(p);
 							smthFound = true;
 						}
@@ -1008,6 +1017,7 @@ public class Hero extends Char {
     }
 
     public void setHeroClass(HeroClass heroClass) {
+		EventCollector.setSessionData("class", heroClass.name());
         this.heroClass = heroClass;
     }
 
@@ -1017,6 +1027,7 @@ public class Hero extends Char {
     }
 
     public void setSubClass(HeroSubClass subClass) {
+		EventCollector.setSessionData("subClass", heroClass.name());
         this.subClass = subClass;
     }
 
@@ -1041,7 +1052,7 @@ public class Hero extends Char {
 
 	public void setDifficulty(int difficulty) {
 		this.difficulty = difficulty;
-		Dungeon.setDifficulty(difficulty);
+		GameLoop.setDifficulty(difficulty);
 	}
 
 	public void accumulateSkillPoints() {
@@ -1095,18 +1106,10 @@ public class Hero extends Char {
 		portalLevelPos = position;
 	}
 
-	public int skillLevel() {
-		return Scrambler.descramble(magicLvl);
-	}
-
 	@Override
 	protected void moveSprite(int oldPos, int pos) {
 		getSprite().move(oldPos, getPos());
 
-	}
-
-	public void setSkillLevel(int level) {
-		magicLvl = Scrambler.scramble(level);
 	}
 
 	public void skillLevelUp() {
@@ -1155,6 +1158,7 @@ public class Hero extends Char {
 	}
 
 	public static void performTests() {
+		int difficulty = GameLoop.getDifficulty();
 		var hero = new Hero(2);
 		var buffsNames = BuffFactory.getAllBuffsNames();
 
@@ -1166,6 +1170,7 @@ public class Hero extends Char {
 				GLog.toFile("Buffs auto-test: %s caused %s", buffName, e);
 			}
 		}
+		GameLoop.setDifficulty(difficulty);
 	}
 
 	@Override

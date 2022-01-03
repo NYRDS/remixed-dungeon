@@ -5,7 +5,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class ReturnOnlyOnce implements InterstitialPoint {
 
-    private InterstitialPoint mTarget;
+    private final InterstitialPoint mTarget;
     private int mReturnCounter = 0;
 
     public ReturnOnlyOnce(InterstitialPoint target) {

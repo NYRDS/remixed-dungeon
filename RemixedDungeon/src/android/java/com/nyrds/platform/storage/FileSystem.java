@@ -22,7 +22,7 @@ import lombok.SneakyThrows;
 
 public class FileSystem {
 
-	static public File getInternalStorageFile(String fileName) {
+	static public @NotNull File getInternalStorageFile(String fileName) {
 		File storageDir = getContext().getFilesDir();
 		return new File(storageDir, fileName);
 	}

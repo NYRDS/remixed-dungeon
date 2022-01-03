@@ -21,12 +21,30 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
+import lombok.SneakyThrows;
+
 /**
  * Created by mike on 05.07.2016.
  */
 public class LevelObjectsFactory {
 
-	static private HashMap<String, Class<? extends LevelObject>> mObjectsList;
+    public static final String PEDESTAL = "pedestal";
+    public static final String STATUE = "statue";
+	public static final String STATUE_SP = "statue_sp";
+	public static final String BARRICADE = "barricade";
+	public static final String WELL = "well";
+	public static final String POT = "pot";
+    public static final String FIRE_TRAP = "FireTrap";
+    public static final String TOXIC_TRAP = "ToxicTrap";
+    public static final String PARALYTIC_TRAP = "ParalyticTrap";
+    public static final String POISON_TRAP = "PoisonTrap";
+    public static final String ALARM_TRAP = "AlarmTrap";
+    public static final String LIGHTNING_TRAP = "LightningTrap";
+    public static final String GRIPPING_TRAP = "GrippingTrap";
+    public static final String SUMMONING_TRAP = "SummoningTrap";
+	public static final String PILE_OF_STONES = "pile_of_stones";
+
+    static private HashMap<String, Class<? extends LevelObject>> mObjectsList;
 
 	static  {
 		initObjectsMap();
@@ -55,18 +73,37 @@ public class LevelObjectsFactory {
 		registerObjectClass(Sorrowmoss.class);
 		registerObjectClass(Sungrass.class);
 		registerObjectClass(Moongrace.class);
+		registerObjectClass(CustomObject.class);
 	}
 
 	public static boolean isValidObjectClass(String objectClass) {
 		return mObjectsList.containsKey(objectClass);
 	}
 
+	@SneakyThrows
 	@LuaInterface
-	public static LevelObject createObject(Level level, String jsonDesc) throws JSONException {
-		return createObject(level, JsonHelper.readJsonFromString(jsonDesc));
+	public static LevelObject createObject(Level level, String jsonDesc) {
+		return createLevelObject(level, JsonHelper.readJsonFromString(jsonDesc));
 	}
 
-	public static LevelObject createObject(Level level, JSONObject desc) throws JSONException {
+
+	@SneakyThrows
+	@LuaInterface
+	public static LevelObject createCustomObject(Level level, String kind, int cell) {
+
+		level.clearCellForObject(cell);
+
+		LevelObject obj = objectByName("CustomObject");
+		JSONObject desc = new JSONObject();
+
+		desc.put("object_desc", kind);
+		obj.setPos(cell);
+
+		obj.setupFromJson(level, desc);
+		return obj;
+	}
+
+	public static LevelObject createLevelObject(Level level, JSONObject desc) throws JSONException {
 
 		String objectKind = desc.getString("kind");
 
@@ -74,9 +111,9 @@ public class LevelObjectsFactory {
 
 		int x = desc.getInt("x");
 		int y = desc.getInt("y");
+		obj.setPos(level.cell(x,y));
 
 		obj.setupFromJson(level, desc);
-		obj.setPos(level.cell(x,y));
 		return obj;
 	}
 

@@ -1,5 +1,6 @@
 package com.nyrds.util;
 
+import com.nyrds.lua.LuaEngine;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.Notifications;
 import com.nyrds.platform.game.Game;
@@ -24,7 +25,9 @@ public class ModError extends RuntimeException {
         if(e instanceof LuaError) {
             List<StackTraceElement> stackTraceElements = new ArrayList<>(Arrays.asList(getStackTrace()));
 
-            String[] elements = e.getMessage().split("\n\t");
+            String[] messages = e.getMessage().split(LuaEngine.traceback.DetailsSeparator);
+
+            String[] elements = messages[0].split("\n\t");
             for (int i = elements.length-2;i>0;i--) {
 
                 String[] fields = elements[i].split(":");
@@ -35,7 +38,7 @@ public class ModError extends RuntimeException {
                 fields = elements[i].split("function");
                 String method = "unknown";
 
-                if(fields[1] != null) {
+                if(fields.length > 1 && fields[1] != null) {
                     method = fields[1].replace('\'',' ').trim();
                 }
 

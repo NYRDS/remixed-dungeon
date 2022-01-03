@@ -11,9 +11,12 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
+import lombok.var;
 
 //This is flavor specific class
 public class AdsUtils {
@@ -27,12 +30,13 @@ public class AdsUtils {
     static {
         MobileAds.initialize(RemixedDungeonApp.getContext(), initializationStatus -> {
             AdsUtils.initializationStatus = initializationStatus;
-            initializationStatus.getAdapterStatusMap();
+            var status = initializationStatus.getAdapterStatusMap();
 
-            bannerFails.put(new AdMobBannerProvider(),-2);
-            interstitialFails.put(new AdMobInterstitialProvider(), -2);
+            GLog.debug("admob status: %s", status.toString());
         });
 
+        bannerFails.put(new AdMobBannerProvider(),-2);
+        interstitialFails.put(new AdMobInterstitialProvider(), -2);
 
 
         if(!RemixedDungeonApp.checkOwnSignature()) {

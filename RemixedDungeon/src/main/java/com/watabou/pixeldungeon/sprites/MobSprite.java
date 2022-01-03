@@ -19,8 +19,10 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.watabou.noosa.Animation;
+import com.watabou.noosa.Group;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class MobSprite extends CharSprite {
 
@@ -44,12 +46,13 @@ public class MobSprite extends CharSprite {
 		super.onComplete( anim );
 		
 		if (anim == die) {
-			getParent().add( new AlphaTweener( this, 0, FADE_TIME ) {
-				@Override
-				protected void onComplete() {
-					MobSprite.this.killAndErase();
-				}
-			} );
+			final Group parent = getParent();
+			GameScene.addToMobLayer(new AlphaTweener(this, 0, FADE_TIME) {
+					@Override
+					protected void onComplete() {
+						MobSprite.this.killAndErase();
+					}
+				});
 		}
 	}
 

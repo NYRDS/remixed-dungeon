@@ -122,4 +122,5 @@ public class Util {
     public static boolean isDebug() {
       return BuildConfig.DEBUG || RemixedDungeon.isDev();
     }
+
 }

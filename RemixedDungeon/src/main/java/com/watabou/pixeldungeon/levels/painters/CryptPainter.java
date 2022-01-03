@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
@@ -43,20 +44,20 @@ public class CryptPainter extends Painter {
 		level.addItemToSpawn( new IronKey() );
 		
 		if (entrance.x == room.left) {
-			set( level, new Point( room.right-1, room.top+1 ), Terrain.STATUE );
-			set( level, new Point( room.right-1, room.bottom-1 ), Terrain.STATUE );
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.right-1, room.top+1 )));
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.right-1, room.bottom-1 )));
 			cx = room.right - 2;
 		} else if (entrance.x == room.right) {
-			set( level, new Point( room.left+1, room.top+1 ), Terrain.STATUE );
-			set( level, new Point( room.left+1, room.bottom-1 ), Terrain.STATUE );
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.left+1, room.top+1 )));
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.left+1, room.bottom-1 )));
 			cx = room.left + 2;
 		} else if (entrance.y == room.top) {
-			set( level, new Point( room.left+1, room.bottom-1 ), Terrain.STATUE );
-			set( level, new Point( room.right-1, room.bottom-1 ), Terrain.STATUE );
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.left+1, room.bottom-1 )));
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.right-1, room.bottom-1 )));
 			cy = room.bottom - 2;
 		} else if (entrance.y == room.bottom) {
-			set( level, new Point( room.left+1, room.top+1 ), Terrain.STATUE );
-			set( level, new Point( room.right-1, room.top+1 ), Terrain.STATUE );
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.left+1, room.top+1 )));
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.right-1, room.top+1)));
 			cy = room.top + 2;
 		}
 		

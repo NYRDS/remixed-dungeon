@@ -86,9 +86,9 @@ public class Plant extends LevelObject {
 
 	private void wither() {
 		Dungeon.level.remove(this);
-
-		sprite.kill();
-		if (Dungeon.visible[pos]) {
+		lo_sprite.ifPresent(
+				sprite -> sprite.kill());
+		if (Dungeon.isCellVisible(pos)) {
 			CellEmitter.get(pos).burst(LeafParticle.GENERAL, 6);
 		}
 	}
@@ -108,7 +108,11 @@ public class Plant extends LevelObject {
 
 	@Override
 	public boolean nonPassable(Char ch) {
-		return ch instanceof Hero;
+		return false;
 	}
 
+	@Override
+	public boolean affectItems() {
+		return true;
+	}
 }

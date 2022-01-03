@@ -169,7 +169,7 @@ return Preferences.INSTANCE.getInt( Preferences.KEY_VERSION, 0 );
     public static void immerse(boolean value) {
         Preferences.INSTANCE.put(Preferences.KEY_IMMERSIVE, value);
 
-        Game.instance().runOnUiThread(() -> {
+        GameLoop.runOnMainThread(() -> {
             RemixedDungeon.updateImmersiveMode();
             GameLoop.setNeedSceneRestart();
         });

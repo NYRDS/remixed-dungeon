@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.food.Candy;
 import com.nyrds.pixeldungeon.items.food.PumpkinPie;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -41,7 +42,7 @@ public class ScarecrowNPC extends ImmortalNPC {
 	public boolean interact(final Char hero) {
 		getSprite().turnTo(getPos(), hero.getPos());
 		if (Quest.completed) {
-			this.die(null);
+			this.die(CharsList.DUMMY);
 			return true;
 		}
 

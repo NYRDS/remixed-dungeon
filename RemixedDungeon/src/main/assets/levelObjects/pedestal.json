@@ -1,0 +1,15 @@
+{
+  "kind":"CustomObject",
+
+  "script": "pedestal",
+  "appearance": {
+    "desc": {
+      "desc": "Level_TileDescPedestal",
+      "name": "Level_TilePedestal"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/objects.png",
+      "imageIndex" : 0
+    }
+  }
+}

@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon;
 
+import com.nyrds.LuaInterface;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
@@ -25,6 +26,8 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class DungeonTilemap extends Tilemap {
@@ -34,15 +37,24 @@ public abstract class DungeonTilemap extends Tilemap {
 	static protected Level level;
 
 
-	public DungeonTilemap(Level level, String tiles ) {
+	public DungeonTilemap(@NotNull Level level, String tiles ) {
 		super(tiles, new TextureFilm(tiles, SIZE, SIZE));
 		DungeonTilemap.level = level;
 
 		map(level.map, level.getWidth());
 	}
 
-	static public DungeonTilemap factory(Level level, String tiles) {
+
+	static public @NotNull DungeonTilemap factory(Level level) {
+		String tiles = level.getTilesTex();
+
 		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
+
+
+		if (tiles.contains("_xyz")) {
+			return new XyzDungeonTilemap(level, tiles);
+		}
+
 
 		if(probe.size() == 256) {
 			return new VariativeDungeonTilemap(level, tiles);
@@ -50,6 +62,38 @@ public abstract class DungeonTilemap extends Tilemap {
 
 		return new ClassicDungeonTilemap(level, tiles);
 	}
+
+
+	@LuaInterface
+	static public int getDecoTileForTerrain(Level level, int cell, int terrain) {
+		String tiles = level.getTilesTex();
+
+		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
+
+		if(probe.size() == 256) {
+			return VariativeDungeonTilemap.getDecoTileForTerrain(level, cell, terrain);
+		}
+
+		return terrain;
+	}
+
+	@LuaInterface
+	static public @NotNull String kind(Level level) {
+		String tiles = level.getTilesTex();
+
+		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
+
+		if (tiles.contains("_xyz")) {
+			return "xyz";
+		}
+
+		if(probe.size() == 256) {
+			return "x";
+		}
+
+		return "classic";
+	}
+
 
 	public int screenToTile(int x, int y) {
 		Point p = camera().screenToCamera(x, y).offset(this.point().negate()).invScale(SIZE).floor();
@@ -92,7 +136,8 @@ public abstract class DungeonTilemap extends Tilemap {
 		return new PointF(level.cellX(pos), level.cellY(pos)).scale(SIZE);
 	}
 
-	public static PointF tileCenterToWorld(int pos) {
+	@Contract("_ -> new")
+	public static @NotNull PointF tileCenterToWorld(int pos) {
 		return new PointF((level.cellX(pos) + 0.5f) * SIZE,
 				(level.cellY(pos) + 0.5f) * SIZE);
 	}
@@ -105,4 +150,8 @@ public abstract class DungeonTilemap extends Tilemap {
 	public abstract void updateCell(int cell, Level level);
 
 	public abstract void updateAll();
+
+	public void updateFow(@NotNull FogOfWar fog) {
+		fog.updateVisibility(Dungeon.visible, level.visited, level.mapped, false);
+	}
 }

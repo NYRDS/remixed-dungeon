@@ -11,8 +11,11 @@ public class JarOfSouls extends UndeadMob {
 	public JarOfSouls() {
 		hp(ht(70));
 		baseDefenseSkill = 5;
+		baseAttackSkill = 1;
 		dr = 0;
 
+		dmgMin = 0;
+		dmgMax = 0;
 		pacified = true;
 		
 		exp = 0;
@@ -24,16 +27,6 @@ public class JarOfSouls extends UndeadMob {
 		//lootChance = 1f;
 	}
 
-	@Override
-	public int damageRoll() {
-		return 0;
-	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 0;
-	}
-	
 	@Override
     public boolean act(){
 		super.act();

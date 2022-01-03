@@ -37,6 +37,7 @@ public class EmoIcon extends Image {
 		this.owner = owner;
 		setVisible(false);
 		GameScene.add( this );
+		setIsometricShift(true);
 	}
 	
 	@Override

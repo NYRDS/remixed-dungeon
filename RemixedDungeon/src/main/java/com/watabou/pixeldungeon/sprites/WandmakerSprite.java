@@ -22,6 +22,7 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
+import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class WandmakerSprite extends MobSprite {
 	
@@ -51,7 +52,7 @@ public class WandmakerSprite extends MobSprite {
 		super.link( ch );
 		
 		if (shield == null) {
-			getParent().add( shield = new ManaShield(this) );
+			GameScene.addToMobLayer( shield = new ManaShield(this) );
 		}
 	}
 	

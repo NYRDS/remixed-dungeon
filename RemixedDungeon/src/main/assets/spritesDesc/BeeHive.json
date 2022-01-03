@@ -1,0 +1,10 @@
+{
+  "texture" : "mobs/BeeHive.png",
+  "width"  : 16,
+  "height" : 16,
+  "idle"   : { "fps" : 12,  "looped" : true,     "frames" : [0] },
+  "run"    : { "fps" : 15, "looped" : true,     "frames" : [0] },
+  "attack" : { "fps" : 20, "looped" : false,    "frames" : [0] },
+  "die"    : { "fps" : 20, "looped" : false,    "frames" : [0] },
+  "bloodColor": "0xffd500"
+}

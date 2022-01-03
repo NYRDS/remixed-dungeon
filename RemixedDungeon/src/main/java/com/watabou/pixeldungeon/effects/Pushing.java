@@ -22,6 +22,7 @@ import com.nyrds.platform.EventCollector;
 import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.PointF;
 
 import org.jetbrains.annotations.NotNull;
@@ -87,7 +88,7 @@ public class Pushing extends Actor {
 			
 			delay = 0;
 
-			ch.getSprite().getParent().add( this );
+			GameScene.addToMobLayer( this );
 		}
 		
 		@Override

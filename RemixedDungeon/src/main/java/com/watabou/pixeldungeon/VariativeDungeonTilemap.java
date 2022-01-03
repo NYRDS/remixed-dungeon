@@ -8,7 +8,10 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
 import com.watabou.pixeldungeon.levels.Level;
 
-import org.json.JSONException;
+import java.util.HashMap;
+import java.util.Map;
+
+import lombok.SneakyThrows;
 
 /**
  * Created by mike on 15.02.2018.
@@ -16,9 +19,12 @@ import org.json.JSONException;
  */
 
 public class VariativeDungeonTilemap extends DungeonTilemap {
+    public static final String TILES_X_DEFAULT_JSON = "tilemapDesc/tiles_x_default.json";
     private final Tilemap mDecoLayer;
 
     private final XTilemapConfiguration xTilemapConfiguration;
+
+    static Map<String, XTilemapConfiguration> xTilemapConfigurationCache = new HashMap<>();
 
     private final Level level;
 
@@ -30,15 +36,12 @@ public class VariativeDungeonTilemap extends DungeonTilemap {
 
         int mSize = level.getWidth() * level.getHeight();
 
-        try {
-            String tilemapConfig = "tilemapDesc/" + tiles.replace(".png", ".json");
-            if (!ModdingMode.isResourceExist(tilemapConfig)) {
-                tilemapConfig = "tilemapDesc/tiles_x_default.json";
-            }
-            xTilemapConfiguration = XTilemapConfiguration.readConfig(tilemapConfig);
-        } catch (JSONException e) {
-            throw ModdingMode.modException(e);
+        String tilemapConfig = "tilemapDesc/" + tiles.replace(".png", ".json");
+        if (!ModdingMode.isResourceExist(tilemapConfig)) {
+            tilemapConfig = TILES_X_DEFAULT_JSON;
         }
+
+        xTilemapConfiguration = getTilemap(tilemapConfig);
 
         data = new int[level.getWidth()*level.getHeight()];
         map(buildGroundMap(),level.getWidth());
@@ -113,5 +116,18 @@ public class VariativeDungeonTilemap extends DungeonTilemap {
     public void brightness(float value) {
         super.brightness(value);
         mDecoLayer.brightness(value);
+    }
+
+    @SneakyThrows
+    static XTilemapConfiguration getTilemap(String name) {
+        if(!xTilemapConfigurationCache.containsKey(name)) {
+            xTilemapConfigurationCache.put(name, XTilemapConfiguration.readConfig(name));
+        }
+
+        return xTilemapConfigurationCache.get(name);
+    }
+
+    static public int getDecoTileForTerrain(Level level, int cell, int terrain) {
+        return getTilemap(TILES_X_DEFAULT_JSON).getDecoTileForTerrain(cell, terrain);
     }
 }

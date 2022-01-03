@@ -39,6 +39,9 @@ import org.jetbrains.annotations.NotNull;
 
 public class Eye extends Mob {
 
+    int [] trace;
+    int distance = 0;
+
     public Eye() {
         hp(ht(100));
         baseDefenseSkill = 20;
@@ -73,8 +76,11 @@ public class Eye extends Mob {
 
         Ballistica.cast(getPos(), enemy.getPos(), true, false);
 
-        for (int i = 1; i < Ballistica.distance; i++) {
-            if (Ballistica.trace[i] == enemy.getPos()) {
+        trace = Ballistica.trace.clone();
+        distance = Ballistica.distance;
+
+        for (int i = 1; i < distance; i++) {
+            if (trace[i] == enemy.getPos()) {
                 return true;
             }
         }
@@ -88,10 +94,8 @@ public class Eye extends Mob {
 
     @Override
     protected int zapProc(@NotNull Char enemy, int damage) {
-        Ballistica.cast(getPos(), enemy.getPos(), true, false);
-
-        for (int i = 1; i < Ballistica.distance; i++) {
-            int cell = Ballistica.trace[i];
+        for (int i = 1; i < distance; i++) {
+            int cell = trace[i];
 
             Char victim = Actor.findChar(cell);
             if (victim != null) {
@@ -99,7 +103,7 @@ public class Eye extends Mob {
                     victim.damage(Random.NormalIntRange(14, 20), this);
                     int pos = victim.getPos();
 
-                    if (Dungeon.visible[pos]) {
+                    if (Dungeon.isCellVisible(pos)) {
                         victim.getSprite().flash();
                         CellEmitter.center(pos).burst(PurpleParticle.BURST, Random.IntRange(1, 2));
                     }
@@ -110,7 +114,7 @@ public class Eye extends Mob {
                 }
             }
         }
+        distance = 0;
         return damage;
     }
-
 }

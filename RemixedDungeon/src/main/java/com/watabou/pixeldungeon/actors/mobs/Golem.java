@@ -25,6 +25,8 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Golem extends Mob {
 	
 	public Golem() {
@@ -53,7 +55,7 @@ public class Golem extends Mob {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		Imp.Quest.process( this );
 		
 		super.die( cause );

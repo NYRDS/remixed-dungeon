@@ -169,7 +169,7 @@ public class Ghost extends NPC {
 					CellEmitter.get( getPos() ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 					setPos(newPos);
 					getSprite().place( getPos() );
-					getSprite().setVisible(Dungeon.visible[getPos()]);
+					getSprite().setVisible(Dungeon.isCellVisible(getPos()));
 				}
 			}
 			

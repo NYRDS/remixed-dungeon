@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.effects.emitters.Vein;
+import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
@@ -36,7 +37,12 @@ public class CavesLevel extends RegularLevel {
 		
 		viewDistance = 6;
 	}
-	
+
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_CAVES_XYZ;
+	}
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_CAVES;
@@ -136,12 +142,8 @@ public class CavesLevel extends RegularLevel {
 				}
 			}
 		}
-		
-		for (int i=0; i < getLength(); i++) {
-			if (map[i] == Terrain.WALL && Random.Int( 12 ) == 0) {
-				set(i, Terrain.WALL_DECO);
-			}
-		}
+
+		LevelTools.northWallDecorate(this, 10, 8);
 
 		placeEntranceSign();
 		
@@ -220,4 +222,8 @@ public class CavesLevel extends RegularLevel {
 		}
 	}
 
+	@Override
+	public int objectsKind() {
+		return 2;
+	}
 }

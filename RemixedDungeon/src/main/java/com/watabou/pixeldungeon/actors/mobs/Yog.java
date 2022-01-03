@@ -70,6 +70,9 @@ public class Yog extends Boss {
 		movable = false;
 		exp = 50;
 
+		baseDefenseSkill = 20;
+		baseAttackSkill  = 20;
+
 		setState(MobAi.getStateByClass(Passive.class));
 
 		addImmunity(Death.class);
@@ -134,7 +137,7 @@ public class Yog extends Boss {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		Mob mob = level().getRandomMob();
 		while(mob != null){
 			mob.remove();

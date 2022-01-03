@@ -22,7 +22,7 @@ public class Terrain {
 	public static final int CHASM = 0;
 	public static final int EMPTY = 1;
 	public static final int GRASS = 2;
-	public static final int EMPTY_WELL = 3;
+	public static final int EMPTY_WELL = 3; //deprecated
 	public static final int WALL = 4;
 	public static final int DOOR = 5;
 	public static final int OPEN_DOOR = 6;
@@ -30,26 +30,28 @@ public class Terrain {
 	public static final int EXIT = 8;
 	public static final int EMBERS = 9;
 	public static final int LOCKED_DOOR = 10;
-	public static final int PEDESTAL = 11;
+	public static final int PEDESTAL = 11; //deprecated
 	public static final int WALL_DECO = 12;
-	public static final int BARRICADE = 13;
+	public static final int BARRICADE = 13; // deprecated
 	public static final int EMPTY_SP = 14;
 	public static final int HIGH_GRASS = 15;
 	public static final int EMPTY_DECO = 24;
 	public static final int LOCKED_EXIT = 25;
 	public static final int UNLOCKED_EXIT = 26;
-	public static final int SIGN = 29;
-	public static final int WELL = 34;
-	public static final int STATUE = 35;
-	public static final int STATUE_SP = 36;
-	public static final int BOOKSHELF = 41;
-	public static final int ALCHEMY = 42;
+	public static final int SIGN = 29; //deprecated
+	public static final int WELL = 34; //deprecated
+	public static final int STATUE = 35; //deprecated
+	public static final int STATUE_SP = 36; //deprecated
+	public static final int BOOKSHELF = 41; //Alternative wall actually
+	public static final int ALCHEMY = 42; //deprecated
 	public static final int CHASM_FLOOR = 43;
 	public static final int CHASM_FLOOR_SP = 44;
 	public static final int CHASM_WALL = 45;
 	public static final int CHASM_WATER = 46;
 
 	public static final int SECRET_DOOR = 16;
+
+	//all deprecated
 	public static final int TOXIC_TRAP = 17;
 	public static final int SECRET_TOXIC_TRAP = 18;
 	public static final int FIRE_TRAP = 19;

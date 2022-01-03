@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.levels.objects;
 
 import androidx.annotation.Keep;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.ml.R;
@@ -92,6 +93,21 @@ public class Trap extends LevelObject {
 		return ret;
 	}
 
+	@LuaInterface
+	public void reactivate(String kind, int uses) {
+		this.kind = kind;
+		this.uses = uses;
+		lo_sprite.ifPresent(
+				sprite -> sprite.reset(image()));
+	}
+
+	public void deactivate() {
+		uses = 0;
+		lo_sprite.ifPresent(
+				sprite -> sprite.reset(usedImage()));
+
+	}
+
 	@Override
 	public boolean stepOn(Char chr) {
 		interact(chr);
@@ -142,7 +158,9 @@ public class Trap extends LevelObject {
 				trigger.doTrigger(targetCell, hero);
 			}
 			if (uses == 0) {
-				sprite.reset(usedImage());
+				lo_sprite.ifPresent(
+						sprite -> sprite.reset(usedImage()));
+				level().markObjectFlags(this, getPos());
 			}
 		}
 	}
@@ -176,7 +194,9 @@ public class Trap extends LevelObject {
 	@Override
 	public void discover() {
 		secret = false;
-		sprite.setVisible(true);
+		lo_sprite.ifPresent(
+				sprite -> sprite.setVisible(true));
+		level().markObjectFlags(this, getPos());
 	}
 
 	@Override
@@ -186,11 +206,17 @@ public class Trap extends LevelObject {
 
 	@Override
 	public String desc() {
+		if(uses <= 0) {
+			return StringsManager.getVar(R.string.Level_TileDescInactiveTrap);
+		}
 		return StringsManager.getVar(R.string.Level_TileDescTrap);
 	}
 
 	@Override
 	public String name() {
+		if(uses <= 0) {
+			return StringsManager.getVar(R.string.Level_TileInactiveTrap);
+		}
 		return StringsManager.maybeId("Level_Tile"+kind);
 	}
 
@@ -200,7 +226,7 @@ public class Trap extends LevelObject {
 			if(imageIndex >= 0) {
 				return imageIndex;
 			}
-			int nKind = Util.indexOf(traps, kind);
+			int nKind = Util.indexOf(traps, kind) + 16 * level().objectsKind();
 			return nKind + 1;
 		} else {
 			return usedImage();
@@ -211,17 +237,30 @@ public class Trap extends LevelObject {
 		if(usedImageIndex >= 0) {
 			return usedImageIndex;
 		}
-		return 0;
+		return 0 + 16 * level().objectsKind();
 	}
 
 	@Override
 	public boolean nonPassable(Char ch) {
+		if(ch instanceof Mob) {
+			return !secret && uses > 0;
+		}
+		return false;
+	}
+
+	@Override
+	public boolean avoid() {
 		return !secret && uses > 0;
 	}
 
 	@Override
 	public String getEntityKind() {
 		return kind;
+	}
+
+	@Override
+	public boolean affectItems() {
+		return true;
 	}
 
 	static class ScriptTrap implements ITrigger {
@@ -240,5 +279,10 @@ public class Trap extends LevelObject {
 			trap.get("setData").call(trap,LuaValue.valueOf(data));
 			trap.get("trigger").call(trap,LuaValue.valueOf(cell), CoerceJavaToLua.coerce(ch));
 		}
+	}
+
+	@Override
+	public boolean ignoreIsometricShift() {
+		return true;
 	}
 }

@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.items.food;
 
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
@@ -14,7 +15,7 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
@@ -68,7 +69,9 @@ abstract public class RottenFood extends Food{
 	
 	@Override
 	protected void onThrow(int cell, @NotNull Char thrower) {
-	   if (Dungeon.level.map[cell] == Terrain.WELL || Dungeon.level.pit[cell]) {
+		final Level level = Dungeon.level;
+		LevelObject lo = level.getTopLevelObject(cell);
+		if ((lo != null && lo.affectItems()) || level.pit[cell]) {
 			super.onThrow( cell, thrower);
 		} else  {
 			if(! molder( cell )){

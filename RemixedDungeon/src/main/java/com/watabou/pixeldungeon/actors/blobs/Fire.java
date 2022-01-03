@@ -28,6 +28,7 @@ import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
@@ -36,7 +37,8 @@ public class Fire extends Blob {
 	@Override
 	protected void evolve() {
 
-		boolean[] flammable = Dungeon.level.flammable;
+		final Level level = Dungeon.level;
+		boolean[] flammable = level.flammable;
 		
 		int from = getWidth() + 1;
 		int to   = getLength() - getWidth() - 1;
@@ -54,11 +56,12 @@ public class Fire extends Blob {
 				fire = cur[pos] - 1;
 				if (fire <= 0 && flammable[pos]) {
 					
-					Dungeon.level.set( pos, Terrain.EMBERS );
+					level.set( pos, Terrain.EMBERS );
 					
 					observe = true;
-					GameScene.updateMap( pos );
-					if (Dungeon.visible[pos]) {
+					GameScene.updateMapPair(pos);
+
+					if (Dungeon.isCellVisible(pos)) {
 						GameScene.discoverTile( pos);
 					}
 				}
@@ -84,18 +87,22 @@ public class Fire extends Blob {
 	}
 	
 	public static void burn( int pos ) {
+		//GLog.debug("Burn %d", pos);
 		Char ch = Actor.findChar( pos );
 		if (ch != null) {
 			Buff.affect( ch, Burning.class ).reignite( ch );
 		}
-		
-		Heap heap = Dungeon.level.getHeap( pos );
+
+		final Level level = Dungeon.level;
+
+		Heap heap = level.getHeap( pos );
 		if (heap != null) {
 			heap.burn();
 		}
 
-		LevelObject levelObject = Dungeon.level.getLevelObject(pos);
+		LevelObject levelObject = level.getTopLevelObject(pos);
 		if (levelObject != null) {
+			//GLog.debug("Obj %s %d", levelObject.getEntityKind(), pos);
 			levelObject.burn();
 		}
 	}

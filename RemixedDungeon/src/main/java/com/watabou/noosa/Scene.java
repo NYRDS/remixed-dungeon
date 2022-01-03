@@ -27,11 +27,14 @@ import com.watabou.utils.Signal;
 import java.util.ArrayList;
 
 public class Scene extends Group {
-	
+
+	public static final String LEVELS_TEST = "levelsTest";
+
 	private Signal.Listener<Keys.Key> keyListener;
 	private final ArrayList<Window> activeWindows = new ArrayList<>();
 
 	static protected LuaScript script = new LuaScript("scripts/services/scene", null);
+	static public String sceneMode = "none";
 
 	public void create() {
 		Keys.event.add( keyListener = key -> {
@@ -95,6 +98,7 @@ public class Scene extends Group {
 	}
 
 	public static void setMode(String mode) {
+		sceneMode = mode;
 		script.run("setMode", mode);
 	}
 }

@@ -53,7 +53,7 @@ public class Freezing {
 			heap.freeze();
 		}
 
-		if (Dungeon.visible[cell]) {
+		if (Dungeon.isCellVisible(cell)) {
 			CellEmitter.get( cell ).start( SnowParticle.FACTORY, 0.2f, 6 );
 		}
 	}

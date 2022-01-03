@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.mechanics;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.levels.Level;
@@ -106,10 +107,17 @@ public class Ballistica {
 			if (!level.passable[cell] && !level.avoid[cell]) {
 				return trace[--distance - 1];
 			}
-			
+
+
+			final LevelObject levelObject = level.getTopLevelObject(cell);
+
 			if (level.losBlocking[cell]
 					|| (hitChars && Actor.findChar( cell ) != null)
-					|| (hitObjects && level.getLevelObject(cell) != null)) {
+					|| (hitObjects && levelObject != null && levelObject.getLayer() >= 0 )) {
+				return cell;
+			}
+
+			if(levelObject != null && levelObject.losBlocker()) {
 				return cell;
 			}
 		}

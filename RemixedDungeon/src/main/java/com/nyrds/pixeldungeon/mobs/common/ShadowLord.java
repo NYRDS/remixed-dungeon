@@ -4,7 +4,8 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.Fleeing;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
-import com.nyrds.pixeldungeon.levels.Tools;
+import com.nyrds.pixeldungeon.levels.LevelTools;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
@@ -27,8 +28,9 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Callback;
 
 import org.jetbrains.annotations.NotNull;
@@ -91,22 +93,26 @@ public class ShadowLord extends Boss implements IZapper {
 
 		if(!levelCreated)
 		{
-			Tools.makeEmptyLevel(level, false);
-			Tools.buildShadowLordMaze(level, 6);
+			LevelTools.makeEmptyLevel(level, false);
+			LevelTools.buildShadowLordMaze(level, 6);
 			levelCreated = true;
 		}
 
-		int cell = level.getRandomTerrainCell(Terrain.PEDESTAL);
+
+		int cell = level.getRandomLevelObjectPosition(LevelObjectsFactory.PEDESTAL);
 		if (level.cellValid(cell)) {
 			if (Actor.findChar(cell) == null) {
 				Mob mob = Crystal.makeShadowLordCrystal();
 				mob.setPos(cell);
 				level.spawnMob(mob);
 
-				mob.getSprite().alpha( 0 );
-				mob.getSprite().getParent().add( new AlphaTweener( mob.getSprite(), 1, 0.4f ) );
+				final CharSprite sprite = mob.getSprite();
 
-				mob.getSprite().emitter().start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
+				sprite.alpha( 0 );
+				GameScene.addToMobLayer(new AlphaTweener(sprite, 1, 0.4f));
+
+
+				sprite.emitter().start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 				Sample.INSTANCE.play( Assets.SND_TELEPORT );
 
 				int x, y;
@@ -185,12 +191,11 @@ public class ShadowLord extends Boss implements IZapper {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		super.die(cause);
         yell(StringsManager.getVar(R.string.ShadowLord_Death));
-		Tools.makeEmptyLevel(level(), false);
+		LevelTools.makeEmptyLevel(level(), false);
 		level().unseal();
 		Badges.validateBossSlain(Badges.Badge.SHADOW_LORD_SLAIN);
 	}
-
 }

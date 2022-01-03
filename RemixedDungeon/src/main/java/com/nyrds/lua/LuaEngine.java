@@ -5,18 +5,15 @@ package com.nyrds.lua;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-import com.nyrds.platform.EventCollector;
+import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.platform.lua.PlatformLuajavaLib;
-import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import org.apache.commons.io.input.BOMInputStream;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.luaj.vm2.Globals;
 import org.luaj.vm2.LoadState;
-import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaString;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
@@ -38,19 +35,27 @@ import org.luaj.vm2.lib.jse.JseMathLib;
 import org.luaj.vm2.lib.jse.JseOsLib;
 
 import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
 
+import lombok.Synchronized;
 import lombok.var;
 
 public class LuaEngine implements ResourceFinder {
 
-	class traceback extends VarArgFunction {
+	public class traceback extends VarArgFunction {
+
+		public static final String DetailsSeparator = "\n!!!!!!!!\n";
+
 		public Varargs invoke(Varargs args) {
 
+			String errMsg = args.arg1() + "\n" + globals.debuglib.traceback(1);
 			if(stp!=null) {
-				GLog.toFile("\n%s\n",LuaString.valueOf(args.arg1() + "\n" + stp.get("stacktrace").call()));
+				errMsg  += DetailsSeparator + stp.get("stacktrace").call();
 			}
+			GLog.toFile("\n%s\n",errMsg);
 
-			return LuaString.valueOf(args.arg1() + "\n" + globals.debuglib.traceback(1));
+			return LuaString.valueOf(errMsg);
 		}
 	}
 
@@ -60,50 +65,43 @@ public class LuaEngine implements ResourceFinder {
 
     static private      LuaEngine engine              = new LuaEngine();
 
+    public static Map<String, LuaTable> modules = new HashMap<>();
+    public static Map<LuaScript, LuaTable> moduleInstance = new HashMap<>();
+
     private final LuaValue stp;
 
 	private final Globals globals;
 
+	@Synchronized
 	public static void reset() {
 		engine = new LuaEngine();
+		modules.clear();
+		moduleInstance.clear();
 	}
+
 	public LuaValue call(String method) {
 		return globals.get(method).call();
 	}
 
 	public LuaValue call(String method, Object arg1) {
-		try {
-			LuaValue methodForData = globals.get(method);
-			return methodForData.call(CoerceJavaToLua.coerce(arg1));
-		} catch (LuaError err) {
-			throw new ModError( String.format("Error when calling %s", method), err);
-		}
+		LuaValue methodForData = globals.get(method);
+		return methodForData.call(CoerceJavaToLua.coerce(arg1));
 	}
 
-	@Nullable
-	public static LuaTable moduleInstance(String module) {
+	@Synchronized
+	public static LuaTable moduleInstance(LuaScript script, String module) {
+		if(moduleInstance.containsKey(script)) {
+			return moduleInstance.get(script);
+		}
+
 		LuaValue luaModule = getEngine().call("dofile", module+".lua");
 
 		if(luaModule.istable()) {
-			return luaModule.checktable();
+			moduleInstance.put(script, luaModule.checktable());
+			return moduleInstance.get(script);
 		}
 
-		EventCollector.logException("failed to load instance of lua module: "+module);
-		return null;
-	}
-
-
-	@Nullable
-	public static LuaTable module(String module) {
-		LuaValue luaModule = getEngine().call("require", module);
-
-		if(luaModule.istable()) {
-			return luaModule.checktable();
-		}
-
-		EventCollector.logException("failed to load lua module: "+module);
-
-		return null;
+		throw new RuntimeException("failed to load instance of lua module: "+module);
 	}
 
 
@@ -113,6 +111,7 @@ public class LuaEngine implements ResourceFinder {
 		}
 	}
 
+	@Synchronized
 	public static LuaEngine getEngine() {
 		return engine;
 	}
@@ -143,16 +142,24 @@ public class LuaEngine implements ResourceFinder {
 		stp = call("require","scripts/lib/StackTracePlus");
 	}
 
-	public LuaTable require(String module) {
-		return module(module);
+	@Synchronized
+	static public LuaTable require(String module) {
+		if(modules.containsKey(module)) {
+			return modules.get(module);
+		}
+
+		LuaValue luaModule = getEngine().call("require", module);
+
+		if(luaModule.istable()) {
+			modules.put(module, luaModule.checktable());
+			return modules.get(module);
+		}
+
+		throw new RuntimeException("failed to load lua module: "+ module);
 	}
 
 	public void runScriptFile(@NotNull String fileName) {
-		try {
-			globals.loadfile(fileName).call();
-		} catch (LuaError err) {
-			throw new ModError( String.format("Error when running %s", fileName), err);
-		}
+		globals.loadfile(fileName).call();
 	}
 
 	@Override

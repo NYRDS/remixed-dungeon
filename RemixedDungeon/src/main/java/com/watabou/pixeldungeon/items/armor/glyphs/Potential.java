@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -52,7 +53,7 @@ public class Potential extends Glyph {
 			}
 			
 			int[] points = {attacker.getPos(), defender.getPos()};
-			attacker.getSprite().getParent().add( new Lightning( points ) );
+			GameScene.addToMobLayer( new Lightning( points ) );
 		}
 		
 		return damage;

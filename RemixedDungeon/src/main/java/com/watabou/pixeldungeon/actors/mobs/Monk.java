@@ -62,7 +62,7 @@ public class Monk extends Mob {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		Imp.Quest.process( this );
 		
 		super.die( cause );

@@ -22,7 +22,9 @@ public class ReportingExecutor extends ThreadPoolExecutor {
                 new ThreadFactory() {
                     @Override
                     public Thread newThread(@NotNull Runnable r) {
-                        return new Thread(r, "ReportingExecutor: "+this.hashCode());
+                        Thread thread =  new Thread(r, "ReportingExecutor: "+this.hashCode());
+                        thread.setPriority(Thread.MIN_PRIORITY);
+                        return thread;
                     }
                 }
         );

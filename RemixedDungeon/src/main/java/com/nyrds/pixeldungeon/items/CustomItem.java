@@ -214,6 +214,11 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
+    public String name() {
+        return StringsManager.maybeId(script.runOptional("name",name));
+    }
+
+    @Override
     public String bag() {
         return script.runOptional("bag",super.bag());
     }
@@ -356,6 +361,11 @@ public class CustomItem extends EquipableItem {
     public boolean doPickUp(@NotNull Char hero) {
         script.runOptionalNoRet("onPickUp", hero);
         return super.doPickUp(hero);
+    }
+
+    @Override
+    public float time2equipBase() {
+        return script.runOptional("time2equip",super.time2equipBase());
     }
 
     private class CustomItemCellListener implements CellSelector.Listener {

@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.support;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;
@@ -35,7 +36,7 @@ public class Ads {
     }
 
     public static void removeEasyModeBanner() {
-        Game.instance().runOnUiThread(() -> {
+        GameLoop.runOnMainThread(() -> {
             int index = AdsUtils.bannerIndex();
             if (index >= 0) {
 
@@ -47,7 +48,7 @@ public class Ads {
     }
 
     static void updateBanner(final View view) {
-        Game.instance().runOnUiThread(() -> {
+        GameLoop.runOnMainThread(() -> {
 
             int index = AdsUtils.bannerIndex();
             final LinearLayout layout = Game.instance().getLayout();

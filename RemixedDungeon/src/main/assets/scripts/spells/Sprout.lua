@@ -48,10 +48,10 @@ return spell.init{
             end
 
             if caster:lvl()/(RPD.Dungeon.depth + 1) > math.random() then
-            local seed = seeds[math.random(1, #seeds)]
-            level:plant(RPD.createItem(seed),cell)
+                local seed = seeds[math.random(1, #seeds)]
+                level:plant(RPD.createItem(seed),cell)
             end
-            end)
+        end)
 
         return true
     end

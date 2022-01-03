@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
@@ -25,6 +26,11 @@ public class NecroBossLevel extends BossLevel {
 	private static final int CHAMBER_HEIGHT	= 4;
 
 	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_NECRO_XYZ;
+	}
+
+	@Override
 	public String tilesTex() {
 		return Assets.TILES_NECRO;
 	}
@@ -41,8 +47,8 @@ public class NecroBossLevel extends BossLevel {
 		
 		int y = TOP + 1;
 		while (y < TOP + HALL_HEIGHT) {
-			map[y * getWidth() + _Center() - 3] = Terrain.STATUE;
-			map[y * getWidth() + _Center() + 3] = Terrain.STATUE;
+			putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, y * getWidth() + _Center() - 3));
+			putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, y * getWidth() + _Center() + 3));
 			y += 2;
 		}
 
@@ -51,7 +57,12 @@ public class NecroBossLevel extends BossLevel {
 		int pedestal_3 = (TOP + HALL_HEIGHT / 4) * getWidth() + _Center() + 2;
 		int pedestal_4 = (TOP + HALL_HEIGHT / 2 + HALL_HEIGHT / 4) * getWidth() + _Center() + 2;
 
-		map[pedestal_1] = map[pedestal_2] = map[pedestal_3] = map[pedestal_4] = Terrain.PEDESTAL;
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, pedestal_1));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, pedestal_2));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, pedestal_3));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, pedestal_4));
+
+		//map[pedestal_1] = map[pedestal_2] = map[pedestal_3] = map[pedestal_4] = Terrain.PEDESTAL;
 		
 		setExit((TOP - 1) * getWidth() + _Center(),0);
 		
@@ -71,8 +82,8 @@ public class NecroBossLevel extends BossLevel {
 	@Override
 	protected void decorate() {
 
-		for (int i=0; i < getLength(); i++) {
-			if (map[i] == Terrain.WALL && Random.Int( 8 ) == 0) {
+		for (int i=0; i < getLength() - getWidth(); i++) {
+			if (map[i] == Terrain.WALL && map[i+getWidth()]==Terrain.EMPTY && Random.Int( 8 ) == 0) {
 				map[i] = Terrain.WALL_DECO;
 			}
 		}
@@ -133,5 +144,11 @@ public class NecroBossLevel extends BossLevel {
 
 	private int _Center() {
 		return _Left() + HALL_WIDTH / 2;
+	}
+
+
+	@Override
+	public int objectsKind() {
+		return 7;
 	}
 }

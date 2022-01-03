@@ -24,6 +24,7 @@ import com.nyrds.pixeldungeon.effects.ParticleEffect;
 import com.nyrds.pixeldungeon.effects.ZapEffect;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.TestLevel;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
@@ -39,7 +40,9 @@ import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
+import com.nyrds.util.WeakOptional;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.SkinnedBlock;
@@ -55,6 +58,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.FogOfWar;
 import com.watabou.pixeldungeon.Statistics;
+import com.watabou.pixeldungeon.XyzDungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -74,6 +78,7 @@ import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
+import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.DiscardedItemSprite;
@@ -97,7 +102,6 @@ import com.watabou.pixeldungeon.windows.WndBag.Mode;
 import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 import com.watabou.utils.Random;
-import com.watabou.utils.SparseArray;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -115,6 +119,7 @@ public class GameScene extends PixelScene {
     private SkinnedBlock water;
 
     private DungeonTilemap logicTiles;
+
     private DungeonTilemap baseTiles;
 
     @Nullable
@@ -127,6 +132,7 @@ public class GameScene extends PixelScene {
     private Group ripples;
     private Group bottomEffects;
     private Group objects;
+    private Group objectEffects;
     private Group heaps;
     private Group mobs;
     private Group emitters;
@@ -190,6 +196,7 @@ public class GameScene extends PixelScene {
     public void createGameScene(@NotNull Level level, @NotNull Hero hero) {
         playLevelMusic();
 
+        LevelTools.upgradeMap(level);
         GamePreferences.lastClass(hero.getHeroClass().classIndex());
 
         super.create();
@@ -220,7 +227,12 @@ public class GameScene extends PixelScene {
 		}
 
         if (!level.customTiles()) {
-            baseTiles = DungeonTilemap.factory(level, level.getTilesetForLayer(Level.LayerId.Base));
+            baseTiles = DungeonTilemap.factory(level);
+
+            if(baseTiles instanceof XyzDungeonTilemap) {
+                roofTiles = ((XyzDungeonTilemap)baseTiles).roofTilemap();
+            }
+
         } else {
             CustomLayerTilemap tiles = new CustomLayerTilemap(level, Level.LayerId.Base);
             tiles.addLayer(Level.LayerId.Deco);
@@ -240,12 +252,8 @@ public class GameScene extends PixelScene {
         objects = new Group();
         add(objects);
 
-        for (int i = 0; i < level.objects.size(); i++) {
-            SparseArray<LevelObject> objectLayer = level.objects.valueAt(i);
-            for (int j = 0; j < objectLayer.size(); j++) {
-                addLevelObjectSprite(objectLayer.valueAt(j));
-            }
-        }
+        objectEffects = new Group();
+        add(objectEffects);
 
         level.addVisuals(this);
 
@@ -286,6 +294,7 @@ public class GameScene extends PixelScene {
                     mob.beckon(hero.getPos());
                 }
             }
+            mob.regenSprite();
         }
 
         add(emitters);
@@ -309,18 +318,20 @@ public class GameScene extends PixelScene {
             add(roofTiles);
         }
 
-        fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
-        add(fog);
-
-        brightness(GamePreferences.brightness());
 
         spells = new Group();
         add(spells);
+
+        fog.updateVisibility(Dungeon.visible, level.visited, level.mapped, false);
+        add(fog);
 
         statuses = new Group();
         add(statuses);
 
         add(emoicons);
+
+        brightness(GamePreferences.brightness());
+
 
         add(new HealthIndicator());
 
@@ -416,6 +427,19 @@ public class GameScene extends PixelScene {
         Camera.main.target = hero.getHeroSprite();
 
         level.activateScripts();
+        LevelTools.upgradeMap(level); // Epic level gen compatibility
+
+        for (var lo: level.getAllLevelObjects()) {
+            GLog.debug("creating lo: %s", lo.getEntityKind());
+
+            if(lo.getEntityKind().contains("ShadowTile")) {
+                GLog.debug("creating ShadowTile");
+            }
+
+            lo.lo_sprite.clear();
+            addLevelObjectSprite(lo);
+            lo.addedToScene();
+        }
 
         fadeIn();
 
@@ -423,7 +447,6 @@ public class GameScene extends PixelScene {
         hero.updateSprite();
         hero.readyAndIdle();
         QuickSlot.refresh(hero);
-
 
         doSelfTest();
 
@@ -465,8 +488,8 @@ public class GameScene extends PixelScene {
             if(!(level instanceof TestLevel) && !ModdingMode.inMod()) {
                 for (var lo : level.getAllLevelObjects()) {
                     int pos = lo.getPos();
-                    if (!level.passable[pos]) {
-                        throw new ModError(Utils.format("%s on a non-passable cell %d. level %s", lo.getEntityKind(), pos, level.levelId));
+                    if (!TerrainFlags.is(level.map[pos],TerrainFlags.PASSABLE)) {
+                        throw new ModError(Utils.format("%s on a non-passable cell %d (%d) . level %s", lo.getEntityKind(), pos, level.map[pos], level.levelId));
                     }
 
                     if (level.pit[pos]) {
@@ -485,6 +508,7 @@ public class GameScene extends PixelScene {
     }
 
     public void destroy() {
+        sceneCreated = false;
         scene = null;
         Badges.saveGlobal();
 
@@ -494,7 +518,10 @@ public class GameScene extends PixelScene {
     @Override
     public synchronized void pause() {
         if(!Game.softPaused) {
-            Dungeon.save(false);
+            final Hero hero = Dungeon.hero;
+            if(hero != null && hero.isAlive()) {
+                Dungeon.save(false);
+            }
         }
     }
 
@@ -538,7 +565,6 @@ public class GameScene extends PixelScene {
             observeRequested = false;
             Dungeon.observeImpl();
         }
-
     }
 
     @Override
@@ -584,20 +610,25 @@ public class GameScene extends PixelScene {
     }
 
     private void addLevelObjectSprite(@NotNull LevelObject obj) {
-        (obj.sprite = (LevelObjectSprite) objects.recycle(LevelObjectSprite.class)).reset(obj);
+        obj.lo_sprite = WeakOptional.of( (LevelObjectSprite)objects.recycle(LevelObjectSprite.class) );
+        obj.lo_sprite.ifPresent (sprite -> sprite.reset(obj));
+        obj.addedToScene();
     }
 
     private void addHeapSprite(@NotNull Heap heap) {
         ItemSprite sprite = heap.sprite = (ItemSprite) heaps.recycle(ItemSprite.class);
         sprite.revive();
         sprite.link(heap);
+        sprite.setIsometricShift(true);
         heaps.add(sprite);
     }
 
     private void addDiscardedSprite(@NotNull Heap heap) {
         heap.sprite = (DiscardedItemSprite) heaps.recycle(DiscardedItemSprite.class);
+        heap.sprite.setIsometricShift(true);
         heap.sprite.revive();
         heap.sprite.link(heap);
+        heap.sprite.setIsometricShift(true);
         heaps.add(heap.sprite);
     }
 
@@ -688,10 +719,12 @@ public class GameScene extends PixelScene {
         }
     }
 
+
     @LuaInterface
     public static Group particleEffect(String effectName, int cell) {
         if (isSceneReady()) {
             Group effect = ParticleEffect.addToCell(effectName, cell);
+            effect.setIsometricShift(Dungeon.isIsometricMode());
             scene.add(effect);
             return effect;
         }
@@ -711,10 +744,14 @@ public class GameScene extends PixelScene {
                 case 1:
                     scene.effects.add(effect);
                     break;
+                case 2:
+                    scene.objectEffects.add(effect);
+                    break;
                 default:
                     GLog.n("Bad layer %d for %s", layer, effectName);
             }
         }
+        effect.setIsometricShift(true);
         effect.playAnimOnce();
         return effect;
     }
@@ -762,7 +799,23 @@ public class GameScene extends PixelScene {
 
     public static void updateMap(int cell) {
         if (isSceneReady()) {
-            scene.baseTiles.updateCell(cell, Dungeon.level);
+            final Level level = Dungeon.level;
+            if(level.cellValid(cell)) {
+                scene.baseTiles.updateCell(cell, level);
+            } else {
+                EventCollector.logException(Utils.format("Attempt to update invalid %d on %s", cell, level.levelId));
+            }
+        }
+    }
+
+    public static void updateMapPair(int cell) {
+        if (isSceneReady()) {
+            final Level level = Dungeon.level;
+            scene.baseTiles.updateCell(cell, level);
+            final int cellN = cell - level.getWidth();
+            if(level.cellValid(cellN)) {
+                scene.baseTiles.updateCell(cellN, level);
+            }
         }
     }
 
@@ -783,7 +836,9 @@ public class GameScene extends PixelScene {
         if (isSceneReady() && scene.sceneCreated) {
 
             final Level level = Dungeon.level;
-            scene.fog.updateVisibility(Dungeon.visible, level.visited, level.mapped);
+
+            GameScene.updateMap();
+            scene.baseTiles.updateFow(scene.fog);
 
             for (Mob mob : level.mobs) {
                 mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
@@ -941,6 +996,12 @@ public class GameScene extends PixelScene {
         }
     }
 
+    public static void addToMobLayer(Gizmo gizmo) {
+        if (isSceneReady()) {
+            scene.mobs.add(gizmo);
+        }
+    }
+
     public static Image getTile(int cell) {
         Image ret;
 
@@ -965,6 +1026,14 @@ public class GameScene extends PixelScene {
             return scene.cellSelector.defaultListner();
         }
         return true;
+    }
+
+    @LuaInterface
+    static DungeonTilemap getBaseTiles() {
+        if(isSceneReady()) {
+            return scene.baseTiles;
+        }
+        throw new IllegalStateException("Scene not ready");
     }
 
 }

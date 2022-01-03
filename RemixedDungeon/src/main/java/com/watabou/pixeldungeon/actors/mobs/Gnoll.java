@@ -22,6 +22,8 @@ import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.Gold;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Gnoll extends Mob {
 	
 	{
@@ -39,7 +41,7 @@ public class Gnoll extends Mob {
 	}
 
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 		ScarecrowNPC.Quest.process( getPos() );
 		Ghost.Quest.process( getPos() );
 		super.die( cause );

@@ -51,13 +51,13 @@ public class Moongrace extends Plant {
 			int cell = level().getEmptyCellNextTo(pos);
 			if (level().cellValid(cell)) {
 				mob.split(cell,0);
-				if (Dungeon.visible[cell]) {
+				if (Dungeon.isCellVisible(cell)) {
 					CellEmitter.get(cell).start(ShaftParticle.FACTORY, 0.2f, 6);
 				}
 			}
 		}
 
-		if (Dungeon.visible[pos]) {
+		if (Dungeon.isCellVisible(pos)) {
 			CellEmitter.get(pos).start(ShaftParticle.FACTORY, 0.2f, 3);
 		}
 	}

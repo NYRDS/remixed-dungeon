@@ -1,0 +1,16 @@
+{
+  "kind":"CustomObject",
+
+  "script": "well",
+  "layer" : 0,
+  "appearance": {
+    "desc": {
+      "desc": "",
+      "name": "Level_TileWell"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/objects.png",
+      "imageIndex" : 0
+    }
+  }
+}

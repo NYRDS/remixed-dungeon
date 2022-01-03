@@ -9,6 +9,7 @@ import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
+import com.watabou.noosa.Group;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -390,13 +391,18 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	public void die() {
 		ch.ifPresent(chr -> {
 			deathEffect.place(chr.getPos());
-			getParent().add(deathEffect);
-			deathEffect.setVisible(true);
 
-			if (chr instanceof Hero) {
-				deathEffect.playAnim(die, Util.nullCallback);
-			} else {
-				deathEffect.playAnim(die, () -> deathEffect.killAndErase());
+			final Group parent = getParent();
+
+			if(parent != null) {
+				parent.add(deathEffect);
+				deathEffect.setVisible(true);
+
+				if (chr instanceof Hero) {
+					deathEffect.playAnim(die, Util.nullCallback);
+				} else {
+					deathEffect.playAnim(die, () -> deathEffect.killAndErase());
+				}
 			}
 		});
 		killAndErase();

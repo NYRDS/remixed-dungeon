@@ -41,6 +41,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
@@ -58,6 +59,7 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
+import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
@@ -69,6 +71,7 @@ import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -207,6 +210,12 @@ public abstract class Mob extends Char {
 
 	@Override
 	public boolean act() {
+
+    	if(Util.isDebug() && !(this instanceof NPC) && !getEntityKind().contains("NPC") && !getEntityKind().contains("Npc")) {
+    		if(!(baseAttackSkill > 0 && baseDefenseSkill > 0)) {
+    			throw new RuntimeException(Utils.format("bad params for %s", getEntityKind()));
+			}
+		}
 
 		super.act(); //Calculate FoV
 
@@ -364,10 +373,15 @@ public abstract class Mob extends Char {
 		super.die(this);
 	}
 
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
 
     	spend(Actor.MICRO_TICK);
 		getState().onDie(this);
+
+		if(cause == null) {
+			cause = CharsList.DUMMY; //Mods may and will misbehave
+			EventCollector.logException("null_death_cause");
+		}
 
 		script.run("onDie", cause);
 
@@ -375,6 +389,7 @@ public abstract class Mob extends Char {
 
 		Hero hero = Dungeon.hero;
 
+		if(!cause.getEntityKind().equals(Chasm.class.getSimpleName()))
 		{
 			//TODO we should move this block out of Mob class ( in script for example )
 			if (hero.getHeroClass() == HeroClass.NECROMANCER){
@@ -449,13 +464,21 @@ public abstract class Mob extends Char {
 	}
 
 	public void resurrect() {
-		resurrect(this);
+		resurrectAnim();
+
+		int spawnPos = getPos();
+		Mob new_mob = MobFactory.mobByName(getMobClassName());
+
+		if (level().cellValid(spawnPos)) {
+			new_mob.setPos(spawnPos);
+			level().spawnMob(new_mob);
+			level().press(spawnPos, new_mob);
+		}
 	}
 
 	public void resurrect(Char parent) {
-    	resurrectAnim();
 
-		int spawnPos = level().getEmptyCellNextTo(parent.getPos());
+		int spawnPos = getPos();
 		Mob new_mob = MobFactory.mobByName(getMobClassName());
 
 		if (level().cellValid(spawnPos)) {
@@ -569,14 +592,15 @@ public abstract class Mob extends Char {
 
 	public boolean zap(@NotNull Char enemy) {
 
-		if(zapHit(enemy)) {
-			int damage = zapProc(enemy,damageRoll());
-			int effectiveDamage = enemy.defenseProc(this,damage);
+    	if(enemy.valid()) {
+			if (zapHit(enemy)) {
+				int damage = zapProc(enemy, damageRoll());
+				int effectiveDamage = enemy.defenseProc(this, damage);
 
-			enemy.damage(effectiveDamage, this);
-			return true;
+				enemy.damage(effectiveDamage, this);
+				return true;
+			}
 		}
-
 		return false;
 	}
 

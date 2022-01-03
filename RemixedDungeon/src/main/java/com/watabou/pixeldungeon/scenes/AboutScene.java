@@ -141,7 +141,7 @@ public class AboutScene extends PixelScene {
 
 				if(clickCounter>10) {
 					Game.toast("Levels test mode enabled");
-					Scene.setMode("levelsTest");
+					Scene.setMode(LEVELS_TEST);
 					return;
 				}
 

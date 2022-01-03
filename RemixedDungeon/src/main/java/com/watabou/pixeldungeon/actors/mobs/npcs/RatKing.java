@@ -116,7 +116,7 @@ public class RatKing extends NPC {
 	}
 	
 	@Override
-	public void die(NamedEntityKind cause) {
+	public void die(@NotNull NamedEntityKind cause) {
         say(StringsManager.getVar(R.string.RatKing_Died));
 		super.die(cause);
 	}

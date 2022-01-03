@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.utils.Random;
 
 import java.util.Arrays;
 
@@ -79,13 +79,7 @@ public class DeadEndLevel extends Level {
 
 	@Override
 	protected void decorate() {
-		for (int i=0; i < getLength(); i++) {
-			if (map[i] == Terrain.EMPTY && Random.Int( 10 ) == 0) { 
-				map[i] = Terrain.EMPTY_DECO;
-			} else if (map[i] == Terrain.WALL && Random.Int( 8 ) == 0) { 
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
+		LevelTools.northWallDecorate(this, 10, 8);
 	}
 
 	@Override

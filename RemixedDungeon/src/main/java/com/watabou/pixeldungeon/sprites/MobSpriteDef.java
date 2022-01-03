@@ -192,11 +192,11 @@ public class MobSpriteDef extends MobSprite {
 
 	@Override
 	public float visualOffsetX() {
-		return visualOffsetX;
+		return visualOffsetX + super.visualOffsetX();
 	}
 
 	@Override
 	public float visualOffsetY() {
-		return visualOffsetY;
+		return visualOffsetY + super.visualOffsetY();
 	}
 }

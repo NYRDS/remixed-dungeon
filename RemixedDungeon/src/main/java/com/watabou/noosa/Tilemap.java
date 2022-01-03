@@ -23,20 +23,30 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
 import com.watabou.utils.Rect;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.nio.FloatBuffer;
 import java.util.Arrays;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class Tilemap extends Visual {
 
+	@Getter
+	@Setter
 	private SmartTexture texture;
-	private TextureFilm tileset;
+
+	@NotNull
+	@Getter
+	private final TextureFilm tileset;
 
 	protected int[] data;
 	protected int   mapWidth;
 	protected int   size;
 
-	private float cellW;
-	private float cellH;
+	private final float cellW;
+	private final float cellH;
 
 	protected float[]     vertices;
 	protected FloatBuffer quads;
@@ -158,17 +168,5 @@ public class Tilemap extends Visual {
 
 	public Rect updateRegion() {
 		return updated;
-	}
-
-	public TextureFilm getTileset() {
-		return tileset;
-	}
-
-	public SmartTexture getTexture() {
-		return texture;
-	}
-
-	public void setTexture(SmartTexture texture) {
-		this.texture = texture;
 	}
 }

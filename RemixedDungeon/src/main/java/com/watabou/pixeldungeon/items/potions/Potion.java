@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items.potions;
 
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.audio.Sample;
@@ -34,7 +35,6 @@ import com.watabou.pixeldungeon.items.food.RottenFood;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -218,7 +218,8 @@ public class Potion extends Item implements UnknownItem {
 			apply( thrower );
 		} else {
 			Level level = thrower.level();
-			if (level.map[cell] == Terrain.WELL || level.pit[cell]) {
+			LevelObject lo = level.getTopLevelObject(cell);
+			if ((lo != null && lo.affectItems()) || level.pit[cell]) {
 				super.onThrow( cell, thrower);
 			} else  {
 				shatter( cell );

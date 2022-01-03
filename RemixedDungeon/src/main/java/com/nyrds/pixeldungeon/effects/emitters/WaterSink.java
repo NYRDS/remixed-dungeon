@@ -12,7 +12,7 @@ import com.watabou.utils.Random;
 
 public class WaterSink extends Emitter {
 
-    private int pos;
+    private final int pos;
     private float rippleDelay = 0;
 
     private static final Factory factory = new Factory() {
@@ -37,7 +37,7 @@ public class WaterSink extends Emitter {
 
     @Override
     public void update() {
-        if (setVisible(Dungeon.visible[pos])) {
+        if (setVisible(Dungeon.isCellVisible(pos))) {
 
             super.update();
 

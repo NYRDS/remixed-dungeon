@@ -17,53 +17,47 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.nyrds.LuaInterface;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.utils.Bundle;
+import com.watabou.pixeldungeon.levels.Level;
 
 public class Alchemy extends Blob {
 
-	protected int pos;
-	
 	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-		super.restoreFromBundle( bundle );
-		
-		for (int i=0; i < getLength(); i++) {
-			if (cur[i] > 0) {
-				pos = i;
-				break;
+	protected void evolve() {
+
+		volume = 0;
+		for (int i = 0;i<getLength();i++) {
+			volume += cur[i];
+			if (cur[i] > 0 && Dungeon.isCellVisible(i)) {
+				Journal.add(Journal.Feature.ALCHEMY.desc());
 			}
 		}
 	}
 	
 	@Override
-	protected void evolve() {
-		volume = off[pos] = cur[pos];
-		
-		if (Dungeon.visible[pos]) {
-			Journal.add( Journal.Feature.ALCHEMY.desc() );
-		}
-	}
-	
-	@Override
 	public void seed( int cell, int amount ) {
-		cur[pos] = 0;
-		pos = cell;
-		volume = cur[pos] = amount;
+		checkSeedCell(cell);
+		cur[cell] = amount;
+		volume += amount;
+
 	}
-	
+
+	@LuaInterface
 	public static void transmute( int cell ) {
-		Heap heap = Dungeon.level.getHeap( cell );
+		final Level level = Dungeon.level;
+
+		Heap heap = level.getHeap( cell );
 		if (heap != null) {
 			
 			Item result = heap.transmute();
 			if (result != null) {
-				Dungeon.level.animatedDrop( result, cell );
+				level.animatedDrop( result, cell );
 			}
 		}
 	}

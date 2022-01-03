@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
+import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.nyrds.pixeldungeon.mobs.common.Crystal;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Gold;
@@ -93,21 +95,20 @@ public class StandardPainter extends Painter {
 		for (int i=room.top + 1; i < room.bottom; i++) {
 			for (int j=room.left + 1; j < room.right; j++) {
 				int t = Terrain.EMBERS;
+				final int pos = i * level.getWidth() + j;
+				level.map[pos] = t;
 				switch (Random.Int( 5 )) {
-				case 0:
-					t = Terrain.EMPTY;
-					break;
 				case 1:
-					t = Terrain.FIRE_TRAP;
+					level.putLevelObject(Trap.makeSimpleTrap(pos, LevelObjectsFactory.FIRE_TRAP, false));
 					break;
 				case 2:
-					t = Terrain.SECRET_FIRE_TRAP;
+					level.putLevelObject(Trap.makeSimpleTrap(pos, LevelObjectsFactory.FIRE_TRAP, true));
 					break;
 				case 3:
 					t = Terrain.INACTIVE_TRAP;
 					break;
 				}
-				level.map[i * level.getWidth() + j] = t;
+				level.map[pos] = t;
 			}
 		}
 	}
@@ -161,9 +162,8 @@ public class StandardPainter extends Painter {
 		}
 		
 		Point roomCenter = room.center();
-		
-		set( level, roomCenter, Terrain.PEDESTAL );
-		
+		level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.PEDESTAL, level.cell(roomCenter.x, roomCenter.y)));
+
 		if(Random.Float(1) < 0.25f) {
 			Crystal crystal = new Crystal();
 			crystal.setPos(level.cell(roomCenter.x, roomCenter.y));

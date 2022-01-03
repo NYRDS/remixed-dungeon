@@ -15,6 +15,12 @@ public class WeakOptional<T> {
     private WeakOptional() {
     }
 
+    public void clear() {
+        if(reference != null) {
+            reference.clear();
+        }
+    }
+
     public static<T> WeakOptional<T> empty() {
         return new WeakOptional<>();
     }

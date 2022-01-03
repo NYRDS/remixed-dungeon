@@ -6,16 +6,17 @@ import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.InterstitialPoint;
 
 public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialProvider {
     private static InterstitialAd mInterstitialAd = null;
 
     AdMobInterstitialProvider() {
-        Game.instance().runOnUiThread(this::requestNewInterstitial);
+        GameLoop.runOnMainThread(this::requestNewInterstitial);
     }
 
     private void requestNewInterstitial() {
@@ -26,7 +27,7 @@ public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialPr
 
         InterstitialAd.load(
                 Game.instance(),
-                StringsManager.getVar(R.string.saveLoadAdUnitId),
+                ModdingMode.getInterstitialId(),
                 AdMob.makeAdRequest(),
                 new InterstitialAdLoadCallback() {
                     @Override
@@ -36,6 +37,7 @@ public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialPr
 
                     @Override
                     public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        EventCollector.logEvent("Interstitial failed", loadAdError.toString());
                     }
                 }
         );
@@ -43,7 +45,7 @@ public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialPr
 
     @Override
     public void showInterstitial(final InterstitialPoint ret) {
-        Game.instance().runOnUiThread(() -> {
+        GameLoop.runOnMainThread(() -> {
             if (mInterstitialAd == null) {
                 AdsUtilsCommon.interstitialFailed(AdMobInterstitialProvider.this, ret);
                 return;

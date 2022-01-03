@@ -78,6 +78,7 @@ public class ItemSprite extends MovieClip {
 
 	public ItemSprite(Heap heap) {
 		super();
+		setIsometricShift(true);
 		link(heap);
 	}
 
@@ -190,7 +191,7 @@ public class ItemSprite extends MovieClip {
 		super.update();
 
 		// Visibility
-		setVisible(heap == null || Dungeon.visible[heap.pos]);
+		setVisible(heap == null || Dungeon.isCellVisible(heap.pos));
 
 		// Dropping
 		final float elapsed = GameLoop.elapsed;

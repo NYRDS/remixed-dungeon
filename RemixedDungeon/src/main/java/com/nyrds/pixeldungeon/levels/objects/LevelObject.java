@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.mechanics.LevelHelpers;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.WeakOptional;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -20,6 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import lombok.Getter;
+import lombok.Setter;
 
 public abstract class LevelObject extends Actor implements Bundlable, Presser, HasPositionOnLevel, NamedEntityKind {
 
@@ -30,6 +32,8 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     protected int layer = 0;
 
     @Packable(defaultValue = "levelObjects/objects.png")
+    @Getter
+    @Setter
     protected String textureFile = "levelObjects/objects.png";
 
     @Packable(defaultValue = "0")
@@ -40,7 +44,22 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     @Packable(defaultValue = "")
     protected String data;
 
-    public LevelObjectSprite sprite;
+    public WeakOptional<LevelObjectSprite> lo_sprite = WeakOptional.empty();
+
+
+    class deprecatedSprite {
+
+        public deprecatedSprite() {}
+
+        public void kill() {
+            lo_sprite.ifPresent(
+                    sprite -> sprite.kill());
+        }
+    };
+
+    @Deprecated
+    @LuaInterface
+    public deprecatedSprite sprite = new deprecatedSprite(); // it exists here because direct use by Epic
 
     public LevelObject(int pos) {
         this.pos = pos;
@@ -70,8 +89,10 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
 
     @LuaInterface
     public void remove() {
+        lo_sprite.ifPresent(
+                sprite -> sprite.kill());
+
         level().remove(this);
-        sprite.kill();
     }
 
     public void burn() {
@@ -84,6 +105,10 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     }
 
     public void bump(Presser presser) {
+    }
+
+    public boolean affectItems() {
+        return false;
     }
 
     public void discover() {
@@ -110,10 +135,11 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     }
 
     public void setPos(int pos) {
-        if (sprite != null) {
-            sprite.move(this.pos, pos);
-            level().levelObjectMoved(this);
-        }
+        lo_sprite.ifPresent(
+            sprite -> {
+              sprite.move(this.pos, pos);
+              level().levelObjectMoved(this);
+        });
 
         this.pos = pos;
     }
@@ -121,10 +147,6 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     public abstract String desc();
 
     public abstract String name();
-
-    public String texture() {
-        return textureFile;
-    }
 
     public boolean pushable(Char hero) {
         return false;
@@ -163,9 +185,9 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     }
 
     public void fall() {
-        if (sprite != null) {
-            sprite.fall();
-        }
+        lo_sprite.ifPresent(
+                sprite -> sprite.fall());
+
         level().remove(this);
     }
 
@@ -206,4 +228,23 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     public String getEntityKind() {
         return getClass().getSimpleName();
     }
+
+    public boolean losBlocker() {
+        return false;
+    }
+
+    public boolean flammable() {
+        return false;
+    }
+
+    public boolean avoid() {
+        return false;
+    }
+
+    public boolean ignoreIsometricShift() {
+        return level().isPlainTile(getPos());
+    }
+
+    public void addedToScene() { }
+
 }

@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Point;
 import com.watabou.utils.Rect;
 
@@ -39,6 +41,16 @@ public class Painter {
 
 	public static void set(Level level, Point p, int value) {
 		set(level, p.x, p.y, value);
+	}
+
+	public static void fill(Level level, int x, int y, int w, int h, String objectKind) {
+		for (int i = y; i < y + h; i++) {
+			for (int j = x; j< x + w; j ++) {
+				final int cell = level.cell(j, i);
+				set(level, cell, Terrain.EMPTY);
+				level.putLevelObject(LevelObjectsFactory.createCustomObject(level, objectKind, cell));
+			}
+		}
 	}
 
 	public static void fill(Level level, int x, int y, int w, int h, int value) {

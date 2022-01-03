@@ -17,6 +17,7 @@ import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
 import com.nyrds.market.GoogleIapCheck;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
@@ -172,7 +173,7 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
     }
 
     private void executeServiceRequest(final Runnable runnable) {
-        Game.instance().runOnUiThread(() -> {
+        GameLoop.runOnMainThread(() -> {
             if (isServiceConnected()) {
                 getExecutor().execute(runnable);
             } else {

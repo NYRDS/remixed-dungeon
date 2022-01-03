@@ -16,7 +16,9 @@ public class SpiderNest extends Mob {
 		dmgMin = 0;
 		dmgMax = 0;
 		dr = 0;
-		
+
+		baseAttackSkill = 1;
+		baseDefenseSkill = 2;
 		postpone(20);
 		
 		loot(new PotionOfHealing(), 0.2f);

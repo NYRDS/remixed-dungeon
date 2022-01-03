@@ -41,6 +41,7 @@ public abstract class PortalGate extends Deco {
 
 	public PortalGate(int pos) {
 		super(pos);
+		layer = 2;
 	}
 
 
@@ -91,17 +92,18 @@ public abstract class PortalGate extends Deco {
 
 	protected void playStartUpAnim(){
 		animationRunning = true;
-
-		sprite.playAnim(activation, () -> {
-			playActiveLoop();
-			activated = true;
-			animationRunning = false;
-            GLog.w(StringsManager.getVar(R.string.PortalGate_Activated));
-		});
+		lo_sprite.ifPresent(
+				sprite -> sprite.playAnim(activation, () -> {
+					playActiveLoop();
+					activated = true;
+					animationRunning = false;
+					GLog.w(StringsManager.getVar(R.string.PortalGate_Activated));
+		}));
 	}
 
 	private void playActiveLoop(){
-		sprite.playAnim(activatedLoop, Util.nullCallback);
+		lo_sprite.ifPresent(
+				sprite -> sprite.playAnim(activatedLoop, Util.nullCallback));
 	}
 
 	@Override
@@ -128,7 +130,7 @@ public abstract class PortalGate extends Deco {
 
 	@Override
 	public boolean nonPassable(Char ch) {
-		return true;
+		return false;
 	}
 
 	public abstract boolean portalInteract(Hero hero);

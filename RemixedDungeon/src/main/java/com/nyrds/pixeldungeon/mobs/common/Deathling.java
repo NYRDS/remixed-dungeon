@@ -1,10 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.utils.Random;
 
 /**
  * Created by DeadDie on 20.08.2016
@@ -14,36 +11,32 @@ public class Deathling extends UndeadMob {
     private static final int HEALTH = 4;
 
     public Deathling(){
-        hp(ht(HEALTH + getModifier()));
+        hp(ht(HEALTH));
 
-        baseSpeed = 1.1f;
-        baseDefenseSkill = 1 + getModifier();
         flying = true;
 
         exp = 0;
         maxLvl = 32;
+        setSkillLevel(3);
     }
 
-    private int getModifier(){
-        Hero hero = Dungeon.hero;
-        if (hero != null){
-            return hero.lvl() + hero.skillLevel()*hero.skillLevel();
-        }
-        return 1;
-    }
+    void adjustStats() {
+        Char hero = getOwner();
 
-    @Override
-    public int damageRoll() {
-        return Random.NormalIntRange(1, 4 + getModifier());
-    }
+        int modifier =  hero.lvl() + hero.skillLevel()*hero.skillLevel();
 
-    @Override
-    public int attackSkill( Char target ) {
-        return 4 + getModifier();
+        baseSpeed = 1.1f;
+        baseDefenseSkill = 1 + modifier;
+        baseAttackSkill  = 4 + modifier;
+        dmgMax = 4 + modifier;
+        dmgMin = 1;
+        dr  = modifier;
+        ht(ht(HEALTH + modifier));
     }
 
     @Override
-    public int dr() {
-        return 1 + getModifier();
+    public boolean act() {
+        adjustStats();
+        return super.act();
     }
 }

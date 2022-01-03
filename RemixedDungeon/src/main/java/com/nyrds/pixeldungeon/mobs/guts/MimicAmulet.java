@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.nyrds.Packable;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
@@ -11,7 +10,8 @@ import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
+
+import lombok.var;
 
 public class MimicAmulet extends Mob {
 
@@ -25,12 +25,14 @@ public class MimicAmulet extends Mob {
 		flying = true;
 
 		level = Dungeon.depth;
-		
+		adjustStats(level);
 		addImmunity( ToxicGas.class );
 		addImmunity( Paralysis.class );
 		addImmunity( Stun.class );
 
-		collect(new SkeletonKey());
+		var prize = new SkeletonKey();
+		prize.levelId = "26";
+		collect(prize);
 	}
 
 	
@@ -44,16 +46,7 @@ public class MimicAmulet extends Mob {
 
 		adjustStats(level);
 	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( ht() / 10, ht() / 4 );
-	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return 9 + level;
-	}
+
 
 	@Override
     public boolean act() {
@@ -68,7 +61,11 @@ public class MimicAmulet extends Mob {
 
 		hp(ht((3 + level) * 5));
 		exp = 2 + 2 * (level - 1) / 5;
-		baseDefenseSkill = 2 * attackSkill( null ) / 3;
+		baseAttackSkill = 9 + level;
+		baseDefenseSkill = 2 * attackSkill + 1;
+
+		dmgMin = ht()/10;
+		dmgMax = ht()/4;
 		
 		enemySeen = true;
 	}

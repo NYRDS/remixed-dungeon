@@ -124,16 +124,19 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     }
 
     public static void toast(final String text, final Object... args) {
-        instance().runOnUiThread(() -> {
-            String toastText = text;
+        String toastText = text;
 
-            if (args.length > 0) {
-                toastText = Utils.format(text, args);
-            }
+        if (args.length > 0) {
+            toastText = Utils.format(text, args);
+        }
 
-            GLog.toFile("%s ",toastText);
+        GLog.toFile("%s ",toastText);
 
-            Toast toast = Toast.makeText(RemixedDungeonApp.getContext(), toastText,
+        String finalToastText = toastText;
+
+        GameLoop.runOnMainThread(() -> {
+
+            Toast toast = Toast.makeText(RemixedDungeonApp.getContext(), finalToastText,
                     Toast.LENGTH_SHORT);
             toast.show();
         });
@@ -234,9 +237,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @SuppressLint({"Recycle", "ClickableViewAccessibility"})
     @Override
     public boolean onTouch(View view, MotionEvent event) {
-        synchronized (gameLoop.motionEvents) {
-            gameLoop.motionEvents.add(MotionEvent.obtain(event));
-        }
+        gameLoop.motionEvents.add(MotionEvent.obtain(event));
         return true;
     }
 
@@ -247,9 +248,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
             return super.onKeyDown(keyCode, event);
         }
 
-        synchronized (gameLoop.keysEvents) {
-            gameLoop.keysEvents.add(event);
-        }
+        gameLoop.keysEvents.add(event);
         return true;
     }
 
@@ -348,7 +347,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Game.height = height;
     }
 
-    private InterstitialPoint permissionsPoint;
+    private InterstitialPoint permissionsPoint = new Utils.SpuriousReturn();;
 
     public void doPermissionsRequest(@NotNull InterstitialPoint returnTo, String[] permissions) {
         boolean havePermissions = true;
@@ -401,4 +400,5 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(address));
         Game.instance().startActivity(Intent.createChooser(intent, prompt));
     }
+
 }

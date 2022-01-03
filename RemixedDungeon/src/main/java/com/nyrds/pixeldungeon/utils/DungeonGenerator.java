@@ -42,6 +42,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -199,7 +200,15 @@ public class DungeonGenerator {
 					int exitIndex = currentLevel.getJSONArray(2).getInt(0);
 					next.cellId = -exitIndex;
 				} else { // new way
-					JSONArray nextLevelExits = mGraph.getJSONArray(next.levelId).getJSONArray(0);
+
+
+					JSONArray nextLevelExits = mGraph.optJSONArray(next.levelId).getJSONArray(0);
+
+					if(nextLevelExits == null) {
+						ModError.doReport("Dungeon.json", new Exception("There is no connectivity defined for "+ next.levelId ));
+						return current;
+					}
+
 					for (int i = 0;i<nextLevelExits.length();++i) {
 						if(nextLevelExits.getString(i).equals(current.levelId)) {
 							next.cellId = -(i+1);
@@ -321,32 +330,28 @@ public class DungeonGenerator {
 		String newLevelKind = getLevelKind(pos.levelId);
 		Class<? extends Level> levelClass = mLevelKindList.get(newLevelKind);
 
-		try {
-			if (levelClass == null) {
-				ModError.doReport(newLevelKind, new Exception("unknown level kind"));
-				levelClass = DeadEndLevel.class;
-			}
-
-			String levelId = pos.levelId;
-
-			Level ret = createFromId(levelId,levelClass);
-
-			JSONObject levelDesc = mLevels.getJSONObject(levelId);
-
-			int xs = 32;
-			int ys = 32;
-			if(levelDesc.has("size")) {
-				JSONArray levelSize = levelDesc.getJSONArray("size");
-				xs = levelSize.optInt(0, 32);
-				ys = levelSize.optInt(1, 32);
-			}
-
-			ret.create(xs, ys);
-
-			return ret;
-		} catch (JSONException e) {
-			throw ModdingMode.modException(e);
+		if (levelClass == null) {
+			ModError.doReport(newLevelKind, new Exception("unknown level kind"));
+			levelClass = DeadEndLevel.class;
 		}
+
+		String levelId = pos.levelId;
+
+		Level ret = createFromId(levelId,levelClass);
+
+		JSONObject levelDesc = mLevels.getJSONObject(levelId);
+
+		int xs = 32;
+		int ys = 32;
+		if(levelDesc.has("size")) {
+			JSONArray levelSize = levelDesc.getJSONArray("size");
+			xs = levelSize.optInt(0, 32);
+			ys = levelSize.optInt(1, 32);
+		}
+
+		ret.create(xs, ys);
+
+		return ret;
 	}
 
 	public static void showStory(Level level) {
@@ -415,6 +420,8 @@ public class DungeonGenerator {
 			}
 			ret.add(levelIds.getString(i));
 		}
+
+		Collections.shuffle(ret);
 
 		return ret;
 	}

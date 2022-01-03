@@ -50,7 +50,8 @@ public class Barrel extends LevelObject {
 
 		burned = true;
 
-		sprite.playAnim(10, false, () -> remove(), image() + 0, image() + 1, image() + 2, image() + 3, image() + 4);
+		lo_sprite.ifPresent(
+				sprite -> sprite.playAnim(10, false, this::remove, image() + 0, image() + 1, image() + 2, image() + 3, image() + 4));
 
 
 		Sample.INSTANCE.play(Assets.SND_EXPLOSION);
@@ -99,7 +100,20 @@ public class Barrel extends LevelObject {
 	}
 
 	@Override
+	public boolean affectItems() {
+		return true;
+	}
+
+	@Override
 	public boolean nonPassable(Char ch) {
+		if(ch.valid()) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public boolean flammable() {
 		return true;
 	}
 }

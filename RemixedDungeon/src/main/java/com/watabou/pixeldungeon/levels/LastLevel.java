@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
@@ -38,7 +39,12 @@ public class LastLevel extends Level {
 	}
 	
 	private int pedestal;
-	
+
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_HALLS_XYZ;
+	}
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_HALLS;
@@ -64,9 +70,10 @@ public class LastLevel extends Level {
 		//map[getExit(0)] = Terrain.LOCKED_EXIT;
 
 		pedestal = (SIZE / 2 + 1) * (getWidth() + 1);
-		map[pedestal] = Terrain.PEDESTAL;
-		map[pedestal-1] = map[pedestal+1] = Terrain.STATUE_SP;
-		
+
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, pedestal));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, pedestal-1));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, pedestal+1));
 		setFeeling(Feeling.NONE);
 		
 		return true;

@@ -67,6 +67,7 @@ public class Web extends Blob {
 	}
 	
 	public void seed( int cell, int amount ) {
+		checkSeedCell(cell);
 		int diff = amount - cur[cell];
 		if (diff > 0) {
 			cur[cell] = amount;

@@ -22,9 +22,10 @@ import com.watabou.noosa.BitmapText;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.utils.SparseArray;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class FloatingText extends BitmapText {
 
@@ -35,7 +36,7 @@ public class FloatingText extends BitmapText {
 	
 	private int key = -1;
 	
-	private static SparseArray<ArrayList<FloatingText>> stacks = new SparseArray<>();
+	private static Map<Integer,ArrayList<FloatingText>> stacks = new HashMap<>();
 	
 	public FloatingText() {
 		super(PixelScene.chooseFont( 9 ));

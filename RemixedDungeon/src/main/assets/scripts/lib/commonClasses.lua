@@ -57,7 +57,11 @@ local Blobs = {
     Darkness = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Darkness"),
     Web = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Web"),
     ToxicGas = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.ToxicGas"),
-    Regrowth = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Regrowth")
+    Regrowth = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Regrowth"),
+    WaterOfHealth = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.WaterOfHealth"),
+    WaterOfTransmutation = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.WaterOfTransmutation"),
+    WaterOfAwareness = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.WaterOfAwareness"),
+    Alchemy = luajava.bindClass("com.watabou.pixeldungeon.actors.blobs.Alchemy")
 }
 
 local PseudoBlobs = {
@@ -131,6 +135,7 @@ local EffectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.effects.Effect
 local LevelObjectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory")
 local SpellFactory = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.spells.SpellFactory")
 
+local Effects = luajava.bindClass("com.watabou.pixeldungeon.effects.Effects")
 
 local Tweeners = {
     PosTweener  = luajava.bindClass("com.watabou.noosa.tweeners.PosTweener"),
@@ -167,6 +172,7 @@ local Sfx = {
 }
 
 local Badges = luajava.bindClass("com.watabou.pixeldungeon.Badges")
+local ItemUtils = luajava.bindClass("com.nyrds.pixeldungeon.items.ItemUtils")
 
 local RPD = {
     RemixedDungeon = RemixedDungeon,
@@ -176,7 +182,9 @@ local RPD = {
     DungeonGenerator = DungeonGenerator,
     PathFinder = PathFinder,
     Badges = Badges,
-
+    Effects = Effects,
+    ItemUtils = ItemUtils,
+    DungeonTilemap = luajava.bindClass("com.watabou.pixeldungeon.DungeonTilemap"),
 
     CharsList = CharsList,
     CharUtils = CharUtils,
@@ -249,8 +257,16 @@ local RPD = {
         blobClass:affect(cell)
     end,
 
-    placeBlob = function (blobClass, cell, amount)
-        GameScene:add( Blobs.Blob:seed(cell, amount, blobClass ) )
+    ---@param cell number
+    ---@param amount number
+    placeBlob = function (blobClass, cell, amount, level)
+        level = level or Dungeon.level
+
+        if not Dungeon.level then
+            Blobs.Blob:seed(level, cell, amount, blobClass )
+        else
+            GameScene:add( Blobs.Blob:seed(level, cell, amount, blobClass ) )
+        end
     end,
 
     playSound = function(sound)
@@ -341,6 +357,10 @@ local RPD = {
         return GameScene:clipEffect(cell,1,effectName)
     end,
 
+    objectEffect = function(cell,effectName)
+        return GameScene:clipEffect(cell,2,effectName)
+    end,
+
     bottomEffect = function(cell,effectName)
         return GameScene:clipEffect(cell,0,effectName)
     end,
@@ -392,6 +412,16 @@ local RPD = {
     end,
 
     createLevelObject = function(desc, cell)
+        local level = Dungeon.level
+
+        if not level:cellValid(cell) then
+            local error_msg = "Trying to create %s on invalid cell %d"
+            GLog:toFile(error_msg,{desc, cell})
+            GLog:n(error_msg,{desc, cell})
+
+            return nil
+        end
+
         desc.x = Dungeon.level:cellX(cell)
         desc.y = Dungeon.level:cellY(cell)
 

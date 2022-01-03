@@ -25,8 +25,10 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 	private TextureFilm frames;
 	private Callback    onAnimComplete;
 	private PointF      centerShift;
+	private int 		cell;
 
-	public LevelObjectSprite() {}
+	public LevelObjectSprite()
+	{}
 
 	public void move(int from, int to) {
 		if (getParent() != null) {
@@ -52,12 +54,17 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 		PointF p = DungeonTilemap.tileToWorld(cell);
 		x = p.x + centerShift.x;
 		y = p.y + centerShift.y;
+		this.cell = cell;
 	}
 
 	public void reset(@NotNull LevelObject object) {
 		revive();
 
-		texture(object.texture());
+		if(!object.ignoreIsometricShift()) {
+			setIsometricShift(true);
+		}
+
+		texture(object.getTextureFile());
 
 		int xs = object.getSpriteXS();
 		int ys = object.getSpriteYS();
@@ -84,6 +91,14 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 
 	public void reset(int image) {
 		frame(frames.get(image));
+	}
+
+	@Override
+	public boolean getVisible() {
+		if(Dungeon.level != null) {
+			return Dungeon.level.mapped[cell] && super.getVisible();
+		}
+		return false;
 	}
 
 	@Override

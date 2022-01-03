@@ -36,6 +36,10 @@ public class EarthElemental extends MultiKindMob implements IDepthAdjustable {
 		exp = depth + 1;
 		maxLvl = depth + 2;
 		dr = exp;
+		baseAttackSkill = baseDefenseSkill /2 + 1;
+
+		dmgMin = ht()/5;
+		dmgMax = ht()/5;
 
 		addImmunity(Roots.class);
 		addImmunity(Paralysis.class);
@@ -52,16 +56,6 @@ public class EarthElemental extends MultiKindMob implements IDepthAdjustable {
 		} else {
 			return super.speed();
 		}
-	}
-
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange(hp() / 5, ht() / 5);
-	}
-
-	@Override
-	public int attackSkill(Char target) {
-		return baseDefenseSkill / 2;
 	}
 
 	@Override

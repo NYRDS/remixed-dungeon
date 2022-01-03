@@ -12,7 +12,7 @@ public class Cook extends CharAction {
     @Override
     public boolean act(Char hero) {
 
-        if (Dungeon.visible[dst]) {
+        if (Dungeon.isCellVisible(dst)) {
             hero.readyAndIdle();
             AlchemyPot.operate(hero, dst);
             return false;

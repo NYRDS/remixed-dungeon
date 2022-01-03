@@ -28,12 +28,12 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1051
-        versionName "30.1.fix.28"
+        versionCode 1090
+        versionName "31.0.fix.8"
         buildToolsVersion = '29.0.2'
         targetSdkVersion 30
         minSdkVersion 16
-        compileSdkVersion = 29
+        compileSdkVersion = 30
 
         // Enabling multidex support.
         multiDexEnabled true
@@ -119,7 +119,7 @@ dependencies {
 
     annotationProcessor project(':processor')
 
-    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
 
@@ -135,31 +135,34 @@ dependencies {
 
     implementation 'commons-io:commons-io:2.6'
 
-    androidImplementation 'com.appodeal.ads.sdk:core:2.9.2'
-    androidImplementation 'com.appodeal.ads.sdk.networks:adcolony:2.9.2.11'
-    androidImplementation 'com.appodeal.ads.sdk.networks:applovin:2.9.2.12'
-    androidImplementation 'com.appodeal.ads.sdk.networks:bidmachine:2.9.2.7'
-    androidImplementation 'com.appodeal.ads.sdk.networks:ironsource:2.9.2.11'
-    androidImplementation 'com.appodeal.ads.sdk.networks:my_target:2.9.2.11'
-    androidImplementation 'com.appodeal.ads.sdk.networks:unity_ads:2.9.2.8'
+    implementation 'com.appodeal.ads.sdk:core:2.10.3'
+    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.10.3.16'
+    implementation 'com.appodeal.ads.sdk.networks:applovin:2.10.3.19'
+    implementation 'com.appodeal.ads.sdk.networks:bidmachine:2.10.3.15'
+    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.10.3.16'
+    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.10.3.13'
+    implementation 'com.appodeal.ads.sdk.networks:vungle:2.10.3.10'
 
-    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'org.jetbrains:annotations:23.0.0'
 
-    annotationProcessor 'org.projectlombok:lombok:1.18.10'
-    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:17.6.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:19.0.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:19.2.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:21.0.0"
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:20.4.0'
+
 
     googlePlayImplementation 'com.android.billingclient:billing:4.0.0'
 
-    googlePlayImplementation platform('com.google.firebase:firebase-bom:26.5.0')
+    googlePlayImplementation platform('com.google.firebase:firebase-bom:28.4.2')
 
 
-    googlePlayImplementation 'com.google.firebase:firebase-ads'
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
+    googlePlayImplementation 'com.google.firebase:firebase-perf'
+
 
     huaweiImplementation 'com.huawei.hms:ads-lite:13.4.30.301'
     huaweiImplementation 'com.huawei.hms:hianalytics:5.0.0.300'
@@ -170,6 +173,8 @@ if (getGradle().getStartParameter().getTaskRequests()
         .toString().contains("GooglePlay")) {
     apply plugin: 'com.google.firebase.crashlytics'
     apply plugin: 'com.google.gms.google-services'
+    apply plugin: 'com.google.firebase.firebase-perf'
+
 }
 
 if (getGradle().getStartParameter().getTaskRequests()

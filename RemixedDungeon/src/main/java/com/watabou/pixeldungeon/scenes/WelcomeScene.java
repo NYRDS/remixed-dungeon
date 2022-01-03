@@ -25,11 +25,11 @@ public class WelcomeScene extends PixelScene {
 		super.create();
 
         String[] upds = {
-                StringsManager.getVar(R.string.Welcome_Text_29_4),
                 StringsManager.getVar(R.string.Welcome_Text_29_5),
                 StringsManager.getVar(R.string.Welcome_Text_29_6),
                 StringsManager.getVar(R.string.Welcome_Text_30),
-                StringsManager.getVar(R.string.Welcome_Text_30_1)
+                StringsManager.getVar(R.string.Welcome_Text_30_1),
+				StringsManager.getVar(R.string.Welcome_Text_31_0)
 
 		};
 

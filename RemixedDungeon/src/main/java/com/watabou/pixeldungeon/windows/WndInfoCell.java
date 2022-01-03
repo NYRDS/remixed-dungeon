@@ -20,8 +20,10 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -32,6 +34,7 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndInfoCell extends Window {
 
@@ -82,8 +85,10 @@ public class WndInfoCell extends Window {
 			float ys = obj.getSpriteYS();
 			sprite.setPos(-(xs - DungeonTilemap.SIZE) / 2, -(ys-DungeonTilemap.SIZE) / 2);
 			sprite.setScale(DungeonTilemap.SIZE/xs,DungeonTilemap.SIZE/ys);
+			sprite.setIsometricShift(false);
 			add(sprite);
 
+			titlebar.icon(sprite);
 			desc = new StringBuilder(obj.desc());
 		}
 
@@ -96,11 +101,26 @@ public class WndInfoCell extends Window {
 			}
 		}
 
+
+		if(Util.isDebug()) {
+			desc.append(Utils.format("\n\ncell: %d x: %d y: %d", cell, level.cellX(cell), level.cellY(cell)));
+			desc.append(Utils.format("\ntile: %d", tile));
+			desc.append(Utils.format("\npassable: %b", level.passable[cell]));
+			desc.append(Utils.format("\navoid: %b", level.avoid[cell]));
+			desc.append(Utils.format("\nsolid: %b", level.solid[cell]));
+			desc.append(Utils.format("\nflammable: %b", level.flammable[cell]));
+			if(obj!=null) {
+				desc.append(Utils.format("\nlo: %s layer: %d", obj.getEntityKind(), obj.getLayer()));
+				desc.append(Utils.format("\nnonPassable: %b", obj.nonPassable(CharsList.DUMMY)));
+				desc.append(Utils.format("\nsecret: %b", obj.secret()));
+			}
+		}
+
         info.text( desc.length() > 0 ? desc.toString() : StringsManager.getVar(R.string.WndInfoCell_Nothing));
 		info.maxWidth(WIDTH);
 		info.x = titlebar.left();
 		info.y = yPos + GAP;
-		
+
 		resize( WIDTH, (int)(info.bottom()) );
 	}
 }

@@ -136,7 +136,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
             jumpTweener = new JumpTweener(this, worldToCamera(chr.getPos()), height,
                     height / 40);
 
-            getParent().add(jumpTweener);
+            GameScene.addToMobLayer(jumpTweener);
         });
     }
 
@@ -148,7 +148,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
         jumpTweener = new JumpTweener(this, worldToCamera(to), 0,
                 distance * 0.1f);
         jumpTweener.listener = this;
-        getParent().add(jumpTweener);
+        GameScene.addToMobLayer(jumpTweener);
 
         turnTo(from, to);
         play(fly);
@@ -162,7 +162,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
         jumpTweener = new JumpTweener(this, worldToCamera(to), distance * 4,
                 distance * 0.1f);
         jumpTweener.listener = this;
-        getParent().add(jumpTweener);
+        GameScene.addToMobLayer(jumpTweener);
 
         turnTo(from, to);
         play(fly);

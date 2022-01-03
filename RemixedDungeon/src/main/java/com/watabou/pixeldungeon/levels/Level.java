@@ -28,7 +28,7 @@ import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.levels.Tools;
+import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
@@ -43,6 +43,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
@@ -51,9 +52,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.RespawnerActor;
-import com.watabou.pixeldungeon.actors.blobs.Alchemy;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.blobs.WellWater;
 import com.watabou.pixeldungeon.actors.buffs.Awareness;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
@@ -94,7 +93,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-import com.watabou.utils.SparseArray;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -114,6 +112,7 @@ import java.util.Set;
 
 import lombok.Getter;
 import lombok.SneakyThrows;
+import lombok.val;
 import lombok.var;
 
 
@@ -183,14 +182,16 @@ public abstract class Level implements Bundlable {
 		throw new ModError("no exit at"+ levelId + "["+ pos +"]");
 	}
 
+	@Deprecated
 	@Nullable
 	public LevelObject getLevelObject(int pos) {
+		EventCollector.logException(new Exception("deprecated method used"));
 		return getLevelObject(pos, 0);
 	}
 
 	@Nullable
 	public LevelObject getLevelObject(int pos, int layer) {
-		SparseArray<LevelObject> objectsLayer = objects.get(layer);
+		var objectsLayer = objects.get(layer);
 		if (objectsLayer == null) {
 			return null;
 		}
@@ -205,8 +206,7 @@ public abstract class Level implements Bundlable {
 	public List<LevelObject> getAllLevelObjects() {
 		ArrayList<LevelObject> ret = new ArrayList<>();
 
-		for (int i = 0; i < objects.size(); i++) {
-			SparseArray<LevelObject> objectLayer = objects.valueAt(i);
+		for (val objectLayer: objects.values()) {
 			ret.addAll(objectLayer.values());
 		}
 
@@ -217,9 +217,7 @@ public abstract class Level implements Bundlable {
 	public LevelObject getTopLevelObject(int pos) {
 		LevelObject top = null;
 
-		for (int i = 0; i < objects.size(); i++) {
-			SparseArray<LevelObject> objectLayer = objects.valueAt(i);
-
+		for (val objectLayer: objects.values()) {
 			LevelObject candidate = objectLayer.get(pos);
 			if (top == null) {
 				top = candidate;
@@ -232,14 +230,49 @@ public abstract class Level implements Bundlable {
 		return top;
 	}
 
-	public void putLevelObject(LevelObject levelObject) {
-		SparseArray<LevelObject> objectsLayer = objects.get(levelObject.getLayer());
+	public void putLevelObject(LevelObject lo) {
+		var objectsLayer = objects.get(lo.getLayer());
 		if (objectsLayer == null) {
-			objectsLayer = new SparseArray<>();
-			objects.put(levelObject.getLayer(), objectsLayer);
+			objectsLayer = new HashMap<>();
+			objects.put(lo.getLayer(), objectsLayer);
 		}
 
-		objectsLayer.put(levelObject.getPos(), levelObject);
+		final int pos = lo.getPos();
+		objectsLayer.put(pos, lo);
+
+		clearCellForObject(pos);
+
+		markObjectFlags(lo, pos);
+	}
+
+	public void markObjectFlags(LevelObject lo, int pos) {
+		if(lo.nonPassable(CharsList.DUMMY)) {
+			passable[pos] = false;
+		}
+
+		if(lo.losBlocker()) {
+			losBlocking[pos] = true;
+		}
+		if(lo.flammable()) {
+			flammable[pos] = true;
+		}
+		if(lo.avoid()){
+			avoid[pos] = true;
+		}	else {
+			avoid[pos] = false;
+		}
+	}
+
+	public void clearCellForObject(int pos) {
+		if(!TerrainFlags.is(map[pos],TerrainFlags.PASSABLE) ||
+				TerrainFlags.is(map[pos],TerrainFlags.DEPRECATED) ) {
+			map[pos] = Terrain.EMPTY;
+		}
+	}
+
+	public boolean isCellNonOccupied(int cell) {
+		LevelObject lo = getTopLevelObject(cell);
+		return Actor.findChar(cell) == null && (lo == null || lo.getLayer() < 0);
 	}
 
 	public void onHeroLeavesLevel() {
@@ -323,6 +356,7 @@ public abstract class Level implements Bundlable {
 				visited[cell] = mapped[cell] = true;
 			}
 		}
+		GameScene.updateMap();
 	}
 
 	public int getViewDistance() {
@@ -338,13 +372,14 @@ public abstract class Level implements Bundlable {
 		return MAX_VIEW_DISTANCE;
 	}
 
+	@NotNull
 	public int[] getTileLayer(LayerId id) {
 		if(customLayers.containsKey(id)) {
 			return customLayers.get(id);
 		}
 
 		int [] ret = new int[getLength()];
-		Arrays.fill(ret,-1);
+		Arrays.fill(ret,INVALID_CELL);
 		return ret;
 	}
 
@@ -384,7 +419,7 @@ public abstract class Level implements Bundlable {
 	protected static final int MAX_VIEW_DISTANCE = 8;
 	public static final    int MIN_VIEW_DISTANCE = 3;
 
-	public int[]     map;
+	public int[]map;
 
 
 	public enum LayerId {
@@ -433,8 +468,8 @@ public abstract class Level implements Bundlable {
 	private Set<ScriptedActor>                    scripts = new HashSet<>();
 	public  Set<Mob>                              mobs    = new HashSet<>();
 	public  Map<Class<? extends Blob>, Blob>      blobs   = new HashMap<>();
-	private SparseArray<Heap>                     heaps   = new SparseArray<>();
-	public  SparseArray<SparseArray<LevelObject>> objects = new SparseArray<>();
+	private Map<Integer, Heap>                    heaps   = new HashMap<>();
+	public  Map<Integer,Map<Integer,LevelObject>> objects = new HashMap<>();
 
 	protected ArrayList<Item> itemsToSpawn = new ArrayList<>();
 
@@ -479,7 +514,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public List<Heap> allHeaps() {
-		return heaps.values();
+		return new ArrayList<>(heaps.values());
 	}
 
 	public int cell(int i, int j) {
@@ -621,7 +656,7 @@ public abstract class Level implements Bundlable {
 
 	protected boolean noBuild() {
 		if(DungeonGenerator.getLevelProperty(levelId, "noBuild", false)) {
-			Tools.makeEmptyLevel(this, true);
+			LevelTools.makeEmptyLevel(this, true);
 			createScript();
 			buildFlagMaps();
 			cleanWalls();
@@ -659,7 +694,7 @@ public abstract class Level implements Bundlable {
 
 		scripts = new HashSet<>();
 		mobs = new HashSet<>();
-		heaps = new SparseArray<>();
+		heaps = new HashMap<>();
 		blobs = new HashMap<>();
 
 		width = bundle.optInt(WIDTH, 32); // old levels compat
@@ -675,6 +710,8 @@ public abstract class Level implements Bundlable {
 				customLayers.put(layerId, layer);
 			}
 		}
+
+		LevelTools.upgradeMap(this);
 
 		visited = bundle.getBooleanArray(VISITED);
 		mapped = bundle.getBooleanArray(MAPPED);
@@ -746,16 +783,7 @@ public abstract class Level implements Bundlable {
 
 		bundle.put(HEAPS, heaps.values());
 
-		ArrayList<LevelObject> objectsArray = new ArrayList<>();
-
-		for (int i = 0; i < objects.size(); i++) {
-			SparseArray<LevelObject> objectLayer = objects.valueAt(i);
-			for (int j = 0; j < objectLayer.size(); j++) {
-				objectsArray.add(objectLayer.valueAt(j));
-			}
-		}
-
-		bundle.put(OBJECTS, objectsArray);
+		bundle.put(OBJECTS, getAllLevelObjects());
 
 		bundle.put(MOBS, mobs);
 		bundle.put(BLOBS, blobs.values());
@@ -775,6 +803,11 @@ public abstract class Level implements Bundlable {
 	}
 
 	public String getTilesTex() {
+
+		if(Dungeon.isIsometricMode()) {
+			return tilesTexXyz();
+		}
+
 		String tiles = DungeonGenerator.getLevelProperty(levelId, "tiles", null);
 		if (tiles != null) {
 			return tiles;
@@ -798,6 +831,10 @@ public abstract class Level implements Bundlable {
 
 	protected String tilesTexEx() {
 		return null;
+	}
+
+	protected String tilesTexXyz() {
+		return Assets.TILES_SEWERS_XYZ;
 	}
 
 	@NotNull
@@ -848,6 +885,11 @@ public abstract class Level implements Bundlable {
 	public void spawnMob(Mob mob, float delay, int fromCell) {
 
 		if (!cellValid(mob.getPos())) {
+
+			if(Util.isDebug()) {
+				throw new RuntimeException(String.format(Locale.ROOT, "trying to spawn: %s on invalid cell: %d", mob.getEntityKind(), mob.getPos()));
+			}
+
 			EventCollector.logException(String.format(Locale.ROOT, "trying to spawn: %s on invalid cell: %d", mob.getEntityKind(), mob.getPos()));
 			return;
 		}
@@ -927,7 +969,7 @@ public abstract class Level implements Bundlable {
 			cell = Random.Int(getLength());
 		}
 		while (!selectFrom[cell]
-				|| Dungeon.visible[cell]
+				|| Dungeon.isCellVisible(cell)
 				|| Actor.findChar(cell) != null
 				|| getTopLevelObject(cell) != null
 				|| cell == entrance);
@@ -977,6 +1019,11 @@ public abstract class Level implements Bundlable {
 			avoid[i] = (flags & TerrainFlags.AVOID) != 0;
 			water[i] = (flags & TerrainFlags.LIQUID) != 0;
 			pit[i] = (flags & TerrainFlags.PIT) != 0;
+		}
+
+		for(val lo:getAllLevelObjects()) {
+			int pos = lo.getPos();
+			markObjectFlags(lo, pos);
 		}
 
 		int lastRow = getLength() - getWidth();
@@ -1094,6 +1141,11 @@ public abstract class Level implements Bundlable {
 				remove(obj);
 			}
 		}
+
+		val lo = getTopLevelObject(cell);
+		if (lo!=null) {
+			markObjectFlags(lo, cell);
+		}
 	}
 
 	public void drop(Item item, int cell, Heap.Type type) {
@@ -1131,7 +1183,12 @@ public abstract class Level implements Bundlable {
 		}
 		var heap = drop(item,cell);
 
-		heap.sprite.drop();
+		assert(heap!=null);
+
+		if(heap.sprite != null) {
+			//assert (heap.sprite != null);
+			heap.sprite.drop();
+		}
 	}
 
 
@@ -1153,11 +1210,10 @@ public abstract class Level implements Bundlable {
 			}
 		}
 
-		if (((map[cell] == Terrain.ALCHEMY) && !(item instanceof Seed))
-				|| (Actor.findChar(cell) instanceof NPC)) {
-			int newCell = getEmptyCellNextTo(cell);
-			if (cellValid(newCell)) {
-				cell = newCell;
+		final int emptyCellNextTo = getEmptyCellNextTo(cell);
+		if ( Actor.findChar(cell) instanceof NPC) {
+			if (cellValid(emptyCellNextTo)) {
+				cell = emptyCellNextTo;
 			}
 		}
 
@@ -1225,22 +1281,36 @@ public abstract class Level implements Bundlable {
 
 	public boolean remove(@NotNull LevelObject levelObject) {
 
-		SparseArray<LevelObject> objectsLayer = objects.get(levelObject.getLayer());
+		var objectsLayer = objects.get(levelObject.getLayer());
 
 		if (objectsLayer == null) {
 			return false;
 		}
 
-		int index = objectsLayer.indexOfValue(levelObject);
+		final int levelObjectPos = levelObject.getPos();
 
-		if (index >= 0) {
-			objectsLayer.remove(objectsLayer.keyAt(index));
-			return true;
+		if(cellValid(levelObjectPos)) {
+			if(levelObject.losBlocker()) {
+				losBlocking[levelObjectPos] = false;
+			}
+
+			if(levelObject.flammable()) {
+				flammable[levelObjectPos] = false;
+			}
+
+			if(levelObject.avoid()) {
+				avoid[levelObjectPos] = false;
+			}
 		}
-		return false;
+
+		return objectsLayer.values().remove(levelObject);
 	}
 
-	protected boolean isCellSafeForPrize(int cell) {
+	public boolean isCellSafeForPrize(int cell) {
+		if(!TerrainFlags.is(map[cell],TerrainFlags.PASSABLE )) {
+			return false;
+		}
+
 		if(map[cell] == Terrain.FIRE_TRAP) {
 			return false;
 		}
@@ -1350,19 +1420,11 @@ public abstract class Level implements Bundlable {
 				case Terrain.HIGH_GRASS:
 					HighGrass.trample(this, cell, chr);
 					break;
-
-				case Terrain.WELL:
-					WellWater.affectCell(cell);
-					break;
-
-				case Terrain.ALCHEMY:
-					Alchemy.transmute(cell);
-					break;
 			}
 		}
 
 		if (TerrainFlags.is(map[cell], TerrainFlags.TRAP)) {
-			if (Dungeon.visible[cell]) {
+			if (Dungeon.isCellVisible(cell)) {
 				Sample.INSTANCE.play(Assets.SND_TRAP);
 			}
 
@@ -1384,8 +1446,7 @@ public abstract class Level implements Bundlable {
 	private void updateFovForObjectAt(int p) {
 		for (int a : NEIGHBOURS9) {
             if(!cellValid(p+a)) {
-                EventCollector.logException("invalid cell");
-                return;
+                continue;
             }
 			markFovCellSafe(p + a);
 		}
@@ -1481,6 +1542,7 @@ public abstract class Level implements Bundlable {
 				|| diff == getWidth() - 1;
 	}
 
+	@LuaInterface
 	public String tileName(int tile) {
 
 		if (tile >= Terrain.WATER_TILES) {
@@ -1568,6 +1630,7 @@ public abstract class Level implements Bundlable {
         }
 	}
 
+	@LuaInterface
 	public String tileDesc(int tile) {
 
 		switch (tile) {
@@ -1753,7 +1816,7 @@ public abstract class Level implements Bundlable {
 		ArrayList<Integer> candidates = new ArrayList<>();
 
 		for (int i = 0; i < getLength(); i++) {
-			if (map[i] == terrainType && Dungeon.visible[i]) {
+			if (map[i] == terrainType && Dungeon.isCellVisible(i)) {
 				candidates.add(i);
 			}
 		}
@@ -1769,6 +1832,26 @@ public abstract class Level implements Bundlable {
 	@LuaInterface
 	public int getRandomTerrainCell(int terrainType) {
 		return oneCellFrom(getAllTerrainCells(terrainType));
+	}
+
+	@LuaInterface
+	public int getRandomObjectCell(String kind) {
+		var objects = getAllLevelObjects();
+
+		var retArray = new ArrayList<LevelObject>();
+
+		for (val obj : objects) {
+			if(obj.getEntityKind().equals(kind)) {
+				retArray.add(obj);
+			}
+		}
+
+		if(retArray.isEmpty()) {
+			return INVALID_CELL;
+		}
+
+		val obj = Random.oneOf(retArray.toArray(new LevelObject[0]));
+		return obj.getPos();
 	}
 
 	public int get(int i, int j) {
@@ -1829,6 +1912,7 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
+	@LuaInterface
 	public int blobAmountAt(Class<? extends Blob> blobClass, int cell) {
 		Blob blob = blobs.get(blobClass);
 		if (blob == null) {
@@ -1944,7 +2028,38 @@ public abstract class Level implements Bundlable {
 
 	@LuaInterface
 	public int getNearestVisibleLevelObject(int cell) {
-		return getNearestTerrain(cell, (level, cell1) -> level.fieldOfView[cell1] && (level.getLevelObject(cell1)!=null));
+		return getNearestTerrain(cell,
+				(level, cell1) -> {
+					LevelObject lo = level.getTopLevelObject(cell);
+					return level.fieldOfView[cell1] && (lo!=null && lo.secret());
+				});
+	}
+
+	@LuaInterface
+	public int getNearestLevelObject(int cell, String kind) {
+		return getNearestTerrain(cell, (level, cell1) -> {
+			final LevelObject levelObject = level.getTopLevelObject(cell1);
+			return (levelObject !=null && levelObject.getEntityKind().equals(kind) );
+		});
+	}
+
+	@LuaInterface
+	public int getRandomLevelObjectPosition(String kind) {
+		val objects = getAllLevelObjects();
+		List<Integer> candidates = new ArrayList<>();
+
+		for (val object : objects) {
+			if(object.getEntityKind().equals(kind)) {
+				candidates.add(object.getPos());
+			}
+		}
+
+		Integer ret = Random.element(candidates);
+		if(ret == null) {
+			ret = Level.INVALID_CELL;
+		}
+
+		return ret;
 	}
 
 	@LuaInterface
@@ -1960,5 +2075,20 @@ public abstract class Level implements Bundlable {
 	@LuaInterface
 	public boolean isPassable(int cell) {
 		return passable[cell];
+	}
+
+	@LuaInterface
+	public int objectsKind() {
+		return 0;
+	}
+
+	@LuaInterface
+	public Blob getBlobByName(String kind) {
+		for(Blob blob : blobs.values()) {
+			if(blob.getEntityKind().equals(kind)) {
+				return blob;
+			}
+		}
+		return null;
 	}
 }

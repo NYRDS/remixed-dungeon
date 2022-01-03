@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
@@ -29,17 +30,9 @@ import com.watabou.utils.Random;
 
 public class TrapsPainter extends Painter {
 
-//	public static Map<String, Float> traps = new HashMap<>();
-//	static {
-//		traps.put("ToxicTrap",3f);
-//		traps.put("ParalyticTrap",2f);
-//		traps.put("SummoningTrap",1f);
-//		traps.put("Chasm",1f);
-//	}
-
 	public static void paint( Level level, Room room ) {
 		 
-		Integer traps[] = {
+		Integer[] traps = {
 			Terrain.TOXIC_TRAP, Terrain.TOXIC_TRAP, Terrain.TOXIC_TRAP, 
 			Terrain.PARALYTIC_TRAP, Terrain.PARALYTIC_TRAP, Terrain.CHASM, Terrain.SUMMONING_TRAP };
 		fill( level, room, Terrain.WALL );
@@ -77,7 +70,8 @@ public class TrapsPainter extends Painter {
 			}
 			level.drop( prize( level ), pos, Heap.Type.CHEST);
 		} else {
-			set( level, pos, Terrain.PEDESTAL );
+			set( level, pos, Terrain.EMPTY );
+			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.PEDESTAL, pos));
 			level.drop( prize( level ), pos, Heap.Type.HEAP );
 		}
 		

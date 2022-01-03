@@ -1,0 +1,15 @@
+{
+  "kind":"CustomObject",
+
+  "script": "barricade",
+  "appearance": {
+    "desc": {
+      "desc": "Level_TileDescBarricade",
+      "name": "Level_TileBarricade"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/objects.png",
+      "imageIndex" : 0
+    }
+  }
+}

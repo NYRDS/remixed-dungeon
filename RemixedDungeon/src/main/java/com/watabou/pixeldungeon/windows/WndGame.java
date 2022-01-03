@@ -22,6 +22,8 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.Util;
+import com.watabou.noosa.Gizmo;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -29,6 +31,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.RankingsScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.ui.Icons;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndGame extends WndMenuCommon {
 
@@ -42,7 +45,11 @@ public class WndGame extends WndMenuCommon {
 			return;
 		}
 
-        menuItems.add( new MenuButton(StringsManager.getVar(R.string.WndGame_Settings)) {
+		if(Util.isDebug()) {
+			menuItems.add(createIsometricShift());
+		}
+
+		menuItems.add( new MenuButton(StringsManager.getVar(R.string.WndGame_Settings)) {
 			@Override
 			protected void onClick() {
 				hide();
@@ -105,7 +112,9 @@ public class WndGame extends WndMenuCommon {
         menuItems.add( new MenuButton(StringsManager.getVar(R.string.WndGame_menu)) {
 			@Override
 			protected void onClick() {
-				Dungeon.save(false);
+				if(Dungeon.hero.isAlive()) {
+					Dungeon.save(false);
+				}
 				GameLoop.switchScene( TitleScene.class );
 			}
 		} );
@@ -123,5 +132,29 @@ public class WndGame extends WndMenuCommon {
 				hide();
 			}
 		} );
+	}
+
+	private Selector createIsometricShift() {
+		return new Selector(WIDTH, BUTTON_HEIGHT, "Shift", new Selector.PlusMinusDefault() {
+
+			@Override
+			public void onPlus(Selector s) {
+				Gizmo.isometricModeShift += 1;
+				s.setText(Utils.format("Shift: %d", Gizmo.isometricModeShift));
+			}
+
+			@Override
+			public void onMinus(Selector s) {
+				Gizmo.isometricModeShift -= 1;
+				s.setText(Utils.format("Shift: %d", Gizmo.isometricModeShift));
+			}
+
+			@Override
+			public void onDefault(Selector s) {
+				Gizmo.isometricModeShift = 0;
+				s.setText(Utils.format("Shift: %d", Gizmo.isometricModeShift));
+			}
+
+		});
 	}
 }

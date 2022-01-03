@@ -59,7 +59,7 @@ return spell.init{
             return true
         end
 
-        local object = level:getLevelObject(dst)
+        local object = level:getTopLevelObject(dst)
 
         if object then
             local newPos = object:getPos()
@@ -68,6 +68,10 @@ return spell.init{
             else
                 dst = level:getEmptyCellNextTo(newPos)
             end
+        end
+
+        if not level:cellValid(dst) then
+            return true
         end
 
         local items = caster:getBelongings()

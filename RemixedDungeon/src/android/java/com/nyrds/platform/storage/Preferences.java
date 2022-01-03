@@ -62,6 +62,7 @@ public enum Preferences {
     public static final String KEY_HANDEDNESS     = "handedness";
 
 	public static final String KEY_EU_CONSENT_LEVEL = "eu_consent_level";
+	public static final String KEY_USE_ISOMETRIC_TILES = "use_isometric_tiles";
 
 
     private SharedPreferences prefs;

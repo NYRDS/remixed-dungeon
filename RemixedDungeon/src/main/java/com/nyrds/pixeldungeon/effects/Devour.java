@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.effects;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -49,18 +48,6 @@ public class Devour extends Image {
 		Devour w = (Devour)ch.getSprite().getParent().recycle( Devour.class );
 		ch.getSprite().getParent().bringToFront( w );
 		w.reset( ch.getPos() );
-		w.angle = angle;
-	}
-	
-	public static void hit( int pos ) {
-		hit( pos, 0 );
-	}
-	
-	public static void hit( int pos, float angle ) {
-		Group parent = Dungeon.hero.getSprite().getParent();
-		Devour w = (Devour)parent.recycle( Devour.class );
-		parent.bringToFront( w );
-		w.reset( pos );
 		w.angle = angle;
 	}
 }

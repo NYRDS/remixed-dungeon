@@ -120,4 +120,9 @@ public class XTilemapConfiguration {
 		TileDesc desc = tilemapConfiguration.get(level.map[cell]);
 		return desc.decoTiles.get(cell % desc.decoTiles.size());
 	}
+
+	public int getDecoTileForTerrain(int cell, int terrain) {
+		TileDesc desc = tilemapConfiguration.get(terrain);
+		return desc.decoTiles.get(cell % desc.decoTiles.size());
+	}
 }

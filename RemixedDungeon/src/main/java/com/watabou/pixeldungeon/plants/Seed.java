@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
@@ -11,7 +12,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -35,6 +36,7 @@ public class Seed extends Item {
     protected Class<? extends Plant> plantClass;
     protected String plantName;
 
+    @LuaInterface
     public Class<? extends Item> alchemyClass;
 
     @Override
@@ -49,7 +51,7 @@ public class Seed extends Item {
     protected void onThrow(int cell, @NotNull Char thrower) {
         Level level = thrower.level();
 
-        if (level.map[cell] == Terrain.ALCHEMY || level.pit[cell]) {
+        if (level.pit[cell] || level.getTopLevelObject(cell) != null || !TerrainFlags.is(level.map[cell],TerrainFlags.PASSABLE)) {
             super.onThrow(cell, thrower);
         } else {
             level.plant(this, cell);

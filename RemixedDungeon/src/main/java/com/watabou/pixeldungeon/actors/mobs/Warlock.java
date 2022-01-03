@@ -25,11 +25,11 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -91,7 +91,7 @@ public class Warlock extends Mob implements IZapper {
 	@Override
 	public boolean zap(@NotNull Char enemy) {
 		if (super.zap(enemy)) {
-			if (getEnemy() == Dungeon.hero && Random.Int(2) == 0) {
+			if (getEnemy().getHeroClass() != HeroClass.NONE && Random.Int(2) == 0) {
 				Buff.prolong(getEnemy(), Weakness.class, Weakness.duration(getEnemy()));
 			}
 

@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.pixeldungeon.items.Codex;
 import com.watabou.pixeldungeon.items.Heap;
@@ -63,11 +64,17 @@ public class LibraryPainter extends Painter {
 			fill(level, room.left + 1, room.top + 1, room.width() - 1, 1,
 					Terrain.BOOKSHELF);
 		}
-		if (a != null && level.map[a.x + a.y * level.getWidth()] == Terrain.EMPTY) {
-			set(level, a, Terrain.STATUE);
+		if (a != null) {
+			final int cell = level.cell(a.x, a.y);
+			if (level.map[cell] == Terrain.EMPTY) {
+				level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, cell));
+			}
 		}
-		if (b != null && level.map[b.x + b.y * level.getWidth()] == Terrain.EMPTY) {
-			set(level, b, Terrain.STATUE);
+		if (b != null) {
+			final int cell = level.cell(b.x, b.y);
+			if (level.map[cell] == Terrain.EMPTY) {
+				level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, cell));
+			}
 		}
 
 		int n = Random.IntRange(2, 3);
@@ -75,8 +82,7 @@ public class LibraryPainter extends Painter {
 			int pos;
 			do {
 				pos = room.random(level);
-			} while (level.map[pos] != Terrain.EMPTY
-					|| level.getHeap(pos) != null);
+			} while (!level.isCellSafeForPrize(pos));
 			level.drop(prize(level), pos, Heap.Type.HEAP);
 
 			if (Random.Int(4) == 0) {

@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.levels.LevelTools;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -39,6 +41,12 @@ public class CityBossLevel extends BossLevel {
 	private static final int HALL_HEIGHT	= 15;
 	private static final int CHAMBER_HEIGHT	= 3;
 
+
+	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_CITY_XYZ;
+	}
+
 	@Override
 	public String tilesTex() {
 		return Assets.TILES_CITY;
@@ -57,14 +65,17 @@ public class CityBossLevel extends BossLevel {
 		
 		int y = TOP + 1;
 		while (y < TOP + HALL_HEIGHT) {
-			map[y * getWidth() + _Center() - 2] = Terrain.STATUE_SP;
-			map[y * getWidth() + _Center() + 2] = Terrain.STATUE_SP;
+			putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, y * getWidth() + _Center() - 2));
+			putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, y * getWidth() + _Center() + 2));
 			y += 2;
 		}
 
 		int left = pedestal( true );
 		int right = pedestal( false );
-		map[left] = map[right] = Terrain.PEDESTAL;
+
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, left));
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, right));
+
 		for (int i=left+1; i < right; i++) {
 			map[i] = Terrain.EMPTY_SP;
 		}
@@ -86,16 +97,10 @@ public class CityBossLevel extends BossLevel {
 	}
 	
 	@Override
-	protected void decorate() {	
-		
-		for (int i=0; i < getLength(); i++) {
-			if (map[i] == Terrain.EMPTY && Random.Int( 10 ) == 0) { 
-				map[i] = Terrain.EMPTY_DECO;
-			} else if (map[i] == Terrain.WALL && Random.Int( 8 ) == 0) { 
-				map[i] = Terrain.WALL_DECO;
-			}
-		}
-		
+	protected void decorate() {
+
+		LevelTools.northWallDecorate(this, 10, 8);
+
 		int sign = arenaDoor + getWidth() + 1;
 		addLevelObject(new Sign(sign,Dungeon.tip(this)));
 	}
@@ -124,7 +129,7 @@ public class CityBossLevel extends BossLevel {
 			} while (
 					!passable[pos] ||
 							!outsideEntranceRoom(pos ) ||
-							Dungeon.visible[pos]);
+							Dungeon.isCellVisible(pos));
 
 			spawnBoss(pos);
 		}
@@ -179,5 +184,10 @@ public class CityBossLevel extends BossLevel {
 
 	private int _Center() {
 		return _Left() + HALL_WIDTH / 2;
+	}
+
+	@Override
+	public int objectsKind() {
+		return 3;
 	}
 }

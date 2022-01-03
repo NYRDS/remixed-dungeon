@@ -27,7 +27,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
@@ -44,7 +43,6 @@ import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -58,6 +56,12 @@ public class Statue extends Mob {
 
 		hp(ht(15 + Dungeon.depth * 5));
 		baseDefenseSkill = 4 + Dungeon.depth;
+		baseAttackSkill  = baseDefenseSkill;
+
+		dmgMin = Dungeon.depth / 4 + 1;
+		dmgMax = Dungeon.depth;
+
+		baseStr = 18;
 
 		addImmunity( ToxicGas.class );
 		addImmunity( Poison.class );
@@ -73,16 +77,6 @@ public class Statue extends Mob {
 			Journal.add( R.string.Journal_Statue );
 		}
 		return super.act();
-	}
-	
-	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( Dungeon.depth/4, Dungeon.depth );
-	}
-	
-	@Override
-	public int attackSkill( Char target ) {
-		return (9 + Dungeon.depth);
 	}
 
 	@Override

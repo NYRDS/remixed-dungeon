@@ -281,18 +281,20 @@ public class  Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     @Override
+    public int damage(int damage, NamedEntityKind src) {
+        return damage;
+    }
+
+    @Override
     public int regenerationBonus() {
         return 0;
     }
 
     @Override
-    public void charAct() {
-    }
+    public void charAct() { }
 
     @Override
-    public void spellCasted(Char caster, Spell spell) {
-
-    }
+    public void spellCasted(Char caster, Spell spell) { }
 
     @Override
     public int dewBonus() {

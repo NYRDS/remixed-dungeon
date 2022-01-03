@@ -7,7 +7,6 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.DownloadStateListener;
@@ -38,11 +37,11 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
     public ModsButton() {
         super(new Image(Assets.DASHBOARD, DashboardItem.IMAGE_SIZE, 5));
 
-        text = new SystemText(GuiProperties.titleFontSize());
+        text = PixelScene.createText(GuiProperties.titleFontSize());
         text.text(R.string.TitleScene_Mods);
         add(text);
 
-        text2 = new SystemText(GuiProperties.titleFontSize());
+        text2 = PixelScene.createText(GuiProperties.titleFontSize());
         text2.text(GamePreferences.activeMod());
         add(text2);
 

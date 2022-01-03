@@ -43,7 +43,7 @@ public class TestLevel extends RegularLevel {
 	@Override
 	protected boolean build() {
 		super.build();
-		Tools.makeEmptyLevel(this, true);
+		LevelTools.makeEmptyLevel(this, true);
 		return true;
 	}
 
@@ -122,7 +122,14 @@ public class TestLevel extends RegularLevel {
 		int oldDifficulty = Dungeon.hero.getDifficulty();
 
 		Hero hero = new Hero(2);
-		hero.setPos(entrance+1);
+
+		int pos;
+
+		do {
+			pos = randomDestination();
+		} while(!cellValid(pos));
+
+		hero.setPos(pos);
 
 		hero.spend(-10000);
 

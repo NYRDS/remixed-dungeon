@@ -37,6 +37,11 @@ public class SewerLevel extends RegularLevel {
 	}
 
 	@Override
+	protected String tilesTexXyz() {
+		return Assets.TILES_SEWERS_XYZ;
+	}
+
+	@Override
 	public String tilesTex() {
 		return Assets.TILES_SEWERS;
 	}
@@ -163,4 +168,8 @@ public class SewerLevel extends RegularLevel {
 		}
 	}
 
+	@Override
+	public int objectsKind() {
+		return 0;
+	}
 }
