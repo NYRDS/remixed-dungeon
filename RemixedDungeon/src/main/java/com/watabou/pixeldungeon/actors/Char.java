@@ -1513,7 +1513,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return false;
 		}
 
-		if(!walkingType.canSpawnAt(level(),chr.getPos())) {
+		if(!walkingType.canWalkOn(level(),chr.getPos())) {
 			return false;
 		}
 

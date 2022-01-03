@@ -29,10 +29,13 @@ public enum WalkingType {
 	}
 
 	public boolean canSpawnAt(Level level,int cell) {
+		return canWalkOn(level, cell) && Actor.findChar(cell) == null;
+	}
+
+	public boolean canWalkOn(Level level,int cell) {
 		final LevelObject topLevelObject = level.getTopLevelObject(cell);
 		return ((passableCells(level)[cell] || level.avoid[cell]) && !level.pit[cell])
-				&& (topLevelObject == null || topLevelObject.getLayer() < 0)
-				&& Actor.findChar(cell) == null;
+				&& (topLevelObject == null || topLevelObject.getLayer() < 0);
 	}
 
 	public int respawnCell(Level level) {
