@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.features;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
@@ -28,7 +29,8 @@ public class AlchemyPot {
 	
 	private static Char hero;
 	private static int pos;
-	
+
+	@LuaInterface
 	public static void operate(Char hero, int pos ) {
 		
 		AlchemyPot.hero = hero;

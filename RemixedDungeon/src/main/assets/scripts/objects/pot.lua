@@ -62,5 +62,15 @@ return object.init {
         else
             return RPD.DungeonTilemap:getDecoTileForTerrain(level, object:getPos(), RPD.Terrain.ALCHEMY)
         end
+    end,
+
+    interactive = function(self, object)
+        return true
+    end,
+
+    interact = function(self, object, hero)
+        local alchemyPot = luajava.bindClass("com.watabou.pixeldungeon.levels.features.AlchemyPot")
+        alchemyPot:operate(hero,object:getPos())
+        return true
     end
 }

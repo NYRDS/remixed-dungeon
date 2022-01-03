@@ -55,6 +55,11 @@ public class Sign extends LevelObject {
 	}
 
 	@Override
+	public boolean interactive() {
+		return true;
+	}
+
+	@Override
 	public void burn() {
 		remove();
 		level().set(getPos(),Terrain.EMBERS);

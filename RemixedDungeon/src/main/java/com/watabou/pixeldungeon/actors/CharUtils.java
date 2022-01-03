@@ -5,13 +5,11 @@ import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
-import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.Ascend;
 import com.nyrds.pixeldungeon.ml.actions.Attack;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
-import com.nyrds.pixeldungeon.ml.actions.Cook;
 import com.nyrds.pixeldungeon.ml.actions.Descend;
 import com.nyrds.pixeldungeon.ml.actions.Examine;
 import com.nyrds.pixeldungeon.ml.actions.Interact;
@@ -198,10 +196,6 @@ public class CharUtils {
         final LevelObject topLevelObject = level.getTopLevelObject(cell);
 
         if (cell != actor.getPos() && topLevelObject != null) {
-            if(topLevelObject.getEntityKind().equals(LevelObjectsFactory.POT) ) {
-                return new Cook(cell);
-            }
-
             if(topLevelObject.interactive()) {
                 return new InteractObject(topLevelObject);
             }

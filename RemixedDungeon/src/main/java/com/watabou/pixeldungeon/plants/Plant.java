@@ -73,6 +73,11 @@ public class Plant extends LevelObject {
 		return true;
 	}
 
+	@Override
+	public boolean interactive() {
+		return true;
+	}
+
 
 	@Override
 	public void bump(Presser presser) {

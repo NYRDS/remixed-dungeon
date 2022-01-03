@@ -33,9 +33,14 @@ public class LibraryBook extends LevelObject {
 	@Override
 	public boolean interact(Char hero) {
 		GameScene.show(new WndLibrary());
-
 		return false;
 	}
+
+	@Override
+	public boolean interactive() {
+		return true;
+	}
+
 
 	@Override
 	public void burn() {
