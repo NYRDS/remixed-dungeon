@@ -66,6 +66,11 @@ public abstract class PortalGate extends Deco {
 		return false;
 	}
 
+	@Override
+	public boolean interactive() {
+		return true;
+	}
+
 	public void useUp(){
 		if (!infiniteUses){
 			uses = uses - 1;
@@ -130,7 +135,7 @@ public abstract class PortalGate extends Deco {
 
 	@Override
 	public boolean nonPassable(Char ch) {
-		return false;
+		return true;
 	}
 
 	public abstract boolean portalInteract(Hero hero);

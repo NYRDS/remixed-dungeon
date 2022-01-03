@@ -161,4 +161,9 @@ public class CustomObject extends Deco {
     public boolean affectItems() {
         return script.runOptional("affectItems", super.affectItems());
     }
+
+    @Override
+    public boolean interactive() {
+        return script.runOptional("interactive", super.interactive());
+    }
 }

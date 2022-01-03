@@ -15,6 +15,7 @@ import com.nyrds.pixeldungeon.ml.actions.Cook;
 import com.nyrds.pixeldungeon.ml.actions.Descend;
 import com.nyrds.pixeldungeon.ml.actions.Examine;
 import com.nyrds.pixeldungeon.ml.actions.Interact;
+import com.nyrds.pixeldungeon.ml.actions.InteractObject;
 import com.nyrds.pixeldungeon.ml.actions.Move;
 import com.nyrds.pixeldungeon.ml.actions.OpenChest;
 import com.nyrds.pixeldungeon.ml.actions.Order;
@@ -196,8 +197,14 @@ public class CharUtils {
     public static  CharAction actionForCell(Char actor, int cell, @NotNull Level level) {
         final LevelObject topLevelObject = level.getTopLevelObject(cell);
 
-        if (cell != actor.getPos() && topLevelObject != null && topLevelObject.getEntityKind().equals(LevelObjectsFactory.POT) ){
-            return new Cook(cell);
+        if (cell != actor.getPos() && topLevelObject != null) {
+            if(topLevelObject.getEntityKind().equals(LevelObjectsFactory.POT) ) {
+                return new Cook(cell);
+            }
+
+            if(topLevelObject.interactive()) {
+                return new InteractObject(topLevelObject);
+            }
         }
 
         Char target;
