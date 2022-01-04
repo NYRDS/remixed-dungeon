@@ -240,7 +240,9 @@ public abstract class Level implements Bundlable {
 		final int pos = lo.getPos();
 		objectsLayer.put(pos, lo);
 
-		clearCellForObject(pos);
+		if(lo.clearCells()) {
+			clearCellForObject(pos);
+		}
 
 		markObjectFlags(lo, pos);
 	}

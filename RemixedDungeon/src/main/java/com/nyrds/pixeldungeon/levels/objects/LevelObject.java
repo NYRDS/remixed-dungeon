@@ -50,6 +50,10 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
         return false;
     }
 
+    public boolean clearCells() {
+        return true;
+    }
+
 
     class deprecatedSprite {
 
