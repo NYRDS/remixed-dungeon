@@ -112,7 +112,7 @@ public class Trap extends LevelObject {
 	public boolean stepOn(Char chr) {
 		interact(chr);
 
-		if (chr instanceof Hero) {
+		if (uses > 0 && chr instanceof Hero) {
 			Hero hero = (Hero) chr;
 			hero.interrupt();
 		}
