@@ -6,7 +6,8 @@
   "appearance": {
     "desc": {
       "desc": "",
-      "name": "Level_TileWell"
+      "name": "Level_TileWell",
+      "nonPassable" : false
     },
     "sprite":{
       "textureFile": "levelObjects/objects.png",

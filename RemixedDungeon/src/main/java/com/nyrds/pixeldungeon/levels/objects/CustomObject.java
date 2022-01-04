@@ -82,7 +82,7 @@ public class CustomObject extends Deco {
 
     @Override
     public boolean nonPassable(Char ch) {
-        return script.runOptional("nonPassable", false, ch);
+        return script.runOptional("nonPassable", super.nonPassable(ch), ch);
     }
 
     @Override

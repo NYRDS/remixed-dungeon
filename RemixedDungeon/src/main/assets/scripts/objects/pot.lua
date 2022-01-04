@@ -40,10 +40,6 @@ return object.init {
         end
     end,
 
-    nonPassable = function(self, object, hero)
-        return true
-    end,
-
     affectItems = function(self, object)
         return true
     end,

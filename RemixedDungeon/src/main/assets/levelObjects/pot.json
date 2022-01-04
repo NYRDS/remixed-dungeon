@@ -6,7 +6,8 @@
   "appearance": {
     "desc": {
       "desc": "Level_TileDescAlchemy",
-      "name": "Level_TileAlchemy"
+      "name": "Level_TileAlchemy",
+      "nonPassable" : true
     },
     "sprite":{
       "textureFile": "levelObjects/objects.png",
