@@ -46,7 +46,7 @@ public class Fury extends Buff {
 	public boolean attachTo(@NotNull Char target) {
 		if (CharUtils.isVisible(target)) {
 			GLog.w(StringsManager.getVar(R.string.Brute_Enraged), target.getName() );
-			target.getSprite().showStatus( CharSprite.NEGATIVE, StringsManager.getVar(R.string.Brute_StaEnraged));
+			target.showStatus( CharSprite.NEGATIVE, StringsManager.getVar(R.string.Brute_StaEnraged));
 		}
 		return super.attachTo(target);
 	}

@@ -605,7 +605,7 @@ public class Hero extends Char {
 
 		this.setExp(this.getExp() + exp);
 
-		getSprite().showStatus(CharSprite.POSITIVE, TXT_EXP, exp);
+		showStatus(CharSprite.POSITIVE, TXT_EXP, exp);
 
 		boolean levelUp = false;
 

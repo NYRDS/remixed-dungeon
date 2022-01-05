@@ -48,7 +48,7 @@ public class Metabolism extends Glyph {
 					BuffIndicator.refreshHero();
 
 					defender.heal(healing,this);
-					defender.getSprite().showStatus( CharSprite.POSITIVE, Integer.toString( healing ) );
+					defender.showStatus( CharSprite.POSITIVE, Integer.toString( healing ) );
 				}
 			}
 		}

@@ -36,7 +36,7 @@ public class FloatingText extends BitmapText {
 	
 	private int key = -1;
 	
-	private static Map<Integer,ArrayList<FloatingText>> stacks = new HashMap<>();
+	private static final Map<Integer,ArrayList<FloatingText>> stacks = new HashMap<>();
 	
 	public FloatingText() {
 		super(PixelScene.chooseFont( 9 ));

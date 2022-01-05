@@ -35,7 +35,7 @@ public class PotionOfMight extends PotionOfStrength {
 			hero.STR(hero.STR() + 1);
 			hero.ht(hero.ht() + 5);
 			hero.heal(5, this);
-            hero.getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.PotionOfMight_StaApply));
+            hero.showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.PotionOfMight_StaApply));
             GLog.p(StringsManager.getVar(R.string.PotionOfMight_Apply));
 
 			Badges.validateStrengthAttained(hero);

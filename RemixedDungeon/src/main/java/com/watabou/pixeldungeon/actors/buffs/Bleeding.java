@@ -67,6 +67,6 @@ public class Bleeding extends Buff {
 
 	@Override
 	public void attachVisual() {
-        target.getSprite().showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaBleeding));
+        target.showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaBleeding));
 	}
 }

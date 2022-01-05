@@ -60,7 +60,7 @@ public class Invisibility extends FlavourBuff {
 	@Override
 	public void attachVisual() {
 		super.attachVisual();
-        target.getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Char_StaInvisible));
+        target.showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Char_StaInvisible));
 	}
 
 	@Override

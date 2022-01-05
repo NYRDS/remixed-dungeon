@@ -71,6 +71,6 @@ public class Poison extends Buff implements Doom {
 	@Override
 	public void attachVisual() {
 		CellEmitter.center(target.getPos()).burst(PoisonParticle.SPLASH, 5);
-        target.getSprite().showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaPoisoned));
+        target.showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaPoisoned));
 	}
 }

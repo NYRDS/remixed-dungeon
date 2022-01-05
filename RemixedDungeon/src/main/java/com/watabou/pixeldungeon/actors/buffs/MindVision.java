@@ -51,7 +51,7 @@ public class MindVision extends FlavourBuff {
 
 	@Override
 	public void attachVisual() {
-        target.getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Char_StaMind));
-        target.getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Char_StaVision));
+        target.showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Char_StaMind));
+        target.showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Char_StaVision));
 	}
 }

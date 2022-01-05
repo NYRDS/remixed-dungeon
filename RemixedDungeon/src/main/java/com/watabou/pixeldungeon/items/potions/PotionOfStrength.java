@@ -39,7 +39,7 @@ public class PotionOfStrength extends Potion {
 		if(chr instanceof Hero) {
 			Hero hero = (Hero) chr;
 			hero.STR(hero.STR() + 1);
-            hero.getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.PotionOfStrength_StaApply));
+            hero.showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.PotionOfStrength_StaApply));
             GLog.p(StringsManager.getVar(R.string.PotionOfStrength_Apply));
 
 			Badges.validateStrengthAttained(hero);

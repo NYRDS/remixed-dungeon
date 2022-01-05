@@ -622,7 +622,7 @@ public abstract class Mob extends Char {
 		if (CharUtils.hit(this, enemy, true)) {
 			return true;
 		} else {
-			enemy.getSprite().showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
+			enemy.showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
 			return false;
 		}
 	}

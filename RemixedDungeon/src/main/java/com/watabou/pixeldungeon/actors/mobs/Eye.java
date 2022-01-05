@@ -110,7 +110,7 @@ public class Eye extends Mob {
 
                     CharUtils.checkDeathReport(this ,victim, StringsManager.getVar(R.string.Eye_Kill));
                 } else {
-                    victim.getSprite().showStatus(CharSprite.NEUTRAL, victim.defenseVerb());
+                    victim.showStatus(CharSprite.NEUTRAL, victim.defenseVerb());
                 }
             }
         }

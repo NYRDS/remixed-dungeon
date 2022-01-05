@@ -80,6 +80,6 @@ public class Paralysis extends FlavourBuff {
 	@Override
 	public void attachVisual() {
 		target.getSprite().add(CharSprite.State.PARALYSED);
-        target.getSprite().showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaParalysed));
+        target.showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaParalysed));
 	}
 }

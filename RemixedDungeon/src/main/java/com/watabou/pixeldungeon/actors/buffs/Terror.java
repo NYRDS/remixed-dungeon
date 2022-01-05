@@ -57,6 +57,6 @@ public class Terror extends FlavourBuff {
 
 	@Override
 	public void attachVisual() {
-        target.getSprite().showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaFrightened));
+        target.showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaFrightened));
 	}
 }

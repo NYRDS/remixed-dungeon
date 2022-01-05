@@ -43,6 +43,6 @@ public class Roots extends FlavourBuff {
 
 	@Override
 	public void attachVisual() {
-        target.getSprite().showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaRooted));
+        target.showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaRooted));
 	}
 }

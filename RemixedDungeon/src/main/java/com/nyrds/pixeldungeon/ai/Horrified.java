@@ -21,7 +21,7 @@ public class Horrified extends MobAi implements AiState{
     public void act(@NotNull Mob me) {
 
         if(!me.hasBuff(Terror.class)) {
-            me.getSprite().showStatus(CharSprite.NEGATIVE, Mob.TXT_RAGE);
+            me.showStatus(CharSprite.NEGATIVE, Mob.TXT_RAGE);
             me.setState(MobAi.getStateByClass(Hunting.class));
             return;
         }

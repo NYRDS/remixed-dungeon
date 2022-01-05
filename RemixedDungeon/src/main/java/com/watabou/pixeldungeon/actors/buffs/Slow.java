@@ -40,6 +40,6 @@ public class Slow extends FlavourBuff {
 
 	@Override
 	public void attachVisual() {
-        target.getSprite().showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaSlowed));
+        target.showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaSlowed));
 	}
 }

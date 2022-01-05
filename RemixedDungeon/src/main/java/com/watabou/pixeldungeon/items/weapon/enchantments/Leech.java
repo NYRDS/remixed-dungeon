@@ -40,7 +40,7 @@ public class Leech extends Weapon.Enchantment {
 		
 		if (effValue > 0) {
 			attacker.heal(effValue, this);
-			attacker.getSprite().showStatus( CharSprite.POSITIVE, Integer.toString( effValue ) );
+			attacker.showStatus( CharSprite.POSITIVE, Integer.toString( effValue ) );
 			
 			return true;
 			

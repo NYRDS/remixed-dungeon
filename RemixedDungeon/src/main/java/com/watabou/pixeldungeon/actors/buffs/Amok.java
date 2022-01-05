@@ -31,6 +31,6 @@ public class Amok extends FlavourBuff {
 
 	@Override
 	public void attachVisual() {
-        target.getSprite().showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaAmok));
+        target.showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaAmok));
 	}
 }

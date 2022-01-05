@@ -21,7 +21,7 @@ public class TomeOfKnowledge extends Book {
 
 		SpellSprite.show( user, SpellSprite.MASTERY );
 		user.getSprite().emitter().burst( Speck.factory( Speck.MAGIC ), 8 );
-		user.getSprite().showStatus( CharSprite.BLUE, "+ 1");
+		user.showStatus( CharSprite.BLUE, "+ 1");
 		Sample.INSTANCE.play( Assets.SND_READ );
 
 		user.spend( TIME_TO_READ );

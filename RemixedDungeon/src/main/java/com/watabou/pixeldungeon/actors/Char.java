@@ -375,6 +375,15 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		GLog.i(StringsManager.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str, index));
 	}
 
+	@LuaInterface
+	public void showStatus(int color, String text) {
+		getSprite().showStatus(color,text);
+	}
+
+	@LuaInterface
+	public void showStatus(int color, String text, Object ... args) {
+		getSprite().showStatus(color, text, args);
+	}
 	public boolean ignoreDr() {
 		return false;
 	}
@@ -444,7 +453,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 			if (visibleFight) {
 				String defense = enemy.defenseVerb();
-				enemy.getSprite().showStatus(CharSprite.NEUTRAL, defense);
+				enemy.showStatus(CharSprite.NEUTRAL, defense);
 				if (this == Dungeon.hero) {
 					GLog.i(StringsManager.getVar(R.string.Char_YouMissed), enemy.name, defense);
 				} else {
