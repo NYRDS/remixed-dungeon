@@ -38,6 +38,6 @@ public class Cripple extends FlavourBuff {
 
 	@Override
 	public void attachVisual() {
-        target.getSprite().showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaCrippled));
+        target.showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaCrippled));
 	}
 }

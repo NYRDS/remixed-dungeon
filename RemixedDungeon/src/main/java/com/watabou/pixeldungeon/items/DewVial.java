@@ -87,7 +87,7 @@ public class DewVial extends Item {
 			int effect = Math.min(chr.ht() - chr.hp(), value);
 			if (effect > 0) {
 				chr.heal(effect, this);
-				chr.getSprite().showStatus(CharSprite.POSITIVE, TXT_VALUE, effect);
+				chr.showStatus(CharSprite.POSITIVE, TXT_VALUE, effect);
 			}
 
 			setVolume(0);
