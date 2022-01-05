@@ -5,7 +5,8 @@
   "appearance": {
     "desc": {
       "desc": "Level_TileDescPedestal",
-      "name": "Level_TilePedestal"
+      "name": "Level_TilePedestal",
+      "nonPassable" : false
     },
     "sprite":{
       "textureFile": "levelObjects/objects.png",
