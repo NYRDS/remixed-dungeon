@@ -31,7 +31,7 @@ public class Deathling extends UndeadMob {
         dmgMax = 4 + modifier;
         dmgMin = 1;
         dr  = modifier;
-        ht(ht(HEALTH + modifier));
+        hp(ht(HEALTH + modifier));
     }
 
     @Override
