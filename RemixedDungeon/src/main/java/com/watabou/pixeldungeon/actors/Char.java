@@ -419,9 +419,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			if (visibleFight) {
 				Sample.INSTANCE.play(Assets.SND_HIT, 1, 1, Random.Float(0.8f, 1.25f));
 
-				enemy.getSprite().bloodBurstA(
+				final CharSprite enemySprite = enemy.getSprite();
+
+				enemySprite.bloodBurstA(
 						getSprite().center(), effectiveDamage);
-				enemy.getSprite().flash();
+				enemySprite.flash();
 			}
 
 			if (!enemy.isAlive() && visibleFight) {
@@ -1040,10 +1042,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		Char enemy = getEnemy();
 
 		if(enemy.valid()) {
-			getItemFromSlot(Belongings.Slot.WEAPON).preAttack(enemy);
+			final EquipableItem weapon = getItemFromSlot(Belongings.Slot.WEAPON);
+			weapon.preAttack(enemy);
 
 			if (attack(enemy)) {
-				getItemFromSlot(Belongings.Slot.WEAPON).postAttack(enemy);
+				weapon.postAttack(enemy);
 			}
 		}
 
