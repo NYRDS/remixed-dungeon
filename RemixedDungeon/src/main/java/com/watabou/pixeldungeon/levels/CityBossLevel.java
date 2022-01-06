@@ -62,7 +62,10 @@ public class CityBossLevel extends BossLevel {
 		
 		Painter.fill( this, _Left(), TOP, HALL_WIDTH, HALL_HEIGHT, Terrain.EMPTY );
 		Painter.fill( this, _Center(), TOP, 1, HALL_HEIGHT, Terrain.EMPTY_SP );
-		
+
+		int left = (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() - 2;
+		int right = (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() + 2;
+
 		int y = TOP + 1;
 		while (y < TOP + HALL_HEIGHT) {
 			putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, y * getWidth() + _Center() - 2));
@@ -70,15 +73,13 @@ public class CityBossLevel extends BossLevel {
 			y += 2;
 		}
 
-		int left = pedestal( true );
-		int right = pedestal( false );
-
 		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, left));
 		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, right));
 
 		for (int i=left+1; i < right; i++) {
 			map[i] = Terrain.EMPTY_SP;
 		}
+
 
 		setExit((TOP - 1) * getWidth() + _Center(),0);
 		map[getExit(0)] = Terrain.LOCKED_EXIT;
@@ -103,14 +104,6 @@ public class CityBossLevel extends BossLevel {
 
 		int sign = arenaDoor + getWidth() + 1;
 		addLevelObject(new Sign(sign,Dungeon.tip(this)));
-	}
-
-	public int pedestal( boolean left ) {
-		if (left) {
-			return (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() - 2;
-		} else {
-			return (TOP + HALL_HEIGHT / 2) * getWidth() + _Center() + 2;
-		}
 	}
 
 	@Override

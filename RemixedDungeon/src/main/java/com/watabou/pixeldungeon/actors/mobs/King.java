@@ -21,6 +21,7 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
@@ -84,7 +85,12 @@ public class King extends Boss {
 	public boolean getCloser(int target) {
 
  		targetPedestal = level().getNearestTerrain(getPos(),
-				(level, cell) -> cell != lastPedestal && level.getTopLevelObject(cell)!=null && level.getTopLevelObject(cell).equals(LevelObjectsFactory.PEDESTAL));
+				(level, cell) -> {
+					final LevelObject topLevelObject = level.getTopLevelObject(cell);
+					return cell != lastPedestal
+						   && topLevelObject !=null
+						   && topLevelObject.getEntityKind().equals(LevelObjectsFactory.PEDESTAL);
+				});
 
 		if(canTryToSummon()) {
 			return super.getCloser( targetPedestal );
