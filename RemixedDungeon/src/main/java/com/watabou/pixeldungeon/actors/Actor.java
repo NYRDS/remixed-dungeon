@@ -274,11 +274,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		//Log.i("Main loop","getNextActor");
 
 		for (Actor actor : all) {
-			//select actor to act
-			if (actor.time < upTo) {
-				upTo = actor.time;
-				next = actor;
-			}
+
+			boolean busy = false;
 
 			//fill chars
 			if (actor instanceof Char) {
@@ -292,7 +289,22 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 					continue;
 				}
 
+				if(ch.getSprite().doingSomething()) {
+					busy = true;
+				}
+
 				chars.put(ch.getPos(), ch);
+			}
+
+			//select actor to act
+			if (actor.time < upTo) {
+				upTo = actor.time;
+				next = actor;
+			}
+
+			if(actor.time == upTo && !busy) {
+				next = actor;
+				GLog.debug("not busy");
 			}
 		}
 
