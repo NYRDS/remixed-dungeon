@@ -113,10 +113,17 @@ public class Potion extends Item implements UnknownItem {
 	public Potion() {
 		image = handler.index( this );
 		color = StringsManager.getVars(R.array.Potion_Colors)[ItemStatusHandler.indexByImage(image, images)];
+		if(knownHamful()) {
+			setDefaultAction(AC_THROW);
+		}
 	}
 	
 	@Override
 	public ArrayList<String> actions(Char hero ) {
+		if(knownHamful()) {
+			setDefaultAction(AC_THROW);
+		}
+
 		ArrayList<String> actions = super.actions( hero );
 		actions.add( AC_DRINK );
 		actions.add( AC_MOISTEN );
@@ -127,11 +134,7 @@ public class Potion extends Item implements UnknownItem {
 	public void _execute(@NotNull final Char chr, @NotNull String action ) {
 		switch (action) {
 			case AC_DRINK:
-				if (isKnown() && (
-						this instanceof PotionOfLiquidFlame ||
-								this instanceof PotionOfToxicGas ||
-								this instanceof PotionOfParalyticGas ||
-								this instanceof PotionOfFrost)) {
+				if (knownHamful()) {
 
                     GameScene.show(
 							new WndOptions(StringsManager.getVar(R.string.Potion_Harmfull),
@@ -162,7 +165,15 @@ public class Potion extends Item implements UnknownItem {
 				break;
 		}
 	}
-	
+
+	public boolean knownHamful() {
+		return isKnown() && (
+				this instanceof PotionOfLiquidFlame ||
+						this instanceof PotionOfToxicGas ||
+						this instanceof PotionOfParalyticGas ||
+						this instanceof PotionOfFrost);
+	}
+
 	@Override
 	public void doThrow(@NotNull final Char chr) {
 
