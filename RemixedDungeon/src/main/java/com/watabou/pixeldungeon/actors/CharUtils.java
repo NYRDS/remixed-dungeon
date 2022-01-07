@@ -193,14 +193,6 @@ public class CharUtils {
 
     @NotNull
     public static  CharAction actionForCell(Char actor, int cell, @NotNull Level level) {
-        final LevelObject topLevelObject = level.getTopLevelObject(cell);
-
-        if (cell != actor.getPos() && topLevelObject != null) {
-            if(topLevelObject.interactive()) {
-                return new InteractObject(topLevelObject);
-            }
-        }
-
         Char target;
         final Char controlTarget = actor.getControlTarget();
 
@@ -223,6 +215,14 @@ public class CharUtils {
 
                     return new Examine(target);
                 }
+            }
+        }
+
+        final LevelObject topLevelObject = level.getTopLevelObject(cell);
+
+        if (cell != actor.getPos() && topLevelObject != null) {
+            if(topLevelObject.interactive()) {
+                return new InteractObject(topLevelObject);
             }
         }
 
