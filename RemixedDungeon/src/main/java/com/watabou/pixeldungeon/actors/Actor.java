@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
@@ -43,6 +44,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 import lombok.var;
 
@@ -266,12 +268,30 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	}
 
 	public static Actor getNextActor(float upTo) {
-		Actor toRemove = null;
+		Set<Char> toRemove = new HashSet<>();
 		Actor next     = null;
 
 		chars.clear();
 
 		//Log.i("Main loop","getNextActor");
+
+		for (Actor actor : all) {
+			if (actor instanceof Char) {
+				Char ch = (Char)actor;
+
+				if(!ch.level().cellValid(ch.getPos())) {
+					actor.next();
+					toRemove.add(ch);
+				}
+			}
+		}
+
+		for(Char ch : toRemove) {
+			ch.regenSprite();
+		}
+
+		all.removeAll(toRemove);
+
 
 		for (Actor actor : all) {
 
@@ -281,15 +301,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 			if (actor instanceof Char) {
 				Char ch = (Char)actor;
 
-				//filter out badly placed chars, is this still happens?
-				if(!ch.level().cellValid(ch.getPos())) {
-					actor.next();
-					toRemove = actor;
-					ch.getSprite().killAndErase();
-					continue;
-				}
+				final CharSprite chSprite = ch.getSprite();
 
-				if(ch.getSprite().doingSomething()) {
+				if(chSprite.doingSomething()) {
 					busy = true;
 				}
 
@@ -310,7 +324,6 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 		Actor.now = upTo;
 
-		remove(toRemove);
 		return next;
 	}
 
