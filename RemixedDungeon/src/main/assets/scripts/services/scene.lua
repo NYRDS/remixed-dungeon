@@ -55,7 +55,7 @@ local function levelsTestModeOnStep(self, scene)
             autoTestAi.step()
         end
 
-        if framesOnLevel > 10000 then
+        if framesOnLevel > 1000 then
             currentLevel = currentLevel + 1
 
             if currentLevel < levelsSize then

@@ -64,7 +64,14 @@
          "object_desc":"pot",
          "x":6,
          "y":19
-       }
+       },
+     {
+       "kind":"Sign",
+       "text":"pot",
+       "x":6,
+       "y":21
+     }
+
  ],
  "tiles":"tiles0_x.png",
  "tiles_logic":"tiles0.png",

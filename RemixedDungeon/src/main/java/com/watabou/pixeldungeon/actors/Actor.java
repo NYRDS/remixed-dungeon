@@ -268,6 +268,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	}
 
 	public static Actor getNextActor(float upTo) {
+
+		var copyOfAll = all.toArray(new Actor[0]);
+
 		Set<Char> toRemove = new HashSet<>();
 		Actor next     = null;
 
@@ -275,7 +278,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 		//Log.i("Main loop","getNextActor");
 
-		for (Actor actor : all) {
+		for (Actor actor : copyOfAll) {
 			if (actor instanceof Char) {
 				Char ch = (Char)actor;
 
@@ -291,9 +294,11 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		}
 
 		all.removeAll(toRemove);
+		copyOfAll = all.toArray(new Actor[0]);
 
 
-		for (Actor actor : all) {
+
+		for (Actor actor : copyOfAll) {
 
 			boolean busy = false;
 
@@ -318,7 +323,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 			if(actor.time == upTo && !busy) {
 				next = actor;
-				GLog.debug("not busy");
+				//GLog.debug("not busy");
 			}
 		}
 
