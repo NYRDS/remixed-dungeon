@@ -43,7 +43,8 @@
         android:networkSecurityConfig="@xml/network_security_config"
         tools:replace="android:fullBackupContent"
         android:fullBackupContent="@xml/backup_descriptor"
-        android:requestLegacyExternalStorage="true">
+        android:requestLegacyExternalStorage="true"
+        android:banner="@drawable/ic_launcher">
 
 
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
@@ -56,7 +57,7 @@
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/app_name"
             android:screenOrientation="nosensor"
-            >
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -64,7 +65,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.nyrds.platform.game.InstallMod">
+        <activity android:name="com.nyrds.platform.game.InstallMod"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />

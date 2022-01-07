@@ -37,8 +37,8 @@ public class AppodealAdapter {
             return;
         }
 
-        Appodeal.disableWriteExternalStoragePermissionCheck();
-        Appodeal.disableLocationPermissionCheck();
+//        Appodeal.disableWriteExternalStoragePermissionCheck();
+//        Appodeal.disableLocationPermissionCheck();
 
 
         if (Util.isDebug()) {
