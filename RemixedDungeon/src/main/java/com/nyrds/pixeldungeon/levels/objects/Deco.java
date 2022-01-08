@@ -52,7 +52,8 @@ public class Deco extends LevelObject {
 
 	private boolean canStepOn   = false;
 	private boolean nonPassable = true;
-	private boolean clearCells = true;
+	private boolean clearCells  = true;
+	private boolean losBlocker  = false;
 
 	private String effectName = Utils.EMPTY_STRING;
 
@@ -71,6 +72,16 @@ public class Deco extends LevelObject {
 	@Override
 	public boolean nonPassable(Char ch) {
 		return nonPassable;
+	}
+
+	@Override
+	public boolean clearCells() {
+		return clearCells;
+	}
+
+	@Override
+	public boolean losBlocker() {
+		return losBlocker;
 	}
 
 	@Override
@@ -113,6 +124,7 @@ public class Deco extends LevelObject {
 		canStepOn = desc.optBoolean("canStepOn",canStepOn);
 		nonPassable = desc.optBoolean("nonPassable",nonPassable);
 		clearCells = desc.optBoolean("clearCells",clearCells);
+		losBlocker = desc.optBoolean("losBlocker",losBlocker);
 
 		JSONObject sprite = appearance.getJSONObject("sprite");
 
