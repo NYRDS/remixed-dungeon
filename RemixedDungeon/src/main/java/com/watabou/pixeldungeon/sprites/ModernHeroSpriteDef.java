@@ -58,6 +58,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private static final String HERO_MODERN_SPRITES_DESC_STATUE_JSON = "hero_modern/spritesDesc/Statue.json";
 
 	private static final String BODY_TYPE = "bodyType";
+	public static final String LEFT = "left";
+	public static final String RIGHT = "right";
 
 	private CustomClipEffect deathEffect;
 
@@ -183,15 +185,15 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_ACCESSORY, accessoryDescriptor);
 
 		if(accessory==null || !accessory.isCoveringItems()) {
-			layersDesc.put(LAYER_LEFT_ITEM_BACK,  itemBackDescriptor(leftHand,"left"));
-			layersDesc.put(LAYER_RIGHT_ITEM_BACK, itemBackDescriptor(weapon, "right"));
+			layersDesc.put(LAYER_LEFT_ITEM_BACK,  itemBackDescriptor(leftHand, LEFT));
+			layersDesc.put(LAYER_RIGHT_ITEM_BACK, itemBackDescriptor(weapon, RIGHT));
 
-			layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(leftHand,"left"));
-			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, "right"));
+			layersDesc.put(LAYER_LEFT_ITEM,  itemHandDescriptor(leftHand, LEFT));
+			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(weapon, RIGHT));
 
 			if(armor != ItemsList.DUMMY) {
-				layersDesc.put(LAYER_LEFT_ARMOR, armorShoulderDescriptor(armor,leftHand,"left"));
-				layersDesc.put(LAYER_RIGHT_ARMOR, armorShoulderDescriptor(armor,weapon,"right"));
+				layersDesc.put(LAYER_LEFT_ARMOR, armorShoulderDescriptor(armor,leftHand, LEFT));
+				layersDesc.put(LAYER_RIGHT_ARMOR, armorShoulderDescriptor(armor,weapon, RIGHT));
 			}
 
 		}
@@ -221,7 +223,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			layersDesc.put(LAYER_RIGHT_HAND, "hero_modern/body/hands/statue_" +weaponAnimationClassRight+"_right.png");
 
 			//layersDesc.put(LAYER_LEFT_ITEM,  "hero_modern/empty.png");
-			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(item, "right"));
+			layersDesc.put(LAYER_RIGHT_ITEM, itemHandDescriptor(item, RIGHT));
 		}
 	}
 
@@ -255,13 +257,13 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			}
 
 			if(right) {
-				attack = weapon_anims.get("right");
+				attack = weapon_anims.get(RIGHT);
 				zap = attack.clone();
 				return;
 			}
 
 			if(left) {
-				attack = weapon_anims.get("left");
+				attack = weapon_anims.get(LEFT);
 				zap = attack.clone();
 			}
 		}
