@@ -24,13 +24,10 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 
+import com.badlogic.gdx.ApplicationListener;
 import com.nyrds.LuaInterface;
-import com.nyrds.market.MarketOptions;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.pixeldungeon.support.AdsUtils;
-import com.nyrds.pixeldungeon.support.EuConsent;
-import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.storage.Preferences;
@@ -42,171 +39,45 @@ import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
-public class RemixedDungeon extends Game {
 
-	public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
+
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
+
+public class RemixedDungeon extends Game implements ApplicationListener {
+
+
+	public static void main(String[] args) {
+		Lwjgl3ApplicationConfiguration cfg = new Lwjgl3ApplicationConfiguration();
+		cfg.setTitle("Remixed Dungeon");
+		cfg.setWindowedMode(480, 800);
+
+		final Lwjgl3Application lwjgl3Application = new Lwjgl3Application(new RemixedDungeon(), cfg);
+	}
 
 	public RemixedDungeon() {
 		super(TitleScene.class);
-
-		// remix 0.5
-		com.watabou.utils.Bundle.addAlias(
-				com.watabou.pixeldungeon.items.food.Ration.class,
-				"com.watabou.pixeldungeon.items.food.Food");
-		// remix 23.1.alpha
-		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.mobs.guts.SuspiciousRat.class,
-				"com.nyrds.pixeldungeon.mobs.guts.Wererat");
-		// remix 23.2.alpha
-		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore.class,
-				"com.nyrds.pixeldungeon.items.guts.weapon.melee.BroadSword");
-		// remix 24
-		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.items.accessories.Bowknot.class,
-				"com.nyrds.pixeldungeon.items.accessories.BowTie");
-		// remix 24
-		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.items.accessories.Nightcap.class,
-				"com.nyrds.pixeldungeon.items.accessories.SleepyHat");
-		// remix 27.2.beta
-		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.items.books.TomeOfKnowledge.class,
-				"com.nyrds.pixeldungeon.items.books.SpellBook");
-
-		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.mechanics.buffs.RageBuff.class,
-			"com.watabou.pixeldungeon.items.quest.CorpseDust.UndeadRageAuraBuff"
-		);
-
-		com.watabou.utils.Bundle.addAlias(
-				com.watabou.pixeldungeon.actors.mobs.FireElemental.class,
-				"com.watabou.pixeldungeon.actors.mobs.Elemental"
-		);
-
 	}
 
-    public static boolean isAlpha() {
-        return version.contains("alpha") || version.contains("in_dev");
-    }
-
-	public static boolean isDev() {
-		return version.contains("in_dev");
-	}
-
-    @Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-
-		EuConsent.check(this);
-		playGames = new PlayGames();
-    }
-
-	@Override
-	public void onResume() {
-		super.onResume();
-
-		GamePreferences.activeMod(ModdingMode.activeMod());
-
-		if(!Utils.canUseClassicFont(GamePreferences.uiLanguage())) {
-			GamePreferences.classicFont(false);
-		}
-
-		ModdingMode.setClassicTextRenderingMode(GamePreferences.classicFont());
-
-		GamePreferences.setSelectedLanguage();
-
-		updateImmersiveMode();
-
-		DisplayMetrics metrics = new DisplayMetrics();
-		getWindowManager().getDefaultDisplay().getMetrics(metrics);
-		boolean landscape = metrics.widthPixels > metrics.heightPixels;
-
-		if (Preferences.INSTANCE.getBoolean(Preferences.KEY_LANDSCAPE, false) != landscape) {
-			landscape(!landscape);
-		}
-
-		Music.INSTANCE.enable(GamePreferences.music());
-		Sample.INSTANCE.enable(GamePreferences.soundFx());
-
-		if (Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)) {
-			playGames.connect();
-		}
-
-		AdsUtils.initRewardVideo();
-	}
-
-	@Override
-	public void onWindowFocusChanged(boolean hasFocus) {
-		super.onWindowFocusChanged(hasFocus);
-
-		if (hasFocus) {
-			updateImmersiveMode();
-		}
-	}
-
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-		String extras = Utils.EMPTY_STRING;
-		if(data!=null) {
-			extras = Util.bundle2string(data.getExtras());
-		}
-
-		GLog.debug("onActivityResult(" + requestCode + "," + resultCode + "," + data +" "+extras);
-
-		if(playGames.onActivityResult(requestCode, resultCode, data)) {
-			return;
-		}
-
-		super.onActivityResult(requestCode, resultCode, data);
-	}
-
-	public static void switchNoFade(Class<? extends PixelScene> c) {
-		PixelScene.noFade = true;
-		GameLoop.switchScene(c);
-	}
 
 	public static boolean canDonate() {
-		return MarketOptions.haveDonations() && Game.instance().iap.isReady() || Util.isDebug();
+		return false;
 	}
-	
-	/*
-	 * ---> Android Preferences
-	 */
+
 
 	public static void landscape(boolean value) {
-		Game.instance()
-				.setRequestedOrientation(value ? ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-						: ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-		Preferences.INSTANCE.put(Preferences.KEY_LANDSCAPE, value);
 	}
 
 	public static boolean storedLandscape() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_LANDSCAPE, false);
+		return true;
 	}
 
 	public static boolean landscape() {
-		return width() > height();
+		return true;
 	}
 
 
-	@SuppressLint("NewApi")
 	public static void updateImmersiveMode() {
-		if (android.os.Build.VERSION.SDK_INT >= 19) {
-			if (instance() != null) {
-				instance().getWindow()
-						.getDecorView()
-						.setSystemUiVisibility(
-								GamePreferences.immersed() ? View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-										| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-										| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-										| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-										| View.SYSTEM_UI_FLAG_FULLSCREEN
-										| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-										: 0);
-			}
-		}
 	}
 
 	//Still here for lua scripts compatibility
@@ -225,4 +96,34 @@ public class RemixedDungeon extends Game {
 		GameLoop.resetScene();
 	}
 
+
+	@Override
+	public void create() {
+
+	}
+
+	@Override
+	public void resize(int width, int height) {
+
+	}
+
+	@Override
+	public void render() {
+
+	}
+
+	@Override
+	public void pause() {
+
+	}
+
+	@Override
+	public void resume() {
+
+	}
+
+	@Override
+	public void dispose() {
+
+	}
 }

@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.support;
 
-import androidx.annotation.MainThread;
-
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -114,7 +112,6 @@ class AdsUtilsCommon {
         tryNextRewardVideo(retTo);
     }
 
-    @MainThread
     static boolean isRewardVideoReady() {
         for(IRewardVideoProvider provider: AdsUtils.rewardVideoFails.keySet()) {
             if(provider.isReady()) {

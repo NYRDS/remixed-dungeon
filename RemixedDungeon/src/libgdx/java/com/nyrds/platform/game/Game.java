@@ -1,20 +1,3 @@
-/*
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
-
 package com.nyrds.platform.game;
 
 import android.annotation.SuppressLint;
@@ -67,31 +50,13 @@ import java.util.concurrent.Executor;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-@SuppressLint("Registered")
-public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
-
-    @SuppressLint("StaticFieldLeak")
+public class Game {
     private static Game instance;
 
-    // Actual size of the screen
-    private static int width;
-    private static int height;
-
-    public static String version = Utils.EMPTY_STRING;
-    public static int versionCode = 0;
-    public PlayGames playGames;
     public Iap iap;
 
 
-    private GLSurfaceView view;
-    private LinearLayout layout;
-
     private static volatile boolean paused = true;
-
-    public static volatile boolean softPaused = false;
-
-
-    public Executor serviceExecutor = new ReportingExecutor();
 
     protected GameLoop gameLoop;
 
@@ -99,220 +64,33 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         super();
         instance = this;
         gameLoop = new GameLoop(c);
+
+        GameLoop.version = "None";
+        GameLoop.versionCode = 0;
     }
 
     public void doRestart() {
-        Intent i = getBaseContext()
-                .getPackageManager()
-                .getLaunchIntentForPackage(getBaseContext().getPackageName())
-                .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-
-        int piId = Random.Int(Integer.MAX_VALUE);
-
-        PendingIntent pi = PendingIntent.getActivity(getBaseContext(), piId, i, PendingIntent.FLAG_CANCEL_CURRENT);
-        AlarmManager mgr = (AlarmManager) getBaseContext().getSystemService(ContextWrapper.ALARM_SERVICE);
-        mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, pi);
-        shutdown();
     }
 
     public static void shutdown() {
         paused = true;
-        instance().gameLoop.shutdown();
-
-        instance().finish();
         System.exit(0);
     }
 
     public static void toast(final String text, final Object... args) {
-        String toastText = text;
-
-        if (args.length > 0) {
-            toastText = Utils.format(text, args);
-        }
-
-        GLog.toFile("%s ",toastText);
-
-        String finalToastText = toastText;
-
-        GameLoop.runOnMainThread(() -> {
-
-            Toast toast = Toast.makeText(RemixedDungeonApp.getContext(), finalToastText,
-                    Toast.LENGTH_SHORT);
-            toast.show();
-        });
 
     }
 
-    @Override
-    protected void onSaveInstanceState(@NotNull Bundle outState) {
-        super.onSaveInstanceState(outState);
+
+    static public void runOnMainThread(Runnable runnable) {
+        GameLoop.pushUiTask( runnable );
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        instance = this;
-
-        iap = new Iap(this);
-
-        try {
-            version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
-            versionCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
-        } catch (NameNotFoundException ignored) {
-        }
-
-        setVolumeControlStream(AudioManager.STREAM_MUSIC);
-
-        view = new GLSurfaceView(this);
-        view.setEGLContextClientVersion(2);
-
-        // Hope this allow game work on broader devices list
-        // view.setEGLConfigChooser( false );
-        view.setRenderer(this);
-        view.setOnTouchListener(this);
-
-        layout = new LinearLayout(this);
-        getLayout().setOrientation(LinearLayout.VERTICAL);
-        getLayout().addView(view);
-
-        setContentView(getLayout());
-    }
 
     public static void syncAdsState() {
-
-        if(GamePreferences.donated() > 0) {
-            Ads.removeEasyModeBanner();
-            return;
-        }
-
-        if (GameLoop.getDifficulty() == 0) {
-            Ads.displayEasyModeBanner();
-        }
-
-        if (GameLoop.getDifficulty() >= 2) {
-            Ads.removeEasyModeBanner();
-        }
-
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        instance = this;
 
-        view.onResume();
-
-        gameLoop.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        paused = true;
-        view.onPause();
-
-        if (gameLoop.scene != null) { // view.onPause will wait for gl thread, so it safe to access scene here
-            gameLoop.scene.pause();
-        }
-
-        Music.INSTANCE.pause();
-        Sample.INSTANCE.pause();
-
-        Script.reset();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-
-        if (gameLoop.scene != null) { // view.onPause will wait for gl thread, so it safe to access scene here
-            gameLoop.scene.destroy();
-            gameLoop.scene = null;
-        }
-
-        Music.INSTANCE.mute();
-        Sample.INSTANCE.reset();
-    }
-
-    @SuppressLint({"Recycle", "ClickableViewAccessibility"})
-    @Override
-    public boolean onTouch(View view, MotionEvent event) {
-        gameLoop.motionEvents.add(MotionEvent.obtain(event));
-        return true;
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-
-        if (keyCode == Keys.VOLUME_DOWN || keyCode == Keys.VOLUME_UP) {
-            return super.onKeyDown(keyCode, event);
-        }
-
-        gameLoop.keysEvents.add(event);
-        return true;
-    }
-
-    @Override
-    public boolean onKeyUp(int keyCode, KeyEvent event) {
-
-        if (keyCode == Keys.VOLUME_DOWN || keyCode == Keys.VOLUME_UP) {
-            return super.onKeyUp(keyCode, event);
-        }
-
-        synchronized (gameLoop.keysEvents) {
-            gameLoop.keysEvents.add(event);
-        }
-        return true;
-    }
-
-    @Override
-    public void onDrawFrame(GL10 gl) {
-        if (instance() == null || width() == 0 || height() == 0) {
-            gameLoop.framesSinceInit = 0;
-            return;
-        }
-
-        if (paused) {
-            gameLoop.framesSinceInit = 0;
-            return;
-        }
-
-        if(!isFinishing()) {
-            gameLoop.onFrame();
-        }
-
-
-    }
-
-    @Override
-    public void onSurfaceChanged(GL10 gl, int width, int height) {
-        GLES20.glViewport(0, 0, width, height);
-
-        //GLog.i("viewport: %d %d",width, height );
-
-        Game.width(width);
-        Game.height(height);
-
-        GameLoop.setNeedSceneRestart();
-    }
-
-    @Override
-    public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-        GLES20.glEnable(GL10.GL_BLEND);
-        GLES20.glBlendFunc(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA);
-
-        GLES20.glEnable(GL10.GL_SCISSOR_TEST);
-
-
-        SystemText.invalidate();
-        TextureCache.clear();
-
-        paused = false;
-
-        if (gameLoop.scene != null) {
-            gameLoop.scene.resume();
-        }
-    }
 
     public static boolean isPaused() {
         return paused;
@@ -320,85 +98,22 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
 
     public static void vibrate(int milliseconds) {
-        ((Vibrator) instance().getSystemService(VIBRATOR_SERVICE)).vibrate(milliseconds);
     }
 
     public synchronized static Game instance() {
         return instance;
     }
 
-    public static boolean smallResScreen() {
-        return width() <= 320 && height() <= 320;
-    }
-
-    public static int width() {
-        return width;
-    }
-
-    private static void width(int width) {
-        Game.width = width;
-    }
-
-    public static int height() {
-        return height;
-    }
-
-    private static void height(int height) {
-        Game.height = height;
-    }
-
-    private InterstitialPoint permissionsPoint = new Utils.SpuriousReturn();;
-
     public void doPermissionsRequest(@NotNull InterstitialPoint returnTo, String[] permissions) {
-        boolean havePermissions = true;
-        for (String permission : permissions) {
-            int checkResult = ActivityCompat.checkSelfPermission(this, permission);
-            if (checkResult != PermissionChecker.PERMISSION_GRANTED) {
-                havePermissions = false;
-                break;
-            }
-        }
-        if (!havePermissions) {
-            int code = 0;
-            permissionsPoint = returnTo;
-            ActivityCompat.requestPermissions(this, permissions, code);
-        } else {
-            returnTo.returnToWork(true);
-        }
+        returnTo.returnToWork(true);
     }
 
-    public void onRequestPermissionsResult(int requestCode, @NotNull String @NotNull [] permissions, @NotNull int @NotNull [] grantResults) {
-        boolean res = true;
-
-        if (permissions.length == 0) {
-            res = false;
-        }
-
-        for (int grant : grantResults) {
-            if (grant != PackageManager.PERMISSION_GRANTED) {
-                res = false;
-                break;
-            }
-        }
-
-        final boolean result = res;
-        gameLoop.doOnResume = () -> {
-            if(permissionsPoint == null) {
-                EventCollector.logException("permissionsPoint was not set");
-                return;
-            }
-            permissionsPoint.returnToWork(result);
-        };
-
-    }
 
     public LinearLayout getLayout() {
         return layout;
     }
 
     public void openUrl(String prompt, String address) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(address));
-        Game.instance().startActivity(Intent.createChooser(intent, prompt));
     }
 
 }

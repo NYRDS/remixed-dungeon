@@ -1,8 +1,5 @@
 package com.watabou.pixeldungeon.windows;
 
-import android.content.Intent;
-import android.net.Uri;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.nyrds.pixeldungeon.windows.HBox;
@@ -69,8 +66,7 @@ public class WndModInstall extends Window {
             TouchArea siteTouch = new TouchArea(site) {
                 @Override
                 protected void onClick(Touchscreen.Touch touch) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(siteUrl));
-                    Game.instance().startActivity(Intent.createChooser(intent, siteUrl));
+                    Game.instance().openUrl(siteUrl, siteUrl);
                 }
             };
             add(siteTouch);
