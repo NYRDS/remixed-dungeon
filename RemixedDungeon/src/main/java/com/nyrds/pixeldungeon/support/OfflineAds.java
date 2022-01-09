@@ -27,7 +27,7 @@ class OfflineAds {
 
 	static void displayBanner() {
 		if (Util.isDebug()) {
-			GameLoop.runOnMainThread(() -> {
+			Game.runOnMainThread(() -> {
 				LinearLayout layout = Game.instance().getLayout();
 				if (layout.getChildCount() == 1) {
 
@@ -48,7 +48,7 @@ class OfflineAds {
 
 	static void displayIsAd(final InterstitialPoint work) {
 		if (Util.isDebug()) {
-			GameLoop.runOnMainThread(() -> {
+			Game.runOnMainThread(() -> {
 
 				final AlertDialog.Builder alert = new AlertDialog.Builder(Game.instance());
 

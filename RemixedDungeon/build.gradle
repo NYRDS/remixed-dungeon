@@ -123,8 +123,10 @@ dependencies {
 
 
 
-    //libgdxImplementation 'com.fancydep.desktop:1.0.7'
-
+    libgdxImplementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+    libgdxImplementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+    libgdxImplementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+    libgdxImplementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
 
     androidImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
@@ -133,13 +135,13 @@ dependencies {
 
     implementation 'commons-io:commons-io:2.6'
 
-    implementation 'com.appodeal.ads.sdk:core:2.11.0'
-    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.11.0.18'
-    implementation 'com.appodeal.ads.sdk.networks:applovin:2.11.0.20'
-    implementation 'com.appodeal.ads.sdk.networks:bidmachine:2.11.0.17'
-    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.11.0.18'
-    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.11.0.15'
-    implementation 'com.appodeal.ads.sdk.networks:vungle:2.11.0.11'
+    androidImplementation 'com.appodeal.ads.sdk:core:2.11.0'
+    androidImplementation 'com.appodeal.ads.sdk.networks:adcolony:2.11.0.18'
+    androidImplementation 'com.appodeal.ads.sdk.networks:applovin:2.11.0.20'
+    androidImplementation 'com.appodeal.ads.sdk.networks:bidmachine:2.11.0.17'
+    androidImplementation 'com.appodeal.ads.sdk.networks:ironsource:2.11.0.18'
+    androidImplementation 'com.appodeal.ads.sdk.networks:unity_ads:2.11.0.15'
+    androidImplementation 'com.appodeal.ads.sdk.networks:vungle:2.11.0.11'
 
     implementation 'org.jetbrains:annotations:23.0.0'
 

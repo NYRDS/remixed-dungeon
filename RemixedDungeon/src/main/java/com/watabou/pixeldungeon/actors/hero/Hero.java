@@ -724,7 +724,7 @@ public class Hero extends Char {
 		deathDesc.put("duration", Float.toString(Statistics.duration));
 
 		deathDesc.put("difficulty", Integer.toString(GameLoop.getDifficulty()));
-		deathDesc.put("version", Game.version);
+		deathDesc.put("version", GameLoop.version);
 		deathDesc.put("mod", ModdingMode.activeMod());
 		deathDesc.put("modVersion",Integer.toString(ModdingMode.activeModVersion()));
 

@@ -8,8 +8,8 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.text.TextPaint;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.LRUCache;
 import com.watabou.glwrap.Matrix;
@@ -64,7 +64,7 @@ public class SystemText extends Text {
 		}
 
 		if (tf == null) {
-			if (Game.smallResScreen()) {
+			if (GameLoop.smallResScreen()) {
 				tf = Typeface.create((String) null, Typeface.BOLD);
 				oversample = 1;
 			} else {
@@ -126,7 +126,7 @@ public class SystemText extends Text {
 			return;
 		}
 
-		if (Game.smallResScreen()) {
+		if (GameLoop.smallResScreen()) {
 			scale *= 1.5;
 		}
 

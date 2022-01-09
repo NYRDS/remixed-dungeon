@@ -12,10 +12,10 @@ import android.os.Environment;
 import android.os.StatFs;
 import android.util.Base64;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.utils.Callback;
 
 import org.jetbrains.annotations.NotNull;
@@ -120,7 +120,7 @@ public class Util {
     }
 
     public static boolean isDebug() {
-      return BuildConfig.DEBUG || RemixedDungeon.isDev();
+      return BuildConfig.DEBUG || GameLoop.isDev();
     }
 
 }

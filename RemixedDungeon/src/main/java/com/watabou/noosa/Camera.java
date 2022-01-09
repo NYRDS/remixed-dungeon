@@ -18,7 +18,6 @@
 package com.watabou.noosa;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.game.Game;
 import com.watabou.glwrap.Matrix;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
@@ -67,8 +66,8 @@ public class Camera extends Gizmo {
 	
 	public static Camera reset( Camera newCamera ) {
 		
-		invW2 = 2f / Game.width();
-		invH2 = 2f / Game.height();
+		invW2 = 2f / GameLoop.width();
+		invH2 = 2f / GameLoop.height();
 		
 		int length = all.size();
 		for (int i=0; i < length; i++) {
@@ -100,19 +99,19 @@ public class Camera extends Gizmo {
 	}
 	
 	public static Camera createFullscreen( float zoom ) {
-		int w = (int)Math.ceil( Game.width() / zoom );
-		int h = (int)Math.ceil( Game.height() / zoom );
+		int w = (int)Math.ceil( GameLoop.width() / zoom );
+		int h = (int)Math.ceil( GameLoop.height() / zoom );
 		return new Camera( 
-			(int)(Game.width() - w * zoom) / 2, 
-			(int)(Game.height() - h * zoom) / 2, 
+			(int)(GameLoop.width() - w * zoom) / 2,
+			(int)(GameLoop.height() - h * zoom) / 2,
 			w, h, zoom );
 	}
 
 	public void updateFullscreenCameraZoom(float zoom) {
-		width = (int)Math.ceil( Game.width() / zoom );
-		height = (int)Math.ceil( Game.height() / zoom );
-		x = (int)(Game.width() - width * zoom) / 2;
-		y = (int)(Game.height() - height * zoom) / 2;
+		width = (int)Math.ceil( GameLoop.width() / zoom );
+		height = (int)Math.ceil( GameLoop.height() / zoom );
+		x = (int)(GameLoop.width() - width * zoom) / 2;
+		y = (int)(GameLoop.height() - height * zoom) / 2;
 		this.zoom = zoom;
 
 		screenWidth = (int)(width * zoom);

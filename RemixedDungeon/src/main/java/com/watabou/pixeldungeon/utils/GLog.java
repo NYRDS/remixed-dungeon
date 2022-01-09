@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.utils;
 import android.util.Log;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
@@ -73,7 +72,7 @@ public class GLog {
 			
 			try {
 				logWriter = new FileWriter(logFile,true);
-				toFile("log started %s !", Game.version);
+				toFile("log started %s !", GameLoop.version);
 			} catch (Exception e) {
 				readonlySd = true;
 				return;

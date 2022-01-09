@@ -14,7 +14,7 @@ import com.watabou.noosa.InterstitialPoint;
 public class Ads {
 
     private static boolean isSmallScreen() {
-        return (Game.width() < 400 || Game.height() < 400);
+        return (GameLoop.width() < 400 || GameLoop.height() < 400);
     }
 
     public static void displayEasyModeBanner() {
@@ -36,7 +36,7 @@ public class Ads {
     }
 
     public static void removeEasyModeBanner() {
-        GameLoop.runOnMainThread(() -> {
+        Game.runOnMainThread(() -> {
             int index = AdsUtils.bannerIndex();
             if (index >= 0) {
 
@@ -48,7 +48,7 @@ public class Ads {
     }
 
     static void updateBanner(final View view) {
-        GameLoop.runOnMainThread(() -> {
+        Game.runOnMainThread(() -> {
 
             int index = AdsUtils.bannerIndex();
             final LinearLayout layout = Game.instance().getLayout();

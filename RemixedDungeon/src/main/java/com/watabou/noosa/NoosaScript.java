@@ -19,7 +19,7 @@ package com.watabou.noosa;
 
 import android.opengl.GLES20;
 
-import com.nyrds.platform.game.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.gl.Attribute;
 import com.nyrds.platform.gl.Uniform;
 import com.watabou.glscripts.Script;
@@ -144,7 +144,7 @@ public class NoosaScript extends Script {
 			
 			GLES20.glScissor( 
 				camera.x, 
-				Game.height() - camera.screenHeight - camera.y,
+				GameLoop.height() - camera.screenHeight - camera.y,
 				camera.screenWidth, 
 				camera.screenHeight );
 		}

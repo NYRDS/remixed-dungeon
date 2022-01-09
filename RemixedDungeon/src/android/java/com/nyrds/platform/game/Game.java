@@ -51,7 +51,6 @@ import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.input.Keys;
-import com.nyrds.util.ReportingExecutor;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.InterstitialPoint;
@@ -62,8 +61,6 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.concurrent.Executor;
-
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
@@ -73,12 +70,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @SuppressLint("StaticFieldLeak")
     private static Game instance;
 
-    // Actual size of the screen
-    private static int width;
-    private static int height;
-
-    public static String version = Utils.EMPTY_STRING;
-    public static int versionCode = 0;
     public PlayGames playGames;
     public Iap iap;
 
@@ -88,17 +79,18 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     private static volatile boolean paused = true;
 
-    public static volatile boolean softPaused = false;
-
-
-    public Executor serviceExecutor = new ReportingExecutor();
-
     protected GameLoop gameLoop;
 
     public Game(Class<? extends Scene> c) {
         super();
         instance = this;
         gameLoop = new GameLoop(c);
+    }
+
+    static public void runOnMainThread(Runnable runnable) {
+        GameLoop.pushUiTask( () -> {
+            instance().runOnUiThread(runnable);
+        });
     }
 
     public void doRestart() {
@@ -134,7 +126,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
         String finalToastText = toastText;
 
-        GameLoop.runOnMainThread(() -> {
+        runOnMainThread(() -> {
 
             Toast toast = Toast.makeText(RemixedDungeonApp.getContext(), finalToastText,
                     Toast.LENGTH_SHORT);
@@ -156,8 +148,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         iap = new Iap(this);
 
         try {
-            version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
-            versionCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
+            GameLoop.version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+            GameLoop.versionCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
         } catch (NameNotFoundException ignored) {
         }
 
@@ -267,7 +259,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     @Override
     public void onDrawFrame(GL10 gl) {
-        if (instance() == null || width() == 0 || height() == 0) {
+        if (instance() == null || GameLoop.width() == 0 || GameLoop.height() == 0) {
             gameLoop.framesSinceInit = 0;
             return;
         }
@@ -290,8 +282,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
         //GLog.i("viewport: %d %d",width, height );
 
-        Game.width(width);
-        Game.height(height);
+        GameLoop.width(width);
+        GameLoop.height(height);
 
         GameLoop.setNeedSceneRestart();
     }
@@ -325,26 +317,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public synchronized static Game instance() {
         return instance;
-    }
-
-    public static boolean smallResScreen() {
-        return width() <= 320 && height() <= 320;
-    }
-
-    public static int width() {
-        return width;
-    }
-
-    private static void width(int width) {
-        Game.width = width;
-    }
-
-    public static int height() {
-        return height;
-    }
-
-    private static void height(int height) {
-        Game.height = height;
     }
 
     private InterstitialPoint permissionsPoint = new Utils.SpuriousReturn();;

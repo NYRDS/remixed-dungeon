@@ -1,6 +1,5 @@
 package com.watabou.pixeldungeon.windows;
 
-import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
@@ -83,7 +82,7 @@ public class WndHatInfo extends Window {
 					return;
 				}
 
-				GameLoop.runOnMainThread(
+				Game.runOnMainThread(
 						() -> {
 							EventCollector.logEvent("PurchaseClick",item.name());
 							RemixedDungeon.instance().iap.doPurchase(accessory, () -> {

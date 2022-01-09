@@ -17,6 +17,8 @@ t * Pixel Dungeon
  */
 package com.watabou.pixeldungeon;
 
+import static com.nyrds.pixeldungeon.game.GameLoop.MOVE_TIMEOUTS;
+
 import com.google.firebase.perf.metrics.AddTrace;
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
@@ -93,8 +95,6 @@ import java.util.HashSet;
 import lombok.SneakyThrows;
 import lombok.val;
 import lombok.var;
-
-import static com.nyrds.platform.game.RemixedDungeon.MOVE_TIMEOUTS;
 
 public class Dungeon {
 
@@ -397,7 +397,7 @@ public class Dungeon {
         Bundle bundle = new Bundle();
 
         bundle.put(GAME_ID, gameId);
-        bundle.put(VERSION, Game.version);
+        bundle.put(VERSION, GameLoop.version);
         bundle.put(HERO, hero);
         bundle.put(DEPTH, depth);
 

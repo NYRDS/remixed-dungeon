@@ -63,14 +63,14 @@ public class ServiceManNPC extends ImmortalNPC {
         }
 
         GameLoop.pushUiTask( () -> {
-            GameLoop.runOnMainThread(() ->
+            Game.runOnMainThread(() ->
             {
                 boolean result = Ads.isRewardVideoReady();
                 GameLoop.pushUiTask(() -> {
                             if (result) {
                                 GameScene.show(new WndMovieTheatre(this, filmsSeen, getLimit()));
                             } else {
-                                Game.softPaused = false;
+                                GameLoop.softPaused = false;
                                 say(StringsManager.getVar(R.string.ServiceManNPC_NotReady));
                             }
                         }

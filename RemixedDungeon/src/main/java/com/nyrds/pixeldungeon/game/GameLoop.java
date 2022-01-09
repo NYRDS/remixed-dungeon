@@ -20,6 +20,8 @@ import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
+import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
 
 import org.luaj.vm2.LuaError;
@@ -33,8 +35,20 @@ import lombok.SneakyThrows;
 public class GameLoop {
 
     public static final AtomicInteger loadingOrSaving = new AtomicInteger();
+    public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
+
+    public static String version = Utils.EMPTY_STRING;
+    public static int versionCode = 0;
+
+    // Actual size of the screen
+    public static int width;
+    public static int height;
+
+    public static volatile boolean softPaused = false;
 
     private final Executor executor = new ReportingExecutor();
+    public Executor serviceExecutor = new ReportingExecutor();
+
     private final ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
 
     // New scene class
@@ -133,10 +147,37 @@ public class GameLoop {
         switchScene(instance().sceneClass);
     }
 
-    static public void runOnMainThread(Runnable runnable) {
-        pushUiTask( () -> {
-            Game.instance().runOnUiThread(runnable);
-        });
+    public static boolean smallResScreen() {
+        return width() <= 320 && height() <= 320;
+    }
+
+    public static int width() {
+        return width;
+    }
+
+    public static void width(int width) {
+        GameLoop.width = width;
+    }
+
+    public static int height() {
+        return height;
+    }
+
+    public static void height(int height) {
+        GameLoop.height = height;
+    }
+
+    public static boolean isAlpha() {
+        return version.contains("alpha") || version.contains("in_dev");
+    }
+
+    public static boolean isDev() {
+        return version.contains("in_dev");
+    }
+
+    public static void switchNoFade(Class<? extends PixelScene> c) {
+        PixelScene.noFade = true;
+        switchScene(c);
     }
 
     public void shutdown() {
@@ -180,7 +221,7 @@ public class GameLoop {
                 task.run();
             }
 
-            if (!Game.softPaused) {
+            if (!softPaused) {
                 try {
                     step();
                 } catch (LuaError e) {

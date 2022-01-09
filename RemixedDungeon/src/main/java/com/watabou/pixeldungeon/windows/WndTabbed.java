@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.nyrds.platform.game.Game;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.elements.Tab;
@@ -75,8 +75,8 @@ public class WndTabbed extends Window {
 			height + chrome.marginVer() );
 		
 		camera.resize( (int)chrome.width, chrome.marginTop() + height + tabHeight());
-		camera.x = (int)(Game.width() - camera.screenWidth()) / 2;
-		camera.y = (int)(Game.height() - camera.screenHeight()) / 2;
+		camera.x = (int)(GameLoop.width() - camera.screenWidth()) / 2;
+		camera.y = (int)(GameLoop.height() - camera.screenHeight()) / 2;
 		// <- super.resize(...)
 		
 		for (Tab tab : tabs) {

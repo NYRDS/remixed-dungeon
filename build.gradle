@@ -18,6 +18,11 @@ buildscript {
 }
 
 allprojects {
+
+    ext {
+        gdxVersion = '1.10.0'
+    }
+
     repositories {
         mavenCentral()
         jcenter()

@@ -76,14 +76,14 @@ public class PixelScene extends Scene {
 
 		defaultZoom = 20;
 
-		while ((Game.width() / defaultZoom < minWidth || Game.height()
+		while ((GameLoop.width() / defaultZoom < minWidth || GameLoop.height()
 				/ defaultZoom < minHeight)
 				&& defaultZoom > 1) {
 
 			defaultZoom-=0.01;
 		}
 
-		WndHelper.update(Game.width() / defaultZoom, Game.height() / defaultZoom);
+		WndHelper.update(GameLoop.width() / defaultZoom, GameLoop.height() / defaultZoom);
 
 		minZoom = 1;
 		maxZoom = defaultZoom * 2;
@@ -131,7 +131,7 @@ public class PixelScene extends Scene {
 
 		scale /= 1.8;
 
-		if(Game.smallResScreen()) {
+		if(GameLoop.smallResScreen()) {
 			scale /= 2;
 		}
 
@@ -278,10 +278,10 @@ public class PixelScene extends Scene {
 
 		PixelCamera(float zoom) {
 			super(
-					(int) (Game.width() - Math.ceil(Game.width() / zoom) * zoom) / 2,
-					(int) (Game.height() - Math.ceil(Game.height() / zoom)* zoom) / 2,
-					(int) Math.ceil(Game.width() / zoom),
-					(int) Math.ceil(Game.height() / zoom),
+					(int) (GameLoop.width() - Math.ceil(GameLoop.width() / zoom) * zoom) / 2,
+					(int) (GameLoop.height() - Math.ceil(GameLoop.height() / zoom)* zoom) / 2,
+					(int) Math.ceil(GameLoop.width() / zoom),
+					(int) Math.ceil(GameLoop.height() / zoom),
 					zoom);
 		}
 

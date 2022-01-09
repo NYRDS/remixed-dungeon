@@ -80,7 +80,7 @@ public class TitleScene extends PixelScene {
         DashboardItem btnBadges = new DashboardItem(StringsManager.getVar(R.string.TitleScene_Badges), 3) {
 			@Override
 			protected void onClick() {
-				RemixedDungeon.switchNoFade(BadgesScene.class);
+				GameLoop.switchNoFade(BadgesScene.class);
 			}
 		};
 		final int w_center = w / 2;
@@ -97,7 +97,7 @@ public class TitleScene extends PixelScene {
         DashboardItem btnPlay = new DashboardItem(StringsManager.getVar(R.string.TitleScene_Play), 0) {
 			@Override
 			protected void onClick() {
-				RemixedDungeon.switchNoFade(StartScene.class);
+				GameLoop.switchNoFade(StartScene.class);
 			}
 		};
 		btnPlay.setPos(w_center - btnPlay.width(), btnMods.top()
@@ -107,7 +107,7 @@ public class TitleScene extends PixelScene {
         DashboardItem btnHighscores = new DashboardItem(StringsManager.getVar(R.string.TitleScene_Highscores), 2) {
 			@Override
 			protected void onClick() {
-				RemixedDungeon.switchNoFade(RankingsScene.class);
+				GameLoop.switchNoFade(RankingsScene.class);
 			}
 		};
 		btnHighscores.setPos(w_center, btnPlay.top());
@@ -142,7 +142,7 @@ public class TitleScene extends PixelScene {
 		archs.setSize(w, h);
 		addToBack(archs);
 
-		Text version = Text.createBasicText(Game.version, font1x);
+		Text version = Text.createBasicText(GameLoop.version, font1x);
 		version.hardlight(0x888888);
 		version.setPos(w - version.width(), h - version.height());
 		add(version);
@@ -194,7 +194,7 @@ public class TitleScene extends PixelScene {
         ImageButton btnAbout = new ImageButton(img){
 			@Override
 			protected void onClick() {
-				RemixedDungeon.switchNoFade(AboutScene.class);
+				GameLoop.switchNoFade(AboutScene.class);
 			}
 		};
 
@@ -208,8 +208,8 @@ public class TitleScene extends PixelScene {
 		btnExit.setPos(w - btnExit.width(), 0);
 		add(btnExit);
 
-		if (GamePreferences.version() != Game.versionCode) {
-			if(Utils.differentVersions(GamePreferences.versionString(),Game.version)) {
+		if (GamePreferences.version() != GameLoop.versionCode) {
+			if(Utils.differentVersions(GamePreferences.versionString(), GameLoop.version)) {
 				changelogUpdated = true;
 			}
 		}
