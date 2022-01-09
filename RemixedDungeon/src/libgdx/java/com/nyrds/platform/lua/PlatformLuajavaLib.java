@@ -1,6 +1,5 @@
 package com.nyrds.platform.lua;
 
-import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 
@@ -32,7 +31,7 @@ public class PlatformLuajavaLib extends LuajavaLib {
 
 	@Override
 	protected Class classForName(String name) {
-		ClassLoader classLoader = RemixedDungeonApp.getContext().getClassLoader();
+		ClassLoader classLoader = this.getClass().getClassLoader();
 
 		String actualClassName = name;
 

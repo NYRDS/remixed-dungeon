@@ -10,7 +10,7 @@ import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
-import com.nyrds.util.Util;
+import com.nyrds.platform.util.Util;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;

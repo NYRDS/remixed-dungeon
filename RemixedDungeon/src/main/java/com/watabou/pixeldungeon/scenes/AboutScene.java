@@ -65,7 +65,7 @@ public class AboutScene extends PixelScene {
 				intent.putExtra(Intent.EXTRA_EMAIL, new String[]{address} );
                 intent.putExtra(Intent.EXTRA_SUBJECT, StringsManager.getVar(R.string.app_name));
 
-                Game.instance().startActivity( Intent.createChooser(intent, StringsManager.getVar(R.string.AboutScene_Snd)) );
+                //Game.instance().startActivity( Intent.createChooser(intent, StringsManager.getVar(R.string.AboutScene_Snd)) );
 			}
 		};
 		add(area);

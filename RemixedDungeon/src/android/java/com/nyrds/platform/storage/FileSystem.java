@@ -180,4 +180,8 @@ public class FileSystem {
 			throw new ModError("Can't create directory:"+dir);
 		}
 	}
+
+	public static boolean deleteFile(String file) {
+		return new File(file).delete();
+	}
 }

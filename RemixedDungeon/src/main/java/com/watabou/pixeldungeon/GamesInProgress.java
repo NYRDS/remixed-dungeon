@@ -31,7 +31,7 @@ public class GamesInProgress {
 		Info info;
 		try {
 			
-			Bundle bundle = Dungeon.gameBundle( file );
+			Bundle bundle = Bundle.readFromFile( file );
 			info = new Info();
 			Dungeon.preview( info, bundle );
 

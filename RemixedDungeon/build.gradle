@@ -90,6 +90,9 @@ android {
 
         libgdx {
             dimension "platform"
+            packagingOptions {
+                exclude "META-INF/INDEX.LIST"
+            }
         }
 
         none {

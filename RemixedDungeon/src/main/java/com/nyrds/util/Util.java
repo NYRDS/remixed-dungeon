@@ -5,8 +5,6 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.StatFs;
@@ -15,7 +13,6 @@ import android.util.Base64;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
 import com.watabou.utils.Callback;
 
 import org.jetbrains.annotations.NotNull;
@@ -45,15 +42,7 @@ public class Util {
 		return e.getMessage() + "\n" + Util.stackTraceToString(e) + "\n";
 	}
 
-	static public boolean isConnectedToInternet() {
-		boolean connectionStatus;
 
-		ConnectivityManager connectivityManager
-				= (ConnectivityManager) Game.instance().getSystemService(Context.CONNECTIVITY_SERVICE);
-		NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-		connectionStatus = activeNetworkInfo != null && activeNetworkInfo.isConnected();
-		return connectionStatus;
-	}
 
 	@SneakyThrows
 	static public String getSignature(Context context) {

@@ -1,15 +1,11 @@
 package com.nyrds.platform.util;
 
 import android.annotation.SuppressLint;
-import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.os.Build;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.ModdingMode;
-import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -145,33 +141,10 @@ public class StringsManager {
 		if(userSelectedLocale==null) {
 			return;
 		}
-
-		Configuration config = getResources().getConfiguration();
-
-		if(!getResources().getConfiguration().locale.equals(userSelectedLocale)) {
-			if(Util.isDebug()){
-				GLog.i("Locale is messed up! Restoring");
-			}
-			config.locale = userSelectedLocale;
-			getResources().updateConfiguration(config,
-					getResources().getDisplayMetrics());
-		}
 	}
 
 	public static void useLocale(Locale locale, String lang) {
 		userSelectedLocale = locale;
-
-		Configuration config = getResources().getConfiguration();
-
-		GLog.i("context locale: %s -> %s", config.locale, locale);
-
-		if(Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR1) {
-			config.locale = locale;
-		} else {
-			config.setLocale(locale);
-		}
-		getResources().updateConfiguration(config,
-				getResources().getDisplayMetrics());
 
 		clearModStrings();
 
@@ -191,7 +164,7 @@ public class StringsManager {
 
 		try {
 			ensureCorrectLocale();
-			return getResources().getString(id);
+			return Utils.EMPTY_STRING;
 		} catch (Resources.NotFoundException notFound) {
 			GLog.w("resource not found: %s", notFound.getMessage());
 		}
@@ -199,7 +172,7 @@ public class StringsManager {
 	}
 
 	public static String @NotNull [] getVars(int id) {
-		String[] baseArray = getResources().getStringArray(id);
+		String[] baseArray = Utils.EMPTY_STRING_ARRAY;;
 		String[] modStrings = Utils.EMPTY_STRING_ARRAY;
 
 		if (stringsMap.containsKey(id)) {
@@ -267,9 +240,5 @@ public class StringsManager {
 		}
 
 		return modStrings;
-	}
-
-	public static Resources getResources() {
-		return RemixedDungeonApp.getContext().getResources();
 	}
 }

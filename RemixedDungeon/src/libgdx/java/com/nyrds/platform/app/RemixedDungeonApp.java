@@ -1,14 +1,13 @@
 package com.nyrds.platform.app;
 
-import android.annotation.SuppressLint;
+import android.content.Context;
 
 public class RemixedDungeonApp  {
-
-    @SuppressLint("StaticFieldLeak")
-    static RemixedDungeonApp remixedDungeonApp;
-
-
     static public boolean checkOwnSignature() {
         return true;
+    }
+
+    static public Context getContext() {
+        return null;
     }
 }

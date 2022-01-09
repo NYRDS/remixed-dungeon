@@ -43,6 +43,9 @@ public class EventCollector {
     public static void logScene(String s) {
     }
 
-    public static void setSessionData(String rpd_active_mod, String activeMod) {
+    public static void setSessionData(String key, String value) {
+    }
+
+    public static void setSessionData(String key, boolean value) {
     }
 }

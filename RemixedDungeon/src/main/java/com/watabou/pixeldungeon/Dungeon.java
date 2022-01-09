@@ -630,7 +630,7 @@ public class Dungeon {
     private static void loadGame(String fileName, boolean fullLoad) throws IOException {
         try {
             GameLoop.loadingOrSaving.incrementAndGet();
-            Bundle bundle = gameBundle(fileName);
+            Bundle bundle = Bundle.readFromFile(fileName);
             loadGameFromBundle(bundle, fullLoad);
         }
         finally {
@@ -700,13 +700,6 @@ public class Dungeon {
         }
 
         GamesInProgress.delete(heroClass);
-    }
-
-    public static Bundle gameBundle(String fileName) throws IOException {
-
-        try(InputStream input = new FileInputStream(FileSystem.getFile(fileName))) {
-            return Bundle.read(input);
-        }
     }
 
     public static void preview(GamesInProgress.Info info, Bundle bundle) {

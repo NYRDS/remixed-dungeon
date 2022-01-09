@@ -145,7 +145,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         super.onCreate(savedInstanceState);
         instance = this;
 
-        iap = new Iap(this);
+        iap = new Iap();
 
         try {
             GameLoop.version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
@@ -371,6 +371,25 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public void openUrl(String prompt, String address) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(address));
         Game.instance().startActivity(Intent.createChooser(intent, prompt));
+    }
+
+    public void sendEmail(String emailUri, String subject) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("message/rfc822");
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[] { emailUri });
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+
+        Game.instance().startActivity(Intent.createChooser(intent, emailUri));
+    }
+
+
+    public static void openPlayStore() {
+        final String appPackageName = instance().getPackageName();
+        try {
+            instance().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+        } catch (android.content.ActivityNotFoundException anfe) {
+            instance().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+        }
     }
 
 }

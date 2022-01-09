@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.InstallMod;
 import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
@@ -110,7 +109,7 @@ public class WndModInstall extends Window {
             var pleaseUpdateButton = new RedButton(R.string.Wnd_Button_Ok) {
                 @Override
                 protected void onClick() {
-                    InstallMod.openPlayStore();
+                    Game.openPlayStore();
                 }
             };
             pleaseUpdateButton.setSize(width / 2f - 4, BUTTON_HEIGHT);

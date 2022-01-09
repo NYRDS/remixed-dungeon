@@ -20,6 +20,7 @@ package com.watabou.utils;
 import com.nyrds.LuaInterface;
 import com.nyrds.generated.BundleHelper;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.Util;
 
@@ -32,6 +33,7 @@ import org.json.JSONTokener;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -67,6 +69,13 @@ public class Bundle {
 
     private Bundle(JSONObject data) {
         this.data = data;
+    }
+
+    public static Bundle readFromFile(String fileName) throws IOException {
+
+        try(InputStream input = new FileInputStream(FileSystem.getFile(fileName))) {
+            return read(input);
+        }
     }
 
     public String serialize() {

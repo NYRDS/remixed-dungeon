@@ -31,6 +31,7 @@ import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.SystemTime;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -137,7 +138,7 @@ public enum Rankings {
 			}
 
 			if (removedGame.gameFile.length() > 0) {
-				Game.instance().deleteFile( removedGame.gameFile );
+				new File(removedGame.gameFile).delete();
 			}
 		}
 
