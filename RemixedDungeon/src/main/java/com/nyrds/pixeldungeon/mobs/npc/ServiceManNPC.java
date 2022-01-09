@@ -9,8 +9,8 @@ import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
-import com.nyrds.platform.util.Util;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
@@ -52,7 +52,7 @@ public class ServiceManNPC extends ImmortalNPC {
 
         getSprite().turnTo(getPos(), hero.getPos());
 
-        if (!Util.isConnectedToInternet()) {
+        if (!PUtil.isConnectedToInternet()) {
             GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.ServiceManNPC_NoConnection)));
             return true;
         }

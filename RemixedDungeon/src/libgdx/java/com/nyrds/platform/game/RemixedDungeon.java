@@ -17,34 +17,15 @@
  */
 package com.nyrds.platform.game;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.view.View;
-
-import com.badlogic.gdx.ApplicationListener;
-import com.nyrds.LuaInterface;
-import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.platform.audio.Music;
-import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.storage.Preferences;
-import com.nyrds.util.ModdingMode;
-import com.nyrds.util.Util;
-import com.watabou.noosa.Scene;
-import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.scenes.TitleScene;
-import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
-
-
-
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
+import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.watabou.noosa.Scene;
+import com.watabou.pixeldungeon.scenes.TitleScene;
+import com.watabou.pixeldungeon.utils.GLog;
 
-public class RemixedDungeon extends Game implements ApplicationListener {
+public class RemixedDungeon extends Game {
 
 
 	public static void main(String[] args) {
@@ -99,31 +80,37 @@ public class RemixedDungeon extends Game implements ApplicationListener {
 
 	@Override
 	public void create() {
-
+		GLog.debug("create");
+		super.create();
 	}
 
 	@Override
 	public void resize(int width, int height) {
-
+		GLog.debug("resize: %dx%d", width, height);
+		super.resize(width, height);
 	}
 
 	@Override
 	public void render() {
-
+		GLog.debug("frame");
+		super.render();
 	}
 
 	@Override
 	public void pause() {
-
+		GLog.debug("pause");
+		super.pause();
 	}
 
 	@Override
 	public void resume() {
-
+		GLog.debug("resume");
+		super.resume();
 	}
 
 	@Override
 	public void dispose() {
-
+		GLog.debug("dispose");
+		super.dispose();
 	}
 }

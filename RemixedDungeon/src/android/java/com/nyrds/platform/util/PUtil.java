@@ -6,7 +6,7 @@ import android.net.NetworkInfo;
 
 import com.nyrds.platform.game.Game;
 
-public class Util {
+public class PUtil {
     static public boolean isConnectedToInternet() {
         boolean connectionStatus;
 
@@ -15,5 +15,9 @@ public class Util {
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         connectionStatus = activeNetworkInfo != null && activeNetworkInfo.isConnected();
         return connectionStatus;
+    }
+
+    static public slog(String tag, String txt) {
+        Log.i(tag, txt);
     }
 }

@@ -272,8 +272,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         if(!isFinishing()) {
             gameLoop.onFrame();
         }
-
-
     }
 
     @Override

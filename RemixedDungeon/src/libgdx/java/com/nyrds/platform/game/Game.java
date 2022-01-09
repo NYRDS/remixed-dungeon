@@ -3,16 +3,20 @@ package com.nyrds.platform.game;
 
 import android.widget.LinearLayout;
 
+import com.badlogic.gdx.ApplicationListener;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
+import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.Sample;
+import com.watabou.glscripts.Script;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
 
 import org.jetbrains.annotations.NotNull;
 
 
-public class Game {
+public class Game implements ApplicationListener {
     private static Game instance;
 
     private static volatile boolean paused = true;
@@ -39,9 +43,7 @@ public class Game {
         System.exit(0);
     }
 
-    public static void toast(final String text, final Object... args) {
-
-    }
+    public static void toast(final String text, final Object... args) { }
 
 
     static public void runOnMainThread(Runnable runnable) {
@@ -51,8 +53,6 @@ public class Game {
 
     public static void syncAdsState() {
     }
-
-
 
     public static boolean isPaused() {
         return paused;
@@ -82,6 +82,68 @@ public class Game {
     }
 
     static public void openPlayStore() {
+    }
 
+    @Override
+    public void create() {
+
+    }
+
+    @Override
+    public void resize(int width, int height) {
+        GameLoop.width(width);
+        GameLoop.height(height);
+        GameLoop.setNeedSceneRestart();
+    }
+
+    @Override
+    public void render() {
+        if (instance() == null || GameLoop.width() == 0 || GameLoop.height() == 0) {
+            gameLoop.framesSinceInit = 0;
+            return;
+        }
+
+        if (paused) {
+            gameLoop.framesSinceInit = 0;
+            return;
+        }
+
+
+        gameLoop.onFrame();
+    }
+
+    @Override
+    public void pause() {
+        paused = true;
+
+        if (gameLoop.scene != null) {
+            gameLoop.scene.pause();
+        }
+
+        Music.INSTANCE.pause();
+        Sample.INSTANCE.pause();
+
+        Script.reset();
+    }
+
+    @Override
+    public void resume() {
+        instance = this;
+        gameLoop.onResume();
+
+        if (gameLoop.scene != null) {
+            gameLoop.scene.resume();
+        }
+    }
+
+    @Override
+    public void dispose() {
+        if (gameLoop.scene != null) {
+            gameLoop.scene.destroy();
+            gameLoop.scene = null;
+        }
+
+        Music.INSTANCE.mute();
+        Sample.INSTANCE.reset();
     }
 }

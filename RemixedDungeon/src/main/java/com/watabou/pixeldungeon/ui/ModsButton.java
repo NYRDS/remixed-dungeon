@@ -8,8 +8,8 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
-import com.nyrds.platform.util.Util;
 import com.nyrds.util.DownloadStateListener;
 import com.nyrds.util.DownloadTask;
 import com.nyrds.util.GuiProperties;
@@ -98,7 +98,7 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
                                  super.hide();
                                  GameLoop.pushUiTask(() -> {
                                      if (result) {
-                                         if (Util.isConnectedToInternet()) {
+                                         if (PUtil.isConnectedToInternet()) {
                                              File modsCommon = FileSystem.getExternalStorageFile(Mods.MODS_COMMON_JSON);
                                              modsCommon.delete();
                                              String downloadTo = modsCommon.getAbsolutePath();
