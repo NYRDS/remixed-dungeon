@@ -86,7 +86,7 @@ public class Game implements ApplicationListener {
 
     @Override
     public void create() {
-
+        paused = false; // we may not get resume
     }
 
     @Override
@@ -134,6 +134,8 @@ public class Game implements ApplicationListener {
         if (gameLoop.scene != null) {
             gameLoop.scene.resume();
         }
+
+        paused = false;
     }
 
     @Override
