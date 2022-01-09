@@ -2,6 +2,7 @@ package com.nyrds.platform.storage;
 
 import android.content.Context;
 
+import com.badlogic.gdx.Gdx;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.util.ModError;
 
@@ -23,8 +24,7 @@ import lombok.SneakyThrows;
 public class FileSystem {
 
 	static public @NotNull File getInternalStorageFile(String fileName) {
-		File storageDir = getContext().getFilesDir();
-		return new File(storageDir, fileName);
+		return Gdx.files.internal(fileName).file();
 	}
 
 	static public String[] listInternalStorage() {
@@ -64,8 +64,7 @@ public class FileSystem {
 	}
 
 	static public File getExternalStorageFile(String fileName) {
-		File storageDir = getContext().getExternalFilesDir(null);
-		return new File(storageDir, fileName);
+		return Gdx.files.external(fileName).file();
 	}
 
 	static public String getExternalStorageFileName(String fname) {

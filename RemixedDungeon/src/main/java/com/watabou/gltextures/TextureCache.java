@@ -37,14 +37,6 @@ public class TextureCache {
 
 	private static final Map<Object, SmartTexture> all = new HashMap<>();
 
-	// No dithering, no scaling, 32 bits per pixel
-	private static final BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
-	static {
-		bitmapOptions.inScaled = false;
-		bitmapOptions.inDither = false;
-		bitmapOptions.inPreferredConfig = Bitmap.Config.ARGB_8888;
-	}
-
 	public static SmartTexture createSolid(int color) {
 		String key = "1x1:" + color;
 
