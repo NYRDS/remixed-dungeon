@@ -89,9 +89,12 @@ public class SummoningSpell extends Spell {
 
         int n = 0;
         for (Integer mobId : pets) {
-            Mob mob = (Mob)CharsList.getById(mobId);
-            if (mob != null && mob.isAlive() && mob.getEntityKind().equals(mobKind) ) {
-                n++;
+            Char aChar = CharsList.getById(mobId);
+            if(aChar.valid()) {
+                Mob mob = (Mob) aChar;
+                if (mob.isAlive() && mob.getEntityKind().equals(mobKind)) {
+                    n++;
+                }
             }
         }
 
