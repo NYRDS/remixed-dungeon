@@ -17,15 +17,6 @@
  */
 package com.nyrds.platform.storage;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.SharedPreferences;
-
-import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.app.RemixedDungeonApp;
-import com.nyrds.util.UserKey;
-import com.watabou.pixeldungeon.utils.Utils;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -65,19 +56,11 @@ public enum Preferences {
 	public static final String KEY_USE_ISOMETRIC_TILES = "use_isometric_tiles";
 
 
-    private SharedPreferences prefs;
-
 	private final Map<String, Integer> intCache    = new HashMap<>();
 	private final Map<String, String>  stringCache = new HashMap<>();
 	private final Map<String, Boolean> boolCache   = new HashMap<>();
 	private final Map<String, Double>  doubleCache = new HashMap<>();
 
-	public SharedPreferences get() {
-		if (prefs == null) {
-			prefs = RemixedDungeonApp.getContext().getSharedPreferences("com.watabou.pixeldungeon.RemixedDungeon", Activity.MODE_PRIVATE);
-		}
-		return prefs;
-	}
 
 	public int getInt(String key, int defValue) {
 
@@ -132,73 +115,12 @@ public enum Preferences {
 		return value;
 	}
 
-	public boolean checkString(String key) {
-		try {
-			get().getString(key, Utils.EMPTY_STRING);
-		} catch (ClassCastException e) {
-			return false;
-		}
-		return true;
-	}
-
-	boolean checkInt(String key) {
-		try {
-			get().getInt(key, 0);
-		} catch (ClassCastException e) {
-			return false;
-		}
-		return true;
-	}
-
-	public boolean checkBoolean(String key) {
-		try {
-			get().getBoolean(key, false);
-		} catch (ClassCastException e) {
-			return false;
-		}
-		return true;
-	}
-
 	public String getString(String key, String defValue) {
 
 		if(stringCache.containsKey(key)) {
 			return stringCache.get(key);
 		}
 
-		String value;
-
-		try {
-			String scrambledKey = UserKey.encrypt(key);
-
-			if (get().contains(scrambledKey)) {
-				String encVal = get().getString(scrambledKey, UserKey.encrypt(defValue));
-				value = UserKey.decrypt(encVal);
-				stringCache.put(key,value);
-				return value;
-			}
-
-			if (get().contains(key)) {
-				String val = Utils.EMPTY_STRING;
-
-				if (checkString(key)) {
-					val = get().getString(key, defValue);
-				}
-				if (checkInt(key)) {
-					val = Integer.toString(get().getInt(key, Integer.parseInt(defValue)));
-				}
-				if (checkBoolean(key)) {
-					val = Boolean.toString(get().getBoolean(key, Boolean.parseBoolean(defValue)));
-				}
-
-				get().edit().putString(scrambledKey, UserKey.encrypt(val)).apply();
-				get().edit().remove(key).apply();
-				return val;
-			}
-		} catch (ClassCastException e) {
-			//just return default value when loading old preferences
-		} catch (Exception e) {
-			EventCollector.logException(e);
-		}
 		return defValue;
 	}
 
@@ -226,16 +148,8 @@ public enum Preferences {
 		put(key, val);
 	}
 
-	@SuppressLint("ApplySharedPref")
+
 	public void put(String key, String value) {
-
 		stringCache.put(key, value);
-
-		String scrambledVal = UserKey.encrypt(value);
-		String scrambledKey = UserKey.encrypt(key);
-
-		if(!get().edit().putString(scrambledKey, scrambledVal).commit()) {
-			EventCollector.logException("Preferences commit failed");
-		}
 	}
 }

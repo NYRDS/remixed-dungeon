@@ -85,7 +85,6 @@ android {
 
         android {
             dimension "platform"
-
         }
 
         libgdx {
@@ -130,6 +129,7 @@ dependencies {
     libgdxImplementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
     libgdxImplementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
     libgdxImplementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+
 
     androidImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
@@ -183,4 +183,9 @@ if (getGradle().getStartParameter().getTaskRequests()
 if (getGradle().getStartParameter().getTaskRequests()
         .toString().contains("Huawei")) {
     apply plugin: 'com.huawei.agconnect'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }

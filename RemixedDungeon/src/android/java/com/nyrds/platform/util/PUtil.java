@@ -20,4 +20,17 @@ public class PUtil {
     static public slog(String tag, String txt) {
         Log.i(tag, txt);
     }
+
+    static String getUserId() {
+        SharedPreferences prefs = Preferences.INSTANCE.get();
+
+        UUID userId = UUID.randomUUID();
+        String key = prefs.getString("userKey", noKey);
+        if(key.equals(noKey)) {
+            prefs.edit().putString("userKey", userId.toString()).apply();
+        } else {
+            userId = UUID.fromString(key);
+        }
+        return userId
+    }
 }
