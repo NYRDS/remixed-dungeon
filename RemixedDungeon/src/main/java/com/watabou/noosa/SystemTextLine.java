@@ -17,9 +17,8 @@
 
 package com.watabou.noosa;
 
-import android.graphics.Bitmap;
-
 import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.glwrap.Quad;
@@ -47,7 +46,7 @@ public class SystemTextLine extends Visual {
 		verticesBuffer = Quad.create();
 	}
 		
-	public SystemTextLine(Bitmap bitmap) {
+	public SystemTextLine(BitmapData bitmap) {
 		this();
 
 		texture = new SmartTexture(bitmap, Texture.LINEAR, Texture.CLAMP);

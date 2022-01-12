@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.sprites;
 
-import android.graphics.Bitmap;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.util.ModError;
@@ -41,6 +39,8 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import lombok.var;
 
 public class ItemSprite extends MovieClip {
 
@@ -239,7 +239,7 @@ public class ItemSprite extends MovieClip {
 	}
 
 	public static int pick(int index, int x, int y) {
-		Bitmap bmp = TextureCache.get(Assets.ITEMS).bitmap;
+		var bmp = TextureCache.get(Assets.ITEMS).bitmap;
 		int rows = bmp.getWidth() / SIZE;
 		int row = index / rows;
 		int col = index % rows;

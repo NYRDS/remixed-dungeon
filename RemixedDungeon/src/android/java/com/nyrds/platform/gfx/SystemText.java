@@ -47,7 +47,7 @@ public class SystemText extends Text {
 
 	private static float fontScale = Float.NaN;
 
-	private static final LRUCache<String, Bitmap> bitmapCache = new LRUCache<>(256);
+	private static final LRUCache<String, BitmapData> bitmapCache = new LRUCache<>(256);
 
 	private static int cacheHits = 0;
 	private static int cacheMiss = 0;
@@ -270,7 +270,7 @@ public class SystemText extends Text {
 								(int) (lineWidth * oversample),
 								(int) (fontHeight * oversample),
 								Bitmap.Config.ARGB_4444);
-						bitmapCache.put(key, bitmap);
+						bitmapCache.put(key, new BitmapData(bitmap));
 
 						Canvas canvas = new Canvas(bitmap);
 						drawTextLine(charIndex, canvas, contourPaint);

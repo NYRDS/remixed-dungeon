@@ -17,10 +17,7 @@
  */
 package com.watabou.pixeldungeon.effects;
 
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-
+import com.nyrds.platform.gfx.BitmapData;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
@@ -36,13 +33,15 @@ public class Halo extends Image {
 
 	public Halo() {
 		if (!TextureCache.contains( CACHE_KEY )) {
-			Bitmap bmp = Bitmap.createBitmap( RADIUS * 2, RADIUS * 2, Bitmap.Config.ARGB_8888 );
+			BitmapData bmp = BitmapData.createBitmap( RADIUS * 2, RADIUS * 2 );
+			/*
 			Canvas canvas = new Canvas( bmp );
 			Paint paint = new Paint();
 			paint.setColor( 0xFFFFFFFF );
 			canvas.drawCircle( RADIUS, RADIUS, RADIUS * 0.75f, paint );
 			paint.setColor( 0x88FFFFFF );
 			canvas.drawCircle( RADIUS, RADIUS, RADIUS, paint );
+			 */
 			TextureCache.add( CACHE_KEY, new SmartTexture( bmp ) );
 		}
 		

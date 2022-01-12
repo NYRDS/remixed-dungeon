@@ -1,9 +1,9 @@
 package com.watabou.noosa;
 
-import android.graphics.Bitmap;
 import android.opengl.GLES20;
 
 import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gfx.BitmapData;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
@@ -49,7 +49,7 @@ public class Font extends TextureFilm {
 		texture.reload();
 	}
 
-	private int findNextEmptyLine(Bitmap bitmap, int startFrom, int color){
+	private int findNextEmptyLine(BitmapData bitmap, int startFrom, int color){
 		int width  = bitmap.getWidth();
 		int height = bitmap.getHeight();
 		
@@ -70,7 +70,7 @@ public class Font extends TextureFilm {
 		return nextEmptyLine;
 	}
 	
-	private boolean isColumnEmpty(Bitmap bitmap, int x, int sy, int ey, int color){
+	private boolean isColumnEmpty(BitmapData bitmap, int x, int sy, int ey, int color){
 		for(int j = sy; j < ey; ++j){
 			if(bitmap.getPixel(x, j) != color){
 				return false;
@@ -79,7 +79,7 @@ public class Font extends TextureFilm {
 		return true;
 	}
 
-	private int findNextCharColumn(Bitmap bitmap, int sx, int sy, int ey, int color){
+	private int findNextCharColumn(BitmapData bitmap, int sx, int sy, int ey, int color){
 		int width = bitmap.getWidth();
 		
 		int nextEmptyColumn;
@@ -107,7 +107,7 @@ public class Font extends TextureFilm {
 	}
 	
 	
-	protected void splitBy(Bitmap bitmap, int color, String chars) {
+	protected void splitBy(BitmapData bitmap, int color, String chars) {
 		
 		autoUppercase = chars.equals( LATIN_UPPER );
 		int length    = chars.length();

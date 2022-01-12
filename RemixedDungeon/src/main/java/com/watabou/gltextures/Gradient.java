@@ -17,13 +17,13 @@
 
 package com.watabou.gltextures;
 
-import android.graphics.Bitmap;
+import com.nyrds.platform.gfx.BitmapData;
 
 public class Gradient extends SmartTexture {
 	
 	public Gradient( int[] colors ) {
 		
-		super( Bitmap.createBitmap( colors.length, 1, Bitmap.Config.ARGB_8888 ) );
+		super( BitmapData.createBitmap( colors.length, 1) );
 		
 		for (int i=0; i < colors.length; i++) {
 			bitmap.setPixel( i, 0, colors[i] );

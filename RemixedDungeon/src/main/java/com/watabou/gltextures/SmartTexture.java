@@ -17,9 +17,8 @@
 
 package com.watabou.gltextures;
 
-import android.graphics.Bitmap;
-
 import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
 
 import org.jetbrains.annotations.NotNull;
@@ -35,15 +34,15 @@ public class SmartTexture extends Texture {
 	public int wModeH;
 	public int wModeV;
 	
-	public Bitmap bitmap;
+	public BitmapData bitmap;
 	
 	public Atlas atlas;
 	
-	public SmartTexture(@NotNull Bitmap bitmap ) {
+	public SmartTexture(@NotNull BitmapData bitmap ) {
 		this( bitmap, NEAREST, CLAMP );
 	}
 
-	public SmartTexture(@NotNull Bitmap bitmap, int filtering, int wrapping ) {
+	public SmartTexture(@NotNull BitmapData bitmap, int filtering, int wrapping ) {
 		
 		super();
 		
@@ -78,11 +77,11 @@ public class SmartTexture extends Texture {
 	}
 	
 	@Override
-	public void bitmap( Bitmap bitmap ) {
+	public void bitmap( BitmapData bitmap ) {
 		bitmap( bitmap, false );
 	}
 	
-	public void bitmap( Bitmap bitmap, boolean premultiplied ) {
+	public void bitmap( BitmapData bitmap, boolean premultiplied ) {
 		if (premultiplied) {
 			super.bitmap( bitmap );
 		} else {

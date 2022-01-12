@@ -21,6 +21,8 @@ import android.graphics.Bitmap;
 import android.opengl.GLES20;
 import android.opengl.GLUtils;
 
+import com.nyrds.platform.gfx.BitmapData;
+
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;
@@ -75,9 +77,9 @@ public class Texture {
 		//Log.i("texture",Utils.format("deleting %d", id));
 	}
 	
-	public void bitmap( Bitmap bitmap ) {
+	public void bitmap( BitmapData bitmap ) {
 		bind();
-		GLUtils.texImage2D( GLES20.GL_TEXTURE_2D, 0, bitmap, 0 );
+		GLUtils.texImage2D( GLES20.GL_TEXTURE_2D, 0, bitmap.bmp, 0 );
 	}
 	
 	public void pixels( int w, int h, int[] pixels ) {
@@ -129,7 +131,7 @@ public class Texture {
 	
 	// If getConfig returns null (unsupported format?), GLUtils.texImage2D works
 	// incorrectly. In this case we need to load pixels manually
-	public void handMade( Bitmap bitmap, boolean recode ) {
+	public void handMade(BitmapData bitmap, boolean recode ) {
 
 		int w = bitmap.getWidth();
 		int h = bitmap.getHeight();
@@ -151,7 +153,7 @@ public class Texture {
 		pixels( w, h, pixels );
 	}
 	
-	public static Texture create( Bitmap bmp ) {
+	public static Texture create( BitmapData bmp ) {
 		Texture tex = new Texture();
 		tex.bitmap( bmp );
 		

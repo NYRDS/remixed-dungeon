@@ -73,14 +73,8 @@ android {
             versionCode defaultConfig.versionCode + 10000
         }
 
-        fdroid {
+        none {
             dimension "market"
-        }
-
-        huawei {
-            minSdkVersion 19
-            dimension "market"
-            applicationIdSuffix ".huawei"
         }
 
         android {
@@ -165,11 +159,6 @@ dependencies {
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
     googlePlayImplementation 'com.google.firebase:firebase-perf'
-
-
-    huaweiImplementation 'com.huawei.hms:ads-lite:13.4.30.301'
-    huaweiImplementation 'com.huawei.hms:hianalytics:5.0.0.300'
-    huaweiImplementation 'com.huawei.agconnect:agconnect-crash:1.4.1.300'
 }
 
 if (getGradle().getStartParameter().getTaskRequests()
@@ -177,12 +166,6 @@ if (getGradle().getStartParameter().getTaskRequests()
     apply plugin: 'com.google.firebase.crashlytics'
     apply plugin: 'com.google.gms.google-services'
     apply plugin: 'com.google.firebase.firebase-perf'
-
-}
-
-if (getGradle().getStartParameter().getTaskRequests()
-        .toString().contains("Huawei")) {
-    apply plugin: 'com.huawei.agconnect'
 }
 
 java {

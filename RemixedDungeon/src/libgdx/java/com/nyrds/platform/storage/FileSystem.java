@@ -1,9 +1,6 @@
 package com.nyrds.platform.storage;
 
-import android.content.Context;
-
 import com.badlogic.gdx.Gdx;
-import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.util.ModError;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,19 +25,16 @@ public class FileSystem {
 	}
 
 	static public String[] listInternalStorage() {
-		File storageDir = getContext().getFilesDir();
-		return storageDir.list();
+		return new File(Gdx.files.getLocalStoragePath()).list();
 	}
 
 	@NotNull
 	static public File[] listExternalStorage() {
+		File storageDir = new File(Gdx.files.getExternalStoragePath());
 
-		File storageDir = getContext().getExternalFilesDir(null);
-		if (storageDir != null) {
-			File[] ret = storageDir.listFiles();
-			if(ret != null) {
-				return ret;
-			}
+		File[] ret = storageDir.listFiles();
+		if(ret != null) {
+			return ret;
 		}
 
 		return new File[0];
@@ -57,10 +51,6 @@ public class FileSystem {
 
 	static public InputStream getInputStream(String filename) throws FileNotFoundException {
 		return new FileInputStream(FileSystem.getInternalStorageFile(filename));
-	}
-
-	static public String getInternalStorageFileName(String fileName) {
-		return getInternalStorageFile(fileName).getAbsolutePath();
 	}
 
 	static public File getExternalStorageFile(String fileName) {
@@ -158,10 +148,6 @@ public class FileSystem {
 		} else {
 			return null;
 		}
-	}
-
-	private static Context getContext() {
-		return RemixedDungeonApp.getContext();
 	}
 
 	public static void ensureDir(String dir) {

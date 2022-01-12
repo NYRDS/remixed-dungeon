@@ -17,10 +17,8 @@
 
 package com.watabou.gltextures;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
@@ -46,7 +44,7 @@ public class TextureCache {
 
 		} else {
 
-			Bitmap bmp = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888);
+			BitmapData bmp = BitmapData.createBitmap(1, 1);
 			bmp.eraseColor(color);
 
 			SmartTexture tx = new SmartTexture(bmp);
@@ -85,14 +83,13 @@ public class TextureCache {
 		} else if (src instanceof SmartTexture) {
 			return (SmartTexture) src;
 		} else {
-			SmartTexture tx = new SmartTexture(getBitmap(src));
+			SmartTexture tx = new SmartTexture(getBitmapData(src));
 			all.put(src, tx);
 			return tx;
 		}
 	}
 
 	public static void clear() {
-
 		for (Texture txt : all.values()) {
 			txt.delete();
 		}
@@ -100,18 +97,18 @@ public class TextureCache {
 	}
 
 	@SneakyThrows
-	private static @NotNull Bitmap getBitmap(Object src) {
+	private static @NotNull BitmapData getBitmapData(Object src) {
 		if (src instanceof String) {
 			String resName = (String) src;
 
-			Bitmap modAsset = BitmapFactory.decodeStream(ModdingMode.getInputStream(resName));
+			BitmapData modAsset = BitmapData.decodeStream(ModdingMode.getInputStream(resName));
 
 			if(modAsset==null) {
 				throw new ModError("Bad bitmap: "+ resName);
 			}
 
 			if(ModdingMode.isAssetExist(resName)) {
-				Bitmap baseAsset = BitmapFactory.decodeStream(ModdingMode.getInputStreamBuiltIn(resName));
+				BitmapData baseAsset = BitmapData.decodeStream(ModdingMode.getInputStreamBuiltIn(resName));
 
 				if(baseAsset==null) {
 					throw new ModError("Bad builtin bitmap: "+ resName);
@@ -124,8 +121,8 @@ public class TextureCache {
 			}
 
 			return modAsset;
-		} else if (src instanceof Bitmap) {
-			return (Bitmap) src;
+		} else if (src instanceof BitmapData) {
+			return (BitmapData) src;
 		}
 
 		throw new ModError("Bad resource source for Bitmap "+ src.getClass().getName());

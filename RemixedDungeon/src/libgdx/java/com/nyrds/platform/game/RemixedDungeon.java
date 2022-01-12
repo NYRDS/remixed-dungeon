@@ -17,8 +17,6 @@
  */
 package com.nyrds.platform.game;
 
-import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
-import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Scene;
@@ -26,15 +24,6 @@ import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class RemixedDungeon extends Game {
-
-
-	public static void main(String[] args) {
-		Lwjgl3ApplicationConfiguration cfg = new Lwjgl3ApplicationConfiguration();
-		cfg.setTitle("Remixed Dungeon");
-		cfg.setWindowedMode(480, 800);
-
-		final Lwjgl3Application lwjgl3Application = new Lwjgl3Application(new RemixedDungeon(), cfg);
-	}
 
 	public RemixedDungeon() {
 		super(TitleScene.class);
