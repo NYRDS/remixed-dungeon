@@ -1,10 +1,15 @@
 package com.nyrds.platform.util;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.util.Log;
 
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.Preferences;
+
+import java.util.UUID;
 
 public class PUtil {
     static public boolean isConnectedToInternet() {
@@ -17,11 +22,13 @@ public class PUtil {
         return connectionStatus;
     }
 
-    static public slog(String tag, String txt) {
+    static public void slog(String tag, String txt) {
         Log.i(tag, txt);
     }
 
-    static String getUserId() {
+    public static UUID getUserId() {
+        final String noKey="noKey";
+
         SharedPreferences prefs = Preferences.INSTANCE.get();
 
         UUID userId = UUID.randomUUID();
@@ -31,6 +38,6 @@ public class PUtil {
         } else {
             userId = UUID.fromString(key);
         }
-        return userId
+        return userId;
     }
 }

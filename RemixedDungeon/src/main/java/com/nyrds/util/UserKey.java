@@ -9,8 +9,6 @@ public class UserKey {
 
 	private static Crypter crypter;
 
-	private static final String noKey="noKey";
-
 	private static void init() {
 		userId = PUtil.getUserId();
 		crypter = new Crypter("RPD_UserKey_"+userId.toString());
