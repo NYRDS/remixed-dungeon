@@ -113,7 +113,7 @@ public class Texture {
 		int h = bitmap.getHeight();
 		
 		int[] pixels = new int[w * h]; 
-		bitmap.getPixels( pixels, 0, w, 0, 0, w, h );
+		bitmap.getAllPixels(pixels);
 
 		// recode - components reordering is needed
 		if (recode) {

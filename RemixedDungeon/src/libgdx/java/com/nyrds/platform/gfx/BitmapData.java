@@ -1,33 +1,52 @@
 package com.nyrds.platform.gfx;
 
+import static com.badlogic.gdx.graphics.g2d.Gdx2DPixmap.GDX2D_FORMAT_RGBA8888;
+
+import com.badlogic.gdx.graphics.g2d.Gdx2DPixmap;
+
+import java.io.InputStream;
+
 public class BitmapData {
 
-    public static BitmapData createBitmap(int i, int i1) {
-        return new BitmapData();
+    Gdx2DPixmap bitmap;
+
+    public BitmapData(int w, int h) {
+        bitmap = Gdx2DPixmap.newPixmap(w,h,GDX2D_FORMAT_RGBA8888);
+    }
+
+    public BitmapData(InputStream inputStream) {
+        bitmap = Gdx2DPixmap.newPixmap(inputStream,GDX2D_FORMAT_RGBA8888);
+    }
+
+    public static BitmapData createBitmap(int w, int h) {
+        return new BitmapData(w,h);
     }
 
     public static BitmapData decodeStream(java.io.InputStream inputStream) {
-        return new BitmapData();
+        return new BitmapData(inputStream);
     }
 
     public int getWidth() {
-        return 0;
+        return bitmap.getWidth();
     }
 
     public int getHeight() {
-        return 0;
+        return bitmap.getHeight();
     }
 
-    public void getPixels(int[] pixels, int i, int w, int i1, int i2, int w1, int h) {
+    public void getAllPixels(int[] pixels) {
+        bitmap.getPixels().asIntBuffer().get(pixels);
     }
 
-    public int getPixel(int i, int i1) {
-        return 0;
+    public int getPixel(int x, int y) {
+        return bitmap.getPixel(x,y);
     }
 
     public void eraseColor(int color) {
+        bitmap.clear(color);
     }
 
-    public void setPixel(int i, int i1, int color) {
+    public void setPixel(int x, int y, int color) {
+        bitmap.setPixel(x,y, color);
     }
 }
