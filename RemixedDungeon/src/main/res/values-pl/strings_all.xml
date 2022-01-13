@@ -2588,14 +2588,6 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="ShieldStrTemplate">Osoba nosząca tarczę powinna mieć co najmniej %1$d punktów Siły, aby prawidłowo z niej korzystać.</string>
   <string name="town_deco_flowerinthepot_name">Kwiat w doniczce</string>
   <string name="town_deco_flowerinthepot_desc">Dekoracyjny kwiat ze słodkim aromatem</string>
-  <string name="Welcome_Text_29_4">
-    remix.29.4\n
-    - Rozgrywka:\n
-    -- Dwuręczne władanie!\n
-    - Modowanie:\n
-    -- Customowe bronie!\n
-    - Błędy naprawione\n
-    </string>
   <string name="Mods_Disclaimer">
         Mody są tworzone przez graczy dla graczy.\n
         Mody czasami zmieniają rozgrywkę w niespodziewane lub dziwne sposoby, zostałeś ostrzeżony!\n
@@ -2828,4 +2820,24 @@ remix.29.6\n
   <string name="MoongraceBuff_Info">Powietrze wokół gęstnieje od unoszącej się w nim magii, co ułatwia łatwiejszą koncetrację i odnowę zasobów magicznych. </string>
   <string name="EncumbranceBuff_Name">Obciążenie</string>
   <string name="EncumbranceBuff_Info">Zbyt mało siły by efektywnie użyć %s.</string>
+
+  <string name="Level_TileDescPedestal">Mały piedestał.</string>
+  <string name="Level_TileDescWell"></string>
+
+  <string name="Welcome_Text_31_0">
+    remix.31.0\n
+    - Rozgrywka:\n
+    -- Opcjonalny tryb izometryczny!\n
+    - Modowanie:\n
+    -- Modyfikowalne obiekty poziomów \n
+    - Naprawiono  bugi\n
+    </string>
+
+  <string name="Level_TilePileOfStones">Góra Głazów.</string>
+  <string name="Level_TileDescPileOfStones">Niezwykle ciężka góra głazów, nie do ruszenia.</string>
+  <string name="WndSettingsInGame_IsometricTiles">Płytki izometryczne.</string>
+
+  <string name="KrampusHead_Name">Głowa Krampusa</string>
+  <string name="KrampusHead_Info">Zastanawiałeś się może kiedyś jak to by było być nieco bardziej niegrzecznym podczas Podziemiowania? Twój demoniczny wygląd na pewno przyprawi o koszmary niejednego szczurka. </string>
+
 </resources>
