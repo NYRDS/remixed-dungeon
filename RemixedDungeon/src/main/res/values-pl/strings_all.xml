@@ -263,14 +263,14 @@
   <string name="Welcome_Ok">Jasne!</string>
   <string name="Welcome_Title">Witaj!</string>
   <string name="BlackCat_Name">Czarny kot</string>
-  <string name="BlackCat_Gender">masculine</string>
+  <string name="BlackCat_Gender">niewieści </string>
   <string name="BlackCat_Name_Objective">kot</string>
   <string name="BlackCat_Desc">to jest czarny kot</string>
   <string name="Str_lose">-1 siły</string>
   <string name="SociologistNPC_Name">Socjolog</string>
-  <string name="SociologistNPC_Gender">masculine</string>
+  <string name="SociologistNPC_Gender">męski</string>
   <string name="SociologistNPC_Name_Objective">Sociolog</string>
-  <string name="SociologistNPC_Desc">To jest socjolog na uświęconej misji zbierania opinii publicznej</string>
+  <string name="SociologistNPC_Desc">To jest socjolog na świętej misji zbierania opinii publicznej</string>
   <string name="SociologistNPC_AlreadyTaken">Już wypełniłeś ankietę, proszę przyjść później</string>
   <string name="SociologistNPC_Hi">Witaj!\nChciałbyś wsiąść udział w naszej ankiecie ?(Wymagany jest dostęp do internetu)\nTwoja opinia ma znaczenie!</string>
   <string name="SociologistNPC_InternetRequired">Przepraszam, ale bez dostępu do internetu nie możesz wypełnić naszej ankiety</string>
