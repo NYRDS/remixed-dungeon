@@ -48,9 +48,6 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.TestOnly;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -59,6 +56,9 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import clone.org.json.JSONArray;
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 import lombok.var;
 
 public class Belongings implements Iterable<Item>, Bundlable {

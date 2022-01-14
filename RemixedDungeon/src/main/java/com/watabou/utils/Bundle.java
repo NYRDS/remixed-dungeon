@@ -26,9 +26,6 @@ import com.nyrds.util.Util;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.io.BufferedReader;
@@ -49,6 +46,9 @@ import java.util.Map;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
+import clone.org.json.JSONArray;
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 import lombok.SneakyThrows;
 
 public class Bundle {

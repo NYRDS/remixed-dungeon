@@ -12,8 +12,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 
 public abstract class PortalGate extends Deco {
 

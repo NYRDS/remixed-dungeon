@@ -58,14 +58,14 @@ import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;

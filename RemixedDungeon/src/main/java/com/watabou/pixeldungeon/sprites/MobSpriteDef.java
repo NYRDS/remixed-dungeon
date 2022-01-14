@@ -9,15 +9,15 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+
+import clone.org.json.JSONArray;
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 
 public class MobSpriteDef extends MobSprite {
 

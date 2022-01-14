@@ -14,8 +14,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndMessage;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 
 /**
  * Created by mike on 01.07.2016.

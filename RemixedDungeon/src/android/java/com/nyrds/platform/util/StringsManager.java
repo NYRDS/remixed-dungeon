@@ -14,8 +14,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONArray;
-import org.json.JSONException;
+import clone.org.json.JSONArray;
+import clone.org.json.JSONException;
 
 import java.io.BufferedReader;
 import java.io.File;

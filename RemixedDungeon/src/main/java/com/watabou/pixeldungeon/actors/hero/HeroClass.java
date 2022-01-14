@@ -48,15 +48,15 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 
+import clone.org.json.JSONArray;
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.var;

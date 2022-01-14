@@ -16,11 +16,10 @@ import com.watabou.pixeldungeon.plants.Sorrowmoss;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.HashMap;
 
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 import lombok.SneakyThrows;
 
 /**

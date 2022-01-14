@@ -23,11 +23,12 @@ import com.watabou.pixeldungeon.levels.traps.SummoningTrap;
 import com.watabou.pixeldungeon.levels.traps.ToxicTrap;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
+
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 
 /**
  * Created by mike on 01.07.2016.

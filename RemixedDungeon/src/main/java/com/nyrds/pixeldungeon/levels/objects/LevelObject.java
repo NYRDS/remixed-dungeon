@@ -17,9 +17,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 import lombok.Getter;
 import lombok.Setter;
 

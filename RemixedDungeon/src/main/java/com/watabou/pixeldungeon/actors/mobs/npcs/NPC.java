@@ -31,10 +31,11 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.Locale;
+
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 
 public abstract class NPC extends Mob {
 	protected NPC() {

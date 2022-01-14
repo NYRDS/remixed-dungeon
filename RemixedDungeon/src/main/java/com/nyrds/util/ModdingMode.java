@@ -5,13 +5,12 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.Assets;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -30,6 +29,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 import lombok.SneakyThrows;
 import lombok.var;
 
@@ -283,6 +284,7 @@ public class ModdingMode {
 	}
 
 	public static @NotNull InputStream getInputStream(String resName) {
+		PUtil.slog("MM",resName);
 		try {
 			if (!mActiveMod.equals(REMIXED) && isModdingAllowed(resName)) {
 				File file = FileSystem.getExternalStorageFile(mActiveMod + "/" + resName);

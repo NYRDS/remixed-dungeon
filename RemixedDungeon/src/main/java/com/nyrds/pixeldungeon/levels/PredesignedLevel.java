@@ -16,10 +16,10 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.Nullable;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
+import clone.org.json.JSONArray;
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 import lombok.SneakyThrows;
 import lombok.var;
 

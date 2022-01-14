@@ -74,12 +74,12 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 import lombok.SneakyThrows;
 
 public abstract class Mob extends Char {

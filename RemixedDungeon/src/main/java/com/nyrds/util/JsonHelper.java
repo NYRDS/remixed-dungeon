@@ -6,10 +6,6 @@ import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONTokener;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -25,6 +21,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import clone.org.json.JSONArray;
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
+import clone.org.json.JSONTokener;
 import lombok.SneakyThrows;
 
 public class JsonHelper {

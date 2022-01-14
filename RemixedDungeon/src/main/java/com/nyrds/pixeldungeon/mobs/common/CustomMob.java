@@ -20,11 +20,11 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONObject;
 import org.luaj.vm2.LuaValue;
 
 import java.util.ArrayList;
 
+import clone.org.json.JSONObject;
 import lombok.SneakyThrows;
 
 /**

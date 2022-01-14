@@ -23,7 +23,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
-import org.json.JSONException;
+import clone.org.json.JSONException;
 
 public class Assets {
 
