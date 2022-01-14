@@ -17,17 +17,20 @@
 
 package com.nyrds.platform.gl;
 
-import android.opengl.GLES20;
+
+import com.badlogic.gdx.Gdx;
+
+import java.nio.IntBuffer;
 
 public class Shader {
 
-	public static final int VERTEX		= GLES20.GL_VERTEX_SHADER;
-	public static final int FRAGMENT	= GLES20.GL_FRAGMENT_SHADER;
+	public static final int VERTEX		= Gdx.gl20.GL_VERTEX_SHADER;
+	public static final int FRAGMENT	= Gdx.gl20.GL_FRAGMENT_SHADER;
 	
 	private final int handle;
 	
 	public Shader( int type ) {
-		handle = GLES20.glCreateShader( type );
+		handle = Gdx.gl20.glCreateShader( type );
 		if(handle==0){
 			throw new AssertionError();
 		}
@@ -38,21 +41,21 @@ public class Shader {
 	}
 	
 	public void source( String src ) {
-		GLES20.glShaderSource( handle, src );
+		Gdx.gl20.glShaderSource( handle, src );
 	}
 	
 	public void compile() {
-		GLES20.glCompileShader( handle );
+		Gdx.gl20.glCompileShader( handle );
 
-		int[] status = new int[1];
-		GLES20.glGetShaderiv( handle, GLES20.GL_COMPILE_STATUS, status, 0 );
-		if (status[0] == GLES20.GL_FALSE) {
-			throw new Error( GLES20.glGetShaderInfoLog( handle ) );
+		IntBuffer status = IntBuffer.allocate(1);
+		Gdx.gl20.glGetShaderiv( handle, Gdx.gl20.GL_COMPILE_STATUS, status);
+		if (status.get() == Gdx.gl20.GL_FALSE) {
+			throw new Error( Gdx.gl20.glGetShaderInfoLog( handle ) );
 		}
 	}
 	
 	public void delete() {
-		GLES20.glDeleteShader( handle );
+		Gdx.gl20.glDeleteShader( handle );
 	}
 	
 	public static Shader createCompiled( int type, String src ) {

@@ -40,4 +40,32 @@ public class PUtil {
         }
         return userId;
     }
+
+    public static String bundle2string(Bundle bundle) {
+        if (bundle == null) {
+            return null;
+        }
+        StringBuilder string = new StringBuilder("Bundle{");
+        for (String key : bundle.keySet()) {
+            string.append(" ").append(key).append(" => ").append(bundle.get(key)).append(";");
+        }
+        string.append(" }Bundle");
+        return string.toString();
+    }
+
+    @SuppressLint("NewApi")
+    public static long getAvailableInternalMemorySize() {
+        File path = Environment.getDataDirectory();
+        StatFs stat = new StatFs(path.getPath());
+        long ret;
+        if (android.os.Build.VERSION.SDK_INT < 18) {
+            long blockSize = stat.getBlockSize();
+            long availableBlocks = stat.getAvailableBlocks();
+            ret = availableBlocks * blockSize;
+        } else {
+            ret = stat.getAvailableBytes();
+        }
+        EventCollector.setSessionData("FreeInternalMemorySize", Long.toString(ret));
+        return ret;
+    }
 }

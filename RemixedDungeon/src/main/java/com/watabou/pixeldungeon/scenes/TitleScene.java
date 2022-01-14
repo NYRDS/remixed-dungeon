@@ -25,9 +25,9 @@ import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
-import com.nyrds.util.Util;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -147,7 +147,7 @@ public class TitleScene extends PixelScene {
 		version.setPos(w - version.width(), h - version.height());
 		add(version);
 
-		float freeInternalStorage = Util.getAvailableInternalMemorySize();
+		float freeInternalStorage = PUtil.getAvailableInternalMemorySize();
 
 		if (freeInternalStorage < 2) {
 			Text lowInternalStorageWarning = PixelScene

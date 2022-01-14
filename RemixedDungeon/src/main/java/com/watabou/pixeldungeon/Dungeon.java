@@ -43,10 +43,10 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
-import com.nyrds.util.Util;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Rankings.gameOver;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -474,7 +474,7 @@ public class Dungeon {
 
     @AddTrace(name = "Dungeon.saveAllImpl")
     private static void saveAllImpl() {
-        float MBytesAvailable = Util.getAvailableInternalMemorySize() / 1024f / 1024f;
+        float MBytesAvailable = PUtil.getAvailableInternalMemorySize() / 1024f / 1024f;
 
         if (MBytesAvailable < 2) {
             EventCollector.logEvent("saveGame", "lowMemory");

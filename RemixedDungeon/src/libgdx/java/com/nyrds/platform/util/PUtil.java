@@ -22,4 +22,8 @@ public class PUtil {
         return UUID.randomUUID();
     }
 
+
+    public static long getAvailableInternalMemorySize() {
+        return 1024 * 1024 * 1024;
+    }
 }
