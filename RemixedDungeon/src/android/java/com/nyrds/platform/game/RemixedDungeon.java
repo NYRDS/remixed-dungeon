@@ -34,6 +34,7 @@ import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Scene;
@@ -103,7 +104,7 @@ public class RemixedDungeon extends Game {
 
 		String extras = Utils.EMPTY_STRING;
 		if(data!=null) {
-			extras = Util.bundle2string(data.getExtras());
+			extras = PUtil.bundle2string(data.getExtras());
 		}
 
 		GLog.debug("onActivityResult(" + requestCode + "," + resultCode + "," + data +" "+extras);
