@@ -170,8 +170,7 @@ public class NoosaScript extends Script {
 		"}" +
 		
 		"//\n" +
-		
-		"precision mediump float;" +
+
 		"varying vec2 vUV;" +
 		"uniform sampler2D uTex;" +
 		"uniform vec4 uColorM;" +

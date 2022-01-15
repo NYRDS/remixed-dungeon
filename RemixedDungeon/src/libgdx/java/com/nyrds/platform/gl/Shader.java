@@ -20,8 +20,6 @@ package com.nyrds.platform.gl;
 
 import com.badlogic.gdx.Gdx;
 
-import java.nio.IntBuffer;
-
 public class Shader {
 
 	public static final int VERTEX		= Gdx.gl20.GL_VERTEX_SHADER;
@@ -39,21 +37,19 @@ public class Shader {
 	public int handle() {
 		return handle;
 	}
-	
-	public void source( String src ) {
-		Gdx.gl20.glShaderSource( handle, src );
-	}
-	
-	public void compile() {
-		Gdx.gl20.glCompileShader( handle );
 
+
+	public void compile(String src) {
+		Gdx.gl20.glShaderSource( handle, src );
+		Gdx.gl20.glCompileShader( handle );
+/*
 		IntBuffer status = IntBuffer.allocate(1);
-		/*Gdx.gl20.glGetShaderiv( handle, Gdx.gl20.GL_COMPILE_STATUS, status);
+
+		Gdx.gl20.glGetShaderiv( handle, Gdx.gl20.GL_COMPILE_STATUS, status);
 		if (status.get() == Gdx.gl20.GL_FALSE) {
 			throw new Error( Gdx.gl20.glGetShaderInfoLog( handle ) );
 		}
-
-		 */
+ */
 	}
 	
 	public void delete() {
@@ -62,8 +58,7 @@ public class Shader {
 	
 	public static Shader createCompiled( int type, String src ) {
 		Shader shader = new Shader( type );
-		shader.source( src );
-		shader.compile();
+		shader.compile(src);
 		return shader;
 	}
 }

@@ -19,8 +19,6 @@ package com.nyrds.platform.gl;
 
 import com.badlogic.gdx.Gdx;
 
-import java.nio.IntBuffer;
-
 public class Program {
 
 	private final int handle;
@@ -39,9 +37,9 @@ public class Program {
 	
 	public void link() {
 		Gdx.gl20.glLinkProgram( handle );
-		
-		IntBuffer status = IntBuffer.allocate(1);
 		/*
+		IntBuffer status = IntBuffer.allocate(1);
+
 		Gdx.gl20.glGetProgramiv( handle, Gdx.gl20.GL_LINK_STATUS, status);
 		if (status.get() == Gdx.gl20.GL_FALSE) {
 			throw new Error( Gdx.gl20.glGetProgramInfoLog( handle ) );

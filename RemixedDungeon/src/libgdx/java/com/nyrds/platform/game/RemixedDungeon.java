@@ -43,7 +43,7 @@ public class RemixedDungeon extends Game {
 	}
 
 	public static boolean landscape() {
-		return true;
+		return false;
 	}
 
 
