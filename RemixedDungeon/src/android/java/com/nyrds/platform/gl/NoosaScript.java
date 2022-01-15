@@ -20,10 +20,9 @@ package com.nyrds.platform.gl;
 import android.opengl.GLES20;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.gl.Attribute;
-import com.nyrds.platform.gl.Uniform;
 import com.watabou.glscripts.Script;
 import com.watabou.glwrap.Quad;
+import com.watabou.noosa.Camera;
 
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
