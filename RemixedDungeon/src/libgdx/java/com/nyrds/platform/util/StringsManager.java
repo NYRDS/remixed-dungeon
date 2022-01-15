@@ -1,12 +1,8 @@
 package com.nyrds.platform.util;
 
-import android.annotation.SuppressLint;
-import android.content.res.Resources;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
 import com.nyrds.util.ModdingMode;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -25,7 +21,6 @@ import java.util.Map;
 import java.util.Set;
 
 import clone.org.json.JSONArray;
-import clone.org.json.JSONException;
 import lombok.SneakyThrows;
 
 /**
@@ -33,10 +28,9 @@ import lombok.SneakyThrows;
  */
 public class StringsManager {
 
-	@SuppressLint("UseSparseArrays")
 	@NotNull
 	private static final Map<Integer, String>   stringMap  = new HashMap<>();
-	@SuppressLint("UseSparseArrays")
+
 	@NotNull
 	private static final Map<Integer, String[]> stringsMap = new HashMap<>();
 
@@ -95,44 +89,40 @@ public class StringsManager {
 
 		String line = Utils.EMPTY_STRING;
 
-		try {
-			InputStream fis = new FileInputStream(jsonFile);
-			InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
-			BufferedReader br = new BufferedReader(isr);
+		InputStream fis = new FileInputStream(jsonFile);
+		InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
+		BufferedReader br = new BufferedReader(isr);
 
-			while ((line = br.readLine()) != null) {
-				JSONArray entry = new JSONArray(line);
+		while ((line = br.readLine()) != null) {
+			JSONArray entry = new JSONArray(line);
 
-				String keyString = entry.getString(0);
-				Integer key = keyToInt.get(keyString);
+			String keyString = entry.getString(0);
+			Integer key = keyToInt.get(keyString);
 
-				if (entry.length() == 2) {
-					String value = entry.getString(1);
+			if (entry.length() == 2) {
+				String value = entry.getString(1);
 
-					if (key != null) {
-						stringMap.put(key, value);
-					}
-
-					sStringMap.put(keyString, value);
+				if (key != null) {
+					stringMap.put(key, value);
 				}
 
-				if (entry.length() > 2) {
-					String[] values = new String[entry.length() - 1];
-					for (int i = 1; i < entry.length(); i++) {
-						values[i - 1] = entry.getString(i);
-					}
-
-					if (key != null) {
-						stringsMap.put(key, values);
-					}
-
-					sStringsMap.put(keyString, values);
-				}
+				sStringMap.put(keyString, value);
 			}
-			br.close();
-		} catch (JSONException e) {
-			Game.toast("malformed json: [%s] in [%s] ignored ", line, resource);
+
+			if (entry.length() > 2) {
+				String[] values = new String[entry.length() - 1];
+				for (int i = 1; i < entry.length(); i++) {
+					values[i - 1] = entry.getString(i);
+				}
+
+				if (key != null) {
+					stringsMap.put(key, values);
+				}
+
+				sStringsMap.put(keyString, values);
+			}
 		}
+		br.close();
 	}
 
 	private static Locale userSelectedLocale;
@@ -162,12 +152,7 @@ public class StringsManager {
 			return stringMap.get(id);
 		}
 
-		try {
-			ensureCorrectLocale();
-			return Utils.EMPTY_STRING;
-		} catch (Resources.NotFoundException notFound) {
-			GLog.w("resource not found: %s", notFound.getMessage());
-		}
+		ensureCorrectLocale();
 		return Utils.EMPTY_STRING;
 	}
 

@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.github.johnrengelman.shadow'
 
 ext.getApiField = { name ->
     def stringsFile = "RemixedDungeon/src/main/res/values/strings_api_signature.xml"
@@ -104,24 +103,23 @@ android {
     androidResources {
         noCompress 'mp3', 'ogg'
     }
-
 }
 
-configurations {
-    libgdx // just define a separate configuration
+tasks.whenTaskAdded {task ->
+    if(task.name.contains("generate") && task.name.contains("ResValue")) {
+        task.enabled = false
+    }
 }
 
 dependencies {
     implementation project(':annotation')
     implementation project(path: ':json_clone')
 
-    annotationProcessor project(':processor')
-    annotationProcessor project(':json_clone')
-
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
 
+    annotationProcessor project(':processor')
 
     libgdxImplementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
     libgdxImplementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
