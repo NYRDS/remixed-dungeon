@@ -13,7 +13,7 @@ translations_dir = 'translations/'
 
 
 source_locales = {"en","tr","ko","hu","it",'de_DE', 'es', 'fr_FR', 'pl_PL', 'ru',
-                  'uk_UA', 'pt_BR', "ms_MY","zh_CN", "zh_TW", "id"}
+                  'uk_UA', 'pt_BR', "ms_MY","zh_CN", "zh_TW", "id", 'el'}
 
 locale_remap = {'de_DE': 'de', 'fr_FR': 'fr', 'pl_PL': 'pl', 'nl_NL': 'nl', 'ro_RO': 'ro',
                 'uk_UA': 'uk', 'pt_BR': 'pt-rBR', 'pt_PT': 'pt-rPT', 'es_MX': 'es-rMX', "ms_MY": "ms", "zh_CN":'zh-rCN',
@@ -78,10 +78,46 @@ def processText(arg):
     return ret
 
 
+def makeRJava(strings, arrays):
+    rJava = open("R.java", "w", encoding='utf8')
+    rJava.write('''
+    package com.nyrds.pixeldungeon.ml;
+
+    public class R {
+        public static class string { 
+                ''')
+
+    counter = 0
+
+    for str in strings:
+        rJava.write(f'''
+                public static final int {str} = {counter};''')
+        counter += 1
+
+    rJava.write('''}
+    
+    public static class array {
+    ''')
+
+    for str in arrays:
+        rJava.write(f'''
+                public static final int {str} = {counter};''')
+        counter += 1
+
+
+    rJava.write('''
+        }
+    }''')
+    rJava.close()
+
+
+r_strings = set()
+r_arrays = set()
+
+
 for _, _, files in os.walk(translations_dir + dir_name):
 
     arrays = ElementTree.Element("resources")
-
     for file_name in files:
 
         locale_code = file_name[:-4]
@@ -91,7 +127,6 @@ for _, _, files in os.walk(translations_dir + dir_name):
 
         if locale_code in locale_remap:
             locale_code = locale_remap[locale_code]
-
 
         if locale_code not in totalCounter:
             totalCounter[locale_code] = 0
@@ -115,19 +150,16 @@ for _, _, files in os.walk(translations_dir + dir_name):
             jsonData = open("strings_" + locale_code + ".json", "w", encoding='utf8')
 
             for entry in transifexData:
-
                 if entry.tag not in ["string", "string-array"]:
                     continue
 
                 #detectedLang = lang(entry.text)
                 #print(entry.text, detectedLang)
 
-
                 counters[resource_name][locale_code] += 1
                 totalCounter[locale_code] += 1
 
                 if entry.tag == "string":
-
                     jsonData.write(unescape(json.dumps([entry.get("name"), entry.text], ensure_ascii=False)))
                     jsonData.write("\n")
 
@@ -151,3 +183,23 @@ for _, _, files in os.walk(translations_dir + dir_name):
             print(error)
 
 pprint.pprint(totalCounter)
+
+strings_files = ['RemixedDungeon/src/main/res/values/strings_not_translate.xml',
+                 'RemixedDungeon/src/main/res/values/strings_api_signature.xml',
+                 'RemixedDungeon/src/main/res/values/string_arrays.xml',
+                 'RemixedDungeon/src/main/res/values/strings_all.xml']
+
+for file in strings_files:
+    pfile = ElementTree.parse('../../' + file).getroot()
+
+    for entry in pfile:
+        if entry.tag not in ["string", "string-array"]:
+            continue
+
+        if entry.tag == 'string':
+            r_strings.add(entry.get("name"))
+
+        if entry.tag == 'string-array':
+            r_arrays.add(entry.get("name"))
+
+makeRJava(r_strings, r_arrays)
