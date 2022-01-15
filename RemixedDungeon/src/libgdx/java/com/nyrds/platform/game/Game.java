@@ -4,12 +4,14 @@ package com.nyrds.platform.game;
 import android.widget.LinearLayout;
 
 import com.badlogic.gdx.ApplicationListener;
+import com.badlogic.gdx.Gdx;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.glscripts.Script;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
 
@@ -87,6 +89,15 @@ public class Game implements ApplicationListener {
     @Override
     public void create() {
         paused = false; // we may not get resume
+
+        Gdx.gl20.glEnable(Gdx.gl20.GL_BLEND);
+        Gdx.gl20.glBlendFunc(Gdx.gl20.GL_SRC_ALPHA, Gdx.gl20.GL_ONE_MINUS_SRC_ALPHA);
+
+        Gdx.gl20.glEnable(Gdx.gl20.GL_SCISSOR_TEST);
+
+
+        //SystemText.invalidate();
+        TextureCache.clear();
     }
 
     @Override

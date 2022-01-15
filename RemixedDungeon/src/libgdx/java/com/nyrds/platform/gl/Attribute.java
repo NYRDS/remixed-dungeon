@@ -17,7 +17,7 @@
 
 package com.nyrds.platform.gl;
 
-import android.opengl.GLES20;
+import com.badlogic.gdx.Gdx;
 
 import java.nio.FloatBuffer;
 
@@ -34,14 +34,14 @@ public class Attribute {
 	}
 	
 	public void enable() {
-		GLES20.glEnableVertexAttribArray( location );
+		Gdx.gl20.glEnableVertexAttribArray( location );
 	}
 	
 	public void disable() {
-		GLES20.glDisableVertexAttribArray( location );
+		Gdx.gl20.glDisableVertexAttribArray( location );
 	}
 	
 	public void vertexPointer( int size, int stride, FloatBuffer ptr ) {
-		GLES20.glVertexAttribPointer( location, size, GLES20.GL_FLOAT, false, stride * Float.SIZE / 8, ptr );
+		Gdx.gl20.glVertexAttribPointer( location, size, Gdx.gl20.GL_FLOAT, false, stride * Float.SIZE / 8, ptr );
 	}
 }

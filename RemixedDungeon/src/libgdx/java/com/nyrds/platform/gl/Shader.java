@@ -48,10 +48,12 @@ public class Shader {
 		Gdx.gl20.glCompileShader( handle );
 
 		IntBuffer status = IntBuffer.allocate(1);
-		Gdx.gl20.glGetShaderiv( handle, Gdx.gl20.GL_COMPILE_STATUS, status);
+		/*Gdx.gl20.glGetShaderiv( handle, Gdx.gl20.GL_COMPILE_STATUS, status);
 		if (status.get() == Gdx.gl20.GL_FALSE) {
 			throw new Error( Gdx.gl20.glGetShaderInfoLog( handle ) );
 		}
+
+		 */
 	}
 	
 	public void delete() {

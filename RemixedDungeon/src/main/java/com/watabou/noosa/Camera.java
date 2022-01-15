@@ -43,8 +43,8 @@ public class Camera extends Gizmo {
 	public int width;
 	public int height;
 	
-	int screenWidth;
-	int screenHeight;
+	public int screenWidth;
+	public int screenHeight;
 
 	@NotNull
 	public float[] matrix;

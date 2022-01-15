@@ -15,15 +15,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.watabou.noosa;
+package com.nyrds.platform.gl;
 
-import android.opengl.GLES20;
-
+import com.badlogic.gdx.Gdx;
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.gl.Attribute;
-import com.nyrds.platform.gl.Uniform;
 import com.watabou.glscripts.Script;
 import com.watabou.glwrap.Quad;
+import com.watabou.noosa.Camera;
 
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
@@ -81,7 +79,7 @@ public class NoosaScript extends Script {
 		vertices.position( 2 );
 		aUV.vertexPointer( 2, 4, vertices );
 		
-		GLES20.glDrawElements( GLES20.GL_TRIANGLES, size, GLES20.GL_UNSIGNED_SHORT, indices );
+		Gdx.gl20.glDrawElements( Gdx.gl20.GL_TRIANGLES, size, Gdx.gl20.GL_UNSIGNED_SHORT, indices );
 	}
 	
 	public void drawQuad( FloatBuffer vertices ) {
@@ -96,7 +94,7 @@ public class NoosaScript extends Script {
 		vertices.position( 2 );
 		aUV.vertexPointer( 2, 4, vertices );
 
-		GLES20.glDrawElements( GLES20.GL_TRIANGLES, Quad.SIZE, GLES20.GL_UNSIGNED_SHORT, Quad.getIndices( 1 ) );
+		Gdx.gl20.glDrawElements( Gdx.gl20.GL_TRIANGLES, Quad.SIZE, Gdx.gl20.GL_UNSIGNED_SHORT, Quad.getIndices( 1 ) );
 		
 	}
 	
@@ -116,10 +114,10 @@ public class NoosaScript extends Script {
 		vertices.position( 2 );
 		aUV.vertexPointer( 2, 4, vertices );
 
-		GLES20.glDrawElements( 
-			GLES20.GL_TRIANGLES, 
+		Gdx.gl20.glDrawElements( 
+			Gdx.gl20.GL_TRIANGLES, 
 			Quad.SIZE * size, 
-			GLES20.GL_UNSIGNED_SHORT, 
+			Gdx.gl20.GL_UNSIGNED_SHORT, 
 			Quad.getIndices( size ) );
 		
 	}
@@ -142,7 +140,7 @@ public class NoosaScript extends Script {
 
 			uCamera.valueM4( camera.matrix );
 			
-			GLES20.glScissor( 
+			Gdx.gl20.glScissor( 
 				camera.x, 
 				GameLoop.height() - camera.screenHeight - camera.y,
 				camera.screenWidth, 
