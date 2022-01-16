@@ -2818,10 +2818,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="MoongraceBuff_Info">The air around becomes more saturated, which allows for better concentration and restoration of magical reserves.</string>
   <string name="EncumbranceBuff_Name">Burden</string>
   <string name="EncumbranceBuff_Info">Not enough strength to use %s effectively.</string>
-
   <string name="Level_TileDescPedestal">A small pedestal.</string>
-  <string name="Level_TileDescWell"></string>
-
+  <string name="Level_TileDescWell"/>
   <string name="Welcome_Text_31_0">
     remix.31.0\n
     - Gameplay:\n
@@ -2830,12 +2828,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Moddable Level Objects\n
     - Bugs fixed\n
     </string>
-
   <string name="Level_TilePileOfStones">A pile of Stones</string>
   <string name="Level_TileDescPileOfStones">A pile of extremely heavy stones, looks unmovable.</string>
   <string name="WndSettingsInGame_IsometricTiles">Isometric Tiles</string>
-
   <string name="KrampusHead_Name">Krampus Head</string>
   <string name="KrampusHead_Info">Have you ever wondered how it would feel to take a more sinister role while Dungeoneering? Well, you will most certainly bring horror to the local baby rats with this devil-like appearance.</string>
-
 </resources>

@@ -38,7 +38,7 @@ public class BloodSink extends Emitter {
 
     @Override
     public void update() {
-        if (setVisible(Dungeon.isCellVisible(pos))) {
+        if (setVisible(Dungeon.isNorthWallVisible(pos))) {
 
             super.update();
 

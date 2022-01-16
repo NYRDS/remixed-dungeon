@@ -295,7 +295,10 @@ public class LevelTools {
         for (int i = 0; i < level.getLength() - level.getWidth(); i++) {
             if (level.map[i] == Terrain.EMPTY && Random.Int(floorDecoRate) == 0) {
                 level.map[i] = Terrain.EMPTY_DECO;
-            } else if (level.map[i] == Terrain.WALL && TerrainFlags.is(level.map[i + level.getWidth()], TerrainFlags.PASSABLE) && Random.Int(wallDecoRate) == 0) {
+            } else if (level.map[i] == Terrain.WALL
+                    && TerrainFlags.is(level.map[i + level.getWidth()], TerrainFlags.PASSABLE)
+                    && !TerrainFlags.is(level.map[i + level.getWidth()], TerrainFlags.SOLID) //filter out doors
+                    && Random.Int(wallDecoRate) == 0) {
                 level.map[i] = Terrain.WALL_DECO;
             }
         }

@@ -918,6 +918,15 @@ public class Dungeon {
         return visible[cell];
     }
 
+    public static boolean isNorthWallVisible(int cell) {
+        if(!Dungeon.isIsometricMode()) {
+            return isCellVisible(cell);
+        }
+
+        return isCellVisible(cell) && isCellVisible(cell + level.getWidth());
+    }
+
+
     public static void onHeroLeaveLevel() {
         if(level==null) {
             level.unseal();

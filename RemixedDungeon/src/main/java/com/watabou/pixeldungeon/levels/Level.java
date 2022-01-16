@@ -1292,6 +1292,11 @@ public abstract class Level implements Bundlable {
 		final int levelObjectPos = levelObject.getPos();
 
 		if(cellValid(levelObjectPos)) {
+
+			if(levelObject.nonPassable(CharsList.DUMMY)) {
+				passable[levelObjectPos] = true;
+			}
+
 			if(levelObject.losBlocker()) {
 				losBlocking[levelObjectPos] = false;
 			}

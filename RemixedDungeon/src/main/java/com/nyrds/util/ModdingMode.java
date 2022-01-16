@@ -51,24 +51,40 @@ public class ModdingMode {
 	private static final Map<String, String> rewardVideoIds = new HashMap<>();
 	private static final Map<String, String> interstitialIds = new HashMap<>();
 
+	public static final String MAZE = "Maze";
+
+	public static final String CONUNDRUM = "Conundrum";
+
+	public static final String REMIXED_ADDITIONS = "Remixed Additions";
+
+	public static final String REMIXED_RPG = "Remixed RPG";
+
+	public static final String THE_EPIC_DUNGEON = "The epic dungeon";
+
+	public static final String HI_FI_DLC = "HiFi DLC";
+
 	static {
-		trustedMods.add("Maze");
-		trustedMods.add("Conundrum");
+		trustedMods.add(MAZE);
+		trustedMods.add(CONUNDRUM);
 
-		trustedMods.add("Remixed Additions");
-		trustedMods.add("Remixed RPG");
-		trustedMods.add("The epic dungeon");
+		trustedMods.add(REMIXED_ADDITIONS);
+		trustedMods.add(REMIXED_RPG);
+		trustedMods.add(THE_EPIC_DUNGEON);
 
 
-		rewardVideoIds.put("The epic dungeon", "ca-app-pub-4791779564989579/1063117964");
-		rewardVideoIds.put("Remixed Additions", "ca-app-pub-4791779564989579/1515968557");
-		rewardVideoIds.put("Remixed RPG", "ca-app-pub-4791779564989579/6811870723");
+		rewardVideoIds.put(THE_EPIC_DUNGEON, "ca-app-pub-4791779564989579/1063117964");
+		rewardVideoIds.put(REMIXED_ADDITIONS, "ca-app-pub-4791779564989579/1515968557");
+		rewardVideoIds.put(REMIXED_RPG, "ca-app-pub-4791779564989579/6811870723");
 
-		interstitialIds.put("The epic dungeon", "ca-app-pub-4791779564989579/6507016335");
-		interstitialIds.put("Remixed Additions", "ca-app-pub-4791779564989579/9438034069");
-		interstitialIds.put("Remixed RPG", "ca-app-pub-4791779564989579/5368934724");
+		interstitialIds.put(THE_EPIC_DUNGEON, "ca-app-pub-4791779564989579/6507016335");
+		interstitialIds.put(REMIXED_ADDITIONS, "ca-app-pub-4791779564989579/9438034069");
+		interstitialIds.put(REMIXED_RPG, "ca-app-pub-4791779564989579/5368934724");
 
-		dlcSet.add("HiFi DLC");
+		dlcSet.add(REMIXED_ADDITIONS);
+		dlcSet.add(REMIXED_RPG);
+		dlcSet.add(THE_EPIC_DUNGEON);
+
+		dlcSet.add(HI_FI_DLC);
 		dlcSet.add(REMIXED);
 
 		resourcesRemap.put("spellsIcons/elemental(new).png", "spellsIcons/elemental_all.png");
