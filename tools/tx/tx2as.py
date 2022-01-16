@@ -160,7 +160,11 @@ for _, _, files in os.walk(translations_dir + dir_name):
                 totalCounter[locale_code] += 1
 
                 if entry.tag == "string":
-                    jsonData.write(unescape(json.dumps([entry.get("name"), entry.text], ensure_ascii=False)))
+                    text = entry.text
+                    if text is None:
+                        text = ""
+
+                    jsonData.write(unescape(json.dumps([entry.get("name"), text], ensure_ascii=False)))
                     jsonData.write("\n")
 
                 entry.text = processText(entry.text)
