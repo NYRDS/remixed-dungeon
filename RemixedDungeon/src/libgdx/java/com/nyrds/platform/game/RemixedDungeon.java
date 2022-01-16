@@ -19,6 +19,7 @@ package com.nyrds.platform.game;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -27,6 +28,7 @@ public class RemixedDungeon extends Game {
 
 	public RemixedDungeon() {
 		super(TitleScene.class);
+		GamePreferences.classicFont(true);
 	}
 
 

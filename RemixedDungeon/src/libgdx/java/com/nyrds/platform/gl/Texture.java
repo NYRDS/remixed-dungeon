@@ -125,7 +125,7 @@ public class Texture {
 				pixels[i] = ag | (b << 16) | r;
 			}
 		}
-		
+
 		pixels( w, h, pixels );
 	}
 	

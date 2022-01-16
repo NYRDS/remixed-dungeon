@@ -11,4 +11,12 @@ public class Gl {
         GLES20.glClearColor(0, 0, 0, 0.0f);
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
     }
+
+    public static void blendSrcAlphaOne() {
+        GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE );
+    }
+
+    public static void blendSrcAlphaOneMinusAlpha() {
+        GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA );
+    }
 }

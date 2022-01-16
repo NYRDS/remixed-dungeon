@@ -1,9 +1,8 @@
 package com.watabou.noosa;
 
-import android.opengl.GLES20;
-
 import com.nyrds.platform.compatibility.RectF;
 import com.nyrds.platform.gfx.BitmapData;
+import com.nyrds.platform.gl.Texture;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
@@ -45,7 +44,7 @@ public class Font extends TextureFilm {
 		super( tx );
 		
 		texture = tx;
-		texture.filter(GLES20.GL_LINEAR,GLES20.GL_NEAREST);
+		texture.filter(Texture.LINEAR,Texture.NEAREST);
 		texture.reload();
 	}
 
