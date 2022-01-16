@@ -1,11 +1,11 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gl.MaskedTilemapScript;
 import com.nyrds.platform.gl.Texture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
-import com.watabou.noosa.MaskedTilemapScript;
 import com.watabou.pixeldungeon.effects.CircleMask;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.PointF;
