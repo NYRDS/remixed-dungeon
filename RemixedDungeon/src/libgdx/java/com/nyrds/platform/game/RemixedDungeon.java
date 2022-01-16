@@ -85,7 +85,7 @@ public class RemixedDungeon extends Game {
 
 	@Override
 	public void render() {
-		GLog.debug("frame");
+		//GLog.debug("frame");
 		super.render();
 	}
 
