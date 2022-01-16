@@ -114,6 +114,34 @@ def makeRJava(strings, arrays):
 r_strings = set()
 r_arrays = set()
 
+d_strings = {}
+d_arrays = {}
+
+locales = []
+
+strings_files = ['RemixedDungeon/src/main/res/values/strings_not_translate.xml',
+                 'RemixedDungeon/src/main/res/values/strings_api_signature.xml',
+                 'RemixedDungeon/src/main/res/values/string_arrays.xml',
+                 'RemixedDungeon/src/main/res/values/strings_all.xml']
+
+for file in strings_files:
+    pfile = ElementTree.parse('../../' + file).getroot()
+
+    for entry in pfile:
+        if entry.tag not in ["string", "string-array"]:
+            continue
+
+        entry_name = entry.get("name")
+        if entry.tag == 'string':
+            r_strings.add(entry_name)
+
+        if entry.tag == 'string-array':
+            d_arrays[entry_name] = []
+            for e in entry:
+                d_arrays[entry_name].append(e.text.replace("@string/", ""))
+
+            r_arrays.add(entry_name)
+
 
 for _, _, files in os.walk(translations_dir + dir_name):
 
@@ -127,6 +155,9 @@ for _, _, files in os.walk(translations_dir + dir_name):
 
         if locale_code in locale_remap:
             locale_code = locale_remap[locale_code]
+
+        d_strings[locale_code] = {}
+        locales.append(locale_code)
 
         if locale_code not in totalCounter:
             totalCounter[locale_code] = 0
@@ -169,6 +200,8 @@ for _, _, files in os.walk(translations_dir + dir_name):
 #                    if locale_code == 'en':
 #                        print(jsonStr)
 
+                    d_strings[locale_code][entry.tag] = jsonStr
+
                     jsonData.write(unescape(json.dumps([entry.get("name"), jsonStr], ensure_ascii=False)))
                     jsonData.write("\n")
 
@@ -191,24 +224,21 @@ for _, _, files in os.walk(translations_dir + dir_name):
             print("shit happens with " + currentFilePath)
             print(error)
 
+
+#for locale in locales:
+#    jsonData = open("strings_" + locale + ".json", "w", encoding='utf8')
+
+#    for string in d_strings[locale]:
+
+
+
+
+
+#        jsonData.write(unescape(json.dumps([entry.get("name"), jsonStr], ensure_ascii=False)))
+#        jsonData.write("\n")
+
 pprint.pprint(totalCounter)
 
-strings_files = ['RemixedDungeon/src/main/res/values/strings_not_translate.xml',
-                 'RemixedDungeon/src/main/res/values/strings_api_signature.xml',
-                 'RemixedDungeon/src/main/res/values/string_arrays.xml',
-                 'RemixedDungeon/src/main/res/values/strings_all.xml']
-
-for file in strings_files:
-    pfile = ElementTree.parse('../../' + file).getroot()
-
-    for entry in pfile:
-        if entry.tag not in ["string", "string-array"]:
-            continue
-
-        if entry.tag == 'string':
-            r_strings.add(entry.get("name"))
-
-        if entry.tag == 'string-array':
-            r_arrays.add(entry.get("name"))
+pprint.pprint(d_arrays)
 
 makeRJava(r_strings, r_arrays)
