@@ -164,7 +164,12 @@ for _, _, files in os.walk(translations_dir + dir_name):
                     if text is None:
                         text = ""
 
-                    jsonData.write(unescape(json.dumps([entry.get("name"), text], ensure_ascii=False)))
+                    jsonStr = unescape(text).replace(r"\'", "'").replace(r"\’", "’").replace(r"\?","?")
+
+#                    if locale_code == 'en':
+#                        print(jsonStr)
+
+                    jsonData.write(unescape(json.dumps([entry.get("name"), jsonStr], ensure_ascii=False)))
                     jsonData.write("\n")
 
                 entry.text = processText(entry.text)
