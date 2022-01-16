@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.watabou.noosa;
+package com.nyrds.platform.gl;
 
 import android.opengl.GLES20;
 
@@ -24,6 +24,7 @@ import com.nyrds.platform.gl.Attribute;
 import com.nyrds.platform.gl.Uniform;
 import com.watabou.glscripts.Script;
 import com.watabou.glwrap.Quad;
+import com.watabou.noosa.Camera;
 
 import java.nio.FloatBuffer;
 

@@ -88,7 +88,7 @@ public class NoosaScript extends Script {
 			throw new AssertionError();
 		}
 
-		vertices.position( 0 );
+		vertices.position( 0);
 		aXY.vertexPointer( 2, 4, vertices );
 		
 		vertices.position( 2 );
@@ -108,18 +108,7 @@ public class NoosaScript extends Script {
 			throw new AssertionError();
 		}
 
-		vertices.position( 0 );
-		aXY.vertexPointer( 2, 4, vertices );
-		
-		vertices.position( 2 );
-		aUV.vertexPointer( 2, 4, vertices );
-
-		Gdx.gl20.glDrawElements( 
-			Gdx.gl20.GL_TRIANGLES, 
-			Quad.SIZE * size, 
-			Gdx.gl20.GL_UNSIGNED_SHORT, 
-			Quad.getIndices( size ) );
-		
+		drawElements(vertices, Quad.getIndices( size ), size );
 	}
 	
 	public void lighting( float rm, float gm, float bm, float am, float ra, float ga, float ba, float aa ) {
