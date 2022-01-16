@@ -135,7 +135,8 @@ public class Utils {
         return !(localeCode.startsWith("ko")
                 || localeCode.startsWith("zh")
                 || localeCode.startsWith("ja")
-                || localeCode.startsWith("tr"));
+                || localeCode.startsWith("tr")
+                || localeCode.startsWith("el"));
     }
 
     @SafeVarargs
