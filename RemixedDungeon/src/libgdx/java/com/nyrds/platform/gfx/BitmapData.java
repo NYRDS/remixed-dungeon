@@ -22,7 +22,7 @@ public class BitmapData {
         return new BitmapData(w,h);
     }
 
-    public static BitmapData decodeStream(java.io.InputStream inputStream) {
+    public static BitmapData decodeStream(InputStream inputStream) {
         return new BitmapData(inputStream);
     }
 

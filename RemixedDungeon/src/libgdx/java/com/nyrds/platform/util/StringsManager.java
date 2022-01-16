@@ -8,8 +8,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Field;
@@ -82,16 +80,11 @@ public class StringsManager {
 
 	@SneakyThrows
 	private static void parseStrings(String resource) {
-		File jsonFile = ModdingMode.getFile(resource);
-		if (jsonFile == null || !jsonFile.exists()) {
-			return;
-		}
-
-		String line = Utils.EMPTY_STRING;
-
-		InputStream fis = new FileInputStream(jsonFile);
+		InputStream fis = ModdingMode.getInputStream(resource);
 		InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
 		BufferedReader br = new BufferedReader(isr);
+
+		String line = Utils.EMPTY_STRING;
 
 		while ((line = br.readLine()) != null) {
 			JSONArray entry = new JSONArray(line);
@@ -127,11 +120,6 @@ public class StringsManager {
 
 	private static Locale userSelectedLocale;
 
-	private static void ensureCorrectLocale() {
-		if(userSelectedLocale==null) {
-			return;
-		}
-	}
 
 	public static void useLocale(Locale locale, String lang) {
 		userSelectedLocale = locale;
@@ -140,11 +128,7 @@ public class StringsManager {
 
 		String modStrings = Utils.format("strings_%s.json", lang);
 
-		if (ModdingMode.isResourceExistInMod(modStrings)) {
-			parseStrings(modStrings);
-		} else if (ModdingMode.isResourceExistInMod("strings_en.json")) {
-			parseStrings("strings_en.json");
-		}
+		parseStrings(modStrings);
 	}
 
 	public static String getVar(int id) {
@@ -152,7 +136,6 @@ public class StringsManager {
 			return stringMap.get(id);
 		}
 
-		ensureCorrectLocale();
 		return Utils.EMPTY_STRING;
 	}
 
@@ -165,7 +148,6 @@ public class StringsManager {
 		}
 
 		if(baseArray.length > modStrings.length) {
-			ensureCorrectLocale();
 			return baseArray;
 		}
 

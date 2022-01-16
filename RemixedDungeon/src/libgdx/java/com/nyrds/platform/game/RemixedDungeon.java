@@ -28,7 +28,6 @@ public class RemixedDungeon extends Game {
 
 	public RemixedDungeon() {
 		super(TitleScene.class);
-		GamePreferences.classicFont(true);
 	}
 
 
@@ -72,6 +71,9 @@ public class RemixedDungeon extends Game {
 	@Override
 	public void create() {
 		GLog.debug("create");
+		GamePreferences.classicFont(true);
+		GamePreferences.uiLanguage("en");
+
 		super.create();
 	}
 
