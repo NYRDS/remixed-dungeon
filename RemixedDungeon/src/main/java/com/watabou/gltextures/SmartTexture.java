@@ -78,21 +78,13 @@ public class SmartTexture extends Texture {
 	
 	@Override
 	public void bitmap( BitmapData bitmap ) {
-		bitmap( bitmap, false );
-	}
-	
-	public void bitmap( BitmapData bitmap, boolean premultiplied ) {
-		if (premultiplied) {
-			super.bitmap( bitmap );
-		} else {
-			handMade( bitmap, true );
-		}
-		
+		handMade(bitmap, true );
+
 		this.bitmap = bitmap;
 		width = bitmap.getWidth();
 		height = bitmap.getHeight();
 	}
-	
+
 	public void reload() {
 		id = new SmartTexture( bitmap ).id;
 		filter( fModeMin, fModeMax );

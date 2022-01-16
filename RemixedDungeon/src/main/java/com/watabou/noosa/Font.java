@@ -124,7 +124,7 @@ public class Font extends TextureFilm {
 				lineTop++;
 			}
 			lineBottom = findNextEmptyLine(bitmap, lineTop, color);
-			//GLog.w("Empty line: %d", lineBottom);
+			//GLog.debug("Empty line: %d", lineBottom);
 			int charColumn = 0;
 			int charBorder;
 			
@@ -146,8 +146,8 @@ public class Font extends TextureFilm {
 					}
 					glyphBorder++;
 				}
-				
-				//GLog.w("addeded: %d %d %d %d %d",(int)chars.charAt(charsProcessed) ,charColumn, lineTop, glyphBorder, lineBottom);
+
+				//GLog.debug("addeded: %d %d %d %d %d",(int)chars.charAt(charsProcessed) ,charColumn, lineTop, glyphBorder, lineBottom);
 				add(chars.charAt(charsProcessed),
 					new RectF( (float)(charColumn)/bWidth,
 							   (float)lineTop/bHeight,
