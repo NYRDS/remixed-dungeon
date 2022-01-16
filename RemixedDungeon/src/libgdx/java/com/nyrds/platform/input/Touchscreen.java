@@ -17,8 +17,7 @@
 
 package com.nyrds.platform.input;
 
-import android.view.MotionEvent;
-
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Signal;
 
@@ -34,46 +33,27 @@ public class Touchscreen {
 	public static float y;
 	public static boolean touched;
 
-	public static void processEvent(MotionEvent e ) {
+	public static void processEvent(PointerEvent e) {
+
+		GLog.debug("pe: %d %d %d %s", e.x, e.y, e.ptr, e.type.name());
 
 		Touch touch;
 
-		switch (e.getAction() & MotionEvent.ACTION_MASK) {
+		switch (e.type) {
 
-		case MotionEvent.ACTION_DOWN:
+		case TOUCH_DOWN:
 			touched = true;
-			touch = new Touch( e, 0 );
-			pointers.put( e.getPointerId( 0 ), touch );
+			touch = new Touch(e);
+			pointers.put( e.ptr, touch );
 			event.dispatch( touch );
 			break;
 
-		case MotionEvent.ACTION_POINTER_DOWN:
-			int index = e.getActionIndex();
-			touch = new Touch( e, index );
-			pointers.put( e.getPointerId( index ), touch );
-			event.dispatch( touch );
-			break;
-
-		case MotionEvent.ACTION_MOVE:
-			int count = e.getPointerCount();
-			for (int j=0; j < count; j++) {
-				pointers.get( e.getPointerId( j ) ).update( e, j );
-			}
-			event.dispatch( null );
-			break;
-
-		case MotionEvent.ACTION_POINTER_UP:
-			event.dispatch( pointers.remove( e.getPointerId( e.getActionIndex() ) ).up() );
-			break;
-
-		case MotionEvent.ACTION_UP:
+		case TOUCH_UP:
 			touched = false;
-			event.dispatch( pointers.remove( e.getPointerId( 0 ) ).up() );
+			event.dispatch(pointers.remove(e.ptr).up());
 			break;
 
 		}
-
-		e.recycle();
 	}
 	
 	public static class Touch {
@@ -82,10 +62,10 @@ public class Touchscreen {
 		public PointF current;
 		public boolean down;
 		
-		public Touch( MotionEvent e, int index ) {
+		public Touch( PointerEvent e) {
 			
-			float x = e.getX( index );
-			float y = e.getY( index );
+			float x = e.x;
+			float y = e.y;
 			
 			start = new PointF( x, y );
 			current = new PointF( x, y );
@@ -93,8 +73,8 @@ public class Touchscreen {
 			down = true;
 		}
 		
-		public void update( MotionEvent e, int index ) {
-			current.set( e.getX( index ), e.getY( index ) );
+		public void update( PointerEvent e) {
+			current.set( e.x, e.y );
 		}
 		
 		public Touch up() {

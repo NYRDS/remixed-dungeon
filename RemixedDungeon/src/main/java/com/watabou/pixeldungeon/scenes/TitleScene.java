@@ -228,11 +228,13 @@ public class TitleScene extends PixelScene {
 
 	private double time = 0;
 	private boolean donationAdded = false;
+
 	@Override
 	public void update() {
 		super.update();
 		time += GameLoop.elapsed;
 		float cl = (float) Math.sin(time) * 0.5f + 0.5f;
+
 		if(!donationAdded) {
 			if (RemixedDungeon.canDonate()) {
 				add(pleaseSupport);
@@ -246,6 +248,5 @@ public class TitleScene extends PixelScene {
 		if(changelogUpdated) {
 			btnChangelog.brightness(cl + 1);
 		}
-
 	}
 }

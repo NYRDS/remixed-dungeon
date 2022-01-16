@@ -5,11 +5,13 @@ import android.widget.LinearLayout;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.InputProcessor;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.input.PointerEvent;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.InterstitialPoint;
@@ -18,7 +20,7 @@ import com.watabou.noosa.Scene;
 import org.jetbrains.annotations.NotNull;
 
 
-public class Game implements ApplicationListener {
+public class Game implements ApplicationListener, InputProcessor {
     private static Game instance;
 
     private static volatile boolean paused = true;
@@ -98,6 +100,7 @@ public class Game implements ApplicationListener {
 
         //SystemText.invalidate();
         TextureCache.clear();
+        Gdx.input.setInputProcessor(this);
     }
 
     @Override
@@ -158,5 +161,47 @@ public class Game implements ApplicationListener {
 
         Music.INSTANCE.mute();
         Sample.INSTANCE.reset();
+    }
+
+    @Override
+    public boolean keyDown(int keycode) {
+        return false;
+    }
+
+    @Override
+    public boolean keyUp(int keycode) {
+        return false;
+    }
+
+    @Override
+    public boolean keyTyped(char character) {
+        return false;
+    }
+
+    @Override
+    public boolean touchDown(int screenX, int screenY, int pointer, int button) {
+        gameLoop.motionEvents.add( new PointerEvent(screenX, screenY, pointer, button, PointerEvent.Type.TOUCH_DOWN));
+        return true;
+    }
+
+    @Override
+    public boolean touchUp(int screenX, int screenY, int pointer, int button) {
+        gameLoop.motionEvents.add( new PointerEvent(screenX, screenY, pointer, button, PointerEvent.Type.TOUCH_UP));
+        return true;
+    }
+
+    @Override
+    public boolean touchDragged(int screenX, int screenY, int pointer) {
+        return false;
+    }
+
+    @Override
+    public boolean mouseMoved(int screenX, int screenY) {
+        return false;
+    }
+
+    @Override
+    public boolean scrolled(float amountX, float amountY) {
+        return false;
     }
 }

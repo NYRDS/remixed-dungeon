@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.game;
 
 import android.view.KeyEvent;
-import android.view.MotionEvent;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.platform.EventCollector;
@@ -12,6 +11,7 @@ import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.gl.Gl;
 import com.nyrds.platform.gl.NoosaScript;
 import com.nyrds.platform.input.Keys;
+import com.nyrds.platform.input.PointerEvent;
 import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
@@ -76,7 +76,7 @@ public class GameLoop {
     public Runnable doOnResume;
 
     // Accumulated touch events
-    public final ConcurrentLinkedQueue<MotionEvent> motionEvents = new ConcurrentLinkedQueue<>();
+    public final ConcurrentLinkedQueue<PointerEvent> motionEvents = new ConcurrentLinkedQueue<>();
 
     // Accumulated key events
     public final ConcurrentLinkedQueue<KeyEvent> keysEvents = new ConcurrentLinkedQueue<>();
