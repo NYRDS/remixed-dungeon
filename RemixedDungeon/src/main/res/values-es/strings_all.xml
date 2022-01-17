@@ -2831,8 +2831,12 @@ otro lugar del nivel.</string>
   <string name="EncumbranceBuff_Info">No hay suficiente fuerza para usar %s efectivamente.</string>
   <string name="Level_TileDescPedestal">Un pequeño pedestal</string>
   <string name="Level_TileDescWell"/>
-  <string name="Welcome_Text_31_0">
-remix.31.0 \ n - Jugabilidad: \ n - ¡Modo isométrico opcional! \ N - Modificación: \ n - Objetos de nivel modificables \ n - Errores solucionados \ n </string>
+  <string name="Welcome_Text_31_0">remix.31.0\n
+- Jugabilidad:\n
+-- ¡Modo isométrico opcional!\n
+- Modificación:\n 
+-- Objetos de nivel modificables\n
+-- Errores solucionados\n</string>
   <string name="Level_TilePileOfStones">un montón de piedras</string>
   <string name="Level_TileDescPileOfStones">Un montón de piedras extremadamente pesadas, parece inamovible.</string>
   <string name="WndSettingsInGame_IsometricTiles">Azulejos isométricos</string>
