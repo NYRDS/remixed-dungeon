@@ -11,6 +11,8 @@ import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.gfx.SystemText;
+import com.nyrds.platform.gl.Gl;
 import com.nyrds.platform.input.PointerEvent;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
@@ -93,12 +95,13 @@ public class Game implements ApplicationListener, InputProcessor {
         paused = false; // we may not get resume
 
         Gdx.gl20.glEnable(Gdx.gl20.GL_BLEND);
-        Gdx.gl20.glBlendFunc(Gdx.gl20.GL_SRC_ALPHA, Gdx.gl20.GL_ONE_MINUS_SRC_ALPHA);
+
+        Gl.blendSrcAlphaOneMinusAlpha();
 
         Gdx.gl20.glEnable(Gdx.gl20.GL_SCISSOR_TEST);
 
 
-        //SystemText.invalidate();
+        SystemText.invalidate();
         TextureCache.clear();
         Gdx.input.setInputProcessor(this);
     }

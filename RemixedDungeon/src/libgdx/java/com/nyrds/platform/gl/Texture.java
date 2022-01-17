@@ -56,7 +56,7 @@ public class Texture {
 	
 	public void bitmap( BitmapData bitmap ) {
 		bind();
-		//Gdx.gl20.texImage2D( Gdx.gl20.GL_TEXTURE_2D, 0, bitmap, 0 );
+		handMade(bitmap, false);
 	}
 	
 	public void pixels( int w, int h, int[] pixels ) {
@@ -115,14 +115,23 @@ public class Texture {
 		int[] pixels = new int[w * h]; 
 		bitmap.getAllPixels(pixels);
 
+		final int as = 0;
+		final int rs = 8;
+		final int gs = 16;
+		final int bs = 24;
 		// recode - components reordering is needed
 		if (recode) {
 			for (int i=0; i < pixels.length; i++) {
-				int color = pixels[i];		
-				int ag = color & 0xFF00FF00;
-				int r = (color >> 16) & 0xFF;
-				int b = color & 0xFF;
-				pixels[i] = ag | (b << 16) | r;
+				int color = pixels[i];
+				int a = (color & (0xFF << as)) >> as;
+				int r = (color & (0xFF << rs)) >> rs;
+				int g = (color & (0xFF << gs)) >> gs;
+				int b = (color & (0xFF << bs)) >> bs;
+		//		int ag = color & 0xFF00FF00;
+		//		int r = (color >> 16) & 0xFF;
+		//		int b = color & 0xFF;
+		//		pixels[i] = ag | (b << 16) | r;
+				pixels[i] = a << 24 | b << 16 | g << 8 | r;
 			}
 		}
 

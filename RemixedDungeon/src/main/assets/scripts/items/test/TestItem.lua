@@ -205,7 +205,8 @@ return itemLib.init{
         self.data.counter = (self.data.counter or 0) + 1
 
         if item:getOwner():valid() then
-            item:getOwner():showStatus( 0xFF00FF, tostring(self.data.counter))
+            RPD.glog(tostring(self.data.counter))
+            --item:getOwner():showStatus( 0xFF00FF, tostring(self.data.counter))
         end
 
         item:spend(1)
