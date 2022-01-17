@@ -197,19 +197,11 @@ for _, _, files in os.walk(translations_dir + dir_name):
 
                     jsonStr = unescape(text).replace(r"\'", "'").replace(r"\’", "’").replace(r"\?","?")
 
-#                    if locale_code == 'en':
-#                        print(jsonStr)
-
-                    d_strings[locale_code][entry.tag] = jsonStr
-
-                    jsonData.write(unescape(json.dumps([entry.get("name"), jsonStr], ensure_ascii=False)))
-                    jsonData.write("\n")
+                    d_strings[locale_code][entry.get("name")] = jsonStr
 
                 entry.text = processText(entry.text)
 
             indent(transifexData)
-
-            jsonData.close()
 
             xml_out_name = resource_dir + "/" + resource_name
             ElementTree.ElementTree(transifexData).write(xml_out_name, encoding="utf-8", method="xml")
@@ -225,14 +217,26 @@ for _, _, files in os.walk(translations_dir + dir_name):
             print(error)
 
 
-#for locale in locales:
-#    jsonData = open("strings_" + locale + ".json", "w", encoding='utf8')
+for locale in locales:
+    jsonData = open("strings_" + locale + ".json", "w", encoding='utf8')
 
-#    for string in d_strings[locale]:
+    for key, jsonStr in d_strings[locale].items():
+        jsonData.write(unescape(json.dumps([key, jsonStr], ensure_ascii=False)))
+        jsonData.write("\n")
 
+    for key, array in d_arrays.items():
+        localizedArray = [key]
+        for s_key in array:
+            value = d_strings["en"][s_key]
+            if s_key in d_strings[locale]:
+                value = d_strings[locale][s_key]
 
+            localizedArray.append(value)
 
+        jsonData.write(unescape(json.dumps(localizedArray, ensure_ascii=False)))
+        jsonData.write("\n")
 
+    jsonData.close()
 
 #        jsonData.write(unescape(json.dumps([entry.get("name"), jsonStr], ensure_ascii=False)))
 #        jsonData.write("\n")
