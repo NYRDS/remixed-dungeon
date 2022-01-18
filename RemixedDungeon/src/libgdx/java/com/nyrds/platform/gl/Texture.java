@@ -131,7 +131,7 @@ public class Texture {
 		//		int r = (color >> 16) & 0xFF;
 		//		int b = color & 0xFF;
 		//		pixels[i] = ag | (b << 16) | r;
-				pixels[i] = a << 24 | b << 16 | g << 8 | r;
+				pixels[i] = (a << 24) + (r << 16) + (g << 8) + (b);
 			}
 		}
 

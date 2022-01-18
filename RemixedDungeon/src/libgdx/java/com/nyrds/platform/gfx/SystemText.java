@@ -34,8 +34,9 @@ public class SystemText extends Text {
 
 	@Override
 	public int lines() {
-		return 4;
+		return 0;
 	}
+
 
 	public static void invalidate() {
 	}
