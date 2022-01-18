@@ -2448,10 +2448,10 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="HeroClass_MagPerks_3">Magowie mogą używać kostury do walki wręcz.</string>
   <string name="HeroClass_MagPerks_4">Magowie mogą rzucać zaklęcia Elementarne.</string>
   <string name="HeroClass_MagPerks_5">Zwój Identyfikacji jest ci znany od samego początku rozgrywki.</string>
-  <string name="HeroClass_RogPerks_0">Złodzieje zaczynają z Pierścieniem Cieni+1</string>
-  <string name="HeroClass_RogPerks_1">Złodzieje identyfikują pierścień natychmiast po założeniu.</string>
-  <string name="HeroClass_RogPerks_2">Złodzieje są biegli w posługiwaniu się lekkim pancerzem i lepiej unikają ataki wrogów jeśli takowy noszą</string>
-  <string name="HeroClass_RogPerks_3">Złodzieje są biegli w odkrywaniu ukrytych przejść i pułapek.</string>
+  <string name="HeroClass_RogPerks_0">Łotrzyki zaczynają z Pierścieniem Cieni+1</string>
+  <string name="HeroClass_RogPerks_1">Łotrzyki identyfikują pierścień natychmiast po założeniu.</string>
+  <string name="HeroClass_RogPerks_2">Łotrzycy są biegli w posługiwaniu się lekkim pancerzem i lepiej unikają ataki wrogów jeśli takowy noszą</string>
+  <string name="HeroClass_RogPerks_3">Łotrzycy są biegli w odkrywaniu ukrytych przejść i pułapek.</string>
   <string name="HeroClass_RogPerks_4">Złodzieje wytrzymują dłużej bez jedzenia.</string>
   <string name="HeroClass_RogPerks_5">Zwoje Magicznej Mapy są ci znane od samego początku rozgrywki.</string>
   <string name="HeroClass_HunPerks_0">Łowczynie zaczynają z 15-stoma punktami Życia.</string>
