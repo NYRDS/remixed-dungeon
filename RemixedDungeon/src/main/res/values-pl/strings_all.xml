@@ -2087,7 +2087,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Level_TileDefault">\?\?\?</string>
   <string name="Level_TileDescChasm">Nie możesz ujrzeć dna.</string>
   <string name="Level_TileDescWater">Kiedy się palisz wejdź do wody by ugasić płomienie.</string>
-  <string name="Level_TileDescEntrance">Schody wiodące na górny poziom.</string>
+  <string name="Level_TileDescEntrance">Schody wiodące poziom wyżej</string>
   <string name="Level_TileDescExit">Schody wiodące poziom niżej.</string>
   <string name="Level_TileDescEmbers">Rozżarzone węgielki pokrywają podłogę.</string>
   <string name="Level_TileDescHighGrass">Gęsta roślinność blokuje widok.</string>
@@ -2448,11 +2448,11 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="HeroClass_MagPerks_3">Magowie mogą używać kostury do walki wręcz.</string>
   <string name="HeroClass_MagPerks_4">Magowie mogą rzucać zaklęcia Elementarne.</string>
   <string name="HeroClass_MagPerks_5">Zwój Identyfikacji jest ci znany od samego początku rozgrywki.</string>
-  <string name="HeroClass_RogPerks_0">Złodzieje zaczynają z Pierścieniem Cieni+1</string>
-  <string name="HeroClass_RogPerks_1">Złodzieje identyfikują pierścień natychmiast po założeniu.</string>
-  <string name="HeroClass_RogPerks_2">Złodzieje są biegli w posługiwaniu się lekkim pancerzem i lepiej unikają ataki wrogów jeśli takowy noszą</string>
-  <string name="HeroClass_RogPerks_3">Złodzieje są biegli w odkrywaniu ukrytych przejść i pułapek.</string>
-  <string name="HeroClass_RogPerks_4">Złodzieje wytrzymują dłużej bez jedzenia.</string>
+  <string name="HeroClass_RogPerks_0">Łotrzyki zaczynają z Pierścieniem Cieni+1</string>
+  <string name="HeroClass_RogPerks_1">Łotrzyki identyfikują pierścień natychmiast po założeniu.</string>
+  <string name="HeroClass_RogPerks_2">Łotrzycy są biegli w posługiwaniu się lekkim pancerzem i lepiej unikają ataki wrogów jeśli takowy noszą</string>
+  <string name="HeroClass_RogPerks_3">Łotrzycy są biegli w odkrywaniu ukrytych przejść i pułapek.</string>
+  <string name="HeroClass_RogPerks_4">Łotrzyki wytrzymują dłużej bez jedzenia.</string>
   <string name="HeroClass_RogPerks_5">Zwoje Magicznej Mapy są ci znane od samego początku rozgrywki.</string>
   <string name="HeroClass_HunPerks_0">Łowczynie zaczynają z 15-stoma punktami Życia.</string>
   <string name="HeroClass_HunPerks_1">Łowczynie zaczynają z unikatowym bumerangiem, który można ulepszać.</string>
@@ -2618,12 +2618,14 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="KunaiThrow_Info">Ten Śmiercionośny Rzut Kunai jest wykonywany tak szybko, że nie zdążysz nawet wybrać swojego celu.\n\nPrawdziwy Mistrz jest w stanie wykonać więcej niż jeden rzut na raz.</string>
   <string name="Haste_Name">Ekstremalny Pośpiech</string>
   <string name="Haste_Info">Używająć Pośpiechu zyskuje się niesamowite prędkości, takie aż wszytko wokół zamiera w miejscu .Wykorzystuje ono jednak dużo energii, więc można go urzywać jedynie przez krótki okres czasu.\n\nMistrzowie Pośpiechu są w stanie zostać w nim dłużej.</string>
-  <string name="Welcome_Text_29_5"> remix.29.5\n
+  <string name="Welcome_Text_29_5"> 
+remix.29.5\n
 - Rozgrywka:\n
 -- Nowe umięjetności Łotra!!\n
 - Mody:\n
 -- Customowe zbroje!\n
-- Naprawy błędów\n</string>
+- Naprawy błędów\n
+</string>
   <string name="Char_Stole_0">%1$sukradł %2$s od %3$s</string>
   <string name="Char_Stole_1">%1$sukradł %2$s od %3$s</string>
   <string name="Char_Stole_2">%1$sukradł %2$s od %3$s</string>
@@ -2793,7 +2795,7 @@ remix.29.6\n
   <string name="DeepSnail_Name_Objective">slimak rogaty</string>
   <string name="DeepSnail_Desc">Spotykany w pobliżu zbiorników wodnych, mięczaków ten przewyższa typowego ślimaka, jest szybszy ,groźniejszy, a jego ugryzienia owodują nieprzyjemne efekty na skórze ofiary.</string>
   <string name="CharInfo_Level">To jest poziom %1$d %2$s</string>
-  <string name="WrnExperimental_realtime">Rozgrywka w czasie rzeczywistym została włączona! Klikaj albo zdychaj. Chcesz sprawdzić ekwipunek? Powodzenia z ściekowym krabem, który będzie wtedy rozpruwać twoje wnętrzności.</string>
+  <string name="WrnExperimental_realtime">Rozgrywka w czasie rzeczywistym została włączona! Klikaj albo zdychaj. Chcesz sprawdzić ekwipunek? Powodzenia z ściekowym krabem, który będzie w tym czasie rozpruwać twoje wnętrzności.</string>
   <string name="WrnExperimental_moveTimeout">Limit czasu ruchu został ustawiony na %d milisekund, myśl szybko!</string>
   <string name="WrnExperimental_hint">Jeśli ten dziwny i pokręcony świat jest dla ciebie zbyt dużym wyzwaniem, proszę wyłączyć podane ustawienia używając\nStart Screen->Options->Gameplay\nmenu i rozpocząć nową rozgrywkę lub załadować poprzedni zapis.</string>
   <string name="WrnExperimental_title">Ustawienia Eksperymentalne zostały włączone!</string>
