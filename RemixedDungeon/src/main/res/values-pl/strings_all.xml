@@ -976,7 +976,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Hero_StaVertigo">Wszystko wokół wiruje w szaleńczym pędzie!</string>
   <string name="HeroClass_War">wojownik</string>
   <string name="HeroClass_Mag">mag</string>
-  <string name="HeroClass_Rog">złodziejaszek</string>
+  <string name="HeroClass_Rog">łotrzyk</string>
   <string name="HeroClass_Hun">łowczyni</string>
   <string name="HeroClass_Elf">elf</string>
   <string name="HeroSubClass_NameGlad">gladiator</string>
@@ -2820,10 +2820,8 @@ remix.29.6\n
   <string name="MoongraceBuff_Info">Powietrze wokół gęstnieje od unoszącej się w nim magii, co ułatwia łatwiejszą koncetrację i odnowę zasobów magicznych. </string>
   <string name="EncumbranceBuff_Name">Obciążenie</string>
   <string name="EncumbranceBuff_Info">Zbyt mało siły by efektywnie użyć %s.</string>
-
   <string name="Level_TileDescPedestal">Mały piedestał.</string>
-  <string name="Level_TileDescWell"></string>
-
+  <string name="Level_TileDescWell"/>
   <string name="Welcome_Text_31_0">
     remix.31.0\n
     - Rozgrywka:\n
@@ -2832,12 +2830,9 @@ remix.29.6\n
     -- Modyfikowalne obiekty poziomów \n
     - Naprawiono  bugi\n
     </string>
-
   <string name="Level_TilePileOfStones">Góra Głazów.</string>
   <string name="Level_TileDescPileOfStones">Niezwykle ciężka góra głazów, nie do ruszenia.</string>
   <string name="WndSettingsInGame_IsometricTiles">Płytki izometryczne.</string>
-
   <string name="KrampusHead_Name">Głowa Krampusa</string>
   <string name="KrampusHead_Info">Zastanawiałeś się może kiedyś jak to by było być nieco bardziej niegrzecznym podczas Podziemiowania? Twój demoniczny wygląd na pewno przyprawi o koszmary niejednego szczurka. </string>
-
 </resources>
