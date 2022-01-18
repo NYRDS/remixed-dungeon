@@ -105,10 +105,8 @@ public class Texture {
 			imageBuffer );
 	}
 	
-	// If getConfig returns null (unsupported format?), GLUtils.texImage2D works
-	// incorrectly. In this case we need to load pixels manually
-	public void handMade( BitmapData bitmap, boolean recode ) {
 
+	public void handMade( BitmapData bitmap, boolean recode ) {
 		int w = bitmap.getWidth();
 		int h = bitmap.getHeight();
 		
@@ -119,7 +117,7 @@ public class Texture {
 		final int rs = 8;
 		final int gs = 16;
 		final int bs = 24;
-		// recode - components reordering is needed
+
 		if (recode) {
 			for (int i=0; i < pixels.length; i++) {
 				int color = pixels[i];
@@ -127,10 +125,6 @@ public class Texture {
 				int r = (color & (0xFF << rs)) >> rs;
 				int g = (color & (0xFF << gs)) >> gs;
 				int b = (color & (0xFF << bs)) >> bs;
-		//		int ag = color & 0xFF00FF00;
-		//		int r = (color >> 16) & 0xFF;
-		//		int b = color & 0xFF;
-		//		pixels[i] = ag | (b << 16) | r;
 				pixels[i] = (a << 24) + (r << 16) + (g << 8) + (b);
 			}
 		}
