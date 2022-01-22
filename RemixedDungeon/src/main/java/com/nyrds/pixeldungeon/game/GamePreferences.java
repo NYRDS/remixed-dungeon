@@ -106,12 +106,12 @@ public class GamePreferences {
     }
 
     public static void version(int value)  {
-Preferences.INSTANCE.put( Preferences.KEY_VERSION, value );
-}
+        Preferences.INSTANCE.put( Preferences.KEY_VERSION, value );
+    }
 
     public static int version() {
-return Preferences.INSTANCE.getInt( Preferences.KEY_VERSION, 0 );
-}
+        return Preferences.INSTANCE.getInt( Preferences.KEY_VERSION, 0 );
+    }
 
     public static void versionString(String value)  {
         Preferences.INSTANCE.put( Preferences.KEY_VERSION_STRING, value );

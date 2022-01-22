@@ -219,6 +219,7 @@
   <string name="WandOfMagicMissile_Info">Αυτό το ραβδί εξαπολύει βλήματα αγνής μαγικής ενέργειας, που προκαλούν μέτρια ζημιά στον στόχο.</string>
   <string name="WandOfMagicMissile_Info1">Εξοντώθηκες από το ίδιο σου το ραβδί μαγικού βλήματος...</string>
   <string name="WandOfMagicMissile_SelectWand">Διάλεξε ένα ραβδί να αναβαθμίσεις</string>
+  <string name="WandOfMagicMissile_Desinchanted">Απενίσχυσες το ραβδί μαγικού βλήματος και με την ουσία του αναβάθμισες το %s.</string>
   <string name="WandOfPoison_Name">Ραβδί δηλητηρίου</string>
   <string name="WandOfPoison_Info1">Τίποτα δεν συνέβη.</string>
   <string name="WandOfRegrowth_Name">Ραβδί αναγέννησης</string>
@@ -404,6 +405,8 @@
   <string name="WndSadGhost_Farewell">Έχε γεια!</string>
   <string name="WndStory_Sewers">Το μπουντρούμι βρίσκεται ακριβώς κάτω από την πόλη· τα ανώτερα επίπεδα αποτελούν το αποχετευτικό της σύστημα. Ως μέρος της πόλης, αυτοί οι όροφοι δεν είναι τόσο επικίνδυνοι. Αν και κανείς δεν μπορεί να το πει ασφαλές μέρος, τουλάχιστον εδώ δεν επικρατεί η διαβολική μαγεία.</string>
   <string name="WndStory_Prision">Πολλά χρόνια πριν, μια υπόγεια φυλακή είχε χτιστεί εδώ για τους πιο επικίνδυνους εγκληματίες. Εκείνον τον καιρό ήταν πολύ έξυπνη ιδέα, μιας και είναι πραγματικά δύσκολο να δραπετεύσει κανείς από εδώ. Αλλά ξαφνικά, ένα σκοτεινό μίασμα άρχισε να αναδύεται από κάτω που τρέλαινε τόσο τους φύλακες όσο και τους κρατούμενους. Στο τέλος η φυλακή εγκαταλείφθηκε, αλλά κάποιοι κατάδικοι έμειναν κλειδωμένοι μέσα...</string>
+  <string name="WndStory_Caves">Τα σπήλαια κάτω από την εγκαταλελειμμένη φυλακή είναι πολύ αραιοκατοικημένα. Βρίσκονται πολύ βαθιά για να τα εκμεταλλευτεί η πόλη και είναι πολύ φτωχά σε ορυκτά για να συγκινήσουν τους νάνους. Υπήρχε, στο παρελθόν, ένα εμπορικό κέντρο εδώ κάτω, στα μέσα της διαδρομής αυτών των δύο πολιτειών. Αλλά εγκαταλείφθηκε μετά την παρακμή της μητρόπολης των νάνων. Πλέον, μόνο γκνολ και πανίδα του υπεδάφους βρίσκεις εδώ κάτω.</string>
+  <string name="WndStory_Metropolis">Η μητρόπολη των νάνων ήταν κάποτε η μεγαλύτερη των πόλεων-κρατών τους. Στην περίοδο της ακμής της, ο μηχανικός στρατός των νάνων απέκρουσε την επίθεση του Παλιού Θεού και της δαιμονικής του στρατιάς. Λέγεται, όμως, ότι οι πολεμιστές έφεραν τους σπόρους της διαφθοράς με την επιστροφή τους, και πως η νίκη αυτή ήταν η αρχή του τέλους για το υπόγειο βασίλειο.</string>
   <string name="WndStory_Halls">Αυτοί οι όροφοι αποτελούσαν κάποτε τα περίχωρα της μητρόπολης. Μετά την πύρρειο νίκη στον πόλεμο με τον Παλιό Θεό, οι νάνοι παραήταν αδύναμοι για να εξολοθρεύσουν όλους τους δαίμονες. Οι δαίμονες επέβαλαν σταδιακά την κυριαρχία τους σε αυτό το μέρος, γνωστό πλέον ως οι «Αίθουσες των Δαιμόνων».\n\nΠολύ λίγοι εξερευνητές έχουν κατεβεί εδώ κάτω...</string>
   <string name="WndTradeItem_Sale">ΠΡΟΣ ΠΩΛΗΣΗ: %1$s - %2$dχρ</string>
   <string name="WndTradeItem_Buy">Αγορά για %dχρ</string>
@@ -881,6 +884,7 @@
   <string name="ArmoredStatue_Name">Κινούμενο άγαλμα</string>
   <string name="ArmoredStatue_Gender">neuter</string>
   <string name="ArmoredStatue_Name_Objective">Κινούμενο άγαλμα</string>
+  <string name="ArmoredStatue_Desc">Κανείς δεν θα σκεφτόταν ότι είναι άλλο ένα από τα κοινά αγάλματα. Όχι μόνο από τα λαμπερά κόκκινα μάτια του, αλλά κι από το γεγονός ότι κανείς δεν θα έβαζε μια _%s_ σε αυτό το πράγμα.</string>
   <string name="SpiderGuard_Name">αραχνοφρουρός</string>
   <string name="SpiderGuard_Gender">αρρενωπός</string>
   <string name="SpiderGuard_Name_Objective">αραχνοφρουρός</string>
@@ -1059,6 +1063,7 @@
   <string name="ShortSword_NotBoomerang">Δεν μπορείς να αναβαθμίσεις το μπούμερανγκ έτσι.</string>
   <string name="ShortSword_Gender">neuter</string>
   <string name="Spear_Name">δόρυ</string>
+  <string name="Spear_Info">Ένα λεπτό ξύλινο κοντάρι με ακονισμένη σιδερένια αιχμή.</string>
   <string name="Spear_Gender">neuter</string>
   <string name="Sword_Name">σπαθί</string>
   <string name="Sword_Info">Η κοφτερή ατσάλινη λεπίδα λάμπει καθησυχαστικά.</string>
@@ -1082,6 +1087,7 @@
   <string name="CurareDart_Gender">neuter</string>
   <string name="Dart_Name">βελάκι</string>
   <string name="Dart_Gender">neuter</string>
+  <string name="IncendiaryDart_Info">Η αιχμές σε αυτά τα βελάκια τα κάνουν να καρφώνονται στον στόχο, και οι ασταθείς χημικές τους ουσίες ξεσπάνε σε λαμπρές φλόγες.</string>
   <string name="IncendiaryDart_Gender">neuter</string>
   <string name="Javelin_Name">ακόντιο</string>
   <string name="Javelin_Info">Αυτό το μακρύ μεταλλικό ακόντιο είναι σχεδιασμένο ώστε οι αιχμή του να σκίζει τον αέρα προς τον στόχο.</string>
@@ -1090,6 +1096,7 @@
   <string name="Shuriken_Info">Μεταλλικά αστεράκια με κοφτερές λεπίδες που προκαλούν ουσιώδη ζημιά στους στόχους τους. Μπορούν να πεταχτούν με πολύ μεγάλη ταχύτητα.</string>
   <string name="Shuriken_Gender">neuter</string>
   <string name="Tamahawk_Name">τόμαχωκ</string>
+  <string name="Tamahawk_Info">Αν και αυτό το τσεκούρι ρίψης δεν είναι και τόσο βαρύ, απαιτεί μεγάλη δύναμη για να χρησιμοποιηθεί αποτελεσματικά.</string>
   <string name="Tamahawk_Gender">neuter</string>
   <string name="Kusarigama_Name">κουγκαρισάμα</string>
   <string name="Kusarigama_Info">Αυτό το όπλο αποτελείται από ένα δρεπάνι δεμένο σε μεταλλική αλυσίδα, με ένα σιδερένιο βαρίδι στην άλλη άκρη.</string>
@@ -1179,6 +1186,7 @@
   <string name="King_Name">Βααιλιάς των νάνων</string>
   <string name="King_Gender">masculine</string>
   <string name="King_Name_Objective">Βααιλιάς των νάνων</string>
+  <string name="King_Desc">Ο τελευταίος βασιλιάς των νάνων ήταν φημισμένος για τη βαθιά του κατανόηση στις διαδικασίες της ζωής και του θανάτου. Είχε πείσει τα μέλη της αυλής του να συμμετάσχουν σε ένα τελετουργικό που θα τους προσέδιδε την αιώνια νιότη. Τελικά, αυτός ήταν ο μόνος που την απέκτησε - μαζί με έναν στρατό από απέθαντους αυλικούς.</string>
   <string name="King_Info1">%s! Δεν μπορείς να με σκοτώσεις... Εγώ... είμαι... αθάνατος...</string>
   <string name="King_Info2">Εγερθείτε, σκλάβοι!</string>
   <string name="King_Info3">Πώς τολμάς!</string>
@@ -1324,6 +1332,7 @@
   <string name="Crystal_Name">επιπλέων κρύσταλλος</string>
   <string name="Crystal_Gender">masculine</string>
   <string name="Crystal_Name_Objective">επιπλέων κρύσταλλος</string>
+  <string name="Crystal_Desc">Ένας μεγάλος λαμπερός κρύσταλλος ίπταται στον αέρα. Πρέπει να είναι γεμάτος με ισχυρή μαγεία.</string>
   <string name="SpiderArmor_Name">αραχνένια πανοπλία</string>
   <string name="SpiderArmor_Gender">feminine</string>
   <string name="BlackSkull_Name">μαύρο κρανίο</string>
@@ -1762,6 +1771,7 @@
   <string name="WandMaker_RotberryInfo">Ο σπόρος ελευθερώνει μια κραυγή που αντηχεί στο μπουντρούμι!</string>
   <string name="Guts_TileGrass">Αποξηραμένος θάμνος</string>
   <string name="Guts_TileHighGrass">Αποξηραμένος θάμνος</string>
+  <string name="Guts_TileDescEntrance">Μία ανοιχτή τρύπα στο ταβάνι οδηγεί στον από πάνω όροφο.</string>
   <string name="Guts_TileDescDeco">Φαίνεται πως αυτό το μέρος... τραυματίστηκε.</string>
   <string name="Guts_TileDescBookshelf">Αυτή η βιβλιοθήκη έχει καλυφθεί εντελώς με παχύ ιστό. Δεν υπάρχει τρόπος να πάρεις βιβλίο από αυτό.</string>
   <string name="WndStory_Guts">Ηττημένος, σκορπισμένος σε κομμάτια, αλλά όχι εντελώς συντετριμμένος· ο Παλιός Θεός σφραγίστηκε στους βαθύτερους ορόφους της κατακόμβης. Αλλά η σφραγίδα έσπασε και η φωλιά του είναι πλέον προσβάσιμη. Τα εφιαλτικά τέρατα που δημιούργησε ο Παλιός Θεός στον ύπνο του ήταν τόσο πολυάριθμα, που δεν είχαν τρόπο να διαφύγουν. Αναγκάστηκαν, λοιπόν, να ενωθούν και να σχηματίσουν αυτές τις αποτρόπαιες αίθουσες. Καθώς περπατάς στη ζωντανή τους σάρκα, νιώθεις την ηχώ από τον χτύπο της καρδιάς του Παλιού Θεού.</string>
@@ -1921,6 +1931,7 @@
   <string name="Firebloom_Name">Φλογανθός</string>
   <string name="Firebloom_Desc">Ο φλογανθός ξεσπά σε φλόγες όταν κάτι τον αγγίξει.</string>
   <string name="Icecap_Name">Παγολούλουδο</string>
+  <string name="Icecap_Desc">Με το άγγιγμα, το παγολούλουδο εκκρίνει μια γύρη που ψυχραίνει τα πάντα στην περιοχή επίδρασης.</string>
   <string name="Sorrowmoss_Name">Οδυνόβρυο</string>
   <string name="Sungrass_Name">Ηλιόχορτο</string>
   <string name="Sungrass_Desc">Το ηλιόχορτο είναι φημισμένο για τις ιαματικές ιδιότητες του χυμού του.</string>
@@ -2079,6 +2090,7 @@
   <string name="PotionOfPurity_Freshness">Νιώθεις ασυνήθιστη φρεσκάδα στον αέρα.</string>
   <string name="PotionOfPurity_NoSmell">Επαψες να αντιλαμβάνεσαι τις οσμές!</string>
   <string name="PotionOfStrength_Name">Φίλτρο της δύναμης</string>
+  <string name="PotionOfStrength_Info">Αυτό το ισχυρό υγρό θα εγχυθεί τους μυς σου, αυξάνοντας μόνιμα τη δύναμή σου κατά έναν βαθμό.</string>
   <string name="PotionOfStrength_Apply">Νεοανακαλυφθείσα δύναμη διαπερνά το σώμα σου.</string>
   <string name="PotionOfStrength_StaApply">+1 δύναμη</string>
   <string name="PotionOfToxicGas_Name">Φίλτρο τοξικού αερίου</string>
@@ -2279,6 +2291,7 @@
   <string name="HeroClass_RogPerks_5">Οι πάπυροι μαγικής χαρτογράφησης είναι εξ αρχής αναγνωρισμένοι.</string>
   <string name="HeroClass_HunPerks_0">Η Κυνηγός ξεκινά με 15 πόντους ζωής.</string>
   <string name="HeroClass_HunPerks_1">Η Κυνηγός ξεκινά με ένα μοναδικό αναβαθμίσιμο μπούμερανγκ.</string>
+  <string name="HeroClass_HunPerks_2">Η Κυνηγός είναι ειδική στα όπλα απόστασης και προκαλεί επιπλέον ζημιά με αυτά, βάσει της πλεονάζουσας δύναμής της.</string>
   <string name="HeroClass_HunPerks_3">Η Κυνηγός λαμβάνει περισσότερη ζωή από τις δροσοσταλίδες.</string>
   <string name="HeroClass_HunPerks_4">Η Κυνηγός αισθάνεται τα γειτονικά πλάσματα ακόμα κι αν κρύβονται πίσω από εμπόδια.</string>
   <string name="HeroClass_ElfPerks_0">Το Ξωτικό ξεκινά με 15 ζωή και 9 δύναμη.</string>

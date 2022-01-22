@@ -71,7 +71,8 @@ public class Font extends TextureFilm {
 	
 	private boolean isColumnEmpty(BitmapData bitmap, int x, int sy, int ey, int color){
 		for(int j = sy; j < ey; ++j){
-			if(bitmap.getPixel(x, j) != color){
+			if((bitmap.getPixel(x, j) & 0xff) != color){
+				//GLog.debug("non-background %dx%d -> %x", x, j,bitmap.getPixel(x, j));
 				return false;
 			}
 		}
@@ -107,7 +108,6 @@ public class Font extends TextureFilm {
 	
 	
 	protected void splitBy(BitmapData bitmap, int color, String chars) {
-		
 		autoUppercase = chars.equals( LATIN_UPPER );
 		int length    = chars.length();
 		
@@ -147,7 +147,7 @@ public class Font extends TextureFilm {
 					glyphBorder++;
 				}
 
-				//GLog.debug("addeded: %d %d %d %d %d",(int)chars.charAt(charsProcessed) ,charColumn, lineTop, glyphBorder, lineBottom);
+				//GLog.debug("added: %s %d %d %d %d",String.valueOf(chars.charAt(charsProcessed)) ,charColumn, lineTop, glyphBorder, lineBottom);
 				add(chars.charAt(charsProcessed),
 					new RectF( (float)(charColumn)/bWidth,
 							   (float)lineTop/bHeight,
@@ -159,19 +159,11 @@ public class Font extends TextureFilm {
 
 			lineTop = lineBottom+1;
 		}
-		
-		//lineHeight = baseLine = height( frames.get( chars.charAt( 0 ) ) );
+
 		lineHeight = baseLine = height( frames.values().iterator().next());
 	}
 
 	public static Font colorMarked(SmartTexture tex, int color, String chars ) {
-		Font font = new Font( tex );
-
-		font.splitBy( tex.bitmap, color, chars );
-		return font;
-	}
-	 
-	public static Font colorMarked(SmartTexture tex, int height, int color, String chars ) {
 		Font font = new Font( tex );
 		font.splitBy( tex.bitmap, color, chars );
 		return font;

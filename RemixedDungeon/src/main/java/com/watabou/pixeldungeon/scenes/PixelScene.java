@@ -103,14 +103,14 @@ public class PixelScene extends Scene {
 
 	static private void createFonts() {
 		// 3x5 (6)
-		font1x = Font.colorMarked(TextureCache.get(Assets.FONTS1X),
-				0x00000000, Font.LATIN_FULL);
+		font1x = Font.colorMarked(
+				TextureCache.get(Assets.FONTS1X), 0x00000000, Font.LATIN_FULL);
 		font1x.baseLine = 6;
 		font1x.tracking = -1;
 
 		// 7x12 (15)
 		font25x = Font.colorMarked(
-			TextureCache.get( Assets.FONTS25X ), 17, 0x00000000, Font.ALL_CHARS);
+			TextureCache.get(Assets.FONTS25X), 0x00000000, Font.ALL_CHARS);
 		font25x.baseLine = 13;
 		font25x.tracking = -1;
 	}
