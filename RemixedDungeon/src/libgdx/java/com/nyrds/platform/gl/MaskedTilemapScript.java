@@ -76,8 +76,8 @@ public class MaskedTilemapScript extends Script {
         aUV.enable();
         aUV_mask.enable();
 
-        int texSampler = Gdx.gl20.glGetUniformLocation(this.handle(),"uTex");
-        int maskSampler = Gdx.gl20.glGetUniformLocation(this.handle(),"uTex_mask");
+        int texSampler = Gdx.gl20.glGetUniformLocation(handle(),"uTex");
+        int maskSampler = Gdx.gl20.glGetUniformLocation(handle(),"uTex_mask");
 
         Gdx.gl20.glUniform1i(texSampler,0);
         Gdx.gl20.glUniform1i(maskSampler,1);

@@ -42,11 +42,24 @@ public class BitmapData {
         return bitmap.getPixel(x,y);
     }
 
+    private int color(int color) {
+        final int as = 0;
+        final int rs = 8;
+        final int gs = 16;
+        final int bs = 24;
+
+        int a = (color & (0xFF << as)) >> as;
+        int r = (color & (0xFF << rs)) >> rs;
+        int g = (color & (0xFF << gs)) >> gs;
+        int b = (color & (0xFF << bs)) >> bs;
+        return (a << 24) + (r << 16) + (g << 8) + (b);
+    }
+
     public void eraseColor(int color) {
-        bitmap.clear(color);
+        bitmap.clear(color(color));
     }
 
     public void setPixel(int x, int y, int color) {
-        bitmap.setPixel(x,y, color);
+        bitmap.setPixel(x,y, color(color));
     }
 }
