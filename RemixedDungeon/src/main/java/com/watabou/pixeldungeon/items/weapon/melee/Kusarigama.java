@@ -12,6 +12,7 @@ import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.effects.KusarigamaChain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -36,10 +37,12 @@ public class Kusarigama extends MeleeWeapon {
     private static final CellSelector.Listener impaler = new KusarigamaCellListener();
 
     private static void drawChain(int tgt, Char caster) {
-        caster.getSprite().zap(tgt);
-        caster.getSprite()
+        CharSprite casterSprite = caster.getSprite();
+
+        casterSprite.zap(tgt);
+        casterSprite
                 .getParent()
-                .add(new KusarigamaChain(caster.getSprite().center(),
+                .add(new KusarigamaChain(casterSprite.center(),
                         DungeonTilemap.tileCenterToWorld(tgt)));
     }
 
