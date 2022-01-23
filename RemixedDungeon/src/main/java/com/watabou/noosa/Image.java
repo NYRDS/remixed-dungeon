@@ -70,7 +70,7 @@ public class Image extends Visual implements IPlaceable {
 
 		RectF frame = film.get(index);
 		if (frame == null) {
-			throw new ModError(Utils.format("bad index %d for image %s", index, tx.toString()));
+			throw new ModError(Utils.format("bad index %d for image %s", index, String.valueOf(TextureCache.getKey(TextureCache.get(tx)))));
 		}
 		frame(frame);
 	}
