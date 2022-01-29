@@ -80,7 +80,7 @@ public class ShortSword extends MeleeWeapon {
     }
 	
 	private final WndBag.Listener itemSelector = (item, selector) -> {
-		if (item != null && !(item instanceof Boomerang)) {
+		if (item != null) {
 			selector.getBelongings().removeItem(this);
 			Sample.INSTANCE.play( Assets.SND_EVOKE );
 			ScrollOfUpgrade.upgrade( selector );
@@ -92,14 +92,6 @@ public class ShortSword extends MeleeWeapon {
 			selector.spend( TIME_TO_REFORGE );
 
 			Badges.validateItemLevelAcquired( item );
-
-		} else {
-
-			if (equipedTo != Slot.NONE) {
-				selector.getBelongings().equip(ShortSword.this, equipedTo);
-			} else {
-				collect( selector.getBelongings().backpack );
-			}
 		}
 		selector.updateSprite();
 		QuickSlot.refresh(selector);

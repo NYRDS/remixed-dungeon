@@ -120,12 +120,6 @@ public class WandOfMagicMissile extends SimpleWand  {
 			selector.spend( TIME_TO_DISENCHANT );
 
 			Badges.validateItemLevelAcquired( item );
-		} else {
-			if (equipedTo != Belongings.Slot.NONE) {
-				selector.getBelongings().equip(WandOfMagicMissile.this, equipedTo);
-			} else {
-				collect( selector.getBelongings().backpack );
-			}
 		}
 		selector.updateSprite();
 		QuickSlot.refresh(selector);
