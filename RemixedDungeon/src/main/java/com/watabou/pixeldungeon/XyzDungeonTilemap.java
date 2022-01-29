@@ -41,6 +41,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     private final int[] mDoorsMap;
 
     private final DungeonTilemap roofTilemap;
+    private final DungeonTilemap doorTilemap;
+
     SeededRandom random = new SeededRandom();
 
     private final int mSize;
@@ -80,10 +82,11 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         mDoorsLayer.map(buildDoorsMap(), mWidth);
 
         roofTilemap = new XyzRoofTileMap(level, tiles);
+        doorTilemap = new XyzDoorTileMap(level, tiles);
     }
 
     public boolean mayPeek(int cell) {
-        return level.passable[cell] || level.map[cell] == Terrain.DOOR || level.map[cell] == Terrain.LOCKED_DOOR;
+        return level.passable[cell] || level.map[cell] == Terrain.DOOR || level.map[cell] == Terrain.LOCKED_DOOR || level.getTopLevelObject(cell) != null;
     }
 
     public void makeIsometricMap() {
@@ -187,7 +190,9 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             int tile = 208;
             for (int j = 0; j < Level.NEIGHBOURS4.length; j++) {
                 final int mapTile = mIsometricMap[cell + Level.NEIGHBOURS4[j]];
-                if ((TerrainFlags.flags[mapTile] & (TerrainFlags.LIQUID | TerrainFlags.PIT | TerrainFlags.SOLID))!= 0 && !(mapTile == Terrain.DOOR || mapTile == Terrain.OPEN_DOOR)) {
+                if ((TerrainFlags.flags[mapTile]
+                        & (TerrainFlags.LIQUID | TerrainFlags.PIT | TerrainFlags.SOLID))!= 0
+                        && !(mapTile == Terrain.DOOR || mapTile == Terrain.OPEN_DOOR)) {
                     tile += 1 << j;
                 }
             }
@@ -350,6 +355,27 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             }
         }
 
+
+        if(isDoorCell(cell)) {
+            if (isWallCell(cell + 1) && isWallCell(cell - 1)) {
+                    return 58;
+            }
+
+            if (isWallCell(cell + mWidth) && isWallCell(cell - mWidth)) {
+                    return 61;
+            }
+        }
+
+        if(isDoorCell(cellS)) {
+            if (isWallCell(cellS +  1) && isWallCell(cellS - 1)) {
+                return 42;
+            }
+
+            if (isWallCell(cellS + mWidth)  && isWallCell(cellS - mWidth)) {
+                return 45;
+            }
+        }
+
         return TRANSPARENT;
     }
 
@@ -438,6 +464,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     private int currentDoorsCell(int cell) {
+
         if(isDoorCell(cell)) {
             if (isWallCell(cell + 1) && isWallCell(cell - 1)) {
                 switch (mIsometricMap[cell]) {
@@ -450,7 +477,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
                 }
             }
 
-            if (isWallCell(cell + level.getWidth()) && isWallCell(cell - level.getWidth())) {
+            if (isWallCell(cell + mWidth) && isWallCell(cell - mWidth)) {
                 switch (mIsometricMap[cell]) {
                     case Terrain.DOOR:
                         return 59;
@@ -462,7 +489,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             }
         }
 
-        int cellS = cell + level.getWidth();
+        int cellS = cell + mWidth;
 
         if(isDoorCell(cellS)) {
             if (isWallCell(cellS +  1) && isWallCell(cellS - 1)) {
@@ -476,7 +503,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
                 }
             }
 
-            if (isWallCell(cellS + level.getWidth())  && isWallCell(cellS - level.getWidth())) {
+            if (isWallCell(cellS + mWidth)  && isWallCell(cellS - mWidth)) {
                 switch (mIsometricMap[cellS]) {
                     case Terrain.DOOR:
                         return 43;
@@ -545,7 +572,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         super.draw(); //floor
         mWallsLayer.draw();
         mDecoLayer.draw();
-        mDoorsLayer.draw();
     }
 
     public void updateAll() {
@@ -606,6 +632,9 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     public DungeonTilemap roofTilemap() {
         return roofTilemap;
     }
+    public DungeonTilemap doorTilemap() {
+        return doorTilemap;
+    }
 
     @Override
     public void updateFow(@NotNull FogOfWar fog) {
@@ -623,6 +652,30 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
         fog.updateVisibility(mVisible, level.visited, mMapped, true);
     }
+
+    class XyzDoorTileMap extends DungeonTilemap {
+
+        public XyzDoorTileMap(@NotNull Level level, String tiles) {
+            super(level, tiles);
+        }
+
+        @Override
+        public @Nullable Image tile(int pos) {
+            return null;
+        }
+
+        @Override
+        public void updateCell(int cell, Level level) { }
+
+        @Override
+        public void updateAll() { }
+
+        @Override
+        public void draw() {
+            mDoorsLayer.draw();
+        }
+    }
+
 
     class XyzRoofTileMap extends DungeonTilemap {
 

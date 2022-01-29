@@ -123,6 +123,9 @@ public class GameScene extends PixelScene {
     private DungeonTilemap baseTiles;
 
     @Nullable
+    private DungeonTilemap doorTiles;
+
+    @Nullable
     private DungeonTilemap roofTiles;
 
     private FogOfWar fog;
@@ -230,6 +233,7 @@ public class GameScene extends PixelScene {
             baseTiles = DungeonTilemap.factory(level);
 
             if(baseTiles instanceof XyzDungeonTilemap) {
+                doorTiles = ((XyzDungeonTilemap)baseTiles).doorTilemap();
                 roofTiles = ((XyzDungeonTilemap)baseTiles).roofTilemap();
             }
 
@@ -259,6 +263,10 @@ public class GameScene extends PixelScene {
 
         heaps = new Group();
         add(heaps);
+
+        if(doorTiles!=null) {
+            add(doorTiles);
+        }
 
         for (Heap heap : level.allHeaps()) {
             addHeapSprite(heap);
@@ -314,13 +322,12 @@ public class GameScene extends PixelScene {
             level.reveal();
         }
 
+        spells = new Group();
+        add(spells);
+
         if(roofTiles!=null) {
             add(roofTiles);
         }
-
-
-        spells = new Group();
-        add(spells);
 
         fog.updateVisibility(Dungeon.visible, level.visited, level.mapped, false);
         add(fog);
@@ -331,7 +338,6 @@ public class GameScene extends PixelScene {
         add(emoicons);
 
         brightness(GamePreferences.brightness());
-
 
         add(new HealthIndicator());
 
