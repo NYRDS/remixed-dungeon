@@ -37,7 +37,7 @@ public class ManaShield extends Halo {
 
         if (setVisible(charSprite.getVisible())) {
             PointF p = charSprite.center();
-            point(p.x, p.y );
+            point(p.x + visualOffsetX(), p.y + charSprite.visualOffsetY());
         }
     }
 

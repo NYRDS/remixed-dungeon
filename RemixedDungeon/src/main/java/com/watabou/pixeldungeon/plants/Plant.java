@@ -74,12 +74,6 @@ public class Plant extends LevelObject {
 	}
 
 	@Override
-	public boolean interactive() {
-		return true;
-	}
-
-
-	@Override
 	public void bump(Presser presser) {
 		if(presser instanceof Char) {
 			interact((Char)presser);

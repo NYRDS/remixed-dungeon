@@ -30,6 +30,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import lombok.SneakyThrows;
+import lombok.val;
 
 public class TextureCache {
 
@@ -132,6 +133,15 @@ public class TextureCache {
 
 	public interface SmartTextureFactory {
 		SmartTexture create();
+	}
+
+	public static Object getKey(SmartTexture value) {
+		for (val entry : all.entrySet()) {
+			if(entry.getValue().equals(value)) {
+				return entry.getKey();
+			}
+		}
+		return null;
 	}
 
 }

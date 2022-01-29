@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.levels.Level;
 
 /**
  * Created by DeadDie on 20.08.2016
@@ -9,6 +10,7 @@ import com.watabou.pixeldungeon.actors.Char;
 public class Deathling extends UndeadMob {
 
     private static final int HEALTH = 4;
+    private boolean firstAct = true;
 
     public Deathling(){
         hp(ht(HEALTH));
@@ -31,7 +33,12 @@ public class Deathling extends UndeadMob {
         dmgMax = 4 + modifier;
         dmgMin = 1;
         dr  = modifier;
-        hp(ht(HEALTH + modifier));
+        ht(HEALTH + modifier);
+
+        if(firstAct) {
+            hp(ht());
+            firstAct = false;
+        }
     }
 
     @Override
