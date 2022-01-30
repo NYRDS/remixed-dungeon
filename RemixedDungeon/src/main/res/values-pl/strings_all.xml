@@ -1057,7 +1057,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="GoldenSword_Gender">masculine</string>
   <string name="GoldenStatue_Name">złoty posąg</string>
   <string name="GoldenStatue_Gender">masculine</string>
-  <string name="GoldenStatue_Name_Objective">złoty posag</string>
+  <string name="GoldenStatue_Name_Objective">złoty posąg</string>
   <string name="GoldenStatue_Desc">Aż trudno uwierzyć, że ten piękny posąg nie służy tylko do dekoracji, ale jest złośliwą kreaturą, która tylko czeka na nieprzygotowanego wędrowca. Na pierwszy rzut oka mógłbyś przysiąc, że _%s_ jest częścią jego ręki.</string>
   <string name="NecromancerNPC_Name">nekromanta</string>
   <string name="NecromancerNPC_Gender">masculine</string>
@@ -2553,12 +2553,12 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="HeroClass_GnollPerks_2">Gnole zaczynają bez jakiejkolwiek zbroi za to posiadają unikatowy tomahawk</string>
   <string name="HeroClass_GnollPerks_3">Gnole nie potrafią czytać ani pisać.</string>
   <string name="HeroClass_GnollPerks_4">Gnole nie atakują innych gnoli bez uprzedniej prowokacji.</string>
-  <string name="Potion_Colors_0">turkusowa</string>
-  <string name="Potion_Colors_1">karmazynowa</string>
-  <string name="Potion_Colors_2">azurowa</string>
-  <string name="Potion_Colors_3">jadeitowa</string>
-  <string name="Potion_Colors_4">złota</string>
-  <string name="Potion_Colors_5">magentowa</string>
+  <string name="Potion_Colors_0">turkusowy</string>
+  <string name="Potion_Colors_1">szkarłatny</string>
+  <string name="Potion_Colors_2">azurowy</string>
+  <string name="Potion_Colors_3">jadeitowy</string>
+  <string name="Potion_Colors_4">złoty</string>
+  <string name="Potion_Colors_5">magentowy</string>
   <string name="Potion_Colors_6">zwęglona</string>
   <string name="Potion_Colors_7">śnieżnobiała</string>
   <string name="Potion_Colors_8">bursztynowa</string>
