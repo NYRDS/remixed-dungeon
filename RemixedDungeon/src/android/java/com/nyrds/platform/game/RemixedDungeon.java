@@ -45,6 +45,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 public class RemixedDungeon extends Game {
 
 	public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
+	private static boolean isDev = false;
 
 	public RemixedDungeon() {
 		super(TitleScene.class);
@@ -87,17 +88,19 @@ public class RemixedDungeon extends Game {
 	}
 
     public static boolean isAlpha() {
-        return version.contains("alpha") || version.contains("in_dev");
+        return version.contains("alpha") || isDev;
     }
 
 	public static boolean isDev() {
-		return version.contains("in_dev");
+		return isDev;
 	}
 
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		isDev = version.contains("in_dev");
+		
 		EuConsent.check(this);
 		playGames = new PlayGames();
     }

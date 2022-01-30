@@ -85,19 +85,7 @@ public class NoosaScript extends Script {
 	}
 	
 	public void drawQuad( FloatBuffer vertices ) {
-
-		if(vertices.limit()<16){
-			throw new AssertionError();
-		}
-
-		vertices.position( 0 );
-		aXY.vertexPointer( 2, 4, vertices );
-		
-		vertices.position( 2 );
-		aUV.vertexPointer( 2, 4, vertices );
-
-		GLES20.glDrawElements( GLES20.GL_TRIANGLES, Quad.SIZE, GLES20.GL_UNSIGNED_SHORT, Quad.getIndices( 1 ) );
-		
+		drawQuadSet(vertices, 1);
 	}
 	
 	public void drawQuadSet( FloatBuffer vertices, int size ) {

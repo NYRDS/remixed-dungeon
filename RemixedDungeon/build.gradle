@@ -28,8 +28,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1103
-        versionName "31.0.fix.21"
+        versionCode 1104
+        versionName "31.0.fix.22"
         targetSdkVersion 31
         minSdkVersion 16
         compileSdkVersion = 31
@@ -37,7 +37,6 @@ android {
         // Enabling multidex support.
         multiDexEnabled true
     }
-
 
     buildTypes {
         release {
@@ -122,12 +121,7 @@ dependencies {
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
 
 
-
-    //libgdxImplementation 'com.fancydep.desktop:1.0.7'
-
-
     androidImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
-
 
     androidImplementation 'androidx.multidex:multidex:2.0.1'
 

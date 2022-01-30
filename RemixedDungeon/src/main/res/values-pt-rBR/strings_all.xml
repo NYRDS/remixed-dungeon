@@ -88,9 +88,13 @@
   <string name="ChaosCrystal_StaffFused">O Cristal absorve sua varinha, e tomou a forma de um bastão.</string>
   <string name="CorpseDustBuff_Name">Sangrento</string>
   <string name="DriedRoseBuff_Name">Encantador</string>
+  <string name="DriedRoseBuff_Info">A rosa parece muito encantadora.</string>
   <string name="DriedRoseCursedBuff_Name">Amoroso</string>
+  <string name="DriedRoseCursedBuff_Info">A rosa parece bonita, mas não muito encantadora.</string>
   <string name="RatSkullBuff_Name">Caçador de ratos</string>
+  <string name="RatSkullBuff_Info">O fedor pungente aterroriza todos os outros roedores ao redor, fazendo-os fugir do portador do crânio.</string>
   <string name="RatKingCrownBuff_Name">Ralteza</string>
+  <string name="RatKingCrownBuff_Info">Saúdam o Lorde dos ratos, todo rato deve obedecê-lo e louvá-lo.</string>
   <string name="RatKingCrown_Name">Coroa do Rei Rato</string>
   <string name="RatKingCrown_Info">Coroa dourada de Sua Ralteza, símbolo do poder peratente</string>
   <string name="BishopNPC_Name">Bispo</string>
@@ -105,6 +109,8 @@
   <string name="Bishop_not_interested">Sair</string>
   <string name="Bishop_no_money">Você não pode pagar por isso.</string>
   <string name="Bishop_bye">Eu rezarei por você, meu filho.</string>
+  <string name="BlessedBuff_Name">Abençoado</string>
+  <string name="BlessedBuff_Info">Que venha a precisão e a evasão para àqueles tocados pela bênção!</string>
   <string name="deco_candle_name">Vela</string>
   <string name="deco_candle_desc">Vela grande</string>
   <string name="Possess_Name">Possessão </string>
@@ -148,6 +154,7 @@
   <string name="town_deco_shelf_name">Prateleiras</string>
   <string name="town_deco_shelf_desc">Prateleiras vazias.</string>
   <string name="town_deco_inn_bed_name">Cama</string>
+  <string name="town_deco_inn_bed_desc">Parece uma cama bem confortável.</string>
   <string name="WndPriest_Instruction2_m">Bem-vindo meu filho, bem-vindo à santa igreja do grande Papai Noel o Senhor das Profundezas!</string>
   <string name="WndPriest_Instruction2_f">Bem-vinda minha filha, bem-vinda à santa igreja do grande Papai Noel o Senhor das Profundezas! </string>
   <string name="WndPriest_Instruction2">Se você estiver procurando ajuda, eu posso lhe fornecer serviço de cura e comida por apenas %d moedas de ouro!\nSe você está em busca da Bênção Sagrada, ou, pelo Senhor proibido, foi amaldiçoado, por favor, fale com o Bispo em nossa humilde igreja.</string>

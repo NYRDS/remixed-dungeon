@@ -23,6 +23,6 @@ public class DelayedMobSpawner extends Actor {
 			WandOfBlink.appear(mob, cell);
 		}
 		remove(this);
-		return false;
+		return true;
 	}
 }
