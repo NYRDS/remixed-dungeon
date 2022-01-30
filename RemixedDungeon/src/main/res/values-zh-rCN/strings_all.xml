@@ -2742,6 +2742,7 @@ remix.30.0\n
   <string name="Potion_Colors_14">缟玛瑙</string>
   <string name="Potion_Colors_15">珍珠</string>
   <string name="ManaShieldBuff_Name">魔法护盾</string>
+  <string name="ManaShieldBuff_Info">一面魔法盾出现了，可以抵挡下一次来袭的攻击。</string>
   <string name="TenguLiver_Name">天狗肝脏</string>
   <string name="TenguLiver_Info">这个肝脏属于一位强大的敌人。仅仅是看着它，你的野性本能就占据了上风，你感到有一种想要吃掉它的冲动。</string>
   <string name="PotionOfMana_Name">魔法药水</string>

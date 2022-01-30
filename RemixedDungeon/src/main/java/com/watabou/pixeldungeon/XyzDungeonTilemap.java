@@ -249,15 +249,14 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     private int wallTileKind(int cell, isTileKind is) {
-        final int width = level.getWidth();
-        final boolean c_plus_w = is.is(cell + width);
+        final boolean c_plus_w = is.is(cell + mWidth);
 
         if (!c_plus_w) {
             return random.oneOf(cell,wallSTiles);
         }
 
-        final boolean c_plus_w_minus_1 = is.is(cell + width - 1);
-        final boolean c_plus_w_plus_1 = is.is(cell + width + 1);
+        final boolean c_plus_w_minus_1 = is.is(cell + mWidth - 1);
+        final boolean c_plus_w_plus_1 = is.is(cell + mWidth + 1);
 
         final boolean c_minus_1 = is.is(cell - 1);
         final boolean c_plus_1 = is.is(cell + 1);
@@ -341,7 +340,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private int currentRoofCell(int cell) {
 
-        int cellS = cell + level.getWidth();
+        int cellS = cell + mWidth;
 
         if (isWallCell(cellS)) {
             if (!isAnyWallCell(cell)) {
@@ -397,13 +396,11 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
 
     private int currentCornersCell(int cell) {
-        final int width = level.getWidth();
-
-        final boolean c_plus_w = isAnyWallCell(cell + width);
+        final boolean c_plus_w = isAnyWallCell(cell + mWidth);
         final boolean c_plus_1 = isAnyWallCell(cell + 1);
-        final boolean c_plus_1_plus_w = isAnyWallCell(cell + 1 + width);
+        final boolean c_plus_1_plus_w = isAnyWallCell(cell + 1 + mWidth);
         final boolean c_minus_1 = isAnyWallCell(cell - 1);
-        final boolean c_minus_1_plus_w = isAnyWallCell(cell - 1 + width);
+        final boolean c_minus_1_plus_w = isAnyWallCell(cell - 1 + mWidth);
 
         int x = cornerCellKind(c_plus_w, c_plus_1, c_plus_1_plus_w, c_minus_1, c_minus_1_plus_w);
         if(x== TRANSPARENT) {
@@ -585,15 +582,14 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         buildCornersMap();
         buildRoofMap();
 
-        final int width = level.getWidth();
         final int height = level.getHeight();
 
-        updateRegion().set(0, 0, width, height);
-        mWallsLayer.updateRegion().set(0, 0, width, height);
-        mDecoLayer.updateRegion().set(0, 0, width, height);
-        mRoofLayer.updateRegion().set(0, 0, width, height);
-        mCornersLayer.updateRegion().set(0, 0, width, height);
-        mDoorsLayer.updateRegion().set(0, 0, width, height);
+        updateRegion().set(0, 0, mWidth, height);
+        mWallsLayer.updateRegion().set(0, 0, mWidth, height);
+        mDecoLayer.updateRegion().set(0, 0, mWidth, height);
+        mRoofLayer.updateRegion().set(0, 0, mWidth, height);
+        mCornersLayer.updateRegion().set(0, 0, mWidth, height);
+        mDoorsLayer.updateRegion().set(0, 0, mWidth, height);
     }
 
     public void updateCell(int cell, Level level) {

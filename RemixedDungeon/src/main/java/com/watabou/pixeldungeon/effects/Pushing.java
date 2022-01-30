@@ -43,11 +43,11 @@ public class Pushing extends Actor {
 	
 	@Override
 	protected boolean act() {
-			if (effect == null) {
-				effect = new Effect();
-			}
-			deactivateActor();
-			return false;
+		if (effect == null) {
+			effect = new Effect();
+		}
+		deactivateActor();
+		return true;
 	}
 
 	private class Effect extends Visual {

@@ -5,6 +5,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -114,6 +115,10 @@ public abstract class Text extends Visual implements IPlaceable {
 	}
 
 	public void text(@NotNull String str) {
+		if(text.equals(str)) {
+			return;
+		}
+
 		dirty = true;
 
 		if(str == null) {
