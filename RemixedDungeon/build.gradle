@@ -28,8 +28,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1102
-        versionName "31.0.fix.20"
+        versionCode 1103
+        versionName "31.0.fix.21"
         targetSdkVersion 31
         minSdkVersion 16
         compileSdkVersion = 31
@@ -156,7 +156,6 @@ dependencies {
     googlePlayImplementation 'com.android.billingclient:billing:4.0.0'
 
     googlePlayImplementation platform('com.google.firebase:firebase-bom:28.4.2')
-
 
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
