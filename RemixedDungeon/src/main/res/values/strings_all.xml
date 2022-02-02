@@ -2694,7 +2694,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Calm_Info">There are a lot of aggravated creatures around, let us help them.</string>
   <string name="CharmSpell_Name">Charm</string>
   <string name="CharmSpell_Info">Everyone deserve some love, right?</string>
-  <string name="HideInGrassSpell_Name">Hide-In-Grass</string>
+  <string name="HideInGrassSpell_Name">HideInGrassSpell</string>
   <string name="HideInGrassSpell_Info">You perfected your Hide-and-seek mastery.</string>
   <string name="HideInGrassSpell_NeedGrassToHide">Even I can\'t hide in plain sight.</string>
   <string name="MagicArrow_Name">Magic Arrow</string>

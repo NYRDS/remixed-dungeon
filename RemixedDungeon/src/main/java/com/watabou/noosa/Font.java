@@ -12,7 +12,7 @@ import java.util.HashMap;
 
 public class Font extends TextureFilm {
 	public static final String SPECIAL_CHAR =
-	"àáâäãèéêëìíîïòóôöõùúûüñçÀÁÂÄÃÈÉÊËÌÍÎÏÒÓÔÖÕÙÚÛÜÑÇº¿¡ẞß";
+	"àáâäãèéêëìíîïòóôöõùúûüñçÀÁÂÄÃÈÉÊËÌÍÎÏÒÓÔÖÕÙÚÛÜÑÇº¿¡ẞßąęćńóżźłĄĘĆŃÓŻŹŁ";
 
 	public static final String LATIN_UPPER =
 	" !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ";

@@ -46,7 +46,6 @@ public class MobSprite extends CharSprite {
 		super.onComplete( anim );
 		
 		if (anim == die) {
-			final Group parent = getParent();
 			GameScene.addToMobLayer(new AlphaTweener(this, 0, FADE_TIME) {
 					@Override
 					protected void onComplete() {
