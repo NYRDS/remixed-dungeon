@@ -18,24 +18,24 @@
   "zap"     : { "fps" : 15, "looped" : false,    "frames" : [8, 9, 10, 0] },
 
   "operate" : { "fps" : 8,  "looped" : false,    "frames" : [11, 12, 11, 12] },
-  "fly"     : { "fps" : 1,  "looped" : true,     "frames" : [13] },
+  "fly"     : { "fps" : 1,  "looped" : true,     "frames" : [13, 14, 14, 13, 13, 13, 14] },
 
   "weapon_anim" : {
     "none"      : { "fps" : 15, "looped" : false,    "frames" : [8, 9, 10, 0]},
-    "sword"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
-    "sword_zap" : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
-    "spear"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
-    "bow"       : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
-    "bow_zap"   : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
-    "crossbow"       : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
-    "crossbow_zap"   : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
-    "staff"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
-    "staff_zap"  : { "fps" : 10, "looped" : false,    "frames": [19, 20, 0]},
-    "heavy"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
-    "wand"      : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
-    "wand_zap"  : { "fps" : 10, "looped" : false,    "frames" : [19, 20, 0]},
-    "kusarigama"     : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]},
-    "kusarigama_zap" : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]}
+    "sword"     : { "fps" : 8,  "looped" : false,    "frames" : [17, 18, 0]},
+    "sword_zap" : { "fps" : 8,  "looped" : false,    "frames" : [17, 18, 0]},
+    "spear"     : { "fps" : 8,  "looped" : false,    "frames" : [17, 18, 0]},
+    "bow"       : { "fps" : 10, "looped" : false,    "frames" : [17, 18, 0]},
+    "bow_zap"   : { "fps" : 10, "looped" : false,    "frames" : [17, 18, 0]]},
+    "crossbow"       : { "fps" : 10, "looped" : false,    "frames" : [17, 18, 0]},
+    "crossbow_zap"   : { "fps" : 10, "looped" : false,    "frames" : [17, 18, 0]},
+    "staff"     : { "fps" : 8,  "looped" : false,    "frames" : [17, 18, 0]},
+    "staff_zap"  : { "fps" : 10, "looped" : false,    "frames": [17, 18, 0]},
+    "heavy"     : { "fps" : 8,  "looped" : false,    "frames" : [17, 18, 0]},
+    "wand"      : { "fps" : 10, "looped" : false,    "frames" : [17, 18, 0]},
+    "wand_zap"  : { "fps" : 10, "looped" : false,    "frames" : [17, 18, 0]},
+    "kusarigama"     : { "fps" : 8,  "looped" : false,    "frames" : [17, 18, 0]},
+    "kusarigama_zap" : { "fps" : 8,  "looped" : false,    "frames" : [17, 18, 0]}
   },
 
   "bloodColor" : "0xFF777777"
