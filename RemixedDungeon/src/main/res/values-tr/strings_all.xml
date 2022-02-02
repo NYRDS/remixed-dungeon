@@ -2705,7 +2705,6 @@ remix.30.0\n
   <string name="Calm_Info">Etrafta bir sürü ağırlaştırılmış yaratık var, onlara yardım edelim.</string>
   <string name="CharmSpell_Name">Etrafta bir sürü ağırlaştırılmış yaratık var, onlara yardım edelim.</string>
   <string name="CharmSpell_Info">Herkes biraz sevgiyi hak eder, değil mi?</string>
-  <string name="HideInGrassSpell_Name">HideInGrassSpell</string>
   <string name="HideInGrassSpell_Info">Saklambaç ustalığını mükemmelleştirdin.</string>
   <string name="HideInGrassSpell_NeedGrassToHide">Ben bile göz önünde saklanamam.</string>
   <string name="MagicArrow_Name">Büyülü Ok</string>
