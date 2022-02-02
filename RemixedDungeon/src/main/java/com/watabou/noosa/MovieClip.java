@@ -18,6 +18,8 @@
 package com.watabou.noosa;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.watabou.pixeldungeon.sprites.ModernHeroSpriteDef;
+import com.watabou.pixeldungeon.utils.GLog;
 
 public class MovieClip extends Image {
 
@@ -52,23 +54,27 @@ public class MovieClip extends Image {
         
         if (anim != null && anim.delay > 0 && (anim.looped || !finished)) {
 
-            int lastFrame = curFrame;
+            int prevFrame = curFrame;
 
             frameTimer += GameLoop.elapsed;
             while (frameTimer > anim.delay) {
                 frameTimer -= anim.delay;
+
                 if (curFrame == anim.frames.length - 1) {
                     if (anim.looped) {
                         curFrame = 0;
                     }
                     finishAnimation();
-
+                    return;
                 } else {
                     curFrame++;
                 }
             }
 
-            if (curFrame != lastFrame) {
+            if (curFrame != prevFrame) {
+                //if(this instanceof ModernHeroSpriteDef && !anim.looped) {
+                //    GLog.debug("%s frame %d", this, curFrame);
+                //}
                 frame(anim.frames[curFrame]);
             }
 
@@ -107,6 +113,7 @@ public class MovieClip extends Image {
 
         if (!getVisible()) {
             finishAnimation();
+            return;
         }
 
         if (anim != null) {
