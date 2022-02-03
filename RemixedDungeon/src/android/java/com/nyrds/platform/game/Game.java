@@ -43,6 +43,7 @@ import androidx.core.content.PermissionChecker;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.EventCollector;
@@ -51,6 +52,7 @@ import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.input.Keys;
+import com.nyrds.platform.input.PointerEvent;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.InterstitialPoint;
@@ -173,7 +175,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public static void syncAdsState() {
 
         if(GamePreferences.donated() > 0) {
-            Ads.removeEasyModeBanner();
+            AdsUtils.removeEasyModeBanner();
             return;
         }
 
@@ -182,7 +184,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
 
         if (GameLoop.getDifficulty() >= 2) {
-            Ads.removeEasyModeBanner();
+            AdsUtils.removeEasyModeBanner();
         }
 
     }
@@ -229,7 +231,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @SuppressLint({"Recycle", "ClickableViewAccessibility"})
     @Override
     public boolean onTouch(View view, MotionEvent event) {
-        gameLoop.motionEvents.add(MotionEvent.obtain(event));
+        gameLoop.motionEvents.add(new PointerEvent(MotionEvent.obtain(event)));
         return true;
     }
 
