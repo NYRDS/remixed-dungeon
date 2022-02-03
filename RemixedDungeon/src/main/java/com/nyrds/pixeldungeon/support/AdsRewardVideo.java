@@ -25,7 +25,7 @@ public class AdsRewardVideo implements InterstitialPoint {
             GameLoop.softPaused = false;
 
             Game.runOnMainThread(() -> {
-                Ads.removeEasyModeBanner();
+                AdsUtils.removeEasyModeBanner();
                 Ads.showRewardVideo(this);
             });
         });

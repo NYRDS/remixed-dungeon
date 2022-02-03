@@ -1,8 +1,5 @@
 package com.nyrds.platform.game;
 
-
-import android.widget.LinearLayout;
-
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
@@ -74,11 +71,6 @@ public class Game implements ApplicationListener, InputProcessor {
 
     public void doPermissionsRequest(@NotNull InterstitialPoint returnTo, String[] permissions) {
         returnTo.returnToWork(true);
-    }
-
-
-    public LinearLayout getLayout() {
-        return null;
     }
 
     public void openUrl(String prompt, String address) {

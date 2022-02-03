@@ -503,6 +503,7 @@ public class GameScene extends PixelScene {
                     }
                 }
             }
+
         }
 
         if(level instanceof TestLevel) {

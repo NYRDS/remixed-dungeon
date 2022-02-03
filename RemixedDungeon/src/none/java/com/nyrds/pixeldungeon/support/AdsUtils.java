@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.support;
 
 import android.view.View;
 
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.PUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,6 +23,15 @@ public class AdsUtils {
 
 
     public static void removeBannerView(int index, View adview) {
-        Game.instance().getLayout().removeViewAt(index);
+        PUtil.slog("", "removeBannerView");
     }
+
+    public static void removeEasyModeBanner() {
+        PUtil.slog("", "removeEasyModeBanner");
+    }
+
+    static void updateBanner(final View view) {
+        PUtil.slog("", "updateBanner");
+    }
+
 }
