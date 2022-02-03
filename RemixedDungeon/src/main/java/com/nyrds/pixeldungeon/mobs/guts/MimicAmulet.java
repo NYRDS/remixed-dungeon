@@ -19,7 +19,6 @@ public class MimicAmulet extends Mob {
 	private int level;
 
 	public MimicAmulet() {
-		
 		baseSpeed = 1.25f;
 		
 		flying = true;
@@ -31,7 +30,6 @@ public class MimicAmulet extends Mob {
 		addImmunity( Stun.class );
 
 		var prize = new SkeletonKey();
-		prize.levelId = "26";
 		collect(prize);
 	}
 
