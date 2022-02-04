@@ -563,8 +563,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 	public boolean actMeleeAttack(Char enemy) {
 		if (canAttack(enemy)) {
+
 			spend(attackDelay());
-			getSprite().attack(enemy.getPos());
+
+			final int enemyPos = enemy.getPos();
+			final boolean realtime = Dungeon.realtime();
+
+			if(Dungeon.isCellVisible(enemyPos) && !realtime) {
+				getSprite().attack(enemyPos);
+			} else {
+				onAttackComplete();
+			}
 
 			return false;
 		}
