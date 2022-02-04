@@ -1500,12 +1500,12 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Badges_DeathGlyph">Śmierć prze glif</string>
   <string name="Badges_DeathFalling">Śmierć przez upadek</string>
   <string name="Badges_Yasd">Śmierć przez ogień, truciznę, toksyczny gaz &amp; i głód</string>
-  <string name="Badges_BossSlain1">1 boss zgładzony</string>
-  <string name="Badges_BossSlain2">2 boss zgładzony</string>
-  <string name="Badges_BossSlain3">3 boss zgładzony</string>
-  <string name="Badges_BossSlain4">4 boss zgładzony</string>
-  <string name="Badges_BossSlain1All">1-wszy boss pokonany przez wszystkie podklasy</string>
-  <string name="Badges_BossSlain3All">3 boss zgładzony przez wszystkie podklasy</string>
+  <string name="Badges_BossSlain1">Pokonano 1-go bossa</string>
+  <string name="Badges_BossSlain2">Pokonano 2-go bossa</string>
+  <string name="Badges_BossSlain3">Pokonano 3-go bossa</string>
+  <string name="Badges_BossSlain4">Pokonano 4-go bossa</string>
+  <string name="Badges_BossSlain1All">Pokonano 1-go bossa wszystkimi podklasami</string>
+  <string name="Badges_BossSlain3All">Pokonano 3-go bossa wszystkimi podklasami</string>
   <string name="Badges_RingHaggler">Pierścień Szantażu zdobyty</string>
   <string name="Badges_RingThorns">Pierścień Cierni zdobyty</string>
   <string name="Badges_StrengthAttained1">Zdobyto 13 punktów siły</string>
@@ -2509,7 +2509,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Codex_Story_8">Glif Cierpienia - Bohater otrzyma odroczone osłabienie obrażeń, które sprawi, że  otrzyma on 1 obrażenie na turę, zamiast przyjąć całość ciosu za jednym razem.</string>
   <string name="Codex_Story_9">Glif Niestabilności - spowoduje, że zaatakowanie Bohatera może go teleportować na dowolne pole w zasięgu wzroku. Nie działa na poziomach bossów.</string>
   <string name="Codex_Story_10">Glif Spętania - sprawi, że zaatakowany Bohater może otrzymać naturalny pancerz, kosztem, będąc jednak w tym samym czasie spętany korzeniami.</string>
-  <string name="Codex_Story_11">Śmiercionośna broń ma szansę na natychmiastowe zabicie wroga (lub zadanie podwójnych obrażeń bossom)</string>
+  <string name="Codex_Story_11">Śmiercionośna broń - przy pomyślnym użyciu, szansa na natychmiastowe zabicie celu (lub zadanie 2x obrażeń bossowi).</string>
   <string name="Codex_Story_12">Płonąca broń może podpalić wroga. Uwaga! Walka Płonącą bronią nie jest wskazana na łatwopalnym terenie!</string>
   <string name="Codex_Story_13">Duchowa broń sprawi, że wróg może uciec kiedy zostanie zaatakowany.</string>
   <string name="Codex_Story_14">Niestabilna broń może nałożyć na wroga efekt każdego możliwego zaklęcia.</string>
