@@ -67,13 +67,13 @@ public class LibraryPainter extends Painter {
 		if (a != null) {
 			final int cell = level.cell(a.x, a.y);
 			if (level.map[cell] == Terrain.EMPTY) {
-				level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, cell));
+				level.putLevelObject( LevelObjectsFactory.STATUE, cell);
 			}
 		}
 		if (b != null) {
 			final int cell = level.cell(b.x, b.y);
 			if (level.map[cell] == Terrain.EMPTY) {
-				level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, cell));
+				level.putLevelObject( LevelObjectsFactory.STATUE, cell);
 			}
 		}
 

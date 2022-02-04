@@ -2642,7 +2642,6 @@ remix.29.6\n
   <string name="Calm_Info">Es gibt viele verärgerte Kreaturen in der Umgebung, lass uns ihnen helfen.</string>
   <string name="CharmSpell_Name">Bezaubern</string>
   <string name="CharmSpell_Info">Jeder verdient etwas Liebe, oder nicht?</string>
-  <string name="HideInGrassSpell_Name">Im Gras vertecken</string>
   <string name="HideInGrassSpell_Info">Du hast deine Versteck-Künste gemeistert.</string>
   <string name="HideInGrassSpell_NeedGrassToHide">Nicht einmal ich kann mich bei voller Sichtbarkeit verstecken.</string>
   <string name="MagicArrow_Name">Magischer Pfeil</string>

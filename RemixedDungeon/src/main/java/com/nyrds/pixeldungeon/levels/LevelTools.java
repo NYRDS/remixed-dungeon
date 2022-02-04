@@ -48,7 +48,7 @@ public class LevelTools {
                 if ((i - 1) % roomStep == roomStep / 2 && (j - 1) % roomStep == roomStep / 2) {
 
                     if (level.get(i, j) == Terrain.EMPTY) {
-                        level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.PEDESTAL, level.cell(i, j)));
+                        level.putLevelObject(LevelObjectsFactory.PEDESTAL, level.cell(i, j));
                         //level.set(i, j, Terrain.PEDESTAL);
                     }
                     continue;
@@ -193,19 +193,19 @@ public class LevelTools {
         for (int i = 0; i < level.map.length; ++i) {
             switch (level.map[i]) { // old saves compatibility
                 case Terrain.BARRICADE:
-                    level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.BARRICADE, i));
+                    level.putLevelObject(LevelObjectsFactory.BARRICADE, i);
                     break;
 
                 case Terrain.PEDESTAL:
-                    level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.PEDESTAL, i));
+                    level.putLevelObject(LevelObjectsFactory.PEDESTAL, i);
                     break;
 
                 case Terrain.STATUE:
-                    level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, i));
+                    level.putLevelObject(LevelObjectsFactory.STATUE, i);
                     break;
 
                 case Terrain.STATUE_SP:
-                    level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE_SP, i));
+                    level.putLevelObject(LevelObjectsFactory.STATUE_SP, i);
                     level.map[i] = Terrain.EMPTY_SP;
                     break;
 
@@ -280,11 +280,11 @@ public class LevelTools {
                     break;
                 case Terrain.WELL:
                 case Terrain.EMPTY_WELL:
-                    level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.WELL, i));
+                    level.putLevelObject(LevelObjectsFactory.WELL, i);
                     break;
 
                 case Terrain.ALCHEMY:
-                    level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.POT, i));
+                    level.putLevelObject(LevelObjectsFactory.POT, i);
                     level.map[i] = Terrain.EMPTY_SP;
                     break;
             }

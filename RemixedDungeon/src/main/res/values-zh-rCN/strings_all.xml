@@ -2661,7 +2661,6 @@ remix.30.0\n
   <string name="Calm_Info">周围有很多令人讨厌的生物，让我们帮助他们吧。</string>
   <string name="CharmSpell_Name">魅惑</string>
   <string name="CharmSpell_Info">每个人都值得爱，不是吗?</string>
-  <string name="HideInGrassSpell_Name">隐藏在草丛中的咒语</string>
   <string name="HideInGrassSpell_Info">你精通捉迷藏。</string>
   <string name="HideInGrassSpell_NeedGrassToHide">即使是我也不能躲在明处。</string>
   <string name="MagicArrow_Name">魔法箭</string>

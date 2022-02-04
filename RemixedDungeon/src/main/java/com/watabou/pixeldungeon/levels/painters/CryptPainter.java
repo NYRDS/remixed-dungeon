@@ -44,20 +44,20 @@ public class CryptPainter extends Painter {
 		level.addItemToSpawn( new IronKey() );
 		
 		if (entrance.x == room.left) {
-			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.right-1, room.top+1 )));
-			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.right-1, room.bottom-1 )));
+			level.putLevelObject(LevelObjectsFactory.STATUE, level.cell(room.right-1, room.top+1 ));
+			level.putLevelObject(LevelObjectsFactory.STATUE, level.cell(room.right-1, room.bottom-1 ));
 			cx = room.right - 2;
 		} else if (entrance.x == room.right) {
-			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.left+1, room.top+1 )));
-			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.left+1, room.bottom-1 )));
+			level.putLevelObject(LevelObjectsFactory.STATUE, level.cell(room.left+1, room.top+1 ));
+			level.putLevelObject(LevelObjectsFactory.STATUE, level.cell(room.left+1, room.bottom-1 ));
 			cx = room.left + 2;
 		} else if (entrance.y == room.top) {
-			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.left+1, room.bottom-1 )));
-			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.right-1, room.bottom-1 )));
+			level.putLevelObject(LevelObjectsFactory.STATUE, level.cell(room.left+1, room.bottom-1 ));
+			level.putLevelObject(LevelObjectsFactory.STATUE, level.cell(room.right-1, room.bottom-1 ));
 			cy = room.bottom - 2;
 		} else if (entrance.y == room.bottom) {
-			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.left+1, room.top+1 )));
-			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.STATUE, level.cell(room.right-1, room.top+1)));
+			level.putLevelObject(LevelObjectsFactory.STATUE, level.cell(room.left+1, room.top+1 ));
+			level.putLevelObject(LevelObjectsFactory.STATUE, level.cell(room.right-1, room.top+1));
 			cy = room.top + 2;
 		}
 		

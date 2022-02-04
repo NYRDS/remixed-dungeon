@@ -70,7 +70,7 @@ public class IceCavesBossLevel extends BossLevel {
 		}
 
 		for(val pos: statues) {
-			putLevelObject(LevelObjectsFactory.createCustomObject(this, "statue", pos));
+			putLevelObject(LevelObjectsFactory.STATUE, pos);
 		}
 		
 		arenaDoor = (TOP + HALL_HEIGHT) * getWidth() + _Center();

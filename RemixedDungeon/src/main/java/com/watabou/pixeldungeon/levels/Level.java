@@ -31,6 +31,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
 import com.nyrds.pixeldungeon.ml.R;
@@ -228,6 +229,11 @@ public abstract class Level implements Bundlable {
 			}
 		}
 		return top;
+	}
+
+
+	public void putLevelObject(String kind, int cell) {
+		putLevelObject(LevelObjectsFactory.createCustomObject(this, kind, cell));
 	}
 
 	public void putLevelObject(LevelObject lo) {

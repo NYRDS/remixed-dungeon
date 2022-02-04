@@ -47,8 +47,8 @@ public class NecroBossLevel extends BossLevel {
 		
 		int y = TOP + 1;
 		while (y < TOP + HALL_HEIGHT) {
-			putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, y * getWidth() + _Center() - 3));
-			putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, y * getWidth() + _Center() + 3));
+			putLevelObject(LevelObjectsFactory.STATUE, y * getWidth() + _Center() - 3);
+			putLevelObject(LevelObjectsFactory.STATUE, y * getWidth() + _Center() + 3);
 			y += 2;
 		}
 
@@ -57,13 +57,11 @@ public class NecroBossLevel extends BossLevel {
 		int pedestal_3 = (TOP + HALL_HEIGHT / 4) * getWidth() + _Center() + 2;
 		int pedestal_4 = (TOP + HALL_HEIGHT / 2 + HALL_HEIGHT / 4) * getWidth() + _Center() + 2;
 
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, pedestal_1));
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, pedestal_2));
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, pedestal_3));
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, pedestal_4));
+		putLevelObject(LevelObjectsFactory.PEDESTAL, pedestal_1);
+		putLevelObject(LevelObjectsFactory.PEDESTAL, pedestal_2);
+		putLevelObject(LevelObjectsFactory.PEDESTAL, pedestal_3);
+		putLevelObject(LevelObjectsFactory.PEDESTAL, pedestal_4);
 
-		//map[pedestal_1] = map[pedestal_2] = map[pedestal_3] = map[pedestal_4] = Terrain.PEDESTAL;
-		
 		setExit((TOP - 1) * getWidth() + _Center(),0);
 		
 		arenaDoor = (TOP + HALL_HEIGHT) * getWidth() + _Center();
