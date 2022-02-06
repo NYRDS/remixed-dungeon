@@ -71,7 +71,7 @@ public class TrapsPainter extends Painter {
 			level.drop( prize( level ), pos, Heap.Type.CHEST);
 		} else {
 			set( level, pos, Terrain.EMPTY );
-			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.PEDESTAL, pos));
+			level.putLevelObject( LevelObjectsFactory.PEDESTAL, pos);
 			level.drop( prize( level ), pos, Heap.Type.HEAP );
 		}
 		

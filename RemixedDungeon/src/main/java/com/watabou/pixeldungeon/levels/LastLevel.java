@@ -71,9 +71,9 @@ public class LastLevel extends Level {
 
 		pedestal = (SIZE / 2 + 1) * (getWidth() + 1);
 
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, pedestal));
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, pedestal-1));
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, pedestal+1));
+		putLevelObject( LevelObjectsFactory.PEDESTAL, pedestal);
+		putLevelObject( LevelObjectsFactory.STATUE, pedestal-1);
+		putLevelObject( LevelObjectsFactory.STATUE, pedestal+1);
 		setFeeling(Feeling.NONE);
 		
 		return true;

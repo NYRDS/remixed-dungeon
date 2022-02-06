@@ -70,7 +70,7 @@ public class PoolPainter extends Painter {
 		level.drop( prize( level ), pos, Random.Int( 3 ) == 0 ? Heap.Type.CHEST : Heap.Type.HEAP);
 
 		set( level, pos, Terrain.EMPTY );
-		level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.PEDESTAL, pos));
+		level.putLevelObject( LevelObjectsFactory.PEDESTAL, pos);
 
 		
 		level.addItemToSpawn( new PotionOfInvisibility() );

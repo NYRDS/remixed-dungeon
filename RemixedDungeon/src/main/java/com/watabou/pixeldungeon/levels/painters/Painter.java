@@ -48,7 +48,7 @@ public class Painter {
 			for (int j = x; j< x + w; j ++) {
 				final int cell = level.cell(j, i);
 				set(level, cell, Terrain.EMPTY);
-				level.putLevelObject(LevelObjectsFactory.createCustomObject(level, objectKind, cell));
+				level.putLevelObject( objectKind, cell);
 			}
 		}
 	}

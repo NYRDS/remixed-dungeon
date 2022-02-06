@@ -68,13 +68,13 @@ public class CityBossLevel extends BossLevel {
 
 		int y = TOP + 1;
 		while (y < TOP + HALL_HEIGHT) {
-			putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, y * getWidth() + _Center() - 2));
-			putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.STATUE, y * getWidth() + _Center() + 2));
+			putLevelObject(LevelObjectsFactory.STATUE, y * getWidth() + _Center() - 2);
+			putLevelObject(LevelObjectsFactory.STATUE, y * getWidth() + _Center() + 2);
 			y += 2;
 		}
 
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, left));
-		putLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.PEDESTAL, right));
+		putLevelObject(LevelObjectsFactory.PEDESTAL, left);
+		putLevelObject(LevelObjectsFactory.PEDESTAL, right);
 
 		for (int i=left+1; i < right; i++) {
 			map[i] = Terrain.EMPTY_SP;

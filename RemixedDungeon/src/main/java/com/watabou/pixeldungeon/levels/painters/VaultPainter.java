@@ -59,7 +59,7 @@ public class VaultPainter extends Painter {
 			
 		case 2:
 			level.drop( prize(level), c, Type.HEAP );
-			level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.PEDESTAL, c));
+			level.putLevelObject( LevelObjectsFactory.PEDESTAL, c);
 			break;
 		}
 		

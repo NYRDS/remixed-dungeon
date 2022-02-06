@@ -36,7 +36,7 @@ public class TreasuryPainter extends Painter {
 		fill( level, room, 1, Terrain.EMPTY );
 
 		val c = room.center();
-		level.putLevelObject(LevelObjectsFactory.createCustomObject(level, "statue", level.cell(c.x,c.y)));
+		level.putLevelObject( LevelObjectsFactory.STATUE, level.cell(c.x,c.y));
 		
 		Heap.Type heapType = Random.Int( 2 ) == 0 ? Heap.Type.CHEST : Heap.Type.HEAP;
 		
