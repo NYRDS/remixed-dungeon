@@ -172,8 +172,6 @@ public class SurfaceScene extends PixelScene {
 	
 	@Override
 	public void destroy() {
-		Badges.saveGlobal();
-		
 		Camera.remove( viewport );
 		super.destroy();
 	}

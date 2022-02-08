@@ -53,9 +53,9 @@ public class Bundle {
 
     private static final String CLASS_NAME = "__className";
 
-    private static Map<String, String> aliases = new HashMap<>();
+    private static final Map<String, String> aliases = new HashMap<>();
 
-    private JSONObject data;
+    private final JSONObject data;
 
     public Bundle() {
         this(new JSONObject());

@@ -496,7 +496,6 @@ public class Dungeon {
                 saveGame(saveToGame);
                 saveLevel(saveToLevel, thisLevel);
 
-                Badges.saveGlobal();
                 Library.saveLibrary();
 
                 SaveUtils.copySaveToSlot(SaveUtils.getAutoSave(), heroClass);
