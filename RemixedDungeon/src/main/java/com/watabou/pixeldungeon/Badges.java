@@ -69,6 +69,17 @@ import lombok.var;
 
 public class Badges {
 
+	public static boolean isSaveNeeded() {
+		return saveNeeded;
+	}
+
+	public static void setSaveNeeded(boolean saveNeeded) {
+		Badges.saveNeeded = saveNeeded;
+		if(saveNeeded) {
+			saveGlobal();
+		}
+	}
+
 	public enum Badge {
 		MONSTERS_SLAIN_1(StringsManager.getVar(R.string.Badges_MonsterSlain1), 0),
 		MONSTERS_SLAIN_2(StringsManager.getVar(R.string.Badges_MonsterSlain2), 1),
@@ -227,8 +238,9 @@ public class Badges {
 		loadGlobal();
 	}
 
-	public static final  String BADGES_FILE = "badges.dat";
-	private static final String BADGES      = "badges";
+	public static final   String BADGES_FILE = "badges.dat";
+	private static final  String BADGES_BACKUP_FILE = "badges_backup.dat";
+	private static final  String BADGES      = "badges";
 
 	private static HashSet<Badge> restore(Bundle bundle) {
 		HashSet<Badge> badges = new HashSet<>();
@@ -267,8 +279,17 @@ public class Badges {
 	}
 
 	public static void loadGlobal() {
+		loadGlobalFrom(BADGES_FILE);
+
+		if(global.isEmpty()) {
+			loadGlobalFrom(BADGES_BACKUP_FILE);
+			setSaveNeeded(true);
+		}
+	}
+
+	private static void loadGlobalFrom(String file){
 		try {
-			InputStream input = FileSystem.getInputStream(BADGES_FILE);
+			InputStream input = FileSystem.getInputStream(file);
 
 			Bundle bundle = Bundle.read(input);
 			input.close();
@@ -278,21 +299,20 @@ public class Badges {
 			for (var badge:global) {
 				unlockPlayGamesBadge(badge);
 			}
-
 		} catch (FileNotFoundException e) {
 			global = new HashSet<>();
-		} catch (IOException e) {
+		} catch (Exception e) {
 			global = new HashSet<>();
 			EventCollector.logException(e, "Badges.loadGlobal");
 		}
 	}
 
-	public static void saveGlobal() {
+	private static void saveGlobal() {
 		if (!ModdingMode.inRemixed()) {
 			return;
 		}
 
-		if (saveNeeded) {
+		if (isSaveNeeded()) {
 			Bundle bundle = new Bundle();
 			store(bundle, global);
 
@@ -301,7 +321,11 @@ public class Badges {
 				Bundle.write(bundle, output);
 				output.close();
 
-				saveNeeded = false;
+				var backup = FileSystem.getOutputStream(BADGES_BACKUP_FILE);
+				Bundle.write(bundle, backup);
+				backup.close();
+
+				setSaveNeeded(false);
 			} catch (IOException e) {
 				EventCollector.logException(e, "Badges.saveGlobal");
 			}
@@ -595,7 +619,7 @@ public class Badges {
 			local.add(badge);
 			if (!global.contains(badge)) {
 				global.add(badge);
-				saveNeeded = true;
+				setSaveNeeded(true);
 			}
 
 			if (global.contains(Badge.BOSS_SLAIN_1_WARRIOR) &&
@@ -610,7 +634,7 @@ public class Badges {
 				if (!global.contains(badge)) {
 					displayBadge(badge);
 					global.add(badge);
-					saveNeeded = true;
+					setSaveNeeded(true);
 				}
 			}
 		} else if (badge == Badge.BOSS_SLAIN_3) {
@@ -654,7 +678,7 @@ public class Badges {
 			local.add(badge);
 			if (!global.contains(badge)) {
 				global.add(badge);
-				saveNeeded = true;
+				setSaveNeeded(true);
 			}
 
 			if (global.contains(Badge.BOSS_SLAIN_3_GLADIATOR) &&
@@ -673,7 +697,7 @@ public class Badges {
 				if (!global.contains(badge)) {
 					displayBadge(badge);
 					global.add(badge);
-					saveNeeded = true;
+					setSaveNeeded(true);
 				}
 			}
 		}
@@ -708,7 +732,7 @@ public class Badges {
 
 		if (!global.contains(badge)) {
 			global.add(badge);
-			saveNeeded = true;
+			setSaveNeeded(true);
 		}
 	}
 
@@ -762,7 +786,7 @@ public class Badges {
 		}
 		if (!global.contains(badge)) {
 			global.add(badge);
-			saveNeeded = true;
+			setSaveNeeded(true);
 		}
 
 		if (global.contains(Badge.RARE_ALBINO) &&
@@ -812,7 +836,7 @@ public class Badges {
 		local.add(badge);
 		if (!global.contains(badge)) {
 			global.add(badge);
-			saveNeeded = true;
+			setSaveNeeded(true);
 		}
 
 		if (global.contains(Badge.VICTORY_WARRIOR) &&
@@ -855,8 +879,7 @@ public class Badges {
 	public static void validateSupporter() {
 		loadGlobal();
 		global.add(Badge.SUPPORTER);
-		saveNeeded = true;
-		saveGlobal();
+		setSaveNeeded(true);
 		PixelScene.showBadge(Badge.SUPPORTER);
 	}
 
@@ -905,7 +928,7 @@ public class Badges {
 		} else {
 
 			global.add(badge);
-			saveNeeded = true;
+			setSaveNeeded(true);
 			EventCollector.badgeUnlocked(badge.name());
 
 			if (badge.meta) {

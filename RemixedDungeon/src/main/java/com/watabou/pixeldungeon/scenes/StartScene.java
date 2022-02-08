@@ -253,14 +253,6 @@ public class StartScene extends PixelScene {
         btnNewGame.setVisible(false);
     }
 
-    @Override
-    public void destroy() {
-
-        Badges.saveGlobal();
-
-        super.destroy();
-    }
-
     private void updateShield(ClassShield shield) {
         if (curShield == shield) {
             add(new WndClass(shield.cl));
