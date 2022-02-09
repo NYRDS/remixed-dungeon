@@ -590,8 +590,6 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
   <string name="StartScene_Warning">Az aktuális játékmeneted el fog veszni.</string>
   <string name="StartScene_Yes">Igen, új játékot kezdek.</string>
   <string name="StartScene_No">Nem, visszatérek a főmenübe.</string>
-  <string name="StartScene_Unlock">A karakterosztály feloldásához pusztítsd el a 3. főgonoszt bármely másik karakterosztállyal!</string>
-  <string name="StartScene_UnlockElf">A karakterosztály feloldásához pusztítsd el a 4. főgonoszt bármely másik karakterosztállyal!</string>
   <string name="StartScene_WinGame">A \"Kihívások\" eléréséhez nyerj meg egy játékot bármely karakterosztállyal!</string>
   <string name="StartScene_DifficultySelect">Válaszd ki a végzetedet!</string>
   <string name="StartScene_DifficultyEasy">Könnyű (hirdetésekkel)</string>
@@ -1430,12 +1428,6 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
   <string name="Badges_DeathGlyph">Varázsjel általi halál</string>
   <string name="Badges_DeathFalling">Zuhanás általi halál</string>
   <string name="Badges_Yasd">Tűz, méreg, gáz és éhség általi halál</string>
-  <string name="Badges_BossSlain1">1. főellenség megölve</string>
-  <string name="Badges_BossSlain2">2. főellenség megölve</string>
-  <string name="Badges_BossSlain3">3. főellenség megölve</string>
-  <string name="Badges_BossSlain4">4. főellenség megölve</string>
-  <string name="Badges_BossSlain1All">1. főellenség megölve minden kaszt által</string>
-  <string name="Badges_BossSlain3All">3. főellenség megölve minden alkaszt által</string>
   <string name="Badges_RingHaggler">Alku gyűrű megszerezve</string>
   <string name="Badges_RingThorns">Tüskés gyűrű megszerezve</string>
   <string name="Badges_StrengthAttained1">13 pontnyi erő elérve</string>

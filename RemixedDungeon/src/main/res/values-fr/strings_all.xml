@@ -657,8 +657,6 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
   <string name="StartScene_Warning">Votre progression actuelle sera perdue.</string>
   <string name="StartScene_Yes">Oui, une nouvelle partie</string>
   <string name="StartScene_No">Non, retour au menu principal</string>
-  <string name="StartScene_Unlock">Pour débloquer ce personnage, vainquez le 3e boss avec tous les autres personnages</string>
-  <string name="StartScene_UnlockElf">Pour débloquer ce personnage, vainquez le 4e boss avec tous les autres personnages.</string>
   <string name="StartScene_WinGame">Pour débloquer les \"Challenges\", finissez le jeu avec n\'importe quel personnage.</string>
   <string name="StartScene_DifficultySelect">Choisissez votre destin</string>
   <string name="StartScene_DifficultyEasy">Facile (Avec Pubs)</string>
@@ -1501,12 +1499,6 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="Badges_DeathGlyph">Mort par un glyphe</string>
   <string name="Badges_DeathFalling">Mort suite à une chute</string>
   <string name="Badges_Yasd">Mort par le feu, le poison, les gaz toxiques et la faim</string>
-  <string name="Badges_BossSlain1">1er boss vaincu</string>
-  <string name="Badges_BossSlain2">2e boss vaincu</string>
-  <string name="Badges_BossSlain3">3e boss vaincu</string>
-  <string name="Badges_BossSlain4">4e boss vaincu</string>
-  <string name="Badges_BossSlain1All">1er boss vaincu par tous les classes</string>
-  <string name="Badges_BossSlain3All">3e boss vaincu par tous les classes</string>
   <string name="Badges_RingHaggler">Anneau du marchandeur obtenu</string>
   <string name="Badges_RingThorns">Anneau d\'épines obtenu</string>
   <string name="Badges_StrengthAttained1">13 points de force obtenus</string>

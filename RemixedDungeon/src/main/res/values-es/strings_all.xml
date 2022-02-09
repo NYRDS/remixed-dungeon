@@ -655,8 +655,6 @@
   <string name="StartScene_Warning">Tu progreso actual será borrado.</string>
   <string name="StartScene_Yes">Si, empezar una nueva partida.</string>
   <string name="StartScene_No">No, volver al menú principal.</string>
-  <string name="StartScene_Unlock">Para desbloquear esta clase derrota al 3er jefe con otra clase.</string>
-  <string name="StartScene_UnlockElf">Para desbloquear esta clase derrota al 4º jefe con otra clase.</string>
   <string name="StartScene_WinGame">Para desbloquear los \"Desafíos\" gana una partida con cualquier personaje.</string>
   <string name="StartScene_DifficultySelect">Elige tu destino</string>
   <string name="StartScene_DifficultyEasy">Fácil (con anuncios)</string>
@@ -1497,12 +1495,6 @@
   <string name="Badges_DeathGlyph">Muerte por un glifo.</string>
   <string name="Badges_DeathFalling">Muerte por caída</string>
   <string name="Badges_Yasd">Muerte por el fuego, veneno, gas tóxico &amp; hambre</string>
-  <string name="Badges_BossSlain1">1er jefe asesinado</string>
-  <string name="Badges_BossSlain2">2º jefe asesinado</string>
-  <string name="Badges_BossSlain3">3er jefe asesinado</string>
-  <string name="Badges_BossSlain4">4º jefe asesinado</string>
-  <string name="Badges_BossSlain1All">1er jefe asesinado por todas las clases</string>
-  <string name="Badges_BossSlain3All">3er jefe asesinado por todas las subclases</string>
   <string name="Badges_RingHaggler">Anillo del Regateador obtenido</string>
   <string name="Badges_RingThorns">Anillo de Espinas obtenido</string>
   <string name="Badges_StrengthAttained1">13 puntos de Fuerza obtenidos</string>

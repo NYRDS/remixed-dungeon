@@ -592,8 +592,6 @@
   <string name="StartScene_Warning">Твій поточний ігровий прогрес буде втрачено.</string>
   <string name="StartScene_Yes">Так, розпочати нову гру</string>
   <string name="StartScene_No">Ні, повернутися до головного меню</string>
-  <string name="StartScene_Unlock">Щоб відкрити цей клас персонажа, убийте 3-го боса будь-яким іншим класом</string>
-  <string name="StartScene_UnlockElf">Щоб відкрити цей клас персонажа, убийте 4-го боса будь-яким іншим класом</string>
   <string name="StartScene_WinGame">Щоб відкрити \"Випробування\", пройдіть гру будь-яким персонажем.</string>
   <string name="StartScene_DifficultySelect">Обери свою долю</string>
   <string name="StartScene_DifficultyEasy">Простий (з рекламою)</string>
@@ -1434,12 +1432,6 @@
   <string name="Badges_DeathGlyph">Смерть від гліфа</string>
   <string name="Badges_DeathFalling">Смерть від падіння</string>
   <string name="Badges_Yasd">Смерть від вогню, отрути, токсичного газу та голоду</string>
-  <string name="Badges_BossSlain1">1-го боса вбито</string>
-  <string name="Badges_BossSlain2">2-го боса вбито</string>
-  <string name="Badges_BossSlain3">3-го боса вбито</string>
-  <string name="Badges_BossSlain4">4-го боса вбито</string>
-  <string name="Badges_BossSlain1All">1-го боса вбито кожним класом</string>
-  <string name="Badges_BossSlain3All">3-го боса вбито кожним підкласом</string>
   <string name="Badges_RingHaggler">Отримано перстень Торговця</string>
   <string name="Badges_RingThorns">Отримано перстень Шипів</string>
   <string name="Badges_StrengthAttained1">Отримано 13 очок сили</string>

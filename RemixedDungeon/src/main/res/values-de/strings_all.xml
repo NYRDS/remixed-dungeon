@@ -609,8 +609,6 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
   <string name="StartScene_Warning">Dein aktueller Spielfortschritt wird gelöscht.</string>
   <string name="StartScene_Yes">Ja, starte ein neues Spiel</string>
   <string name="StartScene_No">Nein, kehr zum Hauptmenü zurück</string>
-  <string name="StartScene_Unlock">Um diese Klasse freizuschalten, besiege den 3. Bossgegner mit einer beliebigen anderen Klasse</string>
-  <string name="StartScene_UnlockElf">Um diese Klasse freizuschalten, besieg den 4. Bossgegner mit einer beliebigen anderen Klasse</string>
   <string name="StartScene_WinGame">Um »Herausforderungen« freizuschalten, gewinne das Spiel mit einer beliebigen Klasse.</string>
   <string name="StartScene_DifficultySelect">Wähle deine Bestimmung</string>
   <string name="StartScene_DifficultyEasy">Einfach (mit Werbung)</string>
@@ -1453,12 +1451,6 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
   <string name="Badges_DeathGlyph">Tod durch eine Glyphe</string>
   <string name="Badges_DeathFalling">Tod durch Fallen</string>
   <string name="Badges_Yasd">Tod durch Feuer, Gift, giftige Gase und Hunger</string>
-  <string name="Badges_BossSlain1">1. Boss besiegt</string>
-  <string name="Badges_BossSlain2">2. Boss besiegt</string>
-  <string name="Badges_BossSlain3">3. Boss besiegt</string>
-  <string name="Badges_BossSlain4">4. Boss besiegt</string>
-  <string name="Badges_BossSlain1All">1. Boss mit allen Klassen besiegt</string>
-  <string name="Badges_BossSlain3All">3. Boss mit allen Unterklassen besiegt</string>
   <string name="Badges_RingHaggler">Ring des Feilschers erhalten</string>
   <string name="Badges_RingThorns">Dornenring erhalten</string>
   <string name="Badges_StrengthAttained1">13 Stärkepunkte erhalten</string>

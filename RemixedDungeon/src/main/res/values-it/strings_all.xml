@@ -601,8 +601,6 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="StartScene_Warning">I progressi della tua partita corrente saranno cancellati.</string>
   <string name="StartScene_Yes">Si, inizia una nuova partita</string>
   <string name="StartScene_No">No, ritorna al menù principale</string>
-  <string name="StartScene_Unlock">Per sbloccare questa classe del personaggio, uccidi il 3^ boss con qualsiasi altra classe </string>
-  <string name="StartScene_UnlockElf"> Per sbloccare questa classe del personaggio, uccidi il 4^ boss con qualsiasi altra classe </string>
   <string name="StartScene_WinGame">Per sbloccare \"Sfide\", vinci il gioco con qualsiasi altra classe </string>
   <string name="StartScene_DifficultySelect">Scegli il tuo destino</string>
   <string name="StartScene_DifficultyEasy">Facile (con pubblicità)</string>
@@ -1384,10 +1382,6 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="Badges_DeathGlyph">Morte a causa di un glifo</string>
   <string name="Badges_DeathFalling">Morte a causa di una caduta</string>
   <string name="Badges_Yasd">Morte a causa di fuoco, veleno, gas velenoso &amp; fame</string>
-  <string name="Badges_BossSlain1">1° boss sconfitto</string>
-  <string name="Badges_BossSlain2">2° boss sconfitto</string>
-  <string name="Badges_BossSlain3">3° boss sconfitto</string>
-  <string name="Badges_BossSlain4">4° boss sconfitto</string>
   <string name="Badges_RingHaggler">Anello di Haggler ottenuto</string>
   <string name="Badges_RingThorns">Anello di Thorns ottenuto</string>
   <string name="Badges_StrengthAttained1">13 punti di Forza raggiunti</string>

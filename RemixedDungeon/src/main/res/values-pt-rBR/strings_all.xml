@@ -1,14 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
-  <string name="ChaosHelmet_Name">Capacete caótico</string>
-  <string name="ChaosHelmet_Info">Um capacete na cor de sangue é um símbolo essencial para um guerreiro do caos.</string>
+  <string name="ChaosHelmet_Name">Capacete do Caos</string>
+  <string name="ChaosHelmet_Info">Um capacete vermelho sangue é um símbolo essencial de um guerreiro do caos.</string>
   <string name="Spells_SummonLimitReached">%1$s: limite de invocação excedido (máximo atual: %2$d)!</string>
   <string name="Mana_Title">Mana</string>
   <string name="Mana_Cost">Custo de Mana: </string>
   <string name="Spells_NotEnoughSP">Você não tem mana o suficiente para lançar uma \'\'%1$s\'\' magia.</string>
   <string name="SummonDeathling_Name">Invocar Morto-Vivo</string>
-  <string name="SummonDeathling_Info">Invocar um seguidor morto vivo. A vida e o dano cresce com o aumento do nível do herói. \n\nLimite de Invocação:%1$d(+1 A Cada Level de Magia)</string>
+  <string name="SummonDeathling_Info">Invocar um seguidor morto-vivo. A vida e o dano cresce com o aumento do nível do herói. \n\nLimite de Invocação: %1$d(+1 A Cada Nível de Magia)</string>
   <string name="Ignite_Name">Incendiar</string>
-  <string name="Ignite_Info">Acende uma chama na célula selecionada. Pode ser usado para queimar grama, monstros e objetos.</string>
+  <string name="Ignite_Info">Acende uma chama no espaço selecionado. Pode ser usado para queimar grama, monstros e objetos.</string>
   <string name="RootSpell_Name">Enraizar</string>
   <string name="RootSpell_Info">Raízes que seguram um inimigo e tornam seu movimento impossível por um curto período de tempo.</string>
   <string name="WindGust_Name">Rajada de vento</string>
@@ -592,8 +592,6 @@
   <string name="StartScene_Warning">O seu progresso no jogo atual será apagado.</string>
   <string name="StartScene_Yes">Sim, iniciar novo jogo</string>
   <string name="StartScene_No">Não, voltar ao menu principal</string>
-  <string name="StartScene_Unlock">Para desbloquear esta classe de personagem, mate o terceiro chefe com qualquer classe de jogador</string>
-  <string name="StartScene_UnlockElf">Para desbloquear esta classe, mate o 4º boss com qualquer classe.</string>
   <string name="StartScene_WinGame">Para desbloquear \"Desafios\", ganhe o jogo com pelo menus uma classe de jogador.</string>
   <string name="StartScene_DifficultySelect">Escolha seu destino</string>
   <string name="StartScene_DifficultyEasy">Fácil (com propaganda)</string>
@@ -1431,12 +1429,6 @@
   <string name="Badges_DeathGlyph">Morto por Encantamento</string>
   <string name="Badges_DeathFalling">Morto por Queda.</string>
   <string name="Badges_Yasd">Morto por Fogo, Envenenamento, Gás Tóxico &amp; Fome</string>
-  <string name="Badges_BossSlain1">1º chefe foi morto</string>
-  <string name="Badges_BossSlain2">2º chefe foi morto</string>
-  <string name="Badges_BossSlain3">3º chefe foi morto</string>
-  <string name="Badges_BossSlain4">4º chefe foi morto</string>
-  <string name="Badges_BossSlain1All">1º chefe morto por todas as classes</string>
-  <string name="Badges_BossSlain3All">3º chefe morto por todas as subclasses</string>
   <string name="Badges_RingHaggler">Anel da Barganha adquirido</string>
   <string name="Badges_RingThorns">Anel de Espinhos adquirido</string>
   <string name="Badges_StrengthAttained1">13 pontos de Força adquiridos</string>
