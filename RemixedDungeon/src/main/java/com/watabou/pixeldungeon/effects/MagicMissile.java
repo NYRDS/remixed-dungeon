@@ -21,6 +21,7 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.PixelParticle;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.effects.particles.LeafParticle;
@@ -47,23 +48,28 @@ public class MagicMissile extends Emitter {
 	private float time;
 	
 	public void reset( int from, int to, @Nullable Callback callback ) {
-		this.callback = callback;
-		
-		revive();
-		
-		PointF pf = DungeonTilemap.tileCenterToWorld( from );
-		PointF pt = DungeonTilemap.tileCenterToWorld( to );
-		
-		x = pf.x;
-		y = pf.y;
-		width = 0;
-		height = 0;
-		
-		PointF d = PointF.diff( pt, pf ); 
-		PointF speed = new PointF( d ).normalize().scale( SPEED );
-		sx = speed.x;
-		sy = speed.y;
-		time = d.length() / SPEED;
+		if(Dungeon.isPathVisible(from,to)) {
+			this.callback = callback;
+			revive();
+
+			PointF pf = DungeonTilemap.tileCenterToWorld(from);
+			PointF pt = DungeonTilemap.tileCenterToWorld(to);
+
+			x = pf.x;
+			y = pf.y;
+			width = 0;
+			height = 0;
+
+			PointF d = PointF.diff(pt, pf);
+			PointF speed = new PointF(d).normalize().scale(SPEED);
+			sx = speed.x;
+			sy = speed.y;
+			time = d.length() / SPEED;
+		} else {
+			if (callback != null) {
+				callback.call();
+			}
+		}
 	}
 	
 	public void size( float size ) {

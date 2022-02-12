@@ -92,7 +92,11 @@ public class Emitter extends Group {
 	}
 
 	public void start(@NotNull Factory factory, float interval, int quantity ) {
-		
+
+		if(!alive) {
+			return;
+		}
+
 		this.factory = factory;
 		this.lightMode = factory.lightMode();
 		
