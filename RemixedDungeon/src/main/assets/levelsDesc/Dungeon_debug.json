@@ -3,136 +3,26 @@
         "0":{"kind":"testLevel", "depth":0, "size":[0,0]},
 
         "town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town_2021_03.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","script": "scripts/actors/town/Compass","maxBrightness":1.05},
-        "cinema_2": {
-            "kind": "PredesignedLevel",
-            "depth": 0,
-            "file": "levelsDesc/Cinema_2021_03.json",
-            "noFogOfWar": "true",
-            "isSafe": true,
-            "music": "ost_town_1",
-            "maxBrightness": 1.05
-        },
-        "church_2": {
-            "kind": "PredesignedLevel",
-            "depth": 0,
-            "file": "levelsDesc/Church_2021_03.json",
-            "noFogOfWar": "true",
-            "isSafe": true,
-            "music": "ost_town_1",
-            "maxBrightness": 1.05
-        },
-        "fortune_2": {
-            "kind": "PredesignedLevel",
-            "depth": 0,
-            "file": "levelsDesc/Fortune_2021_03.json",
-            "noFogOfWar": "true",
-            "isSafe": true,
-            "music": "ost_town_1",
-            "maxBrightness": 1.05
-        },
-        "library_2": {
-            "kind": "PredesignedLevel",
-            "depth": 0,
-            "file": "levelsDesc/Library_2021_03.json",
-            "noFogOfWar": "true",
-            "isSafe": true,
-            "music": "ost_town_1",
-            "maxBrightness": 1.05
-        },
-        "inn_2": {
-            "kind": "PredesignedLevel",
-            "depth": 0,
-            "file": "levelsDesc/Inn_2021_03.json",
-            "noFogOfWar": "true",
-            "isSafe": true,
-            "music": "ost_town_1",
-            "maxBrightness": 1.05
-        },
-        "shop_town_2": {
-            "kind": "PredesignedLevel",
-            "depth": 0,
-            "file": "levelsDesc/Shop_2021_03.json",
-            "noFogOfWar": "true",
-            "isSafe": true,
-            "music": "ost_town_1",
-            "treasury": "TownShopTreasury.json",
-            "maxBrightness": 1.05
-        },
-        "testLevel": {
-            "kind": "TestLevel",
-            "depth": 0,
-            "size": [
-                32,
-                32
-            ]
-        },
-        "testLevel2": {
-            "kind": "PredesignedLevel",
-            "depth": 0,
-            "file": "levelsDesc/ScriptsArena.json"
-        },
-        "testLevelRooms": {
-            "kind": "RandomLevel",
-            "depth": 0,
-            "file": "levelsDesc/TestLevelRandom.json"
-        },
-        "testLevelQuest": {
-            "kind": "PredesignedLevel",
-            "depth": 0,
-            "file": "levelsDesc/QuestDemo1.json"
-        },
-        "portal_room_lvl5": {
-            "kind": "PredesignedLevel",
-            "depth": 5,
-            "file": "levelsDesc/Portal.json",
-            "isSafe": true,
-            "music": "ost_portal_level"
-        },
-        "portal_room_lvl10": {
-            "kind": "PredesignedLevel",
-            "depth": 10,
-            "file": "levelsDesc/Portal.json",
-            "isSafe": true,
-            "music": "ost_portal_level"
-        },
-        "portal_room_lvl15": {
-            "kind": "PredesignedLevel",
-            "depth": 15,
-            "file": "levelsDesc/Portal.json",
-            "isSafe": true,
-            "music": "ost_portal_level"
-        },
-        "portal_room_lvl20": {
-            "kind": "PredesignedLevel",
-            "depth": 20,
-            "file": "levelsDesc/Portal.json",
-            "isSafe": true,
-            "music": "ost_portal_level"
-        },
-        "portal_room_lvl25": {
-            "kind": "PredesignedLevel",
-            "depth": 25,
-            "file": "levelsDesc/Portal.json",
-            "isSafe": true,
-            "music": "ost_portal_level"
-        },
-        "portal_room_lvl31": {
-            "kind": "PredesignedLevel",
-            "depth": 31,
-            "file": "levelsDesc/Portal.json",
-            "isSafe": true,
-            "music": "ost_portal_level"
-        },
-        "6s": {
-            "kind": "SpiderLevel",
-            "depth": 6,
-            "size": [
-                16,
-                16
-            ],
-            "music": "ost_spider",
-            "treasury": "SpidersTreasury.json"
-        },
+        "cinema_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Cinema_2021_03.json", "noFogOfWar":"true",  "isSafe":true, "music":"ost_town_1","maxBrightness":1.05},
+        "church_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Church_2021_03.json", "noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","maxBrightness":1.05},
+        "fortune_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Fortune_2021_03.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","maxBrightness":1.05},
+        "library_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Library_2021_03.json","noFogOfWar":"true", "isSafe":true,  "music":"ost_town_1","maxBrightness":1.05},
+        "inn_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Inn_2021_03.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","maxBrightness":1.05},
+        "shop_town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Shop_2021_03.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","treasury":"TownShopTreasury.json","maxBrightness":1.05},
+
+        "testLevel":{"kind":"TestLevel", "depth":0, "size":[32,32]},
+        "testLevel2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/ScriptsArena.json"},
+        "testLevelRooms":{"kind":"RandomLevel", "depth":0, "file":"levelsDesc/TestLevelRandom.json"},
+
+
+        "portal_room_lvl5":{"kind":"PredesignedLevel" , "depth":5 , "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
+        "portal_room_lvl10":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
+        "portal_room_lvl15":{"kind":"PredesignedLevel", "depth":15, "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
+        "portal_room_lvl20":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
+        "portal_room_lvl25":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
+        "portal_room_lvl31":{"kind":"PredesignedLevel", "depth":31, "file":"levelsDesc/Portal.json", "isSafe":true, "music":"ost_portal_level"},
+
+        "6s":{"kind":"SpiderLevel", "depth":6,      "size":[16,16], "music":"ost_spider", "treasury":"SpidersTreasury.json"},
         "7s":{"kind":"SpiderLevel", "depth":7,      "size":[32,32], "music":"ost_spider", "treasury":"SpidersTreasury.json"},
         "8s":{"kind":"SpiderLevel", "depth":8,      "size":[40,40], "music":"ost_spider", "treasury":"SpidersTreasury.json"},
         "9s":{"kind":"SpiderLevel", "depth":9,      "size":[48,48], "music":"ost_spider", "treasury":"SpidersTreasury.json"},
@@ -184,103 +74,21 @@
         "32":{"kind":"LastLevel", "depth":32,       "size":[32,32], "music":"ost_last"}
     },
 
-    "Graph": {
-        "0": [
-            [
-                "testLevelQuest"
-            ],
-            []
-        ],
-        "testLevel": [
-            [],
-            []
-        ],
-        "testLevel2": [
-            [],
-            []
-        ],
-        "testLevelRooms": [
-            [],
-            []
-        ],
-        "testLevelQuest": [
-            [],
-            []
-        ],
-        "town_2": [
-            [
-                "church_2",
-                "cinema_2",
-                "1",
-                "library_2",
-                "shop_town_2",
-                "fortune_2",
-                "inn_2"
-            ],
-            [
-                "0"
-            ]
-        ],
-        "inn_2": [
-            [],
-            [
-                "town_2"
-            ]
-        ],
-        "church_2": [
-            [],
-            [
-                "town_2"
-            ]
-        ],
-        "shop_town_2": [
-            [],
-            [
-                "town_2"
-            ]
-        ],
-        "cinema_2": [
-            [],
-            [
-                "town_2"
-            ]
-        ],
-        "fortune_2": [
-            [],
-            [
-                "town_2"
-            ]
-        ],
-        "library_2": [
-            [],
-            [
-                "town_2"
-            ]
-        ],
-        "1": [
-            [
-                "2"
-            ],
-            [
-                "town_2"
-            ]
-        ],
-        "2": [
-            [
-                "3"
-            ],
-            [
-                "1"
-            ]
-        ],
-        "3": [
-            [
-                "4"
-            ],
-            [
-                "2"
-            ]
-        ],
+    "Graph":{
+        "0":[["5"],[]],
+        "testLevel":[[],[]],
+        "testLevel2":[[],[]],
+        "testLevelRooms":[[],[]],
+        "town_2":[["church_2","cinema_2","1","library_2","shop_town_2","fortune_2","inn_2"],["0"]],
+        "inn_2":[[],["town_2"]],
+        "church_2":[[],["town_2"]],
+        "shop_town_2":[[],["town_2"]],
+        "cinema_2":[[],["town_2"]],
+        "fortune_2":[[],["town_2"]],
+        "library_2":[[],["town_2"]],
+        "1":[["2"],["town_2"]],
+        "2":[["3"],["1"]],
+        "3":[["4"],["2"]],
         "4":[["5"],["3"]],
         "5":[["portal_room_lvl5","6s"],["4"]],
         "portal_room_lvl5":[["6"],["5"]],
