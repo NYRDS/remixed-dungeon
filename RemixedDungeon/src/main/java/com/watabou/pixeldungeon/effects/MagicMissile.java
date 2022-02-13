@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.effects;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Group;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Dungeon;
@@ -54,6 +55,11 @@ public class MagicMissile extends Emitter {
 
 			PointF pf = DungeonTilemap.tileCenterToWorld(from);
 			PointF pt = DungeonTilemap.tileCenterToWorld(to);
+
+			if(Dungeon.isIsometricMode()) {
+				pf.offset(0, Image.isometricModeShift);
+				pt.offset(0, Image.isometricModeShift);
+			}
 
 			x = pf.x;
 			y = pf.y;
