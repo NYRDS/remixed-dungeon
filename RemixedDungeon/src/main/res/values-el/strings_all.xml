@@ -1052,7 +1052,7 @@
   <string name="GoldenStatue_Gender">neuter</string>
   <string name="GoldenStatue_Name_Objective">χρυσό άγαλμα</string>
   <string name="GoldenStatue_Desc">Δύσκολο να πιστέψει κανείς ότι αυτό το άγαλμα δεν είναι απλά διακοσμητικό. Πόσο μάλλον ότι έιναι ένα μοχθηρό πλάσμα που καραδοκεί για κάποιον ανύποπτο εξερευνητή. Με την πρώτη ματιά, θα ορκιζόσουν ότι το όπλο του _(%s)_ είναι απλά μέρος του χεριού του.</string>
-  <string name="NecromancerNPC_Name">νεκρομάντης</string>
+  <string name="NecromancerNPC_Name">Νεκρομάντης</string>
   <string name="NecromancerNPC_Gender">masculine</string>
   <string name="NecromancerNPC_Name_Objective">νεκρομάντης</string>
   <string name="NecromancerNPC_Desc">Αυτός ο μεσήλικος άντρας δείχνει τόσο ενοχλημένος όσο και ενθουσιασμένος την ίδια στιγμή. Φορά μια σύνθετη πανοπλία φτιαγμένη από ενωμένα κομμάτια οστών.</string>
@@ -1997,7 +1997,7 @@
   <string name="WarriorArmor_Name">πανοπλία πολεμιστών</string>
   <string name="WarriorArmor_Desc">Παρότι η πανοπλία δείχνει βαριά, επιτρέπει στον Πολεμιστή να κάνει ένα ηρωικό άλμα σε μια τοποθεσία. Θα κοπανήσει το έδαφος και θα ακινητοποιήσει όλους τους διπλανούς εχθρούς.</string>
   <string name="WarriorArmor_ACSpecial">ΗΡΩΙΚΟ ΑΛΜΑ</string>
-  <string name="WarriorArmor_NotWarrior">Μόνο Πολεμιστές μπορούν να χρησιμοποιήσουν αυτήν την πανοπλία!</string>
+  <string name="WarriorArmor_NotWarrior">Αυτή η πανοπλία είναι μόνο για Πολεμιστές!</string>
   <string name="WarriorArmor_Prompt">Διάλεξε κατεύθυνση να πηδήξεις</string>
   <string name="Affection_Txt">%s σαγήνης</string>
   <string name="AntiEntropy_Txt">%s αντι-εντροπίας</string>
