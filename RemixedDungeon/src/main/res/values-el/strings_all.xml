@@ -739,7 +739,7 @@
   <string name="NecromancerArmor_NotNecromancer">Αυτή η πανοπλία είναι μόνο για νεκρομάντες!</string>
   <string name="NecromancerRobe_Name">Ρόμπα νεκρομάντη</string>
   <string name="NecromancerRobe_Info">Αυτός ο χιτώνας επιτρέπει στον Νεκρομάντη να κλητεύει έναν Θανατικό με κόστος 5 ψυχών. Ο Θανατικός είναι ένας απέθαντος ακόλουθος που δυναμώνει μαζί με τον αφέντη του.</string>
-  <string name="HeroClass_Necromancer">νεκρομάντης</string>
+  <string name="HeroClass_Necromancer">Νεκρομάντης</string>
   <string name="HeroSubClass_NameLich">Σκοτεινός Επικαλεστής</string>
   <string name="Deathling_Name">θανατικός</string>
   <string name="Deathling_Gender">masculine</string>
@@ -971,7 +971,7 @@
   <string name="HeroClass_Mag">Μάγος</string>
   <string name="HeroClass_Rog">Κλέφτης</string>
   <string name="HeroClass_Hun">Κυνηγός</string>
-  <string name="HeroClass_Elf">ξωτικό</string>
+  <string name="HeroClass_Elf">Ξωτικό</string>
   <string name="HeroSubClass_NameGlad">Μονομάχος</string>
   <string name="HeroSubClass_DescGlad">Μια επιτυχημένη επίθεση με όπλο κοντινής μάχης επιτρέπει στον _Μονομάχο_ να ξεκινήσει μια διαδοχή χτυπημάτων, κατά την οποία κάθε επακόλουθο χτύπημα προκαλεί επιπλέον ζημιά.</string>
   <string name="HeroSubClass_NameBers">Βάρβαρος</string>
@@ -1997,7 +1997,7 @@
   <string name="WarriorArmor_Name">πανοπλία πολεμιστών</string>
   <string name="WarriorArmor_Desc">Παρότι η πανοπλία δείχνει βαριά, επιτρέπει στον Πολεμιστή να κάνει ένα ηρωικό άλμα σε μια τοποθεσία. Θα κοπανήσει το έδαφος και θα ακινητοποιήσει όλους τους διπλανούς εχθρούς.</string>
   <string name="WarriorArmor_ACSpecial">ΗΡΩΙΚΟ ΑΛΜΑ</string>
-  <string name="WarriorArmor_NotWarrior">Μόνο Πολεμιστές μπορούν να χρησιμοποιήσουν αυτήν την πανοπλία!</string>
+  <string name="WarriorArmor_NotWarrior">Αυτή η πανοπλία είναι μόνο για Πολεμιστές!</string>
   <string name="WarriorArmor_Prompt">Διάλεξε κατεύθυνση να πηδήξεις</string>
   <string name="Affection_Txt">%s σαγήνης</string>
   <string name="AntiEntropy_Txt">%s αντι-εντροπίας</string>
