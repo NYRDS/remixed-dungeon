@@ -176,7 +176,7 @@
   <string name="town_deco_wall_brazier_desc">Ο ατμός από τα σιγοκαιόμενα κάρβουνα γεμίζει τον χώρο με ευχάριστα αρώματα.</string>
   <string name="WndPriest_Instruction2_m">Καλώς όρισες, παιδί μου. Καλώς ήρθες στην ιερή εκκλησία του μεγάλου Σάντα, του άρχοντα των εγκάτων!</string>
   <string name="WndPriest_Instruction2_f">Καλώς όρισες, κόρη μου. Καλώς ήρθες στην ιερή εκκλησία του μεγάλου Σάντα, του άρχοντα των εγκάτων!</string>
-  <string name="WndPriest_Instruction2">Αν ψάχνεις για βοήθεια, μπορώ να σε θεραπεύσω για μόλις %d χρυσό!\nΑν αναζητάς ιερή ευλογία ή, χτύπα ξύλο, προσβληθείς από κατάρα, συνάντησε τον επίσκοπο εντός της ταπεινής μας εκκλησίας.</string>
+  <string name="WndPriest_Instruction2">Αν χρειάζεσαι βοήθεια, μπορώ να σε θεραπεύσω για μόλις %d χρυσό!\nΑν επιζητάς την ιερή ευλογία ή --χτύπα ξύλο-- έχεις καταραστεί, συνάντησε τον επίσκοπο μες στην ταπεινή εκκλησία μας.</string>
   <string name="WndDontLikeAds_NotThisTime">Όχι τώρα</string>
   <string name="Item_Info2">κάτι</string>
   <string name="NecromancerArmor_Info2">Με αυτήν την πανοπλία, ο Νεκρομάντης μπορεί να κάνει χρήση του «Νεκροτισμού». Ο Νεκροτισμός εξαπλώνει μια μαγική επιδημία που μολύνει κάθε ορατό πλάσμα, ζωντανό ή νεκρό.</string>
@@ -739,7 +739,7 @@
   <string name="NecromancerArmor_NotNecromancer">Αυτή η πανοπλία είναι μόνο για νεκρομάντες!</string>
   <string name="NecromancerRobe_Name">Ρόμπα νεκρομάντη</string>
   <string name="NecromancerRobe_Info">Αυτός ο χιτώνας επιτρέπει στον Νεκρομάντη να κλητεύει έναν Θανατικό με κόστος 5 ψυχών. Ο Θανατικός είναι ένας απέθαντος ακόλουθος που δυναμώνει μαζί με τον αφέντη του.</string>
-  <string name="HeroClass_Necromancer">νεκρομάντης</string>
+  <string name="HeroClass_Necromancer">Νεκρομάντης</string>
   <string name="HeroSubClass_NameLich">Σκοτεινός Επικαλεστής</string>
   <string name="Deathling_Name">θανατικός</string>
   <string name="Deathling_Gender">masculine</string>
@@ -947,7 +947,7 @@
   <string name="Hero_Leave">Κανείς δεν φεύγει έτσι από το Remixed Dungeon.</string>
   <string name="Hero_LevelUp">Ανέβηκες επίπεδο!</string>
   <string name="Hero_NewLevel">Επίπεδο %d! Η ζωή και η συγκέντρωσή σου αυξάνονται. Μπορείς να αποφεύγεις και να πετυχαίνεις επιθέσεις ευκολότερα.</string>
-  <string name="Hero_YouNowHave">Μάζεψες: %s</string>
+  <string name="Hero_YouNowHave">Απέκτησες: %s</string>
   <string name="Hero_SomethingElse">Υπάρχει και κάτι άλλο εδώ.</string>
   <string name="Hero_LockedChest">Το σεντούκι είναι κλειδωμένο και δεν έχεις το αντίστοιχο κλειδί</string>
   <string name="Hero_LockedDoor">Δεν έχεις το αντίστοιχο κλειδί.</string>
@@ -971,7 +971,7 @@
   <string name="HeroClass_Mag">Μάγος</string>
   <string name="HeroClass_Rog">Κλέφτης</string>
   <string name="HeroClass_Hun">Κυνηγός</string>
-  <string name="HeroClass_Elf">ξωτικό</string>
+  <string name="HeroClass_Elf">Ξωτικό</string>
   <string name="HeroSubClass_NameGlad">Μονομάχος</string>
   <string name="HeroSubClass_DescGlad">Μια επιτυχημένη επίθεση με όπλο κοντινής μάχης επιτρέπει στον _Μονομάχο_ να ξεκινήσει μια διαδοχή χτυπημάτων, κατά την οποία κάθε επακόλουθο χτύπημα προκαλεί επιπλέον ζημιά.</string>
   <string name="HeroSubClass_NameBers">Βάρβαρος</string>
@@ -1028,7 +1028,7 @@
   <string name="CagedKobold_Intro">Ε, ψιτ! Είσαι απ\' αυτούς τους εξερευνητές, ε; Βοήθα με ρε \'συ! Αυτοί οι καταραμένοι οι μιλιταριστές με κλείδωσαν εδώ πάνω! Θέλουν να ενεργοποιήσουν ένα αρχαίο όπλο που θα κυριεύσει αυτά τα ανθρώπινα πλάσματα στην επιφάνεια! Αλλά εγώ, ξέροντας πόσο επικίνδυνο είναι, εναντιώθηκα. Και αυτοί με πέταξαν έξω και με κλείδωσαν στο κλουβί! Σε ικετεύω, βρες το κλειδί του κλουβιού. Σε αντάλλαγμα θα σε βοηθήσω με όποιον τρόπο μπορώ.</string>
   <string name="CagedKobold_Quest_End">Ω, σε ευχαριστώ, σε ευχαριστώ πολύ! Πώς κατάφερες να βρεις το κλειδί; Κα... κατέστρεψες το όπλο;! Αυτό είναι απίστευτο! Ξέρεις τι; Είπα ότι θα σε βοηθήσω και ξέρω και τον τρόπο. Θα μείνω μαζί σου για λίγο. * Ο κλουβιασμένος καλικάντζαρος μεταμορφώθηκε σε κερί.</string>
   <string name="CagedKobold_Message1">Σε παρακαλώ...</string>
-  <string name="CagedKobold_Message2">Πρέπει να με βοηθήσεις ρε συ</string>
+  <string name="CagedKobold_Message2">Πρέπει να με βοηθήσεις ρε \'συ</string>
   <string name="CagedKobold_Message3">Μισώ τόσο πολύ αυτό το κλουβί</string>
   <string name="Journal_Caged_Kobold">Κλουβιασμένος καλικάντζαρος</string>
   <string name="IceCaves_TileDescDeco">Αυτό το γκνολ έχει καταψυχθεί ζωντανό. Όπως φαίνεται, έχει υπάρξει εδώ και πολύ καιρό σε αυτό το μέρος.</string>
@@ -1682,7 +1682,7 @@
   <string name="town_deco_bell_tower_name">Καμπαναριό</string>
   <string name="town_deco_bell_tower_desc">Οι καμπάνες εγκαθιστώνται κατά παράδοση σε ψηλούς πύργους, ώστε να ακούγεται το χτύπημά τους από μεγάλες αποστάσεις.</string>
   <string name="town_deco_chimney_name">Καμινάδα</string>
-  <string name="town_deco_chimney_desc">Πέτρινη καμινάδα--ο τέλειος σύντροφος του κάθε σπιτικού σε αυτό το μέρος, μιας και ο παγωμένος καιρός είναι συνηθισμένο φαινόμενο.</string>
+  <string name="town_deco_chimney_desc">Μια πέτρινη καμινάδα. Ο τέλειος σύντροφος κάθε σπιτικού αυτού του μέρους, που ο παγωμένος καιρός είναι συνήθες φαινόμενο.</string>
   <string name="town_deco_window_name">Παράθυρο</string>
   <string name="town_deco_window_desc">Ένα απλό παράθυρο με τζάμι. Τίποτα ιδιαίτερο.</string>
   <string name="town_deco_door_name">Πόρτα</string>
@@ -1997,7 +1997,7 @@
   <string name="WarriorArmor_Name">πανοπλία πολεμιστών</string>
   <string name="WarriorArmor_Desc">Παρότι η πανοπλία δείχνει βαριά, επιτρέπει στον Πολεμιστή να κάνει ένα ηρωικό άλμα σε μια τοποθεσία. Θα κοπανήσει το έδαφος και θα ακινητοποιήσει όλους τους διπλανούς εχθρούς.</string>
   <string name="WarriorArmor_ACSpecial">ΗΡΩΙΚΟ ΑΛΜΑ</string>
-  <string name="WarriorArmor_NotWarrior">Μόνο Πολεμιστές μπορούν να χρησιμοποιήσουν αυτήν την πανοπλία!</string>
+  <string name="WarriorArmor_NotWarrior">Αυτή η πανοπλία είναι μόνο για Πολεμιστές!</string>
   <string name="WarriorArmor_Prompt">Διάλεξε κατεύθυνση να πηδήξεις</string>
   <string name="Affection_Txt">%s σαγήνης</string>
   <string name="AntiEntropy_Txt">%s αντι-εντροπίας</string>
