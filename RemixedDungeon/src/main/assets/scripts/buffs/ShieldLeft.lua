@@ -25,7 +25,7 @@ return buff.init{
         return "ShieldBuffNotReady_Name"
     end,
 
-    desc = function(self, buff)
+    info = function(self, buff)
         if self.data.state then
             return "ShieldBuffReady_Info"
         end
