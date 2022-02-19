@@ -12,6 +12,6 @@ local mob = require"scripts/lib/mob"
 
 return mob.init({
     interact = function(self, chr)
-        self:say('I used to be an adventurer like you,\nBut then i took an arrow in the knee...')
+        self:say('Froth_ArrowInKnee')
     end
 })
