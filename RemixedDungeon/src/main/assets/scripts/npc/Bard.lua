@@ -12,7 +12,7 @@ local speckAdded = false
 
 return mob.init({
     interact = function(self, chr)
-        self:say("La-la-lA")
+        self:say("BardSong_1")
     end,
     act = function(self)
         if not speckAdded then
