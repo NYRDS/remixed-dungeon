@@ -65,7 +65,9 @@ public class MovieClip extends Image {
                         curFrame = 0;
                     }
                     finishAnimation();
-                    return;
+                    if (!anim.looped) {
+                        return;
+                    }
                 } else {
                     curFrame++;
                 }

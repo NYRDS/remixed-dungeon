@@ -656,8 +656,6 @@
   <string name="StartScene_Warning">Permainan kamu saat ini akan di hapus.</string>
   <string name="StartScene_Yes">Iya, mulai permainan baru</string>
   <string name="StartScene_No">tidak, kembali ke menu utama</string>
-  <string name="StartScene_Unlock">Untuk membuka kelas karakter ini, bunuh raja ke 3 dengan kelas lain</string>
-  <string name="StartScene_UnlockElf">Untuk membuka kelas karakter ini, bunuh raja ke 4 dengan kelas lain</string>
   <string name="StartScene_WinGame">Untuk membuka \"Tantangan\", menangkan permainan dengan karakter kelas apapun</string>
   <string name="StartScene_DifficultySelect">Pilih tujuan anda</string>
   <string name="StartScene_DifficultyEasy">Mudah (dengan iklan)</string>
@@ -1497,12 +1495,6 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
   <string name="Badges_DeathGlyph">Kematian dari glif</string>
   <string name="Badges_DeathFalling">Mati karena jatuh</string>
   <string name="Badges_Yasd">Mati karena api, ramuan, gas beracun &amp; kelaparan</string>
-  <string name="Badges_BossSlain1">Membunuh boss ke-1</string>
-  <string name="Badges_BossSlain2">Membunuh boss ke-2</string>
-  <string name="Badges_BossSlain3">Membunuh boss ke-3</string>
-  <string name="Badges_BossSlain4">Membunuh boss ke-4</string>
-  <string name="Badges_BossSlain1All">1 Bos pertama dibunuh oleh semua kelas</string>
-  <string name="Badges_BossSlain3All">Bos ke-3 dibunuh oleh semua subkelas</string>
   <string name="Badges_RingHaggler">Mendapat Cincin Haggler</string>
   <string name="Badges_RingThorns">Mendapat Cincin Thorn</string>
   <string name="Badges_StrengthAttained1">Mendapat 13 poin kekuatan</string>

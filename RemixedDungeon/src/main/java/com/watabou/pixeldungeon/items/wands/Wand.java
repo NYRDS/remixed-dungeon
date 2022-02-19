@@ -274,8 +274,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 	}
 	
 	protected void fx(int cell, Callback callback) {
-		MagicMissile.blueLight(getOwner().getSprite().getParent(), getOwner().getPos(), cell,
-				callback);
+		MagicMissile.blueLight(getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback);
 		Sample.INSTANCE.play(Assets.SND_ZAP);
 	}
 

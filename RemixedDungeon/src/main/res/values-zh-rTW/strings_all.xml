@@ -614,8 +614,6 @@
   <string name="StartScene_Warning">您當前的所有進度會被清除。</string>
   <string name="StartScene_Yes">是的，重新開始</string>
   <string name="StartScene_No">不，返回主目錄</string>
-  <string name="StartScene_Unlock">使用其他角色擊敗第3個boss來解鎖這個角色</string>
-  <string name="StartScene_UnlockElf">使用其他角色擊敗第4個boss來解鎖這個角色</string>
   <string name="StartScene_WinGame">使用任意角色完成遊戲來解鎖「挑戰」。</string>
   <string name="StartScene_DifficultySelect">選擇難度</string>
   <string name="StartScene_DifficultyEasy">簡單模式(有廣告)</string>
@@ -1459,12 +1457,6 @@
   <string name="Badges_DeathGlyph">死於護甲刻印</string>
   <string name="Badges_DeathFalling">刺客教條玩上腦</string>
   <string name="Badges_Yasd">天將降大任於屍人也</string>
-  <string name="Badges_BossSlain1">斬殺第1個BOSS</string>
-  <string name="Badges_BossSlain2">斬殺第2個BOSS</string>
-  <string name="Badges_BossSlain3">斬殺第3個BOSS</string>
-  <string name="Badges_BossSlain4">斬殺第4個BOSS</string>
-  <string name="Badges_BossSlain1All">分別使用戰士，法師，盜賊和女獵手斬殺第1個BOSS</string>
-  <string name="Badges_BossSlain3All">分別使用角鬥士，狂戰士，術士，戰鬥法師，疾行者，刺客，狙擊手和守望者斬殺第3個BOSS</string>
   <string name="Badges_RingHaggler">獲得討價指環</string>
   <string name="Badges_RingThorns">獲得荊棘指環</string>
   <string name="Badges_StrengthAttained1">達到13點力量</string>

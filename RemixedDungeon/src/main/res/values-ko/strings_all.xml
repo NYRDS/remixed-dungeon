@@ -580,8 +580,6 @@
   <string name="StartScene_Warning">현재 게임 진행 상황은 지워집니다.</string>
   <string name="StartScene_Yes">네, 새로운 게임 시작</string>
   <string name="StartScene_No">아니오, 메인 메뉴로</string>
-  <string name="StartScene_Unlock">이 직업을 얻으려면, 아무 직업으로 3번째 보스까지 물리치세요</string>
-  <string name="StartScene_UnlockElf">이 직업을 얻으려면, 아무 직업으로 4번째 보스까지 물리치세요</string>
   <string name="StartScene_WinGame">\"도전\"을 해제하려면, 아무 직업으로 게임을 클리어 하세요.</string>
   <string name="StartScene_DifficultySelect">당신의 운명을 고르세요</string>
   <string name="StartScene_DifficultyEasy">쉬움(광고)</string>
@@ -1401,12 +1399,6 @@
   <string name="Badges_DeathGlyph">방어구의 상형문자로 인해 사망</string>
   <string name="Badges_DeathFalling">추락 데미지로 인해 사망</string>
   <string name="Badges_Yasd">불, 중독, 독가스, 굶주림으로 인해 사망</string>
-  <string name="Badges_BossSlain1">1번째 보스 처치</string>
-  <string name="Badges_BossSlain2">2번째 보스 처치</string>
-  <string name="Badges_BossSlain3">3번째 보스 처치</string>
-  <string name="Badges_BossSlain4">4번째 보스 처치</string>
-  <string name="Badges_BossSlain1All">모든 직업으로 첫번째 보스 처치</string>
-  <string name="Badges_BossSlain3All">모든 세부전직으로 세번째 보스 처치</string>
   <string name="Badges_RingHaggler">흥정꾼의 반지 획득</string>
   <string name="Badges_RingThorns">가시의 반지 획득</string>
   <string name="Badges_StrengthAttained1">힘 수치 13 달성</string>

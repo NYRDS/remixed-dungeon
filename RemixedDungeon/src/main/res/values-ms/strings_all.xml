@@ -609,8 +609,6 @@
   <string name="StartScene_Warning">Kemajuan permainan semasa anda akan dipadamkan.</string>
   <string name="StartScene_Yes">Ya, mulakan permainan baharu</string>
   <string name="StartScene_No">Tidak, kembali ke menu utama</string>
-  <string name="StartScene_Unlock">Untuk membuka kelas watak ini, bunuh ketua ke-3 dengan lain-lain kelas</string>
-  <string name="StartScene_UnlockElf">Untuk membuka kelas watak ini, bunuh ketua ke-4 dengan lain-lain kelas</string>
   <string name="StartScene_WinGame">Untuk membuka \"Cabaran\", menangi permainan dengan mana-mana kelas watak.</string>
   <string name="StartScene_DifficultySelect">Pilih masa depan anda</string>
   <string name="StartScene_DifficultyEasy">Mudah (dengan iklan)</string>
@@ -1448,12 +1446,6 @@
   <string name="Badges_DeathGlyph">Maut disebabkan glif</string>
   <string name="Badges_DeathFalling">Maut disebabkan terjatuh</string>
   <string name="Badges_Yasd">Maut disebabkan api, racun, gas beracun &amp; kelaparan</string>
-  <string name="Badges_BossSlain1">Bos pertama dibunuh</string>
-  <string name="Badges_BossSlain2">Bos ke-2 dibunuh</string>
-  <string name="Badges_BossSlain3">Bos ke-3 dibunuh</string>
-  <string name="Badges_BossSlain4">Bos ke-4 dibunuh</string>
-  <string name="Badges_BossSlain1All">Bos pertama dibunuh oleh semua kelas</string>
-  <string name="Badges_BossSlain3All">Bos ke-3 dibunuh oleh semua subkelas</string>
   <string name="Badges_RingHaggler">Cincin Tawar-Menawar diperoleh</string>
   <string name="Badges_RingThorns">Cincin Berduri diperoleh</string>
   <string name="Badges_StrengthAttained1">13 mata Kekuatan dicapai</string>

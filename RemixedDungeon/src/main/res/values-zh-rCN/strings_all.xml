@@ -630,8 +630,6 @@
   <string name="StartScene_Warning">你当前的所有进度会被清除。</string>
   <string name="StartScene_Yes">是的，重新开始</string>
   <string name="StartScene_No">不，返回主目录</string>
-  <string name="StartScene_Unlock">使用其他角色击败第3个boss来解锁此角色</string>
-  <string name="StartScene_UnlockElf">使用其他角色击败第4个boss来解锁这个角色</string>
   <string name="StartScene_WinGame">使用任意角色完成游戏来解锁“挑战”。</string>
   <string name="StartScene_DifficultySelect">选择难度</string>
   <string name="StartScene_DifficultyEasy">简单模式（有广告）</string>
@@ -1468,12 +1466,6 @@
   <string name="Badges_DeathGlyph">死于刻纹</string>
   <string name="Badges_DeathFalling">摔死</string>
   <string name="Badges_Yasd">花式作死</string>
-  <string name="Badges_BossSlain1">消灭第1个BOSS</string>
-  <string name="Badges_BossSlain2">消灭第2个BOSS</string>
-  <string name="Badges_BossSlain3">消灭第3个BOSS</string>
-  <string name="Badges_BossSlain4">消灭第4个BOSS</string>
-  <string name="Badges_BossSlain1All">分别使用战士，法师，盗贼和女猎手斩杀第1个BOSS</string>
-  <string name="Badges_BossSlain3All">分别使用角斗士，狂战士，术士，战斗法师，疾行者，刺客，狙击手和守望者斩杀第3个BOSS</string>
   <string name="Badges_RingHaggler">获得还价戒指</string>
   <string name="Badges_RingThorns">获得荆棘戒指</string>
   <string name="Badges_StrengthAttained1">获得13点力量</string>

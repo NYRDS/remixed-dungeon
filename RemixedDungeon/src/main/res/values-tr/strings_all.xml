@@ -660,8 +660,6 @@ Görüşlerinizi önemsiyoruz!</string>
   <string name="StartScene_Warning">Şu anki ilerlemeniz silinecektir.</string>
   <string name="StartScene_Yes">Evet, yeni oyun başlat</string>
   <string name="StartScene_No">Hayır, ana menüye dön</string>
-  <string name="StartScene_Unlock">Bu karakter türünü açmak için, diğer türlerden biri ile 3. boss\'u öldür</string>
-  <string name="StartScene_UnlockElf">Bu karakter türünü açmak için, diğer türlerden biri ile 4. boss\'u öldür</string>
   <string name="StartScene_WinGame">\"Düellolar\"ı açmak için herhangi bir karakter türü ile oyunu bitir.</string>
   <string name="StartScene_DifficultySelect">Kaderini seç</string>
   <string name="StartScene_DifficultyEasy">Kolay (reklamlı)</string>
@@ -1500,12 +1498,6 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Badges_DeathGlyph">Kabartma yüzünden ölüm</string>
   <string name="Badges_DeathFalling">Aşağı düşerek ölüm</string>
   <string name="Badges_Yasd">Ateş, zehir, zehirli gaz ve açlık yüzünden ölüm</string>
-  <string name="Badges_BossSlain1">1. boss kesildi</string>
-  <string name="Badges_BossSlain2">2. boss kesildi</string>
-  <string name="Badges_BossSlain3">3. boss kesildi</string>
-  <string name="Badges_BossSlain4">4. boss kesildi</string>
-  <string name="Badges_BossSlain1All">1. boss tüm karakter türleri tarafından kesildi</string>
-  <string name="Badges_BossSlain3All">3. boss tüm alt karakter türleri tarafından kesildi</string>
   <string name="Badges_RingHaggler">Pazarlıkçı Yüzüğü kazanıldı</string>
   <string name="Badges_RingThorns">Diken Yüzüğü kazanıldı</string>
   <string name="Badges_StrengthAttained1">13 Güç puanına ulaşıldı</string>

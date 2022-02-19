@@ -610,7 +610,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             assert (anim != null);
         }
 
-
         if (curAnim == die) {
             return;
         }
@@ -629,7 +628,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 onComplete(anim);
                 skipAnim[0] = true;
             }
-
         });
 
         if(skipAnim[0]) {
