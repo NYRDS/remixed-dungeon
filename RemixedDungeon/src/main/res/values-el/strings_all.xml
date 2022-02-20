@@ -2656,7 +2656,7 @@
   <string name="InnKeeperNPC_Gender">masculine</string>
   <string name="InnKeeperNPC_Desc">Ο πανδοχέας φαίνεται υπερήφανος.</string>
   <string name="DrunkardNPC_Name">μέθυσος</string>
-  <string name="DrunkardNPC_Name_Objective">πότης</string>
+  <string name="DrunkardNPC_Name_Objective">μέθυσος</string>
   <string name="DrunkardNPC_Gender">masculine</string>
   <string name="DrunkardNPC_Desc">Ένας κοινός πελάτης του πανδοχείου στη φυσιολογική του κατάσταση.</string>
   <string name="MercenaryNPC_Name">μισθοφόρος</string>
