@@ -51,7 +51,7 @@ public class Paralysis extends FlavourBuff {
 	}
 
 	@Override
-	public int damage(int damage, NamedEntityKind src) {
+	public int charGotDamage(int damage, NamedEntityKind src) {
 		if (Random.Int(damage) >= Random.Int(target.hp())) {
 			detach();
 			if (CharUtils.isVisible(target)) {
@@ -59,7 +59,7 @@ public class Paralysis extends FlavourBuff {
 			}
 		}
 
-		return super.damage(damage, src);
+		return super.charGotDamage(damage, src);
 	}
 
 	@Override

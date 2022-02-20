@@ -70,9 +70,9 @@ public class Frost extends FlavourBuff {
 	}
 
 	@Override
-	public int damage(int damage, NamedEntityKind src) {
+	public int charGotDamage(int damage, NamedEntityKind src) {
 		detach();
-		return super.damage(damage, src);
+		return super.charGotDamage(damage, src);
 	}
 
 	@Override

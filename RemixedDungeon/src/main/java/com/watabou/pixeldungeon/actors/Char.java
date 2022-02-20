@@ -731,7 +731,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		}
 
 		final int[] dmg_ = {dmg};
-		forEachBuff(b -> dmg_[0] = b.damage( dmg_[0], src));
+		forEachBuff(b -> dmg_[0] = b.charGotDamage( dmg_[0], src));
 		dmg = dmg_[0];
 
 		dmg = resist(dmg, src);

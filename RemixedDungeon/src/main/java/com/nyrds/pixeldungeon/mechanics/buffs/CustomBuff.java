@@ -206,7 +206,7 @@ public class CustomBuff extends Buff {
     }
 
     @Override
-    public int damage(int damage, NamedEntityKind src) {
-        return  script.runOptional("damage",super.damage(damage, src), damage, src);
+    public int charGotDamage(int damage, NamedEntityKind src) {
+        return  script.runOptional("damage",super.charGotDamage(damage, src), damage, src);
     }
 }
