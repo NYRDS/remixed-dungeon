@@ -19,7 +19,7 @@ public class WndInGameUiSettings extends WndMenuCommon {
 
 		menuItems.add(createUiZoomButtons());
 		menuItems.add(createQuickSlotsSelector());
-        menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_ActionButtonSize)){
+        menuItems.add(new MenuButton(R.string.WndSettings_ActionButtonSize){
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -32,7 +32,7 @@ public class WndInGameUiSettings extends WndMenuCommon {
 			}
 		});
 
-        menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_Handedness)){
+        menuItems.add(new MenuButton(R.string.WndSettings_Handedness){
 			@Override
 			protected void onClick() {
 				super.onClick();

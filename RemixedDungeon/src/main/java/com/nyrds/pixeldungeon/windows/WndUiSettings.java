@@ -15,7 +15,7 @@ public class WndUiSettings extends WndMenuCommon {
 	protected void createItems() {
 
 		if (android.os.Build.VERSION.SDK_INT >= 19) {
-            menuItems.add( new MenuCheckBox(StringsManager.getVar(R.string.WndSettings_Immersive), GamePreferences.immersed()) {
+            menuItems.add( new MenuCheckBox(R.string.WndSettings_Immersive, GamePreferences.immersed()) {
 				@Override
 				protected void onClick() {
 					super.onClick();

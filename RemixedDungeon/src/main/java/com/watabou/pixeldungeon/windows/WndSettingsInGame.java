@@ -48,7 +48,7 @@ public class WndSettingsInGame extends WndMenuCommon {
 
 		menuItems.add(createZoomButtons());
 
-		var isometricModeCheckBox = new MenuCheckBox(StringsManager.getVar(R.string.WndSettingsInGame_IsometricTiles), Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false)) {
+		var isometricModeCheckBox = new MenuCheckBox(R.string.WndSettingsInGame_IsometricTiles, Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false)) {
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -62,7 +62,7 @@ public class WndSettingsInGame extends WndMenuCommon {
 		menuItems.add(isometricModeCheckBox);
 
 		
-		menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_InGameUiSettings)){
+		menuItems.add(new MenuButton(R.string.WndSettings_InGameUiSettings){
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -71,7 +71,7 @@ public class WndSettingsInGame extends WndMenuCommon {
 		});
 
 		if(Game.instance().playGames.isConnected()) {
-            menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_RecordVideo)) {
+            menuItems.add(new MenuButton(R.string.WndSettings_RecordVideo) {
 				@Override
 				protected void onClick() {
 					super.onClick();
@@ -81,7 +81,7 @@ public class WndSettingsInGame extends WndMenuCommon {
 			});
 		}
 
-		menuItems.add( new MenuCheckBox("Glog",GLog.enabled) {
+		menuItems.add( new MenuCheckBox(R.string.WndSettingsInGame_GameLog,GLog.enabled) {
 			@Override
 			protected void onClick() {
 				super.onClick();

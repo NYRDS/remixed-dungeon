@@ -31,7 +31,7 @@ public class WndSettings extends WndMenuCommon {
 	protected void createItems() {
 		addSoundControls(menuItems);
 
-        menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_UiSettings)){
+        menuItems.add(new MenuButton(R.string.WndSettings_UiSettings){
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -39,7 +39,7 @@ public class WndSettings extends WndMenuCommon {
 			}
 		});
 
-        menuItems.add(new MenuButton(StringsManager.getVar(R.string.WndSettings_GameplaySettings)){
+        menuItems.add(new MenuButton(R.string.WndSettings_GameplaySettings){
 			@Override
 			protected void onClick() {
 				super.onClick();
