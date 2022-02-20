@@ -1590,7 +1590,7 @@
   <string name="TownsfolkMovieNPC_Gender">masculine</string>
   <string name="TownsfolkMovieNPC_Name_Objective">κάτοικος</string>
   <string name="TownsfolkMovieNPC_Desc">Ένας από τους ντόπιους. Αν και δεν είναι παρά ένας απλός κάτοικος, αυτά τα ρούχα φαίνονται ακριβά.</string>
-  <string name="TownsfolkMovieNPC_Message">Γνωρίζεις κάτι για την υπηρεσία που παρέχουν στον «κινηματογράφο»; Κρίμα που ζητούν κάποιο εξωτικό αγαθό που το λένε «Ίντερνετ»... Δεν έχω ξανακούσει ποτέ κάτι τέτοιο.</string>
+  <string name="TownsfolkMovieNPC_Message">Γνωρίζεις κάτι για την υπηρεσία που παρέχουν στον «κινηματογράφο»; Κρίμα που ζητούν κάποιο εξωτικό αγαθό που το λένε «Ίντερνετ»... δεν έχω ξανακούσει ποτέ κάτι τέτοιο.</string>
   <string name="LibrarianNPC_Name">βιβλιοθηκάριος</string>
   <string name="LibrarianNPC_Gender">masculine</string>
   <string name="LibrarianNPC_Name_Objective">βιβλιοθηκάριος</string>
@@ -2831,4 +2831,10 @@
   <string name="WndSettingsInGame_IsometricTiles">Ισομετρικά τετράγωνα</string>
   <string name="KrampusHead_Name">Κεφάλι του Κράμπους</string>
   <string name="KrampusHead_Info">Έχεις ποτέ αναρωτηθεί πώς θα ήταν αν υιοθετούσες έναν πιο διαβολικό ρόλο στις εξερευνήσεις σου; Ε, λοιπόν, σίγουρα θα σπείρεις τον τρόμο στα απανταχού μωρά των αρουραίων με αυτήν τη διαβολική αμφίεση.</string>
+
+  <string name="WndSettingsInGame_GameLog">Καταγραφή παιχνιδιού</string>
+  <string name="Froth_ArrowInKnee">Ήμουν, κάποτε, κι εγώ εξερευνητής...\nΜέχρι που έφαγα βέλος στο γόνατο...</string>
+
+  <string name="BardSong_1">Ζούσαμε μονάχοι η γυναίκα μου κι εγώ\nΣε μια μικρή καλύβα, το μικρό μας σπιτικό\nΤο τζιν και το ρούμι μάς κρατούσαν συντροφιά\nΤης αγάπης μας υπήρξε ζεστή η αγκαλιά</string>
+
 </resources>
