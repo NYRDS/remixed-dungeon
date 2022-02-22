@@ -606,7 +606,7 @@
   <string name="SlowBuff_Name">Επιβράδυνση</string>
   <string name="SlowBuff_Info">Μια αίσθηση οκνηρότητας που κάνει κάποιον πιο αργό από το συνηθισμένο.</string>
   <string name="SleepBuff_Name">Ύπνος</string>
-  <string name="SleepBuff_Info">Στην αγγάλη του ύπνου.</string>
+  <string name="SleepBuff_Info">Στην αγκάλη του ύπνου.</string>
   <string name="SnipersMarkBuff_Name">Σημάδι του σκοπευτή</string>
   <string name="SnipersMarkBuff_Info">Το σημάδι τοποθετήθηκε από κάποιον σκοπευτή.</string>
   <string name="SpeedBuff_Name">Ταχύτητα</string>
