@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
-  <string name="ChaosHelmet_Name">Χαοτικό κράνος</string>
+  <string name="ChaosHelmet_Name">Κράνος του Χάους</string>
   <string name="ChaosHelmet_Info">Ένα αιμάτινο κόκκινο κράνος είναι το απαραίτητο σύμβολο του Πολεμιστή του Χάους.</string>
   <string name="Spells_SummonLimitReached">%1$s: έφτασες το όριο κλητεύσεων (τρέχον μέγιστο: %2$d)!</string>
   <string name="Mana_Title">Μαγική ενέργεια</string>
@@ -117,9 +117,9 @@
   <string name="Possess_Name">Κατοχή</string>
   <string name="Possess_Info">Η σκοτεινή τέχνη του ελέγχου του νου επιτρέπει στον χρήστη να υποτάσσει τη θέληση των περισσότερων πλασμάτων.</string>
   <string name="Possess_PossessionFailed">Η θέληση του στόχου (%s) είναι πολύ ισχυρή.</string>
-  <string name="Possess_Possessed">Το πλάσμα (%s) αναμένει τις διαταγές σου.</string>
+  <string name="Possess_Possessed">%s: αναμένει τις διαταγές σου</string>
   <string name="Possess_CantPossessSelf">Δεν μπορείς να κυριεύσεις τον εαυτό σου.</string>
-  <string name="Mob_StaControlledStatus">Το πλάσμα (%s) βρίσκεται υπό ανίερη κατοχή.</string>
+  <string name="Mob_StaControlledStatus">%s: υπό ανίερη κατοχή</string>
   <string name="BlackCat_AiStatus">Η γάτα κάνει συνηθισμένα γατίσια πράγματα.</string>
   <string name="Shopkeeper_Buy">Επίλεξε αντικείμενο προς αγορά</string>
   <string name="Shopkeeper_title">Κατάστημα</string>
@@ -792,9 +792,9 @@
   <string name="gdpr_choose">Παρακαλούμε επιλέξτε</string>
   <string name="Mob_StaHuntingStatus2">%1$s καταδιώκει: %2$s</string>
   <string name="Mob_StaFleeingStatus2">%1$s το σκάει από: %2$s</string>
-  <string name="Mob_StaTerrorStatus">Αυτό το πλάσμα (%1$s) είναι τρομοκρατημένο</string>
+  <string name="Mob_StaTerrorStatus">%1$s: έχει τρομοκρατηθεί</string>
   <string name="Mob_StaTerrorStatus2">%1$s τρομοκρατήθηκε από: %2$s</string>
-  <string name="Mob_StaAmokStatus">Αυτό το πλάσμα (%1$s) έχει κυριευτεί από αμόκ.</string>
+  <string name="Mob_StaAmokStatus">%1$s: σε αμόκ</string>
   <string name="WndSaveSlotSelect_LoadAutoSave">Αυτόματη αποθήκευση</string>
   <string name="TownScript_NeedWeapon">Δεν θα μπω στην κατακόμβη με γυμνά χέρια!\nΜήπως πρέπει να επισκευτώ το κατάστημα της πόλης μια φορά;</string>
   <string name="WndDonate_silver">Ασημένια</string>
@@ -2810,7 +2810,7 @@
   <string name="Bee_Gender">feminine</string>
   <string name="Bee_Name_Objective">μέλισσα</string>
   <string name="Bee_Desc">Παρά το μικρό τους μέγεθος, οι μέλισσες προστατεύουν σθεναρά την κυψέλη τους. Δεν ζουν, όμως, για πολύ.</string>
-  <string name="Moongrace_Name">Εύνοια της Σελήνης</string>
+  <string name="Moongrace_Name">Σεληνόχρισμα</string>
   <string name="Moongrace_Desc">Αυτά τα φυτά μεγαλώνουν σε μικρούς αριθμούς και είναι γνωστά ως πηγές φυσικής μαγείας.</string>
   <string name="MoongraceBuff_Name">Ουράνια μαγεία</string>
   <string name="MoongraceBuff_Info">Ο αέρας αποκτά ανώτερη υγρασία, κάτι που αυξάνει τη συγκέντρωση και την ανάκτηση των μαγικών αποθεμάτων.</string>
