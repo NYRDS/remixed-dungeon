@@ -925,7 +925,7 @@
   <string name="Darkness_Info">Κομμάτια του αιώνιου σκότους φαίνονται να ίπτανται στον αέρα.</string>
   <string name="WndSelectLanguage_ImproveTranslation">Βοηθήστε στη βελτίωση των μεταφράσεων του Remixed Dungeon</string>
   <string name="WndSelectLanguage_LinkToTranslationSite">Κάντε κλικ για να συμμετάσχετε στην ομάδα μετάφρασης του Remixed Dungeon.</string>
-  <string name="ArmoredStatue_Name">Κινούμενο άγαλμα</string>
+  <string name="ArmoredStatue_Name">κινούμενο άγαλμα</string>
   <string name="ArmoredStatue_Gender">neuter</string>
   <string name="ArmoredStatue_Name_Objective">Κινούμενο άγαλμα</string>
   <string name="ArmoredStatue_Desc">Κανείς δεν θα σκεφτόταν ότι είναι άλλο ένα από τα κοινά αγάλματα. Όχι μόνο από τα λαμπερά κόκκινα μάτια του, αλλά κι από το γεγονός ότι κανείς δεν θα έβαζε μια _%s_ σε αυτό το πράγμα.</string>
@@ -1984,7 +1984,7 @@
   <string name="MageArmor_NotMage">Αυτή η πανοπλία είναι μόνο για Μάγους!</string>
   <string name="MailArmor_Name">αλυσιδωτή πανοπλία</string>
   <string name="MailArmor_Desc">Οι αλληλένδετοι μεταλλικοί κρίκοι δημιουργούν μια ανθεκτική αλλά και ευέλικτη πανοπλία.</string>
-  <string name="PlateArmor_Name">Μεταλλική πανοπλία</string>
+  <string name="PlateArmor_Name">μεταλλική πανοπλία</string>
   <string name="PlateArmor_Desc">Η πανοπλία αποτελείται από τεράστιες μεταλλικές πλάκες ενωμένες μεταξύ τους. Προσφέρει απαράμιλλη προστασία σε κάθε δυνατό εξερευνητή που θα αντέξει το τεράστιο βάρος της.</string>
   <string name="RogueArmor_Name">ένδυμα κλεφτών</string>
   <string name="RogueArmor_Desc">Με αυτό το ένδυμα, ο Κλέφτης μπορεί να επιτελέσει ένα κόλπο γνωστό και ως «καπνοβομβίδα» (αν και δεν χρησιμοποιούνται πραγματικά εκρηκτικά). Τυφλώνει τους εχθρούς που μπορούν να τον δουν και αναπηδά παραπέρα.</string>
