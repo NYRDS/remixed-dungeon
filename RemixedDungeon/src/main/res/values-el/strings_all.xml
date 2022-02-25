@@ -477,7 +477,7 @@
   <string name="LloidsBeacon_Preventing">Η ισχυρή μαγική αύρα αυτού του μέρους αποτρέπει τη χρήση του πομπού του Lloyd!</string>
   <string name="LloidsBeacon_Creatures">Η ψυχική αύρα των κοντινών πλασμάτων αποτρέπει τη χρήση του πομπού του Lloyd.</string>
   <string name="LloidsBeacon_Return">Ο πομπός του Lloyd έχει οριστεί στην τρέχουσα θέση. Μπορείς πλέον να επιστρέψεις εδώ ανά πάσα στιγμή.</string>
-  <string name="LloidsBeacon_Set">\n\nΟ πομπός έχει οριστεί κάπου στο %dο επίπεδο στην κατακόμβη.</string>
+  <string name="LloidsBeacon_Set">\n\nΟ πομπός έχει οριστεί κάπου στο επίπεδο %d της κατακόμβης.</string>
   <string name="Stylus_Name">απόκρυφο κονδύλι</string>
   <string name="Stylus_ACInscribe">ΧΑΡΑΞΕ</string>
   <string name="Stylus_Info">Το απόκρυφο κονδύλι είναι φτιαγμένο από κάποια σκοτεινή, πολύ σκληρή πέτρα. Με αυτό μπορείς να χαράξεις έναν γλύφο ή ρούνο, αλλά δεν μπορείς να διαλέξεις ποιος θα είναι· το κονδύλι θα αποφασίσει για εσένα.</string>
@@ -861,7 +861,7 @@
   <string name="Fez_Name">Φέσι</string>
   <string name="Fez_Info">Ένα καπέλο από κόκκινο ύφασμα στο σχήμα ενός ατελούς κώνου, με έναν θύσανο τοποθετημένο στην κορυφή. Και όχι· δεν κάνει τον κόσμο τρισδιάστατο.</string>
   <string name="NekoEars_Name">Αυτιά Neko</string>
-  <string name="NekoEars_Info">Κάποιες φορές θες να ξεπλύνεις όλο το αίμα τεράτων και τη βρομιά από πάνω σου, και να αφεθείς στη χάρη και την ανεμελιά. Ή μπορείς απλά να φοράς χαριτωμένα γατίσια αυτιά.</string>
+  <string name="NekoEars_Info">Κάποιες φορές, θες απλά να ξεπλύνεις το αίμα των τεράτων και τη βρομιά από πάνω σου και να νιώσεις τη χάρη και την ανεμελιά. Ή μπορείς απλά να φοράς δυο χαριτωμένα γατίσια αυτιά.</string>
   <string name="RabbitEars_Name">Λαγουδίσια αυτιά</string>
   <string name="RabbitEars_Info">Υπάρχει η φήμη ότι τα λαγουδάκια είναι από γεννησιμιού τους τυχερά, και πως όποιος κατέχει ένα τμήμα τους θα συντροφεύεται από την καλοτυχία του ζώου. Αν το καλοσκεφτείς, το να σε σκοτώνουν για τα αυτιά σου --με τα οποία φτιάχνουν τέτοια διακοσμητικά στοιχεία-- δεν σε κάνει και πολύ τυχερό.</string>
   <string name="Pumpkin_Name">Κολοκύθα</string>
@@ -925,7 +925,7 @@
   <string name="Darkness_Info">Κομμάτια του αιώνιου σκότους φαίνονται να ίπτανται στον αέρα.</string>
   <string name="WndSelectLanguage_ImproveTranslation">Βοηθήστε στη βελτίωση των μεταφράσεων του Remixed Dungeon</string>
   <string name="WndSelectLanguage_LinkToTranslationSite">Κάντε κλικ για να συμμετάσχετε στην ομάδα μετάφρασης του Remixed Dungeon.</string>
-  <string name="ArmoredStatue_Name">Κινούμενο άγαλμα</string>
+  <string name="ArmoredStatue_Name">κινούμενο άγαλμα</string>
   <string name="ArmoredStatue_Gender">neuter</string>
   <string name="ArmoredStatue_Name_Objective">Κινούμενο άγαλμα</string>
   <string name="ArmoredStatue_Desc">Κανείς δεν θα σκεφτόταν ότι είναι άλλο ένα από τα κοινά αγάλματα. Όχι μόνο από τα λαμπερά κόκκινα μάτια του, αλλά κι από το γεγονός ότι κανείς δεν θα έβαζε μια _%s_ σε αυτό το πράγμα.</string>
@@ -992,8 +992,8 @@
   <string name="HeroSubClass_DescScout">Τα Ξωτικά _Ανιχνευτές_ είναι αυθεντίες στην κάλυψη. Όποτε ποδοπατούν ψηλό γρασίδι, λαμβάνουν μια προσωρινή επίδραση αορατότητας. Επιπλέον, είναι ακόμα πιο γρήγορα από τα κοινά Ξωτικά.</string>
   <string name="HeroSubClass_NameShaman">Σαμάνος</string>
   <string name="HeroSubClass_DescShaman">Οι _Σαμάνοι_ των ξωτικών χρησιμοποιούν τα ραβδιά τους ως όπλα μάχης σώμα-με-σώμα. Ένα επιτυχημένο χτύπημα έχει την πιθανότητα να ενεργοποιήσει τη δύναμη του ραβδιού χωρίς να ξοδέψει φορτίο.</string>
-  <string name="SantaHat_Name">Καπέλο του Σάντα</string>
-  <string name="SantaHat_Info">Τίποτα δεν σε βάζει καλύτερα σε «κατακομβική» διάθεση από αυτό. Είναι το μεταξωτό κόκκινο καπέλο του Σάντα, του άρχοντα των εγκάτων.</string>
+  <string name="SantaHat_Name">Σκουφί του Σάντα</string>
+  <string name="SantaHat_Info">Τίποτα δεν σε βάζει περισσότερο σε «κατακομβική» διάθεση από αυτό. Είναι το κόκκινο μεταξωτό σκουφί του Σάντα, του άρχοντα των εγκάτων.</string>
   <string name="Rudolph_Name">Κέρατα και κόκκινη μύτη</string>
   <string name="Rudolph_Info">Τι πιο εορταστικό από μια λαμπερή κόκκινη μύτη; Μαζί με ένα ζευγάρι κέρατα, φυσικά.</string>
   <string name="Kobold_Name">καλικάντζαρος</string>
@@ -1536,7 +1536,7 @@
   <string name="Ushanka_Name">Ουσάνκα</string>
   <string name="Ushanka_Info">Ένα ζεστό και άνετο καπέλο ουσάνκα, διακοσμημένο με κόκκινο αστέρι. Ο τέλειος σύμμαχος για όποιον ακόμα οραματίζεται περασμένα μεγαλεία ενός ξεπεσμένου καθεστώτος.</string>
   <string name="VampireSkull_Name">Κρανίο βρυκόλακα</string>
-  <string name="VampireSkull_Info">Αυτή η μάσκα είναι φτιαγμένη από ένα φυσικό κρανίο βρυκόλακα. Βασικά είναι όντως ένα μεγάλο κρανίο βρυκόλακα... Αρρωστημένο.</string>
+  <string name="VampireSkull_Info">Αυτή η μάσκα είναι φτιαγμένη από ένα 100% φυσικό κρανίο βρυκόλακα. Με απλά λόγια, είναι ένα πραγματικό κρανίο από βρυκόλακα... Αρρωστημένο.</string>
   <string name="ZombieMask_Name">Μάσκα ζόμπι</string>
   <string name="ZombieMask_Info">Έχεις ευχηθεί ποτέ να μοιάζεις με απέθαντο ήρωα, που έχει αποτύχει επανειλημμένα στην αποστολή του; Ιδού η ευκαιρία.</string>
   <string name="Candy_Name">ζαχαρωτό</string>
@@ -1984,7 +1984,7 @@
   <string name="MageArmor_NotMage">Αυτή η πανοπλία είναι μόνο για Μάγους!</string>
   <string name="MailArmor_Name">αλυσιδωτή πανοπλία</string>
   <string name="MailArmor_Desc">Οι αλληλένδετοι μεταλλικοί κρίκοι δημιουργούν μια ανθεκτική αλλά και ευέλικτη πανοπλία.</string>
-  <string name="PlateArmor_Name">Μεταλλική πανοπλία</string>
+  <string name="PlateArmor_Name">μεταλλική πανοπλία</string>
   <string name="PlateArmor_Desc">Η πανοπλία αποτελείται από τεράστιες μεταλλικές πλάκες ενωμένες μεταξύ τους. Προσφέρει απαράμιλλη προστασία σε κάθε δυνατό εξερευνητή που θα αντέξει το τεράστιο βάρος της.</string>
   <string name="RogueArmor_Name">ένδυμα κλεφτών</string>
   <string name="RogueArmor_Desc">Με αυτό το ένδυμα, ο Κλέφτης μπορεί να επιτελέσει ένα κόλπο γνωστό και ως «καπνοβομβίδα» (αν και δεν χρησιμοποιούνται πραγματικά εκρηκτικά). Τυφλώνει τους εχθρούς που μπορούν να τον δουν και αναπηδά παραπέρα.</string>
