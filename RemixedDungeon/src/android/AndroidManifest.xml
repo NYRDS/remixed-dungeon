@@ -44,8 +44,10 @@
         tools:replace="android:fullBackupContent"
         android:fullBackupContent="@xml/backup_descriptor"
         android:requestLegacyExternalStorage="true"
-        android:banner="@drawable/ic_launcher">
+        android:banner="@drawable/ic_launcher"
+        >
 
+        <profileable android:shell="true" android:enabled="true"/>
 
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
 

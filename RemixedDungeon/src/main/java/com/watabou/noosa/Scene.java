@@ -64,13 +64,13 @@ public class Scene extends Group {
 
 	@Override
 	public void update() {
-		/*
-		activeWindows.clear();
-		int windowIndex = -1;
-		while((windowIndex = findByClass(Window.class, windowIndex+1))>0) {
-			activeWindows.add((Window)getMember(windowIndex));
+		if(sceneMode.equals(Scene.LEVELS_TEST)) {
+			activeWindows.clear();
+			int windowIndex = -1;
+			while ((windowIndex = findByClass(Window.class, windowIndex + 1)) > 0) {
+				activeWindows.add((Window) getMember(windowIndex));
+			}
 		}
-		 */
 
 		totalGizmo = 0;
 		nullGizmo = 0;
