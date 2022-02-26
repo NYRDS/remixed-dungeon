@@ -28,17 +28,26 @@
          "y":13
         }, 
         {
-          "kind":"CustomObject",
-          "object_desc":"statue",
+         "kind":"CustomObject",
+         "object_desc":"statue",
          "x":4,
          "y":15
-        }, 
+        },
         {
          "kind":"Deco",
          "object_desc":"candle",
          "x":6,
          "y":15
         },
+       {
+         "kind": "Trap",
+         "x": 6,
+         "y": 15,
+         "uses": 2000,
+         "trapKind": "scriptFile",
+         "script": "scripts/traps/Disarm",
+         "activatedByItem": true
+       },
        {
          "kind":"CustomObject",
          "object_desc":"well",

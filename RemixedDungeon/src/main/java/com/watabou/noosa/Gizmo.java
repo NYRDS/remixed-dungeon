@@ -24,6 +24,8 @@ import org.jetbrains.annotations.NotNull;
 public class Gizmo {
 
 	static public int isometricModeShift = -7;
+
+	public int    layer;
 	public boolean exists;
 	public boolean alive;
 	public boolean active;

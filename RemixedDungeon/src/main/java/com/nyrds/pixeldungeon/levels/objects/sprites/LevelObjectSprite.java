@@ -86,6 +86,8 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 		setLevelPos(object.getPos());
 		setVisible(!object.secret());
 
+		layer = object.getLayer();
+
 		object.resetVisualState();
 	}
 

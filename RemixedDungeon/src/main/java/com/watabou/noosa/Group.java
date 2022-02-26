@@ -27,6 +27,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Objects;
 
 import lombok.SneakyThrows;
@@ -193,6 +194,11 @@ public class Group extends Gizmo {
 
 	public Gizmo getMember(int i) {
 		return members.get(i);
+	}
+
+	public void sort() {
+		members.removeAll(Collections.singleton(null));
+		Collections.sort(members, (a,b)-> a.layer - b.layer);
 	}
 
 	//Testing stuff

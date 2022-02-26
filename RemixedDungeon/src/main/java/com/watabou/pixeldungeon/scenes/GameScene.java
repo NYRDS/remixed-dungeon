@@ -106,6 +106,8 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 
 import lombok.var;
@@ -157,6 +159,7 @@ public class GameScene extends PixelScene {
 
     private volatile boolean sceneCreated = false;
     private          float   waterSx      = 0, waterSy = -5;
+    private boolean objectSortingRequested;
 
 
     public void updateUiCamera() {
@@ -555,6 +558,9 @@ public class GameScene extends PixelScene {
             return;
         }
 
+        if(objectSortingRequested) {
+            objects.sort();
+        }
         super.update();
 
         water.offset(waterSx * GameLoop.elapsed, waterSy * GameLoop.elapsed);
@@ -617,6 +623,7 @@ public class GameScene extends PixelScene {
         obj.lo_sprite = WeakOptional.of( (LevelObjectSprite)objects.recycle(LevelObjectSprite.class) );
         obj.lo_sprite.ifPresent (sprite -> sprite.reset(obj));
         obj.addedToScene();
+        objectSortingRequested = true;
     }
 
     private void addHeapSprite(@NotNull Heap heap) {
