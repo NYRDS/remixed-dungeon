@@ -44,8 +44,8 @@ public class SparkParticle extends PixelParticle {
 	public void reset( float x, float y ) {
 		revive();
 		
-		this.x = x;
-		this.y = y;
+		this.setX(x);
+		this.setY(y);
 		
 		left = lifespan = Random.Float( 0.5f, 1.0f );
 		

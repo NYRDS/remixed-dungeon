@@ -114,8 +114,8 @@ public class StartScene extends PixelScene {
         Image title = BannerSprites.get(Type.SELECT_YOUR_HERO);
 
         title.setScale(0.85f, 0.85f);
-        title.x = align((w - title.width()) / 2);
-        title.y = align(top);
+        title.setX(align((w - title.width()) / 2));
+        title.setY(align(top));
 
         add(title);
 
@@ -153,7 +153,7 @@ public class StartScene extends PixelScene {
         };
         add(btnLoad);
 
-        float centralHeight = buttonY - title.y - title.height();
+        float centralHeight = buttonY - title.getY() - title.height();
 
         int usableClasses = 0;
 
@@ -170,7 +170,7 @@ public class StartScene extends PixelScene {
         if (RemixedDungeon.landscape()) {
             float shieldW = width / usableClasses;
             float shieldH = Math.min(centralHeight, shieldW);
-            top = title.y + title.height + (centralHeight - shieldH) / 2;
+            top = title.getY() + title.height + (centralHeight - shieldH) / 2;
             int i = 0;
             for (ClassShield shield : shields) {
                 shield.setRect(left + i * shieldW, top, shieldW, shieldH);
@@ -185,7 +185,7 @@ public class StartScene extends PixelScene {
             int classesPerRow = 4;
             float shieldW = width / (classesPerRow);
             float shieldH = shieldW * 1.2f;
-            top = title.y + title.height() + shieldH * 0.25f;
+            top = title.getY() + title.height() + shieldH * 0.25f;
             int i = 0;
             int j = 0;
             for (ClassShield shield : shields) {
@@ -245,8 +245,8 @@ public class StartScene extends PixelScene {
                 + (BUTTON_HEIGHT - unlock.height()) / 2;
 
         unlock.hardlight(0xFFFF00);
-        unlock.x = PixelScene.align(Camera.main.width / 2 - unlock.width() / 2);
-        unlock.y = PixelScene.align(pos);
+        unlock.setX(PixelScene.align(Camera.main.width / 2 - unlock.width() / 2));
+        unlock.setY(PixelScene.align(pos));
 
         unlock.setVisible(true);
         btnLoad.setVisible(false);
@@ -383,7 +383,7 @@ public class StartScene extends PixelScene {
             this.cl = cl;
 
             avatar.frame(cl.classIndex() * WIDTH, 0, WIDTH, HEIGHT);
-            avatar.Scale().set(SCALE);
+            avatar.setScale(SCALE);
 
             if (Badges.isUnlocked(cl.masteryBadge())) {
                 normal = MASTERY_NORMAL;
@@ -420,13 +420,13 @@ public class StartScene extends PixelScene {
 
             super.layout();
 
-            avatar.x = align(x + (width - avatar.width()) / 2);
-            avatar.y = align(y + (height - avatar.height() - name.height()) / 2);
+            avatar.setX(align(x + (width - avatar.width()) / 2));
+            avatar.setY(align(y + (height - avatar.height() - name.height()) / 2));
 
-            name.x = align(x + (width - name.width()) / 2);
-            name.y = avatar.y + avatar.height() + SCALE;
+            name.setX(align(x + (width - name.width()) / 2));
+            name.setY(avatar.getY() + avatar.height() + SCALE);
 
-            emitter.pos(avatar.x, avatar.y, avatar.width(), avatar.height());
+            emitter.pos(avatar.getX(), avatar.getY(), avatar.width(), avatar.height());
         }
 
         @Override

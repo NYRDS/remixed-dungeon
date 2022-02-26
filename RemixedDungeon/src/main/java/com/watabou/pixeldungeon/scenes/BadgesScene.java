@@ -57,14 +57,14 @@ public class BadgesScene extends PixelScene {
 		
 		NinePatch panel = Chrome.get( Chrome.Type.WINDOW );
 		panel.size( pw, ph );
-		panel.x = (w - pw) / 2;
-		panel.y = (h - ph) / 2;
+		panel.setX((w - pw) / 2);
+		panel.setY((h - ph) / 2);
 		add( panel );
 
         Text title = PixelScene.createText(StringsManager.getVar(R.string.BadgesScene_Title), GuiProperties.titleFontSize());
 		title.hardlight( Window.TITLE_COLOR );
-		title.x = align( (w - title.width()) / 2 );
-		title.y = align( (panel.y - title.baseLine()) / 2 );
+		title.setX(align( (w - title.width()) / 2 ));
+		title.setY(align( (panel.getY() - title.baseLine()) / 2 ));
 		add( title );
 		
 		Badges.loadGlobal();
@@ -73,8 +73,8 @@ public class BadgesScene extends PixelScene {
 		add( list );
 		
 		list.setRect( 
-			panel.x + panel.marginLeft(), 
-			panel.y + panel.marginTop(), 
+			panel.getX() + panel.marginLeft(),
+			panel.getY() + panel.marginTop(),
 			panel.innerWidth(), 
 			panel.innerHeight() );
 		

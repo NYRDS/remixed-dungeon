@@ -83,7 +83,7 @@ public class Pushing extends Actor {
 			point( ch.getSprite().worldToCamera( from ) );
 			end = ch.getSprite().worldToCamera( to );
 			
-			speed.set( 2 * (end.x - x) / DELAY, 2 * (end.y - y) / DELAY );
+			speed.set( 2 * (end.x - getX()) / DELAY, 2 * (end.y - getY()) / DELAY );
 			acc.set( -speed.x / DELAY, -speed.y / DELAY );
 			
 			delay = 0;
@@ -97,8 +97,8 @@ public class Pushing extends Actor {
 			
 			if ((delay += GameLoop.elapsed) < DELAY) {
 
-				ch.getSprite().x = x;
-				ch.getSprite().y = y;
+				ch.getSprite().setX(getX());
+				ch.getSprite().setY(getY());
 				
 			} else {
 

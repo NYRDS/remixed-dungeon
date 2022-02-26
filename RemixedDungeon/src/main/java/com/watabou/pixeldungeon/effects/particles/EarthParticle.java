@@ -42,8 +42,8 @@ public class EarthParticle extends PixelParticle {
 	public void reset( float x, float y ) {
 		revive();
 		
-		this.x = x;
-		this.y = y;
+		this.setX(x);
+		this.setY(y);
 
 		left = lifespan;
 	}

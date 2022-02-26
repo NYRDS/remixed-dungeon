@@ -50,15 +50,15 @@ public class WelcomeScene extends PixelScene {
 
 		title.maxWidth(pw);
 
-		title.x = align((w - title.width()) / 2);
-		title.y = align(8);
+		title.setX(align((w - title.width()) / 2));
+		title.setY(align(8));
 		add(title);
 
 		NinePatch panel = Chrome.get(Chrome.Type.WINDOW);
 
-		panel.x = (w - pw) / 2;
-		panel.y = title.y + title.height() + GAP * 2;
-		int ph = (int) (h - panel.y - 22);
+		panel.setX((w - pw) / 2);
+		panel.setY(title.getY() + title.height() + GAP * 2);
+		int ph = (int) (h - panel.getY() - 22);
 
 		panel.size(pw, ph);
 
@@ -66,7 +66,7 @@ public class WelcomeScene extends PixelScene {
 
 		ScrollPane list = new ScrollPane(new Component());
 		add(list);
-		list.setRect(panel.x + panel.marginLeft(), panel.y + panel.marginTop(), panel.innerWidth(),
+		list.setRect(panel.getX() + panel.marginLeft(), panel.getY() + panel.marginTop(), panel.innerWidth(),
 				panel.innerHeight());
 		list.scrollTo(0, 0);
 

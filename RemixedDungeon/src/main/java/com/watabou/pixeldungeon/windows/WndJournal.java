@@ -50,7 +50,7 @@ public class WndJournal extends WndTabbed {
 
         Text txtTitle = PixelScene.createText(StringsManager.getVar(R.string.WndJournal_Title), GuiProperties.titleFontSize());
         txtTitle.hardlight(Window.TITLE_COLOR);
-        txtTitle.x = PixelScene.align(PixelScene.uiCamera, (width - txtTitle.width()) / 2);
+        txtTitle.setX(PixelScene.align(PixelScene.uiCamera, (width - txtTitle.width()) / 2));
         add(txtTitle);
 
         list = new ScrollPane(new Component());
@@ -105,14 +105,14 @@ public class WndJournal extends WndTabbed {
 
         @Override
         protected void layout() {
-            icon.x = width - icon.width;
+            icon.setX(width - icon.width);
 
-            depth.x = icon.x - 1 - depth.width();
-            depth.y = PixelScene.align(y + (height - depth.height()) / 2);
+            depth.setX(icon.getX() - 1 - depth.width());
+            depth.setY(PixelScene.align(y + (height - depth.height()) / 2));
 
-            icon.y = depth.y - 1;
+            icon.setY(depth.getY() - 1);
 
-            feature.y = PixelScene.align(depth.y + depth.baseLine() - feature.baseLine());
+            feature.setY(PixelScene.align(depth.getY() + depth.baseLine() - feature.baseLine()));
         }
     }
 
@@ -142,7 +142,7 @@ public class WndJournal extends WndTabbed {
 
         @Override
         protected void layout() {
-            logEntry.y = PixelScene.align(y);
+            logEntry.setY(PixelScene.align(y));
         }
     }
 

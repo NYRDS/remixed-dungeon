@@ -26,8 +26,8 @@ public class Tab extends Button {
 		super.layout();
 		
 		if (bg != null) {
-			bg.x = x;
-			bg.y = y;
+			bg.setX(x);
+			bg.setY(y);
 			bg.size( width, height );
 		}
 	}

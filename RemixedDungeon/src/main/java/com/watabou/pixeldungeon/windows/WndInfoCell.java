@@ -118,8 +118,8 @@ public class WndInfoCell extends Window {
 
         info.text( desc.length() > 0 ? desc.toString() : StringsManager.getVar(R.string.WndInfoCell_Nothing));
 		info.maxWidth(WIDTH);
-		info.x = titlebar.left();
-		info.y = yPos + GAP;
+		info.setX(titlebar.left());
+		info.setY(yPos + GAP);
 
 		resize( WIDTH, (int)(info.bottom()) );
 	}

@@ -132,8 +132,8 @@ public class BuffIndicator extends Component {
 			if (icon != NONE) {
 				Image img = new Image(TextureCache.get(b.textureSmall()));
 				img.frame(film.get(icon));
-				img.x = x + iconCounter[0] * (ICON_SIZE+1);
-				img.y = y;
+				img.setX(x + iconCounter[0] * (ICON_SIZE+1));
+				img.setY(y);
 				iconCounter[0] +=1;
 				img.setScale(ICON_SIZE/SIZE,ICON_SIZE/SIZE);
 				val imgTouch = new TouchArea(img) {
@@ -152,13 +152,13 @@ public class BuffIndicator extends Component {
 		for (Integer key : icons.keySet()) {
 			if (newIcons.get( key ) == null) {
 				Image icon = icons.get( key );
-				icon.origin.set( ICON_SIZE / 2 );
+				icon.setOrigin( ICON_SIZE / 2 );
 				add( icon );
 				add( new AlphaTweener( icon, 0, 0.6f ) {
 					@Override
 					protected void updateValues( float progress ) {
 						super.updateValues( progress );
-						image.Scale().set( ICON_SIZE/SIZE*(1 + 5 * progress) );
+						image.setScale( ICON_SIZE/SIZE*(1 + 5 * progress) );
 					}
 				} );
 			}

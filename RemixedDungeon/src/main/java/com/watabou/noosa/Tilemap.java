@@ -78,8 +78,8 @@ public class Tilemap extends Visual {
 		int mapHeight = data.length / cols;
 		size = mapWidth * mapHeight;
 		
-		width = cellW * mapWidth;
-		height = cellH * mapHeight;
+		setWidth(cellW * mapWidth);
+		setHeight(cellH * mapHeight);
 		
 		quads = Quad.createSet( size );
 		

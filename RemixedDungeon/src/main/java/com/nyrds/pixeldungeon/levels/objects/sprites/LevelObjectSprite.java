@@ -44,7 +44,7 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 
 	public void fall() {
 
-		origin.set( width / 2, height - DungeonTilemap.SIZE / 2.f );
+		setOrigin( width / 2, height - DungeonTilemap.SIZE / 2.f );
 		angularSpeed = Random.Int( 2 ) == 0 ? -720 : 720;
 
 		getParent().add(new FallTweener(this));
@@ -52,8 +52,8 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 
 	private void setLevelPos(int cell) {
 		PointF p = DungeonTilemap.tileToWorld(cell);
-		x = p.x + centerShift.x;
-		y = p.y + centerShift.y;
+		setX(p.x + centerShift.x);
+		setY(p.y + centerShift.y);
 		this.cell = cell;
 	}
 
@@ -71,7 +71,7 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 
 		frames = new TextureFilm(texture, xs, ys);
 		centerShift = new PointF(-(xs - DungeonTilemap.SIZE) / 2.f, -(ys-DungeonTilemap.SIZE) / 2.f);
-		origin.set(xs / 2.f, ys / 2.f);
+		setOrigin(xs / 2.f, ys / 2.f);
 
 		int image = object.image();
 		var frame = frames.get(image);

@@ -53,8 +53,8 @@ public class Tag extends Button {
 		
 		super.layout();
 		
-		bg.x = x;
-		bg.y = y;
+		bg.setX(x);
+		bg.setY(y);
 		bg.size( width, height );
 	}
 	

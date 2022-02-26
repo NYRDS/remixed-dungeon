@@ -84,8 +84,8 @@ public class Toast extends Component {
 	protected void layout() {
 		super.layout();
 
-		bg.x = x;
-		bg.y = y;
+		bg.setX(x);
+		bg.setY(y);
 		bg.size( width, height );
 		hBox.setPos(x + MARGIN_HOR, y + MARGIN_VER);
 	}

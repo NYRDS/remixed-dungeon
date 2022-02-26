@@ -31,7 +31,7 @@ public class DiscardedItemSprite extends ItemSprite {
 	
 	@Override
 	public void drop() {
-		scale.set( 1 );
+		setScale( 1 );
 		am = 1;
 	}
 	
@@ -39,8 +39,8 @@ public class DiscardedItemSprite extends ItemSprite {
 	public void update() {
 		
 		super.update();
-		
-		scale.set( scale.x * 0.9f );
+
+		setScale( scale.x * 0.9f );
 		if ((am -= GameLoop.elapsed) <= 0) {
 			remove();
 		}

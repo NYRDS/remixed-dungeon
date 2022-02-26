@@ -39,8 +39,8 @@ public class SnowParticle extends PixelParticle {
 	public void reset( float x, float y ) {
 		revive();
 		
-		this.x = x;
-		this.y = y - speed.y * lifespan;
+		this.setX(x);
+		this.setY(y - speed.y * lifespan);
 		
 		left = lifespan;
 	}

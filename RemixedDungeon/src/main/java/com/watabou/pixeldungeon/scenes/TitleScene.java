@@ -70,11 +70,11 @@ public class TitleScene extends PixelScene {
 		Image title = new Image(Assets.getTitle());
 		add(title);
 
-		title.x = (w - title.width()) / 2;
-		title.y = (title.height() * 0.10f) / 2;
+		title.setX((w - title.width()) / 2);
+		title.setY((title.height() * 0.10f) / 2);
 
 		if (RemixedDungeon.landscape()){
-			title.y = -(title.height() * 0.05f);
+			title.setY(-(title.height() * 0.05f));
 		}
 
         DashboardItem btnBadges = new DashboardItem(StringsManager.getVar(R.string.TitleScene_Badges), 3) {
@@ -120,7 +120,7 @@ public class TitleScene extends PixelScene {
 		pleaseSupport.setPos((w - pleaseSupport.width()) / 2,
 				h - pleaseSupport.height() * 2);
 
-		btnDonate.setPos((w - btnDonate.width()) / 2, pleaseSupport.y
+		btnDonate.setPos((w - btnDonate.width()) / 2, pleaseSupport.getY()
 				- btnDonate.height());
 
 		float dashBaseline = btnDonate.top() - DashboardItem.SIZE;

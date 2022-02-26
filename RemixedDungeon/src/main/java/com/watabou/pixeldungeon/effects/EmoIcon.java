@@ -48,17 +48,17 @@ public class EmoIcon extends Image {
 		alpha(owner.alpha());
 
 		if (getVisible()) {
-			x = owner.x + owner.width - owner.visualOffsetX() - width / 2;
-			y = owner.y + owner.visualOffsetY() - height;
+            setX(owner.getX() + owner.width - owner.visualOffsetX() - width / 2);
+			setY(owner.getY() + owner.visualOffsetY() - height);
 
 			final float elapsed = GameLoop.elapsed;
 			if (growing) {
-				scale.set( scale.x + elapsed * timeScale );
+				setScale( scale.x + elapsed * timeScale );
 				if (scale.x > maxSize) {
 					growing = false;
 				}
 			} else {
-				scale.set( scale.x - elapsed * timeScale );
+				setScale( scale.x - elapsed * timeScale );
 				if (scale.x < 1) {
 					growing = true;
 				}
@@ -76,9 +76,9 @@ public class EmoIcon extends Image {
 			
 			maxSize = 1.2f;
 			timeScale = 0.5f;
-			
-			origin.set( width / 2, height / 2 );
-			scale.set( Random.Float( 1, maxSize ) );
+
+			setOrigin( width / 2, height / 2 );
+			setScale( Random.Float( 1, maxSize ) );
 		}
 	}
 	
@@ -92,9 +92,9 @@ public class EmoIcon extends Image {
 			
 			maxSize = 1.3f;
 			timeScale = 2;
-			
-			origin.set( 2.5f, height - 2.5f );
-			scale.set( Random.Float( 1, maxSize ) );
+
+			setOrigin( 2.5f, height - 2.5f );
+			setScale( Random.Float( 1, maxSize ) );
 		}
 	}
 	
@@ -108,9 +108,9 @@ public class EmoIcon extends Image {
 			
 			maxSize = 1.1f;
 			timeScale = 0.5f;
-			
-			origin.set( -1f, height / 2 );
-			scale.set( Random.Float( 1, maxSize ) );
+
+			setOrigin( -1f, height / 2 );
+			setScale( Random.Float( 1, maxSize ) );
 		}
 	}
 

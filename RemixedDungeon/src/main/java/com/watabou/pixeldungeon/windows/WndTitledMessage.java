@@ -49,8 +49,8 @@ public class WndTitledMessage extends Window {
 		}
 		
 		normal.maxWidth(width);
-		normal.x = titlebar.left();
-		normal.y = titlebar.bottom() + 2*GAP;
+		normal.setX(titlebar.left());
+		normal.setY(titlebar.bottom() + 2*GAP);
 		add(normal);
 
 		if (hl.isHighlighted()) {
@@ -58,13 +58,13 @@ public class WndTitledMessage extends Window {
 			Text highlighted = PixelScene.createMultiline(hl.text, GuiProperties.regularFontSize());
 			highlighted.mask = hl.mask;
 			highlighted.maxWidth(normal.getMaxWidth());
-			highlighted.x = normal.x;
-			highlighted.y = normal.y;
+			highlighted.setX(normal.getX());
+			highlighted.setY(normal.getY());
 			add(highlighted);
 			
 			highlighted.hardlight(TITLE_COLOR);
 		}
 		
-		resize( width, (int)(normal.y + normal.height()) );
+		resize( width, (int)(normal.getY() + normal.height()) );
 	}
 }

@@ -35,13 +35,13 @@ public abstract class WndOptions extends Window {
 
 		Text tfTitle = PixelScene.createMultiline(StringsManager.maybeId(title), GuiProperties.titleFontSize() );
 		tfTitle.hardlight( TITLE_COLOR );
-		tfTitle.x = GAP;
+		tfTitle.setX(GAP);
 		tfTitle.maxWidth(STD_WIDTH - GAP * 2);
 		vbox.add( tfTitle );
 		
 		Text tfMessage = PixelScene.createMultiline(StringsManager.maybeId(message), GuiProperties.regularFontSize() );
 		tfMessage.maxWidth(STD_WIDTH - GAP * 2);
-		tfMessage.x = GAP;
+		tfMessage.setX(GAP);
 		vbox.add( tfMessage );
 
 		VBox buttonsVbox = new VBox();

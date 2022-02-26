@@ -52,7 +52,7 @@ public class WndBuffInfo extends Window {
 		//Info text
 		Text info = PixelScene.createMultiline(buff.desc(), GuiProperties.regularFontSize() );
 		info.maxWidth(WIDTH);
-		info.y = bottom + GAP;
+		info.setY(bottom + GAP);
 		add( info );
 
 		resize( WIDTH, (height + (int)info.height() + GAP * 2));

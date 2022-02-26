@@ -83,14 +83,14 @@ public class Lightning extends Group {
 		for (int i=0; i < length - 1; i++) {
 			
 			Image arc = arcsS[i] = new Image( proto );
-			
-			arc.x = cx[i] - arc.origin.x;
-			arc.y = cy[i] - arc.origin.y;
-			arc.origin.set( ox, oy );
+
+			arc.setX(cx[i] - arc.origin.x);
+			arc.setY(cy[i] - arc.origin.y);
+			arc.setOrigin( ox, oy );
 			add( arc );
 			
 			arc = arcsE[i] = new Image( proto );
-			arc.origin.set( ox, oy );
+			arc.setOrigin( ox, oy );
 			add( arc );
 		}
 		
@@ -131,16 +131,16 @@ public class Lightning extends Group {
 				Image arcS = arcsS[i];
 				arcS.am = alpha;
 				arcS.angle = (float)(Math.atan2( dy, dx ) * A);
-				arcS.Scale().x = (float)Math.sqrt( dx * dx + dy * dy ) / arcS.width;
+                arcS.setScaleX ((float)Math.sqrt( dx * dx + dy * dy ) / arcS.width);
 				
 				dx = ex - x2;
 				dy = ey - y2;
 				Image arcE = arcsE[i];
 				arcE.am = alpha;
 				arcE.angle = (float)(Math.atan2( dy, dx ) * A);
-				arcE.Scale().x = (float)Math.sqrt( dx * dx + dy * dy ) / arcE.width;
-				arcE.x = x2 - arcE.origin.x;
-				arcE.y = y2 - arcE.origin.x;
+                arcE.setScaleX( (float)Math.sqrt( dx * dx + dy * dy ) / arcE.width);
+				arcE.setX(x2 - arcE.origin.x);
+				arcE.setY(y2 - arcE.origin.x);
 			}
 		}
 	}

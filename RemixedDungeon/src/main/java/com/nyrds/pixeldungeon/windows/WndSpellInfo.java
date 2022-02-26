@@ -32,14 +32,14 @@ public class WndSpellInfo extends Window {
 		//Info text
 		Text info = PixelScene.createMultiline(spell.desc(), GuiProperties.regularFontSize() );
 		info.maxWidth(WIDTH);
-		info.y = title.bottom()+ GAP;
+		info.setY(title.bottom()+ GAP);
 		add( info );
 
 		Text txtCost;
 
         txtCost = PixelScene.createText( StringsManager.getVar(R.string.Mana_Cost) + spell.spellCost(), GuiProperties.regularFontSize());
-		txtCost.x = 0;
-		txtCost.y = info.bottom() + GAP;
+		txtCost.setX(0);
+		txtCost.setY(info.bottom() + GAP);
 		add(txtCost);
 
 		SimpleButton btnCast = new SimpleButton(Icons.get(Icons.BTN_TARGET)) {

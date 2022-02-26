@@ -42,15 +42,15 @@ public class DeathRay extends Image {
 		PointF s = DungeonTilemap.tileCenterToWorld(from);
 		PointF e = DungeonTilemap.tileCenterToWorld(to);
 
-		origin.set( 0, height / 2 );
-		
-		x = s.x - origin.x;
-		y = s.y - origin.y;
+		setOrigin( 0, height / 2 );
+
+		setX(s.x - origin.x);
+		setY(s.y - origin.y);
 		
 		float dx = e.x - s.x;
 		float dy = e.y - s.y;
 		angle = (float)(Math.atan2( dy, dx ) * A);
-		scale.x = (float)Math.sqrt( dx * dx + dy * dy ) / width;
+        setScaleX((float)Math.sqrt( dx * dx + dy * dy ) / width);
 		
 		Sample.INSTANCE.play( Assets.SND_RAY );
 		
@@ -63,7 +63,7 @@ public class DeathRay extends Image {
 		
 		float p = timeLeft / DURATION;
 		alpha( p );
-		scale.set( scale.x, p );
+		setScaleY( p );
 		
 		if ((timeLeft -= GameLoop.elapsed) <= 0) {
 			killAndErase();

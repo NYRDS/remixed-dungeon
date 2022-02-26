@@ -25,12 +25,12 @@ public abstract class ListItem extends Component implements IClickable {
 
 	@Override
 	protected void layout() {
-		sprite.y = PixelScene.align(y + (height - sprite.height + sprite.visualOffsetY()) / 2);
+		sprite.setY(PixelScene.align(y + (height - sprite.height + sprite.visualOffsetY()) / 2));
 
-		sprite.x = PixelScene.align(x + sprite.visualOffsetX());
+		sprite.setX(PixelScene.align(x + sprite.visualOffsetX()));
 
-		label.x = Math.max(sprite.x + sprite.width-sprite.visualOffsetX(), align);
-		label.y = PixelScene.align(y + (height - label.baseLine()) / 2);
+        label.setX(Math.max(sprite.getX() + sprite.width -sprite.visualOffsetX(), align));
+		label.setY(PixelScene.align(y + (height - label.baseLine()) / 2));
 	}
 
 	public boolean onClick(float x, float y) {

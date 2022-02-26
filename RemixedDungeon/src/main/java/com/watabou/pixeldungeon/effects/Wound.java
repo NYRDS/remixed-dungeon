@@ -32,14 +32,14 @@ public class Wound extends Image {
 	
 	public Wound() {
 		super( Effects.get( Effects.Type.WOUND ) );
-		origin.set( width / 2, height / 2 );
+		setOrigin( width / 2, height / 2 );
 	}
 	
 	public void reset( int p ) {
 		revive();
-		
-		x = (p % Dungeon.level.getWidth()) * DungeonTilemap.SIZE + (DungeonTilemap.SIZE - width) / 2;
-		y = (p / Dungeon.level.getWidth()) * DungeonTilemap.SIZE + (DungeonTilemap.SIZE - height) / 2;
+
+        setX((p % Dungeon.level.getWidth()) * DungeonTilemap.SIZE + (DungeonTilemap.SIZE - width) / 2);
+		setY((p / Dungeon.level.getWidth()) * DungeonTilemap.SIZE + (DungeonTilemap.SIZE - height) / 2);
 		
 		time = TIME_TO_FADE;
 	}
@@ -53,7 +53,7 @@ public class Wound extends Image {
 		} else {
 			float p = time / TIME_TO_FADE;
 			alpha( p );
-			scale.x = 1 + p;
+			setScaleX( 1 + p );
 		}
 	}
 	

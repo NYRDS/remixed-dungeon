@@ -62,15 +62,15 @@ public class DangerIndicator extends Tag {
 	protected void layout() {
 		super.layout();
 		
-		icon.x = right() - 10;
-		icon.y = y + (height - icon.height) / 2;
+		icon.setX(right() - 10);
+        icon.setY(y + (height - icon.height) / 2);
 		
 		placeNumber();
 	}
 	
 	private void placeNumber() {
-		number.x = right() - 11 - number.width();
-		number.y = PixelScene.align( y + (height - number.baseLine()) / 2 );
+		number.setX(right() - 11 - number.width());
+		number.setY(PixelScene.align( y + (height - number.baseLine()) / 2 ));
 	}
 	
 	@Override

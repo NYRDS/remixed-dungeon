@@ -126,25 +126,29 @@ public class WndInfoMob extends WndTitledMessage {
 		@Override
 		protected void layout() {
 			
-			image.x = 0 - image.visualOffsetX();
-			image.y = Math.max( 0, name.height() + GAP + BAR_HEIGHT - image.visualHeight()) - image.visualOffsetY();
-			
-			name.x = image.visualWidth() + GAP;
-			name.y = image.visualHeight() - BAR_HEIGHT - GAP - name.baseLine();
+			image.setX(0 - image.visualOffsetX());
+			image.setY(Math.max( 0, name.height() + GAP + BAR_HEIGHT - image.visualHeight()) - image.visualOffsetY());
+
+			float x = image.visualWidth() + GAP;
+			name.setX(x);
+			name.setY(image.visualHeight() - BAR_HEIGHT - GAP - name.baseLine());
 			
 			float w = width - image.visualWidth() - GAP;
 			
 			hpBg.size( w, BAR_HEIGHT );
 			hpLvl.size( w * hp, BAR_HEIGHT );
 			
-			hpBg.x = hpLvl.x = image.visualWidth() + GAP;
-			hpBg.y = hpLvl.y = image.visualHeight() - BAR_HEIGHT;
+			hpBg.setX(x);
+			hpLvl.setX(x);
+			float y = image.visualHeight() - BAR_HEIGHT;
+			hpLvl.setY(y);
+			hpBg.setY(y);
 			
 			buffs.setPos( 
-				name.x + name.width() + GAP, 
-				name.y + name.baseLine() - BuffIndicator.ICON_SIZE );
+				name.getX() + name.width() + GAP,
+				name.getY() + name.baseLine() - BuffIndicator.ICON_SIZE );
 			
-			height = hpBg.y + hpBg.height();
+			height = hpBg.getY() + hpBg.height();
 		}
 	}
 }

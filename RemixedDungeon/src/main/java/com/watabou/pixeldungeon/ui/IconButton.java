@@ -16,10 +16,10 @@ public class IconButton extends RedButton {
 		
 		float margin = (height - text.baseLine()) / 2;
 		
-		text.x = PixelScene.align( PixelScene.uiCamera, x + margin );
-		text.y = PixelScene.align( PixelScene.uiCamera, y + margin );
-		
-		icon.x = PixelScene.align( PixelScene.uiCamera, x + width - margin - icon.width );
-		icon.y = PixelScene.align( PixelScene.uiCamera, y + (height - icon.height()) / 2 );
+		text.setX(PixelScene.align( PixelScene.uiCamera, x + margin ));
+		text.setY(PixelScene.align( PixelScene.uiCamera, y + margin ));
+
+        icon.setX(PixelScene.align( PixelScene.uiCamera, x + width - margin - icon.width));
+		icon.setY(PixelScene.align( PixelScene.uiCamera, y + (height - icon.height()) / 2 ));
 	}
 }

@@ -19,7 +19,7 @@ public class RedImageButton extends RedButton {
     protected void layout() {
         super.layout();
 
-        icon.x = x + (width - icon.width()) / 2;
-        icon.y = y + (height - icon.height()) / 2;
+        icon.setX(x + (width - icon.width()) / 2);
+        icon.setY(y + (height - icon.height()) / 2);
     }
 }

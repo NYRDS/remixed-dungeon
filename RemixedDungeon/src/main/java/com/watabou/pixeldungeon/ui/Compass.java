@@ -40,7 +40,7 @@ public class Compass extends Image {
 		this.level = level;
 
 		copy( Icons.COMPASS.get() );
-		origin.set( width / 2, RADIUS );
+        setOrigin( width / 2, RADIUS );
 		
 		setCell(cell);
 		setVisible(false);

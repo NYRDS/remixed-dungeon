@@ -46,7 +46,7 @@ public class CircleMask extends Image {
 
 		texture( CACHE_KEY );
 
-		origin.set( RADIUS );
+		setOrigin( RADIUS );
 	}
 
 	public CircleMask(float radius) {
@@ -56,12 +56,12 @@ public class CircleMask extends Image {
 	}
 	
 	public CircleMask point(float x, float y ) {
-		this.x = x - RADIUS;
-		this.y = y - RADIUS;
+		this.setX(x - RADIUS);
+		this.setY(y - RADIUS);
 		return this;
 	}
 	
 	public void radius( float value ) {
-		scale.set(  (this.radius = value) / RADIUS );
+		setScale(  (this.radius = value) / RADIUS );
 	}
 }

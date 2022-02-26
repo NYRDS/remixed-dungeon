@@ -83,7 +83,7 @@ public class Speck extends Image {
             film = new TextureFilm(texture, SIZE, SIZE);
         }
 
-        origin.set(SIZE / 2f);
+        setOrigin(SIZE / 2f);
     }
 
     public void reset(int index, float x, float y, int oldCombinedType) {
@@ -97,11 +97,11 @@ public class Speck extends Image {
 
         selectFrameByType(particleType);
 
-        this.x = x - origin.x;
-        this.y = y - origin.y;
+        this.setX(x - origin.x);
+        this.setY(y - origin.y);
 
         resetColor();
-        scale.set(1);
+        setScale(1);
         speed.set(0);
         acc.set(0);
         angle = 0;
@@ -215,7 +215,7 @@ public class Speck extends Image {
             case ROCK:
                 angle = Random.Float(360);
                 angularSpeed = Random.Float(-360, +360);
-                scale.set(Random.Float(1, 2));
+                setScale(Random.Float(1, 2));
                 speed.set(0, 64);
                 lifespan = 0.2f;
                 break;
@@ -240,7 +240,7 @@ public class Speck extends Image {
 
             case BUBBLE:
                 speed.set(0, -15);
-                scale.set(Random.Float(0.8f, 1));
+                setScale(Random.Float(0.8f, 1));
                 lifespan = Random.Float(0.8f, 1.5f);
                 break;
 
@@ -346,12 +346,13 @@ public class Speck extends Image {
     }
 
     private void updateByEvolutionType(float p) {
+        float v = p < 0.2f ? p * 5f : (1 - p) * 1.25f;
         switch (evolutionType) {
 
             case STAR:
             case FORGE:
-                scale.set(1 - p);
-                am = p < 0.2f ? p * 5f : (1 - p) * 1.25f;
+                setScale(1 - p);
+                am = v;
                 break;
 
             case KIT:
@@ -368,25 +369,26 @@ public class Speck extends Image {
                 break;
 
             case LIGHT:
-                am = scale.set(p < 0.2f ? p * 5f : (1 - p) * 1.25f).x;
+                am = v;
+                setScale(v);
                 break;
 
             case DISCOVER:
                 am = 1 - p;
-                scale.set((p < 0.5f ? p : 1 - p) * 2);
+                setScale((p < 0.5f ? p : 1 - p) * 2);
                 break;
 
             case QUESTION:
-                scale.set((float) (Math.sqrt(p < 0.5f ? p : 1 - p) * 3));
+                setScale((float) (Math.sqrt(p < 0.5f ? p : 1 - p) * 3));
                 break;
 
             case UP:
-                scale.set((float) (Math.sqrt(p < 0.5f ? p : 1 - p) * 2));
+                setScale((float) (Math.sqrt(p < 0.5f ? p : 1 - p) * 2));
                 break;
 
             case SCREAM:
                 am = (float) Math.sqrt((p < 0.5f ? p : 1 - p) * 2f);
-                scale.set(p * 7);
+                setScale(p * 7);
                 break;
 
             case BONE:
@@ -401,17 +403,17 @@ public class Speck extends Image {
                 break;
 
             case WOOL:
-                scale.set(1 - p);
+                setScale(1 - p);
                 break;
 
             case CHANGE:
                 am = (float) Math.sqrt((p < 0.5f ? p : 1 - p) * 2);
-                scale.y = (1 + p) * 0.5f;
-                scale.x = (float) (scale.y * Math.cos(left * 15));
+                setScale( (1 + p) * 0.5f,
+                     (float) (scale.y * Math.cos(left * 15)));
                 break;
 
             case HEART:
-                scale.set(1 - p);
+                setScale(1 - p);
                 am = 1 - p * p;
                 break;
 
@@ -422,16 +424,16 @@ public class Speck extends Image {
             case CONFUSION:
             case DUST:
                 am = p < 0.5f ? p : 1 - p;
-                scale.set(1 + p * 2);
+                setScale(1 + p * 2);
                 break;
 
             case JET:
                 am = (p < 0.5f ? p : 1 - p) * 2;
-                scale.set(p * 1.5f);
+                setScale(p * 1.5f);
                 break;
 
             case COIN:
-                scale.x = (float) Math.cos(left * 5);
+                setScaleX( (float) Math.cos(left * 5));
                 rm = gm = bm = (Math.abs(scale.x) + 1) * 0.5f;
                 am = p < 0.9f ? 1 : (1 - p) * 10;
                 break;

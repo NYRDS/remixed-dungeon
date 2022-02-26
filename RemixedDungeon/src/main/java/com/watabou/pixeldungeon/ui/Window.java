@@ -80,20 +80,20 @@ public class Window extends Group implements Signal.Listener<Key> {
 		this.width = width;
 		this.height = height;
 		
-		chrome.x = -chrome.marginLeft();
-		chrome.y = -chrome.marginTop();
+		chrome.setX(-chrome.marginLeft());
+		chrome.setY(-chrome.marginTop());
 		chrome.size( 
-			width - chrome.x + chrome.marginRight(),
-			height - chrome.y + chrome.marginBottom() );
+			width - chrome.getX() + chrome.marginRight(),
+			height - chrome.getY() + chrome.marginBottom() );
 		add( chrome );
-		
-		camera = new Camera( 0, 0, 
-			(int)chrome.width, 
-			(int)chrome.height, 
+
+		camera = new Camera( 0, 0,
+			(int) chrome.width,
+			(int) chrome.height,
 			PixelScene.defaultZoom );
 		camera.x = (int)(Game.width() - camera.width * camera.zoom) / 2;
 		camera.y = (int)(Game.height() - camera.height * camera.zoom) / 2;
-		camera.scroll.set( chrome.x, chrome.y );
+		camera.scroll.set(chrome.getX(), chrome.getY());
 		Camera.add( camera );
 		
 		Keys.event.add( this );
@@ -110,8 +110,8 @@ public class Window extends Group implements Signal.Listener<Key> {
 		chrome.size( 
 			width + chrome.marginHor(),
 			height + chrome.marginVer() );
-		
-		camera.resize( (int)chrome.width, (int)chrome.height );
+
+		camera.resize( (int) chrome.width, (int) chrome.height);
 		camera.x = (int)(Game.width() - camera.screenWidth()) / 2;
 		camera.y = (int)(Game.height() - camera.screenHeight()) / 2;
 	}

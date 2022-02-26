@@ -64,8 +64,8 @@ public class WndSurvey extends Window {
         questionText = PixelScene.createMultiline(Utils.EMPTY_STRING, GuiProperties.mediumTitleFontSize());
         questionText.hardlight(TITLE_COLOR);
         questionText.maxWidth(WIDTH - GAP);
-        questionText.x = GAP;
-        questionText.y = GAP;
+        questionText.setX(GAP);
+        questionText.setY(GAP);
         add(questionText);
 
         answers = new Component();

@@ -56,8 +56,8 @@ public class LeafParticle extends PixelParticle.Shrinking {
 	public void reset( float x, float y ) {
 		revive();
 		
-		this.x = x;
-		this.y = y;
+		this.setX(x);
+		this.setY(y);
 		
 		speed.set( Random.Float( -8, +8 ), -20 );
 		

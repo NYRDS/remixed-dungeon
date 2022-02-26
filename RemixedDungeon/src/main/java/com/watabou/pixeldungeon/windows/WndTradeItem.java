@@ -213,11 +213,11 @@ public class WndTradeItem extends Window {
 		// Description
 		Text info = PixelScene.createMultiline( item.info(), GuiProperties.regularFontSize() );
 		info.maxWidth(WIDTH);
-		info.x = titlebar.left();
-		info.y = titlebar.bottom() + GAP;
+		info.setX(titlebar.left());
+		info.setY(titlebar.bottom() + GAP);
 		add( info );
 		
-		return info.y + info.height();
+		return info.getY() + info.height();
 	}
 
 	private int price( @NotNull  Item item, boolean buying) {

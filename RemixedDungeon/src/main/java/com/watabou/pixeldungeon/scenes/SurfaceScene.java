@@ -89,16 +89,16 @@ public class SurfaceScene extends PixelScene {
 		boolean dayTime = !Dungeon.nightMode;
 		
 		Sky sky = new Sky( dayTime );
-		sky.Scale().set( WIDTH, HEIGHT );
+		sky.setScale( WIDTH, HEIGHT );
 		window.add( sky );
 		
 		if (!dayTime) {
 			for (int i=0; i < NSTARS; i++) {
 				float size = Random.Float();
 				ColorBlock star = new ColorBlock( size, size, 0xFFFFFFFF );
-				star.x = Random.Float( WIDTH ) - size / 2;
-				star.y = Random.Float( HEIGHT ) - size / 2;
-				star.am = size * (1 - star.y / HEIGHT);
+				star.setX(Random.Float( WIDTH ) - size / 2);
+				star.setY(Random.Float( HEIGHT ) - size / 2);
+				star.am = size * (1 - star.getY() / HEIGHT);
 				window.add( star );
 			}
 		}
@@ -118,14 +118,14 @@ public class SurfaceScene extends PixelScene {
 		}
 		
 		Avatar a = new Avatar(Dungeon.hero.getHeroClass());
-		a.x = PixelScene.align( (WIDTH - a.width) / 2 );
-		a.y = HEIGHT - a.height + 1;
+		a.setX(PixelScene.align( (WIDTH - a.width) / 2 ));
+		a.setY(HEIGHT - a.height + 1);
 		window.add( a );
 		
 		final Pet pet = new Pet();
 		pet.rm = pet.gm = pet.bm = 1.2f;
-		pet.x = WIDTH / 2 + 2;
-		pet.y = HEIGHT - pet.height;
+		pet.setX(WIDTH / 2 + 2);
+		pet.setY(HEIGHT - pet.height);
 		window.add( pet );
 		
 		if (dayTime) {
@@ -150,8 +150,8 @@ public class SurfaceScene extends PixelScene {
 			frame.hardlight( 0xDDEEFF );
 		}
 		frame.frame( 0, 0, 88, 125 );
-		frame.x = vx - 4;
-		frame.y = vy - 9;
+		frame.setX(vx - 4);
+		frame.setY(vy - 9);
 		add( frame );
 
         RedButton gameOver = new RedButton(StringsManager.getVar(R.string.SurfaceScene_GameOver)) {
@@ -160,7 +160,7 @@ public class SurfaceScene extends PixelScene {
 			}
 		};
 		gameOver.setSize( WIDTH - 10, 20 );
-		gameOver.setPos( 5 + frame.x + 4, frame.y + frame.height + 4 );
+		gameOver.setPos( 5 + frame.getX() + 4, frame.getY() + frame.height + 4 );
 		add( gameOver );
 		
 		Badges.validateHappyEnd();
@@ -269,10 +269,10 @@ public class SurfaceScene extends PixelScene {
 			
 			lastIndex = index;
 			
-			this.y = y;
+			this.setY(y);
 			
-			scale.set( 1 - y / HEIGHT );
-			x = Random.Float( WIDTH + width() ) - width();
+			setScale( 1 - y / HEIGHT );
+			setX(Random.Float( WIDTH + width() ) - width());
 			speed.x = scale.x * (dayTime ? +8 : -8);
 			
 			if (dayTime) {
@@ -286,10 +286,10 @@ public class SurfaceScene extends PixelScene {
 		@Override
 		public void update() {
 			super.update();
-			if (speed.x > 0 && x > WIDTH) {
-				x = -width();
-			} else if (speed.x < 0 && x < -width()) {
-				x = WIDTH;
+			if (speed.x > 0 && getX() > WIDTH) {
+				setX(-width());
+			} else if (speed.x < 0 && getX() < -width()) {
+				setX(WIDTH);
 			}
 		}
 	}
@@ -369,10 +369,10 @@ public class SurfaceScene extends PixelScene {
 			a += Random.Float(GameLoop.elapsed * 5);
 			angle = (2 + Math.cos(a)) * (forward ? +0.2 : -0.2);
 
-			scale.y = (float) Math.cos(angle);
+			setScaleY ((float) Math.cos(angle));
 
-			x = tx + (float) Math.tan(angle) * width;
-			y = ty - scale.y * height;
+			setX(tx + (float) Math.tan(angle) * width);
+			setY(ty - scale.y * height);
 		}
 
 		@Override

@@ -212,8 +212,8 @@ public class MagicMissile extends Emitter {
 		public void reset( float x, float y ) {
 			revive();
 			
-			this.x = x;
-			this.y = y;
+			this.setX(x);
+			this.setY(y);
 			
 			left = lifespan;
 		}
@@ -246,8 +246,8 @@ public class MagicMissile extends Emitter {
 		public void reset( float x, float y ) {
 			revive();
 			
-			this.x = x;
-			this.y = y;
+			this.setX(x);
+			this.setY(y);
 			
 			left = lifespan;
 			size = 4;
@@ -278,8 +278,8 @@ public class MagicMissile extends Emitter {
 		public void reset( float x, float y ) {
 			revive();
 			
-			this.x = x;
-			this.y = y;
+			this.setX(x);
+			this.setY(y);
 			
 			left = lifespan;
 		}
@@ -317,8 +317,8 @@ public class MagicMissile extends Emitter {
 		public void reset( float x, float y, Emitter emitter ) {
 			revive();
 			
-			this.x = x;
-			this.y = y;
+			this.setX(x);
+			this.setY(y);
 			this.emitter = emitter;
 			
 			left = lifespan;
@@ -332,7 +332,7 @@ public class MagicMissile extends Emitter {
 			super.update();
 			
 			am = left / lifespan;
-			acc.set( (emitter.x - x) * 10, (emitter.y - y) * 10 );
+			acc.set( (emitter.x - getX()) * 10, (emitter.y - getY()) * 10 );
 		}
 	}
 	
@@ -354,8 +354,8 @@ public class MagicMissile extends Emitter {
 		public void reset( float x, float y ) {
 			revive();
 			
-			this.x = x;
-			this.y = y;
+			this.setX(x);
+			this.setY(y);
 			
 			left = lifespan;
 			
@@ -394,8 +394,8 @@ public class MagicMissile extends Emitter {
 		public void reset( float x, float y ) {
 			revive();
 			
-			this.x = x;
-			this.y = y;
+			this.setX(x);
+			this.setY(y);
 			
 			left = lifespan;
 			size = 8;

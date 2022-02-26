@@ -28,8 +28,8 @@ class MenuButton extends ImageButton {
 	protected void layout() {
 		super.layout();
 
-		image.x = x + 2;
-		image.y = y + 2;
+		image.setX(x + 2);
+		image.setY(y + 2);
 	}
 
 	@Override

@@ -165,7 +165,7 @@ public class Flare extends Visual {
 				}
 
 				p =  p < 0.25f ? p * 4 : (1 - p) * 1.333f;
-				scale.set( p );
+				setScale( p );
 				alpha( p );
 				
 			} else {

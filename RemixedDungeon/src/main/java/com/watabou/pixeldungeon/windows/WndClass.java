@@ -102,16 +102,16 @@ public class WndClass extends WndTabbed {
 				}
 
 				Text dot = PixelScene.createText(DOT, GuiProperties.smallFontSize());
-				dot.x = MARGIN;
-				dot.y = pos;
+				dot.setX(MARGIN);
+				dot.setY(pos);
 				if (dotWidth == 0) {
 					dotWidth = dot.width();
 				}
 				add(dot);
 
 				Text item = PixelScene.createMultiline(items[i], GuiProperties.regularFontSize());
-				item.x = dot.x + dotWidth;
-				item.y = pos;
+				item.setX(dot.getX() + dotWidth);
+				item.setY(pos);
 				item.maxWidth((int) (WIDTH - MARGIN * 2 - dotWidth));
 				add(item);
 
@@ -169,8 +169,8 @@ public class WndClass extends WndTabbed {
 				normal.mask = hl.inverted();
 			}
 			normal.maxWidth(WIDTH - MARGIN * 2);
-			normal.x = MARGIN;
-			normal.y = MARGIN;
+			normal.setX(MARGIN);
+			normal.setY(MARGIN);
 			add(normal);
 
 			if (hl.isHighlighted()) {
@@ -178,15 +178,15 @@ public class WndClass extends WndTabbed {
 				highlighted.mask = hl.mask;
 
 				highlighted.maxWidth(normal.getMaxWidth());
-				highlighted.x = normal.x;
-				highlighted.y = normal.y;
+				highlighted.setX(normal.getX());
+				highlighted.setY(normal.getY());
 				add(highlighted);
 
 				highlighted.hardlight(TITLE_COLOR);
 			}
 
-			height = normal.y + normal.height() + MARGIN;
-			width = normal.x + normal.width() + MARGIN;
+			height = normal.getY() + normal.height() + MARGIN;
+			width = normal.getX() + normal.width() + MARGIN;
 		}
 	}
 }

@@ -56,8 +56,8 @@ public class PoisonParticle extends PixelParticle {
 	public void resetMissile( float x, float y ) {
 		revive();
 		
-		this.x = x;
-		this.y = y;
+		this.setX(x);
+		this.setY(y);
 		
 		left = lifespan;
 		
@@ -67,8 +67,8 @@ public class PoisonParticle extends PixelParticle {
 	public void resetSplash( float x, float y ) {
 		revive();
 		
-		this.x = x;
-		this.y = y;
+		this.setX(x);
+		this.setY(y);
 		
 		left = lifespan;
 		

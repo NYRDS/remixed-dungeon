@@ -30,7 +30,7 @@ public class SimpleButton extends Component {
 		super();
 		
 		this.image.copy( image );
-		width = image.width;
+        width = image.width;
 		height = image.height;
 	}
 	
@@ -59,8 +59,8 @@ public class SimpleButton extends Component {
 	
 	@Override
 	protected void layout() {
-		image.x = x + (width - image.width()) / 2;
-		image.y = y + (height - image.height()) / 2;
+		image.setX(x + (width - image.width()) / 2);
+		image.setY(y + (height - image.height()) / 2);
 	}
 	
 	protected void onClick() {}

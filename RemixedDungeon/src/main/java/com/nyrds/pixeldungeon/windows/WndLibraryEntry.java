@@ -24,14 +24,14 @@ public class WndLibraryEntry extends Window {
 		Text tfTitle = PixelScene.createMultiline(entry, GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - GAP);
-		tfTitle.x = (WIDTH - tfTitle.width())/2;
-		tfTitle.y = GAP;
+		tfTitle.setX((WIDTH - tfTitle.width())/2);
+		tfTitle.setY(GAP);
 		add(tfTitle);
 
 		//Entry text
 		Text message = PixelScene.createMultiline( entry, GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
-		message.y = tfTitle.bottom()+ GAP;
+		message.setY(tfTitle.bottom()+ GAP);
 		add( message );
 
 		int buttonY = (int) message.bottom()+ GAP;

@@ -79,8 +79,8 @@ public class Identification extends Group {
 			float dx = x1 - x0;
 			float dy = y1 - y0;
 			
-			x = x0;
-			y = y0;
+			setX(x0);
+			setY(y0);
 			speed.set( dx, dy );
 			acc.set( -dx / 4, -dy / 4 );
 			

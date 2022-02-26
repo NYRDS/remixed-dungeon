@@ -17,11 +17,13 @@
 
 package com.watabou.noosa;
 
+import com.ironsource.mediationsdk.G;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Keys;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Signal;
 
 import java.util.ArrayList;
@@ -62,14 +64,22 @@ public class Scene extends Group {
 
 	@Override
 	public void update() {
+		/*
 		activeWindows.clear();
 		int windowIndex = -1;
 		while((windowIndex = findByClass(Window.class, windowIndex+1))>0) {
 			activeWindows.add((Window)getMember(windowIndex));
 		}
+		 */
+
+		totalGizmo = 0;
+		nullGizmo = 0;
+
 		script.runOptionalNoRet("onStep", this.getClass().getSimpleName());
 
 		super.update();
+
+		//GLog.debug("gizmos: %d %d", totalGizmo, nullGizmo);
 	}
 
 

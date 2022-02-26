@@ -66,7 +66,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	protected abstract boolean act();
 
 	public void spend( float time ) {
-		GLog.debug("%s spend %2.4f", getEntityKind(), time);
+		//GLog.debug("%s spend %2.4f", getEntityKind(), time);
 		if(Util.isDebug() && current!=this) {
 			if(this instanceof Char) {
 				GLog.debug("%s spends time on %s move!", getEntityKind(), current!=null?current.getEntityKind():"no one");
@@ -219,16 +219,14 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 			if (actor instanceof Char && ((Char)actor).getSprite().doingSomething()) {
 				checkSkips(actor);
-				//Log.i("Main loop", "in action");
+				GLog.debug("skip: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
 				// If it's character's turn to act, but its sprite
 				// is moving, wait till the movement is over
-
-
 
 				return;
 			}
 
-			//GLog.debug("Main actor loop: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
+			GLog.debug("Main actor loop: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
 			if(actor instanceof Char) {
 				//GLog.debug("%s %d action %s",actor.getEntityKind(), ((Char) actor).getId(),((Char) actor).curAction);
 			}
@@ -278,7 +276,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 		skipCounter.put(entityKind, skips);
 
-		GLog.debug("skip: %s ", skipCounter.toString());
+		//GLog.debug("skip: %s ", skipCounter.toString());
 	}
 
 	public static void process(float elapsed) {

@@ -89,8 +89,8 @@ public class AboutScene extends PixelScene {
 	
 	private void placeBellow(Text elem, Text upper)
 	{
-		elem.x = upper.x;
-		elem.y = upper.y + upper.height();
+		elem.setX(upper.getX());
+		elem.setY(upper.getY() + upper.height());
 	}
 
 	private Text createText(String text, Text upper)
@@ -112,8 +112,8 @@ public class AboutScene extends PixelScene {
 		
 		text.camera = uiCamera;
 		
-		text.x = align( (Camera.main.width - text.width()) / 2 );
-		text.y = align( (Camera.main.height - text.height()) / 3 );
+		text.setX(align( (Camera.main.width - text.width()) / 2 ));
+		text.setY(align( (Camera.main.height - text.height()) / 3 ));
 
 
         Text email = createTouchEmail(StringsManager.getVar(R.string.AboutScene_Mail), text);
@@ -124,8 +124,8 @@ public class AboutScene extends PixelScene {
 		createText("\n"+ getTRN(), site);
 		
 		Image nyrdie = Icons.NYRDIE.get();
-		nyrdie.x = align( text.x + (text.width() - nyrdie.width) / 2 );
-		nyrdie.y = text.y - nyrdie.height - 8;
+		nyrdie.setX(align( text.getX() + (text.width() - nyrdie.width) / 2 ));
+		nyrdie.setY(text.getY() - nyrdie.height - 8);
 		add( nyrdie );
 
 		TouchArea area = new TouchArea( nyrdie ) {

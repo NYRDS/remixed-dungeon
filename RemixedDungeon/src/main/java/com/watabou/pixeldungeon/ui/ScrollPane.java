@@ -67,10 +67,10 @@ public class ScrollPane extends Component {
 	protected void layout() {
 		
 		content.setPos( 0, 0 );
-		controller.x = x;
-		controller.y = y;
-		controller.width = width;
-		controller.height = height;
+		controller.setX(x);
+		controller.setY(y);
+		controller.setWidth(width);
+		controller.setHeight(height);
 		
 		Point p = camera().cameraToScreen( x, y );
 		Camera cs = content.camera;
@@ -117,8 +117,8 @@ public class ScrollPane extends Component {
 				Camera c = content.camera;
 				
 				c.scroll.offset( PointF.diff( lastPos, t.current ).invScale( c.zoom ) );
-				if (c.scroll.x + width > content.width()) {
-					c.scroll.x = content.width() - width;
+                if (c.scroll.x + width > content.width()) {
+                    c.scroll.x = content.width() - width;
 				}
 				if (c.scroll.x < 0) {
 					c.scroll.x = 0;

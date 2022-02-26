@@ -113,7 +113,7 @@ public class WndHero extends WndTabbed {
 					GameScene.show( new WndCatalogus() );
 				}
 			};
-			btnCatalogus.setRect( 0, title.y + title.height(), btnCatalogus.reqWidth() + 2, btnCatalogus.reqHeight() + 2 );
+			btnCatalogus.setRect( 0, title.getY() + title.height(), btnCatalogus.reqWidth() + 2, btnCatalogus.reqHeight() + 2 );
 			add( btnCatalogus );
 			
 			RedButton btnJournal = new RedButton( R.string.WndHero_StaJournal) {
@@ -162,12 +162,12 @@ public class WndHero extends WndTabbed {
 		private void statSlot( String label, String value ) {
 			
 			Text txt = PixelScene.createText( label, GuiProperties.regularFontSize() );
-			txt.y = pos;
+			txt.setY(pos);
 			add( txt );
 			
 			txt = PixelScene.createText( value, GuiProperties.regularFontSize() );
-			txt.x = PixelScene.align( WIDTH * 0.65f );
-			txt.y = pos;
+			txt.setX(PixelScene.align( WIDTH * 0.65f ));
+			txt.setY(pos);
 			add( txt );
 			
 			pos += GAP + txt.baseLine();
@@ -206,8 +206,8 @@ public class WndHero extends WndTabbed {
 				icon.setPos(GAP - 1, pos);
 
 				Text txt = PixelScene.createText( buff.name(), GuiProperties.regularFontSize() );
-				txt.x = icon.width() + (GAP * 2);
-				txt.y = pos + (int)(icon.height() - txt.baseLine()) / 2;
+				txt.setX(icon.width() + (GAP * 2));
+				txt.setY(pos + (int)(icon.height() - txt.baseLine()) / 2);
 				val txtTouch = new TouchArea(txt) {
 					@Override
 					protected void onClick(Touchscreen.Touch touch) {
@@ -222,8 +222,8 @@ public class WndHero extends WndTabbed {
 			} else {
 				if(Util.isDebug()) {
 					Text txt = PixelScene.createText(buff.name(), GuiProperties.regularFontSize());
-					txt.x = GAP;
-					txt.y = pos + (int) (16 - txt.baseLine()) / 2;
+					txt.setX(GAP);
+					txt.setY(pos + (int) (16 - txt.baseLine()) / 2);
 
 
 					val txtTouch = new TouchArea(txt) {

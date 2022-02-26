@@ -165,8 +165,8 @@ public class GameScene extends PixelScene {
         attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
         resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
         log.setRect(0, toolbar.top(), attack.left(), 0);
-        busy.x = 1;
-        busy.y = statusPane.bottom() + 2;
+        busy.setX(1);
+        busy.setY(statusPane.bottom() + 2);
     }
 
 
@@ -397,8 +397,8 @@ public class GameScene extends PixelScene {
 
         busy = new BusyIndicator();
         busy.camera = uiCamera;
-        busy.x = 1;
-        busy.y = statusPane.bottom() + 18;
+        busy.setX(1);
+        busy.setY(statusPane.bottom() + 18);
         add(busy);
 
         sceneCreated = true;
@@ -665,8 +665,8 @@ public class GameScene extends PixelScene {
 
     private void showBanner(Banner banner) {
         banner.camera = uiCamera;
-        banner.x = align(uiCamera, (uiCamera.width - banner.width) / 2);
-        banner.y = align(uiCamera, (uiCamera.height - banner.height) / 3);
+        banner.setX(align(uiCamera, (uiCamera.width - banner.width) / 2));
+        banner.setY(align(uiCamera, (uiCamera.height - banner.height) / 3));
         add(banner);
     }
 

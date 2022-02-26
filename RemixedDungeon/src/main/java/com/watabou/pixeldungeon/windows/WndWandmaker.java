@@ -50,7 +50,7 @@ public class WndWandmaker extends Window {
 
         Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndWandmaker_Message), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
-		message.y = titlebar.bottom() + GAP;
+		message.setY(titlebar.bottom() + GAP);
 		add( message );
 
         RedButton btnBattle = new RedButton(StringsManager.getVar(R.string.WndWandmaker_Battle)) {
@@ -59,7 +59,7 @@ public class WndWandmaker extends Window {
 				selectReward( wandmaker, item, WandMaker.makeBattleWand() );
 			}
 		};
-		btnBattle.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
+		btnBattle.setRect( 0, message.getY() + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnBattle );
 
         RedButton btnNonBattle = new RedButton(StringsManager.getVar(R.string.WndWandmaker_NonBattle)) {

@@ -54,11 +54,11 @@ public class WndItem extends Window {
 
 		Text info = PixelScene.createMultiline( item.info(), GuiProperties.regularFontSize());
 		info.maxWidth(WIDTH);
-		info.x = titlebar.left();
-		info.y = titlebar.bottom() + GAP;
+		info.setX(titlebar.left());
+		info.setY(titlebar.bottom() + GAP);
 		add(info);
 		 
-		float y = info.y + info.height() + GAP;
+		float y = info.getY() + info.height() + GAP;
 
 		VHBox actions = new VHBox(WIDTH);
 		actions.setAlign(HBox.Align.Width);
