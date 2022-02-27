@@ -61,7 +61,7 @@ public class Group extends Gizmo {
 				nullGizmo++;
 			}
 */
-			if ( g!= null && exists && g.active) {
+			if ( g!= null && g.exists && g.active) {
 				g.update();
 			}
 		}
