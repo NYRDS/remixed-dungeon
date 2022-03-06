@@ -114,7 +114,7 @@ public class Yog extends Boss {
 
 		int damageShift = 0;
 		for (Mob mob : Dungeon.level.mobs) {
-			if (mob instanceof Boss && !(mob instanceof Yog)) {
+			if (mob.isBoss() && !(mob instanceof Yog)) {
 				mob.beckon(getPos());
 				damageShift++;
 			}
