@@ -431,12 +431,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 				if (enemy == hero) {
 
 					if (hero.killerGlyph != null) {
-
 						Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.GLYPH), hero.killerGlyph.name(), Dungeon.depth));
 						GLog.n(StringsManager.getVars(R.array.Char_Kill)[hero.gender], hero.killerGlyph.name());
-
 					} else {
-						if (this instanceof Boss) {
+						if (isBoss()) {
 							Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.BOSS), name, Dungeon.depth));
 						} else {
 							Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
@@ -1935,4 +1933,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public void accumulateSkillPoints(int n) {}
+
+	public boolean isBoss() {return false;}
 }

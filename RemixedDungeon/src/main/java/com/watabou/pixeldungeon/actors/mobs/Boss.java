@@ -73,4 +73,9 @@ abstract public class Boss extends Mob {
 			}
 		}
 	}
+
+	@Override
+	public boolean isBoss() {
+		return true;
+	}
 }

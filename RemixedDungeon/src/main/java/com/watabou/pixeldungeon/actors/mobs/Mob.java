@@ -109,6 +109,7 @@ public abstract class Mob extends Char {
     protected int dmgMax = 0;
     protected int attackSkill = 0;
     protected int dr = 0;
+    protected boolean isBoss = false;
 
     public Mob() {
 		super();

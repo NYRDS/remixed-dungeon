@@ -181,6 +181,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		canBePet = classDesc.optBoolean("canBePet",canBePet);
 
 		attackRange = classDesc.optInt("attackRange",attackRange);
+		isBoss = classDesc.optBoolean("isBoss",isBoss);
 
 		String scriptFile = classDesc.optString("scriptFile","");
 		if(!scriptFile.isEmpty()) {

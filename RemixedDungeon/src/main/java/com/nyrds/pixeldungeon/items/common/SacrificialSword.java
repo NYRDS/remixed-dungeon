@@ -55,7 +55,7 @@ public class SacrificialSword extends MeleeWeapon {
 	@Override
 	public void postAttack(Char tgt ) {
 		
-		if(tgt instanceof Boss) {
+		if(tgt.isBoss()) {
 			return;
 		}
 		
