@@ -323,7 +323,7 @@
   <string name="GameScene_Secrets">Η ατμόσφαιρα προδίδει ότι ο όροφος κρύβει πολλά μυστικά.</string>
   <string name="Char_Name">εχθρός</string>
   <string name="Char_Name_Objective">εχθρός</string>
-  <string name="Char_YouMissed">%1$s: έγινε %2$s της επίθεσής σου</string>
+  <string name="Char_YouMissed">%1$s: %2$s την επίθεσή σου</string>
   <string name="Char_SmbMissed">%1$s: έγινε %2$s της επίθεσης από: %3$s</string>
   <string name="Char_OutParalysis">Ο πόνος ακύρωσε την παράλυση του πλάσματος: %s</string>
   <string name="Char_StaPoisoned">δηλητηρίαση</string>
