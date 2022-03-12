@@ -323,8 +323,8 @@
   <string name="GameScene_Secrets">Η ατμόσφαιρα προδίδει ότι ο όροφος κρύβει πολλά μυστικά.</string>
   <string name="Char_Name">εχθρός</string>
   <string name="Char_Name_Objective">εχθρός</string>
-  <string name="Char_YouMissed">%1$s: έγινε %2$s της επίθεσής σου</string>
-  <string name="Char_SmbMissed">%1$s: έγινε %2$s της επίθεσης από: %3$s</string>
+  <string name="Char_YouMissed">%1$s: %2$s την επίθεσή σου</string>
+  <string name="Char_SmbMissed">%1$s: %2$s την επίθεση από: %3$s</string>
   <string name="Char_OutParalysis">Ο πόνος ακύρωσε την παράλυση του πλάσματος: %s</string>
   <string name="Char_StaPoisoned">δηλητηρίαση</string>
   <string name="Char_StaAmok">αμόκ</string>
@@ -1199,7 +1199,7 @@
   <string name="Bat_Gender">feminine</string>
   <string name="Bat_Name_Objective">νυχτερίδα βαμπίρ</string>
   <string name="Bat_Desc">Αυτοί οι ζωηροί και ανυποχώρητοι κάτοικοι των σπηλαίων μπορούν να εξοντώνουν μεγαλύτερους εχθρούς, καθώς αναπληρώνουν τη ζωή τους με κάθε επιτυχημένη επίθεση.</string>
-  <string name="Bat_Defense">αποφυγή</string>
+  <string name="Bat_Defense">απέφυγε</string>
   <string name="Brute_Name">κτηνώδες γκνολ</string>
   <string name="Brute_Name_Objective">κτηνώδες γκνολ</string>
   <string name="Brute_Desc">Τα κτήνη είναι τα μεγαλύτερα, δυνατότερα και σκληρότερα όλων των γκνολ. Εξαγριώνονται όταν πληγωθούν θανάσιμα, προκαλώντας μεγαλύτερη ζημιά στους εχθρούς τους.</string>
@@ -1323,7 +1323,7 @@
   <string name="Swarm_Gender">neuter</string>
   <string name="Swarm_Name_Objective">σμήνος μυγών</string>
   <string name="Swarm_Desc">Το θανάσιμο σμήνος μυγών βουίζει από οργή. Κάθε μη μαγική επίθεση θα το χωρίσει σε δύο μικρότερα -αλλά εξίσου επικίνδυνα- σμήνη.</string>
-  <string name="Swarm_Defense">αποφυγή</string>
+  <string name="Swarm_Defense">απέφυγε</string>
   <string name="Tengu_Name">Τένγκου</string>
   <string name="Tengu_Gender">masculine</string>
   <string name="Tengu_Name_Objective">Τένγκου</string>
@@ -1345,7 +1345,7 @@
   <string name="Wraith_Gender">neuter</string>
   <string name="Wraith_Name_Objective">στοιχειό</string>
   <string name="Wraith_Desc">Το στοιχειό είναι το εκδικητικό πνεύμα ενός αμαρτωλού, του οποίου ο τάφος βεβηλώθηκε. Όντας αιθέριο, είναι πολύ δύσκολο να χτυπηθεί με κανονικό όπλο.</string>
-  <string name="Wraith_Defense">αποφυγή</string>
+  <string name="Wraith_Defense">απέφυγε</string>
   <string name="Yog_Name">Yog-Dzewa</string>
   <string name="Yog_Gender">masculine</string>
   <string name="Yog_Name_Objective">Yog-Dzewa</string>
@@ -1812,7 +1812,7 @@
   <string name="Ghost_Rose2">Σε παρακαλώ... βοήθησέ με... Βρες το τριαντάφυλλο...</string>
   <string name="Ghost_Rat1">Γεια σου... Κάποτε ήμουν σαν κι εσένα... είχα δύναμη και σθένος... μέχρι που σκοτώθηκα... Μα δεν μπορώ να φύγω από εδώ... όχι προτού πάρω την εκδίκησή μου... Εξόντωσε τον _βρομερό αρουραίο_ που μου στέρησε τη ζωή...</string>
   <string name="Ghost_Rat2">Σε παρακαλώ... Βοήθησέ με... Εξόντωσε το έκτρωμα...</string>
-  <string name="Ghost_Defense">αποφυγή</string>
+  <string name="Ghost_Defense">απέφυγε</string>
   <string name="FetidRat_Name">βρομερός αρουραίος</string>
   <string name="FetidRat_Name_Objective">βρομερός αρουραίος</string>
   <string name="FetidRat_Gender">masculine</string>
@@ -1826,7 +1826,7 @@
   <string name="Hedgehog_ImLate">Έχω αργήσει, έχω αργήσει πολύ...</string>
   <string name="Imp_Name">φιλόδοξο δαιμόνιο</string>
   <string name="Imp_Desc">Τα δαιμόνια είναι κατώτεροι δαίμονες. Δεν είναι φημισμένα για τη δύναμη ή το μαγικό τους ταλέντο, αλλά είναι αρκετά έξυπνα και κοινωνικά. Πολλά δαιμόνια προτιμούν να ζουν ανάμεσα σε μη δαίμονες.</string>
-  <string name="Imp_Defense">αποφυγή</string>
+  <string name="Imp_Defense">απέφυγε</string>
   <string name="Imp_Golems1">Είσαι απ\' αυτούς τους εξερευνητές; Λατρεύω τους εξερευνητές! Μπορείς πάντα να βασιστείς πάνω τους όταν θέλεις κάτι να εξοντωθεί. Έχω δίκιο; Έναντι αμοιβής προφανώς. ;-)\nΣτην περίπτωσή μου έχω κάποια _γκόλεμ_ που πρέπει να σκοτωθούν. Θα ξεκινήσω, βλέπεις, μια μικρή επιχείρηση εδώ... Αλλά αυτά τα ηλίθια γκόλεμ μού μπαίνουν εμπόδιο! Πού να συνεννοηθείς με κινούμενα ντουβάρια... Την κατάρα μου να\' χουν! Γι\' αυτό, σκότωσε σε παρακαλώ... ας πούμε _6 απ\' αυτά_ και μια ανταμοιβή θα γίνει δική σου.</string>
   <string name="Imp_Golems2">Πώς πάει το σαφάρι σου στα γκόλεμ;</string>
   <string name="Imp_Monks1">Είσαι απ\' αυτούς τους εξερευνητές; Λατρεύω τους εξερευνητές! Μπορείς πάντα να βασιστείς πάνω τους όταν θέλεις κάτι να εξοντωθεί. Έχω δίκιο; Έναντι αμοιβής προφανώς. ;-)\nΣτην περίπτωσή μου έχω κάποιους _μοναχούς_ που πρέπει να σκοτωθούν. Θα ξεκινήσω, βλέπεις, μια μικρή επιχείρηση εδώ... Αλλά αυτοί οι παλαβοί δεν αγοράζουν τίποτα και θα τρομάξουν και τους πελάτες μου. Γι\' αυτό, σκότωσε σε παρακαλώ... ας πούμε _8 απ\' αυτούς_ και μια ανταμοιβή θα γίνει δική σου.</string>
@@ -1851,7 +1851,7 @@
   <string name="Shopkeeper_Sell">Επίλεξε το αντικείμενο προς πώληση</string>
   <string name="WandMaker_Name">γέρος ραβδοποιός</string>
   <string name="WandMaker_Desc">Αυτός ο γέρικος αλλά υγιής κύριος έχει μια κάπως σαστισμένη έκφραση. Προστατεύεται από μια μαγική ασπίδα.</string>
-  <string name="WandMaker_Defense">απορρόφηση</string>
+  <string name="WandMaker_Defense">απορρόφησε</string>
   <string name="WandMaker_Berry1">Α! Τι ευχάριστη έκπληξη να συναντώ ένα αξιόλογο πρόσωπο σε αυτό το μέρος! Ήρθα για να βρω ένα σπάνιο συστατικό: τον _σπόρο σαπιόμουρου._ Ως χρήστης μαγείας, είμαι πολύ ικανός να αμυνθώ από τα τέρατα. Χάνομαι όμως πολύ εύκολα... ντρέπομαι που το λέω. Μήπως μπορείς να με βοηθήσεις εσύ; Θα χαρώ να πληρώσω για τις υπηρεσίες σου με ένα από τα καλύτερα ραβδιά μου.</string>
   <string name="WandMaker_Berry2">%s! Έχουμε κάποιο νέο για τον σπόρο Σαπιόμουρου; Όχι; Δεν βιάζομαι, μην ανησυχείς.</string>
   <string name="WandMaker_Dust1">Α! Τι ευχάριστη έκπληξη να συναντώ ένα αξιόλογο πρόσωπο σε αυτό το μέρος! Ήρθα για να βρω ένα σπάνιο συστατικό: τη _σκόνη σορού._ Μπορεί να βρεθεί στα σκελετικά απομεινάρια που υπάρχουν σε πληθώρα μες στην κατακόμβη. Όντας χρήστης μαγείας, είμαι πολύ ικανός να αμυνθώ από τα τέρατα. Χάνομαι όμως πολύ εύκολα... ντρέπομαι που το λέω. Μήπως μπορείς να με βοηθήσεις εσύ; Θα χαρώ να πληρώσω για τις υπηρεσίες σου με ένα από τα καλύτερα ραβδιά μου.</string>
