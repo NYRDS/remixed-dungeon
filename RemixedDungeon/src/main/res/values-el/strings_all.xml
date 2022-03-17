@@ -985,7 +985,7 @@
   <string name="HeroSubClass_NameFreR">Δρομέας</string>
   <string name="HeroSubClass_DescFreR">Ο _Δρομέας_ μπορεί να τρέχει με σχεδόν διπλάσια ταχύτητα από τα περισσότερα πλάσματα. Επίσης, είναι πολύ δυσκολότερο να χτυπηθεί όταν τρέχει. Για να γίνει αυτό, θα πρέπει να μην είναι επιβαρυμένος και να μη λιμοκτονεί.</string>
   <string name="HeroSubClass_NameSnip">Σκοπεύτρια</string>
-  <string name="HeroSubClass_DescSnip">Η _Σκοπεύτρια_ μπορεί να εντοπίζει αδύναμα σημεία στην πανοπλία του εχθρού--κυριολεκτικά αγνοώντας την εφόσον χρησιμοποιεί εκηβόλο όπλο.</string>
+  <string name="HeroSubClass_DescSnip">Η _Σκοπεύτρια_ μπορεί να εντοπίζει αδύναμα σημεία στην πανοπλία του εχθρού και πρακτικά την παρακάμπτει όταν χρησιμοποιεί όπλο απόστασης.</string>
   <string name="HeroSubClass_NameWard">Δασοφύλακας</string>
   <string name="HeroSubClass_DescWard">Ο ισχυρός εναρμονισμός με τη φύση δίνει στη _Δασοφύλακα_ την ικανότητα να συλλέγει δροσοσταλίδες και σπόρους από φυτά. Επίσης, λαμβάνει μια προσωρινή επίδραση πανοπλίας όποτε ποδοπατά ψηλό γρασίδι.</string>
   <string name="HeroSubClass_NameScout">ανιχνευτής</string>
@@ -1124,7 +1124,7 @@
   <string name="WarHammer_Name">πολεμική σφύρα</string>
   <string name="WarHammer_Info">Μία επιβλητική μάζα από ατσάλι και μόλυβδο. Λίγα πλάσματα μπορούν να αντέξουν το ισοπεδωτικό της χτύπημα. Και μόνο οι ισχυρότεροι των ηρώων μπορούν να τη χρησιμοποιήσουν αποτελεσματικά.</string>
   <string name="WarHammer_Gender">neuter</string>
-  <string name="MissileWeapon_Missiles">Εκηβόλο όπλο</string>
+  <string name="MissileWeapon_Missiles">Όπλο απόστασης</string>
   <string name="MissileWeapon_Yes">Ναι, ξέρω τι κάνω</string>
   <string name="MissileWeapon_No">Όχι, άλλαξα γνώμη</string>
   <string name="MissileWeapon_Sure">Θέλεις σίγουρα να το χρησιμοποιήσεις ως όπλο μάχης σώμα με σώμα;</string>
@@ -2428,7 +2428,7 @@
   <string name="HeroClass_NecromancerPerks_4">Τα φίλτρα θεραπείας αναγνωρίζονται εξ αρχής.</string>
   <string name="HeroClass_WarPerks_0">Οι Πολεμιστές ξεκινούν με 11 δύναμη.</string>
   <string name="HeroClass_WarPerks_1">Οι Πολεμιστές ξεκινούν με ένα μοναδικό ξίφος. Το ξίφος αυτό μπορεί να «σφυρηλατηθεί» για να αναβαθμίσει κάποιο άλλο όπλο μάχης.</string>
-  <string name="HeroClass_WarPerks_2">Οι Πολεμιστές είναι λιγότερο επιδέξιοι με τα εκηβόλα όπλα.</string>
+  <string name="HeroClass_WarPerks_2">Οι Πολεμιστές είναι λιγότερο επιδέξιοι με τα όπλα απόστασης.</string>
   <string name="HeroClass_WarPerks_3">Με την κατάποση κάθε είδους τροφής, αναπληρώνεται λίγη ζωή.</string>
   <string name="HeroClass_WarPerks_4">Τα φίλτρα δύναμης αναγνωρίζονται εξ αρχής.</string>
   <string name="HeroClass_MagPerks_0">Ο Μάγος ξεκινά με ένα μοναδικό ραβδί μαγικού βλήματος. Αυτό το ραβδί μπορεί να «απενισχυθεί» για να αναβαθμίσει κάποιο άλλο ραβδί.</string>
@@ -2445,8 +2445,8 @@
   <string name="HeroClass_RogPerks_5">Οι πάπυροι μαγικής χαρτογράφησης είναι εξ αρχής αναγνωρισμένοι.</string>
   <string name="HeroClass_HunPerks_0">Η Κυνηγός ξεκινά με 15 πόντους ζωής.</string>
   <string name="HeroClass_HunPerks_1">Η Κυνηγός ξεκινά με ένα μοναδικό αναβαθμίσιμο μπούμερανγκ.</string>
-  <string name="HeroClass_HunPerks_2">Η Κυνηγός είναι ειδική στα εκηβόλα όπλα και προκαλεί επιπλέον ζημιά με αυτά, βάσει της πλεονάζουσας δύναμής της.</string>
-  <string name="HeroClass_HunPerks_3">Η Κυνηγός λαμβάνει περισσότερη ζωή από τις δροσοσταλίδες.</string>
+  <string name="HeroClass_HunPerks_2">Η Κυνηγός είναι ειδική στα όπλα απόστασης και προκαλεί επιπλέον ζημιά με αυτά, βάσει της πλεονάζουσας δύναμής της.</string>
+  <string name="HeroClass_HunPerks_3">Οι Κυνηγοί λαμβάνουν περισσότερη ζωή από τις δροσοσταλίδες.</string>
   <string name="HeroClass_HunPerks_4">Η Κυνηγός αισθάνεται τα γειτονικά πλάσματα ακόμα κι αν κρύβονται πίσω από εμπόδια.</string>
   <string name="HeroClass_ElfPerks_0">Τα Ξωτικά ξεκινούν με 15 ζωή και 9 δύναμη.</string>
   <string name="HeroClass_ElfPerks_1">Τα Ξωτικά δεν επηρεάζονται από το ρίζωμα.</string>
