@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Music;
@@ -231,7 +232,7 @@ public class RankingsScene extends PixelScene {
 
     @Override
     protected void onBackPressed() {
-        RemixedDungeon.switchNoFade(TitleScene.class);
+        GameLoop.switchNoFade(TitleScene.class);
     }
 
     public static class Record extends Button {

@@ -212,7 +212,6 @@ public class ItemSlot extends Button {
     }
 
     public void enable(boolean value) {
-
         active = value;
 
         float alpha = value ? ENABLED : DISABLED;

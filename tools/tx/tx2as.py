@@ -78,10 +78,74 @@ def processText(arg):
     return ret
 
 
+def makeRJava(strings, arrays):
+    rJava = open("R.java", "w", encoding='utf8')
+    rJava.write('''
+    package com.nyrds.pixeldungeon.ml;
+
+    public class R {
+        public static class string { 
+                ''')
+
+    counter = 0
+
+    for str in strings:
+        rJava.write(f'''
+                public static final int {str} = {counter};''')
+        counter += 1
+
+    rJava.write('''}
+    
+    public static class array {
+    ''')
+
+    for str in arrays:
+        rJava.write(f'''
+                public static final int {str} = {counter};''')
+        counter += 1
+
+
+    rJava.write('''
+        }
+    }''')
+    rJava.close()
+
+
+r_strings = set()
+r_arrays = set()
+
+d_strings = {}
+d_arrays = {}
+
+locales = []
+
+strings_files = ['RemixedDungeon/src/main/res/values/strings_not_translate.xml',
+                 'RemixedDungeon/src/main/res/values/strings_api_signature.xml',
+                 'RemixedDungeon/src/main/res/values/string_arrays.xml',
+                 'RemixedDungeon/src/main/res/values/strings_all.xml']
+
+for file in strings_files:
+    pfile = ElementTree.parse('../../' + file).getroot()
+
+    for entry in pfile:
+        if entry.tag not in ["string", "string-array"]:
+            continue
+
+        entry_name = entry.get("name")
+        if entry.tag == 'string':
+            r_strings.add(entry_name)
+
+        if entry.tag == 'string-array':
+            d_arrays[entry_name] = []
+            for e in entry:
+                d_arrays[entry_name].append(e.text.replace("@string/", ""))
+
+            r_arrays.add(entry_name)
+
+
 for _, _, files in os.walk(translations_dir + dir_name):
 
     arrays = ElementTree.Element("resources")
-
     for file_name in files:
 
         locale_code = file_name[:-4]
@@ -92,6 +156,8 @@ for _, _, files in os.walk(translations_dir + dir_name):
         if locale_code in locale_remap:
             locale_code = locale_remap[locale_code]
 
+        d_strings[locale_code] = {}
+        locales.append(locale_code)
 
         if locale_code not in totalCounter:
             totalCounter[locale_code] = 0
@@ -115,27 +181,27 @@ for _, _, files in os.walk(translations_dir + dir_name):
             jsonData = open("strings_" + locale_code + ".json", "w", encoding='utf8')
 
             for entry in transifexData:
-
                 if entry.tag not in ["string", "string-array"]:
                     continue
 
                 #detectedLang = lang(entry.text)
                 #print(entry.text, detectedLang)
 
-
                 counters[resource_name][locale_code] += 1
                 totalCounter[locale_code] += 1
 
                 if entry.tag == "string":
+                    text = entry.text
+                    if text is None:
+                        text = ""
 
-                    jsonData.write(unescape(json.dumps([entry.get("name"), entry.text], ensure_ascii=False)))
-                    jsonData.write("\n")
+                    jsonStr = unescape(text).replace(r"\'", "'").replace(r"\’", "’").replace(r"\?","?")
+
+                    d_strings[locale_code][entry.get("name")] = jsonStr
 
                 entry.text = processText(entry.text)
 
             indent(transifexData)
-
-            jsonData.close()
 
             xml_out_name = resource_dir + "/" + resource_name
             ElementTree.ElementTree(transifexData).write(xml_out_name, encoding="utf-8", method="xml")
@@ -150,4 +216,33 @@ for _, _, files in os.walk(translations_dir + dir_name):
             print("shit happens with " + currentFilePath)
             print(error)
 
+
+for locale in locales:
+    jsonData = open("strings_" + locale + ".json", "w", encoding='utf8')
+
+    for key, jsonStr in d_strings[locale].items():
+        jsonData.write(unescape(json.dumps([key, jsonStr], ensure_ascii=False)))
+        jsonData.write("\n")
+
+    for key, array in d_arrays.items():
+        localizedArray = [key]
+        for s_key in array:
+            value = d_strings["en"][s_key]
+            if s_key in d_strings[locale]:
+                value = d_strings[locale][s_key]
+
+            localizedArray.append(value)
+
+        jsonData.write(unescape(json.dumps(localizedArray, ensure_ascii=False)))
+        jsonData.write("\n")
+
+    jsonData.close()
+
+#        jsonData.write(unescape(json.dumps([entry.get("name"), jsonStr], ensure_ascii=False)))
+#        jsonData.write("\n")
+
 pprint.pprint(totalCounter)
+
+pprint.pprint(d_arrays)
+
+makeRJava(r_strings, r_arrays)

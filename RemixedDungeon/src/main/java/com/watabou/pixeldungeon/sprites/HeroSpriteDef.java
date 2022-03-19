@@ -15,8 +15,9 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
-import org.json.JSONObject;
+
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 
 /**
  * Created by mike on 16.04.2016.

@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Music;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
@@ -87,6 +87,6 @@ public class BadgesScene extends PixelScene {
 	
 	@Override
 	protected void onBackPressed() {
-		RemixedDungeon.switchNoFade( TitleScene.class );
+		GameLoop.switchNoFade( TitleScene.class );
 	}
 }

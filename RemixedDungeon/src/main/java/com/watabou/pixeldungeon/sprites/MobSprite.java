@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.watabou.noosa.Animation;
-import com.watabou.noosa.Group;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.GameScene;

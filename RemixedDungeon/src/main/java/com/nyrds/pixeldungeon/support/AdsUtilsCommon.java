@@ -1,8 +1,6 @@
 package com.nyrds.pixeldungeon.support;
 
-import androidx.annotation.MainThread;
-
-import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -74,7 +72,7 @@ class AdsUtilsCommon {
         final IRewardVideoProvider chosenProvider = choseLessFailedFrom(AdsUtils.rewardVideoFails, Integer.MAX_VALUE);
 
         if(chosenProvider!=null) {
-            GameLoop.runOnMainThread(() -> chosenProvider.showRewardVideo(retTo));
+            Game.runOnMainThread(() -> chosenProvider.showRewardVideo(retTo));
         } else {
             retTo.returnToWork(false);
         }
@@ -84,7 +82,7 @@ class AdsUtilsCommon {
         final IInterstitialProvider chosenProvider = choseLessFailedFrom(AdsUtils.interstitialFails, Integer.MAX_VALUE);
 
         if(chosenProvider!=null) {
-            GameLoop.runOnMainThread(() -> chosenProvider.showInterstitial(retTo));
+            Game.runOnMainThread(() -> chosenProvider.showInterstitial(retTo));
         } else {
             retTo.returnToWork(false);
         }
@@ -94,7 +92,7 @@ class AdsUtilsCommon {
         IBannerProvider chosenProvider = choseLessFailedFrom(AdsUtils.bannerFails, Integer.MAX_VALUE);
 
         if(chosenProvider!=null) {
-            GameLoop.runOnMainThread(chosenProvider::displayBanner);
+            Game.runOnMainThread(chosenProvider::displayBanner);
         }
     }
 
@@ -114,7 +112,6 @@ class AdsUtilsCommon {
         tryNextRewardVideo(retTo);
     }
 
-    @MainThread
     static boolean isRewardVideoReady() {
         for(IRewardVideoProvider provider: AdsUtils.rewardVideoFails.keySet()) {
             if(provider.isReady()) {

@@ -17,10 +17,9 @@
  */
 package com.nyrds.pixeldungeon.effects;
 
-import android.opengl.GLES20;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gl.Gl;
 import com.nyrds.platform.gl.Texture;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
@@ -30,8 +29,6 @@ import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.utils.ColorMath;
 import com.watabou.utils.Random;
-
-import javax.microedition.khronos.opengles.GL10;
 
 public class NewFireball extends Component {
 
@@ -114,9 +111,9 @@ public class NewFireball extends Component {
 	
 	@Override
 	public void draw() {
-		GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE );
+		Gl.blendSrcAlphaOne();
 		super.draw();
-		GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA );
+		Gl.blendSrcAlphaOneMinusAlpha();
 	}
 	
 	public static class Flame extends Image {

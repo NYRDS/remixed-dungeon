@@ -8,8 +8,8 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.text.TextPaint;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.LRUCache;
 import com.watabou.glwrap.Matrix;
@@ -47,7 +47,7 @@ public class SystemText extends Text {
 
 	private static float fontScale = Float.NaN;
 
-	private static final LRUCache<String, Bitmap> bitmapCache = new LRUCache<>(256);
+	private static final LRUCache<String, BitmapData> bitmapCache = new LRUCache<>(256);
 
 	private static int cacheHits = 0;
 	private static int cacheMiss = 0;
@@ -64,7 +64,7 @@ public class SystemText extends Text {
 		}
 
 		if (tf == null) {
-			if (Game.smallResScreen()) {
+			if (GameLoop.smallResScreen()) {
 				tf = Typeface.create((String) null, Typeface.BOLD);
 				oversample = 1;
 			} else {
@@ -126,7 +126,7 @@ public class SystemText extends Text {
 			return;
 		}
 
-		if (Game.smallResScreen()) {
+		if (GameLoop.smallResScreen()) {
 			scale *= 1.5;
 		}
 
@@ -270,7 +270,7 @@ public class SystemText extends Text {
 								(int) (lineWidth * oversample),
 								(int) (fontHeight * oversample),
 								Bitmap.Config.ARGB_4444);
-						bitmapCache.put(key, bitmap);
+						bitmapCache.put(key, new BitmapData(bitmap));
 
 						Canvas canvas = new Canvas(bitmap);
 						drawTextLine(charIndex, canvas, contourPaint);

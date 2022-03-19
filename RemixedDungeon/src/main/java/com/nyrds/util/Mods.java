@@ -6,13 +6,14 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+
+import clone.org.json.JSONArray;
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 
 /**
  * Created by mike on 16.10.2016.

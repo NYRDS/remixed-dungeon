@@ -17,13 +17,12 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import android.opengl.GLES20;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.gfx.SystemText;
+import com.nyrds.platform.gl.Gl;
 import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.util.GuiProperties;
@@ -39,8 +38,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import javax.microedition.khronos.opengles.GL10;
 
 public class PixelScene extends Scene {
 
@@ -76,14 +73,14 @@ public class PixelScene extends Scene {
 
 		defaultZoom = 20;
 
-		while ((Game.width() / defaultZoom < minWidth || Game.height()
+		while ((GameLoop.width() / defaultZoom < minWidth || GameLoop.height()
 				/ defaultZoom < minHeight)
 				&& defaultZoom > 1) {
 
 			defaultZoom-=0.01;
 		}
 
-		WndHelper.update(Game.width() / defaultZoom, Game.height() / defaultZoom);
+		WndHelper.update(GameLoop.width() / defaultZoom, GameLoop.height() / defaultZoom);
 
 		minZoom = 1;
 		maxZoom = defaultZoom * 2;
@@ -106,14 +103,14 @@ public class PixelScene extends Scene {
 
 	static private void createFonts() {
 		// 3x5 (6)
-		font1x = Font.colorMarked(TextureCache.get(Assets.FONTS1X),
-				0x00000000, Font.LATIN_FULL);
+		font1x = Font.colorMarked(
+				TextureCache.get(Assets.FONTS1X), 0x00000000, Font.LATIN_FULL);
 		font1x.baseLine = 6;
 		font1x.tracking = -1;
 
 		// 7x12 (15)
 		font25x = Font.colorMarked(
-			TextureCache.get( Assets.FONTS25X ), 17, 0x00000000, Font.ALL_CHARS);
+			TextureCache.get(Assets.FONTS25X), 0x00000000, Font.ALL_CHARS);
 		font25x.baseLine = 13;
 		font25x.tracking = -1;
 	}
@@ -131,7 +128,7 @@ public class PixelScene extends Scene {
 
 		scale /= 1.8;
 
-		if(Game.smallResScreen()) {
+		if(GameLoop.smallResScreen()) {
 			scale /= 2;
 		}
 
@@ -264,10 +261,9 @@ public class PixelScene extends Scene {
 		@Override
 		public void draw() {
 			if (light) {
-				GLES20.glBlendFunc(GL10.GL_SRC_ALPHA, GL10.GL_ONE);
+				Gl.blendSrcAlphaOne();
 				super.draw();
-				GLES20.glBlendFunc(GL10.GL_SRC_ALPHA,
-						GL10.GL_ONE_MINUS_SRC_ALPHA);
+				Gl.blendSrcAlphaOneMinusAlpha();
 			} else {
 				super.draw();
 			}
@@ -278,10 +274,10 @@ public class PixelScene extends Scene {
 
 		PixelCamera(float zoom) {
 			super(
-					(int) (Game.width() - Math.ceil(Game.width() / zoom) * zoom) / 2,
-					(int) (Game.height() - Math.ceil(Game.height() / zoom)* zoom) / 2,
-					(int) Math.ceil(Game.width() / zoom),
-					(int) Math.ceil(Game.height() / zoom),
+					(int) (GameLoop.width() - Math.ceil(GameLoop.width() / zoom) * zoom) / 2,
+					(int) (GameLoop.height() - Math.ceil(GameLoop.height() / zoom)* zoom) / 2,
+					(int) Math.ceil(GameLoop.width() / zoom),
+					(int) Math.ceil(GameLoop.height() / zoom),
 					zoom);
 		}
 

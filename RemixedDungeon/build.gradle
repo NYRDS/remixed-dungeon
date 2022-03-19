@@ -72,23 +72,19 @@ android {
             versionCode defaultConfig.versionCode + 10000
         }
 
-        fdroid {
+        none {
             dimension "market"
-        }
-
-        huawei {
-            minSdkVersion 19
-            dimension "market"
-            applicationIdSuffix ".huawei"
         }
 
         android {
             dimension "platform"
-
         }
 
         libgdx {
             dimension "platform"
+            packagingOptions {
+                exclude "META-INF/INDEX.LIST"
+            }
         }
 
         none {
@@ -106,19 +102,28 @@ android {
     androidResources {
         noCompress 'mp3', 'ogg'
     }
-
 }
 
-
+tasks.whenTaskAdded {task ->
+    if(task.name.contains("generate") && task.name.contains("ResValue")) {
+        task.enabled = false
+    }
+}
 
 dependencies {
     implementation project(':annotation')
-
-    annotationProcessor project(':processor')
+    implementation project(path: ':json_clone')
 
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
+
+    annotationProcessor project(':processor')
+
+    libgdxImplementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+    libgdxImplementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+    libgdxImplementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+    libgdxImplementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
 
 
     androidImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
@@ -127,13 +132,13 @@ dependencies {
 
     implementation 'commons-io:commons-io:2.6'
 
-    implementation 'com.appodeal.ads.sdk:core:2.11.0'
-    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.11.0.18'
-    implementation 'com.appodeal.ads.sdk.networks:applovin:2.11.0.20'
-    implementation 'com.appodeal.ads.sdk.networks:bidmachine:2.11.0.17'
-    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.11.0.18'
-    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.11.0.15'
-    implementation 'com.appodeal.ads.sdk.networks:vungle:2.11.0.11'
+    androidImplementation 'com.appodeal.ads.sdk:core:2.11.0'
+    androidImplementation 'com.appodeal.ads.sdk.networks:adcolony:2.11.0.18'
+    androidImplementation 'com.appodeal.ads.sdk.networks:applovin:2.11.0.20'
+    androidImplementation 'com.appodeal.ads.sdk.networks:bidmachine:2.11.0.17'
+    androidImplementation 'com.appodeal.ads.sdk.networks:ironsource:2.11.0.18'
+    androidImplementation 'com.appodeal.ads.sdk.networks:unity_ads:2.11.0.15'
+    androidImplementation 'com.appodeal.ads.sdk.networks:vungle:2.11.0.11'
 
     implementation 'org.jetbrains:annotations:23.0.0'
 
@@ -153,11 +158,6 @@ dependencies {
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
     googlePlayImplementation 'com.google.firebase:firebase-perf'
-
-
-    huaweiImplementation 'com.huawei.hms:ads-lite:13.4.30.301'
-    huaweiImplementation 'com.huawei.hms:hianalytics:5.0.0.300'
-    huaweiImplementation 'com.huawei.agconnect:agconnect-crash:1.4.1.300'
 }
 
 if (getGradle().getStartParameter().getTaskRequests()
@@ -165,10 +165,9 @@ if (getGradle().getStartParameter().getTaskRequests()
     apply plugin: 'com.google.firebase.crashlytics'
     apply plugin: 'com.google.gms.google-services'
     apply plugin: 'com.google.firebase.firebase-perf'
-
 }
 
-if (getGradle().getStartParameter().getTaskRequests()
-        .toString().contains("Huawei")) {
-    apply plugin: 'com.huawei.agconnect'
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }

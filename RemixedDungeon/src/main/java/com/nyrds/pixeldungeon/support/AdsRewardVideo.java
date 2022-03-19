@@ -17,15 +17,15 @@ public class AdsRewardVideo implements InterstitialPoint {
     public void show(Item prize) {
         Hero.movieRewardPrize = prize;
 
-        Game.softPaused = true;
+        GameLoop.softPaused = true;
         Dungeon.save(false);
 
         GameLoop.pushUiTask( () -> {
             Dungeon.save(true);
-            Game.softPaused = false;
+            GameLoop.softPaused = false;
 
-            GameLoop.runOnMainThread(() -> {
-                Ads.removeEasyModeBanner();
+            Game.runOnMainThread(() -> {
+                AdsUtils.removeEasyModeBanner();
                 Ads.showRewardVideo(this);
             });
         });
@@ -39,7 +39,7 @@ public class AdsRewardVideo implements InterstitialPoint {
         GameLoop.pushUiTask(() -> {
 
             Dungeon.save(true);
-            Game.softPaused = false;
+            GameLoop.softPaused = false;
             Hero.doOnNextAction = new MovieRewardTask(result);
 
             RemixedDungeon.landscape(RemixedDungeon.storedLandscape());

@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Dungeon;
@@ -48,7 +47,7 @@ public class GameControl {
         resDesc.put("modVersion", String.valueOf(ModdingMode.activeModVersion()));
         resDesc.put("difficulty",  String.valueOf(difficulty));
 
-        resDesc.put("version", Game.version);
+        resDesc.put("version", GameLoop.version);
         resDesc.put("donation",Integer.toString(GamePreferences.donated()));
 
         EventCollector.logEvent("game", resDesc);

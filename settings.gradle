@@ -1,1 +1,3 @@
 include ':RemixedDungeon', ':processor', ':annotation'
+include ':lib'
+include ':json_clone'

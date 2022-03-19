@@ -80,15 +80,6 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, In
         });
     }
 
-    public static void openPlayStore() {
-        final String appPackageName = instance().getPackageName();
-        try {
-            instance().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
-        } catch (android.content.ActivityNotFoundException anfe) {
-            instance().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
-        }
-    }
-
     @SneakyThrows
     @Override
     public void returnToWork(boolean result) {

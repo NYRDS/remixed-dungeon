@@ -19,9 +19,9 @@ package com.watabou.pixeldungeon.scenes;
 
 import android.content.Intent;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.input.Touchscreen.Touch;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
@@ -65,7 +65,7 @@ public class AboutScene extends PixelScene {
 				intent.putExtra(Intent.EXTRA_EMAIL, new String[]{address} );
                 intent.putExtra(Intent.EXTRA_SUBJECT, StringsManager.getVar(R.string.app_name));
 
-                Game.instance().startActivity( Intent.createChooser(intent, StringsManager.getVar(R.string.AboutScene_Snd)) );
+                //Game.instance().startActivity( Intent.createChooser(intent, StringsManager.getVar(R.string.AboutScene_Snd)) );
 			}
 		};
 		add(area);
@@ -172,6 +172,6 @@ public class AboutScene extends PixelScene {
 	
 	@Override
 	protected void onBackPressed() {
-		RemixedDungeon.switchNoFade( TitleScene.class );
+		GameLoop.switchNoFade( TitleScene.class );
 	}
 }

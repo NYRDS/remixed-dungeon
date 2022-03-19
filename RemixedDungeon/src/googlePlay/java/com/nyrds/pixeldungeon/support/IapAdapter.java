@@ -173,7 +173,7 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
     }
 
     private void executeServiceRequest(final Runnable runnable) {
-        GameLoop.runOnMainThread(() -> {
+        Game.runOnMainThread(() -> {
             if (isServiceConnected()) {
                 getExecutor().execute(runnable);
             } else {
@@ -209,7 +209,7 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
     }
 
     private Executor getExecutor() {
-        return Game.instance().serviceExecutor;
+        return GameLoop.instance().serviceExecutor;
     }
 
     public boolean isServiceConnected() {

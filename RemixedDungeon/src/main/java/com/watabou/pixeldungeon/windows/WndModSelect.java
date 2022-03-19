@@ -9,6 +9,7 @@ import com.nyrds.pixeldungeon.windows.ScrollableList;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.DownloadStateListener;
 import com.nyrds.util.DownloadTask;
@@ -17,7 +18,6 @@ import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Mods;
 import com.nyrds.util.UnzipStateListener;
 import com.nyrds.util.UnzipTask;
-import com.nyrds.util.Util;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.SaveUtils;
@@ -45,7 +45,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 
 		modsList = Mods.buildModsList();
 
-		boolean haveInternet = Util.isConnectedToInternet();
+		boolean haveInternet = PUtil.isConnectedToInternet();
 
         Text tfTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.ModsButton_SelectMod), GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);

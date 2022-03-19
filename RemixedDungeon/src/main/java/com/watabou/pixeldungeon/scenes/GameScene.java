@@ -506,6 +506,7 @@ public class GameScene extends PixelScene {
                     }
                 }
             }
+
         }
 
         if(level instanceof TestLevel) {
@@ -524,7 +525,7 @@ public class GameScene extends PixelScene {
 
     @Override
     public synchronized void pause() {
-        if(!Game.softPaused) {
+        if(!GameLoop.softPaused) {
             final Hero hero = Dungeon.hero;
             if(hero != null && hero.isAlive()) {
                 Dungeon.save(false);

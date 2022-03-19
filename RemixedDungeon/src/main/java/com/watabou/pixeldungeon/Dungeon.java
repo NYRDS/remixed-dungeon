@@ -17,6 +17,8 @@ t * Pixel Dungeon
  */
 package com.watabou.pixeldungeon;
 
+import static com.nyrds.pixeldungeon.game.GameLoop.MOVE_TIMEOUTS;
+
 import com.google.firebase.perf.metrics.AddTrace;
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
@@ -41,10 +43,10 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
-import com.nyrds.util.Util;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Rankings.gameOver;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -93,8 +95,6 @@ import java.util.HashSet;
 import lombok.SneakyThrows;
 import lombok.val;
 import lombok.var;
-
-import static com.nyrds.platform.game.RemixedDungeon.MOVE_TIMEOUTS;
 
 public class Dungeon {
 
@@ -397,7 +397,7 @@ public class Dungeon {
         Bundle bundle = new Bundle();
 
         bundle.put(GAME_ID, gameId);
-        bundle.put(VERSION, Game.version);
+        bundle.put(VERSION, GameLoop.version);
         bundle.put(HERO, hero);
         bundle.put(DEPTH, depth);
 
@@ -474,7 +474,7 @@ public class Dungeon {
 
     @AddTrace(name = "Dungeon.saveAllImpl")
     private static void saveAllImpl() {
-        float MBytesAvailable = Util.getAvailableInternalMemorySize() / 1024f / 1024f;
+        float MBytesAvailable = PUtil.getAvailableInternalMemorySize() / 1024f / 1024f;
 
         if (MBytesAvailable < 2) {
             EventCollector.logEvent("saveGame", "lowMemory");
@@ -629,7 +629,7 @@ public class Dungeon {
     private static void loadGame(String fileName, boolean fullLoad) throws IOException {
         try {
             GameLoop.loadingOrSaving.incrementAndGet();
-            Bundle bundle = gameBundle(fileName);
+            Bundle bundle = Bundle.readFromFile(fileName);
             loadGameFromBundle(bundle, fullLoad);
         }
         finally {
@@ -699,13 +699,6 @@ public class Dungeon {
         }
 
         GamesInProgress.delete(heroClass);
-    }
-
-    public static Bundle gameBundle(String fileName) throws IOException {
-
-        try(InputStream input = new FileInputStream(FileSystem.getFile(fileName))) {
-            return Bundle.read(input);
-        }
     }
 
     public static void preview(GamesInProgress.Info info, Bundle bundle) {

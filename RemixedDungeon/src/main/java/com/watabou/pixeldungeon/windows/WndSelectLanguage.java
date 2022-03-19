@@ -17,9 +17,6 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import android.content.Intent;
-import android.net.Uri;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.game.Game;
@@ -65,9 +62,7 @@ public class WndSelectLanguage extends Window {
 		TouchArea area = new TouchArea(translateLink) {
 			@Override
 			protected void onClick(Touchscreen.Touch touch) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(StringsManager.getVar(R.string.WndSelectLanguage_TranslationLink)));
-
-                Game.instance().startActivity(Intent.createChooser(intent, StringsManager.getVar(R.string.WndSelectLanguage_TranslationLink)));
+				Game.instance().openUrl(StringsManager.getVar(R.string.WndSelectLanguage_TranslationLink),StringsManager.getVar(R.string.WndSelectLanguage_TranslationLink));
 			}
 		};
 		add(area);

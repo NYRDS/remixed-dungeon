@@ -17,11 +17,9 @@
  */
 package com.watabou.pixeldungeon.utils;
 
-import android.util.Log;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.watabou.utils.Signal;
@@ -73,7 +71,7 @@ public class GLog {
 			
 			try {
 				logWriter = new FileWriter(logFile,true);
-				toFile("log started %s !", Game.version);
+				toFile("log started %s !", GameLoop.version);
 			} catch (Exception e) {
 				readonlySd = true;
 				return;
@@ -111,11 +109,10 @@ public class GLog {
 		final String finalText = text;
 
 		if(Util.isDebug()) {
-			Log.i(TAG, text);
+			PUtil.slog(TAG, text);
 		}
 
-		GameLoop.pushUiTask(() -> update.dispatch(finalText)
-		);
+		GameLoop.pushUiTask(() -> update.dispatch(finalText));
 	}
 
 	public static void i( String text, Object... args ) {
@@ -148,9 +145,7 @@ public class GLog {
 				return;
 			}
 
-			Log.i(TAG, text);
+			PUtil.slog(TAG, text);
 		}
 	}
-
-
 }

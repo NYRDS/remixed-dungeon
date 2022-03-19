@@ -4,7 +4,7 @@ buildscript {
         mavenCentral()
         jcenter()
         google()
-
+        gradlePluginPortal()
         maven { url 'https://developer.huawei.com/repo/' }
     }
     dependencies {
@@ -12,12 +12,16 @@ buildscript {
         classpath 'com.google.firebase:firebase-crashlytics-gradle:2.8.1'
         classpath 'com.google.firebase:perf-plugin:1.4.1'
         classpath 'com.google.gms:google-services:4.3.10' // google-services plugin
-        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:1.0.0'
         classpath 'com.huawei.agconnect:agcp:1.4.1.300'
     }
 }
 
 allprojects {
+
+    ext {
+        gdxVersion = '1.10.0'
+    }
+
     repositories {
         mavenCentral()
         jcenter()

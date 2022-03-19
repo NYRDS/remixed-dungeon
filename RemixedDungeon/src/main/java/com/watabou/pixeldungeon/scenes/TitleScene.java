@@ -25,9 +25,9 @@ import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
-import com.nyrds.util.Util;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -80,7 +80,7 @@ public class TitleScene extends PixelScene {
         DashboardItem btnBadges = new DashboardItem(StringsManager.getVar(R.string.TitleScene_Badges), 3) {
 			@Override
 			protected void onClick() {
-				RemixedDungeon.switchNoFade(BadgesScene.class);
+				GameLoop.switchNoFade(BadgesScene.class);
 			}
 		};
 		final int w_center = w / 2;
@@ -97,7 +97,7 @@ public class TitleScene extends PixelScene {
         DashboardItem btnPlay = new DashboardItem(StringsManager.getVar(R.string.TitleScene_Play), 0) {
 			@Override
 			protected void onClick() {
-				RemixedDungeon.switchNoFade(StartScene.class);
+				GameLoop.switchNoFade(StartScene.class);
 			}
 		};
 		btnPlay.setPos(w_center - btnPlay.width(), btnMods.top()
@@ -107,7 +107,7 @@ public class TitleScene extends PixelScene {
         DashboardItem btnHighscores = new DashboardItem(StringsManager.getVar(R.string.TitleScene_Highscores), 2) {
 			@Override
 			protected void onClick() {
-				RemixedDungeon.switchNoFade(RankingsScene.class);
+				GameLoop.switchNoFade(RankingsScene.class);
 			}
 		};
 		btnHighscores.setPos(w_center, btnPlay.top());
@@ -142,12 +142,12 @@ public class TitleScene extends PixelScene {
 		archs.setSize(w, h);
 		addToBack(archs);
 
-		Text version = Text.createBasicText(Game.version, font1x);
+		Text version = Text.createBasicText(GameLoop.version, font1x);
 		version.hardlight(0x888888);
 		version.setPos(w - version.width(), h - version.height());
 		add(version);
 
-		float freeInternalStorage = Util.getAvailableInternalMemorySize();
+		float freeInternalStorage = PUtil.getAvailableInternalMemorySize();
 
 		if (freeInternalStorage < 2) {
 			Text lowInternalStorageWarning = PixelScene
@@ -194,7 +194,7 @@ public class TitleScene extends PixelScene {
         ImageButton btnAbout = new ImageButton(img){
 			@Override
 			protected void onClick() {
-				RemixedDungeon.switchNoFade(AboutScene.class);
+				GameLoop.switchNoFade(AboutScene.class);
 			}
 		};
 
@@ -208,8 +208,8 @@ public class TitleScene extends PixelScene {
 		btnExit.setPos(w - btnExit.width(), 0);
 		add(btnExit);
 
-		if (GamePreferences.version() != Game.versionCode) {
-			if(Utils.differentVersions(GamePreferences.versionString(),Game.version)) {
+		if (GamePreferences.version() != GameLoop.versionCode) {
+			if(Utils.differentVersions(GamePreferences.versionString(), GameLoop.version)) {
 				changelogUpdated = true;
 			}
 		}
@@ -228,11 +228,13 @@ public class TitleScene extends PixelScene {
 
 	private double time = 0;
 	private boolean donationAdded = false;
+
 	@Override
 	public void update() {
 		super.update();
 		time += GameLoop.elapsed;
 		float cl = (float) Math.sin(time) * 0.5f + 0.5f;
+
 		if(!donationAdded) {
 			if (RemixedDungeon.canDonate()) {
 				add(pleaseSupport);
@@ -246,6 +248,5 @@ public class TitleScene extends PixelScene {
 		if(changelogUpdated) {
 			btnChangelog.brightness(cl + 1);
 		}
-
 	}
 }

@@ -9,6 +9,7 @@ import com.appodeal.ads.BannerView;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -51,7 +52,6 @@ public class AdsUtils {
         }
     }
 
-
     public static void initRewardVideo() {
 
         if(!rewardVideoFails.isEmpty()) {
@@ -74,6 +74,44 @@ public class AdsUtils {
 
         Game.instance().getLayout().removeViewAt(index);
     }
+
+    public static void removeEasyModeBanner() {
+        Game.runOnMainThread(() -> {
+            int index = AdsUtils.bannerIndex();
+            if (index >= 0) {
+
+                View adview = Game.instance().getLayout().getChildAt(index);
+                AdsUtils.removeBannerView(index, adview);
+
+            }
+        });
+    }
+
+    static void updateBanner(final View view) {
+        Game.runOnMainThread(() -> {
+
+            int index = AdsUtils.bannerIndex();
+            final LinearLayout layout = Game.instance().getLayout();
+
+            if (index >= 0) {
+
+                View adview = layout.getChildAt(index);
+                if(adview == view) {
+                    return;
+                }
+
+                AdsUtils.removeBannerView(index, adview);
+
+            }
+
+            try {
+                layout.addView(view, 0);
+            } catch (IllegalStateException e) {
+                EventCollector.logException(e);
+            }
+        });
+    }
+
 
     static int bannerIndex() {
         final LinearLayout layout = Game.instance().getLayout();

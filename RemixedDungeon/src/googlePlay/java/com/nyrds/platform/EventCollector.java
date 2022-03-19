@@ -4,7 +4,6 @@ import android.os.Bundle;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
-import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
@@ -121,7 +120,7 @@ public class EventCollector {
 
 	static public void logScene(final String scene) {
 		if (!mDisabled) {
-			GameLoop.runOnMainThread(() -> mFirebaseAnalytics.setCurrentScreen(Game.instance(), scene, null));
+			Game.runOnMainThread(() -> mFirebaseAnalytics.setCurrentScreen(Game.instance(), scene, null));
 		}
 	}
 

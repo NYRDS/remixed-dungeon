@@ -3,8 +3,8 @@ package com.nyrds.pixeldungeon.mobs.common;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.utils.Bundle;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import clone.org.json.JSONException;
+import clone.org.json.JSONObject;
 
 public class MultiKindMob extends Mob {
 	
