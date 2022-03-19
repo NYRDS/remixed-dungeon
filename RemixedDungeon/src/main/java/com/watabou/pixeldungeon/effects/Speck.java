@@ -106,7 +106,7 @@ public class Speck extends Image {
         setScale(1);
         speed.set(0);
         acc.set(0);
-        angle = 0;
+        setAngle(0);
         angularSpeed = 0;
 
         setEvolutionByType(index, evolutionType);
@@ -127,14 +127,14 @@ public class Speck extends Image {
             case STAR:
                 speed.polar(Random.Float(2 * 3.1415926f), Random.Float(128));
                 acc.set(0, 128);
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 angularSpeed = Random.Float(-360, +360);
                 lifespan = 1f;
                 break;
 
             case MIST:
                 speed.polar(Random.Float(2 * 3.1415926f), Random.Float(3));
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 angularSpeed = Random.Float(-3.6f, +3.6f);
                 lifespan = 2f;
                 break;
@@ -142,7 +142,7 @@ public class Speck extends Image {
             case FORGE:
                 speed.polar(Random.Float(-3.1415926f, 0), Random.Float(64));
                 acc.set(0, 128);
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 angularSpeed = Random.Float(-360, +360);
                 lifespan = 0.51f;
                 break;
@@ -150,7 +150,7 @@ public class Speck extends Image {
             case EVOKE:
                 speed.polar(Random.Float(-3.1415926f, 0), 50);
                 acc.set(0, 50);
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 angularSpeed = Random.Float(-180, +180);
                 lifespan = 1f;
                 break;
@@ -158,7 +158,7 @@ public class Speck extends Image {
             case KIT:
                 speed.polar(index * 3.1415926f / 5, 50);
                 acc.set(-speed.x, -speed.y);
-                angle = index * 36;
+                setAngle(index * 36);
                 angularSpeed = 360;
                 lifespan = 1f;
                 break;
@@ -171,13 +171,13 @@ public class Speck extends Image {
                 break;
 
             case LIGHT:
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 angularSpeed = 90;
                 lifespan = 1f;
                 break;
 
             case DISCOVER:
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 angularSpeed = 90;
                 lifespan = 0.5f;
                 am = 0;
@@ -195,7 +195,7 @@ public class Speck extends Image {
                 lifespan = 0.2f;
                 speed.polar(Random.Float(2 * 3.1415926f), 24 / lifespan);
                 acc.set(0, 128);
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 angularSpeed = 360;
                 break;
 
@@ -203,19 +203,19 @@ public class Speck extends Image {
                 lifespan = 0.5f;
                 speed.set(0, -200);
                 acc.set(0, -2 * speed.y / lifespan);
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 angularSpeed = 360;
                 break;
 
             case WOOL:
                 lifespan = 0.5f;
                 speed.set(0, -50);
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 angularSpeed = Random.Float(-360, +360);
                 break;
 
             case ROCK:
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 angularSpeed = Random.Float(-360, +360);
                 setScale(Random.Float(1, 2));
                 speed.set(0, 64);
@@ -229,7 +229,7 @@ public class Speck extends Image {
                 break;
 
             case CHANGE:
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 speed.polar((angle - 90) * PointF.G2R, Random.Float(4, 12));
                 lifespan = 1.5f;
                 break;
@@ -249,7 +249,7 @@ public class Speck extends Image {
             case STEAM:
                 speed.y = -Random.Float(20, 30);
                 angularSpeed = Random.Float(+180);
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 lifespan = 1f;
                 break;
 
@@ -257,34 +257,34 @@ public class Speck extends Image {
                 speed.y = +32;
                 acc.y = -64;
                 angularSpeed = Random.Float(180, 360);
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 lifespan = 0.5f;
                 break;
 
             case TOXIC:
                 hardlight(0x50FF60);
                 angularSpeed = 30;
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 lifespan = Random.Float(1f, 3f);
                 break;
 
             case PARALYSIS:
                 hardlight(0xFFFF66);
                 angularSpeed = -30;
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 lifespan = Random.Float(1f, 3f);
                 break;
 
             case CONFUSION:
                 hardlight(Random.Int(0x1000000) | 0x000080);
                 angularSpeed = Random.Float(-20, +20);
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 lifespan = Random.Float(1f, 3f);
                 break;
 
             case DUST:
                 hardlight(0xFFFF66);
-                angle = Random.Float(360);
+                setAngle(Random.Float(360));
                 speed.polar(Random.Float(2 * 3.1415926f), Random.Float(16, 48));
                 lifespan = 0.5f;
                 break;

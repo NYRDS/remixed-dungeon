@@ -49,7 +49,7 @@ public class DeathStroke extends Image {
 			DeathStroke w = (DeathStroke)ch.getSprite().getParent().recycle( DeathStroke.class );
 			ch.getSprite().getParent().bringToFront( w );
 			w.reset( ch.getPos() );
-			w.angle = angle;
+			w.setAngle(angle);
 		}
 	}
 }

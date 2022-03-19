@@ -18,7 +18,8 @@ public class SpiderExploding extends MultiKindMob {
             "Earthroot",
             "Sungrass",
             "Fadeleaf",
-            "Dreamweed"
+            "Dreamweed",
+            "Moongrace"
     };
 
     public SpiderExploding() {
@@ -33,7 +34,7 @@ public class SpiderExploding extends MultiKindMob {
         exp = 3;
         maxLvl = 9;
 
-        kind = Random.IntRange(0, 6);
+        kind = Random.IntRange(0, 7);
 
         loot(new MysteryMeat(), 0.067f);
     }
