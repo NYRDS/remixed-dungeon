@@ -362,4 +362,10 @@ public class Visual extends Gizmo implements IPlaceable{
 	public void setOrigin(float x, float y) {
 		this.origin.set(x,y);
 		dirtyMatrix = true;
-	}}
+	}
+
+	public void setAngle(float angle) {
+		this.angle = angle;
+		dirtyMatrix = true;
+	}
+}

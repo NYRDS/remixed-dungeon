@@ -52,7 +52,7 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 
 		if (item.isFliesStraight()) {
 			angularSpeed = 0;
-			angle = 135 - (float)(Math.atan2( d.x, d.y ) / Math.PI * 180);
+			setAngle(135 - (float)(Math.atan2( d.x, d.y ) / Math.PI * 180));
 		} else {
 			angularSpeed = item.isFliesFastRotating() ? 1440 : 720;
 		}

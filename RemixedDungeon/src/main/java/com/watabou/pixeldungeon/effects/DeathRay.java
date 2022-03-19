@@ -49,7 +49,7 @@ public class DeathRay extends Image {
 		
 		float dx = e.x - s.x;
 		float dy = e.y - s.y;
-		angle = (float)(Math.atan2( dy, dx ) * A);
+		setAngle((float)(Math.atan2( dy, dx ) * A));
         setScaleX((float)Math.sqrt( dx * dx + dy * dy ) / width);
 		
 		Sample.INSTANCE.play( Assets.SND_RAY );

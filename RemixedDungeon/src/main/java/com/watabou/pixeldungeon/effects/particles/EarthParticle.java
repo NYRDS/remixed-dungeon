@@ -34,7 +34,7 @@ public class EarthParticle extends PixelParticle {
 	
 	public EarthParticle() {
 		color( ColorMath.random( 0x444444, 0x777766 ) );
-		angle = Random.Float( -30, 30 );
+		setAngle(Random.Float( -30, 30 ));
 		
 		lifespan = 0.5f;
 	}

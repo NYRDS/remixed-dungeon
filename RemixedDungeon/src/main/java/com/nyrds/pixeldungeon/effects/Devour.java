@@ -48,6 +48,6 @@ public class Devour extends Image {
 		Devour w = (Devour)ch.getSprite().getParent().recycle( Devour.class );
 		ch.getSprite().getParent().bringToFront( w );
 		w.reset( ch.getPos() );
-		w.angle = angle;
+		w.setAngle(angle);
 	}
 }

@@ -65,7 +65,7 @@ public class Flare extends Visual {
 
 		this.nRays = nRays;
 		
-		angle = 45;
+		setAngle(45);
 		angularSpeed = 180;
 		
 		vertices = ByteBuffer.

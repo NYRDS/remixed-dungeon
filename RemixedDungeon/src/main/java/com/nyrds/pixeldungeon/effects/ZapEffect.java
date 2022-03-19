@@ -118,7 +118,7 @@ public class ZapEffect {
         target.speed.set( d ).normalize().scale(SPEED );
 
         target.angularSpeed = 0;
-        target.angle = (float) (135 - Math.toDegrees(Math.atan2( d.x, d.y )));
+        target.setAngle((float) (135 - Math.toDegrees(Math.atan2( d.x, d.y ))));
 
         PosTweener tweener = new PosTweener( target, dest, d.length() / SPEED );
         tweener.listener = tweener1 -> target.killAndErase();

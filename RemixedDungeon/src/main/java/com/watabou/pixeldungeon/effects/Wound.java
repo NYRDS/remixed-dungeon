@@ -65,7 +65,7 @@ public class Wound extends Image {
 		Wound w = (Wound)ch.getSprite().getParent().recycle( Wound.class );
 		ch.getSprite().getParent().bringToFront( w );
 		w.reset( ch.getPos() );
-		w.angle = angle;
+		w.setAngle(angle);
 	}
 	
 	public static void hit( int pos ) {
@@ -77,6 +77,6 @@ public class Wound extends Image {
 		Wound w = (Wound)parent.recycle( Wound.class );
 		parent.bringToFront( w );
 		w.reset( pos );
-		w.angle = angle;
+		w.setAngle(angle);
 	}
 }

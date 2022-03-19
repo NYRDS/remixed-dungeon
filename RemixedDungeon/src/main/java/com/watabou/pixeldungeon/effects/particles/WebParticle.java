@@ -45,7 +45,7 @@ public class WebParticle extends PixelParticle {
 		this.setY(y);
 		
 		left = lifespan;
-		angle = Random.Float( 360 );
+		setAngle(Random.Float( 360 ));
 	}
 	
 	@Override
