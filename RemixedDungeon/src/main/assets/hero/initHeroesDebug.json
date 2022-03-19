@@ -2,6 +2,7 @@
   "common": {
     "armor": {
       "kind": "ClothArmor",
+      "glyph": "Bounce",
       "identified": true
     },
     "items": [
