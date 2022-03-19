@@ -1,9 +1,10 @@
 {
-  "texture" : "spider_egg.png",
-  "width"  : 16,
-  "height" : 16,
-  "idle"   : { "fps" : 2,  "looped" : true,    "frames" : [0, 1, 2, 1, 0] },
-  "run"    : { "fps" : 1,  "looped" : true,     "frames" : [0] },
-  "attack" : { "fps" : 1,  "looped" : false,    "frames" : [0] },
-  "die"    : { "fps" : 10, "looped" : false,   "frames" : [0, 3, 4, 5, 6  ] }
+  "texture"    : "spider_egg.png",
+  "width"      : 16,
+  "height"     : 16,
+  "idle"       : { "fps" : 2,  "looped" : true,    "frames" : [0, 1, 2, 3] },
+  "run"        : { "fps" : 12,  "looped" : true,    "frames" : [0] },
+  "attack"     : { "fps" : 10,  "looped" : false,   "frames" : [0] },
+  "die"        : { "fps" : 10, "looped" : false,   "frames" : [0, 4, 5, 6, 7] },
+  "bloodColor" : "0xFFEAFF80"
 }
