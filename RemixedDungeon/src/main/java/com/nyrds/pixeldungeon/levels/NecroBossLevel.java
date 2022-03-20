@@ -18,6 +18,8 @@ public class NecroBossLevel extends BossLevel {
 	{
 		color1 = 0x4b6636;
 		color2 = 0xf2f2f2;
+
+		objectsKind = 7;
 	}
 	
 	private static final int TOP			= 2;
@@ -142,11 +144,5 @@ public class NecroBossLevel extends BossLevel {
 
 	private int _Center() {
 		return _Left() + HALL_WIDTH / 2;
-	}
-
-
-	@Override
-	public int objectsKind() {
-		return 7;
 	}
 }

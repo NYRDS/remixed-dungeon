@@ -24,6 +24,7 @@ public class IceCavesLevel extends RegularLevel {
 		color2 = 0xb9d661;
 
 		viewDistance = 6;
+		objectsKind = 8;
 	}
 
 	@Override
@@ -211,10 +212,5 @@ public class IceCavesLevel extends RegularLevel {
 				scene.add( new IceVein( i ) );
 			}
 		}
-	}
-
-	@Override
-	public int objectsKind() {
-		return 8;
 	}
 }

@@ -37,6 +37,7 @@ public class HallsBossLevel extends BossLevel {
 		color2 = 0xa68521;
 		
 		viewDistance = 3;
+		objectsKind = 4;
 	}
 
 	@Override
@@ -194,8 +195,4 @@ public class HallsBossLevel extends BossLevel {
 		return getHeight() / 2 + 1;
 	}
 
-	@Override
-	public int objectsKind() {
-		return 4;
-	}
 }
