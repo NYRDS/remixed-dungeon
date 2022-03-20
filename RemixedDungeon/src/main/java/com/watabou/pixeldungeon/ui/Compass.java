@@ -76,7 +76,6 @@ public class Compass extends Image {
 				lastScroll.set( scroll );
 				PointF center = Camera.main.center().offset( scroll );
 				setAngle((float)Math.atan2( cellCenter.x - center.x, center.y - cellCenter.y ) * RAD_2_G);
-				GLog.debug("target: %3.0f %3.0f angle %3.2f", cellCenter.x, cellCenter.y, angle);
 			}
 		}
 	}
