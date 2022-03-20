@@ -11,6 +11,7 @@ public class ShadowLordLevel extends BossLevel {
 		color2 = 0xa68521;
 
 		viewDistance = 3;
+		objectsKind = 4;
 	}
 
 	@Override
@@ -55,10 +56,5 @@ public class ShadowLordLevel extends BossLevel {
 
 	@Override
 	protected void createItems() {
-	}
-
-	@Override
-	public int objectsKind() {
-		return 4;
 	}
 }

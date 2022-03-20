@@ -40,6 +40,8 @@ public class PrisonBossLevel extends BossLevel {
 	{
 		color1 = 0x6a723d;
 		color2 = 0x88924c;
+
+		objectsKind = 1;
 	}
 	
 	private Room anteroom;
@@ -275,10 +277,5 @@ public class PrisonBossLevel extends BossLevel {
 	@Override
 	public void addVisuals( Scene scene ) {
 		PrisonLevel.addVisuals( this, scene );
-	}
-
-	@Override
-	public int objectsKind() {
-		return 1;
 	}
 }

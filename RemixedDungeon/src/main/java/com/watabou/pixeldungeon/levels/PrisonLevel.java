@@ -39,6 +39,7 @@ public class PrisonLevel extends RegularLevel {
 	{
 		color1 = 0x6a723d;
 		color2 = 0x88924c;
+		objectsKind = 1;
 	}
 
 	@Override
@@ -185,10 +186,5 @@ public class PrisonLevel extends RegularLevel {
 				scene.add( new Torch( i ) );
 			}
 		}
-	}
-
-	@Override
-	public int objectsKind() {
-		return 1;
 	}
 }
