@@ -32,7 +32,7 @@ public class CityLevel extends RegularLevel {
 	{
 		color1 = 0x4b6636;
 		color2 = 0xf2f2f2;
-		objectsKind = 3;
+		_objectsKind = 3;
 	}
 
 	@Override

@@ -39,7 +39,7 @@ public class PrisonLevel extends RegularLevel {
 	{
 		color1 = 0x6a723d;
 		color2 = 0x88924c;
-		objectsKind = 1;
+		_objectsKind = 1;
 	}
 
 	@Override

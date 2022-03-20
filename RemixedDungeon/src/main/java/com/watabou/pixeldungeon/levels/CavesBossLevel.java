@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.levels;
 import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
@@ -41,7 +40,7 @@ public class CavesBossLevel extends BossLevel {
 		color2 = 0xb9d661;
 		
 		viewDistance = 6;
-		objectsKind = 2;
+		_objectsKind = 2;
 	}
 
 	@Override

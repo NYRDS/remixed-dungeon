@@ -34,7 +34,7 @@ public class SewerLevel extends RegularLevel {
 	{
 		color1 = 0x48763c;
 		color2 = 0x59994a;
-		objectsKind = 0;
+		_objectsKind = 0;
 	}
 
 	@Override

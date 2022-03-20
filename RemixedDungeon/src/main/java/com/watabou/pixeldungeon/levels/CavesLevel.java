@@ -36,7 +36,7 @@ public class CavesLevel extends RegularLevel {
 		color2 = 0xb9d661;
 		
 		viewDistance = 6;
-		objectsKind = 2;
+		_objectsKind = 2;
 	}
 
 	@Override

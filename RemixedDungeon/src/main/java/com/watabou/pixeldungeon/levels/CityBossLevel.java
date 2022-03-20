@@ -34,7 +34,7 @@ public class CityBossLevel extends BossLevel {
 	{
 		color1 = 0x4b6636;
 		color2 = 0xf2f2f2;
-		objectsKind =3;
+		_objectsKind =3;
 	}
 	
 	private static final int TOP			= 2;

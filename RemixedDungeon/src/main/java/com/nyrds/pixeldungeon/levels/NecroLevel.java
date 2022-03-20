@@ -21,7 +21,7 @@ public class NecroLevel extends RegularLevel {
 		color2 = 0xb9d661;
 
 		viewDistance = 6;
-		objectsKind = 7;
+		_objectsKind = 7;
 	}
 
 	@Override

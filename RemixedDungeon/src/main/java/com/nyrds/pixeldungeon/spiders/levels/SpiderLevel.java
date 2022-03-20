@@ -26,7 +26,7 @@ public class SpiderLevel extends CommonLevel {
 	public SpiderLevel() {
 		color1 = 0x48763c;
 		color2 = 0x59994a;
-		objectsKind = 6;
+		_objectsKind = 6;
 	}
 
 	@Override
