@@ -41,7 +41,7 @@ public class HallsLevel extends RegularLevel {
 		minRoomSize = 6;
 		
 		viewDistance = Math.max( 25 - Dungeon.depth, 1 );
-		objectsKind = 4;
+		_objectsKind = 4;
 		
 		color1 = 0x801500;
 		color2 = 0xa68521;

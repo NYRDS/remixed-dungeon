@@ -41,7 +41,7 @@ public class PrisonBossLevel extends BossLevel {
 		color1 = 0x6a723d;
 		color2 = 0x88924c;
 
-		objectsKind = 1;
+		_objectsKind = 1;
 	}
 	
 	private Room anteroom;

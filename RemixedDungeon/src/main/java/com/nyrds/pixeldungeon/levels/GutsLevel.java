@@ -18,7 +18,7 @@ public class GutsLevel extends RegularLevel {
 		color1 = 0x534f3e;
 		color2 = 0xb9d661;
 
-		objectsKind = 5;
+		_objectsKind = 5;
 		viewDistance = 6;
 	}
 

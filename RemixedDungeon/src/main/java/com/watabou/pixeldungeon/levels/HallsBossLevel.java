@@ -37,7 +37,7 @@ public class HallsBossLevel extends BossLevel {
 		color2 = 0xa68521;
 		
 		viewDistance = 3;
-		objectsKind = 4;
+		_objectsKind = 4;
 	}
 
 	@Override

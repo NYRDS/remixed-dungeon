@@ -24,7 +24,7 @@ public class IceCavesLevel extends RegularLevel {
 		color2 = 0xb9d661;
 
 		viewDistance = 6;
-		objectsKind = 8;
+		_objectsKind = 8;
 	}
 
 	@Override

@@ -122,7 +122,7 @@ public abstract class Level implements Bundlable {
 	private static final String SCRIPTS = "scripts";
 	public static final int INVALID_CELL = -1;
 
-	public int objectsKind = 0;
+	public int _objectsKind = 0;
 
 
 	public final ArrayList<Integer> candidates = new ArrayList<>();
@@ -2094,7 +2094,7 @@ public abstract class Level implements Bundlable {
 
 	@LuaInterface
 	public int objectsKind() {
-		return DungeonGenerator.getLevelProperty(levelId, "objectsKind", objectsKind);
+		return DungeonGenerator.getLevelProperty(levelId, "objectsKind", _objectsKind);
 	}
 
 	@LuaInterface
