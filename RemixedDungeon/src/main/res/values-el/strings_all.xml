@@ -270,7 +270,7 @@
   <string name="SociologistNPC_Name">Κοινωνιολόγος</string>
   <string name="SociologistNPC_Gender">masculine</string>
   <string name="SociologistNPC_Name_Objective">Κοινωνιολόγος</string>
-  <string name="SociologistNPC_Desc">Ο κοινωνιολόγος είναι στην ιερή αποστολή του: συλλέγει τις γνώμες του κοινού.</string>
+  <string name="SociologistNPC_Desc">Ο κοινωνιολόγος είναι στην ιερή αποστολή του: συγκεντρώνει τις απόψεις του κόσμου</string>
   <string name="SociologistNPC_AlreadyTaken">Έλαβες ήδη μέρος σε αυτήν την έρευνα. Έλα ξανά αργότερα.</string>
   <string name="SociologistNPC_Hi">Γεια!\nΘα ήθελες να λάβεις μέρος στην έρευνά μας; (Απαιτείται σύνδεση στο Ίντερνετ.)\nΗ γνώμη σου μετράει!</string>
   <string name="SociologistNPC_InternetRequired">Λυπάμαι, αλλά δεν μπορούμε να κάνουμε την έρευνα χωρίς σύνδεση στο Ίντερνετ.</string>
