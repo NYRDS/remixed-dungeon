@@ -270,7 +270,7 @@
   <string name="SociologistNPC_Name">Κοινωνιολόγος</string>
   <string name="SociologistNPC_Gender">masculine</string>
   <string name="SociologistNPC_Name_Objective">Κοινωνιολόγος</string>
-  <string name="SociologistNPC_Desc">Ο κοινωνιολόγος είναι στην ιερή αποστολή του: συλλέγει τις γνώμες του κοινού.</string>
+  <string name="SociologistNPC_Desc">Ο κοινωνιολόγος είναι στην ιερή αποστολή του: συγκεντρώνει τις απόψεις του κόσμου</string>
   <string name="SociologistNPC_AlreadyTaken">Έλαβες ήδη μέρος σε αυτήν την έρευνα. Έλα ξανά αργότερα.</string>
   <string name="SociologistNPC_Hi">Γεια!\nΘα ήθελες να λάβεις μέρος στην έρευνά μας; (Απαιτείται σύνδεση στο Ίντερνετ.)\nΗ γνώμη σου μετράει!</string>
   <string name="SociologistNPC_InternetRequired">Λυπάμαι, αλλά δεν μπορούμε να κάνουμε την έρευνα χωρίς σύνδεση στο Ίντερνετ.</string>
@@ -473,7 +473,7 @@
   <string name="LloidsBeacon_Name">Πομπός του Lloyd</string>
   <string name="LloidsBeacon_ACSet">ΟΡΙΣΕ</string>
   <string name="LloidsBeacon_ACReturn">ΕΠΙΣΤΡΟΦΗ</string>
-  <string name="LloidsBeacon_Info">Ο πομπός του Lloyd είναι μια περίτεχνη μαγική συσκευή. Η μαγεία του θα σου επιτρέψει να επιστρέψεις σε μια τοποθεσία που βρισκόσουν πριν.</string>
+  <string name="LloidsBeacon_Info">Ο πομπός του Lloyd είναι μια περίτεχνη μαγική συσκευή. Η μαγεία του θα σου επιτρέψει να επιστρέψεις σε μια τοποθεσία που βρισκόσουν και προηγουμένως.</string>
   <string name="LloidsBeacon_Preventing">Η ισχυρή μαγική αύρα αυτού του μέρους αποτρέπει τη χρήση του πομπού του Lloyd!</string>
   <string name="LloidsBeacon_Creatures">Η ψυχική αύρα των κοντινών πλασμάτων αποτρέπει τη χρήση του πομπού του Lloyd.</string>
   <string name="LloidsBeacon_Return">Ο πομπός του Lloyd έχει οριστεί στην τρέχουσα θέση. Μπορείς πλέον να επιστρέψεις εδώ ανά πάσα στιγμή.</string>
@@ -548,7 +548,7 @@
   <string name="WaterOfHealth_Info">Η δύναμη της ζωής ακτινοβολεί από το νερό αυτού του πηγαδιού. Πιες μια γουλιά για να γιατρέψεις τις πληγές σου και να ικανοποιήσεις την πείνα σου.</string>
   <string name="WaterOfHealth_Procced">Πίνοντας μια γουλιά, νιώθεις τις πληγές σου να γιατρεύονται πλήρως.</string>
   <string name="WaterOfTransmutation_Info">Η δύναμη της αλλαγής ακτινοβολεί από το νερό αυτού του πηγαδιού. Πέτα ένα αντικείμενο μέσα για να το μετατρέψεις σε κάτι διαφορετικό.</string>
-  <string name="Web_Info">Τα πάντα είναι καλυμμένα σε παχύ ιστό εδώ.</string>
+  <string name="Web_Info">Εδώ τα πάντα είναι καλυμμένα με παχύ ιστό.</string>
   <string name="AmokBuff_Name">Αμόκ</string>
   <string name="AmokBuff_Info">Νιώσε τη δύναμη του αμόκ, που στερεί τη ζωή από τους άτυχους.</string>
   <string name="BarkskinBuff_Name">Φλοιώδες δέρμα</string>
@@ -745,7 +745,7 @@
   <string name="Deathling_Gender">masculine</string>
   <string name="Deathling_Name_Objective">θανατικός</string>
   <string name="Deathling_Desc">Ο Θανατικός είναι η ψυχή ενός έκπτωτου ήρωα, που είχε την ατυχία να κλητευτεί από έναν εξερευνητή που εντρυφεί στη νεκρομαντεία.</string>
-  <string name="NecromancerRobe_PetLimitReached">Νεκρομαντεία: έφτασες το όριο κλητεύσεων (τρέχον μέγιστο: %d)!</string>
+  <string name="NecromancerRobe_PetLimitReached">Νεκρομαντεία: έφτασες στο όριο κλητεύσεων (τρέχον μέγιστο: %d)!</string>
   <string name="Necromancy_NotEnoughSouls">Δεν έχεις αρκετές ψυχές για να εκτελέσεις το ξόρκι «%1$s».</string>
   <string name="Necromancy_SoulsCountLabel">Ψυχές</string>
   <string name="Necromancer_ACSpecial">ΝΕΚΡΟΜΑΝΤΕΙΑ</string>
@@ -2104,7 +2104,7 @@
   <string name="City_TileDescDeco">Εδώ λείπουν αρκετά πλακάκια.</string>
   <string name="City_TileDescEmptySP">Παχύ χαλί καλύπτει το πάτωμα.</string>
   <string name="City_TileDescStatue">Το άγαλμα αναπαριστά έναν νάνο σε ηρωική πόζα.</string>
-  <string name="City_TileDescBookshelf">Η βιβλιοθήκη είναι γεμάτη με σειρές από βιβλία, διαφόρων θεματικών ενοτήτων.</string>
+  <string name="City_TileDescBookshelf">Η βιβλιοθήκη είναι γεμάτη με σειρές από βιβλία διαφόρων θεματικών ενοτήτων.</string>
   <string name="Halls_TileWater">Ψυχρή λάβα</string>
   <string name="Halls_TileGrass">Καρβουνόβρυα</string>
   <string name="Halls_TileHighGrass">καρβουνομύκητες</string>
