@@ -63,7 +63,7 @@ public class Library {
 	private static void loadOldLibrary() {
 		try {
 			mKnowledgeLevel = gson.fromJson(
-					JsonHelper.readJsonFromStream(FileSystem.getInputStream(LIBRARY_FILE)).toString(),
+					JsonHelper.readJsonFromStream(FileSystem.getInputStream(LIBRARY_FILE), LIBRARY_FILE).toString(),
 					new TypeToken<Map<String, Map<String, Integer>>>() {}.getType()
 			);
 		} catch (FileNotFoundException ignore) {
@@ -77,7 +77,7 @@ public class Library {
 		mKnowledgeLevel = new HashMap<>();
 		try {
 			mKnowledgeLevel = gson.fromJson(
-					JsonHelper.readJsonFromStream(FileSystem.getInputStream(getLibraryFile())).toString(),
+					JsonHelper.readJsonFromStream(FileSystem.getInputStream(getLibraryFile()), LIBRARY_FILE).toString(),
 					new TypeToken<Map<String, Map<String, Integer>>>() {}.getType()
 			);
 		} catch (FileNotFoundException ignore) {

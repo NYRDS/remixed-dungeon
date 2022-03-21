@@ -202,7 +202,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 play(run);
             }
 
-
             motion = new PosTweener(this, worldToCamera(to), MOVE_INTERVAL);
             motion.listener = this;
             GameScene.addToMobLayer(motion);

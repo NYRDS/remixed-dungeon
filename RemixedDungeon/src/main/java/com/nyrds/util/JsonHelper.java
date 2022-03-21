@@ -1,10 +1,14 @@
 package com.nyrds.util;
 
+import com.google.gson.JsonParser;
+import com.google.gson.stream.JsonReader;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.pixeldungeon.utils.Utils;
 
+import org.hjson.JsonValue;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,6 +24,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -40,7 +45,7 @@ public class JsonHelper {
 	@NotNull
 	static public JSONObject readJsonFromAsset(String fileName) {
 		try {
-			return readJsonFromStream(ModdingMode.getInputStream(fileName));
+			return readJsonFromStream(ModdingMode.getInputStream(fileName), fileName);
 		} catch (JSONException e) {
 			throw ModdingMode.modException(e);
 		}
@@ -49,19 +54,19 @@ public class JsonHelper {
 	@NotNull
 	static public JSONObject readJsonFromFile(File file) throws JSONException {
 		try {
-			return readJsonFromStream(new FileInputStream(file));
+			return readJsonFromStream(new FileInputStream(file), file.getPath());
 		} catch (FileNotFoundException e) {
 			return new JSONObject();
 		}
 	}
 
 	public static JSONObject readJsonFromString(final String in) throws JSONException {
-		return readJsonFromStream(new ByteArrayInputStream(in.getBytes()));
+		return readJsonFromStream(new ByteArrayInputStream(in.getBytes()), "String");
 	}
 
 	@SneakyThrows(IOException.class)
 	@NotNull
-	public static JSONObject readJsonFromStream(InputStream stream) throws JSONException {
+	public static JSONObject readJsonFromStream(InputStream stream, String tag) throws JSONException {
 			StringBuilder jsonDef = new StringBuilder();
 			Object value = null;
 
@@ -75,9 +80,27 @@ public class JsonHelper {
 				}
 				reader.close();
 
-				value = new JSONTokener(jsonDef.toString()).nextValue();
+				String sourceString = jsonDef.toString();
 
-				return (JSONObject) (value);
+				try {
+					value = new JSONTokener(sourceString).nextValue();
+					return (JSONObject) (value);
+				}	catch (JSONException e) {
+					EventCollector.logException(Utils.format("non std json in %s", tag));
+				}
+
+				sourceString = JsonParser.parseString(sourceString).toString();
+
+				try {
+					value = new JSONTokener(sourceString).nextValue();
+					return (JSONObject) (value);
+				}	catch (JSONException e) {
+					EventCollector.logException(Utils.format("gson failed in %s", tag));
+					return new JSONObject();
+				}
+
+				//String jsonString = JsonValue.readHjson().toString();
+
 			} catch (ClassCastException e) {
 				EventCollector.logException(e, value.toString());
 				return new JSONObject();
