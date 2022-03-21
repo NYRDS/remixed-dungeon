@@ -117,6 +117,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
+    implementation 'org.hjson:hjson:3.0.0'
 
     annotationProcessor project(':processor')
 

@@ -37,7 +37,7 @@ public class Unzip {
 					ret.installDir = ze.getName().replace("/","");
 				} else {
 					if(ze.getName().contains("version.json")) {
-						var modVersion = JsonHelper.readJsonFromStream(zin);
+						var modVersion = JsonHelper.readJsonFromStream(zin, ze.getName());
 						ModDesc.fromJson(ret, modVersion);
 					}
 					zin.closeEntry();
