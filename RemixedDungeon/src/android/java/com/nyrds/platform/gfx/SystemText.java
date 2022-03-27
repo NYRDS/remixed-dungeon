@@ -337,9 +337,11 @@ public class SystemText extends Text {
 	private void updateParent() {
 		Group parent = getParent();
 		for (SystemTextLine img : lineImage) {
-			if (img.getParent() != parent) {
-				if (img.getParent() != null) {
-					img.getParent().remove(img);
+			Group imgParent = img.getParent();
+
+			if (imgParent != parent) {
+				if (imgParent != null) {
+					imgParent.remove(img);
 				}
 
 				if (parent != null) {

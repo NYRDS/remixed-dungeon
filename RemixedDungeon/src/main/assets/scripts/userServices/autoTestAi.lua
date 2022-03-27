@@ -142,7 +142,7 @@ ai.step = function()
         handleItem(hero, hero:getBelongings():randomEquipped(), RPD.Actions.throw)
         return
     end
-
+--[[
     local exitCell = level:getRandomVisibleTerrainCell(RPD.Terrain.EXIT)
 
     if level:cellValid(exitCell) and not level:getTopLevelObject(exitCell) then
@@ -155,7 +155,7 @@ ai.step = function()
         hero:handle(exitCell)
         return
     end
-
+]]
     local doorCell = level:getRandomVisibleTerrainCell(RPD.Terrain.DOOR)
 
     if level:cellValid(doorCell) and  not level:isCellVisited(doorCell) then

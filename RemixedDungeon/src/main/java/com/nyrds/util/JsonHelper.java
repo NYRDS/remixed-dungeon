@@ -128,7 +128,7 @@ public class JsonHelper {
 	public static Animation readAnimation(JSONObject root, String animKind, TextureFilm film, int offset) throws JSONException {
 		JSONObject jsonAnim = root.getJSONObject(animKind);
 
-		Animation anim = new Animation(jsonAnim.getInt("fps"), jsonAnim.getBoolean("looped"));
+		Animation anim = new Animation((float) jsonAnim.getDouble("fps"), jsonAnim.getBoolean("looped"));
 
 		JSONArray jsonFrames = jsonAnim.getJSONArray("frames");
 

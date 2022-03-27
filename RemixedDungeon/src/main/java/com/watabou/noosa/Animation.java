@@ -18,7 +18,7 @@ public class Animation {
 	public int[] framesIndexes;
 	public boolean looped;
 
-	public Animation(int fps, boolean looped) {
+	public Animation(float fps, boolean looped) {
 		this.delay = 1f / fps;
 		this.looped = looped;
 	}

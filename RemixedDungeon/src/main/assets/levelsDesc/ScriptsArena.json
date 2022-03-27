@@ -68,9 +68,10 @@
          "x": 4,
          "y": 19
        },
-       {
-         "kind":"CustomObject",
-         "object_desc":"pot",
+   {
+     "kind":"CustomObject",
+     "object_desc":"well",
+     "data": "WaterOfAwareness",
          "x":6,
          "y":19
        },

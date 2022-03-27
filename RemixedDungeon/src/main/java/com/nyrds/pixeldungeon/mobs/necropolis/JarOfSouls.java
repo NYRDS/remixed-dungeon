@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 
 import org.jetbrains.annotations.NotNull;
@@ -31,17 +30,11 @@ public class JarOfSouls extends UndeadMob {
     public boolean act(){
 		super.act();
 		if (enemySeen){
-			spawnUndead();
+			playAttack(getEnemy().getPos());
+			MobSpawner.spawnRandomMob(level(),getPos(), -1);
+			postpone(15);
 		}
 		return true;
-	}
-
-	private void spawnUndead(){
-		getSprite().zap(getEnemy().getPos());
-
-		MobSpawner.spawnRandomMob(Dungeon.level,getPos(), -1);
-
-		postpone(15);
 	}
 
 	@Override

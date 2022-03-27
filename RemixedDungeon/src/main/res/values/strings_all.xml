@@ -2836,4 +2836,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndSettingsInGame_GameLog">Game log</string>
   <string name="Froth_ArrowInKnee">I used to be an adventurer like you,\nBut then i took an arrow in the knee...</string>
   <string name="BardSong_1">My wife and I live all alone,\nIn a little log hut, we called our own\nShe loved gin, and I loved rum\nI tell you what we\'d lots of fun.</string>
+  <string name="SpiderElite_Name">spider elite guard</string>
+  <string name="SpiderElite_Gender">masculine</string>
+  <string name="SpiderElite_Name_Objective">spider elite guard</string>
+  <string name="SpiderElite_Desc">Much like soldiers, spider guards are sworn to protect their kingdom. The elite guard\'s venom is used to disorient their target.</string>
+
 </resources>

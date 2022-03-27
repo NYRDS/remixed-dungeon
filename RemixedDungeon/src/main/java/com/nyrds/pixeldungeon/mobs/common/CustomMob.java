@@ -10,6 +10,7 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.JsonHelper;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
@@ -146,6 +147,15 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		super.damage(dmg, src);
 	}
 
+	@Override
+	public String getDescription() {
+		if(!Util.isDebug()) {
+			return super.getDescription();
+		}
+		return super.getDescription() + "\n"
+				+ Utils.format("kind: %d", kind);
+	}
+
 	@SneakyThrows
 	private void fillMobStats(boolean restoring) {
 		JSONObject classDesc = getClassDef();
@@ -193,6 +203,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		movable = classDesc.optBoolean("movable",movable);
 		immortal = classDesc.optBoolean("immortal",immortal);
 
+		kind = classDesc.optInt("var", kind);
 
 		JsonHelper.readStringSet(classDesc, Char.IMMUNITIES, immunities);
 		JsonHelper.readStringSet(classDesc, Char.RESISTANCES, resistances);

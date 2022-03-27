@@ -1,15 +1,24 @@
 package com.nyrds.pixeldungeon.mobs.spiders;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
+import com.watabou.pixeldungeon.actors.buffs.Barkskin;
+import com.watabou.pixeldungeon.actors.buffs.Blessed;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.FlavourBuff;
+import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
+import com.watabou.pixeldungeon.actors.buffs.Speed;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.effects.CellEmitter;
+import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
+import com.watabou.pixeldungeon.plants.Earthroot;
+import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -18,17 +27,21 @@ import lombok.val;
 
 public class SpiderMind extends Mob {
 
-	private static final Class<?>[] BuffsForEnemy = {
-			Blindness.class,
-			Slow.class,
-			Weakness.class
+	private static final String[] BuffsForFriends = {
+		Speed.class.getSimpleName(),
+		Barkskin.class.getSimpleName(),
+		Blessed.class.getSimpleName(),
+		Sungrass.Health.class.getSimpleName(),
+		Earthroot.Armor.class.getSimpleName(),
+		"ManaShield",
+		Fury.class.getSimpleName()
 	};
 
 	public SpiderMind() {
 		hp(ht(5));
 		baseDefenseSkill = 1;
 		baseAttackSkill  = 10;
-		baseSpeed = 0.5f;
+		baseSpeed = 1f;
 		dmgMin = 0;
 		dmgMax = 0;
 		dr = 0;
@@ -46,8 +59,21 @@ public class SpiderMind extends Mob {
 	
 	@Override
 	public int zapProc(@NotNull Char enemy, int damage ) {
-		val buffClass = (Class<? extends FlavourBuff>) Random.oneOf(BuffsForEnemy);
-		Buff.prolong( enemy, buffClass, 3 );
+
+		for (val mob : level().mobs){
+			if(mob != this) {
+				int mobPos = mob.getPos();
+				if(level().fieldOfView[mobPos] && mob.friendly(this)) {
+					Buff.prolong(mob, Random.oneOf(BuffsForFriends), 3);
+
+					if (Dungeon.isCellVisible(mobPos)) {
+						CellEmitter.get(mobPos).start(ShaftParticle.FACTORY, 0.2f, 3);
+					}
+
+					break;
+				}
+			}
+		}
 
 		return 0;
 	}
