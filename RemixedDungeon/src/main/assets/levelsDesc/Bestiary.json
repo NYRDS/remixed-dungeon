@@ -58,7 +58,7 @@
       "7s":{"SpiderServant":1,"SpiderExploding":0.5,"SpiderGuard":0.03},
       "8s":{"SpiderServant":1,"SpiderExploding":0.5,"SpiderMind":0.2,"SpiderGuard":0.03,"SpiderMindAmber":0.006},
       "9s":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.3,"SpiderGuard":0.03,"SpiderMindAmber":0.012},
-      "10s":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.5,"SpiderGuard":0.03,"SpiderMindAmber":0.018}
+      "10s":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.5,"SpiderGuard":0.3, "SpiderElite":0.3 ,"SpiderMindAmber":0.018}
    },
    "NecroLevel":{
       "necro1":{"Zombie":1, "Skeleton":1, "EnslavedSoul":0.9},

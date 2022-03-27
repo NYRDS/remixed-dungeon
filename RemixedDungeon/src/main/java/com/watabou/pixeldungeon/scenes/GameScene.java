@@ -106,6 +106,8 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 
 import lombok.var;
@@ -157,6 +159,7 @@ public class GameScene extends PixelScene {
 
     private volatile boolean sceneCreated = false;
     private          float   waterSx      = 0, waterSy = -5;
+    private boolean objectSortingRequested;
 
 
     public void updateUiCamera() {
@@ -165,8 +168,8 @@ public class GameScene extends PixelScene {
         attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
         resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
         log.setRect(0, toolbar.top(), attack.left(), 0);
-        busy.x = 1;
-        busy.y = statusPane.bottom() + 2;
+        busy.setX(1);
+        busy.setY(statusPane.bottom() + 2);
     }
 
 
@@ -397,8 +400,8 @@ public class GameScene extends PixelScene {
 
         busy = new BusyIndicator();
         busy.camera = uiCamera;
-        busy.x = 1;
-        busy.y = statusPane.bottom() + 18;
+        busy.setX(1);
+        busy.setY(statusPane.bottom() + 18);
         add(busy);
 
         sceneCreated = true;
@@ -556,6 +559,9 @@ public class GameScene extends PixelScene {
             return;
         }
 
+        if(objectSortingRequested) {
+            objects.sort();
+        }
         super.update();
 
         water.offset(waterSx * GameLoop.elapsed, waterSy * GameLoop.elapsed);
@@ -618,6 +624,7 @@ public class GameScene extends PixelScene {
         obj.lo_sprite = WeakOptional.of( (LevelObjectSprite)objects.recycle(LevelObjectSprite.class) );
         obj.lo_sprite.ifPresent (sprite -> sprite.reset(obj));
         obj.addedToScene();
+        objectSortingRequested = true;
     }
 
     private void addHeapSprite(@NotNull Heap heap) {
@@ -666,8 +673,8 @@ public class GameScene extends PixelScene {
 
     private void showBanner(Banner banner) {
         banner.camera = uiCamera;
-        banner.x = align(uiCamera, (uiCamera.width - banner.width) / 2);
-        banner.y = align(uiCamera, (uiCamera.height - banner.height) / 3);
+        banner.setX(align(uiCamera, (uiCamera.width - banner.width) / 2));
+        banner.setY(align(uiCamera, (uiCamera.height - banner.height) / 3));
         add(banner);
     }
 

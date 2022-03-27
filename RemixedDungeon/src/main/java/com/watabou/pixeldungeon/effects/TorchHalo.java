@@ -42,18 +42,18 @@ public class TorchHalo extends Halo {
 			if ((phase += elapsed) >= 0) {
 				killAndErase();
 			} else {
-				scale.set( (2 + phase) * radius / RADIUS );
+				setScale( (2 + phase) * radius / RADIUS );
 				am = -phase * brightness;
 			}
 		} else if (phase < 1) {
 			if ((phase += elapsed) >= 1) {
 				phase = 1;
 			}
-			scale.set( phase * radius / RADIUS );
+			setScale( phase * radius / RADIUS );
 			am = phase * brightness;
 		}
-		
-		point( target.x + target.width / 2, target.y + target.height / 2 );
+
+		point( target.getX() + target.width / 2, target.getY() + target.height / 2 );
 	}
 	
 	@Override

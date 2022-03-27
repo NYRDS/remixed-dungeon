@@ -52,7 +52,7 @@ public abstract class WndMenuCommon extends Window {
 	}
 
     protected void addSoundControls(VBox menuItems) {
-        menuItems.add(new MenuCheckBox(StringsManager.getVar(R.string.WndSettings_Music), GamePreferences.music()) {
+        menuItems.add(new MenuCheckBox(R.string.WndSettings_Music, GamePreferences.music()) {
             @Override
             protected void onClick() {
                 super.onClick();
@@ -61,7 +61,7 @@ public abstract class WndMenuCommon extends Window {
         });
 
 
-        menuItems.add(new MenuCheckBox(StringsManager.getVar(R.string.WndSettings_Sound), GamePreferences.soundFx()) {
+        menuItems.add(new MenuCheckBox(R.string.WndSettings_Sound, GamePreferences.soundFx()) {
             @Override
             protected void onClick() {
                 super.onClick();
@@ -73,6 +73,11 @@ public abstract class WndMenuCommon extends Window {
 
 
     public static class MenuButton extends RedButton {
+        protected MenuButton(int id){
+            super(StringsManager.getVar(id));
+            setSize(WIDTH,BUTTON_HEIGHT);
+        }
+
 		protected MenuButton(String txt){
 			super(txt);
 			setSize(WIDTH,BUTTON_HEIGHT);
@@ -86,6 +91,11 @@ public abstract class WndMenuCommon extends Window {
 	}
 
     public static class MenuCheckBox extends CheckBox{
+
+        public MenuCheckBox(int id, boolean checked) {
+            super(StringsManager.getVar(id), checked);
+            setSize(WIDTH,BUTTON_HEIGHT);
+        }
 
 		public MenuCheckBox(String label, boolean checked) {
 			super(label, checked);

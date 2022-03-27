@@ -121,9 +121,9 @@ public class GameLog extends Component implements Signal.Listener<String> {
 		for (int i = getLength() -1; i >= 0; i--) {
 			Visual entry = (Visual) members.get( i );
 			if(entry instanceof Text) {
-				entry.x = x;
-				entry.y = pos - entry.height();
-				pos = entry.y;
+				entry.setX(x);
+				entry.setY(pos - entry.height());
+				pos = entry.getY();
 			}
 		}
 	}

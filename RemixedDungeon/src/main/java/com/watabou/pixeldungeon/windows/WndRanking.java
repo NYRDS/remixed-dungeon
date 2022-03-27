@@ -85,11 +85,11 @@ public class WndRanking extends WndTabbed {
 		};
 		thread.start();
 		
-		busy = Icons.BUSY.get();	
-		busy.origin.set( busy.width / 2, busy.height / 2 );
+		busy = Icons.BUSY.get();
+		busy.setOrigin( busy.width / 2, busy.height / 2 );
 		busy.angularSpeed = 720;
-		busy.x = (WIDTH - busy.width) / 2;
-		busy.y = (HEIGHT - busy.height) / 2;
+        busy.setX((WIDTH - busy.width) / 2);
+		busy.setY((HEIGHT - busy.height) / 2);
 		add( busy );
 	}
 	
@@ -219,12 +219,12 @@ public class WndRanking extends WndTabbed {
 		private float statSlot( Group parent, String label, String value, float pos ) {
 			
 			Text txt = PixelScene.createText( label, GuiProperties.regularFontSize() );
-			txt.y = pos;
+			txt.setY(pos);
 			parent.add( txt );
 			
 			txt = PixelScene.createText( value, GuiProperties.regularFontSize() );
-			txt.x = PixelScene.align( WIDTH * 0.65f );
-			txt.y = pos;
+			txt.setX(PixelScene.align( WIDTH * 0.65f ));
+			txt.setY(pos);
 			parent.add( txt );
 			
 			return pos + GAP + txt.baseLine();
@@ -326,26 +326,26 @@ public class WndRanking extends WndTabbed {
 		
 		@Override
 		protected void layout() {
-			bg.x = x;
-			bg.y = y;
+			bg.setX(x);
+			bg.setY(y);
 			
 			slot.setRect( x, y, SIZE, SIZE);
 
-			hotArea.x = x;
-			hotArea.y = y;
-			hotArea.width = SIZE;
-			hotArea.height = SIZE;
+			hotArea.setX(x);
+			hotArea.setY(y);
+			hotArea.setWidth(SIZE);
+			hotArea.setHeight(SIZE);
 
-			name.x = slot.right() + 2;
-			name.y = y + (height - name.baseLine()) / 2;
+			name.setX(slot.right() + 2);
+			name.setY(y + (height - name.baseLine()) / 2);
 			
 			String str = Utils.capitalize( item.name() );
 			name.text( str );
-			if (name.width() > width - name.x) {
+			if (name.width() > width - name.getX()) {
 				do {
 					str = str.substring( 0, str.length() - 1 );
 					name.text( str + "..." );
-				} while (name.width() > width - name.x);
+				} while (name.width() > width - name.getX());
 			}
 		}
 

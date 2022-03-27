@@ -59,7 +59,7 @@ public class ShopkeeperSprite extends MobSprite {
 						};
 						GameScene.addToMobLayer( coin );
 					}
-					coin.reset( x + (flipHorizontal ? 0 : 13), y + 7, 0xFFFF00, 1, 0.5f );
+					coin.reset( getX() + (flipHorizontal ? 0 : 13), getY() + 7, 0xFFFF00, 1, 0.5f );
 					coin.speed.y = -40;
 					coin.acc.y = +160;
 				}

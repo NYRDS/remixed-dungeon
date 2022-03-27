@@ -67,8 +67,8 @@ public class SystemTextLine extends Visual {
 	public void frame( RectF frame ) {
 		this.frame = frame;
 		
-		width = frame.width() * texture.width;
-		height = frame.height() * texture.height;
+		setWidth(frame.width() * texture.width);
+		setHeight(frame.height() * texture.height);
 		
 		updateFrame();
 		updateVertices();
@@ -93,11 +93,11 @@ public class SystemTextLine extends Visual {
 		
 		vertices[0] 	= 0;
 		vertices[1] 	= 0;
-		
-		vertices[4] 	= width;
+
+        vertices[4] 	= width;
 		vertices[5] 	= 0;
-		
-		vertices[8] 	= width;
+
+        vertices[8] 	= width;
 		vertices[9] 	= height;
 		
 		vertices[12]	= 0;

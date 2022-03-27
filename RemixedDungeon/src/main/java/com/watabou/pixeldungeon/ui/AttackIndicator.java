@@ -58,8 +58,8 @@ public class AttackIndicator extends Tag {
 		super.layout();
 		
 		if (sprite != null) {
-			sprite.x = x + (width - sprite.width()) / 2;
-			sprite.y = y + (height - sprite.height()) / 2;
+			sprite.setX(x + (width - sprite.width()) / 2);
+			sprite.setY(y + (height - sprite.height()) / 2);
 
 			if(sprite.camera()!= null) {
 				PixelScene.align(sprite);
@@ -130,8 +130,8 @@ public class AttackIndicator extends Tag {
 		sprite = target.newSprite().avatar();
 		add(sprite);
 
-		sprite.x = x + (width - sprite.width()) / 2 + 1;
-		sprite.y = y + (height - sprite.height()) / 2;
+		sprite.setX(x + (width - sprite.width()) / 2 + 1);
+		sprite.setY(y + (height - sprite.height()) / 2);
 		PixelScene.align(sprite);
 	}
 	

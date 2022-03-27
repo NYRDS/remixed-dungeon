@@ -47,8 +47,8 @@ public class WndHats extends Window {
         Text slotTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.WndHats_SlotTitle) + equippedName, GuiProperties.titleFontSize());
 		slotTitle.hardlight(0xFFFFFF);
 		slotTitle.maxWidth(WIDTH - GAP * 2);
-		slotTitle.x = (WIDTH - slotTitle.width()) / 2;
-		slotTitle.y = GAP;
+		slotTitle.setX((WIDTH - slotTitle.width()) / 2);
+		slotTitle.setY(GAP);
 		add(slotTitle);
 
 		//Image
@@ -66,7 +66,7 @@ public class WndHats extends Window {
 			}
 		};
 
-		sb.setRect(slot.x + slot.width() * 2 + GAP, slot.y, slot.width() * 2, slot.height() / 2);
+		sb.setRect(slot.getX() + slot.width() * 2 + GAP, slot.getY(), slot.width() * 2, slot.height() / 2);
 
 		add(sb);
 
@@ -75,8 +75,8 @@ public class WndHats extends Window {
         Text listTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.WndHats_ListTitle), GuiProperties.titleFontSize());
 		listTitle.hardlight(TITLE_COLOR);
 		listTitle.maxWidth(WIDTH - GAP * 2);
-		listTitle.x = (WIDTH - listTitle.width()) / 2;
-		listTitle.y = slot.y + slot.height() + GAP * 2;
+		listTitle.setX((WIDTH - listTitle.width()) / 2);
+		listTitle.setY(slot.getY() + slot.height() + GAP * 2);
 
 		add(listTitle);
 
@@ -109,9 +109,9 @@ public class WndHats extends Window {
 
 			name.hardlight(0xFFFFFF);
 
-			name.y = hat.y + GAP;
+			name.setY(hat.getY() + GAP);
 			name.maxWidth(WIDTH - GAP);
-			name.x = hat.x + hat.width() + GAP;
+			name.setX(hat.getX() + hat.width() + GAP);
 
 			content.add(name);
 			float rbY = name.bottom() + GAP * 2;
@@ -120,9 +120,9 @@ public class WndHats extends Window {
 			SystemText priceTag = new SystemText(price, GuiProperties.regularFontSize(), false);
 
 			priceTag.hardlight(0xFFFF00);
-			priceTag.y = name.bottom() + GAP;
+			priceTag.setY(name.bottom() + GAP);
 			priceTag.maxWidth((int) hat.width());
-			priceTag.x = name.x;
+			priceTag.setX(name.getX());
 
 			content.add(priceTag);
 
@@ -151,7 +151,7 @@ public class WndHats extends Window {
 				}
 			};
 
-			rb.setRect(slot.x + slot.width() * 2 + GAP, rbY, slot.width() * 2, slot.height() / 2);
+			rb.setRect(slot.getX() + slot.width() * 2 + GAP, rbY, slot.width() * 2, slot.height() / 2);
 
 			content.add(rb);
 			yPos = (int) (rb.bottom() + GAP * 2);
@@ -160,7 +160,7 @@ public class WndHats extends Window {
 		int HEIGHT = RemixedDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
 		int h = Math.min(HEIGHT - GAP, yPos);
 
-		float topGap = listTitle.y + listTitle.height() + GAP;
+		float topGap = listTitle.getY() + listTitle.height() + GAP;
 		float BottomGap = slotTitle.height() + slot.height() + listTitle.height() + GAP * 5;
 
 		resize(WIDTH, h);

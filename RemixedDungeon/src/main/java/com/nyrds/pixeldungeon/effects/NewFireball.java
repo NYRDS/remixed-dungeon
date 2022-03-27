@@ -52,7 +52,7 @@ public class NewFireball extends Component {
 		
 		bLight = new Image( Assets.FIREBALL );
 		bLight.frame( BLIGHT );
-		bLight.origin.set( bLight.width / 2 );
+        bLight.setOrigin( bLight.width / 2 );
 		bLight.angularSpeed = -120;
 		add( bLight );
 		
@@ -62,15 +62,15 @@ public class NewFireball extends Component {
 			public void emit(Emitter emitter, int index, float x, float y) {
 				Flame p = (Flame)emitter.recycle( Flame.class );
 				p.reset();
-				p.x = x - p.width / 2;
-				p.y = y - p.height / 2;
+                p.setX(x - p.width / 2);
+				p.setY(y - p.height / 2);
 			}
 		}, 0.1f );
 		add( emitter );
 		
 		fLight = new Image( Assets.FIREBALL );
 		fLight.frame( FLIGHT );
-		fLight.origin.set( fLight.width / 2 );
+        fLight.setOrigin( fLight.width / 2 );
 		fLight.angularSpeed = 360;
 		add( fLight );
 		
@@ -79,18 +79,18 @@ public class NewFireball extends Component {
 	
 	@Override
 	protected void layout() {
-		
-		bLight.x = x - bLight.width / 2;
-		bLight.y = y - bLight.height / 2;
-		
-		emitter.pos( 
-			x - bLight.width / 4, 
-			y - bLight.height / 4, 
-			bLight.width / 2, 
+
+        bLight.setX(x - bLight.width / 2);
+		bLight.setY(y - bLight.height / 2);
+
+		emitter.pos(
+			x - bLight.width / 4,
+			y - bLight.height / 4,
+			bLight.width / 2,
 			bLight.height / 2 );
-		
-		fLight.x = x - fLight.width / 2;
-		fLight.y = y - fLight.height / 2;
+
+        fLight.setX(x - fLight.width / 2);
+		fLight.setY(y - fLight.height / 2);
 	}
 	
 	@Override
@@ -130,7 +130,7 @@ public class NewFireball extends Component {
 			super( Assets.FIREBALL );
 			
 			frame( Random.Int( 2 ) == 0 ? FLAME1 : FLAME2 );
-			origin.set( width / 2, height / 2 );
+			setOrigin( width / 2, height / 2 );
 			acc.set( 0, ACC );
 		}
 		
@@ -152,7 +152,7 @@ public class NewFireball extends Component {
 			} else {
 				
 				float p = timeLeft / LIFESPAN;
-				scale.set( p );
+				setScale( p, p );
 				alpha( p > 0.8f ? (1 - p) * 5f : p * 1.25f );
 				
 			}

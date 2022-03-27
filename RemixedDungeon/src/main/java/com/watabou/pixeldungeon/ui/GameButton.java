@@ -29,14 +29,14 @@ public class GameButton extends RedButton {
         super.layout();
 
         if (secondary.text().length() > 0) {
-            text.y = PixelScene.align(y
+            text.setY(PixelScene.align(y
                     + (height - text.height() - secondary.height())
-                    / 2);
+                    / 2));
 
-            secondary.x = PixelScene.align(x + (width - secondary.width()) / 2);
-            secondary.y = PixelScene.align(text.y + text.height());
+            secondary.setX(PixelScene.align(x + (width - secondary.width()) / 2));
+            secondary.setY(PixelScene.align(text.getY() + text.height()));
         } else {
-            text.y = PixelScene.align(y + (height - text.height()) / 2);
+            text.setY(PixelScene.align(y + (height - text.height()) / 2));
         }
     }
 

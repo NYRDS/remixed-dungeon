@@ -32,7 +32,7 @@ public class WndSadGhostNecro extends Window {
 
         Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndSadGhostNecro_Text), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
-		message.y = titlebar.bottom() + GAP;
+		message.setY(titlebar.bottom() + GAP);
 		add( message );
 
         RedButton btnWeapon = new RedButton(StringsManager.getVar(R.string.WndSadGhostNecro_Yes)) {
@@ -43,7 +43,7 @@ public class WndSadGhostNecro extends Window {
 				hide();
 			}
 		};
-		btnWeapon.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
+		btnWeapon.setRect( 0, message.getY() + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnWeapon );
 
         RedButton btnArmor = new RedButton(StringsManager.getVar(R.string.WndSadGhostNecro_No)) {

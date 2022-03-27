@@ -56,7 +56,7 @@ public class WandOfTeleportation extends Wand {
 		if (ch == getOwner()) {
 			setKnown();
 			CharUtils.teleportRandom(getOwner());
-		} else if (ch != null && ! (ch instanceof Boss) && ch.isMovable() ) {
+		} else if (ch != null && ! (ch.isBoss()) && ch.isMovable() ) {
 			teleport(ch, getOwner());
 		} else {
             GLog.i(StringsManager.getVar(R.string.WandOfTeleportation_Info2));

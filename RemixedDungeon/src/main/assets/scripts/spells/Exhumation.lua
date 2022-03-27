@@ -24,7 +24,7 @@ return spell.init{
             spellCost     = 10
         }
     end,
-    castOnCell = function(self, spell, chr, cell)
+    castOnCell = function(self, spell, caster, cell)
         local level = RPD.Dungeon.level
 
         local heap = level:getHeap(cell)
@@ -35,15 +35,15 @@ return spell.init{
         end
 
         if heap.type == RPD.Heap.Type.TOMB or heap.type == RPD.Heap.Type.SKELETON then
-            heap:open(chr)
-            local p = chr:getPos()
+            heap:open(caster)
+            local p = caster:getPos()
             local cellToCheck = {p+1, p-1, p+level:getWidth(), p-level:getWidth() }
 
             for k,v in pairs(cellToCheck) do
                 local soul = RPD.Actor:findChar(v)
-                if soul ~=nil and soul:getMobClassName() == "Wraith" then
-                    if math.random() > 1/(chr:magicLvl() + 1 ) then
-                        RPD.Mob:makePet(soul, chr)
+                if soul and soul:getMobClassName() == "Wraith" then
+                    if math.random() > 1/(caster:magicLvl() + 1 ) then
+                        RPD.Mob:makePet(soul, caster)
                         soul:say("Exhumation_Ok")
                     end
                 end

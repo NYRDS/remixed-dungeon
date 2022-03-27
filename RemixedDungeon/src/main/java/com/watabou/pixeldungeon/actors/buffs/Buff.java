@@ -281,7 +281,7 @@ public class  Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     @Override
-    public int damage(int damage, NamedEntityKind src) {
+    public int charGotDamage(int damage, NamedEntityKind src) {
         return damage;
     }
 

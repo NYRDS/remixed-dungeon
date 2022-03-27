@@ -43,11 +43,11 @@ public class DashboardItem extends Button {
     protected void layout() {
         super.layout();
 
-        image.x = PixelScene.align(x + (width - image.width()) / 2);
-        image.y = PixelScene.align(y);
+        image.setX(PixelScene.align(x + (width - image.width()) / 2));
+        image.setY(PixelScene.align(y));
 
-        label.x = PixelScene.align(x + (width - label.width()) / 2);
-        label.y = PixelScene.align(image.y + image.height() + 2);
+        label.setX(PixelScene.align(x + (width - label.width()) / 2));
+        label.setY(PixelScene.align(image.getY() + image.height() + 2));
     }
 
     @Override

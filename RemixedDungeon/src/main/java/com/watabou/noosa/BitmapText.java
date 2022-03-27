@@ -60,7 +60,7 @@ public class BitmapText extends Text {
 	protected void updateMatrix() {
 		// "origin" field is ignored
 		Matrix.setIdentity( matrix );
-		Matrix.translate( matrix, x, y );
+		Matrix.translate( matrix, getX(), getY());
 		Matrix.scale( matrix, scale.x, scale.y );
 		Matrix.rotate( matrix, angle );
 	}
@@ -86,8 +86,8 @@ public class BitmapText extends Text {
 	
 	protected void updateVertices() {
 		
-		width = 0;
-		height = 0;
+		setWidth(0);
+		setHeight(0);
 		
 		quads = Quad.createSet( text.length() );
 		realLength = 0;
@@ -111,26 +111,26 @@ public class BitmapText extends Text {
 				sx = sp.x;
 				sy = sp.y;
 			}
-			
-			vertices[0] 	= width + sx;
+
+            vertices[0] 	= width + sx;
 			vertices[1] 	= sy;
 			
 			vertices[2]		= rect.left;
 			vertices[3]		= rect.top;
-			
-			vertices[4] 	= width + w + sx;
+
+            vertices[4] 	= width + w + sx;
 			vertices[5] 	= sy;
 			
 			vertices[6]		= rect.right;
 			vertices[7]		= rect.top;
-			
-			vertices[8] 	= width + w + sx;
+
+            vertices[8] 	= width + w + sx;
 			vertices[9] 	= h + sy;
 		
 			vertices[10]	= rect.right;
 			vertices[11]	= rect.bottom;
-			
-			vertices[12]	= width + sx;
+
+            vertices[12]	= width + sx;
 			vertices[13]	= h + sy;
 			
 			vertices[14]	= rect.left;
@@ -138,15 +138,15 @@ public class BitmapText extends Text {
 			
 			quads.put( vertices );
 			realLength++;
-			
-			width += w + font.tracking;
+
+            setWidth(width + w + font.tracking);
 			if (h + sy > height) {
-				height = h + sy;
+				setHeight(h + sy);
 			}
 		}
 		
 		if (length > 0) {
-			width -= font.tracking;
+            setWidth(width - font.tracking);
 		}
 	}
 

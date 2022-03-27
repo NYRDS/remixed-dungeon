@@ -58,11 +58,11 @@ public class Tool extends Button {
     @Override
     protected void layout() {
         super.layout();
-            bg.x = x;
-            bg.y = y;
+            bg.setX(x);
+            bg.setY(y);
 
-            base.x = bg.x + bg.marginLeft();
-            base.y = bg.y + bg.marginTop();
+            base.setX(bg.getX() + bg.marginLeft());
+            base.setY(bg.getY() + bg.marginTop());
     }
 
     @Override

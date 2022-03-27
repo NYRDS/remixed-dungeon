@@ -40,14 +40,14 @@ public class WndLibrary extends Window {
         Text tfTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.WndLibrary_Catalogue_Title), GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - GAP);
-		tfTitle.x = (WIDTH - tfTitle.width())/2;
-		tfTitle.y = GAP;
+		tfTitle.setX((WIDTH - tfTitle.width())/2);
+		tfTitle.setY(GAP);
 		add(tfTitle);
 
 		//Instruction text
         Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndLibrary_Catalogue_Instruction), GuiProperties.mediumTitleFontSize() );
 		message.maxWidth(WIDTH);
-		message.y = tfTitle.bottom()+ GAP;
+		message.setY(tfTitle.bottom()+ GAP);
 		add( message );
 
 		int buttonY = (int) message.bottom()+ GAP;

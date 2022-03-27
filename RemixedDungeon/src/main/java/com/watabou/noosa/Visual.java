@@ -31,9 +31,11 @@ public class Visual extends Gizmo implements IPlaceable{
 	public float y;
 	public float width;
 	public float height;
-	
-	protected PointF scale;
+
+	public PointF scale;
 	public PointF origin;
+
+	public boolean dirtyMatrix = true;
 	
 	protected float[] matrix;
 	
@@ -53,13 +55,13 @@ public class Visual extends Gizmo implements IPlaceable{
 	public float angularSpeed;
 	
 	public Visual( float x, float y, float width, float height ) {
-		this.x = x;
-		this.y = y;
-		this.width = width;
-		this.height = height;
+		this.setX(x);
+		this.setY(y);
+		this.setWidth(width);
+		this.setHeight(height);
 		
 		Scale(new PointF( 1, 1 ));
-		origin = new PointF();
+		setOrigin(new PointF());
 		
 		matrix = new float[16];
 		
@@ -80,31 +82,35 @@ public class Visual extends Gizmo implements IPlaceable{
 	}
 	
 	protected void updateMatrix() {
-		Matrix.setIdentity( matrix );
-		Matrix.translate( matrix, x, y + visualOffsetY() );
-		Matrix.translate( matrix, origin.x, origin.y );
-		if (angle != 0) {
-			Matrix.rotate( matrix, angle );
+		if (dirtyMatrix) {
+
+			Matrix.setIdentity(matrix);
+			Matrix.translate(matrix, getX(), getY() + visualOffsetY());
+			Matrix.translate(matrix, origin.x, origin.y);
+			if (angle != 0) {
+				Matrix.rotate(matrix, angle);
+			}
+			if (scale.x != 1 || scale.y != 1) {
+				Matrix.scale(matrix, scale.x, scale.y);
+			}
+			Matrix.translate(matrix, -origin.x, -origin.y);
+			dirtyMatrix = false;
 		}
-		if (scale.x != 1 || scale.y != 1) {
-			Matrix.scale( matrix, scale.x, scale.y );
-		}
-		Matrix.translate( matrix, -origin.x, -origin.y );
 	}
 	
 	public PointF point() {
-		return new PointF( x, y );
+		return new PointF(getX(), getY());
 	}
 	
 	public PointF point( PointF p ) {
-		x = p.x;
-		y = p.y;
+		setX(p.x);
+		setY(p.y);
 		return p;
 	}
 	
 	public Point point( Point p ) {
-		x = p.x;
-		y = p.y;
+		setX(p.x);
+		setY(p.y);
 		return p;
 	}
 	
@@ -114,7 +120,7 @@ public class Visual extends Gizmo implements IPlaceable{
 
 
 	public PointF center() {
-		return new PointF( x + width / 2, y + height / 2);
+		return new PointF( getX() + width / 2, getY() + height / 2);
 	}
 
 	public float width() {
@@ -126,12 +132,11 @@ public class Visual extends Gizmo implements IPlaceable{
 	}
 	
 	protected void updateMotion() {
-		
 		float elapsed = GameLoop.elapsed;
 		
 		float d = (GameMath.speed( speed.x, acc.x ) - speed.x) / 2;
 		speed.x += d;
-		x += speed.x * elapsed;
+		x +=  speed.x * elapsed;
 		speed.x += d;
 		
 		d = (GameMath.speed( speed.y, acc.y ) - speed.y) / 2;
@@ -140,6 +145,10 @@ public class Visual extends Gizmo implements IPlaceable{
 		speed.y += d;
 		
 		angle += angularSpeed * elapsed;
+
+		if(speed.x != 0 || speed.y != 0 || angularSpeed != 0) {
+			dirtyMatrix = true;
+		}
 	}
 	
 	public void alpha( float value ) {
@@ -212,7 +221,7 @@ public class Visual extends Gizmo implements IPlaceable{
 	}
 	
 	public boolean overlapsPoint( float x, float y ) {
-		return x >= this.x && x < this.x + width * scale.x && y >= this.y && y < this.y + height * Scale().y;
+		return x >= this.getX() && x < this.getX() + width * scale.x && y >= this.getY() && y < this.getY() + height * scale.y;
 	}
 	
 	public boolean overlapsScreenPoint( int x, int y ) {
@@ -236,27 +245,22 @@ public class Visual extends Gizmo implements IPlaceable{
 		float cy = c.scroll.y;
 		float w = width();
 		float h = height();
-		return x + w >= cx && y + h >= cy && x < cx + c.width && y < cy + c.height;
+		return getX() + w >= cx && getY() + h >= cy && getX() < cx + c.width && getY() < cy + c.height;
 	}
-	
-	public void setScale(float x, float y){
-		scale.x = x;
-		scale.y = y;
-	}
-	
+
 	public void setPos(float x, float y){
-		this.x = x;
-		this.y = y;
+		this.setX(x);
+		this.setY(y);
 	}
 
 	@LuaInterface
 	public void incX(float x) {
-		this.x +=x;
+		setX(getX() + x);
 	}
 
 	@LuaInterface
 	public void incY(float y) {
-		this.y +=y;
+		setY(getY() + y);
 	}
 
 	@Override
@@ -269,21 +273,17 @@ public class Visual extends Gizmo implements IPlaceable{
 		return y;
 	}
 
-	public PointF Scale() {
-		return scale;
-	}
-
 	public void Scale(PointF scale) {
-		this.scale = scale;
+		setScale(scale);
 	}
 
 	public float bottom() {
-		return y + height();
+		return getY() + height();
 	}
 
     public float visualWidth() {
 		return width;
-    }
+	}
 
 	public float visualHeight() {
 		return height;
@@ -298,8 +298,74 @@ public class Visual extends Gizmo implements IPlaceable{
 		if(isometricShift) {
 			return isometricModeShift;
 		}
-
 		return 0;
 	}
 
+	public void setX(float x) {
+		this.x = x;
+		dirtyMatrix = true;
+	}
+
+	public void setY(float y) {
+		this.y = y;
+		dirtyMatrix = true;
+	}
+
+	public void setWidth(float width) {
+		this.width = width;
+		dirtyMatrix = true;
+	}
+
+	public void setHeight(float height) {
+		this.height = height;
+		dirtyMatrix = true;
+	}
+
+	public void setScale(float s) {
+		this.scale.set(s);
+		dirtyMatrix = true;
+	}
+
+	public void setScaleX(float x) {
+		scale.x = x;
+		dirtyMatrix = true;
+	}
+
+	public void setScaleY(float y) {
+		scale.y = y;
+		dirtyMatrix = true;
+	}
+
+
+	public void setScale(float x, float y) {
+		scale.x = x;
+		scale.y = y;
+		dirtyMatrix = true;
+	}
+
+	public void setScale(PointF scale) {
+		this.scale = scale;
+		dirtyMatrix = true;
+	}
+
+	public void setOrigin(PointF origin) {
+		this.origin = origin;
+		dirtyMatrix = true;
+	}
+
+	public void setOrigin(float s) {
+		this.origin.set(s);
+		dirtyMatrix = true;
+	}
+
+
+	public void setOrigin(float x, float y) {
+		this.origin.set(x,y);
+		dirtyMatrix = true;
+	}
+
+	public void setAngle(float angle) {
+		this.angle = angle;
+		dirtyMatrix = true;
+	}
 }

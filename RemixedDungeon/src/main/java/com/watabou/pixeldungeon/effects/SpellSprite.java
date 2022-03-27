@@ -65,7 +65,7 @@ public class SpellSprite extends Image {
 	
 	public void reset( int index ) {
 		frame( film.get( index ) );
-		origin.set( width / 2, height / 2 );
+		setOrigin( width / 2, height / 2 );
 		
 		phase = Phase.FADE_IN;
 		
@@ -77,13 +77,13 @@ public class SpellSprite extends Image {
 	public void update() {
 		super.update();
 		
-		x = target.getSprite().center().x - SIZE / 2;
-		y = target.getSprite().y - SIZE;
+		setX(target.getSprite().center().x - SIZE / 2);
+		setY(target.getSprite().getY() - SIZE);
 		
 		switch (phase) {
 		case FADE_IN:
 			alpha( passed / duration );
-			scale.set( passed / duration );
+			setScale( passed / duration );
 			break;
 		case STATIC:
 			break;

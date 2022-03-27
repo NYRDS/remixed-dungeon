@@ -120,11 +120,11 @@ public class Weightstone extends Item {
 
             Text tfMesage = PixelScene.createMultiline( Utils.format(StringsManager.getVar(R.string.Weightstone_WndChoice), weapon.name() ), GuiProperties.regularFontSize());
 			tfMesage.maxWidth(WIDTH - GAP * 2);
-			tfMesage.x = GAP;
-			tfMesage.y = titlebar.bottom() + GAP;
+			tfMesage.setX(GAP);
+			tfMesage.setY(titlebar.bottom() + GAP);
 			add( tfMesage );
 			
-			float pos = tfMesage.y + tfMesage.height();
+			float pos = tfMesage.getY() + tfMesage.height();
 			
 			if (weapon.imbue != Weapon.Imbue.SPEED) {
                 RedButton btnSpeed = new RedButton(StringsManager.getVar(R.string.Weightstone_WndSpeed)) {

@@ -36,8 +36,8 @@ public class WndLibraryCatalogue extends Window {
 		Text listTitle = PixelScene.createMultiline(catalogueName, GuiProperties.mediumTitleFontSize());
 		listTitle.hardlight(TITLE_COLOR);
 		listTitle.maxWidth(WIDTH - GAP * 2);
-		listTitle.x = (WIDTH - listTitle.width()) / 2;
-		listTitle.y = 0;
+		listTitle.setX((WIDTH - listTitle.width()) / 2);
+		listTitle.setY(0);
 
 		add(listTitle);
 

@@ -43,8 +43,8 @@ public class ShaftParticle extends PixelParticle {
 	public void reset( float x, float y ) {
 		revive();
 		
-		this.x = x;
-		this.y = y;
+		this.setX(x);
+		this.setY(y);
 
 		float offs = -Random.Float(lifespan);
 		left = lifespan - offs;
@@ -56,7 +56,6 @@ public class ShaftParticle extends PixelParticle {
 		
 		float p = left / lifespan;
 		am = p < 0.5f ? p : 1 - p;
-		scale.x = (1 - p) * 4;
-		scale.y = 16 + (1 - p) * 16;
+		setScale( (1 - p) * 4, 16 + (1 - p) * 16);
 	}
 }

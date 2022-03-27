@@ -31,13 +31,13 @@ public class CustomClipEffect extends MovieClip implements MovieClip.Listener, I
 		film = new TextureFilm(texture,xs,ys);
 		centerShift = new PointF(-(xs - DungeonTilemap.SIZE) / 2.f,
 				-(ys-DungeonTilemap.SIZE) / 2.f);
-		origin.set(xs / 2.f, ys / 2.f);
+		setOrigin(xs / 2.f, ys / 2.f);
 	}
 
 	public void place(int cell) {
 		PointF p = DungeonTilemap.tileToWorld(cell);
-		x = p.x + centerShift.x;
-		y = p.y + centerShift.y;// - Gizmo.isometricShift();
+		setX(p.x + centerShift.x);
+		setY(p.y + centerShift.y);// - Gizmo.isometricShift();
 	}
 
 	@LuaInterface

@@ -55,7 +55,7 @@ public class BlacksmithSprite extends MobSprite {
 		
 		emitter = new Emitter();
 		emitter.autoKill = false;
-		emitter.pos( x + 7, y + 12 );
+		emitter.pos( getX() + 7, getY() + 12 );
 		getParent().add( emitter );
 	}
 	

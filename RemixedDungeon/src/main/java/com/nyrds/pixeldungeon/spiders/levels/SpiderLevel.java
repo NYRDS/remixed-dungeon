@@ -26,6 +26,7 @@ public class SpiderLevel extends CommonLevel {
 	public SpiderLevel() {
 		color1 = 0x48763c;
 		color2 = 0x59994a;
+		_objectsKind = 6;
 	}
 
 	@Override
@@ -247,10 +248,5 @@ public class SpiderLevel extends CommonLevel {
 			default:
 				return super.tileDesc( tile );
 		}
-	}
-
-	@Override
-	public int objectsKind() {
-		return 6;
 	}
 }

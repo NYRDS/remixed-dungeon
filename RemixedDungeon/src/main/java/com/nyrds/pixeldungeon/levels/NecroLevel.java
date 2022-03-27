@@ -21,6 +21,7 @@ public class NecroLevel extends RegularLevel {
 		color2 = 0xb9d661;
 
 		viewDistance = 6;
+		_objectsKind = 7;
 	}
 
 	@Override
@@ -132,10 +133,5 @@ public class NecroLevel extends RegularLevel {
 				scene.add( new Candle( i ) );
 			}
 		}
-	}
-
-	@Override
-	public int objectsKind() {
-		return 7;
 	}
 }

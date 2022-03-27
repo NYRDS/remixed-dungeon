@@ -39,16 +39,16 @@ class SpellButton extends Button {
     @Override
     protected void layout() {
         super.layout();
-        bg.x = x;
-        bg.y = y;
+        bg.setX(x);
+        bg.setY(y);
         bg.size(width, height);
 
-        cooldownMeter.x = x;
-        cooldownMeter.y = y ;
+        cooldownMeter.setX(x);
+        cooldownMeter.setY(y);
         cooldownMeter.size(width, height * (1-spell.getCooldownFactor(caster)));
 
-        image.x = x + 3;
-        image.y = y + 3;
+        image.setX(x + 3);
+        image.setY(y + 3);
     }
 
     @Override

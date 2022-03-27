@@ -44,7 +44,7 @@ public class WndChallenges extends Window {
 
         Text title = PixelScene.createText(StringsManager.getVar(R.string.WndChallenges_Title), GuiProperties.titleFontSize() );
 		title.hardlight( TITLE_COLOR );
-		title.x = PixelScene.align( camera, (WIDTH - title.width()) / 2 );
+		title.setX(PixelScene.align( camera, (WIDTH - title.width()) / 2 ));
 		add( title );
 		
 		boxes = new ArrayList<>();

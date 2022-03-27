@@ -66,14 +66,14 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
     protected void layout() {
         super.layout();
 
-        image.x = PixelScene.align(x + (width - image.width()) / 2);
-        image.y = PixelScene.align(y);
+        image.setX(PixelScene.align(x + (width - image.width()) / 2));
+        image.setY(PixelScene.align(y));
 
-        text.x = PixelScene.align(x + (width - text.width()) / 2);
-        text.y = PixelScene.align(image.y + image.height() + 2);
+        text.setX(PixelScene.align(x + (width - text.width()) / 2));
+        text.setY(PixelScene.align(image.getY() + image.height() + 2));
 
-        text2.x = PixelScene.align(x + (width - text2.width()) / 2);
-        text2.y = PixelScene.align(text.y + text.height() + 2);
+        text2.setX(PixelScene.align(x + (width - text2.width()) / 2));
+        text2.setY(PixelScene.align(text.getY() + text.height() + 2));
     }
 
     @Override

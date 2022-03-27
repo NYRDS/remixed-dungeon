@@ -61,7 +61,7 @@ public class WndBlacksmith extends Window {
 
         Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndBlacksmith_Prompt), GuiProperties.regularFontSize());
 		message.maxWidth(WIDTH);
-		message.y = titlebar.bottom() + GAP;
+		message.setY(titlebar.bottom() + GAP);
 		add( message );
 		
 		btnItem1 = new ItemButton() {
@@ -71,7 +71,7 @@ public class WndBlacksmith extends Window {
                 GameScene.selectItem(Dungeon.hero, itemSelector, WndBag.Mode.UPGRADEABLE, StringsManager.getVar(R.string.WndBlacksmith_Select));
 			}
 		};
-		btnItem1.setRect( (WIDTH - BTN_GAP) / 2 - BTN_SIZE, message.y + message.height() + BTN_GAP, BTN_SIZE, BTN_SIZE );
+		btnItem1.setRect( (WIDTH - BTN_GAP) / 2 - BTN_SIZE, message.getY() + message.height() + BTN_GAP, BTN_SIZE, BTN_SIZE );
 		add( btnItem1 );
 		
 		btnItem2 = new ItemButton() {
@@ -157,8 +157,8 @@ public class WndBlacksmith extends Window {
 		protected void layout() {	
 			super.layout();
 			
-			bg.x = x;
-			bg.y = y;
+			bg.setX(x);
+			bg.setY(y);
 			bg.size( width, height );
 			
 			slot.setRect( x + 2, y + 2, width - 4, height - 4 );

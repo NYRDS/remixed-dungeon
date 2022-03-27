@@ -45,8 +45,8 @@ public class ChallengeButton extends Button {
 
         super.layout();
 
-        image.x = PixelScene.align(x);
-        image.y = PixelScene.align(y);
+        image.setX(PixelScene.align(x));
+        image.setY(PixelScene.align(y));
     }
 
     @Override

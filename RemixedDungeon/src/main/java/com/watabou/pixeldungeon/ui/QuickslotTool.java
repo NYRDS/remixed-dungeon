@@ -25,7 +25,7 @@ class QuickslotTool extends Tool {
     @Override
     protected void layout() {
         super.layout();
-        slot.setRect(base.x, base.y, base.width(), base.height());
+        slot.setRect(base.getX(), base.getY(), base.width(), base.height());
     }
 
     @Override
@@ -34,8 +34,8 @@ class QuickslotTool extends Tool {
 
         if(slot.getQuickslotItem() instanceof Spell.SpellItem) {
             Spell.SpellItem spell = (Spell.SpellItem)slot.getQuickslotItem();
-            cooldownMeter.x = base.x;
-            cooldownMeter.y = base.y;
+            cooldownMeter.setX(base.getX());
+            cooldownMeter.setY(base.getY());
             cooldownMeter.size(base.width(), base.height() * (1 - spell.spell().getCooldownFactor(Dungeon.hero)));
             cooldownMeter.setVisible(true);
         } else {

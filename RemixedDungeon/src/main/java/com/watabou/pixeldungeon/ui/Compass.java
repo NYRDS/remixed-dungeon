@@ -21,6 +21,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.PointF;
 
 public class Compass extends Image {
@@ -30,9 +31,9 @@ public class Compass extends Image {
 	
 	private int cell;
 	private PointF cellCenter;
-	private Level level;
+	private final Level level;
 
-	private PointF lastScroll = new PointF();
+	private final PointF lastScroll = new PointF();
 	
 	public Compass(int cell, Level level) {
 		
@@ -40,7 +41,7 @@ public class Compass extends Image {
 		this.level = level;
 
 		copy( Icons.COMPASS.get() );
-		origin.set( width / 2, RADIUS );
+        setOrigin( width / 2, RADIUS );
 		
 		setCell(cell);
 		setVisible(false);
@@ -74,7 +75,7 @@ public class Compass extends Image {
 			if (!scroll.equals( lastScroll )) {
 				lastScroll.set( scroll );
 				PointF center = Camera.main.center().offset( scroll );
-				angle = (float)Math.atan2( cellCenter.x - center.x, center.y - cellCenter.y ) * RAD_2_G;
+				setAngle((float)Math.atan2( cellCenter.x - center.x, center.y - cellCenter.y ) * RAD_2_G);
 			}
 		}
 	}

@@ -45,7 +45,7 @@ public class Necrotism extends Buff implements Doom {
 			target.getSprite().burst( 0x6935a5, 3 );
 
 			int damage;
-			if (target instanceof Boss){
+			if (target.isBoss()){
 				damage = (target.hp()/200);
 			} else{
 				damage = ( target.hp() / Math.max(3, (21 - iteration)) );

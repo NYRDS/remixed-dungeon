@@ -15,14 +15,14 @@ public class Devour extends Image {
 
 	public Devour() {
 		super( Effects.get( Effects.Type.DEVOUR ) );
-		origin.set( width / 2, height / 2 );
+		setOrigin( width / 2, height / 2 );
 	}
 	
 	public void reset( int p ) {
 		revive();
-		
-		x = (Dungeon.level.cellX(p)) * DungeonTilemap.SIZE + (DungeonTilemap.SIZE - width) / 2;
-		y = (Dungeon.level.cellY(p)) * DungeonTilemap.SIZE + (DungeonTilemap.SIZE - height) / 2;
+
+        setX((Dungeon.level.cellX(p)) * DungeonTilemap.SIZE + (DungeonTilemap.SIZE - width) / 2);
+		setY((Dungeon.level.cellY(p)) * DungeonTilemap.SIZE + (DungeonTilemap.SIZE - height) / 2);
 		
 		time = TIME_TO_FADE;
 	}
@@ -36,7 +36,7 @@ public class Devour extends Image {
 		} else {
 			float p = time / TIME_TO_FADE;
 			alpha( p );
-			scale.x = 1 + p;
+			setScaleX(1 + p);
 		}
 	}
 	
@@ -48,6 +48,6 @@ public class Devour extends Image {
 		Devour w = (Devour)ch.getSprite().getParent().recycle( Devour.class );
 		ch.getSprite().getParent().bringToFront( w );
 		w.reset( ch.getPos() );
-		w.angle = angle;
+		w.setAngle(angle);
 	}
 }

@@ -49,7 +49,8 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 
         Text tfTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.ModsButton_SelectMod), GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
-		tfTitle.x = tfTitle.y = GAP;
+		tfTitle.setY(GAP);
+		tfTitle.setX(GAP);
 		tfTitle.maxWidth(width - GAP * 2);
 		add(tfTitle);
 

@@ -55,7 +55,8 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
         Text tfTitle = PixelScene.createMultiline(title, GuiProperties.titleFontSize());
         tfTitle.hardlight(TITLE_COLOR);
-        tfTitle.x = tfTitle.y = GAP;
+        tfTitle.setX(GAP);
+        tfTitle.setY(GAP);
         tfTitle.maxWidth(maxW);
         add(tfTitle);
 
@@ -76,18 +77,18 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                     }));
                 }
             };
-            refreshBtn.setPos(WIDTH - refreshBtn.width() - GAP * 2, tfTitle.y);
+            refreshBtn.setPos(WIDTH - refreshBtn.width() - GAP * 2, tfTitle.getY());
             add(refreshBtn);
         }
 
 
         Text tfMesage = PixelScene.createMultiline(windowText(), GuiProperties.regularFontSize());
         tfMesage.maxWidth(maxW);
-        tfMesage.x = GAP;
-        tfMesage.y = tfTitle.y + tfTitle.height() + GAP;
+        tfMesage.setX(GAP);
+        tfMesage.setY(tfTitle.getY() + tfTitle.height() + GAP);
         add(tfMesage);
 
-        float pos = tfMesage.y + tfMesage.height() + GAP;
+        float pos = tfMesage.getY() + tfMesage.height() + GAP;
 
         ArrayList<TextButton> buttons = new ArrayList<>();
 

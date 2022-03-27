@@ -238,9 +238,9 @@ public class SystemText extends Text {
 		if (fontHeight > 0) {
 			destroyLines();
 			lineImage.clear();
-			width = 0;
+			setWidth(0);
 
-			height = 0;
+			setHeight(0);
 			int charIndex = 0;
 			int startLine = 0;
 
@@ -250,12 +250,12 @@ public class SystemText extends Text {
 				if(nextLine == startLine) { // WTF???
 					return;
 				}
-				height += fontHeight;
+				setHeight(height + fontHeight);
 
 				if (lineWidth > 0) {
 
 					lineWidth += 1;
-					width = Math.max(lineWidth, width);
+                    setWidth(Math.max(lineWidth, width));
 
 					currentLine = text.substring(startLine,nextLine);
 
@@ -325,18 +325,23 @@ public class SystemText extends Text {
 	@Override
 	protected void updateMatrix() {
 		// "origin" field is ignored
-		Matrix.setIdentity(matrix);
-		Matrix.translate(matrix, x, y);
-		Matrix.scale(matrix, scale.x, scale.y);
-		Matrix.rotate(matrix, angle);
+		if(dirtyMatrix) {
+			Matrix.setIdentity(matrix);
+			Matrix.translate(matrix, x, y);
+			Matrix.scale(matrix, scale.x, scale.y);
+			Matrix.rotate(matrix, angle);
+			dirtyMatrix = false;
+		}
 	}
 
 	private void updateParent() {
 		Group parent = getParent();
 		for (SystemTextLine img : lineImage) {
-			if (img.getParent() != parent) {
-				if (img.getParent() != null) {
-					img.getParent().remove(img);
+			Group imgParent = img.getParent();
+
+			if (imgParent != parent) {
+				if (imgParent != null) {
+					imgParent.remove(img);
 				}
 
 				if (parent != null) {
@@ -382,7 +387,7 @@ public class SystemText extends Text {
 				img.am = am;
 				img.aa = aa;
 
-				img.setPos(PixelScene.align(PixelScene.uiCamera,x), PixelScene.align(PixelScene.uiCamera,y + (line * fontHeight) * scale.y));
+				img.setPos(PixelScene.align(PixelScene.uiCamera, getX()), PixelScene.align(PixelScene.uiCamera, getY() + (line * fontHeight) * scale.y));
 				img.setScale(scale.x / oversample, scale.x / oversample);
 
 				line++;

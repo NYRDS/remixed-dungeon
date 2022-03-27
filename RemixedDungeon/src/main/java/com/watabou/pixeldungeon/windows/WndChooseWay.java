@@ -80,8 +80,8 @@ public class WndChooseWay extends Window {
 			normal.mask = hl.inverted();
 		}
 		normal.maxWidth(WIDTH);
-		normal.x = titlebar.left();
-		normal.y = titlebar.bottom() + GAP;
+		normal.setX(titlebar.left());
+		normal.setY(titlebar.bottom() + GAP);
 		add( normal );
 		
 		if (hl.isHighlighted()) {
@@ -90,8 +90,8 @@ public class WndChooseWay extends Window {
 			highlighted.mask = hl.mask;
 			
 			highlighted.maxWidth(normal.getMaxWidth());
-			highlighted.x = normal.x;
-			highlighted.y = normal.y;
+			highlighted.setX(normal.getX());
+			highlighted.setY(normal.getY());
 			add( highlighted );
 	
 			highlighted.hardlight( TITLE_COLOR );
@@ -104,7 +104,7 @@ public class WndChooseWay extends Window {
 				MasteryItem.choose(chr, item, way1 );
 			}
 		};
-		btnWay1.setRect( 0, normal.y + normal.height() + GAP, (WIDTH - GAP) / 2, BTN_HEIGHT );
+		btnWay1.setRect( 0, normal.getY() + normal.height() + GAP, (WIDTH - GAP) / 2, BTN_HEIGHT );
 		add( btnWay1 );
 
 		if (way1 != HeroSubClass.LICH){

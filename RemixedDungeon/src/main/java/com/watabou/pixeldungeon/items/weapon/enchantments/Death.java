@@ -27,7 +27,7 @@ import com.watabou.utils.Random;
 
 public class Death extends Weapon.Enchantment {
 
-	private static Glowing BLACK = new Glowing( 0x000000 );
+	private static final Glowing BLACK = new Glowing( 0x000000 );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {
@@ -44,13 +44,9 @@ public class Death extends Weapon.Enchantment {
 			if (!defender.isAlive() && attacker instanceof Hero) {
 				Badges.validateGrimWeapon();
 			}
-			
 			return true;
-			
 		} else {
-			
 			return false;
-			
 		}
 	}
 	

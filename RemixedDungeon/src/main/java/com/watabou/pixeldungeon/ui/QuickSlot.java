@@ -160,8 +160,8 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
         slot.fill(this);
 
-        crossB.x = PixelScene.align(x + (width - crossB.width) / 2);
-        crossB.y = PixelScene.align(y + (height - crossB.height) / 2);
+        crossB.setX(PixelScene.align(x + (width - crossB.width) / 2));
+        crossB.setY(PixelScene.align(y + (height - crossB.height) / 2));
     }
 
 

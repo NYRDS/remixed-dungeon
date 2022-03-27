@@ -76,7 +76,7 @@ public class WndStory extends Window {
 		tf.rm = -bgR;
 		tf.gm = -bgG;
 		tf.bm = -bgB;
-		tf.x = MARGIN;
+		tf.setX(MARGIN);
 		
 		int h = (int) Math.min(HEIGHT - MARGIN, tf.height());
 		int w = (int)(tf.width() + MARGIN * 2);

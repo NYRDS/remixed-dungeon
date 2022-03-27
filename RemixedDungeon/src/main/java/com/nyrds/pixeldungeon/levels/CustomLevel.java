@@ -38,7 +38,7 @@ public abstract class CustomLevel extends CommonLevel {
 			LuaEngine.getEngine().runScriptFile(descFile);
 			String desc = LuaEngine.getEngine().call("getJson").tojstring();
 			try {
-				mLevelDesc = JsonHelper.readJsonFromStream(new ByteArrayInputStream(desc.getBytes()));
+				mLevelDesc = JsonHelper.readJsonFromStream(new ByteArrayInputStream(desc.getBytes()),descFile);
 			} catch (JSONException e) {
 				throw ModdingMode.modException(e);
 			}

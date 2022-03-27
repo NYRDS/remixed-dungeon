@@ -135,11 +135,11 @@ public class WndBag extends WndTabbed {
 		Text txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), GuiProperties.titleFontSize());
 		txtTitle.maxWidth(panelWidth);
 		txtTitle.hardlight( TITLE_COLOR );
-		txtTitle.x = PixelScene.align((panelWidth - txtTitle.width()) / 2);
-		if(txtTitle.x<0) {
-			txtTitle.x = 0;
+		txtTitle.setX(PixelScene.align((panelWidth - txtTitle.width()) / 2));
+		if(txtTitle.getX() <0) {
+			txtTitle.setX(0);
 		}
-		txtTitle.y = 0;
+		txtTitle.setY(0);
 		add( txtTitle );
 
 		titleBottom = txtTitle.bottom();
@@ -148,11 +148,11 @@ public class WndBag extends WndTabbed {
 			Text txtSubTitle = PixelScene.createMultiline( Utils.format(R.string.WndBag_BuySubtitle, Dungeon.hero.gold()) , GuiProperties.titleFontSize());
 			txtSubTitle.maxWidth(panelWidth);
 			txtSubTitle.hardlight( TITLE_COLOR );
-			txtSubTitle.x = PixelScene.align((panelWidth - txtSubTitle.width()) / 2);
-			if(txtSubTitle.x<0) {
-				txtSubTitle.x = 0;
+			txtSubTitle.setX(PixelScene.align((panelWidth - txtSubTitle.width()) / 2));
+			if(txtSubTitle.getX() <0) {
+				txtSubTitle.setX(0);
 			}
-			txtSubTitle.y = titleBottom;
+			txtSubTitle.setY(titleBottom);
 			add( txtSubTitle );
 			titleBottom = txtSubTitle.bottom();
 		}

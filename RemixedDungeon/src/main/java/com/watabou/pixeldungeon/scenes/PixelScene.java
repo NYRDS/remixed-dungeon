@@ -148,7 +148,7 @@ public class PixelScene extends Scene {
 		}
 
 		Text result = Text.create(text, chooseFont(size));
-		result.Scale().set(scale);
+		result.setScale(scale);
 
 		return result;
 	}
@@ -168,7 +168,7 @@ public class PixelScene extends Scene {
 		}
 
 		Text result = Text.createMultiline(text, chooseFont(size));
-		result.Scale().set(scale);
+		result.setScale(scale);
 
 		return result;
 	}
@@ -184,8 +184,8 @@ public class PixelScene extends Scene {
 
 	public static void align(Visual v) {
 		Camera c = v.camera();
-		v.x = align(c, v.x);
-		v.y = align(c, v.y);
+		v.setX(align(c, v.getX()));
+		v.setY(align(c, v.getY()));
 	}
 
 	public static boolean noFade = false;
@@ -210,10 +210,10 @@ public class PixelScene extends Scene {
 		if (uiCamera != null && !Game.isPaused()) {
 			BadgeBanner banner = BadgeBanner.show(badge.image);
 			banner.camera = uiCamera;
-			banner.x = align(banner.camera,
-					(banner.camera.width - banner.width) / 2);
-			banner.y = align(banner.camera,
-					(banner.camera.height - banner.height) / 3);
+            banner.setX(align(banner.camera,
+					(banner.camera.width - banner.width) / 2));
+			banner.setY(align(banner.camera,
+					(banner.camera.height - banner.height) / 3));
 			GameLoop.addToScene(banner);
 		}
 	}

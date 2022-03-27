@@ -23,14 +23,14 @@ public class WndPortalWarning extends Window {
         Text tfTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.WndPortal_Warning_Title), GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - GAP);
-		tfTitle.x = (WIDTH - tfTitle.width())/2;
-		tfTitle.y = GAP;
+		tfTitle.setX((WIDTH - tfTitle.width())/2);
+		tfTitle.setY(GAP);
 		add(tfTitle);
 
 		//Instruction text
         Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndPortal_Warning_Info), GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
-		message.y = tfTitle.bottom()+ GAP;
+		message.setY(tfTitle.bottom()+ GAP);
 		add( message );
 
 		int buttonY = (int) message.bottom()+ GAP;

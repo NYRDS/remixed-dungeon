@@ -44,8 +44,8 @@ public class FlameParticle extends PixelParticle.Shrinking {
 	public void reset( float x, float y ) {
 		revive();
 		
-		this.x = x;
-		this.y = y;
+		this.setX(x);
+		this.setY(y);
 		
 		left = lifespan;
 		

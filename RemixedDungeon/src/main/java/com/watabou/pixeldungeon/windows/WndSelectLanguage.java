@@ -41,21 +41,22 @@ public class WndSelectLanguage extends Window {
 
 		Text tfTitle = PixelScene.createMultiline(title, GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
-		tfTitle.x = tfTitle.y = GAP;
+		tfTitle.setY(GAP);
+		tfTitle.setX(GAP);
 		tfTitle.maxWidth(maxW);
 		add(tfTitle);
 
         Text pleaseHelpTranslate = PixelScene.createMultiline(StringsManager.getVar(R.string.WndSelectLanguage_ImproveTranslation), GuiProperties.titleFontSize());
 		pleaseHelpTranslate.maxWidth(maxW);
-		pleaseHelpTranslate.x = GAP;
-		pleaseHelpTranslate.y = tfTitle.y + tfTitle.height() + GAP;
+		pleaseHelpTranslate.setX(GAP);
+		pleaseHelpTranslate.setY(tfTitle.getY() + tfTitle.height() + GAP);
 		add(pleaseHelpTranslate);
 
         Text translateLink = PixelScene.createMultiline(StringsManager.getVar(R.string.WndSelectLanguage_LinkToTranslationSite), GuiProperties.titleFontSize());
 		translateLink.hardlight(TITLE_COLOR);
 		translateLink.maxWidth(maxW);
-		translateLink.x = GAP;
-		translateLink.y = pleaseHelpTranslate.y + pleaseHelpTranslate.height() + GAP;
+		translateLink.setX(GAP);
+		translateLink.setY(pleaseHelpTranslate.getY() + pleaseHelpTranslate.height() + GAP);
 		add(translateLink);
 
 		TouchArea area = new TouchArea(translateLink) {
@@ -66,7 +67,7 @@ public class WndSelectLanguage extends Window {
 		};
 		add(area);
 
-		float pos = translateLink.y + translateLink.height() + GAP;
+		float pos = translateLink.getY() + translateLink.height() + GAP;
 
 		final int columns = RemixedDungeon.landscape() ? 3 : 2;
 

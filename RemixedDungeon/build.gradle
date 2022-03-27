@@ -19,6 +19,12 @@ android {
             storeFile file(jks_storePath)
             storePassword jks_storePassword
         }
+        debug {
+            keyAlias jks_keyAlias
+            keyPassword jks_keyPassword
+            storeFile file(jks_storePath)
+            storePassword jks_storePassword
+        }
     }
 
     defaultConfig {
@@ -28,8 +34,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1108
-        versionName "31.0.fix.26"
+        versionCode 1114
+        versionName "31.1.alpha.3"
         targetSdkVersion 31
         minSdkVersion 16
         compileSdkVersion = 31
@@ -43,11 +49,16 @@ android {
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
             minifyEnabled false
+            manifestPlaceholders["crashlyticsCollectionEnabled"] = "true"
+            manifestPlaceholders["performanceCollectionDeactivated"] = "false"
         }
         debug {
             debuggable true
+            signingConfig signingConfigs.debug
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
             signingConfig signingConfigs.release
+            manifestPlaceholders["crashlyticsCollectionEnabled"] = "false"
+            manifestPlaceholders["performanceCollectionDeactivated"] = "true"
         }
     }
 
@@ -117,6 +128,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
+    implementation 'org.hjson:hjson:3.0.0'
 
     annotationProcessor project(':processor')
 

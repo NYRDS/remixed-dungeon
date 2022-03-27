@@ -201,11 +201,12 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	}
 
 	public void execute(@NotNull Char hero) {
-		String defaultAction = getDefaultAction();
 
-		if(hero.getHeroClass().forbidden(defaultAction)){
+		if(hero.getHeroClass().forbidden(getDefaultAction())){
 			setDefaultAction(AC_THROW);
 		}
+
+		String defaultAction = getDefaultAction();
 
 		if(actions(hero).contains(defaultAction)) {
 			hero.nextAction(new UseItem(this, defaultAction));

@@ -56,7 +56,7 @@ public class WndSadGhost extends Window {
 				GuiProperties.regularFontSize()
 		);
 		message.maxWidth(WIDTH);
-		message.y = titlebar.bottom() + GAP;
+		message.setY(titlebar.bottom() + GAP);
 		add( message );
 
         RedButton btnWeapon = new RedButton(StringsManager.getVar(R.string.WndSadGhost_Wepon)) {
@@ -65,7 +65,7 @@ public class WndSadGhost extends Window {
 				selectReward( ghost, item, Ghost.Quest.getWeapon());
 			}
 		};
-		btnWeapon.setRect( 0, message.y + message.height() + GAP, WIDTH, BTN_HEIGHT );
+		btnWeapon.setRect( 0, message.getY() + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnWeapon );
 
         RedButton btnArmor = new RedButton(StringsManager.getVar(R.string.WndSadGhost_Armor)) {

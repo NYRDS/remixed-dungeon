@@ -54,6 +54,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	public static final float MICRO_TICK	= 0.001f;
 	private static float realTimeMultiplier = 1f;
 
+	private static Map<String, Integer> skipCounter = new HashMap<>();
+
 	@Packable
 	private float time;
 
@@ -64,7 +66,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	protected abstract boolean act();
 
 	public void spend( float time ) {
-		GLog.debug("%s spend %2.4f", getEntityKind(), time);
+		//GLog.debug("%s spend %2.4f", getEntityKind(), time);
 		if(Util.isDebug() && current!=this) {
 			if(this instanceof Char) {
 				GLog.debug("%s spends time on %s move!", getEntityKind(), current!=null?current.getEntityKind():"no one");
@@ -206,7 +208,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 		// action still in progress
 		if (current != null && !current.timeout()) {
-//			Log.i("Main loop", String.format("skip: %s %4.1f", current, current.time));
+			checkSkips(current);
 			return;
 		}
 
@@ -216,15 +218,17 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		while ((actor=getNextActor(Float.MAX_VALUE)) != null) {
 
 			if (actor instanceof Char && ((Char)actor).getSprite().doingSomething()) {
-				//Log.i("Main loop", "in action");
+				checkSkips(actor);
+				GLog.debug("skip: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
 				// If it's character's turn to act, but its sprite
 				// is moving, wait till the movement is over
+
 				return;
 			}
 
 			GLog.debug("Main actor loop: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
 			if(actor instanceof Char) {
-				GLog.debug("%s %d action %s",actor.getEntityKind(), ((Char) actor).getId(),((Char) actor).curAction);
+				//GLog.debug("%s %d action %s",actor.getEntityKind(), ((Char) actor).getId(),((Char) actor).curAction);
 			}
 
 			current = actor;
@@ -232,8 +236,6 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 			float timeBefore = actor.time;
 
 			EventCollector.setSessionData("actor", actor.getEntityKind());
-
-
 
 			if (actor.act() && Dungeon.hero.isAlive()) {
 				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
@@ -257,6 +259,24 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 				break;
 			}
 		}
+	}
+
+	private static void checkSkips(Actor actor) {
+		if(!Util.isDebug()) {
+			return;
+		}
+
+		String entityKind = actor.getEntityKind();
+
+		Integer skips = skipCounter.get(entityKind);
+		if(skips == null) {
+			skips = 0;
+		}
+		skips++;
+
+		skipCounter.put(entityKind, skips);
+
+		//GLog.debug("skip: %s ", skipCounter.toString());
 	}
 
 	public static void process(float elapsed) {

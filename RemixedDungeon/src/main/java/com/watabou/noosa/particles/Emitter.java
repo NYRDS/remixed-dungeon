@@ -70,14 +70,14 @@ public class Emitter extends Group {
 	
 	public void pos( Visual target ) {
 		this.target = target;
-		x = target.x;
-		y = target.y;
+		x = target.getX();
+		y = target.getY();
 	}
 
 	public void pos( Visual target, float ix, float iy, float width, float height ) {
 		this.target = target;
-		x = target.x;
-		y = target.y;
+		x = target.getX();
+		y = target.getY();
 	}
 	
 	public void burst( Factory factory, int quantity ) {
@@ -137,8 +137,8 @@ public class Emitter extends Group {
 			factory.emit( 
 				this,
 				index,
-				target.x + target.visualOffsetX() + Random.Float( target.visualWidth() ),
-				target.y + target.visualOffsetY() + Random.Float( target.visualHeight() ) );
+				target.getX() + target.visualOffsetX() + Random.Float( target.visualWidth() ),
+				target.getY() + target.visualOffsetY() + Random.Float( target.visualHeight() ) );
 		}
 	}
 	

@@ -88,8 +88,8 @@ public class RankingsScene extends PixelScene {
 
             Text title = PixelScene.createText(StringsManager.getVar(R.string.RankingsScene_Title), GuiProperties.titleFontSize());
             title.hardlight(Window.TITLE_COLOR);
-            title.x = align((w - title.width()) / 2);
-            title.y = align(top - title.height() - GAP);
+            title.setX(align((w - title.width()) / 2));
+            title.setY(align(top - title.height() - GAP));
             add(title);
 
             float btnHeight = rowHeight / 2;
@@ -165,23 +165,29 @@ public class RankingsScene extends PixelScene {
 
             Text total = PixelScene.createText("/" + Rankings.INSTANCE.totalNumber, GuiProperties.titleFontSize());
             total.hardlight(DEFAULT_COLOR);
-            total.x = align((w - total.width()) / 2);
-            total.y = align(top + recordsPerPage * rowHeight + GAP);
+            total.setX(align((w - total.width()) / 2));
+            float ypos = align(top + recordsPerPage * rowHeight + GAP);
+            total.setY(ypos);
             add(total);
 
             float tw = label.width() + won.width() + happy.width() + total.width();
-            label.x = align((w - tw) / 2);
-            happy.x = label.x + label.width();
-            won.x = happy.x + happy.width();
-            total.x = won.x + won.width();
-            label.y = happy.y = won.y = total.y = align(top + recordsPerPage * rowHeight + GAP);
+            label.setX(align((w - tw) / 2));
+            happy.setX(label.getX() + label.width());
+            won.setX(happy.getX() + happy.width());
+            total.setX(won.getX() + won.width());
+
+            total.setY(ypos);
+            happy.setY(ypos);
+            label.setY(ypos);
+            won.setY(ypos);
+
 
         } else {
 
             Text title = PixelScene.createText(StringsManager.getVar(R.string.RankingsScene_NoGames), GuiProperties.titleFontSize());
             title.hardlight(DEFAULT_COLOR);
-            title.x = align((w - title.width()) / 2);
-            title.y = align((h - title.height()) / 2);
+            title.setX(align((w - title.width()) / 2));
+            title.setY(align((h - title.height()) / 2));
             add(title);
 
         }
@@ -297,22 +303,22 @@ public class RankingsScene extends PixelScene {
 
             super.layout();
 
-            shield.x = x;
-            shield.y = y + (height - shield.height) / 2;
+            shield.setX(x);
+            shield.setY(y + (height - shield.height) / 2);
 
-            position.x = align(shield.x + (shield.width - position.width()) / 2);
-            position.y = align(shield.y + (shield.height - position.height()) / 2 + 1);
+            position.setX(align(shield.getX() + (shield.width - position.width()) / 2));
+            position.setY(align(shield.getY() + (shield.height - position.height()) / 2 + 1));
 
             if (flare != null) {
                 flare.point(shield.center());
             }
 
-            classIcon.x = align(x + width - classIcon.width);
-            classIcon.y = shield.y;
+            classIcon.setX(align(x + width - classIcon.width));
+            classIcon.setY(shield.getY());
 
-            desc.x = shield.x + shield.width + GAP;
-            desc.maxWidth((int) (classIcon.x - desc.x));
-            desc.y = position.y + position.baseLine() - desc.baseLine();
+            desc.setX(shield.getX() + shield.width + GAP);
+            desc.maxWidth((int) (classIcon.getX() - desc.getX()));
+            desc.setY(position.getY() + position.baseLine() - desc.baseLine());
         }
 
         @Override

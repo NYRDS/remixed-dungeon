@@ -84,8 +84,8 @@ public class Image extends Visual implements IPlaceable {
 	public void frame( RectF frame ) {
 		this.frame = frame;
 		
-		width = frame.width() * texture.width;
-		height = frame.height() * texture.height;
+		setWidth(frame.width() * texture.width);
+		setHeight(frame.height() * texture.height);
 		
 		updateFrame();
 		updateVertices();
@@ -102,9 +102,9 @@ public class Image extends Visual implements IPlaceable {
 	public void copy( Image other ) {
 		texture = other.texture;
 		frame = new RectF( other.frame );
-		
-		width = other.width;
-		height = other.height;
+
+        setWidth(other.width);
+		setHeight(other.height);
 		
 		updateFrame();
 		updateVertices();
@@ -143,11 +143,11 @@ public class Image extends Visual implements IPlaceable {
 		
 		vertices[0] 	= 0;
 		vertices[1] 	= 0;
-		
-		vertices[4] 	= width;
+
+        vertices[4] 	= width;
 		vertices[5] 	= 0;
-		
-		vertices[8] 	= width;
+
+        vertices[8] 	= width;
 		vertices[9] 	= height;
 		
 		vertices[12]	= 0;
@@ -186,7 +186,7 @@ public class Image extends Visual implements IPlaceable {
 	}
 
 	public float bottom() {
-		return y + height();
+		return getY() + height();
 	}
 
 	public FloatBuffer getVerticesBuffer() {

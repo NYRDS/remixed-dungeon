@@ -43,7 +43,7 @@ public class WindParticle extends PixelParticle {
 	
 	public WindParticle() {
 		lifespan = Random.Float( 1, 2 );
-		scale.set( size = Random.Float( 3 ) );
+		setScale( size = Random.Float( 3 ) );
 	}
 	
 	public void reset( float x, float y ) {
@@ -54,8 +54,8 @@ public class WindParticle extends PixelParticle {
 		super.speed.set( WindParticle.speed );
 		super.speed.scale( size );
 		
-		this.x = x - super.speed.x * lifespan / 2;
-		this.y = y - super.speed.y * lifespan / 2;
+		this.setX(x - super.speed.x * lifespan / 2);
+		this.setY(y - super.speed.y * lifespan / 2);
 		
 		angle += Random.Float( -0.1f, +0.1f );
 		speed = new PointF().polar( angle, 5 );

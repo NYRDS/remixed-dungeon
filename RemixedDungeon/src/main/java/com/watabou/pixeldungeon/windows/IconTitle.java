@@ -63,15 +63,15 @@ public class IconTitle extends Component {
 	
 	@Override
 	protected void layout() {
-		imIcon.x = x - imIcon.visualOffsetX();
-		imIcon.y = y - imIcon.visualOffsetY();
+		imIcon.setX(x - imIcon.visualOffsetX());
+		imIcon.setY(y - imIcon.visualOffsetY());
 		
-		tfLabel.x = PixelScene.align( PixelScene.uiCamera, imIcon.x + imIcon.visualOffsetX() + imIcon.visualWidth() + GAP );
-		tfLabel.maxWidth((int)(width - tfLabel.x));
-		tfLabel.y =  PixelScene.align( PixelScene.uiCamera,
-				imIcon.y + imIcon.visualOffsetY() + (imIcon.visualHeight() - tfLabel.baseLine()) );
+		tfLabel.setX(PixelScene.align( PixelScene.uiCamera, imIcon.getX() + imIcon.visualOffsetX() + imIcon.visualWidth() + GAP ));
+		tfLabel.maxWidth((int)(width - tfLabel.getX()));
+		tfLabel.setY(PixelScene.align( PixelScene.uiCamera,
+				imIcon.getY() + imIcon.visualOffsetY() + (imIcon.visualHeight() - tfLabel.baseLine()) ));
 				
-		height = Math.max( imIcon.y + imIcon.visualOffsetY() + imIcon.visualHeight() + GAP, tfLabel.y + tfLabel.height() );
+		height = Math.max( imIcon.getY() + imIcon.visualOffsetY() + imIcon.visualHeight() + GAP, tfLabel.getY() + tfLabel.height() );
 	}
 	
 	public void icon( Image icon ) {

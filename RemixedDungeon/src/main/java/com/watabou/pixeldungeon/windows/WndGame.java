@@ -49,7 +49,7 @@ public class WndGame extends WndMenuCommon {
 			menuItems.add(createIsometricShift());
 		}
 
-		menuItems.add( new MenuButton(StringsManager.getVar(R.string.WndGame_Settings)) {
+		menuItems.add( new MenuButton(R.string.WndGame_Settings) {
 			@Override
 			protected void onClick() {
 				hide();
@@ -61,7 +61,7 @@ public class WndGame extends WndMenuCommon {
 		final int difficulty = hero.getDifficulty();
 
 		if(difficulty < 2 && hero.isAlive()) {
-            menuItems.add( new MenuButton(StringsManager.getVar(R.string.WndGame_Save)) {
+            menuItems.add( new MenuButton(R.string.WndGame_Save) {
 				@Override
 				protected void onClick() {
                     GameScene.show(new WndSaveSlotSelect(true, StringsManager.getVar(R.string.WndSaveSlotSelect_SelectSlot)));
@@ -70,7 +70,7 @@ public class WndGame extends WndMenuCommon {
 		}
 
 		if(difficulty < 2) {
-            menuItems.add( new MenuButton(StringsManager.getVar(R.string.WndGame_Load)) {
+            menuItems.add( new MenuButton(R.string.WndGame_Load) {
 				@Override
 				protected void onClick() {
                     GameScene.show(new WndSaveSlotSelect(false, StringsManager.getVar(R.string.WndSaveSlotSelect_SelectSlot)));
@@ -81,7 +81,7 @@ public class WndGame extends WndMenuCommon {
 		final int challenges = Dungeon.getChallenges();
 
 		if (challenges > 0) {
-            menuItems.add( new MenuButton(StringsManager.getVar(R.string.WndGame_Challenges)) {
+            menuItems.add( new MenuButton(R.string.WndGame_Challenges) {
 				@Override
 				protected void onClick() {
 					hide();
@@ -101,7 +101,7 @@ public class WndGame extends WndMenuCommon {
 				}
 			});
 
-            menuItems.add( new MenuButton(StringsManager.getVar(R.string.WndGame_Ranking)) {
+            menuItems.add( new MenuButton(R.string.WndGame_Ranking) {
 				@Override
 				protected void onClick() {
 					GameLoop.switchScene( RankingsScene.class );
@@ -109,7 +109,7 @@ public class WndGame extends WndMenuCommon {
 			} );
 		}
 
-        menuItems.add( new MenuButton(StringsManager.getVar(R.string.WndGame_menu)) {
+        menuItems.add( new MenuButton(R.string.WndGame_menu) {
 			@Override
 			protected void onClick() {
 				if(Dungeon.hero.isAlive()) {
@@ -119,14 +119,14 @@ public class WndGame extends WndMenuCommon {
 			}
 		} );
 
-        menuItems.add( new MenuButton(StringsManager.getVar(R.string.WndGame_Exit)) {
+        menuItems.add( new MenuButton(R.string.WndGame_Exit) {
 			@Override
 			protected void onClick() {
 				Game.shutdown();
 			}
 		} );
 
-        menuItems.add( new MenuButton(StringsManager.getVar(R.string.WndGame_Return)) {
+        menuItems.add( new MenuButton(R.string.WndGame_Return) {
 			@Override
 			protected void onClick() {
 				hide();

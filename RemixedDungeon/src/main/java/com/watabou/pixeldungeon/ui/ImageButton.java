@@ -16,7 +16,7 @@ public class ImageButton extends Button {
 
         add( image );
 
-		width = image.width;
+        width = image.width;
 		height = image.height;
 	}
 
@@ -28,8 +28,8 @@ public class ImageButton extends Button {
 	protected void layout() {
 		super.layout();
 
-		image.x = x;
-		image.y = y;
+		image.setX(x);
+		image.setY(y);
 	}
 
 	@Override

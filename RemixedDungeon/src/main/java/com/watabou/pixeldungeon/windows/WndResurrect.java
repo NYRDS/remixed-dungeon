@@ -64,7 +64,7 @@ public class WndResurrect extends Window {
 
         Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndResurrect_Message), GuiProperties.regularFontSize() );
 		message.maxWidth(width);
-		message.y = titlebar.bottom() + GAP;
+		message.setY(titlebar.bottom() + GAP);
 		add( message );
 
         RedButton btnYes = new RedButton(StringsManager.getVar(R.string.WndResurrect_Yes)) {
@@ -77,7 +77,7 @@ public class WndResurrect extends Window {
 				InterlevelScene.Do(InterlevelScene.Mode.RESURRECT);
 			}
 		};
-		btnYes.setRect( 0, message.y + message.height() + GAP, width, BTN_HEIGHT );
+		btnYes.setRect( 0, message.getY() + message.height() + GAP, width, BTN_HEIGHT );
 		add( btnYes );
 
         RedButton btnNo = new RedButton(StringsManager.getVar(R.string.WndResurrect_No)) {

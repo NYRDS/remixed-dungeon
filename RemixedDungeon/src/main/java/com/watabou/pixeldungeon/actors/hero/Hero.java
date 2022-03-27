@@ -279,6 +279,10 @@ public class Hero extends Char {
 		return (int) (super.attackSkill(target) * attackSkillFactor);
 	}
 
+	@Override
+	public void spend(float time) {
+		super.spend(time);
+	}
 
 	@Override
 	public int dr() {

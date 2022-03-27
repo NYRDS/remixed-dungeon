@@ -88,7 +88,7 @@ public class ItemSprite extends MovieClip {
 	}
 
 	protected void originToCenter() {
-		origin.set(scale.x * SIZE / 2, scale.y * SIZE / 2);
+		setOrigin(scale.x * SIZE / 2, scale.y * SIZE / 2);
 	}
 
 	public void link() {
@@ -154,11 +154,11 @@ public class ItemSprite extends MovieClip {
 		if (heap!= null && heap.pos == from) {
 			drop();
 		} else {
-			float px = x;
-			float py = y;
+			float px = getX();
+			float py = getY();
 			drop();
 			place(from);
-			speed.offset((px - x) / DROP_INTERVAL, (py - y) / DROP_INTERVAL);
+			speed.offset((px - getX()) / DROP_INTERVAL, (py - getY()) / DROP_INTERVAL);
 		}
 	}
 

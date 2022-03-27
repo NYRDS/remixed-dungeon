@@ -38,13 +38,13 @@ class BagTab extends Tab {
         super.layout();
 
         icon.copy( icon() );
-        icon.x = x + (width - icon.width) / 2;
-        icon.y = y + (height - icon.height) / 2 - 2 - (selected ? 0 : 1);
-        if (!selected && icon.y < y + CUT) {
+        icon.setX(x + (width - icon.width) / 2);
+        icon.setY(y + (height - icon.height) / 2 - 2 - (selected ? 0 : 1));
+        if (!selected && icon.getY() < y + CUT) {
             RectF frame = icon.frame();
-            frame.top += (y + CUT - icon.y) / icon.texture.height;
+            frame.top += (y + CUT - icon.getY()) / icon.texture.height;
             icon.frame( frame );
-            icon.y = y + CUT;
+            icon.setY(y + CUT);
         }
     }
 

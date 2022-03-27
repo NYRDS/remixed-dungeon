@@ -49,7 +49,7 @@ abstract public class CommonLevel extends Level {
 				continue;
 			}
 
-			EventCollector.logException("trying to spawn " + mob.getEntityKind() + "on invalid cell " + mob.getPos());
+			EventCollector.logException("trying to spawn " + mob.getEntityKind() + " on invalid cell " + mob.getPos());
 		}
 	}
 }

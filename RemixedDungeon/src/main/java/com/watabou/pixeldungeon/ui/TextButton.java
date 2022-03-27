@@ -23,16 +23,16 @@ public class TextButton extends Button {
 		
 		super.layout();
 		
-		bg.x = x;
-		bg.y = y;
+		bg.setX(x);
+		bg.setY(y);
 		bg.size( width, height );
 		
-		text.x = x + (int)(width - text.width()) / 2;
-		text.y = y + (int)(height - Math.max(text.height(),text.baseLine())) / 2;
+		text.setX(x + (int)(width - text.width()) / 2);
+		text.setY(y + (int)(height - Math.max(text.height(),text.baseLine())) / 2);
 
 		if (icon != null) {
-			icon.x = x + text.x - icon.width() - 2;
-			icon.y = y + (height - icon.height()) / 2;
+			icon.setX(x + text.getX() - icon.width() - 2);
+			icon.setY(y + (height - icon.height()) / 2);
 		}
 	}
 

@@ -81,23 +81,23 @@ public class AmuletScene extends PixelScene {
 		float height;
 		if (noText) {
 			height = amulet.height + LARGE_GAP + btnExit.height() + SMALL_GAP + btnStay.height();
-			
-			amulet.x = align( (Camera.main.width - amulet.width) / 2 );
-			amulet.y = align( (Camera.main.height - height) / 2 );
-			
-			btnExit.setPos( (Camera.main.width - btnExit.width()) / 2, amulet.y + amulet.height + LARGE_GAP );
+
+            amulet.setX(align( (Camera.main.width - amulet.width) / 2 ));
+			amulet.setY(align( (Camera.main.height - height) / 2 ));
+
+			btnExit.setPos( (Camera.main.width - btnExit.width()) / 2, amulet.getY() + amulet.height + LARGE_GAP );
 			btnStay.setPos( btnExit.left(), btnExit.bottom() + SMALL_GAP );
 			
 		} else {
 			height = amulet.height + LARGE_GAP + text.height() + LARGE_GAP + btnExit.height() + SMALL_GAP + btnStay.height();
+
+            amulet.setX(align( (Camera.main.width - amulet.width) / 2 ));
+			amulet.setY(align( (Camera.main.height - height) / 2 ));
 			
-			amulet.x = align( (Camera.main.width - amulet.width) / 2 );
-			amulet.y = align( (Camera.main.height - height) / 2 );
+			text.setX(align( (Camera.main.width - text.width()) / 2 ));
+			text.setY(amulet.getY() + amulet.height + LARGE_GAP);
 			
-			text.x =  align( (Camera.main.width - text.width()) / 2 );
-			text.y = amulet.y + amulet.height + LARGE_GAP;
-			
-			btnExit.setPos( (Camera.main.width - btnExit.width()) / 2, text.y + text.height() + LARGE_GAP );
+			btnExit.setPos( (Camera.main.width - btnExit.width()) / 2, text.getY() + text.height() + LARGE_GAP );
 			btnStay.setPos( btnExit.left(), btnExit.bottom() + SMALL_GAP );
 		}
 
@@ -121,7 +121,7 @@ public class AmuletScene extends PixelScene {
 			timer = Random.Float( 0.5f, 5f );
 			
 			Speck star = (Speck)recycle( Speck.class );
-			star.reset( 0, amulet.x + 10.5f, amulet.y + 5.5f, Speck.DISCOVER );
+			star.reset( 0, amulet.getX() + 10.5f, amulet.getY() + 5.5f, Speck.DISCOVER );
 			add( star );
 		}
 	}

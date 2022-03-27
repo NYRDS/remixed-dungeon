@@ -27,7 +27,7 @@ public class SpiderEgg extends Mob {
     public boolean act() {
 		super.act();
 
-		Char newSpider = MobSpawner.spawnRandomMob(level(), getPos(), 15);
+		Char newSpider = MobSpawner.spawnRandomMob(level(), getPos(), 25);
 
 		if(newSpider.valid()) {
 			remove();

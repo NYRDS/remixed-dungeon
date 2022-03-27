@@ -2,6 +2,7 @@
   "common": {
     "armor": {
       "kind": "ClothArmor",
+      "glyph": "Bounce",
       "identified": true
     },
     "items": [
@@ -18,7 +19,7 @@
         "kind": "test/TestItem"
       },
       {
-        "kind": "Moongrace.Seed",
+        "kind": "ScrollOfUpgrade",
         "quantity": 1000
       },
 

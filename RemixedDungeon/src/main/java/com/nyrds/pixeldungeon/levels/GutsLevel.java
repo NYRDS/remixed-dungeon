@@ -18,6 +18,7 @@ public class GutsLevel extends RegularLevel {
 		color1 = 0x534f3e;
 		color2 = 0xb9d661;
 
+		_objectsKind = 5;
 		viewDistance = 6;
 	}
 
@@ -135,8 +136,4 @@ public class GutsLevel extends RegularLevel {
 		}
 	}
 
-	@Override
-	public int objectsKind() {
-		return 5;
-	}
 }

@@ -67,16 +67,17 @@ public class FogOfWar extends Image {
 		}
 		
 		float size = DungeonTilemap.SIZE;
-		width = width2 * size;
-		height = height2 * size;
+		setWidth(width2 * size);
+		setHeight(height2 * size);
 		
 		texture( new FogTexture() );
 		
-		scale.set( 
+		setScale(
 			DungeonTilemap.SIZE, 
 			DungeonTilemap.SIZE );
 		
-		x = y = -size / 2;
+		setX(-size / 2);
+		setY(-size / 2);
 	}
 	
 	public void updateVisibility( boolean[] visible, boolean[] visited, boolean[] mapped, boolean firstRowHack) {

@@ -31,7 +31,7 @@ public class ScaleTweener extends Tweener {
 		super( visual, time );
 		
 		this.visual = visual;
-		start = visual.Scale();
+		start = visual.scale;
 		end = scale;
 	}
 

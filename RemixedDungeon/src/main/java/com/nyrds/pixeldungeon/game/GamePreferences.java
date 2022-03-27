@@ -94,6 +94,7 @@ public class GamePreferences {
 
     public static String uiLanguage() {
         String deviceLocale = Locale.getDefault().getLanguage();
+        EventCollector.setSessionData("device_locale", deviceLocale);
         return Preferences.INSTANCE.getString(Preferences.KEY_LOCALE,
                 deviceLocale);
     }

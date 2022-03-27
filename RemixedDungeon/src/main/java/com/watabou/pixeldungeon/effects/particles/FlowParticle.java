@@ -47,8 +47,8 @@ public class FlowParticle extends PixelParticle {
 		
 		left = lifespan;
 		
-		this.x = x;
-		this.y = y;
+		this.setX(x);
+		this.setY(y);
 		
 		am = 0;
 		size( 0 );

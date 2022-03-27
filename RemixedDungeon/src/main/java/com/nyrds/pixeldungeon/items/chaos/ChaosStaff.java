@@ -73,7 +73,7 @@ public class ChaosStaff extends Wand {
             if (ch instanceof Mob) {
                 Mob mob = (Mob) ch;
 
-                if ((mob instanceof Boss) || (mob instanceof NPC)) {
+                if ((mob.isBoss()) || (mob instanceof NPC)) {
                     return;
                 }
 

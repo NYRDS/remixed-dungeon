@@ -30,7 +30,7 @@ public class SpiderNest extends Mob {
     public boolean act(){
 		super.act();
 
-		MobSpawner.spawnRandomMob(level(), getPos(), 10);
+		MobSpawner.spawnRandomMob(level(), getPos(), 20);
 		postpone(20);
 		
 		return true;

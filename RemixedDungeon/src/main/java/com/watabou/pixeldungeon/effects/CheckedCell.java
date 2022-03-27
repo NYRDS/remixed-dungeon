@@ -29,7 +29,7 @@ public class CheckedCell extends Image {
 	public CheckedCell( int pos ) {
 		super( TextureCache.createSolid( 0xFF55AAFF ) );
 
-		origin.set( 0.5f );
+		setOrigin( 0.5f );
 		
 		point( DungeonTilemap.tileToWorld( pos ).offset( 
 			DungeonTilemap.SIZE / 2, 
@@ -42,7 +42,7 @@ public class CheckedCell extends Image {
 	public void update() {
 		if ((alpha -= GameLoop.elapsed) > 0) {
 			alpha( alpha );
-			scale.set( DungeonTilemap.SIZE * alpha );
+			setScale( DungeonTilemap.SIZE * alpha );
 		} else {
 			killAndErase();
 		}

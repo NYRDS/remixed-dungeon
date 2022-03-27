@@ -188,32 +188,32 @@ public class StatusPane extends Component {
     protected void layout() {
         shield.size(width, shield.height);
 
-        avatar.x = PixelScene.align(camera(), shield.x + 15 - avatar.width / 2);
-        avatar.y = PixelScene.align(camera(), shield.y + 16 - avatar.height / 2);
+        avatar.setX(PixelScene.align(camera(), shield.getX() + 15 - avatar.width / 2));
+        avatar.setY(PixelScene.align(camera(), shield.getY() + 16 - avatar.height / 2));
 
-        compass.x = avatar.x + avatar.width / 2 - compass.origin.x;
-        compass.y = avatar.y + avatar.height / 2 - compass.origin.y;
+        compass.setX(avatar.getX() + avatar.width / 2 - compass.origin.x);
+        compass.setY(avatar.getY() + avatar.height / 2 - compass.origin.y);
 
-        hp.x = 30;
-        hp.y = 3;
+        hp.setX(30);
+        hp.setY(3);
 
-        sp.x = 30;
-        sp.y = 9;
+        sp.setX(30);
+        sp.setY(9);
 
-        hpText.x = 30;
-        hpText.y = 3.5f;
+        hpText.setX(30);
+        hpText.setY(3.5f);
 
-        manaText.x = 30;
-        manaText.y = 9.5f;
+        manaText.setX(30);
+        manaText.setY(9.5f);
 
-        level.x = PixelScene.align(27.0f - level.width() / 2);
-        level.y = PixelScene.align(27.5f - level.baseLine() / 2);
+        level.setX(PixelScene.align(27.0f - level.width() / 2));
+        level.setY(PixelScene.align(27.5f - level.baseLine() / 2));
 
-        depth.x = width - 24 - depth.width() - 18;
-        depth.y = 6;
+        depth.setX(width - 24 - depth.width() - 18);
+        depth.setY(6);
 
-        keys.x = width - 8 - keys.width() - 18;
-        keys.y = 6;
+        keys.setX(width - 8 - keys.width() - 18);
+        keys.setY(6);
 
         danger.setPos(width - danger.width(), 40);
 
@@ -271,9 +271,9 @@ public class StatusPane extends Component {
             blood.on = false;
         }
 
-        this.hp.Scale().x = health;
-        this.sp.Scale().x = sPoints;
-        exp.Scale().x = (width / exp.width) * hero.getExp() / hero.maxExp();
+        this.hp.setScaleX(health);
+        this.sp.setScaleX(sPoints);
+        exp.setScaleX((width / exp.width) * hero.getExp() / hero.maxExp());
 
         if (chr.lvl() != lastLvl) {
 
@@ -286,15 +286,15 @@ public class StatusPane extends Component {
 
             lastLvl = chr.lvl();
             level.text(Integer.toString(lastLvl));
-            level.x = PixelScene.align(27.0f - level.width() / 2);
-            level.y = PixelScene.align(27.5f - level.baseLine() / 2);
+            level.setX(PixelScene.align(27.0f - level.width() / 2));
+            level.setY(PixelScene.align(27.5f - level.baseLine() / 2));
         }
 
         int k = IronKey.curDepthQuantity;
         if (k != lastKeys) {
             lastKeys = k;
             keys.text(Integer.toString(lastKeys));
-            keys.x = width - 8 - keys.width() - 18;
+            keys.setX(width - 8 - keys.width() - 18);
         }
     }
 

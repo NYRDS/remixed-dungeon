@@ -40,6 +40,7 @@ public class CavesBossLevel extends BossLevel {
 		color2 = 0xb9d661;
 		
 		viewDistance = 6;
+		_objectsKind = 2;
 	}
 
 	@Override
@@ -243,11 +244,5 @@ public class CavesBossLevel extends BossLevel {
 
 	private int _RoomBottom() {
 		return getHeight() / 2 + 2;
-	}
-
-
-	@Override
-	public int objectsKind() {
-		return 2;
 	}
 }

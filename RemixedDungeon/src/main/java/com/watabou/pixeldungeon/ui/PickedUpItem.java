@@ -27,8 +27,8 @@ class PickedUpItem extends ItemSprite {
 
         active = setVisible(true);
 
-        x = dstX;
-        y = dstY;
+        setX(dstX);
+        setY(dstY);
         left = DURATION;
 
         alpha(1);
@@ -42,7 +42,7 @@ class PickedUpItem extends ItemSprite {
             setVisible(active = false);
         } else {
             float p = left / DURATION;
-            scale.set((float) Math.sqrt(p));
+            setScale((float) Math.sqrt(p));
         }
     }
 }

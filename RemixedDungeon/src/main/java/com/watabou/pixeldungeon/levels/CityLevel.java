@@ -32,6 +32,7 @@ public class CityLevel extends RegularLevel {
 	{
 		color1 = 0x4b6636;
 		color2 = 0xf2f2f2;
+		_objectsKind = 3;
 	}
 
 	@Override
@@ -130,10 +131,5 @@ public class CityLevel extends RegularLevel {
 				scene.add( new Smoke( i ) );
 			}
 		}
-	}
-
-	@Override
-	public int objectsKind() {
-		return 3;
 	}
 }

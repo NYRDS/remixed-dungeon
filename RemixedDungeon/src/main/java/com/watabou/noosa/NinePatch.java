@@ -62,8 +62,10 @@ public class NinePatch extends Visual {
 		w = w == 0 ? texture.width : w;
 		h = h == 0 ? texture.height : h;
 		
-		nWidth = width = w;
-		nHeight = height = h;
+		nWidth = w;
+		setWidth(w);
+		nHeight = h;
+		setHeight(h);
 		
 		vertices = new float[16];
 		verticesBuffer = Quad.createSet( 9 );
@@ -82,7 +84,7 @@ public class NinePatch extends Visual {
 	protected void updateVertices() {
 
 		verticesBuffer.position( 0 );
-		
+
 		float right = width - marginRight;
 		float bottom = height - marginBottom;
 		
@@ -92,7 +94,7 @@ public class NinePatch extends Visual {
 		Quad.fill( vertices, 
 			marginLeft, right, 0, marginTop, innerF.left, innerF.right, outterF.top, innerF.top );
 		verticesBuffer.put( vertices );
-		Quad.fill( vertices, 
+		Quad.fill( vertices,
 			right, width, 0, marginTop, innerF.right, outterF.right, outterF.top, innerF.top );
 		verticesBuffer.put( vertices );
 		
@@ -102,17 +104,17 @@ public class NinePatch extends Visual {
 		Quad.fill( vertices, 
 			marginLeft, right, marginTop, bottom, innerF.left, innerF.right, innerF.top, innerF.bottom );
 		verticesBuffer.put( vertices );
-		Quad.fill( vertices, 
+		Quad.fill( vertices,
 			right, width, marginTop, bottom, innerF.right, outterF.right, innerF.top, innerF.bottom );
 		verticesBuffer.put( vertices );
-		
-		Quad.fill( vertices, 
+
+		Quad.fill( vertices,
 			0, marginLeft, bottom, height, outterF.left, innerF.left, innerF.bottom, outterF.bottom );
 		verticesBuffer.put( vertices );
-		Quad.fill( vertices, 
+		Quad.fill( vertices,
 			marginLeft, right, bottom, height, innerF.left, innerF.right, innerF.bottom, outterF.bottom );
 		verticesBuffer.put( vertices );
-		Quad.fill( vertices, 
+		Quad.fill( vertices,
 			right, width, bottom, height, innerF.right, outterF.right, innerF.bottom, outterF.bottom );
 		verticesBuffer.put( vertices );
 	}
@@ -158,8 +160,8 @@ public class NinePatch extends Visual {
 	}
 	
 	public void size( float width, float height ) {
-		this.width = width;
-		this.height = height;
+		this.setWidth(width);
+		this.setHeight(height);
 		updateVertices();
 	}
 	

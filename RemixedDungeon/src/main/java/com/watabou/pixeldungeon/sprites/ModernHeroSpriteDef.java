@@ -303,7 +303,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 				}
 			}
 		}
-		deathEffect = new CustomClipEffect(deathEffectDesc, (int)width, (int)height);
+		deathEffect = new CustomClipEffect(deathEffectDesc, (int) width, (int) height);
 	}
 
 	private String armorDescriptor(EquipableItem armor) {

@@ -17,13 +17,25 @@
 
 package com.watabou.noosa;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
+import com.watabou.pixeldungeon.utils.GLog;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Objects;
 
 import lombok.SneakyThrows;
 
 public class Group extends Gizmo {
+
+	static int totalGizmo;
+	static int nullGizmo;
 
 	@NotNull
 	protected ArrayList<Gizmo> members = new ArrayList<>();
@@ -36,11 +48,20 @@ public class Group extends Gizmo {
 		clear();
 	}
 
+
 	@Override
 	public void update() {
+		//members.removeAll(Collections.singleton(null));
+		//members.removeIf(Objects::isNull); needs Android N
 		for (int i = 0; i < members.size(); i++) {
 			Gizmo g = members.get(i);
-			if (g != null && g.exists && g.active) {
+/*
+			totalGizmo++;
+			if(g==null) {
+				nullGizmo++;
+			}
+*/
+			if ( g!= null && g.exists && g.active) {
 				g.update();
 			}
 		}
@@ -173,6 +194,11 @@ public class Group extends Gizmo {
 
 	public Gizmo getMember(int i) {
 		return members.get(i);
+	}
+
+	public void sort() {
+		members.removeAll(Collections.singleton(null));
+		Collections.sort(members, (a,b)-> a.layer - b.layer);
 	}
 
 	//Testing stuff

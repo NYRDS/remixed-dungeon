@@ -127,8 +127,8 @@ public class BitmapTextMultiline extends BitmapText {
 			writer.newLine(0, font.lineHeight);
 		}
 
-		width = writer.width;
-		height = writer.height;
+		setWidth(writer.width);
+		setHeight(writer.height);
 	}
 	
 	private void getWordMetrics( String word, PointF metrics ) {
@@ -154,7 +154,7 @@ public class BitmapTextMultiline extends BitmapText {
 
 
 	public int lines(){
-		return (int) (height/font.lineHeight);
+        return (int) (height /font.lineHeight);
 	}
 
 	private class SymbolWriter {

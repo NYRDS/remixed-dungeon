@@ -29,7 +29,7 @@ public class ManaShield extends Halo {
             if ((phase -= GameLoop.elapsed) <= 0) {
                 killAndErase();
             } else {
-                scale.set( (2 - phase) * radius / RADIUS );
+                setScale( (2 - phase) * radius / RADIUS );
                 am = phase * (-1);
                 aa = phase * (+1);
             }

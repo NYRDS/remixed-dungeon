@@ -901,7 +901,7 @@ public class Dungeon {
     }
 
     public static boolean isPathVisible(int from, int to) {
-        return visible[from] || visible[to];
+        return isCellVisible(from) || isCellVisible(to);
     }
 
     @LuaInterface
