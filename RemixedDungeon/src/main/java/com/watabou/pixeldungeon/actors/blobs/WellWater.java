@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.blobs;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.Journal.Feature;
@@ -91,12 +92,7 @@ public class WellWater extends Blob {
 					volume = off[pos] = cur[pos] = 0;
 					return true;
 				} else {
-					int newPlace;
-					do {
-						newPlace = pos + Level.NEIGHBOURS8[Random.Int( 8 )];
-					} while (!level.passable[newPlace] && !level.avoid[newPlace]);
-					level.animatedDrop( heap.pickUp(), newPlace );
-
+					ItemUtils.throwItemAway(pos);
 					return false;
 				}
 			} else {

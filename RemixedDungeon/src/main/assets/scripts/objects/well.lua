@@ -47,8 +47,9 @@ return object.init{
 
     bump = function(self, object, presser)
         if self.data.water and string.len(self.data.water) > 0 then
-            object:level():getBlobByName(self.data.water):affect()
-            self.data.water = nil
+            if object:level():getBlobByName(self.data.water):affect() then
+                self.data.water = nil
+            end
         end
     end,
 
