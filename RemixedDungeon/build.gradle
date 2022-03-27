@@ -19,6 +19,12 @@ android {
             storeFile file(jks_storePath)
             storePassword jks_storePassword
         }
+        debug {
+            keyAlias jks_keyAlias
+            keyPassword jks_keyPassword
+            storeFile file(jks_storePath)
+            storePassword jks_storePassword
+        }
     }
 
     defaultConfig {
@@ -43,11 +49,16 @@ android {
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
             minifyEnabled false
+            manifestPlaceholders["crashlyticsCollectionEnabled"] = "true"
+            manifestPlaceholders["performanceCollectionDeactivated"] = "false"
         }
         debug {
             debuggable true
+            signingConfig signingConfigs.debug
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
             signingConfig signingConfigs.release
+            manifestPlaceholders["crashlyticsCollectionEnabled"] = "false"
+            manifestPlaceholders["performanceCollectionDeactivated"] = "true"
         }
     }
 
