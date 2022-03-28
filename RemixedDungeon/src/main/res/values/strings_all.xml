@@ -2840,5 +2840,5 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="SpiderElite_Gender">masculine</string>
   <string name="SpiderElite_Name_Objective">spider elite guard</string>
   <string name="SpiderElite_Desc">Much like soldiers, spider guards are sworn to protect their kingdom. The elite guard\'s venom is used to disorient their target.</string>
-
+  <string name="Shaman_ZapMiss">*Cusses in gnollish*</string>
 </resources>

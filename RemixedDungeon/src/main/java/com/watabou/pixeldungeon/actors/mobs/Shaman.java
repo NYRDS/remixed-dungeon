@@ -93,4 +93,11 @@ public class Shaman extends Mob implements IZapper {
         CharUtils.checkDeathReport(this, enemy, StringsManager.getVar(R.string.Shaman_Killed));
 		return 0;
 	}
+
+	@Override
+	protected void zapMiss(@NotNull Char enemy) {
+		if (Math.random() < 0.1) {
+			yell(StringsManager.getVar(R.string.Shaman_ZapMiss));
+		}
+	}
 }

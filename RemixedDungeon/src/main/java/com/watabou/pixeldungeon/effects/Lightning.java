@@ -74,8 +74,10 @@ public class Lightning extends Group {
 		
 		for (int i=0; i < length; i++) {
 			int c = cells[i];
-			cx[i] = (c % Dungeon.level.getWidth() + 0.5f) * DungeonTilemap.SIZE;
-			cy[i] = (c / Dungeon.level.getWidth() + 0.5f) * DungeonTilemap.SIZE;
+			int width = Dungeon.level.getWidth();
+
+			cx[i] = (c % width + 0.5f) * DungeonTilemap.SIZE;
+			cy[i] = (c / width + 0.5f) * DungeonTilemap.SIZE + Image.isometricShift();
 		}
 		
 		arcsS = new Image[length - 1];
