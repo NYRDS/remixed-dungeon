@@ -2831,10 +2831,12 @@
   <string name="WndSettingsInGame_IsometricTiles">Ισομετρικά τετράγωνα</string>
   <string name="KrampusHead_Name">Κεφάλι του Κράμπους</string>
   <string name="KrampusHead_Info">Έχεις ποτέ αναρωτηθεί πώς θα ήταν αν υιοθετούσες έναν πιο διαβολικό ρόλο στις εξερευνήσεις σου; Ε, λοιπόν, σίγουρα θα σπείρεις τον τρόμο στα απανταχού μωρά των αρουραίων με αυτήν τη διαβολική αμφίεση.</string>
-
   <string name="WndSettingsInGame_GameLog">Καταγραφή παιχνιδιού</string>
   <string name="Froth_ArrowInKnee">Ήμουν, κάποτε, κι εγώ εξερευνητής...\nΜέχρι που έφαγα βέλος στο γόνατο...</string>
-
   <string name="BardSong_1">Ζούσαμε μονάχοι η γυναίκα μου κι εγώ\nΣε μια μικρή καλύβα, το μικρό μας σπιτικό\nΤο τζιν και το ρούμι μάς κρατούσαν συντροφιά\nΤης αγάπης μας υπήρξε ζεστή η αγκαλιά</string>
+  <string name="SpiderElite_Name">ανώτερος αραχνοφρουρός</string>
+  <string name="SpiderElite_Gender">masculine</string>
+  <string name="SpiderElite_Name_Objective">ανώτερος αραχνοφρουρός</string>
+  <string name="SpiderElite_Desc">Όπως και οι στρατιώτες, έτσι και οι αραχνοφύλακες έχουν ορκιστεί να προστατεύουν το βασίλειό τους. Το δηλητήριο του ανώτερου αραχνοφρουρού αποπροσανατολίζει τον στόχο.</string>
 
 </resources>
