@@ -156,7 +156,7 @@ public class PredesignedLevel extends CustomLevel {
 					Char chr = Actor.findChar(cell(x,y));
 
 					if(chr!=null) {
-						ModError.doReport(kind + ": cell "+ x + "," + y + "already occupied by "+chr.getEntityKind(),
+						ModError.doReport(kind + ": cell "+ x + "," + y + " already occupied by "+chr.getEntityKind(),
 								new Exception("Mobs block error"));
 						continue;
 					}
@@ -167,7 +167,7 @@ public class PredesignedLevel extends CustomLevel {
 						mob.setPos(cell(x, y));
 						spawnMob(mob);
 					} else {
-						ModError.doReport(kind+":cell "+ x + "," + y + "are outside valid level area",
+						ModError.doReport(kind+":cell "+ x + "," + y + " are outside valid level area",
 								new Exception("Mobs block error"));
 						continue;
 					}

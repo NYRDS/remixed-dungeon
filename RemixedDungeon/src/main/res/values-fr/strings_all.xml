@@ -1590,7 +1590,6 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="TownsfolkMovieNPC_Gender">masculine</string>
   <string name="TownsfolkMovieNPC_Name_Objective">villageois</string>
   <string name="TownsfolkMovieNPC_Desc">Un des habitants du coin. Même si ce n\'est qu\'un simple citoyen, les habits qu\'il porte ont l\'air bien chers. </string>
-  <string name="TownsfolkMovieNPC_Message">Est-ce que vous connaissez ce service spécial offert par la \"salle de cinéma\" ? Trop dommage qu\'un truc aussi étrange que l\'\"Internet\" soit nécessaire... Jamais entendu parler de ça.</string>
   <string name="LibrarianNPC_Name">bibliothécaire</string>
   <string name="LibrarianNPC_Gender">masculine</string>
   <string name="LibrarianNPC_Name_Objective">bibliothécaire</string>
@@ -2818,4 +2817,5 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="MoongraceBuff_Info">L\'air ambiant devient plus saturé, ce qui permet une meilleure concentration et restauration des réserves magiques.</string>
   <string name="EncumbranceBuff_Name">Fardeau</string>
   <string name="EncumbranceBuff_Info">Pas assez de force pour utiliser efficacement : %s.</string>
+  <string name="SpiderElite_Gender">masculine</string>
 </resources>

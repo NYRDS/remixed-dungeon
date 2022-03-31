@@ -9,7 +9,7 @@ import com.watabou.utils.PointF;
 
 public class Candle extends Emitter {
 
-    private int pos;
+    private final int pos;
 
     public Candle(int pos ) {
         super();

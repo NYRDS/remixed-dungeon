@@ -9,10 +9,16 @@
          "y":8
         }, 
         {
-         "kind":"Rat",
+         "kind":"ShamanElder",
          "x":22,
          "y":22
-        }],
+        },
+   {
+     "kind":"Shaman",
+     "x":24,
+     "y":22
+   }
+ ],
  "multiexit":[],
  "objects":[
         {

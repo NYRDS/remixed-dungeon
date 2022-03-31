@@ -719,7 +719,7 @@ Görüşlerinizi önemsiyoruz!</string>
   <string name="PseudoRat_Gender">kadınsı</string>
   <string name="PseudoRat_Name_Objective">Sahte sıçan</string>
   <string name="PseudoRat_Desc">Korkuç bir yaratık , bir sıçan cesedi ile daha önce görmediğin bir kemirgenin birleşiminden oluşuyor.Vücudunun büyük bölümünü oluşturan muazzam ağzı keskin dişlerle dolu.</string>
-  <string name="ZombieGnoll_Info">Akpli dayı diriliyor!</string>
+  <string name="ZombieGnoll_Info">Gnoll zombi diriliyor!</string>
   <string name="HeartOfDarkness_Name">Karanlığın kalbi</string>
   <string name="HeartOfDarkness_Info">Hain ruhun hala atan siyah kalbi.</string>
   <string name="HeartOfDarkness_Gender">nötr</string>
@@ -1498,6 +1498,10 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Badges_DeathGlyph">Kabartma yüzünden ölüm</string>
   <string name="Badges_DeathFalling">Aşağı düşerek ölüm</string>
   <string name="Badges_Yasd">Ateş, zehir, zehirli gaz ve açlık yüzünden ölüm</string>
+  <string name="Badges_BossSlain1">Goo kesidi</string>
+  <string name="Badges_BossSlain2">Tengu kesildi</string>
+  <string name="Badges_BossSlain3">DM-300 Öldürüldü </string>
+  <string name="Badges_BossSlain4">Kral öldürüldü </string>
   <string name="Badges_RingHaggler">Pazarlıkçı Yüzüğü kazanıldı</string>
   <string name="Badges_RingThorns">Diken Yüzüğü kazanıldı</string>
   <string name="Badges_StrengthAttained1">13 Güç puanına ulaşıldı</string>
@@ -1591,7 +1595,6 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="TownsfolkMovieNPC_Gender">erkeksi</string>
   <string name="TownsfolkMovieNPC_Name_Objective">köylü</string>
   <string name="TownsfolkMovieNPC_Desc">Sakinlerden biri. Avamlığı bariz de olsa elbiseleri epey pahalı duruyor.</string>
-  <string name="TownsfolkMovieNPC_Message">Sinema salonunun verdiği özel hizmeti biliyor musun? Ne yazık ki \"internet\" denen egzotik şeyden istiyorlar, öyle bir şeyi duymadım bile. </string>
   <string name="LibrarianNPC_Name">kütüphaneci</string>
   <string name="LibrarianNPC_Gender">erkeksi</string>
   <string name="LibrarianNPC_Name_Objective">kütüphaneci</string>
@@ -1877,10 +1880,10 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Nightmare_Name_Objective">kabus</string>
   <string name="Nightmare_Desc">Titreşen dokunaçlardan yapılmış karabasanlar Eski Tanrının uğursuz düşüncelerinin göstergesi gibidir.</string>
   <string name="Tengu_Info3">Yakaladım, %s!</string>
-  <string name="ZombieGnoll_Name">Akpli Dayı</string>
+  <string name="ZombieGnoll_Name">gnoll-zombi</string>
   <string name="ZombieGnoll_Gender">erkeksi</string>
-  <string name="ZombieGnoll_Name_Objective">Akpli Dayı</string>
-  <string name="ZombieGnoll_Desc">Bükülmüş ve buruşmuş vücudu artık insan görünümünden uzaktır. Akpli Dayı öldürme ve hayallerini tüketme dürtüsü ile varolan et yığını gibidir.</string>
+  <string name="ZombieGnoll_Name_Objective">gnoll-zombi</string>
+  <string name="ZombieGnoll_Desc">Bükülmü ve kırılmış vücudu artık insansı veya sırtlansı görünümünden uzaktır.Zombi gnoll öldürme ve tüketme dürtüsü ile varolan bir kemik ve et yığını gibidir</string>
   <string name="Worm_Name">solucan</string>
   <string name="Worm_Gender">erkeksi</string>
   <string name="Worm_Name_Objective">solucan</string>
@@ -2697,6 +2700,7 @@ remix.30.0\n
   <string name="Calm_Info">Etrafta bir sürü ağırlaştırılmış yaratık var, onlara yardım edelim.</string>
   <string name="CharmSpell_Name">Etrafta bir sürü ağırlaştırılmış yaratık var, onlara yardım edelim.</string>
   <string name="CharmSpell_Info">Herkes biraz sevgiyi hak eder, değil mi?</string>
+  <string name="HideInGrassSpell_Name">Çimenlerde-saklan</string>
   <string name="HideInGrassSpell_Info">Saklambaç ustalığını mükemmelleştirdin.</string>
   <string name="HideInGrassSpell_NeedGrassToHide">Ben bile göz önünde saklanamam.</string>
   <string name="MagicArrow_Name">Büyülü Ok</string>
@@ -2820,4 +2824,8 @@ remix.30.1\n
   <string name="MoongraceBuff_Info">Çevredeki hava daha doygun hale gelir, bu da büyülü rezervlerin daha iyi konsantre edilmesini ve yenilenmesini sağlar.</string>
   <string name="EncumbranceBuff_Name">Yük</string>
   <string name="EncumbranceBuff_Info">%s\'yi etkili bir şekilde kullanmak için yeterli güç yok.</string>
+  <string name="KrampusHead_Name">Kranpus\'un kafası</string>
+  <string name="SpiderElite_Name">Elit örümcek muhafız </string>
+  <string name="SpiderElite_Gender">erkek</string>
+  <string name="SpiderElite_Name_Objective">Elit örümcek muhafız </string>
 </resources>

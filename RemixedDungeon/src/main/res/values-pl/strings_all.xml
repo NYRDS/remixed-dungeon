@@ -1590,7 +1590,6 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="TownsfolkMovieNPC_Gender">masculine</string>
   <string name="TownsfolkMovieNPC_Name_Objective">mieszczanin</string>
   <string name="TownsfolkMovieNPC_Desc">Jeden z lokalsów. Mimo, że wygląda nadzwyczaj zwyczajnie, przyodziany jest w drogo wyglądające szaty.</string>
-  <string name="TownsfolkMovieNPC_Message">Słyszałeś już o nowej usłudze zapewnianej przez lokalny \"teatr filmowy\"? Niestety przy wejściu pytają o jakieś dziwne \"internety\", a o takowych nigdy nie słyszałem.</string>
   <string name="LibrarianNPC_Name">bibliotekarz</string>
   <string name="LibrarianNPC_Gender">masculine</string>
   <string name="LibrarianNPC_Name_Objective">bibliotekarz</string>
@@ -2829,4 +2828,5 @@ remix.29.6\n
   <string name="WndSettingsInGame_IsometricTiles">Płytki izometryczne.</string>
   <string name="KrampusHead_Name">Głowa Krampusa</string>
   <string name="KrampusHead_Info">Zastanawiałeś się może kiedyś jak to by było być nieco bardziej niegrzecznym podczas Podziemiowania? Twój demoniczny wygląd na pewno przyprawi o koszmary niejednego szczurka. </string>
+  <string name="SpiderElite_Gender">męski</string>
 </resources>

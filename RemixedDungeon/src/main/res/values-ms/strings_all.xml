@@ -1537,7 +1537,6 @@
   <string name="TownsfolkMovieNPC_Gender">maskulin</string>
   <string name="TownsfolkMovieNPC_Name_Objective">penduduk pekan</string>
   <string name="TownsfolkMovieNPC_Desc">Orang tempatan. Walaupun nampak macam biasa, tetapi pakaiannya kelihatan mahal.</string>
-  <string name="TownsfolkMovieNPC_Message">Tahukah anda ada perkhidmatan istimewa \"panggung wayang\" disediakan? Tetapi memerlukan \"Internet\", saya pun tak tahu apa kebendanya tu?</string>
   <string name="LibrarianNPC_Name">pustakawan</string>
   <string name="LibrarianNPC_Gender">maskulin</string>
   <string name="LibrarianNPC_Name_Objective">pustakawan</string>
@@ -2533,4 +2532,5 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
   <string name="DeepSnail_Gender">feminin</string>
   <string name="ShamanElder_Gender">feminin</string>
   <string name="Bee_Gender">feminin</string>
+  <string name="SpiderElite_Gender">feminin</string>
 </resources>

@@ -1491,7 +1491,6 @@
   <string name="TownsfolkMovieNPC_Gender">남성</string>
   <string name="TownsfolkMovieNPC_Name_Objective">주민</string>
   <string name="TownsfolkMovieNPC_Desc">현지인들 중 한명입니다. 확실히 일반인이라고는 해도, 옷들은 비싸 보입니다.</string>
-  <string name="TownsfolkMovieNPC_Message">당신은 영화관이 제공하는 특별한 서비스를 아세요? 그들이 인터넷이라는 대단한 물건을 요구해서 나는 들어보지도 못했어요.</string>
   <string name="LibrarianNPC_Name">사서</string>
   <string name="LibrarianNPC_Gender">남성</string>
   <string name="LibrarianNPC_Name_Objective">사서</string>
@@ -2374,4 +2373,5 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="DeepSnail_Gender">남성적인</string>
   <string name="ShamanElder_Gender">남성적인</string>
   <string name="Bee_Gender">남성적인</string>
+  <string name="SpiderElite_Gender">남성적인</string>
 </resources>

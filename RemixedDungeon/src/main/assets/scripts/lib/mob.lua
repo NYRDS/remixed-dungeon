@@ -111,6 +111,14 @@ mob.onZapProc = function(self,mob, enemy, damage)
     return self.zapProc(mob, enemy, damage)
 end
 
+mob.onZapMiss = function(self,mob, enemy)
+    if not self.zapMiss then
+        return
+    end
+    return self.zapMiss(mob, enemy)
+end
+
+
 mob.fillStats = function(self,mob)
     knownMobs[mob] = self
     return not not (self.stats and self.stats(mob))
