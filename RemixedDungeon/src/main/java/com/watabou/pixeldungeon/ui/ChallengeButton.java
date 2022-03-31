@@ -10,13 +10,14 @@ import com.watabou.noosa.Scene;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndChallenges;
 import com.watabou.pixeldungeon.windows.WndMessage;
 
 public class ChallengeButton extends Button {
 
-    private Scene parentScene;
+    private final Scene parentScene;
     private Image image;
 
     public ChallengeButton(Scene startScene) {
@@ -35,7 +36,7 @@ public class ChallengeButton extends Button {
         super.createChildren();
 
         image = Icons
-                .get(GamePreferences.challenges() > 0 ? Icons.CHALLENGE_ON
+                .get(Dungeon.getChallenges() > 0 ? Icons.CHALLENGE_ON
                         : Icons.CHALLENGE_OFF);
         add(image);
     }
@@ -51,18 +52,14 @@ public class ChallengeButton extends Button {
 
     @Override
     protected void onClick() {
-        if (Badges.isUnlocked(Badges.Badge.VICTORY) || Util.isDebug()) {
-            parentScene.add(new WndChallenges(
-                    GamePreferences.challenges(), true) {
-                public void onBackPressed() {
-                    super.onBackPressed();
-                    image.copy(Icons.get(GamePreferences.challenges() > 0 ? Icons.CHALLENGE_ON
-                            : Icons.CHALLENGE_OFF));
-                }
-            });
-        } else {
-            parentScene.add(new WndMessage(StringsManager.getVar(R.string.StartScene_WinGame)));
-        }
+        parentScene.add(new WndChallenges(
+                Dungeon.getChallenges(), true) {
+            public void onBackPressed() {
+                super.onBackPressed();
+                image.copy(Icons.get(Dungeon.getChallenges() > 0 ? Icons.CHALLENGE_ON
+                        : Icons.CHALLENGE_OFF));
+            }
+        });
     }
 
     @Override

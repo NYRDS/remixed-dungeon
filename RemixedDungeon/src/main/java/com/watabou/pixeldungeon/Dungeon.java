@@ -105,6 +105,7 @@ public class Dungeon {
     public static int     transmutation; // depth number for a well of transmutation
 
     private static int challenges;
+    private static int facilitations;
 
     public static Hero  hero;
 
@@ -160,8 +161,6 @@ public class Dungeon {
 
         Treasury.reset();
 
-        setChallenges(GamePreferences.challenges());
-
         Scroll.initLabels();
         Potion.initColors();
         Wand.initWoods();
@@ -208,6 +207,11 @@ public class Dungeon {
     @Contract(pure = true)
     public static boolean isChallenged(int mask) {
         return (getChallenges() & mask) != 0;
+    }
+
+    @Contract(pure = true)
+    public static boolean isFacilated(int mask) {
+        return (facilitations & mask) != 0;
     }
 
     private static void updateStatistics() {
@@ -386,6 +390,7 @@ public class Dungeon {
     private static final String MOD          = "mod";
     private static final String REALTIME     = "realtime";
     private static final String CHALLENGES   = "challenges";
+    private static final String FACILITATIONS= "facilations";
 
 
     public static void gameOver() {
@@ -409,6 +414,7 @@ public class Dungeon {
 
         bundle.put(REALTIME, realtime);
         bundle.put(CHALLENGES, getChallenges());
+        bundle.put(FACILITATIONS, facilitations);
 
         int count = 0;
         int[] ids = new int[chapters.size()];
@@ -902,9 +908,18 @@ public class Dungeon {
         return challenges;
     }
 
+    public static int getFacilitations() {
+        return facilitations;
+    }
+
     public static void setChallenges(int challenges) {
-        EventCollector.setSessionData("challenges",String.valueOf(challenges));
+        EventCollector.setSessionData(CHALLENGES,String.valueOf(challenges));
         Dungeon.challenges = challenges;
+    }
+
+    public static void setFacilitations(int facilitations) {
+        EventCollector.setSessionData(FACILITATIONS,String.valueOf(facilitations));
+        Dungeon.facilitations = facilitations;
     }
 
     public static boolean isPathVisible(int from, int to) {

@@ -23,6 +23,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Challenges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.Window;
@@ -32,14 +33,14 @@ import java.util.ArrayList;
 public class WndChallenges extends Window {
 
 	private static final int WIDTH		= 108;
-	
+
 	private boolean editable;
 	private ArrayList<CheckBox> boxes;
 	
 	public WndChallenges( int checked, boolean editable ) {
 		
 		super();
-		
+
 		this.editable = editable;
 
         Text title = PixelScene.createText(StringsManager.getVar(R.string.WndChallenges_Title), GuiProperties.titleFontSize() );
@@ -80,10 +81,10 @@ public class WndChallenges extends Window {
 				if (boxes.get( i ).checked()) {
 					value |= Challenges.MASKS[i];
 				}
-			}	
-			GamePreferences.challenges( value );
+			}
+			Dungeon.setChallenges(value);
 		}
-		
+
 		super.onBackPressed();
 	}
 }
