@@ -1520,7 +1520,6 @@
   <string name="TownsfolkMovieNPC_Gender">masculino</string>
   <string name="TownsfolkMovieNPC_Name_Objective">cidadão</string>
   <string name="TownsfolkMovieNPC_Desc">Um dos moradores. Mesmo pareça claramente com um plebeu, aquelas roupas parecem caras</string>
-  <string name="TownsfolkMovieNPC_Message">Você o que é esse serviço especial oferecido pelo \"cinema\"? Pena que eles pedem uma coisa exótica chamada \"Internet\", eu nunca ouvi falar nisso.</string>
   <string name="LibrarianNPC_Name">bibliotecário</string>
   <string name="LibrarianNPC_Gender">masculino</string>
   <string name="LibrarianNPC_Name_Objective">bibliotecário</string>
@@ -2585,4 +2584,5 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
   <string name="DeepSnail_Gender">masculino</string>
   <string name="ShamanElder_Gender">masculino</string>
   <string name="Bee_Gender">masculino</string>
+  <string name="SpiderElite_Gender">masculino</string>
 </resources>
