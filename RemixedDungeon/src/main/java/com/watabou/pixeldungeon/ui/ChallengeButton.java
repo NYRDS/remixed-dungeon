@@ -1,10 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.util.StringsManager;
-import com.nyrds.util.Util;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.ui.Button;
@@ -12,8 +8,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.windows.WndChallenges;
-import com.watabou.pixeldungeon.windows.WndMessage;
+import com.watabou.pixeldungeon.windows.WndGameplayCustomization;
 
 public class ChallengeButton extends Button {
 
@@ -52,7 +47,7 @@ public class ChallengeButton extends Button {
 
     @Override
     protected void onClick() {
-        parentScene.add(new WndChallenges(
+        parentScene.add(new WndGameplayCustomization(
                 Dungeon.getChallenges(), true) {
             public void onBackPressed() {
                 super.onBackPressed();

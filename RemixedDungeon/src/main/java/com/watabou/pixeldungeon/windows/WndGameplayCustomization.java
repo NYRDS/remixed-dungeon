@@ -30,14 +30,14 @@ import com.watabou.pixeldungeon.ui.Window;
 
 import java.util.ArrayList;
 
-public class WndChallenges extends Window {
+public class WndGameplayCustomization extends Window {
 
 	private static final int WIDTH		= 108;
 
 	private boolean editable;
 	private ArrayList<CheckBox> boxes;
 	
-	public WndChallenges( int checked, boolean editable ) {
+	public WndGameplayCustomization(int checked, boolean editable ) {
 		
 		super();
 

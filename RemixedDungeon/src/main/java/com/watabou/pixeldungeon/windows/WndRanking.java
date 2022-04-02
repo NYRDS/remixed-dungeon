@@ -165,7 +165,7 @@ public class WndRanking extends WndTabbed {
                 RedButton btnCatalogus = new RedButton(StringsManager.getVar(R.string.WndRanking_StaChallenges)) {
 					@Override
 					protected void onClick() {
-						GameLoop.addToScene( new WndChallenges(Dungeon.getChallenges(), false ) );
+						GameLoop.addToScene( new WndGameplayCustomization(Dungeon.getChallenges(), false ) );
 					}
 				};
 				btnCatalogus.setRect( 0, pos + GAP, btnCatalogus.reqWidth() + 2, btnCatalogus.reqHeight() + 2 );
