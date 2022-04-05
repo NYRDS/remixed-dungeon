@@ -44,6 +44,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.GamesInProgress;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -254,7 +255,9 @@ public class Hero extends Char {
 
 	private void live() {
 		Buff.affect(this, Regeneration.class);
-		Buff.affect(this, Hunger.class);
+		if(!Dungeon.isFacilated(Facilitations.NO_HUNGER)) {
+			Buff.affect(this, Hunger.class);
+		}
 	}
 
 	@Override

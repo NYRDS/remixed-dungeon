@@ -24,6 +24,7 @@ import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.Window;
@@ -34,8 +35,8 @@ public class WndGameplayCustomization extends Window {
 
 	private static final int WIDTH		= 108;
 
-	private boolean editable;
-	private ArrayList<CheckBox> boxes;
+	private final boolean editable;
+	private final ArrayList<CheckBox> boxes;
 	
 	public WndGameplayCustomization(int checked, boolean editable ) {
 		
@@ -52,11 +53,12 @@ public class WndGameplayCustomization extends Window {
 		
 		float pos = title.height() + GAP;
 		final String[] challenges = StringsManager.getVars(R.array.Challenges_Names);
+		final String[] facilitations = StringsManager.getVars(R.array.Facilitations_Names);
 
-		for (int i=0; i < Challenges.MASKS.length; i++) {
+		for (int i = 0; i < Facilitations.MASKS.length; i++) {
 
-			CheckBox cb = new CheckBox( challenges[i] );
-			cb.checked( (checked & Challenges.MASKS[i]) != 0 );
+			CheckBox cb = new CheckBox( facilitations[i] );
+			cb.checked( (checked & Facilitations.MASKS[i]) != 0 );
 			cb.active = editable;
 
 			if (i > 0) {
@@ -64,10 +66,25 @@ public class WndGameplayCustomization extends Window {
 			}
 			cb.setRect( 0, pos, WIDTH, BUTTON_HEIGHT );
 			pos = cb.bottom();
+
+			add( cb );
+			boxes.add( cb );
+		}
+
+
+		for (int i=0; i < Challenges.MASKS.length; i++) {
+
+			CheckBox cb = new CheckBox( challenges[i] );
+			cb.checked( (checked & Challenges.MASKS[i]) != 0 );
+			cb.active = editable;
+			pos += GAP;
+			cb.setRect( 0, pos, WIDTH, BUTTON_HEIGHT );
+			pos = cb.bottom();
 			
 			add( cb );
 			boxes.add( cb );
 		}
+
 		
 		resize( WIDTH, (int)pos );
 	}
@@ -76,13 +93,24 @@ public class WndGameplayCustomization extends Window {
 	public void onBackPressed() {
 		
 		if (editable) {
-			int value = 0;
-			for (int i=0; i < boxes.size(); i++) {
+			int challengesValue = 0;
+			int i = 0;
+
+			for (; i < Facilitations.MASKS.length; i++) {
 				if (boxes.get( i ).checked()) {
-					value |= Challenges.MASKS[i];
+					challengesValue |= Facilitations.MASKS[i];
 				}
 			}
-			Dungeon.setChallenges(value);
+			Dungeon.setChallenges(challengesValue);
+
+			int facilitationsValue = 0;
+			for (;i < boxes.size(); i++) {
+				if (boxes.get( i ).checked()) {
+					facilitationsValue |= Challenges.MASKS[i-Facilitations.MASKS.length];
+				}
+			}
+
+			Dungeon.setFacilitations(challengesValue);
 		}
 
 		super.onBackPressed();

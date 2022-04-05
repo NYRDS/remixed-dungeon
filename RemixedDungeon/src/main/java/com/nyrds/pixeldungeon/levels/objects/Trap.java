@@ -65,7 +65,7 @@ public class Trap extends LevelObject {
 	private boolean secret = false;
 
 	@Packable(defaultValue = "-1")
-	private int usedImageIndex;
+	private int usedImageIndex = -1;
 
 	@Keep
 	public Trap() {

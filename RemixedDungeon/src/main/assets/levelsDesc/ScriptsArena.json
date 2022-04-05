@@ -13,11 +13,11 @@
          "x":22,
          "y":22
         },
-   {
-     "kind":"Shaman",
-     "x":24,
-     "y":22
-   }
+       {
+         "kind":"Shaman",
+         "x":20,
+         "y":22
+       }
  ],
  "multiexit":[],
  "objects":[
@@ -47,10 +47,10 @@
         },
        {
          "kind": "Trap",
-         "x": 6,
+         "x": 8,
          "y": 15,
-         "uses": 2000,
-         "trapKind": "scriptFile",
+         "uses": 1,
+         "trapKind": "FireTrap",
          "script": "scripts/traps/Disarm",
          "activatedByItem": true
        },

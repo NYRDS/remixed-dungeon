@@ -132,6 +132,7 @@ dependencies {
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
     implementation 'org.hjson:hjson:3.0.0'
 
+    api 'com.google.guava:guava:31.1-android'
 
     androidImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
@@ -153,12 +154,12 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.0.1'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.0.1'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.1.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:22.0.1"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:20.5.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:20.6.0'
 
 
-    googlePlayImplementation 'com.android.billingclient:billing:4.0.0'
+    googlePlayImplementation 'com.android.billingclient:billing:4.1.0'
 
     googlePlayImplementation platform('com.google.firebase:firebase-bom:28.4.2')
 
