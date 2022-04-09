@@ -62,6 +62,7 @@ public class CustomItem extends EquipableItem {
         stackable    = desc.rawget("stackable").checkboolean();
         upgradable   = desc.rawget("upgradable").checkboolean();
         identified   = desc.rawget("identified").checkboolean();
+        gender       = Utils.genderFromString(getClassParam("Gender", "neuter", false));
 
         setDefaultAction(desc.rawget("defaultAction").checkjstring());
 

@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.pixeldungeon.windows.WndGameplayCustomization;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Scene;
@@ -8,7 +9,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.windows.WndGameplayCustomization;
 
 public class ChallengeButton extends Button {
 

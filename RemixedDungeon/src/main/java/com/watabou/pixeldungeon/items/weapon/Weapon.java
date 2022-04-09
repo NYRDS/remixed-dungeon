@@ -67,7 +67,9 @@ public class Weapon extends KindOfWeapon {
 
 	protected boolean enchatable = true;
 
-	private final int gender = Utils.genderFromString(getClassParam("Gender","neuter",true));
+	{
+		gender = Utils.genderFromString(getClassParam("Gender", "neuter", true));
+	}
 
 	@Override
 	public int requiredSTR() {
@@ -77,7 +79,6 @@ public class Weapon extends KindOfWeapon {
 	public void setSTR(int STR) {
 		this.STR = STR;
 	}
-
 
 	public enum Imbue {
 		NONE, SPEED, ACCURACY

@@ -22,6 +22,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.TouchArea;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
@@ -115,8 +116,11 @@ public class ScrollPane extends Component {
 			if (dragging) {
 				
 				Camera c = content.camera;
-				
-				c.scroll.offset( PointF.diff( lastPos, t.current ).invScale( c.zoom ) );
+
+				PointF scrollStep = PointF.diff(lastPos, t.current).invScale(c.zoom);
+				GLog.debug("scroll: %s", scrollStep.toString());
+				c.scroll.offset(scrollStep);
+             /*
                 if (c.scroll.x + width > content.width()) {
                     c.scroll.x = content.width() - width;
 				}
@@ -129,7 +133,7 @@ public class ScrollPane extends Component {
 				if (c.scroll.y < 0) {
 					c.scroll.y = 0;
 				}
-
+*/
 				lastPos.set( t.current );	
 				
 			} else if (PointF.distance( t.current, t.start ) > dragThreshold) {
