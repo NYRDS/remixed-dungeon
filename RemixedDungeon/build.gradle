@@ -124,7 +124,6 @@ android {
 
 dependencies {
     implementation project(':annotation')
-
     annotationProcessor project(':processor')
 
     implementation 'com.google.code.gson:gson:2.8.9'

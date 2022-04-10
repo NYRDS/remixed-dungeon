@@ -30,6 +30,10 @@ public class HBox extends BasicBox {
         this.maxWidth = maxWidth;
     }
 
+    public float getMaxWidth() {
+        return maxWidth;
+    }
+
     public void setAlign(Align align) {
         this.align = align;
     }
@@ -123,8 +127,6 @@ public class HBox extends BasicBox {
 
     @Override
     protected void layout() {
-        super.layout();
-
         switch (align) {
 
             case Left:
@@ -140,5 +142,6 @@ public class HBox extends BasicBox {
                 alignWidth();
                 break;
         }
+        super.layout();
     }
 }

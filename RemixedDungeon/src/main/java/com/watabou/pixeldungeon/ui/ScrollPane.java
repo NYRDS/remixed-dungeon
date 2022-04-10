@@ -109,7 +109,7 @@ public class ScrollPane extends Component {
 		// true if dragging is in progress
 		private boolean dragging = false;
 		// last touch coords
-		private PointF lastPos = new PointF();
+		private final PointF lastPos = new PointF();
 		
 		@Override
 		protected void onDrag( Touch t ) {		
@@ -120,20 +120,23 @@ public class ScrollPane extends Component {
 				PointF scrollStep = PointF.diff(lastPos, t.current).invScale(c.zoom);
 				GLog.debug("scroll: %s", scrollStep.toString());
 				c.scroll.offset(scrollStep);
-             /*
-                if (c.scroll.x + width > content.width()) {
-                    c.scroll.x = content.width() - width;
+
+				float width = content.width();
+				if (c.scroll.x + this.width > width) {
+                    c.scroll.x = width - this.width;
 				}
 				if (c.scroll.x < 0) {
 					c.scroll.x = 0;
 				}
-				if (c.scroll.y + height > content.height()) {
-					c.scroll.y = content.height() - height;
+
+				float height = content.height();
+				if (c.scroll.y + this.height > height) {
+					c.scroll.y = height - this.height;
 				}
 				if (c.scroll.y < 0) {
 					c.scroll.y = 0;
 				}
-*/
+
 				lastPos.set( t.current );	
 				
 			} else if (PointF.distance( t.current, t.start ) > dragThreshold) {

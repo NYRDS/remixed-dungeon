@@ -54,26 +54,51 @@ public class WndGameplayCustomization extends Window {
         final String[] challenges = StringsManager.getVars(R.array.Challenges_Names);
         final String[] facilitations = StringsManager.getVars(R.array.Facilitations_Names);
 
-        for (int i = 0; i < Facilitations.MASKS.length; i++) {
-            customizationsSet.add(new ImageTextButton(facilitations[i], Icons.get(Icons.CHALLENGE_OFF)));
-        }
+        var listBox = new VBox();
+        listBox.setAlign(VBox.Align.Top);
 
-        for (int i = 0; i < Challenges.MASKS.length; i++) {
-            customizationsSet.add(new ImageTextButton(challenges[i], Icons.get(Icons.CHALLENGE_OFF)));
-        }
-
-        customizationsSet.layout();
-
-
-        ScrollableList list = new ScrollableList(new Component());
+        ScrollableList list = new ScrollableList(listBox);
 
         add(list);
 
-        list.content().add(customizationsSet);
+        float pos = 0;
+
+        for (int i = 0; i < Facilitations.MASKS.length; i++) {
+            var item = new ChallengeItem(Icons.get(Icons.MIND_CONTROL), facilitations[i], Icons.get(Icons.BTN_QUESTION));
+            item.measure();
+            item.layout();
+            //item.setRect(0, pos, width, 32);
+            listBox.add(item);
+
+            pos += item.height();
+            //customizationsSet.add(item);
+        }
+
+        for (int i = 0; i < Challenges.MASKS.length; i++) {
+            var item = new ChallengeItem(Icons.get(Icons.SKULL), challenges[i], Icons.get(Icons.BTN_QUESTION));
+            //item.setRect(0, pos, width, 32);
+            item.measure();
+            item.layout();
+
+            listBox.add(item);
+
+            pos += item.height();
+            //list.content().add(new ImageTextButton(challenges[i], Icons.get(Icons.CHALLENGE_OFF)));
+            //customizationsSet.add(new ImageTextButton(challenges[i], Icons.get(Icons.CHALLENGE_OFF)));
+        }
+
+        //customizationsSet.layout();
+
+
+
+        //list.content().add(customizationsSet);
+
+        listBox.measure();
+        listBox.layout();
 
         list.setRect(chrome.marginLeft(), Math.max(title.bottom(), title.bottom()) + 2, chrome.innerWidth(),
                 chrome.innerHeight() - title.bottom());
-        list.scrollTo(0, 50);
+        //list.scrollTo(0, 50);
 
         resize(WndHelper.getLimitedWidth(WIDTH), WndHelper.getFullscreenHeight());
     }

@@ -90,8 +90,6 @@ public class VBox extends BasicBox {
 
     @Override
     protected void layout() {
-        super.layout();
-
         switch (align) {
 
             case Top:
@@ -104,5 +102,6 @@ public class VBox extends BasicBox {
                 alignCenter();
                 break;
         }
+        super.layout();
     }
 }
