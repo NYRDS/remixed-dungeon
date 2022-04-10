@@ -605,7 +605,10 @@ public class Hero extends Char {
 
 		level.updateFieldOfView(getControlTarget());
 
-		nextAction(CharUtils.actionForCell(this, cell, level));
+		var action = CharUtils.actionForCell(this, cell, level);
+		if(action.valid()) {
+			nextAction(action);
+		}
 	}
 
 	public void earnExp(int exp) {
