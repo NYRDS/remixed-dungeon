@@ -65,33 +65,26 @@ public class WndGameplayCustomization extends Window {
 
         for (int i = 0; i < Facilitations.MASKS.length; i++) {
             var item = new ChallengeItem(Icons.get(Icons.MIND_CONTROL), facilitations[i], Icons.get(Icons.BTN_QUESTION));
-            item.measure();
-            item.layout();
-            //item.setRect(0, pos, width, 32);
+            //item.layout();
+
             listBox.add(item);
 
             pos += item.height();
-            //customizationsSet.add(item);
+
         }
 
         for (int i = 0; i < Challenges.MASKS.length; i++) {
             var item = new ChallengeItem(Icons.get(Icons.SKULL), challenges[i], Icons.get(Icons.BTN_QUESTION));
-            //item.setRect(0, pos, width, 32);
-            item.measure();
-            item.layout();
+
+            //item.layout();
 
             listBox.add(item);
 
             pos += item.height();
-            //list.content().add(new ImageTextButton(challenges[i], Icons.get(Icons.CHALLENGE_OFF)));
-            //customizationsSet.add(new ImageTextButton(challenges[i], Icons.get(Icons.CHALLENGE_OFF)));
+
         }
 
-        //customizationsSet.layout();
 
-
-
-        //list.content().add(customizationsSet);
 
         listBox.measure();
         listBox.layout();

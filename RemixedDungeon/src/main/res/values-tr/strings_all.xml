@@ -1502,6 +1502,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Badges_BossSlain2">Tengu kesildi</string>
   <string name="Badges_BossSlain3">DM-300 Öldürüldü </string>
   <string name="Badges_BossSlain4">Kral öldürüldü </string>
+  <string name="Badges_BossSlain1All">Goo tüm karakter türleri ile kesildi</string>
   <string name="Badges_RingHaggler">Pazarlıkçı Yüzüğü kazanıldı</string>
   <string name="Badges_RingThorns">Diken Yüzüğü kazanıldı</string>
   <string name="Badges_StrengthAttained1">13 Güç puanına ulaşıldı</string>
