@@ -110,6 +110,24 @@
     <item>@string/Facilitations_Names_2</item>
     <item>@string/Facilitations_Names_3</item>
   </string-array>
+
+  <string-array name="Challenges_Descriotions">
+    <item>@string/Challenges_Names_0</item>
+    <item>@string/Challenges_Names_1</item>
+    <item>@string/Challenges_Names_2</item>
+    <item>@string/Challenges_Names_3</item>
+    <item>@string/Challenges_Names_4</item>
+    <item>@string/Challenges_Names_5</item>
+    <item>@string/Challenges_Names_6</item>
+    <item>@string/Challenges_Names_7</item>
+  </string-array>
+  <string-array name="Facilitations_Descriotions">
+    <item>@string/Facilitations_Names_0</item>
+    <item>@string/Facilitations_Names_1</item>
+    <item>@string/Facilitations_Names_2</item>
+    <item>@string/Facilitations_Names_3</item>
+  </string-array>
+
   <string-array name="Hunger_Hungry">
     <item>@string/Hunger_Hungry_0</item>
     <item>@string/Hunger_Hungry_1</item>

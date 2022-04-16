@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.watabou.noosa.Gizmo;
+import com.watabou.pixeldungeon.utils.GLog;
 
 /**
  * Created by mike on 01.05.2018.
@@ -83,6 +84,7 @@ public class VBox extends BasicBox {
         for(Gizmo g :members) {
             if (g instanceof IPlaceable) {
                 height += ((IPlaceable) g).height() + gap;
+                //GLog.debug("vbox item: %s, %3.0f", g.getClass().getSimpleName(), ((IPlaceable) g).width());
                 width = Math.max(width,((IPlaceable) g).width());
             }
         }

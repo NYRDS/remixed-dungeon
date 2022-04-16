@@ -118,7 +118,6 @@ public class ScrollPane extends Component {
 				Camera c = content.camera;
 
 				PointF scrollStep = PointF.diff(lastPos, t.current).invScale(c.zoom);
-				GLog.debug("scroll: %s", scrollStep.toString());
 				c.scroll.offset(scrollStep);
 
 				float width = content.width();
@@ -136,6 +135,9 @@ public class ScrollPane extends Component {
 				if (c.scroll.y < 0) {
 					c.scroll.y = 0;
 				}
+
+				//GLog.debug("scroll this: %3.0f content: %3.0f", this.width, width );
+
 
 				lastPos.set( t.current );	
 				

@@ -14,10 +14,11 @@ public class ChallengeItem extends ListItem {
     protected ColorBlock bg = new ColorBlock(width, height, 0xFF4A4D44);
     Image descIcon = new Image();
 
-    HBox box = new HBox(100);
+    HBox box;
 
-    ChallengeItem(Image icon, String title, Image _descIcon) {
+    ChallengeItem(Image icon, String title, Image _descIcon, float maxWidth) {
 
+        box = new HBox(maxWidth);
         box.setAlign(HBox.Align.Width);
         box.setAlign(VBox.Align.Center);
 

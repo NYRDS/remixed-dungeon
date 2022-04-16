@@ -47,6 +47,7 @@ public class WndGameplayCustomization extends Window {
 
         resize(WndHelper.getLimitedWidth(WIDTH), WndHelper.getFullscreenHeight() - WINDOW_MARGIN);
 
+
         var customizationsSet = new VHBox(WndHelper.getLimitedWidth(WIDTH) - chrome.marginHor());
         customizationsSet.setAlign(HBox.Align.Width);
         customizationsSet.setGap(4);
@@ -61,38 +62,27 @@ public class WndGameplayCustomization extends Window {
 
         add(list);
 
-        float pos = 0;
-
         for (int i = 0; i < Facilitations.MASKS.length; i++) {
-            var item = new ChallengeItem(Icons.get(Icons.MIND_CONTROL), facilitations[i], Icons.get(Icons.BTN_QUESTION));
-            //item.layout();
-
+            var item = new ChallengeItem(Icons.get(Icons.MIND_CONTROL),
+                    facilitations[i],
+                    Icons.get(Icons.BTN_QUESTION),
+                    chrome.innerWidth());
             listBox.add(item);
-
-            pos += item.height();
-
         }
 
         for (int i = 0; i < Challenges.MASKS.length; i++) {
-            var item = new ChallengeItem(Icons.get(Icons.SKULL), challenges[i], Icons.get(Icons.BTN_QUESTION));
-
-            //item.layout();
+            var item = new ChallengeItem(Icons.get(Icons.SKULL),
+                    challenges[i],
+                    Icons.get(Icons.BTN_QUESTION),
+                    chrome.innerWidth());
 
             listBox.add(item);
-
-            pos += item.height();
-
         }
 
-
-
-        listBox.measure();
         listBox.layout();
 
-        list.setRect(chrome.marginLeft(), Math.max(title.bottom(), title.bottom()) + 2, chrome.innerWidth(),
+        list.setRect(0, Math.max(title.bottom(), title.bottom()) + 2, chrome.innerWidth(),
                 chrome.innerHeight() - title.bottom());
-        //list.scrollTo(0, 50);
-
-        resize(WndHelper.getLimitedWidth(WIDTH), WndHelper.getFullscreenHeight());
+        list.scrollTo(0, 0);
     }
 }
