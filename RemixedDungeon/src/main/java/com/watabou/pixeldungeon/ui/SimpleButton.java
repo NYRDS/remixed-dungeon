@@ -66,7 +66,7 @@ public class SimpleButton extends Component {
 	protected void onClick() {}
 
 	public void enable( boolean value ) {
-		active = value;
+		setActive(value);
 		image.alpha( value ? 1.0f : 0.3f );
 	}
 

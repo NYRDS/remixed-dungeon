@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
@@ -69,7 +70,8 @@ public class WndGameplayCustomization extends Window {
                     facilitations[i],
                     facilitationsDesc[i],
                     Icons.get(Icons.BTN_QUESTION),
-                    chrome.innerWidth());
+                    chrome.innerWidth(),
+                    Util.nullCallback);
             listBox.add(item);
         }
 
@@ -78,7 +80,8 @@ public class WndGameplayCustomization extends Window {
                     challenges[i],
                     challengesDesc[i],
                     Icons.get(Icons.BTN_QUESTION),
-                    chrome.innerWidth());
+                    chrome.innerWidth(),
+                    Util.nullCallback);
 
             listBox.add(item);
         }

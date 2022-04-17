@@ -19,13 +19,13 @@ class PickedUpItem extends ItemSprite {
 
         originToCenter();
 
-        active = setVisible(false);
+        setActive(setVisible(false));
     }
 
     public void reset(Item item, float dstX, float dstY) {
         view(item);
 
-        active = setVisible(true);
+        setActive(setVisible(true));
 
         setX(dstX);
         setY(dstY);
@@ -39,7 +39,7 @@ class PickedUpItem extends ItemSprite {
         super.update();
 
         if ((left -= GameLoop.elapsed) <= 0) {
-            setVisible(active = false);
+            setVisible(setActive(false));
         } else {
             float p = left / DURATION;
             setScale((float) Math.sqrt(p));

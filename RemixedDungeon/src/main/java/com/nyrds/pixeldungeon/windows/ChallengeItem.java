@@ -3,25 +3,52 @@ package com.nyrds.pixeldungeon.windows;
 import static com.watabou.pixeldungeon.ui.Window.GAP;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.util.GuiProperties;
+import com.nyrds.util.Util;
 import com.watabou.noosa.ColorBlock;
+import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.Text;
+import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.GameLog;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ImageButton;
 import com.watabou.pixeldungeon.ui.ListItem;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndStory;
+import com.watabou.utils.Callback;
 
-public class ChallengeItem extends ListItem {
+public class ChallengeItem extends Component {
 
     protected ColorBlock bg = new ColorBlock(width, height, 0xFF4A4D44);
-    ImageButton descIcon;
+    protected ImageButton descIcon;
+    protected ImageButton itemIcon;
+
+    private boolean state = true;
+
+    protected Text label     = PixelScene.createText(GuiProperties.regularFontSize());
 
     HBox box;
+    Callback onClickCallback;
 
-    ChallengeItem(Image icon, String title, String desc, Image _descIcon, float maxWidth) {
+    ChallengeItem(Image icon, String title, String desc, Image _descIcon, float maxWidth, Callback onClick) {
+
+        onClickCallback = onClick;
+
+        itemIcon = new ImageButton(icon) {
+            @Override
+            protected void onClick() {
+                state = ! state;
+                if (state) {
+                    icon.brightness(1.0f);
+                } else {
+                    icon.brightness(0.5f);
+                }
+            }
+        };
 
         descIcon = new ImageButton(_descIcon) {
             @Override
@@ -30,20 +57,15 @@ public class ChallengeItem extends ListItem {
             }
         };
 
-        box = new HBox(maxWidth);
+        box = new HBox(maxWidth - 2 * GAP);
         box.setAlign(HBox.Align.Width);
         box.setAlign(VBox.Align.Center);
 
-        remove(sprite);
-        remove(label);
-
-        box.add(sprite);
+        box.add(itemIcon);
         box.add(label);
         box.add(descIcon);
 
-        sprite.copy(icon);
         label.text(title);
-
 
         add(bg);
         add(box);
@@ -51,10 +73,15 @@ public class ChallengeItem extends ListItem {
 
     @Override
     protected void layout() {
-        box.setPos(x,y);
-        bg.setX(box.left() - GAP);
-        bg.setY(box.top() - GAP);
+        box.setPos(x + GAP,y + GAP);
+        bg.setX(x);
+        bg.setY(y);
         bg.size(box.getMaxWidth() + 2 * GAP, box.height() + 2 * GAP);
+    }
+
+    @Override
+    public void update() {
+        super.update();
     }
 
     @Override
@@ -62,10 +89,6 @@ public class ChallengeItem extends ListItem {
         box.measure();
     }
 
-    @Override
-    protected void onClick() {
-
-    }
 
     @Override
     public float width() {

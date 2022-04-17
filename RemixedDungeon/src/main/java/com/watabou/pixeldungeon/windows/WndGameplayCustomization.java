@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
@@ -59,7 +58,7 @@ public class WndGameplayCustomization extends Window {
 
 			CheckBox cb = new CheckBox( facilitations[i] );
 			cb.checked( (checked & Facilitations.MASKS[i]) != 0 );
-			cb.active = editable;
+			cb.setActive(editable);
 
 			if (i > 0) {
 				pos += GAP;
@@ -76,7 +75,7 @@ public class WndGameplayCustomization extends Window {
 
 			CheckBox cb = new CheckBox( challenges[i] );
 			cb.checked( (checked & Challenges.MASKS[i]) != 0 );
-			cb.active = editable;
+			cb.setActive(editable);
 			pos += GAP;
 			cb.setRect( 0, pos, WIDTH, BUTTON_HEIGHT );
 			pos = cb.bottom();

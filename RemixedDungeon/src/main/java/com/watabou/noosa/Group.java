@@ -17,18 +17,10 @@
 
 package com.watabou.noosa;
 
-import android.os.Build;
-
-import androidx.annotation.RequiresApi;
-
-import com.watabou.pixeldungeon.utils.GLog;
-
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.Objects;
 
 import lombok.SneakyThrows;
 
@@ -61,7 +53,7 @@ public class Group extends Gizmo {
 				nullGizmo++;
 			}
 */
-			if ( g!= null && g.exists && g.active) {
+			if ( g!= null && g.exists && g.isActive()) {
 				g.update();
 			}
 		}

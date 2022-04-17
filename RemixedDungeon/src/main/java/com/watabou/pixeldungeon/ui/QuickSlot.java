@@ -209,7 +209,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     }
 
     public void enable(boolean value) {
-        active = value;
+        setActive(value);
         if (value) {
             enableSlot();
         } else {

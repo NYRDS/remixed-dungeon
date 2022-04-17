@@ -51,6 +51,6 @@ class QuickslotTool extends Tool {
     @Override
     public void enable(boolean value) {
         slot.enable(value);
-        active = value;
+        setActive(value);
     }
 }
