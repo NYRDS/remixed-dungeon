@@ -2846,4 +2846,19 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Facilitations_Names_1">Troll body</string>
   <string name="Facilitations_Names_2">Genie spirit</string>
   <string name="Facilitations_Names_3">Giant strength</string>
+
+  <string name="Facilitations_Descriptions_0">No hunger</string>
+  <string name="Facilitations_Descriptions_1">Troll body</string>
+  <string name="Facilitations_Descriptions_2">Genie spirit</string>
+  <string name="Facilitations_Descriptions_3">Giant strength</string>
+
+
+  <string name="Challenges_Descriptions_0">On diet</string>
+  <string name="Challenges_Descriptions_1">Faith is my armor</string>
+  <string name="Challenges_Descriptions_2">Pharmacophobia</string>
+  <string name="Challenges_Descriptions_3">Barren land</string>
+  <string name="Challenges_Descriptions_4">Swarm intelligence</string>
+  <string name="Challenges_Descriptions_5">Into darkness</string>
+  <string name="Challenges_Descriptions_6">Forbidden Runes</string>
+  <string name="Challenges_Descriptions_7">Pacifism</string>
 </resources>

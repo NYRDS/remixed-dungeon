@@ -2,21 +2,33 @@ package com.nyrds.pixeldungeon.windows;
 
 import static com.watabou.pixeldungeon.ui.Window.GAP;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.ui.GameLog;
+import com.watabou.pixeldungeon.ui.Icons;
+import com.watabou.pixeldungeon.ui.ImageButton;
 import com.watabou.pixeldungeon.ui.ListItem;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndStory;
 
 public class ChallengeItem extends ListItem {
 
     protected ColorBlock bg = new ColorBlock(width, height, 0xFF4A4D44);
-    Image descIcon = new Image();
+    ImageButton descIcon;
 
     HBox box;
 
-    ChallengeItem(Image icon, String title, Image _descIcon, float maxWidth) {
+    ChallengeItem(Image icon, String title, String desc, Image _descIcon, float maxWidth) {
+
+        descIcon = new ImageButton(_descIcon) {
+            @Override
+            protected void onClick() {
+                GameLoop.addToScene(new WndStory(desc));
+            }
+        };
 
         box = new HBox(maxWidth);
         box.setAlign(HBox.Align.Width);
@@ -31,7 +43,7 @@ public class ChallengeItem extends ListItem {
 
         sprite.copy(icon);
         label.text(title);
-        descIcon.copy(_descIcon);
+
 
         add(bg);
         add(box);
