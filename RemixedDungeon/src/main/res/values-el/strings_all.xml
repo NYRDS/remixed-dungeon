@@ -644,7 +644,7 @@
   <string name="AboutScene_Translation">Μετάφραση από:</string>
   <string name="AboutScene_Translation_Names">Aeonius</string>
   <string name="RankingsScene_Title">Κατάταξη κορυφής</string>
-  <string name="RankingsScene_Total">Σύνολο παιχνιδιών που παίχτηκαν:</string>
+  <string name="RankingsScene_Total">Παιχνίδια που έχουν παιχτεί:</string>
   <string name="RankingsScene_NoGames">Δεν έχουν παιχτεί παιχνίδια ακόμα.</string>
   <string name="RankingsScene_NoInfo">Καμία επιπρόσθετη πληροφορία</string>
   <string name="StartScene_Load">Φόρτωση παιχνιδιού</string>
@@ -675,7 +675,7 @@
   <string name="WndSettings_ZoomIn">+</string>
   <string name="WndSettings_ZoomOut">-</string>
   <string name="WndSettings_ZoomDef">Προεπιλεγμένη μεγέθυνση</string>
-  <string name="WndSettings_TextScaleDefault">Προεπιλεγμένη γραμματοσειρά </string>
+  <string name="WndSettings_TextScaleDefault">Προεπιλεγμένη γραμματοσειρά</string>
   <string name="WndSettings_ScaleUp">Μεγέθυνση UI</string>
   <string name="WndSettings_Immersive">Πλήρης οθόνη</string>
   <string name="WndSettings_Music">Μουσική</string>
@@ -2044,7 +2044,7 @@
   <string name="Level_HiddenPlate">Ένα κρυμμένο πλακάκι πίεσης ενεργοποιήθηκε!</string>
   <string name="Level_TileChasm">Χάσμα</string>
   <string name="Level_TileFloor">Πάτωμα</string>
-  <string name="Level_TileGrass">Χορτάρι</string>
+  <string name="Level_TileGrass">Γρασίδι</string>
   <string name="Level_TileWater">Νερό</string>
   <string name="Level_TileWall">Τοίχος</string>
   <string name="Level_TileClosedDoor">Κλειστή πόρτα</string>
@@ -2169,7 +2169,7 @@
   <string name="PotionOfFrost_Info">Με την έκθεση στον αέρα, το χημικό αυτό θα εξατμιστεί σε ένα παγωμένο νέφος. Κάθε πλάσμα που έρχεται σε επαφή μαζί του θα παγώνει σε εκείνο το σημείο - ανίκανο να κινηθεί και να δράσει.</string>
   <string name="PotionOfHealing_Name">Φίλτρο της Θεραπείας</string>
   <string name="PotionOfHealing_Info">Ένα ελιξίριο που θα σε επαναφέρει άμεσα σε πλήρη ζωή και θα θεραπεύσει τη δηλητηρίαση.</string>
-  <string name="PotionOfHealing_Apply">Οι πληγές σας θεραπεύτηκαν εντελώς.</string>
+  <string name="PotionOfHealing_Apply">Οι πληγές σου θεραπεύτηκαν πλήρως.</string>
   <string name="PotionOfInvisibility_Name">Φίλτρο της αορατότητας</string>
   <string name="PotionOfInvisibility_Info">Πίνοντας αυτό το φίλτρο θα αποκτήσεις προσωρινή αορατότητα. Όσο έχεις αορατότητα, οι εχθροί δεν θα μπορούν να σε δουν. Αν επιτεθείς σε εχθρό, ή χρησιμοποιήσεις ραβδί ή πάπυρο μπροστά στα μάτια εχθρού, η επίδραση θα σπάσει.</string>
   <string name="PotionOfInvisibility_Apply">Βλέπεις τα χέρια σου να γίνονται αόρατα</string>
@@ -2591,7 +2591,7 @@
   <string name="MedicineMask_Name">Χειρουργική μάσκα</string>
   <string name="MedicineMask_Info">Λέγεται πως, για επαρκή προστασία από διάφορους ιούς, απαιτείται η κάλυψη κάθε μεγάλης οπής του σώματός μας. Συνιστάται να τη φοράμε κι ως εσώρουχο για αποτελεσματική προστασία από τις πρωκτικές λοιμώξεις.
   \n\nΠάντως δεν βοηθάει όταν τη φοράμε μόνοι μας στα αυτοκίνητα.</string>
-  <string name="MedicineMask_Obtained">Χειρουργική μάσκα αποκτήθηκε</string>
+  <string name="MedicineMask_Obtained">Αποκτήθηκε η χειρουργική μάσκα </string>
   <string name="PlagueDoctorNPC_After_Quest_2">Ακόμα εδώ είσαι; Έλα! Πάρ\' το αυτό.</string>
   <string name="FilteredMask_Name">Μάσκα Ν95</string>
   <string name="FilteredMask_Info">Ο αναπνευστήρας είναι μια συσκευή που προστατεύει τον χρήστη από την εισπνοή επιβλαβών στοιχείων του αέρα. Αυτό περιλαμβάνει καπνούς, αναθυμιάσεις, αέρια, σκόνες και μικροοργανισμούς.
