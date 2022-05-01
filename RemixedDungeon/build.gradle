@@ -34,8 +34,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1116
-        versionName "31.1.alpha.5"
+        versionCode 1117
+        versionName "31.1.alpha.6"
         targetSdkVersion 31
         minSdkVersion 16
         compileSdkVersion = 31
@@ -139,13 +139,11 @@ dependencies {
 
     implementation 'commons-io:commons-io:2.6'
 
-    implementation 'com.appodeal.ads.sdk:core:2.11.0'
-    implementation 'com.appodeal.ads.sdk.networks:adcolony:2.11.0.18'
-    implementation 'com.appodeal.ads.sdk.networks:applovin:2.11.0.20'
-    implementation 'com.appodeal.ads.sdk.networks:bidmachine:2.11.0.17'
-    implementation 'com.appodeal.ads.sdk.networks:ironsource:2.11.0.18'
-    implementation 'com.appodeal.ads.sdk.networks:unity_ads:2.11.0.15'
-    implementation 'com.appodeal.ads.sdk.networks:vungle:2.11.0.11'
+    implementation ('com.appodeal.ads:sdk:2.11.1') {
+        exclude group: 'com.appodeal.ads.sdk.networks', module: 'admob'
+        exclude group: 'com.appodeal.ads.sdk.networks', module: 'facebook'
+        exclude group: 'com.appodeal.ads.sdk.networks', module: 'yandex'
+    }
 
     implementation 'org.jetbrains:annotations:23.0.0'
 
@@ -153,7 +151,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.0.1'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.1.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.2.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:22.0.1"
     googlePlayImplementation 'com.google.android.gms:play-services-ads:20.6.0'
 

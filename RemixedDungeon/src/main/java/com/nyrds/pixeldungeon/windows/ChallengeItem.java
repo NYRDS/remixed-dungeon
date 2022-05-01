@@ -30,7 +30,7 @@ public class ChallengeItem extends Component {
 
     private boolean state = false;
 
-    protected Text label     = PixelScene.createText(GuiProperties.regularFontSize());
+    protected Text label  = PixelScene.createText(GuiProperties.regularFontSize());
 
     HBox box;
     Callback onClickCallback;
@@ -118,7 +118,7 @@ public class ChallengeItem extends Component {
         int mask = (int) Math.pow(2, index);
 
         if(index>=16) {
-            state = Dungeon.isFacilated(mask);
+            state = Dungeon.isFacilitated(mask);
         } else {
             state = Dungeon.isChallenged(mask);
         }

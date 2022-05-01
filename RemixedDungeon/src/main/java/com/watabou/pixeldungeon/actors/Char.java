@@ -51,6 +51,7 @@ import com.nyrds.util.Scrambler;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Blessed;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -957,7 +958,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 			return new Hunger();
 		}
 
-		if (!isAlive()) {
+		if (!isAlive() || Dungeon.isFacilitated(Facilitations.NO_HUNGER)) {
 			return new Hunger();
 		}
 

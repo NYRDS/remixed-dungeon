@@ -58,6 +58,7 @@ import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
+import com.watabou.pixeldungeon.actors.buffs.ManaRegeneration;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
@@ -254,8 +255,10 @@ public class Hero extends Char {
 	}
 
 	private void live() {
+
+		Buff.affect(this, ManaRegeneration.class);
 		Buff.affect(this, Regeneration.class);
-		if(!Dungeon.isFacilated(Facilitations.NO_HUNGER)) {
+		if(!Dungeon.isFacilitated(Facilitations.NO_HUNGER)) {
 			Buff.affect(this, Hunger.class);
 		}
 	}

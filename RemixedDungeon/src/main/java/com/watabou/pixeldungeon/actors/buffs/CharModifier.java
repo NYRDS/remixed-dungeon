@@ -17,6 +17,7 @@ public interface CharModifier {
     int charGotDamage(int damage, NamedEntityKind src);
 
     int regenerationBonus();
+    int manaRegenerationBonus();
     void charAct();
     void spellCasted(Char caster, Spell spell);
 

@@ -210,7 +210,7 @@ public class Dungeon {
     }
 
     @Contract(pure = true)
-    public static boolean isFacilated(int mask) {
+    public static boolean isFacilitated(int mask) {
         return (facilitations & mask) != 0;
     }
 

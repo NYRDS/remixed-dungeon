@@ -215,6 +215,11 @@ public enum HeroSubClass implements CharModifier {
 	}
 
 	@Override
+	public int manaRegenerationBonus() {
+		return 0;
+	}
+
+	@Override
 	public void charAct() { }
 
 	@Override

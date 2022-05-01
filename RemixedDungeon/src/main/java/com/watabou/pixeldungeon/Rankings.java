@@ -88,6 +88,8 @@ public enum Rankings {
 		resDesc.put("mod",       ModdingMode.activeMod());
 		resDesc.put("modVersion",Integer.toString(ModdingMode.activeModVersion()));
 		resDesc.put("donation",  Integer.toString(GamePreferences.donated()));
+		resDesc.put("challenges", Integer.toString(Dungeon.getChallenges()));
+		resDesc.put("facilitations", Integer.toString(Dungeon.getFacilitations()));
 
 		EventCollector.logEvent("gameover", resDesc);
 
@@ -160,9 +162,10 @@ public enum Rankings {
 
 		double winC        = Math.pow(1.4f, win.ordinal());
 		double challengesC = Math.pow(1.3f, Integer.bitCount(Dungeon.getChallenges()));
+		double facilitationsC = Math.pow(0.2f, Integer.bitCount(Dungeon.getFacilitations()));
 		double difficultyC = Math.pow(1.4f, GameLoop.getDifficulty());
 
-		return (int) (difficultyC * challengesC * winC * ( Statistics.goldCollected
+		return (int) (difficultyC * challengesC * facilitationsC * winC * ( Statistics.goldCollected
 									+ (Dungeon.hero.lvl() * Statistics.deepestFloor * 100)
 									- Statistics.duration
 									+ (Statistics.enemiesSlain * 25)

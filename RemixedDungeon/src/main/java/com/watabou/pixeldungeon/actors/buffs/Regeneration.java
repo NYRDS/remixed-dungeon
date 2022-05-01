@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.actors.Char;
 
 import org.jetbrains.annotations.NotNull;
@@ -34,6 +36,10 @@ public class Regeneration extends Buff {
 
             final int[] bonus = {0};
 
+            if(Dungeon.isFacilitated(Facilitations.FAST_REGENERATION)) {
+                bonus[0] += 10;
+            }
+
             target.forEachBuff(b-> bonus[0] +=b.regenerationBonus());
 
             spend((float) (REGENERATION_DELAY / Math.pow(1.2, bonus[0])));
@@ -45,6 +51,6 @@ public class Regeneration extends Buff {
 
 	@Override
 	public boolean attachTo(@NotNull Char target ) {
-        return target.hasBuff(Regeneration.class) || super.attachTo(target);
+        return target.buffLevel(getEntityKind()) > 0 || super.attachTo(target);
     }
 }
