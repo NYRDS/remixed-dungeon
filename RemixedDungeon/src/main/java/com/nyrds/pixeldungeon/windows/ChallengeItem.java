@@ -3,54 +3,88 @@ package com.nyrds.pixeldungeon.windows;
 import static com.watabou.pixeldungeon.ui.Window.GAP;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
-import com.nyrds.util.Util;
 import com.watabou.noosa.ColorBlock;
-import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
+import com.watabou.pixeldungeon.Challenges;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.ui.GameLog;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ImageButton;
-import com.watabou.pixeldungeon.ui.ListItem;
-import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndStory;
 import com.watabou.utils.Callback;
 
+import java.util.Objects;
+
 public class ChallengeItem extends Component {
 
+    public static final String UI_CHALLENGES_PNG = "ui/challenges.png";
     protected ColorBlock bg = new ColorBlock(width, height, 0xFF4A4D44);
     protected ImageButton descIcon;
-    protected ImageButton itemIcon;
+    protected ImageButton challengeIcon;
 
-    private boolean state = true;
+    private boolean state = false;
 
     protected Text label     = PixelScene.createText(GuiProperties.regularFontSize());
 
     HBox box;
     Callback onClickCallback;
 
-    ChallengeItem(Image icon, String title, String desc, Image _descIcon, float maxWidth, Callback onClick) {
+    private final int index;
+
+    ChallengeItem(int index, float maxWidth, Callback onClick) {
+
+        String title;
+        String desc;
+        Image icon;
+
+        this.index = index;
+
+        if(index >= 16) {
+            title = StringsManager.getVars(R.array.Facilitations_Names)[index - 16];
+            desc = StringsManager.getVars(R.array.Facilitations_Descriptions)[index - 16];
+            icon = new Image(UI_CHALLENGES_PNG, 16, index + 8 - 16);
+        } else {
+            title = StringsManager.getVars(R.array.Challenges_Names)[index];
+            desc = StringsManager.getVars(R.array.Challenges_Descriptions)[index];
+            icon = new Image(UI_CHALLENGES_PNG, 16, index);
+        }
 
         onClickCallback = onClick;
 
-        itemIcon = new ImageButton(icon) {
+        challengeIcon = new ImageButton(icon) {
             @Override
             protected void onClick() {
                 state = ! state;
+                int mask = (int) Math.pow(2,index);
                 if (state) {
-                    icon.brightness(1.0f);
+                    if (index >= 16) {
+                        Dungeon.setFacilitation(mask);
+                        for(Integer msk: Objects.requireNonNull(Facilitations.conflictingChallenges.get(mask))) {
+                            Dungeon.resetChallenge(msk);
+                        }
+                    } else {
+                        Dungeon.setChallenge(mask);
+                        for(Integer msk: Objects.requireNonNull(Challenges.conflictingFacilitations.get(mask))) {
+                            Dungeon.resetFacilitation(msk);
+                        }
+                    }
                 } else {
-                    icon.brightness(0.5f);
+                    if (index >= 16) {
+                        Dungeon.resetFacilitation(mask);
+                    } else {
+                        Dungeon.resetChallenge(mask);
+                    }
                 }
             }
         };
 
-        descIcon = new ImageButton(_descIcon) {
+        descIcon = new ImageButton(Icons.get(Icons.BTN_QUESTION)) {
             @Override
             protected void onClick() {
                 GameLoop.addToScene(new WndStory(desc));
@@ -61,7 +95,7 @@ public class ChallengeItem extends Component {
         box.setAlign(HBox.Align.Width);
         box.setAlign(VBox.Align.Center);
 
-        box.add(itemIcon);
+        box.add(challengeIcon);
         box.add(label);
         box.add(descIcon);
 
@@ -81,6 +115,25 @@ public class ChallengeItem extends Component {
 
     @Override
     public void update() {
+        int mask = (int) Math.pow(2, index);
+
+        if(index>=16) {
+            state = Dungeon.isFacilated(mask);
+        } else {
+            state = Dungeon.isChallenged(mask);
+        }
+
+        if (state) {
+            if(index>=16) {
+                challengeIcon.hardlight(0.6f, 0.9f, 0.6f);
+            } else {
+                challengeIcon.hardlight(0.9f, 0.9f, 0.6f);
+            }
+        } else {
+            challengeIcon.hardlight(0.5f,0.5f,0.5f);
+        }
+
+
         super.update();
     }
 
@@ -88,7 +141,6 @@ public class ChallengeItem extends Component {
     public void measure() {
         box.measure();
     }
-
 
     @Override
     public float width() {

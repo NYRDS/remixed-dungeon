@@ -24,6 +24,8 @@ public class ImageButton extends Button {
 		image.brightness(val);
 	}
 
+	public void hardlight(float r, float g, float b) {image.hardlight(r,g,b);}
+
 	@Override
 	protected void layout() {
 		super.layout();

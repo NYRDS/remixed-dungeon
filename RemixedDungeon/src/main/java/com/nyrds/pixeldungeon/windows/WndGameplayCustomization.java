@@ -48,15 +48,9 @@ public class WndGameplayCustomization extends Window {
 
         resize(WndHelper.getLimitedWidth(WIDTH), WndHelper.getFullscreenHeight() - WINDOW_MARGIN);
 
-
         var customizationsSet = new VHBox(WndHelper.getLimitedWidth(WIDTH) - chrome.marginHor());
         customizationsSet.setAlign(HBox.Align.Width);
         customizationsSet.setGap(4);
-
-        final String[] challenges = StringsManager.getVars(R.array.Challenges_Names);
-        final String[] challengesDesc = StringsManager.getVars(R.array.Challenges_Descriptions);
-        final String[] facilitations = StringsManager.getVars(R.array.Facilitations_Names);
-        final String[] facilitationsDesc = StringsManager.getVars(R.array.Facilitations_Descriptions);
 
         var listBox = new VBox();
         listBox.setAlign(VBox.Align.Top);
@@ -66,20 +60,14 @@ public class WndGameplayCustomization extends Window {
         add(list);
 
         for (int i = 0; i < Facilitations.MASKS.length; i++) {
-            var item = new ChallengeItem(Icons.get(Icons.MIND_CONTROL),
-                    facilitations[i],
-                    facilitationsDesc[i],
-                    Icons.get(Icons.BTN_QUESTION),
+            var item = new ChallengeItem(i+16,
                     chrome.innerWidth(),
                     Util.nullCallback);
             listBox.add(item);
         }
 
         for (int i = 0; i < Challenges.MASKS.length; i++) {
-            var item = new ChallengeItem(Icons.get(Icons.SKULL),
-                    challenges[i],
-                    challengesDesc[i],
-                    Icons.get(Icons.BTN_QUESTION),
+            var item = new ChallengeItem(i,
                     chrome.innerWidth(),
                     Util.nullCallback);
 

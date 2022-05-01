@@ -908,6 +908,27 @@ public class Dungeon {
         return challenges;
     }
 
+
+    public static void setFacilitation(int mask) {
+        facilitations = facilitations | mask;
+        setFacilitations(facilitations);
+    }
+
+    public static void resetFacilitation(int mask) {
+        facilitations = facilitations & ~mask;
+        setFacilitations(facilitations);
+    }
+
+    public static void setChallenge(int mask) {
+        challenges = challenges | mask;
+        setChallenges(challenges);
+    }
+
+    public static void resetChallenge(int mask) {
+        challenges = challenges & ~mask;
+        setChallenges(challenges);
+    }
+
     public static int getFacilitations() {
         return facilitations;
     }
