@@ -139,7 +139,7 @@ dependencies {
 
     implementation 'commons-io:commons-io:2.6'
 
-    implementation ('com.appodeal.ads:sdk:2.11.1') {
+    implementation ('com.appodeal.ads:sdk:2.11.1.+') {
         exclude group: 'com.appodeal.ads.sdk.networks', module: 'admob'
         exclude group: 'com.appodeal.ads.sdk.networks', module: 'facebook'
         exclude group: 'com.appodeal.ads.sdk.networks', module: 'yandex'
