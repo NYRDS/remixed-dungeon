@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.actors.buffs;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -36,7 +37,7 @@ public class Regeneration extends Buff {
 
             final int[] bonus = {0};
 
-            if(Dungeon.isFacilitated(Facilitations.FAST_REGENERATION)) {
+            if(Dungeon.isFacilitated(Facilitations.FAST_REGENERATION) && target instanceof Hero) {
                 bonus[0] += 10;
             }
 

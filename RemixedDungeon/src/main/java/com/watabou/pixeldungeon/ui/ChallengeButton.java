@@ -21,8 +21,6 @@ public class ChallengeButton extends Button {
 
         width = image.width;
         height = image.height;
-
-        image.am = Badges.isUnlocked(Badges.Badge.VICTORY) ? 1.0f : 0.5f;
     }
 
     @Override
@@ -33,6 +31,11 @@ public class ChallengeButton extends Button {
         image = Icons
                 .get(Dungeon.getChallenges() > 0 ? Icons.CHALLENGE_ON
                         : Icons.CHALLENGE_OFF);
+
+        if(Dungeon.getFacilitations() > 0) {
+            image.hardlight(0.6f,0.9f,0.6f);
+        }
+
         add(image);
     }
 
@@ -53,6 +56,10 @@ public class ChallengeButton extends Button {
                 super.onBackPressed();
                 image.copy(Icons.get(Dungeon.getChallenges() > 0 ? Icons.CHALLENGE_ON
                         : Icons.CHALLENGE_OFF));
+
+                if(Dungeon.getFacilitations() > 0) {
+                    image.hardlight(0.6f,0.9f,0.6f);
+                }
             }
         });
     }

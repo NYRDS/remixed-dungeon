@@ -2861,4 +2861,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Challenges_Descriptions_5">The first thing that came with evil, was a dense and  impenetrable fog, which makes it almost impossible to clearly navigate the endless hallways of the dungeon.</string>
   <string name="Challenges_Descriptions_6">The ancient art of rune reading is forbidden and avoided at all costs, due to the curse bestowed on each scroll that finds its way into the dungeon or its surroundings.</string>
   <string name="Challenges_Descriptions_7">You got used to the fact, that possession and use of weaponry is morally not right, yet what else can defend you from the creatures roaming down below?</string>
+
+  <string name="ManaRegenerationBuff_Name">Mana Regeneration</string>
+  <string name="ManaRegenerationBuff_Info">The function for mana regeneration is in a buff form to make things easier.</string>
+
 </resources>
