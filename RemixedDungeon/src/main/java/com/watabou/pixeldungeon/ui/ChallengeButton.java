@@ -50,8 +50,7 @@ public class ChallengeButton extends Button {
 
     @Override
     protected void onClick() {
-        parentScene.add(new WndGameplayCustomization(
-                Dungeon.getChallenges(), true) {
+        parentScene.add(new WndGameplayCustomization(true) {
             public void onBackPressed() {
                 super.onBackPressed();
                 image.copy(Icons.get(Dungeon.getChallenges() > 0 ? Icons.CHALLENGE_ON

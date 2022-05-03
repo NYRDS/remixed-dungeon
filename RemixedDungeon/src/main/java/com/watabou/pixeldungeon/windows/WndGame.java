@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.GameControl;
+import com.nyrds.pixeldungeon.windows.WndGameplayCustomization;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
@@ -78,14 +79,12 @@ public class WndGame extends WndMenuCommon {
 			} );
 		}
 
-		final int challenges = Dungeon.getChallenges();
-
-		if (challenges > 0) {
-            menuItems.add( new MenuButton(R.string.WndGame_Challenges) {
+		if (Dungeon.getChallenges() + Dungeon.getFacilitations() > 0) {
+            menuItems.add( new MenuButton(R.string.WndGame_Customizations) {
 				@Override
 				protected void onClick() {
 					hide();
-					GameScene.show( new WndGameplayCustomization(challenges, false ) );
+					GameScene.show( new WndGameplayCustomization( false ) );
 				}
 			} );
 		}

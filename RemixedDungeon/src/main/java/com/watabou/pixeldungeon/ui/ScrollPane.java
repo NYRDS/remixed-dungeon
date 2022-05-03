@@ -89,7 +89,7 @@ public class ScrollPane extends Component {
 	
 	public class TouchController extends TouchArea {
 		
-		private float dragThreshold;
+		private final float dragThreshold;
 		
 		public TouchController() {
 			super( 0, 0, 0, 0 );

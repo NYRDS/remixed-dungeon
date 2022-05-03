@@ -37,7 +37,7 @@ public class ChallengeItem extends Component {
 
     private final int index;
 
-    ChallengeItem(int index, float maxWidth, Callback onClick) {
+    ChallengeItem(int index, float maxWidth, boolean editable) {
 
         String title;
         String desc;
@@ -55,11 +55,13 @@ public class ChallengeItem extends Component {
             icon = new Image(UI_CHALLENGES_PNG, 16, index);
         }
 
-        onClickCallback = onClick;
-
         challengeIcon = new ImageButton(icon) {
             @Override
             protected void onClick() {
+                if(!editable) {
+                    return;
+                }
+
                 state = ! state;
                 int mask = (int) Math.pow(2,index);
                 if (state) {

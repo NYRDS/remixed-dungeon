@@ -2864,5 +2864,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
   <string name="ManaRegenerationBuff_Name">Mana Regeneration</string>
   <string name="ManaRegenerationBuff_Info">The function for mana regeneration is in a buff form to make things easier.</string>
+  <string name="WndGame_Customizations">Customizations</string>
 
 </resources>

@@ -35,7 +35,7 @@ public class WndGameplayCustomization extends Window {
 
     private final int WIDTH = 120;
 
-    public WndGameplayCustomization(int checked, boolean editable ) {
+    public WndGameplayCustomization( boolean editable ) {
 
         super();
 
@@ -62,14 +62,14 @@ public class WndGameplayCustomization extends Window {
         for (int i = 0; i < Facilitations.MASKS.length; i++) {
             var item = new ChallengeItem(i+16,
                     chrome.innerWidth(),
-                    Util.nullCallback);
+                    editable);
             listBox.add(item);
         }
 
         for (int i = 0; i < Challenges.MASKS.length; i++) {
             var item = new ChallengeItem(i,
                     chrome.innerWidth(),
-                    Util.nullCallback);
+                    editable);
 
             listBox.add(item);
         }

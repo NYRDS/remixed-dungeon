@@ -453,7 +453,7 @@ public class Dungeon {
         bundle.put(MOVE_TIMEOUT, moveTimeoutIndex);
 
         bundle.put(SCRIPTS_DATA,
-                LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("serializeGameData").call().checkjstring());
+                LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("serializeGameData").call().checkjstring());
 
         bundle.put(LAST_USED_ID, EntityIdSource.getNextId());
         CharsList.storeInBundle(bundle);
@@ -470,7 +470,7 @@ public class Dungeon {
         bundle.put(LEVEL, level);
 
         bundle.put(SCRIPTS_DATA,
-                LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("serializeLevelData").call().checkjstring());
+                LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("serializeLevelData").call().checkjstring());
 
 
         OutputStream output = FileSystem.getOutputStream(saveTo);
@@ -576,6 +576,7 @@ public class Dungeon {
 
         realtime = bundle.getBoolean(REALTIME);
         setChallenges(bundle.optInt(CHALLENGES,0));
+        setFacilitations(bundle.optInt(FACILITATIONS,0));
 
         if (fullLoad) {
             chapters = new HashSet<>();
@@ -627,7 +628,7 @@ public class Dungeon {
         Statistics.restoreFromBundle(bundle);
         Journal.restoreFromBundle(bundle);
         Logbook.restoreFromBundle(bundle);
-        LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
+        LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
 
         moveTimeoutIndex = GamePreferences.limitTimeoutIndex(bundle.optInt(MOVE_TIMEOUT, Integer.MAX_VALUE));
     }
@@ -680,7 +681,7 @@ public class Dungeon {
                 Bundle bundle = Bundle.read(input);
 
                 Level level = (Level) bundle.get("level");
-                LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeLevelData").call(bundle.getString(SCRIPTS_DATA));
+                LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeLevelData").call(bundle.getString(SCRIPTS_DATA));
 
                 if (level == null) {
                     level = newLevel(next);
@@ -970,7 +971,7 @@ public class Dungeon {
 
 
     public static void onHeroLeaveLevel() {
-        if(level==null) {
+        if(level!=null) {
             level.unseal();
         }
     }
