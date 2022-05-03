@@ -263,7 +263,7 @@
   <string name="Welcome_Ok">Ладушки!</string>
   <string name="Welcome_Title">Добро пожаловать!</string>
   <string name="BlackCat_Name">Чёрная кошка</string>
-  <string name="BlackCat_Gender">Женский</string>
+  <string name="BlackCat_Gender">feminine</string>
   <string name="BlackCat_Name_Objective">кошку</string>
   <string name="BlackCat_Desc">Это чёрная кошка</string>
   <string name="Str_lose">-1 сила</string>
@@ -284,13 +284,13 @@
   <string name="town_deco_INN_sign_name">Вывеска гостиницы</string>
   <string name="town_deco_INN_sign_desc">Вероятно, в этом здании находится гостиница.</string>
   <string name="HealthDart_Name">Исцеляющий Дротик</string>
-  <string name="HealthDart_Gender">Мужской </string>
+  <string name="HealthDart_Gender">masculine</string>
   <string name="HealthDart_Info">Наконечник этого дротика покрыт исцеляющим зельем.</string>
   <string name="HealthArrow_Name">Исцеляющая Стрела</string>
-  <string name="HealthArrow_Gender">Женский</string>
+  <string name="HealthArrow_Gender">feminine</string>
   <string name="HealthArrow_Info">Наконечник этой стрелы покрыт исцеляющим зельем.</string>
   <string name="AmokDart_Name">Дротик Буйства</string>
-  <string name="AmokDart_Gender">Мужской</string>
+  <string name="AmokDart_Gender">masculine</string>
   <string name="AmokDart_Info">Раствор на наконечнике этого дротика превратит любого в беспощадного берсерка.</string>
   <string name="AmokArrow_Name">Стрела Буйства</string>
   <string name="AmokArrow_Gender">feminine</string>
@@ -1606,6 +1606,7 @@
   <string name="TownsfolkMovieNPC_Gender">masculine</string>
   <string name="TownsfolkMovieNPC_Name_Objective">горожанина</string>
   <string name="TownsfolkMovieNPC_Desc">Один из местных жителей. И несмотря на то, что это явно простолюдин, его одежда выглядит совсем не дешёвой.</string>
+  <string name="TownsfolkMovieNPC_Message">Вы знаете о той специальной услуге, которую предоставляет «кинотеатр»? Жалко, они просят какую-то диковинную штуку называемой \"Интернет\". Я раньше ничего не слышал об этой штуке. </string>
   <string name="LibrarianNPC_Name">библиотекарь</string>
   <string name="LibrarianNPC_Gender">masculine</string>
   <string name="LibrarianNPC_Name_Objective">библиотекаря</string>
@@ -2848,5 +2849,15 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndSettingsInGame_IsometricTiles">Изометрические Тайлы</string>
   <string name="KrampusHead_Name">Голова Крампуса</string>
   <string name="KrampusHead_Info">Вы когда-нибудь задумывались, каково это - принять более зловещую роль в этом Приключении? Тогда скорее надевайте эту маску и крысята по всей округе будут трепетать от ужаса.</string>
-  <string name="SpiderElite_Gender">Мужской </string>
+  <string name="WndSettingsInGame_GameLog">Логи игры</string>
+  <string name="Froth_ArrowInKnee">Когда то меня тоже вела дорога приключений, но потом мне прострелили колено...</string>
+  <string name="BardSong_1">Мы с женой живем совсем одни,
+В своей маленькой бревенчатой ​​избушке,
+Она любила джин, а я любил ром
+И скажу я вам что было очень весело нам. </string>
+  <string name="SpiderElite_Name">Элитная паучья стража</string>
+  <string name="SpiderElite_Gender">masculine</string>
+  <string name="SpiderElite_Name_Objective">Элитная паучья стража</string>
+  <string name="SpiderElite_Desc">Подобно солдатам, пауки-стражники поклялись защищать свое королевство. Яд элитного охранника используется для дезориентации цели.</string>
+  <string name="Shaman_ZapMiss">*Ругается на гнолльском*</string>
 </resources>
