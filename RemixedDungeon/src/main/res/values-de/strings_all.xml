@@ -90,7 +90,9 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
   <string name="ChaosCrystal_StaffFused">Der Kristall absorbiert deinen Zauberstab und hat die Gestalt eines Zauberstabs angenommen</string>
   <string name="CorpseDustBuff_Name">Blutrausch</string>
   <string name="DriedRoseBuff_Name">Bezaubernd</string>
+  <string name="DriedRoseBuff_Info">Die Rose sieht sehr reizend aus.</string>
   <string name="DriedRoseCursedBuff_Name">Verliebt</string>
+  <string name="DriedRoseCursedBuff_Info">Die Rose ist schön aber nicht sehr reizend.</string>
   <string name="RatSkullBuff_Name">Rattenfänger</string>
   <string name="RatKingCrownBuff_Name">Rattigkeit</string>
   <string name="RatKingCrown_Name">Krone des Rattenkönigs</string>
@@ -107,6 +109,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
   <string name="Bishop_not_interested">Verlassen</string>
   <string name="Bishop_no_money">Du kannst das nicht bezahlen.</string>
   <string name="Bishop_bye">Ich werde für dich beten, mein Kind.</string>
+  <string name="BlessedBuff_Name">Gesegnet</string>
   <string name="deco_candle_name">Kerze</string>
   <string name="deco_candle_desc">Große Kerze</string>
   <string name="Possess_Name">Besitzergreifung</string>
@@ -560,8 +563,11 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
   <string name="FrostBuff_Name">Eingefroren</string>
   <string name="Frost_Shatter">Die Kälte lässt %s zerspringen!</string>
   <string name="FuryBuff_Name">Wütend</string>
+  <string name="GasImmuneBuff_Name">Gas-Immunität</string>
+  <string name="GasImmuneBuff_Info">Immun gegen alle Gase.</string>
   <string name="Hunger_Death">Du bist verhungert...</string>
   <string name="HungerBuff_Name1">Hungrig</string>
+  <string name="HungerBuff_Info1">Du bist Hungrig!</string>
   <string name="HungerBuff_Name2">Verhungernd</string>
   <string name="InvisibilityBuff_Name">Unsichtbar </string>
   <string name="LevitationBuff_Name">Schwebend</string>
@@ -1544,7 +1550,6 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
   <string name="TownsfolkMovieNPC_Gender">männlich</string>
   <string name="TownsfolkMovieNPC_Name_Objective">Dorfbewohner</string>
   <string name="TownsfolkMovieNPC_Desc">Einer der Einheimischen. Obwohl dies eindeutig einer aus der Mittelschicht ist, sehen diese Kleider teuer aus</string>
-  <string name="TownsfolkMovieNPC_Message">Hast du schon von dem speziellen Service gehört, den das Kino bereitstellt? Zu schade, dass sie nach etwas exotischem fragen, dass \"Internet\" genannt wird. Ich hab noch nie was darüber gehört.\"</string>
   <string name="LibrarianNPC_Name">Bilbliothekar</string>
   <string name="LibrarianNPC_Gender">männlich</string>
   <string name="LibrarianNPC_Name_Objective">Bilbliothekar</string>
@@ -2702,4 +2707,5 @@ remix.29.6\n
   <string name="DeepSnail_Gender">männlich</string>
   <string name="ShamanElder_Gender">männlich</string>
   <string name="Bee_Gender">männlich</string>
+  <string name="SpiderElite_Gender">männlich</string>
 </resources>

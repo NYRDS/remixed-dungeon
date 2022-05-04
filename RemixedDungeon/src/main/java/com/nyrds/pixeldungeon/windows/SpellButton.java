@@ -9,7 +9,7 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 
 class SpellButton extends Button {
 
-    private WndHeroSpells wndHeroSpells;
+    private final WndHeroSpells wndHeroSpells;
     private final Spell spell;
     private final Char caster;
     private final Image image;
@@ -55,7 +55,6 @@ class SpellButton extends Button {
     protected void onClick() {
         super.onClick();
         wndHeroSpells.onSpellClick(spell);
-
     }
 
     @Override

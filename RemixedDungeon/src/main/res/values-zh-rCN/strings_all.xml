@@ -1557,7 +1557,6 @@
   <string name="TownsfolkMovieNPC_Gender">男性</string>
   <string name="TownsfolkMovieNPC_Name_Objective">城镇居民</string>
   <string name="TownsfolkMovieNPC_Desc">城镇居民之一。显而易见，他只是泛泛布衣，但他的衣服看起来价值不菲。</string>
-  <string name="TownsfolkMovieNPC_Message">你知道“电影院”提供的那种特殊服务吗？太糟糕了，他们需要叫“互联网”的东西才能使用，我从来没有听说过叫“互联网”的东西。</string>
   <string name="LibrarianNPC_Name">图书管理员</string>
   <string name="LibrarianNPC_Gender">男性</string>
   <string name="LibrarianNPC_Name_Objective">图书管理员</string>
@@ -2772,4 +2771,5 @@ remix.30.1\n
   <string name="Moongrace_Name">月的恩典</string>
   <string name="Moongrace_Desc">这些植物数量很少，被认为是自然魔力的来源。</string>
   <string name="MoongraceBuff_Name">天赐的灵粮</string>
+  <string name="SpiderElite_Gender">男孩</string>
 </resources>

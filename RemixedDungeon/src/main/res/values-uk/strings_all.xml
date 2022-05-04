@@ -1541,7 +1541,6 @@
   <string name="TownsfolkMovieNPC_Gender">masculine</string>
   <string name="TownsfolkMovieNPC_Name_Objective">городянина</string>
   <string name="TownsfolkMovieNPC_Desc">Один із місцевих. Попри те, що це явно простолюдин, його одяг виглядає досить коштовно</string>
-  <string name="TownsfolkMovieNPC_Message">Ви щось знаєте про особливий сервіс, що називають \"кінотеатр\"? Шкода, що там просять якусь екзотичну річ, під назвою \"інтернет\", я навіть ніколи не чув про таке.</string>
   <string name="LibrarianNPC_Name">бібліотекар</string>
   <string name="LibrarianNPC_Gender">masculine</string>
   <string name="LibrarianNPC_Name_Objective">бібліотекаря</string>
@@ -2574,4 +2573,5 @@
   <string name="DeepSnail_Gender">masculine</string>
   <string name="ShamanElder_Gender">masculine</string>
   <string name="Bee_Gender">masculine</string>
+  <string name="SpiderElite_Gender">masculine</string>
 </resources>

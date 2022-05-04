@@ -60,7 +60,7 @@ public class RankingsScene extends PixelScene {
 
     private int startFrom;
 
-    private ArrayList<Record> displayedRecords = new ArrayList<>();
+    private final ArrayList<Record> displayedRecords = new ArrayList<>();
 
     @Override
     public void create() {

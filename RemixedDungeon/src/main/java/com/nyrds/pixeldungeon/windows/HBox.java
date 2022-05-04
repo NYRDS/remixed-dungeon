@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.watabou.noosa.Gizmo;
+import com.watabou.pixeldungeon.utils.GLog;
 
 /**
  * Created by mike on 01.05.2018.
@@ -28,6 +29,10 @@ public class HBox extends BasicBox {
 
     public void setMaxWidth(float maxWidth) {
         this.maxWidth = maxWidth;
+    }
+
+    public float getMaxWidth() {
+        return maxWidth;
     }
 
     public void setAlign(Align align) {
@@ -117,14 +122,13 @@ public class HBox extends BasicBox {
             if (g instanceof IPlaceable) {
                 width += ((IPlaceable) g).width() + gap;
                 height = Math.max(height,((IPlaceable) g).height());
+                //GLog.debug("vbox item: %s, %3.0f, %3.0f", g.getClass().getSimpleName(), ((IPlaceable) g).width(), gap);
             }
         }
     }
 
     @Override
     protected void layout() {
-        super.layout();
-
         switch (align) {
 
             case Left:
@@ -140,5 +144,6 @@ public class HBox extends BasicBox {
                 alignWidth();
                 break;
         }
+        super.layout();
     }
 }

@@ -73,13 +73,13 @@ public class WndHero extends WndTabbed {
         add( new LabeledTab( this, StringsManager.getVar(R.string.WndHero_Stats)) {
 			public void select( boolean value ) {
 				super.select( value );
-				stats.setVisible(stats.active = selected);
+				stats.setVisible(stats.setActive(selected));
 			}
 		} );
         add( new LabeledTab( this, StringsManager.getVar(R.string.WndHero_Buffs)) {
 			public void select( boolean value ) {
 				super.select( value );
-				buffs.setVisible(buffs.active = selected);
+				buffs.setVisible(buffs.setActive(selected));
 			}
 		} );
 		for (Tab tab : tabs) {

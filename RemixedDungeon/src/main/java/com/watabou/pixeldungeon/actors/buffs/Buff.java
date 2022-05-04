@@ -291,6 +291,11 @@ public class  Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     @Override
+    public int manaRegenerationBonus() {
+        return 0;
+    }
+
+    @Override
     public void charAct() { }
 
     @Override

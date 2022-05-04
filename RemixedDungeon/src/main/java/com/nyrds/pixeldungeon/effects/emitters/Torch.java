@@ -9,7 +9,7 @@ import com.watabou.utils.PointF;
 
 public class Torch extends Emitter {
 
-    private int pos;
+    private final int pos;
 
     public Torch(int pos ) {
         super();

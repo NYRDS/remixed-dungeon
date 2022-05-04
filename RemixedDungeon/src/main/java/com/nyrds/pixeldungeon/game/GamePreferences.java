@@ -76,14 +76,6 @@ public class GamePreferences {
         return Preferences.INSTANCE.getInt(Preferences.KEY_LAST_CLASS, 0);
     }
 
-    public static void challenges(int value) {
-        Preferences.INSTANCE.put(Preferences.KEY_CHALLENGES, value);
-    }
-
-    public static int challenges() {
-        return Preferences.INSTANCE.getInt(Preferences.KEY_CHALLENGES, 0);
-    }
-
     public static void intro(boolean value) {
         Preferences.INSTANCE.put(Preferences.KEY_INTRO, value);
     }

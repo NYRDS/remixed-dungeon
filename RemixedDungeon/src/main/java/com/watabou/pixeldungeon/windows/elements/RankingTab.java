@@ -16,7 +16,7 @@ public class RankingTab extends LabeledTab {
 	public void select( boolean value ) {
 		super.select( value );
 		if (page != null) {
-			page.setVisible(page.active = selected);
+			page.setVisible(page.setActive(selected));
 		}
 	}
 }

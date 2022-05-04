@@ -23,6 +23,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Doom;
@@ -53,6 +54,7 @@ public class Hunger extends Buff implements Doom {
 			int difficulty = GameLoop.getDifficulty();
 
 			if (!target.level().isSafe() && isStarving()) {
+
 
 				if (Random.Float() < 0.3f && (target.hp() > 1 || !target.paralysed)) {
 

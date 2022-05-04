@@ -32,14 +32,14 @@ import java.util.Objects;
 
 public class Challenges {
 
-	public static final int NO_FOOD				= 1;
-	public static final int NO_ARMOR			= 2;
-	public static final int NO_HEALING			= 4;
-	public static final int NO_HERBALISM		= 8;
-	public static final int SWARM_INTELLIGENCE	= 16;
-	public static final int DARKNESS			= 32;
-	public static final int NO_SCROLLS          = 64;
-	public static final int NO_WEAPON           = 128;
+	public static final int NO_FOOD				= (int)Math.pow(2,0);
+	public static final int NO_ARMOR			= (int)Math.pow(2,1);
+	public static final int NO_HEALING			= (int)Math.pow(2,2);
+	public static final int NO_HERBALISM		= (int)Math.pow(2,3);
+	public static final int SWARM_INTELLIGENCE	= (int)Math.pow(2,4);
+	public static final int DARKNESS			= (int)Math.pow(2,5);
+	public static final int NO_SCROLLS          = (int)Math.pow(2,6);
+	public static final int NO_WEAPON           = (int)Math.pow(2,7);
 
 
 	public static final int[] MASKS = {
@@ -49,10 +49,16 @@ public class Challenges {
 	@SuppressLint("UseSparseArrays")
 	private static final Map<Integer, ArrayList<String>> forbiddenCategories = new HashMap<>();
 
+	public static final Map<Integer, ArrayList<Integer>> conflictingFacilitations = new HashMap<>();
+
+
 	static {
 		for(Integer mask:MASKS) {
 			forbiddenCategories.put(mask, new ArrayList<>());
+			conflictingFacilitations.put(mask, new ArrayList<>());
 		}
+
+		Objects.requireNonNull(conflictingFacilitations.get(NO_FOOD)).add(Facilitations.NO_HUNGER);
 
 		Objects.requireNonNull(forbiddenCategories.get(NO_FOOD)).add(Treasury.Category.FOOD.name());
 		Objects.requireNonNull(forbiddenCategories.get(NO_ARMOR)).add(Treasury.Category.ARMOR.name());

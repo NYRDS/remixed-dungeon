@@ -1526,7 +1526,6 @@ Ezért nagy jutalomban lesz részed!</string>
   <string name="TownsfolkMovieNPC_Gender">hím</string>
   <string name="TownsfolkMovieNPC_Name_Objective">városiak</string>
   <string name="TownsfolkMovieNPC_Desc">Egyvalaki a helyiek közül. Bár köztük ő csak átlagos, az öltözéke elég drágának látszik</string>
-  <string name="TownsfolkMovieNPC_Message">Ismeled azt a különleges szolgáltatást amit a \"film színház\" nyújt? Elég rossz hogy valami exotikus dolgot kérnek hozzá amit \"internet\"-nek hívnak. Soha nem hallottam még csak hasonló dologról sem.</string>
   <string name="LibrarianNPC_Name">könyvtáros</string>
   <string name="LibrarianNPC_Gender">hím</string>
   <string name="LibrarianNPC_Name_Objective">könyvtáros</string>
@@ -2584,4 +2583,5 @@ remix.29.6
   <string name="DeepSnail_Gender">hím</string>
   <string name="ShamanElder_Gender">hím</string>
   <string name="Bee_Gender">hím</string>
+  <string name="SpiderElite_Gender">hím</string>
 </resources>

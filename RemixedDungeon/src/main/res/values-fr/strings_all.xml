@@ -657,6 +657,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
   <string name="StartScene_Warning">Votre progression actuelle sera perdue.</string>
   <string name="StartScene_Yes">Oui, une nouvelle partie</string>
   <string name="StartScene_No">Non, retour au menu principal</string>
+  <string name="StartScene_Unlock">Pour débloquer ce personnage, vainquez le DM-300 avec n\'importe quelle classe</string>
+  <string name="StartScene_UnlockElf">Pour débloquer cette classe, vaincs le Roi avec n\'importe quelle autre classe</string>
   <string name="StartScene_WinGame">Pour débloquer les \"Challenges\", finissez le jeu avec n\'importe quel personnage.</string>
   <string name="StartScene_DifficultySelect">Choisissez votre destin</string>
   <string name="StartScene_DifficultyEasy">Facile (Avec Pubs)</string>
@@ -1499,6 +1501,12 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="Badges_DeathGlyph">Mort par un glyphe</string>
   <string name="Badges_DeathFalling">Mort suite à une chute</string>
   <string name="Badges_Yasd">Mort par le feu, le poison, les gaz toxiques et la faim</string>
+  <string name="Badges_BossSlain1">Goo est vaincu</string>
+  <string name="Badges_BossSlain2">Tengu est vaincu</string>
+  <string name="Badges_BossSlain3">DM-300 est vaincu</string>
+  <string name="Badges_BossSlain4">Le roi a été vaincu</string>
+  <string name="Badges_BossSlain1All">Goo a été vaincu par toutes les classes</string>
+  <string name="Badges_BossSlain3All">DM-300 a été vaincu par toutes les sous-classes</string>
   <string name="Badges_RingHaggler">Anneau du marchandeur obtenu</string>
   <string name="Badges_RingThorns">Anneau d\'épines obtenu</string>
   <string name="Badges_StrengthAttained1">13 points de force obtenus</string>
@@ -1590,7 +1598,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="TownsfolkMovieNPC_Gender">masculine</string>
   <string name="TownsfolkMovieNPC_Name_Objective">villageois</string>
   <string name="TownsfolkMovieNPC_Desc">Un des habitants du coin. Même si ce n\'est qu\'un simple citoyen, les habits qu\'il porte ont l\'air bien chers. </string>
-  <string name="TownsfolkMovieNPC_Message">Est-ce que vous connaissez ce service spécial offert par la \"salle de cinéma\" ? Trop dommage qu\'un truc aussi étrange que l\'\"Internet\" soit nécessaire... Jamais entendu parler de ça.</string>
+  <string name="TownsfolkMovieNPC_Message">Connaissez-vous ce service spécial fourni par le \"cinéma\"? Dommage qu\'il demandent un truc bizarre appelé \"Internet\", j\'ai jamais entendu parler d\'un truc pareil.</string>
   <string name="LibrarianNPC_Name">bibliothécaire</string>
   <string name="LibrarianNPC_Gender">masculine</string>
   <string name="LibrarianNPC_Name_Objective">bibliothécaire</string>
@@ -2818,4 +2826,27 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="MoongraceBuff_Info">L\'air ambiant devient plus saturé, ce qui permet une meilleure concentration et restauration des réserves magiques.</string>
   <string name="EncumbranceBuff_Name">Fardeau</string>
   <string name="EncumbranceBuff_Info">Pas assez de force pour utiliser efficacement : %s.</string>
+  <string name="Level_TileDescPedestal">Un petit piédestal.</string>
+  <string name="Level_TileDescWell"/>
+  <string name="Welcome_Text_31_0">
+    remix.31.0\n
+    - Gameplay:\n
+    -- Mode Isométrique optionnel!\n
+    - Modding:\n
+    -- Armes personnalisées!\n
+    - Bugs Corrigés\n
+    </string>
+  <string name="Level_TilePileOfStones">Un tas de Pierres</string>
+  <string name="Level_TileDescPileOfStones">Un tas de pierres extrêmement lourdes, impossibles à bouger. </string>
+  <string name="WndSettingsInGame_IsometricTiles">Tuiles Isométriques</string>
+  <string name="KrampusHead_Name">Tête de Krampus</string>
+  <string name="KrampusHead_Info">Vous êtes vous déjà demandé ce que ca ferai d\'avoir un rôle plus sinistre pendant le Dungeoneering? Hé bien, vous alles sûrement effrayer les bébés rats locaux avec votre apparence diabolique.</string>
+  <string name="WndSettingsInGame_GameLog">Journal de bord</string>
+  <string name="Froth_ArrowInKnee">J\'étai un aventurier comme vous, \nPuis j\'ai pris une flèche dans le genou...</string>
+  <string name="BardSong_1">Ma femme et moi vivons seuls,\nDans une petite cabane en rondins qu\'on appelle la nôtre\nElle aimait le gin, et j\'aimais le rum\nJe vous le dit, on s\'amusait beaucoup.</string>
+  <string name="SpiderElite_Name">Garde d\'élite araignée</string>
+  <string name="SpiderElite_Gender">masculine</string>
+  <string name="SpiderElite_Name_Objective">Garde d\'élite araignée</string>
+  <string name="SpiderElite_Desc">Comme les soldats, les gardes araignées ont juré de protéger leur royaume. Le venin des gardes d\'élites est utilisé pour désorienter leur cible.</string>
+  <string name="Shaman_ZapMiss">*Jure en gnollien*</string>
 </resources>

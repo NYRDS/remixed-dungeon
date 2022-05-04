@@ -1589,7 +1589,6 @@
   <string name="TownsfolkMovieNPC_Gender">masculino</string>
   <string name="TownsfolkMovieNPC_Name_Objective">ciudadano</string>
   <string name="TownsfolkMovieNPC_Desc">Una persona de la localidad. A pesar de ser un plebeyo, sus ropas se ven costosas.</string>
-  <string name="TownsfolkMovieNPC_Message">¿Conoces ese servicio especial que ofrece el \"cine\"? Lástima que pidan algo tan  exótico llamado \"Internet\", ni siquiera he oído hablar de él.</string>
   <string name="LibrarianNPC_Name">bibliotecario</string>
   <string name="LibrarianNPC_Gender">masculino</string>
   <string name="LibrarianNPC_Name_Objective">bibliotecario</string>
@@ -2833,4 +2832,5 @@ otro lugar del nivel.</string>
   <string name="WndSettingsInGame_IsometricTiles">Azulejos isométricos</string>
   <string name="KrampusHead_Name">cabeza de Krampus</string>
   <string name="KrampusHead_Info">¿Alguna vez te has preguntado cómo se sentiría asumir un papel más siniestro mientras haces Dungeoneering? Bueno, seguramente traerás horror a las crías de rata locales con esta apariencia diabólica.</string>
+  <string name="SpiderElite_Gender">masculino</string>
 </resources>

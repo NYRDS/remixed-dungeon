@@ -593,9 +593,15 @@ public abstract class Mob extends Char {
 
 				enemy.damage(effectiveDamage, this);
 				return true;
+			} else {
+				zapMiss(enemy);
 			}
 		}
 		return false;
+	}
+
+	protected void zapMiss(@NotNull Char enemy) {
+    	script.run("onZapMiss", enemy);
 	}
 
 	protected int zapProc(@NotNull Char enemy, int damage) {

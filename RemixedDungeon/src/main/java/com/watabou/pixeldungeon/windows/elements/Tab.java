@@ -34,7 +34,7 @@ public class Tab extends Button {
 	
 	public void select( boolean value ) {
 		
-		active = !(selected = value);
+		setActive(!(selected = value));
 		
 		if (bg != null) {
 			remove( bg );

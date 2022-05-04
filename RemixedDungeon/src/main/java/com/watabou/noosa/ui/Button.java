@@ -21,10 +21,11 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.TouchArea;
+import com.watabou.pixeldungeon.utils.GLog;
 
 public class Button extends Component {
 
-	private static float longClick = 1f;
+	private static final float longClick = 1f;
 
 	protected TouchArea hotArea;
 
@@ -70,7 +71,7 @@ public class Button extends Component {
 	public void update() {
 		super.update();
 		
-		hotArea.active = getVisible();
+		hotArea.setActive(getVisible());
 
 		if (pressed && ((pressTime += GameLoop.elapsed) >= longClick)) {
 			pressed = false;
@@ -95,6 +96,7 @@ public class Button extends Component {
 
 	@Override
 	protected void layout() {
+		//GLog.debug("hot area: %3.0f %3.0f %3.0f %3.0f", x, y, width, height);
 		hotArea.setX(x);
 		hotArea.setY(y);
 		hotArea.setWidth(width);

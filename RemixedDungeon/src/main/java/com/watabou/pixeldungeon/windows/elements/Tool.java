@@ -72,7 +72,7 @@ public class Tool extends Button {
 
     @Override
     protected void onTouchUp() {
-        if (active) {
+        if (isActive()) {
             base.resetColor();
         } else {
             base.tint(BGCOLOR, 0.7f);
@@ -80,13 +80,13 @@ public class Tool extends Button {
     }
 
     public void enable(boolean value) {
-        if (value != active) {
+        if (value != isActive()) {
             if (value) {
                 base.resetColor();
             } else {
                 base.tint(BGCOLOR, 0.7f);
             }
-            active = value;
+            setActive(value);
         }
     }
 }

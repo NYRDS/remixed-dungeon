@@ -1552,7 +1552,6 @@
   <string name="TownsfolkMovieNPC_Gender">masculine</string>
   <string name="TownsfolkMovieNPC_Name_Objective">城鎮居民</string>
   <string name="TownsfolkMovieNPC_Desc">城鎮居民之一。顯而易見，他只是泛泛布衣，但他的衣服看起來價值不菲。</string>
-  <string name="TownsfolkMovieNPC_Message">你知道“電影院”提供的那種特殊服務嗎？太糟糕了，他們需要叫“互聯網”的東西才能使用，我從來沒有聽說過叫“互聯網”的東西。</string>
   <string name="LibrarianNPC_Name">圖書管理員</string>
   <string name="LibrarianNPC_Gender">masculine</string>
   <string name="LibrarianNPC_Name_Objective">圖書管理員</string>
@@ -2606,4 +2605,5 @@ remix.29.5\n
   <string name="DeepSnail_Gender">男孩</string>
   <string name="ShamanElder_Gender">男孩</string>
   <string name="Bee_Gender">男孩</string>
+  <string name="SpiderElite_Gender">男孩</string>
 </resources>

@@ -34,8 +34,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1114
-        versionName "31.1.alpha.3"
+        versionCode 1119
+        versionName "31.1.alpha.8"
         targetSdkVersion 31
         minSdkVersion 16
         compileSdkVersion = 31
@@ -124,6 +124,7 @@ tasks.whenTaskAdded {task ->
 dependencies {
     implementation project(':annotation')
     implementation project(path: ':json_clone')
+    annotationProcessor project(':processor')
 
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'org.luaj:luaj-jse:3.0.1'
@@ -137,6 +138,7 @@ dependencies {
     libgdxImplementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
     libgdxImplementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
 
+    api 'com.google.guava:guava:31.1-android'
 
     androidImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
@@ -144,13 +146,11 @@ dependencies {
 
     implementation 'commons-io:commons-io:2.6'
 
-    androidImplementation 'com.appodeal.ads.sdk:core:2.11.0'
-    androidImplementation 'com.appodeal.ads.sdk.networks:adcolony:2.11.0.18'
-    androidImplementation 'com.appodeal.ads.sdk.networks:applovin:2.11.0.20'
-    androidImplementation 'com.appodeal.ads.sdk.networks:bidmachine:2.11.0.17'
-    androidImplementation 'com.appodeal.ads.sdk.networks:ironsource:2.11.0.18'
-    androidImplementation 'com.appodeal.ads.sdk.networks:unity_ads:2.11.0.15'
-    androidImplementation 'com.appodeal.ads.sdk.networks:vungle:2.11.0.11'
+    implementation ('com.appodeal.ads:sdk:2.11.1.+') {
+        exclude group: 'com.appodeal.ads.sdk.networks', module: 'admob'
+        exclude group: 'com.appodeal.ads.sdk.networks', module: 'facebook'
+        exclude group: 'com.appodeal.ads.sdk.networks', module: 'yandex'
+    }
 
     implementation 'org.jetbrains:annotations:23.0.0'
 
@@ -158,12 +158,12 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.0.1'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.0.1'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.2.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:22.0.1"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:20.5.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:20.6.0'
 
 
-    googlePlayImplementation 'com.android.billingclient:billing:4.0.0'
+    googlePlayImplementation 'com.android.billingclient:billing:4.1.0'
 
     googlePlayImplementation platform('com.google.firebase:firebase-bom:28.4.2')
 

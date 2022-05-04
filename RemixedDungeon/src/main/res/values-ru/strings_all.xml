@@ -1606,7 +1606,6 @@
   <string name="TownsfolkMovieNPC_Gender">masculine</string>
   <string name="TownsfolkMovieNPC_Name_Objective">горожанина</string>
   <string name="TownsfolkMovieNPC_Desc">Один из местных жителей. И несмотря на то, что это явно простолюдин, его одежда выглядит совсем не дешёвой.</string>
-  <string name="TownsfolkMovieNPC_Message">А вы знаете об этой особой акции в \"кинотеатре\"? Жалко что, чтобы в ней участвовать нужна некая диковина под названием \"интернет\"... никогда о такой не слышал.</string>
   <string name="LibrarianNPC_Name">библиотекарь</string>
   <string name="LibrarianNPC_Gender">masculine</string>
   <string name="LibrarianNPC_Name_Objective">библиотекаря</string>
@@ -2849,4 +2848,5 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndSettingsInGame_IsometricTiles">Изометрические Тайлы</string>
   <string name="KrampusHead_Name">Голова Крампуса</string>
   <string name="KrampusHead_Info">Вы когда-нибудь задумывались, каково это - принять более зловещую роль в этом Приключении? Тогда скорее надевайте эту маску и крысята по всей округе будут трепетать от ужаса.</string>
+  <string name="SpiderElite_Gender">masculine</string>
 </resources>

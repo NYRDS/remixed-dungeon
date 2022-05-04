@@ -18,6 +18,7 @@
 package com.watabou.noosa;
 
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -28,7 +29,7 @@ public class Gizmo {
 	public int    layer;
 	public boolean exists;
 	public boolean alive;
-	public boolean active;
+	private boolean active;
 
     protected boolean isometricShift = false;
 
@@ -41,7 +42,7 @@ public class Gizmo {
 	public Gizmo() {
 		exists	= true;
 		alive	= true;
-		active	= true;
+		setActive(true);
 		setVisible(true);
 	}
 
@@ -131,12 +132,22 @@ public class Gizmo {
 
 	public boolean setVisible(boolean visible) {
 		this.visible = visible;
-		return visible;
+		return this.visible;
 	}
 
 	public void setIsometricShift(boolean isometricShift) {
 		if(Dungeon.isIsometricMode()) {
 			this.isometricShift = isometricShift;
 		}
+	}
+
+	public boolean setActive(boolean active) {
+		this.active = active;
+/*
+		if(!active) {
+			GLog.debug("%s non active", toString());
+		}
+*/
+		return this.active;
 	}
 }

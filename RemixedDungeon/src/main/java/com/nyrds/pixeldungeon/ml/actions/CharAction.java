@@ -11,6 +11,10 @@ public abstract class CharAction {
 
 	abstract public boolean act(Char hero);
 
+	public boolean valid() {
+		return true;
+	}
+
 	@Override
 	public String toString() {
 		Level level = Dungeon.level;

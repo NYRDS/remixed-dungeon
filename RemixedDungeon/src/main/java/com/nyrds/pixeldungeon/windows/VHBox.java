@@ -10,8 +10,8 @@ import java.util.List;
  * This file is part of Remixed Pixel Dungeon.
  */
 public class VHBox extends VBox {
-    private List<HBox>  rows = new ArrayList<>();
-    private List<Gizmo> allMembers = new ArrayList<>();
+    private final List<HBox>  rows = new ArrayList<>();
+    private final List<Gizmo> allMembers = new ArrayList<>();
 
     private HBox.Align rowsAlign = HBox.Align.Left;
 

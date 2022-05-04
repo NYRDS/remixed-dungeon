@@ -35,6 +35,8 @@ public abstract class EquipableItem extends Item {
 	protected static final String AC_EQUIP   = "EquipableItem_ACEquip";
 	protected static final String AC_UNEQUIP = "EquipableItem_ACUnequip";
 
+	protected int gender;
+
 	@NotNull
 	protected Belongings.Slot equipedTo = Belongings.Slot.NONE;
 

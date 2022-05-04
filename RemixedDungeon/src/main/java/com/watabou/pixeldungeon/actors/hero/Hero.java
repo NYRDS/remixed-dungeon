@@ -44,6 +44,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.GamesInProgress;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -57,6 +58,7 @@ import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
+import com.watabou.pixeldungeon.actors.buffs.ManaRegeneration;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
@@ -253,8 +255,12 @@ public class Hero extends Char {
 	}
 
 	private void live() {
+
+		Buff.affect(this, ManaRegeneration.class);
 		Buff.affect(this, Regeneration.class);
-		Buff.affect(this, Hunger.class);
+		if(!Dungeon.isFacilitated(Facilitations.NO_HUNGER)) {
+			Buff.affect(this, Hunger.class);
+		}
 	}
 
 	@Override
@@ -602,7 +608,10 @@ public class Hero extends Char {
 
 		level.updateFieldOfView(getControlTarget());
 
-		nextAction(CharUtils.actionForCell(this, cell, level));
+		var action = CharUtils.actionForCell(this, cell, level);
+		if(action.valid()) {
+			nextAction(action);
+		}
 	}
 
 	public void earnExp(int exp) {

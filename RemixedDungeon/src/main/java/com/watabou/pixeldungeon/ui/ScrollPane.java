@@ -22,6 +22,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.TouchArea;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
@@ -88,7 +89,7 @@ public class ScrollPane extends Component {
 	
 	public class TouchController extends TouchArea {
 		
-		private float dragThreshold;
+		private final float dragThreshold;
 		
 		public TouchController() {
 			super( 0, 0, 0, 0 );
@@ -108,27 +109,35 @@ public class ScrollPane extends Component {
 		// true if dragging is in progress
 		private boolean dragging = false;
 		// last touch coords
-		private PointF lastPos = new PointF();
+		private final PointF lastPos = new PointF();
 		
 		@Override
 		protected void onDrag( Touch t ) {		
 			if (dragging) {
 				
 				Camera c = content.camera;
-				
-				c.scroll.offset( PointF.diff( lastPos, t.current ).invScale( c.zoom ) );
-                if (c.scroll.x + width > content.width()) {
-                    c.scroll.x = content.width() - width;
+
+				PointF scrollStep = PointF.diff(lastPos, t.current).invScale(c.zoom);
+				c.scroll.offset(scrollStep);
+
+				float width = content.width();
+				if (c.scroll.x + this.width > width) {
+                    c.scroll.x = width - this.width;
 				}
 				if (c.scroll.x < 0) {
 					c.scroll.x = 0;
 				}
-				if (c.scroll.y + height > content.height()) {
-					c.scroll.y = content.height() - height;
+
+				float height = content.height();
+				if (c.scroll.y + this.height > height) {
+					c.scroll.y = height - this.height;
 				}
 				if (c.scroll.y < 0) {
 					c.scroll.y = 0;
 				}
+
+				//GLog.debug("scroll this: %3.0f content: %3.0f", this.width, width );
+
 
 				lastPos.set( t.current );	
 				

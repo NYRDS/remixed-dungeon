@@ -24,6 +24,8 @@ public class ImageButton extends Button {
 		image.brightness(val);
 	}
 
+	public void hardlight(float r, float g, float b) {image.hardlight(r,g,b);}
+
 	@Override
 	protected void layout() {
 		super.layout();
@@ -44,7 +46,7 @@ public class ImageButton extends Button {
 	}
 
 	public void enable( boolean value ) {
-		active = value;
+		setActive(value);
 		image.alpha( value ? 1.0f : 0.3f );
 	}
 }

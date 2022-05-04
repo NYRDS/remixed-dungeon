@@ -30,6 +30,8 @@ import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.items.Item;
@@ -77,6 +79,8 @@ public enum HeroClass implements CharModifier {
 
     private static final String COMMON            = "common";
     private static final String NON_EXPERT        = "non_expert";
+    public static final String QUICKSLOT = "quickslot";
+    public static final String KNOWN_ITEMS = "knownItems";
 
     private final Class<? extends ClassArmor> armorClass;
 
@@ -126,9 +130,9 @@ public enum HeroClass implements CharModifier {
 
                 hero.getBelongings().setupFromJson(classDesc);
 
-                if (classDesc.has("quickslot")) {
+                if (classDesc.has(QUICKSLOT)) {
                     int slot = 0;
-                    JSONArray quickslots = classDesc.getJSONArray("quickslot");
+                    JSONArray quickslots = classDesc.getJSONArray(QUICKSLOT);
                     for (int i = 0; i < quickslots.length(); ++i) {
                         Item item = ItemFactory.createItemFromDesc(quickslots.getJSONObject(i));
                         if(item.valid()) {
@@ -141,8 +145,8 @@ public enum HeroClass implements CharModifier {
                     }
                 }
 
-                if (classDesc.has("knownItems")) {
-                    JSONArray knownItems = classDesc.getJSONArray("knownItems");
+                if (classDesc.has(KNOWN_ITEMS)) {
+                    JSONArray knownItems = classDesc.getJSONArray(KNOWN_ITEMS);
                     for (int i = 0; i < knownItems.length(); ++i) {
                         Item item = ItemFactory.createItemFromDesc(knownItems.getJSONObject(i));
                         if (item instanceof UnknownItem) {
@@ -157,6 +161,11 @@ public enum HeroClass implements CharModifier {
                 JsonHelper.readStringSet(classDesc, Char.RESISTANCES, resistances);
 
                 hero.STR(classDesc.optInt("str", hero.STR()));
+
+                if(Dungeon.isFacilitated(Facilitations.SUPER_STRENGTH)) {
+                    hero.STR(hero.STR() + 4);
+                }
+
                 hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
                 hero.getHeroClass().setMagicAffinity(classDesc.optString("magicAffinity", magicAffinity));
                 hero.setMaxSkillPoints(classDesc.optInt("maxSp", hero.getSkillPointsMax()));
@@ -320,6 +329,11 @@ public enum HeroClass implements CharModifier {
 
     @Override
     public int regenerationBonus() {
+        return 0;
+    }
+
+    @Override
+    public int manaRegenerationBonus() {
         return 0;
     }
 

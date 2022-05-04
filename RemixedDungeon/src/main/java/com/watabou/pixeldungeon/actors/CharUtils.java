@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.actors;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.items.Treasury;
@@ -192,7 +194,7 @@ public class CharUtils {
     }
 
     @NotNull
-    public static  CharAction actionForCell(Char actor, int cell, @NotNull Level level) {
+    public static  CharAction actionForCell(@NonNull Char actor, int cell, @NotNull Level level) {
         Char target;
         final Char controlTarget = actor.getControlTarget();
 
@@ -247,7 +249,11 @@ public class CharUtils {
             return new Ascend(cell);
         }
 
-        return new Move(cell);
+        if (actor.getPos() != cell) {
+            return new Move(cell);
+        }
+
+        return new NoAction();
     }
 
     public static void execute(Char target, Char hero, @NotNull String action) {

@@ -1586,7 +1586,6 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
   <string name="TownsfolkMovieNPC_Gender">maskulin</string>
   <string name="TownsfolkMovieNPC_Name_Objective">penduduk lokal</string>
   <string name="TownsfolkMovieNPC_Desc">Salah satu penduduk setempat. Meskipun ini jelas orang biasa, pakaian itu memang terlihat mahal.</string>
-  <string name="TownsfolkMovieNPC_Message">Tahukah Anda tentang layanan khusus yang disediakan \"bioskop\" itu? Sayang sekali mereka meminta sesuatu yang eksotis yang disebut \"Internet\", saya bahkan tidak pernah mendengar tentang hal seperti itu.\"</string>
   <string name="LibrarianNPC_Name">pustakawan</string>
   <string name="LibrarianNPC_Gender">maskulin</string>
   <string name="LibrarianNPC_Name_Objective">pustakawan</string>
@@ -2807,4 +2806,5 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
   <string name="MoongraceBuff_Info">Udara di sekitar menjadi lebih jenuh, yang memungkinkan konsentrasi yang lebih baik dan pemulihan cadangan magis.</string>
   <string name="EncumbranceBuff_Name">Beban</string>
   <string name="EncumbranceBuff_Info">Tidak cukup kekuatan untuk menggunakan %s secara efektif.</string>
+  <string name="SpiderElite_Gender">feminim</string>
 </resources>

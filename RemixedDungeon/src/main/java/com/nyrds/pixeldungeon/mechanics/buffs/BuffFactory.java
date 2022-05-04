@@ -23,6 +23,7 @@ import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Light;
+import com.watabou.pixeldungeon.actors.buffs.ManaRegeneration;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -87,6 +88,7 @@ public class BuffFactory {
         registerBuffClass(Hunger.class);
         //registerBuffClass(Charger.class);
         registerBuffClass(Regeneration.class);
+        registerBuffClass(ManaRegeneration.class);
         registerBuffClass(Necrotism.class);
         registerBuffClass(Bleeding.class);
         registerBuffClass(Sungrass.Health.class);
