@@ -658,7 +658,7 @@
   <string name="StartScene_Unlock">Για να ξεκλειδώσεις αυτή την κλάση ήρωα, εξόντωσε το αφεντικό DM-300 με οποιαδήποτε άλλη κλάση.</string>
   <string name="StartScene_UnlockElf">Για να ξεκλειδώσεις αυτήν την κλάση ήρωα, εξόντωσε τον Βασιλιά Νάνο με οποιαδήποτε άλλη κλάση.</string>
   <string name="StartScene_WinGame">Για να ξεκλειδώσεις τις Προκλήσεις, νίκησε το παιχνίδι με οποιαδήποτε κλάση ήρωα.</string>
-  <string name="StartScene_DifficultySelect">Όρισε τη μοίρα σου</string>
+  <string name="StartScene_DifficultySelect">Όρισε το πεπρωμένο σου</string>
   <string name="StartScene_DifficultyEasy">Εύκολο (+Ads)</string>
   <string name="StartScene_DifficultyNormalWithSaves">Κανονικό με αποθηκεύσεις (+Ads)</string>
   <string name="StartScene_DifficultyNormal">Κανονικό</string>
