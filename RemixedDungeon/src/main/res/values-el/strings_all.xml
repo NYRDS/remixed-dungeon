@@ -598,7 +598,7 @@
   <string name="PoisonBuff_Info">Ο οργανισμός καταστρέφεται σταδιακά από το δηλητήριο!</string>
   <string name="Poison_Death">Πέθανες από το δηλητήριο...</string>
   <string name="RegenerationBuff_Name">Φυσική αναζωογόνηση</string>
-  <string name="RegenerationBuff_Info">Η λειτουργία της φυσικής αναζωογόνησης είναι σε μορφή επίδρασης, για να γίνεται ευκολότερο.</string>
+  <string name="RegenerationBuff_Info">Η λειτουργία της φυσικής αναζωογόνησης είναι σε μορφή επίδρασης για διευκόλυνση.</string>
   <string name="RootsBuff_Name">Ρίζωμα</string>
   <string name="RootsBuff_Info">Ρίζες ξεπηδούν από το έδαφος και σφιχταγγαλιάζουν το σώμα. Εμποδίζουν την κίνηση ακόμα και για ένα μόνο βήμα.</string>
   <string name="ShadowsBuff_Name">Ένα με τις σκιές</string>
@@ -658,7 +658,7 @@
   <string name="StartScene_Unlock">Για να ξεκλειδώσεις αυτή την κλάση ήρωα, εξόντωσε το αφεντικό DM-300 με οποιαδήποτε άλλη κλάση.</string>
   <string name="StartScene_UnlockElf">Για να ξεκλειδώσεις αυτήν την κλάση ήρωα, εξόντωσε τον Βασιλιά Νάνο με οποιαδήποτε άλλη κλάση.</string>
   <string name="StartScene_WinGame">Για να ξεκλειδώσεις τις Προκλήσεις, νίκησε το παιχνίδι με οποιαδήποτε κλάση ήρωα.</string>
-  <string name="StartScene_DifficultySelect">Όρισε τη μοίρα σου</string>
+  <string name="StartScene_DifficultySelect">Όρισε το πεπρωμένο σου</string>
   <string name="StartScene_DifficultyEasy">Εύκολο (+Ads)</string>
   <string name="StartScene_DifficultyNormalWithSaves">Κανονικό με αποθηκεύσεις (+Ads)</string>
   <string name="StartScene_DifficultyNormal">Κανονικό</string>
@@ -979,7 +979,7 @@
   <string name="HeroSubClass_NameWarL">Αρχιμάγος</string>
   <string name="HeroSubClass_DescWarL">Αφού εξοντώσει έναν εχθρό, ο _Αρχιμάγος_ καταναλώνει την ψυχή του. Έτσι θεραπεύει τις πληγές και ικανοποιεί την πείνα του.</string>
   <string name="HeroSubClass_NameBatM">Μάγος-μαχητής</string>
-  <string name="HeroSubClass_DescBatM">Όταν μάχεται με εξοπλισμένο ραβδί, ο _Μάγος-μαχητής_ προκαλεί επιπλέον ζημιά βάσει του τρέχοντος φορτίου. Κάθε επιτυχημένο χτύπημα επαναφορτίζει το ραβδί για  1 φορτίο.</string>
+  <string name="HeroSubClass_DescBatM">Όταν μάχεται με εξοπλισμένο ραβδί, ο _Μάγος-μαχητής_ προκαλεί επιπλέον ζημιά βάσει του τρέχοντος φορτίου. Κάθε επιτυχημένο χτύπημα αναπληρώνει 1 φορτίο στο ραβδί.</string>
   <string name="HeroSubClass_NameAssa">Δολοφόνος</string>
   <string name="HeroSubClass_DescAssa">Όταν εκτελεί μια αιφνίδια επίθεση, ο _Δολοφόνος_ προκαλεί επιπλέον ζημιά στον στόχο του.</string>
   <string name="HeroSubClass_NameFreR">Δρομέας</string>
@@ -2839,4 +2839,29 @@
   <string name="SpiderElite_Name_Objective">ανώτερος αραχνοφρουρός</string>
   <string name="SpiderElite_Desc">Όπως και οι στρατιώτες, έτσι και οι αραχνοφύλακες έχουν ορκιστεί να προστατεύουν το βασίλειό τους. Το δηλητήριο του ανώτερου αραχνοφρουρού αποπροσανατολίζει τον στόχο.</string>
   <string name="Shaman_ZapMiss">*Βρισιές στα Γκνολικά*</string>
+
+  <string name="Facilitations_Names_0">Χωρίς πείνα</string>
+  <string name="Facilitations_Names_1">Σώμα του τρολ</string>
+  <string name="Facilitations_Names_2">Πνεύμα του τζίνι</string>
+  <string name="Facilitations_Names_3">Δύναμη του γίγαντα</string>
+
+  <string name="Facilitations_Descriptions_0">Οι μεταλλαγμένοι πάντοτε αντιμετωπίζονταν με φόβο και καταφρόνηση. Η έλλειψη της πείνας, όμως, σου χαρίζει ξανά την υπεροχή· αυτή τη φορά στο να κατακτήσεις τα έγκατα της κατακόμβης.</string>
+  <string name="Facilitations_Descriptions_1">Παραμένει άγνωστο το ποιοι ήταν οι γονείς σου· αλλά η φυσική αναζωογόνηση των τρολ θα βοηθήσει στην επούλωση όλων των τραυμάτων από τις επερχόμενες μάχες.</string>
+  <string name="Facilitations_Descriptions_2">Μια βαθιά και διεισδυτική μελέτη της φύσης ως πηγή ενέργειας, η οποία σου επιτρέπει να αναπληρώνεις τα μαγικά σου αποθέματα κατά τη διάρκεια του ταξιδιού.</string>
+  <string name="Facilitations_Descriptions_3">Σφίγγεις τη ζώνη από δρακόντιο δέρμα, που έχει περαστεί από γενιά σε γενιά, και κάνεις ένα βήμα εμπρός προς το άγνωστο.</string>
+
+
+  <string name="Challenges_Descriptions_0">Το φαΐ και το νερό έχουν σαπίσει από καιρό, και κάθε εξερευνητής τρελαίνεται στην ιδέα του θανάτου από την πείνα. Είναι η διατροφή σου αρκετή για να αντέξεις;</string>
+  <string name="Challenges_Descriptions_1">Η καλύτερη άμυνα είναι η επίθεση. Με αυτήν τη διδασκαλία κατά νου εισχωρείς στην κατακόμβη, με την πίστη να αποτελεί τον ισχυρότερο φύλακα για το σώμα σου.</string>
+  <string name="Challenges_Descriptions_2">Έχοντας ως πυλώνα τη φυσική αναζωογόνηση του σώματος, ποτέ δεν εμπιστευόσουν τα φίλτρα με θεραπευτικές ιδιότητες. Καλύτερα να έχουμε τον νου μας!</string>
+  <string name="Challenges_Descriptions_3">Η γη γύρω από την κατακόμβη έχει κατακυριευτεί από το κακό, κάτι που αποτρέπει την ανάπτυξη των σπόρων από διάφορα φυτά και βότανα. Ποιος ξέρει πόσο καιρό θα πάρει μέχρι να εξαφανιστεί κάθε ίχνος φυτού από την άγονη αυτή γη.</string>
+  <string name="Challenges_Descriptions_4">Μια διαβολική παρουσία ελλοχεύει στα πνεύματα όλων των πλασμάτων της κατακόμβης. Τα κάνει να έχουν συλλογική επίγνωση για κάθε γεγονός που λαμβάνει χώρα στην κατακόμβη.</string>
+  <string name="Challenges_Descriptions_5">Το πρώτο πράγμα που προέκυψε μαζί με το κακό ήταν μια πυκνή και αδιαπέραστη ομίχλη. Αυτό καθιστά σχεδόν αδύνατο τον προσανατολισμό στους ατελείωτους διαδρόμους της κατακόμβης.</string>
+  <string name="Challenges_Descriptions_6">Η αρχαία τέχνη της ανάγνωσης ρούνων είναι απαγορευμένη και αποφεύγεται με κάθε αντίτιμο. Γι\' αυτό ευθύνεται η κατάρα που έχει εγχυθεί σε κάθε πάπυρο, είτε εντός είτε στα περίχωρα της κατακόμβης.</string>
+  <string name="Challenges_Descriptions_7">Έχεις αποδεχτεί το γεγονός πως η κατοχή και η χρήση όπλων δεν είναι ηθικά ορθή. Τι θα σε προστατεύσει, όμως, από τα τέρατα που παραμονεύουν εκεί κάτω;</string>
+
+  <string name="ManaRegenerationBuff_Name">Αναπλήρωση μαγικής ενέργειας</string>
+  <string name="ManaRegenerationBuff_Info">Η λειτουργία αναπλήρωσης μαγικής ενέργειας είναι σε μορφή επίδρασης για διευκόλυνση.</string>
+  <string name="WndGame_Customizations">Προσαρμογές</string>
+
 </resources>
