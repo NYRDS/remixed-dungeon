@@ -63,7 +63,7 @@
   <string name="RingOfSatiety_Name">Δαχτυλίδι κορεσμού</string>
   <string name="RingOfSatiety_Info">Με αυτό το δαχτυλίδι μπορείς να αντέξεις περισσότερο χωρίς φαγητό. Ένα υποβαθμισμένο δαχτυλίδι κορεσμού θα προκαλέσει το αντίθετο αποτέλεσμα.</string>
   <string name="RingOfShadows_Name">Δαχτυλίδι των σκιών</string>
-  <string name="RingOfShadows_Info">Είναι λιγότερο πιθανό να σε παρατηρούν οι εχθροί όσο φοράς αυτό το δαχτυλίδι. Ένα υποβαθμισμένο δαχτυλίδι των σκιών θα ειδοποιεί εχθρούς που κανονικά μπορεί να μη σε είχαν προσέξει.</string>
+  <string name="RingOfShadows_Info">Είναι λιγότερο πιθανό να σε παρατηρούν οι εχθροί ενώ φοράς αυτό το δαχτυλίδι. Ένα υποβαθμισμένο δαχτυλίδι των σκιών θα ειδοποιεί εχθρούς που κανονικά μπορεί να μη σε είχαν προσέξει.</string>
   <string name="RingOfThorns_Name">Δαχτυλίδι των αγκαθιών</string>
   <string name="RingOfThorns_Info">Αν και το δαχτυλίδι δεν έχει πραγματικά αγκάθια, ο εχθρός που σου επιτίθεται τραυματίζεται με ένα ποσοστό της προκληθείσας ζημιάς. Η αναβάθμιση του δαχτυλιδιού δεν παρέχει κάποιο όφελος.</string>
   <string name="RingOfStoneWalking_Name">Δαχτυλίδι πετρώδους αίματος</string>
@@ -103,7 +103,7 @@
   <string name="BishopNPC_Gender">masculine</string>
   <string name="BishopNPC_Name_Objective">Επίσκοπος</string>
   <string name="Bishop_title">Επίσκοπος</string>
-  <string name="Bishop_text">Μέρες και νύχτες προσεύχομαι για σένα, παιδί μου.</string>
+  <string name="Bishop_text">Μέρες και νύχτες προσεύχομαι για εσένα, παιδί μου.</string>
   <string name="Bishop_lesser_bless">Μικρή ευλογία - %dχρ</string>
   <string name="Bishop_great_bless">Ανώτερη ευλογία - %dχρ</string>
   <string name="Bishop_remove_curse">Αφαίρεση κατάρας - %dχρ</string>
@@ -174,9 +174,9 @@
   <string name="town_deco_crate_bottles_desc">Η εμφιάλωση της μπύρας έχει γίνει μια πολύ δημοφιλής απασχόληση στους πανδοχείς.</string>
   <string name="town_deco_wall_brazier_name">Μαγκάλι</string>
   <string name="town_deco_wall_brazier_desc">Ο ατμός από τα σιγοκαιόμενα κάρβουνα γεμίζει τον χώρο με ευχάριστα αρώματα.</string>
-  <string name="WndPriest_Instruction2_m">Καλώς όρισες, υιέ μου. Καλώς όρισες στην ιερή εκκλησία του μεγάλου Σάντα, του άρχοντα των εγκάτων!</string>
-  <string name="WndPriest_Instruction2_f">Καλώς όρισες, κόρη μου. Καλώς όρισες στην ιερή εκκλησία του μεγάλου Σάντα, του άρχοντα των εγκάτων!</string>
-  <string name="WndPriest_Instruction2">Αν χρειάζεσαι βοήθεια, μπορώ να σε θεραπεύσω για μόλις %d χρυσό!\nΑν επιζητάς την ιερή ευλογία ή --χτύπα ξύλο-- έχεις καταραστεί, συνάντησε τον επίσκοπο μες στην ταπεινή εκκλησία μας.</string>
+  <string name="WndPriest_Instruction2_m">Καλώς όρισες, υιέ μου. Καλώς ήλθες στην ιερή εκκλησία του μεγάλου Σάντα, του άρχοντα των εγκάτων!</string>
+  <string name="WndPriest_Instruction2_f">Καλώς όρισες, κόρη μου. Καλώς ήλθες στην ιερή εκκλησία του μεγάλου Σάντα, του άρχοντα των εγκάτων!</string>
+  <string name="WndPriest_Instruction2">Αν χρειάζεσαι βοήθεια, μπορώ να σε θεραπεύσω για μόλις %d χρυσό!\nΑν αναζητάς την ιερή ευλογία ή --χτύπα ξύλο-- έχεις καταραστεί, συνάντησε τον επίσκοπο μες στην ταπεινή μας εκκλησία.</string>
   <string name="WndDontLikeAds_NotThisTime">Όχι τώρα</string>
   <string name="Item_Info2">κάτι</string>
   <string name="NecromancerArmor_Info2">Με αυτήν την πανοπλία, ο Νεκρομάντης μπορεί να κάνει χρήση του «Νεκροτισμού». Ο Νεκροτισμός εξαπλώνει μια μαγική επιδημία που μολύνει κάθε ορατό πλάσμα, ζωντανό ή νεκρό.</string>
@@ -184,7 +184,7 @@
   <string name="NecrotismBuff_Name">Νεκροτισμός</string>
   <string name="NecrotismBuff_Info">Το σημάδι του ίδιου του θανάτου. Το μίασμα που κυριεύει όποιους είναι κοντά και τους καθιστά μεταδότες του.</string>
   <string name="Necrotism_ACSpecial">ΝΕΚΡΟΤΙΣΜΟΣ</string>
-  <string name="ResultDescriptions_Necrotism">Εξοντώθηκες από νεκροτισμό στο %dο επίπεδο</string>
+  <string name="ResultDescriptions_Necrotism">Εξοντώθηκες από νεκροτισμό στο επίπεδο #%d</string>
   <string name="Necrotism_Death">Εξοντώθηκες από τον νεκροτισμό...</string>
   <string name="Badges_DeathNecrotism">Θάνατος από νεκροτισμό</string>
   <string name="Spell_SelectACell">Διάλεξε ένα σημείο στόχου</string>
@@ -231,7 +231,7 @@
   <string name="WandOfPoison_Info1">Δεν συνέβη κάτι.</string>
   <string name="WandOfRegrowth_Name">Ραβδί αναγέννησης</string>
   <string name="WandOfRegrowth_Info">«Όταν η ζωή σταματά, μία νέα ζωή παίρνει τη θέση της. Ο αιώνιος κύκλος παραμένει!»</string>
-  <string name="WandOfRegrowth_Info1">Τίποτα δεν συνέβη.</string>
+  <string name="WandOfRegrowth_Info1">Δεν συνέβη κάτι.</string>
   <string name="WandOfSlowness_Name">Ραβδί βραδύτητας</string>
   <string name="WandOfSlowness_Info">Αυτό το ραβδί θα μειώσει την ταχύτητα κίνησης κι επίθεσης ενός πλάσματος στο μισό, μέχρι να τελειώσει η επίδραση.</string>
   <string name="WandOfSlowness_Info1">Δεν συνέβη κάτι.</string>
@@ -246,7 +246,7 @@
   <string name="WndPortal_Info">Αυτή η πύλη θα σου επιτρέψει να επιστρέψεις στην πόλη. Φαίνεται πολύ ασταθής και μάλλον δεν θα μείνει ενεργή για πολύ.\nΘέλεις να τη χρησιμοποιήσεις;</string>
   <string name="WndPortal_Info_Return">Αυτή η πύλη θα σε μεταφέρει πίσω στην κατακόμβη.\nΘέλεις να τη χρησιμοποιήσεις;</string>
   <string name="WndPortal_Warning_Title">Ειδοποίηση πύλης!</string>
-  <string name="WndPortal_Warning_Info">Δεν έχεις χρησιμοποιήσει την πύλη αυτού του επιπέδου. Αν φύγεις, δεν θα μπορέσεις να χρησιμοποιήσεις ξανά αυτήν την πύλη!\nΘέλεις σίγουρα να φύγεις;</string>
+  <string name="WndPortal_Warning_Info">Δεν έχεις χρησιμοποιήσει την πύλη αυτού του επιπέδου. Αν φύγεις, δεν θα μπορείς να τη χρησιμοποιήσεις ξανά!\nΘέλεις σίγουρα να φύγεις;</string>
   <string name="PortalGate_Name">Πύλη</string>
   <string name="PortalGate_Desc">Τα σκαλίσματα στην επιφάνεια της πύλης σχηματίζουν ένα αλλόκοτο μοτίβο. Μοιάζει με μια γιγάντια σήραγγα που καταλήγει πέρα μακριά. Κοιτώντας όμως από τα πλάγια, δεν χωρά αμφιβολία: η επιφάνεια είναι σχεδόν εντελώς επίπεδη.</string>
   <string name="PortalGate_Desc_Activated">Αυτή η πύλη εκκρίνει ένα είδος λαμπερής ύλης. Είναι εντελώς ακίνητη, αν εξαιρέσεις τους κυματισμούς που ξεπροβάλλουν από το κέντρο της.</string>
@@ -286,13 +286,13 @@
   <string name="HealthDart_Name">Θεραπευτικό βελάκι</string>
   <string name="HealthDart_Gender">neuter</string>
   <string name="HealthDart_Info">Η αιχμή σε αυτό το βελάκι είναι καλυμμένη με φίλτρο θεραπείας.</string>
-  <string name="HealthArrow_Name">Θεραπευτικό βέλος</string>
+  <string name="HealthArrow_Name">θεραπευτικό βέλος</string>
   <string name="HealthArrow_Gender">neuter</string>
-  <string name="HealthArrow_Info">Η αιχμή αυτού του βέλους είναι καλυμμένη με φίλτρο θεραπείας</string>
+  <string name="HealthArrow_Info">Η αιχμή αυτού του βέλους είναι επικαλυμμένη με φίλτρο θεραπείας.</string>
   <string name="AmokDart_Name">Βελάκι αμόκ</string>
   <string name="AmokDart_Gender">neuter</string>
   <string name="AmokDart_Info">Το διάλυμα στην αιχμή από αυτό το βελάκι θα μετατρέψει οποιονδήποτε στόχο σε ένα άμυαλο, ανελέητο θηρίο.</string>
-  <string name="AmokArrow_Name">Βέλος αμόκ</string>
+  <string name="AmokArrow_Name">βέλος αμόκ</string>
   <string name="AmokArrow_Gender">neuter</string>
   <string name="AmokArrow_Info">Το διάλυμα στην αιχμή του βέλους θα μετατρέψει οποιονδήποτε στόχο σε ένα άμυαλο, ανελέητο θηρίο.</string>
   <string name="WndHero_SkillLevel">Επίπεδο ικανότητας</string>
@@ -380,7 +380,7 @@
   <string name="WndHero_StaTitle">%2$s επιπεδου %1$d</string>
   <string name="WndHero_StaCatalogus">Κατάλογος</string>
   <string name="WndHero_StaJournal">Ημερολόγιο</string>
-  <string name="WndImp_Message">Ω, ναι! Είσαι ηρωική ψυχή!\nΌσον αφορά την ανταμοιβή σου: δεν έχω λεφτά μαζί μου τώρα, αλλά έχω κάτι καλύτερο για σένα... Το δαχτυλίδι αυτό είναι οικογενειακό κειμήλιο· ο παππούς μου το άρπαξε από το δάχτυλο ενός νεκρού παλαδίνου.</string>
+  <string name="WndImp_Message">Ω, ναι! Είσαι ηρωική ψυχή!\nΌσον αφορά την ανταμοιβή σου: δεν έχω λεφτά μαζί μου, αλλά έχω κάτι καλύτερο για σένα... Το δαχτυλίδι αυτό είναι οικογενειακό κειμήλιο· ο παππούς μου το άρπαξε από το δάχτυλο ενός νεκρού παλαδίνου.</string>
   <string name="WndImp_Reward">Πάρε το δαχτυλίδι</string>
   <string name="WndInfoCell_Nothing">Δεν υπάρχει κάτι εδώ.</string>
   <string name="WndInfoItem_Chest">Σεντούκι</string>
@@ -417,12 +417,12 @@
   <string name="WndSadGhost_Wepon">Όπλο φαντάσματος</string>
   <string name="WndSadGhost_Armor">Πανοπλία φαντάσματος</string>
   <string name="WndSadGhost_Farewell">Έχε γεια!</string>
-  <string name="WndStory_Sewers">Η κατακόμβη βρίσκεται ακριβώς κάτω από την πόλη· τα ανώτερα επίπεδα αποτελούν το αποχετευτικό της σύστημα. Δεν είναι και πολύ επικίνδυνα αυτά τα επίπεδα, μιας και είναι τμήμα της πόλης. Δεν το λες βέβαια κι ασφαλές μέρος, αλλά εδώ δεν έχει επικρατήσει ακόμα η διαβολική μαγεία.</string>
-  <string name="WndStory_Prision">Πολλά χρόνια πριν, μια υπόγεια φυλακή είχε χτιστεί εδώ για τους πιο επικίνδυνους εγκληματίες. Εκείνον τον καιρό ήταν πολύ έξυπνη ιδέα, μιας και είναι πραγματικά δύσκολο να δραπετεύσει κανείς από εδώ. Αλλά ξαφνικά, ένα σκοτεινό μίασμα άρχισε να αναδύεται από κάτω που τρέλαινε τόσο τους φύλακες όσο και τους κρατούμενους. Στο τέλος η φυλακή εγκαταλείφθηκε, αλλά κάποιοι κατάδικοι έμειναν κλειδωμένοι μέσα...</string>
+  <string name="WndStory_Sewers">Η κατακόμβη βρίσκεται ακριβώς κάτω από την πόλη· τα ανώτερα επίπεδα αποτελούν το αποχετευτικό της σύστημα. Δεν είναι και πολύ επικίνδυνα αυτά τα επίπεδα μιας και είναι τμήμα της πόλης. Δεν το λες κι ασφαλές μέρος, αλλά εδώ δεν έχει επικρατήσει ακόμα η διαβολική μαγεία.</string>
+  <string name="WndStory_Prision">Πολλά χρόνια πριν, μια υπόγεια φυλακή είχε χτιστεί εδώ για τους πιο επικίνδυνους εγκληματίες. Εκείνον τον καιρό ήταν πολύ έξυπνη ιδέα, μιας και είναι πραγματικά δύσκολο να δραπετεύσει κανείς από εδώ. Αλλά ξαφνικά, ένα σκοτεινό μίασμα άρχισε να αναδίδεται από κάτω που τρέλαινε τόσο τους φύλακες όσο και τους κρατούμενους. Στο τέλος η φυλακή εγκαταλείφθηκε, αλλά κάποιοι κατάδικοι έμειναν κλειδωμένοι μέσα...</string>
   <string name="WndStory_Caves">Τα σπήλαια κάτω από την εγκαταλελειμμένη φυλακή είναι πολύ αραιοκατοικημένα. Βρίσκονται πολύ βαθιά για να τα εκμεταλλευτεί η πόλη και είναι πολύ φτωχά σε ορυκτά για να συγκινήσουν τους νάνους. Υπήρχε, στο παρελθόν, ένα εμπορικό κέντρο εδώ κάτω, στα μέσα της διαδρομής αυτών των δύο πολιτειών. Αλλά εγκαταλείφθηκε μετά την παρακμή της μητρόπολης των νάνων. Πλέον, μόνο γκνολ και πανίδα του υπεδάφους βρίσκεις εδώ κάτω.</string>
   <string name="WndStory_Metropolis">Η μητρόπολη των νάνων ήταν κάποτε η μεγαλύτερη των πόλεων-κρατών τους. Στην περίοδο της ακμής της, ο μηχανικός στρατός των νάνων απέκρουσε την επίθεση του Παλιού Θεού και της δαιμονικής του στρατιάς. Λέγεται, όμως, ότι οι πολεμιστές έφεραν τους σπόρους της διαφθοράς με την επιστροφή τους, και πως η νίκη αυτή ήταν η αρχή του τέλους για το υπόγειο βασίλειο.</string>
   <string name="WndStory_Halls">Αυτοί οι όροφοι αποτελούσαν κάποτε τα περίχωρα της μητρόπολης. Μετά την πύρρειο νίκη στον πόλεμο με τον Παλιό Θεό, οι νάνοι παραήταν αδύναμοι για να εξολοθρεύσουν όλους τους δαίμονες. Οι δαίμονες επέβαλαν σταδιακά την κυριαρχία τους σε αυτό το μέρος, γνωστό πλέον ως οι «Αίθουσες των Δαιμόνων».\n\nΠολύ λίγοι εξερευνητές έχουν κατεβεί εδώ κάτω...</string>
-  <string name="WndStory_Spiders">Πολλά, πολλά χρόνια πριν υπήρχε ένα πλούσιο ορυχείο γεμάτο μαγικά πετρώματα. Αλλά μόλις τα ορυκτά εξαντλήθηκαν, οι ανθρακωρύχοι εγκατέλειψαν το μέρος κι άφησαν πίσω τους ένα ευρύ δίκτυο από σήραγγες. Τελικά η περιοχή αποικήθηκε από αράχνες. Αλλά ακόμα κι αυτά τα επικίνδυνα πλάσματα, που καραδοκούν στο σκοτάδι, δεν ήταν αρκετά να αποθαρρύνουν τους θαραλλέους και τους τρελούς που είχαν τις βλέψεις τους στους θησαυρούς του ορυχείου. Γιατί ο βαθμός του κινδύνου είναι πάντα αναλογικός με το πλήθος των θρύλων περί μαγικών τεχνουργημάτων. Έναν καιρό πριν, μια κακιά μάγισσα περιπλανιόταν στις σήραγγες με την ελπίδα να ξεφύγει από τους κυνηγούς της. Αλλά τα προληπτικά αυτά άτομα δεν τολμούσαν να εισχωρήσουν στο σκοτάδι. Γι\' αυτό κι αποφάσισαν να την περιμένουν... αλλά δεν εμφανίστηκε ποτέ. Ίσως να βρήκε άλλη έξοδο διαφυγής ή να πέρασε κρυφά μπροστά από τους φύλακες. Ίσως και να βρήκε τον θάνατό της, περιτριγυρισμένη από τις βοές τεράτων που παραφυλούν στο σκοτάδι.</string>
+  <string name="WndStory_Spiders">Πολλά, πολλά χρόνια πριν υπήρχε ένα πλούσιο ορυχείο γεμάτο μαγικά πετρώματα. Αλλά μόλις τα ορυκτά εξαντλήθηκαν, οι ανθρακωρύχοι εγκατέλειψαν το μέρος κι άφησαν πίσω τους ένα ευρύ δίκτυο από σήραγγες. Τελικά η περιοχή αποικήθηκε από αράχνες. Αλλά ακόμα κι αυτά τα επικίνδυνα πλάσματα, που καραδοκούν στο σκοτάδι, δεν ήταν αρκετά να αποθαρρύνουν τους θαραλλέους και τους τρελούς που είχαν τις βλέψεις τους στους θησαυρούς του ορυχείου. Γιατί ο βαθμός του κινδύνου είναι πάντα αναλογικός με το πλήθος των θρύλων περί μαγικών τεχνουργημάτων. Έναν καιρό πριν, μια κακιά μάγισσα περιπλανιόταν στις σήραγγες με την ελπίδα να ξεφύγει από τους κυνηγούς της. Αλλά τα προληπτικά αυτά άτομα δεν τολμούσαν να εισχωρήσουν στο σκοτάδι. Γι\' αυτό κι αποφάσισαν να την περιμένουν... αλλά δεν εμφανίστηκε ποτέ. Ίσως να βρήκε άλλη έξοδο διαφυγής ή να πέρασε κρυφά μπροστά από τους φύλακες. Ίσως και να βρήκε τον θάνατό της, περιτριγυρισμένη από τις βοές των τεράτων που ελλοχεύουν στο σκοτάδι.</string>
   <string name="WndTradeItem_Sale">ΠΡΟΣ ΠΩΛΗΣΗ: %1$s - %2$dχρ</string>
   <string name="WndTradeItem_Buy">Αγορά για %dχρ</string>
   <string name="WndTradeItem_Sell">Πώληση για %dχρ</string>
@@ -457,12 +457,12 @@
   <string name="ArmorKit_SelectArmor">Διάλεξε μια πανοπλία να αναβαθμίσεις</string>
   <string name="ArmorKit_Upgraded">Χρησιμοποίησες την εργαλειοθήκη και αναβάθμισες την %s</string>
   <string name="Dewdrop_Name">δροσοσταλίδα</string>
-  <string name="Dewdrop_Info">Μια πεντακάθαρη δροσοσταλίδα.</string>
+  <string name="Dewdrop_Info">Μία πεντακάθαρη δροσοσταλίδα.</string>
   <string name="DewVial_Name">φιαλίδιο δρόσου</string>
   <string name="DewVial_ACDRINK">ΠΙΕΣ</string>
-  <string name="DewVial_Info">Μπορείς να αποθηκεύσεις την περίσσια δρόσο σε αυτό το μικρό δοχείο για να την πιεις αργότερα. Εφόσον είναι γεμάτο, η δρόσος θα καταναλωθεί αυτόματα για να σε σώσει από μια θανάσιμη κατάληξη.</string>
+  <string name="DewVial_Info">Μπορείς να αποθηκεύσεις την περίσσια δρόσο σε αυτό το μικρό δοχείο για να την πιεις αργότερα. Εφόσον είναι γεμάτο, η δρόσος του θα καταναλωθεί αυτόματα εν όψει κάποιου θανάσιμου κινδύνου.</string>
   <string name="DewVial_AutoDrink">Το φιαλίδιο δρόσου άδειασε και θεράπευσε τις πληγές σου.</string>
-  <string name="DewVial_Collected">Μάζεψες μια δροσοσταλίδα στο φιαλίδιο δρόσου.</string>
+  <string name="DewVial_Collected">Συλλέγεις τη δροσοσταλίδα στο φιαλίδιο δρόσου.</string>
   <string name="DewVial_Full">Το φιαλίδιο δρόσου είναι γεμάτο!</string>
   <string name="DewVial_Empty">Το φιαλίδιο δρόσου είναι άδειο!</string>
   <string name="Gold_Name">χρυσός</string>
@@ -477,7 +477,7 @@
   <string name="LloidsBeacon_Preventing">Η ισχυρή μαγική αύρα αυτού του μέρους αποτρέπει τη χρήση του πομπού του Lloyd!</string>
   <string name="LloidsBeacon_Creatures">Η ψυχική αύρα των κοντινών πλασμάτων αποτρέπει τη χρήση του πομπού του Lloyd.</string>
   <string name="LloidsBeacon_Return">Ο πομπός του Lloyd έχει οριστεί στην τρέχουσα θέση. Μπορείς πλέον να επιστρέψεις εδώ ανά πάσα στιγμή.</string>
-  <string name="LloidsBeacon_Set">\n\nΟ πομπός έχει οριστεί κάπου στο επίπεδο %d.</string>
+  <string name="LloidsBeacon_Set">\n\nΟ πομπός έχει οριστεί κάπου στο επίπεδο #%d.</string>
   <string name="Stylus_Name">απόκρυφο κονδύλι</string>
   <string name="Stylus_ACInscribe">ΧΑΡΑΞΕ</string>
   <string name="Stylus_Info">Το απόκρυφο κονδύλι είναι φτιαγμένο από κάποια σκοτεινή, πολύ σκληρή πέτρα. Με αυτό μπορείς να χαράξεις έναν γλύφο ή ρούνο, αλλά δεν μπορείς να διαλέξεις ποιος θα είναι· το κονδύλι θα αποφασίσει για εσένα.</string>
@@ -550,7 +550,7 @@
   <string name="WaterOfTransmutation_Info">Η δύναμη της αλλαγής ακτινοβολεί από το νερό αυτού του πηγαδιού. Πέτα ένα αντικείμενο μέσα για να το μετατρέψεις σε κάτι διαφορετικό.</string>
   <string name="Web_Info">Εδώ τα πάντα είναι καλυμμένα με παχύ ιστό.</string>
   <string name="AmokBuff_Name">Αμόκ</string>
-  <string name="AmokBuff_Info">Νιώσε τη δύναμη του αμόκ, που στερεί τη ζωή από τους άτυχους.</string>
+  <string name="AmokBuff_Info">Νιώσε τη δύναμη του αμόκ, που στερεί τις ζωές των άτυχων.</string>
   <string name="BarkskinBuff_Name">Φλοιώδες δέρμα</string>
   <string name="BarkskinBuff_Info">Το σώμα είναι καλυμμένο από κορμό, που εμποδίζει μια ποσότητα εισερχόμενης ζημιάς.</string>
   <string name="BleedingBuff_Name">Αιμορραγία</string>
@@ -598,7 +598,7 @@
   <string name="PoisonBuff_Info">Ο οργανισμός καταστρέφεται σταδιακά από το δηλητήριο!</string>
   <string name="Poison_Death">Πέθανες από το δηλητήριο...</string>
   <string name="RegenerationBuff_Name">Φυσική αναζωογόνηση</string>
-  <string name="RegenerationBuff_Info">Η λειτουργία της φυσικής αναζωογόνησης είναι σε μορφή επίδρασης, για να γίνεται ευκολότερο.</string>
+  <string name="RegenerationBuff_Info">Η λειτουργία της φυσικής αναζωογόνησης είναι σε μορφή επίδρασης για διευκόλυνση.</string>
   <string name="RootsBuff_Name">Ρίζωμα</string>
   <string name="RootsBuff_Info">Ρίζες ξεπηδούν από το έδαφος και σφιχταγγαλιάζουν το σώμα. Εμποδίζουν την κίνηση ακόμα και για ένα μόνο βήμα.</string>
   <string name="ShadowsBuff_Name">Ένα με τις σκιές</string>
@@ -632,7 +632,7 @@
   <string name="TitleScene_Badges">Εμβλήματα</string>
   <string name="TitleScene_About">Σχετικά</string>
   <string name="TitleScene_InternalStorageLow"> Ανεπαρκής χώρος\n στην εσωτερική μνήμη\n Η πρόοδος μπορεί να χαθεί!</string>
-  <string name="AboutScene_Txt_Intro">Remixed Dungeon του NYRDS, βασισμένο στο Pixel Dungeon του Watabou.</string>
+  <string name="AboutScene_Txt_Intro">Remixed Dungeon της ομάδας NYRDS, βασισμένο στο Pixel Dungeon του Watabou.</string>
   <string name="AboutScene_Code">Κώδικας:</string>
   <string name="AboutScene_Graphics">Γραφικά:</string>
   <string name="AboutScene_Music">Μουσική:</string>
@@ -658,7 +658,7 @@
   <string name="StartScene_Unlock">Για να ξεκλειδώσεις αυτή την κλάση ήρωα, εξόντωσε το αφεντικό DM-300 με οποιαδήποτε άλλη κλάση.</string>
   <string name="StartScene_UnlockElf">Για να ξεκλειδώσεις αυτήν την κλάση ήρωα, εξόντωσε τον Βασιλιά Νάνο με οποιαδήποτε άλλη κλάση.</string>
   <string name="StartScene_WinGame">Για να ξεκλειδώσεις τις Προκλήσεις, νίκησε το παιχνίδι με οποιαδήποτε κλάση ήρωα.</string>
-  <string name="StartScene_DifficultySelect">Όρισε τη μοίρα σου</string>
+  <string name="StartScene_DifficultySelect">Όρισε το πεπρωμένο σου</string>
   <string name="StartScene_DifficultyEasy">Εύκολο (+Ads)</string>
   <string name="StartScene_DifficultyNormalWithSaves">Κανονικό με αποθηκεύσεις (+Ads)</string>
   <string name="StartScene_DifficultyNormal">Κανονικό</string>
@@ -786,7 +786,7 @@
   <string name="RottenFish_Info">Σάπιο ψάρι· μυρίζει απαίσια.</string>
   <string name="RottenFish_Taste">Αηδιαστικό!</string>
   <string name="gdpr_title">Προσωποποίηση διαφημιστικών</string>
-  <string name="gdpr_text">Το Remixed Dungeon εξατομικεύει την εμπειρία σου στις διαφημίσεις με χρήση των Admob και Appodeal (πάροχοι διαφημιστικών). Οι πάροχοι και οι συνεργάτες τους μπορεί να συλλέγουν και να επεξεργάζονται προσωπικά δεδομένα -όπως αναγνωριστικά συσκευής, δημογραφικά δεδομένα και δεδομένα ενδιαφέροντος- για να παρέχουν διαφημιστικά σχετικά με τις προτιμήσεις σου. Με τη συναίνεση στη βελτιωμένη εμπειρία διαφημίσεων, θα βλέπεις διαφημιστικά που οι πάροχοι και οι συνεργάτες τους πιστεύουν ότι σε αντιπροσωπεύουν καλύτερα.\n\nΜε την αποδοχή, επιβεβαιώνεις ότι είσαι άνω των 16 ετών και επιθυμείς να βλέπεις εξατομικευμένα διαφημιστικά.\n\n</string>
+  <string name="gdpr_text">Το Remixed Dungeon εξατομικεύει την εμπειρία των διαφημίσεων με χρήση των Admob και Appodeal (πάροχοι διαφημιστικών). Οι πάροχοι και οι συνεργάτες τους μπορεί να συλλέγουν και να επεξεργάζονται προσωπικά δεδομένα --όπως αναγνωριστικά συσκευής, δημογραφικά δεδομένα και δεδομένα ενδιαφέροντος-- για να παρέχουν διαφημιστικά με βάση τις προτιμήσεις σου. Συναινώντας στη βελτιωμένη εμπειρία, θα βλέπεις διαφημιστικά που οι πάροχοι και οι συνεργάτες τους πιστεύουν ότι σε αντιπροσωπεύουν καλύτερα.\n\nΜε την αποδοχή, επιβεβαιώνεις ότι είσαι άνω των 16 ετών και επιθυμείς να βλέπεις εξατομικευμένα διαφημιστικά.\n\n</string>
   <string name="gdpr_agree">Ναι, αποδέχομαι</string>
   <string name="gdpr_disagree">Όχι, ευχαριστώ</string>
   <string name="gdpr_choose">Παρακαλούμε επιλέξτε</string>
@@ -824,7 +824,7 @@
   <string name="DonateButton_pleaseDonate">Σκέψου να κάνεις δωρεά</string>
   <string name="DonateButton_thanks">Ευχαριστώ για την υποστήριξή σου!</string>
   <string name="WndSaveSlotSelect_dontLike">Απεχθάνεσαι τα διαφημιστικά; Κάνε μια οποιαδήποτε δωρεά και θα εξαφανιστούν. Δια παντός.</string>
-  <string name="Bow_Info1">Αυτό είναι ένα όπλο απόστασης. Σε πολύ κοντινή απόσταση, είναι άχρηστο για οποιονδήποτε εκτός από τα Ξωτικά. Μπορείς να εξαπολύεις βέλη με αυτό εφόσον το έχεις εξοπλισμένο.\n\n</string>
+  <string name="Bow_Info1">Αυτό είναι ένα όπλο απόστασης. Σε απόσταση επαφής, είναι άχρηστο για οποιονδήποτε εκτός από τα Ξωτικά. Μπορείς να εξαπολύεις βέλη με αυτό εφόσον το έχεις εξοπλισμένο.\n\n</string>
   <string name="WoodenBow_Name">ξύλινο τόξο</string>
   <string name="WoodenBow_Info">Αυτό το απλό ξύλινο τόξο μπορεί να φανεί χρήσιμο, αρκεί να βρεις μερικά βέλη.</string>
   <string name="WoodenBow_Gender">neuter</string>
@@ -838,7 +838,7 @@
   <string name="Quiver_Info">Μια δερμάτινη φαρέτρα, ιδανική στο να κρατά όλα σου τα βέλη.</string>
   <string name="Quiver_Gender">feminine</string>
   <string name="CommonArrow_Name">βέλος</string>
-  <string name="CommonArrow_Info">Ένα κοινό ξύλινο βέλος με σιδερένια κεφαλή.</string>
+  <string name="CommonArrow_Info">Ένα απλό ξύλινο βέλος με σιδερένια κεφαλή.</string>
   <string name="CommonArrow_Gender">neuter</string>
   <string name="FireArrow_Name">πύρινο βέλος</string>
   <string name="FireArrow_Info">Αυτό το βέλος μοιάζει με τα κανονικά, αν εξαιρέσεις το θερμό κόκκινο φως που εκπέμπει η κεφαλή του.</string>
@@ -886,7 +886,7 @@
   <string name="FortuneTellerNPC_Desc">Αυτή η γυναίκα έχει ντυθεί με έναν μακρύ πολύχρωμο χιτώνα. Δείχνει πολύ νέα για κάποια που έχει εντρυφήσει στην απόκρυφη τέχνη της μαντικής. Από κοντά, την ακούς να ψελλίζει κοιτώντας την κρυστάλλινη μπάλα.</string>
   <string name="ServiceManNPC_Limit_Reached">Ζητώ συγγνώμη, αλλά έχεις ήδη φτάσει στο τωρινό όριο. Αλλά θα μπορείς να χρησιμοποιείς ξανά την υπηρεσία μας με κάθε επίπεδο που ανεβαίνεις!</string>
   <string name="WndFortuneTeller_Instruction">Μπορώ να αποκαλύψω τα μυστικά των αντικειμένων που κατέχεις.\nΜία αναγνώριση θα σου κοστίσει %d νομίσματα.</string>
-  <string name="WndFortuneTeller_No_Item">Πρόσεχε, μη ξοδεύεις τα λεφτά σου άσκοπα. Δεν υπάρχει κάτι μη αναγνωρισμένο στα αντικείμενά σου. </string>
+  <string name="WndFortuneTeller_No_Item">Πρόσεχε... δεν θέλεις να σκορπάς τα λεφτά σου άσκοπα, έτσι; Δεν έχεις κάποιο μη αναγνωρισμένο αντικείμενο.</string>
   <string name="WndFortuneTeller_Title">Μάντης</string>
   <string name="Wnd_Button_Yes">Ναι</string>
   <string name="Wnd_Button_No">Όχι</string>
@@ -899,7 +899,7 @@
   <string name="WndLibrary_Items_Btn">Αντικείμενα</string>
   <string name="WndLibrary_Codex_Btn">Ιστορίες</string>
   <string name="WndLibrary_Levels_Btn">Κατακόμβη</string>
-  <string name="WndMovieTheatre_Instruction_2">Έχεις παρακολουθήσει %1$d/%2$d φορές. Με κάθε νέο επίπεδο ήρωα, θα αποκτάς τη δυνατότητα να παρακολουθείς ακόμα μία ταινία.</string>
+  <string name="WndMovieTheatre_Instruction_2">Έχεις παρακολουθήσει %1$d/%2$d φορές. Με κάθε νέο επίπεδο ήρωα, θα αποκτάς τη δυνατότητα να παρακολουθήσεις ακόμα μία ταινία.</string>
   <string name="town_deco_blue_carpet_name">Χαλί</string>
   <string name="town_deco_blue_carpet_desc">Ένα πολυτελές μπλε χαλί, διακοσμημένο με μωβ στολίδια.</string>
   <string name="town_table_fortune_name">Τραπέζι</string>
@@ -953,7 +953,7 @@
   <string name="Hero_LockedDoor">Δεν έχεις το αντίστοιχο κλειδί.</string>
   <string name="Hero_NoticedSmth">Παρατήρησες κάτι.</string>
   <string name="Hero_Wait">...</string>
-  <string name="Hero_Search">αναζήτηση</string>
+  <string name="Hero_Search">Αναζήτηση</string>
   <string name="Hero_StaBurning">Άρπαξες φωτιά!</string>
   <string name="Hero_StaParalysis">Έχεις παραλύσει!</string>
   <string name="Hero_StaPoison">Έχεις δηλητηριαστεί!</string>
@@ -979,17 +979,17 @@
   <string name="HeroSubClass_NameWarL">Αρχιμάγος</string>
   <string name="HeroSubClass_DescWarL">Αφού εξοντώσει έναν εχθρό, ο _Αρχιμάγος_ καταναλώνει την ψυχή του. Έτσι θεραπεύει τις πληγές και ικανοποιεί την πείνα του.</string>
   <string name="HeroSubClass_NameBatM">Μάγος-μαχητής</string>
-  <string name="HeroSubClass_DescBatM">Όταν μάχεται με εξοπλισμένο ραβδί, ο _Μάγος-μαχητής_ προκαλεί επιπλέον ζημιά βάσει του τρέχοντος φορτίου. Κάθε επιτυχημένο χτύπημα επαναφορτίζει το ραβδί για  1 φορτίο.</string>
+  <string name="HeroSubClass_DescBatM">Όταν μάχεται με εξοπλισμένο ραβδί, ο _Μάγος-μαχητής_ προκαλεί επιπλέον ζημιά βάσει του τρέχοντος φορτίου. Κάθε επιτυχημένο χτύπημα αναπληρώνει 1 φορτίο στο ραβδί.</string>
   <string name="HeroSubClass_NameAssa">Δολοφόνος</string>
   <string name="HeroSubClass_DescAssa">Όταν εκτελεί μια αιφνίδια επίθεση, ο _Δολοφόνος_ προκαλεί επιπλέον ζημιά στον στόχο του.</string>
   <string name="HeroSubClass_NameFreR">Δρομέας</string>
-  <string name="HeroSubClass_DescFreR">Ο _Δρομέας_ μπορεί να τρέχει με σχεδόν διπλάσια ταχύτητα από τα περισσότερα πλάσματα. Επίσης, είναι πολύ δυσκολότερο να χτυπηθεί όταν τρέχει. Για να γίνει αυτό, θα πρέπει να μην είναι επιβαρυμένος και να μη λιμοκτονεί.</string>
+  <string name="HeroSubClass_DescFreR">Ο _Δρομέας_ μπορεί να τρέχει με σχεδόν διπλάσια ταχύτητα από τα περισσότερα πλάσματα. Είναι, επίσης, πολύ ικανότερος στην αποφυγή χτυπημάτων ενώ τρέχει. Για να ισχύσει αυτό, θα πρέπει να μην είναι επιβαρυμένος και να μη λιμοκτονεί.</string>
   <string name="HeroSubClass_NameSnip">Σκοπεύτρια</string>
-  <string name="HeroSubClass_DescSnip">Η _Σκοπεύτρια_ μπορεί να εντοπίζει αδύναμα σημεία στην πανοπλία του εχθρού και πρακτικά την παρακάμπτει όταν χρησιμοποιεί όπλο απόστασης.</string>
+  <string name="HeroSubClass_DescSnip">Η _Σκοπεύτρια_ μπορεί να εντοπίζει αδύναμα σημεία στην πανοπλία του εχθρού, και πρακτικά την παρακάμπτει όποτε χρησιμοποιεί όπλα απόστασης.</string>
   <string name="HeroSubClass_NameWard">Δασοφύλακας</string>
-  <string name="HeroSubClass_DescWard">Ο ισχυρός εναρμονισμός με τη φύση δίνει στη _Δασοφύλακα_ την ικανότητα να συλλέγει δροσοσταλίδες και σπόρους από φυτά. Επίσης, λαμβάνει μια προσωρινή επίδραση πανοπλίας όποτε ποδοπατά ψηλό γρασίδι.</string>
+  <string name="HeroSubClass_DescWard">Ο ισχυρός εναρμονισμός των _Δασοφυλάκων_ με τη φύση τούς δίνει τη δυνατότητα να συλλέγουν δροσοσταλίδες και σπόρους από τα φυτά. Επιπλέον, λαμβάνουν μια προσωρινή επίδραση πανοπλίας όποτε ποδοπατούν το ψηλό γρασίδι.</string>
   <string name="HeroSubClass_NameScout">ανιχνευτής</string>
-  <string name="HeroSubClass_DescScout">Τα Ξωτικά _Ανιχνευτές_ είναι αυθεντίες στην κάλυψη. Όποτε ποδοπατούν ψηλό γρασίδι, λαμβάνουν μια προσωρινή επίδραση αορατότητας. Επιπλέον, είναι ακόμα πιο γρήγορα από τα κοινά Ξωτικά.</string>
+  <string name="HeroSubClass_DescScout">Οι _Ανιχνευτές_ των ξωτικών είναι αυθεντίες στην κάλυψη. Λαμβάνουν μια προσωρινή επίδραση αορατότητας όποτε ποδοπατούν το ψηλό γρασίδι. Είναι, επίσης, ταχύτερα από τα κοινά ξωτικά.</string>
   <string name="HeroSubClass_NameShaman">Σαμάνος</string>
   <string name="HeroSubClass_DescShaman">Οι _Σαμάνοι_ των ξωτικών χρησιμοποιούν τα ραβδιά τους ως όπλα μάχης σώμα-με-σώμα. Ένα επιτυχημένο χτύπημα έχει την πιθανότητα να ενεργοποιήσει τη δύναμη του ραβδιού χωρίς να ξοδέψει φορτίο.</string>
   <string name="SantaHat_Name">Σκουφί του Σάντα</string>
@@ -999,12 +999,12 @@
   <string name="Kobold_Name">καλικάντζαρος</string>
   <string name="Kobold_Gender">masculine</string>
   <string name="Kobold_Name_Objective">καλλικάντζαρος</string>
-  <string name="Kobold_Desc">Κάποτε λεγόταν ότι οι καλικάντζαροι δεν είναι παρά ένας θρύλος. Ως απόγονοι των απλών γκνολ, οι καλικάντζαροι περιφέρονταν πάντα στις βαθύτερες και ψυχρότερες σπηλιές. Λέγεται επίσης ότι επικράτησαν στη μηχανική και τις μηχανές πολύ πριν το κάνουν οι νάνοι.</string>
+  <string name="Kobold_Desc">Κάποτε πίστευαν ότι οι καλικάντζαροι δεν είναι παρά ένας θρύλος. Ως απόγονοι των απλών γκνολ, περιφέρονταν πάντα στις βαθύτερες και ψυχρότερες σπηλιές. Λέγεται, επίσης, ότι επικράτησαν στη μηχανική και τις μηχανές πολύ πριν το κάνουν οι νάνοι.</string>
   <string name="KoboldIcemancer_Name">Καλικάντζαρος παγομάντης</string>
   <string name="KoboldIcemancer_Gender">masculine</string>
   <string name="KoboldIcemancer_Name_Objective">Καλικάντζαρος παγομάντης</string>
   <string name="KoboldIcemancer_Desc">Οι καλικάντζαροι παγομάντες ήταν η αφρόκρεμα της κοινωνίας. Άξιοι πολεμιστές, μάγοι και, επί το πλείστον, επιστήμονες. Οι αρχαίοι άρχοντες του πάγου τελειοποίησαν την τέχνη της κυριαρχίας πάνω στον πάγο, δημιουργώντας περίπλοκους μηχανισμούς ενισχυμένους με περίτεχνα ξόρκια.</string>
-  <string name="KoboldIcemancer_Killed">Η παγωμένη ριπή του %s σε σκότωσε...</string>
+  <string name="KoboldIcemancer_Killed">Ο %s σε εξόντωσε με την παγωμένη ριπή του...</string>
   <string name="ColdSpirit_Name">Ψυχρό πνεύμα</string>
   <string name="ColdSpirit_Gender">neuter</string>
   <string name="ColdSpirit_Name_Objective">Ψυχρό πνεύμα</string>
@@ -1043,7 +1043,7 @@
   <string name="IceKey_Info">Αυτό το κλειδί μοιάζει να έχει φτιαχτεί από πάγο, αλλά είναι σκληρό σαν ατσάλι.</string>
   <string name="WandOfIcebolt_Name">Ραβδί παγωμένου βλήματος</string>
   <string name="WandOfIcebolt_Info">Αυτό το ραβδί εξαπολύει μια ριπή πάγου που προκαλεί ελαφριά ζημιά στον στόχο. Υπάρχει και η πιθανότητα να επιβραδύνει --ή ακόμα και να παγώσει-- τον εχθρό.</string>
-  <string name="WandOfIcebolt_Info1">Σκοτώθηκες από το ίδιο σου το ραβδί παγωμένου βλήματος...</string>
+  <string name="WandOfIcebolt_Info1">Εξοντώθηκες από το ίδιο σου το ραβδί παγωμένου βλήματος...</string>
   <string name="Badges_Ice_Guardian_Slain">Εξοντώθηκε ένας φύλακας του πάγου</string>
   <string name="GoldenSword_Name">χρυσό σπαθί</string>
   <string name="GoldenSword_Info">Τα όπλα από μαλακά μέταλλα όπως ο χρυσός δεν μπορούν παρά να θεωρούνται διακοσμητικά. Παρόλα αυτά, αυτή η λεπίδα φαίνεται να κόβει αρκετά καλά.</string>
@@ -1083,7 +1083,7 @@
   <string name="MeleeWeapon_Info4b">Έχει εξισορροπηθεί για περισσότερη ακρίβεια.</string>
   <string name="MeleeWeapon_Info5">Είναι μαγικά ενισχυμένο.</string>
   <string name="MeleeWeapon_Info6a">Εξ αιτίας της ανεπαρκούς σου δύναμης, η ακρίβεια και η ταχύτητα επίθεσης με αυτό το όπλο (%s) μειώνονται.</string>
-  <string name="MeleeWeapon_Info6b">Χάρη στην υπερβολική σου δύναμη, η επιθέσεις σου με αυτό το όπλο (%s) είναι ισχυρότερες.</string>
+  <string name="MeleeWeapon_Info6b">Χάρη στην υπερβολική σου δύναμη, οι επιθέσεις σου με αυτό το όπλο (%s) είναι ισχυρότερες.</string>
   <string name="MeleeWeapon_Info7a">Κρατάς το όπλο (%1$s) σε ετοιμότητα%2$s.</string>
   <string name="MeleeWeapon_Info7b">Επειδή είναι καταραμένο, δεν μπορείς να το βγάλεις από πάνω σου.</string>
   <string name="MeleeWeapon_Info7c">Νιώθεις μια μοχθηρή μαγεία να ελλοχεύει στο όπλο (%s).</string>
@@ -1194,7 +1194,7 @@
   <string name="Bandit_Name">τρελός συμμορίτης</string>
   <string name="Bandit_Gender">masculine</string>
   <string name="Bandit_Name_Objective">τρελός συμμορίτης</string>
-  <string name="Bandit_Desc">Τα έγκατα της κατακόμβης ήταν πάντα το καταφύγιο κάθε λογής εγκληματιών. Δεν κατάφεραν όλοι να διατηρήσουν σώας τας φρένας, μετά από τόσο καιρό μακριά από το φως. Οι τρελοί ληστές και κακοποιοί έχουν ξεχάσει ποιοι είναι και γιατί κλέβουν, εδώ και πολύ καιρό. Αυτός ο κακοποιός φαίνεται να έχει επικαλύψει το μαχαίρι του με κάτι!</string>
+  <string name="Bandit_Desc">Τα έγκατα της κατακόμβης ήταν πάντοτε το καταφύγιο κάθε λογής εγκληματιών. Δεν κατάφεραν όλοι να διατηρήσουν σώας τας φρένας, έχοντας μείνει τόσο καιρό μακριά από το φως. Οι τρελοί ληστές και συμμορίτες έχουν ξεχάσει εδώ και πολύ καιρό ποιοι είναι και γιατί κλέβουν. Αυτός ο συμμορίτης φαίνεται να έχει επικαλύψει το μαχαίρι του με κάτι!</string>
   <string name="Bat_Name">νυχτερίδα βαμπίρ</string>
   <string name="Bat_Gender">feminine</string>
   <string name="Bat_Name_Objective">νυχτερίδα βαμπίρ</string>
@@ -1226,7 +1226,7 @@
   <string name="Eye_Gender">neuter</string>
   <string name="Eye_Name_Objective">διαβολικό μάτι</string>
   <string name="Eye_Desc">Μια από τις ονομασίες αυτού του δαίμονα είναι η «σφαίρα του μίσους». Όποτε εντοπίζει κάποιον εχθρό, χρησιμοποιεί ανεξέλεγκτα την ακτίνα θανάτου του. Πολλές φορές αγνοεί ακόμα και τους συμμάχους του, καταλήγοντας να τους τραυματίζει.</string>
-  <string name="Eye_Kill">Το θανάσιμο βλέμμα του %s σε σκότωσε...</string>
+  <string name="Eye_Kill">Το %s σε εξόντωσε με το θανάσιμο βλέμμα του...</string>
   <string name="Gnoll_Name">γκνολ ανιχνευτής</string>
   <string name="Gnoll_Gender">neuter</string>
   <string name="Gnoll_Name_Objective">γκνολ ανιχνευτής</string>
@@ -1295,7 +1295,7 @@
   <string name="Shaman_Gender">masculine</string>
   <string name="Shaman_Name_Objective">Σαμάνος γκνολ</string>
   <string name="Shaman_Desc">Τα γκνολ ανώτερης ευφυΐας εξειδικεύονται στη σαμανική μαγεία. Οι γκνολ σαμάνοι δείχνουν προτίμηση στα ξόρκια μάχης, μιας και υστερούν στη μυϊκή ρώμη. Δεν διστάζουν να τα χρησιμοποιούν σε αυτούς οι οποίοι αμφισβητούν τη θέση τους στη φυλή.</string>
-  <string name="Shaman_Killed">Ο %s σε σκότωσε με μια ριπή αστραπής...</string>
+  <string name="Shaman_Killed">Ο %s σε εξόντωσε με μια ριπή αστραπής...</string>
   <string name="Shielded_Name">πάνοπλο κτήνος</string>
   <string name="Shielded_Gender">neuter</string>
   <string name="Shielded_Name_Objective">πάνοπλο κτήνος</string>
@@ -1310,7 +1310,7 @@
   <string name="Spinner_Name">υφαντουργός σπηλαίων</string>
   <string name="Spinner_Gender">feminine</string>
   <string name="Spinner_Name_Objective">υφαντουργός σπηλαίων</string>
-  <string name="Spinner_Desc">Αυτές οι τριχωτές πρασινωπές αράχνες συνήθως αποφεύγουν την απευθείας μάχη. Προτιμούν να περιμένουν σε απόσταση, όσο το θύμα -καθηλωμένο στον ιστό τους- αργοπεθαίνει από το δηλητηριώδες δάγκωμά τους. </string>
+  <string name="Spinner_Desc">Αυτές οι τριχωτές πρασινωπές αράχνες συνήθως αποφεύγουν την απευθείας μάχη. Προτιμούν να περιμένουν σε απόσταση, όσο το θύμα --καθηλωμένο στον ιστό τους-- αργοπεθαίνει από το δηλητηριώδες δάγκωμά τους. </string>
   <string name="Statue_Name">Κινούμενο άγαλμα</string>
   <string name="Statue_Gender">neuter</string>
   <string name="Statue_Name_Objective">Κινούμενο άγαλμα</string>
@@ -1333,14 +1333,14 @@
   <string name="Thief_Name">τρελός κλέφτης</string>
   <string name="Thief_Gender">masculine</string>
   <string name="Thief_Name_Objective">τρελός κλέφτης</string>
-  <string name="Thief_Desc">Τα έγκατα της κατακόμβης ήταν πάντα το καταφύγιο κάθε λογής εγκληματιών. Δεν κατάφεραν όλοι να διατηρήσουν σώας τας φρένας, τόσο καιρό κρυμμένοι από το φως του ήλιου. Οι τρελοί ληστές και κακοποιοί έχουν ξεχάσει ποιοι είναι και γιατί κλέβουν, εδώ και πολύ καιρό.</string>
+  <string name="Thief_Desc">Τα έγκατα της κατακόμβης ήταν πάντοτε το καταφύγιο κάθε λογής εγκληματιών. Δεν κατάφεραν όλοι να διατηρήσουν σώας τας φρένας, έχοντας μείνει τόσο καιρό μακριά από το φως. Οι τρελοί ληστές και συμμορίτες έχουν ξεχάσει εδώ και πολύ καιρό ποιοι είναι και γιατί κλέβουν.</string>
   <string name="Thief_Stole">Ο %1$s σού έκλεψε: %2$s!</string>
   <string name="Thief_Carries">\n\nΟ %1$s κουβαλά: _%2$s._ Προφανώς κλεμμένο.</string>
   <string name="Warlock_Name">νάνος αρχιμάγος</string>
   <string name="Warlock_Gender">masculine</string>
   <string name="Warlock_Name_Objective">νάνος αρχιμάγος</string>
   <string name="Warlock_Desc">Όταν τα ενδιαφέροντα των νάνων στράφηκαν από τη μηχανική στις απόκρυφες τέχνες, οι αρχιμάγοι απέκτησαν δύναμη στην πόλη. Ξεκίνησαν με τη στοιχειακή μαγεία και σύντομα μεταστράφηκαν στη δαιμονολογία και τη νεκρομαντεία.</string>
-  <string name="Warlock_Killed">Η ριπή σκότους του %s σε εξόντωσε...</string>
+  <string name="Warlock_Killed">Ο %s σε εξόντωσε με μια ριπή σκότους...</string>
   <string name="Wraith_Name">στοιχειό</string>
   <string name="Wraith_Gender">neuter</string>
   <string name="Wraith_Name_Objective">στοιχειό</string>
@@ -1514,7 +1514,7 @@
   <string name="Badges_ItemLvl3">Αποκτήθηκε αντικείμενο επιπέδου 9 </string>
   <string name="Badges_ItemLvl4">Αποκτήθηκε αντικείμενο επιπέδου 12</string>
   <string name="Badges_RareAll">Εξοντώθηκαν όλοι οι σπάνιοι εχθροί </string>
-  <string name="Badges_Victory">Αποκτήθηκε το Φυλακτό του Yendor</string>
+  <string name="Badges_Victory">Αποκτήθηκε το Φυλακτό του Γέντορ</string>
   <string name="Badges_VictoryAll">Αποκτήθηκε το Φυλακτό του Γέντορ από κάθε κλάση</string>
   <string name="Badges_MasteryCombo">Διαδοχή 7 χτυπημάτων</string>
   <string name="Badges_PotionsCooked1">Παρασκευάστηκαν 3 φίλτρα</string>
@@ -1546,13 +1546,13 @@
   <string name="PumpkinPie_Name">κολοκυθόπιτα</string>
   <string name="PumpkinPie_Info">Μια πεντανόστιμη κολοκυθόπιτα, όπως την έκανε κι η μαμά σου.</string>
   <string name="RottenPumpkinPie_Name">σάπια κολοκυθόπιτα</string>
-  <string name="RottenPumpkinPie_Info">Άσχετα του πόσο καλή ήταν φρέσκια, δεν υπάρχει περίπτωση να τρώγεται πια.</string>
+  <string name="RottenPumpkinPie_Info">Άσχετα του πόσο καλή ήταν φρέσκια, δεν υπάρχει περίπτωση να τρώγεται πλέον.</string>
   <string name="CandleOfMindVision_Name">Κερί οραμάτων</string>
   <string name="CandleOfMindVision_Info">Μοιάζει με ένα απλό κερί, κάτι που δεν περίμενες να βρεις στην κατακόμβη. Είναι, παραδόξως, αρκετά ζεστό στο άγγιγμα, αν και δεν είναι αναμμένο.</string>
   <string name="CandleOfMindVision_Info_Lighted">Το κερί άναψε τη στιγμή που το έβγαλες από το σακίδιο. Η φλόγα του εκπέμπει ένα αχνό ιώδες φως, και, κοιτώντας μέσα της, όλα τα κοντινά τέρατα σου γίνονται ορατά.</string>
   <string name="CandleOfMindVision_Info_Exhausted">Το κερί έχει καεί και δεν ανάβει πια όταν το κρατάς. Φαίνεται πως δεν μπορείς να το χρησιμοποιήσεις άλλο.</string>
   <string name="Barrel_Name">βαρέλι</string>
-  <string name="Barrel_Desc">Μοιάζει με ένα απλό ξύλινο βαρέλι. Μα όσο το πλησιάζεις διακρίνεις μια ελαφρά οσμή λαδιού. Φαίνεται αρκετά ελαφρύ και λογικά μπορείς να το σπρώξεις.</string>
+  <string name="Barrel_Desc">Μοιάζει με ένα απλό ξύλινο βαρέλι. Μα όσο το πλησιάζεις, διακρίνεις μια ελαφριά οσμή λαδιού. Φαίνεται αρκετά ελαφρύ και λογικά μπορείς να το σπρώξεις.</string>
   <string name="Barrel_Pumpkin_Name">κολοκύθα</string>
   <string name="Barrel_Pumpkin_Desc">Είναι πολύ παράξενη και άβολη η θέα μια σκαλισμένης κολοκύθας στο έδαφος της κατακόμβης. Νιώθεις έναν ξεκάθαρο κίνδυνο γύρω από την παρουσία της. Αλλά μπορείς κάλλιστα να τη σπρώξεις, έτσι δεν είναι;</string>
   <string name="ScarecrowNPC_Name">σκιάχτρο</string>
@@ -1583,7 +1583,7 @@
   <string name="PlagueDoctorNPC_Quest_Start_Male">Μπα! Το πιστεύεις;! Αυτοί οι ηλίθιοι δεν έχουν καταλάβει ακόμα πόσο επικίνδυνοι είναι οι υπόνομοι! Λες και μπορούν οι φύλακες και οι εξερευνητές να προστατεύσουν την πόλη από οτιδήποτε. Χα! Κανένα όπλο δεν θα σταματήσει την εξάπλωση της επιδημίας. Αλλά χρειάζομαι πειστήρια. Μπορείς να με βοηθήσεις σε αυτό; Φέρε μου %d δέρματα αρουραίων για να επιτελέσω μερικά ακόμα πειράματα.</string>
   <string name="PlagueDoctorNPC_Quest_Start_Female">Μπα! Το πιστεύεις;! Αυτοί οι ηλίθιοι δεν έχουν καταλάβει ακόμα πόσο επικίνδυνοι είναι οι υπόνομοι! Λες και μπορούν οι φύλακες και οι εξερευνητές να προστατεύσουν την πόλη από οτιδήποτε. Χα! Κανένα όπλο δεν θα σταματήσει την εξάπλωση της επιδημίας. Αλλά χρειάζομαι πειστήρια. Μπορείς να με βοηθήσεις σε αυτό; Φέρε μου %d δέρματα αρουραίων για να επιτελέσω μερικά ακόμα πειράματα.</string>
   <string name="PlagueDoctorNPC_Quest_Reminder">Φέρε μου %d δέρματα αρουραίων.</string>
-  <string name="PlagueDoctorNPC_Quest_End">Α, ευχαριστώ! Ελπίζω αυτά τα δείγματα να έχουν ίχνη από την ασθένεια. Τα προηγούμενα ήταν τελείως αβλαβή. Ορίστε... σου έφτιαξα αυτό όσο περίμενα για τα νέα δείγματα.</string>
+  <string name="PlagueDoctorNPC_Quest_End">Α, ευχαριστώ! Ελπίζω αυτά τα δείγματα να έχουν ίχνη από την ασθένεια... τα προηγούμενα ήταν τελείως αβλαβή. Ορίστε· σου έφτιαξα αυτό όσο περίμενα για τα νέα δείγματα.</string>
   <string name="PlagueDoctorNPC_After_Quest">Θα τους δείξω εγώ! Θα τους δείξω σε όλους τους!</string>
   <string name="Journal_PlagueDoctorNPC">Γιατρός της επιδημίας</string>
   <string name="TownsfolkMovieNPC_Name">κάτοικος</string>
@@ -1637,7 +1637,7 @@
   <string name="TownGuardNPC_Desc">Ένας απλός φρουρός της πόλης.</string>
   <string name="TownGuardNPC_Message1">Προχώρα.</string>
   <string name="TownGuardNPC_Message2">Χάρη σε εξερευνητές όπως εσύ, είναι πολύ ειρηνικά εδώ πάνω.</string>
-  <string name="TownGuardNPC_Message3">Σου φαίνεται υπερβολικό να έχει τόσους φρουρούς η πόλη; Ίσως επειδή μόνο εδώ έχει μια γιγάντια κατακόμβη με τέρατα. Τι λες κι εσύ;</string>
+  <string name="TownGuardNPC_Message3">Σου φαίνεται υπερβολικό να έχει τόσους φρουρούς η πόλη; Ίσως επειδή είναι η μόνη πόλη με μια τεράστια κατακόμβη γεμάτη τέρατα. Τι λες κι εσύ;</string>
   <string name="TownsfolkNPC_Name">κάτοικος</string>
   <string name="TownsfolkNPC_Gender">masculine</string>
   <string name="TownsfolkNPC_Name_Objective">κάτοικος</string>
@@ -1750,7 +1750,7 @@
   <string name="ScrollOfRemoveCurse_Proced">Το σακίδιο εκπέμπει ένα εξαγνιστικό φως, και μια μοχθηρή ενέργεια διασκορπίζεται.</string>
   <string name="ScrollOfRemoveCurse_NoProced">Το σακίδιο λάμπει με εξαγνιστικό φως, αλλά δεν συνέβη κάτι.</string>
   <string name="ScrollOfTeleportation_Name">Πάπυρος τηλεμεταφοράς</string>
-  <string name="ScrollOfTeleportation_Info">Το ξόρκι αυτής της περγαμηνής τηλεμεταφέρει άμεσα τον αναγνώστη σε μια διαφορετική τοποθεσία του ορόφου. Μπορεί να χρησιμοποιηθεί για να ξεφύγεις από μια επικίνδυνη κατάσταση, αλλά ο άτυχος αναγνώστης μπορεί να βρεθεί σε ένα ακόμα πιο επικίνδυνο μέρος.</string>
+  <string name="ScrollOfTeleportation_Info">Το ξόρκι αυτής της περγαμηνής τηλεμεταφέρει άμεσα τον αναγνώστη σε ένα τυχαίο σημείο του ορόφου. Μπορεί να χρησιμοποιηθεί για να ξεφύγεις από μια επικίνδυνη κατάσταση -αλλά ένας άτυχος αναγνώστης μπορεί να βρεθεί σε ένα ακόμα πιο επικίνδυνο μέρος.</string>
   <string name="ScrollOfTeleportation_Teleport">Τηλεμεταφέρθηκες εν ριπή οφθαλμού σε ένα άλλο σημείο του ορόφου.</string>
   <string name="ScrollOfTeleportation_NoTeleport">Η ισχυρή μαγική αύρα αυτού του μέρους εμποδίζει την τηλεμεταφορά!</string>
   <string name="ScrollOfTerror_Name">Πάπυρος τρόμου</string>
@@ -1782,7 +1782,7 @@
   <string name="CompositeCrossbow_Name">Σύνθετη βαλλίστρα</string>
   <string name="CompositeCrossbow_Info">Αυτή η ενισχυμένη βαλλίστρα είναι ξεκάθαρα αποτελεσματικότερη σε σύγκριση με την ξύλινη.</string>
   <string name="CompositeCrossbow_Gender">feminine</string>
-  <string name="RubyCrossbow_Name">Ρουμπινένιο τόξο</string>
+  <string name="RubyCrossbow_Name">Ρουμπινένια βαλλίστρα</string>
   <string name="RubyCrossbow_Info">Αυτό το θανατηφόρο όπλο είναι ένα αριστούργημα της μηχανικής των νάνων.</string>
   <string name="RubyCrossbow_Gender">feminine</string>
   <string name="GothicArmor_Name">γοτθική πανοπλία</string>
@@ -1827,9 +1827,9 @@
   <string name="Imp_Name">φιλόδοξο δαιμόνιο</string>
   <string name="Imp_Desc">Τα δαιμόνια είναι κατώτεροι δαίμονες. Δεν είναι φημισμένα για τη δύναμη ή το μαγικό τους ταλέντο, αλλά είναι αρκετά έξυπνα και κοινωνικά. Πολλά δαιμόνια προτιμούν να ζουν ανάμεσα σε μη δαίμονες.</string>
   <string name="Imp_Defense">απέφυγε</string>
-  <string name="Imp_Golems1">Είσαι απ\' αυτούς τους εξερευνητές; Λατρεύω τους εξερευνητές! Μπορείς πάντα να βασιστείς πάνω τους όταν θέλεις κάτι να εξοντωθεί. Έχω δίκιο; Έναντι αμοιβής προφανώς. ;-)\nΣτην περίπτωσή μου έχω κάποια _γκόλεμ_ που πρέπει να σκοτωθούν. Θα ξεκινήσω, βλέπεις, μια μικρή επιχείρηση εδώ... Αλλά αυτά τα ηλίθια γκόλεμ μού μπαίνουν εμπόδιο! Πού να συνεννοηθείς με κινούμενα ντουβάρια... Την κατάρα μου να\' χουν! Γι\' αυτό, σκότωσε σε παρακαλώ... ας πούμε _6 απ\' αυτά_ και μια ανταμοιβή θα γίνει δική σου.</string>
+  <string name="Imp_Golems1">Είσαι απ\' αυτούς τους εξερευνητές; Λατρεύω τους εξερευνητές! Μπορείς πάντα να βασιστείς πάνω τους όταν θέλεις κάτι να εξοντωθεί. Έχω δίκιο; Έναντι αμοιβής προφανώς. ;-)\nΕγώ έχω κάποια _γκόλεμ_ που θέλω να σκοτωθούν. Θα ξεκινήσω, βλέπεις, μια μικρή επιχείρηση εδώ... Αλλά αυτά τα ηλίθια γκόλεμ μού μπαίνουν εμπόδιο! Πού να συνεννοηθείς με κινούμενα ντουβάρια... Την κατάρα μου να\' χουν! Γι\' αυτό, σκότωσε σε παρακαλώ... ας πούμε _6 απ\' αυτά_ και μια ανταμοιβή θα γίνει δική σου.</string>
   <string name="Imp_Golems2">Πώς πάει το σαφάρι σου στα γκόλεμ;</string>
-  <string name="Imp_Monks1">Είσαι απ\' αυτούς τους εξερευνητές; Λατρεύω τους εξερευνητές! Μπορείς πάντα να βασιστείς πάνω τους όταν θέλεις κάτι να εξοντωθεί. Έχω δίκιο; Έναντι αμοιβής προφανώς. ;-)\nΣτην περίπτωσή μου έχω κάποιους _μοναχούς_ που πρέπει να σκοτωθούν. Θα ξεκινήσω, βλέπεις, μια μικρή επιχείρηση εδώ... Αλλά αυτοί οι παλαβοί δεν αγοράζουν τίποτα και θα τρομάξουν και τους πελάτες μου. Γι\' αυτό, σκότωσε σε παρακαλώ... ας πούμε _8 απ\' αυτούς_ και μια ανταμοιβή θα γίνει δική σου.</string>
+  <string name="Imp_Monks1">Είσαι απ\' αυτούς τους εξερευνητές; Λατρεύω τους εξερευνητές! Μπορείς πάντα να βασιστείς πάνω τους όταν θέλεις κάτι να εξοντωθεί. Έχω δίκιο; Έναντι αμοιβής προφανώς. ;-)\nΕγώ έχω κάποιους _μοναχούς_ που θέλω να σκοτωθούν. Θα ξεκινήσω, βλέπεις, μια μικρή επιχείρηση εδώ... Αλλά αυτοί οι παλαβοί δεν αγοράζουν τίποτα και θα τρομάξουν και τους πελάτες μου. Γι\' αυτό, σκότωσε σε παρακαλώ... ας πούμε _8 απ\' αυτούς_ και μια ανταμοιβή θα γίνει δική σου.</string>
   <string name="Imp_Monks2">Α, ζεις ακόμα! Το ήξερα ότι το κουνγκ φου σου είναι καλύτερο ;-) Μόνο μη ξεχάσεις να μαζέψεις τα αναγνωριστικά των μοναχών.</string>
   <string name="Imp_Cya">%s! Τα λέμε!</string>
   <string name="Imp_Hey">%s! Πσιτ!</string>
@@ -1879,7 +1879,7 @@
   <string name="ZombieGnoll_Name">γκνολ-ζόμπι</string>
   <string name="ZombieGnoll_Gender">neuter</string>
   <string name="ZombieGnoll_Name_Objective">γκνολ-ζόμπι</string>
-  <string name="ZombieGnoll_Desc">Ένα διεστραμμένο, σπασμένο σώμα από ένα γκνολ-ζόμπι. Δεν θυμίζει πια ανθρωποειδές ή ύαινα. Το μόνο που απέμεινε είναι ένας σωρός από σάπια σάρκα και κόκκαλα. Και μια αποτρόπαια τάση να σκοτώνει και να κατασπαράζει.</string>
+  <string name="ZombieGnoll_Desc">Ένα διεστραμμένο και σπασμένο σώμα από κάποιο γκνολ-ζόμπι. Δεν θυμίζει πια ανθρωποειδές ή ύαινα. Το μόνο που απέμεινε είναι ένας σωρός από σάπια σάρκα και κόκκαλα. Και μια αποτρόπαια τάση να σκοτώνει και να κατασπαράζει.</string>
   <string name="Worm_Name">σκουλήκι</string>
   <string name="Worm_Gender">neuter</string>
   <string name="Worm_Name_Objective">σκουλήκι</string>
@@ -1933,21 +1933,21 @@
   <string name="Pasty_Info">Μια αυθεντική Κορνουαλική πίτα με παραδοσιακή γέμιση βοδινού και πατάτας.</string>
   <string name="PseudoPasty_Name">πίτα</string>
   <string name="PseudoPasty_Info">Μια αυθεντική Κορνουαλική πίτα με παραδοσιακή γέμιση βοδινού και πατάτας.</string>
-  <string name="ResultDescriptions_Mob">Εξοντώθηκες από: %1$s στο %2$dο επίπεδο</string>
-  <string name="ResultDescriptions_Boss">Εξοντώθηκες από: %1$s στο %2$dο επίπεδο</string>
-  <string name="ResultDescriptions_Wand">Εξοντώθηκες από το ίδιο σου το %1$s στο %2$dο επίπεδο</string>
-  <string name="ResultDescriptions_Glyph">Εξοντώθηκες από: %1$s στο %2$dο επίπεδο</string>
-  <string name="ResultDescriptions_Trap">Εξοντώθηκες από μια %1$s στο %2$dο επίπεδο</string>
-  <string name="ResultDescriptions_Burning">Απανθρακώθηκες στο %dο επίπεδο</string>
-  <string name="ResultDescriptions_Hunger">Λιμοκτόνησες στο %dο επίπεδο </string>
-  <string name="ResultDescriptions_Poison">Δηλητηριάστηκες στο %dο επίπεδο</string>
-  <string name="ResultDescriptions_Gas">Πέθανες από τοξικό αέριο στο %dο επίπεδο</string>
-  <string name="ResultDescriptions_Bleeding">Πέθανες από αιμορραγία στο %dο επίπεδο</string>
-  <string name="ResultDescriptions_Ooze">Έλιωσες από καυστική γλίτσα στο %dο επίπεδο</string>
-  <string name="ResultDescriptions_Fall">Πέθανες από πτώση στο %dο επίπεδο</string>
+  <string name="ResultDescriptions_Mob">Εξοντώθηκες από: %1$s στο επίπεδο #%2$d</string>
+  <string name="ResultDescriptions_Boss">Εξοντώθηκες από: %1$s στο επίπεδο #%2$d</string>
+  <string name="ResultDescriptions_Wand">Εξοντώθηκες από το ίδιο σου το %1$s στο επίπεδο #%2$d</string>
+  <string name="ResultDescriptions_Glyph">Εξοντώθηκες από: %1$s στο επίπεδο #%2$d</string>
+  <string name="ResultDescriptions_Trap">Εξοντώθηκες από μια %1$s στο επίπεδο #%2$d</string>
+  <string name="ResultDescriptions_Burning">Απανθρακώθηκες στο επίπεδο #%d</string>
+  <string name="ResultDescriptions_Hunger">Λιμοκτόνησες στο επίπεδο #%d</string>
+  <string name="ResultDescriptions_Poison">Δηλητηριάστηκες στο επίπεδο #%d</string>
+  <string name="ResultDescriptions_Gas">Πέθανες από τοξικό αέριο στο επίπεδο #%d</string>
+  <string name="ResultDescriptions_Bleeding">Πέθανες από αιμορραγία στο επίπεδο #%d</string>
+  <string name="ResultDescriptions_Ooze">Έλιωσες από καυστική γλίτσα στο επίπεδο #%d</string>
+  <string name="ResultDescriptions_Fall">Πέθανες από πτώση στο επίπεδο #%d</string>
   <string name="ResultDescriptions_Win">Απέκτησες το Φυλακτό του Γέντορ</string>
-  <string name="ResultDescriptions_Immured">Μαρμαρώθηκες στο %dο επίπεδο</string>
-  <string name="ResultDescriptions_Unknown">Πέθανες υπό μυστηριώδεις συνθήκες στο %dο επίπεδο </string>
+  <string name="ResultDescriptions_Immured">Μαρμαρώθηκες στο επίπεδο #%d</string>
+  <string name="ResultDescriptions_Unknown">Πέθανες υπό μυστηριώδεις συνθήκες στο επίπεδο #%d</string>
   <string name="Armor_EquipCursed">Η %s συσφίγγεται επίπονα πάνω σου.</string>
   <string name="Armor_Identify">Έχεις εξοικειωθεί αρκετά με την %1$s. Είναι %2$s.</string>
   <string name="Armor_ToString">%1$s: %2$d</string>
@@ -2171,7 +2171,7 @@
   <string name="PotionOfHealing_Info">Ένα ελιξίριο που θα σε επαναφέρει άμεσα σε πλήρη ζωή και θα θεραπεύσει τη δηλητηρίαση.</string>
   <string name="PotionOfHealing_Apply">Οι πληγές σου θεραπεύτηκαν πλήρως.</string>
   <string name="PotionOfInvisibility_Name">Φίλτρο της αορατότητας</string>
-  <string name="PotionOfInvisibility_Info">Πίνοντας αυτό το φίλτρο θα αποκτήσεις προσωρινή αορατότητα. Όσο έχεις αορατότητα, οι εχθροί δεν θα μπορούν να σε δουν. Αν επιτεθείς σε εχθρό, ή χρησιμοποιήσεις ραβδί ή πάπυρο μπροστά στα μάτια εχθρού, η επίδραση θα σπάσει.</string>
+  <string name="PotionOfInvisibility_Info">Πίνοντας αυτό το φίλτρο θα αποκτήσεις προσωρινή αορατότητα. Όσο έχεις αορατότητα, οι εχθροί δεν θα μπορούν να σε δουν. Η επίδραση θα σπάσει αν επιτεθείς σε εχθρό ή χρησιμοποιήσεις ραβδί ή πάπυρο μπροστά στα μάτια εχθρού.</string>
   <string name="PotionOfInvisibility_Apply">Βλέπεις τα χέρια σου να γίνονται αόρατα</string>
   <string name="PotionOfLevitation_Name">Φίλτρο αιώρησης</string>
   <string name="PotionOfLevitation_Info">Πίνοντας αυτό το παράξενο υγρό θα ίπτασαι στον αέρα και θα μπορείς να περνάς πάνω από παγίδες. Οι φλόγες και τα αέρια, όμως, κατακλύζουν τον αέρα· δεν μπορείς να τα αποφύγεις ενώ ίπτασαι.</string>
@@ -2220,7 +2220,7 @@
   <string name="KindOfBow_SelectArrowKind">Τι βέλη θέλω να χρησιμοποιήσω;</string>
   <string name="KindOfBow_ChooseArrows">ΕΠΙΛΕΞΕ ΤΑ ΒΕΛΗ</string>
   <string name="BodyArmorSpell_Name">Σωματική πανοπλία</string>
-  <string name="BodyArmorSpell_Info">Ενεργοποιεί το απόθεμα δύναμης των μυών σου και τους κάνει προσωρινά ισχυρότερους. Η τιμή άμυνας της πανοπλίας αυξάνεται κατά πολύ, με ένα κόστος στην ταχύτητα κίνησης.</string>
+  <string name="BodyArmorSpell_Info">Ενεργοποιεί το απόθεμα δύναμης των μυών σου και τους κάνει προσωρινά ισχυρότερους. Η αμυντική ισχύς αυξάνεται κατά πολύ, με ένα κόστος στην ταχύτητα κίνησης.</string>
   <string name="BodyArmorBuff_Name">Σωματική πανοπλία</string>
   <string name="BodyArmorBuff_Info">Η άμυνα της πανοπλίας αυξάνεται, με κόστος στην ταχύτητα κίνησης.</string>
   <string name="DieHardSpell_Name">Σκληρός για να πεθάνει</string>
@@ -2543,7 +2543,7 @@
   <string name="HeroClass_GnollPerks_1">Τα Γκνολ ξεκινούν με 5 ζωή.</string>
   <string name="HeroClass_GnollPerks_2">Τα Γκνολ ξεκινούν χωρίς πανοπλία, αλλά με ένα μοναδικό τόμαχωκ.</string>
   <string name="HeroClass_GnollPerks_3">Τα Γκνολ δεν ξέρουν να διαβάζουν και να γράφουν.</string>
-  <string name="HeroClass_GnollPerks_4">Τα Γκνολ δεν επιτίθενται σε άλλα γκνολ εκτός αν προκληθούν.</string>
+  <string name="HeroClass_GnollPerks_4">Τα άλλα γκνολ δεν επιτίθενται στο Γκνολ, εκτός αν προκληθούν.</string>
   <string name="Potion_Colors_0">τυρκουάζ</string>
   <string name="Potion_Colors_1">βυσσινί</string>
   <string name="Potion_Colors_2">μπλε</string>
@@ -2576,13 +2576,13 @@
   <string name="RoyalShield_desc">Μια αμιγώς μεταλλική ασπίδα. Ναι, είναι βαριά, αλλά σου προσφέρει τη μέγιστη προστασία.</string>
   <string name="ShieldInfoTemplate">Αυτή η ασπίδα έχει %2$d%% πιθανότητα να αποτρέψει έως και %1$d ζημιά. Απαιτεί %3$3.1f δευτερόλεπτα για να είναι έτοιμη μετά από μια επιτυχημένη απόκρουση.</string>
   <string name="Belongings_CantWearBoth">Δεν μπορείς να εξοπλίσεις τα εφόδια: %1$s και %2$s ταυτόχρονα!</string>
-  <string name="ShieldStrTemplate">Ο κάτοχος αυτής της ασπίδας πρέπει να έχει τουλάχιστον %1$d Δύναμη για να την χρησιμοποιήσει σωστά.</string>
+  <string name="ShieldStrTemplate">Ο κάτοχος αυτής της ασπίδας πρέπει να έχει τουλάχιστον %1$d δύναμη για να τη χρησιμοποιήσει σωστά.</string>
   <string name="town_deco_flowerinthepot_name">Λουλούδι στη γλάστρα</string>
   <string name="town_deco_flowerinthepot_desc">Διακοσμητικό λουλούδι με γλυκό άρωμα.</string>
   <string name="Mods_Disclaimer">
         Οι τροποποιήσεις δημιουργούνται από τους παίχτες για τους παίχτες.\n
-        Οι τροποποιήσεις μπορούν να αλλάξουν το παιχνίδι με απρόβλεπτους ή και παράξενους τρόπους. Έχετε προειδοποιηθεί!\n
-        Η ομάδα NYRDS δεν φέρει καμία απολύτως ευθύνη για το περιεχόμενο, την ποιότητα ή τη σταθερότητα των τροποποιήσεων.\n
+        Οι τροποποιήσεις μπορούν να αλλάξουν το παιχνίδι με απρόβλεπτους και παράξενους τρόπους. Έχετε προειδοποιηθεί!\n
+        Η ομάδα NYRDS δεν φέρει καμία απολύτως ευθύνη για το περιεχόμενο, την ποιότητα και τη σταθερότητα των τροποποιήσεων.\n
         Κατεβάστε τις με δική σας ευθύνη και καλή σας διασκέδαση!\n
   </string>
   <string name="ShieldWeaponInfo">Όταν χρησιμοποιείται ως όπλο, αυτή η ασπίδα προκαλεί %1$d ζημιά κατά μέσο όρο.</string>
@@ -2602,11 +2602,11 @@
   <string name="StartScene_DifficultyEasyNoAds">Εύκολο</string>
   <string name="StartScene_DifficultyNormalWithSavesNoAds">Κανονικό με αποθηκεύσεις</string>
   <string name="Backstab_Name">Πισώπλατο χτύπημα</string>
-  <string name="Backstab_Info">Ένα σιωπηλό χτύπημα από πίσω. Ανέντιμο, αλλά εξαιρετικά αποτελεσματικό. Η ζημιά του πισώπλατου χτυπήματος μεγαλώνει με το επίπεδο ικανότητας του εκτελεστή.\n\nΈνα επιτυχημένο πισώπλατο χτύπημα θα αγνοήσει εντελώς την πανοπλία και ειδικές αμυντικές ικανότητες.</string>
+  <string name="Backstab_Info">Ένα σιωπηλό χτύπημα από πίσω. Ανέντιμο, αλλά εξαιρετικά αποτελεσματικό. Η ζημιά του πισώπλατου χτυπήματος μεγαλώνει με το επίπεδο ικανότητας του εκτελεστή.\n\nΈνα επιτυχημένο πισώπλατο χτύπημα θα αγνοήσει εντελώς την πανοπλία, όπως και ειδικές αμυντικές ικανότητες.</string>
   <string name="Backstab_TooFar">Το θύμα είναι πολύ μακριά για επιτυχημένο χτύπημα.</string>
   <string name="Backstab_Aware">Το θύμα του πισώπλατου χτυπήματος δεν πρέπει να σε έχει υπ\' όψην του.</string>
-  <string name="KunaiThrow_Name">Ρίψη κουνάι</string>
-  <string name="KunaiThrow_Info">Αυτή η θανάσιμη ριπή του κουνάι θα γίνει απίστευτα γρήγορα· τόσο γρήγορα που δεν μπορείς ούτε να ορίσεις τον στόχο.\n\nΟι κύριοι αυτής της τέχνης μπορούν να πετάξουν πάνω από ένα κουνάι τη φορά.</string>
+  <string name="KunaiThrow_Name">Ριπή κουνάι</string>
+  <string name="KunaiThrow_Info">Αυτή η θανάσιμη ριπή του κουνάι θα γίνει απίστευτα γρήγορα· τόσο γρήγορα που δεν μπορείς ούτε να ορίσεις τον στόχο.\n\nΟι κύριοι αυτής της τέχνης μπορούν να πετούν πάνω από ένα κουνάι τη φορά.</string>
   <string name="Haste_Name">Άσβεστη φούρια</string>
   <string name="Haste_Info">Η φούρια επιτρέπει στον χρήστη να κινείται με τόσο απίστευτη ταχύτητα, που όλα γύρω του φαίνονται στάσιμα. Η φούρια καταναλώνει υπερβολική ενέργεια, γι\' αυτό και η χρήση της διαρκεί μόνο για λίγο.\n\nΟι μύστες μπορούν να μείνουν υπό την επήρεια της φούριας για μεγαλύτερο χρονικό διάστημα.</string>
   <string name="Welcome_Text_29_5">
@@ -2695,7 +2695,7 @@
   <string name="HideInGrassSpell_Name">Κάλυψη στα χόρτα</string>
   <string name="HideInGrassSpell_Info">Έχεις τελειοποιήσει την ειδικότητά σου στο κρυφτό.</string>
   <string name="HideInGrassSpell_NeedGrassToHide">Ούτε καν εγώ δεν μπορώ να κρυφτώ σε κοινή θέα.</string>
-  <string name="MagicArrow_Name">Μαγικό βέλος</string>
+  <string name="MagicArrow_Name">μαγικό βέλος</string>
   <string name="MagicArrow_Info">Ένα παλιό καλό μαγικό βέλος. Η σωστή επιλογή όταν σου τελειώσουν τα υπόλοιπα.</string>
   <string name="NatureArmorSpell_Name">Φυσική πανοπλία</string>
   <string name="NatureArmorSpell_Info">Τα ξωτικά μπορούν κι αυτά να γίνουν σκληρά, ειδικά αν προστατεύονται από τη μητέρα-φύση,</string>
@@ -2815,7 +2815,7 @@
   <string name="MoongraceBuff_Name">Ουράνια μαγεία</string>
   <string name="MoongraceBuff_Info">Ο αέρας αποκτά ανώτερη υγρασία, κάτι που αυξάνει τη συγκέντρωση και την ανάκτηση των μαγικών αποθεμάτων.</string>
   <string name="EncumbranceBuff_Name">Επιβάρυνση</string>
-  <string name="EncumbranceBuff_Info">Ανεπαρκής δύναμη για αποτελεσματική χρήση του εφοδίου «%s».</string>
+  <string name="EncumbranceBuff_Info">Μη επαρκής δύναμη για την αποτελεσματική χρήση του εφοδίου «%s».</string>
   <string name="Level_TileDescPedestal">Ένα μικρό βάθρο.</string>
   <string name="Level_TileDescWell"/>
   <string name="Welcome_Text_31_0">
@@ -2829,7 +2829,7 @@
   <string name="Level_TilePileOfStones">Σωρός βράχων</string>
   <string name="Level_TileDescPileOfStones">Ένας σωρός από εξαιρετικά βαριούς βράχους. Μοιάζει ακλόνητος.</string>
   <string name="WndSettingsInGame_IsometricTiles">Ισομετρικά τετράγωνα</string>
-  <string name="KrampusHead_Name">Κεφάλι του Κράμπους</string>
+  <string name="KrampusHead_Name">Κεφαλή του Κράμπους</string>
   <string name="KrampusHead_Info">Έχεις επιθυμήσει ποτέ να υιοθετήσεις έναν διαβολικό ρόλο στις εξερευνήσεις σου; Με αυτήν τη διαβολική αμφίεση, το μόνο βέβαιο είναι ότι θα σπείρεις τον τρόμο στα μωράκια των αρουραίων.</string>
   <string name="WndSettingsInGame_GameLog">Καταγραφή παιχνιδιού</string>
   <string name="Froth_ArrowInKnee">Κάποτε ήμουν κι εγώ εξερευνητής...\nΜέχρι που έφαγα βέλος στο γόνατο...</string>
@@ -2839,4 +2839,29 @@
   <string name="SpiderElite_Name_Objective">ανώτερος αραχνοφρουρός</string>
   <string name="SpiderElite_Desc">Όπως και οι στρατιώτες, έτσι και οι αραχνοφύλακες έχουν ορκιστεί να προστατεύουν το βασίλειό τους. Το δηλητήριο του ανώτερου αραχνοφρουρού αποπροσανατολίζει τον στόχο.</string>
   <string name="Shaman_ZapMiss">*Βρισιές στα Γκνολικά*</string>
+
+  <string name="Facilitations_Names_0">Χωρίς πείνα</string>
+  <string name="Facilitations_Names_1">Σώμα του τρολ</string>
+  <string name="Facilitations_Names_2">Πνεύμα του τζίνι</string>
+  <string name="Facilitations_Names_3">Δύναμη του γίγαντα</string>
+
+  <string name="Facilitations_Descriptions_0">Οι μεταλλαγμένοι πάντοτε αντιμετωπίζονταν με φόβο και καταφρόνηση. Η έλλειψη της πείνας, όμως, σου χαρίζει ξανά την υπεροχή· αυτή τη φορά στο να κατακτήσεις τα έγκατα της κατακόμβης.</string>
+  <string name="Facilitations_Descriptions_1">Παραμένει άγνωστο το ποιοι ήταν οι γονείς σου· αλλά η φυσική αναζωογόνηση των τρολ θα βοηθήσει στην επούλωση όλων των τραυμάτων από τις επερχόμενες μάχες.</string>
+  <string name="Facilitations_Descriptions_2">Μια βαθιά και διεισδυτική μελέτη της φύσης ως πηγή ενέργειας, η οποία σου επιτρέπει να αναπληρώνεις τα μαγικά σου αποθέματα κατά τη διάρκεια του ταξιδιού.</string>
+  <string name="Facilitations_Descriptions_3">Σφίγγεις τη ζώνη από δρακόντιο δέρμα, που έχει περαστεί από γενιά σε γενιά, και κάνεις ένα βήμα εμπρός προς το άγνωστο.</string>
+
+
+  <string name="Challenges_Descriptions_0">Το φαΐ και το νερό έχουν σαπίσει από καιρό, και κάθε εξερευνητής τρελαίνεται στην ιδέα του θανάτου από την πείνα. Είναι η διατροφή σου αρκετή για να αντέξεις;</string>
+  <string name="Challenges_Descriptions_1">Η καλύτερη άμυνα είναι η επίθεση. Με αυτήν τη διδασκαλία κατά νου εισχωρείς στην κατακόμβη, με την πίστη να αποτελεί τον ισχυρότερο φρουρό του σώματός σου.</string>
+  <string name="Challenges_Descriptions_2">Έχοντας ως πυλώνα τη φυσική αναζωογόνηση του σώματος, ποτέ δεν εμπιστευόσουν τα φίλτρα με θεραπευτικές ιδιότητες. Καλύτερα να έχουμε τον νου μας!</string>
+  <string name="Challenges_Descriptions_3">Η γη γύρω από την κατακόμβη έχει κατακυριευτεί από το κακό, κάτι που αποτρέπει την ανάπτυξη των σπόρων από διάφορα φυτά και βότανα. Ποιος ξέρει πόσο καιρό θα πάρει μέχρι να εξαφανιστεί κάθε ίχνος φυτού από την άγονη αυτή γη.</string>
+  <string name="Challenges_Descriptions_4">Μια διαβολική παρουσία ελλοχεύει στα πνεύματα όλων των πλασμάτων της κατακόμβης. Τα κάνει να έχουν συλλογική επίγνωση για κάθε γεγονός που λαμβάνει χώρα στην κατακόμβη.</string>
+  <string name="Challenges_Descriptions_5">Το πρώτο πράγμα που προέκυψε μαζί με το κακό ήταν μια πυκνή και αδιαπέραστη ομίχλη. Αυτό καθιστά σχεδόν αδύνατο τον προσανατολισμό στους ατελείωτους διαδρόμους της κατακόμβης.</string>
+  <string name="Challenges_Descriptions_6">Η αρχαία τέχνη της ανάγνωσης ρούνων έχει απαγορευτεί και αποφεύγεται με κάθε αντίτιμο. Σε αυτό ευθύνεται η κατάρα που έχει εγχυθεί σε κάθε πάπυρο, είτε εντός είτε στα περίχωρα της κατακόμβης.</string>
+  <string name="Challenges_Descriptions_7">Έχεις αποδεχτεί το γεγονός πως η κατοχή και η χρήση όπλων δεν είναι ηθικά ορθή. Τι θα σε προστατεύσει, όμως, από τα τέρατα που παραμονεύουν εκεί κάτω;</string>
+
+  <string name="ManaRegenerationBuff_Name">Αναπλήρωση μαγικής ενέργειας</string>
+  <string name="ManaRegenerationBuff_Info">Η λειτουργία αναπλήρωσης μαγικής ενέργειας είναι σε μορφή επίδρασης για διευκόλυνση.</string>
+  <string name="WndGame_Customizations">Προσαρμογές</string>
+
 </resources>
