@@ -7,6 +7,7 @@
 local RPD = require "scripts/lib/commonClasses"
 
 local gameScene = require "scripts.userServices.gameScene"
+local interlevelScene = require "scripts.userServices.interlevelScene"
 
 local GameControl = luajava.bindClass("com.nyrds.pixeldungeon.utils.GameControl")
 
@@ -90,6 +91,10 @@ end
 
 service.selectCell = function(self)
     gameScene.selectCell()
+end
+
+service.interlevel = function(self, mode, done)
+    return interlevelScene.onStep(mode, done)
 end
 
 return service

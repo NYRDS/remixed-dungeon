@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
+import com.nyrds.pixeldungeon.windows.WndTilesKind;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.util.StringsManager;
@@ -57,8 +58,6 @@ public class InterlevelScene extends PixelScene {
     public static Mode mode;
 
     public static Position returnTo;
-
-    public static boolean noStory = false;
 
     public static boolean fallIntoPit;
 
@@ -179,12 +178,11 @@ public class InterlevelScene extends PixelScene {
         }
 
         switch (phase) {
-
             case FADE_IN:
                 message.alpha(1 - p);
                 if ((timeLeft -= GameLoop.elapsed) <= 0) {
                     if (error == null && levelChanger.isDone()) {
-                        phase = Phase.FADE_OUT;
+                        phase = Phase.STATIC;
                         timeLeft = TIME_TO_FADE;
                     } else {
                         phase = Phase.STATIC;
@@ -205,7 +203,7 @@ public class InterlevelScene extends PixelScene {
                 break;
 
             case STATIC:
-                if (levelChanger.isDone()) {
+                if (script.runOptional("interlevel", true, mode.name(), levelChanger.isDone())) {
                     phase = Phase.FADE_OUT;
                 }
                 break;
@@ -220,15 +218,10 @@ public class InterlevelScene extends PixelScene {
         if (Dungeon.hero == null) {
             Dungeon.level = null;
             Dungeon.init();
-            if (noStory) {
-                Dungeon.chapters.add(WndStory.ID_SEWERS);
-                noStory = false;
-            }
         } else {
             Dungeon.onHeroLeaveLevel();
             Dungeon.save(false);
             followers = Level.mobsFollowLevelChange(Mode.DESCEND);
-
         }
 
         Position next;

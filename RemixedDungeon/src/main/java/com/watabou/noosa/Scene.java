@@ -62,15 +62,22 @@ public class Scene extends Group {
 		return null;
 	}
 
+	@LuaInterface
+	public void enumerateWindows() {
+		activeWindows.clear();
+		int windowIndex = -1;
+		while ((windowIndex = findByClass(Window.class, windowIndex + 1)) > 0) {
+			activeWindows.add((Window) getMember(windowIndex));
+		}
+	}
+
 	@Override
 	public void update() {
 		if(sceneMode.equals(Scene.LEVELS_TEST)) {
-			activeWindows.clear();
-			int windowIndex = -1;
-			while ((windowIndex = findByClass(Window.class, windowIndex + 1)) > 0) {
-				activeWindows.add((Window) getMember(windowIndex));
-			}
+			enumerateWindows();
 		}
+
+		//GLog.debug("%s activeWindows: %d", this.getClass().getSimpleName(), activeWindows.size());
 
 		totalGizmo = 0;
 		nullGizmo = 0;
