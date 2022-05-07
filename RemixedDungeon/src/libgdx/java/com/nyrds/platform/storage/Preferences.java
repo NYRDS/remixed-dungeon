@@ -24,13 +24,11 @@ public enum Preferences {
 
 	INSTANCE;
 
-	public static final String KEY_LANDSCAPE        = "landscape";
 	public static final String KEY_IMMERSIVE        = "immersive";
 	public static final String KEY_MUSIC            = "music";
 	public static final String KEY_SOUND_FX         = "soundfx";
 	public static final String KEY_ZOOM             = "zoom";
 	public static final String KEY_LAST_CLASS       = "last_class";
-	public static final String KEY_CHALLENGES       = "challenges";
 	public static final String KEY_DONATED          = "donated";
 	public static final String KEY_INTRO            = "intro";
 	public static final String KEY_BRIGHTNESS       = "brightness";
@@ -43,28 +41,27 @@ public enum Preferences {
 	public static final String KEY_REALTIME         = "realtime";
 	public static final String KEY_ACTIVE_MOD       = "active_mod";
 	public static final String KEY_COLLECT_STATS    = "collect_stats";
-	public static final String KEY_MOVE_TIMEOUT     = "move_timeout";
-	public static final String KEY_USE_PLAY_GAMES   = "use_play_games";
-	public static final String KEY_PLAY_GAMES_CONNECT_FAILURES   = "play_games_connect_failures";
+	public static final String KEY_MOVE_TIMEOUT = "move_timeout";
+	public static final String KEY_USE_PLAY_GAMES = "use_play_games";
 
-	public static final String KEY_UI_ZOOM        = "ui_zoom";
+	public static final String KEY_UI_ZOOM = "ui_zoom";
 	public static final String KEY_VERSION_STRING = "version_string";
-    public static final String KEY_TOOL_STYLE     = "tool_style";
-    public static final String KEY_HANDEDNESS     = "handedness";
+	public static final String KEY_TOOL_STYLE = "tool_style";
+	public static final String KEY_HANDEDNESS = "handedness";
 
 	public static final String KEY_EU_CONSENT_LEVEL = "eu_consent_level";
 	public static final String KEY_USE_ISOMETRIC_TILES = "use_isometric_tiles";
+	public static final String KEY_ISOMETRIC_TILES_PRESENTED = "isometric_tiles_presented";
 
-
-	private final Map<String, Integer> intCache    = new HashMap<>();
-	private final Map<String, String>  stringCache = new HashMap<>();
-	private final Map<String, Boolean> boolCache   = new HashMap<>();
-	private final Map<String, Double>  doubleCache = new HashMap<>();
+	private final Map<String, Integer> intCache = new HashMap<>();
+	private final Map<String, String> stringCache = new HashMap<>();
+	private final Map<String, Boolean> boolCache = new HashMap<>();
+	private final Map<String, Double> doubleCache = new HashMap<>();
 
 
 	public int getInt(String key, int defValue) {
 
-		if(intCache.containsKey(key)) {
+		if (intCache.containsKey(key)) {
 			return intCache.get(key);
 		}
 

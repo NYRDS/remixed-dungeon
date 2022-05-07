@@ -84,6 +84,14 @@ public class GamePreferences {
         return Preferences.INSTANCE.getBoolean(Preferences.KEY_INTRO, true);
     }
 
+    public static void isometricTilesPresented(boolean value) {
+        Preferences.INSTANCE.put(Preferences.KEY_ISOMETRIC_TILES_PRESENTED, value);
+    }
+
+    public static boolean isometricTilesPresented() {
+        return Preferences.INSTANCE.getBoolean(Preferences.KEY_ISOMETRIC_TILES_PRESENTED, false);
+    }
+
     public static String uiLanguage() {
         String deviceLocale = Locale.getDefault().getLanguage();
         EventCollector.setSessionData("device_locale", deviceLocale);
