@@ -15,7 +15,7 @@ public class Darkness extends Blob {
 		for (int pos=from; pos < to; pos++) {
 			if (cur[pos] > 0) {
 				off[pos] = cur[pos];
-				volume += off[pos];
+				setVolume(getVolume() + off[pos]);
 			} else {
 				off[pos] = 0;
 			}

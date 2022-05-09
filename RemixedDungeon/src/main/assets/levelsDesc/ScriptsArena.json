@@ -69,6 +69,12 @@
        },
        {
          "kind":"CustomObject",
+         "object_desc":"pot",
+         "x":8,
+         "y":17
+       },
+       {
+         "kind":"CustomObject",
          "object_desc":"well",
          "data": "WaterOfHealth",
          "x": 4,

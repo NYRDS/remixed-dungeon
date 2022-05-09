@@ -78,7 +78,7 @@ public class LiquidFlame extends Blob {
 					value = cur[pos]/2;
 				}
 				off[pos] = value;
-				volume += value;
+				setVolume(getVolume() + value);
 			}
 		}
 

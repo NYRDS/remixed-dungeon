@@ -75,7 +75,7 @@ public class Speck extends Image {
 
     private static TextureFilm film;
 
-    private static Map<Pair<Integer, Integer>, Emitter.Factory> factories = new HashMap<>();
+    private static final Map<Pair<Integer, Integer>, Emitter.Factory> factories = new HashMap<>();
 
     public Speck() {
         texture(Assets.SPECKS);

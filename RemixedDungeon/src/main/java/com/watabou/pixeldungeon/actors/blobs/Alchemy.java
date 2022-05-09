@@ -30,22 +30,15 @@ public class Alchemy extends Blob {
 
 	@Override
 	protected void evolve() {
-
-		volume = 0;
 		for (int i = 0;i<getLength();i++) {
-			volume += cur[i];
-			if (cur[i] > 0 && Dungeon.isCellVisible(i)) {
-				Journal.add(Journal.Feature.ALCHEMY.desc());
+			off[i] = cur[i];
+			if(cur[i]>0) {
+				setVolume(getVolume() + cur[i]);
+				if (Dungeon.isCellVisible(i)) {
+					Journal.add(Journal.Feature.ALCHEMY.desc());
+				}
 			}
 		}
-	}
-	
-	@Override
-	public void seed( int cell, int amount ) {
-		checkSeedCell(cell);
-		cur[cell] = amount;
-		volume += amount;
-
 	}
 
 	@LuaInterface

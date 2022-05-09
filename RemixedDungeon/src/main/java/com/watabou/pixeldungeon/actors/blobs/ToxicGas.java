@@ -55,10 +55,10 @@ public class ToxicGas extends Blob implements Doom {
 				int p = par[i];
 				
 				if (p >= t) {
-					volume -= t;
+					setVolume(getVolume() - t);
 					cur[i] = 0;
 				} else {
-					blob.volume -= p;
+					blob.setVolume(blob.getVolume() - p);
 					par[i] = 0;
 				}
 			}

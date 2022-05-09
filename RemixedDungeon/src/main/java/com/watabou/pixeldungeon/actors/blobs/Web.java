@@ -39,7 +39,7 @@ public class Web extends Blob {
 			
 			if (offv > 0) {
 				
-				volume += offv;
+				setVolume(getVolume() + offv);
 
 				Char ch = Actor.findChar( i );
 				boolean rootable = false;
@@ -71,7 +71,7 @@ public class Web extends Blob {
 		int diff = amount - cur[cell];
 		if (diff > 0) {
 			cur[cell] = amount;
-			volume += diff;
+			setVolume(getVolume() + diff);
 		}
 	}
 	

@@ -72,7 +72,7 @@ public class PotionOfPurity extends UpgradablePotion{
 					if (value > 0) {
 
 						blob.cur[i] = 0;
-						blob.volume -= value;
+						blob.setVolume(blob.getVolume() - value);
 						procd = true;
 
 						CellEmitter.get(i).burst(Speck.factory(Speck.DISCOVER), 1);

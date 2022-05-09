@@ -25,6 +25,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.BArray;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
@@ -32,7 +33,7 @@ import lombok.SneakyThrows;
 
 public class Blob extends Actor implements NamedEntityKind {
 
-	public int volume;
+	private int volume;
 
 	public    int[] cur;
 	protected int[] off;
@@ -47,7 +48,7 @@ public class Blob extends Actor implements NamedEntityKind {
 		cur = new int[getLength()];
 		off = new int[getLength()];
 
-		volume = 0;
+		setVolume(0);
 	}
 
 	private static final String CUR   = "cur";
@@ -57,7 +58,7 @@ public class Blob extends Actor implements NamedEntityKind {
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 
-		if (volume > 0) {
+		if (getVolume() > 0) {
 
 			int start;
 			for (start = 0; start < getLength(); start++) {
@@ -95,7 +96,7 @@ public class Blob extends Actor implements NamedEntityKind {
 		int start = bundle.getInt(START);
 		for (int i = 0; i < data.length; i++) {
 			cur[i + start] = data[i];
-			volume += data[i];
+			setVolume(getVolume() + data[i]);
 		}
 	}
 
@@ -104,9 +105,9 @@ public class Blob extends Actor implements NamedEntityKind {
 
 		spend(TICK);
 
-		if (volume > 0) {
+		if (getVolume() > 0) {
 
-			volume = 0;
+			setVolume(0);
 			evolve();
 
 			int[] tmp = off;
@@ -157,7 +158,7 @@ public class Blob extends Actor implements NamedEntityKind {
 					int value = sum >= count ? (sum / count) - 1 : 0;
 					off[pos] = value;
 
-					volume += value;
+					setVolume(getVolume() + value);
 				} else {
 					off[pos] = 0;
 				}
@@ -168,7 +169,7 @@ public class Blob extends Actor implements NamedEntityKind {
 	public void seed(int cell, int amount) {
 		checkSeedCell(cell);
 		cur[cell] += amount;
-		volume += amount;
+		setVolume(getVolume() + amount);
 	}
 
 	public void seed(int x,int y, int amount) {
@@ -176,7 +177,7 @@ public class Blob extends Actor implements NamedEntityKind {
 	}
 
 	public void clearBlob(int cell) {
-		volume -= cur[cell];
+		setVolume(getVolume() - cur[cell]);
 		cur[cell] = 0;
 	}
 
@@ -238,5 +239,14 @@ public class Blob extends Actor implements NamedEntityKind {
 		if(cell<0 || cell > this.cur.length) {
 			throw new ModError(Utils.format("Bad cell %d for blob %s", cell, getEntityKind()));
 		}
+	}
+
+	public int getVolume() {
+		return volume;
+	}
+
+	public void setVolume(int volume) {
+		//GLog.debug("%s blob %d", getEntityKind(), volume);
+		this.volume = volume;
 	}
 }
