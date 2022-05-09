@@ -1,6 +1,9 @@
 package com.nyrds.pixeldungeon.windows;
 
+import androidx.annotation.NonNull;
+
 import com.watabou.noosa.Gizmo;
+import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.utils.GLog;
 
 /**
@@ -105,5 +108,14 @@ public class VBox extends BasicBox {
                 break;
         }
         super.layout();
+    }
+
+    public void addRow(int maxWidth, HBox.Align align, @NonNull Gizmo ...elements) {
+        HBox box = new HBox(maxWidth);
+        box.setAlign(align);
+        for(Gizmo c : elements) {
+            box.add(c);
+        }
+        add(box);
     }
 }

@@ -16,6 +16,7 @@ public class TextButton extends Button {
 		super();
 		
 		text.text( label );
+		setSize(reqWidth() + 2, reqHeight() + 2 );
 	}
 	
 	@Override
