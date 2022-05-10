@@ -14,14 +14,11 @@ public class TextButton extends Button {
 	
 	public TextButton( String label ) {
 		super();
-		
 		text.text( label );
-		setSize(reqWidth() + 2, reqHeight() + 2 );
 	}
-	
+
 	@Override
 	protected void layout() {
-		
 		super.layout();
 		
 		bg.setX(x);
@@ -68,7 +65,11 @@ public class TextButton extends Button {
 			layout();
 		}
 	}
-	
+
+	public void autoSize() {
+		setSize(reqWidth() + 2, reqHeight() + 2 );
+	}
+
 	public float reqWidth() {
 		return text.width() + 4;
 	}

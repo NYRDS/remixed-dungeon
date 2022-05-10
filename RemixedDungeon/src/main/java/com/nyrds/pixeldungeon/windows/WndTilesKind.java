@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
@@ -41,6 +42,7 @@ public class WndTilesKind extends Window {
 				setTilesMode(true);
 			}
 		};
+		newTiles.autoSize();
 
 		RedButton classicTiles = new RedButton("Classic look") {
 			@Override
@@ -48,6 +50,8 @@ public class WndTilesKind extends Window {
 				setTilesMode(false);
 			}
 		};
+		classicTiles.autoSize();
+
 
 		vbox.addRow(WIDTH, HBox.Align.Width, newTiles, classicTiles);
 
@@ -57,6 +61,11 @@ public class WndTilesKind extends Window {
 		vbox.setSize(WIDTH,vbox.height() + 8);
 		vbox.layout();
 		resize((int) WIDTH, (int) vbox.height());
+	}
+
+	@LuaInterface
+	public boolean shownBefore() {
+		return Preferences.INSTANCE.getBoolean(Preferences.KEY_TILES_QUESTION_ASKED, false);
 	}
 
 	private void setTilesMode(boolean newTiles) {

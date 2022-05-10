@@ -20,7 +20,9 @@ interlevelScene.onStep = function(mode, done)
         if not tilesChoiceWindowShown then
             if activeWindow == nil then
                 local wnd = RPD.new("com.nyrds.pixeldungeon.windows.WndTilesKind")
-                RPD.RemixedDungeon:scene():add(wnd)
+                if not wnd:shownBefore() then
+                    RPD.RemixedDungeon:scene():add(wnd)
+                end
                 tilesChoiceWindowShown = true
             end
         else
