@@ -288,6 +288,12 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
+    public String imageFile() {
+        return script.runOptional("imageFile",super.imageFile());
+    }
+
+
+    @Override
     public boolean isFliesStraight() {
         return script.runOptional("isFliesStraight",super.isFliesStraight());
     }
