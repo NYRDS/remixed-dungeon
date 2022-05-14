@@ -160,6 +160,7 @@ public class GameScene extends PixelScene {
     private volatile boolean sceneCreated = false;
     private          float   waterSx      = 0, waterSy = -5;
     private boolean objectSortingRequested;
+    private boolean mapBuildingComplete = false;
 
 
     public void updateUiCamera() {
@@ -200,6 +201,7 @@ public class GameScene extends PixelScene {
     }
 
     public void createGameScene(@NotNull Level level, @NotNull Hero hero) {
+        mapBuildingComplete = false;
         playLevelMusic();
 
         LevelTools.upgradeMap(level);
@@ -439,16 +441,13 @@ public class GameScene extends PixelScene {
         LevelTools.upgradeMap(level); // Epic level gen compatibility
 
         for (var lo: level.getAllLevelObjects()) {
-            GLog.debug("creating lo: %s", lo.getEntityKind());
-
-            if(lo.getEntityKind().contains("ShadowTile")) {
-                GLog.debug("creating ShadowTile");
-            }
-
             lo.lo_sprite.clear();
             addLevelObjectSprite(lo);
             lo.addedToScene();
         }
+
+        mapBuildingComplete = true; // Epic level gen compatibility speedup
+        updateMap();
 
         fadeIn();
 
@@ -803,13 +802,13 @@ public class GameScene extends PixelScene {
     }
 
     public static void updateMap() {
-        if (isSceneReady()) {
+        if (isSceneReady() && scene.mapBuildingComplete) {
             scene.baseTiles.updateAll();
         }
     }
 
     public static void updateMap(int cell) {
-        if (isSceneReady()) {
+        if (isSceneReady() && scene.mapBuildingComplete) {
             final Level level = Dungeon.level;
             if(level.cellValid(cell)) {
                 scene.baseTiles.updateCell(cell, level);
