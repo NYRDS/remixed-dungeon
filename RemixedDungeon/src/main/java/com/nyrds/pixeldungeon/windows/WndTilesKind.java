@@ -60,7 +60,7 @@ public class WndTilesKind extends Window {
 		vbox.layout();
 		vbox.setSize(WIDTH,vbox.height() + 8);
 		vbox.layout();
-		resize((int) WIDTH, (int) vbox.height());
+		resize(WIDTH, (int) vbox.height());
 	}
 
 	@LuaInterface

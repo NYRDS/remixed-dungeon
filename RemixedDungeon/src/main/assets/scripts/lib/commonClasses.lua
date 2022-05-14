@@ -185,6 +185,7 @@ local RPD = {
     Effects = Effects,
     ItemUtils = ItemUtils,
     DungeonTilemap = luajava.bindClass("com.watabou.pixeldungeon.DungeonTilemap"),
+    ModdingMode = luajava.bindClass("com.nyrds.util.ModdingMode"),
 
     CharsList = CharsList,
     CharUtils = CharUtils,
