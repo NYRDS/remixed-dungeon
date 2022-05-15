@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
 import com.watabou.pixeldungeon.Challenges;
@@ -66,7 +67,7 @@ public abstract class MobAi implements AiState {
 
     @Override
     public String status(Char me) {
-        return Utils.format("This %s is %s", me.getName(), getTag());
+        return Utils.format(R.string.MobAi_status, me.getName(), getTag());
     }
 
     protected Char chooseNearestChar(@NotNull Mob me) {

@@ -2875,8 +2875,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     - Bugs fixed\n
     </string>
   <string name="WndTilesKind_Title">Just one more thing:</string>
-  <string name="WndTilesKind_text">You\'re about to enter Dungeon possessed by twisted magic, yet you now would chose how do you see it: Do you like it to be in modern pseudo 3d or classic flat view?\nYou will be able to change it later in game options menu.</string>
+  <string name="WndTilesKind_text">You\'re about to enter a Dungeon possessed by twisted magic, yet you now would choose how do you see it:\n Do you like it to be in modern pseudo 3d or classic flat view?\nYou will be able to change it later in game options menu.</string>
   <string name="WndTilesKind_NewLook">New Look</string>
   <string name="WndTilesKind_ClassicLook">Classic look</string>
+  <string name="MobAi_status">This %s is %s</string>
 
 </resources>
