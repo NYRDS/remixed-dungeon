@@ -1484,7 +1484,7 @@
   <string name="Badges_AllScrolls">Αναγνωρίστηκαν όλοι οι πάπυροι</string>
   <string name="Badges_AllRings">Αναγνωρίστηκαν όλα τα δαχτυλίδια</string>
   <string name="Badges_AllWands">Αναγνωρίστηκαν όλα τα ραβδιά</string>
-  <string name="Badges_AllItems">Αναγνωρίστηκε κάθε φίλτρο, πάπυρος, δαχτυλίδι & ραβδί</string>
+  <string name="Badges_AllItems">Αναγνωρίστηκε κάθε φίλτρο, πάπυρος, δαχτυλίδι &amp; ραβδί</string>
   <string name="Badges_AllBags">Αποκτήθηκαν όλοι οι αποθηκευτικοί χώροι</string>
   <string name="Badges_DeathFire">Θάνατος από φωτιά</string>
   <string name="Badges_DeathPoison">Θάνατος από δηλητήριο</string>
@@ -1492,7 +1492,7 @@
   <string name="Badges_DeathHunger">Θάνατος από την πείνα</string>
   <string name="Badges_DeathGlyph">Θάνατος από γλύφο</string>
   <string name="Badges_DeathFalling">Θάνατος από πτώση</string>
-  <string name="Badges_Yasd">Θάνατος απο φωτιά, δηλητήριο, τοξικό αέριο & πείνα</string>
+  <string name="Badges_Yasd">Θάνατος απο φωτιά, δηλητήριο, τοξικό αέριο &amp; πείνα</string>
   <string name="Badges_BossSlain1">Εξοντώθηκε το Γκου</string>
   <string name="Badges_BossSlain2">Εξοντώθηκε ο Τένγκου</string>
   <string name="Badges_BossSlain3">Εξοντώθηκε το DM-300</string>

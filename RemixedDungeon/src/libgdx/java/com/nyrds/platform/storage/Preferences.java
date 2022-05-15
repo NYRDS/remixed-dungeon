@@ -52,6 +52,7 @@ public enum Preferences {
 	public static final String KEY_EU_CONSENT_LEVEL = "eu_consent_level";
 	public static final String KEY_USE_ISOMETRIC_TILES = "use_isometric_tiles";
 	public static final String KEY_ISOMETRIC_TILES_PRESENTED = "isometric_tiles_presented";
+	public static final String KEY_TILES_QUESTION_ASKED = "tiles_question_asked";
 
 	private final Map<String, Integer> intCache = new HashMap<>();
 	private final Map<String, String> stringCache = new HashMap<>();
