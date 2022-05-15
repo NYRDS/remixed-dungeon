@@ -2841,18 +2841,14 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="SpiderElite_Name_Objective">spider elite guard</string>
   <string name="SpiderElite_Desc">Much like soldiers, spider guards are sworn to protect their kingdom. The elite guard\'s venom is used to disorient their target.</string>
   <string name="Shaman_ZapMiss">*Cusses in gnollish*</string>
-
   <string name="Facilitations_Names_0">No hunger</string>
   <string name="Facilitations_Names_1">Troll body</string>
   <string name="Facilitations_Names_2">Genie spirit</string>
   <string name="Facilitations_Names_3">Giant strength</string>
-
   <string name="Facilitations_Descriptions_0">Mutants have always been treated with contempt and fear, but the absence of hunger will once again give you superiority, this time in conquering the depths of the dungeon.</string>
   <string name="Facilitations_Descriptions_1">It is still not known who were your parents, but the natural troll-like regeneration will help mend all the upcoming battle scars.</string>
   <string name="Facilitations_Descriptions_2">A deep and thorough study of nature as a source of energy will allow you to replenish your magical reserves during the journey.</string>
   <string name="Facilitations_Descriptions_3">Tightening the belt made of ogre skin, which was passed down to each new generation, you make a step towards the unknown that lies ahead.</string>
-
-
   <string name="Challenges_Descriptions_0">The food and water had long gone rotten, driving every adventurer insane from thoughts of death by fear and hunger. Can your diet help you last long enough?</string>
   <string name="Challenges_Descriptions_1">One\'s offense is the best defense. Following these teachings, you venture into the dungeon, with faith being the strongest guardian of your body.</string>
   <string name="Challenges_Descriptions_2">As an adherent of the natural regeneration of the human body, you have always been wary of potions that have remedial properties. Better safe than sorry!</string>
@@ -2861,11 +2857,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Challenges_Descriptions_5">The first thing that came with evil, was a dense and  impenetrable fog, which makes it almost impossible to clearly navigate the endless hallways of the dungeon.</string>
   <string name="Challenges_Descriptions_6">The ancient art of rune reading is forbidden and avoided at all costs, due to the curse bestowed on each scroll that finds its way into the dungeon or its surroundings.</string>
   <string name="Challenges_Descriptions_7">You got used to the fact, that possession and use of weaponry is morally not right, yet what else can defend you from the creatures roaming down below?</string>
-
   <string name="ManaRegenerationBuff_Name">Mana Regeneration</string>
   <string name="ManaRegenerationBuff_Info">The function for mana regeneration is in a buff form to make things easier.</string>
   <string name="WndGame_Customizations">Customizations</string>
-
   <string name="Welcome_Text_31_1">
     remix.31.1\n
     - Gameplay:\n
@@ -2879,5 +2873,4 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndTilesKind_NewLook">New Look</string>
   <string name="WndTilesKind_ClassicLook">Classic look</string>
   <string name="MobAi_status">This %s is %s</string>
-
 </resources>

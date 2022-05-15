@@ -581,6 +581,7 @@
   <string name="OozeBuff_Name">腐蚀污泥</string>
   <string name="Ooze_Death">%s杀了你……</string>
   <string name="ParalysisBuff_Name">麻痹</string>
+  <string name="ParalysisBuff_Info">你完全麻痹了！</string>
   <string name="PoisonBuff_Name">中毒</string>
   <string name="Poison_Death">你中毒身亡…</string>
   <string name="RegenerationBuff_Name">自然回复</string>
