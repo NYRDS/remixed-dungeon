@@ -37,7 +37,7 @@ public class WndLibrary extends Window {
 		super();
 
 		//Title text
-        Text tfTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.WndLibrary_Catalogue_Title), GuiProperties.mediumTitleFontSize());
+        Text tfTitle = PixelScene.createMultiline(R.string.WndLibrary_Catalogue_Title, GuiProperties.mediumTitleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.maxWidth(WIDTH - GAP);
 		tfTitle.setX((WIDTH - tfTitle.width())/2);
@@ -45,7 +45,7 @@ public class WndLibrary extends Window {
 		add(tfTitle);
 
 		//Instruction text
-        Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndLibrary_Catalogue_Instruction), GuiProperties.mediumTitleFontSize() );
+        Text message = PixelScene.createMultiline(R.string.WndLibrary_Catalogue_Instruction, GuiProperties.mediumTitleFontSize() );
 		message.maxWidth(WIDTH);
 		message.setY(tfTitle.bottom()+ GAP);
 		add( message );
@@ -90,7 +90,7 @@ public class WndLibrary extends Window {
 		}
 
 		//Back Button
-        TextButton back = new RedButton(StringsManager.getVar(R.string.Wnd_Button_Back)) {
+        TextButton back = new RedButton(R.string.Wnd_Button_Back) {
 			@Override
 			protected void onClick() {
 				super.onClick();

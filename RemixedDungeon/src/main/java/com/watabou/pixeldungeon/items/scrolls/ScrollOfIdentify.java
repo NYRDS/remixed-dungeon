@@ -41,7 +41,7 @@ public class ScrollOfIdentify extends InventoryScroll {
 		GameScene.addToMobLayer( new Identification( ch.getSprite().center().offset( 0, -16 ) ) );
 
 		item.identify();
-        GLog.i(Utils.format(StringsManager.getVar(R.string.ScrollOfIdentify_Info1), item));
+        GLog.i(Utils.format(R.string.ScrollOfIdentify_Info1, item));
 
 		Badges.validateItemLevelAcquired( item );
 	}

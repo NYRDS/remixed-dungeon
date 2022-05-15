@@ -72,6 +72,6 @@ public class IronKey extends Key {
 	@NotNull
     @Override
 	public String toString() {
-        return Utils.format(StringsManager.getVar(R.string.IronKey_FromDepth), getDepth());
+        return Utils.format(R.string.IronKey_FromDepth, getDepth());
 	}
 }

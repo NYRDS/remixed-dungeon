@@ -2866,4 +2866,17 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ManaRegenerationBuff_Info">The function for mana regeneration is in a buff form to make things easier.</string>
   <string name="WndGame_Customizations">Customizations</string>
 
+  <string name="Welcome_Text_31_1">
+    remix.31.1\n
+    - Gameplay:\n
+    -- New Customizations!\n
+    -- New Spider kind!\n
+    -- Psi-Spider now will buff other spiders instead of debuffing Hero.\n
+    - Bugs fixed\n
+    </string>
+  <string name="WndTilesKind_Title">Just one more thing:</string>
+  <string name="WndTilesKind_text">You\'re about to enter Dungeon possessed by twisted magic, yet you now would chose how do you see it: Do you like it to be in modern pseudo 3d or classic flat view?\nYou will be able to change it later in game options menu.</string>
+  <string name="WndTilesKind_NewLook">New Look</string>
+  <string name="WndTilesKind_ClassicLook">Classic look</string>
+
 </resources>

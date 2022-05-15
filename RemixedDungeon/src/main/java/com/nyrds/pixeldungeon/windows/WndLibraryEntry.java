@@ -37,7 +37,7 @@ public class WndLibraryEntry extends Window {
 		int buttonY = (int) message.bottom()+ GAP;
 
 		//Back Button
-        TextButton back = new RedButton(StringsManager.getVar(R.string.Wnd_Button_Back)) {
+        TextButton back = new RedButton(R.string.Wnd_Button_Back) {
 			@Override
 			protected void onClick() {
 				super.onClick();

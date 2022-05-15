@@ -102,7 +102,7 @@ public class SummoningSpell extends Spell {
     }
 
     private String getLimitWarning(int limit){
-        return Utils.format(StringsManager.getVar(R.string.Spells_SummonLimitReached), this.name(), limit);
+        return Utils.format(R.string.Spells_SummonLimitReached, this.name(), limit);
     }
 
     public int getSummonLimit() {

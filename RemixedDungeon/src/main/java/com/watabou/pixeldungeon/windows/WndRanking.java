@@ -155,7 +155,7 @@ public class WndRanking extends WndTabbed {
 
 			IconTitle title = new IconTitle();
 			title.icon( heroSprite.avatar() );
-            title.label( Utils.format(StringsManager.getVar(R.string.WndRanking_StaTitle), hero.lvl(), heroClass ).toUpperCase( Locale.ENGLISH ) );
+            title.label( Utils.format(R.string.WndRanking_StaTitle, hero.lvl(), heroClass ).toUpperCase( Locale.ENGLISH ) );
 			title.setRect( 0, 0, WIDTH, 0 );
 			title.color(0xCC33FF);
 			add( title );
@@ -163,7 +163,7 @@ public class WndRanking extends WndTabbed {
 			float pos = title.bottom();
 			
 			if (Dungeon.getChallenges() > 0) {
-                RedButton btnCatalogus = new RedButton(StringsManager.getVar(R.string.WndRanking_StaChallenges)) {
+                RedButton btnCatalogus = new RedButton(R.string.WndRanking_StaChallenges) {
 					@Override
 					protected void onClick() {
 						GameLoop.addToScene( new WndGameplayCustomization( false ) );

@@ -55,7 +55,7 @@ public class Affection extends Glyph {
 
 	@Override
 	public String name(String weaponName) {
-        return Utils.format(StringsManager.getVar(R.string.Affection_Txt), weaponName);
+        return Utils.format(R.string.Affection_Txt, weaponName);
 	}
 
 	@Override

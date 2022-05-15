@@ -25,7 +25,7 @@ public class WndPlayGames extends Window {
         boolean playGamesConnected = Game.instance().playGames.isConnected();
         resizeLimited(120);
 
-        Text listTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.WndPlayGames_Title), GuiProperties.mediumTitleFontSize());
+        Text listTitle = PixelScene.createMultiline(R.string.WndPlayGames_Title, GuiProperties.mediumTitleFontSize());
         listTitle.hardlight(TITLE_COLOR);
         listTitle.maxWidth(width - GAP * 2);
         listTitle.setX((width - listTitle.width()) / 2);
@@ -62,7 +62,7 @@ public class WndPlayGames extends Window {
             return;
         }
 
-        addButton(new RedButton(StringsManager.getVar(R.string.WndPlayGames_Show_Badges)) {
+        addButton(new RedButton(R.string.WndPlayGames_Show_Badges) {
             @Override
             protected void onClick() {
                 super.onClick();
@@ -70,7 +70,7 @@ public class WndPlayGames extends Window {
             }
         });
 
-        addButton(new RedButton(StringsManager.getVar(R.string.WndPlayGames_Show_Leaderboards)) {
+        addButton(new RedButton(R.string.WndPlayGames_Show_Leaderboards) {
             @Override
             protected void onClick() {
                 super.onClick();
@@ -78,7 +78,7 @@ public class WndPlayGames extends Window {
             }
         });
 
-        addButton(new RedButton(StringsManager.getVar(R.string.WndPlayGames_BackupProgress)) {
+        addButton(new RedButton(R.string.WndPlayGames_BackupProgress) {
             @Override
             protected void onClick() {
                 super.onClick();
@@ -86,7 +86,7 @@ public class WndPlayGames extends Window {
             }
         });
 
-        addButton(new RedButton(StringsManager.getVar(R.string.WndPlayGames_RestoreProgress)) {
+        addButton(new RedButton(R.string.WndPlayGames_RestoreProgress) {
             @Override
             protected void onClick() {
                 super.onClick();
@@ -94,7 +94,7 @@ public class WndPlayGames extends Window {
             }
         });
 
-        addButton(new RedButton(StringsManager.getVar(R.string.WndSettings_RecordVideo)) {
+        addButton(new RedButton(R.string.WndSettings_RecordVideo) {
             @Override
             protected void onClick() {
                 super.onClick();

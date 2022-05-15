@@ -54,7 +54,7 @@ public class MasteryItem extends Item {
 
 		if (way == HeroSubClass.LICH) {
 			int penalty = 2;
-            GLog.w(Utils.format(StringsManager.getVar(R.string.Necromancy_BecameALich), penalty) );
+            GLog.w(Utils.format(R.string.Necromancy_BecameALich, penalty) );
 			hero.STR(hero.STR() - penalty);
 			hero.setMaxSkillPoints(hero.getSkillPointsMax() * 2);
 		}

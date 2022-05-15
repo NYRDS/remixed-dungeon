@@ -145,22 +145,22 @@ public class MissileWeapon extends Weapon {
 		
 		StringBuilder info = new StringBuilder( desc() );
 
-        info.append(Utils.format(StringsManager.getVar(R.string.MissileWeapon_Info1),MIN + (MAX - MIN) / 2));
+        info.append(Utils.format(R.string.MissileWeapon_Info1,MIN + (MAX - MIN) / 2));
 		info.append(" ");
 
 		final Char hero = Dungeon.hero;
 
 		if (hero.getBelongings().backpack.items.contains( this )) {
 			if (requiredSTR() > hero.effectiveSTR()) {
-                info.append(Utils.format(StringsManager.getVar(R.string.MissileWeapon_Info2), name));
+                info.append(Utils.format(R.string.MissileWeapon_Info2, name));
 			}
 			if (requiredSTR() < hero.effectiveSTR()) {
-                info.append(Utils.format(StringsManager.getVar(R.string.MissileWeapon_Info3), name));
+                info.append(Utils.format(R.string.MissileWeapon_Info3, name));
 			}
 		}
 		
 		if (isEquipped(hero)) {
-            info.append(Utils.format(StringsManager.getVar(R.string.MissileWeapon_Info4), name));
+            info.append(Utils.format(R.string.MissileWeapon_Info4, name));
 		}
 		
 		return info.toString();

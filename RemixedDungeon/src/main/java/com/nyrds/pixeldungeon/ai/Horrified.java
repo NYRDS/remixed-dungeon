@@ -56,12 +56,12 @@ public class Horrified extends MobAi implements AiState{
                 NamedEntityKind src = terror.getSource();
 
                 if (src instanceof Char) {
-                    return Utils.format(StringsManager.getVar(R.string.Mob_StaTerrorStatus2),
+                    return Utils.format(R.string.Mob_StaTerrorStatus2,
                             me.getName(), ((Char) src).getName_objective());
                 }
         }
 
-        return Utils.format(StringsManager.getVar(R.string.Mob_StaTerrorStatus),
+        return Utils.format(R.string.Mob_StaTerrorStatus,
                 me.getName());
     }
 }

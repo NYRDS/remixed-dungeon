@@ -154,7 +154,7 @@ public class SurfaceScene extends PixelScene {
 		frame.setY(vy - 9);
 		add( frame );
 
-        RedButton gameOver = new RedButton(StringsManager.getVar(R.string.SurfaceScene_GameOver)) {
+        RedButton gameOver = new RedButton(R.string.SurfaceScene_GameOver) {
 			protected void onClick() {
 				GameLoop.switchScene( TitleScene.class );
 			}

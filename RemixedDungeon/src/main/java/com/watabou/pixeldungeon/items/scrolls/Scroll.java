@@ -177,12 +177,12 @@ public abstract class Scroll extends Item implements UnknownItem {
 	
 	@Override
 	public String name() {
-        return isKnown() ? name : Utils.format(StringsManager.getVar(R.string.Scroll_Name), rune);
+        return isKnown() ? name : Utils.format(R.string.Scroll_Name, rune);
 	}
 	
 	@Override
 	public String info() {
-        return isKnown() ? desc() : Utils.format(StringsManager.getVar(R.string.Scroll_Info), rune);
+        return isKnown() ? desc() : Utils.format(R.string.Scroll_Info, rune);
 	}
 	
 	@Override

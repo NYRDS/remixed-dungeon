@@ -64,7 +64,7 @@ public class Multiplicity extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-        return Utils.format(StringsManager.getVar(R.string.Multiplicity_Txt), weaponName );
+        return Utils.format(R.string.Multiplicity_Txt, weaponName );
 	}
 
 	@Override

@@ -136,7 +136,7 @@ public class King extends Boss {
 		
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_4);
 
-        yell(Utils.format(StringsManager.getVar(R.string.King_Info1), Dungeon.hero.getHeroClass().title()));
+        yell(Utils.format(R.string.King_Info1, Dungeon.hero.getHeroClass().title()));
 	}
 	
 	private int maxArmySize() {

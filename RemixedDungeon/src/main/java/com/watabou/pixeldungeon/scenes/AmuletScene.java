@@ -50,7 +50,7 @@ public class AmuletScene extends PixelScene {
 		
 		Text text = null;
 		if (!noText) {
-            text = createMultiline(StringsManager.getVar(R.string.AmuletScene_Txt), GuiProperties.regularFontSize() );
+            text = createMultiline(R.string.AmuletScene_Txt, GuiProperties.regularFontSize() );
 			text.maxWidth(WIDTH);
 			add( text );
 		}
@@ -58,7 +58,7 @@ public class AmuletScene extends PixelScene {
 		amulet = new Image( Assets.AMULET );
 		add( amulet );
 
-        RedButton btnExit = new RedButton(StringsManager.getVar(R.string.AmuletScene_Exit)) {
+        RedButton btnExit = new RedButton(R.string.AmuletScene_Exit) {
 			@Override
 			protected void onClick() {
 				Dungeon.win( ResultDescriptions.getDescription(ResultDescriptions.Reason.WIN), Rankings.gameOver.WIN_AMULET );
@@ -69,7 +69,7 @@ public class AmuletScene extends PixelScene {
 		btnExit.setSize( WIDTH, BTN_HEIGHT );
 		add( btnExit );
 
-        RedButton btnStay = new RedButton(StringsManager.getVar(R.string.AmuletScene_Stay)) {
+        RedButton btnStay = new RedButton(R.string.AmuletScene_Stay) {
 			@Override
 			protected void onClick() {
 				onBackPressed();

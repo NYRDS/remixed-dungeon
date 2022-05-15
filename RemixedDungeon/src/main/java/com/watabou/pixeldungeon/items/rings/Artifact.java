@@ -48,6 +48,6 @@ public class Artifact extends EquipableItem {
 
 	@Override
 	public void equippedCursed() {
-        GLog.n(Utils.format(StringsManager.getVar(R.string.Ring_Info2), name()));
+        GLog.n(Utils.format(R.string.Ring_Info2, name()));
 	}
 }

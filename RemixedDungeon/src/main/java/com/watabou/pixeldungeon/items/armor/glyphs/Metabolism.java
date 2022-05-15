@@ -58,7 +58,7 @@ public class Metabolism extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-        return Utils.format(StringsManager.getVar(R.string.Metabolism_Txt), weaponName );
+        return Utils.format(R.string.Metabolism_Txt, weaponName );
 	}
 
 	@Override

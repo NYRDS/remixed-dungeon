@@ -55,7 +55,7 @@ public class Entanglement extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-        return Utils.format(StringsManager.getVar(R.string.Entanglement_Txt), weaponName );
+        return Utils.format(R.string.Entanglement_Txt, weaponName );
 	}
 
 	@Override

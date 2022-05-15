@@ -15,11 +15,11 @@ public class WndMovieTheatre extends WndQuest{
 
 	public WndMovieTheatre(final ServiceManNPC npc, int filmsSeen, int limit) {
 
-		super(npc, Utils.format(StringsManager.getVar(R.string.WndMovieTheatre_Instruction), ServiceManNPC.getReward().quantity()) + "\n\n" + Utils.format(StringsManager.getVar(R.string.WndMovieTheatre_Instruction_2), filmsSeen, limit));
+		super(npc, Utils.format(R.string.WndMovieTheatre_Instruction, ServiceManNPC.getReward().quantity()) + "\n\n" + Utils.format(StringsManager.getVar(R.string.WndMovieTheatre_Instruction_2), filmsSeen, limit));
 
 		float y = height + 2*GAP;
 
-		RedButton btnYes = new RedButton(StringsManager.getVar(R.string.WndMovieTheatre_Watch)) {
+		RedButton btnYes = new RedButton(R.string.WndMovieTheatre_Watch) {
 			@Override
 			protected void onClick() {
 				hide();
@@ -30,7 +30,7 @@ public class WndMovieTheatre extends WndQuest{
 		btnYes.setRect( 0, y + GAP, STD_WIDTH, BUTTON_HEIGHT);
 		add( btnYes );
 
-		RedButton btnNo = new RedButton(StringsManager.getVar(R.string.WndMovieTheatre_No)) {
+		RedButton btnNo = new RedButton(R.string.WndMovieTheatre_No) {
 			@Override
 			protected void onClick() {
 				npc.say(StringsManager.getVar(R.string.WndMovieTheatre_Bye));

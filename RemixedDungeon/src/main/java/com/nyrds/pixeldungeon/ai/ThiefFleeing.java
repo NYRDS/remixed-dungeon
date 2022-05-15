@@ -34,10 +34,10 @@ public class ThiefFleeing extends MobAi implements AiState {
     public String status(Char me) {
         Char enemy = me.getEnemy();
         if(enemy.valid()) {
-            return Utils.format(StringsManager.getVar(R.string.Mob_StaFleeingStatus2),
+            return Utils.format(R.string.Mob_StaFleeingStatus2,
                     me.getName(), enemy.getName_objective());
         }
-        return Utils.format(StringsManager.getVar(R.string.Mob_StaFleeingStatus),
+        return Utils.format(R.string.Mob_StaFleeingStatus,
                 me.getName());
     }
 

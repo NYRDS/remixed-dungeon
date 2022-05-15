@@ -56,7 +56,7 @@ public class AntiEntropy extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-        return Utils.format(StringsManager.getVar(R.string.AntiEntropy_Txt), weaponName );
+        return Utils.format(R.string.AntiEntropy_Txt, weaponName );
 	}
 
 	@Override

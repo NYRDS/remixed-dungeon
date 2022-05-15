@@ -41,7 +41,7 @@ public class Sleeping extends MobAi implements AiState {
 
     @Override
     public String status(Char me) {
-        return Utils.format(StringsManager.getVar(R.string.Mob_StaSleepingStatus),
+        return Utils.format(R.string.Mob_StaSleepingStatus,
                 me.getName());
     }
 }

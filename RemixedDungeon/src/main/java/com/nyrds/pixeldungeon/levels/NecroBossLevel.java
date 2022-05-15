@@ -127,7 +127,7 @@ public class NecroBossLevel extends BossLevel {
 		case Terrain.BOOKSHELF:
             return StringsManager.getVar(R.string.Halls_TileDescBookshelf);
             case Terrain.UNLOCKED_EXIT:
-                return Utils.format(StringsManager.getVar(R.string.PortalExit_Desc), StringsManager.getVar(R.string.PortalExit_Desc_Necropolis));
+                return Utils.format(R.string.PortalExit_Desc, StringsManager.getVar(R.string.PortalExit_Desc_Necropolis));
 		default:
 			return super.tileDesc( tile );
 		}

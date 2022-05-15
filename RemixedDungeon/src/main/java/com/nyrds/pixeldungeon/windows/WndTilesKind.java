@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
@@ -22,7 +23,7 @@ public class WndTilesKind extends Window {
 		vbox.setAlign(VBox.Align.Center);
 		vbox.setGap(4);
 
-		Text title = PixelScene.createMultiline("Just one more thing:", GuiProperties.titleFontSize());
+		Text title = PixelScene.createMultiline(R.string.WndTilesKind_Title, GuiProperties.titleFontSize());
 		title.maxWidth(WIDTH);
 
 		vbox.addRow(WIDTH, HBox.Align.Center, title);
@@ -31,12 +32,12 @@ public class WndTilesKind extends Window {
 		Image image = new Image("ui/xyz_tiles.png");
 		vbox.addRow(WIDTH, HBox.Align.Center, image);
 
-		Text info = PixelScene.createMultiline("You're about to enter Dungeon possessed by twisted magic, yet you now would chose how do you see it: Do you like it to be in modern pseudo 3d or classic flat view?\nYou will be able to change it later in game options menu.", GuiProperties.regularFontSize());
+		Text info = PixelScene.createMultiline(R.string.WndTilesKind_text, GuiProperties.regularFontSize());
 		info.maxWidth(WIDTH);
 
 		vbox.addRow(WIDTH, HBox.Align.Center, info);
 
-		RedButton newTiles = new RedButton("New Look") {
+		RedButton newTiles = new RedButton(R.string.WndTilesKind_NewLook) {
 			@Override
 			public void onClick() {
 				setTilesMode(true);
@@ -44,7 +45,7 @@ public class WndTilesKind extends Window {
 		};
 		newTiles.autoSize();
 
-		RedButton classicTiles = new RedButton("Classic look") {
+		RedButton classicTiles = new RedButton(R.string.WndTilesKind_ClassicLook) {
 			@Override
 			public void onClick() {
 				setTilesMode(false);

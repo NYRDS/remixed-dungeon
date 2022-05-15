@@ -86,7 +86,7 @@ public class WndCatalogus extends WndTabbed {
 
 	private void updateList() {
 
-        txtTitle.text(Utils.format(StringsManager.getVar(R.string.WndCatalogus_Title), showPotions ?
+        txtTitle.text(Utils.format(R.string.WndCatalogus_Title, showPotions ?
                 StringsManager.getVar(R.string.WndCatalogus_Potions) : StringsManager.getVar(R.string.WndCatalogus_Scrolls)));
 		txtTitle.setX(PixelScene.align(PixelScene.uiCamera, (width - txtTitle.width()) / 2));
 

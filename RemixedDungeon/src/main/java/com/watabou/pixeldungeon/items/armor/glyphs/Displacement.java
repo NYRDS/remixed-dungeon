@@ -58,7 +58,7 @@ public class Displacement extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-        return Utils.format(StringsManager.getVar(R.string.Displacement_Txt), weaponName );
+        return Utils.format(R.string.Displacement_Txt, weaponName );
 	}
 
 	@Override

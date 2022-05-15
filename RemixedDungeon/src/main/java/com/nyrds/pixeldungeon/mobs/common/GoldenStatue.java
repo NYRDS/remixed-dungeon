@@ -22,7 +22,7 @@ public class GoldenStatue extends Statue {
 
 	@Override
 	public String getDescription() {
-        return Utils.format(StringsManager.getVar(R.string.GoldenStatue_Desc), getItem().name());
+        return Utils.format(R.string.GoldenStatue_Desc, getItem().name());
 	}
 
 	@NotNull

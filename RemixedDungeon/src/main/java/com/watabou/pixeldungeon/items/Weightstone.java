@@ -118,7 +118,7 @@ public class Weightstone extends Item {
 			titlebar.setRect( 0, 0, WIDTH, 0 );
 			add( titlebar );
 
-            Text tfMesage = PixelScene.createMultiline( Utils.format(StringsManager.getVar(R.string.Weightstone_WndChoice), weapon.name() ), GuiProperties.regularFontSize());
+            Text tfMesage = PixelScene.createMultiline( Utils.format(R.string.Weightstone_WndChoice, weapon.name() ), GuiProperties.regularFontSize());
 			tfMesage.maxWidth(WIDTH - GAP * 2);
 			tfMesage.setX(GAP);
 			tfMesage.setY(titlebar.bottom() + GAP);
@@ -127,7 +127,7 @@ public class Weightstone extends Item {
 			float pos = tfMesage.getY() + tfMesage.height();
 			
 			if (weapon.imbue != Weapon.Imbue.SPEED) {
-                RedButton btnSpeed = new RedButton(StringsManager.getVar(R.string.Weightstone_WndSpeed)) {
+                RedButton btnSpeed = new RedButton(R.string.Weightstone_WndSpeed) {
 					@Override
 					protected void onClick() {
 						hide();
@@ -141,7 +141,7 @@ public class Weightstone extends Item {
 			}
 			
 			if (weapon.imbue != Weapon.Imbue.ACCURACY) {
-                RedButton btnAccuracy = new RedButton(StringsManager.getVar(R.string.Weightstone_WndAccuracy)) {
+                RedButton btnAccuracy = new RedButton(R.string.Weightstone_WndAccuracy) {
 					@Override
 					protected void onClick() {
 						hide();
@@ -154,7 +154,7 @@ public class Weightstone extends Item {
 				pos = btnAccuracy.bottom();
 			}
 
-            RedButton btnCancel = new RedButton(StringsManager.getVar(R.string.Weightstone_WndCancel)) {
+            RedButton btnCancel = new RedButton(R.string.Weightstone_WndCancel) {
 				@Override
 				protected void onClick() {
 					hide();

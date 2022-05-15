@@ -95,7 +95,7 @@ public class WndModDescription extends Window {
 			place(description);
 		}
 
-        RedButton btn = new RedButton(StringsManager.getVar(R.string.Mods_RestartRequired)) {
+        RedButton btn = new RedButton(R.string.Mods_RestartRequired) {
 			@Override
 			protected void onClick() {
 				switchSaves(option, prevMod);

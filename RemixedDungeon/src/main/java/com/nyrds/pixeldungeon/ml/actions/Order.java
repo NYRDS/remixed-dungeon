@@ -56,12 +56,12 @@ public class Order extends CharAction {
                 return;
             }
 
-            target.say(Utils.format(StringsManager.getVar(R.string.Mob_CantDoIt)));
+            target.say(Utils.format(R.string.Mob_CantDoIt));
         }
 
         @Override
         public String prompt() {
-            return Utils.capitalize(Utils.format(StringsManager.getVar(R.string.Mob_ReadyForOrder), target.getName()));
+            return Utils.capitalize(Utils.format(R.string.Mob_ReadyForOrder, target.getName()));
         }
 
         @Override

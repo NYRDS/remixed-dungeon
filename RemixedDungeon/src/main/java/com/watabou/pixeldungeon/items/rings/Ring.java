@@ -126,20 +126,20 @@ public class Ring extends Artifact implements UnknownItem{
 	
 	@Override
 	public String name() {
-        return isKnown() ? name : Utils.format(StringsManager.getVar(R.string.Ring_Name), gem);
+        return isKnown() ? name : Utils.format(R.string.Ring_Name, gem);
 	}
 	
 	@Override
 	public String desc() {
-        return Utils.format(StringsManager.getVar(R.string.Ring_Info), gem);
+        return Utils.format(R.string.Ring_Info, gem);
 	}
 	
 	@Override
 	public String info() {
 		if (isEquipped( Dungeon.hero )) {
-            return Utils.format(StringsManager.getVar(R.string.Ring_Info3a), desc(), name(), (isCursed() ? StringsManager.getVar(R.string.Ring_Info3b) : "."));
+            return Utils.format(R.string.Ring_Info3a, desc(), name(), (isCursed() ? StringsManager.getVar(R.string.Ring_Info3b) : "."));
 		} else if (isCursed() && isCursedKnown()) {
-            return Utils.format(StringsManager.getVar(R.string.Ring_Info4), desc(), name());
+            return Utils.format(R.string.Ring_Info4, desc(), name());
 		} else {
 			return desc();
 		}

@@ -41,7 +41,7 @@ public class WelcomeScene extends PixelScene {
 			updTexts[i] = createMultiline(GuiProperties.regularFontSize());
 		}
 
-        Text title = createMultiline(StringsManager.getVar(R.string.Welcome_Title), GuiProperties.bigTitleFontSize());
+        Text title = createMultiline(R.string.Welcome_Title, GuiProperties.bigTitleFontSize());
 
 		int w = Camera.main.width;
 		int h = Camera.main.height;

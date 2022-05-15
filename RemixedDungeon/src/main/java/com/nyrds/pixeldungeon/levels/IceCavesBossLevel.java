@@ -174,7 +174,7 @@ public class IceCavesBossLevel extends BossLevel {
 			case Terrain.STATUE_SP:
                 return StringsManager.getVar(R.string.IceCaves_TileDescStatue);
             case Terrain.UNLOCKED_EXIT:
-                return Utils.format(StringsManager.getVar(R.string.PortalExit_Desc), StringsManager.getVar(R.string.PortalExit_Desc_IceCaves));
+                return Utils.format(R.string.PortalExit_Desc, StringsManager.getVar(R.string.PortalExit_Desc_IceCaves));
 			default:
 				return super.tileDesc( tile );
 		}

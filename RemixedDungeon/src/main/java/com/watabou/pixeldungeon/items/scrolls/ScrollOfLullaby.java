@@ -58,7 +58,7 @@ public class ScrollOfLullaby extends Scroll {
             GLog.i(StringsManager.getVar(R.string.ScrollOfLullaby_Info1));
 			break;
 		case 1:
-            GLog.i(Utils.format(StringsManager.getVar(R.string.ScrollOfLullaby_Info2), affected.getName()));
+            GLog.i(Utils.format(R.string.ScrollOfLullaby_Info2, affected.getName()));
 			break;
 		default:
             GLog.i(StringsManager.getVar(R.string.ScrollOfLullaby_Info3));

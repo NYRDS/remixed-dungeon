@@ -58,7 +58,7 @@ public class ServiceManNPC extends ImmortalNPC {
         }
 
         if (filmsSeen >= getLimit()) {
-            GameScene.show(new WndQuest(this, Utils.format(StringsManager.getVar(R.string.ServiceManNPC_Limit_Reached), getLimit())));
+            GameScene.show(new WndQuest(this, Utils.format(R.string.ServiceManNPC_Limit_Reached, getLimit())));
             return true;
         }
 

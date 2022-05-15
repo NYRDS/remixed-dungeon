@@ -59,7 +59,7 @@ public class WndBlacksmith extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 
-        Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndBlacksmith_Prompt), GuiProperties.regularFontSize());
+        Text message = PixelScene.createMultiline(R.string.WndBlacksmith_Prompt, GuiProperties.regularFontSize());
 		message.maxWidth(WIDTH);
 		message.setY(titlebar.bottom() + GAP);
 		add( message );
@@ -84,7 +84,7 @@ public class WndBlacksmith extends Window {
 		btnItem2.setRect( btnItem1.right() + BTN_GAP, btnItem1.top(), BTN_SIZE, BTN_SIZE );
 		add( btnItem2 );
 
-        btnReforge = new RedButton(StringsManager.getVar(R.string.WndBlacksmith_Reforge)) {
+        btnReforge = new RedButton(R.string.WndBlacksmith_Reforge) {
 			@Override
 			protected void onClick() {
 				Blacksmith.upgrade( btnItem1.item, btnItem2.item );

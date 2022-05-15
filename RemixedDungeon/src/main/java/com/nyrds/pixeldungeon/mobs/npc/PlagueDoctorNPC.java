@@ -64,13 +64,13 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 				Quest.complete();
                 GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.PlagueDoctorNPC_Quest_End)));
 			} else {
-                GameScene.show(new WndQuest(this, (Utils.format(StringsManager.getVar(R.string.PlagueDoctorNPC_Quest_Reminder), 5)) ) );
+                GameScene.show(new WndQuest(this, (Utils.format(R.string.PlagueDoctorNPC_Quest_Reminder, 5)) ) );
 			}
 
 		} else {
-            String txtQuestStart = Utils.format(StringsManager.getVar(R.string.PlagueDoctorNPC_Quest_Start_Male), 5);
+            String txtQuestStart = Utils.format(R.string.PlagueDoctorNPC_Quest_Start_Male, 5);
 			if (hero.getGender() == Utils.FEMININE) {
-                txtQuestStart = Utils.format(StringsManager.getVar(R.string.PlagueDoctorNPC_Quest_Start_Female), 5);
+                txtQuestStart = Utils.format(R.string.PlagueDoctorNPC_Quest_Start_Female, 5);
 			}
 			GameScene.show(new WndQuest(this, txtQuestStart));
 			Quest.process(hero.getPos());

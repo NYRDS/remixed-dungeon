@@ -66,7 +66,7 @@ public class Moongrace extends Plant {
 		{
             plantName = StringsManager.getVar(R.string.Moongrace_Name);
 
-            name = Utils.format(StringsManager.getVar(R.string.Plant_Seed), plantName);
+            name = Utils.format(R.string.Plant_Seed, plantName);
 			image = 8;
 
 			plantClass = Moongrace.class;
