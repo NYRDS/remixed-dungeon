@@ -35,7 +35,7 @@ public class ImpShopkeeper extends Shopkeeper {
     public boolean act() {
 
 		if (!seenBefore && CharUtils.isVisible(this)) {
-            say( Utils.format(StringsManager.getVar(R.string.ImpShopkeeper_Greetings)) );
+            say( Utils.format(R.string.ImpShopkeeper_Greetings) );
 			seenBefore = true;
 		}
 		

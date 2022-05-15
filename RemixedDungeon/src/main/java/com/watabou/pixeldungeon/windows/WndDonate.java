@@ -97,18 +97,17 @@ public class WndDonate extends WndTabbed {
 				add(donate.setRect(0 ,height - BUTTON_HEIGHT, width, BUTTON_HEIGHT));
 			}
 
-            Text commonText = PixelScene.createMultiline(
-                    StringsManager.getVar(R.string.WndDonate_commonDonateText), GuiProperties.regularFontSize());
+            Text commonText = PixelScene.createMultiline(R.string.WndDonate_commonDonateText, GuiProperties.regularFontSize());
 			commonText.maxWidth(width);
 			commonText.setPos(0, pos);
 			add(commonText);
 			pos += commonText.height() + GAP;
 
-            final String[] text = {
-                    StringsManager.getVar(R.string.WndDonate_silverDonateText),
-                    StringsManager.getVar(R.string.WndDonate_goldDonateText),
-                    StringsManager.getVar(R.string.WndDonate_rubyDonateText),
-                    StringsManager.getVar(R.string.WndDonate_royalDonateText)
+            final int[] text = {
+                    R.string.WndDonate_silverDonateText,
+                    R.string.WndDonate_goldDonateText,
+                    R.string.WndDonate_rubyDonateText,
+                    R.string.WndDonate_royalDonateText
 			};
 
 			Text tabText = PixelScene.createMultiline(
@@ -120,11 +119,11 @@ public class WndDonate extends WndTabbed {
 			
 			pos += tabText.height() + GAP;
 
-            final String[] text2 = {
-                    StringsManager.getVar(R.string.WndDonate_silverDonateText2),
-                    StringsManager.getVar(R.string.WndDonate_goldDonateText2),
-                    StringsManager.getVar(R.string.WndDonate_rubyDonateText2),
-                    StringsManager.getVar(R.string.WndDonate_royalDonateText2)
+            final int[] text2 = {
+                    R.string.WndDonate_silverDonateText2,
+                    R.string.WndDonate_goldDonateText2,
+                    R.string.WndDonate_rubyDonateText2,
+                    R.string.WndDonate_royalDonateText2
 			};
 
 			Text tabText2 = PixelScene.createMultiline(

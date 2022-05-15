@@ -36,7 +36,7 @@ public abstract class WndEuConsent extends Window {
         titlebar.setSize(WIDTH, 0 );
         vbox.add( titlebar );
 
-        Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.gdpr_text), GuiProperties.regularFontSize() );
+        Text message = PixelScene.createMultiline(R.string.gdpr_text, GuiProperties.regularFontSize() );
         message.maxWidth(WIDTH);
         vbox.add( message );
 

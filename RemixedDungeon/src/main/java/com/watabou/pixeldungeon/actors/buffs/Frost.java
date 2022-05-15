@@ -42,7 +42,7 @@ public class Frost extends FlavourBuff {
 
 		public String actionText(Item srcItem) {
 			if(srcItem instanceof Potion) {
-                return Utils.format(StringsManager.getVar(R.string.Frost_Shatter), srcItem.toString());
+                return Utils.format(R.string.Frost_Shatter, srcItem.toString());
 			}
 			return null;
 		}

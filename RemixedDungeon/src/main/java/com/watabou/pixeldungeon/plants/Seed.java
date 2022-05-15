@@ -107,7 +107,7 @@ public class Seed extends Item {
 
     @Override
     public String info() {
-        return Utils.format(StringsManager.getVar(R.string.Plant_Info), Utils.indefinite(plantName), desc());
+        return Utils.format(R.string.Plant_Info, Utils.indefinite(plantName), desc());
     }
 
     @Override

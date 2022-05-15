@@ -46,13 +46,13 @@ public class WndSelectLanguage extends Window {
 		tfTitle.maxWidth(maxW);
 		add(tfTitle);
 
-        Text pleaseHelpTranslate = PixelScene.createMultiline(StringsManager.getVar(R.string.WndSelectLanguage_ImproveTranslation), GuiProperties.titleFontSize());
+        Text pleaseHelpTranslate = PixelScene.createMultiline(R.string.WndSelectLanguage_ImproveTranslation, GuiProperties.titleFontSize());
 		pleaseHelpTranslate.maxWidth(maxW);
 		pleaseHelpTranslate.setX(GAP);
 		pleaseHelpTranslate.setY(tfTitle.getY() + tfTitle.height() + GAP);
 		add(pleaseHelpTranslate);
 
-        Text translateLink = PixelScene.createMultiline(StringsManager.getVar(R.string.WndSelectLanguage_LinkToTranslationSite), GuiProperties.titleFontSize());
+        Text translateLink = PixelScene.createMultiline(R.string.WndSelectLanguage_LinkToTranslationSite, GuiProperties.titleFontSize());
 		translateLink.hardlight(TITLE_COLOR);
 		translateLink.maxWidth(maxW);
 		translateLink.setX(GAP);

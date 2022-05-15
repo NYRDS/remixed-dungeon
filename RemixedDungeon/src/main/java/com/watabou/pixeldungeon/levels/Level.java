@@ -370,9 +370,12 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int getViewDistance() {
-		if (viewDistance == 0) {
-			viewDistance = rollViewDistance();
+		if (isSafe()) {
+			viewDistance = ShadowCaster.MAX_DISTANCE;
+		} else {
+			viewDistance = Dungeon.isChallenged(Challenges.DARKNESS) ? 1 : viewDistance;
 		}
+
 		viewDistance = DungeonGenerator.getLevelProperty(levelId, "viewDistance", viewDistance);
 		viewDistance = Math.min(viewDistance, ShadowCaster.MAX_DISTANCE);
 		return viewDistance;
@@ -442,7 +445,7 @@ public abstract class Level implements Bundlable {
 	public boolean[] mapped;
 
 	@Packable
-	protected int viewDistance;
+	protected int viewDistance = ShadowCaster.MAX_DISTANCE;
 
 	//Active Char fov
 	public boolean[] fieldOfView;
@@ -1960,14 +1963,6 @@ public abstract class Level implements Bundlable {
 
 	public boolean isStatic() {
 		return DungeonGenerator.isStatic(levelId);
-	}
-
-	private int rollViewDistance() {
-		if (isSafe()) {
-			return 8;
-		} else {
-			return Dungeon.isChallenged(Challenges.DARKNESS) ? 2 : Random.Int(3, 8);
-		}
 	}
 
 	public void addScriptedActor(ScriptedActor actor) {

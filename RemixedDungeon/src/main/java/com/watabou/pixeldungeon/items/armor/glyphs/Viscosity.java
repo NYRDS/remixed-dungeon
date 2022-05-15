@@ -69,7 +69,7 @@ public class Viscosity extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-        return Utils.format(StringsManager.getVar(R.string.Viscosity_Txt), weaponName );
+        return Utils.format(R.string.Viscosity_Txt, weaponName );
 	}
 
 	@Override

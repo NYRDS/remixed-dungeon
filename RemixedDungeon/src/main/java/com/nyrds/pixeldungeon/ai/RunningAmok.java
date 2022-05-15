@@ -43,7 +43,7 @@ public class RunningAmok extends MobAi implements AiState {
 
     @Override
     public String status(Char me) {
-        return Utils.format(StringsManager.getVar(R.string.Mob_StaAmokStatus),
+        return Utils.format(R.string.Mob_StaAmokStatus,
                 me.getName());
     }
 }

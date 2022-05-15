@@ -44,7 +44,7 @@ public class WndHats extends Window {
 
 		//"Equipped Accessory" slot
 		//Title
-        Text slotTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.WndHats_SlotTitle) + equippedName, GuiProperties.titleFontSize());
+        Text slotTitle = PixelScene.createMultiline(R.string.WndHats_SlotTitle + equippedName, GuiProperties.titleFontSize());
 		slotTitle.hardlight(0xFFFFFF);
 		slotTitle.maxWidth(WIDTH - GAP * 2);
 		slotTitle.setX((WIDTH - slotTitle.width()) / 2);
@@ -56,7 +56,7 @@ public class WndHats extends Window {
 		add(slot);
 
 		//Unequip Button
-        TextButton sb = new RedButton(StringsManager.getVar(R.string.WndHats_UnequipButton)) {
+        TextButton sb = new RedButton(R.string.WndHats_UnequipButton) {
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -72,7 +72,7 @@ public class WndHats extends Window {
 
 		//List of Accessories
 		//Title
-        Text listTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.WndHats_ListTitle), GuiProperties.titleFontSize());
+        Text listTitle = PixelScene.createMultiline(R.string.WndHats_ListTitle, GuiProperties.titleFontSize());
 		listTitle.hardlight(TITLE_COLOR);
 		listTitle.maxWidth(WIDTH - GAP * 2);
 		listTitle.setX((WIDTH - listTitle.width()) / 2);

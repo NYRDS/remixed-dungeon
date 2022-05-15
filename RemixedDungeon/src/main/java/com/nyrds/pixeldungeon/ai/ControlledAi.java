@@ -86,6 +86,6 @@ public class ControlledAi extends MobAi implements AiState {
 
     @Override
     public String status(Char me) {
-        return Utils.format(StringsManager.getVar(R.string.Mob_StaControlledStatus), me.name());
+        return Utils.format(R.string.Mob_StaControlledStatus, me.name());
     }
 }

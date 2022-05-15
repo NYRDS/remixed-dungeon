@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
 
 public class WellWater extends Blob {
 
@@ -47,7 +46,7 @@ public class WellWater extends Blob {
 	
 	@Override
 	protected void evolve() {
-		volume = off[pos] = cur[pos];
+		setVolume(off[pos] = cur[pos]);
 		
 		if (Dungeon.isCellVisible(pos)) {
 			if (this instanceof WaterOfAwareness) {
@@ -68,7 +67,7 @@ public class WellWater extends Blob {
 		final Hero hero = Dungeon.hero;
 
 		if (pos == hero.getPos() && affectHero(hero)) {
-			volume = off[pos] = cur[pos] = 0;
+			setVolume(off[pos] = cur[pos] = 0);
 			return true;
 			
 		} else {
@@ -89,7 +88,7 @@ public class WellWater extends Blob {
 						}
 					}
 					heap.sprite.link();
-					volume = off[pos] = cur[pos] = 0;
+					setVolume(off[pos] = cur[pos] = 0);
 					return true;
 				} else {
 					ItemUtils.throwItemAway(pos);
@@ -114,6 +113,6 @@ public class WellWater extends Blob {
 		checkSeedCell(cell);
 		cur[pos] = 0;
 		pos = cell;
-		volume = cur[pos] = amount;
+		setVolume(cur[pos] = amount);
 	}
 }

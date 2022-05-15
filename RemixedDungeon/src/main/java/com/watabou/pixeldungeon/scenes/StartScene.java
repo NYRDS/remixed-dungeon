@@ -291,7 +291,7 @@ public class StartScene extends PixelScene {
         if (info != null) {
 
             btnLoad.setVisible(true);
-            btnLoad.secondary(Utils.format(StringsManager.getVar(R.string.StartScene_Depth), info.depth,
+            btnLoad.secondary(Utils.format(R.string.StartScene_Depth, info.depth,
                     info.level));
 
             btnNewGame.setVisible(true);

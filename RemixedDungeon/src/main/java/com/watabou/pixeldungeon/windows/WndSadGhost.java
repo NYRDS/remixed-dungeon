@@ -52,14 +52,14 @@ public class WndSadGhost extends Window {
 		add( titlebar );
 
         Text message = PixelScene.createMultiline(
-				item instanceof DriedRose ? StringsManager.getVar(R.string.WndSadGhost_Rose) : StringsManager.getVar(R.string.WndSadGhost_Rat),
+				item instanceof DriedRose ? R.string.WndSadGhost_Rose : R.string.WndSadGhost_Rat,
 				GuiProperties.regularFontSize()
 		);
 		message.maxWidth(WIDTH);
 		message.setY(titlebar.bottom() + GAP);
 		add( message );
 
-        RedButton btnWeapon = new RedButton(StringsManager.getVar(R.string.WndSadGhost_Wepon)) {
+        RedButton btnWeapon = new RedButton(R.string.WndSadGhost_Wepon) {
 			@Override
 			protected void onClick() {
 				selectReward( ghost, item, Ghost.Quest.getWeapon());
@@ -68,7 +68,7 @@ public class WndSadGhost extends Window {
 		btnWeapon.setRect( 0, message.getY() + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnWeapon );
 
-        RedButton btnArmor = new RedButton(StringsManager.getVar(R.string.WndSadGhost_Armor)) {
+        RedButton btnArmor = new RedButton(R.string.WndSadGhost_Armor) {
 			@Override
 			protected void onClick() {
 				selectReward( ghost, item, Ghost.Quest.getArmor());

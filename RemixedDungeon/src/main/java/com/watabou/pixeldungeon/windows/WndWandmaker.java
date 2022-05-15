@@ -48,12 +48,12 @@ public class WndWandmaker extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 
-        Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndWandmaker_Message), GuiProperties.regularFontSize() );
+        Text message = PixelScene.createMultiline(R.string.WndWandmaker_Message, GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.setY(titlebar.bottom() + GAP);
 		add( message );
 
-        RedButton btnBattle = new RedButton(StringsManager.getVar(R.string.WndWandmaker_Battle)) {
+        RedButton btnBattle = new RedButton(R.string.WndWandmaker_Battle) {
 			@Override
 			protected void onClick() {
 				selectReward( wandmaker, item, WandMaker.makeBattleWand() );
@@ -62,7 +62,7 @@ public class WndWandmaker extends Window {
 		btnBattle.setRect( 0, message.getY() + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnBattle );
 
-        RedButton btnNonBattle = new RedButton(StringsManager.getVar(R.string.WndWandmaker_NonBattle)) {
+        RedButton btnNonBattle = new RedButton(R.string.WndWandmaker_NonBattle) {
 			@Override
 			protected void onClick() {
 				selectReward( wandmaker, item, WandMaker.makeNonBattleWand() );
@@ -86,7 +86,7 @@ public class WndWandmaker extends Window {
 			reward.doDrop(wandmaker);
 		}
 
-        wandmaker.say(Utils.format(StringsManager.getVar(R.string.WndWandmaker_Farawell), Dungeon.hero.className() ) );
+        wandmaker.say(Utils.format(R.string.WndWandmaker_Farawell, Dungeon.hero.className() ) );
 		wandmaker.destroy();
 		
 		wandmaker.getSprite().die();

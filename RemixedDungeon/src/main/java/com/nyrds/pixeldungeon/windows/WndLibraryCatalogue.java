@@ -87,7 +87,7 @@ public class WndLibraryCatalogue extends Window {
 		list.setRect(0, topGap, WIDTH, HEIGHT - BottomGap);
 
 		//Back Button
-        TextButton back = new RedButton(StringsManager.getVar(R.string.Wnd_Button_Back)) {
+        TextButton back = new RedButton(R.string.Wnd_Button_Back) {
 			@Override
 			protected void onClick() {
 				super.onClick();

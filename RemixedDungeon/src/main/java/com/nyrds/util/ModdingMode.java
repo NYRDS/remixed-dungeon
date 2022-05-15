@@ -1,6 +1,7 @@
 package com.nyrds.util;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.Assets;
@@ -189,6 +190,7 @@ public class ModdingMode {
 		return !mActiveMod.equals(REMIXED);
 	}
 
+	@LuaInterface
 	public static boolean inRemixed() {return dlcSet.contains(mActiveMod); }
 
 	public static boolean isResourceExists(String resName) {

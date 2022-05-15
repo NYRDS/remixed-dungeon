@@ -97,14 +97,14 @@ public class MeleeWeapon extends Weapon {
         String degraded = StringsManager.getVar(R.string.MeleeWeapon_Info1d);
 		String quality = isLevelKnown() && level() != 0 ? (level() > 0 ? upgraded : degraded) : typical;
 		info.append(p);
-        info.append(Utils.capitalize(Utils.format(StringsManager.getVar(R.string.MeleeWeapon_Info1a), name, quality, tier)));
+        info.append(Utils.capitalize(Utils.format(R.string.MeleeWeapon_Info1a, name, quality, tier)));
 		info.append(" ");
 
 		final Hero hero = Dungeon.hero;
 		if (isLevelKnown()) {
-            info.append(Utils.format(StringsManager.getVar(R.string.MeleeWeapon_Info2a), (MIN + (MAX - MIN) / 2)));
+            info.append(Utils.format(R.string.MeleeWeapon_Info2a, (MIN + (MAX - MIN) / 2)));
 		} else {
-            info.append(Utils.format(StringsManager.getVar(R.string.MeleeWeapon_Info2b), (min() + (max() - min()) / 2), typicalSTR()));
+            info.append(Utils.format(R.string.MeleeWeapon_Info2b, (min() + (max() - min()) / 2), typicalSTR()));
 			if (typicalSTR() > hero.effectiveSTR()) {
                 info.append(" ").append(StringsManager.getVar(R.string.MeleeWeapon_Info2c));
 			}

@@ -55,7 +55,7 @@ public class Burning extends Buff implements Doom {
 		}
 		@Override
 		public String actionText(Item srcItem) {
-            return Utils.format(StringsManager.getVar(R.string.Burning_Burns), srcItem.toString());
+            return Utils.format(R.string.Burning_Burns, srcItem.toString());
 		}
 	}
 		

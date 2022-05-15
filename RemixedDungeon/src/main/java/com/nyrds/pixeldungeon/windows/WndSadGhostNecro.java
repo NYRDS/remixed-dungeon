@@ -30,12 +30,12 @@ public class WndSadGhostNecro extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 
-        Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndSadGhostNecro_Text), GuiProperties.regularFontSize() );
+        Text message = PixelScene.createMultiline(R.string.WndSadGhostNecro_Text, GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.setY(titlebar.bottom() + GAP);
 		add( message );
 
-        RedButton btnWeapon = new RedButton(StringsManager.getVar(R.string.WndSadGhostNecro_Yes)) {
+        RedButton btnWeapon = new RedButton(R.string.WndSadGhostNecro_Yes) {
 			@Override
 			protected void onClick() {
                 GLog.w(StringsManager.getVar(R.string.WndSadGhostNecro_Persuaded));
@@ -46,7 +46,7 @@ public class WndSadGhostNecro extends Window {
 		btnWeapon.setRect( 0, message.getY() + message.height() + GAP, WIDTH, BTN_HEIGHT );
 		add( btnWeapon );
 
-        RedButton btnArmor = new RedButton(StringsManager.getVar(R.string.WndSadGhostNecro_No)) {
+        RedButton btnArmor = new RedButton(R.string.WndSadGhostNecro_No) {
 			@Override
 			protected void onClick() {
 				persuade = false;

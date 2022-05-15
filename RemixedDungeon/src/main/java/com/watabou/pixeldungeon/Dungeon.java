@@ -309,6 +309,7 @@ public class Dungeon {
         }
 
         hero.levelId = level.levelId;
+        hero.setViewDistance(level.getViewDistance());
 
         if (level.cellValid(pos)) {
             hero.setPos(pos);

@@ -251,7 +251,7 @@ public class Potion extends Item implements UnknownItem {
 	}
 
 	public void shatter( int cell ) {
-        GLog.i(Utils.format(StringsManager.getVar(R.string.Potion_Shatter), color()));
+        GLog.i(Utils.format(R.string.Potion_Shatter, color()));
 		Sample.INSTANCE.play( Assets.SND_SHATTER );
 		splash( cell );
 	}
@@ -280,12 +280,12 @@ public class Potion extends Item implements UnknownItem {
 	
 	@Override
 	public String name() {
-        return isKnown() ? name : Utils.format(StringsManager.getVar(R.string.Potion_Name), color);
+        return isKnown() ? name : Utils.format(R.string.Potion_Name, color);
 	}
 	
 	@Override
 	public String info() {
-        return isKnown() ? desc() : Utils.format(StringsManager.getVar(R.string.Potion_Info), color);
+        return isKnown() ? desc() : Utils.format(R.string.Potion_Info, color);
 	}
 	
 	@Override

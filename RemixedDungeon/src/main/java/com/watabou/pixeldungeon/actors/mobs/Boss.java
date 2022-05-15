@@ -26,6 +26,7 @@ abstract public class Boss extends Mob {
 		addResistance(Death.class);
 		addResistance(ScrollOfPsionicBlast.class);
 		maxLvl = 50;
+		isBoss = true;
 	}
 
 	@Override

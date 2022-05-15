@@ -61,7 +61,7 @@ public class WndInfoItem extends Window {
                 info = StringsManager.getVar(R.string.WndInfoItem_Remains);
 			} else if (heap.type == Type.CRYSTAL_CHEST) {
                 title = StringsManager.getVar(R.string.WndInfoItem_CrystalChest);
-                info = Utils.format(StringsManager.getVar(R.string.WndInfoItem_Inside), Utils.indefinite( heap.peek().name() ) );
+                info = Utils.format(R.string.WndInfoItem_Inside, Utils.indefinite( heap.peek().name() ) );
 			} else {
                 title = StringsManager.getVar(R.string.WndInfoItem_LockedChest);
                 info = StringsManager.getVar(R.string.WndInfoItem_WontKnow) +" "+ StringsManager.getVar(R.string.WndInfoItem_NeedKey);

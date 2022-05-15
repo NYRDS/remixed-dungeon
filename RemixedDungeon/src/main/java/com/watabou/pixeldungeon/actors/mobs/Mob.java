@@ -645,7 +645,7 @@ public abstract class Mob extends Char {
 
 	public void loot(Object loot, float lootChance) {
 
-		if(Dungeon.hero.lvl() > maxLvl + 2 + lvl()) {
+		if(Dungeon.hero.lvl() > maxLvl + 2 + lvl() && !isBoss) {
 			return;
 		}
 

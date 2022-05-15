@@ -39,10 +39,10 @@ public class KillOrder extends MobAi implements AiState {
     @Override
     public String status(Char me) {
         if (me.getEnemy().valid()) {
-            return Utils.format(StringsManager.getVar(R.string.Mob_StaHuntingStatus2),
+            return Utils.format(R.string.Mob_StaHuntingStatus2,
                     me.getName(), me.getEnemy().getName_objective());
         }
-        return Utils.format(StringsManager.getVar(R.string.Mob_StaHuntingStatus),
+        return Utils.format(R.string.Mob_StaHuntingStatus,
                 me.getName());
     }
 

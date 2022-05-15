@@ -61,7 +61,7 @@ public class Potential extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-        return Utils.format(StringsManager.getVar(R.string.Potential_Txt), weaponName );
+        return Utils.format(R.string.Potential_Txt, weaponName );
 	}
 
 	@Override

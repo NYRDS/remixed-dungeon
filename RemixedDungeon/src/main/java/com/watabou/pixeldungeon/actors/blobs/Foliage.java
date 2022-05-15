@@ -46,7 +46,7 @@ public class Foliage extends Blob {
 			if (cur[pos] > 0) {
 				
 				off[pos] = cur[pos];
-				volume += off[pos];
+				setVolume(getVolume() + off[pos]);
 				
 				if (map[pos] == Terrain.EMBERS || map[pos] == Terrain.EMPTY) {
 					map[pos] = Terrain.GRASS;

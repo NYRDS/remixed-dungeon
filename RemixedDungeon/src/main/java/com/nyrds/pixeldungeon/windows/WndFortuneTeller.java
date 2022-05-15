@@ -29,7 +29,7 @@ public class WndFortuneTeller extends WndQuest {
 		{
 			goldCost = (int) (goldCost * 0.9);
 		}
-        return Utils.format(StringsManager.getVar(R.string.WndFortuneTeller_Instruction), goldCost);
+        return Utils.format(R.string.WndFortuneTeller_Instruction, goldCost);
 	}
 
 	public WndFortuneTeller(FortuneTellerNPC fortuneTellerNPC, final Char hero) {
@@ -92,7 +92,7 @@ public class WndFortuneTeller extends WndQuest {
 		}
 
 
-        RedButton btnNo = new RedButton(StringsManager.getVar(R.string.Wnd_Button_No)) {
+        RedButton btnNo = new RedButton(R.string.Wnd_Button_No) {
 			@Override
 			protected void onClick() {
 				hide();

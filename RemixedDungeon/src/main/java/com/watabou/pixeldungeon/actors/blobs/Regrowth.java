@@ -34,7 +34,7 @@ public class Regrowth extends Blob {
 	protected void evolve() {
 		super.evolve();
 
-		if (volume > 0) {
+		if (getVolume() > 0) {
 			final Level level = Dungeon.level;
 			boolean mapUpdated = false;
 			

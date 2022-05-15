@@ -74,7 +74,7 @@ public abstract class WndMenuCommon extends Window {
 
     public static class MenuButton extends RedButton {
         protected MenuButton(int id){
-            super(StringsManager.getVar(id));
+            super(id);
             setSize(WIDTH,BUTTON_HEIGHT);
         }
 

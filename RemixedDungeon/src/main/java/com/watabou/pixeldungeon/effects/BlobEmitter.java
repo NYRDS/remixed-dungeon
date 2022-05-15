@@ -23,6 +23,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
 public class BlobEmitter extends Emitter {
@@ -36,24 +37,24 @@ public class BlobEmitter extends Emitter {
 	
 	@Override
 	protected void emit( int index ) {
-		
-		if (blob.volume <= 0) {
+
+		//GLog.debug("%s %d", blob.getEntityKind(), blob.getVolume());
+
+		if (blob.getVolume() <= 0) {
 			return;
 		}
-		
-		int[] map = blob.cur;
-		float size = DungeonTilemap.SIZE;
 
+		float size = DungeonTilemap.SIZE;
 		final Level level = Dungeon.level;
 
 		for (int i = 0; i < level.getLength(); i++) {
-			if (map[i] > 0 && Dungeon.isCellVisible(i)) {
-				float x = ((i % level.getWidth()) + Random.Float()) * size;
-				float y = ((i / level.getWidth()) + Random.Float()) * size;
+			if (blob.cur[i] > 0 && Dungeon.isCellVisible(i)) {
+				float x = ((level.cellX(i)) + Random.Float()) * size;
+				float y = ((level.cellY(i)) + Random.Float()) * size;
+
 
 
 				y+= Gizmo.isometricShift();
-
 				factory.emit( this, index, x, y );
 			}
 		}

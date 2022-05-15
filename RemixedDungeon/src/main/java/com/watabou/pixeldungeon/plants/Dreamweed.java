@@ -48,7 +48,7 @@ public class Dreamweed extends Plant {
 		{
             plantName = StringsManager.getVar(R.string.Dreamweed_Name);
 
-            name = Utils.format(StringsManager.getVar(R.string.Plant_Seed), plantName);
+            name = Utils.format(R.string.Plant_Seed, plantName);
 			image = 3;
 			
 			plantClass = Dreamweed.class;

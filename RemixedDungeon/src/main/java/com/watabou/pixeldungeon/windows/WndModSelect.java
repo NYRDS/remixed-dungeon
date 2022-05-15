@@ -47,7 +47,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 
 		boolean haveInternet = PUtil.isConnectedToInternet();
 
-        Text tfTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.ModsButton_SelectMod), GuiProperties.titleFontSize());
+        Text tfTitle = PixelScene.createMultiline(R.string.ModsButton_SelectMod, GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
 		tfTitle.setY(GAP);
 		tfTitle.setX(GAP);

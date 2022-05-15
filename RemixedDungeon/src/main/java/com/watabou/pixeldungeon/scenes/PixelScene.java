@@ -25,6 +25,7 @@ import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.gl.Gl;
 import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.ModdingMode;
 import com.watabou.gltextures.TextureCache;
@@ -171,6 +172,10 @@ public class PixelScene extends Scene {
 		result.setScale(scale);
 
 		return result;
+	}
+
+	public static Text createMultiline(int id, float size) {
+		return createMultiline(StringsManager.getVar(id), size);
 	}
 
 	public static float align(Camera camera, float pos) {

@@ -47,7 +47,7 @@ public class Stench extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-        return Utils.format(StringsManager.getVar(R.string.Stench_Txt), weaponName );
+        return Utils.format(R.string.Stench_Txt, weaponName );
 	}
 	
 	@Override

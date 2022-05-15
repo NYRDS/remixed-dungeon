@@ -56,7 +56,7 @@
         "identified": true
       },
       {
-        "kind": "Dagger",
+        "kind": "HookedDagger",
         "cursed": true
       },
       {

@@ -62,12 +62,12 @@ public class WndResurrect extends Window {
 		titlebar.setRect( 0, 0, width, 0 );
 		add( titlebar );
 
-        Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndResurrect_Message), GuiProperties.regularFontSize() );
+        Text message = PixelScene.createMultiline(R.string.WndResurrect_Message, GuiProperties.regularFontSize() );
 		message.maxWidth(width);
 		message.setY(titlebar.bottom() + GAP);
 		add( message );
 
-        RedButton btnYes = new RedButton(StringsManager.getVar(R.string.WndResurrect_Yes)) {
+        RedButton btnYes = new RedButton(R.string.WndResurrect_Yes) {
 			@Override
 			protected void onClick() {
 				hide();
@@ -80,7 +80,7 @@ public class WndResurrect extends Window {
 		btnYes.setRect( 0, message.getY() + message.height() + GAP, width, BTN_HEIGHT );
 		add( btnYes );
 
-        RedButton btnNo = new RedButton(StringsManager.getVar(R.string.WndResurrect_No)) {
+        RedButton btnNo = new RedButton(R.string.WndResurrect_No) {
 			@Override
 			protected void onClick() {
 				hide();

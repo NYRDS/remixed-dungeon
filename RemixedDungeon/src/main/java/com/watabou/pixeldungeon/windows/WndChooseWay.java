@@ -121,7 +121,7 @@ public class WndChooseWay extends Window {
 			btnBreakSpell(btnWay1);
 		}
 
-        RedButton btnCancel = new RedButton(StringsManager.getVar(R.string.WndChooseWay_Cancel)) {
+        RedButton btnCancel = new RedButton(R.string.WndChooseWay_Cancel) {
 			@Override
 			protected void onClick() {
 				hide();

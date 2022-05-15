@@ -100,11 +100,11 @@ public class Statue extends Mob {
 		val item = getItem();
 
 		if(ItemUtils.usableAsWeapon(item)) {
-            return Utils.format(StringsManager.getVar(R.string.Statue_Desc), getItem().name());
+            return Utils.format(R.string.Statue_Desc, getItem().name());
 		}
 
 		if(ItemUtils.usableAsArmor(item)) {
-            return Utils.format(StringsManager.getVar(R.string.ArmoredStatue_Desc), getItem().name());
+            return Utils.format(R.string.ArmoredStatue_Desc, getItem().name());
 		}
 
 		throw new TrackedRuntimeException("Can't equip statue with " + item.getEntityKind());

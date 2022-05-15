@@ -174,8 +174,6 @@ public class LevelTools {
     }
 
     public static void upgradeMap(@NotNull Level level) {
-
-
         val baseLayer = level.getTileLayer(Level.LayerId.Base);
         val decoLayer = level.getTileLayer(Level.LayerId.Deco);
 

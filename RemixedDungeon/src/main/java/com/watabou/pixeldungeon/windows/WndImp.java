@@ -48,12 +48,12 @@ public class WndImp extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 
-        Text message = PixelScene.createMultiline(StringsManager.getVar(R.string.WndImp_Message), GuiProperties.regularFontSize() );
+        Text message = PixelScene.createMultiline(R.string.WndImp_Message, GuiProperties.regularFontSize() );
 		message.maxWidth(WIDTH);
 		message.setY(titlebar.bottom() + GAP);
 		add( message );
 
-        RedButton btnReward = new RedButton(StringsManager.getVar(R.string.WndImp_Reward)) {
+        RedButton btnReward = new RedButton(R.string.WndImp_Reward) {
 			@Override
 			protected void onClick() {
 				takeReward( imp, tokens, Imp.Quest.reward );

@@ -121,7 +121,7 @@ public class Armor extends EquipableItem {
 	@NotNull
     @Override
 	public String toString() {
-        return isLevelKnown() ? Utils.format(StringsManager.getVar(R.string.Armor_ToString), super.toString(), requiredSTR() ) : super.toString();
+        return isLevelKnown() ? Utils.format(R.string.Armor_ToString, super.toString(), requiredSTR() ) : super.toString();
 	}
 	
 	@Override
@@ -141,7 +141,7 @@ public class Armor extends EquipableItem {
 
 		if (isLevelKnown()) {
 			info.append(p);
-            info.append(Utils.capitalize(Utils.format(StringsManager.getVar(R.string.Armor_Info1), name, Math.max( effectiveDr(), 0 ))));
+            info.append(Utils.capitalize(Utils.format(R.string.Armor_Info1, name, Math.max( effectiveDr(), 0 ))));
 			
 			if (requiredSTR() > hero.effectiveSTR()) {
 				if (isEquipped(hero)) {
@@ -151,7 +151,7 @@ public class Armor extends EquipableItem {
 				}
 			}
 		} else {
-            info.append(Utils.format(StringsManager.getVar(R.string.Armor_Info4), name, typicalDR(), typicalSTR()));
+            info.append(Utils.format(R.string.Armor_Info4, name, typicalDR(), typicalSTR()));
 			if (typicalSTR() > hero.effectiveSTR()) {
 				info.append(" ");
                 info.append(StringsManager.getVar(R.string.Armor_Info5));
@@ -163,11 +163,11 @@ public class Armor extends EquipableItem {
 		}
 		
 		if (isEquipped(hero)) {
-            info.append(Utils.format(StringsManager.getVar(R.string.Armor_Info7a), name,
+            info.append(Utils.format(R.string.Armor_Info7a, name,
 				(isCursed() ? StringsManager.getVar(R.string.Armor_Info7b) : Utils.EMPTY_STRING) ));
 		} else {
 			if (isCursedKnown() && isCursed()) {
-                info.append(Utils.format(StringsManager.getVar(R.string.Armor_Info8), name));
+                info.append(Utils.format(R.string.Armor_Info8, name));
 			}
 		}
 		
