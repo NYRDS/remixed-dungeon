@@ -10,7 +10,7 @@
   <string name="Ignite_Name">Podpalenie</string>
   <string name="Ignite_Info">Podpala zaznaczoną komórkę. Może być użyty do podpalania traw, postaci oraz obiektów</string>
   <string name="RootSpell_Name">Spętanie</string>
-  <string name="RootSpell_Info">Pęta wybraną postać, sprawia że nie może się ona poruszać przez krótki okres czasu.</string>
+  <string name="RootSpell_Info">Oplata wybraną postać, sprawia że nie może się poruszać przez krótki okres czasu.</string>
   <string name="WindGust_Name">Podmuch wiatru</string>
   <string name="WindGust_Info">Tworzy podmuch który odpycha wybraną postać.</string>
   <string name="FreezeGlobe_Name">Zamrożenie</string>

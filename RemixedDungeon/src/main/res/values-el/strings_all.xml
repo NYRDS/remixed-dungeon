@@ -1335,7 +1335,7 @@
   <string name="Thief_Name_Objective">τρελός ληστής</string>
   <string name="Thief_Desc">Τα έγκατα της κατακόμβης ήταν πάντοτε το καταφύγιο κάθε λογής εγκληματιών. Δεν κατάφεραν όλοι να διατηρήσουν σώας τας φρένας, έχοντας μείνει τόσο καιρό μακριά από το φως. Οι τρελοί ληστές και συμμορίτες έχουν ξεχάσει εδώ και πολύ καιρό ποιοι είναι και γιατί κλέβουν.</string>
   <string name="Thief_Stole">Ο %1$s σού έκλεψε: %2$s!</string>
-  <string name="Thief_Carries">\n\nΟ %1$s κουβαλά: _%2$s._ Προφανώς κλεμμένο.</string>
+  <string name="Thief_Carries">\n\nΟ %1$s κουβαλά: _%2$s._ Ένα προφανώς κλεμμένο αντικείμενο.</string>
   <string name="Warlock_Name">νάνος αρχιμάγος</string>
   <string name="Warlock_Gender">masculine</string>
   <string name="Warlock_Name_Objective">νάνος αρχιμάγος</string>
@@ -2376,9 +2376,9 @@
   <string name="Char_Hit_0">%1$s χτυπά: %2$s</string>
   <string name="Char_Hit_1">%1$s χτυπά: %2$s</string>
   <string name="Char_Hit_2">%1$s χτυπά: %2$s</string>
-  <string name="Char_Kill_0">Ο %s σε εξόντωσε...</string>
-  <string name="Char_Kill_1">Η %s σε εξόντωσε...</string>
-  <string name="Char_Kill_2">Το %s σε εξόντωσε...</string>
+  <string name="Char_Kill_0">Εξοντώθηκες από: %s...</string>
+  <string name="Char_Kill_1">Εξοντώθηκες από: %s...</string>
+  <string name="Char_Kill_2">Εξοντώθηκες από: %s...</string>
   <string name="Char_Defeat_0">%1$s εξόντωσε: %2$s</string>
   <string name="Char_Defeat_1">%1$s εξόντωσε: %2$s</string>
   <string name="Char_Defeat_2">%1$s εξόντωσε: %2$s</string>
@@ -2602,9 +2602,9 @@
   <string name="StartScene_DifficultyEasyNoAds">Εύκολο</string>
   <string name="StartScene_DifficultyNormalWithSavesNoAds">Κανονικό με αποθηκεύσεις</string>
   <string name="Backstab_Name">Πισώπλατο χτύπημα</string>
-  <string name="Backstab_Info">Ένα σιωπηλό χτύπημα από πίσω. Ανέντιμο, αλλά εξαιρετικά αποτελεσματικό. Η ζημιά του πισώπλατου χτυπήματος μεγαλώνει με το επίπεδο ικανότητας του εκτελεστή.\n\nΈνα επιτυχημένο πισώπλατο χτύπημα θα αγνοήσει εντελώς την πανοπλία, όπως και ειδικές αμυντικές ικανότητες.</string>
+  <string name="Backstab_Info">Ένα σιωπηλό πισώπλατο χτύπημα. Ανέντιμο, αλλά εξαιρετικά αποτελεσματικό. Η ζημιά του πισώπλατου χτυπήματος μεγαλώνει με το επίπεδο ικανότητας του εκτελεστή.\n\nΈνα επιτυχημένο πισώπλατο χτύπημα θα αγνοήσει εντελώς την πανοπλία, όπως και ειδικές αμυντικές ικανότητες.</string>
   <string name="Backstab_TooFar">Το θύμα είναι πολύ μακριά για επιτυχημένο χτύπημα.</string>
-  <string name="Backstab_Aware">Το θύμα του πισώπλατου χτυπήματος δεν πρέπει να σε έχει υπ\' όψην του.</string>
+  <string name="Backstab_Aware">Ο στόχος του πισώπλατου χτυπήματος δεν πρέπει να σε έχει υπόψην του.</string>
   <string name="KunaiThrow_Name">Ριπή κουνάι</string>
   <string name="KunaiThrow_Info">Αυτή η θανάσιμη ριπή του κουνάι θα γίνει απίστευτα γρήγορα· τόσο γρήγορα που δεν μπορείς ούτε να ορίσεις τον στόχο.\n\nΟι κύριοι αυτής της τέχνης μπορούν να πετούν πάνω από ένα κουνάι τη φορά.</string>
   <string name="Haste_Name">Άσβεστη φούρια</string>
@@ -2858,4 +2858,17 @@
   <string name="ManaRegenerationBuff_Name">Αναπλήρωση μαγικής ενέργειας</string>
   <string name="ManaRegenerationBuff_Info">Η λειτουργία αναπλήρωσης μαγικής ενέργειας είναι σε μορφή επίδρασης για διευκόλυνση.</string>
   <string name="WndGame_Customizations">Προσαρμογές</string>
+  <string name="Welcome_Text_31_1">
+    remix.31.1\n
+    - Παιχνίδι:\n
+    -- Νέες προσαρμογές!\n
+    -- Νέο είδος αράχνης!\n
+    -- Η ψυχο-αράχνη ενδυναμώνει τις άλλες αράχνες αντί να αποδυναμώνει τον ήρωα.\n
+    - Διορθώσεις σφαλμάτων\n
+    </string>
+  <string name="WndTilesKind_Title">Και κάτι ακόμη:</string>
+  <string name="WndTilesKind_text">Πρόκειται να μπεις σε μια κατακόμβη που έχει κυριευτεί από τη διαβολική μαγεία· τουλάχιστον μπορείς να επιλέξεις πώς θα τη βλέπεις.\n Θέλεις να είναι με σύγχρονα ψευδο-3D γραφικά ή με την κλασική επίπεδη εμφάνιση;\nΜπορείς να το αλλάξεις αργότερα στο μενού ρυθμίσεων του παιχνιδιού.</string>
+  <string name="WndTilesKind_NewLook">Νέα εμφάνιση</string>
+  <string name="WndTilesKind_ClassicLook">Κλασική εμφάνιση</string>
+  <string name="MobAi_status">- %s: %s</string>
 </resources>
