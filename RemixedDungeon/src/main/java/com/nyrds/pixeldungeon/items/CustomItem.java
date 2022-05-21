@@ -201,7 +201,7 @@ public class CustomItem extends EquipableItem {
 
     @Override
     public int price() {
-        return adjustPrice(price * quantity());
+        return script.runOptional("price", adjustPrice(price * quantity()));
     }
 
     @Override
