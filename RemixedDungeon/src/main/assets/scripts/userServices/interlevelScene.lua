@@ -13,7 +13,10 @@ tilesChoiceWindowShown = false
 
 --! Called when interlevelScene enters static mode
 interlevelScene.onStep = function(mode, done)
-    if done and mode == "DESCEND" and RPD.Dungeon.level.levelId == '1' and RPD.ModdingMode:inRemixed() then
+    if not done then
+        return false
+    end
+    if mode == "DESCEND" and RPD.Dungeon.level.levelId == '1' and RPD.ModdingMode:inRemixed() then
         RPD.RemixedDungeon:scene():enumerateWindows()
         local activeWindow = RPD.RemixedDungeon:scene():getWindow(0)
         RPD.debug("activeWindow :%s", tostring(activeWindow))
