@@ -120,7 +120,7 @@
   <string name="Possess_Possessed">- %s σε αναμονή για τις διαταγές σου</string>
   <string name="Possess_CantPossessSelf">Δεν μπορείς να κυριεύσεις τον εαυτό σου.</string>
   <string name="Mob_StaControlledStatus">- %s υπό ανίερη κατοχή</string>
-  <string name="BlackCat_AiStatus">Η γάτα κάνει συνηθισμένα γατίσια πράγματα.</string>
+  <string name="BlackCat_AiStatus">- η γάτα κάνει συνηθισμένα γατίσια πράγματα</string>
   <string name="Shopkeeper_Buy">Επίλεξε αντικείμενο προς αγορά</string>
   <string name="Shopkeeper_title">Κατάστημα</string>
   <string name="Shopkeeper_text">Καλωσόρισες στο τοπικό κατάστημα Pixel-Mart.\nΠώς μπορώ να βοηθήσω;</string>
@@ -323,8 +323,8 @@
   <string name="GameScene_Secrets">Η ατμόσφαιρα προδίδει ότι ο όροφος κρύβει πολλά μυστικά.</string>
   <string name="Char_Name">εχθρός</string>
   <string name="Char_Name_Objective">εχθρός</string>
-  <string name="Char_YouMissed">%1$s: %2$s την επίθεσή σου</string>
-  <string name="Char_SmbMissed">%1$s: %2$s την επίθεση από: %3$s</string>
+  <string name="Char_YouMissed">%1$s %2$s την επίθεση από: ήρωας</string>
+  <string name="Char_SmbMissed">%1$s %2$s την επίθεση από: %3$s</string>
   <string name="Char_OutParalysis">Ο πόνος ακύρωσε την παράλυση του πλάσματος: %s</string>
   <string name="Char_StaPoisoned">δηλητηρίαση</string>
   <string name="Char_StaAmok">αμόκ</string>
@@ -417,7 +417,7 @@
   <string name="WndSadGhost_Wepon">Όπλο φαντάσματος</string>
   <string name="WndSadGhost_Armor">Πανοπλία φαντάσματος</string>
   <string name="WndSadGhost_Farewell">Έχε γεια!</string>
-  <string name="WndStory_Sewers">Η κατακόμβη βρίσκεται ακριβώς κάτω από την πόλη· τα ανώτερα επίπεδα αποτελούν το αποχετευτικό της σύστημα. Δεν είναι και πολύ επικίνδυνα αυτά τα επίπεδα μιας και είναι τμήμα της πόλης. Δεν το λες κι ασφαλές μέρος, αλλά εδώ δεν έχει επικρατήσει ακόμα η διαβολική μαγεία.</string>
+  <string name="WndStory_Sewers">Η κατακόμβη βρίσκεται ακριβώς κάτω από την πόλη· τα ανώτερα επίπεδα αποτελούν το αποχετευτικό της σύστημα. Δεν είναι και πολύ επικίνδυνα αυτά τα επίπεδα μιας και αποτελούν τμήμα της πόλης. Δεν το λες κι ασφαλές μέρος, αλλά εδώ δεν έχει επικρατήσει ακόμα η διαβολική μαγεία.</string>
   <string name="WndStory_Prision">Πολλά χρόνια πριν, μια υπόγεια φυλακή είχε χτιστεί εδώ κάτω για τους πιο επικίνδυνους εγκληματίες. Εκείνον τον καιρό ήταν πολύ έξυπνη ιδέα· είναι πραγματικά δύσκολο να δραπετεύσει κανείς από εδώ. Σύντομα, όμως, άρχισε να αναδίδεται ένα σκοτεινό μίασμα από κάτω, το οποίο οδηγούσε στην τρέλα τόσο τους φύλακες όσο και τους κρατούμενους. Στο τέλος η φυλακή εγκαταλείφθηκε, αλλά κάποιοι κατάδικοι έμειναν κλειδωμένοι εδώ μέσα...</string>
   <string name="WndStory_Caves">Τα σπήλαια κάτω από την εγκαταλελειμμένη φυλακή είναι πολύ αραιοκατοικημένα. Βρίσκονται πολύ βαθιά για να τα εκμεταλλευτεί η πόλη και είναι πολύ φτωχά σε ορυκτά για να συγκινήσουν τους νάνους. Υπήρχε, στο παρελθόν, ένα εμπορικό κέντρο εδώ κάτω, στα μέσα της διαδρομής αυτών των δύο πολιτειών. Εγκαταλείφθηκε, όμως, μετά την παρακμή της μητρόπολης των νάνων. Πλέον μόνο γκνολ και πανίδα του υπεδάφους βρίσκεται εδώ κάτω.</string>
   <string name="WndStory_Metropolis">Η μητρόπολη των νάνων ήταν κάποτε η μεγαλύτερη των πόλεων-κρατών τους. Στην περίοδο της ακμής της, ο μηχανικός στρατός των νάνων απέκρουσε την επίθεση του Παλιού Θεού και της δαιμονικής του στρατιάς. Λέγεται, όμως, ότι οι πολεμιστές έφεραν τους σπόρους της διαφθοράς με την επιστροφή τους, και πως η νίκη αυτή ήταν η αρχή του τέλους για το υπόγειο βασίλειο.</string>
@@ -733,7 +733,7 @@
   <string name="BlackSkullOfMastery_RemainHumanDesc">Αλλιώς, αν _σπάσεις το ξόρκι,_ θα μπορείς να χρησιμοποιείς το τεχνούργημα κανονικά.</string>
   <string name="BlackSkull_Activated">Το μαύρο κρανίο ξύπνησε!</string>
   <string name="BlackSkull_Ressurrect">Το μαύρο κρανίο ανέστησε το νεκρό πλάσμα για να σε υπηρετήσει!</string>
-  <string name="BlackSkull_Deactivated">Το μαύρο κρανίο είναι αδρανές, για άλλη μια φορά...</string>
+  <string name="BlackSkull_Deactivated">Το μαύρο κρανίο είναι και πάλι αδρανές...</string>
   <string name="NecromancerArmor_Name">κοκκάλινη πανοπλία</string>
   <string name="NecromancerArmor_Info">Αυτή η πανοπλία επιτρέπει στον Νεκρομάντη να κλητεύσει έως και δύο Θανατικούς, με κόστος 5 ψυχών για τον καθένα. Αυτοί οι απέθαντοι υπήκοοι θα ακολουθούν τον αφέντη τους και θα επιτίθενται στους εχθρούς του. Οι Θανατικοί γίνονται ισχυρότεροι με κάθε νέο επίπεδο του ήρωα.</string>
   <string name="NecromancerArmor_NotNecromancer">Αυτή η πανοπλία είναι μόνο για νεκρομάντες!</string>
@@ -812,14 +812,14 @@
   <string name="WndDonate_silverDonateText2">Επιπλέον, απενεργοποιούνται τα διαφημιστικά από παντού και η Κυνηγός ξεκλειδώνεται εξ αρχής.</string>
   <string name="WndDonate_goldDonateText2">Επιπλέον, το Ξωτικό ξεκλειδώνεται εξ αρχής.</string>
   <string name="WndDonate_rubyDonateText2"/>
-  <string name="WndPremiumSettings_std">κανονική</string>
-  <string name="WndPremiumSettings_silver">ασημένια</string>
-  <string name="WndPremiumSettings_gold">χρυσή</string>
-  <string name="WndPremiumSettings_ruby">ρουμπινένια</string>
-  <string name="WndPremiumSettings_chrome">Επίλεξε την υφή διεπαφής</string>
-  <string name="WndPremiumSettings_status">Διάλεξε υφή γραμμής κατάστασης</string>
+  <string name="WndPremiumSettings_std">Κανονική</string>
+  <string name="WndPremiumSettings_silver">Ασημένια</string>
+  <string name="WndPremiumSettings_gold">Χρυσή</string>
+  <string name="WndPremiumSettings_ruby">Ρουμπινένια</string>
+  <string name="WndPremiumSettings_chrome">Επιλογή υφής της διεπαφής</string>
+  <string name="WndPremiumSettings_status">Επιλογή υφής της γραμμής κατάστασης</string>
   <string name="WndPremiumSettings_toolbar">Επιλογή υφής μπάρας</string>
-  <string name="WndPremiumSettings_banners">Επιλογή υφής πανώ</string>
+  <string name="WndPremiumSettings_banners">Επιλογή υφής των πανώ</string>
   <string name="WndPremiumSettings_notAvailbale">Αυτή η επιλογή δεν είναι διαθέσιμη ακόμα</string>
   <string name="DonateButton_pleaseDonate">Σκέψου να κάνεις δωρεά</string>
   <string name="DonateButton_thanks">Ευχαριστούμε για την υποστήριξη!</string>
@@ -883,7 +883,7 @@
   <string name="FortuneTellerNPC_Name">μάντισσα</string>
   <string name="FortuneTellerNPC_Gender">feminine</string>
   <string name="FortuneTellerNPC_Name_Objective">μάντισσα</string>
-  <string name="FortuneTellerNPC_Desc">Αυτή η γυναίκα έχει ντυθεί με έναν μακρύ πολύχρωμο χιτώνα. Δείχνει πολύ νέα για κάποια που έχει εντρυφήσει στην απόκρυφη τέχνη της μαντικής. Από κοντά, την ακούς να ψελλίζει κοιτώντας την κρυστάλλινη μπάλα.</string>
+  <string name="FortuneTellerNPC_Desc">Αυτή η γυναίκα έχει ντυθεί με έναν μακρύ πολύχρωμο χιτώνα. Δείχνει πολύ νέα για κάποια που έχει εντρυφήσει στην απόκρυφη τέχνη της μαντικής. Πλησιάζοντας, την ακούς να ψελλίζει κοιτώντας την κρυστάλλινη σφαίρα.</string>
   <string name="ServiceManNPC_Limit_Reached">Ζητώ συγγνώμη, αλλά έχεις ήδη φτάσει στο τωρινό όριο. Αλλά θα μπορείς να χρησιμοποιείς ξανά την υπηρεσία μας με κάθε επίπεδο που ανεβαίνεις!</string>
   <string name="WndFortuneTeller_Instruction">Μπορώ να αποκαλύψω τα μυστικά των αντικειμένων που κατέχεις.\nΜία αναγνώριση θα σου κοστίσει %d νομίσματα.</string>
   <string name="WndFortuneTeller_No_Item">Πρόσεχε... δεν θέλεις να σκορπάς τα λεφτά σου άσκοπα, έτσι; Δεν έχεις κάποιο μη αναγνωρισμένο αντικείμενο.</string>
@@ -917,8 +917,8 @@
   <string name="AllowStatisticsCollectionScene_Request">Αν συναινέσεις, το Remixed Dungeon θα συλλέγει στατιστικά χρήσης. Αυτά τα δεδομένα χρησιμοποιούνται για:\n
     - εντοπισμό και επιδιόρθωση διαφόρων μικρών σφαλμάτων (σε περίπτωση κρίσιμου σφάλματος, το παιχνίδι θα σου ζητήσει να αποστείλεις μια αναφορά)\n
     - βελτιώσεις στην ισορροπία του παιχνιδιού\n
-    - επιδιορθώσεις προβλημάτων επιδόσεων σχετικών με τη συσκευή\n
-    - περιστασιακές δημοσιεύσεις αστείων αναφορών σχετικών με τα στατιστικά\n
+    - διορθώσεις προβλημάτων στις επιδόσεις που έχουν να κάνουν με τη συσκευή\n
+    - περιστασιακές δημοσιεύσεις αστείων στατιστικών\n
    Μπορείς να αλλάξεις την απόφασή σου ανά πάσα στιγμή (πάτα το εικονίδιο γραφήματος στο κύριο μενού).</string>
   <string name="AllowStatisticsCollectionScene_Allow">Αποδοχή</string>
   <string name="AllowStatisticsCollectionScene_Deny">Άρνηση</string>
@@ -1003,12 +1003,12 @@
   <string name="KoboldIcemancer_Name">καλικάντζαρος παγομάντης</string>
   <string name="KoboldIcemancer_Gender">masculine</string>
   <string name="KoboldIcemancer_Name_Objective">καλικάντζαρος παγομάντης</string>
-  <string name="KoboldIcemancer_Desc">Οι καλικάντζαροι παγομάντες ήταν πάντα η αφρόκρεμα της κοινωνίας. Άξιοι πολεμιστές, μάγοι και, επί το πλείστον, επιστήμονες. Οι αρχαίοι άρχοντες του πάγου τελειοποίησαν την τέχνη της κυριαρχίας επάνω του, δημιουργώντας πολύπλοκους μηχανισμούς ενισχυμένους με περίτεχνα ξόρκια.</string>
+  <string name="KoboldIcemancer_Desc">Οι καλικάντζαροι παγομάντες ήταν πάντα η αφρόκρεμα της κοινωνίας. Άξιοι πολεμιστές, μάγοι και, επί το πλείστον, επιστήμονες. Αυτοί οι αρχαίοι άρχοντες του πάγου τελειοποίησαν την τέχνη της κυριαρχίας επάνω του, δημιουργώντας πολύπλοκους μηχανισμούς ενισχυμένους με περίτεχνα ξόρκια.</string>
   <string name="KoboldIcemancer_Killed">Ο %s σε εξόντωσε με μια παγωμένη ριπή...</string>
   <string name="ColdSpirit_Name">ψυχρό πνεύμα</string>
   <string name="ColdSpirit_Gender">neuter</string>
   <string name="ColdSpirit_Name_Objective">ψυχρό πνεύμα</string>
-  <string name="ColdSpirit_Desc">Το ψυχρό πνεύμα είναι η προσωποποίηση του παγετού στην αγνότερη μορφή του. Ως μια άμυαλη μπάλα μαγικής ενέργειας, απαντά είτε στη θέληση του Μάγου που το κλήτευσε είτε στα δικά του βασικά ένστικτα.</string>
+  <string name="ColdSpirit_Desc">Το ψυχρό πνεύμα είναι η προσωποποίηση του παγετού στην αγνότερη μορφή του. Ως μια άμυαλη μπάλα μαγικής ενέργειας, απαντά είτε στη θέληση του μάγου που το κλήτευσε είτε στα δικά του βασικά ένστικτα.</string>
   <string name="IceElemental_Name">στοιχείο του πάγου</string>
   <string name="IceElemental_Gender">neuter</string>
   <string name="IceElemental_Name_Objective">στοιχείο του πάγου</string>
@@ -1070,7 +1070,7 @@
   <string name="MeleeWeapon_Info1c">ένα αναβαθμισμένο</string>
   <string name="MeleeWeapon_Info1d">ένα υποβαθμισμένο</string>
   <string name="MeleeWeapon_Info2a">Η μέση του ζημιά είναι %d πόντοι ανά χτύπημα.</string>
-  <string name="MeleeWeapon_Info2b">Η τυπική μέση ζημιά του όπλου είναι %1$d πόντοι ανά χτύπημα, και συνήθως απαιτεί %2$d δύναμη.</string>
+  <string name="MeleeWeapon_Info2b">Η τυπική μέση ζημιά του όπλου είναι %1$d πόντοι ανά χτύπημα και συνήθως απαιτεί %2$d δύναμη.</string>
   <string name="MeleeWeapon_Info2c">Αυτό το όπλο μάλλον είναι πολύ βαρύ για σένα.</string>
   <string name="MeleeWeapon_Info3a">Αυτό είναι ένα αρκετά %s όπλο.</string>
   <string name="MeleeWeapon_Info3b">γρήγορο</string>
@@ -1217,7 +1217,7 @@
   <string name="DM300_Desc">Αυτή η μηχανή κατασκευάστηκε από τους νάνους πριν από αρκετούς αιώνες. Αργότερα, οι νάνοι άρχισαν να αντικαθιστούν τις μηχανές τους με γκόλεμς, με στοιχεία, ακόμα και με δαίμονες. Αυτό οδήγησε σταδιακά στην παρακμή του πολιτισμού τους. Το DM-300 και οι λοιπές μηχανές χρησιμοποιούνταν για κατασκευές, εξορύξεις και, σε ορισμένες περιπτώσεις, την άμυνα των πόλεων.</string>
   <string name="DM300_Info1">Το DM-300 επισκευάζεται!</string>
   <string name="DM300_Info2">Η αποστολή απέτυχε. Τερματισμός λειτουργίας.</string>
-  <string name="DM300_Info3">Ανιχνεύτηκε μη εξουσιοδοτημένο προσωπικό.</string>
+  <string name="DM300_Info3">Εντοπίστηκε μη εξουσιοδοτημένο προσωπικό.</string>
   <string name="FireElemental_Name">στοιχείο της φωτιάς</string>
   <string name="FireElemental_Gender">neuter</string>
   <string name="FireElemental_Name_Objective">στοιχείο της φωτιάς</string>
@@ -1461,7 +1461,7 @@
   <string name="LibrarianNPC_Message_Instruction">Γ-γεια... Καλώς ήλθες στη βιβλιοθήκη. Εδώ θα βρεις πληροφορίες πάνω σε οτιδήποτε μπορεί να βρεθεί στην κατακόμβη... Βασικά, μπορούμε να παράσχουμε μόνο ό,τι έχουν αποκομίσει οι εξερευνητές. Είναι... είναι κάπως ντροπιαστικό. Οπότε, κάθε φορά που έρχεσαι, λογικά θα υπάρχουν καινούργια πράγματα να διαβάσεις.</string>
   <string name="LibraryBook_Name">Βιβλίο βιβλιοθήκης</string>
   <string name="LibraryBook_Description">Αυτός ο τόμος είναι τεράστιος. Κατέχει όλη τη γνώση που έχουν αποκομίσει οι εξερευνητές από την κατακόμβη.</string>
-  <string name="WndSettings_moveTimeout">Χρόνος ενεργειών: %s</string>
+  <string name="WndSettings_moveTimeout">Χρόνος κίνησης: %s</string>
   <string name="TrapWnd_Title">Παγίδα</string>
   <string name="TrapWnd_Step">Θέλεις σίγουρα να πατήσεις στην παγίδα; Μπορεί και να πεθάνεις.</string>
   <string name="BadgesScene_Title">Τα εμβλήματά σου</string>
@@ -1549,7 +1549,7 @@
   <string name="RottenPumpkinPie_Info">Άσχετα του πόσο καλή ήταν φρέσκια, δεν υπάρχει περίπτωση να τρώγεται πλέον.</string>
   <string name="CandleOfMindVision_Name">κερί οραμάτων</string>
   <string name="CandleOfMindVision_Info">Μοιάζει με ένα απλό κερί, κάτι που δεν περίμενες να βρεις στην κατακόμβη. Είναι, παραδόξως, αρκετά ζεστό στο άγγιγμα, αν και δεν είναι αναμμένο.</string>
-  <string name="CandleOfMindVision_Info_Lighted">Το κερί άναψε τη στιγμή που το έβγαλες από το σακίδιο. Η φλόγα του εκπέμπει ένα αχνό ιώδες φως, και, κοιτώντας μέσα της, όλα τα κοντινά τέρατα σου γίνονται ορατά.</string>
+  <string name="CandleOfMindVision_Info_Lighted">Το κερί άναψε τη στιγμή που το έβγαλες από το σακίδιο. Η φλόγα του εκπέμπει ένα αχνό ιώδες φως, και, κοιτώντας μέσα της, όλα τα κοντινά τέρατα σου αποκαλύπτονται.</string>
   <string name="CandleOfMindVision_Info_Exhausted">Το κερί έχει καεί και δεν ανάβει πια όταν το κρατάς. Φαίνεται πως δεν μπορείς να το χρησιμοποιήσεις άλλο.</string>
   <string name="Barrel_Name">βαρέλι</string>
   <string name="Barrel_Desc">Μοιάζει με ένα απλό ξύλινο βαρέλι. Μα όσο το πλησιάζεις, διακρίνεις μια ελαφριά οσμή λαδιού. Φαίνεται αρκετά ελαφρύ και λογικά μπορείς να το σπρώξεις.</string>
@@ -1705,11 +1705,11 @@
   <string name="town_deco_carpet_desc">Πολυτελές κόκκινο χαλί για εκλεκτούς επισκέπτες.</string>
   <string name="town_deco_movies_door_name">Πόρτα</string>
   <string name="town_deco_movies_door_desc">Αυτή η πόρτα φαίνεται πολύ καλά φτιαγμένη. Πιθανώς να οδηγεί σε κάτι εξαιρετικό.</string>
-  <string name="WndDonate_royal">βασιλική</string>
-  <string name="WndDonate_royalDonate">βασιλική δωρεά</string>
+  <string name="WndDonate_royal">Βασιλική</string>
+  <string name="WndDonate_royalDonate">Βασιλική δωρεά</string>
   <string name="WndDonate_royalDonateText">Δεν θέλω να ακουστεί περίεργο, αλλά με αυτήν τη δωρεά κυριολεκτικά ταΐζεις τους δημιουργούς.</string>
   <string name="WndDonate_royalDonateText2">Επιπλέον, θα λάβεις όλα τα καπέλα από το κατάστημα της εφαρμογής! Όπως και κάθε καπέλο που θα κυκλοφορήσει στο μέλλον.</string>
-  <string name="WndPremiumSettings_royal">βασιλική</string>
+  <string name="WndPremiumSettings_royal">Βασιλική</string>
   <string name="Scroll_Name">πάπυρος «%s»</string>
   <string name="Scroll_Info">Αυτή η περγαμηνή είναι γεμάτη με ακατανόητη γραφή και έχει τον τίτλο του ρούνου %s. Άραγε, τι θα κάνει μόλις διαβαστεί φωναχτά;</string>
   <string name="Scroll_ACRead">ΔΙΑΒΑΣΕ</string>
@@ -2091,7 +2091,7 @@
   <string name="Level_TileDescEmptyWell">Το πηγάδι έχει στερέψει.</string>
   <string name="Caves_TileGrass">Φωσφορίζοντα βρύα</string>
   <string name="Caves_TileHighGrass">Φωσφορίζοντα μανιτάρια</string>
-  <string name="Caves_TileWater">Παγωμένο νερό</string>
+  <string name="Caves_TileWater">Οριακά παγωμένο νερό</string>
   <string name="Caves_TileDescEntrance">Η σκάλα οδηγεί στο ανώτερο επίπεδο.</string>
   <string name="Caves_TileDescExit">Η σκάλα οδηγεί στο κατώτερο επίπεδο.</string>
   <string name="Caves_TileDescHighGrass">Τεράστια μανιτάρια εμποδίζουν τη θέα.</string>
@@ -2145,7 +2145,7 @@
   <string name="GnollArmor_Name">πανοπλία γκνολ υπολοχαγών</string>
   <string name="GnollArmor_Info">Οι κάτοχοι της πανοπλίας του Γκνολ υπολοχαγού είναι γνωστοί για την ικανότητά τους να πείθουν τους πάντες, ακόμα και τα πιο ατίθασα πλάσματα, να υπηρετούν πιστά τον Θρόνο.</string>
   <string name="GnollTamahawk_Name">τόμαχωκ των γκνολ</string>
-  <string name="GnollTamahawk_Info">Ενα παραδοσιακό τόμαχωκ κατασκευασμένο από αρχηγούς γκνολ, όπου κάθε συντεχνία έχει τον δικό της σχεδιασμό. Αυτό το τόμαχωκ είναι σχετικά ελαφρύτερο από τα υπόλοιπα.</string>
+  <string name="GnollTamahawk_Info">Ενα παραδοσιακό τόμαχωκ κατασκευασμένο από τους αρχηγούς των γκνολ· κάθε συντεχνία έχει και τον δικό της σχεδιασμό. Αυτό το τόμαχωκ είναι σχετικά ελαφρύτερο από τα υπόλοιπα.</string>
   <string name="GnollTamahawk_Gender">neuter</string>
   <string name="WndPlayGames_BackupProgress">Αντίγραφο ασφαλείας της προόδου</string>
   <string name="WndPlayGames_RestoreProgress">Ανάκτηση προόδου παιχνιδιού</string>
@@ -2167,7 +2167,7 @@
   <string name="PotionOfExperience_Info">Εξιστορημένες εμπειρίες από πληθώρα μαχών, συμπυκνωμένες σε υγρή μορφή. Αυτό το ποτό θα αυξήσει άμεσα το επίπεδο εμπειρίας σου.</string>
   <string name="PotionOfFrost_Name">φίλτρο του παγετού</string>
   <string name="PotionOfFrost_Info">Με την έκθεση στον αέρα, το χημικό αυτό θα εξατμιστεί σε ένα παγωμένο νέφος. Κάθε πλάσμα που έρχεται σε επαφή μαζί του θα παγώνει σε εκείνο το σημείο - ανίκανο να κινηθεί και να δράσει.</string>
-  <string name="PotionOfHealing_Name">φίλτρο της Θεραπείας</string>
+  <string name="PotionOfHealing_Name">φίλτρο θεραπείας</string>
   <string name="PotionOfHealing_Info">Ένα ελιξίριο που θα σε επαναφέρει άμεσα σε πλήρη ζωή και θα θεραπεύσει τη δηλητηρίαση.</string>
   <string name="PotionOfHealing_Apply">Οι πληγές σου θεραπεύτηκαν πλήρως.</string>
   <string name="PotionOfInvisibility_Name">φίλτρο αορατότητας</string>
@@ -2179,11 +2179,11 @@
   <string name="PotionOfLiquidFlame_Name">φίλτρο υγρής φλόγας</string>
   <string name="PotionOfLiquidFlame_Info">Αυτή η φιάλη περιέχει μια ασταθή χημική ένωση που θα αναφλεχθεί βίαια μόλις εκτεθεί στον αέρα.</string>
   <string name="PotionOfMight_Name">φίλτρο της ισχύος</string>
-  <string name="PotionOfMight_Info">Αυτό το ισχυρό υγρό θα εγχυθεί τους μυς σου, αυξάνοντας μόνιμα τη δύναμή σου κατά έναν βαθμό και τη μέγιστη ζωή σου κατά πέντε βαθμούς.</string>
+  <string name="PotionOfMight_Info">Αυτό το ισχυρό υγρό θα εγχυθεί τους μυς σου και θα αυξήσει μόνιμα τη δύναμή σου κατά 1 πόντο και τη μέγιστη ζωή σου κατά 5 πόντους.</string>
   <string name="PotionOfMight_Apply">Νεοανακαλυφθείσα δύναμη διαπερνά το σώμα σου.</string>
   <string name="PotionOfMight_StaApply">+1 Δύναμη, +5 Ζωή</string>
   <string name="PotionOfMindVision_Name">φίλτρο ενόρασης</string>
-  <string name="PotionOfMindVision_Info">Αφού πιεις το φίλτρο, το μυαλό σου θα εναρμονιστεί με την ψυχική υπογραφή μακρινών πλασμάτων. Αυτό θα σου επιτρέψει να νιώθεις τις βιολογικές παρουσίες μέσα από τοίχους. Επίσης, το φίλτρο θα σου επιτρέψει να βλέπεις μέσα από κοντινούς τοίχους και πόρτες.</string>
+  <string name="PotionOfMindVision_Info">Αφού πιεις το φίλτρο, το μυαλό σου θα εναρμονιστεί με την ψυχική υπογραφή των μακρινών πλασμάτων. Έτσι, θα μπορείς να αισθάνεσαι τις βιολογικές παρουσίες μέσα από τοίχους. Επιπλέον, το φίλτρο σού επιτρέπει να βλέπεις μέσα από κοντινούς τοίχους και πόρτες.</string>
   <string name="PotionOfMindVision_Apply1">Με κάποιον τρόπο, νιώθεις την πνευματική παρουσία άλλων πλασμάτων!</string>
   <string name="PotionOfMindVision_Apply2">Με κάποιον τρόπο, ξέρεις ότι είσαι μόνο εσύ στο επίπεδο προς το παρόν.</string>
   <string name="PotionOfParalyticGas_Name">φίλτρο παραλυτικού αερίου</string>
@@ -2193,7 +2193,7 @@
   <string name="PotionOfPurity_Freshness">Νιώθεις ασυνήθιστη φρεσκάδα στον αέρα.</string>
   <string name="PotionOfPurity_NoSmell">Επαψες να αντιλαμβάνεσαι τις οσμές!</string>
   <string name="PotionOfStrength_Name">φίλτρο της δύναμης</string>
-  <string name="PotionOfStrength_Info">Αυτό το ισχυρό υγρό εγχέεται στους μυς σου κι αυξάνει μόνιμα τη δύναμή σου κατά έναν πόντο.</string>
+  <string name="PotionOfStrength_Info">Αυτό το ισχυρό υγρό εγχέεται στους μυς σου κι αυξάνει μόνιμα τη δύναμή σου κατά 1 πόντο.</string>
   <string name="PotionOfStrength_Apply">Νεοανακαλυφθείσα δύναμη διαπερνά το σώμα σου.</string>
   <string name="PotionOfStrength_StaApply">+1 δύναμη</string>
   <string name="PotionOfToxicGas_Name">φίλτρο τοξικού αερίου</string>
@@ -2208,7 +2208,7 @@
   <string name="WndSettings_Handedness">Κυρίαρχο χέρι</string>
   <string name="WndSettings_InGameUiSettings">Ρυθμίσεις διεπαφής (UI)</string>
   <string name="WndSettings_GameplaySettings">Ρυθμίσεις παιχνιδιού</string>
-  <string name="WndPremiumSettings_marble">μαρμαρένια</string>
+  <string name="WndPremiumSettings_marble">Μαρμαρένια</string>
   <string name="QuickSlot_SelectSlot">Διάλεξε μια ταχεία θέση</string>
   <string name="Potion_ACMoisten">ΕΜΠΟΤΙΣΕ</string>
   <string name="Potion_SelectForMoisten">Επίλεξε το αντικείμενο προς εμποτισμό</string>
@@ -2679,7 +2679,7 @@
     - Διορθώσεις σφαλμάτων\n
    </string>
   <string name="Roar_Name">Ιαχή</string>
-  <string name="Roar_Info">Μια τρανή ιαχή που τρομοκρατεί τους εχθρούς και εμπνέει τους συμμάχους.</string>
+  <string name="Roar_Info">Μια φοβερή ιαχή που τρομοκρατεί τους εχθρούς και εμπνέει τους συμμάχους.</string>
   <string name="LightningBolt_Name">Αστραπή</string>
   <string name="LightningBolt_Info">Ένα ξόρκι που είναι γνωστό στους κύκλους των αρχαίων σαμάνων. Θα κατακεραυνώσει τους εχθρούς με διπλάσια αποτελεσματικότητα--ειδικά αν είναι τόσο ανόητοι ώστε να στέκονται στο νερό.</string>
   <string name="Heal_Name">Θεραπεία</string>
@@ -2788,8 +2788,8 @@
   <string name="DeepSnail_Name_Objective">θαλάσσιο σαλιγκάρι</string>
   <string name="DeepSnail_Desc">Αυτό το είδος μαλάκιου συνήθως βρίσκεται κοντά σε πηγές νερού και είναι πολύ γρηγορότερο από το κανονικό σαλιγκάρι. Προσοχή με το δάγκωμά του, όμως· μπορεί να έχει άσχημες επιδράσεις στο δέρμα σου.</string>
   <string name="CharInfo_Level">- %2$s επιπέδου %1$d.</string>
-  <string name="WrnExperimental_realtime">Η λειτουργία πραγματικού χρόνου ενεργοποιήθηκε! Τώρα μιλάμε για roguelike πραγματικού χρόνου... Ταχύτητα ή θάνατος.\nΘες να τσεκάρεις τα εφόδιά σου;\nΚάνε γρήγορα· ο κάβουρας των υπονόμων έρχεται κατά πάνω σου!</string>
-  <string name="WrnExperimental_moveTimeout">Ο καταληκτικός χρόνος ενεργειών έχει οριστεί στα %dms. Σκέψου γρήγορα!</string>
+  <string name="WrnExperimental_realtime">Η λειτουργία πραγματικού χρόνου ενεργοποιήθηκε! Τώρα μιλάμε για roguelike πραγματικού χρόνου... Ταχύτητα ή θάνατος.\nΘες να τσεκάρεις τα εφόδιά σου; Κάνε γρήγορα... ο κάβουρας των υπονόμων έρχεται κατά πάνω σου!</string>
+  <string name="WrnExperimental_moveTimeout">Ο καταληκτικός χρόνος κίνησης έχει οριστεί στα %dχιλιοστά του δευτερολέπτου. Σκέψου γρήγορα!</string>
   <string name="WrnExperimental_hint">Αν δεν θες να βιώσεις αυτές τις περίεργες και διεστραμμένες καταστάσεις, απενεργοποίησε τις ρυθμίσεις εδώ:\nΑρχική οθόνη -> Ρυθμίσεις -> Ρυθμίσεις παιχνιδιού\nΈπειτα, ξεκίνα νέο παιχνίδι ή φόρτωσε μια άλλη αποθήκευση.</string>
   <string name="WrnExperimental_title">Πειραματικές ρυθμίσεις ενεργοποιημένες!</string>
   <string name="Welcome_Text_30_1">
@@ -2831,7 +2831,7 @@
   <string name="WndSettingsInGame_IsometricTiles">Ισομετρικά τετράγωνα</string>
   <string name="KrampusHead_Name">Κεφαλή του Κράμπους</string>
   <string name="KrampusHead_Info">Έχεις επιθυμήσει ποτέ να υιοθετήσεις έναν διαβολικό ρόλο στις εξερευνήσεις σου; Με αυτήν τη διαβολική αμφίεση, το μόνο βέβαιο είναι ότι θα σπείρεις τον τρόμο στα μωράκια των αρουραίων.</string>
-  <string name="WndSettingsInGame_GameLog">Καταγραφή παιχνιδιού</string>
+  <string name="WndSettingsInGame_GameLog">Καταγραφές παιχνιδιού</string>
   <string name="Froth_ArrowInKnee">Κάποτε ήμουν κι εγώ εξερευνητής...\nΜέχρι που έφαγα βέλος στο γόνατο...</string>
   <string name="BardSong_1">Ζούσαμε μονάχοι η γυναίκα μου κι εγώ\nΣε μια μικρή καλύβα, το μικρό μας σπιτικό\nΤο τζιν και το ρούμι μάς κρατούσαν συντροφιά\nΤης αγάπης μας υπήρξε ζεστή η αγκαλιά</string>
   <string name="SpiderElite_Name">ανώτερος αραχνοφρουρός</string>
@@ -2867,7 +2867,7 @@
     - Διορθώσεις σφαλμάτων\n
     </string>
   <string name="WndTilesKind_Title">Και κάτι ακόμη:</string>
-  <string name="WndTilesKind_text">Πρόκειται να μπεις σε μια κατακόμβη που έχει κυριευτεί από τη διαβολική μαγεία· τουλάχιστον μπορείς να επιλέξεις πώς θα τη βλέπεις.\n Θέλεις να είναι με σύγχρονα ψευδο-3D γραφικά ή με την κλασική επίπεδη εμφάνιση;\nΜπορείς να το αλλάξεις αργότερα στο μενού ρυθμίσεων του παιχνιδιού.</string>
+  <string name="WndTilesKind_text">Πρόκειται να μπεις σε μια κατακόμβη που έχει κυριευτεί από τη διαβολική μαγεία· τουλάχιστον μπορείς να επιλέξεις πώς θα τη βλέπεις.\nΘέλεις να είναι με σύγχρονα ψευδο-3D γραφικά ή με την κλασική επίπεδη εμφάνιση;\nΜπορείς να το αλλάξεις αργότερα στο μενού ρυθμίσεων του παιχνιδιού.</string>
   <string name="WndTilesKind_NewLook">Νέα εμφάνιση</string>
   <string name="WndTilesKind_ClassicLook">Κλασική εμφάνιση</string>
   <string name="MobAi_status">- %s: %s</string>
