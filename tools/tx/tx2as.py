@@ -25,6 +25,10 @@ totalCounter = {}
 dir_name = "remixed-dungeon.strings-all-xml--master"
 resource_name = "strings_all.xml"
 
+changelog_prefix = "Welcome_Text_"
+changelog_key = "Welcome_Text_0"
+changelog = {}
+
 escape_apostrophe = re.compile(r"(?<!\\)'")
 
 print("Processing:", dir_name, resource_name)
@@ -109,6 +113,7 @@ for _, _, files in os.walk(translations_dir + dir_name):
         currentFilePath = translations_dir + dir_name + "/" + file_name
 
         print("file:", currentFilePath)
+        changelog_key = "Welcome_Text_0"
         try:
             transifexData = ElementTree.parse(currentFilePath).getroot()
 
@@ -122,11 +127,16 @@ for _, _, files in os.walk(translations_dir + dir_name):
                 #detectedLang = lang(entry.text)
                 #print(entry.text, detectedLang)
 
+                entry_name = entry.get("name")
 
                 counters[resource_name][locale_code] += 1
                 totalCounter[locale_code] += 1
 
                 if entry.tag == "string":
+                    if entry_name.startswith(changelog_prefix):
+                        if entry_name > changelog_key:
+                            changelog_key = entry_name
+                            changelog[locale_code] = entry.text
 
                     jsonData.write(unescape(json.dumps([entry.get("name"), entry.text], ensure_ascii=False)))
                     jsonData.write("\n")
@@ -151,3 +161,7 @@ for _, _, files in os.walk(translations_dir + dir_name):
             print(error)
 
 pprint.pprint(totalCounter)
+for locale_code, text in changelog.items():
+
+    print(locale_code)
+    print(text.replace("\\n",""))
