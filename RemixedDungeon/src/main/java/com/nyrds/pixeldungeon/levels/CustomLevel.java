@@ -66,7 +66,7 @@ public abstract class CustomLevel extends CommonLevel {
 
 	@Override
 	public String tilesTexEx() {
-		return getProperty("tiles_x", null);
+		return getProperty("tiles_x", "");
 	}
 
 	@Override

@@ -47,7 +47,12 @@ public class RandomLevel extends RegularLevel {
 	}
 
 	public String tilesTexEx() {
-		return mLevelDesc.optString("tiles_x", null);
+		return mLevelDesc.optString("tiles_x", super.tilesTexEx());
+	}
+
+	@Override
+	protected String tilesTexXyz() {
+		return mLevelDesc.optString("tiles_xyz", super.tilesTexXyz());
 	}
 
 	public String waterTex() {
