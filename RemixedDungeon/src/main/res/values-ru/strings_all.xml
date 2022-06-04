@@ -1230,7 +1230,7 @@
   <string name="Eye_Kill">%s убивает тебя взглядом смерти...</string>
   <string name="Gnoll_Name">гнолл-следопыт</string>
   <string name="Gnoll_Gender">masculine</string>
-  <string name="Gnoll_Name_Objective">гнолла</string>
+  <string name="Gnoll_Name_Objective">гнолл-разведчик</string>
   <string name="Gnoll_Desc">Гноллы - это гиенообразные гуманоиды. Они обитают в канализации и подземельях, периодически совершая набеги на поверхность. Гнолл-следопыт - типичный представитель стаи, он не столь силён, как громила, и не так умён, как шаман.</string>
   <string name="Golem_Name">голем</string>
   <string name="Golem_Gender">masculine</string>
@@ -1306,7 +1306,7 @@
   <string name="Skeleton_Gender">masculine</string>
   <string name="Skeleton_Name_Objective">скелета</string>
   <string name="Skeleton_Desc">Скелеты из костей павших путешественников восстали под воздействием отголосков зловещей магии, таящейся в глубине подземелья. Будучи достаточно повреждёнными, они разлетаются на костяные осколки.</string>
-  <string name="Skeleton_Defense">прикрылся</string>
+  <string name="Skeleton_Defense">заблокировано</string>
   <string name="Skeleton_Killed">Тебя пробило костяным осколком...</string>
   <string name="Spinner_Name">пещерный паук</string>
   <string name="Spinner_Gender">masculine</string>
@@ -1606,6 +1606,7 @@
   <string name="TownsfolkMovieNPC_Gender">masculine</string>
   <string name="TownsfolkMovieNPC_Name_Objective">горожанина</string>
   <string name="TownsfolkMovieNPC_Desc">Один из местных жителей. И несмотря на то, что это явно простолюдин, его одежда выглядит совсем не дешёвой.</string>
+  <string name="TownsfolkMovieNPC_Message">Вы знаете о той специальной услуге, которую предоставляет «кинотеатр»? Жалко, они просят какую-то диковинную штуку называемой \"Интернет\". Я раньше ничего не слышал об этой штуке. </string>
   <string name="LibrarianNPC_Name">библиотекарь</string>
   <string name="LibrarianNPC_Gender">masculine</string>
   <string name="LibrarianNPC_Name_Objective">библиотекаря</string>
@@ -2848,5 +2849,49 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndSettingsInGame_IsometricTiles">Изометрические Тайлы</string>
   <string name="KrampusHead_Name">Голова Крампуса</string>
   <string name="KrampusHead_Info">Вы когда-нибудь задумывались, каково это - принять более зловещую роль в этом Приключении? Тогда скорее надевайте эту маску и крысята по всей округе будут трепетать от ужаса.</string>
+  <string name="WndSettingsInGame_GameLog">Игровой лог</string>
+  <string name="Froth_ArrowInKnee">Когда-то меня тоже вела дорога приключений, но потом мне прострелили колено...</string>
+  <string name="BardSong_1">Мы с женой живем совсем одни,
+В своей маленькой бревенчатой ​​избушке,
+Она любила джин, а я любил ром
+И скажу я вам что было очень весело нам. </string>
+  <string name="SpiderElite_Name">Элитный паучий страж</string>
   <string name="SpiderElite_Gender">masculine</string>
+  <string name="SpiderElite_Name_Objective">паука</string>
+  <string name="SpiderElite_Desc">Подобно солдатам, пауки-стражи поклялись защищать свое королевство. Яд элитного стража деориентирует жертву.</string>
+  <string name="Shaman_ZapMiss">*Ругается на гнолльском*</string>
+  <string name="Facilitations_Names_0">Без голода</string>
+  <string name="Facilitations_Names_1">Тело тролля</string>
+  <string name="Facilitations_Names_2">Дух джина</string>
+  <string name="Facilitations_Names_3">Сила гиганта</string>
+  <string name="Facilitations_Descriptions_0">К мутантам всегда относились с презрением и страхом, но отсутствие голода снова даст вам превосходство, на этот раз в покорении глубин подземелья.</string>
+  <string name="Facilitations_Descriptions_1">До сих пор неизвестно, кем были ваши родители, но естественная регенерация, подобная тролльей, поможет загладить все предстоящие боевые шрамы.</string>
+  <string name="Facilitations_Descriptions_2">Глубокое и тщательное изучение природы как источника энергии позволит вам пополнять свои магические резервы во время путешествия.</string>
+  <string name="Facilitations_Descriptions_3">Затянув пояс из шкуры огра, который передавался каждому новому поколению, вы делаете шаг навстречу неизвестности.</string>
+  <string name="Challenges_Descriptions_0">Еда и вода давно протухли, сводя с ума всех искателей приключений от мыслей о смерти от страха и голода. Может ли ваша диета помочь вам продержаться достаточно долго?</string>
+  <string name="Challenges_Descriptions_1">Нападение - лучшая защита. Следуя этим наставлениям, вы отправляетесь в подземелье с верой, которая заменит вам броню.</string>
+  <string name="Challenges_Descriptions_2">Будучи приверженцем естественной регенерации организма, вы всегда с опаской относились к снадобьям, обладающим лечебными свойствами. Лучше перестраховаться, чем потом жалеть!</string>
+  <string name="Challenges_Descriptions_3">Земли вокруг подземелья давно поражены скверной, препятствующей произрастанию семян различных трав и растений. Кто знает, сколько времени пройдет, прежде чем последнее растение прекратит свое существование на этих бесплодных землях.</string>
+  <string name="Challenges_Descriptions_4">В сознании всех существ в подземелье таится некое дьявольское начало, заставляющее их осознавать события, происходящие друг с другом.</string>
+  <string name="Challenges_Descriptions_5">Первое, что пришло со злом, — густой и непроницаемый туман, из-за которого почти невозможно четко ориентироваться в бесконечных коридорах подземелья.</string>
+  <string name="Challenges_Descriptions_6">Древнее искусство чтения рун запрещено и его избегают любой ценой из-за проклятия, наложенного на каждый свиток, который попадает в подземелье или его окрестности.</string>
+  <string name="Challenges_Descriptions_7">Вы привыкли к тому, что владение и использование оружия неприемлемо с моральной точки зрения, но что еще может защитить вас от существ, бродящих внизу?</string>
+  <string name="ManaRegenerationBuff_Name">Регенерация Маны</string>
+  <string name="ManaRegenerationBuff_Info">Регенерация маны сделана как бафф чтобы все было проще.</string>
+  <string name="WndGame_Customizations">Кастомизации</string>
+  <string name="Welcome_Text_31_1">
+    remix.31.1\n
+    - Геймплей:\n
+    -- Новые Кастомизации!\n
+    -- Новый вид пауков!!\n
+    -- Пси-пауки теперь усиляют союзников, вместо того чтобы проклинать врагов.\n
+    - Исправления ошибок\n
+    </string>
+  <string name="WndTilesKind_Title">Еще один момент:</string>
+  <string name="WndTilesKind_text">Вы собираетесь войти в Подземелье одержимое извращенным колдовством, однако вы можете выбрать:\n
+Вы предпочитаете современное псевдо 3d или классический плоский вид?\n
+Вы всегда сможете изменить его позже в игровых настройках.</string>
+  <string name="WndTilesKind_NewLook">Новый вид</string>
+  <string name="WndTilesKind_ClassicLook">Классический вид</string>
+  <string name="MobAi_status"> %s сейчас %s</string>
 </resources>
