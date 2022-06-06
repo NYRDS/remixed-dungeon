@@ -370,14 +370,16 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int getViewDistance() {
-		if (isSafe()) {
-			viewDistance = ShadowCaster.MAX_DISTANCE;
-		} else {
+
+		if (!isSafe()) {
 			viewDistance = Dungeon.isChallenged(Challenges.DARKNESS) ? 1 : viewDistance;
+		} else {
+			viewDistance = ShadowCaster.MAX_DISTANCE;
 		}
 
 		viewDistance = DungeonGenerator.getLevelProperty(levelId, "viewDistance", viewDistance);
 		viewDistance = Math.min(viewDistance, ShadowCaster.MAX_DISTANCE);
+		viewDistance = Math.max(viewDistance, 1);
 		return viewDistance;
 	}
 
@@ -443,7 +445,7 @@ public abstract class Level implements Bundlable {
 	public boolean[] visited;
 	public boolean[] mapped;
 
-	@Packable
+	@Packable(defaultValue = "ShadowCaster.MAX_DISTANCE")
 	protected int viewDistance = ShadowCaster.MAX_DISTANCE;
 
 	//Active Char fov
