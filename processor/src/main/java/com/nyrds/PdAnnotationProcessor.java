@@ -12,6 +12,7 @@ import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
 import java.io.Writer;
 import java.lang.reflect.Field;
+import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -26,6 +27,8 @@ import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
 import javax.lang.model.type.TypeMirror;
 import javax.tools.JavaFileObject;
+
+import lombok.val;
 
 @AutoService(Processor.class)
 public class
@@ -46,8 +49,14 @@ PdAnnotationProcessor extends AbstractProcessor{
 
 		Map<Element, Set<Element>> fieldsByClass = new HashMap<>();
 		Map<Element, String>       defaultValues = new HashMap<>();
-		// for each javax.lang.model.element.Element annotated with the CustomAnnotation
+		Set<Element>               classesToImport = new HashSet<>();
+
 		for (Element element : roundEnvironment.getElementsAnnotatedWith(Packable.class)) {
+			if(element.getKind().isClass()){
+				classesToImport.add(element);
+				continue;
+			}
+
 			Element parent = element.getEnclosingElement();
 
 			String defaultValue = element.getAnnotation(Packable.class).defaultValue();
@@ -191,11 +200,15 @@ PdAnnotationProcessor extends AbstractProcessor{
 
 		BundleHelper = BundleHelper.toBuilder()
 				.addMethod(pack)
-				.addMethod(unpack)
-				.build();
+				.addMethod(unpack).build();
+
+		for (val clazz: classesToImport) {
+			BundleHelper = BundleHelper.toBuilder()
+					.addField(ClassName.bestGuess(clazz.asType().toString()), String.format("holder_%s", clazz.asType().hashCode()), Modifier.PRIVATE)
+					.build();
+		}
 
 		JavaFile javaFile = JavaFile.builder("com.nyrds.generated", BundleHelper)
-				.addStaticImport(itemsList,"DUMMY")
 				.build();
 
 		try { // write the file
