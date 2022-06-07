@@ -445,7 +445,6 @@ public abstract class Level implements Bundlable {
 	public boolean[] visited;
 	public boolean[] mapped;
 
-	@Packable(defaultValue = "ShadowCaster.MAX_DISTANCE")
 	protected int viewDistance = ShadowCaster.MAX_DISTANCE;
 
 	//Active Char fov
