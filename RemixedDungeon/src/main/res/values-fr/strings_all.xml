@@ -2849,4 +2849,36 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="SpiderElite_Name_Objective">Garde d\'élite araignée</string>
   <string name="SpiderElite_Desc">Comme les soldats, les gardes araignées ont juré de protéger leur royaume. Le venin des gardes d\'élites est utilisé pour désorienter leur cible.</string>
   <string name="Shaman_ZapMiss">*Jure en gnollien*</string>
+  <string name="Facilitations_Names_0">Pas de faim</string>
+  <string name="Facilitations_Names_1">Corps de Troll</string>
+  <string name="Facilitations_Names_2">Esprit de Génie</string>
+  <string name="Facilitations_Names_3">Force de géant</string>
+  <string name="Facilitations_Descriptions_0">Les mutants ont toujours été craints et méprisés , mais l\'absence de faim vous donnera une fois de plus la supériorité afin de conquérir les profondeurs du donjon.</string>
+  <string name="Facilitations_Descriptions_1">L\'identité de vos parents est toujours inconnue, mais la régénération naturelle de troll aidera à soigner toutes les prochaines blessures de batailles.</string>
+  <string name="Facilitations_Descriptions_2">Une étude profonde et rigoureuse de la nature vous permettra de restaurer vos réserves magiques durant votre périple.</string>
+  <string name="Facilitations_Descriptions_3">En serrant votre ceinture faite en peau d\'ogre, qui a été transmise à chaque nouvelle génération, vous faites un pas de plus vers l\'inconnu qui se dresse devant vous.</string>
+  <string name="Challenges_Descriptions_0">L\'eau et la nourriture sont avariées depuis longtemps, rendant chaque aventurier fou et causant des pensées mortelles de peur et de faim. Votre régime vous aidera-t-il à a survivre assez longtemps ?</string>
+  <string name="Challenges_Descriptions_1">L\'attaque est la meilleure des défenses. En suivant ces enseignements, vous vous aventurez dans le donjon, avec la foi comme le meilleur gardien de votre corps.</string>
+  <string name="Challenges_Descriptions_2">Étant un adepte de la régénération naturelle du corps ordinaire, vous êtes capable de différencier les potions de soin des autres potions. Mieux vaut prévenir que guérir !</string>
+  <string name="Challenges_Descriptions_3">Le donjon et ses alentours sont infectés depuis longtemps par un sort malveillant, empêchant la croissance des graines d\'herbes et de plantes. Personne ne sait combien de temps il faudra avant que la dernière plante mourra sur ces terres désolées.</string>
+  <string name="Challenges_Descriptions_4">Une présence maléfique rôde au sein de l\'esprit des créatures du donjon, leur permettant de ressentir les évènement qui se déroulent l\'un après l\'autre. </string>
+  <string name="Challenges_Descriptions_5">La première chose que le Mal à apporté, est un brouillard dense et impénétrable qui rend la navigation dans les couloirs sans fin au sein du donjon pratiquement impossible.</string>
+  <string name="Challenges_Descriptions_6">L\'art ancestral de la lecture de rune est interdit et évité à tout prix à cause de la malédiction infligée à chaque parchemin qui se retrouve dans le donjon et ses alentours.</string>
+  <string name="Challenges_Descriptions_7">Vous vous êtes habitué au fait que la possession et l\'utilisation d\'armes ne soient pas très morales, mais bon c\'est pas comme si vous aviez un autre moyen pour vous défendre contre les créatures qui rôdent dans les profondeurs ?</string>
+  <string name="ManaRegenerationBuff_Name">Régénération de Mana</string>
+  <string name="ManaRegenerationBuff_Info">La régénération de mana est sous la forme d\'un buff affin de rendre les choses plus faciles.</string>
+  <string name="WndGame_Customizations">Customisations</string>
+  <string name="Welcome_Text_31_1">
+    remix.31.1\n
+    - Gameplay:\n
+    -- Nouvelles Customisations!\n
+    -- Nouvelles espèces d\'araignées!\n
+    -- L\'araignée psy renforcera les autres araignées au lieu d\'affaiblir le héros.\n
+    - Bugs corrigés\n
+    </string>
+  <string name="WndTilesKind_Title">Juste une dernière chose:</string>
+  <string name="WndTilesKind_text">Vous êtes sur le point de rentrer dans un Donjon possédé par une magie étrange, mais vous pouvez désormais choisir comment vous voulez le voir:\n Aimeriez vous le voir en vue moderne 3D isométrique où bien à plat comme avant ?\nVous pourrez toujours modifier votre choix plus tard dans le menu des options du jeu.</string>
+  <string name="WndTilesKind_NewLook">Nouveau Look</string>
+  <string name="WndTilesKind_ClassicLook">Look Classique</string>
+  <string name="MobAi_status">Ce %s est %s</string>
 </resources>
