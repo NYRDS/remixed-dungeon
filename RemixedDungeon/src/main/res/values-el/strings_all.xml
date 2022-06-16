@@ -404,7 +404,7 @@
   <string name="WndRanking_StaStr">Δύναμη</string>
   <string name="WndRanking_StaDuration">Διάρκεια παιχνιδιού</string>
   <string name="WndRanking_StaDepth">Μέγιστο βάθος</string>
-  <string name="WndRanking_StaEnemies">Εχθροί που σκοτώθηκαν</string>
+  <string name="WndRanking_StaEnemies">Εχθροί που εξοντώθηκαν</string>
   <string name="WndRanking_StaGold">Χρυσός που συλλέχθηκε</string>
   <string name="WndRanking_StaFood">Καταναλωμένο φαγητό</string>
   <string name="WndRanking_StaAlchemy">Παρασκευασμένα φίλτρα</string>
@@ -771,7 +771,7 @@
   <string name="Exhumation_NoGrave">Δεν υπάρχει τάφος εδώ για να κάνεις εκταφή.</string>
   <string name="Exhumation_Ok">Θα σε υπακούσω.</string>
   <string name="RaiseDead_Name">Ανάσταση νεκρού</string>
-  <string name="RaiseDead_Info">Απόπειρα ανάστησης του τελευταίου πλάσματος που εξολοθρεύτηκε (η τελετή απαιτεί φρέσκο «υλικό»). Όταν χρησιμοποιείς αυτήν τη σκοτεινή μαγεία, θυμήσου: σχεδόν κάθε πλάσμα μπορεί να αναστηθεί, αλλά η θέλησή τους δεν λυγίζει το ίδιο εύκολα.</string>
+  <string name="RaiseDead_Info">Απόπειρα ανάστασης του τελευταίου πλάσματος που εξοντώθηκε (η τελετή απαιτεί φρέσκο «υλικό»). Όταν χρησιμοποιείς αυτήν τη σκοτεινή μαγεία, να θυμάσαι: σχεδόν κάθε πλάσμα μπορεί να αναστηθεί, αλλά η θέλησή τους δεν λυγίζει το ίδιο εύκολα.</string>
   <string name="RaiseDead_NoSpace">Η ανάσταση απέτυχε: δεν υπάρχει κοντινός ελεύθερος χώρος.</string>
   <string name="RaiseDead_NoKill">Πρέπει να εξοντώσεις κάποιον προτού τον αναστήσεις.</string>
   <string name="RawFish_Name">ωμό ψάρι</string>
@@ -1204,7 +1204,7 @@
   <string name="Brute_Name_Objective">κτηνώδες γκνολ</string>
   <string name="Brute_Desc">Τα κτήνη είναι τα μεγαλύτερα, δυνατότερα και σκληρότερα όλων των γκνολ. Εξαγριώνονται όταν πληγωθούν θανάσιμα, προκαλώντας μεγαλύτερη ζημιά στους εχθρούς τους.</string>
   <string name="Brute_Gender">neuter</string>
-  <string name="Brute_Enraged">Το %s εξαγριώνεται!</string>
+  <string name="Brute_Enraged">Ο εχθρός (%s) εξαγριώνεται!</string>
   <string name="Brute_StaEnraged">εξαγρίωση</string>
   <string name="Crab_Name">κάβουρας υπονόμων</string>
   <string name="Crab_Gender">masculine</string>
@@ -1418,7 +1418,7 @@
   <string name="DeathKnight_Name">ιππότης του θανάτου</string>
   <string name="DeathKnight_Gender">masculine</string>
   <string name="DeathKnight_Name_Objective">ιππότης του θανάτου</string>
-  <string name="DeathKnight_Desc">Με την πρώτη ματιά, φαίνεται σαν ένας ισχυρός πολεμιστής με βαριά πανοπλία. Το μόνο που τον προδίδει είναι ο μορφασμός του θανάτου. Ο ιππότης του θανάτου είναι η ενσάρκωση της ψυχής ενός ιππότη που απέτυχε να κρατήσει τους όρκους του. Στην καταραμένη του υπόσταση, περιπλανιέται αιώνια αναζητώντας την κάθαρση μέσω της μάχης. Σκοτώνει τους αθώους, ανήμπορος να θυμηθεί ποιους είχε ορκιστεί να προστατεύει.</string>
+  <string name="DeathKnight_Desc">Με την πρώτη ματιά, δεν είναι παρά ένας δυνατός πολεμιστής με βαριά πανοπλία. Το μόνο που τον προδίδει είναι ο μορφασμός του θανάτου. Ο ιππότης του θανάτου είναι η ενσάρκωση της ψυχής ενός ιππότη που απέτυχε να κρατήσει τους όρκους του. Στην καταραμένη του υπόσταση, περιπλανιέται αιώνια αναζητώντας την κάθαρση μέσω της μάχης. Σκοτώνει τους αθώους, ανήμπορος να θυμηθεί ποιους είχε ορκιστεί να προστατεύει.</string>
   <string name="DreadKnight_Name">ανεξιλέωτος ιππότης</string>
   <string name="DreadKnight_Gender">masculine</string>
   <string name="DreadKnight_Name_Objective">ανεξιλέωτος ιππότης</string>
@@ -2014,7 +2014,7 @@
   <string name="DeferedDamageBuff_Info">Ο πόνος έχει γίνει σταδιακός και η ζημιά δεν λαμβάνεται όλη απευθείας.\nΖημιά που απομένει να ληφθεί: %d</string>
   <string name="DeferedDamage_Killed_Txt">Η %s σε εξόντωσε...</string>
   <string name="Plant_ACPlant">ΦΥΤΕΨΕ</string>
-  <string name="Plant_Info">Πέτα τον σπόρο στο σημείο που θέλεις να φυτρώσει ένα %1$s.\n\n%2$s</string>
+  <string name="Plant_Info">Πέτα τον σπόρο στο σημείο που θέλεις να φυτρώσει %1$s.\n\n%2$s</string>
   <string name="Plant_Seed">σπόρος από %s</string>
   <string name="Dreamweed_Name">ονειρόχορτο</string>
   <string name="Dreamweed_Desc">Με το άγγιγμα του ονειρόχορτου, εκκρίνεται ένα φωσφορίζον αέριο σύγχυσης.</string>
@@ -2414,7 +2414,7 @@
   <string name="Challenges_Names_2">Φαρμακοφοβία</string>
   <string name="Challenges_Names_3">Άγονη γη</string>
   <string name="Challenges_Names_4">Ευφυΐα σμήνους</string>
-  <string name="Challenges_Names_5">μες στο σκοτάδι</string>
+  <string name="Challenges_Names_5">Μες στο σκοτάδι</string>
   <string name="Hunger_Hungry_0">Πεινάς.</string>
   <string name="Hunger_Hungry_1">Πεινάς.</string>
   <string name="Hunger_Hungry_2">Πεινάς.</string>
@@ -2620,7 +2620,7 @@
   <string name="Char_Stole_0">%1$s έκλεψε: %2$s από: %3$s!</string>
   <string name="Char_Stole_1">%1$s έκλεψε: %2$s από: %3$s!</string>
   <string name="Char_Stole_2">%1$s έκλεψε: %2$s από: %3$s!</string>
-  <string name="ScrollOfTeleportation_Teleport2">Ο στόχος (%s) τηλεμεταφέρθηκε σε ένα άλλο σημείο του ορόφου.</string>
+  <string name="ScrollOfTeleportation_Teleport2">%s: τηλεμεταφέρθηκε σε ένα άλλο σημείο του επιπέδου.</string>
   <string name="ScrollOfTeleportation_NoTeleport2">Η ισχυρή μαγική αύρα αυτού του μέρους εμποδίζει την τηλεμεταφορά 
     του πλάσματος (%s)!</string>
   <string name="WndModInstall_InstallingMod">Εγκατάσταση τροποποίησης</string>
@@ -2812,8 +2812,8 @@
   <string name="Bee_Desc">Παρά το μικρό τους μέγεθος, οι μέλισσες προστατεύουν σθεναρά την κυψέλη τους. Δεν ζουν, όμως, για πολύ.</string>
   <string name="Moongrace_Name">σεληνόχρισμα</string>
   <string name="Moongrace_Desc">Αυτά τα φυτά μεγαλώνουν σε μικρούς αριθμούς και είναι γνωστά ως πηγές φυσικής μαγείας.</string>
-  <string name="MoongraceBuff_Name">Ουράνια μαγεία</string>
-  <string name="MoongraceBuff_Info">Ο αέρας αποκτά ανώτερη υγρασία, κάτι που αυξάνει τη συγκέντρωση και την ανάκτηση των μαγικών αποθεμάτων.</string>
+  <string name="MoongraceBuff_Name">Επουράνια μαγεία</string>
+  <string name="MoongraceBuff_Info">Ο αέρας αποκτά υγρασία, κάτι που αυξάνει τη συγκέντρωση και την ανάκτηση των μαγικών αποθεμάτων.</string>
   <string name="EncumbranceBuff_Name">Επιβάρυνση</string>
   <string name="EncumbranceBuff_Info">Μη επαρκής δύναμη για την αποτελεσματική χρήση του εφοδίου «%s».</string>
   <string name="Level_TileDescPedestal">Ένα μικρό βάθρο.</string>
