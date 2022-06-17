@@ -203,7 +203,7 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
         if (mSkuDetails.containsKey(skuLowerCase)) {
             return mSkuDetails.get(skuLowerCase).getPrice();
         } else {
-            EventCollector.logException(sku);
+            //EventCollector.logException(sku); //Yeah, this happens a lot...
             return Utils.EMPTY_STRING;
         }
     }
