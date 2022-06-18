@@ -863,7 +863,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	protected String waterTex() {
-		return null;
+		return Assets.WATER_SEWERS;
 	}
 
 	abstract protected boolean build();
