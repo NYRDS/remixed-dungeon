@@ -2881,4 +2881,5 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="WndTilesKind_NewLook">Nouveau Look</string>
   <string name="WndTilesKind_ClassicLook">Look Classique</string>
   <string name="MobAi_status">Ce %s est %s</string>
+  <string name="WndCustomizations_Title">Customisations</string>
 </resources>
