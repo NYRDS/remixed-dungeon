@@ -2873,4 +2873,5 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndTilesKind_NewLook">New Look</string>
   <string name="WndTilesKind_ClassicLook">Classic look</string>
   <string name="MobAi_status">This %s is %s</string>
+  <string name="WndCustomizations_Title">Customizations</string>
 </resources>

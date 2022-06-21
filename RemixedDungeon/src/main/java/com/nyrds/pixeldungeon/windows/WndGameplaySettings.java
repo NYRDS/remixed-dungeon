@@ -23,6 +23,7 @@ public class WndGameplaySettings extends WndMenuCommon {
         });
 
         menuItems.add(moveTimeoutSelector=createMoveTimeoutSelector());
+        moveTimeoutSelector.enable(!GamePreferences.realtime());
 	}
 
     private Selector createMoveTimeoutSelector() {

@@ -31,22 +31,18 @@ import lombok.var;
 
 public class WndGameplayCustomization extends Window {
 
-    private boolean editable;
-
     private final int WIDTH = 120;
 
     public WndGameplayCustomization( boolean editable ) {
 
         super();
 
-        this.editable = editable;
-
-        Text title = PixelScene.createText(StringsManager.getVar(R.string.WndChallenges_Title), GuiProperties.titleFontSize() );
+        Text title = PixelScene.createText(StringsManager.getVar(R.string.WndCustomizations_Title), GuiProperties.titleFontSize() );
         title.hardlight( TITLE_COLOR );
         title.setX(PixelScene.align( camera, (WIDTH - title.width()) / 2 ));
         add( title );
 
-        resize(WndHelper.getLimitedWidth(WIDTH), WndHelper.getFullscreenHeight() - WINDOW_MARGIN);
+        resize(WndHelper.getLimitedWidth(WIDTH), WndHelper.getFullscreenHeight() - WINDOW_MARGIN*4);
 
         var customizationsSet = new VHBox(WndHelper.getLimitedWidth(WIDTH) - chrome.marginHor());
         customizationsSet.setAlign(HBox.Align.Width);
