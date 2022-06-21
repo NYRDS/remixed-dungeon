@@ -960,7 +960,15 @@ public class Dungeon {
             return isCellVisible(cell);
         }
 
-        return isCellVisible(cell) && isCellVisible(cell + level.getWidth());
+        if(!isCellVisible(cell)) {
+            return false;
+        }
+
+        int next_cell = cell + level.getWidth();
+        if(!level.cellValid(next_cell)) {
+            return true;
+        }
+        return isCellVisible(next_cell);
     }
 
 

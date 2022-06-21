@@ -15,10 +15,10 @@ public class SpiderExploding extends MultiKindMob {
             "Firebloom",
             "Icecap",
             "Sorrowmoss",
-            "Earthroot",
-            "Sungrass",
-            "Fadeleaf",
             "Dreamweed",
+            "Sungrass",
+            "Earthroot",
+            "Fadeleaf",
             "Moongrace"
     };
 

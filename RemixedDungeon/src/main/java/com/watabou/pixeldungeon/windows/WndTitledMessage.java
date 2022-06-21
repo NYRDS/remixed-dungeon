@@ -54,7 +54,6 @@ public class WndTitledMessage extends Window {
 		add(normal);
 
 		if (hl.isHighlighted()) {
-
 			Text highlighted = PixelScene.createMultiline(hl.text, GuiProperties.regularFontSize());
 			highlighted.mask = hl.mask;
 			highlighted.maxWidth(normal.getMaxWidth());
@@ -65,6 +64,6 @@ public class WndTitledMessage extends Window {
 			highlighted.hardlight(TITLE_COLOR);
 		}
 		
-		resize( width, (int)(normal.getY() + normal.height()) );
+		resize( width, (int)(normal.getY() + normal.height()+GAP) );
 	}
 }

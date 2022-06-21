@@ -227,9 +227,9 @@ public class GameScene extends PixelScene {
         ripples = new Group();
         terrain.add(ripples);
 
-        String logicTilesAtlas = level.getProperty("tiles_logic", null);
+        String logicTilesAtlas = level.getProperty("tiles_logic", "");
 
-        if(logicTilesAtlas != null) {
+        if(!logicTilesAtlas.isEmpty()) {
 			logicTiles = new ClassicDungeonTilemap(level,logicTilesAtlas);
 			terrain.add(logicTiles);
 		}
@@ -1034,7 +1034,7 @@ public class GameScene extends PixelScene {
 
     static public boolean defaultCellSelector() {
         if(isSceneReady()) {
-            return scene.cellSelector.defaultListner();
+            return cellSelector.defaultListner();
         }
         return true;
     }

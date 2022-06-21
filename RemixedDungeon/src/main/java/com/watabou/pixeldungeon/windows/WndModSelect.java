@@ -94,7 +94,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 			}
 		}
 
-		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - WINDOW_MARGIN);
+		resize(WndHelper.getLimitedWidth(120), WndHelper.getFullscreenHeight() - WINDOW_MARGIN * 4);
 
 		list.content().setSize(width, pos);
 		list.setRect(0, tfTitle.bottom() + GAP, width, height - tfTitle.height() - GAP);

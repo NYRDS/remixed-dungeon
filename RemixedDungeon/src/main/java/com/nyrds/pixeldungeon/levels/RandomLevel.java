@@ -40,18 +40,6 @@ public class RandomLevel extends RegularLevel {
 		readDescFile(mDescFile);
 	}
 
-	@Override
-	public String tilesTex() {
-		return mLevelDesc.optString("tiles", "tiles0.png");
-	}
-
-	public String tilesTexEx() {
-		return mLevelDesc.optString("tiles_x", null);
-	}
-
-	public String waterTex() {
-		return mLevelDesc.optString("water", "water0.png");
-	}
 
 	@Override
 	protected void decorate() {

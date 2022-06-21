@@ -149,19 +149,19 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
 	private final Set<EquipableItem> activatedItems = new HashSet<>();
 
-	@Packable(defaultValue = "DUMMY")
+	@Packable(defaultValue = "ItemsList.DUMMY")
 	@NotNull
 	public EquipableItem weapon = ItemsList.DUMMY;
-	@Packable(defaultValue = "DUMMY")
+	@Packable(defaultValue = "ItemsList.DUMMY")
 	@NotNull
 	public EquipableItem leftHand = ItemsList.DUMMY;
-	@Packable(defaultValue = "DUMMY")
+	@Packable(defaultValue = "ItemsList.DUMMY")
 	@NotNull
 	public EquipableItem armor  = ItemsList.DUMMY;
-	@Packable(defaultValue = "DUMMY")
+	@Packable(defaultValue = "ItemsList.DUMMY")
 	@NotNull
 	public EquipableItem ring1  = ItemsList.DUMMY;
-	@Packable(defaultValue = "DUMMY")
+	@Packable(defaultValue = "ItemsList.DUMMY")
 	@NotNull
 	public EquipableItem ring2  = ItemsList.DUMMY;
 

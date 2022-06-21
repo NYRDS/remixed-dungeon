@@ -370,14 +370,16 @@ public abstract class Level implements Bundlable {
 	}
 
 	public int getViewDistance() {
-		if (isSafe()) {
-			viewDistance = ShadowCaster.MAX_DISTANCE;
-		} else {
+
+		if (!isSafe()) {
 			viewDistance = Dungeon.isChallenged(Challenges.DARKNESS) ? 1 : viewDistance;
+		} else {
+			viewDistance = ShadowCaster.MAX_DISTANCE;
 		}
 
 		viewDistance = DungeonGenerator.getLevelProperty(levelId, "viewDistance", viewDistance);
 		viewDistance = Math.min(viewDistance, ShadowCaster.MAX_DISTANCE);
+		viewDistance = Math.max(viewDistance, 1);
 		return viewDistance;
 	}
 
@@ -385,7 +387,6 @@ public abstract class Level implements Bundlable {
 		return MAX_VIEW_DISTANCE;
 	}
 
-	@NotNull
 	public int[] getTileLayer(LayerId id) {
 		if(customLayers.containsKey(id)) {
 			return customLayers.get(id);
@@ -444,7 +445,6 @@ public abstract class Level implements Bundlable {
 	public boolean[] visited;
 	public boolean[] mapped;
 
-	@Packable
 	protected int viewDistance = ShadowCaster.MAX_DISTANCE;
 
 	//Active Char fov
@@ -586,7 +586,7 @@ public abstract class Level implements Bundlable {
 		Blob.setWidth(getWidth());
 		Blob.setHeight(getHeight());
 
-		LuaEngine.getEngine().require(LuaEngine.SCRIPTS_LIB_STORAGE).get("resetLevelData").call();
+		LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("resetLevelData").call();
 	}
 
 	public void create(int w, int h) {
@@ -755,11 +755,13 @@ public abstract class Level implements Bundlable {
 		var loadedMobs = bundle.getCollection(MOBS, Mob.class);
 
 		for (Mob mob : loadedMobs) {
-			if (mob != null && mob.valid() && cellValid(mob.getPos()) && !CharsList.isDestroyed(mob.getId())) {
-				GLog.debug("load: %s %d", mob.getEntityKind(), mob.getId());
-				mobs.add(mob);
-			} else {
-				GLog.debug("skip: %s %d", mob.getEntityKind(), mob.getId());
+			if (mob != null) {
+				if (mob.valid() && cellValid(mob.getPos()) && !CharsList.isDestroyed(mob.getId())) {
+					GLog.debug("load: %s %d", mob.getEntityKind(), mob.getId());
+					mobs.add(mob);
+				} else {
+					GLog.debug("skip: %s %d", mob.getEntityKind(), mob.getId());
+				}
 			}
 		}
 
@@ -826,7 +828,7 @@ public abstract class Level implements Bundlable {
 			return tiles;
 		}
 
-		if (tilesTexEx() == null) {
+		if (tilesTexEx().isEmpty()) {
 			return tilesTex();
 		}
 
@@ -843,7 +845,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	protected String tilesTexEx() {
-		return null;
+		return Utils.EMPTY_STRING;
 	}
 
 	protected String tilesTexXyz() {
@@ -861,7 +863,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	protected String waterTex() {
-		return null;
+		return Assets.WATER_SEWERS;
 	}
 
 	abstract protected boolean build();
@@ -1996,7 +1998,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	public boolean hasTilesetForLayer(LayerId layerId) {
-		return getProperty("tiles_"+layerId.name().toLowerCase(), null)!=null;
+		return !getProperty("tiles_"+layerId.name().toLowerCase(), "").isEmpty();
 	}
 
 	public Mob[] getCopyOfMobsArray() {

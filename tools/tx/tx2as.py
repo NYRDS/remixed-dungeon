@@ -25,6 +25,10 @@ totalCounter = {}
 dir_name = "remixed-dungeon.strings-all-xml--master"
 resource_name = "strings_all.xml"
 
+changelog_prefix = "Welcome_Text_"
+changelog_key = "Welcome_Text_0"
+changelog = {}
+
 escape_apostrophe = re.compile(r"(?<!\\)'")
 
 print("Processing:", dir_name, resource_name)
@@ -84,7 +88,7 @@ def makeRJava(strings, arrays):
     package com.nyrds.pixeldungeon.ml;
 
     public class R {
-        public static class string { 
+        public static class string {
                 ''')
 
     counter = 0
@@ -95,7 +99,7 @@ def makeRJava(strings, arrays):
         counter += 1
 
     rJava.write('''}
-    
+
     public static class array {
     ''')
 
@@ -175,6 +179,7 @@ for _, _, files in os.walk(translations_dir + dir_name):
         currentFilePath = translations_dir + dir_name + "/" + file_name
 
         print("file:", currentFilePath)
+        changelog_key = "Welcome_Text_0"
         try:
             transifexData = ElementTree.parse(currentFilePath).getroot()
 
@@ -187,10 +192,16 @@ for _, _, files in os.walk(translations_dir + dir_name):
                 #detectedLang = lang(entry.text)
                 #print(entry.text, detectedLang)
 
+                entry_name = entry.get("name")
+
                 counters[resource_name][locale_code] += 1
                 totalCounter[locale_code] += 1
 
                 if entry.tag == "string":
+                    if entry_name.startswith(changelog_prefix):
+                        if entry_name > changelog_key:
+                            changelog_key = entry_name
+                            changelog[locale_code] = entry.text
                     text = entry.text
                     if text is None:
                         text = ""
@@ -246,3 +257,7 @@ pprint.pprint(totalCounter)
 pprint.pprint(d_arrays)
 
 makeRJava(r_strings, r_arrays)
+
+for locale_code, text in changelog.items():
+    print(locale_code)
+    print(text.replace("\\n",""))

@@ -1,5 +1,6 @@
 package com.nyrds;
 
+import java.lang.annotation.ElementType;
 import java.lang.annotation.Target;
 
 import static java.lang.annotation.ElementType.FIELD;
@@ -9,7 +10,7 @@ import static java.lang.annotation.ElementType.FIELD;
  * This file is part of Remixed Pixel Dungeon.
  */
 
-@Target(value = FIELD)
+@Target(value = {ElementType.FIELD, ElementType.TYPE})
 public @interface Packable {
 	String defaultValue() default "";
 }

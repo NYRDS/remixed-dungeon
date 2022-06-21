@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
@@ -9,6 +10,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.ConcurrentHashMap;
 
+@Packable
 public class ItemsList {
     // invalid item
     public static final EquipableItem DUMMY = new DummyItem();

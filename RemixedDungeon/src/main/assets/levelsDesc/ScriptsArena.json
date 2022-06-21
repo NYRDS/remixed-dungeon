@@ -96,6 +96,7 @@
 
  ],
  "tiles":"tiles0_x.png",
+ "tiles_xyz":"tilesets/tiles_necropolis_xyz.png",
  "tiles_logic":"tiles0.png",
  "tiles_mobs":"Mobs.png",
  "tiles_objects":"Objects.png",
