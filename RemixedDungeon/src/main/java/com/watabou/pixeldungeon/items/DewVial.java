@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
@@ -39,9 +40,7 @@ import java.util.ArrayList;
 public class DewVial extends Item {
 
 	private static final int MAX_VOLUME	= 10;
-	
-	private static final String AC_DRINK	= "DewVial_ACDRINK";
-	
+
 	private static final float TIME_TO_DRINK = 1f;
 	
 	private static final String TXT_VALUE	= "%+dHP";
@@ -50,8 +49,8 @@ public class DewVial extends Item {
 	{
 		imageFile = "items/vials.png";
 		image = 0;
-		
-		setDefaultAction(AC_DRINK);
+
+		setDefaultAction(CommonActions.AC_DRINK);
 	}
 
 	@Packable
@@ -61,7 +60,7 @@ public class DewVial extends Item {
 	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		if (getVolume() > 0) {
-			actions.add( AC_DRINK );
+			actions.add(CommonActions.AC_DRINK);
 		}
 		return actions;
 	}
@@ -71,12 +70,12 @@ public class DewVial extends Item {
 	
 	@Override
 	public void _execute(@NotNull final Char chr, @NotNull String action ) {
-		if (action.equals( AC_DRINK )) {
+		if (action.equals(CommonActions.AC_DRINK)) {
 
 			doDrink(chr);
 
 		} else {
-			super._execute(chr, action );
+			super._execute(chr, action);
 		}
 	}
 

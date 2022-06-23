@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.items;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
@@ -32,8 +33,6 @@ import java.util.ArrayList;
 public abstract class EquipableItem extends Item {
 
 	public static final String NO_ANIMATION = "none";
-	protected static final String AC_EQUIP   = "EquipableItem_ACEquip";
-	protected static final String AC_UNEQUIP = "EquipableItem_ACUnequip";
 
 	protected int gender;
 
@@ -43,10 +42,10 @@ public abstract class EquipableItem extends Item {
 	@Override
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		switch (action) {
-			case AC_EQUIP:
+			case CommonActions.AC_EQUIP:
 				doEquip(chr);
 				break;
-			case AC_UNEQUIP:
+			case CommonActions.AC_UNEQUIP:
 				doUnequip(chr, true);
 				break;
 			default:
@@ -86,7 +85,7 @@ public abstract class EquipableItem extends Item {
 	@Override
 	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		actions.add( isEquipped( hero ) ? AC_UNEQUIP : AC_EQUIP );
+		actions.add(isEquipped(hero) ? CommonActions.AC_UNEQUIP : CommonActions.AC_EQUIP);
 		return actions;
 	}
 

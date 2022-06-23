@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
@@ -70,7 +71,7 @@ public abstract class KindOfBow extends MeleeWeapon {
 			actions.add(AC_CHOOSE_ARROWS);
 			setDefaultAction(AC_CHOOSE_ARROWS);
 		} else {
-			setDefaultAction(AC_EQUIP);
+			setDefaultAction(CommonActions.AC_EQUIP);
 		}
 		return actions;
 	}

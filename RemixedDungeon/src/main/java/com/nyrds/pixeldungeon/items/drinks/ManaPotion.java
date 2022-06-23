@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items.drinks;
 
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
@@ -24,17 +25,17 @@ public class ManaPotion extends Drink {
 
 	@Override
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
-		if (action.equals( AC_DRINK )) {
-			detach( chr.getBelongings().backpack );
-            GLog.i(StringsManager.getVar(R.string.Drink_Message));
+		if (action.equals(CommonActions.AC_DRINK)) {
+			detach(chr.getBelongings().backpack);
+			GLog.i(StringsManager.getVar(R.string.Drink_Message));
 
-			chr.setSkillPoints(chr.getSkillPoints() + chr.getSkillPointsMax()/3);
-			chr.doOperate(TIME_TO_DRINK );
+			chr.setSkillPoints(chr.getSkillPoints() + chr.getSkillPointsMax() / 3);
+			chr.doOperate(TIME_TO_DRINK);
 
-			SpellSprite.show(chr, SpellSprite.FOOD );
-			Sample.INSTANCE.play( Assets.SND_DRINK );
+			SpellSprite.show(chr, SpellSprite.FOOD);
+			Sample.INSTANCE.play(Assets.SND_DRINK);
 		} else {
-			super._execute(chr, action );
+			super._execute(chr, action);
 		}
 	}
 

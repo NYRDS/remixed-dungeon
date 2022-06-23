@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors;
 
+import static com.watabou.pixeldungeon.Dungeon.level;
+
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaUtils;
@@ -70,7 +72,6 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
-import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
@@ -118,8 +119,6 @@ import java.util.Set;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.var;
-
-import static com.watabou.pixeldungeon.Dungeon.level;
 
 public abstract class Char extends Actor implements HasPositionOnLevel, Presser, ItemOwner, NamedEntityKindWithId {
 
@@ -1172,7 +1171,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		if(level().cellValid(getPos())) {
 			sprite.setVisible(Dungeon.isCellVisible(getPos()) && invisible >= 0);
 		} else {
-			EventCollector.logException("invalid pos for:"+toString()+":"+getEntityKind());
+			EventCollector.logException("invalid pos for:" + this.toString() + ":" + getEntityKind());
 		}
 		GameScene.addMobSpriteDirect(sprite);
 

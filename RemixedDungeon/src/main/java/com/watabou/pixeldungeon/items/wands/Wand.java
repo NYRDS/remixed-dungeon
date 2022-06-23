@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.wands;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
@@ -124,16 +125,16 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 			actions.add(AC_ZAP);
 		}
 
-		actions.remove(AC_EQUIP);
-		actions.remove(AC_UNEQUIP);
-		
+		actions.remove(CommonActions.AC_EQUIP);
+		actions.remove(CommonActions.AC_UNEQUIP);
+
 		if (hero.getHeroClass() == HeroClass.MAGE
-			|| hero.getSubClass() == HeroSubClass.SHAMAN) {
-			
-			if(isEquipped(hero)) {
-				actions.add(AC_UNEQUIP); 
+				|| hero.getSubClass() == HeroSubClass.SHAMAN) {
+
+			if (isEquipped(hero)) {
+				actions.add(CommonActions.AC_UNEQUIP);
 			} else {
-				actions.add(AC_EQUIP);
+				actions.add(CommonActions.AC_EQUIP);
 			}
 		}
 		return actions;
