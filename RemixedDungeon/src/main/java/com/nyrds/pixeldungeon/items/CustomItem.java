@@ -4,6 +4,7 @@ import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
@@ -128,8 +129,8 @@ public class CustomItem extends EquipableItem {
         ArrayList<String> actions = super.actions(hero);
 
         if(equipable.isEmpty()) {
-            actions.remove(AC_EQUIP);
-            actions.remove(AC_UNEQUIP);
+            actions.remove(CommonActions.AC_EQUIP);
+            actions.remove(CommonActions.AC_UNEQUIP);
         }
 
         LuaValue ret = script.run("actions", hero);

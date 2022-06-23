@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
@@ -29,7 +30,7 @@ import com.watabou.utils.Random;
 public class MeleeWeapon extends Weapon {
 
 	{
-		setDefaultAction(AC_EQUIP);
+		setDefaultAction(CommonActions.AC_EQUIP);
 	}
 	
 	private int tier;

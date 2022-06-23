@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.actions.UseItem;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
@@ -77,7 +78,9 @@ public class WndItem extends Window {
 					@Override
 					protected void onClick() {
 						hide();
-						bag.hide();
+						if (CommonActions.hideBagOnAction(action)) {
+							bag.hide();
+						}
 						owner.nextAction(new UseItem(item, action));
 					}
 				};

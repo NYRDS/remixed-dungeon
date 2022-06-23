@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
@@ -46,8 +47,8 @@ public class MissileWeapon extends Weapon {
 	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		if (!Utils.isOneOf(hero.getHeroClass(), HeroClass.HUNTRESS, HeroClass.ROGUE, HeroClass.GNOLL)) {
-			actions.remove( AC_EQUIP );
-			actions.remove( AC_UNEQUIP );
+			actions.remove(CommonActions.AC_EQUIP);
+			actions.remove(CommonActions.AC_UNEQUIP);
 		}
 		return actions;
 	}

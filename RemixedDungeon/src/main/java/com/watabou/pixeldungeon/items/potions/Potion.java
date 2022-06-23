@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.potions;
 
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.audio.Sample;
@@ -50,7 +51,6 @@ import java.util.HashSet;
 
 public class Potion extends Item implements UnknownItem {
 
-	private static final String AC_DRINK   = "Potion_ACDrink";
 	private static final String AC_MOISTEN = "Potion_ACMoisten";
 	
 	private static final float TIME_TO_DRINK = 1f;
@@ -87,9 +87,9 @@ public class Potion extends Item implements UnknownItem {
 		}
 	}
 
-	{	
+	{
 		stackable = true;
-		setDefaultAction(AC_DRINK);
+		setDefaultAction(CommonActions.AC_DRINK);
 		imageFile = "items/potions.png";
 	}
 	
@@ -125,15 +125,15 @@ public class Potion extends Item implements UnknownItem {
 		}
 
 		ArrayList<String> actions = super.actions( hero );
-		actions.add( AC_DRINK );
-		actions.add( AC_MOISTEN );
+		actions.add(CommonActions.AC_DRINK);
+		actions.add(AC_MOISTEN);
 		return actions;
 	}
 	
 	@Override
 	public void _execute(@NotNull final Char chr, @NotNull String action ) {
 		switch (action) {
-			case AC_DRINK:
+			case CommonActions.AC_DRINK:
 				if (knownHamful()) {
 
                     GameScene.show(
