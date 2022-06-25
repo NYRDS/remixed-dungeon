@@ -5,7 +5,10 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -15,6 +18,7 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Fire;
+import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;

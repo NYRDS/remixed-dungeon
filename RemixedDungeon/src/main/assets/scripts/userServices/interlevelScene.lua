@@ -9,33 +9,62 @@ local RPD = require "scripts/lib/commonClasses"
 local interlevelScene = {}
 
 
-tilesChoiceWindowShown = false
+windowShown = false
+
+function showWindowLoop(wnd)
+    RPD.RemixedDungeon:scene():enumerateWindows()
+    local activeWindow = RPD.RemixedDungeon:scene():getWindow(0)
+    if not windowShown then
+        if activeWindow == nil then
+            RPD.RemixedDungeon:scene():add(wnd)
+            windowShown = true
+        end
+    else
+        if activeWindow == nil then
+            wnd = nil
+            return true
+        end
+    end
+    return false
+end
 
 --! Called when interlevelScene enters static mode
 interlevelScene.onStep = function(mode, done)
     if not done then
         return false
     end
-    if mode == "DESCEND" and RPD.Dungeon.level.levelId == '1' and RPD.ModdingMode:inRemixed() then
-        RPD.RemixedDungeon:scene():enumerateWindows()
-        local activeWindow = RPD.RemixedDungeon:scene():getWindow(0)
-        RPD.debug("activeWindow :%s", tostring(activeWindow))
-        if not tilesChoiceWindowShown then
-            if activeWindow == nil then
-                local wnd = RPD.new("com.nyrds.pixeldungeon.windows.WndTilesKind")
-                if not wnd:shownBefore() then
-                    RPD.RemixedDungeon:scene():add(wnd)
-                end
-                tilesChoiceWindowShown = true
+
+    RPD.debug("%s %s %s %s", mode, tostring(done), tostring(RPD.Dungeon.levelId), tostring(RPD.Dungeon.previousLevelId))
+
+    if not wnd then
+        if RPD.ModdingMode:inRemixed() then
+            if RPD.Dungeon.previousLevelId == '10s' and RPD.Badges:isUnlockedInThisGame(RPD.Badges.Badge.SPIDER_QUEEN_SLAIN) then
+                wnd = RPD.new(RPD.Objects.Ui.WndQuest, RPD.Dungeon.hero, RPD.textById("SpiderQueen_DieInfo"))
             end
-        else
-            if activeWindow == nil then
+
+            if RPD.Dungeon.previousLevelId == 'necro5' and RPD.Badges:isUnlockedInThisGame(RPD.Badges.Badge.LICH_SLAIN) then
+                wnd = RPD.new(RPD.Objects.Ui.WndQuest, RPD.Dungeon.hero, RPD.textById("Lich_DieInfo"))
+            end
+
+            if RPD.Dungeon.previousLevelId == 'ice5' and RPD.Badges:isUnlockedInThisGame(RPD.Badges.Badge.ICE_GUARDIAN_SLAIN) then
+                wnd = RPD.new(RPD.Objects.Ui.WndQuest, RPD.Dungeon.hero, RPD.textById("IceGuardianCore_DieInfo"))
+            end
+        end
+
+        if mode == "DESCEND" and RPD.Dungeon.levelId == '1' and RPD.ModdingMode:inRemixed() then
+            wnd = RPD.new("com.nyrds.pixeldungeon.windows.WndTilesKind")
+            if wnd:shownBefore() then
+                wnd = nil
                 return true
             end
         end
-    else
+    end
+
+    if not wnd then
         return true
     end
+
+    return showWindowLoop(wnd)
 end
 
 

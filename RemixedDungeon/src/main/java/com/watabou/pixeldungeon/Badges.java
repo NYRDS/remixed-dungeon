@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
@@ -952,8 +953,14 @@ public class Badges {
 		}
 	}
 
+	@LuaInterface
 	public static boolean isUnlocked(Badge badge) {
 		return global.contains(badge);
+	}
+
+	@LuaInterface
+	public static boolean isUnlockedInThisGame(Badge badge) {
+		return local.contains(badge);
 	}
 
 	public static List<Badge> filtered(boolean global) {

@@ -111,6 +111,7 @@ public class Dungeon {
 
     public static Level  level;
     public static String levelId;
+    public static String previousLevelId;
 
     public static  int depth;
     private static long lastSaveTimestamp;
@@ -341,6 +342,7 @@ public class Dungeon {
                 level.spawnMob(mob);
             }
 
+        previousLevelId = levelId;
         levelId = level.levelId;
         Dungeon.level = level;
     }
@@ -650,7 +652,7 @@ public class Dungeon {
     public static Level loadLevel(Position next) {
         try {
             GameLoop.loadingOrSaving.incrementAndGet();
-            levelId = next.levelId;
+            String levelId = next.levelId;
 
             if(Dungeon.level!=null) {
                 CharsList.remove(Dungeon.hero.getId());
