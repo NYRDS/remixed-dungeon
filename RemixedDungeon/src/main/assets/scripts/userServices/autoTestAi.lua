@@ -119,7 +119,7 @@ ai.step = function()
     local objectPos = level:getNearestVisibleLevelObject(heroPos)
 
     if level:cellValid(objectPos) then
-        local objectKind = level:getLevelObject(objectPos):getEntityKind()
+        local objectKind = level:getTopLevelObject(objectPos):getEntityKind()
 
         if not explorationCache:get(objectPos) then
             explorationCache:set(objectPos, true)

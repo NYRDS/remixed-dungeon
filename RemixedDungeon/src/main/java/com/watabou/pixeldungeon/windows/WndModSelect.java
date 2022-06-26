@@ -90,7 +90,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 				btn.setRect(GAP, pos, width - GAP * 2 - (additionalMargin * 2), BUTTON_HEIGHT);
                 list.content().add(btn);
 
-				pos += BUTTON_HEIGHT + GAP;
+				pos += BUTTON_HEIGHT;
 			}
 		}
 

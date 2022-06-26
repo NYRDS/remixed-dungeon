@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.levels.objects;
 import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -52,6 +53,16 @@ public class Sign extends LevelObject {
 			}
 		}
 		return super.interact(hero);
+	}
+
+	@Override
+	public boolean stepOn(Char hero) {
+		return true;
+	}
+
+	@Override
+	public void bump(Presser presser) {
+		ItemUtils.throwItemAway(getPos());
 	}
 
 	@Override

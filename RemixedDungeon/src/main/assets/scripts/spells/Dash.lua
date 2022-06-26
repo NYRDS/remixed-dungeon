@@ -31,6 +31,8 @@ return spell.init{
 
         local dist = level:distance(ownPos, cell)
 
+        caster:detachBuff("Roots")
+
         if ownPos == cell then
             RPD.glogn("DashSpell_OnSelf")
             return false
