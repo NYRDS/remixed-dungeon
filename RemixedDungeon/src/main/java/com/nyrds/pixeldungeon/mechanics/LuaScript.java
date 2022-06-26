@@ -2,6 +2,10 @@ package com.nyrds.pixeldungeon.mechanics;
 
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.Nullable;
 import org.luaj.vm2.LuaTable;
@@ -125,13 +129,18 @@ public class LuaScript {
             luaArgs[i] = CoerceJavaToLua.coerce(args[i-startIndex]);
         }
 
-        if(defaultValue==null) {
-            run(method, luaArgs);
-            return null;
-        }
+        try {
+            if(defaultValue==null) {
+                run(method, luaArgs);
+                return null;
+            }
 
-        return (T) CoerceLuaToJava.coerce(
-                run(method, luaArgs),
-                defaultValue.getClass());
+            return (T) CoerceLuaToJava.coerce(
+                    run(method, luaArgs),
+                    defaultValue.getClass());
+        } catch (Exception e) {
+            ModError.doReport(Utils.format("Error while running script %s:%s", scriptFile, method), e);
+            return defaultValue;
+        }
     }
 }
