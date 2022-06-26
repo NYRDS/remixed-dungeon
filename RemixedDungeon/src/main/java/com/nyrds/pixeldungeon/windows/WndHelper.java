@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.platform.game.RemixedDungeon;
+
 /**
  * Created by mike on 04.01.2017.
  * This file is part of Remixed Pixel Dungeon.
@@ -12,6 +14,14 @@ public class WndHelper {
 	public static void update(float mw, float mh) {
 		maxWidth = mw;
 		maxHeight = mh;
+	}
+
+	public static int getAlmostFullscreenHeight() {
+		if(RemixedDungeon.landscape()) {
+			return (int) (maxHeight - 14);
+		} else {
+			return (int) (maxHeight - 44);
+		}
 	}
 
 	public static int getFullscreenWidth() {
