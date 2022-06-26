@@ -2894,4 +2894,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndTilesKind_NewLook">Новый вид</string>
   <string name="WndTilesKind_ClassicLook">Классический вид</string>
   <string name="MobAi_status"> %s сейчас %s</string>
+  <string name="WndCustomizations_Title">Кастомизации</string>
+  <string name="IceGuardianCore_DieInfo">Здесь так холодно, так что лучше я вернусь на 14-й уровень и попытаюсь найти путь в более теплое место.</string>
+  <string name="Lich_DieInfo">Мне никогда не нравился этот Некромант. Так что пора вернуться на 7 уровень и найти другой путь к новому приключению.</string>
+  <string name="SpiderQueen_DieInfo">Паучья королева убита! Теперь я должен вернуться на 5ый уровень и продолжить путешествие в Глубины.</string>
 </resources>

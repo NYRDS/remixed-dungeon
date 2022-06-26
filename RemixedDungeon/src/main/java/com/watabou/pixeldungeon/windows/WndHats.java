@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.gfx.SystemText;
@@ -44,7 +45,7 @@ public class WndHats extends Window {
 
 		//"Equipped Accessory" slot
 		//Title
-        Text slotTitle = PixelScene.createMultiline(R.string.WndHats_SlotTitle + equippedName, GuiProperties.titleFontSize());
+        Text slotTitle = PixelScene.createMultiline(StringsManager.getVar(R.string.WndHats_SlotTitle) + equippedName, GuiProperties.titleFontSize());
 		slotTitle.hardlight(0xFFFFFF);
 		slotTitle.maxWidth(WIDTH - GAP * 2);
 		slotTitle.setX((WIDTH - slotTitle.width()) / 2);
@@ -157,7 +158,7 @@ public class WndHats extends Window {
 			yPos = (int) (rb.bottom() + GAP * 2);
 		}
 
-		int HEIGHT = RemixedDungeon.landscape() ? HEIGHT_LANDSCAPE : HEIGHT_PORTRAIT;
+		int HEIGHT = WndHelper.getAlmostFullscreenHeight();
 		int h = Math.min(HEIGHT - GAP, yPos);
 
 		float topGap = listTitle.getY() + listTitle.height() + GAP;
