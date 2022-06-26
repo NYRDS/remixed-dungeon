@@ -2869,4 +2869,5 @@ remix.31.1\n
   <string name="WndTilesKind_NewLook">Novo visual</string>
   <string name="WndTilesKind_ClassicLook">Visual Clássico</string>
   <string name="MobAi_status">Este %s é %s</string>
+  <string name="WndCustomizations_Title">Personalizações</string>
 </resources>
