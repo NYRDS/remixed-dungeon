@@ -1935,4 +1935,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	public void accumulateSkillPoints(int n) {}
 
 	public boolean isBoss() {return false;}
+
+	@LuaInterface
+	public void detachBuff(String buffClass) {
+		Buff.detach(this, buffClass);
+	}
 }

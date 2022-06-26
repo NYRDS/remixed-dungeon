@@ -51,6 +51,7 @@ return object.init{
                 self.data.water = nil
             end
         end
+        RPD.ItemUtils:throwItemAway(object:getPos())
     end,
 
     stepOn = function(self, object, hero)

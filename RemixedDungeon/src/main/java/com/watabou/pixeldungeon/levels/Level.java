@@ -217,6 +217,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	@Nullable
+	@LuaInterface
 	public LevelObject getTopLevelObject(int pos) {
 		LevelObject top = null;
 
