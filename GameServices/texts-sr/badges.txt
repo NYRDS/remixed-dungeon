@@ -1,13 +1,13 @@
-1.Goo je ubijen
-Došao je kraj terora kanalizacije
+1. Goo je ubijen
+Došao je kraj terora kanalizacije.
 
-2.Tengu je ubijen
-Zli duh neće više mučiti nikoga
+2. Tengu je ubijen
+Zli duh neće više mučiti nikoga.
 
-3.DM-300 je ubijen
-Mašina koja je izgubila svoju svrhu biva deaktivirana
+3. DM-300 je uništen
+Mašina koja je izgubila svoju svrhu biva deaktivirana.
 
-4.Kralj je ubijen
+4. Kralj je ubijen
 Antički kralj mrtvog kraljevstva konačno počiva u miru
 
 5.Zli čarobnjak je ubijen
@@ -26,4 +26,8 @@ Sami manifest tame je uništen
 Došao je kraj Yog-Dzewa i njegovim terorima
 
 10.Novi Gnoll u gradu!
-Hrabrost, Ljubaznost i nekoliko zlatnih novčića pa čak i brutalni Gnoll će se pridružiti u tvojoj avanturi
+Hrabrost, Ljubaznost i nekoliko zlatnika pa čak i brutalni Gnoll će se pridružiti u tvojoj avanturi
+
+11. Hirurška maska dobijena
+Nošenje maske znači da ti je stalo do drugih
+
