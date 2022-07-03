@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.ml.actions.UseItem;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
@@ -77,11 +78,14 @@ public class WndItem extends Window {
 				RedButton btn = new RedButton(StringsManager.maybeId(action) ) {
 					@Override
 					protected void onClick() {
+						CharAction acton = new UseItem(item, action);
+						acton.act(owner);
+
 						hide();
-						if (CommonActions.hideBagOnAction(action)) {
-							bag.hide();
+						bag.hide();
+						if (!CommonActions.hideBagOnAction(action)) {
+							WndBag.getInstance().updateItems();
 						}
-						owner.nextAction(new UseItem(item, action));
 					}
 				};
 				btn.setSize( Math.max( BUTTON_WIDTH, btn.reqWidth() ), BUTTON_HEIGHT );
