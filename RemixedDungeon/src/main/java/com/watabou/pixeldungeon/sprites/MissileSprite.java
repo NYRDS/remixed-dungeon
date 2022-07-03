@@ -38,7 +38,7 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 		revive();
 
 		float scale = item.heapScale();
-		setScale(scale, scale);
+		setScaleXY(scale, scale);
 		view(item);
 
 		this.callback = listener;

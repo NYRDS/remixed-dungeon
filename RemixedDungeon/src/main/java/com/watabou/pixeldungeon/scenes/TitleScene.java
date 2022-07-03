@@ -190,7 +190,7 @@ public class TitleScene extends PixelScene {
 
         Image img = new Image(Assets.DASHBOARD,DashboardItem.IMAGE_SIZE,1);
 
-        img.setScale(0.45f,0.45f);
+        img.setScaleXY(0.45f,0.45f);
         ImageButton btnAbout = new ImageButton(img){
 			@Override
 			protected void onClick() {

@@ -135,7 +135,7 @@ public class BuffIndicator extends Component {
 				img.setX(x + iconCounter[0] * (ICON_SIZE+1));
 				img.setY(y);
 				iconCounter[0] +=1;
-				img.setScale(ICON_SIZE/SIZE,ICON_SIZE/SIZE);
+				img.setScaleXY(ICON_SIZE/SIZE,ICON_SIZE/SIZE);
 				val imgTouch = new TouchArea(img) {
 					@Override
 					protected void onClick(Touchscreen.Touch touch) {

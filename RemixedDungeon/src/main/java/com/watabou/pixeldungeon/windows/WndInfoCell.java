@@ -84,7 +84,7 @@ public class WndInfoCell extends Window {
 			float xs = obj.getSpriteXS();
 			float ys = obj.getSpriteYS();
 			sprite.setPos(-(xs - DungeonTilemap.SIZE) / 2, -(ys-DungeonTilemap.SIZE) / 2);
-			sprite.setScale(DungeonTilemap.SIZE/xs,DungeonTilemap.SIZE/ys);
+			sprite.setScaleXY(DungeonTilemap.SIZE/xs,DungeonTilemap.SIZE/ys);
 			sprite.setIsometricShift(false);
 			add(sprite);
 

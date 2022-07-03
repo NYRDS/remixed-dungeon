@@ -23,12 +23,12 @@ public class ColorBlock extends Image {
 	
 	public ColorBlock( float width, float height, int color ) {
 		super( TextureCache.createSolid( color ) );
-		setScale( width, height );
+		setScaleXY( width, height );
 		setOrigin( 0, 0 );
 	}
 
 	public void size( float width, float height ) {
-		setScale( width, height );
+		setScaleXY( width, height );
 	}
 	
 	public float width() {

@@ -337,7 +337,7 @@ public class Visual extends Gizmo implements IPlaceable{
 	}
 
 
-	public void setScale(float x, float y) {
+	public void setScaleXY(float x, float y) {
 		scale.x = x;
 		scale.y = y;
 		dirtyMatrix = true;
