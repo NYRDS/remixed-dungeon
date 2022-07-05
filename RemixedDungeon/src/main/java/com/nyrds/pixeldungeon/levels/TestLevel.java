@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.levels;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.util.ModError;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -15,6 +16,7 @@ import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
 import java.util.List;
@@ -72,7 +74,11 @@ public class TestLevel extends RegularLevel {
 			}
 
 			mob.setPos(cell);
-			spawnMob(mob);
+			try {
+				spawnMob(mob);
+			} catch (Exception e) {
+				ModError.doReport(Utils.format("Failed to spawn %s", mob.getMobClassName()), e);
+			}
 		}
 	}
 
