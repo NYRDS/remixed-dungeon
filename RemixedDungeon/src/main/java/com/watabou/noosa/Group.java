@@ -195,7 +195,7 @@ public class Group extends Gizmo {
 
 	//Testing stuff
 
-	public int findByClass(@NotNull Class<? extends Gizmo> c, int offset) {
+	public int findByClass(@NotNull Class<? extends Object> c, int offset) {
 		for (int i = offset; i < getLength(); i++) {
 			Gizmo g = members.get(i);
 			if (c.isAssignableFrom(g.getClass())) {

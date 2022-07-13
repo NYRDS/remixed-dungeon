@@ -31,7 +31,7 @@ import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.utils.Signal;
 
-public class Window extends Group implements Signal.Listener<Key> {
+public class Window extends Group implements Signal.Listener<Key>, IWindow {
 
 	public static final    int GAP           = 2;
 	protected static final int MARGIN        = 4;

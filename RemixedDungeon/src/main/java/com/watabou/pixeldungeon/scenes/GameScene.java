@@ -106,8 +106,6 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashSet;
 
 import lombok.var;
@@ -657,12 +655,7 @@ public class GameScene extends PixelScene {
         }
 
         if (text != null) {
-            prompt = new Toast(text, icon) {
-                @Override
-                protected void onClose() {
-                    cancel();
-                }
-            };
+            prompt = new CellSelectorToast(text, icon);
             prompt.camera = uiCamera;
             prompt.setPos((uiCamera.width - prompt.width()) / 2, uiCamera.height - 60);
             add(prompt);

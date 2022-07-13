@@ -17,6 +17,7 @@ local function handleWindow(hero)
 
     if activeWindow then
         local wndClass = tostring(activeWindow:getClass())
+        local isWindow = true
 
         if wndClass:match('WndInfoMob') then
             local target = activeWindow:getTarget()
@@ -36,7 +37,17 @@ local function handleWindow(hero)
             end
         end
 
-        activeWindow:hide()
+        if wndClass:match('CellSelectorToast') then
+            isWindow = false
+            RPD.GameScene:handleCell(hero:level():randomDestination())
+        end
+
+        RPD.debug(wndClass)
+
+        if isWindow then
+            activeWindow:hide()
+        end
+
         return true
     end
 end
