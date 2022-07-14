@@ -444,6 +444,10 @@ public class GameScene extends PixelScene {
             lo.addedToScene();
         }
 
+        for(var mob: level.getCopyOfMobsArray()) {
+            mob.onSpawn(level);
+        }
+
         mapBuildingComplete = true; // Epic level gen compatibility speedup
         updateMap();
 
