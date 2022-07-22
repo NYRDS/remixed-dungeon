@@ -323,8 +323,8 @@
   <string name="GameScene_Secrets">Η ατμόσφαιρα προδίδει ότι ο όροφος κρύβει πολλά μυστικά.</string>
   <string name="Char_Name">εχθρός</string>
   <string name="Char_Name_Objective">εχθρός</string>
-  <string name="Char_YouMissed">%1$s %2$s την επίθεση από: ήρωας</string>
-  <string name="Char_SmbMissed">%1$s %2$s την επίθεση από: %3$s</string>
+  <string name="Char_YouMissed">%1$s %2$s: ήρωας</string>
+  <string name="Char_SmbMissed">%1$s %2$s: %3$s</string>
   <string name="Char_OutParalysis">Ο πόνος ακύρωσε την παράλυση του πλάσματος: %s</string>
   <string name="Char_StaPoisoned">δηλητηρίαση</string>
   <string name="Char_StaAmok">αμόκ</string>
@@ -440,7 +440,7 @@
   <string name="Item_Info">κάτι</string>
   <string name="Item_ACDrop">ΑΦΗΣΕ ΚΑΤΩ</string>
   <string name="Item_ACThrow">ΠΕΤΑΞΕ</string>
-  <string name="Item_PackFull">Το σακίδιό σου δεν έχει χώρο για: %s</string>
+  <string name="Item_PackFull">Δεν έχεις αρκετό χώρο για: %s</string>
   <string name="Item_DirThrow">Διάλεξε κατεύθυνση να το πετάξεις</string>
   <string name="EquipableItem_ACEquip">ΕΞΟΠΛΙΣΕ</string>
   <string name="EquipableItem_ACUnequip">ΑΦΟΠΛΙΣΕ</string>
@@ -573,7 +573,7 @@
   <string name="FrostBuff_Info">Ολοκληρωτικό πάγωμα που αποτρέπει κάθε ενέργεια.</string>
   <string name="Frost_Shatter">Το κρύο έκανε θρύψαλα το %s!</string>
   <string name="FuryBuff_Name">Οργή</string>
-  <string name="FuryBuff_Info">Μάτια ματωμένα κόκκινα από την αστείρευτη εσωτερική οργή.</string>
+  <string name="FuryBuff_Info">Μάτια ματωμένα από την αστείρευτη εσωτερική οργή.</string>
   <string name="GasImmuneBuff_Name">Ανοσία στο αέριο</string>
   <string name="GasImmuneBuff_Info">Έχεις ανοσία σε όλα τα αέρια.</string>
   <string name="Hunger_Death">Λιμοκτόνησες...</string>
@@ -655,7 +655,7 @@
   <string name="StartScene_Warning">Η τρέχουσα πρόοδος του παιχνιδιού θα διαγραφεί.</string>
   <string name="StartScene_Yes">Ναι, έναρξη νέου παιχνιδιού</string>
   <string name="StartScene_No">Όχι, επιστροφή στο μενού</string>
-  <string name="StartScene_Unlock">Για να ξεκλειδώσεις αυτή την κλάση ήρωα, εξόντωσε το αφεντικό DM-300 με οποιαδήποτε άλλη κλάση.</string>
+  <string name="StartScene_Unlock">Για να ξεκλειδώσεις αυτήν την κλάση ήρωα, εξόντωσε το αφεντικό DM-300 με οποιαδήποτε άλλη κλάση.</string>
   <string name="StartScene_UnlockElf">Για να ξεκλειδώσεις αυτήν την κλάση ήρωα, εξόντωσε τον Βασιλιά Νάνο με οποιαδήποτε άλλη κλάση.</string>
   <string name="StartScene_WinGame">Για να ξεκλειδώσεις τις Προκλήσεις, νίκησε το παιχνίδι με οποιαδήποτε κλάση ήρωα.</string>
   <string name="StartScene_DifficultySelect">Όρισε το πεπρωμένο σου</string>
@@ -1060,7 +1060,7 @@
   <string name="NecromancerNPC_Message1">Ελάχιστος ο χρόνος, ελάχιστος ο χρόνος...</string>
   <string name="NecromancerNPC_Message2">Πρέπει να είμαι έτοιμος.</string>
   <string name="NecromancerNPC_Message3">Ακούω το κάλεσμα των νεκρών.</string>
-  <string name="NecromancerNPC_Message4">Κάτι ξεχωριστό κρύβεται μέσα στη Νεκρόπολη.</string>
+  <string name="NecromancerNPC_Message4">Κάτι ξεχωριστό κρύβεται μες στη Νεκρόπολη.</string>
   <string name="RatKing_Name_Objective">βασιλιάς αρουραίος</string>
   <string name="RatKing_Gender">masculine</string>
   <string name="Weapon_Identify">Έχεις εξοικειωθεί αρκετά με το όπλο σου (%1$s). Είναι %2$s.</string>
@@ -1204,7 +1204,7 @@
   <string name="Brute_Name_Objective">κτηνώδες γκνολ</string>
   <string name="Brute_Desc">Τα κτήνη είναι τα μεγαλύτερα, δυνατότερα και σκληρότερα όλων των γκνολ. Εξαγριώνονται όταν πληγωθούν θανάσιμα, προκαλώντας μεγαλύτερη ζημιά στους εχθρούς τους.</string>
   <string name="Brute_Gender">neuter</string>
-  <string name="Brute_Enraged">Ο εχθρός (%s) εξαγριώνεται!</string>
+  <string name="Brute_Enraged">%s: εξαγριώνεται!</string>
   <string name="Brute_StaEnraged">εξαγρίωση</string>
   <string name="Crab_Name">κάβουρας υπονόμων</string>
   <string name="Crab_Gender">masculine</string>
@@ -1851,7 +1851,7 @@
   <string name="Shopkeeper_Sell">Επίλεξε το αντικείμενο προς πώληση</string>
   <string name="WandMaker_Name">γέρος ραβδοποιός</string>
   <string name="WandMaker_Desc">Αυτός ο γέρικος αλλά υγιής κύριος έχει μια κάπως σαστισμένη έκφραση. Προστατεύεται από μια μαγική ασπίδα.</string>
-  <string name="WandMaker_Defense">απορρόφησε</string>
+  <string name="WandMaker_Defense">απέκρουσε</string>
   <string name="WandMaker_Berry1">Α! Τι ευχάριστη έκπληξη να συναντώ ένα αξιόλογο πρόσωπο σε αυτό το μέρος! Ήρθα για να βρω ένα σπάνιο συστατικό: τον _σπόρο σαπιόμουρου._ Ως χρήστης μαγείας, είμαι πολύ ικανός να αμυνθώ από τα τέρατα. Χάνομαι όμως πολύ εύκολα... ντρέπομαι που το λέω. Μήπως μπορείς να με βοηθήσεις εσύ; Θα χαρώ να πληρώσω για τις υπηρεσίες σου με ένα από τα καλύτερα ραβδιά μου.</string>
   <string name="WandMaker_Berry2">%s! Έχουμε κάποιο νέο για τον σπόρο Σαπιόμουρου; Όχι; Δεν βιάζομαι, μην ανησυχείς.</string>
   <string name="WandMaker_Dust1">Α! Τι ευχάριστη έκπληξη να συναντώ ένα αξιόλογο πρόσωπο σε αυτό το μέρος! Ήρθα για να βρω ένα σπάνιο συστατικό: τη _σκόνη σορού._ Μπορεί να βρεθεί στα σκελετικά απομεινάρια που υπάρχουν σε πληθώρα μες στην κατακόμβη. Όντας χρήστης μαγείας, είμαι πολύ ικανός να αμυνθώ από τα τέρατα. Χάνομαι όμως πολύ εύκολα... ντρέπομαι που το λέω. Μήπως μπορείς να με βοηθήσεις εσύ; Θα χαρώ να πληρώσω για τις υπηρεσίες σου με ένα από τα καλύτερα ραβδιά μου.</string>
@@ -2481,9 +2481,9 @@
   <string name="Poison_Name_0">%s δηλητηρίου</string>
   <string name="Poison_Name_1">%s δηλητηρίου</string>
   <string name="Poison_Name_2">%s δηλητηρίου</string>
-  <string name="Slow_Name_0">Ψυχρός %s</string>
+  <string name="Slow_Name_0">%s ψύχους</string>
   <string name="Slow_Name_1">%s ψύχους</string>
-  <string name="Slow_Name_2">Ψυχρό %s</string>
+  <string name="Slow_Name_2">%s ψύχους</string>
   <string name="Swing_Name_0">%s φρενίτιδας</string>
   <string name="Swing_Name_1">%s φρενίτιδας</string>
   <string name="Swing_Name_2">%s φρενίτιδας</string>
@@ -2639,7 +2639,7 @@
   <string name="StunBuff_Name">Ακινητοποίηση</string>
   <string name="StunBuff_Info">Το σώμα έχει ακινητοποιηθεί!</string>
   <string name="Char_StaStunned">ακινητοποίηση</string>
-  <string name="Mob_ReadyForOrder">%s, στις προσταγές σας.</string>
+  <string name="Mob_ReadyForOrder">%s, στις διαταγές σας.</string>
   <string name="Mob_CantDoIt">Δεν μπορώ να το κάνω αυτό.</string>
   <string name="Welcome_Text_29_6">
     remix.29.6\n
@@ -2871,4 +2871,8 @@
   <string name="WndTilesKind_NewLook">Νέα εμφάνιση</string>
   <string name="WndTilesKind_ClassicLook">Κλασική εμφάνιση</string>
   <string name="MobAi_status">- %s: %s</string>
+  <string name="WndCustomizations_Title">Προσαρμογές</string>
+  <string name="IceGuardianCore_DieInfo">Κάνει τόσο κρύο εδώ... Καλύτερα να επιστρέψω στο επίπεδο #14 και να βρω ένα πιο ζεστό μέρος.</string>
+  <string name="Lich_DieInfo">Ποτέ δεν συμπάθησα αυτόν τον νεκρομάντη. Ώρα να επιστρέψω στο επίπεδο #7 και να αναζητήσω την επόμενη περιπέτεια.</string>
+  <string name="SpiderQueen_DieInfo">Η βασίλισσα αράχνη εξουδετερώθηκε! Τώρα πρέπει να επιστρέψω στο επίπεδο #5 και να συνεχίσω το ταξίδι μου στα βάθη.</string>
 </resources>
