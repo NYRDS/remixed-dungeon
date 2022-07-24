@@ -398,6 +398,7 @@ public class Dungeon {
 
     public static void gameOver() {
         SaveUtils.deleteSaveFromSlot(SaveUtils.getPrevSave(),heroClass);
+        SaveUtils.deleteSaveFromSlot(SaveUtils.getAutoSave(),heroClass);
         Dungeon.deleteGame(true);
     }
 
@@ -554,9 +555,12 @@ public class Dungeon {
 
     private static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
 
-        if(fullLoad &&
-                !bundle.optString(MOD,ModdingMode.REMIXED).equals(ModdingMode.activeMod())) {
-            EventCollector.logException(new Exception("loading save from another mod"));
+        String saveMod = bundle.optString(MOD, ModdingMode.REMIXED);
+        String activeMod = ModdingMode.activeMod();
+
+        if(fullLoad && !saveMod.equals(activeMod)) {
+            EventCollector.logException(new Exception(
+                    Utils.format("loading save from another mod (save: %s, active: %s)", saveMod, activeMod)));
         }
 
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
