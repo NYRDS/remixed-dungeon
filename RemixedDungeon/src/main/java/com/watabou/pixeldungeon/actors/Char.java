@@ -182,6 +182,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	@Getter
 	protected int gender = Utils.NEUTER;
 
+	@Getter
 	protected WalkingType walkingType = WalkingType.NORMAL;
 
 	private int HT;
@@ -1173,7 +1174,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		} else {
 			EventCollector.logException("invalid pos for:" + this.toString() + ":" + getEntityKind());
 		}
-		GameScene.addMobSpriteDirect(sprite);
+		GameScene.addMobSpriteDirect(this,sprite);
 
 		if(GameScene.isSceneReady()) {
 			assert (sprite.getParent() != null);

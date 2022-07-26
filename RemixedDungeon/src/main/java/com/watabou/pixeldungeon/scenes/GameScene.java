@@ -64,6 +64,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.BannerSprites;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.EmoIcon;
@@ -142,6 +143,7 @@ public class GameScene extends PixelScene {
     private Group effects;
     private Group gases;
     private Group spells;
+    private Group topMobs;
     private Group statuses;
     private Group emoicons;
 
@@ -331,6 +333,9 @@ public class GameScene extends PixelScene {
         if(roofTiles!=null) {
             add(roofTiles);
         }
+
+        topMobs = new Group();
+        add(topMobs);
 
         fog.updateVisibility(Dungeon.visible, level.visited, level.mapped, false);
         add(fog);
@@ -997,9 +1002,13 @@ public class GameScene extends PixelScene {
         InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
     }
 
-    public static void addMobSpriteDirect(CharSprite sprite) {
+    public static void addMobSpriteDirect(Char chr,CharSprite sprite) {
         if (isSceneReady()) {
-            scene.mobs.add(sprite);
+            if(chr.getWalkingType() == WalkingType.WALL || chr.getWalkingType() == WalkingType.ABSOLUTE) {
+                scene.topMobs.add(sprite);
+            } else {
+                scene.mobs.add(sprite);
+            }
         }
     }
 
