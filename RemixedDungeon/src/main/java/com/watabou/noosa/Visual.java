@@ -59,11 +59,12 @@ public class Visual extends Gizmo implements IPlaceable{
 		this.setY(y);
 		this.setWidth(width);
 		this.setHeight(height);
-		
-		Scale(new PointF( 1, 1 ));
-		setOrigin(new PointF());
-		
+
+		scale = new PointF( 1, 1 );
+		origin = new PointF(0,0);
+
 		matrix = new float[16];
+		dirtyMatrix = true;
 		
 		resetColor();
 		
