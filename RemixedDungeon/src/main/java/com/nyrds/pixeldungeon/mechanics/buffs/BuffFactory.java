@@ -42,6 +42,8 @@ import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.items.armor.glyphs.Viscosity;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.items.quest.RatSkull;
+import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
+import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.plants.Sungrass;
@@ -63,6 +65,11 @@ public class BuffFactory {
     static private final Set<String> customBuffs = new HashSet<>();
 
     public static final String GASES_IMMUNITY = "GasesImmunity";
+    public static final String BLESSED = Blessed.class.getSimpleName();
+    public static final String EVASION = RingOfEvasion.Evasion.class.getSimpleName();
+    public static final String STONE_WALKING = RingOfStoneWalking.StoneWalking.class.getSimpleName();
+    public static final String ACCURACY = RingOfAccuracy.Accuracy.class.getSimpleName();
+
 
     static {
         initBuffsMap();

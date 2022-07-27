@@ -146,8 +146,9 @@ public class CustomLayerTilemap extends DungeonTilemap {
 
     private float getTCoord(float h, float i) {
         float d = (h - i) / (1f);
+        d = d < -2 ? -2 : d;
+        d = d > 2 ? 2 : d;
 
-        d = Math.max(-2, Math.min(2, d));
         d = (d + 1) * 0.5f;
         return d;
     }

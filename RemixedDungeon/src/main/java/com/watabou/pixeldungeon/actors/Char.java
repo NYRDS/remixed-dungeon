@@ -36,6 +36,7 @@ import com.nyrds.pixeldungeon.mechanics.LevelHelpers;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
@@ -481,8 +482,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 	}
 
 	public int attackSkill(Char target) {
-		int bonus = buffLevel(RingOfAccuracy.Accuracy.class.getSimpleName())
-				+ buffLevel(Blessed.class.getSimpleName());
+		int bonus = buffLevel(BuffFactory.ACCURACY)
+				+ buffLevel(BuffFactory.BLESSED);
 
 		float accuracy = (float) Math.pow(1.4, bonus);
 
@@ -510,8 +511,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		int defenseSkill = baseDefenseSkill + lvl();
 
-		int bonus = buffLevel(RingOfEvasion.Evasion.class.getSimpleName())
-				+ buffLevel(Blessed.class.getSimpleName());
+		int bonus = buffLevel(BuffFactory.BLESSED)
+				+ buffLevel(BuffFactory.EVASION);
 
 		float evasion = bonus == 0 ? 1 : (float) Math.pow(1.2, bonus);
 		if (paralysed) {
