@@ -27,7 +27,6 @@ public class Gizmo {
 	static public int isometricModeShift = -7;
 
 	public int    layer;
-	public boolean exists;
 	public boolean alive;
 	private boolean active;
 
@@ -40,7 +39,6 @@ public class Gizmo {
 	public Camera camera;
 	
 	public Gizmo() {
-		exists	= true;
 		alive	= true;
 		setActive(true);
 		setVisible(true);
@@ -69,13 +67,10 @@ public class Gizmo {
 	
 	public void kill() {
 		alive = false;
-		exists = false;
 	}
-	
-	// Not exactly opposite to "kill" method
+
 	public void revive() {
 		alive = true;
-		exists = true;
 	}
 	
 	public Camera camera() {

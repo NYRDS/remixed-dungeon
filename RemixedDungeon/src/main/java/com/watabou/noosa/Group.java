@@ -47,13 +47,14 @@ public class Group extends Gizmo {
 		//members.removeIf(Objects::isNull); needs Android N
 		for (int i = 0; i < members.size(); i++) {
 			Gizmo g = members.get(i);
+
 /*
 			totalGizmo++;
 			if(g==null) {
 				nullGizmo++;
 			}
 */
-			if ( g!= null && g.exists && g.isActive()) {
+			if ( g!= null && g.alive && g.isActive()) {
 				g.update();
 			}
 		}
@@ -63,7 +64,7 @@ public class Group extends Gizmo {
 	public void draw() {
 		for (int i = 0; i < members.size(); i++) {
 			Gizmo g = members.get(i);
-			if (g != null && g.exists && g.getVisible()) {
+			if (g != null && g.alive && g.getVisible()) {
 				g.draw();
 			}
 		}
@@ -73,9 +74,8 @@ public class Group extends Gizmo {
 	public void kill() {
 		// A killed group keeps all its members,
 		// but they get killed too
-		for (int i = 0; i < getLength(); i++) {
-			Gizmo g = members.get(i);
-			if (g != null && g.exists) {
+		for (Gizmo g: members) {
+			if (g != null && g.alive) {
 				g.kill();
 			}
 		}
@@ -132,9 +132,8 @@ public class Group extends Gizmo {
 
 	private Gizmo getFirstAvailable(@NotNull Class<? extends Gizmo> c) {
 
-		for (int i = 0; i < getLength(); i++) {
-			Gizmo g = members.get(i);
-			if (g != null && !g.exists && g.getClass() == c) {
+		for (Gizmo g: members) {
+			if (g != null && !g.alive && g.getClass() == c) {
 				return g;
 			}
 		}
@@ -146,9 +145,8 @@ public class Group extends Gizmo {
 
 		int count = 0;
 
-		for (int i = 0; i < getLength(); i++) {
-			Gizmo g = members.get(i);
-			if (g != null && g.exists && g.alive) {
+		for (Gizmo g: members) {
+			if (g != null && g.alive) {
 				count++;
 			}
 		}
