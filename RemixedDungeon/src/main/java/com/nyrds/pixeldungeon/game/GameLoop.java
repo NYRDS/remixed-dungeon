@@ -180,8 +180,23 @@ public class GameLoop {
                 task.run();
             }
 
-            if (!Game.softPaused) {
+            if (!Game.softPaused && loadingOrSaving.get() == 0) {
                 try {
+                    if (requestedReset) {
+                        requestedReset = false;
+                        switchScene(sceneClass.newInstance());
+                        return;
+                    }
+
+                    while(!motionEvents.isEmpty()) {
+                        Touchscreen.processEvent(motionEvents.poll());
+                    }
+
+                    while(!keysEvents.isEmpty()) {
+                        Keys.processEvent(keysEvents.poll());
+                    }
+
+
                     step();
                 } catch (LuaError e) {
                     throw ModdingMode.modException(e);
@@ -202,26 +217,7 @@ public class GameLoop {
 
     @SneakyThrows
     public void step() {
-
-        if(loadingOrSaving.get() > 0) {
-            return;
-        }
-
-        if (requestedReset) {
-            requestedReset = false;
-            switchScene(sceneClass.newInstance());
-            return;
-        }
-
         elapsed = timeScale * step * 0.001f;
-
-        while(!motionEvents.isEmpty()) {
-            Touchscreen.processEvent(motionEvents.poll());
-        }
-
-        while(!keysEvents.isEmpty()) {
-            Keys.processEvent(keysEvents.poll());
-        }
 
         scene.update();
         Camera.updateAll();

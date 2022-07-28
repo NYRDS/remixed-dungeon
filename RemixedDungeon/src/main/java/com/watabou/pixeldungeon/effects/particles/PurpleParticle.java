@@ -58,8 +58,8 @@ public class PurpleParticle extends PixelParticle {
 	public void reset( float x, float y ) {
 		revive();
 		
-		this.setX(x);
-		this.setY(y);
+		setX(x);
+		setY(y);
 		
 		speed.set( Random.Float( -5, +5 ), Random.Float( -5, +5 ) );
 		
@@ -69,8 +69,8 @@ public class PurpleParticle extends PixelParticle {
 	public void resetBurst( float x, float y ) {
 		revive();
 		
-		this.setX(x);
-		this.setY(y);
+		setX(x);
+		setY(y);
 		
 		speed.polar( Random.Float( 360 ), Random.Float( 16, 32 ) );
 		

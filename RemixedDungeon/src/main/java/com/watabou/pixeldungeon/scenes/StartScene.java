@@ -126,7 +126,7 @@ public class StartScene extends PixelScene {
             @Override
             protected void onClick() {
                 if (GamesInProgress.check(curShield.cl) != null) {
-                    StartScene.this.add(new WndOptions(StringsManager.getVar(R.string.StartScene_Really), StringsManager.getVar(R.string.StartScene_Warning),
+                    GameLoop.addToScene(new WndOptions(StringsManager.getVar(R.string.StartScene_Really), StringsManager.getVar(R.string.StartScene_Warning),
                             StringsManager.getVar(R.string.StartScene_Yes), StringsManager.getVar(R.string.StartScene_No)) {
                         @Override
                         public void onSelect(int index) {
