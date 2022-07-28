@@ -34,76 +34,67 @@ public class SmartTexture extends Texture {
 
 	public int wModeH;
 	public int wModeV;
-	
+	boolean premultiplied;
+	boolean loaded;
+
 	public Bitmap bitmap;
-	
-	public Atlas atlas;
-	
+
 	public SmartTexture(@NotNull Bitmap bitmap ) {
 		this( bitmap, NEAREST, CLAMP );
 	}
 
 	public SmartTexture(@NotNull Bitmap bitmap, int filtering, int wrapping ) {
-		
 		super();
 		
 		bitmap( bitmap );
 		filter( filtering, filtering );
 		wrap( wrapping, wrapping );
-		
-	}
-
-	public SmartTexture(int width, int height, int[] pixels){
-		super();
-		pixels(width, height, pixels);
-		filter( NEAREST,NEAREST );
-		wrap( CLAMP, CLAMP);
-	}
-
-	public SmartTexture(int width, int height, byte[] pixels){
-		super();
-		pixels(width, height, pixels);
-		filter( NEAREST,NEAREST );
-		wrap( CLAMP, CLAMP);
 	}
 
 	@Override
 	public void filter(int minMode, int maxMode) {
-		super.filter( fModeMin = minMode, fModeMax = maxMode);
+		fModeMin = minMode;
+		fModeMax = maxMode;
 	}
 	
 	@Override
 	public void wrap( int s, int t ) {
-		super.wrap( wModeH = s, wModeV = t );
+		wModeH = s;
+		wModeV = t;
 	}
 	
 	@Override
 	public void bitmap( Bitmap bitmap ) {
 		bitmap( bitmap, false );
 	}
-	
-	public void bitmap( Bitmap bitmap, boolean premultiplied ) {
-		if (premultiplied) {
-			super.bitmap( bitmap );
-		} else {
-			handMade( bitmap, true );
+
+	public void bind() {
+		_bind();
+		if(!loaded) {
+			super.filter(fModeMin,fModeMax);
+			super.wrap(wModeH,wModeV);
+
+			if (premultiplied) {
+				super.bitmap( bitmap );
+			} else {
+				handMade( bitmap, true );
+			}
+			loaded = true;
 		}
-		
+	}
+
+	public void bitmap( Bitmap bitmap, boolean premultiplied ) {
 		this.bitmap = bitmap;
+		this.premultiplied = premultiplied;
 		width = bitmap.getWidth();
 		height = bitmap.getHeight();
 	}
-	
-	public void reload() {
-		id = new SmartTexture( bitmap ).id;
-		filter( fModeMin, fModeMax );
-		wrap( wModeH, wModeV );
-	}
-	
+
 	@Override
 	public void delete() {
 		super.delete();
 		bitmap = null;
+		loaded = false;
 	}
 	
 	public RectF uvRect( int left, int top, int right, int bottom ) {

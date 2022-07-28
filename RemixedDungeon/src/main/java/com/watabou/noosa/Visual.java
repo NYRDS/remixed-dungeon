@@ -133,6 +133,10 @@ public class Visual extends Gizmo implements IPlaceable{
 	}
 	
 	protected void updateMotion() {
+		if(speed.x*speed.y*angularSpeed==0) {
+			return;
+		}
+
 		float elapsed = GameLoop.elapsed;
 		
 		float d = (GameMath.speed( speed.x, acc.x ) - speed.x) / 2;
@@ -147,9 +151,7 @@ public class Visual extends Gizmo implements IPlaceable{
 		
 		angle += angularSpeed * elapsed;
 
-		if(speed.x != 0 || speed.y != 0 || angularSpeed != 0) {
-			dirtyMatrix = true;
-		}
+		dirtyMatrix = true;
 	}
 	
 	public void alpha( float value ) {

@@ -46,7 +46,6 @@ public class Font extends TextureFilm {
 		
 		texture = tx;
 		texture.filter(GLES20.GL_LINEAR,GLES20.GL_NEAREST);
-		texture.reload();
 	}
 
 	private int findNextEmptyLine(Bitmap bitmap, int startFrom, int color){

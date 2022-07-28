@@ -122,6 +122,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     // The sprite is currently in motion
     public boolean isMoving = false;
+    public int cellIndex;
 
     public CharSprite() {
         super();
@@ -143,9 +144,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                     isMoving = false;
                 }
         );
-
     }
-
 
     public PointF worldCoords() {
         final int csize = DungeonTilemap.SIZE;
@@ -166,6 +165,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public void place(int cell) {
+        cellIndex = cell;
         point(worldToCamera(cell));
     }
 
@@ -248,7 +248,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             }
         });
     }
-
 
     @LuaInterface
     public void operate() { //used by Epic
@@ -495,6 +494,13 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             if (visible && curAnim == null) {
                 idle();
             }
+
+            int chrPos = chr.getPos();
+            if(!isMoving && cellIndex!= chrPos) {
+                EventCollector.logEvent(Utils.format("CharSprite desync %s (%d not %d)", chr.getEntityKind(), cellIndex, chrPos));
+                place(chrPos);
+            }
+
         });
 
     }

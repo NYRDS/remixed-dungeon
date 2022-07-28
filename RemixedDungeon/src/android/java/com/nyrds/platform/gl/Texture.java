@@ -36,35 +36,37 @@ public class Texture {
 	
 	protected int id;
 	
-	public Texture() {
-		int[] ids = new int[1];
-		GLES20.glGenTextures( 1, ids, 0 );
-		id = ids[0];
-
-		if(id==0) {
-			throw new AssertionError();
-		}
-
-		//Log.i("texture",Utils.format("creating %d", id));
-		bind();
-	}
+	public Texture() {}
 	
 	public static void activate( int index ) {
 		GLES20.glActiveTexture( GLES20.GL_TEXTURE0 + index );
 	}
-	
-	public void bind() {
+
+	private void ensureTexture() {
+		if(id==0) {
+			int[] ids = new int[1];
+			GLES20.glGenTextures( 1, ids, 0 );
+			id = ids[0];
+		}
+	}
+
+	protected void _bind() {
+		ensureTexture();
 		GLES20.glBindTexture( GLES20.GL_TEXTURE_2D, id );
 	}
-	
+
+	public void bind() {
+		_bind();
+	}
+
 	public void filter( int minMode, int maxMode ) {
-		bind();
+		_bind();
 		GLES20.glTexParameterf( GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_MIN_FILTER, minMode );
 		GLES20.glTexParameterf( GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_MAG_FILTER, maxMode );
 	}
 	
 	public void wrap( int s, int t ) {
-		bind();
+		_bind();
 		GLES20.glTexParameterf( GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_WRAP_S, s );
 		GLES20.glTexParameterf( GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_WRAP_T, t );
 	}
@@ -72,17 +74,18 @@ public class Texture {
 	public void delete() {
 		int[] ids = {id};
 		GLES20.glDeleteTextures( 1, ids, 0 );
+		id = 0;
 		//Log.i("texture",Utils.format("deleting %d", id));
 	}
 	
 	public void bitmap( Bitmap bitmap ) {
-		bind();
+		_bind();
 		GLUtils.texImage2D( GLES20.GL_TEXTURE_2D, 0, bitmap, 0 );
 	}
 	
 	public void pixels( int w, int h, int[] pixels ) {
 	
-		bind();
+		_bind();
 		
 		IntBuffer imageBuffer = ByteBuffer.
 			allocateDirect( w * h * 4 ).
@@ -99,30 +102,6 @@ public class Texture {
 			h, 
 			0, 
 			GLES20.GL_RGBA, 
-			GLES20.GL_UNSIGNED_BYTE, 
-			imageBuffer );
-	}
-	
-	public void pixels( int w, int h, byte[] pixels ) {
-		
-		bind();
-		
-		ByteBuffer imageBuffer = ByteBuffer.
-			allocateDirect( w * h ).
-			order( ByteOrder.nativeOrder() );
-		imageBuffer.put( pixels );
-		imageBuffer.position( 0 );
-		
-		GLES20.glPixelStorei( GLES20.GL_UNPACK_ALIGNMENT, 1 );
-		
-		GLES20.glTexImage2D(
-			GLES20.GL_TEXTURE_2D, 
-			0, 
-			GLES20.GL_ALPHA, 
-			w, 
-			h, 
-			0, 
-			GLES20.GL_ALPHA, 
 			GLES20.GL_UNSIGNED_BYTE, 
 			imageBuffer );
 	}
@@ -149,30 +128,5 @@ public class Texture {
 		}
 		
 		pixels( w, h, pixels );
-	}
-	
-	public static Texture create( Bitmap bmp ) {
-		Texture tex = new Texture();
-		tex.bitmap( bmp );
-		
-		return tex;
-	}
-	
-	public static Texture create( int width, int height, int[] pixels ) {
-		Texture tex = new Texture();
-		tex.pixels( width, height, pixels );
-		
-		return tex;
-	}
-	
-	public static Texture create( int width, int height, byte[] pixels ) {
-		Texture tex = new Texture();
-		tex.pixels( width, height, pixels );
-		
-		return tex;
-	}
-
-	public int getId() {
-		return id;
 	}
 }
