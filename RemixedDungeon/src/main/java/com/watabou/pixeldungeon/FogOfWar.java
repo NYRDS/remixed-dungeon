@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon;
 
 import android.graphics.Bitmap;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.gl.Texture;
 import com.nyrds.util.Util;
 import com.watabou.gltextures.SmartTexture;
@@ -136,7 +137,9 @@ public class FogOfWar extends Image {
             }
         }
 
-        texture.pixels(width2, height2, pixels);
+        GameLoop.pushUiTask(() -> {
+            texture.pixels(width2, height2, pixels);
+        });
     }
 
     private class FogTexture extends SmartTexture {

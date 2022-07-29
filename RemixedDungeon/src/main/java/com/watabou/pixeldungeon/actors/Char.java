@@ -1184,7 +1184,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 		if(sprite.getParent()==null) {
 			String err = String.format("sprite addition failed for %s %b", getEntityKind(), GameScene.isSceneReady());
-
 			GLog.debug(err);
 		}
 

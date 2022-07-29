@@ -26,6 +26,7 @@ import org.luaj.vm2.LuaError;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import lombok.SneakyThrows;
@@ -33,6 +34,7 @@ import lombok.SneakyThrows;
 public class GameLoop {
 
     public static final AtomicInteger loadingOrSaving = new AtomicInteger();
+    public static final Object stepLock = new Object();
 
     private final Executor executor = new ReportingExecutor();
     private final ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
@@ -113,7 +115,7 @@ public class GameLoop {
 
     public static void addToScene(Gizmo gizmo) {
         Scene scene = scene();
-        if(scene!=null) {
+        if (scene != null) {
             scene.add(gizmo);
         }
     }
@@ -134,7 +136,7 @@ public class GameLoop {
     }
 
     static public void runOnMainThread(Runnable runnable) {
-        pushUiTask( () -> {
+        pushUiTask(() -> {
             Game.instance().runOnUiThread(runnable);
         });
     }
@@ -156,7 +158,7 @@ public class GameLoop {
         Sample.INSTANCE.resume();
 
         if (doOnResume != null) {
-            GameLoop.pushUiTask( () -> {
+            GameLoop.pushUiTask(() -> {
                         doOnResume.run();
                         doOnResume = null;
                     }
@@ -168,59 +170,65 @@ public class GameLoop {
     public void onFrame() {
         SystemTime.tick();
         long rightNow = SystemTime.now();
-        step = Math.min((now == 0 ? 0 : rightNow - now),250);
+        step = Math.min((now == 0 ? 0 : rightNow - now), 250);
         now = rightNow;
 
         framesSinceInit++;
 
+        synchronized (stepLock) {
+            if (framesSinceInit > 2) {
+                Runnable task;
+                while ((task = uiTasks.poll()) != null) {
+                    task.run();
+                }
 
-        if (framesSinceInit>2) {
-            Runnable task;
-            while ((task = uiTasks.poll()) != null) {
-                task.run();
-            }
+                if (!Game.softPaused && loadingOrSaving.get() == 0) {
+                    try {
+                        if (requestedReset) {
+                            requestedReset = false;
+                            switchScene(sceneClass.newInstance());
+                            return;
+                        }
 
-            if (!Game.softPaused && loadingOrSaving.get() == 0) {
-                try {
-                    if (requestedReset) {
-                        requestedReset = false;
-                        switchScene(sceneClass.newInstance());
-                        return;
+                        while (!motionEvents.isEmpty()) {
+                            Touchscreen.processEvent(motionEvents.poll());
+                        }
+
+                        while (!keysEvents.isEmpty()) {
+                            Keys.processEvent(keysEvents.poll());
+                        }
+
+                    } catch (LuaError e) {
+                        throw ModdingMode.modException(e);
+                    } catch (Exception e) {
+                        throw new TrackedRuntimeException(e);
                     }
-
-                    while(!motionEvents.isEmpty()) {
-                        Touchscreen.processEvent(motionEvents.poll());
-                    }
-
-                    while(!keysEvents.isEmpty()) {
-                        Keys.processEvent(keysEvents.poll());
-                    }
-
-
-                    step();
-                } catch (LuaError e) {
-                    throw ModdingMode.modException(e);
-                } catch (Exception e) {
-                    throw new TrackedRuntimeException(e);
                 }
             }
 
             NoosaScript.get().resetCamera();
-
             Gl.clear();
 
-            if (scene != null) {
-                scene.draw();
+            synchronized (stepLock) {
+                if (scene != null) {
+                    scene.draw();
+                }
+            }
+
+            if (framesSinceInit > 2 && !Game.softPaused && loadingOrSaving.get() == 0) {
+                executor.execute(this::step);
             }
         }
     }
 
     @SneakyThrows
     public void step() {
-        elapsed = timeScale * step * 0.001f;
+        synchronized (stepLock) {
+            elapsed = timeScale * step * 0.001f;
 
-        scene.update();
-        Camera.updateAll();
+            scene.update();
+            Camera.updateAll();
+        }
     }
 
     private void switchScene(Scene requestedScene) {
@@ -229,12 +237,12 @@ public class GameLoop {
         Camera.reset();
 
         if (scene != null) {
-            EventCollector.setSessionData("pre_scene",scene.getClass().getSimpleName());
+            EventCollector.setSessionData("pre_scene", scene.getClass().getSimpleName());
             scene.destroy();
         }
         scene = requestedScene;
         scene.create();
-        EventCollector.setSessionData("scene",scene.getClass().getSimpleName());
+        EventCollector.setSessionData("scene", scene.getClass().getSimpleName());
 
         elapsed = 0f;
         timeScale = 1f;
