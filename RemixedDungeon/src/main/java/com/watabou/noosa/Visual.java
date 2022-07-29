@@ -133,7 +133,7 @@ public class Visual extends Gizmo implements IPlaceable{
 	}
 	
 	protected void updateMotion() {
-		if(speed.x*speed.y*angularSpeed==0) {
+		if(speed.x==0 && speed.y==0 && angularSpeed==0) {
 			return;
 		}
 

@@ -74,7 +74,8 @@ public class Group extends Gizmo {
 	public void kill() {
 		// A killed group keeps all its members,
 		// but they get killed too
-		for (Gizmo g: members) {
+		for (int i = 0; i < members.size(); i++) {
+			Gizmo g = members.get(i);
 			if (g != null && g.alive) {
 				g.kill();
 			}

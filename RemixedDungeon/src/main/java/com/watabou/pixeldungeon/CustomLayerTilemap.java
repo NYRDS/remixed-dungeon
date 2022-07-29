@@ -173,9 +173,9 @@ public class CustomLayerTilemap extends DungeonTilemap {
                     rm, gm, bm, am,
                     ra, ga, ba, aa);
 
-            if(!updated.isEmpty()) {
+            //if(!updated.isEmpty()) {
                 updateVertices();
-            }
+            //}
 
             script.camera(camera);
             script.drawQuadSet(quads, mask, size);
