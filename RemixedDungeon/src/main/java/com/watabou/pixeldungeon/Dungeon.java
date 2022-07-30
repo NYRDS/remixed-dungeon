@@ -150,8 +150,9 @@ public class Dungeon {
     }
 
     public static void init() {
-        GameLoop.loadingOrSaving.incrementAndGet();
         synchronized (GameLoop.stepLock) {
+            GameLoop.loadingOrSaving.incrementAndGet();
+
             SaveUtils.deleteLevels(heroClass);
 
             gameId = String.valueOf(SystemTime.now());
@@ -201,8 +202,9 @@ public class Dungeon {
 
             realtime = GamePreferences.realtime();
             moveTimeoutIndex = GamePreferences.limitTimeoutIndex(GamePreferences.moveTimeout());
+
+            GameLoop.loadingOrSaving.decrementAndGet();
         }
-        GameLoop.loadingOrSaving.decrementAndGet();
     }
 
     @Contract(pure = true)
@@ -225,9 +227,9 @@ public class Dungeon {
 
     @NotNull
     public static Level newLevel(@NotNull Position pos) {
-
-        GameLoop.loadingOrSaving.incrementAndGet();
         synchronized (GameLoop.stepLock) {
+            GameLoop.loadingOrSaving.incrementAndGet();
+
             updateStatistics();
 
             if (!DungeonGenerator.isLevelExist(pos.levelId)) {
@@ -241,9 +243,10 @@ public class Dungeon {
             Dungeon.hero.setPos(level.entrance);
 
             Statistics.qualifiedForNoKilling = !DungeonGenerator.getLevelProperty(level.levelId, "isSafe", false);
+
+            GameLoop.loadingOrSaving.decrementAndGet();
+            return level;
         }
-        GameLoop.loadingOrSaving.decrementAndGet();
-        return level;
     }
 
     public static void resetLevel() {
@@ -644,23 +647,26 @@ public class Dungeon {
     }
 
     private static void loadGame(String fileName, boolean fullLoad) throws IOException {
-        try {
-            GameLoop.loadingOrSaving.incrementAndGet();
-            synchronized (GameLoop.stepLock) {
+        synchronized (GameLoop.stepLock) {
+            try {
+                GameLoop.loadingOrSaving.incrementAndGet();
+
                 Bundle bundle = gameBundle(fileName);
                 loadGameFromBundle(bundle, fullLoad);
+
+            } finally {
+                GameLoop.loadingOrSaving.decrementAndGet();
             }
-        } finally {
-            GameLoop.loadingOrSaving.decrementAndGet();
         }
     }
 
     @NotNull
     @SneakyThrows
     public static Level loadLevel(Position next) {
-        try {
-            GameLoop.loadingOrSaving.incrementAndGet();
-            synchronized (GameLoop.stepLock) {
+        synchronized (GameLoop.stepLock) {
+            try {
+                GameLoop.loadingOrSaving.incrementAndGet();
+
                 String levelId = next.levelId;
 
                 if (Dungeon.level != null) {
@@ -701,11 +707,12 @@ public class Dungeon {
 
                     level.levelId = next.levelId;
                     initSizeDependentStuff(level.getWidth(), level.getHeight());
+                    return level;
+
                 }
-                return level;
+            } finally {
+                GameLoop.loadingOrSaving.decrementAndGet();
             }
-        } finally {
-            GameLoop.loadingOrSaving.decrementAndGet();
         }
     }
 
