@@ -98,29 +98,29 @@ import static com.nyrds.platform.game.RemixedDungeon.MOVE_TIMEOUTS;
 
 public class Dungeon {
 
-    public static int     potionOfStrength;
-    public static int     scrollsOfUpgrade;
-    public static int     arcaneStyli;
+    public static int potionOfStrength;
+    public static int scrollsOfUpgrade;
+    public static int arcaneStyli;
     public static boolean dewVial; // true if the dew vial can be spawned
-    public static int     transmutation; // depth number for a well of transmutation
+    public static int transmutation; // depth number for a well of transmutation
 
     private static int challenges;
     private static int facilitations;
 
-    public static Hero  hero;
+    public static Hero hero;
 
-    public static Level  level;
+    public static Level level;
     public static String levelId;
     public static String previousLevelId;
 
-    public static  int depth;
+    public static int depth;
     private static long lastSaveTimestamp;
 
-    public static  String  gameId;
+    public static String gameId;
 
     private static boolean realtime;
 
-    private static int     moveTimeoutIndex;
+    private static int moveTimeoutIndex;
 
     public static HashSet<Integer> chapters;
 
@@ -151,57 +151,57 @@ public class Dungeon {
 
     public static void init() {
         GameLoop.loadingOrSaving.incrementAndGet();
+        synchronized (GameLoop.stepLock) {
+            SaveUtils.deleteLevels(heroClass);
 
-        SaveUtils.deleteLevels(heroClass);
+            gameId = String.valueOf(SystemTime.now());
 
-        gameId = String.valueOf(SystemTime.now());
+            if (!Scene.sceneMode.equals(Scene.LEVELS_TEST)) {
+                LuaEngine.reset();
+            }
 
-        if(!Scene.sceneMode.equals(Scene.LEVELS_TEST)) {
-            LuaEngine.reset();
+            Treasury.reset();
+
+            Scroll.initLabels();
+            Potion.initColors();
+            Wand.initWoods();
+            Ring.initGems();
+
+            Statistics.reset();
+            Journal.reset();
+
+            depth = 0;
+
+            potionOfStrength = 0;
+            scrollsOfUpgrade = 0;
+            arcaneStyli = 0;
+            dewVial = true;
+            transmutation = Random.IntRange(6, 14);
+
+            chapters = new HashSet<>();
+
+            Ghost.Quest.reset();
+            WandMaker.Quest.reset();
+            Blacksmith.Quest.reset();
+            Imp.Quest.reset();
+            ScarecrowNPC.Quest.reset();
+            AzuterronNPC.Quest.reset();
+            CagedKobold.Quest.reset();
+            PlagueDoctorNPC.Quest.reset();
+
+            Room.shuffleTypes();
+
+            hero = new Hero(GameLoop.getDifficulty());
+
+            Badges.reset();
+
+            heroClass.initHero(hero);
+
+            hero.levelId = DungeonGenerator.getEntryLevel();
+
+            realtime = GamePreferences.realtime();
+            moveTimeoutIndex = GamePreferences.limitTimeoutIndex(GamePreferences.moveTimeout());
         }
-
-        Treasury.reset();
-
-        Scroll.initLabels();
-        Potion.initColors();
-        Wand.initWoods();
-        Ring.initGems();
-
-        Statistics.reset();
-        Journal.reset();
-
-        depth = 0;
-
-        potionOfStrength = 0;
-        scrollsOfUpgrade = 0;
-        arcaneStyli = 0;
-        dewVial = true;
-        transmutation = Random.IntRange(6, 14);
-
-        chapters = new HashSet<>();
-
-        Ghost.Quest.reset();
-        WandMaker.Quest.reset();
-        Blacksmith.Quest.reset();
-        Imp.Quest.reset();
-        ScarecrowNPC.Quest.reset();
-        AzuterronNPC.Quest.reset();
-        CagedKobold.Quest.reset();
-        PlagueDoctorNPC.Quest.reset();
-
-        Room.shuffleTypes();
-
-        hero = new Hero(GameLoop.getDifficulty());
-
-        Badges.reset();
-
-        heroClass.initHero(hero);
-
-        hero.levelId = DungeonGenerator.getEntryLevel();
-
-        realtime = GamePreferences.realtime();
-        moveTimeoutIndex = GamePreferences.limitTimeoutIndex(GamePreferences.moveTimeout());
-
         GameLoop.loadingOrSaving.decrementAndGet();
     }
 
@@ -226,7 +226,8 @@ public class Dungeon {
     @NotNull
     public static Level newLevel(@NotNull Position pos) {
 
-            GameLoop.loadingOrSaving.incrementAndGet();
+        GameLoop.loadingOrSaving.incrementAndGet();
+        synchronized (GameLoop.stepLock) {
             updateStatistics();
 
             if (!DungeonGenerator.isLevelExist(pos.levelId)) {
@@ -240,9 +241,9 @@ public class Dungeon {
             Dungeon.hero.setPos(level.entrance);
 
             Statistics.qualifiedForNoKilling = !DungeonGenerator.getLevelProperty(level.levelId, "isSafe", false);
-
-            GameLoop.loadingOrSaving.decrementAndGet();
-            return level;
+        }
+        GameLoop.loadingOrSaving.decrementAndGet();
+        return level;
     }
 
     public static void resetLevel() {
@@ -290,17 +291,17 @@ public class Dungeon {
     }
 
     public static void switchLevel(@NotNull final Level level, int pos, Collection<Mob> followers) {
-        EventCollector.setSessionData("level",level.levelId);
+        EventCollector.setSessionData("level", level.levelId);
 
         isometricModeAllowed = level.isPlainTile(1); //TODO check entire level
 
-        if(isometricModeAllowed) {
+        if (isometricModeAllowed) {
             setIsometricMode(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false));
         } else {
             setIsometricMode(false);
         }
 
-        nightMode =new GregorianCalendar().get(Calendar.HOUR_OF_DAY) < 7;
+        nightMode = new GregorianCalendar().get(Calendar.HOUR_OF_DAY) < 7;
 
         Actor.init(level);
 
@@ -314,33 +315,33 @@ public class Dungeon {
 
         if (level.cellValid(pos)) {
             hero.setPos(pos);
-        } else if(level.cellValid(level.entrance)){
+        } else if (level.cellValid(level.entrance)) {
             hero.setPos(level.entrance);
         } else {
             hero.setPos(level.getRandomTerrainCell(Terrain.EMPTY));
         }
 
-        for(Mob mob : followers) {
-                var dup = CharsList.getById(mob.getId());
+        for (Mob mob : followers) {
+            var dup = CharsList.getById(mob.getId());
 
-                if(dup.valid()) {
-                    GLog.debug("Removing dup: %s, %d", dup.getEntityKind(), dup.getId());
-                    Actor.remove(dup);
-                    Actor.freeCell(dup.getPos());
-                    CharsList.remove(dup.getId());
-                    level.mobs.remove(dup);
-                }
-
-                int cell = level.getEmptyCellNextTo(hero.getPos());
-                if (!level.cellValid(cell)) {
-                    cell = hero.getPos();
-                }
-                mob.setPos(cell);
-
-                mob.setEnemy(CharsList.DUMMY);
-                mob.setState(MobAi.getStateByClass(Wandering.class));
-                level.spawnMob(mob);
+            if (dup.valid()) {
+                GLog.debug("Removing dup: %s, %d", dup.getEntityKind(), dup.getId());
+                Actor.remove(dup);
+                Actor.freeCell(dup.getPos());
+                CharsList.remove(dup.getId());
+                level.mobs.remove(dup);
             }
+
+            int cell = level.getEmptyCellNextTo(hero.getPos());
+            if (!level.cellValid(cell)) {
+                cell = hero.getPos();
+            }
+            mob.setPos(cell);
+
+            mob.setEnemy(CharsList.DUMMY);
+            mob.setState(MobAi.getStateByClass(Wandering.class));
+            level.spawnMob(mob);
+        }
 
         previousLevelId = levelId;
         levelId = level.levelId;
@@ -374,31 +375,31 @@ public class Dungeon {
         return Random.Int(12 * (1 + arcaneStyli)) < depth;
     }
 
-    private static final String VERSION      = "version";
-    private static final String HERO         = "hero";
-    private static final String DEPTH        = "depth";
-    private static final String LEVEL        = "level";
-    private static final String POS          = "potionsOfStrength";
-    private static final String SOU          = "scrollsOfEnhancement";
-    private static final String AS           = "arcaneStyli";
-    private static final String DV           = "dewVial";
-    private static final String WT           = "transmutation";
-    private static final String CHAPTERS     = "chapters";
-    private static final String QUESTS       = "quests";
-    private static final String BADGES       = "badges";
+    private static final String VERSION = "version";
+    private static final String HERO = "hero";
+    private static final String DEPTH = "depth";
+    private static final String LEVEL = "level";
+    private static final String POS = "potionsOfStrength";
+    private static final String SOU = "scrollsOfEnhancement";
+    private static final String AS = "arcaneStyli";
+    private static final String DV = "dewVial";
+    private static final String WT = "transmutation";
+    private static final String CHAPTERS = "chapters";
+    private static final String QUESTS = "quests";
+    private static final String BADGES = "badges";
     private static final String SCRIPTS_DATA = "scripts_data";
-    private static final String GAME_ID      = "game_id";
+    private static final String GAME_ID = "game_id";
     private static final String MOVE_TIMEOUT = "move_timeout";
     private static final String LAST_USED_ID = "lastUsedId";
-    private static final String MOD          = "mod";
-    private static final String REALTIME     = "realtime";
-    private static final String CHALLENGES   = "challenges";
-    private static final String FACILITATIONS= "facilations";
+    private static final String MOD = "mod";
+    private static final String REALTIME = "realtime";
+    private static final String CHALLENGES = "challenges";
+    private static final String FACILITATIONS = "facilations";
 
 
     public static void gameOver() {
-        SaveUtils.deleteSaveFromSlot(SaveUtils.getPrevSave(),heroClass);
-        SaveUtils.deleteSaveFromSlot(SaveUtils.getAutoSave(),heroClass);
+        SaveUtils.deleteSaveFromSlot(SaveUtils.getPrevSave(), heroClass);
+        SaveUtils.deleteSaveFromSlot(SaveUtils.getAutoSave(), heroClass);
         Dungeon.deleteGame(true);
     }
 
@@ -491,7 +492,7 @@ public class Dungeon {
             Game.toast("Low memory condition");
         }
 
-        if (level != null && hero!= null && hero.isAlive()) {
+        if (level != null && hero != null && hero.isAlive()) {
             Level thisLevel = Dungeon.level;
 
             Actor.fixTime();
@@ -532,13 +533,15 @@ public class Dungeon {
                 current.levelId);
     }
 
-    public synchronized static void save(boolean force) {
+    public static void save(boolean force) {
 
         if (!force && SystemTime.now() - lastSaveTimestamp < 1000) {
             return;
         }
         GameLoop.loadingOrSaving.incrementAndGet();
-        saveAllImpl();
+        synchronized (GameLoop.stepLock) {
+            saveAllImpl();
+        }
         GameLoop.loadingOrSaving.decrementAndGet();
 
         lastSaveTimestamp = SystemTime.now();
@@ -558,13 +561,13 @@ public class Dungeon {
         String saveMod = bundle.optString(MOD, ModdingMode.REMIXED);
         String activeMod = ModdingMode.activeMod();
 
-        if(fullLoad && !saveMod.equals(activeMod)) {
+        if (fullLoad && !saveMod.equals(activeMod)) {
             EventCollector.logException(new Exception(
                     Utils.format("loading save from another mod (save: %s, active: %s)", saveMod, activeMod)));
         }
 
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
-        EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID,1));
+        EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID, 1));
         CharsList.restoreFromBundle(bundle);
 
         Treasury.reset();
@@ -582,8 +585,8 @@ public class Dungeon {
         transmutation = bundle.getInt(WT);
 
         realtime = bundle.getBoolean(REALTIME);
-        setChallenges(bundle.optInt(CHALLENGES,0));
-        setFacilitations(bundle.optInt(FACILITATIONS,0));
+        setChallenges(bundle.optInt(CHALLENGES, 0));
+        setFacilitations(bundle.optInt(FACILITATIONS, 0));
 
         if (fullLoad) {
             chapters = new HashSet<>();
@@ -626,7 +629,7 @@ public class Dungeon {
         String version = bundle.getString(VERSION);
 
         hero = (Hero) bundle.get(HERO);
-        if(hero==null) {
+        if (hero == null) {
             throw new TrackedRuntimeException("no hero in bundle");
         }
 
@@ -643,10 +646,11 @@ public class Dungeon {
     private static void loadGame(String fileName, boolean fullLoad) throws IOException {
         try {
             GameLoop.loadingOrSaving.incrementAndGet();
-            Bundle bundle = gameBundle(fileName);
-            loadGameFromBundle(bundle, fullLoad);
-        }
-        finally {
+            synchronized (GameLoop.stepLock) {
+                Bundle bundle = gameBundle(fileName);
+                loadGameFromBundle(bundle, fullLoad);
+            }
+        } finally {
             GameLoop.loadingOrSaving.decrementAndGet();
         }
     }
@@ -656,47 +660,48 @@ public class Dungeon {
     public static Level loadLevel(Position next) {
         try {
             GameLoop.loadingOrSaving.incrementAndGet();
-            String levelId = next.levelId;
+            synchronized (GameLoop.stepLock) {
+                String levelId = next.levelId;
 
-            if(Dungeon.level!=null) {
-                CharsList.remove(Dungeon.hero.getId());
-                for(var mob:Dungeon.level.mobs) {
-                    CharsList.remove(mob.getId());
-                }
-                Dungeon.level = null;
-            }
-
-            DungeonGenerator.loadingLevel(next);
-
-            String loadFrom = SaveUtils.depthFileForLoad(heroClass,
-                    DungeonGenerator.getLevelDepth(levelId),
-                    DungeonGenerator.getLevelKind(levelId),
-                    levelId);
-
-            GLog.toFile("loading level: %s", loadFrom);
-
-
-            if(DungeonGenerator.isStatic(levelId)) {
-                return newLevel(next);
-            }
-
-            if(!FileSystem.getFile(loadFrom).exists()) {
-                return newLevel(next);
-            }
-
-            try(InputStream input =  new FileInputStream(FileSystem.getFile(loadFrom))) {
-                Bundle bundle = Bundle.read(input);
-
-                Level level = (Level) bundle.get("level");
-                LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeLevelData").call(bundle.getString(SCRIPTS_DATA));
-
-                if (level == null) {
-                    level = newLevel(next);
+                if (Dungeon.level != null) {
+                    CharsList.remove(Dungeon.hero.getId());
+                    for (var mob : Dungeon.level.mobs) {
+                        CharsList.remove(mob.getId());
+                    }
+                    Dungeon.level = null;
                 }
 
-                level.levelId = next.levelId;
-                initSizeDependentStuff(level.getWidth(), level.getHeight());
+                DungeonGenerator.loadingLevel(next);
 
+                String loadFrom = SaveUtils.depthFileForLoad(heroClass,
+                        DungeonGenerator.getLevelDepth(levelId),
+                        DungeonGenerator.getLevelKind(levelId),
+                        levelId);
+
+                GLog.toFile("loading level: %s", loadFrom);
+
+
+                if (DungeonGenerator.isStatic(levelId)) {
+                    return newLevel(next);
+                }
+
+                if (!FileSystem.getFile(loadFrom).exists()) {
+                    return newLevel(next);
+                }
+
+                try (InputStream input = new FileInputStream(FileSystem.getFile(loadFrom))) {
+                    Bundle bundle = Bundle.read(input);
+
+                    Level level = (Level) bundle.get("level");
+                    LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeLevelData").call(bundle.getString(SCRIPTS_DATA));
+
+                    if (level == null) {
+                        level = newLevel(next);
+                    }
+
+                    level.levelId = next.levelId;
+                    initSizeDependentStuff(level.getWidth(), level.getHeight());
+                }
                 return level;
             }
         } finally {
@@ -717,7 +722,7 @@ public class Dungeon {
 
     public static Bundle gameBundle(String fileName) throws IOException {
 
-        try(InputStream input = new FileInputStream(FileSystem.getFile(fileName))) {
+        try (InputStream input = new FileInputStream(FileSystem.getFile(fileName))) {
             return Bundle.read(input);
         }
     }
@@ -768,12 +773,12 @@ public class Dungeon {
 
         boolean ignoreDanger = ignoreDanger(ch);
 
-        for (val objectLayer: level.objects.values()) {
+        for (val objectLayer : level.objects.values()) {
             for (val object : objectLayer.values()) {
                 int pos = object.getPos();
 
-                if(!level.cellValid(pos)) {
-                    EventCollector.logException("Invalid object "+object.getEntityKind());
+                if (!level.cellValid(pos)) {
+                    EventCollector.logException("Invalid object " + object.getEntityKind());
                     level.remove(object);
                     continue;
                 }
@@ -782,7 +787,7 @@ public class Dungeon {
                     passable[pos] = false;
                 }
 
-                if(!ignoreDanger && object.avoid()) {
+                if (!ignoreDanger && object.avoid()) {
                     passable[pos] = false;
                 }
 
@@ -794,7 +799,7 @@ public class Dungeon {
         for (Char actor : Actor.chars.values()) {
             int pos = actor.getPos();
 
-            if(!level.cellValid(pos)) {
+            if (!level.cellValid(pos)) {
                 GLog.debug("WTF?");
                 return;
             }
@@ -810,7 +815,7 @@ public class Dungeon {
 
     public static int findPath(@NotNull Hero ch, int to, boolean[] pass, boolean[] visible) {
 
-        int from  = ch.getPos();
+        int from = ch.getPos();
 
         if (level.adjacent(from, to)) {
             if (!(pass[to] || level.avoid[to])) {
@@ -897,7 +902,7 @@ public class Dungeon {
 
 
     public static boolean isLoading() {
-        return hero==null || level == null || GameLoop.loadingOrSaving.get()>0;
+        return hero == null || level == null || GameLoop.loadingOrSaving.get() > 0;
     }
 
     public static boolean realtime() {
@@ -942,12 +947,12 @@ public class Dungeon {
     }
 
     public static void setChallenges(int challenges) {
-        EventCollector.setSessionData(CHALLENGES,String.valueOf(challenges));
+        EventCollector.setSessionData(CHALLENGES, String.valueOf(challenges));
         Dungeon.challenges = challenges;
     }
 
     public static void setFacilitations(int facilitations) {
-        EventCollector.setSessionData(FACILITATIONS,String.valueOf(facilitations));
+        EventCollector.setSessionData(FACILITATIONS, String.valueOf(facilitations));
         Dungeon.facilitations = facilitations;
     }
 
@@ -957,11 +962,11 @@ public class Dungeon {
 
     @LuaInterface
     public static boolean isCellVisible(int cell) {
-        if(level == null) {
+        if (level == null) {
             return false;
         }
 
-        if(!level.cellValid(cell)) {
+        if (!level.cellValid(cell)) {
             EventCollector.logException(Utils.format("visibility check on %d", cell));
             return false;
         }
@@ -969,16 +974,16 @@ public class Dungeon {
     }
 
     public static boolean isNorthWallVisible(int cell) {
-        if(!Dungeon.isIsometricMode()) {
+        if (!Dungeon.isIsometricMode()) {
             return isCellVisible(cell);
         }
 
-        if(!isCellVisible(cell)) {
+        if (!isCellVisible(cell)) {
             return false;
         }
 
         int next_cell = cell + level.getWidth();
-        if(!level.cellValid(next_cell)) {
+        if (!level.cellValid(next_cell)) {
             return true;
         }
         return isCellVisible(next_cell);
@@ -986,7 +991,7 @@ public class Dungeon {
 
 
     public static void onHeroLeaveLevel() {
-        if(level!=null) {
+        if (level != null) {
             level.unseal();
         }
     }
