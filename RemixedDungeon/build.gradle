@@ -38,7 +38,7 @@ android {
         versionName "31.1.fix.9"
         targetSdkVersion 32
         minSdkVersion 19
-        compileSdkVersion = 31
+        compileSdkVersion = 32
 
         // Enabling multidex support.
         multiDexEnabled true
