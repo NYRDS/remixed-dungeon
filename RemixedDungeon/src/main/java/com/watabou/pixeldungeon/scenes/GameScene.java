@@ -282,6 +282,8 @@ public class GameScene extends PixelScene {
         emoicons = new Group();
 
         mobs = new Group();
+        topMobs = new Group();  // mobs that are drawn on top of walls
+
         add(mobs);
 
         // hack to save bugged saves...
@@ -334,7 +336,6 @@ public class GameScene extends PixelScene {
             add(roofTiles);
         }
 
-        topMobs = new Group();
         add(topMobs);
 
         fog.updateVisibility(Dungeon.visible, level.visited, level.mapped, false);
