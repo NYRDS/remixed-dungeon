@@ -26,6 +26,8 @@ import org.jetbrains.annotations.NotNull;
 
 import static com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.PEDESTAL;
 
+import lombok.var;
+
 public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 	static private int ctr = 0;
@@ -53,12 +55,12 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 			return wand;
 		}
 
+		var item = SimpleWand.createRandomSimpleWand().upgrade(Dungeon.depth/3);
 		if(kind == 2) {
-			collect(new WandOfShadowbolt().upgrade(Dungeon.depth / 3));
-			return ensureWand();
+			item = new WandOfShadowbolt().upgrade(Dungeon.depth/2);
 		}
 
-		collect(SimpleWand.createRandomSimpleWand().upgrade(Dungeon.depth / 3));
+		item.collect(this); //no treasury check, we want to keep the wand in the crystal
 
 		return ensureWand();
 	}
