@@ -34,7 +34,6 @@ public class SmartTexture extends Texture {
 
 	public int wModeH;
 	public int wModeV;
-	boolean premultiplied;
 	boolean loaded;
 
 	public Bitmap bitmap;
@@ -62,11 +61,6 @@ public class SmartTexture extends Texture {
 		wModeH = s;
 		wModeV = t;
 	}
-	
-	@Override
-	public void bitmap( Bitmap bitmap ) {
-		bitmap( bitmap, false );
-	}
 
 	public void bind() {
 		_bind();
@@ -74,18 +68,14 @@ public class SmartTexture extends Texture {
 			super.filter(fModeMin,fModeMax);
 			super.wrap(wModeH,wModeV);
 
-			if (premultiplied) {
-				super.bitmap( bitmap );
-			} else {
-				handMade( bitmap, true );
-			}
+			handMade( bitmap );
+
 			loaded = true;
 		}
 	}
 
-	public void bitmap( Bitmap bitmap, boolean premultiplied ) {
+	public void bitmap( Bitmap bitmap) {
 		this.bitmap = bitmap;
-		this.premultiplied = premultiplied;
 		width = bitmap.getWidth();
 		height = bitmap.getHeight();
 	}
@@ -93,7 +83,7 @@ public class SmartTexture extends Texture {
 	@Override
 	public void delete() {
 		super.delete();
-		bitmap = null;
+		//bitmap = null;
 		loaded = false;
 	}
 	
