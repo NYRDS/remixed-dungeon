@@ -92,6 +92,7 @@ public class ChaosStaff extends Wand {
 
                         if (level.cellValid(nextCell)) {
                             Mob newMob = MobFactory.mobByName(mob.getEntityKind());
+                            newMob.setPos(nextCell);
                             level.spawnMob(newMob);
                         }
                         break;

@@ -280,7 +280,7 @@ public class SystemText extends Text {
 						cacheHits++;
 					}
 
-					GLog.debug("text cache hits %d miss: %d size %d", cacheHits, cacheMiss, bitmapCache.size());
+					//GLog.debug("text cache hits %d miss: %d size %d", cacheHits, cacheMiss, bitmapCache.size());
 
 					SystemTextLine line = new SystemTextLine(bitmapCache.get(key));
 					line.setVisible(getVisible());

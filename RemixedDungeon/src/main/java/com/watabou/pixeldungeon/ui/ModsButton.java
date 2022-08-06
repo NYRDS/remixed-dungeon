@@ -88,37 +88,38 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
 
         Scene scene = GameLoop.scene();
 
-        if(scene==null) {
+        if (scene == null) {
             return;
         }
 
-        scene.add(new WndMessage(StringsManager.getVar(R.string.Mods_Disclaimer)) {
-                             @Override
-                             public void hide() {
-                                 super.hide();
-                                 GameLoop.pushUiTask(() -> {
-                                     if (result) {
-                                         if (Util.isConnectedToInternet()) {
-                                             File modsCommon = FileSystem.getExternalStorageFile(Mods.MODS_COMMON_JSON);
-                                             modsCommon.delete();
-                                             String downloadTo = modsCommon.getAbsolutePath();
+        GameLoop.pushUiTask(() -> {
+            GameLoop.addToScene(new WndMessage(StringsManager.getVar(R.string.Mods_Disclaimer)) {
+                @Override
+                public void hide() {
+                    super.hide();
+                    GameLoop.pushUiTask(() -> {
+                        if (result) {
+                            if (Util.isConnectedToInternet()) {
+                                File modsCommon = FileSystem.getExternalStorageFile(Mods.MODS_COMMON_JSON);
+                                modsCommon.delete();
+                                String downloadTo = modsCommon.getAbsolutePath();
 
-                                             GameLoop.execute(new DownloadTask(new DownloadProgressWindow("Downloading", ModsButton.this),
-                                                     "https://nyrds.github.io/NYRDS/mods.json",
-                                                     downloadTo));
+                                GameLoop.execute(new DownloadTask(new DownloadProgressWindow("Downloading", ModsButton.this),
+                                        "https://nyrds.github.io/NYRDS/mods.json",
+                                        downloadTo));
 
-                                         } else {
-                                             DownloadComplete("no internet", true);
-                                         }
+                            } else {
+                                DownloadComplete("no internet", true);
+                            }
 
-                                     } else {
-                                         parent.add(new WndTitledMessage(Icons.get(Icons.SKULL), "No permissions granted", "No permissions granted"));
-                                     }
-                                 });
-
-                             }
-                         }
-        );
+                        } else {
+                            parent.add(new WndTitledMessage(Icons.get(Icons.SKULL), "No permissions granted", "No permissions granted"));
+                        }
+                    });
+                }
+            }
+            );
+        });
 
 
     }

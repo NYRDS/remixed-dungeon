@@ -37,6 +37,9 @@ public class GameLoop {
     public static final Object stepLock = new Object();
 
     private final Executor executor = new ReportingExecutor();
+    private final Executor stepExecutor = new ReportingExecutor();
+    public final Executor soundExecutor = new ReportingExecutor();
+
     private final ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
 
     // New scene class
@@ -82,6 +85,10 @@ public class GameLoop {
 
     static public void pushUiTask(Runnable task) {
         instance().uiTasks.add(task);
+    }
+
+    static public void stepExecute(Runnable task) {
+        instance().stepExecutor.execute(task);
     }
 
     static public void execute(Runnable task) {
@@ -216,7 +223,7 @@ public class GameLoop {
             }
 
             if (framesSinceInit > 2 && !Game.softPaused && loadingOrSaving.get() == 0) {
-                executor.execute(this::step);
+                stepExecutor.execute(this::step);
             }
         }
     }

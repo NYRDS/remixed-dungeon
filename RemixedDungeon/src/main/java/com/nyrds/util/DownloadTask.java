@@ -35,7 +35,7 @@ public class DownloadTask implements Runnable {
             URL url = new URL(m_url);
             File file = new File(m_downloadTo);
 
-            HttpsURLConnection ucon = NetCipher.getCompatibleHttpsURLConnection(url);
+            HttpURLConnection ucon = NetCipher.getCompatibleHttpURLConnection(url);
 
             //ucon.setSSLSocketFactory((SSLSocketFactory) SSLCertificateSocketFactory.getDefault());
 
@@ -53,7 +53,7 @@ public class DownloadTask implements Runnable {
 
                 try (InputStream is = ucon.getInputStream();
                      FileOutputStream fos = new FileOutputStream(file)) {
-                    byte[] buffer = new byte[16384];
+                    byte[] buffer = new byte[1024 * 128];
                     int count;
                     int bytesDownloaded = 0;
 
