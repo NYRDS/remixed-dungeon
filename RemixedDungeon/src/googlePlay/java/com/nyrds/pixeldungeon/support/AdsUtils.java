@@ -9,6 +9,7 @@ import com.appodeal.ads.BannerView;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -28,40 +29,46 @@ public class AdsUtils {
     static InitializationStatus initializationStatus;
 
     static {
-        MobileAds.initialize(RemixedDungeonApp.getContext(), initializationStatus -> {
-            AdsUtils.initializationStatus = initializationStatus;
-            var status = initializationStatus.getAdapterStatusMap();
+        try {
+            MobileAds.initialize(RemixedDungeonApp.getContext(), initializationStatus -> {
+                AdsUtils.initializationStatus = initializationStatus;
+                var status = initializationStatus.getAdapterStatusMap();
 
-            GLog.debug("admob status: %s", status.toString());
-        });
+                GLog.debug("admob status: %s", status.toString());
+            });
 
-        bannerFails.put(new AdMobBannerProvider(),-2);
-        interstitialFails.put(new AdMobInterstitialProvider(), -2);
+            bannerFails.put(new AdMobBannerProvider(), -2);
+            interstitialFails.put(new AdMobInterstitialProvider(), -2);
 
 
-        if(!RemixedDungeonApp.checkOwnSignature()) {
-            bannerFails.put(new AAdsComboProvider(), 0);
-            interstitialFails.put(new AAdsComboProvider(), 0);
-        }
+            if (!RemixedDungeonApp.checkOwnSignature()) {
+                bannerFails.put(new AAdsComboProvider(), 0);
+                interstitialFails.put(new AAdsComboProvider(), 0);
+            }
 
-        if(AppodealAdapter.usable()) {
-            AppodealAdapter.init();
-            bannerFails.put(AppodealBannerProvider.getInstance(), -1);
-            interstitialFails.put(new AppodealInterstitialProvider(), -1);
+            if (AppodealAdapter.usable()) {
+                AppodealAdapter.init();
+                bannerFails.put(AppodealBannerProvider.getInstance(), -1);
+                interstitialFails.put(new AppodealInterstitialProvider(), -1);
+            }
+        } catch (Exception e) {
+            EventCollector.logException(e,"AdsUtils init error");
         }
     }
 
 
     public static void initRewardVideo() {
-
-        if(!rewardVideoFails.isEmpty()) {
-            return;
+        try {
+            if (!rewardVideoFails.isEmpty()) {
+                return;
+            }
+            if (AppodealAdapter.usable()) {
+                rewardVideoFails.put(new AppodealRewardVideoProvider(), -1);
+            }
+            rewardVideoFails.put(new GoogleRewardVideoAds(), -2);
+        } catch (Exception e) {
+            EventCollector.logException(e,"AdsUtils init rw");
         }
-
-        if(AppodealAdapter.usable()) {
-            rewardVideoFails.put(new AppodealRewardVideoProvider(), -1);
-        }
-        rewardVideoFails.put(new GoogleRewardVideoAds(), -2000);
     }
 
     static void removeBannerView(int index, View adview) {

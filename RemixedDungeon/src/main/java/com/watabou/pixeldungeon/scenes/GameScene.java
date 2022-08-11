@@ -475,9 +475,7 @@ public class GameScene extends PixelScene {
             if(realtime) {
                 msg += StringsManager.getVar(R.string.WrnExperimental_realtime);
             } else {
-                if (moveTimeout < Double.POSITIVE_INFINITY) {
-                    msg += Utils.format(R.string.WrnExperimental_moveTimeout, (int)moveTimeout);
-                }
+                msg += Utils.format(R.string.WrnExperimental_moveTimeout, (int)moveTimeout);
             }
 
             msg += "\n\n";
@@ -530,11 +528,13 @@ public class GameScene extends PixelScene {
     }
 
     @Override
-    public synchronized void pause() {
-        if(!Game.softPaused) {
-            final Hero hero = Dungeon.hero;
-            if(hero != null && hero.isAlive()) {
-                Dungeon.save(false);
+    public void pause() {
+        synchronized (GameLoop.stepLock) {
+            if (!Game.softPaused) {
+                final Hero hero = Dungeon.hero;
+                if (hero != null && hero.isAlive()) {
+                    Dungeon.save(false);
+                }
             }
         }
     }
@@ -546,7 +546,7 @@ public class GameScene extends PixelScene {
     }
 
     @Override
-    public synchronized void update() {
+    public void update() {
         if (!sceneCreated) {
             return;
         }
@@ -567,6 +567,7 @@ public class GameScene extends PixelScene {
 
         if(objectSortingRequested) {
             objects.sort();
+            objectSortingRequested = false;
         }
         super.update();
 
