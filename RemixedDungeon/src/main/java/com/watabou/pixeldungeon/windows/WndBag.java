@@ -37,10 +37,15 @@ import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
 import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+
+import lombok.var;
 
 public class WndBag extends WndTabbed {
 
@@ -103,7 +108,7 @@ public class WndBag extends WndTabbed {
 	private static WndBag instance;
 
 	private Belongings stuff;
-	
+
 	public WndBag(Belongings stuff, Bag bag, Listener listener, Mode mode, String title) {
 		
 		super();
@@ -219,9 +224,14 @@ public class WndBag extends WndTabbed {
 	}
 
 	public void updateItems() {
-		GameScene.show(new WndBag(stuff, lastBag, listener, mode, title));
-	}
+		clearItems();
+		placeItems(lastBag);
 
+		Window activeDialog = getActiveDialog();
+		if(activeDialog != null) {
+			bringToFront(activeDialog);
+		}
+	}
 
 	private void placeEquipped(Item item,Belongings.Slot slot, int image) {
 		if(item != ItemsList.DUMMY) {
@@ -236,6 +246,28 @@ public class WndBag extends WndTabbed {
 
 		placeItem(new ItemPlaceholder(image));
 
+	}
+
+	public void setItemsActive(boolean state) {
+		for (var child: members) {
+			if(child instanceof ItemButton) {
+				child.setActive(state);
+			}
+		}
+	}
+
+	private void clearItems() {
+		row = col = count = 0;
+		var childsToRemove = new ArrayList<ItemButton>();
+		for (var child: members) {
+			if(child instanceof ItemButton) {
+				childsToRemove.add((ItemButton) child);
+			}
+		}
+
+		for(var child:childsToRemove) {
+			remove(child);
+		}
 	}
 
 	private void placeItems(Bag container) {

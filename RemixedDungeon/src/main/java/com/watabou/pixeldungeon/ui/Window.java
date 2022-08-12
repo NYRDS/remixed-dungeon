@@ -31,6 +31,8 @@ import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.utils.Signal;
 
+import lombok.var;
+
 public class Window extends Group implements Signal.Listener<Key>, IWindow {
 
 	public static final    int GAP           = 2;
@@ -151,8 +153,17 @@ public class Window extends Group implements Signal.Listener<Key>, IWindow {
 	public void onBackPressed() {
 		hide();
 	}
-	
-	public void onMenuPressed() {
+
+    public Window getActiveDialog() {
+        for(var maybeWindow: members) {
+            if(maybeWindow instanceof Window) {
+                return (Window) maybeWindow;
+            }
+        }
+        return null;
+    }
+
+    public void onMenuPressed() {
 	}
 
 	protected void resizeLimited(int wLimit) {
