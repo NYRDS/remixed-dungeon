@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Quiver;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
+import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
@@ -85,8 +86,9 @@ public class MissileWeapon extends Weapon {
 
         if (this instanceof Arrow) {
             Arrow arrow = (Arrow) this;
-            if (arrow.firedFrom != null && arrow.firedFrom.isEnchanted()) {
-                arrow.firedFrom.getEnchantment().proc(arrow.firedFrom, attacker, defender, damage);
+            KindOfBow firedFrom = arrow.firedFrom;
+            if (firedFrom != null && firedFrom.isEnchanted()) {
+                firedFrom.getEnchantment().proc(firedFrom, attacker, defender, damage);
             }
         }
 
@@ -163,10 +165,12 @@ public class MissileWeapon extends Weapon {
         final Char hero = Dungeon.hero;
 
         if (hero.getBelongings().backpack.items.contains(this)) {
-            if (requiredSTR() > hero.effectiveSTR()) {
+            int effectiveSTR = hero.effectiveSTR();
+            int requiredSTR = requiredSTR();
+            if (requiredSTR > effectiveSTR) {
                 info.append(Utils.format(R.string.MissileWeapon_Info2, name));
             }
-            if (requiredSTR() < hero.effectiveSTR()) {
+            if (requiredSTR < effectiveSTR) {
                 info.append(Utils.format(R.string.MissileWeapon_Info3, name));
             }
         }

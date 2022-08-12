@@ -49,9 +49,10 @@ public class WndItem extends Window {
 		add( titlebar );
 
 		if (item.isLevelKnown()) {
-			if (item.level() > 0) {
+			int level = item.level();
+			if (level > 0) {
 				titlebar.color(ItemSlot.UPGRADED);
-			} else if (item.level() < 0) {
+			} else if (level < 0) {
 				titlebar.color(ItemSlot.DEGRADED);
 			}
 		}
