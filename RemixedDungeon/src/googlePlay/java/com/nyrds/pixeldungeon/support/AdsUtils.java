@@ -9,9 +9,11 @@ import com.appodeal.ads.BannerView;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.Map;
@@ -37,9 +39,10 @@ public class AdsUtils {
                 GLog.debug("admob status: %s", status.toString());
             });
 
-            bannerFails.put(new AdMobBannerProvider(), -2);
-            interstitialFails.put(new AdMobInterstitialProvider(), -2);
-
+            if (!GamePreferences.uiLanguage().equals("ru")) {
+                bannerFails.put(new AdMobBannerProvider(), -2);
+                interstitialFails.put(new AdMobInterstitialProvider(), -2);
+            }
 
             if (!RemixedDungeonApp.checkOwnSignature()) {
                 bannerFails.put(new AAdsComboProvider(), 0);
@@ -65,7 +68,9 @@ public class AdsUtils {
             if (AppodealAdapter.usable()) {
                 rewardVideoFails.put(new AppodealRewardVideoProvider(), -1);
             }
-            rewardVideoFails.put(new GoogleRewardVideoAds(), -2);
+            if (!GamePreferences.uiLanguage().equals("ru")) {
+                rewardVideoFails.put(new GoogleRewardVideoAds(), -20);
+            }
         } catch (Exception e) {
             EventCollector.logException(e,"AdsUtils init rw");
         }
