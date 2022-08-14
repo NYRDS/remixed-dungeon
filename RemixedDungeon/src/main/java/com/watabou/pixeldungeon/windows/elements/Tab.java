@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.windows.elements;
 
 import com.nyrds.platform.audio.Sample;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
@@ -43,9 +44,9 @@ public class Tab extends Button {
 		bg = Chrome.get( selected ? 
 			Chrome.Type.TAB_SELECTED : 
 			Chrome.Type.TAB_UNSELECTED );
-		addToBack( bg );
-		
-		layout();
+        sendToBack(bg);
+
+        layout();
 	}
 	
 	@Override

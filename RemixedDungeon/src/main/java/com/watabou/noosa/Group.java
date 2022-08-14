@@ -95,16 +95,6 @@ public class Group extends Gizmo {
 		return g;
 	}
 
-	public void addToBack(Gizmo g) {
-
-		if (g.getParent() == this) {
-			sendToBack(g);
-		}
-
-		members.add(0, g);
-		g.setParent(this);
-	}
-
 	@SneakyThrows
 	public Gizmo recycle(@NotNull Class<? extends Gizmo> c) {
 
@@ -166,17 +156,15 @@ public class Group extends Gizmo {
 	}
 
 	public void bringToFront(Gizmo g) {
-		if (members.contains(g)) {
-			members.remove(g);
-			members.add(g);
-		}
+		members.remove(g);
+		members.add(g);
+		g.setParent(this);
 	}
 
-	private void sendToBack(Gizmo g) {
-		if (members.contains(g)) {
-			members.remove(g);
-			members.add(0, g);
-		}
+	public void sendToBack(Gizmo g) {
+		members.remove(g);
+		members.add(0, g);
+		g.setParent(this);
 	}
 
 	public int getLength() {

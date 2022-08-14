@@ -24,6 +24,7 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.gltextures.Gradient;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.Visual;
 import com.watabou.utils.SystemTime;
@@ -136,9 +137,9 @@ public class Flare extends Visual {
 	@LuaInterface
 	public Flare show( Visual visual, float duration ) {
 		point( visual.center() );
-		visual.getParent().addToBack( this );
+        visual.getParent().sendToBack(this);
 
-		lifespan = this.duration = duration;
+        lifespan = this.duration = duration;
 		
 		return this;
 	}

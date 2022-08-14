@@ -29,6 +29,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Assets;
@@ -140,7 +141,7 @@ public class TitleScene extends PixelScene {
 
 		Archs archs = new Archs();
 		archs.setSize(w, h);
-		addToBack(archs);
+		sendToBack(archs);
 
 		Text version = Text.createBasicText(Game.version, font1x);
 		version.hardlight(0x888888);
