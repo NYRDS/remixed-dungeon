@@ -122,6 +122,8 @@ return itemLib.init{
 
         local owner = item:getOwner()
 
+        RPD.affectBuff(owner, RPD.Buffs.Blindness, 100)
+
         RPD.glog("execute owner: %s", tostring(owner))
 
         if action == "action1" then
