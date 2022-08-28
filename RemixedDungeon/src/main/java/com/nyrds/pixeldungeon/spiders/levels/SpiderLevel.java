@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.spiders.levels;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderSpawner;
 import com.nyrds.platform.util.StringsManager;
@@ -148,15 +149,22 @@ public class SpiderLevel extends CommonLevel {
 
 		Chamber ent = chambers.get(0);
 		entrance = cell(ent.x, ent.y);
+		removeLosFromCell(cell(ent.x,ent.y));
+
 		map[entrance] = Terrain.ENTRANCE;
 
 
 		Chamber ext = chambers.get(chambers.size() - 1);
 		setExit(cell(ext.x, ext.y), 0);
+
+		int exit = getExit(0);
+
+		removeLosFromCell(exit);
+
 		if (Dungeon.depth != 10){
-			map[getExit(0)] = Terrain.EXIT;
+			map[exit] = Terrain.EXIT;
 		} else{
-			map[getExit(0)] = Terrain.LOCKED_EXIT;
+			map[exit] = Terrain.LOCKED_EXIT;
 		}
 
 		setFeeling(Feeling.NONE);
