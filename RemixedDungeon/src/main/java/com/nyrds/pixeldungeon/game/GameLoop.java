@@ -96,8 +96,8 @@ public class GameLoop {
     }
 
     public static void setNeedSceneRestart() {
-        if (!(instance().scene instanceof InterlevelScene)) {
-            instance().requestedReset = true;
+            if (!(instance().scene instanceof InterlevelScene)) {
+                instance().requestedReset = true;
         }
     }
 
@@ -191,10 +191,10 @@ public class GameLoop {
 
                 if (!Game.softPaused && loadingOrSaving.get() == 0) {
                     try {
-                        if (requestedReset) {
-                            requestedReset = false;
-                            switchScene(sceneClass.newInstance());
-                            return;
+                            if (requestedReset) {
+                                requestedReset = false;
+                                switchScene(sceneClass.newInstance());
+                                return;
                         }
 
                         while (!motionEvents.isEmpty()) {
@@ -232,8 +232,9 @@ public class GameLoop {
     public void step() {
         synchronized (stepLock) {
             elapsed = timeScale * step * 0.001f;
-
-            scene.update();
+            if (scene != null) {
+                scene.update();
+            }
             Camera.updateAll();
         }
     }

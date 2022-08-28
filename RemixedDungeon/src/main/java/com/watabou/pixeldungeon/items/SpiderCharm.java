@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.rings.UsableArtifact;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Sungrass.Health;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -35,14 +36,15 @@ public class SpiderCharm extends UsableArtifact {
 			Wound.hit(ch);
 			ch.damage(ch.ht()/4, this);
 			Buff.detach(ch, Health.class);
+			Level level = ch.level();
+
+			int spawnPos = level.getEmptyCellNextTo(ch.getPos());
 			
-			int spawnPos = Dungeon.level.getEmptyCellNextTo(ch.getPos());
-			
-			if (Dungeon.level.cellValid(spawnPos)) {
+			if (level.cellValid(spawnPos)) {
 				Mob pet = Mob.makePet(new SpiderServant(), ch.getId());
 				pet.setPos(spawnPos);
 				
-				Dungeon.level.spawnMob(pet );
+				level.spawnMob(pet );
 				Actor.addDelayed( new Pushing( pet, ch.getPos(), pet.getPos() ), -1 );
 			}
 			return;
