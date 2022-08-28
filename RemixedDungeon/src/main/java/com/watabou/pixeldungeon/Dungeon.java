@@ -803,6 +803,7 @@ public class Dungeon {
     }
 
     private static void markActorsAsUnpassable(Char ch, boolean[] visible) {
+        int chPos = ch.getPos();
         for (Char actor : Actor.chars.values()) {
             int pos = actor.getPos();
 
@@ -811,7 +812,7 @@ public class Dungeon {
                 return;
             }
 
-            if (visible[pos]) {
+            if (visible[pos] || level.adjacent(pos, chPos)) {
                 if (actor instanceof Mob) {
                     passable[pos] = passable[pos] && !level.avoid[pos] && actor.getOwnerId() == ch.getId();
                 }
