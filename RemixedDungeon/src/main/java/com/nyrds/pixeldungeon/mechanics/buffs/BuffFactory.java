@@ -69,6 +69,10 @@ public class BuffFactory {
     public static final String EVASION = RingOfEvasion.Evasion.class.getSimpleName();
     public static final String STONE_WALKING = RingOfStoneWalking.StoneWalking.class.getSimpleName();
     public static final String ACCURACY = RingOfAccuracy.Accuracy.class.getSimpleName();
+    public static final String SHADOWS = Shadows.class.getSimpleName();
+    public static final String BLINDNESS = Blindness.class.getSimpleName();
+    public static final String MIND_VISION = MindVision.class.getSimpleName();
+    public static final String AWARENESS = Awareness.class.getSimpleName();
 
 
     static {
