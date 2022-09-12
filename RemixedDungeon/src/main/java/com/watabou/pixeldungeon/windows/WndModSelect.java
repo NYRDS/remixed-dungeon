@@ -74,7 +74,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 
 			String option = desc.name;
 			if (desc.needUpdate && haveInternet) {
-				option = "Update " + option;
+				option = (desc.installed ? "Update " : "Install ") + option;
 			}
 
 			if (desc.installed || haveInternet) {
