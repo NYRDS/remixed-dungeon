@@ -49,6 +49,10 @@ import lombok.var;
 
 public class WndBag extends WndTabbed {
 
+	private final int panelWidth;
+	private final Text txtTitle;
+	private Text txtSubTitle;
+
 	public static WndBag getInstance() {
 		return instance;
 	}
@@ -134,10 +138,10 @@ public class WndBag extends WndTabbed {
 		}
 
 		lastBag = bag;
-		
-		int panelWidth = SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1);
-		
-		Text txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), GuiProperties.titleFontSize());
+
+		panelWidth = SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1);
+
+		txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), GuiProperties.titleFontSize());
 		txtTitle.maxWidth(panelWidth);
 		txtTitle.hardlight( TITLE_COLOR );
 		txtTitle.setX(PixelScene.align((panelWidth - txtTitle.width()) / 2));
@@ -147,25 +151,10 @@ public class WndBag extends WndTabbed {
 		txtTitle.setY(0);
 		add( txtTitle );
 
-		titleBottom = txtTitle.bottom();
-
-		if(mode==Mode.FOR_BUY) {
-			Text txtSubTitle = PixelScene.createMultiline( Utils.format(R.string.WndBag_BuySubtitle, Dungeon.hero.gold()) , GuiProperties.titleFontSize());
-			txtSubTitle.maxWidth(panelWidth);
-			txtSubTitle.hardlight( TITLE_COLOR );
-			txtSubTitle.setX(PixelScene.align((panelWidth - txtSubTitle.width()) / 2));
-			if(txtSubTitle.getX() <0) {
-				txtSubTitle.setX(0);
-			}
-			txtSubTitle.setY(titleBottom);
-			add( txtSubTitle );
-			titleBottom = txtSubTitle.bottom();
-		}
-
 		placeItems( bag );
 		
 		resize( 
-			panelWidth, 
+			panelWidth,
 			(int) (SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + titleBottom + SLOT_MARGIN) );
 
 		if(stuff.getOwner() instanceof Hero) {
@@ -271,7 +260,24 @@ public class WndBag extends WndTabbed {
 	}
 
 	private void placeItems(Bag container) {
-		
+		titleBottom = txtTitle.bottom();
+
+		if(mode==Mode.FOR_BUY) {
+			if(txtSubTitle != null) {
+				txtSubTitle.killAndErase();
+			}
+			txtSubTitle = PixelScene.createMultiline( Utils.format(R.string.WndBag_BuySubtitle, Dungeon.hero.gold()) , GuiProperties.titleFontSize());
+			txtSubTitle.maxWidth(panelWidth);
+			txtSubTitle.hardlight( TITLE_COLOR );
+			txtSubTitle.setX(PixelScene.align((panelWidth - txtSubTitle.width()) / 2));
+			if(txtSubTitle.getX() <0) {
+				txtSubTitle.setX(0);
+			}
+			txtSubTitle.setY(titleBottom);
+			add( txtSubTitle );
+			titleBottom = txtSubTitle.bottom();
+		}
+
 		// Equipped items
 		if(stuff.getOwner() instanceof Hero) {
 			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.WEAPON),   Belongings.Slot.WEAPON,    ItemPlaceholder.RIGHT_HAND);
