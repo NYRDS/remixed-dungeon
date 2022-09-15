@@ -29,6 +29,7 @@ return buff.init{
 
     charAct = function(self,buff)
         self.data.counter = (self.data.counter or 0) + 1
+        print(self.data.counter)
         RPD.debug("counter: %d", self.data.counter)
         storage.gamePut("CounterBuffTest", self.data.counter)
         storage.put("CounterBuffTest", self.data.counter)
