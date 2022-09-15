@@ -63,10 +63,10 @@ public class LuaEngine implements ResourceFinder {
     public static final String    LUA_DATA = "luaData";
 	public static final LuaTable  emptyTable = new LuaTable();
 
-    static private      LuaEngine engine              = new LuaEngine();
+	static private      LuaEngine engine              = new LuaEngine();
 
-    public static Map<String, LuaTable> modules = new HashMap<>();
-    public static Map<LuaScript, LuaTable> moduleInstance = new HashMap<>();
+    private final Map<String, LuaTable> modules = new HashMap<>();
+    private final Map<LuaScript, LuaTable> moduleInstance = new HashMap<>();
 
     private final LuaValue stp;
 
@@ -75,21 +75,21 @@ public class LuaEngine implements ResourceFinder {
 	@Synchronized
 	public static void reset() {
 		engine = new LuaEngine();
-		modules.clear();
-		moduleInstance.clear();
 	}
 
-	public LuaValue call(String method) {
-		return globals.get(method).call();
+	static public LuaValue call(String method) {
+		return getEngine().globals.get(method).call();
 	}
 
-	public LuaValue call(String method, Object arg1) {
+	private LuaValue call(String method, Object arg1) {
 		LuaValue methodForData = globals.get(method);
 		return methodForData.call(CoerceJavaToLua.coerce(arg1));
 	}
 
 	@Synchronized
-	public static LuaTable moduleInstance(LuaScript script, String module) {
+	static public LuaTable moduleInstance(LuaScript script, String module) {
+
+		var moduleInstance = getEngine().moduleInstance;
 		if(moduleInstance.containsKey(script)) {
 			return moduleInstance.get(script);
 		}
@@ -112,7 +112,7 @@ public class LuaEngine implements ResourceFinder {
 	}
 
 	@Synchronized
-	public static LuaEngine getEngine() {
+	private static LuaEngine getEngine() {
 		return engine;
 	}
 
@@ -144,6 +144,8 @@ public class LuaEngine implements ResourceFinder {
 
 	@Synchronized
 	static public LuaTable require(String module) {
+		var modules = getEngine().modules;
+
 		if(modules.containsKey(module)) {
 			return modules.get(module);
 		}
@@ -158,8 +160,8 @@ public class LuaEngine implements ResourceFinder {
 		throw new RuntimeException("failed to load lua module: "+ module);
 	}
 
-	public void runScriptFile(@NotNull String fileName) {
-		globals.loadfile(fileName).call();
+	static public void runScriptFile(@NotNull String fileName) {
+		getEngine().globals.loadfile(fileName).call();
 	}
 
 	@Override

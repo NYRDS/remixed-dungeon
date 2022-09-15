@@ -3,6 +3,7 @@ package com.nyrds.platform.lua;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import org.luaj.vm2.lib.jse.LuajavaLib;
 
@@ -31,7 +32,7 @@ public class PlatformLuajavaLib extends LuajavaLib {
 	}
 
 	@Override
-	protected Class classForName(String name) {
+	protected Class<?> classForName(String name) {
 		ClassLoader classLoader = RemixedDungeonApp.getContext().getClassLoader();
 
 		String actualClassName = name;
@@ -41,7 +42,7 @@ public class PlatformLuajavaLib extends LuajavaLib {
 		}
 
 		try {
-			Class clazz = Class.forName(actualClassName, true, classLoader);
+			Class<?> clazz = Class.forName(actualClassName, true, classLoader);
 			return clazz;
 		} catch (ClassNotFoundException e) {
 			ModError.doReport("Failed to load class ["+classLoader.toString() + "] in mod "+ ModdingMode.activeMod(), e);

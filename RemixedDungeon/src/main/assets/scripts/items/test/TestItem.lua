@@ -6,8 +6,9 @@
 --
 
 local RPD = require "scripts/lib/commonClasses"
-
+local storage = require "scripts/lib/storage"
 local itemLib = require "scripts/lib/item"
+
 
 local candle =
 {
@@ -130,6 +131,8 @@ return itemLib.init{
 
             local ads = require("scripts/lib/ads")
 
+            storage.gamePut("action1", true)
+            storage.put("action1", true)
 
             --[[
             if ads.rewardVideoReady() then

@@ -3,6 +3,7 @@
 local RPD  = require "scripts/lib/commonClasses"
 
 local buff = require "scripts/lib/buff"
+local storage = require "scripts/lib/storage"
 
 return buff.init{
     desc  = function ()
@@ -28,6 +29,9 @@ return buff.init{
 
     charAct = function(self,buff)
         self.data.counter = (self.data.counter or 0) + 1
+        RPD.debug("counter: %d", self.data.counter)
+        storage.gamePut("CounterBuffTest", self.data.counter)
+        storage.put("CounterBuffTest", self.data.counter)
         buff.target:getSprite():showStatus( 0xFF00FF, tostring(self.data.counter))
     end
 }
