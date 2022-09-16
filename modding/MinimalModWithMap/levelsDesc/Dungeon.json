@@ -1,0 +1,12 @@
+{
+   "Levels":{
+      "0":{"kind":"SewerLevel", "depth":0, "size":[0,0]},
+      "testLevel":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/ScriptsArena.json", "objectsKind":7, "tiles": "tilesets/tiles_metropolis_xyz.png"}
+   },
+
+   "Graph":{
+    "0":[["testLevel"],[]],
+    "testLevel":[[],[]]
+   },
+   "Entrance":"0"
+}
