@@ -22,7 +22,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.gl.NoosaScript;
 import com.nyrds.platform.input.Touchscreen.Touch;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.gltextures.Gradient;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
@@ -89,7 +88,7 @@ public class SurfaceScene extends PixelScene {
 		boolean dayTime = !Dungeon.nightMode;
 		
 		Sky sky = new Sky( dayTime );
-		sky.setScale( WIDTH, HEIGHT );
+		sky.setScaleXY( WIDTH, HEIGHT );
 		window.add( sky );
 		
 		if (!dayTime) {

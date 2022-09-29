@@ -20,23 +20,11 @@ public class CommonActions {
     public static final String AC_DRINK = "Potion_ACDrink";
 
     public static boolean hideBagOnAction(String action) {
-        if (AC_READ.equals(action)) {
-            return false;
-        }
-
-        if (AC_EAT.equals(action)) {
-            return false;
-        }
-
         if (AC_EQUIP.equals(action)) {
             return false;
         }
 
         if (AC_UNEQUIP.equals(action)) {
-            return false;
-        }
-
-        if (AC_DRINK.equals(action)) {
             return false;
         }
 

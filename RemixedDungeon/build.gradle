@@ -34,11 +34,11 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1129
-        versionName "31.1.fix.4"
-        targetSdkVersion 31
-        minSdkVersion 16
-        compileSdkVersion = 31
+        versionCode 1143
+        versionName "31.1.fix.18"
+        targetSdkVersion 32
+        minSdkVersion 19
+        compileSdkVersion = 32
 
         // Enabling multidex support.
         multiDexEnabled true
@@ -149,7 +149,6 @@ dependencies {
     implementation ('com.appodeal.ads:sdk:2.11.1.+') {
         exclude group: 'com.appodeal.ads.sdk.networks', module: 'admob'
         exclude group: 'com.appodeal.ads.sdk.networks', module: 'facebook'
-        exclude group: 'com.appodeal.ads.sdk.networks', module: 'yandex'
     }
 
     implementation 'org.jetbrains:annotations:23.0.0'
@@ -157,15 +156,15 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
     compileOnly 'org.projectlombok:lombok:1.18.22'
 
-    googlePlayImplementation 'com.google.android.gms:play-services-base:18.0.1'
+    googlePlayImplementation 'com.google.android.gms:play-services-base:18.1.0'
     googlePlayImplementation 'com.google.android.gms:play-services-auth:20.2.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:22.0.1"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:20.6.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:21.1.0'
 
 
     googlePlayImplementation 'com.android.billingclient:billing:4.1.0'
 
-    googlePlayImplementation platform('com.google.firebase:firebase-bom:28.4.2')
+    googlePlayImplementation platform('com.google.firebase:firebase-bom:30.3.0')
 
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'

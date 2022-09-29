@@ -34,8 +34,6 @@ interlevelScene.onStep = function(mode, done)
         return false
     end
 
-    RPD.debug("%s %s %s %s", mode, tostring(done), tostring(RPD.Dungeon.levelId), tostring(RPD.Dungeon.previousLevelId))
-
     if not wnd then
         if RPD.ModdingMode:inRemixed() then
             if RPD.Dungeon.previousLevelId == '10s' and RPD.Badges:isUnlockedInThisGame(RPD.Badges.Badge.SPIDER_QUEEN_SLAIN) then

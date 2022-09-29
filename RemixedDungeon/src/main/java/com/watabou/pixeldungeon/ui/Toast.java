@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 
 import org.jetbrains.annotations.Nullable;
 
-public class Toast extends Component {
+public class Toast extends Component implements IWindow {
 
 	private static final float MARGIN_HOR	= 4;
 	private static final float MARGIN_VER	= 4;

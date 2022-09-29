@@ -317,7 +317,6 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		copyOfAll = all.toArray(new Actor[0]);
 
 
-
 		for (Actor actor : copyOfAll) {
 
 			boolean busy = false;

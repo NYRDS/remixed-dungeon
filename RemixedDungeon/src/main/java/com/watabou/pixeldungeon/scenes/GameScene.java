@@ -64,6 +64,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.BannerSprites;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.EmoIcon;
@@ -106,8 +107,6 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashSet;
 
 import lombok.var;
@@ -144,6 +143,7 @@ public class GameScene extends PixelScene {
     private Group effects;
     private Group gases;
     private Group spells;
+    private Group topMobs;
     private Group statuses;
     private Group emoicons;
 
@@ -282,6 +282,8 @@ public class GameScene extends PixelScene {
         emoicons = new Group();
 
         mobs = new Group();
+        topMobs = new Group();  // mobs that are drawn on top of walls
+
         add(mobs);
 
         // hack to save bugged saves...
@@ -333,6 +335,8 @@ public class GameScene extends PixelScene {
         if(roofTiles!=null) {
             add(roofTiles);
         }
+
+        add(topMobs);
 
         fog.updateVisibility(Dungeon.visible, level.visited, level.mapped, false);
         add(fog);
@@ -446,6 +450,10 @@ public class GameScene extends PixelScene {
             lo.addedToScene();
         }
 
+        for(var mob: level.getCopyOfMobsArray()) {
+            mob.onSpawn(level);
+        }
+
         mapBuildingComplete = true; // Epic level gen compatibility speedup
         updateMap();
 
@@ -467,9 +475,7 @@ public class GameScene extends PixelScene {
             if(realtime) {
                 msg += StringsManager.getVar(R.string.WrnExperimental_realtime);
             } else {
-                if (moveTimeout < Double.POSITIVE_INFINITY) {
-                    msg += Utils.format(R.string.WrnExperimental_moveTimeout, (int)moveTimeout);
-                }
+                msg += Utils.format(R.string.WrnExperimental_moveTimeout, (int)moveTimeout);
             }
 
             msg += "\n\n";
@@ -523,11 +529,13 @@ public class GameScene extends PixelScene {
     }
 
     @Override
-    public synchronized void pause() {
-        if(!GameLoop.softPaused) {
-            final Hero hero = Dungeon.hero;
-            if(hero != null && hero.isAlive()) {
-                Dungeon.save(false);
+    public void pause() {
+        synchronized (GameLoop.stepLock) {
+            if (!GameLoop.softPaused) {
+                final Hero hero = Dungeon.hero;
+                if (hero != null && hero.isAlive()) {
+                    Dungeon.save(false);
+                }
             }
         }
     }
@@ -539,7 +547,7 @@ public class GameScene extends PixelScene {
     }
 
     @Override
-    public synchronized void update() {
+    public void update() {
         if (!sceneCreated) {
             return;
         }
@@ -560,6 +568,7 @@ public class GameScene extends PixelScene {
 
         if(objectSortingRequested) {
             objects.sort();
+            objectSortingRequested = false;
         }
         super.update();
 
@@ -658,12 +667,7 @@ public class GameScene extends PixelScene {
         }
 
         if (text != null) {
-            prompt = new Toast(text, icon) {
-                @Override
-                protected void onClose() {
-                    cancel();
-                }
-            };
+            prompt = new CellSelectorToast(text, icon);
             prompt.camera = uiCamera;
             prompt.setPos((uiCamera.width - prompt.width()) / 2, uiCamera.height - 60);
             add(prompt);
@@ -839,7 +843,7 @@ public class GameScene extends PixelScene {
     public static void show(Window wnd) {
         cancelCellSelector();
         if (isSceneReady() && scene.sceneCreated) {
-            scene.add(wnd);
+            GameLoop.pushUiTask(()-> scene.add(wnd));
         }
     }
 
@@ -1001,9 +1005,13 @@ public class GameScene extends PixelScene {
         InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
     }
 
-    public static void addMobSpriteDirect(CharSprite sprite) {
+    public static void addMobSpriteDirect(Char chr,CharSprite sprite) {
         if (isSceneReady()) {
-            scene.mobs.add(sprite);
+            if(chr.getWalkingType() == WalkingType.WALL || chr.getWalkingType() == WalkingType.ABSOLUTE) {
+                scene.topMobs.add(sprite);
+            } else {
+                scene.mobs.add(sprite);
+            }
         }
     }
 

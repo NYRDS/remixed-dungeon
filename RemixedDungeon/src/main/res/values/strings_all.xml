@@ -1240,7 +1240,7 @@
   <string name="Goo_Name">Goo</string>
   <string name="Goo_Gender">feminine</string>
   <string name="Goo_Name_Objective">Goo</string>
-  <string name="Goo_Desc">Little is known about The Goo. It\'s quite possible that it is not even a creature, but rather a conglomerate of substances from the sewers that gained rudiments of free will. Either way, it\'s obvious dark magic is at work here. </string>
+  <string name="Goo_Desc">Little is known about The Goo. It\'s quite possible that it is not even a creature, but rather a conglomerate of substances from the sewers that gained rudiments of free will. Either way, it\'s obvious dark magic is at work here.</string>
   <string name="Goo_Info1">Goo is pumping itself up!</string>
   <string name="Goo_Info2">glurp... glurp...</string>
   <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -1660,10 +1660,10 @@
   <string name="ServiceManNPC_Desc">A regular worker of the local establishments.</string>
   <string name="TownShopkeeper_Name">shopkeeper</string>
   <string name="TownShopkeeper_Desc">This guy is a typical shopkeeper. You can tell he already knows your price.</string>
-  <string name="WndMovieTheatre_Watch">watch a movie</string>
+  <string name="WndMovieTheatre_Watch">watch an Ad</string>
   <string name="WndMovieTheatre_No">leave</string>
   <string name="WndMovieTheatre_Bye">Come back any time, we are always happy to see you!</string>
-  <string name="WndMovieTheatre_Instruction">Greetings and welcome to our movie theater! We provide a special service, where you can watch a movie for free. And if you watch through all of it, you will be rewarded with %d gold coins!</string>
+  <string name="WndMovieTheatre_Instruction">Greetings and welcome to our movie theater! We provide a special service, where you can watch a special movie called ad for free. And if you watch through all of it, you will be rewarded with %d gold coins!</string>
   <string name="WndMovieTheatre_Title">Movie Theatre</string>
   <string name="WndMovieTheatre_Thank_You">Thank you for your participation!</string>
   <string name="WndPriest_Heal">heal - %d gold</string>

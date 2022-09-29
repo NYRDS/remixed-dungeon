@@ -27,8 +27,8 @@ public class LevelTools {
             level.set(level.entrance, Terrain.EMPTY_DECO);
             level.set(level.getExit(0), Terrain.EMPTY_DECO);
         }
-        level.entrance = level.INVALID_CELL;
-        level.setExit(level.INVALID_CELL, 0);
+        level.entrance = Level.INVALID_CELL;
+        level.setExit(Level.INVALID_CELL, 0);
 
         int im = (int) (Math.floor((float) (w) / roomStep) * roomStep + 2);
         int jm = (int) (Math.floor((float) (h) / roomStep) * roomStep + 2);
@@ -287,6 +287,7 @@ public class LevelTools {
                     break;
             }
         }
+        level.buildFlagMaps();
     }
 
     public static void northWallDecorate(Level level, int floorDecoRate, int wallDecoRate) {

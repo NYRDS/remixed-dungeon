@@ -56,6 +56,6 @@ public class ShaftParticle extends PixelParticle {
 		
 		float p = left / lifespan;
 		am = p < 0.5f ? p : 1 - p;
-		setScale( (1 - p) * 4, 16 + (1 - p) * 16);
+		setScaleXY( (1 - p) * 4, 16 + (1 - p) * 16);
 	}
 }

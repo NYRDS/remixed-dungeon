@@ -280,7 +280,7 @@ public class SystemText extends Text {
 						cacheHits++;
 					}
 
-					GLog.debug("text cache hits %d miss: %d size %d", cacheHits, cacheMiss, bitmapCache.size());
+					//GLog.debug("text cache hits %d miss: %d size %d", cacheHits, cacheMiss, bitmapCache.size());
 
 					SystemTextLine line = new SystemTextLine(bitmapCache.get(key));
 					line.setVisible(getVisible());
@@ -388,7 +388,7 @@ public class SystemText extends Text {
 				img.aa = aa;
 
 				img.setPos(PixelScene.align(PixelScene.uiCamera, getX()), PixelScene.align(PixelScene.uiCamera, getY() + (line * fontHeight) * scale.y));
-				img.setScale(scale.x / oversample, scale.x / oversample);
+				img.setScaleXY(scale.x / oversample, scale.x / oversample);
 
 				line++;
 			}

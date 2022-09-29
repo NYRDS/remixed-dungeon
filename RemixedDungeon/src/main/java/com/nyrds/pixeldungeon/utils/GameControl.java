@@ -27,11 +27,16 @@ public class GameControl {
 
     @LuaInterface
     static public void startNewGame(String className, int difficulty, boolean testMode) {
+
         GameLoop.setDifficulty(difficulty);
 
         Dungeon.hero = null;
         Dungeon.level = null;
         Dungeon.heroClass = HeroClass.valueOf(className);
+
+        Dungeon.deleteGame(true);
+        Logbook.logbookEntries.clear();    // Clear the log book before starting a new game
+        ServiceManNPC.resetLimit();
 
         if(Util.isDebug()) {
             Hero.performTests();
@@ -52,8 +57,6 @@ public class GameControl {
 
         EventCollector.logEvent("game", resDesc);
 
-        Logbook.logbookEntries.clear();    // Clear the log book before starting a new game
-        ServiceManNPC.resetLimit();
 
         if (GamePreferences.intro()) {
             GamePreferences.intro(false);

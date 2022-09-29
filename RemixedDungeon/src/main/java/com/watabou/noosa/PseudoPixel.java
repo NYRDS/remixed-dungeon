@@ -35,7 +35,7 @@ public class PseudoPixel extends Image {
 	}
 	
 	public void size( float w, float h ) {
-		setScale( w, h );
+		setScaleXY( w, h );
 	}
 	
 	public void size( float value ) {

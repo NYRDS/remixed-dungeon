@@ -42,7 +42,7 @@ public class WndGameplayCustomization extends Window {
         title.setX(PixelScene.align( camera, (WIDTH - title.width()) / 2 ));
         add( title );
 
-        resize(WndHelper.getLimitedWidth(WIDTH), WndHelper.getFullscreenHeight() - WINDOW_MARGIN*4);
+        resize(WndHelper.getLimitedWidth(WIDTH), WndHelper.getAlmostFullscreenHeight());
 
         var customizationsSet = new VHBox(WndHelper.getLimitedWidth(WIDTH) - chrome.marginHor());
         customizationsSet.setAlign(HBox.Align.Width);

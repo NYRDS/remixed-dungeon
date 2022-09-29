@@ -31,10 +31,6 @@ public class Regeneration extends Buff {
     @Override
     public boolean act() {
         if (target.isAlive()) {
-            if (!target.isStarving() && !target.level().isSafe()) {
-                target.heal(1,this);
-            }
-
             final int[] bonus = {0};
 
             if(Dungeon.isFacilitated(Facilitations.FAST_REGENERATION) && target instanceof Hero) {
@@ -43,7 +39,20 @@ public class Regeneration extends Buff {
 
             target.forEachBuff(b-> bonus[0] +=b.regenerationBonus());
 
-            spend((float) (REGENERATION_DELAY / Math.pow(1.2, bonus[0])));
+            int healPoints = 1;
+            float healRate = (float) Math.pow(1.2, bonus[0]);
+
+            if(healRate > REGENERATION_DELAY * 5) {
+                healPoints += (int) (healRate / 5);
+                healRate = REGENERATION_DELAY * 5;
+            }
+
+            if (!target.isStarving() && !target.level().isSafe()) {
+                target.heal(healPoints,this);
+            }
+
+
+            spend(REGENERATION_DELAY / healRate);
         } else {
             deactivateActor();
         }

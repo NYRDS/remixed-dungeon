@@ -96,15 +96,15 @@ public class ItemSlot extends Button {
         add(emitter);
 
         topLeft = new BitmapText(PixelScene.font1x);
-        topLeft.setScale(0.8f, 0.8f);
+        topLeft.setScaleXY(0.8f, 0.8f);
         add(topLeft);
 
         topRight = new BitmapText(PixelScene.font1x);
-        topRight.setScale(0.8f, 0.8f);
+        topRight.setScaleXY(0.8f, 0.8f);
         add(topRight);
 
         bottomRight = new BitmapText(PixelScene.font1x);
-        bottomRight.setScale(0.8f, 0.8f);
+        bottomRight.setScaleXY(0.8f, 0.8f);
         add(bottomRight);
     }
 

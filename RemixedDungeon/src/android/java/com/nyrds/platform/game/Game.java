@@ -205,8 +205,10 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         paused = true;
         view.onPause();
 
-        if (gameLoop.scene != null) { // view.onPause will wait for gl thread, so it safe to access scene here
-            gameLoop.scene.pause();
+        synchronized (GameLoop.stepLock) {
+            if (gameLoop.scene != null) { // view.onPause will wait for gl thread, so it safe to access scene here
+                gameLoop.scene.pause();
+            }
         }
 
         Music.INSTANCE.pause();
@@ -218,11 +220,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @Override
     public void onDestroy() {
         super.onDestroy();
-
-        if (gameLoop.scene != null) { // view.onPause will wait for gl thread, so it safe to access scene here
-            gameLoop.scene.destroy();
-            gameLoop.scene = null;
-        }
 
         Music.INSTANCE.mute();
         Sample.INSTANCE.reset();

@@ -153,7 +153,7 @@ public class InterlevelScene extends PixelScene {
         timeLeft = TIME_TO_FADE;
 
         levelChanger = new FutureTask<>(new LevelChanger(), true);
-        GameLoop.execute(levelChanger);
+        GameLoop.stepExecute(levelChanger);
     }
 
     @Override
@@ -309,15 +309,28 @@ public class InterlevelScene extends PixelScene {
 
             EventCollector.logException(cause, "enter rescue mode");
 
-            if(SaveUtils.slotUsed(SaveUtils.getPrevSave(), Dungeon.heroClass)) {
-                SaveUtils.loadGame(SaveUtils.getPrevSave(), Dungeon.heroClass);
-            } else {
-                GameLoop.switchScene(TitleScene.class);
-            }
+            if (tryLoadFromSlot(SaveUtils.getAutoSave())) return;
+            if (tryLoadFromSlot(SaveUtils.getPrevSave())) return;
+
+
+            GameLoop.switchScene(TitleScene.class);
+
             return;
         }
         EventCollector.logException(cause,"rescue failed");
         error = Utils.format("Sorry, but something terrible happens with backup save for %s\n",Dungeon.heroClass.name());
+    }
+
+    private boolean tryLoadFromSlot(String slot) {
+        try {
+            if (SaveUtils.slotUsed(slot,Dungeon.heroClass)) {
+                SaveUtils.loadGame(slot,Dungeon.heroClass);
+                return true;
+            }
+        } catch (Exception e) {
+            EventCollector.logException(e, slot);
+        }
+        return false;
     }
 
 

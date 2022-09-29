@@ -410,7 +410,7 @@ public class Speck extends Image {
 
             case CHANGE:
                 am = (float) Math.sqrt((p < 0.5f ? p : 1 - p) * 2);
-                setScale( (1 + p) * 0.5f,
+                setScaleXY( (1 + p) * 0.5f,
                      (float) (scale.y * Math.cos(left * 15)));
                 break;
 

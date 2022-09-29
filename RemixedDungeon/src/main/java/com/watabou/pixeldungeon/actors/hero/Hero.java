@@ -40,6 +40,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Scrambler;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Gizmo;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Bones;
@@ -868,7 +869,7 @@ public class Hero extends Char {
 				if (Dungeon.isCellVisible(p)) {
 
 					if (intentional) {
-						getSprite().getParent().addToBack(new CheckedCell(p));
+						getSprite().getParent().sendToBack(new CheckedCell(p));
 					}
 
 					if (intentional || Random.Float() < searchLevel) {

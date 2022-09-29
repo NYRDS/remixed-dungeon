@@ -42,7 +42,8 @@ public class WaterSink extends Emitter {
             super.update();
 
             if ((rippleDelay -= GameLoop.elapsed) <= 0) {
-                GameScene.ripple(pos + Dungeon.level.getWidth()).setY(GameScene.ripple(pos + Dungeon.level.getWidth()).getY() - DungeonTilemap.SIZE / 2);
+                int width = Dungeon.level.getWidth();
+                GameScene.ripple(pos + width).setY(GameScene.ripple(pos + width).getY() - DungeonTilemap.SIZE / 2);
                 rippleDelay = Random.Float(0.2f, 0.3f);
             }
         }

@@ -34,6 +34,7 @@ import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
@@ -869,6 +870,13 @@ public abstract class Level implements Bundlable {
 
 	abstract protected boolean build();
 
+	protected void removeLosFromCell(int exit) {
+		LevelObject obj;
+		while((obj = getTopLevelObject(exit))!=null) {
+			remove(obj);
+		}
+	}
+
 	abstract protected void decorate();
 
 	abstract protected void createMobs();
@@ -927,9 +935,8 @@ public abstract class Level implements Bundlable {
 		Actor.addDelayed(mob, delay);
 		Actor.occupyCell(mob);
 
-		mob.onSpawn(this);
-
 		if (GameScene.isSceneReady()) {
+			mob.onSpawn(this);
 			if (mob.isPet() || fieldOfView[targetPos]) {
 				press(targetPos,mob);
 			}
@@ -1485,8 +1492,8 @@ public abstract class Level implements Bundlable {
 		int cx = cellX(c.getPos());
 		int cy = cellY(c.getPos());
 
-		int viewDistance = c.hasBuff(Shadows.class) ? 1 : c.getViewDistance();
-		boolean sighted = !c.hasBuff(Blindness.class) && c.isAlive();
+		int viewDistance = c.buffLevel(BuffFactory.SHADOWS) > 0 ? 1 : c.getViewDistance();
+		boolean sighted = !(c.buffLevel(BuffFactory.BLINDNESS) > 0) && c.isAlive();
 
 		if (sighted) {
 			ShadowCaster.castShadow(cx, cy, fieldOfView, viewDistance);
@@ -1494,7 +1501,7 @@ public abstract class Level implements Bundlable {
 			Arrays.fill(fieldOfView, false);
 		}
 
-		int sense = c.buffLevel(MindVision.class);
+		int sense = c.buffLevel(BuffFactory.MIND_VISION);
 
 		if (!sighted || sense > 1) {
 			int ax = Math.max(0, cx - sense);
@@ -1521,7 +1528,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		if (c.isAlive()) {
-			if (c.hasBuff(MindVision.class)) {
+			if (c.buffLevel(BuffFactory.MIND_VISION) > 0) {
 				for (Mob mob : mobs) {
 					updateFovForObjectAt(mob.getPos());
 				}
@@ -1533,7 +1540,7 @@ public abstract class Level implements Bundlable {
 					}
 				}
 			}
-			if (c.hasBuff(Awareness.class)) {
+			if (c.buffLevel(BuffFactory.AWARENESS)>0) {
 				for (Heap heap : heaps.values()) {
 					updateFovForObjectAt(heap.pos);
 				}

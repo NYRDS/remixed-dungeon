@@ -17,6 +17,10 @@ public class ArtifactBuff extends Buff {
         return super.act();
     }
 
+    public String getEntityKind() {
+        return "artifactBuff" + super.getEntityKind();
+    }
+
     @Override
     public boolean dontPack() {
         return getSourceId()!= EntityIdSource.INVALID_ID;

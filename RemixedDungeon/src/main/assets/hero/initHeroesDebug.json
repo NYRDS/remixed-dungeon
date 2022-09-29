@@ -22,7 +22,10 @@
         "kind": "ScrollOfUpgrade",
         "quantity": 1000
       },
-
+      {
+        "kind": "GnollTamahawk",
+        "identified": true
+      },
       {
         "kind": "PotionOfHealing",
         "identified": true,

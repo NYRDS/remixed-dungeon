@@ -48,13 +48,14 @@ public class Group extends Gizmo {
 		//members.removeIf(Objects::isNull); needs Android N
 		for (int i = 0; i < members.size(); i++) {
 			Gizmo g = members.get(i);
+
 /*
 			totalGizmo++;
 			if(g==null) {
 				nullGizmo++;
 			}
 */
-			if ( g!= null && g.exists && g.isActive()) {
+			if ( g!= null && g.alive && g.isActive()) {
 				g.update();
 			}
 		}
@@ -64,7 +65,7 @@ public class Group extends Gizmo {
 	public void draw() {
 		for (int i = 0; i < members.size(); i++) {
 			Gizmo g = members.get(i);
-			if (g != null && g.exists && g.getVisible()) {
+			if (g != null && g.alive && g.getVisible()) {
 				g.draw();
 			}
 		}
@@ -74,9 +75,9 @@ public class Group extends Gizmo {
 	public void kill() {
 		// A killed group keeps all its members,
 		// but they get killed too
-		for (int i = 0; i < getLength(); i++) {
+		for (int i = 0; i < members.size(); i++) {
 			Gizmo g = members.get(i);
-			if (g != null && g.exists) {
+			if (g != null && g.alive) {
 				g.kill();
 			}
 		}
@@ -93,16 +94,6 @@ public class Group extends Gizmo {
 		members.add(g);
 		g.setParent(this);
 		return g;
-	}
-
-	public void addToBack(Gizmo g) {
-
-		if (g.getParent() == this) {
-			sendToBack(g);
-		}
-
-		members.add(0, g);
-		g.setParent(this);
 	}
 
 	@SneakyThrows
@@ -133,9 +124,8 @@ public class Group extends Gizmo {
 
 	private Gizmo getFirstAvailable(@NotNull Class<? extends Gizmo> c) {
 
-		for (int i = 0; i < getLength(); i++) {
-			Gizmo g = members.get(i);
-			if (g != null && !g.exists && g.getClass() == c) {
+		for (Gizmo g: members) {
+			if (g != null && !g.alive && g.getClass() == c) {
 				return g;
 			}
 		}
@@ -147,9 +137,8 @@ public class Group extends Gizmo {
 
 		int count = 0;
 
-		for (int i = 0; i < getLength(); i++) {
-			Gizmo g = members.get(i);
-			if (g != null && g.exists && g.alive) {
+		for (Gizmo g: members) {
+			if (g != null && g.alive) {
 				count++;
 			}
 		}
@@ -168,17 +157,15 @@ public class Group extends Gizmo {
 	}
 
 	public void bringToFront(Gizmo g) {
-		if (members.contains(g)) {
-			members.remove(g);
-			members.add(g);
-		}
+		members.remove(g);
+		members.add(g);
+		g.setParent(this);
 	}
 
-	private void sendToBack(Gizmo g) {
-		if (members.contains(g)) {
-			members.remove(g);
-			members.add(0, g);
-		}
+	public void sendToBack(Gizmo g) {
+		members.remove(g);
+		members.add(0, g);
+		g.setParent(this);
 	}
 
 	public int getLength() {
@@ -196,7 +183,7 @@ public class Group extends Gizmo {
 
 	//Testing stuff
 
-	public int findByClass(@NotNull Class<? extends Gizmo> c, int offset) {
+	public int findByClass(@NotNull Class<? extends Object> c, int offset) {
 		for (int i = offset; i < getLength(); i++) {
 			Gizmo g = members.get(i);
 			if (c.isAssignableFrom(g.getClass())) {

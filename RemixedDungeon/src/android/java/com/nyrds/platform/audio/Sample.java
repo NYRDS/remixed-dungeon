@@ -24,9 +24,11 @@ import android.media.SoundPool;
 
 import androidx.annotation.NonNull;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ReportingExecutor;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -36,6 +38,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.Executor;
 
 public enum Sample implements SoundPool.OnLoadCompleteListener {
 
@@ -44,14 +47,14 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 	public static final int MAX_STREAMS = 8;
 	String playOnComplete;
 
-	protected SoundPool pool =
+	private SoundPool pool =
 			new SoundPool(MAX_STREAMS, AudioManager.STREAM_MUSIC, 0);
 
 	@NonNull
-	protected Set<String> missingAssets = new HashSet<>();
+	private final Set<String> missingAssets = new HashSet<>();
 
 	@NotNull
-	protected Map<String, Integer> ids =
+	private final Map<String, Integer> ids =
 			new HashMap<>();
 
 	private AssetManager manager;
@@ -115,27 +118,27 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 		return streamID;
 	}
 
-	public int play(String id) {
-		return play(id, 1, 1, 1);
+	public void play(String id) {
+		play(id, 1, 1, 1);
 	}
 
-	public int play(String id, float volume) {
-		return play(id, volume, volume, 1);
+	public void play(String id, float volume) {
+		play(id, volume, volume, 1);
 	}
 
-	public int play(String id, float leftVolume, float rightVolume, float rate) {
+	public void play(String id, float leftVolume, float rightVolume, float rate) {
 		if(!enabled) {
-			return -1;
+			return;
 		}
-
-		Integer sampleId = ids.get(id);
-		if (sampleId!=null) {
-			return pool.play(sampleId, leftVolume, rightVolume, 0, 0, rate);
-		} else {
-			playOnComplete = id;
-			load(id);
-			return -1;
-		}
+		GameLoop.instance().soundExecutor.execute(() -> {
+			Integer sampleId = ids.get(id);
+			if (sampleId != null) {
+				pool.play(sampleId, leftVolume, rightVolume, 0, 0, rate);
+			} else {
+				playOnComplete = id;
+				GameLoop.execute(() -> load(id));
+			}
+		});
 	}
 
 	public void enable(boolean value) {

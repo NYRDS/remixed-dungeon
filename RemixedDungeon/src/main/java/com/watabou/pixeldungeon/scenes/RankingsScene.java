@@ -26,6 +26,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Button;
@@ -261,7 +262,7 @@ public class RankingsScene extends PixelScene {
                 flare = new Flare(6, 24);
                 flare.angularSpeed = 90;
                 flare.color(rec.win ? FLARE_WIN : FLARE_LOSE);
-                addToBack(flare);
+                Record.this.sendToBack(flare);
             }
 
             position.text(Integer.toString(pos + 1));

@@ -6,8 +6,9 @@
 --
 
 local RPD = require "scripts/lib/commonClasses"
-
+local storage = require "scripts/lib/storage"
 local itemLib = require "scripts/lib/item"
+
 
 local candle =
 {
@@ -122,12 +123,16 @@ return itemLib.init{
 
         local owner = item:getOwner()
 
+        RPD.affectBuff(owner, RPD.Buffs.Blindness, 100)
+
         RPD.glog("execute owner: %s", tostring(owner))
 
         if action == "action1" then
 
             local ads = require("scripts/lib/ads")
 
+            storage.gamePut("action1", true)
+            storage.put("action1", true)
 
             --[[
             if ads.rewardVideoReady() then

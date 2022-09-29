@@ -29,6 +29,7 @@ import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Assets;
@@ -140,7 +141,7 @@ public class TitleScene extends PixelScene {
 
 		Archs archs = new Archs();
 		archs.setSize(w, h);
-		addToBack(archs);
+		sendToBack(archs);
 
 		Text version = Text.createBasicText(GameLoop.version, font1x);
 		version.hardlight(0x888888);
@@ -190,7 +191,7 @@ public class TitleScene extends PixelScene {
 
         Image img = new Image(Assets.DASHBOARD,DashboardItem.IMAGE_SIZE,1);
 
-        img.setScale(0.45f,0.45f);
+        img.setScaleXY(0.45f,0.45f);
         ImageButton btnAbout = new ImageButton(img){
 			@Override
 			protected void onClick() {

@@ -135,12 +135,12 @@ public class StatusPane extends Component {
 
         hpText = new BitmapText(PixelScene.font1x);
         hpText.hardlight(0x777777);
-        hpText.setScale(0.5f,0.5f);
+        hpText.setScaleXY(0.5f,0.5f);
         add(hpText);
 
         manaText = new BitmapText(PixelScene.font1x);
         manaText.hardlight(0xaaaaaa);
-        manaText.setScale(0.5f,0.5f);
+        manaText.setScaleXY(0.5f,0.5f);
         add(manaText);
 
         level = new BitmapText(PixelScene.font1x);
@@ -180,7 +180,7 @@ public class StatusPane extends Component {
         verText.text(String.valueOf(GameLoop.versionCode-10000));
         verText.hardlight(0xaaaaaa);
         verText.alpha(0.6f);
-        verText.setScale(0.5f,0.5f);
+        verText.setScaleXY(0.5f,0.5f);
         add(verText);
     }
 

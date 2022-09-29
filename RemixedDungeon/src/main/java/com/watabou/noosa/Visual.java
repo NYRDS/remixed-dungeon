@@ -35,7 +35,7 @@ public class Visual extends Gizmo implements IPlaceable{
 	public PointF scale;
 	public PointF origin;
 
-	public boolean dirtyMatrix = true;
+	public boolean dirtyMatrix;
 	
 	protected float[] matrix;
 	
@@ -59,11 +59,12 @@ public class Visual extends Gizmo implements IPlaceable{
 		this.setY(y);
 		this.setWidth(width);
 		this.setHeight(height);
-		
-		Scale(new PointF( 1, 1 ));
-		setOrigin(new PointF());
-		
+
+		scale = new PointF( 1, 1 );
+		origin = new PointF(0,0);
+
 		matrix = new float[16];
+		dirtyMatrix = true;
 		
 		resetColor();
 		
@@ -132,6 +133,10 @@ public class Visual extends Gizmo implements IPlaceable{
 	}
 	
 	protected void updateMotion() {
+		if(speed.x==0 && speed.y==0 && angularSpeed==0) {
+			return;
+		}
+
 		float elapsed = GameLoop.elapsed;
 		
 		float d = (GameMath.speed( speed.x, acc.x ) - speed.x) / 2;
@@ -146,9 +151,7 @@ public class Visual extends Gizmo implements IPlaceable{
 		
 		angle += angularSpeed * elapsed;
 
-		if(speed.x != 0 || speed.y != 0 || angularSpeed != 0) {
-			dirtyMatrix = true;
-		}
+		dirtyMatrix = true;
 	}
 	
 	public void alpha( float value ) {
@@ -337,7 +340,7 @@ public class Visual extends Gizmo implements IPlaceable{
 	}
 
 
-	public void setScale(float x, float y) {
+	public void setScaleXY(float x, float y) {
 		scale.x = x;
 		scale.y = y;
 		dirtyMatrix = true;

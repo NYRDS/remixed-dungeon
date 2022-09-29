@@ -7,6 +7,8 @@ import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.InterstitialPoint;
@@ -35,40 +37,44 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 	@MainThread
 	private void loadNextVideo() {
+		try {
+			FullScreenContentCallback fullScreenContentCallback =
+					new FullScreenContentCallback() {
+						@Override
+						public void onAdShowedFullScreenContent() {
+							rewardEarned = false;
+						}
 
-		FullScreenContentCallback fullScreenContentCallback =
-				new FullScreenContentCallback() {
-					@Override
-					public void onAdShowedFullScreenContent() {
-						rewardEarned = false;
-					}
+						@Override
+						public void onAdDismissedFullScreenContent() {
+							mCinemaRewardAd = null;
+							GLog.debug("reward state " + rewardEarned);
+							Game.runOnMainThread(GoogleRewardVideoAds.this::loadNextVideo);
+							returnTo.returnToWork(rewardEarned);
+							rewardEarned = false;
+						}
+					};
 
-					@Override
-					public void onAdDismissedFullScreenContent() {
-						mCinemaRewardAd = null;
-						GLog.debug("reward state "+ rewardEarned);
-						Game.runOnMainThread(GoogleRewardVideoAds.this::loadNextVideo);
-						returnTo.returnToWork(rewardEarned);
-						rewardEarned = false;
-					}
-				};
+			RewardedAd.load(Game.instance(),
+					ModdingMode.getRewardedVideoId(),
+					AdMob.makeAdRequest(),
+					new RewardedAdLoadCallback() {
+						@Override
+						public void onAdLoaded(@NotNull RewardedAd ad) {
+							mCinemaRewardAd = ad;
+							mCinemaRewardAd.setFullScreenContentCallback(fullScreenContentCallback);
+							AdsUtilsCommon.rewardVideoLoaded(GoogleRewardVideoAds.this);
+						}
 
-        RewardedAd.load(Game.instance(),
-				ModdingMode.getRewardedVideoId(),
-				AdMob.makeAdRequest(),
-				new RewardedAdLoadCallback() {
-					@Override
-					public void onAdLoaded(@NotNull RewardedAd ad) {
-						mCinemaRewardAd = ad;
-						mCinemaRewardAd.setFullScreenContentCallback(fullScreenContentCallback);
-						AdsUtilsCommon.rewardVideoLoaded(GoogleRewardVideoAds.this);
-					}
-
-					@Override
-					public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-						AdsUtilsCommon.rewardVideoFailed(GoogleRewardVideoAds.this);
-					}
-				});
+						@Override
+						public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+							AdsUtilsCommon.rewardVideoFailed(GoogleRewardVideoAds.this);
+						}
+					});
+		} catch (Exception e) {
+			AdsUtilsCommon.rewardVideoFailed(GoogleRewardVideoAds.this);
+			EventCollector.logException(e, "GoogleRewardVideoAds");
+		}
 	}
 
 	@MainThread

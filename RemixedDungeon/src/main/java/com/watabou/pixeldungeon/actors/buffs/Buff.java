@@ -50,7 +50,7 @@ import java.util.Set;
 import lombok.SneakyThrows;
 import lombok.var;
 
-public class  Buff extends Actor implements NamedEntityKind, CharModifier {
+public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
     protected final Set<String> EMPTY_STRING_SET = new HashSet<>();
     public Char target = CharsList.DUMMY;

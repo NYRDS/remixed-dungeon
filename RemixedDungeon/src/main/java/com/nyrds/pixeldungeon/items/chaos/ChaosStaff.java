@@ -14,6 +14,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -86,11 +87,13 @@ public class ChaosStaff extends Wand {
                         break;
 
                     case 2:
-                        int nextCell = Dungeon.level.getEmptyCellNextTo(cell);
+                        Level level = Dungeon.level;
+                        int nextCell = level.getEmptyCellNextTo(cell);
 
-                        if (Dungeon.level.cellValid(nextCell)) {
+                        if (level.cellValid(nextCell)) {
                             Mob newMob = MobFactory.mobByName(mob.getEntityKind());
-                            Dungeon.level.spawnMob(newMob);
+                            newMob.setPos(nextCell);
+                            level.spawnMob(newMob);
                         }
                         break;
                     case 3:

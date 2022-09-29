@@ -275,7 +275,7 @@ public class Trap extends LevelObject {
 
 		@Override
 		public void doTrigger(int cell, Char ch) {
-			LuaTable trap = LuaEngine.getEngine().call("require", scriptFile).checktable();
+			LuaTable trap = LuaEngine.require(scriptFile).checktable();
 
 			trap.get("setData").call(trap,LuaValue.valueOf(data));
 			trap.get("trigger").call(trap,LuaValue.valueOf(cell), CoerceJavaToLua.coerce(ch));

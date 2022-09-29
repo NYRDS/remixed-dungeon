@@ -7,6 +7,7 @@ import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
@@ -103,7 +104,7 @@ public class WelcomeScene extends PixelScene {
 
 		Archs archs = new Archs();
 		archs.setSize(Camera.main.width, Camera.main.height);
-		addToBack(archs);
+		sendToBack(archs);
 
 		fadeIn();
 	}

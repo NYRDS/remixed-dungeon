@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.ml.actions.CharAction;
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.actions.UseItem;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
@@ -46,11 +48,14 @@ public class WndItem extends Window {
 		IconTitle titlebar = new IconTitle(new ItemSprite( item ), Utils.capitalize( item.toString() ));
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
-		
-		if (item.isLevelKnown() && item.level() > 0) {
-			titlebar.color( ItemSlot.UPGRADED );
-		} else if (item.isLevelKnown() && item.level() < 0) {
-			titlebar.color( ItemSlot.DEGRADED );
+
+		if (item.isLevelKnown()) {
+			int level = item.level();
+			if (level > 0) {
+				titlebar.color(ItemSlot.UPGRADED);
+			} else if (level < 0) {
+				titlebar.color(ItemSlot.DEGRADED);
+			}
 		}
 
 		Text info = PixelScene.createMultiline( item.info(), GuiProperties.regularFontSize());
@@ -67,7 +72,7 @@ public class WndItem extends Window {
 
 		Char owner = item.getOwner();
 
-		if (bag != null && item.getOwner().isAlive()) {
+		if (bag != null && owner.isAlive()) {
 			for (final String action:item.actions( owner )) {
 
 				if(owner.getHeroClass().forbidden(action)){
@@ -77,10 +82,11 @@ public class WndItem extends Window {
 				RedButton btn = new RedButton(StringsManager.maybeId(action) ) {
 					@Override
 					protected void onClick() {
+						CharAction acton = new UseItem(item, action);
+						acton.act(owner);
+
 						hide();
-						if (CommonActions.hideBagOnAction(action)) {
-							bag.hide();
-						}
+						bag.hide();
 						owner.nextAction(new UseItem(item, action));
 					}
 				};

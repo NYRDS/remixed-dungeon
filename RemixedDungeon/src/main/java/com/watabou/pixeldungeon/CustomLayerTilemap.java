@@ -127,22 +127,17 @@ public class CustomLayerTilemap extends DungeonTilemap {
 
         mask.position(0);
 
+        int width = level.getWidth();
+
         for (int i = 0; i < level.getHeight(); i++) {
-            for (int j = 0; j < level.getWidth(); j++) {
+            for (int j = 0; j < width; j++) {
+                int p = (i * width + j) * 8;
 
-                int p = (i * level.getWidth() + j) * 8;
+                maskData[p + 6] = maskData[p + 0] = getTCoord(hx, j - 0.5f);
+                maskData[p + 3] = maskData[p + 1] = getTCoord(hy, i - 0.5f);
 
-                maskData[p + 0] = getTCoord(hx, j - 0.5f);
-                maskData[p + 1] = getTCoord(hy, i - 0.5f);
-
-                maskData[p + 2] = getTCoord(hx, j + 0.5f);
-                maskData[p + 3] = getTCoord(hy, i - 0.5f);
-
-                maskData[p + 4] = getTCoord(hx, j + 0.5f);
-                maskData[p + 5] = getTCoord(hy, i + 0.5f);
-
-                maskData[p + 6] = getTCoord(hx, j - 0.5f);
-                maskData[p + 7] = getTCoord(hy, i + 0.5f);
+                maskData[p + 4] = maskData[p + 2] = getTCoord(hx, j + 0.5f);
+                maskData[p + 7] = maskData[p + 5] = getTCoord(hy, i + 0.5f);
             }
         }
 
@@ -151,8 +146,9 @@ public class CustomLayerTilemap extends DungeonTilemap {
 
     private float getTCoord(float h, float i) {
         float d = (h - i) / (1f);
+        d = d < -2 ? -2 : d;
+        d = d > 2 ? 2 : d;
 
-        d = Math.max(-2, Math.min(2, d));
         d = (d + 1) * 0.5f;
         return d;
     }
@@ -177,7 +173,9 @@ public class CustomLayerTilemap extends DungeonTilemap {
                     rm, gm, bm, am,
                     ra, ga, ba, aa);
 
-            updateVertices();
+            //if(!updated.isEmpty()) {
+                updateVertices();
+            //}
 
             script.camera(camera);
             script.drawQuadSet(quads, mask, size);

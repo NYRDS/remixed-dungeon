@@ -19,10 +19,10 @@ package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.TouchArea;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
@@ -35,9 +35,9 @@ public class ScrollPane extends Component {
 		super();
 
 		this.content = content;
-		addToBack( content );
-		
-		width = content.width();
+        sendToBack(content);
+
+        width = content.width();
 		height = content.height();
 		
 		content.camera = new Camera( 0, 0, 1, 1, PixelScene.defaultZoom );

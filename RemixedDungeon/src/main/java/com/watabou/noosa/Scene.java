@@ -22,6 +22,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Keys;
+import com.watabou.pixeldungeon.ui.IWindow;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.utils.Signal;
 
@@ -32,7 +33,7 @@ public class Scene extends Group {
 	public static final String LEVELS_TEST = "levelsTest";
 
 	private Signal.Listener<Keys.Key> keyListener;
-	private final ArrayList<Window> activeWindows = new ArrayList<>();
+	private final ArrayList<IWindow> activeWindows = new ArrayList<>();
 
 	static protected LuaScript script = new LuaScript("scripts/services/scene", null);
 	static public String sceneMode = "none";
@@ -53,7 +54,7 @@ public class Scene extends Group {
 	}
 
 	@LuaInterface
-	public Window getWindow(int i) {
+	public IWindow getWindow(int i) {
 		if(i < activeWindows.size()) {
 			return activeWindows.get(i);
 		}
@@ -65,8 +66,8 @@ public class Scene extends Group {
 	public void enumerateWindows() {
 		activeWindows.clear();
 		int windowIndex = -1;
-		while ((windowIndex = findByClass(Window.class, windowIndex + 1)) > 0) {
-			activeWindows.add((Window) getMember(windowIndex));
+		while ((windowIndex = findByClass(IWindow.class, windowIndex + 1)) > 0) {
+			activeWindows.add((IWindow) getMember(windowIndex));
 		}
 	}
 
