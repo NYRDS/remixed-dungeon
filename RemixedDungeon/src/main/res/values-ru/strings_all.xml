@@ -1675,10 +1675,10 @@
   <string name="ServiceManNPC_Desc">Рядовой работник местных заведений.</string>
   <string name="TownShopkeeper_Name">торговец</string>
   <string name="TownShopkeeper_Desc">Этот человек  - типичный торговец. Даже не сомневайся, он уже знает тебе цену.</string>
-  <string name="WndMovieTheatre_Watch">посмотреть фильм</string>
+  <string name="WndMovieTheatre_Watch">посмотреть рекламу</string>
   <string name="WndMovieTheatre_No">уйти</string>
   <string name="WndMovieTheatre_Bye">Возвращайтесь в любое время, мы вам всегда рады!</string>
-  <string name="WndMovieTheatre_Instruction">Здравствуйте и добро пожаловать в наш кинотеатр! Вы можете принять участие в особой акции, посмотрите фильм, причём совершенно бесплатно. И если вы просмотрите его до конца то вы получите вознаграждение в размере %d золотых монет!</string>
+  <string name="WndMovieTheatre_Instruction">Здравствуйте и добро пожаловать в наш кинотеатр! Вы можете принять участие в особой акции, посмотрите особый фильм, называемый рекламой, причём совершенно бесплатно. И если вы просмотрите его до конца то вы получите вознаграждение в размере %d золотых монет!</string>
   <string name="WndMovieTheatre_Title">Кинотеатр</string>
   <string name="WndMovieTheatre_Thank_You">Спасибо вам за участие!</string>
   <string name="WndPriest_Heal">лечение - %d золотых монет</string>
