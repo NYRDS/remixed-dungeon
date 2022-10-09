@@ -2877,4 +2877,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="IceGuardianCore_DieInfo">It is so cold here, I better go back to level 14 and try to find a way to a warmer place.</string>
   <string name="Lich_DieInfo">I never liked this Necromancer. So it is time to return to level 7 and find another way down to the new adventure.</string>
   <string name="SpiderQueen_DieInfo">Spider Queen is slain! Now I should go back to level 5 and continue my journey to the Deeps.</string>
+  <string name="WndModSelect_ReallyDelete">Really delete?</string>
+  <string name="WndModSelect_AreYouSure">Deleting mod: %s, are you sure?</string>
 </resources>

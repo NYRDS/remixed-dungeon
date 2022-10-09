@@ -153,7 +153,7 @@ public class TitleScene extends PixelScene {
 		if (freeInternalStorage < 2) {
 			Text lowInternalStorageWarning = PixelScene
 					.createMultiline(GuiProperties.regularFontSize());
-            lowInternalStorageWarning.text(StringsManager.getVar(R.string.TitleScene_InternalStorageLow));
+			lowInternalStorageWarning.text(StringsManager.getVar(R.string.TitleScene_InternalStorageLow));
 			lowInternalStorageWarning.setPos(0,
 					h - lowInternalStorageWarning.height());
 			lowInternalStorageWarning.hardlight(0.95f, 0.1f, 0.1f);

@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.nyrds.pixeldungeon.windows.ScrollableList;
 import com.nyrds.pixeldungeon.windows.WndHelper;
+import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
@@ -21,6 +22,7 @@ import com.nyrds.util.Util;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.SaveUtils;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -38,8 +40,15 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 
 	private final Map<String, ModDesc> modsList;
 
+	static private WndModSelect instance = null;
+
 	public WndModSelect() {
 		super();
+
+		if(instance!=null) {
+			instance.hide();
+		}
+		instance = this;
 
 		resizeLimited(120);
 
@@ -65,7 +74,18 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 			if (desc.installed && !ModdingMode.REMIXED.equals(desc.name)) {
 				SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
 					protected void onClick() {
-						onDelete(desc.installDir);
+						GameLoop.addToScene(new WndOptions(StringsManager.getVar(R.string.WndModSelect_ReallyDelete),
+								Utils.format(StringsManager.getVar(R.string.WndModSelect_AreYouSure), desc.name),
+								StringsManager.getVar(R.string.Wnd_Button_Yes),
+								StringsManager.getVar(R.string.Wnd_Button_No) ) {
+							@Override
+							public void onSelect(int index) {
+								hide();
+								if(index == 0) {
+									onDelete(desc.installDir);
+								}
+							}
+						});
 					}
 				};
 				deleteBtn.setPos(width - (deleteBtn.width() * 2) - GAP, pos + (BUTTON_HEIGHT - deleteBtn.height())/2);
@@ -88,7 +108,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 				};
 
 				btn.setRect(GAP, pos, width - GAP * 2 - (additionalMargin * 2), BUTTON_HEIGHT);
-                list.content().add(btn);
+				list.content().add(btn);
 
 				pos += BUTTON_HEIGHT;
 			}
@@ -116,9 +136,6 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 			RemixedDungeon.instance().doRestart();
 		}
 
-		if (getParent() != null) {
-			hide();
-		}
 		GameLoop.addToScene(new WndModSelect());
 	}
 
@@ -147,9 +164,6 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 			return;
 		}
 
-		if (getParent() != null) {
-			hide();
-		}
 		GameLoop.addToScene(new WndModDescription(option, prevMod));
 	}
 

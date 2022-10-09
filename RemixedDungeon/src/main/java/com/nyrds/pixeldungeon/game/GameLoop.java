@@ -121,10 +121,13 @@ public class GameLoop {
     }
 
     public static void addToScene(Gizmo gizmo) {
-        Scene scene = scene();
-        if (scene != null) {
-            scene.add(gizmo);
-        }
+        GameLoop.pushUiTask(()->
+            {
+                Scene scene = scene();
+                if (scene != null) {
+                    scene.add(gizmo);
+                }
+            });
     }
 
     @LuaInterface

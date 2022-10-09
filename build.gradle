@@ -2,16 +2,15 @@
 buildscript {
     repositories {
         mavenCentral()
-        jcenter()
         google()
 
         maven { url 'https://developer.huawei.com/repo/' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.1'
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.1'
+        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.2'
         classpath 'com.google.firebase:perf-plugin:1.4.1'
-        classpath 'com.google.gms:google-services:4.3.13' // google-services plugin
+        classpath 'com.google.gms:google-services:4.3.14' // google-services plugin
         classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:1.0.0'
         classpath 'com.huawei.agconnect:agcp:1.4.1.300'
     }
@@ -20,7 +19,6 @@ buildscript {
 allprojects {
     repositories {
         mavenCentral()
-        jcenter()
         google()
 
         maven { url "https://artifactory.appodeal.com/appodeal" }
