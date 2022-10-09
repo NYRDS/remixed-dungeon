@@ -1,9 +1,11 @@
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.util.Util;
+
 public class Glowing {
 
     public static final Glowing WHITE      = new Glowing(0xFFFFFF, 0.6f);
-    public static final Glowing NO_GLOWING = new Glowing(0, Float.MAX_VALUE);
+    public static final Glowing NO_GLOWING = new Glowing(0, Util.BIG_FLOAT);
 
     public float red;
     public float green;

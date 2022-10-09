@@ -253,12 +253,12 @@ public class Bundle {
     @SneakyThrows
     public void put(String key, float value) {
         if(Float.isInfinite(value)) {
-            value = Float.MAX_VALUE;
+            value = Util.BIG_FLOAT;
             EventCollector.logException(key+" is infinity");
         }
 
         if(Float.isNaN(value)) {
-            value = Float.MAX_VALUE;
+            value = Util.BIG_FLOAT;
             EventCollector.logException(key+" is NaN");
         }
 

@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Image;
 
 public class Banner extends Image {
@@ -56,7 +57,7 @@ public class Banner extends Image {
 	}
 	
 	public void show( int color, float fadeTime ) {
-		show( color, fadeTime, Float.MAX_VALUE );
+		show( color, fadeTime, Util.BIG_FLOAT );
 	}
 	
 	@Override

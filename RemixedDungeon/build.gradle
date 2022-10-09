@@ -34,8 +34,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1143
-        versionName "31.1.fix.18"
+        versionCode 1144
+        versionName "31.1.fix.19"
         targetSdkVersion 32
         minSdkVersion 19
         compileSdkVersion = 32
@@ -150,9 +150,9 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.1.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.2.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.3.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:22.0.1"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:21.1.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:21.2.0'
 
 
     googlePlayImplementation 'com.android.billingclient:billing:4.1.0'
