@@ -617,14 +617,6 @@ public class GameScene extends PixelScene {
         if(roofTiles != null) {
             roofTiles.brightness(brightnessValue);
         }
-
-        if (value) {
-            fog.am = +2f;
-            fog.aa = -1f;
-        } else {
-            fog.am = +1f;
-            fog.aa = 0f;
-        }
     }
 
     private void addLevelObjectSprite(@NotNull LevelObject obj) {

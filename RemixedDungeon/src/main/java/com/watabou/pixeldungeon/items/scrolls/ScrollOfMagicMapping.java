@@ -39,67 +39,67 @@ import lombok.var;
 
 public class ScrollOfMagicMapping extends Scroll {
 
-	@Override
-	protected void doRead(@NotNull Char reader) {
-		Level level = reader.level();
+    @Override
+    protected void doRead(@NotNull Char reader) {
+        Level level = reader.level();
 
-		int length = level.getLength();
-		int[] map = level.map;
-		boolean[] mapped = level.mapped;
-		boolean[] discoverable = level.discoverable;
-		
-		boolean noticed = false;
-		
-		for (int i=0; i < length; i++) {
-			int terr = map[i];
-			if (discoverable[i]) {
-				mapped[i] = true;
-				if ((TerrainFlags.flags[terr] & TerrainFlags.SECRET) != 0) {
-					
-					level.set( i, Terrain.discover( terr ) );
-					GameScene.updateMap( i );
-					
-					if (Dungeon.isCellVisible(i)) {
-						GameScene.discoverTile( i);
-						discover( i );
-						
-						noticed = true;
-					}
-				}
-			}
-		}
+        int length = level.getLength();
+        int[] map = level.map;
+        boolean[] mapped = level.mapped;
+        boolean[] discoverable = level.discoverable;
 
-		for(var lo : level.getAllLevelObjects()) {
-			if(lo.secret()) {
-				lo.discover();
-				discover(lo.getPos());
-				noticed = true;
-			}
-		}
+        boolean noticed = false;
 
-		Dungeon.observe();
+        for (int i = 0; i < length; i++) {
+            int terr = map[i];
+            if (discoverable[i]) {
+                mapped[i] = true;
+                if ((TerrainFlags.flags[terr] & TerrainFlags.SECRET) != 0) {
+
+                    level.set(i, Terrain.discover(terr));
+                    GameScene.updateMap(i);
+
+                    if (Dungeon.isCellVisible(i)) {
+                        GameScene.discoverTile(i);
+                        discover(i);
+
+                        noticed = true;
+                    }
+                }
+            }
+        }
+
+        for (var lo : level.getAllLevelObjects()) {
+            if (lo.secret()) {
+                lo.discover();
+                discover(lo.getPos());
+                noticed = true;
+            }
+        }
+
+        Dungeon.observe();
 
         GLog.i(StringsManager.getVar(R.string.ScrollOfMagicMapping_Layout));
 
-		if (noticed) {
-			Sample.INSTANCE.play( Assets.SND_SECRET );
-		}
-		
-		SpellSprite.show( reader, SpellSprite.MAP );
-		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(reader);
-		
-		setKnown();
+        if (noticed) {
+            Sample.INSTANCE.play(Assets.SND_SECRET);
+        }
 
-		reader.spend( TIME_TO_READ );
-	}
-	
-	@Override
-	public int price() {
-		return isKnown() ? 25 * quantity() : super.price();
-	}
-	
-	public static void discover( int cell ) {
-		CellEmitter.get( cell ).start( Speck.factory( Speck.DISCOVER ), 0.1f, 4 );
-	}
+        SpellSprite.show(reader, SpellSprite.MAP);
+        Sample.INSTANCE.play(Assets.SND_READ);
+        Invisibility.dispel(reader);
+
+        setKnown();
+
+        reader.spend(TIME_TO_READ);
+    }
+
+    @Override
+    public int price() {
+        return isKnown() ? 25 * quantity() : super.price();
+    }
+
+    public static void discover(int cell) {
+        CellEmitter.get(cell).start(Speck.factory(Speck.DISCOVER), 0.1f, 4);
+    }
 }
