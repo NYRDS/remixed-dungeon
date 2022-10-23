@@ -1175,7 +1175,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (level().cellValid(getPos())) {
             sprite.setVisible(Dungeon.isCellVisible(getPos()) && invisible >= 0);
         } else {
-            EventCollector.logException("invalid pos for:" + this.toString() + ":" + getEntityKind());
+            EventCollector.logException("invalid pos for:" + this + ":" + getEntityKind());
         }
         GameScene.addMobSpriteDirect(this, sprite);
 
@@ -1583,11 +1583,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return name();
     }
 
+    @LuaInterface
     public int lvl() {
         return Scrambler.descramble(lvl);
     }
 
-    protected void lvl(int lvl) {
+    @LuaInterface
+    public void lvl(int lvl) {
         this.lvl = Scrambler.scramble(lvl);
     }
 
@@ -1953,7 +1955,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         Buff.detach(this, buffClass);
     }
 
-    public int getAttackRange() {
+    @LuaInterface
+    int getAttackRange() {
         return Math.max(attackRange, getBelongings().getItemFromSlot(Belongings.Slot.WEAPON).range());
     }
 }

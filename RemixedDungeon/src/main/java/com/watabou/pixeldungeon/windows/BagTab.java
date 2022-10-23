@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 
 class BagTab extends Tab {
 
-    private Image icon;
+    private final Image icon;
 
     public Bag bag;
 

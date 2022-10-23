@@ -839,6 +839,13 @@ public class GameScene extends PixelScene {
         }
     }
 
+    public static void showNow(Window wnd) {
+        cancelCellSelector();
+        if (isSceneReady() && scene.sceneCreated) {
+            scene.add(wnd);
+        }
+    }
+
     public static void show(Window wnd) {
         cancelCellSelector();
         if (isSceneReady() && scene.sceneCreated) {
