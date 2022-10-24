@@ -1559,9 +1559,9 @@
   <string name="ScarecrowNPC_Gender">neuter</string>
   <string name="ScarecrowNPC_Name_Objective">σκιάχτρο</string>
   <string name="ScarecrowNPC_Desc">Δεν χωρά αμφιβολία... το σκιάχτρο παρατηρεί την κάθε σου κίνηση. Τα λαμπερά κόκκινα μάτια του μοιάζουν να εισχωρούν μέσα σου. Παραδόξως, όμως, δεν νιώθεις κάποια απειλή.</string>
-  <string name="ScarecrowNPC_Quest_Start_Male">Γεια σου, τι κάνεις, αγόρι μου καλό;\nΈχω να σου δώσω κάτι φοβερό!\nΜεγάλη χαρά θα μου προσφέρεις,\nλίγα κεριά αν βρεις να μου φέρεις!</string>
-  <string name="ScarecrowNPC_Quest_Start_Female">Γεια σου, τι κάνεις, κορίτσι μου καλό;\nΈχω να σου δώσω κάτι φοβερό!\nΜεγάλη χαρά θα μου προσφέρεις,\nλίγα κεριά αν βρεις να μου φέρεις!</string>
-  <string name="ScarecrowNPC_Quest_Reminder">Πέντε κεριά ζητάω να μου βρεις.\nΓλυκιά ανταμοιβή θα λάβεις να χαρείς!</string>
+  <string name="ScarecrowNPC_Quest_Start_Male">Γεια σου, τι κάνεις, αγόρι μου καλό;\nΈχω να σου δώσω κάτι φοβερό!\nΜεγάλη χαρά θα μου προσφέρεις,\nλίγα γλυκά αν βρεις να μου φέρεις!</string>
+  <string name="ScarecrowNPC_Quest_Start_Female">Γεια σου, τι κάνεις, κορίτσι μου καλό;\nΈχω να σου δώσω κάτι φοβερό!\nΜεγάλη χαρά θα μου προσφέρεις,\nλίγα γλυκά αν βρεις να μου φέρεις!</string>
+  <string name="ScarecrowNPC_Quest_Reminder">Πέντε γλυκά ζητάω να μου βρεις.\nΓλυκιά ανταμοιβή θα λάβεις να χαρείς!</string>
   <string name="ScarecrowNPC_Quest_End">Ω, μα τι μεγάλη μου έδωσες χαρά!\nΠάρε αυτήν την πίτα και σε καλή μεριά!</string>
   <string name="Journal_ScarecrowNPC">Σκιάχτρο</string>
   <string name="Mods_CreatedBy">Δημιουργήθηκε από:</string>
@@ -1659,10 +1659,10 @@
   <string name="ServiceManNPC_Desc">Ένας απλός εργάτης των τοπικών εγκαταστάσεων.</string>
   <string name="TownShopkeeper_Name">καταστηματάρχης</string>
   <string name="TownShopkeeper_Desc">Αυτός είναι ο κλασικός καταστηματάρχης. Το νιώθεις ότι γνωρίζει ήδη την τιμή σου.</string>
-  <string name="WndMovieTheatre_Watch">Παρακολούθηση ταινίας</string>
+  <string name="WndMovieTheatre_Watch">Παρακολούθηση Ad</string>
   <string name="WndMovieTheatre_No">Αποχώρηση</string>
   <string name="WndMovieTheatre_Bye">Έλα πάλι όποτε θες. Χαιρόμαστε που σε βλέπουμε!</string>
-  <string name="WndMovieTheatre_Instruction">Γεια σου και καλωσόρισες στον κινηματογράφο μας! Παρέχουμε μια ειδική υπηρεσία με την οποία μπορείς να δεις δωρεάν μία ταινία. Και αν την παρακολουθήσεις ολόκληρη, θα ανταμειφθείς με %d χρυσά νομίσματα!</string>
+  <string name="WndMovieTheatre_Instruction">Γεια σου και καλωσόρισες στον κινηματογράφο μας! Παρέχουμε μια ειδική υπηρεσία με την οποία μπορείς να δεις δωρεάν μία ταινία που λέγεται Ad (διαφημιστικό). Κι αν την παρακολουθήσεις ολόκληρη, θα ανταμειφθείς με %d χρυσά νομίσματα!</string>
   <string name="WndMovieTheatre_Title">Κινηματογράφος</string>
   <string name="WndMovieTheatre_Thank_You">Ευχαριστούμε για τη συμμετοχή σου!</string>
   <string name="WndPriest_Heal">Θεραπεία - %d χρυσός</string>
@@ -1895,7 +1895,7 @@
   <string name="YogsHeart_Name">καρδιά του Yog</string>
   <string name="YogsHeart_Gender">feminine</string>
   <string name="YogsHeart_Name_Objective">καρδιά του Yog</string>
-  <string name="YogsHeart_Desc">Για αιώνες πιστευόταν πως μόνο τα άκαρδα πλάσματα είναι ικανά για διαβολικές πράξεις. Αλλά να· η τεράστια καρδιά του Παλιού Θεού χτυπά μπροστά σου.</string>
+  <string name="YogsHeart_Desc">Για αιώνες πιστευόταν πως μόνο τα άκαρδα πλάσματα είναι ικανά για διαβολικές πράξεις. Αλλά να... η τεράστια καρδιά του Παλιού Θεού χτυπά μπροστά σου.</string>
   <string name="YogsTeeth_Name">δόντια του Yog</string>
   <string name="YogsTeeth_Gender">neuter</string>
   <string name="YogsTeeth_Name_Objective">δόντια του Yog</string>
