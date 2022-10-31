@@ -1583,7 +1583,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 		return Scrambler.descramble(lvl);
 	}
 
-	protected void lvl(int lvl) {
+	public void lvl(int lvl) {
 		this.lvl = Scrambler.scramble(lvl);
 	}
 
