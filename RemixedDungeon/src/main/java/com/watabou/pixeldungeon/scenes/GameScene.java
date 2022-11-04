@@ -1000,6 +1000,12 @@ public class GameScene extends PixelScene {
     @Override
     public void resume() {
         super.resume();
+
+        if(Dungeon.heroClass == null) { // no active game in progress
+            GameLoop.switchScene(TitleScene.class);
+            return;
+        }
+
         InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
     }
 

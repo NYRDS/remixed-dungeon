@@ -79,6 +79,7 @@ import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -132,6 +133,7 @@ public class Dungeon {
     // Current char passability map
     private static boolean[] passable;
 
+    @Nullable
     public static HeroClass heroClass;
 
     private static boolean isometricMode = false;
@@ -404,6 +406,7 @@ public class Dungeon {
         SaveUtils.deleteSaveFromSlot(SaveUtils.getPrevSave(), heroClass);
         SaveUtils.deleteSaveFromSlot(SaveUtils.getAutoSave(), heroClass);
         Dungeon.deleteGame(true);
+        heroClass = null;
     }
 
     public static void saveGame(String fileName) throws IOException {

@@ -56,6 +56,7 @@ import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -344,7 +345,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Game.height = height;
     }
 
-    private InterstitialPoint permissionsPoint = new Utils.SpuriousReturn();;
+    private InterstitialPoint permissionsPoint = new Utils.SpuriousReturn();
 
     public void doPermissionsRequest(@NotNull InterstitialPoint returnTo, String[] permissions) {
         boolean havePermissions = true;

@@ -34,7 +34,7 @@ import lombok.SneakyThrows;
 public class Util {
     public static final String SAVE_ADS_EXPERIMENT = "SaveAdsExperiment2";
     public static Callback nullCallback = () -> {};
-	public static final float BIG_FLOAT = Float.MAX_VALUE / 2;
+	public static final float BIG_FLOAT = Float.MAX_VALUE / 16384;
 
     private static String stackTraceToString(Throwable e) {
 		StringWriter sw = new StringWriter();
@@ -108,14 +108,7 @@ public class Util {
     public static long getAvailableInternalMemorySize() {
         File path = Environment.getDataDirectory();
         StatFs stat = new StatFs(path.getPath());
-        long ret;
-        if (android.os.Build.VERSION.SDK_INT < 18) {
-            long blockSize = stat.getBlockSize();
-            long availableBlocks = stat.getAvailableBlocks();
-            ret = availableBlocks * blockSize;
-        } else {
-            ret = stat.getAvailableBytes();
-        }
+        long ret = stat.getAvailableBytes();
         EventCollector.setSessionData("FreeInternalMemorySize", Long.toString(ret));
         return ret;
     }
