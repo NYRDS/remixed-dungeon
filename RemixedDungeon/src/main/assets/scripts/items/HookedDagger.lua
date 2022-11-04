@@ -63,4 +63,20 @@ return item.init{
         RPD.affectBuff(defender,"Bleeding",3)
         return damage
     end,
+
+    typicalSTR = function(self, item)
+        return 9
+    end,
+
+    statsRequirementsSatisfied = function(self, item)
+        return item:getOwner():effectiveSTR() > 9
+    end,
+
+    knownStatsText = function(self, item)
+        return ":9"
+    end,
+
+    unknownStatsText = function(self, item)
+        return "???"
+    end
 }

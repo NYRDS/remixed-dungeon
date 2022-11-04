@@ -38,7 +38,7 @@ public class EuConsent {
 
                 @Override
                 public void onFailedToUpdateConsentInfo(String errorDescription) {
-                    EventCollector.logException(errorDescription);
+                    //EventCollector.logException(errorDescription);
                 }
             });
         }

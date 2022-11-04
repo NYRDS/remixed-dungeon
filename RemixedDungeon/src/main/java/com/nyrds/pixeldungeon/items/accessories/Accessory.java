@@ -2,6 +2,8 @@ package com.nyrds.pixeldungeon.items.accessories;
 
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.support.Iap;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
@@ -121,8 +123,15 @@ public class Accessory {
     }
 
     static public void check() {
+        Iap iap = RemixedDungeon.instance().iap;
+
+        if(iap == null) {
+            EventCollector.logException("iap is null!!!");
+            return;
+        }
+
         for (String item : allAccessoriesList.keySet()) {
-            getByName(item).ownIt(RemixedDungeon.instance().iap.checkPurchase(item));
+            getByName(item).ownIt(iap.checkPurchase(item));
         }
     }
 

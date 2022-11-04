@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.game;
 
 import android.annotation.SuppressLint;
 
-import com.nyrds.pixeldungeon.support.AdsUtils;
+import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
@@ -84,14 +84,6 @@ public class GamePreferences {
         return Preferences.INSTANCE.getBoolean(Preferences.KEY_INTRO, true);
     }
 
-    public static void isometricTilesPresented(boolean value) {
-        Preferences.INSTANCE.put(Preferences.KEY_ISOMETRIC_TILES_PRESENTED, value);
-    }
-
-    public static boolean isometricTilesPresented() {
-        return Preferences.INSTANCE.getBoolean(Preferences.KEY_ISOMETRIC_TILES_PRESENTED, false);
-    }
-
     public static String uiLanguage() {
         String deviceLocale = Locale.getDefault().getLanguage();
         EventCollector.setSessionData("device_locale", deviceLocale);
@@ -170,7 +162,7 @@ public class GamePreferences {
     public static void immerse(boolean value) {
         Preferences.INSTANCE.put(Preferences.KEY_IMMERSIVE, value);
 
-        Game.runOnMainThread(() -> {
+        GameLoop.runOnMainThread(() -> {
             RemixedDungeon.updateImmersiveMode();
             GameLoop.setNeedSceneRestart();
         });
@@ -187,7 +179,7 @@ public class GamePreferences {
     static public void setDonationLevel(int level) {
 
         if(level > 0) {
-            AdsUtils.removeEasyModeBanner();
+            Ads.removeEasyModeBanner();
         }
 
         if (level < donated()) {
@@ -218,11 +210,11 @@ public class GamePreferences {
     }
 
     public static int limitTimeoutIndex(int value) {
-        return 	Math.max(Math.min(value, GameLoop.MOVE_TIMEOUTS.length-1),0);
+        return 	Math.max(Math.min(value, RemixedDungeon.MOVE_TIMEOUTS.length-1),0);
     }
 
     public static double getMoveTimeout() {
-        return GameLoop.MOVE_TIMEOUTS[limitTimeoutIndex(moveTimeout())];
+        return RemixedDungeon.MOVE_TIMEOUTS[limitTimeoutIndex(moveTimeout())];
     }
 
     public static int quickSlots() {

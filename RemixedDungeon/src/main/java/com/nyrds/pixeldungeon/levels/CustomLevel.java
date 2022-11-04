@@ -8,11 +8,10 @@ import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.ByteArrayInputStream;
-
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
 
 /**
  * Created by mike on 13.11.2016.

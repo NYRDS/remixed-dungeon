@@ -20,16 +20,18 @@ package com.watabou.utils;
 import com.nyrds.LuaInterface;
 import com.nyrds.generated.BundleHelper;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.Util;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -45,10 +47,6 @@ import java.util.Map;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
-import clone.org.json.JSONArray;
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
-import clone.org.json.JSONTokener;
 import lombok.SneakyThrows;
 
 public class Bundle {
@@ -69,13 +67,6 @@ public class Bundle {
 
     private Bundle(JSONObject data) {
         this.data = data;
-    }
-
-    public static Bundle readFromFile(String fileName) throws IOException {
-
-        try(InputStream input = new FileInputStream(FileSystem.getFile(fileName))) {
-            return read(input);
-        }
     }
 
     public String serialize() {
@@ -262,13 +253,13 @@ public class Bundle {
     @SneakyThrows
     public void put(String key, float value) {
         if(Float.isInfinite(value)) {
-            value = Float.MAX_VALUE;
-            EventCollector.logException(key+" is infinity");
+            value = Util.BIG_FLOAT;
+            //EventCollector.logException(key+" is infinity");
         }
 
         if(Float.isNaN(value)) {
-            value = Float.MAX_VALUE;
-            EventCollector.logException(key+" is NaN");
+            value = Util.BIG_FLOAT;
+            //EventCollector.logException(key+" is NaN");
         }
 
         data.put(key, value);

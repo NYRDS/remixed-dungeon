@@ -17,9 +17,12 @@
  */
 package com.watabou.pixeldungeon.effects;
 
+import android.opengl.GLES20;
+
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.gl.Gl;
 import com.watabou.pixeldungeon.sprites.CharSprite;
+
+import javax.microedition.khronos.opengles.GL10;
 
 public class TorchHalo extends Halo {
 
@@ -58,9 +61,9 @@ public class TorchHalo extends Halo {
 	
 	@Override
 	public void draw() {
-		Gl.blendSrcAlphaOne();
+		GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE );
 		super.draw();
-		Gl.blendSrcAlphaOneMinusAlpha();
+		GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA );
 	}
 	
 	public void putOut() {

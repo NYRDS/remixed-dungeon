@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon;
 
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.utils.ItemsList;
+import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
@@ -30,8 +31,8 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 
 public class Bones {
@@ -72,7 +73,10 @@ public class Bones {
 	public static Item get() {
 		if (depth == -1) {
 			try {
-				Bundle bundle = Bundle.readFromFile(BONES_FILE);
+				InputStream input = Game.instance().openFileInput(BONES_FILE);
+				Bundle bundle = Bundle.read(input);
+				input.close();
+
 				if (bundle.contains(LEVEL) && bundle.contains(ITEM)) {
 					depth = bundle.getInt(LEVEL);
 					item = (Item) bundle.get(ITEM);
@@ -83,7 +87,7 @@ public class Bones {
 			return ItemsList.DUMMY;
 		} else {
 			if (depth == Dungeon.depth) {
-				new File( BONES_FILE ).delete();
+				Game.instance().deleteFile( BONES_FILE );
 				depth = 0;
 
 				if(item==null) {

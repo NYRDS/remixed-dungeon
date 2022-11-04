@@ -36,7 +36,7 @@ public class ZapEffect {
             }
 
             if(EffectsFactory.isValidEffectName(zapEffect)) {
-                attachMissileTeenier(GameScene.clipEffect(from, 1,zapEffect),from,to);
+                attachMissileTweener(GameScene.clipEffect(from, 1,zapEffect),from,to);
                 return;
             }
 
@@ -109,7 +109,7 @@ public class ZapEffect {
         }
     }
 
-    private static void attachMissileTeenier(Visual target, int from, int to) {
+    private static void attachMissileTweener(Visual target, int from, int to) {
 
         target.point( DungeonTilemap.tileToWorld( from ) );
         PointF dest = DungeonTilemap.tileToWorld( to );

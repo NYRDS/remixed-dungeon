@@ -26,29 +26,27 @@ import com.watabou.utils.Signal;
 import java.util.HashMap;
 
 public class Touchscreen {
-
+	
 	public static Signal<Touch> event = new Signal<>(true);
 
-	public static HashMap<Integer, Touch> pointers = new HashMap<>();
+	public static HashMap<Integer,Touch> pointers = new HashMap<>();
 
 	public static float x;
 	public static float y;
 	public static boolean touched;
 
-	public static void processEvent(PointerEvent ev) {
+	public static void processEvent(MotionEvent e ) {
 
 		Touch touch;
 
-		MotionEvent e = ev.event;
-
 		switch (e.getAction() & MotionEvent.ACTION_MASK) {
 
-			case MotionEvent.ACTION_DOWN:
-				touched = true;
-				touch = new Touch(e, 0);
-				pointers.put(e.getPointerId(0), touch);
-				event.dispatch(touch);
-				break;
+		case MotionEvent.ACTION_DOWN:
+			touched = true;
+			touch = new Touch( e, 0 );
+			pointers.put( e.getPointerId( 0 ), touch );
+			event.dispatch( touch );
+			break;
 
 		case MotionEvent.ACTION_POINTER_DOWN:
 			int index = e.getActionIndex();

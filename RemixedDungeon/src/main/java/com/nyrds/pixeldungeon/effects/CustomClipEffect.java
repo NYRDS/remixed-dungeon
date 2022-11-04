@@ -9,8 +9,8 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class CustomClipEffect extends MovieClip implements MovieClip.Listener, ICustomEffect {
 

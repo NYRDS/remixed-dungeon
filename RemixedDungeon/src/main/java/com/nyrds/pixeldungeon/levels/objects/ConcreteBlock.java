@@ -8,7 +8,8 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 
-import clone.org.json.JSONObject;
+import org.json.JSONObject;
+
 import lombok.Getter;
 import lombok.Setter;
 

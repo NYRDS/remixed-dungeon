@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 
 public class ExitButton extends ImageButton {
@@ -32,7 +33,7 @@ public class ExitButton extends ImageButton {
 		if (GameLoop.scene() instanceof TitleScene) {
 			Game.shutdown();
 		} else {
-			GameLoop.switchNoFade( TitleScene.class );
+			RemixedDungeon.switchNoFade( TitleScene.class );
 		}
 	}
 }

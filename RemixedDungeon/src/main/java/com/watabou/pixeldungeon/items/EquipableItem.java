@@ -25,6 +25,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -33,6 +34,8 @@ import java.util.ArrayList;
 public abstract class EquipableItem extends Item {
 
 	public static final String NO_ANIMATION = "none";
+	private static final String TXT_STRENGTH    = ":%d";
+	private static final String TXT_TYPICAL_STR = "%d?";
 
 	protected int gender;
 
@@ -111,7 +114,7 @@ public abstract class EquipableItem extends Item {
 	protected boolean doUnequip(Char hero, boolean collect, boolean single) {
 		
 		if (isCursed()) {
-            GLog.w(StringsManager.getVar(R.string.EquipableItem_Unequip), name() );
+			GLog.w(StringsManager.getVar(R.string.EquipableItem_Unequip), name() );
 			return false;
 		}
 
@@ -211,5 +214,17 @@ public abstract class EquipableItem extends Item {
 	}
 
 	public void postAttack(Char tgt ) {
+	}
+
+	public boolean statsRequirementsSatisfied() {
+		return requiredSTR() <= getOwner().effectiveSTR();
+	}
+
+	public String knownStatsText() {
+		return Utils.format(TXT_STRENGTH, requiredSTR());
+	}
+
+	public String unknownStatsText() {
+		return  Utils.format(TXT_TYPICAL_STR, typicalSTR());
 	}
 }

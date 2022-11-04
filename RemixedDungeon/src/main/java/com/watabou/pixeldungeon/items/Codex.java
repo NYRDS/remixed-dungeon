@@ -25,8 +25,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.windows.WndStory;
 import com.watabou.utils.Random;
 
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Codex extends Book {
 

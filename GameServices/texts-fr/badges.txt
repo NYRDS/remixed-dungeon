@@ -4,7 +4,7 @@ La terreur des égoûts a cessé d'exister.
 2. Tengu a été tué
 L'esprit sournois ne tourmentera plus personne.
 
-3. DM-300 est vaincu
+3. DM-300 a été tué
 La machine sans but a été désactivée.
 
 4. Le roi a été tué
@@ -30,4 +30,3 @@ Bravoure, gentillesse, quelque pièces d'or et même un Gnoll brutal  se joint �
 
 11. Masque chirurgical obtenu
 Porter un masque c'est penser aux autres.
-

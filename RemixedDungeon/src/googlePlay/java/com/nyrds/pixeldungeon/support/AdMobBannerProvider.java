@@ -39,7 +39,7 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
 
         @Override
         public void onAdLoaded() {
-            AdsUtils.updateBanner(adView);
+            Ads.updateBanner(adView);
             loaded = true;
         }
 

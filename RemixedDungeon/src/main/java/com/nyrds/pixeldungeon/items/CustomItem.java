@@ -376,6 +376,21 @@ public class CustomItem extends EquipableItem {
         return script.runOptional("time2equip",super.time2equipBase());
     }
 
+    @Override
+    public boolean statsRequirementsSatisfied() {
+        return script.runOptional("statsRequirementsSatisfied", super.statsRequirementsSatisfied());
+    }
+
+    @Override
+    public String knownStatsText() {
+        return script.runOptional("knownStatsText", super.knownStatsText());
+    }
+
+    @Override
+    public String unknownStatsText() {
+        return script.runOptional("unknownStatsText", super.unknownStatsText());
+    }
+
     private class CustomItemCellListener implements CellSelector.Listener {
 
         private final String action;

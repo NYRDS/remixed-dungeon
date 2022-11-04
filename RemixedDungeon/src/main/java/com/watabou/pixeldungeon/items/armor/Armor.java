@@ -48,9 +48,9 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
 import lombok.SneakyThrows;
 
 public class Armor extends EquipableItem {

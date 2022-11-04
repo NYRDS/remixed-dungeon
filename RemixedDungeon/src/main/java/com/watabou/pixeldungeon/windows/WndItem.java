@@ -86,8 +86,14 @@ public class WndItem extends Window {
 						acton.act(owner);
 
 						hide();
-						bag.hide();
-						owner.nextAction(new UseItem(item, action));
+
+						if (!CommonActions.hideBagOnAction(action)) {
+							if( bag.getActiveDialog() == null) {
+								bag.updateItems();
+							}
+						} else {
+							bag.hide();
+						}
 					}
 				};
 				btn.setSize( Math.max( BUTTON_WIDTH, btn.reqWidth() ), BUTTON_HEIGHT );

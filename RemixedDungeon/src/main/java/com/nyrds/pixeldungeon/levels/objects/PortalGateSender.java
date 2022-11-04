@@ -11,8 +11,8 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class PortalGateSender extends PortalGate {
 

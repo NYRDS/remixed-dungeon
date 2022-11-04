@@ -31,7 +31,6 @@ import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.SystemTime;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -85,7 +84,7 @@ public enum Rankings {
 		resDesc.put("duration", Float.toString(Statistics.duration));
 
 		resDesc.put("difficulty", Integer.toString(GameLoop.getDifficulty()));
-		resDesc.put("version",   GameLoop.version);
+		resDesc.put("version",   Game.version);
 		resDesc.put("mod",       ModdingMode.activeMod());
 		resDesc.put("modVersion",Integer.toString(ModdingMode.activeModVersion()));
 		resDesc.put("donation",  Integer.toString(GamePreferences.donated()));
@@ -140,7 +139,7 @@ public enum Rankings {
 			}
 
 			if (removedGame.gameFile.length() > 0) {
-				new File(removedGame.gameFile).delete();
+				Game.instance().deleteFile( removedGame.gameFile );
 			}
 		}
 

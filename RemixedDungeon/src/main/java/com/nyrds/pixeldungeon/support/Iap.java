@@ -1,10 +1,11 @@
 package com.nyrds.pixeldungeon.support;
 
+import android.app.Activity;
+
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -26,8 +27,8 @@ public class Iap implements IPurchasesUpdated {
 
     private IIapCallback mIapCallback = null;
 
-    public Iap() {
-        mIap = new IapAdapter(Game.instance(), this);
+    public Iap(Activity context) {
+        mIap = new IapAdapter(context, this);
 
         List<String> items = new ArrayList<>();
 

@@ -23,9 +23,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Keyring;
 
 import org.jetbrains.annotations.NotNull;
-
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Key extends Item {
 

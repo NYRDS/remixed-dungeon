@@ -91,7 +91,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 	@LuaInterface
 	public void deactivateActor() {
-		time = Float.MAX_VALUE;
+		time = Util.BIG_FLOAT;
 	}
 
 	@Override
@@ -134,7 +134,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 			Statistics.duration += now;
 		}
 		
-		float min = Float.MAX_VALUE;
+		float min = Util.BIG_FLOAT;
 		for (Actor a : all) {
 			if (a.time < min) {
 				min = a.time;
@@ -215,7 +215,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		Actor actor;
 
 		//Log.i("Main loop", "start");
-		while ((actor=getNextActor(Float.MAX_VALUE)) != null) {
+		while ((actor=getNextActor(Util.BIG_FLOAT)) != null) {
 
 			if (actor instanceof Char && ((Char)actor).getSprite().doingSomething()) {
 				checkSkips(actor);

@@ -31,7 +31,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 
 	public GoogleRewardVideoAds() {
-		Game.runOnMainThread(this::loadNextVideo);
+		GameLoop.runOnMainThread(this::loadNextVideo);
 	}
 
 

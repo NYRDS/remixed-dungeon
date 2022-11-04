@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.game;
 
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.platform.EventCollector;
@@ -9,19 +10,16 @@ import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.gl.Gl;
-import com.nyrds.platform.gl.NoosaScript;
 import com.nyrds.platform.input.Keys;
-import com.nyrds.platform.input.PointerEvent;
 import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.ReportingExecutor;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Gizmo;
+import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
-import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
 
 import org.luaj.vm2.LuaError;
@@ -36,6 +34,8 @@ import lombok.SneakyThrows;
 public class GameLoop {
 
     public static final AtomicInteger loadingOrSaving = new AtomicInteger();
+    public static final Object stepLock = new Object();
+
     public static final Object stepLock = new Object();
     public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
 
@@ -81,7 +81,7 @@ public class GameLoop {
     public Runnable doOnResume;
 
     // Accumulated touch events
-    public final ConcurrentLinkedQueue<PointerEvent> motionEvents = new ConcurrentLinkedQueue<>();
+    public final ConcurrentLinkedQueue<MotionEvent> motionEvents = new ConcurrentLinkedQueue<>();
 
     // Accumulated key events
     public final ConcurrentLinkedQueue<KeyEvent> keysEvents = new ConcurrentLinkedQueue<>();
@@ -135,10 +135,13 @@ public class GameLoop {
     }
 
     public static void addToScene(Gizmo gizmo) {
-        Scene scene = scene();
-        if (scene != null) {
-            scene.add(gizmo);
-        }
+        GameLoop.pushUiTask(()->
+            {
+                Scene scene = scene();
+                if (scene != null) {
+                    scene.add(gizmo);
+                }
+            });
     }
 
     @LuaInterface
@@ -156,6 +159,7 @@ public class GameLoop {
         switchScene(instance().sceneClass);
     }
 
+<<<<<<<<< Temporary merge branch 1
     public static boolean smallResScreen() {
         return width() <= 320 && height() <= 320;
     }
@@ -187,6 +191,12 @@ public class GameLoop {
     public static void switchNoFade(Class<? extends PixelScene> c) {
         PixelScene.noFade = true;
         switchScene(c);
+=========
+    static public void runOnMainThread(Runnable runnable) {
+        pushUiTask(() -> {
+            Game.instance().runOnUiThread(runnable);
+        });
+>>>>>>>>> Temporary merge branch 2
     }
 
     public void shutdown() {
@@ -230,7 +240,22 @@ public class GameLoop {
                     task.run();
                 }
 
-                if (!softPaused && loadingOrSaving.get() == 0) {
+<<<<<<<<< Temporary merge branch 1
+        if (framesSinceInit>2) {
+            Runnable task;
+            while ((task = uiTasks.poll()) != null) {
+                task.run();
+            }
+
+            if (!softPaused) {
+                try {
+                    step();
+                } catch (LuaError e) {
+                    throw ModdingMode.modException(e);
+                } catch (Exception e) {
+                    throw new TrackedRuntimeException(e);
+=========
+                if (!Game.softPaused && loadingOrSaving.get() == 0) {
                     try {
                             if (requestedReset) {
                                 requestedReset = false;

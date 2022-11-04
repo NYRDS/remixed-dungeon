@@ -1,13 +1,13 @@
 package com.nyrds.util;
 
-import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.game.Game;
 
 /**
  * Created by mike on 14.08.2016.
  */
 public class GuiProperties {
 	public static int regularFontSize() {
-		if(GameLoop.smallResScreen()) {
+		if(Game.smallResScreen()) {
 			return 8;
 		} else {
 			return 7;
@@ -19,7 +19,7 @@ public class GuiProperties {
 	}
 
 	public static int smallFontSize() {
-		if(GameLoop.smallResScreen()) {
+		if(Game.smallResScreen()) {
 			return 8;
 		} else {
 			return 6;

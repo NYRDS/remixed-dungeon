@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.effects;
 
+import android.opengl.GLES20;
+
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.gl.Gl;
-import com.nyrds.platform.gl.NoosaScript;
 import com.watabou.gltextures.Gradient;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
@@ -33,6 +33,8 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
+
+import javax.microedition.khronos.opengles.GL10;
 
 @LuaInterface
 public class Flare extends Visual {
@@ -179,9 +181,9 @@ public class Flare extends Visual {
 		super.draw();
 		
 		if (lightMode) {
-			Gl.blendSrcAlphaOne();
+			GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE );
 			drawRays();
-			Gl.blendSrcAlphaOneMinusAlpha();
+			GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA );
 		} else {
 			drawRays();
 		}

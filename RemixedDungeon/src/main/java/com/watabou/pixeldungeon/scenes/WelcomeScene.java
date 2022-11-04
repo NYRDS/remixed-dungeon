@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
@@ -88,8 +89,8 @@ public class WelcomeScene extends PixelScene {
         RedButton okay = new RedButton(StringsManager.getVar(R.string.Welcome_Ok)) {
 			@Override
 			protected void onClick() {
-				GamePreferences.version(GameLoop.versionCode);
-				GamePreferences.versionString(GameLoop.version);
+				GamePreferences.version(Game.versionCode);
+				GamePreferences.versionString(Game.version);
 
 				if (Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS, 1) == 0) {
 					GameLoop.switchScene(AllowStatisticsCollectionScene.class);

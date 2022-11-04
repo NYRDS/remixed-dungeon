@@ -1,6 +1,8 @@
 package com.nyrds.util;
 
-import com.nyrds.platform.util.PUtil;
+import android.content.SharedPreferences;
+
+import com.nyrds.platform.storage.Preferences;
 
 import java.util.UUID;
 
@@ -9,8 +11,21 @@ public class UserKey {
 
 	private static Crypter crypter;
 
+	private static final String noKey="noKey";
+
 	private static void init() {
-		userId = PUtil.getUserId();
+
+		SharedPreferences prefs = Preferences.INSTANCE.get();
+
+		String key = prefs.getString("userKey", noKey);
+		if(key.equals(noKey)) { 
+			userId = UUID.randomUUID();
+			
+			prefs.edit().putString("userKey", userId.toString()).apply();
+		} else {
+			userId = UUID.fromString(key);
+		}
+
 		crypter = new Crypter("RPD_UserKey_"+userId.toString());
 	}
 

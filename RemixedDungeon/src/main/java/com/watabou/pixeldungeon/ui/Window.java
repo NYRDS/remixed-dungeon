@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.windows.WndHelper;
+import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.input.Keys;
 import com.nyrds.platform.input.Keys.Key;
@@ -93,8 +93,8 @@ public class Window extends Group implements Signal.Listener<Key>, IWindow {
 			(int) chrome.width,
 			(int) chrome.height,
 			PixelScene.defaultZoom );
-		camera.x = (int)(GameLoop.width() - camera.width * camera.zoom) / 2;
-		camera.y = (int)(GameLoop.height() - camera.height * camera.zoom) / 2;
+		camera.x = (int)(Game.width() - camera.width * camera.zoom) / 2;
+		camera.y = (int)(Game.height() - camera.height * camera.zoom) / 2;
 		camera.scroll.set(chrome.getX(), chrome.getY());
 		Camera.add( camera );
 		
@@ -112,10 +112,10 @@ public class Window extends Group implements Signal.Listener<Key>, IWindow {
 		chrome.size( 
 			width + chrome.marginHor(),
 			height + chrome.marginVer() );
-		
-		camera.resize( (int)chrome.width, (int)chrome.height );
-		camera.x = (int)(GameLoop.width() - camera.screenWidth()) / 2;
-		camera.y = (int)(GameLoop.height() - camera.screenHeight()) / 2;
+
+		camera.resize( (int) chrome.width, (int) chrome.height);
+		camera.x = (int)(Game.width() - camera.screenWidth()) / 2;
+		camera.y = (int)(Game.height() - camera.screenHeight()) / 2;
 	}
 	
 	public void hide() {

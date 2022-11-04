@@ -1,18 +1,27 @@
 package com.nyrds.util;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Bundle;
+import android.os.Environment;
+import android.os.StatFs;
 import android.util.Base64;
 
-import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.utils.Callback;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.security.MessageDigest;
@@ -25,6 +34,7 @@ import lombok.SneakyThrows;
 public class Util {
     public static final String SAVE_ADS_EXPERIMENT = "SaveAdsExperiment2";
     public static Callback nullCallback = () -> {};
+	public static final float BIG_FLOAT = Float.MAX_VALUE / 16384;
 
     private static String stackTraceToString(Throwable e) {
 		StringWriter sw = new StringWriter();
@@ -36,7 +46,15 @@ public class Util {
 		return e.getMessage() + "\n" + Util.stackTraceToString(e) + "\n";
 	}
 
+	static public boolean isConnectedToInternet() {
+		boolean connectionStatus;
 
+		ConnectivityManager connectivityManager
+				= (ConnectivityManager) Game.instance().getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+		connectionStatus = activeNetworkInfo != null && activeNetworkInfo.isConnected();
+		return connectionStatus;
+	}
 
 	@SneakyThrows
 	static public String getSignature(Context context) {
@@ -74,8 +92,29 @@ public class Util {
 		return -1;
 	}
 
-	public static boolean isDebug() {
-      return BuildConfig.DEBUG || GameLoop.isDev();
+    public static String bundle2string(Bundle bundle) {
+        if (bundle == null) {
+            return null;
+        }
+        StringBuilder string = new StringBuilder("Bundle{");
+        for (String key : bundle.keySet()) {
+            string.append(" ").append(key).append(" => ").append(bundle.get(key)).append(";");
+        }
+        string.append(" }Bundle");
+        return string.toString();
+    }
+
+    @SuppressLint("NewApi")
+    public static long getAvailableInternalMemorySize() {
+        File path = Environment.getDataDirectory();
+        StatFs stat = new StatFs(path.getPath());
+        long ret = stat.getAvailableBytes();
+        EventCollector.setSessionData("FreeInternalMemorySize", Long.toString(ret));
+        return ret;
+    }
+
+    public static boolean isDebug() {
+      return BuildConfig.DEBUG || RemixedDungeon.isDev();
     }
 
 }

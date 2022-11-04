@@ -349,7 +349,7 @@ public class StartScene extends PixelScene {
 
     @Override
     protected void onBackPressed() {
-        GameLoop.switchNoFade(TitleScene.class);
+        RemixedDungeon.switchNoFade(TitleScene.class);
     }
 
     private class ClassShield extends Button {

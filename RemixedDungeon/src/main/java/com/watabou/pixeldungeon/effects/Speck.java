@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.effects;
 
 import android.annotation.SuppressLint;
+import android.util.Pair;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
@@ -28,11 +29,8 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
-import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.Map;
-
-import lombok.var;
 
 public class Speck extends Image {
 
@@ -77,7 +75,7 @@ public class Speck extends Image {
 
     private static TextureFilm film;
 
-    private static final Map<AbstractMap.SimpleEntry<Integer, Integer>, Emitter.Factory> factories = new HashMap<>(); // Because Pair is andorid-specific for Java 8
+    private static final Map<Pair<Integer, Integer>, Emitter.Factory> factories = new HashMap<>();
 
     public Speck() {
         texture(Assets.SPECKS);
@@ -460,7 +458,7 @@ public class Speck extends Image {
 
     public static Emitter.Factory factory(final int animationType, final int evolutionType, final boolean lightMode) {
 
-        var key = new AbstractMap.SimpleEntry<>(animationType, evolutionType);
+        Pair<Integer, Integer> key = new Pair<>(animationType, evolutionType);
 
         Emitter.Factory factory = factories.get(key);
 

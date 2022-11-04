@@ -1,8 +1,9 @@
 package com.watabou.noosa;
 
+import android.graphics.Bitmap;
+import android.opengl.GLES20;
+
 import com.nyrds.platform.compatibility.RectF;
-import com.nyrds.platform.gfx.BitmapData;
-import com.nyrds.platform.gl.Texture;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
@@ -47,7 +48,7 @@ public class Font extends TextureFilm {
 		texture.filter(Texture.LINEAR,Texture.NEAREST);
 	}
 
-	private int findNextEmptyLine(BitmapData bitmap, int startFrom, int color){
+	private int findNextEmptyLine(Bitmap bitmap, int startFrom, int color){
 		int width  = bitmap.getWidth();
 		int height = bitmap.getHeight();
 		
@@ -68,17 +69,16 @@ public class Font extends TextureFilm {
 		return nextEmptyLine;
 	}
 	
-	private boolean isColumnEmpty(BitmapData bitmap, int x, int sy, int ey, int color){
+	private boolean isColumnEmpty(Bitmap bitmap, int x, int sy, int ey, int color){
 		for(int j = sy; j < ey; ++j){
-			if((bitmap.getPixel(x, j) & 0xff) != color){
-				//GLog.debug("non-background %dx%d -> %x", x, j,bitmap.getPixel(x, j));
+			if(bitmap.getPixel(x, j) != color){
 				return false;
 			}
 		}
 		return true;
 	}
 
-	private int findNextCharColumn(BitmapData bitmap, int sx, int sy, int ey, int color){
+	private int findNextCharColumn(Bitmap bitmap, int sx, int sy, int ey, int color){
 		int width = bitmap.getWidth();
 		
 		int nextEmptyColumn;
@@ -106,7 +106,8 @@ public class Font extends TextureFilm {
 	}
 	
 	
-	protected void splitBy(BitmapData bitmap, int color, String chars) {
+	protected void splitBy(Bitmap bitmap, int color, String chars) {
+
 		autoUppercase = chars.equals( LATIN_UPPER );
 		int length    = chars.length();
 		
@@ -123,7 +124,7 @@ public class Font extends TextureFilm {
 				lineTop++;
 			}
 			lineBottom = findNextEmptyLine(bitmap, lineTop, color);
-			//GLog.debug("Empty line: %d", lineBottom);
+			//GLog.w("Empty line: %d", lineBottom);
 			int charColumn = 0;
 			int charBorder;
 			
@@ -146,7 +147,7 @@ public class Font extends TextureFilm {
 					glyphBorder++;
 				}
 
-				//GLog.debug("added: %s %d %d %d %d",String.valueOf(chars.charAt(charsProcessed)) ,charColumn, lineTop, glyphBorder, lineBottom);
+				//GLog.w("addeded: %d %d %d %d %d",(int)chars.charAt(charsProcessed) ,charColumn, lineTop, glyphBorder, lineBottom);
 				add(chars.charAt(charsProcessed),
 					new RectF( (float)(charColumn)/bWidth,
 							   (float)lineTop/bHeight,
@@ -159,10 +160,18 @@ public class Font extends TextureFilm {
 			lineTop = lineBottom+1;
 		}
 
+		//lineHeight = baseLine = height( frames.get( chars.charAt( 0 ) ) );
 		lineHeight = baseLine = height( frames.values().iterator().next());
 	}
 
 	public static Font colorMarked(SmartTexture tex, int color, String chars ) {
+		Font font = new Font( tex );
+
+		font.splitBy( tex.bitmap, color, chars );
+		return font;
+	}
+
+	public static Font colorMarked(SmartTexture tex, int height, int color, String chars ) {
 		Font font = new Font( tex );
 		font.splitBy( tex.bitmap, color, chars );
 		return font;

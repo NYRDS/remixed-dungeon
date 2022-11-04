@@ -16,12 +16,12 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.Nullable;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
 import lombok.Getter;
 import lombok.SneakyThrows;
 

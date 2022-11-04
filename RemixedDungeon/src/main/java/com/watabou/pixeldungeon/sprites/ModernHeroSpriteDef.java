@@ -17,13 +17,12 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
 
 /**
  * Created by mike on 16.04.2016.

@@ -3,10 +3,9 @@ package com.watabou.noosa;
 import com.nyrds.platform.compatibility.RectF;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
 
 import java.util.List;
-
-import clone.org.json.JSONException;
 
 /**
  * Created by mike on 29.03.2016.

@@ -13,6 +13,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,8 +23,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
 import lombok.SneakyThrows;
 
 public class Treasury {

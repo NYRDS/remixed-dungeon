@@ -43,7 +43,6 @@ import androidx.core.content.PermissionChecker;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.EventCollector;
@@ -52,16 +51,19 @@ import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.input.Keys;
-import com.nyrds.platform.input.PointerEvent;
+import com.nyrds.util.ReportingExecutor;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
+
+import java.util.concurrent.Executor;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -72,6 +74,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @SuppressLint("StaticFieldLeak")
     private static Game instance;
 
+    // Actual size of the screen
+    private static int width;
+    private static int height;
+
+    public static String version = Utils.EMPTY_STRING;
+    public static int versionCode = 0;
     public PlayGames playGames;
     public Iap iap;
 
@@ -81,18 +89,17 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     private static volatile boolean paused = true;
 
+    public static volatile boolean softPaused = false;
+
+
+    public Executor serviceExecutor = new ReportingExecutor();
+
     protected GameLoop gameLoop;
 
     public Game(Class<? extends Scene> c) {
         super();
         instance = this;
         gameLoop = new GameLoop(c);
-    }
-
-    static public void runOnMainThread(Runnable runnable) {
-        GameLoop.pushUiTask( () -> {
-            instance().runOnUiThread(runnable);
-        });
     }
 
     public void doRestart() {
@@ -128,7 +135,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
         String finalToastText = toastText;
 
-        runOnMainThread(() -> {
+        GameLoop.runOnMainThread(() -> {
 
             Toast toast = Toast.makeText(RemixedDungeonApp.getContext(), finalToastText,
                     Toast.LENGTH_SHORT);
@@ -147,11 +154,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         super.onCreate(savedInstanceState);
         instance = this;
 
-        iap = new Iap();
+        iap = new Iap(this);
 
         try {
-            GameLoop.version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
-            GameLoop.versionCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
+            version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+            versionCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
         } catch (NameNotFoundException ignored) {
         }
 
@@ -175,7 +182,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public static void syncAdsState() {
 
         if(GamePreferences.donated() > 0) {
-            AdsUtils.removeEasyModeBanner();
+            Ads.removeEasyModeBanner();
             return;
         }
 
@@ -184,7 +191,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
 
         if (GameLoop.getDifficulty() >= 2) {
-            AdsUtils.removeEasyModeBanner();
+            Ads.removeEasyModeBanner();
         }
 
     }
@@ -228,7 +235,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @SuppressLint({"Recycle", "ClickableViewAccessibility"})
     @Override
     public boolean onTouch(View view, MotionEvent event) {
-        gameLoop.motionEvents.add(new PointerEvent(MotionEvent.obtain(event)));
+        gameLoop.motionEvents.add(MotionEvent.obtain(event));
         return true;
     }
 
@@ -258,7 +265,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     @Override
     public void onDrawFrame(GL10 gl) {
-        if (instance() == null || GameLoop.width() == 0 || GameLoop.height() == 0) {
+        if (instance() == null || width() == 0 || height() == 0) {
             gameLoop.framesSinceInit = 0;
             return;
         }
@@ -271,6 +278,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         if(!isFinishing()) {
             gameLoop.onFrame();
         }
+
+
     }
 
     @Override
@@ -279,8 +288,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
         //GLog.i("viewport: %d %d",width, height );
 
-        GameLoop.width(width);
-        GameLoop.height(height);
+        Game.width(width);
+        Game.height(height);
 
         GameLoop.setNeedSceneRestart();
     }
@@ -316,7 +325,27 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         return instance;
     }
 
-    private InterstitialPoint permissionsPoint = new Utils.SpuriousReturn();;
+    public static boolean smallResScreen() {
+        return width() <= 320 && height() <= 320;
+    }
+
+    public static int width() {
+        return width;
+    }
+
+    private static void width(int width) {
+        Game.width = width;
+    }
+
+    public static int height() {
+        return height;
+    }
+
+    private static void height(int height) {
+        Game.height = height;
+    }
+
+    private InterstitialPoint permissionsPoint = new Utils.SpuriousReturn();
 
     public void doPermissionsRequest(@NotNull InterstitialPoint returnTo, String[] permissions) {
         boolean havePermissions = true;
@@ -368,25 +397,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public void openUrl(String prompt, String address) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(address));
         Game.instance().startActivity(Intent.createChooser(intent, prompt));
-    }
-
-    public void sendEmail(String emailUri, String subject) {
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("message/rfc822");
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[] { emailUri });
-        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
-
-        Game.instance().startActivity(Intent.createChooser(intent, emailUri));
-    }
-
-
-    public static void openPlayStore() {
-        final String appPackageName = instance().getPackageName();
-        try {
-            instance().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
-        } catch (android.content.ActivityNotFoundException anfe) {
-            instance().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
-        }
     }
 
 }

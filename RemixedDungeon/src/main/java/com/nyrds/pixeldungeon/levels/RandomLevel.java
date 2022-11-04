@@ -16,13 +16,14 @@ import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Random;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import clone.org.json.JSONArray;
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
 import lombok.SneakyThrows;
 
 public class RandomLevel extends RegularLevel {

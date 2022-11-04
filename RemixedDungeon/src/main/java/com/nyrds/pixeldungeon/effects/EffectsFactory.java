@@ -5,11 +5,11 @@ import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
 
 public class EffectsFactory {
 

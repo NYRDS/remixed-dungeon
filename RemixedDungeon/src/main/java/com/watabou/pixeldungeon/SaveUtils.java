@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.GamesInProgress.Info;
@@ -123,7 +124,7 @@ public class SaveUtils {
 	public static void copySaveToSlot(String slot, HeroClass cl) {
 		deleteSaveFromSlot(slot, cl);
 
-		String[] files = FileSystem.listInternalStorage();
+		String[] files = Game.instance().fileList();
 
 		for (String file : files) {
 			if (isRelatedTo(file, cl)) {
@@ -137,11 +138,11 @@ public class SaveUtils {
 	}
 
 	public static void deleteLevels(HeroClass cl) {
-		String[] files = FileSystem.listInternalStorage();
+		String[] files = Game.instance().fileList();
 
 		for (String file : files) {
 			if (file.endsWith(".dat") && hasClassTag(cl, file)) {
-				if(!FileSystem.deleteFile(file)){
+				if(!Game.instance().deleteFile(file)){
 					GLog.toFile("Failed to delete file: %s !", file);
 				}
 			}
@@ -150,7 +151,7 @@ public class SaveUtils {
 
 	public static void deleteGameFile(HeroClass cl) {
 		String gameFile = gameFile(cl);
-		FileSystem.deleteFile(gameFile);
+		Game.instance().deleteFile(gameFile);
 	}
 
 	public static String gameFile(HeroClass cl) {

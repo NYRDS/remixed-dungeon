@@ -33,11 +33,11 @@ class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
         adView = Appodeal.getBannerView(Game.instance());
 
         if(!Appodeal.show(Game.instance(), Appodeal.BANNER_VIEW)){
-            EventCollector.logException("appodeal_show_failed");
+            //EventCollector.logException("appodeal_show_failed");
             AdsUtilsCommon.bannerFailed(AppodealBannerProvider.this);
             return;
         }
-        AdsUtils.updateBanner(adView);
+        Ads.updateBanner(adView);
     }
 
     @Override
@@ -48,12 +48,12 @@ class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
     private class AppodealBannerCallbacks implements BannerCallbacks {
         @Override
         public void onBannerLoaded(int i, boolean b) {
-            AdsUtils.updateBanner(adView);
+            Ads.updateBanner(adView);
         }
 
         @Override
         public void onBannerFailedToLoad() {
-            EventCollector.logException("appodeal_no_banner");
+            //EventCollector.logException("appodeal_no_banner");
             AdsUtilsCommon.bannerFailed(AppodealBannerProvider.this);
         }
 
@@ -64,7 +64,7 @@ class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
 
         @Override
         public void onBannerShowFailed() {
-            EventCollector.logException("appodeal_no_banner");
+            //EventCollector.logException("appodeal_no_banner");
             AdsUtilsCommon.bannerFailed(AppodealBannerProvider.this);
         }
 

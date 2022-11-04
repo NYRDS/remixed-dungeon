@@ -30,10 +30,10 @@ import lombok.var;
 
 public class FogOfWar extends Image {
 
-    private static final int VISIBLE = 0x00000000;
-    private static final int VISITED = 0xcc222222;
-    private static final int MAPPED = 0xcc111111;
-    private static final int INVISIBLE = 0xFF000000;
+    private static final int VISIBLE	= 0x00000000;
+    private static final int VISITED    = 0xCC111111;
+    private static final int MAPPED		= 0xCC442211;
+    private static final int INVISIBLE	= 0xFF000000;
 
     private int[] pixels;
 
@@ -43,8 +43,8 @@ public class FogOfWar extends Image {
     private int width2;
     private int height2;
 
-    private int mWidth;
-    private int mHeight;
+    private final int mWidth;
+    private final int mHeight;
 
     public FogOfWar(int mapWidth, int mapHeight) {
 
@@ -105,27 +105,29 @@ public class FogOfWar extends Image {
         }
 
         for (int i = 1; i < pHeight - 1; i++) {
-            int pos = (pWidth - 1) * i;
-            for (int j = 1; j < pWidth - 1; j++) {
+            int w_minus_one = pWidth - 1;
+            int pos = w_minus_one * i;
+            for (int j = 1; j < w_minus_one; j++) {
                 pos++;
                 int c = INVISIBLE;
 
 
-                if (visible[pos] && visible[pos - (pWidth - 1)] &&
-                        visible[pos - 1] && visible[pos - (pWidth - 1) - 1]) {
+                int p_minus_w_minus_one = pos - w_minus_one;
+                if (visible[pos] && visible[p_minus_w_minus_one] &&
+                        visible[pos - 1] && visible[p_minus_w_minus_one - 1]) {
                     c = VISIBLE;
-                } else if (visited[pos] || visited[pos - (pWidth - 1)] ||
-                        visited[pos - 1] || visited[pos - (pWidth - 1) - 1]) {
+                } else if (visited[pos] || visited[p_minus_w_minus_one] ||
+                        visited[pos - 1] || visited[p_minus_w_minus_one - 1]) {
                     c = VISITED;
-                } else if (mapped[pos] && mapped[pos - (pWidth - 1)] &&
-                        mapped[pos - 1] && mapped[pos - (pWidth - 1) - 1]) {
+                } else if (mapped[pos] && mapped[p_minus_w_minus_one] &&
+                        mapped[pos - 1] && mapped[p_minus_w_minus_one - 1]) {
                     c = MAPPED;
                 }
 
                 if (Util.isDebug()) {
                     var candidates = Dungeon.level.candidates;
                     if ((candidates.contains(pos) || candidates.contains(pos - 1)
-                            || candidates.contains(pos - (pWidth - 1)) || candidates.contains(pos - (pWidth - 1) - 1))
+                            || candidates.contains(p_minus_w_minus_one) || candidates.contains(p_minus_w_minus_one - 1))
                     ) {
                         c = 0xaa444499;
                     }

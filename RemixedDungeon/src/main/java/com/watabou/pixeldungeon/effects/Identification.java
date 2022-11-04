@@ -17,11 +17,14 @@
  */
 package com.watabou.pixeldungeon.effects;
 
-import com.nyrds.platform.gl.Gl;
+import android.opengl.GLES20;
+
 import com.watabou.noosa.Group;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
+
+import javax.microedition.khronos.opengles.GL10;
 
 public class Identification extends Group {
 
@@ -56,9 +59,9 @@ public class Identification extends Group {
 	
 	@Override
 	public void draw() {
-		Gl.blendSrcAlphaOne();
+		GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE );
 		super.draw();
-		Gl.blendSrcAlphaOneMinusAlpha();
+		GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA );
 	}
 	
 	public static class Speck extends PixelParticle {

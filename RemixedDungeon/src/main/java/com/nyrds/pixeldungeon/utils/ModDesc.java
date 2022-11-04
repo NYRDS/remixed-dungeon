@@ -1,12 +1,11 @@
 package com.nyrds.pixeldungeon.utils;
 
-import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
-
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class ModDesc {
     public String  url         = Utils.EMPTY_STRING;
@@ -31,6 +30,6 @@ public class ModDesc {
     }
 
     public boolean isCompatible() {
-        return rpdVersion <= (GameLoop.versionCode % 2000);
+        return rpdVersion <= (RemixedDungeon.versionCode % 2000);
     }
 }

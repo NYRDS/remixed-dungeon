@@ -17,12 +17,15 @@
  */
 package com.watabou.pixeldungeon.sprites;
 
-import com.nyrds.platform.gl.Gl;
+import android.opengl.GLES20;
+
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
+
+import javax.microedition.khronos.opengles.GL10;
 
 public class GhostSprite extends MobSprite {
 	
@@ -47,9 +50,9 @@ public class GhostSprite extends MobSprite {
 	
 	@Override
 	public void draw() {
-		Gl.blendSrcAlphaOne();
+		GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE );
 		super.draw();
-		Gl.blendSrcAlphaOneMinusAlpha();
+		GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA );
 	}
 	
 	@Override

@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.ui;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.ui.Button;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.PseudoItem;
@@ -47,9 +46,6 @@ public class ItemSlot extends Button {
     private BitmapText bottomRight;
 
     private boolean inQuickSlot;
-
-    private static final String TXT_STRENGTH    = ":%d";
-    private static final String TXT_TYPICAL_STR = "%d?";
 
     private static final String TXT_LEVEL = "%+d";
 
@@ -171,16 +167,14 @@ public class ItemSlot extends Button {
 
             if(typicalStr>0 && !inQuickSlot) {
                 if (item.isLevelKnown()) {
-
-                    int str = eitem.requiredSTR();
-                    topRight.text(Utils.format(TXT_STRENGTH, str));
-                    if (str > Dungeon.hero.effectiveSTR()) {
+                    topRight.text(eitem.knownStatsText());
+                    if (!eitem.statsRequirementsSatisfied()) {
                         topRight.hardlight(DEGRADED);
                     } else {
                         topRight.resetColor();
                     }
                 } else {
-                    topRight.text(Utils.format(TXT_TYPICAL_STR, typicalStr));
+                    topRight.text(eitem.unknownStatsText());
                     topRight.hardlight(WARNING);
                 }
             } else {

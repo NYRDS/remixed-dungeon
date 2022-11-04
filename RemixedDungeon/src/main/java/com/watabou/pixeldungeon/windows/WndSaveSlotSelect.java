@@ -300,7 +300,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
         hide();
         slot = slotName;
 
-        GameLoop.softPaused = true;
+        Game.softPaused = true;
 
         if (GamePreferences.donated() < 1) {
             Ads.displaySaveAndLoadAd(new ReturnOnlyOnce(this));
@@ -321,7 +321,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
     @Override
     public void returnToWork(boolean res) {
-        GameLoop.softPaused = false;
+        Game.softPaused = false;
 
         GameLoop.pushUiTask(() -> {
             if (!saving) {

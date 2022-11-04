@@ -18,7 +18,6 @@ import com.google.android.gms.games.snapshot.Snapshot;
 import com.google.android.gms.games.snapshot.SnapshotMetadata;
 import com.google.android.gms.games.snapshot.SnapshotMetadataChange;
 import com.google.android.gms.tasks.Task;
-import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
@@ -107,7 +106,7 @@ public class PlayGames {
 			GoogleSignIn.getClient(Game.instance(), signInOptions)
 					.silentSignIn()
 					.addOnCompleteListener(
-							GameLoop.instance().serviceExecutor,
+							Game.instance().serviceExecutor,
 							task -> {
 								if (task.isSuccessful()) {
 									 signedInAccount = task.getResult();
@@ -131,7 +130,7 @@ public class PlayGames {
 
 		GoogleSignInClient signInClient = GoogleSignIn.getClient(Game.instance(),
 				GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN);
-		signInClient.signOut().addOnCompleteListener(GameLoop.instance().serviceExecutor,
+		signInClient.signOut().addOnCompleteListener(Game.instance().serviceExecutor,
 				task -> {
 					signedInAccount = null;
 					// at this point, the user is signed out.
@@ -325,7 +324,7 @@ public class PlayGames {
 			return;
 		}
 
-		GameLoop.instance().serviceExecutor.execute(() -> {
+		Game.instance().serviceExecutor.execute(() -> {
 			try {
 				boolean res = packFilesToSnapshot(PlayGames.PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING), pathname -> {
 					String filename = pathname.getName();
@@ -356,7 +355,7 @@ return filename.startsWith("game_") && filename.endsWith(".dat");
 			return;
 		}
 
-		GameLoop.instance().serviceExecutor.execute(() -> {
+		Game.instance().serviceExecutor.execute(() -> {
 			unpackSnapshotTo(PROGRESS, FileSystem.getInternalStorageFile(Utils.EMPTY_STRING),
 					resultCallback);
 		});

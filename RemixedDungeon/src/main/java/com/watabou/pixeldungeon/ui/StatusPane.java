@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.market.MarketOptions;
-import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
@@ -177,7 +177,7 @@ public class StatusPane extends Component {
         add(btnHats);
 
         verText = new BitmapText(PixelScene.font1x);
-        verText.text(String.valueOf(GameLoop.versionCode-10000));
+        verText.text(String.valueOf(Game.versionCode-10000));
         verText.hardlight(0xaaaaaa);
         verText.alpha(0.6f);
         verText.setScaleXY(0.5f,0.5f);

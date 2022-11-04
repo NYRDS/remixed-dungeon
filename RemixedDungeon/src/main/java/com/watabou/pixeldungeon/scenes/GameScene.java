@@ -511,7 +511,6 @@ public class GameScene extends PixelScene {
                     }
                 }
             }
-
         }
 
         if(level instanceof TestLevel) {
@@ -617,14 +616,6 @@ public class GameScene extends PixelScene {
 
         if(roofTiles != null) {
             roofTiles.brightness(brightnessValue);
-        }
-
-        if (value) {
-            fog.am = +2f;
-            fog.aa = -1f;
-        } else {
-            fog.am = +1f;
-            fog.aa = 0f;
         }
     }
 
@@ -840,6 +831,13 @@ public class GameScene extends PixelScene {
         }
     }
 
+    public static void showNow(Window wnd) {
+        cancelCellSelector();
+        if (isSceneReady() && scene.sceneCreated) {
+            scene.add(wnd);
+        }
+    }
+
     public static void show(Window wnd) {
         cancelCellSelector();
         if (isSceneReady() && scene.sceneCreated) {
@@ -1002,6 +1000,12 @@ public class GameScene extends PixelScene {
     @Override
     public void resume() {
         super.resume();
+
+        if(Dungeon.heroClass == null) { // no active game in progress
+            GameLoop.switchScene(TitleScene.class);
+            return;
+        }
+
         InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
     }
 

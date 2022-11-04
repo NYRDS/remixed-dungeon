@@ -62,9 +62,9 @@ return mob.init({
 
         local priceFactor = RPD.RemixedDungeon:getDifficultyFactor() * math.pow( 1.05, (client:lvl()-1))
 
-        lesserPrice      = 100 * priceFactor
-        greatPrice       = 500 * priceFactor
-        removeCursePrice = 200 * priceFactor
+        lesserPrice      = math.floor(100 * priceFactor)
+        greatPrice       = math.floor(500 * priceFactor)
+        removeCursePrice = math.floor(200 * priceFactor)
 
         RPD.chooseOption( dialog,
                 "Bishop_title",

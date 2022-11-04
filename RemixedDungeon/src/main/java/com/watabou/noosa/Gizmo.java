@@ -138,11 +138,6 @@ public class Gizmo {
 
 	public boolean setActive(boolean active) {
 		this.active = active;
-/*
-		if(!active) {
-			GLog.debug("%s non active", toString());
-		}
-*/
 		return this.active;
 	}
 }

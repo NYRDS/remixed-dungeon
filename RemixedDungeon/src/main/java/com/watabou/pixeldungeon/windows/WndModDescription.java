@@ -1,5 +1,8 @@
 package com.watabou.pixeldungeon.windows;
 
+import android.content.Intent;
+import android.net.Uri;
+
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
@@ -56,7 +59,9 @@ public class WndModDescription extends Window {
 				TouchArea siteTouch = new TouchArea(site) {
 					@Override
 					protected void onClick(Touch touch) {
-						Game.instance().openUrl(siteUrl,siteUrl);
+						Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(siteUrl));
+
+						Game.instance().startActivity(Intent.createChooser(intent, siteUrl));
 					}
 				};
 				add(siteTouch);
@@ -73,7 +78,12 @@ public class WndModDescription extends Window {
 				TouchArea emailTouch = new TouchArea(email) {
 					@Override
 					protected void onClick(Touch touch) {
-						Game.instance().sendEmail(emailUri, StringsManager.getVar(R.string.app_name) +":"+ StringsManager.getVar(R.string.Mod_Name));
+						Intent intent = new Intent(Intent.ACTION_SEND);
+						intent.setType("message/rfc822");
+						intent.putExtra(Intent.EXTRA_EMAIL, new String[] { emailUri });
+                        intent.putExtra(Intent.EXTRA_SUBJECT, StringsManager.getVar(R.string.app_name) +":"+ StringsManager.getVar(R.string.Mod_Name));
+
+						Game.instance().startActivity(Intent.createChooser(intent, emailUri));
 					}
 				};
 				add(emailTouch);

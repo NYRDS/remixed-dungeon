@@ -3,7 +3,7 @@ Jest to gra roguelike z otwartym kodem źródłowym i z pixelową grafiką
 Pewnego razu było sobie miasteczko. Jego mieszkańcy żyli szczęśliwie ale byli tak biedni, że nie stać ich było na wyjazd na jako takie wakacje. Lecz w dniu, kiedy wszyscy porzucili nadzieję, stał się cud. Ziemia pod miasteczkiem zatrzesla się gwałtownie i uwolniła miriadę podłych potworów. Od tego czasu, mieszkańcy którzy przeżyli, zyli długo i szczęśliwie. Dlaczego? Bo lochy przyciągnęły wszelkiego rodzaju bohaterów i poszukiwaczy przygód. Ochronili niewinnych i okazali się niezłymi kupującymi, wspomagając ekonomię miasta.
 A teraz małe miasteczko rozkwitło, stojąc na szczycie niebezpiecznego lochu, wypełnionego martwymi poszukiwaczami przygód i ich nędznymi duszami.
 
-Gra oferuje:
+Cechy gry:
 - Ta gra wspiera modyfikacje stworzone przez graczy! Wraz z dalszym rozwojem tej funkcji, wkrótce będziesz w stanie stworzyć zupełnie nową grę wewnątrz Remixed Dungeon!
 - Hardkorowa gra z gatunku roguelike! 
 - 7 klas postaci do wyboru
@@ -11,7 +11,7 @@ Gra oferuje:
 - Ponad 30 poziomów głównego lochu podzielonego na 6 rodzajów
 - 3 opcjonalne lochy: Leże pająków, Nekropolia i Lodowe jaskinie
 - Dziesiątki przedmiotów i potworów
-- Różnoracy bossowie
+- Przeróżni  bossowie
 - Czapki! Wszyscy lubią czapki
 
 Zobacz nas serwer Discord:

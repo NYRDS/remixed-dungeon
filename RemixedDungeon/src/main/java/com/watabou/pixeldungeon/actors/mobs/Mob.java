@@ -41,6 +41,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
@@ -58,6 +59,7 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
+import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
@@ -69,17 +71,18 @@ import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
 import lombok.SneakyThrows;
 
 public abstract class Mob extends Char {

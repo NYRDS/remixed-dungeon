@@ -4,7 +4,6 @@ import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
-import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
@@ -21,11 +20,11 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONObject;
 import org.luaj.vm2.LuaValue;
 
 import java.util.ArrayList;
 
-import clone.org.json.JSONObject;
 import lombok.SneakyThrows;
 
 /**
@@ -41,8 +40,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	private String mobClass = "Unknown";
 
 	private boolean canBePet = false;
-
-	private int     attackRange     = 1;
 
 	private boolean friendly;
 	private boolean immortal = false;
@@ -185,9 +182,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		setViewDistance(classDesc.optInt("viewDistance", getViewDistance()));
 
 		walkingType = Enum.valueOf(WalkingType.class, classDesc.optString("walkingType","NORMAL"));
-
-        defenceVerb = StringsManager.maybeId(classDesc.optString("defenceVerb", StringsManager.getVars(R.array.Char_StaDodged)[gender]));
-
+		defenceVerb = StringsManager.maybeId(classDesc.optString("defenceVerb", StringsManager.getVars(R.array.Char_StaDodged)[gender]));
 		canBePet = classDesc.optBoolean("canBePet",canBePet);
 
 		attackRange = classDesc.optInt("attackRange",attackRange);

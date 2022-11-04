@@ -27,7 +27,7 @@
         "identified": true
       },
       {
-        "kind": "PotionOfHealing",
+        "kind": "PotionOfStrength",
         "identified": true,
         "cursed": true,
         "quantity": 1000

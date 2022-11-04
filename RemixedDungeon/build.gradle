@@ -34,8 +34,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1143
-        versionName "31.1.fix.18"
+        versionCode 1147
+        versionName "31.1.fix.20"
         targetSdkVersion 32
         minSdkVersion 19
         compileSdkVersion = 32
@@ -83,19 +83,23 @@ android {
             versionCode defaultConfig.versionCode + 10000
         }
 
-        none {
+        fdroid {
             dimension "market"
+        }
+
+        huawei {
+            minSdkVersion 19
+            dimension "market"
+            applicationIdSuffix ".huawei"
         }
 
         android {
             dimension "platform"
+
         }
 
         libgdx {
             dimension "platform"
-            packagingOptions {
-                exclude "META-INF/INDEX.LIST"
-            }
         }
 
         none {
@@ -113,30 +117,19 @@ android {
     androidResources {
         noCompress 'mp3', 'ogg'
     }
+
 }
 
-tasks.whenTaskAdded {task ->
-    if(task.name.contains("generate") && task.name.contains("ResValue")) {
-        task.enabled = false
-    }
-}
+
 
 dependencies {
     implementation project(':annotation')
-    implementation project(path: ':json_clone')
     annotationProcessor project(':processor')
 
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
     implementation 'org.hjson:hjson:3.0.0'
-
-    annotationProcessor project(':processor')
-
-    libgdxImplementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
-    libgdxImplementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
-    libgdxImplementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
-    libgdxImplementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
 
     api 'com.google.guava:guava:31.1-android'
 
@@ -157,9 +150,9 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.1.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.2.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.3.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:22.0.1"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:21.1.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:21.2.0'
 
 
     googlePlayImplementation 'com.android.billingclient:billing:4.1.0'
@@ -169,6 +162,11 @@ dependencies {
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
     googlePlayImplementation 'com.google.firebase:firebase-perf'
+
+
+    huaweiImplementation 'com.huawei.hms:ads-lite:13.4.30.301'
+    huaweiImplementation 'com.huawei.hms:hianalytics:5.0.0.300'
+    huaweiImplementation 'com.huawei.agconnect:agconnect-crash:1.4.1.300'
 }
 
 if (getGradle().getStartParameter().getTaskRequests()
@@ -176,9 +174,10 @@ if (getGradle().getStartParameter().getTaskRequests()
     apply plugin: 'com.google.firebase.crashlytics'
     apply plugin: 'com.google.gms.google-services'
     apply plugin: 'com.google.firebase.firebase-perf'
+
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+if (getGradle().getStartParameter().getTaskRequests()
+        .toString().contains("Huawei")) {
+    apply plugin: 'com.huawei.agconnect'
 }

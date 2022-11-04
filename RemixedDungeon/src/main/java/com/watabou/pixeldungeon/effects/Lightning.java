@@ -17,9 +17,10 @@
  */
 package com.watabou.pixeldungeon.effects;
 
+import android.opengl.GLES20;
+
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.gl.Gl;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
@@ -27,6 +28,8 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
+
+import javax.microedition.khronos.opengles.GL10;
 
 public class Lightning extends Group {
 
@@ -146,8 +149,8 @@ public class Lightning extends Group {
 	
 	@Override
 	public void draw() {
-		Gl.blendSrcAlphaOne();
+		GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE );
 		super.draw();
-		Gl.blendSrcAlphaOneMinusAlpha();
+		GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA );
 	}
 }

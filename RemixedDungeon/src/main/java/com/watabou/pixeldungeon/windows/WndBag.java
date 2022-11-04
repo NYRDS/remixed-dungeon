@@ -93,16 +93,16 @@ public class WndBag extends WndTabbed {
 	private static final int TAB_WIDTH_P	= 18;
 	private static final int TAB_WIDTH_L	= 26;
 		
-	private Listener listener;
-	private WndBag.Mode mode;
-	private String title;
+	private final Listener listener;
+	private final WndBag.Mode mode;
+	private final String title;
 
 	protected int count;
 	protected int col;
 	protected int row;
 	
-	private int nCols;
-	private int nRows;
+	private final int nCols;
+	private final int nRows;
 
 	private float titleBottom;
 
@@ -111,15 +111,11 @@ public class WndBag extends WndTabbed {
 
 	private static WndBag instance;
 
-	private Belongings stuff;
+	private final Belongings stuff;
 
-	public WndBag(Belongings stuff, Bag bag, Listener listener, Mode mode, String title) {
+	public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title) {
 		
 		super();
-
-		if(instance!=null) {
-			instance.hide();
-		}
 
 		stuff.getOwner().interrupt();
 
@@ -158,7 +154,6 @@ public class WndBag extends WndTabbed {
 			(int) (SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + titleBottom + SLOT_MARGIN) );
 
 		if(stuff.getOwner() instanceof Hero) {
-
 			Bag[] bags = {
 					stuff.backpack,
 					stuff.getItem( PotionBelt.class ),
@@ -178,11 +173,17 @@ public class WndBag extends WndTabbed {
 					}
 
 					add(tab);
-
-					tab.select(b == bag);
+					if(b==bag){
+						select(tab);
+					}
 				}
 			}
 		}
+
+		if(instance!=null) {
+			instance.hide();
+		}
+
 		instance = this;
 	}
 	
@@ -222,7 +223,7 @@ public class WndBag extends WndTabbed {
 		}
 	}
 
-	private void placeEquipped(Item item,Belongings.Slot slot, int image) {
+	private void placeEquipped(Item item, Belongings.Slot slot, int image) {
 		if(item != ItemsList.DUMMY) {
 			placeItem(item);
 			return;
@@ -351,7 +352,19 @@ public class WndBag extends WndTabbed {
 	
 	@Override
 	public void onClick( Tab tab ) {
-		GameScene.show( new WndBag(stuff, ((BagTab)tab).bag, listener, mode, title ) );
+		super.onClick(tab);
+
+		BagTab bagTab = (BagTab) tab;
+
+		txtTitle.text( title != null ? title : Utils.capitalize(bagTab.bag.name() ));
+		txtTitle.setX(PixelScene.align((panelWidth - txtTitle.width()) / 2));
+
+		if(txtTitle.getX() <0) {
+			txtTitle.setX(0);
+		}
+
+		clearItems();
+		placeItems(bagTab.bag);
 	}
 	
 	@Override

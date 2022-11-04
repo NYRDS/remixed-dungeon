@@ -41,12 +41,13 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import clone.org.json.JSONException;
-import clone.org.json.JSONObject;
 import lombok.SneakyThrows;
 
 public enum HeroSubClass implements CharModifier {

@@ -18,7 +18,6 @@
 package com.watabou.noosa;
 
 import com.nyrds.platform.compatibility.RectF;
-import com.nyrds.platform.gl.NoosaScript;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;

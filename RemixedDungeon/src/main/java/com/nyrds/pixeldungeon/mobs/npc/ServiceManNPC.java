@@ -9,8 +9,8 @@ import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
@@ -52,7 +52,7 @@ public class ServiceManNPC extends ImmortalNPC {
 
         getSprite().turnTo(getPos(), hero.getPos());
 
-        if (!PUtil.isConnectedToInternet()) {
+        if (!Util.isConnectedToInternet()) {
             GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.ServiceManNPC_NoConnection)));
             return true;
         }
@@ -63,14 +63,14 @@ public class ServiceManNPC extends ImmortalNPC {
         }
 
         GameLoop.pushUiTask( () -> {
-            Game.runOnMainThread(() ->
+            GameLoop.runOnMainThread(() ->
             {
                 boolean result = Ads.isRewardVideoReady();
                 GameLoop.pushUiTask(() -> {
                             if (result) {
                                 GameScene.show(new WndMovieTheatre(this, filmsSeen, getLimit()));
                             } else {
-                                GameLoop.softPaused = false;
+                                Game.softPaused = false;
                                 say(StringsManager.getVar(R.string.ServiceManNPC_NotReady));
                             }
                         }

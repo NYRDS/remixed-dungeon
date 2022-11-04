@@ -9,7 +9,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
-import clone.org.json.JSONObject;
+import org.json.JSONObject;
 
 /**
  * Created by mike on 01.07.2016.

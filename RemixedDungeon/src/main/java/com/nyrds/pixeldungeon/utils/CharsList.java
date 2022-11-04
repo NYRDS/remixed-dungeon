@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.utils;
 
-
+import com.google.android.gms.common.util.ArrayUtils;
 import com.nyrds.LuaInterface;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.Util;
@@ -14,6 +14,7 @@ import com.watabou.utils.Bundle;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -67,14 +68,12 @@ public class CharsList {
 
 
     static public void storeInBundle(Bundle bundle) {
-        bundle.put(GRAVEYARD,  destroyedChars.toArray(new Integer[0]));
+        bundle.put(GRAVEYARD,  ArrayUtils.toPrimitiveArray(destroyedChars));
     }
 
     static public void restoreFromBundle(Bundle bundle) {
         destroyedChars.clear();
-        for( int id :bundle.getIntArray(GRAVEYARD)) {
-            destroyedChars.add(id);
-        }
+        destroyedChars.addAll(Arrays.asList(ArrayUtils.toWrapperArray( bundle.getIntArray(GRAVEYARD))));
     }
 
     static public void reset() {

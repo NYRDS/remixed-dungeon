@@ -50,7 +50,7 @@ public class Quad {
 	}
 	
 	public static ShortBuffer getIndices( int size ) {
-
+		
 		if (size > indexSize) {
 			indexSize = size;
 			indices = ByteBuffer.
@@ -73,7 +73,6 @@ public class Quad {
 			indices.put( values );
 			indices.position( 0 );
 		}
-		indices.limit(size * SIZE);
 		
 		return indices;
 	}
