@@ -15,7 +15,7 @@ public class ItemsList {
     // invalid item
     public static final EquipableItem DUMMY = new DummyItem();
 
-    private static ConcurrentHashMap<Integer, Item> itemsMap = new ConcurrentHashMap<>();
+    private static final ConcurrentHashMap<Integer, Item> itemsMap = new ConcurrentHashMap<>();
 
     @LuaInterface
     @NotNull
