@@ -63,6 +63,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.BannerSprites;
@@ -1001,7 +1002,7 @@ public class GameScene extends PixelScene {
     public void resume() {
         super.resume();
 
-        if(Dungeon.heroClass == null) { // no active game in progress
+        if(Dungeon.heroClass == HeroClass.NONE) { // no active game in progress
             GameLoop.switchScene(TitleScene.class);
             return;
         }

@@ -28,6 +28,7 @@ import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.IceCavesLevel;
 import com.nyrds.pixeldungeon.levels.NecroLevel;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
@@ -36,6 +37,7 @@ import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
@@ -133,7 +135,6 @@ public class Dungeon {
     // Current char passability map
     private static boolean[] passable;
 
-    @Nullable
     public static HeroClass heroClass;
 
     private static boolean isometricMode = false;
@@ -151,6 +152,31 @@ public class Dungeon {
         PathFinder.setMapSize(w, h);
     }
 
+    public static void reset() {
+        if (!Scene.sceneMode.equals(Scene.LEVELS_TEST)) {
+            LuaEngine.reset();
+        }
+
+        Treasury.reset();
+        Statistics.reset();
+        Journal.reset();
+
+        Ghost.Quest.reset();
+        WandMaker.Quest.reset();
+        Blacksmith.Quest.reset();
+        Imp.Quest.reset();
+        ScarecrowNPC.Quest.reset();
+        AzuterronNPC.Quest.reset();
+        CagedKobold.Quest.reset();
+        PlagueDoctorNPC.Quest.reset();
+
+        Badges.reset();
+        ItemsList.reset();
+        CharsList.reset();
+
+        hero = null;
+    }
+
     public static void init() {
         synchronized (GameLoop.stepLock) {
             GameLoop.loadingOrSaving.incrementAndGet();
@@ -159,19 +185,11 @@ public class Dungeon {
 
             gameId = String.valueOf(SystemTime.now());
 
-            if (!Scene.sceneMode.equals(Scene.LEVELS_TEST)) {
-                LuaEngine.reset();
-            }
+            reset();
 
-            Treasury.reset();
-
-            Scroll.initLabels();
-            Potion.initColors();
             Wand.initWoods();
             Ring.initGems();
 
-            Statistics.reset();
-            Journal.reset();
 
             depth = 0;
 
@@ -183,20 +201,9 @@ public class Dungeon {
 
             chapters = new HashSet<>();
 
-            Ghost.Quest.reset();
-            WandMaker.Quest.reset();
-            Blacksmith.Quest.reset();
-            Imp.Quest.reset();
-            ScarecrowNPC.Quest.reset();
-            AzuterronNPC.Quest.reset();
-            CagedKobold.Quest.reset();
-            PlagueDoctorNPC.Quest.reset();
-
             Room.shuffleTypes();
 
             hero = new Hero(GameLoop.getDifficulty());
-
-            Badges.reset();
 
             heroClass.initHero(hero);
 
@@ -406,7 +413,7 @@ public class Dungeon {
         SaveUtils.deleteSaveFromSlot(SaveUtils.getPrevSave(), heroClass);
         SaveUtils.deleteSaveFromSlot(SaveUtils.getAutoSave(), heroClass);
         Dungeon.deleteGame(true);
-        heroClass = null;
+        heroClass = HeroClass.NONE;
     }
 
     public static void saveGame(String fileName) throws IOException {
@@ -858,7 +865,7 @@ public class Dungeon {
     }
 
     public static boolean ignoreDanger(@NotNull Char ch) {
-        return ch.isFlying() || ch.hasBuff(Amok.class);
+        return ch.isFlying() || ch.buffLevel(BuffFactory.AMOK) > 0;
     }
 
 
@@ -875,7 +882,7 @@ public class Dungeon {
             return Actor.findChar(to) == null ? to : Level.INVALID_CELL;
         }
 
-        if (ch.isFlying() || ch.hasBuff(Amok.class)) {
+        if (ch.isFlying() || ch.buffLevel(BuffFactory.AMOK) > 0) {
             BArray.or(pass, level.avoid, passable);
         } else {
             BArray.and_not(pass, level.avoid, passable);

@@ -73,6 +73,14 @@ public class BuffFactory {
     public static final String BLINDNESS = Blindness.class.getSimpleName();
     public static final String MIND_VISION = MindVision.class.getSimpleName();
     public static final String AWARENESS = Awareness.class.getSimpleName();
+    public static final String HUNGER = Hunger.class.getSimpleName();
+    public static final String INVISIBILITY = Invisibility.class.getSimpleName();
+    public static final String POISON = Poison.class.getSimpleName();
+    public static final String SLEEP = Sleep.class.getSimpleName();
+    public static final String SPEED = Speed.class.getSimpleName();
+    public static final String MAGIC_REGENERATION = ManaRegeneration.class.getSimpleName();
+    public static final String AMOK = Amok.class.getSimpleName();
+
 
 
     static {

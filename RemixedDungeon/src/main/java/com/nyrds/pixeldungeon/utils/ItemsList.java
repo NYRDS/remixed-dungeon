@@ -27,10 +27,13 @@ public class ItemsList {
         return ret;
     }
 
+    static public void reset() {
+        itemsMap.clear();
+    }
+
     static public void add(Item item, int id) {
         itemsMap.put(id,item);
     }
-
     static public void remove(int id) {
         itemsMap.remove(id);
     }

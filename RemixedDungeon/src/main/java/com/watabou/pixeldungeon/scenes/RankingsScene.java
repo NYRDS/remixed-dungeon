@@ -30,6 +30,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -244,7 +245,7 @@ public class RankingsScene extends PixelScene {
         private static final int FLARE_WIN  = 0x888866;
         private static final int FLARE_LOSE = 0x666666;
 
-        private Rankings.Record rec;
+        private final Rankings.Record rec;
 
         private ItemSprite shield;
         private Flare      flare;
@@ -323,6 +324,7 @@ public class RankingsScene extends PixelScene {
 
         @Override
         protected void onClick() {
+            Dungeon.reset();
             if (rec.gameFile.length() > 0) {
                 getParent().add(new WndRanking(rec.gameFile));
             } else {
