@@ -189,7 +189,8 @@ public class Dungeon {
 
             Wand.initWoods();
             Ring.initGems();
-
+            Scroll.initLabels();
+            Potion.initColors();
 
             depth = 0;
 
