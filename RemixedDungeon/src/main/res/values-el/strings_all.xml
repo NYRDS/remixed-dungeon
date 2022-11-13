@@ -2875,4 +2875,6 @@
   <string name="IceGuardianCore_DieInfo">Κάνει τόσο κρύο εδώ... Καλύτερα να επιστρέψω στο επίπεδο #14 και να βρω ένα πιο ζεστό μέρος.</string>
   <string name="Lich_DieInfo">Ποτέ δεν συμπάθησα αυτόν τον νεκρομάντη. Ώρα να επιστρέψω στο επίπεδο #7 και να αναζητήσω την επόμενη περιπέτεια.</string>
   <string name="SpiderQueen_DieInfo">Η βασίλισσα αράχνη εξουδετερώθηκε! Τώρα πρέπει να επιστρέψω στο επίπεδο #5 και να συνεχίσω το ταξίδι μου στα βάθη.</string>
+  <string name="WndModSelect_ReallyDelete">Διαγραφή σίγουρα;</string>
+  <string name="WndModSelect_AreYouSure">Διαγραφή τροποποίησης: %s. Σίγουρα;</string>
 </resources>
