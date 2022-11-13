@@ -1559,9 +1559,9 @@
   <string name="ScarecrowNPC_Gender">neuter</string>
   <string name="ScarecrowNPC_Name_Objective">σκιάχτρο</string>
   <string name="ScarecrowNPC_Desc">Δεν χωρά αμφιβολία... το σκιάχτρο παρατηρεί την κάθε σου κίνηση. Τα λαμπερά κόκκινα μάτια του μοιάζουν να εισχωρούν μέσα σου. Παραδόξως, όμως, δεν νιώθεις κάποια απειλή.</string>
-  <string name="ScarecrowNPC_Quest_Start_Male">Γεια σου, τι κάνεις, αγόρι μου καλό;\nΈχω να σου δώσω κάτι φοβερό!\nΜεγάλη χαρά θα μου προσφέρεις,\nλίγα γλυκά αν βρεις να μου φέρεις!</string>
+  <string name="ScarecrowNPC_Quest_Start_Male">Γεια σου, τι κάνεις αγόρι μου καλό;\nΈχω να σου δώσω κάτι φοβερό!\nΜεγάλη χαρά θα μου προσφέρεις,\nλίγα γλυκά αν βρεις να μου φέρεις!</string>
   <string name="ScarecrowNPC_Quest_Start_Female">Γεια σου, τι κάνεις, κορίτσι μου καλό;\nΈχω να σου δώσω κάτι φοβερό!\nΜεγάλη χαρά θα μου προσφέρεις,\nλίγα γλυκά αν βρεις να μου φέρεις!</string>
-  <string name="ScarecrowNPC_Quest_Reminder">Πέντε γλυκά ζητάω να μου βρεις.\nΓλυκιά ανταμοιβή θα λάβεις να χαρείς!</string>
+  <string name="ScarecrowNPC_Quest_Reminder">Πέντε μόνο γλυκά ζητάω να μου βρεις.\nΓλυκιά ανταμοιβή θα λάβεις να χαρείς!</string>
   <string name="ScarecrowNPC_Quest_End">Ω, μα τι μεγάλη μου έδωσες χαρά!\nΠάρε αυτήν την πίτα και σε καλή μεριά!</string>
   <string name="Journal_ScarecrowNPC">Σκιάχτρο</string>
   <string name="Mods_CreatedBy">Δημιουργήθηκε από:</string>
@@ -2875,4 +2875,6 @@
   <string name="IceGuardianCore_DieInfo">Κάνει τόσο κρύο εδώ... Καλύτερα να επιστρέψω στο επίπεδο #14 και να βρω ένα πιο ζεστό μέρος.</string>
   <string name="Lich_DieInfo">Ποτέ δεν συμπάθησα αυτόν τον νεκρομάντη. Ώρα να επιστρέψω στο επίπεδο #7 και να αναζητήσω την επόμενη περιπέτεια.</string>
   <string name="SpiderQueen_DieInfo">Η βασίλισσα αράχνη εξουδετερώθηκε! Τώρα πρέπει να επιστρέψω στο επίπεδο #5 και να συνεχίσω το ταξίδι μου στα βάθη.</string>
+  <string name="WndModSelect_ReallyDelete">Διαγραφή σίγουρα;</string>
+  <string name="WndModSelect_AreYouSure">Διαγραφή τροποποίησης: %s. Σίγουρα;</string>
 </resources>
