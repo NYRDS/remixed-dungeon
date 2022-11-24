@@ -1,12 +1,15 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import androidx.annotation.Keep;
+import androidx.annotation.NonNull;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
+import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.levels.Level;
@@ -39,14 +42,14 @@ public class Sign extends LevelObject {
 	}
 
 	@Override
-	void setupFromJson(Level level, JSONObject obj) throws JSONException {
+	void setupFromJson(Level level, @NonNull JSONObject obj) throws JSONException {
 		text = StringsManager.maybeId(obj.getString(TEXT));
 	}
 
 	@Override
-	public boolean interact(Char hero) {
+	public boolean interact(@NonNull Char hero) {
 		if(!hero.getHeroClass().forbidden(CommonActions.AC_READ)) {
-			if (hero.hasBuff(Blindness.class )) {
+			if (hero.hasBuff(BuffFactory.BLINDNESS)) {
 				GLog.w(StringsManager.getVar(R.string.Codex_Blinded));
 			} else {
 				GameScene.show(new WndMessage(text));
@@ -88,7 +91,7 @@ public class Sign extends LevelObject {
 	}
 
 	@Override
-	public int image() { //TODO use variety
-		return 16;
+	public int image() {
+		return 16 * 1 + level().objectsKind();
 	}
 }
