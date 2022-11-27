@@ -369,7 +369,7 @@ public class WndBag extends WndTabbed {
 	
 	@Override
 	protected int tabHeight() {
-		return 20;
+		return 24;
 	}
 
 	public boolean hideOnSelect() {
