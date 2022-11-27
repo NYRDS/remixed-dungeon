@@ -5,7 +5,7 @@ import com.watabou.pixeldungeon.windows.WndTabbed;
 
 public class RankingTab extends LabeledTab {
 	
-	private Group page;
+	private final Group page;
 	
 	public RankingTab(WndTabbed parent, String label, Group page ) {
 		super( parent, label );

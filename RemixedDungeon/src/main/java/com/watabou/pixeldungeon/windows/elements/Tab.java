@@ -10,7 +10,7 @@ import com.watabou.pixeldungeon.windows.WndTabbed;
 
 public class Tab extends Button {
 	
-	private final WndTabbed parent;
+	protected final WndTabbed parent;
 
 	protected Tab(WndTabbed wndTabbed) {
 		parent = wndTabbed;
@@ -34,8 +34,7 @@ public class Tab extends Button {
 	}
 	
 	public void select( boolean value ) {
-		
-		setActive(!(selected = value));
+		selected = value;
 		
 		if (bg != null) {
 			remove( bg );
