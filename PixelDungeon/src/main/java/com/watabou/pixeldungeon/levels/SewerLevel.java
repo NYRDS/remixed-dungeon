@@ -18,8 +18,8 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
+import com.nyrds.retrodungeon.ml.R;
+import com.nyrds.retrodungeon.mobs.npc.ScarecrowNPC;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.particles.Emitter;

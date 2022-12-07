@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.nyrds.pixeldungeon.mobs.common.ArmoredStatue;
-import com.nyrds.pixeldungeon.mobs.common.GoldenStatue;
+import com.nyrds.retrodungeon.mobs.common.ArmoredStatue;
+import com.nyrds.retrodungeon.mobs.common.GoldenStatue;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Statue;

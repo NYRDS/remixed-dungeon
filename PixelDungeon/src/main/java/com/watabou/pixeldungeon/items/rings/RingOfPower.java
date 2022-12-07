@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items.rings;
 
 import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 
 public class RingOfPower extends Ring {
 	

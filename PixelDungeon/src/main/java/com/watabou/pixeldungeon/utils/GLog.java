@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.utils;
 import android.util.Log;
 
 import com.nyrds.android.util.FileSystem;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.retrodungeon.ml.BuildConfig;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Signal;
 

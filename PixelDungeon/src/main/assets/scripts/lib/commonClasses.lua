@@ -10,8 +10,8 @@ RPD = {
     Dungeon = luajava.bindClass("com.watabou.pixeldungeon.Dungeon"),
     Terrain = luajava.bindClass("com.watabou.pixeldungeon.levels.Terrain"),
     Actor = luajava.bindClass("com.watabou.pixeldungeon.actors.Actor"),
-    MobFactory = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobFactory"),
-    ItemFactory = luajava.bindClass("com.nyrds.pixeldungeon.items.common.ItemFactory"),
+    MobFactory = luajava.bindClass("com.nyrds.retrodungeon.mobs.common.MobFactory"),
+    ItemFactory = luajava.bindClass("com.nyrds.retrodungeon.items.common.ItemFactory"),
     Journal = luajava.bindClass("com.watabou.pixeldungeon.Journal"),
     Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
 
@@ -45,7 +45,7 @@ RPD = {
             WndStory = "com.watabou.pixeldungeon.windows.WndStory"
         },
         Actors = {
-            ScriptedActor = "com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor"
+            ScriptedActor = "com.nyrds.retrodungeon.mechanics.actors.ScriptedActor"
         },
     },
 

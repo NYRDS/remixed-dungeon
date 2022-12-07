@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
+import com.nyrds.retrodungeon.mobs.common.IDepthAdjustable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;

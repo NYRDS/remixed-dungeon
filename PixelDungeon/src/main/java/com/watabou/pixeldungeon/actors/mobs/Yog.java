@@ -19,9 +19,9 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.common.IZapper;
-import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.retrodungeon.ml.R;
+import com.nyrds.retrodungeon.mobs.common.IZapper;
+import com.nyrds.retrodungeon.mobs.common.MobFactory;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;

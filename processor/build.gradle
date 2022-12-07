@@ -1,11 +1,12 @@
 apply plugin: 'java'
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(path: ':annotation')
-    compile 'com.google.auto.service:auto-service:1.0-rc2'
-    compile 'com.google.guava:guava:22.0'
-    compile 'com.squareup:javapoet:1.9.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':annotation')
+    implementation 'com.google.auto.service:auto-service:1.0-rc2'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc2'
+    implementation 'com.google.guava:guava:22.0'
+    implementation 'com.squareup:javapoet:1.9.0'
     
 }
 

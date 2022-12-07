@@ -18,9 +18,9 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.levels.objects.LevelObject;
-import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.levels.objects.LevelObject;
+import com.nyrds.retrodungeon.levels.objects.sprites.LevelObjectSprite;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;

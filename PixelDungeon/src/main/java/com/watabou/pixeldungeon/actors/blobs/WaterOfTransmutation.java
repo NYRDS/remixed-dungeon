@@ -17,12 +17,12 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
+import com.nyrds.retrodungeon.items.guts.weapon.melee.Claymore;
+import com.nyrds.retrodungeon.items.guts.weapon.melee.Halberd;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.Journal.Feature;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Generator;

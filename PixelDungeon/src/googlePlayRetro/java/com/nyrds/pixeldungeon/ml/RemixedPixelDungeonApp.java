@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.ml;
+package com.nyrds.retrodungeon.ml;
 
 import android.app.Application;
 

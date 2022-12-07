@@ -20,8 +20,8 @@ package com.watabou.pixeldungeon;
 import android.support.annotation.NonNull;
 
 import com.nyrds.Packable;
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.utils.Bundlable;

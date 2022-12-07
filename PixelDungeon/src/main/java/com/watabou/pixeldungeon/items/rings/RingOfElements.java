@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.rings;
 import java.util.HashSet;
 
 import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Poison;

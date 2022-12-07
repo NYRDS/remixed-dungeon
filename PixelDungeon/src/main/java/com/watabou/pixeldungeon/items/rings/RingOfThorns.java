@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.rings;
 
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 

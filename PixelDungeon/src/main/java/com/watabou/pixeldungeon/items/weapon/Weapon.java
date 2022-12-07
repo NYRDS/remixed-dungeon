@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon.items.weapon;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;

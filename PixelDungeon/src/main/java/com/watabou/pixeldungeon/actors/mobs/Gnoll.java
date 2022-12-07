@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
+import com.nyrds.retrodungeon.mobs.npc.ScarecrowNPC;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.Gold;

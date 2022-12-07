@@ -9,7 +9,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import org.luaj.vm2.Globals;

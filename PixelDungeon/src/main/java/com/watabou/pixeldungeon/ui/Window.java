@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.pixeldungeon.windows.WndHelper;
+import com.nyrds.retrodungeon.windows.WndHelper;
 import com.watabou.input.Keys;
 import com.watabou.input.Keys.Key;
 import com.watabou.input.Touchscreen.Touch;

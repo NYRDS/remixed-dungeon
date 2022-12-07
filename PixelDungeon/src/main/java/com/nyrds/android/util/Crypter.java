@@ -2,7 +2,7 @@ package com.nyrds.android.util;
 
 import android.util.Base64;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.EventCollector;
 
 import java.security.spec.KeySpec;
 

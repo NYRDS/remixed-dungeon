@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.levels.objects.Sign;
+import com.nyrds.retrodungeon.levels.objects.Sign;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.utils.Random;

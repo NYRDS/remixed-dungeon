@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.rings;
 
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 
 public class RingOfDetection extends Ring {

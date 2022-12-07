@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.pixeldungeon.support.PlayGames;
+import com.nyrds.retrodungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Button;

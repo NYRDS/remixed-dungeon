@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.nyrds.pixeldungeon.mobs.common.Crystal;
+import com.nyrds.retrodungeon.mobs.common.Crystal;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Gold;

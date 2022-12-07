@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;

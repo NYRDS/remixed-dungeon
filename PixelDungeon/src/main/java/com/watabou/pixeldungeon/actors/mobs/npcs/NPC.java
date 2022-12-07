@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import com.nyrds.pixeldungeon.mechanics.quest.Quest;
+import com.nyrds.retrodungeon.mechanics.quest.Quest;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;

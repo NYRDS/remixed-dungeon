@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.levels.CustomLevel;
-import com.nyrds.pixeldungeon.levels.objects.Barrel;
-import com.nyrds.pixeldungeon.levels.objects.Sign;
-import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.retrodungeon.levels.CustomLevel;
+import com.nyrds.retrodungeon.levels.objects.Barrel;
+import com.nyrds.retrodungeon.levels.objects.Sign;
+import com.nyrds.retrodungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;

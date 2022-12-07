@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.support;
+package com.nyrds.retrodungeon.support;
 
 import com.watabou.noosa.InterstitialPoint;
 

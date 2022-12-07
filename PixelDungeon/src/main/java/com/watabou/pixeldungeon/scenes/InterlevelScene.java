@@ -19,11 +19,11 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.pixeldungeon.utils.DungeonGenerator;
-import com.nyrds.pixeldungeon.utils.Position;
+import com.nyrds.retrodungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.R;
+import com.nyrds.retrodungeon.support.Ads;
+import com.nyrds.retrodungeon.utils.DungeonGenerator;
+import com.nyrds.retrodungeon.utils.Position;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.InterstitialPoint;

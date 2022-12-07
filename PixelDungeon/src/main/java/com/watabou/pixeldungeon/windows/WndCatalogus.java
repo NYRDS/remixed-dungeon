@@ -18,9 +18,9 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.windows.ScrollableList;
-import com.nyrds.pixeldungeon.windows.WndHelper;
+import com.nyrds.retrodungeon.ml.R;
+import com.nyrds.retrodungeon.windows.ScrollableList;
+import com.nyrds.retrodungeon.windows.WndHelper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;

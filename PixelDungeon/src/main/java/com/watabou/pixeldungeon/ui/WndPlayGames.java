@@ -1,8 +1,8 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.PlayGames;
+import com.nyrds.retrodungeon.ml.R;
+import com.nyrds.retrodungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Preferences;

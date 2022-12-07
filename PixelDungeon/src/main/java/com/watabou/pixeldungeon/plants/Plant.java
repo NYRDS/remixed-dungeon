@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.plants;
 
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;

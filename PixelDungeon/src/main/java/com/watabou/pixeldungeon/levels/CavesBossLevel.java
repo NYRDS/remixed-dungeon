@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.levels.objects.Sign;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.levels.objects.Sign;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;

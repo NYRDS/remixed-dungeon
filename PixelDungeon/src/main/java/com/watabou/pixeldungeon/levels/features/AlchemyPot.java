@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.levels.features;
 
 import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;

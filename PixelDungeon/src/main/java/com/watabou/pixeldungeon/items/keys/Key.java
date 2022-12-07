@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.keys;
 
 import android.support.annotation.NonNull;
 
-import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.retrodungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Bundle;
 

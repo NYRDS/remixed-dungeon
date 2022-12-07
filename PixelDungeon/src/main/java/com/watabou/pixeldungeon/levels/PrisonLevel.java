@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.npc.NecromancerNPC;
+import com.nyrds.retrodungeon.ml.R;
+import com.nyrds.retrodungeon.mobs.npc.NecromancerNPC;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.particles.Emitter;

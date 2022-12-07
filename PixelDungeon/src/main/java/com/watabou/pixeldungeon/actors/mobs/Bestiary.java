@@ -18,8 +18,8 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.android.util.JsonHelper;
-import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.retrodungeon.mobs.common.MobFactory;
+import com.nyrds.retrodungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;

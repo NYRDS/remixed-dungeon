@@ -1,10 +1,10 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.items.accessories.Accessory;
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.Iap;
+import com.nyrds.retrodungeon.items.accessories.Accessory;
+import com.nyrds.retrodungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.R;
+import com.nyrds.retrodungeon.support.Iap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.SystemText;

@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.items.chaos.ChaosCrystal;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;

@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.pixeldungeon.windows.WndStory;
 
 public class IntroScene extends PixelScene {

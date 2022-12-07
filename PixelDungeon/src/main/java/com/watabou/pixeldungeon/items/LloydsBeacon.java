@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.DungeonGenerator;
-import com.nyrds.pixeldungeon.utils.Position;
+import com.nyrds.retrodungeon.ml.R;
+import com.nyrds.retrodungeon.utils.DungeonGenerator;
+import com.nyrds.retrodungeon.utils.Position;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;

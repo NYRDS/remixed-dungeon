@@ -9,9 +9,8 @@ android {
             storePassword '123456'
         }
     }
-    buildToolsVersion '26.0.2'
     defaultConfig {
-        applicationId "com.nyrds.pixeldungeon.ml"
+        applicationId "com.nyrds.retrodungeon.ml"
         versionCode 482
         versionName "remix.27.4.fix.2"
     }
@@ -40,17 +39,11 @@ android {
     }
     flavorDimensions "minApi"
     productFlavors {
-        googlePlayRetro {
-            minSdkVersion 9
-            compileSdkVersion 23
-            targetSdkVersion 23
-            dimension "minApi"
 
-        }
         googlePlay {
-            targetSdkVersion 26
-            minSdkVersion 14
-            compileSdkVersion 26
+            targetSdkVersion 32
+            minSdkVersion 19
+            compileSdkVersion 32
 
             versionCode defaultConfig.versionCode + 10000
             // Enabling multidex support.
@@ -59,25 +52,17 @@ android {
         }
 
     }
-    compileSdkVersion 26
+    compileSdk 32
 }
 
 dependencies {
+    implementation project(':annotation')
+    annotationProcessor project(':processor')
+
     implementation 'ch.acra:acra:4.9.0@aar'
     implementation 'com.google.code.gson:gson:2.8.0'
     implementation 'org.luaj:luaj-jse:3.0.1'
-    //noinspection GradleDependency
-    googlePlayRetroImplementation 'com.android.support:support-v4:25.3.1'
-    //noinspection GradleDependency
-    googlePlayRetroImplementation 'com.google.android.gms:play-services-ads:9.0.2'
-    //noinspection GradleDependency
-    googlePlayRetroImplementation 'com.google.android.gms:play-services-base:9.0.2'
-    //noinspection GradleDependency
-    googlePlayRetroImplementation 'com.google.android.gms:play-services-analytics:9.0.2'
-    //noinspection GradleDependency
-    googlePlayRetroImplementation "com.google.android.gms:play-services-games:9.0.2"
 
-    googlePlayImplementation 'com.android.support:support-v4:27.0.2'
     googlePlayImplementation project(':adcolony-sdk-3.1.2')
     googlePlayImplementation 'com.squareup.picasso:picasso:2.5.2' //for Inmobi
     googlePlayImplementation 'com.google.android.gms:play-services-ads:10.2.1'
@@ -86,8 +71,7 @@ dependencies {
     googlePlayImplementation "com.google.android.gms:play-services-games:10.2.1"
     googlePlayImplementation fileTree(dir: 'lib', include: '*.jar')
     googlePlayImplementation 'com.android.support:multidex:1.0.2'
-    implementation project(':annotation')
-    annotationProcessor project(':processor')
 }
+
 
 

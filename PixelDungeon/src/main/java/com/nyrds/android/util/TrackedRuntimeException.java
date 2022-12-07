@@ -1,6 +1,6 @@
 package com.nyrds.android.util;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.EventCollector;
 
 /**
  * Created by DeadDie on 18.03.2016

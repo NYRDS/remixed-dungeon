@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.EventCollector;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.CompositeMovieClip;
 import com.watabou.noosa.CompositeTextureImage;

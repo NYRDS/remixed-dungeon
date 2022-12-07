@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import com.nyrds.pixeldungeon.items.common.RatKingCrown;
+import com.nyrds.retrodungeon.items.common.RatKingCrown;
 import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;

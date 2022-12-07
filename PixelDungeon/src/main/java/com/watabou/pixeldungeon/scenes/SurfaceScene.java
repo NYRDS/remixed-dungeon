@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.gltextures.Gradient;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.glwrap.Matrix;

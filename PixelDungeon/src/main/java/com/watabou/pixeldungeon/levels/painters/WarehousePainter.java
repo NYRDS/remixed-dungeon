@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.nyrds.pixeldungeon.levels.objects.Barrel;
+import com.nyrds.retrodungeon.levels.objects.Barrel;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;

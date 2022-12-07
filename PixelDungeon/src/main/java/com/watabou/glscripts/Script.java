@@ -17,7 +17,7 @@
 
 package com.watabou.glscripts;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.EventCollector;
 import com.watabou.glwrap.Program;
 import com.watabou.glwrap.Shader;
 

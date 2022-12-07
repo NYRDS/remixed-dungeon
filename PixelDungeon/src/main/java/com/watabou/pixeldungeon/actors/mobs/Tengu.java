@@ -17,12 +17,12 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.nyrds.pixeldungeon.mobs.common.IZapper;
+import com.nyrds.retrodungeon.mobs.common.IZapper;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.pixeldungeon.Badges.Badge;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;

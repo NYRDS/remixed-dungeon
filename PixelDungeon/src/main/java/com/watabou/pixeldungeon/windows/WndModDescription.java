@@ -5,7 +5,7 @@ import android.net.Uri;
 
 import com.nyrds.android.util.GuiProperties;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;

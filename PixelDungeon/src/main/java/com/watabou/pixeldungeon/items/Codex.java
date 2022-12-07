@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.items;
 
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;

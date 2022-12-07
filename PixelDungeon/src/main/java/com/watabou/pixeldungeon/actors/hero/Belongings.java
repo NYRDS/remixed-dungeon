@@ -20,8 +20,8 @@ package com.watabou.pixeldungeon.actors.hero;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.DungeonGenerator;
+import com.nyrds.retrodungeon.ml.R;
+import com.nyrds.retrodungeon.utils.DungeonGenerator;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.items.Amulet;

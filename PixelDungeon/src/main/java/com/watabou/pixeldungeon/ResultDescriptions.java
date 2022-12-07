@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon;
 
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 
 public class ResultDescriptions {

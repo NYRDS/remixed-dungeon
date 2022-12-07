@@ -18,8 +18,8 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.effects.NewFireball;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.effects.NewFireball;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
@@ -29,8 +29,6 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
-import com.watabou.pixeldungeon.effects.BannerSprites;
-import com.watabou.pixeldungeon.effects.Fireball;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ChangelogButton;
 import com.watabou.pixeldungeon.ui.DonateButton;

@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.features;
 
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;

@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import android.support.annotation.NonNull;
 
-import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
+import com.nyrds.retrodungeon.mobs.common.IDepthAdjustable;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;

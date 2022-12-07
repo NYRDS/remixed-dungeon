@@ -2,7 +2,7 @@ package com.nyrds.android.util;
 
 import android.support.annotation.NonNull;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.EventCollector;
 import com.watabou.pixeldungeon.PixelDungeon;
 
 import org.json.JSONArray;

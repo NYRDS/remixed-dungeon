@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
-import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
-import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
+import com.nyrds.retrodungeon.items.books.TomeOfKnowledge;
+import com.nyrds.retrodungeon.items.guts.armor.GothicArmor;
+import com.nyrds.retrodungeon.items.guts.weapon.melee.Claymore;
+import com.nyrds.retrodungeon.items.guts.weapon.melee.Halberd;
+import com.nyrds.retrodungeon.mobs.npc.AzuterronNPC;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.ImpShopkeeper;

@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
-import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
+import com.nyrds.retrodungeon.mobs.common.IDepthAdjustable;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;

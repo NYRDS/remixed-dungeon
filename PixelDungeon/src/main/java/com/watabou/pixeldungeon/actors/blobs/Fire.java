@@ -17,10 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
-import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.retrodungeon.levels.objects.LevelObject;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;

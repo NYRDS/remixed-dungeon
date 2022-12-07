@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.items;
 
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
+import com.nyrds.retrodungeon.mobs.spiders.SpiderServant;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.buffs.Buff;

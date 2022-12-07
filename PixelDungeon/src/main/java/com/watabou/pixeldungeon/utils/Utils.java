@@ -18,9 +18,9 @@
 package com.watabou.pixeldungeon.utils;
 
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.BuildConfig;
+import com.nyrds.retrodungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 
 import java.util.Locale;
@@ -32,7 +32,7 @@ public class Utils {
 
 	static private Class<?> getR_Field(String field) {
 		try {
-			return Class.forName("com.nyrds.pixeldungeon.ml.R$" + field);
+			return Class.forName("com.nyrds.retrodungeon.ml.R$" + field);
 		} catch (ClassNotFoundException e) {// well this is newer happens :) 
 			EventCollector.logException(e);
 		}

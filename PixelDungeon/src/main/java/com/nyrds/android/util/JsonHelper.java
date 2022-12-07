@@ -2,7 +2,7 @@ package com.nyrds.android.util;
 
 import android.support.annotation.NonNull;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.utils.GLog;
 

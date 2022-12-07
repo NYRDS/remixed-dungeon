@@ -3,7 +3,7 @@ package com.nyrds.android.util;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.EventCollector;
 
 import java.io.File;
 import java.io.FileOutputStream;

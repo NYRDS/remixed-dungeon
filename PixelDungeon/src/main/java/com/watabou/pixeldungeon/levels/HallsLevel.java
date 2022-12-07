@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.levels;
 
 import android.opengl.GLES20;
 
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Scene;

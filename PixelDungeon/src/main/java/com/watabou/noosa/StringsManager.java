@@ -8,8 +8,8 @@ import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.BuildConfig;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 

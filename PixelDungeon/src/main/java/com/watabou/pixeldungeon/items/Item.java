@@ -22,10 +22,10 @@ import android.support.annotation.Nullable;
 
 import com.nyrds.android.util.Scrambler;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.items.common.Library;
-import com.nyrds.pixeldungeon.levels.objects.Presser;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.items.common.ItemFactory;
+import com.nyrds.retrodungeon.items.common.Library;
+import com.nyrds.retrodungeon.levels.objects.Presser;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;

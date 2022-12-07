@@ -26,11 +26,11 @@ import android.view.View;
 
 import com.nyrds.android.util.Flavours;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.pixeldungeon.support.Iap;
-import com.nyrds.pixeldungeon.support.PlayGames;
+import com.nyrds.retrodungeon.ml.BuildConfig;
+import com.nyrds.retrodungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.support.Ads;
+import com.nyrds.retrodungeon.support.Iap;
+import com.nyrds.retrodungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.SystemText;
 import com.watabou.noosa.audio.Music;
@@ -62,23 +62,23 @@ public class PixelDungeon extends Game {
 				"com.watabou.pixeldungeon.items.food.Food");
 		// remix 23.1.alpha
 		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.mobs.guts.SuspiciousRat.class,
+				com.nyrds.retrodungeon.mobs.guts.SuspiciousRat.class,
 				"com.nyrds.pixeldungeon.mobs.guts.Wererat");
 		// remix 23.2.alpha
 		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore.class,
+				com.nyrds.retrodungeon.items.guts.weapon.melee.Claymore.class,
 				"com.nyrds.pixeldungeon.items.guts.weapon.melee.BroadSword");
 		// remix 24
 		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.items.accessories.Bowknot.class,
+				com.nyrds.retrodungeon.items.accessories.Bowknot.class,
 				"com.nyrds.pixeldungeon.items.accessories.BowTie");
 		// remix 24
 		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.items.accessories.Nightcap.class,
+				com.nyrds.retrodungeon.items.accessories.Nightcap.class,
 				"com.nyrds.pixeldungeon.items.accessories.SleepyHat");
 		// remix 27.2.beta
 		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.items.books.TomeOfKnowledge.class,
+				com.nyrds.retrodungeon.items.books.TomeOfKnowledge.class,
 				"com.nyrds.pixeldungeon.items.books.SpellBook");
 	}
 

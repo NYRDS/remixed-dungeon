@@ -21,12 +21,12 @@ import android.util.Log;
 
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
-import com.nyrds.pixeldungeon.support.PlayGames;
+import com.nyrds.retrodungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.R;
+import com.nyrds.retrodungeon.mobs.necropolis.DreadKnight;
+import com.nyrds.retrodungeon.mobs.spiders.SpiderGuard;
+import com.nyrds.retrodungeon.mobs.spiders.SpiderMindAmber;
+import com.nyrds.retrodungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.StringsManager;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;

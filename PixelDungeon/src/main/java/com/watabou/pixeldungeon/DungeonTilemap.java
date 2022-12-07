@@ -21,7 +21,7 @@ import android.graphics.RectF;
 
 import com.nyrds.android.util.ModdingMode;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.levels.XTilemapConfiguration;
+import com.nyrds.retrodungeon.levels.XTilemapConfiguration;
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;

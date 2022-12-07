@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon;
 
 import com.nyrds.android.util.FileSystem;
 import com.nyrds.android.util.ModdingMode;
-import com.nyrds.pixeldungeon.ml.EventCollector;
-import com.nyrds.pixeldungeon.support.PlayGames;
+import com.nyrds.retrodungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.support.PlayGames;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;

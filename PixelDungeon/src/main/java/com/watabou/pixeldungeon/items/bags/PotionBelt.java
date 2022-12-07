@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.items.bags;
 
-import com.nyrds.pixeldungeon.items.drinks.ManaPotion;
+import com.nyrds.retrodungeon.items.drinks.ManaPotion;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;

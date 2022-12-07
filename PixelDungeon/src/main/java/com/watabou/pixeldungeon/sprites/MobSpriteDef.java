@@ -2,8 +2,8 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.android.util.JsonHelper;
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.items.common.ItemFactory;
+import com.nyrds.retrodungeon.ml.EventCollector;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Game;

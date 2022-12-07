@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.levels.traps;
 
 import android.support.annotation.Nullable;
 
-import com.nyrds.pixeldungeon.levels.objects.ITrigger;
+import com.nyrds.retrodungeon.levels.objects.ITrigger;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;

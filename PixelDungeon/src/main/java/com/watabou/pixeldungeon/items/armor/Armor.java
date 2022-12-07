@@ -19,7 +19,7 @@ package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.android.util.TrackedRuntimeException;
 import com.nyrds.android.util.Util;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;

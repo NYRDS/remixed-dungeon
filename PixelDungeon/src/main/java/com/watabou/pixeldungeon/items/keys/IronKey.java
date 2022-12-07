@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.items.keys;
 
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.bags.Bag;

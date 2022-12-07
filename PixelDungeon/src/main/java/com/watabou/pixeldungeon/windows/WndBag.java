@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.windows;
 import android.graphics.RectF;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.items.chaos.IChaosItem;
+import com.nyrds.retrodungeon.items.chaos.IChaosItem;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Image;

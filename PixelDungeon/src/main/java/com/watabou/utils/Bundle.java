@@ -20,8 +20,9 @@ package com.watabou.utils;
 import android.support.annotation.NonNull;
 
 import com.nyrds.android.util.TrackedRuntimeException;
+
 import com.nyrds.generated.BundleHelper;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.EventCollector;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -36,6 +37,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;

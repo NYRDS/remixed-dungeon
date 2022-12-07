@@ -21,8 +21,8 @@ import android.content.Intent;
 import android.net.Uri;
 
 import com.nyrds.android.util.GuiProperties;
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.windows.WndHelper;
+import com.nyrds.retrodungeon.ml.R;
+import com.nyrds.retrodungeon.windows.WndHelper;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Text;

@@ -18,11 +18,11 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.android.util.TrackedRuntimeException;
-import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
-import com.nyrds.pixeldungeon.mechanics.ablities.Abilities;
-import com.nyrds.pixeldungeon.mechanics.ablities.Ordinary;
-import com.nyrds.pixeldungeon.mechanics.ablities.Undead;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.items.common.armor.NecromancerArmor;
+import com.nyrds.retrodungeon.mechanics.ablities.Abilities;
+import com.nyrds.retrodungeon.mechanics.ablities.Ordinary;
+import com.nyrds.retrodungeon.mechanics.ablities.Undead;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.items.armor.AssasinArmor;
 import com.watabou.pixeldungeon.items.armor.BattleMageArmor;

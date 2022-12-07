@@ -18,7 +18,7 @@
 package com.watabou.pixeldungeon.items;
 
 import com.watabou.noosa.Game;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Ankh extends Item {

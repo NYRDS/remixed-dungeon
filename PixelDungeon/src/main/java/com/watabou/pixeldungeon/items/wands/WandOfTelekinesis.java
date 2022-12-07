@@ -17,9 +17,9 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
-import com.nyrds.pixeldungeon.levels.objects.LevelObject;
-import com.nyrds.pixeldungeon.levels.objects.Presser;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.levels.objects.LevelObject;
+import com.nyrds.retrodungeon.levels.objects.Presser;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;

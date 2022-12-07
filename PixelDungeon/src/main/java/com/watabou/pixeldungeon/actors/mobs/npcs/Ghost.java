@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.windows.WndSadGhostNecro;
+import com.nyrds.retrodungeon.ml.R;
+import com.nyrds.retrodungeon.windows.WndSadGhostNecro;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;

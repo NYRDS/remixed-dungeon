@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon;
 import android.content.SharedPreferences;
 
 import com.nyrds.android.util.UserKey;
-import com.nyrds.pixeldungeon.ml.EventCollector;
+import com.nyrds.retrodungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 
 import java.util.HashMap;

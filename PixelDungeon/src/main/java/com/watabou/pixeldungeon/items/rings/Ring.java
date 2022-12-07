@@ -17,8 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
-import com.nyrds.pixeldungeon.items.common.UnknownItem;
-import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.retrodungeon.items.common.UnknownItem;
+import com.nyrds.retrodungeon.ml.R;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
