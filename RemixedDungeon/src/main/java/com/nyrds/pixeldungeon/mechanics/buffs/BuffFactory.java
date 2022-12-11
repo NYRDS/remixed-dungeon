@@ -80,7 +80,8 @@ public class BuffFactory {
     public static final String SPEED = Speed.class.getSimpleName();
     public static final String MAGIC_REGENERATION = ManaRegeneration.class.getSimpleName();
     public static final String AMOK = Amok.class.getSimpleName();
-
+    public static final String CHARM = Charm.class.getSimpleName();
+    public static final String SNIPER_MARK = SnipersMark.class.getSimpleName();
 
 
     static {
