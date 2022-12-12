@@ -110,7 +110,8 @@ public class Dungeon {
     private static int challenges;
     private static int facilitations;
 
-    public static Hero hero;
+    @NotNull
+    public static Hero hero = CharsList.DUMMY_HERO;
 
     public static Level level;
     public static String levelId;
@@ -174,7 +175,7 @@ public class Dungeon {
         ItemsList.reset();
         CharsList.reset();
 
-        hero = null;
+        hero = CharsList.DUMMY_HERO;
     }
 
     public static void init() {
@@ -506,7 +507,7 @@ public class Dungeon {
             Game.toast("Low memory condition");
         }
 
-        if (level != null && hero != null && hero.isAlive()) {
+        if (level != null && hero.valid() && hero.isAlive()) {
             Level thisLevel = Dungeon.level;
 
             Actor.fixTime();
@@ -921,7 +922,7 @@ public class Dungeon {
 
 
     public static boolean isLoading() {
-        return hero == null || level == null || GameLoop.loadingOrSaving.get() > 0;
+        return hero.invalid() || level == null || GameLoop.loadingOrSaving.get() > 0;
     }
 
     public static boolean realtime() {

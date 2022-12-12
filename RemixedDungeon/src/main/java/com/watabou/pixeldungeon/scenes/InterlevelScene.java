@@ -107,7 +107,7 @@ public class InterlevelScene extends PixelScene {
         Level level = Dungeon.level;
         Hero hero = Dungeon.hero;
 
-        if(GameLoop.scene() instanceof GameScene && level !=null && hero !=null) { // not game start
+        if(GameLoop.scene() instanceof GameScene && level !=null && hero.valid()) { // not game start
             hero.getSprite().completeForce();
             for(Mob mob: level.getCopyOfMobsArray()) {
                 mob.getSprite().completeForce();
@@ -215,7 +215,7 @@ public class InterlevelScene extends PixelScene {
 
         Collection<Mob> followers = CharsList.emptyMobList;
 
-        if (Dungeon.hero == null) {
+        if (Dungeon.hero.invalid()) {
             Dungeon.level = null;
             Dungeon.init();
         } else {

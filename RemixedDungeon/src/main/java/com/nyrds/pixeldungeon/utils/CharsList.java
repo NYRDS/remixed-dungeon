@@ -6,6 +6,7 @@ import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.DummyChar;
+import com.watabou.pixeldungeon.actors.DummyHero;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -24,6 +25,7 @@ public class CharsList {
 
     // Unreachable target
     public static final Char DUMMY = new DummyChar();
+    public static final Hero DUMMY_HERO = new DummyHero();
 
     private static final ConcurrentHashMap<Integer, Char> charsMap = new ConcurrentHashMap<>();
     private static final HashSet<Integer> destroyedChars = new HashSet<>();

@@ -78,7 +78,7 @@ public class MirrorImage extends Mob {
 		if(look.length > 0 && deathEffect!=null && !deathEffect.isEmpty()) {
 			return HeroSpriteDef.createHeroSpriteDef(look, deathEffect);
 		} else { // first sprite generation
-			if(Dungeon.hero != null) {
+			if(Dungeon.hero.valid()) {
 				look = Dungeon.hero.getHeroSprite().getLayersDesc();
 				deathEffect = Dungeon.hero.getHeroSprite().getDeathEffect();
 			} else { // dirty hack here

@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.EuConsent;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.nyrds.platform.audio.Sample;
@@ -146,7 +147,7 @@ public class StartScene extends PixelScene {
         btnLoad = new GameButton(StringsManager.getVar(R.string.StartScene_Load)) {
             @Override
             protected void onClick() {
-                Dungeon.hero = null;
+                Dungeon.hero = CharsList.DUMMY_HERO;
                 Dungeon.heroClass = curShield.cl;
                 InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
             }

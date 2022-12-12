@@ -194,8 +194,8 @@ public class GameScene extends PixelScene {
 
         Hero hero = Dungeon.hero;
 
-        if(hero==null) {
-            throw new TrackedRuntimeException("Trying to create GameScene when hero is nil!");
+        if(hero.invalid()) {
+            throw new TrackedRuntimeException("Trying to create GameScene when hero is invalid!");
         }
 
         createGameScene(level, hero);
@@ -533,7 +533,7 @@ public class GameScene extends PixelScene {
         synchronized (GameLoop.stepLock) {
             if (!Game.softPaused) {
                 final Hero hero = Dungeon.hero;
-                if (hero != null && hero.isAlive()) {
+                if (hero.isAlive()) {
                     Dungeon.save(false);
                 }
             }
@@ -554,7 +554,7 @@ public class GameScene extends PixelScene {
 
         final Hero hero = Dungeon.hero;
 
-        if (hero == null || hero.invalid()) {
+        if (hero.invalid()) {
             return;
         }
 
@@ -951,7 +951,7 @@ public class GameScene extends PixelScene {
     static public boolean cancel() {
         Hero hero = Dungeon.hero;
 
-        if(hero!=null) {
+        if(hero.valid()) {
             hero.next();
             if (hero.curAction != null || hero.restoreHealth) {
 

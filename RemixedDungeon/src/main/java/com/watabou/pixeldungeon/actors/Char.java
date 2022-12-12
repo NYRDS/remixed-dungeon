@@ -786,7 +786,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public boolean isAlive() {
-        return hp() > 0;
+        return valid() && hp() > 0;
     }
 
     protected float _attackDelay() {
