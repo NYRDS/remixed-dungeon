@@ -17,7 +17,7 @@ t * Pixel Dungeon
  */
 package com.watabou.pixeldungeon;
 
-import com.google.firebase.perf.metrics.AddTrace;
+
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.ai.MobAi;
@@ -140,6 +140,7 @@ public class Dungeon {
 
     private static boolean isometricMode = false;
     public static boolean isometricModeAllowed = false;
+
 
     public static void initSizeDependentStuff(int w, int h) {
         int size = w * h;
