@@ -9,14 +9,18 @@ mods_json = urllib.request.urlopen("https://nyrds.github.io/NYRDS/mods2.json").r
 mods = json.loads(mods_json)
 mods['info'] = {}
 
+print("Downloading mods...")
 for cat in mods['known_mods']:
     for mod in mods['known_mods'][cat]:
+        print(mod)
         urllib.request.urlretrieve(mod['url'], mod['name'])
         with zipfile.ZipFile(mod['name'], 'r') as zip_ref:
+            print("Extracting", mod['name'])
             zip_ref.extractall(f"./mods")
 
+print("Parsing...")
 for dir in os.listdir("mods"):
-
+    print(dir)
     for lang in ["en","ru","fr","es"]:
         try:
             mod_data = {}
@@ -37,4 +41,4 @@ for dir in os.listdir("mods"):
             pass
 
 with open("mods2.json", 'w') as mods_json:
-    mods_json.write(json.dumps(mods,indent=2))
+    mods_json.write(json.dumps(mods,indent=2,ensure_ascii=False))
