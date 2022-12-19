@@ -41,7 +41,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Collections;
 
-import lombok.var;
+
 
 public class Shopkeeper extends NPC {
 

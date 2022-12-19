@@ -22,7 +22,7 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
-import lombok.var;
+
 
 /**
  * Created by DeadDie on 12.02.2016

@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 
-import lombok.var;
+
 
 public class WndSettingsInGame extends WndMenuCommon {
 

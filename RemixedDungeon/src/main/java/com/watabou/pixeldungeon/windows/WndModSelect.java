@@ -5,7 +5,9 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
+import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.ScrollableList;
+import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -67,9 +69,50 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 		add(list);
 
         float pos = 0;
+
+		VBox modsListContainer = new VBox();
+		modsListContainer.setGap(GAP);
+
 		for (Map.Entry<String, ModDesc> entry : modsList.entrySet()) {
+
+			HBox modRow = new HBox(width - GAP * 2);
+			modRow.setGap(GAP);
+
 			final ModDesc desc = entry.getValue();
 			float additionalMargin = Icons.get(Icons.CLOSE).width() + GAP;
+
+			String option = desc.name;
+			if (desc.needUpdate && haveInternet) {
+				option = (desc.installed ? "Update " : "Install ") + option;
+			}
+
+			if (desc.installed || haveInternet) {
+				RedButton btn = new RedButton(option) {
+
+					@Override
+					protected void onClick() {
+						hide();
+						onSelect(desc.installDir);
+					}
+				};
+
+				btn.setSize(width - GAP * 2 - (additionalMargin * 2), BUTTON_HEIGHT);
+				modRow.add(btn);
+				modsListContainer.add(modRow);
+				pos += BUTTON_HEIGHT;
+			}
+
+			var redQuestion = Icons.get(Icons.BTN_QUESTION);
+			redQuestion.color(0.7f,0.3f,0.3f);
+			SimpleButton modInfo = new SimpleButton(redQuestion) {
+				@Override
+				protected void onClick() {
+					ModDesc infoDesc = Mods.getModDesc(desc.name, GamePreferences.uiLanguage());
+					GameLoop.addToScene(new WndModInfo(infoDesc));
+				}
+			};
+
+			modRow.add(modInfo);
 
 			if (desc.installed && !ModdingMode.REMIXED.equals(desc.name)) {
 				SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
@@ -88,31 +131,12 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 						});
 					}
 				};
-				deleteBtn.setPos(width - (deleteBtn.width() * 2) - GAP, pos + (BUTTON_HEIGHT - deleteBtn.height())/2);
-				list.content().add(deleteBtn);
-			}
-
-			String option = desc.name;
-			if (desc.needUpdate && haveInternet) {
-				option = (desc.installed ? "Update " : "Install ") + option;
-			}
-
-			if (desc.installed || haveInternet) {
-				RedButton btn = new RedButton(option) {
-
-					@Override
-					protected void onClick() {
-						hide();
-						onSelect(desc.installDir);
-					}
-				};
-
-				btn.setRect(GAP, pos, width - GAP * 2 - (additionalMargin * 2), BUTTON_HEIGHT);
-				list.content().add(btn);
-
-				pos += BUTTON_HEIGHT;
+				modRow.add(deleteBtn);
 			}
 		}
+
+		modsListContainer.setSize(width, pos);
+		list.content().add(modsListContainer);
 
 		resize(WndHelper.getLimitedWidth(120), WndHelper.getAlmostFullscreenHeight());
 

@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
-import lombok.var;
+
 
 public class ControlledAi extends MobAi implements AiState {
 

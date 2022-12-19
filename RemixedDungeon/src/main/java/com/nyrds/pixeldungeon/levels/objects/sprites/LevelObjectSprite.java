@@ -18,7 +18,7 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
-import lombok.var;
+
 
 public class LevelObjectSprite extends MovieClip implements Tweener.Listener, MovieClip.Listener {
 

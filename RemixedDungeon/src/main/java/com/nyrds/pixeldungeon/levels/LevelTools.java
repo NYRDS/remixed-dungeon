@@ -12,7 +12,7 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 
 import lombok.val;
-import lombok.var;
+
 
 /**
  * Created by mike on 27.02.2016.

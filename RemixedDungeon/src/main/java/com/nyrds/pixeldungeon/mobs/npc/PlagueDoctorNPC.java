@@ -20,7 +20,7 @@ import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import lombok.var;
+
 
 public class PlagueDoctorNPC extends ImmortalNPC {
 

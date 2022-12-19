@@ -25,7 +25,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 
-import lombok.var;
+
 
 public class DangerIndicator extends Tag {
 	

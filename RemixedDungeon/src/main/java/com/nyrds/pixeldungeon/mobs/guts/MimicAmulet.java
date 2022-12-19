@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.utils.Bundle;
 
-import lombok.var;
+
 
 public class MimicAmulet extends Mob {
 

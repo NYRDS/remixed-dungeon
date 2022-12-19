@@ -95,7 +95,7 @@ import java.util.HashSet;
 
 import lombok.SneakyThrows;
 import lombok.val;
-import lombok.var;
+
 
 import static com.nyrds.platform.game.RemixedDungeon.MOVE_TIMEOUTS;
 

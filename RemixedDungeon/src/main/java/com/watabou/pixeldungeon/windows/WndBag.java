@@ -45,7 +45,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-import lombok.var;
+
 
 public class WndBag extends WndTabbed {
 

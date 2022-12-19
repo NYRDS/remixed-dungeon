@@ -29,7 +29,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 
-import lombok.var;
+
 
 public class AttackIndicator extends Tag {
 	

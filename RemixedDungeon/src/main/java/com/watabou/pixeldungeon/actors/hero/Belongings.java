@@ -59,7 +59,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import lombok.var;
+
 
 public class Belongings implements Iterable<Item>, Bundlable {
 

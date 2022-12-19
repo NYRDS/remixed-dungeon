@@ -57,7 +57,7 @@ import java.util.Map;
 import java.util.Set;
 
 import lombok.SneakyThrows;
-import lombok.var;
+
 
 public class BuffFactory {
     static private final Map<String, Class<? extends Buff>> buffList = new HashMap<>();

@@ -122,7 +122,7 @@ public class HBox extends BasicBox {
             if (g instanceof IPlaceable) {
                 width += ((IPlaceable) g).width() + gap;
                 height = Math.max(height,((IPlaceable) g).height());
-                //GLog.debug("vbox item: %s, %3.0f, %3.0f", g.getClass().getSimpleName(), ((IPlaceable) g).width(), gap);
+                GLog.debug("hbox item: %s, %3.0f, %3.0f", g.getClass().getSimpleName(), ((IPlaceable) g).width(), gap);
             }
         }
     }

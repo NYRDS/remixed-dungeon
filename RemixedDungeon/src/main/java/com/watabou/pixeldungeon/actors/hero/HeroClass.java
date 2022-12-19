@@ -61,7 +61,7 @@ import java.util.Set;
 
 import lombok.Getter;
 import lombok.SneakyThrows;
-import lombok.var;
+
 
 public enum HeroClass implements CharModifier {
 

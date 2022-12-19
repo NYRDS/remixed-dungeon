@@ -87,7 +87,7 @@ public class VBox extends BasicBox {
         for(Gizmo g :members) {
             if (g instanceof IPlaceable) {
                 height += ((IPlaceable) g).height() + gap;
-                //GLog.debug("vbox item: %s, %3.0f", g.getClass().getSimpleName(), ((IPlaceable) g).width());
+                GLog.debug("vbox item: %s, %3.0f", g.getClass().getSimpleName(), ((IPlaceable) g).width());
                 width = Math.max(width,((IPlaceable) g).width());
             }
         }

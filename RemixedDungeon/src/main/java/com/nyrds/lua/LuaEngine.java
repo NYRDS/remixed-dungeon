@@ -39,7 +39,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import lombok.Synchronized;
-import lombok.var;
+
 
 public class LuaEngine implements ResourceFinder {
 

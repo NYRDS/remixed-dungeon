@@ -33,7 +33,7 @@ import com.watabou.utils.PointF;
 
 import org.jetbrains.annotations.NotNull;
 
-import lombok.var;
+
 
 public class CellSelector extends TouchArea {
 

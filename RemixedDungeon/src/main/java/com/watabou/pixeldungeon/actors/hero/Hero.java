@@ -110,7 +110,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import lombok.var;
+
 
 public class Hero extends Char {
 	private static final String TXT_EXP = "%+dEXP";

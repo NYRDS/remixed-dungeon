@@ -26,7 +26,7 @@ import org.jetbrains.annotations.NotNull;
 
 import static com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.PEDESTAL;
 
-import lombok.var;
+
 
 public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 

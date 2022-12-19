@@ -27,7 +27,7 @@ import com.watabou.pixeldungeon.windows.IconTitle;
 
 import java.util.ArrayList;
 
-import lombok.var;
+
 
 public class WndGameplayCustomization extends Window {
 

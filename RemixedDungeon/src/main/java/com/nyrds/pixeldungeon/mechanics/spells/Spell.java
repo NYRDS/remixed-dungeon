@@ -22,7 +22,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.TestOnly;
 
 import lombok.val;
-import lombok.var;
+
 
 public class Spell implements NamedEntityKind {
 

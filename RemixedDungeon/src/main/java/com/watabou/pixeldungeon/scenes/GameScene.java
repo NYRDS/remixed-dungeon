@@ -110,7 +110,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
 
-import lombok.var;
+
 
 public class GameScene extends PixelScene {
 

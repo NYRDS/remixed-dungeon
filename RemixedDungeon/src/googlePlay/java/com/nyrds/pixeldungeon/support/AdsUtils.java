@@ -19,7 +19,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import lombok.var;
+
 
 //This is flavor specific class
 public class AdsUtils {

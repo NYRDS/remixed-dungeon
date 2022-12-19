@@ -16,7 +16,7 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 
-import lombok.var;
+
 
 public abstract class BossLevel extends RegularLevel {
 

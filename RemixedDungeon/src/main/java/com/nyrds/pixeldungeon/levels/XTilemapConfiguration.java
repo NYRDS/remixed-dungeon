@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import lombok.var;
+
 
 /**
  * Created by mike on 26.12.2016.

@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import lombok.SneakyThrows;
-import lombok.var;
+
 
 public class SpellFactory {
 

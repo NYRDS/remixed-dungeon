@@ -48,7 +48,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import lombok.SneakyThrows;
-import lombok.var;
+
 
 public class Buff extends Actor implements NamedEntityKind, CharModifier {
 

@@ -33,7 +33,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.ArrayList;
 
-import lombok.var;
+
 
 public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 

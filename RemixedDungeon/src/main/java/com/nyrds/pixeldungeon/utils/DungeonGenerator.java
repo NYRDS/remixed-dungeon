@@ -49,7 +49,7 @@ import java.util.List;
 import java.util.Set;
 
 import lombok.SneakyThrows;
-import lombok.var;
+
 
 public class DungeonGenerator {
 	private static final String DEAD_END_LEVEL = "DeadEndLevel";

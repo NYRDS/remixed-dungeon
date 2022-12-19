@@ -31,7 +31,7 @@ import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.utils.Signal;
 
-import lombok.var;
+
 
 public class Window extends Group implements Signal.Listener<Key>, IWindow {
 

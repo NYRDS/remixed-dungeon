@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
-import lombok.var;
+
 
 public class Horrified extends MobAi implements AiState{
 

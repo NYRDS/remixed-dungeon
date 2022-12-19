@@ -28,7 +28,7 @@ import com.watabou.noosa.Image;
 
 import java.util.Arrays;
 
-import lombok.var;
+
 
 public class FogOfWar extends Image {
 

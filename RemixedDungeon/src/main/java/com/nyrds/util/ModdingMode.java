@@ -32,7 +32,7 @@ import java.util.Map;
 import java.util.Set;
 
 import lombok.SneakyThrows;
-import lombok.var;
+
 
 public class ModdingMode {
 	public static final String REMIXED = "Remixed";

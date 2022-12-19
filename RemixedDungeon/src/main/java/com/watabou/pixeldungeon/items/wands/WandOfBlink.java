@@ -33,7 +33,7 @@ import com.watabou.utils.Callback;
 
 import org.jetbrains.annotations.NotNull;
 
-import lombok.var;
+
 
 public class WandOfBlink extends Wand {
 

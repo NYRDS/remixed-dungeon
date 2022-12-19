@@ -35,7 +35,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 
-import lombok.var;
+
 
 public class ScrollOfMagicMapping extends Scroll {
 
