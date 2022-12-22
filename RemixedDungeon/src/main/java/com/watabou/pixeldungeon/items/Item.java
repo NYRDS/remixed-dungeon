@@ -470,7 +470,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		int charmedLevel = getOwner().buffLevel(BuffFactory.CHARM);
 
 		if(charmedLevel > 0) {
-			price /= (1 - charmedLevel);
+			price /= (1 + charmedLevel);
 		}
 
 		if (price < 1) {
