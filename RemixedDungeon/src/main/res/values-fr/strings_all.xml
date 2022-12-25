@@ -2885,4 +2885,6 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="IceGuardianCore_DieInfo">Il fait si froid ici, je ferais mieux de retourner au 14ème étage et d\'essayer de trouver un endroit plus chaud.</string>
   <string name="Lich_DieInfo">Je n\'ai jamais apprécié ce nécromancien. Il est donc temps de retourner au 7ème étage et de trouver une autre voie vers une nouvelle aventure.</string>
   <string name="SpiderQueen_DieInfo">La Reine des Araignées est vaincue ! Maintenant, je devrais retourner au niveau 5 et continuer mon voyage dans les Profondeurs.</string>
+  <string name="WndModSelect_ReallyDelete">Voulez-vous vraiment l\'effacer ?</string>
+  <string name="WndModSelect_AreYouSure">Effacer le mod: %s, en êtes-vous sûr?</string>
 </resources>

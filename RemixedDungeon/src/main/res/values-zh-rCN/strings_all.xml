@@ -611,12 +611,19 @@
   <string name="SnipersMarkBuff_Name">狙击标记</string>
   <string name="SnipersMarkBuff_Info">该标记是由嗅探器做出的。</string>
   <string name="SpeedBuff_Name">速度</string>
+  <string name="SpeedBuff_Info">身躯散发着活力和能量，移动也快于寻常。</string>
   <string name="TerrorBuff_Name">惊恐</string>
+  <string name="TerrorBuff_Info">看样子有人吓坏了。</string>
   <string name="VertigoBuff_Name">眩晕</string>
+  <string name="VertigoBuff_Info">天旋地转的感觉让你都走不直了！</string>
   <string name="WeaknessBuff_Name">虚弱</string>
+  <string name="WeaknessBuff_Info">虚弱笼罩着身体，这使人更容易成为目标。</string>
   <string name="AwarenessBuff_Name">察觉</string>
+  <string name="AwarenessBuff_Info">感官变得敏锐，对周围环境的感知变得更强了。</string>
   <string name="DarkVeilBuff_Name">暗黑面纱</string>
+  <string name="DarkVeilBuff_Info">每当受到伤害时，围绕着拥有者的黑暗面纱会召唤一个灵体。</string>
   <string name="FrostAuraBuff_Name">寒冰护罩</string>
+  <string name="FrostAuraBuff_Info">环绕着身躯的冰霜会使所有接近者减速。</string>
   <string name="Belongings_Name">背包</string>
   <string name="ItemSprite_Info1">一旁掉落：%1$.1f、%2$.1f</string>
   <string name="Toolbar_Info1">你不知道那里有什么。</string>
@@ -649,6 +656,8 @@
   <string name="StartScene_Warning">你当前的所有进度会被清除。</string>
   <string name="StartScene_Yes">是的，重新开始</string>
   <string name="StartScene_No">不，返回主目录</string>
+  <string name="StartScene_Unlock">使用其他角色击杀DM-300来解锁此角色</string>
+  <string name="StartScene_UnlockElf">使用其他角色击杀矮人之王来解锁此角色</string>
   <string name="StartScene_WinGame">使用任意角色完成游戏来解锁“挑战”。</string>
   <string name="StartScene_DifficultySelect">选择难度</string>
   <string name="StartScene_DifficultyEasy">简单模式（有广告）</string>
@@ -1231,7 +1240,7 @@
   <string name="Goo_Name">粘咕</string>
   <string name="Goo_Gender">女人味</string>
   <string name="Goo_Name_Objective">粘咕</string>
-  <string name="Goo_Desc">我们对粘咕所知甚少。它甚至很有可能不是一个生物，而是拥有基础智能的下水道物质聚合物。无论如何，很明显是黑暗魔法造就了它。</string>
+  <string name="Goo_Desc">人们对粘咕知之甚少。它很有可能甚至不是一个生物，而是获得了自由意志的下水道物质聚合物。至少很明显黑魔法在它身上起了作用。</string>
   <string name="Goo_Info1">粘咕正在不断地抽动！</string>
   <string name="Goo_Info2">咕……咕……</string>
   <string name="Goo_Info3">咕-咕！</string>
@@ -1485,6 +1494,12 @@
   <string name="Badges_DeathGlyph">死于刻纹</string>
   <string name="Badges_DeathFalling">摔死</string>
   <string name="Badges_Yasd">花式作死</string>
+  <string name="Badges_BossSlain1">黏咕已被击杀</string>
+  <string name="Badges_BossSlain2">天狗已被击杀</string>
+  <string name="Badges_BossSlain3">DM-300已被击杀</string>
+  <string name="Badges_BossSlain4">矮人之王已被击杀</string>
+  <string name="Badges_BossSlain1All">黏咕被所有角色击杀过</string>
+  <string name="Badges_BossSlain3All">DM-300被所有子职业击杀过</string>
   <string name="Badges_RingHaggler">获得还价戒指</string>
   <string name="Badges_RingThorns">获得荆棘戒指</string>
   <string name="Badges_StrengthAttained1">获得13点力量</string>
@@ -1576,6 +1591,7 @@
   <string name="TownsfolkMovieNPC_Gender">男性</string>
   <string name="TownsfolkMovieNPC_Name_Objective">城镇居民</string>
   <string name="TownsfolkMovieNPC_Desc">城镇居民之一。显而易见，他只是泛泛布衣，但他的衣服看起来价值不菲。</string>
+  <string name="TownsfolkMovieNPC_Message">你知道“电影院”提供的那种特殊服务吗？太糟糕了，他们需要叫“互联网”的东西才能使用，我从来没有听说过叫“互联网”的东西。</string>
   <string name="LibrarianNPC_Name">图书管理员</string>
   <string name="LibrarianNPC_Gender">男性</string>
   <string name="LibrarianNPC_Name_Objective">图书管理员</string>
@@ -1644,10 +1660,10 @@
   <string name="ServiceManNPC_Desc">当地企业一名中规中矩的员工。</string>
   <string name="TownShopkeeper_Name">商人</string>
   <string name="TownShopkeeper_Desc">平凡的商人，却知道你的斤两。</string>
-  <string name="WndMovieTheatre_Watch">观看影片</string>
+  <string name="WndMovieTheatre_Watch">观看广告</string>
   <string name="WndMovieTheatre_No">离开</string>
   <string name="WndMovieTheatre_Bye">想回来的时候就回来，我们对你的到来而感到高兴！</string>
-  <string name="WndMovieTheatre_Instruction">欢迎来到我们的电影院！我们正在提供一项特别服务，你可以免费观看“电影”。如果你成功看完，将得到 %d 枚金币的奖励！</string>
+  <string name="WndMovieTheatre_Instruction">欢迎来到我们的电影院！我们正在提供一项特别服务，你可以免费观看一部叫“广告”的特殊电影。如果全部看完，你将得到 %d 枚金币的奖励！</string>
   <string name="WndMovieTheatre_Title">戏院</string>
   <string name="WndMovieTheatre_Thank_You">感谢你的参与！</string>
   <string name="WndPriest_Heal">治疗—花费 %d 枚金币</string>
@@ -1996,6 +2012,7 @@
   <string name="Viscosity_Txt">粘稠之%s</string>
   <string name="Viscosity_Status">延缓 %d 点伤害</string>
   <string name="DeferedDamageBuff_Name">延时伤害 (%d)</string>
+  <string name="DeferedDamageBuff_Info">疼痛已经变成了一种缓慢的疼痛，减少即将受到的伤害。\n待承受的伤害 %d 点</string>
   <string name="DeferedDamage_Killed_Txt">%s杀死了你</string>
   <string name="Plant_ACPlant">种植</string>
   <string name="Plant_Info">将这个种子扔到你想种植%1$s的地方。\n\n%2$s</string>
@@ -2210,6 +2227,7 @@
   <string name="DieHardSpell_Name">顽固</string>
   <string name="DieHardSpell_Info">会暂时增加你的回复速度，让你成为真正的死神。</string>
   <string name="DieHardBuff_Name">顽固</string>
+  <string name="DieHardBuff_Info">回复速度提高了。</string>
   <string name="SmashSpell_Name">猛劈</string>
   <string name="SmashSpell_Info">向上跃起，进行落地猛击，暂时震晕周围敌人，同时造成物理伤害。</string>
   <string name="SmashSpell_NeedWeapon">我需要一把武器来完成这次行动。</string>
@@ -2221,6 +2239,7 @@
   <string name="CloakSpell_Info">进入阴影中使敌人看不见，减少被发现的机会。附近有敌人时无法使用。</string>
   <string name="CloakSpell_EnemiesNearby">敌人在附近，你不能进入阴影中。</string>
   <string name="CloakBuff_Name">潜伏</string>
+  <string name="CloakBuff_Info">一件黑色的斗篷使你隐藏于阴影之中，让你更不容易被敌人看到。</string>
   <string name="TitleScene_Mods">MOD</string>
   <string name="WndHero_Stealth">潜行</string>
   <string name="WndHero_Awareness">察觉</string>
@@ -2671,6 +2690,7 @@ remix.30.0\n
   <string name="Calm_Info">周围有很多令人讨厌的生物，让我们帮助他们吧。</string>
   <string name="CharmSpell_Name">魅惑</string>
   <string name="CharmSpell_Info">每个人都值得爱，不是吗?</string>
+  <string name="HideInGrassSpell_Name">隐——于——草</string>
   <string name="HideInGrassSpell_Info">你精通捉迷藏。</string>
   <string name="HideInGrassSpell_NeedGrassToHide">即使是我也不能躲在明处。</string>
   <string name="MagicArrow_Name">魔法箭</string>
@@ -2790,5 +2810,58 @@ remix.30.1\n
   <string name="Moongrace_Name">月的恩典</string>
   <string name="Moongrace_Desc">这些植物数量很少，被认为是自然魔力的来源。</string>
   <string name="MoongraceBuff_Name">天赐的灵粮</string>
+  <string name="MoongraceBuff_Info">周围的空气变得更加饱和，因而可以更好地集中精力，恢复魔法储备。</string>
+  <string name="EncumbranceBuff_Name">负重</string>
+  <string name="EncumbranceBuff_Info">力量不足以有效使用 %s 。</string>
+  <string name="Level_TileDescPedestal">一个小支座。</string>
+  <string name="Level_TileDescWell"/>
+  <string name="Welcome_Text_31_0">
+    remix.31.0\n
+    ——游戏性：\n
+    —可选等距视角贴图模式！\n
+    ——修改：\n
+    —部分楼层对象！\n
+    ——修复错误\n
+    </string>
+  <string name="Level_TilePileOfStones">一堆石头。</string>
+  <string name="Level_TileDescPileOfStones">一堆极其沉重的石头，看起来无法移动。</string>
+  <string name="WndSettingsInGame_IsometricTiles">等距视角贴图</string>
+  <string name="KrampusHead_Name">坎卜斯之首</string>
+  <string name="KrampusHead_Info">你有想过扮演一个更邪恶的角色进行地牢探险会是什么感受吗？嗯，你这魔鬼般的外表肯定会给当地的幼鼠带来恐惧。</string>
+  <string name="WndSettingsInGame_GameLog">游戏日志</string>
+  <string name="Froth_ArrowInKnee">我曾经和你一样是个冒险者，\n直到我膝盖中了一箭……</string>
+  <string name="BardSong_1">我与妻子单独生活\n在一间我们自己的小木屋\n她喜欢杜松子酒而我喜欢朗姆酒\n我告诉你我们快乐极了</string>
+  <string name="SpiderElite_Name">蜘蛛精英卫队</string>
   <string name="SpiderElite_Gender">男孩</string>
+  <string name="SpiderElite_Name_Objective">蜘蛛精英卫队</string>
+  <string name="SpiderElite_Desc">就像军人一样，蜘蛛首位宣誓保卫它们的王国。蜘蛛精英的毒液是用来使它们的目标迷失方向的。</string>
+  <string name="Shaman_ZapMiss">*地精的咒骂*</string>
+  <string name="Facilitations_Names_0">没有饥饿</string>
+  <string name="Facilitations_Names_1">巨魔之躯</string>
+  <string name="Facilitations_Names_2">魔精之灵</string>
+  <string name="Facilitations_Names_3">超强力量</string>
+  <string name="Facilitations_Descriptions_0">作为突变个体，你总是会被蔑视或被他人所恐惧，但是此次征服地牢之旅中，不会感到饥饿将会再次给你带来优势。</string>
+  <string name="Facilitations_Descriptions_1">没有人知道你的父母是谁，但堪比巨魔的再生能力将会修复接下来战斗中你所受到的伤。</string>
+  <string name="Facilitations_Descriptions_2">通过对自然深入彻底的研究，你能够从环境中汲取能量，从而在旅途中不断补充你的魔力储备。</string>
+  <string name="Facilitations_Descriptions_3">拉紧了这条传承了一代又一代的食人魔皮制腰带，你朝着未知的前方迈出了一步。</string>
+  <string name="ManaRegenerationBuff_Name">魔法恢复</string>
+  <string name="ManaRegenerationBuff_Info">魔法恢复是一种buff，这能让一些事情变得简单一些。</string>
+  <string name="WndGame_Customizations">自定义设置</string>
+  <string name="Welcome_Text_31_1">
+remix.31.1\n
+——游戏性：\n
+—新的城镇居民！\n
+—新的蜘蛛类型！\n
+—灵能催眠蜘蛛将会给其它蜘蛛施加buff，而不是向玩家施加debuff。\n
+——修复错误\n</string>
+  <string name="WndTilesKind_text">你将进入一个被魔法所扭曲的地下城，但你现在可以选择你所看到地下城的样子：\n你喜欢它是较新的伪3D楼层外观还是经典的平面楼层外观？\n稍后你可以在游戏选项菜单中更改它。</string>
+  <string name="WndTilesKind_NewLook">新的外观</string>
+  <string name="WndTilesKind_ClassicLook">经典外观</string>
+  <string name="MobAi_status">此%s是%s</string>
+  <string name="WndCustomizations_Title">自定义设置</string>
+  <string name="IceGuardianCore_DieInfo">这里太冷了，我最好回到14层找个暖和点的地方。</string>
+  <string name="Lich_DieInfo">我挺讨厌这个死灵法师的。是时候回到第7层找条前往地牢下方的路继续我的冒险。</string>
+  <string name="SpiderQueen_DieInfo">蜘蛛女王已经被杀死了！现在我应该回到第5层继续我的地牢探险</string>
+  <string name="WndModSelect_ReallyDelete">真的要删除吗？</string>
+  <string name="WndModSelect_AreYouSure">删除mod：%s，你确定吗？</string>
 </resources>

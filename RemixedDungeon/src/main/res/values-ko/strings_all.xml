@@ -88,9 +88,12 @@
   <string name="ChaosCrystal_StaffFused">수정이 당신의 마법봉을 흡수했고, 지팡이의 형태가 되었습니다.</string>
   <string name="CorpseDustBuff_Name">피에 굶주린</string>
   <string name="DriedRoseBuff_Name">애정</string>
+  <string name="DriedRoseBuff_Info">이 장미는 매우 매혹적입니다.</string>
   <string name="DriedRoseCursedBuff_Name">모호함</string>
+  <string name="DriedRoseCursedBuff_Info">이 장미는 아름답지만 매혹적이지는 않습니다.</string>
   <string name="RatSkullBuff_Name">쥐스러움</string>
   <string name="RatKingCrownBuff_Name">쥐같음</string>
+  <string name="RatKingCrownBuff_Info">위대한 쥐의 왕을 경배하라. 모든 쥐는 그에 복종하고 찬양하리라.</string>
   <string name="RatKingCrown_Name">쥐 왕의 왕관</string>
   <string name="RatKingCrown_Info">그의 쥐같음의 황금 왕관으로, 영원한 힘을 상징합니다.</string>
   <string name="BishopNPC_Name">성직자</string>
@@ -105,6 +108,7 @@
   <string name="Bishop_not_interested">떠나기</string>
   <string name="Bishop_no_money">골드가 부족합니다.</string>
   <string name="Bishop_bye">산타께서 당신의 앞길을 비추시기를.</string>
+  <string name="BlessedBuff_Name">축복받은</string>
   <string name="deco_candle_name">양초</string>
   <string name="deco_candle_desc">큰 양초</string>
   <string name="Possess_Name">정신 지배</string>
@@ -149,6 +153,7 @@
   <string name="town_deco_shelf_desc">빈 선반</string>
   <string name="town_deco_banner_name">배너</string>
   <string name="town_deco_inn_bed_name">침대</string>
+  <string name="town_deco_inn_bed_desc">매우 편안한 침대 같습니다.</string>
   <string name="town_deco_barrel_wine_name">와인통</string>
   <string name="WndDontLikeAds_NotThisTime">지금은 아니다</string>
   <string name="Item_Info2">무언가</string>
@@ -1145,7 +1150,6 @@
   <string name="Goo_Name">블랙 푸딩</string>
   <string name="Goo_Gender">여성</string>
   <string name="Goo_Name_Objective">블랙 푸딩</string>
-  <string name="Goo_Desc">블랙 푸딩에 대해서는 알려진 것이 없다. 생물이 아니라, 오히려 하수구의 물질이 모인 것에 자유 의지의 씨앗이 깃든 무언가일 가능성도 있다. 무엇이든 간에, 흑마법이 이 곳에 영향을 미치고 있는게 틀림없다.</string>
   <string name="Goo_Info1">블랙 푸딩이 부풀어 오르기 시작했다!</string>
   <string name="Goo_Info2">꾸룩...꾸룩....</string>
   <string name="Goo_Info3">꾸룩-꾸룩!</string>
@@ -1558,7 +1562,6 @@
   <string name="ServiceManNPC_Desc">지역 설립의 정규 일꾼</string>
   <string name="TownShopkeeper_Name">상인</string>
   <string name="TownShopkeeper_Desc">이 사람은 일반적인 상인으로, 당신은 그가 당신의 가치를 안다고 말할 수 있습니다.</string>
-  <string name="WndMovieTheatre_Watch">영화 보기</string>
   <string name="WndMovieTheatre_No">떠나기</string>
   <string name="WndMovieTheatre_Bye">언제든지 돌아오세요!</string>
   <string name="WndMovieTheatre_Title">영화관</string>
