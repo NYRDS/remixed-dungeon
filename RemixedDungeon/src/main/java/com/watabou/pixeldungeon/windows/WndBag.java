@@ -363,6 +363,8 @@ public class WndBag extends WndTabbed {
 			txtTitle.setX(0);
 		}
 
+		lastBag = bagTab.bag;
+
 		clearItems();
 		placeItems(bagTab.bag);
 	}
