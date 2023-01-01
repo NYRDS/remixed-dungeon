@@ -24,16 +24,17 @@ import org.jetbrains.annotations.NotNull;
 
 public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider {
 
-	private static RewardedAd mCinemaRewardAd;
-	private static InterstitialPoint returnTo = new Utils.SpuriousReturn();;
+	private RewardedAd mCinemaRewardAd;
+	private InterstitialPoint returnTo = new Utils.SpuriousReturn();
 
-	private static boolean rewardEarned = false;
+	private boolean rewardEarned = false;
+	private final String adId;
 
 
-	public GoogleRewardVideoAds() {
+	public GoogleRewardVideoAds(String id) {
+		adId = id;
 		GameLoop.runOnMainThread(this::loadNextVideo);
 	}
-
 
 	@MainThread
 	private void loadNextVideo() {
@@ -56,7 +57,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 					};
 
 			RewardedAd.load(Game.instance(),
-					ModdingMode.getRewardedVideoId(),
+					adId,
 					AdMob.makeAdRequest(),
 					new RewardedAdLoadCallback() {
 						@Override

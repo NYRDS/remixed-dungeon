@@ -10,10 +10,12 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.Map;
@@ -40,8 +42,8 @@ public class AdsUtils {
             });
 
             if (!GamePreferences.uiLanguage().equals("ru")) {
-                bannerFails.put(new AdMobBannerProvider(), -2);
-                interstitialFails.put(new AdMobInterstitialProvider(), -2);
+                bannerFails.put(new AdMobBannerProvider(StringsManager.getVar(R.string.easyModeAdUnitId)), -2);
+                interstitialFails.put(new AdMobInterstitialProvider(ModdingMode.getInterstitialId()), -2);
             }
 
             if (!RemixedDungeonApp.checkOwnSignature()) {
@@ -69,7 +71,7 @@ public class AdsUtils {
                 rewardVideoFails.put(new AppodealRewardVideoProvider(), -1);
             }
             if (!GamePreferences.uiLanguage().equals("ru")) {
-                rewardVideoFails.put(new GoogleRewardVideoAds(), -20);
+                rewardVideoFails.put(new GoogleRewardVideoAds(ModdingMode.getRewardedVideoId()), -20);
             }
         } catch (Exception e) {
             EventCollector.logException(e,"AdsUtils init rw");

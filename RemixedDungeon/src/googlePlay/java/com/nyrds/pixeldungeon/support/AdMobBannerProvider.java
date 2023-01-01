@@ -16,14 +16,17 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
     private AdView adView;
 
     private boolean loaded = true;
+    private final String adId;
 
-    AdMobBannerProvider(){ }
+    AdMobBannerProvider(String id){
+        adId = id;
+    }
 
     @SuppressLint("MissingPermission")
     @Override
     public void displayBanner() {
         adView = new AdView(Game.instance());
-        adView.setAdUnitId(StringsManager.getVar(R.string.easyModeAdUnitId));
+        adView.setAdUnitId(adId);
         adView.setBackgroundColor(Color.TRANSPARENT);
         adView.setAdListener(new AdMobBannerListener());
         adView.setAdSize(AdSize.SMART_BANNER);
