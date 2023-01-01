@@ -103,7 +103,7 @@ public class CustomItem extends EquipableItem {
     public Belongings.Slot blockSlot() {
         String slotName = "";
         try {
-            slotName = script.runOptional("blockSlot",_slot().name());
+            slotName = script.runOptional("blockSlot",super.blockSlot().name());
             return Belongings.Slot.valueOf(slotName);
         } catch (Exception e) {
             ModError.doReport(Utils.format("%s: not a valid blockSlot value", slotName), e);
