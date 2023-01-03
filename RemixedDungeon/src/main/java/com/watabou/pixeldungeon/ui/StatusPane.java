@@ -75,7 +75,7 @@ public class StatusPane extends Component {
 
 
     private final Level currentLevel;
-    private final Hero  hero;
+    private final Char  hero;
 
     public StatusPane(Hero hero, Level level) {
         super(true);
@@ -116,7 +116,7 @@ public class StatusPane extends Component {
         if (currentLevel.hasCompassTarget()) {
             compassTarget = currentLevel.getCompassTarget();    // Set to compass target if exists
         } else if ( currentLevel.hasExit(0)
-                    && hero.getBelongings().getItem(Amulet.class) == null) {
+                    && hero.getBelongings().getItem(Amulet.class.getSimpleName()) == null) {
             compassTarget = currentLevel.getExit(0);    // Set to first exit if exists
         }
 
@@ -156,10 +156,10 @@ public class StatusPane extends Component {
         keys.hardlight(0xCACFC2);
         add(keys);
 
-        danger = new DangerIndicator();
+        danger = new DangerIndicator(hero);
         add(danger);
 
-        loot = new LootIndicator();
+        loot = new LootIndicator(hero);
         add(loot);
 
         buffs = new BuffIndicator(hero);

@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 
@@ -27,10 +28,13 @@ public class LootIndicator extends Tag {
 	
 	private Item lastItem = null;
 	private int lastQuantity = 0;
-	
-	public LootIndicator() {
+
+	private Char hero;
+
+	public LootIndicator(Char hero) {
 		super( 0x1F75CC );
-		
+
+		this.hero = hero;
 		setSize( 24, 22 );
 		
 		setVisible(false);
@@ -59,8 +63,8 @@ public class LootIndicator extends Tag {
 	@Override
 	public void update() {
 		
-		if (Dungeon.hero.isReady()) {
-			Heap heap = Dungeon.level.getHeap( Dungeon.hero.getPos() );
+		if (hero.isReady()) {
+			Heap heap = Dungeon.level.getHeap( hero.getPos() );
 				
 			if (heap != null) {
 				Item item = 
@@ -86,7 +90,7 @@ public class LootIndicator extends Tag {
 			}
 		}
 		
-		slot.enable( getVisible() && Dungeon.hero.isReady() );
+		slot.enable( getVisible() && hero.isReady() );
 		
 		super.update();
 	}

@@ -41,10 +41,14 @@ public class AttackIndicator extends Tag {
 	private Image sprite = null;
 
 	@Nullable
-	private static Char lastTarget = null;
+	static private Char lastTarget = null;
 
-	public AttackIndicator() {
+	private final Char hero;
+
+	public AttackIndicator(Char hero) {
 		super( DangerIndicator.COLOR );
+
+		this.hero = hero;
 		
 		instance = this;
 		
@@ -158,7 +162,7 @@ public class AttackIndicator extends Tag {
 	@Override
 	protected void onClick() {
 		if (enabled && lastTarget != null) {
-			Dungeon.hero.handle( lastTarget.getPos() );
+			hero.handle( lastTarget.getPos() );
 		}
 	}
 	

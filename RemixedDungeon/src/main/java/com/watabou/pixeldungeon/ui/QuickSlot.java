@@ -73,11 +73,13 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     @NotNull
     private Char    lastTarget = CharsList.DUMMY;
+    final private Char hero;
 
     private final int index;
 
-    public QuickSlot() {
+    public QuickSlot(Char hero) {
         super();
+        this.hero = hero;
         slots.add(this);
 
         index = slots.size() - 1;
@@ -173,8 +175,6 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     @Override
     protected void onClick() {
-        Hero hero = Dungeon.hero;
-
         if(!hero.isReady()) {
             return;
         }
@@ -189,8 +189,6 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     @Override
     protected boolean onLongClick() {
-        Hero hero = Dungeon.hero;
-
         if(!hero.isReady()) {
             return true;
         }
@@ -228,7 +226,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
         if (!targeting) {
             if (lastItem instanceof Wand || lastItem instanceof Weapon) {
-                lastTarget = Dungeon.hero.getNearestEnemy();
+                lastTarget = hero.getNearestEnemy();
                 updateTargetingState();
             }
         }
@@ -251,7 +249,6 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     private void refreshSelf() {
         if(quickslotItem != null && !(quickslotItem instanceof Spell.SpellItem)) {
             Item item;
-            final Hero hero = Dungeon.hero;
 
             Belongings belongings = hero.getBelongings();
             if(quickslotItem.quantity()>0) {
@@ -292,7 +289,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         }
 
         for (QuickSlot slot : slots) {
-            if (item == slot.lastItem && newTarget != Dungeon.hero) {
+            if (item == slot.lastItem && newTarget != slot.hero) {
                 slot.lastTarget = newTarget;
                 HealthIndicator.instance.target(newTarget);
             }
@@ -377,7 +374,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         if (n < slots.size()) {
             QuickSlot slot = slots.get(n);
             slot.quickslotItem(object);
-            slot.onSelect(slot.quickslotItem, Dungeon.hero);
+            slot.onSelect(slot.quickslotItem, slot.hero);
         } else {
             qsStorage.put(n, object);
         }
@@ -427,10 +424,8 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         super.update();
 
         if(refreshRequested) {
-            if(Dungeon.hero != null) {
-                for (QuickSlot slot : slots) {
-                    slot.refreshSelf();
-                }
+            for (QuickSlot slot : slots) {
+                slot.refreshSelf();
             }
             refreshRequested = false;
         }

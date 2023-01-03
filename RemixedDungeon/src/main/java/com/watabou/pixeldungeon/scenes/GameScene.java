@@ -363,12 +363,12 @@ public class GameScene extends PixelScene {
         toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
         add(toolbar);
 
-        attack = new AttackIndicator();
+        attack = new AttackIndicator(hero);
         attack.camera = uiCamera;
         attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
         add(attack);
 
-        resume = new ResumeIndicator();
+        resume = new ResumeIndicator(hero);
         resume.camera = uiCamera;
         resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
         add(resume);
@@ -427,7 +427,7 @@ public class GameScene extends PixelScene {
                 WandOfBlink.appear(hero, hero.getPos());
                 break;
             case FALL:
-                Chasm.heroLand();
+                Chasm.heroLand(hero);
                 break;
             case DESCEND:
 

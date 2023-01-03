@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
 class QuickslotTool extends Tool {
@@ -12,10 +13,10 @@ class QuickslotTool extends Tool {
 
     protected ColorBlock cooldownMeter;
 
-    QuickslotTool() {
+    QuickslotTool(Char hero) {
         super(-1, Chrome.Type.QUICKSLOT);
 
-        slot = new QuickSlot();
+        slot = new QuickSlot(hero);
         add(slot);
 
         cooldownMeter = new ColorBlock(width, height, 0x7f000000);

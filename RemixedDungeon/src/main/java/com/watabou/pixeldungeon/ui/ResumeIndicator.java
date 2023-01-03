@@ -3,14 +3,19 @@ package com.watabou.pixeldungeon.ui;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 
 public class ResumeIndicator extends Tag {
 	
 	private ImageButton btnResume;
-	
-	public ResumeIndicator() {
+
+	private final Char hero;
+
+	public ResumeIndicator(Char hero) {
 		super( 0x00000000);
-		
+
+		this.hero = hero;
+
 		setSize( 24, 26 );
 		
 		setVisible(true);
@@ -23,7 +28,7 @@ public class ResumeIndicator extends Tag {
 		add(btnResume = new ImageButton(new Image(Assets.UI_ICONS_12,12,0)) {
 			@Override
 			protected void onClick() {
-				Dungeon.hero.resume();
+				ResumeIndicator.this.hero.resume();
 			}
 		});
 	}
@@ -39,7 +44,7 @@ public class ResumeIndicator extends Tag {
 	@Override
 	public void update() {
 		
-		boolean visible = Dungeon.hero.lastAction != null;
+		boolean visible = hero.lastAction != null;
 		
 		btnResume.setVisible(visible);
 		setVisible(visible);

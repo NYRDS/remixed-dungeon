@@ -35,6 +35,7 @@ import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
@@ -56,12 +57,12 @@ public class Toolbar extends Component {
     private final ArrayList<QuickslotTool> slots = new ArrayList<>();
     final private Hero hero;
 
-    public Toolbar(final Hero hero) {
+    public Toolbar(@NotNull final Hero hero) {
         super();
 
         this.hero = hero;
 
-        slots.add(new QuickslotTool());
+        slots.add(new QuickslotTool(hero));
 
         btnWait = new Tool(7, Chrome.Type.ACTION_BUTTON) {
             @Override
@@ -81,7 +82,6 @@ public class Toolbar extends Component {
                 if (hero.isReady()) {
                     hero.rest(false);
                 }
-
             }
 
             protected boolean onLongClick() {
@@ -145,7 +145,7 @@ public class Toolbar extends Component {
         for (int i = 0; i < active_slots; i++) {
 
             if(i>slots.size()-1) {
-                slots.add(new QuickslotTool());
+                slots.add(new QuickslotTool(hero));
             }
 
             slots.get(i).show(true);
