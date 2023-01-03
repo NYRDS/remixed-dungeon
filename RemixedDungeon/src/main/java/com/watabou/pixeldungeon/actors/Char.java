@@ -1970,11 +1970,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return Math.max(attackRange, getBelongings().getItemFromSlot(Belongings.Slot.WEAPON).range());
     }
 
-    public float getExp() {
+    public int getExp() {
         return 0;
     }
 
-    public float maxExp() {
+    public int maxExp() {
         return 10;
     }
 
