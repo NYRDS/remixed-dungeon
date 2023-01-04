@@ -32,8 +32,7 @@ import com.watabou.utils.Callback;
 public class WandOfPoison extends SimpleWand  {
 
 	@Override
-	protected void onZap( int cell ) {
-		Char ch = Actor.findChar( cell );
+	protected void onZap( int cell, Char ch ) {
 		if (ch != null) {
 			Buff.affect( ch, Poison.class,Poison.durationFactor( ch ) * (5 + effectiveLevel()) );
 		} else {

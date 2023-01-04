@@ -42,8 +42,6 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Charm;
-import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.actors.hero.Backpack;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.bags.Bag;
@@ -217,7 +215,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		}
 	}
 
-	protected void onThrow(int cell, @NotNull Char thrower) {
+	protected void onThrow(int cell, @NotNull Char thrower, Char target) {
 		dropTo(cell, thrower);
 	}
 
@@ -574,7 +572,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		int finalCell = cell;
 		sprite.reset(pos, cell, this, () -> {
 					user.spend(finalDelay);
-					item.onThrow(finalCell, user);
+					item.onThrow(finalCell, user, enemy);
 				});
 	}
 

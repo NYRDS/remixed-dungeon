@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
@@ -49,13 +48,12 @@ public class IncendiaryDart extends Dart {
 	}
 	
 	@Override
-	protected void onThrow(int cell, @NotNull Char thrower) {
-		Char enemy = Actor.findChar( cell );
+	protected void onThrow(int cell, @NotNull Char thrower, Char enemy) {
 		if (enemy == null || enemy == thrower) {
 			if (thrower.level().flammable[cell]) {
 				GameScene.add( Blob.seed( cell, 4, Fire.class ) );
 			} else {
-				super.onThrow( cell, thrower);
+				super.onThrow( cell, thrower, enemy);
 			}
 		} else {
 			if (!thrower.shoot( enemy, this )) {

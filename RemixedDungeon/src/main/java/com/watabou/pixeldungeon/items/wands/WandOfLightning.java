@@ -47,7 +47,7 @@ public class WandOfLightning extends SimpleWand  {
 	private int nPoints;
 	
 	@Override
-	protected void onZap( int cell ) {
+	protected void onZap( int cell, Char ch ) {
 
 		if ((getOwner() == Dungeon.hero) && !getOwner().isAlive()) {
 			Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );

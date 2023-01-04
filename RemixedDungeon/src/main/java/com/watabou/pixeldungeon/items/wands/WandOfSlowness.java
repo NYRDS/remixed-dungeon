@@ -32,8 +32,7 @@ import com.watabou.utils.Callback;
 public class WandOfSlowness extends SimpleWand  {
 	
 	@Override
-	protected void onZap( int cell ) {
-		Char ch = Actor.findChar( cell );
+	protected void onZap( int cell, Char ch ) {
 		if (ch != null) {
 			Buff.affect( ch, Slow.class, Slow.duration( ch ) / 3 + effectiveLevel() );
 		} else {

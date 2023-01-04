@@ -156,7 +156,11 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
         onZap(cell);
     }
 
-    protected abstract void onZap(int cell);
+    protected void onZap(int cell) {
+        onZap(cell, Actor.findChar(cell));
+    }
+
+    protected abstract void onZap(int cell, Char victim);
 
     public int effectiveLevel() {
         return level() + getOwner().buffLevel(Power.class.getSimpleName());
@@ -326,11 +330,13 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
     protected void wandEffect(final int cell, Char selector) {
         setKnown();
 
-        QuickSlot.target(this, Actor.findChar(cell));
+        Char victim = Actor.findChar(cell);
+
+        QuickSlot.target(this, victim);
 
         if (curCharges() > 0) {
             fx(cell, () -> {
-                onZap(cell);
+                onZap(cell, victim);
                 wandUsed();
             });
 

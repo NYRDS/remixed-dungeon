@@ -22,6 +22,7 @@ import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.effects.MagicMissile;
@@ -35,7 +36,7 @@ import com.watabou.utils.Callback;
 public class WandOfRegrowth extends SimpleWand  {
 	
 	@Override
-	protected void onZap( int cell ) {
+	protected void onZap( int cell, Char ch ) {
 
 		final Level level = Dungeon.level;
 

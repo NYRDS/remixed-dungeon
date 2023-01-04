@@ -40,7 +40,7 @@ public class WandOfDisintegration extends SimpleWand  {
 	}
 	
 	@Override
-	protected void onZap( int cell ) {
+	protected void onZap( int cell, Char victim ) {
 		
 		boolean terrainAffected = false;
 		
