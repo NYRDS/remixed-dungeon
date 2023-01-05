@@ -105,7 +105,9 @@ public class Shopkeeper extends NPC {
 			attempts++;
 		}
 
-		Collections.shuffle(backpack.items);
+		//if(attempts > 0) {
+		//	Collections.shuffle(backpack.items);
+        //}
 
 		GameScene.show(
 				new WndShopOptions(this, hero));
