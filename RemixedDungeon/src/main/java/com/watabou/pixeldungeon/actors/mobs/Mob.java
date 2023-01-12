@@ -87,24 +87,24 @@ import lombok.SneakyThrows;
 
 public abstract class Mob extends Char {
 
-	public static final String TXT_RAGE = "#$%^";
+    public static final String TXT_RAGE = "#$%^";
 
-	private static final float SPLIT_DELAY = 1f;
+    private static final float SPLIT_DELAY = 1f;
 
-	protected Object spriteClass;
+    protected Object spriteClass;
 
-	protected int exp    = 1;
-	protected int maxLvl = 50;
+    protected int exp = 1;
+    protected int maxLvl = 50;
 
-	@Packable(defaultValue = "false")
-	public boolean enemySeen;
+    @Packable(defaultValue = "false")
+    public boolean enemySeen;
 
-	public static final float TIME_TO_WAKE_UP = 1f;
+    public static final float TIME_TO_WAKE_UP = 1f;
 
-	static private final Map<String, JSONObject> defMap = new HashMap<>();
+    static private final Map<String, JSONObject> defMap = new HashMap<>();
 
-	private static final String STATE      = "state";
-	private static final String FRACTION   = "fraction";
+    private static final String STATE = "state";
+    private static final String FRACTION = "fraction";
     protected int dmgMin = 0;
     protected int dmgMax = 0;
     protected int attackSkill = 0;
@@ -112,105 +112,105 @@ public abstract class Mob extends Char {
     protected boolean isBoss = false;
 
     public Mob() {
-		super();
-		setupCharData();
-	}
+        super();
+        setupCharData();
+    }
 
-	public void releasePet() {
-		setFraction(Fraction.DUNGEON);
-		setOwnerId(getId());
-	}
+    public void releasePet() {
+        setFraction(Fraction.DUNGEON);
+        setOwnerId(getId());
+    }
 
-	@LuaInterface
-	@NotNull
-	public static Mob makePet(@NotNull Mob pet, @NotNull Char owner) {
-		return makePet(pet,owner.getId());
-	}
+    @LuaInterface
+    @NotNull
+    public static Mob makePet(@NotNull Mob pet, @NotNull Char owner) {
+        return makePet(pet, owner.getId());
+    }
 
-	@LuaInterface
-	@NotNull
-	public Mob makePet(@NotNull Char owner) {
-		return Mob.makePet(this, owner);
-	}
+    @LuaInterface
+    @NotNull
+    public Mob makePet(@NotNull Char owner) {
+        return Mob.makePet(this, owner);
+    }
 
-	@NotNull
-	public static Mob makePet(@NotNull Mob pet, int ownerId) {
-		if (pet.canBePet()) {
-			pet.setFraction(Fraction.HEROES);
-			pet.setOwnerId(ownerId);
-		}
-		return pet;
-	}
+    @NotNull
+    public static Mob makePet(@NotNull Mob pet, int ownerId) {
+        if (pet.canBePet()) {
+            pet.setFraction(Fraction.HEROES);
+            pet.setOwnerId(ownerId);
+        }
+        return pet;
+    }
 
-	@Override
-	public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
-		return getOwner() instanceof Hero;
-	}
+    @Override
+    public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
+        return getOwner() instanceof Hero;
+    }
 
-	@LuaInterface
-	public int getOwnerPos() {
-		return getOwner().getPos();
-	}
+    @LuaInterface
+    public int getOwnerPos() {
+        return getOwner().getPos();
+    }
 
-	public void setFraction(Fraction fr) {
-		fraction = fr;
-		setEnemy(CharsList.DUMMY);
-	}
+    public void setFraction(Fraction fr) {
+        fraction = fr;
+        setEnemy(CharsList.DUMMY);
+    }
 
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
+    @Override
+    public void storeInBundle(Bundle bundle) {
+        super.storeInBundle(bundle);
 
-		bundle.put(STATE,  getState().getTag());
-		bundle.put(FRACTION, fraction.ordinal());
-	}
+        bundle.put(STATE, getState().getTag());
+        bundle.put(FRACTION, fraction.ordinal());
+    }
 
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
+    @Override
+    public void restoreFromBundle(Bundle bundle) {
 
-		super.restoreFromBundle(bundle);
+        super.restoreFromBundle(bundle);
 
-		String state = bundle.getString(STATE);
-		setState(state);
+        String state = bundle.getString(STATE);
+        setState(state);
 
-		fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
+        fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
 
-		if (bundle.contains("loot")) { //pre 29.6 saves compatibility
-			loot(bundle.get("loot"), 1);
-		}
-	}
+        if (bundle.contains("loot")) { //pre 29.6 saves compatibility
+            loot(bundle.get("loot"), 1);
+        }
+    }
 
-	@LuaInterface
-	public void setState(String state) {
-		setState(MobAi.getStateByTag(state));
-	}
+    @LuaInterface
+    public void setState(String state) {
+        setState(MobAi.getStateByTag(state));
+    }
 
-	protected int getKind() {
-		return 0;
-	}
+    protected int getKind() {
+        return 0;
+    }
 
-	@SneakyThrows
-	public CharSprite newSprite() {
-		String descName = "spritesDesc/" + getEntityKind() + ".json";
-		if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
-			return new MobSpriteDef(descName, getKind());
-		}
+    @SneakyThrows
+    public CharSprite newSprite() {
+        String descName = "spritesDesc/" + getEntityKind() + ".json";
+        if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
+            return new MobSpriteDef(descName, getKind());
+        }
 
-		if (spriteClass instanceof Class) {
-			CharSprite sprite = (CharSprite) ((Class<?>) spriteClass).newInstance();
-			sprite.selectKind(getKind());
-			return sprite;
-		}
+        if (spriteClass instanceof Class) {
+            CharSprite sprite = (CharSprite) ((Class<?>) spriteClass).newInstance();
+            sprite.selectKind(getKind());
+            return sprite;
+        }
 
-		if (spriteClass instanceof String) {
-			return new MobSpriteDef((String) spriteClass, getKind());
-		}
+        if (spriteClass instanceof String) {
+            return new MobSpriteDef((String) spriteClass, getKind());
+        }
 
-		throw new TrackedRuntimeException(String.format("sprite creation failed - me class %s", getEntityKind()));
-	}
+        throw new TrackedRuntimeException(String.format("sprite creation failed - me class %s", getEntityKind()));
+    }
 
-	@Override
-	public boolean act() {
+    @Override
+    public boolean act() {
 /*
     	if(Util.isDebug() && !(this instanceof NPC) && !getEntityKind().contains("NPC") && !getEntityKind().contains("Npc")) {
     		if(!(baseAttackSkill > 0 && baseDefenseSkill > 0)) {
@@ -218,25 +218,25 @@ public abstract class Mob extends Char {
 			}
 		}
 */
-		super.act(); //Calculate FoV
+        super.act(); //Calculate FoV
 
-		getSprite().hideAlert();
+        getSprite().hideAlert();
 
-		if (paralysed) {
-			enemySeen = false;
-			spend(TICK);
-			return true;
-		}
+        if (paralysed) {
+            enemySeen = false;
+            spend(TICK);
+            return true;
+        }
 
-		if (Random.Float() < 0.01/lvl()) {
-			lvl(lvl()+1);
-		}
+        if (Random.Float() < 0.01 / lvl()) {
+            lvl(lvl() + 1);
+        }
 
-		float timeBeforeAct = actorTime();
+        float timeBeforeAct = actorTime();
 
-		script.runOptional("onAct");
-		//GLog.debug("%s is %s", getEntityKind(), getState().getTag());
-		getState().act(this);
+        script.runOptional("onAct");
+        //GLog.debug("%s is %s", getEntityKind(), getState().getTag());
+        getState().act(this);
 
 /*		if(actorTime() == timeBeforeAct && Util.isDebug()) {
 			var error = String.format("actor %s has same timestamp after %s act!", getEntityKind(), getState().getTag());
@@ -247,451 +247,450 @@ public abstract class Mob extends Char {
 				EventCollector.logException(error);
 			}
 		}*/
-		return true;
-	}
+        return true;
+    }
 
 
-	public boolean isEnemyInFov(){
-		final Char enemy = getEnemy();
-		final int enemyPos = enemy.getPos();
-		return enemy.valid() && enemy.isAlive() && level().cellValid(enemyPos) && level().fieldOfView[enemyPos]
+    public boolean isEnemyInFov() {
+        final Char enemy = getEnemy();
+        final int enemyPos = enemy.getPos();
+        return enemy.valid() && enemy.isAlive() && level().cellValid(enemyPos) && level().fieldOfView[enemyPos]
                 && enemy.invisible <= 0;
     }
 
-	public void moveSprite(int from, int to) {
-
-		if (getSprite().isVisible()
-				&& (Dungeon.isPathVisible(from, to))) {
-			getSprite().move(from, to);
-		} else {
-			getSprite().place(to);
-		}
-	}
-
-	@Override
-	public boolean add(Buff buff) {
-		super.add(buff);
-
-		if (!GameScene.isSceneReady()) {
-			return true;
-		}
-
-		if (buff instanceof Amok) {
-			getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
-			setState(MobAi.getStateByClass(RunningAmok.class));
-		} else if (buff instanceof Terror) {
-			setState(MobAi.getStateByClass(Horrified.class));
-		} else if (buff instanceof Sleep) {
-			new Flare(4, 32).color(0x44ffff, true).show(getSprite(), 2f);
-			setState(MobAi.getStateByClass(Sleeping.class));
-			postpone(Sleep.SWS);
-		}
-		return true;
-	}
-
-	public boolean canAttack(@NotNull Char enemy) {
-		return !pacified && super.canAttack(enemy);
-	}
-
-	public boolean getCloser(int target) {
-		int step = Dungeon.findPath(this, target, walkingType.passableCells(level()));
-		return _doStep(step);
-	}
-
-	public boolean getFurther(int target) {
-		int step = Dungeon.flee(this, target, walkingType.passableCells(level()));
-		return _doStep(step);
-	}
-
-	public boolean _doStep(int step) {
-		if (level().cellValid(step)) {
-			move(step);
-			return true;
-		}
-		return false;
-	}
-
-	@Override
-	public void move(int step) {
-		script.run("onMove", step);
-
-		super.move(step);
-	}
-
-	@Override
-	public final void onZapComplete() {
-		zap(getEnemy());
-		super.onZapComplete();
-	}
-
-	@Override
-	public int defenseSkill(Char enemy) {
-		return enemySeen ? super.defenseSkill(enemy) : 0;
-	}
-
-	@Override
-	public int attackProc(@NotNull Char enemy, int damage) {
-		int baseDamage = super.attackProc(enemy, damage);
-		return script.run("onAttackProc", enemy, baseDamage).optint(baseDamage);
-	}
-
-	@Override
-	public int defenseProc(Char enemy, int damage) {
-		int baseDamage = super.defenseProc(enemy, damage);
-
-		if (!enemySeen && enemy.getSubClass() == HeroSubClass.ASSASSIN) {
-			baseDamage += Random.Int(1, baseDamage);
-			Wound.hit(this);
-		}
-
-		if(getOwnerId() !=enemy.getId()) {
-			setEnemy(enemy);
-		}
-
-		return script.run("onDefenceProc", enemy, baseDamage).optint(baseDamage);
-	}
-
-	@Override
-	public void damage(int dmg,@NotNull NamedEntityKind src) {
-		script.run("onDamage", dmg, src);
-
-        getState().gotDamage(this,src, dmg);
-
-		super.damage(dmg, src);
-	}
+    public void moveSprite(int from, int to) {
+
+        if (getSprite().isVisible()
+                && (Dungeon.isPathVisible(from, to))) {
+            getSprite().move(from, to);
+        } else {
+            getSprite().place(to);
+        }
+    }
+
+    @Override
+    public boolean add(Buff buff) {
+        super.add(buff);
+
+        if (!GameScene.isSceneReady()) {
+            return true;
+        }
+
+        if (buff instanceof Amok) {
+            getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
+            setState(MobAi.getStateByClass(RunningAmok.class));
+        } else if (buff instanceof Terror) {
+            setState(MobAi.getStateByClass(Horrified.class));
+        } else if (buff instanceof Sleep) {
+            new Flare(4, 32).color(0x44ffff, true).show(getSprite(), 2f);
+            setState(MobAi.getStateByClass(Sleeping.class));
+            postpone(Sleep.SWS);
+        }
+        return true;
+    }
+
+    public boolean canAttack(@NotNull Char enemy) {
+        return !pacified && super.canAttack(enemy);
+    }
+
+    public boolean getCloser(int target) {
+        int step = Dungeon.findPath(this, target, walkingType.passableCells(level()));
+        return _doStep(step);
+    }
+
+    public boolean getFurther(int target) {
+        int step = Dungeon.flee(this, target, walkingType.passableCells(level()));
+        return _doStep(step);
+    }
+
+    public boolean _doStep(int step) {
+        if (level().cellValid(step)) {
+            move(step);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public void move(int step) {
+        script.run("onMove", step);
+
+        super.move(step);
+    }
+
+    @Override
+    public final void onZapComplete() {
+        zap(getEnemy());
+        super.onZapComplete();
+    }
+
+    @Override
+    public int defenseSkill(Char enemy) {
+        return enemySeen ? super.defenseSkill(enemy) : 0;
+    }
+
+    @Override
+    public int attackProc(@NotNull Char enemy, int damage) {
+        int baseDamage = super.attackProc(enemy, damage);
+        return script.run("onAttackProc", enemy, baseDamage).optint(baseDamage);
+    }
+
+    @Override
+    public int defenseProc(Char enemy, int damage) {
+        int baseDamage = super.defenseProc(enemy, damage);
+
+        if (!enemySeen && enemy.getSubClass() == HeroSubClass.ASSASSIN) {
+            baseDamage += Random.Int(1, baseDamage);
+            Wound.hit(this);
+        }
+
+        if (getOwnerId() != enemy.getId()) {
+            setEnemy(enemy);
+        }
+
+        return script.run("onDefenceProc", enemy, baseDamage).optint(baseDamage);
+    }
+
+    @Override
+    public void damage(int dmg, @NotNull NamedEntityKind src) {
+        script.run("onDamage", dmg, src);
+
+        getState().gotDamage(this, src, dmg);
+
+        super.damage(dmg, src);
+    }
 
-	@Override
-	public void destroy() {
+    @Override
+    public void destroy() {
 
-    	spend(MICRO_TICK);
+        spend(MICRO_TICK);
 
-		super.destroy();
+        super.destroy();
 
-		level().mobs.remove(this);
-	}
+        level().mobs.remove(this);
+    }
 
-	public void remove() {
-		super.die(this);
-	}
+    public void remove() {
+        super.die(this);
+    }
 
-	public void die(@NotNull NamedEntityKind cause) {
+    public void die(@NotNull NamedEntityKind cause) {
 
-    	spend(Actor.MICRO_TICK);
-		getState().onDie(this);
+        spend(Actor.MICRO_TICK);
+        getState().onDie(this);
 
-		if(cause == null) {
-			cause = CharsList.DUMMY; //Mods may and will misbehave
-			EventCollector.logException("null_death_cause");
-		}
+        if (cause == null) {
+            cause = CharsList.DUMMY; //Mods may and will misbehave
+            EventCollector.logException("null_death_cause");
+        }
 
-		script.run("onDie", cause);
+        script.run("onDie", cause);
 
-		Badges.validateRare( this );
+        Badges.validateRare(this);
 
-		Hero hero = Dungeon.hero;
+        Hero hero = Dungeon.hero;
 
-		if(!cause.getEntityKind().equals(Chasm.class.getSimpleName()))
-		{
-			//TODO we should move this block out of Mob class ( in script for example )
-			if (hero.getHeroClass() == HeroClass.NECROMANCER){
-				if (hero.isAlive()) {
-					if(hero.getItemFromSlot(Belongings.Slot.ARMOR) instanceof NecromancerRobe){
-						hero.accumulateSkillPoints();
-					}
-				}
-			}
-
-			for (Item item : hero.getBelongings()) {
-				if (item instanceof BlackSkull && item.isEquipped(hero)) {
-					((BlackSkull) item).mobDied(this, hero);
-				}
-			}
-		}
-
-		if (hero.isAlive()) {
-			if (!friendly(hero)) {
-				Statistics.enemiesSlain++;
-				Badges.validateMonstersSlain();
-				Statistics.qualifiedForNoKilling = false;
+        if (!cause.getEntityKind().equals(Chasm.class.getSimpleName())) {
+            //TODO we should move this block out of Mob class ( in script for example )
+            if (hero.getHeroClass() == HeroClass.NECROMANCER) {
+                if (hero.isAlive()) {
+                    if (hero.getItemFromSlot(Belongings.Slot.ARMOR) instanceof NecromancerRobe) {
+                        hero.accumulateSkillPoints();
+                    }
+                }
+            }
+
+            for (Item item : hero.getBelongings()) {
+                if (item instanceof BlackSkull && item.isEquipped(hero)) {
+                    ((BlackSkull) item).mobDied(this, hero);
+                }
+            }
+        }
 
-				if (Dungeon.nightMode) {
-					Statistics.nightHunt++;
-					Badges.validateNightHunter();
-				} else {
-					Statistics.nightHunt = 0;
-				}
+        if (hero.isAlive()) {
+            if (!friendly(hero)) {
+                Statistics.enemiesSlain++;
+                Badges.validateMonstersSlain();
+                Statistics.qualifiedForNoKilling = false;
 
-				if (!(cause instanceof Mob) || hero.getHeroClass() == HeroClass.NECROMANCER) {
-					if (hero.lvl() <= (maxLvl + lvl()) && exp > 0) {
-						hero.earnExp(exp);
-					}
-				}
-			}
-		}
+                if (Dungeon.nightMode) {
+                    Statistics.nightHunt++;
+                    Badges.validateNightHunter();
+                } else {
+                    Statistics.nightHunt = 0;
+                }
 
-		super.die(cause);
+                if (!(cause instanceof Mob) || hero.getHeroClass() == HeroClass.NECROMANCER) {
+                    if (hero.lvl() <= (maxLvl + lvl()) && exp > 0) {
+                        hero.earnExp(exp);
+                    }
+                }
+            }
+        }
 
-		Library.identify(Library.MOB, getEntityKind());
-
-		if (!(cause instanceof Chasm)) {
-			getBelongings().dropAll();
-		}
+        super.die(cause);
 
-		if (hero.isAlive() && !CharUtils.isVisible(this)) {
-			GLog.i(StringsManager.getVar(R.string.Mob_Died));
-		}
-	}
+        Library.identify(Library.MOB, getEntityKind());
+
+        if (!(cause instanceof Chasm)) {
+            getBelongings().dropAll();
+        }
 
-	public Mob split(int cell, int damage) {
+        if (hero.isAlive() && !CharUtils.isVisible(this)) {
+            GLog.i(StringsManager.getVar(R.string.Mob_Died));
+        }
+    }
 
-		Mob clone = (Mob)makeClone();
+    public Mob split(int cell, int damage) {
 
-		clone.hp(Math.max((hp() - damage) / 2, 1));
-		clone.setPos(cell);
-		clone.setState(MobAi.getStateByClass(Hunting.class));
+        Mob clone = (Mob) makeClone();
 
-		clone.ensureOpenDoor();
+        clone.hp(Math.max((hp() - damage) / 2, 1));
+        clone.setPos(cell);
+        clone.setState(MobAi.getStateByClass(Hunting.class));
 
-		level().spawnMob(clone, SPLIT_DELAY, getPos());
+        clone.ensureOpenDoor();
 
-		if (hasBuff(Burning.class)) {
-			Buff.affect(clone, Burning.class).reignite(clone);
-		}
-		if (hasBuff(Poison.class)) {
-			Buff.affect(clone, Poison.class,2);
-		}
+        level().spawnMob(clone, SPLIT_DELAY, getPos());
 
-		return clone;
-	}
+        if (hasBuff(Burning.class)) {
+            Buff.affect(clone, Burning.class).reignite(clone);
+        }
+        if (hasBuff(Poison.class)) {
+            Buff.affect(clone, Poison.class, 2);
+        }
 
-	public void resurrect() {
-		resurrectAnim();
+        return clone;
+    }
 
-		int spawnPos = getPos();
-		Mob new_mob = MobFactory.mobByName(getMobClassName());
+    public void resurrect() {
+        resurrectAnim();
 
-		if (level().cellValid(spawnPos)) {
-			new_mob.setPos(spawnPos);
-			level().spawnMob(new_mob);
-			level().press(spawnPos, new_mob);
-		}
-	}
+        int spawnPos = getPos();
+        Mob new_mob = MobFactory.mobByName(getMobClassName());
 
-	public void resurrect(Char parent) {
+        if (level().cellValid(spawnPos)) {
+            new_mob.setPos(spawnPos);
+            level().spawnMob(new_mob);
+            level().press(spawnPos, new_mob);
+        }
+    }
 
-		int spawnPos = getPos();
-		Mob new_mob = MobFactory.mobByName(getMobClassName());
+    public void resurrect(Char parent) {
 
-		if (level().cellValid(spawnPos)) {
-			new_mob.setPos(spawnPos);
-			Mob.makePet(new_mob, parent.getId());
-			Actor.addDelayed(new Pushing(new_mob, parent.getPos(), new_mob.getPos()), -1);
-			level().spawnMob(new_mob);
-			level().press(spawnPos, new_mob);
-		}
-	}
+        int spawnPos = getPos();
+        Mob new_mob = MobFactory.mobByName(getMobClassName());
 
-	public boolean reset() {
-		return false;
-	}
+        if (level().cellValid(spawnPos)) {
+            new_mob.setPos(spawnPos);
+            Mob.makePet(new_mob, parent.getId());
+            Actor.addDelayed(new Pushing(new_mob, parent.getPos(), new_mob.getPos()), -1);
+            level().spawnMob(new_mob);
+            level().press(spawnPos, new_mob);
+        }
+    }
 
-	public void beckon(int cell) {
-		notice();
-		setState(MobAi.getStateByClass(Wandering.class));
-		setTarget(cell);
-	}
-
-	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
-		if (mobDesc.has("loot")) {
-			float lootChance = (float) mobDesc.optDouble("lootChance", 1f);
-			loot(ItemFactory.createItemFromDesc(mobDesc.getJSONObject("loot")), lootChance);
-		}
-
-		getBelongings().setupFromJson(mobDesc);
-
-		if (this instanceof IDepthAdjustable) {
-			((IDepthAdjustable) this).adjustStats(mobDesc.optInt("level", 1));
-		}
-
-		setState(mobDesc.optString("aiState",getState().getTag()));
-	}
-
-	public AiState getState() {
-		return state;
-	}
-
-	protected JSONObject getClassDef(){
-		if (!defMap.containsKey(getEntityKind())) {
-			defMap.put(getEntityKind(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getEntityKind() + ".json"));
-		}
-
-		return defMap.get(getEntityKind());
-	}
-
-	public void onSpawn(Level level) {
-		Buff.affect(this, Regeneration.class);
-		script.run("onSpawn",level);
-	}
-
-
-	public boolean isPet() {
-		return fraction == Fraction.HEROES;
-	}
-
-	@Override
-	public boolean friendly(@NotNull Char chr) {
-
-		if(chr == this) {
-			return true;
-		}
-
-		if(hasBuff(Amok.class) || chr.hasBuff(Amok.class)) {
-			return false;
-		}
-
-		if(getOwnerId() == chr.getId()) {
-			return true;
-		}
-
-		if(getEnemy() == chr) {
-			return false;
-		}
-
-		if(getOwnerId()!=getId() && getOwner().friendly(chr)) {
-			return true;
-		}
-
-		if(chr instanceof Hero) {
-			return chr.getHeroClass().friendlyTo(getEntityKind());
-		}
-
-		return !this.fraction.isEnemy(chr.fraction);
-	}
-
-	@Override
-	public boolean canBePet() {
-		return true;
-	}
-
-	public boolean interact(Char chr) {
-		return  script.run("onInteract", chr).optboolean(true) ||
-				super.interact(chr);
-	}
-
-	@Override
-	public boolean swapPosition(Char chr) {
-		if(super.swapPosition(chr)) {
-			setState(MobAi.getStateByClass(Wandering.class));
-			return true;
-		}
-		return false;
-	}
-
-	public boolean zap(@NotNull Char enemy) {
-
-    	if(enemy.valid()) {
-			if (zapHit(enemy)) {
-				int damage = zapProc(enemy, damageRoll());
-				int effectiveDamage = enemy.defenseProc(this, damage);
-
-				enemy.damage(effectiveDamage, this);
-				return true;
-			} else {
-				zapMiss(enemy);
-			}
-		}
-		return false;
-	}
-
-	protected void zapMiss(@NotNull Char enemy) {
-    	script.run("onZapMiss", enemy);
-	}
-
-	protected int zapProc(@NotNull Char enemy, int damage) {
-		return script.run("onZapProc", enemy, damage).optint(damage);
-	}
-
-	protected boolean zapHit(@NotNull Char enemy) {
-		if (enemy == CharsList.DUMMY) {
-			EventCollector.logException(String.format("%s zapping dummy enemy", getEntityKind()));
-			return false;
-		}
-
-		if(!level().cellValid(enemy.getPos())) {
-			EventCollector.logException(getEntityKind() + " zapping "+enemy.getEntityKind()+" on invalid cell");
-			return false;
-		}
-
-		if (CharUtils.hit(this, enemy, true)) {
-			return true;
-		} else {
-			enemy.showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
-			return false;
-		}
-	}
-
-	@LuaInterface
-	public String getMobClassName() {
-		return getEntityKind();
-	}
-
-	@Nullable
-	@LuaInterface
-	public Object getLoot() {
-		return getBelongings().randomUnequipped();
-	}
-
-	@Override
-	public Char makeClone() {
-		return MobFactory.mobByName(getEntityKind());
-	}
-
-	public void loot(Object loot, float lootChance) {
-
-		if(Dungeon.hero.lvl() > maxLvl + 2 + lvl() && !isBoss) {
-			return;
-		}
-
-		if (loot != null && Random.Float() <= lootChance) {
-			Item item;
-			if (loot instanceof Treasury.Category) {
-				item = Treasury.getLevelTreasury().random((Treasury.Category) loot);
-			} else if (loot instanceof Class<?>) {
-				item = Treasury.getLevelTreasury().random((Class<? extends Item>) loot);
-			} else if(loot instanceof String) {
-				item = Treasury.getLevelTreasury().random((String) loot);
-			} else {
-				item = (Item) loot;
-			}
-			collect(item);
-		}
-	}
-
-	@Override
-	public int priceBuy(Item item) {
-		return script.run("priceBuy", item, super.priceBuy(item)).toint();
-	}
-
-	@Override
-	public int priceSell(Item item) {
-		return script.run("priceSell", item, super.priceSell(item)).toint();
-	}
-
-	@Override
-	public int damageRoll() {
-		int dmg = Random.NormalIntRange(dmgMin, dmgMax);
-
-		dmg += getActiveWeapon().damageRoll(this);
-
-		if(!rangedWeapon.valid()) {
-			dmg += getSecondaryWeapon().damageRoll(this);
-		}
-
-		return dmg;
-	}
-
-	@Override
-	public int dr() {
-		return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() + dr;
-	}
+    public boolean reset() {
+        return false;
+    }
+
+    public void beckon(int cell) {
+        notice();
+        setState(MobAi.getStateByClass(Wandering.class));
+        setTarget(cell);
+    }
+
+    public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
+        if (mobDesc.has("loot")) {
+            float lootChance = (float) mobDesc.optDouble("lootChance", 1f);
+            loot(ItemFactory.createItemFromDesc(mobDesc.getJSONObject("loot")), lootChance);
+        }
+
+        getBelongings().setupFromJson(mobDesc);
+
+        if (this instanceof IDepthAdjustable) {
+            ((IDepthAdjustable) this).adjustStats(mobDesc.optInt("level", 1));
+        }
+
+        setState(mobDesc.optString("aiState", getState().getTag()));
+    }
+
+    public AiState getState() {
+        return state;
+    }
+
+    protected JSONObject getClassDef() {
+        if (!defMap.containsKey(getEntityKind())) {
+            defMap.put(getEntityKind(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getEntityKind() + ".json"));
+        }
+
+        return defMap.get(getEntityKind());
+    }
+
+    public void onSpawn(Level level) {
+        Buff.affect(this, Regeneration.class);
+        script.run("onSpawn", level);
+    }
+
+
+    public boolean isPet() {
+        return fraction == Fraction.HEROES;
+    }
+
+    @Override
+    public boolean friendly(@NotNull Char chr) {
+
+        if (chr == this) {
+            return true;
+        }
+
+        if (hasBuff(Amok.class) || chr.hasBuff(Amok.class)) {
+            return false;
+        }
+
+        if (getOwnerId() == chr.getId()) {
+            return true;
+        }
+
+        if (getEnemy() == chr) {
+            return false;
+        }
+
+        if (getOwnerId() != getId() && getOwner().friendly(chr)) {
+            return true;
+        }
+
+        if (chr instanceof Hero) {
+            return chr.getHeroClass().friendlyTo(getEntityKind());
+        }
+
+        return !this.fraction.isEnemy(chr.fraction);
+    }
+
+    @Override
+    public boolean canBePet() {
+        return true;
+    }
+
+    public boolean interact(Char chr) {
+        return script.run("onInteract", chr).optboolean(true) ||
+                super.interact(chr);
+    }
+
+    @Override
+    public boolean swapPosition(Char chr) {
+        if (super.swapPosition(chr)) {
+            setState(MobAi.getStateByClass(Wandering.class));
+            return true;
+        }
+        return false;
+    }
+
+    public boolean zap(@NotNull Char enemy) {
+
+        if (enemy.valid()) {
+            if (zapHit(enemy)) {
+                int damage = zapProc(enemy, damageRoll());
+                int effectiveDamage = enemy.defenseProc(this, damage);
+
+                enemy.damage(effectiveDamage, this);
+                return true;
+            } else {
+                zapMiss(enemy);
+            }
+        }
+        return false;
+    }
+
+    protected void zapMiss(@NotNull Char enemy) {
+        script.run("onZapMiss", enemy);
+    }
+
+    protected int zapProc(@NotNull Char enemy, int damage) {
+        return script.run("onZapProc", enemy, damage).optint(damage);
+    }
+
+    protected boolean zapHit(@NotNull Char enemy) {
+        if (enemy == CharsList.DUMMY) {
+            EventCollector.logException(String.format("%s zapping dummy enemy", getEntityKind()));
+            return false;
+        }
+
+        if (!level().cellValid(enemy.getPos())) {
+            EventCollector.logException(getEntityKind() + " zapping " + enemy.getEntityKind() + " on invalid cell");
+            return false;
+        }
+
+        if (CharUtils.hit(this, enemy, true)) {
+            return true;
+        } else {
+            enemy.showStatus(CharSprite.NEUTRAL, enemy.defenseVerb());
+            return false;
+        }
+    }
+
+    @LuaInterface
+    public String getMobClassName() {
+        return getEntityKind();
+    }
+
+    @Nullable
+    @LuaInterface
+    public Object getLoot() {
+        return getBelongings().randomUnequipped();
+    }
+
+    @Override
+    public Char makeClone() {
+        return MobFactory.mobByName(getEntityKind());
+    }
+
+    public void loot(Object loot, float lootChance) {
+
+        if (Dungeon.hero.lvl() > maxLvl + 2 + lvl() && !isBoss) {
+            return;
+        }
+
+        if (loot != null && Random.Float() <= lootChance) {
+            Item item;
+            if (loot instanceof Treasury.Category) {
+                item = Treasury.getLevelTreasury().random((Treasury.Category) loot);
+            } else if (loot instanceof Class<?>) {
+                item = Treasury.getLevelTreasury().random((Class<? extends Item>) loot);
+            } else if (loot instanceof String) {
+                item = Treasury.getLevelTreasury().random((String) loot);
+            } else {
+                item = (Item) loot;
+            }
+            collect(item);
+        }
+    }
+
+    @Override
+    public int priceBuy(Item item) {
+        return script.run("priceBuy", item, super.priceBuy(item)).toint();
+    }
+
+    @Override
+    public int priceSell(Item item) {
+        return script.run("priceSell", item, super.priceSell(item)).toint();
+    }
+
+    @Override
+    public int damageRoll() {
+        int dmg = Random.NormalIntRange(dmgMin, dmgMax);
+
+        dmg += getActiveWeapon().damageRoll(this);
+
+        if (!rangedWeapon.valid()) {
+            dmg += getSecondaryWeapon().damageRoll(this);
+        }
+
+        return dmg;
+    }
+
+    @Override
+    public int dr() {
+        return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() + dr;
+    }
 }

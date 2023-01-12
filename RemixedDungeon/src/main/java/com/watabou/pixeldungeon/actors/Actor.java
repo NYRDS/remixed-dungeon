@@ -54,7 +54,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	public static final float MICRO_TICK	= 0.001f;
 	private static float realTimeMultiplier = 1f;
 
-	private static Map<String, Integer> skipCounter = new HashMap<>();
+	private static final Map<String, Integer> skipCounter = new HashMap<>();
 
 	@Packable
 	private float time;
@@ -130,7 +130,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	public static void fixTime() {
 		Hero hero = Dungeon.hero;
 
-		if (hero != null && all.contains(hero)) {
+		if (hero.valid() && all.contains(hero)) {
 			Statistics.duration += now;
 		}
 		
