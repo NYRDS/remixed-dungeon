@@ -82,8 +82,6 @@ return ai.init{
                 if disgusting[item:getEntityKind()] then
 
                     local mobRat = RPD.MobFactory:mobByName("Rat")
-                    RPD.glog(tostring(mobRat))
-                    RPD.glog(tostring(mobRat.canSpawnAt))
 
                     local pos = level:getEmptyCellNextTo(me:getPos())
                     if pos>0 and mobRat:canSpawnAt(level, pos) then
