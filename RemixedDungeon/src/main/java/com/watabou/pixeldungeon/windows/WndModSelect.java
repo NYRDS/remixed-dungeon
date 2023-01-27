@@ -88,7 +88,6 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 
 			if (desc.installed || haveInternet) {
 				RedButton btn = new RedButton(option) {
-
 					@Override
 					protected void onClick() {
 						hide();
@@ -99,7 +98,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 				btn.setSize(width - GAP * 2 - (additionalMargin * 2), BUTTON_HEIGHT);
 				modRow.add(btn);
 				modsListContainer.add(modRow);
-				pos += BUTTON_HEIGHT;
+				pos += BUTTON_HEIGHT + GAP;
 			}
 
 			var redQuestion = Icons.get(Icons.BTN_QUESTION);
@@ -134,6 +133,8 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 				modRow.add(deleteBtn);
 			}
 		}
+
+		pos+= 4*GAP;
 
 		modsListContainer.setSize(width, pos);
 		list.content().add(modsListContainer);
