@@ -215,6 +215,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public Char() {
     }
 
+    @LuaInterface
     public boolean canSpawnAt(Level level, int cell) {
         boolean ret = walkingType.canSpawnAt(level, cell)
                 && level.map[cell] != Terrain.ENTRANCE;

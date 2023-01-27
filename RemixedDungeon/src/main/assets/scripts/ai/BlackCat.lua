@@ -18,9 +18,16 @@ local raw = {
     RawFish = true,
 }
 
+local disgusting = {
+    RottenRation = true,
+    RottenPasty = true,
+    RottenPumpkinPie = true,
+    RottenFish = true
+}
+
 return ai.init{
 
-    act       = function(self, ai, me)
+    act = function(self, ai, me)
         local level = RPD.Dungeon.level
 
         -- already have something tasty?
@@ -69,6 +76,20 @@ return ai.init{
                             RPD.blinkTo(me, tgt)
                             break
                         end
+                    end
+                end
+
+                if disgusting[item:getEntityKind()] then
+
+                    local mobRat = RPD.MobFactory:mobByName("Rat")
+                    RPD.glog(tostring(mobRat))
+                    RPD.glog(tostring(mobRat.canSpawnAt))
+
+                    local pos = level:getEmptyCellNextTo(me:getPos())
+                    if pos>0 and mobRat:canSpawnAt(level, pos) then
+                        mobRat:setPos(pos)
+                        level:spawnMob(mobRat)
+                        break
                     end
                 end
 
