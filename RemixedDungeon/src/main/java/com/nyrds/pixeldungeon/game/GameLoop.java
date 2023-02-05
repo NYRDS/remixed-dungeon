@@ -15,6 +15,7 @@ import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.ReportingExecutor;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.NoosaScript;
@@ -163,6 +164,9 @@ public class GameLoop {
 
         SystemTime.tick();
         SystemTime.updateLastActionTime();
+
+        SystemText.invalidate();
+        TextureCache.clear();
 
         Music.INSTANCE.resume();
         Sample.INSTANCE.resume();

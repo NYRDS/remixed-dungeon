@@ -1000,6 +1000,15 @@ public abstract class Level implements Bundlable {
 	}
 
 	@LuaInterface
+	public int randomPassableCell() {
+		return getRandomTerrain((level, cell) -> level.passable[cell]
+		&& cell != level.entrance
+		&& Actor.findChar(cell) == null);
+	}
+
+
+
+	@LuaInterface
 	@TestOnly
 	public int randomTestDestination() {
 		return getNearestTerrain(Dungeon.hero.getPos(), new RandomDestinationForAutoTest());
