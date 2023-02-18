@@ -192,6 +192,7 @@ public class LevelTools {
             switch (level.map[i]) { // old saves compatibility
                 case Terrain.BARRICADE:
                     level.putLevelObject(LevelObjectsFactory.BARRICADE, i);
+                    level.map[i] = Terrain.EMPTY;
                     break;
 
                 case Terrain.PEDESTAL:
@@ -200,6 +201,7 @@ public class LevelTools {
 
                 case Terrain.STATUE:
                     level.putLevelObject(LevelObjectsFactory.STATUE, i);
+                    level.map[i] = Terrain.EMPTY;
                     break;
 
                 case Terrain.STATUE_SP:

@@ -8,6 +8,8 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.utils.Bundle;
 
 import org.luaj.vm2.LuaTable;
+import org.luaj.vm2.LuaValue;
+import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 /**
  * Created by mike on 05.11.2017.
@@ -39,6 +41,16 @@ public class ScriptedActor extends Actor {
 		spend((float) actor.get("actionTime").call().checkdouble());
 
 		return ret;
+	}
+
+	public boolean cellClicked(int cell) {
+		LuaTable actor = LuaEngine.require(sourceFile);
+
+		var func = actor.get("cellClicked");
+		if (func.isfunction()) {
+			return func.call(CoerceJavaToLua.coerce(cell)).checkboolean();
+		}
+		return false;
 	}
 
 	public void activate() {

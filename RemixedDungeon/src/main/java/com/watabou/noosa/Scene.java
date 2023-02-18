@@ -117,4 +117,8 @@ public class Scene extends Group {
 		sceneMode = mode;
 		script.run("setMode", mode);
 	}
+
+	public boolean cellClicked(int cell) {
+		return script.runOptional("cellClicked",false, cell);
+	}
 }

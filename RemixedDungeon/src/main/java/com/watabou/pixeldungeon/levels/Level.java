@@ -117,7 +117,6 @@ import lombok.SneakyThrows;
 import lombok.val;
 
 
-
 public abstract class Level implements Bundlable {
 
 	private static final String SCRIPTS = "scripts";
@@ -1147,6 +1146,7 @@ public abstract class Level implements Bundlable {
 		set(cell, terrain);
 	}
 
+	@LuaInterface
 	public void set(int cell, int terrain) {
 
 		if(!cellValid(cell)) {
@@ -2119,5 +2119,14 @@ public abstract class Level implements Bundlable {
 			}
 		}
 		return null;
+	}
+
+	public boolean cellClicked(int cell) {
+		for(var actor: scripts){
+			if(actor.cellClicked(cell)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }

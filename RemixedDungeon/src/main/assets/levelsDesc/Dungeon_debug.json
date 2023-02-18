@@ -11,7 +11,7 @@
         "shop_town_2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Shop_2021_03.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","treasury":"TownShopTreasury.json","maxBrightness":1.05},
 
         "testLevel":{"kind":"TestLevel", "depth":0, "size":[32,32]},
-        "testLevel2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/ScriptsArena.json", "objectsKind":7, "tiles": "tilesets/tiles_metropolis_xyz.png"},
+        "testLevel2":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/ScriptsArena.json", "objectsKind":7, "tiles": "tilesets/tiles_metropolis_xyz.png","script": "scripts/actors/ClickTest"},
         "testLevelRooms":{"kind":"RandomLevel", "depth":0, "file":"levelsDesc/TestLevelRandom.json"},
 
 
@@ -75,7 +75,7 @@
     },
 
     "Graph":{
-        "0":[["portal_room_lvl5"],[]],
+        "0":[["testLevel2"],[]],
         "testLevel":[[],[]],
         "testLevel2":[[],[]],
         "testLevelRooms":[[],[]],

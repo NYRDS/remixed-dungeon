@@ -1047,7 +1047,7 @@ public class GameScene extends PixelScene {
 
     static public boolean defaultCellSelector() {
         if(isSceneReady()) {
-            return cellSelector.defaultListner();
+            return cellSelector.defaultListener();
         }
         return true;
     }

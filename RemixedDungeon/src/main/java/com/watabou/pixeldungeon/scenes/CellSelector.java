@@ -50,7 +50,7 @@ public class CellSelector extends TouchArea {
 		dragThreshold = PixelScene.defaultZoom * DungeonTilemap.SIZE / 2;
 	}
 
-	public boolean defaultListner() {
+	public boolean defaultListener() {
 		return listener instanceof DefaultCellListener;
 	}
 
