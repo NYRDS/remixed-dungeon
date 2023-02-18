@@ -60,6 +60,10 @@ public class DummyChar extends Char {
         return Level.INVALID_CELL;
     }
 
+    @Override
+    public void setPos(int pos) {
+    }
+
     public boolean add(Buff buff) {
         GLog.debug("%s (%s) added to %s", buff.getEntityKind(), buff.getSource().getEntityKind(), getEntityKind());
         return false;

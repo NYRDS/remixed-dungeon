@@ -32,6 +32,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import lombok.SneakyThrows;
+import lombok.Synchronized;
 import lombok.val;
 
 public class TextureCache {
@@ -46,6 +47,7 @@ public class TextureCache {
 		bitmapOptions.inPreferredConfig = Bitmap.Config.ARGB_8888;
 	}
 
+	@Synchronized
 	public static SmartTexture createSolid(int color) {
 		String key = "1x1:" + color;
 
@@ -65,10 +67,12 @@ public class TextureCache {
 		}
 	}
 
+	@Synchronized
 	public static void add(Object key, SmartTexture tx) {
 		all.put(key, tx);
 	}
 
+	@Synchronized
 	@Nullable
 	public static SmartTexture rawget(@NotNull Object src) {
 		return all.get(src);
@@ -87,6 +91,7 @@ public class TextureCache {
 		return ret;
 	}
 
+	@Synchronized
 	public static SmartTexture get(@NotNull Object src) {
 		SmartTexture ret = rawget(src);
 		if (ret!=null) {
@@ -100,6 +105,7 @@ public class TextureCache {
 		}
 	}
 
+	@Synchronized
 	public static void clear() {
 
 		for (Texture txt : all.values()) {
@@ -140,6 +146,7 @@ public class TextureCache {
 		throw new ModError("Bad resource source for Bitmap "+ src.getClass().getName());
 	}
 
+	@Synchronized
 	public static boolean contains(Object key) {
 		return all.containsKey(key);
 	}
@@ -148,6 +155,7 @@ public class TextureCache {
 		SmartTexture create();
 	}
 
+	@Synchronized
 	public static Object getKey(SmartTexture value) {
 		for (val entry : all.entrySet()) {
 			if(entry.getValue().equals(value)) {

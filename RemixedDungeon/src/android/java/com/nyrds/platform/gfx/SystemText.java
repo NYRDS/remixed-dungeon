@@ -28,6 +28,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import lombok.Synchronized;
+
 public class SystemText extends Text {
 
 	static private final Map<Float, TextPaint> textPaints = new HashMap<>();
@@ -142,6 +144,7 @@ public class SystemText extends Text {
 		}
 	}
 
+	@Synchronized
 	@Override
 	public void destroy() {
 		destroyLines();
@@ -151,6 +154,7 @@ public class SystemText extends Text {
 		texts.remove(this);
 	}
 
+	@Synchronized
 	@Override
 	public void kill() {
 		destroyLines();
@@ -424,6 +428,7 @@ public class SystemText extends Text {
 		return this.lineImage.size();
 	}
 
+	@Synchronized
 	public static void invalidate() {
 		for (SystemText txt : texts.toArray(new SystemText[0])) {
 			txt.dirty = true;
