@@ -501,7 +501,6 @@ local function search(pos, maxn)
     return nil, score
 end
 
-
 -------------------------------------------------------------------------------
 -- User interface
 -------------------------------------------------------------------------------
@@ -584,6 +583,7 @@ local function main()
                 print("Invalid input. Please enter a move in the proper format (e.g. g8f6)")
             end
         end
+
         pos = pos:move(move)
 
         -- After our move we rotate the board and print it again.
@@ -612,12 +612,68 @@ local function main()
     end
 end
 
-main()
+--main()
 
+--//RPD interface:
 
+local sunfish = {}
 
+local game = Position.new(initial, 0, { true, true }, { true, true }, 0, 0)
 
+function sunfish.new()
+    game = Position.new(initial, 0, { true, true }, { true, true }, 0, 0)
+    return game
+end
 
+function sunfish.store_data(game)
+    local dta = {}
+    for k, v in pairs(game) do
+        if type(v) ~= 'function' then
+            dta[k] = v
+        end
+    end
 
+    return dta
+end
 
+function sunfish.restore_data(dta)
+    game = {}
 
+    for k,v in dta do
+        game[k] = v
+    end
+
+    for k, v in pairs(Position) do
+        game[k] = v
+    end
+    return game
+end
+
+function sunfish.move(game, mv)
+    move = { parse(mv:sub(1, 2)), parse(mv:sub(3, 4)) }
+    if move[1] and move[2] and ttfind(game:genMoves(), move) then
+    else
+        return false
+    end
+
+    game = game:move(move)
+    return game
+end
+
+function sunfish.ai_move(game)
+    local move, score = search(game)
+    -- print(move, score)
+    --[[
+    assert(score)
+    if score <= -MATE_VALUE then
+    end
+    if score >= MATE_VALUE then
+    end
+    ]]
+
+    game = game:move(move)
+
+    return move, score
+end
+
+return sunfish
