@@ -87,12 +87,12 @@ public class WndStory extends Window {
 		
 		content.add(tf);
 		
-		content.setSize(tf.width(), tf.height());
+		content.setSize(tf.width(), tf.height()+ MARGIN);
 		
 		ScrollPane list = new ScrollPane(content);
 		add(list);
 
-		list.setRect(0, 0, w, h);
+		list.setRect(0, 0, w, h + MARGIN);
 	}
 
 	public static void showCustomStory( @NotNull String text ) {

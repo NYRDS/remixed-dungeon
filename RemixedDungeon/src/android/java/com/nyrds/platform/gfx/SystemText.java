@@ -412,7 +412,6 @@ public class SystemText extends Text {
 
 			fontHeight = (contourPaint.descent() - contourPaint.ascent())
 					/ oversample;
-			//fontHeight = contourPaint.getTextSize() / oversample;
 			createText();
 		}
 	}
