@@ -1177,7 +1177,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void updateSprite() {
         Level level = level();
 
-        if (level != null && level.cellValid(getPos())) {
+        if (level != null && level.cellValid(getPos()) && valid()) {
             updateSprite(getSprite());
         }
     }
