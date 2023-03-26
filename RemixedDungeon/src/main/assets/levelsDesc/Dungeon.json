@@ -70,10 +70,10 @@
    },
 
    "Graph":{
-    "0":[["town_2"],[]],
+      "0":[["town_2"],[]],
 
-    "town_2":[["church_2","cinema_2","1","library_2","shop_town_2","fortune_2","inn_2"],["0"]],
-    "inn_2":[[],["town_2"]],
+      "town_2":[["church_2","cinema_2","1","library_2","shop_town_2","fortune_2","inn_2"],["0"]],
+      "inn_2":[[],["town_2"]],
 	  "church_2":[[],["town_2"]],
 	  "shop_town_2":[[],["town_2"]],
 	  "cinema_2":[[],["town_2"]],

@@ -36,8 +36,26 @@ local function table_foreach_deep(tbl, action, level)
     return ret
 end
 
+
+local function split(str,sep)
+    local sep, fields = sep or ":", {}
+    local pattern = string.format("([^%s]+)", sep)
+    str:gsub(pattern, function(c) fields[#fields+1] = c end)
+    return fields
+end
+
+
+
 util.table_clone        = table_clone
 util.table_foreach_deep = table_foreach_deep
+util.split = split
 
+getmetatable('').__index = function(str,i)
+    if type(i) == 'number' then
+        return string.sub(str,i,i)
+    else
+        return string[i]
+    end
+end
 
 return util
