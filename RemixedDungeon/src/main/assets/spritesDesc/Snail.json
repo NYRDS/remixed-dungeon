@@ -2,6 +2,7 @@
   "texture" : "mobs/snail.png",
   "width"  : 16,
   "height" : 16,
+  "scale"  : 1,
   "idle"   : { "fps" : 2,  "looped" : true,     "frames" : [0,0,0,1] },
   "run"    : { "fps" : 14, "looped" : true,     "frames" : [2,3,4,5,6] },
   "attack" : { "fps" : 11, "looped" : false,    "frames" : [7,8,9,10,11] },

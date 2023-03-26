@@ -26,9 +26,9 @@ pieces_set = {
     ['Q']='Warlock',
     ['q']='Warlock',
     ['K']='King',
-    ['k']='RatKing',
+    ['k']='King',
     ['p']='Rat',
-    ['P']='Monk'
+    ['P']='Rat'
 }
 
 
@@ -43,11 +43,11 @@ local function chessCellFromCell(cell)
 
     if x >= 0 and x < 8 and y >= 0 and y < 8 then
         local chessCell = x_letters[x+1]..tostring(y+1)
-        RPD.glog("inside of board %d -> %s", cell, chessCell)
+        --RPD.glog("inside of board %d -> %s", cell, chessCell)
         return chessCell
     end
 
-    RPD.glog("outside of board %d -> %d,%d", cell, x,y)
+    --RPD.glog("outside of board %d -> %d,%d", cell, x,y)
 end
 
 local function cellFromChess(x,y)
@@ -80,9 +80,9 @@ return actor.init({
                             RPD.setAi(mob,"PASSIVE")
                             level:spawnMob(mob)
                             if piece == piece:upper() then
-                                mob:getSprite():hardlight(1.2f,1.2f,1.2f)
+                                mob:getSprite():hardlight(1.2,1.2,1.2)
                             else
-                                mob:getSprite():hardlight(0.8f,0.8f,0.8f)
+                                mob:getSprite():hardlight(0.8,0.8,0.8)
                             end
                             pieces[chessCell] = mob
                         end
