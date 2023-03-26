@@ -87,6 +87,7 @@ public class Spell implements NamedEntityKind {
         return true;
     }
 
+    @LuaInterface
     public boolean cast(@NotNull final Char chr) {
 
         if (!chr.isAlive()) {

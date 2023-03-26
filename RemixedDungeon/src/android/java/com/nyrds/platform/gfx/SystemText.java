@@ -392,7 +392,7 @@ public class SystemText extends Text {
 				img.aa = aa;
 
 				img.setPos(PixelScene.align(PixelScene.uiCamera, getX()), PixelScene.align(PixelScene.uiCamera, getY() + (line * fontHeight) * scale.y));
-				img.setScaleXY(scale.x / oversample, scale.x / oversample);
+				img.setScaleXY(scale.x / oversample, scale.y / oversample);
 
 				line++;
 			}

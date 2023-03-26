@@ -43,7 +43,7 @@ public class MobSpriteDef extends MobSprite {
 
 	static private final Map<String, JSONObject> defMap = new HashMap<>();
 
-	private String name;
+	private final String name;
 	private String deathEffect;
 
 	public MobSpriteDef(String defName, int kind) {
@@ -84,6 +84,9 @@ public class MobSpriteDef extends MobSprite {
 
 			visualOffsetX = (float) json.optDouble("visualOffsetX",0);
 			visualOffsetY = (float) json.optDouble("visualOffsetY",0);
+
+			charScale = (float) json.optDouble("scale",1.0);
+			setScale(charScale);
 
 			TextureFilm film = new TextureFilm(texture, width, height);
 
@@ -182,12 +185,12 @@ public class MobSpriteDef extends MobSprite {
 
 	@Override
 	public float visualHeight() {
-		return visualHeight;
+		return visualHeight * charScale;
 	}
 
 	@Override
 	public float visualWidth() {
-		return visualWidth;
+		return visualWidth * charScale;
 	}
 
 	@Override

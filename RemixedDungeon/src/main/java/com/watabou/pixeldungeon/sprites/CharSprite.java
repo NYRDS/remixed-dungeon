@@ -75,6 +75,8 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     private static final float FLASH_INTERVAL = 0.05f;
     private static final float INVISIBILITY_ALPHA = 0.4f;
 
+    protected float charScale = 1.0f;
+
     @Nullable
     protected Image avatar;
 
@@ -649,6 +651,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
         if (avatar == null) {
             avatar = snapshot(idle.frames[0]);
+            avatar.setScale(charScale);
         }
 
         return avatar;
