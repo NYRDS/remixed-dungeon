@@ -111,9 +111,9 @@ public class RemixedDungeon extends Game {
 
 		GamePreferences.activeMod(ModdingMode.activeMod());
 
-		if(!Utils.canUseClassicFont(GamePreferences.uiLanguage())) {
+		//if(!Utils.canUseClassicFont(GamePreferences.uiLanguage())) {
 			GamePreferences.classicFont(false);
-		}
+		//}
 
 		ModdingMode.setClassicTextRenderingMode(GamePreferences.classicFont());
 

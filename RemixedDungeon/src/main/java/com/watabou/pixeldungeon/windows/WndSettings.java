@@ -60,9 +60,9 @@ public class WndSettings extends WndMenuCommon {
 							@Override
 							protected void onSelect(int index) {
 								String[] lang = {"en", "ru", "fr", "pl", "es", "ko", "pt_BR", "it", "de", "zh_CN", "zh_TW", "tr", "uk","ms","hu","in","el"};
-								if (!Utils.canUseClassicFont(lang[index])) {
-									GamePreferences.classicFont(false);
-								}
+								//if (!Utils.canUseClassicFont(lang[index])) {
+								//	GamePreferences.classicFont(false);
+								//}
 								GamePreferences.uiLanguage(lang[index]);
 							}
 						});

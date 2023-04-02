@@ -785,11 +785,7 @@ public class GameScene extends PixelScene {
     }
 
     public static Text status() {
-        if (ModdingMode.getClassicTextRenderingMode()) {
-            return (FloatingText) scene.statuses.recycle(FloatingText.class);
-        } else {
-            return (SystemFloatingText) scene.statuses.recycle(SystemFloatingText.class);
-        }
+        return (SystemFloatingText) scene.statuses.recycle(SystemFloatingText.class);
     }
 
     public static void pickUp(Item item) {

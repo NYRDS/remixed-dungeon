@@ -113,10 +113,12 @@ public class PixelScene extends Scene {
 		font1x.tracking = -1;
 
 		// 7x12 (15)
+		/*
 		font25x = Font.colorMarked(
 			TextureCache.get( Assets.FONTS25X ), 17, 0x00000000, Font.ALL_CHARS);
 		font25x.baseLine = 13;
 		font25x.tracking = -1;
+		*/
 	}
 
 	@Override
@@ -146,15 +148,7 @@ public class PixelScene extends Scene {
 	}
 
 	public static Text createText(String text, float size) {
-
-		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, size, false);
-		}
-
-		Text result = Text.create(text, chooseFont(size));
-		result.setScale(scale);
-
-		return result;
+		return new SystemText(text, size, false);
 	}
 
 	public static Text createMultiline() {
@@ -166,15 +160,7 @@ public class PixelScene extends Scene {
 	}
 
 	public static Text createMultiline(final String text, float size) {
-
-		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, size, true);
-		}
-
-		Text result = Text.createMultiline(text, chooseFont(size));
-		result.setScale(scale);
-
-		return result;
+		return new SystemText(text, size, true);
 	}
 
 	public static Text createMultiline(int id, float size) {
@@ -236,7 +222,7 @@ public class PixelScene extends Scene {
 
 	private static class Fader extends ColorBlock {
 
-		private static float FADE_TIME = 1f;
+		private static final float FADE_TIME = 1f;
 
 		private boolean light;
 

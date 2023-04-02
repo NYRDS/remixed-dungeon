@@ -38,33 +38,19 @@ public abstract class Text extends Visual implements IPlaceable {
 	}
 	
 	public static Text createBasicText(String text,Font font) {
-		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, font.baseLine * 2, false);
-		}
-		return new BitmapText(text, font);
+		return new SystemText(text, font.baseLine * 2, false);
 	}
 
 	public static Text create(Font font) {
-		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(font.baseLine * 2);
-		}
-		return new BitmapText(font);
+		return new SystemText(font.baseLine * 2);
 	}
 	
 	public static Text create(String text, Font font) {
-		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, font.baseLine*2, false);
-		}
-		return new BitmapTextMultiline(text, font);
+		return new SystemText(text, font.baseLine*2, false);
 	}
 	
 	public static Text createMultiline(String text, Font font) {
-		
-		if(!ModdingMode.getClassicTextRenderingMode()) {
-			return new SystemText(text, font.baseLine * 2,true);
-		}
-		
-		return new BitmapTextMultiline(text, font);
+		return new SystemText(text, font.baseLine * 2,true);
 	}
 
 	@Override

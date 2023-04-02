@@ -9,9 +9,11 @@ import android.graphics.Typeface;
 import android.text.TextPaint;
 
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.LRUCache;
+import com.nyrds.util.ModdingMode;
 import com.watabou.glwrap.Matrix;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.SystemTextLine;
@@ -27,20 +29,21 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import lombok.Synchronized;
 
 public class SystemText extends Text {
 
-	static private final Map<Float, TextPaint> textPaints = new HashMap<>();
+	static private final Map<Float, TextPaint> textPaints = new ConcurrentHashMap<>();
 	private final TextPaint textPaint;
 
-	static private final Map<Float, TextPaint> contourPaints = new HashMap<>();
+	static private final Map<Float, TextPaint> contourPaints = new ConcurrentHashMap<>();
 	private final TextPaint             contourPaint;
 
 	private final ArrayList<SystemTextLine> lineImage = new ArrayList<>();
 
-	private static final Set<SystemText> texts = new HashSet<>();
+	private static final Map<SystemText, Boolean> texts = new ConcurrentHashMap<>();
 
 	private static Typeface tf;
 	private static float    oversample;
@@ -66,12 +69,24 @@ public class SystemText extends Text {
 		}
 
 		if (tf == null) {
-			if (Game.smallResScreen()) {
-				tf = Typeface.create((String) null, Typeface.BOLD);
-				oversample = 1;
-			} else {
-				tf = Typeface.create((String) null, Typeface.NORMAL);
+
+			if (GamePreferences.classicFont()) {
 				oversample = 4;
+				var fontFile = ModdingMode.getFile("fonts/pixel_font.ttf");
+				if (fontFile != null) {
+					tf = Typeface.createFromFile(fontFile);
+				} else {
+					tf = Typeface.createFromAsset(RemixedDungeonApp.getContext().getAssets(),"fonts/pixel_font.ttf");
+				}
+			}
+			else {
+				if (Game.smallResScreen()) {
+					tf = Typeface.create((String) null, Typeface.BOLD);
+					oversample = 1;
+				} else {
+					tf = Typeface.create((String) null, Typeface.NORMAL);
+					oversample = 4;
+				}
 			}
 		}
 
@@ -111,7 +126,7 @@ public class SystemText extends Text {
 		contourPaint = contourPaints.get(textSize);
 
 		this.text(text);
-		texts.add(this);
+		texts.put (this, true);
 	}
 
 	public static void updateFontScale() {
@@ -429,10 +444,14 @@ public class SystemText extends Text {
 
 	@Synchronized
 	public static void invalidate() {
-		for (SystemText txt : texts.toArray(new SystemText[0])) {
+		for (SystemText txt : texts.keySet().toArray(new SystemText[0])) {
 			txt.dirty = true;
 			txt.destroyLines();
 		}
+		tf = null;
+		textPaints.clear();
+		contourPaints.clear();
+		texts.clear();
 		bitmapCache.clear();
 	}
 }
