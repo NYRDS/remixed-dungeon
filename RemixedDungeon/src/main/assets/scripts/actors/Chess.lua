@@ -42,7 +42,7 @@ local function chessCellFromCell(cell)
     y = level:cellY(cell) - y0
 
     if x >= 0 and x < 8 and y >= 0 and y < 8 then
-        local chessCell = x_letters[x+1]..tostring(y+1)
+        local chessCell = string.sub(x_letters,x+1,x+1)..tostring(y+1)
         --RPD.glog("inside of board %d -> %s", cell, chessCell)
         return chessCell
     end
@@ -70,7 +70,7 @@ return actor.init({
                 for ii = 1, 8 do
                     local chessCell = chessCellFromCell(cell)
 
-                    local piece = v[ii+1]
+                    local piece = string.sub(v,ii+1,ii+1)
 
                     if pieces_set[piece] then
                         if not pieces[chessCell] or pieces[chessCell]:getEntityKind() ~= pieces_set[piece] then

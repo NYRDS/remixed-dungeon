@@ -50,6 +50,7 @@ util.table_clone        = table_clone
 util.table_foreach_deep = table_foreach_deep
 util.split = split
 
+--[[ #conflicts with Remixed RPG
 getmetatable('').__index = function(str,i)
     if type(i) == 'number' then
         return string.sub(str,i,i)
@@ -57,5 +58,5 @@ getmetatable('').__index = function(str,i)
         return string[i]
     end
 end
-
+]]
 return util
