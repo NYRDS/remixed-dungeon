@@ -660,6 +660,8 @@ Görüşlerinizi önemsiyoruz!</string>
   <string name="StartScene_Warning">Şu anki ilerlemeniz silinecektir.</string>
   <string name="StartScene_Yes">Evet, yeni oyun başlat</string>
   <string name="StartScene_No">Hayır, ana menüye dön</string>
+  <string name="StartScene_Unlock">\"Bu karakter sınıfını kilidini açmak için, herhangi bir diğer sınıfla DM-300 patronunu öldürün</string>
+  <string name="StartScene_UnlockElf">Bu karakter sınıfının kilidini açmak için, Kral patronunu başka bir sınıfla öldürün</string>
   <string name="StartScene_WinGame">\"Düellolar\"ı açmak için herhangi bir karakter türü ile oyunu bitir.</string>
   <string name="StartScene_DifficultySelect">Kaderini seç</string>
   <string name="StartScene_DifficultyEasy">Kolay (reklamlı)</string>
@@ -733,7 +735,7 @@ Görüşlerinizi önemsiyoruz!</string>
   <string name="BlackSkullOfMastery_Lich">Kara Büyücü\'ye dönüş</string>
   <string name="BlackSkullOfMastery_Necromancer">Büyüyü Kırdın</string>
   <string name="BlackSkullOfMastery_BecomeLichDesc">Kara Büyücülük, Ölüçağıran klasmanının en üst mertebesidir. Yaşam ile ölüm arasında sıkışmış olan Kara Büyücü\'nün ölüçağırma yetenekleri son derece gelişmiş olsa da kılıç kılıca mücadelede küçük bir çocuktan farkı yoktur.</string>
-  <string name="BlackSkullOfMastery_RemainHumanDesc">Veyahut, eğer büyüyü bozmayı tercih edersen bu eseri arzu ettiğin gibi kullanabilirsin.</string>
+  <string name="BlackSkullOfMastery_RemainHumanDesc">Ya da _büyüyü bozarsanız_, bu objeyi amaçlandığı gibi kullanabileceksiniz.</string>
   <string name="BlackSkull_Activated">Siyah Kurukafa Uyandı !</string>
   <string name="BlackSkull_Ressurrect">Siyah Kurukafa sana hizmet etmek için yükseldi </string>
   <string name="BlackSkull_Deactivated">Kara Kurukafa Bir Kez Daha Uykuya Daldı.</string>
@@ -870,9 +872,9 @@ Görüşlerinizi önemsiyoruz!</string>
   <string name="Pumpkin_Name">balkabağı</string>
   <string name="Pumpkin_Info">Back in a day Pumpkin people were proud and prosperous nation. But after humans came everything ended up in ruins. And severed carved heads of long gone Pumpkin tribes serves as remainder of those terrible events.</string>
   <string name="Nightcap_Name">Takke</string>
-  <string name="Nightcap_Info">Conquering dungeons in the night must be a very tiring business. How about put on a warm, cosy hat and relax, so that all your worries would go away.</string>
+  <string name="Nightcap_Info">Gece vakti zindanları fethetmek çok yorucu bir iş olmalı. Bu sıcak, rahat şapkayı takıp rahatlamaya ve tüm dünyanın beklemesine izin vermeye ne dersiniz?</string>
   <string name="WizardHat_Name">büyücü şapkası</string>
-  <string name="WizardHat_Info">A beautiful silk hat decorated with star ornaments. Back in the old, some believed that the greatest wizards wore specially crafted clothing that increased their power. But it doesn\'t actually buffs your magical capabilities, but it\'s sure feels like it.</string>
+  <string name="WizardHat_Info">Yıldız süslemeli güzel bir ipek şapka. Eski zamanlarda, bazıları en büyük büyücülerin sihirli güçlerini artıran özel olarak hazırlanmış giysiler giydiğine inanırdı. Ancak bu, aslında sihirli yeteneklerinizi artırmıyor, ancak giydiğinizde kesinlikle öyle hissettiriyor.</string>
   <string name="WndHats_ListTitle">List of Accessories</string>
   <string name="WndHats_SlotTitle">kuşanılmış.</string>
   <string name="WndHats_NoConnectionMsg">şuanda google play e bağlanamazsın.</string>
@@ -1244,7 +1246,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Goo_Name">Goo</string>
   <string name="Goo_Gender">erkek</string>
   <string name="Goo_Name_Objective">Goo</string>
-  <string name="Goo_Desc">Goo hakkında çok az şey bilinir.Lağımdaki maddelerin özgür iradesi ile bir araya gelmesinden oluşmuştur. </string>
+  <string name="Goo_Desc">Goo hakkında pek az şey bilinmektedir. Muhtemelen bir yaratık değil, kanalizasyondan gelen maddelerin özgür iradeye sahip rudimentler kazandığı bir birleşik yapıdır. Her halükarda, burada karanlık sihirin işaretleri açıktır.</string>
   <string name="Goo_Info1">Goo kendini şişiriyor!</string>
   <string name="Goo_Info2">gluk gluk</string>
   <string name="Goo_Info3">GLUK-GLUK!</string>
@@ -1281,7 +1283,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Piranha_Name_Objective">dev pirana</string>
   <string name="Piranha_Desc">Bu etobur balıklar yeraltı sularının doğal canlıları değildir, hazineleri korumak için özel olarak üretilmişlerdir.</string>
   <string name="Rat_Name">keseli sıçan</string>
-  <string name="Rat_Gender">dişi</string>
+  <string name="Rat_Gender">kadınsı</string>
   <string name="Rat_Name_Objective">keseli sıçan</string>
   <string name="Rat_Desc">Keseli sıçanlar lağımların sinirli ancak zayıf müdavimleridir.Çok fazla sayıda olduklarında tehlikeli olabilirler.</string>
   <string name="Scorpio_Name">akrep</string>
@@ -1440,7 +1442,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="JarOfSouls_Gender">erkeksi</string>
   <string name="JarOfSouls_Name_Objective">ruhlar kavanozu</string>
   <string name="JarOfSouls_Desc">Bu eski kavanozda tasvir edilen kafatasının parlayan gözleri ve yaydığı garip enerji seni rahatsız ediyor.</string>
-  <string name="Lich_Name">Ummacı</string>
+  <string name="Lich_Name">lich</string>
   <string name="Lich_Gender">erkeksi</string>
   <string name="Lich_Name_Objective">lich</string>
   <string name="Lich_Desc">Güçlü büyücüler Necropolis\'in bu derinliklerinde öldüğünde, buradaki şeytani enerji vücudunu ele geçirip onu \"Lich\" e çevirir.Bu ölümsüz büyücü artık kötü niyetli ellerde bir kukladır</string>
@@ -1503,6 +1505,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Badges_BossSlain3">DM-300 Öldürüldü </string>
   <string name="Badges_BossSlain4">Kral öldürüldü </string>
   <string name="Badges_BossSlain1All">Goo tüm karakter türleri ile kesildi</string>
+  <string name="Badges_BossSlain3All">DM-300 tüm alt sınıflar tarafından öldürüldü</string>
   <string name="Badges_RingHaggler">Pazarlıkçı Yüzüğü kazanıldı</string>
   <string name="Badges_RingThorns">Diken Yüzüğü kazanıldı</string>
   <string name="Badges_StrengthAttained1">13 Güç puanına ulaşıldı</string>
@@ -1542,7 +1545,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="VampireSkull_Name">vampir kurukafa</string>
   <string name="VampireSkull_Info">Bu maske %100 doğal vampir kafatasından yapılmış. Her ne kadar vampir de olsa... Pek koca kafalıymış. Acayip.</string>
   <string name="ZombieMask_Name">Zombi Maskesi</string>
-  <string name="ZombieMask_Info">Hiç Ölü Bir Kahraman Gibi Gözükmek İstedin Mi ? Görevlerinde Ölüp Ölüp Baştan Başlayan ?  O Zaman Bu Tam Sana Göre.</string>
+  <string name="ZombieMask_Info">Hiç görevinde defalarca başarısız olan ölümsüz bir kahraman gibi görünmek istediniz mi? İşte size fırsat.</string>
   <string name="Candy_Name">Şeker</string>
   <string name="Candy_Info">bu şeker çok güzel görünüyor ve harika kokuyor. cidden bunu başkasına vermen gerekli mi ?</string>
   <string name="Candy_Warning_1">o şekeri yememeliydin. başkasına vereceğine söz vermiştin.hiçbir işe yaramadı açlığın azalmadı.sadece basit bir şeker</string>
@@ -1568,7 +1571,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="ScarecrowNPC_Quest_Reminder">İhtiyacım olan tek şey 5 tane şeker. Ohh, ödüller çok tatlı olacak! </string>
   <string name="ScarecrowNPC_Quest_End">Ah, ne tatlı, ne harika!\nLeziz bir dilim turta işte sana!</string>
   <string name="Journal_ScarecrowNPC">korkuluk</string>
-  <string name="Mods_CreatedBy">Yaratan:</string>
+  <string name="Mods_CreatedBy">Oluşturan:</string>
   <string name="Mods_AuthorSite">Sahibinin sitesi:</string>
   <string name="Mods_AuthorEmail">Sahibinin epostası:</string>
   <string name="Mods_RestartRequired">Yeniden başlatma gerekiyor</string>
@@ -1582,7 +1585,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="RatArmor_Info">Fare derisinden bir zırh, muhtemelen zehirli değildir. </string>
   <string name="PlagueDoctorNPC_Name">Veba Hekimi</string>
   <string name="PlagueDoctorNPC_Gender">Erkeksi</string>
-  <string name="PlagueDoctorNPC_Name_Objective">Veba Hekimi</string>
+  <string name="PlagueDoctorNPC_Name_Objective">veba doktoru</string>
   <string name="PlagueDoctorNPC_Desc">Kürekle kaplı bu kambur adam sanki şey gibi kokuyor, ilaç ve... sarımsak mı?! </string>
   <string name="PlagueDoctorNPC_Quest_Start_Male">Olacak iş değil! Şu ahmaklar hala lağımların ne kadar tehlikeli olduğunu idrak edemiyor. Sanki gardiyan ve maceracı bozmaları, Kasaba\'yı her bir şeyden koruyabilirmiş gibi... Bu hastalığın yayılmasını hiçbir silah durduramaz. Biraz yardımın lazım. Bana %d sıçan derisi getir ki araştırmalarıma devam edebileyim. 
 </string>
@@ -1596,6 +1599,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="TownsfolkMovieNPC_Gender">erkeksi</string>
   <string name="TownsfolkMovieNPC_Name_Objective">köylü</string>
   <string name="TownsfolkMovieNPC_Desc">Sakinlerden biri. Avamlığı bariz de olsa elbiseleri epey pahalı duruyor.</string>
+  <string name="TownsfolkMovieNPC_Message">\"Sinema salonunun\" sağladığı özel hizmeti biliyor musunuz? \"İnternet\" diye egzotik bir şey istemeleri çok kötü, böyle bir şeyi hiç duymadım bile.</string>
   <string name="LibrarianNPC_Name">kütüphaneci</string>
   <string name="LibrarianNPC_Gender">erkeksi</string>
   <string name="LibrarianNPC_Name_Objective">kütüphaneci</string>
@@ -1664,10 +1668,10 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="ServiceManNPC_Desc">Yerel bir işletmelerin müdavim çalışanı.</string>
   <string name="TownShopkeeper_Name">mağaza sahib</string>
   <string name="TownShopkeeper_Desc">Bu adam normal bir esnaf. Kaç para edeceğini bildiğinden eminsin.</string>
-  <string name="WndMovieTheatre_Watch">film izle </string>
+  <string name="WndMovieTheatre_Watch">bir Reklam izle</string>
   <string name="WndMovieTheatre_No">ayrıl</string>
   <string name="WndMovieTheatre_Bye">Sizi gördüğümüze sevindik, yine bekleriz!</string>
-  <string name="WndMovieTheatre_Instruction">Merhabalar ve hoş geldiniz! Burası sinema salonumuz ve burada ücretsiz şekilde film izleyebileceğiniz hususi bir hizmet sunuyoruz. Eğer filmin sonunu görebilirseniz %d altın sikke ile ödüllendirileceksiniz!</string>
+  <string name="WndMovieTheatre_Instruction">Merhaba ve sinemamıza hoş geldiniz! Özel bir hizmet sunuyoruz: ücretsiz olarak \"reklam\" adlı özel bir filmi izleyebilirsiniz. Eğer tamamını izlerseniz, %d altın paralarla ödüllendirileceksiniz!</string>
   <string name="WndMovieTheatre_Title">sinema salonu </string>
   <string name="WndMovieTheatre_Thank_You">izlediğiniz için teşekkürler </string>
   <string name="WndPriest_Heal">iyileş %d altın</string>
@@ -1851,7 +1855,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="RatKing_Info2">Bu nedir ? Bu anlamsız şeylerle uğraşamam, krallığım kendi kendini yönetemez!</string>
   <string name="RatKing_Info3">Seni cılız yaratık, majestelerini rahatsız etmeye nasıl cüret edersin?!</string>
   <string name="RatKing_Died">Kral öldü , yaşasın yeni kral!</string>
-  <string name="Shopkeeper_Name">mağaza sahib</string>
+  <string name="Shopkeeper_Name">dükkan sahibi</string>
   <string name="Shopkeeper_Desc">Bu sağlam adam bu zindan gibi yerler yerine büyük bir şehirde olmaya daha uygun görünüyor. Fiyatları neden burada olmak istediğini açıklıyor.</string>
   <string name="Shopkeeper_Sell">Satmak için bir eşya seç</string>
   <string name="WandMaker_Name">yaşlı asa ustası</string>
@@ -2123,7 +2127,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="Halls_TileDescBookshelf">Antik dillerdeki kitaplar kitaplıkta yanar.</string>
   <string name="LastLevel_TileWater">Soğuk lav</string>
   <string name="LastLevel_TileGrass">Koryosunu</string>
-  <string name="LastLevel_TileHighGrass">Adam mantarı</string>
+  <string name="LastLevel_TileHighGrass">Kormantarları</string>
   <string name="LastLevel_TileStatue">Sütun</string>
   <string name="LastLevel_TileDescWater">Görünüş olarak lava benziyor, ama bu soğuk, ve dokunmak için muhtemelen güvenli.</string>
   <string name="LastLevel_TileDescStatue">Bu sütun gerçek insan kafatalarından yapılmış. Muhteşem.</string>
@@ -2825,8 +2829,65 @@ remix.30.1\n
   <string name="MoongraceBuff_Info">Çevredeki hava daha doygun hale gelir, bu da büyülü rezervlerin daha iyi konsantre edilmesini ve yenilenmesini sağlar.</string>
   <string name="EncumbranceBuff_Name">Yük</string>
   <string name="EncumbranceBuff_Info">%s\'yi etkili bir şekilde kullanmak için yeterli güç yok.</string>
+  <string name="Level_TileDescPedestal">Küçük bir kaide.</string>
+  <string name="Level_TileDescWell"/>
+  <string name="Welcome_Text_31_0">
+    remix.31.0\n
+    - Oynanış:\n
+    -- İsteğe Bağlı İzometrik Mod!\n
+    - Modifiye:\n
+    -- Modifiye Edilebilir Seviye Nesneleri\n
+    - Hatalar düzeltildi\n
+    </string>
+  <string name="Level_TilePileOfStones">Bir yığın taş</string>
+  <string name="Level_TileDescPileOfStones">Son derece ağır taşlardan oluşan bir yığın, kımıldamaz görünüyor.</string>
+  <string name="WndSettingsInGame_IsometricTiles">İzometrik Karolar</string>
   <string name="KrampusHead_Name">Kranpus\'un kafası</string>
+  <string name="KrampusHead_Info">Hiç Zindan Keşfi yaparken daha uğursuz bir rol üstlenmenin nasıl bir his olduğunu merak ettiniz mi? Bu şeytani görünümle yerel bebek farelere korku salacağınız kesin.</string>
+  <string name="WndSettingsInGame_GameLog">Oyun günlüğü</string>
+  <string name="Froth_ArrowInKnee">Ben de senin gibi bir maceracıydım.\nAma sonra dizime bir ok yedim...</string>
+  <string name="BardSong_1">Karım ve ben, kendimize ait\ndediğimiz küçük bir kulübede tek\nbaşımıza yaşıyoruz. O cin severdi,\n ben de rom severdim.</string>
   <string name="SpiderElite_Name">Elit örümcek muhafız </string>
   <string name="SpiderElite_Gender">erkek</string>
   <string name="SpiderElite_Name_Objective">Elit örümcek muhafız </string>
+  <string name="SpiderElite_Desc">Tıpkı askerler gibi örümcek muhafızlar da krallıklarını korumaya yeminlidir. Seçkin muhafızların zehri hedeflerini şaşırtmak için kullanılır.</string>
+  <string name="Shaman_ZapMiss">*Gnolce küfürler*</string>
+  <string name="Facilitations_Names_0">Açlık yok</string>
+  <string name="Facilitations_Names_1">Trol bedeni</string>
+  <string name="Facilitations_Names_2">Cin ruhu</string>
+  <string name="Facilitations_Names_3">Dev güç</string>
+  <string name="Facilitations_Descriptions_0">Mutantlara her zaman aşağılama ve korku ile yaklaşılmıştır, ancak açlığın yokluğu size bir kez daha üstünlük sağlayacak, bu sefer zindanın derinliklerini fethetmede.</string>
+  <string name="Facilitations_Descriptions_1">Ailenin kim olduğu hâlâ bilinmiyor, ancak doğal trol benzeri yenilenme, yaklaşan tüm savaş yaralarını iyileştirmeye yardımcı olacaktır.</string>
+  <string name="Facilitations_Descriptions_2">Bir enerji kaynağı olarak doğayı derinlemesine ve kapsamlı bir şekilde incelemek, yolculuk sırasında sihirli rezervlerinizi yenilemenizi sağlayacaktır.</string>
+  <string name="Facilitations_Descriptions_3">Ogre derisinden yapılmış kemerini sıktıktan sonra, ileride ne olduğunu bilmeden bir adım atarsın.</string>
+  <string name="Challenges_Descriptions_0">Yiyecek ve su uzun süredir çürümüştü, her maceracının ölüm korkusu ve açlıktan delirdiği düşüncesiyle. Sizinkisi dayanıklı bir diyet mi?</string>
+  <string name="Challenges_Descriptions_1">Birinin saldırısı en iyi savunmadır. Bu öğretileri takip ederek, bedeninizin en güçlü koruyucusu olan inançla zindana girersiniz.</string>
+  <string name="Challenges_Descriptions_2">Sıradan bedenin doğal yenilenmesine inanan biri olarak, iyileştirici özellikleri olan iksirlere her zaman temkinli yaklaştınız. Üzülmektense güvende olmak daha iyidir!</string>
+  <string name="Challenges_Descriptions_3">Zindan etrafındaki topraklar kötülük tarafından uzun süredir enfekte edilmiştir ve çeşitli otlar ve bitkiler için tohumların büyümesini engeller. Kim bilir, bu çorak topraklarda son bitkinin yok olması ne kadar sürecek.</string>
+  <string name="Challenges_Descriptions_4">Zindandaki tüm yaratıkların zihinleri arasında şeytani bir varlık gizleniyor ve birbirleriyle meydana gelen olaylardan haberdar olmalarını sağlıyor.</string>
+  <string name="Challenges_Descriptions_5">Kötülükle birlikte gelen ilk şey, zindanın sonsuz koridorlarında net bir şekilde gezinmeyi neredeyse imkansız kılan yoğun ve aşılmaz bir sis oldu.</string>
+  <string name="Challenges_Descriptions_6">Kadim rün okuma sanatı, zindana ya da çevresine giren her parşömene bahşedilen lanet nedeniyle yasaklanmış ve her ne pahasına olursa olsun kaçınılmıştır.</string>
+  <string name="Challenges_Descriptions_7">Silah bulundurmanın ve kullanmanın ahlaki olarak doğru olmadığı gerçeğine alıştınız, ancak sizi aşağıda dolaşan yaratıklardan başka ne koruyabilir?</string>
+  <string name="ManaRegenerationBuff_Name">Mana Yenilenmesi</string>
+  <string name="ManaRegenerationBuff_Info">Mana yenileme işlevi, işleri kolaylaştırmak için bir güçlendirme biçimindedir.</string>
+  <string name="WndGame_Customizations">Özelleştirmeler</string>
+  <string name="Welcome_Text_31_1">
+    remix.31.1\n
+    - Oynanış:\n
+    -- Yeni Özelleştirmeler!\n
+    -- Yeni Örümcek türü!\n
+    -- Psi-Spider artık Kahramanı zayıflatmak yerine diğer örümcekleri güçlendirecek.\n
+    - Hatalar düzeltildi\n
+    </string>
+  <string name="WndTilesKind_Title">Bir şey daha var:</string>
+  <string name="WndTilesKind_text">Çarpık büyü tarafından ele geçirilmiş bir zindana girmek üzeresiniz, ancak şimdi onu nasıl göreceğinizi seçeceksiniz:\nModern pseudo 3d veya klasik düz görünümde olmasını ister misiniz?\nBunu daha sonra oyun seçenekleri menüsünde değiştirebileceksiniz.</string>
+  <string name="WndTilesKind_NewLook">Yeni Görünüm</string>
+  <string name="WndTilesKind_ClassicLook">Klasik görünüm</string>
+  <string name="MobAi_status">Bu %s, %s</string>
+  <string name="WndCustomizations_Title">Özelleştirmeler</string>
+  <string name="IceGuardianCore_DieInfo">Burası çok soğuk, 14. seviyeye geri dönüp daha sıcak bir yer bulmaya çalışsam iyi olacak.</string>
+  <string name="Lich_DieInfo">Bu Ölü Çağıran\'ı hiç sevmedim. Bu yüzden 7. seviyeye dönmenin ve yeni maceraya giden başka bir yol bulmanın zamanı geldi.</string>
+  <string name="SpiderQueen_DieInfo">Örümcek Kraliçe öldürüldü! Şimdi 5. seviyeye geri dönmeli ve Derinlere yolculuğuma devam etmeliyim.</string>
+  <string name="WndModSelect_ReallyDelete">Gerçekten silecek misin?</string>
+  <string name="WndModSelect_AreYouSure">Mod siliniyor: %s, emin misin?</string>
 </resources>
