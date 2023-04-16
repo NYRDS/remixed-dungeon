@@ -104,7 +104,7 @@ local function safe_tostring (value)
 end
 
 -- Private:
--- Parses a line, looking for possible function definitions (in a very naïve way) 
+-- Parses a line, looking for possible function definitions (in a very naï¿½ve way) 
 -- Returns '(anonymous)' if no function name was found in the line
 local function ParseLine(line)
 	assert(type(line) == "string")
@@ -272,7 +272,7 @@ function Dumper:DumpLocals (level)
 			else
 				local source = info.short_src
 				if source:sub(2,7) == "string" then
-					source = source:sub(9)	-- uno más, por el espacio que viene (string "Baragent.Main", por ejemplo)
+					source = source:sub(9)	-- uno mï¿½s, por el espacio que viene (string "Baragent.Main", por ejemplo)
 				end
 				--for k,v in pairs(info) do print(k,v) end
 				fun_name = fun_name or GuessFunctionName(info)
@@ -292,7 +292,7 @@ end
 -- Collects a detailed stack trace, dumping locals, resolving function names when they're not available, etc.
 -- This function is suitable to be used as an error handler with pcall or xpcall
 --
--- @param thread An optional thread whose stack is to be inspected (defaul is the current thread)
+-- @param thread An optional thread whose stack is to be inspected (default is the current thread)
 -- @param message An optional error string or object.
 -- @param level An optional number telling at which level to start the traceback (default is 1)
 --
@@ -306,7 +306,7 @@ function _M.stacktrace(thread, message, level)
 
 	thread = thread or coroutine.running()
 
-	level = level or 1
+	level = level or 0
 
 	local dumper = Dumper.new(thread)
 
