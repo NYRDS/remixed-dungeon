@@ -2844,6 +2844,8 @@ remix.30.1\n
   <string name="Facilitations_Descriptions_1">没有人知道你的父母是谁，但堪比巨魔的再生能力将会修复接下来战斗中你所受到的伤。</string>
   <string name="Facilitations_Descriptions_2">通过对自然深入彻底的研究，你能够从环境中汲取能量，从而在旅途中不断补充你的魔力储备。</string>
   <string name="Facilitations_Descriptions_3">拉紧了这条传承了一代又一代的食人魔皮制腰带，你朝着未知的前方迈出了一步。</string>
+  <string name="Challenges_Descriptions_0">食物和水早就腐烂了，恐惧和饥饿使每个冒险者都因为死亡的想法而变得疯狂。你的饮食能帮助你坚持足够长的时间吗？</string>
+  <string name="Challenges_Descriptions_1">一个人的进攻是最好的防守。遵循这些教导，你冒险进入地牢，信仰是你身体最强大的守护者。</string>
   <string name="ManaRegenerationBuff_Name">魔法恢复</string>
   <string name="ManaRegenerationBuff_Info">魔法恢复是一种buff，这能让一些事情变得简单一些。</string>
   <string name="WndGame_Customizations">自定义设置</string>
