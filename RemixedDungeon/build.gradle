@@ -34,8 +34,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1157
-        versionName "31.1.fix.30"
+        versionCode 1158
+        versionName "31.1.fix.31"
         targetSdkVersion 32
         minSdkVersion 21
         compileSdkVersion = 32
