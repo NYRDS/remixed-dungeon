@@ -51,7 +51,6 @@ import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Rankings.gameOver;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -81,7 +80,6 @@ import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -957,9 +955,16 @@ public class Dungeon {
         setFacilitations(facilitations);
     }
 
-    public static void setChallenge(int mask) {
+    public static boolean setChallenge(int mask) {
+        if (ModdingMode.inMod()) {
+            if (mask == Challenges.NO_TOWN) {
+                return false;
+            }
+        }
+
         challenges = challenges | mask;
         setChallenges(challenges);
+        return true;
     }
 
     public static void resetChallenge(int mask) {

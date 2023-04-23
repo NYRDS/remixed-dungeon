@@ -33,7 +33,6 @@ public class ChallengeItem extends Component {
     protected Text label  = PixelScene.createText(GuiProperties.regularFontSize());
 
     HBox box;
-    Callback onClickCallback;
 
     private final int index;
 
@@ -71,9 +70,12 @@ public class ChallengeItem extends Component {
                             Dungeon.resetChallenge(msk);
                         }
                     } else {
-                        Dungeon.setChallenge(mask);
-                        for(Integer msk: Objects.requireNonNull(Challenges.conflictingFacilitations.get(mask))) {
-                            Dungeon.resetFacilitation(msk);
+                        if(Dungeon.setChallenge(mask)) {
+                            for (Integer msk : Objects.requireNonNull(Challenges.conflictingFacilitations.get(mask))) {
+                                Dungeon.resetFacilitation(msk);
+                            }
+                        } else {
+                            state = ! state;
                         }
                     }
                 } else {

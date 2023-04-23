@@ -18,6 +18,7 @@ import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
+import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.CavesBossLevel;
 import com.watabou.pixeldungeon.levels.CavesLevel;
@@ -91,6 +92,10 @@ public class DungeonGenerator {
 			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon_debug.json");
 		} else {
 			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon.json");
+		}
+
+		if (Dungeon.isChallenged(Challenges.NO_TOWN) && !ModdingMode.inMod()) {
+			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon_no_town.json");
 		}
 
 		try {
