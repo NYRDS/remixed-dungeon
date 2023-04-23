@@ -29,6 +29,7 @@ import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.IceCavesLevel;
 import com.nyrds.pixeldungeon.levels.NecroLevel;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
+import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
@@ -158,6 +159,7 @@ public class Dungeon {
         }
 
         DungeonGenerator.reset();
+        SpellFactory.reset();
 
         Treasury.reset();
         Statistics.reset();
