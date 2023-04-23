@@ -40,10 +40,11 @@ public class Challenges {
 	public static final int DARKNESS			= (int)Math.pow(2,5);
 	public static final int NO_SCROLLS          = (int)Math.pow(2,6);
 	public static final int NO_WEAPON           = (int)Math.pow(2,7);
+	public static final int NO_TOWN             = (int)Math.pow(2,8);
 
 
 	public static final int[] MASKS = {
-		NO_FOOD, NO_ARMOR, NO_HEALING, NO_HERBALISM, SWARM_INTELLIGENCE, DARKNESS, NO_SCROLLS, NO_WEAPON
+		NO_FOOD, NO_ARMOR, NO_HEALING, NO_HERBALISM, SWARM_INTELLIGENCE, DARKNESS, NO_SCROLLS, NO_WEAPON, NO_TOWN
 	};
 
 	@SuppressLint("UseSparseArrays")

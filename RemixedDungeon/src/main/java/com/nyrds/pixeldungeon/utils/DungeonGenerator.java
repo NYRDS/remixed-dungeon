@@ -82,6 +82,10 @@ public class DungeonGenerator {
 		mLevelKindList.put(levelClass.getSimpleName(), levelClass);
 	}
 
+	public static void reset() {
+		initLevelsMap();
+	}
+
 	private static void initLevelsMap() {
 		if (Util.isDebug() && !ModdingMode.inMod()) {
 			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon_debug.json");

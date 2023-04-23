@@ -48,7 +48,7 @@ public class ChallengeItem extends Component {
         if(index >= 16) {
             title = StringsManager.getVars(R.array.Facilitations_Names)[index - 16];
             desc = StringsManager.getVars(R.array.Facilitations_Descriptions)[index - 16];
-            icon = new Image(UI_CHALLENGES_PNG, 16, index + 8 - 16);
+            icon = new Image(UI_CHALLENGES_PNG, 16, index + 16 - 16);
         } else {
             title = StringsManager.getVars(R.array.Challenges_Names)[index];
             desc = StringsManager.getVars(R.array.Challenges_Descriptions)[index];

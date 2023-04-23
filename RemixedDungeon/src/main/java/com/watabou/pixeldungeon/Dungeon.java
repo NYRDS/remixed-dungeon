@@ -159,6 +159,8 @@ public class Dungeon {
             LuaEngine.reset();
         }
 
+        DungeonGenerator.reset();
+
         Treasury.reset();
         Statistics.reset();
         Journal.reset();
@@ -582,11 +584,13 @@ public class Dungeon {
                     Utils.format("loading save from another mod (save: %s, active: %s)", saveMod, activeMod)));
         }
 
+        if(fullLoad) {
+            reset();
+        }
+
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
         EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID, 1));
         CharsList.restoreFromBundle(bundle);
-
-        Treasury.reset();
 
         Scroll.restore(bundle);
         Potion.restore(bundle);
