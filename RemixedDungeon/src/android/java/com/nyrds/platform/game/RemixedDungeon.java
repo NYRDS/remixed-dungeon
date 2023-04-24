@@ -111,10 +111,6 @@ public class RemixedDungeon extends Game {
 
 		GamePreferences.activeMod(ModdingMode.activeMod());
 
-		if(!Utils.canUseClassicFont(GamePreferences.uiLanguage())) {
-			GamePreferences.classicFont(false);
-		}
-
 		ModdingMode.setClassicTextRenderingMode(GamePreferences.classicFont());
 
 		GamePreferences.setSelectedLanguage();
@@ -196,19 +192,17 @@ public class RemixedDungeon extends Game {
 
 	@SuppressLint("NewApi")
 	public static void updateImmersiveMode() {
-		if (android.os.Build.VERSION.SDK_INT >= 19) {
-			if (instance() != null) {
-				instance().getWindow()
-						.getDecorView()
-						.setSystemUiVisibility(
-								GamePreferences.immersed() ? View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-										| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-										| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-										| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-										| View.SYSTEM_UI_FLAG_FULLSCREEN
-										| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-										: 0);
-			}
+		if (instance() != null) {
+			instance().getWindow()
+					.getDecorView()
+					.setSystemUiVisibility(
+							GamePreferences.immersed() ? View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+									| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+									| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+									| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+									| View.SYSTEM_UI_FLAG_FULLSCREEN
+									| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+									: 0);
 		}
 	}
 

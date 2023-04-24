@@ -62,9 +62,9 @@ public class DarkGold extends Item {
 	}
 
 	@Override
-	protected void onThrow(int cell, @NotNull Char thrower) {
+	protected void onThrow(int cell, @NotNull Char thrower, Char enemy) {
 		if(Dungeon.depth > 0) {
-			super.onThrow(cell, thrower);
+			super.onThrow(cell, thrower, enemy);
 		}   else {
 			melt(cell);
 		}

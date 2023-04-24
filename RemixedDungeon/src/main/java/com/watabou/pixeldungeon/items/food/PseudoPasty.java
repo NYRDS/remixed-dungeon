@@ -41,7 +41,7 @@ public class PseudoPasty extends Food {
 
 		level.spawnMob(mob);
 
-		Dungeon.hero.checkVisibleEnemies();
+		ch.checkVisibleEnemies();
 
 		CellEmitter.get(pos).burst(Speck.factory(Speck.STAR), 10);
 		Sample.INSTANCE.play(Assets.SND_MIMIC);

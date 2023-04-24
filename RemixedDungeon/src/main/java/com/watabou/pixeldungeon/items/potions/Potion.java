@@ -210,7 +210,7 @@ public class Potion extends Item implements UnknownItem {
 		
 		detach( hero.getBelongings().backpack );
 
-		onThrow( hero.getPos(), hero);
+		onThrow( hero.getPos(), hero, hero);
 		
 		Sample.INSTANCE.play( Assets.SND_DRINK );
 		
@@ -224,14 +224,14 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	@Override
-	protected void onThrow(int cell, @NotNull Char thrower) {
+	protected void onThrow(int cell, @NotNull Char thrower, Char enemy) {
 		if (thrower.getPos() == cell) {
 			apply( thrower );
 		} else {
 			Level level = thrower.level();
 			LevelObject lo = level.getTopLevelObject(cell);
 			if ((lo != null && lo.affectItems()) || level.pit[cell]) {
-				super.onThrow( cell, thrower);
+				super.onThrow( cell, thrower, enemy);
 			} else  {
 				shatter( cell );
 			}

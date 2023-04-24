@@ -98,7 +98,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 		int texts = 0;
 		for (int i = 0; i< getLength(); i++) {
 			if(members.get( i ) instanceof Text)
-			texts++;
+				texts++;
 		}
 		
 		if (texts > MAX_MESSAGES) {

@@ -45,7 +45,7 @@ import java.util.List;
 import java.util.Set;
 
 import lombok.SneakyThrows;
-import lombok.var;
+
 
 public abstract class RegularLevel extends CustomLevel {
 

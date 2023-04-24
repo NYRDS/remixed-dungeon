@@ -46,7 +46,7 @@ public class WandOfAvalanche extends SimpleWand {
 	}
 	
 	@Override
-	protected void onZap( int cell ) {
+	protected void onZap( int cell, Char victim ) {
 		
 		Sample.INSTANCE.play( Assets.SND_ROCKS );
 		

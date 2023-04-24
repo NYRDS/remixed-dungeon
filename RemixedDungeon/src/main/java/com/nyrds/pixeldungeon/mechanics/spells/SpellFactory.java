@@ -2,6 +2,8 @@ package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.watabou.pixeldungeon.Challenges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -9,10 +11,12 @@ import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 import lombok.SneakyThrows;
-import lombok.var;
+
 
 public class SpellFactory {
 
@@ -20,6 +24,8 @@ public class SpellFactory {
 	static private Map<String,ArrayList<String>> mSpellsByAffinity;
 
 	static private final LuaScript script = new LuaScript("scripts/spells/SpellsByAffinity", null);
+
+	static private Set<String> forbiddenSpells = new HashSet<>();
 
 
 	@SneakyThrows
@@ -38,11 +44,7 @@ public class SpellFactory {
 
 
 	public static boolean hasSpellForName (String name) {
-		if (getSpellsList().get(name) != null) {
-			return true;
-		}
-
-		return script.run("haveSpell", name).checkboolean();
+		return getAllSpells().contains(name);
 	}
 
 	@NotNull
@@ -73,6 +75,8 @@ public class SpellFactory {
 			spellList.add(luaList.rawget(i).checkjstring());
 		}
 
+		spellList.removeAll(forbiddenSpells);
+
 		return spellList;
 	}
 
@@ -89,6 +93,8 @@ public class SpellFactory {
 		for (int i = 1;i<=luaList.length();i++) {
 			spellList.add(luaList.rawget(i).checkjstring());
 		}
+
+		spellList.removeAll(forbiddenSpells);
 
 		return spellList;
 	}
@@ -123,5 +129,14 @@ public class SpellFactory {
 		}
 
 		return mSpellsList;
+	}
+
+	public static void forbid(String spell) {
+		forbiddenSpells.add(spell);
+	}
+
+	public static void reset() {
+		forbiddenSpells.clear();
+		Challenges.forbidSpells(Dungeon.getChallenges());
 	}
 }

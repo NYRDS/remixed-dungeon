@@ -4,6 +4,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.storage.Assets;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
@@ -32,7 +33,7 @@ import java.util.Map;
 import java.util.Set;
 
 import lombok.SneakyThrows;
-import lombok.var;
+
 
 public class ModdingMode {
 	public static final String REMIXED = "Remixed";

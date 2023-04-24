@@ -17,7 +17,7 @@ t * Pixel Dungeon
  */
 package com.watabou.pixeldungeon;
 
-import com.google.firebase.perf.metrics.AddTrace;
+
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.ai.MobAi;
@@ -28,6 +28,8 @@ import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.IceCavesLevel;
 import com.nyrds.pixeldungeon.levels.NecroLevel;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
+import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
@@ -36,6 +38,7 @@ import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
@@ -49,7 +52,6 @@ import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Rankings.gameOver;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -79,7 +81,6 @@ import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -93,7 +94,7 @@ import java.util.HashSet;
 
 import lombok.SneakyThrows;
 import lombok.val;
-import lombok.var;
+
 
 import static com.nyrds.platform.game.RemixedDungeon.MOVE_TIMEOUTS;
 
@@ -108,7 +109,8 @@ public class Dungeon {
     private static int challenges;
     private static int facilitations;
 
-    public static Hero hero;
+    @NotNull
+    public static Hero hero = CharsList.DUMMY_HERO;
 
     public static Level level;
     public static String levelId;
@@ -133,11 +135,11 @@ public class Dungeon {
     // Current char passability map
     private static boolean[] passable;
 
-    @Nullable
     public static HeroClass heroClass;
 
     private static boolean isometricMode = false;
     public static boolean isometricModeAllowed = false;
+
 
     public static void initSizeDependentStuff(int w, int h) {
         int size = w * h;
@@ -151,6 +153,34 @@ public class Dungeon {
         PathFinder.setMapSize(w, h);
     }
 
+    public static void reset() {
+        if (!Scene.sceneMode.equals(Scene.LEVELS_TEST)) {
+            LuaEngine.reset();
+        }
+
+        DungeonGenerator.reset();
+        SpellFactory.reset();
+
+        Treasury.reset();
+        Statistics.reset();
+        Journal.reset();
+
+        Ghost.Quest.reset();
+        WandMaker.Quest.reset();
+        Blacksmith.Quest.reset();
+        Imp.Quest.reset();
+        ScarecrowNPC.Quest.reset();
+        AzuterronNPC.Quest.reset();
+        CagedKobold.Quest.reset();
+        PlagueDoctorNPC.Quest.reset();
+
+        Badges.reset();
+        ItemsList.reset();
+        CharsList.reset();
+
+        hero = CharsList.DUMMY_HERO;
+    }
+
     public static void init() {
         synchronized (GameLoop.stepLock) {
             GameLoop.loadingOrSaving.incrementAndGet();
@@ -159,19 +189,12 @@ public class Dungeon {
 
             gameId = String.valueOf(SystemTime.now());
 
-            if (!Scene.sceneMode.equals(Scene.LEVELS_TEST)) {
-                LuaEngine.reset();
-            }
+            reset();
 
-            Treasury.reset();
-
-            Scroll.initLabels();
-            Potion.initColors();
             Wand.initWoods();
             Ring.initGems();
-
-            Statistics.reset();
-            Journal.reset();
+            Scroll.initLabels();
+            Potion.initColors();
 
             depth = 0;
 
@@ -183,20 +206,9 @@ public class Dungeon {
 
             chapters = new HashSet<>();
 
-            Ghost.Quest.reset();
-            WandMaker.Quest.reset();
-            Blacksmith.Quest.reset();
-            Imp.Quest.reset();
-            ScarecrowNPC.Quest.reset();
-            AzuterronNPC.Quest.reset();
-            CagedKobold.Quest.reset();
-            PlagueDoctorNPC.Quest.reset();
-
             Room.shuffleTypes();
 
             hero = new Hero(GameLoop.getDifficulty());
-
-            Badges.reset();
 
             heroClass.initHero(hero);
 
@@ -406,7 +418,7 @@ public class Dungeon {
         SaveUtils.deleteSaveFromSlot(SaveUtils.getPrevSave(), heroClass);
         SaveUtils.deleteSaveFromSlot(SaveUtils.getAutoSave(), heroClass);
         Dungeon.deleteGame(true);
-        heroClass = null;
+        heroClass = HeroClass.NONE;
     }
 
     public static void saveGame(String fileName) throws IOException {
@@ -498,7 +510,7 @@ public class Dungeon {
             Game.toast("Low memory condition");
         }
 
-        if (level != null && hero != null && hero.isAlive()) {
+        if (level != null && hero.valid() && hero.isAlive()) {
             Level thisLevel = Dungeon.level;
 
             Actor.fixTime();
@@ -572,11 +584,13 @@ public class Dungeon {
                     Utils.format("loading save from another mod (save: %s, active: %s)", saveMod, activeMod)));
         }
 
+        if(fullLoad) {
+            reset();
+        }
+
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
         EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID, 1));
         CharsList.restoreFromBundle(bundle);
-
-        Treasury.reset();
 
         Scroll.restore(bundle);
         Potion.restore(bundle);
@@ -858,7 +872,7 @@ public class Dungeon {
     }
 
     public static boolean ignoreDanger(@NotNull Char ch) {
-        return ch.isFlying() || ch.hasBuff(Amok.class);
+        return ch.isFlying() || ch.buffLevel(BuffFactory.AMOK) > 0;
     }
 
 
@@ -875,7 +889,7 @@ public class Dungeon {
             return Actor.findChar(to) == null ? to : Level.INVALID_CELL;
         }
 
-        if (ch.isFlying() || ch.hasBuff(Amok.class)) {
+        if (ch.isFlying() || ch.buffLevel(BuffFactory.AMOK) > 0) {
             BArray.or(pass, level.avoid, passable);
         } else {
             BArray.and_not(pass, level.avoid, passable);
@@ -913,7 +927,7 @@ public class Dungeon {
 
 
     public static boolean isLoading() {
-        return hero == null || level == null || GameLoop.loadingOrSaving.get() > 0;
+        return hero.invalid() || level == null || GameLoop.loadingOrSaving.get() > 0;
     }
 
     public static boolean realtime() {
@@ -943,9 +957,16 @@ public class Dungeon {
         setFacilitations(facilitations);
     }
 
-    public static void setChallenge(int mask) {
+    public static boolean setChallenge(int mask) {
+        if (ModdingMode.inMod()) {
+            if (mask == Challenges.NO_TOWN) {
+                return false;
+            }
+        }
+
         challenges = challenges | mask;
         setChallenges(challenges);
+        return true;
     }
 
     public static void resetChallenge(int mask) {

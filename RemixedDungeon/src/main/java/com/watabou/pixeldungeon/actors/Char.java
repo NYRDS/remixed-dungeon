@@ -119,7 +119,7 @@ import java.util.Set;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.var;
+
 
 public abstract class Char extends Actor implements HasPositionOnLevel, Presser, ItemOwner, NamedEntityKindWithId {
 
@@ -215,6 +215,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public Char() {
     }
 
+    @LuaInterface
     public boolean canSpawnAt(Level level, int cell) {
         boolean ret = walkingType.canSpawnAt(level, cell)
                 && level.map[cell] != Terrain.ENTRANCE;
@@ -786,7 +787,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public boolean isAlive() {
-        return hp() > 0;
+        return valid() && hp() > 0;
     }
 
     protected float _attackDelay() {
@@ -878,6 +879,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             }
         }
         return null;
+    }
+
+    @LuaInterface
+    public boolean hasBuff(String buffName) {
+        for (Buff b : buffs) {
+            if (buffName.equals(b.getEntityKind())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @LuaInterface
@@ -1166,7 +1177,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void updateSprite() {
         Level level = level();
 
-        if (level != null && level.cellValid(getPos())) {
+        if (level != null && level.cellValid(getPos()) && valid()) {
             updateSprite(getSprite());
         }
     }
@@ -1958,5 +1969,24 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @LuaInterface
     int getAttackRange() {
         return Math.max(attackRange, getBelongings().getItemFromSlot(Belongings.Slot.WEAPON).range());
+    }
+
+    public int getExp() {
+        return 0;
+    }
+
+    public int maxExp() {
+        return 10;
+    }
+
+    public boolean isReady() {
+        return true;
+    }
+
+    public boolean isSpellUser() {
+        return true;
+    }
+
+    public void resume() {
     }
 }

@@ -21,7 +21,7 @@ import java.io.FileNotFoundException;
 import javax.microedition.khronos.opengles.GL10;
 
 import lombok.SneakyThrows;
-import lombok.var;
+
 
 public class InstallMod extends RemixedDungeon implements UnzipStateListener, InterstitialPoint{
 

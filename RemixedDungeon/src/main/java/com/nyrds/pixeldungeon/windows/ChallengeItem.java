@@ -33,7 +33,6 @@ public class ChallengeItem extends Component {
     protected Text label  = PixelScene.createText(GuiProperties.regularFontSize());
 
     HBox box;
-    Callback onClickCallback;
 
     private final int index;
 
@@ -48,7 +47,7 @@ public class ChallengeItem extends Component {
         if(index >= 16) {
             title = StringsManager.getVars(R.array.Facilitations_Names)[index - 16];
             desc = StringsManager.getVars(R.array.Facilitations_Descriptions)[index - 16];
-            icon = new Image(UI_CHALLENGES_PNG, 16, index + 8 - 16);
+            icon = new Image(UI_CHALLENGES_PNG, 16, index + 16 - 16);
         } else {
             title = StringsManager.getVars(R.array.Challenges_Names)[index];
             desc = StringsManager.getVars(R.array.Challenges_Descriptions)[index];
@@ -71,9 +70,12 @@ public class ChallengeItem extends Component {
                             Dungeon.resetChallenge(msk);
                         }
                     } else {
-                        Dungeon.setChallenge(mask);
-                        for(Integer msk: Objects.requireNonNull(Challenges.conflictingFacilitations.get(mask))) {
-                            Dungeon.resetFacilitation(msk);
+                        if(Dungeon.setChallenge(mask)) {
+                            for (Integer msk : Objects.requireNonNull(Challenges.conflictingFacilitations.get(mask))) {
+                                Dungeon.resetFacilitation(msk);
+                            }
+                        } else {
+                            state = ! state;
                         }
                     }
                 } else {

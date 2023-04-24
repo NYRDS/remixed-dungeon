@@ -44,7 +44,7 @@ public class PotionOfHealing extends Potion {
 	@Override
 	protected void apply(Char hero ) {
 		setKnown();
-		heal( Dungeon.hero, 1f );
+		heal( hero, 1f );
         GLog.p(StringsManager.getVar(R.string.PotionOfHealing_Apply));
 	}
 	

@@ -45,7 +45,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-import lombok.var;
+
 
 public class WndBag extends WndTabbed {
 
@@ -363,13 +363,15 @@ public class WndBag extends WndTabbed {
 			txtTitle.setX(0);
 		}
 
+		lastBag = bagTab.bag;
+
 		clearItems();
 		placeItems(bagTab.bag);
 	}
 	
 	@Override
 	protected int tabHeight() {
-		return 20;
+		return 24;
 	}
 
 	public boolean hideOnSelect() {

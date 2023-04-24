@@ -21,7 +21,7 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 
 import java.util.List;
 
-import lombok.var;
+
 
 public class TestLevel extends RegularLevel {
 

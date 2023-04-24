@@ -44,9 +44,9 @@ gameStorage.put = function(k,v)
     --RPD.debug("put: %s -> %s", tostring(k), tostring(serpent.dump({v})))
 end
 
-gameStorage.get = function(k)
+gameStorage.get = function(k, dv)
     --RPD.debug("get: %s -> %s", tostring(k), tostring(serpent.dump({levelData[k]})))
-    return levelData[k]
+    return levelData[k] or dv
 end
 
 gameStorage.gamePut = function(k,v)
@@ -56,9 +56,9 @@ gameStorage.gamePut = function(k,v)
     gameData[k] = v
 end
 
-gameStorage.gameGet = function(k)
+gameStorage.gameGet = function(k, dv)
     --RPD.debug("game get: %s -> %s", tostring(k), tostring(serpent.dump({levelData[k]})))
-    return gameData[k]
+    return gameData[k] or dv
 end
 
 return gameStorage

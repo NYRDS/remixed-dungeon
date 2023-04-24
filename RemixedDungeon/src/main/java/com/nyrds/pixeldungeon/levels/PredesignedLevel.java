@@ -21,7 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import lombok.SneakyThrows;
-import lombok.var;
+
 
 public class PredesignedLevel extends CustomLevel {
 

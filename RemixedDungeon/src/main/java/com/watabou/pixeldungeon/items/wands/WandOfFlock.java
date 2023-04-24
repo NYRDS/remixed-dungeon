@@ -41,7 +41,7 @@ import org.jetbrains.annotations.NotNull;
 public class WandOfFlock extends SimpleWand  {
 
 	@Override
-	protected void onZap( int cell ) {
+	protected void onZap( int cell, Char victim ) {
 		int level = effectiveLevel();
 		
 		int n = level + 2;

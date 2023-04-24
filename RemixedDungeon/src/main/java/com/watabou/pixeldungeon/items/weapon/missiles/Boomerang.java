@@ -86,7 +86,7 @@ public class Boomerang extends MissileWeapon {
 	}
 
 	@Override
-	protected void miss(int cell, Char thrower) {
+	protected void miss(int cell, Char thrower, Char enemy) {
 		circleBack( cell, thrower);
 	}
 	

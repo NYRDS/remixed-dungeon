@@ -24,6 +24,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Locale;
@@ -101,7 +102,7 @@ public class StringsManager {
 
 		try {
 			InputStream fis = new FileInputStream(jsonFile);
-			InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
+			InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
 			BufferedReader br = new BufferedReader(isr);
 
 			while ((line = br.readLine()) != null) {

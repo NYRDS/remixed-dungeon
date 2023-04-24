@@ -42,248 +42,247 @@ import org.jetbrains.annotations.NotNull;
 
 public class WndTradeItem extends Window {
 
-	private static final int WIDTH		= 120;
-	private static final int BTN_HEIGHT	= 18;
+    private static final int WIDTH = 120;
+    private static final int BTN_HEIGHT = 18;
 
-	private final VBox vbox = new VBox();
+    private final VBox vbox = new VBox();
 
-	@NotNull
-	private final ItemOwner shopkeeper;
-	private final Hero       customer;
+    @NotNull
+    private final ItemOwner shopkeeper;
+    private final Hero customer;
 
-	private static final int[] tradeQuantity = {1, 5, 10, 50, 100, 500, 1000};
+    private static final int[] tradeQuantity = {1, 5, 10, 50, 100, 500, 1000};
 
-	public WndTradeItem(final Item item, @NotNull ItemOwner shopkeeper, boolean buy) {
+    public WndTradeItem(final Item item, @NotNull ItemOwner shopkeeper, boolean buy) {
 
-		super();
+        super();
 
-		this.shopkeeper = shopkeeper;
-		this.customer   = Dungeon.hero;
+        this.shopkeeper = shopkeeper;
+        this.customer = Dungeon.hero;
 
-		add(vbox);
+        add(vbox);
 
-		if(buy) {
-			makeBuyWnd(item);
-		} else {
-			makeSellWnd(item);
-		}
-	}
+        if (buy) {
+            makeBuyWnd(item);
+        } else {
+            makeSellWnd(item);
+        }
+    }
 
-	private void makeSellWnd(final Item item) {
-		float pos = createDescription( item, false);
+    private void makeSellWnd(final Item item) {
+        float pos = createDescription(item, false);
 
-		vbox.clear();
-		int priceAll = price( item, false);
+        vbox.clear();
+        int priceAll = price(item, false);
 
-		if (item.quantity() == 1) {
+        if (item.quantity() == 1) {
 
-            RedButton btn = new RedButton( Utils.format(R.string.WndTradeItem_Sell, priceAll ) ) {
-				@Override
-				protected void onClick() {
-					sell( item,1 );
-				}
-			};
-			btn.setSize( WIDTH, BTN_HEIGHT );
-			vbox.add( btn );
+            RedButton btn = new RedButton(Utils.format(R.string.WndTradeItem_Sell, priceAll)) {
+                @Override
+                protected void onClick() {
+                    sell(item, 1);
+                }
+            };
+            btn.setSize(WIDTH, BTN_HEIGHT);
+            vbox.add(btn);
 
-		} else {
+        } else {
 
-			for (int i = 0;i< tradeQuantity.length;++i) {
-				if (item.quantity() > tradeQuantity[i]) {
-					final int finalI = i;
-					final int priceFor = priceAll/item.quantity() * tradeQuantity[i];
+            for (int i = 0; i < tradeQuantity.length; ++i) {
+                if (item.quantity() > tradeQuantity[i]) {
+                    final int finalI = i;
+                    final int priceFor = priceAll / item.quantity() * tradeQuantity[i];
                     RedButton btnSellN = new RedButton(Utils.format(R.string.WndTradeItem_SellN,
-							tradeQuantity[finalI],
-							priceFor))
-					{
-						@Override
-						protected void onClick() {
-							sell(item, tradeQuantity[finalI]);
-						}
-					};
-					btnSellN.setSize(WIDTH, BTN_HEIGHT);
-					vbox.add(btnSellN);
-				}
-			}
+                            tradeQuantity[finalI],
+                            priceFor)) {
+                        @Override
+                        protected void onClick() {
+                            sell(item, tradeQuantity[finalI]);
+                        }
+                    };
+                    btnSellN.setSize(WIDTH, BTN_HEIGHT);
+                    vbox.add(btnSellN);
+                }
+            }
 
-            RedButton btnSellAll = new RedButton( Utils.format(R.string.WndTradeItem_SellAll, priceAll ) ) {
-				@Override
-				protected void onClick() {
-					sell( item, item.quantity() );
-				}
-			};
-			btnSellAll.setSize(WIDTH, BTN_HEIGHT );
-			vbox.add( btnSellAll );
-		}
+            RedButton btnSellAll = new RedButton(Utils.format(R.string.WndTradeItem_SellAll, priceAll)) {
+                @Override
+                protected void onClick() {
+                    sell(item, item.quantity());
+                }
+            };
+            btnSellAll.setSize(WIDTH, BTN_HEIGHT);
+            vbox.add(btnSellAll);
+        }
 
         RedButton btnCancel = new RedButton(R.string.WndTradeItem_Cancel) {
-			@Override
-			protected void onClick() {
-				hide();
-			}
-		};
-		btnCancel.setSize( WIDTH, BTN_HEIGHT );
-		vbox.add( btnCancel );
+            @Override
+            protected void onClick() {
+                hide();
+            }
+        };
+        btnCancel.setSize(WIDTH, BTN_HEIGHT);
+        vbox.add(btnCancel);
 
-		vbox.setPos(0, pos+GAP);
+        vbox.setPos(0, pos + GAP);
 
-		resize( WIDTH, (int) vbox.bottom());
-	}
+        resize(WIDTH, (int) vbox.bottom());
+    }
 
-	private void makeBuyWnd(final Item item) {
-		float pos = createDescription( item, true);
+    private void makeBuyWnd(final Item item) {
+        float pos = createDescription(item, true);
 
-		vbox.clear();
+        vbox.clear();
 
-		int priceAll = price( item, true );
+        int priceAll = price(item, true);
 
-		if (item.quantity() == 1) {
+        if (item.quantity() == 1) {
 
-            RedButton btnBuy = new RedButton( Utils.format(R.string.WndTradeItem_Buy, priceAll ) ) {
-				@Override
-				protected void onClick() {
-					buy( item,1 );
-				}
-			};
-			btnBuy.setSize( WIDTH, BTN_HEIGHT );
-			btnBuy.enable(priceAll<=customer.gold());
-			vbox.add( btnBuy );
+            RedButton btnBuy = new RedButton(Utils.format(R.string.WndTradeItem_Buy, priceAll)) {
+                @Override
+                protected void onClick() {
+                    buy(item, 1);
+                }
+            };
+            btnBuy.setSize(WIDTH, BTN_HEIGHT);
+            btnBuy.enable(priceAll <= customer.gold());
+            vbox.add(btnBuy);
 
-		} else {
-			for (int i = 0; i < tradeQuantity.length; ++i) {
-				if (item.quantity() > tradeQuantity[i]) {
-					final int priceFor = priceAll / item.quantity() * tradeQuantity[i];
-					final int finalI = i;
+        } else {
+            for (int i = 0; i < tradeQuantity.length; ++i) {
+                if (item.quantity() > tradeQuantity[i]) {
+                    final int priceFor = priceAll / item.quantity() * tradeQuantity[i];
+                    final int finalI = i;
                     RedButton btnBuyN = new RedButton(Utils.format(R.string.WndTradeItem_BuyN,
-							tradeQuantity[finalI],
-							priceFor)) {
-						@Override
-						protected void onClick() {
-							buy(item, tradeQuantity[finalI]);
-						}
-					};
-					btnBuyN.enable(priceFor <= customer.gold());
-					btnBuyN.setSize(WIDTH, BTN_HEIGHT);
-					vbox.add(btnBuyN);
-				}
-			}
+                            tradeQuantity[finalI],
+                            priceFor)) {
+                        @Override
+                        protected void onClick() {
+                            buy(item, tradeQuantity[finalI]);
+                        }
+                    };
+                    btnBuyN.enable(priceFor <= customer.gold());
+                    btnBuyN.setSize(WIDTH, BTN_HEIGHT);
+                    vbox.add(btnBuyN);
+                }
+            }
 
             RedButton btnBuyAll = new RedButton(Utils.format(R.string.WndTradeItem_BuyAll, priceAll)) {
-				@Override
-				protected void onClick() {
-					buy(item, item.quantity());
-				}
-			};
+                @Override
+                protected void onClick() {
+                    buy(item, item.quantity());
+                }
+            };
 
-			btnBuyAll.setSize(WIDTH, BTN_HEIGHT);
-			btnBuyAll.enable(priceAll <= customer.gold());
-			vbox.add(btnBuyAll);
-		}
+            btnBuyAll.setSize(WIDTH, BTN_HEIGHT);
+            btnBuyAll.enable(priceAll <= customer.gold());
+            vbox.add(btnBuyAll);
+        }
         RedButton btnCancel = new RedButton(R.string.WndTradeItem_Cancel) {
-			@Override
-			protected void onClick() {
-				hide();
-			}
-		};
-		btnCancel.setSize(WIDTH, BTN_HEIGHT);
-		vbox.add(btnCancel);
-		vbox.setPos(0, pos+GAP);
+            @Override
+            protected void onClick() {
+                hide();
+            }
+        };
+        btnCancel.setSize(WIDTH, BTN_HEIGHT);
+        vbox.add(btnCancel);
+        vbox.setPos(0, pos + GAP);
 
-		resize( WIDTH, (int)vbox.bottom());
-	}
+        resize(WIDTH, (int) vbox.bottom());
+    }
 
-	private float createDescription( Item item, boolean buying ) {
-		
-		// Title
-		IconTitle titlebar = new IconTitle();
-		titlebar.icon( new ItemSprite( item ) );
-        titlebar.label( buying ?
-			Utils.format(R.string.WndTradeItem_Sale, item.toString(), price( item, true ) ) :
-			Utils.capitalize( item.toString() ) );
-		titlebar.setRect( 0, 0, WIDTH, 0 );
-		add( titlebar );
-		
-		// Upgraded / degraded
-		if (item.isLevelKnown() && item.level() > 0) {
-			titlebar.color( ItemSlot.UPGRADED );	
-		} else if (item.isLevelKnown() && item.level() < 0) {
-			titlebar.color( ItemSlot.DEGRADED );	
-		}
-		
-		// Description
-		Text info = PixelScene.createMultiline( item.info(), GuiProperties.regularFontSize() );
-		info.maxWidth(WIDTH);
-		info.setX(titlebar.left());
-		info.setY(titlebar.bottom() + GAP);
-		add( info );
-		
-		return info.getY() + info.height();
-	}
+    private float createDescription(Item item, boolean buying) {
 
-	private int price( @NotNull  Item item, boolean buying) {
-		if(buying) {
-			int price = shopkeeper.priceSell(item);
-			if (Dungeon.hero.hasBuff(RingOfHaggler.Haggling.class) && price >= 2) {
-				price /= 2;
-			}
-			return price;
-		}
+        // Title
+        IconTitle titlebar = new IconTitle();
+        titlebar.icon(new ItemSprite(item));
+        titlebar.label(buying ?
+                Utils.format(R.string.WndTradeItem_Sale, item.toString(), price(item, true)) :
+                Utils.capitalize(item.toString()));
+        titlebar.setRect(0, 0, WIDTH, 0);
+        add(titlebar);
 
-		int price = shopkeeper.priceBuy(item);
-		if(Dungeon.hero.hasBuff(RingOfHaggler.Haggling.class)) {
-			price *= 1.5f;
-		}
-		return price;
-	}
+        // Upgraded / degraded
+        if (item.isLevelKnown() && item.level() > 0) {
+            titlebar.color(ItemSlot.UPGRADED);
+        } else if (item.isLevelKnown() && item.level() < 0) {
+            titlebar.color(ItemSlot.DEGRADED);
+        }
 
-	private void buy( @NotNull Item item, final int quantity ) {
-		Item boughtItem = item.detach(shopkeeper.getBelongings().backpack, quantity);
+        // Description
+        Text info = PixelScene.createMultiline(item.info(), GuiProperties.regularFontSize());
+        info.maxWidth(WIDTH);
+        info.setX(titlebar.left());
+        info.setY(titlebar.bottom() + GAP);
+        add(info);
 
-		int price = price( boughtItem, true );
-		customer.spendGold(price);
+        return info.getY() + info.height();
+    }
 
-        GLog.i(StringsManager.getVar(R.string.WndTradeItem_Bought), boughtItem.name(), price );
+    private int price(@NotNull Item item, boolean buying) {
+        if (buying) {
+            int price = shopkeeper.priceSell(item);
+            if (Dungeon.hero.hasBuff(RingOfHaggler.Haggling.class) && price >= 2) {
+                price /= 2;
+            }
+            return price;
+        }
 
-		if (!boughtItem.doPickUp( customer )) {
-			boughtItem.doDrop(customer);
-		}
+        int price = shopkeeper.priceBuy(item);
+        if (Dungeon.hero.hasBuff(RingOfHaggler.Haggling.class)) {
+            price *= 1.5f;
+        }
+        return price;
+    }
 
-		if(boughtItem != item) {
-			hide();
-			GameScene.show(new WndTradeItem(item,shopkeeper,true));
-		} else {
-			shopkeeper.generateNewItem();
-			hide();
-		}
-	}
+    private void buy(@NotNull Item item, final int quantity) {
+        Item boughtItem = item.detach(shopkeeper.getBelongings().backpack, quantity);
 
-	private void sell( Item item, final int quantity) {
+        int price = price(boughtItem, true);
+        customer.spendGold(price);
 
-		if (item.isEquipped( customer ) && !((EquipableItem)item).doUnequip( customer, false )) {
-			hide();
-			return;
-		}
+        GLog.i(StringsManager.getVar(R.string.WndTradeItem_Bought), boughtItem.name(), price);
 
-		Item soldItem = item.detach( customer.getBelongings().backpack, quantity );
-		//shopkeeper.placeItemInShop(soldItem);
+        if (!boughtItem.doPickUp(customer)) {
+            boughtItem.doDrop(customer);
+        }
 
-		int price = price(soldItem, false);
+        if (boughtItem != item) {
+            hide();
+            GameScene.show(new WndTradeItem(item, shopkeeper, true));
+        } else {
+            shopkeeper.generateNewItem();
+            hide();
+        }
+    }
 
-		new Gold( price ).doPickUp( customer );
-		hide();
-        GLog.i(StringsManager.getVar(R.string.WndTradeItem_Sold), soldItem.name(), price );
+    private void sell(Item item, final int quantity) {
 
-		if(soldItem!=item) {
-			GameScene.show(new WndTradeItem(item,shopkeeper,false));
-		}
+        if (item.isEquipped(customer) && !((EquipableItem) item).doUnequip(customer, false)) {
+            hide();
+            return;
+        }
 
-	}
+        Item soldItem = item.detach(customer.getBelongings().backpack, quantity);
+        //shopkeeper.placeItemInShop(soldItem);
 
-	@Override
-	public void hide() {
-		super.hide();
-		if(WndBag.getInstance()!=null) {
-			WndBag.getInstance().updateItems();
-		}
-	}
+        int price = price(soldItem, false);
+
+        new Gold(price).doPickUp(customer);
+        hide();
+        GLog.i(StringsManager.getVar(R.string.WndTradeItem_Sold), soldItem.name(), price);
+
+        if (soldItem != item) {
+            GameScene.show(new WndTradeItem(item, shopkeeper, false));
+        }
+
+    }
+
+    @Override
+    public void hide() {
+        super.hide();
+        if (WndBag.getInstance() != null) {
+            WndBag.getInstance().updateItems();
+        }
+    }
 }

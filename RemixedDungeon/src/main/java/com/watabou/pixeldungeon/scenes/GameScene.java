@@ -63,6 +63,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.BannerSprites;
@@ -109,7 +110,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
 
-import lombok.var;
+
 
 public class GameScene extends PixelScene {
 
@@ -193,8 +194,8 @@ public class GameScene extends PixelScene {
 
         Hero hero = Dungeon.hero;
 
-        if(hero==null) {
-            throw new TrackedRuntimeException("Trying to create GameScene when hero is nil!");
+        if(hero.invalid()) {
+            throw new TrackedRuntimeException("Trying to create GameScene when hero is invalid!");
         }
 
         createGameScene(level, hero);
@@ -362,12 +363,12 @@ public class GameScene extends PixelScene {
         toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
         add(toolbar);
 
-        attack = new AttackIndicator();
+        attack = new AttackIndicator(hero);
         attack.camera = uiCamera;
         attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
         add(attack);
 
-        resume = new ResumeIndicator();
+        resume = new ResumeIndicator(hero);
         resume.camera = uiCamera;
         resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
         add(resume);
@@ -426,7 +427,7 @@ public class GameScene extends PixelScene {
                 WandOfBlink.appear(hero, hero.getPos());
                 break;
             case FALL:
-                Chasm.heroLand();
+                Chasm.heroLand(hero);
                 break;
             case DESCEND:
 
@@ -532,7 +533,7 @@ public class GameScene extends PixelScene {
         synchronized (GameLoop.stepLock) {
             if (!GameLoop.softPaused) {
                 final Hero hero = Dungeon.hero;
-                if (hero != null && hero.isAlive()) {
+                if (hero.isAlive()) {
                     Dungeon.save(false);
                 }
             }
@@ -553,7 +554,7 @@ public class GameScene extends PixelScene {
 
         final Hero hero = Dungeon.hero;
 
-        if (hero == null || hero.invalid()) {
+        if (hero.invalid()) {
             return;
         }
 
@@ -784,11 +785,7 @@ public class GameScene extends PixelScene {
     }
 
     public static Text status() {
-        if (ModdingMode.getClassicTextRenderingMode()) {
-            return (FloatingText) scene.statuses.recycle(FloatingText.class);
-        } else {
-            return (SystemFloatingText) scene.statuses.recycle(SystemFloatingText.class);
-        }
+        return (SystemFloatingText) scene.statuses.recycle(SystemFloatingText.class);
     }
 
     public static void pickUp(Item item) {
@@ -950,7 +947,7 @@ public class GameScene extends PixelScene {
     static public boolean cancel() {
         Hero hero = Dungeon.hero;
 
-        if(hero!=null) {
+        if(hero.valid()) {
             hero.next();
             if (hero.curAction != null || hero.restoreHealth) {
 
@@ -1001,7 +998,7 @@ public class GameScene extends PixelScene {
     public void resume() {
         super.resume();
 
-        if(Dungeon.heroClass == null) { // no active game in progress
+        if(Dungeon.heroClass == HeroClass.NONE) { // no active game in progress
             GameLoop.switchScene(TitleScene.class);
             return;
         }
@@ -1046,7 +1043,7 @@ public class GameScene extends PixelScene {
 
     static public boolean defaultCellSelector() {
         if(isSceneReady()) {
-            return cellSelector.defaultListner();
+            return cellSelector.defaultListener();
         }
         return true;
     }

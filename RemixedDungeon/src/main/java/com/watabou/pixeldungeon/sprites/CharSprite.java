@@ -75,12 +75,14 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     private static final float FLASH_INTERVAL = 0.05f;
     private static final float INVISIBILITY_ALPHA = 0.4f;
 
+    protected float charScale = 1.0f;
+
     @Nullable
     protected Image avatar;
 
     public void fall() {
 
-        setOrigin(width / 2, height - DungeonTilemap.SIZE / 2);
+        setOrigin(width * charScale/ 2, height * charScale- DungeonTilemap.SIZE / 2);
         angularSpeed = Random.Int(2) == 0 ? -720 : 720;
 
         if (hasParent()) {
@@ -149,8 +151,8 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public PointF worldCoords() {
         final int csize = DungeonTilemap.SIZE;
         PointF point = point();
-        point.x = (point.x + width * 0.5f) / csize - 0.5f;
-        point.y = (point.y + height) / csize - 1.0f;
+        point.x = (point.x + width * charScale * 0.5f) / csize - 0.5f;
+        point.y = (point.y + height * charScale) / csize - 1.0f;
         return point;
     }
 
@@ -159,8 +161,8 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         final Level level = Dungeon.level;
 
         return new PointF(
-                (level.cellX(cell) + 0.5f) * csize - width * 0.5f,
-                (level.cellY(cell) + 1.0f) * csize - height
+                (level.cellX(cell) + 0.5f) * csize - width * charScale * 0.5f,
+                (level.cellY(cell) + 1.0f) * csize - height * charScale
         );
     }
 
@@ -173,11 +175,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         if (getVisible()) {
             ch.ifPresent(
                     chr -> {
-                        if (ModdingMode.getClassicTextRenderingMode()) {
-                            FloatingText.show(getX() + width * 0.5f, getY(), chr.getPos(), text, color);
-                        } else {
-                            SystemFloatingText.show(getX() + width * 0.5f, getY(), chr.getPos(), text, color);
-                        }
+                            SystemFloatingText.show(getX() + width * charScale * 0.5f, getY(), chr.getPos(), text, color);
                     }
             );
         }
@@ -323,7 +321,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     public Emitter bottomEmitter() {
         Emitter emitter = GameScene.emitter();
-        emitter.pos(getX(), getY() + height, width, 0);
+        emitter.pos(getX(), getY() + height * charScale, width * charScale, 0);
         return emitter;
     }
 
@@ -649,6 +647,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
         if (avatar == null) {
             avatar = snapshot(idle.frames[0]);
+            avatar.setScale(charScale);
         }
 
         return avatar;

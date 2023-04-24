@@ -35,6 +35,7 @@ import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -60,14 +61,14 @@ public class Chasm implements Doom {
 		}
 	}
 
-	public static void heroLand() {
-		
-		Hero hero = Dungeon.hero;
-		
-		hero.getSprite().setVisible(true);
-		hero.getSprite().alpha(1f);
+	public static void heroLand(Hero hero) {
 
-		hero.getSprite().burst( hero.getSprite().blood(), 10 );
+		CharSprite heroSprite = hero.getSprite();
+
+		heroSprite.setVisible(true);
+		heroSprite.alpha(1f);
+
+		heroSprite.burst( heroSprite.blood(), 10 );
 		Camera.main.shake( 4, 0.2f );
 		
 		Buff.prolong( hero, Cripple.class, Cripple.DURATION );

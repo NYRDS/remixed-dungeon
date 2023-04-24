@@ -41,7 +41,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Collections;
 
-import lombok.var;
+
 
 public class Shopkeeper extends NPC {
 
@@ -105,7 +105,9 @@ public class Shopkeeper extends NPC {
 			attempts++;
 		}
 
-		Collections.shuffle(backpack.items);
+		//if(attempts > 0) {
+		//	Collections.shuffle(backpack.items);
+        //}
 
 		GameScene.show(
 				new WndShopOptions(this, hero));

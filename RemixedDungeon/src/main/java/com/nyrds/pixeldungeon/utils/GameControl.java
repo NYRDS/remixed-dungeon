@@ -31,7 +31,7 @@ public class GameControl {
 
         GameLoop.setDifficulty(difficulty);
 
-        Dungeon.hero = null;
+        Dungeon.hero = CharsList.DUMMY_HERO;
         Dungeon.level = null;
         Dungeon.heroClass = HeroClass.valueOf(className);
 

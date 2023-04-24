@@ -29,7 +29,7 @@ import com.watabou.utils.Random;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import lombok.var;
+
 
 public class SewerBossLevel extends BossLevel {
 

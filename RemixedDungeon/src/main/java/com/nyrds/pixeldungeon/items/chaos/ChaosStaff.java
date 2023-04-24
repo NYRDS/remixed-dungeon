@@ -64,13 +64,12 @@ public class ChaosStaff extends Wand {
     }
 
     @Override
-    protected void onZap(int cell) {
+    protected void onZap(int cell, Char ch) {
 
         ChaosCommon.doChaosMark(cell, 10 + level() * 10 + charge);
         charge = 0;
 
         if (Math.random() < 0.1f) {
-            Char ch = Actor.findChar(cell);
             if (ch instanceof Mob) {
                 Mob mob = (Mob) ch;
 

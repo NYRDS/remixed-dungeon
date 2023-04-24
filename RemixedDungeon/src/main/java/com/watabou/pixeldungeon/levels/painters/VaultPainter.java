@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
+import com.nyrds.platform.EventCollector;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.GoldenKey;
@@ -48,9 +49,14 @@ public class VaultPainter extends Painter {
 			
 		case 1:
 			Item i1, i2;
+			int count = 0;
 			do {
 				i1 = prize(level);
 				i2 = prize(level);
+				count++;
+				if (count>1000) {
+					EventCollector.logException(new Exception("Too many attempts"));
+				}
 			} while (i1.getClass() == i2.getClass());
 			level.drop( i1, c, Type.CRYSTAL_CHEST);
 			level.drop( i2, c + Level.NEIGHBOURS8[Random.Int( 8 )], Type.CRYSTAL_CHEST);

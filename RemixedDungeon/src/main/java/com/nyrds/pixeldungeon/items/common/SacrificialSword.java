@@ -26,11 +26,8 @@ public class SacrificialSword extends MeleeWeapon {
 	@Override
 	public Glowing glowing() {
 		
-		float period = (float) Math.max(0.1, 0.1/baseChance(Dungeon.hero));
-		//GLog.i("base chance: %.3f %.3f",baseChance(Dungeon.hero), period);
-		
+		float period = (float) Math.max(0.1, 0.1/baseChance(getOwner()));
 		return new Glowing(0xFF4466, period);
-		
 	}
 
 	private double baseChance(Char hero) {

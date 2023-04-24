@@ -291,6 +291,9 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Game.width(width);
         Game.height(height);
 
+        SystemText.invalidate();
+        TextureCache.clear();
+
         GameLoop.setNeedSceneRestart();
     }
 
@@ -300,7 +303,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         GLES20.glBlendFunc(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA);
 
         GLES20.glEnable(GL10.GL_SCISSOR_TEST);
-
 
         SystemText.invalidate();
         TextureCache.clear();

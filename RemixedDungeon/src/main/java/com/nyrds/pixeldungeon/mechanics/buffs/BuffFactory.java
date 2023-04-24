@@ -57,7 +57,7 @@ import java.util.Map;
 import java.util.Set;
 
 import lombok.SneakyThrows;
-import lombok.var;
+
 
 public class BuffFactory {
     static private final Map<String, Class<? extends Buff>> buffList = new HashMap<>();
@@ -73,6 +73,15 @@ public class BuffFactory {
     public static final String BLINDNESS = Blindness.class.getSimpleName();
     public static final String MIND_VISION = MindVision.class.getSimpleName();
     public static final String AWARENESS = Awareness.class.getSimpleName();
+    public static final String HUNGER = Hunger.class.getSimpleName();
+    public static final String INVISIBILITY = Invisibility.class.getSimpleName();
+    public static final String POISON = Poison.class.getSimpleName();
+    public static final String SLEEP = Sleep.class.getSimpleName();
+    public static final String SPEED = Speed.class.getSimpleName();
+    public static final String MAGIC_REGENERATION = ManaRegeneration.class.getSimpleName();
+    public static final String AMOK = Amok.class.getSimpleName();
+    public static final String CHARM = Charm.class.getSimpleName();
+    public static final String SNIPER_MARK = SnipersMark.class.getSimpleName();
 
 
     static {

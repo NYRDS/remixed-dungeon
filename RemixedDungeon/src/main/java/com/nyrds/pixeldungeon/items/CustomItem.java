@@ -7,6 +7,7 @@ import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.ModError;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -89,11 +90,25 @@ public class CustomItem extends EquipableItem {
 
     @Override
     public Belongings.Slot slot(Belongings belongings) {
-        return Belongings.Slot.valueOf(script.runOptional("slot",_slot().name(), belongings));
+        String slotName = "";
+        try {
+            slotName = script.runOptional("slot",_slot().name(), belongings);
+            return Belongings.Slot.valueOf(slotName);
+        } catch (Exception e) {
+            ModError.doReport(Utils.format("%s: not a valid slot value", slotName), e);
+        }
+        return Belongings.Slot.NONE;
     }
 
     public Belongings.Slot blockSlot() {
-        return Belongings.Slot.valueOf(script.runOptional("blockSlot",super.blockSlot().name()));
+        String slotName = "";
+        try {
+            slotName = script.runOptional("blockSlot",super.blockSlot().name());
+            return Belongings.Slot.valueOf(slotName);
+        } catch (Exception e) {
+            ModError.doReport(Utils.format("%s: not a valid blockSlot value", slotName), e);
+        }
+        return Belongings.Slot.NONE;
     }
 
     private Belongings.Slot _slot() {
@@ -191,8 +206,8 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    protected void onThrow(int cell, @NotNull Char thrower) {
-        script.run("onThrow", cell, thrower);
+    protected void onThrow(int cell, @NotNull Char thrower, Char enemy) {
+        script.run("onThrow", cell, thrower, enemy);
     }
 
     @Override

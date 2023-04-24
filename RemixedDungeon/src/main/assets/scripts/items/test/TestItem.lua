@@ -161,6 +161,18 @@ return itemLib.init{
         end
 
         if action == "action4" then
+
+            local function errFunc(arg, lvl)
+                local var = 1
+                local var2 = "abc"
+                lvl = (lvl or 0)+ 1
+                if lvl > 5 then
+                    error("test error")
+                else
+                    errFunc(arg, lvl)
+                end
+            end
+
             local packedItem = RPD.packEntity(item)
             RPD.glog(packedItem)
             local restoredItem = RPD.unpackEntity(packedItem)
@@ -168,6 +180,8 @@ return itemLib.init{
             restoredItem = RPD.fromLua(luaDesc)
             packedItem = RPD.packEntity(restoredItem)
             RPD.glog(packedItem)
+            --errFunc(packedItem)
+
         end
 
         if action == "inputText" then

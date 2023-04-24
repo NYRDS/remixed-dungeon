@@ -115,7 +115,6 @@ import java.util.Set;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.val;
-import lombok.var;
 
 
 public abstract class Level implements Bundlable {
@@ -1000,6 +999,15 @@ public abstract class Level implements Bundlable {
 	}
 
 	@LuaInterface
+	public int randomPassableCell() {
+		return getRandomTerrain((level, cell) -> level.passable[cell]
+		&& cell != level.entrance
+		&& Actor.findChar(cell) == null);
+	}
+
+
+
+	@LuaInterface
 	@TestOnly
 	public int randomTestDestination() {
 		return getNearestTerrain(Dungeon.hero.getPos(), new RandomDestinationForAutoTest());
@@ -1138,6 +1146,7 @@ public abstract class Level implements Bundlable {
 		set(cell, terrain);
 	}
 
+	@LuaInterface
 	public void set(int cell, int terrain) {
 
 		if(!cellValid(cell)) {
@@ -2110,5 +2119,14 @@ public abstract class Level implements Bundlable {
 			}
 		}
 		return null;
+	}
+
+	public boolean cellClicked(int cell) {
+		for(var actor: scripts){
+			if(actor.cellClicked(cell)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }

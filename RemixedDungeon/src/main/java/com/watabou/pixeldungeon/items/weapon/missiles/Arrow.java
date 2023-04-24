@@ -60,12 +60,12 @@ public abstract class Arrow extends MissileWeapon {
 	}
 
 	@Override
-	protected void onThrow(int cell, @NotNull Char thrower) {
+	protected void onThrow(int cell, @NotNull Char thrower,Char enemy) {
 		if (thrower.bowEquipped()) {
 
 			if (thrower.level().adjacent(thrower.getPos(), cell)
 					&& thrower.getHeroClass() != HeroClass.ELF) {
-				miss(cell, thrower);
+				miss(cell, thrower, enemy);
 				return;
 			}
 
@@ -90,9 +90,9 @@ public abstract class Arrow extends MissileWeapon {
 			firedFrom.usedForHit();
 			firedFrom.useArrowType(this);
 
-			super.onThrow(cell, thrower);
+			super.onThrow(cell, thrower, enemy);
 		} else {
-			miss(cell, thrower);
+			miss(cell, thrower, enemy);
 		}
 	}
 

@@ -647,8 +647,7 @@
 Przemo10371
 assassynkk32
 Lufix
-(oraz inni)
-</string>
+(oraz inni)</string>
   <string name="RankingsScene_Title">Najlepsi z Najlepszych</string>
   <string name="RankingsScene_Total">Liczba rozegranych gier:</string>
   <string name="RankingsScene_NoGames">Nie zagrano jeszcze ani razu</string>
@@ -1246,7 +1245,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Goo_Name">Szlam</string>
   <string name="Goo_Gender">masculine</string>
   <string name="Goo_Name_Objective">Szlam</string>
-  <string name="Goo_Desc">Niewiele wiadomo na temat Szlamu. Prawdopodobnym jest, że to nawet nie jest potwór, ale raczej mieszanina substancji chemicznych ze ścieków, która zyskała strzępki wolnej woli.</string>
+  <string name="Goo_Desc">Niewiele wiadomo o Szlamie. Całkiem możliwe, że to nawet nie stworzenie, a konglomerat substancji z kanałów, które zyskały podstawy wolnej woli. Tak czy inaczej, oczywiste jest, że działa tu czarna magia.</string>
   <string name="Goo_Info1">Szlam spręża się do ataku!</string>
   <string name="Goo_Info2">ślarp... ślarp...</string>
   <string name="Goo_Info3">ŚLARP-ŚLARP!</string>
@@ -1598,6 +1597,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="TownsfolkMovieNPC_Gender">masculine</string>
   <string name="TownsfolkMovieNPC_Name_Objective">mieszczanin</string>
   <string name="TownsfolkMovieNPC_Desc">Jeden z lokalsów. Mimo, że wygląda nadzwyczaj zwyczajnie, przyodziany jest w drogo wyglądające szaty.</string>
+  <string name="TownsfolkMovieNPC_Message">Czy wiesz o tej specjalnej usłudze, którą zapewnia „kino”? Szkoda, że ​​proszą o jakąś egzotyczną rzecz zwaną \"Internetem\", nigdy o czymś takim nie słyszałem.</string>
   <string name="LibrarianNPC_Name">bibliotekarz</string>
   <string name="LibrarianNPC_Gender">masculine</string>
   <string name="LibrarianNPC_Name_Objective">bibliotekarz</string>
@@ -1666,10 +1666,10 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="ServiceManNPC_Desc">Zwykły pracownik jednego z miejscowych przybytków.</string>
   <string name="TownShopkeeper_Name">handlarz</string>
   <string name="TownShopkeeper_Desc">Ta osoba to typowy sklepikarz. Z jego oczu można wyczytać że już dokonał twojej wyceny.</string>
-  <string name="WndMovieTheatre_Watch">obejrzyj film</string>
+  <string name="WndMovieTheatre_Watch">Obejrzyj reklame</string>
   <string name="WndMovieTheatre_No">wyjdź</string>
   <string name="WndMovieTheatre_Bye">Wróć kiedy zechcesz, jesteś zawsze mile widziany!</string>
-  <string name="WndMovieTheatre_Instruction">Witamy w naszym kinie! Zapewniamy specjalne usługi, możesz obejrzeć film za darmo, a jeśli obejrzysz go do końca, otrzymasz %d złotych monet!</string>
+  <string name="WndMovieTheatre_Instruction">Pozdrawiamy i zapraszamy do naszego kina! Zapewniamy specjalną usługę, w której możesz bezpłatnie obejrzeć specjalny film o nazwie reklama. A jeśli przejrzysz to wszystko, zostaniesz nagrodzony %dzłotymi monetami!</string>
   <string name="WndMovieTheatre_Title">Kino</string>
   <string name="WndMovieTheatre_Thank_You">Dziękujemy za udział!</string>
   <string name="WndPriest_Heal">ulecz się - %d sztuk złota</string>
@@ -2838,5 +2838,47 @@ remix.29.6\n
   <string name="KrampusHead_Info">Zastanawiałeś się może kiedyś jak to by było być nieco bardziej niegrzecznym podczas Podziemiowania? Twój demoniczny wygląd na pewno przyprawi o koszmary niejednego szczurka. </string>
   <string name="WndSettingsInGame_GameLog">Logi gry</string>
   <string name="Froth_ArrowInKnee">Byłem kiedyś podróżnikiem jak ty,\nAle wtedy dostałem strzałą w kolano</string>
+  <string name="BardSong_1">Moja żona i ja mieszkamy całkiem sami,\nW małej chatce z bali, którą nazywamy naszą własną\nOna uwielbiała gin, a ja kochałem rum\nMówię ci, że świetnie się bawiliśmy.</string>
+  <string name="SpiderElite_Name">Pajęczy elitarny strażnik</string>
   <string name="SpiderElite_Gender">męski</string>
+  <string name="SpiderElite_Name_Objective">Pajęczy elitarny strażnik</string>
+  <string name="SpiderElite_Desc">Podobnie jak żołnierze, pajączy strażnicy przysięgają chronić swoje królestwo. Jad elitarnego strażnika jest używany do dezorientacji celu.</string>
+  <string name="Shaman_ZapMiss">*przeklina po gnomsku*</string>
+  <string name="Facilitations_Names_0">Nie głodny</string>
+  <string name="Facilitations_Names_1">Ciało trolla</string>
+  <string name="Facilitations_Names_2">Duch dżina</string>
+  <string name="Facilitations_Names_3">Siła giganta</string>
+  <string name="Facilitations_Descriptions_0">Mutanty zawsze były traktowane z pogardą i strachem, ale brak głodu ponownie da ci przewagę, tym razem w podboju czeluści lochów.</string>
+  <string name="Facilitations_Descriptions_1">Nadal nie wiadomo, kim byli twoi rodzice, ale naturalna trollowa regeneracja pomoże naprawić wszystkie nadchodzące blizny po bitwach.</string>
+  <string name="Facilitations_Descriptions_2">Głębokie i dogłębne studium przyrody jako źródła energii pozwoli uzupełnić magiczne rezerwy podczas podróży.</string>
+  <string name="Facilitations_Descriptions_3">Zaciskając pas ze skóry ogra, który był przekazywany kolejnym pokoleniom, robisz krok w stronę nieznanego, które Cię czeka.</string>
+  <string name="Challenges_Descriptions_0">Jedzenie i woda już dawno zgniły, doprowadzając każdego poszukiwacza przygód do szaleństwa, od myśli o śmierci przez strach i głód. Czy Twoja dieta pomoże Ci przetrwać wystarczająco długo?</string>
+  <string name="Challenges_Descriptions_1">Atak jest najlepszą obroną. Postępując zgodnie z tymi naukami, zapuszczasz się do lochu, gdzie wiara jest najsilniejszym strażnikiem twojego ciała.</string>
+  <string name="Challenges_Descriptions_2">Jako zwolennik naturalnej regeneracji zwykłego ciała zawsze byłeś nieufny wobec mikstur o właściwościach leczniczych. Lepiej dmuchać na zimne!</string>
+  <string name="Challenges_Descriptions_3">Ziemie wokół lochu są od dawna zarażone złą wolą, uniemożliwiającą wzrost nasion różnych ziół i roślin. Kto wie, jak długo potrwa, zanim ostatnia roślina przestanie istnieć na tych jałowych ziemiach.</string>
+  <string name="Challenges_Descriptions_4">Zła obecność czai się w umysłach wszystkich stworzeń w lochu, uświadamiając im wydarzenia, które mają miejsce między sobą</string>
+  <string name="Challenges_Descriptions_5">Pierwszą rzeczą, która pojawiła się wraz ze złem, była gęsta i nieprzenikniona mgła, która prawie uniemożliwia wyraźne poruszanie się po niekończących się korytarzach lochu.</string>
+  <string name="Challenges_Descriptions_6">Starożytna sztuka wróżenia z run jest zabroniona i unikana za wszelką cenę, ze względu na klątwę rzuconą na każdy zwój, który trafia do lochów lub ich okolic.</string>
+  <string name="Challenges_Descriptions_7">Przyzwyczaiłeś się do tego, że posiadanie i używanie broni jest moralnie nie w porządku, ale co jeszcze może cię obronić przed kreaturami grasującymi na dole?</string>
+  <string name="ManaRegenerationBuff_Name">Regeneracja many.</string>
+  <string name="ManaRegenerationBuff_Info">Mechanika naturalnej regeneracji istnieje w formie umiejętności, co ma na celu uczynienie mechaniki klarowniejszej.</string>
+  <string name="WndGame_Customizations">Modyfikacje</string>
+  <string name="Welcome_Text_31_1"> remix.31.1\n
+- Rozgrywka:\n
+-- Nowe modyfikacje!\n
+-- Nowe rodzaje pająków\n
+-- Psi-pająk teraz bedzie wzmacniać inne pająki zamiast osłabiać bohatera.\n
+- Naprawione błędy\n
+</string>
+  <string name="WndTilesKind_Title">Jeszcze jedna rzecz:</string>
+  <string name="WndTilesKind_text">Zamierzasz wejść do Lochu opętanego przez pokręconą magię, ale teraz możesz wybrać, jak chcesz to zobaczyć:\n Czy wolisz nowoczesny pseudo-3D czy klasyczny płaski widok?\nPóźniej będziesz mógł to zmienić w menu opcji gry.</string>
+  <string name="WndTilesKind_NewLook">Nowy wygląd</string>
+  <string name="WndTilesKind_ClassicLook">Wygląd klasyczny</string>
+  <string name="MobAi_status">Ten%sto%s</string>
+  <string name="WndCustomizations_Title">Modyfikacje</string>
+  <string name="IceGuardianCore_DieInfo">Zimno tutaj, Lepiej wrócę na poziom 14 i poszukam jakiegoś cieplejszego miejsca.</string>
+  <string name="Lich_DieInfo">Nigdy nie lubiłem/am Nekromantów. To dobra pora by wrócić na poziom 7 i poszukać drogi ku nowej przygodzie.</string>
+  <string name="SpiderQueen_DieInfo">Królowa pająków została zabita! Teraz powinienem wrócić na poziom 5 i kontynuować moją przygodę w głębiny .</string>
+  <string name="WndModSelect_ReallyDelete">Na pewno usunąć? </string>
+  <string name="WndModSelect_AreYouSure">Usuwanie modyfikacji %s, Jesteś pewien?</string>
 </resources>

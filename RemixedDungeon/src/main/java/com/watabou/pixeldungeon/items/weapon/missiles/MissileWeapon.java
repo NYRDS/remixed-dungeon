@@ -21,14 +21,12 @@ import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Quiver;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
@@ -56,18 +54,17 @@ public class MissileWeapon extends Weapon {
     }
 
     @Override
-    protected void onThrow(int cell, @NotNull Char thrower) {
-        Char target = Actor.findChar(cell);
+    protected void onThrow(int cell, @NotNull Char thrower, Char target) {
         if (target == null || !target.valid() || target == thrower) {
-            super.onThrow(cell, thrower);
+            super.onThrow(cell, thrower, target);
         } else {
             if (!thrower.shoot(target, this)) {
-                miss(cell, thrower);
+                miss(cell, thrower, target);
             }
         }
     }
 
-    protected void miss(int cell, Char thrower) {
+    protected void miss(int cell, Char thrower, Char enemy) {
 
         if (this instanceof Arrow) {
             Arrow arrow = (Arrow) this;
@@ -76,7 +73,7 @@ public class MissileWeapon extends Weapon {
             }
         }
 
-        super.onThrow(cell, thrower);
+        super.onThrow(cell, thrower, enemy);
     }
 
     @Override

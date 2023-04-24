@@ -23,9 +23,7 @@ public class WandOfShadowbolt extends Wand {
 	}
 
 	@Override
-	protected void onZap( int cell ) {
-
-		Char ch = Actor.findChar( cell );
+	protected void onZap( int cell, Char ch ) {
 		if (ch != null) {
 			int level = effectiveLevel();
 

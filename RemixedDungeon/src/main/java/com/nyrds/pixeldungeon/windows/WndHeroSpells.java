@@ -17,7 +17,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.IconTitle;
 
-import lombok.var;
+
 
 public class WndHeroSpells extends Window {
 

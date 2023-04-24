@@ -22,7 +22,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.TestOnly;
 
 import lombok.val;
-import lombok.var;
+
 
 public class Spell implements NamedEntityKind {
 
@@ -87,6 +87,7 @@ public class Spell implements NamedEntityKind {
         return true;
     }
 
+    @LuaInterface
     public boolean cast(@NotNull final Char chr) {
 
         if (!chr.isAlive()) {
@@ -239,13 +240,19 @@ public class Spell implements NamedEntityKind {
 
                 @Override
                 public Item quickSlotContent() {
-                    quantity(Dungeon.hero.getSkillPoints()/spellCost());
+                    if (spellCost() > 0)
+                        quantity(Dungeon.hero.getSkillPoints()/spellCost());
+
+                    quantity(1);
                     return this;
                 }
 
                 @Override
                 public boolean usableByHero() {
-                    return quantity() > 0 && canCast(Dungeon.hero, false);
+                    if (spellCost() > 0)
+                        return quantity() > 0 && canCast(Dungeon.hero, false);
+                    else
+                        return canCast(Dungeon.hero, false);
                 }
 
                 @Override

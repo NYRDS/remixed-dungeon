@@ -3,8 +3,8 @@ package com.watabou.pixeldungeon.plants;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.SpellSprite;
@@ -48,11 +48,11 @@ public class Seed extends Item {
     }
 
     @Override
-    protected void onThrow(int cell, @NotNull Char thrower) {
+    protected void onThrow(int cell, @NotNull Char thrower, Char enemy) {
         Level level = thrower.level();
 
         if (level.pit[cell] || level.getTopLevelObject(cell) != null || !TerrainFlags.is(level.map[cell],TerrainFlags.PASSABLE)) {
-            super.onThrow(cell, thrower);
+            super.onThrow(cell, thrower, enemy);
         } else {
             level.plant(this, cell);
         }
@@ -61,7 +61,7 @@ public class Seed extends Item {
     @Override
     public void _execute(@NotNull Char chr, @NotNull String action) {
         if (action.equals(AC_PLANT)) {
-            ((Seed) detach(chr.getBelongings().backpack)).onThrow(chr.getPos(), chr);
+            ((Seed) detach(chr.getBelongings().backpack)).onThrow(chr.getPos(), chr, CharsList.DUMMY);
             chr.doOperate(TIME_TO_PLANT);
 
         } else if (action.equals(CommonActions.AC_EAT)) {

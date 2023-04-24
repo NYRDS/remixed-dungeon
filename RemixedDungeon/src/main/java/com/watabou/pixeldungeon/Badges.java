@@ -66,7 +66,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
-import lombok.var;
+
 
 public class Badges {
 
@@ -430,7 +430,7 @@ public class Badges {
 	}
 
 	public static void validateAllPotionsIdentified() {
-		if (Dungeon.hero != null && Dungeon.hero.isAlive() &&
+		if (Dungeon.hero.isAlive() &&
 				!local.contains(Badge.ALL_POTIONS_IDENTIFIED) && Potion.allKnown()) {
 
 			Badge badge = Badge.ALL_POTIONS_IDENTIFIED;
@@ -442,7 +442,7 @@ public class Badges {
 	}
 
 	public static void validateAllScrollsIdentified() {
-		if (Dungeon.hero != null && Dungeon.hero.isAlive() &&
+		if (Dungeon.hero.isAlive() &&
 				!local.contains(Badge.ALL_SCROLLS_IDENTIFIED) && Scroll.allKnown()) {
 
 			Badge badge = Badge.ALL_SCROLLS_IDENTIFIED;
@@ -454,7 +454,7 @@ public class Badges {
 	}
 
 	public static void validateAllRingsIdentified() {
-		if (Dungeon.hero != null && Dungeon.hero.isAlive() &&
+		if (Dungeon.hero.isAlive() &&
 				!local.contains(Badge.ALL_RINGS_IDENTIFIED) && Ring.allKnown()) {
 
 			Badge badge = Badge.ALL_RINGS_IDENTIFIED;
@@ -466,7 +466,7 @@ public class Badges {
 	}
 
 	public static void validateAllWandsIdentified() {
-		if (Dungeon.hero != null && Dungeon.hero.isAlive() &&
+		if (Dungeon.hero.isAlive() &&
 				!local.contains(Badge.ALL_WANDS_IDENTIFIED) && Wand.allKnown()) {
 
 			Badge badge = Badge.ALL_WANDS_IDENTIFIED;

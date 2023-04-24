@@ -43,11 +43,10 @@ import com.watabou.utils.Random;
 public class WandOfFirebolt extends SimpleWand  {
 
 	@Override
-	protected void onZap( int cell ) {
+	protected void onZap( int cell, Char ch ) {
 
 		int wandLevel = effectiveLevel();
 		Level level = getOwner().level();
-
 
 		for (int i=1; i < Ballistica.distance - 1; i++) {
 			int c = Ballistica.trace[i];
@@ -63,8 +62,7 @@ public class WandOfFirebolt extends SimpleWand  {
 		}
 		
 		GameScene.add( Blob.seed( cell, 1, Fire.class ) );
-					
-		Char ch = Actor.findChar( cell );
+
 		if (ch != null) {
 			
 			ch.damage( Random.Int( 1, 8 + wandLevel * wandLevel ), this );

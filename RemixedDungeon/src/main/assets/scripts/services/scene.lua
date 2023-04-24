@@ -97,4 +97,11 @@ service.interlevel = function(self, mode, done)
     return interlevelScene.onStep(mode, done)
 end
 
+service.cellClicked = function(self, cell)
+    if gameScene.cellClicked then
+        return gameScene.cellClicked(cell)
+    end
+    return false
+end
+
 return service

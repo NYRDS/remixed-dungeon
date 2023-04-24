@@ -33,7 +33,7 @@ import com.watabou.utils.PointF;
 
 import org.jetbrains.annotations.NotNull;
 
-import lombok.var;
+
 
 public class CellSelector extends TouchArea {
 
@@ -50,7 +50,7 @@ public class CellSelector extends TouchArea {
 		dragThreshold = PixelScene.defaultZoom * DungeonTilemap.SIZE / 2;
 	}
 
-	public boolean defaultListner() {
+	public boolean defaultListener() {
 		return listener instanceof DefaultCellListener;
 	}
 

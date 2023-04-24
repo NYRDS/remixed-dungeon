@@ -22,7 +22,9 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.EuConsent;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.GameControl;
+import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -46,6 +48,7 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ChallengeButton;
 import com.watabou.pixeldungeon.ui.ExitButton;
+import com.watabou.pixeldungeon.ui.FacilitaionButton;
 import com.watabou.pixeldungeon.ui.GameButton;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndClass;
@@ -146,7 +149,7 @@ public class StartScene extends PixelScene {
         btnLoad = new GameButton(StringsManager.getVar(R.string.StartScene_Load)) {
             @Override
             protected void onClick() {
-                Dungeon.hero = null;
+                Dungeon.hero = CharsList.DUMMY_HERO;
                 Dungeon.heroClass = curShield.cl;
                 InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
             }
@@ -177,9 +180,7 @@ public class StartScene extends PixelScene {
                 i++;
             }
 
-            ChallengeButton challenge = new ChallengeButton(this);
-            challenge.setPos(w / 2 - challenge.width() / 2, 0);
-            add(challenge);
+            placeCustomizationsAt(left + 32, title.getY() + title.height/2);
 
         } else {
             int classesPerRow = 4;
@@ -203,10 +204,7 @@ public class StartScene extends PixelScene {
                 }
             }
 
-            ChallengeButton challenge = new ChallengeButton(this);
-            challenge.setPos(w / 2 - challenge.width() / 2, top + shieldH * 0.5f
-                    - challenge.height() / 2);
-            add(challenge);
+            placeCustomizationsAt(w / 2, top + shieldH * 0.5f);
         }
 
         unlock = PixelScene.createMultiline(GuiProperties.titleFontSize());
@@ -235,6 +233,19 @@ public class StartScene extends PixelScene {
         ServiceManNPC.resetLimit();
 
         fadeIn();
+    }
+
+    private void placeCustomizationsAt(float x, float y) {
+        ChallengeButton challenge = new ChallengeButton(this);
+
+        FacilitaionButton facilitations = new FacilitaionButton(this);
+
+        HBox customizations = new HBox(challenge.width() * 2.5f);
+        customizations.add(challenge);
+        //customizations.add(facilitations);
+
+        customizations.setPos(x - customizations.width() / 2, y - customizations.height() / 2);
+        add(customizations);
     }
 
     private void updateUnlockLabel(String text) {

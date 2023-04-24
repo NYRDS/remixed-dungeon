@@ -508,6 +508,10 @@ local RPD = {
         else
             return string.format(fmt, table.unpack(args))
         end
+    end,
+
+    lua2json = function(entity)
+        return json.encode({data = entity})
     end
 }
 

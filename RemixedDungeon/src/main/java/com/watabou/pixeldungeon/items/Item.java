@@ -25,6 +25,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.ml.actions.UseItem;
@@ -41,7 +42,6 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.actors.hero.Backpack;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.bags.Bag;
@@ -71,7 +71,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;
 import lombok.val;
-import lombok.var;
+
 
 public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWithId {
 
@@ -215,7 +215,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		}
 	}
 
-	protected void onThrow(int cell, @NotNull Char thrower) {
+	protected void onThrow(int cell, @NotNull Char thrower, Char target) {
 		dropTo(cell, thrower);
 	}
 
@@ -465,6 +465,12 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 			}
 		}
 
+		int charmedLevel = getOwner().buffLevel(BuffFactory.CHARM);
+
+		if(charmedLevel > 0) {
+			price /= (1 + charmedLevel);
+		}
+
 		if (price < 1) {
 			price = 1;
 		}
@@ -550,7 +556,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
 			// FIXME
 			delay *= ((MissileWeapon) this).attackDelayFactor(user);
-			if (enemy != null && enemy.hasBuff(SnipersMark.class)) {
+			if (enemy != null && enemy.hasBuff(BuffFactory.SNIPER_MARK)) {
 				delay *= 0.5f;
 			}
 		}
@@ -566,7 +572,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 		int finalCell = cell;
 		sprite.reset(pos, cell, this, () -> {
 					user.spend(finalDelay);
-					item.onThrow(finalCell, user);
+					item.onThrow(finalCell, user, enemy);
 				});
 	}
 

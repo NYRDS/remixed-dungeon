@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.items.common;
 import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.weapon.missiles.Tamahawk;
 import com.watabou.utils.Bundle;
@@ -39,8 +38,7 @@ public class GnollTamahawk extends Tamahawk {
     }
 
     @Override
-    protected void onThrow(int cell, @NotNull Char thrower) {
-        Char enemy = Actor.findChar( cell );
+    protected void onThrow(int cell, @NotNull Char thrower, Char enemy) {
         if (enemy != null && enemy != thrower) {
             thrower.shoot( enemy, this );
         }

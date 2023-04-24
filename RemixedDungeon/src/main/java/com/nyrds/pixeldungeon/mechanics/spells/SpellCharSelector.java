@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
-import lombok.var;
+
 
 class SpellCharSelector implements CellSelector.Listener {
     private final Spell spell;

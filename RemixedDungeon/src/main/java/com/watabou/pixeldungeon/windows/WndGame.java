@@ -41,7 +41,7 @@ public class WndGame extends WndMenuCommon {
 
 		Hero hero = Dungeon.hero;
 
-		if (hero == null) {
+		if (hero.invalid()) {
 			GameLoop.switchScene(TitleScene.class);
 			return;
 		}

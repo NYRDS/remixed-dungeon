@@ -16,7 +16,7 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 
-import lombok.var;
+
 
 public abstract class BossLevel extends RegularLevel {
 
@@ -80,9 +80,9 @@ public abstract class BossLevel extends RegularLevel {
         }
 
         if(cellValid(arenaDoor)) {
-            CellEmitter.get(arenaDoor).start(Speck.factory(Speck.ROCK), 0.07f, 10);
+            CellEmitter.get(arenaDoor).start(Speck.factory(Speck.EVOKE), 0.07f, 10);
 
-            set(arenaDoor, Terrain.EMPTY_DECO);
+            set(arenaDoor, Terrain.DOOR);
             GameScene.updateMap(arenaDoor);
         }
 

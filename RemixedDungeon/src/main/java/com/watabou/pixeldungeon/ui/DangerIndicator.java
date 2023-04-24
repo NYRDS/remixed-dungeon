@@ -25,7 +25,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 
-import lombok.var;
+
 
 public class DangerIndicator extends Tag {
 	
@@ -37,10 +37,12 @@ public class DangerIndicator extends Tag {
 	private int enemyIndex = 0;
 	
 	private int lastNumber = -1;
-	
-	public DangerIndicator() {
+	private final Char hero;
+
+	public DangerIndicator(Char hero) {
 		super( 0xFF4C4C );
-		
+
+		this.hero = hero;
 		setSize( 24, 16 );
 		
 		setVisible(false);
@@ -76,8 +78,8 @@ public class DangerIndicator extends Tag {
 	@Override
 	public void update() {
 		
-		if (Dungeon.hero.isAlive()) {
-			int v =  Dungeon.hero.visibleEnemies();
+		if (hero.isAlive()) {
+			int v =  hero.visibleEnemies();
 
 			if(v>0) {
 				Actor.setRealTimeMultiplier(1);
@@ -103,7 +105,6 @@ public class DangerIndicator extends Tag {
 	
 	@Override
 	protected void onClick() {
-		var hero = Dungeon.hero;
 		int enemies = hero.visibleEnemies();
 		if(enemies > 0) {
 			enemyIndex++;

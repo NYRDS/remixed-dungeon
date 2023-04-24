@@ -18,7 +18,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 
-import lombok.var;
+
 
 public class WndModInstall extends Window {
 
@@ -28,7 +28,7 @@ public class WndModInstall extends Window {
 
         VBox mainLayout = new VBox();
 
-        Text title = PixelScene.createMultiline(GuiProperties.mediumTitleFontSize());
+        Text title = PixelScene.createMultiline(GuiProperties.titleFontSize());
         title.maxWidth(width);
         title.text(StringsManager.getVar(R.string.WndModInstall_InstallingMod) +"\n\n");
         title.hardlight(Window.TITLE_COLOR);

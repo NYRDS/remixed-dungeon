@@ -68,14 +68,14 @@ abstract public class RottenFood extends Food{
 	}
 	
 	@Override
-	protected void onThrow(int cell, @NotNull Char thrower) {
+	protected void onThrow(int cell, @NotNull Char thrower, Char enemy) {
 		final Level level = Dungeon.level;
 		LevelObject lo = level.getTopLevelObject(cell);
 		if ((lo != null && lo.affectItems()) || level.pit[cell]) {
-			super.onThrow( cell, thrower);
+			super.onThrow( cell, thrower, enemy);
 		} else  {
 			if(! molder( cell )){
-				super.onThrow(cell, thrower);
+				super.onThrow(cell, thrower, enemy);
 			}
 		}
 	}

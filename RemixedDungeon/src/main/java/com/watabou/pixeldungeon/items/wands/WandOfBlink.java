@@ -33,7 +33,7 @@ import com.watabou.utils.Callback;
 
 import org.jetbrains.annotations.NotNull;
 
-import lombok.var;
+
 
 public class WandOfBlink extends Wand {
 
@@ -57,7 +57,7 @@ public class WandOfBlink extends Wand {
 	}
 
 	@Override
-	protected void onZap( int cell ) {
+	protected void onZap( int cell, Char victim ) {
 
 		getOwner().getSprite().setVisible(true);
 		appear( getOwner(), cell);

@@ -2879,4 +2879,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="SpiderQueen_DieInfo">Spider Queen is slain! Now I should go back to level 5 and continue my journey to the Deeps.</string>
   <string name="WndModSelect_ReallyDelete">Really delete?</string>
   <string name="WndModSelect_AreYouSure">Deleting mod: %s, are you sure?</string>
+  <string name="Challenges_Names_8">No town</string>
+  <string name="Challenges_Descriptions_8">Your journey will begin in the dark and dangerous town sewers, with the only way to the surface blocked. To make matters worse, you will only be able to use equipment that you find within the dungeon. With limited resources and equipment, your survival will depend on your skills and strategy.</string>
 </resources>

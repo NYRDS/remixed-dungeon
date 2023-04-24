@@ -17,7 +17,7 @@ import java.text.Collator;
 import java.util.Arrays;
 import java.util.Map;
 
-import lombok.var;
+
 
 public class WndLibraryCatalogue extends Window {
 

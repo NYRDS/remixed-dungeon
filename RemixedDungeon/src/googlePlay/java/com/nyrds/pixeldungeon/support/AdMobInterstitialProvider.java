@@ -13,9 +13,12 @@ import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.InterstitialPoint;
 
 public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialProvider {
-    private static InterstitialAd mInterstitialAd = null;
+    private InterstitialAd mInterstitialAd = null;
 
-    AdMobInterstitialProvider() {
+    private final String adId;
+
+    AdMobInterstitialProvider(String id) {
+        adId = id;
         GameLoop.runOnMainThread(this::requestNewInterstitial);
     }
 
@@ -27,7 +30,7 @@ public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialPr
 
         InterstitialAd.load(
                 Game.instance(),
-                ModdingMode.getInterstitialId(),
+                adId,
                 AdMob.makeAdRequest(),
                 new InterstitialAdLoadCallback() {
                     @Override

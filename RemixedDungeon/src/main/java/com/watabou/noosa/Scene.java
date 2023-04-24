@@ -16,8 +16,6 @@
  */
 
 package com.watabou.noosa;
-
-import com.ironsource.mediationsdk.G;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.platform.game.Game;
@@ -118,5 +116,9 @@ public class Scene extends Group {
 	public static void setMode(String mode) {
 		sceneMode = mode;
 		script.run("setMode", mode);
+	}
+
+	public boolean cellClicked(int cell) {
+		return script.runOptional("cellClicked",false, cell);
 	}
 }

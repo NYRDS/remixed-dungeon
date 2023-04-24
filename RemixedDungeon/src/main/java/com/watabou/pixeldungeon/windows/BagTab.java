@@ -39,7 +39,7 @@ class BagTab extends Tab {
 
         icon.copy( icon() );
         icon.setX(x + (width - icon.width) / 2);
-        icon.setY(y + (height - icon.height) / 2 - 2 - (selected ? 0 : 1));
+        icon.setY(y + (height - icon.height) / 2 - (selected ? 0 : 1));
         if (!selected && icon.getY() < y + CUT) {
             RectF frame = icon.frame();
             frame.top += (y + CUT - icon.getY()) / icon.texture.height;

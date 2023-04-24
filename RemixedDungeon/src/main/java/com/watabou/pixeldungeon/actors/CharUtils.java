@@ -59,7 +59,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-import lombok.var;
+
 
 public class CharUtils {
     static public boolean isVisible(@Nullable Char ch) {

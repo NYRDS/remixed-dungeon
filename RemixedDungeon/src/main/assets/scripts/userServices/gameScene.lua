@@ -27,4 +27,10 @@ gameScene.selectCell = function()
 
 end
 
+gameScene.cellClicked = function(cell)
+    --RPD.glog("%d:cellClicked", cell)
+    return false
+end
+
+
 return gameScene

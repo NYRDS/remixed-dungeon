@@ -48,6 +48,7 @@ public enum Preferences {
 	public static final String KEY_VERSION          = "version";
 	public static final String KEY_FONT_SCALE       = "font_scale";
 	public static final String KEY_CLASSIC_FONT     = "classic_font";
+	public static final String KEY_CLASSIC_TTF_FONT = "classic_ttf_font";
 	public static final String KEY_PREMIUM_SETTINGS = "premium_settings";
 	public static final String KEY_REALTIME         = "realtime";
 	public static final String KEY_ACTIVE_MOD       = "active_mod";

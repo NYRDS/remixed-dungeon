@@ -34,10 +34,10 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1147
-        versionName "31.1.fix.20"
+        versionCode 1159
+        versionName "31.1.fix.32"
         targetSdkVersion 32
-        minSdkVersion 19
+        minSdkVersion 21
         compileSdkVersion = 32
 
         // Enabling multidex support.
@@ -63,8 +63,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility '1.8'
-        targetCompatibility '1.8'
+        sourceCompatibility "10"
+        targetCompatibility "10"
     }
 
     packagingOptions {
@@ -139,8 +139,13 @@ dependencies {
 
     implementation 'commons-io:commons-io:2.6'
 
-    implementation ('com.appodeal.ads:sdk:2.11.1.+') {
+
+    implementation ('com.appodeal.ads:sdk:3.0.1.0') {
+        exclude group: 'com.appodeal.ads.sdk.services', module: 'adjust'
+        exclude group: 'com.appodeal.ads.sdk.services', module: 'appsflyer'
+        exclude group: 'com.appodeal.ads.sdk.services', module: 'firebase'
         exclude group: 'com.appodeal.ads.sdk.networks', module: 'admob'
+        exclude group: 'com.appodeal.ads.sdk.services', module: 'facebook_analytics'
         exclude group: 'com.appodeal.ads.sdk.networks', module: 'facebook'
     }
 
@@ -150,9 +155,9 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.1.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.3.0'
-    googlePlayImplementation "com.google.android.gms:play-services-games:22.0.1"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:21.2.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.4.0'
+    googlePlayImplementation "com.google.android.gms:play-services-games:23.1.0"
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:21.3.0'
 
 
     googlePlayImplementation 'com.android.billingclient:billing:4.1.0'

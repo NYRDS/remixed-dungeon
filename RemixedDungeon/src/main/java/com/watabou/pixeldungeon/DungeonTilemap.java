@@ -33,7 +33,8 @@ import org.jetbrains.annotations.Nullable;
 public abstract class DungeonTilemap extends Tilemap {
 
 	public static final int SIZE = 16;
-	
+	public static final String XYZ = "xyz";
+
 	static protected Level level;
 
 
@@ -84,7 +85,7 @@ public abstract class DungeonTilemap extends Tilemap {
 		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
 
 		if (tiles.contains("_xyz")) {
-			return "xyz";
+			return XYZ;
 		}
 
 		if(probe.size() == 256) {
