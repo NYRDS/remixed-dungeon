@@ -22,6 +22,8 @@ import com.watabou.noosa.TextureFilm;
 
 public class DummySprite extends MobSprite {
 
+	public static DummySprite instance = new DummySprite();
+
 	public DummySprite() {
 		super();
 		

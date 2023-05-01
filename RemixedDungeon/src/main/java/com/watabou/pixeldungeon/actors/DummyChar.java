@@ -24,9 +24,10 @@ public class DummyChar extends Char {
     }
 
     @Override
-    public CharSprite newSprite() {
-        return new DummySprite();
-    }
+    public CharSprite newSprite() {return DummySprite.instance;}
+
+    @Override
+    public CharSprite getSprite() {return DummySprite.instance;}
 
     @Override
     protected void moveSprite(int oldPos, int pos) {
