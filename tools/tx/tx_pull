@@ -1,4 +1,0 @@
-#!/bin/sh
-
-tx set --auto-remote https://www.transifex.com/nyrds/remixed-dungeon
-tx pull --traceback -a -s  --parallel  --force
