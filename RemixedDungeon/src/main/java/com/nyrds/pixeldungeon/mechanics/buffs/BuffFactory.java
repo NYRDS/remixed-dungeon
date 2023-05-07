@@ -43,6 +43,7 @@ import com.watabou.pixeldungeon.items.armor.glyphs.Viscosity;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
+import com.watabou.pixeldungeon.items.rings.RingOfDetection;
 import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.plants.Earthroot;
@@ -82,7 +83,9 @@ public class BuffFactory {
     public static final String AMOK = Amok.class.getSimpleName();
     public static final String CHARM = Charm.class.getSimpleName();
     public static final String SNIPER_MARK = SnipersMark.class.getSimpleName();
-
+    public static final String WEAKNESS = Weakness.class.getSimpleName();
+    public static final String ROOTS = Roots.class.getSimpleName();
+    public static final String DETECTION = RingOfDetection.Detection.class.getSimpleName();
 
     static {
         initBuffsMap();

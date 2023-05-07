@@ -2898,4 +2898,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="IceGuardianCore_DieInfo">Здесь так холодно, так что лучше я вернусь на 14-й уровень и попытаюсь найти путь в более теплое место.</string>
   <string name="Lich_DieInfo">Мне никогда не нравился этот Некромант. Так что пора вернуться на 7 уровень и найти другой путь к новому приключению.</string>
   <string name="SpiderQueen_DieInfo">Паучья королева убита! Теперь я должен вернуться на 5ый уровень и продолжить путешествие в Глубины.</string>
+  <string name="WndModSelect_ReallyDelete">Точно удалить?</string>
+  <string name="WndModSelect_AreYouSure">Удаляем мод %s, уверены?</string>
+  <string name="Challenges_Names_8">Без города</string>
+  <string name="Challenges_Descriptions_8">Ваше путешествие начнется в темной и опасной городской канализации, единственный путь на поверхность заблокирован. Что еще хуже, вы сможете использовать только то что найдете в подземелье. В условиях ограниченных ресурсов и снаряжения ваше выживание будет зависеть от ваших навыков и стратегии.</string>
 </resources>
