@@ -460,7 +460,7 @@ public class GameScene extends PixelScene {
 
         fadeIn();
 
-        Dungeon.observeImpl();
+        Dungeon.observe();
         hero.updateSprite();
         hero.readyAndIdle();
         QuickSlot.refresh(hero);
@@ -566,6 +566,7 @@ public class GameScene extends PixelScene {
             return;
         }
 
+
         if(objectSortingRequested) {
             objects.sort();
             objectSortingRequested = false;
@@ -581,7 +582,6 @@ public class GameScene extends PixelScene {
         }
 
         if(observeRequested) {
-            observeRequested = false;
             Dungeon.observeImpl();
         }
     }
@@ -844,15 +844,18 @@ public class GameScene extends PixelScene {
 
     public static void afterObserve() {
         if (isSceneReady() && scene.sceneCreated) {
+            GameLoop.pushUiTask(() -> {
+                final Level level = Dungeon.level;
 
-            final Level level = Dungeon.level;
+                GameScene.updateMap();
+                scene.baseTiles.updateFow(scene.fog);
 
-            GameScene.updateMap();
-            scene.baseTiles.updateFow(scene.fog);
+                for (Mob mob : level.mobs) {
+                    mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
+                }
 
-            for (Mob mob : level.mobs) {
-                mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
-            }
+                observeRequested = false;
+            });
         }
     }
 

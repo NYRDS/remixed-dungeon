@@ -50,6 +50,7 @@ public class Texture {
             int[] ids = new int[1];
             GLES20.glGenTextures(1, ids, 0);
             id = ids[0];
+            lastTexture = -1;
         }
 
         if (lastTexture != id) {
@@ -77,7 +78,7 @@ public class Texture {
     public void delete() {
         int[] ids = {id};
         GLES20.glDeleteTextures(1, ids, 0);
-        id = 0;
+        id = -1;
         //Log.i("texture",Utils.format("deleting %d", id));
     }
 

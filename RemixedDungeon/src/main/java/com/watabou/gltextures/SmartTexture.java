@@ -38,6 +38,10 @@ public class SmartTexture extends Texture {
 
 	public Bitmap bitmap;
 
+	public SmartTexture() {
+		super();
+	}
+
 	public SmartTexture(@NotNull Bitmap bitmap ) {
 		this( bitmap, NEAREST, CLAMP );
 	}
@@ -68,7 +72,9 @@ public class SmartTexture extends Texture {
 			super.filter(fModeMin,fModeMax);
 			super.wrap(wModeH,wModeV);
 
-			handMade( bitmap );
+			if(bitmap!=null) {
+				handMade(bitmap);
+			}
 
 			loaded = true;
 		}

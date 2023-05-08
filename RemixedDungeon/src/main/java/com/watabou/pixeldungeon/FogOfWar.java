@@ -18,6 +18,9 @@
 package com.watabou.pixeldungeon;
 
 import android.graphics.Bitmap;
+import android.opengl.GLES20;
+import android.opengl.GLES31;
+import android.view.ViewDebug;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.gl.Texture;
@@ -25,6 +28,7 @@ import com.nyrds.util.Util;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.Arrays;
 
@@ -72,6 +76,9 @@ public class FogOfWar extends Image {
         setWidth(width2 * size);
         setHeight(height2 * size);
 
+        pixels = new int[width2 * height2];
+        Arrays.fill(pixels, INVISIBLE);
+
         texture(new FogTexture());
 
         setScaleXY(
@@ -83,11 +90,7 @@ public class FogOfWar extends Image {
     }
 
     public void updateVisibility(boolean[] visible, boolean[] visited, boolean[] mapped, boolean firstRowHack) {
-
-        if (pixels == null) {
-            pixels = new int[width2 * height2];
-            Arrays.fill(pixels, INVISIBLE);
-        }
+        dirty = true;
 
         if (firstRowHack) {
             int pos = 0;
@@ -138,10 +141,14 @@ public class FogOfWar extends Image {
                 pixels[i * width2 + j] = c;
             }
         }
+    }
 
-        GameLoop.pushUiTask(() -> {
+    @Override
+    public void draw() {
+        //if(dirty) {
             texture.pixels(width2, height2, pixels);
-        });
+        //}
+        super.draw();
     }
 
     private class FogTexture extends SmartTexture {
