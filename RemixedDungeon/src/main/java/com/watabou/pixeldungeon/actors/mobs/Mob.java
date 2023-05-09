@@ -678,7 +678,7 @@ public abstract class Mob extends Char {
 
     @Override
     public int damageRoll() {
-        int dmg = Random.NormalIntRange(dmgMin, dmgMax);
+        int dmg = Random.NormalIntRange(dmgMin, dmgMax) + Random.NormalIntRange(0, lvl());
 
         dmg += getActiveWeapon().damageRoll(this);
 
@@ -691,6 +691,6 @@ public abstract class Mob extends Char {
 
     @Override
     public int dr() {
-        return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() + dr;
+        return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() + dr + lvl()/2;
     }
 }

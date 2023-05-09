@@ -422,8 +422,15 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                     levitation = null;
                 }
                 break;
-            case INVISIBLE:
-                alpha(1f);
+            case INVISIBLE: {
+                float alpha = 1.0f;
+
+                if (hasParent()) {
+                    GameScene.addToMobLayer(new AlphaTweener(this, alpha, 0.4f));
+                } else {
+                    alpha(alpha);
+                }
+            }
                 break;
             case PARALYSED:
                 paused = false;

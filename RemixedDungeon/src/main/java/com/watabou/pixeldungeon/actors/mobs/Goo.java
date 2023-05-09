@@ -63,9 +63,13 @@ public class Goo extends Boss {
 	@Override
 	public int damageRoll() {
 		if (pumpedUp) {
-			return Random.NormalIntRange( 7, 21 );
+			dmgMin = 7;
+			dmgMax = 21;
+			return super.damageRoll();
 		} else {
-			return Random.NormalIntRange( 4, 11 );
+			dmgMin = 4;
+			dmgMax = 11;
+			return super.damageRoll();
 		}
 	}
 	
