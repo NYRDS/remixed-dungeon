@@ -44,7 +44,9 @@ import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
+import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
+import com.watabou.pixeldungeon.items.rings.RingOfPower;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.plants.Sungrass;
@@ -67,9 +69,7 @@ public class BuffFactory {
 
     public static final String GASES_IMMUNITY = "GasesImmunity";
     public static final String BLESSED = Blessed.class.getSimpleName();
-    public static final String EVASION = RingOfEvasion.Evasion.class.getSimpleName();
-    public static final String STONE_WALKING = RingOfStoneWalking.StoneWalking.class.getSimpleName();
-    public static final String ACCURACY = RingOfAccuracy.Accuracy.class.getSimpleName();
+
     public static final String SHADOWS = Shadows.class.getSimpleName();
     public static final String BLINDNESS = Blindness.class.getSimpleName();
     public static final String MIND_VISION = MindVision.class.getSimpleName();
@@ -85,7 +85,18 @@ public class BuffFactory {
     public static final String SNIPER_MARK = SnipersMark.class.getSimpleName();
     public static final String WEAKNESS = Weakness.class.getSimpleName();
     public static final String ROOTS = Roots.class.getSimpleName();
-    public static final String DETECTION = RingOfDetection.Detection.class.getSimpleName();
+    public static final String TERROR = Terror.class.getSimpleName();
+    public static final String RAGE = new RageBuff().getEntityKind();
+
+    public static final String RING_OF_DETECTION = new RingOfDetection().buff().getEntityKind();
+    public static final String RING_OF_EVASION = new RingOfEvasion().buff().getEntityKind();
+    public static final String RING_OF_ACCURACY = new RingOfAccuracy().buff().getEntityKind();
+    public static final String RING_OF_STONE_WALKING = new RingOfStoneWalking().buff().getEntityKind();
+    public static final String RING_OF_POWER = new RingOfPower().buff().getEntityKind();
+    public static final String RING_OF_ELEMENTS = new RingOfElements().buff().getEntityKind();
+
+    public static final String RAT_SKULL_RATTER_AURA = new RatSkull().buff().getEntityKind();
+
 
     static {
         initBuffsMap();

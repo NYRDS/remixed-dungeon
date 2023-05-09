@@ -29,7 +29,7 @@ import org.jetbrains.annotations.NotNull;
 public class RingOfThorns extends Ring {
 	
 	@Override
-	protected ArtifactBuff buff( ) {
+	public ArtifactBuff buff( ) {
 		return new Thorns();
 	}
 	

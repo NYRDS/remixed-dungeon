@@ -23,7 +23,7 @@ import com.nyrds.platform.util.StringsManager;
 public class RingOfPower extends Ring {
 	
 	@Override
-	protected ArtifactBuff buff( ) {
+	public ArtifactBuff buff( ) {
 		return new Power();
 	}
 	

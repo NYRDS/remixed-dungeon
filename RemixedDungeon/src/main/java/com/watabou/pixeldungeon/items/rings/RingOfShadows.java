@@ -23,7 +23,7 @@ import com.nyrds.platform.util.StringsManager;
 public class RingOfShadows extends Ring {
 	
 	@Override
-	protected ArtifactBuff buff( ) {
+	public ArtifactBuff buff( ) {
 		return new Shadows();
 	}
 	

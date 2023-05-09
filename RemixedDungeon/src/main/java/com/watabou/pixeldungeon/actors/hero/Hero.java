@@ -40,7 +40,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Scrambler;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Gizmo;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Bones;
@@ -78,7 +77,6 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
-import com.watabou.pixeldungeon.items.rings.RingOfDetection;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
@@ -468,7 +466,7 @@ public class Hero extends Char {
         Buff wallWalkerBuff = null;
 
         if (!level.isBossLevel()) {
-            wallWalkerBuff = buff(RingOfStoneWalking.StoneWalking.class);
+            wallWalkerBuff = buff(BuffFactory.RING_OF_STONE_WALKING);
         }
 
         if (level.adjacent(getPos(), target)) {
@@ -835,7 +833,7 @@ public class Hero extends Char {
 
         boolean smthFound = false;
 
-        int distance = 1 + buffLevel(BuffFactory.DETECTION);
+        int distance = 1 + buffLevel(BuffFactory.RING_OF_DETECTION);
 
         float searchLevel = intentional ? (2 * awareness - awareness * awareness) : awareness;
         if (distance <= 0) {

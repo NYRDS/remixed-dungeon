@@ -20,7 +20,7 @@ public class RingOfStoneWalking extends Artifact{
 	}
 	
 	@Override
-	protected ArtifactBuff buff( ) {
+	public ArtifactBuff buff( ) {
 		return new StoneWalking();
 	}
 	

@@ -23,7 +23,7 @@ import com.nyrds.platform.util.StringsManager;
 public class RingOfMending extends Ring {
 	
 	@Override
-	protected ArtifactBuff buff( ) {
+	public  ArtifactBuff buff( ) {
 		return new Rejuvenation();
 	}
 	

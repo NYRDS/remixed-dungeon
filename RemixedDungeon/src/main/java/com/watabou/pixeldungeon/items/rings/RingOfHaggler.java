@@ -28,7 +28,7 @@ import org.jetbrains.annotations.NotNull;
 public class RingOfHaggler extends Ring {
 	
 	@Override
-	protected ArtifactBuff buff( ) {
+	public  ArtifactBuff buff( ) {
 		return new Haggling();
 	}
 	

@@ -39,7 +39,7 @@ public class CorpseDust extends Artifact {
 	}
 
 	@Override
-	protected ArtifactBuff buff() {
+	public ArtifactBuff buff() {
 		return new RageBuff();
 	}
 

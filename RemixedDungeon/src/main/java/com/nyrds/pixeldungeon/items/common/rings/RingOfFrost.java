@@ -42,7 +42,7 @@ public class RingOfFrost extends Artifact {
 	}
 
 	@Override
-	protected ArtifactBuff buff( ) {
+	public ArtifactBuff buff( ) {
 		return new FrostAura();
 	}
 

@@ -22,7 +22,7 @@ public class RatKingCrown extends Artifact {
 	}
 
 	@Override
-	protected ArtifactBuff buff() {
+	public ArtifactBuff buff() {
 		return new RatKingAuraBuff();
 	}
 

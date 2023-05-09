@@ -69,6 +69,10 @@ public class Ring extends Artifact implements UnknownItem {
 
     private static ItemStatusHandler<Ring> handler;
 
+    static {
+        initGems();
+    }
+
     private String gem;
 
     private int ticksToKnow = 200;

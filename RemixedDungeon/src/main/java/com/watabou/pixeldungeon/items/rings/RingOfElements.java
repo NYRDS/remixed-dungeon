@@ -35,7 +35,7 @@ import java.util.Set;
 public class RingOfElements extends Ring {
 
 	@Override
-	protected ArtifactBuff buff( ) {
+	public ArtifactBuff buff( ) {
 		return new Resistance();
 	}
 	

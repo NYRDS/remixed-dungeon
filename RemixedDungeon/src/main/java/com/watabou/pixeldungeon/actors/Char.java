@@ -56,7 +56,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.ResultDescriptions;
-import com.watabou.pixeldungeon.actors.buffs.Blessed;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
@@ -82,8 +81,6 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
-import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.rings.RingOfHaste;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -485,7 +482,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public int attackSkill(Char target) {
-        int bonus = buffLevel(BuffFactory.ACCURACY)
+        int bonus = buffLevel(BuffFactory.RING_OF_ACCURACY)
                 + buffLevel(BuffFactory.BLESSED);
 
         float accuracy = (float) Math.pow(1.4, bonus);
@@ -515,7 +512,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         int defenseSkill = baseDefenseSkill + lvl();
 
         int bonus = buffLevel(BuffFactory.BLESSED)
-                + buffLevel(BuffFactory.EVASION);
+                + buffLevel(BuffFactory.RING_OF_EVASION);
 
         float evasion = bonus == 0 ? 1 : (float) Math.pow(1.2, bonus);
         if (paralysed) {

@@ -36,7 +36,7 @@ public class RatSkull extends Artifact {
 	}
 
 	@Override
-	protected ArtifactBuff buff() {
+	public ArtifactBuff buff() {
 		return new RatterAura();
 	}
 
