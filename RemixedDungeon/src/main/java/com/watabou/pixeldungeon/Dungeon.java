@@ -18,6 +18,7 @@ t * Pixel Dungeon
 package com.watabou.pixeldungeon;
 
 
+import com.google.common.base.Optional;
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.ai.MobAi;
@@ -668,8 +669,10 @@ public class Dungeon {
             try {
                 GameLoop.loadingOrSaving.incrementAndGet();
 
-                Bundle bundle = gameBundle(fileName);
-                loadGameFromBundle(bundle, fullLoad);
+                val bundle = gameBundle(fileName);
+                if (bundle.isPresent()) {
+                    loadGameFromBundle(bundle.get(), fullLoad);
+                }
 
             } finally {
                 GameLoop.loadingOrSaving.decrementAndGet();
@@ -744,11 +747,15 @@ public class Dungeon {
         GamesInProgress.delete(heroClass);
     }
 
-    public static Bundle gameBundle(String fileName) throws IOException {
+    public static Optional<Bundle> gameBundle(String fileName) throws IOException {
 
-        try (InputStream input = new FileInputStream(FileSystem.getFile(fileName))) {
-            return Bundle.read(input);
+        var saveFile = FileSystem.getFile(fileName);
+        if (saveFile.exists()) {
+            try (InputStream input = new FileInputStream(saveFile)) {
+                return Optional.of(Bundle.read(input));
+            }
         }
+        return Optional.absent();
     }
 
     public static void preview(GamesInProgress.Info info, Bundle bundle) {
@@ -1029,7 +1036,7 @@ public class Dungeon {
     }
 
     public static void setIsometricMode(boolean isometricMode) {
-        EventCollector.setSessionData("isometricMode", isometricMode);
+        EventCollector.setSessionData("isometricMode", String.valueOf(isometricMode));
         Dungeon.isometricMode = isometricMode;
     }
 

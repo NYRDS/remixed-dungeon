@@ -17,24 +17,27 @@
  */
 package com.watabou.pixeldungeon;
 
+import com.google.common.base.Optional;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.utils.Bundle;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import lombok.val;
+
 public class GamesInProgress {
 
 	private static final Map<HeroClass, Info> state = new HashMap<>();
 	
 	public static Info checkFile(String file) {
-		Info info;
+		Info info = null;
 		try {
-			
-			Bundle bundle = Dungeon.gameBundle( file );
-			info = new Info();
-			Dungeon.preview( info, bundle );
-
+			val bundle = Dungeon.gameBundle( file );
+			if (bundle.isPresent()) {
+				info = new Info();
+				Dungeon.preview( info, bundle.get() );
+			}
 		} catch (Exception e) {
 			info = null;
 		}

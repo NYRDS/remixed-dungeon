@@ -31,9 +31,9 @@ pieces_set = {
     ['P']='Rat'
 }
 
+chess = nil
 
-
-local chess
+local x_letters = {'a','b','c','d','e','f','g','h'}
 
 local function chessCellFromCell(cell)
     local level = RPD.Dungeon.level
@@ -42,7 +42,7 @@ local function chessCellFromCell(cell)
     y = level:cellY(cell) - y0
 
     if x >= 0 and x < 8 and y >= 0 and y < 8 then
-        local chessCell = string.sub(x_letters,x+1,x+1)..tostring(y+1)
+        local chessCell = x_letters[x+1]..tostring(8 - y)
         --RPD.glog("inside of board %d -> %s", cell, chessCell)
         return chessCell
     end
@@ -50,11 +50,30 @@ local function chessCellFromCell(cell)
     --RPD.glog("outside of board %d -> %d,%d", cell, x,y)
 end
 
+local function cellFromChessCell(chessCell)
+    local level = RPD.Dungeon.level
+
+    local x = nil
+    for i, letter in ipairs(x_letters) do
+        if letter == chessCell:sub(1,1) then
+            x = i - 1
+            break
+        end
+    end
+    if not x then return nil end -- invalid chess cell
+    local y = 8 - tonumber(chessCell:sub(2,2))
+    if y < 0 or y > 7 then return nil end -- invalid chess cell
+
+    return level:cell(x + x0, y + y0)
+end
+
 local function cellFromChess(x,y)
     local level = RPD.Dungeon.level
     return level:cell(x+x0, y+y0-1)
 end
 
+local move_str = ''
+local move_cells = {}
 
 return actor.init({
     act = function()
@@ -97,11 +116,6 @@ return actor.init({
             end
 
         end
---[[
-        for k, v in pairs(pieces) do
-            RPD.glog("%s -> %s", k, v)
-        end
-]]
         return true
     end,
     actionTime = function()
@@ -113,11 +127,42 @@ return actor.init({
     end,
 
     cellClicked = function(cell)
-        local level = RPD.Dungeon.level
-        local jcell = cell+1
 
-        chessCellFromCell(cell)
+        chessCell = chessCellFromCell(cell)
+
+        if not chessCell then return false end
+
+        if string.len(move_str) == 0 then
+            move_cells[1] = cell
+            move_str = chessCell
+        else
+            move_str = move_str..chessCell
+            move_cells[2] = cell
+            local mob = RPD.Actor:findChar(move_cells[1])
+            RPD.glog(move_str)
+            local moveResult = sunfish.move(chess, move_str)
+            if moveResult then
+                chess = moveResult
+                mob:setPos(move_cells[2])
+                mob:moveSprite(move_cells[1], move_cells[2])
+
+                chess, ai_move, score = sunfish.ai_move(chess)
+                RPD.glog("%s %d", ai_move, score)
+
+                local ai_cells = {string.sub(ai_move,1,2),string.sub(ai_move,3,4)}
+                RPD.glog("%s %s", ai_cells[1], ai_cells[2])
+                ai_cells = {cellFromChessCell(ai_cells[1]), cellFromChessCell(ai_cells[2])}
+                RPD.glog("%s %s", ai_cells[1], ai_cells[2])
+
+                mob = RPD.Actor:findChar(ai_cells[1])
+                mob:setPos(ai_cells[2])
+                mob:moveSprite(ai_cells[1], ai_cells[2])
+            else
+                RPD.glog('illegal move')
+            end
+            move_str = ''
+        end
 
         return false
-    end
+        end
 })
