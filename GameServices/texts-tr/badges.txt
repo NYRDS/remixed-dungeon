@@ -4,7 +4,7 @@ Lağımdaki tehlike artık sonra erdi.
 2. Tengu kesildi
 Aldatıcı ruh artık kimseye işkence uygulayamayacak.
 
-3. DM-300 kesildi
+DM-300 Devre dışı bırakıldı
 Amacını kaybetmiş bir makinenin fişi çekildi.
 
 4. Kral kesildi
@@ -30,3 +30,4 @@ Cesaret, Nezaket ve biraz da altın, hatta acımasız bir Sırtlanadam maceranı
 
 11. Cerrahi maske elde edildi.
 Maske takmak diğerlerini düşündüğünüz anlamına gelir.
+
