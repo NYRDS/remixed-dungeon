@@ -2891,4 +2891,6 @@ remix.30.1\n
   <string name="SpiderQueen_DieInfo">Örümcek Kraliçe öldürüldü! Şimdi 5. seviyeye geri dönmeli ve Derinlere yolculuğuma devam etmeliyim.</string>
   <string name="WndModSelect_ReallyDelete">Gerçekten silecek misin?</string>
   <string name="WndModSelect_AreYouSure">Mod siliniyor: %s, emin misin?</string>
+  <string name="Challenges_Names_8">Kasaba yok</string>
+  <string name="Challenges_Descriptions_8">Yolculuğunuz karanlık ve tehlikeli şehir kanalizasyonlarında başlayacak ve yüzeye giden tek yol kapalı olacak. Daha da kötüsü, sadece zindanda bulduğunuz ekipmanları kullanabileceksiniz. Sınırlı kaynaklar ve ekipmanla, hayatta kalmanız becerilerinize ve stratejinize bağlı olacaktır.</string>
 </resources>
