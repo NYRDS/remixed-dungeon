@@ -208,6 +208,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     private int lvl = Scrambler.scramble(1);
     private int magicLvl = Scrambler.scramble(1);
+    private float lightness = 0.5f;
 
     public Char() {
     }
@@ -1237,6 +1238,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         assert (sprite.getParent() != null);
 
+        sprite.lightness(lightness);
+
         return sprite;
     }
 
@@ -1985,5 +1988,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void resume() {
+    }
+
+    public void lightness(float value) {
+        lightness = value;
     }
 }

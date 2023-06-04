@@ -72,6 +72,27 @@ local function cellFromChess(x,y)
     return level:cell(x+x0, y+y0-1)
 end
 
+local function movePiece(from, to)
+    local mob = RPD.Actor:findChar(from)
+    local target = RPD.Actor:findChar(to)
+
+    if not mob then
+        error("mob not found on from cell "..tostring(from))
+    end
+
+    if not target then
+        mob:setPos(to)
+        mob:moveSprite(from, to)
+        return
+    end
+
+    if target then
+        target:die(mob)
+        mob:setPos(to)
+        mob:moveSprite(from, to)
+    end
+end
+
 local move_str = ''
 local move_cells = {}
 
@@ -98,11 +119,13 @@ return actor.init({
                             mob:setPos(cell)
                             RPD.setAi(mob,"PASSIVE")
                             level:spawnMob(mob)
+
                             if piece == piece:upper() then
-                                mob:getSprite():hardlight(1.2,1.2,1.2)
+                                mob:lightness(0.6)
                             else
-                                mob:getSprite():hardlight(0.8,0.8,0.8)
+                                mob:lightness(0.4)
                             end
+
                             pieces[chessCell] = mob
                         end
                     end
@@ -132,19 +155,23 @@ return actor.init({
 
         if not chessCell then return false end
 
+
+        RPD.glog("move: %s", move_str)
+
         if string.len(move_str) == 0 then
             move_cells[1] = cell
             move_str = chessCell
         else
             move_str = move_str..chessCell
             move_cells[2] = cell
-            local mob = RPD.Actor:findChar(move_cells[1])
+
             RPD.glog(move_str)
             local moveResult = sunfish.move(chess, move_str)
+
             if moveResult then
                 chess = moveResult
-                mob:setPos(move_cells[2])
-                mob:moveSprite(move_cells[1], move_cells[2])
+
+                movePiece(move_cells[1], move_cells[2])
 
                 chess, ai_move, score = sunfish.ai_move(chess)
                 RPD.glog("%s %d", ai_move, score)
@@ -154,9 +181,7 @@ return actor.init({
                 ai_cells = {cellFromChessCell(ai_cells[1]), cellFromChessCell(ai_cells[2])}
                 RPD.glog("%s %s", ai_cells[1], ai_cells[2])
 
-                mob = RPD.Actor:findChar(ai_cells[1])
-                mob:setPos(ai_cells[2])
-                mob:moveSprite(ai_cells[1], ai_cells[2])
+                movePiece(ai_cells[1], ai_cells[2])
             else
                 RPD.glog('illegal move')
             end

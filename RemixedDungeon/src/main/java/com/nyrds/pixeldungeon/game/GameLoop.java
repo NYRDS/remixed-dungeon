@@ -198,10 +198,10 @@ public class GameLoop {
 
                 if (!Game.softPaused && loadingOrSaving.get() == 0) {
                     try {
-                            if (requestedReset) {
-                                requestedReset = false;
-                                switchScene(sceneClass.newInstance());
-                                return;
+                        if (requestedReset) {
+                            requestedReset = false;
+                            switchScene(sceneClass.newInstance());
+                            return;
                         }
 
                         while (!motionEvents.isEmpty()) {
@@ -219,18 +219,18 @@ public class GameLoop {
                     }
                 }
             }
+        }
 
-            NoosaScript.get().resetCamera();
-            Gl.clear();
+        if (framesSinceInit > 2 && !Game.softPaused && loadingOrSaving.get() == 0) {
+            stepExecutor.execute(this::step);
+        }
 
-            synchronized (stepLock) {
-                if (scene != null) {
-                    scene.draw();
-                }
-            }
+        NoosaScript.get().resetCamera();
+        Gl.clear();
 
-            if (framesSinceInit > 2 && !Game.softPaused && loadingOrSaving.get() == 0) {
-                stepExecutor.execute(this::step);
+        synchronized (stepLock) {
+            if (scene != null) {
+                scene.draw();
             }
         }
     }

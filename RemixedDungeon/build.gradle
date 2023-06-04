@@ -66,14 +66,12 @@ android {
         sourceCompatibility "10"
         targetCompatibility "10"
     }
-
     packagingOptions {
-        exclude "META-INF/MANIFEST.MF"
+        resources {
+            excludes += ['META-INF/MANIFEST.MF']
+        }
     }
 
-    lintOptions {
-        abortOnError false
-    }
 
     flavorDimensions "platform","market"
 
@@ -116,6 +114,10 @@ android {
     }
     androidResources {
         noCompress 'mp3', 'ogg'
+    }
+    namespace 'com.nyrds.pixeldungeon.ml'
+    lint {
+        abortOnError false
     }
 
 }
