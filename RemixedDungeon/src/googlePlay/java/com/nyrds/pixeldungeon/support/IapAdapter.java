@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.support;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.android.billingclient.api.AcknowledgePurchaseParams;
@@ -13,7 +14,9 @@ import com.android.billingclient.api.ConsumeResponseListener;
 import com.android.billingclient.api.Purchase;
 import com.android.billingclient.api.PurchaseHistoryRecord;
 import com.android.billingclient.api.PurchaseHistoryResponseListener;
+import com.android.billingclient.api.PurchasesResponseListener;
 import com.android.billingclient.api.PurchasesUpdatedListener;
+import com.android.billingclient.api.QueryPurchasesParams;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
 import com.nyrds.market.GoogleIapCheck;
@@ -134,10 +137,21 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
 
     public void queryPurchases() {
         Runnable queryToExecute = () -> {
-            Purchase.PurchasesResult result = mBillingClient.queryPurchases(BillingClient.SkuType.INAPP);
-            onPurchasesUpdated(result.getBillingResult(), result.getPurchasesList());
+            //Purchase.PurchasesResult result = mBillingClient.queryPurchases(BillingClient.SkuType.INAPP);
+            //onPurchasesUpdated(result.getBillingResult(), result.getPurchasesList());
 
-            //mBillingClient.queryPurchaseHistoryAsync(BillingClient.SkuType.INAPP, GoogleIap.this);
+            mBillingClient.queryPurchasesAsync(
+                    QueryPurchasesParams.newBuilder()
+                            .setProductType(BillingClient.ProductType.INAPP)
+                            .build(),
+                    new PurchasesResponseListener() {
+                        public void onQueryPurchasesResponse(@NonNull BillingResult billingResult, List purchases) {
+                            onPurchasesUpdated(billingResult, purchases);
+                        }
+                    }
+            );
+
+            mBillingClient.queryPurchaseHistoryAsync(BillingClient.SkuType.INAPP, this);
         };
 
         executeServiceRequest(queryToExecute);

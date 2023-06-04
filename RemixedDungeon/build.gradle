@@ -156,13 +156,13 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
     compileOnly 'org.projectlombok:lombok:1.18.22'
 
-    googlePlayImplementation 'com.google.android.gms:play-services-base:18.1.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.4.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-base:18.2.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.5.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:23.1.0"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:21.3.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:22.1.0'
 
 
-    googlePlayImplementation 'com.android.billingclient:billing:4.1.0'
+    googlePlayImplementation 'com.android.billingclient:billing:6.0.0'
 
     googlePlayImplementation platform('com.google.firebase:firebase-bom:30.3.0')
 
