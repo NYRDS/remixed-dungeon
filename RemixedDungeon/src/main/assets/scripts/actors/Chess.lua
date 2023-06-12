@@ -12,28 +12,27 @@ local sunfish = require "scripts.stuff.chess.sunfish"
 local x0 = 4
 local y0 = 4
 
-local x_letters = {'a','b','c','d','e','f','g','h'}
-
 local pieces = {}
+local rawPieces = {}
 
 pieces_set = {
-    ['r']='Eye',
-    ['R']='Eye',
-    ['n']='Succubus',
-    ['N']='Succubus',
-    ['b']='Shaman',
-    ['B']='Shaman',
-    ['Q']='Warlock',
-    ['q']='Warlock',
-    ['K']='King',
-    ['k']='King',
-    ['p']='Rat',
-    ['P']='Rat'
+    ['r'] = 'Eye',
+    ['R'] = 'Eye',
+    ['n'] = 'Succubus',
+    ['N'] = 'Succubus',
+    ['b'] = 'Shaman',
+    ['B'] = 'Shaman',
+    ['Q'] = 'Warlock',
+    ['q'] = 'Warlock',
+    ['K'] = 'King',
+    ['k'] = 'King',
+    ['p'] = 'Rat',
+    ['P'] = 'Rat'
 }
 
 chess = nil
 
-local x_letters = {'a','b','c','d','e','f','g','h'}
+local x_letters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' }
 
 local function chessCellFromCell(cell)
     local level = RPD.Dungeon.level
@@ -42,7 +41,7 @@ local function chessCellFromCell(cell)
     y = level:cellY(cell) - y0
 
     if x >= 0 and x < 8 and y >= 0 and y < 8 then
-        local chessCell = x_letters[x+1]..tostring(8 - y)
+        local chessCell = x_letters[x + 1] .. tostring(8 - y)
         --RPD.glog("inside of board %d -> %s", cell, chessCell)
         return chessCell
     end
@@ -55,21 +54,25 @@ local function cellFromChessCell(chessCell)
 
     local x = nil
     for i, letter in ipairs(x_letters) do
-        if letter == chessCell:sub(1,1) then
+        if letter == chessCell:sub(1, 1) then
             x = i - 1
             break
         end
     end
-    if not x then return nil end -- invalid chess cell
-    local y = 8 - tonumber(chessCell:sub(2,2))
-    if y < 0 or y > 7 then return nil end -- invalid chess cell
+    if not x then
+        return nil
+    end -- invalid chess cell
+    local y = 8 - tonumber(chessCell:sub(2, 2))
+    if y < 0 or y > 7 then
+        return nil
+    end -- invalid chess cell
 
     return level:cell(x + x0, y + y0)
 end
 
-local function cellFromChess(x,y)
+local function cellFromChess(x, y)
     local level = RPD.Dungeon.level
-    return level:cell(x+x0, y+y0-1)
+    return level:cell(x + x0, y + y0 - 1)
 end
 
 local function movePiece(from, to)
@@ -77,7 +80,7 @@ local function movePiece(from, to)
     local target = RPD.Actor:findChar(to)
 
     if not mob then
-        error("mob not found on from cell "..tostring(from))
+        error("mob not found on from cell " .. tostring(from))
     end
 
     if not target then
@@ -95,29 +98,118 @@ end
 
 local move_str = ''
 local move_cells = {}
+local chess_cells = {}
+
+local function fillPiecesFromBoard()
+    local boardData = util.split(chess.board, "\n")
+    for i, v in ipairs(boardData) do
+        if i >= 3 and i <= 10 then
+            local y = i - 2
+
+            local cell = cellFromChess(0, y)
+
+            for ii = 1, 8 do
+                local chessCell = chessCellFromCell(cell)
+                local piece = string.sub(v, ii + 1, ii + 1)
+
+                if pieces_set[piece] then
+                    rawPieces[chessCell] = piece
+                end
+                cell = cell + 1
+            end
+        end
+    end
+end
+
+
+local castleMovesList = { 'e1g1', 'e1c1', 'e8g8', 'e8c8' }
+local rookMoves = { ['e1g1'] = 'h1f1' , ['e1c1'] = 'a1d1',
+                    ['e8g8'] = 'h8f8' , ['e8c8'] = 'a8d8' }
+
+local enPassantMovesList = { 'a4b3', 'b4a3', 'b4c3', 'c4b3', 'c4d3', 'd4c3', 'd4e3', 'e4d3', 'e4f3', 'f4e3', 'f4g3', 'g4f3', 'g4h3', 'h4g3',
+                             'a5b6', 'b5a6', 'b5c6', 'c5b6', 'c5d6', 'd5c6', 'd5e6', 'e5d6', 'e5f6', 'f5e6', 'f5g6', 'g5f6', 'g5h6', 'h5g6' }
+local pawnVictim = { ['a4b3'] = 'b4', ['b4a3'] = 'a4', ['b4c3'] = 'c4', ['c4b3'] = 'b4', ['c4d3'] = 'd4', ['d4c3'] = 'c4', ['d4e3'] = 'e4', ['e4d3'] = 'd4', ['e4f3'] = 'f4', ['f4e3'] = 'e4', ['f4g3'] = 'g4', ['g4f3'] = 'f4', ['g4h3'] = 'h4', ['h4g3'] = 'g4',
+                     ['a5b6'] = 'b5', ['b5a6'] = 'a5', ['b5c6'] = 'c5', ['c5b6'] = 'b5', ['c5d6'] = 'd5', ['d5c6'] = 'c5', ['d5e6'] = 'e5', ['e5d6'] = 'd5', ['e5f6'] = 'f5', ['f5e6'] = 'e5', ['f5g6'] = 'g5', ['g5f6'] = 'f5', ['g5h6'] = 'h5', ['h5g6'] = 'g5' }
+
+local castleMoves = {}
+local enPassantMoves = {}
+
+for _, v in ipairs(castleMovesList) do
+    castleMoves[v] = true
+end
+
+for _, v in ipairs(enPassantMovesList) do
+    enPassantMoves[v] = true
+end
+
+
+local function animateMove(move_str, move_cells, chess_cells)
+    movePiece(move_cells[1], move_cells[2])
+    fillPiecesFromBoard()
+--[[
+    for k, v in pairs(rawPieces) do
+        if v == 'K' then
+            RPD.glog("%s -> %s", k, v)
+        end
+    end
+]]
+    if castleMoves[move_str] then
+        --RPD.glog("check for castle: %s %s", move_str, chess_cells[2])
+        --RPD.glog("check for castle: %s %s", rawPieces[chess_cells[1]], rawPieces[chess_cells[2]])
+        if rawPieces[chess_cells[2]] == 'K' or rawPieces[chess_cells[2]] == 'k' then
+            local rookMove = rookMoves[move_str]
+            local cells = { cellFromChessCell(string.sub(rookMove, 1, 2)),
+                            cellFromChessCell(string.sub(rookMove, 3, 4)) }
+            movePiece(cells[1], cells[2])
+        end
+    end
+
+    if enPassantMoves[move_str] then
+        RPD.glog("check en passant: %s %s", move_str, chess_cells[2])
+        local pawnCell = pawnVictim[move_str]
+        if rawPieces[pawnCell] == 'P' or rawPieces[pawnCell] == 'p' then
+            local cell = cellFromChessCell(pawnCell)
+            local mob = RPD.Actor:findChar(cell)
+            if mob then
+                mob:die()
+            end
+        end
+    end
+end
 
 return actor.init({
     act = function()
+        return true
+    end,
+
+    actionTime = function()
+        return 1
+    end,
+
+    activate = function()
+        chess = sunfish.new()
+        pieces = {}
         local level = RPD.Dungeon.level
 
-        local boardData = util.split(chess.board,"\n")
-        for i,v in ipairs(boardData) do
+        local boardData = util.split(chess.board, "\n")
+        for i, v in ipairs(boardData) do
+            print(v)
             if i >= 3 and i <= 10 then
                 local y = i - 2
 
-                local cell = cellFromChess(0,y)
+                local cell = cellFromChess(0, y)
 
                 for ii = 1, 8 do
                     local chessCell = chessCellFromCell(cell)
 
-                    local piece = string.sub(v,ii+1,ii+1)
+                    local piece = string.sub(v, ii + 1, ii + 1)
 
                     if pieces_set[piece] then
                         if not pieces[chessCell] or pieces[chessCell]:getEntityKind() ~= pieces_set[piece] then
                             local mob = RPD.MobFactory:mobByName(pieces_set[piece])
 
                             mob:setPos(cell)
-                            RPD.setAi(mob,"PASSIVE")
+                            RPD.setAi(mob, "PASSIVE")
                             level:spawnMob(mob)
 
                             if piece == piece:upper() then
@@ -139,49 +231,62 @@ return actor.init({
             end
 
         end
-        return true
-    end,
-    actionTime = function()
-        return 1
-    end,
-    activate = function()
-        chess = sunfish.new()
-        pieces = {}
+
     end,
 
     cellClicked = function(cell)
 
+        if animationInProgress then
+            return false
+        end
+
         chessCell = chessCellFromCell(cell)
 
-        if not chessCell then return false end
+        if not chessCell then
+            return false
+        end
 
-
-        RPD.glog("move: %s", move_str)
+        --RPD.glog("move: %s", move_str)
 
         if string.len(move_str) == 0 then
             move_cells[1] = cell
+            chess_cells[1] = chessCell
             move_str = chessCell
         else
-            move_str = move_str..chessCell
+            move_str = move_str .. chessCell
             move_cells[2] = cell
+            chess_cells[2] = chessCell
 
-            RPD.glog(move_str)
             local moveResult = sunfish.move(chess, move_str)
 
             if moveResult then
-                chess = moveResult
+                chess = moveResult:rotate()
+                --RPD.glog("Position score: %s", chess.score)
 
-                movePiece(move_cells[1], move_cells[2])
+--[[
+                if chess.score >= 30000 then
+                    RPD.glog("You Win!")
+                    return false
+                end
+]]
+                animateMove(move_str, move_cells, chess_cells)
 
-                chess, ai_move, score = sunfish.ai_move(chess)
-                RPD.glog("%s %d", ai_move, score)
+                moveResult:rotate()
+                chess, ai_move, score = sunfish.ai_move(chess:rotate())
+                --RPD.glog("%s %d", ai_move, score)
 
-                local ai_cells = {string.sub(ai_move,1,2),string.sub(ai_move,3,4)}
-                RPD.glog("%s %s", ai_cells[1], ai_cells[2])
-                ai_cells = {cellFromChessCell(ai_cells[1]), cellFromChessCell(ai_cells[2])}
-                RPD.glog("%s %s", ai_cells[1], ai_cells[2])
+                local chess_cells = { string.sub(ai_move, 1, 2), string.sub(ai_move, 3, 4) }
 
-                movePiece(ai_cells[1], ai_cells[2])
+                ai_cells = { cellFromChessCell(chess_cells[1]), cellFromChessCell(chess_cells[2]) }
+
+                animateMove(ai_move, ai_cells, chess_cells)
+                --RPD.glog("Position score: %s", chess.score)
+--[[
+                if score <= 30000 then
+                    RPD.glog("You Lose!")
+                    return false
+                end
+]]
             else
                 RPD.glog('illegal move')
             end
@@ -189,5 +294,5 @@ return actor.init({
         end
 
         return false
-        end
+    end
 })
