@@ -1934,6 +1934,15 @@ public abstract class Level implements Bundlable {
 		clearAreaFrom(blobClass, cellX(cell), cellY(cell), xs, ys);
 	}
 
+	@LuaInterface
+	public void clearFrom(Class<? extends Blob> blobClass) {
+		Blob blob = blobs.get(blobClass);
+		if (blob == null) {
+			return;
+		}
+		blob.clearAllBlob();
+	}
+
 	public void clearAreaFrom(Class<? extends Blob> blobClass, int x, int y, int xs, int ys) {
 		Blob blob = blobs.get(blobClass);
 		if (blob == null) {

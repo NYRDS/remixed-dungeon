@@ -7,7 +7,7 @@ local TABLE_SIZE = 1e6
 
 -- This constant controls how much time we spend on looking for optimal moves.
 --local NODES_SEARCHED = 1e4
-local NODES_SEARCHED = 1e2
+local NODES_SEARCHED = 10
 
 -- Mate value must be greater than 8*queen + 2*(rook+knight+bishop)
 -- King value is set to twice this value such that if the opponent is
@@ -674,6 +674,10 @@ function sunfish.ai_move(game)
     game = game:move(move)
 
     return game, render(119 - move[1]) .. render(119 - move[2]), score
+end
+
+function sunfish.move_2_cell(cell)
+    return render(cell)
 end
 
 return sunfish

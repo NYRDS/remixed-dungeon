@@ -177,6 +177,15 @@ local function animateMove(move_str, move_cells, chess_cells)
     end
 end
 
+local function highlightCells(cells)
+    RPD.Dungeon.level:clearFrom(RPD.Blobs.Foliage)
+    for k,cell in pairs(cells) do
+        local pos = cellFromChessCell(cell)
+        RPD.placeBlob(RPD.Blobs.Foliage, pos, 1)
+    end
+end
+
+
 return actor.init({
     act = function()
         return true
@@ -252,6 +261,17 @@ return actor.init({
             move_cells[1] = cell
             chess_cells[1] = chessCell
             move_str = chessCell
+
+            local moveCandidates = chess:genMoves()
+            local hCells = {}
+            for i, candidate in ipairs(moveCandidates) do
+                if sunfish.move_2_cell(candidate[1]) == chessCell then
+                    table.insert(hCells, sunfish.move_2_cell(candidate[2]))
+                end
+            end
+
+            highlightCells(hCells)
+
         else
             move_str = move_str .. chessCell
             move_cells[2] = cell

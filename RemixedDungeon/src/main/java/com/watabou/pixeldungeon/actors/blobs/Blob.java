@@ -29,6 +29,9 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 import lombok.SneakyThrows;
 
 public class Blob extends Actor implements NamedEntityKind {
@@ -179,6 +182,13 @@ public class Blob extends Actor implements NamedEntityKind {
 	public void clearBlob(int cell) {
 		setVolume(getVolume() - cur[cell]);
 		cur[cell] = 0;
+	}
+
+
+	public void clearAllBlob() {
+		setVolume(0);
+		//set all elements of cur to 0
+		Arrays.fill(cur, 0);
 	}
 
 	public String tileDesc() {
