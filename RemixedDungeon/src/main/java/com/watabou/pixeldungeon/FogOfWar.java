@@ -41,7 +41,7 @@ public class FogOfWar extends Image {
     private static final int MAPPED		= 0xCC442211;
     private static final int INVISIBLE	= 0xFF000000;
 
-    private int[] pixels;
+    private final int[] pixels;
 
     private final int pWidth;
     private final int pHeight;

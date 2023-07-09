@@ -177,11 +177,14 @@ local function animateMove(move_str, move_cells, chess_cells)
     end
 end
 
+local highlights = {}
+
 local function highlightCells(cells)
+    RPD.Sfx.HighlightCell:removeAll()
     RPD.Dungeon.level:clearFrom(RPD.Blobs.Foliage)
     for k,cell in pairs(cells) do
         local pos = cellFromChessCell(cell)
-        RPD.placeBlob(RPD.Blobs.Foliage, pos, 1)
+        RPD.Sfx.HighlightCell:add(pos)
     end
 end
 
