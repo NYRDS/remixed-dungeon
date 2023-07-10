@@ -54,9 +54,9 @@ public class HighlightCell extends Image {
 	
 	@Override
 	public void update() {
-		t += GameLoop.elapsed * 2;
-		float a = (float) (Math.sin( t ) * 0.4f + 0.3f);
-		alpha( a );
+		t += GameLoop.elapsed * 4;
+		float a = (float) (Math.sin( t ) * 0.2f + 0.6f);
+		alpha( 0.4f );
 		setScale( DungeonTilemap.SIZE * a );
 	}
 }

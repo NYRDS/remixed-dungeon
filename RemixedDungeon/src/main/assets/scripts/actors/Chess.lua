@@ -181,7 +181,7 @@ local highlights = {}
 
 local function highlightCells(cells)
     RPD.Sfx.HighlightCell:removeAll()
-    RPD.Dungeon.level:clearFrom(RPD.Blobs.Foliage)
+
     for k,cell in pairs(cells) do
         local pos = cellFromChessCell(cell)
         RPD.Sfx.HighlightCell:add(pos)
@@ -260,6 +260,8 @@ return actor.init({
 
         --RPD.glog("move: %s", move_str)
 
+        RPD.Sfx.HighlightCell:removeAll()
+
         if string.len(move_str) == 0 then
             move_cells[1] = cell
             chess_cells[1] = chessCell
@@ -292,6 +294,7 @@ return actor.init({
                     return false
                 end
 ]]
+                RPD.Sfx.HighlightCell:removeAll()
                 animateMove(move_str, move_cells, chess_cells)
 
                 moveResult:rotate()
