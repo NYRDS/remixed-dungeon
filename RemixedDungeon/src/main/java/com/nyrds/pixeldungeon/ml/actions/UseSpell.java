@@ -16,8 +16,8 @@ public class UseSpell extends CharAction{
     public boolean act(Char hero) {
         spell.cast(hero);
 
-        if(hero.curAction == this) {
-            hero.curAction = null;
+        if(hero.getCurAction() == this) {
+            hero.setCurAction(null);
         }
 
         if(GameScene.defaultCellSelector() && !hero.getSprite().doingSomething()) {

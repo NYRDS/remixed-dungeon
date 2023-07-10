@@ -70,7 +70,6 @@ import com.watabou.pixeldungeon.effects.BannerSprites;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.EmoIcon;
 import com.watabou.pixeldungeon.effects.Flare;
-import com.watabou.pixeldungeon.effects.FloatingText;
 import com.watabou.pixeldungeon.effects.Ripple;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.effects.SystemFloatingText;
@@ -952,9 +951,9 @@ public class GameScene extends PixelScene {
 
         if(hero.valid()) {
             hero.next();
-            if (hero.curAction != null || hero.restoreHealth) {
+            if (hero.getCurAction() != null || hero.restoreHealth) {
 
-                hero.curAction = null;
+                hero.setCurAction(null);
                 hero.restoreHealth = false;
                 return true;
             } else {

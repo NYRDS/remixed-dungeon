@@ -398,6 +398,19 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	}
 
 	@LuaInterface
+	public static boolean motionInProgress() {
+		for(Actor ch : all) {
+			if (ch instanceof Char){
+				if (((Char) ch).getSprite().doingSomething()) {
+					return true;
+				}
+			}
+		}
+		GLog.debug("no motion in progress");
+		return false;
+	}
+
+	@LuaInterface
 	public static Char getRandomChar() {
 		var ret = Random.element(chars.values());
 		GLog.debug("selected %s at %d", ret.getEntityKind(),ret.getPos());

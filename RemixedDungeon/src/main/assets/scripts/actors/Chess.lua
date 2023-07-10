@@ -75,7 +75,14 @@ local function cellFromChess(x, y)
     return level:cell(x + x0, y + y0 - 1)
 end
 
+local scheduledMoves = {}
+
 local function movePiece(from, to)
+    if RPD.Actor:motionInProgress() then
+        table.insert(scheduledMoves, {from, to})
+        return
+    end
+
     local mob = RPD.Actor:findChar(from)
     local target = RPD.Actor:findChar(to)
 
@@ -177,7 +184,6 @@ local function animateMove(move_str, move_cells, chess_cells)
     end
 end
 
-local highlights = {}
 
 local function highlightCells(cells)
     RPD.Sfx.HighlightCell:removeAll()
@@ -188,9 +194,21 @@ local function highlightCells(cells)
     end
 end
 
+local moveDelay = 5
 
 return actor.init({
     act = function()
+        if #scheduledMoves > 0 and not RPD.Actor:motionInProgress() then
+            if moveDelay > 0 then
+                moveDelay = moveDelay - 1
+            else
+                moveDelay = 5
+
+                local move = scheduledMoves[1]
+                movePiece(move[1], move[2])
+                table.remove(scheduledMoves,1)
+            end
+        end
         return true
     end,
 
@@ -248,9 +266,9 @@ return actor.init({
 
     cellClicked = function(cell)
 
-        if animationInProgress then
-            return false
-        end
+        --make hero very busy
+        RPD.Dungeon.hero.paralysed = true
+        RPD.Dungeon.hero:next()
 
         chessCell = chessCellFromCell(cell)
 
@@ -286,7 +304,7 @@ return actor.init({
 
             if moveResult then
                 chess = moveResult:rotate()
-                --RPD.glog("Position score: %s", chess.score)
+                RPD.glog("your move Position score: %s", chess.score)
 
 --[[
                 if chess.score >= 30000 then
@@ -306,7 +324,7 @@ return actor.init({
                 ai_cells = { cellFromChessCell(chess_cells[1]), cellFromChessCell(chess_cells[2]) }
 
                 animateMove(ai_move, ai_cells, chess_cells)
-                --RPD.glog("Position score: %s", chess.score)
+                RPD.glog("ai move Position score: %s", chess.score)
 --[[
                 if score <= 30000 then
                     RPD.glog("You Lose!")
@@ -319,6 +337,6 @@ return actor.init({
             move_str = ''
         end
 
-        return false
+        return true
     end
 })

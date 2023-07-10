@@ -204,7 +204,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     private Map<String, Number> spellsUsage = new HashMap<>();
 
-    public CharAction curAction = null;
+    private CharAction curAction = null;
 
     private int lvl = Scrambler.scramble(1);
     private int magicLvl = Scrambler.scramble(1);
@@ -528,7 +528,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
             if (getHeroClass() == HeroClass.ROGUE) {
 
-                if (curAction != null && getSubClass() == HeroSubClass.FREERUNNER && !isStarving()) {
+                if (getCurAction() != null && getSubClass() == HeroSubClass.FREERUNNER && !isStarving()) {
                     evasion *= 2;
                 }
 
@@ -838,8 +838,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         QuickSlot.refresh(this);
 
-        if (curAction != null) {
-            GLog.debug("%s", curAction.toString());
+        if (getCurAction() != null) {
+            GLog.debug("%s", getCurAction().toString());
         }
     }
 
@@ -922,15 +922,15 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void nextAction(CharAction action) {
-        curAction = action;
+        setCurAction(action);
 
-        if (curAction instanceof Move) {
+        if (getCurAction() instanceof Move) {
             lastAction = null;
         }
         next();
 
-        GLog.debug("action: %s", curAction.toString());
-        getControlTarget().curAction = curAction;
+        GLog.debug("action: %s", getCurAction().toString());
+        getControlTarget().setCurAction(getCurAction());
     }
 
     public boolean add(Buff buff) {
@@ -1070,7 +1070,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             }
         }
 
-        curAction = null;
+        setCurAction(null);
 
         Invisibility.dispel(this);
 
@@ -1992,5 +1992,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public void lightness(float value) {
         lightness = value;
+    }
+
+    public CharAction getCurAction() {
+        return curAction;
+    }
+
+    public void setCurAction(CharAction curAction) {
+        this.curAction = curAction;
     }
 }

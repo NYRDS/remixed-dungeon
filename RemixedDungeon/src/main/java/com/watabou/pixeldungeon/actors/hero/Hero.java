@@ -77,7 +77,6 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
-import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -320,16 +319,16 @@ public class Hero extends Char {
         Dungeon.observe();
 
         if (paralysed) {
-            curAction = null;
+            setCurAction(null);
             spendAndNext(TICK);
             return false;
         }
 
         if (controlTargetId != getId()) {
-            curAction = null;
+            setCurAction(null);
         }
 
-        if (curAction == null) {
+        if (getCurAction() == null) {
             if (restoreHealth) {
                 if (isStarving() || hp() >= ht() || level().isSafe()) {
                     restoreHealth = false;
@@ -341,7 +340,7 @@ public class Hero extends Char {
             }
 
             if (Dungeon.realtime() ||
-                    (controlTargetId != getId() && getControlTarget().curAction != null)) {
+                    (controlTargetId != getId() && getControlTarget().getCurAction() != null)) {
                 if (!ready) {
                     readyAndIdle();
                 }
@@ -360,9 +359,9 @@ public class Hero extends Char {
             busy();
         }
 
-        GLog.debug("action: %s", curAction);
+        GLog.debug("action: %s", getCurAction());
 
-        return curAction.act(this);
+        return getCurAction().act(this);
     }
 
     @Override
@@ -372,7 +371,7 @@ public class Hero extends Char {
     }
 
     public void readyAndIdle() {
-        curAction = null;
+        setCurAction(null);
         ready = true;
 
         GameScene.ready();
@@ -381,18 +380,18 @@ public class Hero extends Char {
 
     @Override
     public void interrupt() {
-        if (curAction != null && curAction.dst != getPos()) {
-            lastAction = curAction;
+        if (getCurAction() != null && getCurAction().dst != getPos()) {
+            lastAction = getCurAction();
         }
 
-        curAction = null;
+        setCurAction(null);
     }
 
     public void resume() {
-        curAction = lastAction;
+        setCurAction(lastAction);
         lastAction = null;
 
-        getControlTarget().curAction = curAction;
+        getControlTarget().setCurAction(getCurAction());
         getControlTarget().act();
     }
 
@@ -771,7 +770,7 @@ public class Hero extends Char {
     }
 
     public void clearActions() {
-        curAction = null;
+        setCurAction(null);
         lastAction = null;
     }
 
@@ -868,7 +867,7 @@ public class Hero extends Char {
                 if (Dungeon.isCellVisible(p)) {
 
                     if (intentional) {
-                        getSprite().getParent().sendToBack(new CheckedCell(p));
+                        GameScene.addToMobLayer(new CheckedCell(p));
                     }
 
                     if (intentional || Random.Float() < searchLevel) {
@@ -997,12 +996,14 @@ public class Hero extends Char {
 
     @Override
     public void setControlTarget(Char controlTarget) {
-        if (getControlTarget() instanceof Mob) {
-            Mob controlledMob = (Mob) getControlTarget();
-            controlledMob.releasePet();
-            controlledMob.setState(MobAi.getStateByClass(Sleeping.class));
+        if (getControlTarget().valid()){
+            if (getControlTarget() instanceof Mob) {
+                Mob controlledMob = (Mob) getControlTarget();
+                controlledMob.releasePet();
+                controlledMob.setState(MobAi.getStateByClass(Sleeping.class));
+            }
+            Camera.main.focusOn(controlTarget.getSprite());
         }
-        Camera.main.focusOn(controlTarget.getSprite());
         this.controlTargetId = controlTarget.getId();
 
     }

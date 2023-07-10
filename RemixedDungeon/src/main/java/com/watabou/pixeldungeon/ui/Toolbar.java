@@ -67,18 +67,6 @@ public class Toolbar extends Component {
         btnWait = new Tool(7, Chrome.Type.ACTION_BUTTON) {
             @Override
             protected void onClick() {
-                if(Util.isDebug()) {
-                    if (Dungeon.isometricModeAllowed) {
-                        Dungeon.setIsometricMode(!Dungeon.isIsometricMode());
-                    } else {
-                        Dungeon.setIsometricMode(false);
-                    }
-
-                    Preferences.INSTANCE.put(Preferences.KEY_USE_ISOMETRIC_TILES, Dungeon.isIsometricMode());
-
-                    GameLoop.pushUiTask(GameLoop::resetScene);
-                }
-
                 if (hero.isReady()) {
                     hero.rest(false);
                 }
