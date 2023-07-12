@@ -57,7 +57,9 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 import lombok.val;
 
@@ -101,6 +103,8 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     protected Animation operate;
     protected Animation zap;
     protected Animation die;
+
+    protected Map<String,Animation> extras = new HashMap<>();
 
     private Callback animCallback;
 
@@ -183,6 +187,12 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     public void showStatus(int color, String text, Object... args) {
         showStatus(color, Utils.format(text, args));
+    }
+
+    public void playExtra(String key) {
+        if (extras.containsKey(key)) {
+            play(extras.get(key));
+        }
     }
 
     public void idle() {
@@ -451,7 +461,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public boolean doingSomething() {
-        return (curAnim != null && curAnim != idle && curAnim != run && curAnim != die) || isMoving;
+        return (curAnim == attack || curAnim == operate || curAnim == zap) || isMoving;
     }
 
     @Override

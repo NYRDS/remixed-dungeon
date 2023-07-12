@@ -15,9 +15,12 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+
+import lombok.val;
 
 public class MobSpriteDef extends MobSprite {
 
@@ -131,6 +134,20 @@ public class MobSpriteDef extends MobSprite {
 
 			if(json.has(DEATH_EFFECT)) {
 				deathEffect = json.getString(DEATH_EFFECT);
+			}
+
+			extras.put("std_idle", idle.clone());
+			extras.put("std_run", run.clone());
+			extras.put("std_attack", attack.clone());
+			extras.put("std_die", die.clone());
+			extras.put("std_zap", zap.clone());
+
+			if(json.has("extras")) {
+				val extrasJson = json.getJSONObject("extras");
+				for (Iterator<String> it = extrasJson.keys(); it.hasNext(); ) {
+					String key = it.next();
+					extras.put(key, readAnimation(extrasJson, key, film));
+				}
 			}
 
 			loadAdditionalData(json,film, kind);
