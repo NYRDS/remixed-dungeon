@@ -30,7 +30,6 @@ local initial = '         \n' .. --   0 -  9
         '         \n' .. -- 100 -109
         '          '     -- 110 -119
 
-local __1 = 1 -- 1-index correction
 -------------------------------------------------------------------------------
 -- Move and evaluation tables
 -------------------------------------------------------------------------------
@@ -190,22 +189,22 @@ function Position:genMoves()
     -- For each of our pieces, iterate through each possible 'ray' of moves,
     -- as defined in the 'directions' map. The rays are broken e.g. by
     -- captures or immediately in case of pieces such as knights.
-    for i = 1 - __1, #self.board - __1 do
-        local p = self.board:sub(i + __1, i + __1)
+    for i = 0, #self.board - 1 do
+        local p = self.board:sub(i + 1, i + 1)
         if isupper(p) and directions[p] then
             for _, d in ipairs(directions[p]) do
                 local limit = (i + d) + (10000) * d -- fake limit
                 for j = i + d, limit, d do
-                    local q = self.board:sub(j + __1, j + __1)
+                    local q = self.board:sub(j + 1, j + 1)
                     -- Stay inside the board
-                    if isspace(self.board:sub(j + __1, j + __1)) then
+                    if isspace(self.board:sub(j + 1, j + 1)) then
                         break ;
                     end
                     -- Castling
-                    if i == A1 and q == 'K' and self.wc[0 + __1] then
+                    if i == A1 and q == 'K' and self.wc[0 + 1] then
                         table.insert(moves, { j, j - 2 })
                     end
-                    if i == H1 and q == 'K' and self.wc[1 + __1] then
+                    if i == H1 and q == 'K' and self.wc[1 + 1] then
                         table.insert(moves, { j, j + 2 })
                     end
                     -- print(p, q, i, d, j)
@@ -220,7 +219,7 @@ function Position:genMoves()
                     if p == 'P' and (d == N or d == 2 * N) and q ~= '.' then
                         break ;
                     end
-                    if p == 'P' and d == 2 * N and (i < A1 + N or self.board:sub(i + N + __1, i + N + __1) ~= '.') then
+                    if p == 'P' and d == 2 * N and (i < A1 + N or self.board:sub(i + N + 1, i + N + 1) ~= '.') then
                         break ;
                     end
                     -- Move it
@@ -249,8 +248,8 @@ end
 
 function Position:move(move)
     assert(move) -- move is zero-indexed
-    local i, j = move[0 + __1], move[1 + __1]
-    local p, q = self.board:sub(i + __1, i + __1), self.board:sub(j + __1, j + __1)
+    local i, j = move[1], move[2]
+    local p, q = self.board:sub(i + 1, i + 1), self.board:sub(j + 1, j + 1)
     local function put(board, i, p)
         return board:sub(1, i - 1) .. p .. board:sub(i + 1)
     end
@@ -259,40 +258,40 @@ function Position:move(move)
     local wc, bc, ep, kp = self.wc, self.bc, 0, 0
     local score = self.score + self:value(move)
     -- Actual move
-    board = put(board, j + __1, board:sub(i + __1, i + __1))
-    board = put(board, i + __1, '.')
+    board = put(board, j + 1, board:sub(i + 1, i + 1))
+    board = put(board, i + 1, '.')
     -- Castling rights
     if i == A1 then
-        wc = { false, wc[0 + __1] };
+        wc = { false, wc[1] };
     end
     if i == H1 then
-        wc = { wc[0 + __1], false };
+        wc = { wc[1], false };
     end
     if j == A8 then
-        bc = { bc[0 + __1], false };
+        bc = { bc[1], false };
     end
     if j == H8 then
-        bc = { false, bc[1 + __1] };
+        bc = { false, bc[2] };
     end
     -- Castling
     if p == 'K' then
         wc = { false, false }
         if math.abs(j - i) == 2 then
             kp = math.floor((i + j) / 2)
-            board = put(board, j < i and A1 + __1 or H1 + __1, '.')
-            board = put(board, kp + __1, 'R')
+            board = put(board, j < i and A1 + 1 or H1 + 1, '.')
+            board = put(board, kp + 1, 'R')
         end
     end
     -- Special pawn stuff
     if p == 'P' then
         if A8 <= j and j <= H8 then
-            board = put(board, j + __1, 'Q')
+            board = put(board, j + 1, 'Q')
         end
         if j - i == 2 * N then
             ep = i + N
         end
         if ((j - i) == N + W or (j - i) == N + E) and q == '.' then
-            board = put(board, j + S + __1, '.')
+            board = put(board, j + S + 1, '.')
         end
     end
     -- We rotate the returned position, so it's ready for the next player
@@ -300,46 +299,46 @@ function Position:move(move)
 end
 
 function Position:value(move)
-    local i, j = move[0 + __1], move[1 + __1]
-    local p, q = self.board:sub(i + __1, i + __1), self.board:sub(j + __1, j + __1)
+    local i, j = move[1], move[2]
+    local p, q = self.board:sub(i + 1, i + 1), self.board:sub(j + 1, j + 1)
     -- Actual move
-    local score = pst[p][j + __1] - pst[p][i + __1]
+    local score = pst[p][j + 1] - pst[p][i + 1]
     -- Capture
     if islower(q) then
-        score = score + pst[q:upper()][j + __1]
+        score = score + pst[q:upper()][j + 1]
     end
     -- Castling check detection
     if math.abs(j - self.kp) < 2 then
-        score = score + pst['K'][j + __1]
+        score = score + pst['K'][j + 1]
     end
     -- Castling
     if p == 'K' and math.abs(i - j) == 2 then
-        score = score + pst['R'][math.floor((i + j) / 2) + __1]
-        score = score - pst['R'][j < i and A1 + __1 or H1 + __1]
+        score = score + pst['R'][math.floor((i + j) / 2) + 1]
+        score = score - pst['R'][j < i and A1 + 1 or H1 + 1]
     end
     -- Special pawn stuff
     if p == 'P' then
         if A8 <= j and j <= H8 then
-            score = score + pst['Q'][j + __1] - pst['P'][j + __1]
+            score = score + pst['Q'][j + 1] - pst['P'][j + 1]
         end
         if j == self.ep then
-            score = score + pst['P'][j + S + __1]
+            score = score + pst['P'][j + S + 1]
         end
     end
     return score
 end
 
--- the lamest possible and most embarassing namedtuple hasher ordered dict
+-- the lamest possible and most embarrassing namedtuple hasher ordered dict
 -- I apologize to the world for writing it.
 local tp = {}
 local tp_index = {}
 local tp_count = 0
 
 local function tp_set(pos, val)
-    local b1 = pos.bc[1] and 'true' or 'false'
-    local b2 = pos.bc[2] and 'true' or 'false'
-    local w1 = pos.bc[1] and 'true' or 'false'
-    local w2 = pos.bc[2] and 'true' or 'false'
+    local b1 = pos.bc[1] and 't' or 'f'
+    local b2 = pos.bc[2] and 't' or 'f'
+    local w1 = pos.bc[1] and 't' or 'f'
+    local w2 = pos.bc[2] and 't' or 'f'
     local hash = pos.board .. ';' .. pos.score .. ';' .. w1 .. ';' .. w2 .. ';'
             .. b1 .. ';' .. b2 .. ';' .. pos.ep .. ';' .. pos.kp
     tp[hash] = val
@@ -348,10 +347,10 @@ local function tp_set(pos, val)
 end
 
 local function tp_get(pos)
-    local b1 = pos.bc[1] and 'true' or 'false'
-    local b2 = pos.bc[2] and 'true' or 'false'
-    local w1 = pos.bc[1] and 'true' or 'false'
-    local w2 = pos.bc[2] and 'true' or 'false'
+    local b1 = pos.bc[1] and 't' or 'f'
+    local b2 = pos.bc[2] and 't' or 'f'
+    local w1 = pos.bc[1] and 't' or 'f'
+    local w2 = pos.bc[2] and 't' or 'f'
     local hash = pos.board .. ';' .. pos.score .. ';' .. w1 .. ';' .. w2 .. ';'
             .. b1 .. ';' .. b2 .. ';' .. pos.ep .. ';' .. pos.kp
     return tp[hash]
@@ -608,7 +607,7 @@ local function main()
 
         -- The black player moves from a rotated position, so we have to
         -- 'back rotate' the move before printing it.
-        print("My move:", render(119 - move[0 + __1]) .. render(119 - move[1 + __1]))
+        print("My move:", render(119 - move[0 + 1]) .. render(119 - move[1 + 1]))
         pos = pos:move(move)
     end
 end
@@ -618,6 +617,8 @@ end
 --//RPD interface:
 
 local sunfish = {}
+
+sunfish.MATE_VALUE = MATE_VALUE
 
 local game = Position.new(initial, 0, { true, true }, { true, true }, 0, 0)
 
@@ -662,14 +663,14 @@ end
 
 function sunfish.ai_move(game)
     local move, score = search(game)
-    -- print(move, score)
-    --[[
+
     assert(score)
     if score <= -MATE_VALUE then
+        return game, nil, score
     end
     if score >= MATE_VALUE then
+        return game, nil, score
     end
-    ]]
 
     game = game:move(move)
 
@@ -678,6 +679,10 @@ end
 
 function sunfish.move_2_cell(cell)
     return render(cell)
+end
+
+function sunfish.cell_2_move(move)
+    return parse(move:sub(1, 2))
 end
 
 return sunfish

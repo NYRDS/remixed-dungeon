@@ -52,7 +52,7 @@ end
 local function cellFromChessCell(chessCell)
     local level = RPD.Dungeon.level
 
-    local x = nil
+    local x
     for i, letter in ipairs(x_letters) do
         if letter == chessCell:sub(1, 1) then
             x = i - 1
@@ -79,7 +79,7 @@ local scheduledMoves = {}
 
 local function movePiece(from, to)
     if RPD.Actor:motionInProgress() then
-        table.insert(scheduledMoves, {from, to})
+        table.insert(scheduledMoves, { from, to })
         return
     end
 
@@ -128,10 +128,9 @@ local function fillPiecesFromBoard()
     end
 end
 
-
 local castleMovesList = { 'e1g1', 'e1c1', 'e8g8', 'e8c8' }
-local rookMoves = { ['e1g1'] = 'h1f1' , ['e1c1'] = 'a1d1',
-                    ['e8g8'] = 'h8f8' , ['e8c8'] = 'a8d8' }
+local rookMoves = { ['e1g1'] = 'h1f1', ['e1c1'] = 'a1d1',
+                    ['e8g8'] = 'h8f8', ['e8c8'] = 'a8d8' }
 
 local enPassantMovesList = { 'a4b3', 'b4a3', 'b4c3', 'c4b3', 'c4d3', 'd4c3', 'd4e3', 'e4d3', 'e4f3', 'f4e3', 'f4g3', 'g4f3', 'g4h3', 'h4g3',
                              'a5b6', 'b5a6', 'b5c6', 'c5b6', 'c5d6', 'd5c6', 'd5e6', 'e5d6', 'e5f6', 'f5e6', 'f5g6', 'g5f6', 'g5h6', 'h5g6' }
@@ -149,17 +148,11 @@ for _, v in ipairs(enPassantMovesList) do
     enPassantMoves[v] = true
 end
 
-
 local function animateMove(move_str, move_cells, chess_cells)
+    RPD.debug("animating: %s %s", chess_cells[1], chess_cells[2])
     movePiece(move_cells[1], move_cells[2])
     fillPiecesFromBoard()
---[[
-    for k, v in pairs(rawPieces) do
-        if v == 'K' then
-            RPD.glog("%s -> %s", k, v)
-        end
-    end
-]]
+
     if castleMoves[move_str] then
         --RPD.glog("check for castle: %s %s", move_str, chess_cells[2])
         --RPD.glog("check for castle: %s %s", rawPieces[chess_cells[1]], rawPieces[chess_cells[2]])
@@ -184,17 +177,51 @@ local function animateMove(move_str, move_cells, chess_cells)
     end
 end
 
-
 local function highlightCells(cells)
     RPD.Sfx.HighlightCell:removeAll()
 
-    for k,cell in pairs(cells) do
+    for k, cell in pairs(cells) do
         local pos = cellFromChessCell(cell)
         RPD.Sfx.HighlightCell:add(pos)
     end
 end
 
+local gameInProgress = true
+
+local function processLose()
+    RPD.glog("You Lose!")
+
+    RPD.Dungeon.hero:die(RPD.Dungeon.hero)
+
+    gameInProgress = false
+end
+
+local function processWin()
+    local mobs = RPD.Dungeon.level.mobs
+
+    local iterator = mobs:iterator()
+
+    local mobsToDie = {}
+
+    while iterator:hasNext() do
+        local mob = iterator:next()
+        table.insert(mobsToDie, mob)
+    end
+
+    for i,mob in ipairs(mobsToDie) do
+        mob:die(RPD.Dungeon.hero)
+    end
+
+    RPD.glog("You Win!")
+    gameInProgress = false
+end
+
 local moveDelay = 5
+local allowedMoves = {}
+
+local function getPiece(board, engineCell)
+    return string.sub(board, engineCell+1, engineCell + 1),
+end
 
 return actor.init({
     act = function()
@@ -206,14 +233,14 @@ return actor.init({
 
                 local move = scheduledMoves[1]
                 movePiece(move[1], move[2])
-                table.remove(scheduledMoves,1)
+                table.remove(scheduledMoves, 1)
             end
         end
         return true
     end,
 
     actionTime = function()
-        return 1
+        return 0.1
     end,
 
     activate = function()
@@ -266,17 +293,17 @@ return actor.init({
 
     cellClicked = function(cell)
 
-        --make hero very busy
-        RPD.Dungeon.hero.paralysed = true
-        RPD.Dungeon.hero:next()
-
-        chessCell = chessCellFromCell(cell)
-
-        if not chessCell then
+        if not gameInProgress then
             return false
         end
 
-        --RPD.glog("move: %s", move_str)
+        chessCell = chessCellFromCell(cell)
+        engineCell = sunfish.cell_2_move(chessCell)
+
+        if not chessCell then
+            RPD.glog("it is your move, Hero")
+            return false
+        end
 
         RPD.Sfx.HighlightCell:removeAll()
 
@@ -285,17 +312,67 @@ return actor.init({
             chess_cells[1] = chessCell
             move_str = chessCell
 
-            local moveCandidates = chess:genMoves()
-            local hCells = {}
-            for i, candidate in ipairs(moveCandidates) do
-                if sunfish.move_2_cell(candidate[1]) == chessCell then
-                    table.insert(hCells, sunfish.move_2_cell(candidate[2]))
+            allowedMoves = {}
+
+            local pseudoMoves = chess:genMoves()
+            local moveCandidates = {}
+
+            for i, v in ipairs(pseudoMoves) do
+
+                if sunfish.move_2_cell(v[1]) == chessCell then
+
+                    local validMove = true
+
+                    local move_str = sunfish.move_2_cell(v[1]) .. sunfish.move_2_cell(v[2])
+                    RPD.debug("checking move: %s", move_str)
+                    RPD.debug("own piece: %d %d %s %s", v[1], v[2],
+                            getPiece(chess.board, v[1]),
+                            getPiece(chess.board, v[2]))
+
+                    probe = sunfish.move(chess, move_str)
+
+                    probeMoves = probe:genMoves()
+
+                    for ii, vv in ipairs(probeMoves) do
+                        local target = getPiece(probe.board,vv[2])
+                        local move_str = sunfish.move_2_cell(vv[1]) .. sunfish.move_2_cell(vv[2])
+
+                        RPD.debug("ai piece: %d %d %s %s %s",vv[1],vv[2], getPiece(probe.board, vv[1]), target, move_str)
+                        if target == 'k' then
+                            validMove = false
+                        end
+                    end
+
+                    if validMove then
+                        RPD.debug("valid")
+                        allowedMoves[sunfish.move_2_cell(v[2])] = true
+                        table.insert(moveCandidates, v)
+                    else
+                        RPD.debug("invalid")
+                    end
                 end
             end
 
-            highlightCells(hCells)
+            local hCells = {}
+            for i, candidate in ipairs(moveCandidates) do
+                table.insert(hCells, sunfish.move_2_cell(candidate[2]))
+            end
 
+            highlightCells(hCells)
         else
+
+            clickedPiece = getPiece(chess.board, engineCell)
+            if string.match(clickedPiece,"%u") then
+                move_str = ''
+                RPD.glog("another piece clicked: %s", clickedPiece)
+                return true
+            end
+
+            if not allowedMoves[chessCell] then
+                RPD.glog("illegal move: %s", chessCell)
+                return true
+            end
+
             move_str = move_str .. chessCell
             move_cells[2] = cell
             chess_cells[2] = chessCell
@@ -306,18 +383,21 @@ return actor.init({
                 chess = moveResult:rotate()
                 RPD.glog("your move Position score: %s", chess.score)
 
---[[
-                if chess.score >= 30000 then
-                    RPD.glog("You Win!")
-                    return false
-                end
-]]
                 RPD.Sfx.HighlightCell:removeAll()
                 animateMove(move_str, move_cells, chess_cells)
 
                 moveResult:rotate()
                 chess, ai_move, score = sunfish.ai_move(chess:rotate())
-                --RPD.glog("%s %d", ai_move, score)
+
+                if score <= -sunfish.MATE_VALUE then
+                    processWin()
+                    return true
+                end
+
+                if score >= sunfish.MATE_VALUE then
+                    processLose()
+                    return true
+                end
 
                 local chess_cells = { string.sub(ai_move, 1, 2), string.sub(ai_move, 3, 4) }
 
@@ -325,12 +405,7 @@ return actor.init({
 
                 animateMove(ai_move, ai_cells, chess_cells)
                 RPD.glog("ai move Position score: %s", chess.score)
---[[
-                if score <= 30000 then
-                    RPD.glog("You Lose!")
-                    return false
-                end
-]]
+
             else
                 RPD.glog('illegal move')
             end
