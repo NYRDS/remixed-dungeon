@@ -220,7 +220,7 @@ local moveDelay = 5
 local allowedMoves = {}
 
 local function getPiece(board, engineCell)
-    return string.sub(board, engineCell+1, engineCell + 1),
+    return string.sub(board, engineCell+1, engineCell + 1)
 end
 
 return actor.init({
