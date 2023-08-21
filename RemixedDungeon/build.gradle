@@ -142,7 +142,7 @@ dependencies {
     implementation 'commons-io:commons-io:2.6'
 
 
-    implementation ('com.appodeal.ads:sdk:3.0.2.0') {
+    implementation ('com.appodeal.ads:sdk:3.0.2.+') {
         exclude group: 'com.appodeal.ads.sdk.services', module: 'adjust'
         exclude group: 'com.appodeal.ads.sdk.services', module: 'appsflyer'
         exclude group: 'com.appodeal.ads.sdk.services', module: 'firebase'
