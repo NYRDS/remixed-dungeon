@@ -4,7 +4,7 @@ El terror de las alcantarillas ya no existe.
 2. Tengu ha sido derrotado.
 El espíritu tortuoso ya no va a atormentar a nadie más.
 
-DM-300 ha sido derrotado.
+3. DM-300 ha sido asesinado
 Una maquina que ha perdido su propósito ha sido desactivada. 
 
 4. El Rey ha sido asesinado. 
@@ -29,4 +29,5 @@ Yog-Dzewa y sus horrores ya no son más.
 Valor, amabilidad y un par de monedas de oro, e incluso El Gnoll brutal se unirán a tu viaje.
 
 11. mascarilla recogida
-Esta mascarillas es para licenciados
+Esta mascarilla es para licenciados
+
