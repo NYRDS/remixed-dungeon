@@ -655,6 +655,8 @@
   <string name="StartScene_Warning">Tu progreso actual será borrado.</string>
   <string name="StartScene_Yes">Si, empezar una nueva partida.</string>
   <string name="StartScene_No">No, volver al menú principal.</string>
+  <string name="StartScene_Unlock">Para desbloquear esta clase de personaje, mata al jefe DM-300 con cualquier otra clase.</string>
+  <string name="StartScene_UnlockElf">Para desbloquear esta clase de personaje, mata al jefe Rey con cualquier otra clase.</string>
   <string name="StartScene_WinGame">Para desbloquear los \"Desafíos\" gana una partida con cualquier personaje.</string>
   <string name="StartScene_DifficultySelect">Elige tu destino</string>
   <string name="StartScene_DifficultyEasy">Fácil (con anuncios)</string>
@@ -1240,7 +1242,7 @@
   <string name="Goo_Name">viscosidad</string>
   <string name="Goo_Gender">femenino</string>
   <string name="Goo_Name_Objective">viscosidad</string>
-  <string name="Goo_Desc">Se sabe poco sobre la viscosidad. Es bastante posible que ni siquiera sea una criatura, sino más bien un conglomerado de sustancias de la alcantarilla que ha conseguido algún tipo de libre albedrío.</string>
+  <string name="Goo_Desc">Poco se sabe sobre el Goo. Es muy posible que ni siquiera sea una criatura, sino un conglomerado de sustancias de las cloacas que adquirieron rudimentos de libre albedrío. De cualquier manera, es obvio que la magia oscura está funcionando aquí.</string>
   <string name="Goo_Info1">¡La viscosidad se está bombeando a sí misma!</string>
   <string name="Goo_Info2">glurp... glurp...</string>
   <string name="Goo_Info3">¡GLURP-GLURP!</string>
@@ -1495,6 +1497,12 @@
   <string name="Badges_DeathGlyph">Muerte por un glifo.</string>
   <string name="Badges_DeathFalling">Muerte por caída</string>
   <string name="Badges_Yasd">Muerte por el fuego, veneno, gas tóxico &amp; hambre</string>
+  <string name="Badges_BossSlain1">Goo ha sido asesinado </string>
+  <string name="Badges_BossSlain2">Tengu ha sido asesinado.</string>
+  <string name="Badges_BossSlain3">DM-300 ha sido asesinado</string>
+  <string name="Badges_BossSlain4">El rey ha sido asesinado.</string>
+  <string name="Badges_BossSlain1All">Goo ha sido asesinado por todas las clases.</string>
+  <string name="Badges_BossSlain3All">DM-300 ha sido asesinado por todas las clases.</string>
   <string name="Badges_RingHaggler">Anillo del Regateador obtenido</string>
   <string name="Badges_RingThorns">Anillo de Espinas obtenido</string>
   <string name="Badges_StrengthAttained1">13 puntos de Fuerza obtenidos</string>
@@ -1589,6 +1597,7 @@
   <string name="TownsfolkMovieNPC_Gender">masculino</string>
   <string name="TownsfolkMovieNPC_Name_Objective">ciudadano</string>
   <string name="TownsfolkMovieNPC_Desc">Una persona de la localidad. A pesar de ser un plebeyo, sus ropas se ven costosas.</string>
+  <string name="TownsfolkMovieNPC_Message">¿Conoces ese servicio especial que brinda el \"cine\"? Lástima que pidan algo exótico llamado \"Internet\", nunca escuché sobre tal cosa.</string>
   <string name="LibrarianNPC_Name">bibliotecario</string>
   <string name="LibrarianNPC_Gender">masculino</string>
   <string name="LibrarianNPC_Name_Objective">bibliotecario</string>
@@ -1657,10 +1666,10 @@
   <string name="ServiceManNPC_Desc">Un trabajador de los establecimientos locales.</string>
   <string name="TownShopkeeper_Name">comerciante</string>
   <string name="TownShopkeeper_Desc">Este tipo es un comerciante típico. Usted puede decir que ya conoce los precios.</string>
-  <string name="WndMovieTheatre_Watch">mirar una pelicula</string>
+  <string name="WndMovieTheatre_Watch">¿ver un anuncio?.</string>
   <string name="WndMovieTheatre_No">salir</string>
   <string name="WndMovieTheatre_Bye">¡Vuelve cuando quieras, siempre estaremos felices de verte!</string>
-  <string name="WndMovieTheatre_Instruction">¡Saludos y bienvenidos a nuestro cine! Brindamos un servicio especial, donde puedes ver una película gratis. ¡Y si observa todo esto, será recompensado con %d monedas de oro!</string>
+  <string name="WndMovieTheatre_Instruction">¡Saludos y bienvenidos a nuestra sala de cine! Brindamos un servicio especial, donde puede ver una película especial llamada anuncio de forma gratuita. ¡Y si lo miras todo, serás recompensado con %d monedas de oro.</string>
   <string name="WndMovieTheatre_Title">Cine</string>
   <string name="WndMovieTheatre_Thank_You">¡Gracias por tu participación!</string>
   <string name="WndPriest_Heal">sanar - %d monedas de oro.</string>
@@ -2696,6 +2705,7 @@ otro lugar del nivel.</string>
   <string name="Calm_Info">Hay muchas criaturas enfadadas por ahí, ayudémoslas.</string>
   <string name="CharmSpell_Name">Encanto</string>
   <string name="CharmSpell_Info">Todo el mundo se merece un poco de amor, ¿verdad?</string>
+  <string name="HideInGrassSpell_Name">Esconderse-en-la-hierba</string>
   <string name="HideInGrassSpell_Info">Has perfeccionado tu dominio del escondite.</string>
   <string name="HideInGrassSpell_NeedGrassToHide">Ni siquiera yo puedo esconderme a la vista.</string>
   <string name="MagicArrow_Name">Flecha mágica</string>
@@ -2832,5 +2842,51 @@ otro lugar del nivel.</string>
   <string name="WndSettingsInGame_IsometricTiles">Azulejos isométricos</string>
   <string name="KrampusHead_Name">cabeza de Krampus</string>
   <string name="KrampusHead_Info">¿Alguna vez te has preguntado cómo se sentiría asumir un papel más siniestro mientras haces Dungeoneering? Bueno, seguramente traerás horror a las crías de rata locales con esta apariencia diabólica.</string>
+  <string name="WndSettingsInGame_GameLog">Registros de juego</string>
+  <string name="Froth_ArrowInKnee">Solía ​​ser un aventurero como tú,\npero recibí una flecha en la rodilla...</string>
+  <string name="BardSong_1">Mi esposa y yo vivimos solos,\nEn una pequeña cabaña de troncos, que es nuestra\nA ella le encantaba la ginebra y a mí me encantaba el ron\nTe diré lo que nos divertiría mucho.</string>
+  <string name="SpiderElite_Name">Araña guardian de élite.</string>
   <string name="SpiderElite_Gender">masculino</string>
+  <string name="SpiderElite_Name_Objective">Araña guardian de élite.</string>
+  <string name="SpiderElite_Desc">Al igual que los soldados, las arañas guardian juran proteger su reino. El veneno de las arañas de élite se usa para desorientar a su objetivo.</string>
+  <string name="Shaman_ZapMiss">*Maldice en mounstroñol*</string>
+  <string name="Facilitations_Names_0">Sin apetito</string>
+  <string name="Facilitations_Names_1">Cuerpo de troll</string>
+  <string name="Facilitations_Names_2">Espíritu de genio</string>
+  <string name="Facilitations_Names_3">Fuerza gigantesca </string>
+  <string name="Facilitations_Descriptions_0">Los mutantes siempre han sido tratados con desprecio y miedo, pero la ausencia de hambre te dará una vez más la superioridad, esta vez en la conquista de las profundidades de la mazmorra.</string>
+  <string name="Facilitations_Descriptions_1">Todavía no se sabe quiénes fueron tus padres, pero la regeneración natural similar a la de un troll ayudará a reparar todas las cicatrices de batalla que se avecinan.</string>
+  <string name="Facilitations_Descriptions_2">Un estudio profundo y minucioso de la naturaleza como fuente de energía te permitirá reponer tus reservas mágicas durante el viaje.</string>
+  <string name="Facilitations_Descriptions_3">Ajustándote el cinturón hecho de piel de ogro, que se transmitía a cada nueva generación, das un paso hacia lo desconocido que te espera.</string>
+  <string name="Challenges_Descriptions_0">La comida y el agua habían caducado hace mucho tiempo, volviendo locos a todos los aventureros por pensando en la muerte, miedo y hambre. ¿Puede tu dieta ayudarte a durar lo suficiente?</string>
+  <string name="Challenges_Descriptions_1">El ataque es la mejor defensa. Siguiendo estas enseñanzas, te adentras en la mazmorra, siendo la fe el guardián más fuerte de tu cuerpo.</string>
+  <string name="Challenges_Descriptions_2">Como seguidor de la regeneración natural del cuerpo, siempre has desconfiado de las pociones que tienen propiedades curativas. ¡Más vale prevenir que lamentar!</string>
+  <string name="Challenges_Descriptions_3">Las tierras alrededor de la mazmorra están infectadas desde hace mucho tiempo por la malicia, lo que impide el crecimiento de semillas de varias hierbas y plantas. Quién sabe cuánto tiempo pasará antes de que la última planta deje de existir en estas tierras áridas.</string>
+  <string name="Challenges_Descriptions_4">Una presencia malvada acecha entre las mentes de todas las criaturas en la mazmorra, haciéndolas conscientes de los eventos que ocurren entre sí.</string>
+  <string name="Challenges_Descriptions_5">Lo primero que vino con el mal fue una niebla densa e impenetrable, que hace casi imposible navegar con claridad por los interminables pasillos de la mazmorra.</string>
+  <string name="Challenges_Descriptions_6">El antiguo arte de la lectura de runas está prohibido y evitado a toda costa, debido a la maldición otorgada a cada pergamino que llega a la mazmorra o sus alrededores.</string>
+  <string name="Challenges_Descriptions_7">Te acostumbraste al hecho de que la posesión y el uso de armas no es moralmente correcto, pero ¿qué más puede defenderte de las criaturas que deambulan por debajo?</string>
+  <string name="ManaRegenerationBuff_Name">Regeneración de mana</string>
+  <string name="ManaRegenerationBuff_Info">La función para la regeneración de maná está en es mejorada para facilitar las cosas.</string>
+  <string name="WndGame_Customizations">Personalizaciones</string>
+  <string name="Welcome_Text_31_1">remix.31.1\n
+- Jugabilidad:\n
+-- ¡Nuevas personalizaciones!\n
+-- ¡Nuevo tipo de araña!\n
+-- Psi-Spider ahora mejorará a otras arañas en lugar de debilitar al heroe.\n
+- Errores corregidos\n
+</string>
+  <string name="WndTilesKind_Title">Solo una cosa mas:</string>
+  <string name="WndTilesKind_text">Estás a punto de entrar en una mazmorra poseída por magia retorcida, pero ahora debes elegir cómo la ves:\n ¿Te gusta que esté en pseudo 3D moderno o vista plana clásica?\nPodrás cambiarlo más tarde en el menú de opciones del juego.</string>
+  <string name="WndTilesKind_NewLook">Estilo nuevo</string>
+  <string name="WndTilesKind_ClassicLook">Estilo clásico.</string>
+  <string name="MobAi_status">esto%s es %s</string>
+  <string name="WndCustomizations_Title">Personalizaciones</string>
+  <string name="IceGuardianCore_DieInfo">Hace tanto frío aquí, mejor regreso al nivel 14 y trato de encontrar un camino a un lugar más cálido.</string>
+  <string name="Lich_DieInfo">Nunca me gustó este Nigromante. Tendre que volver al nivel 7 y encontrar otro camino hacia la nueva aventura.</string>
+  <string name="SpiderQueen_DieInfo">¡La Reina Araña ha sido asesinada! Ahora debería volver al nivel 5 y continuar mi viaje a las Profundidades.</string>
+  <string name="WndModSelect_ReallyDelete">borrar de verdad?</string>
+  <string name="WndModSelect_AreYouSure">Borrar mod: %s, estas seguro?</string>
+  <string name="Challenges_Names_8">Niguna ciudad.</string>
+  <string name="Challenges_Descriptions_8">Tu viaje comenzará en las oscuras y peligrosas alcantarillas de la ciudad, con el único camino a la superficie bloqueado. Para empeorar las cosas, solo podrás usar el equipo que encuentres dentro de la mazmorra. Con recursos y equipos limitados, tu supervivencia dependerá de tus habilidades y estrategia.</string>
 </resources>
