@@ -34,9 +34,9 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1163
-        versionName "32.0.alpha.1"
-        targetSdkVersion 32
+        versionCode 1164
+        versionName "31.5.fix.36"
+        targetSdkVersion 33
         minSdkVersion 21
         compileSdkVersion = 32
 
@@ -142,7 +142,7 @@ dependencies {
     implementation 'commons-io:commons-io:2.6'
 
 
-    implementation ('com.appodeal.ads:sdk:3.0.1.0') {
+    implementation ('com.appodeal.ads:sdk:3.0.2.0') {
         exclude group: 'com.appodeal.ads.sdk.services', module: 'adjust'
         exclude group: 'com.appodeal.ads.sdk.services', module: 'appsflyer'
         exclude group: 'com.appodeal.ads.sdk.services', module: 'firebase'
@@ -157,12 +157,12 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.2.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.5.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.6.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:23.1.0"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:22.1.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:22.2.0'
 
 
-    googlePlayImplementation 'com.android.billingclient:billing:6.0.0'
+    googlePlayImplementation 'com.android.billingclient:billing:6.0.1'
 
     googlePlayImplementation platform('com.google.firebase:firebase-bom:30.3.0')
 
