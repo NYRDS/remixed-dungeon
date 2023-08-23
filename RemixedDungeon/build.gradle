@@ -37,6 +37,7 @@ android {
         versionCode 1164
         versionName "31.1.fix.36"
         targetSdkVersion 33
+        compileSdkVersion 33 // bitrise want it
         minSdkVersion 21
 
         // Enabling multidex support.
