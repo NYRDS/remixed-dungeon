@@ -21,6 +21,7 @@ import com.watabou.pixeldungeon.actors.blobs.Foliage;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.plants.Moongrace;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.utils.Random;
 
@@ -41,12 +42,18 @@ public class GardenPainter extends Painter {
 			if(level.getTopLevelObject(cellToPlant)==null) {
 				level.plant( new Sungrass.Seed(), cellToPlant );
 			}
+
+			cellToPlant = room.random(level);
+			if(level.getTopLevelObject(cellToPlant)==null) {
+				level.plant( new Moongrace.Seed(), cellToPlant );
+			}
 		}
 		
 		Foliage light = (Foliage)level.blobs.get( Foliage.class );
 		if (light == null) {
 			light = new Foliage();
 		}
+
 		for (int i=room.top + 1; i < room.bottom; i++) {
 			for (int j=room.left + 1; j < room.right; j++) {
 				light.seed( j + level.getWidth() * i, 1 );

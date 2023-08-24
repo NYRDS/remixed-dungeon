@@ -372,7 +372,7 @@ public class CharUtils {
     @NotNull
     public static Char spawnOnNextCell(@NotNull Char src ,String mobClass, int limit) {
         final Level level = src.level();
-        int pos = level.getEmptyCellNextTo(src.getPos());
+        int pos = src.emptyCellNextTo();
 
         if (level.cellValid(pos) && level.countMobsOfKind(mobClass) < limit) {
             Mob mob = MobFactory.mobByName(mobClass);

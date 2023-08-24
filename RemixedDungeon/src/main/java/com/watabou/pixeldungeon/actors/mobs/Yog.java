@@ -46,6 +46,7 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
+import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -241,7 +242,9 @@ public class Yog extends Boss {
 			addImmunity(Amok.class);
 			addImmunity(Sleep.class);
 			addImmunity(Terror.class);
-			addImmunity(Burning.class);
+			addImmunity(Fire.class );
+			addImmunity(Burning.class );
+			addImmunity(WandOfFirebolt.class );
 		}
 
 		public BurningFist() {

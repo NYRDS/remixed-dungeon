@@ -26,12 +26,14 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.RunningAmok;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -230,6 +232,11 @@ public abstract class Mob extends Char {
 
         if (Random.Float() < 0.01 / lvl()) {
             lvl(lvl() + 1);
+
+            ht((int) (ht() + GameLoop.getDifficultyFactor() * 2));
+            heal(ht(), this);
+
+            getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Hero_LevelUp));
         }
 
         float timeBeforeAct = actorTime();
@@ -544,7 +551,7 @@ public abstract class Mob extends Char {
             return true;
         }
 
-        if (hasBuff(Amok.class) || chr.hasBuff(Amok.class)) {
+        if (hasBuff(BuffFactory.AMOK) || chr.hasBuff(BuffFactory.AMOK)) {
             return false;
         }
 

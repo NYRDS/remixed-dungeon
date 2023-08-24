@@ -49,6 +49,7 @@ public class FireElemental extends Mob {
 		loot(PotionOfLiquidFlame.class, 0.1f);
 		
 		addImmunity( Fire.class );
+		addImmunity( Burning.class );
 		addImmunity( WandOfFirebolt.class );
 		addImmunity( ScrollOfPsionicBlast.class );
 		addImmunity( Bleeding.class );

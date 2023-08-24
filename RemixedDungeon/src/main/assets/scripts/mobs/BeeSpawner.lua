@@ -14,40 +14,38 @@ local mobBeeCount = math.random(mobBeeCountMin, mobBeeCountMax)
 
 return mob.init({
     spawn = function(self, level)
-        RPD.setAi(self,"None")
+        RPD.setAi(self, "None")
     end,
 
-    die = function(self,cause)
+    die = function(self, cause)
         local level = RPD.Dungeon.level
-		if mobBeeCount >= 1 then
-            for i = 1,mobBeeCount do
+        if mobBeeCount >= 1 then
+            for _ = 1, mobBeeCount do
                 local mobBee = RPD.MobFactory:mobByName("Bee")
-                local pos = level:getEmptyCellNextTo(self:getPos())
-            if (level:cellValid(pos) and mobBeeCount > 0) then
-                mobBeeCount = mobBeeCount - 1
-                mobBee:setPos(pos)
-                RPD.setAi(mobBee,"Hunting")
-                level:spawnMob(mobBee)
-        else do
+                local pos = self:emptyCellNextTo()
+                if level:cellValid(pos) and mobBeeCount > 0 then
+                    mobBeeCount = mobBeeCount - 1
+                    mobBee:lvl(self:lvl())
+                    mobBee:setPos(pos)
+                    RPD.setAi(mobBee, "Hunting")
+                    level:spawnMob(mobBee)
+                end
             end
         end
-        end
-        end
     end,
 
-    damage = function(self,dmg,src)
+    damage = function(self, dmg, src)
         local level = RPD.Dungeon.level
-        for i = 1,1 do
-            local mobBee = RPD.MobFactory:mobByName("Bee")
-            local pos = level:getEmptyCellNextTo(self:getPos())
-            if (level:cellValid(pos) and mobBeeCount > 0) then
-                mobBeeCount = mobBeeCount - 1
-                mobBee:setPos(pos)
-                RPD.setAi(mobBee,"Hunting")
-                level:spawnMob(mobBee)
-            else do
-                end
+
+        local mobBee = RPD.MobFactory:mobByName("Bee")
+        local pos = self:emptyCellNextTo()
+        if level:cellValid(pos) and mobBeeCount > 0 then
+            mobBeeCount = mobBeeCount - 1
+            mobBee:lvl(self:lvl())
+            mobBee:setPos(pos)
+            RPD.setAi(mobBee, "Hunting")
+            level:spawnMob(mobBee)
         end
-        end
+
     end
-    })
+})
