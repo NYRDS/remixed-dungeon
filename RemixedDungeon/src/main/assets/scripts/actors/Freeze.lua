@@ -3,9 +3,6 @@
     DateTime: 25.10.18 22:21
     This file is part of pixel-dungeon-remix
 ]]
-
-
-
 local RPD = require "scripts/lib/commonClasses"
 local actor = require "scripts/lib/actor"
 

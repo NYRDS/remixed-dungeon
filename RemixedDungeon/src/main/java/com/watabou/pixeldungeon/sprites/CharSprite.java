@@ -597,7 +597,9 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 callback.call();
             } else {
                 if (anim!=idle) {
-                    idle();
+                    if(Dungeon.isCellVisible(chr.getPos())) {
+                        idle();
+                    }
 
                     if (anim == attack) {
                         if (!realtime) {
