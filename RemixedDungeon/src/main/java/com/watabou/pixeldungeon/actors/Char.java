@@ -717,9 +717,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public void damage(int dmg, @NotNull NamedEntityKind src) {
 
-        if (Util.isDebug()) {
-            GLog.i("%s: <- %d dmg from %s", getEntityKind(), dmg, src.getEntityKind());
-        }
+        GLog.debug("%s: <- %d dmg from %s", getEntityKind(), dmg, src.getEntityKind());
 
         if (!isAlive()) {
             return;
@@ -738,6 +736,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         dmg = resist(dmg, src);
 
         if (dmg <= 0) {
+            GLog.debug("Resisted!!!", getEntityKind(), dmg, src.getEntityKind());
             return;
         }
 
