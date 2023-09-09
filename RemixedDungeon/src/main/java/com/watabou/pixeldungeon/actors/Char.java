@@ -1230,12 +1230,18 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (sprite == null) {
 
             if (!GameScene.mayCreateSprites()) {
-                throw new TrackedRuntimeException("scene not ready for " + this.getClass().getSimpleName());
+                throw new TrackedRuntimeException("scene not ready for " + getEntityKind());
+            }
+
+            if(Util.isDebug()){
+                if(!isAlive()) {
+                    throw new TrackedRuntimeException("its dead! leave it alone! " + getEntityKind());
+                }
             }
             sprite = newSprite();
         }
         if (sprite == null) {
-            throw new TrackedRuntimeException("Sprite creation for: " + getClass().getSimpleName() + " failed");
+            throw new TrackedRuntimeException("Sprite creation for: " + getEntityKind() + " failed");
         }
 
         if (sprite.getParent() == null) {

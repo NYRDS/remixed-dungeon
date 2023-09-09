@@ -605,19 +605,19 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                         if (!realtime) {
                             chr.onAttackComplete();
                         }
-                        curAnim = null;
+                        resetIfNotDying();
                         return;
                     } else if (anim == zap) {
                         if (!realtime) {
                             chr.onZapComplete();
                         }
-                        curAnim = null;
+                        resetIfNotDying();
                         return;
                     } else if (anim == operate) {
                         if (!realtime) {
                             chr.onOperateComplete();
                         }
-                        curAnim = null;
+                        resetIfNotDying();
                         return;
                     }
                 }
@@ -674,6 +674,12 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         }
 
         return avatar;
+    }
+
+    private void resetIfNotDying(){
+        if(curAnim!=die) {
+            curAnim = null;
+        }
     }
 
     public void reset() {

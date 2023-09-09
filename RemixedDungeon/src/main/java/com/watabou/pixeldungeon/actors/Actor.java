@@ -217,7 +217,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		//Log.i("Main loop", "start");
 		while ((actor=getNextActor(Util.BIG_FLOAT)) != null) {
 
-			if (actor instanceof Char && ((Char)actor).getSprite().doingSomething()) {
+			if (actor instanceof Char && ((Char)actor).isAlive() && ((Char)actor).getSprite().doingSomething()) {
 				checkSkips(actor);
 				GLog.debug("skip: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
 				// If it's character's turn to act, but its sprite
