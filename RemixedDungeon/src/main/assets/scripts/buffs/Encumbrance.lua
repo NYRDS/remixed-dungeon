@@ -26,18 +26,18 @@ return buff.init{
     end,
 
     charAct = function(self,buff)
-        if RPD.RemixedDungeon.getDifficulty() > 2 then
+        if RPD.GameLoop:getDifficulty() >= 2 then
             return
         end
 
         if math.random() < 0.05 then
             local target = buff.target
-            target:yell(RPD.format(RPD.oneOf(phrases), target:encumbranceBuff():name()))
+            target:yell(RPD.format(RPD.oneOf(phrases), target:getBelongings():encumbranceCheck():name()))
         end
     end,
 
     attachTo = function(self, buff, target)
-        target:yell(RPD.format(RPD.oneOf(phrases), target:encumbranceBuff():name()))
+        target:yell(RPD.format(RPD.oneOf(phrases), target:getBelongings():encumbranceCheck():name()))
         return true
     end,
 
