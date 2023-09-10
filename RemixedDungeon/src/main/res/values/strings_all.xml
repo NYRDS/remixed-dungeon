@@ -2881,4 +2881,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndModSelect_AreYouSure">Deleting mod: %s, are you sure?</string>
   <string name="Challenges_Names_8">No town</string>
   <string name="Challenges_Descriptions_8">Your journey will begin in the dark and dangerous town sewers, with the only way to the surface blocked. To make matters worse, you will only be able to use equipment that you find within the dungeon. With limited resources and equipment, your survival will depend on your skills and strategy.</string>
+
+  <string name="EncumbranceBuff_CharAct_1">I\'m not strong enough to wield %s properly.</string>
+  <string name="EncumbranceBuff_CharAct_2">This %s is too heavy for me to use effectively.</string>
+  <string name="EncumbranceBuff_CharAct_3">I need to work on my strength before I can use %s.</string>
+  <string name="EncumbranceBuff_CharAct_4">I lack the strength to use %s to its full potential."</string>
+  <string name="EncumbranceBuff_CharAct_5">%s is too much for me to handle right now.</string>
+
 </resources>

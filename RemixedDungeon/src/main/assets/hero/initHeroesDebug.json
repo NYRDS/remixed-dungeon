@@ -7,8 +7,8 @@
     },
     "items": [
       {
-        "kind": "TomeOfMastery",
-        "volume": 10
+        "kind": "RingOfPower",
+        "level": 7
       },
       {
         "kind": "DewVial",
@@ -16,7 +16,10 @@
       },
 
       {
-        "kind": "test/TestItem"
+        "kind": "PotionOfLevitation",
+        "identified": true,
+        "level": 1,
+        "quantity": 1000
       },
       {
         "kind": "ScrollOfUpgrade",
@@ -40,11 +43,11 @@
       {
         "kind": "WandOfIcebolt",
         "identified": true,
-        "level" : 200
+        "level" : 3
       },
 
       {
-        "kind": "BlackSkull",
+        "kind": "RottenFish",
         "quantity": 1000,
         "identified": true
       },
@@ -59,7 +62,7 @@
         "identified": true
       },
       {
-        "kind": "HookedDagger",
+        "kind": "Codex",
         "cursed": true
       },
       {

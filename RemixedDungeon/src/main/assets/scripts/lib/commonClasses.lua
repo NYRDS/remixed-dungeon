@@ -513,6 +513,11 @@ local RPD = {
 
     lua2json = function(entity)
         return json.encode({data = entity})
+    end,
+
+    oneOf = function(items)
+        local randomIndex = math.random(#items)
+        return items[randomIndex]
     end
 }
 
