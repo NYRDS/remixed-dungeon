@@ -91,7 +91,7 @@ public class DungeonGenerator {
 		if (Util.isDebug() && !ModdingMode.inMod()) {
 			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon_debug.json");
 		} else {
-			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon_debug.json");
+			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon.json");
 		}
 
 		if (Dungeon.isChallenged(Challenges.NO_TOWN) && !ModdingMode.inMod()) {
