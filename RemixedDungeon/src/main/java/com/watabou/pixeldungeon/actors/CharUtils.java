@@ -26,6 +26,8 @@ import com.nyrds.pixeldungeon.ml.actions.Taunt;
 import com.nyrds.pixeldungeon.ml.actions.Unlock;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.windows.HBox;
+import com.nyrds.pixeldungeon.windows.VHBox;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
@@ -48,8 +50,11 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndInfoMob;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -382,5 +387,31 @@ public class CharUtils {
         }
 
         return CharsList.DUMMY;
+    }
+
+    @NonNull
+    public static VHBox makeActionsBlock(final Window parentWindow, Char mob, @NonNull Char selector) {
+
+        VHBox actions = new VHBox(parentWindow.getWidth() - 2* Window.GAP);
+        actions.setAlign(HBox.Align.Width);
+        actions.setGap(Window.GAP);
+
+        if (selector.isAlive()) {
+
+            for (final String action: actions(mob, selector)) {
+
+                RedButton btn = new RedButton(StringsManager.maybeId(action)) {
+                    @Override
+                    protected void onClick() {
+                        execute(mob, selector, action);
+                        parentWindow.hide();
+                    }
+                };
+                btn.setSize( Math.max(36, btn.reqWidth() ), Window.BUTTON_HEIGHT );
+
+                actions.add(btn);
+            }
+        }
+        return actions;
     }
 }

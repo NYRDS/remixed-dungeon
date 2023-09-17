@@ -15,21 +15,24 @@ import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.utils.Signal;
 
+import lombok.Getter;
 
 
 public class Window extends Group implements Signal.Listener<Key>, IWindow {
 
 	public static final    int GAP           = 2;
-	protected static final int MARGIN        = 4;
-	protected static final int BUTTON_HEIGHT = 18;
-	protected static final int STD_WIDTH     = 120;
+	public static final int MARGIN         = 4;
+	public  static final int BUTTON_HEIGHT = 18;
+	public static final int STD_WIDTH     = 120;
 
 	protected static final int STD_WIDTH_P = 120;
 	protected static final int STD_WIDTH_L = 160;
 
 	protected static final int WINDOW_MARGIN = 10;
 
+	@Getter
 	protected int width;
+	@Getter
 	protected int height;
 
 	protected NinePatch chrome;
