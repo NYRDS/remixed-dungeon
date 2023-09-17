@@ -13,10 +13,7 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 
 public class WndChar extends WndTabbed {
 	public static final int WIDTH		= 100;
-	private static final int TAB_WIDTH	= 50;
-	
-	private StatsTab stats;
-	private BuffsTab buffs;
+	private static final int TAB_WIDTH	= 33;
 
 	private TextureFilm film;
 	
@@ -26,19 +23,30 @@ public class WndChar extends WndTabbed {
 
 		SmartTexture icons = TextureCache.get(Assets.BUFFS_LARGE);
 		film = new TextureFilm(icons, 16, 16 );
-		
-		stats = new StatsTab(chr);
+
+		var desc = new CharDescTab(chr);
+		add(desc);
+
+		var stats = new StatsTab(chr);
 		add( stats );
 		
-		buffs = new BuffsTab(chr);
+		var buffs = new BuffsTab(chr);
 		add( buffs );
 
-        add( new LabeledTab( this, StringsManager.getVar(R.string.WndHero_Stats)) {
+		add( new LabeledTab( this, "Desc") {
+			public void select( boolean value ) {
+				super.select( value );
+				desc.setVisible(desc.setActive(selected));
+			}
+		} );
+
+		add( new LabeledTab( this, StringsManager.getVar(R.string.WndHero_Stats)) {
 			public void select( boolean value ) {
 				super.select( value );
 				stats.setVisible(stats.setActive(selected));
 			}
 		} );
+
         add( new LabeledTab( this, StringsManager.getVar(R.string.WndHero_Buffs)) {
 			public void select( boolean value ) {
 				super.select( value );

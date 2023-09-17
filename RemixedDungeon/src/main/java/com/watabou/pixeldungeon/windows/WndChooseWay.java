@@ -57,29 +57,7 @@ public class WndChooseWay extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 
-		Highlighter hl = new Highlighter( getWayDesc(way1, way2) );
-		
-		Text normal = PixelScene.createMultiline( hl.text, GuiProperties.regularFontSize() );
-		if (hl.isHighlighted()) {
-			normal.mask = hl.inverted();
-		}
-		normal.maxWidth(WIDTH);
-		normal.setX(titlebar.left());
-		normal.setY(titlebar.bottom() + GAP);
-		add( normal );
-		
-		if (hl.isHighlighted()) {
-			
-			Text highlighted = PixelScene.createMultiline( hl.text, GuiProperties.regularFontSize() );
-			highlighted.mask = hl.mask;
-			
-			highlighted.maxWidth(normal.getMaxWidth());
-			highlighted.setX(normal.getX());
-			highlighted.setY(normal.getY());
-			add( highlighted );
-	
-			highlighted.hardlight( TITLE_COLOR );
-		}
+		Text normal = Highlighter.addHilightedText(titlebar.left(), titlebar.bottom() +  GAP, width,this,  getWayDesc(way1, way2) );
 
 		RedButton btnWay1 = new RedButton( Utils.capitalize( way1.title() ) ) {
 			@Override

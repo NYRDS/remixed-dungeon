@@ -1,5 +1,11 @@
 package com.watabou.pixeldungeon.ui;
 
+import androidx.annotation.NonNull;
+
+import com.nyrds.util.GuiProperties;
+import com.watabou.noosa.Group;
+import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.regex.Matcher;
@@ -42,6 +48,33 @@ public class Highlighter {
         m.appendTail( sb );
 
         this.text = sb.toString();
+    }
+
+    @NonNull
+    public static Text addHilightedText(float x, float y, int maxWidth, Group parent, String message) {
+        Highlighter hl = new Highlighter(message);
+
+        Text normal = PixelScene.createMultiline(hl.text, GuiProperties.regularFontSize());
+        if (hl.isHighlighted()) {
+            normal.mask = hl.inverted();
+        }
+
+        normal.maxWidth(maxWidth);
+        normal.setX(x);
+        normal.setY(y);
+        parent.add(normal);
+
+        if (hl.isHighlighted()) {
+            Text highlighted = PixelScene.createMultiline(hl.text, GuiProperties.regularFontSize());
+            highlighted.mask = hl.mask;
+            highlighted.maxWidth(normal.getMaxWidth());
+            highlighted.setX(normal.getX());
+            highlighted.setY(normal.getY());
+            parent.add(highlighted);
+
+            highlighted.hardlight(Window.TITLE_COLOR);
+        }
+        return normal;
     }
 
     public boolean[] inverted() {
