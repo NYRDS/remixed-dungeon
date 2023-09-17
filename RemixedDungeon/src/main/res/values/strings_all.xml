@@ -973,6 +973,9 @@
   <string name="HeroClass_Rog">rogue</string>
   <string name="HeroClass_Hun">huntress</string>
   <string name="HeroClass_Elf">elf</string>
+  <string name="HeroClass_None">commoner</string>
+  <string name="HeroSubClass_NameNone">none</string>
+  <string name="HeroSubClass_DescNone"></string>
   <string name="HeroSubClass_NameGlad">gladiator</string>
   <string name="HeroSubClass_DescGlad">A successful attack with a melee weapon allows the _Gladiator_ to start a combo, in which every next successful hit inflicts more damage.</string>
   <string name="HeroSubClass_NameBers">berserker</string>

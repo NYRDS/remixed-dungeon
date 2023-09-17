@@ -52,7 +52,7 @@ import lombok.SneakyThrows;
 
 public enum HeroSubClass implements CharModifier {
 
-	NONE( null, null,"ClassArmor"),
+	NONE( R.string.HeroSubClass_NameNone, R.string.HeroSubClass_DescNone,"ClassArmor"),
 	GLADIATOR( R.string.HeroSubClass_NameGlad,   R.string.HeroSubClass_DescGlad, "GladiatorArmor"),
 	BERSERKER( R.string.HeroSubClass_NameBers,   R.string.HeroSubClass_DescBers, "BerserkArmor"),
 	WARLOCK(   R.string.HeroSubClass_NameWarL,   R.string.HeroSubClass_DescWarL, "WarlockArmor"),

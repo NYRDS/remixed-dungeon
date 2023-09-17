@@ -69,11 +69,13 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     @Override
     public String name() {
         String id = getEntityKind() + "Buff_Name";
+        /*
         if(Util.isDebug()) {
             if(StringsManager.getVar(id).equals(Utils.EMPTY_STRING)) {
                 throw new TrackedRuntimeException(Utils.format("missing Buff_Name for %s", getEntityKind()));
             }
         }
+         */
         return StringsManager.maybeId(id);
     }
 
