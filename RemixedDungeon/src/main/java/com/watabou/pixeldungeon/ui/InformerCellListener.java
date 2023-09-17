@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.windows.WndHero;
+import com.watabou.pixeldungeon.windows.WndChar;
 import com.watabou.pixeldungeon.windows.WndInfoCell;
 import com.watabou.pixeldungeon.windows.WndInfoItem;
 import com.watabou.pixeldungeon.windows.WndInfoMob;
@@ -40,7 +40,7 @@ class InformerCellListener implements CellSelector.Listener {
         }
 
         if (cell == Dungeon.hero.getPos()) {
-            GameScene.show(new WndHero());
+            GameScene.show(new WndChar(Dungeon.hero));
             return;
         }
 

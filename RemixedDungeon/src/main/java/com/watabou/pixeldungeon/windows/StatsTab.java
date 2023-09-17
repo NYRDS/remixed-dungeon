@@ -23,10 +23,7 @@ class StatsTab extends Group {
 
     private float pos;
 
-    public StatsTab(WndHero wndHero) {
-
-        final Char chr = Dungeon.hero;
-
+    public StatsTab(final Char chr) {
         Text title = PixelScene.createText(
                 Utils.format(R.string.WndHero_StaTitle, chr.lvl(), chr.className()).toUpperCase(), GuiProperties.titleFontSize());
         title.hardlight(Window.TITLE_COLOR);
@@ -35,7 +32,7 @@ class StatsTab extends Group {
         RedButton btnCatalogus = new RedButton(R.string.WndHero_StaCatalogus) {
             @Override
             protected void onClick() {
-                wndHero.hide();
+                ((Window)getParent()).hide();
                 GameScene.show(new WndCatalogus());
             }
         };
@@ -45,7 +42,7 @@ class StatsTab extends Group {
         RedButton btnJournal = new RedButton(R.string.WndHero_StaJournal) {
             @Override
             protected void onClick() {
-                wndHero.hide();
+                ((Window)getParent()).hide();
                 GameScene.show(new WndJournal());
             }
         };
@@ -95,7 +92,7 @@ class StatsTab extends Group {
         add(txt);
 
         txt = PixelScene.createText(value, GuiProperties.regularFontSize());
-        txt.setX(PixelScene.align(WndHero.WIDTH * 0.65f));
+        txt.setX(PixelScene.align(WndChar.WIDTH * 0.65f));
         txt.setY(pos);
         add(txt);
 

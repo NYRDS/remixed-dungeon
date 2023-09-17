@@ -42,7 +42,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.pixeldungeon.windows.WndHats;
-import com.watabou.pixeldungeon.windows.WndHero;
+import com.watabou.pixeldungeon.windows.WndChar;
 
 public class StatusPane extends Component {
 
@@ -97,7 +97,7 @@ public class StatusPane extends Component {
                 if (!sprite.isVisible()) {
                     Camera.main.focusOn(sprite);
                 }
-                GameScene.show(new WndHero());
+                GameScene.show(new WndChar(Dungeon.hero));
             }
         });
 

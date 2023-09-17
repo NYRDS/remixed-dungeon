@@ -23,10 +23,11 @@ import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.windows.elements.LabeledTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
-public class WndHero extends WndTabbed {
+public class WndChar extends WndTabbed {
 	public static final int WIDTH		= 100;
 	private static final int TAB_WIDTH	= 50;
 	
@@ -35,17 +36,17 @@ public class WndHero extends WndTabbed {
 
 	private TextureFilm film;
 	
-	public WndHero() {
+	public WndChar(final Char chr) {
 		
 		super();
 
 		SmartTexture icons = TextureCache.get(Assets.BUFFS_LARGE);
 		film = new TextureFilm(icons, 16, 16 );
 		
-		stats = new StatsTab(this);
+		stats = new StatsTab(chr);
 		add( stats );
 		
-		buffs = new BuffsTab();
+		buffs = new BuffsTab(chr);
 		add( buffs );
 
         add( new LabeledTab( this, StringsManager.getVar(R.string.WndHero_Stats)) {
@@ -60,6 +61,7 @@ public class WndHero extends WndTabbed {
 				buffs.setVisible(buffs.setActive(selected));
 			}
 		} );
+
 		for (Tab tab : tabs) {
 			tab.setSize( TAB_WIDTH, tabHeight() );
 		}
