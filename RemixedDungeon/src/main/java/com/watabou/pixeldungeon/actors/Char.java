@@ -1011,7 +1011,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             return;
         }
 
-        if (hasBuff(Vertigo.class) && level().adjacent(getPos(), step)) { //ignore vertigo when blinking or teleporting
+        if (hasBuff(BuffFactory.VERTIGO) && level().adjacent(getPos(), step)) { //ignore vertigo when blinking or teleporting
 
             List<Integer> candidates = new ArrayList<>();
             for (int dir : Level.NEIGHBOURS8) {

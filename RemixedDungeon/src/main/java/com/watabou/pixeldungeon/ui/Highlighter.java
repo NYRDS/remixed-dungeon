@@ -74,6 +74,8 @@ public class Highlighter {
 
             highlighted.hardlight(Window.TITLE_COLOR);
         }
+
+
         return normal;
     }
 

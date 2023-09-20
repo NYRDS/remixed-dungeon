@@ -4,6 +4,7 @@ package com.watabou.pixeldungeon.windows;
 
 import static com.watabou.pixeldungeon.ui.Window.GAP;
 import static com.watabou.pixeldungeon.ui.Window.MARGIN;
+import static com.watabou.pixeldungeon.ui.Window.STD_WIDTH;
 
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
@@ -23,19 +24,21 @@ public class CharDescTab extends TabContent {
 	public CharDescTab(Char mob) {
 
 		VBox mainBox = new VBox();
+		mainBox.setGap(2);
 
 		var charTitle = new CharTitle( mob );
 		charTitle.setPos(MARGIN,MARGIN);
 
 		mainBox.add(charTitle);
 
-		Highlighter.addHilightedText(charTitle.left(), charTitle.bottom() +  GAP, (int) width, mainBox, desc( mob, true ));
+		Highlighter.addHilightedText(0, 0, STD_WIDTH, mainBox, desc( mob, true ));
 
 		VHBox actions = CharUtils.makeActionsBlock(new Window(), mob, mob);
 
 		mainBox.add(actions);
 
 		mainBox.setPos(MARGIN,MARGIN);
+
 		add(mainBox);
 	}
 

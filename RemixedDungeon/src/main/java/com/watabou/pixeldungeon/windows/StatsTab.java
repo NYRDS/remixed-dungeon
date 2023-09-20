@@ -16,8 +16,10 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.elements.Tab;
+import com.watabou.pixeldungeon.windows.elements.TabContent;
 
-class StatsTab extends Group {
+class StatsTab extends TabContent {
 
     private static final int GAP = 2;
 
