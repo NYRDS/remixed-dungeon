@@ -214,7 +214,7 @@ public abstract class Mob extends Char {
             return true;
         }
 
-        if (Random.Float() < 0.01 / lvl()) {
+        if (Random.Float() < 0.01 / lvl() && ! level().isSafe()) {
             lvl(lvl() + 1);
 
             ht((int) (ht() + GameLoop.getDifficultyFactor() * 2));
