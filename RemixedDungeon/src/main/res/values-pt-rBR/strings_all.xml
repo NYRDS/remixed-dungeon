@@ -1240,7 +1240,7 @@
   <string name="Goo_Name">Goo</string>
   <string name="Goo_Gender">feminino</string>
   <string name="Goo_Name_Objective">Goo</string>
-  <string name="Goo_Desc">Há pouco conhecimento sobre o Goo. É bem possível que ele não seja nem mesmo uma criatura, mas sim um conglomerado de substâncias provenientes dos esgotos que ganharam rudimentos de livre-arbítrio.</string>
+  <string name="Goo_Desc">Há pouco conhecimento sobre o Goo. É bem possível que ele não seja nem mesmo uma criatura, mas sim um conglomerado de substâncias provenientes dos esgotos que ganharam rudimentos de livre-arbítrio. De qualquer das formas, é óbvio que a magia negra está trabalhando aqui.</string>
   <string name="Goo_Info1">Goo está se bombeando para cima!</string>
   <string name="Goo_Info2">glurp... glurp...</string>
   <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -1660,7 +1660,7 @@
   <string name="ServiceManNPC_Desc">Um trabalhador regular do estabelecimento local.</string>
   <string name="TownShopkeeper_Name">comerciante</string>
   <string name="TownShopkeeper_Desc">Este homem é um comerciante típico. Pode se dizer que ele já sabe o seu preço.</string>
-  <string name="WndMovieTheatre_Watch">Assistir um filme</string>
+  <string name="WndMovieTheatre_Watch">assista a um anúncio</string>
   <string name="WndMovieTheatre_No">sair</string>
   <string name="WndMovieTheatre_Bye">Volte a qualquer hora, nós estamos sempre felizes em vê-lo!</string>
   <string name="WndMovieTheatre_Instruction">Saudações e bem-vindo ao nosso cinema! Nós fornecemos um serviço especial, onde você pode assistir a um filme de graça. E se você assisti-lo todo, você será recompensado com %d moedas de ouro!</string>
@@ -2849,6 +2849,7 @@ remix.31.0\n
   <string name="Facilitations_Descriptions_3">Apertando o cinto feito de pele de ogro, que foi passado a cada nova geração, você dá um passo em direção ao desconhecido que está por vir.</string>
   <string name="Challenges_Descriptions_0">A comida e a água haviam apodrecido há muito tempo, levando todos os aventureiros à loucura de pensamentos de morte por medo e fome. Sua dieta pode ajudá-lo a durar o suficiente?</string>
   <string name="Challenges_Descriptions_1">O ataque de alguém é a melhor defesa. Seguindo esses ensinamentos, você se aventura na masmorra, sendo a fé a guardiã mais forte do seu corpo.</string>
+  <string name="Challenges_Descriptions_2">Como adepto da regeneração natural do corpo humano, você sempre foi cauteloso com poções que possuem propriedades curativas. Melhor prevenir do que remediar!</string>
   <string name="Challenges_Descriptions_3">As terras ao redor da masmorra estão há muito infectadas pela malícia, impedindo o crescimento de sementes de várias ervas e plantas. Quem sabe quanto tempo levará até que a última planta deixe de existir nestas terras áridas.</string>
   <string name="Challenges_Descriptions_4">Uma presença maligna está à espreita entre as mentes de todas as criaturas da masmorra, tornando-as cientes dos eventos que ocorrem umas com as outras.</string>
   <string name="Challenges_Descriptions_5">A primeira coisa que veio com o mal, foi uma névoa densa e impenetrável, o que torna quase impossível navegar claramente pelos intermináveis corredores da masmorra.</string>
@@ -2870,4 +2871,11 @@ remix.31.1\n
   <string name="WndTilesKind_ClassicLook">Visual Clássico</string>
   <string name="MobAi_status">Este %s é %s</string>
   <string name="WndCustomizations_Title">Personalizações</string>
+  <string name="IceGuardianCore_DieInfo">Está tão frio aqui, é melhor eu voltar para o nível 14 e tentar encontrar um caminho para um lugar mais quente.</string>
+  <string name="Lich_DieInfo">Eu nunca gostei deste Necromante. Portanto é hora de retornar para o nível 7 e encontrar outro caminho para a nova aventura.</string>
+  <string name="SpiderQueen_DieInfo">A Aranha Rainha foi morta! Agora eu devo voltar para o nível 5 e continuar a minha jornada para as Profundezas.</string>
+  <string name="WndModSelect_ReallyDelete">Realmente eliminar?</string>
+  <string name="WndModSelect_AreYouSure">Eliminando mod: %s, tem a certeza?</string>
+  <string name="Challenges_Names_8">Sem cidade</string>
+  <string name="Challenges_Descriptions_8">A sua jornada irá começar nos esgotos escuros e perigosos da cidade, com o único caminho à superfície bloqueado. Para piorar as coisas, você apenas poderá usar os equipamentos que você encontrar dentro da masmorra. Com recursos e equipamentos limitados, a sua sobrevivência dependerá das suas habilidades e estratégia.</string>
 </resources>
