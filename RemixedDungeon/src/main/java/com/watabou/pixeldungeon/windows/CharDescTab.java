@@ -11,7 +11,9 @@ import com.nyrds.pixeldungeon.windows.VHBox;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.actors.Char;
 
+
 import com.watabou.pixeldungeon.actors.CharUtils;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.ui.Highlighter;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -24,19 +26,20 @@ public class CharDescTab extends TabContent {
 	public CharDescTab(Char mob) {
 
 		VBox mainBox = new VBox();
-		mainBox.setGap(2);
+		mainBox.setGap(8);
 
 		var charTitle = new CharTitle( mob );
 		charTitle.setPos(MARGIN,MARGIN);
+		charTitle.setSize(STD_WIDTH - MARGIN*3, 0);
 
 		mainBox.add(charTitle);
 
 		Highlighter.addHilightedText(0, 0, STD_WIDTH, mainBox, desc( mob, true ));
 
-		VHBox actions = CharUtils.makeActionsBlock(new Window(), mob, mob);
-
-		mainBox.add(actions);
-
+		if(mob instanceof Mob) {
+			VHBox actions = CharUtils.makeActionsBlock(new Window(), mob, mob);
+			mainBox.add(actions);
+		}
 		mainBox.setPos(MARGIN,MARGIN);
 
 		add(mainBox);

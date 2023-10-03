@@ -59,7 +59,7 @@ public class CharTitle extends Component {
         name.setX(x);
         name.setY(image.visualHeight() - BAR_HEIGHT - Window.GAP - name.baseLine());
 
-        float w = width - image.visualWidth() - Window.GAP;
+        float w = width - image.width() - image.x - Window.GAP;
 
         hpBg.size(w, BAR_HEIGHT);
         hpLvl.size(w * hp, BAR_HEIGHT);
