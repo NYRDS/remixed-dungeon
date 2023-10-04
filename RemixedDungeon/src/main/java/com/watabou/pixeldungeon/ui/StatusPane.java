@@ -81,7 +81,7 @@ public class StatusPane extends Component {
                 if (!sprite.isVisible()) {
                     Camera.main.focusOn(sprite);
                 }
-                GameScene.show(new WndChar(Dungeon.hero));
+                GameScene.show(new WndChar(hero, hero));
             }
         });
 

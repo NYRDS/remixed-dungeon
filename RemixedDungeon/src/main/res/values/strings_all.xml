@@ -2890,5 +2890,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="EncumbranceBuff_CharAct_3">I need to work on my strength before I can use %s.</string>
   <string name="EncumbranceBuff_CharAct_4">I lack the strength to use %s to its full potential."</string>
   <string name="EncumbranceBuff_CharAct_5">%s is too much for me to handle right now.</string>
-
+    <string name="Typical_Damage">Typical damage</string>
+    <string name="Damage_Reduction">Damage reduction</string>
+    <string name="Attack_Range">Attack range</string>
+  <string name="Movement_Speed">Movement speed</string>
+  <string name="Attack_Cooldown">Attack cooldown</string>
+  <string name="View_Distance">View distance</string>
 </resources>

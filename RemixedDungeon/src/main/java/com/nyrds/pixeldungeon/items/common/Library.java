@@ -14,8 +14,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndChar;
 import com.watabou.pixeldungeon.windows.WndInfoItem;
-import com.watabou.pixeldungeon.windows.WndInfoMob;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -157,7 +157,8 @@ public class Library {
 		}
 
 		if(category.equals(MOB)) {
-			return new WndInfoMob(MobFactory.mobByName(clazz), getKnowledgeLevel(category, clazz));
+			var mob = MobFactory.mobByName(clazz);
+			return new WndChar(mob, mob);
 		}
 		throw new TrackedRuntimeException("unknown category: "+category);
 	}

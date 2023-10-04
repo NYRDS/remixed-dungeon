@@ -118,7 +118,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @Getter
     @NotNull
     protected LuaScript script = new LuaScript(DEFAULT_MOB_SCRIPT, this);
-    protected int baseStr;
+    protected int baseStr = 10;
     protected int attackRange = 1;
 
 
@@ -1963,7 +1963,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     @LuaInterface
-    int getAttackRange() {
+    public int getAttackRange() {
         return Math.max(attackRange, getBelongings().getItemFromSlot(Belongings.Slot.WEAPON).range());
     }
 

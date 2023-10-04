@@ -31,41 +31,74 @@ class StatsTab extends TabContent {
         title.hardlight(Window.TITLE_COLOR);
         add(title);
 
-        RedButton btnCatalogus = new RedButton(R.string.WndHero_StaCatalogus) {
-            @Override
-            protected void onClick() {
-                ((Window)getParent()).hide();
-                GameScene.show(new WndCatalogus());
-            }
-        };
-        btnCatalogus.setRect(0, title.getY() + title.height(), btnCatalogus.reqWidth() + 2, btnCatalogus.reqHeight() + 2);
-        add(btnCatalogus);
+        if (chr instanceof Hero) {
+            RedButton btnCatalogus = new RedButton(R.string.WndHero_StaCatalogus) {
+                @Override
+                protected void onClick() {
+                    ((Window) getParent()).hide();
+                    GameScene.show(new WndCatalogus());
+                }
+            };
+            btnCatalogus.setRect(0, title.getY() + title.height(), btnCatalogus.reqWidth() + 2, btnCatalogus.reqHeight() + 2);
+            add(btnCatalogus);
 
-        RedButton btnJournal = new RedButton(R.string.WndHero_StaJournal) {
-            @Override
-            protected void onClick() {
-                ((Window)getParent()).hide();
-                GameScene.show(new WndJournal());
-            }
-        };
-        btnJournal.setRect(
-                btnCatalogus.right() + 1, btnCatalogus.top(),
-                btnJournal.reqWidth() + 2, btnJournal.reqHeight() + 2);
-        add(btnJournal);
+            RedButton btnJournal = new RedButton(R.string.WndHero_StaJournal) {
+                @Override
+                protected void onClick() {
+                    ((Window) getParent()).hide();
+                    GameScene.show(new WndJournal());
+                }
+            };
+            btnJournal.setRect(
+                    btnCatalogus.right() + 1, btnCatalogus.top(),
+                    btnJournal.reqWidth() + 2, btnJournal.reqHeight() + 2);
+            add(btnJournal);
 
-        pos = btnCatalogus.bottom() + GAP;
+            pos = btnCatalogus.bottom() + GAP;
+        }   else {
+            pos = title.bottom() + GAP;
+        }
 
         statSlot(StringsManager.getVar(R.string.WndHero_Health), chr.hp() + "/" + chr.ht());
         statSlot(StringsManager.getVar(R.string.Mana_Title), chr.getSkillPoints() + "/" + chr.getSkillPointsMax());
 
-        Hunger hunger = chr.hunger();
+        int dmgMin = Integer.MAX_VALUE, dmgMax = 0;
+        int drMin = Integer.MAX_VALUE, drMax = 0;
 
-        statSlot(StringsManager.getVar(R.string.WndHero_Satiety),
-                Utils.EMPTY_STRING + ((int) ((Hunger.STARVING - hunger.getHungerLevel()) / Hunger.STARVING * 100)) + "%");
+        for (int i =0;i<100;i++) {
+            int dmg = chr.damageRoll();
+            if (dmg < dmgMin) {
+                dmgMin = dmg;
+            }
+            if (dmg > dmgMax) {
+                dmgMax = dmg;
+            }
 
-        statSlot(StringsManager.getVar(R.string.WndHero_Stealth), chr.stealth());
+            int dr = chr.defenceRoll(CharsList.DUMMY);
+            if (dr < drMin) {
+                drMin = dr;
+            }
+            if (dr > drMax) {
+                drMax = dr;
+            }
+        }
+
+        statSlot(StringsManager.getVar(R.string.Typical_Damage), Utils.format("%d - %d", dmgMin, dmgMax));
+        statSlot(StringsManager.getVar(R.string.Damage_Reduction), Utils.format("%d - %d", drMin, drMax));
+        statSlot(StringsManager.getVar(R.string.Movement_Speed), Utils.format("%3.2f%%" ,chr.speed()*100));
+        statSlot(StringsManager.getVar(R.string.Attack_Cooldown), Utils.format("%3.2f" ,chr.attackDelay()));
+        statSlot(StringsManager.getVar(R.string.Attack_Range), Utils.EMPTY_STRING + chr.getAttackRange());
+        statSlot(StringsManager.getVar(R.string.View_Distance), Utils.EMPTY_STRING + chr.getViewDistance());
+
 
         if(chr instanceof Hero) {
+            Hunger hunger = chr.hunger();
+
+            statSlot(StringsManager.getVar(R.string.WndHero_Satiety),
+                    Utils.EMPTY_STRING + ((int) ((Hunger.STARVING - hunger.getHungerLevel()) / Hunger.STARVING * 100)) + "%");
+
+            statSlot(StringsManager.getVar(R.string.WndHero_Stealth), chr.stealth());
+
             Hero hero = ((Hero) chr);
             statSlot(StringsManager.getVar(R.string.WndHero_Awareness), Utils.EMPTY_STRING + (hero.getAwareness() * 100) + "%");
         }
@@ -79,10 +112,6 @@ class StatsTab extends TabContent {
         pos += GAP;
         statSlot(StringsManager.getVar(R.string.WndHero_Str), chr.effectiveSTR());
         statSlot(StringsManager.getVar(R.string.WndHero_SkillLevel), chr.skillLevel());
-
-        statSlot(StringsManager.getVar(R.string.WndHero_Gold), Statistics.goldCollected);
-        statSlot(StringsManager.getVar(R.string.WndHero_Depth), Statistics.deepestFloor);
-
 
         pos += GAP;
     }

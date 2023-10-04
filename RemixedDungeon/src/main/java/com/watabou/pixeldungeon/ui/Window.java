@@ -8,6 +8,7 @@ import com.nyrds.platform.input.Keys;
 import com.nyrds.platform.input.Keys.Key;
 import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.TouchArea;
@@ -155,6 +156,19 @@ public class Window extends Group implements Signal.Listener<Key>, IWindow {
 
 	protected void resizeLimited(int wLimit) {
 		resize(WndHelper.getLimitedWidth(wLimit),WndHelper.getFullscreenHeight());
+	}
+
+	static public Window getParentWindow(Gizmo child) {
+		var parent = child.getParent();
+		if (parent == null) {
+			return null;
+		}
+
+		if (parent instanceof Window) {
+			return (Window) parent;
+		}
+
+		return getParentWindow(parent);
 	}
 
 }

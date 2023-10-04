@@ -54,7 +54,6 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndInfoMob;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -390,9 +389,9 @@ public class CharUtils {
     }
 
     @NonNull
-    public static VHBox makeActionsBlock(final Window parentWindow, Char mob, @NonNull Char selector) {
+    public static VHBox makeActionsBlock(int maxWidth, Char mob, @NonNull Char selector) {
 
-        VHBox actions = new VHBox(parentWindow.getWidth() - 2* Window.GAP);
+        VHBox actions = new VHBox(maxWidth - 2* Window.GAP);
         actions.setAlign(HBox.Align.Width);
         actions.setGap(Window.GAP);
 
@@ -404,7 +403,10 @@ public class CharUtils {
                     @Override
                     protected void onClick() {
                         execute(mob, selector, action);
-                        parentWindow.hide();
+                        var parentWindow = Window.getParentWindow(this);
+                        if(parentWindow != null) {
+                            parentWindow.hide();
+                        }
                     }
                 };
                 btn.setSize( Math.max(36, btn.reqWidth() ), Window.BUTTON_HEIGHT );

@@ -14,7 +14,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndChar;
 import com.watabou.pixeldungeon.windows.WndInfoCell;
 import com.watabou.pixeldungeon.windows.WndInfoItem;
-import com.watabou.pixeldungeon.windows.WndInfoMob;
 import com.watabou.pixeldungeon.windows.WndMessage;
 
 import org.jetbrains.annotations.NotNull;
@@ -40,13 +39,13 @@ class InformerCellListener implements CellSelector.Listener {
         }
 
         if (cell == Dungeon.hero.getPos()) {
-            GameScene.show(new WndChar(Dungeon.hero));
+            GameScene.show(new WndChar(Dungeon.hero, Dungeon.hero));
             return;
         }
 
         Mob mob = (Mob) Actor.findChar(cell);
         if (mob != null) {
-            GameScene.show(new WndInfoMob(mob, selector));
+            GameScene.show(new WndChar(mob, selector));
             return;
         }
 

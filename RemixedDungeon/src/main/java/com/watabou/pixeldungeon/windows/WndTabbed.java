@@ -5,6 +5,7 @@ import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.elements.Tab;
+import com.watabou.pixeldungeon.windows.elements.TabContent;
 
 import java.util.ArrayList;
 
@@ -72,6 +73,12 @@ public class WndTabbed extends Window {
 
         for (Tab tab : tabs) {
             add(tab);
+        }
+
+        for (var child: members) {
+            if (child instanceof TabContent) {
+                ((TabContent) child).setMaxWidth(width);
+            }
         }
     }
 
