@@ -4,7 +4,7 @@ El terror de las alcantarillas ya no existe.
 2. Tengu fue derrotado.
 El espíritu tortuoso ya no atormentará a nadie.
 
-3. DM-300 fue derrotado.
+3. DM-300 ha sido asesinado
 Una máquina que perdió su propósito fue desactivada.
 
 4. El Rey fue derrotado.
@@ -30,3 +30,4 @@ Valor, amabilidad y un par de monedas de oro, e incluso el brutal Gnoll se unir�
 
 11. Mascarilla quirúrgica obtenida
 Usar una máscara significa que te preocupas por las demás.
+
