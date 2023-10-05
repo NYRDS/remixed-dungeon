@@ -1,20 +1,4 @@
-/*
- * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
+
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.LuaInterface;
@@ -70,7 +54,6 @@ import com.watabou.pixeldungeon.effects.BannerSprites;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.EmoIcon;
 import com.watabou.pixeldungeon.effects.Flare;
-import com.watabou.pixeldungeon.effects.FloatingText;
 import com.watabou.pixeldungeon.effects.Ripple;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.effects.SystemFloatingText;
@@ -566,6 +549,7 @@ public class GameScene extends PixelScene {
             return;
         }
 
+
         if(objectSortingRequested) {
             objects.sort();
             objectSortingRequested = false;
@@ -581,7 +565,6 @@ public class GameScene extends PixelScene {
         }
 
         if(observeRequested) {
-            observeRequested = false;
             Dungeon.observeImpl();
         }
     }
@@ -844,15 +827,18 @@ public class GameScene extends PixelScene {
 
     public static void afterObserve() {
         if (isSceneReady() && scene.sceneCreated) {
+            GameLoop.pushUiTask(() -> {
+                final Level level = Dungeon.level;
 
-            final Level level = Dungeon.level;
+                GameScene.updateMap();
+                scene.baseTiles.updateFow(scene.fog);
 
-            GameScene.updateMap();
-            scene.baseTiles.updateFow(scene.fog);
+                for (Mob mob : level.mobs) {
+                    mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
+                }
 
-            for (Mob mob : level.mobs) {
-                mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
-            }
+                observeRequested = false;
+            });
         }
     }
 
@@ -949,9 +935,9 @@ public class GameScene extends PixelScene {
 
         if(hero.valid()) {
             hero.next();
-            if (hero.curAction != null || hero.restoreHealth) {
+            if (hero.getCurAction() != null || hero.restoreHealth) {
 
-                hero.curAction = null;
+                hero.setCurAction(null);
                 hero.restoreHealth = false;
                 return true;
             } else {

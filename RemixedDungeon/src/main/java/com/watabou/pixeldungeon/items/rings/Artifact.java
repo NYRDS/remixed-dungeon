@@ -34,7 +34,7 @@ public class Artifact extends EquipableItem {
 	}
 
 	@Nullable
-	protected ArtifactBuff buff() {
+	public ArtifactBuff buff() {
 		return null;
 	}
 

@@ -22,7 +22,7 @@ public class HeartOfDarkness extends Artifact {
 	}
 
 	@Override
-	protected ArtifactBuff buff() {
+	public ArtifactBuff buff() {
 		return new HeartOfDarknessBuff();
 	}
 

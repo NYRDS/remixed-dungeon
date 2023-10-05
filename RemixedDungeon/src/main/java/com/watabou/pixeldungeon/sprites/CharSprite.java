@@ -1,20 +1,4 @@
-/*
- * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
+
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.LuaInterface;
@@ -57,7 +41,9 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 import lombok.val;
 
@@ -101,6 +87,8 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     protected Animation operate;
     protected Animation zap;
     protected Animation die;
+
+    protected Map<String,Animation> extras = new HashMap<>();
 
     private Callback animCallback;
 
@@ -183,6 +171,12 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     public void showStatus(int color, String text, Object... args) {
         showStatus(color, Utils.format(text, args));
+    }
+
+    public void playExtra(String key) {
+        if (extras.containsKey(key)) {
+            play(extras.get(key));
+        }
     }
 
     public void idle() {
@@ -422,8 +416,15 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                     levitation = null;
                 }
                 break;
-            case INVISIBLE:
-                alpha(1f);
+            case INVISIBLE: {
+                float alpha = 1.0f;
+
+                if (hasParent()) {
+                    GameScene.addToMobLayer(new AlphaTweener(this, alpha, 0.4f));
+                } else {
+                    alpha(alpha);
+                }
+            }
                 break;
             case PARALYSED:
                 paused = false;
@@ -444,7 +445,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public boolean doingSomething() {
-        return (curAnim != null && curAnim != idle && curAnim != run && curAnim != die) || isMoving;
+        return ((curAnim != null) && (curAnim == attack || curAnim == operate || curAnim == zap)) || isMoving;
     }
 
     @Override
@@ -579,24 +580,30 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 animCallback = null;
                 callback.call();
             } else {
-                if (anim == attack) {
-                    if(!realtime) {
-                        chr.onAttackComplete();
+                if (anim!=idle) {
+                    if(Dungeon.isCellVisible(chr.getPos())) {
+                        idle();
                     }
-                    idle();
-                    return;
-                } else if (anim == zap) {
-                    if(!realtime) {
-                        chr.onZapComplete();
+
+                    if (anim == attack) {
+                        if (!realtime) {
+                            chr.onAttackComplete();
+                        }
+                        resetIfNotDying();
+                        return;
+                    } else if (anim == zap) {
+                        if (!realtime) {
+                            chr.onZapComplete();
+                        }
+                        resetIfNotDying();
+                        return;
+                    } else if (anim == operate) {
+                        if (!realtime) {
+                            chr.onOperateComplete();
+                        }
+                        resetIfNotDying();
+                        return;
                     }
-                    idle();
-                    return;
-                } else if (anim == operate) {
-                    if(!realtime) {
-                        chr.onOperateComplete();
-                    }
-                    idle();
-                    return;
                 }
             }
 
@@ -651,6 +658,12 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         }
 
         return avatar;
+    }
+
+    private void resetIfNotDying(){
+        if(curAnim!=die) {
+            curAnim = null;
+        }
     }
 
     public void reset() {

@@ -656,6 +656,8 @@
   <string name="StartScene_Warning">Permainan kamu saat ini akan di hapus.</string>
   <string name="StartScene_Yes">Iya, mulai permainan baru</string>
   <string name="StartScene_No">tidak, kembali ke menu utama</string>
+  <string name="StartScene_Unlock">Untuk membuka kelas karakter ini, bunuh bos DM-300 dengan kelas lainnya</string>
+  <string name="StartScene_UnlockElf">Untuk membuka kelas karakter ini, bunuh bos Raja dengan kelas lainnya</string>
   <string name="StartScene_WinGame">Untuk membuka \"Tantangan\", menangkan permainan dengan karakter kelas apapun</string>
   <string name="StartScene_DifficultySelect">Pilih tujuan anda</string>
   <string name="StartScene_DifficultyEasy">Mudah (dengan iklan)</string>
@@ -1240,7 +1242,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
   <string name="Goo_Name">Lendir</string>
   <string name="Goo_Gender">feminim</string>
   <string name="Goo_Name_Objective">Lendir</string>
-  <string name="Goo_Desc">Sedikit yang diketahui tentang The Goo. Sangat mungkin bahwa itu bahkan bukan makhluk, melainkan konglomerat zat dari selokan yang memperoleh dasar-dasar kehendak bebas. Either way, itu jelas sihir gelap sedang bekerja di sini.</string>
+  <string name="Goo_Desc">Tidak banyak yang diketahui tentang Goo. Sangat mungkin bahwa ia bukanlah makhluk, melainkan gabungan zat dari saluran pembuangan yang mendapatkan dasar-dasar kehendak bebas. Apa pun itu, jelas sekali bahwa sihir gelap bekerja di sini.</string>
   <string name="Goo_Info1">Lendir sedang memompa diri!</string>
   <string name="Goo_Info2">glurp... glurp...</string>
   <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -1495,6 +1497,12 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
   <string name="Badges_DeathGlyph">Kematian dari glif</string>
   <string name="Badges_DeathFalling">Mati karena jatuh</string>
   <string name="Badges_Yasd">Mati karena api, ramuan, gas beracun &amp; kelaparan</string>
+  <string name="Badges_BossSlain1">Goo telah dibunuh</string>
+  <string name="Badges_BossSlain2">Tengu telah terbunuh</string>
+  <string name="Badges_BossSlain3">DM-300 telah dibunuh</string>
+  <string name="Badges_BossSlain4">Raja telah dibunuh </string>
+  <string name="Badges_BossSlain1All">Goo telah dibunuh oleh semua kelas</string>
+  <string name="Badges_BossSlain3All">DM-300 telah dibunuh oleh semua subkelas</string>
   <string name="Badges_RingHaggler">Mendapat Cincin Haggler</string>
   <string name="Badges_RingThorns">Mendapat Cincin Thorn</string>
   <string name="Badges_StrengthAttained1">Mendapat 13 poin kekuatan</string>
@@ -1586,6 +1594,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
   <string name="TownsfolkMovieNPC_Gender">maskulin</string>
   <string name="TownsfolkMovieNPC_Name_Objective">penduduk lokal</string>
   <string name="TownsfolkMovieNPC_Desc">Salah satu penduduk setempat. Meskipun ini jelas orang biasa, pakaian itu memang terlihat mahal.</string>
+  <string name="TownsfolkMovieNPC_Message">Apakah Anda tahu tentang layanan khusus yang disediakan oleh \"bioskop\"? Sayang sekali mereka meminta sesuatu yang eksotis yang disebut \"Internet\", saya bahkan tidak pernah mendengar tentang hal seperti itu.</string>
   <string name="LibrarianNPC_Name">pustakawan</string>
   <string name="LibrarianNPC_Gender">maskulin</string>
   <string name="LibrarianNPC_Name_Objective">pustakawan</string>
@@ -1654,10 +1663,10 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
   <string name="ServiceManNPC_Desc">Seorang pekerja tetap dari perusahaan lokal.</string>
   <string name="TownShopkeeper_Name">penjaga toko</string>
   <string name="TownShopkeeper_Desc">Orang ini adalah penjaga toko biasa. Anda dapat memberitahu dia sudah tahu harga Anda.</string>
-  <string name="WndMovieTheatre_Watch">menonton film</string>
+  <string name="WndMovieTheatre_Watch">menonton Iklan</string>
   <string name="WndMovieTheatre_No">meninggalkan</string>
   <string name="WndMovieTheatre_Bye">Kembalilah kapan saja, kami selalu senang melihat Anda!</string>
-  <string name="WndMovieTheatre_Instruction">Salam dan selamat datang di bioskop kami! Kami menyediakan layanan khusus, di mana Anda dapat menonton film secara gratis. Dan jika Anda menonton semuanya, Anda akan diberi hadiah %d koin emas!</string>
+  <string name="WndMovieTheatre_Instruction">Salam dan selamat datang di bioskop kami! Kami menyediakan layanan khusus, di mana Anda dapat menonton film khusus yang disebut iklan secara gratis. Dan jika Anda menonton sampai selesai, Anda akan mendapatkan hadiah %d koin emas!</string>
   <string name="WndMovieTheatre_Title">Bioskop</string>
   <string name="WndMovieTheatre_Thank_You">Terima kasih atas partisipasinya!</string>
   <string name="WndPriest_Heal">Sembuhkan - %d koin emas</string>
@@ -2683,6 +2692,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
   <string name="Calm_Info">Ada banyak makhluk yang diperparah di sekitar, mari kita bantu mereka.</string>
   <string name="CharmSpell_Name">Pesona</string>
   <string name="CharmSpell_Info">Setiap orang berhak mendapatkan cinta, bukan?</string>
+  <string name="HideInGrassSpell_Name">Bersembunyi di Rumput</string>
   <string name="HideInGrassSpell_Info">Anda menyempurnakan penguasaan petak umpet Anda.</string>
   <string name="HideInGrassSpell_NeedGrassToHide">Bahkan aku tidak bisa bersembunyi di depan mata.</string>
   <string name="MagicArrow_Name">Anak panah Ajaib </string>
@@ -2806,5 +2816,66 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
   <string name="MoongraceBuff_Info">Udara di sekitar menjadi lebih jenuh, yang memungkinkan konsentrasi yang lebih baik dan pemulihan cadangan magis.</string>
   <string name="EncumbranceBuff_Name">Beban</string>
   <string name="EncumbranceBuff_Info">Tidak cukup kekuatan untuk menggunakan %s secara efektif.</string>
+  <string name="Level_TileDescPedestal">Alas kecil.</string>
+  <string name="Level_TileDescWell"/>
+  <string name="Welcome_Text_31_0">
+    remix.31.0\n
+    - Gameplay:\n  
+    -- Mode Isometrik Opsional!\n 
+    - Modding:\n   
+    -- Objek Level yang dapat dimodifikasi\n 
+    - Bug diperbaiki\n</string>
+  <string name="Level_TilePileOfStones">Tumpukan Batu</string>
+  <string name="Level_TileDescPileOfStones">Tumpukan batu yang sangat berat, terlihat tidak bisa digerakkan.</string>
+  <string name="WndSettingsInGame_IsometricTiles">Ubin Isometrik</string>
+  <string name="KrampusHead_Name">Kepala Krampus</string>
+  <string name="KrampusHead_Info">Pernahkah Anda membayangkan bagaimana rasanya mengambil peran yang lebih menyeramkan saat Dungeoneering? Nah, Anda pasti akan membawa kengerian bagi bayi tikus lokal dengan penampilan seperti setan ini.</string>
+  <string name="WndSettingsInGame_GameLog">Log Permainan </string>
+  <string name="Froth_ArrowInKnee">Saya dulu adalah seorang petualang seperti Anda, \ntapi kemudian saya terkena panah di lutut...</string>
+  <string name="BardSong_1">Saya dan istri saya tinggal berdua saja, \ndi gubuk kayu kecil yang kami sebut gubuk kami sendiri. \nDia menyukai gin, dan \nsaya menyukai rum.</string>
+  <string name="SpiderElite_Name">penjaga elit laba-laba</string>
   <string name="SpiderElite_Gender">feminim</string>
+  <string name="SpiderElite_Name_Objective">penjaga elit laba-laba</string>
+  <string name="SpiderElite_Desc">Sama seperti tentara, penjaga laba-laba bersumpah untuk melindungi kerajaan mereka. Racun penjaga elit digunakan untuk membingungkan target mereka.</string>
+  <string name="Shaman_ZapMiss">* Menyebut dengan gnollish*</string>
+  <string name="Facilitations_Names_0">Tidak lapar</string>
+  <string name="Facilitations_Names_1"> tubuh Troll </string>
+  <string name="Facilitations_Names_2">Semangat Spirit</string>
+  <string name="Facilitations_Names_3">Kekuatan Raksasa</string>
+  <string name="Facilitations_Descriptions_0">Mutan selalu diperlakukan dengan jijik dan ketakutan, tetapi ketiadaan rasa lapar sekali lagi akan memberi Anda keunggulan, kali ini dalam menaklukkan kedalaman Dungeon.</string>
+  <string name="Facilitations_Descriptions_1">Masih belum diketahui siapa orang tua Anda, tetapi regenerasi alami seperti troll akan membantu memperbaiki semua bekas luka pertempuran yang akan datang.</string>
+  <string name="Facilitations_Descriptions_2">Studi yang mendalam dan menyeluruh tentang alam sebagai sumber energi akan memungkinkan Anda untuk mengisi kembali cadangan magis Anda selama perjalanan.</string>
+  <string name="Facilitations_Descriptions_3">Mengencangkan sabuk yang terbuat dari kulit raksasa, yang diwariskan kepada setiap generasi baru, Anda membuat langkah menuju hal yang tidak diketahui yang ada di depan.</string>
+  <string name="Challenges_Descriptions_0">Makanan dan air telah lama membusuk, membuat setiap petualang menjadi gila karena ketakutan dan kelaparan. Dapatkah diet Anda membantu Anda bertahan cukup lama?</string>
+  <string name="Challenges_Descriptions_1">Serangan adalah pertahanan terbaik. Mengikuti ajaran-ajaran ini, Anda menjelajah ke dalam ruang bawah tanah, dengan keyakinan sebagai penjaga terkuat tubuh Anda.</string>
+  <string name="Challenges_Descriptions_2">Sebagai penganut regenerasi alami tubuh biasa, Anda selalu rakus terhadap ramuan yang memiliki khasiat penyembuhan. Lebih baik aman daripada menyesal!</string>
+  <string name="Challenges_Descriptions_3">Tanah di sekitar penjara bawah tanah telah lama terinfeksi oleh penyakit, mencegah tumbuhnya benih untuk berbagai tumbuhan dan tanaman. Entah berapa lama waktu yang dibutuhkan sebelum tanaman terakhir tidak ada lagi di tanah tandus ini.</string>
+  <string name="Challenges_Descriptions_4">Kehadiran jahat mengintai di antara pikiran semua makhluk di Dungeon, membuat mereka sadar akan peristiwa yang terjadi satu sama lain.</string>
+  <string name="Challenges_Descriptions_5">Hal pertama yang datang bersama kejahatan, adalah kabut tebal dan tidak bisa ditembus, yang membuat hampir tidak mungkin untuk menavigasi lorong-lorong penjara bawah tanah yang tak berujung dengan jelas.</string>
+  <string name="Challenges_Descriptions_6">Seni kuno membaca rune dilarang dan dihindari dengan cara apa pun, karena kutukan yang diberikan pada setiap gulungan yang masuk ke Dungeon atau sekitarnya.</string>
+  <string name="Challenges_Descriptions_7">Anda sudah terbiasa dengan fakta bahwa kepemilikan dan penggunaan senjata secara moral tidak benar, namun apa lagi yang dapat melindungi Anda dari makhluk yang berkeliaran di bawah sana?</string>
+  <string name="ManaRegenerationBuff_Name">Regenerasi Mana</string>
+  <string name="ManaRegenerationBuff_Info">Fungsi untuk regenerasi mana dalam bentuk buff membuat segalanya lebih mudah.</string>
+  <string name="WndGame_Customizations">Penyesuaian </string>
+  <string name="Welcome_Text_31_1">
+    remix.31.1\n
+    - Gameplay:\n
+    -- Penyesuaian baru!\n
+    -- Jenis laba-laba baru !\n
+    -- Psi-Spider sekarang akan memberikan buff pada laba-laba lain alih-alih melakukan debuff pada Hero.\n
+    - Bug diperbaiki\n
+    </string>
+  <string name="WndTilesKind_Title">Satu hal lagi:</string>
+  <string name="WndTilesKind_text">Anda akan memasuki Dungeon yang dirasuki sihir jahat, namun sekarang Anda dapat memilih bagaimana Anda melihatnya: Apakah Anda ingin melihatnya dalam tampilan 3 dimensi semu modern atau tampilan datar klasik? Anda dapat mengubahnya di menu opsi permainan.</string>
+  <string name="WndTilesKind_NewLook">Tampilan Baru</string>
+  <string name="WndTilesKind_ClassicLook">Tampilan Klasik</string>
+  <string name="MobAi_status">Ini %s adalah %s</string>
+  <string name="WndCustomizations_Title">Penyesuaian </string>
+  <string name="IceGuardianCore_DieInfo">Di sini sangat dingin, lebih baik saya kembali ke level 14 dan mencoba mencari jalan ke tempat yang lebih hangat.</string>
+  <string name="Lich_DieInfo">Saya tidak pernah menyukai Necromancer ini. Jadi, sekarang saatnya untuk kembali ke level 7 dan menemukan jalan lain menuju petualangan baru.</string>
+  <string name="SpiderQueen_DieInfo">Ratu Laba-laba terbunuh! Sekarang saya harus kembali ke level 5 dan melanjutkan perjalanan ke Kedalaman.</string>
+  <string name="WndModSelect_ReallyDelete">Yakin ingin dihapus?</string>
+  <string name="WndModSelect_AreYouSure">Menghapus mod: %s, apa kau yakin?</string>
+  <string name="Challenges_Names_8">Tidak ada kota</string>
+  <string name="Challenges_Descriptions_8">Perjalanan Anda akan dimulai di gorong-gorong kota yang gelap dan berbahaya, dengan satu-satunya jalan ke permukaan yang diblokir. Lebih buruk lagi, Anda hanya dapat menggunakan peralatan yang Anda temukan di dalam Dungeon. Dengan sumber daya dan peralatan yang terbatas, kelangsungan hidup Anda akan bergantung pada keterampilan dan strategi Anda.</string>
 </resources>

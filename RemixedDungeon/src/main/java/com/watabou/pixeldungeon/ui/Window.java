@@ -1,20 +1,4 @@
-/*
- * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
+
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.windows.WndHelper;
@@ -24,6 +8,7 @@ import com.nyrds.platform.input.Keys;
 import com.nyrds.platform.input.Keys.Key;
 import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.TouchArea;
@@ -31,21 +16,24 @@ import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.utils.Signal;
 
+import lombok.Getter;
 
 
 public class Window extends Group implements Signal.Listener<Key>, IWindow {
 
 	public static final    int GAP           = 2;
-	protected static final int MARGIN        = 4;
-	protected static final int BUTTON_HEIGHT = 18;
-	protected static final int STD_WIDTH     = 120;
+	public static final int MARGIN         = 4;
+	public  static final int BUTTON_HEIGHT = 18;
+	public static final int STD_WIDTH     = 120;
 
 	protected static final int STD_WIDTH_P = 120;
 	protected static final int STD_WIDTH_L = 160;
 
 	protected static final int WINDOW_MARGIN = 10;
 
+	@Getter
 	protected int width;
+	@Getter
 	protected int height;
 
 	protected NinePatch chrome;
@@ -168,6 +156,19 @@ public class Window extends Group implements Signal.Listener<Key>, IWindow {
 
 	protected void resizeLimited(int wLimit) {
 		resize(WndHelper.getLimitedWidth(wLimit),WndHelper.getFullscreenHeight());
+	}
+
+	static public Window getParentWindow(Gizmo child) {
+		var parent = child.getParent();
+		if (parent == null) {
+			return null;
+		}
+
+		if (parent instanceof Window) {
+			return (Window) parent;
+		}
+
+		return getParentWindow(parent);
 	}
 
 }

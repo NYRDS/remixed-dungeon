@@ -61,11 +61,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange(dmgMin, dmgMax);
-	}
-
-	@Override
 	public int dr() {
 		return dr;
 	}

@@ -8,7 +8,7 @@ import com.watabou.noosa.ui.Component;
  * This file is part of Remixed Pixel Dungeon.
  */
 public abstract class BasicBox extends Component{
-    protected boolean dirty;
+    protected boolean dirty = true;
 
     @Override
     public void measure() {

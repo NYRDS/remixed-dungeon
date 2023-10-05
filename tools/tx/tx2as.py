@@ -159,6 +159,7 @@ for _, _, files in os.walk(translations_dir + dir_name):
         except ElementTree.ParseError as error:
             print("shit happens with " + currentFilePath)
             print(error)
+            raise error
 
 pprint.pprint(totalCounter)
 for locale_code, text in changelog.items():

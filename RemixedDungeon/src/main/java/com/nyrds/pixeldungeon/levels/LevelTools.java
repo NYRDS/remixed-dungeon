@@ -46,10 +46,9 @@ public class LevelTools {
                 }
 
                 if ((i - 1) % roomStep == roomStep / 2 && (j - 1) % roomStep == roomStep / 2) {
-
-                    if (level.get(i, j) == Terrain.EMPTY) {
+                    int cell = level.cell(i,j);
+                    if (level.get(i, j) == Terrain.EMPTY && level.getTopLevelObject(cell) == null) {
                         level.putLevelObject(LevelObjectsFactory.PEDESTAL, level.cell(i, j));
-                        //level.set(i, j, Terrain.PEDESTAL);
                     }
                     continue;
                 }

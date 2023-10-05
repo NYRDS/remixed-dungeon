@@ -1,20 +1,4 @@
-/*
- * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
+
 package com.watabou.pixeldungeon;
 
 import com.nyrds.platform.gfx.BitmapData;
@@ -23,6 +7,7 @@ import com.nyrds.util.Util;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.Arrays;
 
@@ -35,7 +20,7 @@ public class FogOfWar extends Image {
     private static final int MAPPED		= 0xCC442211;
     private static final int INVISIBLE	= 0xFF000000;
 
-    private int[] pixels;
+    private final int[] pixels;
 
     private final int pWidth;
     private final int pHeight;
@@ -70,6 +55,9 @@ public class FogOfWar extends Image {
         setWidth(width2 * size);
         setHeight(height2 * size);
 
+        pixels = new int[width2 * height2];
+        Arrays.fill(pixels, INVISIBLE);
+
         texture(new FogTexture());
 
         setScaleXY(
@@ -81,11 +69,7 @@ public class FogOfWar extends Image {
     }
 
     public void updateVisibility(boolean[] visible, boolean[] visited, boolean[] mapped, boolean firstRowHack) {
-
-        if (pixels == null) {
-            pixels = new int[width2 * height2];
-            Arrays.fill(pixels, INVISIBLE);
-        }
+        dirty = true;
 
         if (firstRowHack) {
             int pos = 0;
@@ -136,10 +120,14 @@ public class FogOfWar extends Image {
                 pixels[i * width2 + j] = c;
             }
         }
+    }
 
-        GameLoop.pushUiTask(() -> {
+    @Override
+    public void draw() {
+        //if(dirty) {
             texture.pixels(width2, height2, pixels);
-        });
+        //}
+        super.draw();
     }
 
     private class FogTexture extends SmartTexture {

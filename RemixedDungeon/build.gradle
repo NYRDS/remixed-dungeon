@@ -34,11 +34,11 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1159
-        versionName "31.1.fix.32"
-        targetSdkVersion 32
+        versionCode 1168
+        versionName "31.1.fix.40"
+        targetSdkVersion 33
+        compileSdkVersion 33 // bitrise want it
         minSdkVersion 21
-        compileSdkVersion = 32
 
         // Enabling multidex support.
         multiDexEnabled true
@@ -66,14 +66,12 @@ android {
         sourceCompatibility "10"
         targetCompatibility "10"
     }
-
     packagingOptions {
-        exclude "META-INF/MANIFEST.MF"
+        resources {
+            excludes += ['META-INF/MANIFEST.MF']
+        }
     }
 
-    lintOptions {
-        abortOnError false
-    }
 
     flavorDimensions "platform","market"
 
@@ -117,6 +115,10 @@ android {
     androidResources {
         noCompress 'mp3', 'ogg'
     }
+    namespace 'com.nyrds.pixeldungeon.ml'
+    lint {
+        abortOnError false
+    }
 
 }
 
@@ -131,7 +133,7 @@ dependencies {
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
     implementation 'org.hjson:hjson:3.0.0'
 
-    api 'com.google.guava:guava:31.1-android'
+    androidImplementation 'com.google.guava:guava:31.1-android'
 
     androidImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
@@ -140,7 +142,7 @@ dependencies {
     implementation 'commons-io:commons-io:2.6'
 
 
-    implementation ('com.appodeal.ads:sdk:3.0.1.0') {
+    implementation ('com.appodeal.ads:sdk:3.0.2.+') {
         exclude group: 'com.appodeal.ads.sdk.services', module: 'adjust'
         exclude group: 'com.appodeal.ads.sdk.services', module: 'appsflyer'
         exclude group: 'com.appodeal.ads.sdk.services', module: 'firebase'
@@ -154,13 +156,13 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
     compileOnly 'org.projectlombok:lombok:1.18.22'
 
-    googlePlayImplementation 'com.google.android.gms:play-services-base:18.1.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.4.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-base:18.2.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.6.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:23.1.0"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:21.3.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:22.2.0'
 
 
-    googlePlayImplementation 'com.android.billingclient:billing:4.1.0'
+    googlePlayImplementation 'com.android.billingclient:billing:6.0.1'
 
     googlePlayImplementation platform('com.google.firebase:firebase-bom:30.3.0')
 

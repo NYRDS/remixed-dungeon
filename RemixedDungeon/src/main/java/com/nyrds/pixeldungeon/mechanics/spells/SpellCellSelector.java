@@ -21,11 +21,11 @@ class SpellCellSelector implements CellSelector.Listener {
     @Override
     public void onSelect(Integer cell, @NotNull Char selector) {
         if (cell != null) {
+            caster.getSprite().zap(cell);
             spell.cast(caster, cell);
 
             caster.spend(spell.castTime);
             caster.busy();
-            caster.getSprite().zap(cell);
         }
     }
 

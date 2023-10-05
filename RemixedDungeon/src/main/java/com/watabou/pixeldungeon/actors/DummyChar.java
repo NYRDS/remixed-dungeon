@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.actors;
 
+import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
@@ -24,9 +25,10 @@ public class DummyChar extends Char {
     }
 
     @Override
-    public CharSprite newSprite() {
-        return new DummySprite();
-    }
+    public CharSprite newSprite() {return DummySprite.instance;}
+
+    @Override
+    public CharSprite getSprite() {return DummySprite.instance;}
 
     @Override
     protected void moveSprite(int oldPos, int pos) {
@@ -108,5 +110,13 @@ public class DummyChar extends Char {
     @Override
     public boolean isAlive() {
         return false;
+    }
+
+    @Override
+    public CharAction getCurAction() {
+        return null;
+    }
+    @Override
+    public void setCurAction(CharAction curAction) {
     }
 }

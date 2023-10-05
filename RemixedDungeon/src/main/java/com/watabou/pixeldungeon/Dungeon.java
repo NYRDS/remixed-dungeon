@@ -1,23 +1,7 @@
-/*
-t * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
 package com.watabou.pixeldungeon;
 
 
+import com.google.common.base.Optional;
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.ai.MobAi;
@@ -668,8 +652,10 @@ public class Dungeon {
             try {
                 GameLoop.loadingOrSaving.incrementAndGet();
 
-                Bundle bundle = Bundle.readFromFile(fileName);
-                loadGameFromBundle(bundle, fullLoad);
+                val bundle = Bundle.readFromFile(fileName);
+                if (bundle.isPresent()) {
+                    loadGameFromBundle(bundle.get(), fullLoad);
+                }
 
             } finally {
                 GameLoop.loadingOrSaving.decrementAndGet();
@@ -744,11 +730,15 @@ public class Dungeon {
         GamesInProgress.delete(heroClass);
     }
 
-    public static Bundle gameBundle(String fileName) throws IOException {
+    public static Optional<Bundle> gameBundle(String fileName) throws IOException {
 
-        try (InputStream input = new FileInputStream(FileSystem.getFile(fileName))) {
-            return Bundle.read(input);
+        var saveFile = FileSystem.getFile(fileName);
+        if (saveFile.exists()) {
+            try (InputStream input = new FileInputStream(saveFile)) {
+                return Optional.of(Bundle.read(input));
+            }
         }
+        return Optional.absent();
     }
 
     public static void preview(GamesInProgress.Info info, Bundle bundle) {
@@ -1029,7 +1019,7 @@ public class Dungeon {
     }
 
     public static void setIsometricMode(boolean isometricMode) {
-        EventCollector.setSessionData("isometricMode", isometricMode);
+        EventCollector.setSessionData("isometricMode", String.valueOf(isometricMode));
         Dungeon.isometricMode = isometricMode;
     }
 

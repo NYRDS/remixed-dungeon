@@ -54,7 +54,7 @@ public class Unlock extends CharAction {
                 });
 
                 Sample.INSTANCE.play(Assets.SND_UNLOCK);
-                hero.curAction = null;
+                hero.setCurAction(null);
             } else {
                 GLog.w(StringsManager.getVar(R.string.Hero_LockedDoor));
                 hero.readyAndIdle();

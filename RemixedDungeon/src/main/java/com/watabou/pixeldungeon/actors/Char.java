@@ -1,20 +1,4 @@
-/*
- * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
+
 package com.watabou.pixeldungeon.actors;
 
 import static com.watabou.pixeldungeon.Dungeon.level;
@@ -56,7 +40,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.ResultDescriptions;
-import com.watabou.pixeldungeon.actors.buffs.Blessed;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
@@ -82,8 +65,6 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
-import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.rings.RingOfHaste;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -137,7 +118,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @Getter
     @NotNull
     protected LuaScript script = new LuaScript(DEFAULT_MOB_SCRIPT, this);
-    protected int baseStr;
+    protected int baseStr = 10;
     protected int attackRange = 1;
 
 
@@ -207,10 +188,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     private Map<String, Number> spellsUsage = new HashMap<>();
 
-    public CharAction curAction = null;
+    private CharAction curAction = null;
 
     private int lvl = Scrambler.scramble(1);
     private int magicLvl = Scrambler.scramble(1);
+    private float lightness = 0.5f;
 
     public Char() {
     }
@@ -485,7 +467,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public int attackSkill(Char target) {
-        int bonus = buffLevel(BuffFactory.ACCURACY)
+        int bonus = buffLevel(BuffFactory.RING_OF_ACCURACY)
                 + buffLevel(BuffFactory.BLESSED);
 
         float accuracy = (float) Math.pow(1.4, bonus);
@@ -515,7 +497,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         int defenseSkill = baseDefenseSkill + lvl();
 
         int bonus = buffLevel(BuffFactory.BLESSED)
-                + buffLevel(BuffFactory.EVASION);
+                + buffLevel(BuffFactory.RING_OF_EVASION);
 
         float evasion = bonus == 0 ? 1 : (float) Math.pow(1.2, bonus);
         if (paralysed) {
@@ -530,7 +512,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
             if (getHeroClass() == HeroClass.ROGUE) {
 
-                if (curAction != null && getSubClass() == HeroSubClass.FREERUNNER && !isStarving()) {
+                if (getCurAction() != null && getSubClass() == HeroSubClass.FREERUNNER && !isStarving()) {
                     evasion *= 2;
                 }
 
@@ -719,9 +701,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public void damage(int dmg, @NotNull NamedEntityKind src) {
 
-        if (Util.isDebug()) {
-            GLog.i("%s: <- %d dmg from %s", getEntityKind(), dmg, src.getEntityKind());
-        }
+        GLog.debug("%s: <- %d dmg from %s", getEntityKind(), dmg, src.getEntityKind());
 
         if (!isAlive()) {
             return;
@@ -740,6 +720,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         dmg = resist(dmg, src);
 
         if (dmg <= 0) {
+            GLog.debug("Resisted!!!", getEntityKind(), dmg, src.getEntityKind());
             return;
         }
 
@@ -840,8 +821,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         QuickSlot.refresh(this);
 
-        if (curAction != null) {
-            GLog.debug("%s", curAction.toString());
+        if (getCurAction() != null) {
+            GLog.debug("%s", getCurAction().toString());
         }
     }
 
@@ -924,15 +905,15 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void nextAction(CharAction action) {
-        curAction = action;
+        setCurAction(action);
 
-        if (curAction instanceof Move) {
+        if (getCurAction() instanceof Move) {
             lastAction = null;
         }
         next();
 
-        GLog.debug("action: %s", curAction.toString());
-        getControlTarget().curAction = curAction;
+        GLog.debug("action: %s", getCurAction().toString());
+        getControlTarget().setCurAction(getCurAction());
     }
 
     public boolean add(Buff buff) {
@@ -1030,7 +1011,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             return;
         }
 
-        if (hasBuff(Vertigo.class) && level().adjacent(getPos(), step)) { //ignore vertigo when blinking or teleporting
+        if (hasBuff(BuffFactory.VERTIGO) && level().adjacent(getPos(), step)) { //ignore vertigo when blinking or teleporting
 
             List<Integer> candidates = new ArrayList<>();
             for (int dir : Level.NEIGHBOURS8) {
@@ -1072,11 +1053,18 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             }
         }
 
-        curAction = null;
+        setCurAction(null);
 
         Invisibility.dispel(this);
 
         next();
+    }
+
+    @LuaInterface
+    public void playExtra(String key) {
+        if(Dungeon.isCellVisible(getPos())) {
+            getSprite().playExtra(key);
+        }
     }
 
     public void playAttack(int cell) {
@@ -1226,12 +1214,18 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (sprite == null) {
 
             if (!GameScene.mayCreateSprites()) {
-                throw new TrackedRuntimeException("scene not ready for " + this.getClass().getSimpleName());
+                throw new TrackedRuntimeException("scene not ready for " + getEntityKind());
+            }
+
+            if(Util.isDebug()){
+                if(!isAlive()) {
+                    throw new TrackedRuntimeException("its dead! leave it alone! " + getEntityKind());
+                }
             }
             sprite = newSprite();
         }
         if (sprite == null) {
-            throw new TrackedRuntimeException("Sprite creation for: " + getClass().getSimpleName() + " failed");
+            throw new TrackedRuntimeException("Sprite creation for: " + getEntityKind() + " failed");
         }
 
         if (sprite.getParent() == null) {
@@ -1239,6 +1233,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         assert (sprite.getParent() != null);
+
+        sprite.lightness(lightness);
 
         return sprite;
     }
@@ -1967,7 +1963,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     @LuaInterface
-    int getAttackRange() {
+    public int getAttackRange() {
         return Math.max(attackRange, getBelongings().getItemFromSlot(Belongings.Slot.WEAPON).range());
     }
 
@@ -1988,5 +1984,22 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void resume() {
+    }
+
+    public void lightness(float value) {
+        lightness = value;
+    }
+
+    public CharAction getCurAction() {
+        return curAction;
+    }
+
+    public void setCurAction(CharAction curAction) {
+        this.curAction = curAction;
+    }
+
+    @LuaInterface
+    int emptyCellNextTo() {
+        return level().getEmptyCellNextTo(getPos());
     }
 }

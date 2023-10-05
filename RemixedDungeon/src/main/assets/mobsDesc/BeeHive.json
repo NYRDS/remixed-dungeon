@@ -17,7 +17,7 @@
    "gender"        :"BeeHive_Gender",
    "spriteDesc"    :"spritesDesc/BeeHive.json",
    "scriptFile"    :"scripts/mobs/BeeSpawner",
-   "walkingType"   :"ABSOLUTE",
+   "walkingType"   :"NORMAL",
    "aiState"       :"Passive",
    "canBePet"	   : false,
    "flying"		   : false,

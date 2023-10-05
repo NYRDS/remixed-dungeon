@@ -53,6 +53,6 @@ public class RageBuff extends ArtifactBuff {
 
     @Override
     public boolean attachTo(@NotNull Char target ) {
-        return target.hasBuff(RageBuff.class) || super.attachTo(target);
+        return target.hasBuff(BuffFactory.RAGE) || super.attachTo(target);
     }
 }

@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.Attack;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.ml.actions.Move;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -22,7 +21,7 @@ public class ControlledAi extends MobAi implements AiState {
     public void act(@NotNull Mob me) {
 
         final Char owner = me.getOwner();
-        final CharAction curAction = me.curAction;
+        final CharAction curAction = me.getCurAction();
 
         if(curAction!=null) {
 
@@ -40,7 +39,7 @@ public class ControlledAi extends MobAi implements AiState {
                     if (me.doStepTo(dst)) {
                         Dungeon.observe();
                     } else {
-                        me.curAction = null;
+                        me.setCurAction(null);
                     }
                     return;
                 }
@@ -51,17 +50,17 @@ public class ControlledAi extends MobAi implements AiState {
                 final Char target = attack.target;
 
                 if (!target.isAlive()) {
-                    me.curAction = null;
+                    me.setCurAction(null);
                     return;
                 }
 
                 if (me.canAttack(target)) {
                     me.doAttack(target);
-                    me.curAction = null;
+                    me.setCurAction(null);
                 } else {
                     me.setTarget(me.getEnemy().getPos());
                     if (!me.doStepTo(me.getTarget())) {
-                        me.curAction = null;
+                        me.setCurAction(null);
                     }
 
                 }
@@ -70,7 +69,7 @@ public class ControlledAi extends MobAi implements AiState {
         }
 
         me.spend(Actor.TICK);
-        me.curAction = null;
+        me.setCurAction(null);
     }
 
     @Override

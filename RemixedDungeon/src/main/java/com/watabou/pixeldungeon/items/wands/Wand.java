@@ -1,25 +1,10 @@
-/*
- * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
+
 package com.watabou.pixeldungeon.items.wands;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
@@ -163,7 +148,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
     protected abstract void onZap(int cell, Char victim);
 
     public int effectiveLevel() {
-        return level() + getOwner().buffLevel(Power.class.getSimpleName());
+        return level() + getOwner().buffLevel(BuffFactory.RING_OF_POWER);
     }
 
     public boolean isKnown() {

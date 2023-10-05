@@ -126,6 +126,8 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
         super.loadAdditionalData(json, film, kind);
         fly = readAnimation(json, "fly", film);
         operate = readAnimation(json, "operate", film);
+        extras.put("std_fly", fly.clone());
+        extras.put("std_operate", operate.clone());
     }
 
 

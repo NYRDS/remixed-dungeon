@@ -37,6 +37,10 @@ public class SmartTexture extends Texture {
 
 	public BitmapData bitmap;
 
+	public SmartTexture() {
+		super();
+	}
+
 	public SmartTexture(@NotNull BitmapData bitmap ) {
 		this( bitmap, NEAREST, CLAMP );
 	}
@@ -60,7 +64,7 @@ public class SmartTexture extends Texture {
 		wModeH = s;
 		wModeV = t;
 	}
-	
+
 	@Override
 	public void bitmap( BitmapData bitmap ) {
 		handMade(bitmap, true );
@@ -72,7 +76,9 @@ public class SmartTexture extends Texture {
 			super.filter(fModeMin,fModeMax);
 			super.wrap(wModeH,wModeV);
 
-			handMade( bitmap );
+			if(bitmap!=null) {
+				handMade(bitmap);
+			}
 
 			loaded = true;
 		}
@@ -84,7 +90,7 @@ public class SmartTexture extends Texture {
 		height = bitmap.getHeight();
 	}
 
-	
+
 	@Override
 	public void delete() {
 		super.delete();

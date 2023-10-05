@@ -98,7 +98,6 @@ return ai.init{
     end,
 
     gotDamage = function(self, ai, me, src, dmg)
-
     end,
 
     status = function(self, ai, me)

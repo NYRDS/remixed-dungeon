@@ -4,7 +4,6 @@ import com.nyrds.pixeldungeon.ai.KillOrder;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.MoveOrder;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
@@ -26,7 +25,7 @@ public class Order extends CharAction {
     @Override
     public boolean act(Char hero) {
         hero.spend(TICK/10);
-        hero.curAction = null;
+        hero.setCurAction(null);
         hero.busy();
         hero.selectCell(new OrderCellSelector());
         return false;

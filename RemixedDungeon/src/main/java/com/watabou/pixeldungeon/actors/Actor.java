@@ -1,20 +1,4 @@
-/*
- * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
+
 package com.watabou.pixeldungeon.actors;
 
 import android.annotation.SuppressLint;
@@ -54,7 +38,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	public static final float MICRO_TICK	= 0.001f;
 	private static float realTimeMultiplier = 1f;
 
-	private static final Map<String, Integer> skipCounter = new HashMap<>();
+	private static final Map<Actor, Integer> skipCounter = new HashMap<>();
 
 	@Packable
 	private float time;
@@ -217,7 +201,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		//Log.i("Main loop", "start");
 		while ((actor=getNextActor(Util.BIG_FLOAT)) != null) {
 
-			if (actor instanceof Char && ((Char)actor).getSprite().doingSomething()) {
+			if (actor instanceof Char && ((Char)actor).isAlive() && ((Char)actor).getSprite().doingSomething()) {
 				checkSkips(actor);
 				GLog.debug("skip: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
 				// If it's character's turn to act, but its sprite
@@ -225,6 +209,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 				return;
 			}
+
+			resetSkips(actor);
 
 			GLog.debug("Main actor loop: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
 			if(actor instanceof Char) {
@@ -261,20 +247,29 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		}
 	}
 
+	private static void resetSkips(Actor actor) {
+		if(!Util.isDebug()) {
+			return;
+		}
+		skipCounter.put(actor, 0);
+	}
+
 	private static void checkSkips(Actor actor) {
 		if(!Util.isDebug()) {
 			return;
 		}
 
-		String entityKind = actor.getEntityKind();
-
-		Integer skips = skipCounter.get(entityKind);
+		Integer skips = skipCounter.get(actor);
 		if(skips == null) {
 			skips = 0;
 		}
 		skips++;
 
-		skipCounter.put(entityKind, skips);
+		if (skips > 1000) {
+			GLog.debug("Stall!");
+		}
+
+		skipCounter.put(actor, skips);
 
 		//GLog.debug("skip: %s ", skipCounter.toString());
 	}
@@ -395,6 +390,19 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 			
 			all.remove( actor );
 		}
+	}
+
+	@LuaInterface
+	public static boolean motionInProgress() {
+		for(Actor ch : all) {
+			if (ch instanceof Char){
+				if (((Char) ch).getSprite().doingSomething()) {
+					return true;
+				}
+			}
+		}
+		GLog.debug("no motion in progress");
+		return false;
 	}
 
 	@LuaInterface

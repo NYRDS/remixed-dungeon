@@ -1,20 +1,4 @@
-/*
- * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
+
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.LuaInterface;
@@ -26,12 +10,14 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.RunningAmok;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -228,8 +214,13 @@ public abstract class Mob extends Char {
             return true;
         }
 
-        if (Random.Float() < 0.01 / lvl()) {
+        if (Random.Float() < 0.01 / lvl() && ! level().isSafe()) {
             lvl(lvl() + 1);
+
+            ht((int) (ht() + GameLoop.getDifficultyFactor() * 2));
+            heal(ht(), this);
+
+            getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Hero_LevelUp));
         }
 
         float timeBeforeAct = actorTime();
@@ -544,7 +535,7 @@ public abstract class Mob extends Char {
             return true;
         }
 
-        if (hasBuff(Amok.class) || chr.hasBuff(Amok.class)) {
+        if (hasBuff(BuffFactory.AMOK) || chr.hasBuff(BuffFactory.AMOK)) {
             return false;
         }
 
@@ -678,7 +669,7 @@ public abstract class Mob extends Char {
 
     @Override
     public int damageRoll() {
-        int dmg = Random.NormalIntRange(dmgMin, dmgMax);
+        int dmg = Random.NormalIntRange(dmgMin, dmgMax) + Random.NormalIntRange(0, lvl());
 
         dmg += getActiveWeapon().damageRoll(this);
 
@@ -691,6 +682,6 @@ public abstract class Mob extends Char {
 
     @Override
     public int dr() {
-        return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() + dr;
+        return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() + dr + lvl()/2;
     }
 }
