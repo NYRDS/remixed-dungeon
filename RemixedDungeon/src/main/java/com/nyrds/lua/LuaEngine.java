@@ -140,6 +140,7 @@ public class LuaEngine implements ResourceFinder {
 		globals.set("loadResource", new resLoader());
 
 		stp = call("require","scripts/lib/StackTracePlus");
+		call("require","scripts/startup/quirks");
 	}
 
 	@Synchronized

@@ -20,6 +20,7 @@ local Sample           = luajava.bindClass("com.nyrds.platform.audio.Sample")
 local Music            = luajava.bindClass("com.nyrds.platform.audio.Music")
 local StringsManager   = luajava.bindClass("com.nyrds.platform.util.StringsManager")
 local CharUtils        = luajava.bindClass("com.watabou.pixeldungeon.actors.CharUtils")
+local ModQuirks        = luajava.bindClass("com.nyrds.pixeldungeon.game.ModQuirks")
 
 local Buffs  = {
     Buff         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Buff"),
@@ -187,6 +188,7 @@ local RPD = {
     ItemUtils = ItemUtils,
     DungeonTilemap = luajava.bindClass("com.watabou.pixeldungeon.DungeonTilemap"),
     ModdingMode = luajava.bindClass("com.nyrds.util.ModdingMode"),
+    ModQuirks = ModQuirks,
 
     CharsList = CharsList,
     CharUtils = CharUtils,

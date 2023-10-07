@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.IceCavesLevel;
@@ -138,6 +139,7 @@ public class Dungeon {
     }
 
     public static void reset() {
+        ModQuirks.reset();
         if (!Scene.sceneMode.equals(Scene.LEVELS_TEST)) {
             LuaEngine.reset();
         }
