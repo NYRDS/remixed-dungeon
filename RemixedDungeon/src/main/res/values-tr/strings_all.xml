@@ -978,6 +978,9 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
   <string name="HeroClass_Rog">haydut</string>
   <string name="HeroClass_Hun">avcı kadın</string>
   <string name="HeroClass_Elf">elf</string>
+  <string name="HeroClass_None">halktan biri</string>
+  <string name="HeroSubClass_NameNone">Hiçbiri</string>
+  <string name="HeroSubClass_DescNone"></string>
   <string name="HeroSubClass_NameGlad">gladyatör</string>
   <string name="HeroSubClass_DescGlad">Yakın silah ile yapılan her başarılı vuruş _Gladyatör\'ün_ kombo yapmasına olanak sağlar, her başarılı vuruş ek hasar verir.</string>
   <string name="HeroSubClass_NameBers">Vahşi Savaşçı</string>
@@ -2893,4 +2896,16 @@ remix.30.1\n
   <string name="WndModSelect_AreYouSure">Mod siliniyor: %s, emin misin?</string>
   <string name="Challenges_Names_8">Kasaba yok</string>
   <string name="Challenges_Descriptions_8">Yolculuğunuz karanlık ve tehlikeli şehir kanalizasyonlarında başlayacak ve yüzeye giden tek yol kapalı olacak. Daha da kötüsü, sadece zindanda bulduğunuz ekipmanları kullanabileceksiniz. Sınırlı kaynaklar ve ekipmanla, hayatta kalmanız becerilerinize ve stratejinize bağlı olacaktır.</string>
+
+  <string name="EncumbranceBuff_CharAct_1">%s\'i düzgün kullanacak kadar güçlü değilim.</string>
+  <string name="EncumbranceBuff_CharAct_2">Bu %s etkili bir şekilde kullanmam için çok ağır.</string>
+  <string name="EncumbranceBuff_CharAct_3">%s kullanmadan önce gücüm üzerinde çalışmam gerekiyor .</string>
+  <string name="EncumbranceBuff_CharAct_4">%s\'i tam potansiyeliyle kullanacak güçten yoksunum.\"</string>
+  <string name="EncumbranceBuff_CharAct_5">%s şu anda benim için çok fazla.</string>
+    <string name="Typical_Damage">Tipik hasar</string>
+    <string name="Damage_Reduction">Hasar azaltma</string>
+    <string name="Attack_Range">Saldırı menzili</string>
+  <string name="Movement_Speed">Hareket hızı</string>
+  <string name="Attack_Cooldown">Saldırı bekleme süresi</string>
+  <string name="View_Distance">Mesafeyi görüntüle</string>
 </resources>
