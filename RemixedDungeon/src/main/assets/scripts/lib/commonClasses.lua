@@ -101,7 +101,9 @@ local Objects = {
         WndQuest       = "com.watabou.pixeldungeon.windows.WndQuest",
         WndOptionsLua  = "com.nyrds.pixeldungeon.windows.WndOptionsLua",
         WndShopOptions = "com.nyrds.pixeldungeon.windows.WndShopOptions",
-        WndChooseWay   = "com.watabou.pixeldungeon.windows.WndChooseWay"
+        WndChooseWay   = "com.watabou.pixeldungeon.windows.WndChooseWay",
+        Image          = "com.watabou.noosa.Image",
+        Banner         = "com.watabou.pixeldungeon.ui.Banner"
     },
 
     Actors = {
@@ -227,6 +229,7 @@ local RPD = {
 
     Buffs = Buffs,
     BuffIndicator = luajava.bindClass("com.watabou.pixeldungeon.ui.BuffIndicator"),
+
 
     Actions = actions,
 

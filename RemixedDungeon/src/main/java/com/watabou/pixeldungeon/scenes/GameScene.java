@@ -649,11 +649,14 @@ public class GameScene extends PixelScene {
         }
     }
 
-    private void showBanner(Banner banner) {
-        banner.camera = uiCamera;
-        banner.setX(align(uiCamera, (uiCamera.width - banner.width) / 2));
-        banner.setY(align(uiCamera, (uiCamera.height - banner.height) / 3));
-        add(banner);
+    @LuaInterface
+    public static void showBanner(Banner banner) {
+        if(isSceneReady()) {
+            banner.camera = uiCamera;
+            banner.setX(align(uiCamera, (uiCamera.width - banner.width) / 2));
+            banner.setY(align(uiCamera, (uiCamera.height - banner.height) / 3));
+            scene.add(banner);
+        }
     }
 
     // -------------------------------------------------------
@@ -853,7 +856,7 @@ public class GameScene extends PixelScene {
 
             Banner gameOver = new Banner(BannerSprites.get(BannerSprites.Type.GAME_OVER));
             gameOver.show(0x000000, 1f);
-            scene.showBanner(gameOver);
+            showBanner(gameOver);
 
             Sample.INSTANCE.play(Assets.SND_DEATH);
         }
@@ -863,7 +866,7 @@ public class GameScene extends PixelScene {
         if (isSceneReady() && Dungeon.hero.isAlive()) {
             Banner bossSlain = new Banner(BannerSprites.get(BannerSprites.Type.BOSS_SLAIN));
             bossSlain.show(0xFFFFFF, 0.3f, 5f);
-            scene.showBanner(bossSlain);
+            showBanner(bossSlain);
 
             Sample.INSTANCE.play(Assets.SND_BOSS);
         }
