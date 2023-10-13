@@ -972,6 +972,9 @@
   <string name="HeroClass_Rog">Κλέφτης</string>
   <string name="HeroClass_Hun">Κυνηγός</string>
   <string name="HeroClass_Elf">Ξωτικό</string>
+  <string name="HeroClass_None">Κοινός θνητός</string>
+  <string name="HeroSubClass_NameNone">Τίποτα</string>
+  <string name="HeroSubClass_DescNone"></string>
   <string name="HeroSubClass_NameGlad">Μονομάχος</string>
   <string name="HeroSubClass_DescGlad">Μια επιτυχημένη επίθεση με όπλο κοντινής μάχης επιτρέπει στον _Μονομάχο_ να ξεκινήσει μια διαδοχή χτυπημάτων, κατά την οποία κάθε επακόλουθο χτύπημα προκαλεί επιπλέον ζημιά.</string>
   <string name="HeroSubClass_NameBers">Βάρβαρος</string>
@@ -2879,4 +2882,16 @@
   <string name="WndModSelect_AreYouSure">Διαγραφή τροποποίησης: %s. Σίγουρα;</string>
   <string name="Challenges_Names_8">Χωρίς την πόλη</string>
   <string name="Challenges_Descriptions_8">Το ταξίδι σου ξεκινά μες στους σκοτεινούς κι επικίνδυνους υπονόμους της πόλης, και η μόνη σου διέξοδος προς την επιφάνεια είναι φραγμένη. Σαν να μην έφτανε αυτό, μπορείς να χρησιμοποιείς μόνο τον εξοπλισμό που βρίσκεις μες στην κατακόμβη. Έχοντας περιορισμένους πόρους κι εξοπλισμό, μόνο οι ικανότητες και η στρατηγική θα κρίνουν το αν θα επιβιώσεις.</string>
+
+  <string name="EncumbranceBuff_CharAct_1">Δεν έχω αρκετή δύναμη για να κρατήσω καλά το εφόδιο (%s).</string>
+  <string name="EncumbranceBuff_CharAct_2">Αυτό το εφόδιο (%s) μού είναι πολύ βαρύ για να το χρησιμοποιήσω αποτελεσματικά.</string>
+  <string name="EncumbranceBuff_CharAct_3">Πρέπει να δουλέψω με τη δύναμή μου για να χρησιμοποιήσω το εφόδιο (%s).</string>
+  <string name="EncumbranceBuff_CharAct_4">Μου λείπει η δύναμη για να αξιοποιήσω το εφόδιο (%s) πλήρως.</string>
+  <string name="EncumbranceBuff_CharAct_5">Το εφόδιο (%s) είναι πολύ βαρύ για να το αντέξω.</string>
+    <string name="Typical_Damage">Τυπική ζημιά</string>
+    <string name="Damage_Reduction">Μείωση ζημιάς</string>
+    <string name="Attack_Range">Εμβέλεια επίθεσης</string>
+  <string name="Movement_Speed">Ταχύτητα κίνησης</string>
+  <string name="Attack_Cooldown">Αναπλήρωση επίθεσης</string>
+  <string name="View_Distance">Οπτικό πεδίο</string>
 </resources>
