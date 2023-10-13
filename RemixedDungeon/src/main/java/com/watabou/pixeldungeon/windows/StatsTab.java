@@ -4,10 +4,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
-import com.watabou.noosa.Group;
 import com.watabou.noosa.Text;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -16,7 +13,6 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.elements.Tab;
 import com.watabou.pixeldungeon.windows.elements.TabContent;
 
 class StatsTab extends TabContent {
@@ -107,7 +103,7 @@ class StatsTab extends TabContent {
         statSlot(StringsManager.getVar(R.string.WndHero_DefenceSkill), chr.defenseSkill(CharsList.DUMMY));
 
 
-        statSlot(StringsManager.getVar(R.string.WndHero_Exp), chr.getExp() + "/" + chr.maxExp());
+        statSlot(StringsManager.getVar(R.string.WndHero_Exp), chr.getExp() + "/" + chr.expToLevel());
 
         pos += GAP;
         statSlot(StringsManager.getVar(R.string.WndHero_Str), chr.effectiveSTR());

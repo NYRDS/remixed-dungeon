@@ -214,12 +214,7 @@ public abstract class Mob extends Char {
 
         if(ModQuirks.mobLeveling) {
             if (Random.Float() < 0.01 / lvl() && !level().isSafe()) {
-                lvl(lvl() + 1);
-
-                ht((int) (ht() + GameLoop.getDifficultyFactor() * 2));
-                heal(ht(), this);
-
-                getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Hero_LevelUp));
+                earnExp(1);
             }
         }
         float timeBeforeAct = actorTime();

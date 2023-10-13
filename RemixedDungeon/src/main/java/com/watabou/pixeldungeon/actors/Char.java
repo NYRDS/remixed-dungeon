@@ -10,6 +10,7 @@ import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.ai.Sleeping;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
@@ -37,6 +38,7 @@ import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.Scrambler;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -51,7 +53,6 @@ import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Speed;
-import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -112,8 +113,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public CharAction lastAction = null;
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
-    protected
-    int enemyId = EntityIdSource.INVALID_ID;
+    protected int enemyId = EntityIdSource.INVALID_ID;
+
+    @Packable(defaultValue = "0")
+    protected int exp = 0;
 
     @Getter
     @NotNull
@@ -1968,11 +1971,30 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public int getExp() {
-        return 0;
+        return exp;
     }
 
-    public int maxExp() {
-        return 10;
+    public void earnExp(int exp) {
+        this.exp += exp;
+
+        boolean levelUp = false;
+
+        while (this.getExp() >= expToLevel()) {
+            this.exp -= expToLevel();
+            lvl(lvl() + 1);
+
+            ht((int) (ht() + GameLoop.getDifficultyFactor() * 2));
+            heal(lvl(), this);
+
+            levelUp = true;
+        }
+
+        if (levelUp) {
+            getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Hero_LevelUp));
+        }
+    }
+    public int expToLevel() {
+         return 5 + lvl() * 5;
     }
 
     public boolean isReady() {

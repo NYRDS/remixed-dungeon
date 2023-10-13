@@ -123,7 +123,7 @@ public class Hero extends Char {
 
     private float awareness;
 
-    private int exp = Scrambler.scramble(0);
+    private int scrambledExp = Scrambler.scramble(0);
     private int sp = Scrambler.scramble(0);
     private int maxSp = Scrambler.scramble(0);
 
@@ -597,6 +597,7 @@ public class Hero extends Char {
         }
     }
 
+    @Override
     public void earnExp(int exp) {
 
         this.setExp(this.getExp() + exp);
@@ -605,8 +606,8 @@ public class Hero extends Char {
 
         boolean levelUp = false;
 
-        while (this.getExp() >= maxExp()) {
-            this.setExp(this.getExp() - maxExp());
+        while (this.getExp() >= expToLevel()) {
+            this.setExp(this.getExp() - expToLevel());
             lvl(lvl() + 1);
 
             EventCollector.levelUp(heroClass.name() + "_" + subClass.name(), lvl());
@@ -646,7 +647,8 @@ public class Hero extends Char {
         }
     }
 
-    public int maxExp() {
+    @Override
+    public int expToLevel() {
         if (getDifficulty() != 0) {
             return 5 + lvl() * 5;
         } else {
@@ -940,11 +942,11 @@ public class Hero extends Char {
     }
 
     public int getExp() {
-        return Scrambler.descramble(exp);
+        return Scrambler.descramble(scrambledExp);
     }
 
     public void setExp(int exp) {
-        this.exp = Scrambler.scramble(exp);
+        this.scrambledExp = Scrambler.scramble(exp);
     }
 
     @Override
