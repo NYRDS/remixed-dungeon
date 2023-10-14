@@ -2020,6 +2020,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         this.curAction = curAction;
     }
 
+    public ArrayList<String> actions(Char hero) {
+        return CharUtils.actions(this, hero);
+    }
+
     @LuaInterface
     int emptyCellNextTo() {
         return level().getEmptyCellNextTo(getPos());

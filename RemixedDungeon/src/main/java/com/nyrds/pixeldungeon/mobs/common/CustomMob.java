@@ -121,8 +121,9 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 
+	@Override
 	public ArrayList<String> actions(Char hero) {
-		ArrayList<String> actions = CharUtils.actions(this, hero);
+		ArrayList<String> actions = super.actions(hero);
 
 		LuaValue ret = script.run("actionsList", hero);
 		LuaEngine.forEach(ret, (key,val)->actions.add(val.tojstring()));

@@ -210,7 +210,7 @@ public class CharUtils {
                     return new Attack(target);
                 } else {
 
-                    Set<String> actions = new HashSet<>(actions(target, actor));
+                    Set<String> actions = new HashSet<>(target.actions(actor));
 
                     actions.remove(CommonActions.MAC_HIT);
                     actions.remove(CommonActions.MAC_TAUNT);
@@ -286,7 +286,7 @@ public class CharUtils {
             return;
         }
 
-        hero.getScript().run("executeAction", target, action);
+        target.getScript().run("executeAction", target, action);
     }
 
     public static @NotNull ArrayList<String> actions(@NotNull Char target, Char hero) {
@@ -322,8 +322,8 @@ public class CharUtils {
     }
 
     @LuaInterface //for auto tests
-    public static String randomAction(@NotNull Char target, Char hero) {
-        return Random.element(actions(target,hero));
+    public static String randomAction(@NotNull Char target, Char actor) {
+        return Random.element(target.actions(actor));
     }
 
     public static void blinkAway(@NotNull Char chr, cellCondition condition) {
@@ -397,7 +397,7 @@ public class CharUtils {
 
         if (selector.isAlive()) {
 
-            for (final String action: actions(mob, selector)) {
+            for (final String action: mob.actions(selector)) {
 
                 RedButton btn = new RedButton(StringsManager.maybeId(action)) {
                     @Override
