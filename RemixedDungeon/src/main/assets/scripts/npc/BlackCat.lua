@@ -31,8 +31,10 @@ return mob.init({
         return {"pet"}
     end,
 
-    execute = function(self, chr)
-        self:say("BlackCat_Phrases",math.random(0,2))
+    execute = function(self, chr, action)
+        if action == "pet" then
+            self:say("BlackCat_Phrases",math.random(0,2))
+        end
     end,
 
 })
