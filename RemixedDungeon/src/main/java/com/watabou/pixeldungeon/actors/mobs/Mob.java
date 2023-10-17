@@ -10,7 +10,6 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.RunningAmok;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
-import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
@@ -38,7 +37,6 @@ import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
-import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -49,7 +47,6 @@ import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
@@ -296,12 +293,6 @@ public abstract class Mob extends Char {
         return false;
     }
 
-    @Override
-    public void move(int step) {
-        script.run("onMove", step);
-
-        super.move(step);
-    }
 
     @Override
     public final void onZapComplete() {
@@ -314,11 +305,6 @@ public abstract class Mob extends Char {
         return enemySeen ? super.defenseSkill(enemy) : 0;
     }
 
-    @Override
-    public int attackProc(@NotNull Char enemy, int damage) {
-        int baseDamage = super.attackProc(enemy, damage);
-        return script.run("onAttackProc", enemy, baseDamage).optint(baseDamage);
-    }
 
     @Override
     public int defenseProc(Char enemy, int damage) {
@@ -512,11 +498,6 @@ public abstract class Mob extends Char {
         return defMap.get(getEntityKind());
     }
 
-    public void onSpawn(Level level) {
-        Buff.affect(this, Regeneration.class);
-        script.run("onSpawn", level);
-    }
-
 
     public boolean isPet() {
         return fraction == Fraction.HEROES;
@@ -557,11 +538,6 @@ public abstract class Mob extends Char {
         return true;
     }
 
-    public boolean interact(Char chr) {
-        return script.run("onInteract", chr).optboolean(true) ||
-                super.interact(chr);
-    }
-
     @Override
     public boolean swapPosition(Char chr) {
         if (super.swapPosition(chr)) {
@@ -585,14 +561,6 @@ public abstract class Mob extends Char {
             }
         }
         return false;
-    }
-
-    protected void zapMiss(@NotNull Char enemy) {
-        script.run("onZapMiss", enemy);
-    }
-
-    protected int zapProc(@NotNull Char enemy, int damage) {
-        return script.run("onZapProc", enemy, damage).optint(damage);
     }
 
     protected boolean zapHit(@NotNull Char enemy) {
@@ -649,16 +617,6 @@ public abstract class Mob extends Char {
             }
             collect(item);
         }
-    }
-
-    @Override
-    public int priceBuy(Item item) {
-        return script.run("priceBuy", item, super.priceBuy(item)).toint();
-    }
-
-    @Override
-    public int priceSell(Item item) {
-        return script.run("priceSell", item, super.priceSell(item)).toint();
     }
 
     @Override

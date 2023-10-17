@@ -35,6 +35,17 @@ public class LuaScript {
         onlyParentArgs[0] = CoerceJavaToLua.coerce(parent);
     }
 
+    public LuaScript(String scriptFile, String fallbackScript, @Nullable Object parent)
+    {
+        this.parent = parent;
+        if (ModdingMode.isResourceExists(scriptFile+".lua")) {
+            this.scriptFile = scriptFile;
+        } else {
+            this.scriptFile = fallbackScript;
+        }
+        onlyParentArgs[0] = CoerceJavaToLua.coerce(parent);
+    }
+
     public void asInstance() {
         asInstance = true;
     }

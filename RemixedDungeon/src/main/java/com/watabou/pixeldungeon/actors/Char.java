@@ -50,6 +50,7 @@ import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Light;
+import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Speed;
@@ -120,7 +121,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Getter
     @NotNull
-    protected LuaScript script = new LuaScript(DEFAULT_MOB_SCRIPT, this);
+    protected LuaScript script = new LuaScript("scripts/mobs/"+getEntityKind(), DEFAULT_MOB_SCRIPT, this);
     protected int baseStr = 10;
     protected int attackRange = 1;
 
@@ -619,7 +620,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             getSecondaryWeapon().attackProc(this, enemy, dmg[0]);
         }
 
-        return dmg[0];
+        return script.run("onAttackProc", enemy, dmg[0]).optint(dmg[0]);
     }
 
     public int defenseProc(Char enemy, int baseDamage) {
@@ -647,6 +648,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         return ItemsList.DUMMY;
+    }
+
+    @Override
+    public int priceSell(Item item) {
+        return script.run("priceSell", item, priceSell(item)).toint();
     }
 
     public int damageRoll() {
@@ -1033,6 +1039,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             step = Random.element(candidates);
         }
 
+        script.run("onMove", step);
         placeTo(step);
     }
 
@@ -1349,6 +1356,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         spend(Actor.MICRO_TICK);
     }
 
+    public void onSpawn(Level level) {
+        Buff.affect(this, Regeneration.class);
+        script.run("onSpawn", level);
+    }
+
     public boolean friendly(@NotNull Char chr) {
         return !fraction.isEnemy(chr.fraction);
     }
@@ -1581,6 +1593,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public boolean interact(Char chr) {
+
+        if(script.run("onInteract", chr).optboolean(true)) {
+            return true;
+        }
+
         if (friendly(chr)) {
             swapPosition(chr);
             return true;
@@ -1693,6 +1710,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @NotNull
     public Char getEnemy() {
         return CharsList.getById(enemyId);
+    }
+
+    protected void zapMiss(@NotNull Char enemy) {
+        script.run("onZapMiss", enemy);
+    }
+
+    protected int zapProc(@NotNull Char enemy, int damage) {
+        return script.run("onZapProc", enemy, damage).optint(damage);
     }
 
     public abstract Char makeClone();
@@ -1903,6 +1928,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Override
     public void generateNewItem() {
+    }
+
+    @Override
+    public int priceBuy(Item item) {
+        return script.run("priceBuy", item, priceBuy(item)).toint();
     }
 
     @Override
