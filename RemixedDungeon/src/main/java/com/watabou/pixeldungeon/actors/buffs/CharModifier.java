@@ -14,7 +14,7 @@ public interface CharModifier {
     int defenceProc(Char defender, Char enemy, int damage);
     int attackProc(Char attacker, Char defender, int damage );
 
-    int charGotDamage(int damage, NamedEntityKind src);
+    int charGotDamage(int damage, NamedEntityKind src, Char target);
 
     int regenerationBonus();
     int manaRegenerationBonus();

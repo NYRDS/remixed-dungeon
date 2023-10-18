@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -13,6 +14,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.actors.buffs.Combo;
+import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
@@ -189,7 +191,16 @@ public enum HeroSubClass implements CharModifier {
 	}
 
 	@Override
-	public int charGotDamage(int damage, NamedEntityKind src) {
+	public int charGotDamage(int damage, NamedEntityKind src, Char target) {
+		switch (this) {
+			case BERSERKER:
+				if (0 < target.hp() && target.hp() <= target.ht() * Fury.LEVEL) {
+					if (!target.hasBuff(BuffFactory.FURY)) {
+						Buff.affect(target, BuffFactory.FURY);
+					}
+				}
+			break;
+		}
 		return damage;
 	}
 

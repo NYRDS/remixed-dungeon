@@ -8,7 +8,6 @@ import com.nyrds.pixeldungeon.ml.actions.Move;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -18,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 public class ControlledAi extends MobAi implements AiState {
 
     @Override
-    public void act(@NotNull Mob me) {
+    public void act(@NotNull Char me) {
 
         final Char owner = me.getOwner();
         final CharAction curAction = me.getCurAction();
@@ -73,11 +72,11 @@ public class ControlledAi extends MobAi implements AiState {
     }
 
     @Override
-    public void gotDamage(Mob me, NamedEntityKind src, int dmg) {
+    public void gotDamage(Char me, NamedEntityKind src, int dmg) {
     }
 
     @Override
-    public void onDie(@NotNull Mob me) {
+    public void onDie(@NotNull Char me) {
         var owner = me.getOwner();
         owner.setControlTarget(owner);
         Dungeon.observe();

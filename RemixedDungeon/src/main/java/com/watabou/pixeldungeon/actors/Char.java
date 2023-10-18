@@ -38,7 +38,6 @@ import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.Scrambler;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -113,6 +112,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public EquipableItem rangedWeapon = ItemsList.DUMMY;
 
     public CharAction lastAction = null;
+    @Packable(defaultValue = "false")
+    public boolean enemySeen;
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
     protected int enemyId = EntityIdSource.INVALID_ID;
 
@@ -268,6 +269,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     private static final String TAG_HT = "HT";
     private static final String BUFFS = "buffs";
     private static final String SPELLS_USAGE = "spells_usage";
+
+    @LuaInterface
+    public int getOwnerPos() {
+        return getOwner().getPos();
+    }
 
     @Override
     public void storeInBundle(Bundle bundle) {
@@ -573,9 +579,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         KindOfBow kindOfBow = (KindOfBow) getItemFromSlot(Belongings.Slot.WEAPON);
 
-        Class<? extends Arrow> arrowType = kindOfBow.arrowType();
-
-        Arrow arrow = getBelongings().getItem(arrowType);
+        Item arrow = getBelongings().getItem(kindOfBow.arrowType());
         if (arrow == null || arrow.quantity() == 0) {
             arrow = getBelongings().getItem(Arrow.class);
         }
@@ -652,7 +656,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Override
     public int priceSell(Item item) {
-        return script.run("priceSell", item, priceSell(item)).toint();
+        return script.run("priceSell", item, item.price() * 5 * (Dungeon.depth / 5 + 1)).toint();
     }
 
     public int damageRoll() {
@@ -716,14 +720,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             return;
         }
 
-        if (getSubClass() == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
-            if (!hasBuff(Fury.class)) {
-                Buff.affect(this, Fury.class);
-            }
-        }
+        script.run("onDamage", dmg, src);
+        getState().gotDamage(this, src, dmg);
 
         final int[] dmg_ = {dmg};
-        forEachBuff(b -> dmg_[0] = b.charGotDamage(dmg_[0], src));
+        forEachBuff(b -> dmg_[0] = b.charGotDamage(dmg_[0], src, this));
         dmg = dmg_[0];
 
         dmg = resist(dmg, src);
@@ -1401,6 +1402,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return Scrambler.descramble(magicLvl);
     }
 
+    public boolean isEnemyInFov() {
+        final Char enemy = getEnemy();
+        final int enemyPos = enemy.getPos();
+        return enemy.valid() && enemy.isAlive() && level().cellValid(enemyPos) && level().fieldOfView[enemyPos]
+                && enemy.invisible <= 0;
+    }
+
     protected abstract void moveSprite(int oldPos, int pos);
 
     public int visibleEnemies() {
@@ -1932,18 +1940,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Override
     public int priceBuy(Item item) {
-        return script.run("priceBuy", item, priceBuy(item)).toint();
+        return script.run("priceBuy", item, (item.price())).toint();
     }
 
-    @Override
-    public int priceSell(Item item) {
-        return item.price() * 5 * (Dungeon.depth / 5 + 1);
-    }
-
-    @Override
-    public int priceBuy(Item item) {
-        return item.price();
-    }
 
     public String getDescription() {
         if (!Util.isDebug()) {

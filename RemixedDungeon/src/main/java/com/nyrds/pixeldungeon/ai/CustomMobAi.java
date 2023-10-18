@@ -4,7 +4,6 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -20,12 +19,12 @@ public class CustomMobAi extends MobAi implements AiState {
     }
 
     @Override
-    public void act(@NotNull Mob me) {
+    public void act(@NotNull Char me) {
         script.run("act",me);
     }
 
     @Override
-    public void gotDamage(Mob me, NamedEntityKind src, int dmg) {
+    public void gotDamage(Char me, NamedEntityKind src, int dmg) {
         script.run("gotDamage",me, src, dmg);
     }
 

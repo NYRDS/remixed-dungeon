@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Horrified;
 import com.nyrds.pixeldungeon.ai.Hunting;
@@ -77,9 +76,6 @@ public abstract class Mob extends Char {
     protected int exp = 1;
     protected int maxLvl = 50;
 
-    @Packable(defaultValue = "false")
-    public boolean enemySeen;
-
     public static final float TIME_TO_WAKE_UP = 1f;
 
     static private final Map<String, JSONObject> defMap = new HashMap<>();
@@ -126,11 +122,6 @@ public abstract class Mob extends Char {
     @Override
     public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
         return getOwner() instanceof Hero;
-    }
-
-    @LuaInterface
-    public int getOwnerPos() {
-        return getOwner().getPos();
     }
 
     public void setFraction(Fraction fr) {
@@ -233,13 +224,6 @@ public abstract class Mob extends Char {
     }
 
 
-    public boolean isEnemyInFov() {
-        final Char enemy = getEnemy();
-        final int enemyPos = enemy.getPos();
-        return enemy.valid() && enemy.isAlive() && level().cellValid(enemyPos) && level().fieldOfView[enemyPos]
-                && enemy.invisible <= 0;
-    }
-
     public void moveSprite(int from, int to) {
 
         if (getSprite().isVisible()
@@ -322,14 +306,7 @@ public abstract class Mob extends Char {
         return script.run("onDefenceProc", enemy, baseDamage).optint(baseDamage);
     }
 
-    @Override
-    public void damage(int dmg, @NotNull NamedEntityKind src) {
-        script.run("onDamage", dmg, src);
 
-        getState().gotDamage(this, src, dmg);
-
-        super.damage(dmg, src);
-    }
 
     @Override
     public void destroy() {

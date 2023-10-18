@@ -323,7 +323,7 @@ public enum HeroClass implements CharModifier {
     }
 
     @Override
-    public int charGotDamage(int damage, NamedEntityKind src) {
+    public int charGotDamage(int damage, NamedEntityKind src, Char target) {
         return damage;
     }
 

@@ -148,7 +148,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     @LuaInterface
-    public static Buff affect(Char target, String buffClass, float duration) {
+    public static Buff affect(Char target, String buffClass) {
         Buff buff = target.buff(buffClass);
         if (buff == null) {
             buff = BuffFactory.getBuffByName(buffClass);
@@ -156,6 +156,13 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         } else {
             buff.level++;
         }
+
+        return buff;
+    }
+
+    @LuaInterface
+    public static Buff affect(Char target, String buffClass, float duration) {
+        Buff buff = affect(target,buffClass);
 
         buff.spend(duration);
         GLog.debug("%s cooldown %3.2f", buff.getEntityKind(), buff.cooldown());
@@ -267,7 +274,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     @Override
-    public int charGotDamage(int damage, NamedEntityKind src) {
+    public int charGotDamage(int damage, NamedEntityKind src, Char target) {
         return damage;
     }
 
