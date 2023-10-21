@@ -1,0 +1,31 @@
+This is an open source roguelike game with pixel style graphics
+
+Once upon a time, there was a small town. The townsfolk lived happily, but they were so poor that they couldn’t even afford to go somewhere decent on holidays. But on the day when everybody abandoned all hope, a miracle occurred. The ground beneath the town shook violently and burst out a myriad of despicable monsters. From that point on, all the townsfolk who had survived lived happily ever after. Why? Because the dungeon has attracted all sorts of heroes and adventurers. They protected the innocents and ended up being excellent spenders, boosting the town’s economy.
+And now the little town flourishes, as it stands on top of a dangerous dungeon filled with dead adventurers and their miserable souls.
+
+Game features:
+- This game supports user-created mods! And as we further develop this feature, soon you will be able to create whole new game inside Remixed Dungeon!
+- Hardcore roguelike experience!
+- 7 hero classes to chose from
+- Town hub to prepare you for your journey and introduce you to the game world
+- Over 30 dungeon levels of main dungeon split in 6 dungeon types
+- 3 optional dungeons: Spider Lair, Necropolis, Ice Caves
+- Dozens of items and monsters
+- Various bosses
+- Hats! Everyone likes hats
+
+Join our Discord server:
+https://discordapp.com/invite/AMXrhQZ
+
+Follow us on twitter:
+https://twitter.com/nyrds
+
+This game is an open source software under the GPLv3 License. Source code of Remixed Dungeon can be found here: 
+https://github.com/NYRDS/remixed-dungeon
+
+If  you wish participate in localization to other languages please visit:
+https://www.transifex.com/projects/p/remixed-dungeon/
+
+You can check 
+http://wiki.nyrds.net/doku.php?id=rpd:changelog
+for full changelog on our wiki
