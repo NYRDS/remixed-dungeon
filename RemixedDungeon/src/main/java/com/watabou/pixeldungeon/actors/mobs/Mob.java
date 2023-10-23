@@ -207,7 +207,7 @@ public abstract class Mob extends Char {
         }
         float timeBeforeAct = actorTime();
 
-        script.runOptional("onAct");
+
         //GLog.debug("%s is %s", getEntityKind(), getState().getTag());
         getState().act(this);
 
@@ -291,24 +291,6 @@ public abstract class Mob extends Char {
 
 
     @Override
-    public int defenseProc(Char enemy, int damage) {
-        int baseDamage = super.defenseProc(enemy, damage);
-
-        if (!enemySeen && enemy.getSubClass() == HeroSubClass.ASSASSIN) {
-            baseDamage += Random.Int(1, baseDamage);
-            Wound.hit(this);
-        }
-
-        if (getOwnerId() != enemy.getId()) {
-            setEnemy(enemy);
-        }
-
-        return script.run("onDefenceProc", enemy, baseDamage).optint(baseDamage);
-    }
-
-
-
-    @Override
     public void destroy() {
 
         spend(MICRO_TICK);
@@ -325,14 +307,7 @@ public abstract class Mob extends Char {
     public void die(@NotNull NamedEntityKind cause) {
 
         spend(Actor.MICRO_TICK);
-        getState().onDie(this);
 
-        if (cause == null) {
-            cause = CharsList.DUMMY; //Mods may and will misbehave
-            EventCollector.logException("null_death_cause");
-        }
-
-        script.run("onDie", cause);
 
         Badges.validateRare(this);
 

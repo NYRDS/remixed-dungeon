@@ -63,6 +63,7 @@ import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
@@ -249,6 +250,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         checkVisibleEnemies();
+
+        script.runOptional("onAct");
 
         forEachBuff(CharModifier::charAct);
 
@@ -631,7 +634,19 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         int dr = defenceRoll(enemy);
         final int[] damage = {baseDamage - dr};
         forEachBuff(b -> damage[0] = b.defenceProc(this, enemy, damage[0]));
-        return getItemFromSlot(Belongings.Slot.ARMOR).defenceProc(enemy, this, damage[0]);
+        damage[0] = getItemFromSlot(Belongings.Slot.ARMOR).defenceProc(enemy, this, damage[0]);
+
+        if (!enemySeen && enemy.getSubClass() == HeroSubClass.ASSASSIN) {
+            baseDamage += Random.Int(1, baseDamage);
+            Wound.hit(this);
+        }
+
+        if (getOwnerId() != enemy.getId()) {
+            setEnemy(enemy);
+        }
+
+        return script.run("onDefenceProc", enemy, baseDamage).optint(baseDamage);
+
     }
 
     @NotNull
@@ -768,7 +783,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         CharsList.destroy(getId());
     }
 
-    public void die(@NotNull NamedEntityKind src) {
+    public void die(@NotNull NamedEntityKind cause) {
+
+        getState().onDie(this);
+
+        if (cause == null) {
+            cause = CharsList.DUMMY; //Mods may and will misbehave
+            EventCollector.logException("null_death_cause");
+        }
+
+        script.run("onDie", cause);
+
         if (level().pit[getPos()]) {
             getSprite().fall();
         } else {
