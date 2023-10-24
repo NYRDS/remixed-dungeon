@@ -5,6 +5,7 @@ import static com.watabou.pixeldungeon.Dungeon.level;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
+import com.nyrds.lua.LuaEngine;
 import com.nyrds.lua.LuaUtils;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.MobAi;
@@ -44,7 +45,6 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
-import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
@@ -91,6 +91,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.TestOnly;
 import org.luaj.vm2.LuaTable;
+import org.luaj.vm2.LuaValue;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -148,6 +149,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @Getter
     private int pos = Level.INVALID_CELL;
 
+    @Packable(defaultValue = "0")
+    private long layersMask = 0;
+
+
     transient private int prevPos = Level.INVALID_CELL;
 
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
@@ -201,6 +206,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     private float lightness = 0.5f;
 
     public Char() {
+        fillMobStats(false);
+    }
+
+    protected void fillMobStats(boolean b) {
     }
 
     @LuaInterface
@@ -290,6 +299,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         bundle.put(LEVEL, lvl());
 
         getBelongings().storeInBundle(bundle);
+
+        bundle.put(LuaEngine.LUA_DATA, script.run("saveData").checkjstring());
     }
 
     @Override
@@ -309,6 +320,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         getId(); // ensure id
 
+        fillMobStats(true);
+
         hp(bundle.getInt(TAG_HP));
         ht(bundle.getInt(TAG_HT));
         lvl(bundle.getInt(LEVEL));
@@ -322,6 +335,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         setupCharData();
 
         getBelongings().restoreFromBundle(bundle);
+
+        String luaData = bundle.optString(LuaEngine.LUA_DATA,null);
+        if(luaData!=null) {
+            script.run("loadData",luaData);
+        }
+        script.run("fillStats");
     }
 
     private String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
@@ -338,16 +357,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         setBelongings(new Belongings(this));
 
-        if (this instanceof CustomMob) {
-            return;
-        }
-
         name = getClassParam("Name", name, true);
         name_objective = getClassParam("Name_Objective", name, true);
-
-        if (this instanceof Hero) {
-            return;
-        }
 
         description = getClassParam("Desc", description, true);
         gender = Utils.genderFromString(getClassParam("Gender", "masculine", true));
@@ -1260,9 +1271,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             }
             sprite = newSprite();
         }
+
         if (sprite == null) {
             throw new TrackedRuntimeException("Sprite creation for: " + getEntityKind() + " failed");
         }
+
+        sprite.layersMask = layersMask;
 
         if (sprite.getParent() == null) {
             updateSprite(sprite);
@@ -1753,6 +1767,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return script.run("onZapProc", enemy, damage).optint(damage);
     }
 
+    @LuaInterface
+    public String getMobClassName() {
+        return getEntityKind();
+    }
+
     public abstract Char makeClone();
 
     protected void setOwnerId(int owner) {
@@ -2075,11 +2094,25 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public ArrayList<String> actions(Char hero) {
-        return CharUtils.actions(this, hero);
+        ArrayList<String> actions = CharUtils.actions(this, hero);;
+
+        LuaValue ret = script.run("actionsList", hero);
+        LuaEngine.forEach(ret, (key,val)->actions.add(val.tojstring()));
+
+        return actions;
     }
 
     @LuaInterface
     int emptyCellNextTo() {
         return level().getEmptyCellNextTo(getPos());
+    }
+
+    public long getLayersMask() {
+        return layersMask;
+    }
+
+    public void setLayersMask(long layersMask) {
+        this.layersMask = layersMask;
+        updateSprite();
     }
 }

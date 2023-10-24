@@ -69,7 +69,7 @@ public class TestLevel extends RegularLevel {
 
 			int cell = randomRespawnCell(passable);
 			if(!cellValid(cell)) {
-				GLog.debug("no cell for %s", mob.getMobClassName());
+				GLog.debug("no cell for %s", mob.getEntityKind());
 				continue;
 			}
 
@@ -77,7 +77,7 @@ public class TestLevel extends RegularLevel {
 			try {
 				spawnMob(mob);
 			} catch (Exception e) {
-				ModError.doReport(Utils.format("Failed to spawn %s", mob.getMobClassName()), e);
+				ModError.doReport(Utils.format("Failed to spawn %s", mob.getEntityKind()), e);
 			}
 		}
 	}
@@ -108,7 +108,7 @@ public class TestLevel extends RegularLevel {
 
 			int cell = randomRespawnCell(passable);
 			if(!cellValid(cell)) {
-				GLog.debug("no cell for %s", mob.getMobClassName());
+				GLog.debug("no cell for %s", mob.getEntityKind());
 				continue;
 			}
 

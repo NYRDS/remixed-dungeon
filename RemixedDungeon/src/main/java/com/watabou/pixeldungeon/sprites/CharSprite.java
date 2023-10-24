@@ -62,6 +62,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     private static final float INVISIBILITY_ALPHA = 0.4f;
 
     protected float charScale = 1.0f;
+    public long layersMask = 0;
 
     @Nullable
     protected Image avatar;

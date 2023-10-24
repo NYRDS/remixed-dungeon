@@ -47,12 +47,12 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	//For restoreFromBundle
 	@Keep
 	public CustomMob() {
+		super();
 	}
 
 	public CustomMob(String mobClass) {
+		super();
 		this.mobClass = mobClass;
-		fillMobStats(false);
-		script.run("fillStats");
 	}
 
 	@Override
@@ -63,26 +63,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	@Override
 	public int dr() {
 		return dr;
-	}
-
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-
-		bundle.put(LuaEngine.LUA_DATA, script.run("saveData").checkjstring());
-	}
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		fillMobStats(true);
-
-		super.restoreFromBundle(bundle);
-
-		String luaData = bundle.optString(LuaEngine.LUA_DATA,null);
-		if(luaData!=null) {
-			script.run("loadData",luaData);
-		}
-		script.run("fillStats");
 	}
 
 	@Override
@@ -120,17 +100,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		return friendly || super.friendly(chr);
 	}
 
-
-	@Override
-	public ArrayList<String> actions(Char hero) {
-		ArrayList<String> actions = super.actions(hero);
-
-		LuaValue ret = script.run("actionsList", hero);
-		LuaEngine.forEach(ret, (key,val)->actions.add(val.tojstring()));
-
-		return actions;
-	}
-
 	@Override
 	public void damage(int dmg, @NotNull NamedEntityKind src) {
 		if(immortal) {
@@ -150,7 +119,8 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 	@SneakyThrows
-	private void fillMobStats(boolean restoring) {
+	@Override
+	protected void fillMobStats(boolean restoring) {
 		JSONObject classDesc = getClassDef();
 
 		baseDefenseSkill = classDesc.optInt("defenseSkill", baseDefenseSkill);

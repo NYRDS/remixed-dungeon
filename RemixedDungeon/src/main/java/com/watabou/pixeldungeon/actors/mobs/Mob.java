@@ -41,10 +41,8 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
-import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -91,6 +89,7 @@ public abstract class Mob extends Char {
     public Mob() {
         super();
         setupCharData();
+        script.run("fillStats");
     }
 
     public void releasePet() {
@@ -390,7 +389,7 @@ public abstract class Mob extends Char {
         resurrectAnim();
 
         int spawnPos = getPos();
-        Mob new_mob = MobFactory.mobByName(getMobClassName());
+        Mob new_mob = MobFactory.mobByName(getEntityKind());
 
         if (level().cellValid(spawnPos)) {
             new_mob.setPos(spawnPos);
@@ -402,7 +401,7 @@ public abstract class Mob extends Char {
     public void resurrect(Char parent) {
 
         int spawnPos = getPos();
-        Mob new_mob = MobFactory.mobByName(getMobClassName());
+        Mob new_mob = MobFactory.mobByName(getEntityKind());
 
         if (level().cellValid(spawnPos)) {
             new_mob.setPos(spawnPos);
@@ -532,11 +531,6 @@ public abstract class Mob extends Char {
             enemy.showStatus(CharSprite.NEUTRAL, enemy.defenseVerb());
             return false;
         }
-    }
-
-    @LuaInterface
-    public String getMobClassName() {
-        return getEntityKind();
     }
 
     @Nullable
