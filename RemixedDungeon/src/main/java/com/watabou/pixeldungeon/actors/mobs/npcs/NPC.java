@@ -28,8 +28,6 @@ public abstract class NPC extends Mob {
 		setState(MobAi.getStateByClass(Passive.class));
 		
 		fraction = Fraction.NEUTRAL;
-		
-		gender = Utils.MASCULINE;
 	}
 
 	@Override

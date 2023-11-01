@@ -110,8 +110,6 @@ public enum HeroClass implements CharModifier {
         initCommon(hero);
         initForClass(hero, hero.getHeroClass().name());
 
-        hero.setGender(getGender());
-
         if (Badges.isUnlocked(masteryBadge()) && hero.getDifficulty() < 3) {
             {
                 var tomeOfMastery = new TomeOfMastery();

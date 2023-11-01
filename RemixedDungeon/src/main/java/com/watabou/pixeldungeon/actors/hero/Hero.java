@@ -138,8 +138,6 @@ public class Hero extends Char {
     public Hero() {
         super();
         setupCharData();
-        name = StringsManager.getVar(R.string.Hero_Name);
-        name_objective = StringsManager.getVar(R.string.Hero_Name_Objective);
 
         fraction = Fraction.HEROES;
 
@@ -222,9 +220,12 @@ public class Hero extends Char {
         sp = Scrambler.scramble(bundle.optInt(SP, 0));
         maxSp = Scrambler.scramble(bundle.optInt(MAX_SP, 10));
 
-        gender = heroClass.getGender();
-
         setSkillLevel(bundle.getInt(MAGIC_LEVEL));
+    }
+
+    @Override
+    public int getGender() {
+        return heroClass.getGender();
     }
 
     public static void preview(GamesInProgress.Info info, Bundle bundle) {
@@ -1044,10 +1045,6 @@ public class Hero extends Char {
 
     public int getDifficulty() {
         return difficulty;
-    }
-
-    public void setGender(int gender) {
-        this.gender = gender;
     }
 
     public void setDifficulty(int difficulty) {

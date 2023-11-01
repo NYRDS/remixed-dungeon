@@ -27,7 +27,6 @@ import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.ml.actions.Move;
-import com.nyrds.pixeldungeon.mobs.common.CustomMob;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.ItemsList;
@@ -36,6 +35,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.JsonHelper;
 import com.nyrds.util.Scrambler;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Assets;
@@ -90,6 +90,7 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.TestOnly;
+import org.json.JSONObject;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
 
@@ -101,8 +102,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import lombok.Getter;
 import lombok.Setter;
+import lombok.val;
 
 
 public abstract class Char extends Actor implements HasPositionOnLevel, Presser, ItemOwner, NamedEntityKindWithId {
@@ -111,6 +112,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public static final String RESISTANCES = "resistances";
     protected static final String LEVEL = "lvl";
     private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
+    static private final Map<String, JSONObject> defMap = new HashMap<>();
     public EquipableItem rangedWeapon = ItemsList.DUMMY;
 
     public CharAction lastAction = null;
@@ -122,7 +124,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @Packable(defaultValue = "0")
     protected int exp = 0;
 
-    @Getter
     @NotNull
     protected LuaScript script = new LuaScript("scripts/mobs/"+getEntityKind(), DEFAULT_MOB_SCRIPT, this);
     protected int baseStr = 10;
@@ -131,7 +132,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Packable(defaultValue = "-1")//Level.INVALID_CELL
     @LuaInterface
-    @Getter
     @Setter
     private int target = Level.INVALID_CELL;
 
@@ -146,7 +146,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     private int owner = EntityIdSource.INVALID_ID;
 
     @Packable(defaultValue = "-1")//Level.INVALID_CELL
-    @Getter
     private int pos = Level.INVALID_CELL;
 
     @Packable(defaultValue = "0")
@@ -165,18 +164,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     protected CharSprite sprite;
 
-    @Getter
-    protected String name = StringsManager.getVar(R.string.Char_Name);
-    @Getter
-    protected String name_objective = StringsManager.getVar(R.string.Char_Name_Objective);
-
-    protected String description = StringsManager.getVar(R.string.Mob_Desc);
-    @Getter
-    protected String defenceVerb = null;
-    @Getter
-    protected int gender = Utils.NEUTER;
-
-    @Getter
     protected WalkingType walkingType = WalkingType.NORMAL;
 
     private int HT;
@@ -356,13 +343,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         setBelongings(new Belongings(this));
-
-        name = getClassParam("Name", name, true);
-        name_objective = getClassParam("Name_Objective", name, true);
-
-        description = getClassParam("Desc", description, true);
-        gender = Utils.genderFromString(getClassParam("Gender", "masculine", true));
-        defenceVerb = getClassParam("Defense", null, false);
     }
 
     @LuaInterface
@@ -416,7 +396,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (CharUtils.hit(this, enemy, false)) {
 
             if (visibleFight) {
-                GLog.i(StringsManager.getVars(R.array.Char_Hit)[gender], name, enemy.getName_objective());
+                GLog.i(StringsManager.getVars(R.array.Char_Hit)[getGender()], getName(), enemy.getName_objective());
             }
 
             int dmg = damageRoll();
@@ -443,20 +423,20 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
                     if (hero.killerGlyph != null) {
                         Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.GLYPH), hero.killerGlyph.name(), Dungeon.depth));
-                        GLog.n(StringsManager.getVars(R.array.Char_Kill)[hero.gender], hero.killerGlyph.name());
+                        GLog.n(StringsManager.getVars(R.array.Char_Kill)[hero.getGender()], hero.killerGlyph.name());
                     } else {
                         if (isBoss()) {
-                            Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.BOSS), name, Dungeon.depth));
+                            Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.BOSS), getName(), Dungeon.depth));
                         } else {
                             Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
-                                    Utils.indefinite(name), Dungeon.depth));
+                                    Utils.indefinite(getName()), Dungeon.depth));
                         }
 
-                        GLog.n(StringsManager.getVars(R.array.Char_Kill)[gender], name);
+                        GLog.n(StringsManager.getVars(R.array.Char_Kill)[getGender()], getName());
                     }
 
                 } else {
-                    GLog.i(StringsManager.getVars(R.array.Char_Defeat)[gender], name, enemy.getName_objective());
+                    GLog.i(StringsManager.getVars(R.array.Char_Defeat)[getGender()], getName(), enemy.getName_objective());
                 }
             }
             return true;
@@ -466,9 +446,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
                 String defense = enemy.defenseVerb();
                 enemy.showStatus(CharSprite.NEUTRAL, defense);
                 if (this == Dungeon.hero) {
-                    GLog.i(StringsManager.getVar(R.string.Char_YouMissed), enemy.name, defense);
+                    GLog.i(StringsManager.getVar(R.string.Char_YouMissed), enemy.getName(), defense);
                 } else {
-                    GLog.i(StringsManager.getVar(R.string.Char_SmbMissed), enemy.name, defense, name);
+                    GLog.i(StringsManager.getVar(R.string.Char_SmbMissed), enemy.getName(), defense, getName());
                 }
 
                 Sample.INSTANCE.play(Assets.SND_MISS);
@@ -548,10 +528,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public String defenseVerb() {
+        val defenceVerb = getDefenceVerb();
         if (defenceVerb != null) {
             return defenceVerb;
         }
-        return StringsManager.getVars(R.array.Char_StaDodged)[gender];
+        return StringsManager.getVars(R.array.Char_StaDodged)[getGender()];
     }
 
 
@@ -1401,6 +1382,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         script.run("onSpawn", level);
     }
 
+    protected JSONObject getClassDef() {
+        if (!defMap.containsKey(getEntityKind())) {
+            defMap.put(getEntityKind(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getEntityKind() + ".json"));
+        }
+
+        return defMap.get(getEntityKind());
+    }
+
     public boolean friendly(@NotNull Char chr) {
         return !fraction.isEnemy(chr.fraction);
     }
@@ -1964,7 +1953,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @LuaInterface
     @Deprecated
     public String description() { // Still used in Remixed Additions
-        return description;
+        return getDescription();
     }
 
     public void execute(Char chr, String action) {
@@ -1989,9 +1978,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 
     public String getDescription() {
+        var description = getClassParam("Desc", "missing desc", true);
+
+        description = StringsManager.maybeId(getClassDef().optString(description, getEntityKind()+"_Desc"));
+
         if (!Util.isDebug()) {
             return description + "\n\n" + String.format(StringsManager.getVar(R.string.CharInfo_Level), lvl(), name());
         }
+
         return description + "\n\n"
                 + String.format(StringsManager.getVar(R.string.CharInfo_Level), lvl(), name()) + "\n\n"
                 + Utils.format("id: %d owner: %d", getId(), getOwnerId());
@@ -2114,5 +2108,37 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void setLayersMask(long layersMask) {
         this.layersMask = layersMask;
         updateSprite();
+    }
+
+    public @NotNull LuaScript getScript() {
+        return this.script;
+    }
+
+    public int getTarget() {
+        return this.target;
+    }
+
+    public int getPos() {
+        return this.pos;
+    }
+
+    public String getName() {
+        return StringsManager.maybeId(getClassDef().optString("name", getEntityKind()+"_Name"));
+    }
+
+    public String getName_objective() {
+        return StringsManager.maybeId(getClassDef().optString("name_objective", getEntityKind()+"_Name_Objective"));
+    }
+
+    public String getDefenceVerb() {
+        return StringsManager.maybeId(getClassDef().optString("defenceVerb", StringsManager.getVars(R.array.Char_StaDodged)[getGender()]));
+    }
+
+    public int getGender() {
+        return Utils.genderFromString(StringsManager.maybeId(getClassDef().optString("gender", getEntityKind()+"_Gender")));
+    }
+
+    public WalkingType getWalkingType() {
+        return this.walkingType;
     }
 }

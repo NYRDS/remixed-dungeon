@@ -109,14 +109,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		super.damage(dmg, src);
 	}
 
-	@Override
-	public String getDescription() {
-		if(!Util.isDebug()) {
-			return super.getDescription();
-		}
-		return super.getDescription() + "\n"
-				+ Utils.format("kind: %d", kind);
-	}
 
 	@SneakyThrows
 	@Override
@@ -136,11 +128,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		baseSpeed = (float) classDesc.optDouble("baseSpeed", baseSpeed);
 		attackDelay = (float) classDesc.optDouble("attackDelay", attackDelay);
 
-		name = StringsManager.maybeId(classDesc.optString("name", mobClass+"_Name"));
-		name_objective = StringsManager.maybeId(classDesc.optString("name_objective", mobClass+"_Name_Objective"));
-		description = StringsManager.maybeId(classDesc.optString("description", mobClass+"_Desc"));
-		gender = Utils.genderFromString(StringsManager.maybeId(classDesc.optString("gender", mobClass+"_Gender")));
-
 		spriteClass = classDesc.optString("spriteDesc", "spritesDesc/Rat.json");
 
 		flying = classDesc.optBoolean("flying", flying);
@@ -148,7 +135,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		setViewDistance(classDesc.optInt("viewDistance", getViewDistance()));
 
 		walkingType = Enum.valueOf(WalkingType.class, classDesc.optString("walkingType","NORMAL"));
-		defenceVerb = StringsManager.maybeId(classDesc.optString("defenceVerb", StringsManager.getVars(R.array.Char_StaDodged)[gender]));
+
 		canBePet = classDesc.optBoolean("canBePet",canBePet);
 
 		attackRange = classDesc.optInt("attackRange",attackRange);

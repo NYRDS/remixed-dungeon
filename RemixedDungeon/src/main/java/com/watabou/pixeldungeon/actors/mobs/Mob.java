@@ -24,7 +24,6 @@ import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
-import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -58,9 +57,6 @@ import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import lombok.SneakyThrows;
 
 public abstract class Mob extends Char {
@@ -75,8 +71,6 @@ public abstract class Mob extends Char {
     protected int maxLvl = 50;
 
     public static final float TIME_TO_WAKE_UP = 1f;
-
-    static private final Map<String, JSONObject> defMap = new HashMap<>();
 
     private static final String STATE = "state";
     private static final String FRACTION = "fraction";
@@ -439,14 +433,6 @@ public abstract class Mob extends Char {
 
     public AiState getState() {
         return state;
-    }
-
-    protected JSONObject getClassDef() {
-        if (!defMap.containsKey(getEntityKind())) {
-            defMap.put(getEntityKind(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getEntityKind() + ".json"));
-        }
-
-        return defMap.get(getEntityKind());
     }
 
 
