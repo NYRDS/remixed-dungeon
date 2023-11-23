@@ -23,7 +23,6 @@ import com.watabou.pixeldungeon.sprites.ShopkeeperSprite;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Collections;
 
 
 
@@ -89,10 +88,6 @@ public class Shopkeeper extends NPC {
 			attempts++;
 		}
 
-		//if(attempts > 0) {
-		//	Collections.shuffle(backpack.items);
-        //}
-
 		GameScene.show(
 				new WndShopOptions(this, hero));
 		return true;
@@ -103,7 +98,7 @@ public class Shopkeeper extends NPC {
 	public boolean collect(@NotNull Item item) {
 		final Hero hero = Dungeon.hero;
 
-		if(item instanceof Bag && hero != null) {
+		if(item instanceof Bag) {
 			if(Dungeon.hero.getItem(item.getEntityKind()).valid()) {
 				return false;
 			}
