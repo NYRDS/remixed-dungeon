@@ -10,9 +10,7 @@ local mob = require"scripts/lib/mob"
 
 return mob.init({
     damage = function(self,dmg,src)
-        self:yell("Ouch!")
-        self:setLayersMask(16)
+        --self:yell("Ouch!")
+        --self:setLayersMask(16)
     end
 })
-
---return mob.init({})

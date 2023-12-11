@@ -33,8 +33,8 @@ public class Shopkeeper extends NPC {
 		addImmunity(Regeneration.class);
 	}
 
-	@Packable(defaultValue = "")
-	private String bagSold;
+	@Packable
+	private String bagSold = "";
 
 
 	public static int countFood(Bag backpack) {

@@ -64,6 +64,7 @@ public abstract class Mob extends Char {
     public static final String TXT_RAGE = "#$%^";
 
     private static final float SPLIT_DELAY = 1f;
+    public static final String LOOT = "loot";
 
     protected Object spriteClass;
 
@@ -140,8 +141,8 @@ public abstract class Mob extends Char {
 
         fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
 
-        if (bundle.contains("loot")) { //pre 29.6 saves compatibility
-            loot(bundle.get("loot"), 1);
+        if (bundle.contains(LOOT)) { //pre 29.6 saves compatibility
+            loot(bundle.get(LOOT), 1);
         }
     }
 
@@ -417,9 +418,9 @@ public abstract class Mob extends Char {
     }
 
     public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
-        if (mobDesc.has("loot")) {
+        if (mobDesc.has(LOOT)) {
             float lootChance = (float) mobDesc.optDouble("lootChance", 1f);
-            loot(ItemFactory.createItemFromDesc(mobDesc.getJSONObject("loot")), lootChance);
+            loot(ItemFactory.createItemFromDesc(mobDesc.getJSONObject(LOOT)), lootChance);
         }
 
         getBelongings().setupFromJson(mobDesc);
