@@ -248,7 +248,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         checkVisibleEnemies();
 
-        script.runOptional("onAct");
+        getScript().runOptional("onAct");
 
         forEachBuff(CharModifier::charAct);
 
@@ -288,7 +288,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         getBelongings().storeInBundle(bundle);
 
-        bundle.put(LuaEngine.LUA_DATA, script.run("saveData").checkjstring());
+        bundle.put(LuaEngine.LUA_DATA, getScript().run("saveData").checkjstring());
     }
 
     @Override
@@ -326,9 +326,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         String luaData = bundle.optString(LuaEngine.LUA_DATA,null);
         if(luaData!=null) {
-            script.run("loadData",luaData);
+            getScript().run("loadData",luaData);
         }
-        script.run("fillStats");
+        getScript().run("fillStats");
     }
 
     private String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
@@ -620,7 +620,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             getSecondaryWeapon().attackProc(this, enemy, dmg[0]);
         }
 
-        return script.run("onAttackProc", enemy, dmg[0]).optint(dmg[0]);
+        return getScript().run("onAttackProc", enemy, dmg[0]).optint(dmg[0]);
     }
 
     public int defenseProc(Char enemy, int baseDamage) {
@@ -638,7 +638,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             setEnemy(enemy);
         }
 
-        return script.run("onDefenceProc", enemy, baseDamage).optint(baseDamage);
+        return getScript().run("onDefenceProc", enemy, baseDamage).optint(baseDamage);
 
     }
 
@@ -664,7 +664,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Override
     public int priceSell(Item item) {
-        return script.run("priceSell", item, item.price() * 5 * (Dungeon.depth / 5 + 1)).toint();
+        return getScript().run("priceSell", item, item.price() * 5 * (Dungeon.depth / 5 + 1)).toint();
     }
 
     public int damageRoll() {
@@ -728,7 +728,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             return;
         }
 
-        script.run("onDamage", dmg, src);
+        getScript().run("onDamage", dmg, src);
         getState().gotDamage(this, src, dmg);
 
         final int[] dmg_ = {dmg};
@@ -785,7 +785,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             EventCollector.logException("null_death_cause");
         }
 
-        script.run("onDie", cause);
+        getScript().run("onDie", cause);
 
         if (level().pit[getPos()]) {
             getSprite().fall();
@@ -1058,7 +1058,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             step = Random.element(candidates);
         }
 
-        script.run("onMove", step);
+        getScript().run("onMove", step);
         placeTo(step);
     }
 
@@ -1380,7 +1380,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public void onSpawn(Level level) {
         Buff.affect(this, Regeneration.class);
-        script.run("onSpawn", level);
+        getScript().run("onSpawn", level);
     }
 
     protected JSONObject getClassDef() {
@@ -1631,7 +1631,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public boolean interact(Char chr) {
 
-        if(script.run("onInteract", chr).optboolean(true)) {
+        if(getScript().run("onInteract", chr).optboolean(true)) {
             return true;
         }
 
@@ -1750,11 +1750,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     protected void zapMiss(@NotNull Char enemy) {
-        script.run("onZapMiss", enemy);
+        getScript().run("onZapMiss", enemy);
     }
 
     protected int zapProc(@NotNull Char enemy, int damage) {
-        return script.run("onZapProc", enemy, damage).optint(damage);
+        return getScript().run("onZapProc", enemy, damage).optint(damage);
     }
 
     @LuaInterface
@@ -1974,7 +1974,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Override
     public int priceBuy(Item item) {
-        return script.run("priceBuy", item, (item.price())).toint();
+        return getScript().run("priceBuy", item, (item.price())).toint();
     }
 
 
@@ -2091,7 +2091,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public ArrayList<String> actions(Char hero) {
         ArrayList<String> actions = CharUtils.actions(this, hero);;
 
-        LuaValue ret = script.run("actionsList", hero);
+        LuaValue ret = getScript().run("actionsList", hero);
         LuaEngine.forEach(ret, (key,val)->actions.add(val.tojstring()));
 
         return actions;
@@ -2132,6 +2132,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public LuaScript getScript() {
         if(script==null) {
             script = new LuaScript("scripts/mobs/"+getEntityKind(), DEFAULT_MOB_SCRIPT, this);
+            script.asInstance();
         }
         return script;
     }

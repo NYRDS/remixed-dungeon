@@ -83,7 +83,7 @@ public abstract class Mob extends Char {
     public Mob() {
         super();
         setupCharData();
-        script.run("fillStats");
+        getScript().run("fillStats");
     }
 
     public void releasePet() {
