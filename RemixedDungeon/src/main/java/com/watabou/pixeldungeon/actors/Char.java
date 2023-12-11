@@ -102,6 +102,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import lombok.Getter;
 import lombok.Setter;
 import lombok.val;
 
@@ -124,8 +125,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @Packable(defaultValue = "0")
     protected int exp = 0;
 
-    @NotNull
-    protected LuaScript script = new LuaScript("scripts/mobs/"+getEntityKind(), DEFAULT_MOB_SCRIPT, this);
+    protected LuaScript script;
     protected int baseStr = 10;
     protected int attackRange = 1;
 
@@ -133,6 +133,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @Packable(defaultValue = "-1")//Level.INVALID_CELL
     @LuaInterface
     @Setter
+    @Getter
     private int target = Level.INVALID_CELL;
 
     @NotNull
@@ -146,11 +147,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     private int owner = EntityIdSource.INVALID_ID;
 
     @Packable(defaultValue = "-1")//Level.INVALID_CELL
+    @Getter
     private int pos = Level.INVALID_CELL;
 
     @Packable(defaultValue = "0")
     private long layersMask = 0;
-
 
     transient private int prevPos = Level.INVALID_CELL;
 
@@ -2101,25 +2102,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return level().getEmptyCellNextTo(getPos());
     }
 
-    public long getLayersMask() {
-        return layersMask;
-    }
 
+    @LuaInterface
     public void setLayersMask(long layersMask) {
         this.layersMask = layersMask;
         updateSprite();
-    }
-
-    public @NotNull LuaScript getScript() {
-        return this.script;
-    }
-
-    public int getTarget() {
-        return this.target;
-    }
-
-    public int getPos() {
-        return this.pos;
     }
 
     public String getName() {
@@ -2140,5 +2127,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public WalkingType getWalkingType() {
         return this.walkingType;
+    }
+
+    public LuaScript getScript() {
+        if(script==null) {
+            script = new LuaScript("scripts/mobs/"+getEntityKind(), DEFAULT_MOB_SCRIPT, this);
+        }
+        return script;
     }
 }
