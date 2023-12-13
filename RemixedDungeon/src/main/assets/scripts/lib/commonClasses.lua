@@ -347,12 +347,12 @@ local RPD = {
 
     showBuyWindow = function(shopkeeper,client)
         local wnd = luajava.newInstance(Objects.Ui.WndShopOptions, shopkeeper, client )
-        wnd: showBuyWnd()
+        wnd:showBuyWnd()
     end,
 
     showSellWindow = function(shopkeeper,client)
         local wnd = luajava.newInstance(Objects.Ui.WndShopOptions, shopkeeper, client )
-        wnd: showSellWnd()
+        wnd:showSellWnd()
     end,
 
 
