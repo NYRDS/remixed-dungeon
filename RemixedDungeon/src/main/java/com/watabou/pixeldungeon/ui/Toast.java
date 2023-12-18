@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.util.GuiProperties;
@@ -63,6 +64,10 @@ public class Toast extends Component implements IWindow {
 		height = hBox.height() + MARGIN_VER * 2;
 	}
 
+	@LuaInterface
+	public void close() {
+		onClose();
+	}
 
 	@Override
 	protected void layout() {
