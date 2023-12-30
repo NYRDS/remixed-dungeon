@@ -87,9 +87,12 @@ import com.watabou.utils.SystemTime;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+
+import lombok.val;
 
 
 public class Hero extends Char {
@@ -920,6 +923,11 @@ public class Hero extends Char {
         immunities.addAll(heroClass.immunities());
         immunities.addAll(subClass.immunities());
         return immunities;
+    }
+
+    @Override
+    public String getDescription() {
+        return getHeroClass().getDescription();
     }
 
     @Override

@@ -61,6 +61,7 @@ import java.util.Set;
 
 import lombok.Getter;
 import lombok.SneakyThrows;
+import lombok.val;
 
 
 public enum HeroClass implements CharModifier {
@@ -229,6 +230,17 @@ public enum HeroClass implements CharModifier {
             case GNOLL:
                 return StringsManager.getVars(R.array.HeroClass_GnollPerks);
         }
+    }
+
+    public String getDescription() {
+        StringBuilder desc = new StringBuilder();
+        for (val item : perks()) {
+            desc.append("# ");
+            desc.append(item);
+            desc.append("\n\n");
+        }
+
+        return desc.toString();
     }
 
     public int getGender() {
