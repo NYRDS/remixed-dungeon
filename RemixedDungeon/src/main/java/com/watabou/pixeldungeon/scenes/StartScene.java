@@ -336,17 +336,6 @@ public class StartScene extends PixelScene {
                 StringsManager.getVar(R.string.StartScene_DifficultyExpert)) {
             @Override
             public void onSelect(final int index) {
-
-                if (index < 2 && EuConsent.getConsentLevel() < EuConsent.NON_PERSONALIZED) {
-                    GameLoop.addToScene(new WndEuConsent() {
-                        @Override
-                        public void done() {
-                            startNewGame(index);
-                        }
-                    });
-                    return;
-                }
-
                 startNewGame(index);
             }
         };
