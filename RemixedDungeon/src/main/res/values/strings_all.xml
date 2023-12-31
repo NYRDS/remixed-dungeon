@@ -2452,7 +2452,7 @@
   <string name="HeroClass_HunPerks_2">Huntresses are proficient with missile weapons and get a damage bonus for excessive strength when using them.</string>
   <string name="HeroClass_HunPerks_3">Huntresses gain more health from dewdrops.</string>
   <string name="HeroClass_HunPerks_4">Huntresses sense neighbouring monsters even if they are hidden behind obstacles.</string>
-  <string name="HeroClass_ElfPerks_0">Elves start with 15 HP and 9 STR.</string>
+  <string name="HeroClass_ElfPerks_0">Elves start with 15 points of Health. and 9 points of Strength.</string>
   <string name="HeroClass_ElfPerks_1">Elves are immune to rooting.</string>
   <string name="HeroClass_ElfPerks_2">Elves start with an upgraded wooden bow and a bunch of arrows.</string>
   <string name="HeroClass_ElfPerks_3">Elves are extremely proficient with bows and are agile.</string>
