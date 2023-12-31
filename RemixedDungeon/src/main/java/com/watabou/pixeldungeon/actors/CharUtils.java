@@ -393,6 +393,7 @@ public class CharUtils {
 
         VHBox actions = new VHBox(maxWidth - 2* Window.GAP);
         actions.setAlign(HBox.Align.Width);
+        actions.setHGap(Window.GAP);
         actions.setGap(Window.GAP);
 
         if (selector.isAlive()) {
@@ -409,7 +410,7 @@ public class CharUtils {
                         }
                     }
                 };
-                btn.setSize( Math.max(36, btn.reqWidth() ), Window.BUTTON_HEIGHT );
+                btn.setSize( Math.max(btn.reqWidth(), 24), Window.BUTTON_HEIGHT );
 
                 actions.add(btn);
             }
