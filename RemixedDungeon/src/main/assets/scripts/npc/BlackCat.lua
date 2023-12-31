@@ -27,7 +27,7 @@ return mob.init({
         RPD.setAi(me,"BlackCat")
     end,
 
-    actions = function(self, chr)
+    actionsList = function(self, chr)
         return {"pet"}
     end,
 
