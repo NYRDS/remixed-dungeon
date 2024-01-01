@@ -5,7 +5,6 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.nyrds.util.WeakOptional;
 import com.watabou.noosa.Animation;
@@ -24,7 +23,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.EmoIcon;
-import com.watabou.pixeldungeon.effects.FloatingText;
 import com.watabou.pixeldungeon.effects.IceBlock;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Splash;
@@ -33,6 +31,7 @@ import com.watabou.pixeldungeon.effects.TorchHalo;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
@@ -66,6 +65,14 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     @Nullable
     protected Image avatar;
+
+
+    @Nullable
+    private Glowing glowing = Glowing.NO_GLOWING;
+
+    private float   phase;
+    private boolean glowUp;
+
 
     public void fall() {
 
@@ -119,6 +126,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         super();
         listener = this;
         setIsometricShift(true);
+        GLog.debug("new sprite");
     }
 
     public void link(Char owner) {
@@ -462,6 +470,27 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             resetColor();
         }
 
+        if (getVisible()) {
+            if (glowing != null && glowing != Glowing.NO_GLOWING) {
+                final float elapsed = GameLoop.elapsed;
+
+                if (glowUp && (phase += elapsed) > glowing.period) {
+                    glowUp = false;
+                    phase = glowing.period;
+                } else if (!glowUp && (phase -= elapsed) < 0) {
+                    glowUp = true;
+                    phase = 0;
+                }
+
+                float value = phase / glowing.period * 0.6f;
+
+                rm = gm = bm = 1 - value;
+                ra = glowing.red * value;
+                ga = glowing.green * value;
+                ba = glowing.blue * value;
+            }
+        }
+
         ch.ifPresent(chr -> {
             boolean visible = getVisible() && chr.invisible <= 0;
 
@@ -500,9 +529,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                 EventCollector.logEvent(Utils.format("CharSprite desync %s (%d not %d)", chr.getEntityKind(), cellIndex, chrPos));
                 place(chrPos);
             }
-
         });
-
     }
 
     private void showSleep() {

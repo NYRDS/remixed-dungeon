@@ -171,4 +171,10 @@ public class Window extends Group implements Signal.Listener<Key>, IWindow {
 		return getParentWindow(parent);
 	}
 
+	static public void hideParentWindow(Gizmo child) {
+		var parent = getParentWindow(child);
+		if (parent != null) {
+			parent.hide();
+		}
+	}
 }

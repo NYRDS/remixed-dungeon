@@ -31,7 +31,7 @@ class StatsTab extends TabContent {
             RedButton btnCatalogus = new RedButton(R.string.WndHero_StaCatalogus) {
                 @Override
                 protected void onClick() {
-                    ((Window) getParent()).hide();
+                    Window.hideParentWindow(this);
                     GameScene.show(new WndCatalogus());
                 }
             };
@@ -41,7 +41,7 @@ class StatsTab extends TabContent {
             RedButton btnJournal = new RedButton(R.string.WndHero_StaJournal) {
                 @Override
                 protected void onClick() {
-                    ((Window) getParent()).hide();
+                    Window.hideParentWindow(this);
                     GameScene.show(new WndJournal());
                 }
             };

@@ -1248,10 +1248,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
             if(Util.isDebug()){
                 if(!isAlive()) {
-                    throw new TrackedRuntimeException("its dead! leave it alone! " + getEntityKind());
+                    //throw new TrackedRuntimeException("its dead! leave it alone! " + getEntityKind());
                 }
             }
             sprite = newSprite();
+            sprite.lightness(lightness);
         }
 
         if (sprite == null) {
@@ -1265,8 +1266,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         assert (sprite.getParent() != null);
-
-        sprite.lightness(lightness);
 
         return sprite;
     }
@@ -2089,7 +2088,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public ArrayList<String> actions(Char hero) {
-        ArrayList<String> actions = CharUtils.actions(this, hero);;
+        ArrayList<String> actions = CharUtils.actions(this, hero);
 
         LuaValue ret = getScript().run("actionsList", hero);
         LuaEngine.forEach(ret, (key,val)->actions.add(val.tojstring()));

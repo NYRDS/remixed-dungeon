@@ -404,10 +404,7 @@ public class CharUtils {
                     @Override
                     protected void onClick() {
                         execute(mob, selector, action);
-                        var parentWindow = Window.getParentWindow(this);
-                        if(parentWindow != null) {
-                            parentWindow.hide();
-                        }
+                        Window.hideParentWindow(this);
                     }
                 };
                 btn.setSize( Math.max(btn.reqWidth(), 24), Window.BUTTON_HEIGHT );
