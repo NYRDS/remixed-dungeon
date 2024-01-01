@@ -53,6 +53,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	public CustomMob(String mobClass) {
 		super();
 		this.mobClass = mobClass;
+		fillMobStats(false);
 	}
 
 	@Override
@@ -114,6 +115,9 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	@Override
 	protected void fillMobStats(boolean restoring) {
 		JSONObject classDesc = getClassDef();
+		if(! classDesc.keys().hasNext()) {
+			return;
+		}
 
 		baseDefenseSkill = classDesc.optInt("defenseSkill", baseDefenseSkill);
 		baseAttackSkill = classDesc.optInt("attackSkill", attackSkill);
