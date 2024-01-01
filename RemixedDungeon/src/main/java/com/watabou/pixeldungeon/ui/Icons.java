@@ -74,7 +74,10 @@ public enum Icons {
     FB,
     DISCORD,
     PLUS,
-    MINUS;
+    MINUS,
+    FACILITATIONS_ON,
+    FACILITATIONS_OFF;
+
 
 
     public Image get() {
@@ -83,6 +86,7 @@ public enum Icons {
 
     public static Image get(Icons type) {
         Image icon = new Image(Assets.ICONS);
+        Image icon2 = new Image(Assets.ICONS2);
         switch (type) {
             case SKULL:
                 icon.frame(icon.texture.uvRect(0, 0, 8, 8));
@@ -168,6 +172,13 @@ public enum Icons {
             case CHALLENGE_ON:
                 icon.frame(icon.texture.uvRect(102, 16, 126, 40));
                 break;
+            case FACILITATIONS_OFF:
+                icon2.frame(icon2.texture.uvRect(78, 16, 102, 40));
+                return icon2;
+
+            case FACILITATIONS_ON:
+                icon2.frame(icon2.texture.uvRect(102, 16, 126, 40));
+                return icon2;
             case RESUME:
                 icon.frame(icon.texture.uvRect(114, 0, 126, 11));
                 break;

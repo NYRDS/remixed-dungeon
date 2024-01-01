@@ -2896,4 +2896,5 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Movement_Speed">Movement speed</string>
   <string name="Attack_Cooldown">Attack cooldown</string>
   <string name="View_Distance">View distance</string>
+  <string name="WndHero_Info">Info</string>
 </resources>

@@ -32,7 +32,7 @@ public class WndChar extends WndTabbed {
         var buffs = new BuffsTab(chr);
         add(buffs);
 
-        add(new LabeledTab(this, "Desc") {
+        add(new LabeledTab(this, StringsManager.getVar(R.string.WndHero_Info)) {
             public void select(boolean value) {
                 super.select(value);
                 desc.setVisible(desc.setActive(selected));

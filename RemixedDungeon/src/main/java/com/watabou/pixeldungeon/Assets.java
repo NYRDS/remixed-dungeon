@@ -24,6 +24,7 @@ public class Assets {
     public static final String AMULET = "amulet.png";
 
     public static final String ICONS  = "ui/icons.png";
+    public static final String ICONS2  = "ui/icons2.png";
     public static final String HP_BAR = "ui/hp_bar.png";
     public static final String SP_BAR = "ui/sp_bar.png";
     public static final String XP_BAR = "ui/exp_bar.png";

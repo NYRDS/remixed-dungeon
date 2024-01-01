@@ -31,14 +31,20 @@ import java.util.ArrayList;
 
 public class WndGameplayCustomization extends Window {
 
-    private final int WIDTH = 120;
+    public enum Mode {
+        CHALLENGES,
+        FACILITATIONS,
+        BOTH
 
-    public WndGameplayCustomization( boolean editable ) {
+    };
+
+    public WndGameplayCustomization( boolean editable, Mode mode ) {
 
         super();
 
         Text title = PixelScene.createText(StringsManager.getVar(R.string.WndCustomizations_Title), GuiProperties.titleFontSize() );
         title.hardlight( TITLE_COLOR );
+        int WIDTH = 120;
         title.setX(PixelScene.align( camera, (WIDTH - title.width()) / 2 ));
         add( title );
 
@@ -55,19 +61,23 @@ public class WndGameplayCustomization extends Window {
 
         add(list);
 
-        for (int i = 0; i < Facilitations.MASKS.length; i++) {
-            var item = new ChallengeItem(i+16,
-                    chrome.innerWidth(),
-                    editable);
-            listBox.add(item);
+        if(mode == Mode.FACILITATIONS ||mode == Mode.BOTH) {
+            for (int i = 0; i < Facilitations.MASKS.length; i++) {
+                var item = new ChallengeItem(i + 16,
+                        chrome.innerWidth(),
+                        editable);
+                listBox.add(item);
+            }
         }
 
-        for (int i = 0; i < Challenges.MASKS.length; i++) {
-            var item = new ChallengeItem(i,
-                    chrome.innerWidth(),
-                    editable);
+        if(mode == Mode.CHALLENGES ||mode == Mode.BOTH) {
+            for (int i = 0; i < Challenges.MASKS.length; i++) {
+                var item = new ChallengeItem(i,
+                        chrome.innerWidth(),
+                        editable);
 
-            listBox.add(item);
+                listBox.add(item);
+            }
         }
 
         listBox.layout();
