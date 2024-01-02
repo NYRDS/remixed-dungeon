@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.generated.BundleHelper;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Horrified;
 import com.nyrds.pixeldungeon.ai.Hunting;
@@ -418,6 +419,9 @@ public abstract class Mob extends Char {
     }
 
     public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
+        Bundle descBundle = new Bundle(mobDesc);
+        BundleHelper.UnPack(this, descBundle);
+
         if (mobDesc.has(LOOT)) {
             float lootChance = (float) mobDesc.optDouble("lootChance", 1f);
             loot(ItemFactory.createItemFromDesc(mobDesc.getJSONObject(LOOT)), lootChance);

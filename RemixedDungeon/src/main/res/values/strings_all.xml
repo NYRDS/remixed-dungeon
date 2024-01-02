@@ -1793,7 +1793,7 @@
   <string name="GothicArmor_Info">A gothic armor is a pinnacle of the art of armor forging.</string>
   <string name="ChaosArmor_Name">Chaos armor</string>
   <string name="ChaosArmor_Info">This armor consists of blood-red plates that are sewed together with dark red chains. They irradiate chaotic energy as you touch them.</string>
-  <string name="ChaosCrystal_ArmorFused">The crystal fused with your armor, and it took the form of a composite one instead.</string>
+  <string name="ChaosCrystal_ArmorFused">The crystal fused with your armor, and it took the chaos form.</string>
   <string name="Blacksmith_Name">troll blacksmith</string>
   <string name="Blacksmith_Desc">This troll blacksmith looks like all trolls look: he is tall and lean, and his skin resembles stone in both color and texture. The troll blacksmith is tinkering with unproportionally small tools.</string>
   <string name="Blacksmith_Gold1">Hey human! Wanna be useful, eh? Take dis pickaxe and mine me some _dark gold ore_, _15 pieces_ should be enough. What do you mean, how am I gonna pay? You greedy...\nOk, ok, I don\'t have money to pay, but I can do some smithin\' for you. Consider yourself lucky, I\'m the only blacksmith around.</string>
@@ -2897,4 +2897,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Attack_Cooldown">Attack cooldown</string>
   <string name="View_Distance">View distance</string>
   <string name="WndHero_Info">Info</string>
+  <string name="ChaosShield_name">Chaos Shield</string>
+  <string name="ChaosShield_desc">Chaos Shield desc</string>
+  <string name="ChaosCrystal_ShieldFused">The crystal fused with your shield, and it took the chaos form.</string>
 </resources>

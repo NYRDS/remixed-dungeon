@@ -24,8 +24,6 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 
 public class SpiderQueen extends Boss {
-
-
 	public SpiderQueen() {
 		hp(ht(120));
 		baseDefenseSkill = 18;

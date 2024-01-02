@@ -65,7 +65,7 @@ public class Bundle {
         this.data = new JSONObject(data);
     }
 
-    private Bundle(JSONObject data) {
+    public Bundle(JSONObject data) {
         this.data = data;
     }
 

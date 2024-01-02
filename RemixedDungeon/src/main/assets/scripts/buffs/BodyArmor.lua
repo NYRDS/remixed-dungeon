@@ -14,13 +14,19 @@ return buff.init{
             info          = "BodyArmorBuff_Info",
         }
     end,
+
     act = function(self,buff)
         buff:detach()
     end,
+
+    attachTo = function(self, buff, target)
+        return buff:spend(10)
+    end,
+
     drBonus = function(self,buff)
         return (buff.target:effectiveSTR()-10) * (1 + 0.5 * buff:level())
     end,
     speedMultiplier = function(self, buff)
-        return 0.5
+        return 0.85
     end
 }

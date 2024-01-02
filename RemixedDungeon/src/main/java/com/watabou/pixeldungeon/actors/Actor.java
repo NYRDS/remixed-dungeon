@@ -259,6 +259,10 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 			return;
 		}
 
+		if(actor.getEntityKind().equals("Hero")) {
+			return;
+		}
+
 		Integer skips = skipCounter.get(actor);
 		if(skips == null) {
 			skips = 0;
