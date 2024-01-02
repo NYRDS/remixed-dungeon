@@ -643,7 +643,9 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
 	public void fromJson(JSONObject itemDesc) throws JSONException {
 
-		Bundle descBundle = new Bundle(itemDesc);
+		Bundle descBundle = new Bundle();
+		BundleHelper.Pack(this, descBundle);
+		descBundle.mergeWith(itemDesc);
 		BundleHelper.UnPack(this, descBundle);
 
 		quantity(Math.max(itemDesc.optInt("quantity",1),1));

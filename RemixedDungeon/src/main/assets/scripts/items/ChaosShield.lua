@@ -4,7 +4,7 @@ local item = require "scripts/lib/item"
 
 local shields = require "scripts/lib/shields"
 
-local shieldLevel = 1
+local shieldLevel = 3
 local shieldDesc  = "ChaosShield_desc"
 
 

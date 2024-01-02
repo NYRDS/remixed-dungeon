@@ -419,7 +419,9 @@ public abstract class Mob extends Char {
     }
 
     public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
-        Bundle descBundle = new Bundle(mobDesc);
+        Bundle descBundle = new Bundle();
+        BundleHelper.Pack(this, descBundle);
+        descBundle.mergeWith(mobDesc);
         BundleHelper.UnPack(this, descBundle);
 
         if (mobDesc.has(LOOT)) {

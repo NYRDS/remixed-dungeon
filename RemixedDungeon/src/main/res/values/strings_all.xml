@@ -2898,6 +2898,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="View_Distance">View distance</string>
   <string name="WndHero_Info">Info</string>
   <string name="ChaosShield_name">Chaos Shield</string>
-  <string name="ChaosShield_desc">Chaos Shield desc</string>
+  <string name="ChaosShield_desc">The Chaos Shield is the result of fusing a Chaos Crystal with ordinary shield, causing it to manifest random chaotic effects upon a successful block.</string>
   <string name="ChaosCrystal_ShieldFused">The crystal fused with your shield, and it took the chaos form.</string>
 </resources>

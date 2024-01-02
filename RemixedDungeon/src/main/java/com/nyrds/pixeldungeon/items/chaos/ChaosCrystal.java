@@ -98,11 +98,13 @@ public class ChaosCrystal extends UsableArtifact {
             if (item instanceof Wand) {
                 selector.collect(new ChaosStaff());
                 GLog.p(StringsManager.getVar(R.string.ChaosCrystal_StaffFused));
+                return;
             }
 
             if (item.getEntityKind().contains("Shield")){
                 selector.collect(ItemFactory.itemByName("ChaosShield"));
                 GLog.p(StringsManager.getVar(R.string.ChaosCrystal_ShieldFused));
+                return;
             }
         }
     };
