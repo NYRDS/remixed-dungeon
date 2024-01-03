@@ -22,7 +22,7 @@ public class FireElemental extends Mob {
 		baseDefenseSkill = 20;
 		baseAttackSkill  = 25;
 		
-		exp = 10;
+		expForKill = 10;
 		maxLvl = 20;
 		dmgMin = 16;
 		dmgMax = 20;

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ai.Sleeping;
+import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
@@ -168,7 +169,19 @@ public class CharUtils {
 
         float acuRoll = Random.Float(attacker.attackSkill(defender));
         float defRoll = Random.Float(defender.defenseSkill(attacker));
-        return (magic ? acuRoll * 2 : acuRoll) >= defRoll;
+        boolean hit = (magic ? acuRoll * 2 : acuRoll) >= defRoll;
+
+        if(ModQuirks.mobLeveling) {
+            if (hit && attacker instanceof Mob) {
+                attacker.earnExp(1);
+            }
+
+            if (!hit && defender instanceof Mob) {
+                defender.earnExp(1);
+            }
+        }
+
+        return hit;
     }
 
     public static void challengeAllMobs(Char ch, String sound) {

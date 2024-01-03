@@ -23,7 +23,7 @@ public class DreadKnight extends UndeadMob {
         dmgMax = 16;
         dr = 12;
 
-        exp = 8;
+        expForKill = 8;
         maxLvl = 15;
 
         loot(Gold.class, 0.02f);

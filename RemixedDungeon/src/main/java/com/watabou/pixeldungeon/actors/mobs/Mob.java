@@ -23,6 +23,7 @@ import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
@@ -69,7 +70,7 @@ public abstract class Mob extends Char {
 
     protected Object spriteClass;
 
-    protected int exp = 1;
+    protected int expForKill = 1;
     protected int maxLvl = 50;
 
     public static final float TIME_TO_WAKE_UP = 1f;
@@ -86,6 +87,7 @@ public abstract class Mob extends Char {
         super();
         setupCharData();
         getScript().run("fillStats");
+        lvl(Random.NormalIntRange(1 , (int) (5 * RemixedDungeon.getDifficultyFactor()+1)));
     }
 
     public void releasePet() {
@@ -195,12 +197,7 @@ public abstract class Mob extends Char {
             return true;
         }
 
-        if(ModQuirks.mobLeveling) {
-            if (Random.Float() < 0.01 / lvl() && !level().isSafe()) {
-                earnExp(1);
-            }
-        }
-        float timeBeforeAct = actorTime();
+        //float timeBeforeAct = actorTime();
 
 
         //GLog.debug("%s is %s", getEntityKind(), getState().getTag());
@@ -339,8 +336,8 @@ public abstract class Mob extends Char {
                 }
 
                 if (!(cause instanceof Mob) || hero.getHeroClass() == HeroClass.NECROMANCER) {
-                    if (hero.lvl() <= (maxLvl + lvl()) && exp > 0) {
-                        hero.earnExp(exp);
+                    if (hero.lvl() <= (maxLvl + lvl()) && expForKill > 0) {
+                        hero.earnExp(expForKill);
                     }
                 }
             }

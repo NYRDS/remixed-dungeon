@@ -32,7 +32,7 @@ public class Warlock extends Mob implements IZapper {
 		dmgMax = 20;
 		dr = 8;
 
-		exp = 11;
+		expForKill = 11;
 		maxLvl = 21;
 
 		loot(Treasury.Category.POTION, 0.83f);

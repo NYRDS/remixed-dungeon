@@ -24,7 +24,7 @@ public class YogsHeart extends Mob {
         dmgMax = 45;
         dr = 22;
 
-        exp = 12;
+        expForKill = 12;
 
         addImmunity(ToxicGas.class);
         addImmunity(Paralysis.class);

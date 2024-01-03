@@ -340,7 +340,7 @@ public class Ghost extends NPC {
 			dmgMax = 6;
 			dr = 2;
 			
-			exp = 0;
+			expForKill = 0;
 			
 			setState(MobAi.getStateByClass(Wandering.class));
 

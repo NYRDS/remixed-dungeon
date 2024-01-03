@@ -20,12 +20,14 @@ return buff.init{
     end,
 
     attachTo = function(self, buff, target)
-        return buff:spend(10)
+        buff:spend(20)
+        return true
     end,
 
     drBonus = function(self,buff)
         return (buff.target:effectiveSTR()-10) * (1 + 0.5 * buff:level())
     end,
+
     speedMultiplier = function(self, buff)
         return 0.85
     end

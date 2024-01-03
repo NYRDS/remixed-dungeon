@@ -25,7 +25,7 @@ public class Thief extends Mob {
 		dmgMax = 7;
 		dr = 3;
 
-		exp = 5;
+		expForKill = 5;
 		maxLvl = 10;
 		
 		loot(RingOfHaggler.class, 0.01f);

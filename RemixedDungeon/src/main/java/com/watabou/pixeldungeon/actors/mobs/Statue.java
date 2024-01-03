@@ -7,7 +7,6 @@ import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -35,7 +34,7 @@ import lombok.val;
 public class Statue extends Mob {
 
 	public Statue() {
-		exp = 0;
+		expForKill = 0;
 		setState(MobAi.getStateByClass(Passive.class));
 
 		hp(ht(15 + Dungeon.depth * 5));

@@ -298,7 +298,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 				addLayer(layersOrder[i], TextureCache.get(lookDesc[i]));
 			} else {
 				if(Util.isDebug()) {
-					GLog.n("Missing file %s", lookDesc[i]);
+					//GLog.n("Missing file %s", lookDesc[i]);
 				}
 			}
 		}

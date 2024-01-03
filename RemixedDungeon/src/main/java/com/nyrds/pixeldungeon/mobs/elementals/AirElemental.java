@@ -34,9 +34,9 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 		hp(ht(depth * 3 + 1));
 		baseDefenseSkill = depth * 2 + 1;
 		baseAttackSkill = baseDefenseSkill * 2 + 1;
-		exp = depth + 1;
+		expForKill = depth + 1;
 		maxLvl = depth + 2;
-		dr = exp / 5;
+		dr = expForKill / 5;
 		dmgMin = 0;
 		dmgMax = ht() / 4;
 	}

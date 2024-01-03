@@ -15,7 +15,7 @@ public class Brute extends Mob {
 		dmgMin = 8;
 		dmgMax = 18;
 
-		exp = 8;
+		expForKill = 8;
 		maxLvl = 15;
 
 		dr = 8;

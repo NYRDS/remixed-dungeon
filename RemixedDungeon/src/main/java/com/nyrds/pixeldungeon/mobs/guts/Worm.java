@@ -25,7 +25,7 @@ public class Worm extends Mob {
         dmgMax = 45;
         dr = 50;
 
-        exp = 18;
+        expForKill = 18;
         maxLvl = 35;
 
         loot(Gold.class, 0.4f);

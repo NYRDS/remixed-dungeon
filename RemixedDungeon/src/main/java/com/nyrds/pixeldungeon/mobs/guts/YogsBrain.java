@@ -40,7 +40,7 @@ public class YogsBrain extends Mob implements IZapper {
         dmgMax = 25;
         dr = 12;
 
-        exp = 25;
+        expForKill = 25;
 
         addResistance( LightningTrap.Electricity.class );
         addResistance(ToxicGas.class);

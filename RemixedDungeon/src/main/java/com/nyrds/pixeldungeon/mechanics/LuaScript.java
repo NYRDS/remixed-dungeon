@@ -5,6 +5,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.Nullable;
@@ -141,6 +142,9 @@ public class LuaScript {
         }
 
         try {
+            if (Util.isDebug() && !method.equals("onStep")) {
+                GLog.debug("Running script %s:%s", scriptFile, method);
+            }
             if(defaultValue==null) {
                 run(method, luaArgs);
                 return null;

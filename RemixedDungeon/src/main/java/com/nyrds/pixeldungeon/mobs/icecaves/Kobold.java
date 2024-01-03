@@ -15,7 +15,7 @@ public class Kobold extends Mob {
 		dmgMax = 17;
 		dr = 9;
 		
-		exp = 10;
+		expForKill = 10;
 		maxLvl = 20;
 		
 		loot(new PotionOfFrost(), 0.1f);

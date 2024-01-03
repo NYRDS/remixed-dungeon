@@ -42,7 +42,7 @@ public class Tengu extends Boss implements IZapper {
 	public Tengu() {
 		
 		hp(ht(120));
-		exp = 20;
+		expForKill = 20;
 		baseDefenseSkill = 20;
 		baseAttackSkill  = 20;
 		dmgMin = 8;

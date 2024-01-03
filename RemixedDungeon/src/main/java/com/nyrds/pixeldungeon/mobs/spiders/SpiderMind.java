@@ -6,13 +6,9 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Blessed;
-import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.FlavourBuff;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
-import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Speed;
-import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
@@ -46,7 +42,7 @@ public class SpiderMind extends Mob {
 		dmgMax = 0;
 		dr = 0;
 		
-		exp = 6;
+		expForKill = 6;
 		maxLvl = 9;
 		
 		loot(new MysteryMeat(), 0.067f);

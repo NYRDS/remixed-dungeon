@@ -27,7 +27,7 @@ public class Goo extends Boss {
 	
 	public Goo() {
 		hp(ht(68));
-		exp = 9;
+		expForKill = 9;
 		baseDefenseSkill = 12;
 		baseAttackSkill = 11;
 		dr = 2;

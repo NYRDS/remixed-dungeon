@@ -18,7 +18,7 @@ public class Gnoll extends Mob {
 		dmgMax = 5;
 		dr = 2;
 
-		exp = 2;
+		expForKill = 2;
 		maxLvl = 12;
 		
 		loot(Gold.class, 0.5f);

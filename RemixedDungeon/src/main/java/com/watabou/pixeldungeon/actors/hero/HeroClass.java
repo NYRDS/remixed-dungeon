@@ -165,6 +165,8 @@ public enum HeroClass implements CharModifier {
                     hero.STR(hero.STR() + 4);
                 }
 
+                hero.lvl(classDesc.optInt("lvl", hero.lvl()));
+
                 hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
                 hero.getHeroClass().setMagicAffinity(classDesc.optString("magicAffinity", magicAffinity));
                 hero.setMaxSkillPoints(classDesc.optInt("maxSp", hero.getSkillPointsMax()));

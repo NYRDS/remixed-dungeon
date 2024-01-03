@@ -31,7 +31,7 @@ public class SpiderMindAmber extends MultiKindMob {
 		dmgMax = 1;
 		dr = 10;
 
-		exp = 9;
+		expForKill = 9;
 		maxLvl = 10;
 
 		kind = 1;

@@ -27,7 +27,7 @@ public class Spinner extends Mob {
 		dmgMax = 16;
 		dr = 6;
 		
-		exp = 9;
+		expForKill = 9;
 		maxLvl = 16;
 		
 		loot(new MysteryMeat(), 0.125f);

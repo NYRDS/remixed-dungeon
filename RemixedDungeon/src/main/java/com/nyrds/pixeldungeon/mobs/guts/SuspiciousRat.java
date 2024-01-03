@@ -29,7 +29,7 @@ public class SuspiciousRat extends Mob {
 		dmgMax = 15;
 		dr = 2;
 
-		exp = 1;
+		expForKill = 1;
 		maxLvl = 30;
 
 		pacified = true;

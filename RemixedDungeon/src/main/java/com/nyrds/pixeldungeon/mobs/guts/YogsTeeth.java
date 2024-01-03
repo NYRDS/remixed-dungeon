@@ -29,7 +29,7 @@ public class YogsTeeth extends Mob {
         dmgMax = 80;
         dr = 21;
 
-        exp = 26;
+        expForKill = 26;
 
         addResistance(ToxicGas.class);
 

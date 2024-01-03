@@ -18,7 +18,7 @@ public class PseudoRat extends Mob {
         dmgMax = 70;
         dr = 25;
 
-        exp = 20;
+        expForKill = 20;
         maxLvl = 35;
 
         loot(Gold.class, 0.8f);
