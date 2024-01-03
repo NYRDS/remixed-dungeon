@@ -6,6 +6,7 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.effects.Splash;
 
+@Deprecated
 public class YogSprite extends MobSprite {
 	
 	public YogSprite() {

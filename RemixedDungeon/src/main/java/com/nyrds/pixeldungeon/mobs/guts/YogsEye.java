@@ -103,6 +103,7 @@ public class YogsEye extends Boss {
             }
         }
 
+
         dmg >>= damageShift;
 
         super.damage(dmg, src);

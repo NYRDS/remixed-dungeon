@@ -5,6 +5,7 @@
 ---
 
 local buff = require "scripts/lib/buff"
+local RPD = require "scripts/lib/commonClasses"
 
 return buff.init{
     desc  = function ()
@@ -19,13 +20,9 @@ return buff.init{
         buff:detach()
     end,
 
-    attachTo = function(self, buff, target)
-        buff:spend(20)
-        return true
-    end,
-
     drBonus = function(self,buff)
-        return (buff.target:effectiveSTR()-10) * (1 + 0.5 * buff:level())
+        local bonus = (buff.target:effectiveSTR()-10) * (1 + buff:level())
+        return bonus
     end,
 
     speedMultiplier = function(self, buff)

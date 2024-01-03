@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -60,6 +61,16 @@ public class YogsBrain extends Mob implements IZapper {
         }
         return damage;
     }
+
+    @Override
+    public void damage(int dmg, @NotNull NamedEntityKind src) {
+        for (Mob mob : level().mobs) {
+            mob.beckon(getPos());
+        }
+
+        super.damage(dmg, src);
+    }
+
 
     @Override
     public boolean canAttack(@NotNull Char enemy) {

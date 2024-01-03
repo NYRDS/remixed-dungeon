@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.nyrds.platform.util.StringsManager;
@@ -74,6 +75,15 @@ public class BurningFist extends Mob implements IZapper {
         }
 
         return super.act();
+    }
+
+    @Override
+    public void damage(int dmg, @NotNull NamedEntityKind src) {
+        for (Mob mob : level().mobs) {
+            mob.beckon(getPos());
+        }
+
+        super.damage(dmg, src);
     }
 
     @Override
