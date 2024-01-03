@@ -160,6 +160,10 @@ public class YogsEye extends Boss {
     }
 
     @Override
+    public void beckon(int cell) {
+    }
+
+    @Override
     public void die(@NotNull NamedEntityKind cause) {
         Badges.validateBossSlain(Badges.Badge.YOG_SLAIN);
         super.die(cause);
