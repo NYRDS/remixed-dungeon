@@ -103,7 +103,6 @@ public class YogsEye extends Boss {
             }
         }
 
-
         dmg >>= damageShift;
 
         super.damage(dmg, src);
@@ -134,8 +133,6 @@ public class YogsEye extends Boss {
         return false;
     }
 
-
-
     @Override
     protected int zapProc(@NotNull Char enemy, int damage) {
         for (int i = 1; i < distance; i++) {
@@ -163,17 +160,7 @@ public class YogsEye extends Boss {
     }
 
     @Override
-    public void beckon(int cell) {
-    }
-
-    @Override
     public void die(@NotNull NamedEntityKind cause) {
-        Mob mob = level().getRandomMob();
-        while (mob != null) {
-            mob.remove();
-            mob = level().getRandomMob();
-        }
-
         Badges.validateBossSlain(Badges.Badge.YOG_SLAIN);
         super.die(cause);
 

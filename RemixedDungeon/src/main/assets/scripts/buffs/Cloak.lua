@@ -22,7 +22,7 @@ return buff.init{
     end,
 
     stealthBonus = function(self,buff)
-        return buff.target:skillLevel()
+        return buff.target:skillLevel() + buff.target:lvl() / 4
     end,
 
     charSpriteStatus = function(self, buff)
