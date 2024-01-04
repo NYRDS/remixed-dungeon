@@ -96,8 +96,13 @@ public class CustomBuff extends Buff {
     @Override
     public boolean attachTo(@NotNull Char target) {
         try {
-            if (super.attachTo(target)) {
-                return script.run("attachTo", target).checkboolean();
+            if (target.immunities().contains(getEntityKind())) {
+                return false;
+            }
+
+            if (script.run("attachTo", target).checkboolean()) {
+                this.target = target;
+                return target.add(this);
             }
             return false;
         } catch (Exception e) {

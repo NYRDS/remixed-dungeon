@@ -293,7 +293,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Override
     public void restoreFromBundle(Bundle bundle) {
-
         super.restoreFromBundle(bundle);
 
         if (id != EntityIdSource.INVALID_ID) {

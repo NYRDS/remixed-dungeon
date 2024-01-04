@@ -10,6 +10,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.RunningAmok;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
@@ -22,7 +23,6 @@ import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
@@ -34,8 +34,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
-import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -86,7 +84,11 @@ public abstract class Mob extends Char {
         super();
         setupCharData();
         getScript().run("fillStats");
-        lvl(Random.NormalIntRange(1, (int) (5 * RemixedDungeon.getDifficultyFactor() + 1)));
+        if(ModQuirks.mobLeveling) {
+            //lvl(Random.NormalIntRange(1, (int) (5 * RemixedDungeon.getDifficultyFactor() + 1)));
+            lvl(4);
+            exp = 25;
+        }
     }
 
     public void releasePet() {
@@ -367,13 +369,6 @@ public abstract class Mob extends Char {
 
         level().spawnMob(clone, SPLIT_DELAY, getPos());
 
-        if (hasBuff(Burning.class)) {
-            Buff.affect(clone, Burning.class).reignite(clone);
-        }
-        if (hasBuff(Poison.class)) {
-            Buff.affect(clone, Poison.class, 2);
-        }
-
         return clone;
     }
 
@@ -551,6 +546,17 @@ public abstract class Mob extends Char {
                 item = (Item) loot;
             }
             collect(item);
+        }
+    }
+
+    @Override
+    @LuaInterface
+    public void lvl(int lvl) {
+        super.lvl(lvl);
+        if (!Dungeon.isLoading()) {
+            if (lvl >= 5) {
+                Buff.permanent(this, "ChampionOfEarth");
+            }
         }
     }
 

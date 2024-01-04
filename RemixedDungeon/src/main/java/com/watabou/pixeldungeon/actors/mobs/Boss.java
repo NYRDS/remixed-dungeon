@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.ShadowLord;
 import com.nyrds.platform.audio.Music;
@@ -28,7 +29,9 @@ abstract public class Boss extends Mob {
 	public Boss() {
 		addResistance(Death.class);
 		addResistance(ScrollOfPsionicBlast.class);
-		lvl(Random.NormalIntRange(5 , (int) (5 * RemixedDungeon.getDifficultyFactor()+1)));
+		if(ModQuirks.mobLeveling) {
+			lvl(Random.NormalIntRange(5, (int) (5 * RemixedDungeon.getDifficultyFactor() + 1)));
+		}
 		maxLvl = 50;
 		isBoss = true;
 	}

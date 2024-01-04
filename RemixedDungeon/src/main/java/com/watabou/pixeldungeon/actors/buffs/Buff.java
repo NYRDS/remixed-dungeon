@@ -129,13 +129,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
     @LuaInterface
     public static Buff permanent(Char target, String buffClass) {
-
-        if(target.buffLevel(buffClass) > 0) {
-            return target.buff(buffClass);
-        }
-
-        Buff buff = BuffFactory.getBuffByName(buffClass);
-        buff.attachTo(target);
+        Buff buff = affect(target, buffClass);
         buff.deactivateActor();
         return buff;
     }
