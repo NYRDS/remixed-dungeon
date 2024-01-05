@@ -23,9 +23,11 @@ import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
@@ -85,9 +87,12 @@ public abstract class Mob extends Char {
         setupCharData();
         getScript().run("fillStats");
         if(ModQuirks.mobLeveling) {
-            //lvl(Random.NormalIntRange(1, (int) (5 * RemixedDungeon.getDifficultyFactor() + 1)));
-            lvl(4);
-            exp = 25;
+            lvl(Random.NormalIntRange(1, (int) (2 * RemixedDungeon.getDifficultyFactor() + 1)));
+
+            if (Util.isDebug()) {
+                lvl(4);
+                expForLevelUp = 25;
+            }
         }
     }
 
@@ -555,7 +560,13 @@ public abstract class Mob extends Char {
         super.lvl(lvl);
         if (!Dungeon.isLoading()) {
             if (lvl >= 5) {
-                Buff.permanent(this, "ChampionOfEarth");
+                if (!hasBuff("ChampionOfEarth") && !hasBuff("ChampionOfFire")
+                        && !hasBuff("ChampionOfWater") && !hasBuff("ChampionOfAir")) {
+
+                    String [] champions = {"ChampionOfEarth", "ChampionOfFire", "ChampionOfWater", "ChampionOfAir"};
+
+                    Buff.permanent(this, Random.oneOf(champions));
+                }
             }
         }
     }

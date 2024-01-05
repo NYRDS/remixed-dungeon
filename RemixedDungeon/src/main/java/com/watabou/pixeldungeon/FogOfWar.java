@@ -112,7 +112,7 @@ public class FogOfWar extends Image {
                         mapped[pos - 1] && mapped[p_minus_w_minus_one - 1]) {
                     c = MAPPED;
                 }
-
+/*
                 if (Util.isDebug()) {
                     var candidates = Dungeon.level.candidates;
                     if ((candidates.contains(pos) || candidates.contains(pos - 1)
@@ -121,7 +121,7 @@ public class FogOfWar extends Image {
                         c = 0xaa444499;
                     }
                 }
-
+*/
                 pixels[i * width2 + j] = c;
             }
         }

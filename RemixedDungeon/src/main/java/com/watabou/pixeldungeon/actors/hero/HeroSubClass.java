@@ -239,6 +239,16 @@ public enum HeroSubClass implements CharModifier {
 	}
 
 	@Override
+	public int defenceSkillBonus() {
+		return 0;
+	}
+
+	@Override
+	public int attackSkillBonus() {
+		return 0;
+	}
+
+	@Override
 	public Set<String> resistances() {
 		return resistances;
 	}
@@ -266,6 +276,14 @@ public enum HeroSubClass implements CharModifier {
 	@Override
 	public String textureLarge() {
 		return Assets.BUFFS_LARGE;
+	}
+
+	@Override
+	public float hasteLevel() {
+		if (this == HeroSubClass.SCOUT) {
+			return 1;
+		}
+		return 0;
 	}
 
 }

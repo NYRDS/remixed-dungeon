@@ -9,4 +9,13 @@ public class Blessed extends FlavourBuff {
 		return BuffIndicator.BLEESSED;
 	}
 
+	@Override
+	public int defenceSkillBonus() {
+		return level();
+	}
+
+	@Override
+	public int attackSkillBonus() {
+		return level();
+	}
 }

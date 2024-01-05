@@ -7,7 +7,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -20,7 +19,7 @@ public class PotionOfExperience extends Potion {
 	@Override
 	protected void apply(Char chr ) {
 		setKnown();
-		chr.earnExp(chr.expToLevel() - chr.getExp());
+		chr.earnExp(chr.expToLevel() - chr.getExpForLevelUp());
 	}
 
 	public void shatter( int cell ) {

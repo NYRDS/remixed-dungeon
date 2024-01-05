@@ -51,8 +51,6 @@ import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.buffs.Slow;
-import com.watabou.pixeldungeon.actors.buffs.Speed;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -67,7 +65,6 @@ import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.rings.RingOfHaste;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -80,6 +77,7 @@ import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -123,7 +121,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     protected int enemyId = EntityIdSource.INVALID_ID;
 
     @Packable(defaultValue = "0")
-    protected int exp = 0;
+    protected int expForLevelUp = 0;
 
     protected LuaScript script;
     protected int baseStr = 10;
@@ -192,6 +190,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     private int lvl = Scrambler.scramble(1);
     private int magicLvl = Scrambler.scramble(1);
     private float lightness = 0.5f;
+    private int glowColor = 0;
+    private float glowPeriod = 0.0f;
 
     public Char() {
         fillMobStats(false);
@@ -322,6 +322,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         setupCharData();
 
         getBelongings().restoreFromBundle(bundle);
+
+        //pre 32 save compatibility
+        expForLevelUp = bundle.optInt("exp",expForLevelUp);
+
 
         String luaData = bundle.optString(LuaEngine.LUA_DATA,null);
         if(luaData!=null) {
@@ -471,8 +475,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public int attackSkill(Char target) {
-        int bonus = buffLevel(BuffFactory.RING_OF_ACCURACY)
-                + buffLevel(BuffFactory.BLESSED);
+
+        int[] bf = {0};
+        forEachBuff(b -> bf[0] += b.attackSkillBonus());
+
+        int bonus = bf[0];
 
         float accuracy = (float) Math.pow(1.4, bonus);
 
@@ -500,8 +507,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         int defenseSkill = baseDefenseSkill + lvl();
 
-        int bonus = buffLevel(BuffFactory.BLESSED)
-                + buffLevel(BuffFactory.RING_OF_EVASION);
+        final int[] bf = {0};
+        forEachBuff(b -> bf[0] += b.defenceSkillBonus());
+
+        int bonus = bf[0];
 
         float evasion = bonus == 0 ? 1 : (float) Math.pow(1.2, bonus);
         if (paralysed) {
@@ -815,34 +824,29 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return aDelay;
     }
 
+
+    public float timeScale() {
+        final int[] bf = {0};
+        forEachBuff(b -> bf[0] += b.hasteLevel());
+
+        float hasteLevel = bf[0];
+
+        return Math.min (3, (float)  Math.pow(1.1f, -hasteLevel));
+    }
+
     @Override
     public void spend(float time) {
+        float scaledTime = time * timeScale();
+
         for (Item item : getBelongings()) {
             if (item instanceof IActingItem && item.isEquipped(this)) {
-                ((IActingItem) item).spend(this, time);
+                ((IActingItem) item).spend(this, scaledTime);
             }
         }
-
-        int hasteLevel = 0;
-
-        if (getHeroClass() == HeroClass.ELF) {
-            hasteLevel++;
-            if (getSubClass() == HeroSubClass.SCOUT) {
-                hasteLevel++;
-            }
-        }
-
-        hasteLevel += buffLevel(RingOfHaste.Haste.class);
-
-        float timeScale = (1.f + buffLevel(Speed.class)) / (1.f + buffLevel(Slow.class));
-
-        float scaledTime = (float) (time * Math.pow(1.1f, -hasteLevel) / timeScale);
 
         for (Map.Entry<String, Number> spell : spellsUsage.entrySet()) {
             spell.setValue(spell.getValue().floatValue() + scaledTime);
         }
-
-        scaledTime = Math.min(time * 3, scaledTime);
 
         super.spend(scaledTime);
 
@@ -1252,6 +1256,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             }
             sprite = newSprite();
             sprite.lightness(lightness);
+            setGlowing(glowColor, glowPeriod);
         }
 
         if (sprite == null) {
@@ -1981,6 +1986,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         description = StringsManager.maybeId(getClassDef().optString(description, getEntityKind()+"_Desc"));
 
+        for(Buff buff: buffs) {
+            if (buff.getEntityKind().startsWith("Champion")) {
+                description += "\n\n" + StringsManager.maybeId(buff.name());
+                description += "\n" + StringsManager.maybeId(buff.desc());
+            }
+        }
+
         if (!Util.isDebug()) {
             return description + "\n\n" + String.format(StringsManager.getVar(R.string.CharInfo_Level), lvl(), name());
         }
@@ -2036,17 +2048,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return Math.max(attackRange, getBelongings().getItemFromSlot(Belongings.Slot.WEAPON).range());
     }
 
-    public int getExp() {
-        return exp;
+    public int getExpForLevelUp() {
+        return expForLevelUp;
     }
 
     public void earnExp(int exp) {
-        this.exp += exp;
+        this.expForLevelUp += exp;
 
         boolean levelUp = false;
 
-        while (this.getExp() >= expToLevel()) {
-            this.exp -= expToLevel();
+        while (this.getExpForLevelUp() >= expToLevel()) {
+            this.expForLevelUp -= expToLevel();
             lvl(lvl() + 1);
 
             ht((int) (ht() + GameLoop.getDifficultyFactor() * 2));
@@ -2133,5 +2145,19 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             script.asInstance();
         }
         return script;
+    }
+
+    @LuaInterface
+    public void setGlowing(int color, float period) {
+        this.glowColor = color;
+        this.glowPeriod = period;
+
+        if(sprite!=null) {
+            if (glowPeriod > 0) {
+                getSprite().setGlowing(new Glowing(color, period));
+            } else {
+                getSprite().setGlowing(Glowing.NO_GLOWING);
+            }
+        }
     }
 }

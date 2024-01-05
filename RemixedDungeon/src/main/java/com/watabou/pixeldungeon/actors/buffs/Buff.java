@@ -258,6 +258,11 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         return 1;
     }
 
+    @Override
+    public float hasteLevel() {
+        return 0;
+    }
+
     public int defenceProc(Char defender, Char enemy, int damage) {
         return damage;
     }
@@ -290,6 +295,16 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
     @Override
     public int dewBonus() {
+        return 0;
+    }
+
+    @Override
+    public int defenceSkillBonus() {
+        return 0;
+    }
+
+    @Override
+    public int attackSkillBonus() {
         return 0;
     }
 

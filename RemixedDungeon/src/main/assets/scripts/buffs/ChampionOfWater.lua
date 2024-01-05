@@ -12,8 +12,8 @@ return buff.init{
     desc  = function ()
         return {
             icon          = -1,
-            name          = "ChampionOfEarthBuff_Name",
-            info          = "ChampionOfEarthBuff_Info",
+            name          = "ChampionOfWaterBuff_Name",
+            info          = "ChampionOfWaterBuff_Info",
         }
     end,
 
@@ -21,26 +21,20 @@ return buff.init{
     attachTo = function(self, buff, target)
         self.data.activated = self.data.activated or false
 
-        if target:hasBuff("ChampionOfEarth") then
+        if target:hasBuff("ChampionOfWater") then
             return false
         end
 
-        target:setGlowing(0x55AA55, 1.5)
+        target:setGlowing(0x5555AA, 1.5)
 
         if not self.data.activated then
             self.data.activated = true
-            target:ht(target:ht() * 4)
-            target:heal(target:ht(), buff)
         end
 
         return true
     end,
 
-    drBonus = function(self, buff)
-        return buff.target:lvl()
-    end,
-
-    regenerationBonus = function(self, buff)
-        return buff.target:lvl()
+    defenceSkillBonus = function(self, buff)
+        return buff.target:lvl() * 2
     end
 }

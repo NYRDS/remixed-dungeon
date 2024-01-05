@@ -27,7 +27,7 @@ return spell.init{
         RPD.topEffect(caster:getPos(),"body_armor")
 
 	    RPD.playSound("body_armor")
-        local buff = RPD.affectBuff(caster,"BodyArmor", 5+2*caster:skillLevel())
+        local buff = RPD.affectBuff(caster,"BodyArmor", 15+10*caster:skillLevel())
         buff:level(caster:skillLevel())
 
         return true

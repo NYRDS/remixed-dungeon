@@ -12,8 +12,8 @@ return buff.init{
     desc  = function ()
         return {
             icon          = -1,
-            name          = "ChampionOfEarthBuff_Name",
-            info          = "ChampionOfEarthBuff_Info",
+            name          = "ChampionOfFireBuff_Name",
+            info          = "ChampionOfFireBuff_Info",
         }
     end,
 
@@ -21,26 +21,25 @@ return buff.init{
     attachTo = function(self, buff, target)
         self.data.activated = self.data.activated or false
 
-        if target:hasBuff("ChampionOfEarth") then
+        if target:hasBuff("ChampionOfFire") then
             return false
         end
 
-        target:setGlowing(0x55AA55, 1.5)
+        target:setGlowing(0xAA2222, 1.5)
 
         if not self.data.activated then
             self.data.activated = true
-            target:ht(target:ht() * 4)
-            target:heal(target:ht(), buff)
         end
 
         return true
     end,
 
-    drBonus = function(self, buff)
-        return buff.target:lvl()
+    attackProc = function(self, buff, enemy, damage)
+        RPD.affectBuff(enemy, "Burning", 3)
+        return damage
     end,
 
-    regenerationBonus = function(self, buff)
+    attackSkillBonus = function(self, buff)
         return buff.target:lvl()
     end
 }

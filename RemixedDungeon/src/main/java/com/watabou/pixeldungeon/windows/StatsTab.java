@@ -77,10 +77,13 @@ class StatsTab extends TabContent {
             }
         }
 
+        float timeScale = chr.timeScale();
+
         statSlot(StringsManager.getVar(R.string.Typical_Damage), Utils.format("%d - %d", dmgMin, dmgMax));
         statSlot(StringsManager.getVar(R.string.Damage_Reduction), Utils.format("%d - %d", drMin, drMax));
-        statSlot(StringsManager.getVar(R.string.Movement_Speed), Utils.format("%3.2f%%" ,chr.speed()*100));
-        statSlot(StringsManager.getVar(R.string.Attack_Cooldown), Utils.format("%3.2f" ,chr.attackDelay()));
+        statSlot(StringsManager.getVar(R.string.Movement_Speed), Utils.format("%3.2f%%" ,chr.speed()*100 / timeScale));
+        statSlot(StringsManager.getVar(R.string.Attack_Cooldown), Utils.format("%3.2f" ,chr.attackDelay() * timeScale));
+        statSlot(StringsManager.getVar(R.string.Actions_Speed), Utils.format("%3.2f%%" ,100/timeScale));
         statSlot(StringsManager.getVar(R.string.Attack_Range), Utils.EMPTY_STRING + chr.getAttackRange());
         statSlot(StringsManager.getVar(R.string.View_Distance), Utils.EMPTY_STRING + chr.getViewDistance());
 
@@ -101,7 +104,7 @@ class StatsTab extends TabContent {
         statSlot(StringsManager.getVar(R.string.WndHero_DefenceSkill), chr.defenseSkill(CharsList.DUMMY));
 
 
-        statSlot(StringsManager.getVar(R.string.WndHero_Exp), chr.getExp() + "/" + chr.expToLevel());
+        statSlot(StringsManager.getVar(R.string.WndHero_Exp), chr.getExpForLevelUp() + "/" + chr.expToLevel());
 
         pos += GAP;
         statSlot(StringsManager.getVar(R.string.WndHero_Str), chr.effectiveSTR());

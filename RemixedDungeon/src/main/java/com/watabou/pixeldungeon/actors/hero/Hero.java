@@ -79,7 +79,6 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndResurrect;
-import com.watabou.pixeldungeon.windows.WndSaveSlotSelect;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 import com.watabou.utils.SystemTime;
@@ -87,12 +86,9 @@ import com.watabou.utils.SystemTime;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
-import lombok.val;
 
 
 public class Hero extends Char {
@@ -193,7 +189,7 @@ public class Hero extends Char {
 
         bundle.put(STRENGTH, STR());
 
-        bundle.put(EXPERIENCE, getExp());
+        bundle.put(EXPERIENCE, getExpForLevelUp());
         bundle.put(DIFFICULTY, getDifficulty());
 
 
@@ -604,14 +600,14 @@ public class Hero extends Char {
     @Override
     public void earnExp(int exp) {
 
-        this.setExp(this.getExp() + exp);
+        this.setExp(this.getExpForLevelUp() + exp);
 
         showStatus(CharSprite.POSITIVE, TXT_EXP, exp);
 
         boolean levelUp = false;
 
-        while (this.getExp() >= expToLevel()) {
-            this.setExp(this.getExp() - expToLevel());
+        while (this.getExpForLevelUp() >= expToLevel()) {
+            this.setExp(this.getExpForLevelUp() - expToLevel());
             lvl(lvl() + 1);
 
             EventCollector.levelUp(heroClass.name() + "_" + subClass.name(), lvl());
@@ -765,12 +761,12 @@ public class Hero extends Char {
     }
 
     public static void reallyDie(Hero hero, final NamedEntityKind cause) {
-
+/*
         if (hero.getDifficulty() < 2 && !Game.isPaused()) {
             GameScene.show(new WndSaveSlotSelect(false, StringsManager.getVar(R.string.Hero_AnotherTry)));
             return;
         }
-
+*/
         Dungeon.level.discover();
 
         Bones.leave(hero);
@@ -950,7 +946,7 @@ public class Hero extends Char {
         return StringsManager.getVar(R.string.Hero_YouNowHave);
     }
 
-    public int getExp() {
+    public int getExpForLevelUp() {
         return Scrambler.descramble(scrambledExp);
     }
 
@@ -1134,6 +1130,7 @@ public class Hero extends Char {
     public boolean ignoreDr() {
         return rangedWeapon.valid() && subClass == HeroSubClass.SNIPER;
     }
+
 
     @Override
     public boolean collect(@NotNull Item item) {

@@ -2900,4 +2900,16 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ChaosShield_name">Chaos Shield</string>
   <string name="ChaosShield_desc">The Chaos Shield is the result of fusing a Chaos Crystal with ordinary shield, causing it to manifest random chaotic effects upon a successful block.</string>
   <string name="ChaosCrystal_ShieldFused">The crystal fused with your shield, and it took the chaos form.</string>
+    <string name="Actions_Speed">Haste level</string>
+  <string name="ChampionOfAirBuff_Name">Champion of Air</string>
+  <string name="ChampionOfAirBuff_Info">This trait bestows the creature with the essence of the winds, enhancing its agility and prowess in combat. The Champion of Air becomes a formidable adversary, capable of unleashing swift and devastating attacks that can swiftly alter the course of battle.</string>
+  <string name="ChampionOfWaterBuff_Name">Champion of Water</string>
+  <string name="ChampionOfWaterBuff_Info">The Champion of Water embodies the indomitable force of the oceans, enhancing the creature\'s resilience and fortitude. As a result, it becomes a stalwart adversary, capable of enduring a relentless barrage of attacks and standing as an unyielding guardian in the face of adversity.</string>
+  <string name="ChampionOfFireBuff_Name">Champion of Fire</string>
+  <string name="ChampionOfFireBuff_Info">"Infused with the fury of the flames, this trait amplifies the creature\'s ferocity and combat prowess. The Champion of Fire emerges as a fearsome adversary, unleashing devastating attacks that can engulf its foes in searing flames, instilling terror in all who dare to oppose it.</string>
+  <string name="ChampionOfEarthBuff_Name">Champion of Earth</string>
+  <string name="ChampionOfEarthBuff_Info">The Champion of Earth embodies unyielding strength, as this trait enhances the creature\'s damage resistance and increases its maximum vitality. This transformation makes it a daunting adversary in the treacherous depths, capable of shrugging off attacks with ease and enduring prolonged battles with unwavering resolve.</string>
+
+
+
 </resources>

@@ -30,7 +30,7 @@ abstract public class Boss extends Mob {
 		addResistance(Death.class);
 		addResistance(ScrollOfPsionicBlast.class);
 		if(ModQuirks.mobLeveling) {
-			lvl(Random.NormalIntRange(5, (int) (5 * RemixedDungeon.getDifficultyFactor() + 1)));
+			lvl(Random.NormalIntRange(1, (int) (2 * RemixedDungeon.getDifficultyFactor())));
 		}
 		maxLvl = 50;
 		isBoss = true;

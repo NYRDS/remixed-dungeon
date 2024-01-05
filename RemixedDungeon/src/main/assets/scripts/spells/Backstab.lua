@@ -41,7 +41,7 @@ return spell.init{
             return false
         end
 
-        if not (distracted[victim:getState():getTag()] or victim:isParalysed()) then
+        if not (distracted[victim:getState():getTag()] and not victim:isParalysed()) then
             RPD.glogn("Backstab_Aware")
             return false
         end

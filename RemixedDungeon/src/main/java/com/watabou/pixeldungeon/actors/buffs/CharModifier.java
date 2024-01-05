@@ -11,6 +11,12 @@ public interface CharModifier {
     int drBonus();
     int stealthBonus();
     float speedMultiplier();
+
+    float hasteLevel();
+
+    int defenceSkillBonus();
+    int attackSkillBonus();
+
     int defenceProc(Char defender, Char enemy, int damage);
     int attackProc(Char attacker, Char defender, int damage );
 

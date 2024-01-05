@@ -386,6 +386,16 @@ public enum HeroClass implements CharModifier {
     }
 
     @Override
+    public int defenceSkillBonus() {
+        return 0;
+    }
+
+    @Override
+    public int attackSkillBonus() {
+        return 0;
+    }
+
+    @Override
     public int icon() {
         return BuffIndicator.NONE;
     }
@@ -405,5 +415,13 @@ public enum HeroClass implements CharModifier {
     @Override
     public String textureLarge() {
         return Assets.BUFFS_LARGE;
+    }
+
+    @Override
+    public float hasteLevel() {
+        if (this == HeroClass.ELF) {
+            return 1;
+        }
+        return 0;
     }
 }

@@ -16,6 +16,10 @@ public class RingOfEvasion extends Ring {
         return isKnown() ? StringsManager.getVar(R.string.RingOfEvasion_Info) : super.desc();
 	}
 	
-	public class Evasion extends RingBuff {	
+	public class Evasion extends RingBuff {
+		@Override
+		public int defenceSkillBonus() {
+			return level();
+		}
 	}
 }

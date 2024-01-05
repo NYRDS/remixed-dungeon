@@ -67,7 +67,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     protected Image avatar;
 
 
-    @Nullable
     private Glowing glowing = Glowing.NO_GLOWING;
 
     private float   phase;
@@ -470,27 +469,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             resetColor();
         }
 
-        if (getVisible()) {
-            if (glowing != null && glowing != Glowing.NO_GLOWING) {
-                final float elapsed = GameLoop.elapsed;
-
-                if (glowUp && (phase += elapsed) > glowing.period) {
-                    glowUp = false;
-                    phase = glowing.period;
-                } else if (!glowUp && (phase -= elapsed) < 0) {
-                    glowUp = true;
-                    phase = 0;
-                }
-
-                float value = phase / glowing.period * 0.6f;
-
-                rm = gm = bm = 1 - value;
-                ra = glowing.red * value;
-                ga = glowing.green * value;
-                ba = glowing.blue * value;
-            }
-        }
-
         ch.ifPresent(chr -> {
             boolean visible = getVisible() && chr.invisible <= 0;
 
@@ -522,6 +500,27 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
             if (visible && curAnim == null) {
                 idle();
+            }
+
+            if (visible) {
+                if (glowing != Glowing.NO_GLOWING) {
+                    final float elapsed = GameLoop.elapsed + chr.getId()/1000f;
+
+                    if (glowUp && (phase += elapsed) > glowing.period) {
+                        glowUp = false;
+                        phase = glowing.period;
+                    } else if (!glowUp && (phase -= elapsed) < 0) {
+                        glowUp = true;
+                        phase = 0;
+                    }
+
+                    float value = phase / glowing.period * 0.6f;
+
+                    rm = gm = bm = 1 - value;
+                    ra = glowing.red * value;
+                    ga = glowing.green * value;
+                    ba = glowing.blue * value;
+                }
             }
 
             int chrPos = chr.getPos();
@@ -704,5 +703,9 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         animCallback = null;
 
         reset();
+    }
+
+    public void setGlowing(Glowing glowing) {
+        this.glowing = glowing;
     }
 }

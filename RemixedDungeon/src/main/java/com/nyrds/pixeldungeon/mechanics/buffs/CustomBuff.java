@@ -158,6 +158,21 @@ public class CustomBuff extends Buff {
     }
 
     @Override
+    public int defenceSkillBonus() {
+        return script.runOptional("defenceSkillBonus",super.defenceSkillBonus());
+    }
+
+    @Override
+    public int attackSkillBonus() {
+        return script.runOptional("attackSkillBonus",super.attackSkillBonus());
+    }
+
+    @Override
+    public float hasteLevel() {
+        return script.runOptional("hasteLevel",super.hasteLevel());
+    }
+
+    @Override
     public void spellCasted(Char caster, Spell spell) {
         script.runOptionalNoRet("spellCasted", caster, spell);
     }
