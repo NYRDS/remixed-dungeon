@@ -257,5 +257,8 @@ public class Camera extends Gizmo {
 
 	public void setTarget(Visual target) {
 		this.target = target;
+		if( target != null ) {
+			focusOn(target);
+		}
 	}
 }

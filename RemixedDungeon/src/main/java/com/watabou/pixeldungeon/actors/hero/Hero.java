@@ -79,6 +79,7 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndResurrect;
+import com.watabou.pixeldungeon.windows.WndSaveSlotSelect;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 import com.watabou.utils.SystemTime;
@@ -761,12 +762,12 @@ public class Hero extends Char {
     }
 
     public static void reallyDie(Hero hero, final NamedEntityKind cause) {
-/*
+
         if (hero.getDifficulty() < 2 && !Game.isPaused()) {
             GameScene.show(new WndSaveSlotSelect(false, StringsManager.getVar(R.string.Hero_AnotherTry)));
             return;
         }
-*/
+
         Dungeon.level.discover();
 
         Bones.leave(hero);

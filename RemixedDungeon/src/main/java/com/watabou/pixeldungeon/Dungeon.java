@@ -542,6 +542,11 @@ public class Dungeon {
         if (!force && SystemTime.now() - lastSaveTimestamp < 1000) {
             return;
         }
+
+        if(! Dungeon.hero.isAlive()) {
+            return;
+        }
+
         GameLoop.loadingOrSaving.incrementAndGet();
         synchronized (GameLoop.stepLock) {
             saveAllImpl();

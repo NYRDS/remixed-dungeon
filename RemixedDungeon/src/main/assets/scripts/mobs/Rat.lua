@@ -7,10 +7,11 @@
 local RPD = require "scripts/lib/commonClasses"
 local mob = require "scripts/lib/mob"
 
+--[[
 return mob.init{
     defenceProc = function(self, enemy, dmg)
         RPD.affectBuff(enemy, "Ooze", self:skillLevel())
     end
 }
-
---return mob.init({})
+]]
+return mob.init({})

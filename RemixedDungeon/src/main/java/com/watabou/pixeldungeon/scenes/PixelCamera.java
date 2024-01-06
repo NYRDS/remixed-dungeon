@@ -18,6 +18,7 @@ class PixelCamera extends Camera {
                 (int) Math.ceil(Game.width() / zoom),
                 (int) Math.ceil(Game.height() / zoom),
                 zoom);
+        _scroll.reset();
     }
 
     public void setTarget(Visual target) {
@@ -25,7 +26,7 @@ class PixelCamera extends Camera {
             scroll.set(_scroll);
         }
 
-        boolean targetChanged = target != this.target;
+        boolean targetChanged = target != this.target || (_scroll.x == 0 && _scroll.y == 0);
 
         super.setTarget(target);
 

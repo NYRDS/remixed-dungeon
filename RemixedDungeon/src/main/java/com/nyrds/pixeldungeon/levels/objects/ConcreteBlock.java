@@ -44,13 +44,8 @@ public class ConcreteBlock extends LevelObject {
 	}
 
 	@Override
-	public boolean stepOn(Char hero) {
-		return false;
-	}
-
-	@Override
 	public boolean pushable(Char hero) {
-		return true;
+		return hero.effectiveSTR() >= requiredStr;
 	}
 
 	@Override
@@ -75,6 +70,6 @@ public class ConcreteBlock extends LevelObject {
 
 	@Override
 	public boolean nonPassable(Char ch) {
-		return true;
+		return ch.valid();
 	}
 }
