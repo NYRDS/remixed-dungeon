@@ -25,7 +25,7 @@ return buff.init{
             return false
         end
 
-        target:setGlowing(0x55AA55, 1.5)
+        target:setGlowing(0x55AA55, 2.5)
 
         if not self.data.activated then
             self.data.activated = true

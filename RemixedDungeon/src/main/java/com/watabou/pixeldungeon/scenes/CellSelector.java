@@ -134,7 +134,7 @@ public class CellSelector extends TouchArea {
 	@Override
 	protected void onDrag( Touch t ) {
 		 
-		camera.target = null;
+		camera.setTarget(null);
 
 		if (pinching) {
 

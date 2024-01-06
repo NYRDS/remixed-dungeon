@@ -423,7 +423,7 @@ public class GameScene extends PixelScene {
             default:
         }
 
-        Camera.main.target = hero.getHeroSprite();
+        Camera.main.setTarget(hero.getHeroSprite());
 
         level.activateScripts();
         LevelTools.upgradeMap(level); // Epic level gen compatibility
