@@ -123,7 +123,7 @@ public class Hero extends Char {
 
     private float awareness;
 
-    private int exp = Scrambler.scramble(0);
+    private int scrambledExp = Scrambler.scramble(0);
     private int sp = Scrambler.scramble(0);
     private int maxSp = Scrambler.scramble(0);
 
@@ -138,8 +138,6 @@ public class Hero extends Char {
     public Hero() {
         super();
         setupCharData();
-        name = StringsManager.getVar(R.string.Hero_Name);
-        name_objective = StringsManager.getVar(R.string.Hero_Name_Objective);
 
         fraction = Fraction.HEROES;
 
@@ -192,7 +190,7 @@ public class Hero extends Char {
 
         bundle.put(STRENGTH, STR());
 
-        bundle.put(EXPERIENCE, getExp());
+        bundle.put(EXPERIENCE, getExpForLevelUp());
         bundle.put(DIFFICULTY, getDifficulty());
 
 
@@ -222,9 +220,12 @@ public class Hero extends Char {
         sp = Scrambler.scramble(bundle.optInt(SP, 0));
         maxSp = Scrambler.scramble(bundle.optInt(MAX_SP, 10));
 
-        gender = heroClass.getGender();
-
         setSkillLevel(bundle.getInt(MAGIC_LEVEL));
+    }
+
+    @Override
+    public int getGender() {
+        return heroClass.getGender();
     }
 
     public static void preview(GamesInProgress.Info info, Bundle bundle) {
@@ -597,16 +598,17 @@ public class Hero extends Char {
         }
     }
 
+    @Override
     public void earnExp(int exp) {
 
-        this.setExp(this.getExp() + exp);
+        this.setExp(this.getExpForLevelUp() + exp);
 
         showStatus(CharSprite.POSITIVE, TXT_EXP, exp);
 
         boolean levelUp = false;
 
-        while (this.getExp() >= maxExp()) {
-            this.setExp(this.getExp() - maxExp());
+        while (this.getExpForLevelUp() >= expToLevel()) {
+            this.setExp(this.getExpForLevelUp() - expToLevel());
             lvl(lvl() + 1);
 
             EventCollector.levelUp(heroClass.name() + "_" + subClass.name(), lvl());
@@ -646,7 +648,8 @@ public class Hero extends Char {
         }
     }
 
-    public int maxExp() {
+    @Override
+    public int expToLevel() {
         if (getDifficulty() != 0) {
             return 5 + lvl() * 5;
         } else {
@@ -920,6 +923,11 @@ public class Hero extends Char {
     }
 
     @Override
+    public String getDescription() {
+        return getHeroClass().getDescription();
+    }
+
+    @Override
     public CharSprite newSprite() {
         return HeroSpriteDef.createHeroSpriteDef(this);
     }
@@ -939,12 +947,12 @@ public class Hero extends Char {
         return StringsManager.getVar(R.string.Hero_YouNowHave);
     }
 
-    public int getExp() {
-        return Scrambler.descramble(exp);
+    public int getExpForLevelUp() {
+        return Scrambler.descramble(scrambledExp);
     }
 
     public void setExp(int exp) {
-        this.exp = Scrambler.scramble(exp);
+        this.scrambledExp = Scrambler.scramble(exp);
     }
 
     @Override
@@ -1044,10 +1052,6 @@ public class Hero extends Char {
         return difficulty;
     }
 
-    public void setGender(int gender) {
-        this.gender = gender;
-    }
-
     public void setDifficulty(int difficulty) {
         this.difficulty = difficulty;
         GameLoop.setDifficulty(difficulty);
@@ -1127,6 +1131,7 @@ public class Hero extends Char {
     public boolean ignoreDr() {
         return rangedWeapon.valid() && subClass == HeroSubClass.SNIPER;
     }
+
 
     @Override
     public boolean collect(@NotNull Item item) {

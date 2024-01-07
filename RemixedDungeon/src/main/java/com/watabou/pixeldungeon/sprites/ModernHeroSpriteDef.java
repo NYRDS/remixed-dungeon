@@ -294,11 +294,11 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private void applyLayersDesc(String[] lookDesc) {
 		clearLayers();
 		for(int i = 0;i<layersOrder.length && i<lookDesc.length;++i){
-			if(ModdingMode.isResourceExists(lookDesc[i])) {
+			if(ModdingMode.isResourceExists(lookDesc[i]) && (layersMask & (1L << i))==0) {
 				addLayer(layersOrder[i], TextureCache.get(lookDesc[i]));
 			} else {
 				if(Util.isDebug()) {
-					GLog.n("Missing file %s", lookDesc[i]);
+					//GLog.n("Missing file %s", lookDesc[i]);
 				}
 			}
 		}

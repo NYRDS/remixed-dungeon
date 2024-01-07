@@ -17,7 +17,7 @@ public class SpiritOfPain extends Mob {
         dmgMax = 10;
         dr = 20;
 
-        exp = 0;
+        expForKill = 0;
 
         setState(MobAi.getStateByClass(Hunting.class));
         flying = true;

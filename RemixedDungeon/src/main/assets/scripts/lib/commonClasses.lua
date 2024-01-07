@@ -20,6 +20,7 @@ local Sample           = luajava.bindClass("com.nyrds.platform.audio.Sample")
 local Music            = luajava.bindClass("com.nyrds.platform.audio.Music")
 local StringsManager   = luajava.bindClass("com.nyrds.platform.util.StringsManager")
 local CharUtils        = luajava.bindClass("com.watabou.pixeldungeon.actors.CharUtils")
+local ModQuirks        = luajava.bindClass("com.nyrds.pixeldungeon.game.ModQuirks")
 
 local Buffs  = {
     Buff         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Buff"),
@@ -100,7 +101,9 @@ local Objects = {
         WndQuest       = "com.watabou.pixeldungeon.windows.WndQuest",
         WndOptionsLua  = "com.nyrds.pixeldungeon.windows.WndOptionsLua",
         WndShopOptions = "com.nyrds.pixeldungeon.windows.WndShopOptions",
-        WndChooseWay   = "com.watabou.pixeldungeon.windows.WndChooseWay"
+        WndChooseWay   = "com.watabou.pixeldungeon.windows.WndChooseWay",
+        Image          = "com.watabou.noosa.Image",
+        Banner         = "com.watabou.pixeldungeon.ui.Banner"
     },
 
     Actors = {
@@ -187,6 +190,7 @@ local RPD = {
     ItemUtils = ItemUtils,
     DungeonTilemap = luajava.bindClass("com.watabou.pixeldungeon.DungeonTilemap"),
     ModdingMode = luajava.bindClass("com.nyrds.util.ModdingMode"),
+    ModQuirks = ModQuirks,
 
     CharsList = CharsList,
     CharUtils = CharUtils,
@@ -225,6 +229,7 @@ local RPD = {
 
     Buffs = Buffs,
     BuffIndicator = luajava.bindClass("com.watabou.pixeldungeon.ui.BuffIndicator"),
+
 
     Actions = actions,
 
@@ -342,12 +347,12 @@ local RPD = {
 
     showBuyWindow = function(shopkeeper,client)
         local wnd = luajava.newInstance(Objects.Ui.WndShopOptions, shopkeeper, client )
-        wnd: showBuyWnd()
+        wnd:showBuyWnd()
     end,
 
     showSellWindow = function(shopkeeper,client)
         local wnd = luajava.newInstance(Objects.Ui.WndShopOptions, shopkeeper, client )
-        wnd: showSellWnd()
+        wnd:showSellWnd()
     end,
 
 

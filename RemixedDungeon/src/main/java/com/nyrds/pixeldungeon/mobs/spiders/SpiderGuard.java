@@ -20,7 +20,7 @@ public class SpiderGuard extends MultiKindMob {
 		dmgMax = 14;
 		dr = 7;
 		
-		exp = 4;
+		expForKill = 4;
 		maxLvl = 10;
 		
 		kind = 1;

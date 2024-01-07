@@ -216,6 +216,8 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
             autoLoadButton.setSize(BUTTON_WIDTH - GAP, BUTTON_HEIGHT);
 
+            autoLoadButton.enable(SaveUtils.slotUsed(SaveUtils.getAutoSave(),Dungeon.heroClass));
+
             bottomRow.add(autoLoadButton);
         }
 

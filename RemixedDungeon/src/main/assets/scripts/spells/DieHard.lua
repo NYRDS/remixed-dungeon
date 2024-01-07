@@ -29,7 +29,7 @@ return spell.init{
 
         local buffLevel = math.min(3, caster:skillLevel()-spellLevel) + 2
 
-        local duration = buffLevel * 10 + 10
+        local duration = buffLevel * 20 + 20
 
         local buff = RPD.affectBuff(caster,"DieHard", duration)
         buff:level(buffLevel)

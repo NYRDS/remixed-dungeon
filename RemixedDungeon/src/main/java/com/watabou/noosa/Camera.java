@@ -44,14 +44,15 @@ public class Camera extends Gizmo {
 	public int width;
 	public int height;
 	
-	int screenWidth;
-	int screenHeight;
+	protected int screenWidth;
+	protected int screenHeight;
 
 	@NotNull
 	public float[] matrix;
 	
-	public PointF scroll;
-	public Visual target;
+	public PointF scroll = new PointF();
+
+	protected Visual target;
 	
 	private float shakeMagX		= 10f;
 	private float shakeMagY		= 10f;
@@ -118,7 +119,7 @@ public class Camera extends Gizmo {
 		screenWidth = (int)(width * zoom);
 		screenHeight = (int)(height * zoom);
 
-		scroll = new PointF();
+		scroll.reset();
 
 		matrix = new float[16];
 		Matrix.setIdentity( matrix );
@@ -135,7 +136,7 @@ public class Camera extends Gizmo {
 		screenWidth = (int)(width * zoom);
 		screenHeight = (int)(height * zoom);
 		
-		scroll = new PointF();
+		scroll.reset();
 		
 		matrix = new float[16];
 		Matrix.setIdentity( matrix );
@@ -173,9 +174,9 @@ public class Camera extends Gizmo {
 		super.update();
 		
 		if (target != null) {
-			focusOn( target );
+			focusOn(target);
 		}
-		
+
 		if ((shakeTime -= GameLoop.elapsed) > 0) {
 			float damping = shakeTime / shakeDuration;
 			shakeX = Random.Float( -shakeMagX, +shakeMagX ) * damping;
@@ -243,11 +244,21 @@ public class Camera extends Gizmo {
 
 		matrix[12] = -1 + x * invW2 - (scroll.x + shakeX) * matrix[0];
 		matrix[13] = +1 - y * invH2 - (scroll.y + shakeY) * matrix[5];
-
 	}
 	
 	public void shake( float magnitude, float duration ) {
 		shakeMagX = shakeMagY = magnitude;
 		shakeTime = shakeDuration = duration;
+	}
+
+	public Visual getTarget() {
+		return target;
+	}
+
+	public void setTarget(Visual target) {
+		this.target = target;
+		if( target != null ) {
+			focusOn(target);
+		}
 	}
 }

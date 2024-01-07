@@ -23,6 +23,11 @@ public class Slow extends FlavourBuff {
 	}
 
 	@Override
+	public float hasteLevel() {
+		return -7.27254f;
+	}
+
+	@Override
 	public void attachVisual() {
         target.showStatus(CharSprite.NEGATIVE, StringsManager.getVar(R.string.Char_StaSlowed));
 	}

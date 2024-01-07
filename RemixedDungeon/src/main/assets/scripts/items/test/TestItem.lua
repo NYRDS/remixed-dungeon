@@ -145,8 +145,12 @@ return itemLib.init{
             --ads.interstitialShow()
 
             --RPD.affectBuff(hero, RPD.Buffs.Invisibility ,200)
-            item:selectCell("action1","Please select cell for action 1")
+            --item:selectCell("action1","Please select cell for action 1")
             --RPD.playMusic("surface",true);
+
+            local banner = RPD.new(RPD.Objects.Ui.Banner,"amulet.png")
+            banner:show(0xFFAA55, 5, 10)
+            RPD.GameScene:showBanner(banner)
         end
 
         if action == "action2" then

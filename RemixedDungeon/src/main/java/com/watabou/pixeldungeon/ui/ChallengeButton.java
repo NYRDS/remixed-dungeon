@@ -32,10 +32,6 @@ public class ChallengeButton extends Button {
                 .get(Dungeon.getChallenges() > 0 ? Icons.CHALLENGE_ON
                         : Icons.CHALLENGE_OFF);
 
-        if(Dungeon.getFacilitations() > 0) {
-            image.hardlight(0.6f,0.9f,0.6f);
-        }
-
         add(image);
     }
 
@@ -48,17 +44,18 @@ public class ChallengeButton extends Button {
         image.setY(PixelScene.align(y));
     }
 
+    public void update() {
+        image.copy(Icons.get(Dungeon.getChallenges() > 0 ? Icons.CHALLENGE_ON
+                : Icons.CHALLENGE_OFF));
+
+    }
+
     @Override
     protected void onClick() {
-        parentScene.add(new WndGameplayCustomization(true) {
+        parentScene.add(new WndGameplayCustomization(true, WndGameplayCustomization.Mode.CHALLENGES) {
             public void onBackPressed() {
                 super.onBackPressed();
-                image.copy(Icons.get(Dungeon.getChallenges() > 0 ? Icons.CHALLENGE_ON
-                        : Icons.CHALLENGE_OFF));
-
-                if(Dungeon.getFacilitations() > 0) {
-                    image.hardlight(0.6f,0.9f,0.6f);
-                }
+                update();
             }
         });
     }

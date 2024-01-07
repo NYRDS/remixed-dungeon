@@ -1,81 +1,39 @@
 {
   "common": {
     "armor": {
-      "kind": "ClothArmor",
-      "glyph": "Bounce",
-      "identified": true
+      "kind": "GothicArmor",
+      "identified": true,
+      "level": 10
     },
     "items": [
       {
-        "kind": "RingOfPower",
-        "level": 7
-      },
-      {
-        "kind": "DewVial",
-        "volume": 10
-      },
-
-      {
-        "kind": "PotionOfLevitation",
-        "identified": true,
+        "kind": "ChaosCrystal",
         "level": 1,
-        "quantity": 1000
+        "charge": 100,
+        "identetifyLevel": 2
       },
       {
-        "kind": "ScrollOfUpgrade",
-        "quantity": 1000
-      },
-      {
-        "kind": "GnollTamahawk",
-        "identified": true
-      },
-      {
-        "kind": "PotionOfStrength",
+        "kind": "Halberd",
         "identified": true,
-        "cursed": true,
-        "quantity": 1000
-      },
-      {
-        "kind": "WandOfBlink",
-        "identified": true,
-        "level" : 200
+        "level": 10
       },
       {
         "kind": "WandOfIcebolt",
         "identified": true,
         "level" : 3
       },
-
-      {
-        "kind": "RottenFish",
-        "quantity": 1000,
-        "identified": true
-      },
-      {
-        "kind": "ScrollOfMagicMapping",
-        "quantity": 1000,
-        "identified": true
-      },
-      {
-        "kind": "PotionOfLiquidFlame",
-        "quantity": 1000,
-        "identified": true
-      },
-      {
-        "kind": "Codex",
-        "cursed": true
-      },
       {
         "kind": "Gold",
-        "quantity" : 100000
+        "quantity" : 10
       }
     ],
-    "str": 10,
-    "hp": 2000,
+    "str": 20,
+    "hp": 20000,
     "magicAffinity": "Common",
     "sp": 100,
     "maxSp": 100,
-    "sl" : 20
+    "sl" : 10,
+    "lvl" : 30
   },
   "non_expert": {
     "items": [

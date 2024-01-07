@@ -30,8 +30,11 @@ public class Eye extends Mob {
         hp(ht(100));
         baseDefenseSkill = 20;
         baseAttackSkill  = 30;
-        exp = 13;
+        expForKill = 13;
         maxLvl = 25;
+
+        dmgMin = 14;
+        dmgMax = 20;
 
         flying = true;
 
@@ -84,7 +87,7 @@ public class Eye extends Mob {
             Char victim = Actor.findChar(cell);
             if (victim != null) {
                 if (CharUtils.hit(this, victim, true)) {
-                    victim.damage(Random.NormalIntRange(14, 20), this);
+                    victim.damage(Random.NormalIntRange(dmgMin, dmgMax), this);
                     int pos = victim.getPos();
 
                     if (Dungeon.isCellVisible(pos)) {

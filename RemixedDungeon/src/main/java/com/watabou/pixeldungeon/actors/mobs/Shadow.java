@@ -11,7 +11,7 @@ public class Shadow extends Mob {
 		dmgMin = 5;
 		dmgMax = 10;
 
-		exp = 5;
+		expForKill = 5;
 		maxLvl = 10;
 
 		walkingType = WalkingType.WALL;

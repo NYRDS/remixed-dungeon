@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
@@ -36,6 +37,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -459,6 +461,35 @@ public class Badges {
 
 			validateAllItemsIdentified();
 		}
+	}
+
+	public static Item getNotBroughtBag() {
+		List<Item> bags = new ArrayList<>();
+
+		if(!local.contains(Badge.BAG_BOUGHT_KEY_RING)) {
+			bags.add(new Keyring());
+		}
+		if(!local.contains(Badge.BAG_BOUGHT_SEED_POUCH)) {
+			bags.add(new SeedPouch());
+		}
+		if (!local.contains(Badge.BAG_BOUGHT_SCROLL_HOLDER)) {
+			bags.add(new ScrollHolder());
+		}
+		if(!local.contains(Badge.BAG_BOUGHT_WAND_HOLSTER)) {
+			bags.add(new WandHolster());
+		}
+		if(!local.contains(Badge.BAG_BOUGHT_POTION_BELT)) {
+			bags.add(new PotionBelt());
+		}
+		if(!local.contains(Badge.BAG_BOUGHT_QUIVER)) {
+			bags.add(new Quiver());
+		}
+
+		if(bags.isEmpty()) {
+			return ItemsList.DUMMY;
+		}
+
+		return Random.element(bags);
 	}
 
 	public static void validateAllBagsBought(Item bag) {

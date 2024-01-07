@@ -68,7 +68,7 @@ public class WndGame extends WndMenuCommon {
 				@Override
 				protected void onClick() {
 					hide();
-					GameScene.show( new WndGameplayCustomization( false ) );
+					GameScene.show( new WndGameplayCustomization( false, WndGameplayCustomization.Mode.BOTH ) );
 				}
 			} );
 		}

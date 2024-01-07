@@ -17,7 +17,7 @@ public class JarOfSouls extends UndeadMob {
 		dmgMax = 0;
 		pacified = true;
 		
-		exp = 0;
+		expForKill = 0;
 		maxLvl = 13;
 
 		postpone(20);

@@ -30,7 +30,7 @@ public class Monk extends Mob {
 		dmgMax = 16;
 		dr = 2;
 		
-		exp = 11;
+		expForKill = 11;
 		maxLvl = 21;
 		
 		loot(Treasury.Category.FOOD, 0.153f);

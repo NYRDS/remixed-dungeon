@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ai.Sleeping;
+import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
@@ -168,7 +169,19 @@ public class CharUtils {
 
         float acuRoll = Random.Float(attacker.attackSkill(defender));
         float defRoll = Random.Float(defender.defenseSkill(attacker));
-        return (magic ? acuRoll * 2 : acuRoll) >= defRoll;
+        boolean hit = (magic ? acuRoll * 2 : acuRoll) >= defRoll;
+
+        if(ModQuirks.mobLeveling) {
+            if (hit && attacker instanceof Mob) {
+                attacker.earnExp(1);
+            }
+
+            if (!hit && defender instanceof Mob) {
+                defender.earnExp(1);
+            }
+        }
+
+        return hit;
     }
 
     public static void challengeAllMobs(Char ch, String sound) {
@@ -210,7 +223,7 @@ public class CharUtils {
                     return new Attack(target);
                 } else {
 
-                    Set<String> actions = new HashSet<>(actions(target, actor));
+                    Set<String> actions = new HashSet<>(target.actions(actor));
 
                     actions.remove(CommonActions.MAC_HIT);
                     actions.remove(CommonActions.MAC_TAUNT);
@@ -286,7 +299,7 @@ public class CharUtils {
             return;
         }
 
-        hero.getScript().run("executeAction", target, action);
+        target.getScript().run("executeAction", target, action);
     }
 
     public static @NotNull ArrayList<String> actions(@NotNull Char target, Char hero) {
@@ -322,8 +335,8 @@ public class CharUtils {
     }
 
     @LuaInterface //for auto tests
-    public static String randomAction(@NotNull Char target, Char hero) {
-        return Random.element(actions(target,hero));
+    public static String randomAction(@NotNull Char target, Char actor) {
+        return Random.element(target.actions(actor));
     }
 
     public static void blinkAway(@NotNull Char chr, cellCondition condition) {
@@ -393,23 +406,21 @@ public class CharUtils {
 
         VHBox actions = new VHBox(maxWidth - 2* Window.GAP);
         actions.setAlign(HBox.Align.Width);
+        actions.setHGap(Window.GAP);
         actions.setGap(Window.GAP);
 
         if (selector.isAlive()) {
 
-            for (final String action: actions(mob, selector)) {
+            for (final String action: mob.actions(selector)) {
 
                 RedButton btn = new RedButton(StringsManager.maybeId(action)) {
                     @Override
                     protected void onClick() {
                         execute(mob, selector, action);
-                        var parentWindow = Window.getParentWindow(this);
-                        if(parentWindow != null) {
-                            parentWindow.hide();
-                        }
+                        Window.hideParentWindow(this);
                     }
                 };
-                btn.setSize( Math.max(36, btn.reqWidth() ), Window.BUTTON_HEIGHT );
+                btn.setSize( Math.max(btn.reqWidth(), 24), Window.BUTTON_HEIGHT );
 
                 actions.add(btn);
             }

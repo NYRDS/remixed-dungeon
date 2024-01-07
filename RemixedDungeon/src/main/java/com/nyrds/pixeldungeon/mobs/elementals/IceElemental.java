@@ -27,9 +27,9 @@ public class IceElemental extends Mob implements IDepthAdjustable {
 	public void adjustStats(int depth) {
 		hp(ht(depth * 10 + 1));
 		baseDefenseSkill = depth * 2 + 1;
-		exp = depth + 1;
+		expForKill = depth + 1;
 		maxLvl = depth + 2;
-		dr = exp;
+		dr = expForKill;
 		baseAttackSkill = baseDefenseSkill / 3 + 1;
 		dmgMin = hp()/6;
 		dmgMax = hp()/6;

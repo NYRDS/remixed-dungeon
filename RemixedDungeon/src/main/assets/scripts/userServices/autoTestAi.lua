@@ -21,14 +21,18 @@ local function handleWindow(hero)
 
         local isWindow = true
 
-        if wndClass:match('WndInfoMob') then
+        if wndClass:match('WndChar') then
             local target = activeWindow:getTarget()
             local action = RPD.CharUtils:randomAction(target,hero)
-            RPD.CharUtils:execute(target, hero, action);
+            RPD.CharUtils:execute(target, hero, action)
+            activeWindow:hide()
+            return true
         end
 
         if wndClass:match('WndStepOnTrap') then
             activeWindow:onSelect(0)
+            activeWindow:hide()
+            return true
         end
 
         if wndClass:match('WndChasmJump') then
@@ -37,18 +41,57 @@ local function handleWindow(hero)
             else
                 activeWindow:onSelect(1)
             end
+            return true
+        end
+
+        if wndClass:match('Potion') then
+            if math.random()<0.5 then
+                activeWindow:onSelect(0)
+            else
+                activeWindow:onSelect(1)
+            end
+            activeWindow:hide()
+            return true
+        end
+
+
+        if wndClass:match('CellSelectorToast') then
+            cell = hero:level():randomDestination()
+            RPD.debug("wnd toast: %s %d",wndClass, cell)
+
+            RPD.GameScene:handleCell(cell)
+            RPD.GameScene:ready()
+            return true
         end
 
         if wndClass:match('CellSelector') then
-            isWindow = false
             RPD.GameScene:handleCell(hero:level():randomDestination())
+            return true
         end
 
-        RPD.debug(wndClass)
-
-        if isWindow then
+        if wndClass:match('WndQuest') then
             activeWindow:hide()
+            return true
         end
+
+        if wndClass:match("WndShopOptions") then
+            activeWindow:hide()
+            return true
+        end
+
+        if wndClass:match('WndBag') then
+            activeWindow:hide()
+            return true
+        end
+
+        if wndClass:match('WndStory') then
+            activeWindow:hide()
+            return true
+        end
+
+
+
+        RPD.debug("unmatched wnd: %s",wndClass)
 
         return true
     end

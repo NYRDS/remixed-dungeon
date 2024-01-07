@@ -22,7 +22,7 @@ public class Golem extends Mob {
 		dmgMax = 40;
 		dr = 12;
 		
-		exp = 12;
+		expForKill = 12;
 		maxLvl = 22;
 		
 		addResistance( ScrollOfPsionicBlast.class );

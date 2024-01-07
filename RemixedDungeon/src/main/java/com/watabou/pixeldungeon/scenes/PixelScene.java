@@ -28,7 +28,6 @@ import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
-import com.nyrds.util.ModdingMode;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.ColorBlock;
@@ -265,28 +264,4 @@ public class PixelScene extends Scene {
 		}
 	}
 
-	private static class PixelCamera extends Camera {
-
-		PixelCamera(float zoom) {
-			super(
-					(int) (Game.width() - Math.ceil(Game.width() / zoom) * zoom) / 2,
-					(int) (Game.height() - Math.ceil(Game.height() / zoom)* zoom) / 2,
-					(int) Math.ceil(Game.width() / zoom),
-					(int) Math.ceil(Game.height() / zoom),
-					zoom);
-		}
-
-		@Override
-		protected void updateMatrix() {
-			float sx = align(this, scroll.x + shakeX);
-			float sy = align(this, scroll.y + shakeY);
-
-			matrix[0] = +zoom * invW2;
-			matrix[5] = -zoom * invH2;
-
-			matrix[12] = -1 + x * invW2 - sx * matrix[0];
-			matrix[13] = +1 - y * invH2 - sy * matrix[5];
-
-		}
-	}
 }

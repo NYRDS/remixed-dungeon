@@ -65,8 +65,16 @@ public class Bundle {
         this.data = new JSONObject(data);
     }
 
-    private Bundle(JSONObject data) {
+    public Bundle(JSONObject data) {
         this.data = data;
+    }
+
+    @SneakyThrows
+    public void mergeWith(JSONObject data) {
+        for (Iterator<String> it = data.keys(); it.hasNext(); ) {
+            String key = it.next();
+            this.data.put(key, data.get(key));
+        }
     }
 
     public String serialize() {

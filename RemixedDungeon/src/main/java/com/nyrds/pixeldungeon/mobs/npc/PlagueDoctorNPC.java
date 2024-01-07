@@ -38,7 +38,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 				var mask = new MedicineMask();
 				mask.equip();
 
-				GameScene.show(new WndHatInfo(mask.getClass().getSimpleName(),"",null));
+				GameScene.show(new WndHatInfo(mask.getClass().getSimpleName(),""));
 
 				return true;
 			}

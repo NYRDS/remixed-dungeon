@@ -257,7 +257,7 @@ public class StatusPane extends Component {
 
         this.hp.setScaleX(health);
         this.sp.setScaleX(sPoints);
-        exp.setScaleX((width / exp.width) * hero.getExp() / hero.maxExp());
+        exp.setScaleX((width / exp.width) * hero.getExpForLevelUp() / hero.expToLevel());
 
         if (chr.lvl() != lastLvl) {
 

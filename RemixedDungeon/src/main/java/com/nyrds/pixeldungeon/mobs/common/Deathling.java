@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.levels.Level;
 
 /**
  * Created by DeadDie on 20.08.2016
@@ -17,7 +16,7 @@ public class Deathling extends UndeadMob {
 
         flying = true;
 
-        exp = 0;
+        expForKill = 0;
         maxLvl = 32;
         setSkillLevel(3);
     }

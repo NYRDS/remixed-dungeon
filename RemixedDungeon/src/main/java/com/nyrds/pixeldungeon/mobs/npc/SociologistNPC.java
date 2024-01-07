@@ -37,7 +37,7 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
 
     public boolean interact(Char hero) {
 
-        GameLoop.addToScene(new WndOptions(this.name,
+        GameLoop.addToScene(new WndOptions(getName(),
                 StringsManager.getVar(R.string.SociologistNPC_Hi),
                 StringsManager.getVar(R.string.Wnd_Button_Yes), StringsManager.getVar(R.string.Wnd_Button_No)
         ) {

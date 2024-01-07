@@ -129,13 +129,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
     @LuaInterface
     public static Buff permanent(Char target, String buffClass) {
-
-        if(target.buffLevel(buffClass) > 0) {
-            return target.buff(buffClass);
-        }
-
-        Buff buff = BuffFactory.getBuffByName(buffClass);
-        buff.attachTo(target);
+        Buff buff = affect(target, buffClass);
         buff.deactivateActor();
         return buff;
     }
@@ -148,7 +142,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     @LuaInterface
-    public static Buff affect(Char target, String buffClass, float duration) {
+    public static Buff affect(Char target, String buffClass) {
         Buff buff = target.buff(buffClass);
         if (buff == null) {
             buff = BuffFactory.getBuffByName(buffClass);
@@ -156,6 +150,13 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         } else {
             buff.level++;
         }
+
+        return buff;
+    }
+
+    @LuaInterface
+    public static Buff affect(Char target, String buffClass, float duration) {
+        Buff buff = affect(target,buffClass);
 
         buff.spend(duration);
         GLog.debug("%s cooldown %3.2f", buff.getEntityKind(), buff.cooldown());
@@ -257,6 +258,11 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         return 1;
     }
 
+    @Override
+    public float hasteLevel() {
+        return 0;
+    }
+
     public int defenceProc(Char defender, Char enemy, int damage) {
         return damage;
     }
@@ -267,7 +273,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     @Override
-    public int charGotDamage(int damage, NamedEntityKind src) {
+    public int charGotDamage(int damage, NamedEntityKind src, Char target) {
         return damage;
     }
 
@@ -289,6 +295,16 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
     @Override
     public int dewBonus() {
+        return 0;
+    }
+
+    @Override
+    public int defenceSkillBonus() {
+        return 0;
+    }
+
+    @Override
+    public int attackSkillBonus() {
         return 0;
     }
 

@@ -97,6 +97,7 @@ public class BuffFactory {
 
     public static final String RAT_SKULL_RATTER_AURA = new RatSkull().buff().getEntityKind();
     public static final String VERTIGO = new Vertigo().getEntityKind();
+    public static final String FURY = new Fury().getEntityKind();
 
 
     static {

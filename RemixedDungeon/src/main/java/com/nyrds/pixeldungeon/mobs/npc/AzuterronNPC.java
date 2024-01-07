@@ -21,134 +21,134 @@ import org.jetbrains.annotations.NotNull;
 
 public class AzuterronNPC extends Shopkeeper {
 
-	public AzuterronNPC() {
-		movable = false;
-		addImmunity( Paralysis.class );
-		addImmunity( Stun.class );
-		addImmunity( Roots.class );
-	}
-	
-	@Override
-	public int defenseSkill( Char enemy ) {
-		return 1000;
-	}
-	
-	@Override
-	public String defenseVerb() {
+    public AzuterronNPC() {
+        movable = false;
+        addImmunity(Paralysis.class);
+        addImmunity(Stun.class);
+        addImmunity(Roots.class);
+    }
+
+    @Override
+    public int defenseSkill(Char enemy) {
+        return 1000;
+    }
+
+    @Override
+    public String defenseVerb() {
         return StringsManager.getVar(R.string.Ghost_Defense);
     }
-	
-	@Override
-	public float speed() {
-		return 0.5f;
-	}
 
-	@Override
-	public void damage(int dmg, @NotNull NamedEntityKind src ) {
-	}
+    @Override
+    public float speed() {
+        return 0.5f;
+    }
 
-	@Override
-	public boolean reset() {
-		return true;
-	}
+    @Override
+    public void damage(int dmg, @NotNull NamedEntityKind src) {
+    }
 
-	@Override
+    @Override
+    public boolean reset() {
+        return true;
+    }
+
+    @Override
     public boolean act() {
 
-		ItemUtils.throwItemAway(getPos());
+        ItemUtils.throwItemAway(getPos());
 
-		getSprite().turnTo( getPos(), Dungeon.hero.getPos() );
-		spend( TICK );
-		return true;
-	}
+        getSprite().turnTo(getPos(), Dungeon.hero.getPos());
+        spend(TICK);
+        return true;
+    }
 
-	@Override
-	public boolean interact(final Char hero) {
-		getSprite().turnTo( getPos(), hero.getPos() );
-		if(Quest.completed) {
-			return super.interact(hero);
-		}
-		if (Quest.given) {
-			
-			if (exchangeItem(hero,"HeartOfDarkness", "PotionOfMight")) {
-				Quest.complete();
-                GameScene.show( new WndQuest( this, StringsManager.getVar(R.string.AzuterronNPC_Quest_End)) );
-			} else {
-                GameScene.show( new WndQuest( this, StringsManager.getVar(R.string.AzuterronNPC_Quest_Reminder)) );
-			}
-			
-		} else {
-            GameScene.show( new WndQuest( this, StringsManager.getVar(R.string.AzuterronNPC_Quest_Start)) );
-			Quest.given = true;
-			Quest.process();
-			Journal.add( Journal.Feature.AZUTERRON.desc() );
-		}
-		return true;
-	}
+    @Override
+    public boolean interact(final Char hero) {
+        getSprite().turnTo(getPos(), hero.getPos());
+        if (Quest.completed) {
+            return super.interact(hero);
+        }
+        if (Quest.given) {
 
-	public static class Quest {
+            if (exchangeItem(hero, "HeartOfDarkness", "PotionOfMight")) {
+                Quest.complete();
+                GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.AzuterronNPC_Quest_End)));
+            } else {
+                GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.AzuterronNPC_Quest_Reminder)));
+            }
 
-		private static boolean completed;
-		private static boolean given;
-		private static boolean processed;
+        } else {
+            GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.AzuterronNPC_Quest_Start)));
+            Quest.given = true;
+            Quest.process();
+            Journal.add(Journal.Feature.AZUTERRON.desc());
+        }
+        return true;
+    }
 
-		private static int depth;
+    public static class Quest {
 
-		public static void reset() {
-			completed = false;
-			processed = false;
-			given = false;
-		}
+        private static boolean completed;
+        private static boolean given;
+        private static boolean processed;
 
-		private static final String COMPLETED   = "completed";
-		private static final String NODE		= "azuterron";
-		private static final String GIVEN		= "given";
-		private static final String PROCESSED	= "processed";
-		private static final String DEPTH		= "depth";
+        private static int depth;
 
-		public static void storeInBundle( Bundle bundle ) {
-			Bundle node = new Bundle();
+        public static void reset() {
+            completed = false;
+            processed = false;
+            given = false;
+        }
 
-			node.put(GIVEN, given);
-			node.put(DEPTH, depth);
-			node.put(PROCESSED, processed);
-			node.put(COMPLETED, completed);
+        private static final String COMPLETED = "completed";
+        private static final String NODE = "azuterron";
+        private static final String GIVEN = "given";
+        private static final String PROCESSED = "processed";
+        private static final String DEPTH = "depth";
 
-			bundle.put( NODE, node );
-		}
-		
-		public static void restoreFromBundle( Bundle bundle ) {
-			
-			Bundle node = bundle.getBundle( NODE );
+        public static void storeInBundle(Bundle bundle) {
+            Bundle node = new Bundle();
 
-			if (!node.isNull()) {
-				given	= node.getBoolean( GIVEN );
-				depth	= node.getInt( DEPTH );
-				processed	= node.getBoolean( PROCESSED );
-				completed = node.getBoolean( COMPLETED );
-			}
-		}
+            node.put(GIVEN, given);
+            node.put(DEPTH, depth);
+            node.put(PROCESSED, processed);
+            node.put(COMPLETED, completed);
 
-		public static void process() {
-			if (given && !processed) {
-				final Level level = Dungeon.level;
+            bundle.put(NODE, node);
+        }
 
-				int mobPos = level.randomRespawnCell();
+        public static void restoreFromBundle(Bundle bundle) {
 
-				if (level.cellValid(mobPos)) {
-					TreacherousSpirit enemy = new TreacherousSpirit();
-					enemy.setPos(mobPos);
-					level.spawnMob(enemy);
-					processed = true;
-				}
-			}
-		}
+            Bundle node = bundle.getBundle(NODE);
 
-		public static void complete() {
-			completed = true;
-			Journal.remove( Journal.Feature.AZUTERRON.desc() );
-		}
-	}
+            if (!node.isNull()) {
+                given = node.getBoolean(GIVEN);
+                depth = node.getInt(DEPTH);
+                processed = node.getBoolean(PROCESSED);
+                completed = node.getBoolean(COMPLETED);
+            }
+        }
+
+        public static void process() {
+            if (given && !processed) {
+                final Level level = Dungeon.level;
+
+                int mobPos = level.randomRespawnCell();
+
+                if (level.cellValid(mobPos)) {
+                    TreacherousSpirit enemy = new TreacherousSpirit();
+                    enemy.setPos(mobPos);
+                    level.spawnMob(enemy);
+                    processed = true;
+                }
+            }
+        }
+
+        public static void complete() {
+            completed = true;
+            Journal.remove(Journal.Feature.AZUTERRON.desc());
+        }
+    }
 }
 
 

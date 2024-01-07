@@ -61,6 +61,7 @@ import java.util.Set;
 
 import lombok.Getter;
 import lombok.SneakyThrows;
+import lombok.val;
 
 
 public enum HeroClass implements CharModifier {
@@ -109,8 +110,6 @@ public enum HeroClass implements CharModifier {
         hero.setHeroClass(this);
         initCommon(hero);
         initForClass(hero, hero.getHeroClass().name());
-
-        hero.setGender(getGender());
 
         if (Badges.isUnlocked(masteryBadge()) && hero.getDifficulty() < 3) {
             {
@@ -165,6 +164,8 @@ public enum HeroClass implements CharModifier {
                 if(Dungeon.isFacilitated(Facilitations.SUPER_STRENGTH)) {
                     hero.STR(hero.STR() + 4);
                 }
+
+                hero.lvl(classDesc.optInt("lvl", hero.lvl()));
 
                 hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
                 hero.getHeroClass().setMagicAffinity(classDesc.optString("magicAffinity", magicAffinity));
@@ -231,6 +232,17 @@ public enum HeroClass implements CharModifier {
             case GNOLL:
                 return StringsManager.getVars(R.array.HeroClass_GnollPerks);
         }
+    }
+
+    public String getDescription() {
+        StringBuilder desc = new StringBuilder();
+        for (val item : perks()) {
+            desc.append("# ");
+            desc.append(item);
+            desc.append("\n\n");
+        }
+
+        return desc.toString();
     }
 
     public int getGender() {
@@ -323,7 +335,7 @@ public enum HeroClass implements CharModifier {
     }
 
     @Override
-    public int charGotDamage(int damage, NamedEntityKind src) {
+    public int charGotDamage(int damage, NamedEntityKind src, Char target) {
         return damage;
     }
 
@@ -374,6 +386,16 @@ public enum HeroClass implements CharModifier {
     }
 
     @Override
+    public int defenceSkillBonus() {
+        return 0;
+    }
+
+    @Override
+    public int attackSkillBonus() {
+        return 0;
+    }
+
+    @Override
     public int icon() {
         return BuffIndicator.NONE;
     }
@@ -393,5 +415,13 @@ public enum HeroClass implements CharModifier {
     @Override
     public String textureLarge() {
         return Assets.BUFFS_LARGE;
+    }
+
+    @Override
+    public float hasteLevel() {
+        if (this == HeroClass.ELF) {
+            return 1;
+        }
+        return 0;
     }
 }

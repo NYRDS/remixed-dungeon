@@ -1,17 +1,18 @@
 
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.windows.WndShopOptions;
 import com.nyrds.util.ModdingMode;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.items.Item;
@@ -23,9 +24,6 @@ import com.watabou.pixeldungeon.sprites.ShopkeeperSprite;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Collections;
-
-
 
 public class Shopkeeper extends NPC {
 
@@ -34,6 +32,10 @@ public class Shopkeeper extends NPC {
 		movable = false;
 		addImmunity(Regeneration.class);
 	}
+
+	@Packable
+	private String bagSold = "";
+
 
 	public static int countFood(Bag backpack) {
         int ret = 0;
@@ -84,14 +86,17 @@ public class Shopkeeper extends NPC {
 			}
 		}
 
+		if (bagSold.isEmpty()) {
+			Item bag = Badges.getNotBroughtBag();
+			if(bag.valid() && collect(bag)) {
+				bagSold = bag.getEntityKind();
+			}
+		}
+
 		while(backpack.items.size() < backpack.getSize() + 2 && attempts < 100) {
 			CharUtils.generateNewItem(this);
 			attempts++;
 		}
-
-		//if(attempts > 0) {
-		//	Collections.shuffle(backpack.items);
-        //}
 
 		GameScene.show(
 				new WndShopOptions(this, hero));
@@ -101,9 +106,8 @@ public class Shopkeeper extends NPC {
 
 	@Override
 	public boolean collect(@NotNull Item item) {
-		final Hero hero = Dungeon.hero;
 
-		if(item instanceof Bag && hero != null) {
+		if(item instanceof Bag) {
 			if(Dungeon.hero.getItem(item.getEntityKind()).valid()) {
 				return false;
 			}

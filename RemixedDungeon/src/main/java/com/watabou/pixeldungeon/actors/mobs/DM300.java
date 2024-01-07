@@ -42,7 +42,7 @@ public class DM300 extends Boss {
 		spriteClass = DM300Sprite.class;
 		
 		hp(ht(200));
-		exp = 30;
+		expForKill = 30;
 		baseDefenseSkill = 18;
 		baseAttackSkill  = 28;
 		dmgMin = 18;

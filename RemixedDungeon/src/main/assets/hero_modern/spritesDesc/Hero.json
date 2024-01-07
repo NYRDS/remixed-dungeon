@@ -27,6 +27,10 @@
     "dual"      : { "fps" : 8,  "looped" : false,    "frames" : [19, 20, 0]}
   },
 
+  "extras" : {
+    "zan": { "fps" : 1, "looped" : true,    "frames" : [18,18,18,18] }
+  },
+
   "bodyType": {
     "WARLOCK": "warlock",
     "LICH": "lich",

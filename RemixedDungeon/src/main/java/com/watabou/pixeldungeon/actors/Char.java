@@ -5,11 +5,13 @@ import static com.watabou.pixeldungeon.Dungeon.level;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
+import com.nyrds.lua.LuaEngine;
 import com.nyrds.lua.LuaUtils;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.ai.Sleeping;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
@@ -25,7 +27,6 @@ import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.ml.actions.Move;
-import com.nyrds.pixeldungeon.mobs.common.CustomMob;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.ItemsList;
@@ -34,6 +35,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.JsonHelper;
 import com.nyrds.util.Scrambler;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Assets;
@@ -43,15 +45,12 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
-import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Light;
+import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.buffs.Slow;
-import com.watabou.pixeldungeon.actors.buffs.Speed;
-import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -62,10 +61,10 @@ import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.rings.RingOfHaste;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -78,6 +77,7 @@ import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
+import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -88,7 +88,9 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.TestOnly;
+import org.json.JSONObject;
 import org.luaj.vm2.LuaTable;
+import org.luaj.vm2.LuaValue;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -100,6 +102,7 @@ import java.util.Set;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.val;
 
 
 public abstract class Char extends Actor implements HasPositionOnLevel, Presser, ItemOwner, NamedEntityKindWithId {
@@ -108,24 +111,27 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public static final String RESISTANCES = "resistances";
     protected static final String LEVEL = "lvl";
     private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
+    static private final Map<String, JSONObject> defMap = new HashMap<>();
     public EquipableItem rangedWeapon = ItemsList.DUMMY;
 
     public CharAction lastAction = null;
+    @Packable(defaultValue = "false")
+    public boolean enemySeen;
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
-    protected
-    int enemyId = EntityIdSource.INVALID_ID;
+    protected int enemyId = EntityIdSource.INVALID_ID;
 
-    @Getter
-    @NotNull
-    protected LuaScript script = new LuaScript(DEFAULT_MOB_SCRIPT, this);
+    @Packable(defaultValue = "0")
+    protected int expForLevelUp = 0;
+
+    protected LuaScript script;
     protected int baseStr = 10;
     protected int attackRange = 1;
 
 
     @Packable(defaultValue = "-1")//Level.INVALID_CELL
     @LuaInterface
-    @Getter
     @Setter
+    @Getter
     private int target = Level.INVALID_CELL;
 
     @NotNull
@@ -142,6 +148,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @Getter
     private int pos = Level.INVALID_CELL;
 
+    @Packable(defaultValue = "0")
+    private long layersMask = 0;
+
     transient private int prevPos = Level.INVALID_CELL;
 
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
@@ -154,18 +163,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     protected CharSprite sprite;
 
-    @Getter
-    protected String name = StringsManager.getVar(R.string.Char_Name);
-    @Getter
-    protected String name_objective = StringsManager.getVar(R.string.Char_Name_Objective);
-
-    protected String description = StringsManager.getVar(R.string.Mob_Desc);
-    @Getter
-    protected String defenceVerb = null;
-    @Getter
-    protected int gender = Utils.NEUTER;
-
-    @Getter
     protected WalkingType walkingType = WalkingType.NORMAL;
 
     private int HT;
@@ -193,8 +190,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     private int lvl = Scrambler.scramble(1);
     private int magicLvl = Scrambler.scramble(1);
     private float lightness = 0.5f;
+    private int glowColor = 0;
+    private float glowPeriod = 0.0f;
 
     public Char() {
+        fillMobStats(false);
+    }
+
+    protected void fillMobStats(boolean b) {
     }
 
     @LuaInterface
@@ -245,6 +248,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         checkVisibleEnemies();
 
+        getScript().runOptional("onAct");
+
         forEachBuff(CharModifier::charAct);
 
         for (Item item : getBelongings()) {
@@ -265,6 +270,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     private static final String BUFFS = "buffs";
     private static final String SPELLS_USAGE = "spells_usage";
 
+    @LuaInterface
+    public int getOwnerPos() {
+        return getOwner().getPos();
+    }
+
     @Override
     public void storeInBundle(Bundle bundle) {
         getId(); // Ensure id
@@ -277,11 +287,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         bundle.put(LEVEL, lvl());
 
         getBelongings().storeInBundle(bundle);
+
+        bundle.put(LuaEngine.LUA_DATA, getScript().run("saveData").checkjstring());
     }
 
     @Override
     public void restoreFromBundle(Bundle bundle) {
-
         super.restoreFromBundle(bundle);
 
         if (id != EntityIdSource.INVALID_ID) {
@@ -296,6 +307,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         getId(); // ensure id
 
+        fillMobStats(true);
+
         hp(bundle.getInt(TAG_HP));
         ht(bundle.getInt(TAG_HT));
         lvl(bundle.getInt(LEVEL));
@@ -309,6 +322,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         setupCharData();
 
         getBelongings().restoreFromBundle(bundle);
+
+        //pre 32 save compatibility
+        expForLevelUp = bundle.optInt("exp",expForLevelUp);
+
+
+        String luaData = bundle.optString(LuaEngine.LUA_DATA,null);
+        if(luaData!=null) {
+            getScript().run("loadData",luaData);
+        }
+        getScript().run("fillStats");
     }
 
     private String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
@@ -324,21 +347,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         setBelongings(new Belongings(this));
-
-        if (this instanceof CustomMob) {
-            return;
-        }
-
-        name = getClassParam("Name", name, true);
-        name_objective = getClassParam("Name_Objective", name, true);
-
-        if (this instanceof Hero) {
-            return;
-        }
-
-        description = getClassParam("Desc", description, true);
-        gender = Utils.genderFromString(getClassParam("Gender", "masculine", true));
-        defenceVerb = getClassParam("Defense", null, false);
     }
 
     @LuaInterface
@@ -392,7 +400,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (CharUtils.hit(this, enemy, false)) {
 
             if (visibleFight) {
-                GLog.i(StringsManager.getVars(R.array.Char_Hit)[gender], name, enemy.getName_objective());
+                GLog.i(StringsManager.getVars(R.array.Char_Hit)[getGender()], getName(), enemy.getName_objective());
             }
 
             int dmg = damageRoll();
@@ -419,20 +427,20 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
                     if (hero.killerGlyph != null) {
                         Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.GLYPH), hero.killerGlyph.name(), Dungeon.depth));
-                        GLog.n(StringsManager.getVars(R.array.Char_Kill)[hero.gender], hero.killerGlyph.name());
+                        GLog.n(StringsManager.getVars(R.array.Char_Kill)[hero.getGender()], hero.killerGlyph.name());
                     } else {
                         if (isBoss()) {
-                            Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.BOSS), name, Dungeon.depth));
+                            Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.BOSS), getName(), Dungeon.depth));
                         } else {
                             Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
-                                    Utils.indefinite(name), Dungeon.depth));
+                                    Utils.indefinite(getName()), Dungeon.depth));
                         }
 
-                        GLog.n(StringsManager.getVars(R.array.Char_Kill)[gender], name);
+                        GLog.n(StringsManager.getVars(R.array.Char_Kill)[getGender()], getName());
                     }
 
                 } else {
-                    GLog.i(StringsManager.getVars(R.array.Char_Defeat)[gender], name, enemy.getName_objective());
+                    GLog.i(StringsManager.getVars(R.array.Char_Defeat)[getGender()], getName(), enemy.getName_objective());
                 }
             }
             return true;
@@ -442,9 +450,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
                 String defense = enemy.defenseVerb();
                 enemy.showStatus(CharSprite.NEUTRAL, defense);
                 if (this == Dungeon.hero) {
-                    GLog.i(StringsManager.getVar(R.string.Char_YouMissed), enemy.name, defense);
+                    GLog.i(StringsManager.getVar(R.string.Char_YouMissed), enemy.getName(), defense);
                 } else {
-                    GLog.i(StringsManager.getVar(R.string.Char_SmbMissed), enemy.name, defense, name);
+                    GLog.i(StringsManager.getVar(R.string.Char_SmbMissed), enemy.getName(), defense, getName());
                 }
 
                 Sample.INSTANCE.play(Assets.SND_MISS);
@@ -467,8 +475,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public int attackSkill(Char target) {
-        int bonus = buffLevel(BuffFactory.RING_OF_ACCURACY)
-                + buffLevel(BuffFactory.BLESSED);
+
+        int[] bf = {0};
+        forEachBuff(b -> bf[0] += b.attackSkillBonus());
+
+        int bonus = bf[0];
 
         float accuracy = (float) Math.pow(1.4, bonus);
 
@@ -496,8 +507,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         int defenseSkill = baseDefenseSkill + lvl();
 
-        int bonus = buffLevel(BuffFactory.BLESSED)
-                + buffLevel(BuffFactory.RING_OF_EVASION);
+        final int[] bf = {0};
+        forEachBuff(b -> bf[0] += b.defenceSkillBonus());
+
+        int bonus = bf[0];
 
         float evasion = bonus == 0 ? 1 : (float) Math.pow(1.2, bonus);
         if (paralysed) {
@@ -524,10 +537,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public String defenseVerb() {
+        val defenceVerb = getDefenceVerb();
         if (defenceVerb != null) {
             return defenceVerb;
         }
-        return StringsManager.getVars(R.array.Char_StaDodged)[gender];
+        return StringsManager.getVars(R.array.Char_StaDodged)[getGender()];
     }
 
 
@@ -569,9 +583,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         KindOfBow kindOfBow = (KindOfBow) getItemFromSlot(Belongings.Slot.WEAPON);
 
-        Class<? extends Arrow> arrowType = kindOfBow.arrowType();
-
-        Arrow arrow = getBelongings().getItem(arrowType);
+        Item arrow = getBelongings().getItem(kindOfBow.arrowType());
         if (arrow == null || arrow.quantity() == 0) {
             arrow = getBelongings().getItem(Arrow.class);
         }
@@ -616,14 +628,26 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             getSecondaryWeapon().attackProc(this, enemy, dmg[0]);
         }
 
-        return dmg[0];
+        return getScript().run("onAttackProc", enemy, dmg[0]).optint(dmg[0]);
     }
 
     public int defenseProc(Char enemy, int baseDamage) {
         int dr = defenceRoll(enemy);
         final int[] damage = {baseDamage - dr};
         forEachBuff(b -> damage[0] = b.defenceProc(this, enemy, damage[0]));
-        return getItemFromSlot(Belongings.Slot.ARMOR).defenceProc(enemy, this, damage[0]);
+        damage[0] = getItemFromSlot(Belongings.Slot.ARMOR).defenceProc(enemy, this, damage[0]);
+
+        if (!enemySeen && enemy.getSubClass() == HeroSubClass.ASSASSIN) {
+            baseDamage += Random.Int(1, baseDamage);
+            Wound.hit(this);
+        }
+
+        if (getOwnerId() != enemy.getId()) {
+            setEnemy(enemy);
+        }
+
+        return getScript().run("onDefenceProc", enemy, baseDamage).optint(baseDamage);
+
     }
 
     @NotNull
@@ -644,6 +668,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         return ItemsList.DUMMY;
+    }
+
+    @Override
+    public int priceSell(Item item) {
+        return getScript().run("priceSell", item, item.price() * 5 * (Dungeon.depth / 5 + 1)).toint();
     }
 
     public int damageRoll() {
@@ -707,14 +736,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             return;
         }
 
-        if (getSubClass() == HeroSubClass.BERSERKER && 0 < hp() && hp() <= ht() * Fury.LEVEL) {
-            if (!hasBuff(Fury.class)) {
-                Buff.affect(this, Fury.class);
-            }
-        }
+        getScript().run("onDamage", dmg, src);
+        getState().gotDamage(this, src, dmg);
 
         final int[] dmg_ = {dmg};
-        forEachBuff(b -> dmg_[0] = b.charGotDamage(dmg_[0], src));
+        forEachBuff(b -> dmg_[0] = b.charGotDamage(dmg_[0], src, this));
         dmg = dmg_[0];
 
         dmg = resist(dmg, src);
@@ -758,7 +784,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         CharsList.destroy(getId());
     }
 
-    public void die(@NotNull NamedEntityKind src) {
+    public void die(@NotNull NamedEntityKind cause) {
+
+        getState().onDie(this);
+
+        if (cause == null) {
+            cause = CharsList.DUMMY; //Mods may and will misbehave
+            EventCollector.logException("null_death_cause");
+        }
+
+        getScript().run("onDie", cause);
+
         if (level().pit[getPos()]) {
             getSprite().fall();
         } else {
@@ -788,34 +824,29 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return aDelay;
     }
 
+
+    public float timeScale() {
+        final int[] bf = {0};
+        forEachBuff(b -> bf[0] += b.hasteLevel());
+
+        float hasteLevel = bf[0];
+
+        return Math.min (3, (float)  Math.pow(1.1f, -hasteLevel));
+    }
+
     @Override
     public void spend(float time) {
+        float scaledTime = time * timeScale();
+
         for (Item item : getBelongings()) {
             if (item instanceof IActingItem && item.isEquipped(this)) {
-                ((IActingItem) item).spend(this, time);
+                ((IActingItem) item).spend(this, scaledTime);
             }
         }
-
-        int hasteLevel = 0;
-
-        if (getHeroClass() == HeroClass.ELF) {
-            hasteLevel++;
-            if (getSubClass() == HeroSubClass.SCOUT) {
-                hasteLevel++;
-            }
-        }
-
-        hasteLevel += buffLevel(RingOfHaste.Haste.class);
-
-        float timeScale = (1.f + buffLevel(Speed.class)) / (1.f + buffLevel(Slow.class));
-
-        float scaledTime = (float) (time * Math.pow(1.1f, -hasteLevel) / timeScale);
 
         for (Map.Entry<String, Number> spell : spellsUsage.entrySet()) {
             spell.setValue(spell.getValue().floatValue() + scaledTime);
         }
-
-        scaledTime = Math.min(time * 3, scaledTime);
 
         super.spend(scaledTime);
 
@@ -1030,6 +1061,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             step = Random.element(candidates);
         }
 
+        getScript().run("onMove", step);
         placeTo(step);
     }
 
@@ -1219,22 +1251,25 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
             if(Util.isDebug()){
                 if(!isAlive()) {
-                    throw new TrackedRuntimeException("its dead! leave it alone! " + getEntityKind());
+                    //throw new TrackedRuntimeException("its dead! leave it alone! " + getEntityKind());
                 }
             }
             sprite = newSprite();
+            sprite.lightness(lightness);
+            setGlowing(glowColor, glowPeriod);
         }
+
         if (sprite == null) {
             throw new TrackedRuntimeException("Sprite creation for: " + getEntityKind() + " failed");
         }
+
+        sprite.layersMask = layersMask;
 
         if (sprite.getParent() == null) {
             updateSprite(sprite);
         }
 
         assert (sprite.getParent() != null);
-
-        sprite.lightness(lightness);
 
         return sprite;
     }
@@ -1346,6 +1381,19 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         spend(Actor.MICRO_TICK);
     }
 
+    public void onSpawn(Level level) {
+        Buff.affect(this, Regeneration.class);
+        getScript().run("onSpawn", level);
+    }
+
+    protected JSONObject getClassDef() {
+        if (!defMap.containsKey(getEntityKind())) {
+            defMap.put(getEntityKind(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getEntityKind() + ".json"));
+        }
+
+        return defMap.get(getEntityKind());
+    }
+
     public boolean friendly(@NotNull Char chr) {
         return !fraction.isEnemy(chr.fraction);
     }
@@ -1384,6 +1432,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public int skillLevel() {
         return Scrambler.descramble(magicLvl);
+    }
+
+    public boolean isEnemyInFov() {
+        final Char enemy = getEnemy();
+        final int enemyPos = enemy.getPos();
+        return enemy.valid() && enemy.isAlive() && level().cellValid(enemyPos) && level().fieldOfView[enemyPos]
+                && enemy.invisible <= 0;
     }
 
     protected abstract void moveSprite(int oldPos, int pos);
@@ -1578,6 +1633,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public boolean interact(Char chr) {
+
+        if(getScript().run("onInteract", chr).optboolean(true)) {
+            return true;
+        }
+
         if (friendly(chr)) {
             swapPosition(chr);
             return true;
@@ -1690,6 +1750,19 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @NotNull
     public Char getEnemy() {
         return CharsList.getById(enemyId);
+    }
+
+    protected void zapMiss(@NotNull Char enemy) {
+        getScript().run("onZapMiss", enemy);
+    }
+
+    protected int zapProc(@NotNull Char enemy, int damage) {
+        return getScript().run("onZapProc", enemy, damage).optint(damage);
+    }
+
+    @LuaInterface
+    public String getMobClassName() {
+        return getEntityKind();
     }
 
     public abstract Char makeClone();
@@ -1884,7 +1957,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @LuaInterface
     @Deprecated
     public String description() { // Still used in Remixed Additions
-        return description;
+        return getDescription();
     }
 
     public void execute(Char chr, String action) {
@@ -1903,19 +1976,27 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     @Override
-    public int priceSell(Item item) {
-        return item.price() * 5 * (Dungeon.depth / 5 + 1);
+    public int priceBuy(Item item) {
+        return getScript().run("priceBuy", item, (item.price())).toint();
     }
 
-    @Override
-    public int priceBuy(Item item) {
-        return item.price();
-    }
 
     public String getDescription() {
+        var description = getClassParam("Desc", "missing desc", true);
+
+        description = StringsManager.maybeId(getClassDef().optString(description, getEntityKind()+"_Desc"));
+
+        for(Buff buff: buffs) {
+            if (buff.getEntityKind().startsWith("Champion")) {
+                description += "\n\n" + StringsManager.maybeId(buff.name());
+                description += "\n" + StringsManager.maybeId(buff.desc());
+            }
+        }
+
         if (!Util.isDebug()) {
             return description + "\n\n" + String.format(StringsManager.getVar(R.string.CharInfo_Level), lvl(), name());
         }
+
         return description + "\n\n"
                 + String.format(StringsManager.getVar(R.string.CharInfo_Level), lvl(), name()) + "\n\n"
                 + Utils.format("id: %d owner: %d", getId(), getOwnerId());
@@ -1967,12 +2048,31 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return Math.max(attackRange, getBelongings().getItemFromSlot(Belongings.Slot.WEAPON).range());
     }
 
-    public int getExp() {
-        return 0;
+    public int getExpForLevelUp() {
+        return expForLevelUp;
     }
 
-    public int maxExp() {
-        return 10;
+    public void earnExp(int exp) {
+        this.expForLevelUp += exp;
+
+        boolean levelUp = false;
+
+        while (this.getExpForLevelUp() >= expToLevel()) {
+            this.expForLevelUp -= expToLevel();
+            lvl(lvl() + 1);
+
+            ht((int) (ht() + GameLoop.getDifficultyFactor() * 2));
+            heal(lvl(), this);
+
+            levelUp = true;
+        }
+
+        if (levelUp) {
+            getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Hero_LevelUp));
+        }
+    }
+    public int expToLevel() {
+         return 5 + lvl() * 5;
     }
 
     public boolean isReady() {
@@ -1998,8 +2098,66 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         this.curAction = curAction;
     }
 
+    public ArrayList<String> actions(Char hero) {
+        ArrayList<String> actions = CharUtils.actions(this, hero);
+
+        LuaValue ret = getScript().run("actionsList", hero);
+        LuaEngine.forEach(ret, (key,val)->actions.add(val.tojstring()));
+
+        return actions;
+    }
+
     @LuaInterface
     int emptyCellNextTo() {
         return level().getEmptyCellNextTo(getPos());
+    }
+
+
+    @LuaInterface
+    public void setLayersMask(long layersMask) {
+        this.layersMask = layersMask;
+        updateSprite();
+    }
+
+    public String getName() {
+        return StringsManager.maybeId(getClassDef().optString("name", getEntityKind()+"_Name"));
+    }
+
+    public String getName_objective() {
+        return StringsManager.maybeId(getClassDef().optString("name_objective", getEntityKind()+"_Name_Objective"));
+    }
+
+    public String getDefenceVerb() {
+        return StringsManager.maybeId(getClassDef().optString("defenceVerb", StringsManager.getVars(R.array.Char_StaDodged)[getGender()]));
+    }
+
+    public int getGender() {
+        return Utils.genderFromString(StringsManager.maybeId(getClassDef().optString("gender", getEntityKind()+"_Gender")));
+    }
+
+    public WalkingType getWalkingType() {
+        return this.walkingType;
+    }
+
+    public LuaScript getScript() {
+        if(script==null) {
+            script = new LuaScript("scripts/mobs/"+getEntityKind(), DEFAULT_MOB_SCRIPT, this);
+            script.asInstance();
+        }
+        return script;
+    }
+
+    @LuaInterface
+    public void setGlowing(int color, float period) {
+        this.glowColor = color;
+        this.glowPeriod = period;
+
+        if(sprite!=null) {
+            if (glowPeriod > 0) {
+                getSprite().setGlowing(new Glowing(color, period));
+            } else {
+                getSprite().setGlowing(Glowing.NO_GLOWING);
+            }
+        }
     }
 }

@@ -34,7 +34,7 @@ public class Piranha extends Mob {
 
 		baseSpeed = 2f;
 		
-		exp = 0;
+		expForKill = 0;
 
 		collect(ItemFactory.itemByName("RawFish"));
 

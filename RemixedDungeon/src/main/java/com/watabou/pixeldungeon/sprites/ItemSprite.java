@@ -190,7 +190,7 @@ public class ItemSprite extends MovieClip {
 			}
 		}
 
-		if (getVisible())
+		if (getVisible()) {
 			if (glowing != null && glowing != Glowing.NO_GLOWING) {
 				if (glowUp && (phase += elapsed) > glowing.period) {
 					glowUp = false;
@@ -207,6 +207,7 @@ public class ItemSprite extends MovieClip {
 				ga = glowing.green * value;
 				ba = glowing.blue * value;
 			}
+		}
 	}
 
 	@Override

@@ -32,7 +32,7 @@ public class RatKing extends NPC {
 		dr = 5;
 		
 		hp(ht(30));
-		exp = 1;
+		expForKill = 1;
 
 		collect(new RatKingCrown() );
 	}

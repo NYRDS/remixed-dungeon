@@ -41,7 +41,7 @@ public class EnslavedSoul extends UndeadMob {
         dmgMax = 8;
         dr = 10;
 
-        exp = 5;
+        expForKill = 5;
         maxLvl = 15;
 
         loot(Gold.class, 0.02f);

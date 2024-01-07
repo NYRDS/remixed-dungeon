@@ -21,11 +21,9 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
-import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.windows.HBox;
-import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
@@ -69,6 +67,8 @@ public class StartScene extends PixelScene {
     private static final float HEIGHT_L = 124;
 
     private final ArrayList<ClassShield> shields = new ArrayList<>();
+    private ChallengeButton challengeButton;
+    private FacilitaionButton facilitaionButton;
 
     private float buttonX;
     private float buttonY;
@@ -170,6 +170,9 @@ public class StartScene extends PixelScene {
             }
         }
 
+        challengeButton = new ChallengeButton(this);
+        facilitaionButton = new FacilitaionButton(this);
+
         if (RemixedDungeon.landscape()) {
             float shieldW = width / usableClasses;
             float shieldH = Math.min(centralHeight, shieldW);
@@ -180,7 +183,19 @@ public class StartScene extends PixelScene {
                 i++;
             }
 
-            placeCustomizationsAt(left + 32, title.getY() + title.height/2);
+            float y = title.getY() + title.height/2;
+
+            HBox customizations = new HBox(width);
+            customizations.setAlign(HBox.Align.Width);
+            customizations.setGap(2);
+
+            customizations.add(challengeButton);
+            customizations.add(title);
+            customizations.add(facilitaionButton);
+
+            remove(title);
+            customizations.setPos( left, y - customizations.height() / 2);
+            add(customizations);
 
         } else {
             int classesPerRow = 4;
@@ -204,7 +219,14 @@ public class StartScene extends PixelScene {
                 }
             }
 
-            placeCustomizationsAt(w / 2, top + shieldH * 0.5f);
+            HBox customizations = new HBox(challengeButton.width() * 2.5f);
+            customizations.setGap(2);
+
+            customizations.add(challengeButton);
+            customizations.add(facilitaionButton);
+
+            customizations.setPos((float) (w / 2) - customizations.width() / 2, top + shieldH * 0.5f - customizations.height() / 2);
+            add(customizations);
         }
 
         unlock = PixelScene.createMultiline(GuiProperties.titleFontSize());
@@ -233,19 +255,6 @@ public class StartScene extends PixelScene {
         ServiceManNPC.resetLimit();
 
         fadeIn();
-    }
-
-    private void placeCustomizationsAt(float x, float y) {
-        ChallengeButton challenge = new ChallengeButton(this);
-
-        FacilitaionButton facilitations = new FacilitaionButton(this);
-
-        HBox customizations = new HBox(challenge.width() * 2.5f);
-        customizations.add(challenge);
-        //customizations.add(facilitations);
-
-        customizations.setPos(x - customizations.width() / 2, y - customizations.height() / 2);
-        add(customizations);
     }
 
     private void updateUnlockLabel(String text) {
@@ -336,17 +345,6 @@ public class StartScene extends PixelScene {
                 StringsManager.getVar(R.string.StartScene_DifficultyExpert)) {
             @Override
             public void onSelect(final int index) {
-
-                if (index < 2 && EuConsent.getConsentLevel() < EuConsent.NON_PERSONALIZED) {
-                    GameLoop.addToScene(new WndEuConsent() {
-                        @Override
-                        public void done() {
-                            startNewGame(index);
-                        }
-                    });
-                    return;
-                }
-
                 startNewGame(index);
             }
         };
@@ -460,6 +458,9 @@ public class StartScene extends PixelScene {
                 }
                 updateBrightness();
             }
+
+            //challengeButton.update();
+            //facilitaionButton.update();
         }
 
         public void highlight(boolean value) {

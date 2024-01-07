@@ -44,7 +44,7 @@ return spell.init{
             local tgt = caster:randomEnemy()
 
             RPD.zapEffect(ownPos,tgt:getPos(),"Kunai")
-            tgt:damage(math.random(n,n + caster:lvl()), caster)
+            tgt:damage(math.random( n, n + caster:lvl()*n ), caster)
         end
 
         return true

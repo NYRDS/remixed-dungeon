@@ -17,11 +17,14 @@ return buff.init{
         }
     end,
 
-    attachTo = function(self, buff, target)
-        return true
+    act = function(self,buff)
+        buff:spend(20)
     end,
 
-    detach = function(self, buff)
+    damage = function(self, buff, damage, src)
+        if math.random() < 1 / buff.target:skillLevel() then
+            buff:detach()
+        end
     end,
 
     regenerationBonus = function(self, buff)

@@ -25,7 +25,18 @@ return mob.init({
 
     spawn = function(me, level)
         RPD.setAi(me,"BlackCat")
-    end
+    end,
+
+    actionsList = function(self, chr)
+        return {"pet"}
+    end,
+
+    execute = function(self, chr, action)
+        if action == "pet" then
+            self:say("BlackCat_Phrases",math.random(0,2))
+        end
+    end,
+
 })
 
 

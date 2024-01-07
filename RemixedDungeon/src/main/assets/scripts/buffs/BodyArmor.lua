@@ -5,6 +5,7 @@
 ---
 
 local buff = require "scripts/lib/buff"
+local RPD = require "scripts/lib/commonClasses"
 
 return buff.init{
     desc  = function ()
@@ -14,13 +15,17 @@ return buff.init{
             info          = "BodyArmorBuff_Info",
         }
     end,
+
     act = function(self,buff)
         buff:detach()
     end,
+
     drBonus = function(self,buff)
-        return (buff.target:effectiveSTR()-10) * (1 + 0.5 * buff:level())
+        local bonus = (buff.target:effectiveSTR()-10) * (1 + buff:level())
+        return bonus
     end,
+
     speedMultiplier = function(self, buff)
-        return 0.5
+        return 0.85
     end
 }

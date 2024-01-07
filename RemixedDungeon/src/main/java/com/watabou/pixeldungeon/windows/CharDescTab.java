@@ -39,7 +39,7 @@ public class CharDescTab extends TabContent {
 			VHBox actions = CharUtils.makeActionsBlock(maxWidth, mob, selector);
 			mainBox.add(actions);
 		}
-		mainBox.setPos(MARGIN,MARGIN);
+		mainBox.setPos(0,MARGIN);
 
 		add(mainBox);
 		setSize(mainBox.right()+MARGIN, mainBox.bottom()+MARGIN);

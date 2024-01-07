@@ -4,9 +4,12 @@ import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.IceElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
+import com.nyrds.pixeldungeon.mobs.guts.BurningFist;
+import com.nyrds.pixeldungeon.mobs.guts.Larva;
 import com.nyrds.pixeldungeon.mobs.guts.MimicAmulet;
 import com.nyrds.pixeldungeon.mobs.guts.Nightmare;
 import com.nyrds.pixeldungeon.mobs.guts.PseudoRat;
+import com.nyrds.pixeldungeon.mobs.guts.RottingFist;
 import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
 import com.nyrds.pixeldungeon.mobs.guts.SuspiciousRat;
 import com.nyrds.pixeldungeon.mobs.guts.Worm;
@@ -93,9 +96,6 @@ import com.watabou.pixeldungeon.actors.mobs.Thief;
 import com.watabou.pixeldungeon.actors.mobs.Warlock;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.actors.mobs.Yog;
-import com.watabou.pixeldungeon.actors.mobs.Yog.BurningFist;
-import com.watabou.pixeldungeon.actors.mobs.Yog.Larva;
-import com.watabou.pixeldungeon.actors.mobs.Yog.RottingFist;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
@@ -104,6 +104,7 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
+import com.watabou.pixeldungeon.items.wands.WandOfFlock;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -260,6 +261,7 @@ public class MobFactory {
 		registerMobClass(TownShopkeeper.class);
 		registerMobClass(SpiritOfPain.class);
 
+		mMobsList.put("Sheep", WandOfFlock.Sheep.class);
 		//old mods compatibility
 		mMobsList.put("Elemental", FireElemental.class);
 	}

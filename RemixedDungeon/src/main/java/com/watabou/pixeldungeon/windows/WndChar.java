@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.gltextures.SmartTexture;
@@ -15,10 +16,12 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 public class WndChar extends WndTabbed {
     public static final int WIDTH = 100;
     private static final int TAB_WIDTH = 33;
+    private Char target;
 
     public WndChar(final Char chr, final Char selector) {
 
         super();
+        target = chr;
 
         var desc = new CharDescTab(chr, selector, WIDTH);
         add(desc);
@@ -29,7 +32,7 @@ public class WndChar extends WndTabbed {
         var buffs = new BuffsTab(chr);
         add(buffs);
 
-        add(new LabeledTab(this, "Desc") {
+        add(new LabeledTab(this, StringsManager.getVar(R.string.WndHero_Info)) {
             public void select(boolean value) {
                 super.select(value);
                 desc.setVisible(desc.setActive(selected));
@@ -57,6 +60,11 @@ public class WndChar extends WndTabbed {
         resize(WIDTH, (int) Utils.max(desc.height() + GAP,stats.height() + GAP, buffs.height() + GAP));
 
         select(0);
+    }
+
+    @LuaInterface
+    public Char getTarget() {
+        return target;
     }
 
 }

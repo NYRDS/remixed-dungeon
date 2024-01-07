@@ -27,9 +27,7 @@ public class ServiceManNPC extends ImmortalNPC {
     public static int filmsSeen = 0;
 
     public ServiceManNPC() {
-        if (EuConsent.getConsentLevel() > EuConsent.UNKNOWN) {
-            AdsUtils.initRewardVideo();
-        }
+        AdsUtils.initRewardVideo();
     }
 
     public static Item getReward() {
@@ -39,17 +37,6 @@ public class ServiceManNPC extends ImmortalNPC {
 
     @Override
     public boolean interact(final Char hero) {
-
-        if (EuConsent.getConsentLevel() < EuConsent.NON_PERSONALIZED) {
-            GameLoop.addToScene(new WndEuConsent() {
-                @Override
-                public void done() {
-                    AdsUtils.initRewardVideo();
-                }
-            });
-            return true;
-        }
-
         getSprite().turnTo(getPos(), hero.getPos());
 
         if (!Util.isConnectedToInternet()) {

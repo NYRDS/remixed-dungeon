@@ -1,15 +1,19 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.ai.Hunting;
+import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.ShadowLord;
 import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.ModdingMode;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -25,6 +29,9 @@ abstract public class Boss extends Mob {
 	public Boss() {
 		addResistance(Death.class);
 		addResistance(ScrollOfPsionicBlast.class);
+		if(ModQuirks.mobLeveling) {
+			lvl(Random.NormalIntRange(1, (int) (2 * RemixedDungeon.getDifficultyFactor())));
+		}
 		maxLvl = 50;
 		isBoss = true;
 	}

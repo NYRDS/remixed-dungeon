@@ -96,8 +96,13 @@ public class CustomBuff extends Buff {
     @Override
     public boolean attachTo(@NotNull Char target) {
         try {
-            if (super.attachTo(target)) {
-                return script.run("attachTo", target).checkboolean();
+            if (target.immunities().contains(getEntityKind())) {
+                return false;
+            }
+
+            if (script.run("attachTo", target).checkboolean()) {
+                this.target = target;
+                return target.add(this);
             }
             return false;
         } catch (Exception e) {
@@ -150,6 +155,21 @@ public class CustomBuff extends Buff {
     @Override
     public int attackProc(Char attacker, Char defender, int damage) {
         return script.runOptional("attackProc", damage, defender, damage);
+    }
+
+    @Override
+    public int defenceSkillBonus() {
+        return script.runOptional("defenceSkillBonus",super.defenceSkillBonus());
+    }
+
+    @Override
+    public int attackSkillBonus() {
+        return script.runOptional("attackSkillBonus",super.attackSkillBonus());
+    }
+
+    @Override
+    public float hasteLevel() {
+        return script.runOptional("hasteLevel",super.hasteLevel());
     }
 
     @Override
@@ -206,7 +226,7 @@ public class CustomBuff extends Buff {
     }
 
     @Override
-    public int charGotDamage(int damage, NamedEntityKind src) {
-        return  script.runOptional("damage",super.charGotDamage(damage, src), damage, src);
+    public int charGotDamage(int damage, NamedEntityKind src, Char target) {
+        return  script.runOptional("damage",super.charGotDamage(damage, src, target), damage, src);
     }
 }

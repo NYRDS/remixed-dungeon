@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -23,13 +22,11 @@ import java.util.Locale;
 public abstract class NPC extends Mob {
 	protected NPC() {
 		hp(ht(1));
-		exp = 0;
+		expForKill = 0;
 
 		setState(MobAi.getStateByClass(Passive.class));
 		
 		fraction = Fraction.NEUTRAL;
-		
-		gender = Utils.MASCULINE;
 	}
 
 	@Override

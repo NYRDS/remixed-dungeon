@@ -3,27 +3,16 @@ package com.nyrds.pixeldungeon.mobs.common;
 import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
-import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.JsonHelper;
-import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
-import org.luaj.vm2.LuaValue;
-
-import java.util.ArrayList;
 
 import lombok.SneakyThrows;
 
@@ -47,12 +36,13 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	//For restoreFromBundle
 	@Keep
 	public CustomMob() {
+		super();
 	}
 
 	public CustomMob(String mobClass) {
+		super();
 		this.mobClass = mobClass;
 		fillMobStats(false);
-		script.run("fillStats");
 	}
 
 	@Override
@@ -63,26 +53,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	@Override
 	public int dr() {
 		return dr;
-	}
-
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-
-		bundle.put(LuaEngine.LUA_DATA, script.run("saveData").checkjstring());
-	}
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		fillMobStats(true);
-
-		super.restoreFromBundle(bundle);
-
-		String luaData = bundle.optString(LuaEngine.LUA_DATA,null);
-		if(luaData!=null) {
-			script.run("loadData",luaData);
-		}
-		script.run("fillStats");
 	}
 
 	@Override
@@ -120,16 +90,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		return friendly || super.friendly(chr);
 	}
 
-
-	public ArrayList<String> actions(Char hero) {
-		ArrayList<String> actions = CharUtils.actions(this, hero);
-
-		LuaValue ret = script.run("actionsList", hero);
-		LuaEngine.forEach(ret, (key,val)->actions.add(val.tojstring()));
-
-		return actions;
-	}
-
 	@Override
 	public void damage(int dmg, @NotNull NamedEntityKind src) {
 		if(immortal) {
@@ -139,23 +99,19 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		super.damage(dmg, src);
 	}
 
-	@Override
-	public String getDescription() {
-		if(!Util.isDebug()) {
-			return super.getDescription();
-		}
-		return super.getDescription() + "\n"
-				+ Utils.format("kind: %d", kind);
-	}
 
 	@SneakyThrows
-	private void fillMobStats(boolean restoring) {
+	@Override
+	protected void fillMobStats(boolean restoring) {
 		JSONObject classDesc = getClassDef();
+		if(! classDesc.keys().hasNext()) {
+			return;
+		}
 
 		baseDefenseSkill = classDesc.optInt("defenseSkill", baseDefenseSkill);
 		baseAttackSkill = classDesc.optInt("attackSkill", attackSkill);
 
-		exp = classDesc.optInt("exp", exp);
+		expForKill = classDesc.optInt("exp", expForKill);
 		maxLvl = classDesc.optInt("maxLvl", maxLvl);
 		dmgMin = classDesc.optInt("dmgMin", dmgMin);
 		dmgMax = classDesc.optInt("dmgMax", dmgMax);
@@ -165,11 +121,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		baseSpeed = (float) classDesc.optDouble("baseSpeed", baseSpeed);
 		attackDelay = (float) classDesc.optDouble("attackDelay", attackDelay);
 
-		name = StringsManager.maybeId(classDesc.optString("name", mobClass+"_Name"));
-		name_objective = StringsManager.maybeId(classDesc.optString("name_objective", mobClass+"_Name_Objective"));
-		description = StringsManager.maybeId(classDesc.optString("description", mobClass+"_Desc"));
-		gender = Utils.genderFromString(StringsManager.maybeId(classDesc.optString("gender", mobClass+"_Gender")));
-
 		spriteClass = classDesc.optString("spriteDesc", "spritesDesc/Rat.json");
 
 		flying = classDesc.optBoolean("flying", flying);
@@ -177,7 +128,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		setViewDistance(classDesc.optInt("viewDistance", getViewDistance()));
 
 		walkingType = Enum.valueOf(WalkingType.class, classDesc.optString("walkingType","NORMAL"));
-		defenceVerb = StringsManager.maybeId(classDesc.optString("defenceVerb", StringsManager.getVars(R.array.Char_StaDodged)[gender]));
+
 		canBePet = classDesc.optBoolean("canBePet",canBePet);
 
 		attackRange = classDesc.optInt("attackRange",attackRange);
