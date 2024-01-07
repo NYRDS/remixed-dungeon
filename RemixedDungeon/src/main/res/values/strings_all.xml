@@ -2613,14 +2613,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="KunaiThrow_Info">This Deadly Kunai throw will be done extremely fast, so fast that you won\'t even be able to select a target.\n\nTrue Masters able to throw more than one Kunai at once.</string>
   <string name="Haste_Name">Extreme Haste</string>
   <string name="Haste_Info">Haste will allow the performer to move with such extreme speed, that everything around him will appear static. Such haste will consume a lot of energy so using it is possible for only a short period of time.\n\nSkilled masters are able to stay hasted for a longer period of time.</string>
-  <string name="Welcome_Text_29_5">
-    remix.29.5\n
-    - Gameplay:\n
-    -- Rogue abilities!\n
-    - Modding:\n
-    -- Custom Armor!\n
-    - Bugs fixed\n
-    </string>
   <string name="Char_Stole_0">%1$s stole %2$s from %3$s!</string>
   <string name="Char_Stole_1">%1$s stole %2$s from %3$s!</string>
   <string name="Char_Stole_2">%1$s stole %2$s from %3$s!</string>
@@ -2646,16 +2638,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Char_StaStunned">stunned</string>
   <string name="Mob_ReadyForOrder">%s ready for your order.</string>
   <string name="Mob_CantDoIt">I can\'t do it. I have little paws.</string>
-  <string name="Welcome_Text_29_6">
-    remix.29.6\n
-    - Gameplay:\n
-    -- Additional actions to perform on mobs!\n
-    - Modding:\n
-    -- Item actors!\n
-    -- Special weapon properties!\n
-    -- More uncategorized stuff!\n
-    - Bugs fixed\n
-    </string>
   <string name="InnKeeperNPC_Name">inn keeper</string>
   <string name="InnKeeperNPC_Name_Objective">inn keeper</string>
   <string name="InnKeeperNPC_Gender">masculine</string>
@@ -2910,6 +2892,23 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ChampionOfEarthBuff_Name">Champion of Earth</string>
   <string name="ChampionOfEarthBuff_Info">The Champion of Earth embodies unyielding strength, as this trait enhances the creature\'s damage resistance and increases its maximum vitality. This transformation makes it a daunting adversary in the treacherous depths, capable of shrugging off attacks with ease and enduring prolonged battles with unwavering resolve.</string>
 
-
+  <string name="Welcome_Text_32">
+    remix.32\n
+    - Gameplay:\n
+    -- Mobs and Pets cloud get experience and levels now\n
+    -- Chaos Shield\n
+    -- Champions\n
+    -- Yog battle rebalanced\n
+    -- Balance tunes\n
+    - UX:\n
+    -- Detailed Hero and Mobs stats\n
+    -- Better Customizations interface\n
+    -- Smooth camera\n
+    - Modding:\n
+    -- Custom animations\n
+    -- Custom Scripts for built-in Mobs\n
+    -- Glowing for Mobs\n
+    - Bugs fixed\n
+    </string>
 
 </resources>

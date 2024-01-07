@@ -46,7 +46,7 @@ public class AppodealAdapter {
             Appodeal.setTesting(true);
         }
 
-        Appodeal.initialize(RemixedDungeon.instance(), appKey, toInitialize, EuConsent.getConsentLevel() == EuConsent.PERSONALIZED);
+        Appodeal.initialize(RemixedDungeon.instance(), appKey, toInitialize);
         Appodeal.cache(RemixedDungeon.instance(), toCache);
         Appodeal.setAutoCache(toCache, true);
     }

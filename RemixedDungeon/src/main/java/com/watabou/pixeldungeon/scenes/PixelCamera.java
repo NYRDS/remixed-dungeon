@@ -65,11 +65,13 @@ class PixelCamera extends Camera {
             _scroll.set(scroll);
         }
 
-        if (Math.abs(_scroll.x - scroll.x) > screenWidth * 0.025f) {
+        //if (Math.abs(_scroll.x - scroll.x) > screenWidth * 0.025f)
+        {
             _scroll.x -= 5 * (_scroll.x - scroll.x) * GameLoop.elapsed;
         }
 
-        if (Math.abs(_scroll.y - scroll.y) > screenHeight * 0.025f) {
+        //if (Math.abs(_scroll.y - scroll.y) > screenHeight * 0.025f)
+        {
             _scroll.y -= 5 * (_scroll.y - scroll.y) * GameLoop.elapsed;
         }
     }
