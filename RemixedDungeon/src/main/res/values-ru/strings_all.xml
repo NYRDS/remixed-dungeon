@@ -370,7 +370,7 @@
   <string name="WndGame_Return">Вернуться в Игру</string>
   <string name="WndGame_Save">Сохранить</string>
   <string name="WndGame_Load">Загрузить</string>
-  <string name="WndHero_Stats">Параметры</string>
+  <string name="WndHero_Stats">Статы</string>
   <string name="WndHero_Buffs">Эффекты</string>
   <string name="WndHero_Exp">Опыт</string>
   <string name="WndHero_Str">Сила</string>
@@ -2624,15 +2624,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="KunaiThrow_Name">Бросок Кунай</string>
   <string name="KunaiThrow_Info">Смертельный бросок Кунай выполняется быстро, так быстро что ты даже не сможешь выбрать для него цели.\n\nНастоящие мастера могут метать больше чем один Кунай одновременно.</string>
   <string name="Haste_Name">Неимоверная Спешка</string>
-  <string name="Haste_Info">Спешка позволяет двигаться с настолько невообразимой скоростью что все вокруг выглядит замершим. Движение с такой скоростью требует огромного напряжения сил и возможно только на краткий период времени.\n\nВеликие мастера способны дольше выдерживать такую скорость. </string>
-  <string name="Welcome_Text_29_5">
-    remix.29.5\n
-    - Геймплей:\n
-    -- Способности Вора!\n
-    - Моддинг:\n
-    -- Кастомизируемая броня!\n
-    - Исправления ошибок\n
-    </string>
+  <string name="Haste_Info">Спешка позволяет двигаться с настолько невообразимой скоростью что все вокруг выглядит замершим. Движение с такой скоростью требует огромного напряжения сил и возможно только на краткий период времени.\n\nВеликие мастера способны дольше выдерживать такую скорость.</string>
   <string name="Char_Stole_0">%1$s украло предмет %2$s у %3$s!</string>
   <string name="Char_Stole_1">%1$s украл предмет %2$s у %3$s!</string>
   <string name="Char_Stole_2">%1$s украла предмет %2$s у %3$s!</string>
@@ -2658,16 +2650,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Char_StaStunned">oглушён</string>
   <string name="Mob_ReadyForOrder">Субъект %s готов к вашим указаниям.</string>
   <string name="Mob_CantDoIt">Я это не умею. У меня лапки.</string>
-  <string name="Welcome_Text_29_6">
-    remix.29.6\n
-    - Геймплей:\n
-    -- С мобами теперь можно делать много нового!\n
-    - Моддинг:\n
-    -- Предметы могут быть акторами!\n
-    -- Новые свойства для оружия!\n
-    -- Кое-что ещё!\n
-    - Исправление ошибок\n
-    </string>
   <string name="InnKeeperNPC_Name">хозяин таверны</string>
   <string name="InnKeeperNPC_Name_Objective">хозяина таверны</string>
   <string name="InnKeeperNPC_Gender">masculine</string>
@@ -2817,7 +2799,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Улитки!\n
     -- Понерфлена скорость апгрейда предметов Хаоса.\n
     -- Зелье маны - теперь обычное зелье.\n
-    -- Добывать значки, и открывать классы теперь можно и в официальных DLC (но не в модах). \n
+    -- Добывать значки, и открывать классы теперь можно и в официальных DLC (но не в модах).\n
     - Исправлены ошибки\n
     </string>
   <string name="ShamanElder_Name">старший шаман</string>
@@ -2902,4 +2884,50 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndModSelect_AreYouSure">Удаляем мод %s, уверены?</string>
   <string name="Challenges_Names_8">Без города</string>
   <string name="Challenges_Descriptions_8">Ваше путешествие начнется в темной и опасной городской канализации, единственный путь на поверхность заблокирован. Что еще хуже, вы сможете использовать только то что найдете в подземелье. В условиях ограниченных ресурсов и снаряжения ваше выживание будет зависеть от ваших навыков и стратегии.</string>
+
+
+  <string name="EncumbranceBuff_CharAct_1">У меня недостаточно сил, чтобы правильно использовать %s.</string>
+  <string name="EncumbranceBuff_CharAct_2">Этот предмет, %s, слишком тяжел для меня, чтобы использовать его эффективно.</string>
+  <string name="EncumbranceBuff_CharAct_3">Мне нужно поработать над своей силой, прежде чем я смогу использовать %s.</string>
+  <string name="EncumbranceBuff_CharAct_4">Мне не хватает силы, чтобы использовать %s как следует.</string>
+  <string name="EncumbranceBuff_CharAct_5">Предмет %s слишком тяжелый для меня.</string>
+  <string name="Typical_Damage">Типичный урон</string>
+  <string name="Damage_Reduction">Снижение урона</string>
+  <string name="Attack_Range">Дальность атаки</string>
+  <string name="Movement_Speed">Скорость передвижения</string>
+  <string name="Attack_Cooldown">Стоимость атаки</string>
+  <string name="View_Distance">Дальность обзора</string>
+  <string name="WndHero_Info">Инфо</string>
+  <string name="ChaosShield_name">Щит Хаоса</string>
+  <string name="ChaosShield_desc">Щит Хаоса - это результат слияния кристалла Хаоса с обычным щитом, заставляющий его проявлять случайные хаотические эффекты при успешном блоке.</string>
+  <string name="ChaosCrystal_ShieldFused">Кристалл слился с вашим щитом, и тот принял форму хаоса.</string>
+  <string name="Actions_Speed">Скорость действий</string>
+  <string name="ChampionOfAirBuff_Name">Чемпион воздуха</string>
+  <string name="ChampionOfAirBuff_Info">Эта черта наделяет существо сущностью ветров, повышая его ловкость и мастерство в бою. Чемпион воздуха становится грозным противником, способным наносить быстрые и разрушительные атаки, которые могут быстро изменить ход битвы.</string>
+  <string name="ChampionOfWaterBuff_Name">Чемпион Воды</string>.
+  <string name="ChampionOfWaterBuff_Info">Чемпион воды воплощает в себе неукротимую силу океанов, повышая устойчивость и стойкость существа. В результате оно становится непоколебимым противником, способным выдержать непрекращающийся шквал атак и стать непреклонным защитником перед лицом невзгод.</string>
+  <string name="ChampionOfFireBuff_Name">Чемпион огня</string>.
+  <string name="ChampionOfFireBuff_Info">"Пронизанная яростью пламени, эта способность усиливает свирепость и боевое мастерство существа. Чемпион огня становится грозным противником, нанося разрушительные атаки, которые могут поглотить его врагов в обжигающем пламени, вселяя ужас во всех, кто осмелится противостоять ему.</string>
+  <string name="ChampionOfEarthBuff_Name">Чемпион Земли</string>.
+  <string name="ChampionOfEarthBuff_Info">Чемпион Земли воплощает в себе непреклонную силу, так как эта черта повышает сопротивляемость существа к урону и увеличивает его максимальную жизненную силу. Это превращение делает его грозным противником в коварных глубинах, способным с легкостью отражать атаки и выдерживать длительные сражения с непоколебимой решимостью.</string>
+
+  <string name="Welcome_Text_32">
+    remix.32\n
+    - Геймплей:\n
+    -- Мобы и питомцы теперь получают опыт и уровни\n
+    -- Щит Хаоса\n
+    -- Чемпионы\n
+    -- Перебалансирован бой с Йогом\n
+    -- Больше подстройки баланса\n
+    - UX:\n
+    -- Подробные статы для героев и мобов\n
+    -- Улучшенный интерфейс кастомизаций\n
+    -- Плавная камера\n
+    - Моддинг:\n
+    -- Пользовательские анимации\n
+    -- Пользовательские скрипты для встроенных мобов\n
+    -- Свечение для мобов\n
+    - Багофиксы\n
+    </string>
+
 </resources>
