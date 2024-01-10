@@ -2108,7 +2108,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     @LuaInterface
-    int emptyCellNextTo() {
+    public int emptyCellNextTo() {
         return level().getEmptyCellNextTo(getPos());
     }
 

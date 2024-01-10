@@ -43,6 +43,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		super();
 		this.mobClass = mobClass;
 		fillMobStats(false);
+		getScript().run("fillStats");
 	}
 
 	@Override
