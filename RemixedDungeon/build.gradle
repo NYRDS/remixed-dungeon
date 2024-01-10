@@ -34,8 +34,8 @@ android {
                                 "gow_app_id":getApiField("gow_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1173
-        versionName "32.0.alpha.1"
+        versionCode 1174
+        versionName "32.0.rc.1"
         targetSdkVersion 33
         compileSdkVersion 33 // bitrise want it
         minSdkVersion 21
