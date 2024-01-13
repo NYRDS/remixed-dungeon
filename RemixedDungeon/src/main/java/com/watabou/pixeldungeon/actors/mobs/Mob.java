@@ -86,8 +86,8 @@ public abstract class Mob extends Char {
         super();
         setupCharData();
         getScript().run("fillStats");
-        if(ModQuirks.mobLeveling) {
-            lvl(Random.NormalIntRange(1, (int) (2 * RemixedDungeon.getDifficultyFactor() + 1)));
+        if (ModQuirks.mobLeveling) {
+            lvl(Random.NormalIntRange(0, (int) RemixedDungeon.getDifficultyFactor()));
         }
     }
 
@@ -550,20 +550,22 @@ public abstract class Mob extends Char {
     }
 
     @Override
-    @LuaInterface
-    public void lvl(int lvl) {
-        super.lvl(lvl);
+    public void earnExp(int exp) {
+        super.earnExp(exp);
         if (!Dungeon.isLoading()) {
-            if (lvl >= 5) {
-                if (!hasBuff("ChampionOfEarth") && !hasBuff("ChampionOfFire")
-                        && !hasBuff("ChampionOfWater") && !hasBuff("ChampionOfAir")) {
+            if (level().cellValid(getPos())) {
+                if (lvl() >= 1) {
+                    if (!hasBuff("ChampionOfEarth") && !hasBuff("ChampionOfFire")
+                            && !hasBuff("ChampionOfWater") && !hasBuff("ChampionOfAir")) {
 
-                    String [] champions = {"ChampionOfEarth", "ChampionOfFire", "ChampionOfWater", "ChampionOfAir"};
+                        String[] champions = {"ChampionOfEarth", "ChampionOfFire", "ChampionOfWater", "ChampionOfAir"};
 
-                    Buff.permanent(this, Random.oneOf(champions));
+                        Buff.permanent(this, Random.oneOf(champions));
+                    }
                 }
             }
         }
+
     }
 
     @Override
