@@ -79,10 +79,21 @@ class StatsTab extends TabContent {
 
         float timeScale = chr.timeScale();
 
+
+        String chrSpeed = "???";
+        String chrAttackDelay = "???";
+
+        try {
+            chrSpeed = String.format("%3.2f%%", chr.speed()*100 / timeScale);
+            chrAttackDelay = String.format("%3.2f", chr.attackDelay()*timeScale);
+        } catch (Exception e) {
+        }
+
+
         statSlot(StringsManager.getVar(R.string.Typical_Damage), Utils.format("%d - %d", dmgMin, dmgMax));
         statSlot(StringsManager.getVar(R.string.Damage_Reduction), Utils.format("%d - %d", drMin, drMax));
-        statSlot(StringsManager.getVar(R.string.Movement_Speed), Utils.format("%3.2f%%" ,chr.speed()*100 / timeScale));
-        statSlot(StringsManager.getVar(R.string.Attack_Cooldown), Utils.format("%3.2f" ,chr.attackDelay() * timeScale));
+        statSlot(StringsManager.getVar(R.string.Movement_Speed), chrSpeed);
+        statSlot(StringsManager.getVar(R.string.Attack_Cooldown), chrAttackDelay);
         statSlot(StringsManager.getVar(R.string.Actions_Speed), Utils.format("%3.2f%%" ,100/timeScale));
         statSlot(StringsManager.getVar(R.string.Attack_Range), Utils.EMPTY_STRING + chr.getAttackRange());
         statSlot(StringsManager.getVar(R.string.View_Distance), Utils.EMPTY_STRING + chr.getViewDistance());

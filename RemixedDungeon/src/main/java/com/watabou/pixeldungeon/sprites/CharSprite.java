@@ -303,6 +303,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public void die() {
+        glowing = Glowing.NO_GLOWING;
         sleeping = false;
         play(die);
 

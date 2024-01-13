@@ -93,7 +93,9 @@ local function handleWindow(hero)
 
         RPD.debug("unmatched wnd: %s",wndClass)
 
-        return true
+        activeWindow:hide()
+
+        return false
     end
 end
 
