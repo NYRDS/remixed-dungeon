@@ -1,6 +1,7 @@
 package com.nyrds.util;
 
 import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.stream.JsonReader;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
@@ -52,10 +53,11 @@ public class JsonHelper {
 	}
 
 	@NotNull
-	static public JSONObject readJsonFromFile(File file) throws JSONException {
+	static public JSONObject readJsonFromFile(File file)  {
 		try {
 			return readJsonFromStream(new FileInputStream(file), file.getPath());
-		} catch (FileNotFoundException e) {
+		} catch (Exception e ) {
+			ModError.doReport(file.getAbsolutePath(), e);
 			return new JSONObject();
 		}
 	}
