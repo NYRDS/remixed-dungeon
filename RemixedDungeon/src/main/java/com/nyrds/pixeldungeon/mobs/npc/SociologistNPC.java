@@ -60,14 +60,8 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
             if (!result) {
                 reportError();
             } else {
-                try {
-                    survey = JsonHelper.readJsonFromFile(FileSystem.getInternalStorageFile(SURVEY_JSON));
-
-                    GameLoop.addToScene(new WndSurvey(survey));
-
-                } catch (JSONException e) {
-                    reportError();
-                }
+                survey = JsonHelper.readJsonFromFile(FileSystem.getInternalStorageFile(SURVEY_JSON));
+                GameLoop.addToScene(new WndSurvey(survey));
             }
         });
     }
