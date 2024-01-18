@@ -49,7 +49,7 @@ public class Bestiary {
 
 			return getMobFromCachedData();
 
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			ModError.doReport("No bestiary for "+level.levelId, e);
 			return MobFactory.mobByName("Rat");
 		}

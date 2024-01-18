@@ -158,7 +158,7 @@ public class Deco extends LevelObject {
 						kind,
 						new TextureFilm(textureFile, width, height),
 						0);
-			} catch (JSONException e) {
+			} catch (Exception e) {
 				throw new ModError("Deco:" + name + "|" + kind + ":", e);
 			}
 		}

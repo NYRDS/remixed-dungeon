@@ -28,7 +28,6 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.ModdingMode;
-import com.nyrds.util.ReportingExecutor;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -38,7 +37,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.Executor;
 
 public enum Sample implements SoundPool.OnLoadCompleteListener {
 

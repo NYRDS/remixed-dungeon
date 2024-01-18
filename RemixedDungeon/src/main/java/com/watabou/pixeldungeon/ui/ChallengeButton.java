@@ -6,7 +6,6 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 

@@ -16,7 +16,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public class WndSurvey extends Window {
@@ -54,7 +53,7 @@ public class WndSurvey extends Window {
             }
             Preferences.INSTANCE.put(SURVEY_TAKEN, surveyId);
             this.survey = survey.getJSONArray(lang);
-        } catch (JSONException e) {
+        } catch (Exception e) {
             this.survey = new JSONArray();
         }
 
@@ -114,7 +113,7 @@ public class WndSurvey extends Window {
                 }
 
                 resize(WIDTH, (int) (y + GAP));
-            } catch (JSONException e) {
+            } catch (Exception e) {
                 hide();
             } finally {
                 question++;

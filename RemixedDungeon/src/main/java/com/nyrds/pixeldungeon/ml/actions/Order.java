@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.ml.actions;
 
+import static com.watabou.pixeldungeon.actors.Actor.TICK;
+
 import com.nyrds.pixeldungeon.ai.KillOrder;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.MoveOrder;
@@ -11,8 +13,6 @@ import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
-
-import static com.watabou.pixeldungeon.actors.Actor.TICK;
 
 public class Order extends CharAction {
     private final Char target;

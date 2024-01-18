@@ -4,7 +4,6 @@ import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.ui.IClickable;
 import com.watabou.pixeldungeon.ui.ScrollPane;
-import com.watabou.pixeldungeon.utils.GLog;
 
 /**
  * Created by mike on 26.05.2017.

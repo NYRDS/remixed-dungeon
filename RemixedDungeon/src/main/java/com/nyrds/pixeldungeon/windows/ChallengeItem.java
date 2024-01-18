@@ -17,7 +17,6 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ImageButton;
 import com.watabou.pixeldungeon.windows.WndStory;
-import com.watabou.utils.Callback;
 
 import java.util.Objects;
 

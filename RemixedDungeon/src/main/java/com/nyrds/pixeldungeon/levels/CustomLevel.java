@@ -8,7 +8,6 @@ import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayInputStream;
@@ -38,7 +37,7 @@ public abstract class CustomLevel extends CommonLevel {
 			String desc = LuaEngine.call("getJson").tojstring();
 			try {
 				mLevelDesc = JsonHelper.readJsonFromStream(new ByteArrayInputStream(desc.getBytes()),descFile);
-			} catch (JSONException e) {
+			} catch (Exception e) {
 				throw ModdingMode.modException(e);
 			}
 		}

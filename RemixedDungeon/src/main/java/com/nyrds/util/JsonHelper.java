@@ -1,15 +1,12 @@
 package com.nyrds.util;
 
 import com.google.gson.JsonParser;
-import com.google.gson.JsonSyntaxException;
-import com.google.gson.stream.JsonReader;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import org.hjson.JsonValue;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,12 +17,10 @@ import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -87,7 +82,7 @@ public class JsonHelper {
 				try {
 					value = new JSONTokener(sourceString).nextValue();
 					return (JSONObject) (value);
-				}	catch (JSONException e) {
+				}	catch (Exception e) {
 					EventCollector.logException(Utils.format("non std json in %s", tag));
 				}
 
@@ -96,7 +91,7 @@ public class JsonHelper {
 				try {
 					value = new JSONTokener(sourceString).nextValue();
 					return (JSONObject) (value);
-				}	catch (JSONException e) {
+				}	catch (Exception e) {
 					EventCollector.logException(Utils.format("gson failed in %s", tag));
 					return new JSONObject();
 				}

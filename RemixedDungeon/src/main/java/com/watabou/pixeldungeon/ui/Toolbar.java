@@ -1,18 +1,14 @@
 
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
-import com.nyrds.platform.storage.Preferences;
-import com.nyrds.util.Util;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.CellSelector;

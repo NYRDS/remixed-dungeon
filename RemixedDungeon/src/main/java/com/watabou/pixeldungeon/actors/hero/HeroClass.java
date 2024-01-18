@@ -51,7 +51,6 @@ import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Collections;
@@ -173,7 +172,7 @@ public enum HeroClass implements CharModifier {
                 hero.setSkillLevel(classDesc.optInt("sl",hero.skillLevel()));
                 hero.setSkillPoints(classDesc.optInt("sp",classDesc.optInt("startingSp", hero.getSkillPoints())));
 
-            } catch (JSONException e) {
+            } catch (Exception e) {
                 throw ModdingMode.modException("bad InitHero.json",e);
             }
         }

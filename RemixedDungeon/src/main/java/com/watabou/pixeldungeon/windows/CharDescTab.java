@@ -2,23 +2,15 @@
 package com.watabou.pixeldungeon.windows;
 
 
-import static com.watabou.pixeldungeon.ui.Window.GAP;
 import static com.watabou.pixeldungeon.ui.Window.MARGIN;
-import static com.watabou.pixeldungeon.ui.Window.STD_WIDTH;
 
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
-import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.actors.Char;
-
-
 import com.watabou.pixeldungeon.actors.CharUtils;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.ui.Highlighter;
-import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.CharTitle;
-
 import com.watabou.pixeldungeon.windows.elements.TabContent;
 
 public class CharDescTab extends TabContent {

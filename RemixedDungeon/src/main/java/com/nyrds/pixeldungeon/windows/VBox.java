@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.windows;
 import androidx.annotation.NonNull;
 
 import com.watabou.noosa.Gizmo;
-import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.utils.GLog;
 
 /**

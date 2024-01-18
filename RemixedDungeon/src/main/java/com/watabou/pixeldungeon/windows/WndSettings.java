@@ -7,7 +7,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndGameplaySettings;
 import com.nyrds.pixeldungeon.windows.WndUiSettings;
 import com.nyrds.platform.util.StringsManager;
-import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndSettings extends WndMenuCommon {
 

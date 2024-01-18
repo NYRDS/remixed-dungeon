@@ -101,7 +101,7 @@ public class DungeonGenerator {
 		try {
 			mLevels = mDungeonMap.getJSONObject("Levels");
 			mGraph = mDungeonMap.getJSONObject("Graph");
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			throw ModdingMode.modException("bad Dungeon.json",e);
 		}
 
@@ -142,7 +142,7 @@ public class DungeonGenerator {
 	public static String getEntryLevel() {
 		try {
 			return mDungeonMap.getString("Entrance");
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			throw ModdingMode.modException("bad Dungeon.json",e);
 		}
 	}
@@ -150,7 +150,7 @@ public class DungeonGenerator {
 	public static int exitCount(String levelId) {
 		try {
 			return mGraph.getJSONArray(levelId).getJSONArray(0).length();
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			throw ModdingMode.modException("bad Dungeon.json",e);
 		}
 	}
@@ -231,7 +231,7 @@ public class DungeonGenerator {
 			mCurrentLevelKind  = getLevelKind(next.levelId);
 
 			return next;
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			throw ModdingMode.modException("bad Dungeon.json",e);
 		}
 	}
@@ -241,7 +241,7 @@ public class DungeonGenerator {
 		try {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
 			JsonHelper.readStringSet(levelDesc,property,ret);
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			//default value is ok
 		}
 
@@ -253,7 +253,7 @@ public class DungeonGenerator {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
 			return levelDesc.optString(property,defaultValue);
 
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			//default value is ok
 		}
 		return defaultValue;
@@ -264,7 +264,7 @@ public class DungeonGenerator {
 		try {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
 			return (float) levelDesc.optDouble(property, defaultValue);
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			//default value is ok
 		}
 		return defaultValue;
@@ -275,7 +275,7 @@ public class DungeonGenerator {
 		try {
 			JSONObject levelDesc = mLevels.getJSONObject(id);
 			return levelDesc.optBoolean(property, defaultValue);
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			//default value is ok
 		}
 		return defaultValue;

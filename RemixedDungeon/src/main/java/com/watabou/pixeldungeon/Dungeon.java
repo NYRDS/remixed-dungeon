@@ -1,6 +1,8 @@
 package com.watabou.pixeldungeon;
 
 
+import static com.nyrds.platform.game.RemixedDungeon.MOVE_TIMEOUTS;
+
 import com.google.common.base.Optional;
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
@@ -79,9 +81,6 @@ import java.util.HashSet;
 
 import lombok.SneakyThrows;
 import lombok.val;
-
-
-import static com.nyrds.platform.game.RemixedDungeon.MOVE_TIMEOUTS;
 
 public class Dungeon {
 

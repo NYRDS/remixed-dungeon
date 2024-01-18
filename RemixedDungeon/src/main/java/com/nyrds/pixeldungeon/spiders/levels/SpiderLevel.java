@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.spiders.levels;
 
 import com.nyrds.pixeldungeon.items.Treasury;
-import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderSpawner;
 import com.nyrds.platform.util.StringsManager;

@@ -1,9 +1,7 @@
 
 package com.watabou.pixeldungeon;
 
-import com.google.common.base.Optional;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.utils.Bundle;
 
 import java.util.HashMap;
 import java.util.Map;

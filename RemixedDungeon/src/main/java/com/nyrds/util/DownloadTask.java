@@ -9,8 +9,6 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import javax.net.ssl.HttpsURLConnection;
-
 import info.guardianproject.netcipher.NetCipher;
 
 public class DownloadTask implements Runnable {

@@ -17,7 +17,6 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Random;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -67,7 +66,7 @@ public class RandomLevel extends RegularLevel {
 				}
 			}
 
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			throw ModdingMode.modException("RandomLevel",e);
 		}
 
@@ -107,7 +106,7 @@ public class RandomLevel extends RegularLevel {
 					return mob;
 				}
 			}
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			throw ModdingMode.modException("invalid mob desc",e);
 		}
 		return super.createMob();
@@ -124,7 +123,7 @@ public class RandomLevel extends RegularLevel {
 			for (int i = 0; i < roomsDesc.length(); ++i) {
 				try {
 					neededRooms.add(Room.Type.valueOf(roomsDesc.getString(i)));
-				} catch (JSONException e) {
+				} catch (Exception e) {
 					EventCollector.logException(e,"bad room desc");
 				}
 			}

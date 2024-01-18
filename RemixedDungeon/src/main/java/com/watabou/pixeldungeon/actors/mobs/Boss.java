@@ -7,7 +7,6 @@ import com.nyrds.pixeldungeon.mobs.common.ShadowLord;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.ModdingMode;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;

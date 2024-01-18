@@ -3,7 +3,6 @@ package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.TouchArea;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.PixelScene;

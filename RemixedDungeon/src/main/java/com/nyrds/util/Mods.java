@@ -60,7 +60,7 @@ public class Mods {
                 }
             }
 
-        } catch (JSONException e) {
+        } catch (Exception e) {
             EventCollector.logException(e);
         }
 

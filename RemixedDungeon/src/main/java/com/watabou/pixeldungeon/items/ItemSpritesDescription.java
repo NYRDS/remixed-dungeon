@@ -4,7 +4,6 @@ import com.nyrds.platform.game.Game;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -76,7 +75,7 @@ public class ItemSpritesDescription {
 									itemDesc.optInt("index", 0), 
 									itemDesc.optBoolean("fliesStraight", false),
 									itemDesc.optBoolean("fliesFastRotating", false)));
-				} catch (JSONException e) {
+				} catch (Exception e) {
 					Game.toast("malformed desc (%s) for %s ignored", itemsDesc.toString(), key);
 				}
 

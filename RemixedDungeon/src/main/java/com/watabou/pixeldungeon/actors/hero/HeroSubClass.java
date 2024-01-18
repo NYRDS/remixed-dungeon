@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Collections;
@@ -71,7 +70,7 @@ public enum HeroSubClass implements CharModifier {
 				JsonHelper.readStringSet(classDesc, Char.IMMUNITIES,immunities);
 				JsonHelper.readStringSet(classDesc, Char.RESISTANCES,resistances);
 			}
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			throw ModdingMode.modException("bad InitHero.json",e);
 		}
 	}

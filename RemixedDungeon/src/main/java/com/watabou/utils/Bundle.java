@@ -173,7 +173,7 @@ public class Bundle {
     public <E extends Enum<E>> E getEnum(String key, Class<E> enumClass, E defaultValue) {
         try {
             return Enum.valueOf(enumClass, data.getString(key));
-        } catch (JSONException e) {
+        } catch (Exception e) {
             EventCollector.logException(e);
             return defaultValue;
         }
@@ -194,7 +194,7 @@ public class Bundle {
                 result[i] = array.optInt(i);
             }
             return result;
-        } catch (JSONException e) {
+        } catch (Exception e) {
             return new int[0];
         }
     }
@@ -209,7 +209,7 @@ public class Bundle {
                 result[i] = array.getBoolean(i);
             }
             return result;
-        } catch (JSONException e) {
+        } catch (Exception e) {
             return new boolean[0];
         }
     }
@@ -224,7 +224,7 @@ public class Bundle {
                 result[i] = array.getString(i);
             }
             return result;
-        } catch (JSONException e) {
+        } catch (Exception e) {
             return new String[0];
         }
     }
@@ -241,7 +241,7 @@ public class Bundle {
                     list.add(type.cast(storedObject));
                 }
             }
-        } catch (JSONException e) {
+        } catch (Exception e) {
             return new ArrayList<>();
         }
 

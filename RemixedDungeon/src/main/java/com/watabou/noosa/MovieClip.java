@@ -18,8 +18,6 @@
 package com.watabou.noosa;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.watabou.pixeldungeon.sprites.ModernHeroSpriteDef;
-import com.watabou.pixeldungeon.utils.GLog;
 
 public class MovieClip extends Image {
 

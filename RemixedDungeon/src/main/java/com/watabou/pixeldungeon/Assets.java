@@ -7,8 +7,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
-import org.json.JSONException;
-
 public class Assets {
 
     private static final String KEY_BANNERS = "banners";
@@ -177,7 +175,7 @@ public class Assets {
             statusType = premiumSettings.getInt(KEY_STATUS);
             toolbarType = premiumSettings.getInt(KEY_TOOLBAR);
             bannersType = premiumSettings.getInt(KEY_BANNERS);
-        } catch (JSONException e) {
+        } catch (Exception e) {
         }
     }
 

@@ -2,17 +2,11 @@
 package com.watabou.pixeldungeon;
 
 import android.graphics.Bitmap;
-import android.opengl.GLES20;
-import android.opengl.GLES31;
-import android.view.ViewDebug;
 
-import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.gl.Texture;
-import com.nyrds.util.Util;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
-import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.Arrays;
 

@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import static com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.PEDESTAL;
+
 import com.nyrds.pixeldungeon.items.chaos.ChaosCommon;
 import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
@@ -23,8 +25,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
-
-import static com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.PEDESTAL;
 
 
 

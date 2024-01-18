@@ -19,7 +19,6 @@ package com.nyrds.platform.gl;
 
 import android.graphics.Bitmap;
 import android.opengl.GLES20;
-import android.opengl.GLUtils;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

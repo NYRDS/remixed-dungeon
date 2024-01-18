@@ -4,7 +4,6 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
-import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.storage.Assets;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
@@ -364,7 +363,7 @@ public class ModdingMode {
 		return new ModError(mActiveMod,e);
 	}
 
-	public static RuntimeException modException(String s, JSONException e) {
+	public static RuntimeException modException(String s, Exception e) {
 		return new ModError(mActiveMod + ":" + s, e);
 	}
 

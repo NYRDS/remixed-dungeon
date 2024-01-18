@@ -173,7 +173,7 @@ public class PredesignedLevel extends CustomLevel {
 					}
 				}
 			}
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			throw ModdingMode.modException("bad mob description",e);
 		}
 	}
@@ -195,7 +195,7 @@ public class PredesignedLevel extends CustomLevel {
 					}
 				}
 			}
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			throw ModdingMode.modException("bad items description", e);
 		}
 	}
@@ -225,7 +225,7 @@ public class PredesignedLevel extends CustomLevel {
 				if(!descId.isEmpty()) {
 					return StringsManager.maybeId(descId);
 				}
-			} catch (JSONException e) {
+			} catch (Exception e) {
 				return null;
 			}
 		}
