@@ -550,10 +550,11 @@ public abstract class Mob extends Char {
 
     @Override
     public void earnExp(int exp) {
+        int old_lvl = lvl();
         super.earnExp(exp);
         if (!Dungeon.isLoading()) {
             if (level().cellValid(getPos())) {
-                if (lvl() >= 1) {
+                if (lvl() >= 5 && lvl() != old_lvl) {
                     if (!hasBuff("ChampionOfEarth") && !hasBuff("ChampionOfFire")
                             && !hasBuff("ChampionOfWater") && !hasBuff("ChampionOfAir")) {
 
