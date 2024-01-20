@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -281,7 +280,7 @@ public class ModdingMode {
 				resource.append(line);
 				line = reader.readLine();
 			}
-		} catch (IOException e) {
+		} catch (IOException | SecurityException e) {
 			EventCollector.logException(e, resName);
 		}
 
@@ -295,7 +294,7 @@ public class ModdingMode {
 			}
 
 			return Assets.getStream(resName);
-		} catch (IOException e) {
+		} catch (IOException | SecurityException e) {
 			throw new ModError("Missing file: "+resName + " in Remixed",e);
 		}
 	}
@@ -310,7 +309,7 @@ public class ModdingMode {
 			}
 
 			return getInputStreamBuiltIn(resName);
-		} catch (IOException | ModError e) {
+		} catch (IOException | SecurityException | ModError e) {
 			throw new ModError("Missing file: " + resName + " in: " + activeMod() + " " + activeModVersion(),e);
 		}
 	}
