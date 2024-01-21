@@ -191,4 +191,9 @@ public class Image extends Visual implements IPlaceable {
 	public FloatBuffer getVerticesBuffer() {
 		return verticesBuffer;
 	}
+
+	@Override
+	public IPlaceable shadowOf() {
+		return null;
+	}
 }

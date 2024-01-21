@@ -10,4 +10,6 @@ public interface IPlaceable {
     void setPos(float x, float y);
     float getX();
     float getY();
+
+    IPlaceable shadowOf();
 }

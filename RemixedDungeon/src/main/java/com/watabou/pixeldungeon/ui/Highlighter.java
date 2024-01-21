@@ -66,6 +66,7 @@ public class Highlighter {
 
         if (hl.isHighlighted()) {
             Text highlighted = PixelScene.createMultiline(hl.text, GuiProperties.regularFontSize());
+            highlighted.baseText = normal;
             highlighted.mask = hl.mask;
             highlighted.maxWidth(normal.getMaxWidth());
             highlighted.setX(normal.getX());

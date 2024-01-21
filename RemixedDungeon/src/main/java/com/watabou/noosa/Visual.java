@@ -276,6 +276,11 @@ public class Visual extends Gizmo implements IPlaceable{
 		return y;
 	}
 
+	@Override
+	public IPlaceable shadowOf() {
+		return null;
+	}
+
 	public void Scale(PointF scale) {
 		setScale(scale);
 	}
