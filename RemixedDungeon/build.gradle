@@ -81,6 +81,7 @@ android {
         }
 
         ruStore {
+            minSdkVersion 23
             dimension "market"
         }
 
