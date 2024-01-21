@@ -80,6 +80,10 @@ android {
             versionCode defaultConfig.versionCode + 10000
         }
 
+        ruStore {
+            dimension "market"
+        }
+
         fdroid {
             dimension "market"
         }
@@ -169,6 +173,7 @@ dependencies {
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
     googlePlayImplementation 'com.google.firebase:firebase-perf'
 
+    ruStoreImplementation 'ru.rustore.sdk:billingclient:3.2.0'
 
     huaweiImplementation 'com.huawei.hms:ads-lite:13.4.30.301'
     huaweiImplementation 'com.huawei.hms:hianalytics:5.0.0.300'

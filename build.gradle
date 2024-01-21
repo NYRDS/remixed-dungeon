@@ -4,7 +4,12 @@ buildscript {
         mavenCentral()
         google()
 
+        maven {
+            url "https://artifactory-external.vkpartner.ru/artifactory/maven"
+        }
+        
         maven { url 'https://developer.huawei.com/repo/' }
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.1.0'
