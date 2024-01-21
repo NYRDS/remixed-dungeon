@@ -86,7 +86,7 @@ public abstract class Mob extends Char {
         setupCharData();
         getScript().run("fillStats");
         if (ModQuirks.mobLeveling) {
-            lvl(Random.Int(1, (int) RemixedDungeon.getDifficultyFactor())+1);
+            lvl(Random.Int(1, (int) RemixedDungeon.getDifficultyFactor()+1));
         }
     }
 
