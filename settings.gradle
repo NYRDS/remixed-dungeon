@@ -6,7 +6,9 @@ dependencyResolutionManagement {
     repositories {
         mavenCentral()
         google()
-
+        maven {
+            url "https://artifactory-external.vkpartner.ru/artifactory/maven"
+        }
         maven { url "https://artifactory.appodeal.com/appodeal/" }
         maven { url 'https://developer.huawei.com/repo/' }
     }
