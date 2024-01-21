@@ -215,7 +215,7 @@ public class SystemText extends Text {
                 codePoints.add(codepoint);
             }
 
-            if (codepoint == 0x000A) {
+            if (codepoint == 0x000A || codepoint == 0x000D) {
                 lineWidth += symbolWidth;
                 return offset;
             }
