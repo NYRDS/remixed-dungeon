@@ -188,9 +188,12 @@ public class MobSpriteDef extends MobSprite {
 	@Override
 	public void zap(int cell) {
 		ch.ifPresent( chr -> {
-			super.zap(cell);
+			val parent = getParent();
+			if(parent!=null) {
+				super.zap(cell);
 
-			ZapEffect.zap(getParent(), chr.getPos(), cell, zapEffect);
+				ZapEffect.zap(getParent(), chr.getPos(), cell, zapEffect);
+			}
 		});
 	}
 
