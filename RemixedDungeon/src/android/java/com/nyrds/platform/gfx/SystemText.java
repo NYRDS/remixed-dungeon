@@ -98,7 +98,7 @@ public class SystemText extends Text {
             TextPaint tx = new TextPaint();
 
             tx.setTextSize(textSize);
-            tx.setStyle(Paint.Style.FILL_AND_STROKE);
+            tx.setStyle(Paint.Style.FILL);
             tx.setHinting(Paint.HINTING_ON);
             tx.setAntiAlias(true);
 
@@ -282,7 +282,7 @@ public class SystemText extends Text {
                     if (!bitmapCache.containsKey(key)) {
                         Bitmap bitmap = Bitmap.createBitmap(
                                 (int) (lineWidth * oversample),
-                                (int) (fontHeight * oversample),
+                                (int) (fontHeight * oversample + textPaint.descent()),
                                 Bitmap.Config.ARGB_4444);
                         bitmapCache.put(key, bitmap);
 
@@ -309,19 +309,11 @@ public class SystemText extends Text {
 
     private int drawTextLine(int charIndex, Canvas canvas, TextPaint paint) {
 
-        float y = (fontHeight) * oversample - textPaint.descent();
+        float y = (fontHeight) * oversample - paint.descent();
 
-        boolean checkMore;
-        do {
-            checkMore = false;
-            int lastChar = codePoints.get(codePoints.size() - 1);
-            if (Character.isWhitespace(lastChar)) {
-                codePoints.remove(codePoints.size() - 1);
-                checkMore = true;
-            }
-        } while (checkMore);
+        currentLine = currentLine.trim();
 
-        final int charsToDraw = codePoints.size();
+        final int charsToDraw = currentLine.length();
 
         if (mask == null) {
             if (!xCharPos.isEmpty()) {
