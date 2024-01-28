@@ -2425,7 +2425,7 @@
   <string name="Hunger_Starving_0">You are starving!</string>
   <string name="Hunger_Starving_1">You are starving!</string>
   <string name="Hunger_Starving_2">You are starving!</string>
-  <string name="HeroClass_NecromancerPerks_0">Necromancers start with 15 hp.</string>
+  <string name="HeroClass_NecromancerPerks_0">Necromancers start with 15 points of Health.</string>
   <string name="HeroClass_NecromancerPerks_1">Necromancers use mana to cast Death spells.</string>
   <string name="HeroClass_NecromancerPerks_2">Necromancers start with a unique Necromancer\'s robe, which grants 1 mana point for each slain creature.</string>
   <string name="HeroClass_NecromancerPerks_3">Necromancers start with a level 7 skeleton key.</string>

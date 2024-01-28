@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -217,7 +218,10 @@ public class SystemText extends Text {
             }
 
             if (codepoint == 0x000A || codepoint == 0x000D) {
-                //lineWidth += symbolWidth;
+                xCharPos.add(xPos);
+                codePoints.add(codepoint);
+
+                lineWidth += symbolWidth;
                 return offset;
             }
 
@@ -276,7 +280,7 @@ public class SystemText extends Text {
                     String key = Utils.format("%fx%f_%s", lineWidth, fontHeight, currentLine);
 
                     if (mask != null) {
-                        key += mask.toString();
+                        key += Arrays.toString(mask);
                     }
 
                     if (!bitmapCache.containsKey(key)) {
@@ -313,7 +317,7 @@ public class SystemText extends Text {
 
         currentLine = currentLine.trim();
 
-        final int charsToDraw = currentLine.length();
+        final int charsToDraw = Math.min(currentLine.length(), codePoints.size());
 
         if (mask == null) {
             if (!xCharPos.isEmpty()) {
