@@ -204,11 +204,6 @@ public class SystemText extends Text {
 
             offset += codepointCharCount;
 
-            if (codepoint == 0x000A || codepoint == 0x000D) {
-                //lineWidth += symbolWidth;
-                return offset;
-            }
-
             boolean isWhiteSpace = Character.isWhitespace(codepoint);
 
             if (isWhiteSpace) {
@@ -219,6 +214,11 @@ public class SystemText extends Text {
             if (!isWhiteSpace || symbolWidth == 0) {
                 xCharPos.add(xPos);
                 codePoints.add(codepoint);
+            }
+
+            if (codepoint == 0x000A || codepoint == 0x000D) {
+                //lineWidth += symbolWidth;
+                return offset;
             }
 
             symbolWidth = symbolWidth(Character.toString((char) (codepoint)));
@@ -320,7 +320,7 @@ public class SystemText extends Text {
                 float x = (xCharPos.get(0) + 0.5f) * oversample;
                 canvas.drawText(currentLine, x, y, paint);
             }
-            return charIndex + codePoints.size();
+            return charIndex + charsToDraw;
         }
 
         for (int i = 0; i < charsToDraw; ++i) {
