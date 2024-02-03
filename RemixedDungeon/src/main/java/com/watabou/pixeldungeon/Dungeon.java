@@ -297,6 +297,10 @@ public class Dungeon {
 
         isometricModeAllowed = level.isPlainTile(1); //TODO check entire level
 
+        if(ModQuirks.only2dTiles) {
+            isometricModeAllowed = false;
+        }
+        
         if (isometricModeAllowed) {
             setIsometricMode(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false));
         } else {
