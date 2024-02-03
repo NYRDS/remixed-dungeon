@@ -1761,8 +1761,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     @LuaInterface
-    public String getMobClassName() {
+    public String getMobClassName() { //Used by some mods, such as RA
         return getEntityKind();
+    }
+
+
+    @LuaInterface
+    public boolean isPet() { //Used by some mods, such as RA
+        return false;
     }
 
     public abstract Char makeClone();
