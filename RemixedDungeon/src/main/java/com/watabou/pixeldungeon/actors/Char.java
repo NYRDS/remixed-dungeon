@@ -784,6 +784,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         CharsList.destroy(getId());
     }
 
+    //Compatibility fix for Epic
+    @LuaInterface
+    public void die() {
+        die(CharsList.DUMMY);
+    }
+
+    @LuaInterface
     public void die(@NotNull NamedEntityKind cause) {
 
         getState().onDie(this);
