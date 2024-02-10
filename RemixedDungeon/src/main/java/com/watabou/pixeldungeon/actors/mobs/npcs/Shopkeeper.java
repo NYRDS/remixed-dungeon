@@ -88,8 +88,12 @@ public class Shopkeeper extends NPC {
 
 		if (bagSold.isEmpty()) {
 			Item bag = Badges.getNotBroughtBag();
-			if(bag.valid() && collect(bag)) {
-				bagSold = bag.getEntityKind();
+			if(bag.valid()) {
+				if (getBelongings().getItem(bag.getEntityKind()) == null) {
+					if(collect(bag)) {
+						bagSold = bag.getEntityKind();
+					}
+				}
 			}
 		}
 
