@@ -99,12 +99,11 @@ public class BuffIndicator extends Component {
 	
 	@Override
 	protected void createChildren() {
-		//texture = TextureCache.get( Assets.BUFFS_LARGE  );
 		film = new TextureFilm(TextureCache.get(Assets.BUFFS_SMALL), SIZE, SIZE );
 	}
 	
 	@Override
-	protected void layout() {
+	public void update() {
 		clear();
 		
 		val newIcons = new HashMap<Integer, Image>();

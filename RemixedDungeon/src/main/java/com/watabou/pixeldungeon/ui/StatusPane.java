@@ -280,6 +280,8 @@ public class StatusPane extends Component {
             keys.text(Integer.toString(lastKeys));
             keys.setX(width - 8 - keys.width() - 18);
         }
+
+        buffs.update();
     }
 
 }
