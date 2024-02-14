@@ -2904,21 +2904,21 @@ remix.30.1\n
   <string name="ChampionOfEarthBuff_Name">Dünya Şampiyonu</string>
   <string name="ChampionOfEarthBuff_Info">Dünya Şampiyonu, esneklik göstermeyen bir güçle temsil edilir, çünkü bu özellik yaratığın hasar direncini artırır ve maksimum canını yükseltir. Bu dönüşüm, onu tehlikeli derinliklerde karşı konulmaz bir rakip haline getirir, saldırıları kolaylıkla savuşturabilir ve kararlı bir şekilde uzun süren savaşlara dayanabilir.</string>
 
-  <string name="Welcome_Text_32">remix.32\n
-- Oynanış:\n
--- Mobs ve Pets artık deneyim ve seviyeler alabilir\n
--- Chaos Shield\n
--- Şampiyonlar\n
--- Yog savaşı yeniden dengelendi\n
--- Denge ayarları\n
-- Kullanıcı Deneyimi:\n
--- Detaylı Kahraman ve Mobs istatistikleri\n
--- Daha iyi Özelleştirmeler arayüzü\n
--- Düzgün kamera\n
-- Modlama:\n
--- Özel animasyonlar\n
--- Dahili Mobs için Özel Komut Dosyaları\n
--- Mobs için parlamalar\n
-- Düzeltilen hatalar</string>
+  <string name="Welcome_Text_32"> remix.32\n
+-  Oynanış:\n
+--  Mobs ve Pets artık deneyim ve seviyeler alabilir\n
+--  Chaos Shield\n
+--  Şampiyonlar\n
+--  Yog savaşı yeniden dengelendi\n
+--  Denge ayarları\n
+-  Kullanıcı Deneyimi:\n
+--  Detaylı Kahraman ve Mobs istatistikleri\n
+--  Daha iyi Özelleştirmeler arayüzü\n
+--  Düzgün kamera\n
+-  Modlama:\n
+--  Özel animasyonlar\n
+--  Dahili Mobs için Özel Komut Dosyaları\n
+--  Mobs için parlamalar\n
+-  Düzeltilen hatalar</string>
 
 </resources>
