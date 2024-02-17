@@ -1801,7 +1801,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="GothicArmor_Info">Bir gotik zırh , zırh sanatının doruk noktası.</string>
   <string name="ChaosArmor_Name">Kaos zırhı</string>
   <string name="ChaosArmor_Info">Kan kırmızı metal parçalar , kırmızı zincirler ile birlikte dikilmiş. Dokunman ile birlikte kaotik bir enerji yayıyor</string>
-  <string name="ChaosCrystal_ArmorFused">Kristal zırhını özümsedi ve zırhınla bir bileşik haline geldi</string>
+  <string name="ChaosCrystal_ArmorFused">Zırhınızla kristal birleşti ve kaos formunu aldı.</string>
   <string name="Blacksmith_Name">trol demirci</string>
   <string name="Blacksmith_Desc">Bu trol demircisi tüm troller gibi görünüyor: uzun boylu ve zayıf, derisi hem renk hem de doku olarak taşı andırıyor. Trol demirci orantısız derecede küçük aletlerle uğraşıyor.</string>
   <string name="Blacksmith_Gold1">Hey insan! Yararlı olmak ister misin? Kazmanı al ve bana biraz _kara altın cevheri_ çıkar, _15 parça_ yeterli olur. Ne demek istiyorsun, nasıl ödeyeceğim? Seni açgözlü...\nTamam, ödeyecek param yok ama senin için biraz demircilik yapabilirim. Kendini şanslı say, etraftaki tek demirci benim.</string>
@@ -2465,7 +2465,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
   <string name="HeroClass_HunPerks_2">Avcı kadınlar menzilli silahlarda ustadır ve bunları kullanırken aşırı güç için bir hasar bonusu alırlar.</string>
   <string name="HeroClass_HunPerks_3">Avcı kadınlar çiy damlalarından daha fazla sağlık kazanır.</string>
   <string name="HeroClass_HunPerks_4">Avcılar, engellerin arkasına gizlenmiş olsalar bile komşu canavarları hissederler.</string>
-  <string name="HeroClass_ElfPerks_0">Elfler 15 can ve 9 güç ile başlar.</string>
+  <string name="HeroClass_ElfPerks_0">Elfler 15 Sağlık puanı ve 9 Güç puanı ile başlar.</string>
   <string name="HeroClass_ElfPerks_1">Elflerin kök salmaya karşı bağışıklığı vardır.</string>
   <string name="HeroClass_ElfPerks_2">Elfler geliştirilmiş bir ahşap yay ve bir sürü okla başlar.</string>
   <string name="HeroClass_ElfPerks_3">Elfler yay kullanmakta son derece ustadır ve çeviktir.</string>
@@ -2625,14 +2625,6 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
   <string name="KunaiThrow_Info">Bu Ölümcül Kunai atışı son derece hızlı olacak, o kadar hızlı olacak ki bir hedef bile seçemeyeceksiniz.\n\nGerçek Ustalar aynı anda birden fazla Kunai fırlatabilir.</string>
   <string name="Haste_Name">Aşırı acele</string>
   <string name="Haste_Info">Acele, oyuncunun o kadar aşırı bir hızla hareket etmesine izin verecek ki, etrafındaki her şey durağan görünecek. Böyle bir acele çok fazla enerji tüketecektir, bu yüzden onu kullanmak sadece kısa bir süre için mümkündür.\n\nYetenekli ustalar daha uzun süre aceleci kalabilirler.</string>
-  <string name="Welcome_Text_29_5">
-remix.29.5\n
-- Oynanış:\n
--- Haydut yetenekleri!\n
-- Modlar:\n
--- Özel Zırh!\n
-- Hatalar düzeltildi\n
- </string>
   <string name="Char_Stole_0">%1$s%3$sden %2$s çaldı!</string>
   <string name="Char_Stole_1">%1$s%3$sden %2$s çaldı!</string>
   <string name="Char_Stole_2">%1$s%3$sden %2$s çaldı!</string>
@@ -2658,16 +2650,6 @@ seviyenin başka bir yeri.</string>
   <string name="Char_StaStunned">sersemlemiş</string>
   <string name="Mob_ReadyForOrder">%s siparişiniz için hazır.</string>
   <string name="Mob_CantDoIt">Yapamam. Küçük pençelerim var.</string>
-  <string name="Welcome_Text_29_6">
-remix.29.6\n
-- Oynanış:\n
--- Çeteler üzerinde gerçekleştirilecek ek eylemler!\n
-- Modlama:\n
--- Eşya oyuncuları!\n
--- Özel silah özellikleri!\n
--- Daha fazla kategorize edilmemiş içerik!\n
-- Hatalar düzeltildi\n
- </string>
   <string name="InnKeeperNPC_Name">han işletmecisi</string>
   <string name="InnKeeperNPC_Name_Objective">han işletmecisi</string>
   <string name="InnKeeperNPC_Gender">erkek</string>
@@ -2907,4 +2889,33 @@ remix.30.1\n
   <string name="Movement_Speed">Hareket hızı</string>
   <string name="Attack_Cooldown">Saldırı bekleme süresi</string>
   <string name="View_Distance">Mesafeyi görüntüle</string>
+  <string name="WndHero_Info">Bilgi</string>
+  <string name="ChaosShield_name">Kaos Kalkanı</string>
+  <string name="ChaosShield_desc">Kaos Kalkanı, sıradan bir kalkan ile bir Kaos Kristali\'nin birleştirilmesi sonucunda ortaya çıkar ve başarılı bir blok sonrasında rastgele kaotik etkiler sergiler.</string>
+  <string name="ChaosCrystal_ShieldFused">Zırhınızla kristal birleşti ve kaos formunu aldı.</string>
+  <string name="Actions_Speed">Acele seviyesi</string>
+  <string name="ChampionOfAirBuff_Name">Hava Şampiyonu</string>
+  <string name="ChampionOfAirBuff_Info">Bu özellik, yaratığa rüzgarın özünü verir ve savaşta çeviklik ve yeteneklerini artırır. Hava Şampiyonu, savaşın seyrini hızla değiştirebilen hızlı ve yıkıcı saldırılar sergileyebilen korkutucu bir rakip haline gelir.</string>
+  <string name="ChampionOfWaterBuff_Name">Su Şampiyonu</string>
+  <string name="ChampionOfWaterBuff_Info">Suyun Şampiyonu, yaratığın dayanıklılığını ve azimini artırarak okyanusların yenilmez gücünü temsil eder. Sonuç olarak, sürekli saldırılara dayanabilen ve zorluklar karşısında boyun eğmeyen bir koruyucu olarak durabilir.</string>
+  <string name="ChampionOfFireBuff_Name">Ateş Şampiyonu</string>
+  <string name="ChampionOfFireBuff_Info">\"Alevin öfkesiyle dolu olan bu özellik, yaratığın vahşiliğini ve savaş yeteneğini artırır. Ateşin Şampiyonu, korkutucu bir rakip olarak ortaya çıkar ve düşmanlarını yakıcı alevlerle sararak yıkıcı saldırılar sergiler, ona karşı durmaya cesaret eden herkesi dehşete düşürür.\"</string>
+  <string name="ChampionOfEarthBuff_Name">Dünya Şampiyonu</string>
+  <string name="ChampionOfEarthBuff_Info">Dünya Şampiyonu, esneklik göstermeyen bir güçle temsil edilir, çünkü bu özellik yaratığın hasar direncini artırır ve maksimum canını yükseltir. Bu dönüşüm, onu tehlikeli derinliklerde karşı konulmaz bir rakip haline getirir, saldırıları kolaylıkla savuşturabilir ve kararlı bir şekilde uzun süren savaşlara dayanabilir.</string>
+  <string name="Welcome_Text_32">remix.32\n
+- Oynanış:\n
+-- Mobs ve Pets artık deneyim ve seviyeler alabilir\n
+-- Chaos Shield\n
+-- Şampiyonlar\n
+-- Yog savaşı yeniden dengelendi\n
+-- Denge ayarları\n
+- Kullanıcı Deneyimi:\n
+-- Detaylı Kahraman ve Mobs istatistikleri\n
+-- Daha iyi Özelleştirmeler arayüzü\n
+-- Düzgün kamera\n
+- Modlama:\n
+-- Özel animasyonlar\n
+-- Dahili Mobs için Özel Komut Dosyaları\n
+-- Mobs için parlamalar\n
+- Düzeltilen hatalar</string>
 </resources>

@@ -1734,7 +1734,6 @@
   <string name="GothicArmor_Info">고딕 갑옷은 갑옷 제련 기술의 정점입니다.</string>
   <string name="ChaosArmor_Name">혼돈 갑옷</string>
   <string name="ChaosArmor_Info">이 갑옷의 붉은 피의 금속판은 검고 붉은 사슬로 얽혀있습니다. 이것을 만질 때 마다 혼돈스러운 기운이 악화됩니다.</string>
-  <string name="ChaosCrystal_ArmorFused">크리스탈의 당신의 갑옷을 흡수하고, 합성된 갑옷의 형태가 되었습니다.</string>
   <string name="Blacksmith_Name">트롤 대장장이</string>
   <string name="Blacksmith_Desc">트롤 대장장이는  큰 키에 여윈 몸을 가지고 있고, 피부는 색이든 질감이든 돌을 연상시키는 일반적인 트롤같이 생겼다. 트롤 대장장이는 덩치에 어울리지 않는 작은 도구들을 가지고 땜질을 하고 있다.</string>
   <string name="Blacksmith_Gold1">이봐 인간! 쓸만해지고 싶나, 응? 이 곡괭이를 가져다가 이걸로 _어두운 금 원석_을 좀 캐다 줘, _15개_ 면 충분하겠네. 보상은 뭐냐고? 이 탐욕스러운... \n알았어, 알았다고, 내가 보상해줄 돈은 없지만 아이템 제련은 해줄 수 있지. 운 좋은 줄 알아, 이 근처에 대장장이는 나밖에 없으니.</string>
@@ -2161,6 +2160,7 @@
   <string name="KindOfBow_SelectArrowKind">어떤 화살을 사용해야 할까?</string>
   <string name="CloakSpell_Name">은신</string>
   <string name="CloakBuff_Name">은신함</string>
+  <string name="TitleScene_Mods">MOD</string>
   <string name="town_deco_grave_desc">풍화되어 깎여나간 평범한 묘비석이다.</string>
   <string name="town_deco_pillar_name">기둥</string>
   <string name="town_deco_pillar_desc">예전에는, 이 기둥은 지탱과 장식으로서의 역할 모두를 톡톡히 수행했었다.</string>
@@ -2309,7 +2309,6 @@
   <string name="HeroClass_HunPerks_2">사냥꾼은 투척무기에 숙련되어, 자신의 현재 힘이 투척무기의 요구치보다 높을 경우 데미지에 보너스를 받습니다.</string>
   <string name="HeroClass_HunPerks_3">사냥꾼은 이슬로부터 더 많은 양의 체력을 회복합니다.</string>
   <string name="HeroClass_HunPerks_4">사냥꾼은 근처에 있는 적이 장애물 뒤에 숨어 있어도 인식할 수 있습니다.</string>
-  <string name="HeroClass_ElfPerks_0">엘프는 체력이 15, 힘이 9인 상태에서 시작합니다.</string>
   <string name="HeroClass_ElfPerks_1">엘프는 속박에 면역입니다.</string>
   <string name="HeroClass_ElfPerks_2">엘프는 강화된 나무 활과 화살 한 다발을 가지고 시작합니다.</string>
   <string name="HeroClass_ElfPerks_3">엘프는 활을 매우 잘 다루고 민첩합니다.</string>
@@ -2421,6 +2420,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="town_deco_stone_wall_broken_desc">상태가 안 좋은 오래된 돌 벽이다,</string>
   <string name="Belongings_CantWearBoth">%1$s와 %2$s는 동시에 착용할 수 없습니다!</string>
   <string name="ShieldStrTemplate">이 방패를 제대로 사용하기 위해서는 착용자에게 최소한 %1$d의 힘 수치가 필요합니다.</string>
+  <string name="Mods_Disclaimer">
+        MOD는 플레이어가 플레이어를 위해 만듭니다.\n
+        MOD가 때때로 게임플레이를 예측할 수 없거나 이상하게 바꿉니다. 경고했습니다\n
+        NYRDS 팀은 MOD 컨텐츠, 품질 및 안정성을 책임지지 않습니다! \n
+        위협을 무릅쓰고 다운로드 하여 즐기세요!\n
+    </string>
   <string name="PlagueDoctorNPC_After_Quest_2">아직까지 여기 있었던거야? 자! 받아.</string>
   <string name="StartScene_DifficultyEasyNoAds">쉬움</string>
   <string name="StartScene_DifficultyNormalWithSavesNoAds">저장 가능한 보통</string>
@@ -2446,4 +2451,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Moongrace_Name">월광초</string>
   <string name="Moongrace_Desc">희귀하게 자라는 이 식물은 자연 마법의 원천으로 알려져 있습니다.</string>
   <string name="SpiderElite_Gender">남성적인</string>
+  <string name="Facilitations_Names_0">배고픔 없음</string>
+  <string name="Challenges_Descriptions_0">음식과 물은 이미 오래 전에 썩어서, 모든 모험가들을 두려움과 배고픔으로 인한 죽음에 대한 생각으로 미치게 만들었습니다. 여러분의 식단이 여러분을 충분히 오래도록 도와줄 수 있나요?</string>
 </resources>
