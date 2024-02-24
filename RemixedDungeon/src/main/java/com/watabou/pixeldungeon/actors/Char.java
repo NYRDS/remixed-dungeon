@@ -223,12 +223,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         boolean newMob = false;
 
         for (Mob m : level().mobs) {
+            if (m==this) {
+                continue;
+            }
+
             if (level().fieldOfView[m.getPos()] && !m.friendly(this) && m.invisible <= 0) {
                 visible.add(m);
                 if (!visibleEnemies.contains(m)) {
                     newMob = true;
                 }
             }
+
         }
 
         visibleEnemies = visible;
@@ -1934,7 +1939,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public int getId() {
-        if (id == EntityIdSource.INVALID_ID) {
+        if (id == EntityIdSource.INVALID_ID || id == EntityIdSource.DUPLICATE_ID) {
             id = EntityIdSource.getNextId();
             CharsList.add(this, id);
         }

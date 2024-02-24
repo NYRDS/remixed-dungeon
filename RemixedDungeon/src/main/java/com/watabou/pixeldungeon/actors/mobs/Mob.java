@@ -524,7 +524,22 @@ public abstract class Mob extends Char {
 
     @Override
     public Char makeClone() {
-        return MobFactory.mobByName(getEntityKind());
+
+        Bundle storedMob = new Bundle();
+
+        storeInBundle(storedMob);
+
+        Mob new_mob = MobFactory.mobByName(getEntityKind());
+
+        new_mob.restoreFromBundle(storedMob);
+
+        new_mob.getId(); //Ensure valid id
+
+        if(getOwnerId() == getId()) {
+            new_mob.setOwnerId(new_mob.getId());
+        }
+
+        return new_mob;
     }
 
     public void loot(Object loot, float lootChance) {
