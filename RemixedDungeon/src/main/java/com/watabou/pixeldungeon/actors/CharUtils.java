@@ -186,7 +186,7 @@ public class CharUtils {
 
     public static void challengeAllMobs(Char ch, String sound) {
 
-        if (!GameScene.isSceneReady()) {
+        if (!ch.isOnStage()) {
             return;
         }
 

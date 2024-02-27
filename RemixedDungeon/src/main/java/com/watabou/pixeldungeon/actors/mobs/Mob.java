@@ -230,7 +230,7 @@ public abstract class Mob extends Char {
     public boolean add(Buff buff) {
         super.add(buff);
 
-        if (!GameScene.isSceneReady()) {
+        if (!isOnStage()) {
             return true;
         }
 

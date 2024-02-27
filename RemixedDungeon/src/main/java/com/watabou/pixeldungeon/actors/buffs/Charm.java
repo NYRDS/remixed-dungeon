@@ -22,7 +22,7 @@ public class Charm extends FlavourBuff {
 		}
 
 		if (super.attachTo( target )) {
-			if(GameScene.isSceneReady()) {
+			if(target.isOnStage()) {
 				target.getSprite().centerEmitter().start(Speck.factory(Speck.HEART), 0.2f, 5);
 				Sample.INSTANCE.play(Assets.SND_CHARMS);
 			}

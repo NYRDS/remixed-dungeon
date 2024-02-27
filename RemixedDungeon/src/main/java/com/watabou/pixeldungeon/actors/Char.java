@@ -969,7 +969,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         buffs.add(buff);
         Actor.add(buff);
 
-        if (!GameScene.isSceneReady()) {
+        if (!isOnStage()) {
             return true;
         }
 
@@ -1222,7 +1222,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
         GameScene.addMobSpriteDirect(this, sprite);
 
-        if (GameScene.isSceneReady()) {
+        if (isOnStage()) {
             assert (sprite.getParent() != null);
         }
 
@@ -1380,7 +1380,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public void paralyse(boolean paralysed) {
         this.paralysed = paralysed;
-        if (paralysed && GameScene.isSceneReady()) {
+        if (paralysed && isOnStage()) {
             level().press(getPos(), this);
         }
     }

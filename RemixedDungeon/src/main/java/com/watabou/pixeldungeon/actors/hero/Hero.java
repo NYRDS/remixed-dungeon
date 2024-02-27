@@ -665,7 +665,7 @@ public class Hero extends Char {
     public boolean add(Buff buff) {
         super.add(buff);
 
-        if (!GameScene.isSceneReady()) {
+        if (!isOnStage()) {
             return false;
         }
 
