@@ -43,6 +43,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	@Packable
 	private float time;
 
+	private boolean added = false;
+
 	public static void setRealTimeMultiplier(float realTimeMultiplier) {
 		Actor.realTimeMultiplier = realTimeMultiplier;
 	}
@@ -105,6 +107,11 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	public static void clearActors() {
 		now = 0;
 		chars.clear();
+
+		for(Actor a : all) {
+			a.added = false;
+		}
+
 		all.clear();
 
 		CharsList.reset();
@@ -371,6 +378,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		all.add( actor );
 		actor.time += time;
 
+		actor.added = true;
+
 		if (actor instanceof Char) {
 			Char ch = (Char)actor;
 
@@ -382,8 +391,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 			for(var item: ch.getBelongings()) {
 				all.add(item);
 			}
-
 		}
+
 
 	}
 	
@@ -391,7 +400,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		
 		if (actor != null) {
 			actor.next();
-			
+			actor.added = false;
 			all.remove( actor );
 		}
 	}
@@ -452,5 +461,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 	public boolean testAct() {
 		return act();
+	}
+
+	public boolean isAdded() {
+		return added;
 	}
 }
