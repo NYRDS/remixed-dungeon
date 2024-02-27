@@ -456,8 +456,10 @@ public abstract class Mob extends Char {
             return false;
         }
 
-        if (getOwnerId() != getId() && getOwner().friendly(chr)) {
-            return true;
+        if (getOwnerId() != getId()) {
+            if (getOwner().friendly(chr)) {
+                return true;
+            }
         }
 
         if (chr instanceof Hero) {
