@@ -448,7 +448,7 @@ public abstract class Mob extends Char {
             return false;
         }
 
-        if (getOwnerId() == chr.getId()) {
+        if (getOwnerId() == chr.getId() || getId() == chr.getId()) {
             return true;
         }
 
@@ -539,6 +539,8 @@ public abstract class Mob extends Char {
 
         if(getOwnerId() == getId()) {
             new_mob.setOwnerId(new_mob.getId());
+        } else {
+            new_mob.setOwnerId(getOwnerId());
         }
 
         return new_mob;

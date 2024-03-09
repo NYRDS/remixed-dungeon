@@ -101,6 +101,7 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
+import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
@@ -260,6 +261,7 @@ public class MobFactory {
 		registerMobClass(Shopkeeper.class);
 		registerMobClass(TownShopkeeper.class);
 		registerMobClass(SpiritOfPain.class);
+		registerMobClass(MirrorImage.class);
 
 		mMobsList.put("Sheep", WandOfFlock.Sheep.class);
 		//old mods compatibility

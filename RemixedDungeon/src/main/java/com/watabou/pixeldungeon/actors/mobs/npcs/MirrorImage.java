@@ -17,6 +17,8 @@ import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 
 import org.jetbrains.annotations.NotNull;
 
+import lombok.SneakyThrows;
+
 public class MirrorImage extends Mob {
 
 	public MirrorImage() {
@@ -58,6 +60,7 @@ public class MirrorImage extends Mob {
 	}
 
 	@Override
+	@SneakyThrows
 	public CharSprite newSprite() {
 		if(look.length > 0 && deathEffect!=null && !deathEffect.isEmpty()) {
 			return HeroSpriteDef.createHeroSpriteDef(look, deathEffect);
