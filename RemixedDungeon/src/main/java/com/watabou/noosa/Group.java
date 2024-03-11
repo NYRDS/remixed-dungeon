@@ -32,6 +32,9 @@ public class Group extends Gizmo {
 	@NotNull
 	protected ArrayList<Gizmo> members = new ArrayList<>();
 
+	private boolean sorted = false;
+	public boolean sort = false;
+
 	public Group() {
 	}
 
@@ -43,6 +46,9 @@ public class Group extends Gizmo {
 
 	@Override
 	public void update() {
+		if (sort && !sorted) {
+			sort();
+		}
 		//members.removeAll(Collections.singleton(null));
 		//members.removeIf(Objects::isNull); needs Android N
 		for (int i = 0; i < members.size(); i++) {
@@ -92,6 +98,7 @@ public class Group extends Gizmo {
 
 		members.add(g);
 		g.setParent(this);
+		sorted = false;
 		return g;
 	}
 
@@ -111,6 +118,7 @@ public class Group extends Gizmo {
 		if (members.remove(g)) {
 			g.setNullParent();
 		}
+		sorted = false;
 	}
 
 	public void removeAll() {
@@ -178,6 +186,7 @@ public class Group extends Gizmo {
 	public void sort() {
 		members.removeAll(Collections.singleton(null));
 		Collections.sort(members, (a,b)-> a.layer - b.layer);
+		sorted = true;
 	}
 
 	//Testing stuff

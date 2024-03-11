@@ -24,6 +24,7 @@ import lombok.SneakyThrows;
 public class CustomMob extends MultiKindMob implements IZapper {
 
 	private float attackDelay = 1;
+	private int spriteLayer = 0;
 
 	@Packable
 	private String mobClass = "Unknown";
@@ -145,6 +146,8 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		movable = classDesc.optBoolean("movable",movable);
 		immortal = classDesc.optBoolean("immortal",immortal);
 
+		spriteLayer = classDesc.optInt("spriteLayer",spriteLayer);
+
 		kind = classDesc.optInt("var", kind);
 
 		JsonHelper.readStringSet(classDesc, Char.IMMUNITIES, immunities);
@@ -157,4 +160,8 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		}
 	}
 
+	@Override
+	public int getSpriteLayer() {
+		return spriteLayer;
+	}
 }

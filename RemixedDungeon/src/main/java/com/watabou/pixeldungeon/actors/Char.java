@@ -2178,4 +2178,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             }
         }
     }
+
+    public int getSpriteLayer() {
+        return 0;
+    }
 }

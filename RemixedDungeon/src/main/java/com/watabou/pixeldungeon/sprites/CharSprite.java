@@ -132,6 +132,8 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         ch = WeakOptional.of(owner);
 
         ch.ifPresent(chr -> {
+                    layer = owner.getSpriteLayer();
+
                     place(chr.getPos());
                     turnTo(chr.getPos(), Random.Int(chr.level().getLength()));
 

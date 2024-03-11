@@ -143,7 +143,6 @@ public class GameScene extends PixelScene {
 
     private volatile boolean sceneCreated = false;
     private          float   waterSx      = 0, waterSy = -5;
-    private boolean objectSortingRequested;
     private boolean mapBuildingComplete = false;
 
 
@@ -243,6 +242,7 @@ public class GameScene extends PixelScene {
         add(bottomEffects);
 
         objects = new Group();
+        objects.sort = true;
         add(objects);
 
         objectEffects = new Group();
@@ -266,7 +266,9 @@ public class GameScene extends PixelScene {
         emoicons = new Group();
 
         mobs = new Group();
+        mobs.sort = true;
         topMobs = new Group();  // mobs that are drawn on top of walls
+        topMobs.sort = true;
 
         add(mobs);
 
@@ -448,7 +450,7 @@ public class GameScene extends PixelScene {
         hero.readyAndIdle();
         QuickSlot.refresh(hero);
 
-        doSelfTest();
+        //doSelfTest();
 
         final double moveTimeout = Dungeon.moveTimeout();
         final boolean realtime = Dungeon.realtime();
@@ -549,11 +551,6 @@ public class GameScene extends PixelScene {
             return;
         }
 
-
-        if(objectSortingRequested) {
-            objects.sort();
-            objectSortingRequested = false;
-        }
         super.update();
 
         water.offset(waterSx * GameLoop.elapsed, waterSy * GameLoop.elapsed);
@@ -607,7 +604,6 @@ public class GameScene extends PixelScene {
         obj.lo_sprite = WeakOptional.of( (LevelObjectSprite)objects.recycle(LevelObjectSprite.class) );
         obj.lo_sprite.ifPresent (sprite -> sprite.reset(obj));
         obj.addedToScene();
-        objectSortingRequested = true;
     }
 
     private void addHeapSprite(@NotNull Heap heap) {

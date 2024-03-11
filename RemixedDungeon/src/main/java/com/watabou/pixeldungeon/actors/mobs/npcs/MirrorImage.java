@@ -21,62 +21,62 @@ import lombok.SneakyThrows;
 
 public class MirrorImage extends Mob {
 
-	public MirrorImage() {
-		setState(MobAi.getStateByClass(Hunting.class));
+    public MirrorImage() {
+        setState(MobAi.getStateByClass(Hunting.class));
 
-        addImmunity( ToxicGas.class );
-		addImmunity( Paralysis.class );
-        addImmunity( Burning.class );
+        addImmunity(ToxicGas.class);
+        addImmunity(Paralysis.class);
+        addImmunity(Burning.class);
         hp(ht(1));
-	}
+    }
 
-	public MirrorImage(@NotNull Hero hero) {
-		this();
+    public MirrorImage(@NotNull Hero hero) {
+        this();
 
-		baseAttackSkill = hero.attackSkill(hero);
-		baseDefenseSkill = hero.defenseSkill(hero);
-		dmgMin = hero.damageRoll();
-		dmgMax = dmgMin * 2;
+        baseAttackSkill = hero.attackSkill(hero);
+        baseDefenseSkill = hero.defenseSkill(hero);
+        dmgMin = hero.damageRoll();
+        dmgMax = dmgMin * 2;
 
-		makePet(this, hero.getId());
+        makePet(this, hero.getId());
 
-		look = hero.getHeroSprite().getLayersDesc();
-	}
+        look = hero.getHeroSprite().getLayersDesc();
+    }
 
-	@Packable
-	private String[] look = new String[0];
-	@Packable
-	private String deathEffect;
+    @Packable
+    private String[] look = new String[0];
+    @Packable
+    private String deathEffect;
 
 
-	@Override
-	public int attackProc(@NotNull Char enemy, int damage ) {
-		int dmg = super.attackProc( enemy, damage );
+    @Override
+    public int attackProc(@NotNull Char enemy, int damage) {
+        int dmg = super.attackProc(enemy, damage);
 
-		destroy();
-		getSprite().die();
-		
-		return dmg;
-	}
+        destroy();
+        getSprite().die();
 
-	@Override
-	@SneakyThrows
-	public CharSprite newSprite() {
-		if(look.length > 0 && deathEffect!=null && !deathEffect.isEmpty()) {
-			return HeroSpriteDef.createHeroSpriteDef(look, deathEffect);
-		} else { // first sprite generation
-			if(Dungeon.hero.valid()) {
-				look = Dungeon.hero.getHeroSprite().getLayersDesc();
-				deathEffect = Dungeon.hero.getHeroSprite().getDeathEffect();
-			} else { // dirty hack here
-				EventCollector.logException("MirrorImage sprite created before hero");
-				Hero hero = new Hero();
-				HeroSpriteDef spriteDef = HeroSpriteDef.createHeroSpriteDef(hero);
-				look = spriteDef.getLayersDesc();
-				deathEffect = spriteDef.getDeathEffect();
-			}
+        return dmg;
+    }
 
-			return newSprite();
-		}
-	}
+    @Override
+    @SneakyThrows
+    public CharSprite newSprite() {
+        if (look.length > 0 && deathEffect != null && !deathEffect.isEmpty()) {
+            return HeroSpriteDef.createHeroSpriteDef(look, deathEffect);
+        } else { // first sprite generation
+            if (Dungeon.hero.valid()) {
+                look = Dungeon.hero.getHeroSprite().getLayersDesc();
+                deathEffect = Dungeon.hero.getHeroSprite().getDeathEffect();
+            } else { // dirty hack here
+                EventCollector.logException("MirrorImage sprite created before hero");
+                Hero hero = new Hero();
+                HeroSpriteDef spriteDef = HeroSpriteDef.createHeroSpriteDef(hero);
+                look = spriteDef.getLayersDesc();
+                deathEffect = spriteDef.getDeathEffect();
+            }
+
+            return newSprite();
+        }
+    }
 }
