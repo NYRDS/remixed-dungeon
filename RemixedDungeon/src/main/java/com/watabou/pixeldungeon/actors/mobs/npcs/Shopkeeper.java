@@ -133,4 +133,9 @@ public class Shopkeeper extends NPC {
 		return false;
 	}
 
+	@Override
+	public int effectiveSTR() {
+		return Dungeon.hero.effectiveSTR();
+	}
+
 }
