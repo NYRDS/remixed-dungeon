@@ -44,7 +44,6 @@ import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.features.Chasm;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
@@ -439,6 +438,16 @@ public abstract class Mob extends Char {
 
     @Override
     public boolean friendly(@NotNull Char chr) {
+        return friendly(chr, 0);
+    }
+
+    @Override
+    public boolean friendly(@NotNull Char chr, int r_level) {
+
+        if(r_level > 7) {
+            EventCollector.logEvent("too high r_level in Mob::friendly");
+            return false;
+        }
 
         if (chr == this) {
             return true;
@@ -457,7 +466,7 @@ public abstract class Mob extends Char {
         }
 
         if (getOwnerId() != getId()) {
-            if (getOwner().friendly(chr)) {
+            if (getOwner().friendly(chr, r_level+1)) {
                 return true;
             }
         }

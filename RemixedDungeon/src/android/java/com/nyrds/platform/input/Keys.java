@@ -31,6 +31,10 @@ public class Keys {
 	public static Signal<Key> event = new Signal<>(true);
 	
 	public static void processEvent(KeyEvent e) {
+		if(e == null) { //shit happens
+			return;
+		}
+
 		switch (e.getAction()) {
 		case KeyEvent.ACTION_DOWN:
 			event.dispatch(new Key(e.getKeyCode(), true));

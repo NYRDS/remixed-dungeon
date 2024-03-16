@@ -1032,8 +1032,19 @@ public class Hero extends Char {
         return subClass;
     }
 
+    @LuaInterface
+    public void setSubClass(String subClass) { //To conceal strange behavior in RemixedRPG
+        EventCollector.setSessionData("subclass", subClass);
+        EventCollector.logException("RemixedPRG setSubClass bug");
+        try {
+            setSubClass(HeroSubClass.valueOf(subClass));
+        } catch (IllegalArgumentException e) {
+            setSubClass(HeroSubClass.NONE);
+        }
+    }
+
     public void setSubClass(HeroSubClass subClass) {
-        EventCollector.setSessionData("subClass", heroClass.name());
+        EventCollector.setSessionData("subClass", subClass.name());
         this.subClass = subClass;
     }
 

@@ -1286,6 +1286,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return sprite;
     }
 
+    public boolean hasSprite() {
+        return sprite!= null;
+    }
+
     public Fraction fraction() {
         return fraction;
     }
@@ -1407,6 +1411,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public boolean friendly(@NotNull Char chr) {
+        return friendly(chr, 0);
+    }
+
+    public boolean friendly(@NotNull Char chr, int r_level) {
         return !fraction.isEnemy(chr.fraction);
     }
 

@@ -36,6 +36,10 @@ public class Touchscreen {
 
 	public static void processEvent(MotionEvent e ) {
 
+		if(e == null) { //shit happens
+			return;
+		}
+
 		Touch touch;
 
 		switch (e.getAction() & MotionEvent.ACTION_MASK) {

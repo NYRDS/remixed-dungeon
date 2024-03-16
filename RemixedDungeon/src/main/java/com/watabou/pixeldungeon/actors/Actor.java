@@ -332,10 +332,12 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 			if (actor instanceof Char) {
 				Char ch = (Char)actor;
 
-				final CharSprite chSprite = ch.getSprite();
+				if(ch.hasSprite()) {
+					final CharSprite chSprite = ch.getSprite();
 
-				if(chSprite.doingSomething()) {
-					busy = true;
+					if (chSprite.doingSomething()) {
+						busy = true;
+					}
 				}
 
 				chars.put(ch.getPos(), ch);

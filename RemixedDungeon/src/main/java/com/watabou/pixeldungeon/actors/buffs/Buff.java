@@ -32,6 +32,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import lombok.SneakyThrows;
+import lombok.val;
 
 
 public class Buff extends Actor implements NamedEntityKind, CharModifier {
@@ -44,11 +45,6 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
     @Packable(defaultValue = "-1")
     protected int source = -1;
-
-    @Override
-    public String getEntityKind() {
-        return getClass().getSimpleName();
-    }
 
     @Override
     public String name() {
@@ -86,7 +82,10 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     public void attachVisual() {
-        target.getSprite().add(charSpriteStatus());
+        val charSpriteState = charSpriteStatus();
+        if(charSpriteState!= CharSprite.State.NONE) {
+            target.getSprite().add(charSpriteState);
+        }
     }
 
     public boolean attachTo(@NotNull Char target) {
