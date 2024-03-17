@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.mobs.common;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.utils.Bundle;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MultiKindMob extends Mob {
@@ -29,7 +28,7 @@ public class MultiKindMob extends Mob {
 	}
 
 	@Override
-	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
+	public void fromJson(JSONObject mobDesc) {
 		super.fromJson(mobDesc);
 		//Yes it is illogical but "kind" already used for mob class
 		kind = mobDesc.optInt("var",0);

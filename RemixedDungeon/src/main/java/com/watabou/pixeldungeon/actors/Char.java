@@ -1403,11 +1403,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     protected JSONObject getClassDef() {
-        if (!defMap.containsKey(getEntityKind())) {
-            defMap.put(getEntityKind(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getEntityKind() + ".json"));
+        String entityKind = getEntityKind();
+        if (!defMap.containsKey(entityKind)) {
+            defMap.put(entityKind, JsonHelper.tryReadJsonFromAssets("mobsDesc/" + entityKind + ".json"));
         }
 
-        return defMap.get(getEntityKind());
+        return defMap.get(entityKind);
     }
 
     public boolean friendly(@NotNull Char chr) {
@@ -1892,7 +1893,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         int computedViewDistance = viewDistance;
 
         if (hasBuff(Light.class)) {
-            computedViewDistance = Utils.max(computedViewDistance, Level.MIN_VIEW_DISTANCE + 1, level().getViewDistance());
+            if(level()!=null) {
+                computedViewDistance = Utils.max(computedViewDistance, Level.MIN_VIEW_DISTANCE + 1, level().getViewDistance());
+            } else {
+                computedViewDistance = Math.max(computedViewDistance, Level.MIN_VIEW_DISTANCE + 1);
+            }
         }
 
         return Math.min(computedViewDistance, ShadowCaster.MAX_DISTANCE);
@@ -2190,4 +2195,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public int getSpriteLayer() {
         return 0;
     }
+
+    public void observe() {}
 }

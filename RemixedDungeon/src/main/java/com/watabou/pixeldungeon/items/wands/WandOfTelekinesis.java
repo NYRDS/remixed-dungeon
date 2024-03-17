@@ -58,7 +58,7 @@ public class WandOfTelekinesis extends Wand {
 
                         ch.placeTo(next);
                         ch.getSprite().move(ch.getPos(), next);
-                        Dungeon.observe();
+                        ch.observe();
 					} else {
 						ch.damage(maxDistance - 1 - i, this);
 					}

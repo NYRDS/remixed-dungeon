@@ -45,7 +45,7 @@ public class WandOfBlink extends Wand {
 
 		getOwner().getSprite().setVisible(true);
 		appear( getOwner(), cell);
-		Dungeon.observe();
+		getOwner().observe();
 	}
 	
 	@Override

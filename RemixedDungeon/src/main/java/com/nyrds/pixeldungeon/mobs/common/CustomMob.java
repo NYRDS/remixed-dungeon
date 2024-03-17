@@ -101,7 +101,6 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		super.damage(dmg, src);
 	}
 
-
 	@SneakyThrows
 	@Override
 	protected void fillMobStats(boolean restoring) {

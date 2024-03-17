@@ -14,7 +14,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Locale;
@@ -53,7 +52,7 @@ public abstract class NPC extends Mob {
 		return false;
 	}
 
-	public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
+	public void fromJson(JSONObject mobDesc) {
 		super.fromJson(mobDesc);
 
 		setState(mobDesc.optString("aiState","Passive").toUpperCase(Locale.ROOT));

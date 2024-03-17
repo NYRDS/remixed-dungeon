@@ -14,7 +14,7 @@ public class Blindness extends FlavourBuff {
 	public boolean attachTo(@NotNull Char target) {
 		boolean ret = super.attachTo(target);
 		if (ret) {
-			Dungeon.observe();
+			target.observe();
 		}
 		return ret;
 	}
@@ -22,7 +22,7 @@ public class Blindness extends FlavourBuff {
 	@Override
 	public void detach() {
 		super.detach();
-		Dungeon.observe();
+		target.observe();
 	}
 	
 	@Override

@@ -157,7 +157,7 @@ public class CharUtils {
         } else {
             WandOfBlink.appear( ch, pos );
             level.press( pos, ch );
-            Dungeon.observe();
+            ch.observe();
             GLog.i( Utils.format(R.string.ScrollOfTeleportation_Teleport2, ch.getName_objective()) );
         }
     }
@@ -348,7 +348,7 @@ public class CharUtils {
             final Char ch = chr;
             chr.fx(chr.getPos(), () -> WandOfBlink.appear(ch, tgt));
         }
-        Dungeon.observe();
+        chr.observe();
     }
 
     public static void blinkTo(@NotNull Char chr, int target) {

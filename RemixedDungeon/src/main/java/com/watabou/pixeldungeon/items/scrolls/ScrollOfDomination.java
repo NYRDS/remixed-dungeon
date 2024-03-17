@@ -44,7 +44,7 @@ public class ScrollOfDomination extends Scroll {
 			mobsInSight.remove(pet);
 		}
 		
-		Dungeon.observe();
+		reader.observe();
 		
 		setKnown();
 

@@ -15,7 +15,7 @@ public class Light extends FlavourBuff {
 	@Override
 	public boolean attachTo(@NotNull Char target ) {
 		if (super.attachTo( target )) {
-			Dungeon.observe();
+			target.observe();
 			return true;
 		} else {
 			return false;
@@ -25,7 +25,7 @@ public class Light extends FlavourBuff {
 	@Override
 	public void detach() {
 		super.detach();
-		Dungeon.observe();
+		target.observe();
 	}
 	
 	@Override

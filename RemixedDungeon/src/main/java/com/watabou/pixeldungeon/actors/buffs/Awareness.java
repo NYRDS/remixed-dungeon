@@ -10,6 +10,6 @@ public class Awareness extends FlavourBuff {
 	@Override
 	public void detach() {
 		super.detach();
-		Dungeon.observe();
+		target.observe();
 	}
 }

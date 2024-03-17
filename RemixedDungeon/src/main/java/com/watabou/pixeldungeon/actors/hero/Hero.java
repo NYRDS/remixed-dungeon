@@ -301,7 +301,7 @@ public class Hero extends Char {
             super.act();
         }
 
-        Dungeon.observe();
+        observe();
 
         if (paralysed) {
             setCurAction(null);
@@ -540,7 +540,7 @@ public class Hero extends Char {
                     if (!mob.swapPosition(this)) {
                         return false;
                     }
-                    Dungeon.observe();
+                    observe();
                 }
             }
 
@@ -801,7 +801,7 @@ public class Hero extends Char {
 
     @Override
     public void onMotionComplete() {
-        Dungeon.observe();
+        observe();
         search(false);
 
         super.onMotionComplete();
@@ -1159,7 +1159,7 @@ public class Hero extends Char {
             newPos.computeCell(level());
             WandOfBlink.appear(this, newPos.cellId);
             level().press(newPos.cellId, this);
-            Dungeon.observe();
+            observe();
         } else {
             InterlevelScene.returnTo = new Position(newPos);
             InterlevelScene.Do(InterlevelScene.Mode.RETURN);
@@ -1197,5 +1197,10 @@ public class Hero extends Char {
 
     public boolean isSpellUser() {
         return !heroClass.getMagicAffinity().isEmpty();
+    }
+
+    @Override
+    public void observe() {
+        Dungeon.observe();
     }
 }

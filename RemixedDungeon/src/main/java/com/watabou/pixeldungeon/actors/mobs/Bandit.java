@@ -20,10 +20,7 @@ public class Bandit extends Thief {
 		if (CharUtils.steal(this, enemy)) {
 			setState(MobAi.getStateByClass(ThiefFleeing.class));
 			Buff.prolong(getEnemy(), Blindness.class, Random.Int(5, 12));
-
-			if(enemy==Dungeon.hero) {
-				Dungeon.observe();
-			}
+			enemy.observe();
 		}
 		return damage;
 	}

@@ -15,7 +15,7 @@ public class MindVision extends FlavourBuff {
 
 	static public void reportMindVisionEffect() {
 		Dungeon.observe();
-		if (Dungeon.level.mobs.size() > 0) {
+		if (!Dungeon.level.mobs.isEmpty()) {
             GLog.i(StringsManager.getVar(R.string.PotionOfMindVision_Apply1));
 		} else {
             GLog.i(StringsManager.getVar(R.string.PotionOfMindVision_Apply2));
@@ -30,7 +30,7 @@ public class MindVision extends FlavourBuff {
 	@Override
 	public void detach() {
 		super.detach();
-		Dungeon.observe();
+		target.observe();
 	}
 
 	@Override

@@ -51,7 +51,7 @@ class TeleportCellListener implements CellSelector.Listener {
             CellEmitter.get( target ).burst( Speck.factory( Speck.WOOL ), 10 );
             Sample.INSTANCE.play( Assets.SND_PUFF );
             level.press( target, selector );
-            Dungeon.observe();
+            selector.observe();
 
             selector.spend( Actor.TICK );
         }

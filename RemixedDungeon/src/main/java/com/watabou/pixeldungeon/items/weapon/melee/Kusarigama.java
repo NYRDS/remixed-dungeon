@@ -104,7 +104,7 @@ public class Kusarigama extends MeleeWeapon {
                         chr.placeTo(Ballistica.trace[1]);
                         chr.getSprite().move(chr.getPos(), Ballistica.trace[1]);
 
-                        Dungeon.observe();
+                        selector.observe();
                     }
 
                     drawChain(hitCell, selector);

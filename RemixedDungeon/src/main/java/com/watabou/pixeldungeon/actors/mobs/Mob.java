@@ -53,7 +53,6 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import lombok.SneakyThrows;
@@ -159,6 +158,7 @@ public abstract class Mob extends Char {
 
     @SneakyThrows
     public CharSprite newSprite() {
+
         String descName = "spritesDesc/" + getEntityKind() + ".json";
         if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
             return new MobSpriteDef(descName, getKind());
@@ -407,7 +407,8 @@ public abstract class Mob extends Char {
         setTarget(cell);
     }
 
-    public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
+    @SneakyThrows
+    public void fromJson(JSONObject mobDesc) {
         Bundle descBundle = new Bundle();
         BundleHelper.Pack(this, descBundle);
         descBundle.mergeWith(mobDesc);

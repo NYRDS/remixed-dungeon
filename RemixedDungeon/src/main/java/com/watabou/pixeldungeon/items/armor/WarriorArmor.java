@@ -78,7 +78,7 @@ public class WarriorArmor extends ClassArmor {
 					((HeroSpriteDef) selector.getSprite()).jump(pos, cell, () -> {
 						selector.placeTo(dest);
 						selector.level().press(dest, selector);
-						Dungeon.observe();
+						selector.observe();
 
 						for (int i = 0; i < Level.NEIGHBOURS8.length; i++) {
 							Char mob = Actor.findChar(pos + Level.NEIGHBOURS8[i]);
