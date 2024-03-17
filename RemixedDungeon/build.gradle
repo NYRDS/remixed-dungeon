@@ -33,8 +33,8 @@ android {
         manifestPlaceholders = ["admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1189
-        versionName "32.0.fix.5"
+        versionCode 1190
+        versionName "32.0.fix.6"
         targetSdkVersion 33
         compileSdkVersion 33 // bitrise want it
         minSdkVersion 21
