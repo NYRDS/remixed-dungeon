@@ -125,7 +125,7 @@ public class LuaEngine implements ResourceFinder {
 		globals.load(new TableLib());
 		globals.load(new StringLib());
 		globals.load(new CoroutineLib());
-		globals.load(new JseMathLib());
+		globals.load(new RpdMathLib());
 		globals.load(new JseIoLib());
 		globals.load(new JseOsLib());
 		globals.load(new PlatformLuajavaLib());
