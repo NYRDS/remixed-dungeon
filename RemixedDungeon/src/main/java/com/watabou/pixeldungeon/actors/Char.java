@@ -728,7 +728,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         hp(hp() + heal);
 
-        if (!noAnim) {
+        if (!noAnim && hasSprite()) {
             getSprite().emitter().burst(Speck.factory(Speck.HEALING), Math.max(1, heal * 5 / ht()));
         }
     }

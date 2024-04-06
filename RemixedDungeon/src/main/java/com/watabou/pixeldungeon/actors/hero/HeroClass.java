@@ -23,6 +23,7 @@ import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
+import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.JsonHelper;
@@ -65,7 +66,7 @@ import lombok.val;
 
 public enum HeroClass implements CharModifier {
 
-    NONE( null, ClassArmor.class),
+    NONE(null, ClassArmor.class),
     WARRIOR(R.string.HeroClass_War, WarriorArmor.class),
     MAGE(R.string.HeroClass_Mag, MageArmor.class),
     ROGUE(R.string.HeroClass_Rog, RogueArmor.class),
@@ -75,10 +76,10 @@ public enum HeroClass implements CharModifier {
     GNOLL(R.string.HeroClass_Gnoll, GnollArmor.class);
 
     private static final String FORBIDDEN_ACTIONS = "forbiddenActions";
-    private static final String FRIENDLY_MOBS     = "friendlyMobs";
+    private static final String FRIENDLY_MOBS = "friendlyMobs";
 
-    private static final String COMMON            = "common";
-    private static final String NON_EXPERT        = "non_expert";
+    private static final String COMMON = "common";
+    private static final String NON_EXPERT = "non_expert";
     public static final String QUICKSLOT = "quickslot";
     public static final String KNOWN_ITEMS = "knownItems";
 
@@ -86,15 +87,15 @@ public enum HeroClass implements CharModifier {
 
     @Getter
     private final Set<String> forbiddenActions = new HashSet<>();
-    private final Set<String> friendlyMobs     = new HashSet<>();
-    private final Set<String> immunities       = new HashSet<>();
-    private final Set<String> resistances      = new HashSet<>();
+    private final Set<String> friendlyMobs = new HashSet<>();
+    private final Set<String> immunities = new HashSet<>();
+    private final Set<String> resistances = new HashSet<>();
 
 
-    private final Integer    titleId;
-    static public final JSONObject initHeroes = JsonHelper.readJsonFromAsset(Util.isDebug() && !ModdingMode.inMod()? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
+    private final Integer titleId;
+    static public final JSONObject initHeroes = JsonHelper.readJsonFromAsset(Util.isDebug() && !ModdingMode.inMod() ? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
 
-    private String  magicAffinity = Utils.EMPTY_STRING;
+    private String magicAffinity = Utils.EMPTY_STRING;
 
     HeroClass(Integer titleId, Class<? extends ClassArmor> armorClass) {
         this.titleId = titleId;
@@ -113,7 +114,7 @@ public enum HeroClass implements CharModifier {
         if (Badges.isUnlocked(masteryBadge()) && hero.getDifficulty() < 3) {
             {
                 var tomeOfMastery = new TomeOfMastery();
-                if(tomeOfMastery.givesMasteryTo(hero)){
+                if (tomeOfMastery.givesMasteryTo(hero)) {
                     tomeOfMastery.collect(hero);
                 }
             }
@@ -132,11 +133,24 @@ public enum HeroClass implements CharModifier {
                     int slot = 0;
                     JSONArray quickslots = classDesc.getJSONArray(QUICKSLOT);
                     for (int i = 0; i < quickslots.length(); ++i) {
-                        Item item = ItemFactory.createItemFromDesc(quickslots.getJSONObject(i));
-                        if(item.valid()) {
-                            item = hero.getItem(item.getEntityKind());
+
+                        val desc = quickslots.getJSONObject(i);
+                        if (desc.has("kind")) {
+                            Item item = ItemFactory.createItemFromDesc(desc);
                             if (item.valid()) {
-                                QuickSlot.selectItem(item, slot);
+                                item = hero.getItem(item.getEntityKind());
+                                if (item.valid()) {
+                                    QuickSlot.selectItem(item, slot);
+                                    slot++;
+                                }
+                            }
+                        }
+
+                        if (desc.has("spell")) {
+                            String spellKind = desc.getString("spell");
+                            if (SpellFactory.hasSpellForName(spellKind)) {
+                                Spell spell = SpellFactory.getSpellByName(spellKind);
+                                QuickSlot.selectItem(spell.itemForSlot(), slot);
                                 slot++;
                             }
                         }
@@ -160,7 +174,7 @@ public enum HeroClass implements CharModifier {
 
                 hero.STR(classDesc.optInt("str", hero.STR()));
 
-                if(Dungeon.isFacilitated(Facilitations.SUPER_STRENGTH)) {
+                if (Dungeon.isFacilitated(Facilitations.SUPER_STRENGTH)) {
                     hero.STR(hero.STR() + 4);
                 }
 
@@ -169,11 +183,11 @@ public enum HeroClass implements CharModifier {
                 hero.hp(hero.ht(classDesc.optInt("hp", hero.ht())));
                 hero.getHeroClass().setMagicAffinity(classDesc.optString("magicAffinity", magicAffinity));
                 hero.setMaxSkillPoints(classDesc.optInt("maxSp", hero.getSkillPointsMax()));
-                hero.setSkillLevel(classDesc.optInt("sl",hero.skillLevel()));
-                hero.setSkillPoints(classDesc.optInt("sp",classDesc.optInt("startingSp", hero.getSkillPoints())));
+                hero.setSkillLevel(classDesc.optInt("sl", hero.skillLevel()));
+                hero.setSkillPoints(classDesc.optInt("sp", classDesc.optInt("startingSp", hero.getSkillPoints())));
 
             } catch (Exception e) {
-                throw ModdingMode.modException("bad InitHero.json",e);
+                throw ModdingMode.modException("bad InitHero.json", e);
             }
         }
     }
@@ -253,16 +267,16 @@ public enum HeroClass implements CharModifier {
         }
     }
 
-    private static final String CLASS          = "class";
+    private static final String CLASS = "class";
     private static final String SPELL_AFFINITY = "affinity";
 
     public void storeInBundle(Bundle bundle) {
         bundle.put(CLASS, toString());
         bundle.put(SPELL_AFFINITY, getMagicAffinity());
-        bundle.put(FORBIDDEN_ACTIONS,forbiddenActions.toArray(new String[0]));
-        bundle.put(FRIENDLY_MOBS,friendlyMobs.toArray(new String[0]));
-        bundle.put(toString()+Char.IMMUNITIES,immunities.toArray(new String[0]));
-        bundle.put(toString()+Char.RESISTANCES,resistances.toArray(new String[0]));
+        bundle.put(FORBIDDEN_ACTIONS, forbiddenActions.toArray(new String[0]));
+        bundle.put(FRIENDLY_MOBS, friendlyMobs.toArray(new String[0]));
+        bundle.put(toString() + Char.IMMUNITIES, immunities.toArray(new String[0]));
+        bundle.put(toString() + Char.RESISTANCES, resistances.toArray(new String[0]));
     }
 
     public static HeroClass restoreFromBundle(Bundle bundle) {
@@ -271,10 +285,10 @@ public enum HeroClass implements CharModifier {
 
         ret.setMagicAffinity(bundle.getString(SPELL_AFFINITY));
 
-        Collections.addAll(ret.forbiddenActions,bundle.getStringArray(FORBIDDEN_ACTIONS));
-        Collections.addAll(ret.friendlyMobs,bundle.getStringArray(FRIENDLY_MOBS));
-        Collections.addAll(ret.immunities,bundle.getStringArray(value+Char.IMMUNITIES));
-        Collections.addAll(ret.resistances,bundle.getStringArray(value+Char.RESISTANCES));
+        Collections.addAll(ret.forbiddenActions, bundle.getStringArray(FORBIDDEN_ACTIONS));
+        Collections.addAll(ret.friendlyMobs, bundle.getStringArray(FRIENDLY_MOBS));
+        Collections.addAll(ret.immunities, bundle.getStringArray(value + Char.IMMUNITIES));
+        Collections.addAll(ret.resistances, bundle.getStringArray(value + Char.RESISTANCES));
 
         return ret;
     }
@@ -400,7 +414,9 @@ public enum HeroClass implements CharModifier {
     }
 
     @Override
-    public String desc() { return name(); }
+    public String desc() {
+        return name();
+    }
 
     public int classIndex() {
         return ordinal() - 1;

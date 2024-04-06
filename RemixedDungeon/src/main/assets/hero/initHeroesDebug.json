@@ -7,24 +7,24 @@
     },
     "items": [
       {
-        "kind": "ChaosCrystal",
+        "kind": "ScrollOfMirrorImage",
         "level": 1,
-        "charge": 100,
+        "quantity": 100,
         "identetifyLevel": 2
       },
       {
-        "kind": "Halberd",
+        "kind": "WandOfFlock",
         "identified": true,
         "level": 10
       },
       {
         "kind": "WandOfIcebolt",
         "identified": true,
-        "level" : 3
+        "level": 3
       },
       {
         "kind": "Gold",
-        "quantity" : 10
+        "quantity": 10
       }
     ],
     "str": 20,
@@ -32,8 +32,8 @@
     "magicAffinity": "Common",
     "sp": 100,
     "maxSp": 100,
-    "sl" : 10,
-    "lvl" : 30
+    "sl": 10,
+    "lvl": 30
   },
   "non_expert": {
     "items": [
@@ -49,13 +49,18 @@
   "WARRIOR": {
     "weapon": {
       "kind": "ShortSword",
-      "level" : 200,
+      "level": 200,
       "identified": true
     },
     "str": 11,
     "knownItems": [
       {
         "kind": "PotionOfStrength"
+      }
+    ],
+    "quickslot": [
+      {
+        "spell": "DieHard"
       }
     ],
     "magicAffinity": "Combat"
@@ -70,6 +75,9 @@
     "quickslot": [
       {
         "kind": "WandOfMagicMissile"
+      },
+      {
+        "spell": "WindGust"
       }
     ],
     "knownItems": [
@@ -77,8 +85,8 @@
         "kind": "ScrollOfIdentify"
       }
     ],
-    "maxSp":15,
-    "sp":15,
+    "maxSp": 15,
+    "sp": 15,
     "magicAffinity": "Elemental"
   },
   "ROGUE": {
@@ -90,6 +98,11 @@
     "knownItems": [
       {
         "kind": "ScrollOfMagicMapping"
+      }
+    ],
+    "quickslot": [
+      {
+        "spell": "Cloak"
       }
     ],
     "magicAffinity": "Rogue"
@@ -104,6 +117,9 @@
     "quickslot": [
       {
         "kind": "Boomerang"
+      },
+      {
+        "spell": "Calm"
       }
     ],
     "magicAffinity": "Huntress",
@@ -129,9 +145,11 @@
     "quickslot": [
       {
         "kind": "CommonArrow"
+      },
+      {
+        "spell": "MagicArrow"
       }
     ],
-
     "immunities": [
       "Roots"
     ],
@@ -149,6 +167,11 @@
         "kind": "SkeletonKey",
         "levelId": "7",
         "depth": "7"
+      }
+    ],
+    "quickslot": [
+      {
+        "spell": "SummonDeathling"
       }
     ],
     "knownItems": [
@@ -177,6 +200,9 @@
     "quickslot": [
       {
         "kind": "Dart"
+      },
+      {
+        "spell": "Roar"
       }
     ],
     "forbiddenActions": [

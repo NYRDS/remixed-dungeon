@@ -34,7 +34,11 @@
         "kind": "PotionOfStrength"
       }
     ],
-    "isSpellUser": true,
+    "quickslot": [
+      {
+        "spell": "DieHard"
+      }
+    ],
     "magicAffinity": "Combat"
   },
   "MAGE": {
@@ -47,6 +51,9 @@
     "quickslot": [
       {
         "kind": "WandOfMagicMissile"
+      },
+      {
+        "spell": "WindGust"
       }
     ],
     "knownItems": [
@@ -70,6 +77,11 @@
         "kind": "ScrollOfMagicMapping"
       }
     ],
+    "quickslot": [
+      {
+        "spell": "Cloak"
+      }
+    ],
     "magicAffinity": "Rogue"
   },
   "HUNTRESS": {
@@ -82,6 +94,9 @@
     "quickslot": [
       {
         "kind": "Boomerang"
+      },
+      {
+        "spell": "Calm"
       }
     ],
     "hp": 15,
@@ -107,6 +122,9 @@
     "quickslot": [
       {
         "kind": "CommonArrow"
+      },
+      {
+        "spell": "MagicArrow"
       }
     ],
 
@@ -126,6 +144,11 @@
       {
         "kind": "SkeletonKey",
         "levelId": "7"
+      }
+    ],
+    "quickslot": [
+      {
+        "spell": "SummonDeathling"
       }
     ],
     "hp": 15,
@@ -155,6 +178,9 @@
     "quickslot": [
       {
         "kind": "Dart"
+      },
+      {
+        "spell": "Roar"
       }
     ],
     "forbiddenActions": [
