@@ -181,8 +181,8 @@ public class SpiderLevel extends CommonLevel {
 
 	@Override
 	public int nMobs() {
-		return 0;
-	}
+        return super.nMobs();
+    }
 
 	@Override
 	protected void createMobs() {

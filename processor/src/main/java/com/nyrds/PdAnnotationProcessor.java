@@ -63,9 +63,7 @@ PdAnnotationProcessor extends AbstractProcessor{
 				defaultValues.put(element,defaultValue);
 			}
 
-			if(fieldsByClass.get(parent)==null) {
-				fieldsByClass.put(parent, new HashSet<>());
-			}
+            fieldsByClass.computeIfAbsent(parent, k -> new HashSet<>());
 
 			fieldsByClass.get(parent).add(element);
 		}

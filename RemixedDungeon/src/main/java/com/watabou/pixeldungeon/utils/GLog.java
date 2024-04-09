@@ -27,7 +27,7 @@ public class GLog {
 	public static final String WARNING		= "** ";
 	public static final String HIGHLIGHT	= "@@ ";
 
-	public static Signal<String> update = new Signal<>();
+	public static final Signal<String> update = new Signal<>();
 	
 	private static FileWriter logWriter;
 	private static boolean readonlySd = false;
@@ -70,7 +70,7 @@ public class GLog {
 			text = Utils.format( text, args );
 		}
 		
-		text = today.toString() + "\t" + text + "\n";
+		text = today + "\t" + text + "\n";
 		
 		try {
 			logWriter.write(text);

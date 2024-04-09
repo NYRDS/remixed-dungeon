@@ -25,7 +25,7 @@ public class SpellFactory {
 
 	static private final LuaScript script = new LuaScript("scripts/spells/SpellsByAffinity", null);
 
-	static private Set<String> forbiddenSpells = new HashSet<>();
+	static private final Set<String> forbiddenSpells = new HashSet<>();
 
 
 	@SneakyThrows

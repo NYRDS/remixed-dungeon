@@ -4,7 +4,6 @@ package com.watabou.pixeldungeon.actors.buffs;
 import com.nyrds.Packable;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -59,6 +58,6 @@ public class Shadows extends Invisibility {
 
 	@Override
 	public CharSprite.State charSpriteStatus() {
-		return CharSprite.State.INVISIBLE;
-	}
+        return super.charSpriteStatus();
+    }
 }

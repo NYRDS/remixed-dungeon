@@ -4,6 +4,7 @@ package com.watabou.pixeldungeon.plants;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.watabou.noosa.Gizmo;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -47,8 +48,8 @@ public class Plant extends LevelObject {
 			Buff.affect(ch, Barkskin.class).level(ch.ht() / 3);
 
 			if (Random.Int(5) == 0) {
-				Treasury.getLevelTreasury().random(Treasury.Category.SEED).doDrop(ch);;
-			}
+				Treasury.getLevelTreasury().random(Treasury.Category.SEED).doDrop(ch);
+            }
 			if (Random.Int(5) == 0) {
 				new Dewdrop().doDrop(ch);
 			}
@@ -70,7 +71,7 @@ public class Plant extends LevelObject {
 	private void wither() {
 		Dungeon.level.remove(this);
 		lo_sprite.ifPresent(
-				sprite -> sprite.kill());
+				Gizmo::kill);
 		if (Dungeon.isCellVisible(pos)) {
 			CellEmitter.get(pos).burst(LeafParticle.GENERAL, 6);
 		}
@@ -91,8 +92,8 @@ public class Plant extends LevelObject {
 
 	@Override
 	public boolean nonPassable(Char ch) {
-		return false;
-	}
+        return super.nonPassable(ch);
+    }
 
 	@Override
 	public boolean affectItems() {

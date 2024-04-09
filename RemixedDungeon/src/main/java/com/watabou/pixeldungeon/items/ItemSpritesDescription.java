@@ -15,10 +15,10 @@ public class ItemSpritesDescription {
 
 	static private final Map<String, ItemSpritesDescription> m_descMap = new HashMap<>();
 
-	private String imageFile;
-	private int imageIndex;
-	private boolean fliesStraight;
-	private boolean fliesFastRotating;
+	private final String imageFile;
+	private final int imageIndex;
+	private final boolean fliesStraight;
+	private final boolean fliesFastRotating;
 
 	private ItemSpritesDescription(String imageFile, int imageIndex, boolean fliesStraight, boolean fliesFastRotating) {
 		this.imageFile = imageFile;

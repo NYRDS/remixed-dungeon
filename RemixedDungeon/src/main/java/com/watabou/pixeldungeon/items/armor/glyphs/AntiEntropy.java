@@ -17,7 +17,7 @@ import com.watabou.utils.Random;
 
 public class AntiEntropy extends Glyph {
 
-	private static Glowing BLUE = new Glowing( 0x0000FF );
+	private static final Glowing BLUE = new Glowing( 0x0000FF );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {

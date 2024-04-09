@@ -30,7 +30,7 @@ public class Group extends Gizmo {
 	static int nullGizmo;
 
 	@NotNull
-	protected ArrayList<Gizmo> members = new ArrayList<>();
+	protected final ArrayList<Gizmo> members = new ArrayList<>();
 
 	private boolean sorted = false;
 	public boolean sort = false;
@@ -183,6 +183,7 @@ public class Group extends Gizmo {
 		return members.get(i);
 	}
 
+	/** @noinspection ComparatorCombinators*/
 	public void sort() {
 		members.removeAll(Collections.singleton(null));
 		Collections.sort(members, (a,b)-> a.layer - b.layer);

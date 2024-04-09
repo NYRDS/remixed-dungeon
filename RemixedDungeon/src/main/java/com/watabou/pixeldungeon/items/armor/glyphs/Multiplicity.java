@@ -15,7 +15,7 @@ import com.watabou.utils.Random;
 
 public class Multiplicity extends Glyph {
 
-	private static Glowing PINK = new Glowing( 0xCCAA88 );
+	private static final Glowing PINK = new Glowing( 0xCCAA88 );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {

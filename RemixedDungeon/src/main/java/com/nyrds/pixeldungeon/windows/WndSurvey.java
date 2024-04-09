@@ -25,7 +25,7 @@ public class WndSurvey extends Window {
     private static final   String SURVEY_TAKEN = "survey_taken";
     private static final   String SURVEY       = "survey";
 
-    protected int WIDTH = WndHelper.getFullscreenWidth();
+    protected final int WIDTH = WndHelper.getFullscreenWidth();
 
     private Text      questionText;
     private Component answers;

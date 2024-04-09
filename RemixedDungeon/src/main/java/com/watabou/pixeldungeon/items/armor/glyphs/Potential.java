@@ -16,7 +16,7 @@ import com.watabou.utils.Random;
 
 public class Potential extends Glyph {
 
-	private static Glowing BLUE = new Glowing( 0x66CCEE );
+	private static final Glowing BLUE = new Glowing( 0x66CCEE );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {

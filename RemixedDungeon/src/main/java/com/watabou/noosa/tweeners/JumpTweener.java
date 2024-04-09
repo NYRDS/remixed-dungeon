@@ -11,12 +11,12 @@ import com.watabou.utils.PointF;
  */
 public class JumpTweener extends Tweener {
 
-	public Visual visual;
+	public final Visual visual;
 
-	public PointF start;
-	public PointF end;
+	public final PointF start;
+	public final PointF end;
 
-	public float height;
+	public final float height;
 
 	@LuaInterface
 	public static void attachTo(CharSprite spr, int targetCell,  float height, float time) {

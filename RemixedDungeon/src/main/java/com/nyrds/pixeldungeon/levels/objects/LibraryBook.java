@@ -44,7 +44,8 @@ public class LibraryBook extends LevelObject {
 
 	@Override
 	public void burn() {
-	}
+        super.burn();
+    }
 
 	@Override
 	public boolean stepOn(Char hero) {

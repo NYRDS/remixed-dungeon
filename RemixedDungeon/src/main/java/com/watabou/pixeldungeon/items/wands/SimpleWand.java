@@ -7,7 +7,7 @@ import lombok.SneakyThrows;
 public abstract class SimpleWand extends Wand {
 	
 	@SuppressWarnings("rawtypes")
-	private static Class[] variants = {	WandOfAmok.class, 
+	private static final Class[] variants = {	WandOfAmok.class,
 		WandOfAvalanche.class, 
 		WandOfDisintegration.class, 
 		WandOfFirebolt.class, 

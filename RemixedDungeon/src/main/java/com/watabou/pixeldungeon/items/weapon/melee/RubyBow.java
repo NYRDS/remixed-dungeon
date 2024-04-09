@@ -11,8 +11,8 @@ public class RubyBow extends Bow {
 	
 	@Override
 	public double acuFactor() {
-		return 1;
-	}
+        return super.acuFactor();
+    }
 	
 	@Override
 	public double dmgFactor() {

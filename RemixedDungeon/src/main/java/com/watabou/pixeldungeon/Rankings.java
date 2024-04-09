@@ -138,7 +138,7 @@ public enum Rankings {
 				removedGame = records.remove( size - 1 );
 			}
 
-			if (removedGame.gameFile.length() > 0) {
+			if (!removedGame.gameFile.isEmpty()) {
 				Game.instance().deleteFile( removedGame.gameFile );
 			}
 		}

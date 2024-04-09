@@ -55,7 +55,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
     protected boolean hitChars = true;
     protected boolean hitObjects = false;
 
-    private boolean directional = true;
+    private final boolean directional = true;
 
     private static final Class<?>[] wands = {WandOfTeleportation.class,
             WandOfSlowness.class, WandOfFirebolt.class, WandOfPoison.class,

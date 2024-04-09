@@ -6,7 +6,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class UseSpell extends CharAction{
 
-    public Spell spell;
+    public final Spell spell;
 
     public UseSpell(Spell spell) {
         this.spell = spell;

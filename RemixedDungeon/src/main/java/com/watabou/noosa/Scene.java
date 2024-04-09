@@ -33,7 +33,7 @@ public class Scene extends Group {
 	private Signal.Listener<Keys.Key> keyListener;
 	private final ArrayList<IWindow> activeWindows = new ArrayList<>();
 
-	static protected LuaScript script = new LuaScript("scripts/services/scene", null);
+	static protected final LuaScript script = new LuaScript("scripts/services/scene", null);
 	static public String sceneMode = "none";
 
 	public void create() {

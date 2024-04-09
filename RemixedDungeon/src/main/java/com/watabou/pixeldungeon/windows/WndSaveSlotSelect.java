@@ -1,5 +1,7 @@
 package com.watabou.pixeldungeon.windows;
 
+import androidx.annotation.NonNull;
+
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
@@ -61,23 +63,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
         add(tfTitle);
 
         if (!_saving && Game.instance().playGames.isConnected()) {
-            SimpleButton refreshBtn = new SimpleButton(Icons.get(Icons.BTN_SYNC_REFRESH)) {
-                @Override
-                protected void onClick() {
-                    final Window refreshing = new WndMessage("Please wait a bit...") {
-                        @Override
-                        public void onBackPressed() {
-                        }
-                    };
-
-                    GameLoop.addToScene(refreshing);
-                    Game.instance().playGames.loadSnapshots(() -> GameLoop.pushUiTask(() -> {
-                        refreshing.hide();
-                        refreshWindow();
-                    }));
-                }
-            };
-            refreshBtn.setPos(WIDTH - refreshBtn.width() - GAP * 2, tfTitle.getY());
+            SimpleButton refreshBtn = getRefreshBtn(WIDTH, tfTitle);
             add(refreshBtn);
         }
 
@@ -234,6 +220,28 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
         add(bottomRow);
 
         resize(width, (int) (height + bottomRow.height()));
+    }
+
+    @NonNull
+    private SimpleButton getRefreshBtn(int WIDTH, Text tfTitle) {
+        SimpleButton refreshBtn = new SimpleButton(Icons.get(Icons.BTN_SYNC_REFRESH)) {
+            @Override
+            protected void onClick() {
+                final Window refreshing = new WndMessage("Please wait a bit...") {
+                    @Override
+                    public void onBackPressed() {
+                    }
+                };
+
+                GameLoop.addToScene(refreshing);
+                Game.instance().playGames.loadSnapshots(() -> GameLoop.pushUiTask(() -> {
+                    refreshing.hide();
+                    refreshWindow();
+                }));
+            }
+        };
+        refreshBtn.setPos(WIDTH - refreshBtn.width() - GAP * 2, tfTitle.getY());
+        return refreshBtn;
     }
 
 

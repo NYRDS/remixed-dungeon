@@ -18,7 +18,7 @@ import java.util.Iterator;
 public class Bestiary {
 
 	private static final String FEELINGS = "Feelings";
-	private static JSONObject bestiaryData;
+	private static final JSONObject bestiaryData;
 	private static JSONObject Feelings;
 	private static double feelingChance;
 

@@ -49,17 +49,13 @@ public class AzuterronNPC extends Shopkeeper {
 
     @Override
     public boolean reset() {
-        return true;
+        return super.reset();
     }
 
     @Override
     public boolean act() {
 
-        ItemUtils.throwItemAway(getPos());
-
-        getSprite().turnTo(getPos(), Dungeon.hero.getPos());
-        spend(TICK);
-        return true;
+        return super.act();
     }
 
     @Override

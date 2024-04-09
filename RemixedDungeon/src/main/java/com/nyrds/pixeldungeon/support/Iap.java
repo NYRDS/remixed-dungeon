@@ -23,7 +23,7 @@ public class Iap implements IPurchasesUpdated {
     private static final String SKU_LEVEL_3 = "supporter_level_3";
     private static final String SKU_LEVEL_4 = "supporter_level_4";
 
-    private IapAdapter mIap;
+    private final IapAdapter mIap;
 
     private IIapCallback mIapCallback = null;
 

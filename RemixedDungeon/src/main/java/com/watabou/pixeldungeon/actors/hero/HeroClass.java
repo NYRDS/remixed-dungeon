@@ -275,13 +275,13 @@ public enum HeroClass implements CharModifier {
         bundle.put(SPELL_AFFINITY, getMagicAffinity());
         bundle.put(FORBIDDEN_ACTIONS, forbiddenActions.toArray(new String[0]));
         bundle.put(FRIENDLY_MOBS, friendlyMobs.toArray(new String[0]));
-        bundle.put(toString() + Char.IMMUNITIES, immunities.toArray(new String[0]));
-        bundle.put(toString() + Char.RESISTANCES, resistances.toArray(new String[0]));
+        bundle.put(this + Char.IMMUNITIES, immunities.toArray(new String[0]));
+        bundle.put(this + Char.RESISTANCES, resistances.toArray(new String[0]));
     }
 
     public static HeroClass restoreFromBundle(Bundle bundle) {
         String value = bundle.getString(CLASS);
-        HeroClass ret = value.length() > 0 ? valueOf(value) : ROGUE;
+        HeroClass ret = !value.isEmpty() ? valueOf(value) : ROGUE;
 
         ret.setMagicAffinity(bundle.getString(SPELL_AFFINITY));
 

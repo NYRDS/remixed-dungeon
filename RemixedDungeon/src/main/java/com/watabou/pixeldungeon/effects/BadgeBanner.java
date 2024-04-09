@@ -21,7 +21,7 @@ public class BadgeBanner extends Image {
 	private static final float STATIC_TIME		= 1f;
 	private static final float FADE_OUT_TIME	= 1.0f;
 	
-	private int index;
+	private final int index;
 	private float time;
 	
 	private static TextureFilm atlas;

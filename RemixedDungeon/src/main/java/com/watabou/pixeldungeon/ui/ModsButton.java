@@ -29,8 +29,8 @@ import java.io.File;
 
 public class ModsButton extends ImageButton implements InterstitialPoint, DownloadStateListener.IDownloadComplete {
 
-    private Text text;
-    private Text text2;
+    private final Text text;
+    private final Text text2;
 
     static private boolean needUpdate;
 

@@ -261,7 +261,7 @@ public abstract class RegularLevel extends CustomLevel {
 			if (r.type == Type.NULL &&
 					r.connected.size() == 1) {
 
-				if (specials.size() > 0 &&
+				if (!specials.isEmpty() &&
 						r.width() > 3 && r.height() > 3 &&
 						Random.Int(specialRooms * specialRooms + 2) == 0) {
 
@@ -357,7 +357,7 @@ public abstract class RegularLevel extends CustomLevel {
 
 
 	protected int minRoomSize = 7;
-	protected int maxRoomSize = 9;
+	protected final int maxRoomSize = 9;
 
 	protected void split(Rect rect) {
 
@@ -395,7 +395,7 @@ public abstract class RegularLevel extends CustomLevel {
 		}
 	}
 
-	private Set<Room> paintedRoom = new HashSet<>();
+	private final Set<Room> paintedRoom = new HashSet<>();
 
 	@SneakyThrows
 	private void paintRoom(Room r) {

@@ -466,9 +466,7 @@ public class ItemFactory {
                 return itemByName("Gold");
             }
 
-        } catch (InstantiationException e) {
-            throw new TrackedRuntimeException("itemFactory", e);
-        } catch (IllegalAccessException e) {
+        } catch (InstantiationException | IllegalAccessException e) {
             throw new TrackedRuntimeException("itemFactory", e);
         }
     }

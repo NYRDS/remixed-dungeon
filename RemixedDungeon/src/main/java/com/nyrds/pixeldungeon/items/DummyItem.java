@@ -42,7 +42,7 @@ public class DummyItem extends EquipableItem {
 
     @Override
     public int requiredSTR() {
-        return 0;
+        return super.requiredSTR();
     }
 
     @Override

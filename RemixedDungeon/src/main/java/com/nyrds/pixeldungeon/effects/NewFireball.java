@@ -105,10 +105,10 @@ public class NewFireball extends Component {
 	
 	public static class Flame extends Image {
 		
-		private static float LIFESPAN	= 1f;
+		private static final float LIFESPAN	= 1f;
 		
-		private static float SPEED	= -20f;
-		private static float ACC	= -20f;
+		private static final float SPEED	= -20f;
+		private static final float ACC	= -20f;
 		
 		private float timeLeft;
 		

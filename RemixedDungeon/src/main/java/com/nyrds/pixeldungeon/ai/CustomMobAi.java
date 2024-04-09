@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class CustomMobAi extends MobAi implements AiState {
 
-    String scriptFile;
+    final String scriptFile;
 
     private final LuaScript script;
 

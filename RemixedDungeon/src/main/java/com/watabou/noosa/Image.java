@@ -35,7 +35,7 @@ public class Image extends Visual implements IPlaceable {
 	public boolean flipHorizontal;
 	public boolean flipVertical;
 	
-	protected float[] vertices;
+	protected final float[] vertices;
 	private final FloatBuffer verticesBuffer;
 	
 	protected boolean dirty;
@@ -185,8 +185,8 @@ public class Image extends Visual implements IPlaceable {
 	}
 
 	public float bottom() {
-		return getY() + height();
-	}
+        return super.bottom();
+    }
 
 	public FloatBuffer getVerticesBuffer() {
 		return verticesBuffer;
@@ -194,6 +194,6 @@ public class Image extends Visual implements IPlaceable {
 
 	@Override
 	public IPlaceable shadowOf() {
-		return null;
-	}
+        return super.shadowOf();
+    }
 }

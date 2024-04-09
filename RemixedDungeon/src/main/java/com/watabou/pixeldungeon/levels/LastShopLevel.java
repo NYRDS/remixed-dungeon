@@ -89,7 +89,7 @@ public class LastShopLevel extends RegularLevel {
 		Room roomShop = null;
 		int shopSquare = 0;
 		for (Room r : rooms) {
-			if (r.type == Type.NULL && r.connected.size() > 0) {
+			if (r.type == Type.NULL && !r.connected.isEmpty()) {
 				r.type = Type.PASSAGE; 
 				if (r.square() > shopSquare) {
 					roomShop = r;

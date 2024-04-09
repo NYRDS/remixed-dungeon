@@ -28,7 +28,7 @@ public class Keys {
 	public static final int VOLUME_UP	= KeyEvent.KEYCODE_VOLUME_UP;
 	public static final int VOLUME_DOWN	= KeyEvent.KEYCODE_VOLUME_DOWN;
 
-	public static Signal<Key> event = new Signal<>(true);
+	public static final Signal<Key> event = new Signal<>(true);
 	
 	public static void processEvent(KeyEvent e) {
 		if(e == null) { //shit happens
@@ -48,8 +48,8 @@ public class Keys {
 	
 	public static class Key {
 		
-		public int code;
-		public boolean pressed;
+		public final int code;
+		public final boolean pressed;
 		
 		public Key( int code, boolean pressed ) {
 			this.code = code;

@@ -43,7 +43,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     private final DungeonTilemap roofTilemap;
     private final DungeonTilemap doorTilemap;
 
-    SeededRandom random = new SeededRandom();
+    final SeededRandom random = new SeededRandom();
 
     private final int mSize;
     private final int mWidth;

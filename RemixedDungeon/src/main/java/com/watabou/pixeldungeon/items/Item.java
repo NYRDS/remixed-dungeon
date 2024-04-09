@@ -84,10 +84,10 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     @NotNull
 	protected String info = getClassParam("Info", StringsManager.getVar(R.string.Item_Info), false);
     @NotNull
-	protected String info2 = getClassParam("Info2", StringsManager.getVar(R.string.Item_Info2), false);
+	protected final String info2 = getClassParam("Info2", StringsManager.getVar(R.string.Item_Info2), false);
 
     protected int image = 0;
-	protected int overlayIndex = -1;
+	protected final int overlayIndex = -1;
 
 	static private final String overlayFile = "items/overlays.png";
 	protected String imageFile;
@@ -509,8 +509,8 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	}
 
 	public boolean dontPack() {
-		return false;
-	}
+        return super.dontPack();
+    }
 
 	@LuaInterface
 	public void cast(final @NotNull Char user, int dst) {

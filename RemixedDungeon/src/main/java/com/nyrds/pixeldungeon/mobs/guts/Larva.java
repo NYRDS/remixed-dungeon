@@ -31,7 +31,7 @@ public class Larva extends Mob {
         lvl(1);
     }
 
-    String [] imago = {
+    final String [] imago = {
         "Scorpio",
         "Worm",
         "Eye"

@@ -36,7 +36,7 @@ public class Window extends Group implements Signal.Listener<Key>, IWindow {
 	@Getter
 	protected int height;
 
-	protected NinePatch chrome;
+	protected final NinePatch chrome;
 	
 	public static final int TITLE_COLOR = 0xCC33FF;
 	

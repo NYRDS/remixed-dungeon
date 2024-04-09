@@ -25,7 +25,7 @@ class BuffsTab extends Group {
     private float pos;
 
     public BuffsTab(final Char chr) {
-        chr.forEachBuff(buff -> buffSlot(buff));
+        chr.forEachBuff(this::buffSlot);
     }
 
     private void buffSlot(CharModifier buff) {

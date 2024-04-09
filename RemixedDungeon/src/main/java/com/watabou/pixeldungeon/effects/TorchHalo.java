@@ -10,7 +10,7 @@ import javax.microedition.khronos.opengles.GL10;
 
 public class TorchHalo extends Halo {
 
-	private CharSprite target;
+	private final CharSprite target;
 	
 	private float phase = 0;
 	

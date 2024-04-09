@@ -78,8 +78,8 @@ public class RunicSkull extends MultiKindMob {
 
 	@Override
 	public int getKind() {
-		return kind;
-	}
+        return super.getKind();
+    }
 
 	@Override
 	public boolean getCloser(int target) {

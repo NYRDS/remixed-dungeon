@@ -8,7 +8,7 @@ import com.watabou.utils.Random;
 
 public class MonkSprite extends MobSprite {
 	
-	private Animation kick;
+	private final Animation kick;
 	
 	public MonkSprite() {
 		super();

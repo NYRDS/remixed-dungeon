@@ -12,7 +12,7 @@ import lombok.SneakyThrows;
  */
 class MenuButton extends ImageButton {
 
-	private Class<? extends Window> wndClass;
+	private final Class<? extends Window> wndClass;
 	private boolean enabled = true;
 
 	public MenuButton(Image image, Class<? extends Window> _wndClass) {

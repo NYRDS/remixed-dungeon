@@ -24,7 +24,7 @@ public class VariativeDungeonTilemap extends DungeonTilemap {
 
     private final XTilemapConfiguration xTilemapConfiguration;
 
-    static Map<String, XTilemapConfiguration> xTilemapConfigurationCache = new HashMap<>();
+    static final Map<String, XTilemapConfiguration> xTilemapConfigurationCache = new HashMap<>();
 
     private final Level level;
 

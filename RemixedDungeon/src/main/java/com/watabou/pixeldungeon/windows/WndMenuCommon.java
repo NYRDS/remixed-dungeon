@@ -32,8 +32,8 @@ public abstract class WndMenuCommon extends Window {
 
     @Override
 	public void onBackPressed() {
-		hide();
-	}
+        super.onBackPressed();
+    }
 
     protected void addSoundControls(VBox menuItems) {
         menuItems.add(new MenuCheckBox(R.string.WndSettings_Music, GamePreferences.music()) {

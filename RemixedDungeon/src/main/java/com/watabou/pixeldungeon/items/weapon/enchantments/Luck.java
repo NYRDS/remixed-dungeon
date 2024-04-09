@@ -7,7 +7,7 @@ import com.watabou.pixeldungeon.sprites.Glowing;
 
 public class Luck extends Weapon.Enchantment {
 	
-	private static Glowing GREEN = new Glowing( 0x00FF00 );
+	private static final Glowing GREEN = new Glowing( 0x00FF00 );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

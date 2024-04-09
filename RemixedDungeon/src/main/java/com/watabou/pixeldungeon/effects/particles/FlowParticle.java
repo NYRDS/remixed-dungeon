@@ -52,10 +52,10 @@ public class FlowParticle extends PixelParticle {
 		
 		private static final float DELAY	= 0.1f;
 		
-		private int pos;
+		private final int pos;
 		
-		private float x;
-		private float y;
+		private final float x;
+		private final float y;
 		
 		private float delay;
 		

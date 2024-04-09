@@ -41,7 +41,7 @@ public class Library {
 	private final static String  LIBRARY_FILE = "library.json";
 	private static       boolean saveNeeded   = false;
 
-	private static Gson gson = new Gson();
+	private static final Gson gson = new Gson();
 
 	static {
 		loadLibrary();
@@ -66,8 +66,6 @@ public class Library {
 					JsonHelper.readJsonFromStream(FileSystem.getInputStream(LIBRARY_FILE), LIBRARY_FILE).toString(),
 					new TypeToken<Map<String, Map<String, Integer>>>() {}.getType()
 			);
-		} catch (FileNotFoundException ignore) {
-
 		} catch (Exception e) {
 			EventCollector.logException(e,"library restore failed");
 		}
@@ -80,8 +78,6 @@ public class Library {
 					JsonHelper.readJsonFromStream(FileSystem.getInputStream(getLibraryFile()), LIBRARY_FILE).toString(),
 					new TypeToken<Map<String, Map<String, Integer>>>() {}.getType()
 			);
-		} catch (FileNotFoundException ignore) {
-
 		} catch (Exception e) {
 			loadOldLibrary();
 		}
@@ -168,8 +164,8 @@ public class Library {
 	}
 
 	public static class EntryHeader {
-		public String header;
-		public Image icon;
+		public final String header;
+		public final Image icon;
 
 		public EntryHeader(String hdr, Image icn) {
 			header = hdr;

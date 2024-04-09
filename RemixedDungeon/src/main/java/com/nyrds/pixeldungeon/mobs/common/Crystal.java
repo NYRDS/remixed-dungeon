@@ -85,8 +85,8 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 	@Override
 	public int getKind() {
-		return kind;
-	}
+        return super.getKind();
+    }
 
 	@Override
 	public int damageRoll() {

@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class ScrollOfCurse extends Scroll {
 
-	private static Class<?>[] badBuffs = {
+	private static final Class<?>[] badBuffs = {
 			Blindness.class,
 			Charm.class,
 			Roots.class,

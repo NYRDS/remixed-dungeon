@@ -13,9 +13,9 @@ import org.jetbrains.annotations.NotNull;
 
 public class Pushing extends Actor {
 
-	private Char ch;
-	private int from;
-	private int to;
+	private final Char ch;
+	private final int from;
+	private final int to;
 	
 	private Effect effect;
 	

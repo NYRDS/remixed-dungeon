@@ -93,7 +93,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public Executor serviceExecutor = new ReportingExecutor();
 
-    protected GameLoop gameLoop;
+    protected final GameLoop gameLoop;
 
     public Game(Class<? extends Scene> c) {
         super();

@@ -48,6 +48,7 @@ public class ChaosStaff extends Wand {
 
     @Override
     public void ownerDoesDamage(int damage) {
+        super.ownerDoesDamage(damage);
     }
 
     private void selectImage() {

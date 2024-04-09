@@ -194,10 +194,10 @@ public class Badges {
 		DOCTOR_QUEST_COMPLETED(StringsManager.getVar(R.string.MedicineMask_Obtained),81),
 		MASTERY_GNOLL;
 
-		public boolean meta;
+		public final boolean meta;
 
-		public String description;
-		public int    image;
+		public final String description;
+		public final int    image;
 
 		Badge(String description, int image) {
 			this(description, image, false);

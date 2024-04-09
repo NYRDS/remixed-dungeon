@@ -57,7 +57,7 @@ public class HuntressArmor extends ClassArmor {
 			}
 		}
 		
-		if (targets.size() == 0) {
+		if (targets.isEmpty()) {
             GLog.w(StringsManager.getVar(R.string.HuntressArmor_NoEnemies));
 			return;
 		}

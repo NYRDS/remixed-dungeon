@@ -32,7 +32,7 @@ public class Journal {
 		PLAGUEDOCTOR			(StringsManager.getVar(R.string.Journal_PlagueDoctorNPC));
 
 
-		private String desc;
+		private final String desc;
 
 		Feature(String desc) {
 			this.desc = desc;

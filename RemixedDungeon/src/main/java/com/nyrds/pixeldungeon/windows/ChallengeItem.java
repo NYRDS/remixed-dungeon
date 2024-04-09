@@ -23,15 +23,15 @@ import java.util.Objects;
 public class ChallengeItem extends Component {
 
     public static final String UI_CHALLENGES_PNG = "ui/challenges.png";
-    protected ColorBlock bg = new ColorBlock(width, height, 0xFF4A4D44);
-    protected ImageButton descIcon;
-    protected ImageButton challengeIcon;
+    protected final ColorBlock bg = new ColorBlock(width, height, 0xFF4A4D44);
+    protected final ImageButton descIcon;
+    protected final ImageButton challengeIcon;
 
     private boolean state = false;
 
-    protected Text label  = PixelScene.createText(GuiProperties.regularFontSize());
+    protected final Text label  = PixelScene.createText(GuiProperties.regularFontSize());
 
-    HBox box;
+    final HBox box;
 
     private final int index;
 

@@ -152,7 +152,7 @@ public class HallsLevel extends RegularLevel {
 	
 	private static class Stream extends Group {
 		
-		private int pos;
+		private final int pos;
 		
 		private float delay;
 		

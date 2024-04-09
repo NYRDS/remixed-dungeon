@@ -23,7 +23,7 @@ import com.watabou.utils.PointF;
 
 public class BitmapTextMultiline extends BitmapText {
 
-	protected float spaceSize;
+	protected final float spaceSize;
 	
 	
 	public BitmapTextMultiline( String text, Font font ) {
@@ -43,7 +43,7 @@ public class BitmapTextMultiline extends BitmapText {
 		// Word size
 		PointF metrics = new PointF();
 		
-		String paragraphs[] = PARAGRAPH.split( text );
+		String[] paragraphs = PARAGRAPH.split( text );
 		
 		// Current character (used in masking)
 		int pos = 0;
@@ -54,7 +54,7 @@ public class BitmapTextMultiline extends BitmapText {
 
 			for (String word : words) {
 
-				if (word.length() == 0) {
+				if (word.isEmpty()) {
 					// This case is possible when there are
 					// several spaces coming along
 					continue;

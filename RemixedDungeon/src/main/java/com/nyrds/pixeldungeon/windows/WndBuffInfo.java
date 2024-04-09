@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class WndBuffInfo extends Window {
 
-	private TextureFilm film;
+	private final TextureFilm film;
 
 	protected static final int BTN_HEIGHT	= 18;
 	protected static final int WIDTH		= 100;

@@ -65,7 +65,8 @@ public class WndClass extends WndTabbed {
 
         private static final int MARGIN = 4;
 
-        public  float width, height;
+        public final float width;
+        public final float height;
 
         public PerksTab() {
             super();
@@ -85,8 +86,8 @@ public class WndClass extends WndTabbed {
 
         private static final int MARGIN = 4;
 
-        public float height;
-        public float width;
+        public final float height;
+        public final float width;
 
         public MasteryTab() {
             super();

@@ -74,7 +74,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 	@Getter
 	public Type type = Type.HEAP;
 
-	public static Map<Type, Float> regularHeaps = new HashMap<>();
+	public static final Map<Type, Float> regularHeaps = new HashMap<>();
 	static {
 		regularHeaps.put(Type.SKELETON,1f);
 		regularHeaps.put(Type.CHEST,4f);
@@ -82,7 +82,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 		regularHeaps.put(Type.HEAP,14f);
 	}
 
-	public static Map<Type, Float> sageHeaps = new HashMap<>();
+	public static final Map<Type, Float> sageHeaps = new HashMap<>();
 	static {
 		sageHeaps.put(Type.SKELETON,1f);
 		sageHeaps.put(Type.CHEST,4f);
@@ -134,7 +134,7 @@ public class Heap implements Bundlable, NamedEntityKind {
 	}
 	
 	public Glowing glowing() {
-		return (type == Type.HEAP) && items.size() > 0 ? items.peek().glowing() : null;
+		return (type == Type.HEAP) && !items.isEmpty() ? items.peek().glowing() : null;
 	}
 	
 	public void open( Char chr ) {

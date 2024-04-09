@@ -16,7 +16,7 @@ import com.watabou.utils.Random;
 public class ChaosCommon {
 	
 	@SuppressWarnings("rawtypes")
-	private static Class[] blobs = {
+	private static final Class[] blobs = {
 		ConfusionGas.class,
 		LiquidFlame.class,
 		ParalyticGas.class,

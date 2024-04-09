@@ -36,13 +36,13 @@ public class Codex extends Book {
 
 	@Override
 	public boolean isIdentified() {
-		return true;
-	}
+        return super.isIdentified();
+    }
 	
 	@Override
 	public boolean isUpgradable() {
-		return false;
-	}
+        return super.isUpgradable();
+    }
 
 	public void fromJson(JSONObject itemDesc) throws JSONException {
 		super.fromJson(itemDesc);

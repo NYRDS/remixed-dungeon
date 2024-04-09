@@ -14,7 +14,7 @@ import com.watabou.utils.Random;
 
 public class Stench extends Glyph {
 
-	private static Glowing GREEN = new Glowing( 0x22CC44 );
+	private static final Glowing GREEN = new Glowing( 0x22CC44 );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {

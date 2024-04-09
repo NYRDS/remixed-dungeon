@@ -37,7 +37,7 @@ public class Visual extends Gizmo implements IPlaceable{
 
 	public boolean dirtyMatrix;
 	
-	protected float[] matrix;
+	protected final float[] matrix;
 	
 	public float rm;
 	public float gm;
@@ -48,8 +48,8 @@ public class Visual extends Gizmo implements IPlaceable{
 	public float ba;
 	public float aa;
 	
-	public PointF speed;
-	public PointF acc;
+	public final PointF speed;
+	public final PointF acc;
 	
 	public float angle;
 	public float angularSpeed;

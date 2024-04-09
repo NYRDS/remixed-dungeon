@@ -25,7 +25,7 @@ public class Necrotism extends Buff implements Doom {
 	@Packable
 	protected int iteration;
 
-	public static int duration = 3;
+	public static final int duration = 3;
 
 	public void set( float duration, int i ) {
 		this.left = duration + i;

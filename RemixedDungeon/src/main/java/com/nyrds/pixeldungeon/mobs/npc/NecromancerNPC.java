@@ -45,8 +45,8 @@ public class NecromancerNPC extends ImmortalNPC {
 
 	@Override
 	public boolean reset() {
-		return true;
-	}
+        return super.reset();
+    }
 
 	public static void spawn(RegularLevel level, Room room) {
 		NecromancerNPC npc = new NecromancerNPC();

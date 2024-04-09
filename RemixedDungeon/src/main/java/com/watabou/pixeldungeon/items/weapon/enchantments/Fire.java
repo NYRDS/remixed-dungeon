@@ -11,7 +11,7 @@ import com.watabou.utils.Random;
 
 public class Fire extends Weapon.Enchantment {
 	
-	private static Glowing ORANGE = new Glowing( 0xFF4400 );
+	private static final Glowing ORANGE = new Glowing( 0xFF4400 );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

@@ -85,7 +85,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	};
 
 	private Map<String,String> layerOverrides = new HashMap<>();
-	private Map<String,String> layersDesc    = new HashMap<>();
+	private final Map<String,String> layersDesc    = new HashMap<>();
 
 	private String deathEffectDesc;
 

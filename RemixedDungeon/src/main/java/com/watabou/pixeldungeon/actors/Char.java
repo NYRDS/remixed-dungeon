@@ -178,10 +178,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     private int viewDistance = 8;
 
-    protected Set<String> immunities = new HashSet<>();
-    protected Set<String> resistances = new HashSet<>();
+    protected final Set<String> immunities = new HashSet<>();
+    protected final Set<String> resistances = new HashSet<>();
 
-    protected Set<Buff> buffs = new HashSet<>();
+    protected final Set<Buff> buffs = new HashSet<>();
 
     private Map<String, Number> spellsUsage = new HashMap<>();
 
@@ -1559,7 +1559,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Override
     public String getEntityKind() {
-        return getClass().getSimpleName();
+        return super.getEntityKind();
     }
 
     @Override
@@ -1829,6 +1829,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @LuaInterface
     @Deprecated // keep it for old version of Remixed Additions
     public void setSoulPoints(int i) {
+        setSkillPoints(i);
     }
 
     public boolean canAttack(@NotNull Char enemy) {

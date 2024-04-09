@@ -103,7 +103,7 @@ public class PrisonBossLevel extends BossLevel {
 		}
 		
 		for (Room r : rooms) {
-			if (r.type == Type.NULL && r.connected.size() > 0) {
+			if (r.type == Type.NULL && !r.connected.isEmpty()) {
 				r.type = Type.PASSAGE; 
 			}
 		}
@@ -124,12 +124,12 @@ public class PrisonBossLevel extends BossLevel {
 	}
 		
 	protected boolean[] water() {
-		return Patch.generate(this, 0.45f, 5 );
-	}
+        return super.water();
+    }
 	
 	protected boolean[] grass() {
-		return Patch.generate(this, 0.30f, 4 );
-	}
+        return super.grass();
+    }
 	
 	protected void paintDoors( Room r ) {
 		
@@ -213,7 +213,8 @@ public class PrisonBossLevel extends BossLevel {
 	
 	@Override
 	protected void createMobs() {
-	}
+        super.createMobs();
+    }
 	
 	@Override
 	protected void createItems() {

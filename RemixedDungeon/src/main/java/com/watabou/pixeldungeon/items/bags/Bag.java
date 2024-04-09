@@ -29,7 +29,7 @@ public class Bag extends Item implements Iterable<Item> {
 		setDefaultAction(AC_OPEN);
 	}
 
-	public ArrayList<Item> items = new ArrayList<>();
+	public final ArrayList<Item> items = new ArrayList<>();
 		
 	@Override
 	public ArrayList<String> actions(Char hero ) {

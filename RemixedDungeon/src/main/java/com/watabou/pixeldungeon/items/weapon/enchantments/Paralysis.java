@@ -10,7 +10,7 @@ import com.watabou.utils.Random;
 
 public class Paralysis extends Weapon.Enchantment {
 	
-	private static Glowing YELLOW = new Glowing( 0xCCAA44 );
+	private static final Glowing YELLOW = new Glowing( 0xCCAA44 );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

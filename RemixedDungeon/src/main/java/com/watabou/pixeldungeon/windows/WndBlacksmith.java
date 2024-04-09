@@ -29,9 +29,9 @@ public class WndBlacksmith extends Window {
 	
 	private ItemButton btnPressed;
 	
-	private ItemButton btnItem1;
-	private ItemButton btnItem2;
-	private RedButton btnReforge;
+	private final ItemButton btnItem1;
+	private final ItemButton btnItem2;
+	private final RedButton btnReforge;
 	
 	public WndBlacksmith(Blacksmith troll) {
 		
@@ -83,7 +83,7 @@ public class WndBlacksmith extends Window {
 		resize( WIDTH, (int)btnReforge.bottom() );
 	}
 
-	protected WndBag.Listener itemSelector = new WndBag.Listener() {
+	protected final WndBag.Listener itemSelector = new WndBag.Listener() {
 		@Override
 		public void onSelect(Item item, Char selector) {
 			if (item != null) {

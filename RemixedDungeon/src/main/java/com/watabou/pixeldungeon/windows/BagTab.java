@@ -16,7 +16,7 @@ class BagTab extends Tab {
 
     private final Image icon;
 
-    public Bag bag;
+    public final Bag bag;
 
     public BagTab(WndBag parent, Bag bag ) {
         super(parent);

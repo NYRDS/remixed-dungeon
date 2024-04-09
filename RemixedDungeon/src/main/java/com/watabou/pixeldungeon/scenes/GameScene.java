@@ -525,7 +525,7 @@ public class GameScene extends PixelScene {
         }
     }
 
-    private static transient boolean observeRequested = false;
+    private static boolean observeRequested = false;
 
     public static void observeRequest() {
         observeRequested = true;

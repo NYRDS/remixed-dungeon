@@ -24,7 +24,7 @@ import com.watabou.utils.Signal;
 public class TouchArea extends Visual implements Signal.Listener<Touchscreen.Touch> {
 
     // Its target can be toucharea itself
-    public Visual target;
+    public final Visual target;
 
     private boolean catchTouch = true;
 

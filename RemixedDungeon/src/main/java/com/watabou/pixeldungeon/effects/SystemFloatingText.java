@@ -21,7 +21,7 @@ public class SystemFloatingText extends SystemText {
 
 	private int key = -1;
 
-	private static Map<Integer, ArrayList<SystemFloatingText>> stacks = new HashMap<>();
+	private static final Map<Integer, ArrayList<SystemFloatingText>> stacks = new HashMap<>();
 
 	public SystemFloatingText() {
 		super(Utils.EMPTY_STRING, GuiProperties.mediumTitleFontSize(), false);
@@ -90,7 +90,7 @@ public class SystemFloatingText extends SystemText {
 			stacks.put(key, stack);
 		}
 
-		if (stack.size() > 0) {
+		if (!stack.isEmpty()) {
 			SystemFloatingText below = txt;
 			int aboveIndex = stack.size() - 1;
 			while (aboveIndex >= 0) {

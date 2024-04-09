@@ -21,7 +21,7 @@ public class WndLibrary extends Window {
 	private static final int WIDTH		= 100;
 	private static final int GAP		= 2;
 
-	private static Map<String,String> categoriesMap = new HashMap<>();
+	private static final Map<String,String> categoriesMap = new HashMap<>();
 
 	static {
         categoriesMap.put(Library.ITEM, StringsManager.getVar(R.string.WndLibrary_Items_Btn));

@@ -52,7 +52,7 @@ public class StringsManager {
     private static final Set<String> nonModdable = new HashSet<>();
 
 
-    public static Set<String> missingStrings = new HashSet<>();
+    public static final Set<String> missingStrings = new HashSet<>();
 
 	static {
 		addMappingForClass(R.string.class);

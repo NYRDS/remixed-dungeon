@@ -18,7 +18,7 @@ public class RpdMathLib extends JseMathLib {
     }
 
     static class random extends LibFunction {
-        Random random = new Random();
+        final Random random = new Random();
         public LuaValue call() {
             return valueOf( random.nextDouble() );
         }

@@ -53,7 +53,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
     private final Char owner;
 
-    public Bag backpack;
+    public final Bag backpack;
 
     public Item getSelectedItem() {
         return selectedItem;
@@ -129,7 +129,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
     }
 
     private final Map<Slot, EquipableItem> blockedSlots = new HashMap<>();
-    public Map<EquipableItem, Slot> usedSlots = new HashMap<>();
+    public final Map<EquipableItem, Slot> usedSlots = new HashMap<>();
 
     private final Set<EquipableItem> activatedItems = new HashSet<>();
 

@@ -39,8 +39,8 @@ public class WndCatalogus extends WndTabbed {
 
 	private static final int ITEM_HEIGHT = 18;
 
-	private Text       txtTitle;
-	private ScrollPane list;
+	private final Text       txtTitle;
+	private final ScrollPane list;
 
 	private static boolean showPotions = true;
 

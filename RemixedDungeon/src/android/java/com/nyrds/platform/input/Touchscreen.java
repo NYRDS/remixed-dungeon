@@ -26,9 +26,9 @@ import java.util.HashMap;
 
 public class Touchscreen {
 	
-	public static Signal<Touch> event = new Signal<>(true);
+	public static final Signal<Touch> event = new Signal<>(true);
 
-	public static HashMap<Integer,Touch> pointers = new HashMap<>();
+	public static final HashMap<Integer,Touch> pointers = new HashMap<>();
 
 	public static float x;
 	public static float y;
@@ -82,8 +82,8 @@ public class Touchscreen {
 	
 	public static class Touch {
 		
-		public PointF start;
-		public PointF current;
+		public final PointF start;
+		public final PointF current;
 		public boolean down;
 		
 		public Touch( MotionEvent e, int index ) {

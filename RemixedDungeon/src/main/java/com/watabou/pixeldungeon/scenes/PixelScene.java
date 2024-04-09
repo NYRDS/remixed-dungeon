@@ -223,7 +223,7 @@ public class PixelScene extends Scene {
 
 		private static final float FADE_TIME = 1f;
 
-		private boolean light;
+		private final boolean light;
 
 		private float time;
 

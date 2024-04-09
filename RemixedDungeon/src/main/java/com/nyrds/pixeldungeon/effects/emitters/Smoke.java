@@ -9,7 +9,7 @@ import com.watabou.utils.Random;
 
 public class Smoke extends Emitter {
 
-    private int pos;
+    private final int pos;
 
     private static final Factory factory = new Factory() {
 

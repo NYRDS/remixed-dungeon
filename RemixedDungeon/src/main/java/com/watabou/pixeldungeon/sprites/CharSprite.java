@@ -95,7 +95,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     protected Animation zap;
     protected Animation die;
 
-    protected Map<String,Animation> extras = new HashMap<>();
+    protected final Map<String,Animation> extras = new HashMap<>();
 
     private Callback animCallback;
 

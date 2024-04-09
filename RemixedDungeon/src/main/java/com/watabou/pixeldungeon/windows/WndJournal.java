@@ -24,7 +24,7 @@ public class WndJournal extends WndTabbed {
 
     private static final int LEVEL_ITEM_HEIGHT = 18;    // Height of a level entry
 
-    private ScrollPane list;
+    private final ScrollPane list;
 
     public WndJournal() {
 

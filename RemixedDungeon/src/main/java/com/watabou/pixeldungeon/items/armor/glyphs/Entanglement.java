@@ -17,7 +17,7 @@ import com.watabou.utils.Random;
 
 public class Entanglement extends Glyph {
 	
-	private static Glowing GREEN = new Glowing( 0x448822 );
+	private static final Glowing GREEN = new Glowing( 0x448822 );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage ) {

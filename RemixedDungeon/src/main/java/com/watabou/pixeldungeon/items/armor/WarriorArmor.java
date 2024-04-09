@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -24,8 +23,8 @@ import org.jetbrains.annotations.NotNull;
 
 public class WarriorArmor extends ClassArmor {
 	
-	private static int LEAP_TIME	= 1;
-	private static int SHOCK_TIME	= 3;
+	private static final int LEAP_TIME	= 1;
+	private static final int SHOCK_TIME	= 3;
 
 	{
 		image = 5;
@@ -56,7 +55,7 @@ public class WarriorArmor extends ClassArmor {
         return StringsManager.getVar(R.string.WarriorArmor_Desc);
     }
 
-	protected static CellSelector.Listener leaper = new LeaperCellListener();
+	protected static final CellSelector.Listener leaper = new LeaperCellListener();
 
 	private static class LeaperCellListener implements CellSelector.Listener {
 

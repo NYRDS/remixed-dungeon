@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
 public class Camera extends Gizmo {
 
-	protected static ArrayList<Camera> all = new ArrayList<>();
+	protected static final ArrayList<Camera> all = new ArrayList<>();
 	
 	protected static float invW2;
 	protected static float invH2;
@@ -50,7 +50,7 @@ public class Camera extends Gizmo {
 	@NotNull
 	public float[] matrix;
 	
-	public PointF scroll = new PointF();
+	public final PointF scroll = new PointF();
 
 	protected Visual target;
 	

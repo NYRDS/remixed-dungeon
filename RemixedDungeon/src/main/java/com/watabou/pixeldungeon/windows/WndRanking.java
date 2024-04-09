@@ -217,7 +217,7 @@ public class WndRanking extends WndTabbed {
 
         private float posY;
 
-        ScrollPane list;
+        final ScrollPane list;
 
         public ItemsTab() {
             super();

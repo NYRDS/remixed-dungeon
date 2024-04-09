@@ -455,7 +455,7 @@ public abstract class Level implements Bundlable {
 	private int compassTarget = INVALID_CELL;	// Where compass should point
 
 	@SuppressLint("UseSparseArrays")
-	protected HashMap<Integer, Integer> exitMap = new HashMap<>();
+	protected final HashMap<Integer, Integer> exitMap = new HashMap<>();
 
 	public String levelId;
 
@@ -463,9 +463,9 @@ public abstract class Level implements Bundlable {
 	public  Set<Mob>                              mobs    = new HashSet<>();
 	public  Map<Class<? extends Blob>, Blob>      blobs   = new HashMap<>();
 	private Map<Integer, Heap>                    heaps   = new HashMap<>();
-	public  Map<Integer,Map<Integer,LevelObject>> objects = new HashMap<>();
+	public final Map<Integer,Map<Integer,LevelObject>> objects = new HashMap<>();
 
-	protected ArrayList<Item> itemsToSpawn = new ArrayList<>();
+	protected final ArrayList<Item> itemsToSpawn = new ArrayList<>();
 
 	public int color1 = 0x004400;
 	public int color2 = 0x88CC44;

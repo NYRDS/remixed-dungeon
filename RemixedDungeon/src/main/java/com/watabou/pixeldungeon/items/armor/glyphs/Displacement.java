@@ -14,7 +14,7 @@ import com.watabou.utils.Random;
 
 public class Displacement extends Glyph {
 	
-	private static Glowing BLUE = new Glowing( 0x66AAFF );
+	private static final Glowing BLUE = new Glowing( 0x66AAFF );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage ) {

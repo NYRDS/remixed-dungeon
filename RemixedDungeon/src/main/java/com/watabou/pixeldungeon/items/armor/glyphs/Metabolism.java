@@ -14,7 +14,7 @@ import com.watabou.utils.Random;
 
 public class Metabolism extends Glyph {
 
-	private static Glowing RED = new Glowing( 0xCC0000 );
+	private static final Glowing RED = new Glowing( 0xCC0000 );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {

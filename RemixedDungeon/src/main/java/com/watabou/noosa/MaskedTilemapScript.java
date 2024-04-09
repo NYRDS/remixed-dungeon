@@ -29,15 +29,15 @@ import java.nio.FloatBuffer;
 
 public class MaskedTilemapScript extends Script {
 
-    public Uniform   uCamera;
-    public Uniform   uModel;
-    public Uniform   uTex;
-    public Uniform   uTex_mask;
-    public Uniform   uColorM;
-    public Uniform   uColorA;
-    public Attribute aXY;
-    public Attribute aUV;
-    public Attribute aUV_mask;
+    public final Uniform   uCamera;
+    public final Uniform   uModel;
+    public final Uniform   uTex;
+    public final Uniform   uTex_mask;
+    public final Uniform   uColorM;
+    public final Uniform   uColorA;
+    public final Attribute aXY;
+    public final Attribute aUV;
+    public final Attribute aUV_mask;
 
     private Camera lastCamera;
 

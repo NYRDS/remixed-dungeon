@@ -44,8 +44,8 @@ public class Treasury {
     }
 
     private static class CategoryItems {
-        ArrayList<String> names = new ArrayList<>();
-        ArrayList<Float>  probs = new ArrayList<>();
+        final ArrayList<String> names = new ArrayList<>();
+        final ArrayList<Float>  probs = new ArrayList<>();
     }
 
     private final ArrayList<String>        names = new ArrayList<>();

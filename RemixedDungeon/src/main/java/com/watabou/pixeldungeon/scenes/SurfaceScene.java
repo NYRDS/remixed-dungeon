@@ -290,8 +290,8 @@ public class SurfaceScene extends PixelScene {
 	
 	private static class Pet extends MovieClip implements MovieClip.Listener {
 
-		private Animation idle;
-		private Animation jump;
+		private final Animation idle;
+		private final Animation jump;
 
 		public Pet() {
 			super(Assets.PET);
@@ -326,13 +326,13 @@ public class SurfaceScene extends PixelScene {
 		public static final int WIDTH  = 16;
 		public static final int HEIGHT = 14;
 
-		private float tx;
-		private float ty;
+		private final float tx;
+		private final float ty;
 
 		private double a = Random.Float(5);
 		private double angle;
 
-		private boolean forward;
+		private final boolean forward;
 
 		public GrassPatch(float tx, float ty, boolean forward) {
 

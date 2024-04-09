@@ -21,7 +21,7 @@ public class DummyChar extends Char {
 
     @Override
     protected float _attackDelay() {
-        return 1f;
+        return super._attackDelay();
     }
 
     @Override

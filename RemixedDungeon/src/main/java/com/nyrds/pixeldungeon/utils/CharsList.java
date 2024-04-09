@@ -30,7 +30,7 @@ public class CharsList {
     private static final HashSet<Integer> destroyedChars = new HashSet<>();
     private static final String GRAVEYARD = "graveyard";
 
-    static public List<Mob> emptyMobList = Collections.unmodifiableList(new ArrayList<>());
+    static public final List<Mob> emptyMobList = Collections.unmodifiableList(new ArrayList<>());
 
     @LuaInterface
     @NotNull

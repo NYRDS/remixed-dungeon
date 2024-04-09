@@ -17,7 +17,7 @@ public class Logbook {
     private static final int                LOGBOOK_SIZE   = 30;	// Number of log book messages to store
     private static final String             LOGBOOK        = "logbook";
 
-    public static        List<logBookEntry> logbookEntries = new LinkedList<>();
+    public static final List<logBookEntry> logbookEntries = new LinkedList<>();
 
     public static void addPlayerLogMessage(String message, int color) {
         logbookEntries.add( new logBookEntry(message, color) );	// Add the log entry

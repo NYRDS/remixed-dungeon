@@ -103,7 +103,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	private static float now = 0;
 	
 	@SuppressLint("UseSparseArrays")
-	public static Map<Integer, Char> chars = new HashMap<>();
+	public static final Map<Integer, Char> chars = new HashMap<>();
 	
 	public static void clearActors() {
 		now = 0;

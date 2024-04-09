@@ -4,7 +4,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 
 public class Interact extends CharAction {
-    public Char chr;
+    public final Char chr;
     public Interact(Char chr) {
         this.chr = chr;
         dst = chr.getPos();

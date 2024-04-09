@@ -48,8 +48,8 @@ import lombok.SneakyThrows;
 
 public class Room extends Rect implements Graph.Node, Bundlable {
 	
-	public HashSet<Room>       neighbours = new HashSet<>();
-	public HashMap<Room, Door> connected  = new HashMap<>();
+	public final HashSet<Room>       neighbours = new HashSet<>();
+	public final HashMap<Room, Door> connected  = new HashMap<>();
 	
 	public int distance;
 	public int price = 1;

@@ -41,11 +41,7 @@ public class JsonHelper {
 
     @NotNull
     static public JSONObject readJsonFromAsset(String fileName) {
-        try {
-            return readJsonFromStream(ModdingMode.getInputStream(fileName), fileName);
-        } catch (JSONException e) {
-            throw ModdingMode.modException(e);
-        }
+        return readJsonFromStream(ModdingMode.getInputStream(fileName), fileName);
     }
 
     @NotNull
@@ -53,7 +49,7 @@ public class JsonHelper {
         try {
             try {
                 return readJsonFromStream(new FileInputStream(file), file.getPath());
-            } catch (FileNotFoundException | SecurityException e) {
+            } catch (SecurityException e) {
                 return new JSONObject();
             }
         } catch (Exception e) {
@@ -70,7 +66,7 @@ public class JsonHelper {
 
     @SneakyThrows(IOException.class)
     @NotNull
-    public static JSONObject readJsonFromStream(InputStream stream, String tag) throws JSONException {
+    public static JSONObject readJsonFromStream(InputStream stream, String tag) {
         StringBuilder jsonDef = new StringBuilder();
         Object value = null;
 

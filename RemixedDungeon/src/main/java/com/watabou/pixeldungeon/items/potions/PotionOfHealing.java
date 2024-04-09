@@ -18,7 +18,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfHealing extends Potion {
 
-	private static PotionOfHealing pseudoPotion = new PotionOfHealing();
+	private static final PotionOfHealing pseudoPotion = new PotionOfHealing();
 
 	{
 		labelIndex = 5;

@@ -58,8 +58,8 @@ public class Sign extends LevelObject {
 
 	@Override
 	public boolean stepOn(Char hero) {
-		return true;
-	}
+        return super.stepOn(hero);
+    }
 
 	@Override
 	public void bump(Presser presser) {

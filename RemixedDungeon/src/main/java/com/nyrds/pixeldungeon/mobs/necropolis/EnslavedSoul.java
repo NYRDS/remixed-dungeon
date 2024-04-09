@@ -20,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class EnslavedSoul extends UndeadMob {
 
-    static Class<?>[] BuffsForEnemy = {
+    static final Class<?>[] BuffsForEnemy = {
             Blindness.class,
             Charm.class,
             Roots.class,

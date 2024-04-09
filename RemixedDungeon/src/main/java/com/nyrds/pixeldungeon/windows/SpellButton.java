@@ -15,8 +15,8 @@ class SpellButton extends Button {
     private final Image image;
 
 
-    protected ColorBlock bg;
-    protected ColorBlock cooldownMeter;
+    protected final ColorBlock bg;
+    protected final ColorBlock cooldownMeter;
 
     public SpellButton(WndHeroSpells wndHeroSpells, Char caster, Spell spell) {
         this.image = spell.image(caster);

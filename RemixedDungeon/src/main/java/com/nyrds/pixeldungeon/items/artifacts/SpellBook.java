@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class SpellBook extends Artifact {
 
-	@Packable(defaultValue = "")
+	@Packable()
 	private String spell;
 
 	public SpellBook() {

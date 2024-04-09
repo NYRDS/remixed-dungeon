@@ -24,7 +24,7 @@ import java.util.Collection;
  */
 public class SummoningSpell extends Spell {
 
-    private int summonLimit = 1;
+    private final int summonLimit = 1;
 
     protected String mobKind = "Rat";
 
