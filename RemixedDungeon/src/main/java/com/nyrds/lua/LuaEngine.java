@@ -36,6 +36,7 @@ import org.luaj.vm2.lib.jse.JseOsLib;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.WeakHashMap;
 
 import lombok.Synchronized;
 
@@ -64,8 +65,8 @@ public class LuaEngine implements ResourceFinder {
 
 	static private      LuaEngine engine              = new LuaEngine();
 
-    private final Map<String, LuaTable> modules = new HashMap<>();
-    private final Map<LuaScript, LuaTable> moduleInstance = new HashMap<>();
+    private final WeakHashMap<String, LuaTable> modules = new WeakHashMap<>();
+    private final WeakHashMap<LuaScript, LuaTable> moduleInstance = new WeakHashMap<>();
 
     private final LuaValue stp;
 

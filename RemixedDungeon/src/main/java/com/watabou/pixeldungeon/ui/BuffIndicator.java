@@ -16,7 +16,9 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 import lombok.val;
 
@@ -75,8 +77,9 @@ public class BuffIndicator extends Component {
 
 	private TextureFilm film;
 	
-	private Map<Integer, Image> icons = new HashMap<>();
-	
+	private final Map<Integer, Image> icons = new HashMap<>();
+	private final Map<Integer, Image> newIcons = new HashMap<>();
+	private final Set<Integer> keysToRemove = new HashSet<>();
 	private final Char ch;
 	
 	public BuffIndicator( Char ch ) {
@@ -105,14 +108,13 @@ public class BuffIndicator extends Component {
 	@Override
 	public void update() {
 		clear();
-		
-		val newIcons = new HashMap<Integer, Image>();
-		final int[] iconCounter = {0};
+
+		final int[] iconCounter = {icons.size()};
 
 		ch.forEachBuff(b->
 		{
 			int icon = b.icon();
-			if (icon != NONE) {
+			if (icon != NONE & !icons.containsKey(icon)) {
 				Image img = new Image(TextureCache.get(b.textureSmall()));
 				img.frame(film.get(icon));
 				img.setX(x + iconCounter[0] * (ICON_SIZE+1));
@@ -134,6 +136,7 @@ public class BuffIndicator extends Component {
 
 		for (Integer key : icons.keySet()) {
 			if (newIcons.get( key ) == null) {
+				keysToRemove.add( key );
 				Image icon = icons.get( key );
 				icon.setOrigin( ICON_SIZE / 2 );
 				add( icon );
@@ -146,8 +149,15 @@ public class BuffIndicator extends Component {
 				} );
 			}
 		}
-		
-		icons = newIcons;
+
+		for (Integer key : keysToRemove) {
+			icons.remove( key );
+		}
+
+		if(!newIcons.isEmpty()) {
+			icons.putAll(newIcons);
+			newIcons.clear();
+		}
 	}
 
 	@LuaInterface

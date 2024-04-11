@@ -35,8 +35,8 @@ android {
         applicationId "com.nyrds.pixeldungeon.ml"
         versionCode 1192
         versionName "32.0.fix.8"
-        targetSdkVersion 33
-        compileSdkVersion 33 // bitrise want it
+        targetSdkVersion 34
+        compileSdk 34
         minSdkVersion 21
 
         // Enabling multidex support.
@@ -132,18 +132,17 @@ dependencies {
     implementation project(':annotation')
     annotationProcessor project(':processor')
 
-    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
     implementation 'org.hjson:hjson:3.0.0'
 
     androidImplementation 'com.google.guava:guava:31.1-android'
 
-    androidImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
-
+    androidImplementation "androidx.core:core:1.12.0"
     androidImplementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation 'commons-io:commons-io:2.6'
+    implementation 'commons-io:commons-io:2.13.0'
 
 
     implementation ('com.appodeal.ads:sdk:3.2.0.+') {
@@ -161,14 +160,14 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.3.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.7.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:21.0.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:23.1.0"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:22.6.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:23.0.0'
 
 
-    googlePlayImplementation 'com.android.billingclient:billing:6.1.0'
+    googlePlayImplementation 'com.android.billingclient:billing:6.2.0'
 
-    googlePlayImplementation platform('com.google.firebase:firebase-bom:30.3.0')
+    googlePlayImplementation platform('com.google.firebase:firebase-bom:32.8.0')
 
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
