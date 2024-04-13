@@ -44,7 +44,7 @@ abstract public class Tweener extends Gizmo {
 		if (elapsed >= interval) {
 			updateValues( 1 );
 			onComplete();
-			kill();
+			killAndErase();
 		} else {
 			updateValues( elapsed / interval );
 		}

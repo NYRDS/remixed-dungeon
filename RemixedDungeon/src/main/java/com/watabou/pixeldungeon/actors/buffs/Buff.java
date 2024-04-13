@@ -1,6 +1,9 @@
 
 package com.watabou.pixeldungeon.actors.buffs;
 
+import static com.watabou.pixeldungeon.ui.BuffIndicator.NONE;
+import static com.watabou.pixeldungeon.ui.BuffIndicator.SIZE;
+
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.game.GameLoop;
@@ -14,6 +17,9 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.Util;
+import com.watabou.gltextures.TextureCache;
+import com.watabou.noosa.Image;
+import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -81,6 +87,15 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         return Assets.BUFFS_LARGE;
     }
 
+    @Override
+    public Image smallIcon() {
+        int icon = icon();
+        if (icon != NONE) {
+            return new Image(TextureCache.get(textureSmall()), SIZE, icon);
+        }
+        return null;
+    }
+
     public void attachVisual() {
         val charSpriteState = charSpriteStatus();
         if(charSpriteState!= CharSprite.State.NONE) {
@@ -111,7 +126,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     public int icon() {
-        return BuffIndicator.NONE;
+        return NONE;
     }
 
     @SneakyThrows

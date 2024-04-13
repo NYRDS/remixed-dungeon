@@ -22,7 +22,6 @@ public class JumpTweener extends Tweener {
 	public static void attachTo(CharSprite spr, int targetCell,  float height, float time) {
 		JumpTweener tweener = new JumpTweener(spr, spr.worldToCamera(targetCell), height, time);
 		spr.getParent().add(tweener);
-		tweener.listener = Gizmo::killAndErase;
 	}
 
 

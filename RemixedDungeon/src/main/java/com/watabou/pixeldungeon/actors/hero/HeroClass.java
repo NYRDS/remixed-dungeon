@@ -29,6 +29,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
+import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -430,6 +431,11 @@ public enum HeroClass implements CharModifier {
     @Override
     public String textureLarge() {
         return Assets.BUFFS_LARGE;
+    }
+
+    @Override
+    public Image smallIcon() {
+        return null;
     }
 
     @Override

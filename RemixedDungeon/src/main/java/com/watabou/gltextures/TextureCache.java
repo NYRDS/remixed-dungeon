@@ -24,6 +24,7 @@ import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.gl.Texture;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
+import com.watabou.noosa.TextureFilm;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -38,6 +39,7 @@ import lombok.val;
 public class TextureCache {
 
 	private static final Map<Object, SmartTexture> all = new HashMap<>();
+	private static final Map<Object, TextureFilm> allFilm = new HashMap<>();
 
 	// No dithering, no scaling, 32 bits per pixel
 	private static final BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
@@ -106,12 +108,24 @@ public class TextureCache {
 	}
 
 	@Synchronized
+	public static TextureFilm getFilm(@NotNull Object key, int w, int h) {
+		if (allFilm.containsKey(key)) {
+			return allFilm.get(key);
+		} else {
+			TextureFilm film = new TextureFilm(get(key), w, h);
+			allFilm.put(key, film);
+			return film;
+		}
+	}
+
+	@Synchronized
 	public static void clear() {
 
 		for (Texture txt : all.values()) {
 			txt.delete();
 		}
 		all.clear();
+		allFilm.clear();
 	}
 
 	@SneakyThrows

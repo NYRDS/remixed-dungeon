@@ -84,6 +84,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
+import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -192,6 +193,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     private float lightness = 0.5f;
     private int glowColor = 0;
     private float glowPeriod = 0.0f;
+
+    @Getter
+    private int buffsUpdatedCount;
 
     public Char() {
         fillMobStats(false);
@@ -969,6 +973,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         buffs.add(buff);
         Actor.add(buff);
 
+        buffsUpdatedCount++;
+
         if (!isOnStage()) {
             return true;
         }
@@ -982,6 +988,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         Actor.remove(buff);
 
         if (buff != null) {
+            buffsUpdatedCount++;
             GLog.debug("%s removed from %s", buff.getEntityKind(), getEntityKind());
         }
 

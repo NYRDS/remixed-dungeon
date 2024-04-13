@@ -4,21 +4,18 @@ package com.watabou.pixeldungeon.ui;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.windows.WndBuffInfo;
 import com.nyrds.platform.input.Touchscreen;
-import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
-import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.TouchArea;
 import com.watabou.noosa.tweeners.AlphaTweener;
+import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.noosa.ui.Component;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 import lombok.val;
 
@@ -73,18 +70,21 @@ public class BuffIndicator extends Component {
 	public static final int   SIZE	= 7;
 	public static final float ICON_SIZE = 7;
 
+	public static final float ICON_SCALE = ICON_SIZE / SIZE;
+
     private static BuffIndicator heroInstance;
 
-	private TextureFilm film;
-	
 	private final Map<Integer, Image> icons = new HashMap<>();
 	private final Map<Integer, Image> newIcons = new HashMap<>();
-	private final Set<Integer> keysToRemove = new HashSet<>();
 	private final Char ch;
+
+	private int updateCount;
 	
 	public BuffIndicator( Char ch ) {
 		super();
-		
+
+		updateCount = 0;
+
 		this.ch = ch;
 		if (ch == Dungeon.hero) {
 			heroInstance = this;
@@ -99,62 +99,77 @@ public class BuffIndicator extends Component {
 			heroInstance = null;
 		}
 	}
-	
-	@Override
-	protected void createChildren() {
-		film = new TextureFilm(TextureCache.get(Assets.BUFFS_SMALL), SIZE, SIZE );
-	}
-	
+
 	@Override
 	public void update() {
-		clear();
+		super.update();
 
-		final int[] iconCounter = {icons.size()};
-
-		ch.forEachBuff(b->
-		{
-			int icon = b.icon();
-			if (icon != NONE & !icons.containsKey(icon)) {
-				Image img = new Image(TextureCache.get(b.textureSmall()));
-				img.frame(film.get(icon));
-				img.setX(x + iconCounter[0] * (ICON_SIZE+1));
-				img.setY(y);
-				iconCounter[0] +=1;
-				img.setScaleXY(ICON_SIZE/SIZE,ICON_SIZE/SIZE);
-				val imgTouch = new TouchArea(img) {
-					@Override
-					protected void onClick(Touchscreen.Touch touch) {
-						GameScene.show( new WndBuffInfo(b));
-					}
-				};
-				add(imgTouch);
-				add(img);
-
-				newIcons.put( icon, img );
+		if(ch.getBuffsUpdatedCount() > updateCount) {
+			if(findByClass(Tweener.class, 0) >= 0) { //Tweener is still running
+				return;
 			}
-		});
 
-		for (Integer key : icons.keySet()) {
-			if (newIcons.get( key ) == null) {
-				keysToRemove.add( key );
-				Image icon = icons.get( key );
-				icon.setOrigin( ICON_SIZE / 2 );
-				add( icon );
-				add( new AlphaTweener( icon, 0, 0.6f ) {
-					@Override
-					protected void updateValues( float progress ) {
-						super.updateValues( progress );
-						image.setScale( ICON_SIZE/SIZE*(1 + 5 * progress) );
+			updateCount = ch.getBuffsUpdatedCount();
+
+			clear();
+
+			val buffs = ch.buffs();
+			int iconCounter = 0;
+			for (CharModifier b : buffs)
+			{
+				int icon = b.icon();
+				if (icon != NONE ) {
+					Image img = b.smallIcon();
+					if (img != null) {
+						img.setX(x + iconCounter * (ICON_SIZE + 1));
+						img.setY(y);
+						iconCounter += 1;
+						img.setScaleXY(ICON_SCALE , ICON_SCALE );
+						val imgTouch = new TouchArea(img) {
+							@Override
+							protected void onClick(Touchscreen.Touch touch) {
+								GameScene.show(new WndBuffInfo(b));
+							}
+						};
+						add(imgTouch);
+						add(img);
+
+						if(!icons.containsKey(icon)) {
+							img.setScaleXY(ICON_SCALE * 6, ICON_SCALE * 6);
+							img.alpha(0);
+							var fadeInTweener = new AlphaTweener(img, 1, 0.6f) {
+								@Override
+								protected void updateValues(float progress) {
+									super.updateValues(progress);
+									image.setScale(ICON_SCALE * (6 - 5 * progress));
+								}
+							};
+							add(fadeInTweener);
+						}
+						newIcons.put(icon, img);
 					}
-				} );
+				}
 			}
-		}
 
-		for (Integer key : keysToRemove) {
-			icons.remove( key );
-		}
+			for (Integer key : icons.keySet()) {
+				if (newIcons.get(key) == null) {
+					Image icon = icons.get(key);
+					icon.setOrigin(ICON_SIZE / 2);
+					add(icon);
 
-		if(!newIcons.isEmpty()) {
+					var fadeOutTweener = new AlphaTweener(icon, 0, 0.6f) {
+						@Override
+						protected void updateValues(float progress) {
+							super.updateValues(progress);
+							image.setScale(ICON_SCALE * (1 + 5 * progress));
+						}
+					};
+					fadeOutTweener.listener = (t) -> icon.killAndErase();
+					add(fadeOutTweener);
+				}
+			}
+
+			icons.clear();
 			icons.putAll(newIcons);
 			newIcons.clear();
 		}

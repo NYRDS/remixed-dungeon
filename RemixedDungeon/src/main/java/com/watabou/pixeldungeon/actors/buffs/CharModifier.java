@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
+import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 
@@ -39,4 +40,6 @@ public interface CharModifier {
     String desc();
     String textureSmall();
     String textureLarge();
+
+    Image smallIcon();
 }

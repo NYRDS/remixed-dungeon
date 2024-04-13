@@ -33,7 +33,6 @@ public class PosTweener extends Tweener {
 	public static void attachTo(Visual visual, float dx, float dy, float time) {
 		PosTweener tweener = new PosTweener(visual,dx,dy,time);
 		visual.getParent().add(tweener);
-		tweener.listener = Gizmo::killAndErase;
 	}
 
 
