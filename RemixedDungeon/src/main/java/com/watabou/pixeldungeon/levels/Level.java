@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.levels;
 
 import android.annotation.SuppressLint;
 
+import com.google.common.base.Optional;
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
@@ -199,6 +200,10 @@ public abstract class Level implements Bundlable {
 	@Nullable
 	@LuaInterface
 	public LevelObject getTopLevelObject(int pos) {
+		if(top_objects.containsKey(pos)) {
+			return top_objects.get(pos);
+		}
+
 		LevelObject top = null;
 
 		for (val objectLayer: objects.values()) {
@@ -211,6 +216,9 @@ public abstract class Level implements Bundlable {
 				}
 			}
 		}
+
+		top_objects.put(pos, top);
+
 		return top;
 	}
 
@@ -228,6 +236,7 @@ public abstract class Level implements Bundlable {
 
 		final int pos = lo.getPos();
 		objectsLayer.put(pos, lo);
+		top_objects.remove(pos);
 
 		if(lo.clearCells()) {
 			clearCellForObject(pos);
@@ -464,6 +473,8 @@ public abstract class Level implements Bundlable {
 	public  Map<Class<? extends Blob>, Blob>      blobs   = new HashMap<>();
 	private Map<Integer, Heap>                    heaps   = new HashMap<>();
 	public final Map<Integer,Map<Integer,LevelObject>> objects = new HashMap<>();
+
+	public final Map<Integer, LevelObject> top_objects = new HashMap<>();
 
 	protected final ArrayList<Item> itemsToSpawn = new ArrayList<>();
 
@@ -1319,7 +1330,7 @@ public abstract class Level implements Bundlable {
 				avoid[levelObjectPos] = false;
 			}
 		}
-
+		top_objects.remove(levelObjectPos);
 		return objectsLayer.values().remove(levelObject);
 	}
 
@@ -2048,8 +2059,11 @@ public abstract class Level implements Bundlable {
 	public int getNearestVisibleLevelObject(int cell) {
 		return getNearestTerrain(cell,
 				(level, cell1) -> {
+					if(!level.fieldOfView[cell1]) {
+						return false;
+					}
 					LevelObject lo = level.getTopLevelObject(cell);
-					return level.fieldOfView[cell1] && (lo!=null && lo.secret());
+					return (lo!=null && lo.secret());
 				});
 	}
 
