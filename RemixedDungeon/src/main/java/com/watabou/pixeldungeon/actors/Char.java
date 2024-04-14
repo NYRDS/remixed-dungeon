@@ -248,13 +248,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @Override
     public boolean act() {
         level().updateFieldOfView(this);
-
+/*
         if (sprite == null) {
             if (Util.isDebug()) {
                 throw new TrackedRuntimeException(Utils.format("%s act on %s without sprite", getEntityKind(), level().levelId));
             }
         }
-
+*/
         checkVisibleEnemies();
 
         getScript().runOptional("onAct");
@@ -642,20 +642,23 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public int defenseProc(Char enemy, int baseDamage) {
         int dr = defenceRoll(enemy);
-        final int[] damage = {baseDamage - dr};
-        forEachBuff(b -> damage[0] = b.defenceProc(this, enemy, damage[0]));
-        damage[0] = getItemFromSlot(Belongings.Slot.ARMOR).defenceProc(enemy, this, damage[0]);
 
         if (!enemySeen && enemy.getSubClass() == HeroSubClass.ASSASSIN) {
             baseDamage += Random.Int(1, baseDamage);
             Wound.hit(this);
         }
 
+        final int[] damage = {baseDamage - dr};
+
+        forEachBuff(b -> damage[0] = b.defenceProc(this, enemy, damage[0]));
+        damage[0] = getItemFromSlot(Belongings.Slot.ARMOR).defenceProc(enemy, this, damage[0]);
+
+
         if (getOwnerId() != enemy.getId()) {
             setEnemy(enemy);
         }
 
-        return getScript().run("onDefenceProc", enemy, baseDamage).optint(baseDamage);
+        return getScript().run("onDefenceProc", enemy, damage[0]).optint(damage[0]);
 
     }
 
@@ -968,7 +971,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             return false;
         }
 
-        GLog.debug("%s (%s) added to %s", buff.getEntityKind(), buff.getSource().getEntityKind(), getEntityKind());
+        //GLog.debug("%s (%s) added to %s", buff.getEntityKind(), buff.getSource().getEntityKind(), getEntityKind());
 
         buffs.add(buff);
         Actor.add(buff);
@@ -1398,7 +1401,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public void setState(@NotNull AiState state) {
         if (!state.equals(this.state)) {
-            GLog.debug("%s now will %s, was doing %s before", getEntityKind(), this.state.getTag(), state.getTag());
+            //GLog.debug("%s now will %s, was doing %s before", getEntityKind(), this.state.getTag(), state.getTag());
             this.state = state;
         }
         spend(Actor.MICRO_TICK);
@@ -1763,12 +1766,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (Util.isDebug()) {
 
             if (enemy == this) {
-                GLog.i("WTF???");
+                //GLog.i("WTF???");
                 throw new TrackedRuntimeException(enemy.getEntityKind());
             }
 
             if (enemyId != enemy.getId() && enemy.valid()) {
-                GLog.i("%s  my enemy is %s now ", this.getEntityKind(), enemy.getEntityKind());
+                //GLog.i("%s  my enemy is %s now ", this.getEntityKind(), enemy.getEntityKind());
             }
         }
 
