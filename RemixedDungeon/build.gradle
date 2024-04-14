@@ -36,7 +36,7 @@ android {
         versionCode 1193
         versionName "32.0.fix.9"
         targetSdkVersion 34
-        compileSdk 34
+        compileSdkVersion 34
         minSdkVersion 21
 
         // Enabling multidex support.
@@ -123,6 +123,9 @@ android {
     lint {
         abortOnError false
     }
+    buildFeatures {
+        buildConfig true
+    }
 
 }
 
@@ -145,7 +148,7 @@ dependencies {
     implementation 'commons-io:commons-io:2.13.0'
 
 
-    implementation ('com.appodeal.ads:sdk:3.2.0.+') {
+    implementation ('com.appodeal.ads:sdk:3.2.1.0') {
         exclude group: 'com.appodeal.ads.sdk.services', module: 'adjust'
         exclude group: 'com.appodeal.ads.sdk.services', module: 'appsflyer'
         exclude group: 'com.appodeal.ads.sdk.services', module: 'firebase'
@@ -164,10 +167,11 @@ dependencies {
     googlePlayImplementation "com.google.android.gms:play-services-games:23.1.0"
     googlePlayImplementation 'com.google.android.gms:play-services-ads:23.0.0'
 
+    googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
     googlePlayImplementation 'com.android.billingclient:billing:6.2.0'
 
-    googlePlayImplementation platform('com.google.firebase:firebase-bom:32.8.0')
+    googlePlayImplementation platform('com.google.firebase:firebase-bom:30.0.2')
 
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
