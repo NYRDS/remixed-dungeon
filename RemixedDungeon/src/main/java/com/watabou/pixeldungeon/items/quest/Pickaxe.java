@@ -49,7 +49,15 @@ public class Pickaxe extends Weapon {
 
 	@Packable
 	public boolean bloodStained = false;
-	
+
+	@Override
+	public boolean getBoolean(String key) {
+		if (key.equals("bloodStained"))
+			return bloodStained;
+
+		return super.getBoolean(key);
+	}
+
 	@Override
 	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );

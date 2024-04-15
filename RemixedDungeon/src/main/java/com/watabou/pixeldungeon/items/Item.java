@@ -774,4 +774,9 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	public void setImage(int image) {
 		this.image = image;
 	}
+
+
+	public boolean getBoolean(String key) {
+		return false;
+	}
 }

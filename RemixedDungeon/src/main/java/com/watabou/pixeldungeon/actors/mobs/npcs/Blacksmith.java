@@ -16,7 +16,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.quest.DarkGold;
-import com.watabou.pixeldungeon.items.quest.Pickaxe;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Room.Type;
@@ -25,6 +24,7 @@ import com.watabou.pixeldungeon.sprites.BlacksmithSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBlacksmith;
 import com.watabou.pixeldungeon.windows.WndQuest;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -64,7 +64,7 @@ public class Blacksmith extends NPC {
 					Quest.given = true;
 					Quest.completed = false;
 					
-					Pickaxe pick = new Pickaxe();
+					EquipableItem pick = (EquipableItem) ItemFactory.itemByName("RemixedPickaxe");
 					if (pick.doPickUp( hero )) {
 						GLog.i( Hero.getHeroYouNowHave(), pick.name() );
 					} else {
@@ -76,12 +76,12 @@ public class Blacksmith extends NPC {
 			Journal.add( Journal.Feature.TROLL.desc() );
 			
 		} else if (!Quest.completed) {
+			EquipableItem pick = hero.getBelongings().getEquipableItemPartialMatch( "Pickaxe" );
+			if(!pick.valid()) {
+				tell(StringsManager.getVar(R.string.Blacksmith_Txt2));
+			}
 			if (Quest.alternative) {
-				
-				Pickaxe pick = hero.getBelongings().getItem( Pickaxe.class );
-				if (pick == null) {
-                    tell(StringsManager.getVar(R.string.Blacksmith_Txt2));
-				} else if (!pick.bloodStained) {
+				if (!pick.getBoolean( "bloodStained" )) {
                     tell(StringsManager.getVar(R.string.Blacksmith_Txt4));
 				} else {
 					if (pick.isEquipped( hero )) {
@@ -95,12 +95,8 @@ public class Blacksmith extends NPC {
 				}
 				
 			} else {
-				
-				Pickaxe pick = hero.getBelongings().getItem( Pickaxe.class );
 				DarkGold gold = hero.getBelongings().getItem( DarkGold.class );
-				if (pick == null) {
-                    tell(StringsManager.getVar(R.string.Blacksmith_Txt2));
-				} else if (gold == null || gold.quantity() < 15) {
+				if (gold == null || gold.quantity() < 15) {
                     tell(StringsManager.getVar(R.string.Blacksmith_Txt3));
 				} else {
 					if (pick.isEquipped( hero )) {

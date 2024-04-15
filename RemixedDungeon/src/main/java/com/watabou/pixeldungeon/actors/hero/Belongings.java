@@ -229,6 +229,25 @@ public class Belongings implements Iterable<Item>, Bundlable {
         }
         return null;
     }
+    @LuaInterface
+    public Item getItemPartialMatch(String itemClass) {
+        for (Item item : this) {
+            if (item.getEntityKind().contains(itemClass))
+                return item;
+            }
+        return ItemsList.DUMMY;
+    }
+
+    @LuaInterface
+    public EquipableItem getEquipableItemPartialMatch(String itemClass) {
+        for (Item item : this) {
+            if (item instanceof EquipableItem) {
+                if (item.getEntityKind().contains(itemClass))
+                    return (EquipableItem) item;
+            }
+        }
+        return ItemsList.DUMMY;
+    }
 
     @Deprecated
     @SuppressWarnings("unchecked")

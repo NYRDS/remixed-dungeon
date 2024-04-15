@@ -406,6 +406,11 @@ public class CustomItem extends EquipableItem {
         return script.runOptional("unknownStatsText", super.unknownStatsText());
     }
 
+    @Override
+    public boolean getBoolean(String key) {
+        return script.runOptional("getBoolean", super.getBoolean(key));
+    }
+
     private class CustomItemCellListener implements CellSelector.Listener {
 
         private final String action;

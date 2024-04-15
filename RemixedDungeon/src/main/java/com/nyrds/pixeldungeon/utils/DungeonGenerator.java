@@ -387,6 +387,7 @@ public class DungeonGenerator {
 		return !getLevelKind(id).equals(DEAD_END_LEVEL);
 	}
 
+	@LuaInterface
 	@NotNull
 	public static String getLevelKind(String id) {
 		return getLevelProperty(id,"kind",DEAD_END_LEVEL);
