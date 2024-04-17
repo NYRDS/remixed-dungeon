@@ -33,8 +33,8 @@ android {
         manifestPlaceholders = ["admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1193
-        versionName "32.0.fix.9"
+        versionCode 1194
+        versionName "32.0.fix.10"
         targetSdkVersion 34
         compileSdkVersion 34
         minSdkVersion 21
@@ -142,19 +142,21 @@ dependencies {
 
     androidImplementation 'com.google.guava:guava:31.1-android'
 
-    androidImplementation "androidx.core:core:1.12.0"
+    androidImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
+
     androidImplementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation 'commons-io:commons-io:2.13.0'
+    implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices
 
 
-    implementation ('com.appodeal.ads:sdk:3.2.1.0') {
-        exclude group: 'com.appodeal.ads.sdk.services', module: 'adjust'
-        exclude group: 'com.appodeal.ads.sdk.services', module: 'appsflyer'
-        exclude group: 'com.appodeal.ads.sdk.services', module: 'firebase'
-        exclude group: 'com.appodeal.ads.sdk.networks', module: 'admob'
-        exclude group: 'com.appodeal.ads.sdk.services', module: 'facebook_analytics'
-        exclude group: 'com.appodeal.ads.sdk.networks', module: 'meta'
+    implementation ("com.appodeal.ads:sdk:3.2.1.0") {
+        exclude group: "com.appodeal.ads.sdk.networks", module: "adcolony"
+        exclude group: "com.appodeal.ads.sdk.networks", module: "admob"
+        exclude group: "com.appodeal.ads.sdk.networks", module: "meta"
+        exclude group: "com.appodeal.ads.sdk.services", module: "adjust"
+        exclude group: "com.appodeal.ads.sdk.services", module: "appsflyer"
+        exclude group: "com.appodeal.ads.sdk.services", module: "facebook_analytics"
+        exclude group: "com.appodeal.ads.sdk.services", module: "firebase"
     }
 
     implementation 'org.jetbrains:annotations:23.0.0'
@@ -167,11 +169,10 @@ dependencies {
     googlePlayImplementation "com.google.android.gms:play-services-games:23.1.0"
     googlePlayImplementation 'com.google.android.gms:play-services-ads:23.0.0'
 
-    googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
-    googlePlayImplementation 'com.android.billingclient:billing:6.2.0'
+    googlePlayImplementation 'com.android.billingclient:billing:6.2.1'
 
-    googlePlayImplementation platform('com.google.firebase:firebase-bom:30.0.2')
+    googlePlayImplementation platform('com.google.firebase:firebase-bom:30.3.0')
 
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
