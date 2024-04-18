@@ -26,7 +26,8 @@ return itemLib.init{
             info          = "Pickaxe_Info",
             stackable     = false,
             defaultAction = action_mine,
-            isArtifact    = true,
+            equipable = RPD.Slots.weapon,
+            price     = 20,
             data = {
                 bloodStained = false
             }
@@ -68,11 +69,16 @@ return itemLib.init{
                     owner:spend(time_to_mine)
                     owner:hunger():satisfy(-RPD.Buffs.Hunger.STARVING / 10)
 
-                    RPD.Sfx.CellEmitter:center(cell):burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.STAR), 7)
-
                     if levelKind == 'CavesLevel' or levelKind == 'CavesBossLevel' then
+                        RPD.Sfx.CellEmitter:center(cell):burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.STAR), 7)
                         RPD.playSound( "snd_evoke" )
-                        RPD.item("DarkGold",1)
+                        owner:collect(RPD.item("DarkGold"))
+                    end
+
+                    if levelKind == 'GutsLevel' then
+                        RPD.Sfx.Wound:hit(cell,math.random()*3.14)
+                        RPD.playSound( "snd_hit" )
+                        owner:collect(RPD.item("MysteryMeat"))
                     end
                 end
             end

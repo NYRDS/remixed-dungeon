@@ -1001,6 +1001,14 @@ public class GameScene extends PixelScene {
         }
     }
 
+    @Nullable
+    public static Group getMobsLayer() {
+        if (isSceneReady()) {
+            return scene.mobs;
+        }
+        return null;
+    }
+
     public static void addToMobLayer(Gizmo gizmo) {
         if (isSceneReady()) {
             scene.mobs.add(gizmo);

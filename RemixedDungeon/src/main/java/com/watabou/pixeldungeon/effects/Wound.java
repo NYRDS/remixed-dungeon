@@ -1,12 +1,14 @@
 
 package com.watabou.pixeldungeon.effects;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class Wound extends Image {
 
@@ -40,26 +42,38 @@ public class Wound extends Image {
 			setScaleX( 1 + p );
 		}
 	}
-	
+
+	@LuaInterface
 	public static void hit( Char ch ) {
 		hit( ch, 0 );
 	}
-	
+
+	@LuaInterface
 	public static void hit( Char ch, float angle ) {
-		Wound w = (Wound)ch.getSprite().getParent().recycle( Wound.class );
-		ch.getSprite().getParent().bringToFront( w );
+		Group layer = GameScene.getMobsLayer();
+		if (layer==null) {
+			return;
+		}
+		Wound w = (Wound)layer.recycle( Wound.class );
+		layer.bringToFront( w );
 		w.reset( ch.getPos() );
 		w.setAngle(angle);
 	}
-	
+
+	@LuaInterface
 	public static void hit( int pos ) {
 		hit( pos, 0 );
 	}
-	
+
+	@LuaInterface
 	public static void hit( int pos, float angle ) {
-		Group parent = Dungeon.hero.getSprite().getParent();
-		Wound w = (Wound)parent.recycle( Wound.class );
-		parent.bringToFront( w );
+		Group layer = GameScene.getMobsLayer();
+		if (layer==null) {
+			return;
+		}
+
+		Wound w = (Wound)layer.recycle( Wound.class );
+		layer.bringToFront( w );
 		w.reset( pos );
 		w.setAngle(angle);
 	}

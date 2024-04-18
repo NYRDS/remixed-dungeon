@@ -76,7 +76,7 @@ public class Blacksmith extends NPC {
 			Journal.add( Journal.Feature.TROLL.desc() );
 			
 		} else if (!Quest.completed) {
-			EquipableItem pick = hero.getBelongings().getEquipableItemPartialMatch( "Pickaxe" );
+			EquipableItem pick = hero.getBelongings().getEquipableItemPartialMatch( "RemixedPickaxe" );
 			if(!pick.valid()) {
 				tell(StringsManager.getVar(R.string.Blacksmith_Txt2));
 			}
