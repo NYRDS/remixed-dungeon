@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon;
 
 import com.nyrds.pixeldungeon.levels.XTilemapConfiguration;
 import com.nyrds.util.ModdingMode;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
@@ -46,7 +47,7 @@ public class VariativeDungeonTilemap extends DungeonTilemap {
         data = new int[level.getWidth()*level.getHeight()];
         map(buildGroundMap(),level.getWidth());
 
-        mDecoLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
+        mDecoLayer = new Tilemap(tiles, TextureCache.getFilm(tiles, SIZE, SIZE));
         mDecoMap = new int[mSize];
         mDecoLayer.map(buildDecoMap(), level.getWidth());
     }

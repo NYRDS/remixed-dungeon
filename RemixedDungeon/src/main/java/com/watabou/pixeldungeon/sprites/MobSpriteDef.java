@@ -91,7 +91,7 @@ public class MobSpriteDef extends MobSprite {
 			charScale = (float) json.optDouble("scale",1.0);
 			setScale(charScale);
 
-			TextureFilm film = new TextureFilm(texture, width, height);
+			TextureFilm film = TextureCache.getFilm(texture, width, height);
 
 			bloodColor = 0xFFBB0000;
 			Object _bloodColor = json.opt("bloodColor");

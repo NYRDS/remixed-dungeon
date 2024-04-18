@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.effects;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.audio.Sample;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
@@ -31,11 +32,9 @@ public class BadgeBanner extends Image {
 	private BadgeBanner( int index ) {
 		
 		super( Assets.BADGES );
-		
-		if (atlas == null) {
-			atlas = new TextureFilm( texture, 16, 16 );
-		}
-		
+
+		atlas = TextureCache.getFilm( texture, 16, 16 );
+
 		this.index = index;
 		
 		frame( atlas.get( index ) );
@@ -214,9 +213,9 @@ public class BadgeBanner extends Image {
 	
 	public static Image image( int index ) {
 		Image image = new Image( Assets.BADGES );
-		if (atlas == null) {
-			atlas = new TextureFilm( image.texture, 16, 16 );
-		}
+
+		atlas = TextureCache.getFilm( image.texture, 16, 16 );
+
 		image.frame( atlas.get( index ) );
 		return image;
 	}

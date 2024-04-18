@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.sprites;
 
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 
@@ -13,7 +14,7 @@ public class DummySprite extends MobSprite {
 		
 		texture("hero/empty.png");
 		
-		TextureFilm frames = new TextureFilm( texture, 1, 1 );
+		TextureFilm frames = TextureCache.getFilm( texture, 1, 1 );
 
 		idle = new Animation( 1, true );
 		idle.frames( frames, 0);

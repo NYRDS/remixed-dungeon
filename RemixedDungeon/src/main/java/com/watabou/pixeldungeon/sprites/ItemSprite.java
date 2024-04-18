@@ -68,7 +68,7 @@ public class ItemSprite extends MovieClip {
 
 	private void updateTexture(String file) {
 		texture(file);
-		film = new TextureFilm(texture, SIZE, SIZE);
+		film = TextureCache.getFilm(texture, SIZE, SIZE);
 	}
 
 	protected void originToCenter() {

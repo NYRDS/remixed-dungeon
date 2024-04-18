@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.sprites;
 
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
@@ -13,7 +14,7 @@ public class DM300Sprite extends MobSprite {
 		
 		texture( Assets.DM300 );
 		
-		TextureFilm frames = new TextureFilm( texture, 22, 20 );
+		TextureFilm frames = TextureCache.getFilm( texture, 22, 20 );
 		
 		idle = new Animation( 10, true );
 		idle.frames( frames, 0, 1 );

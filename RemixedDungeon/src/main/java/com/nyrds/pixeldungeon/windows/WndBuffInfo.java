@@ -27,7 +27,7 @@ public class WndBuffInfo extends Window {
 		super();
 
 		SmartTexture icons = TextureCache.get(Assets.BUFFS_LARGE);
-		film = new TextureFilm(icons, 16, 16 );
+		film = TextureCache.getFilm(icons, 16, 16 );
 		int index = buff.icon();
 		int bottom = 0;
 		int height = 0;

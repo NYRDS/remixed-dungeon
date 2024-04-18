@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.LuaInterface;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
@@ -23,7 +24,7 @@ public abstract class DungeonTilemap extends Tilemap {
 
 
 	public DungeonTilemap(@NotNull Level level, String tiles ) {
-		super(tiles, new TextureFilm(tiles, SIZE, SIZE));
+		super(tiles, TextureCache.getFilm(tiles, SIZE, SIZE));
 		DungeonTilemap.level = level;
 
 		map(level.map, level.getWidth());
@@ -33,7 +34,7 @@ public abstract class DungeonTilemap extends Tilemap {
 	static public @NotNull DungeonTilemap factory(Level level) {
 		String tiles = level.getTilesTex();
 
-		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
+		TextureFilm probe = TextureCache.getFilm(tiles, SIZE, SIZE);
 
 
 		if (tiles.contains("_xyz")) {
@@ -53,7 +54,7 @@ public abstract class DungeonTilemap extends Tilemap {
 	static public int getDecoTileForTerrain(Level level, int cell, int terrain) {
 		String tiles = level.getTilesTex();
 
-		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
+		TextureFilm probe = TextureCache.getFilm(tiles, SIZE, SIZE);
 
 		if(probe.size() == 256) {
 			return VariativeDungeonTilemap.getDecoTileForTerrain(level, cell, terrain);
@@ -66,7 +67,7 @@ public abstract class DungeonTilemap extends Tilemap {
 	static public @NotNull String kind(Level level) {
 		String tiles = level.getTilesTex();
 
-		TextureFilm probe = new TextureFilm(tiles, SIZE, SIZE);
+		TextureFilm probe = TextureCache.getFilm(tiles, SIZE, SIZE);
 
 		if (tiles.contains("_xyz")) {
 			return XYZ;

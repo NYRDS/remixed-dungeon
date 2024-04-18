@@ -39,10 +39,6 @@ public class TextureFilm {
 		texWidth = texture.width;
 		texHeight = texture.height;
 	}
-	
-	public TextureFilm( SmartTexture texture, int width ) {
-		this( texture, width, texture.height );
-	}
 
 	public TextureFilm( Object tx, int width, int height ) {
 		

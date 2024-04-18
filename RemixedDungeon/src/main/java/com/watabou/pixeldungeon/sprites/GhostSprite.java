@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.sprites;
 
 import android.opengl.GLES20;
 
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
@@ -18,7 +19,7 @@ public class GhostSprite extends MobSprite {
 		
 		texture( Assets.GHOST );
 		
-		TextureFilm frames = new TextureFilm( texture, 14, 15 );
+		TextureFilm frames = TextureCache.getFilm( texture, 14, 15 );
 		
 		idle = new Animation( 5, true );
 		idle.frames( frames, 0, 1 );

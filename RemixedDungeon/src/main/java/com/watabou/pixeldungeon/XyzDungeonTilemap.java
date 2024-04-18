@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.util.SeededRandom;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
@@ -62,12 +63,12 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
         map(buildGroundMap(), mWidth);
 
-        mWallsLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
-        mDecoLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
-        mRoofLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
+        mWallsLayer = new Tilemap(tiles, TextureCache.getFilm(tiles, SIZE, SIZE));
+        mDecoLayer = new Tilemap(tiles, TextureCache.getFilm(tiles, SIZE, SIZE));
+        mRoofLayer = new Tilemap(tiles, TextureCache.getFilm(tiles, SIZE, SIZE));
 
-        mCornersLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
-        mDoorsLayer = new Tilemap(tiles, new TextureFilm(tiles, SIZE, SIZE));
+        mCornersLayer = new Tilemap(tiles, TextureCache.getFilm(tiles, SIZE, SIZE));
+        mDoorsLayer = new Tilemap(tiles, TextureCache.getFilm(tiles, SIZE, SIZE));
 
         mWallsMap = new int[mSize];
         mDecoMap = new int[mSize];
