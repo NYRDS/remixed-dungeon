@@ -92,11 +92,7 @@ public class Pickaxe extends Weapon {
 					GameScene.updateMap( pos );
 
 					DarkGold gold = new DarkGold();
-					if (gold.doPickUp( chr )) {
-						GLog.i( Hero.getHeroYouNowHave(), gold.name() );
-					} else {
-						gold.doDrop(chr);
-					}
+					chr.collectAnimated(gold);
 
 					chr.hunger().satisfy( -Hunger.STARVING / 10 );
 					BuffIndicator.refreshHero();

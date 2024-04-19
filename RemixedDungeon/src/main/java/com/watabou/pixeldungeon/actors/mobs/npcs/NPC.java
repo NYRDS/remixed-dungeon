@@ -73,12 +73,7 @@ public abstract class NPC extends Mob {
 		item.removeItemFrom(hero);
 
 		Item reward = ItemFactory.itemByName(rewardClass);
-
-		if (reward.doPickUp(hero)) {
-			GLog.i(Hero.getHeroYouNowHave(), reward.name());
-		} else {
-			reward.doDrop(hero);
-		}
+		hero.collectAnimated(reward);
 		return true;
 	}
 }

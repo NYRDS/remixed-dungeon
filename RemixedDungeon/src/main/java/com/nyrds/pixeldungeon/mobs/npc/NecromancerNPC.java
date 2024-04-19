@@ -67,12 +67,7 @@ public class NecromancerNPC extends ImmortalNPC {
 			introduced = true;
 
 			SkeletonKey key = new SkeletonKey();
-
-			if (key.doPickUp( hero )) {
-				GLog.i( Hero.getHeroYouNowHave(), key.name() );
-			} else {
-				level().animatedDrop( key, hero.getPos() );
-			}
+			hero.collectAnimated(key);
 
 		} else {
 

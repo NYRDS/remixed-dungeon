@@ -40,6 +40,8 @@ public class Image extends Visual implements IPlaceable {
 
     protected boolean dirty;
 
+    private static final RectF defaultFrame = new RectF(0, 0, 1, 1);
+
 
     public Image() {
         super(0, 0, 0, 0);
@@ -77,7 +79,7 @@ public class Image extends Visual implements IPlaceable {
 
     public void texture(Object tx) {
         texture = tx instanceof SmartTexture ? (SmartTexture) tx : TextureCache.get(tx);
-        frame(new RectF(0, 0, 1, 1));
+        frame(defaultFrame);
     }
 
     public void frame(RectF frame) {

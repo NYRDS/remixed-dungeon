@@ -55,12 +55,8 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 
 				Item reward = Treasury.getLevelTreasury().check(new RatArmor());
 				reward.identify();
+				hero.collectAnimated(reward);
 
-				if (reward.doPickUp(hero)) {
-					GLog.i(Hero.getHeroYouNowHave(), reward.name());
-				} else {
-					reward.doDrop(hero);
-				}
 				Quest.complete();
                 GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.PlagueDoctorNPC_Quest_End)));
 			} else {

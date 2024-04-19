@@ -386,7 +386,7 @@ public class Hero extends Char {
                     || (item instanceof PotionOfStrength && ((PotionOfStrength) item).isKnown())) {
                 GLog.p(StringsManager.getVar(R.string.Hero_YouNowHave), item.name());
             } else {
-                GLog.i(getHeroYouNowHave(), item.name());
+                GLog.i(StringsManager.getVar(R.string.Hero_YouNowHave), item.name() );
             }
         }
     }
@@ -943,10 +943,6 @@ public class Hero extends Char {
         return sprite;
     }
 
-    public static String getHeroYouNowHave() {
-        return StringsManager.getVar(R.string.Hero_YouNowHave);
-    }
-
     public int getExpForLevelUp() {
         return Scrambler.descramble(scrambledExp);
     }
@@ -1202,5 +1198,14 @@ public class Hero extends Char {
     @Override
     public void observe() {
         Dungeon.observe();
+    }
+
+    @Override
+    public void collectAnimated(@NotNull Item item) {
+        if (item.doPickUp( this )) {
+            itemPickedUp(item);
+        } else {
+            item.doDrop(this);
+        }
     }
 }

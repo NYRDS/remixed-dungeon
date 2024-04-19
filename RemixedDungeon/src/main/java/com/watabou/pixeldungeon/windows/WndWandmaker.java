@@ -63,11 +63,7 @@ public class WndWandmaker extends Window {
 		item.removeItemFrom(Dungeon.hero);
 
 		reward.identify();
-		if (reward.doPickUp( Dungeon.hero )) {
-			GLog.i( Hero.getHeroYouNowHave(), reward.name() );
-		} else {
-			reward.doDrop(wandmaker);
-		}
+		Dungeon.hero.collectAnimated(reward);
 
         wandmaker.say(Utils.format(R.string.WndWandmaker_Farawell, Dungeon.hero.className() ) );
 		wandmaker.destroy();

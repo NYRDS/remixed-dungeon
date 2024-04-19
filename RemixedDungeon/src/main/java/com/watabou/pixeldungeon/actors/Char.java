@@ -227,7 +227,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         boolean newMob = false;
 
         for (Mob m : level().mobs) {
-            if (m==this) {
+            if (m == this) {
                 continue;
             }
 
@@ -333,12 +333,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         getBelongings().restoreFromBundle(bundle);
 
         //pre 32 save compatibility
-        expForLevelUp = bundle.optInt("exp",expForLevelUp);
+        expForLevelUp = bundle.optInt("exp", expForLevelUp);
 
 
-        String luaData = bundle.optString(LuaEngine.LUA_DATA,null);
-        if(luaData!=null) {
-            getScript().run("loadData",luaData);
+        String luaData = bundle.optString(LuaEngine.LUA_DATA, null);
+        if (luaData != null) {
+            getScript().run("loadData", luaData);
         }
         getScript().run("fillStats");
     }
@@ -850,7 +850,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         float hasteLevel = bf[0];
 
-        return Math.min (3, (float)  Math.pow(1.1f, -hasteLevel));
+        return Math.min(3, (float) Math.pow(1.1f, -hasteLevel));
     }
 
     @Override
@@ -1116,7 +1116,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @LuaInterface
     public void playExtra(String key) {
-        if(Dungeon.isCellVisible(getPos())) {
+        if (Dungeon.isCellVisible(getPos())) {
             getSprite().playExtra(key);
         }
     }
@@ -1271,8 +1271,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
                 throw new TrackedRuntimeException("scene not ready for " + getEntityKind());
             }
 
-            if(Util.isDebug()){
-                if(!isAlive()) {
+            if (Util.isDebug()) {
+                if (!isAlive()) {
                     //throw new TrackedRuntimeException("its dead! leave it alone! " + getEntityKind());
                 }
             }
@@ -1297,7 +1297,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public boolean hasSprite() {
-        return sprite!= null;
+        return sprite != null;
     }
 
     public Fraction fraction() {
@@ -1364,12 +1364,18 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         item = Treasury.get().check(item);
 
         if (!item.collect(this)) {
-            if (level() != null && level().cellValid(getPos())) {
-                level().animatedDrop(item, getPos());
+            Level level = level();
+            if (level != null && level.cellValid(getPos())) {
+                level.animatedDrop(item, getPos());
             }
             return false;
         }
         return true;
+    }
+
+    @LuaInterface
+    public void collectAnimated(@NotNull Item item) {
+        collect(item);
     }
 
     //backward compatibility with mods
@@ -1665,7 +1671,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public boolean interact(Char chr) {
 
-        if(getScript().run("onInteract", chr).optboolean(true)) {
+        if (getScript().run("onInteract", chr).optboolean(true)) {
             return true;
         }
 
@@ -1904,7 +1910,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         int computedViewDistance = viewDistance;
 
         if (hasBuff(Light.class)) {
-            if(level()!=null) {
+            if (level() != null) {
                 computedViewDistance = Utils.max(computedViewDistance, Level.MIN_VIEW_DISTANCE + 1, level().getViewDistance());
             } else {
                 computedViewDistance = Math.max(computedViewDistance, Level.MIN_VIEW_DISTANCE + 1);
@@ -2026,9 +2032,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public String getDescription() {
         var description = getClassParam("Desc", "missing desc", true);
 
-        description = StringsManager.maybeId(getClassDef().optString(description, getEntityKind()+"_Desc"));
+        description = StringsManager.maybeId(getClassDef().optString(description, getEntityKind() + "_Desc"));
 
-        for(Buff buff: buffs) {
+        for (Buff buff : buffs) {
             if (buff.getEntityKind().startsWith("Champion")) {
                 description += "\n\n" + StringsManager.maybeId(buff.name());
                 description += "\n" + StringsManager.maybeId(buff.desc());
@@ -2113,8 +2119,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Hero_LevelUp));
         }
     }
+
     public int expToLevel() {
-         return 5 + lvl() * 5;
+        return 5 + lvl() * 5;
     }
 
     public boolean isReady() {
@@ -2144,7 +2151,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         ArrayList<String> actions = CharUtils.actions(this, hero);
 
         LuaValue ret = getScript().run("actionsList", hero);
-        LuaEngine.forEach(ret, (key,val)->actions.add(val.tojstring()));
+        LuaEngine.forEach(ret, (key, val) -> actions.add(val.tojstring()));
 
         return actions;
     }
@@ -2162,11 +2169,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public String getName() {
-        return StringsManager.maybeId(getClassDef().optString("name", getEntityKind()+"_Name"));
+        return StringsManager.maybeId(getClassDef().optString("name", getEntityKind() + "_Name"));
     }
 
     public String getName_objective() {
-        return StringsManager.maybeId(getClassDef().optString("name_objective", getEntityKind()+"_Name_Objective"));
+        return StringsManager.maybeId(getClassDef().optString("name_objective", getEntityKind() + "_Name_Objective"));
     }
 
     public String getDefenceVerb() {
@@ -2174,7 +2181,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public int getGender() {
-        return Utils.genderFromString(StringsManager.maybeId(getClassDef().optString("gender", getEntityKind()+"_Gender")));
+        return Utils.genderFromString(StringsManager.maybeId(getClassDef().optString("gender", getEntityKind() + "_Gender")));
     }
 
     public WalkingType getWalkingType() {
@@ -2182,8 +2189,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public LuaScript getScript() {
-        if(script==null) {
-            script = new LuaScript("scripts/mobs/"+getEntityKind(), DEFAULT_MOB_SCRIPT, this);
+        if (script == null) {
+            script = new LuaScript("scripts/mobs/" + getEntityKind(), DEFAULT_MOB_SCRIPT, this);
             script.asInstance();
         }
         return script;
@@ -2194,7 +2201,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         this.glowColor = color;
         this.glowPeriod = period;
 
-        if(sprite!=null) {
+        if (sprite != null) {
             if (glowPeriod > 0) {
                 getSprite().setGlowing(new Glowing(color, period));
             } else {
@@ -2207,5 +2214,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return 0;
     }
 
-    public void observe() {}
+    public void observe() {
+    }
 }

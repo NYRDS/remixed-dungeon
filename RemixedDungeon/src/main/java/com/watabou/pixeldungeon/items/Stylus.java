@@ -104,7 +104,7 @@ public class Stylus extends Item {
 		
 		Scroll inscribedScroll = Scroll.createRandomScroll();
 		getOwner().collect(inscribedScroll);
-		GLog.i(Hero.getHeroYouNowHave(), inscribedScroll.name());	// Let know which scroll was inscribed
+		getOwner().itemPickedUp(inscribedScroll);
 
 		inscribeEffect();
 	}

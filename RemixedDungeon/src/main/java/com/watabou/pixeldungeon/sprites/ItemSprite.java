@@ -147,7 +147,6 @@ public class ItemSprite extends MovieClip {
 	}
 
 	public ItemSprite view(@NotNull Item item) {
-
 		if(item.overlayIndex()>=0) {
 			overlay = new Image(item.overlayFile(),16,item.overlayIndex());
 		} else {

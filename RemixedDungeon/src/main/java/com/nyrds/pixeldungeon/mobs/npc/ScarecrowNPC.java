@@ -56,11 +56,7 @@ public class ScarecrowNPC extends ImmortalNPC {
 				Item reward = new PumpkinPie();
 				reward.quantity(5);
 
-				if (reward.doPickUp(Dungeon.hero)) {
-					GLog.i(Hero.getHeroYouNowHave(), reward.name());
-				} else {
-					level().animatedDrop(reward, hero.getPos());
-				}
+				hero.collectAnimated(reward);
 				Quest.complete();
                 GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.ScarecrowNPC_Quest_End)));
 			} else {

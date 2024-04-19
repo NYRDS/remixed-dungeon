@@ -110,11 +110,7 @@ public class WandOfTelekinesis extends Wand {
 		Char owner = getOwner();
 		item = item.pick(owner, heap.pos);
 		if (item != null) {
-			if (item.doPickUp(owner)) {
-				owner.itemPickedUp(item);
-			} else {
-				item.doDrop(owner);
-			}
+			owner.collectAnimated(item);
 		}
 	}
 

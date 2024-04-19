@@ -25,6 +25,7 @@ import com.nyrds.platform.gl.Texture;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
