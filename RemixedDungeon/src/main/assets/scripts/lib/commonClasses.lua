@@ -196,6 +196,7 @@ local RPD = {
     CharsList = CharsList,
     CharUtils = CharUtils,
     Utils = luajava.bindClass("com.nyrds.lua.LuaUtils"),
+    QuickSlot = luajava.bindClass("com.watabou.pixeldungeon.ui.QuickSlot"),
 
     System = {
         Input = luajava.bindClass("com.nyrds.platform.app.Input")

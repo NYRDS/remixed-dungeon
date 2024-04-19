@@ -69,8 +69,6 @@ return itemLib.init{
                     owner:spend(time_to_mine)
                     owner:hunger():satisfy(-RPD.Buffs.Hunger.STARVING / 10)
 
-                    local item = nil
-
                     if levelKind == 'CavesLevel' or levelKind == 'CavesBossLevel' then
                         RPD.Sfx.CellEmitter:center(cell):burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.STAR), 7)
                         RPD.playSound( "snd_evoke" )
@@ -92,6 +90,14 @@ return itemLib.init{
             end
 
         end
+    end,
+
+    attackProc        = function(self, item, attacker, defender, damage)
+        if defender:getEntityKind() == "Bat" and damage >= defender:hp() then
+            self.data.bloodStained = true
+            RPD.QuickSlot:refresh(attacker)
+        end
+        return damage
     end,
 
     glowing = function(self, item)
