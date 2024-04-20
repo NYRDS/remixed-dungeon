@@ -4,7 +4,7 @@ Teroarea canalelor nu mai este.
 2. Tengu a fost ucis
 Spiritul viclean nu va mai chinui pe nimeni de acum.
 
-3. Dm-300 a fost ucis
+3. DM-300 a fost ucis
 O mașinărie care și-a pierdut rostul a fost dezactivată.
 
 4. Regele a fost ucis
@@ -30,3 +30,4 @@ Valoare, bunătate și câțiva bani de aur, și chiar brutalul Gnoll se va ală
 
 11. Mască chirurgicală obținută
 Purtarea unei măști înseamnă că îți pasă de ceilalți.
+
