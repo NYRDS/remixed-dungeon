@@ -86,6 +86,10 @@ public class Mods {
 
                 File fileToTry = new File(file.getAbsolutePath() + "/version.json");
 
+                if(!fileToTry.exists()) {
+                    continue;
+                }
+
                 JSONObject versionInfo = JsonHelper.readJsonFromFile(fileToTry);
                 if (versionInfo.has("version")) {
 
