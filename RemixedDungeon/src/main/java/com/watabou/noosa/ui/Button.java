@@ -57,7 +57,7 @@ public class Button extends Component {
 
 			@Override
 			public void onSignal(Touch touch) {
-				if(!isVisible()) {
+				if(!isVisible() || !Button.this.isActive()) {
 					return;
 				}
 				super.onSignal(touch);

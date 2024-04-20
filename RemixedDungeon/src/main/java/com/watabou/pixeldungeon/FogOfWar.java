@@ -59,6 +59,7 @@ public class FogOfWar extends Image {
         old_pixels = new int[width2 * height2];
 
         Arrays.fill(pixels, INVISIBLE);
+        Arrays.fill(old_pixels, VISIBLE);
 
         texture(new FogTexture());
 
@@ -127,7 +128,7 @@ public class FogOfWar extends Image {
     @Override
     public void draw() {
 
-        if(!Arrays.equals(pixels, old_pixels)) {
+        if(dirty || !Arrays.equals(pixels, old_pixels)) {
             texture.pixels(width2, height2, pixels);
             System.arraycopy(pixels, 0, old_pixels, 0, pixels.length);
         }

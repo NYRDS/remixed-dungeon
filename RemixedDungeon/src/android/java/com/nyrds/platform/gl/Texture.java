@@ -34,6 +34,7 @@ public class Texture {
     public static final int CLAMP = GLES20.GL_CLAMP_TO_EDGE;
 
     protected int id = -1;
+    ThreadLocal<IntBuffer> threadImageBuffer = new ThreadLocal<>();
 
     static protected int lastTexture = -1;
 
@@ -85,10 +86,12 @@ public class Texture {
 
         _bind();
 
-        IntBuffer imageBuffer = ByteBuffer.
-                allocateDirect(w * h * 4).
-                order(ByteOrder.nativeOrder()).
-                asIntBuffer();
+        IntBuffer imageBuffer = threadImageBuffer.get();
+        if (imageBuffer == null || imageBuffer.capacity() < pixels.length * 4) {
+            imageBuffer = ByteBuffer.allocateDirect(pixels.length * 4).order(ByteOrder.nativeOrder()).asIntBuffer();
+            threadImageBuffer.set(imageBuffer);
+        }
+
         imageBuffer.put(pixels);
         imageBuffer.position(0);
 
@@ -105,7 +108,7 @@ public class Texture {
     }
 
     // If getConfig returns null (unsupported format?), GLUtils.texImage2D works
-    // incorrectly. In this case we need to load pixels manually
+    // incorrectly. In this case, we need to load pixels manually
     public void handMade(Bitmap bitmap) {
 
         int w = bitmap.getWidth();
