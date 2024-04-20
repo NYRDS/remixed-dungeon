@@ -176,9 +176,9 @@ public class BuffIndicator extends Component {
 	}
 
 	@LuaInterface
-	public static void refreshHero() {
+	public static void refreshHero() { //used by mods, can't remove it
 		if (heroInstance != null) {
-			heroInstance.layout();
+			heroInstance.ch.buffsUpdated();
 		}
 	}
 }

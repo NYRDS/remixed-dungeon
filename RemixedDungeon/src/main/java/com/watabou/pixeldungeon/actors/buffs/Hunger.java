@@ -92,7 +92,7 @@ public class Hunger extends Buff implements Doom {
 					hungerLevel = GameMath.gate(0, newLevel, STARVING);
 
 					if (statusUpdated) {
-						BuffIndicator.refreshHero();
+						target.buffsUpdated();
 					}
 				}
 				
@@ -115,7 +115,7 @@ public class Hunger extends Buff implements Doom {
 
 		hungerLevel = GameMath.gate(0, hungerLevel, STARVING);
 
-		BuffIndicator.refreshHero();
+		target.buffsUpdated();
 	}
 	
 	public boolean isStarving() {

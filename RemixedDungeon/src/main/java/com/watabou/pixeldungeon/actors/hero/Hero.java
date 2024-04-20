@@ -700,15 +700,7 @@ public class Hero extends Char {
             interrupt();
         }
 
-        BuffIndicator.refreshHero();
         return true;
-    }
-
-    @Override
-    public void remove(@Nullable Buff buff) {
-        super.remove(buff);
-
-        BuffIndicator.refreshHero();
     }
 
     @Override

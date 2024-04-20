@@ -95,8 +95,6 @@ public class Pickaxe extends Weapon {
 					chr.collectAnimated(gold);
 
 					chr.hunger().satisfy( -Hunger.STARVING / 10 );
-					BuffIndicator.refreshHero();
-
 					return;
 				}
 			}

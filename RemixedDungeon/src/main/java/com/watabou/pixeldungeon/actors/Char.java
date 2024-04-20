@@ -2216,4 +2216,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public void observe() {
     }
+
+    public void buffsUpdated() {
+        buffsUpdatedCount++;
+    }
 }

@@ -28,8 +28,6 @@ public class Metabolism extends Glyph {
 				if (!defender.isStarving()) {
 
 					defender.hunger().satisfy(-Hunger.STARVING / 10);
-					BuffIndicator.refreshHero();
-
 					defender.heal(healing,this);
 					defender.showStatus( CharSprite.POSITIVE, Integer.toString( healing ) );
 				}
