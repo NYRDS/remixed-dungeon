@@ -84,7 +84,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
-import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -2032,7 +2031,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public String getDescription() {
         var description = getClassParam("Desc", "missing desc", true);
 
-        description = StringsManager.maybeId(getClassDef().optString(description, getEntityKind() + "_Desc"));
+        description = StringsManager.maybeId(getClassDef().optString("description", getEntityKind() + "_Desc"));
 
         for (Buff buff : buffs) {
             if (buff.getEntityKind().startsWith("Champion")) {
