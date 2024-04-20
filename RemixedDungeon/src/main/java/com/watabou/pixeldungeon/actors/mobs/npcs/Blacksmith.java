@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.nyrds.pixeldungeon.items.ItemUtils;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
@@ -12,7 +13,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.quest.DarkGold;
@@ -24,7 +24,6 @@ import com.watabou.pixeldungeon.sprites.BlacksmithSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBlacksmith;
 import com.watabou.pixeldungeon.windows.WndQuest;
-import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -72,7 +71,7 @@ public class Blacksmith extends NPC {
 			Journal.add( Journal.Feature.TROLL.desc() );
 			
 		} else if (!Quest.completed) {
-			EquipableItem pick = hero.getBelongings().getEquipableItemPartialMatch( "RemixedPickaxe" );
+			EquipableItem pick = hero.getBelongings().getEquipableItemPartialMatch( "Pickaxe" );
 			if(!pick.valid()) {
 				tell(StringsManager.getVar(R.string.Blacksmith_Txt2));
 			}
