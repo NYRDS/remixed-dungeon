@@ -25,7 +25,6 @@ import com.nyrds.platform.gl.Texture;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.TextureFilm;
-import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -138,6 +137,10 @@ public class TextureCache {
 
 			if(modAsset==null) {
 				throw new ModError("Bad bitmap: "+ resName);
+			}
+
+			if(ModdingMode.sizeAgnosticFiles.contains(resName)) {
+				return modAsset;
 			}
 
 			if(ModdingMode.isAssetExist(resName)) {

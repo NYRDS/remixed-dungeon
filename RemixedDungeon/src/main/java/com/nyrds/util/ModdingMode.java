@@ -50,6 +50,8 @@ public class ModdingMode {
 	private static final Map<String, String> rewardVideoIds = new HashMap<>();
 	private static final Map<String, String> interstitialIds = new HashMap<>();
 
+	public static final Set<String> sizeAgnosticFiles = new HashSet<>();
+
 	public static final String MAZE = "Maze";
 
 	public static final String CONUNDRUM = "Conundrum";
@@ -87,6 +89,11 @@ public class ModdingMode {
 		dlcSet.add(REMIXED);
 
 		resourcesRemap.put("spellsIcons/elemental(new).png", "spellsIcons/elemental_all.png");
+
+		sizeAgnosticFiles.add("ui/title.png");
+		sizeAgnosticFiles.add("amulet.png");
+		sizeAgnosticFiles.add("ui/arcs1.png");
+		sizeAgnosticFiles.add("ui/arcs2.png");
 	}
 
 	@NotNull
