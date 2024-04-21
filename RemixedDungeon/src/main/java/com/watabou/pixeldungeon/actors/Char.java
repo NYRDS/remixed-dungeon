@@ -2202,9 +2202,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         if (sprite != null) {
             if (glowPeriod > 0) {
-                getSprite().setGlowing(new Glowing(color, period));
+                sprite.setGlowing(new Glowing(color, period));
             } else {
-                getSprite().setGlowing(Glowing.NO_GLOWING);
+                sprite.setGlowing(Glowing.NO_GLOWING);
             }
         }
     }
@@ -2218,5 +2218,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public void buffsUpdated() {
         buffsUpdatedCount++;
+    }
+
+    public Item carcass() {
+        return ItemsList.DUMMY;
     }
 }

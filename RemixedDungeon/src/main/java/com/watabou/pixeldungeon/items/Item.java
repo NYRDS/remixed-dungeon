@@ -21,6 +21,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Scrambler;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
@@ -778,5 +779,9 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
 	public boolean getBoolean(String key) {
 		return false;
+	}
+
+	public Image getCustomImage() {
+		return null;
 	}
 }

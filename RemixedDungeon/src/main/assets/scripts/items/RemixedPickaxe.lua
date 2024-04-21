@@ -14,6 +14,7 @@ local mineableLevels = {
     ["GutsLevel"] = true,
 }
 
+local requiredStr = 14
 
 return itemLib.init{
     desc  = function (self, item)
@@ -50,6 +51,12 @@ return itemLib.init{
         RPD.debug("Pickaxe: " .. levelKind .. " " .. action .. " " .. tostring(self.data.bloodStained))
 
         if action == action_mine then
+
+            if owner:effectiveSTR() < requiredStr then
+                owner:say("Pickaxe_InsufficientStr")
+                return
+            end
+
            --[[
             if not mineableLevels[levelKind] then
                 return
@@ -92,7 +99,7 @@ return itemLib.init{
         end
     end,
 
-    attackProc        = function(self, item, attacker, defender, damage)
+    attackProc = function(self, item, attacker, defender, damage)
         if defender:getEntityKind() == "Bat" and damage >= defender:hp() then
             self.data.bloodStained = true
             RPD.QuickSlot:refresh(attacker)
@@ -105,5 +112,56 @@ return itemLib.init{
             return itemLib.makeGlowing(0x550000, 1)
         end
         return nil
+    end,
+
+
+    goodForMelee = function()
+        return true
+    end,
+
+    getVisualName = function()
+        return "Pickaxe"
+    end,
+
+    getAttackAnimationClass = function()
+        return "sword"  --look at KindOfWeapon.java for possible values
+    end,
+
+    slot = function(self, item, belongings)
+        return RPD.Slots.weapon
+    end,
+
+    blockSlot = function(self, item, belongings)
+        return RPD.Slots.leftHand
+    end,
+
+    accuracyFactor = function(self, item, user)
+        return 1
+    end,
+
+    damageRoll = function(self, item, user)
+        local lvl = item:level()
+        return math.random(2 + lvl, 10 + lvl*2)
+    end,
+
+    attackDelayFactor = function(self, item, user)
+        return 1 + math.min((requiredStr - user:effectiveSTR()) / 10, 0)
+    end,
+
+    typicalSTR = function(self, item)
+        return requiredStr
+    end,
+
+    statsRequirementsSatisfied = function(self, item)
+        return item:getOwner():effectiveSTR() >= requiredStr
+    end,
+
+    knownStatsText = function(self, item)
+        return ":"..tostring(requiredStr)
+    end,
+
+    unknownStatsText = function(self, item)
+        return "???"
     end
+
 }

@@ -411,6 +411,11 @@ public class CustomItem extends EquipableItem {
         return script.runOptional("getBoolean", super.getBoolean(key));
     }
 
+    @Override
+    public Image getCustomImage() {
+        return script.runOptional("getCustomImage", super.getCustomImage());
+    }
+
     private class CustomItemCellListener implements CellSelector.Listener {
 
         private final String action;

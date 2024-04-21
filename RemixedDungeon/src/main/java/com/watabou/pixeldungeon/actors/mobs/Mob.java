@@ -350,6 +350,11 @@ public abstract class Mob extends Char {
             getBelongings().dropAll();
         }
 
+        Item carcass = carcass();
+        if(carcass.valid()) {
+            carcass.dropTo(getPos());
+        }
+
         if (hero.isAlive() && !CharUtils.isVisible(this)) {
             GLog.i(StringsManager.getVar(R.string.Mob_Died));
         }

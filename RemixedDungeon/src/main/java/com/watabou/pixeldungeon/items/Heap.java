@@ -255,7 +255,11 @@ public class Heap implements Bundlable, NamedEntityKind {
 			if (sprite != null) {
 				float scale = scale();
 				sprite.setScaleXY(scale, scale);
-				sprite.view(imageFile(), image(), glowing());
+				if (type == Type.HEAP) {
+					sprite.view(peek());
+				} else {
+					sprite.view(imageFile(), image(), glowing());
+				}
 				sprite.place(pos);
 			}
 		}

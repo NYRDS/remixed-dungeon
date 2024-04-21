@@ -26,6 +26,8 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import lombok.val;
+
 public class ItemSprite extends MovieClip {
 
 	public static final int SIZE = 16;
@@ -147,10 +149,20 @@ public class ItemSprite extends MovieClip {
 	}
 
 	public ItemSprite view(@NotNull Item item) {
+
 		if(item.overlayIndex()>=0) {
 			overlay = new Image(item.overlayFile(),16,item.overlayIndex());
 		} else {
 			overlay = null;
+		}
+
+		val customImage = item.getCustomImage();
+		if(customImage!= null) {
+			if ((this.glowing = item.glowing()) == null) {
+				resetColor();
+			}
+			copy(customImage);
+			return this;
 		}
 
 		return view(item.imageFile(), item.image(), item.glowing());
