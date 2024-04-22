@@ -82,6 +82,12 @@ return itemLib.init{
                         owner:collectAnimated(RPD.item("DarkGold"))
                     end
 
+                    if levelKind == 'IceCavesLevel' or levelKind == 'IceCavesBossLevel' then
+                        RPD.Sfx.CellEmitter:center(cell):burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.STAR), 7)
+                        RPD.playSound( "snd_evoke" )
+                        owner:collectAnimated(RPD.carcass("Gnoll"))
+                    end
+
                     if levelKind == 'GutsLevel' then
                         RPD.Sfx.Wound:hit(cell,math.random()*3.14)
                         RPD.playSound( "snd_hit" )

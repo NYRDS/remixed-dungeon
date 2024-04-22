@@ -11,6 +11,7 @@ import com.nyrds.pixeldungeon.ai.RunningAmok;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.game.ModQuirks;
+import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
@@ -618,5 +619,10 @@ public abstract class Mob extends Char {
     @Override
     public int dr() {
         return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() + dr + lvl() / 2;
+    }
+
+    @Override
+    public Item carcass() {
+       return new Carcass(this);
     }
 }

@@ -391,6 +391,11 @@ local RPD = {
         Tweeners.JumpTweener:attachTo(chr:getSprite(), target, height, time)
     end,
 
+    carcass = function(mobClass)
+        local mob = MobFactory:createMob(mobClass, json.encode(mobDesc or {_=""}))
+        return mob:carcass()
+    end,
+
     item = function(itemClass, quantity)
         quantity = quantity or 1
         local item = ItemFactory:itemByName(itemClass)

@@ -257,9 +257,7 @@ public class GameScene extends PixelScene {
             add(doorTiles);
         }
 
-        for (Heap heap : level.allHeaps()) {
-            addHeapSprite(heap);
-        }
+
 
         emitters = new Group();
         effects = new Group();
@@ -269,6 +267,10 @@ public class GameScene extends PixelScene {
         mobs.sort = true;
         topMobs = new Group();  // mobs that are drawn on top of walls
         topMobs.sort = true;
+
+        for (Heap heap : level.allHeaps()) { //so carcases cloud ne loaded
+            addHeapSprite(heap);
+        }
 
         add(mobs);
 
@@ -994,9 +996,9 @@ public class GameScene extends PixelScene {
     public static void addMobSpriteDirect(Char chr,CharSprite sprite) {
         if (isSceneReady()) {
             if(chr.getWalkingType() == WalkingType.WALL || chr.getWalkingType() == WalkingType.ABSOLUTE) {
-                scene.topMobs.add(sprite);
+                    scene.topMobs.add(sprite);
             } else {
-                scene.mobs.add(sprite);
+                    scene.mobs.add(sprite);
             }
         }
     }

@@ -65,6 +65,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     @Nullable
     protected Image avatar;
+    protected Image carcass;
 
 
     private Glowing glowing = Glowing.NO_GLOWING;
@@ -688,6 +689,14 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         }
 
         return avatar;
+    }
+
+    public Image carcass() {
+        if (carcass == null) {
+            carcass = snapshot(die.frames[die.frames.length - 1]);
+            carcass.setScale(charScale);
+        }
+        return carcass;
     }
 
     private void resetIfNotDying(){
