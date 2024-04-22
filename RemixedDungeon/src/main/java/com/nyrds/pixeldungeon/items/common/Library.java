@@ -19,7 +19,6 @@ import com.watabou.pixeldungeon.windows.WndInfoItem;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.FileNotFoundException;
 import java.io.OutputStream;
 import java.util.Collections;
 import java.util.HashMap;
@@ -36,7 +35,7 @@ public class Library {
 	public static final String ITEM = "item";
 	public static final String MOB = "mob";
 
-	private static Map<String, Map<String, Integer>> mKnowledgeLevel;
+	private static Map<String, Map<String, Integer>> mKnowledgeLevel = new HashMap<>();
 
 	private final static String  LIBRARY_FILE = "library.json";
 	private static       boolean saveNeeded   = false;
@@ -62,10 +61,11 @@ public class Library {
 	@Deprecated
 	private static void loadOldLibrary() {
 		try {
-			mKnowledgeLevel = gson.fromJson(
-					JsonHelper.readJsonFromStream(FileSystem.getInputStream(LIBRARY_FILE), LIBRARY_FILE).toString(),
-					new TypeToken<Map<String, Map<String, Integer>>>() {}.getType()
-			);
+			if (FileSystem.getInternalStorageFile(LIBRARY_FILE).exists()) {
+				mKnowledgeLevel = gson.fromJson(
+						JsonHelper.readJsonFromStream(FileSystem.getInputStream(LIBRARY_FILE), LIBRARY_FILE).toString(),
+						new TypeToken<Map<String, Map<String, Integer>>>() {}.getType());
+			}
 		} catch (Exception e) {
 			EventCollector.logException(e,"library restore failed");
 		}
@@ -74,10 +74,14 @@ public class Library {
 	private static void loadLibrary() {
 		mKnowledgeLevel = new HashMap<>();
 		try {
-			mKnowledgeLevel = gson.fromJson(
-					JsonHelper.readJsonFromStream(FileSystem.getInputStream(getLibraryFile()), LIBRARY_FILE).toString(),
-					new TypeToken<Map<String, Map<String, Integer>>>() {}.getType()
-			);
+			String libraryFile = getLibraryFile();
+			if (FileSystem.getInternalStorageFile(libraryFile).exists()) {
+				mKnowledgeLevel = gson.fromJson(
+						JsonHelper.readJsonFromStream(FileSystem.getInputStream(libraryFile), libraryFile).toString(),
+						new TypeToken<Map<String, Map<String, Integer>>>() {
+						}.getType()
+				);
+			}
 		} catch (Exception e) {
 			loadOldLibrary();
 		}
