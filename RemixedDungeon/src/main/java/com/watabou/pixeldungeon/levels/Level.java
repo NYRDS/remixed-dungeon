@@ -3,7 +3,6 @@ package com.watabou.pixeldungeon.levels;
 
 import android.annotation.SuppressLint;
 
-import com.google.common.base.Optional;
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
@@ -916,12 +915,12 @@ public abstract class Level implements Bundlable {
 			Actor.addDelayed(new Pushing(mob, fromCell, targetPos), -1);
 		}
 
+		mob.setPos(fromCell);
 		if (GameScene.isSceneReady()) {
-			mob.setPos(fromCell);
 			mob.updateSprite();
 		}
 
-		mob.setPos(targetPos);
+		//mob.setPos(targetPos);
 		Actor.addDelayed(mob, delay);
 		Actor.occupyCell(mob);
 

@@ -7,6 +7,7 @@ import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.PointF;
 
 import org.jetbrains.annotations.NotNull;
@@ -57,15 +58,15 @@ public class Pushing extends Actor {
 				return;
 			}
 
-			if(ch.getSprite().getParent()==null) {
+			if(!ch.hasSprite() ||ch.getSprite().getParent()==null) {
 				EventCollector.logException("pushing orphaned char");
 				Actor.remove( Pushing.this );
 				return;
 			}
+			CharSprite sprite = ch.getSprite();
 
-
-			point( ch.getSprite().worldToCamera( from ) );
-			end = ch.getSprite().worldToCamera( to );
+			sprite.point(point( sprite.worldToCamera( from ) ));
+			end = sprite.worldToCamera( to );
 			
 			speed.set( 2 * (end.x - getX()) / DELAY, 2 * (end.y - getY()) / DELAY );
 			acc.set( -speed.x / DELAY, -speed.y / DELAY );
@@ -78,19 +79,15 @@ public class Pushing extends Actor {
 		@Override
 		public void update() {
 			super.update();
-			
+			CharSprite sprite = ch.getSprite();
 			if ((delay += GameLoop.elapsed) < DELAY) {
-
-				ch.getSprite().setX(getX());
-				ch.getSprite().setY(getY());
-				
+				sprite.setX(getX());
+				sprite.setY(getY());
 			} else {
-
-				ch.getSprite().point( end );
-				
+				sprite.point( end );
 				killAndErase();
 				Actor.remove( Pushing.this );
-				
+				ch.setPos(to);
 				next();
 			}
 		}
