@@ -333,7 +333,7 @@ public class Dungeon {
             if (dup.valid()) {
                 GLog.debug("Removing dup: %s, %d", dup.getEntityKind(), dup.getId());
                 Actor.remove(dup);
-                Actor.freeCell(dup.getPos());
+                Actor.freeCell(dup);
                 CharsList.remove(dup.getId());
                 level.mobs.remove(dup);
             }

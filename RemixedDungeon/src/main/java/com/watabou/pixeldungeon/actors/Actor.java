@@ -3,6 +3,8 @@ package com.watabou.pixeldungeon.actors;
 
 import android.annotation.SuppressLint;
 
+import com.google.common.collect.Multimap;
+import com.google.common.collect.MultimapBuilder;
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -31,6 +33,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import lombok.val;
 
 
 public abstract class Actor implements Bundlable, NamedEntityKind {
@@ -103,7 +106,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	private static float now = 0;
 	
 	@SuppressLint("UseSparseArrays")
-	public static final Map<Integer, Char> chars = new HashMap<>();
+	public static final Multimap<Integer, Char> chars = MultimapBuilder.hashKeys().arrayListValues().build();
 	
 	public static void clearActors() {
 		now = 0;
@@ -160,8 +163,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		chars.put(ch.getPos(), ch);
 	}
 	
-	public static void freeCell( int pos ) {
-		chars.remove(pos);
+	public static void freeCell( Char actor ) {
+		chars.remove(actor.getPos(), actor);
 	}
 	
 	/*protected*/final public void next() {
@@ -430,7 +433,12 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 	@LuaInterface
 	public static Char findChar(int pos) {
-		return chars.get(pos);
+		val ret = chars.get(pos);
+		if (ret.isEmpty()) {
+
+			return null;
+		}
+		return ret.iterator().next();
 	}
 
 	@LuaInterface

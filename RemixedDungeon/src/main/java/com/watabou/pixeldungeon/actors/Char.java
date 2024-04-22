@@ -791,7 +791,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             buff.detach();
         }
 
-        Actor.freeCell(getPos());
+        Actor.freeCell(this);
         CharsList.destroy(getId());
     }
 
@@ -1350,7 +1350,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             throw new TrackedRuntimeException("Trying to set invalid pos " + pos + " for " + getEntityKind());
         }
         prevPos = this.pos;
-        freeCell(this.pos);
+        freeCell(this);
         this.pos = pos;
         occupyCell(this);
     }

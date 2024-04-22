@@ -148,7 +148,7 @@ public class Ghost extends NPC {
 				}
 				if (newPos != -1) {
 					
-					Actor.freeCell( getPos() );
+					Actor.freeCell( this );
 					
 					CellEmitter.get( getPos() ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 					setPos(newPos);
