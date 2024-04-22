@@ -2,6 +2,8 @@ package com.nyrds.pixeldungeon.ml.actions;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.windows.WndChar;
 
 public class Interact extends CharAction {
     public final Char chr;
@@ -21,7 +23,14 @@ public class Interact extends CharAction {
             }
             return false;
 
+        } else {
+            if (chr.getOwnerId() == hero.getId()) {
+                GameScene.show(new WndChar(chr, hero));
+                return false;
+            }
         }
+
+
 
         if (Dungeon.level.fieldOfView[chr.getPos()] && hero.getCloser(chr.getPos())) {
             return true;
