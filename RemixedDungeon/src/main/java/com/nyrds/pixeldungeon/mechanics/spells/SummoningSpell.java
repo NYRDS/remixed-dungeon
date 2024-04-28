@@ -32,7 +32,7 @@ public class SummoningSpell extends Spell {
         }
 
         if (isSummoningLimitReached(chr)) {
-            if(reallyCast) {
+            if (reallyCast) {
                 GLog.w(getLimitWarning(getSummonLimit()));
             }
             return false;
@@ -42,12 +42,12 @@ public class SummoningSpell extends Spell {
     }
 
     @Override
-    public boolean cast(@NotNull Char chr){
-        if(!super.cast(chr)) {
-	        return false;
+    public boolean cast(@NotNull Char chr) {
+        if (!super.cast(chr)) {
+            return false;
         }
 
-	    Level level = chr.level();
+        Level level = chr.level();
         int casterPos = chr.getPos();
         int spawnPos = level.getEmptyCellNextTo(casterPos);
 
@@ -58,26 +58,26 @@ public class SummoningSpell extends Spell {
             Mob pet = MobFactory.mobByName(mobKind);
             pet = Mob.makePet(pet, chr.getId());
 
-	        pet.setPos(spawnPos);
-            level.spawnMob(pet,0,casterPos);
+            pet.setPos(spawnPos);
+            level.spawnMob(pet, 0, casterPos);
         }
-        
-	    castCallback(chr);
-	    return true;
+
+        castCallback(chr);
+        return true;
     }
 
 
-    private boolean isSummoningLimitReached(Char hero){
+    private boolean isSummoningLimitReached(Char hero) {
         return getSummonLimit() <= getNumberOfSummons(hero);
     }
 
-    private int getNumberOfSummons(Char hero){
+    private int getNumberOfSummons(Char hero) {
         Collection<Integer> pets = hero.getPets();
 
         int n = 0;
         for (Integer mobId : pets) {
             Char aChar = CharsList.getById(mobId);
-            if(aChar.valid()) {
+            if (aChar.valid()) {
                 Mob mob = (Mob) aChar;
                 if (mob.isAlive() && mob.getEntityKind().equals(mobKind)) {
                     n++;
@@ -88,7 +88,7 @@ public class SummoningSpell extends Spell {
         return n;
     }
 
-    private String getLimitWarning(int limit){
+    private String getLimitWarning(int limit) {
         return Utils.format(R.string.Spells_SummonLimitReached, this.name(), limit);
     }
 

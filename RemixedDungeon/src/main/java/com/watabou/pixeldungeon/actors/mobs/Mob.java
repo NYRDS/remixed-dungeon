@@ -353,7 +353,7 @@ public abstract class Mob extends Char {
 
         Item carcass = carcass();
         if(carcass.valid()) {
-            carcass.dropTo(getPos());
+            level().drop(carcass, getPos());
         }
 
         if (hero.isAlive() && !CharUtils.isVisible(this)) {
