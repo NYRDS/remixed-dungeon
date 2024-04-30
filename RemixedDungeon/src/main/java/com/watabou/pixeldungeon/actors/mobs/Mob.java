@@ -69,6 +69,7 @@ public abstract class Mob extends Char {
 
     protected int expForKill = 1;
     protected int maxLvl = 50;
+    protected float carcassChance = 1;
 
     public static final float TIME_TO_WAKE_UP = 1f;
 
@@ -85,7 +86,7 @@ public abstract class Mob extends Char {
         setupCharData();
         getScript().run("fillStats");
         if (ModQuirks.mobLeveling) {
-            lvl(Random.Int(1, (int) RemixedDungeon.getDifficultyFactor()+1));
+            lvl(Random.Int(1, (int) RemixedDungeon.getDifficultyFactor() + 1));
         }
     }
 
@@ -351,9 +352,11 @@ public abstract class Mob extends Char {
             getBelongings().dropAll();
         }
 
-        Item carcass = carcass();
-        if(carcass.valid()) {
-            level().drop(carcass, getPos());
+        if (Random.Float(1) <= carcassChance) {
+            Item carcass = carcass();
+            if (carcass.valid()) {
+                level().drop(carcass, getPos());
+            }
         }
 
         if (hero.isAlive() && !CharUtils.isVisible(this)) {
@@ -451,7 +454,7 @@ public abstract class Mob extends Char {
     @Override
     public boolean friendly(@NotNull Char chr, int r_level) {
 
-        if(r_level > 7) {
+        if (r_level > 7) {
             EventCollector.logEvent("too high r_level in Mob::friendly");
             return false;
         }
@@ -473,7 +476,7 @@ public abstract class Mob extends Char {
         }
 
         if (getOwnerId() != getId()) {
-            if (getOwner().friendly(chr, r_level+1)) {
+            if (getOwner().friendly(chr, r_level + 1)) {
                 return true;
             }
         }
@@ -553,7 +556,7 @@ public abstract class Mob extends Char {
 
         new_mob.getId(); //Ensure valid id
 
-        if(getOwnerId() == getId()) {
+        if (getOwnerId() == getId()) {
             new_mob.setOwnerId(new_mob.getId());
         } else {
             new_mob.setOwnerId(getOwnerId());
@@ -623,6 +626,6 @@ public abstract class Mob extends Char {
 
     @Override
     public Item carcass() {
-       return new Carcass(this);
+        return new Carcass(this);
     }
 }

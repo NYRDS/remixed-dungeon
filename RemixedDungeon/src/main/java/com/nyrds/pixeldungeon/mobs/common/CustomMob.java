@@ -148,6 +148,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		spriteLayer = classDesc.optInt("spriteLayer",spriteLayer);
 
 		kind = classDesc.optInt("var", kind);
+		carcassChance = (float) classDesc.optDouble("carcassChance", carcassChance);
 
 		JsonHelper.readStringSet(classDesc, Char.IMMUNITIES, immunities);
 		JsonHelper.readStringSet(classDesc, Char.RESISTANCES, resistances);

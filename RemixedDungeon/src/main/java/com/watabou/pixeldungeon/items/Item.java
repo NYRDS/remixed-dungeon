@@ -567,6 +567,17 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	@Getter
 	private Char owner = CharsList.DUMMY;
 
+
+	@Getter
+	private Heap heap = null;
+
+	public void setHeap(Heap heap) {
+		this.heap = heap;
+		if(heap!= null) {
+			add(this);
+		}
+	}
+
 	protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
 		return Utils.getClassParam(getEntityKind(), paramName, defaultValue, warnIfAbsent);
 	}
@@ -760,6 +771,9 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 	public void setOwner(Char owner) {
 		add(this);
 		this.owner = owner;
+		if(owner.valid()) {
+			setHeap(null);
+		}
 	}
 
 	public boolean selectedForAction() {

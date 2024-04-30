@@ -80,7 +80,7 @@ public class Assets {
     public static final String TILES_NECRO                 = "tiles_necropolis.png";
     public static final String TILES_NECRO_XYZ             = "tilesets/tiles_necropolis_xyz.png";
     public static final String TILES_ICE_CAVES_X           = "tiles_ice_caves_x.png";
-    public static final String TILES_ICE_CAVES_XYZ         = "tilesets/tiles_ice_caves_xyz.png";
+    public static final String TILES_ICE_CAVES_XYZ         = "tilesets/tiles_ice_caves_xyz.webp";
     public static final String TILES_GENERIC_TOWN_INTERIOR = "tiles_standalone_interior.png";
 
     public static final String WATER_SEWERS    = "water0.png";
