@@ -88,7 +88,7 @@ public class Chasm implements Doom {
 	}
 
 	@Override
-	public void onDeath() {
+	public void onHeroDeath() {
 		Badges.validateDeathFromFalling();
 
 		Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.FALL), Dungeon.depth ) );

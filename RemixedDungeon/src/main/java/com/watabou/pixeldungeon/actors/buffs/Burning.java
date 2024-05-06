@@ -93,7 +93,7 @@ public class Burning extends Buff implements Doom {
 	}
 
 	@Override
-	public void onDeath() {
+	public void onHeroDeath() {
 		
 		Badges.validateDeathFromFire();
 		

@@ -75,7 +75,6 @@ import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.ui.AttackIndicator;
-import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndResurrect;
@@ -771,7 +770,7 @@ public class Hero extends Char {
         GameScene.gameOver();
 
         if (cause instanceof Doom) {
-            ((Doom) cause).onDeath();
+            ((Doom) cause).onHeroDeath();
         }
 
         Dungeon.gameOver();

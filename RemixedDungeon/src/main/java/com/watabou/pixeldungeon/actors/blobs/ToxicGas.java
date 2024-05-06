@@ -81,7 +81,7 @@ public class ToxicGas extends Blob implements Doom {
     }
 	
 	@Override
-	public void onDeath() {
+	public void onHeroDeath() {
 		
 		Badges.validateDeathFromGas();
 		

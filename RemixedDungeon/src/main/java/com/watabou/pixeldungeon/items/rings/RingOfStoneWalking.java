@@ -40,7 +40,7 @@ public class RingOfStoneWalking extends Artifact{
             return StringsManager.getVar(R.string.StoneBloodBuff_Info);
         }
 		@Override
-		public void onDeath() {
+		public void onHeroDeath() {
 			Badges.validateDeathInStone();
 			
 			Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.IMMURED), Dungeon.depth ) );

@@ -79,7 +79,7 @@ public class Necrotism extends Buff implements Doom {
 	}
 
 	@Override
-	public void onDeath() {
+	public void onHeroDeath() {
 		Badges.validateDeathFromNecrotism();
 
 		Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.NECROTISM), Dungeon.depth ) );
