@@ -10,6 +10,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class ExplodingSkull extends UndeadMob {
     {
+        carcassChance = 0;
         hp(ht(10));
         baseDefenseSkill = 1;
         baseAttackSkill  = 125;

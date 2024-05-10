@@ -246,31 +246,28 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Override
     public boolean act() {
-        level().updateFieldOfView(this);
-/*
-        if (sprite == null) {
-            if (Util.isDebug()) {
-                throw new TrackedRuntimeException(Utils.format("%s act on %s without sprite", getEntityKind(), level().levelId));
+        if(prevTime < time) {
+            prevTime = time;
+
+            level().updateFieldOfView(this);
+            checkVisibleEnemies();
+
+            getScript().runOptional("onAct");
+
+            forEachBuff(CharModifier::charAct);
+
+            for (Item item : getBelongings()) {
+                item.charAct();
+            }
+
+            if (getBelongings().encumbranceCheck().valid()) {
+                Buff.permanent(this, "Encumbrance");
+            } else {
+                Buff.detach(this, "Encumbrance");
             }
         }
-*/
-        checkVisibleEnemies();
 
-        getScript().runOptional("onAct");
-
-        forEachBuff(CharModifier::charAct);
-
-        for (Item item : getBelongings()) {
-            item.charAct();
-        }
-
-        if (getBelongings().encumbranceCheck().valid()) {
-            Buff.permanent(this, "Encumbrance");
-        } else {
-            Buff.detach(this, "Encumbrance");
-        }
-
-        return false;
+        return true;
     }
 
     private static final String TAG_HP = "HP";

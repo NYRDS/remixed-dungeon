@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 public class IceElemental extends Mob implements IDepthAdjustable {
 
 	public IceElemental() {
+		carcassChance = 0;
 		adjustStats(Dungeon.depth);
 
 		loot(new FrozenCarpaccio(), 0.1f);

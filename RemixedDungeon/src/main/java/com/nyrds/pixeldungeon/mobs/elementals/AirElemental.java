@@ -19,7 +19,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 	private static final WindGust windGust = new WindGust();
 
 	public AirElemental() {
-
+		carcassChance = 0;
 		adjustStats(Dungeon.depth);
 
 		flying = true;

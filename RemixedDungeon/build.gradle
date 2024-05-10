@@ -33,8 +33,8 @@ android {
         manifestPlaceholders = ["admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1195
-        versionName "32.0.fix.11"
+        versionCode 1196
+        versionName "32.1.alpha.1"
         targetSdkVersion 34
         compileSdkVersion 34
         minSdkVersion 21
@@ -149,16 +149,20 @@ dependencies {
     implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices
 
 
-    implementation ("com.appodeal.ads:sdk:3.2.1.0") {
-        exclude group: "com.appodeal.ads.sdk.networks", module: "adcolony"
-        exclude group: "com.appodeal.ads.sdk.networks", module: "admob"
+    implementation ("com.appodeal.ads:sdk:3.3.0.0") {
         exclude group: "com.appodeal.ads.sdk.networks", module: "meta"
         exclude group: "com.appodeal.ads.sdk.services", module: "adjust"
         exclude group: "com.appodeal.ads.sdk.services", module: "appsflyer"
         exclude group: "com.appodeal.ads.sdk.services", module: "facebook_analytics"
         exclude group: "com.appodeal.ads.sdk.services", module: "firebase"
+        exclude group: "com.applovin.mediation", module: "google-adapter"
+        exclude group: "com.applovin.mediation", module: "facebook-adapter"
+        exclude group: "io.bidmachine", module: "ads.networks.meta_audience"
+        exclude group: "org.bidon", module: "admob-adapter"
+        exclude group: "org.bidon", module: "meta-adapter"
     }
 
+    
     implementation 'org.jetbrains:annotations:23.0.0'
 
     annotationProcessor 'org.projectlombok:lombok:1.18.22'

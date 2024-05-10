@@ -2914,4 +2914,5 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Pickaxe_InsufficientStr">Not enough strength to mine!</string>
     <string name="Carcass_Name">Remains of %s</string>
     <string name="Carcass_Info">Remains of totally dead %s.</string>
+    <string name="ResultDescriptions_Necromancy">Depleted of life force while trying to animate corpse on level %d</string>
 </resources>

@@ -35,6 +35,8 @@ public class Statue extends Mob {
 
 	public Statue() {
 		expForKill = 0;
+		carcassChance = 0;
+
 		setState(MobAi.getStateByClass(Passive.class));
 
 		hp(ht(15 + Dungeon.depth * 5));

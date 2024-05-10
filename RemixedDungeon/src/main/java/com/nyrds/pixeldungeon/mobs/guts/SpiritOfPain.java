@@ -10,6 +10,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 public class SpiritOfPain extends Mob {
 
     {
+        carcassChance = 0;
         hp(ht(80));
         baseDefenseSkill = 30;
         baseAttackSkill  = 30;

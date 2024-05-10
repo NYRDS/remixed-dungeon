@@ -3,16 +3,21 @@ package com.nyrds.pixeldungeon.items;
 import androidx.annotation.Keep;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.effects.Devour;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Sungrass;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -21,7 +26,7 @@ import java.util.ArrayList;
 
 import lombok.val;
 
-public class Carcass extends Item {
+public class Carcass extends Item implements Doom {
     @Packable
     Char src;
 
@@ -76,8 +81,13 @@ public class Carcass extends Item {
     public ArrayList<String> actions(Char hero) {
         var actions = super.actions(hero);
 
-        if (hero.getHeroClass() == HeroClass.NECROMANCER) {
-            actions.add("Necromancy");
+        switch (hero.getHeroClass()) {
+            case NECROMANCER:
+                actions.add("Necromancy");
+            break;
+            case GNOLL:
+                actions.add("Devour");
+            break;
         }
 
         return actions;
@@ -91,6 +101,7 @@ public class Carcass extends Item {
             int spawnPos = level.getEmptyCellNextTo(casterPos);
 
             Wound.hit(chr);
+            chr.damage(src.ht()/5, this);
             Buff.detach(chr, Sungrass.Health.class);
 
             if (level.cellValid(spawnPos)) {
@@ -104,8 +115,22 @@ public class Carcass extends Item {
                 level.spawnMob(pet, 0, casterPos);
             }
             chr.getBelongings().removeItem(this);
+        } else if (action.equals("Devour")) {
+            Devour.hit(chr);
+            chr.eat(this, src.ht(), "You have devoured corpse of " + src.getName() + "!");
+            chr.heal(src.ht()/10, this);
+
+            chr.getBelongings().removeItem(this);
         } else {
             super._execute(chr, action);
         }
+
+
+    }
+
+    @Override
+    public void onHeroDeath() {
+        Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.BURNING), Dungeon.depth ) );
+        GLog.n(StringsManager.getVar(R.string.Burning_Death));
     }
 }

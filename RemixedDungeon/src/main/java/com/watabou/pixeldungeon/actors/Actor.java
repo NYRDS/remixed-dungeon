@@ -45,7 +45,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	private static final Map<Actor, Integer> skipCounter = new HashMap<>();
 
 	@Packable
-	private float time;
+	float time = 0;
+	@Packable
+	float prevTime = -1;
 
 	private boolean added = false;
 
@@ -137,6 +139,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		}
 		for (Actor a : all) {
 			a.time -= min;
+			a.prevTime -= min;
 		}
 		now = 0;
 	}
@@ -241,17 +244,17 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
 				break;
 			}
-/*
+
 			if(actor.time == timeBefore && all.contains(actor)) { // don't need this check for removed actors
 				var error = String.format("actor %s has same timestamp after act!", actor.getEntityKind());
 				if(Util.isDebug()) {
-					throw new ModError(error);
+					EventCollector.logException(error);
 				} else {
 					actor.spend(TICK);
 					EventCollector.logException(error);
 				}
 			}
-*/
+
 			if(SystemTime.timeSinceTick() > 50) {
 				break;
 			}

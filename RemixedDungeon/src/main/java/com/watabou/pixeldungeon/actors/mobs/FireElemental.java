@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 public class FireElemental extends Mob {
 
 	public FireElemental() {
-
+		carcassChance = 0;
 		hp(ht(65));
 		baseDefenseSkill = 20;
 		baseAttackSkill  = 25;

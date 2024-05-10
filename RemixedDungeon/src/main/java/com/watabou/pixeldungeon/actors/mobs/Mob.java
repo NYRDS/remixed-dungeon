@@ -198,21 +198,17 @@ public abstract class Mob extends Char {
             return true;
         }
 
-        //float timeBeforeAct = actorTime();
+        float timeBeforeAct = actorTime();
 
 
         //GLog.debug("%s is %s", getEntityKind(), getState().getTag());
         getState().act(this);
 
-/*		if(actorTime() == timeBeforeAct && Util.isDebug()) {
+		if(actorTime() == timeBeforeAct) {
 			var error = String.format("actor %s has same timestamp after %s act!", getEntityKind(), getState().getTag());
-			if(Util.isDebug()) {
-				throw new ModError(error);
-			} else {
-				spend(MICRO_TICK);
-				EventCollector.logException(error);
-			}
-		}*/
+            spend(TICK);
+            EventCollector.logException(error);
+		}
         return true;
     }
 

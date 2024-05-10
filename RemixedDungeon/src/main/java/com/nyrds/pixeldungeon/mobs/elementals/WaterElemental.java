@@ -25,6 +25,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	}
 	
 	public void adjustStats(int depth) {
+		carcassChance = 0;
 		kind = Math.min(depth/5, 4);
 		if ( kind > 5 ) { kind = 5; }
 

@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 public class Piranha extends Mob {
 	
 	public Piranha() {
+		carcassChance = 0;
 		spriteClass = PiranhaSprite.class;
 
 		walkingType = WalkingType.WATER;

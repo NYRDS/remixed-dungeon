@@ -31,7 +31,7 @@ public class EnslavedSoul extends UndeadMob {
 
     public EnslavedSoul(){
         hp(ht(25));
-
+        carcassChance = 0;
         baseSpeed = 1.1f;
         baseDefenseSkill = 11;
         baseAttackSkill  = 10;

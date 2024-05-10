@@ -22,6 +22,7 @@ import lombok.SneakyThrows;
 public class MirrorImage extends Mob {
 
     public MirrorImage() {
+        carcassChance = 0;
         setState(MobAi.getStateByClass(Hunting.class));
 
         addImmunity(ToxicGas.class);

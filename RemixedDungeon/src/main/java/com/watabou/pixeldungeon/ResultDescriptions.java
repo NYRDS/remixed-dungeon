@@ -10,7 +10,7 @@ public final class ResultDescriptions {
 
 	public enum Reason {
 		MOB, BOSS, WAND, GLYPH, TRAP, BURNING, HUNGER, POISON, GAS, BLEEDING, OOZE, FALL, IMMURED,
-		NECROTISM, UNKNOWN, WIN
+		NECROTISM, NECROMANCY, UNKNOWN, WIN
 	}
 
 	private static final HashMap<Reason, Integer> descriptionsMap;
@@ -39,6 +39,7 @@ public final class ResultDescriptions {
 		descriptionsMap.put(Reason.FALL, R.string.ResultDescriptions_Fall);
 		descriptionsMap.put(Reason.IMMURED, R.string.ResultDescriptions_Immured);
 		descriptionsMap.put(Reason.NECROTISM, R.string.ResultDescriptions_Necrotism);
+		descriptionsMap.put(Reason.NECROMANCY, R.string.ResultDescriptions_Necromancy);
 
 		// Win
 		descriptionsMap.put(Reason.WIN, R.string.ResultDescriptions_Win);

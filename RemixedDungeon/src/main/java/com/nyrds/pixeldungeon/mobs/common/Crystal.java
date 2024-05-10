@@ -34,9 +34,11 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 	{
 		movable = false;
+		carcassChance = 0;
 	}
 
 	public Crystal() {
+
 		adjustStats(Dungeon.depth);
 		ensureWand();
 	}

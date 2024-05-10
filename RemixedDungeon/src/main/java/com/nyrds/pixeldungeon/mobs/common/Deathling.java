@@ -16,6 +16,7 @@ public class Deathling extends UndeadMob {
     public Deathling(){
         hp(ht(HEALTH));
 
+        carcassChance = 0;
         flying = true;
 
         expForKill = 0;
