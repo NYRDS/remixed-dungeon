@@ -5,6 +5,7 @@ import androidx.annotation.Keep;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.effects.Devour;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
@@ -28,7 +29,7 @@ import lombok.val;
 
 public class Carcass extends Item implements Doom {
     @Packable
-    Char src;
+    Char src = CharsList.DUMMY;
 
     @Packable
     int ttl = 10;
@@ -124,13 +125,20 @@ public class Carcass extends Item implements Doom {
         } else {
             super._execute(chr, action);
         }
-
-
     }
 
     @Override
     public void onHeroDeath() {
         Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.BURNING), Dungeon.depth ) );
         GLog.n(StringsManager.getVar(R.string.Burning_Death));
+    }
+
+    @Override
+    public String getEntityKind() {
+        if (src != null && src.valid()) {
+            return "Carcass of " + src.getName();
+        } else {
+            return "Carcass";
+        }
     }
 }

@@ -15,6 +15,9 @@ import java.util.HashSet;
 
 public class DummyChar extends Char {
 
+    {
+        deactivateActor();
+    }
     public DummyChar() {
         super();
     }
@@ -118,5 +121,10 @@ public class DummyChar extends Char {
     }
     @Override
     public void setCurAction(CharAction curAction) {
+    }
+
+    @Override
+    public String getEntityKind() {
+        return "DummyChar";
     }
 }
