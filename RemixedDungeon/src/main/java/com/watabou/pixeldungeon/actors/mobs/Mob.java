@@ -345,15 +345,16 @@ public abstract class Mob extends Char {
         Library.identify(Library.MOB, getEntityKind());
 
         if (!(cause instanceof Chasm)) {
+            if (Random.Float(1) <= carcassChance) {
+                Item carcass = carcass();
+                if (carcass.valid()) {
+                    level().drop(carcass, getPos());
+                }
+            }
+
             getBelongings().dropAll();
         }
 
-        if (Random.Float(1) <= carcassChance) {
-            Item carcass = carcass();
-            if (carcass.valid()) {
-                level().drop(carcass, getPos());
-            }
-        }
 
         if (hero.isAlive() && !CharUtils.isVisible(this)) {
             GLog.i(StringsManager.getVar(R.string.Mob_Died));
