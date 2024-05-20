@@ -24,6 +24,7 @@ public class Wraith extends Mob implements IDepthAdjustable {
 	public Wraith() {
 		hp(ht(1));
 		expForKill = 0;
+		carcassChance = 0;
 		
 		flying = true;
 
