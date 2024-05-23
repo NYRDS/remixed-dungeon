@@ -240,6 +240,11 @@ public class GameLoop {
             elapsed = timeScale * step * 0.001f;
             if (scene != null) {
                 scene.update();
+				
+				// Causing artificial death
+				if (Dungeon.hero.isReady()) {
+					Dungeon.hero.die();
+				}
             }
             Camera.updateAll();
         }

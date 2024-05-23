@@ -83,6 +83,8 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 import com.watabou.utils.SystemTime;
 
+import org.apache.commons.collections4.map.HashedMap;
+
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -705,7 +707,7 @@ public class Hero extends Char {
     @Override
     public void die(@NotNull NamedEntityKind cause) {
 
-        Map<String, String> deathDesc = new HashMap<>();
+        Map<String, String> deathDesc = new HashedMap<>();
 
         deathDesc.put("class", heroClass.name());
         deathDesc.put("subClass", subClass.name());
