@@ -212,15 +212,12 @@ public class SystemText extends Text {
                 lastWordStart = xCharPos.size();
             }
 
-            if (!isWhiteSpace || symbolWidth == 0) {
+            if (!isWhiteSpace) {
                 xCharPos.add(xPos);
                 codePoints.add(codepoint);
             }
 
             if (codepoint == 0x000A || codepoint == 0x000D) {
-                xCharPos.add(xPos);
-                codePoints.add(codepoint);
-
                 lineWidth += symbolWidth;
                 return offset;
             }
@@ -297,9 +294,6 @@ public class SystemText extends Text {
                     } else {
                         cacheHits++;
                     }
-
-                    //GLog.debug("text cache hits %d miss: %d size %d", cacheHits, cacheMiss, bitmapCache.size());
-
                     SystemTextLine line = new SystemTextLine(bitmapCache.get(key));
                     line.setVisible(getVisible());
                     lineImage.add(line);
@@ -319,6 +313,7 @@ public class SystemText extends Text {
 
         final int charsToDraw = Math.min(currentLine.length(), codePoints.size());
 
+
         if (mask == null) {
             if (!xCharPos.isEmpty()) {
                 float x = (xCharPos.get(0) + 0.5f) * oversample;
@@ -328,16 +323,16 @@ public class SystemText extends Text {
         }
 
         for (int i = 0; i < charsToDraw; ++i) {
-            int codepoint = codePoints.get(i);
-
             if (charIndex < mask.length && mask[charIndex]) {
-
+                int codepoint = codePoints.get(i);
                 float x = (xCharPos.get(i) + 0.5f) * oversample;
-
-                canvas.drawText(Character.toString((char) codepoint), x, y, paint);
+                if (!Character.isWhitespace(codepoint)) {
+                    canvas.drawText(Character.toString((char) codepoint), x, y, paint);
+                }
             }
             charIndex++;
         }
+
 
         return charIndex;
     }

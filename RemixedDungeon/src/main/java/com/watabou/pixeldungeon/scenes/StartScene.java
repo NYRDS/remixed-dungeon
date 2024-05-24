@@ -458,9 +458,6 @@ public class StartScene extends PixelScene {
                 }
                 updateBrightness();
             }
-
-            //challengeButton.update();
-            //facilitaionButton.update();
         }
 
         public void highlight(boolean value) {

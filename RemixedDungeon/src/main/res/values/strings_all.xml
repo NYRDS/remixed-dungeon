@@ -975,7 +975,7 @@
   <string name="HeroClass_Elf">elf</string>
   <string name="HeroClass_None">commoner</string>
   <string name="HeroSubClass_NameNone">none</string>
-  <string name="HeroSubClass_DescNone"></string>
+  <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">gladiator</string>
   <string name="HeroSubClass_DescGlad">A successful attack with a melee weapon allows the _Gladiator_ to start a combo, in which every next successful hit inflicts more damage.</string>
   <string name="HeroSubClass_NameBers">berserker</string>
@@ -2866,15 +2866,14 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndModSelect_AreYouSure">Deleting mod: %s, are you sure?</string>
   <string name="Challenges_Names_8">No town</string>
   <string name="Challenges_Descriptions_8">Your journey will begin in the dark and dangerous town sewers, with the only way to the surface blocked. To make matters worse, you will only be able to use equipment that you find within the dungeon. With limited resources and equipment, your survival will depend on your skills and strategy.</string>
-
   <string name="EncumbranceBuff_CharAct_1">I\'m not strong enough to wield %s properly.</string>
   <string name="EncumbranceBuff_CharAct_2">This %s is too heavy for me to use effectively.</string>
   <string name="EncumbranceBuff_CharAct_3">I need to work on my strength before I can use %s.</string>
   <string name="EncumbranceBuff_CharAct_4">I lack the strength to use %s to its full potential."</string>
   <string name="EncumbranceBuff_CharAct_5">%s is too much for me to handle right now.</string>
-    <string name="Typical_Damage">Typical damage</string>
-    <string name="Damage_Reduction">Damage reduction</string>
-    <string name="Attack_Range">Attack range</string>
+  <string name="Typical_Damage">Typical damage</string>
+  <string name="Damage_Reduction">Damage reduction</string>
+  <string name="Attack_Range">Attack range</string>
   <string name="Movement_Speed">Movement speed</string>
   <string name="Attack_Cooldown">Attack cooldown</string>
   <string name="View_Distance">View distance</string>
@@ -2882,7 +2881,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ChaosShield_name">Chaos Shield</string>
   <string name="ChaosShield_desc">The Chaos Shield is the result of fusing a Chaos Crystal with ordinary shield, causing it to manifest random chaotic effects upon a successful block.</string>
   <string name="ChaosCrystal_ShieldFused">The crystal fused with your shield, and it took the chaos form.</string>
-    <string name="Actions_Speed">Haste level</string>
+  <string name="Actions_Speed">Haste level</string>
   <string name="ChampionOfAirBuff_Name">Champion of Air</string>
   <string name="ChampionOfAirBuff_Info">This trait bestows the creature with the essence of the winds, enhancing its agility and prowess in combat. The Champion of Air becomes a formidable adversary, capable of unleashing swift and devastating attacks that can swiftly alter the course of battle.</string>
   <string name="ChampionOfWaterBuff_Name">Champion of Water</string>
@@ -2891,7 +2890,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ChampionOfFireBuff_Info">"Infused with the fury of the flames, this trait amplifies the creature\'s ferocity and combat prowess. The Champion of Fire emerges as a fearsome adversary, unleashing devastating attacks that can engulf its foes in searing flames, instilling terror in all who dare to oppose it.</string>
   <string name="ChampionOfEarthBuff_Name">Champion of Earth</string>
   <string name="ChampionOfEarthBuff_Info">The Champion of Earth embodies unyielding strength, as this trait enhances the creature\'s damage resistance and increases its maximum vitality. This transformation makes it a daunting adversary in the treacherous depths, capable of shrugging off attacks with ease and enduring prolonged battles with unwavering resolve.</string>
-
   <string name="Welcome_Text_32">
     remix.32\n
     - Gameplay:\n
