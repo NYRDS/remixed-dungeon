@@ -41,8 +41,8 @@ def resize(iname, oname):
 
 
 rootDir = '../../RemixedDungeon/src/main/assets/spritesDesc'
+spriteDir = '../../RemixedDungeon/src/main/assets/'
 
-out = Image.new('RGBA', (oXs, oYs))
 
 def readJson(fname):
     with open(fname) as json_file:
@@ -60,6 +60,36 @@ for dirName, subdirList, fileList in os.walk(rootDir):
             print(fullPath)
             spriteDesc = readJson(fullPath)
 
+            img = Image.open(f"{spriteDir}{spriteDesc['texture']}")
+            fw = spriteDesc["width"]
+            fh = spriteDesc["height"]
+            mobName = fname.replace('.json', '')
+            os.makedirs(f"./sprites/{mobName}/", exist_ok=True)
+
+            animations = ["idle", "run", "attack", "die"]
+
+            allFrames = set()
+
+            for animation in animations:
+                if animation in spriteDesc:
+                    if 'frames' in spriteDesc[animation]:
+                        for frame in spriteDesc[animation]['frames']:
+                            allFrames.add(frame)
+
+            for i in allFrames:
+                x = fw * i
+                y = 0
+
+                while x + fw >= img.width:
+                    x -= img.width
+                    y += fh
+
+                frame = img.crop((x, y, x + fw, y + fh))
+                nx = nXs * i
+                ny = 0
+                out = Image.new('RGBA', (fw, fh))
+                out.paste(frame, (0,0))
+                out.save(f"./sprites/{mobName}/{i}.png")
 
             print(spriteDesc)
 
