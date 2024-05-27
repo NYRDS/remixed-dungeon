@@ -10,6 +10,7 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.scenes.CellSelector;
+import com.watabou.pixeldungeon.ui.IWindow;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -31,7 +32,7 @@ public class Order extends CharAction {
         return false;
     }
 
-    private class OrderCellSelector implements CellSelector.Listener {
+    private class OrderCellSelector implements CellSelector.Listener, IWindow {
         @Override
         public void onSelect(Integer cell, @NotNull Char selector) {
             selector.next();

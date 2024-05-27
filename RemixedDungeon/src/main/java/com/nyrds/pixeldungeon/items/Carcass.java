@@ -76,12 +76,12 @@ public class Carcass extends Item implements Doom {
 
     @Override
     public String name() {
-        return Utils.format(R.string.Carcass_Name, src.getName_objective());
+        return Utils.format(R.string.Carcass_Name, src.getName());
     }
 
     @Override
     public String desc() {
-        return Utils.format(R.string.Carcass_Info, src.getName_objective());
+        return Utils.format(R.string.Carcass_Info, src.getName());
     }
 
     @Override
