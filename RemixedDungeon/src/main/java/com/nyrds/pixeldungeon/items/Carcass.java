@@ -18,6 +18,7 @@ import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Sungrass;
+import com.watabou.pixeldungeon.sprites.DummySprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -65,7 +66,12 @@ public class Carcass extends Item implements Doom {
 
     @Override
     public Image getCustomImage() {
-        return src.getSprite().carcass();
+        if(src.valid()) {
+            return src.getSprite().carcass();
+        } else {
+            return DummySprite.instance;
+        }
+
     }
 
     @Override
