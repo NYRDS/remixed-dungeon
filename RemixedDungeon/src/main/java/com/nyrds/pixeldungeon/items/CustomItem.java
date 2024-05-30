@@ -6,6 +6,7 @@ import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModError;
 import com.watabou.noosa.Image;
@@ -378,6 +379,10 @@ public class CustomItem extends EquipableItem {
     @Override
     public void ownerTakesDamage(int damage) {
         script.runOptionalNoRet("ownerTakesDamage",damage);
+    }
+
+    public void charDied(Char chr, NamedEntityKind cause) {
+        script.runOptionalNoRet("charDied", chr, cause);
     }
 
     @Override

@@ -32,148 +32,153 @@ import lombok.SneakyThrows;
  */
 
 public class Library {
-	public static final String ITEM = "item";
-	public static final String MOB = "mob";
+    public static final String ITEM = "item";
+    public static final String MOB = "mob";
 
-	private static Map<String, Map<String, Integer>> mKnowledgeLevel = new HashMap<>();
+    private static Map<String, Map<String, Integer>> mKnowledgeLevel = new HashMap<>();
 
-	private final static String  LIBRARY_FILE = "library.json";
-	private static       boolean saveNeeded   = false;
+    private final static String LIBRARY_FILE = "library.json";
+    private static boolean saveNeeded = false;
 
-	private static final Gson gson = new Gson();
+    private static final Gson gson = new Gson();
 
-	static {
-		loadLibrary();
-	}
+    static {
+        loadLibrary();
+    }
 
-	@SneakyThrows
-	public static void saveLibrary() {
-		if(!saveNeeded) {
-			return;
-		}
-		saveNeeded = false;
-		gson.toJson(mKnowledgeLevel);
-		OutputStream output = FileSystem.getOutputStream(getLibraryFile());
-		output.write(gson.toJson(mKnowledgeLevel).getBytes());
-		output.close();
-	}
+    @SneakyThrows
+    public static void saveLibrary() {
+        if (!saveNeeded) {
+            return;
+        }
+        saveNeeded = false;
+        gson.toJson(mKnowledgeLevel);
+        OutputStream output = FileSystem.getOutputStream(getLibraryFile());
+        output.write(gson.toJson(mKnowledgeLevel).getBytes());
+        output.close();
+    }
 
-	@Deprecated
-	private static void loadOldLibrary() {
-		try {
-			if (FileSystem.getInternalStorageFile(LIBRARY_FILE).exists()) {
-				mKnowledgeLevel = gson.fromJson(
-						JsonHelper.readJsonFromStream(FileSystem.getInputStream(LIBRARY_FILE), LIBRARY_FILE).toString(),
-						new TypeToken<Map<String, Map<String, Integer>>>() {}.getType());
-			}
-		} catch (Exception e) {
-			EventCollector.logException(e,"library restore failed");
-		}
-	}
+    @Deprecated
+    private static void loadOldLibrary() {
+        try {
+            if (FileSystem.getInternalStorageFile(LIBRARY_FILE).exists()) {
+                mKnowledgeLevel = gson.fromJson(
+                        JsonHelper.readJsonFromStream(FileSystem.getInputStream(LIBRARY_FILE), LIBRARY_FILE).toString(),
+                        new TypeToken<Map<String, Map<String, Integer>>>() {
+                        }.getType());
+            }
+        } catch (Exception e) {
+            EventCollector.logException(e, "library restore failed");
+        }
+    }
 
-	private static void loadLibrary() {
-		mKnowledgeLevel = new HashMap<>();
-		try {
-			String libraryFile = getLibraryFile();
-			if (FileSystem.getInternalStorageFile(libraryFile).exists()) {
-				mKnowledgeLevel = gson.fromJson(
-						JsonHelper.readJsonFromStream(FileSystem.getInputStream(libraryFile), libraryFile).toString(),
-						new TypeToken<Map<String, Map<String, Integer>>>() {
-						}.getType()
-				);
-			}
-		} catch (Exception e) {
-			loadOldLibrary();
-		}
-	}
+    private static void loadLibrary() {
+        mKnowledgeLevel = new HashMap<>();
+        try {
+            String libraryFile = getLibraryFile();
+            if (FileSystem.getInternalStorageFile(libraryFile).exists()) {
+                mKnowledgeLevel = gson.fromJson(
+                        JsonHelper.readJsonFromStream(FileSystem.getInputStream(libraryFile), libraryFile).toString(),
+                        new TypeToken<Map<String, Map<String, Integer>>>() {
+                        }.getType()
+                );
+            }
+        } catch (Exception e) {
+            loadOldLibrary();
+        }
+    }
 
-	static public void identify(String category, String clazz) {
-		int knowledgeLevel = getKnowledgeLevel(category, clazz);
+    static public void identify(String category, String clazz) {
+        int knowledgeLevel = getKnowledgeLevel(category, clazz);
 
-		if (knowledgeLevel < 10 ) {
-			getCategory(category).put(clazz, knowledgeLevel + 1);
-			saveNeeded = true;
-		}
-	}
+        if (knowledgeLevel < 10) {
+            getCategory(category).put(clazz, knowledgeLevel + 1);
+            saveNeeded = true;
+        }
+    }
 
-	private static int getKnowledgeLevel(String category, String clazz) {
-		int knowledgeLevel = 0;
-		if (getCategory(category).containsKey(clazz)) {
-			knowledgeLevel = getCategory(category).get(clazz);
-		}
-		return knowledgeLevel;
-	}
+    private static int getKnowledgeLevel(String category, String clazz) {
+        int knowledgeLevel = 0;
+        if (getCategory(category).containsKey(clazz)) {
+            knowledgeLevel = getCategory(category).get(clazz);
+        }
+        return knowledgeLevel;
+    }
 
-	private static Map<String, Integer> getCategory(String category) {
-		if(!mKnowledgeLevel.containsKey(category)) {
-			mKnowledgeLevel.put(category, new HashMap<>());
-		}
-		return mKnowledgeLevel.get(category);
-	}
+    private static Map<String, Integer> getCategory(String category) {
+        if (!mKnowledgeLevel.containsKey(category)) {
+            mKnowledgeLevel.put(category, new HashMap<>());
+        }
+        return mKnowledgeLevel.get(category);
+    }
 
-	public static Map<String, Integer> getKnowledgeMap(String category) {
-		return Collections.unmodifiableMap(getCategory(category));
-	}
+    public static Map<String, Integer> getKnowledgeMap(String category) {
+        return Collections.unmodifiableMap(getCategory(category));
+    }
 
 
-	public static boolean isValidCategory(String category) {
-		if(category.equals(ITEM)) {
-			return true;
-		}
+    public static boolean isValidCategory(String category) {
+        if (category.equals(ITEM)) {
+            return true;
+        }
 
-		if(category.equals(MOB)) {
-			return true;
-		}
+        if (category.equals(MOB)) {
+            return true;
+        }
 
-		return false;
-	}
+        return false;
+    }
 
-	@NotNull
-	public static EntryHeader infoHeader(String category, String clazz) {
-		if(category.equals(ITEM)) {
-			if(ItemFactory.isValidItemClass(clazz)) {
-				Item item = ItemFactory.itemByName(clazz);
-				return new EntryHeader(
-					Utils.capitalize(item.name()),
-					new ItemSprite(item));
-			}
-		}
+    @NotNull
+    public static EntryHeader infoHeader(String category, String clazz) {
+        if (category.equals(ITEM)) {
+            try {
+                if (ItemFactory.isValidItemClass(clazz)) {
+                    Item item = ItemFactory.itemByName(clazz);
+                    return new EntryHeader(
+                            Utils.capitalize(item.name()),
+                            new ItemSprite(item));
+                }
+            } catch (Exception e) {
+                EventCollector.logException(e, "Issue with item entry: " + clazz);
+            }
+        }
 
-		if(category.equals(MOB)) {
-			if(MobFactory.hasMob(clazz)) {
-				Mob mob = MobFactory.mobByName(clazz);
-				return new EntryHeader(
-					Utils.capitalize(mob.getName()),
-					mob.newSprite().avatar());
-			}
-		}
+        if (category.equals(MOB)) {
+            if (MobFactory.hasMob(clazz)) {
+                Mob mob = MobFactory.mobByName(clazz);
+                return new EntryHeader(
+                        Utils.capitalize(mob.getName()),
+                        mob.newSprite().avatar());
+            }
+        }
 
-		return new EntryHeader(Utils.EMPTY_STRING,null);
-	}
+        return new EntryHeader(Utils.EMPTY_STRING, null);
+    }
 
-	public static Window infoWindow(String category, String clazz) {
-		if(category.equals(ITEM)) {
-			return new WndInfoItem(ItemFactory.itemByName(clazz));
-		}
+    public static Window infoWindow(String category, String clazz) {
+        if (category.equals(ITEM)) {
+            return new WndInfoItem(ItemFactory.itemByName(clazz));
+        }
 
-		if(category.equals(MOB)) {
-			var mob = MobFactory.mobByName(clazz);
-			return new WndChar(mob, mob);
-		}
-		throw new TrackedRuntimeException("unknown category: "+category);
-	}
+        if (category.equals(MOB)) {
+            var mob = MobFactory.mobByName(clazz);
+            return new WndChar(mob, mob);
+        }
+        throw new TrackedRuntimeException("unknown category: " + category);
+    }
 
-	public static String getLibraryFile() {
-		return ModdingMode.activeMod() + "_" + LIBRARY_FILE;
-	}
+    public static String getLibraryFile() {
+        return ModdingMode.activeMod() + "_" + LIBRARY_FILE;
+    }
 
-	public static class EntryHeader {
-		public final String header;
-		public final Image icon;
+    public static class EntryHeader {
+        public final String header;
+        public final Image icon;
 
-		public EntryHeader(String hdr, Image icn) {
-			header = hdr;
-			icon = icn;
-		}
-	}
+        public EntryHeader(String hdr, Image icn) {
+            header = hdr;
+            icon = icn;
+        }
+    }
 }

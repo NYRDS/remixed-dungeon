@@ -69,7 +69,7 @@ public abstract class Mob extends Char {
 
     protected int expForKill = 1;
     protected int maxLvl = 50;
-    protected float carcassChance = 1;
+    protected float carcassChance = ModdingMode.inMod() ? ModQuirks.defaultCarcassChance : 0.5f;
 
     public static final float TIME_TO_WAKE_UP = 1f;
 
@@ -303,20 +303,7 @@ public abstract class Mob extends Char {
         Hero hero = Dungeon.hero;
 
         if (!cause.getEntityKind().equals(Chasm.class.getSimpleName())) {
-            //TODO we should move this block out of Mob class ( in script for example )
-            if (hero.getHeroClass() == HeroClass.NECROMANCER) {
-                if (hero.isAlive()) {
-                    if (hero.getItemFromSlot(Belongings.Slot.ARMOR) instanceof NecromancerRobe) {
-                        hero.accumulateSkillPoints();
-                    }
-                }
-            }
-
-            for (Item item : hero.getBelongings()) {
-                if (item instanceof BlackSkull && item.isEquipped(hero)) {
-                    ((BlackSkull) item).mobDied(this, hero);
-                }
-            }
+            hero.getBelongings().forEachEquipped(item -> item.charDied(this, hero));
         }
 
         if (hero.isAlive()) {
@@ -354,7 +341,6 @@ public abstract class Mob extends Char {
 
             getBelongings().dropAll();
         }
-
 
         if (hero.isAlive() && !CharUtils.isVisible(this)) {
             GLog.i(StringsManager.getVar(R.string.Mob_Died));
