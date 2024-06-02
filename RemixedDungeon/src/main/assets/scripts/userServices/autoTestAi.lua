@@ -64,10 +64,6 @@ local function handleWindow(hero)
             return true
         end
 
-        if wndClass:match('CellSelector') then
-            RPD.GameScene:handleCell(hero:level():randomDestination())
-            return true
-        end
 
         if wndClass:match('WndQuest') then
             activeWindow:hide()
@@ -89,6 +85,14 @@ local function handleWindow(hero)
             return true
         end
 
+        if wndClass:match('CellSelector') then
+            if wndClass:match('com.watabou.pixeldungeon.scenes.DefaultCellListener') then
+                activeWindow:hide()
+                return false
+            end
+            RPD.GameScene:handleCell(hero:level():randomDestination())
+            return true
+        end
 
 
         RPD.debug("unmatched wnd: %s",wndClass)

@@ -11,6 +11,7 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.ui.IWindow;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.PointF;
@@ -19,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
 
 
 
-public class CellSelector extends TouchArea {
+public class CellSelector extends TouchArea implements IWindow {
 
 	public Listener listener = null;
 	public Char selector = CharsList.DUMMY;
