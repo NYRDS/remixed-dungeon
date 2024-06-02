@@ -1,8 +1,10 @@
 package com.nyrds.pixeldungeon.items.necropolis;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.rings.Artifact;
@@ -30,7 +32,9 @@ public class BlackSkull extends Artifact {
 		image = BASIC_IMAGE;
 	}
 
-	public void mobDied(Mob mob, Hero hero) {
+	public void charDied(Mob mob, NamedEntityKind cause) {
+		Char hero = getOwner();
+
 		Collection<Integer> pets = hero.getPets();
 
 		if (pets.contains(mob.getId())){

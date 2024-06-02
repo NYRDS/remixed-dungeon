@@ -9,6 +9,7 @@ import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
@@ -359,6 +360,9 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
 	public boolean isEquipped(@NotNull Char chr) {
     	return chr.getBelongings().isEquipped(this);
+	}
+
+	public void charDied(Char chr, NamedEntityKind cause) {
 	}
 
 	public void removeItemFrom(@NotNull Char hero) {

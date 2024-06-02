@@ -60,7 +60,7 @@ local function handleWindow(hero)
             RPD.debug("wnd toast: %s %d",wndClass, cell)
 
             RPD.GameScene:handleCell(cell)
-            RPD.GameScene:ready()
+            hero:readyAndIdle()
             return true
         end
 

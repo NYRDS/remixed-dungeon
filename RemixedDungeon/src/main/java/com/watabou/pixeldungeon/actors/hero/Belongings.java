@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.EquippedItemCallback;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
@@ -280,6 +281,15 @@ public class Belongings implements Iterable<Item>, Bundlable {
     public void identify() {
         for (Item item : this) {
             item.identify();
+        }
+    }
+
+    public void forEachEquipped(EquippedItemCallback callback) {
+        var itemIterator = iterator();
+
+        while (itemIterator.hasNextEquipped()) {
+            EquipableItem item = (EquipableItem) itemIterator.next();
+            callback.onItem(item);
         }
     }
 

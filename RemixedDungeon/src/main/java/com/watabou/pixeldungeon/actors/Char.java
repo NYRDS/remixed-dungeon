@@ -615,11 +615,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         final int[] dmg = {damage};
         forEachBuff(b -> dmg[0] = b.attackProc(this, enemy, dmg[0]));
 
-        if (!(enemy instanceof NPC)) {
-            for (Item item : getBelongings()) {
-                if (item.isEquipped(this)) {
-                    item.ownerDoesDamage(dmg[0]);
-                }
+        for (Item item : getBelongings()) {
+            if (item.isEquipped(this)) {
+                item.ownerDoesDamage(dmg[0]);
             }
         }
 
@@ -1095,11 +1093,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         Char enemy = getEnemy();
 
         if (enemy.valid()) {
-            final EquipableItem weapon = getItemFromSlot(Belongings.Slot.WEAPON);
-            weapon.preAttack(enemy);
+            belongings.forEachEquipped(item -> item.preAttack(enemy));
 
             if (attack(enemy)) {
-                weapon.postAttack(enemy);
+                belongings.forEachEquipped(item -> item.postAttack(enemy));
             }
         }
 
@@ -1221,7 +1218,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     private void updateSprite(CharSprite sprite) {
-        if (level().cellValid(getPos())) {
+        if (isOnStage() && level().cellValid(getPos())) {
             sprite.setVisible(Dungeon.isCellVisible(getPos()) && invisible >= 0);
         } else {
             EventCollector.logException("invalid pos for:" + this + ":" + getEntityKind());

@@ -1,0 +1,10 @@
+{
+   "baseSpeed"     :0,
+   "spriteDesc"    :"spritesDesc/PlagueDoctorNPC.json",
+   "scriptFile"    :"scripts/npc/PlagueDoctor",
+   "friendly"      :true,
+   "movable"       :false,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+   "immortal"      :true
+}

@@ -31,7 +31,7 @@ public class Order extends CharAction {
         return false;
     }
 
-    private class OrderCellSelector implements CellSelector.Listener{
+    private class OrderCellSelector implements CellSelector.Listener {
         @Override
         public void onSelect(Integer cell, @NotNull Char selector) {
             selector.next();
@@ -65,7 +65,7 @@ public class Order extends CharAction {
 
         @Override
         public Image icon() {
-            return null;
+            return target.getSprite().avatar();
         }
     }
 }

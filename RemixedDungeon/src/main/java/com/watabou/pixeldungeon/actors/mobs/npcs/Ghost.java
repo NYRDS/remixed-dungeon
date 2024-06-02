@@ -158,7 +158,7 @@ public class Ghost extends NPC {
 			}
 			
 		} else {
-            GameScene.show( new WndQuest( this, Quest.alternative ? StringsManager.getVar(R.string.Ghost_Rat1) : StringsManager.getVar(R.string.Ghost_Rose1)) );
+			GameScene.show( new WndQuest( this, Quest.alternative ? StringsManager.getVar(R.string.Ghost_Rat1) : StringsManager.getVar(R.string.Ghost_Rose1)) );
 			Quest.given = true;
 			
 			Journal.add( Journal.Feature.GHOST.desc() );
