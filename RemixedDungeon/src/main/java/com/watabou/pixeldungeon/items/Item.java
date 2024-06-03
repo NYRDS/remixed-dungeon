@@ -581,7 +581,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
 
     @Getter
-    private Heap heap = null;
+    protected Heap heap = null;
 
     public void setHeap(Heap heap) {
         this.heap = heap;

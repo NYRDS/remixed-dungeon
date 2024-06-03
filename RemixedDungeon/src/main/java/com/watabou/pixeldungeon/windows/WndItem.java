@@ -122,12 +122,10 @@ public class WndItem extends Window {
         actions.setAlign(HBox.Align.Width);
         actions.setGap(GAP);
 
-        Char owner = item.getOwner();
 
+        for (final String action : item.actions(actor)) {
 
-        for (final String action : item.actions(owner)) {
-
-            if (owner.getHeroClass().forbidden(action)) {
+            if (actor.getHeroClass().forbidden(action)) {
                 continue;
             }
 

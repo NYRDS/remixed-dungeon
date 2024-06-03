@@ -121,13 +121,23 @@ public class Carcass extends Item implements Doom {
                 pet.setPos(spawnPos);
                 level.spawnMob(pet, 0, casterPos);
             }
-            chr.getBelongings().removeItem(this);
+
+            if(heap!= null) {
+                chr.getBelongings().removeItem(this);
+            } else  {
+                heap.pickUp();
+            }
+
         } else if (action.equals("Devour")) {
             Devour.hit(chr);
             chr.eat(this, src.ht(), "You have devoured corpse of " + src.getName() + "!");
             chr.heal(src.ht()/10, this);
 
-            chr.getBelongings().removeItem(this);
+            if(heap!= null) {
+                chr.getBelongings().removeItem(this);
+            } else  {
+                heap.pickUp();
+            }
         } else {
             super._execute(chr, action);
         }
