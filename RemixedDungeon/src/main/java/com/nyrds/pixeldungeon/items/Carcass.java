@@ -113,11 +113,11 @@ public class Carcass extends Item implements Doom {
 
             if (level.cellValid(spawnPos)) {
                 var pet = Mob.makePet((Mob) src, chr.getId());
+                pet.assigndNextId();
+                pet.setUndead(true);
                 pet.hp(1); //it's alive!
                 pet.regenSprite();
                 pet.heal(pet.ht() * chr.skillLevel() / 10);
-                pet.setGlowing(0xff333333, 5f);
-
                 pet.setPos(spawnPos);
                 level.spawnMob(pet, 0, casterPos);
             }

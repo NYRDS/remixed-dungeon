@@ -58,7 +58,6 @@ import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Wound;
@@ -192,6 +191,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     private float lightness = 0.5f;
     private int glowColor = 0;
     private float glowPeriod = 0.0f;
+
+    @Packable(defaultValue = "false")//EntityIdSource.INVALID_ID
+    public boolean undead;
 
     @Getter
     private int buffsUpdatedCount;
@@ -337,6 +339,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             getScript().run("loadData", luaData);
         }
         getScript().run("fillStats");
+
+        setUndead(undead);
     }
 
     private String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
@@ -1407,7 +1411,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void onSpawn(Level level) {
-        Buff.affect(this, Regeneration.class);
+        if(!undead) {
+            Buff.affect(this, Regeneration.class);
+        }
         getScript().run("onSpawn", level);
     }
 
@@ -1961,10 +1967,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return MobAi.getStateByClass(Passive.class);
     }
 
+    public void assigndNextId() {
+        id = EntityIdSource.getNextId();
+        CharsList.add(this, id);
+    }
+
     public int getId() {
         if (id == EntityIdSource.INVALID_ID || id == EntityIdSource.DUPLICATE_ID) {
-            id = EntityIdSource.getNextId();
-            CharsList.add(this, id);
+            assigndNextId();
         }
         return id;
     }
@@ -2094,6 +2104,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void earnExp(int exp) {
+        if(undead) {
+            return;
+        }
+
         this.expForLevelUp += exp;
 
         boolean levelUp = false;
@@ -2216,5 +2230,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public Item carcass() {
         return ItemsList.DUMMY;
+    }
+
+    public void setUndead(boolean flag)  {
+        undead = flag;
+        if(undead)  {
+            setGlowing(0xff333333, 5f);
+        }
+
     }
 }

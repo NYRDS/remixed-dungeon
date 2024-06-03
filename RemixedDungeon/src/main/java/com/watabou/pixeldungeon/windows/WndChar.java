@@ -16,11 +16,13 @@ public class WndChar extends WndTabbed {
     public static final int WIDTH = 100;
     private static final int TAB_WIDTH = 33;
     private final Char target;
+    private final Char selector;
 
     public WndChar(final Char chr, final Char selector) {
 
         super();
         target = chr;
+        this.selector  = selector;
 
         var desc = new CharDescTab(chr, selector, WIDTH);
         add(desc);
@@ -78,4 +80,9 @@ public class WndChar extends WndTabbed {
         return target;
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        selector.readyAndIdle();
+    }
 }
