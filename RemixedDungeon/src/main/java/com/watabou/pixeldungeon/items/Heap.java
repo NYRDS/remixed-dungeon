@@ -46,7 +46,7 @@ import java.util.Map;
 
 import lombok.Getter;
 
-public class Heap implements Bundlable, NamedEntityKind {
+public class Heap implements Bundlable, NamedEntityKind  {
 
     private static final int SEEDS_TO_POTION = 3;
 
@@ -444,6 +444,10 @@ public class Heap implements Bundlable, NamedEntityKind {
             type = Type.HEAP;
         }
         items = new LinkedList<>(bundle.getCollection(ITEMS, Item.class));
+
+        for(Item item  : items)  {
+            item.setHeap(this);
+        }
     }
 
     @Override

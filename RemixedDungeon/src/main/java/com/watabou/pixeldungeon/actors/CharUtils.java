@@ -5,6 +5,7 @@ import androidx.annotation.NonNull;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.game.ModQuirks;
+import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
@@ -17,6 +18,7 @@ import com.nyrds.pixeldungeon.ml.actions.Descend;
 import com.nyrds.pixeldungeon.ml.actions.Examine;
 import com.nyrds.pixeldungeon.ml.actions.Interact;
 import com.nyrds.pixeldungeon.ml.actions.InteractObject;
+import com.nyrds.pixeldungeon.ml.actions.MapItemAction;
 import com.nyrds.pixeldungeon.ml.actions.Move;
 import com.nyrds.pixeldungeon.ml.actions.OpenChest;
 import com.nyrds.pixeldungeon.ml.actions.Order;
@@ -248,7 +250,11 @@ public class CharUtils {
         Heap heap;
         if ((heap = level.getHeap(cell)) != null) {
             if (heap.type == Heap.Type.HEAP) {
+            if (heap.peek() instanceof Carcass) {
+                return new MapItemAction(cell);
+            } else {
                 return new PickUp(cell);
+            }
             } else {
                 return new OpenChest(cell);
             }
@@ -426,5 +432,27 @@ public class CharUtils {
             }
         }
         return actions;
+    }
+
+    public static void tryPickUp(Char hero, @NonNull Item item) {
+        Heap oldHeap  = item.getHeap();
+
+        item = item.pick(hero, hero.getPos());
+
+        if (item.doPickUp(hero)) {
+
+            hero.itemPickedUp(item);
+
+            oldHeap.pickUp();
+            if (!oldHeap.isEmpty()) {
+                GLog.i(StringsManager.getVar(R.string.Hero_SomethingElse));
+            }
+        } else {
+            Heap newHeap = hero.level().drop(item, hero.getPos());
+
+            newHeap.sprite.drop();
+            newHeap.pickUpFailed();
+        }
+        hero.readyAndIdle();
     }
 }

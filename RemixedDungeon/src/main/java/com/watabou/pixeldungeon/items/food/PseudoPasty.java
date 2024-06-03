@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.items.food;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -46,7 +47,7 @@ public class PseudoPasty extends Food {
 		CellEmitter.get(pos).burst(Speck.factory(Speck.STAR), 10);
 		Sample.INSTANCE.play(Assets.SND_MIMIC);
 
-		return null;
+		return ItemsList.DUMMY;
 	}
 
 	@Override
