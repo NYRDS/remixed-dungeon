@@ -5,6 +5,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.LabeledTab;
@@ -23,6 +24,11 @@ public class WndChar extends WndTabbed {
         super();
         target = chr;
         this.selector  = selector;
+
+        if(chr.friendly(selector)) {
+            CharUtils.mark(target);
+            CharUtils.markTarget(target);
+        }
 
         var desc = new CharDescTab(chr, selector, WIDTH);
         add(desc);
@@ -84,5 +90,6 @@ public class WndChar extends WndTabbed {
     public void onBackPressed() {
         super.onBackPressed();
         selector.readyAndIdle();
+        CharUtils.clearMarkers();
     }
 }

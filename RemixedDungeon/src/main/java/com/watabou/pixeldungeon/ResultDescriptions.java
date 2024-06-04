@@ -39,6 +39,8 @@ public final class ResultDescriptions {
 		descriptionsMap.put(Reason.FALL, R.string.ResultDescriptions_Fall);
 		descriptionsMap.put(Reason.IMMURED, R.string.ResultDescriptions_Immured);
 		descriptionsMap.put(Reason.NECROTISM, R.string.ResultDescriptions_Necrotism);
+
+		// Necromancy
 		descriptionsMap.put(Reason.NECROMANCY, R.string.ResultDescriptions_Necromancy);
 
 		// Win

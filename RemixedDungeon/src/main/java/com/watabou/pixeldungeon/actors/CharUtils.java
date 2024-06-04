@@ -35,7 +35,9 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
@@ -53,6 +55,7 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -68,6 +71,7 @@ import java.util.Set;
 
 
 public class CharUtils {
+
     static public boolean isVisible(@Nullable Char ch) {
 
         if (Dungeon.isLoading()) {
@@ -455,5 +459,29 @@ public class CharUtils {
             newHeap.pickUpFailed();
         }
         hero.readyAndIdle();
+    }
+
+    static public final Set<Image> markers = new HashSet<>();
+    static public void mark(Char chr) {
+        var marker = Icons.TARGET.get();
+        chr.getSprite().getParent().add(marker);
+
+        marker.point(DungeonTilemap.tileToWorld(chr.getPos()));
+        marker.y+=chr.getSprite().visualOffsetY();
+        markers.add(marker);
+    }
+
+    static public void markTarget(Char chr) {
+        var marker = Icons.TARGET.get();
+        chr.getSprite().getParent().add(marker);
+        marker.point(DungeonTilemap.tileToWorld(chr.getTarget()));
+        markers.add(marker);
+    }
+
+    static public void clearMarkers() {
+        for(var marker: markers) {
+            marker.killAndErase();
+        }
+        markers.clear();
     }
 }

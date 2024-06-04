@@ -121,7 +121,11 @@ public class Hunger extends Buff implements Doom {
 	public boolean isStarving() {
 		return hungerLevel >= STARVING;
 	}
-	
+
+	public boolean isHungry() {
+		return hungerLevel >= HUNGRY;
+	}
+
 	@Override
 	public int icon() {
 		if (hungerLevel < HUNGRY) {

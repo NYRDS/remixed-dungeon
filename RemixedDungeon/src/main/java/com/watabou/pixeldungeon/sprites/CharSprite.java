@@ -683,7 +683,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     public Image avatar() {
 
-        if (avatar == null) {
+        if (avatar == null || !avatar.alive) {
             avatar = snapshot(idle.frames[0]);
             avatar.setScale(charScale);
         }

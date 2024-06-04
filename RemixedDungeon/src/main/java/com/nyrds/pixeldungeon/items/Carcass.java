@@ -29,6 +29,8 @@ import java.util.ArrayList;
 import lombok.val;
 
 public class Carcass extends Item implements Doom {
+    public static final String AC_NECROMANCY = "AC_Necromancy";
+    public static final String AC_DEVOUR = "AC_Devour";
     @Packable
     Char src = CharsList.DUMMY;
 
@@ -90,10 +92,12 @@ public class Carcass extends Item implements Doom {
 
         switch (hero.getHeroClass()) {
             case NECROMANCER:
-                actions.add("Necromancy");
+                actions.add(AC_NECROMANCY);
             break;
             case GNOLL:
-                actions.add("Devour");
+                if(hero.hunger().isHungry()) {
+                    actions.add(AC_DEVOUR);
+                }
             break;
         }
 
@@ -102,7 +106,7 @@ public class Carcass extends Item implements Doom {
 
     @Override
     public void _execute(@NotNull Char chr, @NotNull String action){
-        if (action.equals("Necromancy")) {
+        if (action.equals(AC_NECROMANCY)) {
             Level level = chr.level();
             int casterPos = chr.getPos();
             int spawnPos = level.getEmptyCellNextTo(casterPos);
@@ -120,12 +124,15 @@ public class Carcass extends Item implements Doom {
                 pet.heal(pet.ht() * chr.skillLevel() / 10);
                 pet.setPos(spawnPos);
                 level.spawnMob(pet, 0, casterPos);
+                GLog.p(Utils.format(R.string.Carcass_Necromancy, pet.getName()));
+            } else {
+                GLog.n(Utils.format(R.string.Carcass_Necromancy_Failed, src.getName()));
             }
             removeItem();
 
-        } else if (action.equals("Devour")) {
+        } else if (action.equals(AC_DEVOUR)) {
             Devour.hit(chr);
-            chr.eat(this, src.ht(), "You have devoured corpse of " + src.getName() + "!");
+            chr.eat(this, src.ht(), Utils.format(R.string.Carcass_Devoured, src.getName()));
             chr.heal(src.ht()/10, this);
 
             removeItem();
@@ -136,8 +143,9 @@ public class Carcass extends Item implements Doom {
 
     @Override
     public void onHeroDeath() {
-        Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.BURNING), Dungeon.depth ) );
-        GLog.n(StringsManager.getVar(R.string.Burning_Death));
+
+        Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.NECROMANCY), Dungeon.depth ) );
+        GLog.n(StringsManager.getVar(R.string.Necromancy_Death));
     }
 
     @Override
