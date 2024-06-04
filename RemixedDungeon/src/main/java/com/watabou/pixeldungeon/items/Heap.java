@@ -190,6 +190,11 @@ public class Heap implements Bundlable, NamedEntityKind  {
         return removeFromHeap(item);
     }
 
+    public Item pickUp(Item item) {
+        items.remove(item);
+        return removeFromHeap(item);
+    }
+
     public void pickUpFailed() {
         if (!isEmpty()) {
             Item item = items.removeFirst();

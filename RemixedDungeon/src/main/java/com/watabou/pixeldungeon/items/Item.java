@@ -810,4 +810,12 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     public Image getCustomImage() {
         return null;
     }
+
+    public void removeItem() {
+        if(heap!= null) {
+            heap.pickUp(this);
+        } else  {
+            owner.getBelongings().removeItem(this);
+        }
+    }
 }
