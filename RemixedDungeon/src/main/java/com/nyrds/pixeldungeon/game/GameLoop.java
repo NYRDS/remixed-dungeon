@@ -20,6 +20,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.Scene;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.utils.SystemTime;
 

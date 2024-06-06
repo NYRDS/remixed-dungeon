@@ -88,7 +88,7 @@ import org.apache.commons.collections4.map.HashedMap;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 import java.util.Set;
 

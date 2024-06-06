@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public class WndLibrary extends Window {
@@ -21,7 +21,7 @@ public class WndLibrary extends Window {
 	private static final int WIDTH		= 100;
 	private static final int GAP		= 2;
 
-	private static final Map<String,String> categoriesMap = new HashMap<>();
+	private static final Map<String,String> categoriesMap = new HashedMap<>();
 
 	static {
         categoriesMap.put(Library.ITEM, StringsManager.getVar(R.string.WndLibrary_Items_Btn));

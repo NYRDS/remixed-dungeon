@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public class Speck extends Image {
@@ -60,7 +60,7 @@ public class Speck extends Image {
 
     private static TextureFilm film;
 
-    private static final Map<Pair<Integer, Integer>, Emitter.Factory> factories = new HashMap<>();
+    private static final Map<Pair<Integer, Integer>, Emitter.Factory> factories = new HashedMap<>();
 
     public Speck() {
         texture(Assets.SPECKS);

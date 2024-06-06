@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -43,12 +43,12 @@ public class ModdingMode {
 	public static boolean useRetroHeroSprites = false;
 
 	private static final Set<String> pathsChecked = new HashSet<>();
-	private static final Map<String, Boolean> assetsExistenceCache = new HashMap<>();
+	private static final Map<String, Boolean> assetsExistenceCache = new HashedMap<>();
 
-	private static final Map<String, String> resourcesRemap = new HashMap<>();
+	private static final Map<String, String> resourcesRemap = new HashedMap<>();
 
-	private static final Map<String, String> rewardVideoIds = new HashMap<>();
-	private static final Map<String, String> interstitialIds = new HashMap<>();
+	private static final Map<String, String> rewardVideoIds = new HashedMap<>();
+	private static final Map<String, String> interstitialIds = new HashedMap<>();
 
 	public static final Set<String> sizeAgnosticFiles = new HashSet<>();
 

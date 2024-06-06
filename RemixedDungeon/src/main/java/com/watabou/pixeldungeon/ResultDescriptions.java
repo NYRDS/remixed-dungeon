@@ -4,7 +4,7 @@ package com.watabou.pixeldungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 
 public final class ResultDescriptions {
 
@@ -13,10 +13,10 @@ public final class ResultDescriptions {
 		NECROTISM, NECROMANCY, UNKNOWN, WIN
 	}
 
-	private static final HashMap<Reason, Integer> descriptionsMap;
+	private static final HashedMap<Reason, Integer> descriptionsMap;
 
 	static {
-		descriptionsMap = new HashMap<>();
+		descriptionsMap = new HashedMap<>();
 
 		// Mobs
 		descriptionsMap.put(Reason.MOB, R.string.ResultDescriptions_Mob);
@@ -51,7 +51,7 @@ public final class ResultDescriptions {
 	}
 
 	public static String getDescription(Reason reason){
-		// Strangely not in the map, probably added a reason to the enum and forgot to add it to the HashMap
+		// Strangely not in the map, probably added a reason to the enum and forgot to add it to the HashedMap
 		if(!descriptionsMap.containsKey(reason)){
 			reason = Reason.UNKNOWN;	// This one is definitely in the map. Returning UNKNOWN.
 		}

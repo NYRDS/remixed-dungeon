@@ -10,4 +10,6 @@ dependencies {
 
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
     compileOnly 'org.projectlombok:lombok:1.18.22'
+
+    implementation 'org.apache.commons:commons-collections4:4.4'
 }

@@ -20,7 +20,7 @@ import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 import lombok.Getter;
@@ -32,7 +32,7 @@ import lombok.SneakyThrows;
 public class Deco extends LevelObject {
 
 	private static final String ANIMATIONS = "animations";
-	static protected final Map<String, JSONObject> defMap = new HashMap<>();
+	static protected final Map<String, JSONObject> defMap = new HashedMap<>();
 
 	private JSONObject animations;
 

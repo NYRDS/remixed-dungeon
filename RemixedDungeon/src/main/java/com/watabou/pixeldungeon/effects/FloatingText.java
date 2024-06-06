@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public class FloatingText extends BitmapText {
@@ -20,7 +20,7 @@ public class FloatingText extends BitmapText {
 	
 	private int key = -1;
 	
-	private static final Map<Integer,ArrayList<FloatingText>> stacks = new HashMap<>();
+	private static final Map<Integer,ArrayList<FloatingText>> stacks = new HashedMap<>();
 	
 	public FloatingText() {
 		super(PixelScene.chooseFont( 9 ));

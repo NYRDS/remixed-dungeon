@@ -14,7 +14,7 @@ import com.watabou.utils.Callback;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 
 public class HuntressArmor extends ClassArmor {
 	
@@ -24,7 +24,7 @@ public class HuntressArmor extends ClassArmor {
 		coverHair = true;
 	}
 	
-	private final HashMap<Callback, Mob> targets = new HashMap<>();
+	private final HashedMap<Callback, Mob> targets = new HashedMap<>();
 	
 	@Override
 	public String special() {

@@ -40,7 +40,7 @@ import java.io.OutputStreamWriter;
 import java.io.PushbackInputStream;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -53,7 +53,7 @@ public class Bundle {
 
     private static final String CLASS_NAME = "__className";
 
-    private static final Map<String, String> aliases = new HashMap<>();
+    private static final Map<String, String> aliases = new HashedMap<>();
 
     private final JSONObject data;
 
@@ -372,7 +372,7 @@ public class Bundle {
 
     @SneakyThrows
     public <T> Map<String,T> getMap(String key) {
-        Map<String,T> ret = new HashMap<>();
+        Map<String,T> ret = new HashedMap<>();
 
         if(data.isNull(key)) {
             return ret;

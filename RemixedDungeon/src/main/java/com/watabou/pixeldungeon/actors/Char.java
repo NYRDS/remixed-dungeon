@@ -94,7 +94,7 @@ import org.luaj.vm2.LuaValue;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -111,7 +111,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public static final String RESISTANCES = "resistances";
     protected static final String LEVEL = "lvl";
     private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
-    static private final Map<String, JSONObject> defMap = new HashMap<>();
+    static private final Map<String, JSONObject> defMap = new HashedMap<>();
     public EquipableItem rangedWeapon = ItemsList.DUMMY;
 
     public CharAction lastAction = null;
@@ -183,7 +183,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     protected final Set<Buff> buffs = new HashSet<>();
 
-    private Map<String, Number> spellsUsage = new HashMap<>();
+    private Map<String, Number> spellsUsage = new HashedMap<>();
 
     private CharAction curAction = null;
 
@@ -1891,7 +1891,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void teleportTo(Position target) {
     }
 
-    private final Map<String, String> layersOverrides = new HashMap<>();
+    private final Map<String, String> layersOverrides = new HashedMap<>();
 
     public Map<String, String> getLayersOverrides() {
         return layersOverrides;

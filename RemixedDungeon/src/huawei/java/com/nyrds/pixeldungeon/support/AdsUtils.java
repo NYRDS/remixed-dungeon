@@ -8,14 +8,14 @@ import com.nyrds.android.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public class AdsUtils {
 
-    static Map<AdsUtilsCommon.IBannerProvider, Integer> bannerFails = new HashMap<>();
-    static Map<AdsUtilsCommon.IInterstitialProvider, Integer> interstitialFails = new HashMap<>();
-    static Map<AdsUtilsCommon.IRewardVideoProvider, Integer> rewardVideoFails = new HashMap<>();
+    static Map<AdsUtilsCommon.IBannerProvider, Integer> bannerFails = new HashedMap<>();
+    static Map<AdsUtilsCommon.IInterstitialProvider, Integer> interstitialFails = new HashedMap<>();
+    static Map<AdsUtilsCommon.IRewardVideoProvider, Integer> rewardVideoFails = new HashedMap<>();
 
     static {
         if(!RemixedDungeonApp.checkOwnSignature()) {

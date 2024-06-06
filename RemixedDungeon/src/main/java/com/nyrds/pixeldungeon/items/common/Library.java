@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.OutputStream;
 import java.util.Collections;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 import lombok.SneakyThrows;
@@ -35,7 +35,7 @@ public class Library {
 	public static final String ITEM = "item";
 	public static final String MOB = "mob";
 
-	private static Map<String, Map<String, Integer>> mKnowledgeLevel = new HashMap<>();
+	private static Map<String, Map<String, Integer>> mKnowledgeLevel = new HashedMap<>();
 
 	private final static String  LIBRARY_FILE = "library.json";
 	private static       boolean saveNeeded   = false;
@@ -72,7 +72,7 @@ public class Library {
 	}
 
 	private static void loadLibrary() {
-		mKnowledgeLevel = new HashMap<>();
+		mKnowledgeLevel = new HashedMap<>();
 		try {
 			String libraryFile = getLibraryFile();
 			if (FileSystem.getInternalStorageFile(libraryFile).exists()) {
@@ -106,7 +106,7 @@ public class Library {
 
 	private static Map<String, Integer> getCategory(String category) {
 		if(!mKnowledgeLevel.containsKey(category)) {
-			mKnowledgeLevel.put(category, new HashMap<>());
+			mKnowledgeLevel.put(category, new HashedMap<>());
 		}
 		return mKnowledgeLevel.get(category);
 	}

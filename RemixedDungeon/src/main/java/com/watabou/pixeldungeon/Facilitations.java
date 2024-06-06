@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public class Facilitations {
 
     public static final int[] MASKS = {NO_HUNGER, FAST_REGENERATION, FAST_MANA_REGENERATION, SUPER_STRENGTH};
 
-    public static final Map<Integer, ArrayList<Integer>> conflictingChallenges = new HashMap<>();
+    public static final Map<Integer, ArrayList<Integer>> conflictingChallenges = new HashedMap<>();
 
 
     static {

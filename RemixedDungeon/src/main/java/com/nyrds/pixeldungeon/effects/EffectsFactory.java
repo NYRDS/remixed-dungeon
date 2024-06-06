@@ -7,12 +7,12 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import org.json.JSONObject;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public class EffectsFactory {
 
-    private static final Map<String, JSONObject> effects = new HashMap<>();
+    private static final Map<String, JSONObject> effects = new HashedMap<>();
 
     static {
         for(String effectFile: ModdingMode.listResources("effects", (dir, name) -> name.endsWith(".json"))) {

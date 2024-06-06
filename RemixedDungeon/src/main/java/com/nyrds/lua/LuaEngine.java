@@ -34,8 +34,6 @@ import org.luaj.vm2.lib.jse.JseIoLib;
 import org.luaj.vm2.lib.jse.JseOsLib;
 
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.WeakHashMap;
 
 import lombok.Synchronized;

@@ -20,7 +20,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 /**
@@ -84,8 +84,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		LAYER_RIGHT_ITEM,
 	};
 
-	private Map<String,String> layerOverrides = new HashMap<>();
-	private final Map<String,String> layersDesc    = new HashMap<>();
+	private Map<String,String> layerOverrides = new HashedMap<>();
+	private final Map<String,String> layersDesc    = new HashedMap<>();
 
 	private String deathEffectDesc;
 
@@ -375,13 +375,13 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	protected void loadAdditionalData(JSONObject json, TextureFilm film, int kind) throws JSONException {
 		super.loadAdditionalData(json,film,kind);
 
-		weapon_anims = new HashMap<>();
+		weapon_anims = new HashedMap<>();
 		if(json.has(WEAPON_ANIM)){
 			JsonHelper.foreach(json.getJSONObject(WEAPON_ANIM),
 					(root, key) -> weapon_anims.put(key,readAnimation(root,key,film)));
 		}
 
-		body_types = new HashMap<>();
+		body_types = new HashedMap<>();
 		if(json.has(BODY_TYPE)) {
 			JsonHelper.foreach(json.getJSONObject(BODY_TYPE),
 					(root, key) -> body_types.put(key,root.getString(key)));

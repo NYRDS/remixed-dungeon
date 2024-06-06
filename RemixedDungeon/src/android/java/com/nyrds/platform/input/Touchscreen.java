@@ -22,13 +22,13 @@ import android.view.MotionEvent;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Signal;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 
 public class Touchscreen {
 	
 	public static final Signal<Touch> event = new Signal<>(true);
 
-	public static final HashMap<Integer,Touch> pointers = new HashMap<>();
+	public static final HashedMap<Integer,Touch> pointers = new HashedMap<>();
 
 	public static float x;
 	public static float y;

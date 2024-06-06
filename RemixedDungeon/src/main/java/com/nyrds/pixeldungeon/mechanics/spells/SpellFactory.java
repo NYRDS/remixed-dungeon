@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -112,8 +112,8 @@ public class SpellFactory {
 	private static Map<String, Class<? extends Spell>> getSpellsList() {
 
 		if(mSpellsList == null) {
-			mSpellsList = new HashMap<>();
-			mSpellsByAffinity = new HashMap<>();
+			mSpellsList = new HashedMap<>();
+			mSpellsByAffinity = new HashedMap<>();
 
 			registerSpellClass(SummonDeathling.class);
 

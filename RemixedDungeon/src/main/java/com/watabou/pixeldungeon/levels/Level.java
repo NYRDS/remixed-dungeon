@@ -84,7 +84,7 @@ import org.luaj.vm2.LuaTable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -229,7 +229,7 @@ public abstract class Level implements Bundlable {
 	public void putLevelObject(LevelObject lo) {
 		var objectsLayer = objects.get(lo.getLayer());
 		if (objectsLayer == null) {
-			objectsLayer = new HashMap<>();
+			objectsLayer = new HashedMap<>();
 			objects.put(lo.getLayer(), objectsLayer);
 		}
 
@@ -463,17 +463,17 @@ public abstract class Level implements Bundlable {
 	private int compassTarget = INVALID_CELL;	// Where compass should point
 
 	@SuppressLint("UseSparseArrays")
-	protected final HashMap<Integer, Integer> exitMap = new HashMap<>();
+	protected final HashedMap<Integer, Integer> exitMap = new HashedMap<>();
 
 	public String levelId;
 
 	private Set<ScriptedActor>                    scripts = new HashSet<>();
 	public  Set<Mob>                              mobs    = new HashSet<>();
-	public  Map<Class<? extends Blob>, Blob>      blobs   = new HashMap<>();
-	private Map<Integer, Heap>                    heaps   = new HashMap<>();
-	public final Map<Integer,Map<Integer,LevelObject>> objects = new HashMap<>();
+	public  Map<Class<? extends Blob>, Blob>      blobs   = new HashedMap<>();
+	private Map<Integer, Heap>                    heaps   = new HashedMap<>();
+	public final Map<Integer,Map<Integer,LevelObject>> objects = new HashedMap<>();
 
-	public final Map<Integer, LevelObject> top_objects = new HashMap<>();
+	public final Map<Integer, LevelObject> top_objects = new HashedMap<>();
 
 	protected final ArrayList<Item> itemsToSpawn = new ArrayList<>();
 
@@ -698,8 +698,8 @@ public abstract class Level implements Bundlable {
 
 		scripts = new HashSet<>();
 		mobs = new HashSet<>();
-		heaps = new HashMap<>();
-		blobs = new HashMap<>();
+		heaps = new HashedMap<>();
+		blobs = new HashedMap<>();
 
 		width = bundle.optInt(WIDTH, 32); // old levels compat
 		height = bundle.optInt(HEIGHT, 32);
@@ -1963,7 +1963,7 @@ public abstract class Level implements Bundlable {
 	}
 
 	private void initTilesVariations() {
-		customLayers = new HashMap<>();
+		customLayers = new HashedMap<>();
 		for(LayerId layerId: LayerId.values()) {
 			int [] layer = new int[getLength()];
 			Arrays.fill(layer,-1);

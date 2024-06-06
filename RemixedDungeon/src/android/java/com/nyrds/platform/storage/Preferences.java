@@ -10,7 +10,7 @@ import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.util.UserKey;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public enum Preferences {
@@ -56,10 +56,10 @@ public enum Preferences {
 
     private SharedPreferences prefs;
 
-	private final Map<String, Integer> intCache    = new HashMap<>();
-	private final Map<String, String>  stringCache = new HashMap<>();
-	private final Map<String, Boolean> boolCache   = new HashMap<>();
-	private final Map<String, Double>  doubleCache = new HashMap<>();
+	private final Map<String, Integer> intCache    = new HashedMap<>();
+	private final Map<String, String>  stringCache = new HashedMap<>();
+	private final Map<String, Boolean> boolCache   = new HashedMap<>();
+	private final Map<String, Double>  doubleCache = new HashedMap<>();
 
 	public SharedPreferences get() {
 		if (prefs == null) {

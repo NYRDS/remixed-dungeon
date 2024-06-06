@@ -28,7 +28,7 @@ import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -42,7 +42,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	public static final float MICRO_TICK	= 0.001f;
 	private static float realTimeMultiplier = 1f;
 
-	private static final Map<Actor, Integer> skipCounter = new HashMap<>();
+	private static final Map<Actor, Integer> skipCounter = new HashedMap<>();
 
 	@Packable
 	float time = 0;

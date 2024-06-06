@@ -6,14 +6,14 @@ import com.nyrds.util.ModdingMode;
 
 import org.json.JSONObject;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Iterator;
 import java.util.Map;
 
 public class ItemSpritesDescription {
 	private static final String SPRITES_DESC_ITEMS_JSON = "spritesDesc/items.json";
 
-	static private final Map<String, ItemSpritesDescription> m_descMap = new HashMap<>();
+	static private final Map<String, ItemSpritesDescription> m_descMap = new HashedMap<>();
 
 	private final String imageFile;
 	private final int imageIndex;

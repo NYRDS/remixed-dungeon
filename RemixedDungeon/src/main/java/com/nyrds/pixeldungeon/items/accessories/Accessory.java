@@ -16,7 +16,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.List;
 import java.util.Map;
 
@@ -35,7 +35,7 @@ public class Accessory {
 
     protected static final String imageFile = "items/accessories.png";
 
-    static final private Map<String, Class<? extends Accessory>> allAccessoriesList = new HashMap<>();
+    static final private Map<String, Class<? extends Accessory>> allAccessoriesList = new HashedMap<>();
 
     private static void registerAccessory(Class<? extends Accessory> Clazz) {
         allAccessoriesList.put(Clazz.getSimpleName(), Clazz);

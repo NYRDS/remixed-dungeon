@@ -32,7 +32,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -43,11 +43,11 @@ import java.util.concurrent.Executor;
 
 public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResponseListener, ConsumeResponseListener {
 
-    private final Map<String, Purchase> mPurchases = new HashMap<>();
+    private final Map<String, Purchase> mPurchases = new HashedMap<>();
     private final BillingClient mBillingClient;
     private boolean mIsServiceConnected;
     private final IPurchasesUpdated mPurchasesUpdatedListener;
-    private Map<String, SkuDetails> mSkuDetails = new HashMap<>();
+    private Map<String, SkuDetails> mSkuDetails = new HashedMap<>();
     private boolean mIsServiceConnecting;
 
     private final ConcurrentLinkedQueue<Runnable> mRequests = new ConcurrentLinkedQueue<>();
@@ -68,7 +68,7 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
                     (billingResult, list) -> {
                         if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
                                 && list != null) {
-                            mSkuDetails = new HashMap<>();
+                            mSkuDetails = new HashedMap<>();
                             for (SkuDetails skuDetails : list) {
                                 mSkuDetails.put(skuDetails.getSku().toLowerCase(Locale.ROOT), skuDetails);
                             }

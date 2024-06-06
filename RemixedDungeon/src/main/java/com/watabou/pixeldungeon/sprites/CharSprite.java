@@ -40,7 +40,7 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Locale;
 import java.util.Map;
 
@@ -96,7 +96,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     protected Animation zap;
     protected Animation die;
 
-    protected final Map<String,Animation> extras = new HashMap<>();
+    protected final Map<String,Animation> extras = new HashedMap<>();
 
     private Callback animCallback;
 
