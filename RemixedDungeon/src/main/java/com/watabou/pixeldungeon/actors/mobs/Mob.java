@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.Packable;
 import com.nyrds.generated.BundleHelper;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Horrified;
@@ -67,7 +68,9 @@ public abstract class Mob extends Char {
 
     protected Object spriteClass;
 
+    @Packable(defaultValue = "1")
     protected int expForKill = 1;
+
     protected int maxLvl = 50;
     protected float carcassChance = ModdingMode.inMod() ? ModQuirks.defaultCarcassChance : 0.5f;
 
@@ -109,6 +112,7 @@ public abstract class Mob extends Char {
 
     @NotNull
     public static Mob makePet(@NotNull Mob pet, int ownerId) {
+        pet.expForKill = 0;
         if (pet.canBePet()) {
             pet.setFraction(Fraction.HEROES);
             pet.setOwnerId(ownerId);

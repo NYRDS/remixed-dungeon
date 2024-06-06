@@ -31,6 +31,7 @@ import lombok.val;
 public class Carcass extends Item implements Doom {
     public static final String AC_NECROMANCY = "AC_Necromancy";
     public static final String AC_DEVOUR = "AC_Devour";
+    public static final String AC_KICK = "AC_Kick";
     @Packable
     Char src = CharsList.DUMMY;
 
@@ -89,6 +90,7 @@ public class Carcass extends Item implements Doom {
     @Override
     public ArrayList<String> actions(Char hero) {
         var actions = super.actions(hero);
+        actions.add(AC_KICK);
 
         switch (hero.getHeroClass()) {
             case NECROMANCER:
@@ -106,6 +108,11 @@ public class Carcass extends Item implements Doom {
 
     @Override
     public void _execute(@NotNull Char chr, @NotNull String action){
+        if(action.equals(AC_KICK)) {
+            GLog.i(Utils.format(R.string.Carcass_Kick, src.getName()));
+            removeItem();
+        }
+
         if (action.equals(AC_NECROMANCY)) {
             Level level = chr.level();
             int casterPos = chr.getPos();
