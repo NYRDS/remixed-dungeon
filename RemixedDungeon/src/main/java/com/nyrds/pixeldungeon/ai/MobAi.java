@@ -17,13 +17,13 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Locale;
 import java.util.Map;
 
 public abstract class MobAi implements AiState {
 
-    private static final Map<String, AiState> aiStateInstances = new HashMap<>();
+    private static final Map<String, AiState> aiStateInstances = new HashedMap<>();
 
     static {
         registerAiState(Passive.class);

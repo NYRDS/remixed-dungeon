@@ -8,21 +8,21 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 
 public class ItemStatusHandler<T extends Item> {
 
 	private final Class<? extends T>[] items;
 	
-	private final HashMap<Class<? extends T>, Integer> images;
+	private final HashedMap<Class<? extends T>, Integer> images;
 	private final HashSet<Class<? extends T>>          known;
 	
 	public ItemStatusHandler( Class<? extends T>[] items, Integer[] allImages ) {
 		
 		this.items = items;
 		
-		this.images = new HashMap<>();
+		this.images = new HashedMap<>();
 		known       = new HashSet<>();
 		
 		ArrayList<Integer> imagesLeft = new ArrayList<>(Arrays.asList(allImages));
@@ -37,7 +37,7 @@ public class ItemStatusHandler<T extends Item> {
 		
 		this.items = items;
 		
-		this.images = new HashMap<>();
+		this.images = new HashedMap<>();
 		known       = new HashSet<>();
 		
 		restore( bundle, images );

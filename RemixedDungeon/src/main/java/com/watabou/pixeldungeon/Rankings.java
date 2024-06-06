@@ -37,7 +37,7 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public enum Rankings {
@@ -73,7 +73,7 @@ public enum Rankings {
 		rec.gameId      = Dungeon.gameId;
 
 
-		Map<String,String> resDesc = new HashMap<>();
+		Map<String,String> resDesc = new HashedMap<>();
 		resDesc.put("class",     hero.getHeroClass().toString());
 		resDesc.put("subclass",  hero.getSubClass().toString());
 		resDesc.put("heroLevel", Integer.toString(hero.lvl()));

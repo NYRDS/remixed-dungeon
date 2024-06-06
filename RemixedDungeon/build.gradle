@@ -187,6 +187,8 @@ dependencies {
     huaweiImplementation 'com.huawei.hms:ads-lite:13.4.30.301'
     huaweiImplementation 'com.huawei.hms:hianalytics:5.0.0.300'
     huaweiImplementation 'com.huawei.agconnect:agconnect-crash:1.4.1.300'
+	
+	implementation 'org.apache.commons:commons-collections4:4.4'
 }
 
 if (getGradle().getStartParameter().getTaskRequests()

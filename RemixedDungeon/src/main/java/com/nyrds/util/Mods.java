@@ -11,7 +11,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 import lombok.SneakyThrows;
@@ -25,7 +25,7 @@ public class Mods {
     public static final String MODS_COMMON_JSON = "mods_common.json";
 
     static public @NotNull Map<String, ModDesc> buildModsList() {
-        Map<String, ModDesc> modsList = new HashMap<>();
+        Map<String, ModDesc> modsList = new HashedMap<>();
         try {
             Map<String, ModDesc> installedMods = getInstalledModsList();
             Map<String, ModDesc> availableMods = getAvailableModsList();
@@ -75,7 +75,7 @@ public class Mods {
 
     @NotNull
     static private Map<String, ModDesc> getInstalledModsList() throws JSONException {
-        Map<String, ModDesc> installedMods = new HashMap<>();
+        Map<String, ModDesc> installedMods = new HashedMap<>();
 
         File[] extList = FileSystem.listExternalStorage();
 
@@ -178,7 +178,7 @@ public class Mods {
     }
 
     private static @NotNull Map<String, ModDesc> getAvailableModsList() throws JSONException {
-        Map<String, ModDesc> availableMods = new HashMap<>();
+        Map<String, ModDesc> availableMods = new HashedMap<>();
 
         updateAvailableModsList("common", availableMods);
         updateAvailableModsList(GamePreferences.uiLanguage(), availableMods);

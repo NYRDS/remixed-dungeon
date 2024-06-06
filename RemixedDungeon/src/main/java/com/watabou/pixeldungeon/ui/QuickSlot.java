@@ -33,7 +33,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.Listener {
@@ -42,7 +42,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     private static final ArrayList<QuickSlot>     slots   = new ArrayList<>();
     @SuppressLint("UseSparseArrays")
-    private static final Map<Integer, Item> qsStorage = new HashMap<>();
+    private static final Map<Integer, Item> qsStorage = new HashedMap<>();
 
     private Item quickslotItem;
 

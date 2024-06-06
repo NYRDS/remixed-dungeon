@@ -17,7 +17,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
@@ -54,12 +54,12 @@ public class Treasury {
 
     private float decayFactor = 1;
 
-    private final Map<String, String> itemToCategory = new HashMap<>();
+    private final Map<String, String> itemToCategory = new HashedMap<>();
 
     private final Set<String> forbidden = new HashSet<>();
 
     private static Treasury defaultTreasury;
-    private static final Map<String, Treasury> treasurySet = new HashMap<>();
+    private static final Map<String, Treasury> treasurySet = new HashedMap<>();
 
     public static void reset() {
         defaultTreasury = null;

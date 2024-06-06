@@ -23,14 +23,14 @@ import com.watabou.gltextures.TextureCache;
 
 import org.jetbrains.annotations.Nullable;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 
 public class TextureFilm {
 
 	private final int texWidth;
 	private final int texHeight;
 	
-	protected final HashMap<Integer,RectF> frames = new HashMap<>();
+	protected final HashedMap<Integer,RectF> frames = new HashedMap<>();
 	
 	public TextureFilm( Object tx ) {
 		

@@ -44,7 +44,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -72,8 +72,8 @@ public class DungeonGenerator {
 
 	private static int    mCurrentLevelDepth;
 
-	static private HashMap<String, Class<? extends Level>> mLevelKindList;
-	static private HashMap<String, Integer>                mStoryMap;
+	static private HashedMap<String, Class<? extends Level>> mLevelKindList;
+	static private HashedMap<String, Integer>                mStoryMap;
 
 	static {
 		initLevelsMap();
@@ -105,7 +105,7 @@ public class DungeonGenerator {
 			throw ModdingMode.modException("bad Dungeon.json",e);
 		}
 
-		mLevelKindList = new HashMap<>();
+		mLevelKindList = new HashedMap<>();
 
 		registerLevelClass(SewerLevel.class);
 		registerLevelClass(SewerBossLevel.class);
@@ -365,7 +365,7 @@ public class DungeonGenerator {
 
 	public static void showStory(Level level) {
 		if (mStoryMap == null) {
-			mStoryMap = new HashMap<>();
+			mStoryMap = new HashedMap<>();
 			mStoryMap.put(SEWER_LEVEL, WndStory.ID_SEWERS);
 			mStoryMap.put(SPIDER_LEVEL, WndStory.ID_SPIDERS);
 			mStoryMap.put(PRISON_LEVEL, WndStory.ID_PRISON);

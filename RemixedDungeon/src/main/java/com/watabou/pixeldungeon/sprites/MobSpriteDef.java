@@ -13,7 +13,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Locale;
@@ -44,7 +44,7 @@ public class MobSpriteDef extends MobSprite {
 	private float visualOffsetY;
 
 
-	static private final Map<String, JSONObject> defMap = new HashMap<>();
+	static private final Map<String, JSONObject> defMap = new HashedMap<>();
 
 	private final String name;
 	private String deathEffect;

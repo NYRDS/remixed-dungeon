@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 
 import lombok.SneakyThrows;
@@ -49,7 +49,7 @@ import lombok.SneakyThrows;
 public class Room extends Rect implements Graph.Node, Bundlable {
 	
 	public final HashSet<Room>       neighbours = new HashSet<>();
-	public final HashMap<Room, Door> connected  = new HashMap<>();
+	public final HashedMap<Room, Door> connected  = new HashedMap<>();
 	
 	public int distance;
 	public int price = 1;

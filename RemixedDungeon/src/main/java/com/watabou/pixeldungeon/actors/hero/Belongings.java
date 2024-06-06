@@ -37,7 +37,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
@@ -128,8 +128,8 @@ public class Belongings implements Iterable<Item>, Bundlable {
         LEFT_ARTIFACT
     }
 
-    private final Map<Slot, EquipableItem> blockedSlots = new HashMap<>();
-    public final Map<EquipableItem, Slot> usedSlots = new HashMap<>();
+    private final Map<Slot, EquipableItem> blockedSlots = new HashedMap<>();
+    public final Map<EquipableItem, Slot> usedSlots = new HashedMap<>();
 
     private final Set<EquipableItem> activatedItems = new HashSet<>();
 

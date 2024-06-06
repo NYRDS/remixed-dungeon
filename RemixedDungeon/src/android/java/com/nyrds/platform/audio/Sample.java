@@ -33,7 +33,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -53,7 +53,7 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 
 	@NotNull
 	private final Map<String, Integer> ids =
-			new HashMap<>();
+			new HashedMap<>();
 
 	private AssetManager manager;
 	private boolean enabled = true;

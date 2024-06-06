@@ -5,7 +5,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public class SpellHelper {
@@ -27,7 +27,7 @@ public class SpellHelper {
     public static final String TARGET_ENEMY         = "enemy";
     public static final String TARGET_NONE          = "none";
 
-    private static final Map<String, Integer> affinityToIcon = new HashMap<>();
+    private static final Map<String, Integer> affinityToIcon = new HashedMap<>();
 
 
     static {

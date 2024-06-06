@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 import lombok.val;
@@ -74,8 +74,8 @@ public class BuffIndicator extends Component {
 
     private static BuffIndicator heroInstance;
 
-	private final Map<Integer, Image> icons = new HashMap<>();
-	private final Map<Integer, Image> newIcons = new HashMap<>();
+	private final Map<Integer, Image> icons = new HashedMap<>();
+	private final Map<Integer, Image> newIcons = new HashedMap<>();
 	private final Char ch;
 
 	private int updateCount;

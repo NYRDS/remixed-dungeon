@@ -21,13 +21,13 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.gl.Program;
 import com.nyrds.platform.gl.Shader;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public class Script extends Program {
 
 	private static final Map<Class<? extends Script>,Script> all =
-			new HashMap<>();
+			new HashedMap<>();
 	
 	private static Script curScript = null;
 	private static Class<? extends Script> curScriptClass = null;

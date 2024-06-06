@@ -9,7 +9,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 
 public class SpellSprite extends Image {
 
@@ -38,7 +38,7 @@ public class SpellSprite extends Image {
 	private float duration;
 	private float passed;
 	
-	private static final HashMap<Char,SpellSprite> all = new HashMap<>();
+	private static final HashedMap<Char,SpellSprite> all = new HashedMap<>();
 	
 	public SpellSprite() {
 		super( Assets.SPELL_ICONS );

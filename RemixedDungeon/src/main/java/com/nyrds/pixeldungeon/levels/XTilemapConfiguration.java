@@ -11,7 +11,7 @@ import org.json.JSONObject;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 
@@ -23,9 +23,9 @@ import java.util.Map;
 
 public class XTilemapConfiguration {
 
-	private final Map<Integer,TileDesc> tilemapConfiguration = new HashMap<>();
+	private final Map<Integer,TileDesc> tilemapConfiguration = new HashedMap<>();
 
-	private static final Map<String, Integer> terrainMapping = new HashMap<>();
+	private static final Map<String, Integer> terrainMapping = new HashedMap<>();
 
 	private static void createTerrainMapping() {
 		if(terrainMapping.isEmpty()) {

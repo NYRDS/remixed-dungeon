@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.items.Stylus;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 import java.util.Objects;
 
@@ -33,11 +33,11 @@ public class Challenges {
 	};
 
 	@SuppressLint("UseSparseArrays")
-	private static final Map<Integer, ArrayList<String>> forbiddenCategories = new HashMap<>();
+	private static final Map<Integer, ArrayList<String>> forbiddenCategories = new HashedMap<>();
 
-	public static final Map<Integer, ArrayList<String>> forbiddenSpells = new HashMap<>();
+	public static final Map<Integer, ArrayList<String>> forbiddenSpells = new HashedMap<>();
 
-	public static final Map<Integer, ArrayList<Integer>> conflictingFacilitations = new HashMap<>();
+	public static final Map<Integer, ArrayList<Integer>> conflictingFacilitations = new HashedMap<>();
 
 
 	static {

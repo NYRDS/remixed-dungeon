@@ -6,14 +6,14 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.utils.Random;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 abstract public class CommonLevel extends Level {
 
 	abstract protected int nTraps();
 
-	public static final Map<String, Float> traps = new HashMap<>();
+	public static final Map<String, Float> traps = new HashedMap<>();
 	static {
 		traps.put("ToxicTrap",1f);
 		traps.put("FireTrap",1f);

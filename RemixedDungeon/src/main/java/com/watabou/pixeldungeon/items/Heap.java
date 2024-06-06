@@ -40,7 +40,7 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.LinkedList;
 import java.util.Map;
 
@@ -74,7 +74,7 @@ public class Heap implements Bundlable, NamedEntityKind {
     @Getter
     public Type type = Type.HEAP;
 
-    public static final Map<Type, Float> regularHeaps = new HashMap<>();
+    public static final Map<Type, Float> regularHeaps = new HashedMap<>();
 
     static {
         regularHeaps.put(Type.SKELETON, 1f);
@@ -83,7 +83,7 @@ public class Heap implements Bundlable, NamedEntityKind {
         regularHeaps.put(Type.HEAP, 14f);
     }
 
-    public static final Map<Type, Float> sageHeaps = new HashMap<>();
+    public static final Map<Type, Float> sageHeaps = new HashedMap<>();
 
     static {
         sageHeaps.put(Type.SKELETON, 1f);

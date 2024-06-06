@@ -29,7 +29,7 @@ import com.watabou.noosa.TextureFilm;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 import lombok.SneakyThrows;
@@ -38,8 +38,8 @@ import lombok.val;
 
 public class TextureCache {
 
-	private static final Map<Object, SmartTexture> all = new HashMap<>();
-	private static final Map<Object, TextureFilm> allFilm = new HashMap<>();
+	private static final Map<Object, SmartTexture> all = new HashedMap<>();
+	private static final Map<Object, TextureFilm> allFilm = new HashedMap<>();
 
 	// No dithering, no scaling, 32 bits per pixel
 	private static final BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();

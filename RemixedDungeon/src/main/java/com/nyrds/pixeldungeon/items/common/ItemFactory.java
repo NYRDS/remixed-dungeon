@@ -208,15 +208,15 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.List;
 import java.util.Map;
 
 
 public class ItemFactory {
 
-    static private final Map<String, Class<? extends Item>> mItemsList = new HashMap<>();
-    static private final Map<Class<? extends Item>, String> mNamesList = new HashMap<>();
+    static private final Map<String, Class<? extends Item>> mItemsList = new HashedMap<>();
+    static private final Map<Class<? extends Item>, String> mNamesList = new HashedMap<>();
 
     static {
         initItemsMap();

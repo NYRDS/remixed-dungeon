@@ -8,14 +8,14 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public class AdsUtils {
 
-    static final Map<AdsUtilsCommon.IBannerProvider, Integer> bannerFails = new HashMap<>();
-    static final Map<AdsUtilsCommon.IInterstitialProvider, Integer> interstitialFails = new HashMap<>();
-    static final Map<AdsUtilsCommon.IRewardVideoProvider, Integer> rewardVideoFails = new HashMap<>();
+    static final Map<AdsUtilsCommon.IBannerProvider, Integer> bannerFails = new HashedMap<>();
+    static final Map<AdsUtilsCommon.IInterstitialProvider, Integer> interstitialFails = new HashedMap<>();
+    static final Map<AdsUtilsCommon.IRewardVideoProvider, Integer> rewardVideoFails = new HashedMap<>();
 
     static {
         if(!RemixedDungeonApp.checkOwnSignature()) {

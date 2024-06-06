@@ -24,7 +24,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Map;
@@ -39,15 +39,15 @@ public class StringsManager {
 
 	@SuppressLint("UseSparseArrays")
 	@NotNull
-	private static final Map<Integer, String>   stringMap  = new HashMap<>();
+	private static final Map<Integer, String>   stringMap  = new HashedMap<>();
 	@SuppressLint("UseSparseArrays")
 	@NotNull
-	private static final Map<Integer, String[]> stringsMap = new HashMap<>();
+	private static final Map<Integer, String[]> stringsMap = new HashedMap<>();
 
-	private static final Map<String, String>   sStringMap  = new HashMap<>();
-	private static final Map<String, String[]> sStringsMap = new HashMap<>();
+	private static final Map<String, String>   sStringMap  = new HashedMap<>();
+	private static final Map<String, String[]> sStringsMap = new HashedMap<>();
 
-	private static final Map<String, Integer> keyToInt = new HashMap<>();
+	private static final Map<String, Integer> keyToInt = new HashedMap<>();
 
     private static final Set<String> nonModdable = new HashSet<>();
 

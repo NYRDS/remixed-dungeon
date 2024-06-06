@@ -9,12 +9,12 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public class WndPremiumSettings extends Window {
 
-	private static final Map<String, Integer> material2level = new HashMap<>();
+	private static final Map<String, Integer> material2level = new HashedMap<>();
 
 	static {
         material2level.put(StringsManager.getVar(R.string.WndPremiumSettings_std),0);

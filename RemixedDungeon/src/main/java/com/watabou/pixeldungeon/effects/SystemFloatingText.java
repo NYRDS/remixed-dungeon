@@ -9,7 +9,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public class SystemFloatingText extends SystemText {
@@ -21,7 +21,7 @@ public class SystemFloatingText extends SystemText {
 
 	private int key = -1;
 
-	private static final Map<Integer, ArrayList<SystemFloatingText>> stacks = new HashMap<>();
+	private static final Map<Integer, ArrayList<SystemFloatingText>> stacks = new HashedMap<>();
 
 	public SystemFloatingText() {
 		super(Utils.EMPTY_STRING, GuiProperties.mediumTitleFontSize(), false);

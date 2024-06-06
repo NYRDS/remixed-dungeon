@@ -3,14 +3,14 @@ package com.watabou.pixeldungeon;
 
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 import lombok.val;
 
 public class GamesInProgress {
 
-	private static final Map<HeroClass, Info> state = new HashMap<>();
+	private static final Map<HeroClass, Info> state = new HashedMap<>();
 	
 	public static Info checkFile(String file) {
 		Info info = null;

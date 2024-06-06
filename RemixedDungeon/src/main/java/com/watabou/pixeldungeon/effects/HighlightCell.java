@@ -7,7 +7,7 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 @LuaInterface
@@ -15,7 +15,7 @@ public class HighlightCell extends Image {
 
 	private float t;
 
-	static private final Map<Integer, HighlightCell> cells = new HashMap<>();
+	static private final Map<Integer, HighlightCell> cells = new HashedMap<>();
 
 	static public void add(int pos) {
 		cells.put(pos,  new HighlightCell(pos) );

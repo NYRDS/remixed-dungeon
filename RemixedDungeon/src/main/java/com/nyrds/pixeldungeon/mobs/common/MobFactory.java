@@ -114,7 +114,7 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.List;
 import java.util.Map;
 
@@ -141,7 +141,7 @@ public class MobFactory {
 	
 	private static void initMobsMap() {
 
-		mMobsList = new HashMap<>();
+		mMobsList = new HashedMap<>();
 		registerMobClass(Rat.class);
 		registerMobClass(Albino.class);
 		registerMobClass(Gnoll.class);

@@ -8,7 +8,7 @@ import com.watabou.gltextures.SmartTexture;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 
 public class Font extends TextureFilm {
 	public static final String SPECIAL_CHAR =
@@ -39,7 +39,7 @@ public class Font extends TextureFilm {
 	
 	private boolean endOfRow = false;
 	
-	final HashMap<Object, PointF> glyphShift = new HashMap<>();
+	final HashedMap<Object, PointF> glyphShift = new HashedMap<>();
 	
 	protected Font( SmartTexture tx ) {
 		super( tx );

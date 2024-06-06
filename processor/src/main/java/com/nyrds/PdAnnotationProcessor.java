@@ -12,7 +12,7 @@ import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
 import java.io.Writer;
 import java.lang.reflect.Field;
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -46,8 +46,8 @@ PdAnnotationProcessor extends AbstractProcessor{
 		ClassName charList = ClassName.get("com.nyrds.pixeldungeon.utils", "CharsList");
 		ClassName itemsList = ClassName.get("com.nyrds.pixeldungeon.utils", "ItemsList");
 
-		Map<Element, Set<Element>> fieldsByClass = new HashMap<>();
-		Map<Element, String>       defaultValues = new HashMap<>();
+		Map<Element, Set<Element>> fieldsByClass = new HashedMap<>();
+		Map<Element, String>       defaultValues = new HashedMap<>();
 		Set<Element>               classesToImport = new HashSet<>();
 
 		for (Element element : roundEnvironment.getElementsAnnotatedWith(Packable.class)) {

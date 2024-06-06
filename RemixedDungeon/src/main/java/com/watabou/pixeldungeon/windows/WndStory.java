@@ -15,7 +15,7 @@ import com.watabou.pixeldungeon.ui.Window;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public class WndStory extends Window {
@@ -37,7 +37,7 @@ public class WndStory extends Window {
 	public static final int ID_SPIDERS		= 5;
 	public static final int ID_GUTS         = 6;
 	
-	private static final Map<Integer,String> CHAPTERS = new HashMap<>();
+	private static final Map<Integer,String> CHAPTERS = new HashedMap<>();
 	
 	static {
 		CHAPTERS.put(ID_SEWERS, StringsManager.getVar(R.string.WndStory_Sewers));

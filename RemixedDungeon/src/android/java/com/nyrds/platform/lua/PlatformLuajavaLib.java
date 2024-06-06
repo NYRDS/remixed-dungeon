@@ -6,7 +6,7 @@ import com.nyrds.util.ModdingMode;
 
 import org.luaj.vm2.lib.jse.LuajavaLib;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 /**
@@ -16,7 +16,7 @@ import java.util.Map;
 public class PlatformLuajavaLib extends LuajavaLib {
 
 
-	final static Map<String, String> classRemap = new HashMap<>();
+	final static Map<String, String> classRemap = new HashedMap<>();
 
 	static {
 		classRemap.put("com.watabou.pixeldungeon.RemixedDungeon", "com.nyrds.platform.game.RemixedDungeon");

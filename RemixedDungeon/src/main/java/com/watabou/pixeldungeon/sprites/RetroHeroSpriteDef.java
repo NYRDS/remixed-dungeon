@@ -10,7 +10,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 /**
@@ -43,7 +43,7 @@ public class RetroHeroSpriteDef extends HeroSpriteDef {
 			LAYER_DEATH
 	};
 
-	private final Map<String,String> layersDesc = new HashMap<>();
+	private final Map<String,String> layersDesc = new HashedMap<>();
 
 	public RetroHeroSpriteDef(String[] lookDesc){
 		super(HERO_SPRITES_DESC_HERO_JSON,0);

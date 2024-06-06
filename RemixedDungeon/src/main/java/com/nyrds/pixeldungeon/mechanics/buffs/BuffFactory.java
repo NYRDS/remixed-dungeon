@@ -54,7 +54,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -63,7 +63,7 @@ import lombok.SneakyThrows;
 
 
 public class BuffFactory {
-    static private final Map<String, Class<? extends Buff>> buffList = new HashMap<>();
+    static private final Map<String, Class<? extends Buff>> buffList = new HashedMap<>();
 
     static private final Set<String> customBuffs = new HashSet<>();
 

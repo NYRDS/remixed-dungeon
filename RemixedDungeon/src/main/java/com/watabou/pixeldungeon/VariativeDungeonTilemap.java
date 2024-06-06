@@ -9,7 +9,7 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
 import com.watabou.pixeldungeon.levels.Level;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 import lombok.SneakyThrows;
@@ -25,7 +25,7 @@ public class VariativeDungeonTilemap extends DungeonTilemap {
 
     private final XTilemapConfiguration xTilemapConfiguration;
 
-    static final Map<String, XTilemapConfiguration> xTilemapConfigurationCache = new HashMap<>();
+    static final Map<String, XTilemapConfiguration> xTilemapConfigurationCache = new HashedMap<>();
 
     private final Level level;
 

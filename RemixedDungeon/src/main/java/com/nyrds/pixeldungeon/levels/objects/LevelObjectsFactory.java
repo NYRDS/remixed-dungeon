@@ -19,7 +19,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 
 import lombok.SneakyThrows;
 
@@ -44,7 +44,7 @@ public class LevelObjectsFactory {
     public static final String SUMMONING_TRAP = "SummoningTrap";
 	public static final String PILE_OF_STONES = "pile_of_stones";
 
-    static private HashMap<String, Class<? extends LevelObject>> mObjectsList;
+    static private HashedMap<String, Class<? extends LevelObject>> mObjectsList;
 
 	static  {
 		initObjectsMap();
@@ -55,7 +55,7 @@ public class LevelObjectsFactory {
 
 	private static void initObjectsMap() {
 
-		mObjectsList = new HashMap<>();
+		mObjectsList = new HashedMap<>();
 		registerObjectClass(Sign.class);
 		registerObjectClass(Barrel.class);
 		registerObjectClass(ConcreteBlock.class);

@@ -16,7 +16,7 @@ import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.IntroScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 
-import java.util.HashMap;
+import org.apache.commons.collections4.map.HashedMap;
 import java.util.Map;
 
 public class GameControl {
@@ -47,7 +47,7 @@ public class GameControl {
             EventCollector.disable();
         }
 
-        Map<String,String> resDesc = new HashMap<>();
+        Map<String,String> resDesc = new HashedMap<>();
         resDesc.put("class",className);
         resDesc.put("mod", GamePreferences.activeMod());
         resDesc.put("modVersion", String.valueOf(ModdingMode.activeModVersion()));
