@@ -20,7 +20,6 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.Scene;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.utils.SystemTime;
 
@@ -241,11 +240,6 @@ public class GameLoop {
             elapsed = timeScale * step * 0.001f;
             if (scene != null) {
                 scene.update();
-				
-				// Causing artificial death
-				if (Dungeon.hero.isReady()) {
-					Dungeon.hero.die();
-				}
             }
             Camera.updateAll();
         }
