@@ -226,10 +226,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (level.fieldOfView[m.getPos()] && !m.friendly(this) && m.invisible <= 0) {
             visible.add(m);
             if (!visibleEnemies.contains(m)) {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
     public boolean checkVisibleEnemies() {
