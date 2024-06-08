@@ -1663,6 +1663,7 @@
   <string name="ServiceManNPC_Desc">A regular worker of the local establishments.</string>
   <string name="TownShopkeeper_Name">shopkeeper</string>
   <string name="TownShopkeeper_Desc">This guy is a typical shopkeeper. You can tell he already knows your price.</string>
+  <string name="TownShopkeeper_Objective">shopkeeper</string>
   <string name="WndMovieTheatre_Watch">watch an Ad</string>
   <string name="WndMovieTheatre_No">leave</string>
   <string name="WndMovieTheatre_Bye">Come back any time, we are always happy to see you!</string>

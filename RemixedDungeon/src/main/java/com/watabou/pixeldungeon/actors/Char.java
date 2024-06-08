@@ -222,23 +222,34 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         next();
     }
 
+    private boolean checkEnemyVisibility(ArrayList<Char> visible, Char m) {
+        if (level.fieldOfView[m.getPos()] && !m.friendly(this) && m.invisible <= 0) {
+            visible.add(m);
+            if (!visibleEnemies.contains(m)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public boolean checkVisibleEnemies() {
         ArrayList<Char> visible = new ArrayList<>();
+        Level level = level();
 
         boolean newMob = false;
 
-        for (Mob m : level().mobs) {
+        if (checkEnemyVisibility(visible, Dungeon.hero)) {
+            newMob = true;
+        }
+
+        for (Mob m : level.mobs) {
             if (m == this) {
                 continue;
             }
 
-            if (level().fieldOfView[m.getPos()] && !m.friendly(this) && m.invisible <= 0) {
-                visible.add(m);
-                if (!visibleEnemies.contains(m)) {
-                    newMob = true;
-                }
+            if (checkEnemyVisibility(visible, m)) {
+                newMob = true;
             }
-
         }
 
         visibleEnemies = visible;
@@ -248,7 +259,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Override
     public boolean act() {
-        if(prevTime < time) {
+        if (prevTime < time) {
             prevTime = time;
 
             level().updateFieldOfView(this);
@@ -1411,7 +1422,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void onSpawn(Level level) {
-        if(!undead) {
+        if (!undead) {
             Buff.affect(this, Regeneration.class);
         }
         getScript().run("onSpawn", level);
@@ -2104,7 +2115,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void earnExp(int exp) {
-        if(undead) {
+        if (undead) {
             return;
         }
 
@@ -2232,9 +2243,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return ItemsList.DUMMY;
     }
 
-    public void setUndead(boolean flag)  {
+    public void setUndead(boolean flag) {
         undead = flag;
-        if(undead)  {
+        if (undead) {
             setGlowing(0xff333333, 5f);
         }
 
