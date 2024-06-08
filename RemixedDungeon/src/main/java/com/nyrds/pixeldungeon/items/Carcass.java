@@ -32,6 +32,8 @@ public class Carcass extends Item implements Doom {
     public static final String AC_NECROMANCY = "AC_Necromancy";
     public static final String AC_DEVOUR = "AC_Devour";
     public static final String AC_KICK = "AC_Kick";
+    public static final String CARCASS_OF = "Carcass of ";
+    public static final String CARCASS = "Carcass";
     @Packable
     Char src = CharsList.DUMMY;
 
@@ -70,7 +72,7 @@ public class Carcass extends Item implements Doom {
     @Override
     public Image getCustomImage() {
         if(src.valid()) {
-            return src.getSprite().carcass();
+            return src.newSprite().carcass();
         } else {
             return DummySprite.instance;
         }
@@ -90,7 +92,9 @@ public class Carcass extends Item implements Doom {
     @Override
     public ArrayList<String> actions(Char hero) {
         var actions = super.actions(hero);
-        actions.add(AC_KICK);
+        if(getHeap()!= null) {
+            actions.add(AC_KICK);
+        }
 
         switch (hero.getHeroClass()) {
             case NECROMANCER:
@@ -158,9 +162,9 @@ public class Carcass extends Item implements Doom {
     @Override
     public String getEntityKind() {
         if (src != null && src.valid()) {
-            return "Carcass of " + src.getName();
+            return CARCASS_OF + src.getEntityKind();
         } else {
-            return "Carcass";
+            return CARCASS;
         }
     }
 }

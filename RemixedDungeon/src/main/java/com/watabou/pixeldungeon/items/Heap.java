@@ -244,8 +244,8 @@ public class Heap implements Bundlable, NamedEntityKind  {
     }
 
     public void replace(Item item, Item newItem) {
-        item.setHeap(null);
         if (newItem == null) {
+            item.setHeap(null);
             items.remove(item);
         } else {
             if (!item.equals(newItem)) {

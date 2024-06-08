@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.items.common;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.CustomItem;
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
@@ -37,6 +38,8 @@ import com.nyrds.pixeldungeon.items.material.SoulShard;
 import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
+import com.nyrds.pixeldungeon.mobs.common.CustomMob;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
@@ -450,12 +453,27 @@ public class ItemFactory {
         return mItemsList.containsKey(itemClass);
     }
 
-    public static Item itemByName(String selectedItemClass) {
+    public static Item itemByName(@NotNull String selectedItemClass) {
         try {
-            Class<? extends Item> itemClass = mItemsList.get(selectedItemClass);
+            {
+                Class<? extends Item> itemClass = mItemsList.get(selectedItemClass);
 
-            if (itemClass != null && itemClass != CustomItem.class) {
-                return itemClass.newInstance();
+                if (itemClass != null && itemClass != CustomItem.class) {
+                    return itemClass.newInstance();
+                }
+            }
+
+            if (selectedItemClass.startsWith(Carcass.CARCASS_OF))  {
+                String mobKind  = selectedItemClass.substring(Carcass.CARCASS_OF.length());
+                if (MobFactory.hasMob(mobKind)) {
+                    try {
+                        return new Carcass(MobFactory.mobByName(mobKind));
+                    } catch (Exception e) {
+                        EventCollector.logException(e, mobKind);
+                        return new Carcass(new CustomMob("Snail"));
+                    }
+                }
+                return new Carcass(new CustomMob("Snail"));
             }
 
             try {

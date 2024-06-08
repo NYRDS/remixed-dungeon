@@ -2914,9 +2914,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Carcass_Info">Remains of totally dead %s.</string>
     <string name="ResultDescriptions_Necromancy">Depleted of life force while trying to animate corpse on level %d</string>
     <string name="Item_ACPickup">Pick up</string>
-  <string name="Necromancy_Death">You delpeted all your life force while practising necromancy.</string>
+  <string name="Necromancy_Death">You depleted all your life force while practising necromancy.</string>
   <string name="AC_Necromancy">Necromancy</string>
   <string name="AC_Devour">Devour</string>
+  <string name="AC_Kick">Kick</string>
+  <string name="Carcass_Kick">This %s is totally dead, no need to kick it.</string>
   <string name="Carcass_Devoured">"You have devoured corpse of %s!"</string>
   <string name="Carcass_Necromancy">"You have raised corpse of %s!"</string>
   <string name="Carcass_Necromancy_Failed">"Your attempt to raise corpse of %s failed!"</string>
