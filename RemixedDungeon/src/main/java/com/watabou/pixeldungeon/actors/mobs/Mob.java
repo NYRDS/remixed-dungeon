@@ -16,8 +16,6 @@ import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
-import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
-import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
@@ -379,6 +377,7 @@ public abstract class Mob extends Char {
         }
     }
 
+    @Override
     public void resurrect(Char parent) {
 
         int spawnPos = getPos();

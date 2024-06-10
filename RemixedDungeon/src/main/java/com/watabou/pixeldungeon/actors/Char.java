@@ -2077,10 +2077,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public abstract void resurrect();
+    public void resurrect(Char parent) {}
+
 
     public void setSubClass(HeroSubClass subClass) {
     }
-
 
     @LuaInterface
     public void setMaxSkillPoints(int points) {
