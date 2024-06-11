@@ -85,6 +85,7 @@ public class StartScene extends PixelScene {
     private Text unlock;
 
     private ClassShield curShield;
+    private int difficulty;
 
     @Override
     public void create() {
@@ -134,13 +135,13 @@ public class StartScene extends PixelScene {
                         @Override
                         public void onSelect(int index) {
                             if (index == 0) {
-                                selectDifficulty();
+                                startNewGame(difficulty);
                             }
                         }
                     });
 
                 } else {
-                    selectDifficulty();
+                    startNewGame(difficulty);
                 }
             }
         };
@@ -243,7 +244,7 @@ public class StartScene extends PixelScene {
         for (ClassShield shield : shields) {
             if (shield.cl.classIndex() == GamePreferences.lastClass()) {
                 updateShield(shield);
-                return;
+                break;
             }
         }
 
@@ -255,6 +256,8 @@ public class StartScene extends PixelScene {
         ServiceManNPC.resetLimit();
 
         fadeIn();
+
+        selectDifficulty();
     }
 
     private void updateUnlockLabel(String text) {
@@ -345,7 +348,8 @@ public class StartScene extends PixelScene {
                 StringsManager.getVar(R.string.StartScene_DifficultyExpert)) {
             @Override
             public void onSelect(final int index) {
-                startNewGame(index);
+                difficulty = index;
+                hide();
             }
         };
 
