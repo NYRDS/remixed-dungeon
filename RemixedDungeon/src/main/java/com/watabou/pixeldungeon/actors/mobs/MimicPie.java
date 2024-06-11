@@ -17,6 +17,7 @@ public class MimicPie extends Mob implements IDepthAdjustable {
 		flying = true;
 
 		level = Dungeon.depth;
+		carcassChance = 0;
 
 		collect(new RottenPasty());
 

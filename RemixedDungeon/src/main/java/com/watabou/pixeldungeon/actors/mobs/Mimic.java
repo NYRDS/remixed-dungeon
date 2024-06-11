@@ -48,6 +48,8 @@ public class Mimic extends Mob implements IDepthAdjustable {
 	public Mimic() {
 		addImmunity(ScrollOfPsionicBlast.class);
 		adjustStats(Dungeon.depth);
+
+		carcassChance = 0;
 	}
 
 	@Override

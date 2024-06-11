@@ -22,6 +22,7 @@ public class MimicAmulet extends Mob {
 		baseSpeed = 1.25f;
 		
 		flying = true;
+		carcassChance = 0;
 
 		level = Dungeon.depth;
 		adjustStats(level);
