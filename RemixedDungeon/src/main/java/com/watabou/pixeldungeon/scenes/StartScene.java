@@ -51,6 +51,7 @@ import com.watabou.pixeldungeon.ui.GameButton;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndClass;
 import com.watabou.pixeldungeon.windows.WndOptions;
+import com.watabou.pixeldungeon.windows.WndSaveSlotSelect;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -152,7 +153,15 @@ public class StartScene extends PixelScene {
             protected void onClick() {
                 Dungeon.hero = CharsList.DUMMY_HERO;
                 Dungeon.heroClass = curShield.cl;
-                InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
+
+                if (difficulty >=2) {
+                    InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
+                } else  {
+                    var selectLoadSlot  = new WndSaveSlotSelect(false);
+
+                    add(selectLoadSlot);
+                    sendToBack(selectLoadSlot);
+                }
             }
         };
         add(btnLoad);
@@ -350,6 +359,10 @@ public class StartScene extends PixelScene {
             public void onSelect(final int index) {
                 difficulty = index;
                 hide();
+            }
+
+            @Override
+            public void onBackPressed() {
             }
         };
 

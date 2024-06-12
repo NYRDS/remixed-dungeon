@@ -23,6 +23,7 @@ import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.DonateButton;
@@ -50,7 +51,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
     public WndSaveSlotSelect(final boolean _saving, String title) {
         String[] options = slotInfos();
 
-        Hero hero = Dungeon.hero;
+        HeroClass heroClass  = Dungeon.heroClass;
 
         final int WIDTH = WndHelper.getFullscreenWidth();
         final int maxW = WIDTH - GAP * 2;
@@ -110,8 +111,8 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                     final String modernSlotDir = slotsDir[0];
 
                     for (var slotDirProbe:slotsDir) {
-                        final String snapshotId = slotDirProbe + "_" + hero.getHeroClass().toString();
-                        final String saveSnapshotId = modernSlotDir + "_" + hero.getHeroClass().toString();
+                        final String snapshotId = slotDirProbe + "_" + heroClass.toString();
+                        final String saveSnapshotId = modernSlotDir + "_" + heroClass.toString();
 
                         if ((_saving && !options[index].isEmpty())
                                 || (!_saving
@@ -126,7 +127,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                                                 FileSystem.getInternalStorageFile(modernSlotDir),
                                                 pathname -> SaveUtils.isRelatedTo(
                                                         pathname.getPath(),
-                                                        hero.getHeroClass()));
+                                                        heroClass));
                                         showActionResult(res);
                                     } else {
                                         Game.instance().playGames.unpackSnapshotTo(snapshotId,
