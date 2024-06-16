@@ -24,6 +24,7 @@ import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.windows.HBox;
+import com.nyrds.pixeldungeon.windows.WndDifficultyOptions;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
@@ -86,7 +87,7 @@ public class StartScene extends PixelScene {
     private Text unlock;
 
     private ClassShield curShield;
-    private int difficulty;
+    public int difficulty;
 
     @Override
     public void create() {
@@ -348,28 +349,12 @@ public class StartScene extends PixelScene {
 
     private void selectDifficulty() {
 
-        int id = GamePreferences.donated() > 0 ? R.string.StartScene_DifficultyNormalWithSavesNoAds : R.string.StartScene_DifficultyNormalWithSaves;
-        int id1 = GamePreferences.donated() > 0 ? R.string.StartScene_DifficultyEasyNoAds : R.string.StartScene_DifficultyEasy;
-        WndOptions difficultyOptions = new WndOptions(StringsManager.getVar(R.string.StartScene_DifficultySelect), Utils.EMPTY_STRING,
-                StringsManager.getVar(id1),
-                StringsManager.getVar(id),
-                StringsManager.getVar(R.string.StartScene_DifficultyNormal),
-                StringsManager.getVar(R.string.StartScene_DifficultyExpert)) {
-            @Override
-            public void onSelect(final int index) {
-                difficulty = index;
-                hide();
-            }
-
-            @Override
-            public void onBackPressed() {
-            }
-        };
+        WndOptions difficultyOptions = new WndDifficultyOptions(this);
 
         add(difficultyOptions);
     }
 
-    private void startNewGame(int difficulty) {
+    public void startNewGame(int difficulty) {
         GameControl.startNewGame(curShield.cl.name(), difficulty, false);
     }
 

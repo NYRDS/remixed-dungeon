@@ -35,20 +35,15 @@ public class SaveUtils {
 		Dungeon.heroClass = heroClass;
 	}
 
-	public static String slotInfo(String slot, HeroClass cl) {
+	public static Info slotInfo(String slot, HeroClass cl) {
 		if(slotUsed(slot, cl)) {
 			
 			String localName = slot +"/"+ gameFile(cl);
 			
-			Info info = GamesInProgress.checkFile(localName);
-			
-			if(info!= null) {
-				return Utils.format("d: %2d   l: %2d", info.depth,
-						info.level);
-			}
+			return GamesInProgress.checkFile(localName);
 		}
 		
-		return Utils.EMPTY_STRING;
+		return null;
 	}
 	
 	public static boolean slotUsed(String slot, HeroClass cl) {

@@ -5,9 +5,11 @@ import androidx.annotation.NonNull;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.windows.HBox;
+import com.nyrds.pixeldungeon.windows.WndDifficultyOptions;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
@@ -29,10 +31,10 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.DonateButton;
+import com.watabou.pixeldungeon.ui.IconButton;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.SimpleButton;
-import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -54,7 +56,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
     }
 
     public WndSaveSlotSelect(final boolean _saving, String title, final boolean start_scene) {
-        String[] options = slotInfos();
+        GamesInProgress.Info[] options = slotInfos();
 
         HeroClass heroClass = Dungeon.heroClass;
 
@@ -82,29 +84,42 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
         float pos = tfMesage.getY() + tfMesage.height() + GAP;
 
-        ArrayList<TextButton> buttons = new ArrayList<>();
+        ArrayList<IconButton> buttons = new ArrayList<>();
 
 
         final int columns = RemixedDungeon.landscape() ? 3 : 2;
         final int BUTTON_WIDTH = WIDTH / columns - GAP;
 
         for (int i = 0; i < options.length / columns + 1; i++) {
+
             for (int j = 0; j < columns; j++) {
                 final int index = i * columns + j;
                 if (!(index < options.length)) {
                     break;
                 }
 
+                GamesInProgress.Info info  = options[index];
+
                 float additionalMargin = 0;
                 float xColumn = GAP + j * (BUTTON_WIDTH + GAP);
                 float xBtn = xColumn;
 
-                final RedButton btn = new RedButton(options[index]) {
+                String btnText = "";
+                if(info!= null) {
+                    btnText = Utils.format("d:%2d l:%2d", info.depth, info.level);
+                }
+
+                final IconButton btn = new IconButton(btnText) {
                     @Override
                     protected void onClick() {
                         onSelect(index);
                     }
                 };
+
+                if(info!= null) {
+                    btn.icon(MobFactory.avatar(WndDifficultyOptions.difficulties[info.difficulty]));
+                }
+
                 buttons.add(btn);
 
                 if (Game.instance().playGames.isConnected()) {
@@ -119,7 +134,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                         final String snapshotId = slotDirProbe + "_" + heroClass.toString();
                         final String saveSnapshotId = modernSlotDir + "_" + heroClass.toString();
 
-                        if ((_saving && !options[index].isEmpty())
+                        if ((_saving && (options[index]!=null))
                                 || (!_saving
                                 && Game.instance().playGames.haveSnapshot(snapshotId)
                         )) {
@@ -150,7 +165,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                         }
                     }
                 }
-                if (!options[index].isEmpty()) {
+                if (options[index]!= null) {
                     SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
                         protected void onClick() {
                             final int slotIndex = index;
@@ -305,10 +320,11 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
     }
 
 
-    private static String[] slotInfos() {
-        String[] ret = new String[10];
+    private static GamesInProgress.Info[]  slotInfos() {
+        GamesInProgress.Info[] ret = new GamesInProgress.Info[10];
 
         for (int i = 0; i < ret.length; i++) {
+
             ret[i] = SaveUtils.slotInfo(getSlotToLoad(i), Dungeon.heroClass);
         }
 

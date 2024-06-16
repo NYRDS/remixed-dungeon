@@ -59,6 +59,7 @@ import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
+import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
@@ -302,6 +303,10 @@ public class MobFactory {
 		var mob = mobByName(selectedMobClass);
 		mob.fromJson(JsonHelper.readJsonFromString(jsonDesc));
 		return mob;
+	}
+
+	public static Image avatar(String kind)  {
+		return MobFactory.mobByName(kind).newSprite().avatar();
 	}
 
 	public static List<Mob> allMobs() {

@@ -6,12 +6,14 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.IconButton;
 import com.watabou.pixeldungeon.ui.Window;
 
 public abstract class WndOptions extends Window {
 
-	public WndOptions( String title, String message, String... options ) {
+	protected final VBox buttonsVbox;
+
+	public WndOptions(String title, String message, String... options ) {
 		super();
 
         VBox vbox = new VBox();
@@ -28,10 +30,10 @@ public abstract class WndOptions extends Window {
 		tfMessage.setX(GAP);
 		vbox.add( tfMessage );
 
-		VBox buttonsVbox = new VBox();
+		buttonsVbox = new VBox();
 		for (int i=0; i < options.length; i++) {
 			final int index = i;
-			RedButton btn = new RedButton( StringsManager.maybeId(options[i]) ) {
+			var btn = new IconButton( StringsManager.maybeId(options[i]) ) {
 				@Override
 				protected void onClick() {
 					hide();
@@ -43,7 +45,7 @@ public abstract class WndOptions extends Window {
 			buttonsVbox.add( btn );
 		}
 
-		buttonsVbox.setRect(GAP,0, STD_WIDTH,buttonsVbox.childsHeight());
+		buttonsVbox.setRect(GAP,0, STD_WIDTH, buttonsVbox.childsHeight());
 		vbox.add(buttonsVbox);
 
 		vbox.setRect(GAP,0, STD_WIDTH,vbox.childsHeight());

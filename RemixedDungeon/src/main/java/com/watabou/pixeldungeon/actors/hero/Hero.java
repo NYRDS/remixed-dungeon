@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Facilitations;
-import com.watabou.pixeldungeon.GamesInProgress;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -175,7 +174,7 @@ public class Hero extends Char {
 
     private static final String STRENGTH = "STR";
     private static final String EXPERIENCE = "exp";
-    private static final String DIFFICULTY = "difficulty";
+    public static final String DIFFICULTY = "difficulty";
     private static final String SP = "sp";
     private static final String MAX_SP = "maxsp";
     private static final String MAGIC_LEVEL = "magicLvl";
@@ -225,10 +224,6 @@ public class Hero extends Char {
     @Override
     public int getGender() {
         return heroClass.getGender();
-    }
-
-    public static void preview(GamesInProgress.Info info, Bundle bundle) {
-        info.level = bundle.getInt(LEVEL);
     }
 
     public String className() {
