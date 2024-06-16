@@ -108,7 +108,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public static final String IMMUNITIES = "immunities";
     public static final String RESISTANCES = "resistances";
-    protected static final String LEVEL = "lvl";
+    public static final String LEVEL = "lvl";
     private static final String DEFAULT_MOB_SCRIPT = "scripts/mobs/Dummy";
     static private final Map<String, JSONObject> defMap = new HashMap<>();
     public EquipableItem rangedWeapon = ItemsList.DUMMY;

@@ -157,10 +157,10 @@ public class StartScene extends PixelScene {
                 if (difficulty >=2) {
                     InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
                 } else  {
-                    var selectLoadSlot  = new WndSaveSlotSelect(false);
+                    var selectLoadSlot  = new WndSaveSlotSelect(false, StringsManager.getVar(R.string.WndSaveSlotSelect_SelectSlot), true);
 
-                    add(selectLoadSlot);
-                    sendToBack(selectLoadSlot);
+                    StartScene.this.add(selectLoadSlot);
+                    StartScene.this.bringToFront(selectLoadSlot);
                 }
             }
         };

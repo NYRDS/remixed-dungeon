@@ -5,10 +5,13 @@ import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.GamesInProgress.Info;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.Bundle;
 
 import java.io.File;
 
@@ -185,5 +188,16 @@ public class SaveUtils {
 
 	public static String getPrevSave() {
 		return buildSlotFromTag(PREV_SAVE);
+	}
+
+	public static void preview(Info info, Bundle bundle) {
+		info.depth = bundle.getInt(Dungeon.DEPTH);
+		if (info.depth == -1) {
+			info.depth = bundle.getInt(Statistics.DEEPEST); // FIXME
+		}
+
+		Bundle heroBundle = bundle.getBundle(Dungeon.HERO);
+		info.level = heroBundle.getInt(Char.LEVEL);
+		info.difficulty  = heroBundle.getInt(Hero.DIFFICULTY);
 	}
 }

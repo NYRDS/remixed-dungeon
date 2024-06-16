@@ -21,10 +21,12 @@ import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.ReturnOnlyOnce;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.GamesInProgress;
 import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.DonateButton;
 import com.watabou.pixeldungeon.ui.Icons;
@@ -35,7 +37,6 @@ import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.ArrayList;
-
 
 
 public class WndSaveSlotSelect extends Window implements InterstitialPoint {
@@ -49,9 +50,13 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
     }
 
     public WndSaveSlotSelect(final boolean _saving, String title) {
+        this(_saving, title, false);
+    }
+
+    public WndSaveSlotSelect(final boolean _saving, String title, final boolean start_scene) {
         String[] options = slotInfos();
 
-        HeroClass heroClass  = Dungeon.heroClass;
+        HeroClass heroClass = Dungeon.heroClass;
 
         final int WIDTH = WndHelper.getFullscreenWidth();
         final int maxW = WIDTH - GAP * 2;
@@ -110,7 +115,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
 
                     final String modernSlotDir = slotsDir[0];
 
-                    for (var slotDirProbe:slotsDir) {
+                    for (var slotDirProbe : slotsDir) {
                         final String snapshotId = slotDirProbe + "_" + heroClass.toString();
                         final String saveSnapshotId = modernSlotDir + "_" + heroClass.toString();
 
@@ -155,7 +160,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
                                 @Override
                                 public void onSelect(int index) {
                                     if (index == 0) {
-                                        while(isSlotIndexUsed(slotIndex)) {
+                                        while (isSlotIndexUsed(slotIndex)) {
                                             SaveUtils.deleteSaveFromSlot(getSlotToLoad(slotIndex), Dungeon.heroClass);
                                         }
                                         WndSaveSlotSelect.this.hide();
@@ -194,16 +199,29 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
         bottomRow.setGap(2 * GAP);
 
         if (!saving) {
-            RedButton autoLoadButton = new RedButton(R.string.WndSaveSlotSelect_LoadAutoSave) {
-                @Override
-                protected void onClick() {
-                    showAd(SaveUtils.getAutoSave());
-                }
-            };
+
+            RedButton autoLoadButton;
+
+            if (!start_scene) {
+                autoLoadButton = new RedButton(R.string.WndSaveSlotSelect_LoadAutoSave) {
+                    @Override
+                    protected void onClick() {
+                        showAd(SaveUtils.getAutoSave());
+                    }
+                };
+                autoLoadButton.enable(SaveUtils.slotUsed(SaveUtils.getAutoSave(), Dungeon.heroClass));
+            } else {
+                GamesInProgress.Info info = GamesInProgress.check(Dungeon.heroClass);
+                autoLoadButton = new RedButton(Utils.format(R.string.StartScene_Depth, info.depth,
+                        info.level)) {
+                    @Override
+                    protected void onClick() {
+                        InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
+                    }
+                };
+            }
 
             autoLoadButton.setSize(BUTTON_WIDTH - GAP, BUTTON_HEIGHT);
-
-            autoLoadButton.enable(SaveUtils.slotUsed(SaveUtils.getAutoSave(),Dungeon.heroClass));
 
             bottomRow.add(autoLoadButton);
         }
@@ -258,7 +276,7 @@ public class WndSaveSlotSelect extends Window implements InterstitialPoint {
     private static String getSlotToLoad(int index) {
 
         String slot = SaveUtils.buildSlotFromTag(slotNameFromIndex(index));
-        if(SaveUtils.slotUsed(slot,Dungeon.heroClass)) {
+        if (SaveUtils.slotUsed(slot, Dungeon.heroClass)) {
             return slot;
         }
 

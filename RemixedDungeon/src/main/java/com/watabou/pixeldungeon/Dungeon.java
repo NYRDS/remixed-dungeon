@@ -382,8 +382,8 @@ public class Dungeon {
     }
 
     private static final String VERSION = "version";
-    private static final String HERO = "hero";
-    private static final String DEPTH = "depth";
+    public static final String HERO = "hero";
+    public static final String DEPTH = "depth";
     private static final String LEVEL = "level";
     private static final String POS = "potionsOfStrength";
     private static final String SOU = "scrollsOfEnhancement";
@@ -749,14 +749,6 @@ public class Dungeon {
             }
         }
         return Optional.absent();
-    }
-
-    public static void preview(GamesInProgress.Info info, Bundle bundle) {
-        info.depth = bundle.getInt(DEPTH);
-        if (info.depth == -1) {
-            info.depth = bundle.getInt("maxDepth"); // FIXME
-        }
-        Hero.preview(info, bundle.getBundle(HERO));
     }
 
     public static void fail(String desc) {

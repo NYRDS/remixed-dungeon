@@ -18,7 +18,7 @@ public class GamesInProgress {
 			val bundle = Dungeon.gameBundle( file );
 			if (bundle.isPresent()) {
 				info = new Info();
-				Dungeon.preview( info, bundle.get() );
+				SaveUtils.preview( info, bundle.get() );
 			}
 		} catch (Exception e) {
 			info = null;
@@ -34,7 +34,7 @@ public class GamesInProgress {
 			return state.get( cl );
 			
 		} else {
-			Info info =checkFile(SaveUtils.gameFile( cl ));
+			Info info = checkFile(SaveUtils.gameFile( cl ));
 			state.put( cl, info );
 			return info;
 		}
@@ -58,5 +58,6 @@ public class GamesInProgress {
 	public static class Info {
 		public int depth;
 		public int level;
+		public int difficulty;
 	}
 }
