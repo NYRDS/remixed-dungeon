@@ -56,13 +56,14 @@ local function levelsTestModeOnStep(self, scene)
             autoTestAi.step()
         end
 
-        if framesOnLevel > 1000 then
+        if framesOnLevel > 10000 then
             currentLevel = currentLevel + 1
 
             if currentLevel < levelsSize then
                 framesOnLevel = 0
 
                 local nextLevelId = levels:get(currentLevel)
+                --nextLevelId = 'Rat5'
                 RPD.glog("trying level: %s", nextLevelId)
                 GameControl:changeLevel(nextLevelId)
             else

@@ -5,27 +5,27 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 
 public class IconButton extends RedButton {
 
-	public IconButton(int label, Image icon) {
-		super(label);
-		icon( icon );
-	}
+    public IconButton(int label, Image icon) {
+        super(label);
+        icon(icon);
+    }
 
-	public IconButton(String label) {
-		super(label);
-	}
+    public IconButton(String label) {
+        super(label);
+    }
 
-	@Override
-	protected void layout() {
-		super.layout();
-		
-		float margin = (height - text.baseLine()) / 4;
-		
-		text.setX(PixelScene.align( PixelScene.uiCamera, x + margin ));
-		text.setY(PixelScene.align( PixelScene.uiCamera, y + margin ));
+    @Override
+    protected void layout() {
+        super.layout();
+        if (icon != null) {
+            float margin = (height - text.baseLine()) / 2;
 
-		if(icon!= null) {
-			icon.setX(PixelScene.align(PixelScene.uiCamera, x + width - margin - icon.width));
-			icon.setY(PixelScene.align(PixelScene.uiCamera, y + (height - icon.height()) / 2));
-		}
-	}
+            text.setX(PixelScene.align(PixelScene.uiCamera, x + margin));
+            text.setY(PixelScene.align(PixelScene.uiCamera, y + margin));
+
+
+            icon.setX(PixelScene.align(PixelScene.uiCamera, x + width - margin - icon.width));
+            icon.setY(PixelScene.align(PixelScene.uiCamera, y + (height - icon.height()) / 2));
+        }
+    }
 }

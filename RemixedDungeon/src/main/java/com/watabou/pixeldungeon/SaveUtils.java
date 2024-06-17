@@ -173,16 +173,29 @@ public class SaveUtils {
 		return cl.tag()+"%d.dat";
 	}
 
-	static public String buildSlotFromTag(String tag) {
-		return ModdingMode.activeMod() + "_" + tag + "_" + GameLoop.getDifficulty();
+	static public String buildSlotFromTag(String tag, int difficulty)  {
+		return ModdingMode.activeMod() + "_" + tag + "_" + difficulty;
 	}
 
+	static public String buildSlotFromTag(String tag) {
+		return buildSlotFromTag(tag, GameLoop.getDifficulty());
+	}
+
+
 	public static String getAutoSave() {
-		return buildSlotFromTag(AUTO_SAVE);
+		return getAutoSave(GameLoop.getDifficulty());
 	}
 
 	public static String getPrevSave() {
-		return buildSlotFromTag(PREV_SAVE);
+		return getAutoSave(GameLoop.getDifficulty());
+	}
+
+	public static String getAutoSave(int dif) {
+		return buildSlotFromTag(AUTO_SAVE, dif);
+	}
+
+	public static String getPrevSave(int dif) {
+		return buildSlotFromTag(PREV_SAVE, dif);
 	}
 
 	public static void preview(Info info, Bundle bundle) {
