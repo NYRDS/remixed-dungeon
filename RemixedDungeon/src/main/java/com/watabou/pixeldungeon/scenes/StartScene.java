@@ -132,18 +132,9 @@ public class StartScene extends PixelScene {
             @Override
             protected void onClick() {
                 if (GamesInProgress.check(curShield.cl) != null) {
-                    GameLoop.addToScene(new WndOptions(StringsManager.getVar(R.string.StartScene_Really), StringsManager.getVar(R.string.StartScene_Warning),
-                            StringsManager.getVar(R.string.StartScene_Yes), StringsManager.getVar(R.string.StartScene_No)) {
-                        @Override
-                        public void onSelect(int index) {
-                            if (index == 0) {
-                                startNewGame(difficulty);
-                            }
-                        }
-                    });
-
+                    GameLoop.addToScene(new WndReallyStartNewGame());
                 } else {
-                    startNewGame(difficulty);
+                    selectDifficulty();
                 }
             }
         };
@@ -158,7 +149,7 @@ public class StartScene extends PixelScene {
                 if (difficulty >=2) {
                     InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
                 } else  {
-                    var selectLoadSlot  = new WndSaveSlotSelect(false, StringsManager.getVar(R.string.WndSaveSlotSelect_SelectSlot), true,difficulty);
+                    var selectLoadSlot  = new WndSaveSlotSelect(false, StringsManager.getVar(R.string.WndSaveSlotSelect_SelectSlot), true, difficulty);
 
                     StartScene.this.add(selectLoadSlot);
                     StartScene.this.bringToFront(selectLoadSlot);
@@ -266,8 +257,6 @@ public class StartScene extends PixelScene {
         ServiceManNPC.resetLimit();
 
         fadeIn();
-
-        selectDifficulty();
     }
 
     private void updateUnlockLabel(String text) {
@@ -326,6 +315,7 @@ public class StartScene extends PixelScene {
             btnLoad.setVisible(true);
             btnLoad.secondary(Utils.format(R.string.StartScene_Depth, info.depth,
                     info.level));
+            difficulty = info.difficulty;
 
             btnNewGame.setVisible(true);
             btnNewGame.secondary(StringsManager.getVar(R.string.StartScene_Erase));
@@ -348,9 +338,7 @@ public class StartScene extends PixelScene {
     }
 
     private void selectDifficulty() {
-
         WndOptions difficultyOptions = new WndDifficultyOptions(this);
-
         add(difficultyOptions);
     }
 
@@ -480,4 +468,16 @@ public class StartScene extends PixelScene {
         }
     }
 
+    private class WndReallyStartNewGame extends WndOptions {
+        public WndReallyStartNewGame() {
+            super(StringsManager.getVar(R.string.StartScene_Really), StringsManager.getVar(R.string.StartScene_Warning), StringsManager.getVar(R.string.StartScene_Yes), StringsManager.getVar(R.string.StartScene_No));
+        }
+
+        @Override
+        public void onSelect(int index) {
+            if (index == 0) {
+                selectDifficulty();
+            }
+        }
+    }
 }

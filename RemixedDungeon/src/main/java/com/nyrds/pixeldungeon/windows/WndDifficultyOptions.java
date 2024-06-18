@@ -29,6 +29,7 @@ public class WndDifficultyOptions extends WndOptions {
     public void onSelect(final int index) {
         startScene.difficulty = index;
         hide();
+        startScene.startNewGame(startScene.difficulty);
     }
 
     @Override

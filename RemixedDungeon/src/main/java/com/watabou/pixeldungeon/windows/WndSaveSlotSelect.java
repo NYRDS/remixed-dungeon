@@ -79,7 +79,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
         this.initial_difficulty = this.difficulty = difficulty;
 
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 2; i++) {
             Image img = MobFactory.avatar(WndDifficultyOptions.difficulties[i]);
             Tab tab = new DifficultyTab(img, i);
             tab.setSize(32, tabHeight());
