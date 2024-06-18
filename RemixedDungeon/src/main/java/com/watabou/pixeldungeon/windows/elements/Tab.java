@@ -31,7 +31,7 @@ public class Tab extends Button {
 			bg.size( width, height );
 		}
 	}
-	
+
 	public void select( boolean value ) {
 		selected = value;
 		
