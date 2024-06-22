@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.GameControl;
@@ -49,6 +50,7 @@ import com.watabou.pixeldungeon.ui.ChallengeButton;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.FacilitaionButton;
 import com.watabou.pixeldungeon.ui.GameButton;
+import com.watabou.pixeldungeon.ui.IconButton;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndClass;
 import com.watabou.pixeldungeon.windows.WndOptions;
@@ -146,14 +148,7 @@ public class StartScene extends PixelScene {
                 Dungeon.hero = CharsList.DUMMY_HERO;
                 Dungeon.heroClass = curShield.cl;
 
-                if (difficulty >=2) {
-                    InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
-                } else  {
-                    var selectLoadSlot  = new WndSaveSlotSelect(false, StringsManager.getVar(R.string.WndSaveSlotSelect_SelectSlot), true, difficulty);
-
-                    StartScene.this.add(selectLoadSlot);
-                    StartScene.this.bringToFront(selectLoadSlot);
-                }
+                GameLoop.addToScene(new LoadGameOptions());
             }
         };
         add(btnLoad);
@@ -185,7 +180,7 @@ public class StartScene extends PixelScene {
                 i++;
             }
 
-            float y = title.getY() + title.height/2;
+            float y = title.getY() + title.height / 2;
 
             HBox customizations = new HBox(width);
             customizations.setAlign(HBox.Align.Width);
@@ -196,7 +191,7 @@ public class StartScene extends PixelScene {
             customizations.add(facilitaionButton);
 
             remove(title);
-            customizations.setPos( left, y - customizations.height() / 2);
+            customizations.setPos(left, y - customizations.height() / 2);
             add(customizations);
 
         } else {
@@ -308,33 +303,16 @@ public class StartScene extends PixelScene {
         }
 
         unlock.setVisible(false);
+        btnLoad.setVisible(true);
 
-        GamesInProgress.Info info = GamesInProgress.check(curShield.cl);
-        if (info != null) {
+        btnNewGame.setVisible(true);
+        btnNewGame.secondary(StringsManager.getVar(R.string.StartScene_Erase));
 
-            btnLoad.setVisible(true);
-            btnLoad.secondary(Utils.format(R.string.StartScene_Depth, info.depth,
-                    info.level));
-            difficulty = info.difficulty;
+        float w = (Camera.main.width - GAP) / 2 - buttonX;
 
-            btnNewGame.setVisible(true);
-            btnNewGame.secondary(StringsManager.getVar(R.string.StartScene_Erase));
-
-            float w = (Camera.main.width - GAP) / 2 - buttonX;
-
-            btnLoad.setRect(buttonX, buttonY, w, BUTTON_HEIGHT);
-            btnNewGame.setRect(btnLoad.right() + GAP, buttonY, w,
-                    BUTTON_HEIGHT);
-
-        } else {
-            btnLoad.setVisible(false);
-
-            btnNewGame.setVisible(true);
-            btnNewGame.secondary(Utils.EMPTY_STRING);
-            btnNewGame.setRect(buttonX, buttonY, Camera.main.width
-                    - buttonX * 2, BUTTON_HEIGHT);
-        }
-
+        btnLoad.setRect(buttonX, buttonY, w, BUTTON_HEIGHT);
+        btnNewGame.setRect(btnLoad.right() + GAP, buttonY, w,
+                BUTTON_HEIGHT);
     }
 
     private void selectDifficulty() {
@@ -477,6 +455,34 @@ public class StartScene extends PixelScene {
         public void onSelect(int index) {
             if (index == 0) {
                 selectDifficulty();
+            }
+        }
+    }
+
+    private class LoadGameOptions extends WndOptions {
+        public LoadGameOptions() {
+            super(StringsManager.getVar(R.string.StartScene_Load), "Continue your latest game or choose from a save slot", "Continue your latest game", "Choose from a save slot");
+            var info = GamesInProgress.check(curShield.cl);
+            IconButton newGameButton  = ((IconButton)buttonsVbox.getMember(0));
+            if (info == null)  {
+                newGameButton.enable(false);
+            } else {
+                newGameButton.text(Utils.format(R.string.StartScene_Depth, info.depth, info.level));
+                newGameButton.icon(MobFactory.avatar(WndDifficultyOptions.difficulties[info.difficulty]));
+            }
+
+        }
+
+        @Override
+        public void onSelect(int i) {
+            if (i == 0) {
+                InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
+            } else {
+                var selectLoadSlot = new WndSaveSlotSelect(false, StringsManager.getVar(R.string.WndSaveSlotSelect_SelectSlot), true, difficulty);
+
+                StartScene.this.add(selectLoadSlot);
+                StartScene.this.bringToFront(selectLoadSlot);
+
             }
         }
     }

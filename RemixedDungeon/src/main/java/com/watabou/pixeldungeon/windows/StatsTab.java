@@ -108,7 +108,7 @@ class StatsTab extends TabContent {
             statSlot(StringsManager.getVar(R.string.WndHero_Stealth), chr.stealth());
 
             Hero hero = ((Hero) chr);
-            statSlot(StringsManager.getVar(R.string.WndHero_Awareness), Utils.EMPTY_STRING + (hero.getAwareness() * 100) + "%");
+            statSlot(StringsManager.getVar(R.string.WndHero_Awareness), Utils.format("%3.2f%%",(hero.getAwareness() * 100)));
         }
 
         statSlot(StringsManager.getVar(R.string.WndHero_AttackSkill), chr.attackSkill(CharsList.DUMMY));

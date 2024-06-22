@@ -198,6 +198,16 @@ public class RankingsScene extends PixelScene {
                             startFrom = 50;
                         }
                         break;
+                    case  3:
+                        if (startFrom >  75)  {
+                            startFrom = 75;
+                        }
+                        break;
+                    case  4:
+                        if (startFrom >  100)  {
+                            startFrom = 100;
+                        }
+                        break;
                 }
 
                 createRecords();

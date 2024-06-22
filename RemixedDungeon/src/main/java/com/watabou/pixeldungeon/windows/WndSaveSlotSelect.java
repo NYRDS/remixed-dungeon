@@ -31,7 +31,6 @@ import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.DonateButton;
 import com.watabou.pixeldungeon.ui.IconButton;
@@ -213,27 +212,13 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
         bottomRow.setGap(2 * GAP);
 
         if (!saving) {
-
-            RedButton autoLoadButton;
-
-            if (!start_scene || initial_difficulty != difficulty)  {
-                autoLoadButton = new RedButton(R.string.WndSaveSlotSelect_LoadAutoSave) {
-                    @Override
-                    protected void onClick() {
-                        showAd(SaveUtils.getAutoSave(difficulty));
-                    }
-                };
-                autoLoadButton.enable(SaveUtils.slotUsed(SaveUtils.getAutoSave(difficulty), Dungeon.heroClass));
-            } else {
-                GamesInProgress.Info info = GamesInProgress.check(Dungeon.heroClass);
-                autoLoadButton = new RedButton(Utils.format(R.string.StartScene_Depth, info.depth,
-                        info.level)) {
-                    @Override
-                    protected void onClick() {
-                        InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
-                    }
-                };
-            }
+            RedButton autoLoadButton = new RedButton(R.string.WndSaveSlotSelect_LoadAutoSave) {
+                @Override
+                protected void onClick() {
+                    showAd(SaveUtils.getAutoSave(difficulty));
+                }
+            };
+            autoLoadButton.enable(SaveUtils.slotUsed(SaveUtils.getAutoSave(difficulty), Dungeon.heroClass));
 
             autoLoadButton.setSize(BUTTON_WIDTH - GAP, BUTTON_HEIGHT);
 
