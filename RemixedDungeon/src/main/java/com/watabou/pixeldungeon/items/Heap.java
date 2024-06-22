@@ -223,6 +223,7 @@ public class Heap implements Bundlable, NamedEntityKind  {
             return;
         }
 
+        item.setHeap(this);
         if (items.contains(item)) { //TODO fix me
             return;
         }
@@ -238,7 +239,7 @@ public class Heap implements Bundlable, NamedEntityKind  {
             }
             items.remove(item);
         }
-        item.setHeap(this);
+
         items.addFirst(item);
 
         updateHeap();
