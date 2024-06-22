@@ -439,6 +439,11 @@ public class CharUtils {
     public static void tryPickUp(Char hero, @NonNull Item item) {
         Heap oldHeap = item.getHeap();
 
+        int heapPos = hero.getPos();
+        if (oldHeap!= null) {
+            heapPos  = oldHeap.pos;
+        }
+
         item = item.pick(hero, hero.getPos());
 
         if (item.doPickUp(hero)) {
@@ -453,7 +458,7 @@ public class CharUtils {
             }
 
         } else {
-            Heap newHeap = hero.level().drop(item, hero.getPos());
+            Heap newHeap = hero.level().drop(item, heapPos);
 
             newHeap.sprite.drop();
             newHeap.pickUpFailed();
