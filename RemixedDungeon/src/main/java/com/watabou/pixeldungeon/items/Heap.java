@@ -198,6 +198,7 @@ public class Heap implements Bundlable, NamedEntityKind  {
     public void pickUpFailed() {
         if (!isEmpty()) {
             Item item = items.removeFirst();
+            item.setHeap(this);
             items.addLast(item);
         }
         updateHeap();
