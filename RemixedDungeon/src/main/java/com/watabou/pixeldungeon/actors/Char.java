@@ -532,7 +532,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         int bonus = bf[0];
 
-        float evasion = bonus == 0 ? 1 : (float) Math.pow(1.2, bonus);
+        float evasion =  (float) Math.pow(1.2, bonus);
         if (paralysed) {
             evasion /= 2;
         }
