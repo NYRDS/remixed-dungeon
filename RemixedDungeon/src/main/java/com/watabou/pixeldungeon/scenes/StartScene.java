@@ -476,7 +476,8 @@ public class StartScene extends PixelScene {
             var info = GamesInProgress.check(curShield.cl);
             IconButton newGameButton  = ((IconButton)buttonsVbox.getMember(0));
             if (info == null)  {
-                newGameButton.enable(false);
+                onSelect(1);
+                hide();
             } else {
                 newGameButton.text(Utils.format(R.string.StartScene_Depth, info.depth, info.level));
                 newGameButton.icon(MobFactory.avatar(WndDifficultyOptions.difficulties[info.difficulty]));

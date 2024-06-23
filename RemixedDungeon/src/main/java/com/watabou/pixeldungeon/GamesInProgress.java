@@ -14,26 +14,22 @@ public class GamesInProgress {
 	private static final Map<HeroClass, Info> state = new HashMap<>();
 	
 	public static Info checkFile(String file) {
-		Info info = null;
 		try {
 			val bundle = Dungeon.gameBundle( file );
 			if (bundle.isPresent()) {
-				info = new Info();
+				Info info = new Info();
 				SaveUtils.preview( info, bundle.get() );
+				return info;
 			}
-		} catch (Exception e) {
-			info = null;
+		} catch (Exception ignored) {
 		}
-		return info;
-		
+		return null;
 	}
 	
 	public static Info check( HeroClass cl ) {
 		
 		if (state.containsKey( cl )) {
-			
 			return state.get( cl );
-			
 		} else {
 			Info info = checkFile(SaveUtils.gameFile( cl ));
 			state.put( cl, info );
@@ -50,7 +46,7 @@ public class GamesInProgress {
 	}
 	
 	public static void delete( HeroClass cl ) {
-		state.put( cl, null );
+		state.remove( cl);
 	}
 	
 	public static class Info {

@@ -37,8 +37,8 @@ public class WandOfIcebolt extends Wand {
 			ch.damage( Random.Int( 3 + level, 4 + level * 2 ), this );
 			ch.getSprite().burst( 0xFF99FFFF, level / 2 + 3 );
 
-			Buff.affect( ch, Frost.class, Frost.duration( ch ) / 2 + effectiveLevel() );
-			Buff.affect( ch, Slow.class, Slow.duration( ch ) / 2 + effectiveLevel() );
+			Buff.affect( ch, Frost.class, Frost.duration( ch ) / 2 + level );
+			Buff.affect( ch, Slow.class, Slow.duration( ch ) / 2 + level );
 
 			if (ch == getOwner() && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), name, Dungeon.depth ) );
