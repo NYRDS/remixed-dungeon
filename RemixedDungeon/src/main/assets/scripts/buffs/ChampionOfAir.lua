@@ -21,7 +21,7 @@ return buff.init{
     attachTo = function(self, buff, target)
         self.data.activated = self.data.activated or false
 
-        if target:hasBuff("ChampionOfAir") then
+        if target:hasBuff(buff:getEntityKind()) then
             return false
         end
 

@@ -579,10 +579,10 @@ public abstract class Mob extends Char {
         if (!Dungeon.isLoading()) {
             if (level().cellValid(getPos())) {
                 if (lvl() >= 5 && lvl() != old_lvl) {
-                    if (!hasBuff("ChampionOfEarth") && !hasBuff("ChampionOfFire")
-                            && !hasBuff("ChampionOfWater") && !hasBuff("ChampionOfAir")) {
+                    if (!hasBuff(BuffFactory.CHAMPION_OF_EARTH) && !hasBuff(BuffFactory.CHAMPION_OF_FIRE)
+                            && !hasBuff(BuffFactory.CHAMPION_OF_WATER) && !hasBuff(BuffFactory.CHAMPION_OF_AIR)) {
 
-                        String[] champions = {"ChampionOfEarth", "ChampionOfFire", "ChampionOfWater", "ChampionOfAir"};
+                        String[] champions = {BuffFactory.CHAMPION_OF_EARTH, BuffFactory.CHAMPION_OF_FIRE, BuffFactory.CHAMPION_OF_WATER, BuffFactory.CHAMPION_OF_AIR};
 
                         Buff.permanent(this, Random.oneOf(champions));
                     }
