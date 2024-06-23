@@ -278,6 +278,7 @@ public class StartScene extends PixelScene {
 
         if (curShield != null) {
             curShield.highlight(false);
+            GamesInProgress.delete(shield.cl);
         }
 
         curShield = shield;

@@ -518,7 +518,7 @@ public class Dungeon {
 
                 SaveUtils.copySaveToSlot(SaveUtils.getAutoSave(), heroClass);
 
-                GamesInProgress.set(hero.getHeroClass(), depth, hero.lvl());
+                GamesInProgress.set(hero, depth);
             } catch (IOException e) {
                 Game.toast(StringsManager.getVar(R.string.Dungeon_saveIoError) + "\n" + e.getLocalizedMessage());
                 EventCollector.logException(new Exception("cannot write save", e));

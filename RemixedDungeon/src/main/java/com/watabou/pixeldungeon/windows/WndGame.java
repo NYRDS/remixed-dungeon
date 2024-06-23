@@ -95,9 +95,7 @@ public class WndGame extends WndMenuCommon {
         menuItems.add( new MenuButton(R.string.WndGame_menu) {
 			@Override
 			protected void onClick() {
-				if(Dungeon.hero.isAlive()) {
-					Dungeon.save(false);
-				}
+				Dungeon.save(true);
 				GameLoop.switchScene( TitleScene.class );
 			}
 		} );

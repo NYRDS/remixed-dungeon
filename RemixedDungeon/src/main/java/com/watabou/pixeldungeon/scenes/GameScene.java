@@ -519,10 +519,7 @@ public class GameScene extends PixelScene {
     public void pause() {
         synchronized (GameLoop.stepLock) {
             if (!Game.softPaused) {
-                final Hero hero = Dungeon.hero;
-                if (hero.isAlive()) {
-                    Dungeon.save(false);
-                }
+                Dungeon.save(false);
             }
         }
     }

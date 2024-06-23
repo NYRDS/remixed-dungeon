@@ -28,12 +28,7 @@ public class WndDifficultyOptions extends WndOptions {
 
     @Override
     public void onSelect(final int index) {
-        startScene.difficulty = index;
         hide();
-        startScene.startNewGame(startScene.difficulty);
-    }
-
-    @Override
-    public void onBackPressed() {
+        startScene.startNewGame(index);
     }
 }

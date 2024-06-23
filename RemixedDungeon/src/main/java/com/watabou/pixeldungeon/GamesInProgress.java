@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon;
 
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 
 import java.util.HashMap;
@@ -40,15 +41,12 @@ public class GamesInProgress {
 		}
 	}
 
-	public static void set( HeroClass cl, int depth, int level ) {
+	public static void set(Hero hero, int depth) {
 		Info info = new Info();
 		info.depth = depth;
-		info.level = level;
-		state.put( cl, info );
-	}
-	
-	public static void setUnknown( HeroClass cl ) {
-		state.remove( cl );
+		info.level = hero.lvl();
+		info.difficulty = hero.getDifficulty();
+		state.put( hero.getHeroClass(), info );
 	}
 	
 	public static void delete( HeroClass cl ) {
