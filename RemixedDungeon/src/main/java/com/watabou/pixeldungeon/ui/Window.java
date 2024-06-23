@@ -177,4 +177,6 @@ public class Window extends Group implements Signal.Listener<Key>, IWindow {
 			parent.hide();
 		}
 	}
+
+	public void layout() {}
 }

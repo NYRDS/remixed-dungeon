@@ -449,6 +449,16 @@ public class StartScene extends PixelScene {
     private class WndReallyStartNewGame extends WndOptions {
         public WndReallyStartNewGame() {
             super(StringsManager.getVar(R.string.StartScene_Really), StringsManager.getVar(R.string.StartScene_Warning), StringsManager.getVar(R.string.StartScene_Yes), StringsManager.getVar(R.string.StartScene_No));
+            var info = GamesInProgress.check(curShield.cl);
+            Text eraseWarning = message;
+            if (info == null)  {
+                selectDifficulty();
+                hide();
+            } else {
+                eraseWarning.text(eraseWarning.text() + ":\n" + Utils.format(R.string.StartScene_Depth, info.depth, info.level)+"\n" + StringsManager.getVar(WndDifficultyOptions.descs[info.difficulty])+"\n");
+                layout();
+            }
+
         }
 
         @Override
@@ -461,7 +471,7 @@ public class StartScene extends PixelScene {
 
     private class LoadGameOptions extends WndOptions {
         public LoadGameOptions() {
-            super(StringsManager.getVar(R.string.StartScene_Load), "Continue your latest game or choose from a save slot", "Continue your latest game", "Choose from a save slot");
+            super(StringsManager.getVar(R.string.StartScene_Load), "Continue your latest game or choose from a save slot", "Continue_your_latest_game", "Choose from a save slot");
             var info = GamesInProgress.check(curShield.cl);
             IconButton newGameButton  = ((IconButton)buttonsVbox.getMember(0));
             if (info == null)  {

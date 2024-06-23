@@ -14,6 +14,7 @@ public class WndDifficultyOptions extends WndOptions {
     private final StartScene startScene;
 
     static public final String [] difficulties = {"Snail", "Rat", "Gnoll", "Crab"};
+    static public final int [] descs  = {R.string.StartScene_DifficultyEasyNoAds,R.string.StartScene_DifficultyNormalWithSavesNoAds,R.string.StartScene_DifficultyNormal,R.string.StartScene_DifficultyExpert};
 
     public WndDifficultyOptions(StartScene startScene) {
         super(StringsManager.getVar(R.string.StartScene_DifficultySelect), Utils.EMPTY_STRING, StringsManager.getVar(GamePreferences.donated() > 0 ? R.string.StartScene_DifficultyEasyNoAds : R.string.StartScene_DifficultyEasy), StringsManager.getVar(GamePreferences.donated() > 0 ? R.string.StartScene_DifficultyNormalWithSavesNoAds : R.string.StartScene_DifficultyNormalWithSaves), StringsManager.getVar(R.string.StartScene_DifficultyNormal), StringsManager.getVar(R.string.StartScene_DifficultyExpert));
