@@ -401,7 +401,7 @@
   <string name="WndRanking_Badges">バッヂ</string>
   <string name="WndRanking_StaTitle">レベル %1$d %2$s</string>
   <string name="WndRanking_StaChallenges">挑戦</string>
-  <string name="WndRanking_StaHealth">ヘルス</string>
+  <string name="WndRanking_StaHealth">体力</string>
   <string name="WndRanking_StaStr">力</string>
   <string name="WndRanking_StaDuration">ゲームプレイ時間</string>
   <string name="WndRanking_StaDepth">到達最下層</string>
