@@ -1584,7 +1584,7 @@
   <string name="PlagueDoctorNPC_Gender">男性的</string>
   <string name="PlagueDoctorNPC_Name_Objective">ペストドクター</string>
   <string name="PlagueDoctorNPC_Desc">全身を革のジャンプスーツで隠している。また、彼からは薬と......ニンニクの苦い匂いがする。</string>
-  <string name="PlagueDoctorNPC_Quest_Start_Male">ふん！信じられるか？この下水道がどれほど危険か、あのバカどもはまだわかっていない！ハァ…どんな武器でも、病気の蔓延は防げないというのに。でも、証拠が必要なんだ。協力してくれないかな？ネズミの皮を%d個持ってきてくれれば、追加で検査ができるのだ。</string>
+  <string name="PlagueDoctorNPC_Quest_Start_Male">ふん！信じられるか？この下水道がどれほど危険か、あのバカどもはまだわかっていない！ハァ…どんな武器でも、病気の蔓延は防げないというのに。まずは証拠が必要なんだ。キミ、協力してくれないか？ネズミの皮を%d個持ってきてくれれば、追加で検査ができるのだ。</string>
   <string name="PlagueDoctorNPC_Quest_Start_Female">ふん！信じられるか？この下水道がどれほど危険か、あのバカどもはまだわかっていない！ハァ…どんな武器でも、病気の蔓延は防げないというのに。でも、証拠が必要なんだ。協力してくれないかな？ネズミの皮を%d個持ってきてくれれば、追加で検査ができるのだ。</string>
   <string name="PlagueDoctorNPC_Quest_Reminder">ネズミの皮を%d個持ってきてくれ</string>
   <string name="PlagueDoctorNPC_Quest_End">ああ、ありがとう、これらに病気の痕跡があることを願うよ。以前のサンプルはまったく無害だった。だから、新しいサンプルを待っている間に、君のためにこれを作ったんだ。</string>
