@@ -586,7 +586,7 @@
   <string name="InvisibilityBuff_Info">完全に見えないからこそ、危険を回避することも、危険になることもできる。</string>
   <string name="LevitationBuff_Name">浮上</string>
   <string name="LevitationBuff_Info">トラップや地上の危険を避けるため、体は地上に浮かんでいる。</string>
-  <string name="LightBuff_Name">点灯</string>
+  <string name="LightBuff_Name">発光</string>
   <string name="LightBuff_Info">身体から光が発せられ、周囲のすべてを照らす。</string>
   <string name="MindVisionBuff_Name">透視</string>
   <string name="MindVisionBuff_Info">内なる視覚は、床の上のすべての生き物の動きをはっきりと見ることを可能にする。</string>
