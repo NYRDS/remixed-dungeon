@@ -1462,7 +1462,7 @@
   <string name="RingOfFrost_Info">魔法の氷で作られたリング。装着者は霜のオーラに守られ、攻撃してくる敵の動きを鈍らせ、ダメージを与える。</string>
   <string name="SpiderQueenCarapace_Name">スパイダークイーンの甲殻</string>
   <string name="SpiderQueenCarapace_Info">クモの女王の甲殻の破片。中にクモの腺があり、まるで生きているかのように見える。</string>
-  <string name="LibrarianNPC_Message_Instruction">こんにちは。図書館へようこそ。ここでは、ダンジョン内で発見されたあらゆる物事に関する情報を得ることができる......と言いたい所だが、実は、冒険者が発見した知識しか提供できないんだ。恥ずかしながらね…というわけで、訪れるたびに、おそらく新しい発見があることだろう。</string>
+  <string name="LibrarianNPC_Message_Instruction">こんにちは。図書館へようこそ。ここでは、ダンジョンのあらゆる物事に関する情報を得ることができる......と言いたい所だが、実は、冒険者が発見した知識しか提供できないんだ。恥ずかしながらね…というわけで、訪れるたびに、おそらく新しい発見があることだろう。</string>
   <string name="LibraryBook_Name">図書館の本</string>
   <string name="LibraryBook_Description">この書物は実に巨大だ。冒険者たちが発見し、ダンジョンから持ち帰ったすべての知識が収められている。</string>
   <string name="WndSettings_moveTimeout">Move timeout: %s</string>
