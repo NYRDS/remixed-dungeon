@@ -202,7 +202,7 @@
   <string name="WandOfAmok_Name">逆上の杖</string>
   <string name="WandOfAmok_Info">この杖から放たれる紫色の光は、対象を逆上させ、周囲のランダムな生き物を攻撃させます。</string>
   <string name="WandOfAmok_Info1">何も起こらなかった</string>
-  <string name="WandOfAvalanche_Name">雪崩の杖</string>
+  <string name="WandOfAvalanche_Name">崩落の杖</string>
   <string name="WandOfAvalanche_Info">この杖の力が壁（または他の固い障害物）に当たると、石の雪崩を引き起こし、影響を受けた領域にいるすべてのクリーチャーにダメージを与え、気絶させる。</string>
   <string name="WandOfAvalanche_Info1">あなたは、あなたの雪崩の杖に殺された...</string>
   <string name="WandOfBlink_Name">転移の杖</string>
