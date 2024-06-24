@@ -1240,9 +1240,9 @@
   <string name="Golem_Name_Objective">ゴーレム</string>
   <string name="Golem_Desc">ドワーフたちは、彼らの機械に関する知識と、新たに発見した元素結合の力を組み合わせようとした。彼らはゴーレムの機械体の \"魂 \"として、最も制御しやすいと考えた大地の精霊を使ったが、儀式にほんのわずかなミスがあれば、大災害を引き起こす可能性もあった。</string>
   <string name="Golem_Defense">ブロックした</string>
-  <string name="Goo_Name">グー</string>
+  <string name="Goo_Name">グゥ</string>
   <string name="Goo_Gender">弱々しい</string>
-  <string name="Goo_Name_Objective">グー</string>
+  <string name="Goo_Name_Objective">グゥ</string>
   <string name="Goo_Desc">グーについてはほとんど知られていない。生き物ですらなく、なぜか自由意志を得た下水道内の物質の集合体である可能性が高い。いずれにせよ、闇の魔法が働いているのは明らかだ。</string>
   <string name="Goo_Info1">グーは自らを奮い立たせている！</string>
   <string name="Goo_Info2">グプン...グプン...</string>
