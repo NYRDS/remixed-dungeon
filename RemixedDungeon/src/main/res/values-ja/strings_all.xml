@@ -45,7 +45,7 @@
   <string name="RingOfAccuracy_Name">命中のリング</string>
   <string name="RingOfAccuracy_Info">このリングは、あなたの敵への命中率を増加させます。</string>
   <string name="RingOfDetection_Name">探知のリング</string>
-  <string name="RingOfDetection_Info">このリングを身に着けていると隠された秘密に気付きます - 罠や隠されたドア - 探索の時間がかかりません。劣化した探知のリングはあなたの感覚を鈍らせ、隠された秘密の探索が困難になります。</string>
+  <string name="RingOfDetection_Info">このリングを身につけると、隠された秘密、つまり罠や秘密の扉に、時間をかけて探すことなく気づくことができるようになる。劣化した探知のリングは感覚を鈍らせ、積極的に探しても秘密に気づきにくくなる。</string>
   <string name="RingOfElements_Name">元素のリング</string>
   <string name="RingOfElements_Info">このリングは炎や雷、ガスなどの負の要素に対する耐性を備えています。</string>
   <string name="RingOfEvasion_Name">回避のリング</string>
