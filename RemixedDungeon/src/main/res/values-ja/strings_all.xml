@@ -1526,7 +1526,7 @@
   <string name="Badges_PotionsCooked3">ポーションを9個作った</string>
   <string name="Badges_PotionsCooked4">ポーションを12個作った</string>
   <string name="Badges_NoMonsterSlain">すべてのモンスターを倒すことなくレベル上限に達した</string>
-  <string name="Badges_GrimWepon">グリム武器でモンスターを倒した</string>
+  <string name="Badges_GrimWepon">致命武器でモンスターを倒した</string>
   <string name="Badges_Piranhas">ピラニアを6倒した</string>
   <string name="Badges_NightHunter">夜間にモンスターを5倒した</string>
   <string name="Badges_GamesPlayed1">ゲームを10プレイした</string>
