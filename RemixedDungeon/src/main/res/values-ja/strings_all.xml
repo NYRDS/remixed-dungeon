@@ -697,7 +697,7 @@
   <string name="AzuterronNPC_Name_Objective">見知らぬ者</string>
   <string name="AzuterronNPC_Desc">黒い霧に包まれた謎の人物。</string>
   <string name="AzuterronNPC_Quest_Start">はぁ、どうして......あぁ、僕が見えるんだね？つまり、君は \"彼ら \"の仲間ではないということだ。君だって、この怪物たちが嫌いなんだね。そうだ、ちょっと困ったことがあるんだが、手伝ってくれないか？この階層のどこかに闇の獣、「裏切りの精霊」がいるはずだ。それを倒し、その「心臓」を奪って、僕のところに持って来てほしい。それともう一つ、もし僕の物資を購入することに興味があれば、遠慮なく尋ねてほしい。</string>
-  <string name="AzuterronNPC_Quest_Reminder">助けてくれ！そしたらお前を援助してやろう</string>
+  <string name="AzuterronNPC_Quest_Reminder">助けて欲しい！必ずお礼はする</string>
   <string name="AzuterronNPC_Quest_End">素晴らしい。この薬を飲めば、きっと役に立つだろう。</string>
   <string name="Journal_Azuterron">見知らぬ者</string>
   <string name="TreacherousSpirit_Name">裏切りの精霊</string>
