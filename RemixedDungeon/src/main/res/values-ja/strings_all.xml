@@ -35,7 +35,7 @@
   <string name="WndSpells_Level">魔法レベル</string>
   <string name="Ring_Name">%s リング</string>
   <string name="Ring_Info">この金属の環は暗闇で輝く大きな %s の宝石で飾られている。身につけるどどうなるかわかりますか？</string>
-  <string name="Ring_Identify">あなたは今 %1$s を識別するために十分精通しています。これは %2$s です。</string>
+  <string name="Ring_Identify">あなたは今 %1$s を識別するために十分精通している。これは %2$s だ。</string>
   <string name="Ring_Info1">あなたは一度に2つのリングを身につけることが出来る。</string>
   <string name="Ring_Info2">あなたの %s は痛いくらい指を締め付けた</string>
   <string name="Ring_Info3a">%1$sあなたの指の %3$s に %2$s がある。</string>
