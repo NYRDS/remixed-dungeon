@@ -47,7 +47,7 @@
   <string name="RingOfDetection_Name">探知のリング</string>
   <string name="RingOfDetection_Info">このリングを身につけると、隠された秘密、つまり罠や秘密の扉に、時間をかけて探すことなく気づくことができるようになる。劣化した探知のリングは感覚を鈍らせ、積極的に探しても秘密に気づきにくくなる。</string>
   <string name="RingOfElements_Name">元素のリング</string>
-  <string name="RingOfElements_Info">このリングは炎や雷、ガスなどの負の要素に対する耐性を備えています。</string>
+  <string name="RingOfElements_Info">このリングは、炎、雷、ガスなど、さまざまな要素に対する耐性を与える。また、マイナス効果の持続時間を減少させる。</string>
   <string name="RingOfEvasion_Name">回避のリング</string>
   <string name="RingOfEvasion_Info">このリングは、あなたの敵からの回避率を増加させます。</string>
   <string name="RingOfHaggler_Name">値切りのリング</string>
