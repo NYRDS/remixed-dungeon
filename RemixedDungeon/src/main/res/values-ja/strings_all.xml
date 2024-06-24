@@ -991,7 +991,7 @@
   <string name="HeroSubClass_NameSnip">スナイパー</string>
   <string name="HeroSubClass_DescSnip">「スナイパー」は敵の装甲の弱点を探知することができ、遠隔兵器を使用する際、装甲を効果的に無視することができる。</string>
   <string name="HeroSubClass_NameWard">ウォーデン</string>
-  <string name="HeroSubClass_DescWard">自然の力との強い結びつきを持つ_ウォーデン_には、植物から雫や種を集める能力がある。また、高い草に触れることで、一時的に防御力を高める効果を得ることが出来る。</string>
+  <string name="HeroSubClass_DescWard">自然の力との強い結びつきを持つ「ウォーデン」には、植物から雫や種を集める能力がある。また、高い草に触れることで、一時的に防御力を高める効果を得ることが出来る。</string>
   <string name="HeroSubClass_NameScout">スカウト</string>
   <string name="HeroSubClass_DescScout">エルフの「スカウト」はステルスの達人である。高い草に触れると、一時的に不可視のバフが付与される。また、彼らは通常のエルフよりもさらに速い。</string>
   <string name="HeroSubClass_NameShaman">シャーマン</string>
