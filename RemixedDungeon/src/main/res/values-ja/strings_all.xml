@@ -278,7 +278,7 @@
   <string name="SociologistNPC_DownloadError">申し訳ありませんが、何か問題が発生しました。</string>
   <string name="town_deco_library_sign_name">図書館の看板</string>
   <string name="town_deco_library_sign_desc">あの建物の中に図書館があるようだ。</string>
-  <string name="town_deco_identifier_sign_name">占い屋の看板</string>
+  <string name="town_deco_identifier_sign_name">占い館の看板</string>
   <string name="town_deco_identifier_sign_desc">あの建物の中には占い師がいるようだ。</string>
   <string name="town_deco_cinema_sign_name">映画館の看板</string>
   <string name="town_deco_cinema_sign_desc">あの建物の中に映画館があるようだ。</string>
