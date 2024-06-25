@@ -1206,7 +1206,7 @@
   <string name="Bat_Defense">回避した</string>
   <string name="Brute_Name">ノールブルート</string>
   <string name="Brute_Name_Objective">ノールブルート</string>
-  <string name="Brute_Desc">ノールブルートはとても大きく、強く、タフです。重傷を負った時には凶暴になり、更に多くのダメージを敵に与えます。</string>
+  <string name="Brute_Desc">ブルートはノールの中で最も大きく、強く、タフである。重傷を負うと凶暴化し、敵にさらなるダメージを与える。</string>
   <string name="Brute_Gender">力強い</string>
   <string name="Brute_Enraged">%s は激怒した！</string>
   <string name="Brute_StaEnraged">激怒</string>
