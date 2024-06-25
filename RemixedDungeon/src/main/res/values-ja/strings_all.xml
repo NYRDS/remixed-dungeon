@@ -493,7 +493,7 @@
   <string name="Torch_Info">このアイテムは悪名高い悪魔の広間を照らす照明として必需品だ。</string>
   <string name="Weightstone_Name">重石</string>
   <string name="Weightstone_ACApply">適応する</string>
-  <string name="Weightstone_Info">重石を使用して、近接武器のバランスを整えて速度や正確さを高めることが出来ます。</string>
+  <string name="Weightstone_Info">重石を使うことで、近接武器のバランスを整えて速度や精度を高めることが出来る。</string>
   <string name="Weightstone_Select">バランスをとる武器を選択</string>
   <string name="Weightstone_Fast">あなたの %s を速くするためにバランスをとった</string>
   <string name="Weightstone_Accurate">あなたの %s をより正確にするためにバランスをとった</string>
