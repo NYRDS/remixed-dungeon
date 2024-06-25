@@ -338,8 +338,8 @@
   <string name="Char_StaBleeding">出血</string>
   <string name="Char_StaDizzy">目眩</string>
   <string name="Char_StaInvisible">透明</string>
-  <string name="Dungeon_NoTips">テキストは判読できません...</string>
-  <string name="Dungeon_DeadEnd">あなたはここで何をしている？！</string>
+  <string name="Dungeon_NoTips">解読不能だ...</string>
+  <string name="Dungeon_DeadEnd">ここで何をしているんだ？！</string>
   <string name="Journal_WellHealt">健康の井戸</string>
   <string name="Journal_WellAwareness">意識の井戸</string>
   <string name="Journal_WellTransmut">変異の井戸</string>
