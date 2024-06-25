@@ -1709,7 +1709,7 @@
   <string name="town_deco_carpet_desc">特別ゲストのために用意された豪華なレッドカーペット。</string>
   <string name="town_deco_movies_door_name">扉</string>
   <string name="town_deco_movies_door_desc">この扉は特別によくできているようだ。おそらく信じられないような何かにつながっているのだろう。</string>
-  <string name="WndDonate_royal">寄付</string>
+  <string name="WndDonate_royal">ロイヤル</string>
   <string name="WndDonate_royalDonate">ロイヤルの寄付</string>
   <string name="WndDonate_royalDonateText">変なことを言うようだが、そうすることは、文字通り開発者に餌を与えていることになる。</string>
   <string name="WndDonate_royalDonateText2">さらに、アプリ内ストアからすべての帽子を受け取ることができます！今後リリースされるすべての帽子も。</string>
