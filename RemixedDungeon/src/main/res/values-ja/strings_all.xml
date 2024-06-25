@@ -1299,7 +1299,7 @@
   <string name="Shaman_Gender">力強い</string>
   <string name="Shaman_Name_Objective">ノールシャーマン</string>
   <string name="Shaman_Desc">最も知能の高いノールはシャーマンの魔法を使いこなすことができる。ノールシャーマンは力不足を補うために戦闘魔法を好み、部族内での地位に疑問を抱く者には躊躇なく使用する。</string>
-  <string name="Shaman_Killed">%s のライトニングボルトはあなたを倒しました...</string>
+  <string name="Shaman_Killed">%s のライトニングボルトがあなたを殺した...</string>
   <string name="Shielded_Name">シールデッドブルート</string>
   <string name="Shielded_Gender">力強い</string>
   <string name="Shielded_Name_Objective">シールデッドブルート</string>
