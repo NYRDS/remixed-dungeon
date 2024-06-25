@@ -216,7 +216,7 @@
   <string name="Sheep_Name">羊</string>
   <string name="Sheep_Name_Objective">羊</string>
   <string name="Sheep_Gender">弱々しい</string>
-  <string name="Sheep_Desc">これは魔法の羊です。これの何が魔法かって？あなたはこれを殺せません。魔法のように消えるまで、ずっとどこかをぼんやり見ながらクチャクチャ口を動かしています。</string>
+  <string name="Sheep_Desc">これは魔法の羊だ。これの何が不思議かって？あなたはこれを殺すことができない。魔法のように消えるまで、その場に立ち尽くすのだ。</string>
   <string name="WandOfLightning_Name">稲妻の杖</string>
   <string name="WandOfLightning_Info">この杖から放たれるの致命的な雷撃は、まとまっている生き物のそれぞれに同時にダメージを与えます。</string>
   <string name="WandOfLightning_Info1">あなたは、あなたの稲妻の杖に殺された...</string>
