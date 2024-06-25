@@ -2198,7 +2198,7 @@
   <string name="PotionOfPurity_NoSmell">匂いを感じなくなった！</string>
   <string name="PotionOfStrength_Name">力のポーション</string>
   <string name="PotionOfStrength_Info">この強力な液体は筋肉を巡り、力を1ポイント永久的に増加させる。</string>
-  <string name="PotionOfStrength_Apply">あなたの体に新しい力がみなぎる。</string>
+  <string name="PotionOfStrength_Apply">新たな力が全身を駆け巡る。</string>
   <string name="PotionOfStrength_StaApply">力 +1</string>
   <string name="PotionOfToxicGas_Name">毒ガスのポーション</string>
   <string name="PotionOfToxicGas_Info">加圧されたガラスを開栓するか砕くことで、内部の毒ガスが爆発的に広がります。あなたはこのポーションを手で開栓するのではなく、敵に投げつける選択をするでしょう。</string>
