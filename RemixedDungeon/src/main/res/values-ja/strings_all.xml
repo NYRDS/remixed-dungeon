@@ -320,7 +320,7 @@
   <string name="GameScene_Chasm">あなたの足音がダンジョンに響き渡る。</string>
   <string name="GameScene_Water">あなたは水の撥ねる音を聞いた。</string>
   <string name="GameScene_Grass">草木の匂いが濃い。</string>
-  <string name="GameScene_Secrets">このフロアには多くの秘密が隠されていそうな雰囲気だ。</string>
+  <string name="GameScene_Secrets">このフロアには多くの秘密が隠されていそうな雰囲気がある。</string>
   <string name="Char_Name">敵</string>
   <string name="Char_Name_Objective">敵</string>
   <string name="Char_YouMissed">%1$s はあなたの攻撃を %2$s</string>
