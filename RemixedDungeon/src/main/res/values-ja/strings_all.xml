@@ -2121,9 +2121,9 @@
   <string name="LastLevel_TileHighGrass">熾火茸</string>
   <string name="LastLevel_TileStatue">柱</string>
   <string name="LastLevel_TileDescWater">溶岩のように見えるが、冷たくて触っても安全だろう。</string>
-  <string name="LastLevel_TileDescStatue">柱は人の頭蓋骨で出来ている。驚きだ。</string>
+  <string name="LastLevel_TileDescStatue">なんと、この柱は本物の頭蓋骨でできているようだ。</string>
   <string name="LastShopLevel_TileWater">怪しい色の水</string>
-  <string name="LastShopLevel_TileHighGrass">高い花が咲く</string>
+  <string name="LastShopLevel_TileHighGrass">高貴な花</string>
   <string name="LastShopLevel_TileDescEntrance">ランプは上の階層に通じています。</string>
   <string name="LastShopLevel_TileDescExit">ランプは下の灼熱地獄に通じています。</string>
   <string name="LastShopLevel_TileDescDeco">いくつかのタイルはここにありません。</string>
