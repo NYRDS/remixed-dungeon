@@ -2100,9 +2100,9 @@
   <string name="Caves_TileDescExit">はしごは下層階まで続いている。</string>
   <string name="Caves_TileDescHighGrass">巨大なキノコが視界を遮る。</string>
   <string name="Caves_TileDescDeco">壁に鉱脈が見える。金か？</string>
-  <string name="Caves_TileDescBookshelf">誰が洞窟の中に本棚を必要とする？</string>
+  <string name="Caves_TileDescBookshelf">洞窟に本棚が必要だろうか？</string>
   <string name="City_TileWater">怪しい色の水</string>
-  <string name="City_TileHighGrass">高い花が咲く</string>
+  <string name="City_TileHighGrass">高貴な花</string>
   <string name="City_TileDescEntrance">ランプは上の階層に通じています。</string>
   <string name="City_TileDescExit">ランプは下の階層に通じています。</string>
   <string name="City_TileDescDeco">いくつかのタイルはここにありません。</string>
