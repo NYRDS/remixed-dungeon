@@ -2096,9 +2096,9 @@
   <string name="Caves_TileGrass">光る苔</string>
   <string name="Caves_TileHighGrass">光るキノコ</string>
   <string name="Caves_TileWater">凍りつくほど冷たい水</string>
-  <string name="Caves_TileDescEntrance">上りハシゴは上の階層に通じています。</string>
-  <string name="Caves_TileDescExit">下りハシゴは下の階層に通じています。</string>
-  <string name="Caves_TileDescHighGrass">大きいキノコは視界を遮ります。</string>
+  <string name="Caves_TileDescEntrance">はしごは上層階まで続いている。</string>
+  <string name="Caves_TileDescExit">はしごは下層階まで続いている。</string>
+  <string name="Caves_TileDescHighGrass">巨大なキノコが視界を遮る。</string>
   <string name="Caves_TileDescDeco">壁に鉱脈が見える。金？</string>
   <string name="Caves_TileDescBookshelf">誰が洞窟の中に本棚を必要とする？</string>
   <string name="City_TileWater">怪しい色の水</string>
