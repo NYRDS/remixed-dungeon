@@ -176,8 +176,7 @@
   <string name="town_deco_wall_brazier_desc">燃えさかる炎から立ち上る湯気が、心地よい香りを部屋に充満させる。</string>
   <string name="WndPriest_Instruction2_m">我が息子よ、偉大なるサンタの聖なる教会へようこそ！</string>
   <string name="WndPriest_Instruction2_f">ようこそ、私の娘よ。偉大なるサンタ・デプス・ロードの聖なる教会へようこそ！</string>
-  <string name="WndPriest_Instruction2">もしあなたが助けを求めるなら、私は金貨%d枚で治癒を提供することができる！
-もしあなたが聖なる祝福を求めているのなら、あるいは呪われているのなら、私たちの小さな教会で司教に会ってください。</string>
+  <string name="WndPriest_Instruction2">もしあなたが助けを求めるなら、私は金貨%d枚で治癒を提供することができる！もしあなたが聖なる祝福を求めているのなら、あるいは呪われているのなら、私たちの小さな教会で司教に会ってください。</string>
   <string name="WndDontLikeAds_NotThisTime">今回は違う</string>
   <string name="Item_Info2">何か</string>
   <string name="NecromancerArmor_Info2">この鎧を着ると、ネクロマンサーは 「ネクロティズム 」を使用できるようになる。これは魔法の疫病を撒き散らすもので、生死を問わず周囲のあらゆる生き物に感染する可能性がある。</string>
