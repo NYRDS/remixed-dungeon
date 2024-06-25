@@ -2184,8 +2184,8 @@
   <string name="PotionOfLiquidFlame_Info">このフラスコには不安定な化合物が含まれており、外気に触れると激しく燃え上がる。</string>
   <string name="PotionOfMight_Name">強靭のポーション</string>
   <string name="PotionOfMight_Info">この強力な液体は筋肉を巡り、力を1ポイント、体力を5ポイント 永久的に増加させる。</string>
-  <string name="PotionOfMight_Apply">あなたの体に新しい力がみなぎる。</string>
-  <string name="PotionOfMight_StaApply">力 +1、ヘルス +5</string>
+  <string name="PotionOfMight_Apply">新たな力が全身を駆け巡る。</string>
+  <string name="PotionOfMight_StaApply">力 +1、体力+5</string>
   <string name="PotionOfMindVision_Name">透視のポーション</string>
   <string name="PotionOfMindVision_Info">これを飲んだ後、あなたは壁やドアの向こうにいる生き物の気配をも感知することができるようになる。</string>
   <string name="PotionOfMindVision_Apply1">あなたはぼんやりと他の生き物の気配を感じるようになった！</string>
