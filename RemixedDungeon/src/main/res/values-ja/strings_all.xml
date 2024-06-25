@@ -989,9 +989,9 @@
   <string name="HeroSubClass_NameFreR">フリーランナー</string>
   <string name="HeroSubClass_DescFreR">「フリーランナー」はほとんどのモンスターよりも2倍近く速く移動できる。彼が走っている時に攻撃を当てるのは困難だろう。ただそのためには、フリーランナーは動き続けなければならず、飢餓状態であってはならない。</string>
   <string name="HeroSubClass_NameSnip">スナイパー</string>
-  <string name="HeroSubClass_DescSnip">_スナイパー_が遠隔武器を使った場合、敵の装甲の弱点を狙えます。</string>
+  <string name="HeroSubClass_DescSnip">「スナイパー」は敵の装甲の弱点を探知することができ、遠隔兵器を使用する際、装甲を効果的に無視することができる。</string>
   <string name="HeroSubClass_NameWard">ウォーデン</string>
-  <string name="HeroSubClass_DescWard">自然と強いつながりを持つ_ウォーデン_は、植物から雫や種子を得る技能があります。また、高い草を踏みつけると鎧にバフを得ます。</string>
+  <string name="HeroSubClass_DescWard">自然の力との強い結びつきを持つ「ウォーデン」には、植物から雫や種を集める能力がある。また、高い草に触れることで、一時的に防御力を高める効果を得ることが出来る。</string>
   <string name="HeroSubClass_NameScout">スカウト</string>
   <string name="HeroSubClass_DescScout">エルフの_スカウト_はステルスのマスターです。高い草を踏みつけると不可視のバフを得ます。また、彼らは通常のエルフよりもさらに素早いです。</string>
   <string name="HeroSubClass_NameShaman">シャーマン</string>
