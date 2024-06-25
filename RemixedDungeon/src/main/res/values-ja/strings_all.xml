@@ -2136,8 +2136,8 @@
   <string name="Sewer_TileDescBookshelf">本棚には安くて役に立たない本がぎっしり。燃えるのでは？</string>
   <string name="AlchemyPot_SelectSeed">投げる種を選択</string>
   <string name="Chasm_Chasm">割れ目</string>
-  <string name="Chasm_Yes">はい、私は私が何をやっているか知っている</string>
-  <string name="Chasm_No">いいえ、私は考えを変えました</string>
+  <string name="Chasm_Yes">ああ、自分が何をしているかは分かっている</string>
+  <string name="Chasm_No">いや、気が変わった</string>
   <string name="Chasm_Jump">あなたは本当に割れ目に飛び込みますか？おそらく死ぬでしょう。</string>
   <string name="Chasm_Info">あなたは落下死した...</string>
   <string name="AlarmTrap_Desc">罠はダンジョン全体にけたたましい音を響かせます！</string>
