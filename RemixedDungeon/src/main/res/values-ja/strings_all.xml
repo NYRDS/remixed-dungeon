@@ -59,9 +59,9 @@
   <string name="RingOfMending_Name">修復のリング</string>
   <string name="RingOfMending_Info">このリングは身体の再生能力を高め、失われた体力を加速度的に回復させる。劣化したリングは自然再生を減少させ、あるいは停止させる。</string>
   <string name="RingOfPower_Name">威力のリング</string>
-  <string name="RingOfPower_Info">あなたの杖は、このリングの輝くエネルギーフィールドによってより強力になります。劣化した威力のリングはあなたの杖を弱体化させます。</string>
+  <string name="RingOfPower_Info">このリングから放射されるエネルギーフィールドの中で、あなたの杖はより強力になる。劣化した威力のリングは、逆にあなたの杖を弱める。</string>
   <string name="RingOfSatiety_Name">満腹のリング</string>
-  <string name="RingOfSatiety_Info">このリングを着用していると長期間食べ物なしでも平気です。劣化した満腹のリングは逆の効果を発揮します。</string>
+  <string name="RingOfSatiety_Info">このリングを身に着けていれば、より長く食べずにいられる。劣化した満腹のリングは効果が逆転する。</string>
   <string name="RingOfShadows_Name">影のリング</string>
   <string name="RingOfShadows_Info">あなたがこのリングを着用すると、敵があなたに気づきにくくなります。劣化した影のリングは、あなたの存在に気づいていない敵に警告を発します。</string>
   <string name="RingOfThorns_Name">いばらのリング</string>
