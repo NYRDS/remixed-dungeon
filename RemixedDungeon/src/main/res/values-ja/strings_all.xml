@@ -1763,7 +1763,7 @@
   <string name="ScrollOfTerror_Info2">スクロールは鮮やかな赤い閃光を発して、 %s は逃げ出した！</string>
   <string name="ScrollOfTerror_Info3">スクロールは鮮やかな赤い閃光を発して、モンスターは逃げ出した！</string>
   <string name="ScrollOfUpgrade_Name">強化のスクロール</string>
-  <string name="ScrollOfUpgrade_Info">このスクロールは1つのアイテムの品質を改善し強化します。杖は力と充填数を増加します。武器はより多くダメージを与えたり、より頻繁にその印を見つけます。鎧はさらにダメージを逸します。リングの効果はより激しくなります。武器や鎧はより少ない力で使用できます。そして、アイテムの任意の呪いが解除されます。</string>
+  <string name="ScrollOfUpgrade_Info">このスクロールは1つのアイテムを強化し、その品質を向上させる。杖は威力とチャージ回数が増加し、武器はより多くのダメージを与えたり、より正確に攻撃出来るようになり、鎧はより多くの打撃をそらすようになり、リングは着用者に与える効果が強くなる。また、武器や防具を使用するのに必要な筋力も少なくなり、アイテムにかけられた呪いも解ける。</string>
   <string name="ScrollOfUpgrade_InvTitle">強化するアイテムを選択</string>
   <string name="ScrollOfUpgrade_LooksBetter">あなたの %s は良くなったように見えます</string>
   <string name="ScrollOfWeaponUpgrade_Name">武器強化のスクロール</string>
