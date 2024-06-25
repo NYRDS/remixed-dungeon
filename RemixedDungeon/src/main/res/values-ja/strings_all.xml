@@ -2217,8 +2217,8 @@
   <string name="Potion_ACMoisten">塗布する</string>
   <string name="Potion_SelectForMoisten">塗布するアイテムを選択</string>
   <string name="Potion_MoistenUseless">あなたはこのポーションを無駄にしたようだ。</string>
-  <string name="Potion_RuneDissaperaed">%s からルーンが消え去りました。</string>
-  <string name="Potion_ArrowMoisten">あなたは矢を湿らせることに成功した。</string>
+  <string name="Potion_RuneDissaperaed">ルーンは%s から消え去った。</string>
+  <string name="Potion_ArrowMoisten">あなたは矢に塗布することに成功した。</string>
   <string name="Potion_ItemFliesAway">%s はあなたの手から飛び去った。</string>
   <string name="Potion_FoodRefreshed">%s は食べられそう</string>
   <string name="KindOfBow_SelectArrowKind">どの矢を使うべきだろう？</string>
