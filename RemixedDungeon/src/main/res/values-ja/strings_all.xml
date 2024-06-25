@@ -908,7 +908,7 @@
   <string name="ConcreteBlock_Name">重いコンクリートブロック</string>
   <string name="ConcreteBlock_Description">このブロックを押すには%dポイントの力が必要なようだ。</string>
   <string name="Hero_AnotherTry">あなたは死んでしまった。もう一度やってみますか？</string>
-  <string name="ShadowLord_Name">シャドウロード</string>
+  <string name="ShadowLord_Name">影の君主</string>
   <string name="ShadowLord_Gender">力強い</string>
   <string name="ShadowLord_Name_Objective">シャドウロード</string>
   <string name="ShadowLord_Desc">純粋な悪と闇から作られたクリーチャー、その強さから彼は古き神であると信じられている。一方では、彼は古き神々の守護者であるとも信じられている。</string>
