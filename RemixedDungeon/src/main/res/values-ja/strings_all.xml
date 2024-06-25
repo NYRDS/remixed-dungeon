@@ -2633,7 +2633,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="CharAction_Give">あげる</string>
   <string name="CharAction_Take">もらう</string>
   <string name="CharAction_Scare">恐怖</string>
-  <string name="CharAction_Hit">命中</string>
+  <string name="CharAction_Hit">叩く</string>
   <string name="StunBuff_Name">びっくり</string>
   <string name="StunBuff_Info">びっくりした！</string>
   <string name="Char_StaStunned">びっくり</string>
