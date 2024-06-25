@@ -2197,7 +2197,7 @@
   <string name="PotionOfPurity_Freshness">空気中にただならぬ新鮮さを感じる。</string>
   <string name="PotionOfPurity_NoSmell">匂いを感じなくなった！</string>
   <string name="PotionOfStrength_Name">力のポーション</string>
-  <string name="PotionOfStrength_Info">この強力な液体は、あなたの筋肉に作用して、力を1ポイント上昇させます。</string>
+  <string name="PotionOfStrength_Info">この強力な液体は筋肉を巡り、力を1ポイント永久的に増加させる。</string>
   <string name="PotionOfStrength_Apply">あなたの体に新しい力がみなぎる。</string>
   <string name="PotionOfStrength_StaApply">力 +1</string>
   <string name="PotionOfToxicGas_Name">毒ガスのポーション</string>
