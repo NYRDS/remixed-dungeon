@@ -477,7 +477,7 @@
   <string name="LloidsBeacon_Preventing">何らかの強力な魔法のオーラが、ロイドのビーコンを使うことを妨げた！</string>
   <string name="LloidsBeacon_Creatures">近くにいる生き物の精神的なオーラのせいで、今はロイドのビーコンを使うことができない。</string>
   <string name="LloidsBeacon_Return">ロイドのビーコンに現在地がセットされ、いつでもここに戻れるようになった。</string>
-  <string name="LloidsBeacon_Set">このビーコンはRemixed Dungeonの%d階層のどこかに設置されていた。</string>
+  <string name="LloidsBeacon_Set">このビーコンはRemixed Dungeonの%d階層のどこかに設置されている。</string>
   <string name="Stylus_Name">不可解な鉄筆</string>
   <string name="Stylus_ACInscribe">刻み込む</string>
   <string name="Stylus_Info">この不可解な鉄筆は、黒っぽい非常に硬い石で作られています。あなたはグリフかルーンを刻み込むことが出来ます。しかし、どんな力を刻むかの選択権はあなたにはありません。鉄筆の意思があなたのために決めます。</string>
