@@ -1318,11 +1318,11 @@
   <string name="Statue_Name">生ける彫像</string>
   <string name="Statue_Gender">弱々しい</string>
   <string name="Statue_Name_Objective">生ける彫像</string>
-  <string name="Statue_Desc">あなたはあれをこのダンジョン内の彫像とは別の醜い彫像と思うだろう。しかし、赤く光る眼には恐怖を感じる。像自体は石で作られているが、%s 振り回す、本物のように。</string>
+  <string name="Statue_Desc">このダンジョンにある醜い彫像のひとつかと思いきや、赤く光る目がそうではないと物語っている。像自体は石でできているが、振り回している「%s」は本物のように見える。</string>
   <string name="Succubus_Name">サキュバス</string>
   <string name="Succubus_Gender">力強い</string>
   <string name="Succubus_Name_Objective">サキュバス</string>
-  <string name="Succubus_Desc">サキュバスは蠱惑的な女性(ゴシック風)のように見える悪魔です。サキュバスは魅了の魔法を使い、ヒーローは効果が解けるまで何もできなくなります。</string>
+  <string name="Succubus_Desc">サキュバスは魅惑的な（少しゴシック風の）少女のような姿をした悪魔である。サキュバスは魔法を使ってヒーローを魅了することができ、魅了が切れるまでヒーローは相手を攻撃できなくなる。</string>
   <string name="Swarm_Name">ハエの群れ</string>
   <string name="Swarm_Gender">力強い</string>
   <string name="Swarm_Name_Objective">ハエの群れ</string>
