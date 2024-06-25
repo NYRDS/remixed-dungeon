@@ -497,7 +497,7 @@
   <string name="Weightstone_Select">バランスをとる武器を選択</string>
   <string name="Weightstone_Fast">あなたの %s を速くするためにバランスをとった</string>
   <string name="Weightstone_Accurate">あなたの %s をより正確にするためにバランスをとった</string>
-  <string name="Weightstone_WndChoice">あなたの %s は何を重視しますか？</string>
+  <string name="Weightstone_WndChoice">あなたは %s の何を重視する？</string>
   <string name="Weightstone_WndSpeed">速さを</string>
   <string name="Weightstone_WndAccuracy">正確さを</string>
   <string name="Weightstone_WndCancel">気にするな</string>
