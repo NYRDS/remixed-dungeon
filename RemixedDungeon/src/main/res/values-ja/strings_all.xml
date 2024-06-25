@@ -1691,7 +1691,7 @@
   <string name="town_deco_window_desc">一般的なガラス窓で、特別なものはない。</string>
   <string name="town_deco_door_name">ドア</string>
   <string name="town_deco_door_desc">シンプルな木製の扉</string>
-  <string name="town_deco_locked_door_name">鍵付きの扉</string>
+  <string name="town_deco_locked_door_name">鍵のかかった扉</string>
   <string name="town_deco_locked_door_desc">あの扉の向こうに、いったい何があるのだろう？</string>
   <string name="town_deco_snowman_name">雪だるま</string>
   <string name="town_deco_snowman_desc">雪だるまは、モンスターがダンジョンに侵入する日 \"ダンジョンマス \"を祝うために特別にこの場所に置かれた、ホリデーシーズンの伝統的な街の飾りである。</string>
