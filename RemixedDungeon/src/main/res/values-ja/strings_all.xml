@@ -923,7 +923,7 @@
   あなたはいつでも決定を変更することができます (タイトル画面のチャートアイコンをクリック)</string>
   <string name="AllowStatisticsCollectionScene_Allow">許可する</string>
   <string name="AllowStatisticsCollectionScene_Deny">拒否する</string>
-  <string name="Darkness_Info">大気中に浮遊する永遠の闇の一片のように見えます</string>
+  <string name="Darkness_Info">永遠の闇のかけらが宙に浮いているように見える</string>
   <string name="WndSelectLanguage_ImproveTranslation">Remixed Dungeon の翻訳の向上にご助力ください</string>
   <string name="WndSelectLanguage_LinkToTranslationSite">Remixed Dungeon の翻訳チームに参加するにはここをクリック</string>
   <string name="ArmoredStatue_Name">生像</string>
