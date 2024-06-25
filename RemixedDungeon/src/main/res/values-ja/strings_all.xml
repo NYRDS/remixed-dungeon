@@ -530,7 +530,7 @@
   <string name="DwarfToken_Name">ドワーフトークン</string>
   <string name="DwarfToken_Info">多くのドワーフたちと、彼らの大きな創造物の中には、このような用途不明の小さな金属片を持っている者もいる。宝石なのかもしれないし、身分証明書なのかもしれない。ドワーフは奇妙な民族だ。</string>
   <string name="Pickaxe_Name">つるはし</string>
-  <string name="Pickaxe_Info">これは岩を壊すための大きく頑丈な道具です。武器として使うことが出来ます。</string>
+  <string name="Pickaxe_Info">岩を砕くための大きくて頑丈な道具。武器としても使えないことはないだろう。</string>
   <string name="Pickaxe_ACMine">掘る</string>
   <string name="Pickaxe_Gender">弱々しい</string>
   <string name="Pickaxe_NoVein">あなたが採掘する近くに黒金鉱脈はありません</string>
