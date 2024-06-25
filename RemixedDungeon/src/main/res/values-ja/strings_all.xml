@@ -2606,7 +2606,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="FullFaceMask_Name">ガスマスク</string>
   <string name="FullFaceMask_Info">ガスマスクは、空気中の汚染物質や有毒ガスの吸入から着用者を守るためのマスクである。マスクは鼻、口、目を密閉して覆う。
 このマスクにはフィルターがない。</string>
-  <string name="StartScene_DifficultyEasyNoAds">かんたん</string>
+  <string name="StartScene_DifficultyEasyNoAds">やさしい</string>
   <string name="StartScene_DifficultyNormalWithSavesNoAds">セーブありのふつう</string>
   <string name="Backstab_Name">バックスタブ</string>
   <string name="Backstab_Info">静かに背中を打つ。不誠実だが非常に効果的で、使用者のスキルレベルに応じてバックスタブのダメージが増加する。バックスタブに成功すると、被害者の鎧や特殊な防御能力を完全に無視する。</string>
