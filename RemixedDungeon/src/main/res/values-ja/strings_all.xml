@@ -1650,7 +1650,7 @@
   <string name="TownsfolkNPC_Message2">あのダンジョンのおかげで町はとても裕福になり、町の誰もが好きなときに休暇に出かけることができるようになった！実際、だから今ここに人が少ないんだ。</string>
   <string name="TownsfolkNPC_Message3">なんて素敵な日だろう。</string>
   <string name="TownsfolkNPC_Message4">春が来て下水道が水浸しにならなければいいのだが。ネズミの大発生はもうごめんだ。</string>
-  <string name="HealerNPC_Name">町長</string>
+  <string name="HealerNPC_Name">街の司祭</string>
   <string name="HealerNPC_Gender">男性</string>
   <string name="HealerNPC_Name_Objective">街の司祭</string>
   <string name="HealerNPC_Desc">杖を作っていそうな老人だ。</string>
