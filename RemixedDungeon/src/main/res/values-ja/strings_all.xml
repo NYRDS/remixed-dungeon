@@ -1865,7 +1865,7 @@
   <string name="WandMaker_RotberryInfo">種はダンジョン全体に響き渡る轟音を発した！</string>
   <string name="Guts_TileGrass">枯れ草</string>
   <string name="Guts_TileHighGrass">枯れ草</string>
-  <string name="Guts_TileWater">不気味なねばねば</string>
+  <string name="Guts_TileWater">奇妙なぬるぬるした液体</string>
   <string name="Guts_TileDescEntrance">天井にぽっかりと開いた穴が上層階へと続いている</string>
   <string name="Guts_TileDescExit">床にぽっかりと開いた穴が下層階へと続いている</string>
   <string name="Guts_TileDescDeco">どうやらここは......傷だらけだ</string>
