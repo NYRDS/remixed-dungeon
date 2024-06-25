@@ -1801,9 +1801,9 @@
   <string name="Blacksmith_Txt2">冗談だろ？俺のツルハシをどこにやった？</string>
   <string name="Blacksmith_Txt3">影金鉱石を15個だ。そんなに難しいか？</string>
   <string name="Blacksmith_Txt4">つるはしでコウモリを殺してくれと言っただろう。つるはしに血が必要なんだ。刺せ、刺せ！</string>
-  <string name="Blacksmith_Completed">おぉ、戻ってきたか...遅かったな。</string>
+  <string name="Blacksmith_Completed">おぉ、戻ってきたか...遅くも早くもなかったな。</string>
   <string name="Blacksmith_GetLost">俺は忙しいんだ。失せろ！</string>
-  <string name="Blacksmith_LooksBetter">あなたの %s は良くなったように見えます</string>
+  <string name="Blacksmith_LooksBetter">あなたの %s は良くなったように見える</string>
   <string name="Blacksmith_Verify1">違うアイテムを2つ選んで、同じアイテムではない！</string>
   <string name="Blacksmith_Verify2">同じタイプのアイテムを2つ選べ！</string>
   <string name="Blacksmith_Verify3">なんだかわからん物では作業できん、まず識別しろ！</string>
