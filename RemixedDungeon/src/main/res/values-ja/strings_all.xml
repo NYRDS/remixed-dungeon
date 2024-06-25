@@ -1835,8 +1835,8 @@
   <string name="Imp_Golems2">ゴーレム狩りはどうなった？</string>
   <string name="Imp_Monks1">あんた冒険者かい？冒険者は大好きだ！何か殺さなければならないとき、彼らはいつでも頼りになるんだ。そうだろ？もちろん、賞金目当てだろうけどね ;)　オイラはこれから商売を始めるんだけど、ここの「モンク」たちは自分では何も買わないし、他のお客さんを怖がらせてしまうしで、本当に邪魔なんだよね。ということで、ちょいと殺して来てくれないかい？......そうだな....「8人」くらい殺してくれたら、報酬をあげるよ。</string>
   <string name="Imp_Monks2">ああ、まだ生きていたんだね！やっぱり君のカンフーは強いな ;)　あ、ちゃんとモンクのトークンを手に入れるのを忘れないでね。</string>
-  <string name="Imp_Cya">またな、%s ！</string>
-  <string name="Imp_Hey">なぁ、%s ！</string>
+  <string name="Imp_Cya">またね、%s ！</string>
+  <string name="Imp_Hey">ちょっと、%s ！</string>
   <string name="ImpShopkeeper_Name">野心的なインプ</string>
   <string name="ImpShopkeeper_Desc">インプは低級悪魔です。彼らは力も魔法の才能も無いことが知られている。しかし、彼らはとても賢く社交的です。多くのインプは悪魔ではないものに囲まれて生きるのとビジネスを好みます。</string>
   <string name="ImpShopkeeper_Greetings">ハロー、友人よ！</string>
