@@ -1671,7 +1671,7 @@
   <string name="WndMovieTheatre_Thank_You">ご参加ありがとうございました！</string>
   <string name="WndPriest_Heal">ヒール - %dゴールド</string>
   <string name="WndPriest_Instruction_m">ようこそ、我が息子よ。偉大なるサンタ・デプス・ロードの聖なる教会へ！あいにく今は建物を改築中なので、君を通すことはできないが、もし君が助けを求めるのであれば、%dゴールドを払えば回復サービスと食事を提供しよう！</string>
-  <string name="WndPriest_Instruction_f">ようこそ、我が息子よ。偉大なるサンタ・デプス・ロードの聖なる教会へ！あいにく今は建物を改築中なので、君を通すことはできないが、もし君が助けを求めるのであれば、%dゴールドを払えば回復サービスと食事を提供しよう！</string>
+  <string name="WndPriest_Instruction_f">ようこそ、我が娘よ。偉大なるサンタ・デプス・ロードの聖なる教会へ！あいにく今は建物を改築中なので、君を通すことはできないが、もし君が助けを求めるのであれば、%dゴールドを払えば回復サービスと食事を提供しよう！</string>
   <string name="WndPriest_Title">街の司祭</string>
   <string name="town_deco_roof_name">屋根</string>
   <string name="town_deco_roof_desc">シンプルな屋根。</string>
