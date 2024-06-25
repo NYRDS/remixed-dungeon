@@ -2085,8 +2085,8 @@
   <string name="Level_TileDescEmbers">熾火が床を覆っている。</string>
   <string name="Level_TileDescHighGrass">密生した凍った植物が視界を遮る。</string>
   <string name="Level_TileDescLockedDoor">この扉には鍵がかかっている。開けるにはこの扉にあう鍵が必要だ。</string>
-  <string name="Level_TileDescLockedExit">重いバーが下り階段を塞いでいる。</string>
-  <string name="Level_TileDescBarricade">木製のバリケードが堅くセットされている。長い年月で乾いている。燃えるか？</string>
+  <string name="Level_TileDescLockedExit">重い鉄格子が下へ続く階段をふさいでいる。</string>
+  <string name="Level_TileDescBarricade">木製のバリケードはしっかりと固定されているが、長い年月で乾燥しているようだ。燃えるのでは？</string>
   <string name="Level_TileDescSign">ここからでは読むことが出来ない。</string>
   <string name="Level_TileDescTrap">隠された圧力版の上に乗ると罠が作動します。</string>
   <string name="Level_TileDescInactiveTrap">作動済みのトラップはもう危険ではありません。</string>
