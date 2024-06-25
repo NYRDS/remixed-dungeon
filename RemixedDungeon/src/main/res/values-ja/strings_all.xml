@@ -2088,7 +2088,7 @@
   <string name="Level_TileDescLockedExit">重い鉄格子が下へ続く階段をふさいでいる。</string>
   <string name="Level_TileDescBarricade">木製のバリケードはしっかりと固定されているが、長い年月で乾燥しているようだ。燃えるのでは？</string>
   <string name="Level_TileDescSign">ここからでは読むことが出来ない。</string>
-  <string name="Level_TileDescTrap">隠された圧力版の上に乗ると罠が作動します。</string>
+  <string name="Level_TileDescTrap">隠された感圧板を踏むと、罠が作動する。</string>
   <string name="Level_TileDescInactiveTrap">作動済みのトラップはもう危険ではありません。</string>
   <string name="Level_TileDescStatue">誰かがここを飾ろうとしましたが、失敗です、明らかに。</string>
   <string name="Level_TileDescAlchemy">ここに種子を落としてポーションを作ります。</string>
