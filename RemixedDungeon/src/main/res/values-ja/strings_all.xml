@@ -1952,8 +1952,8 @@
   <string name="ResultDescriptions_Win">イェンダーの魔除けを手に入れた</string>
   <string name="ResultDescriptions_Immured">%d 階層で石に閉じ込められた</string>
   <string name="ResultDescriptions_Unknown">%d階層で謎の死を遂げた</string>
-  <string name="Armor_EquipCursed">あなたの %s は痛いくらい締め付けた</string>
-  <string name="Armor_Identify">あなたは今 %1$s を識別するために十分精通しています。これは %2$s です。</string>
+  <string name="Armor_EquipCursed"> %s があなたを痛いくらい締め付けた</string>
+  <string name="Armor_Identify">あなたは今 %1$s を識別するために十分精通している。これは %2$s だ。</string>
   <string name="Armor_ToString">%1$s :%2$d</string>
   <string name="Armor_Incompatible">異なるタイプの魔法はこの鎧のグリフを消し去った！</string>
   <string name="Armor_Info1">この %1$s は攻撃ごとに \"%2$d\" のダメージを防ぐ。</string>
