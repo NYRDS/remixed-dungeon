@@ -1375,7 +1375,7 @@
   <string name="SpiderNest_Name">クモの繭</string>
   <string name="SpiderNest_Gender">中性の</string>
   <string name="SpiderNest_Name_Objective">クモの繭</string>
-  <string name="SpiderNest_Desc">この繭は薄い絹で出来ていて、中にあるものを隠している。</string>
+  <string name="SpiderNest_Desc">この繭は薄い絹で出来ていて、なにか生きているものを隠している。</string>
   <string name="SpiderServant_Name">クモの兵士</string>
   <string name="SpiderServant_Gender">力強い</string>
   <string name="SpiderServant_Name_Objective">クモの兵士</string>
