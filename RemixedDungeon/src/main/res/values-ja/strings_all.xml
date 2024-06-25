@@ -2138,9 +2138,9 @@
   <string name="Chasm_Chasm">割れ目</string>
   <string name="Chasm_Yes">ああ、自分が何をしているかは分かっている</string>
   <string name="Chasm_No">いや、気が変わった</string>
-  <string name="Chasm_Jump">あなたは本当に割れ目に飛び込みますか？おそらく死ぬでしょう。</string>
+  <string name="Chasm_Jump">本当に裂け目に飛び込みたいのか？おそらく死ぬだろうが。</string>
   <string name="Chasm_Info">あなたは落下死した...</string>
-  <string name="AlarmTrap_Desc">罠はダンジョン全体にけたたましい音を響かせます！</string>
+  <string name="AlarmTrap_Desc">罠はダンジョン全体に響き渡る鋭い音を発した！</string>
   <string name="LightningTrap_Name">電撃の罠</string>
   <string name="LightningTrap_Desc">あなたは電撃の罠の放電で殺されました...</string>
   <string name="HeroClass_Gnoll">ノール</string>
