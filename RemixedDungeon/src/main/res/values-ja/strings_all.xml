@@ -1334,9 +1334,9 @@
   <string name="Tengu_Desc">天狗は古代の暗殺者一族の一員である。この暗殺者たちは手裏剣と罠を多用することで知られている。</string>
   <string name="Tengu_Info1">ついに自由に...</string>
   <string name="Tengu_Info2">捕まえたぞ、%s！</string>
-  <string name="Thief_Name">シーフ</string>
+  <string name="Thief_Name">狂った泥棒</string>
   <string name="Thief_Gender">力強い</string>
-  <string name="Thief_Name_Objective">シーフ</string>
+  <string name="Thief_Name_Objective">狂った泥棒</string>
   <string name="Thief_Desc">ダンジョンの深い階層は、常にあらゆる犯罪者の隠れ場所だった。日の光から遠く離れている間、平静を保てる者ばかりではない。とっくの昔に、この狂った泥棒や盗賊たちは、自分たちが何者で、なぜ盗むのかを忘れてしまっている。</string>
   <string name="Thief_Stole">%1$s はあなたから %2$s を盗んだ！</string>
   <string name="Thief_Carries">
