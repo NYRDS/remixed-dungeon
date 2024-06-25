@@ -53,7 +53,7 @@
   <string name="RingOfHaggler_Name">値切りのリング</string>
   <string name="RingOfHaggler_Info">このリングには魔法の効果はないが、店主や行商人に指輪の持ち主が盗賊ギルドのメンバーであることを示すことができる。彼らは店を守るために喜んで値引きをしてくれるだろう。この指輪をアップグレードしても、追加のボーナスは得られない。</string>
   <string name="RingOfHaste_Name">加速のリング</string>
-  <string name="RingOfHaste_Info">このリングは装着者の時間の流れを加速させて、すべての行動を少し速くします。</string>
+  <string name="RingOfHaste_Info">このリングは、装着者の時間の流れを加速させ、あらゆる行動を少し速く行えるようにする。</string>
   <string name="RingOfHerbalism_Name">草学のリング</string>
   <string name="RingOfHerbalism_Info">このリングは、草を踏みつけた時の、雫や種子を得られる確率を増加します。</string>
   <string name="RingOfMending_Name">修復のリング</string>
