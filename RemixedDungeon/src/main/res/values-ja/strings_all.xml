@@ -1184,8 +1184,8 @@
   <string name="Mob_Died">あなたは何かが死ぬ音を聞いた</string>
   <string name="Mob_StaSleepingStatus">%s は眠っている</string>
   <string name="Mob_StaWanderingStatus">%s は彷徨っている</string>
-  <string name="Mob_StaHuntingStatus">この %s は狩りをしている</string>
-  <string name="Mob_StaFleeingStatus">この %s は逃げている</string>
+  <string name="Mob_StaHuntingStatus">%s は狩りをしている</string>
+  <string name="Mob_StaFleeingStatus">%s は逃げている</string>
   <string name="Mob_StaPassiveStatus">この %s は消極的です</string>
   <string name="Acidic_Name">酸サソリ</string>
   <string name="Acidic_Gender">力強い</string>
