@@ -2162,7 +2162,7 @@
   <string name="Potion_ACDrink">飲む</string>
   <string name="Potion_Harmfull">有害なポーション！</string>
   <string name="Potion_Beneficial">有益なポーション</string>
-  <string name="Potion_Yes">はい、私は私が何をやっているか知っている</string>
+  <string name="Potion_Yes">ああ、自分が何をしているかは分かっている</string>
   <string name="Potion_No">いいえ、私は考えを変えました</string>
   <string name="Potion_SureDrink">本当に飲んでもいいですか？ほとんどの場合、こんなポーションは敵に投げるべきです。</string>
   <string name="Potion_SureThrow">本当に投げてもいいですか？ほとんどの場合、これは飲むべきです。</string>
