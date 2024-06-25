@@ -2019,9 +2019,9 @@
   <string name="DeferedDamage_Killed_Txt">%s はあなたを殺した...</string>
   <string name="Plant_ACPlant">植える</string>
   <string name="Plant_Info">この種を%1$sを育てたい場所に投げる。%2$s</string>
-  <string name="Plant_Seed">%s の種子</string>
+  <string name="Plant_Seed">%s の種</string>
   <string name="Dreamweed_Name">ドリームウィード</string>
-  <string name="Dreamweed_Desc">ドリームウィードに触れると、輝く混乱ガス雲が発生します。</string>
+  <string name="Dreamweed_Desc">ドリームウィードに触れると、混乱させるガスのきらめく雲を分泌する。</string>
   <string name="Earthroot_Name">アースルート</string>
   <string name="Earthroot_Desc">生き物がアースルートに触れると、根が自然の鎧のようになって生き物に巻き付きます。</string>
   <string name="EarthrootBuff_Name">ハーバルアーマー</string>
