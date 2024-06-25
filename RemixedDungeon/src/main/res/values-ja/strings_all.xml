@@ -1123,10 +1123,10 @@
   <string name="Spear_Info">先端に研いだ鉄をつけた細長い木の棒。</string>
   <string name="Spear_Gender">中性の</string>
   <string name="Sword_Name">ソード</string>
-  <string name="Sword_Info">鋭い長さの鋼の刃は頼もしく輝きます。</string>
+  <string name="Sword_Info">カミソリのように鋭利な鋼鉄の刃が安心感を与える輝きを放っている</string>
   <string name="Sword_Gender">力強い</string>
   <string name="WarHammer_Name">ウォーハンマー</string>
-  <string name="WarHammer_Info">少数の生き物だけが、このそびえ立つ鉛と鋼の塊の強烈な一撃に耐えます。しかし、効果的に扱えるのは最強の冒険者だけでしょう。</string>
+  <string name="WarHammer_Info">鉛と鋼鉄の塊がそびえ立つこの一撃に耐えられる生き物は少ないが、これを効果的に使えるのは屈強な冒険者だけだ。</string>
   <string name="WarHammer_Gender">力強い</string>
   <string name="MissileWeapon_Missiles">飛び道具</string>
   <string name="MissileWeapon_Yes">はい、私は私が何をやっているか知っている</string>
