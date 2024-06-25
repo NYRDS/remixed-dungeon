@@ -1229,7 +1229,7 @@
   <string name="Eye_Name">イビルアイ</string>
   <string name="Eye_Gender">中性の</string>
   <string name="Eye_Name_Objective">イビルアイ</string>
-  <string name="Eye_Desc">この悪魔の別名は\"憎悪のオーブ\"。なぜならそれは、敵を見たら即座にデスゲイズを発動し、時々、味方だろうが負傷者だろうが攻撃するからだ。</string>
+  <string name="Eye_Desc">この悪魔の別名に \"憎悪のオーブ \"があるが、これは敵を見つけるとデスゲイズを無謀に使い、しばしば味方を無視して負傷させるからである。</string>
   <string name="Eye_Kill">%s のデスゲイズはあなたを倒しました...</string>
   <string name="Gnoll_Name">ノールスカウト</string>
   <string name="Gnoll_Gender">力強い</string>
