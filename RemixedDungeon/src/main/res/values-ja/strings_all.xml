@@ -2193,7 +2193,7 @@
   <string name="PotionOfParalyticGas_Name">麻痺ガスのポーション</string>
   <string name="PotionOfParalyticGas_Info">外気に触れると、フラスコ内の液体が気化し、痺れる黄色い靄が発生する。この霧を吸い込んだ者は即座に麻痺し、霧が消えた後もしばらく身動きが取れなくなる。このアイテムは遠くの敵に投げつけて、ガスの効果内に捕らえることができる。</string>
   <string name="PotionOfPurity_Name">浄化のポーション</string>
-  <string name="PotionOfPurity_Info">この試薬は即座にエリアの有害なガスを中和します。飲むことであなたはそれらのガスから一時的に耐性を得ます。</string>
+  <string name="PotionOfPurity_Info">この試薬は、効果範囲内のすべての有害なガスを素早く中和する。これを飲むと、そのようなガスに対する一時的な免疫が得られる。</string>
   <string name="PotionOfPurity_Freshness">あなたはとても新鮮な空気を感じます。</string>
   <string name="PotionOfPurity_NoSmell">あなたはあらゆる臭いを感じなくなった！</string>
   <string name="PotionOfStrength_Name">力のポーション</string>
