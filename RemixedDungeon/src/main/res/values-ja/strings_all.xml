@@ -1747,7 +1747,7 @@
   <string name="ScrollOfRecharging_Name">再充填のスクロール</string>
   <string name="ScrollOfRecharging_Info">この羊皮紙に封じ込められた未加工の魔力は、解き放たれたとき、読み手の持つすべての杖をフルパワーに充填する。</string>
   <string name="ScrollOfRecharging_Info1a">エネルギーの波がパックを通り抜け、杖を充填する。</string>
-  <string name="ScrollOfRecharging_Info1b">あなたの荷物はエネルギーの影響を受けて、あなたの杖が再充填されます</string>
+  <string name="ScrollOfRecharging_Info1b">エネルギーの波がパックを通り抜け、杖を充填する。</string>
   <string name="ScrollOfRecharging_Info2">あなたの荷物はエネルギーの影響を受けましたが、何も起こらなかった</string>
   <string name="ScrollOfRemoveCurse_Name">解呪のスクロール</string>
   <string name="ScrollOfRemoveCurse_Info">このスクロール上の呪文は、読み手の武器、鎧、リングと所持アイテムから、邪悪な呪いを取り除きます。</string>
