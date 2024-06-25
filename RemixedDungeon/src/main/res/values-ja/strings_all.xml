@@ -412,7 +412,7 @@
   <string name="WndResurrect_Message">あなたは死んだが、ダンジョン攻略の別の機会を与えられた。受け入れるか？</string>
   <string name="WndResurrect_Yes">もちろんだ、私は戦う！</string>
   <string name="WndResurrect_No">もう無理だ、諦める</string>
-  <string name="WndSadGhost_Rose">イエス！イエス！！！これです！これを私にください！代わりにこれらの中から1つアイテムを譲りましょう。多分あなたの旅に有用なものだと思うのですが...</string>
+  <string name="WndSadGhost_Rose">そう！そう！！！これです！これを私にください！代わりにこれらの中から1つアイテムを譲りましょう。多分あなたの旅に有用なものだと思うのですが...</string>
   <string name="WndSadGhost_Rat">イエス！醜い生き物が死んでやっと休めます... これらの中から1つアイテムを受け取ってください。多分あなたの旅に有用なものだと思うのですが...</string>
   <string name="WndSadGhost_Wepon">幽霊の武器</string>
   <string name="WndSadGhost_Armor">幽霊の鎧</string>
