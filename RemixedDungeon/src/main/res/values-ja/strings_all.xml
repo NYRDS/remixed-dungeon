@@ -1400,7 +1400,7 @@
   <string name="AirElemental_Gender">力強い</string>
   <string name="AirElemental_Name_Objective">風のエレメンタル</string>
   <string name="AirElemental_Desc">風のエレメンタルは生きた空気でできた空飛ぶ魔法の存在だ。</string>
-  <string name="EarthElemental_Name">アースエレメンタル</string>
+  <string name="EarthElemental_Name">土のエレメンタル</string>
   <string name="EarthElemental_Gender">力強い</string>
   <string name="EarthElemental_Name_Objective">アースエレメンタル</string>
   <string name="EarthElemental_Desc">アースエレメンタルは自然の力が集中したモノ。</string>
