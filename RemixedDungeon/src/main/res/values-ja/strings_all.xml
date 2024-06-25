@@ -2078,7 +2078,7 @@
   <string name="Level_TileBookshelf">本棚</string>
   <string name="Level_TileAlchemy">錬金釜</string>
   <string name="Level_TileDefault">\?\?\?</string>
-  <string name="Level_TileDescChasm">あなたは底を見ることが出来ない。</string>
+  <string name="Level_TileDescChasm">底が見えない。</string>
   <string name="Level_TileDescWater">火を消すためには水の中に入ります。</string>
   <string name="Level_TileDescEntrance">上り階段は上の階層に通じています。</string>
   <string name="Level_TileDescExit">下り階段は下の階層に通じています。</string>
