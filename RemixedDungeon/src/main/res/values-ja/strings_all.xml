@@ -2422,8 +2422,8 @@
   <string name="Hunger_Hungry_0">お腹が空いた</string>
   <string name="Hunger_Hungry_1">お腹が空いた</string>
   <string name="Hunger_Hungry_2">お腹が空いた</string>
-  <string name="Hunger_Starving_0">あなたは飢餓だ！</string>
-  <string name="Hunger_Starving_1">あなたは飢餓だ！</string>
+  <string name="Hunger_Starving_0">飢え死にしそうだ！</string>
+  <string name="Hunger_Starving_1">飢え死にしそうだ！</string>
   <string name="Hunger_Starving_2">あなたは飢餓だ！</string>
   <string name="HeroClass_NecromancerPerks_0">ネクロマンサーはスタート時に15ポイントの体力がある。</string>
   <string name="HeroClass_NecromancerPerks_1">ネクロマンサーは死の呪文を唱えるためにマナを使う。</string>
