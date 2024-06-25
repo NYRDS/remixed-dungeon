@@ -2018,7 +2018,7 @@
   <string name="DeferedDamageBuff_Info">痛みが鈍り、一度に受けるダメージが減った。残されたダメージ%d</string>
   <string name="DeferedDamage_Killed_Txt">%s はあなたを殺した...</string>
   <string name="Plant_ACPlant">植える</string>
-  <string name="Plant_Info">あなたが育てたい場所に %1$s の種子を投げてください。\n\n%2$s</string>
+  <string name="Plant_Info">この種を%1$sを育てたい場所に投げる。%2$s</string>
   <string name="Plant_Seed">%s の種子</string>
   <string name="Dreamweed_Name">ドリームウィード</string>
   <string name="Dreamweed_Desc">ドリームウィードに触れると、輝く混乱ガス雲が発生します。</string>
