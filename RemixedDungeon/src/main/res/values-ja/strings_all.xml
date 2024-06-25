@@ -2449,9 +2449,9 @@
   <string name="HeroClass_RogPerks_5">魔法の地図のスクロールは最初から特定されている。</string>
   <string name="HeroClass_HunPerks_0">ハントレスはスタート時に15ポイントの体力がある。</string>
   <string name="HeroClass_HunPerks_1">ハントレスはスタート時に強化された特殊なブーメランを持つ。</string>
-  <string name="HeroClass_HunPerks_2">ハンターは遠隔武器が得意で、ダメージボーナスを得ます。</string>
+  <string name="HeroClass_HunPerks_2">ハントレスは遠隔武器の扱いに長けており、遠隔武器を使用する際には過剰な力に応じたダメージボーナスを得る。</string>
   <string name="HeroClass_HunPerks_3">ハントレスは雫からより多くの体力を得られる。</string>
-  <string name="HeroClass_HunPerks_4">ハンターは障害物に隠れているモンスターでも気配がわかります。</string>
+  <string name="HeroClass_HunPerks_4">ハントレスは、たとえモンスターが障害物の陰に隠れていても、それを感知することができる。</string>
   <string name="HeroClass_ElfPerks_0">エルフはスタート時に15ポイントの体力があるが力は9ポイントしかない。</string>
   <string name="HeroClass_ElfPerks_1">エルフはrootingに免疫がある。</string>
   <string name="HeroClass_ElfPerks_2">エルフはスタート時に強化された木の弓と矢の束を持つ。</string>
