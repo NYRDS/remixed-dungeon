@@ -2082,7 +2082,7 @@
   <string name="Level_TileDescWater">燃えた場合は、水の中に入って消火する。</string>
   <string name="Level_TileDescEntrance">階段は上層階まで続いている。</string>
   <string name="Level_TileDescExit">階段は下層階まで続いている。</string>
-  <string name="Level_TileDescEmbers">燃えさかる炎が床を覆っている。</string>
+  <string name="Level_TileDescEmbers">熾火が床を覆っている。</string>
   <string name="Level_TileDescHighGrass">密生した凍った植物が視界を遮る。</string>
   <string name="Level_TileDescLockedDoor">この扉には鍵がかかっている。開けるにはこの扉にあう鍵が必要だ。</string>
   <string name="Level_TileDescLockedExit">重い鉄格子が下へ続く階段をふさいでいる。</string>
