@@ -1069,11 +1069,11 @@
   <string name="RatKing_Gender">男性</string>
   <string name="Weapon_Identify">あなたは今 %1$s を識別するために十分精通している。これは %2$s だ。</string>
   <string name="Weapon_Incompatible">異なる種類の魔法の相互作用によって、この武器のエンチャントは無効化された！</string>
-  <string name="MeleeWeapon_Info1a">この %1$s は %2$s ランク-%3$d の近接武器です。</string>
+  <string name="MeleeWeapon_Info1a">この %1$s は %2$s ランク-%3$d の近接武器だ。</string>
   <string name="MeleeWeapon_Info1b">普通の</string>
   <string name="MeleeWeapon_Info1c">強化された</string>
   <string name="MeleeWeapon_Info1d">劣化した</string>
-  <string name="MeleeWeapon_Info2a">平均ダメージは %d ポイントです。</string>
+  <string name="MeleeWeapon_Info2a">平均ダメージは %d ポイントだ。</string>
   <string name="MeleeWeapon_Info2b">平均ダメージは %1$d ポイントで、%2$d の力が必要です。</string>
   <string name="MeleeWeapon_Info2c">あなたにとって、この武器は重い。</string>
   <string name="MeleeWeapon_Info3a">これはかなり %s な武器です。</string>
