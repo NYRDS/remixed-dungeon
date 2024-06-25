@@ -225,9 +225,9 @@
   <string name="WandOfMagicMissile_ACDisenchant">魔法を解く</string>
   <string name="WandOfMagicMissile_Info1">あなたは、あなたの魔弾の杖に殺された...</string>
   <string name="WandOfMagicMissile_SelectWand">強化する杖を選択</string>
-  <string name="WandOfMagicMissile_Desinchanted">あなたは魔弾の杖の魔法を解き、強化のためにあなたの %s を使いました。</string>
+  <string name="WandOfMagicMissile_Desinchanted">あなたは魔弾の杖の魔法を解き、そのエッセンスを使って%s を強化した。</string>
   <string name="WandOfPoison_Name">毒の杖</string>
-  <string name="WandOfPoison_Info">このねじれた木材からの嫌な爆発は、目標に猛毒を注ぎ込みます。効果が切れるまでその生き物は猛毒に苦しみます。効果の持続時間は杖のレベルと共に増加します。</string>
+  <string name="WandOfPoison_Info">このねじれた木片からの下劣な爆風は、対象を致命的な毒で覆う。毒に冒された生き物は効果が終了するまで持続ダメージを受け続ける。効果時間は杖のレベルに応じて増加する。</string>
   <string name="WandOfPoison_Info1">何も起こらなかった</string>
   <string name="WandOfRegrowth_Name">再生の杖</string>
   <string name="WandOfRegrowth_Info">\"命の終わりは新しい命の始まり... 永遠のサイクルはどこにでもあります！\"</string>
