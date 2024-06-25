@@ -485,7 +485,7 @@
   <string name="Stylus_Inscribed">あなたは %2$s に %1$s を刻み込んだ</string>
   <string name="TomeOfMastery_Name">習熟の学術本</string>
   <string name="TomeOfMastery_ACRead">読む</string>
-  <string name="TomeOfMastery_Info">この擦り切れた革の本は、厚くはないですが多くの情報を得ることができると感じています。この本を読み取るにはいくらかの時間を必要とするでしょう。</string>
+  <string name="TomeOfMastery_Info">この使い古された革の本はそれほど分厚くはないが、何となく、そこから多くのことを得られるような気がする。しかし、この本を読むには時間がかかるだろう。</string>
   <string name="TomeOfMastery_Blinded">あなたは盲目なため読むことが出来ない</string>
   <string name="TomeOfMastery_Choose">あなたは %s の道を選択しました！</string>
   <string name="Torch_Name">たいまつ</string>
