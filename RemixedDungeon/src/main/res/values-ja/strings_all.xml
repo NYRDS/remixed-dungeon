@@ -1294,11 +1294,11 @@
   <string name="Shadow_Name">シャドウ</string>
   <string name="Shadow_Gender">弱々しい</string>
   <string name="Shadow_Name_Objective">シャドウ</string>
-  <string name="Shadow_Desc">シャドウは古い刑務所の遺跡を静かに彷徨う。時折、自分自身を冒険者に見せる。通常それは最新の冒険者だ。</string>
+  <string name="Shadow_Desc">シャドウは古代の牢獄の廃墟を静かにさまよい、冒険者たちの前に時折姿を現すだけだ。</string>
   <string name="Shaman_Name">ノールシャーマン</string>
   <string name="Shaman_Gender">力強い</string>
   <string name="Shaman_Name_Objective">ノールシャーマン</string>
-  <string name="Shaman_Desc">とても賢いノールは呪術的な魔法を習得できます。ノールシャーマンは戦力の不足を呪文で補います。部族内の誰が疑問に思おうとも、それを使うことを躊躇しない。</string>
+  <string name="Shaman_Desc">最も知能の高いノールはシャーマンの魔法を使いこなすことができる。ノールシャーマンは力不足を補うために戦闘魔法を好み、部族内での地位に疑問を抱く者には躊躇なく使用する。</string>
   <string name="Shaman_Killed">%s のライトニングボルトはあなたを倒しました...</string>
   <string name="Shielded_Name">シールデッドブルート</string>
   <string name="Shielded_Gender">力強い</string>
