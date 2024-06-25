@@ -1997,7 +1997,7 @@
   <string name="RogueArmor_Fov">あなたは跳んでフィールドを眺めることができます。</string>
   <string name="RogueArmor_Prompt">跳ぶ場所を選んでください。</string>
   <string name="ScaleArmor_Name">スケイルアーマー</string>
-  <string name="ScaleArmor_Desc">金属片を革のベストに縫い付けた、柔軟で丈夫な鎧。</string>
+  <string name="ScaleArmor_Desc">革製のベストに縫い付けられた金属製の鱗が、柔軟でありながら防御力の高い鎧を作り出している。</string>
   <string name="WarriorArmor_Name">戦士の鎧</string>
   <string name="WarriorArmor_Desc">戦士はこの重そうな鎧で跳躍し、近くの敵にスタンを与えます。</string>
   <string name="WarriorArmor_ACSpecial">英雄の跳躍</string>
