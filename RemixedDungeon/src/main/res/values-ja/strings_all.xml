@@ -443,7 +443,7 @@
   <string name="Item_PackFull">あなたの荷物は%sで一杯だ。</string>
   <string name="Item_DirThrow">投げる方向を選ぶ</string>
   <string name="EquipableItem_ACEquip">装備する</string>
-  <string name="EquipableItem_ACUnequip">外す</string>
+  <string name="EquipableItem_ACUnequip">装備解除</string>
   <string name="EquipableItem_Unequip">呪われた %s は外すことが出来ない！</string>
   <string name="Heap_Mimic">これはミミックです！</string>
   <string name="Amulet_Name">イェンダーの魔除け</string>
