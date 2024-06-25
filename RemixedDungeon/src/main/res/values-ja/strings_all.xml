@@ -538,8 +538,8 @@
   <string name="RatSkull_Info">狩猟のトロフィーにはいいかもしれないが、壁に飾るには臭すぎる。</string>
   <string name="RatSkull_Info2">その一方で、所有者がネズミ、それも大きくて臭いネズミを殺すことができることも示している。</string>
   <string name="ConfusionGas_Info">混乱のガスが渦巻いている。</string>
-  <string name="Fire_Info">炎がここに燃え盛っています。</string>
-  <string name="Foliage_Info">一筋の光が地下の庭の暗がりを突き刺しています。</string>
+  <string name="Fire_Info">ここで炎が燃え盛っている。</string>
+  <string name="Foliage_Info">地下の庭の暗がりを光線が貫いている。</string>
   <string name="ParalyticGas_Info">麻痺ガスの雲がここに渦巻いています。</string>
   <string name="ToxicGas_Info">緑の毒ガスの雲がここに渦巻いています。</string>
   <string name="ToxicGas_Info1">あなたは毒ガスを吸って死亡しました...</string>
