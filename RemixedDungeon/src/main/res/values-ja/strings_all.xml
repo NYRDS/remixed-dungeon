@@ -82,7 +82,7 @@
   <string name="ChaosCrystal_Fuse">融合</string>
   <string name="ChaosCrystal_Prompt">混沌の印をセットする場所を選ぶ</string>
   <string name="ChaosCrystal_SelectForFuse">融合する混沌のクリスタルを選ぶ</string>
-  <string name="ChaosCrystal_ScrollFused">クリスタルはスクロールのルーンに吸収されて、いまは %s です</string>
+  <string name="ChaosCrystal_ScrollFused">スクロールに刻まれたルーンにクリスタルが吸収され、 %s になった。</string>
   <string name="ChaosCrystal_SwordFused">クリスタルはあなたの武器を吸収し、剣の姿になった</string>
   <string name="ChaosCrystal_BowFused">クリスタルはあなたの弓を吸収し、弓の姿になった</string>
   <string name="ChaosCrystal_StaffFused">クリスタルはあなたの杖を吸収し、杖の姿になった</string>
