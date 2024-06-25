@@ -1726,8 +1726,8 @@
   <string name="BlankScroll_Info">真っ白なスクロール。何か書けるのでは？</string>
   <string name="BlankScroll_ReallyBlank">このスクロールは白紙だ</string>
   <string name="ScrollOfChallenge_Name">挑戦のスクロール</string>
-  <string name="ScrollOfChallenge_Info">声に出して読んだ時、このスクロールはすべてのモンスターを目覚めさせる挑戦的な咆哮を発し、読み手の場所を警告します。</string>
-  <string name="ScrollOfChallenge_Info1">スクロールはダンジョン全体に挑戦的な咆哮を響かせます！</string>
+  <string name="ScrollOfChallenge_Info">このスクロールを声に出して読むと、すべてのモンスターを目覚めさせ、読み手の居場所を知らせる挑戦的な咆哮を放つ。</string>
+  <string name="ScrollOfChallenge_Info1">スクロールは、ダンジョン全体に響き渡る挑戦的な轟音を発した！</string>
   <string name="ScrollOfIdentify_Name">識別のスクロール</string>
   <string name="ScrollOfIdentify_Info">恒久的に1つのアイテムの秘密を明らかにします。</string>
   <string name="ScrollOfIdentify_InvTitle">識別するアイテムを選択</string>
