@@ -1155,10 +1155,10 @@
   <string name="Shuriken_Info">カミソリのような鋭い刃を持つ星形の金属片で、標的に大きなダメージを与える。非常に高い速度で投げることができる。</string>
   <string name="Shuriken_Gender">力強い</string>
   <string name="Tamahawk_Name">トマホーク</string>
-  <string name="Tamahawk_Info">この投げ斧は重くはありませんが、効果的に使用するにはかなりの力が必要です。</string>
+  <string name="Tamahawk_Info">この投げ斧はそれほど重くはないが、それでも効果的に使うにはかなりの力が必要だ。</string>
   <string name="Tamahawk_Gender">力強い</string>
   <string name="Kusarigama_Name">鎖鎌</string>
-  <string name="Kusarigama_Info">この武器は鎌と金属の鎖と重い鉄のおもりで成り立っています。</string>
+  <string name="Kusarigama_Info">この武器は金属製の鎖につながれた鎌で、もう一方の端には重い鉄の重りがついている。</string>
   <string name="Kusarigama_Gender">弱々しい</string>
   <string name="Kusarigama_Pull">引く</string>
   <string name="ChaosSword_Name">カオスソード</string>
