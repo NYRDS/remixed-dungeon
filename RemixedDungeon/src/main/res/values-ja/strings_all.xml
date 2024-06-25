@@ -2165,7 +2165,7 @@
   <string name="Potion_Yes">ああ、自分が何をしているかは分かっている</string>
   <string name="Potion_No">いや、気が変わった</string>
   <string name="Potion_SureDrink">本当に飲むのか？ほとんどの場合、このようなポーションは敵に投げつけるべきだ。</string>
-  <string name="Potion_SureThrow">本当に投げるのか？ほとんどの場合、飲むことに意味がある。</string>
+  <string name="Potion_SureThrow">本当に投げるのか？ほとんどの場合、このようなポーションは飲むことに意味がある。</string>
   <string name="Potion_Shatter">フラスコが砕け、%sの液体が無害に飛び散る。</string>
   <string name="PotionOfExperience_Name">経験のポーション</string>
   <string name="PotionOfExperience_Info">幾多の戦いの経験を液体にしたこの飲み物は、あなたの経験値を一気に引き上げてくれるだろう。</string>
