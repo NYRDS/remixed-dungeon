@@ -243,7 +243,7 @@
   <string name="WandOfTeleportation_Info1">%1$s は %2$s をどこかへテレポートさせた</string>
   <string name="WandOfTeleportation_Info2">何も起こらなかった</string>
   <string name="WndPortal_Title">ポータル</string>
-  <string name="WndPortal_Info">このポータルを使えば、町に戻ることができる。かなり不安定なようで、おそらく長くは使えないだろう。使いたいのかい？</string>
+  <string name="WndPortal_Info">このポータルを使えば、町に戻ることができる。かなり不安定なようで、おそらく長くは使えないだろう。使ってみたいか？</string>
   <string name="WndPortal_Info_Return">このポータルを使うとダンジョンに戻れる。使ってみたいか？</string>
   <string name="WndPortal_Warning_Title">ポータルからの警告!</string>
   <string name="WndPortal_Warning_Info">この階層のポータルはまだ使用されていません。退出すると、このポータルを再度使用できなくなります。 退出してもよろしいですか?</string>
