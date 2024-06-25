@@ -2385,7 +2385,7 @@
   <string name="Char_Kill_2">%s はあなたを殺した...</string>
   <string name="Char_Defeat_0">%1$s は %2$s を倒した</string>
   <string name="Char_Defeat_1">%1$s は %2$s を倒した</string>
-  <string name="Char_Defeat_2">%1$s は %2$s を倒しました</string>
+  <string name="Char_Defeat_2">%1$s は %2$s を倒した</string>
   <string name="Char_StaDodged_0">回避した</string>
   <string name="Char_StaDodged_1">回避した</string>
   <string name="Char_StaDodged_2">回避した</string>
