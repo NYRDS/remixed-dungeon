@@ -500,7 +500,7 @@
   <string name="Weightstone_WndChoice">あなたは %s の何を重視する？</string>
   <string name="Weightstone_WndSpeed">速さを</string>
   <string name="Weightstone_WndAccuracy">正確さを</string>
-  <string name="Weightstone_WndCancel">気にするな</string>
+  <string name="Weightstone_WndCancel">なにも重視しない</string>
   <string name="Bag_ACOpen">開ける</string>
   <string name="Keyring_Name">キーホルダー</string>
   <string name="Keyring_Info">これは、あなたの荷物の残り部分とは別に、鍵を保持することができる銅のキーホルダーです。</string>
