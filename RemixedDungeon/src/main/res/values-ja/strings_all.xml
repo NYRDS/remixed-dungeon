@@ -1497,11 +1497,11 @@
   <string name="Badges_DeathGlyph">刻印による死亡</string>
   <string name="Badges_DeathFalling">落下による死亡</string>
   <string name="Badges_Yasd">火災、毒、毒ガス、飢餓による死亡</string>
-  <string name="Badges_BossSlain1">グーを殺した</string>
+  <string name="Badges_BossSlain1">グゥを殺した</string>
   <string name="Badges_BossSlain2">天狗を殺した</string>
   <string name="Badges_BossSlain3">DM-300を壊した</string>
   <string name="Badges_BossSlain4">ドワーフの王を殺した</string>
-  <string name="Badges_BossSlain1All">すべてのクラスでグーを殺した</string>
+  <string name="Badges_BossSlain1All">すべてのクラスでグゥを殺した</string>
   <string name="Badges_BossSlain3All">すべてのクラスでDM-300を壊した</string>
   <string name="Badges_RingHaggler">値切りのリングを得た</string>
   <string name="Badges_RingThorns">いばらのリングを得た</string>
