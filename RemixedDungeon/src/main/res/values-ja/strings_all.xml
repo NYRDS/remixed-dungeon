@@ -1738,8 +1738,8 @@
   <string name="ScrollOfLullaby_Info2">スクロールは心地よいメロディを発し、 %s は眠りに落ちた！</string>
   <string name="ScrollOfLullaby_Info3">スクロールは心地よいメロディを発し、モンスターは眠りに落ちた！</string>
   <string name="ScrollOfMagicMapping_Name">魔法の地図のスクロール</string>
-  <string name="ScrollOfMagicMapping_Info">このスクロールを読むと、あなたの脳の中にこの階層のすべての構造、隠された秘密までもがくっきりと刻み込まれます。アイテムの場所や生き物の場所は不明のままです。</string>
-  <string name="ScrollOfMagicMapping_Layout">あなたはこれでこの階層の構造がすべてわかります。</string>
+  <string name="ScrollOfMagicMapping_Info">このスクロールを読むと、鮮明なイメージがあなたの記憶に刻まれ、この階層の正確な構造と隠された秘密がすべて明らかになる。ただしアイテムや生き物の位置まではわからない。</string>
+  <string name="ScrollOfMagicMapping_Layout">これでこの階層の構造が理解できただろう。</string>
   <string name="ScrollOfMirrorImage_Name">鏡像のスクロール</string>
   <string name="ScrollOfMirrorImage_Info">このスクロール上の呪文は、あなたそっくりの鏡像を作り出し、敵を追いかけます。</string>
   <string name="ScrollOfPsionicBlast_Name">心霊破のスクロール</string>
