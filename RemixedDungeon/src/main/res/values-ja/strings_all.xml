@@ -540,8 +540,8 @@
   <string name="ConfusionGas_Info">混乱のガスが渦巻いている。</string>
   <string name="Fire_Info">ここで炎が燃え盛っている。</string>
   <string name="Foliage_Info">地下の庭の暗がりを光線が貫いている。</string>
-  <string name="ParalyticGas_Info">麻痺ガスの雲がここに渦巻いています。</string>
-  <string name="ToxicGas_Info">緑の毒ガスの雲がここに渦巻いています。</string>
+  <string name="ParalyticGas_Info">麻痺のガスが渦巻いている。</string>
+  <string name="ToxicGas_Info">緑がかった有毒のガスが渦巻いている。</string>
   <string name="ToxicGas_Info1">あなたは毒ガスを吸って死亡しました...</string>
   <string name="WaterOfAwareness_Info">知識の力がこの井戸の水から放射されている。一口飲めばあなたの装備品のすべての秘密が明らかになります。</string>
   <string name="WaterOfAwareness_Procced">あなたは一口飲んで、知識があなたの心に注がれるのを感じた。あなたは今の装備品についてすべてを知っています。また、あなたはこの階層のすべてのアイテムを感知していて、その秘密のすべてを知っています。</string>
