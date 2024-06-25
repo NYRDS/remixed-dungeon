@@ -1344,11 +1344,11 @@
   <string name="Warlock_Gender">力強い</string>
   <string name="Warlock_Name_Objective">ドワーフウォーロック</string>
   <string name="Warlock_Desc">ドワーフの関心が工学から魔術に移ると、ウォーロックが都市で権力を握るようになった。彼らは元素魔法から始めたが、やがて悪魔学と死霊術に転向した。</string>
-  <string name="Warlock_Killed">%s のシャドウボルトはあなたを倒しました...</string>
+  <string name="Warlock_Killed">%s のシャドウボルトがあなたを殺した...</string>
   <string name="Wraith_Name">レイス</string>
   <string name="Wraith_Gender">力強い</string>
   <string name="Wraith_Name_Objective">レイス</string>
-  <string name="Wraith_Desc">レイスは罪人の怨霊です。幽体なため通常武器では命中させるのが非常に困難です。</string>
+  <string name="Wraith_Desc">レイスとは、墓を荒らされた罪人の復讐心に燃えた霊のことである。幽体であるため、通常の武器で攻撃するのは非常に難しい。</string>
   <string name="Wraith_Defense">回避した</string>
   <string name="Yog_Name">ヨグ-ゼヴァ</string>
   <string name="Yog_Gender">力強い</string>
