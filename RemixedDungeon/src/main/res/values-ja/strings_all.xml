@@ -1765,9 +1765,9 @@
   <string name="ScrollOfUpgrade_Name">強化のスクロール</string>
   <string name="ScrollOfUpgrade_Info">このスクロールは1つのアイテムを強化し、その品質を向上させる。杖は威力とチャージ回数が増加し、武器はより多くのダメージを与えたり、より正確に攻撃出来るようになり、鎧はより多くの打撃をそらすようになり、リングは着用者に与える効果が強くなる。また、武器や防具を使用するのに必要な筋力も少なくなり、アイテムにかけられた呪いも解ける。</string>
   <string name="ScrollOfUpgrade_InvTitle">強化するアイテムを選択</string>
-  <string name="ScrollOfUpgrade_LooksBetter">あなたの %s は良くなったように見えます</string>
+  <string name="ScrollOfUpgrade_LooksBetter">あなたの %s は良くなったように見える</string>
   <string name="ScrollOfWeaponUpgrade_Name">武器強化のスクロール</string>
-  <string name="ScrollOfWeaponUpgrade_Info">このスクロールは近接武器の品質を改善し強化します。通常の強化のスクロールとは違い、この特殊版は武器の魔術を破壊しません。逆に、魔術のない武器にランダムな魔術を注ぎこむことが出来ます。</string>
+  <string name="ScrollOfWeaponUpgrade_Info">このスクロールは近接武器をアップグレードし、その品質を向上させる。通常のアップグレードの巻物とは違い、この特別なスクロールは武器のエンチャントを破壊することはない。それどころか、エンチャントされていない武器にランダムなエンチャントを付与することができる。</string>
   <string name="ScrollOfWeaponUpgrade_InvTitle">強化する武器を選択</string>
   <string name="ScrollOfWeaponUpgrade_LooksBetter">あなたの %s は良くなったように見えます</string>
   <string name="ScrollOfDomination_Name">支配のスクロール</string>
