@@ -548,7 +548,7 @@
   <string name="WaterOfHealth_Info">この井戸の水からは再生の力が放たれている。一口飲めばあなたの傷を癒やし、空腹を満たしてくれるだろう。</string>
   <string name="WaterOfHealth_Procced">一口飲むと、傷が完全に癒えていくのを感じる。</string>
   <string name="WaterOfTransmutation_Info">この井戸の水からは変化の力が放たれている。アイテムを井戸に投げ入れると、別のものに変わるだろう。</string>
-  <string name="Web_Info">ここはすべてが濃い蜘蛛の巣で覆われている。</string>
+  <string name="Web_Info">ここではすべてが分厚い蜘蛛の巣で覆われている。</string>
   <string name="AmokBuff_Name">逆上</string>
   <string name="AmokBuff_Info">不運な人々の命を奪う暴挙を感じろ。</string>
   <string name="BarkskinBuff_Name">樹皮の肌</string>
