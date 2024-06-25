@@ -1402,8 +1402,8 @@
   <string name="AirElemental_Desc">風のエレメンタルは生きた空気でできた空飛ぶ魔法の存在だ。</string>
   <string name="EarthElemental_Name">土のエレメンタル</string>
   <string name="EarthElemental_Gender">力強い</string>
-  <string name="EarthElemental_Name_Objective">アースエレメンタル</string>
-  <string name="EarthElemental_Desc">アースエレメンタルは自然の力が集中したモノ。</string>
+  <string name="EarthElemental_Name_Objective">土のエレメンタル</string>
+  <string name="EarthElemental_Desc">土のエレメンタルは自然の力が凝縮された大地の塊である。</string>
   <string name="Crystal_Name">浮遊クリスタル</string>
   <string name="Crystal_Gender">力強い</string>
   <string name="Crystal_Name_Objective">浮遊クリスタル</string>
