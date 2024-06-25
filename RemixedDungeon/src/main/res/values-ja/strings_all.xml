@@ -1652,7 +1652,7 @@
   <string name="TownsfolkNPC_Message4">春が来て下水道が水浸しにならなければいいのだが。ネズミの大発生はもうごめんだ。</string>
   <string name="HealerNPC_Name">町長</string>
   <string name="HealerNPC_Gender">男性</string>
-  <string name="HealerNPC_Name_Objective">町長</string>
+  <string name="HealerNPC_Name_Objective">街の司祭</string>
   <string name="HealerNPC_Desc">杖を作っていそうな老人だ。</string>
   <string name="HealerNPC_Message1">冒険者なら誰でも無料で治療を受けられる！</string>
   <string name="HealerNPC_Message2">具合が悪くなったり、お腹が空いたりしたら、いつでも戻ってきてください！</string>
