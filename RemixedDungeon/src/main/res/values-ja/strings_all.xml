@@ -382,7 +382,7 @@
   <string name="WndHero_StaJournal">日記</string>
   <string name="WndImp_Message">おぉ！やった！あんたはオイラのヒーローだ！報酬についてだけど、あいにくオイラは現金は持ってないだ。だけど、良い物があるぞ。これは家宝のリングで、オイラの爺ちゃんが死んだパラディンの指から取ったものなんだ。</string>
   <string name="WndImp_Reward">リングを受け取る</string>
-  <string name="WndInfoCell_Nothing">ここには何もありません。</string>
+  <string name="WndInfoCell_Nothing">ここには何もない。</string>
   <string name="WndInfoItem_Chest">箱</string>
   <string name="WndInfoItem_LockedChest">鍵付き箱</string>
   <string name="WndInfoItem_CrystalChest">クリスタルの箱</string>
