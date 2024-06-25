@@ -1135,8 +1135,7 @@
   <string name="MissileWeapon_Info1">この武器の平均ダメージは、1ヒットにつき%dポイントに等しい。</string>
   <string name="MissileWeapon_Info2">あなたの力が不足しているため、この %s の正確さと攻撃速度が低下している。</string>
   <string name="MissileWeapon_Info3">あなたの力が十分なので、この %s のダメージが増加する。</string>
-  <string name="MissileWeapon_Info4">
-\n\nあなたはすぐ使える状態で %s を持っている。</string>
+  <string name="MissileWeapon_Info4">あなたは %s を構えている。</string>
   <string name="Boomerang_Name">ブーメラン</string>
   <string name="Boomerang_Info">敵に投げられたこの平らで湾曲した木の武器は投げ手の元に戻ってきます。</string>
   <string name="Boomerang_Gender">力強い</string>
