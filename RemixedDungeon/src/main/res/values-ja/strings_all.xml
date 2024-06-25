@@ -2434,7 +2434,7 @@
   <string name="HeroClass_WarPerks_1">ウォリアーは、後で「鍛え直す」ことで、別の近接武器にアップグレードできるユニークなショートソードを持ってスタートする。</string>
   <string name="HeroClass_WarPerks_2">ウォリアーは遠隔武器の扱いが苦手だ。</string>
   <string name="HeroClass_WarPerks_3">どんな食べ物でも、食べればいくらかの体力を回復することができる。</string>
-  <string name="HeroClass_WarPerks_4">力のポーションは最初から特定されます。</string>
+  <string name="HeroClass_WarPerks_4">力のポーションは最初から特定されている。</string>
   <string name="HeroClass_MagPerks_0">魔法使いは、後で「魔法解除」して別の杖をアップグレードすることができるユニークな魔弾の杖を持ってスタートする。</string>
   <string name="HeroClass_MagPerks_1">メイジは杖のリチャージが早い。</string>
   <string name="HeroClass_MagPerks_2">食品を食べると、インベントリ内のすべての杖のチャージが1回復する。</string>
