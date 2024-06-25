@@ -229,7 +229,7 @@
   <string name="WandOfPoison_Name">毒の杖</string>
   <string name="WandOfPoison_Info">このねじれた木片からの下劣な爆風は、対象を致命的な毒で覆う。毒に冒された生き物は効果が終了するまで持続ダメージを受け続ける。効果時間は杖のレベルに応じて増加する。</string>
   <string name="WandOfPoison_Info1">何も起こらなかった</string>
-  <string name="WandOfRegrowth_Name">再生の杖</string>
+  <string name="WandOfRegrowth_Name">萌芽の杖</string>
   <string name="WandOfRegrowth_Info">\"生命が絶えるとき、常に新しい生命が芽生え始める...。永遠のサイクルは常に続いている\"</string>
   <string name="WandOfRegrowth_Info1">何も起こらなかった</string>
   <string name="WandOfSlowness_Name">鈍化の杖</string>
