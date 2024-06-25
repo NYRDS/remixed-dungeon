@@ -238,7 +238,7 @@
   <string name="WandOfTelekinesis_Name">念動の杖</string>
   <string name="WandOfTelekinesis_Info">この杖から放たれる魔力の波動は、道中のすべての細胞に影響を与え、罠を発動させ、高い草木を踏みつけ、閉ざされた扉を開き、開いた扉を閉じる。また、モンスターを押し戻したりもする。</string>
   <string name="WandOfTelekinesis_YouNowHave">あなたは %s を荷物の中に魔法のように運びこんだ。</string>
-  <string name="WandOfTeleportation_Name">瞬間移動の杖</string>
+  <string name="WandOfTeleportation_Name">転移の杖</string>
   <string name="WandOfTeleportation_Info">この杖からの爆発は、生き物の意思を無視して、現在の階層のランダムな場所へテレポートさせます。</string>
   <string name="WandOfTeleportation_Info1">%1$s は %2$s をどこかへテレポートさせた</string>
   <string name="WandOfTeleportation_Info2">何も起こらなかった</string>
