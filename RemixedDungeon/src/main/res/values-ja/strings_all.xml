@@ -2190,7 +2190,7 @@
   <string name="PotionOfLiquidFlame_Name">液化炎のポーション</string>
   <string name="PotionOfLiquidFlame_Info">このフラスコには、外気に触れると激しく燃え上がる化合物が入っています。</string>
   <string name="PotionOfMight_Name">実力のポーション</string>
-  <string name="PotionOfMight_Info">この強力な液体は、あなたの筋肉に作用して、力を1ポイント、ヘルスを5ポイント上昇させます。</string>
+  <string name="PotionOfMight_Info">この強力な液体は筋肉を巡り、力を1ポイント、体力を5ポイント 永久的に増加させる。</string>
   <string name="PotionOfMight_Apply">あなたの体に新しい力がみなぎる。</string>
   <string name="PotionOfMight_StaApply">力 +1、ヘルス +5</string>
   <string name="PotionOfMindVision_Name">透視のポーション</string>
