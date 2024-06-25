@@ -1689,7 +1689,7 @@
   <string name="town_deco_chimney_desc">石造りの煙突は、凍てつくような天候が日常となる、そこに建つすべての住宅にふさわしい仲間だ。</string>
   <string name="town_deco_window_name">窓</string>
   <string name="town_deco_window_desc">一般的なガラス窓で、特別なものはない。</string>
-  <string name="town_deco_door_name">ドア</string>
+  <string name="town_deco_door_name">扉</string>
   <string name="town_deco_door_desc">シンプルな木製の扉</string>
   <string name="town_deco_locked_door_name">鍵のかかった扉</string>
   <string name="town_deco_locked_door_desc">あの扉の向こうに、いったい何があるのだろう？</string>
