@@ -1343,7 +1343,7 @@
   <string name="Warlock_Name">ドワーフウォーロック</string>
   <string name="Warlock_Gender">力強い</string>
   <string name="Warlock_Name_Objective">ドワーフウォーロック</string>
-  <string name="Warlock_Desc">難解な工学技術から切り替えたドワーフは、ウォーロックとして街での権力を握った。彼らは元素魔法を始めたが、すぐに悪魔術と死霊術に切り替えた。</string>
+  <string name="Warlock_Desc">ドワーフの関心が工学から魔術に移ると、ウォーロックが都市で権力を握るようになった。彼らは元素魔法から始めたが、やがて悪魔学と死霊術に転向した。</string>
   <string name="Warlock_Killed">%s のシャドウボルトはあなたを倒しました...</string>
   <string name="Wraith_Name">レイス</string>
   <string name="Wraith_Gender">力強い</string>
