@@ -480,7 +480,7 @@
   <string name="LloidsBeacon_Set">このビーコンはRemixed Dungeonの%d階層のどこかに設置されている。</string>
   <string name="Stylus_Name">不可解な鉄筆</string>
   <string name="Stylus_ACInscribe">刻み込む</string>
-  <string name="Stylus_Info">この不可解な鉄筆は、黒っぽい非常に硬い石で作られています。あなたはグリフかルーンを刻み込むことが出来ます。しかし、どんな力を刻むかの選択権はあなたにはありません。鉄筆の意思があなたのために決めます。</string>
+  <string name="Stylus_Info">この不可解な鉄筆は、黒くて非常に硬い石でできている。この鉄筆を使ってグリフやルーンを刻むことができるが、何を刻むかは鉄筆の意思に委ねられ、あなたには決められない。</string>
   <string name="Stylus_SelectArmor">刻み込むアイテムを選択</string>
   <string name="Stylus_Inscribed">あなたは %2$s に %1$s を刻み込んだ</string>
   <string name="TomeOfMastery_Name">習熟の学術本</string>
