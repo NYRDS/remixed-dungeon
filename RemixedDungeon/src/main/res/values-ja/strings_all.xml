@@ -1959,8 +1959,7 @@
   <string name="Armor_Info1">この %1$s は攻撃ごとに \"%2$d\" のダメージを防ぐ。</string>
   <string name="Armor_Info2">あなたの力が不足しているため、移動速度と防御スキルが低下する。</string>
   <string name="Armor_Info3">あなたの力が不足しているため、この鎧を着用すると移動速度と防御スキルが低下する。</string>
-  <string name="Armor_Info4">
-\n\n一般的な %1$s は %2$d のダメージを防ぐ。 %3$d の力が必要です。</string>
+  <string name="Armor_Info4">一般的な%1$sは、1回の攻撃につき%2$d点までのダメージを防ぐ事ができ、%3$dの力を必要とする。</string>
   <string name="Armor_Info5">おそらくこの鎧は重すぎる。</string>
   <string name="Armor_Info6">それは刻まれている。</string>
   <string name="Armor_Info7a">
