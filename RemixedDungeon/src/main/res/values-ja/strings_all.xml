@@ -1998,8 +1998,8 @@
   <string name="RogueArmor_Prompt">跳ぶ場所を選んでください。</string>
   <string name="ScaleArmor_Name">スケイルアーマー</string>
   <string name="ScaleArmor_Desc">革製のベストに縫い付けられた金属製の鱗が、柔軟でありながら防御力の高い鎧を作り出している。</string>
-  <string name="WarriorArmor_Name">戦士の鎧</string>
-  <string name="WarriorArmor_Desc">戦士はこの重そうな鎧で跳躍し、近くの敵にスタンを与えます。</string>
+  <string name="WarriorArmor_Name">ウォリアーの鎧</string>
+  <string name="WarriorArmor_Desc">この鎧は重そうに見えるが、戦士が狙った場所に向かって勇壮なる跳躍を行い、叩きつけることで隣接するすべての敵を気絶させることができる。</string>
   <string name="WarriorArmor_ACSpecial">英雄の跳躍</string>
   <string name="WarriorArmor_NotWarrior">ウォリアーだけがこの鎧を使うことができます！</string>
   <string name="WarriorArmor_Prompt">跳躍する方向を選んでください。</string>
