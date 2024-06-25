@@ -1854,7 +1854,7 @@
   <string name="Shopkeeper_Desc">このがっしりした男は、ダンジョンというより、どこかの大都市の貿易街に似合いそうだ。彼がなぜここでの商売を好むのかは、商品の値段が説明している。</string>
   <string name="Shopkeeper_Sell">売却するアイテムを選択</string>
   <string name="WandMaker_Name">年老いたワンドメーカー</string>
-  <string name="WandMaker_Desc">この年老いているが壮健な紳士は、困惑した表情をしている。彼はマジックシールドで守られている。</string>
+  <string name="WandMaker_Desc">この年老いた、しかし矍鑠とした紳士は、少し困惑した表情を浮かべている。彼は魔法の盾で守られているようだ。</string>
   <string name="WandMaker_Defense">吸収された</string>
   <string name="WandMaker_Berry1">おぉ、こんな場所でちゃんとした人に会うなんて嬉しい驚きだ！私は珍しい材料のためにここに来ました - _ロトベリーの種子_。魔法の使い手なので、ここらのモンスターから自分自身は守れるが、恥ずかしながら時間をかけ過ぎた。私を助けてくれるだろうか？お礼として私の最高の杖の1つを譲ろう。</string>
   <string name="WandMaker_Berry2">ロトベリーの種子はあったかい、%s ？ない？心配しないでいい、私は急いでないから。</string>
