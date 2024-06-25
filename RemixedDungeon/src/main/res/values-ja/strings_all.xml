@@ -518,7 +518,7 @@
   <string name="IronKey_Info">この古びた鉄の鍵の刻み目はよく磨り減り、革のヒモは年季が入ってボロボロになっている。どんなドアを開けるのだろう？</string>
   <string name="IronKey_FromDepth">%d 階層の鉄の鍵</string>
   <string name="SkeletonKey_Name">骸骨の鍵</string>
-  <string name="SkeletonKey_Info">これは厳粛な鍵: その頭は頭蓋骨のような形をしています。おそらく厳粛な扉を開くことが出来ます。</string>
+  <string name="SkeletonKey_Info">これは厳粛な鍵だ: 頭がドクロの形をしている。おそらく、何か重大なドアを開けることができるのだろう。</string>
   <string name="CorpseDust_Name">コープスダスト</string>
   <string name="CorpseDust_Info">コープスダストの玉は普通のダストの玉と外見に違いはありません。しかし、あなたはそれを手にしてみれば何となく分かるでしょう。</string>
   <string name="CorpseDust_Info2">多分、あなたが不安と怒りを感じるのはそれを保持したからでしょう。</string>
