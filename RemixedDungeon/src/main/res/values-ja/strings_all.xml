@@ -1975,7 +1975,7 @@
   <string name="ElfArmor_Desc">このマントの助けを借りて、エルフは自然の力そのものを呼び出すことができる。固い石を突き破り瞬く間に高い草が生え、視界に入るすべての敵を動けなくする。</string>
   <string name="ElfArmor_ACSpecial">自然を呼び出す</string>
   <string name="ElfArmor_NotElf">エルフだけがこの鎧を使うことができます。</string>
-  <string name="HuntressArmor_Name">ハンターのマント</string>
+  <string name="HuntressArmor_Name">ハントレスのマント</string>
   <string name="HuntressArmor_Desc">ハンターのこのようなマントはスペクトルブレードのファンを作ることができる。ハンターの視界内の単体ターゲットにこれらのブレードは、彼女の現在装備の近接武器に応じたダメージを与えます。</string>
   <string name="HuntressArmor_ACSpecial">スペクトルブレード</string>
   <string name="HuntressArmor_NoEnemies">敵が見えません</string>
