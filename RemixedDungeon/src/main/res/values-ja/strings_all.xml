@@ -1963,7 +1963,7 @@
   <string name="Armor_Info5">この鎧はあなたには重すぎるようだ。</string>
   <string name="Armor_Info6">と刻まれている。</string>
   <string name="Armor_Info7a">あなたは %1$s%2$s を着用している。</string>
-  <string name="Armor_Info7b">、それは呪われているため、あなたは取り除くことが出来ない</string>
+  <string name="Armor_Info7b">、それは呪われているため、取り除くことが出来ない</string>
   <string name="Armor_Info8">あなたは %s に潜んでいる邪悪な魔力を感じることが出来る。</string>
   <string name="Armor_Glyph">刻印</string>
   <string name="ClassArmor_Desc">見た目は素晴らしい！</string>
