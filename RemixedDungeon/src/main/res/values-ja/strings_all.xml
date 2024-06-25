@@ -2012,11 +2012,11 @@
   <string name="Multiplicity_Txt">多重の %s</string>
   <string name="Potential_Txt">感電の %s</string>
   <string name="Stench_Txt">悪臭の %s</string>
-  <string name="Viscosity_Txt">鈍感の %s</string>
+  <string name="Viscosity_Txt">遅延の %s</string>
   <string name="Viscosity_Status">遅延%d</string>
   <string name="DeferedDamageBuff_Name">遅延ダメージ（%d）</string>
   <string name="DeferedDamageBuff_Info">痛みが鈍り、一度に受けるダメージが減った。残されたダメージ%d</string>
-  <string name="DeferedDamage_Killed_Txt">%s はあなたを倒しました...</string>
+  <string name="DeferedDamage_Killed_Txt">%s はあなたを殺した...</string>
   <string name="Plant_ACPlant">植える</string>
   <string name="Plant_Info">あなたが育てたい場所に %1$s の種子を投げてください。\n\n%2$s</string>
   <string name="Plant_Seed">%s の種子</string>
