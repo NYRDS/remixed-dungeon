@@ -542,8 +542,8 @@
   <string name="Foliage_Info">地下の庭の暗がりを光線が貫いている。</string>
   <string name="ParalyticGas_Info">麻痺のガスが渦巻いている。</string>
   <string name="ToxicGas_Info">緑がかった有毒のガスが渦巻いている。</string>
-  <string name="ToxicGas_Info1">あなたは毒ガスを吸って死亡しました...</string>
-  <string name="WaterOfAwareness_Info">知識の力がこの井戸の水から放射されている。一口飲めばあなたの装備品のすべての秘密が明らかになります。</string>
+  <string name="ToxicGas_Info1">あなたは有毒のガスを吸って死んだ。</string>
+  <string name="WaterOfAwareness_Info">この井戸の水からは知識の力が放たれている。一口飲めば、装備したアイテムの秘密がすべて明らかになるだろう。</string>
   <string name="WaterOfAwareness_Procced">あなたは一口飲んで、知識があなたの心に注がれるのを感じた。あなたは今の装備品についてすべてを知っています。また、あなたはこの階層のすべてのアイテムを感知していて、その秘密のすべてを知っています。</string>
   <string name="WaterOfHealth_Info">健康の力がこの井戸の水から放射されている。一口飲めばあなたの傷を癒やし、空腹を満たしてくれます。</string>
   <string name="WaterOfHealth_Procced">あなたは一口飲んで、完全治癒するのを感じました。</string>
