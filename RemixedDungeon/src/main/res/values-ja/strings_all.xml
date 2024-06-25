@@ -1745,8 +1745,8 @@
   <string name="ScrollOfPsionicBlast_Name">精神のスクロール</string>
   <string name="ScrollOfPsionicBlast_Info">このスクロールには破壊的なエネルギーが含まれており、それを精神領域に流すことで、視界内のすべての生き物に大ダメージを与えることができる。それに伴う閃光により、スクロールを読んだ者を含む効果範囲内の全ての者の目が一時的に盲目となる。</string>
   <string name="ScrollOfRecharging_Name">再充填のスクロール</string>
-  <string name="ScrollOfRecharging_Info">この羊皮紙に縛られた魔法の力が放たれて、読み手の杖が充填されます。</string>
-  <string name="ScrollOfRecharging_Info1a">あなたの荷物はエネルギーの影響を受けて、あなたの杖が再充填されます</string>
+  <string name="ScrollOfRecharging_Info">この羊皮紙に封じ込められた未加工の魔力は、解き放たれたとき、読み手の持つすべての杖をフルパワーに充填する。</string>
+  <string name="ScrollOfRecharging_Info1a">エネルギーの波がパックを通り抜け、杖を充填する。</string>
   <string name="ScrollOfRecharging_Info1b">あなたの荷物はエネルギーの影響を受けて、あなたの杖が再充填されます</string>
   <string name="ScrollOfRecharging_Info2">あなたの荷物はエネルギーの影響を受けましたが、何も起こらなかった</string>
   <string name="ScrollOfRemoveCurse_Name">解呪のスクロール</string>
