@@ -340,7 +340,7 @@
   <string name="Char_StaInvisible">透明</string>
   <string name="Dungeon_NoTips">解読不能だ...</string>
   <string name="Dungeon_DeadEnd">ここで何をしているんだ？！</string>
-  <string name="Journal_WellHealt">健康の井戸</string>
+  <string name="Journal_WellHealt">再生の井戸</string>
   <string name="Journal_WellAwareness">意識の井戸</string>
   <string name="Journal_WellTransmut">変異の井戸</string>
   <string name="Journal_Alchemy">錬金釜</string>
