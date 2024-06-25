@@ -1326,12 +1326,12 @@
   <string name="Swarm_Name">ハエの群れ</string>
   <string name="Swarm_Gender">力強い</string>
   <string name="Swarm_Name_Objective">ハエの群れ</string>
-  <string name="Swarm_Desc">物凄い羽音の殺人的なハエの群れ。魔法以外のすべての攻撃は、二つの小さな群れに分割されますが、危険なことに変わりありません。</string>
+  <string name="Swarm_Desc">致命的なハエの大群が怒り狂ったように唸る。魔法以外の攻撃はすべて、より小さいが同様に危険な2つの群れに分裂させる。</string>
   <string name="Swarm_Defense">回避した</string>
   <string name="Tengu_Name">天狗</string>
   <string name="Tengu_Gender">力強い</string>
   <string name="Tengu_Name_Objective">天狗</string>
-  <string name="Tengu_Desc">天狗は古代の暗殺者一族の者です。これらの暗殺者は手裏剣や罠を駆使すると記載されている。</string>
+  <string name="Tengu_Desc">天狗は古代の暗殺者一族の一員である。この暗殺者たちは手裏剣と罠を多用することで知られている。</string>
   <string name="Tengu_Info1">ついに自由に...</string>
   <string name="Tengu_Info2">捕まえたぞ、%s！</string>
   <string name="Thief_Name">シーフ</string>
