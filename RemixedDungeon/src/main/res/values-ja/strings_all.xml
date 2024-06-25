@@ -184,7 +184,7 @@
   <string name="NecrotismBuff_Name">ネクロティズム</string>
   <string name="NecrotismBuff_Info">死の印そのものであり、その悪臭は近くにいる者に影響を与え、同じ苦境を共有させる。</string>
   <string name="Necrotism_ACSpecial">ネクロティズム</string>
-  <string name="ResultDescriptions_Necrotism">%d階でネクロティズムにより死亡</string>
+  <string name="ResultDescriptions_Necrotism">%d階層で壊死症により死亡した</string>
   <string name="Necrotism_Death">あなたは壊死症で死んだ...</string>
   <string name="Badges_DeathNecrotism">壊死症による死亡</string>
   <string name="Spell_SelectACell">対象のセルを選択する。</string>
