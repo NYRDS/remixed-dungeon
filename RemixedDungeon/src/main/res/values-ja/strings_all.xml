@@ -1930,8 +1930,8 @@
   <string name="RottenPasty_Info">このパスティはかなり不味そうだ。</string>
   <string name="RottenRation_Name">腐った糧食</string>
   <string name="RottenRation_Info">昔は食べられただろう</string>
-  <string name="OverpricedRation_Name">高級レーション</string>
-  <string name="OverpricedRation_Info">普通のレーションが安物に見えます。</string>
+  <string name="OverpricedRation_Name">高品質な糧食</string>
+  <string name="OverpricedRation_Info">見た目は標準的な糧食にそっくりだが、もっと小さい。</string>
   <string name="OverpricedRation_Message">それは良い味です。</string>
   <string name="Pasty_Name">ペースト</string>
   <string name="Pasty_Info">これは牛肉とポテトを入れたコーンペーストです。</string>
