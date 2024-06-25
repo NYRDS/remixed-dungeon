@@ -2423,8 +2423,8 @@
   <string name="Hunger_Hungry_1">お腹が空いた</string>
   <string name="Hunger_Hungry_2">お腹が空いた</string>
   <string name="Hunger_Starving_0">飢え死にしそうだ！</string>
-  <string name="Hunger_Starving_1">あなたは飢餓だ！</string>
-  <string name="Hunger_Starving_2">あなたは飢餓だ！</string>
+  <string name="Hunger_Starving_1">飢え死にしそうだ！</string>
+  <string name="Hunger_Starving_2">飢え死にしそうだ！</string>
   <string name="HeroClass_NecromancerPerks_0">ネクロマンサーは体力15からスタートする。</string>
   <string name="HeroClass_NecromancerPerks_1">ネクロマンサーは死の呪文を唱えるためにマナを使う。</string>
   <string name="HeroClass_NecromancerPerks_2">ネクロマンサーは、倒した生き物1 体につき 1 マナポイントを回復するユニークなネクロマンサーのローブを装備してスタートする。</string>
