@@ -49,9 +49,9 @@
   <string name="RingOfElements_Name">元素のリング</string>
   <string name="RingOfElements_Info">このリングは、炎、雷、ガスなど、さまざまな要素に対する耐性を与える。また、マイナス効果の持続時間を減少させる。</string>
   <string name="RingOfEvasion_Name">回避のリング</string>
-  <string name="RingOfEvasion_Info">このリングは、あなたの敵からの回避率を増加させます。</string>
+  <string name="RingOfEvasion_Info">このリングは、敵の攻撃を回避する確率を上昇させる。</string>
   <string name="RingOfHaggler_Name">値切りのリング</string>
-  <string name="RingOfHaggler_Info">このリングは何か魔法の要素は備えていませんが、店主と行商人は、盗賊ギルドのメンバーの所有しているリングだと把握しています。彼らは店を守るために喜んで値切りに応じます。このリングは強化しても追加ボーナスは得られません。</string>
+  <string name="RingOfHaggler_Info">このリングには魔法の効果はないが、店主や行商人に指輪の持ち主が盗賊ギルドのメンバーであることを示すことができる。彼らは店を守るために喜んで値引きをしてくれるだろう。この指輪をアップグレードしても、追加のボーナスは得られない。</string>
   <string name="RingOfHaste_Name">加速のリング</string>
   <string name="RingOfHaste_Info">このリングは装着者の時間の流れを加速させて、すべての行動を少し速くします。</string>
   <string name="RingOfHerbalism_Name">草学のリング</string>
