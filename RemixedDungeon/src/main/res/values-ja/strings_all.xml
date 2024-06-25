@@ -1619,7 +1619,7 @@
   <string name="BellaNPC_Yes_End_Game">もちろん（最終戦）</string>
   <string name="BellaNPC_No">いいえ、あなたとは</string>
   <string name="ServiceManNPC_NoConnection">申し訳ございませんが、ただいまサービスをご利用いただけません。(インターネット接続が必要です)</string>
-  <string name="town_deco_common_door_name">ドア</string>
+  <string name="town_deco_common_door_name">扉</string>
   <string name="town_deco_common_door_desc">マナーをわきまえた冒険家は、もちろん招待状がない限り、私有地に侵入すべきではない。</string>
   <string name="town_deco_dungeon_door_name">入り口</string>
   <string name="town_deco_dungeon_door_desc">ダンジョンへの入り口</string>
