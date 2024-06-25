@@ -462,7 +462,7 @@
   <string name="DewVial_ACDRINK">飲む</string>
   <string name="DewVial_Info">この小さな容器に余分な雫を貯めておけば、後で飲むことができる。小瓶が満杯になれば、命がけの瞬間、雫は自動的に消費される。</string>
   <string name="DewVial_AutoDrink">雫用の瓶は、あなたの傷を癒やして空になった。</string>
-  <string name="DewVial_Collected">あなたは雫用の瓶に雫を集めました。</string>
+  <string name="DewVial_Collected">あなたは雫を瓶に集めた。</string>
   <string name="DewVial_Full">あなたの雫用の瓶は満杯だ！</string>
   <string name="DewVial_Empty">あなたの雫用の瓶は空だ！</string>
   <string name="Gold_Name">ゴールド</string>
