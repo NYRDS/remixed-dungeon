@@ -63,7 +63,7 @@
   <string name="RingOfSatiety_Name">満腹のリング</string>
   <string name="RingOfSatiety_Info">このリングを身に着けていれば、より長く食べずにいられる。劣化した満腹のリングは効果が逆転する。</string>
   <string name="RingOfShadows_Name">影のリング</string>
-  <string name="RingOfShadows_Info">あなたがこのリングを着用すると、敵があなたに気づきにくくなります。劣化した影のリングは、あなたの存在に気づいていない敵に警告を発します。</string>
+  <string name="RingOfShadows_Info">このリングを身に着けていると、敵に気づかれにくくなる。劣化した影のリングは、あなたの存在に気づいていない敵に警告を発する。</string>
   <string name="RingOfThorns_Name">いばらのリング</string>
   <string name="RingOfThorns_Info">このリングに本物のいばらがあるわけではないですが、あなたに対する敵の攻撃の何割か損傷を相手に負わせます。このリングは強化しても追加ボーナスは得られません。</string>
   <string name="RingOfStoneWalking_Name">石血のリング</string>
