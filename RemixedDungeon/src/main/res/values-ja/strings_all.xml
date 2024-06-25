@@ -1987,7 +1987,7 @@
   <string name="MageArmor_ACSpecial">モルテンアース</string>
   <string name="MageArmor_NotMage">この鎧を使えるのはメイジだけだ！</string>
   <string name="MailArmor_Name">チェインメイル</string>
-  <string name="MailArmor_Desc">金属の輪を繋げて作った丈夫で柔軟な鎧。</string>
+  <string name="MailArmor_Desc">金属製の輪が連動することで、頑丈でありながらも柔軟な鎧に仕上がっている。</string>
   <string name="PlateArmor_Name">プレートアーマー</string>
   <string name="PlateArmor_Desc">巨大な金属のプレートは屈強な冒険者に十分な保護を与えてくれるが物凄く重い。</string>
   <string name="RogueArmor_Name">ローグの服</string>
