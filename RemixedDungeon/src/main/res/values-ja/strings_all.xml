@@ -1469,7 +1469,7 @@
   <string name="TrapWnd_Title">罠</string>
   <string name="TrapWnd_Step">本当にこの罠を踏みたいのか？おそらく死ぬだろうが。</string>
   <string name="BadgesScene_Title">あなたのバッジ</string>
-  <string name="Badges_Info1">バッジ承認: %s</string>
+  <string name="Badges_Info1">獲得したバッジ: %s</string>
   <string name="Badges_Info2">新しいスーパーバッジ: %s</string>
   <string name="Badges_Info3">新しいバッジ: %s</string>
   <string name="Badges_MonsterSlain1">敵を10体倒した</string>
