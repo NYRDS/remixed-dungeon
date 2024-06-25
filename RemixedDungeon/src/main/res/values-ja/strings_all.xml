@@ -810,7 +810,7 @@
   <string name="WndDonate_silverDonateText">寄付金はプロジェクトの開発を支援します</string>
   <string name="WndDonate_goldDonateText">ご協力ありがとうございました！</string>
   <string name="WndDonate_rubyDonateText">皆様のご厚意は、Remixed Dungeon!の継続的な改善に役立てられます！</string>
-  <string name="WndDonate_silverDonateText2">さらに、すべてのゲームモードで広告を無効にして、最初からハンターのロックを解除します。</string>
+  <string name="WndDonate_silverDonateText2">さらに、すべてのゲームモードで広告を無効にして、最初からハントレスのロックを解除します。</string>
   <string name="WndDonate_goldDonateText2">さらに、最初からエルフのロックを解除します。</string>
   <string name="WndDonate_rubyDonateText2"/>
   <string name="WndPremiumSettings_std">標準</string>
