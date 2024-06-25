@@ -2179,7 +2179,7 @@
   <string name="PotionOfFrost_Name">冷気のポーション</string>
   <string name="PotionOfFrost_Info">空気にさらすことで化学反応を起こし凍結雲を発生させる。それに触れた生き物は凍結して動くことができなくなる。</string>
   <string name="PotionOfHealing_Name">治癒のポーション</string>
-  <string name="PotionOfHealing_Info">瞬時に体力完全回復、毒の常態異常も治すエリクサー。</string>
+  <string name="PotionOfHealing_Info">即座に完全な健康状態に戻し、毒を治す万能薬。</string>
   <string name="PotionOfHealing_Apply">あなたは完全治癒しました。</string>
   <string name="PotionOfInvisibility_Name">不可視のポーション</string>
   <string name="PotionOfInvisibility_Info">このポーションを飲むと一時的に不可視になります。不可視化して敵から見えなくなります。敵を攻撃したり、杖やスクロールを使用すると効果は失われます。</string>
