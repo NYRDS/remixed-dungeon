@@ -2826,7 +2826,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="SpiderElite_Gender">男性的</string>
   <string name="SpiderElite_Name_Objective">スパイダーエリートガード</string>
   <string name="SpiderElite_Desc">兵士のように、クモの警備兵は王国を守ることを誓う。エリートの毒は標的を混乱させるために使われる。</string>
-  <string name="Shaman_ZapMiss">「ノール語で罵る」</string>
+  <string name="Shaman_ZapMiss">*ノール語で罵る*</string>
   <string name="Facilitations_Names_0">飢餓の消失</string>
   <string name="Facilitations_Names_1">トロールの肉体</string>
   <string name="Facilitations_Names_2">ジーニーの精神</string>
