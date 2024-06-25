@@ -2625,7 +2625,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="WndModInstall_Version">バージョン</string>
   <string name="WndModInstall_PleaseUpdate">このMODをインストールする前にRemixed Dungeonをアップデートしてください。</string>
   <string name="Wnd_Button_Ok">OK</string>
-  <string name="CharAction_Taunt">喰う</string>
+  <string name="CharAction_Taunt">挑発する</string>
   <string name="CharAction_Push">押す</string>
   <string name="CharAction_Steal">盗む</string>
   <string name="CharAction_Charm">魅了</string>
