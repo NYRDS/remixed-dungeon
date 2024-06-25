@@ -1165,10 +1165,10 @@
   <string name="ChaosSword_Info">この剣の刃は純粋なカオスでできており、時折微かに振動する。この武器に秘められた偉大な力は、ほとんどのものを真っ二つにすることができるが、それを扱うには熟練の技が必要とされている。</string>
   <string name="ChaosSword_Gender">力強い</string>
   <string name="ChaosBow_Name">カオスボウ</string>
-  <string name="ChaosBow_Info">カオスの力で満たされた恐ろしい弓。放たれた矢がカオスエネルギーの欠片を目標に運びます。しかし、もしあなたが外したら...</string>
+  <string name="ChaosBow_Info">カオスの力に満ちた恐ろしい弓。放たれる矢には、カオスエネルギーの欠片が宿っている。もし狙いを外せば...</string>
   <string name="ChaosBow_Gender">力強い</string>
   <string name="ChaosStaff_Name">カオススタッフ</string>
-  <string name="ChaosStaff_Info">スタッフはカオスの力を注ぎ込んだ！夢や恐れ以外にメイジが思うことがあるか？</string>
+  <string name="ChaosStaff_Info">カオスの力を宿した杖！魔導士が夢見るもの、恐れるものが他にあるだろうか？</string>
   <string name="ChaosStaff_Gender">力強い</string>
   <string name="SacrificialSword_Name">生け贄の剣</string>
   <string name="SacrificialSword_Info">一見すると、この古い青銅の剣は古サビの汚れで覆われていて使いものにならないように見える。しかし、古代の力が内部には眠っている。この力は、ほぼすべての生き物をまれに奴隷に変えることができる。それらを覚ますには正しい方法を見つける必要がある...</string>
