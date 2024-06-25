@@ -503,9 +503,9 @@
   <string name="Weightstone_WndCancel">なにも重視しない</string>
   <string name="Bag_ACOpen">開ける</string>
   <string name="Keyring_Name">キーホルダー</string>
-  <string name="Keyring_Info">これは、あなたの荷物の残り部分とは別に、鍵を保持することができる銅のキーホルダーです。</string>
+  <string name="Keyring_Info">これは銅製のキーホルダーで、すべての鍵を他の持ち物とは別に保管できる。</string>
   <string name="ScrollHolder_Name">スクロールホルダー</string>
-  <string name="ScrollHolder_Info">あなたはこの筒状の容器内にスクロールを複数保持することが出来ます。この容器内のスクロールは炎から守られます。</string>
+  <string name="ScrollHolder_Info">この筒状の容器には、巻物を何枚でも入れることが出来る。バックパックの場所を取らず、入れた巻物を火から守ることも出来る。</string>
   <string name="SeedPouch_Name">シードポーチ</string>
   <string name="SeedPouch_Info">この小さなベルベットのポーチは、種子を複数保存して置けます。とても便利。</string>
   <string name="WandHolster_Name">ワンドホルスター</string>
