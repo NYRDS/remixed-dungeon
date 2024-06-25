@@ -2508,9 +2508,9 @@
   <string name="Codex_Story_14">不安定な武器 - 攻撃命中時、ランダムなエンチャントの効果が発動する。</string>
   <string name="Codex_Story_15">吸血武器 - 攻撃命中時、敵に与えたダメージの一部を吸収しヒーローを回復する。</string>
   <string name="Codex_Story_16">幸運の武器 - 敵の装甲をほとんど無視し、より大きなダメージを与える。</string>
-  <string name="Codex_Story_17">衝撃の武器 - 攻撃命中時、対象を麻痺させることがあります。</string>
-  <string name="Codex_Story_18">貫通の武器 - 攻撃命中時、対象の背後一直線にもダメージを与えます。</string>
-  <string name="Codex_Story_19">猛毒の武器 - 攻撃命中時、対象に毒を付与することがあります。</string>
+  <string name="Codex_Story_17">衝撃の武器 - 攻撃命中時、対象を麻痺させることがある。</string>
+  <string name="Codex_Story_18">貫通の武器 - 攻撃命中時、対象の後方直線上にいる全ての敵にダメージを与える。</string>
+  <string name="Codex_Story_19">猛毒の武器 - 攻撃命中時、対象を毒状態にすることがある。</string>
   <string name="Codex_Story_20">極寒の武器 - 攻撃命中時、対象の行動を遅くすることがあります。しかし、延焼からは救うでしょう。</string>
   <string name="Codex_Story_21">野蛮な武器 - 攻撃命中時、対象に隣接するすべての敵にもダメージを与えることがあります。</string>
   <string name="Codex_Story_22">この本は悪魔の言語で書かれています</string>
