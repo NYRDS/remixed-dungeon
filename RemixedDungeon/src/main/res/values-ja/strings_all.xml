@@ -1978,9 +1978,9 @@
   <string name="HuntressArmor_Name">ハントレスのマント</string>
   <string name="HuntressArmor_Desc">このようなマントをまとったハントレスは、スペクトラルブレードの扇を作り出すことができる。これらの刃はそれぞれ、彼女の視界内にいる敵1体を対象とし、現在装備している近接武器に応じてダメージを与える。</string>
   <string name="HuntressArmor_ACSpecial">スペクトルブレード</string>
-  <string name="HuntressArmor_NoEnemies">敵が見えません</string>
-  <string name="HuntressArmor_NotHuntress">ハンターだけがこの鎧を使うことができます。</string>
-  <string name="LeatherArmor_Name">革製の鎧</string>
+  <string name="HuntressArmor_NoEnemies">敵は見当たらない</string>
+  <string name="HuntressArmor_NotHuntress">この鎧を使えるのはハントレスだけだ！</string>
+  <string name="LeatherArmor_Name">レザーアーマー</string>
   <string name="LeatherArmor_Desc">モンスターの革をなめして作られた鎧。布製の鎧のように軽くはないが、より良い防御性能を備えている。</string>
   <string name="MageArmor_Name">魔術師のローブ</string>
   <string name="MageArmor_Desc">メイジがこの素晴らしいローブを着ることで、モルテンアースの呪文を唱えることが出来ます:彼の視界内のすべての敵に、火と移動阻害を同時に与える。</string>
