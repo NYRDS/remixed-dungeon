@@ -2445,10 +2445,10 @@
   <string name="HeroClass_RogPerks_1">ローグは装着時にリングの種類を特定する。</string>
   <string name="HeroClass_RogPerks_2">ローグは軽い鎧の扱いに習熟しており、軽い鎧を着用しているときはよりうまく身をかわすことができる。</string>
   <string name="HeroClass_RogPerks_3">ローグは隠された扉や罠を発見することに長けている。</string>
-  <string name="HeroClass_RogPerks_4">マジックマッピングのスクロールは最初から特定されます。</string>
+  <string name="HeroClass_RogPerks_4">ローグは食料がなくても長く過ごせる。</string>
   <string name="HeroClass_RogPerks_5">魔法の地図のスクロールは最初から特定されている。</string>
   <string name="HeroClass_HunPerks_0">ハントレスはスタート時に15ポイントの体力がある。</string>
-  <string name="HeroClass_HunPerks_1">ハンターはスタート時にアップグレードされた特殊なブーメランを持つ。</string>
+  <string name="HeroClass_HunPerks_1">ハントレスはスタート時に強化された特殊なブーメランを持つ。</string>
   <string name="HeroClass_HunPerks_2">ハンターは遠隔武器が得意で、ダメージボーナスを得ます。</string>
   <string name="HeroClass_HunPerks_3">ハントレスは雫からより多くの体力を得られる。</string>
   <string name="HeroClass_HunPerks_4">ハンターは障害物に隠れているモンスターでも気配がわかります。</string>
