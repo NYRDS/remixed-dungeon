@@ -607,7 +607,7 @@
   <string name="SlowBuff_Info">そのもったりとした感触が、いつもよりペースを落とす。</string>
   <string name="SleepBuff_Name">睡眠</string>
   <string name="SleepBuff_Info">完全に眠っている。</string>
-  <string name="SnipersMarkBuff_Name">狙撃目標</string>
+  <string name="SnipersMarkBuff_Name">標的</string>
   <string name="SnipersMarkBuff_Info">このマークは狙撃手によるものだ。</string>
   <string name="SpeedBuff_Name">加速</string>
   <string name="SpeedBuff_Info">活力とエネルギーが体から発散され、動きがいつもより速く感じられる。</string>
