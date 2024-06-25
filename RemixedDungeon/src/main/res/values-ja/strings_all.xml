@@ -1934,9 +1934,9 @@
   <string name="OverpricedRation_Info">見た目は標準的な糧食にそっくりだが、もっと小さい。</string>
   <string name="OverpricedRation_Message">味はまあまあだった。</string>
   <string name="Pasty_Name">パスティ</string>
-  <string name="Pasty_Info">これは牛肉とポテトを入れたコーンペーストです。</string>
-  <string name="PseudoPasty_Name">ペースト</string>
-  <string name="PseudoPasty_Info">これは牛肉とポテトを入れたコーンペーストです。</string>
+  <string name="Pasty_Info">伝統的なビーフとポテトのフィリングが入った本格的なコーニッシュパスティ。</string>
+  <string name="PseudoPasty_Name">パスティ</string>
+  <string name="PseudoPasty_Info">伝統的なビーフとポテトのフィリングが入った本格的なコーニッシュパスティ。</string>
   <string name="ResultDescriptions_Mob">%2$d 階層で %1$s に殺された</string>
   <string name="ResultDescriptions_Boss">%2$d 階層で %1$s に殺された</string>
   <string name="ResultDescriptions_Wand">%2$d 階層で、あなたの %1$s に殺された</string>
