@@ -981,9 +981,9 @@
   <string name="HeroSubClass_NameBers">バーサーカー</string>
   <string name="HeroSubClass_DescBers">重傷を負うと、「バーサーカー」は野生の怒り状態になり、ダメージ量が大幅に増加する。</string>
   <string name="HeroSubClass_NameWarL">ウォーロック</string>
-  <string name="HeroSubClass_DescWarL">敵を倒した時に_ウォーロック_はその魂を使い傷を癒やし空腹を満たします。</string>
+  <string name="HeroSubClass_DescWarL">敵を倒した時、「ウォーロック」はその魂を使い、傷を癒し、空腹を満たす。</string>
   <string name="HeroSubClass_NameBatM">バトルメイジ</string>
-  <string name="HeroSubClass_DescBatM">杖を手にして戦った時、_バトルメイジ_はチャージ数に応じて追加ダメージを与える。攻撃成功時にその杖は1チャージ得る。</string>
+  <string name="HeroSubClass_DescBatM">杖を手に戦っている時、「バトルメイジ」は現在のチャージ数に応じて追加ダメージを与える。攻撃が命中するたびに、この杖のチャージは1回復する。</string>
   <string name="HeroSubClass_NameAssa">アサシン</string>
   <string name="HeroSubClass_DescAssa">奇襲攻撃をした時、_アサシン_は追加ダメージを与える。</string>
   <string name="HeroSubClass_NameFreR">フリーランナー</string>
