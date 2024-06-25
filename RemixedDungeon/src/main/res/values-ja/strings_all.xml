@@ -839,10 +839,10 @@
   <string name="Quiver_Info">矢を何本でも収納できる革製の矢筒</string>
   <string name="Quiver_Gender">力強い</string>
   <string name="CommonArrow_Name">矢</string>
-  <string name="CommonArrow_Info">鉄の矢じりのついた一般的な矢。</string>
+  <string name="CommonArrow_Info">鉄の矢じりが付いた一般的な木製の矢。</string>
   <string name="CommonArrow_Gender">弱々しい</string>
   <string name="FireArrow_Name">炎の矢</string>
-  <string name="FireArrow_Info">この矢は普通と違う点があります、それは矢じりの部分がほんのり赤く光っている点です。</string>
+  <string name="FireArrow_Info">この矢は、矢じりから暖かい赤い光が放射されている以外は、普通の矢と同じように見える。</string>
   <string name="FireArrow_Gender">弱々しい</string>
   <string name="PoisonArrow_Name">毒の矢</string>
   <string name="PoisonArrow_Info">この矢じりから猛毒の液が滴っています。</string>
