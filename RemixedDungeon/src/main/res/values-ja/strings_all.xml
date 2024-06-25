@@ -2492,8 +2492,8 @@
   <string name="Swing_Name_1">野蛮な %s</string>
   <string name="Swing_Name_2">野蛮な %s</string>
   <string name="Codex_Story_0">Pixel Dungeon は Watabou が制作しました。彼は自分の作品を見て、とても良い作品になったこと理解しました！</string>
-  <string name="Codex_Story_1">弾むグリフ - 敵がヒーローを攻撃すると後ろに押し返します。</string>
-  <string name="Codex_Story_2">慕情のグリフ - 敵は数ターン魅了を受けるが、ヒーローも数ターン魅了を受ける。しかし敵のターン数を超えることはない。</string>
+  <string name="Codex_Story_1">弾性の刻印- ヒーローを攻撃した敵を押し戻す。</string>
+  <string name="Codex_Story_2">愛情の刻印 - ヒーローを攻撃した敵は数ターンの間魅了され、ヒーローも数ターンの間魅了されるが、敵より多く魅了されることはない。</string>
   <string name="Codex_Story_3">逆熱交換のグリフ - ヒーローが点灯して発火し、敵は凍結する。</string>
   <string name="Codex_Story_4">多重のグリフ - ヒーローの分身を生み出す効果だがダメージがある。これはヒーローを殺すことができる。</string>
   <string name="Codex_Story_5">潜在的なグリフ - プレイヤーを攻撃した敵に雷撃ダメージを与えますが、ヒーローもその約半分のダメージを受けます。</string>
