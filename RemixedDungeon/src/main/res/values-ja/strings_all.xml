@@ -2459,11 +2459,11 @@
   <string name="HeroClass_HunPerks_2">ハンターは遠隔武器が得意で、ダメージボーナスを得ます。</string>
   <string name="HeroClass_HunPerks_3">ハントレスは雫からより多くの体力を得られる。</string>
   <string name="HeroClass_HunPerks_4">ハンターは障害物に隠れているモンスターでも気配がわかります。</string>
-  <string name="HeroClass_ElfPerks_0">エルフはスタート時に15ポイントの体力と9ポイントの力がある。</string>
+  <string name="HeroClass_ElfPerks_0">エルフはスタート時に15ポイントの体力があるが力は9ポイントしかない。</string>
   <string name="HeroClass_ElfPerks_1">エルフはrootingに免疫がある。</string>
   <string name="HeroClass_ElfPerks_2">エルフはスタート時に強化された木の弓と矢の束を持つ。</string>
   <string name="HeroClass_ElfPerks_3">エルフは弓の扱いに非常に長けており、機敏である。</string>
-  <string name="HeroClass_ElfPerks_4">ハントレスは雫からより多くの体力を得られる。</string>
+  <string name="HeroClass_ElfPerks_4">エルフは雫からより多くの体力を得られる。</string>
   <string name="HeroClass_ElfPerks_5">エルフは近接武器の扱いが苦手だ。</string>
   <string name="Death_Name_0">グリム %s</string>
   <string name="Death_Name_1">グリム %s</string>
