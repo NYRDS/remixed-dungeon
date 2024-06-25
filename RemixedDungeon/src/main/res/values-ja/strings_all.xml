@@ -1741,7 +1741,7 @@
   <string name="ScrollOfMagicMapping_Info">このスクロールを読むと、鮮明なイメージがあなたの記憶に刻まれ、この階層の正確な構造と隠された秘密がすべて明らかになる。ただしアイテムや生き物の位置まではわからない。</string>
   <string name="ScrollOfMagicMapping_Layout">これでこの階層の構造が理解できただろう。</string>
   <string name="ScrollOfMirrorImage_Name">鏡像のスクロール</string>
-  <string name="ScrollOfMirrorImage_Info">このスクロール上の呪文は、あなたそっくりの鏡像を作り出し、敵を追いかけます。</string>
+  <string name="ScrollOfMirrorImage_Info">このスクロールに書かれた呪文は、読み手の幻影の双子を作り出し、幻影は敵を追いかける。</string>
   <string name="ScrollOfPsionicBlast_Name">心霊破のスクロール</string>
   <string name="ScrollOfPsionicBlast_Info">このスクロールは、視界内のすべての生き物に心霊的チャネリングで大規模な被害を与えるための破壊的なエネルギーを内包しています。読み手を含めたすべての範囲内の生き物に、閃光による一時的盲目を与えます。</string>
   <string name="ScrollOfRecharging_Name">再充填のスクロール</string>
