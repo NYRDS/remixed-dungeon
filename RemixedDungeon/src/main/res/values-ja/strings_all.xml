@@ -510,7 +510,7 @@
   <string name="SeedPouch_Info">この小さなベルベットのポーチは、いくつでも種をいれることが出来る。とても便利だ。</string>
   <string name="WandHolster_Name">ワンドホルスター</string>
   <string name="WandHolster_Info">エキゾチックな動物の革を使用したスリムなホルダー。 %d 本までの杖をコンパクトに収納することが出来る。</string>
-  <string name="PotionBelt_Info">この強力な革のベルトは、すべてのポーションを持ち運べて、霜の被害からも保護することが出来ます。</string>
+  <string name="PotionBelt_Info">この丈夫な革製のベルトは、霜による粉砕からポーションを守りながら、すべてのポーションを収納することができる。</string>
   <string name="PotionBelt_Name">ポーションベルト</string>
   <string name="GoldenKey_Name">金の鍵</string>
   <string name="GoldenKey_Info">この金の鍵の切れ込みは細かくて複雑です。一部のロックされた箱を開けられるかも？</string>
