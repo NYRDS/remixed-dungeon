@@ -1991,7 +1991,7 @@
   <string name="PlateArmor_Name">プレートアーマー</string>
   <string name="PlateArmor_Desc">巨大な金属板をつなぎ合わせた鎧は、その驚異的な重量に耐えられるだけの強さを持つ冒険者に、比類なき防御力を提供する。</string>
   <string name="RogueArmor_Name">ローグの服</string>
-  <string name="RogueArmor_Desc">この暗い服装を身に着けているローグは\"スモークボム\"(本物の爆発物ではない)のトリックを使うことが出来ます:敵を煙に巻いて横に飛ぶことが出来ます。</string>
+  <string name="RogueArmor_Desc">この暗い衣装を身にまとったローグは、\"スモークボム\"と呼ばれるトリックを繰り出すことができ、敵の目をくらまし、脇をすり抜ける。（ただし、本物の爆薬は使用しない）</string>
   <string name="RogueArmor_ACSpecial">スモークボム</string>
   <string name="RogueArmor_NotRogue">ローグだけがこの鎧を使うことができます！</string>
   <string name="RogueArmor_Fov">あなたは跳んでフィールドを眺めることができます。</string>
