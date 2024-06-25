@@ -545,7 +545,7 @@
   <string name="ToxicGas_Info1">あなたは有毒のガスを吸って死んだ。</string>
   <string name="WaterOfAwareness_Info">この井戸の水からは知識の力が放たれている。一口飲めば、装備したアイテムの秘密がすべて明らかになるだろう。</string>
   <string name="WaterOfAwareness_Procced">一口飲むと、知識が頭の中に流れ込んでくるのを感じる。あなたは今、装備しているアイテムのすべてを知っている。また、あなたはこの階層にあるすべてのアイテムを感知し、その秘密のすべてを知っている。</string>
-  <string name="WaterOfHealth_Info">この井戸の水からは健康の力が放たれている。一口飲めばあなたの傷を癒やし、空腹を満たしてくれるだろう。</string>
+  <string name="WaterOfHealth_Info">この井戸の水からは癒しの力が放たれている。一口飲めばあなたの傷を癒やし、空腹を満たしてくれるだろう。</string>
   <string name="WaterOfHealth_Procced">一口飲むと、傷が完全に癒えていくのを感じる。</string>
   <string name="WaterOfTransmutation_Info">この井戸の水からは変化の力が放たれている。アイテムを井戸に投げ入れると、別のものに変わるだろう。</string>
   <string name="Web_Info">ここはすべてが濃い蜘蛛の巣で覆われている。</string>
