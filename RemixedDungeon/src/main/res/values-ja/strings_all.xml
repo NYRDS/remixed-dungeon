@@ -1222,10 +1222,10 @@
   <string name="DM300_Info1">DM-300は自己修復した！</string>
   <string name="DM300_Info2">ミッション失敗。シャットダウン。</string>
   <string name="DM300_Info3">侵入者発見。</string>
-  <string name="FireElemental_Name">ファイアーエレメンタル</string>
+  <string name="FireElemental_Name">火のエレメンタル</string>
   <string name="FireElemental_Gender">力強い</string>
-  <string name="FireElemental_Name_Objective">ファイアーエレメンタル</string>
-  <string name="FireElemental_Desc">彷徨うファイアーエレメンタルは、偉大な存在の召喚時の副産物です。彼らの自然制御はとてもカオスで、それは最も強力な悪魔信奉者のようだ。</string>
+  <string name="FireElemental_Name_Objective">火のエレメンタル</string>
+  <string name="FireElemental_Desc">放浪する火のエレメンタルは、大いなる存在を召喚する際の副産物である。彼らはその性質があまりに混沌としているため、最も強力な悪魔研究者でさえ制御できない。</string>
   <string name="Eye_Name">イビルアイ</string>
   <string name="Eye_Gender">中性の</string>
   <string name="Eye_Name_Objective">イビルアイ</string>
