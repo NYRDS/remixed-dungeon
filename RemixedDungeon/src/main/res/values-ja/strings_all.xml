@@ -2142,7 +2142,7 @@
   <string name="Chasm_Info">あなたは落下死した...</string>
   <string name="AlarmTrap_Desc">罠はダンジョン全体に響き渡る鋭い音を発した！</string>
   <string name="LightningTrap_Name">電撃の罠</string>
-  <string name="LightningTrap_Desc">あなたは電撃の罠の放電で殺されました...</string>
+  <string name="LightningTrap_Desc">あなたは電撃の罠の放電で死んだ...。</string>
   <string name="HeroClass_Gnoll">ノール</string>
   <string name="GnollArmor_ACSpecial">支配</string>
   <string name="GnollArmor_NotGnoll">ノールの鎧を装備できるのはノールだけである！</string>
@@ -2158,7 +2158,7 @@
   <string name="WndPriest_Heal_Minions">自分の配下全員を回復する - たったの %dゴールド！</string>
   <string name="Badges_GnollUnlocked">ノールがアンロック</string>
   <string name="Potion_Name">%s のポーション</string>
-  <string name="Potion_Info">このフラスコには %s の液体が渦巻いて入っている。飲んだり投げたりしたらどうなるか誰か知っているか？</string>
+  <string name="Potion_Info">このフラスコには渦巻く%sの液体が入っている。飲んだり投げたりしてどうなるかは誰にもわからない。</string>
   <string name="Potion_ACDrink">飲む</string>
   <string name="Potion_Harmfull">有害なポーション！</string>
   <string name="Potion_Beneficial">有益なポーション</string>
