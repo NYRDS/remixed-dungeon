@@ -1984,7 +1984,7 @@
   <string name="LeatherArmor_Desc">なめしたモンスターの皮で作った鎧。布の鎧ほど軽くはないが、防御力は高い。</string>
   <string name="MageArmor_Name">メイジの法衣</string>
   <string name="MageArmor_Desc">このゴージャスなローブを身にまとったメイジは、モルテンアースの魔法を唱えることができる。この魔法は視界内のすべての敵を炎上させ、同時に身動きを取れなくする。</string>
-  <string name="MageArmor_ACSpecial">モルテンアース</string>
+  <string name="MageArmor_ACSpecial">大地の怒り</string>
   <string name="MageArmor_NotMage">この鎧を使えるのはメイジだけだ！</string>
   <string name="MailArmor_Name">チェインメイル</string>
   <string name="MailArmor_Desc">金属製の輪が連動することで、頑丈でありながらも柔軟な鎧に仕上がっている。</string>
