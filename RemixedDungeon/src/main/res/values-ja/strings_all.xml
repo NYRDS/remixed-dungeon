@@ -1838,8 +1838,8 @@
   <string name="Imp_Cya">またね、%s ！</string>
   <string name="Imp_Hey">ちょっと、%s ！</string>
   <string name="ImpShopkeeper_Name">野心的なインプ</string>
-  <string name="ImpShopkeeper_Desc">インプは低級悪魔です。彼らは力も魔法の才能も無いことが知られている。しかし、彼らはとても賢く社交的です。多くのインプは悪魔ではないものに囲まれて生きるのとビジネスを好みます。</string>
-  <string name="ImpShopkeeper_Greetings">ハロー、友人よ！</string>
+  <string name="ImpShopkeeper_Desc">インプは小悪魔である。その強さも魔法の才能も特筆すべきものではない。しかし、彼らは非常に賢く社交的で、インプの多くは非魔族の中で生活し、ビジネスを行うことを好む。</string>
+  <string name="ImpShopkeeper_Greetings">やあ、友よ！</string>
   <string name="MirrorImage_Name">ミラーイメージ</string>
   <string name="MirrorImage_Name_Objective">ミラーイメージ</string>
   <string name="MirrorImage_Gender">力強い</string>
