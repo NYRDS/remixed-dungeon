@@ -2220,7 +2220,7 @@
   <string name="Potion_RuneDissaperaed">ルーンは%s から消え去った。</string>
   <string name="Potion_ArrowMoisten">あなたは矢に塗布することに成功した。</string>
   <string name="Potion_ItemFliesAway">%s はあなたの手から飛び去った。</string>
-  <string name="Potion_FoodRefreshed">%s は食べられそう</string>
+  <string name="Potion_FoodRefreshed">%s は食べられそうだ</string>
   <string name="KindOfBow_SelectArrowKind">どの矢を使うべきだろう？</string>
   <string name="KindOfBow_ChooseArrows">矢を選択する</string>
   <string name="BodyArmorSpell_Name">ボディーアーマー</string>
