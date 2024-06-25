@@ -199,7 +199,7 @@
   <string name="Wand_SelfTarget">自分自身をターゲットすることは出来ません</string>
   <string name="Wand_Prompt">振る方向を選ぶ</string>
   <string name="WandOfAmok_Name">逆上の杖</string>
-  <string name="WandOfAmok_Info">この杖からの紫の光は、対象を逆上させて、付近の生き物をランダムに攻撃するようになります。</string>
+  <string name="WandOfAmok_Info">この杖から放たれる紫色の光は対象を暴走させ、周囲のランダムな生き物を攻撃させる。</string>
   <string name="WandOfAmok_Info1">何も起こらなかった</string>
   <string name="WandOfAvalanche_Name">崩落の杖</string>
   <string name="WandOfAvalanche_Info">この杖の力が当たった壁(もしくは硬い障害物)を崩落させ、影響範囲内のすべての生き物にダメージとスタンを与えます。</string>
