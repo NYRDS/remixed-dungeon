@@ -57,7 +57,7 @@
   <string name="RingOfHerbalism_Name">草学のリング</string>
   <string name="RingOfHerbalism_Info">このリングは、草を踏みつけた時の、雫や種子を得られる確率を増加させる。</string>
   <string name="RingOfMending_Name">修復のリング</string>
-  <string name="RingOfMending_Info">このリングは自然治癒力を高めて、失われたヘルスの回復を早めます。劣化したリングは自然治癒力を停止、あるいは減少させます。</string>
+  <string name="RingOfMending_Info">このリングは身体の再生能力を高め、失われた体力を加速度的に回復させる。劣化したリングは自然再生を減少させ、あるいは停止させる。</string>
   <string name="RingOfPower_Name">威力のリング</string>
   <string name="RingOfPower_Info">あなたの杖は、このリングの輝くエネルギーフィールドによってより強力になります。劣化した威力のリングはあなたの杖を弱体化させます。</string>
   <string name="RingOfSatiety_Name">満腹のリング</string>
