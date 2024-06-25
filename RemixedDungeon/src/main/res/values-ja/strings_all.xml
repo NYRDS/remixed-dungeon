@@ -2033,9 +2033,9 @@
   <string name="Icecap_Name">アイスキャップ</string>
   <string name="Icecap_Desc">アイスキャップは触れると花粉を吐き出し、周囲のものを凍らせる。</string>
   <string name="Sorrowmoss_Name">ソロウモス</string>
-  <string name="Sorrowmoss_Desc">ソロウモスは、猛毒でコーティングされたカミソリのような花びらを持つ花(苔ではない)です。</string>
+  <string name="Sorrowmoss_Desc">ソロウモスはカミソリのような鋭い花びらを持つ花（コケではない）で、猛毒でコーティングされている。</string>
   <string name="Sungrass_Name">サングラス</string>
-  <string name="Sungrass_Desc">サングラスは、治癒性の樹液を持つことで有名です。</string>
+  <string name="Sungrass_Desc">サングラスは、その樹液にヒーリング効果があることで有名だ。</string>
   <string name="SungrassBuff_Name">ハーバルヒーリング</string>
   <string name="SungrassBuff_Info">根が地面から芽を出し、癒しのハーブを提供している。</string>
   <string name="WndPlayGames_Title">Google Play Games</string>
