@@ -2132,8 +2132,8 @@
   <string name="Prison_TileDescDeco">床には古い血痕がある。</string>
   <string name="Prison_TileDescBookshelf">これはおそらく刑務所の図書館の名残だろう。燃えるのでは？</string>
   <string name="Sewer_TileWater">濁った水</string>
-  <string name="Sewer_TileDescDeco">湿った黄色がかった苔が床を覆っています。</string>
-  <string name="Sewer_TileDescBookshelf">本棚には役に立たない本ばかり。燃えるか？</string>
+  <string name="Sewer_TileDescDeco">濡れた黄色っぽい苔が床を覆っている。</string>
+  <string name="Sewer_TileDescBookshelf">本棚には安くて役に立たない本がぎっしり。燃えるのでは？</string>
   <string name="AlchemyPot_SelectSeed">投げる種子を選択</string>
   <string name="Chasm_Chasm">割れ目</string>
   <string name="Chasm_Yes">はい、私は私が何をやっているか知っている</string>
