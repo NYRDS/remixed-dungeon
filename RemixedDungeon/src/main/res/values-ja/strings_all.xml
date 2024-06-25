@@ -1083,8 +1083,8 @@
   <string name="MeleeWeapon_Info3e">だが</string>
   <string name="MeleeWeapon_Info3f">正確</string>
   <string name="MeleeWeapon_Info3g">不正確</string>
-  <string name="MeleeWeapon_Info4a">これは速さを重視して作られています。</string>
-  <string name="MeleeWeapon_Info4b">これは正確さを重視して作られています。</string>
+  <string name="MeleeWeapon_Info4a">これは速さを重視して作られている。</string>
+  <string name="MeleeWeapon_Info4b">これは正確さを重視して作られている。</string>
   <string name="MeleeWeapon_Info5">これは魔術がかかっている。</string>
   <string name="MeleeWeapon_Info6a">あなたの力が不足しているため、この %s の正確さと攻撃速度が低下します。</string>
   <string name="MeleeWeapon_Info6b">あなたの力が十分なので、この %s のダメージが増加します。</string>
