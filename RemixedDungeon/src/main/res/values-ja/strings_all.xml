@@ -785,7 +785,7 @@
   <string name="FriedFish_Taste">美味しい！</string>
   <string name="RottenFish_Name">腐った魚</string>
   <string name="RottenFish_Info">腐った魚、ひどい臭い</string>
-  <string name="RottenFish_Taste">ウエェェェ！</string>
+  <string name="RottenFish_Taste">うんざりだ！</string>
   <string name="gdpr_title">広告表示を最適化する</string>
   <string name="gdpr_text">Remixed Dungeonは、AdmobおよびAppodeal（さらなる広告プロバイダー）を使用して、あなたの広告表示を最適化します。広告プロバイダーとそのパートナーは、あなたに合わせた広告を提供するために、デバイス識別子、人口統計データ、興味関心データなどの個人データを収集し、処理することがあります。この改善された広告表示に同意することで、広告プロバイダーとそのパートナーがお客様により適切であると考える広告が表示されます。 同意することにより、あなたは16歳以上であり、最適化された広告表示を希望することを確認します。 </string>
   <string name="gdpr_agree">同意する</string>
