@@ -394,7 +394,7 @@
   <string name="WndInfoItem_Owner">この古い墓には使えるものがあるかもしれないが、持ち主は間違いなく確認することに反対するだろう。</string>
   <string name="WndInfoItem_Remains">これが先代の遺品だ。貴重品がないか調べてみる価値はあるかもしれない。</string>
   <string name="WndJournal_Title">日記</string>
-  <string name="WndRanking_Error">追加の情報を読み込むことが出来ません</string>
+  <string name="WndRanking_Error">追加情報を読み込むことができない</string>
   <string name="WndRanking_Stats">統計</string>
   <string name="WndRanking_Items">アイテム</string>
   <string name="WndRanking_Badges">バッヂ</string>
