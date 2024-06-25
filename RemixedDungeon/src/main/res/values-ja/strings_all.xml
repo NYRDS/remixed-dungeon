@@ -2107,8 +2107,8 @@
   <string name="City_TileDescExit">スロープが下層階まで続いている。</string>
   <string name="City_TileDescDeco">ここにはいくつかのタイルが欠けている。</string>
   <string name="City_TileDescEmptySP">厚手のカーペットが床を覆っている。</string>
-  <string name="City_TileDescStatue">像は英雄的なドワーフの姿を象っている。</string>
-  <string name="City_TileDescBookshelf">本棚には様々な分野の本が並んでいる。</string>
+  <string name="City_TileDescStatue">この像は、英雄的な姿勢で立つドワーフを象っている。</string>
+  <string name="City_TileDescBookshelf">さまざまな分野の本が本棚いっぱいに並んでいる。</string>
   <string name="Halls_TileWater">冷えた溶岩</string>
   <string name="Halls_TileGrass">炭焼き苔</string>
   <string name="Halls_TileHighGrass">炭焼き菌類</string>
