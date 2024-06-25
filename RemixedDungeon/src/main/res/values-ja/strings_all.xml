@@ -1985,7 +1985,7 @@
   <string name="MageArmor_Name">魔術師のローブ</string>
   <string name="MageArmor_Desc">このゴージャスなローブを身にまとったメイジは、モルテンアースの魔法を唱えることができる。この魔法は視界内のすべての敵を炎上させ、同時に身動きを取れなくする。</string>
   <string name="MageArmor_ACSpecial">モルテンアース</string>
-  <string name="MageArmor_NotMage">メイジだけがこの鎧を使うことができます！</string>
+  <string name="MageArmor_NotMage">この鎧を使えるのはメイジだけだ！</string>
   <string name="MailArmor_Name">チェインメイル</string>
   <string name="MailArmor_Desc">金属の輪を繋げて作った丈夫で柔軟な鎧。</string>
   <string name="PlateArmor_Name">プレートアーマー</string>
