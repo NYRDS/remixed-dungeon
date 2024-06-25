@@ -470,7 +470,7 @@
   <string name="Gold_Info">%d の金貨の山</string>
   <string name="Gold_Info1">1金貨</string>
   <string name="KindOfWeapon_EquipCursed">思わず %sのグリップを握り締め、身震いした。</string>
-  <string name="LloidsBeacon_Name">ロイズビーコン</string>
+  <string name="LloidsBeacon_Name">ロイドのビーコン</string>
   <string name="LloidsBeacon_ACSet">セット</string>
   <string name="LloidsBeacon_ACReturn">リターン</string>
   <string name="LloidsBeacon_Info">ロイズビーコンは複雑な魔法の機器です。あなたが予めセットしておいた場所に戻ることが出来ます。</string>
