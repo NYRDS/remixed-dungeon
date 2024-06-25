@@ -949,7 +949,7 @@
   <string name="Hero_LevelUp">レベルアップ！</string>
   <string name="Hero_NewLevel">レベル %d へようこそ！今、あなたはより健康で、より集中している。敵に攻撃を当てたり、かわしたりするのがより簡単になった。</string>
   <string name="Hero_YouNowHave">%s を手に入れた</string>
-  <string name="Hero_SomethingElse">まだ何かある</string>
+  <string name="Hero_SomethingElse">ここには何かがある</string>
   <string name="Hero_LockedChest">箱には鍵がかかっているが、合う鍵を持っていない。</string>
   <string name="Hero_LockedDoor">一致する鍵を持っていない</string>
   <string name="Hero_NoticedSmth">あなたは何かに気づいた</string>
