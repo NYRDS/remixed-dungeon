@@ -1983,7 +1983,7 @@
   <string name="LeatherArmor_Name">レザーアーマー</string>
   <string name="LeatherArmor_Desc">なめしたモンスターの皮で作った鎧。布の鎧ほど軽くはないが、防御力は高い。</string>
   <string name="MageArmor_Name">魔術師のローブ</string>
-  <string name="MageArmor_Desc">このゴージャスなローブを身にまとったメイジは、モルテンアースの魔法を唱えることができる。この魔法は視界内のすべての敵を炎上させ、同時に身動きを取れなくする。</string>
+  <string name="MageArmor_Desc">このゴージャスなローブを身にまとったメイジは、大地の怒りの魔法を唱えることができる。この魔法は視界内のすべての敵を炎上させ、同時に身動きを取れなくする。</string>
   <string name="MageArmor_ACSpecial">大地の怒り</string>
   <string name="MageArmor_NotMage">この鎧を使えるのはメイジだけだ！</string>
   <string name="MailArmor_Name">チェインメイル</string>
