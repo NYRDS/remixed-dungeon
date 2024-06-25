@@ -2201,7 +2201,7 @@
   <string name="PotionOfStrength_Apply">新たな力が全身を駆け巡る。</string>
   <string name="PotionOfStrength_StaApply">力 +1</string>
   <string name="PotionOfToxicGas_Name">毒ガスのポーション</string>
-  <string name="PotionOfToxicGas_Info">加圧されたガラスを開栓するか砕くことで、内部の毒ガスが爆発的に広がります。あなたはこのポーションを手で開栓するのではなく、敵に投げつける選択をするでしょう。</string>
+  <string name="PotionOfToxicGas_Info">この加圧ガラスの栓を抜いたり、砕いたりすると、中身が爆発して有毒な緑色のガスが発生する。手で栓を抜く代わりに、このポーションを遠くの敵に投げつけることもできる。</string>
   <string name="WndSettings_Quickslots">クイックスロット</string>
   <string name="Abilities_Default">習熟</string>
   <string name="Abilities_Common">通常呪文</string>
@@ -2214,7 +2214,7 @@
   <string name="WndSettings_GameplaySettings">Gameplay</string>
   <string name="WndPremiumSettings_marble">大理石</string>
   <string name="QuickSlot_SelectSlot">クイックスロットを選択する</string>
-  <string name="Potion_ACMoisten">湿らせる</string>
+  <string name="Potion_ACMoisten">塗布する</string>
   <string name="Potion_SelectForMoisten">湿らせるアイテムを選択</string>
   <string name="Potion_MoistenUseless">あなたはこのポーションを無駄にしたように見えます。</string>
   <string name="Potion_RuneDissaperaed">%s からルーンが消え去りました。</string>
