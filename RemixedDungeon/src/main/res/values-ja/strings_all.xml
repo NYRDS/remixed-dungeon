@@ -1304,11 +1304,11 @@
   <string name="Shielded_Gender">力強い</string>
   <string name="Shielded_Name_Objective">盾持ちのノールブルート</string>
   <string name="Shielded_Defense">ブロックした</string>
-  <string name="Shielded_Desc">ノールブルートはとても大きく、強く、タフです。重傷を負った時には凶暴になり、更に多くのダメージを敵に与えます。このブルートは巨大な盾を身に着けている！</string>
+  <string name="Shielded_Desc">ブルートはノールの中で最も大きく、強く、タフである。重傷を負うと凶暴化し、敵にさらなるダメージを与える。このブルートは巨大な盾を身に着けている！</string>
   <string name="Skeleton_Name">スケルトン</string>
   <string name="Skeleton_Gender">力強い</string>
   <string name="Skeleton_Name_Objective">スケルトン</string>
-  <string name="Skeleton_Desc">スケルトンは不運な冒険者とダンジョンの住人の骨で成り立っています。深層からの邪悪な魔法の影響で動き出す。彼らは十分な損傷を受けると骨が爆散して朽ちる。</string>
+  <string name="Skeleton_Desc">スケルトンは、不運な冒険者やダンジョンの住人の死体の骨で構成され、地下からの邪悪な魔力によって動いている。彼らは十分なダメージを受けると、骨の爆発によって崩壊する。</string>
   <string name="Skeleton_Defense">ブロックした</string>
   <string name="Skeleton_Killed">あなたは骨の爆散によって倒された...</string>
   <string name="Spinner_Name">ケイヴスピナー</string>
