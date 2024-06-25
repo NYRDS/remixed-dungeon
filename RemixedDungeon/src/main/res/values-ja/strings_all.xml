@@ -977,9 +977,9 @@
   <string name="HeroSubClass_NameNone">なし</string>
   <string name="HeroSubClass_DescNone"></string>
   <string name="HeroSubClass_NameGlad">グラディエーター</string>
-  <string name="HeroSubClass_DescGlad">近接攻撃が成功した_グラディエーター_はコンボがスタートする。次の攻撃はダメージが上がる。</string>
+  <string name="HeroSubClass_DescGlad">近接武器による攻撃に成功すると、「グラディエーター」はコンボを開始することができ、次の攻撃が成功するたびにダメージが増加する。</string>
   <string name="HeroSubClass_NameBers">バーサーカー</string>
-  <string name="HeroSubClass_DescBers">ひどく傷ついた時に、_バーサーカー_はダメージをアップさせる野生の怒り状態になる。</string>
+  <string name="HeroSubClass_DescBers">重傷を負うと、「バーサーカー」は野生の怒り状態になり、ダメージ量が大幅に増加する。</string>
   <string name="HeroSubClass_NameWarL">ウォーロック</string>
   <string name="HeroSubClass_DescWarL">敵を倒した時に_ウォーロック_はその魂を使い傷を癒やし空腹を満たします。</string>
   <string name="HeroSubClass_NameBatM">バトルメイジ</string>
