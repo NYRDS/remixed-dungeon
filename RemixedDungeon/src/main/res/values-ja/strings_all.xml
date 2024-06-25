@@ -350,7 +350,7 @@
   <string name="Journal_Wandmaker">年老いたワンドメーカー</string>
   <string name="Journal_Troll">トロールの鍛冶屋</string>
   <string name="Journal_Imp">野心的なインプ</string>
-  <string name="WndBlacksmith_Prompt">オーケー、契約は契約だ、あなたのために何ができるか: 俺は2つのアイテムを鍛え直して、より良い品質の物に変えることができる。</string>
+  <string name="WndBlacksmith_Prompt">いいだろう、契約は契約だ。では、2つのアイテムを鍛え直して、より良い品質の物に変えてやろう。</string>
   <string name="WndBlacksmith_Select">鍛え直すアイテムを選択</string>
   <string name="WndBlacksmith_Reforge">それらを鍛え直す</string>
   <string name="WndCatalogus_Potions">ポーション</string>
