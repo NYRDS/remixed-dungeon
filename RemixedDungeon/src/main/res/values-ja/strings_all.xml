@@ -1339,8 +1339,7 @@
   <string name="Thief_Name_Objective">狂った泥棒</string>
   <string name="Thief_Desc">ダンジョンの深い階層は、常にあらゆる犯罪者の隠れ場所だった。日の光から遠く離れている間、平静を保てる者ばかりではない。とっくの昔に、この狂った泥棒や盗賊たちは、自分たちが何者で、なぜ盗むのかを忘れてしまっている。</string>
   <string name="Thief_Stole">%1$s はあなたから %2$s を盗んだ！</string>
-  <string name="Thief_Carries">
-\n\n%1$s は _%2$s_ を運んでいる。明らかに盗まれたものだ。</string>
+  <string name="Thief_Carries">%1$s は「%2$s」 を持っている。明らかに盗まれたものだ。</string>
   <string name="Warlock_Name">ドワーフウォーロック</string>
   <string name="Warlock_Gender">力強い</string>
   <string name="Warlock_Name_Objective">ドワーフウォーロック</string>
