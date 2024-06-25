@@ -1380,9 +1380,9 @@
   <string name="SpiderServant_Gender">力強い</string>
   <string name="SpiderServant_Name_Objective">スパイダーソルジャー</string>
   <string name="SpiderServant_Desc">ソルジャーはクモの巣で最も数が多く、縄張りを守るために生まれた。彼らの鋏角は、敵を毒殺するための毒腺が発達している。</string>
-  <string name="SpiderExploding_Name">クモの労働者</string>
+  <string name="SpiderExploding_Name">スパイダーワーカー</string>
   <string name="SpiderExploding_Gender">力強い</string>
-  <string name="SpiderExploding_Name_Objective">クモの労働者</string>
+  <string name="SpiderExploding_Name_Objective">スパイダーワーカー</string>
   <string name="SpiderExploding_Desc">平時はとても働き者だが、これらの生き物は敵に突進することを躊躇しないし、彼らは走って横切った最初の植物を掴み旋回し自分自身を生きた爆弾とする。</string>
   <string name="SpiderMind_Name">超能力クモ</string>
   <string name="SpiderMind_Gender">力強い</string>
