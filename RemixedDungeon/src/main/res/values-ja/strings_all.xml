@@ -1756,9 +1756,9 @@
   <string name="ScrollOfTeleportation_Name">転移のスクロール</string>
   <string name="ScrollOfTeleportation_Info">この羊皮紙に書かれた呪文は、読み手を階層内のランダムな場所に瞬時に移動させる。危険な状況から逃れるために使うこともできるが、運の悪い読み手はさらに危険な場所に身を置くことになるかもしれない。</string>
   <string name="ScrollOfTeleportation_Teleport">瞬く間に、あなたは階層の別の場所にテレポートされた。</string>
-  <string name="ScrollOfTeleportation_NoTeleport">この場所の強力な魔法のオーラが、あなたの瞬間移動を防いだ！</string>
+  <string name="ScrollOfTeleportation_NoTeleport">この場所の強い魔法のオーラは、テレポートを妨げる！</string>
   <string name="ScrollOfTerror_Name">恐怖のスクロール</string>
-  <string name="ScrollOfTerror_Info">赤い閃光はあなたの視界内の全ての生き物に恐怖を与えて、彼らは逃げまわります。逃げまわる敵を攻撃すると効果は失われます。</string>
+  <string name="ScrollOfTerror_Info">赤い閃光は視界にいるすべての生き物を恐怖で圧倒し、彼らは一目散に逃げ去るだろう。逃げ惑う敵を攻撃すると、この効果は解除される。</string>
   <string name="ScrollOfTerror_Info1">スクロールは鮮やかな赤い閃光を発した</string>
   <string name="ScrollOfTerror_Info2">スクロールは鮮やかな赤い閃光を発して、 %s は逃げ出した！</string>
   <string name="ScrollOfTerror_Info3">スクロールは鮮やかな赤い閃光を発して、モンスターは逃げ出した！</string>
