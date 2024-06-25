@@ -2113,8 +2113,8 @@
   <string name="Halls_TileGrass">熾火苔</string>
   <string name="Halls_TileHighGrass">熾火茸</string>
   <string name="Halls_TileStatue">柱</string>
-  <string name="Halls_TileDescWater">これは溶岩のように見えますが、冷たく、触っても平気でしょう。</string>
-  <string name="Halls_TileDescStatue">柱は人の頭蓋骨で出来ている。驚きだ。</string>
+  <string name="Halls_TileDescWater">溶岩のように見えるが、冷たくて触っても安全だろう。</string>
+  <string name="Halls_TileDescStatue">なんと、この柱は本物の頭蓋骨でできているようだ。</string>
   <string name="Halls_TileDescBookshelf">本棚には古代の言語で書かれた本がある。</string>
   <string name="LastLevel_TileWater">冷えた溶岩</string>
   <string name="LastLevel_TileGrass">炭焼き苔</string>
