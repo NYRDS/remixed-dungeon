@@ -1113,7 +1113,7 @@
   <string name="Quarterstaff_Info">この硬い木の棒は、先端が鉄で覆われている。</string>
   <string name="Quarterstaff_Gender">力強い</string>
   <string name="ShortSword_Name">ショートソード</string>
-  <string name="ShortSword_Info">これはなかなか短いですが、ダガーより少し長いです。</string>
+  <string name="ShortSword_Info">ダガーより数センチ長いだけで、かなり短い剣。</string>
   <string name="ShortSword_ACReforge">鍛え直す</string>
   <string name="ShortSword_Select">強化する武器を選択</string>
   <string name="ShortSword_Reforged">あなたの %s を強化するため、ショートソードで鍛え直します</string>
