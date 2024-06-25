@@ -2177,7 +2177,7 @@
   <string name="PotionOfInvisibility_Name">不可視のポーション</string>
   <string name="PotionOfInvisibility_Info">このポーションを飲むと、一時的に透明になる。透明になっている間、敵はあなたを見ることができなくなる。敵を攻撃したり、敵の目の前で杖や巻物を使用すると、この効果は解除される。</string>
   <string name="PotionOfInvisibility_Apply">あなたはあなたの手が透明になるのを見た！</string>
-  <string name="PotionOfLevitation_Name">浮揚のポーション</string>
+  <string name="PotionOfLevitation_Name">浮遊のポーション</string>
   <string name="PotionOfLevitation_Info">この珍しい液体を飲むと、あなたはホバリングするように浮き上がり、トラップなどを難なく越えられます。しかし、炎やガスは空気中にあるため避けられません。</string>
   <string name="PotionOfLevitation_Apply">あなたは浮き上がった！</string>
   <string name="PotionOfLiquidFlame_Name">液化炎のポーション</string>
