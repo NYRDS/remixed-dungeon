@@ -679,7 +679,7 @@
   <string name="WndSettings_TextScaleDefault">既定のフォント</string>
   <string name="WndSettings_ScaleUp">UIを拡大</string>
   <string name="WndSettings_Immersive">没入モード</string>
-  <string name="WndSettings_Music">Music</string>
+  <string name="WndSettings_Music">音楽</string>
   <string name="WndSettings_Sound">Sound FX</string>
   <string name="WndSettings_Brightness">明るさ調整</string>
   <string name="WndSettings_SwitchPort">縦向きへ変更</string>
