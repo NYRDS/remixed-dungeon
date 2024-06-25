@@ -313,7 +313,7 @@
   <string name="IntroScene_Txt">あなたが来る以前に様々な冒険者が中に入って行きました。そのうちの何人かは宝物と魔法の古物を持ち帰りましたが、その他のほとんどの者はどうなったかわかりません。しかし、ダンジョンの奥深くにあると言われるイェンダーの魔除けを取得したものはいません。\n\nあなたは挑戦のために十分な準備をしましたが、一番重要なのは幸運の微笑みであると感じています。さぁ、あなたの冒険が始まる時です！</string>
   <string name="AmuletScene_Exit">今日は終わりにしましょう</string>
   <string name="AmuletScene_Stay">私はまだ終わらない</string>
-  <string name="AmuletScene_Txt">あなたの目的はイェンダーの魔除けを手に入れることです。その力で世界を手に入れることもできるし、人々の平和や繁栄も得られるし、それ以外でも。とにかく、あなたの人生の変更とともにこのゲームは終りを迎えます。ですが、もう少しの間残るという選択肢もあります。</string>
+  <string name="AmuletScene_Txt">あなたはついにイェンダーの魔除けを手にした。その力を使えば、世界を征服することも、人々に平和と繁栄をもたらすことも、何でもできる。いずれにせよ、あなたの人生は永遠に変わり、このゲームはここで終わる。あるいは、もう少しだけただの人間のままでいることもできる。</string>
   <string name="GameScene_Welcome">Remixed Dungeonの %d 階層へようこそ！</string>
   <string name="GameScene_WelcomeBack">おかえり！ここはRemixed Dungeonの %d 階層です！</string>
   <string name="GameScene_NightMode">夜のダンジョンはさらに危険なので、用心すること！</string>
