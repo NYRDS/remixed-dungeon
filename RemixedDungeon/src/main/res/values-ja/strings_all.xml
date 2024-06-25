@@ -938,9 +938,9 @@
   <string name="SpiderMindAmber_Gender">男性</string>
   <string name="SpiderMindAmber_Name_Objective">アンバースパイダー</string>
   <string name="SpiderMindAmber_Desc">アンバースパイダーは、通常のサイキックスパイダーに似た超能力を持つが、肉体的にははるかにタフな、神秘的で珍しい生き物である。「琥珀」という名前は、彼らの巨大な脳袋の色にちなんでおり、アンバースパイダーがその力を使って攻撃するとき、犠牲者の前に姿を現す。</string>
-  <string name="PirateSet_Name">海賊のセット</string>
+  <string name="PirateSet_Name">海賊セット</string>
   <string name="PirateSet_Info">おらぁ！きさまは我々の仲間に加わる勇気があるのか！？それとも、きさまもただの陸のネズミか？そうでなけりゃいいがな！なにせここは結局のところ海賊専用なんだからな。あー、つまり、なんだ……おらぁ！！</string>
-  <string name="WndSaveSlotSelect_Delete_Yes">はい、デリート</string>
+  <string name="WndSaveSlotSelect_Delete_Yes">はい、削除してください！</string>
   <string name="WndSaveSlotSelect_Delete_No">いいえ</string>
   <string name="WndSaveSlotSelect_Delete_Title">本当にこのセーブを削除しますか？</string>
   <string name="Hero_Name">あなた</string>
