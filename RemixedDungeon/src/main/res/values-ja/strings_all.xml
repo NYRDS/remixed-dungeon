@@ -2187,7 +2187,7 @@
   <string name="PotionOfMight_Apply">新たな力が全身を駆け巡る。</string>
   <string name="PotionOfMight_StaApply">力 +1、体力+5</string>
   <string name="PotionOfMindVision_Name">透視のポーション</string>
-  <string name="PotionOfMindVision_Info">これを飲んだ後、あなたは壁やドアの向こうにいる生き物の気配をも感知することができるようになる。</string>
+  <string name="PotionOfMindVision_Info">この薬を飲むと、遠くの生き物の精神に同調し、壁越しに生物の気配を感じることができるようになる。また、この薬を飲むと、近くの壁や扉を見通すことができるようになる。</string>
   <string name="PotionOfMindVision_Apply1">あなたはぼんやりと他の生き物の気配を感じるようになった！</string>
   <string name="PotionOfMindVision_Apply2">あなたは今、この周辺に他の気配を感じない。</string>
   <string name="PotionOfParalyticGas_Name">麻痺ガスのポーション</string>
