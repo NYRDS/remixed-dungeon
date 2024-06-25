@@ -1337,7 +1337,7 @@
   <string name="Thief_Name">シーフ</string>
   <string name="Thief_Gender">力強い</string>
   <string name="Thief_Name_Objective">シーフ</string>
-  <string name="Thief_Desc">ダンジョンの深層は犯罪者の隠れ場所になっています。すべてではないが、彼らは長い間日光を浴びずに正気でいられる。彼ら狂賊共は誰から何を盗んだかなど覚えていない。</string>
+  <string name="Thief_Desc">ダンジョンの深い階層は、常にあらゆる犯罪者の隠れ場所だった。日の光から遠く離れている間、平静を保てる者ばかりではない。とっくの昔に、この狂った泥棒や盗賊たちは、自分たちが何者で、なぜ盗むのかを忘れてしまっている。</string>
   <string name="Thief_Stole">%1$s はあなたから %2$s を盗んだ！</string>
   <string name="Thief_Carries">
 \n\n%1$s は _%2$s_ を運んでいる。明らかに盗まれたものだ。</string>
