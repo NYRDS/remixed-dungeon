@@ -2442,8 +2442,8 @@
   <string name="HeroClass_MagPerks_4">メイジは元素呪文を唱えるためにマナを使う。</string>
   <string name="HeroClass_MagPerks_5">識別のスクロールは最初から特定されている。</string>
   <string name="HeroClass_RogPerks_0">ローグはスタート時に影のリング+1を持っている。</string>
-  <string name="HeroClass_RogPerks_1">ローグは装着時にリングのタイプを特定する。</string>
-  <string name="HeroClass_RogPerks_2">ローグは軽い鎧を装備時に攻撃をかわすことがある。</string>
+  <string name="HeroClass_RogPerks_1">ローグは装着時にリングの種類を特定する。</string>
+  <string name="HeroClass_RogPerks_2">ローグは軽い鎧の扱いに習熟しており、軽い鎧を着用しているときはよりうまく身をかわすことができる。</string>
   <string name="HeroClass_RogPerks_3">ローグは長時間食べ物なしで平気です。</string>
   <string name="HeroClass_RogPerks_4">マジックマッピングのスクロールは最初から特定されます。</string>
   <string name="HeroClass_RogPerks_5">魔法の地図のスクロールは最初から特定されている。</string>
