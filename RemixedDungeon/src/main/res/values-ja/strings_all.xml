@@ -1230,11 +1230,11 @@
   <string name="Eye_Gender">中性の</string>
   <string name="Eye_Name_Objective">イビルアイ</string>
   <string name="Eye_Desc">この悪魔の別名に \"憎悪のオーブ \"があるが、これは敵を見つけるとデスゲイズを無謀に使い、しばしば味方を無視して負傷させるからである。</string>
-  <string name="Eye_Kill">%s のデスゲイズはあなたを倒しました...</string>
+  <string name="Eye_Kill">%s のデスゲイズがあなたを殺した...</string>
   <string name="Gnoll_Name">ノールスカウト</string>
   <string name="Gnoll_Gender">力強い</string>
   <string name="Gnoll_Name_Objective">ノールスカウト</string>
-  <string name="Gnoll_Desc">ノールはハイエナのような人型種です。彼らは下水やダンジョンに住み、常にそこを危険な場所にしている。ノールスカウトは彼らの集団の大多数を占める。彼らは獣のように強くも、シャーマンのように知的でもない。</string>
+  <string name="Gnoll_Desc">ノールはハイエナに似た人型種である。下水道や地下牢に住み、時折地上に出て襲撃を行う。ノールスカウトは彼らの群れの一般的なメンバーであり、ブルートほど強くはなく、シャーマンほど知的でもない。</string>
   <string name="Golem_Name">ゴーレム</string>
   <string name="Golem_Gender">力強い</string>
   <string name="Golem_Name_Objective">ゴーレム</string>
