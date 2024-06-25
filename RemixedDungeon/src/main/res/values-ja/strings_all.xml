@@ -453,7 +453,7 @@
   <string name="Ankh_Info">この古代の不死のシンボルは、死後に蘇る能力を与える。復活すると、装備していないアイテムはすべて失われる。</string>
   <string name="ArmorKit_Name">アーマーキット</string>
   <string name="ArmorKit_ACAplly">適応する</string>
-  <string name="ArmorKit_Info">小さなツールと材料のこのキットを使って、元の鎧のすべての性質を保持したまま\"偉大な鎧\"に作り変える事ができます。また、着用者のクラスに応じて特別な能力を与えます。仕立て、革加工、鍛冶などのスキルは必要ありません。</string>
+  <string name="ArmorKit_Info">この小さなツールと材料キットを使えば、誰でもどんな鎧でも \"エピック・アーマー \"に作り変えることができる。\"エピック・アーマー \"は元の鎧の特性はそのままに、着用者のクラスに応じて特別な能力を発揮する。仕立てや革細工、鍛冶の技術は必要ない。</string>
   <string name="ArmorKit_SelectArmor">強化する鎧を選択</string>
   <string name="ArmorKit_Upgraded">あなたは、アーマーキットを適用して %s を強化した</string>
   <string name="Dewdrop_Name">雫</string>
