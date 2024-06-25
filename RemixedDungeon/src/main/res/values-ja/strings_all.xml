@@ -1143,7 +1143,7 @@
   <string name="CurareDart_Info">この邪悪な小さなダーツは大したダメージは与えないが、標的を麻痺させ、しばらくの間無力化することができる。</string>
   <string name="CurareDart_Gender">力強い</string>
   <string name="Dart_Name">ダーツ</string>
-  <string name="Dart_Info">この単純な金属のクギは、手首の軽い動きで敵に向かってまっすぐ飛ぶようにできています。</string>
+  <string name="Dart_Info">このシンプルな金属製のクギは、獲物を正確に貫くために理想的な重さになっている。</string>
   <string name="Dart_Gender">力強い</string>
   <string name="IncendiaryDart_Name">焼夷性ダーツ</string>
   <string name="IncendiaryDart_Info">このダーツが目標に刺さると、取り付けられた不安定な化合物が鮮やかに炎上するよう設計されています。</string>
