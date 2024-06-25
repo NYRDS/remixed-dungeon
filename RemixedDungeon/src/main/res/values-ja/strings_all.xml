@@ -985,9 +985,9 @@
   <string name="HeroSubClass_NameBatM">バトルメイジ</string>
   <string name="HeroSubClass_DescBatM">杖を手に戦っている時、「バトルメイジ」は現在のチャージ数に応じて追加ダメージを与える。攻撃が命中するたびに、この杖のチャージは1回復する。</string>
   <string name="HeroSubClass_NameAssa">アサシン</string>
-  <string name="HeroSubClass_DescAssa">奇襲攻撃をした時、_アサシン_は追加ダメージを与える。</string>
+  <string name="HeroSubClass_DescAssa">奇襲攻撃をした時、「アサシン」は追加ダメージを与える。</string>
   <string name="HeroSubClass_NameFreR">フリーランナー</string>
-  <string name="HeroSubClass_DescFreR">_フリーランナー_はほとんどのモンスターよりも倍速く移動できます。彼が走っている時、フリーランナーに当てるのは困難です。彼は重荷と飢えに邪魔されないでしょう。</string>
+  <string name="HeroSubClass_DescFreR">「フリーランナー」はほとんどのモンスターよりも2倍近く速く移動できる。彼が走っている時に攻撃を当てるのは困難だろう。ただそのためには、フリーランナーは動き続けなければならず、飢餓状態であってはならない。</string>
   <string name="HeroSubClass_NameSnip">スナイパー</string>
   <string name="HeroSubClass_DescSnip">_スナイパー_が遠隔武器を使った場合、敵の装甲の弱点を狙えます。</string>
   <string name="HeroSubClass_NameWard">ウォーデン</string>
