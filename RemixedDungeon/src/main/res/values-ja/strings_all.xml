@@ -1300,9 +1300,9 @@
   <string name="Shaman_Name_Objective">ノールシャーマン</string>
   <string name="Shaman_Desc">最も知能の高いノールはシャーマンの魔法を使いこなすことができる。ノールシャーマンは力不足を補うために戦闘魔法を好み、部族内での地位に疑問を抱く者には躊躇なく使用する。</string>
   <string name="Shaman_Killed">%s のライトニングボルトがあなたを殺した...</string>
-  <string name="Shielded_Name">シールデッドブルート</string>
+  <string name="Shielded_Name">盾持ちのノールブルート</string>
   <string name="Shielded_Gender">力強い</string>
-  <string name="Shielded_Name_Objective">シールデッドブルート</string>
+  <string name="Shielded_Name_Objective">盾持ちのノールブルート</string>
   <string name="Shielded_Defense">ブロックした</string>
   <string name="Shielded_Desc">ノールブルートはとても大きく、強く、タフです。重傷を負った時には凶暴になり、更に多くのダメージを敵に与えます。このブルートは巨大な盾を身に着けている！</string>
   <string name="Skeleton_Name">スケルトン</string>
