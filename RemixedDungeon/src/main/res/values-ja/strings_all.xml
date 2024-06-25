@@ -2118,9 +2118,9 @@
   <string name="Halls_TileDescBookshelf">本棚には古代の言語で書かれた本がある。</string>
   <string name="LastLevel_TileWater">冷たい溶岩</string>
   <string name="LastLevel_TileGrass">熾火苔</string>
-  <string name="LastLevel_TileHighGrass">炭焼き菌類</string>
+  <string name="LastLevel_TileHighGrass">熾火茸</string>
   <string name="LastLevel_TileStatue">柱</string>
-  <string name="LastLevel_TileDescWater">これは溶岩のように見えますが、冷たく、触っても平気でしょう。</string>
+  <string name="LastLevel_TileDescWater">溶岩のように見えるが、冷たくて触っても安全だろう。</string>
   <string name="LastLevel_TileDescStatue">柱は人の頭蓋骨で出来ている。驚きだ。</string>
   <string name="LastShopLevel_TileWater">怪しい色の水</string>
   <string name="LastShopLevel_TileHighGrass">高い花が咲く</string>
