@@ -1769,7 +1769,7 @@
   <string name="ScrollOfWeaponUpgrade_Name">武器強化のスクロール</string>
   <string name="ScrollOfWeaponUpgrade_Info">このスクロールは近接武器をアップグレードし、その品質を向上させる。通常のアップグレードの巻物とは違い、この特別なスクロールは武器のエンチャントを破壊することはない。それどころか、エンチャントされていない武器にランダムなエンチャントを付与することができる。</string>
   <string name="ScrollOfWeaponUpgrade_InvTitle">強化する武器を選択</string>
-  <string name="ScrollOfWeaponUpgrade_LooksBetter">あなたの %s は良くなったように見えます</string>
+  <string name="ScrollOfWeaponUpgrade_LooksBetter">あなたの %s は良くなったように見える</string>
   <string name="ScrollOfDomination_Name">支配のスクロール</string>
   <string name="ScrollOfDomination_Info">このスクロールはあなたの目の前の生き物の意思を捻じ曲げます。その生き物はあなたのために死ぬまで戦います。</string>
   <string name="ScrollOfCurse_Name">呪いのスクロール</string>
