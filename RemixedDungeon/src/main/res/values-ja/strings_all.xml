@@ -1116,8 +1116,8 @@
   <string name="ShortSword_Info">ダガーより数センチ長いだけで、かなり短い剣。</string>
   <string name="ShortSword_ACReforge">鍛え直す</string>
   <string name="ShortSword_Select">強化する武器を選択</string>
-  <string name="ShortSword_Reforged">あなたの %s を強化するため、ショートソードで鍛え直します</string>
-  <string name="ShortSword_NotBoomerang">あなたはこの方法でブーメランを強化できません</string>
+  <string name="ShortSword_Reforged">%s を強化するため、ショートソードを鍛え直した</string>
+  <string name="ShortSword_NotBoomerang">この方法ではブーメランを強化できない</string>
   <string name="ShortSword_Gender">力強い</string>
   <string name="Spear_Name">スピアー</string>
   <string name="Spear_Info">細い木の棒の先端に鋭い鉄が付いています。</string>
