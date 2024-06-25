@@ -196,7 +196,7 @@
   <string name="Wand_Damage">この杖を近接武器として使用する場合、その平均ダメージは1ヒットにつき%dである。</string>
   <string name="Wand_Weapon">あなたは近接武器としてこの杖を使用することができる。</string>
   <string name="Wand_Fizzles">あなたの杖はプシューと鳴った; 今は充填しなければならない</string>
-  <string name="Wand_SelfTarget">自分自身をターゲットすることは出来ません</string>
+  <string name="Wand_SelfTarget">自分自身をターゲットにすることはできない</string>
   <string name="Wand_Prompt">振る方向を選ぶ</string>
   <string name="WandOfAmok_Name">逆上の杖</string>
   <string name="WandOfAmok_Info">この杖から放たれる紫色の光は、対象を逆上させ、周囲のランダムな生き物を攻撃させます。</string>
