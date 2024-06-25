@@ -103,7 +103,7 @@
   <string name="BishopNPC_Gender">男性</string>
   <string name="BishopNPC_Name_Objective">司教</string>
   <string name="Bishop_title">司教</string>
-  <string name="Bishop_text">日夜、私はあなたのために祈る。</string>
+  <string name="Bishop_text">日夜、私はあなたのために祈りましょう。</string>
   <string name="Bishop_lesser_bless">祝福 - %dg</string>
   <string name="Bishop_great_bless">大いなる祝福 - %dg</string>
   <string name="Bishop_remove_curse">解呪 - %dg</string>
