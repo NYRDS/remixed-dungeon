@@ -2241,7 +2241,7 @@
   <string name="CloakSpell_Name">潜伏</string>
   <string name="CloakSpell_Info">影に隠れて姿を消す。発見される確率を大幅に下げる。敵が近くにいるときは使用できない。</string>
   <string name="CloakSpell_EnemiesNearby">敵が近くにいる間は、影に隠れることはできない。</string>
-  <string name="CloakBuff_Name">クロークド</string>
+  <string name="CloakBuff_Name">潜伏中</string>
   <string name="CloakBuff_Info">暗いマントはあなたを影の中に隠し、敵から見えにくくする。</string>
   <string name="TitleScene_Mods">Mods</string>
   <string name="WndHero_Stealth">ステルス</string>
