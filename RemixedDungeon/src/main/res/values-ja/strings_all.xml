@@ -1845,8 +1845,8 @@
   <string name="MirrorImage_Gender">力強い</string>
   <string name="MirrorImage_Desc">この幻影はあなたにとても良く似ているが、青白く少し震えている。</string>
   <string name="RatKing_Name">ネズミの王</string>
-  <string name="RatKing_Desc">このネズミは普通の有袋ネズミより少し大きく、頭の上に小さな王冠をつけています。</string>
-  <string name="RatKing_Info1">私は眠っていない！</string>
+  <string name="RatKing_Desc">このネズミは普通の有袋ネズミより少し大きく、頭に小さな冠をかぶっている。</string>
+  <string name="RatKing_Info1">寝てないよ！</string>
   <string name="RatKing_Info2">それはなんだ？私に戯れ言の時間など無い。我が王国にルールは無用だ！</string>
   <string name="RatKing_Info3">おまえはどうやる、小さな生き物、私達ネズミらをかき乱す？！</string>
   <string name="RatKing_Died">王は死んだ。王様バンザイ！</string>
