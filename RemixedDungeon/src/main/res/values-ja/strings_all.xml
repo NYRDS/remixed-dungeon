@@ -192,7 +192,7 @@
   <string name="WndJournal_Logbook">ログブック</string>
   <string name="Wand_Name">%s の杖</string>
   <string name="Wand_ACZap">振る</string>
-  <string name="Wand_Wood">この細い %s の杖は触れると温かいです。使うと何が起こるか知っているか？</string>
+  <string name="Wand_Wood">この細い %s の杖は触れると温かい。使ったらどうなるかは誰にもわからない。</string>
   <string name="Wand_Damage">この杖を近接武器として使用した場合、平均ダメージは %d ポイントです。</string>
   <string name="Wand_Weapon">あなたは近接武器としてこの杖を使用できます。</string>
   <string name="Wand_Fizzles">あなたの杖はプシューと鳴った; 今は充填しなければならない</string>
