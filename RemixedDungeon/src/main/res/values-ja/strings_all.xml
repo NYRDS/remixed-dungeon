@@ -314,7 +314,7 @@
   <string name="AmuletScene_Exit">今日はこれで終わりにしよう</string>
   <string name="AmuletScene_Stay">まだ終わっていない</string>
   <string name="AmuletScene_Txt">あなたはついにイェンダーの魔除けを手にした。その力を使えば、世界を征服することも、人々に平和と繁栄をもたらすことも、何でもできる。いずれにせよ、あなたの人生は永遠に変わり、このゲームはここで終わる。あるいは、もう少しだけただの人間のままでいることもできる。</string>
-  <string name="GameScene_Welcome">Remixed Dungeonの %d 階層へようこそ！</string>
+  <string name="GameScene_Welcome">ようこそ！ここはRemixed Dungeonの%d階層です！</string>
   <string name="GameScene_WelcomeBack">おかえり！ここはRemixed Dungeonの %d 階層です！</string>
   <string name="GameScene_NightMode">夜のダンジョンはさらに危険なので、用心すること！</string>
   <string name="GameScene_Chasm">あなたの足音がダンジョンに響き渡る。</string>
