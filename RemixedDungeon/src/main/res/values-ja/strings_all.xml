@@ -1398,8 +1398,8 @@
   <string name="WaterElemental_Desc">水のエレメンタルは大きな水塊の近くに生息している。通常、これらの魔法で結合された波は、ただ彷徨っているだけだ。</string>
   <string name="AirElemental_Name">風のエレメンタル</string>
   <string name="AirElemental_Gender">力強い</string>
-  <string name="AirElemental_Name_Objective">エアーエレメンタル</string>
-  <string name="AirElemental_Desc">エアーエレメンタルは空気中に存在する魔法の存在で浮いています。</string>
+  <string name="AirElemental_Name_Objective">風のエレメンタル</string>
+  <string name="AirElemental_Desc">風のエレメンタルは生きた空気でできた空飛ぶ魔法の存在だ。</string>
   <string name="EarthElemental_Name">アースエレメンタル</string>
   <string name="EarthElemental_Gender">力強い</string>
   <string name="EarthElemental_Name_Objective">アースエレメンタル</string>
