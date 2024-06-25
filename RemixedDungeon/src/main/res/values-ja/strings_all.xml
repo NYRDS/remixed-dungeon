@@ -520,7 +520,7 @@
   <string name="SkeletonKey_Name">骸骨の鍵</string>
   <string name="SkeletonKey_Info">これは厳粛な鍵だ: 頭がドクロの形をしている。おそらく、何か重大なドアを開けることができるのだろう。</string>
   <string name="CorpseDust_Name">コープスダスト</string>
-  <string name="CorpseDust_Info">コープスダストの玉は普通のダストの玉と外見に違いはありません。しかし、あなたはそれを手にしてみれば何となく分かるでしょう。</string>
+  <string name="CorpseDust_Info">コープスダストの玉は、外見上は普通のダストの玉と変わらない。しかし、一刻も早く手放した方がいいことは何となくわかる。</string>
   <string name="CorpseDust_Info2">多分、あなたが不安と怒りを感じるのはそれを保持したからでしょう。</string>
   <string name="DarkGold_Name">黒金鉱石</string>
   <string name="DarkGold_Info">この金属が黒と呼ばれているのはその色からではなく(普通の金とは違っていない)、日光のもとで溶けて作られた役に立たない表面からです。</string>
