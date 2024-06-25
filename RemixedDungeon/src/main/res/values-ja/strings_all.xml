@@ -1383,8 +1383,8 @@
   <string name="SpiderExploding_Name">スパイダーワーカー</string>
   <string name="SpiderExploding_Gender">力強い</string>
   <string name="SpiderExploding_Name_Objective">スパイダーワーカー</string>
-  <string name="SpiderExploding_Desc">平時はとても働き者だが、これらの生き物は敵に突進することを躊躇しないし、彼らは走って横切った最初の植物を掴み旋回し自分自身を生きた爆弾とする。</string>
-  <string name="SpiderMind_Name">超能力クモ</string>
+  <string name="SpiderExploding_Desc">平和な時代には働き者であるこの生き物は、敵に突撃することをためらわず、最初に出くわした植物をつかみ、自らを生きた爆弾に変えてしまう。</string>
+  <string name="SpiderMind_Name">サイキックスパイダー</string>
   <string name="SpiderMind_Gender">力強い</string>
   <string name="SpiderMind_Name_Objective">超能力クモ</string>
   <string name="SpiderMind_Desc">これらの弱そうに見えるクモは、ユニークな精神力で巣穴全体を制御することが出来ます。超能力クモは生き物の制御は上手いが、とても臆病です。</string>
