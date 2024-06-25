@@ -1814,8 +1814,8 @@
   <string name="Ghost_Desc">ゴーストはかろうじて見える。それは悲しい顔をしてぼんやりと光っている。</string>
   <string name="Ghost_Rose1">こんにちは、冒険家...かつての私はあなたのように強く、自信に満ちていた...そして死んでしまった...でもここを離れることができない...「乾燥したバラ」を手に入れるまでは...大切なバラなのに...あるモンスターに盗まれてしまった...</string>
   <string name="Ghost_Rose2">お願い...助けて...バラを見つけて...</string>
-  <string name="Ghost_Rat1">ハロー冒険者... 私もかつてはあなたのようだった - 強いと信じた... そして今は死んでいる... しかし私はここから離れられない... 復讐したい... _太ったネズミ_を殺してくれ、ヤツが俺の命を奪った...</string>
-  <string name="Ghost_Rat2">お願いだ... 助けてくれ... 醜いアイツを殺してくれ...</string>
+  <string name="Ghost_Rat1">こんにちは、冒険家...かつての私はあなたのように強く、自信に満ちていた...そして死んでしまった...でもここを離れることができない...復讐を果たすまでは...私の命を奪ったあの腐ったネズミに...</string>
+  <string name="Ghost_Rat2">お願い...助けて...私の代わりにあいつを殺して...</string>
   <string name="Ghost_Defense">回避した</string>
   <string name="FetidRat_Name">太ったネズミ</string>
   <string name="FetidRat_Name_Objective">太ったネズミ</string>
