@@ -1067,7 +1067,7 @@
   <string name="NecromancerNPC_Message4">ネクロポリスには特別な何かが隠されている。</string>
   <string name="RatKing_Name_Objective">ネズミの王</string>
   <string name="RatKing_Gender">男性</string>
-  <string name="Weapon_Identify">あなたは今 %1$s を識別するために十分精通しています。これは %2$s です。</string>
+  <string name="Weapon_Identify">あなたは今 %1$s を識別するために十分精通している。これは %2$s だ。</string>
   <string name="Weapon_Incompatible">異なるタイプの魔法はこの武器の魔術を打ち消した！</string>
   <string name="MeleeWeapon_Info1a">この %1$s は %2$s ランク-%3$d の近接武器です。</string>
   <string name="MeleeWeapon_Info1b">普通の</string>
