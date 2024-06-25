@@ -2083,8 +2083,8 @@
   <string name="Level_TileDescEntrance">階段は上層階まで続いている。</string>
   <string name="Level_TileDescExit">階段は下層階まで続いている。</string>
   <string name="Level_TileDescEmbers">熾火が床を覆っている。</string>
-  <string name="Level_TileDescHighGrass">濃い植物は視界を遮ります。</string>
-  <string name="Level_TileDescLockedDoor">このドアはロックされていて、開けるためには合う鍵が必要です。</string>
+  <string name="Level_TileDescHighGrass">密生した凍った植物が視界を遮る。</string>
+  <string name="Level_TileDescLockedDoor">この扉には鍵がかかっている。開けるにはこの扉にあう鍵が必要だ。</string>
   <string name="Level_TileDescLockedExit">重いバーが下り階段を塞いでいる。</string>
   <string name="Level_TileDescBarricade">木製のバリケードが堅くセットされている。長い年月で乾いている。燃えるか？</string>
   <string name="Level_TileDescSign">ここからでは読むことが出来ない。</string>
