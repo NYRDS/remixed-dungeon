@@ -507,7 +507,7 @@
   <string name="ScrollHolder_Name">スクロールホルダー</string>
   <string name="ScrollHolder_Info">この筒状の容器には、巻物を何枚でも入れることが出来る。バックパックの場所を取らず、入れた巻物を火から守ることも出来る。</string>
   <string name="SeedPouch_Name">シードポーチ</string>
-  <string name="SeedPouch_Info">この小さなベルベットのポーチは、種子を複数保存して置けます。とても便利。</string>
+  <string name="SeedPouch_Info">この小さなベルベットのポーチは、いくつでも種をいれることが出来る。とても便利だ。</string>
   <string name="WandHolster_Name">ワンドホルスター</string>
   <string name="WandHolster_Info">このスリムなホルダーはエキゾチックな動物の革で作られています。これは %d 個の杖をコンパクトに持ち運べます。</string>
   <string name="PotionBelt_Info">この強力な革のベルトは、すべてのポーションを持ち運べて、霜の被害からも保護することが出来ます。</string>
