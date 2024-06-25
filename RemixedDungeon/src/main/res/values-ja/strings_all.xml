@@ -1754,8 +1754,8 @@
   <string name="ScrollOfRemoveCurse_Proced">パックが浄化の光で輝き、邪悪なエネルギーが散っていく。</string>
   <string name="ScrollOfRemoveCurse_NoProced">パックが浄化の光で輝くが、何も起こらなかった。</string>
   <string name="ScrollOfTeleportation_Name">転移のスクロール</string>
-  <string name="ScrollOfTeleportation_Info">この羊皮紙上の呪文はこの階層のランダムな場所へ読み手を瞬間移動させます。危険な状況を回避できますが、不運な読み手はもっと危険な場所で自分自身を見つけるかもしれません。</string>
-  <string name="ScrollOfTeleportation_Teleport">まばたきの一瞬で、あなたはこの階層の別な場所へ瞬間移動した。</string>
+  <string name="ScrollOfTeleportation_Info">この羊皮紙に書かれた呪文は、読み手を階層内のランダムな場所に瞬時に移動させる。危険な状況から逃れるために使うこともできるが、運の悪い読み手はさらに危険な場所に身を置くことになるかもしれない。</string>
+  <string name="ScrollOfTeleportation_Teleport">瞬く間に、あなたは階層の別の場所にテレポートされた。</string>
   <string name="ScrollOfTeleportation_NoTeleport">この場所の強力な魔法のオーラが、あなたの瞬間移動を防いだ！</string>
   <string name="ScrollOfTerror_Name">恐怖のスクロール</string>
   <string name="ScrollOfTerror_Info">赤い閃光はあなたの視界内の全ての生き物に恐怖を与えて、彼らは逃げまわります。逃げまわる敵を攻撃すると効果は失われます。</string>
