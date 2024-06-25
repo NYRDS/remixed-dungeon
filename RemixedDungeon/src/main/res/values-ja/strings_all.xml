@@ -123,7 +123,7 @@
   <string name="BlackCat_AiStatus">この猫は普通の猫らしいことをしている</string>
   <string name="Shopkeeper_Buy">購入するアイテムを選択</string>
   <string name="Shopkeeper_title">商店</string>
-  <string name="Shopkeeper_text">ピクセルマートのダンジョン支店へようこそ。どのようなご用件でしょうか?</string>
+  <string name="Shopkeeper_text">ピクセル商会のダンジョン支店へようこそ。どのようなご用件でしょうか?</string>
   <string name="Shopkeeper_SellPrompt">売りたいものがある</string>
   <string name="Shopkeeper_BuyPrompt">商品を買いたい</string>
   <string name="WndTradeItem_BuyN">%1$dを%2$dgで買う</string>
