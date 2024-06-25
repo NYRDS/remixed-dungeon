@@ -431,7 +431,7 @@
   <string name="WndTradeItem_Cancel">気にするな</string>
   <string name="WndTradeItem_Sold">あなたは %2$dg で %1$s を売った</string>
   <string name="WndTradeItem_Bought">あなたは %2$dg で %1$s を買った</string>
-  <string name="WndWandmaker_Message">おぉ、私はあなたが成功するのを見ました！私はあなたなら成し遂げると信じていました。約束通り、私の自慢の杖の1つを譲りましょう。</string>
+  <string name="WndWandmaker_Message">ああ、成功したんだな！安心したよ、ありがとう！約束通り、私の高品質な作品を１本差し上げようじゃないか。さぁ、選んでくれ。</string>
   <string name="WndWandmaker_Battle">戦闘の杖</string>
   <string name="WndWandmaker_NonBattle">便利な杖</string>
   <string name="WndWandmaker_Farawell">あなたの探索に幸運を、%s！</string>
