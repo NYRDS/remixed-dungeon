@@ -1734,8 +1734,8 @@
   <string name="ScrollOfIdentify_Info1">これは %s だ</string>
   <string name="ScrollOfLullaby_Name">子守唄のスクロール</string>
   <string name="ScrollOfLullaby_Info">心地よいメロディが視界内の生き物を深い眠りに誘い、逃走や奇襲を仕掛けるチャンスを与えてくれる。</string>
-  <string name="ScrollOfLullaby_Info1">スクロールはなだめるようなメロディを発した。</string>
-  <string name="ScrollOfLullaby_Info2">スクロールはなだめるようなメロディを発し、 %s は眠りに落ちた！</string>
+  <string name="ScrollOfLullaby_Info1">スクロールが心地よいメロディーを奏でる。</string>
+  <string name="ScrollOfLullaby_Info2">スクロールは心地よいメロディを発し、 %s は眠りに落ちた！</string>
   <string name="ScrollOfLullaby_Info3">スクロールはなだめるようなメロディを発し、モンスターは眠りに落ちた！</string>
   <string name="ScrollOfMagicMapping_Name">魔法の地図作成のスクロール</string>
   <string name="ScrollOfMagicMapping_Info">このスクロールを読むと、あなたの脳の中にこの階層のすべての構造、隠された秘密までもがくっきりと刻み込まれます。アイテムの場所や生き物の場所は不明のままです。</string>
