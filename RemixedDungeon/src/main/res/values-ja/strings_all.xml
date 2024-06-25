@@ -65,7 +65,7 @@
   <string name="RingOfShadows_Name">影のリング</string>
   <string name="RingOfShadows_Info">このリングを身に着けていると、敵に気づかれにくくなる。劣化した影のリングは、あなたの存在に気づいていない敵に警告を発する。</string>
   <string name="RingOfThorns_Name">いばらのリング</string>
-  <string name="RingOfThorns_Info">このリングに本物のいばらがあるわけではないですが、あなたに対する敵の攻撃の何割か損傷を相手に負わせます。このリングは強化しても追加ボーナスは得られません。</string>
+  <string name="RingOfThorns_Info">このリングには本物の棘はないが、攻撃してきた敵へダメージの何割かを返すことが出来る。このリングをアップグレードしても、追加のボーナスは得られない。</string>
   <string name="RingOfStoneWalking_Name">石血のリング</string>
   <string name="RingOfStoneWalking_Info">この珍しいリングは頑丈な石で作られています。あなたが最初に思ったことは、ルビーは実際には血液がその場所にあった！壁の内部へ向かって現れる矢印は、絶望へと進んでいる... どういうことだろうか？</string>
   <string name="RingOfStoneWalking_ImmuredInStone">あなたは石に閉じ込められた。永遠に。</string>
