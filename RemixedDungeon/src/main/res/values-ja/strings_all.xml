@@ -2056,7 +2056,7 @@
   <string name="Level_TileEntrance">深層の入り口</string>
   <string name="Level_TileExit">深層の出口</string>
   <string name="Level_TileEmbers">熾火</string>
-  <string name="Level_TileLockedDoor">鍵付きの扉</string>
+  <string name="Level_TileLockedDoor">鍵のかかった扉</string>
   <string name="Level_TilePedestal">台座</string>
   <string name="Level_TileBarricade">バリケード</string>
   <string name="Level_TileHighGrass">高い草</string>
