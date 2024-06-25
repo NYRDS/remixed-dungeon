@@ -428,7 +428,7 @@
   <string name="WndTradeItem_Sell">%dg で売る</string>
   <string name="WndTradeItem_Sell1">%dg で1つ売る</string>
   <string name="WndTradeItem_SellAll">%dg ですべて売る</string>
-  <string name="WndTradeItem_Cancel">気にするな</string>
+  <string name="WndTradeItem_Cancel">何もしない</string>
   <string name="WndTradeItem_Sold">あなたは %2$dg で %1$s を売った</string>
   <string name="WndTradeItem_Bought">あなたは %2$dg で %1$s を買った</string>
   <string name="WndWandmaker_Message">ああ、成功したんだな！安心したよ、ありがとう！約束通り、私の高品質な作品を１本差し上げようじゃないか。さぁ、選んでくれ。</string>
