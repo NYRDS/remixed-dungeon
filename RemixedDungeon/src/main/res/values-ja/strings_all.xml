@@ -358,7 +358,7 @@
   <string name="WndCatalogus_Title">カタログ</string>
   <string name="WndChallenges_Title">挑戦</string>
   <string name="WndChooseWay_Message">あなたはどちらの道を行く？</string>
-  <string name="WndChooseWay_Cancel">私は後で決める</string>
+  <string name="WndChooseWay_Cancel">後で決める</string>
   <string name="WndClass_Mastery">習熟</string>
   <string name="WndError_Title">エラー</string>
   <string name="WndGame_Settings">設定</string>
