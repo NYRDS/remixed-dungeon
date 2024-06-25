@@ -1494,7 +1494,7 @@
   <string name="Badges_DeathPoison">毒による死亡</string>
   <string name="Badges_DeathGas">毒ガスによる死亡</string>
   <string name="Badges_DeathHunger">飢え死に</string>
-  <string name="Badges_DeathGlyph">グリフによる死亡</string>
+  <string name="Badges_DeathGlyph">刻印による死亡</string>
   <string name="Badges_DeathFalling">落下による死亡</string>
   <string name="Badges_Yasd">火災、毒、毒ガス、飢餓による死亡</string>
   <string name="Badges_BossSlain1">グーを殺した</string>
