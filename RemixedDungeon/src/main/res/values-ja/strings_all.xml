@@ -1965,14 +1965,14 @@
   <string name="Armor_Info7a">あなたは %1$s%2$s を着用している。</string>
   <string name="Armor_Info7b">、それは呪われているため、あなたは取り除くことが出来ない</string>
   <string name="Armor_Info8">あなたは %s に潜んでいる邪悪な魔力を感じることが出来る。</string>
-  <string name="Armor_Glyph">グリフ</string>
+  <string name="Armor_Glyph">刻印</string>
   <string name="ClassArmor_Desc">アイテムがよく見える！</string>
   <string name="ClassArmor_LowHealt">あなたは不健康だ！</string>
   <string name="ClassArmor_NotEquipped">この鎧をつけるとあなたはパワーアップするだろう。</string>
   <string name="ClothArmor_Name">布製の鎧</string>
   <string name="ClothArmor_Desc">この軽い鎧は普通の性能だ。</string>
   <string name="ElfArmor_Name">エルフのマント</string>
-  <string name="ElfArmor_Desc">このエルフのマントの助けを借りて自然の力を召喚できます。高い草の成長意思のまたたきで、視界内のすべての敵を硬い石のように動けなくする。</string>
+  <string name="ElfArmor_Desc">このマントの助けを借りて、エルフは自然の力そのものを呼び出すことができる。固い石を突き破り瞬く間に高い草が生え、視界に入るすべての敵を動けなくする。</string>
   <string name="ElfArmor_ACSpecial">自然を呼び出す</string>
   <string name="ElfArmor_NotElf">エルフだけがこの鎧を使うことができます。</string>
   <string name="HuntressArmor_Name">ハンターのマント</string>
