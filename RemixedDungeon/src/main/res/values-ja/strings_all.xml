@@ -2378,8 +2378,8 @@
   <string name="BlackCat_Phrases_1">ニャー...</string>
   <string name="BlackCat_Phrases_2">ニャー！</string>
   <string name="Char_Hit_0">%1$s は %2$s を攻撃した</string>
-  <string name="Char_Hit_1">%1$s は %2$s を攻撃</string>
-  <string name="Char_Hit_2">%1$s は %2$s を攻撃</string>
+  <string name="Char_Hit_1">%1$s は %2$s を攻撃した</string>
+  <string name="Char_Hit_2">%1$s は %2$s を攻撃した</string>
   <string name="Char_Kill_0">%s はあなたを殺した...</string>
   <string name="Char_Kill_1">%s はあなたを殺した...</string>
   <string name="Char_Kill_2">%s はあなたを殺した...</string>
