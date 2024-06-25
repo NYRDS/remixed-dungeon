@@ -2453,7 +2453,7 @@
   <string name="HeroClass_HunPerks_3">ハントレスは雫からより多くの体力を得られる。</string>
   <string name="HeroClass_HunPerks_4">ハントレスは、たとえモンスターが障害物の陰に隠れていても、それを感知することができる。</string>
   <string name="HeroClass_ElfPerks_0">エルフはスタート時に15ポイントの体力があるが力は9ポイントしかない。</string>
-  <string name="HeroClass_ElfPerks_1">エルフはrootingに免疫がある。</string>
+  <string name="HeroClass_ElfPerks_1">エルフはルート化に免疫がある。</string>
   <string name="HeroClass_ElfPerks_2">エルフはスタート時に強化された木の弓と矢の束を持つ。</string>
   <string name="HeroClass_ElfPerks_3">エルフは弓の扱いに非常に長けており、機敏である。</string>
   <string name="HeroClass_ElfPerks_4">エルフは雫からより多くの体力を得られる。</string>
