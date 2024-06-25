@@ -2029,9 +2029,9 @@
   <string name="Fadeleaf_Name">フェードリーフ</string>
   <string name="Fadeleaf_Desc">フェードリーフに触れると、どの生き物も現在の階層上のランダムな場所にテレポートする。</string>
   <string name="Firebloom_Name">ファイアーブルーム</string>
-  <string name="Firebloom_Desc">何かがファイアーブルームに触れると、炎に包まれます。</string>
+  <string name="Firebloom_Desc">ファイアーブルームに何かが触れると、炎が燃え上がる。</string>
   <string name="Icecap_Name">アイスキャップ</string>
-  <string name="Icecap_Desc">アイスキャップに触れると、周辺のすべてのものを凍らせる花粉を放出します。</string>
+  <string name="Icecap_Desc">アイスキャップは触れると花粉を吐き出し、周囲のものを凍らせる。</string>
   <string name="Sorrowmoss_Name">ソロウモス</string>
   <string name="Sorrowmoss_Desc">ソロウモスは、猛毒でコーティングされたカミソリのような花びらを持つ花(苔ではない)です。</string>
   <string name="Sungrass_Name">サングラス</string>
