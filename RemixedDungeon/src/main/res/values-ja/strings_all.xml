@@ -1720,7 +1720,7 @@
   <string name="Scroll_Blinded">あなたは盲目なためスクロールを読むことが出来ない</string>
   <string name="InventoryScroll_Title">アイテムを選択</string>
   <string name="InventoryScroll_Warning">本当にこのスクロールの使用をキャンセルするのですか？キャンセルしてもスクロールは消費はされます。</string>
-  <string name="InventoryScroll_Yes">はい、問題ないです</string>
+  <string name="InventoryScroll_Yes">ああ、問題ない</string>
   <string name="InventoryScroll_No">いや、気が変わった</string>
   <string name="BlankScroll_Name">白紙のスクロール</string>
   <string name="BlankScroll_Info">ただの白紙のスクロール。おそらく何かを書くことができるでしょう？</string>
