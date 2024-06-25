@@ -2173,9 +2173,9 @@
   <string name="PotionOfFrost_Info">外気に触れると、この化学物質は蒸発して凍結雲となり、接触した生物はその場に凍りつき、行動も移動もできなくなる。</string>
   <string name="PotionOfHealing_Name">治癒のポーション</string>
   <string name="PotionOfHealing_Info">即座に完全な健康状態に戻し、毒を治す万能薬。</string>
-  <string name="PotionOfHealing_Apply">あなたは完全治癒しました。</string>
+  <string name="PotionOfHealing_Apply">あなたの傷は完全に癒やされた。</string>
   <string name="PotionOfInvisibility_Name">不可視のポーション</string>
-  <string name="PotionOfInvisibility_Info">このポーションを飲むと一時的に不可視になります。不可視化して敵から見えなくなります。敵を攻撃したり、杖やスクロールを使用すると効果は失われます。</string>
+  <string name="PotionOfInvisibility_Info">このポーションを飲むと、一時的に透明になる。透明になっている間、敵はあなたを見ることができなくなる。敵を攻撃したり、敵の目の前で杖や巻物を使用すると、この効果は解除される。</string>
   <string name="PotionOfInvisibility_Apply">あなたはあなたの手が透明になるのを見た！</string>
   <string name="PotionOfLevitation_Name">浮揚のポーション</string>
   <string name="PotionOfLevitation_Info">この珍しい液体を飲むと、あなたはホバリングするように浮き上がり、トラップなどを難なく越えられます。しかし、炎やガスは空気中にあるため避けられません。</string>
