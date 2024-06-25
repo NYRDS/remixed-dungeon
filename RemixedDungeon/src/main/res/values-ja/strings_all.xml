@@ -1086,8 +1086,8 @@
   <string name="MeleeWeapon_Info4a">これは速さを重視して作られている。</string>
   <string name="MeleeWeapon_Info4b">これは正確さを重視して作られている。</string>
   <string name="MeleeWeapon_Info5">これは魔術がかかっている。</string>
-  <string name="MeleeWeapon_Info6a">あなたの力が不足しているため、この %s の正確さと攻撃速度が低下します。</string>
-  <string name="MeleeWeapon_Info6b">あなたの力が十分なので、この %s のダメージが増加します。</string>
+  <string name="MeleeWeapon_Info6a">あなたの力が不足しているため、この %s の正確さと攻撃速度が低下している。</string>
+  <string name="MeleeWeapon_Info6b">あなたの力が十分なので、この %s のダメージが増加する。</string>
   <string name="MeleeWeapon_Info7a">あなたはすぐ使える状態 %2$s で %1$s を持っている。</string>
   <string name="MeleeWeapon_Info7b">、それは呪われているため、あなたは手放すことが出来ない</string>
   <string name="MeleeWeapon_Info7c">あなたは %s に潜んでいる邪悪な魔法を感じることが出来ます。</string>
