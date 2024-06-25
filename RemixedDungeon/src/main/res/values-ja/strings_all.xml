@@ -2458,9 +2458,9 @@
   <string name="HeroClass_ElfPerks_3">エルフは弓の扱いに非常に長けており、機敏である。</string>
   <string name="HeroClass_ElfPerks_4">エルフは雫からより多くの体力を得られる。</string>
   <string name="HeroClass_ElfPerks_5">エルフは近接武器の扱いが苦手だ。</string>
-  <string name="Death_Name_0">グリム %s</string>
-  <string name="Death_Name_1">グリム %s</string>
-  <string name="Death_Name_2">グリム %s</string>
+  <string name="Death_Name_0">致命の %s</string>
+  <string name="Death_Name_1">致命の %s</string>
+  <string name="Death_Name_2">致命の %s</string>
   <string name="Fire_Name_0">烈火の %s</string>
   <string name="Fire_Name_1">烈火の %s</string>
   <string name="Fire_Name_2">烈火の %s</string>
