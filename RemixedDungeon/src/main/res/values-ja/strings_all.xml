@@ -650,7 +650,8 @@
   <string name="StartScene_Load">Load Game</string>
   <string name="StartScene_New">New Game</string>
   <string name="StartScene_Erase">進行中のゲームを消去</string>
-  <string name="StartScene_Depth">階層: %1$d レベル: %2$d</string>
+  <string name="StartScene_Depth">階層: %1$d
+レベル: %2$d</string>
   <string name="StartScene_Really">本当に新しいゲームを始めていいですか？</string>
   <string name="StartScene_Warning">現在進行中のゲームが消去されます。</string>
   <string name="StartScene_Yes">はい、新しいゲームを始めます</string>
