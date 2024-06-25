@@ -2181,8 +2181,8 @@
   <string name="PotionOfLevitation_Info">この不思議な液体を飲むと宙に浮き、罠の上を軽々と漂うことができる。ただし、炎やガスは空中に充満するため、避けることはできない。</string>
   <string name="PotionOfLevitation_Apply">あなたは浮き上がった！</string>
   <string name="PotionOfLiquidFlame_Name">炎のポーション</string>
-  <string name="PotionOfLiquidFlame_Info">このフラスコには、外気に触れると激しく燃え上がる化合物が入っています。</string>
-  <string name="PotionOfMight_Name">実力のポーション</string>
+  <string name="PotionOfLiquidFlame_Info">このフラスコには不安定な化合物が含まれており、外気に触れると激しく燃え上がる。</string>
+  <string name="PotionOfMight_Name">強靭のポーション</string>
   <string name="PotionOfMight_Info">この強力な液体は筋肉を巡り、力を1ポイント、体力を5ポイント 永久的に増加させる。</string>
   <string name="PotionOfMight_Apply">あなたの体に新しい力がみなぎる。</string>
   <string name="PotionOfMight_StaApply">力 +1、ヘルス +5</string>
