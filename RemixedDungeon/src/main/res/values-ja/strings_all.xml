@@ -830,7 +830,7 @@
   <string name="WoodenBow_Info">このシンプルな木の弓は、矢が見つかれば役に立つかもしれない。</string>
   <string name="WoodenBow_Gender">力強い</string>
   <string name="CompoundBow_Name">複合弓</string>
-  <string name="CompoundBow_Info">機械式複合弓にセットされた矢は、木製の弓に比べてダメージと精度が向上しますが、速度が犠牲になります。</string>
+  <string name="CompoundBow_Info">この弓から放たれる矢は大きなダメージを与え、木製の弓よりも命中精度が向上するが、その代償として速度が落ちる。</string>
   <string name="CompoundBow_Gender">力強い</string>
   <string name="RubyBow_Name">ルビーの弓</string>
   <string name="RubyBow_Info">弓の名手はこのルビーの弓を使用することが出来ます。放たれた矢は敵に大きな穴を開け貫通しますが、弦を引くためには極端な力が必要です。</string>
