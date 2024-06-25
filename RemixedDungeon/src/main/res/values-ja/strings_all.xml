@@ -2105,8 +2105,8 @@
   <string name="City_TileHighGrass">高貴な花</string>
   <string name="City_TileDescEntrance">スロープが上層階まで続いている。</string>
   <string name="City_TileDescExit">スロープが下層階まで続いている。</string>
-  <string name="City_TileDescDeco">いくつかのタイルはここにありません。</string>
-  <string name="City_TileDescEmptySP">厚いカーペットが床を覆っています。</string>
+  <string name="City_TileDescDeco">ここにはいくつかのタイルが欠けている。</string>
+  <string name="City_TileDescEmptySP">厚手のカーペットが床を覆っている。</string>
   <string name="City_TileDescStatue">像は英雄的なドワーフの姿を象っている。</string>
   <string name="City_TileDescBookshelf">本棚には様々な分野の本が並んでいる。</string>
   <string name="Halls_TileWater">冷えた溶岩</string>
