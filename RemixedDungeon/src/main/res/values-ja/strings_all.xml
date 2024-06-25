@@ -1272,7 +1272,7 @@
   <string name="Monk_Name">ドワーフモンク</string>
   <string name="Monk_Gender">力強い</string>
   <string name="Monk_Name_Objective">ドワーフモンク</string>
-  <string name="Monk_Desc">これらのモンクは狂信的で、部外者から自分たちの街の秘密を守るためには自分自身をも犠牲にします。彼らはあらゆる武器や防具を使わず、芸術的とも言える格闘術を使います。</string>
+  <string name="Monk_Desc">このモンクたちは狂信的で、あらゆる侵略者から自分たちの街の秘密を守ることに専念している。彼らは鎧や武器を一切使わず、手刀による戦闘術のみに頼っている。</string>
   <string name="Monk_Defense">受け流し</string>
   <string name="Monk_Disarm">%1$s はあなたの手から %2$s を叩き落とした！</string>
   <string name="Piranha_Name">巨大ピラニア</string>
