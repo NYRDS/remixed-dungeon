@@ -1074,7 +1074,7 @@
   <string name="MeleeWeapon_Info1c">強化された</string>
   <string name="MeleeWeapon_Info1d">劣化した</string>
   <string name="MeleeWeapon_Info2a">平均ダメージは %d ポイントだ。</string>
-  <string name="MeleeWeapon_Info2b">平均ダメージは %1$d ポイントで、%2$d の力が必要です。</string>
+  <string name="MeleeWeapon_Info2b">平均ダメージは %1$d ポイントで、%2$d の力が必要だ。</string>
   <string name="MeleeWeapon_Info2c">あなたにとって、この武器は重い。</string>
   <string name="MeleeWeapon_Info3a">これはかなり %s な武器です。</string>
   <string name="MeleeWeapon_Info3b">速い</string>
