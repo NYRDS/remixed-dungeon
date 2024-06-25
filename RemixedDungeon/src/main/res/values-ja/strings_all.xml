@@ -2134,7 +2134,7 @@
   <string name="Sewer_TileWater">濁った水</string>
   <string name="Sewer_TileDescDeco">濡れた黄色っぽい苔が床を覆っている。</string>
   <string name="Sewer_TileDescBookshelf">本棚には安くて役に立たない本がぎっしり。燃えるのでは？</string>
-  <string name="AlchemyPot_SelectSeed">投げる種子を選択</string>
+  <string name="AlchemyPot_SelectSeed">投げる種を選択</string>
   <string name="Chasm_Chasm">割れ目</string>
   <string name="Chasm_Yes">はい、私は私が何をやっているか知っている</string>
   <string name="Chasm_No">いいえ、私は考えを変えました</string>
