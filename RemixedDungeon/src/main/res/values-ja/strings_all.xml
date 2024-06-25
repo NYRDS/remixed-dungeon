@@ -825,7 +825,7 @@
   <string name="DonateButton_pleaseDonate">寄付をご検討ください</string>
   <string name="DonateButton_thanks">ご協力ありがとうございました！</string>
   <string name="WndSaveSlotSelect_dontLike">広告が嫌いですか？寄付をすれば広告は消えます。永遠に。</string>
-  <string name="Bow_Info1">これは遠距離武器です。エルフ以外はうまく扱えません。装備することで矢を射ることが出来ます。\n\n</string>
+  <string name="Bow_Info1">これは射撃武器だ。至近距離ではエルフ以外には役に立たない。弓を装備すると矢を射ることができる。</string>
   <string name="WoodenBow_Name">木製の弓</string>
   <string name="WoodenBow_Info">これは簡素な木製の弓です。矢を見つけることで有用に使えるでしょう。</string>
   <string name="WoodenBow_Gender">力強い</string>
