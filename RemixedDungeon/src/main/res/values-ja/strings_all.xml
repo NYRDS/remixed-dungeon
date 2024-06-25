@@ -533,7 +533,7 @@
   <string name="Pickaxe_Info">岩を砕くための大きくて頑丈な道具。武器としても使えないことはないだろう。</string>
   <string name="Pickaxe_ACMine">掘る</string>
   <string name="Pickaxe_Gender">弱々しい</string>
-  <string name="Pickaxe_NoVein">あなたが採掘する近くに黒金鉱脈はありません</string>
+  <string name="Pickaxe_NoVein">あなたの近くに採掘できる影金鉱脈はない</string>
   <string name="RatSkull_Name">巨大なネズミの頭蓋骨</string>
   <string name="RatSkull_Info">それは素敵な狩猟のトロフィーかもしれないが、壁にかけて飾るには臭すぎます。</string>
   <string name="RatSkull_Info2">一方で、この所有者は有能なネズミハンターだと証明します。でも大きくて臭いもの。</string>
