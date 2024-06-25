@@ -2551,7 +2551,7 @@
   <string name="Scroll_Runes_14">ALGIZ</string>
   <string name="Scroll_Runes_15">DAGAZ</string>
   <string name="HeroClass_GnollPerks_0">ノールはスタート時に15ポイントの体力がある。</string>
-  <string name="HeroClass_GnollPerks_1">ノールはスタート時に5ポイントの体力がある。</string>
+  <string name="HeroClass_GnollPerks_1">ノールはスタート時に5ポイントしか体力がない</string>
   <string name="HeroClass_GnollPerks_2">ノールは鎧なしでスタートするが、ユニークなトマホークを持っている。</string>
   <string name="HeroClass_GnollPerks_3">ノールは読み書きができない</string>
   <string name="HeroClass_GnollPerks_4">ノールは挑発されるまで他のノールを攻撃しない。</string>
