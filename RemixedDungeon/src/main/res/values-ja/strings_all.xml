@@ -325,7 +325,7 @@
   <string name="Char_Name_Objective">敵</string>
   <string name="Char_YouMissed">%1$s %2$sあなたの攻撃</string>
   <string name="Char_SmbMissed">%1$s %2$s %3$s の攻撃</string>
-  <string name="Char_OutParalysis">痛みは %s から麻痺を解いた</string>
+  <string name="Char_OutParalysis">痛みが%sを麻痺から解き放った</string>
   <string name="Char_StaPoisoned">毒化</string>
   <string name="Char_StaAmok">逆上</string>
   <string name="Char_StaSlowed">遅滞</string>
