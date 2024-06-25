@@ -993,9 +993,9 @@
   <string name="HeroSubClass_NameWard">ウォーデン</string>
   <string name="HeroSubClass_DescWard">自然の力との強い結びつきを持つ「ウォーデン」には、植物から雫や種を集める能力がある。また、高い草に触れることで、一時的に防御力を高める効果を得ることが出来る。</string>
   <string name="HeroSubClass_NameScout">スカウト</string>
-  <string name="HeroSubClass_DescScout">エルフの_スカウト_はステルスのマスターです。高い草を踏みつけると不可視のバフを得ます。また、彼らは通常のエルフよりもさらに素早いです。</string>
+  <string name="HeroSubClass_DescScout">エルフの「スカウト」はステルスの達人である。高い草に触れると、一時的に不可視のバフが付与される。また、彼らは通常のエルフよりもさらに速い。</string>
   <string name="HeroSubClass_NameShaman">シャーマン</string>
-  <string name="HeroSubClass_DescShaman">エルフの_シャーマン_は杖を近接武器として使えます。命中した場合、チャージを消費せずに杖の力を使うことが出来ます。</string>
+  <string name="HeroSubClass_DescShaman">エルフの「シャーマン」は杖を近接武器として使用でき、杖による攻撃が命中した時、チャージを使わずに杖の力を対象に発動させることができる。</string>
   <string name="SantaHat_Name">サンタ帽</string>
   <string name="SantaHat_Info">深淵の主、サンタの赤いシルクハットほど”ダンジョン”気分を盛り上げてくれるものはない。</string>
   <string name="Rudolph_Name">赤い鼻と角</string>
