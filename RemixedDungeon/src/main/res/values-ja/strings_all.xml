@@ -848,10 +848,10 @@
   <string name="PoisonArrow_Info">この矢じりには猛毒の雫が光っている。</string>
   <string name="PoisonArrow_Gender">弱々しい</string>
   <string name="ParalysisArrow_Name">麻痺の矢</string>
-  <string name="ParalysisArrow_Info">この矢はクラーレでコーティングされています。</string>
+  <string name="ParalysisArrow_Info">この矢にはクラーレが塗られている。</string>
   <string name="ParalysisArrow_Gender">弱々しい</string>
   <string name="FrostArrow_Name">氷の矢</string>
-  <string name="FrostArrow_Info">あなたはこの矢じりから冷気を感じることが出来ます。</string>
+  <string name="FrostArrow_Info">矢じりから凍てつくようなオーラが発せられているのを感じる。</string>
   <string name="FrostArrow_Gender">弱々しい</string>
   <string name="Bowknot_Name">蝶結び</string>
   <string name="Bowknot_Info">かわいらしいピンクのキラキラしたリボンを結び、ヘアピンにつけたもの。</string>
