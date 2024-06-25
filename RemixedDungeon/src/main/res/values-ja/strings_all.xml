@@ -1642,9 +1642,9 @@
   <string name="TownGuardNPC_Message1">進め</string>
   <string name="TownGuardNPC_Message2">君たちのような冒険家のおかげで、ここは本当に平和になったよ</string>
   <string name="TownGuardNPC_Message3">この街に衛兵が多すぎると思うか？それは、この街には巨大なモンスターが巣食うダンジョンしかないからだろう？</string>
-  <string name="TownsfolkNPC_Name">都市の住人</string>
+  <string name="TownsfolkNPC_Name">街の住人</string>
   <string name="TownsfolkNPC_Gender">男性</string>
-  <string name="TownsfolkNPC_Name_Objective">都市の住人</string>
+  <string name="TownsfolkNPC_Name_Objective">街の住人</string>
   <string name="TownsfolkNPC_Desc">地元民の一人。明らかに庶民なのに、その服は高そうに見える。</string>
   <string name="TownsfolkNPC_Message1">また冒険者か！貴重品はできるだけ略奪するように！</string>
   <string name="TownsfolkNPC_Message2">あのダンジョンのおかげで町はとても裕福になり、町の誰もが好きなときに休暇に出かけることができるようになった！実際、だから今ここに人が少ないんだ。</string>
