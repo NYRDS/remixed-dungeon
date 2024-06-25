@@ -747,7 +747,7 @@
   <string name="Deathling_Name_Objective">デスリング</string>
   <string name="Deathling_Desc">デスリングとは、不運にも仲間の冒険者に召喚されてしまった死した英雄の魂のことで、彼は死霊術を実践している。</string>
   <string name="NecromancerRobe_PetLimitReached">死霊術：召喚数が限界に達した（現在の最大数：%d）！</string>
-  <string name="Necromancy_NotEnoughSouls">あなたには「%1$s」を唱えるための十分なソウルがありません。</string>
+  <string name="Necromancy_NotEnoughSouls">あなたには「%1$s」の呪文を唱えるだけのソウルがない。</string>
   <string name="Necromancy_SoulsCountLabel">ソウル</string>
   <string name="Necromancer_ACSpecial">死霊術</string>
   <string name="Necromancy_ReincarnationName">リインカーネイション</string>
