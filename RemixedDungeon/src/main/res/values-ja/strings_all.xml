@@ -2103,8 +2103,8 @@
   <string name="Caves_TileDescBookshelf">洞窟に本棚が必要だろうか？</string>
   <string name="City_TileWater">怪しい色の水</string>
   <string name="City_TileHighGrass">高貴な花</string>
-  <string name="City_TileDescEntrance">ランプは上の階層に通じています。</string>
-  <string name="City_TileDescExit">ランプは下の階層に通じています。</string>
+  <string name="City_TileDescEntrance">スロープが上層階まで続いている。</string>
+  <string name="City_TileDescExit">スロープが下層階まで続いている。</string>
   <string name="City_TileDescDeco">いくつかのタイルはここにありません。</string>
   <string name="City_TileDescEmptySP">厚いカーペットが床を覆っています。</string>
   <string name="City_TileDescStatue">像は英雄的なドワーフの姿を象っている。</string>
