@@ -1771,9 +1771,9 @@
   <string name="ScrollOfWeaponUpgrade_InvTitle">強化する武器を選択</string>
   <string name="ScrollOfWeaponUpgrade_LooksBetter">あなたの %s は良くなったように見える</string>
   <string name="ScrollOfDomination_Name">支配のスクロール</string>
-  <string name="ScrollOfDomination_Info">このスクロールはあなたの目の前の生き物の意思を捻じ曲げます。その生き物はあなたのために死ぬまで戦います。</string>
+  <string name="ScrollOfDomination_Info">このスクロールはあなたの目の前にいる生き物1体の意志を曲げる。その生き物はあなたのために死ぬまで戦うだろう。</string>
   <string name="ScrollOfCurse_Name">呪いのスクロール</string>
-  <string name="ScrollOfCurse_Info">このスクロールは愚かな盗賊を罰するために作られました。普通の冒険者はこのスクロールの魔法は使えないと思うが、商人たちには評価されています。</string>
+  <string name="ScrollOfCurse_Info">このスクロールは、理解できない魔法を使おうとする愚かな盗賊を罰するために特別に作られた。普通の冒険者には全く役に立たず、有害ですらあるが、商人には重宝されている。</string>
   <string name="Claymore_Name">クレイモア</string>
   <string name="Claymore_Info">この巨大な剣は、どんなものでも切り裂くことができるはずだ。</string>
   <string name="Claymore_Gender">男性</string>
