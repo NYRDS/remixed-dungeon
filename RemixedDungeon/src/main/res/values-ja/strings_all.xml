@@ -374,7 +374,7 @@
   <string name="WndHero_Buffs">バフ</string>
   <string name="WndHero_Exp">経験</string>
   <string name="WndHero_Str">力</string>
-  <string name="WndHero_Health">ヘルス</string>
+  <string name="WndHero_Health">体力</string>
   <string name="WndHero_Gold">集めたゴールド</string>
   <string name="WndHero_Depth">到達最下層</string>
   <string name="WndHero_StaTitle">レベル %1$d %2$s</string>
