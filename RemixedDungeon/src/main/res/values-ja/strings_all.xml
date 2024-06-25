@@ -205,7 +205,7 @@
   <string name="WandOfAvalanche_Info">この杖の力が壁（または他の固い障害物）に当たると、石の崩落を引き起こし、影響を受けた領域にいるすべての生き物にダメージを与え、気絶させる。</string>
   <string name="WandOfAvalanche_Info1">あなたは、あなたの崩落の杖に殺された...</string>
   <string name="WandOfBlink_Name">転移の杖</string>
-  <string name="WandOfBlink_Info">この杖は、あなたが選んだ場所にテレポートさせます。生き物と障害物はテレポートをブロックします。</string>
+  <string name="WandOfBlink_Info">この杖を使うと、選んだ方向にテレポートすることができる。生き物や障害物はテレポートを妨害する。</string>
   <string name="WandOfDisintegration_Name">分解の杖</string>
   <string name="WandOfDisintegration_Info">この杖は破壊的なエネルギーの光線を放ち、邪魔な生き物すべてを貫く。当たる対象が多ければ多いほど、それぞれに与えるダメージも大きくなる。</string>
   <string name="WandOfFirebolt_Name">火矢の杖</string>
