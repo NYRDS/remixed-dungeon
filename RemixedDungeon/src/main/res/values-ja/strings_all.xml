@@ -487,7 +487,7 @@
   <string name="TomeOfMastery_ACRead">読む</string>
   <string name="TomeOfMastery_Info">この使い古された革の本はそれほど分厚くはないが、何となく、そこから多くのことを得られるような気がする。しかし、この本を読むには時間がかかるだろう。</string>
   <string name="TomeOfMastery_Blinded">あなたは盲目なため読むことが出来ない</string>
-  <string name="TomeOfMastery_Choose">あなたは %s の道を選択しました！</string>
+  <string name="TomeOfMastery_Choose">あなたは %sの道を選んだ</string>
   <string name="Torch_Name">たいまつ</string>
   <string name="Torch_ACLight">点火する</string>
   <string name="Torch_Info">このアイテムは悪名高い悪魔の広間を照らす照明として必需品です。</string>
