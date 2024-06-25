@@ -1707,7 +1707,7 @@
   <string name="town_deco_floor_desc">シンプルな木の板でできた床。探しものですか？</string>
   <string name="town_deco_carpet_name">カーペット</string>
   <string name="town_deco_carpet_desc">特別ゲストのために用意された豪華なレッドカーペット。</string>
-  <string name="town_deco_movies_door_name">ドア</string>
+  <string name="town_deco_movies_door_name">扉</string>
   <string name="town_deco_movies_door_desc">この扉は特別によくできているようだ。おそらく信じられないような何かにつながっているのだろう。</string>
   <string name="WndDonate_royal">寄付</string>
   <string name="WndDonate_royalDonate">ロイヤルの寄付</string>
