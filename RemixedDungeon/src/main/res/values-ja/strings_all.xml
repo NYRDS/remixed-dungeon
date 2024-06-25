@@ -1729,9 +1729,9 @@
   <string name="ScrollOfChallenge_Info">このスクロールを声に出して読むと、すべてのモンスターを目覚めさせ、読み手の居場所を知らせる挑戦的な咆哮を放つ。</string>
   <string name="ScrollOfChallenge_Info1">スクロールは、ダンジョン全体に響き渡る挑戦的な轟音を発した！</string>
   <string name="ScrollOfIdentify_Name">識別のスクロール</string>
-  <string name="ScrollOfIdentify_Info">恒久的に1つのアイテムの秘密を明らかにします。</string>
+  <string name="ScrollOfIdentify_Info">1つのアイテムの秘密を永久に明らかにする。</string>
   <string name="ScrollOfIdentify_InvTitle">識別するアイテムを選択</string>
-  <string name="ScrollOfIdentify_Info1">これは %s です</string>
+  <string name="ScrollOfIdentify_Info1">これは %s だ</string>
   <string name="ScrollOfLullaby_Name">子守唄のスクロール</string>
   <string name="ScrollOfLullaby_Info">なだめるようなメロディはあなたの視界内のすべての生き物を深い眠りへ誘います。あなたは逃げるか、それらへ奇襲攻撃を加えるチャンスを得ます。</string>
   <string name="ScrollOfLullaby_Info1">スクロールはなだめるようなメロディを発した。</string>
