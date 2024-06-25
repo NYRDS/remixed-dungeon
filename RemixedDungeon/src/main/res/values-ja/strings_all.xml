@@ -1947,7 +1947,7 @@
   <string name="ResultDescriptions_Poison">%d 階層で毒で死亡した</string>
   <string name="ResultDescriptions_Gas">%d 階層で毒ガスで死亡した</string>
   <string name="ResultDescriptions_Bleeding">%d 階層で出血死した</string>
-  <string name="ResultDescriptions_Ooze">%d 階層でカウスティックウーズで死亡した</string>
+  <string name="ResultDescriptions_Ooze">%d 階層で苛性粘液で死亡した</string>
   <string name="ResultDescriptions_Fall">%d 階層で落下死した</string>
   <string name="ResultDescriptions_Win">イェンダーの魔除けを手に入れた</string>
   <string name="ResultDescriptions_Immured">%d 階層で石に閉じ込められた</string>
