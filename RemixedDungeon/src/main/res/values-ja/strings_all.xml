@@ -448,9 +448,9 @@
   <string name="Heap_Mimic">ミミックだ！</string>
   <string name="Amulet_Name">イェンダーの魔除け</string>
   <string name="Amulet_ACEnd">ゲーム終了</string>
-  <string name="Amulet_Info">イェンダーの魔除けは最も強力だと言われいる起源不明の古物です。このお守りは、所有者の意志力が\"説得\"するのに十分強い場合、どんな願いでも叶えると言われている。</string>
+  <string name="Amulet_Info">イェンダーの魔除けは起源不明の最も強力なアーティファクトとして知られている。この魔除けは、持ち主が十分に強い意志の力で\"説得\"することが出来れば、どんな願いでも叶えることができると言われている。</string>
   <string name="Ankh_Name">アンク</string>
-  <string name="Ankh_Info">この古代のシンボルは、生者の死後に蘇る能力を付与します。復活の際にすべての非装備のアイテムは失われます。</string>
+  <string name="Ankh_Info">この古代の不死のシンボルは、死後に蘇る能力を与える。復活すると、装備していないアイテムはすべて失われる。</string>
   <string name="ArmorKit_Name">アーマーキット</string>
   <string name="ArmorKit_ACAplly">適応する</string>
   <string name="ArmorKit_Info">小さなツールと材料のこのキットを使って、元の鎧のすべての性質を保持したまま\"偉大な鎧\"に作り変える事ができます。また、着用者のクラスに応じて特別な能力を与えます。仕立て、革加工、鍛冶などのスキルは必要ありません。</string>
