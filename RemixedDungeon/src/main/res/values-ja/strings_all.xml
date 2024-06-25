@@ -1311,7 +1311,7 @@
   <string name="Skeleton_Desc">スケルトンは、不運な冒険者やダンジョンの住人の死体の骨で構成され、地下からの邪悪な魔力によって動いている。彼らは十分なダメージを受けると、骨の爆発によって崩壊する。</string>
   <string name="Skeleton_Defense">ブロックした</string>
   <string name="Skeleton_Killed">あなたは骨の爆散によって倒された...</string>
-  <string name="Spinner_Name">ケイヴスピナー</string>
+  <string name="Spinner_Name">ケイヴスパイダー</string>
   <string name="Spinner_Gender">力強い</string>
   <string name="Spinner_Name_Objective">ケイヴスピナー</string>
   <string name="Spinner_Desc">これらの緑がかったフワフワのケイヴスパイダーは直接戦闘を避けようとします。クモの巣に絡まった犠牲者が毒でゆっくり死んでいくのを待つ方法を好みます。</string>
