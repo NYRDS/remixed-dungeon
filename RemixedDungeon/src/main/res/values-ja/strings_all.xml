@@ -2060,7 +2060,7 @@
   <string name="Level_TilePedestal">台座</string>
   <string name="Level_TileBarricade">バリケード</string>
   <string name="Level_TileHighGrass">高い草</string>
-  <string name="Level_TileLockedExit">鍵付き深層出口</string>
+  <string name="Level_TileLockedExit">鍵の掛かった深層の出口</string>
   <string name="Level_TileUnlockedExit">鍵無し深層出口</string>
   <string name="Level_TileSign">看板</string>
   <string name="Level_TileWell">井戸</string>
