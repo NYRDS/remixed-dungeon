@@ -2127,7 +2127,7 @@
   <string name="LastShopLevel_TileDescEntrance">スロープが上層階まで続いている。</string>
   <string name="LastShopLevel_TileDescExit">スロープが焦熱地獄まで続いている。</string>
   <string name="LastShopLevel_TileDescDeco">ここにはいくつかのタイルが欠けている。</string>
-  <string name="LastShopLevel_TileDescEmptySP">厚いカーペットが床を覆っています。</string>
+  <string name="LastShopLevel_TileDescEmptySP">厚手のカーペットが床を覆っている。</string>
   <string name="Prison_TileWater">暗く冷たい水。</string>
   <string name="Prison_TileDescDeco">床の上に古い血痕があります。</string>
   <string name="Prison_TileDescBookshelf">これはおそらく刑務所の図書館の跡です。燃えるか？</string>
