@@ -259,7 +259,7 @@
   <string name="DevourBuff_Name">ディバウアー</string>
   <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">石血</string>
-  <string name="StoneBloodBuff_Info">血は石に変化し、近くの壁と融合する。</string>
+  <string name="StoneBloodBuff_Info">血は石に変わり、近くの壁と融合して壁の通過がはるかに容易になるが、その代償は大きい。</string>
   <string name="Welcome_Ok">オーケー！</string>
   <string name="Welcome_Title">ようこそ！</string>
   <string name="BlackCat_Name">黒猫</string>
