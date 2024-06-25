@@ -1806,8 +1806,8 @@
   <string name="Blacksmith_LooksBetter">あなたの %s は良くなったように見える</string>
   <string name="Blacksmith_Verify1">2つのアイテムを選べ。同じアイテムを2回ではないぞ。</string>
   <string name="Blacksmith_Verify2">いくら俺でも違う種類では無理だ。同じ種類のアイテムで2つ選んでくれ。</string>
-  <string name="Blacksmith_Verify3">なんだかわからん物では作業できん、まず識別しろ！</string>
-  <string name="Blacksmith_Verify4">呪われたアイテムは無理だ！</string>
+  <string name="Blacksmith_Verify3">そりゃ何だ？よくわからん物は扱えん。先に識別してくれ！</string>
+  <string name="Blacksmith_Verify4">おいおい、そいつは呪われてるじゃないか。それは無理だ！</string>
   <string name="Blacksmith_Verify5">これはゴミだ、品質が悪すぎる！</string>
   <string name="Blacksmith_Verify6">これらのアイテムを再び鍛えることは出来ない！</string>
   <string name="Ghost_Name">悲しいゴースト</string>
