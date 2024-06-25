@@ -2001,9 +2001,9 @@
   <string name="WarriorArmor_Name">ウォリアーの鎧</string>
   <string name="WarriorArmor_Desc">この鎧は重そうに見えるが、戦士が狙った場所に向かって勇壮なる跳躍を行い、叩きつけることで隣接するすべての敵を気絶させることができる。</string>
   <string name="WarriorArmor_ACSpecial">英雄の跳躍</string>
-  <string name="WarriorArmor_NotWarrior">ウォリアーだけがこの鎧を使うことができます！</string>
+  <string name="WarriorArmor_NotWarrior">この鎧を使えるのはウォリアーだけだ！</string>
   <string name="WarriorArmor_Prompt">跳躍する方向を選んでください。</string>
-  <string name="Affection_Txt">慕情の %s</string>
+  <string name="Affection_Txt">愛情の%s</string>
   <string name="AntiEntropy_Txt">逆熱交換の %s</string>
   <string name="Bounce_Txt">弾む %s</string>
   <string name="Displacement_Txt">追放の %s</string>
