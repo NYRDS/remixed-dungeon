@@ -1955,7 +1955,7 @@
   <string name="Armor_EquipCursed"> %s があなたを痛いくらい締め付けた</string>
   <string name="Armor_Identify">あなたは今 %1$s を識別するために十分精通している。これは %2$s だ。</string>
   <string name="Armor_ToString">%1$s :%2$d</string>
-  <string name="Armor_Incompatible">異なるタイプの魔法はこの鎧のグリフを消し去った！</string>
+  <string name="Armor_Incompatible">異なる種類の魔法の相互作用によって、この鎧の刻印は消されてしまった！</string>
   <string name="Armor_Info1">この %1$s は攻撃ごとに \"%2$d\" のダメージを防ぐ。</string>
   <string name="Armor_Info2">
 \n\nあなたの力が不足しているため、速度と防御スキルが低下します。</string>
