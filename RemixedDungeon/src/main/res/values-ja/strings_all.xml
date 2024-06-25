@@ -445,7 +445,7 @@
   <string name="EquipableItem_ACEquip">装備する</string>
   <string name="EquipableItem_ACUnequip">装備解除</string>
   <string name="EquipableItem_Unequip">呪われた %s は外すことが出来ない！</string>
-  <string name="Heap_Mimic">これはミミックです！</string>
+  <string name="Heap_Mimic">ミミックだ！</string>
   <string name="Amulet_Name">イェンダーの魔除け</string>
   <string name="Amulet_ACEnd">ゲーム終了</string>
   <string name="Amulet_Info">イェンダーの魔除けは起源不明の最も強力なアーティファクトとして知られている。この魔除けは、持ち主が十分に強い意志の力で\"説得\"することが出来れば、どんな願いでも叶えることができると言われている。</string>
