@@ -311,8 +311,8 @@
   <string name="DogeMask_Name">ドージマスク</string>
   <string name="DogeMask_Info">有名なドージに変装したいと思ったことはありませんか? 今がチャンスです! こんなにたくさんのマスク! たくさんの変装! すごい!</string>
   <string name="IntroScene_Txt">ダンジョンには様々な冒険者が先陣を切って進入した。そして、そのうちの何人かは財宝や魔法のアーティファクトを持って帰ってきた。しかし、ダンジョンの奥深くに隠されているという \"イェンダーの魔除け\"の奪還に成功した者はいない。\n\nあなたは挑戦の準備はできていると考えているが、最も重要なのは、幸運があなたに微笑んでいると感じていることだ。さあ、冒険の始まりだ！</string>
-  <string name="AmuletScene_Exit">今日は終わりにしましょう</string>
-  <string name="AmuletScene_Stay">私はまだ終わらない</string>
+  <string name="AmuletScene_Exit">今日はこれで終わりにしよう</string>
+  <string name="AmuletScene_Stay">まだ終わっていない</string>
   <string name="AmuletScene_Txt">あなたはついにイェンダーの魔除けを手にした。その力を使えば、世界を征服することも、人々に平和と繁栄をもたらすことも、何でもできる。いずれにせよ、あなたの人生は永遠に変わり、このゲームはここで終わる。あるいは、もう少しだけただの人間のままでいることもできる。</string>
   <string name="GameScene_Welcome">Remixed Dungeonの %d 階層へようこそ！</string>
   <string name="GameScene_WelcomeBack">おかえり！ここはRemixed Dungeonの %d 階層です！</string>
