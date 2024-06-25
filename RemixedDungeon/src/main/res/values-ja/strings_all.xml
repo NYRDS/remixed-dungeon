@@ -1149,10 +1149,10 @@
   <string name="IncendiaryDart_Info">このダーツは、取り付けられた不安定な化合物が鮮やかな炎を上げる間、ターゲットに固定されるように設計されている。</string>
   <string name="IncendiaryDart_Gender">力強い</string>
   <string name="Javelin_Name">ジャベリン</string>
-  <string name="Javelin_Info">先端の金属のトゲの長さは、空気中を綺麗に飛ぶ重さです。</string>
+  <string name="Javelin_Info">この金属の長さは、犠牲者に向かって宙を舞うとき、その先端が必ず前を向くように重みが加えられている。</string>
   <string name="Javelin_Gender">中性の</string>
   <string name="Shuriken_Name">手裏剣</string>
-  <string name="Shuriken_Info">鋭い刃の付いた星形の金属片は目標にかなりのダメージを与えます。彼らはとても速い速度で投げることが出来ます。</string>
+  <string name="Shuriken_Info">カミソリのような鋭い刃を持つ星形の金属片で、標的に大きなダメージを与える。非常に高い速度で投げることができる。</string>
   <string name="Shuriken_Gender">力強い</string>
   <string name="Tamahawk_Name">トマホーク</string>
   <string name="Tamahawk_Info">この投げ斧は重くはありませんが、効果的に使用するにはかなりの力が必要です。</string>
