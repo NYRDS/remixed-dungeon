@@ -13,7 +13,7 @@
   <string name="RootSpell_Info">選択したキャラクターを固定し、短時間動けなくする。</string>
   <string name="WindGust_Name">風よ</string>
   <string name="WindGust_Info">選択したキャラクターを押しのける突風を呼び出す。</string>
-  <string name="FreezeGlobe_Name">凍結</string>
+  <string name="FreezeGlobe_Name">氷よ</string>
   <string name="FreezeGlobe_Info">選択したキャラクターを凍結させ、短時間の間、一切の行動を不能にする。</string>
   <string name="MagicTorch_Name">点灯</string>
   <string name="MagicTorch_Info">ダンジョンの暗い階層を照らす、光を生み出す呪文。</string>
