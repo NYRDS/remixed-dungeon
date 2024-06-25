@@ -7,7 +7,7 @@
   <string name="Spells_NotEnoughSP">あなたには「%1$s」の呪文を唱えるだけのマナがない。</string>
   <string name="SummonDeathling_Name">デスリング召喚</string>
   <string name="SummonDeathling_Info">アンデッドの従者を召喚する。デスリングのHPとダメージはヒーローレベルに応じて増加する。 召喚制限: 「%1$d」(魔法レベル毎に+1)</string>
-  <string name="Ignite_Name">点火</string>
+  <string name="Ignite_Name">炎よ</string>
   <string name="Ignite_Info">選択したセルに点火する。草やキャラクター、オブジェクトを燃やすのに使用できる。</string>
   <string name="RootSpell_Name">根縛</string>
   <string name="RootSpell_Info">選択したキャラクターを固定し、短時間動けなくする。</string>
