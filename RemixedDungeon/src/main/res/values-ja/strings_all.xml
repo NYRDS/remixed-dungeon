@@ -1146,7 +1146,7 @@
   <string name="Dart_Info">このシンプルな金属製のクギは、獲物を正確に貫くために理想的な重さになっている。</string>
   <string name="Dart_Gender">力強い</string>
   <string name="IncendiaryDart_Name">焼夷性ダーツ</string>
-  <string name="IncendiaryDart_Info">このダーツが目標に刺さると、取り付けられた不安定な化合物が鮮やかに炎上するよう設計されています。</string>
+  <string name="IncendiaryDart_Info">このダーツは、取り付けられた不安定な化合物が鮮やかな炎を上げる間、ターゲットに固定されるように設計されている。</string>
   <string name="IncendiaryDart_Gender">力強い</string>
   <string name="Javelin_Name">ジャベリン</string>
   <string name="Javelin_Info">先端の金属のトゲの長さは、空気中を綺麗に飛ぶ重さです。</string>
