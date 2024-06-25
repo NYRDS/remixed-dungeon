@@ -2091,7 +2091,7 @@
   <string name="Level_TileDescTrap">隠された感圧板を踏むと、罠が作動する。</string>
   <string name="Level_TileDescInactiveTrap">発動済みの罠は、もう危険ではない。</string>
   <string name="Level_TileDescStatue">誰かがこの場所を飾りたかったようだが、明らかに失敗している。</string>
-  <string name="Level_TileDescAlchemy">ここに種を落としてポーションを作る。</string>
+  <string name="Level_TileDescAlchemy">ここに種を3つ落とすとポーションを作ることができる。</string>
   <string name="Level_TileDescEmptyWell">井戸は涸れてしまった。</string>
   <string name="Caves_TileGrass">光る苔</string>
   <string name="Caves_TileHighGrass">光るキノコ</string>
