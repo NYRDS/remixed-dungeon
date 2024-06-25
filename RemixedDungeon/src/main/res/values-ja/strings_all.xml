@@ -467,8 +467,8 @@
   <string name="DewVial_Empty">雫用の瓶は空っぽだ！</string>
   <string name="Gold_Name">ゴールド</string>
   <string name="Gold_Collect">金貨を集めて後で商店で使おう。</string>
-  <string name="Gold_Info">%d の金貨の山</string>
-  <string name="Gold_Info1">1金貨</string>
+  <string name="Gold_Info">%dゴールドコインの山</string>
+  <string name="Gold_Info1">ゴールド1枚</string>
   <string name="KindOfWeapon_EquipCursed">思わず %sのグリップを握り締め、身震いした。</string>
   <string name="LloidsBeacon_Name">ロイドのビーコン</string>
   <string name="LloidsBeacon_ACSet">セット</string>
