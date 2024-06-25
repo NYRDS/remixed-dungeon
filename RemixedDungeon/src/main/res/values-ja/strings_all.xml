@@ -1055,7 +1055,7 @@
   <string name="GoldenStatue_Name">金の像</string>
   <string name="GoldenStatue_Gender">男性</string>
   <string name="GoldenStatue_Name_Objective">金の像</string>
-  <string name="GoldenStatue_Desc">この立派な像がただの飾りではなく、無防備な冒険者を待ち構えている悪意ある生き物だとは、本当に信じられない。一見したところ、この像の _%s_ は腕の一部に過ぎない。</string>
+  <string name="GoldenStatue_Desc">この立派な像がただの飾りではなく、無防備な冒険者を待ち構えている悪意ある生き物だとは、本当に信じられない。一見したところ、この像の「%s」は腕の一部に過ぎない。</string>
   <string name="NecromancerNPC_Name">ネクロマンサー</string>
   <string name="NecromancerNPC_Gender">男性</string>
   <string name="NecromancerNPC_Name_Objective">ネクロマンサー</string>
