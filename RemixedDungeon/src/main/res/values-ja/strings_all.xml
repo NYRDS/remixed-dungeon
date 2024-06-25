@@ -1808,8 +1808,8 @@
   <string name="Blacksmith_Verify2">いくら俺でも違う種類では無理だ。同じ種類のアイテムで2つ選んでくれ。</string>
   <string name="Blacksmith_Verify3">そりゃ何だ？よくわからん物は扱えん。先に識別してくれ！</string>
   <string name="Blacksmith_Verify4">おいおい、そいつは呪われてるじゃないか。それは無理だ！</string>
-  <string name="Blacksmith_Verify5">これはゴミだ、品質が悪すぎる！</string>
-  <string name="Blacksmith_Verify6">これらのアイテムを再び鍛えることは出来ない！</string>
+  <string name="Blacksmith_Verify5">こりゃゴミだな。品質が悪すぎる！</string>
+  <string name="Blacksmith_Verify6">おっと、すまんがそいつを鍛え直すのは無理だ！</string>
   <string name="Ghost_Name">悲しいゴースト</string>
   <string name="Ghost_Desc">ゴーストはかろうじて見える。それは悲しい顔をしてぼんやりと光っている。</string>
   <string name="Ghost_Rose1">ハロー冒険者... 私もかつてはあなたのようだった - 強いと信じた... そして今は死んでいる... しかし私はここから離れられない... _乾燥したバラ_を持っていた... 私にとって大切な物だ... あるモンスターが私から盗んでいった...</string>
