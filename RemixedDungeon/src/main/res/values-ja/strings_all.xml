@@ -1089,7 +1089,7 @@
   <string name="MeleeWeapon_Info6a">あなたの力が不足しているため、この %s の正確さと攻撃速度が低下している。</string>
   <string name="MeleeWeapon_Info6b">あなたの力が十分なので、この %s のダメージが増加する。</string>
   <string name="MeleeWeapon_Info7a">%1$sを %2$sに構えた。</string>
-  <string name="MeleeWeapon_Info7b">、それは呪われているため、あなたは手放すことが出来ない</string>
+  <string name="MeleeWeapon_Info7b">、それは呪われているため、手放すことが出来ない</string>
   <string name="MeleeWeapon_Info7c">あなたは %s に潜んでいる邪悪な魔法を感じることが出来ます。</string>
   <string name="BattleAxe_Name">バトルアックス</string>
   <string name="BattleAxe_Info">この巨大な鋼鉄のバトルアックスは、攻撃後のスキが大きいです。</string>
