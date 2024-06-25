@@ -1908,8 +1908,8 @@
   <string name="Food_Message">その食べ物はとても美味しい！</string>
   <string name="Ration_Name">糧食</string>
   <string name="Ration_Info">乾燥肉、ビスケット、そんなものだ。</string>
-  <string name="ChargrilledMeat_Name">炭焼きの肉</string>
-  <string name="ChargrilledMeat_Info">これはまともなステーキに見えます。</string>
+  <string name="ChargrilledMeat_Name">炭火焼肉</string>
+  <string name="ChargrilledMeat_Info">まともなステーキに見える。</string>
   <string name="FrozenCarpaccio_Name">冷凍カルパッチョ</string>
   <string name="FrozenCarpaccio_Info">これは冷凍生肉品です。薄くスライスして食べます。これは驚くほど良いです。</string>
   <string name="FrozenCarpaccio_Info1">あなたはあなたの手が透明になるのを見た！</string>
