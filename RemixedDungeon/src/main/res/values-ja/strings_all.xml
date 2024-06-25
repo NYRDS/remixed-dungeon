@@ -2109,8 +2109,8 @@
   <string name="City_TileDescEmptySP">厚手のカーペットが床を覆っている。</string>
   <string name="City_TileDescStatue">この像は、英雄的な姿勢で立つドワーフを象っている。</string>
   <string name="City_TileDescBookshelf">さまざまな分野の本が本棚いっぱいに並んでいる。</string>
-  <string name="Halls_TileWater">冷えた溶岩</string>
-  <string name="Halls_TileGrass">炭焼き苔</string>
+  <string name="Halls_TileWater">冷たい溶岩</string>
+  <string name="Halls_TileGrass">熾火苔</string>
   <string name="Halls_TileHighGrass">炭焼き菌類</string>
   <string name="Halls_TileStatue">柱</string>
   <string name="Halls_TileDescWater">これは溶岩のように見えますが、冷たく、触っても平気でしょう。</string>
