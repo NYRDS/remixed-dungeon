@@ -1973,7 +1973,7 @@
   <string name="ClothArmor_Desc">この軽い鎧は普通の性能だ。</string>
   <string name="ElfArmor_Name">エルフのマント</string>
   <string name="ElfArmor_Desc">このマントの助けを借りて、エルフは自然の力そのものを呼び出すことができる。固い石を突き破り瞬く間に高い草が生え、視界に入るすべての敵を動けなくする。</string>
-  <string name="ElfArmor_ACSpecial">自然の力に呼び掛ける</string>
+  <string name="ElfArmor_ACSpecial">自然の力を呼ぶ</string>
   <string name="ElfArmor_NotElf">この鎧を使えるのはエルフだけだ！</string>
   <string name="HuntressArmor_Name">ハントレスのマント</string>
   <string name="HuntressArmor_Desc">このようなマントをまとったハントレスは、スペクトラルブレードの扇を作り出すことができる。これらの刃はそれぞれ、彼女の視界内にいる敵1体を対象とし、現在装備している近接武器に応じてダメージを与える。</string>
