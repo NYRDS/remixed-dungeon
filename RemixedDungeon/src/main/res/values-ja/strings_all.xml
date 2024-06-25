@@ -2045,7 +2045,7 @@
   <string name="WndPlayGames_Show_Leaderboards">leaderboardsを表示</string>
   <string name="WndPlayGames_Show_Ok">成功だ！</string>
   <string name="WndPlayGames_Show_Error">失敗。何かが間違っていた...</string>
-  <string name="Level_HiddenPlate">隠された圧力板をクリック！</string>
+  <string name="Level_HiddenPlate">隠された感圧板がカチッと音を立てる！</string>
   <string name="Level_TileChasm">割れ目</string>
   <string name="Level_TileFloor">フロア</string>
   <string name="Level_TileGrass">草</string>
