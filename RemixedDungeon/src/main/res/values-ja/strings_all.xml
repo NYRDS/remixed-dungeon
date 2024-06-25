@@ -736,7 +736,7 @@
   <string name="BlackSkull_Ressurrect">黒い頭蓋骨は死んだモンスターを蘇らせた！</string>
   <string name="BlackSkull_Deactivated">黒い頭蓋骨は再び眠りについた…</string>
   <string name="NecromancerArmor_Name">ボーンアーマー</string>
-  <string name="NecromancerArmor_Info">この鎧によってネクロマンサーはデスリングを2体まで召喚できる。これらのアンデッドの従者は主人に従い、彼の敵を攻撃する。デスリングは術者のレベルが上がるごとに強くなる。</string>
+  <string name="NecromancerArmor_Info">この鎧によってネクロマンサーはデスリングを2体まで召喚でき、召喚にはそれぞれ 5 つの魂が必要となる。これらのアンデッドの従者は主人に従い、彼の敵を攻撃する。デスリングは術者のレベルが上がるごとに強くなる。</string>
   <string name="NecromancerArmor_NotNecromancer">この鎧を使えるのはネクロマンサーだけだ！</string>
   <string name="NecromancerRobe_Name">ネクロマンサーの法衣</string>
   <string name="NecromancerRobe_Info">このローブにより、ネクロマンサーはソウル5個を消費してデスリングを召喚できるようになる。デスリングは主人と共に強くなるアンデッドのミニオンである。</string>
