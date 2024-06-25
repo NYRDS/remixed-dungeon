@@ -680,7 +680,7 @@
   <string name="WndSettings_ScaleUp">UIを拡大</string>
   <string name="WndSettings_Immersive">没入モード</string>
   <string name="WndSettings_Music">音楽</string>
-  <string name="WndSettings_Sound">Sound FX</string>
+  <string name="WndSettings_Sound">効果音</string>
   <string name="WndSettings_Brightness">明るさ調整</string>
   <string name="WndSettings_SwitchPort">縦向きへ変更</string>
   <string name="WndSettings_SwitchLand">横向きへ変更</string>
