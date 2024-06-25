@@ -926,9 +926,9 @@
   <string name="Darkness_Info">永遠の闇のかけらが宙に浮いているように見える</string>
   <string name="WndSelectLanguage_ImproveTranslation">Remixed Dungeon の翻訳の向上にご助力ください</string>
   <string name="WndSelectLanguage_LinkToTranslationSite">Remixed Dungeon の翻訳チームに参加するにはここをクリック</string>
-  <string name="ArmoredStatue_Name">生像</string>
+  <string name="ArmoredStatue_Name">生ける彫像</string>
   <string name="ArmoredStatue_Gender">男性</string>
-  <string name="ArmoredStatue_Name_Objective">生像</string>
+  <string name="ArmoredStatue_Name_Objective">生ける彫像</string>
   <string name="ArmoredStatue_Desc">誰も、これが普通の彫像だと思い始めることさえできない。赤く光る目だけでなく、誰もこんなものに実際の「%s」を付けないという事実がそうさせるのだ。</string>
   <string name="SpiderGuard_Name">警備員蜘蛛</string>
   <string name="SpiderGuard_Gender">男性</string>
