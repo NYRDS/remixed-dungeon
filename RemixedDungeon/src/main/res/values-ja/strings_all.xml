@@ -390,7 +390,7 @@
   <string name="WndInfoItem_Skeleton">白骨遺体</string>
   <string name="WndInfoItem_WontKnow">中身は開けてみるまでわからない！</string>
   <string name="WndInfoItem_NeedKey">それを開けるには金の鍵が必要だ。</string>
-  <string name="WndInfoItem_Inside">あなたは %s の中を見ることが出来ますが、開けるためには金の鍵が必要です。</string>
+  <string name="WndInfoItem_Inside">中に %s が見えるが、開けるためには金の鍵が必要だ。</string>
   <string name="WndInfoItem_Owner">この古い墓には使えるものがあるかもしれませんが、その所有者は調べることを許さないでしょう。</string>
   <string name="WndInfoItem_Remains">これらはすべてあなたより先人の者が残したもの。すべての貴重品は調べる価値があるでしょう。</string>
   <string name="WndJournal_Title">日記</string>
