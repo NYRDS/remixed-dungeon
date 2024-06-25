@@ -1388,9 +1388,9 @@
   <string name="SpiderMind_Gender">力強い</string>
   <string name="SpiderMind_Name_Objective">サイキックスパイダー</string>
   <string name="SpiderMind_Desc">この一見か弱そうなクモは、コロニー全体をコントロールできるユニークな精神力を持っている。サイキックスパイダーはあらゆる生き物を操ることができるが、かなりの臆病者である。</string>
-  <string name="SpiderQueen_Name">女王クモ</string>
+  <string name="SpiderQueen_Name">スパイダークイーン</string>
   <string name="SpiderQueen_Gender">弱々しい</string>
-  <string name="SpiderQueen_Name_Objective">女王クモ</string>
+  <string name="SpiderQueen_Name_Objective">スパイダークイーン</string>
   <string name="SpiderQueen_Desc">体は美しい女性と醜いクモの融合。巣穴のすべての者は彼女の下僕です。この特別な女性に会うことは命に関わるでしょう。なぜならあなたは侵入者なのだから！</string>
   <string name="WaterElemental_Name">ウォーターエレメンタル</string>
   <string name="WaterElemental_Gender">力強い</string>
