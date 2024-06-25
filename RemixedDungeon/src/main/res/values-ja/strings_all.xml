@@ -2004,8 +2004,8 @@
   <string name="WarriorArmor_NotWarrior">この鎧を使えるのはウォリアーだけだ！</string>
   <string name="WarriorArmor_Prompt">跳躍する方向を選んでください。</string>
   <string name="Affection_Txt">愛情の%s</string>
-  <string name="AntiEntropy_Txt">逆熱交換の %s</string>
-  <string name="Bounce_Txt">弾む %s</string>
+  <string name="AntiEntropy_Txt">反エントロピーの%s</string>
+  <string name="Bounce_Txt">弾性の %s</string>
   <string name="Displacement_Txt">追放の %s</string>
   <string name="Entanglement_Txt">根付く %s</string>
   <string name="Metabolism_Txt">代謝の %s</string>
