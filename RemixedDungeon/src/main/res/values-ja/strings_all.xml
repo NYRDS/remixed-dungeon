@@ -845,7 +845,7 @@
   <string name="FireArrow_Info">この矢は、矢じりから暖かい赤い光が放射されている以外は、普通の矢と同じように見える。</string>
   <string name="FireArrow_Gender">弱々しい</string>
   <string name="PoisonArrow_Name">毒の矢</string>
-  <string name="PoisonArrow_Info">この矢じりから猛毒の液が滴っています。</string>
+  <string name="PoisonArrow_Info">この矢じりには猛毒の雫が光っている。</string>
   <string name="PoisonArrow_Gender">弱々しい</string>
   <string name="ParalysisArrow_Name">麻痺の矢</string>
   <string name="ParalysisArrow_Info">この矢はクラーレでコーティングされています。</string>
