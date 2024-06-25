@@ -1130,8 +1130,8 @@
   <string name="WarHammer_Gender">力強い</string>
   <string name="MissileWeapon_Missiles">飛び道具</string>
   <string name="MissileWeapon_Yes">ああ、自分が何をしているかは分かっている</string>
-  <string name="MissileWeapon_No">いいえ、私は考えを変えました</string>
-  <string name="MissileWeapon_Sure">本当に近接武器としてそれを装備しますか？</string>
+  <string name="MissileWeapon_No">いや、気が変わった</string>
+  <string name="MissileWeapon_Sure">本当にそれを近接武器として装備するのか？</string>
   <string name="MissileWeapon_Info1">
 \n\nこの武器の平均ダメージは %d ポイントと同じです。</string>
   <string name="MissileWeapon_Info2">あなたの力が不足しているため、この %s の正確さと攻撃速度が低下します。</string>
