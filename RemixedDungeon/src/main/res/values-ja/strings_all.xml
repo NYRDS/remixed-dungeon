@@ -469,7 +469,7 @@
   <string name="Gold_Collect">金貨を集めて後で商店で使おう。</string>
   <string name="Gold_Info">%d の金貨の山</string>
   <string name="Gold_Info1">1金貨</string>
-  <string name="KindOfWeapon_EquipCursed">あなたの %s があなたの握り手を勝手に締め付けてたじろいだ</string>
+  <string name="KindOfWeapon_EquipCursed">思わず %sのグリップを握り締め、身震いした。</string>
   <string name="LloidsBeacon_Name">ロイズビーコン</string>
   <string name="LloidsBeacon_ACSet">セット</string>
   <string name="LloidsBeacon_ACReturn">リターン</string>
