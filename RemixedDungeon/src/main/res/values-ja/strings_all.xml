@@ -233,10 +233,10 @@
   <string name="WandOfRegrowth_Info">\"生命が絶えるとき、常に新しい生命が芽生え始める...。永遠のサイクルは常に続いている\"</string>
   <string name="WandOfRegrowth_Info1">何も起こらなかった</string>
   <string name="WandOfSlowness_Name">鈍化の杖</string>
-  <string name="WandOfSlowness_Info">この杖の効果が切れるまで、生き物の移動と攻撃は通常の半分の速度になります。</string>
+  <string name="WandOfSlowness_Info">この杖の効果が終了するまで、対象とした生き物の移動と攻撃を通常の半分の速度にする。</string>
   <string name="WandOfSlowness_Info1">何も起こらなかった</string>
   <string name="WandOfTelekinesis_Name">念動の杖</string>
-  <string name="WandOfTelekinesis_Info">この杖からの魔法の力の波は、罠を作動させたり、高い草を踏みつけたり、ドアを開けたり閉めたり出来ます。モンスターを押し戻すことも出来ます。</string>
+  <string name="WandOfTelekinesis_Info">この杖から放たれる魔力の波動は、道中のすべての細胞に影響を与え、罠を発動させ、高い草木を踏みつけ、閉ざされた扉を開き、開いた扉を閉じる。また、モンスターを押し戻したりもする。</string>
   <string name="WandOfTelekinesis_YouNowHave">あなたは %s を荷物の中に魔法のように運びこんだ。</string>
   <string name="WandOfTeleportation_Name">瞬間移動の杖</string>
   <string name="WandOfTeleportation_Info">この杖からの爆発は、生き物の意思を無視して、現在の階層のランダムな場所へテレポートさせます。</string>
