@@ -631,7 +631,7 @@
   <string name="TitleScene_Highscores">ハイスコア</string>
   <string name="TitleScene_Badges">バッヂ</string>
   <string name="TitleScene_About">About</string>
-  <string name="TitleScene_InternalStorageLow">内部ストレージに\nスペースが足りません\n進行状況が失われる可能性があります！</string>
+  <string name="TitleScene_InternalStorageLow">内部ストレージにスペースが足りません。進行状況が失われる可能性があります！</string>
   <string name="AboutScene_Txt_Intro">Remixed Dungeon by NYRDS based on Pixel Dungeon Source by Watabou.</string>
   <string name="AboutScene_Code">Code:</string>
   <string name="AboutScene_Graphics">Graphics:</string>
