@@ -475,8 +475,8 @@
   <string name="LloidsBeacon_ACReturn">リターン</string>
   <string name="LloidsBeacon_Info">ロイドのビーコンは複雑な魔法の装置で、あながが予めセットしておいた場所に戻ることができる。</string>
   <string name="LloidsBeacon_Preventing">何らかの強力な魔法のオーラが、ロイドのビーコンを使うことを妨げた！</string>
-  <string name="LloidsBeacon_Creatures">近くにいる生き物の精神的なオーラのせいで、あなたは今ロイズビーコンを使うことが出来ません。</string>
-  <string name="LloidsBeacon_Return">ロイズビーコンは現在位置のセットに成功した。あなたはいつでもこの場所に戻ってこられます。</string>
+  <string name="LloidsBeacon_Creatures">近くにいる生き物の精神的なオーラのせいで、今はロイドのビーコンを使うことができない。</string>
+  <string name="LloidsBeacon_Return">ロイドのビーコンに現在地がセットされ、いつでもここに戻れるようになった。</string>
   <string name="LloidsBeacon_Set">このビーコンはRemixed Dungeonの%d階層のどこかに設置されていた。</string>
   <string name="Stylus_Name">不可解な鉄筆</string>
   <string name="Stylus_ACInscribe">刻み込む</string>
