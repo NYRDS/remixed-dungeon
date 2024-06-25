@@ -1927,9 +1927,9 @@
   <string name="RottenMeat_Name">腐った肉</string>
   <string name="RottenMeat_Info">腐った肉片</string>
   <string name="RottenPasty_Name">腐ったパスティ</string>
-  <string name="RottenPasty_Info">とても嫌な元ペースト</string>
-  <string name="RottenRation_Name">腐ったレーション</string>
-  <string name="RottenRation_Info">昔は食べることが出来ました</string>
+  <string name="RottenPasty_Info">このパスティはかなり不味そうだ。</string>
+  <string name="RottenRation_Name">腐った糧食</string>
+  <string name="RottenRation_Info">昔は食べられただろう</string>
   <string name="OverpricedRation_Name">高級レーション</string>
   <string name="OverpricedRation_Info">普通のレーションが安物に見えます。</string>
   <string name="OverpricedRation_Message">それは良い味です。</string>
