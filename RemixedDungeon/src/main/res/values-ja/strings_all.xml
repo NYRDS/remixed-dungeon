@@ -490,7 +490,7 @@
   <string name="TomeOfMastery_Choose">あなたは %sの道を選んだ</string>
   <string name="Torch_Name">たいまつ</string>
   <string name="Torch_ACLight">点火する</string>
-  <string name="Torch_Info">このアイテムは悪名高い悪魔の広間を照らす照明として必需品です。</string>
+  <string name="Torch_Info">このアイテムは悪名高い悪魔の広間を照らす照明として必需品だ。</string>
   <string name="Weightstone_Name">重石</string>
   <string name="Weightstone_ACApply">適応する</string>
   <string name="Weightstone_Info">重石を使用して、近接武器のバランスを整えて速度や正確さを高めることが出来ます。</string>
