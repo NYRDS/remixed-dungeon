@@ -55,7 +55,7 @@
   <string name="RingOfHaste_Name">加速のリング</string>
   <string name="RingOfHaste_Info">このリングは、装着者の時間の流れを加速させ、あらゆる行動を少し速く行えるようにする。</string>
   <string name="RingOfHerbalism_Name">草学のリング</string>
-  <string name="RingOfHerbalism_Info">このリングは、草を踏みつけた時の、雫や種子を得られる確率を増加します。</string>
+  <string name="RingOfHerbalism_Info">このリングは、草を踏みつけた時の、雫や種子を得られる確率を増加させる。</string>
   <string name="RingOfMending_Name">修復のリング</string>
   <string name="RingOfMending_Info">このリングは自然治癒力を高めて、失われたヘルスの回復を早めます。劣化したリングは自然治癒力を停止、あるいは減少させます。</string>
   <string name="RingOfPower_Name">威力のリング</string>
