@@ -1719,7 +1719,7 @@
   <string name="Scroll_ACRead">読む</string>
   <string name="Scroll_Blinded">あなたは盲目なためスクロールを読むことが出来ない</string>
   <string name="InventoryScroll_Title">アイテムを選択</string>
-  <string name="InventoryScroll_Warning">あなたは本当にスクロールの使用を中止しますか？中止してもこれは失われます。</string>
+  <string name="InventoryScroll_Warning">本当にこのスクロールの使用をキャンセルするのですか？キャンセルしてもスクロールは消費はされます。</string>
   <string name="InventoryScroll_Yes">はい、私は肯定します</string>
   <string name="InventoryScroll_No">いいえ、私は考えを変えました</string>
   <string name="BlankScroll_Name">白紙のスクロール</string>
