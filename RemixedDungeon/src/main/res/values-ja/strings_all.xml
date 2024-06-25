@@ -2503,9 +2503,9 @@
   <string name="Codex_Story_9">追放の刻印- ヒーローが攻撃を受けるたびに、視界内のランダムな位置にテレポートする可能性がある。この刻印はボス階層では機能しない。</string>
   <string name="Codex_Story_10">根付く刻印- ヒーローはハーバルアーマーの効果を得るが、同時にルート化を受けることもある。</string>
   <string name="Codex_Story_11">致命の武器 - 攻撃が命中した場合、対象を即死させることがある（ボスには最大2倍のダメージを与える）</string>
-  <string name="Codex_Story_12">烈火の武器 - 攻撃命中時、相手に追加ダメージと延焼を与えます。</string>
-  <string name="Codex_Story_13">不気味な武器 - 攻撃命中時、敵が恐怖で逃げることがあります。</string>
-  <string name="Codex_Story_14">不安定な武器 - 攻撃命中時、ランダムな魔法の効果が適用されることがあります。</string>
+  <string name="Codex_Story_12">烈火の武器 - 攻撃命中時、対象に追加ダメージを与え、火傷を負わせる。</string>
+  <string name="Codex_Story_13">不気味な武器 - 攻撃命中時、敵に恐怖を与え、逃走させる。</string>
+  <string name="Codex_Story_14">不安定な武器 - 攻撃命中時、ランダムなエンチャントの効果が発動する。</string>
   <string name="Codex_Story_15">吸血武器 - 攻撃命中時、敵に与えたダメージの一部でヒーローを回復します。</string>
   <string name="Codex_Story_16">幸運の武器 - 敵の装甲をほぼ無視して高いダメージを与えます。</string>
   <string name="Codex_Story_17">衝撃の武器 - 攻撃命中時、対象を麻痺させることがあります。</string>
