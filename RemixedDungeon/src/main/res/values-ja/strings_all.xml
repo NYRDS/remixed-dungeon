@@ -513,7 +513,7 @@
   <string name="PotionBelt_Info">この丈夫な革製のベルトは、霜による粉砕からポーションを守りながら、すべてのポーションを収納することができる。</string>
   <string name="PotionBelt_Name">ポーションベルト</string>
   <string name="GoldenKey_Name">金の鍵</string>
-  <string name="GoldenKey_Info">この金の鍵の切れ込みは細かくて複雑です。一部のロックされた箱を開けられるかも？</string>
+  <string name="GoldenKey_Info">この金の鍵の切り込みは小さく、複雑だ。もしかしたら、どこかのチェストの鍵を開けることができるかもしれない。</string>
   <string name="IronKey_Name">鉄の鍵</string>
   <string name="IronKey_Info">この古い鉄の鍵の切れ込みは使い込まれています; 革のストラップも経年劣化しています。どの扉が開くでしょうか？</string>
   <string name="IronKey_FromDepth">%d 階層の鉄の鍵</string>
