@@ -2571,8 +2571,8 @@
   <string name="town_deco_crossroad_name">交差点の看板</string>
   <string name="town_deco_crossroad_desc">粗末な木製の柱には矢のような形の文字が書かれているが、厳しい気象条件のためか、かなり前に色あせてしまっている。</string>
   <string name="ShieldBuffReady_Name">盾の準備完了</string>
-  <string name="ShieldBuffReady_Info">シールドは次の攻撃を防ぐ準備ができている。</string>
-  <string name="ShieldBuffNotReady_Name">シールドの準備中</string>
+  <string name="ShieldBuffReady_Info">盾は次の攻撃を防ぐ準備ができている。</string>
+  <string name="ShieldBuffNotReady_Name">盾の準備中</string>
   <string name="ShieldBuffNotReady_Info">シールドは次の攻撃を防ぐ準備ができていない。</string>
   <string name="WoodenShield_name">木の盾</string>
   <string name="WoodenShield_desc">粗雑に作られた木の盾は、最もシンプルな盾である。丸みがあり、時折ダメージを防ぐことができる。</string>
