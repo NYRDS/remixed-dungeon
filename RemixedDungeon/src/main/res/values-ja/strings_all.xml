@@ -1713,7 +1713,7 @@
   <string name="WndDonate_royalDonate">ロイヤルの寄付</string>
   <string name="WndDonate_royalDonateText">変なことを言うようだが、そうすることは、文字通り開発者に餌を与えていることになる。</string>
   <string name="WndDonate_royalDonateText2">さらに、アプリ内ストアからすべての帽子を受け取ることができます！今後リリースされるすべての帽子も。</string>
-  <string name="WndPremiumSettings_royal">寄付</string>
+  <string name="WndPremiumSettings_royal">ロイヤル</string>
   <string name="Scroll_Name">スクロール \"%s\"</string>
   <string name="Scroll_Info">この羊皮紙には解読不能な文字が書かれており、%sのルーン文字がタイトルに記されている。声に出して読んだらどうなるかは誰にもわからない。</string>
   <string name="Scroll_ACRead">読む</string>
