@@ -1822,8 +1822,8 @@
   <string name="FetidRat_Gender">弱々しい</string>
   <string name="FetidRat_Desc">この有袋ネズミは普通のネズミよりずっと大きい。その周囲は不潔な雲に覆われている。</string>
   <string name="Hedgehog_Name">ハリネズミ</string>
-  <string name="Hedgehog_Desc">そのハリネズミはビクビクしているように見えます。</string>
-  <string name="Hedgehog_Info1">あなたもクマを探していますか？</string>
+  <string name="Hedgehog_Desc">あのハリネズミは神経質そうだ。</string>
+  <string name="Hedgehog_Info1">クマも探しているのか？</string>
   <string name="Hedgehog_Info2">霧の中の馬はどうだ？</string>
   <string name="Hedgehog_Info3">あなたはお茶とラズベリージャムは好きですか？</string>
   <string name="Hedgehog_Info4">このパイを取る</string>
