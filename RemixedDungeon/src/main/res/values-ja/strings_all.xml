@@ -1960,7 +1960,7 @@
   <string name="Armor_Info2">あなたの力が不足しているため、移動速度と防御スキルが低下する。</string>
   <string name="Armor_Info3">あなたの力が不足しているため、この鎧を着用すると移動速度と防御スキルが低下する。</string>
   <string name="Armor_Info4">一般的な%1$sは、1回の攻撃につき%2$d点までのダメージを防ぐ事ができ、%3$dの力を必要とする。</string>
-  <string name="Armor_Info5">この鎧は君には重すぎるだろう。</string>
+  <string name="Armor_Info5">この鎧はあなたには重すぎるようだ。</string>
   <string name="Armor_Info6">と刻まれている。</string>
   <string name="Armor_Info7a">あなたは %1$s%2$s を着用している。</string>
   <string name="Armor_Info7b">、それは呪われているため、あなたは取り除くことが出来ない</string>
