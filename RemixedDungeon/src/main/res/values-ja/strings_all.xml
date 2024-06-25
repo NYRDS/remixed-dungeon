@@ -2047,11 +2047,11 @@
   <string name="WndPlayGames_Show_Error">失敗。何かが間違っていた...</string>
   <string name="Level_HiddenPlate">隠された感圧板がカチッと音を立てる！</string>
   <string name="Level_TileChasm">割れ目</string>
-  <string name="Level_TileFloor">フロア</string>
+  <string name="Level_TileFloor">床</string>
   <string name="Level_TileGrass">草</string>
   <string name="Level_TileWater">水</string>
   <string name="Level_TileWall">壁</string>
-  <string name="Level_TileClosedDoor">閉じてるドア</string>
+  <string name="Level_TileClosedDoor">閉じている扉</string>
   <string name="Level_TileOpenDoor">開いてるドア</string>
   <string name="Level_TileEntrance">深層の入り口</string>
   <string name="Level_TileExit">深層の出口</string>
