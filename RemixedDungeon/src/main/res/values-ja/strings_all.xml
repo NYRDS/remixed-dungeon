@@ -2099,7 +2099,7 @@
   <string name="Caves_TileDescEntrance">はしごは上層階まで続いている。</string>
   <string name="Caves_TileDescExit">はしごは下層階まで続いている。</string>
   <string name="Caves_TileDescHighGrass">巨大なキノコが視界を遮る。</string>
-  <string name="Caves_TileDescDeco">壁に鉱脈が見える。金？</string>
+  <string name="Caves_TileDescDeco">壁に鉱脈が見える。金か？</string>
   <string name="Caves_TileDescBookshelf">誰が洞窟の中に本棚を必要とする？</string>
   <string name="City_TileWater">怪しい色の水</string>
   <string name="City_TileHighGrass">高い花が咲く</string>
