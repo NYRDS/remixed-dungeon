@@ -1092,10 +1092,10 @@
   <string name="MeleeWeapon_Info7b">、それは呪われているため、手放すことが出来ない</string>
   <string name="MeleeWeapon_Info7c">あなたは %s に潜んでいる邪悪な魔力を感じることが出来る。</string>
   <string name="BattleAxe_Name">バトルアックス</string>
-  <string name="BattleAxe_Info">この巨大な鋼鉄のバトルアックスは、攻撃後のスキが大きいです。</string>
+  <string name="BattleAxe_Info"> この巨大な鋼鉄のバトルアックスは、攻撃後のスキが大きくなるだろう。</string>
   <string name="BattleAxe_Gender">力強い</string>
   <string name="Dagger_Name">ダガー</string>
-  <string name="Dagger_Info">木製に握りのシンプルな鉄の短剣。</string>
+  <string name="Dagger_Info">使い古された木の柄がついたシンプルな鉄の短剣だ。</string>
   <string name="Dagger_Gender">力強い</string>
   <string name="Glaive_Name">グレイブ</string>
   <string name="Glaive_Info">ポールの先に剣の刃が付けられた柄の長い武器。</string>
