@@ -212,7 +212,7 @@
   <string name="WandOfFirebolt_Info">この杖は魔法の炎を放つ。燃えやすい地形を発火させ、当たった生き物にダメージを与え、火傷を負わせる。</string>
   <string name="WandOfFirebolt_Info1">あなたは、あなたの火矢の杖に殺された...</string>
   <string name="WandOfFlock_Name">群集の杖</string>
-  <string name="WandOfFlock_Info">この杖を軽く振ると、魔法の羊の群れが召喚されて、一時的な障害物になります。</string>
+  <string name="WandOfFlock_Info">この杖を一振りすると、魔法の羊の群れが召喚され、一時的に侵入不可能な障害物を作り出す。</string>
   <string name="Sheep_Name">羊</string>
   <string name="Sheep_Name_Objective">羊</string>
   <string name="Sheep_Gender">弱々しい</string>
