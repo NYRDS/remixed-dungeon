@@ -1137,10 +1137,10 @@
   <string name="MissileWeapon_Info3">あなたの力が十分なので、この %s のダメージが増加する。</string>
   <string name="MissileWeapon_Info4">あなたは %s を構えている。</string>
   <string name="Boomerang_Name">ブーメラン</string>
-  <string name="Boomerang_Info">敵に投げられたこの平らで湾曲した木の武器は投げ手の元に戻ってきます。</string>
+  <string name="Boomerang_Info">この平たく曲がった木製の投擲武器を敵に投げると、投げた人の手に戻る。</string>
   <string name="Boomerang_Gender">力強い</string>
   <string name="CurareDart_Name">クラーレダーツ</string>
-  <string name="CurareDart_Info">この邪悪な小さなダーツのダメージは大きくはありませんが、目標を麻痺させて少しの間無力化させることが出来ます。</string>
+  <string name="CurareDart_Info">この邪悪な小さなダーツは大したダメージは与えないが、標的を麻痺させ、しばらくの間無力化することができる。</string>
   <string name="CurareDart_Gender">力強い</string>
   <string name="Dart_Name">ダーツ</string>
   <string name="Dart_Info">この単純な金属のクギは、手首の軽い動きで敵に向かってまっすぐ飛ぶようにできています。</string>
