@@ -1218,7 +1218,7 @@
   <string name="DM300_Name">DM-300</string>
   <string name="DM300_Gender">力強い</string>
   <string name="DM300_Name_Objective">DM-300</string>
-  <string name="DM300_Desc">このマシンは数世紀前のドワーフによって作られました。その後、ドワーフたちはこのマシンの交換を始めた。ゴーレムやエレメンタル、そして悪魔とも。この行為は文明の衰退を招きました。DM-300や同様のマシンは、建設や掘削、都市防衛などに使われました。</string>
+  <string name="DM300_Desc">この機械は数世紀前にドワーフによって作られた。その後、ドワーフは機械をゴーレムやエレメンタル、さらには悪魔に置き換え始め、やがてそれが彼らの文明を衰退へと導いた。DM-300と同様の機械は通常、建設や採掘に使われ、場合によっては都市の防衛にも使われた。</string>
   <string name="DM300_Info1">DM-300は自己修復した！</string>
   <string name="DM300_Info2">ミッション失敗。シャットダウン。</string>
   <string name="DM300_Info3">侵入者発見。</string>
