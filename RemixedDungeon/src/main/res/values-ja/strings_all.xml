@@ -221,7 +221,7 @@
   <string name="WandOfLightning_Info">この杖は致命的な電撃を呼び起こし、近くに立っている複数の生き物にダメージを与える。</string>
   <string name="WandOfLightning_Info1">あなたは、あなたの稲妻の杖に殺された...</string>
   <string name="WandOfMagicMissile_Name">魔弾の杖</string>
-  <string name="WandOfMagicMissile_Info">この杖から放たれる純粋な魔法のエネルギー弾は、目標の生き物に適度なダメージを与えます。</string>
+  <string name="WandOfMagicMissile_Info">この杖は純粋な魔法のエネルギー弾を発射し、標的に中程度のダメージを与える。</string>
   <string name="WandOfMagicMissile_ACDisenchant">魔法を解く</string>
   <string name="WandOfMagicMissile_Info1">あなたは、あなたの魔弾の杖に殺された...</string>
   <string name="WandOfMagicMissile_SelectWand">強化する杖を選択</string>
