@@ -836,7 +836,7 @@
   <string name="RubyBow_Info">このルビーの弓を使えるのは、最強の弓手だけだ。ほとんどすべての矢が敵を貫き、体に大きな穴を残すが、弓の弦を引くには非常に強い力が必要だ。</string>
   <string name="RubyBow_Gender">力強い</string>
   <string name="Quiver_Name">矢筒</string>
-  <string name="Quiver_Info">革製の矢筒は矢を保持するのに適しています。</string>
+  <string name="Quiver_Info">矢を何本でも収納できる革製の矢筒</string>
   <string name="Quiver_Gender">力強い</string>
   <string name="CommonArrow_Name">矢</string>
   <string name="CommonArrow_Info">鉄の矢じりのついた一般的な矢。</string>
