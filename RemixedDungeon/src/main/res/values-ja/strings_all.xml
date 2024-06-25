@@ -316,8 +316,8 @@
   <string name="AmuletScene_Txt">あなたの目的はイェンダーの魔除けを手に入れることです。その力で世界を手に入れることもできるし、人々の平和や繁栄も得られるし、それ以外でも。とにかく、あなたの人生の変更とともにこのゲームは終りを迎えます。ですが、もう少しの間残るという選択肢もあります。</string>
   <string name="GameScene_Welcome">Remixed Dungeonの %d 階層へようこそ！</string>
   <string name="GameScene_WelcomeBack">おかえり！ここはRemixed Dungeonの %d 階層です！</string>
-  <string name="GameScene_NightMode">夜のダンジョンは更に危険なため用心してください！</string>
-  <string name="GameScene_Chasm">あなたの足音がダンジョン内に響きます。</string>
+  <string name="GameScene_NightMode">夜のダンジョンはさらに危険なので、用心すること！</string>
+  <string name="GameScene_Chasm">あなたの足音がダンジョンに響き渡る。</string>
   <string name="GameScene_Water">あなたは水の撥ねる音を聞いた。</string>
   <string name="GameScene_Grass">空気中に濃厚な植物の匂い。</string>
   <string name="GameScene_Secrets">このフロアには多くの秘密が隠されていそうな雰囲気がある。</string>
