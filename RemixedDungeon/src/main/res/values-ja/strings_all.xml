@@ -206,8 +206,8 @@
   <string name="WandOfAvalanche_Info1">あなたは、あなたの崩落の杖に殺された...</string>
   <string name="WandOfBlink_Name">転移の杖</string>
   <string name="WandOfBlink_Info">この杖は、あなたが選んだ場所にテレポートさせます。生き物と障害物はテレポートをブロックします。</string>
-  <string name="WandOfDisintegration_Name">粉砕の杖</string>
-  <string name="WandOfDisintegration_Info">この杖の破壊的エネルギーの光線は、行く手のすべての生き物を貫きます。多くの目標に当てると、多くのダメージをそれらに与えます。</string>
+  <string name="WandOfDisintegration_Name">分解の杖</string>
+  <string name="WandOfDisintegration_Info">この杖は破壊的なエネルギーの光線を放ち、邪魔な生き物すべてを貫く。当たる対象が多ければ多いほど、それぞれに与えるダメージも大きくなる。</string>
   <string name="WandOfFirebolt_Name">火矢の杖</string>
   <string name="WandOfFirebolt_Info">この杖は魔法の炎のバーストを解放します。これは可燃性の地形を燃やしたり、生き物に当たればダメージと延焼を引き起こします。</string>
   <string name="WandOfFirebolt_Info1">あなたは、あなたの火矢の杖に殺された...</string>
