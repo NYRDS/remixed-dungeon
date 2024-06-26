@@ -2399,7 +2399,7 @@
   <string name="Dungeon_Tips_7">空腹は苦痛ではないが、飢餓は苦痛だ。</string>
   <string name="Dungeon_Tips_8">奇襲攻撃は命中率が高い。例えば、敵が近づいてくるのがわかっているときに、閉ざされた扉の陰で待ち伏せすることができる。</string>
   <string name="Dungeon_Tips_9">天狗を外に出すな！</string>
-  <string name="Dungeon_Tips_10">Pixel-Mart -お金を使う。長生きする。</string>
+  <string name="Dungeon_Tips_10">お金を使う。長生きする。 -ピクセル商会-</string>
   <string name="Dungeon_Tips_11">複数のモンスターに同時に襲われたときは、扉の後ろに退避するようにしよう。</string>
   <string name="Dungeon_Tips_12">浮いていると、体が燃えても水で火を消すことはできない。</string>
   <string name="Dungeon_Tips_13">複数のアンクを同時に所有する意味はない。復活時にすべて失ってしまうからだ。</string>
