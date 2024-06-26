@@ -2428,7 +2428,7 @@
   <string name="HeroClass_NecromancerPerks_0">ネクロマンサーはスタート時に15ポイントの体力がある。</string>
   <string name="HeroClass_NecromancerPerks_1">ネクロマンサーは死の呪文を唱えるためにマナを使う。</string>
   <string name="HeroClass_NecromancerPerks_2">ネクロマンサーは、倒した生き物1 体につき 1 マナポイントを回復するユニークなネクロマンサーのローブを装備してスタートする。</string>
-  <string name="HeroClass_NecromancerPerks_3">ネクロマンサーはレベル7のスケルトンの鍵を持ってスタートする。</string>
+  <string name="HeroClass_NecromancerPerks_3">ネクロマンサーは7階層の骸骨の鍵を持ってスタートする。</string>
   <string name="HeroClass_NecromancerPerks_4">治癒のポーションは最初から特定されている。</string>
   <string name="HeroClass_WarPerks_0">ウォリアーはスタート時に11ポイントの力がある。</string>
   <string name="HeroClass_WarPerks_1">ウォリアーは、後で「鍛え直す」ことで、別の近接武器にアップグレードできるユニークなショートソードを持ってスタートする。</string>
