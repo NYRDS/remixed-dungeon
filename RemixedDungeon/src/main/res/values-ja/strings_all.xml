@@ -614,7 +614,7 @@
   <string name="TerrorBuff_Name">恐怖</string>
   <string name="TerrorBuff_Info">誰かがとても怯えていたようだ。</string>
   <string name="VertigoBuff_Name">目眩</string>
-  <string name="VertigoBuff_Info">ふらふらすると、まっすぐ歩くのが難しくなる！</string>
+  <string name="VertigoBuff_Info">クラクラして、まっすぐ歩くのが難しくなる！</string>
   <string name="WeaknessBuff_Name">弱体化</string>
   <string name="WeaknessBuff_Info">弱さは身体を包み込み、人を標的にしやすくする。</string>
   <string name="AwarenessBuff_Name">意識</string>
