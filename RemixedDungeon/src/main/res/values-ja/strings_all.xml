@@ -1925,7 +1925,7 @@
   <string name="MysteryMeat_Message">あの食べ物は...奇妙な味がした。</string>
   <string name="RottenFood_Message">うんざりだ！</string>
   <string name="RottenMeat_Name">腐った肉</string>
-  <string name="RottenMeat_Info">腐った肉片</string>
+  <string name="RottenMeat_Info">腐った肉。ひどい臭いがする</string>
   <string name="RottenPasty_Name">腐ったパスティ</string>
   <string name="RottenPasty_Info">このパスティはかなり不味そうだ。</string>
   <string name="RottenRation_Name">腐った糧食</string>
