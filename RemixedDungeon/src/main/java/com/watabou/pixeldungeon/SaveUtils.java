@@ -156,6 +156,10 @@ public class SaveUtils {
 		return cl.tag()+".dat";
 	}
 
+	public static String modDataFile() {
+		return "ModDataFor_"+ModdingMode.activeMod() + ".dat";
+	}
+
 	public static String depthFileForLoad(HeroClass cl, int depth, String levelKind, String levelId) {
 		String newFormat = depthFileForSave(cl, depth, levelKind, levelId);
 		if(FileSystem.getInternalStorageFile(newFormat).exists()) {

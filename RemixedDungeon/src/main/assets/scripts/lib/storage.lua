@@ -9,6 +9,8 @@ local serpent = require "scripts/lib/serpent"
 
 local gameData  = {}
 local levelData = {}
+local modData   = {}
+
 
 local gameStorage = {}
 
@@ -32,6 +34,17 @@ gameStorage.deserializeLevelData = function(str)
     --RPD.debug("deserialize")
     local res, _levelData = serpent.load(str)
     levelData = _levelData or {}
+end
+
+gameStorage.serializeModData = function()
+    --RPD.debug("serialize mod")
+    return serpent.dump(modData)
+end
+
+gameStorage.deserializeModData = function(str)
+    --RPD.debug("deserialize mod")
+    local res, _modData = serpent.load(str)
+    modData = _modData or {}
 end
 
 gameStorage.resetLevelData = function()
@@ -59,6 +72,18 @@ end
 gameStorage.gameGet = function(k, dv)
     --RPD.debug("game get: %s -> %s", tostring(k), tostring(serpent.dump({levelData[k]})))
     return gameData[k] or dv
+end
+
+gameStorage.modPut = function(k,v)
+    --RPD.debug("mod put: %s -> %s",
+    --        tostring(k),
+    --       tostring(serpent.dump({v})))
+    modData[k] = v
+end
+
+gameStorage.modGet = function(k, dv)
+    --RPD.debug("mod get: %s -> %s", tostring(k), tostring(serpent.dump({levelData[k]})))
+    return modData[k] or dv
 end
 
 return gameStorage

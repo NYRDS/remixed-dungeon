@@ -474,6 +474,14 @@ public class Dungeon {
         OutputStream output = FileSystem.getOutputStream(fileName);
         Bundle.write(bundle, output);
         output.close();
+
+        OutputStream modData = FileSystem.getOutputStream(SaveUtils.modDataFile());
+        Bundle modBundle = new Bundle();
+        modBundle.put(SCRIPTS_DATA,
+                LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("serializeModData").call().checkjstring());
+        Bundle.write(modBundle, modData);
+        modData.close();
+
     }
 
     @SneakyThrows
@@ -665,6 +673,11 @@ public class Dungeon {
                 val bundle = gameBundle(fileName);
                 if (bundle.isPresent()) {
                     loadGameFromBundle(bundle.get(), fullLoad);
+                }
+
+                val modBundle = gameBundle(SaveUtils.modDataFile());
+                if (modBundle.isPresent()) {
+                    LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeModData").call(modBundle.get().getString(SCRIPTS_DATA));
                 }
 
             } finally {
