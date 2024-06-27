@@ -115,7 +115,7 @@
   <string name="deco_candle_name">ロウソク</string>
   <string name="deco_candle_desc">大きなロウソク</string>
   <string name="Possess_Name">憑依</string>
-  <string name="Possess_Info">マインド・コントロールの暗黒術で、術者はほとんどの生き物の意思を曲げることができる。</string>
+  <string name="Possess_Info">マインドコントロールの暗黒術で、術者はほとんどの生き物の意思を曲げ、意のままにあやつることができる。</string>
   <string name="Possess_PossessionFailed">%sの意志は強すぎる</string>
   <string name="Possess_Possessed">%sはあなたの命令を待っている</string>
   <string name="Possess_CantPossessSelf">自分を洗脳することはできない</string>
