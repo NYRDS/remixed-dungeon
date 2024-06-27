@@ -1668,6 +1668,7 @@
   <string name="ServiceManNPC_Desc">Un trabajador de los establecimientos locales.</string>
   <string name="TownShopkeeper_Name">comerciante</string>
   <string name="TownShopkeeper_Desc">Este tipo es un comerciante típico. Usted puede decir que ya conoce los precios.</string>
+  <string name="TownShopkeeper_Objective">comerciante</string>
   <string name="WndMovieTheatre_Watch">¿ver un anuncio?.</string>
   <string name="WndMovieTheatre_No">salir</string>
   <string name="WndMovieTheatre_Bye">¡Vuelve cuando quieras, siempre estaremos felices de verte!</string>
@@ -1798,7 +1799,6 @@
   <string name="GothicArmor_Info">Una armadura gótica que es el pináculo del arte en la forja de armaduras.</string>
   <string name="ChaosArmor_Name">Armadura de caos</string>
   <string name="ChaosArmor_Info">Las placas color rojo sangre de esta armadura unidas con cadenas de color rojo oscuro. Irradia energía caótica al tocarla.</string>
-  <string name="ChaosCrystal_ArmorFused">El cristal absorbe tu armadura, tomando la forma de una armadura compuesta</string>
   <string name="Blacksmith_Name">herrero troll</string>
   <string name="Blacksmith_Desc">Este herrero troll es como cualquier otro troll: alto, musculoso y con una piel parecida a piedra en color y tacto. El herrero troll está trabajando con herramientas extremadamente pequeñas.</string>
   <string name="Blacksmith_Gold1">¡Eh, humano! ¿Quieres ser útil? Coge este pico y extrae algo de _mineral de oro oscuro_ para mi. _15 piezas_ deberían bastar. ¿Qué dices? ¿Qué como voy a pagarte? Serás avaricioso... \n Vale, vale, no tengo dinero, pero puedo forjar algo para ti. Siéntete afortunado, ya que soy el único herrero de por aquí.</string>
@@ -2435,7 +2435,6 @@
   <string name="Hunger_Starving_0">¡Estás muriendo de hambre!</string>
   <string name="Hunger_Starving_1">¡Estás muriendo de hambre!</string>
   <string name="Hunger_Starving_2">¡Estás muriendo de hambre!</string>
-  <string name="HeroClass_NecromancerPerks_0">Los nigromantes comienzan con 15 puntos de vida.</string>
   <string name="HeroClass_NecromancerPerks_1">Los nigromantes usan maná para lanzar hechizos de muerte.</string>
   <string name="HeroClass_NecromancerPerks_2">Los nigromantes comienzan con una túnica de nigromante, que otorga 1 punto de maná por cada criatura muerta.</string>
   <string name="HeroClass_NecromancerPerks_3">Los nigromantes comienzan con una llave esqueleto para el nivel 7.</string>
@@ -2462,7 +2461,6 @@
   <string name="HeroClass_HunPerks_2">Las cazadoras son mejores con armas arrojadizas, y ganan un bonus de daño al usarlas.</string>
   <string name="HeroClass_HunPerks_3">Las cazadoras ganan más vida con las gotas de rocío.</string>
   <string name="HeroClass_HunPerks_4">Las cazadoras sienten a enemigos cercanos incluso si están escondidos tras obstáculos. </string>
-  <string name="HeroClass_ElfPerks_0">Los elfos comienzan con 15 de vida y 9 de fuerza.</string>
   <string name="HeroClass_ElfPerks_1">Los elfos son inmunes al enraizado.</string>
   <string name="HeroClass_ElfPerks_2">Los elfos comienzan un arco de madera mejorado y flechas.</string>
   <string name="HeroClass_ElfPerks_3">Los elfos son buenos con los arcos y son ágiles.</string>
@@ -2623,14 +2621,6 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
   <string name="KunaiThrow_Info">Este lanzamiento de Kunai mortal se hará extremadamente rápido, tanto que ni siquiera podrás seleccionar un objetivo.\n\nLos verdaderos maestros son capaces de lanzar más de un Kunai a la vez.</string>
   <string name="Haste_Name">Prisa extrema</string>
   <string name="Haste_Info">La prisa permitirá al ejecutante moverse con una velocidad tan extrema, que todo a su alrededor parecerá estático. Dicha prisa consumirá mucha energía, por lo que su uso solo es posible durante un breve periodo de tiempo.\n\nLos maestros expertos son capaces de mantenerse apurados durante más tiempo.</string>
-  <string name="Welcome_Text_29_5">
-    remix.29.5\n
-    - Gameplay:\n
-    -- ¡Habilidades de Rogue!\n
-    - Modding:\n
-    -- ¡Armaduras personalizables!\n
-    - Bugs arreglados\n
-    </string>
   <string name="Char_Stole_0">%1$s robó %2$s de %3$s!</string>
   <string name="Char_Stole_1">%1$s robó %2$s de %3$s!</string>
   <string name="Char_Stole_2">%1$s robó %2$s de %3$s!</string>
@@ -2656,16 +2646,6 @@ otro lugar del nivel.</string>
   <string name="Char_StaStunned">aturdido</string>
   <string name="Mob_ReadyForOrder">%slisto para usarse.</string>
   <string name="Mob_CantDoIt">No puedo hacer esto. Tengo patas pequeñas.</string>
-  <string name="Welcome_Text_29_6">
-    remix.29.6\n
-    - Gameplay:\n
-    -- ¡Acciones adicionales para realizar en los mobs!\n
-    - Modding:\n
-    -- ¡Actores de artículos!\n
-    -- ¡Armas con propiedades especiales!\n
-    -- ¡Más cosas sin categorizar!\n
-    - Bugs arreglados\n
-    </string>
   <string name="InnKeeperNPC_Name">encargado de la posada</string>
   <string name="InnKeeperNPC_Name_Objective">encargado de la posada</string>
   <string name="InnKeeperNPC_Gender">masculino</string>
@@ -2902,4 +2882,6 @@ otro lugar del nivel.</string>
   <string name="Movement_Speed">Velocidad de movimiento</string>
   <string name="Attack_Cooldown">Enfriamiento de ataque</string>
   <string name="View_Distance">Distancia de visión</string>
+  <string name="AC_Necromancy">Nigromancia</string>
+  <string name="AC_Devour">Devorar</string>
 </resources>

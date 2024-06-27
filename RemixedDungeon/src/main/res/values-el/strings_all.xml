@@ -1662,6 +1662,7 @@
   <string name="ServiceManNPC_Desc">Ένας απλός εργάτης των τοπικών εγκαταστάσεων.</string>
   <string name="TownShopkeeper_Name">καταστηματάρχης</string>
   <string name="TownShopkeeper_Desc">Αυτός είναι ο κλασικός καταστηματάρχης. Το νιώθεις ότι γνωρίζει ήδη την τιμή σου.</string>
+  <string name="TownShopkeeper_Objective">καταστηματάρχης</string>
   <string name="WndMovieTheatre_Watch">Παρακολούθηση Ad</string>
   <string name="WndMovieTheatre_No">Αποχώρηση</string>
   <string name="WndMovieTheatre_Bye">Έλα πάλι όποτε θες. Χαιρόμαστε που σε βλέπουμε!</string>
@@ -2424,7 +2425,6 @@
   <string name="Hunger_Starving_0">Λιμοκτονείς!</string>
   <string name="Hunger_Starving_1">Λιμοκτονείς!</string>
   <string name="Hunger_Starving_2">Λιμοκτονείς!</string>
-  <string name="HeroClass_NecromancerPerks_0">Οι Νεκρομάντες ξεκινούν με 15 ζωή.</string>
   <string name="HeroClass_NecromancerPerks_1">Οι Νεκρομάντες χρησιμοποιούν μαγική ενέργεια για να εκτελέσουν ξόρκια θανάτου.</string>
   <string name="HeroClass_NecromancerPerks_2">Οι Νεκρομάντες ξεκινούν με τον μοναδικό Χιτώνα του Νεκρομάντη, που προσφέρει 1 πόντο μαγικής ενέργειας για κάθε εξοντωμένο πλάσμα.</string>
   <string name="HeroClass_NecromancerPerks_3">Οι Νεκρομάντες ξεκινούν με ένα σκελετικό κλειδί του 7ου επιπέδου.</string>
@@ -2905,4 +2905,6 @@ remix.32\n
     -- Εξατομικευμένα σενάρια (scripts) για τους προ-υπάρχοντες εχθρούς\n
     -- Λάμψεις για τους εχθρούς\n
     - Διορθώσεις σφαλμάτων\n</string>
+  <string name="AC_Necromancy">Νεκρομαντεία</string>
+  <string name="AC_Devour">Καταβρόχθιση</string>
 </resources>

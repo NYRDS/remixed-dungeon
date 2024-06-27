@@ -973,6 +973,7 @@
   <string name="HeroClass_Rog">вор</string>
   <string name="HeroClass_Hun">охотница</string>
   <string name="HeroClass_Elf">эльф</string>
+  <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">гладиатор</string>
   <string name="HeroSubClass_DescGlad">Успешная атака ближнего боя позволяет, _Гладиатору_ начать серию комбо-ударов, в течение которой каждое последующее попадание наносит больше урона.</string>
   <string name="HeroSubClass_NameBers">берсерк</string>
@@ -1675,6 +1676,7 @@
   <string name="ServiceManNPC_Desc">Рядовой работник местных заведений.</string>
   <string name="TownShopkeeper_Name">торговец</string>
   <string name="TownShopkeeper_Desc">Этот человек  - типичный торговец. Даже не сомневайся, он уже знает тебе цену.</string>
+  <string name="TownShopkeeper_Objective">торговец</string>
   <string name="WndMovieTheatre_Watch">посмотреть рекламу</string>
   <string name="WndMovieTheatre_No">уйти</string>
   <string name="WndMovieTheatre_Bye">Возвращайтесь в любое время, мы вам всегда рады!</string>
@@ -2437,7 +2439,6 @@
   <string name="Hunger_Starving_0">Ты истощено!</string>
   <string name="Hunger_Starving_1">Ты истощён!</string>
   <string name="Hunger_Starving_2">Ты истощена!</string>
-  <string name="HeroClass_NecromancerPerks_0">Некроманты начинают с 15 очками Здоровья.</string>
   <string name="HeroClass_NecromancerPerks_1">Некроманты используют ману для заклятий Смерти.</string>
   <string name="HeroClass_NecromancerPerks_2">Некроманты начинают с уникальной робой некроманта, которая восстанавливает одно очко маны за каждое убитое существо.</string>
   <string name="HeroClass_NecromancerPerks_3">Некроманты начинают с ключом-скелетом от 7 уровня.</string>
@@ -2884,8 +2885,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndModSelect_AreYouSure">Удаляем мод %s, уверены?</string>
   <string name="Challenges_Names_8">Без города</string>
   <string name="Challenges_Descriptions_8">Ваше путешествие начнется в темной и опасной городской канализации, единственный путь на поверхность заблокирован. Что еще хуже, вы сможете использовать только то что найдете в подземелье. В условиях ограниченных ресурсов и снаряжения ваше выживание будет зависеть от ваших навыков и стратегии.</string>
-
-
   <string name="EncumbranceBuff_CharAct_1">У меня недостаточно сил, чтобы правильно использовать %s.</string>
   <string name="EncumbranceBuff_CharAct_2">Этот предмет, %s, слишком тяжел для меня, чтобы использовать его эффективно.</string>
   <string name="EncumbranceBuff_CharAct_3">Мне нужно поработать над своей силой, прежде чем я смогу использовать %s.</string>
@@ -2910,7 +2909,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ChampionOfFireBuff_Info">"Пронизанная яростью пламени, эта способность усиливает свирепость и боевое мастерство существа. Чемпион огня становится грозным противником, нанося разрушительные атаки, которые могут поглотить его врагов в обжигающем пламени, вселяя ужас во всех, кто осмелится противостоять ему.</string>
   <string name="ChampionOfEarthBuff_Name">Чемпион Земли</string>
   <string name="ChampionOfEarthBuff_Info">Чемпион Земли воплощает в себе непреклонную силу, так как эта черта повышает сопротивляемость существа к урону и увеличивает его максимальную жизненную силу. Это превращение делает его грозным противником в коварных глубинах, способным с легкостью отражать атаки и выдерживать длительные сражения с непоколебимой решимостью.</string>
-
   <string name="Welcome_Text_32">
     remix.32\n
     - Геймплей:\n
@@ -2929,5 +2927,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Свечение для мобов\n
     - Багофиксы\n
     </string>
-
+  <string name="AC_Necromancy">Некромантия</string>
+  <string name="AC_Devour">Пожирание</string>
 </resources>

@@ -1606,6 +1606,7 @@
   <string name="ServiceManNPC_Desc">지역 설립의 정규 일꾼</string>
   <string name="TownShopkeeper_Name">상인</string>
   <string name="TownShopkeeper_Desc">이 사람은 일반적인 상인으로, 당신은 그가 당신의 가치를 안다고 말할 수 있습니다.</string>
+  <string name="TownShopkeeper_Objective">상인</string>
   <string name="WndMovieTheatre_No">떠나기</string>
   <string name="WndMovieTheatre_Bye">언제든지 돌아오세요!</string>
   <string name="WndMovieTheatre_Title">영화관</string>
@@ -2282,7 +2283,6 @@
   <string name="Hunger_Starving_0">당신은 굶주리고 있습니다!</string>
   <string name="Hunger_Starving_1">당신은 굶주리고 있습니다!</string>
   <string name="Hunger_Starving_2">당신은 굶주리고 있습니다!</string>
-  <string name="HeroClass_NecromancerPerks_0">강령술사는 15의 체력으로 시작합니다.</string>
   <string name="HeroClass_NecromancerPerks_1">강령술사는 마나를 사용해 죽음의 주문을 사용합니다.</string>
   <string name="HeroClass_NecromancerPerks_2">강령술사는 7레벨 스켈레톤 키를 지니고 시작합니다.</string>
   <string name="HeroClass_NecromancerPerks_3">회복의 물약이 처음부터 식별되어 있습니다.</string>
@@ -2453,4 +2453,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="SpiderElite_Gender">남성적인</string>
   <string name="Facilitations_Names_0">배고픔 없음</string>
   <string name="Challenges_Descriptions_0">음식과 물은 이미 오래 전에 썩어서, 모든 모험가들을 두려움과 배고픔으로 인한 죽음에 대한 생각으로 미치게 만들었습니다. 여러분의 식단이 여러분을 충분히 오래도록 도와줄 수 있나요?</string>
+  <string name="AC_Necromancy">강령술</string>
+  <string name="AC_Devour">포식</string>
 </resources>

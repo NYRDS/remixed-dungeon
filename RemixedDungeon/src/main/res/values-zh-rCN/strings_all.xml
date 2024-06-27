@@ -973,6 +973,7 @@
   <string name="HeroClass_Rog">盗贼</string>
   <string name="HeroClass_Hun">女猎手</string>
   <string name="HeroClass_Elf">精灵</string>
+  <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">角斗士</string>
   <string name="HeroSubClass_DescGlad">一次成功的近战攻击可以让_角斗士_找回节奏，开始连击。接下来每次近战攻击命中都会造成更多伤害。</string>
   <string name="HeroSubClass_NameBers">狂战士</string>
@@ -1660,6 +1661,7 @@
   <string name="ServiceManNPC_Desc">当地企业一名中规中矩的员工。</string>
   <string name="TownShopkeeper_Name">商人</string>
   <string name="TownShopkeeper_Desc">平凡的商人，却知道你的斤两。</string>
+  <string name="TownShopkeeper_Objective">商店店主</string>
   <string name="WndMovieTheatre_Watch">观看广告</string>
   <string name="WndMovieTheatre_No">离开</string>
   <string name="WndMovieTheatre_Bye">想回来的时候就回来，我们对你的到来而感到高兴！</string>
@@ -1790,7 +1792,6 @@
   <string name="GothicArmor_Info">哥特式盔甲是盔甲锻造艺术的顶峰。</string>
   <string name="ChaosArmor_Name">混沌护甲</string>
   <string name="ChaosArmor_Info">这件盔甲的血红色金属板被暗红的铁链缝接在一起，当你触碰它时会迸发出混沌能量。</string>
-  <string name="ChaosCrystal_ArmorFused">水晶吸收了你的护甲，并化成了复合盔甲的形态。</string>
   <string name="Blacksmith_Name">巨魔铁匠</string>
   <string name="Blacksmith_Desc">这只巨魔看起来和其他巨魔一样：又高又瘦，皮肤的色泽和纹理看起来就像石头一样。这位巨魔铁匠正拿着一把与他体型不相称的小锤子不停地修补。</string>
   <string name="Blacksmith_Gold1">嘿，人类！想要做个有用点的人吗？拿着这把镐子给我挖点_暗金矿_，只要_15块_。什么？我要如何报答你？你……真是贪婪。\n好吧，好吧，我没钱付给你，但我可以给你锻造。想想你有多走运吧，我可是这附近唯一的铁匠。</string>
@@ -2422,7 +2423,6 @@
   <string name="Hunger_Starving_0">你饿到受不了了！</string>
   <string name="Hunger_Starving_1">你饿到受不了了！</string>
   <string name="Hunger_Starving_2">你饿到受不了了！</string>
-  <string name="HeroClass_NecromancerPerks_0">死灵法师初始只拥有15点生命上限。</string>
   <string name="HeroClass_NecromancerPerks_1">死灵法师使用法力值施放死灵咒语。</string>
   <string name="HeroClass_NecromancerPerks_2">死灵法师初始拥有一件独特的灵魂长袍。装备后，每杀死一个生物会给他提供1点法力值。</string>
   <string name="HeroClass_NecromancerPerks_3">死灵法师开局有一把7层的骷髅钥匙。</string>
@@ -2449,7 +2449,6 @@
   <string name="HeroClass_HunPerks_2">女猎手精通远程武器。使用它们时，她可以获得基于额外力量值的伤害加成。</string>
   <string name="HeroClass_HunPerks_3">女猎手能从露珠获得更多生命值。</string>
   <string name="HeroClass_HunPerks_4">女猎手可以隔着障碍物感应到附近隐匿的敌人。</string>
-  <string name="HeroClass_ElfPerks_0">精灵初始时只拥有15点生命值和9点力量。</string>
   <string name="HeroClass_ElfPerks_1">精灵免疫缠绕状态。</string>
   <string name="HeroClass_ElfPerks_2">精灵开局时拥有一把升级过的弓和一些箭。 </string>
   <string name="HeroClass_ElfPerks_3">精灵十分敏捷，并且十分精通弓箭。</string>
@@ -2611,13 +2610,6 @@
   <string name="KunaiThrow_Info">这个致命苦无的投掷将以极快的速度完成，快到你甚至无法选择目标。\n\n真正的大师能够同时投掷多个苦无。</string>
   <string name="Haste_Name">急速</string>
   <string name="Haste_Info">急速会让实行者以极快的速度移动，他周围的一切都会显得静止。如此急速会消耗大量的能量，所以只能在很短的时间内使用。\n\n熟练的大师能够在较长的时间内保持急速。</string>
-  <string name="Welcome_Text_29_5">
-remix.29.5\n
-——游戏性：\n
-—盗贼技能！\n
-——修改：\n
-—盔甲贴图！\n
-——修复错误</string>
   <string name="Char_Stole_0">%1$s从%3$s身上偷走了%2$s！</string>
   <string name="Char_Stole_1">%1$s把%3$s的%2$s偷窃了！</string>
   <string name="Char_Stole_2">%1$s把%3$s的%2$s偷窃了！</string>
@@ -2641,15 +2633,6 @@ remix.29.5\n
   <string name="Char_StaStunned">眩晕</string>
   <string name="Mob_ReadyForOrder">%s已准备执行你的命令</string>
   <string name="Mob_CantDoIt">我做不到。我的手太小了。</string>
-  <string name="Welcome_Text_29_6">
-Remix.29.6\n
-——游戏性：\n
-—对怪物们执行额外行动！\n
-——修改：\n
-—角色项目！\n
-—特殊武器属性！\n
-—更多未分类的东西！\n
-——修复错误</string>
   <string name="InnKeeperNPC_Name">旅店老板</string>
   <string name="InnKeeperNPC_Name_Objective">旅店老板</string>
   <string name="InnKeeperNPC_Gender">男孩</string>
@@ -2866,4 +2849,6 @@ remix.31.1\n
   <string name="SpiderQueen_DieInfo">蜘蛛女王已经被杀死了！现在我应该回到第5层继续我的地牢探险</string>
   <string name="WndModSelect_ReallyDelete">真的要删除吗？</string>
   <string name="WndModSelect_AreYouSure">删除mod：%s，你确定吗？</string>
+  <string name="AC_Necromancy">死灵术</string>
+  <string name="AC_Devour">吞噬</string>
 </resources>

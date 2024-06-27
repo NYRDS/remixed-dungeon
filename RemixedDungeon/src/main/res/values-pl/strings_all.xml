@@ -978,6 +978,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="HeroClass_Rog">łotrzyk</string>
   <string name="HeroClass_Hun">łowczyni</string>
   <string name="HeroClass_Elf">elf</string>
+  <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">gladiator</string>
   <string name="HeroSubClass_DescGlad">Udany atak bronią krótkodystansową  _Gladiatora_ rozpoczyna kombinację, w której ilość obrażeń wzrasta wraz z każdym kolejnym uderzeniem.</string>
   <string name="HeroSubClass_NameBers">berserk</string>
@@ -1666,6 +1667,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="ServiceManNPC_Desc">Zwykły pracownik jednego z miejscowych przybytków.</string>
   <string name="TownShopkeeper_Name">handlarz</string>
   <string name="TownShopkeeper_Desc">Ta osoba to typowy sklepikarz. Z jego oczu można wyczytać że już dokonał twojej wyceny.</string>
+  <string name="TownShopkeeper_Objective">handlarz</string>
   <string name="WndMovieTheatre_Watch">Obejrzyj reklame</string>
   <string name="WndMovieTheatre_No">wyjdź</string>
   <string name="WndMovieTheatre_Bye">Wróć kiedy zechcesz, jesteś zawsze mile widziany!</string>
@@ -1796,7 +1798,6 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="GothicArmor_Info">Gotycka zbroja jest szczytem sztuki wykuwania pancerza.</string>
   <string name="ChaosArmor_Name">Zbroja Chaosu</string>
   <string name="ChaosArmor_Info">Ta broń składa się z krwistoczerwonych płytek połączonych ze sobą ciemnoczerwonymi łańcuchami. Przy dotknięciu promienieje chaotyczną energią.</string>
-  <string name="ChaosCrystal_ArmorFused">Kryształ absorbuje twoją zbroję i przyjmuje formę kompozytowego pancerza.</string>
   <string name="Blacksmith_Name">kowal trolli</string>
   <string name="Blacksmith_Desc">Ten kowal trolli wygląda jak każdy troll: jest wysoki i chudy, jego skóra przypomina kamień z koloru jak i wyglądu. Kowal trolli pracuje z nieproporcjonalnie małymi narzędziami.</string>
   <string name="Blacksmith_Gold1">Hej, człowieku! Chcesz się na coś przydać, hę? Weź ten kilof i wydobądź mi trochę _Rudy Mrocznego Złota_. Myślę, że _15 kawałków_ powinno wystarczyć. Jak ci mam zapłacić? Jesteś chciwy... \nDobrze, dobrze, nie mam złota by ci zapłacić, ale mogę odwalić dla ciebie trochę kowalskiej roboty! Uznaj siebie za szczęściarza, bo jestem jedynym kowalem w okolicy.</string>
@@ -2431,7 +2432,6 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Hunger_Starving_0">Konasz z głodu!</string>
   <string name="Hunger_Starving_1">Konasz z głodu!</string>
   <string name="Hunger_Starving_2">Konasz z głodu!</string>
-  <string name="HeroClass_NecromancerPerks_0">Nekromanci zaczynają z 15 punktami życia.</string>
   <string name="HeroClass_NecromancerPerks_1">Nekromanci używają many aby rzucać zaklęcia Śmierci.</string>
   <string name="HeroClass_NecromancerPerks_2">Nekromanci zaczynają grę z unikalną Szatą Nekromanty, która daje 1 punkt many za każdą pokonaną istotę.</string>
   <string name="HeroClass_NecromancerPerks_3">Nekromanci zaczynają z Kościanym Kluczem poziomu 7-ego.</string>
@@ -2458,7 +2458,6 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="HeroClass_HunPerks_2">Łowczynie są biegłe w używaniu broni dystansowych i otrzymują bonus do obrażeń od nadmiernej Siły kiedy ich używają. </string>
   <string name="HeroClass_HunPerks_3">Łowczynie otrzymują więcej życia z kropel rosy.</string>
   <string name="HeroClass_HunPerks_4">Łowczynie mogą wykryć potwory w pobliżu, nawet jeśli chowają się za przeszkodą.</string>
-  <string name="HeroClass_ElfPerks_0">Elfy zaczynają z 15 HP oraz 9 punktami siły</string>
   <string name="HeroClass_ElfPerks_1">Elfy są odporne na zakorzenienie.</string>
   <string name="HeroClass_ElfPerks_2">Elfy zaczynają z ulepszonym drewnianym łukiem oraz pęczkiem strzał.</string>
   <string name="HeroClass_ElfPerks_3">Elfy są zwinne i niezwykle biegłe w obsłudze łuku.</string>
@@ -2617,14 +2616,6 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="KunaiThrow_Info">Ten Śmiercionośny Rzut Kunai jest wykonywany tak szybko, że nie zdążysz nawet wybrać swojego celu.\n\nPrawdziwy Mistrz jest w stanie wykonać więcej niż jeden rzut na raz.</string>
   <string name="Haste_Name">Ekstremalny Pośpiech</string>
   <string name="Haste_Info">Używająć Pośpiechu zyskuje się niesamowite prędkości, takie aż wszytko wokół zamiera w miejscu .Wykorzystuje ono jednak dużo energii, więc można go urzywać jedynie przez krótki okres czasu.\n\nMistrzowie Pośpiechu są w stanie zostać w nim dłużej.</string>
-  <string name="Welcome_Text_29_5"> 
-remix.29.5\n
-- Rozgrywka:\n
--- Nowe umięjetności Łotra!!\n
-- Mody:\n
--- Customowe zbroje!\n
-- Naprawy błędów\n
-</string>
   <string name="Char_Stole_0">%1$sukradł %2$s od %3$s</string>
   <string name="Char_Stole_1">%1$sukradł %2$s od %3$s</string>
   <string name="Char_Stole_2">%1$sukradł %2$s od %3$s</string>
@@ -2648,15 +2639,6 @@ remix.29.5\n
   <string name="Char_StaStunned">ogłuszony</string>
   <string name="Mob_ReadyForOrder">%s gotowy na twoje rozkazy</string>
   <string name="Mob_CantDoIt">Nie mogę tego zrobić. Mam drobne łapy.</string>
-  <string name="Welcome_Text_29_6">
-remix.29.6\n
--Rozgrywka:\n
---Więcej akcji które mogą wykonać postacie niegrywalne!/n
--Mody:\n
---Nowe specjalne właściwości broni:\n
--- Więcej różnych rzeczy!:\n
--Poprawki błędów:\n
-</string>
   <string name="InnKeeperNPC_Name">Karczmarz</string>
   <string name="InnKeeperNPC_Name_Objective">karczmarz</string>
   <string name="InnKeeperNPC_Gender">masculine</string>
@@ -2881,4 +2863,6 @@ remix.29.6\n
   <string name="SpiderQueen_DieInfo">Królowa pająków została zabita! Teraz powinienem wrócić na poziom 5 i kontynuować moją przygodę w głębiny .</string>
   <string name="WndModSelect_ReallyDelete">Na pewno usunąć? </string>
   <string name="WndModSelect_AreYouSure">Usuwanie modyfikacji %s, Jesteś pewien?</string>
+  <string name="AC_Necromancy">Nekromancja</string>
+  <string name="AC_Devour">Pożerać ?</string>
 </resources>

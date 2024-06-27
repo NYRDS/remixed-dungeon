@@ -1671,6 +1671,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
   <string name="ServiceManNPC_Desc">Yerel işletmelerin düzenli bir çalışanı.</string>
   <string name="TownShopkeeper_Name">dükkan sahibi</string>
   <string name="TownShopkeeper_Desc">Bu adam normal bir esnaf. Kaç para edeceğini bildiğinden eminsin.</string>
+  <string name="TownShopkeeper_Objective">dükkan sahibi</string>
   <string name="WndMovieTheatre_Watch">bir Reklam izle</string>
   <string name="WndMovieTheatre_No">ayrıl</string>
   <string name="WndMovieTheatre_Bye">Sizi gördüğümüze sevindik, yine bekleriz!</string>
@@ -2438,7 +2439,6 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
   <string name="Hunger_Starving_0">Açlıktan ölüyorsun!</string>
   <string name="Hunger_Starving_1">Açlıktan ölüyorsun!</string>
   <string name="Hunger_Starving_2">Açlıktan ölüyorsun!</string>
-  <string name="HeroClass_NecromancerPerks_0">Ölü Çağıranlar 15 hp ile başlar.</string>
   <string name="HeroClass_NecromancerPerks_1">Ölü Çağıranlar Ölüm büyüleri yapmak için mana kullanır.</string>
   <string name="HeroClass_NecromancerPerks_2">Ölü Çağıranlar, öldürülen her yaratık için 1 mana puanı veren benzersiz bir Ölü Çağıran cübbesi ile başlar.</string>
   <string name="HeroClass_NecromancerPerks_3">Ölü Çağıranlar 7. seviye bir iskelet anahtarıyla başlar.</string>
@@ -2918,4 +2918,6 @@ remix.30.1\n
 -- Dahili Mobs için Özel Komut Dosyaları\n
 -- Mobs için parlamalar\n
 - Düzeltilen hatalar</string>
+  <string name="AC_Necromancy">Ölüçağırma</string>
+  <string name="AC_Devour">Obur</string>
 </resources>

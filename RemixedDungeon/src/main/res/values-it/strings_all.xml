@@ -895,6 +895,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="HeroClass_Rog">furfante</string>
   <string name="HeroClass_Hun">cacciatrice</string>
   <string name="HeroClass_Elf">elfo</string>
+  <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">gladiatore</string>
   <string name="HeroSubClass_DescGlad">Un attacco di successo con un arma da mischia permette al _Gladiatore_ di iniziare una combo, in cui ogni successivo colpo andato a segno infligge più danni.</string>
   <string name="HeroSubClass_NameBers">berserker</string>
@@ -1140,7 +1141,6 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="Goo_Name">Goo</string>
   <string name="Goo_Gender">Femmina</string>
   <string name="Goo_Name_Objective">Goo</string>
-  <string name="Goo_Desc">Si conosce poco di Goo. È probabile che non sia nemmeno una creatura, ma piuttosto un conglomerato di sostante provenienti dalle fogne che ha guadagnato principi di volontà propria. In ogni caso, è ovvio che è opera di magia nera.</string>
   <string name="Goo_Info1">Goo si sta pompando!</string>
   <string name="Goo_Info2">glurp... glurp...</string>
   <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -1475,6 +1475,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="ServiceManNPC_Gender">maschile</string>
   <string name="ServiceManNPC_Name_Objective">lavoratore</string>
   <string name="TownShopkeeper_Name">Negoziante</string>
+  <string name="TownShopkeeper_Objective">Negoziante</string>
   <string name="WndPriest_Instruction_m">Benvenuto figlio mio, benvenuto nella sacra chiesa del grande Santa, il Signore delle Profondità! Sfortunatamente ora non posso farti entrare, l\'edificio è ancora in costruzione ma, se sei in cera di aiuto, posso fornire guarigione e cibo per sole %d monete d\'oro!</string>
   <string name="WndPriest_Instruction_f">Benvenuta figlia mia, benvenuta nella sacra chiesa del grande Santa, il Signore delle Profondità! Sfortunatamente ora non posso farti entrare, l\'edificio è ancora in costruzione ma, se sei in cera di aiuto, posso fornire guarigione e cibo per sole %d monete d\'oro!</string>
   <string name="WndPriest_Title">Prete di paese</string>
@@ -1585,7 +1586,6 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="GothicArmor_Info">Un\'armatura gotica è il pinnacolo dell\'arte di forgiare armature. </string>
   <string name="ChaosArmor_Name">Armatura del caos. </string>
   <string name="ChaosArmor_Info">Le placche rosso sangue di questa armatura sono tenute insieme con catene rosse oscure. Irradia energia del Caos quando la tocchi. </string>
-  <string name="ChaosCrystal_ArmorFused">Il cristallo assorbe la tua armatura, prendendo la forma di un\'armatura composita. </string>
   <string name="Blacksmith_Name">fabbro troll</string>
   <string name="Blacksmith_Desc">Questo fabbro troll si presenta come tutti i troll guardandolo : è alto e magro, la sua pelle assomiglia alla pietra sia a colori e alla consistenza. Il fabbro troll sa armeggiare con piccoli attrezzi in modo non proporzionale </string>
   <string name="Blacksmith_Gold1">Hey umano!  Vuoi essere utile, eh? Prendi il piccone e mina del _dark gold ore_, _15 pieces_ dovrebbe essere sufficiente. Cosa vuol dire come ho intenzione di pagare? Sei avido...\nOk, ok, non ho soldi da darti, ma in cambio ti posso offrire i miei servigi per un po. Considerati fortunato, io sono l\'unico fabbro qui attorno.</string>
@@ -2117,7 +2117,6 @@ Potrebbe bruciare?</string>
   <string name="Hunger_Starving_0">Stai morendo di fame!</string>
   <string name="Hunger_Starving_1">Stai morendo di fame!</string>
   <string name="Hunger_Starving_2">Stai morendo di fame!</string>
-  <string name="HeroClass_NecromancerPerks_0">I Negromanti iniziano con 15 hp.</string>
   <string name="HeroClass_NecromancerPerks_1">I Negromanti partono con una chiave scheletrica da livello 7.</string>
   <string name="HeroClass_NecromancerPerks_2">Le Pozioni di Cura vengono identificate subito.</string>
   <string name="HeroClass_NecromancerPerks_3">I Negromanti partono con una chiave scheletrica da livello 7.</string>
@@ -2142,7 +2141,6 @@ Potrebbe bruciare?</string>
   <string name="HeroClass_HunPerks_2">Le cacciatrici sono abili con armi da tiro ed ottengono un bonus di danno per la forza eccessiva quando li utilizzano.</string>
   <string name="HeroClass_HunPerks_3">Le cacciatrici guadagnano più salute da gocce di rugiada.</string>
   <string name="HeroClass_HunPerks_4">Le cacciatrici avvertono mostri vicini, anche se sono nascosti dietro ostacoli.</string>
-  <string name="HeroClass_ElfPerks_0">Gli elfi iniziano con 15 HP e 9 STR.</string>
   <string name="HeroClass_ElfPerks_1">Gli elfi sono immuni al radicamento.</string>
   <string name="HeroClass_ElfPerks_2">Gli elfi iniziano con un aggiornato arco di legno e delle frecce.</string>
   <string name="HeroClass_ElfPerks_3">Gli elfi sono estremamente bravi con gli archi e sono agili.</string>
@@ -2265,4 +2263,6 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
   <string name="ShamanElder_Gender">maschile</string>
   <string name="Bee_Gender">maschile</string>
   <string name="SpiderElite_Gender">maschile</string>
+  <string name="AC_Necromancy">Negromanzia</string>
+  <string name="AC_Devour">Divorare</string>
 </resources>

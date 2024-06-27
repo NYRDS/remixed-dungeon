@@ -925,6 +925,7 @@
   <string name="HeroClass_Rog">gasar</string>
   <string name="HeroClass_Hun">pemburu</string>
   <string name="HeroClass_Elf">bunian</string>
+  <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">gladiator</string>
   <string name="HeroSubClass_DescGlad">Serangan berjaya dengan senjata jarak dekat membolehkan _Gladiator_ memulakan satu kombo, dimana bagi setiap pukulan yang berjaya dapat hasilkan lebih banyak kecederaan.</string>
   <string name="HeroSubClass_NameBers">berserker</string>
@@ -1192,7 +1193,6 @@
   <string name="Goo_Name">Goo</string>
   <string name="Goo_Gender">feminin</string>
   <string name="Goo_Name_Objective">Goo</string>
-  <string name="Goo_Desc">Hanya sedikit pengetahuan berkenaan Goo. Ia berkemungkinan bukan makhluk, tetapi gabungan bahan-bahan berasal dari pembentung yang memiliki kehendak. Ataupun, ia merupakan sihir kegelapan.</string>
   <string name="Goo_Info1">Goo mengepam dirinya sendiri!</string>
   <string name="Goo_Info2">glurp... glurp...</string>
   <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -1605,10 +1605,9 @@
   <string name="ServiceManNPC_Desc">Pekerja biasa di pertubuhan tempatan.</string>
   <string name="TownShopkeeper_Name">pekedai</string>
   <string name="TownShopkeeper_Desc">Lelaki ini merupakan seorang pekedai biasa. Anda boleh agak dia dah tahu harga yang anda berikan.</string>
-  <string name="WndMovieTheatre_Watch">tonton cereka</string>
+  <string name="TownShopkeeper_Objective">pekedai</string>
   <string name="WndMovieTheatre_No">keluar</string>
   <string name="WndMovieTheatre_Bye">Sila datang lagi, kami sentiasa menunggu kehadiran anda!</string>
-  <string name="WndMovieTheatre_Instruction">Selamat datang ke panggung wayang kami! Kami menyediakan satu perkhidmatan istimewa, iaitu anda boleh tonton cereka secara percuma, dan jika anda melihat sehingga tamat, anda akan diberi hadiah iaitu sebanyak %d syiling emas!</string>
   <string name="WndMovieTheatre_Title">Panggung Wayang</string>
   <string name="WndMovieTheatre_Thank_You">Terima kasih atas sumbangan anda!</string>
   <string name="WndPriest_Heal">sembuh - %d emas</string>
@@ -1735,7 +1734,6 @@
   <string name="GothicArmor_Info">Perisai gothik merupakan puncak kesenian penempaan perisai.</string>
   <string name="ChaosArmor_Name">Perisai Chaos</string>
   <string name="ChaosArmor_Info">Plat berwarna merah darah perisai ini disulam bersama-sama dengan rantai merah. Ia diselimuti dengan tenaga kekacauan bilamana anda menyentuhnya.</string>
-  <string name="ChaosCrystal_ArmorFused">Kristal menyerap masuk ke dalam perisai anda, dan membentuk perisai komposit</string>
   <string name="Blacksmith_Name">tukang besi troll</string>
   <string name="Blacksmith_Desc">Tukang besi troll ini rupa seperti troll biasa: dia tinggi dan kurus, kulitnya menyerupai warna dan tekstur batu. Tukang besi troll sedang menggodek-godek alat-alat kecil kelihatan tidak seimbang.</string>
   <string name="Blacksmith_Gold1">Hei manusia! Nak tolong aku tak? Ambil beliung ini dan cari beberapa _bijih emas gelap_, _15 keping_ dah cukup. Apa, nak balasan? Kau tamak...\nBaiklah, baiklah, aku takde duit, tapi boleh buat kerja tempa untuk kau. Anggaplah kau bertuah, aku sorang jer tukang besi kat sini.</string>
@@ -2361,7 +2359,6 @@
   <string name="Hunger_Starving_0">Anda kebuluran!</string>
   <string name="Hunger_Starving_1">Anda kebuluran!</string>
   <string name="Hunger_Starving_2">Anda kebuluran!</string>
-  <string name="HeroClass_NecromancerPerks_0">Pembangkit mayat bermula dengan 15 mata hayat.</string>
   <string name="HeroClass_NecromancerPerks_1">Pembangkit mayat guna mana untuk menyihir mantera Kematian.</string>
   <string name="HeroClass_NecromancerPerks_2">Pembangkit mayat bermula dengan jubah Pembangkit mayat yang unik, ia dapat menjana 1 mata mana bagi setiap makhluk yang dibunuh oleh pemakainya.</string>
   <string name="HeroClass_NecromancerPerks_3">Pembangkit mayat bermula dengan kunci rangka aras 7.</string>
@@ -2388,7 +2385,6 @@
   <string name="HeroClass_HunPerks_2">Pemburu cekap mengendalikan senjata misil dan mendapat bonus kecederaan atas kekuatan luar biasa ketika menggunakannya.</string>
   <string name="HeroClass_HunPerks_3">Pemburu memperoleh lebih tenaga hayat daripada titisan embun.</string>
   <string name="HeroClass_HunPerks_4">Pemburu dapat merasakan kehadiran raksaksa berhampiran walaupun ia tersembunyi disebalik halangan.</string>
-  <string name="HeroClass_ElfPerks_0">Bunian bermula dengan 15 mata Hayat dan 9 mata Kekuatan.</string>
   <string name="HeroClass_ElfPerks_1">Bunian kebal dengan pengakaran.</string>
   <string name="HeroClass_ElfPerks_2">Bunian bermula dengan busur kayu boleh ditatar berserta sejumlah anak panah.</string>
   <string name="HeroClass_ElfPerks_3">Bunian sangat cekap dengan busur dan lincah.</string>
@@ -2533,4 +2529,6 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
   <string name="ShamanElder_Gender">feminin</string>
   <string name="Bee_Gender">feminin</string>
   <string name="SpiderElite_Gender">feminin</string>
+  <string name="AC_Necromancy">Necromancy</string>
+  <string name="AC_Devour">Baham</string>
 </resources>

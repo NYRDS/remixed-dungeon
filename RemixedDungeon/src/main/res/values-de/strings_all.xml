@@ -932,6 +932,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
   <string name="HeroClass_Rog">Schurke</string>
   <string name="HeroClass_Hun">Jägerin</string>
   <string name="HeroClass_Elf">Elf</string>
+  <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">Gladiator</string>
   <string name="HeroSubClass_DescGlad">Ein erfolgreicher Angriff mit einer Nahkampfwaffe erlaubt es dem _Gladiator_ , einen Komboangriff einzusetzen, in dem jeder erfolgreiche Treffer mehr Schaden verursacht.</string>
   <string name="HeroSubClass_NameBers">Berserker</string>
@@ -1199,7 +1200,6 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
   <string name="Goo_Name">Goo</string>
   <string name="Goo_Gender">weiblich</string>
   <string name="Goo_Name_Objective">Goo</string>
-  <string name="Goo_Desc">Wenig ist über den Goo bekannt. Es könnte möglich sein, dass er nicht einmal eine Kreatur, sondern ein Konglomerat aus Substanzen der Abwasserkanäle ist, die einen freien Willen gewannen. Es ist offensichtlich, dass hier dunkle Magie am Werk ist.</string>
   <string name="Goo_Info1">Goo lädt sich auf!</string>
   <string name="Goo_Info2">glurp...glurp...</string>
   <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -1618,10 +1618,9 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
   <string name="ServiceManNPC_Desc">Ein normaler Arbeiter in den lokalen Niederlassungen.</string>
   <string name="TownShopkeeper_Name">Händler</string>
   <string name="TownShopkeeper_Desc">Dieser Typ ist ein durchschnittlicher Händler. Man kann sagen, dass er immer weiß, wieviel etwas kostet.</string>
-  <string name="WndMovieTheatre_Watch">Schaue einen Film</string>
+  <string name="TownShopkeeper_Objective">Händler</string>
   <string name="WndMovieTheatre_No">Verlassen</string>
   <string name="WndMovieTheatre_Bye">Komm jederzeit zurück, wir freuen uns auf dich!</string>
-  <string name="WndMovieTheatre_Instruction">Hallo und herzlich willkommen in unserem Kino! Wir bieten einen speziellen Service an, wo du ein kostenloses Video anschauen kannst. Wenn du es zu Ende gesehen hast, erhältst du %dGoldmünze.</string>
   <string name="WndMovieTheatre_Title">Kino</string>
   <string name="WndMovieTheatre_Thank_You">Danke, dass du teilgenommen hast!</string>
   <string name="WndPriest_Heal">Heilen -%d Gold</string>
@@ -1748,7 +1747,6 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
   <string name="GothicArmor_Info">Die gotische Rüstung ist die Meisterleistung der Kunst des Rüstungsbaus</string>
   <string name="ChaosArmor_Name">Chaosrüstung</string>
   <string name="ChaosArmor_Info">Die blutroten Platten dieser Rüstung sind mit dunkelroten Ketten verbunden. Sie strahlt chaotische Energie aus, wenn du sie berührst.</string>
-  <string name="ChaosCrystal_ArmorFused">Der Kristall absorbiert deine Rüstung und nimmt die Form einer Verstärkten Rüstung an.</string>
   <string name="Blacksmith_Name">Trollschmied</string>
   <string name="Blacksmith_Desc">Dieser Trollschmied sieht so aus wie alle Trolle auch: Er ist groß und dürr, und seine Haut gleicht Stein, in beidem: Farbe und Beschaffenheit. Der Trollschmied arbeitet mit unproportional kleinen Werkzeugen.</string>
   <string name="Blacksmith_Gold1">Hey Mensch! Willst du dich nützlich machen? Nimm diese Spitzhacke und baue etwas _dunkles Golderz_ für mich ab, _15 Stück_ sollten genügen. Was willst du? Wie ich dich bezahle? Du gieriger...\nOkay, okay, ich habe kein Geld um dich zu bezahlen, aber ich kann etwas für dich schmieden. Du kannst dich glücklich schätzen, ich bin der einzige Schmied in der Gegend.</string>
@@ -2382,7 +2380,6 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="Hunger_Starving_0">Du verhungerst!</string>
   <string name="Hunger_Starving_1">Du verhungerst!</string>
   <string name="Hunger_Starving_2">Du verhungerst!</string>
-  <string name="HeroClass_NecromancerPerks_0">Nekromanten starten mit 15 Lebenspunkten.</string>
   <string name="HeroClass_NecromancerPerks_1">Nekromanten benutzen Mana um Todessprüche zu zaubern.</string>
   <string name="HeroClass_NecromancerPerks_2">Nekromanten starten mit einem Skelettschlüssel für Level 7.</string>
   <string name="HeroClass_NecromancerPerks_3">Heiltränke sind von Anfang an identifiziert.</string>
@@ -2409,7 +2406,6 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
   <string name="HeroClass_HunPerks_2">Jägerinnen sind effektiv im Umgang mit Fernkampfwaffen und erhalten einen Schadensbonus beim Benutzen, wenn ihre Stärke die erforderliche Stärke für die Waffe übersteigt.</string>
   <string name="HeroClass_HunPerks_3">Jägerinnen erhalten mehr Gesundheit von Tautropfen.</string>
   <string name="HeroClass_HunPerks_4">Jägerinnen spüren benachbarte Monster sogar dann, wenn sie hinter Hindernissen versteckt sind.</string>
-  <string name="HeroClass_ElfPerks_0">Elfen beginnen mit 15 HP und 9 STR.</string>
   <string name="HeroClass_ElfPerks_1">Elfen sind immun zu festsetzen.</string>
   <string name="HeroClass_ElfPerks_2">Elfen beginnen mit einem verstärkten Holzbogen und ein paar Pfeilen.</string>
   <string name="HeroClass_ElfPerks_3">Elfen sind sehr effektiv mit Bögen und sind agil.</string>
@@ -2565,13 +2561,6 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
   <string name="KunaiThrow_Info">Dieser tödliche Kunai-Wurf wird extrem schnell ausgeführt, so schnell, dass du nicht einmal ein Ziel auswählen kannst.\n\nWahre Meister können mehr als einen Kunai gleichzeitig werfen.</string>
   <string name="Haste_Name">Eilen</string>
   <string name="Haste_Info">Die Eile ermöglicht es dem Nutzer, sich mit solch extremer Geschwindigkeit zu bewegen, dass alles um ihn herum statisch erscheint. Eine solche Eile wird viel Energie verbrauchen, so dass eine Nutzung nur für kurze Zeit möglich ist.\n\nErfahrene Meister können über einen längeren Zeitraum in Eile bleiben.</string>
-  <string name="Welcome_Text_29_5">
-remix.29.5\n
-- Spielmechaniken:\n
--- Fähigkeiten vom Schurken!\n
-- Modding:\n
-- Benutzerdefinierte Rüstung!\n
-- Bugs behoben\n </string>
   <string name="Char_Stole_0">%1$shat%2$svon%3$sgestohlen!</string>
   <string name="Char_Stole_1">%1$shat%2$svon%3$sgestohlen!</string>
   <string name="Char_Stole_2">%1$shat%2$svon%3$sgestohlen!</string>
@@ -2596,15 +2585,6 @@ remix.29.5\n
   <string name="Char_StaStunned">betäubt</string>
   <string name="Mob_ReadyForOrder">%sfür deine Bestellung bereit.</string>
   <string name="Mob_CantDoIt">Ich kann das nicht machen. Ich habe kleine Pfoten.</string>
-  <string name="Welcome_Text_29_6">
-remix.29.6\n
-- Spielmechaniken:\n
--- Zusätzliche Aktionen für Mobs!\n
-- Modding:\n
--- Item actors
--- Spezielle Waffeneigenschaften!\n
--- Mehr nicht kategorisiertes Zeug!\n
-- Bugs behoben\n </string>
   <string name="InnKeeperNPC_Name">Tavernenwirt</string>
   <string name="InnKeeperNPC_Name_Objective">Tavernenwirt</string>
   <string name="InnKeeperNPC_Gender">männlich</string>
@@ -2708,4 +2688,6 @@ remix.29.6\n
   <string name="ShamanElder_Gender">männlich</string>
   <string name="Bee_Gender">männlich</string>
   <string name="SpiderElite_Gender">männlich</string>
+  <string name="AC_Necromancy">Nekromantie</string>
+  <string name="AC_Devour">Verschlingen</string>
 </resources>

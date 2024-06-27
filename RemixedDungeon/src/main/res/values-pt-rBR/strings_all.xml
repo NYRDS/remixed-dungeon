@@ -1661,6 +1661,7 @@
   <string name="ServiceManNPC_Desc">Um trabalhador regular do estabelecimento local.</string>
   <string name="TownShopkeeper_Name">comerciante</string>
   <string name="TownShopkeeper_Desc">Este homem é um comerciante típico. Pode se dizer que ele já sabe o seu preço.</string>
+  <string name="TownShopkeeper_Objective">comerciante</string>
   <string name="WndMovieTheatre_Watch">assista a um anúncio</string>
   <string name="WndMovieTheatre_No">sair</string>
   <string name="WndMovieTheatre_Bye">Volte a qualquer hora, nós estamos sempre felizes em vê-lo!</string>
@@ -1791,7 +1792,6 @@
   <string name="GothicArmor_Info">A armadura gótica é o pináculo da arte da forja de armaduras.</string>
   <string name="ChaosArmor_Name">Armadura do Caos</string>
   <string name="ChaosArmor_Info">As placas de sangue vermelho desta armadura é costurada junto com correntes vermelhas escuras. Ele irradia energia caótica enquanto você a toca.</string>
-  <string name="ChaosCrystal_ArmorFused">O Cristal absorve sua armadura, e tomou a forma de armadura composta</string>
   <string name="Blacksmith_Name">Troll Ferreiro.</string>
   <string name="Blacksmith_Desc">Este Troll Ferreiro se parece muito com todos os trolls: ele é alto e magro, e sua pele se assemelha a pedra na cor e textura. O ferreiro trolls mexe com suas pequenas ferramentas de tamanho desproporcinal.</string>
   <string name="Blacksmith_Gold1">Ei humano! Quer ser útil, não é? Tome este picareta e me consiga algumas pedras de _Ouro Escuro_, _15 peças_ devem ser suficiente. O que quer dizer, como é que eu vou te pagar? Você gananciosos...\nOk, ok, eu não tenho dinheiro para pagar, mas posso forjar para você. Considere-se com sorte, eu sou o único ferreiro por perto.</string>
@@ -2425,7 +2425,6 @@ Parede
   <string name="Hunger_Starving_0">Você está morrendo de fome!</string>
   <string name="Hunger_Starving_1">Você está morrendo de fome!</string>
   <string name="Hunger_Starving_2">Você está morrendo de fome!</string>
-  <string name="HeroClass_NecromancerPerks_0">Necromantes começam com 15 pontos de vida.</string>
   <string name="HeroClass_NecromancerPerks_1">Necromantes possuem um recurso único \"almas\", usadas para conjurar feitiços. Cada monstro morto concede uma alma.</string>
   <string name="HeroClass_NecromancerPerks_2">Necromantes começam com o manto do Necromante.</string>
   <string name="HeroClass_NecromancerPerks_3">Necromantes começam com a chave esqueleto do nível 7.</string>
@@ -2452,7 +2451,6 @@ Parede
   <string name="HeroClass_HunPerks_2">Caçadoras são peritas em armas de aremesso, e tem bonus de ataque quando usadas.</string>
   <string name="HeroClass_HunPerks_3">Caçadoras ganham mais vida a partir de gotas de orvalho.</string>
   <string name="HeroClass_HunPerks_4">Caçadoras podem sentir monstros por perto, mesmo que eles estejam escondidos atrás de obstáculos.</string>
-  <string name="HeroClass_ElfPerks_0">Elfos começam com 15 de vida e 9 de força</string>
   <string name="HeroClass_ElfPerks_1">Elfos são imunes ao enraizamento</string>
   <string name="HeroClass_ElfPerks_2">Elfos começam com um arco de madeira melhorado e um monte de flechas</string>
   <string name="HeroClass_ElfPerks_3">Elfos são peritos com arcos e ágeis</string>
@@ -2613,14 +2611,6 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
   <string name="KunaiThrow_Info">Este arremesso de Kunai Mortal será feito extremamente rápido, tão rápido que você nem conseguirá selecionar um alvo.\n\nMestres verdadeiros foram capazes de arremessar mais de uma Kunai de uma vez.</string>
   <string name="Haste_Name">Pressa Extrema</string>
   <string name="Haste_Info">A pressa permitirá que o executante se mova com uma velocidade tão extrema que tudo ao seu redor parecerá estático. Essa pressa consumirá muita energia, então usá-la é possível apenas por um curto período de tempo.\n\nMestres habilidosos são capazes de permanecer apressados por um longo período de tempo.</string>
-  <string name="Welcome_Text_29_5">
-    remix.29.5\n
-    - Jogabilidade:\n
-    -- Habilidades do Ladino!\n
-    - Modding:\n
-    -- Armaduras Personalizadas!\n
-    - Defeitos Consertados\n
-    </string>
   <string name="Char_Stole_0">%1$s roubou %2$s de  %3$s!</string>
   <string name="Char_Stole_1">%1$s roubou %2$s de  %3$s!</string>
   <string name="Char_Stole_2">%1$s roubou %2$s de  %3$s!</string>
@@ -2646,15 +2636,6 @@ de teletransporte!</string>
   <string name="Char_StaStunned">atordoado</string>
   <string name="Mob_ReadyForOrder">%s pronto para o seu pedido.</string>
   <string name="Mob_CantDoIt">Eu não posso fazer isso. Eu tenho patas pequenas.</string>
-  <string name="Welcome_Text_29_6">
-remix.29.6\n
-- Jogabilidade:\n
--- Ações adicionais para realizar em mobs!\n
-- Modding:\n
--- Atores de itens!\n
--- Propriedades especiais da arma!\n
--- Mais coisas sem categoria!\n
-- Erros corrigidos\n</string>
   <string name="InnKeeperNPC_Name">dono da pousada</string>
   <string name="InnKeeperNPC_Name_Objective">dono da pousada</string>
   <string name="InnKeeperNPC_Gender">Feminino</string>
@@ -2879,4 +2860,6 @@ remix.31.1\n
   <string name="WndModSelect_AreYouSure">Eliminando mod: %s, tem a certeza?</string>
   <string name="Challenges_Names_8">Sem cidade</string>
   <string name="Challenges_Descriptions_8">A sua jornada irá começar nos esgotos escuros e perigosos da cidade, com o único caminho à superfície bloqueado. Para piorar as coisas, você apenas poderá usar os equipamentos que você encontrar dentro da masmorra. Com recursos e equipamentos limitados, a sua sobrevivência dependerá das suas habilidades e estratégia.</string>
+  <string name="AC_Necromancy">Necromancia</string>
+  <string name="AC_Devour">Devorar</string>
 </resources>

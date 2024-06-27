@@ -907,6 +907,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
   <string name="HeroClass_Rog">tolvaj</string>
   <string name="HeroClass_Hun">vadásznő</string>
   <string name="HeroClass_Elf">tünde</string>
+  <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">gladiátor</string>
   <string name="HeroSubClass_DescGlad">Minden sikeres találat egy közelharci fegyverrel lehetővé teszi a _Gladiátornak_ hogy sorozatos kombót kezdjen, amelyben minden egymást követő ütés nagyobbat sebez az előzőnél.</string>
   <string name="HeroSubClass_NameBers">berzerker</string>
@@ -1174,7 +1175,6 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
   <string name="Goo_Name">Massza</string>
   <string name="Goo_Gender">nőnemű</string>
   <string name="Goo_Name_Objective">Massza</string>
-  <string name="Goo_Desc">Keveset tudunk a Masszáról. Könnyen meglehet hogy ez nem is egy teremtmény, hanem inkább a csatornából származó anyagok által alkotott egyveleg ami valahogy megszerezte a szabad akarat alapjait. Minden esetre, egyértelműen sötét mágia működik itt.</string>
   <string name="Goo_Info1">A Massza elkezdte felpumpálni magát!</string>
   <string name="Goo_Info2">bluggy... bluggy...</string>
   <string name="Goo_Info3">BLUGGY-BLUGGY!</string>
@@ -1594,10 +1594,9 @@ Ezért nagy jutalomban lesz részed!</string>
   <string name="ServiceManNPC_Desc">Egy átlagos dolgozó az itteni intézményből.</string>
   <string name="TownShopkeeper_Name">eladó</string>
   <string name="TownShopkeeper_Desc">Ez a fickó egy tipikus boltos. Már látod rajta, hogy meg tudja mondani mennyibe kerülsz.</string>
-  <string name="WndMovieTheatre_Watch">film megtekintése</string>
+  <string name="TownShopkeeper_Objective">eladó</string>
   <string name="WndMovieTheatre_No">távozás</string>
   <string name="WndMovieTheatre_Bye">Gyere máskor is! Szívesen látunk!</string>
-  <string name="WndMovieTheatre_Instruction">Üdvözlünk a moziban! Egy különleges szolgáltatást nyújtunk, ahol ingyen tudsz videót nézni. Amint végignézted, megajándékozunk téged %d aranyérmével!</string>
   <string name="WndMovieTheatre_Title">Film Színház</string>
   <string name="WndMovieTheatre_Thank_You">Köszönjük a részvételt!</string>
   <string name="WndPriest_Heal">Gyógyítás - %d arany</string>
@@ -1724,7 +1723,6 @@ Ezért nagy jutalomban lesz részed!</string>
   <string name="GothicArmor_Info">Gótikus védőfelszerelés, a páncélkészítés művészetének gyöngyszeme.</string>
   <string name="ChaosArmor_Name">Káosz páncél</string>
   <string name="ChaosArmor_Info">Ez a páncél sötétvörös láncokkal összefűzött vérvörös lemezekből áll. Kaotikus energiát sugároz, ahogy megérinted.</string>
-  <string name="ChaosCrystal_ArmorFused">A kristály elnyelte a páncélod és egy Összetett Páncél alakját vette át</string>
   <string name="Blacksmith_Name">troll kovács</string>
   <string name="Blacksmith_Desc">Ez a troll kovács úgy néz ki mint a többi troll: magas és girhes, a bőre emlékeztet a kőre mind színben és kinézetben. A troll kovács éppen aránytalanul kicsi szerszámokkal.</string>
   <string name="Blacksmith_Gold1">Hej ember! Nem akarod hasznosítani magad, he? Vedd ezt a csákányt és bányásszá nekem némi _sötét arany rögöt_, _15 darab_ elég kell hogy legyen. Hogy érted azt hogy hogyan fogok fizetni? Te kapzsi kis... \nRendben, rendben, nincsen pénzem amivel ki tudnálak fizetni, de van valami ami szerintem megteszi. Nagy szerencséd van, a környéken én vagyok az egyetlen kovács.</string>
@@ -2350,7 +2348,6 @@ Ezért nagy jutalomban lesz részed!</string>
   <string name="Hunger_Starving_0">Éhezel!</string>
   <string name="Hunger_Starving_1">Éhezel!</string>
   <string name="Hunger_Starving_2">Éhezel!</string>
-  <string name="HeroClass_NecromancerPerks_0">A Halottidézők 15 életerővel kezdenek.</string>
   <string name="HeroClass_NecromancerPerks_1">A Halottidézők manát használnak a halál varázslatok megidézéséhez.</string>
   <string name="HeroClass_NecromancerPerks_2">A Halottidézők egy egyedi Halottidéző köpennyel kezdenek, ami 1 manát ad minden legyőzött lény után.</string>
   <string name="HeroClass_NecromancerPerks_3">A Halottidézők egy 7-es szintű csont kulccsal kezdenek.</string>
@@ -2377,7 +2374,6 @@ Ezért nagy jutalomban lesz részed!</string>
   <string name="HeroClass_HunPerks_2">A Vadásznő gyakorlottan bánik a lőfegyverekkel és bónusz sebzést okoz velük ha a követelményüket meghaladó Erő ponttal rendelkezik.</string>
   <string name="HeroClass_HunPerks_3">A Vadásznő több Életerő pontot kap a harmatcseppekből.</string>
   <string name="HeroClass_HunPerks_4">A Vadásznő érzékeli a közeli szörnyeket, még akkor is ha azok a fal mögött vannak.</string>
-  <string name="HeroClass_ElfPerks_0">A Tündék 15 Életerő és 9 Erő ponttal kezdenek.</string>
   <string name="HeroClass_ElfPerks_1">A Tündék immunisak a lekötözésre.</string>
   <string name="HeroClass_ElfPerks_2">A Tündék egy fejleszthető íjjal és egy rakász nyílvesszővel kezdenek.</string>
   <string name="HeroClass_ElfPerks_3">A Tündék kimagaslóan képzettek az íjhasználatban és rendkívül mozgékonyak.</string>
@@ -2525,14 +2521,6 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
   <string name="Backstab_TooFar">Az áldozat túl messze van egy sikeres támadáshoz.</string>
   <string name="KunaiThrow_Name">Kunai Dobás</string>
   <string name="Haste_Name">Extrém Gyorsaság</string>
-  <string name="Welcome_Text_29_5">
-    remix.29.5\n
-    - Játékmenet:\n
-    -- Tolvaj képességek!\n
-    - Modding:\n
-    -- Egyedi páncél!\n
-    - Bugok javítva\n
-    </string>
   <string name="Char_Stole_0">%1$s ellopta: %2$s innen: %3$s !</string>
   <string name="Char_Stole_1">%1$s ellopta: %2$s innen: %3$s !</string>
   <string name="Char_Stole_2">%1$s ellopta: %2$s innen: %3$s !</string>
@@ -2556,15 +2544,6 @@ hogy teleportáljon</string>
   <string name="StunBuff_Name">Kábult</string>
   <string name="Char_StaStunned">kábult</string>
   <string name="Mob_ReadyForOrder">%skészen áll a parancsodra.</string>
-  <string name="Welcome_Text_29_6">
-remix.29.6
-- Játék:
--- További lényeken végrehajtható akciók
-- Modok:
--- Tárgy jelzők!
--- Különleges fegyver tulajdonságok!
--- Még több csoportosítatlan cucc!
-- Bugok megjavítva</string>
   <string name="InnKeeperNPC_Gender">hím</string>
   <string name="DrunkardNPC_Gender">hím</string>
   <string name="MercenaryNPC_Gender">hím</string>
@@ -2584,4 +2563,6 @@ remix.29.6
   <string name="ShamanElder_Gender">hím</string>
   <string name="Bee_Gender">hím</string>
   <string name="SpiderElite_Gender">hím</string>
+  <string name="AC_Necromancy">Nekromácia</string>
+  <string name="AC_Devour">Felfalás</string>
 </resources>
