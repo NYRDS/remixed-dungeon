@@ -20,6 +20,7 @@ Remixed Dungeon in [Google Play](https://play.google.com/store/apps/details?id=c
 [VK](https://vk.com/pixel_dungeon_remix)
 [Wiki](https://wiki.nyrds.net/)
 [YouTube](https://www.youtube.com/c/NYRDS)
+[Telegram](https://t.me/RemixedDungeon)
 
 
 
@@ -35,6 +36,7 @@ Remixed Dungeon в [Google Play](https://play.google.com/store/apps/details?id=c
 [VK](https://vk.com/pixel_dungeon_remix)
 [Wiki](https://wiki.nyrds.net/)
 [YouTube](https://www.youtube.com/c/NYRDS)
+[Telegram](https://t.me/RemixedDungeon)
 
 
 ## Star History
