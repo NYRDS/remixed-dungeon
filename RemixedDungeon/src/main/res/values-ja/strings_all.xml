@@ -114,7 +114,7 @@
   <string name="BlessedBuff_Info">祝福に触れた人々に、正確さと身軽さが訪れますように！</string>
   <string name="deco_candle_name">ロウソク</string>
   <string name="deco_candle_desc">大きなロウソク</string>
-  <string name="Possess_Name">洗脳</string>
+  <string name="Possess_Name">憑依</string>
   <string name="Possess_Info">マインド・コントロールの暗黒術で、術者はほとんどの生き物の意思を曲げることができる。</string>
   <string name="Possess_PossessionFailed">%sの意志は強すぎる</string>
   <string name="Possess_Possessed">%sはあなたの命令を待っている</string>
