@@ -974,7 +974,7 @@
   <string name="HeroClass_Elf">Ξωτικό</string>
   <string name="HeroClass_None">Κοινός θνητός</string>
   <string name="HeroSubClass_NameNone">Τίποτα</string>
-  <string name="HeroSubClass_DescNone"></string>
+  <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">Μονομάχος</string>
   <string name="HeroSubClass_DescGlad">Μια επιτυχημένη επίθεση με όπλο κοντινής μάχης επιτρέπει στον _Μονομάχο_ να ξεκινήσει μια διαδοχή χτυπημάτων, κατά την οποία κάθε επακόλουθο χτύπημα προκαλεί επιπλέον ζημιά.</string>
   <string name="HeroSubClass_NameBers">Βάρβαρος</string>
@@ -2864,15 +2864,14 @@
   <string name="WndModSelect_AreYouSure">Διαγραφή τροποποίησης: %s. Σίγουρα;</string>
   <string name="Challenges_Names_8">Χωρίς την πόλη</string>
   <string name="Challenges_Descriptions_8">Το ταξίδι σου ξεκινά μες στους σκοτεινούς κι επικίνδυνους υπονόμους της πόλης, και η μόνη σου διέξοδος προς την επιφάνεια είναι φραγμένη. Σαν να μην έφτανε αυτό, μπορείς να χρησιμοποιείς μόνο τον εξοπλισμό που βρίσκεις μες στην κατακόμβη. Έχοντας περιορισμένους πόρους κι εξοπλισμό, μόνο οι ικανότητες και η στρατηγική θα κρίνουν το αν θα επιβιώσεις.</string>
-
   <string name="EncumbranceBuff_CharAct_1">Δεν έχω αρκετή δύναμη για να κρατήσω καλά το εφόδιο (%s).</string>
   <string name="EncumbranceBuff_CharAct_2">Αυτό το εφόδιο (%s) μού είναι πολύ βαρύ για να το χρησιμοποιήσω αποτελεσματικά.</string>
   <string name="EncumbranceBuff_CharAct_3">Πρέπει να δουλέψω με τη δύναμή μου για να χρησιμοποιήσω το εφόδιο (%s).</string>
   <string name="EncumbranceBuff_CharAct_4">Μου λείπει η δύναμη για να αξιοποιήσω το εφόδιο (%s) πλήρως.</string>
   <string name="EncumbranceBuff_CharAct_5">Το εφόδιο (%s) είναι πολύ βαρύ για να το αντέξω.</string>
-    <string name="Typical_Damage">Τυπική ζημιά</string>
-    <string name="Damage_Reduction">Μείωση ζημιάς</string>
-    <string name="Attack_Range">Εμβέλεια επίθεσης</string>
+  <string name="Typical_Damage">Τυπική ζημιά</string>
+  <string name="Damage_Reduction">Μείωση ζημιάς</string>
+  <string name="Attack_Range">Εμβέλεια επίθεσης</string>
   <string name="Movement_Speed">Ταχύτητα κίνησης</string>
   <string name="Attack_Cooldown">Αναπλήρωση επίθεσης</string>
   <string name="View_Distance">Οπτικό πεδίο</string>
@@ -2880,7 +2879,7 @@
   <string name="ChaosShield_name">ασπίδα του χάους</string>
   <string name="ChaosShield_desc">Η ασπίδα του χάους είναι το αποτέλεσμα της ανάμειξης ενός κρυστάλλου του χάους με μια κοινή ασπίδα. Υλοποιεί τυχαίες χαοτικές επιδράσεις με κάθε επιτυχημένο χτύπημα.</string>
   <string name="ChaosCrystal_ShieldFused">Ο κρύσταλλος ενώθηκε με την ασπίδα σου και πήρε τη μορφή του χάους.</string>
-    <string name="Actions_Speed">Επίπεδο φούριας</string>
+  <string name="Actions_Speed">Επίπεδο φούριας</string>
   <string name="ChampionOfAirBuff_Name">Μαχητής του αέρα</string>
   <string name="ChampionOfAirBuff_Info">Αυτό το χαρακτηριστικό δίνει στο πλάσμα την ουσία των ανέμων, ενισχύοντας την ευκινησία και τη μαχητική του δεινότητα. Ο μαχητής του αέρα είναι ένας τρομερός αντίπαλος, ικανός να εξαπολύει ταχείες και καταστροφικές επιθέσεις που αλλάζουν γρήγορα την πορεία της μάχης.</string>
   <string name="ChampionOfWaterBuff_Name">Μαχητής του νερού</string>
@@ -2889,7 +2888,6 @@
   <string name="ChampionOfFireBuff_Info">Εμποτισμένο με την οργή της φλόγας, αυτό το χαρακτηριστικό αυξάνει την αγριότητα και τη μαχητική δεινότητα του πλάσματος. Ο μαχητής της φωτιάς εγείρεται ως ένας φοβερός αντίπαλος, εξαπολύοντας καταστροφικές επιθέσεις που τυλίγουν τους εχθρούς στις φλόγες και προκαλώντας τον τρόμο σε όλους όσους τολμούν να του αντιταχθούν.</string>
   <string name="ChampionOfEarthBuff_Name">Μαχητής της γης</string>
   <string name="ChampionOfEarthBuff_Info">Ο μαχητής της γης ενσαρκώνει μια ακατανίκητη δύναμη, μιας και το χαρακτηριστικό αυτό ενισχύει την αντοχή του στη ζημιά και τη μέγιστη ζωτική του ισχύ. Αυτή η μεταμόρφωση τον καθιστά έναν τρομακτικό αντίπαλο μες στα άγνωστα βάθη, ικανό να αγνοεί τις επιθέσεις και να αντέχει παρατεταμένες μάχες με ακλόνητη αποφασιστικότητα.</string>
-
   <string name="Welcome_Text_32">
 remix.32\n
     - Παιχνίδι:\n
@@ -2907,5 +2905,4 @@ remix.32\n
     -- Εξατομικευμένα σενάρια (scripts) για τους προ-υπάρχοντες εχθρούς\n
     -- Λάμψεις για τους εχθρούς\n
     - Διορθώσεις σφαλμάτων\n</string>
-
 </resources>
