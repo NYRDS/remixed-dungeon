@@ -2755,7 +2755,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="Gnoll_BecomeWitchdoctorDesc">ウィッチドクターになる</string>
   <string name="Gnoll_BecomeGuardianDesc">ガーディアンになる</string>
   <string name="HeroSubClass_DescWitchdoctor">呪文を唱えることで、「ウィッチドクター」は受けるダメージを完全に遮断する魔法の盾を張ることができる。</string>
-  <string name="HeroSubClass_DescGuardian">巧みな防御の知識により、ガーディアンは盾で反撃することができる。この歩く砦を攻撃しようとする者にとって、彼は手強い敵となるだろう。</string>
+  <string name="HeroSubClass_DescGuardian">巧みな防御の知識により、「ガーディアン」は盾で反撃することができる。この歩く砦を攻撃しようとする者にとって、彼は手強い敵となるだろう。</string>
   <string name="Potion_Colors_12">エピドート</string>
   <string name="Potion_Colors_13">クォーツ</string>
   <string name="Potion_Colors_14">オニキス</string>
