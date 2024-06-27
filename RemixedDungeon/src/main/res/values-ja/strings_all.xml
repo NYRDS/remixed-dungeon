@@ -912,7 +912,7 @@
   <string name="ShadowLord_Gender">男性的</string>
   <string name="ShadowLord_Name_Objective">影の君主</string>
   <string name="ShadowLord_Desc">この生き物は純粋な悪と不可解な闇でできている。その力の強さから、多くの者は彼こそが旧神そのものだと信じている。一方で、彼は旧神の部屋の守護者に過ぎないという説もある。</string>
-  <string name="ShadowLord_Intro">覚悟を決めろ！</string>
+  <string name="ShadowLord_Intro">覚悟するがいい！</string>
   <string name="ShadowLord_Death">Nooooo...</string>
   <string name="AllowStatisticsCollectionScene_Title">利用統計の収集</string>
   <string name="AllowStatisticsCollectionScene_Request">Remixed Dungeonは利用統計を収集します。そのデータは以下の目的で使用されます：
