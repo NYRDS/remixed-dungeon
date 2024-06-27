@@ -45,7 +45,8 @@ public class GnollArmor extends ClassArmor {
 
         for (Mob mob : level.getCopyOfMobsArray()) {
 
-            if (level.fieldOfView[mob.getPos()]) {
+            if (level.fieldOfView[mob.getPos()] && level.distanceL2(user, mob) <= user.getViewDistance()) {
+
                 if(mobsDominated > user.lvl() / 6) {
                     break;
                 }

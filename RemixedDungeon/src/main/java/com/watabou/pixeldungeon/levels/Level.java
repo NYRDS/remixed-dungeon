@@ -17,6 +17,7 @@ import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
@@ -1553,6 +1554,10 @@ public abstract class Level implements Bundlable {
 		int bx = cellX(b);
 		int by = cellY(b);
 		return Math.max(Math.abs(ax - bx), Math.abs(ay - by));
+	}
+
+	public float distanceL2(HasPositionOnLevel oa, HasPositionOnLevel ob) {
+		return distanceL2(oa.getPos(), ob.getPos());
 	}
 
 	public float distanceL2(int a, int b) {
