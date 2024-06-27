@@ -67,7 +67,8 @@ public class SmartTexture extends Texture {
 
 	@Override
 	public void bitmap( BitmapData bitmap ) {
-		handMade(bitmap, true );
+		handMade(bitmap, true);
+	}
 
 
 	public void bind() {

@@ -159,7 +159,7 @@ public class GameLoop {
         switchScene(instance().sceneClass);
     }
 
-<<<<<<<<< Temporary merge branch 1
+
     public static boolean smallResScreen() {
         return width() <= 320 && height() <= 320;
     }
@@ -191,12 +191,11 @@ public class GameLoop {
     public static void switchNoFade(Class<? extends PixelScene> c) {
         PixelScene.noFade = true;
         switchScene(c);
-=========
+    }
     static public void runOnMainThread(Runnable runnable) {
         pushUiTask(() -> {
             Game.instance().runOnUiThread(runnable);
         });
->>>>>>>>> Temporary merge branch 2
     }
 
     public void shutdown() {
@@ -242,8 +241,10 @@ public class GameLoop {
                 while ((task = uiTasks.poll()) != null) {
                     task.run();
                 }
+            }
+        }
 
-<<<<<<<<< Temporary merge branch 1
+
         if (framesSinceInit>2) {
             Runnable task;
             while ((task = uiTasks.poll()) != null) {
@@ -257,27 +258,28 @@ public class GameLoop {
                     throw ModdingMode.modException(e);
                 } catch (Exception e) {
                     throw new TrackedRuntimeException(e);
-=========
-                if (!Game.softPaused && loadingOrSaving.get() == 0) {
-                    try {
-                        if (requestedReset) {
-                            requestedReset = false;
-                            switchScene(sceneClass.newInstance());
-                            return;
-                        }
 
-                        while (!motionEvents.isEmpty()) {
-                            Touchscreen.processEvent(motionEvents.poll());
-                        }
+                    if (!Game.softPaused && loadingOrSaving.get() == 0) {
+                        try {
+                            if (requestedReset) {
+                                requestedReset = false;
+                                switchScene(sceneClass.newInstance());
+                                return;
+                            }
 
-                        while (!keysEvents.isEmpty()) {
-                            Keys.processEvent(keysEvents.poll());
-                        }
+                            while (!motionEvents.isEmpty()) {
+                                Touchscreen.processEvent(motionEvents.poll());
+                            }
 
-                    } catch (LuaError e) {
-                        throw ModdingMode.modException(e);
-                    } catch (Exception e) {
-                        throw new TrackedRuntimeException(e);
+                            while (!keysEvents.isEmpty()) {
+                                Keys.processEvent(keysEvents.poll());
+                            }
+
+                        } catch (LuaError e) {
+                            throw ModdingMode.modException(e);
+                        } catch (Exception e) {
+                            throw new TrackedRuntimeException(e);
+                        }
                     }
                 }
             }
