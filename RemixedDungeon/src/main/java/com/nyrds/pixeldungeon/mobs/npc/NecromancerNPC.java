@@ -45,8 +45,8 @@ public class NecromancerNPC extends ImmortalNPC {
 
 	@Override
 	public boolean reset() {
-		return true;
-	}
+        return super.reset();
+    }
 
 	public static void spawn(RegularLevel level, Room room) {
 		NecromancerNPC npc = new NecromancerNPC();
@@ -67,12 +67,7 @@ public class NecromancerNPC extends ImmortalNPC {
 			introduced = true;
 
 			SkeletonKey key = new SkeletonKey();
-
-			if (key.doPickUp( hero )) {
-				GLog.i( Hero.getHeroYouNowHave(), key.name() );
-			} else {
-				level().animatedDrop( key, hero.getPos() );
-			}
+			hero.collectAnimated(key);
 
 		} else {
 

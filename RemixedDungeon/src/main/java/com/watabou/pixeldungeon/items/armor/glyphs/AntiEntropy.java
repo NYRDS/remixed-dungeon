@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -18,7 +17,7 @@ import com.watabou.utils.Random;
 
 public class AntiEntropy extends Glyph {
 
-	private static Glowing BLUE = new Glowing( 0x0000FF );
+	private static final Glowing BLUE = new Glowing( 0x0000FF );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {

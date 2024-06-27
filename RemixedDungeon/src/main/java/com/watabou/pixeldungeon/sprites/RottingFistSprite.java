@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.sprites;
 
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.TextureFilm;
@@ -15,7 +16,7 @@ public class RottingFistSprite extends MobSprite {
 
         texture(Assets.ROTTING);
 
-        TextureFilm frames = new TextureFilm(texture, 24, 17);
+        TextureFilm frames = TextureCache.getFilm(texture, 24, 17);
 
         idle = new Animation(2, true);
         idle.frames(frames, 0, 0, 1);

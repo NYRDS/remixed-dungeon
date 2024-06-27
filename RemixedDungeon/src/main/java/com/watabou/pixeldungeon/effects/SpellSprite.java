@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.effects;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
@@ -43,7 +44,7 @@ public class SpellSprite extends Image {
 		super( Assets.SPELL_ICONS );
 		
 		if (film == null) {
-			film = new TextureFilm( texture, SIZE );
+			film = TextureCache.getFilm( texture, SIZE, SIZE );
 		}
 	}
 	

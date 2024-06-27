@@ -1,0 +1,18 @@
+{
+   "defenseSkill"  :3,
+   "attackSkill"   :8,
+   "exp"           :2,
+   "maxLvl"        :4,
+   "dmgMin"        :1,
+   "dmgMax"        :4,
+   "dr"            :1,
+   "attackDelay"   :1,
+   "ht"            :10,
+   "baseSpeed"     : 1,
+   "spriteDesc"    :"spritesDesc/BlackCat.json",
+   "scriptFile"    :"scripts/npc/BlackCat",
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+   "friendly"      :true,
+   "immortal"      :true
+}

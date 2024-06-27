@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.nyrds.pixeldungeon.items.ItemUtils;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
@@ -12,11 +13,9 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.quest.DarkGold;
-import com.watabou.pixeldungeon.items.quest.Pickaxe;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Room.Type;
@@ -64,24 +63,20 @@ public class Blacksmith extends NPC {
 					Quest.given = true;
 					Quest.completed = false;
 					
-					Pickaxe pick = new Pickaxe();
-					if (pick.doPickUp( hero )) {
-						GLog.i( Hero.getHeroYouNowHave(), pick.name() );
-					} else {
-						pick.doDrop(hero);
-					}
+					EquipableItem pick = (EquipableItem) ItemFactory.itemByName("RemixedPickaxe");
+					hero.collectAnimated(pick);
 				}
 			} );
 			
 			Journal.add( Journal.Feature.TROLL.desc() );
 			
 		} else if (!Quest.completed) {
+			EquipableItem pick = hero.getBelongings().getEquipableItemPartialMatch( "Pickaxe" );
+			if(!pick.valid()) {
+				tell(StringsManager.getVar(R.string.Blacksmith_Txt2));
+			}
 			if (Quest.alternative) {
-				
-				Pickaxe pick = hero.getBelongings().getItem( Pickaxe.class );
-				if (pick == null) {
-                    tell(StringsManager.getVar(R.string.Blacksmith_Txt2));
-				} else if (!pick.bloodStained) {
+				if (!pick.getBoolean( "bloodStained" )) {
                     tell(StringsManager.getVar(R.string.Blacksmith_Txt4));
 				} else {
 					if (pick.isEquipped( hero )) {
@@ -95,12 +90,8 @@ public class Blacksmith extends NPC {
 				}
 				
 			} else {
-				
-				Pickaxe pick = hero.getBelongings().getItem( Pickaxe.class );
 				DarkGold gold = hero.getBelongings().getItem( DarkGold.class );
-				if (pick == null) {
-                    tell(StringsManager.getVar(R.string.Blacksmith_Txt2));
-				} else if (gold == null || gold.quantity() < 15) {
+				if (gold == null || gold.quantity() < 15) {
                     tell(StringsManager.getVar(R.string.Blacksmith_Txt3));
 				} else {
 					if (pick.isEquipped( hero )) {

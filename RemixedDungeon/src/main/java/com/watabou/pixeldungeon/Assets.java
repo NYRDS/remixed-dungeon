@@ -7,8 +7,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
-import org.json.JSONException;
-
 public class Assets {
 
     private static final String KEY_BANNERS = "banners";
@@ -24,6 +22,7 @@ public class Assets {
     public static final String AMULET = "amulet.png";
 
     public static final String ICONS  = "ui/icons.png";
+    public static final String ICONS2  = "ui/icons2.png";
     public static final String HP_BAR = "ui/hp_bar.png";
     public static final String SP_BAR = "ui/sp_bar.png";
     public static final String XP_BAR = "ui/exp_bar.png";
@@ -81,7 +80,7 @@ public class Assets {
     public static final String TILES_NECRO                 = "tiles_necropolis.png";
     public static final String TILES_NECRO_XYZ             = "tilesets/tiles_necropolis_xyz.png";
     public static final String TILES_ICE_CAVES_X           = "tiles_ice_caves_x.png";
-    public static final String TILES_ICE_CAVES_XYZ         = "tilesets/tiles_ice_caves_xyz.png";
+    public static final String TILES_ICE_CAVES_XYZ         = "tilesets/tiles_ice_caves_xyz.webp";
     public static final String TILES_GENERIC_TOWN_INTERIOR = "tiles_standalone_interior.png";
 
     public static final String WATER_SEWERS    = "water0.png";
@@ -176,7 +175,7 @@ public class Assets {
             statusType = premiumSettings.getInt(KEY_STATUS);
             toolbarType = premiumSettings.getInt(KEY_TOOLBAR);
             bannersType = premiumSettings.getInt(KEY_BANNERS);
-        } catch (JSONException e) {
+        } catch (Exception e) {
         }
     }
 

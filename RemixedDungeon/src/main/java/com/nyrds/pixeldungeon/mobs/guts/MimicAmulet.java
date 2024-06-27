@@ -22,6 +22,7 @@ public class MimicAmulet extends Mob {
 		baseSpeed = 1.25f;
 		
 		flying = true;
+		carcassChance = 0;
 
 		level = Dungeon.depth;
 		adjustStats(level);
@@ -58,7 +59,7 @@ public class MimicAmulet extends Mob {
 		this.level = level;
 
 		hp(ht((3 + level) * 5));
-		exp = 2 + 2 * (level - 1) / 5;
+		expForKill = 2 + 2 * (level - 1) / 5;
 		baseAttackSkill = 9 + level;
 		baseDefenseSkill = 2 * attackSkill + 1;
 

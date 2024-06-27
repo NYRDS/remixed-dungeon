@@ -5,7 +5,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Flare;
@@ -45,7 +44,7 @@ public class ScrollOfDomination extends Scroll {
 			mobsInSight.remove(pet);
 		}
 		
-		Dungeon.observe();
+		reader.observe();
 		
 		setKnown();
 

@@ -2,12 +2,12 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.Yog;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.levels.painters.Painter;
@@ -21,22 +21,22 @@ public class HallsBossLevel extends BossLevel {
 		color2 = 0xa68521;
 		
 		viewDistance = 3;
-		_objectsKind = 4;
+		_objectsKind = 5;
 	}
 
 	@Override
 	protected String tilesTexXyz() {
-		return Assets.TILES_HALLS_XYZ;
+		return Assets.TILES_GUTS_XYZ;
 	}
 
 	@Override
 	public String tilesTex() {
-		return Assets.TILES_HALLS;
+		return Assets.TILES_GUTS;
 	}
 	
 	@Override
 	public String waterTex() {
-		return Assets.WATER_HALLS;
+		return Assets.WATER_GUTS;
 	}
 
 	@Override
@@ -112,14 +112,14 @@ public class HallsBossLevel extends BossLevel {
 
 			Dungeon.observe();
 			
-			Yog boss = new Yog();
+			YogsEye boss = new YogsEye();
 			do {
 				boss.setPos(Random.Int( getLength() ));
 			} while (
-				!passable[boss.getPos()] ||
+				!passable[boss.getPos()] || !passable[boss.getPos() - getWidth()] ||
 				Dungeon.isCellVisible(boss.getPos()));
 			spawnMob(boss);
-			boss.spawnFists();
+			boss.spawnOrgans();
 		}
 	}
 

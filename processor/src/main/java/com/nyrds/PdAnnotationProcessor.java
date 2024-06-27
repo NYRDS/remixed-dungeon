@@ -12,7 +12,6 @@ import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
 import java.io.Writer;
 import java.lang.reflect.Field;
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -64,9 +63,7 @@ PdAnnotationProcessor extends AbstractProcessor{
 				defaultValues.put(element,defaultValue);
 			}
 
-			if(fieldsByClass.get(parent)==null) {
-				fieldsByClass.put(parent, new HashSet<>());
-			}
+            fieldsByClass.computeIfAbsent(parent, k -> new HashSet<>());
 
 			fieldsByClass.get(parent).add(element);
 		}

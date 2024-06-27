@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -18,7 +17,7 @@ import com.watabou.utils.Random;
 
 public class Entanglement extends Glyph {
 	
-	private static Glowing GREEN = new Glowing( 0x448822 );
+	private static final Glowing GREEN = new Glowing( 0x448822 );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage ) {

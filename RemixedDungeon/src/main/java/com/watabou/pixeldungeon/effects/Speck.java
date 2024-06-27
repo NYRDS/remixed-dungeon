@@ -6,6 +6,7 @@ import android.util.Pair;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.particles.Emitter;
@@ -64,7 +65,7 @@ public class Speck extends Image {
     public Speck() {
         texture(Assets.SPECKS);
         if (film == null) {
-            film = new TextureFilm(texture, SIZE, SIZE);
+            film = TextureCache.getFilm(texture, SIZE, SIZE);
         }
 
         setOrigin(SIZE / 2f);

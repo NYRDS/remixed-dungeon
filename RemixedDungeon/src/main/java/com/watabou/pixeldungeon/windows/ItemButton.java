@@ -106,7 +106,7 @@ class ItemButton extends ItemSlot {
                         enableItem=(item instanceof Arrow || item instanceof Scroll || item instanceof RottenFood);
                         break;
                     case FUSEABLE:
-                        enableItem=((item instanceof Scroll || item instanceof MeleeWeapon || item instanceof Armor || item instanceof KindOfBow || item instanceof Wand));
+                        enableItem=(item instanceof Scroll || item instanceof MeleeWeapon || item instanceof Armor || item instanceof KindOfBow || item instanceof Wand || item.getEntityKind().contains("Shield"));
                         break;
                     case UPGRADABLE_WEAPON:
                         enableItem=((item instanceof MeleeWeapon || item instanceof Boomerang) && (item.isUpgradable()));

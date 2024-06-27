@@ -1,6 +1,8 @@
 package com.watabou.pixeldungeon;
 
 
+import static com.nyrds.platform.game.RemixedDungeon.MOVE_TIMEOUTS;
+
 import com.google.common.base.Optional;
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
@@ -8,6 +10,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.IceCavesLevel;
@@ -79,9 +82,6 @@ import java.util.HashSet;
 import lombok.SneakyThrows;
 import lombok.val;
 
-
-import static com.nyrds.platform.game.RemixedDungeon.MOVE_TIMEOUTS;
-
 public class Dungeon {
 
     public static int potionOfStrength;
@@ -138,6 +138,7 @@ public class Dungeon {
     }
 
     public static void reset() {
+        ModQuirks.reset();
         if (!Scene.sceneMode.equals(Scene.LEVELS_TEST)) {
             LuaEngine.reset();
         }
@@ -296,6 +297,10 @@ public class Dungeon {
 
         isometricModeAllowed = level.isPlainTile(1); //TODO check entire level
 
+        if(ModQuirks.only2dTiles) {
+            isometricModeAllowed = false;
+        }
+        
         if (isometricModeAllowed) {
             setIsometricMode(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false));
         } else {
@@ -328,7 +333,7 @@ public class Dungeon {
             if (dup.valid()) {
                 GLog.debug("Removing dup: %s, %d", dup.getEntityKind(), dup.getId());
                 Actor.remove(dup);
-                Actor.freeCell(dup.getPos());
+                Actor.freeCell(dup);
                 CharsList.remove(dup.getId());
                 level.mobs.remove(dup);
             }
@@ -377,8 +382,8 @@ public class Dungeon {
     }
 
     private static final String VERSION = "version";
-    private static final String HERO = "hero";
-    private static final String DEPTH = "depth";
+    public static final String HERO = "hero";
+    public static final String DEPTH = "depth";
     private static final String LEVEL = "level";
     private static final String POS = "potionsOfStrength";
     private static final String SOU = "scrollsOfEnhancement";
@@ -513,7 +518,7 @@ public class Dungeon {
 
                 SaveUtils.copySaveToSlot(SaveUtils.getAutoSave(), heroClass);
 
-                GamesInProgress.set(hero.getHeroClass(), depth, hero.lvl());
+                GamesInProgress.set(hero, depth);
             } catch (IOException e) {
                 Game.toast(StringsManager.getVar(R.string.Dungeon_saveIoError) + "\n" + e.getLocalizedMessage());
                 EventCollector.logException(new Exception("cannot write save", e));
@@ -540,6 +545,11 @@ public class Dungeon {
         if (!force && SystemTime.now() - lastSaveTimestamp < 1000) {
             return;
         }
+
+        if(! Dungeon.hero.isAlive()) {
+            return;
+        }
+
         GameLoop.loadingOrSaving.incrementAndGet();
         synchronized (GameLoop.stepLock) {
             saveAllImpl();
@@ -739,14 +749,6 @@ public class Dungeon {
             }
         }
         return Optional.absent();
-    }
-
-    public static void preview(GamesInProgress.Info info, Bundle bundle) {
-        info.depth = bundle.getInt(DEPTH);
-        if (info.depth == -1) {
-            info.depth = bundle.getInt("maxDepth"); // FIXME
-        }
-        Hero.preview(info, bundle.getBundle(HERO));
     }
 
     public static void fail(String desc) {

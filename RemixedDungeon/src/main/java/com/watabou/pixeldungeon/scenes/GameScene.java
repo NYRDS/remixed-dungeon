@@ -143,7 +143,6 @@ public class GameScene extends PixelScene {
 
     private volatile boolean sceneCreated = false;
     private          float   waterSx      = 0, waterSy = -5;
-    private boolean objectSortingRequested;
     private boolean mapBuildingComplete = false;
 
 
@@ -243,6 +242,7 @@ public class GameScene extends PixelScene {
         add(bottomEffects);
 
         objects = new Group();
+        objects.sort = true;
         add(objects);
 
         objectEffects = new Group();
@@ -257,16 +257,20 @@ public class GameScene extends PixelScene {
             add(doorTiles);
         }
 
-        for (Heap heap : level.allHeaps()) {
-            addHeapSprite(heap);
-        }
+
 
         emitters = new Group();
         effects = new Group();
         emoicons = new Group();
 
         mobs = new Group();
+        mobs.sort = true;
         topMobs = new Group();  // mobs that are drawn on top of walls
+        topMobs.sort = true;
+
+        for (Heap heap : level.allHeaps()) { //so carcases cloud ne loaded
+            addHeapSprite(heap);
+        }
 
         add(mobs);
 
@@ -423,7 +427,7 @@ public class GameScene extends PixelScene {
             default:
         }
 
-        Camera.main.target = hero.getHeroSprite();
+        Camera.main.setTarget(hero.getHeroSprite());
 
         level.activateScripts();
         LevelTools.upgradeMap(level); // Epic level gen compatibility
@@ -448,7 +452,7 @@ public class GameScene extends PixelScene {
         hero.readyAndIdle();
         QuickSlot.refresh(hero);
 
-        doSelfTest();
+        //doSelfTest();
 
         final double moveTimeout = Dungeon.moveTimeout();
         final boolean realtime = Dungeon.realtime();
@@ -515,15 +519,12 @@ public class GameScene extends PixelScene {
     public void pause() {
         synchronized (GameLoop.stepLock) {
             if (!GameLoop.softPaused) {
-                final Hero hero = Dungeon.hero;
-                if (hero.isAlive()) {
-                    Dungeon.save(false);
-                }
+                Dungeon.save(false);
             }
         }
     }
 
-    private static transient boolean observeRequested = false;
+    private static boolean observeRequested = false;
 
     public static void observeRequest() {
         observeRequested = true;
@@ -549,11 +550,6 @@ public class GameScene extends PixelScene {
             return;
         }
 
-
-        if(objectSortingRequested) {
-            objects.sort();
-            objectSortingRequested = false;
-        }
         super.update();
 
         water.offset(waterSx * GameLoop.elapsed, waterSy * GameLoop.elapsed);
@@ -607,7 +603,6 @@ public class GameScene extends PixelScene {
         obj.lo_sprite = WeakOptional.of( (LevelObjectSprite)objects.recycle(LevelObjectSprite.class) );
         obj.lo_sprite.ifPresent (sprite -> sprite.reset(obj));
         obj.addedToScene();
-        objectSortingRequested = true;
     }
 
     private void addHeapSprite(@NotNull Heap heap) {
@@ -649,11 +644,14 @@ public class GameScene extends PixelScene {
         }
     }
 
-    private void showBanner(Banner banner) {
-        banner.camera = uiCamera;
-        banner.setX(align(uiCamera, (uiCamera.width - banner.width) / 2));
-        banner.setY(align(uiCamera, (uiCamera.height - banner.height) / 3));
-        add(banner);
+    @LuaInterface
+    public static void showBanner(Banner banner) {
+        if(isSceneReady()) {
+            banner.camera = uiCamera;
+            banner.setX(align(uiCamera, (uiCamera.width - banner.width) / 2));
+            banner.setY(align(uiCamera, (uiCamera.height - banner.height) / 3));
+            scene.add(banner);
+        }
     }
 
     // -------------------------------------------------------
@@ -853,7 +851,7 @@ public class GameScene extends PixelScene {
 
             Banner gameOver = new Banner(BannerSprites.get(BannerSprites.Type.GAME_OVER));
             gameOver.show(0x000000, 1f);
-            scene.showBanner(gameOver);
+            showBanner(gameOver);
 
             Sample.INSTANCE.play(Assets.SND_DEATH);
         }
@@ -863,7 +861,7 @@ public class GameScene extends PixelScene {
         if (isSceneReady() && Dungeon.hero.isAlive()) {
             Banner bossSlain = new Banner(BannerSprites.get(BannerSprites.Type.BOSS_SLAIN));
             bossSlain.show(0xFFFFFF, 0.3f, 5f);
-            scene.showBanner(bossSlain);
+            showBanner(bossSlain);
 
             Sample.INSTANCE.play(Assets.SND_BOSS);
         }
@@ -995,11 +993,19 @@ public class GameScene extends PixelScene {
     public static void addMobSpriteDirect(Char chr,CharSprite sprite) {
         if (isSceneReady()) {
             if(chr.getWalkingType() == WalkingType.WALL || chr.getWalkingType() == WalkingType.ABSOLUTE) {
-                scene.topMobs.add(sprite);
+                    scene.topMobs.add(sprite);
             } else {
-                scene.mobs.add(sprite);
+                    scene.mobs.add(sprite);
             }
         }
+    }
+
+    @Nullable
+    public static Group getMobsLayer() {
+        if (isSceneReady()) {
+            return scene.mobs;
+        }
+        return null;
     }
 
     public static void addToMobLayer(Gizmo gizmo) {

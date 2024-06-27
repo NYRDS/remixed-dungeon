@@ -33,7 +33,7 @@ import lombok.SneakyThrows;
  */
 public class Util {
     public static final String SAVE_ADS_EXPERIMENT = "SaveAdsExperiment2";
-    public static Callback nullCallback = () -> {};
+    public static final Callback nullCallback = () -> {};
 	public static final float BIG_FLOAT = Float.MAX_VALUE / 16384;
 
     private static String stackTraceToString(Throwable e) {

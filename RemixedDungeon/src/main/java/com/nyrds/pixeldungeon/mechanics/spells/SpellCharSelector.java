@@ -3,19 +3,14 @@ package com.nyrds.pixeldungeon.mechanics.spells;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
-import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.CellSelector;
-import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.util.HashSet;
-import java.util.Set;
-
 
 
 class SpellCharSelector implements CellSelector.Listener {
@@ -23,7 +18,7 @@ class SpellCharSelector implements CellSelector.Listener {
     private @NotNull
     final Char caster;
 
-    private final Set<Image> markers = new HashSet<>();
+
 
     public SpellCharSelector(Spell spell, @NotNull Char caster, String mode) {
         this.spell = spell;
@@ -41,12 +36,7 @@ class SpellCharSelector implements CellSelector.Listener {
 
             if(level.fieldOfView[pos]) {
                 GLog.debug("%s: visible: %s", spell.getEntityKind(), chr.getEntityKind());
-
-                var marker = Icons.TARGET.get();
-                chr.getSprite().getParent().add(marker);
-
-                marker.point(DungeonTilemap.tileToWorld(pos));
-                markers.add(marker);
+                CharUtils.mark(chr);
             }
         }
     }
@@ -65,10 +55,7 @@ class SpellCharSelector implements CellSelector.Listener {
                 caster.getSprite().zap(target.getPos());
             }
         }
-
-        for(var marker: markers) {
-            marker.killAndErase();
-        }
+        CharUtils.clearMarkers();
     }
 
     @Override

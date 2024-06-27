@@ -21,7 +21,7 @@ public class ColdSpirit extends Mob {
         baseAttackSkill  = 22;
         flying = true;
 
-        exp = 8;
+        expForKill = 8;
         maxLvl = 20;
         dmgMin = 12;
         dmgMax = 15;

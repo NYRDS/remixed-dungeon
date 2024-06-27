@@ -48,10 +48,10 @@ public class Tilemap extends Visual {
 	private final float cellW;
 	private final float cellH;
 
-	protected float[]     vertices;
+	protected final float[]     vertices;
 	protected FloatBuffer quads;
 	
-	protected Rect updated;
+	protected final Rect updated;
 	
 	public Tilemap( Object tx, TextureFilm tileset ) {
 		

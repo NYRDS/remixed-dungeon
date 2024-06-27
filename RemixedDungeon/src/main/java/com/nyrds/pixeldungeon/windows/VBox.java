@@ -3,8 +3,6 @@ package com.nyrds.pixeldungeon.windows;
 import androidx.annotation.NonNull;
 
 import com.watabou.noosa.Gizmo;
-import com.watabou.noosa.ui.Component;
-import com.watabou.pixeldungeon.utils.GLog;
 
 /**
  * Created by mike on 01.05.2018.
@@ -32,8 +30,16 @@ public class VBox extends BasicBox {
 
         for(Gizmo g :members) {
             if (g instanceof IPlaceable) {
-                ((IPlaceable) g).setPos(x, pos);
-                pos += ((IPlaceable) g).height() + gap;
+                IPlaceable gip = (IPlaceable) g;
+
+                IPlaceable shadowOf = gip.shadowOf();
+                if(shadowOf != null) {
+                    gip.setPos(x, shadowOf.getY());
+                    continue;
+                }
+
+                gip.setPos(x, pos);
+                pos += gip.height() + gap;
             }
         }
     }
@@ -43,8 +49,16 @@ public class VBox extends BasicBox {
 
         for(Gizmo g :members) {
             if (g instanceof IPlaceable) {
-                ((IPlaceable) g).setPos(x,pos - ((IPlaceable) g).height() - gap);
-                pos -= ((IPlaceable) g).height() + gap;
+                IPlaceable gip = (IPlaceable) g;
+
+                IPlaceable shadowOf = gip.shadowOf();
+                if(shadowOf != null) {
+                    gip.setPos(x, shadowOf.getY());
+                    continue;
+                }
+
+                gip.setPos(x,pos - gip.height() - gap);
+                pos -= gip.height() + gap;
             }
         }
     }
@@ -54,6 +68,13 @@ public class VBox extends BasicBox {
 
         for(Gizmo g :members) {
             if (g instanceof IPlaceable) {
+                IPlaceable gip = (IPlaceable) g;
+
+                IPlaceable shadowOf = gip.shadowOf();
+                if(shadowOf != null) {
+                    continue;
+                }
+
                 childsHeight += ((IPlaceable) g).height() + gap;
             }
         }
@@ -65,8 +86,16 @@ public class VBox extends BasicBox {
 
         for(Gizmo g :members) {
             if (g instanceof IPlaceable) {
-                ((IPlaceable) g).setPos(x, pos);
-                pos += ((IPlaceable) g).height() + gap;
+                IPlaceable gip = (IPlaceable) g;
+
+                IPlaceable shadowOf = gip.shadowOf();
+                if(shadowOf != null) {
+                    gip.setPos(x, shadowOf.getY());
+                    continue;
+                }
+
+                gip.setPos(x, pos);
+                pos += gip.height() + gap;
             }
         }
     }
@@ -86,9 +115,15 @@ public class VBox extends BasicBox {
 
         for(Gizmo g :members) {
             if (g instanceof IPlaceable) {
-                height += ((IPlaceable) g).height() + gap;
-                GLog.debug("vbox item: %s, %3.0f", g.getClass().getSimpleName(), ((IPlaceable) g).width());
-                width = Math.max(width,((IPlaceable) g).width());
+                IPlaceable gip = (IPlaceable) g;
+
+                IPlaceable shadowOf = gip.shadowOf();
+                if(shadowOf != null) {
+                    continue;
+                }
+                height += gip.height() + gap;
+                //GLog.debug("vbox item: %s, %3.0f", g.getClass().getSimpleName(), gip.width());
+                width = Math.max(width,gip.width());
             }
         }
     }

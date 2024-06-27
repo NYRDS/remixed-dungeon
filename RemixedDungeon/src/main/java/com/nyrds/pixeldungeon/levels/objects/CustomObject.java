@@ -118,7 +118,7 @@ public class CustomObject extends Deco {
 
     @Override
     public String getEntityKind() {
-        return objectDesc;
+        return super.getEntityKind();
     }
 
     @Override

@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -15,7 +14,7 @@ import com.watabou.utils.Random;
 
 public class Displacement extends Glyph {
 	
-	private static Glowing BLUE = new Glowing( 0x66AAFF );
+	private static final Glowing BLUE = new Glowing( 0x66AAFF );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage ) {
@@ -31,7 +30,7 @@ public class Displacement extends Glyph {
 				
 				WandOfBlink.appear( defender, pos );
 				Dungeon.level.press( pos, defender );
-				Dungeon.observe();
+				defender.observe();
 
 				break;
 			}

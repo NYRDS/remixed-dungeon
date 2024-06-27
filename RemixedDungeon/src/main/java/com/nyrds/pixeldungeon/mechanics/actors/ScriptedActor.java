@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.utils.Bundle;
 
 import org.luaj.vm2.LuaTable;
-import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 /**

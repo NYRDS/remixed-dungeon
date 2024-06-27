@@ -6,7 +6,6 @@ import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.MagicMissile;
@@ -45,7 +44,7 @@ public class WandOfBlink extends Wand {
 
 		getOwner().getSprite().setVisible(true);
 		appear( getOwner(), cell);
-		Dungeon.observe();
+		getOwner().observe();
 	}
 	
 	@Override

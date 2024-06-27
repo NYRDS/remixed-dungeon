@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.sprites;
 
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
@@ -14,7 +15,7 @@ public class GooSprite extends MobSprite {
 		
 		texture( Assets.GOO );
 		
-		TextureFilm frames = new TextureFilm( texture, 20, 14 );
+		TextureFilm frames = TextureCache.getFilm( texture, 20, 14 );
 		
 		idle = new Animation( 10, true );
 		idle.frames( frames, 0, 1 );

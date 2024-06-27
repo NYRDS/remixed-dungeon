@@ -57,7 +57,7 @@ public class Terrain {
 	public static final int WATER_TILES = 48;
 	public static final int WATER = 63;
 
-	public static int[] SECRET_TRAPS = {SECRET_FIRE_TRAP,
+	public static final int[] SECRET_TRAPS = {SECRET_FIRE_TRAP,
 										SECRET_PARALYTIC_TRAP,
 										SECRET_TOXIC_TRAP,
 										SECRET_POISON_TRAP,

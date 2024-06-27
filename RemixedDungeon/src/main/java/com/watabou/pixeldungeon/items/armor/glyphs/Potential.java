@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -17,7 +16,7 @@ import com.watabou.utils.Random;
 
 public class Potential extends Glyph {
 
-	private static Glowing BLUE = new Glowing( 0x66CCEE );
+	private static final Glowing BLUE = new Glowing( 0x66CCEE );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {

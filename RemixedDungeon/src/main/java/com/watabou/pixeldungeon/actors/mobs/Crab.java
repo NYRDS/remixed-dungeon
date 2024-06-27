@@ -15,7 +15,7 @@ public class Crab extends Mob {
 		baseAttackSkill  = 12;
 		baseSpeed = 2f;
 		
-		exp = 3;
+		expForKill = 3;
 		maxLvl = 9;
 		dmgMin = 3;
 		dmgMax = 6;

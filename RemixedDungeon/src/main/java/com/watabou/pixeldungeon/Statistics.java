@@ -41,7 +41,7 @@ public class Statistics {
 	}
 	
 	private static final String GOLD		= "score";
-	private static final String DEEPEST		= "maxDepth";
+	public static final String DEEPEST		= "maxDepth";
 	private static final String SLAIN		= "enemiesSlain";
 	private static final String FOOD		= "foodEaten";
 	private static final String ALCHEMY		= "potionsCooked";

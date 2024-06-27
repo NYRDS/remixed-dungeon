@@ -61,7 +61,7 @@ public class ScrollOfMagicMapping extends Scroll {
             }
         }
 
-        Dungeon.observe();
+        reader.observe();
 
         GLog.i(StringsManager.getVar(R.string.ScrollOfMagicMapping_Layout));
 

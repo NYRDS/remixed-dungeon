@@ -44,7 +44,7 @@ public abstract class MobAi implements AiState {
         return getClass().getSimpleName().toUpperCase(Locale.ROOT);
     }
 
-    protected void seekRevenge(Mob me, NamedEntityKind src) {
+    protected void seekRevenge(Char me, NamedEntityKind src) {
         if(src == me) { //no selfharm
             return;
         }
@@ -70,7 +70,7 @@ public abstract class MobAi implements AiState {
         return Utils.format(R.string.MobAi_status, me.getName(), getTag());
     }
 
-    protected Char chooseNearestChar(@NotNull Mob me) {
+    protected Char chooseNearestChar(@NotNull Char me) {
 
         Char bestEnemy = CharsList.DUMMY;
         int dist = me.level().getLength();
@@ -98,7 +98,7 @@ public abstract class MobAi implements AiState {
     }
 
 
-    protected Char chooseEnemy(@NotNull Mob me, float attentionFactor) {
+    protected Char chooseEnemy(@NotNull Char me, float attentionFactor) {
 
         attentionFactor *= me.getAttentionFactor();
         attentionFactor *= GameLoop.getDifficultyFactor();
@@ -129,7 +129,7 @@ public abstract class MobAi implements AiState {
         return bestEnemy;
     }
 
-    protected void huntEnemy(@NotNull Mob me) {
+    protected void huntEnemy(@NotNull Char me) {
 
         final Char enemy = me.getEnemy();
 
@@ -154,7 +154,7 @@ public abstract class MobAi implements AiState {
         }
     }
 
-    public boolean returnToOwnerIfTooFar(@NotNull Mob me, int maxDist) {
+    public boolean returnToOwnerIfTooFar(@NotNull Char me, int maxDist) {
         final Level level = me.level();
         final int ownerPos = me.getOwnerPos();
 
@@ -171,9 +171,7 @@ public abstract class MobAi implements AiState {
     private static void registerAiState(@NotNull Class<? extends AiState> stateClass) {
         try {
             aiStateInstances.put(stateClass.getSimpleName().toUpperCase(Locale.ROOT), stateClass.newInstance());
-        } catch (InstantiationException e) {
-            EventCollector.logException(e);
-        } catch (IllegalAccessException e) {
+        } catch (InstantiationException | IllegalAccessException e) {
             EventCollector.logException(e);
         }
     }
@@ -199,6 +197,6 @@ public abstract class MobAi implements AiState {
     }
 
     @Override
-    public void onDie(@NotNull Mob me) { // do nothing, we are dead already...
+    public void onDie(@NotNull Char me) { // do nothing, we are dead already...
     }
 }

@@ -34,7 +34,7 @@ public class BitmapText extends Text {
 	
 	public int realLength;
 	
-	protected static char INVALID_CHAR = ' ';
+	protected static final char INVALID_CHAR = ' ';
 	
 	public BitmapText( Font font ) {
 		this(Utils.EMPTY_STRING, font );

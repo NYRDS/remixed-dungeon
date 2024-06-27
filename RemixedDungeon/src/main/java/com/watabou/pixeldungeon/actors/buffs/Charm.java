@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 import org.jetbrains.annotations.NotNull;
@@ -22,7 +21,7 @@ public class Charm extends FlavourBuff {
 		}
 
 		if (super.attachTo( target )) {
-			if(GameScene.isSceneReady()) {
+			if(target.isOnStage()) {
 				target.getSprite().centerEmitter().start(Speck.factory(Speck.HEART), 0.2f, 5);
 				Sample.INSTANCE.play(Assets.SND_CHARMS);
 			}

@@ -17,19 +17,12 @@ return buff.init{
         }
     end,
 
-    attachTo = function(self, buff, target)
-        return true
-    end,
-
-    detach = function(self, buff)
-    end,
-
     act = function(self,buff)
         buff:detach()
     end,
 
     stealthBonus = function(self,buff)
-        return buff.target:skillLevel()
+        return buff.target:skillLevel() + buff.target:lvl() / 4
     end,
 
     charSpriteStatus = function(self, buff)

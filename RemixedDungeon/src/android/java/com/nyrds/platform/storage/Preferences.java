@@ -50,6 +50,8 @@ public enum Preferences {
 	public static final String KEY_USE_ISOMETRIC_TILES = "use_isometric_tiles";
     public static final String KEY_TILES_QUESTION_ASKED = "tiles_question_asked";
 
+	public static final String KEY_USE_SMOOTH_CAMERA = "use_smooth_camera";
+
 
 
     private SharedPreferences prefs;

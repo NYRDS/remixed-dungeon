@@ -13,7 +13,7 @@ import com.watabou.utils.Random;
 public class BloodSink extends Emitter {
 
 
-    private int pos;
+    private final int pos;
     private float rippleDelay = 0;
 
     private static final Factory factory = new Factory() {

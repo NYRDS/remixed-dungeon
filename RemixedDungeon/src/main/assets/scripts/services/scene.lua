@@ -63,6 +63,7 @@ local function levelsTestModeOnStep(self, scene)
                 framesOnLevel = 0
 
                 local nextLevelId = levels:get(currentLevel)
+                --nextLevelId = 'Rat5'
                 RPD.glog("trying level: %s", nextLevelId)
                 GameControl:changeLevel(nextLevelId)
             else

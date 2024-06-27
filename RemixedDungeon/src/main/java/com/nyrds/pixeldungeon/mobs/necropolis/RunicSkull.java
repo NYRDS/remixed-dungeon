@@ -29,7 +29,8 @@ public class RunicSkull extends MultiKindMob {
 	public RunicSkull() {
 
 		hp(ht(70));
-		exp = 5;
+		carcassChance = 0;
+		expForKill = 5;
 		baseDefenseSkill = 15;
 		baseAttackSkill = 1;
 
@@ -78,8 +79,8 @@ public class RunicSkull extends MultiKindMob {
 
 	@Override
 	public int getKind() {
-		return kind;
-	}
+        return super.getKind();
+    }
 
 	@Override
 	public boolean getCloser(int target) {

@@ -52,7 +52,8 @@ public class ShadowLordLevel extends BossLevel {
 
 	@Override
 	protected void createMobs() {
-	}
+        super.createMobs();
+    }
 
 	@Override
 	protected void createItems() {

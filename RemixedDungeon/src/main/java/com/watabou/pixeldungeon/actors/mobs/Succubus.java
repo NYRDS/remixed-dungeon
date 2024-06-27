@@ -30,7 +30,7 @@ public class Succubus extends Mob {
 		dmgMax = 25;
 		dr = 10;
 
-		exp = 12;
+		expForKill = 12;
 		maxLvl = 25;
 
 		loot(new ScrollOfLullaby(), 0.05f);

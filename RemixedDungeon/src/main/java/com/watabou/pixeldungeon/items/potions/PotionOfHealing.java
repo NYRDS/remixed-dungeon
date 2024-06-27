@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
@@ -19,7 +18,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class PotionOfHealing extends Potion {
 
-	private static PotionOfHealing pseudoPotion = new PotionOfHealing();
+	private static final PotionOfHealing pseudoPotion = new PotionOfHealing();
 
 	{
 		labelIndex = 5;

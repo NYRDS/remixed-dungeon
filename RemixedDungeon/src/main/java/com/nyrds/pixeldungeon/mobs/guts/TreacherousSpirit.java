@@ -23,7 +23,7 @@ public class TreacherousSpirit extends Mob {
         dmgMax = 45;
         dr = 25;
 
-        exp = 45;
+        expForKill = 45;
         maxLvl = 30;
 
         setState(MobAi.getStateByClass(Wandering.class));

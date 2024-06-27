@@ -10,7 +10,6 @@ import com.nyrds.platform.input.Touchscreen.Touch;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.Text;

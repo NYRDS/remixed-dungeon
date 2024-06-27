@@ -3,7 +3,6 @@ package com.watabou.pixeldungeon.items.weapon.melee;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -104,7 +103,7 @@ public class Kusarigama extends MeleeWeapon {
                         chr.placeTo(Ballistica.trace[1]);
                         chr.getSprite().move(chr.getPos(), Ballistica.trace[1]);
 
-                        Dungeon.observe();
+                        selector.observe();
                     }
 
                     drawChain(hitCell, selector);

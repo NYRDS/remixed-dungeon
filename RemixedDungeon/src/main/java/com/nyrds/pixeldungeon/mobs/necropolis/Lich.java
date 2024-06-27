@@ -65,7 +65,7 @@ public class Lich extends Boss {
 
     public Lich() {
         hp(ht(HEALTH));
-        exp = 25;
+        expForKill = 25;
         baseDefenseSkill = 23;
         baseAttackSkill  = 35;
 

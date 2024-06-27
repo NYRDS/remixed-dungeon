@@ -25,8 +25,6 @@ import com.watabou.gltextures.SmartTexture;
 import com.watabou.glwrap.Quad;
 
 import java.nio.FloatBuffer;
-import java.util.Map;
-import java.util.WeakHashMap;
 
 public class SystemTextLine extends Visual {
 
@@ -38,7 +36,7 @@ public class SystemTextLine extends Visual {
 	
 	private boolean dirty;
 
-	static final Map<String, SystemTextLine> linesCache = new WeakHashMap<>();
+	static final public SystemTextLine emptyLine = new SystemTextLine();
 
 	public SystemTextLine() {
 		super( 0, 0, 0, 0 );

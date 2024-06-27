@@ -20,13 +20,13 @@ public class CharTitle extends Component {
 
     private static final int BAR_HEIGHT = 2;
 
-    private CharSprite image;
-    private Text name;
-    private ColorBlock hpBg;
-    private ColorBlock hpLvl;
-    private BuffIndicator buffs;
+    private final CharSprite image;
+    private final Text name;
+    private final ColorBlock hpBg;
+    private final ColorBlock hpLvl;
+    private final BuffIndicator buffs;
 
-    private float hp;
+    private final float hp;
 
     public CharTitle(@NotNull Char mob) {
 

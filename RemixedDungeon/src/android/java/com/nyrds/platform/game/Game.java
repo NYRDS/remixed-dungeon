@@ -56,7 +56,6 @@ import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -94,7 +93,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public Executor serviceExecutor = new ReportingExecutor();
 
-    protected GameLoop gameLoop;
+    protected final GameLoop gameLoop;
 
     public Game(Class<? extends Scene> c) {
         super();

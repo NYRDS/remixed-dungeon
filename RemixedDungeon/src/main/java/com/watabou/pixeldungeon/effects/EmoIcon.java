@@ -15,7 +15,7 @@ public class EmoIcon extends Image {
 
 	private boolean growing = true;
 
-	protected CharSprite owner;
+	protected final CharSprite owner;
 
 	private EmoIcon(CharSprite owner) {
 		this.owner = owner;

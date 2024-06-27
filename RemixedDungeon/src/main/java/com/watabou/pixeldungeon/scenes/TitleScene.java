@@ -13,7 +13,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Assets;
@@ -160,12 +159,14 @@ public class TitleScene extends PixelScene {
         final boolean useVk = lang.equals("ru");
 
         Icons social = useVk ? Icons.VK : Icons.FB;
-        leftGroup.add(new ImageButton(social.get()) {
-            @Override
-            protected void onClick() {
-                Game.instance().openUrl("Visit us on social network", useVk ? "https://vk.com/pixel_dungeon_remix" : "https://fb.me/RemixedDungeon");
-            }
-        });
+        if (useVk) {
+            leftGroup.add(new ImageButton(social.get()) {
+                @Override
+                protected void onClick() {
+                    Game.instance().openUrl("Visit us on social network", useVk ? "https://vk.com/pixel_dungeon_remix" : "https://fb.me/RemixedDungeon");
+                }
+            });
+        }
 
         leftGroup.add(new ImageButton(Icons.DISCORD.get()) {
             @Override

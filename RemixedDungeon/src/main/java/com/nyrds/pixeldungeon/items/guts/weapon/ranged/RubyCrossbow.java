@@ -9,8 +9,8 @@ public class RubyCrossbow extends Crossbow {
 
 	@Override
 	public double acuFactor() {
-		return 1;
-	}
+        return super.acuFactor();
+    }
 
 	@Override
 	public double dmgFactor() {

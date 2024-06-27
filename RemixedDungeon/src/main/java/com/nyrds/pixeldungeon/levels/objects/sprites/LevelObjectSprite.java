@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.levels.objects.sprites;
 
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.util.ModError;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
@@ -69,7 +70,7 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 		int xs = object.getSpriteXS();
 		int ys = object.getSpriteYS();
 
-		frames = new TextureFilm(texture, xs, ys);
+		frames = TextureCache.getFilm(texture, xs, ys);
 		centerShift = new PointF(-(xs - DungeonTilemap.SIZE) / 2.f, -(ys-DungeonTilemap.SIZE) / 2.f);
 		setOrigin(xs / 2.f, ys / 2.f);
 

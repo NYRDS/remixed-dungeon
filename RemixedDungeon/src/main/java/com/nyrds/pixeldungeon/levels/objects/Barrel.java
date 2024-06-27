@@ -106,10 +106,7 @@ public class Barrel extends LevelObject {
 
 	@Override
 	public boolean nonPassable(Char ch) {
-		if(ch.valid()) {
-			return true;
-		}
-		return false;
+		return ch.valid();
 	}
 
 	@Override

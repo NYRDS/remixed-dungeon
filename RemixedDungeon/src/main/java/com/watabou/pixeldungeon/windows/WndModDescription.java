@@ -22,7 +22,7 @@ import com.watabou.pixeldungeon.ui.Window;
 public class WndModDescription extends Window {
 
     private float yPos;
-    private String prevMod;
+    private final String prevMod;
 
     public WndModDescription(final String option, final String prevMod) {
 
@@ -50,7 +50,7 @@ public class WndModDescription extends Window {
             place(author);
 
             final String siteUrl = StringsManager.getVar(R.string.Mod_Link);
-            if (siteUrl.length() > 0) {
+            if (!siteUrl.isEmpty()) {
                 Text site = PixelScene.createMultiline(GuiProperties.regularFontSize());
                 site.maxWidth(width);
                 site.text(StringsManager.getVar(R.string.Mods_AuthorSite) + "\n" + siteUrl + "\n ");
@@ -69,7 +69,7 @@ public class WndModDescription extends Window {
 
             final String emailUri = StringsManager.getVar(R.string.Mod_Email);
 
-            if (emailUri.length() > 0) {
+            if (!emailUri.isEmpty()) {
                 Text email = PixelScene.createMultiline(GuiProperties.regularFontSize());
                 email.maxWidth(width);
                 email.text(StringsManager.getVar(R.string.Mods_AuthorEmail) + emailUri + "\n ");

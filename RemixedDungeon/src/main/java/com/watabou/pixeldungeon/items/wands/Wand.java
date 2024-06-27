@@ -24,7 +24,6 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
-import com.watabou.pixeldungeon.items.rings.RingOfPower.Power;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.QuickSlot;
@@ -56,7 +55,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
     protected boolean hitChars = true;
     protected boolean hitObjects = false;
 
-    private boolean directional = true;
+    private final boolean directional = true;
 
     private static final Class<?>[] wands = {WandOfTeleportation.class,
             WandOfSlowness.class, WandOfFirebolt.class, WandOfPoison.class,

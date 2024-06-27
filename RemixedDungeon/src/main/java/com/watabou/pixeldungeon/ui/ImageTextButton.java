@@ -12,8 +12,8 @@ public class ImageTextButton extends Button {
 
     public static final float SIZE = 48;
 
-    private Image image;
-    private Text label;
+    private final Image image;
+    private final Text label;
 
     public ImageTextButton(String text, Image image) {
         super();

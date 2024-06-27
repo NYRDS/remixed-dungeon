@@ -933,6 +933,7 @@
   <string name="HeroClass_Rog">盜賊</string>
   <string name="HeroClass_Hun">女獵手</string>
   <string name="HeroClass_Elf">精靈</string>
+  <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">角鬥士</string>
   <string name="HeroSubClass_DescGlad">一次成功的近戰攻擊可以讓_角鬥士_找回節奏，開始連擊。接下來每次近戰攻擊命中都會造成更多傷害。</string>
   <string name="HeroSubClass_NameBers">狂戰士</string>
@@ -1202,7 +1203,6 @@
   <string name="Goo_Name">粘咕</string>
   <string name="Goo_Gender">雌性的</string>
   <string name="Goo_Name_Objective">粘咕</string>
-  <string name="Goo_Desc">我們對粘咕所知甚少。它甚至很有可能不是一個生物，而是擁有基礎智能的下水道物質聚合物。無論如何，很明顯是黑暗魔法造就了這個東西。</string>
   <string name="Goo_Info1">粘咕正在不斷地抽動！</string>
   <string name="Goo_Info2">咕……咕……</string>
   <string name="Goo_Info3">咕-咕！</string>
@@ -1620,10 +1620,8 @@
   <string name="ServiceManNPC_Desc">當地企業一名中規中矩的員工。</string>
   <string name="TownShopkeeper_Name">商人</string>
   <string name="TownShopkeeper_Desc">平凡的商人，卻知道您的斤兩。</string>
-  <string name="WndMovieTheatre_Watch">觀看影片</string>
   <string name="WndMovieTheatre_No">離開</string>
   <string name="WndMovieTheatre_Bye">想回來的時候就回來，我們對您的到來而感到高興！</string>
-  <string name="WndMovieTheatre_Instruction">歡迎來到我們的電影院！我們正在提供一項特別服務，您可以免費觀看“電影”。如果您成功看完，將得到%d枚金幣的獎勵!</string>
   <string name="WndMovieTheatre_Title">戲院</string>
   <string name="WndMovieTheatre_Thank_You">感謝您的參與！</string>
   <string name="WndPriest_Heal">治療-花費%d金幣</string>
@@ -1750,7 +1748,6 @@
   <string name="GothicArmor_Info">哥特式的盔甲是鎧甲鍛造藝術的頂峰。</string>
   <string name="ChaosArmor_Name">混沌護甲</string>
   <string name="ChaosArmor_Info">這件盔甲的血紅色金屬板被暗紅的鐵鏈縫接在一起，當你觸碰它時會迸發出混沌能量。</string>
-  <string name="ChaosCrystal_ArmorFused">水晶吸收了你的護甲，並化成了復合盔甲的形態。</string>
   <string name="Blacksmith_Name">巨魔鐵匠</string>
   <string name="Blacksmith_Desc">這只巨魔看起來和任何其他巨魔一樣：又高又瘦，皮膚的色澤和紋理看起來就像石頭一樣。這位巨魔鐵匠正拿著一把與他體型不相稱的小錘子不停地修補。</string>
   <string name="Blacksmith_Gold1">嘿，人類！想要做個有用點的人嗎？拿著這個鎬子給我挖點_暗金礦_，只要_15塊_。什麼？我要如何報答你？你……真是貪婪。 好吧，好吧，我沒錢付給你，但我可以給你鍛造。想想你有多走運吧，我可是這附近唯一的鐵匠。</string>
@@ -2408,7 +2405,6 @@
   <string name="HeroClass_HunPerks_2">女擅獵手精通遠程武器。使用它們時，她可以獲得基於額外力量值的傷害加成。</string>
   <string name="HeroClass_HunPerks_3">女獵手能從露珠獲得更多生命值。</string>
   <string name="HeroClass_HunPerks_4">女獵手可以隔著障礙物感應到附近隱匿的敵人。</string>
-  <string name="HeroClass_ElfPerks_0">精靈初始時只擁有15點生命值和9點力量。</string>
   <string name="HeroClass_ElfPerks_1">精靈免疫纏繞狀態。</string>
   <string name="HeroClass_ElfPerks_2">精靈開局時擁有一把升級過的弓和一些箭加上一把匕首。 </string>
   <string name="HeroClass_ElfPerks_3">精靈十分敏捷，並且十分精通弓箭。</string>
@@ -2566,14 +2562,6 @@
   <string name="Backstab_TooFar">距離太遠了，無法命中。</string>
   <string name="KunaiThrow_Name">投擲苦無</string>
   <string name="Haste_Name">急速</string>
-  <string name="Welcome_Text_29_5">
-remix.29.5\n
-- 遊戲性:\n
--- 盜賊技能!\n
-- 修改:\n
--- 盔甲貼圖!\n
-- 修復了一些Bug\n
-</string>
   <string name="Char_Stole_0">%1$s 從%3$s身上偷走了%2$s！</string>
   <string name="Char_Stole_1">%1$s把%3$s的%2$s偷竊了！</string>
   <string name="Char_Stole_2">%1$s把%3$s的%2$s偷竊了！</string>

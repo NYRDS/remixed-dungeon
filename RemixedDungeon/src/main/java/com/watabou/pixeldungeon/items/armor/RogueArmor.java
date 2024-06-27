@@ -41,6 +41,6 @@ public class RogueArmor extends ClassArmor {
         return StringsManager.getVar(R.string.RogueArmor_Desc);
     }
 
-	protected static CellSelector.Listener teleporter = new TeleportCellListener();
+	protected static final CellSelector.Listener teleporter = new TeleportCellListener();
 
 }

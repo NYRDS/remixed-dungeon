@@ -247,7 +247,7 @@ public class WandMaker extends NPC {
 					}
 				}
 				
-				if (candidates.size() > 0) {
+				if (!candidates.isEmpty()) {
 					Random.element( candidates ).drop( new CorpseDust() );
 				} else {
 					int pos = level.randomRespawnCell();

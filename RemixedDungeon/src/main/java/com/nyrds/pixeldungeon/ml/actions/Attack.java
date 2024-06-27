@@ -4,7 +4,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 
 public class Attack extends CharAction {
-    public Char target;
+    public final Char target;
     public Attack(Char target ) {
         this.target = target;
         dst = target.getPos();

@@ -1,6 +1,8 @@
 
 package com.watabou.pixeldungeon.ui;
 
+import static com.watabou.pixeldungeon.scenes.PixelScene.uiCamera;
+
 import android.annotation.SuppressLint;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
@@ -18,7 +20,6 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
@@ -34,8 +35,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
-import static com.watabou.pixeldungeon.scenes.PixelScene.uiCamera;
 
 public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.Listener {
 

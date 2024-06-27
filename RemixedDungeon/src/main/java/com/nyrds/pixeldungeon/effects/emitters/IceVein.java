@@ -10,7 +10,7 @@ import com.watabou.utils.Random;
 
 public class IceVein extends Group {
 
-    private int pos;
+    private final int pos;
 
     private float delay;
 

@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class Fury extends Buff {
 	
-	public static float LEVEL	= 0.4f;
+	public static final float LEVEL	= 0.4f;
 	
 	@Override
 	public boolean act() {

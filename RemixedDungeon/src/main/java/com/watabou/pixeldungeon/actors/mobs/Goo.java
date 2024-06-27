@@ -27,7 +27,7 @@ public class Goo extends Boss {
 	
 	public Goo() {
 		hp(ht(68));
-		exp = 9;
+		expForKill = 9;
 		baseDefenseSkill = 12;
 		baseAttackSkill = 11;
 		dr = 2;
@@ -49,13 +49,12 @@ public class Goo extends Boss {
 		if (pumpedUp) {
 			dmgMin = 7;
 			dmgMax = 21;
-			return super.damageRoll();
-		} else {
+        } else {
 			dmgMin = 4;
 			dmgMax = 11;
-			return super.damageRoll();
-		}
-	}
+        }
+        return super.damageRoll();
+    }
 	
 	@Override
 	public int attackSkill( Char target ) {

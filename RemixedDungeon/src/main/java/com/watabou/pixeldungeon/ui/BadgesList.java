@@ -63,7 +63,7 @@ public class BadgesList extends ScrollPane {
 		
 		private static final float HEIGHT	= 20;
 		
-		private Badges.Badge badge;
+		private final Badges.Badge badge;
 		
 		private Image icon;
 		private Text label;

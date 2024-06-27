@@ -32,7 +32,7 @@ public class ZombieGnoll extends Mob {
         dmgMax = 35;
         dr = 20;
 
-        exp = 7;
+        expForKill = 7;
         maxLvl = 35;
 
         loot(Gold.class, 0.02f);

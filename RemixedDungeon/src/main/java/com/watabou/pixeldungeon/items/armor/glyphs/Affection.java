@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
@@ -16,7 +15,7 @@ import com.watabou.utils.Random;
 
 public class Affection extends Glyph {
 
-	private static Glowing PINK = new Glowing(0xFF4488);
+	private static final Glowing PINK = new Glowing(0xFF4488);
 
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {

@@ -18,7 +18,7 @@ import java.util.Iterator;
 public class Bestiary {
 
 	private static final String FEELINGS = "Feelings";
-	private static JSONObject bestiaryData;
+	private static final JSONObject bestiaryData;
 	private static JSONObject Feelings;
 	private static double feelingChance;
 
@@ -49,7 +49,7 @@ public class Bestiary {
 
 			return getMobFromCachedData();
 
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			ModError.doReport("No bestiary for "+level.levelId, e);
 			return MobFactory.mobByName("Rat");
 		}

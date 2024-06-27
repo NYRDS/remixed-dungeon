@@ -1,6 +1,8 @@
 
 package com.watabou.pixeldungeon.levels.painters;
 
+import static com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.STATUE;
+
 import com.nyrds.pixeldungeon.mobs.common.ArmoredStatue;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -13,8 +15,6 @@ import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Point;
 import com.watabou.utils.Random;
-
-import static com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.STATUE;
 
 public class StatuePainter extends Painter {
 

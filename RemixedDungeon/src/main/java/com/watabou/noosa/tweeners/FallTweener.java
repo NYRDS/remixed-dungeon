@@ -4,7 +4,7 @@ import com.watabou.noosa.Visual;
 import com.watabou.utils.PointF;
 
 public class FallTweener extends ScaleTweener {
-    private Visual sprite;
+    private final Visual sprite;
 
     public FallTweener(Visual sprite) {
         super(sprite, new PointF(0, 0), 1f);

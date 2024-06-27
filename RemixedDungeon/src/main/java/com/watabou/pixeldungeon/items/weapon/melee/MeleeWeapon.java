@@ -17,7 +17,7 @@ public class MeleeWeapon extends Weapon {
 		setDefaultAction(CommonActions.AC_EQUIP);
 	}
 	
-	private int tier;
+	private final int tier;
 	
 	public MeleeWeapon( int tier, float acu, float dly ) {
 		this.tier = tier;

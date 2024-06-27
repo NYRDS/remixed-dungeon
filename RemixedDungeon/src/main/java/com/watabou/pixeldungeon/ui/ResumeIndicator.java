@@ -2,7 +2,6 @@ package com.watabou.pixeldungeon.ui;
 
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 
 public class ResumeIndicator extends Tag {

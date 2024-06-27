@@ -16,8 +16,8 @@ public class Tool extends Button {
 
     private static final int BGCOLOR = 0x7B8073;
 
-    protected Image     base;
-    private   NinePatch bg;
+    protected final Image     base;
+    private final NinePatch bg;
 
     public Tool(int index, Chrome.Type chrome) {
         this(Size.valueOf(GamePreferences.toolStyle()),index, chrome);

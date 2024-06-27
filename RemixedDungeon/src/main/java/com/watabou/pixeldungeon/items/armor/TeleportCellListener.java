@@ -7,7 +7,6 @@ import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
@@ -51,7 +50,7 @@ class TeleportCellListener implements CellSelector.Listener {
             CellEmitter.get( target ).burst( Speck.factory( Speck.WOOL ), 10 );
             Sample.INSTANCE.play( Assets.SND_PUFF );
             level.press( target, selector );
-            Dungeon.observe();
+            selector.observe();
 
             selector.spend( Actor.TICK );
         }

@@ -30,13 +30,13 @@ import java.nio.ShortBuffer;
 
 public class NoosaScript extends Script {
 
-	public Uniform uCamera;
-	public Uniform uModel;
-	public Uniform uTex;
-	public Uniform uColorM;
-	public Uniform uColorA;
-	public Attribute aXY;
-	public Attribute aUV;
+	public final Uniform uCamera;
+	public final Uniform uModel;
+	public final Uniform uTex;
+	public final Uniform uColorM;
+	public final Uniform uColorA;
+	public final Attribute aXY;
+	public final Attribute aUV;
 	
 	private Camera lastCamera;
 	

@@ -27,7 +27,7 @@ public class Shaman extends Mob implements IZapper {
 		dmgMax = 6;
 		dr = 4;
 
-		exp = 6;
+		expForKill = 6;
 		maxLvl = 14;
 
 		loot(Treasury.Category.SCROLL, 0.33f);

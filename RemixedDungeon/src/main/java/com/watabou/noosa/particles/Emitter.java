@@ -157,10 +157,8 @@ public class Emitter extends Group {
 	}
 
 	public void setIsometricShift(boolean isometricShift) {
-		if(Dungeon.isIsometricMode()) {
-			this.isometricShift = isometricShift;
-		}
-	}
+        super.setIsometricShift(isometricShift);
+    }
 
 	abstract public static class Factory {
 		

@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
 public class BlobEmitter extends Emitter {

@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import static com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.PEDESTAL;
+
 import com.nyrds.pixeldungeon.items.chaos.ChaosCommon;
 import com.nyrds.pixeldungeon.items.common.WandOfShadowbolt;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
@@ -24,8 +26,6 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
-import static com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.PEDESTAL;
-
 
 
 public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
@@ -34,9 +34,11 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 	{
 		movable = false;
+		carcassChance = 0;
 	}
 
 	public Crystal() {
+
 		adjustStats(Dungeon.depth);
 		ensureWand();
 	}
@@ -72,9 +74,9 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 		baseDefenseSkill = depth * 2 + 1;
 		baseAttackSkill = 35;
-		exp = depth + 1;
+		expForKill = depth + 1;
 		maxLvl = depth + 2;
-		dr = exp/3;
+		dr = expForKill /3;
 
 		addImmunity(ScrollOfPsionicBlast.class);
 		addImmunity(ToxicGas.class);
@@ -85,8 +87,8 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 	@Override
 	public int getKind() {
-		return kind;
-	}
+        return super.getKind();
+    }
 
 	@Override
 	public int damageRoll() {

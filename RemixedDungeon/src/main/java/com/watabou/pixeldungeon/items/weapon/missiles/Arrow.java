@@ -20,7 +20,7 @@ public abstract class Arrow extends MissileWeapon {
 	protected final int HEALTH_ARROW_IMAGE    = 13;
 	protected final int AMOK_ARROW_IMAGE      = 15;
 
-	protected double baseAcu = 1;
+	protected final double baseAcu = 1;
 	protected double baseDly = 1;
 	protected double baseMax = 1;
 	protected double baseMin = 1;

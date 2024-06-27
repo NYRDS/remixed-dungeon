@@ -9,7 +9,7 @@ import com.watabou.utils.Random;
 
 public class Poison extends Weapon.Enchantment {
 	
-	private static Glowing PURPLE = new Glowing( 0x4400AA );
+	private static final Glowing PURPLE = new Glowing( 0x4400AA );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

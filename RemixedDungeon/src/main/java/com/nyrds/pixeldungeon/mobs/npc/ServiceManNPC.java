@@ -5,8 +5,6 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.support.AdsUtils;
-import com.nyrds.pixeldungeon.support.EuConsent;
-import com.nyrds.pixeldungeon.windows.WndEuConsent;
 import com.nyrds.pixeldungeon.windows.WndMovieTheatre;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
@@ -27,9 +25,7 @@ public class ServiceManNPC extends ImmortalNPC {
     public static int filmsSeen = 0;
 
     public ServiceManNPC() {
-        if (EuConsent.getConsentLevel() > EuConsent.UNKNOWN) {
-            AdsUtils.initRewardVideo();
-        }
+        AdsUtils.initRewardVideo();
     }
 
     public static Item getReward() {
@@ -39,17 +35,6 @@ public class ServiceManNPC extends ImmortalNPC {
 
     @Override
     public boolean interact(final Char hero) {
-
-        if (EuConsent.getConsentLevel() < EuConsent.NON_PERSONALIZED) {
-            GameLoop.addToScene(new WndEuConsent() {
-                @Override
-                public void done() {
-                    AdsUtils.initRewardVideo();
-                }
-            });
-            return true;
-        }
-
         getSprite().turnTo(getPos(), hero.getPos());
 
         if (!Util.isConnectedToInternet()) {

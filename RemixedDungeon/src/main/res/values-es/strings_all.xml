@@ -973,6 +973,8 @@
   <string name="HeroClass_Rog">granuja</string>
   <string name="HeroClass_Hun">cazadora</string>
   <string name="HeroClass_Elf">elfo</string>
+  <string name="HeroSubClass_NameNone">ninguna</string>
+  <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">gladiador</string>
   <string name="HeroSubClass_DescGlad">Un ataque con exito con un arma cuerpo a cuerpo permite al _Gladiador_ empezar un combo, con lo que cada golpe consecutivo causa más daño.</string>
   <string name="HeroSubClass_NameBers">berserker</string>
@@ -2889,4 +2891,15 @@ otro lugar del nivel.</string>
   <string name="WndModSelect_AreYouSure">Borrar mod: %s, estas seguro?</string>
   <string name="Challenges_Names_8">Niguna ciudad.</string>
   <string name="Challenges_Descriptions_8">Tu viaje comenzará en las oscuras y peligrosas alcantarillas de la ciudad, con el único camino a la superficie bloqueado. Para empeorar las cosas, solo podrás usar el equipo que encuentres dentro de la mazmorra. Con recursos y equipos limitados, tu supervivencia dependerá de tus habilidades y estrategia.</string>
+  <string name="EncumbranceBuff_CharAct_1">No tengo fuerza suficiente para usar %s correctamente.</string>
+  <string name="EncumbranceBuff_CharAct_2">El/la %s es muy pesado, no puedo usarlo con efectividad.</string>
+  <string name="EncumbranceBuff_CharAct_3">Necesito mejorar mi fuerza antes de usar %s.</string>
+  <string name="EncumbranceBuff_CharAct_4">Me falta fuerza para usar %s con todo su potencial.</string>
+  <string name="EncumbranceBuff_CharAct_5">%s es demasiado para mi en este momento.</string>
+  <string name="Typical_Damage">Daño usual</string>
+  <string name="Damage_Reduction">Reducción de daño</string>
+  <string name="Attack_Range">Rango de ataque</string>
+  <string name="Movement_Speed">Velocidad de movimiento</string>
+  <string name="Attack_Cooldown">Enfriamiento de ataque</string>
+  <string name="View_Distance">Distancia de visión</string>
 </resources>

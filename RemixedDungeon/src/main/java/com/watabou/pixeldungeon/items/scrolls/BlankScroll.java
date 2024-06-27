@@ -16,14 +16,14 @@ public class BlankScroll extends Scroll {
 	}
 	
 	@Override
-	public Item burn(int cell){
-		return null;
-	}
+	public Item burn(int cell) {
+        return super.burn(cell);
+    }
 	
 	@Override
 	public boolean isUpgradable() {
-		return false;
-	}
+        return super.isUpgradable();
+    }
 	
 	@Override
 	public boolean isIdentified() {

@@ -19,7 +19,6 @@ import com.watabou.pixeldungeon.items.bags.Quiver;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -95,7 +94,7 @@ public class WndBag extends WndTabbed {
 
 	private static WndBag instance;
 
-	private final Belongings stuff;
+	private Belongings stuff;
 
 	public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title) {
 		
@@ -170,7 +169,7 @@ public class WndBag extends WndTabbed {
 
 		instance = this;
 	}
-	
+
 	public static WndBag lastBag(@NotNull Char owner, Listener listener, Mode mode, String title ) {
 
 		Belongings belongings = owner.getBelongings();

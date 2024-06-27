@@ -91,7 +91,7 @@ public class SewerBossLevel extends BossLevel {
 		connectRooms(ignoredRooms);
 
 		for (Room r : rooms) {
-			if (r.type == Type.NULL && r.connected.size() > 0) {
+			if (r.type == Type.NULL && !r.connected.isEmpty()) {
 				r.type = Type.TUNNEL;
 			}
 		}

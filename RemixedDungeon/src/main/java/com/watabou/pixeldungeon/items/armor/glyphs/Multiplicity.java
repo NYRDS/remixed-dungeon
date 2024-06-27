@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -16,7 +15,7 @@ import com.watabou.utils.Random;
 
 public class Multiplicity extends Glyph {
 
-	private static Glowing PINK = new Glowing( 0xCCAA88 );
+	private static final Glowing PINK = new Glowing( 0xCCAA88 );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {

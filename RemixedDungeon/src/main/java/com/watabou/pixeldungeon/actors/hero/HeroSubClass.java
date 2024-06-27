@@ -3,16 +3,19 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
+import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.actors.buffs.Combo;
+import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
@@ -25,7 +28,6 @@ import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Collections;
@@ -69,7 +71,7 @@ public enum HeroSubClass implements CharModifier {
 				JsonHelper.readStringSet(classDesc, Char.IMMUNITIES,immunities);
 				JsonHelper.readStringSet(classDesc, Char.RESISTANCES,resistances);
 			}
-		} catch (JSONException e) {
+		} catch (Exception e) {
 			throw ModdingMode.modException("bad InitHero.json",e);
 		}
 	}
@@ -86,8 +88,8 @@ public enum HeroSubClass implements CharModifier {
 
 	public void storeInBundle( Bundle bundle ) {
 		bundle.put( SUBCLASS, toString() );
-		bundle.put(toString()+Char.IMMUNITIES,immunities.toArray(new String[0]));
-		bundle.put(toString()+Char.RESISTANCES,resistances.toArray(new String[0]));
+		bundle.put(this +Char.IMMUNITIES,immunities.toArray(new String[0]));
+		bundle.put(this +Char.RESISTANCES,resistances.toArray(new String[0]));
 	}
 
 	public static HeroSubClass restoreFromBundle(Bundle bundle) {
@@ -189,7 +191,16 @@ public enum HeroSubClass implements CharModifier {
 	}
 
 	@Override
-	public int charGotDamage(int damage, NamedEntityKind src) {
+	public int charGotDamage(int damage, NamedEntityKind src, Char target) {
+		switch (this) {
+			case BERSERKER:
+				if (0 < target.hp() && target.hp() <= target.ht() * Fury.LEVEL) {
+					if (!target.hasBuff(BuffFactory.FURY)) {
+						Buff.affect(target, BuffFactory.FURY);
+					}
+				}
+			break;
+		}
 		return damage;
 	}
 
@@ -228,6 +239,16 @@ public enum HeroSubClass implements CharModifier {
 	}
 
 	@Override
+	public int defenceSkillBonus() {
+		return 0;
+	}
+
+	@Override
+	public int attackSkillBonus() {
+		return 0;
+	}
+
+	@Override
 	public Set<String> resistances() {
 		return resistances;
 	}
@@ -255,6 +276,19 @@ public enum HeroSubClass implements CharModifier {
 	@Override
 	public String textureLarge() {
 		return Assets.BUFFS_LARGE;
+	}
+
+	@Override
+	public Image smallIcon() {
+		return null;
+	}
+
+	@Override
+	public float hasteLevel() {
+		if (this == HeroSubClass.SCOUT) {
+			return 1;
+		}
+		return 0;
 	}
 
 }

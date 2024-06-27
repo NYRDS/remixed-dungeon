@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.sprites;
 
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.particles.PixelParticle;
@@ -15,7 +16,7 @@ public class ShopkeeperSprite extends MobSprite {
 		super();
 		
 		texture( Assets.KEEPER );
-		TextureFilm film = new TextureFilm( texture, 14, 14 );
+		TextureFilm film = TextureCache.getFilm( texture, 14, 14 );
 		
 		idle = new Animation( 10, true );
 		idle.frames( film, 1, 1, 1, 1, 1, 0, 0, 0, 0 );

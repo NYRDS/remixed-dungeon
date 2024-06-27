@@ -28,7 +28,7 @@ public class Font extends TextureFilm {
 	
 	public static final String ALL_CHARS = LATIN_FULL+SPECIAL_CHAR+CYRILLIC_UPPER+CYRILLIC_LOWER;
 
-	public SmartTexture texture;
+	public final SmartTexture texture;
 	
 	public float tracking = 0;
 	public float baseLine;
@@ -39,7 +39,7 @@ public class Font extends TextureFilm {
 	
 	private boolean endOfRow = false;
 	
-	HashMap<Object, PointF> glyphShift = new HashMap<>();
+	final HashMap<Object, PointF> glyphShift = new HashMap<>();
 	
 	protected Font( SmartTexture tx ) {
 		super( tx );

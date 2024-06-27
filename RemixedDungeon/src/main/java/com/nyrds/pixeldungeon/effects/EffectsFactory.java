@@ -5,7 +5,6 @@ import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -26,7 +25,7 @@ public class EffectsFactory {
         CustomClipEffect effect = new CustomClipEffect();
         try {
             effect.setupFromJson(effects.get(name));
-        } catch (JSONException e) {
+        } catch (Exception e) {
             throw new ModError(name, e);
         }
 

@@ -9,6 +9,7 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.WeakOptional;
+import com.watabou.noosa.Gizmo;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -41,7 +42,7 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
 
     @LuaInterface
     @Getter
-    @Packable(defaultValue = "")
+    @Packable()
     protected String data;
 
     public WeakOptional<LevelObjectSprite> lo_sprite = WeakOptional.empty();
@@ -61,9 +62,9 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
 
         public void kill() {
             lo_sprite.ifPresent(
-                    sprite -> sprite.kill());
+                    Gizmo::kill);
         }
-    };
+    }
 
     @Deprecated
     @LuaInterface
@@ -98,7 +99,7 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     @LuaInterface
     public void remove() {
         lo_sprite.ifPresent(
-                sprite -> sprite.kill());
+                Gizmo::kill);
 
         level().remove(this);
     }
@@ -127,15 +128,17 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     }
 
     @Override
-    public void restoreFromBundle(Bundle bundle) {
+    public void restoreFromBundle(Bundle bundle ) {
+        super.restoreFromBundle(bundle);
     }
 
     @Override
-    public void storeInBundle(Bundle bundle) {
+    public void storeInBundle(Bundle bundle ) {
+        super.storeInBundle(bundle);
     }
 
     public boolean dontPack() {
-        return false;
+        return super.dontPack();
     }
 
     public int getPos() {
@@ -234,7 +237,7 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
 
     @Override
     public String getEntityKind() {
-        return getClass().getSimpleName();
+        return super.getEntityKind();
     }
 
     public boolean losBlocker() {

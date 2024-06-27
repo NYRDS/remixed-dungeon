@@ -11,7 +11,7 @@ class QuickslotTool extends Tool {
 
     private final QuickSlot slot;
 
-    protected ColorBlock cooldownMeter;
+    protected final ColorBlock cooldownMeter;
 
     QuickslotTool(Char hero) {
         super(-1, Chrome.Type.QUICKSLOT);

@@ -5,7 +5,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 
 public class InteractObject extends CharAction {
-    public LevelObject obj;
+    public final LevelObject obj;
     public InteractObject(LevelObject obj) {
         this.obj = obj;
         dst = obj.getPos();

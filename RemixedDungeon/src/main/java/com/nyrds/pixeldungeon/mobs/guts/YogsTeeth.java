@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.nyrds.pixeldungeon.effects.Devour;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
@@ -29,7 +30,7 @@ public class YogsTeeth extends Mob {
         dmgMax = 80;
         dr = 21;
 
-        exp = 26;
+        expForKill = 26;
 
         addResistance(ToxicGas.class);
 
@@ -38,6 +39,15 @@ public class YogsTeeth extends Mob {
         addImmunity(Sleep.class);
         addImmunity(Terror.class);
         addImmunity(Burning.class);
+    }
+
+    @Override
+    public void damage(int dmg, @NotNull NamedEntityKind src) {
+        for (Mob mob : level().mobs) {
+            mob.beckon(getPos());
+        }
+
+        super.damage(dmg, src);
     }
 
     @Override

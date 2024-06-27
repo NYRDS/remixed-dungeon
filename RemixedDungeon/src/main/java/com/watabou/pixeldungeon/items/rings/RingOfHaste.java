@@ -17,5 +17,9 @@ public class RingOfHaste extends Ring {
 	}
 	
 	public class Haste extends RingBuff {
+		@Override
+		public float hasteLevel() {
+			return level();
+		}
 	}
 }

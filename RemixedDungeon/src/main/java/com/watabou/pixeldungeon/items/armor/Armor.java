@@ -44,7 +44,7 @@ public class Armor extends EquipableItem {
 	protected boolean coverHair = false;
 	protected boolean coverFacialHair = false;
 
-	public int tier;
+	public final int tier;
 
 	private int hitsToKnow = 10;
 

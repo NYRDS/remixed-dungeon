@@ -45,7 +45,7 @@ public class King extends Boss {
 
 	public King() {
 		hp(ht(300));
-		exp = 40;
+		expForKill = 40;
 		baseDefenseSkill = 25;
 		baseAttackSkill  = 32;
 		dmgMin = 20;
@@ -173,7 +173,7 @@ public class King extends Boss {
 			dmgMax = 16;
 			dr = 5;
 			
-			exp = 0;
+			expForKill = 0;
 			
 			setState(MobAi.getStateByClass(Wandering.class));
 		}

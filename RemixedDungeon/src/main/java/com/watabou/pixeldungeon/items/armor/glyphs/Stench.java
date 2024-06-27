@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -15,7 +14,7 @@ import com.watabou.utils.Random;
 
 public class Stench extends Glyph {
 
-	private static Glowing GREEN = new Glowing( 0x22CC44 );
+	private static final Glowing GREEN = new Glowing( 0x22CC44 );
 	
 	@Override
 	public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {

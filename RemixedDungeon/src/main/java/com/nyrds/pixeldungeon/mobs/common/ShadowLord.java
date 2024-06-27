@@ -54,7 +54,7 @@ public class ShadowLord extends Boss implements IZapper {
 		dmgMax = 40;
 		dr = 40;
 
-		exp = 60;
+		expForKill = 60;
 
 		collect(new ScrollOfWeaponUpgrade());
 

@@ -6,6 +6,7 @@ import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModError;
 import com.watabou.noosa.Image;
@@ -380,6 +381,10 @@ public class CustomItem extends EquipableItem {
         script.runOptionalNoRet("ownerTakesDamage",damage);
     }
 
+    public void charDied(Char chr, NamedEntityKind cause) {
+        script.runOptionalNoRet("charDied", chr, cause);
+    }
+
     @Override
     public boolean doPickUp(@NotNull Char hero) {
         script.runOptionalNoRet("onPickUp", hero);
@@ -404,6 +409,16 @@ public class CustomItem extends EquipableItem {
     @Override
     public String unknownStatsText() {
         return script.runOptional("unknownStatsText", super.unknownStatsText());
+    }
+
+    @Override
+    public boolean getBoolean(String key) {
+        return script.runOptional("getBoolean", super.getBoolean(key));
+    }
+
+    @Override
+    public Image getCustomImage() {
+        return script.runOptional("getCustomImage", super.getCustomImage());
     }
 
     private class CustomItemCellListener implements CellSelector.Listener {

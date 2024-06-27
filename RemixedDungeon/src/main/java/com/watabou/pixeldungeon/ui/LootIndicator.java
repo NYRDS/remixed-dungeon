@@ -13,7 +13,7 @@ public class LootIndicator extends Tag {
 	private Item lastItem = null;
 	private int lastQuantity = 0;
 
-	private Char hero;
+	private final Char hero;
 
 	public LootIndicator(Char hero) {
 		super( 0x1F75CC );

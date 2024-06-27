@@ -27,7 +27,7 @@ public class Scorpio extends Mob implements IZapper {
 		dmgMax = 32;
 		dr = 16;
 		
-		exp = 14;
+		expForKill = 14;
 		maxLvl = 25;
 
 

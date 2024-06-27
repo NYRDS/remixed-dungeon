@@ -45,7 +45,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
 
-
+@Deprecated
 public class Yog extends Boss {
 
 	public Yog() {
@@ -53,7 +53,7 @@ public class Yog extends Boss {
 
 		hp(ht(1000));
 		movable = false;
-		exp = 50;
+		expForKill = 50;
 
 		baseDefenseSkill = 20;
 		baseAttackSkill  = 20;
@@ -152,7 +152,7 @@ public class Yog extends Boss {
 			baseDefenseSkill = 25;
 			baseAttackSkill  = 36;
 
-			exp = 0;
+			expForKill = 0;
 
 			dmgMin = 34;
 			dmgMax = 46;
@@ -213,7 +213,7 @@ public class Yog extends Boss {
 			baseDefenseSkill = 25;
 			baseAttackSkill  = 26;
 
-			exp = 0;
+			expForKill = 0;
 
 			dmgMin = 40;
 			dmgMax = 62;
@@ -272,7 +272,6 @@ public class Yog extends Boss {
 	}
 
 	public static class Larva extends Mob {
-
 		{
 			spriteClass = LarvaSprite.class;
 
@@ -283,7 +282,7 @@ public class Yog extends Boss {
 			dmgMin = 25;
 			dmgMax = 30;
 			dr = 8;
-			exp = 0;
+			expForKill = 0;
 
 			setState(MobAi.getStateByClass(Hunting.class));
 		}

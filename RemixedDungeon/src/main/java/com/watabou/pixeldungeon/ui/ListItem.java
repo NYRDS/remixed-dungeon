@@ -12,10 +12,10 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
  */
 public abstract class ListItem extends Component implements IClickable {
 
-	protected CompositeTextureImage   sprite    = new CompositeTextureImage();
-	protected Text    label     = PixelScene.createText(GuiProperties.regularFontSize());
+	protected final CompositeTextureImage   sprite    = new CompositeTextureImage();
+	protected final Text    label     = PixelScene.createText(GuiProperties.regularFontSize());
 	protected boolean clickable = false;
-	protected int     align     = 24;
+	protected final int     align     = 24;
 
 	protected ListItem() {
 		super();

@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Facilitations;
-import com.watabou.pixeldungeon.GamesInProgress;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -75,7 +74,6 @@ import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.ui.AttackIndicator;
-import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndResurrect;
@@ -123,7 +121,7 @@ public class Hero extends Char {
 
     private float awareness;
 
-    private int exp = Scrambler.scramble(0);
+    private int scrambledExp = Scrambler.scramble(0);
     private int sp = Scrambler.scramble(0);
     private int maxSp = Scrambler.scramble(0);
 
@@ -138,8 +136,6 @@ public class Hero extends Char {
     public Hero() {
         super();
         setupCharData();
-        name = StringsManager.getVar(R.string.Hero_Name);
-        name_objective = StringsManager.getVar(R.string.Hero_Name_Objective);
 
         fraction = Fraction.HEROES;
 
@@ -178,7 +174,7 @@ public class Hero extends Char {
 
     private static final String STRENGTH = "STR";
     private static final String EXPERIENCE = "exp";
-    private static final String DIFFICULTY = "difficulty";
+    public static final String DIFFICULTY = "difficulty";
     private static final String SP = "sp";
     private static final String MAX_SP = "maxsp";
     private static final String MAGIC_LEVEL = "magicLvl";
@@ -192,7 +188,7 @@ public class Hero extends Char {
 
         bundle.put(STRENGTH, STR());
 
-        bundle.put(EXPERIENCE, getExp());
+        bundle.put(EXPERIENCE, getExpForLevelUp());
         bundle.put(DIFFICULTY, getDifficulty());
 
 
@@ -222,13 +218,12 @@ public class Hero extends Char {
         sp = Scrambler.scramble(bundle.optInt(SP, 0));
         maxSp = Scrambler.scramble(bundle.optInt(MAX_SP, 10));
 
-        gender = heroClass.getGender();
-
         setSkillLevel(bundle.getInt(MAGIC_LEVEL));
     }
 
-    public static void preview(GamesInProgress.Info info, Bundle bundle) {
-        info.level = bundle.getInt(LEVEL);
+    @Override
+    public int getGender() {
+        return heroClass.getGender();
     }
 
     public String className() {
@@ -300,7 +295,7 @@ public class Hero extends Char {
             super.act();
         }
 
-        Dungeon.observe();
+        observe();
 
         if (paralysed) {
             setCurAction(null);
@@ -385,7 +380,7 @@ public class Hero extends Char {
                     || (item instanceof PotionOfStrength && ((PotionOfStrength) item).isKnown())) {
                 GLog.p(StringsManager.getVar(R.string.Hero_YouNowHave), item.name());
             } else {
-                GLog.i(getHeroYouNowHave(), item.name());
+                GLog.i(StringsManager.getVar(R.string.Hero_YouNowHave), item.name() );
             }
         }
     }
@@ -539,7 +534,7 @@ public class Hero extends Char {
                     if (!mob.swapPosition(this)) {
                         return false;
                     }
-                    Dungeon.observe();
+                    observe();
                 }
             }
 
@@ -597,16 +592,17 @@ public class Hero extends Char {
         }
     }
 
+    @Override
     public void earnExp(int exp) {
 
-        this.setExp(this.getExp() + exp);
+        this.setExp(this.getExpForLevelUp() + exp);
 
         showStatus(CharSprite.POSITIVE, TXT_EXP, exp);
 
         boolean levelUp = false;
 
-        while (this.getExp() >= maxExp()) {
-            this.setExp(this.getExp() - maxExp());
+        while (this.getExpForLevelUp() >= expToLevel()) {
+            this.setExp(this.getExpForLevelUp() - expToLevel());
             lvl(lvl() + 1);
 
             EventCollector.levelUp(heroClass.name() + "_" + subClass.name(), lvl());
@@ -646,7 +642,8 @@ public class Hero extends Char {
         }
     }
 
-    public int maxExp() {
+    @Override
+    public int expToLevel() {
         if (getDifficulty() != 0) {
             return 5 + lvl() * 5;
         } else {
@@ -662,7 +659,7 @@ public class Hero extends Char {
     public boolean add(Buff buff) {
         super.add(buff);
 
-        if (!GameScene.isSceneReady()) {
+        if (!isOnStage()) {
             return false;
         }
 
@@ -697,15 +694,7 @@ public class Hero extends Char {
             interrupt();
         }
 
-        BuffIndicator.refreshHero();
         return true;
-    }
-
-    @Override
-    public void remove(@Nullable Buff buff) {
-        super.remove(buff);
-
-        BuffIndicator.refreshHero();
     }
 
     @Override
@@ -776,7 +765,7 @@ public class Hero extends Char {
         GameScene.gameOver();
 
         if (cause instanceof Doom) {
-            ((Doom) cause).onDeath();
+            ((Doom) cause).onHeroDeath();
         }
 
         Dungeon.gameOver();
@@ -798,7 +787,7 @@ public class Hero extends Char {
 
     @Override
     public void onMotionComplete() {
-        Dungeon.observe();
+        observe();
         search(false);
 
         super.onMotionComplete();
@@ -920,6 +909,11 @@ public class Hero extends Char {
     }
 
     @Override
+    public String getDescription() {
+        return getHeroClass().getDescription();
+    }
+
+    @Override
     public CharSprite newSprite() {
         return HeroSpriteDef.createHeroSpriteDef(this);
     }
@@ -935,16 +929,12 @@ public class Hero extends Char {
         return sprite;
     }
 
-    public static String getHeroYouNowHave() {
-        return StringsManager.getVar(R.string.Hero_YouNowHave);
-    }
-
-    public int getExp() {
-        return Scrambler.descramble(exp);
+    public int getExpForLevelUp() {
+        return Scrambler.descramble(scrambledExp);
     }
 
     public void setExp(int exp) {
-        this.exp = Scrambler.scramble(exp);
+        this.scrambledExp = Scrambler.scramble(exp);
     }
 
     @Override
@@ -1024,8 +1014,19 @@ public class Hero extends Char {
         return subClass;
     }
 
+    @LuaInterface
+    public void setSubClass(String subClass) { //To conceal strange behavior in RemixedRPG
+        EventCollector.setSessionData("subclass", subClass);
+        EventCollector.logException("RemixedPRG setSubClass bug");
+        try {
+            setSubClass(HeroSubClass.valueOf(subClass));
+        } catch (IllegalArgumentException e) {
+            setSubClass(HeroSubClass.NONE);
+        }
+    }
+
     public void setSubClass(HeroSubClass subClass) {
-        EventCollector.setSessionData("subClass", heroClass.name());
+        EventCollector.setSessionData("subClass", subClass.name());
         this.subClass = subClass;
     }
 
@@ -1042,10 +1043,6 @@ public class Hero extends Char {
 
     public int getDifficulty() {
         return difficulty;
-    }
-
-    public void setGender(int gender) {
-        this.gender = gender;
     }
 
     public void setDifficulty(int difficulty) {
@@ -1128,6 +1125,7 @@ public class Hero extends Char {
         return rangedWeapon.valid() && subClass == HeroSubClass.SNIPER;
     }
 
+
     @Override
     public boolean collect(@NotNull Item item) {
         if (super.collect(item)) {
@@ -1143,7 +1141,7 @@ public class Hero extends Char {
             newPos.computeCell(level());
             WandOfBlink.appear(this, newPos.cellId);
             level().press(newPos.cellId, this);
-            Dungeon.observe();
+            observe();
         } else {
             InterlevelScene.returnTo = new Position(newPos);
             InterlevelScene.Do(InterlevelScene.Mode.RETURN);
@@ -1181,5 +1179,19 @@ public class Hero extends Char {
 
     public boolean isSpellUser() {
         return !heroClass.getMagicAffinity().isEmpty();
+    }
+
+    @Override
+    public void observe() {
+        Dungeon.observe();
+    }
+
+    @Override
+    public void collectAnimated(@NotNull Item item) {
+        if (item.doPickUp( this )) {
+            itemPickedUp(item);
+        } else {
+            item.doDrop(this);
+        }
     }
 }

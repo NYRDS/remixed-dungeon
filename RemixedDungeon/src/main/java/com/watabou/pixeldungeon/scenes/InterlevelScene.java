@@ -6,7 +6,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
-import com.nyrds.pixeldungeon.windows.WndTilesKind;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.util.StringsManager;
@@ -21,7 +20,6 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndError;
-import com.watabou.pixeldungeon.windows.WndStory;
 
 import org.jetbrains.annotations.Nullable;
 

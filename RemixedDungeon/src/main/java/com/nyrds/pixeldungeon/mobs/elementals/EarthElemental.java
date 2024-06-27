@@ -33,9 +33,9 @@ public class EarthElemental extends MultiKindMob implements IDepthAdjustable {
 		
 		hp(ht(depth * 10 + 1));
 		baseDefenseSkill = depth / 2 + 1;
-		exp = depth + 1;
+		expForKill = depth + 1;
 		maxLvl = depth + 2;
-		dr = exp;
+		dr = expForKill;
 		baseAttackSkill = baseDefenseSkill /2 + 1;
 
 		dmgMin = ht()/5;
@@ -69,7 +69,7 @@ public class EarthElemental extends MultiKindMob implements IDepthAdjustable {
 					|| c == Terrain.EMPTY_DECO || c == Terrain.GRASS
 					|| c == Terrain.HIGH_GRASS) {
 				
-				GameScene.add(Blob.seed(cell, Math.max(exp,10) * 15, Regrowth.class));
+				GameScene.add(Blob.seed(cell, Math.max(expForKill,10) * 15, Regrowth.class));
 			}
 		}
 		return damage;

@@ -3,6 +3,8 @@ package com.watabou.pixeldungeon.actors;
 
 import android.annotation.SuppressLint;
 
+import com.google.common.collect.Multimap;
+import com.google.common.collect.MultimapBuilder;
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -16,6 +18,7 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundlable;
@@ -30,6 +33,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import lombok.val;
 
 
 public abstract class Actor implements Bundlable, NamedEntityKind {
@@ -41,7 +45,11 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	private static final Map<Actor, Integer> skipCounter = new HashMap<>();
 
 	@Packable
-	private float time;
+	float time = 0;
+	@Packable
+	float prevTime = -1;
+
+	private boolean added = false;
 
 	public static void setRealTimeMultiplier(float realTimeMultiplier) {
 		Actor.realTimeMultiplier = realTimeMultiplier;
@@ -100,11 +108,16 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	private static float now = 0;
 	
 	@SuppressLint("UseSparseArrays")
-	public static Map<Integer, Char> chars = new HashMap<>();
+	public static final Multimap<Integer, Char> chars = MultimapBuilder.hashKeys().arrayListValues().build();
 	
 	public static void clearActors() {
 		now = 0;
 		chars.clear();
+
+		for(Actor a : all) {
+			a.added = false;
+		}
+
 		all.clear();
 
 		CharsList.reset();
@@ -126,6 +139,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		}
 		for (Actor a : all) {
 			a.time -= min;
+			a.prevTime -= min;
 		}
 		now = 0;
 	}
@@ -152,8 +166,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		chars.put(ch.getPos(), ch);
 	}
 	
-	public static void freeCell( int pos ) {
-		chars.remove(pos);
+	public static void freeCell( Char actor ) {
+		chars.remove(actor.getPos(), actor);
 	}
 	
 	/*protected*/final public void next() {
@@ -201,7 +215,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		//Log.i("Main loop", "start");
 		while ((actor=getNextActor(Util.BIG_FLOAT)) != null) {
 
-			if (actor instanceof Char && ((Char)actor).isAlive() && ((Char)actor).getSprite().doingSomething()) {
+			if (actor instanceof Char && ((Char)actor).isAlive() && ((Char)actor).hasSprite() && ((Char)actor).getSprite().doingSomething()) {
 				checkSkips(actor);
 				GLog.debug("skip: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
 				// If it's character's turn to act, but its sprite
@@ -230,17 +244,17 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
 				break;
 			}
-/*
+
 			if(actor.time == timeBefore && all.contains(actor)) { // don't need this check for removed actors
 				var error = String.format("actor %s has same timestamp after act!", actor.getEntityKind());
 				if(Util.isDebug()) {
-					throw new ModError(error);
+					EventCollector.logException(error);
 				} else {
 					actor.spend(TICK);
 					EventCollector.logException(error);
 				}
 			}
-*/
+
 			if(SystemTime.timeSinceTick() > 50) {
 				break;
 			}
@@ -256,6 +270,10 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 	private static void checkSkips(Actor actor) {
 		if(!Util.isDebug()) {
+			return;
+		}
+
+		if(actor.getEntityKind().equals("Hero")) {
 			return;
 		}
 
@@ -320,10 +338,12 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 			if (actor instanceof Char) {
 				Char ch = (Char)actor;
 
-				final CharSprite chSprite = ch.getSprite();
+				if(ch.hasSprite()) {
+					final CharSprite chSprite = ch.getSprite();
 
-				if(chSprite.doingSomething()) {
-					busy = true;
+					if (chSprite.doingSomething()) {
+						busy = true;
+					}
 				}
 
 				chars.put(ch.getPos(), ch);
@@ -367,6 +387,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		all.add( actor );
 		actor.time += time;
 
+		actor.added = true;
+
 		if (actor instanceof Char) {
 			Char ch = (Char)actor;
 
@@ -378,8 +400,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 			for(var item: ch.getBelongings()) {
 				all.add(item);
 			}
-
 		}
+
 
 	}
 	
@@ -387,7 +409,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		
 		if (actor != null) {
 			actor.next();
-			
+			actor.added = false;
 			all.remove( actor );
 		}
 	}
@@ -414,7 +436,12 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 	@LuaInterface
 	public static Char findChar(int pos) {
-		return chars.get(pos);
+		val ret = chars.get(pos);
+		if (ret.isEmpty()) {
+
+			return null;
+		}
+		return ret.iterator().next();
 	}
 
 	@LuaInterface
@@ -448,5 +475,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 	public boolean testAct() {
 		return act();
+	}
+
+	public boolean isOnStage() {
+		return added && GameScene.isSceneReady();
 	}
 }

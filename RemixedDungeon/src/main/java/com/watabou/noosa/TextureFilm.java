@@ -30,7 +30,7 @@ public class TextureFilm {
 	private final int texWidth;
 	private final int texHeight;
 	
-	protected HashMap<Integer,RectF> frames = new HashMap<>();
+	protected final HashMap<Integer,RectF> frames = new HashMap<>();
 	
 	public TextureFilm( Object tx ) {
 		
@@ -38,10 +38,6 @@ public class TextureFilm {
 		
 		texWidth = texture.width;
 		texHeight = texture.height;
-	}
-	
-	public TextureFilm( SmartTexture texture, int width ) {
-		this( texture, width, texture.height );
 	}
 
 	public TextureFilm( Object tx, int width, int height ) {

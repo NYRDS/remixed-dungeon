@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.MimicAmulet;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
@@ -45,7 +46,7 @@ public class PseudoAmulet extends Item {
 		CellEmitter.get( pos ).burst( Speck.factory( Speck.STAR ), 10 );
 		Sample.INSTANCE.play( Assets.SND_MIMIC );
 		
-		return null;
+		return ItemsList.DUMMY;
 	}
 	
 }

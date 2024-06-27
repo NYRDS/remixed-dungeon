@@ -9,9 +9,7 @@ import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
-import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -60,8 +58,8 @@ public class Sign extends LevelObject {
 
 	@Override
 	public boolean stepOn(Char hero) {
-		return true;
-	}
+        return super.stepOn(hero);
+    }
 
 	@Override
 	public void bump(Presser presser) {

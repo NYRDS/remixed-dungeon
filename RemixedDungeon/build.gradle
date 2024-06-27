@@ -30,14 +30,13 @@ android {
     defaultConfig {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        manifestPlaceholders = ["admob_app_id":getApiField("admob_app_id"),
-                                "gow_app_id":getApiField("gow_app_id")]
+        manifestPlaceholders = ["admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1168
-        versionName "31.1.fix.40"
-        targetSdkVersion 33
-        compileSdkVersion 33 // bitrise want it
+        versionCode 1203
+        versionName "32.1.alpha.7"
+        targetSdkVersion 34
+        compileSdkVersion 34
         minSdkVersion 21
 
         // Enabling multidex support.
@@ -81,6 +80,11 @@ android {
             versionCode defaultConfig.versionCode + 10000
         }
 
+        ruStore {
+            minSdkVersion 23
+            dimension "market"
+        }
+
         fdroid {
             dimension "market"
         }
@@ -119,6 +123,9 @@ android {
     lint {
         abortOnError false
     }
+    buildFeatures {
+        buildConfig true
+    }
 
 }
 
@@ -128,7 +135,7 @@ dependencies {
     implementation project(':annotation')
     annotationProcessor project(':processor')
 
-    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
     implementation 'org.hjson:hjson:3.0.0'
@@ -139,30 +146,35 @@ dependencies {
 
     androidImplementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation 'commons-io:commons-io:2.6'
+    implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices
 
 
-    implementation ('com.appodeal.ads:sdk:3.0.2.+') {
-        exclude group: 'com.appodeal.ads.sdk.services', module: 'adjust'
-        exclude group: 'com.appodeal.ads.sdk.services', module: 'appsflyer'
-        exclude group: 'com.appodeal.ads.sdk.services', module: 'firebase'
-        exclude group: 'com.appodeal.ads.sdk.networks', module: 'admob'
-        exclude group: 'com.appodeal.ads.sdk.services', module: 'facebook_analytics'
-        exclude group: 'com.appodeal.ads.sdk.networks', module: 'facebook'
+    implementation ("com.appodeal.ads:sdk:3.3.0.0") {
+        exclude group: "com.appodeal.ads.sdk.networks", module: "meta"
+        exclude group: "com.appodeal.ads.sdk.services", module: "adjust"
+        exclude group: "com.appodeal.ads.sdk.services", module: "appsflyer"
+        exclude group: "com.appodeal.ads.sdk.services", module: "facebook_analytics"
+        exclude group: "com.appodeal.ads.sdk.services", module: "firebase"
+        exclude group: "com.applovin.mediation", module: "google-adapter"
+        exclude group: "com.applovin.mediation", module: "facebook-adapter"
+        exclude group: "io.bidmachine", module: "ads.networks.meta_audience"
+        exclude group: "org.bidon", module: "admob-adapter"
+        exclude group: "org.bidon", module: "meta-adapter"
     }
 
+    
     implementation 'org.jetbrains:annotations:23.0.0'
 
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
     compileOnly 'org.projectlombok:lombok:1.18.22'
 
-    googlePlayImplementation 'com.google.android.gms:play-services-base:18.2.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:20.6.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-base:18.3.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:21.0.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:23.1.0"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:22.2.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:23.0.0'
 
 
-    googlePlayImplementation 'com.android.billingclient:billing:6.0.1'
+    googlePlayImplementation 'com.android.billingclient:billing:6.2.1'
 
     googlePlayImplementation platform('com.google.firebase:firebase-bom:30.3.0')
 
@@ -170,6 +182,7 @@ dependencies {
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
     googlePlayImplementation 'com.google.firebase:firebase-perf'
 
+    ruStoreImplementation 'ru.rustore.sdk:billingclient:3.2.0'
 
     huaweiImplementation 'com.huawei.hms:ads-lite:13.4.30.301'
     huaweiImplementation 'com.huawei.hms:hianalytics:5.0.0.300'

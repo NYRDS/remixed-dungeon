@@ -21,17 +21,17 @@ public abstract class KindOfBow extends MeleeWeapon {
 
 	private static final String AC_CHOOSE_ARROWS   = "KindOfBow_ChooseArrows";
 
-	private Class <? extends Arrow> arrowType = Arrow.class;
+	private String arrowType = "Arrow";
 	
 	public KindOfBow(int tier, float acu, float dly ) {
 		super(tier, acu, dly);
 	}
 	
 	public void useArrowType(Arrow arrow){
-		arrowType = arrow.getClass();
+		arrowType = arrow.getEntityKind();
 	}
 	
-	public Class <? extends Arrow> arrowType() {
+	public String arrowType() {
 		return arrowType;
 	}
 	

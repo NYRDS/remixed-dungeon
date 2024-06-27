@@ -56,6 +56,6 @@ public class WndGameplaySettings extends WndMenuCommon {
     }
 
     private String moveTimeoutText() {
-        return String.format(StringsManager.getVar(R.string.WndSettings_moveTimeout),Double.toString(GamePreferences.getMoveTimeout()/1000));
+        return String.format(StringsManager.getVar(R.string.WndSettings_moveTimeout), GamePreferences.getMoveTimeout() / 1000);
     }
 }

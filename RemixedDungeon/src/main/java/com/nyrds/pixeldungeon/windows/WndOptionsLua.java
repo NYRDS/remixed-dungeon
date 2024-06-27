@@ -10,7 +10,7 @@ import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 @LuaInterface
 public class WndOptionsLua extends WndOptions {
 
-    private LuaFunction callback;
+    private final LuaFunction callback;
 
 
     public WndOptionsLua(Object callback, String title, String message, String... options) {

@@ -40,7 +40,7 @@ return buff.init{
     act = function(self,buff)
         if not self.data.state then
             self.data.state = true
-            RPD.BuffIndicator:refreshHero()
+            buff.target:buffsUpdated()
         end
 
         buff:spend(shields.rechargeTime(buff:level(),buff.target:effectiveSTR()))
@@ -56,7 +56,7 @@ return buff.init{
                 RPD.playSound("body_armor")
 
                 self.data.state = false
-                RPD.BuffIndicator:refreshHero()
+                buff.target:buffsUpdated()
 
                 buff:spend(
                         shields.waitAfterBlockTime(

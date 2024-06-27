@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.EquippedItemCallback;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
@@ -53,7 +54,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
     private final Char owner;
 
-    public Bag backpack;
+    public final Bag backpack;
 
     public Item getSelectedItem() {
         return selectedItem;
@@ -129,7 +130,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
     }
 
     private final Map<Slot, EquipableItem> blockedSlots = new HashMap<>();
-    public Map<EquipableItem, Slot> usedSlots = new HashMap<>();
+    public final Map<EquipableItem, Slot> usedSlots = new HashMap<>();
 
     private final Set<EquipableItem> activatedItems = new HashSet<>();
 
@@ -221,7 +222,6 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
     @LuaInterface
     @Nullable
-    @Deprecated
     public Item getItem(String itemClass) { //Still here for old mods
         for (Item item : this) {
             if (itemClass.equals(item.getEntityKind())) {
@@ -229,6 +229,25 @@ public class Belongings implements Iterable<Item>, Bundlable {
             }
         }
         return null;
+    }
+    @LuaInterface
+    public Item getItemPartialMatch(String itemClass) {
+        for (Item item : this) {
+            if (item.getEntityKind().contains(itemClass))
+                return item;
+            }
+        return ItemsList.DUMMY;
+    }
+
+    @LuaInterface
+    public EquipableItem getEquipableItemPartialMatch(String itemClass) {
+        for (Item item : this) {
+            if (item instanceof EquipableItem) {
+                if (item.getEntityKind().contains(itemClass))
+                    return (EquipableItem) item;
+            }
+        }
+        return ItemsList.DUMMY;
     }
 
     @Deprecated
@@ -262,6 +281,15 @@ public class Belongings implements Iterable<Item>, Bundlable {
     public void identify() {
         for (Item item : this) {
             item.identify();
+        }
+    }
+
+    public void forEachEquipped(EquippedItemCallback callback) {
+        var itemIterator = iterator();
+
+        while (itemIterator.hasNextEquipped()) {
+            EquipableItem item = (EquipableItem) itemIterator.next();
+            callback.onItem(item);
         }
     }
 

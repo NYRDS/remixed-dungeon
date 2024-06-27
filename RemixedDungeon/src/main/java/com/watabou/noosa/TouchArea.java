@@ -19,13 +19,12 @@ package com.watabou.noosa;
 
 import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.input.Touchscreen.Touch;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Signal;
 
 public class TouchArea extends Visual implements Signal.Listener<Touchscreen.Touch> {
 
     // Its target can be toucharea itself
-    public Visual target;
+    public final Visual target;
 
     private boolean catchTouch = true;
 

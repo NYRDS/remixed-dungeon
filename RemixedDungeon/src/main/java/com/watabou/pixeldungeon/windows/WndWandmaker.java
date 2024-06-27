@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -64,11 +63,7 @@ public class WndWandmaker extends Window {
 		item.removeItemFrom(Dungeon.hero);
 
 		reward.identify();
-		if (reward.doPickUp( Dungeon.hero )) {
-			GLog.i( Hero.getHeroYouNowHave(), reward.name() );
-		} else {
-			reward.doDrop(wandmaker);
-		}
+		Dungeon.hero.collectAnimated(reward);
 
         wandmaker.say(Utils.format(R.string.WndWandmaker_Farawell, Dungeon.hero.className() ) );
 		wandmaker.destroy();

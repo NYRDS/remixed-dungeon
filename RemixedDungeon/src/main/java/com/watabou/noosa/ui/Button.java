@@ -21,7 +21,6 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.TouchArea;
-import com.watabou.pixeldungeon.utils.GLog;
 
 public class Button extends Component {
 
@@ -58,7 +57,7 @@ public class Button extends Component {
 
 			@Override
 			public void onSignal(Touch touch) {
-				if(!isVisible()) {
+				if(!isVisible() || !Button.this.isActive()) {
 					return;
 				}
 				super.onSignal(touch);

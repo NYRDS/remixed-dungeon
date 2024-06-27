@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.platform.audio.Sample;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.particles.Emitter;
@@ -19,7 +20,7 @@ public class BlacksmithSprite extends MobSprite {
 		
 		texture( Assets.TROLL );
 		
-		TextureFilm frames = new TextureFilm( texture, 13, 16 );
+		TextureFilm frames = TextureCache.getFilm( texture, 13, 16 );
 		
 		idle = new Animation( 15, true );
 		idle.frames( frames, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 3 );

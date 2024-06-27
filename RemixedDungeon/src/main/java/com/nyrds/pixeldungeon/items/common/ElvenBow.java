@@ -6,7 +6,7 @@ import com.watabou.pixeldungeon.items.Item;
 public class ElvenBow extends Bow {
 
 	public ElvenBow() {
-		super( 1, 1.2f, 1.3f );
+		super( 1, 1.2f, 1f );
 		image = 6;
 	}
 	

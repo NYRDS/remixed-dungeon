@@ -3,7 +3,6 @@ package com.nyrds.platform.lua;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
-import com.watabou.pixeldungeon.utils.GLog;
 
 import org.luaj.vm2.lib.jse.LuajavaLib;
 

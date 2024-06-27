@@ -26,6 +26,8 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import lombok.val;
+
 public class ItemSprite extends MovieClip {
 
 	public static final int SIZE = 16;
@@ -68,7 +70,7 @@ public class ItemSprite extends MovieClip {
 
 	private void updateTexture(String file) {
 		texture(file);
-		film = new TextureFilm(texture, SIZE, SIZE);
+		film = TextureCache.getFilm(texture, SIZE, SIZE);
 	}
 
 	protected void originToCenter() {
@@ -83,7 +85,11 @@ public class ItemSprite extends MovieClip {
 		this.heap = heap;
 		float scale = heap.scale();
 		setScaleXY(scale, scale);
-		view(heap.imageFile(), heap.image(), heap.glowing());
+		if(heap.type == Heap.Type.HEAP) {
+			view(heap.peek());
+		} else {
+			view(heap.imageFile(), heap.image(), heap.glowing());
+		}
 		place(heap.pos);
 	}
 
@@ -154,6 +160,15 @@ public class ItemSprite extends MovieClip {
 			overlay = null;
 		}
 
+		val customImage = item.getCustomImage();
+		if(customImage!= null) {
+			if ((this.glowing = item.glowing()) == null) {
+				resetColor();
+			}
+			copy(customImage);
+			return this;
+		}
+
 		return view(item.imageFile(), item.image(), item.glowing());
 	}
 
@@ -190,7 +205,7 @@ public class ItemSprite extends MovieClip {
 			}
 		}
 
-		if (getVisible())
+		if (getVisible()) {
 			if (glowing != null && glowing != Glowing.NO_GLOWING) {
 				if (glowUp && (phase += elapsed) > glowing.period) {
 					glowUp = false;
@@ -207,6 +222,7 @@ public class ItemSprite extends MovieClip {
 				ga = glowing.green * value;
 				ba = glowing.blue * value;
 			}
+		}
 	}
 
 	@Override

@@ -69,11 +69,7 @@ public class WndSadGhost extends Window {
 
 		item.removeItemFrom(Dungeon.hero);
 
-		if (reward.doPickUp( Dungeon.hero )) {
-			GLog.i( Hero.getHeroYouNowHave(), reward.name() );
-		} else {
-			reward.doDrop(ghost);
-		}
+		Dungeon.hero.collectAnimated(reward);
 
         ghost.say(StringsManager.getVar(R.string.WndSadGhost_Farewell));
 		ghost.die( CharsList.DUMMY );

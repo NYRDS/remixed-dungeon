@@ -171,7 +171,7 @@ public class Spell implements NamedEntityKind {
         val texture = TextureCache.get(texture());
         var spellImage = new Image(texture);
 
-        spellImage.frame(new TextureFilm(texture, 16, 16).get(getImage(caster)));
+        spellImage.frame(TextureCache.getFilm(texture, 16, 16).get(getImage(caster)));
 
         return spellImage;
     }

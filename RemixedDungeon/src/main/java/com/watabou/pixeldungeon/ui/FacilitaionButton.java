@@ -28,12 +28,8 @@ public class FacilitaionButton extends Button {
         super.createChildren();
 
         image = Icons
-                .get(Dungeon.getChallenges() > 0 ? Icons.CHALLENGE_ON
-                        : Icons.CHALLENGE_OFF);
-
-        if(Dungeon.getFacilitations() > 0) {
-            image.hardlight(0.6f,0.9f,0.6f);
-        }
+                .get(Dungeon.getFacilitations() > 0 ? Icons.FACILITATIONS_ON
+                        : Icons.FACILITATIONS_OFF);
 
         add(image);
     }
@@ -47,17 +43,17 @@ public class FacilitaionButton extends Button {
         image.setY(PixelScene.align(y));
     }
 
+    public void update() {
+        image.copy(Icons.get(Dungeon.getFacilitations() > 0 ? Icons.FACILITATIONS_ON
+                : Icons.FACILITATIONS_OFF));
+    }
+
     @Override
     protected void onClick() {
-        parentScene.add(new WndGameplayCustomization(true) {
+        parentScene.add(new WndGameplayCustomization(true, WndGameplayCustomization.Mode.FACILITATIONS) {
             public void onBackPressed() {
                 super.onBackPressed();
-                image.copy(Icons.get(Dungeon.getChallenges() > 0 ? Icons.CHALLENGE_ON
-                        : Icons.CHALLENGE_OFF));
-
-                if(Dungeon.getFacilitations() > 0) {
-                    image.hardlight(0.6f,0.9f,0.6f);
-                }
+                update();
             }
         });
     }

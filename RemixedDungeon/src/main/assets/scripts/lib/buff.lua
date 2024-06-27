@@ -29,7 +29,7 @@ function buff.saveData(self)
     return serpent.dump(self.data or {})
 end
 
-function buff.loadData(self, buff, str)
+function buff.loadData(self, _, str)
     local _,data = serpent.load(str)
     self.data = data or {}
 end
@@ -42,11 +42,11 @@ function buff.restoreData(self)
     return self.data or {}
 end
 
-function buff.setProperty(self, buff, key, value)
+function buff.setProperty(self, key, value)
     self.data[key] = value
 end
 
-function buff.getProperty(self, buff, key)
+function buff.getProperty(self, key)
     return self.data[key]
 end
 
@@ -65,6 +65,8 @@ end
 function buff.buffDesc(self)
     local ret = buff.defaultDesc()
     local own = self:desc()
+
+    self.data = own.data or {}
 
     for k,v in pairs(ret) do
         ret[k] = own[k] or v

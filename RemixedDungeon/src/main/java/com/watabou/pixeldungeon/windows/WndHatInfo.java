@@ -26,7 +26,7 @@ public class WndHatInfo extends Window {
 	private static final int HEIGHT        = 160;
 	private static final int BUTTON_HEIGHT = 16;
 
-	public WndHatInfo(final String accessory, String price, final Window parent ) {
+	public WndHatInfo(final String accessory, String price) {
 		final Accessory item = Accessory.getByName(accessory);
 
 		EventCollector.logScene(getClass().getCanonicalName()+":"+item.getClass().getSimpleName());
@@ -90,9 +90,7 @@ public class WndHatInfo extends Window {
 								item.ownIt(true);
 								item.equip();
 								onBackPressed();
-								if(parent!=null) {
-									parent.hide();
-								}
+								Window.hideParentWindow(this);
 								if(!Game.isPaused()) {
 									GameScene.show(new WndHats());
 								}

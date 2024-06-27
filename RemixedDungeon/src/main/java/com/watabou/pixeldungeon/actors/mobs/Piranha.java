@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 public class Piranha extends Mob {
 	
 	public Piranha() {
+		carcassChance = 0;
 		spriteClass = PiranhaSprite.class;
 
 		walkingType = WalkingType.WATER;
@@ -34,7 +35,7 @@ public class Piranha extends Mob {
 
 		baseSpeed = 2f;
 		
-		exp = 0;
+		expForKill = 0;
 
 		collect(ItemFactory.itemByName("RawFish"));
 

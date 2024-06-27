@@ -31,12 +31,12 @@ import org.luaj.vm2.lib.VarArgFunction;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import org.luaj.vm2.lib.jse.JseBaseLib;
 import org.luaj.vm2.lib.jse.JseIoLib;
-import org.luaj.vm2.lib.jse.JseMathLib;
 import org.luaj.vm2.lib.jse.JseOsLib;
 
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.WeakHashMap;
 
 import lombok.Synchronized;
 
@@ -65,8 +65,8 @@ public class LuaEngine implements ResourceFinder {
 
 	static private      LuaEngine engine              = new LuaEngine();
 
-    private final Map<String, LuaTable> modules = new HashMap<>();
-    private final Map<LuaScript, LuaTable> moduleInstance = new HashMap<>();
+    private final WeakHashMap<String, LuaTable> modules = new WeakHashMap<>();
+    private final WeakHashMap<LuaScript, LuaTable> moduleInstance = new WeakHashMap<>();
 
     private final LuaValue stp;
 
@@ -125,7 +125,7 @@ public class LuaEngine implements ResourceFinder {
 		globals.load(new TableLib());
 		globals.load(new StringLib());
 		globals.load(new CoroutineLib());
-		globals.load(new JseMathLib());
+		globals.load(new RpdMathLib());
 		globals.load(new JseIoLib());
 		globals.load(new JseOsLib());
 		globals.load(new PlatformLuajavaLib());
@@ -140,6 +140,7 @@ public class LuaEngine implements ResourceFinder {
 		globals.set("loadResource", new resLoader());
 
 		stp = call("require","scripts/lib/StackTracePlus");
+		call("require","scripts/startup/quirks");
 	}
 
 	@Synchronized

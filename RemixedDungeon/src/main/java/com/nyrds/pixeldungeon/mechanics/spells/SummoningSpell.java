@@ -3,12 +3,8 @@ package com.nyrds.pixeldungeon.mechanics.spells;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
-import com.nyrds.platform.util.StringsManager;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.levels.Level;
@@ -25,7 +21,7 @@ import java.util.Collection;
  */
 public class SummoningSpell extends Spell {
 
-    private int summonLimit = 1;
+    private final int summonLimit = 1;
 
     protected String mobKind = "Rat";
 
@@ -35,62 +31,53 @@ public class SummoningSpell extends Spell {
             return false;
         }
 
-        if(chr instanceof Hero) {
-            Hero hero = (Hero)chr;
-            if (isSummoningLimitReached(hero)) {
-                if(reallyCast) {
-                    GLog.w(getLimitWarning(getSummonLimit()));
-                }
-                return false;
+        if (isSummoningLimitReached(chr)) {
+            if (reallyCast) {
+                GLog.w(getLimitWarning(getSummonLimit()));
             }
+            return false;
         }
+
         return true;
     }
 
     @Override
-    public boolean cast(@NotNull Char chr){
-        if(!super.cast(chr)) {
-	        return false;
+    public boolean cast(@NotNull Char chr) {
+        if (!super.cast(chr)) {
+            return false;
         }
 
-	    Level level = Dungeon.level;
-        int spawnPos = level.getEmptyCellNextTo(chr.getPos());
+        Level level = chr.level();
+        int casterPos = chr.getPos();
+        int spawnPos = level.getEmptyCellNextTo(casterPos);
 
         Wound.hit(chr);
         Buff.detach(chr, Sungrass.Health.class);
 
         if (level.cellValid(spawnPos)) {
             Mob pet = MobFactory.mobByName(mobKind);
+            pet = Mob.makePet(pet, chr.getId());
 
-            if(chr instanceof Hero) {
-		        pet = Mob.makePet(pet, chr.getId());
-	        } else if(chr instanceof Mob) {
-		        Mob mob = (Mob) chr;
-		        pet.setFraction(mob.fraction());
-	        } else {
-		        pet.setFraction(Fraction.DUNGEON);
-	        }
-
-	        pet.setPos(spawnPos);
-            level.spawnMob(pet,0,chr.getPos());
+            pet.setPos(spawnPos);
+            level.spawnMob(pet, 0, casterPos);
         }
-        
-	    castCallback(chr);
-	    return true;
+
+        castCallback(chr);
+        return true;
     }
 
 
-    private boolean isSummoningLimitReached(Hero hero){
+    private boolean isSummoningLimitReached(Char hero) {
         return getSummonLimit() <= getNumberOfSummons(hero);
     }
 
-    private int getNumberOfSummons(Hero hero){
+    private int getNumberOfSummons(Char hero) {
         Collection<Integer> pets = hero.getPets();
 
         int n = 0;
         for (Integer mobId : pets) {
             Char aChar = CharsList.getById(mobId);
-            if(aChar.valid()) {
+            if (aChar.valid()) {
                 Mob mob = (Mob) aChar;
                 if (mob.isAlive() && mob.getEntityKind().equals(mobKind)) {
                     n++;
@@ -101,7 +88,7 @@ public class SummoningSpell extends Spell {
         return n;
     }
 
-    private String getLimitWarning(int limit){
+    private String getLimitWarning(int limit) {
         return Utils.format(R.string.Spells_SummonLimitReached, this.name(), limit);
     }
 

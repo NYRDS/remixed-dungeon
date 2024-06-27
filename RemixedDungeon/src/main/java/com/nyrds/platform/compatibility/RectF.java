@@ -3,10 +3,10 @@ package com.nyrds.platform.compatibility;
 import org.jetbrains.annotations.Nullable;
 
 public class RectF {
-    public float left;
+    public final float left;
     public float top;
-    public float right;
-    public float bottom;
+    public final float right;
+    public final float bottom;
 
 
     public RectF(float left, float top, float right, float bottom) {

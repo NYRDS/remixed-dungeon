@@ -24,16 +24,15 @@ import com.watabou.utils.PointF;
 
 public class PosTweener extends Tweener {
 
-	public Visual visual;
+	public final Visual visual;
 
-	public PointF start;
-	public PointF end;
+	public final PointF start;
+	public final PointF end;
 
 	@LuaInterface
 	public static void attachTo(Visual visual, float dx, float dy, float time) {
 		PosTweener tweener = new PosTweener(visual,dx,dy,time);
 		visual.getParent().add(tweener);
-		tweener.listener = Gizmo::killAndErase;
 	}
 
 

@@ -9,7 +9,6 @@ import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -26,7 +25,7 @@ class BuffsTab extends Group {
     private float pos;
 
     public BuffsTab(final Char chr) {
-        chr.forEachBuff(buff -> buffSlot(buff));
+        chr.forEachBuff(this::buffSlot);
     }
 
     private void buffSlot(CharModifier buff) {

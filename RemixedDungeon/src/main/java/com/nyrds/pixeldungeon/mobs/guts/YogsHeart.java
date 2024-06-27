@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -11,6 +12,8 @@ import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by DeadDie on 12.02.2016
@@ -24,7 +27,7 @@ public class YogsHeart extends Mob {
         dmgMax = 45;
         dr = 22;
 
-        exp = 12;
+        expForKill = 12;
 
         addImmunity(ToxicGas.class);
         addImmunity(Paralysis.class);
@@ -33,6 +36,16 @@ public class YogsHeart extends Mob {
         addImmunity(Terror.class);
         addImmunity(Burning.class);
     }
+
+    @Override
+    public void damage(int dmg, @NotNull NamedEntityKind src) {
+        for (Mob mob : level().mobs) {
+            mob.beckon(getPos());
+        }
+
+        super.damage(dmg, src);
+    }
+
 
     @Override
     public int defenseProc(Char enemy, int damage) {

@@ -148,7 +148,7 @@ public class WndHats extends Window {
 						onBackPressed();
 						return;
 					}
-					GameScene.show(new WndHatInfo(item, finalPrice, currentWindow));
+					GameScene.show(new WndHatInfo(item, finalPrice));
 				}
 			};
 

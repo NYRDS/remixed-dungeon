@@ -26,7 +26,7 @@ public class Nightmare extends Mob {
         dr = 10;
 
         flying = true;
-        exp = 0;
+        expForKill = 0;
     }
 
     @Override

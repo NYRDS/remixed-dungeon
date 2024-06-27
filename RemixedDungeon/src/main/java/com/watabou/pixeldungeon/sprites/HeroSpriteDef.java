@@ -100,8 +100,8 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
             if (chr.isFlying()) {
                 play(fly);
             }
-            if (chr instanceof Hero) {
-                Camera.main.target = this;
+            if (chr == Dungeon.hero) {
+                Camera.main.setTarget(this);
             }
         });
     }
@@ -115,8 +115,8 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
     public void place(int p) {
         ch.ifPresent(chr -> {
             super.place(p);
-            if (chr instanceof Hero) {
-                Camera.main.target = this;
+            if (chr == Dungeon.hero) {
+                Camera.main.setTarget(this);
             }
         });
     }

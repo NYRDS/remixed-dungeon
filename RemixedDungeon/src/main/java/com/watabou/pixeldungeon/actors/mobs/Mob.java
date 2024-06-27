@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
+import com.nyrds.generated.BundleHelper;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Horrified;
 import com.nyrds.pixeldungeon.ai.Hunting;
@@ -10,12 +11,11 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.RunningAmok;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
-import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.ModQuirks;
+import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
-import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
-import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
@@ -23,11 +23,10 @@ import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
-import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
-import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
@@ -36,38 +35,25 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
-import com.watabou.pixeldungeon.actors.buffs.Poison;
-import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
-import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.features.Chasm;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import lombok.SneakyThrows;
 
@@ -76,30 +62,33 @@ public abstract class Mob extends Char {
     public static final String TXT_RAGE = "#$%^";
 
     private static final float SPLIT_DELAY = 1f;
+    public static final String LOOT = "loot";
 
     protected Object spriteClass;
 
-    protected int exp = 1;
-    protected int maxLvl = 50;
+    @Packable(defaultValue = "1")
+    protected int expForKill = 1;
 
-    @Packable(defaultValue = "false")
-    public boolean enemySeen;
+    protected int maxLvl = 50;
+    protected float carcassChance = ModdingMode.inMod() ? ModQuirks.defaultCarcassChance : 0.5f;
 
     public static final float TIME_TO_WAKE_UP = 1f;
-
-    static private final Map<String, JSONObject> defMap = new HashMap<>();
 
     private static final String STATE = "state";
     private static final String FRACTION = "fraction";
     protected int dmgMin = 0;
     protected int dmgMax = 0;
-    protected int attackSkill = 0;
+    protected final int attackSkill = 0;
     protected int dr = 0;
     protected boolean isBoss = false;
 
     public Mob() {
         super();
         setupCharData();
+        getScript().run("fillStats");
+        if (ModQuirks.mobLeveling) {
+            lvl(Random.Int(1, (int) RemixedDungeon.getDifficultyFactor() + 1));
+        }
     }
 
     public void releasePet() {
@@ -121,6 +110,7 @@ public abstract class Mob extends Char {
 
     @NotNull
     public static Mob makePet(@NotNull Mob pet, int ownerId) {
+        pet.expForKill = 0;
         if (pet.canBePet()) {
             pet.setFraction(Fraction.HEROES);
             pet.setOwnerId(ownerId);
@@ -131,11 +121,6 @@ public abstract class Mob extends Char {
     @Override
     public boolean followOnLevelChanged(InterlevelScene.Mode changeMode) {
         return getOwner() instanceof Hero;
-    }
-
-    @LuaInterface
-    public int getOwnerPos() {
-        return getOwner().getPos();
     }
 
     public void setFraction(Fraction fr) {
@@ -161,8 +146,8 @@ public abstract class Mob extends Char {
 
         fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
 
-        if (bundle.contains("loot")) { //pre 29.6 saves compatibility
-            loot(bundle.get("loot"), 1);
+        if (bundle.contains(LOOT)) { //pre 29.6 saves compatibility
+            loot(bundle.get(LOOT), 1);
         }
     }
 
@@ -177,6 +162,7 @@ public abstract class Mob extends Char {
 
     @SneakyThrows
     public CharSprite newSprite() {
+
         String descName = "spritesDesc/" + getEntityKind() + ".json";
         if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
             return new MobSpriteDef(descName, getKind());
@@ -214,40 +200,20 @@ public abstract class Mob extends Char {
             return true;
         }
 
-        if (Random.Float() < 0.01 / lvl() && ! level().isSafe()) {
-            lvl(lvl() + 1);
-
-            ht((int) (ht() + GameLoop.getDifficultyFactor() * 2));
-            heal(ht(), this);
-
-            getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Hero_LevelUp));
-        }
-
         float timeBeforeAct = actorTime();
 
-        script.runOptional("onAct");
+
         //GLog.debug("%s is %s", getEntityKind(), getState().getTag());
         getState().act(this);
 
-/*		if(actorTime() == timeBeforeAct && Util.isDebug()) {
+		if(actorTime() == timeBeforeAct) {
 			var error = String.format("actor %s has same timestamp after %s act!", getEntityKind(), getState().getTag());
-			if(Util.isDebug()) {
-				throw new ModError(error);
-			} else {
-				spend(MICRO_TICK);
-				EventCollector.logException(error);
-			}
-		}*/
+            spend(TICK);
+            EventCollector.logException(error);
+		}
         return true;
     }
 
-
-    public boolean isEnemyInFov() {
-        final Char enemy = getEnemy();
-        final int enemyPos = enemy.getPos();
-        return enemy.valid() && enemy.isAlive() && level().cellValid(enemyPos) && level().fieldOfView[enemyPos]
-                && enemy.invisible <= 0;
-    }
 
     public void moveSprite(int from, int to) {
 
@@ -263,7 +229,7 @@ public abstract class Mob extends Char {
     public boolean add(Buff buff) {
         super.add(buff);
 
-        if (!GameScene.isSceneReady()) {
+        if (!isOnStage()) {
             return true;
         }
 
@@ -302,12 +268,6 @@ public abstract class Mob extends Char {
         return false;
     }
 
-    @Override
-    public void move(int step) {
-        script.run("onMove", step);
-
-        super.move(step);
-    }
 
     @Override
     public final void onZapComplete() {
@@ -320,36 +280,6 @@ public abstract class Mob extends Char {
         return enemySeen ? super.defenseSkill(enemy) : 0;
     }
 
-    @Override
-    public int attackProc(@NotNull Char enemy, int damage) {
-        int baseDamage = super.attackProc(enemy, damage);
-        return script.run("onAttackProc", enemy, baseDamage).optint(baseDamage);
-    }
-
-    @Override
-    public int defenseProc(Char enemy, int damage) {
-        int baseDamage = super.defenseProc(enemy, damage);
-
-        if (!enemySeen && enemy.getSubClass() == HeroSubClass.ASSASSIN) {
-            baseDamage += Random.Int(1, baseDamage);
-            Wound.hit(this);
-        }
-
-        if (getOwnerId() != enemy.getId()) {
-            setEnemy(enemy);
-        }
-
-        return script.run("onDefenceProc", enemy, baseDamage).optint(baseDamage);
-    }
-
-    @Override
-    public void damage(int dmg, @NotNull NamedEntityKind src) {
-        script.run("onDamage", dmg, src);
-
-        getState().gotDamage(this, src, dmg);
-
-        super.damage(dmg, src);
-    }
 
     @Override
     public void destroy() {
@@ -368,34 +298,14 @@ public abstract class Mob extends Char {
     public void die(@NotNull NamedEntityKind cause) {
 
         spend(Actor.MICRO_TICK);
-        getState().onDie(this);
 
-        if (cause == null) {
-            cause = CharsList.DUMMY; //Mods may and will misbehave
-            EventCollector.logException("null_death_cause");
-        }
-
-        script.run("onDie", cause);
 
         Badges.validateRare(this);
 
         Hero hero = Dungeon.hero;
 
         if (!cause.getEntityKind().equals(Chasm.class.getSimpleName())) {
-            //TODO we should move this block out of Mob class ( in script for example )
-            if (hero.getHeroClass() == HeroClass.NECROMANCER) {
-                if (hero.isAlive()) {
-                    if (hero.getItemFromSlot(Belongings.Slot.ARMOR) instanceof NecromancerRobe) {
-                        hero.accumulateSkillPoints();
-                    }
-                }
-            }
-
-            for (Item item : hero.getBelongings()) {
-                if (item instanceof BlackSkull && item.isEquipped(hero)) {
-                    ((BlackSkull) item).mobDied(this, hero);
-                }
-            }
+            hero.getBelongings().forEachEquipped(item -> item.charDied(this, hero));
         }
 
         if (hero.isAlive()) {
@@ -412,8 +322,8 @@ public abstract class Mob extends Char {
                 }
 
                 if (!(cause instanceof Mob) || hero.getHeroClass() == HeroClass.NECROMANCER) {
-                    if (hero.lvl() <= (maxLvl + lvl()) && exp > 0) {
-                        hero.earnExp(exp);
+                    if (hero.lvl() <= (maxLvl + lvl()) && expForKill > 0) {
+                        hero.earnExp(expForKill);
                     }
                 }
             }
@@ -424,6 +334,13 @@ public abstract class Mob extends Char {
         Library.identify(Library.MOB, getEntityKind());
 
         if (!(cause instanceof Chasm)) {
+            if (Random.Float(1) <= carcassChance) {
+                Item carcass = carcass();
+                if (carcass.valid()) {
+                    level().drop(carcass, getPos());
+                }
+            }
+
             getBelongings().dropAll();
         }
 
@@ -444,13 +361,6 @@ public abstract class Mob extends Char {
 
         level().spawnMob(clone, SPLIT_DELAY, getPos());
 
-        if (hasBuff(Burning.class)) {
-            Buff.affect(clone, Burning.class).reignite(clone);
-        }
-        if (hasBuff(Poison.class)) {
-            Buff.affect(clone, Poison.class, 2);
-        }
-
         return clone;
     }
 
@@ -458,7 +368,7 @@ public abstract class Mob extends Char {
         resurrectAnim();
 
         int spawnPos = getPos();
-        Mob new_mob = MobFactory.mobByName(getMobClassName());
+        Mob new_mob = MobFactory.mobByName(getEntityKind());
 
         if (level().cellValid(spawnPos)) {
             new_mob.setPos(spawnPos);
@@ -467,10 +377,11 @@ public abstract class Mob extends Char {
         }
     }
 
+    @Override
     public void resurrect(Char parent) {
 
         int spawnPos = getPos();
-        Mob new_mob = MobFactory.mobByName(getMobClassName());
+        Mob new_mob = MobFactory.mobByName(getEntityKind());
 
         if (level().cellValid(spawnPos)) {
             new_mob.setPos(spawnPos);
@@ -491,10 +402,16 @@ public abstract class Mob extends Char {
         setTarget(cell);
     }
 
-    public void fromJson(JSONObject mobDesc) throws JSONException, InstantiationException, IllegalAccessException {
-        if (mobDesc.has("loot")) {
+    @SneakyThrows
+    public void fromJson(JSONObject mobDesc) {
+        Bundle descBundle = new Bundle();
+        BundleHelper.Pack(this, descBundle);
+        descBundle.mergeWith(mobDesc);
+        BundleHelper.UnPack(this, descBundle);
+
+        if (mobDesc.has(LOOT)) {
             float lootChance = (float) mobDesc.optDouble("lootChance", 1f);
-            loot(ItemFactory.createItemFromDesc(mobDesc.getJSONObject("loot")), lootChance);
+            loot(ItemFactory.createItemFromDesc(mobDesc.getJSONObject(LOOT)), lootChance);
         }
 
         getBelongings().setupFromJson(mobDesc);
@@ -510,19 +427,6 @@ public abstract class Mob extends Char {
         return state;
     }
 
-    protected JSONObject getClassDef() {
-        if (!defMap.containsKey(getEntityKind())) {
-            defMap.put(getEntityKind(), JsonHelper.tryReadJsonFromAssets("mobsDesc/" + getEntityKind() + ".json"));
-        }
-
-        return defMap.get(getEntityKind());
-    }
-
-    public void onSpawn(Level level) {
-        Buff.affect(this, Regeneration.class);
-        script.run("onSpawn", level);
-    }
-
 
     public boolean isPet() {
         return fraction == Fraction.HEROES;
@@ -530,6 +434,16 @@ public abstract class Mob extends Char {
 
     @Override
     public boolean friendly(@NotNull Char chr) {
+        return friendly(chr, 0);
+    }
+
+    @Override
+    public boolean friendly(@NotNull Char chr, int r_level) {
+
+        if (r_level > 7) {
+            EventCollector.logEvent("too high r_level in Mob::friendly");
+            return false;
+        }
 
         if (chr == this) {
             return true;
@@ -539,7 +453,7 @@ public abstract class Mob extends Char {
             return false;
         }
 
-        if (getOwnerId() == chr.getId()) {
+        if (getOwnerId() == chr.getId() || getId() == chr.getId()) {
             return true;
         }
 
@@ -547,8 +461,10 @@ public abstract class Mob extends Char {
             return false;
         }
 
-        if (getOwnerId() != getId() && getOwner().friendly(chr)) {
-            return true;
+        if (getOwnerId() != getId()) {
+            if (getOwner().friendly(chr, r_level + 1)) {
+                return true;
+            }
         }
 
         if (chr instanceof Hero) {
@@ -561,11 +477,6 @@ public abstract class Mob extends Char {
     @Override
     public boolean canBePet() {
         return true;
-    }
-
-    public boolean interact(Char chr) {
-        return script.run("onInteract", chr).optboolean(true) ||
-                super.interact(chr);
     }
 
     @Override
@@ -593,14 +504,6 @@ public abstract class Mob extends Char {
         return false;
     }
 
-    protected void zapMiss(@NotNull Char enemy) {
-        script.run("onZapMiss", enemy);
-    }
-
-    protected int zapProc(@NotNull Char enemy, int damage) {
-        return script.run("onZapProc", enemy, damage).optint(damage);
-    }
-
     protected boolean zapHit(@NotNull Char enemy) {
         if (enemy == CharsList.DUMMY) {
             EventCollector.logException(String.format("%s zapping dummy enemy", getEntityKind()));
@@ -620,11 +523,6 @@ public abstract class Mob extends Char {
         }
     }
 
-    @LuaInterface
-    public String getMobClassName() {
-        return getEntityKind();
-    }
-
     @Nullable
     @LuaInterface
     public Object getLoot() {
@@ -633,7 +531,24 @@ public abstract class Mob extends Char {
 
     @Override
     public Char makeClone() {
-        return MobFactory.mobByName(getEntityKind());
+
+        Bundle storedMob = new Bundle();
+
+        storeInBundle(storedMob);
+
+        Mob new_mob = MobFactory.mobByName(getEntityKind());
+
+        new_mob.restoreFromBundle(storedMob);
+
+        new_mob.getId(); //Ensure valid id
+
+        if (getOwnerId() == getId()) {
+            new_mob.setOwnerId(new_mob.getId());
+        } else {
+            new_mob.setOwnerId(getOwnerId());
+        }
+
+        return new_mob;
     }
 
     public void loot(Object loot, float lootChance) {
@@ -658,13 +573,23 @@ public abstract class Mob extends Char {
     }
 
     @Override
-    public int priceBuy(Item item) {
-        return script.run("priceBuy", item, super.priceBuy(item)).toint();
-    }
+    public void earnExp(int exp) {
+        int old_lvl = lvl();
+        super.earnExp(exp);
+        if (!Dungeon.isLoading()) {
+            if (level().cellValid(getPos())) {
+                if (lvl() >= 5 && lvl() != old_lvl) {
+                    if (!hasBuff(BuffFactory.CHAMPION_OF_EARTH) && !hasBuff(BuffFactory.CHAMPION_OF_FIRE)
+                            && !hasBuff(BuffFactory.CHAMPION_OF_WATER) && !hasBuff(BuffFactory.CHAMPION_OF_AIR)) {
 
-    @Override
-    public int priceSell(Item item) {
-        return script.run("priceSell", item, super.priceSell(item)).toint();
+                        String[] champions = {BuffFactory.CHAMPION_OF_EARTH, BuffFactory.CHAMPION_OF_FIRE, BuffFactory.CHAMPION_OF_WATER, BuffFactory.CHAMPION_OF_AIR};
+
+                        Buff.permanent(this, Random.oneOf(champions));
+                    }
+                }
+            }
+        }
+
     }
 
     @Override
@@ -682,6 +607,11 @@ public abstract class Mob extends Char {
 
     @Override
     public int dr() {
-        return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() + dr + lvl()/2;
+        return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() + dr + lvl() / 2;
+    }
+
+    @Override
+    public Item carcass() {
+        return new Carcass(this);
     }
 }

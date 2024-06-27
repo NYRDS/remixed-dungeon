@@ -148,7 +148,7 @@ public class Ghost extends NPC {
 				}
 				if (newPos != -1) {
 					
-					Actor.freeCell( getPos() );
+					Actor.freeCell( this );
 					
 					CellEmitter.get( getPos() ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 					setPos(newPos);
@@ -158,7 +158,7 @@ public class Ghost extends NPC {
 			}
 			
 		} else {
-            GameScene.show( new WndQuest( this, Quest.alternative ? StringsManager.getVar(R.string.Ghost_Rat1) : StringsManager.getVar(R.string.Ghost_Rose1)) );
+			GameScene.show( new WndQuest( this, Quest.alternative ? StringsManager.getVar(R.string.Ghost_Rat1) : StringsManager.getVar(R.string.Ghost_Rose1)) );
 			Quest.given = true;
 			
 			Journal.add( Journal.Feature.GHOST.desc() );
@@ -340,7 +340,7 @@ public class Ghost extends NPC {
 			dmgMax = 6;
 			dr = 2;
 			
-			exp = 0;
+			expForKill = 0;
 			
 			setState(MobAi.getStateByClass(Wandering.class));
 

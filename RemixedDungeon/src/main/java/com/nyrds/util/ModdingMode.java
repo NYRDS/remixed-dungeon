@@ -4,7 +4,6 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
-import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.storage.Assets;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
@@ -12,7 +11,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -52,6 +50,8 @@ public class ModdingMode {
 	private static final Map<String, String> rewardVideoIds = new HashMap<>();
 	private static final Map<String, String> interstitialIds = new HashMap<>();
 
+	public static final Set<String> sizeAgnosticFiles = new HashSet<>();
+
 	public static final String MAZE = "Maze";
 
 	public static final String CONUNDRUM = "Conundrum";
@@ -89,6 +89,11 @@ public class ModdingMode {
 		dlcSet.add(REMIXED);
 
 		resourcesRemap.put("spellsIcons/elemental(new).png", "spellsIcons/elemental_all.png");
+
+		sizeAgnosticFiles.add("ui/title.png");
+		sizeAgnosticFiles.add("amulet.png");
+		sizeAgnosticFiles.add("ui/arcs1.png");
+		sizeAgnosticFiles.add("ui/arcs2.png");
 	}
 
 	@NotNull
@@ -282,7 +287,7 @@ public class ModdingMode {
 				resource.append(line);
 				line = reader.readLine();
 			}
-		} catch (IOException e) {
+		} catch (IOException | SecurityException e) {
 			EventCollector.logException(e, resName);
 		}
 
@@ -296,7 +301,7 @@ public class ModdingMode {
 			}
 
 			return Assets.getStream(resName);
-		} catch (IOException e) {
+		} catch (IOException | SecurityException e) {
 			throw new ModError("Missing file: "+resName + " in Remixed",e);
 		}
 	}
@@ -311,7 +316,7 @@ public class ModdingMode {
 			}
 
 			return getInputStreamBuiltIn(resName);
-		} catch (IOException | ModError e) {
+		} catch (IOException | SecurityException | ModError e) {
 			throw new ModError("Missing file: " + resName + " in: " + activeMod() + " " + activeModVersion(),e);
 		}
 	}
@@ -364,7 +369,7 @@ public class ModdingMode {
 		return new ModError(mActiveMod,e);
 	}
 
-	public static RuntimeException modException(String s, JSONException e) {
+	public static RuntimeException modException(String s, Exception e) {
 		return new ModError(mActiveMod + ":" + s, e);
 	}
 

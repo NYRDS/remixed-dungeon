@@ -60,7 +60,7 @@ public class Mods {
                 }
             }
 
-        } catch (JSONException e) {
+        } catch (Exception e) {
             EventCollector.logException(e);
         }
 
@@ -84,7 +84,13 @@ public class Mods {
                 ModDesc desc = new ModDesc();
                 desc.installDir = desc.name = file.getName();
 
-                JSONObject versionInfo = JsonHelper.readJsonFromFile(new File(file.getAbsolutePath() + "/version.json"));
+                File fileToTry = new File(file.getAbsolutePath() + "/version.json");
+
+                if(!fileToTry.exists()) {
+                    continue;
+                }
+
+                JSONObject versionInfo = JsonHelper.readJsonFromFile(fileToTry);
                 if (versionInfo.has("version")) {
 
                     ModDesc.fromJson(desc, versionInfo);

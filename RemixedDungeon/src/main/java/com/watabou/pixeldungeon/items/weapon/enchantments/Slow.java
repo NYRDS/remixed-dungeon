@@ -9,7 +9,7 @@ import com.watabou.utils.Random;
 
 public class Slow extends Weapon.Enchantment {
 	
-	private static Glowing BLUE = new Glowing( 0x0044FF );
+	private static final Glowing BLUE = new Glowing( 0x0044FF );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

@@ -55,6 +55,10 @@ public class PointF {
 	public PointF clone() {
 		return new PointF( this );
 	}
+
+	public void reset() {
+		set( 0, 0 );
+	}
 	
 	public PointF scale( float f ) {
 		this.x *= f;

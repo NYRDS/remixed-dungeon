@@ -1,7 +1,6 @@
 package com.watabou.pixeldungeon.windows.elements;
 
 import com.nyrds.platform.audio.Sample;
-import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
@@ -32,7 +31,7 @@ public class Tab extends Button {
 			bg.size( width, height );
 		}
 	}
-	
+
 	public void select( boolean value ) {
 		selected = value;
 		

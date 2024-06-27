@@ -13,7 +13,7 @@ import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
 public class Crypter {
-	private String encryptionKey;
+	private final String encryptionKey;
 
 	public Crypter(String encryptionKey) {
 		this.encryptionKey = encryptionKey;

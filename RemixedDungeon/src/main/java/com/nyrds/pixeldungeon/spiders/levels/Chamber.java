@@ -8,9 +8,9 @@ import com.watabou.pixeldungeon.plants.Seed;
 import com.watabou.utils.Random;
 
 public class Chamber {
-	int x;
-	int y;
-	int r;
+	final int x;
+	final int y;
+	final int r;
 
 	int shape;
 	int interior;

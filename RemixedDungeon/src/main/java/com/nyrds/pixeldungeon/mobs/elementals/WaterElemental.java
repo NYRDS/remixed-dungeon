@@ -25,14 +25,15 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	}
 	
 	public void adjustStats(int depth) {
+		carcassChance = 0;
 		kind = Math.min(depth/5, 4);
 		if ( kind > 5 ) { kind = 5; }
 
 		hp(ht(depth * 5 + 1));
 		baseDefenseSkill = depth * 2 + 1;
-		exp = depth + 1;
+		expForKill = depth + 1;
 		maxLvl = depth + 2;
-		dr = exp/3;
+		dr = expForKill /3;
 		baseAttackSkill = baseDefenseSkill / 2 + 1;
 		dmgMin = ht()/2;
 		dmgMax = ht()/2;
@@ -64,7 +65,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	@Override
 	public boolean act() {
 		if (level().water[getPos()]) {
-			heal(exp,this);
+			heal(expForKill,this);
 		}
 		
 		return super.act();
@@ -74,7 +75,7 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	public boolean add(Buff buff ) {
 		if (buff instanceof Frost) {
 			if (hp() < ht()) {
-				heal(exp, buff);
+				heal(expForKill, buff);
 			}
 			return false;
 		} else {

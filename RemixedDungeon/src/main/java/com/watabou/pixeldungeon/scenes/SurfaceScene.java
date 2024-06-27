@@ -284,19 +284,19 @@ public class SurfaceScene extends PixelScene {
 		
 		public Avatar( HeroClass cl ) {
 			super( Assets.AVATARS );
-			frame( new TextureFilm( texture, WIDTH, HEIGHT ).get( cl.classIndex()) );
+			frame( TextureCache.getFilm( texture, WIDTH, HEIGHT ).get( cl.classIndex()) );
 		}
 	}
 	
 	private static class Pet extends MovieClip implements MovieClip.Listener {
 
-		private Animation idle;
-		private Animation jump;
+		private final Animation idle;
+		private final Animation jump;
 
 		public Pet() {
 			super(Assets.PET);
 
-			TextureFilm frames = new TextureFilm(texture, 16, 16);
+			TextureFilm frames = TextureCache.getFilm(texture, 16, 16);
 
 			idle = new Animation(2, true);
 			idle.frames(frames, 0, 0, 0, 0, 0, 0, 1);
@@ -326,13 +326,13 @@ public class SurfaceScene extends PixelScene {
 		public static final int WIDTH  = 16;
 		public static final int HEIGHT = 14;
 
-		private float tx;
-		private float ty;
+		private final float tx;
+		private final float ty;
 
 		private double a = Random.Float(5);
 		private double angle;
 
-		private boolean forward;
+		private final boolean forward;
 
 		public GrassPatch(float tx, float ty, boolean forward) {
 

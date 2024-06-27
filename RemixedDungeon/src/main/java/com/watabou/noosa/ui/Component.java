@@ -55,6 +55,11 @@ public class Component extends Group implements IPlaceable {
 		return y;
 	}
 
+	@Override
+	public IPlaceable shadowOf() {
+		return null;
+	}
+
 	public Component setSize( float width, float height ) {
 		this.width = width;
 		this.height = height;

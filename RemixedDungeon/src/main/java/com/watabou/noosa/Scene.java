@@ -16,13 +16,12 @@
  */
 
 package com.watabou.noosa;
+
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Keys;
 import com.watabou.pixeldungeon.ui.IWindow;
-import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Signal;
 
 import java.util.ArrayList;
@@ -34,7 +33,7 @@ public class Scene extends Group {
 	private Signal.Listener<Keys.Key> keyListener;
 	private final ArrayList<IWindow> activeWindows = new ArrayList<>();
 
-	static protected LuaScript script = new LuaScript("scripts/services/scene", null);
+	static protected final LuaScript script = new LuaScript("scripts/services/scene", null);
 	static public String sceneMode = "none";
 
 	public void create() {

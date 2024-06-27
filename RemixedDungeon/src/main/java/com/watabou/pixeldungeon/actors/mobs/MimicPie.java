@@ -17,6 +17,7 @@ public class MimicPie extends Mob implements IDepthAdjustable {
 		flying = true;
 
 		level = Dungeon.depth;
+		carcassChance = 0;
 
 		collect(new RottenPasty());
 
@@ -30,7 +31,7 @@ public class MimicPie extends Mob implements IDepthAdjustable {
 		this.level = level;
 
 		hp(ht((3 + level) * 5));
-		exp = 2 + 2 * (level - 1) / 5;
+		expForKill = 2 + 2 * (level - 1) / 5;
 		baseAttackSkill = 9 + level;
 		baseDefenseSkill = 2 * baseAttackSkill / 3;
 

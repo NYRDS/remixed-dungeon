@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.ui.BadgesList;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ItemSlot;
@@ -148,7 +147,7 @@ public class WndRanking extends WndTabbed {
                 RedButton btnCatalogus = new RedButton(R.string.WndRanking_StaChallenges) {
                     @Override
                     protected void onClick() {
-                        GameLoop.addToScene(new WndGameplayCustomization(false));
+                        GameLoop.addToScene(new WndGameplayCustomization(false, WndGameplayCustomization.Mode.BOTH));
                     }
                 };
                 btnCatalogus.setRect(0, pos + GAP, btnCatalogus.reqWidth() + 2, btnCatalogus.reqHeight() + 2);
@@ -218,7 +217,7 @@ public class WndRanking extends WndTabbed {
 
         private float posY;
 
-        ScrollPane list;
+        final ScrollPane list;
 
         public ItemsTab() {
             super();

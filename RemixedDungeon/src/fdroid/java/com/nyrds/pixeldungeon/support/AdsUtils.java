@@ -13,9 +13,9 @@ import java.util.Map;
 
 public class AdsUtils {
 
-    static Map<AdsUtilsCommon.IBannerProvider, Integer> bannerFails = new HashMap<>();
-    static Map<AdsUtilsCommon.IInterstitialProvider, Integer> interstitialFails = new HashMap<>();
-    static Map<AdsUtilsCommon.IRewardVideoProvider, Integer> rewardVideoFails = new HashMap<>();
+    static final Map<AdsUtilsCommon.IBannerProvider, Integer> bannerFails = new HashMap<>();
+    static final Map<AdsUtilsCommon.IInterstitialProvider, Integer> interstitialFails = new HashMap<>();
+    static final Map<AdsUtilsCommon.IRewardVideoProvider, Integer> rewardVideoFails = new HashMap<>();
 
     static {
         if(!RemixedDungeonApp.checkOwnSignature()) {

@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.effects;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.util.JsonHelper;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
@@ -28,7 +29,7 @@ public class CustomClipEffect extends MovieClip implements MovieClip.Listener, I
 	private void init(Object texture, int xs, int ys) {
 		texture(texture);
 
-		film = new TextureFilm(texture,xs,ys);
+		film = TextureCache.getFilm(texture, xs, ys);
 		centerShift = new PointF(-(xs - DungeonTilemap.SIZE) / 2.f,
 				-(ys-DungeonTilemap.SIZE) / 2.f);
 		setOrigin(xs / 2.f, ys / 2.f);

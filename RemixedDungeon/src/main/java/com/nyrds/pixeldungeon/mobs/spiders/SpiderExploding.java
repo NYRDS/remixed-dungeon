@@ -24,6 +24,7 @@ public class SpiderExploding extends MultiKindMob {
 
     public SpiderExploding() {
         hp(ht(5));
+        carcassChance = 0;
         baseDefenseSkill = 1;
         baseAttackSkill  = 125;
         baseSpeed = 2f;
@@ -31,7 +32,7 @@ public class SpiderExploding extends MultiKindMob {
         dmgMax = 6;
         dr = 0;
 
-        exp = 3;
+        expForKill = 3;
         maxLvl = 9;
 
         kind = Random.IntRange(0, 7);

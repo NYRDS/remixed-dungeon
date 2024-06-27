@@ -29,7 +29,7 @@ public class Skeleton extends UndeadMob {
 		dmgMax = 8;
 		dr = 5;
 		
-		exp = 5;
+		expForKill = 5;
 		maxLvl = 10;
 
 		loot(getLoot(), 0.2f);

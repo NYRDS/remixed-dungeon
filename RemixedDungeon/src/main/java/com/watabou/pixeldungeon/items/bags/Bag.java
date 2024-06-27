@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.items.bags;
 
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -28,7 +29,7 @@ public class Bag extends Item implements Iterable<Item> {
 		setDefaultAction(AC_OPEN);
 	}
 
-	public ArrayList<Item> items = new ArrayList<>();
+	public final ArrayList<Item> items = new ArrayList<>();
 		
 	@Override
 	public ArrayList<String> actions(Char hero ) {
@@ -60,8 +61,10 @@ public class Bag extends Item implements Iterable<Item> {
 					item.collect( this );
 				}
 			}
-			
-			Badges.validateAllBagsBought( this );
+
+			if(getOwner() == Dungeon.hero) {
+				Badges.validateAllBagsBought(this);
+			}
 			
 			return true;
 		} else {

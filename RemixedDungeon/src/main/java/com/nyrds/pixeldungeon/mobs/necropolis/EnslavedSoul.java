@@ -20,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class EnslavedSoul extends UndeadMob {
 
-    static Class<?>[] BuffsForEnemy = {
+    static final Class<?>[] BuffsForEnemy = {
             Blindness.class,
             Charm.class,
             Roots.class,
@@ -31,7 +31,7 @@ public class EnslavedSoul extends UndeadMob {
 
     public EnslavedSoul(){
         hp(ht(25));
-
+        carcassChance = 0;
         baseSpeed = 1.1f;
         baseDefenseSkill = 11;
         baseAttackSkill  = 10;
@@ -41,7 +41,7 @@ public class EnslavedSoul extends UndeadMob {
         dmgMax = 8;
         dr = 10;
 
-        exp = 5;
+        expForKill = 5;
         maxLvl = 15;
 
         loot(Gold.class, 0.02f);

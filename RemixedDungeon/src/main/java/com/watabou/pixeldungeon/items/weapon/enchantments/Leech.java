@@ -9,7 +9,7 @@ import com.watabou.utils.Random;
 
 public class Leech extends Weapon.Enchantment {
 
-	private static Glowing RED = new Glowing( 0x660022 );
+	private static final Glowing RED = new Glowing( 0x660022 );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

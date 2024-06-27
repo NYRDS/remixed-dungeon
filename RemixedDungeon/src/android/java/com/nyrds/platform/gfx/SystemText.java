@@ -19,16 +19,13 @@ import com.watabou.noosa.Group;
 import com.watabou.noosa.SystemTextLine;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.Arrays;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import lombok.Synchronized;
@@ -102,7 +99,7 @@ public class SystemText extends Text {
             TextPaint tx = new TextPaint();
 
             tx.setTextSize(textSize);
-            tx.setStyle(Paint.Style.FILL_AND_STROKE);
+            tx.setStyle(Paint.Style.FILL);
             tx.setHinting(Paint.HINTING_ON);
             tx.setAntiAlias(true);
 
@@ -205,6 +202,7 @@ public class SystemText extends Text {
 
             int codepoint = text.codePointAt(offset);
             int codepointCharCount = Character.charCount(codepoint);
+
             offset += codepointCharCount;
 
             boolean isWhiteSpace = Character.isWhitespace(codepoint);
@@ -214,15 +212,16 @@ public class SystemText extends Text {
                 lastWordStart = xCharPos.size();
             }
 
-            if (!isWhiteSpace || symbolWidth == 0) {
+            if (!isWhiteSpace) {
                 xCharPos.add(xPos);
                 codePoints.add(codepoint);
             }
 
-            if (codepoint == 0x000A) {
+            if (codepoint == 0x000A || codepoint == 0x000D) {
                 lineWidth += symbolWidth;
                 return offset;
             }
+
             symbolWidth = symbolWidth(Character.toString((char) (codepoint)));
             xPos += symbolWidth;
             lineWidth = xPos;
@@ -278,13 +277,13 @@ public class SystemText extends Text {
                     String key = Utils.format("%fx%f_%s", lineWidth, fontHeight, currentLine);
 
                     if (mask != null) {
-                        key += mask.toString();
+                        key += Arrays.toString(mask);
                     }
 
                     if (!bitmapCache.containsKey(key)) {
                         Bitmap bitmap = Bitmap.createBitmap(
                                 (int) (lineWidth * oversample),
-                                (int) (fontHeight * oversample),
+                                (int) (fontHeight * oversample + textPaint.descent()),
                                 Bitmap.Config.ARGB_4444);
                         bitmapCache.put(key, bitmap);
 
@@ -295,14 +294,11 @@ public class SystemText extends Text {
                     } else {
                         cacheHits++;
                     }
-
-                    //GLog.debug("text cache hits %d miss: %d size %d", cacheHits, cacheMiss, bitmapCache.size());
-
                     SystemTextLine line = new SystemTextLine(bitmapCache.get(key));
                     line.setVisible(getVisible());
                     lineImage.add(line);
                 } else {
-                    lineImage.add(new SystemTextLine());
+                    lineImage.add(SystemTextLine.emptyLine);
                 }
                 startLine = nextLine;
             }
@@ -311,29 +307,32 @@ public class SystemText extends Text {
 
     private int drawTextLine(int charIndex, Canvas canvas, TextPaint paint) {
 
-        float y = (fontHeight) * oversample - textPaint.descent();
+        float y = (fontHeight) * oversample - paint.descent();
 
-        final int charsToDraw = codePoints.size();
+        currentLine = currentLine.trim();
+
+        final int charsToDraw = Math.min(currentLine.length(), codePoints.size());
+
 
         if (mask == null) {
             if (!xCharPos.isEmpty()) {
                 float x = (xCharPos.get(0) + 0.5f) * oversample;
                 canvas.drawText(currentLine, x, y, paint);
             }
-            return charIndex + codePoints.size();
+            return charIndex + charsToDraw;
         }
 
         for (int i = 0; i < charsToDraw; ++i) {
-            int codepoint = codePoints.get(i);
-
             if (charIndex < mask.length && mask[charIndex]) {
-
+                int codepoint = codePoints.get(i);
                 float x = (xCharPos.get(i) + 0.5f) * oversample;
-
-                canvas.drawText(Character.toString((char) codepoint), x, y, paint);
+                if (!Character.isWhitespace(codepoint)) {
+                    canvas.drawText(Character.toString((char) codepoint), x, y, paint);
+                }
             }
             charIndex++;
         }
+
 
         return charIndex;
     }

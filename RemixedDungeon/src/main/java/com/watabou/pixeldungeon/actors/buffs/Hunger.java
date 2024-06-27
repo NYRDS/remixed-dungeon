@@ -7,7 +7,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Doom;
@@ -93,7 +92,7 @@ public class Hunger extends Buff implements Doom {
 					hungerLevel = GameMath.gate(0, newLevel, STARVING);
 
 					if (statusUpdated) {
-						BuffIndicator.refreshHero();
+						target.buffsUpdated();
 					}
 				}
 				
@@ -116,13 +115,17 @@ public class Hunger extends Buff implements Doom {
 
 		hungerLevel = GameMath.gate(0, hungerLevel, STARVING);
 
-		BuffIndicator.refreshHero();
+		target.buffsUpdated();
 	}
 	
 	public boolean isStarving() {
 		return hungerLevel >= STARVING;
 	}
-	
+
+	public boolean isHungry() {
+		return hungerLevel >= HUNGRY;
+	}
+
 	@Override
 	public int icon() {
 		if (hungerLevel < HUNGRY) {
@@ -158,7 +161,7 @@ public class Hunger extends Buff implements Doom {
 	}
 
 	@Override
-	public void onDeath() {
+	public void onHeroDeath() {
 		
 		Badges.validateDeathFromHunger();
 		

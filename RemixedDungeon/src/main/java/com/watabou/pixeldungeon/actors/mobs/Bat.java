@@ -18,7 +18,7 @@ public class Bat extends Mob {
 		dmgMin = 6;
 		dmgMax = 12;
 
-		exp = 7;
+		expForKill = 7;
 		maxLvl = 15;
 		
 		flying = true;

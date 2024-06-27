@@ -6,8 +6,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 
 public class UseItem extends CharAction{
 
-    public Item item;
-    public String action;
+    public final Item item;
+    public final String action;
 
     public UseItem(Item item, String action ) {
         this.item = item;

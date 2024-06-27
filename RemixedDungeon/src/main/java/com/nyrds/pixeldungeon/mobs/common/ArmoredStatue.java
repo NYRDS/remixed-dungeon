@@ -35,14 +35,14 @@ public class ArmoredStatue extends Statue {
 	}
 
 	@Override
-	public void beckon( int cell ) {
-	}
+	public void beckon(int cell ) {
+        super.beckon(cell);
+    }
 
 	@Override
 	public boolean reset() {
-		setState(MobAi.getStateByClass(Passive.class));
-		return true;
-	}
+        return super.reset();
+    }
 
 
 	@NotNull

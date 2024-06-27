@@ -13,7 +13,7 @@ abstract public class CommonLevel extends Level {
 
 	abstract protected int nTraps();
 
-	public static Map<String, Float> traps = new HashMap<>();
+	public static final Map<String, Float> traps = new HashMap<>();
 	static {
 		traps.put("ToxicTrap",1f);
 		traps.put("FireTrap",1f);

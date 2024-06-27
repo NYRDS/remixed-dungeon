@@ -7,10 +7,10 @@ public class Glowing {
     public static final Glowing WHITE      = new Glowing(0xFFFFFF, 0.6f);
     public static final Glowing NO_GLOWING = new Glowing(0, Util.BIG_FLOAT);
 
-    public float red;
-    public float green;
-    public float blue;
-    public float period;
+    public final float red;
+    public final float green;
+    public final float blue;
+    public final float period;
 
     public Glowing(int color) {
         this(color, 1f);

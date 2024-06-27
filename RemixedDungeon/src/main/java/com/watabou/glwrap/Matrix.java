@@ -93,7 +93,7 @@ public class Matrix {
 		m[13] += m[1] * x + m[5] * y;
 	}
 	
-	public static void multiply( float[] left, float right[], float[] result ) {
+	public static void multiply(float[] left, float[] right, float[] result ) {
 		android.opengl.Matrix.multiplyMM( result, 0, left, 0, right, 0 );
 	}
 }

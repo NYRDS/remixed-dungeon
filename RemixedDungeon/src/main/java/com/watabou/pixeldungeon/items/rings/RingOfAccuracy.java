@@ -17,5 +17,9 @@ public class RingOfAccuracy extends Ring {
 	}
 	
 	public class Accuracy extends RingBuff {
+		@Override
+		public int attackSkillBonus() {
+			return level();
+		}
 	}
 }

@@ -13,6 +13,7 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.SheepSprite;
 import com.watabou.pixeldungeon.utils.BArray;
@@ -26,15 +27,17 @@ public class WandOfFlock extends SimpleWand  {
 
 	@Override
 	protected void onZap( int cell, Char victim ) {
-		int level = effectiveLevel();
+		int spellLevel = effectiveLevel();
 		
-		int n = level + 2;
+		int n = spellLevel + 2;
 		
 		if (Actor.findChar( cell ) != null && Ballistica.distance > 2) {
 			cell = Ballistica.trace[Ballistica.distance - 2];
 		}
-		
-		boolean[] passable = BArray.or( Dungeon.level.passable, Dungeon.level.avoid, null );
+
+		Level level = Dungeon.level;
+
+		boolean[] passable = BArray.or( level.passable, level.avoid, null );
 		for (Actor actor : Actor.all()) {
 			if (actor instanceof Char) {
 				passable[((Char)actor).getPos()] = false;
@@ -49,19 +52,19 @@ public class WandOfFlock extends SimpleWand  {
 			dist = 1;
 		}
 		
-		float lifespan = level + 3;
+		float lifespan = spellLevel + 3;
 		
 	sheepLabel:
 		for (int i=0; i < n; i++) {
 			do {
-				for (int j=0; j < Dungeon.level.getLength(); j++) {
+				for (int j=0; j < level.getLength(); j++) {
 					if (PathFinder.distance[j] == dist) {
 						
 						Sheep sheep = new Sheep();
 						sheep.lifespan = lifespan;
 						sheep.setPos(j);
-						Dungeon.level.spawnMob(sheep);
-						Dungeon.level.press(sheep.getPos(), sheep );
+						level.spawnMob(sheep);
+						level.press(sheep.getPos(), sheep );
 						
 						CellEmitter.get( j ).burst( Speck.factory( Speck.WOOL ), 4 );
 						
@@ -99,8 +102,6 @@ public class WandOfFlock extends SimpleWand  {
 		@Override
         public boolean act() {
 			if (initialized) {
-				hp(0);
-
 				destroy();
 				getSprite().die();
 				

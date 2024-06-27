@@ -51,11 +51,11 @@ public class KindOfWeapon extends EquipableItem {
 
 	@Override
 	public void equippedCursed() {
-        GLog.n(StringsManager.getVar(R.string.KindOfWeapon_EquipCursed), name());
-	}
+        super.equippedCursed();
+    }
 
 	@Override
 	public boolean goodForMelee() {
-		return true;
-	}
+        return super.goodForMelee();
+    }
 }

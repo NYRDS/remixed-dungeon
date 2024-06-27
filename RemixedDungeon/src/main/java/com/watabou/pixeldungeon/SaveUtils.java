@@ -5,10 +5,13 @@ import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.GamesInProgress.Info;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.Bundle;
 
 import java.io.File;
 
@@ -32,20 +35,15 @@ public class SaveUtils {
 		Dungeon.heroClass = heroClass;
 	}
 
-	public static String slotInfo(String slot, HeroClass cl) {
+	public static Info slotInfo(String slot, HeroClass cl) {
 		if(slotUsed(slot, cl)) {
 			
 			String localName = slot +"/"+ gameFile(cl);
 			
-			Info info = GamesInProgress.checkFile(localName);
-			
-			if(info!= null) {
-				return Utils.format("d: %2d   l: %2d", info.depth,
-						info.level);
-			}
+			return GamesInProgress.checkFile(localName);
 		}
 		
-		return Utils.EMPTY_STRING;
+		return null;
 	}
 	
 	public static boolean slotUsed(String slot, HeroClass cl) {
@@ -175,15 +173,39 @@ public class SaveUtils {
 		return cl.tag()+"%d.dat";
 	}
 
-	static public String buildSlotFromTag(String tag) {
-		return ModdingMode.activeMod() + "_" + tag + "_" + GameLoop.getDifficulty();
+	static public String buildSlotFromTag(String tag, int difficulty)  {
+		return ModdingMode.activeMod() + "_" + tag + "_" + difficulty;
 	}
 
+	static public String buildSlotFromTag(String tag) {
+		return buildSlotFromTag(tag, GameLoop.getDifficulty());
+	}
+
+
 	public static String getAutoSave() {
-		return buildSlotFromTag(AUTO_SAVE);
+		return getAutoSave(GameLoop.getDifficulty());
 	}
 
 	public static String getPrevSave() {
-		return buildSlotFromTag(PREV_SAVE);
+		return getAutoSave(GameLoop.getDifficulty());
+	}
+
+	public static String getAutoSave(int dif) {
+		return buildSlotFromTag(AUTO_SAVE, dif);
+	}
+
+	public static String getPrevSave(int dif) {
+		return buildSlotFromTag(PREV_SAVE, dif);
+	}
+
+	public static void preview(Info info, Bundle bundle) {
+		info.depth = bundle.getInt(Dungeon.DEPTH);
+		if (info.depth == -1) {
+			info.depth = bundle.getInt(Statistics.DEEPEST); // FIXME
+		}
+
+		Bundle heroBundle = bundle.getBundle(Dungeon.HERO);
+		info.level = heroBundle.getInt(Char.LEVEL);
+		info.difficulty  = heroBundle.getInt(Hero.DIFFICULTY);
 	}
 }

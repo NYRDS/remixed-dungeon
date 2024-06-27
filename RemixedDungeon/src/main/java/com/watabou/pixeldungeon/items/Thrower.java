@@ -5,6 +5,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.CellSelector;
+import com.watabou.pixeldungeon.sprites.ItemSprite;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -29,6 +30,6 @@ class Thrower implements CellSelector.Listener {
 
     @Override
     public Image icon() {
-        return null;
+        return new ItemSprite(item);
     }
 }

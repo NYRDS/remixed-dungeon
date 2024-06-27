@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.sprites;
 
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
@@ -13,7 +14,7 @@ public class LarvaSprite extends MobSprite {
 		
 		texture( Assets.LARVA );
 		
-		TextureFilm frames = new TextureFilm( texture, 12, 8 );
+		TextureFilm frames = TextureCache.getFilm( texture, 12, 8 );
 		
 		idle = new Animation( 5, true );
 		idle.frames( frames, 4, 4, 4, 4, 4, 5, 5 );

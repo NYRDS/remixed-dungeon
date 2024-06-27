@@ -63,6 +63,10 @@ import lombok.SneakyThrows;
 
 
 public class BuffFactory {
+    public static final String CHAMPION_OF_EARTH = "ChampionOfEarth";
+    public static final String CHAMPION_OF_FIRE = "ChampionOfFire";
+    public static final String CHAMPION_OF_WATER = "ChampionOfWater";
+    public static final String CHAMPION_OF_AIR = "ChampionOfAir";
     static private final Map<String, Class<? extends Buff>> buffList = new HashMap<>();
 
     static private final Set<String> customBuffs = new HashSet<>();
@@ -97,6 +101,7 @@ public class BuffFactory {
 
     public static final String RAT_SKULL_RATTER_AURA = new RatSkull().buff().getEntityKind();
     public static final String VERTIGO = new Vertigo().getEntityKind();
+    public static final String FURY = new Fury().getEntityKind();
 
 
     static {

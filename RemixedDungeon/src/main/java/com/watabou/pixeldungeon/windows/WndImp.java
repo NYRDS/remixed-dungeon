@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -56,12 +55,7 @@ public class WndImp extends Window {
 		tokens.detachAll( Dungeon.hero.getBelongings().backpack );
 
 		reward.identify();
-		if (reward.doPickUp( Dungeon.hero )) {
-			GLog.i( Hero.getHeroYouNowHave(), reward.name() );
-		} else {
-			reward.doDrop(imp);
-		}
-		
+		Dungeon.hero.collectAnimated(reward);
 		imp.flee();
 		
 		Imp.Quest.complete();

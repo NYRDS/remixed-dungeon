@@ -14,7 +14,6 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
-import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -86,7 +85,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	};
 
 	private Map<String,String> layerOverrides = new HashMap<>();
-	private Map<String,String> layersDesc    = new HashMap<>();
+	private final Map<String,String> layersDesc    = new HashMap<>();
 
 	private String deathEffectDesc;
 
@@ -294,11 +293,11 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private void applyLayersDesc(String[] lookDesc) {
 		clearLayers();
 		for(int i = 0;i<layersOrder.length && i<lookDesc.length;++i){
-			if(ModdingMode.isResourceExists(lookDesc[i])) {
+			if(ModdingMode.isResourceExists(lookDesc[i]) && (layersMask & (1L << i))==0) {
 				addLayer(layersOrder[i], TextureCache.get(lookDesc[i]));
 			} else {
 				if(Util.isDebug()) {
-					GLog.n("Missing file %s", lookDesc[i]);
+					//GLog.n("Missing file %s", lookDesc[i]);
 				}
 			}
 		}

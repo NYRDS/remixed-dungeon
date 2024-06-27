@@ -32,7 +32,7 @@ public class ScrollOfPsionicBlast extends Scroll {
 		}
 		
 		Buff.prolong( reader, Blindness.class, Random.Int( 3, 6 ) );
-		Dungeon.observe();
+		reader.observe();
 		
 		setKnown();
 

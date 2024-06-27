@@ -22,9 +22,9 @@ import com.watabou.noosa.Gizmo;
 
 abstract public class Tweener extends Gizmo {
 
-	public Gizmo target;
+	public final Gizmo target;
 
-	public float interval;
+	public final float interval;
 	public float elapsed;
 	
 	public Listener listener;
@@ -44,7 +44,7 @@ abstract public class Tweener extends Gizmo {
 		if (elapsed >= interval) {
 			updateValues( 1 );
 			onComplete();
-			kill();
+			killAndErase();
 		} else {
 			updateValues( elapsed / interval );
 		}

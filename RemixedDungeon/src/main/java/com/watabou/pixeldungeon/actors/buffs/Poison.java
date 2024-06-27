@@ -45,7 +45,7 @@ public class Poison extends Buff implements Doom {
 	}
 
 	@Override
-	public void onDeath() {
+	public void onHeroDeath() {
 		Badges.validateDeathFromPoison();
 		
 		Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.POISON), Dungeon.depth ) );

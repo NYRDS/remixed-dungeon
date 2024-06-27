@@ -8,7 +8,7 @@ import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 
 public class TextButton extends Button {
-	protected NinePatch bg;
+	public NinePatch bg;
 	protected Text text;
 	protected Image icon;
 	

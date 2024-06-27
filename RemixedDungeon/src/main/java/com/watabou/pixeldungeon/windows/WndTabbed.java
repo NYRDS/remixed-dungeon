@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class WndTabbed extends Window {
 
-    protected ArrayList<Tab> tabs = new ArrayList<>();
+    protected final ArrayList<Tab> tabs = new ArrayList<>();
     protected Tab selected;
 
     public WndTabbed() {
@@ -20,7 +20,7 @@ public class WndTabbed extends Window {
 
     protected Tab add(Tab tab) {
 
-        tab.setPos(tabs.size() == 0 ?
+        tab.setPos(tabs.isEmpty() ?
                 -chrome.marginLeft() + 1 :
                 tabs.get(tabs.size() - 1).right(), height);
         tab.select(false);

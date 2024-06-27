@@ -35,15 +35,15 @@ public class Paralysis extends FlavourBuff {
 	}
 
 	@Override
-	public int charGotDamage(int damage, NamedEntityKind src) {
-		if (Random.Int(damage) >= Random.Int(target.hp())) {
+	public int charGotDamage(int damage, NamedEntityKind src, Char target) {
+		if (Random.Int(damage) >= Random.Int(this.target.hp())) {
 			detach();
-			if (CharUtils.isVisible(target)) {
-				GLog.i(StringsManager.getVar(R.string.Char_OutParalysis), target.getName_objective());
+			if (CharUtils.isVisible(this.target)) {
+				GLog.i(StringsManager.getVar(R.string.Char_OutParalysis), this.target.getName_objective());
 			}
 		}
 
-		return super.charGotDamage(damage, src);
+		return super.charGotDamage(damage, src, target);
 	}
 
 	@Override

@@ -26,21 +26,21 @@ import java.nio.FloatBuffer;
 
 public class NinePatch extends Visual {
 
-	public SmartTexture texture;
+	public final SmartTexture texture;
 
-	protected float[] vertices;
-	protected FloatBuffer verticesBuffer;
+	protected final float[] vertices;
+	protected final FloatBuffer verticesBuffer;
 
-	protected RectF outterF;
-	protected RectF innerF;
+	protected final RectF outterF;
+	protected final RectF innerF;
 
-	protected int marginLeft;
-	protected int marginRight;
-	protected int marginTop;
-	protected int marginBottom;
+	protected final int marginLeft;
+	protected final int marginRight;
+	protected final int marginTop;
+	protected final int marginBottom;
 
-	protected float nWidth;
-	protected float nHeight;
+	protected final float nWidth;
+	protected final float nHeight;
 	
 	public NinePatch( Object tx, int margin ) {
 		this( tx, margin, margin, margin, margin );

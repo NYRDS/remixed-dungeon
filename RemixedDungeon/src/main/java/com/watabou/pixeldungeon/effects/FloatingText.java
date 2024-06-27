@@ -93,7 +93,7 @@ public class FloatingText extends BitmapText {
 			stacks.put( key, stack );
 		}
 		
-		if (stack.size() > 0) {
+		if (!stack.isEmpty()) {
 			FloatingText below = txt;
 			int aboveIndex = stack.size() - 1;
 			while (aboveIndex >= 0) {

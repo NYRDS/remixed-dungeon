@@ -10,6 +10,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 public class SpiritOfPain extends Mob {
 
     {
+        carcassChance = 0;
         hp(ht(80));
         baseDefenseSkill = 30;
         baseAttackSkill  = 30;
@@ -17,7 +18,7 @@ public class SpiritOfPain extends Mob {
         dmgMax = 10;
         dr = 20;
 
-        exp = 0;
+        expForKill = 0;
 
         setState(MobAi.getStateByClass(Hunting.class));
         flying = true;

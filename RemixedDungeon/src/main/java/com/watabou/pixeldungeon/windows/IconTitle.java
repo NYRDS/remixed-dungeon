@@ -1,6 +1,8 @@
 
 package com.watabou.pixeldungeon.windows;
 
+import static com.watabou.pixeldungeon.ui.Window.GAP;
+
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -10,8 +12,6 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import static com.watabou.pixeldungeon.ui.Window.GAP;
 
 public class IconTitle extends Component {
 

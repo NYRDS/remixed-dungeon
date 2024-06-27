@@ -107,8 +107,8 @@ public class XTilemapConfiguration {
 	}
 
 	private static class TileDesc {
-		ArrayList<Integer> baseTiles = new ArrayList<>();
-		ArrayList<Integer> decoTiles = new ArrayList<>();
+		final ArrayList<Integer> baseTiles = new ArrayList<>();
+		final ArrayList<Integer> decoTiles = new ArrayList<>();
 	}
 
 	public int baseTile(Level level, int cell) {

@@ -1,7 +1,6 @@
 
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;

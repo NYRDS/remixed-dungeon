@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class CompositeTextureImage extends Image {
 
-	private ArrayList<Texture> mLayers = new ArrayList<>();
+	private final ArrayList<Texture> mLayers = new ArrayList<>();
 
 	public CompositeTextureImage() {
 		super();

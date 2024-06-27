@@ -14,6 +14,9 @@ public class VHBox extends VBox {
     private final List<Gizmo> allMembers = new ArrayList<>();
 
     private HBox.Align rowsAlign = HBox.Align.Left;
+    private HBox.Align rowsLoginLast = HBox.Align.Left;
+
+    private int hGap = 0;
 
     private float maxWidth;
 
@@ -65,6 +68,7 @@ public class VHBox extends VBox {
 
     private void putInNextRow(Gizmo g) {
         HBox hBox = new HBox(maxWidth);
+        hBox.setGap(hGap);
         hBox.setAlign(rowsAlign);
         hBox.add(g);
         rows.add(hBox);
@@ -73,6 +77,14 @@ public class VHBox extends VBox {
 
     public void setAlign(HBox.Align rowsAlign) {
         this.rowsAlign = rowsAlign;
+    }
+
+    public void setLoginLast(HBox.Align rowsLoginLast) {
+        this.rowsLoginLast = rowsLoginLast;
+    }
+
+    public void setHGap(int hGap) {
+        this.hGap = hGap;
     }
 
     public void setMaxWidth(float maxWidth) {

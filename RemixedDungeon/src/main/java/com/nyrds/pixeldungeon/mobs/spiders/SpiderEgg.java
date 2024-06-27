@@ -13,7 +13,7 @@ public class SpiderEgg extends Mob {
 		baseAttackSkill = 1;
 		baseSpeed = 0f;
 
-		exp = 0;
+		expForKill = 0;
 		maxLvl = 9;
 
 		postpone(20);

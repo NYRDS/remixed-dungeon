@@ -1,12 +1,9 @@
 package com.nyrds.pixeldungeon.ml.actions;
 
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.utils.GLog;
 
 public class PickUp extends CharAction {
     public PickUp(int dst ) {
@@ -17,27 +14,11 @@ public class PickUp extends CharAction {
     public boolean act(Char hero) {
         if (hero.getPos() == dst) {
 
-            Heap heap = Dungeon.level.getHeap(hero.getPos());
+            Heap heap = hero.level().getHeap(hero.getPos());
             if (heap != null) {
-                Item item = heap.pickUp();
-                item = item.pick(hero, hero.getPos());
-                if (item != null) {
-                    if (item.doPickUp(hero)) {
-
-                        hero.itemPickedUp(item);
-
-                        if (!heap.isEmpty()) {
-                            GLog.i(StringsManager.getVar(R.string.Hero_SomethingElse));
-                        }
-                        hero.readyAndIdle();
-                    } else {
-                        Heap newHeap = hero.level().drop(item, hero.getPos());
-
-                        newHeap.sprite.drop();
-                        newHeap.pickUpFailed();
-
-                        hero.readyAndIdle();
-                    }
+                Item item = heap.peek();
+                if (item.valid()) {
+                    CharUtils.tryPickUp(hero, item);
                 } else {
                     hero.readyAndIdle();
                 }

@@ -54,7 +54,7 @@ public class Utils {
             return noun;
         }
 
-        if (noun.length() == 0) {
+        if (noun.isEmpty()) {
             return "a";
         } else {
             String VOWELS = "aoeiu";
@@ -65,7 +65,7 @@ public class Utils {
     @SneakyThrows
     public static String[] getClassParams(String className, String paramName, String[] defaultValues, boolean warnIfAbsent) {
 
-        if (className.length() == 0) { // isEmpty() require api level 9
+        if (className.isEmpty()) { // isEmpty() require api level 9
             return defaultValues;
         }
 

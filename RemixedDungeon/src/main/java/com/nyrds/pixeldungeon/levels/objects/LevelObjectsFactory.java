@@ -121,12 +121,10 @@ public class LevelObjectsFactory {
 	public static LevelObject objectByName(String objectClassName) {
 		try {
 			return objectClassByName(objectClassName).newInstance();
-		} catch (InstantiationException e) {
-			throw new TrackedRuntimeException(Utils.EMPTY_STRING, e);
-		} catch (IllegalAccessException e) {
+		} catch (InstantiationException | IllegalAccessException e) {
 			throw new TrackedRuntimeException(Utils.EMPTY_STRING, e);
 		}
-	}
+    }
 
 
 	public static Class<? extends LevelObject> objectClassByName(String objectClassName) {
