@@ -118,7 +118,7 @@
   <string name="Possess_Info">マインドコントロールの暗黒術で、術者はほとんどの生き物の意思を曲げ、意のままにあやつることができる。</string>
   <string name="Possess_PossessionFailed">%sの意志は強すぎる</string>
   <string name="Possess_Possessed">%sはあなたの命令を待っている</string>
-  <string name="Possess_CantPossessSelf">自分を洗脳することはできない</string>
+  <string name="Possess_CantPossessSelf">自分に憑依することはできない</string>
   <string name="Mob_StaControlledStatus">この%sは既に不浄なものに精神を支配されている</string>
   <string name="BlackCat_AiStatus">この猫は普通の猫らしいことをしている</string>
   <string name="Shopkeeper_Buy">購入するアイテムを選択</string>
