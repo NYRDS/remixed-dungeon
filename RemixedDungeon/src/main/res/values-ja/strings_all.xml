@@ -2688,7 +2688,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="NatureArmorSpell_Name">ネイチャーアーマー</string>
   <string name="NatureArmorSpell_Info">エルフもまた、母なる自然そのものに守られているときは、タフになるのだ。</string>
   <string name="ShootInEye_Name">シュートインアイ</string>
-  <string name="ShootInEye_Info">あなたの卓越した射撃技術を駆使して、敵の目を撃ち抜くのだ。</string>
+  <string name="ShootInEye_Info">あなたの卓越した射撃技術を駆使して、敵の目を撃ち抜くのだ。もちろん、敵に目があればの話だが。</string>
   <string name="Sprout_Name">スプラウト</string>
   <string name="Sprout_Info">眠っている種を目覚めさせる。ただし、この呪文が成功するためには、地面に緑がなければならない。</string>
   <string name="SummonBeast_Name">ビーストコール</string>
