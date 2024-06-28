@@ -2677,7 +2677,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="Order_Resist">よくも言ってくれたな？！</string>
   <string name="Spell_SelectAChar">対象となる存在を選択する。</string>
   <string name="Calm_Name">カーム</string>
-  <string name="Calm_Info">この辺りには攻撃的な生き物がたくさんいる。</string>
+  <string name="Calm_Info">この辺りには攻撃的な生き物がたくさんいる。彼らを落ち着かせてあげよう。</string>
   <string name="CharmSpell_Name">チャーム</string>
   <string name="CharmSpell_Info">誰だって愛されて当然だろう？</string>
   <string name="HideInGrassSpell_Name">ハイド・イン・グラス</string>
