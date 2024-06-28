@@ -2669,7 +2669,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="Roar_Name">ロアー</string>
   <string name="Roar_Info">強大な咆哮は敵を恐怖に陥れ、味方を鼓舞すること間違いない。</string>
   <string name="LightningBolt_Name">ライティングボルト</string>
-  <string name="LightningBolt_Info">古代のシャーマンの間で共有されている呪文で、敵に2倍のショックを与えることができる。</string>
+  <string name="LightningBolt_Info">古代のシャーマンの間で共有されている呪文で、敵に2倍のショックを与えることができる。 特に、水の上に立っているような愚かな敵には効果的だ。</string>
   <string name="Heal_Name">ヒール</string>
   <string name="Heal_Info">ダンジョンではかなり役に立つ呪文だろう？</string>
   <string name="Order_Name">オーダー</string>
