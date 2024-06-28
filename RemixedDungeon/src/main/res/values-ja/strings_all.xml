@@ -180,7 +180,7 @@
   <string name="WndDontLikeAds_NotThisTime">今回は違う</string>
   <string name="Item_Info2">何か</string>
   <string name="NecromancerArmor_Info2">この鎧を着ると、ネクロマンサーは 「ネクロティズム 」を使用できるようになる。これは魔法の疫病を撒き散らすもので、生死を問わず周囲のあらゆる生き物に感染する可能性がある。</string>
-  <string name="NecromancerRobe_Info2">このローブには闇の魔法が込められており、ネクロマンサーは倒れたモンスターの魂を消費することができる。</string>
+  <string name="NecromancerRobe_Info2">このローブには闇の魔法が込められており、ネクロマンサーは倒れたモンスターの魂を利用することができる。</string>
   <string name="NecrotismBuff_Name">ネクロティズム</string>
   <string name="NecrotismBuff_Info">死の印そのものであり、その悪臭は近くにいる者に影響を与え、同じ苦境を共有させる。</string>
   <string name="Necrotism_ACSpecial">壊死症</string>
