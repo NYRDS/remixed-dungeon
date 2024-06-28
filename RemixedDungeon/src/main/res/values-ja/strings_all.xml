@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
   <string name="ChaosHelmet_Name">混沌の兜</string>
-  <string name="ChaosHelmet_Info">血のように赤い兜は、カオスの戦士に欠かせないシンボルだ。</string>
+  <string name="ChaosHelmet_Info">血のように赤い兜は、混沌の戦士に欠かせないシンボルだ。</string>
   <string name="Spells_SummonLimitReached">%1$s：召喚制限に達した（現在の最大値は %2$d）！</string>
   <string name="Mana_Title">マナ</string>
   <string name="Mana_Cost">マナ消費量</string>
