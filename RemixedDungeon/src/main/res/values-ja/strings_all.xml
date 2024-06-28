@@ -2882,7 +2882,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="View_Distance">視認距離</string>
   <string name="WndHero_Info">情報</string>
   <string name="ChaosShield_name">混沌の盾</string>
-  <string name="ChaosShield_desc">カオスシールドはカオスクリスタルを普通のシールドと融合させたもので、ブロックに成功するとランダムなカオス効果を発現する。</string>
+  <string name="ChaosShield_desc">混沌の盾は混沌のクリスタルを普通の盾と融合させたもので、ブロックに成功すると混沌の力によるランダムな効果を発現する。</string>
   <string name="ChaosCrystal_ShieldFused">クリスタルはあなたの鎧と融合し、カオスフォームとなった。</string>
     <string name="Actions_Speed">加速倍率</string>
   <string name="ChampionOfAirBuff_Name">風の覇者</string>
