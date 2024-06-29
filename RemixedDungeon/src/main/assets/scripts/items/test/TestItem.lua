@@ -129,10 +129,24 @@ return itemLib.init{
 
         if action == "action1" then
 
-            local ads = require("scripts/lib/ads")
+            --local ads = require("scripts/lib/ads")
+
+            local a = storage.gameGet("action1")
+            local b = storage.get("action1")
+            local c = storage.modGet("action1")
+
+            RPD.glog("stored data: "..tostring(a).."|"..tostring(b)..""..tostring(c))
+
 
             storage.gamePut("action1", true)
             storage.put("action1", true)
+            storage.modPut("action1", true)
+
+            a = storage.gameGet("action1")
+            b = storage.get("action1")
+            c = storage.modGet("action1")
+
+            RPD.glog("stored data: "..tostring(a).."|"..tostring(b)..""..tostring(c))
 
             --[[
             if ads.rewardVideoReady() then

@@ -141,6 +141,7 @@ public class Dungeon {
         ModQuirks.reset();
         if (!Scene.sceneMode.equals(Scene.LEVELS_TEST)) {
             LuaEngine.reset();
+            loadModData();
         }
 
         DungeonGenerator.reset();
@@ -475,13 +476,17 @@ public class Dungeon {
         Bundle.write(bundle, output);
         output.close();
 
+        saveModData();
+
+    }
+
+    private static void saveModData() throws IOException {
         OutputStream modData = FileSystem.getOutputStream(SaveUtils.modDataFile());
         Bundle modBundle = new Bundle();
         modBundle.put(SCRIPTS_DATA,
                 LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("serializeModData").call().checkjstring());
         Bundle.write(modBundle, modData);
         modData.close();
-
     }
 
     @SneakyThrows
@@ -675,14 +680,19 @@ public class Dungeon {
                     loadGameFromBundle(bundle.get(), fullLoad);
                 }
 
-                val modBundle = gameBundle(SaveUtils.modDataFile());
-                if (modBundle.isPresent()) {
-                    LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeModData").call(modBundle.get().getString(SCRIPTS_DATA));
-                }
+                loadModData();
 
             } finally {
                 GameLoop.loadingOrSaving.decrementAndGet();
             }
+        }
+    }
+
+    @SneakyThrows
+    private static void loadModData() {
+        val modBundle = gameBundle(SaveUtils.modDataFile());
+        if (modBundle.isPresent()) {
+            LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeModData").call(modBundle.get().getString(SCRIPTS_DATA));
         }
     }
 
