@@ -4,6 +4,7 @@ package com.nyrds.platform.game;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
@@ -140,6 +142,15 @@ public class RemixedDungeon extends Game {
 
 		if(playGames.onActivityResult(requestCode, resultCode, data)) {
 			return;
+		}
+
+		if (requestCode == REQUEST_CODE_OPEN_DOCUMENT_TREE && resultCode == RESULT_OK && data != null) {
+			Uri selectedDirectoryUri = data.getData();
+			int flags = Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION;
+			getContentResolver().takePersistableUriPermission(selectedDirectoryUri, flags);
+
+			GLog.debug("selectedDirectoryUri="  + selectedDirectoryUri);
+			FileSystem.setBaseUri(selectedDirectoryUri);
 		}
 
 		super.onActivityResult(requestCode, resultCode, data);

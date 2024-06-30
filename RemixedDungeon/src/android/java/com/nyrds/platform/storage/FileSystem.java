@@ -1,9 +1,13 @@
 package com.nyrds.platform.storage;
 
 import android.content.Context;
+import android.net.Uri;
+
+import androidx.documentfile.provider.DocumentFile;
 
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.util.ModError;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -35,7 +39,7 @@ public class FileSystem {
 	@NotNull
 	static public File[] listExternalStorage() {
 
-		File storageDir = getContext().getExternalFilesDir(null);
+		File storageDir = getExternalStorageFile(".");
 		if (storageDir != null) {
 			File[] ret = storageDir.listFiles();
 			if(ret != null) {
@@ -178,6 +182,45 @@ public class FileSystem {
 
 		if (!f.mkdirs()) {
 			throw new ModError("Can't create directory:"+dir);
+		}
+	}
+
+	private static Uri mBasePath;
+	public static void setBaseUri(Uri selectedDirectoryUri) {
+		mBasePath = selectedDirectoryUri;
+		accessFilesByParentDirectoryUri(getContext(), mBasePath);
+	}
+
+	static private void accessFilesByParentDirectoryUri(Context context, Uri parentDirectoryUri) {
+		try {
+			Uri fileUri = Uri.withAppendedPath(parentDirectoryUri, "version.json");
+			DocumentFile file = DocumentFile.fromTreeUri(getContext(), parentDirectoryUri);
+
+			listFilesRecursively(file,"");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static void listFilesRecursively(DocumentFile directory, String pathPrefix) {
+		DocumentFile[] files = directory.listFiles();
+		for (DocumentFile file : files) {
+			if (file.isDirectory()) {
+				if(pathPrefix.isEmpty())  {
+					listFilesRecursively(file, file.getName());
+				}
+				else {
+					listFilesRecursively(file, pathPrefix + File.separator + file.getName());
+				}
+			} else {
+				if(pathPrefix.isEmpty()) {
+					GLog.debug("File exists %s", file.getName());
+				}else {
+					GLog.debug("File exists %s%s%s", pathPrefix, File.separator, file.getName());
+				}
+				String fileName = file.getName();
+			}
 		}
 	}
 }

@@ -15,6 +15,8 @@ import com.watabou.noosa.Scene;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.effects.Flare;
+import com.watabou.pixeldungeon.items.ArmorKit;
+import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
@@ -142,6 +144,22 @@ public class AboutScene extends PixelScene {
 		add(area);
 
 		new Flare( 7, 64 ).color( 0x332211, true ).show( nyrdie, 0 ).angularSpeed = -20;
+
+		ItemSprite sprite = new ItemSprite(new ArmorKit());
+		sprite.alpha(0.1f);
+		sprite.setX(align( text.getX() + (text.width() - sprite.width()) / 2 ));
+		sprite.setY(nyrdie.getY() - sprite.height() - 8);
+		add(sprite);
+
+		TouchArea area2 = new TouchArea( sprite )  {
+			@Override
+			protected void onClick( Touch touch ) {
+				Game.toast("Entering dev mode, pick directory");
+				RemixedDungeon.instance().pickDirectory();
+			}
+		};
+
+
 		
 		Archs archs = new Archs();
 		archs.setSize( Camera.main.width, Camera.main.height );
