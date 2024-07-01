@@ -2859,7 +2859,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     - Bugs fixed\n
     </string>
   <string name="WndTilesKind_Title">もうひとつだけ：</string>
-  <string name="WndTilesKind_text">あなたは今、歪んだ魔法に取り憑かれたダンジョンに入ろうとしています： 現代的な擬似3Dにするか、クラシックなフラットビューにするかは、後でゲームオプションメニューで変更できます。</string>
+  <string name="WndTilesKind_text">あなたは今、歪んだ魔法に取り憑かれたダンジョンに入ろうとしています： モダンな擬似3Dにしますか？クラシックなフラットビューにしますか？後でゲームオプションメニューで変更できます。</string>
   <string name="WndTilesKind_NewLook">モダンな方</string>
   <string name="WndTilesKind_ClassicLook">クラシックな方</string>
   <string name="MobAi_status">この%sは%sである</string>
