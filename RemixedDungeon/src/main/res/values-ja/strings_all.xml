@@ -2871,7 +2871,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="WndModSelect_AreYouSure">MOD %s を削除します。よろしいですか？</string>
   <string name="Challenges_Names_8">街なし</string>
   <string name="Challenges_Descriptions_8">あなたの旅は暗く危険な街の下水道から始まる。さらに悪いことに、ダンジョン内で見つけた装備品しか使えない。限られた資源と装備の中で、あなたが生き残れるかどうかは、あなたのスキルと戦略にかかっている。</string>
-  <string name="EncumbranceBuff_CharAct_1">私は %sをまともに振り回せるほど強くない。</string>
+  <string name="EncumbranceBuff_CharAct_1">%sをまともに振り回すには力が足りない。</string>
   <string name="EncumbranceBuff_CharAct_2">この %sは重すぎて効果的に使えない。</string>
   <string name="EncumbranceBuff_CharAct_3">%sを使えるようになるには、もっと力をつけないといけない。</string>
   <string name="EncumbranceBuff_CharAct_4">%sを完全に使いこなすだけの力が私にはない。</string>
