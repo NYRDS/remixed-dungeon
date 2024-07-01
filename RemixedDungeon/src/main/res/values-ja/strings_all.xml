@@ -1641,7 +1641,7 @@
   <string name="TownGuardNPC_Desc">ただの街の衛兵</string>
   <string name="TownGuardNPC_Message1">進め</string>
   <string name="TownGuardNPC_Message2">君たちのような冒険家のおかげで、ここは本当に平和になったよ</string>
-  <string name="TownGuardNPC_Message3">この街に衛兵が多すぎると思うか？それは、この街には巨大なモンスターが巣食うダンジョンしかないからだろう？</string>
+  <string name="TownGuardNPC_Message3">この街に警備員が多すぎるって？まぁ、モンスターが巣食う巨大なダンジョンがあるのは、この町だけだからな。そうだろう？</string>
   <string name="TownsfolkNPC_Name">街の住人</string>
   <string name="TownsfolkNPC_Gender">男性的</string>
   <string name="TownsfolkNPC_Name_Objective">街の住人</string>
