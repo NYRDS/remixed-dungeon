@@ -580,7 +580,7 @@
   <string name="HungerBuff_Name1">空腹</string>
   <string name="HungerBuff_Info1">お腹が空いた！</string>
   <string name="HungerBuff_Name2">飢餓</string>
-  <string name="HungerBuff_Info2">あなたは飢えている！ご飯を食べないと！</string>
+  <string name="HungerBuff_Info2">あなたは飢えている！食事をしないと！</string>
   <string name="InvisibilityBuff_Name">透明</string>
   <string name="InvisibilityBuff_Info">完全に見えないからこそ、危険を回避することも、危険になることもできる。</string>
   <string name="LevitationBuff_Name">浮上</string>
