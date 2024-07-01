@@ -591,7 +591,7 @@
   <string name="MindVisionBuff_Info">内なる視覚は、床の上のすべての生き物の動きをはっきりと見ることを可能にする。</string>
   <string name="OozeBuff_Name">苛性粘液</string>
   <string name="OozeBuff_Info">腐食性の滲出液が肉を蝕んでいる！</string>
-  <string name="Ooze_Death">%s はあなたを倒しました...</string>
+  <string name="Ooze_Death">%s はあなたを殺した...</string>
   <string name="ParalysisBuff_Name">麻痺</string>
   <string name="ParalysisBuff_Info">完全に麻痺している！</string>
   <string name="PoisonBuff_Name">毒化</string>
