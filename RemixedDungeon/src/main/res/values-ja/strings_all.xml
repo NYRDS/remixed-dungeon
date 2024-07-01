@@ -404,7 +404,7 @@
   <string name="WndRanking_StaStr">力</string>
   <string name="WndRanking_StaDuration">ゲームプレイ時間</string>
   <string name="WndRanking_StaDepth">到達最下層</string>
-  <string name="WndRanking_StaEnemies">殺した敵</string>
+  <string name="WndRanking_StaEnemies">殺した敵の数</string>
   <string name="WndRanking_StaGold">集めたゴールド</string>
   <string name="WndRanking_StaFood">食品を食べた数</string>
   <string name="WndRanking_StaAlchemy">ポーション作成数</string>
