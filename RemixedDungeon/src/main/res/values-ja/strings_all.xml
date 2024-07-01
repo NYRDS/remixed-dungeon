@@ -596,7 +596,7 @@
   <string name="ParalysisBuff_Info">完全に麻痺している！</string>
   <string name="PoisonBuff_Name">毒化</string>
   <string name="PoisonBuff_Info">身体は徐々に毒に侵されていく！</string>
-  <string name="Poison_Death">あなたは毒で死にました...</string>
+  <string name="Poison_Death">あなたは毒で死んだ...</string>
   <string name="RegenerationBuff_Name">自然再生</string>
   <string name="RegenerationBuff_Info">自然再生の機能は、物事を簡単にするためにバフ形式になっている。</string>
   <string name="RootsBuff_Name">根付き</string>
