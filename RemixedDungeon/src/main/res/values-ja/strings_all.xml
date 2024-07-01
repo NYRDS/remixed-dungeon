@@ -406,7 +406,7 @@
   <string name="WndRanking_StaDepth">到達最下層</string>
   <string name="WndRanking_StaEnemies">殺した敵</string>
   <string name="WndRanking_StaGold">集めたゴールド</string>
-  <string name="WndRanking_StaFood">食べた食料</string>
+  <string name="WndRanking_StaFood">食品を食べた数</string>
   <string name="WndRanking_StaAlchemy">ポーション作成数</string>
   <string name="WndRanking_StaAnkhs">アンク使用回数</string>
   <string name="WndResurrect_Message">あなたは死んだが、ダンジョン攻略の別の機会を与えられた。受け入れるか？</string>
