@@ -5,15 +5,10 @@ import android.Manifest;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
+import com.nyrds.pixeldungeon.windows.WndModsDisclaimer;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.storage.FileSystem;
-import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.DownloadStateListener;
-import com.nyrds.util.DownloadTask;
 import com.nyrds.util.GuiProperties;
-import com.nyrds.util.Mods;
-import com.nyrds.util.Util;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.InterstitialPoint;
@@ -21,11 +16,7 @@ import com.watabou.noosa.Scene;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndModSelect;
-import com.watabou.pixeldungeon.windows.WndTitledMessage;
-
-import java.io.File;
 
 public class ModsButton extends ImageButton implements InterstitialPoint, DownloadStateListener.IDownloadComplete {
 
@@ -93,31 +84,7 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
         }
 
         GameLoop.pushUiTask(() -> {
-            GameLoop.addToScene(new WndMessage(StringsManager.getVar(R.string.Mods_Disclaimer)) {
-                @Override
-                public void hide() {
-                    super.hide();
-                    GameLoop.pushUiTask(() -> {
-                        if (result) {
-                            if (Util.isConnectedToInternet()) {
-                                File modsCommon = FileSystem.getExternalStorageFile(Mods.MODS_COMMON_JSON);
-                                modsCommon.delete();
-                                String downloadTo = modsCommon.getAbsolutePath();
-
-                                GameLoop.execute(new DownloadTask(new DownloadProgressWindow("Downloading", ModsButton.this),
-                                        "https://nyrds.github.io/NYRDS/mods2.json",
-                                        downloadTo));
-
-                            } else {
-                                DownloadComplete("no internet", true);
-                            }
-
-                        } else {
-                            parent.add(new WndTitledMessage(Icons.get(Icons.SKULL), "No permissions granted", "No permissions granted"));
-                        }
-                    });
-                }
-            }
+            GameLoop.addToScene(new WndModsDisclaimer(this, result, parent)
             );
         });
 
@@ -134,4 +101,5 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
             }
         });
     }
+
 }

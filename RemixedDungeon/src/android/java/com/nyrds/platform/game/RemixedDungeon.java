@@ -18,8 +18,8 @@ import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.storage.copyFromSAF;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Scene;
@@ -150,7 +150,7 @@ public class RemixedDungeon extends Game {
 			getContentResolver().takePersistableUriPermission(selectedDirectoryUri, flags);
 
 			GLog.debug("selectedDirectoryUri="  + selectedDirectoryUri);
-			FileSystem.setBaseUri(selectedDirectoryUri);
+			copyFromSAF.copyModFromSAF(selectedDirectoryUri);
 		}
 
 		super.onActivityResult(requestCode, resultCode, data);
