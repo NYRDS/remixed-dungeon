@@ -6,9 +6,11 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.pixeldungeon.windows.VBox;
+import com.nyrds.pixeldungeon.windows.WndLocalModInstall;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.storage.copyFromSAF;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.Util;
@@ -213,6 +215,10 @@ public class TitleScene extends PixelScene {
         Dungeon.reset();
 
         fadeIn();
+
+        if (copyFromSAF.mBasePath!=null) {
+            GameLoop.pushUiTask(() -> WndLocalModInstall.onDirectoryPicked());
+        }
     }
 
     private double time = 0;

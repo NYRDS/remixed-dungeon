@@ -150,7 +150,7 @@ public class RemixedDungeon extends Game {
 			getContentResolver().takePersistableUriPermission(selectedDirectoryUri, flags);
 
 			GLog.debug("selectedDirectoryUri="  + selectedDirectoryUri);
-			copyFromSAF.copyModFromSAF(selectedDirectoryUri);
+			copyFromSAF.pickModDirectory(selectedDirectoryUri);
 		}
 
 		super.onActivityResult(requestCode, resultCode, data);

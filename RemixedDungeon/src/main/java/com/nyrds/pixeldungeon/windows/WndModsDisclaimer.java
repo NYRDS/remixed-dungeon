@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.DownloadTask;
@@ -22,7 +21,7 @@ public class WndModsDisclaimer extends WndOptions {
     private final Group parent;
 
     public WndModsDisclaimer(ModsButton modsButton, boolean result, Group parent) {
-        super("Mods",StringsManager.getVar(R.string.Mods_Disclaimer), "Mods List","Install local mod");
+        super("Mods",StringsManager.getVar(R.string.Mods_Disclaimer), "Manage mods list","Install local mod");
         this.modsButton = modsButton;
         this.result = result;
         this.parent = parent;
@@ -58,15 +57,10 @@ public class WndModsDisclaimer extends WndOptions {
                 break;
             case 1:
                 GameLoop.pushUiTask(() -> {
-                    GameLoop.addToScene(new WndOptions("Install local mod from directory", "", "Pick mod directory") {
-                                            @Override
-                                            public void onSelect(int index) {
-                                                Game.instance().pickDirectory();
-                                            }
-                                        }
-                    );
+                    GameLoop.addToScene(new WndLocalModInstall());
                 });
                 break;
         }
     }
+
 }

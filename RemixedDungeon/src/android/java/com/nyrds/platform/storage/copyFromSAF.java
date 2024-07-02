@@ -12,9 +12,18 @@ import java.io.InputStream;
 import lombok.SneakyThrows;
 
 public class copyFromSAF {
-    public static void copyModFromSAF(Uri selectedDirectoryUri) {
-        Uri mBasePath = selectedDirectoryUri;
+    public static Uri mBasePath;
+    static IListener mListener;
+
+    public static void copyModToAppStorage() {
+        if (mBasePath == null) {
+            return;
+        }
         copyModToAppStorage(FileSystem.getContext(), mBasePath);
+    }
+
+    public static void pickModDirectory(Uri selectedDirectoryUri) {
+        mBasePath = selectedDirectoryUri;
     }
 
     static private void copyModToAppStorage(Context context, Uri parentDirectoryUri) {
@@ -28,6 +37,11 @@ public class copyFromSAF {
 
         } catch (Exception e) {
             e.printStackTrace();
+        } finally  {
+            mBasePath = null;
+            if (mListener!= null)  {
+                mListener.onComplete();
+            }
         }
     }
 
@@ -59,10 +73,24 @@ public class copyFromSAF {
             }
         }
 
+        if (mListener != null) {
+            mListener.onFileCopy(pathPrefix + File.separator + file.getName());
+        }
+
         File dir = outputFile.getParentFile();
         if (!dir.exists()) {
             dir.mkdirs();
         }
         FileSystem.copyStream(inputStream, new FileOutputStream(outputFile));
+    }
+
+    public static void setListener(IListener listener) {
+        mListener = listener;
+    }
+
+    public interface IListener {
+        void onFileCopy(String path);
+        void onFileSkip(String path);
+        void onComplete();
     }
 }
