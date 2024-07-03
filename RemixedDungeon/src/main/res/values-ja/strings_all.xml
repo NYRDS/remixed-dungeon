@@ -2205,7 +2205,7 @@
   <string name="PotionOfToxicGas_Info">この加圧ガラスの栓を抜いたり、砕いたりすると、中身が爆発して有毒な緑色のガスが発生する。手で栓を抜く代わりに、このポーションを遠くの敵に投げつけることもできる。</string>
   <string name="WndSettings_Quickslots">クイックスロット</string>
   <string name="Abilities_Default">習熟</string>
-  <string name="Abilities_Common">通常呪文</string>
+  <string name="Abilities_Common">汎用呪文</string>
   <string name="Abilities_Elemental">元素呪文</string>
   <string name="Abilities_Necromancy">死霊術</string>
   <string name="WndSettings_UiSettings">UI設定</string>
