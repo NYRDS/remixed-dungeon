@@ -2596,4 +2596,5 @@
   <string name="SpiderElite_Gender">男孩</string>
   <string name="AC_Necromancy">死靈法術</string>
   <string name="AC_Devour">吞噬</string>
+  <string name="WndModsDisclaimer_title">模組</string>
 </resources>

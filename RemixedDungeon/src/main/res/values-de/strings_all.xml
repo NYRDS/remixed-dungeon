@@ -2690,4 +2690,5 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
   <string name="SpiderElite_Gender">männlich</string>
   <string name="AC_Necromancy">Nekromantie</string>
   <string name="AC_Devour">Verschlingen</string>
+  <string name="WndModsDisclaimer_title">Mods</string>
 </resources>

@@ -2572,4 +2572,5 @@
   <string name="SpiderElite_Gender">masculine</string>
   <string name="AC_Necromancy">Некромантія</string>
   <string name="AC_Devour">Поглинання</string>
+  <string name="WndModsDisclaimer_title">Модифікації</string>
 </resources>

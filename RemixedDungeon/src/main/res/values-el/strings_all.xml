@@ -2907,4 +2907,5 @@ remix.32\n
     - Διορθώσεις σφαλμάτων\n</string>
   <string name="AC_Necromancy">Νεκρομαντεία</string>
   <string name="AC_Devour">Καταβρόχθιση</string>
+  <string name="WndModsDisclaimer_title">Τροποποιήσεις</string>
 </resources>

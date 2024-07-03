@@ -2565,4 +2565,5 @@ hogy teleportáljon</string>
   <string name="SpiderElite_Gender">hím</string>
   <string name="AC_Necromancy">Nekromácia</string>
   <string name="AC_Devour">Felfalás</string>
+  <string name="WndModsDisclaimer_title">Modok</string>
 </resources>

@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
-  <string name="ChaosHelmet_Name">カオスヘルム</string>
-  <string name="ChaosHelmet_Info">血のように赤い兜は、カオスの戦士に欠かせないシンボルだ。</string>
+  <string name="ChaosHelmet_Name">混沌の兜</string>
+  <string name="ChaosHelmet_Info">血のように赤い兜は、混沌の戦士に欠かせないシンボルだ。</string>
   <string name="Spells_SummonLimitReached">%1$s：召喚制限に達した（現在の最大値は %2$d）！</string>
   <string name="Mana_Title">マナ</string>
   <string name="Mana_Cost">マナ消費量</string>
@@ -81,7 +81,7 @@
   <string name="ChaosCrystal_Use">使う</string>
   <string name="ChaosCrystal_Fuse">融合</string>
   <string name="ChaosCrystal_Prompt">混沌の印をセットする場所を選ぶ</string>
-  <string name="ChaosCrystal_SelectForFuse">融合する混沌のクリスタルを選ぶ</string>
+  <string name="ChaosCrystal_SelectForFuse">混沌のクリスタルを融合するアイテムを選ぶ</string>
   <string name="ChaosCrystal_ScrollFused">スクロールに刻まれたルーンにクリスタルが吸収され、 %s になった。</string>
   <string name="ChaosCrystal_SwordFused">クリスタルはあなたの武器を吸収し、剣の姿になった</string>
   <string name="ChaosCrystal_BowFused">クリスタルはあなたの弓を吸収し、弓の姿になった</string>
@@ -110,7 +110,7 @@
   <string name="Bishop_not_interested">去る</string>
   <string name="Bishop_no_money">お金が足りないようですね</string>
   <string name="Bishop_bye">あなたのために祈りましょう。</string>
-  <string name="BlessedBuff_Name">祝福された</string>
+  <string name="BlessedBuff_Name">祝福</string>
   <string name="BlessedBuff_Info">祝福に触れた人々に、正確さと身軽さが訪れますように！</string>
   <string name="deco_candle_name">ロウソク</string>
   <string name="deco_candle_desc">大きなロウソク</string>
@@ -180,7 +180,7 @@
   <string name="WndDontLikeAds_NotThisTime">今回は違う</string>
   <string name="Item_Info2">何か</string>
   <string name="NecromancerArmor_Info2">この鎧を着ると、ネクロマンサーは 「ネクロティズム 」を使用できるようになる。これは魔法の疫病を撒き散らすもので、生死を問わず周囲のあらゆる生き物に感染する可能性がある。</string>
-  <string name="NecromancerRobe_Info2">このローブには闇の魔法が込められており、ネクロマンサーは倒れたモンスターの魂を消費することができる。</string>
+  <string name="NecromancerRobe_Info2">このローブには闇の魔法が込められており、ネクロマンサーは倒れたモンスターの魂を利用することができる。</string>
   <string name="NecrotismBuff_Name">ネクロティズム</string>
   <string name="NecrotismBuff_Info">死の印そのものであり、その悪臭は近くにいる者に影響を与え、同じ苦境を共有させる。</string>
   <string name="Necrotism_ACSpecial">ネクロティズム</string>
@@ -310,7 +310,7 @@
   <string name="town_deco_snowy_plate_desc">雪に覆われた古代のプレート</string>
   <string name="DogeMask_Name">ドージマスク</string>
   <string name="DogeMask_Info">有名なドージに変装したいと思ったことはありませんか? 今がチャンスです! こんなにたくさんのマスク! たくさんの変装! すごい!</string>
-  <string name="IntroScene_Txt">ダンジョンには様々な冒険者が先陣を切って進入した。そして、そのうちの何人かは財宝や魔法のアーティファクトを持って帰ってきた。しかし、ダンジョンの奥深くに隠されているという \"イェンダーの魔除け\"の奪還に成功した者はいない。\n\nあなたは挑戦の準備はできていると考えているが、最も重要なのは、幸運があなたに微笑んでいると感じていることだ。さあ、冒険の始まりだ！</string>
+  <string name="IntroScene_Txt">ダンジョンには様々な冒険者が先陣を切って進入した。そして、そのうちの何人かは財宝や魔法のアーティファクトを持って帰ってきた。しかし、ダンジョンの奥深くに隠されているという \"イェンダーの魔除け\"の奪還に成功した者はいない。あなたは挑戦の準備はできていると考えているが、最も重要なのは、幸運があなたに微笑んでいると感じていることだ。さあ、冒険の始まりだ！</string>
   <string name="AmuletScene_Exit">今日はこれで終わりにしよう</string>
   <string name="AmuletScene_Stay">まだ終わっていない</string>
   <string name="AmuletScene_Txt">あなたはついにイェンダーの魔除けを手にした。その力を使えば、世界を征服することも、人々に平和と繁栄をもたらすことも、何でもできる。いずれにせよ、あなたの人生は永遠に変わり、このゲームはここで終わる。あるいは、もう少しだけただの人間のままでいることもできる。</string>
@@ -580,7 +580,7 @@
   <string name="HungerBuff_Name1">空腹</string>
   <string name="HungerBuff_Info1">お腹が空いた！</string>
   <string name="HungerBuff_Name2">飢餓</string>
-  <string name="HungerBuff_Info2">あなたは飢えている！ご飯を食べないと！</string>
+  <string name="HungerBuff_Info2">あなたは飢えている！食事をしないと！</string>
   <string name="InvisibilityBuff_Name">透明</string>
   <string name="InvisibilityBuff_Info">完全に見えないからこそ、危険を回避することも、危険になることもできる。</string>
   <string name="LevitationBuff_Name">浮上</string>
@@ -591,12 +591,12 @@
   <string name="MindVisionBuff_Info">内なる視覚は、床の上のすべての生き物の動きをはっきりと見ることを可能にする。</string>
   <string name="OozeBuff_Name">苛性粘液</string>
   <string name="OozeBuff_Info">腐食性の滲出液が肉を蝕んでいる！</string>
-  <string name="Ooze_Death">%s はあなたを倒しました...</string>
+  <string name="Ooze_Death">%s はあなたを殺した...</string>
   <string name="ParalysisBuff_Name">麻痺</string>
   <string name="ParalysisBuff_Info">完全に麻痺している！</string>
   <string name="PoisonBuff_Name">毒化</string>
   <string name="PoisonBuff_Info">身体は徐々に毒に侵されていく！</string>
-  <string name="Poison_Death">あなたは毒で死にました...</string>
+  <string name="Poison_Death">あなたは毒で死んだ...</string>
   <string name="RegenerationBuff_Name">自然再生</string>
   <string name="RegenerationBuff_Info">自然再生の機能は、物事を簡単にするためにバフ形式になっている。</string>
   <string name="RootsBuff_Name">根付き</string>
@@ -1161,14 +1161,14 @@
   <string name="Kusarigama_Info">この武器は金属製の鎖につながれた鎌で、もう一方の端には重い鉄の重りがついている。</string>
   <string name="Kusarigama_Gender">女性的</string>
   <string name="Kusarigama_Pull">引く</string>
-  <string name="ChaosSword_Name">カオスソード</string>
-  <string name="ChaosSword_Info">この剣の刃は純粋なカオスでできており、時折微かに振動する。この武器に秘められた偉大な力は、ほとんどのものを真っ二つにすることができるが、それを扱うには熟練の技が必要とされている。</string>
+  <string name="ChaosSword_Name">混沌の剣</string>
+  <string name="ChaosSword_Info">この剣の刃は純粋な混沌でできており、時折微かに振動する。この武器に秘められた偉大な力は、ほとんどのものを真っ二つにすることができるが、それを扱うには熟練の技が必要とされている。</string>
   <string name="ChaosSword_Gender">男性的</string>
-  <string name="ChaosBow_Name">カオスボウ</string>
-  <string name="ChaosBow_Info">カオスの力に満ちた恐ろしい弓。放たれる矢には、カオスエネルギーの欠片が宿っている。もし狙いを外せば...</string>
+  <string name="ChaosBow_Name">混沌の弓</string>
+  <string name="ChaosBow_Info">混沌の力に満ちた恐ろしい弓。放たれる矢には、混沌の力の欠片が宿っている。もし狙いを外せば...</string>
   <string name="ChaosBow_Gender">男性的</string>
-  <string name="ChaosStaff_Name">カオススタッフ</string>
-  <string name="ChaosStaff_Info">カオスの力を宿した杖！魔導士が夢見るもの、恐れるものが他にあるだろうか？</string>
+  <string name="ChaosStaff_Name">混沌の杖</string>
+  <string name="ChaosStaff_Info">混沌の力を宿した杖！魔導士が夢見るもの、恐れるものが他にあるだろうか？</string>
   <string name="ChaosStaff_Gender">男性的</string>
   <string name="SacrificialSword_Name">支配の剣</string>
   <string name="SacrificialSword_Info">一見したところ、この年季の入った青銅の剣は、古サビの汚れに覆われ、まったく使い物にならないように見える。しかし、その内部にはある種の古めかしい力が眠っている。その力は、ほとんどの生き物を意志なき奴隷に変えることができる。ただ、それを目覚めさせる正しい方法を見つける必要があるだけなのだ...</string>
@@ -1641,7 +1641,7 @@
   <string name="TownGuardNPC_Desc">ただの街の衛兵</string>
   <string name="TownGuardNPC_Message1">進め</string>
   <string name="TownGuardNPC_Message2">君たちのような冒険家のおかげで、ここは本当に平和になったよ</string>
-  <string name="TownGuardNPC_Message3">この街に衛兵が多すぎると思うか？それは、この街には巨大なモンスターが巣食うダンジョンしかないからだろう？</string>
+  <string name="TownGuardNPC_Message3">この街に警備員が多すぎるって？まぁ、モンスターが巣食う巨大なダンジョンがあるのは、この町だけだからな。そうだろう？</string>
   <string name="TownsfolkNPC_Name">街の住人</string>
   <string name="TownsfolkNPC_Gender">男性的</string>
   <string name="TownsfolkNPC_Name_Objective">街の住人</string>
@@ -1792,9 +1792,9 @@
   <string name="RubyCrossbow_Gender">男性的</string>
   <string name="GothicArmor_Name">ゴシックアーマー</string>
   <string name="GothicArmor_Info">ゴシック様式の鎧は、鎧の鍛造技術の最高峰である。</string>
-  <string name="ChaosArmor_Name">カオスアーマー</string>
-  <string name="ChaosArmor_Info">この鎧は血のように赤い板を暗赤色の鎖で縫い合わせたものである。触れるとカオス的なエネルギーを照射する。</string>
-  <string name="ChaosCrystal_ArmorFused">クリスタルはあなたの鎧と融合し、カオスフォームとなった。</string>
+  <string name="ChaosArmor_Name">混沌の鎧</string>
+  <string name="ChaosArmor_Info">この鎧は血のように赤い板を暗赤色の鎖で縫い合わせたものである。触れると混沌の力を照射する。</string>
+  <string name="ChaosCrystal_ArmorFused">クリスタルはあなたの鎧と融合し、混沌とした形に変化させた。</string>
   <string name="Blacksmith_Name">トロールの鍛冶屋</string>
   <string name="Blacksmith_Desc">このトロールの鍛冶屋は、トロールが皆そうであるように、背が高くて痩せていて、肌の色も質感も石に似ている。トロールの鍛冶屋は不釣り合いなほど小さな道具をいじっている。</string>
   <string name="Blacksmith_Gold1">おい、人間！ちと手伝ってくれんか？つるはしで影金鉱石を掘って来て欲しい。15個もあれば十分なんだが。なに？いくら払うかだと？...まったく、強欲者め...わかった。払う金はないが、お前のために鍛冶をしてやろう。この辺に鍛冶屋は俺だけだぞ。それで良いだろう？ほら、つるはしは貸してやろう。</string>
@@ -2205,7 +2205,7 @@
   <string name="PotionOfToxicGas_Info">この加圧ガラスの栓を抜いたり、砕いたりすると、中身が爆発して有毒な緑色のガスが発生する。手で栓を抜く代わりに、このポーションを遠くの敵に投げつけることもできる。</string>
   <string name="WndSettings_Quickslots">クイックスロット</string>
   <string name="Abilities_Default">習熟</string>
-  <string name="Abilities_Common">通常呪文</string>
+  <string name="Abilities_Common">汎用呪文</string>
   <string name="Abilities_Elemental">元素呪文</string>
   <string name="Abilities_Necromancy">死霊術</string>
   <string name="WndSettings_UiSettings">UI設定</string>
@@ -2426,12 +2426,13 @@
   <string name="Hunger_Starving_0">飢え死にしそうだ！</string>
   <string name="Hunger_Starving_1">飢え死にしそうだ！</string>
   <string name="Hunger_Starving_2">飢え死にしそうだ！</string>
+  <string name="HeroClass_NecromancerPerks_0">ネクロマンサーはスタート時に15ポイントの体力がある。</string>
   <string name="HeroClass_NecromancerPerks_1">ネクロマンサーは死の呪文を唱えるためにマナを使う。</string>
   <string name="HeroClass_NecromancerPerks_2">ネクロマンサーは、倒した生き物1 体につき 1 マナポイントを回復するユニークなネクロマンサーのローブを装備してスタートする。</string>
   <string name="HeroClass_NecromancerPerks_3">ネクロマンサーはダンジョンの階層7で使える骸骨の鍵を持ってスタートする。</string>
   <string name="HeroClass_NecromancerPerks_4">治癒のポーションは最初から特定されている。</string>
   <string name="HeroClass_WarPerks_0">ウォリアーはスタート時に11ポイントの力がある。</string>
-  <string name="HeroClass_WarPerks_1">ウォリアーは、後で「鍛え直す」ことで、別の近接武器にアップグレードできるユニークなショートソードを持ってスタートする。</string>
+  <string name="HeroClass_WarPerks_1">ウォリアーは、後で「鍛え直す」ことで、別の近接武器をアップグレードできるユニークなショートソードを持ってスタートする。</string>
   <string name="HeroClass_WarPerks_2">ウォリアーは遠隔武器の扱いが苦手だ。</string>
   <string name="HeroClass_WarPerks_3">どんな食べ物でも、食べればいくらかの体力を回復することができる。</string>
   <string name="HeroClass_WarPerks_4">力のポーションは最初から特定されている。</string>
@@ -2448,7 +2449,7 @@
   <string name="HeroClass_RogPerks_4">ローグは食料がなくても長く過ごせる。</string>
   <string name="HeroClass_RogPerks_5">魔法の地図のスクロールは最初から特定されている。</string>
   <string name="HeroClass_HunPerks_0">ハントレスはスタート時に15ポイントの体力がある。</string>
-  <string name="HeroClass_HunPerks_1">ハントレスはスタート時に強化された特殊なブーメランを持つ。</string>
+  <string name="HeroClass_HunPerks_1">ハントレスはスタート時にアップグレード可能な特殊なブーメランを持つ。</string>
   <string name="HeroClass_HunPerks_2">ハントレスは遠隔武器の扱いに長けており、遠隔武器を使用する際には過剰な力に応じたダメージボーナスを得る。</string>
   <string name="HeroClass_HunPerks_3">ハントレスは雫からより多くの体力を得られる。</string>
   <string name="HeroClass_HunPerks_4">ハントレスは、たとえモンスターが障害物の陰に隠れていても、それを感知することができる。</string>
@@ -2485,9 +2486,9 @@
   <string name="Poison_Name_0">猛毒の %s</string>
   <string name="Poison_Name_1">猛毒の %s</string>
   <string name="Poison_Name_2">猛毒の %s</string>
-  <string name="Slow_Name_0">極寒の %s</string>
-  <string name="Slow_Name_1">極寒の %s</string>
-  <string name="Slow_Name_2">極寒の %s</string>
+  <string name="Slow_Name_0">冷却の %s</string>
+  <string name="Slow_Name_1">冷却の %s</string>
+  <string name="Slow_Name_2">冷却の %s</string>
   <string name="Swing_Name_0">野蛮な %s</string>
   <string name="Swing_Name_1">野蛮な %s</string>
   <string name="Swing_Name_2">野蛮な %s</string>
@@ -2511,7 +2512,7 @@
   <string name="Codex_Story_17">衝撃の武器 - 攻撃命中時、対象を麻痺させることがある。</string>
   <string name="Codex_Story_18">貫通の武器 - 攻撃命中時、対象の後方直線上にいる全ての敵にダメージを与える。</string>
   <string name="Codex_Story_19">猛毒の武器 - 攻撃命中時、対象を毒状態にすることがある。</string>
-  <string name="Codex_Story_20">極寒の武器 - 攻撃命中時、対象の動きを遅くし、燃焼を防ぐ。</string>
+  <string name="Codex_Story_20">冷却の武器 - 攻撃命中時、対象の動きを遅くし、燃焼を防ぐ。</string>
   <string name="Codex_Story_21">野蛮な武器 - 攻撃命中時、対象に隣接するすべての敵にダメージを与える。</string>
   <string name="Codex_Story_22">この本は悪魔の言語で書かれている</string>
   <string name="Codex_Story_23">この本はドワーフの言語で書かれている</string>
@@ -2591,8 +2592,7 @@
 MODはプレイヤーがプレイヤーのために作成したものです。
 MODは時々ゲームプレイを予測できない、または奇妙な方法で変更することがあります。
 NYRDSチームはMODの内容、品質、安定性に関して一切責任を負いません。
-自己責任でダウンロードして楽しんでください！
-</string>
+自己責任でダウンロードして楽しんでください！</string>
   <string name="ShieldWeaponInfo">武器として使用した場合、この盾は平均して%1$dのダメージを与える。</string>
   <string name="TownPortal_Name">タウンポータル</string>
   <string name="TownPortal_Info">この呪文を使うと、瞬時に安全な場所に戻ることができる。ただし、近くに強力な魔力があると、本来の効果が発揮できないことがある。</string>
@@ -2635,7 +2635,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="CharAction_Give">あげる</string>
   <string name="CharAction_Take">もらう</string>
   <string name="CharAction_Scare">恐怖</string>
-  <string name="CharAction_Hit">命中</string>
+  <string name="CharAction_Hit">叩く</string>
   <string name="StunBuff_Name">唖然</string>
   <string name="StunBuff_Info">唖然とした！</string>
   <string name="Char_StaStunned">びっくり</string>
@@ -2671,7 +2671,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="Roar_Name">ロアー</string>
   <string name="Roar_Info">強大な咆哮は敵を恐怖に陥れ、味方を鼓舞すること間違いない。</string>
   <string name="LightningBolt_Name">ライティングボルト</string>
-  <string name="LightningBolt_Info">古代のシャーマンの間で共有されている呪文で、敵に2倍のショックを与えることができる。</string>
+  <string name="LightningBolt_Info">古代のシャーマンの間で共有されている呪文で、敵に2倍のショックを与えることができる。 特に、水の上に立っているような愚かな敵には効果的だ。</string>
   <string name="Heal_Name">ヒール</string>
   <string name="Heal_Info">ダンジョンではかなり役に立つ呪文だろう？</string>
   <string name="Order_Name">オーダー</string>
@@ -2679,7 +2679,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="Order_Resist">よくも言ってくれたな？！</string>
   <string name="Spell_SelectAChar">対象となる存在を選択する。</string>
   <string name="Calm_Name">カーム</string>
-  <string name="Calm_Info">この辺りには攻撃的な生き物がたくさんいる。</string>
+  <string name="Calm_Info">この辺りには攻撃的な生き物がたくさんいる。彼らを落ち着かせてあげよう。</string>
   <string name="CharmSpell_Name">チャーム</string>
   <string name="CharmSpell_Info">誰だって愛されて当然だろう？</string>
   <string name="HideInGrassSpell_Name">ハイド・イン・グラス</string>
@@ -2690,11 +2690,12 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="NatureArmorSpell_Name">ネイチャーアーマー</string>
   <string name="NatureArmorSpell_Info">エルフもまた、母なる自然そのものに守られているときは、タフになるのだ。</string>
   <string name="ShootInEye_Name">シュートインアイ</string>
-  <string name="ShootInEye_Info">あなたの卓越した射撃技術を駆使して、敵の目を撃ち抜くのだ。</string>
+  <string name="ShootInEye_Info">あなたの卓越した射撃技術を駆使して、敵の目を撃ち抜くのだ。もちろん、敵に目があればの話だが。</string>
   <string name="Sprout_Name">スプラウト</string>
   <string name="Sprout_Info">ただし、この呪文が成功するためには、地面に緑がなければなりません。</string>
   <string name="SummonBeast_Name">ビーストコール</string>
-  <string name="SummonBeast_Info">獰猛な獣の大群を召喚してみよう。</string>
+  <string name="SummonBeast_Info">強大な獣の大群を召喚してみよう。
+※実際の結果は異なる場合があります。</string>
   <string name="SummonBeast_AtYourCommand">あなたの命令で</string>
   <string name="WndSettings_RecordVideo">ビデオ録画</string>
   <string name="Dungeon_saveIoError">保存ファイルを作成しようとすると…</string>
@@ -2756,8 +2757,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="HeroSubClass_NameGuardian">ガーディアン</string>
   <string name="Gnoll_BecomeWitchdoctorDesc">ウィッチドクターになる</string>
   <string name="Gnoll_BecomeGuardianDesc">ガーディアンになる</string>
-  <string name="HeroSubClass_DescWitchdoctor">呪文を唱えることで、「ウィッチドクター」にマジック・シールドを付与する。</string>
-  <string name="HeroSubClass_DescGuardian">巧みな防御の知識により、ガーディアンは盾で反撃することができる、。この歩く砦を攻撃しようとする者にとって、彼は手強い敵となるだろう。</string>
+  <string name="HeroSubClass_DescWitchdoctor">呪文を唱えることで、「ウィッチドクター」は受けるダメージを完全に遮断する魔法の盾を張ることができる。</string>
+  <string name="HeroSubClass_DescGuardian">巧みな防御の知識により、「ガーディアン」は盾で反撃することができる。この歩く砦を攻撃しようとする者にとって、彼は手強い敵となるだろう。</string>
   <string name="Potion_Colors_12">エピドート</string>
   <string name="Potion_Colors_13">クォーツ</string>
   <string name="Potion_Colors_14">オニキス</string>
@@ -2857,7 +2858,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     - Bugs fixed\n
     </string>
   <string name="WndTilesKind_Title">もうひとつだけ：</string>
-  <string name="WndTilesKind_text">あなたは今、歪んだ魔法に取り憑かれたダンジョンに入ろうとしています： 現代的な擬似3Dにするか、クラシックなフラットビューにするかは、後でゲームオプションメニューで変更できます。</string>
+  <string name="WndTilesKind_text">あなたは今、歪んだ魔法に取り憑かれたダンジョンに入ろうとしています： モダンな擬似3Dにしますか？クラシックなフラットビューにしますか？後でゲームオプションメニューで変更できます。</string>
   <string name="WndTilesKind_NewLook">モダンな方</string>
   <string name="WndTilesKind_ClassicLook">クラシックな方</string>
   <string name="MobAi_status">この%sは%sである</string>
@@ -2869,11 +2870,11 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="WndModSelect_AreYouSure">MOD %s を削除します。よろしいですか？</string>
   <string name="Challenges_Names_8">街なし</string>
   <string name="Challenges_Descriptions_8">あなたの旅は暗く危険な街の下水道から始まる。さらに悪いことに、ダンジョン内で見つけた装備品しか使えない。限られた資源と装備の中で、あなたが生き残れるかどうかは、あなたのスキルと戦略にかかっている。</string>
-  <string name="EncumbranceBuff_CharAct_1">私は %sをまともに振り回せるほど強くない。</string>
+  <string name="EncumbranceBuff_CharAct_1">%sをまともに振り回すには力が足りない。</string>
   <string name="EncumbranceBuff_CharAct_2">この %sは重すぎて効果的に使えない。</string>
   <string name="EncumbranceBuff_CharAct_3">%sを使えるようになるには、もっと力をつけないといけない。</string>
-  <string name="EncumbranceBuff_CharAct_4">%sを完全に使いこなすだけの力が私にはない。</string>
-  <string name="EncumbranceBuff_CharAct_5">%sは今の私には手に余る。</string>
+  <string name="EncumbranceBuff_CharAct_4">%sを完全に使いこなすだけの力はない。</string>
+  <string name="EncumbranceBuff_CharAct_5">%sは今の自分には手に余るようだ。</string>
   <string name="Typical_Damage">典型的なダメージ</string>
   <string name="Damage_Reduction">ダメージ軽減</string>
   <string name="Attack_Range">攻撃範囲</string>
@@ -2881,9 +2882,9 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="Attack_Cooldown">攻撃間隔</string>
   <string name="View_Distance">視認距離</string>
   <string name="WndHero_Info">情報</string>
-  <string name="ChaosShield_name">カオスシールド</string>
-  <string name="ChaosShield_desc">カオスシールドはカオスクリスタルを普通のシールドと融合させたもので、ブロックに成功するとランダムなカオス効果を発現する。</string>
-  <string name="ChaosCrystal_ShieldFused">クリスタルはあなたの鎧と融合し、カオスフォームとなった。</string>
+  <string name="ChaosShield_name">混沌の盾</string>
+  <string name="ChaosShield_desc">混沌の盾は混沌のクリスタルを普通の盾と融合させたもので、ブロックに成功すると混沌の力によるランダムな効果を発現する。</string>
+  <string name="ChaosCrystal_ShieldFused">クリスタルはあなたの盾と融合し、混沌とした形に変化させた。</string>
   <string name="Actions_Speed">加速倍率</string>
   <string name="ChampionOfAirBuff_Name">風の覇者</string>
   <string name="ChampionOfAirBuff_Info">この特性は生き物に風のエッセンスを授け、その敏捷性と戦闘能力を強化する。風の覇者は手強い敵になり、戦況を一変させるような素早く壊滅的な攻撃を放つことができる。</string>
@@ -2911,6 +2912,19 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     -- Glowing for Mobs\n
     - Bugs fixed\n
     </string>
+  <string name="Pickaxe_NothingToMine">ここには何もない！</string>
+  <string name="Pickaxe_InsufficientStr">力が足りない！</string>
+  <string name="Carcass_Name">%sの死体</string>
+  <string name="Carcass_Info">完全に死んだ %sの死体</string>
+  <string name="ResultDescriptions_Necromancy">階層%dで死体を生き返らせようとして生命力が枯渇した。</string>
+  <string name="Item_ACPickup">選ぶ</string>
+  <string name="Necromancy_Death">あなたは死霊術の練習中に生命力を使い果たした。</string>
   <string name="AC_Necromancy">死霊術</string>
   <string name="AC_Devour">ディバウアー</string>
+  <string name="AC_Kick">蹴る</string>
+  <string name="Carcass_Kick">この %sは完全に死んでいるので、蹴る必要はない。</string>
+  <string name="Carcass_Devoured">あなたは %sの死体を食い尽くした！</string>
+  <string name="Carcass_Necromancy">あなたは%sの死体を蘇らせた！</string>
+  <string name="Carcass_Necromancy_Failed">あなたは%sの死体を蘇らせようとしたが失敗した。</string>
+  <string name="WndModsDisclaimer_title">Mods</string>
 </resources>

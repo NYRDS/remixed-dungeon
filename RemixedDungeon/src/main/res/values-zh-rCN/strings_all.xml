@@ -973,6 +973,8 @@
   <string name="HeroClass_Rog">盗贼</string>
   <string name="HeroClass_Hun">女猎手</string>
   <string name="HeroClass_Elf">精灵</string>
+  <string name="HeroClass_None">平民</string>
+  <string name="HeroSubClass_NameNone">无</string>
   <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">角斗士</string>
   <string name="HeroSubClass_DescGlad">一次成功的近战攻击可以让_角斗士_找回节奏，开始连击。接下来每次近战攻击命中都会造成更多伤害。</string>
@@ -1792,6 +1794,7 @@
   <string name="GothicArmor_Info">哥特式盔甲是盔甲锻造艺术的顶峰。</string>
   <string name="ChaosArmor_Name">混沌护甲</string>
   <string name="ChaosArmor_Info">这件盔甲的血红色金属板被暗红的铁链缝接在一起，当你触碰它时会迸发出混沌能量。</string>
+  <string name="ChaosCrystal_ArmorFused">水晶吸收了你的护甲，并化成了复合盔甲的形态。</string>
   <string name="Blacksmith_Name">巨魔铁匠</string>
   <string name="Blacksmith_Desc">这只巨魔看起来和其他巨魔一样：又高又瘦，皮肤的色泽和纹理看起来就像石头一样。这位巨魔铁匠正拿着一把与他体型不相称的小锤子不停地修补。</string>
   <string name="Blacksmith_Gold1">嘿，人类！想要做个有用点的人吗？拿着这把镐子给我挖点_暗金矿_，只要_15块_。什么？我要如何报答你？你……真是贪婪。\n好吧，好吧，我没钱付给你，但我可以给你锻造。想想你有多走运吧，我可是这附近唯一的铁匠。</string>
@@ -2423,6 +2426,7 @@
   <string name="Hunger_Starving_0">你饿到受不了了！</string>
   <string name="Hunger_Starving_1">你饿到受不了了！</string>
   <string name="Hunger_Starving_2">你饿到受不了了！</string>
+  <string name="HeroClass_NecromancerPerks_0">死灵法师初始只拥有15点生命上限。</string>
   <string name="HeroClass_NecromancerPerks_1">死灵法师使用法力值施放死灵咒语。</string>
   <string name="HeroClass_NecromancerPerks_2">死灵法师初始拥有一件独特的灵魂长袍。装备后，每杀死一个生物会给他提供1点法力值。</string>
   <string name="HeroClass_NecromancerPerks_3">死灵法师开局有一把7层的骷髅钥匙。</string>
@@ -2449,6 +2453,7 @@
   <string name="HeroClass_HunPerks_2">女猎手精通远程武器。使用它们时，她可以获得基于额外力量值的伤害加成。</string>
   <string name="HeroClass_HunPerks_3">女猎手能从露珠获得更多生命值。</string>
   <string name="HeroClass_HunPerks_4">女猎手可以隔着障碍物感应到附近隐匿的敌人。</string>
+  <string name="HeroClass_ElfPerks_0">精灵初始时只拥有15点生命值和9点力量。</string>
   <string name="HeroClass_ElfPerks_1">精灵免疫缠绕状态。</string>
   <string name="HeroClass_ElfPerks_2">精灵开局时拥有一把升级过的弓和一些箭。 </string>
   <string name="HeroClass_ElfPerks_3">精灵十分敏捷，并且十分精通弓箭。</string>
@@ -2829,6 +2834,12 @@ remix.30.1\n
   <string name="Facilitations_Descriptions_3">拉紧了这条传承了一代又一代的食人魔皮制腰带，你朝着未知的前方迈出了一步。</string>
   <string name="Challenges_Descriptions_0">食物和水早就腐烂了，恐惧和饥饿使每个冒险者都因为死亡的想法而变得疯狂。你的饮食能帮助你坚持足够长的时间吗？</string>
   <string name="Challenges_Descriptions_1">一个人的进攻是最好的防守。遵循这些教导，你冒险进入地牢，信仰是你身体最强大的守护者。</string>
+  <string name="Challenges_Descriptions_2">作为依靠普普通通身体能够自然再生的追随者，你一直对具有治疗作用的药剂持谨慎态度。安全总比说抱歉好！</string>
+  <string name="Challenges_Descriptions_3">地牢周围的土地长期受到恶意的感染，阻止了各种草药和植物的种子生长。谁知道最后一株植物需要多长时间才能在这些贫瘠的土地上消失。</string>
+  <string name="Challenges_Descriptions_4">一种邪恶的存在潜伏在地牢中所有生物的脑海中，使他们意识到彼此发生的事件。</string>
+  <string name="Challenges_Descriptions_5">伴随着邪恶而来的第一件事是一团浓密而难以穿透的雾，这使得人们几乎不可能清楚地穿过地牢无尽的走廊。</string>
+  <string name="Challenges_Descriptions_6">古代的符文阅读艺术是被禁止的，并不惜一切代价避免，因为进入地牢或周围环境的每一卷卷轴都会受到诅咒。</string>
+  <string name="Challenges_Descriptions_7">你已经习惯了这样一个事实，即拥有和使用武器在道德上是不对的，但还有什么能保护你免受下面漫游的生物的伤害呢？</string>
   <string name="ManaRegenerationBuff_Name">魔法恢复</string>
   <string name="ManaRegenerationBuff_Info">魔法恢复是一种buff，这能让一些事情变得简单一些。</string>
   <string name="WndGame_Customizations">自定义设置</string>
@@ -2851,4 +2862,5 @@ remix.31.1\n
   <string name="WndModSelect_AreYouSure">删除mod：%s，你确定吗？</string>
   <string name="AC_Necromancy">死灵术</string>
   <string name="AC_Devour">吞噬</string>
+  <string name="WndModsDisclaimer_title">MOD</string>
 </resources>

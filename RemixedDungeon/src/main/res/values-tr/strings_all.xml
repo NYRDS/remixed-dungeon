@@ -2920,4 +2920,5 @@ remix.30.1\n
 - Düzeltilen hatalar</string>
   <string name="AC_Necromancy">Ölüçağırma</string>
   <string name="AC_Devour">Obur</string>
+  <string name="WndModsDisclaimer_title">Modlar</string>
 </resources>

@@ -2865,4 +2865,5 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="WndModSelect_AreYouSure">Usuwanie modyfikacji %s, Jesteś pewien?</string>
   <string name="AC_Necromancy">Nekromancja</string>
   <string name="AC_Devour">Pożerać ?</string>
+  <string name="WndModsDisclaimer_title">Mody</string>
 </resources>
