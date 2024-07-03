@@ -2923,4 +2923,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Carcass_Devoured">"You have devoured corpse of %s!"</string>
   <string name="Carcass_Necromancy">"You have raised corpse of %s!"</string>
   <string name="Carcass_Necromancy_Failed">"Your attempt to raise corpse of %s failed!"</string>
+  <string name="WndInstallingMod_please_wait">Installing mod, please wait...</string>
+  <string name="WndInstallingMod_copying_file">Copying %s to Remixed Dungeon storage</string>
+  <string name="WndInstallingMod_skipping_file">"Skipping %s"</string>
+  <string name="WndLocalModInstall_title">Install mod from local directory</string>
+  <string name="WndLocalModInstall_text">Select directory to install mod from.</string>
+  <string name="WndLocalModInstall_pick">Pick mod directory</string>
+  <string name="WndModsDisclaimer_title">Mods</string>
+  <string name="WndModsDisclaimer_manage">Manage mods list</string>
+  <string name="WndModsDisclaimer_install">Install local mod</string>
 </resources>
