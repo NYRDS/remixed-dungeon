@@ -28,7 +28,7 @@ public class copyFromSAF {
 
     static private void copyModToAppStorage(Context context, Uri parentDirectoryUri) {
         try {
-            DocumentFile file = DocumentFile.fromTreeUri(FileSystem.getContext(), parentDirectoryUri);
+            DocumentFile file = DocumentFile.fromTreeUri(context, parentDirectoryUri);
 
             String modPath = parentDirectoryUri.getLastPathSegment();
             String[] parts = modPath.split("/");
@@ -37,9 +37,9 @@ public class copyFromSAF {
 
         } catch (Exception e) {
             e.printStackTrace();
-        } finally  {
+        } finally {
             mBasePath = null;
-            if (mListener!= null)  {
+            if (mListener != null) {
                 mListener.onComplete();
             }
         }
@@ -64,17 +64,21 @@ public class copyFromSAF {
     @SneakyThrows
     private static void copyToAppStorage(String pathPrefix, String rootPath, DocumentFile file) {
         InputStream inputStream = FileSystem.getContext().getContentResolver().openInputStream(file.getUri());
+        String filePath = pathPrefix + File.separator + file.getName();
+        File outputFile = FileSystem.getExternalStorageFile(rootPath + File.separator + filePath);
 
-        File outputFile = FileSystem.getExternalStorageFile(rootPath + File.separator + pathPrefix + File.separator + file.getName());
 
         if (outputFile.exists()) {
             if (outputFile.lastModified() > file.lastModified()) {
+                if (mListener != null) {
+                    mListener.onFileSkip(filePath);
+                }
                 return;
             }
         }
 
         if (mListener != null) {
-            mListener.onFileCopy(pathPrefix + File.separator + file.getName());
+            mListener.onFileCopy(filePath);
         }
 
         File dir = outputFile.getParentFile();
@@ -90,7 +94,9 @@ public class copyFromSAF {
 
     public interface IListener {
         void onFileCopy(String path);
+
         void onFileSkip(String path);
+
         void onComplete();
     }
 }

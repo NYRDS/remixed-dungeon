@@ -1,14 +1,15 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.copyFromSAF;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
 public class WndLocalModInstall extends WndOptions  {
     public WndLocalModInstall() {
-        super("Install local mod from directory", "Step 1:" +
-                "\nSelect directory to install mod from", "Pick mod directory");
+        super(StringsManager.getVar(R.string.WndLocalModInstall_title), StringsManager.getVar(R.string.WndLocalModInstall_text), StringsManager.getVar(R.string.WndLocalModInstall_pick));
     }
 
     @Override
