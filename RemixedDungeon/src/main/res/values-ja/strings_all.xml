@@ -2486,7 +2486,7 @@
   <string name="Poison_Name_0">猛毒の %s</string>
   <string name="Poison_Name_1">猛毒の %s</string>
   <string name="Poison_Name_2">猛毒の %s</string>
-  <string name="Slow_Name_0">極寒の %s</string>
+  <string name="Slow_Name_0">冷却の %s</string>
   <string name="Slow_Name_1">極寒の %s</string>
   <string name="Slow_Name_2">極寒の %s</string>
   <string name="Swing_Name_0">野蛮な %s</string>
