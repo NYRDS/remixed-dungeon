@@ -9,6 +9,7 @@ import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.WndLocalModInstall;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.InstallMod;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.copyFromSAF;
 import com.nyrds.platform.util.StringsManager;
@@ -219,6 +220,11 @@ public class TitleScene extends PixelScene {
         if (copyFromSAF.mBasePath!=null) {
             GameLoop.pushUiTask(() -> WndLocalModInstall.onDirectoryPicked());
         }
+
+        if(Game.instance() instanceof InstallMod) {
+            GameLoop.pushUiTask(()  -> {((InstallMod) Game.instance()).installMod();});
+        }
+
     }
 
     private double time = 0;

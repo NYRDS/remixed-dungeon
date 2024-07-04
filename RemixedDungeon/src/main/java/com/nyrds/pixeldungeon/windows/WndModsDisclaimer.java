@@ -21,7 +21,10 @@ public class WndModsDisclaimer extends WndOptions {
     private final Group parent;
 
     public WndModsDisclaimer(ModsButton modsButton, boolean result, Group parent) {
-        super(StringsManager.getVar(R.string.WndModsDisclaimer_title),StringsManager.getVar(R.string.Mods_Disclaimer), StringsManager.getVar(R.string.WndModsDisclaimer_manage),StringsManager.getVar(R.string.WndModsDisclaimer_install));
+        super(StringsManager.getVar(R.string.WndModsDisclaimer_title),
+                StringsManager.getVar(R.string.Mods_Disclaimer),
+                StringsManager.getVar(R.string.WndModsDisclaimer_manage),
+                StringsManager.getVar(R.string.WndModsDisclaimer_install));
         this.modsButton = modsButton;
         this.result = result;
         this.parent = parent;
