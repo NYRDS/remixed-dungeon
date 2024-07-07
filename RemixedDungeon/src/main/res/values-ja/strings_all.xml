@@ -2926,5 +2926,13 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="Carcass_Devoured">あなたは %sの死体を食い尽くした！</string>
   <string name="Carcass_Necromancy">あなたは%sの死体を蘇らせた！</string>
   <string name="Carcass_Necromancy_Failed">あなたは%sの死体を蘇らせようとしたが失敗した。</string>
+  <string name="WndInstallingMod_please_wait">Installing mod, please wait...</string>
+  <string name="WndInstallingMod_copying_file">Copying %s to Remixed Dungeon storage</string>
+  <string name="WndInstallingMod_skipping_file">Skipping %s</string>
+  <string name="WndLocalModInstall_title">ローカルディレクトリからMODをインストール</string>
+  <string name="WndLocalModInstall_text">MODをインストールするディレクトリを選択してください。</string>
+  <string name="WndLocalModInstall_pick">MODディレクトリを選ぶ</string>
   <string name="WndModsDisclaimer_title">Mods</string>
+  <string name="WndModsDisclaimer_manage">MODの管理</string>
+  <string name="WndModsDisclaimer_install">ローカルMODのインストール</string>
 </resources>
