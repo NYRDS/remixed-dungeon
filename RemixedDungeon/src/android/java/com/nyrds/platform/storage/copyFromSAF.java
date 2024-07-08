@@ -5,11 +5,19 @@ import android.net.Uri;
 
 import androidx.documentfile.provider.DocumentFile;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 import lombok.SneakyThrows;
+import lombok.val;
 
 public class copyFromSAF {
     public static Uri mBasePath;
@@ -26,21 +34,59 @@ public class copyFromSAF {
         mBasePath = selectedDirectoryUri;
     }
 
-    static private void copyModToAppStorage(Context context, Uri parentDirectoryUri) {
+    @SneakyThrows
+    static public void autoSyncModDirectory(String modName) {
+        File uriFile= FileSystem.getExternalStorageFile(modName + File.separator+"src_uri.sync");
+        if (!uriFile.exists()) {
+            return;
+        }
+        InputStream fis = new FileInputStream(uriFile);
+        //read uri from file
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(fis))) {
+            String line = reader.readLine();
+            Uri uri = Uri.parse(line);
+            pickModDirectory(uri);
+            copyModToAppStorage();
+        }
+    }
 
-
+    static private  void copyModToAppStorage(Context context, Uri parentDirectoryUri) {
         try {
             DocumentFile file = DocumentFile.fromTreeUri(context, parentDirectoryUri);
 
             String modPath = parentDirectoryUri.getLastPathSegment();
             String[] parts = modPath.split("/");
 
-            String modName  = parts[parts.length  -  1];
-            var externalMap = getFileTimestampMap(file,"");
-            var internalMap = FileSystem.getFileTimestampMap(FileSystem.getExternalStorageFile(modName),"");
+            String modName = parts[parts.length - 1];
+            var externalMap = getFileTimestampMap(file, "");
+            var internalMap = FileSystem.getFileTimestampMap(FileSystem.getExternalStorageFile(modName), "");
 
+            Set<String> newerFiles = new HashSet<>();
+            //build map of newer external files
+            for (val entry : externalMap.entrySet()) {
+                if (internalMap.get(entry.getKey()) == null || internalMap.get(entry.getKey()).compareTo(entry.getValue()) < 0) {
+                    newerFiles.add(entry.getKey());
+                }
+            }
+
+            Set<String> deletedFiles = new HashSet<>();
+            //build map of deleted external files
+            for (val entry : internalMap.entrySet()) {
+                if (externalMap.get(entry.getKey()) == null) {
+                    deletedFiles.add(entry.getKey());
+                }
+            }
+
+            for (val entry : deletedFiles) {
+                FileSystem.getExternalStorageFile(modName+File.separator+entry).delete();
+            }
 
             copyDirToAppStorage(file, "", modName);
+
+            File uri = FileSystem.getExternalStorageFile(modName + File.separator+"src_uri.sync");
+            FileOutputStream fos = new FileOutputStream(uri);
+            fos.write(parentDirectoryUri.toString().getBytes());
+            fos.close();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -93,6 +139,35 @@ public class copyFromSAF {
             dir.mkdirs();
         }
         FileSystem.copyStream(inputStream, new FileOutputStream(outputFile));
+    }
+
+    public static Map<String, Long> getFileTimestampMap(DocumentFile directory, String pathPrefix) {
+        Map<String, Long> fileTimestampMap = new HashMap<>();
+
+        try {
+            DocumentFile[] files = directory.listFiles();
+            for (DocumentFile file : files) {
+                if (file.isDirectory()) {
+                    if (pathPrefix.isEmpty()) {
+                        val ret = getFileTimestampMap(file, file.getName());
+                        fileTimestampMap.putAll(ret);
+                    } else {
+                        val ret = getFileTimestampMap(file, pathPrefix + File.separator + file.getName());
+                        fileTimestampMap.putAll(ret);
+                    }
+                } else {
+                    if (pathPrefix.isEmpty()) {
+                        fileTimestampMap.put(file.getName(), file.lastModified());
+                    } else {
+                        fileTimestampMap.put(pathPrefix + File.separator + file.getName(), file.lastModified());
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            return fileTimestampMap;
+        }
     }
 
     public static void setListener(IListener listener) {
