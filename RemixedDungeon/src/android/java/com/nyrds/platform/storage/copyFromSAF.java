@@ -27,13 +27,20 @@ public class copyFromSAF {
     }
 
     static private void copyModToAppStorage(Context context, Uri parentDirectoryUri) {
+
+
         try {
             DocumentFile file = DocumentFile.fromTreeUri(context, parentDirectoryUri);
 
             String modPath = parentDirectoryUri.getLastPathSegment();
             String[] parts = modPath.split("/");
 
-            copyDirToAppStorage(file, "", parts[parts.length - 1]);
+            String modName  = parts[parts.length  -  1];
+            var externalMap = getFileTimestampMap(file,"");
+            var internalMap = FileSystem.getFileTimestampMap(FileSystem.getExternalStorageFile(modName),"");
+
+
+            copyDirToAppStorage(file, "", modName);
 
         } catch (Exception e) {
             e.printStackTrace();

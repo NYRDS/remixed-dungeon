@@ -15,6 +15,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -111,6 +113,20 @@ public class FileSystem {
         }
 
         copyFile(inputFile, new FileOutputStream(outputFile));
+    }
+
+    public static Map<String, Long> getFileTimestampMap(File directory, String pathPrefix) {
+        Map<String, Long> ret = new HashMap<>();
+        if (directory.isDirectory()) {
+            for (File file : directory.listFiles()) {
+                if (file.isDirectory()) {
+                    ret.putAll(getFileTimestampMap(file, pathPrefix + file.getName() + File.separator));
+                } else {
+                    ret.put(pathPrefix + file.getName(), file.lastModified());
+                }
+            }
+        }
+        return ret;
     }
 
     public static void zipFolderTo(OutputStream out, File srcFolder, int depth, FileFilter filter) throws IOException {
