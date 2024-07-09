@@ -1662,6 +1662,7 @@
   <string name="ServiceManNPC_Desc">Ένας απλός εργάτης των τοπικών εγκαταστάσεων.</string>
   <string name="TownShopkeeper_Name">καταστηματάρχης</string>
   <string name="TownShopkeeper_Desc">Αυτός είναι ο κλασικός καταστηματάρχης. Το νιώθεις ότι γνωρίζει ήδη την τιμή σου.</string>
+  <string name="TownShopkeeper_Objective">καταστηματάρχης</string>
   <string name="WndMovieTheatre_Watch">Παρακολούθηση Ad</string>
   <string name="WndMovieTheatre_No">Αποχώρηση</string>
   <string name="WndMovieTheatre_Bye">Έλα πάλι όποτε θες. Χαιρόμαστε που σε βλέπουμε!</string>
@@ -2424,7 +2425,7 @@
   <string name="Hunger_Starving_0">Λιμοκτονείς!</string>
   <string name="Hunger_Starving_1">Λιμοκτονείς!</string>
   <string name="Hunger_Starving_2">Λιμοκτονείς!</string>
-  <string name="HeroClass_NecromancerPerks_0">Οι Νεκρομάντες ξεκινούν με 15 ζωή.</string>
+  <string name="HeroClass_NecromancerPerks_0">Οι Νεκρομάντες ξεκινούν με 15 πόντους ζωής.</string>
   <string name="HeroClass_NecromancerPerks_1">Οι Νεκρομάντες χρησιμοποιούν μαγική ενέργεια για να εκτελέσουν ξόρκια θανάτου.</string>
   <string name="HeroClass_NecromancerPerks_2">Οι Νεκρομάντες ξεκινούν με τον μοναδικό Χιτώνα του Νεκρομάντη, που προσφέρει 1 πόντο μαγικής ενέργειας για κάθε εξοντωμένο πλάσμα.</string>
   <string name="HeroClass_NecromancerPerks_3">Οι Νεκρομάντες ξεκινούν με ένα σκελετικό κλειδί του 7ου επιπέδου.</string>
@@ -2905,4 +2906,27 @@ remix.32\n
     -- Εξατομικευμένα σενάρια (scripts) για τους προ-υπάρχοντες εχθρούς\n
     -- Λάμψεις για τους εχθρούς\n
     - Διορθώσεις σφαλμάτων\n</string>
+    <string name="Pickaxe_NothingToMine">Τίποτα να εξορυχθεί εδώ!</string>
+    <string name="Pickaxe_InsufficientStr">Ανεπαρκής δύναμη για να εξορύξεις!</string>
+    <string name="Carcass_Name">Λείψανα από: %s</string>
+    <string name="Carcass_Info">Λείψανα ενός εντελός νεκρού ήρωα: %s</string>
+    <string name="ResultDescriptions_Necromancy">Εξαντλήθηκε η ζωτική ισχύς κατά την προσπάθεια ανάστασης σορού στο επίπεδο %d</string>
+    <string name="Item_ACPickup">Μάζεμα</string>
+  <string name="Necromancy_Death">Εξάντλησες όλη σου τη ζωτική ισχύ εξασκώντας τη Νεκρομαντική.</string>
+  <string name="AC_Necromancy">Νεκρομαντεία</string>
+  <string name="AC_Devour">Καταβρόχθιση</string>
+  <string name="AC_Kick">Κλωτσιά</string>
+  <string name="Carcass_Kick">Το πλάσμα: %s είναι παντελώς νεκρό. Δεν χρειάζεται να το κλωτσάς.</string>
+  <string name="Carcass_Devoured">Καταβρόχθισες τη σορό του πλάσματος: %s!</string>
+  <string name="Carcass_Necromancy">Ανέστησες τη σορό του πλάσματος: %s!</string>
+  <string name="Carcass_Necromancy_Failed">Η απόπειρά σου να αναστήσεις τη σορό (%s) απέτυχε!</string>
+  <string name="WndInstallingMod_please_wait">Εγκατάσταση τροποποίησης, παρακαλώ περιμένετε...</string>
+  <string name="WndInstallingMod_copying_file">Αντιγραφή τροποποίησης «%s» στον αποθηκευτικό χώρο του Remixed Dungeon...</string>
+  <string name="WndInstallingMod_skipping_file">Παράλειψη %s...</string>
+  <string name="WndLocalModInstall_title">Εγκατάσταση τροποποίησης από τη συσκευή</string>
+  <string name="WndLocalModInstall_text">Επίλεξε κατάλογο από όπου θα εγκαταστήσεις την τροποποίηση.</string>
+  <string name="WndLocalModInstall_pick">Επιλογή φακέλου τροποποίησης</string>
+  <string name="WndModsDisclaimer_title">Τροποποιήσεις</string>
+  <string name="WndModsDisclaimer_manage">Διαχείριση λίστας τροποποιήσεων</string>
+  <string name="WndModsDisclaimer_install">Εγκατάσταση τροποποίησης από συσκευή</string>
 </resources>
