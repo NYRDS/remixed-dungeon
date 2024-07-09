@@ -2909,7 +2909,7 @@ remix.32\n
     <string name="Pickaxe_NothingToMine">Τίποτα να εξορυχθεί εδώ!</string>
     <string name="Pickaxe_InsufficientStr">Ανεπαρκής δύναμη για να εξορύξεις!</string>
     <string name="Carcass_Name">Λείψανα από: %s</string>
-    <string name="Carcass_Info">Λείψανα ενός εντελός νεκρού ήρωα: %s</string>
+    <string name="Carcass_Info">Λείψανα του παντελώς νεκρού πλάσματος: %s</string>
     <string name="ResultDescriptions_Necromancy">Εξαντλήθηκε η ζωτική ισχύς κατά την προσπάθεια ανάστασης σορού στο επίπεδο %d</string>
     <string name="Item_ACPickup">Μάζεμα</string>
   <string name="Necromancy_Death">Εξάντλησες όλη σου τη ζωτική ισχύ εξασκώντας τη Νεκρομαντική.</string>
