@@ -1774,7 +1774,7 @@
   <string name="ScrollOfDomination_Info">Αυτός ο πάπυρος θα υποτάξει τη θέληση ενός πλάσματος στο οπτικό σου πεδίο. Το πλάσμα θα πολεμήσει στο πλευρό σου μέχρι θανάτου.</string>
   <string name="ScrollOfCurse_Name">πάπυρος κατάρας</string>
   <string name="ScrollOfCurse_Info">Αυτός ο πάπυρος έχει φτιαχτεί για να τιμωρεί τους κουτούς ληστές που παν να κάνουν χρήση μαγείας που δεν κατανοούν. Η μαγεία του παπύρου είναι εντελώς άχρηστη -έως και επιβλαβής- για τον μέσο εξερευνητή, αλλά έχει μεγάλη αξία για τους εμπόρους.</string>
-  <string name="Claymore_Name">δίκοπο σπαθί</string>
+  <string name="Claymore_Name">Κλέιμορ</string>
   <string name="Claymore_Info">Αυτό το γιγάντιο σπαθί θα μπορούσε να κόψει τα πάντα.</string>
   <string name="Claymore_Gender">neuter</string>
   <string name="Halberd_Name">αλαβάρδα</string>
