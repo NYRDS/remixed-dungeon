@@ -2916,7 +2916,7 @@ remix.32\n
   <string name="AC_Necromancy">Νεκρομαντεία</string>
   <string name="AC_Devour">Καταβρόχθιση</string>
   <string name="AC_Kick">Κλωτσιά</string>
-  <string name="Carcass_Kick">Το πλάσμα: %s είναι παντελώς νεκρό. Δεν χρειάζεται να το κλωτσάς.</string>
+  <string name="Carcass_Kick">Το πλάσμα: %s έχει πεθάνει για τα καλά. Δεν χρειάζεται να το κλωτσάς.</string>
   <string name="Carcass_Devoured">Καταβρόχθισες τη σορό του πλάσματος: %s!</string>
   <string name="Carcass_Necromancy">Ανέστησες τη σορό του πλάσματος: %s!</string>
   <string name="Carcass_Necromancy_Failed">Η απόπειρά σου να αναστήσεις τη σορό (%s) απέτυχε!</string>
