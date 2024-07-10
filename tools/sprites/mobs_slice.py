@@ -1,6 +1,6 @@
+import json
 import os
 from PIL import Image
-import json
 
 xs = 14
 ys = 17

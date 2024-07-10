@@ -4,8 +4,6 @@ import static com.watabou.pixeldungeon.actors.Actor.TICK;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.windows.WndChar;
 
 public class Interact extends CharAction {
     public final Char chr;

@@ -5,7 +5,6 @@ import com.nyrds.util.ModdingMode;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
-import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
 import com.watabou.pixeldungeon.levels.Level;
 

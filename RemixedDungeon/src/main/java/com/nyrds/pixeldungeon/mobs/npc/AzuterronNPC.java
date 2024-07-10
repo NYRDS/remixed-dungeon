@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
-import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.guts.TreacherousSpirit;
