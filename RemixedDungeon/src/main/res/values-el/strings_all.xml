@@ -694,7 +694,7 @@
   <string name="AzuterronNPC_Name">ξένος</string>
   <string name="AzuterronNPC_Gender">masculine</string>
   <string name="AzuterronNPC_Name_Objective">Ξένος</string>
-  <string name="AzuterronNPC_Desc">Μια μυστηριώδης φιγούρα καλυμμένη με ένα πέπλο μαύρης ομίχλης.</string>
+  <string name="AzuterronNPC_Desc">Μια μυστηριώδης φιγούρα καλυμμένη από ένα πέπλο μαύρης ομίχλης.</string>
   <string name="AzuterronNPC_Quest_Start">Ε, τι έγινε... α, με βλέπεις λοιπόν ε; Αυτό σημαίνει ότι δεν είσαι απ\' «αυτούς». Βλέπω ούτε εσύ τα συμπαθείς τα τέρατα. Λοιπόν, κοίτα να δεις... αν με βοηθήσεις με ένα μικρό θεματάκι, θα σου προσφέρω τις υπηρεσίες μου. Κάπου σε αυτόν τον όροφο θα βρεις ένα δημιούργημα του σκότους: το _Δόλιο πνεύμα._ Εξόντωσέ το, πάρε την _καρδιά_ του και γύρνα σε εμένα. Και κάτι ακόμη: αν σε ενδιαφέρει να αγοράσεις το εμπόρευμά μου, να μου το πεις.</string>
   <string name="AzuterronNPC_Quest_Reminder">Βοήθησέ με, για να σε βοηθήσω.</string>
   <string name="AzuterronNPC_Quest_End">Έξοχα. Έλα, πάρε αυτό το φίλτρο. Σίγουρα θα σου φανεί χρήσιμο.</string>
