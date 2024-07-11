@@ -1139,7 +1139,7 @@
   <string name="Boomerang_Info">Αφού ριχθεί στον εχθρό, αυτό το κυρτό ξύλινο όπλο ρίψης θα επιστρέψει στα χέρια του χρήστη.</string>
   <string name="Boomerang_Gender">neuter</string>
   <string name="CurareDart_Name">παραλυτικό βελάκι</string>
-  <string name="CurareDart_Info">Αυτά τα μικρά διαβολικά βελάκια δεν προκαλούν μεγάλη ζημιά, μα μπορούν να παραλύσουν τον στόχο και να τον αφήσουν αβοήθητο για κάποιο χρονικό διάστημα.</string>
+  <string name="CurareDart_Info">Αυτά τα μικρά διαβολικά βελάκια δεν προκαλούν μεγάλη ζημιά, αλλά μπορούν να παραλύσουν τον στόχο και να τον αφήσουν αβοήθητο για κάποιο χρονικό διάστημα.</string>
   <string name="CurareDart_Gender">neuter</string>
   <string name="Dart_Name">βελάκι</string>
   <string name="Dart_Info">Αυτά τα απλά μεταλλικά βελάκια είναι ειδικά κατασκευασμένα ώστε να τρυπούν με ακρίβεια τον στόχο.</string>
