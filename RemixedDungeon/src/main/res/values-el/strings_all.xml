@@ -2281,7 +2281,7 @@
   <string name="town_deco_stakes_name">Πάσσαλοι</string>
   <string name="town_deco_stakes_desc">Αυτοί οι μυτεροί πάσσαλοι είναι τρομακτικοί στην όψη. Στην πραγματικότητα, είναι εντελώς άχρηστοι από μόνοι τους.</string>
   <string name="town_deco_fence_name">Φράκτης</string>
-  <string name="town_deco_fence_desc">Ένας ξύλινος φράχτης καλυμμένος στο χιόνι.</string>
+  <string name="town_deco_fence_desc">Ένας ξύλινος φράχτης καλυμμένος από το χιόνι.</string>
   <string name="town_deco_pole_name">Στύλος</string>
   <string name="town_deco_pole_desc">Ένας ψηλός στύλος όπου δένεται το σκοινί.</string>
   <string name="town_deco_rope_name">Σκοινί</string>
