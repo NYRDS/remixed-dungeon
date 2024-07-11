@@ -2249,6 +2249,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (undead) {
             setGlowing(0xff333333, 5f);
         }
+    }
 
+    @LuaInterface
+    public Item checkItem(String itemClass) {
+        return getBelongings().checkItem(itemClass);
     }
 }

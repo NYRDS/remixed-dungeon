@@ -42,12 +42,18 @@ public class Carcass extends Item implements Doom {
 
     static final int MAX_TTL = 10;
 
+    {
+        stackable = true;
+    }
+
     @Keep
     public Carcass() {
     }
+
     public Carcass(Char src) {
         this.src = src;
         spend(10);
+
     }
 
     @Override
