@@ -30,7 +30,8 @@ return mob.init({
         end
 
         if not data["questInProgress"] then
-            self:say(questList[questIndex].prologue.text)
+            RPD.showQuestWindow(self, questList[questIndex].prologue.text)
+
             data["questInProgress"] = true
 
             mob.storeData(self,data)
@@ -38,9 +39,17 @@ return mob.init({
         else
 
             local wantedItem = chr:checkItem(questList[questIndex].requirements.kind)
-            if wantedItem:quantity() >= questList[questIndex].requirements.quantity then
-                wantedItem:removeItem()
-                self:say(questList[questIndex].epilogue.text)
+            local wantedQty = questList[questIndex].requirements.quantity
+            local actualQty = wantedItem:quantity()
+            if actualQty >= wantedQty then
+                if wantedQty == actualQty then
+                    wantedItem:removeItem()
+                else
+                    wantedItem:quantity(actualQty - wantedQty)
+                end
+
+                RPD.showQuestWindow(self, questList[questIndex].epilogue.text)
+
                 data["questInProgress"] = false
                 data["questIndex"] = questIndex+ 1
 
@@ -51,7 +60,7 @@ return mob.init({
                 return
 
             else
-                self:say(questList[questIndex].in_progress.text)
+                RPD.showQuestWindow(self,questList[questIndex].in_progress.text)
                 return
             end
         end

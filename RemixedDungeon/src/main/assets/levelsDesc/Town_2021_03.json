@@ -34,7 +34,7 @@
          "y":10
         },
         {
-         "kind":"PlagueDoctorNPC",
+         "kind":"PlagueDoctor",
          "x":14,
          "y":11
         },

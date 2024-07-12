@@ -291,7 +291,7 @@ local RPD = {
     end,
 
     textById = function(id)
-        return StringsManager:getVar(id)
+        return StringsManager:maybeId(id)
     end,
 
     glog = function (text,...)
@@ -357,6 +357,12 @@ local RPD = {
         wnd:showSellWnd()
     end,
 
+    showQuestWindow = function(chr, text_id)
+        local text = StringsManager:maybeId(text_id)
+        local wnd = luajava.newInstance(Objects.Ui.WndQuest,chr,text)
+        chr:say(text)
+        GameScene:show(wnd)
+    end,
 
     zapEffect = function (from, to, zapEffect)
         GameScene:zapEffect(from, to, zapEffect)
