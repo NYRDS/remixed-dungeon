@@ -13,37 +13,55 @@ questList = {
         prologue = {text = "Kill Black Rats!"},
         requirements = {kind= "Carcass of Rat", quantity = 5},
         in_progress = {text = "Killing Black Rats..."},
-        reward = {kind = "gold", quantity = 100},
+        reward = {kind = "Gold", quantity = 100},
         epilogue = {text = "Great Job!"}
     }
 }
 
 return mob.init({
     interact = function(self, chr)
-        if questIndex > #questList then
+        data = mob.restoreData(self)
+
+        local questIndex = data["questIndex"]
+
+        if data["questIndex"] > #questList then
             self:say("All quests complete!")
             return
         end
 
-        if not self.data["questInProgress"] then
+        if not data["questInProgress"] then
             self:say(questList[questIndex].prologue.text)
-            self.data["questInProgress"] = true
+            data["questInProgress"] = true
+
+            mob.storeData(self,data)
             return
         else
 
             local wantedItem = chr:checkItem(questList[questIndex].requirements.kind)
             if wantedItem:quantity() >= questList[questIndex].requirements.quantity then
+                wantedItem:removeItem()
                 self:say(questList[questIndex].epilogue.text)
-                self.data["questInProgress"] = false
-                self.data["questIndex"] = self.data["questIndex"] + 1
+                data["questInProgress"] = false
+                data["questIndex"] = questIndex+ 1
+
+                local reward = RPD.item(questList[questIndex].reward.kind, questList[questIndex].reward.quantity)
+                chr:collectAnimated(reward)
+
+                mob.storeData(self,data)
+                return
+
+            else
+                self:say(questList[questIndex].in_progress.text)
                 return
             end
         end
 
-    end
+    end,
     spawn = function (self,level)
         level:setCompassTarget(self:getPos())
-        self.data["questIndex"] = 1
-        self.data["questInProgress"] = false
+        data = mob.restoreData(self)
+        data["questIndex"] = 1
+        data["questInProgress"] = false
+        mob.storeData(self,data)
     end
 })
