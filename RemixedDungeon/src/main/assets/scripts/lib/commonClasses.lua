@@ -360,7 +360,7 @@ local RPD = {
     showQuestWindow = function(chr, text_id)
         local text = StringsManager:maybeId(text_id)
         local wnd = luajava.newInstance(Objects.Ui.WndQuest,chr,text)
-        chr:say(text)
+        --chr:say(text)
         GameScene:show(wnd)
     end,
 
