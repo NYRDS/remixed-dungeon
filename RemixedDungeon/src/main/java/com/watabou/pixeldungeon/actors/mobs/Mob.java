@@ -472,10 +472,12 @@ public abstract class Mob extends Char {
         }
 
         if (chr instanceof Hero) {
-            return chr.getHeroClass().friendlyTo(getEntityKind());
+            if(chr.getHeroClass().friendlyTo(getEntityKind())) {
+                return true;
+            }
         }
 
-        return !this.fraction.isEnemy(chr.fraction);
+        return super.friendly(chr, r_level);
     }
 
     @Override

@@ -405,6 +405,8 @@ public abstract class Level implements Bundlable {
 				it.remove();
 			}
 		}
+
+		Dungeon.saveCurrentLevel(); //save level
 		return mobsToNextLevel;
 	}
 
