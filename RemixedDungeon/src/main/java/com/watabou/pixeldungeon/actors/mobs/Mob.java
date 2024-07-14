@@ -110,9 +110,13 @@ public abstract class Mob extends Char {
 
     @NotNull
     public static Mob makePet(@NotNull Mob pet, int ownerId) {
-        pet.expForKill = 0;
+        var owner = CharsList.getById(ownerId);
+        if(owner.fraction()==Fraction.HEROES) {
+            pet.expForKill = 0;
+        }
         if (pet.canBePet()) {
-            pet.setFraction(Fraction.HEROES);
+
+            pet.setFraction(owner.fraction());
             pet.setOwnerId(ownerId);
         }
         return pet;

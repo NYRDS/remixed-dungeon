@@ -37,7 +37,7 @@ questList = {
             prologue = { text = 'PlagueDoctorQuest_2_2_Prologue' },
             requirements = { item = { kind = "Sungrass.Seed", quantity = 2 } },
             in_progress = { text = "PlagueDoctorQuest_2_2_InProgress" },
-            reward = { item = { kind = "PotionOfHealth", quantity = 1 } },
+            reward = { item = { kind = "PotionOfHealing", quantity = 1 } },
             epilogue = { text = "PlagueDoctorQuest_2_2_Epilogue" }
         }
     },
@@ -113,9 +113,10 @@ return mob.init({
 
             local function giveReward()
                 local rewardItem = quest.reward.item
-                local reward = RPD.item(rewardItem.kind, rewardItem.quantity)
-                chr:collectAnimated(reward)
-
+                if rewardItem then
+                    local reward = RPD.item(rewardItem.kind, rewardItem.quantity)
+                    chr:collectAnimated(reward)
+                end
                 RPD.showQuestWindow(self, quest.epilogue.text)
 
                 data["questInProgress"] = false
@@ -157,7 +158,7 @@ return mob.init({
                 local actualQty = 0
 
                 for _, mob in pairs(pets) do
-                    if mob.kind == wantedMob then
+                    if mob:getEntityKind() == wantedMob then
                         actualQty = actualQty + 1
                     end
                 end
@@ -165,8 +166,8 @@ return mob.init({
                 if actualQty >= wantedQty then
 
                     for _, mob in pairs(pets) do
-                        if mob.kind == wantedMob and wantedQty < 0 then
-                            wantedQty = wantdQty - 1
+                        if mob:getEntityKind() == wantedMob and wantedQty > 0 then
+                            wantedQty = wantedQty - 1
                             mob:makePet(self)
                         end
                     end
