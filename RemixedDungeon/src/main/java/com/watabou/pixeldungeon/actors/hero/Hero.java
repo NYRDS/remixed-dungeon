@@ -86,6 +86,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -100,6 +101,8 @@ public class Hero extends Char {
 
     @Nullable
     static public Runnable doOnNextAction;
+
+    public Set<Char> initialAlies = new HashSet<>();
 
     private HeroClass heroClass = HeroClass.ROGUE;
     private HeroSubClass subClass = HeroSubClass.NONE;
