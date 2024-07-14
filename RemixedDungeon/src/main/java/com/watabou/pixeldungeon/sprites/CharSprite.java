@@ -496,6 +496,10 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
             if (controlled && visible) {
                 showMindControl(chr);
+            } else {
+                if (emo instanceof EmoIcon.Controlled) {
+                    removeEmo();
+                }
             }
 
             if (emo != null) {

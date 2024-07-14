@@ -87,7 +87,7 @@ questList = {
 
 return mob.init({
     interact = function(self, chr)
-        data = mob.restoreData(self)
+        local data = mob.restoreData(self)
 
         local questIndex = data["questIndex"]
         local questVariant = data["questVariant"]
@@ -178,11 +178,15 @@ return mob.init({
             end
         end
     end,
+
     spawn = function(self, level)
         level:setCompassTarget(self:getPos())
-        data = mob.restoreData(self)
-        data["questIndex"] = 1
-        data["questInProgress"] = false
-        mob.storeData(self, data)
+        local data = mob.restoreData(self)
+        local questIndex = data["questIndex"]
+        if not questIndex then
+            data["questIndex"] = 1
+            data["questInProgress"] = false
+            mob.storeData(self, data)
+        end
     end
 })
