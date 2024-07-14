@@ -102,7 +102,7 @@ public class Hero extends Char {
     @Nullable
     static public Runnable doOnNextAction;
 
-    public Set<Char> initialAlies = new HashSet<>();
+    public Set<Mob> initialAlies = new HashSet<>();
 
     private HeroClass heroClass = HeroClass.ROGUE;
     private HeroSubClass subClass = HeroSubClass.NONE;

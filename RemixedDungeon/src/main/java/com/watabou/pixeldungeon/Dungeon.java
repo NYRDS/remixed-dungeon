@@ -350,6 +350,20 @@ public class Dungeon {
             level.spawnMob(mob);
         }
 
+        for (Mob mob : hero.initialAlies) {
+
+            int cell = level.getEmptyCellNextTo(hero.getPos());
+            if (!level.cellValid(cell)) {
+                cell = hero.getPos();
+            }
+            mob.setPos(cell);
+
+            mob.setEnemy(CharsList.DUMMY);
+            mob.setState(MobAi.getStateByClass(Wandering.class));
+            level.spawnMob(mob);
+        }
+        hero.initialAlies.clear();
+
         previousLevelId = levelId;
         levelId = level.levelId;
         Dungeon.level = level;

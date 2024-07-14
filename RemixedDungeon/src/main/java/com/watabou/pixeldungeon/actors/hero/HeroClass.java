@@ -142,6 +142,7 @@ public enum HeroClass implements CharModifier {
                         if (desc.has(KIND)) {
                             var mob = MobFactory.mobByName(desc.getString(KIND));
                             mob.fromJson(desc);
+                            mob.makePet(hero);
                             hero.initialAlies.add(mob);
                         }
                     }

@@ -5,15 +5,21 @@
       "identified": true,
       "level": 10
     },
+    "allies" : [
+      {
+        "kind" : "Rat",
+        "level": 1
+      }
+    ],
     "items": [
       {
-        "kind": "RemixedPickaxe",
+        "kind": "Carcass of Rat",
         "level": 1,
         "quantity": 100,
         "identetifyLevel": 2
       },
       {
-        "kind": "WandOfFlock",
+        "kind": "test/TestItem",
         "identified": true,
         "level": 10
       },
