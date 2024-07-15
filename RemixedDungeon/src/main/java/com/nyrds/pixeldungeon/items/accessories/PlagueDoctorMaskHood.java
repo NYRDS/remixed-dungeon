@@ -1,12 +1,12 @@
 package com.nyrds.pixeldungeon.items.accessories;
 
 
-public class PlagueDoctorMask extends Accessory{
+public class PlagueDoctorMaskHood extends Accessory{
 
     {
         coverFacialHair = true;
-        coverHair = false;
-        image = 23;
+        coverHair = true;
+        image = 24;
     }
 
 }

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items.accessories;
 
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.platform.EventCollector;
@@ -64,6 +65,7 @@ public class Accessory {
         registerAccessory(FullFaceMask.class);
         registerAccessory(KrampusHead.class);
         registerAccessory(PlagueDoctorMask.class);
+        registerAccessory(PlagueDoctorMaskHood.class);
     }
 
     public static List<String> getAccessoriesList() {
@@ -136,8 +138,8 @@ public class Accessory {
     }
 
     public boolean haveIt() {
-        return true;
-        //return GamePreferences.donated() == 4 || Preferences.INSTANCE.getString(prefProperty(), Utils.EMPTY_STRING).equals(getClass().getSimpleName());
+        //return true;
+        return GamePreferences.donated() == 4 || Preferences.INSTANCE.getString(prefProperty(), Utils.EMPTY_STRING).equals(getClass().getSimpleName());
     }
 
     public void ownIt(boolean reallyOwn) {
