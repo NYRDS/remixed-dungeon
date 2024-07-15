@@ -138,7 +138,6 @@ public class Accessory {
     }
 
     public boolean haveIt() {
-        //return true;
         return GamePreferences.donated() == 4 || Preferences.INSTANCE.getString(prefProperty(), Utils.EMPTY_STRING).equals(getClass().getSimpleName());
     }
 

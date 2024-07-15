@@ -9,4 +9,8 @@ public class PlagueDoctorMaskHood extends Accessory{
         image = 24;
     }
 
+    @Override
+    public boolean nonIap() {
+        return true;
+    }
 }

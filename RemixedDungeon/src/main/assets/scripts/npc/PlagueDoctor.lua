@@ -92,8 +92,17 @@ return mob.init({
         local questIndex = data["questIndex"]
         local questVariant = data["questVariant"]
 
+        if data['needToGiveSpecialReward'] then
+            local npc = luajava.bindClass("com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC")
+            npc:questCompleted()
+
+            data['needToGiveSpecialReward'] = false
+            mob.storeData(self, data)
+            return
+        end
+
         if data["questIndex"] > #questList then
-            self:say("All quests complete!")
+            RPD.showQuestWindow(self, "PlagueDoctorQuest_AllDone")
             return
         end
 
@@ -117,11 +126,18 @@ return mob.init({
                     local reward = RPD.item(rewardItem.kind, rewardItem.quantity)
                     chr:collectAnimated(reward)
                 end
+
+                if quest.reward.special then
+                    data['needToGiveSpecialReward'] = true
+                end
+
                 RPD.showQuestWindow(self, quest.epilogue.text)
 
                 data["questInProgress"] = false
                 data["questIndex"] = questIndex + 1
                 mob.storeData(self, data)
+
+
             end
 
             local function inProgress()
