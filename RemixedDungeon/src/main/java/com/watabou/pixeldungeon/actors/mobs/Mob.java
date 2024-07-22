@@ -539,13 +539,9 @@ public abstract class Mob extends Char {
     public Char makeClone() {
 
         Bundle storedMob = new Bundle();
-
         storeInBundle(storedMob);
-
         Mob new_mob = MobFactory.mobByName(getEntityKind());
-
         new_mob.restoreFromBundle(storedMob);
-
         new_mob.getId(); //Ensure valid id
 
         if (getOwnerId() == getId()) {

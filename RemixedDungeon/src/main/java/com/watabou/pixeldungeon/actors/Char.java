@@ -158,6 +158,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     protected int baseAttackSkill = 0;
     protected int baseDefenseSkill = 0;
 
+    @Setter
     public Fraction fraction = Fraction.DUNGEON;
 
     protected CharSprite sprite;
@@ -184,6 +185,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     private Map<String, Number> spellsUsage = new HashMap<>();
 
+    @Setter
+    @Getter
     private CharAction curAction = null;
 
     private int lvl = Scrambler.scramble(1);
@@ -1820,7 +1823,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public abstract Char makeClone();
 
-    protected void setOwnerId(int owner) {
+    public void setOwnerId(int owner) {
         this.owner = owner;
     }
 
@@ -2158,14 +2161,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         lightness = value;
     }
 
-    public CharAction getCurAction() {
-        return curAction;
-    }
-
-    public void setCurAction(CharAction curAction) {
-        this.curAction = curAction;
-    }
-
     public ArrayList<String> actions(Char hero) {
         ArrayList<String> actions = CharUtils.actions(this, hero);
 
@@ -2255,4 +2250,5 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public Item checkItem(String itemClass) {
         return getBelongings().checkItem(itemClass);
     }
+
 }

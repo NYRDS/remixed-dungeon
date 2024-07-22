@@ -16,6 +16,7 @@ import com.nyrds.pixeldungeon.ml.actions.Attack;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.ml.actions.Descend;
 import com.nyrds.pixeldungeon.ml.actions.Examine;
+import com.nyrds.pixeldungeon.ml.actions.Expel;
 import com.nyrds.pixeldungeon.ml.actions.Interact;
 import com.nyrds.pixeldungeon.ml.actions.InteractObject;
 import com.nyrds.pixeldungeon.ml.actions.MapItemAction;
@@ -308,6 +309,11 @@ public class CharUtils {
             return;
         }
 
+        if(action.equals(CommonActions.MAC_EXPEL)){
+            hero.nextAction(new Expel(target));
+            return;
+        }
+
         target.getScript().run("executeAction", target, action);
     }
 
@@ -336,6 +342,7 @@ public class CharUtils {
 
         if (target.getOwnerId() == hero.getId()) {
             actions.add(CommonActions.MAC_ORDER);
+            actions.add(CommonActions.MAC_EXPEL);
         }
 
         actions.removeAll(hero.getHeroClass().getForbiddenActions());
