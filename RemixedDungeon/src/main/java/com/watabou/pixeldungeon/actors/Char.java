@@ -2251,4 +2251,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return getBelongings().checkItem(itemClass);
     }
 
+    public void unequip(EquipableItem equipableItem) {
+        getBelongings().unequip(equipableItem);
+    }
 }

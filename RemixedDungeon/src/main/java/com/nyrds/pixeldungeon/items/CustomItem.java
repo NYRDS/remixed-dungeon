@@ -413,7 +413,7 @@ public class CustomItem extends EquipableItem {
 
     @Override
     public boolean getBoolean(String key) {
-        return script.runOptional("getBoolean", super.getBoolean(key));
+        return script.runOptional("getBoolean", super.getBoolean(key), key);
     }
 
     @Override

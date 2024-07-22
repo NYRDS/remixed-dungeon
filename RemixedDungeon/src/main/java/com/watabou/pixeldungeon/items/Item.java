@@ -815,6 +815,11 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
         if(heap!= null) {
             heap.pickUp(this);
         } else  {
+
+            if(isEquipped(owner)) {
+                owner.unequip((EquipableItem) this);
+            }
+
             owner.getBelongings().removeItem(this);
         }
     }
