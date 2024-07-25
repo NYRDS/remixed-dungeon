@@ -1527,8 +1527,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
         return nearest;
     }
+    public abstract boolean getCloser(final int cell, boolean ignorePets);
 
-    public abstract boolean getCloser(final int cell);
+    public boolean getCloser(final int cell) {
+        return getCloser(cell, false);
+    }
 
     protected abstract boolean getFurther(final int cell);
 

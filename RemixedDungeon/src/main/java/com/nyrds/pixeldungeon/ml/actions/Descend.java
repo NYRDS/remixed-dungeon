@@ -26,7 +26,7 @@ public class Descend extends CharAction {
             return false;
         }
 
-        if (hero.getCloser(dst)) {
+        if (hero.getCloser(dst, true)) {
             return true;
         }
 

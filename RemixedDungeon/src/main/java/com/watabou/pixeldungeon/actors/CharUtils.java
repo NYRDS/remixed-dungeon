@@ -41,6 +41,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
@@ -218,6 +219,17 @@ public class CharUtils {
 
     @NotNull
     public static CharAction actionForCell(@NonNull Char actor, int cell, @NotNull Level level) {
+
+        if (actor.getControlTarget() instanceof Hero) {
+            if (level.isExit(cell)) {
+                return new Descend(cell);
+            }
+
+            if (cell == level.entrance) {
+                return new Ascend(cell);
+            }
+        }
+
         Char target;
         final Char controlTarget = actor.getControlTarget();
 
@@ -266,14 +278,6 @@ public class CharUtils {
 
         if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
             return new Unlock(cell);
-        }
-
-        if (level.isExit(cell)) {
-            return new Descend(cell);
-        }
-
-        if (cell == level.entrance) {
-            return new Ascend(cell);
         }
 
         if (actor.getPos() != cell) {

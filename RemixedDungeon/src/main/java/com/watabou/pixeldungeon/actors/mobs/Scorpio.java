@@ -61,11 +61,11 @@ public class Scorpio extends Mob implements IZapper {
 	}
 
 	@Override
-	public boolean getCloser(int target) {
+	public boolean getCloser(int target,  boolean ignorePets) {
 		if (getState() instanceof Hunting) {
 			return enemySeen && getFurther( target );
 		} else {
-			return super.getCloser( target );
+			return super.getCloser( target, ignorePets );
 		}
 	}
 }

@@ -38,7 +38,7 @@ public class JarOfSouls extends UndeadMob {
 	}
 
 	@Override
-	public boolean getCloser(int target) {
+	public boolean getCloser(int target, boolean ignorePets) {
 		return false;
 	}
 

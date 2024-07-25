@@ -41,6 +41,9 @@ public class DummyChar extends Char {
     public boolean getCloser(int cell) {
         return false;
     }
+    public boolean getCloser(int cell, boolean ignorePets) {
+        return false;
+    }
 
     @Override
     protected boolean getFurther(int cell) {

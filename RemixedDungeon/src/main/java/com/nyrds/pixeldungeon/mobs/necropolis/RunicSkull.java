@@ -83,7 +83,7 @@ public class RunicSkull extends MultiKindMob {
     }
 
 	@Override
-	public boolean getCloser(int target) {
+	public boolean getCloser(int target, boolean ignorePets) {
 		return false;
 	}
 

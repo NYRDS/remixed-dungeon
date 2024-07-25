@@ -64,7 +64,7 @@ public class Succubus extends Mob {
 	}
 
 	@Override
-    public boolean getCloser(int target) {
+    public boolean getCloser(int target,  boolean ignorePets) {
 		spend(Actor.MICRO_TICK);
 		if (level().fieldOfView[target] && level().distance(getPos(), target) > 2 && delay <= 0) {
 			CharUtils.blinkTo(this, target);
@@ -73,7 +73,7 @@ public class Succubus extends Mob {
 			return true;
 		} else {
 			delay--;
-			return super.getCloser(target);
+			return super.getCloser(target, ignorePets);
 		}
 	}
 }

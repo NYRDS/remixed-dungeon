@@ -95,12 +95,12 @@ public class Lich extends Boss {
 
 
     @Override
-    public boolean getCloser(int target) {
+    public boolean getCloser(int target, boolean ignorePets) {
         if (Dungeon.level.fieldOfView[target]) {
             jump();
             return true;
         } else {
-            return super.getCloser( target );
+            return super.getCloser( target, ignorePets );
         }
     }
 

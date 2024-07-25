@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.missiles.Shuriken;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
@@ -39,7 +40,7 @@ public class HuntressArmor extends ClassArmor {
 		Level level = user.level();
 
 		for (Mob mob : level.getCopyOfMobsArray()) {
-			if (level.fieldOfView[mob.getPos()] && level.distanceL2(user, mob) <= user.getViewDistance()) {
+			if (level.fieldOfView[mob.getPos()] && level.distanceL2(user, mob) <= ShadowCaster.MAX_DISTANCE) {
 				
 				Callback callback = new Callback() {	
 					@Override

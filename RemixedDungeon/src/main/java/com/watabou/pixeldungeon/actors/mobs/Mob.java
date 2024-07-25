@@ -254,7 +254,7 @@ public abstract class Mob extends Char {
         return !pacified && super.canAttack(enemy);
     }
 
-    public boolean getCloser(int target) {
+    public boolean getCloser(int target, boolean ignorePets) {
         int step = Dungeon.findPath(this, target, walkingType.passableCells(level()));
         return _doStep(step);
     }
