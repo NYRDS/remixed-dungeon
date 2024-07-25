@@ -19,6 +19,7 @@ public class Descend extends CharAction {
 
         int pos = hero.getPos();
         if ((pos == dst || level.adjacent(pos, dst)) && level.isExit(dst)) {
+            hero.setPos(dst);
             level.onHeroDescend(dst);
             hero.clearActions();
             if (!level.isSafe()) {
