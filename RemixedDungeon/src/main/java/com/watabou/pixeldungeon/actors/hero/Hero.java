@@ -1004,7 +1004,6 @@ public class Hero extends Char {
         }
 
         if (level.adjacent(getPos(), target)) {
-
             if (Actor.findChar(target) == null) {
                 if (!hasBuff(BuffFactory.BLINDNESS)) {
                     if (level.pit[target] && !isFlying() && !Chasm.jumpConfirmed) {

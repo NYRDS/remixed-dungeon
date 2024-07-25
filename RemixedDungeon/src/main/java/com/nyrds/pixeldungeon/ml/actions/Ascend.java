@@ -26,7 +26,7 @@ public class Ascend extends CharAction {
     public boolean act(Char hero) {
         Level level = hero.level();
         int heroPos = hero.getPos();
-        if (heroPos == dst && heroPos == level.getEntrance()) {
+        if ((heroPos == dst || level.adjacent(heroPos, dst)) && dst == level.getEntrance()) {
 
             Position nextLevel = DungeonGenerator.ascend(Dungeon.currentPosition());
 

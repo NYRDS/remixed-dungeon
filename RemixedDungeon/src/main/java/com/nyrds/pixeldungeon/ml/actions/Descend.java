@@ -16,8 +16,10 @@ public class Descend extends CharAction {
 
         final Level level = Dungeon.level;
 
-        if (hero.getPos() == dst && level.isExit(hero.getPos())) {
-            level.onHeroDescend(hero.getPos());
+
+        int pos = hero.getPos();
+        if ((pos == dst || level.adjacent(pos, dst)) && level.isExit(dst)) {
+            level.onHeroDescend(dst);
             hero.clearActions();
             if (!level.isSafe()) {
                 hero.hunger().satisfy(-Hunger.STARVING / 10);
