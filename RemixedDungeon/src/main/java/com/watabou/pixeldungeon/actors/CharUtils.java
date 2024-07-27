@@ -219,8 +219,15 @@ public class CharUtils {
 
     @NotNull
     public static CharAction actionForCell(@NonNull Char actor, int cell, @NotNull Level level) {
+        final Char target = Actor.findChar(cell);
+        final Char controlTarget = actor.getControlTarget();
 
-        if (actor.getControlTarget() instanceof Hero) {
+
+        if (controlTarget instanceof Hero && (target == null || target.friendly(controlTarget)) ) {
+            if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
+                return new Unlock(cell);
+            }
+
             if (level.isExit(cell)) {
                 return new Descend(cell);
             }
@@ -230,10 +237,7 @@ public class CharUtils {
             }
         }
 
-        Char target;
-        final Char controlTarget = actor.getControlTarget();
-
-        if (level.fieldOfView[cell] && (target = Actor.findChar(cell)) != null && target != controlTarget) {
+        if (level.fieldOfView[cell] && target != null && target != controlTarget) {
             if (target.friendly(controlTarget)) {
                 return new Interact(target);
             } else {
@@ -276,9 +280,6 @@ public class CharUtils {
             }
         }
 
-        if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
-            return new Unlock(cell);
-        }
 
         if (actor.getPos() != cell) {
             return new Move(cell);

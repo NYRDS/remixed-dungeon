@@ -77,7 +77,7 @@ public class King extends Boss {
 				});
 
 		if(canTryToSummon()) {
-			return super.getCloser( targetPedestal );
+			return super.getCloser( targetPedestal, ignorePets );
 		}
 
 		return super.getCloser(target, ignorePets);
