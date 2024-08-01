@@ -2659,13 +2659,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="BardNPC_Name_Objective">bard</string>
   <string name="BardNPC_Gender">masculine</string>
   <string name="BardNPC_Desc">The town bard is playing his lute.</string>
-  <string name="Welcome_Text_30">
-    remix.30.0\n
-    - Gameplay:\n
-    -- Abilities for everyone!\n
-    -- Inn is opened now!\n
-    - Bugs fixed\n
-    </string>
   <string name="Roar_Name">Roar</string>
   <string name="Roar_Info">The mighty roar will surely terrify your enemies and inspire allies.</string>
   <string name="LightningBolt_Name">Lighting Bolt</string>
@@ -2932,4 +2925,70 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndModsDisclaimer_title">Mods</string>
   <string name="WndModsDisclaimer_manage">Manage mods list</string>
   <string name="WndModsDisclaimer_install">Install local mod</string>
+
+  <string name="PlagueDoctor_Name">plague doctor</string>
+  <string name="PlagueDoctor_Gender">masculine</string>
+  <string name="PlagueDoctor_Name_Objective">plague doctor</string>
+  <string name="PlagueDoctor_Desc">The whole body of this humpbacked person is hidden under a leather jumpsuit. Also, from him comes a bitter smell of medicine and ... garlic?</string>
+
+
+  <string name="PlagueDoctorQuest_1_1_Prologue">Achooo!\n Curse this infernal plague! It\'s spreading through the city like wildfire, festering in the bones of the unsuspecting populace! BAH! Do you think those pathetic guards stand a chance against this insidious blight? You, there! Strong, healthy specimen. Perhaps you can help me. Those filthy sewer _rats_… they carry it, I tell you, the seeds of pestilence within their putrid little bodies! Bring me _five_ of those wretched creatures, _dead_, of course! Their hides will be invaluable to my research. I\'ll fashion you a wondrous armor, a protective barrier against the very plague it originates from!</string>
+  <string name="PlagueDoctorQuest_1_1_InProgress">Bring me _five dead rats_! Every one you bring me brings us closer to understanding this horrible plague.</string>
+  <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, you\'ve returned! _Five dead rats_, perfect! Their hides will be crucial to my research. And as promised, for your valiant effort, I\'ve fashioned you this armor from their very skins. It\'s imbued with a touch of the plague, but don\'t worry! It\'s controlled, it protects! Now go! Protect the city!</string>
+
+  <string name="PlagueDoctorQuest_1_2_Prologue"> *Coughs violently* Achoo!\n _The snails_… they slither. They ooze. And they whisper secrets of a forgotten age. I need them, _ten_ of them, their shells still intact. Do you think a mere _fifty gold coins_ is enough for such precious knowledge?\n Bah! No matter. The information they hold could be the key to stopping this plague. Or… it could lead us to something even more terrible. You decide.</string>
+  <string name="PlagueDoctorQuest_1_2_InProgress">_Ten snails_, ten whispers from the abyss! Their slime will be analyzed, their essence scrutinized. The secrets they hold are within reach.</string>
+  <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… magnificent! The _snails_, their secrets slowly unfurling like petals in the moonlight. A bounty of information indeed! But you are right, _fifty gold_ is hardly a fitting reward. *Chuckles maniacally*.</string>
+
+  <string name="PlagueDoctorQuest_2_1_Prologue">_Moongrace seeds_… those ethereal blossoms, whispering with the magic of the moon itself. I\'ve been studying their strange luminescence for weeks. There\'s a potency to their essence, a hidden energy that could be the key to… something. *Taps a bony finger against his chin thoughtfully*\nBut alas, they are rare. Found only in the deepest caverns where moonlight barely penetrates. I need two of them. Two seeds to unlock the secrets of their power. And in return, I can offer you something…  a taste of pure, potent magic. A _Potion Of Mana_, brimming with the very essence of the moongrace. It will replenish your weary soul and allow you to wield the arcane with renewed strength.</string>
+  <string name="PlagueDoctorQuest_2_1_InProgress">Seek out the _moongrace_, where darkness meets the faintest glimmer of moonlight. _Two seeds_, their essence, will reveal hidden secrets.</string>
+  <string name="PlagueDoctorQuest_2_1_Epilogue">_The moongrace_…  a testament to the magic that weaves through this world. I’ve learned much from their essence, but your reward… well, it’s been prepared with the utmost care. *Hands the hero a shimmering _Mana Potion_* May its power guide you through the perils ahead.</string>
+
+  <string name="PlagueDoctorQuest_2_2_Prologue"> Ah, _sungrass_! A delicate flower, its petals radiating the warmth of the sun. I believe its essence holds the key to… ah, forget the specifics for now. Suffice to say, it’s crucial to my research. _Two sungrass seeds_. Retrieve them for me, and I\'ll reward you with something that will surely come in handy on your adventures - a _Potion of Health_, brimming with the very vitality of the sun.</string>
+  <string name="PlagueDoctorQuest_2_2_InProgress">_Two sungrass_ seeds. Their golden petals hold a power I seek to understand. Find them, and let their essence be revealed!</string>
+  <string name="PlagueDoctorQuest_2_2_Epilogue">Magnificent! _The sungrass_, its golden essence pulsates with vitality. I\'ve already learned much from its delicate structure. *He hands you a _Potion of Health_, its liquid shimmering with a faint, golden light.* Drink this when the world weighs heavily upon you, and feel the sun\'s warmth revive your spirit.</string>
+
+  <string name="PlagueDoctorQuest_3_1_Prologue">*His eyes gleam with a strange, feverish intensity* Ah, the _vampire bat_! A creature of the night, feeding on the life force of its prey. Fascinating… truly fascinating. I need one alive to study its unique physiology. It’s all about… understanding the… the… *He trails off, muttering to himself in a string of arcane terms*. Yes! The _bat_\'s echolocation, its ability to navigate in complete darkness… it\'s key to unlocking a secret.</string>
+  <string name="PlagueDoctorQuest_3_1_InProgress">Bring me a _vampire bat_, alive and unharmed! Its blood, its wings… they hold secrets I must uncover!</string>
+  <string name="PlagueDoctorQuest_3_1_Epilogue">*He cradles the _bat_ gently in his gloved hands, examining its tiny form with a disturbing fascination*  Magnificent! The bat’s echolocation… it’s unlike anything I\'ve encountered. Such precision… such… control. *He turns to you, his face obscured by his mask* For your efforts, a _Scroll of Upgrade_. Use it wisely, for it holds the potential to… refine your very essence. *He hands you the scroll, his voice dropping to a hushed whisper* This _bat_, it’s… a window into a hidden world.  A world… where shadows dance and secrets whisper.</string>
+
+  <string name="PlagueDoctorQuest_3_2_Prologue">A _Death Knight_! *His voice cracks with excitement, his bony fingers trembling as he clutches a bubbling vial filled with a murky, phosphorescent liquid*. Such a creature… a beacon of undeath! To capture one, alive… it would be… monumental. Imagine the secrets we could unlock! The power that flows through its skeletal veins! Yes, a _Death Knight_! It’s crucial to my research! For it will allow us to delve deeper… into the mysteries of life… and death itself!</string>
+  <string name="PlagueDoctorQuest_3_2_InProgress">This is no mere beast! It is a walking testament to necromantic power! Capture one, alive and unharmed! This _Death Knight_… it is the key!</string>
+  <string name="PlagueDoctorQuest_3_2_Epilogue">*He throws back his head and lets out a cackling laugh, the sound echoing through his dank laboratory* Magnificent! A _Death Knight_, standing before us! The power emanating from its being… intoxicating! *He turns to you, eyes gleaming with a feverish intensity* And for you, a reward worthy of your valor: a _Potion of Strength_! May it grant you the power to conquer any foe! Now… let us examine our subject. Its very essence holds secrets that could rewrite the very laws of life! *He approaches the _Death Knight_ with a manic grin, brandishing a vial of bubbling green liquid*</string>
+
+  <string name="PlagueDoctorQuest_4_1_Prologue">Achoo! Dwarves! Those stubborn, subterranean dwellers, obsessed with gems and gold. But it\'s the _Dwarf Warlocks_ I crave… their twisted magic, fuelled by the very depths they inhabit. Five, I need five of those withered souls! Their bodies hold the key to understanding a certain… phenomenon. Something about channeling arcane energies through the earth itself. I believe I’m close to a breakthrough, but I need their essence, their corrupted magic! *He coughs violently into his handkerchief, a dark stain spreading across the delicate fabric*</string>
+  <string name="PlagueDoctorQuest_4_1_InProgress">Five _Dwarf Warlocks_, their bodies still pulsating with the faint echo of dark magic! Retrieve them for me, and I’ll reward you with a potion of unparalleled might – a _Potion of Might_ that will imbue you with the strength of ten men!</string>
+  <string name="PlagueDoctorQuest_4_1_Epilogue">Splendid! The _Dwarf Warlocks_, their essence now mine to explore! Such twisted, corrupted magic… truly fascinating. *He holds up a shimmering vial, filled with a viscous, crimson liquid.* This, is for you: a _Potion of Might_! Imbibe its power, and you shall feel the strength of mountains coursing through your veins! Remember, the knowledge gained from these sacrifices will ultimately serve a higher purpose… perhaps even save us all from a fate worse than death. </string>
+
+  <string name="PlagueDoctorQuest_4_2_Prologue">*His skeletal fingers tap rhythmically against a bubbling cauldron, the air around him thick with the acrid stench of sulfur and decay*\n_Kobold Icemancers_! Those pathetic creatures, huddled in their frozen caves, desperately clinging to their icy magic. I need five of them, their frozen corpses will be… illuminating. Their mastery of ice, it’s… peculiar. I believe they tap into a primal energy, a power dormant beneath the surface of this very world.</string>
+  <string name="PlagueDoctorQuest_4_2_InProgress">Retrieve five dead _Kobold Icemancers_! Their frozen bodies hold the key to unlocking the secrets of their chilling magic!</string>
+  <string name="PlagueDoctorQuest_4_2_Epilogue">Splendid! Five _Kobold Icemancers_, their icy essence now mine to explore! Their connection to the frozen wastes, it\'s truly fascinating. The way they manipulate water itself… truly remarkable.  *He hands you a shimmering vial filled with a vibrant crimson liquid* This, is for your valiant efforts: a _Potion of Might_! Drink deep and feel the power of ten warriors surge through your veins! Remember, knowledge is power… and power is the only weapon we have against the encroaching darkness. Now… let us dissect these icy souls and uncover their chilling secrets!</string>
+
+  <string name="PlagueDoctorQuest_5_1_Prologue">*He stammers, his voice cracking like a brittle twig*.  A-ah, _succubi_! Two… yes, two, alive! It\'s… ahem… for my research! You see… their pheromones… it\'s crucial to understanding the delicate balance of… ah… *He trails off, his bony hand reaching up to nervously adjust his mask, his eyes darting towards you with a feverish intensity.*Their… essence… it\'s a puzzle… a beautiful, enigmatic puzzle! *He coughs violently, attempting to regain his composure.* I promise, for bringing me two of these… creatures… you will have my eternal gratitude. Think of it as a… a boon to knowledge! Yes! To knowledge!</string>
+  <string name="PlagueDoctorQuest_5_1_InProgress">*His mind wanders as he speaks, his voice growing quieter, barely a whisper.* Bring me two _succubi_… alive. Their… power… it\'s captivating.</string>
+  <string name="PlagueDoctorQuest_5_1_Epilogue">*He stares at the two _succubi_, a blissful smile spreading beneath his mask.* Splendid! Magnificent! This will unlock so many… possibilities! *He turns to you, his voice thick with gratitude… and something else.*  Your efforts… they will not be forgotten. I owe you my deepest thanks. *His gaze lingers on the _succubi_ for a moment too long, before he retreats into his laboratory, muttering about unlocking the secrets of seduction.*</string>
+
+  <string name="PlagueDoctorMask_Name">Plague Doctor mask</string>
+  <string name="PlagueDoctorMask_Info">This… this is no mere mask. It\'s… a barrier. A shield against the forces of decay that Plague Doctor tirelessly battle against. Crafted from the finest ebony wood, intricately carved with the visage of a ravenous skull. Its hollow eye sockets are filled with glittering, amethyst gemstones that pulse faintly, like the dying embers of a fire. Each breath you take, each utterance you make, is filtered through a labyrinthine network of tubes and filters. A concoction of potent herbs and exotic spices infuses the air within, masking the stench of death that clings to you like a shroud.</string>
+
+  <string name="PlagueDoctorMaskHood_Name">Plague Doctor mask with hood</string>
+  <string name="PlagueDoctorMaskHood_Info">A sculpted ebony skull, its hollow sockets glowing with the ethereal shimmer of amethyst gems. Each breath you draw whispers through a labyrinth of tubes and filters, carrying the scent of potent herbs and spices that mask the decay that clings to you. But it\'s not merely the mask. A heavy cowl of midnight velvet, shrouding your face and head in shadows. The hood, like a raven\'s wing, flows down your back, its edges trimmed with a fringe of bone-white lace, a chillingly beautiful contrast. Together, mask and hood create a spectral visage, a grim testament to the unending battle against the forces of decay.</string>
+
+  <string name="PlagueDoctorQuest_AllDone">*He lets out a dry, wheezing laugh.* "Your deeds, they have unlocked secrets beyond measure! The knowledge gained… it pulses within me, a symphony of discovery. But knowledge," he adds, his voice dropping to a conspiratorial whisper, "knowledge is power. And power… ah… that is a most intoxicating elixir.” He stares intently at you for a moment, his amethyst eyes burning with a feverish intensity. “Perhaps,” he murmurs, “our paths will cross again. For there are still many… mysteries… yet to be unravelled.”</string>
+  <string name="CharAction_Expel">expel</string>
+
+  <string name="Welcome_Text_32_1">
+    remix.32.1\n
+    - Gameplay:\n
+    -- Plague Doctor quest line\n
+    -- Mob carcasses now somewhat usable items\n
+    -- Better pets control\n
+    - UX:\n
+    -- Improved save-game management\n
+    - Modding:\n
+    -- Local mod installation methods\n
+    -- Custom items now can perform actions while being in heaps\n
+    - Bugs fixed\n
+    </string>
+
 </resources>
