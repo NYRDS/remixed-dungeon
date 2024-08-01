@@ -1972,7 +1972,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Armor_Info6">To zostało zaklęte.</string>
   <string name="Armor_Info7a">
 \n\nMasz na sobie %1$s%2$s.</string>
-  <string name="Armor_Info7b">, ponieważ jest to przeklęte, jesteś bezsilny w próbach usunięcia tego ze swego ciała.</string>
+  <string name="Armor_Info7b">, Ponieważ jest to przeklęte, jesteś bezsilny w próbach usunięcia tego ze swego ciała.</string>
   <string name="Armor_Info8">\n\nMożesz odczuć mroczną magię przenikającą %s.</string>
   <string name="Armor_Glyph">glif</string>
   <string name="ClassArmor_Desc">To wygląda wspaniale!</string>
