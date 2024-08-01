@@ -1879,7 +1879,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="WndStory_Guts">Pokonany, rozbity na kawałki, ale nie całkowicie zniszczony, Stary Bóg został zapieczętowany w najgłębszych poziomach lochów. Lecz niedawno pieczęć została złamana, pozostawiając przejście do gniazda demonów całkowicie otwartym. Koszmarne potwory, stworzone przez Starego Boga w jego śnie były tak liczne, że pozbawione drogi ucieczki były zmuszone do łączenia się ze sobą, by uformować te groteskowe korytarze. Idąc po ich żyjących ciałach, możesz poczuć uderzenia serca Starego Boga, niosące się echem przez sale.</string>
   <string name="MimicAmulet_Name">mimik</string>
   <string name="MimicAmulet_Gender">masculine</string>
-  <string name="MimicAmulet_Name_Objective">mimik</string>
+  <string name="MimicAmulet_Name_Objective">Mimik</string>
   <string name="MimicAmulet_Desc">Najbardziej chwalebny moment twej kariery podróżnika właśnie okazał się być pułapką.</string>
   <string name="Nightmare_Name">Koszmar</string>
   <string name="Nightmare_Gender">masculine</string>
