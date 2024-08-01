@@ -1980,7 +1980,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="ClassArmor_NotEquipped">By użyć specjalnej mocy zbroi, musisz mieć ją na sobie!</string>
   <string name="ClothArmor_Name">zbroja płócienna</string>
   <string name="ClothArmor_Desc">Ta lekka zbroja zapewnia podstawową ochronę.</string>
-  <string name="ElfArmor_Name">elficka peleryna</string>
+  <string name="ElfArmor_Name">Elficka peleryna</string>
   <string name="ElfArmor_Desc">Z pomocą tej peleryny, elf może przyzwać pradawne siły natury. Wysokie pnącza urosną w mgnieniu oka, nawet mimo litej skały, unieruchamiając wszystkich wrogów w zasięgu wzroku.</string>
   <string name="ElfArmor_ACSpecial">ZEW NATURY</string>
   <string name="ElfArmor_NotElf">Tylko elfy mogą korzystać z tej zbroi!</string>
