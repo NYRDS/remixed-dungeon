@@ -1187,7 +1187,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="No_Valid_Cell">W pobliżu nie ma odpowiedniej komórki/miejsca.</string>
   <string name="Mob_Desc">Prawdziwe opisy pojawią się wkrótce!</string>
   <string name="Mob_Died">Usłyszałeś jak coś gdzieś umarło.</string>
-  <string name="Mob_StaSleepingStatus">Ten %s śpi</string>
+  <string name="Mob_StaSleepingStatus">%s śpi</string>
   <string name="Mob_StaWanderingStatus">Ten %s wędruje</string>
   <string name="Mob_StaHuntingStatus">Ten %s poluje</string>
   <string name="Mob_StaFleeingStatus">Ten %s ucieka w popłochu</string>
