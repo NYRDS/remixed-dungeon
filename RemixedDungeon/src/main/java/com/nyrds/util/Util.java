@@ -70,6 +70,10 @@ public class Util {
 		return Integer.compare(x, 0);
 	}
 
+	public static int clamp(int value, int min, int max) {
+		return Math.max(min, Math.min(max, value));
+	}
+
 	@Nullable
 	@SneakyThrows
 	public static <T> T byNameFromList(Class<?>[] classList, @NotNull String name) {

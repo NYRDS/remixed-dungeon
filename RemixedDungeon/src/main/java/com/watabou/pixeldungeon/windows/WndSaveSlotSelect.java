@@ -75,7 +75,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
         this._saving = _saving;
         this.title = title;
         this.start_scene = start_scene;
-        this.initial_difficulty = this.difficulty = difficulty;
+        this.initial_difficulty = this.difficulty = Util.clamp(difficulty, 0, 3);
 
 
         for (int i = 0; i < 2; i++) {
