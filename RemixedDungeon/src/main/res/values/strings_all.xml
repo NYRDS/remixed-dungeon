@@ -2659,13 +2659,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="BardNPC_Name_Objective">bard</string>
   <string name="BardNPC_Gender">masculine</string>
   <string name="BardNPC_Desc">The town bard is playing his lute.</string>
-  <string name="Welcome_Text_30">
-    remix.30.0\n
-    - Gameplay:\n
-    -- Abilities for everyone!\n
-    -- Inn is opened now!\n
-    - Bugs fixed\n
-    </string>
   <string name="Roar_Name">Roar</string>
   <string name="Roar_Info">The mighty roar will surely terrify your enemies and inspire allies.</string>
   <string name="LightningBolt_Name">Lighting Bolt</string>
@@ -2983,4 +2976,19 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
   <string name="PlagueDoctorQuest_AllDone">*He lets out a dry, wheezing laugh.* "Your deeds, they have unlocked secrets beyond measure! The knowledge gained… it pulses within me, a symphony of discovery. But knowledge," he adds, his voice dropping to a conspiratorial whisper, "knowledge is power. And power… ah… that is a most intoxicating elixir.” He stares intently at you for a moment, his amethyst eyes burning with a feverish intensity. “Perhaps,” he murmurs, “our paths will cross again. For there are still many… mysteries… yet to be unravelled.”</string>
   <string name="CharAction_Expel">expel</string>
+
+  <string name="Welcome_Text_32_1">
+    remix.32.1\n
+    - Gameplay:\n
+    -- Plague Doctor quest line\n
+    -- Mob carcasses now somewhat usable items\n
+    -- Better pets control\n
+    - UX:\n
+    -- Improved save-game management\n
+    - Modding:\n
+    -- Local mod installation methods\n
+    -- Custom items now can perform actions while being in heaps\n
+    - Bugs fixed\n
+    </string>
+
 </resources>
