@@ -1189,8 +1189,8 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Mob_Died">Usłyszałeś jak coś gdzieś umarło.</string>
   <string name="Mob_StaSleepingStatus">%s śpi</string>
   <string name="Mob_StaWanderingStatus">%s wędruje</string>
-  <string name="Mob_StaHuntingStatus">Ten %s poluje</string>
-  <string name="Mob_StaFleeingStatus">Ten %s ucieka w popłochu</string>
+  <string name="Mob_StaHuntingStatus">%s poluje</string>
+  <string name="Mob_StaFleeingStatus">%s ucieka w popłochu</string>
   <string name="Mob_StaPassiveStatus">Ten %s jest przyjazny</string>
   <string name="Acidic_Name">jadowity skorpion</string>
   <string name="Acidic_Gender">masculine</string>
