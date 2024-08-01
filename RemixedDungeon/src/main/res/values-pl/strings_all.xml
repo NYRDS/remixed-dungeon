@@ -1959,7 +1959,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="ResultDescriptions_Immured">Śmierć przez zamurowanie %d</string>
   <string name="ResultDescriptions_Unknown">Zginął w niewyjaśnionych okolicznościach na poziomie  %d</string>
   <string name="Armor_EquipCursed">twój %s zaciska się boleśnie wokół ciebie</string>
-  <string name="Armor_Identify">zaznajomiłeś się już wystarczająco z %1$s, aby go zidentyfikować. Jest to %2$s.</string>
+  <string name="Armor_Identify">Zaznajomiłeś się już wystarczająco z %1$s, aby go zidentyfikować. Jest to %2$s.</string>
   <string name="Armor_ToString">%1$s :%2$d</string>
   <string name="Armor_Incompatible">Interakcja różnych typów magii usunęła glif z tej zbroi!</string>
   <string name="Armor_Info1">Ta %1$s wchłania \"%2$d\"  obrażeń.</string>
