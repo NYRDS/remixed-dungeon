@@ -119,8 +119,8 @@
   <string name="Possess_PossessionFailed">Wola %s jest zbyt silna</string>
   <string name="Possess_Possessed">%s czeka na twoje rozkazy</string>
   <string name="Possess_CantPossessSelf">Nie możesz opętać samego siebie</string>
-  <string name="Mob_StaControlledStatus">Ten %s jest objęty władaniem siły nieczystej</string>
-  <string name="BlackCat_AiStatus">Ten kot wykonuje zwyczajne kocie czynności</string>
+  <string name="Mob_StaControlledStatus"> %s jest objęty władaniem siły nieczystej</string>
+  <string name="BlackCat_AiStatus"> Kot wykonuje zwyczajne kocie czynności</string>
   <string name="Shopkeeper_Buy">Wybierz przedmiot do kupienia</string>
   <string name="Shopkeeper_title">Sklep</string>
   <string name="Shopkeeper_text">Witamy w Pixel-Markecie! \nW czym mogę pomóc?</string>
@@ -252,7 +252,7 @@
   <string name="PortalGate_Desc_Activated">Z wrót wydziela się jakaś dziwna świecąca substancja. Wygląda na to że jest ona całkowicie nieruchoma, poza sporadycznie wypływającymi z jej centrum falami.</string>
   <string name="PortalGate_Activated">Starożytne wrota zostały przebudzone!</string>
   <string name="PortalGate_Used">Dotknąłeś wrót iii... nic się nie wydarzyło...</string>
-  <string name="PortalExit_Desc">Ten wrota zabiorą cię na pierwszy poziom %s.</string>
+  <string name="PortalExit_Desc">Te wrota zabiorą cię na pierwszy poziom %s.</string>
   <string name="PortalExit_Desc_SpiderNest">Leże Pająków</string>
   <string name="PortalExit_Desc_Necropolis">Miasto Umarłych</string>
   <string name="PortalExit_Desc_IceCaves">Lodowe Groty</string>
@@ -645,7 +645,7 @@
   <string name="AboutScene_Translation">Tłumaczenie wykonane przez:</string>
   <string name="AboutScene_Translation_Names">Marek Piętka
 Przemo10371
-assassynkk32
+Leszy z Bieszczad
 Lufix
 (oraz inni)</string>
   <string name="RankingsScene_Title">Najlepsi z Najlepszych</string>
@@ -709,9 +709,9 @@ Lufix
   <string name="TreacherousSpirit_Gender">feminine</string>
   <string name="TreacherousSpirit_Name_Objective">Zdradziecka dusza</string>
   <string name="TreacherousSpirit_Desc">Ta gigantyczna kreatura wygląda jak chmura żyjącej ciemności. Jej oko pozbawione powieki wpatruje się w ciebie, pulsując z każdym twoim ruchem.</string>
-  <string name="SpiritOfPain_Name">dusza bólu</string>
+  <string name="SpiritOfPain_Name">Żywiołak męki</string>
   <string name="SpiritOfPain_Gender">feminine</string>
-  <string name="SpiritOfPain_Name_Objective">dusza bólu</string>
+  <string name="SpiritOfPain_Name_Objective">Żywiołak męki</string>
   <string name="SpiritOfPain_Desc">Odłamek żyjącej ciemności.</string>
   <string name="SuspiciousRat_Name">Podejrzany szczur.</string>
   <string name="SuspiciousRat_Gender">masculine</string>
@@ -796,7 +796,7 @@ Lufix
   <string name="gdpr_agree">Tak, zgadam się</string>
   <string name="gdpr_disagree">Nie, dziękuję </string>
   <string name="gdpr_choose">Proszę podjąć decyzję </string>
-  <string name="Mob_StaHuntingStatus2">Ten %1$s poluje na%2$s</string>
+  <string name="Mob_StaHuntingStatus2"> %1$s poluje na%2$s</string>
   <string name="Mob_StaFleeingStatus2">%1$s ucieka przed %2$s</string>
   <string name="Mob_StaTerrorStatus">%1$s jest przerażony!</string>
   <string name="Mob_StaTerrorStatus2">%1$s przestraszył się %2$s</string>
@@ -978,6 +978,8 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="HeroClass_Rog">łotrzyk</string>
   <string name="HeroClass_Hun">łowczyni</string>
   <string name="HeroClass_Elf">elf</string>
+  <string name="HeroClass_None">chudopachołek</string>
+  <string name="HeroSubClass_NameNone">Nic</string>
   <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">gladiator</string>
   <string name="HeroSubClass_DescGlad">Udany atak bronią krótkodystansową  _Gladiatora_ rozpoczyna kombinację, w której ilość obrażeń wzrasta wraz z każdym kolejnym uderzeniem.</string>
@@ -1072,7 +1074,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="RatKing_Gender">masculine</string>
   <string name="Weapon_Identify">Zapoznałeś się już wystarczająco dobrze z %1$s by móc to zidentyfikować. Jest to%2$s.</string>
   <string name="Weapon_Incompatible">Interakcja różnych typów magii usunęła zaklęcie z tej broni!</string>
-  <string name="MeleeWeapon_Info1a">Ten %1$s jest %2$s %3$d-ego tieru bronią białą.</string>
+  <string name="MeleeWeapon_Info1a"> %1$s jest %2$s %3$d-ego tieru bronią białą.</string>
   <string name="MeleeWeapon_Info1b"> </string>
   <string name="MeleeWeapon_Info1c">ulepszony</string>
   <string name="MeleeWeapon_Info1d">zdegradowany</string>
@@ -1185,11 +1187,11 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="No_Valid_Cell">W pobliżu nie ma odpowiedniej komórki/miejsca.</string>
   <string name="Mob_Desc">Prawdziwe opisy pojawią się wkrótce!</string>
   <string name="Mob_Died">Usłyszałeś jak coś gdzieś umarło.</string>
-  <string name="Mob_StaSleepingStatus">Ten %s śpi</string>
-  <string name="Mob_StaWanderingStatus">Ten %s wędruje</string>
-  <string name="Mob_StaHuntingStatus">Ten %s poluje</string>
-  <string name="Mob_StaFleeingStatus">Ten %s ucieka w popłochu</string>
-  <string name="Mob_StaPassiveStatus">Ten %s jest przyjazny</string>
+  <string name="Mob_StaSleepingStatus">%s śpi</string>
+  <string name="Mob_StaWanderingStatus">%s wędruje</string>
+  <string name="Mob_StaHuntingStatus">%s poluje</string>
+  <string name="Mob_StaFleeingStatus">%s ucieka w popłochu</string>
+  <string name="Mob_StaPassiveStatus">%s jest przyjazny</string>
   <string name="Acidic_Name">jadowity skorpion</string>
   <string name="Acidic_Gender">masculine</string>
   <string name="Acidic_Name_Objective">jadowity skorpion</string>
@@ -1798,6 +1800,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="GothicArmor_Info">Gotycka zbroja jest szczytem sztuki wykuwania pancerza.</string>
   <string name="ChaosArmor_Name">Zbroja Chaosu</string>
   <string name="ChaosArmor_Info">Ta broń składa się z krwistoczerwonych płytek połączonych ze sobą ciemnoczerwonymi łańcuchami. Przy dotknięciu promienieje chaotyczną energią.</string>
+  <string name="ChaosCrystal_ArmorFused">Kryształ zlewa sie z twoją zbroją przyjmując chaotyczną formę.</string>
   <string name="Blacksmith_Name">kowal trolli</string>
   <string name="Blacksmith_Desc">Ten kowal trolli wygląda jak każdy troll: jest wysoki i chudy, jego skóra przypomina kamień z koloru jak i wyglądu. Kowal trolli pracuje z nieproporcjonalnie małymi narzędziami.</string>
   <string name="Blacksmith_Gold1">Hej, człowieku! Chcesz się na coś przydać, hę? Weź ten kilof i wydobądź mi trochę _Rudy Mrocznego Złota_. Myślę, że _15 kawałków_ powinno wystarczyć. Jak ci mam zapłacić? Jesteś chciwy... \nDobrze, dobrze, nie mam złota by ci zapłacić, ale mogę odwalić dla ciebie trochę kowalskiej roboty! Uznaj siebie za szczęściarza, bo jestem jedynym kowalem w okolicy.</string>
@@ -2031,7 +2034,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Dreamweed_Desc">Po dotknięciu Marzyziele wyzwoli migoczącą chmurę narkotyzującego gazu.</string>
   <string name="Earthroot_Name">Ziemiokorzenia</string>
   <string name="Earthroot_Desc">Kiedy istota dotknie Ziemiokorzenia, zostaje ona opleciona korzeniami, zapewniając jej pewną formę naturalnego pancerza.</string>
-  <string name="EarthrootBuff_Name">Ziołowego pancerza</string>
+  <string name="EarthrootBuff_Name">Ziołowy pancerz</string>
   <string name="EarthrootBuff_Info">Korzenie wyłoniły się z ziemi zapewniając naturalną zbroję.</string>
   <string name="Fadeleaf_Name">Znikoliścia</string>
   <string name="Fadeleaf_Desc">Dotknięcie Znikoliścia sprawi że przeteleportujesz się w losowe miejsce na poziomie.</string>
@@ -2432,6 +2435,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Hunger_Starving_0">Konasz z głodu!</string>
   <string name="Hunger_Starving_1">Konasz z głodu!</string>
   <string name="Hunger_Starving_2">Konasz z głodu!</string>
+  <string name="HeroClass_NecromancerPerks_0">Nekromanci zaczynają z 15 punktami życia.</string>
   <string name="HeroClass_NecromancerPerks_1">Nekromanci używają many aby rzucać zaklęcia Śmierci.</string>
   <string name="HeroClass_NecromancerPerks_2">Nekromanci zaczynają grę z unikalną Szatą Nekromanty, która daje 1 punkt many za każdą pokonaną istotę.</string>
   <string name="HeroClass_NecromancerPerks_3">Nekromanci zaczynają z Kościanym Kluczem poziomu 7-ego.</string>
@@ -2458,6 +2462,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="HeroClass_HunPerks_2">Łowczynie są biegłe w używaniu broni dystansowych i otrzymują bonus do obrażeń od nadmiernej Siły kiedy ich używają. </string>
   <string name="HeroClass_HunPerks_3">Łowczynie otrzymują więcej życia z kropel rosy.</string>
   <string name="HeroClass_HunPerks_4">Łowczynie mogą wykryć potwory w pobliżu, nawet jeśli chowają się za przeszkodą.</string>
+  <string name="HeroClass_ElfPerks_0">Elfy zaczynają z 15 punktami życia i 9 punktami siły.</string>
   <string name="HeroClass_ElfPerks_1">Elfy są odporne na zakorzenienie.</string>
   <string name="HeroClass_ElfPerks_2">Elfy zaczynają z ulepszonym drewnianym łukiem oraz pęczkiem strzał.</string>
   <string name="HeroClass_ElfPerks_3">Elfy są zwinne i niezwykle biegłe w obsłudze łuku.</string>
@@ -2619,7 +2624,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="Char_Stole_0">%1$sukradł %2$s od %3$s</string>
   <string name="Char_Stole_1">%1$sukradł %2$s od %3$s</string>
   <string name="Char_Stole_2">%1$sukradł %2$s od %3$s</string>
-  <string name="ScrollOfTeleportation_Teleport2">W mgnieniu oka %szostali teleportowani w inne miejsce na poziomie.</string>
+  <string name="ScrollOfTeleportation_Teleport2">W mgnieniu oka teleportowało Cię w inne miejsce na %sm poziomie.</string>
   <string name="ScrollOfTeleportation_NoTeleport2">Silna aura magiczna tego miejsca nie pozwala %s teleportować się!</string>
   <string name="WndModInstall_InstallingMod">Instalowanie moda...</string>
   <string name="WndModInstall_Version">wersja</string>
@@ -2856,14 +2861,77 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="WndTilesKind_text">Zamierzasz wejść do Lochu opętanego przez pokręconą magię, ale teraz możesz wybrać, jak chcesz to zobaczyć:\n Czy wolisz nowoczesny pseudo-3D czy klasyczny płaski widok?\nPóźniej będziesz mógł to zmienić w menu opcji gry.</string>
   <string name="WndTilesKind_NewLook">Nowy wygląd</string>
   <string name="WndTilesKind_ClassicLook">Wygląd klasyczny</string>
-  <string name="MobAi_status">Ten%sto%s</string>
+  <string name="MobAi_status">%sto%s</string>
   <string name="WndCustomizations_Title">Modyfikacje</string>
   <string name="IceGuardianCore_DieInfo">Zimno tutaj, Lepiej wrócę na poziom 14 i poszukam jakiegoś cieplejszego miejsca.</string>
   <string name="Lich_DieInfo">Nigdy nie lubiłem/am Nekromantów. To dobra pora by wrócić na poziom 7 i poszukać drogi ku nowej przygodzie.</string>
   <string name="SpiderQueen_DieInfo">Królowa pająków została zabita! Teraz powinienem wrócić na poziom 5 i kontynuować moją przygodę w głębiny .</string>
   <string name="WndModSelect_ReallyDelete">Na pewno usunąć? </string>
   <string name="WndModSelect_AreYouSure">Usuwanie modyfikacji %s, Jesteś pewien?</string>
+  <string name="Challenges_Names_8">Żadnego miasta</string>
+  <string name="Challenges_Descriptions_8">Twoja przygoda zaczyna się w ciemnych i niebezpiecznych miejskich ściekach, z zablokowaną jedyną drogą na powierzchnie. Żeby było gorzej będziesz móc używać tylko wyposażenia które znajdziesz od tej pory. Od tej pory twoje przetrwanie będzie zależeć od limitowanych zasobów, wyposażenia i twoich umiejętności. </string>
+  <string name="EncumbranceBuff_CharAct_1">Nie mam tyle siły by prawidłowo władać %s .</string>
+  <string name="EncumbranceBuff_CharAct_2">%s jest zbyt ciężkie dla mnie.</string>
+  <string name="EncumbranceBuff_CharAct_3">Musze popracować nad siłą zanim zacznę używać %s.</string>
+  <string name="EncumbranceBuff_CharAct_4">Mój brak siły nie pozwala mi wykorzystać pełnego potencjału %s </string>
+  <string name="EncumbranceBuff_CharAct_5">%sto dla mnie za dużo, żeby sobie teraz poradzić.</string>
+  <string name="Typical_Damage">Średnie obrażenia</string>
+  <string name="Damage_Reduction">Zmniejszenie obrażeń</string>
+  <string name="Attack_Range">Zasięg ataku</string>
+  <string name="Movement_Speed">Szybkość poruszania</string>
+  <string name="Attack_Cooldown">Przerwa miedzy atakami</string>
+  <string name="View_Distance">Pole widzenia</string>
+  <string name="WndHero_Info">Info</string>
+  <string name="ChaosShield_name">Tarcza chaosu</string>
+  <string name="ChaosShield_desc">Tarcza chaosu jest wynikiem  złączenia się kryształu chaosu ze zwykłą tarczą. Powodując, że po udanym bloku manifestuje losowe efekty chaotyczne.</string>
+  <string name="ChaosCrystal_ShieldFused">Kryształ złączył się z twoją tarczą, przyjmując chaotyczną formę.</string>
+  <string name="Actions_Speed">Poziom pośpiechu</string>
+  <string name="ChampionOfAirBuff_Name">Mistrz powietrza</string>
+  <string name="ChampionOfAirBuff_Info">Ta cecha nadaje stworzeniu esencję wiatrów, zwiększając jego zwinność i waleczność w walce. Czempion Powietrza staje się groźnym przeciwnikiem, zdolnym do wyprowadzania szybkich i niszczycielskich ataków, które mogą szybko zmienić przebieg bitwy.</string>
+  <string name="ChampionOfWaterBuff_Name">Mistrz Wody
+</string>
+  <string name="ChampionOfWaterBuff_Info">Mistrz Wody ucieleśnia niezłomną siłę oceanów, zwiększając odporność i hart ducha stworzenia. W rezultacie staje się niezłomnym przeciwnikiem, zdolnym przetrwać nieustanną falę ataków i stać się nieustępliwym strażnikiem w obliczu przeciwności losu.</string>
+  <string name="ChampionOfFireBuff_Name">Mistrz Ognia</string>
+  <string name="ChampionOfFireBuff_Info">Napełniony wściekłością płomieni, Ta cecha wzmacnia dzikość i sprawność bojową stworzenia. Mistrz ognia wyłania się jako przerażający przeciwnik, przeprowadzając niszczycielskie ataki, które mogą pochłonąć jego wrogów w palących płomieniach, siejąc terror u wszystkich, którzy ośmielą się mu przeciwstawić.</string>
+  <string name="ChampionOfEarthBuff_Name">Mistrz Ziemi</string>
+  <string name="ChampionOfEarthBuff_Info">Mistrz Ziemi to ucieleśnienie nieustępliwej siły, ponieważ ta cecha zwiększa odporność stworzenia na obrażenia i zwiększa jego maksymalną żywotność. Ta transformacja czyni go zniechęcającym przeciwnikiem w zdradzieckich głębinach, zdolnym z łatwością odpierać ataki i z niezachwianą determinacją toczyć długotrwałe bitwy.</string>
+  <string name="Welcome_Text_32">remix.32/n
+-Rozgrywka:\n
+--Potwory i zwierzątka mogą otrzymywać doświadczenie i levelować.\n
+--Tarcza Chaosu\n
+--Mistrzowie\n
+--Walka z Yogiem została przebalansowana\n
+--Zrównoważone Melodie\n
+-Doświadczenie Użytkownika:\n
+Szczegółowe statystyki bohaterów i potworów\n
+--Płynna kamera\n
+--Lepszy interfejs\n
+-Modowanie\n
+--Własne animacje\n
+--Własne skrypty dla wbudowanych potworów\n
+--Świecenie dla potworów\n
+</string>
+  <string name="Pickaxe_NothingToMine">Nie ma tu nic do wydobycia!</string>
+  <string name="Pickaxe_InsufficientStr">Za mało siły by kopać!</string>
+  <string name="Carcass_Name">Szczątki %s</string>
+  <string name="Carcass_Info">Szczątki totalnie martwego %s,</string>
+  <string name="ResultDescriptions_Necromancy">Wyczerpano siły witalne w trakcje próby ożywienia zwłok na poziomie %d</string>
+  <string name="Item_ACPickup">Podnieś</string>
+  <string name="Necromancy_Death">Wyczerpano siły witalne w trakcje praktykowania nekromancji,</string>
   <string name="AC_Necromancy">Nekromancja</string>
   <string name="AC_Devour">Pożerać ?</string>
+  <string name="AC_Kick">Kopnij</string>
+  <string name="Carcass_Kick">%s jest totalnie martwy, nie ma powodu żeby to kopać.</string>
+  <string name="Carcass_Devoured">Pożarto zwłoki %s!</string>
+  <string name="Carcass_Necromancy">Ożywiono zwłoki %s</string>
+  <string name="Carcass_Necromancy_Failed">Twoja próba ożywienia zwłok %s zawiodła!</string>
+  <string name="WndInstallingMod_please_wait">Instalowanie modyfikacji, proszę czekać...</string>
+  <string name="WndInstallingMod_copying_file">Kopiuje %s do pamięci gry</string>
+  <string name="WndInstallingMod_skipping_file">Pomijam %s</string>
+  <string name="WndLocalModInstall_title">Zainstaluj modyfikacje z pamięci lokalnej</string>
+  <string name="WndLocalModInstall_text">Wybierz folder z którego zainstalujesz modyfikacje.</string>
+  <string name="WndLocalModInstall_pick">Wybierz folder z modyfikacją</string>
   <string name="WndModsDisclaimer_title">Mody</string>
+  <string name="WndModsDisclaimer_manage">Organizuj liste modyfikacji</string>
+  <string name="WndModsDisclaimer_install">Zainstaluj lokalną modyfikacje</string>
 </resources>
