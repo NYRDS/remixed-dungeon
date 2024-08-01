@@ -228,13 +228,13 @@
   <string name="WandOfMagicMissile_Desinchanted">Wyładowałeś Kostur Magicznego Pocisku i użyłeś jego esencji by %s stał się znacznie silniejszy.</string>
   <string name="WandOfPoison_Name">Kostur Trucizny</string>
   <string name="WandOfPoison_Info">Ohydny powiew wywołany tym spaczonym kawałkiem drewna napełni ciało ofiary śmiercionośnym jadem. Otrute stworzenie będzie otrzymywać ciągłe obrażenia dopóki efekt się nie skończy. Im wyższy poziom kostura, tym dłuższy będzie czas działania trucizny.</string>
-  <string name="WandOfPoison_Info1">nic się nie wydarzyło</string>
+  <string name="WandOfPoison_Info1">Nic się nie wydarzyło</string>
   <string name="WandOfRegrowth_Name">Kostur Natury</string>
   <string name="WandOfRegrowth_Info">\"Kiedy jedno życie się kończy, drugie zawsze wzrasta... Wieczny cykl zawsze będzie trwać!\"</string>
   <string name="WandOfRegrowth_Info1">nic się nie wydarzyło</string>
   <string name="WandOfSlowness_Name">Kostur Spowolnienia</string>
   <string name="WandOfSlowness_Info">Ten kostur sprawi, że stworzenie będzie się poruszało i atakowało o połowę wolniej niż normalnie, dopóki efekt się nie skończy.</string>
-  <string name="WandOfSlowness_Info1">nic się nie wydarzyło</string>
+  <string name="WandOfSlowness_Info1">Nic się nie wydarzyło</string>
   <string name="WandOfTelekinesis_Name">Kostur Telekinezy</string>
   <string name="WandOfTelekinesis_Info">Fala magicznej mocy tego kostura uaktywni pułapki, stratuje wysoką roślinność, otworzy zamknięte i zamknie otwarte drzwi na swej trasie. Odepchnie ona również potwory.</string>
   <string name="WandOfTelekinesis_YouNowHave">Magicznie przeteleportowałeś %s do Twojego Plecaka</string>
