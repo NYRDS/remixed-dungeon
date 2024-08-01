@@ -1896,7 +1896,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Worm_Desc">Nie ma sposobu by określić faktyczną wielkość tego stworzenia. Częściowo wyłaniająca się z posadzki kreatura pokryta jest płatami zgniłego mięsa i śluzu. Jej ogromna żuwaczka wyraźnie sugeruje w jaki sposób przemieszcza się ona przez zwały mięsa będące budulcem tego kompleksu.</string>
   <string name="YogsBrain_Name">mózg yog</string>
   <string name="YogsBrain_Gender">masculine</string>
-  <string name="YogsBrain_Name_Objective">mózg yog</string>
+  <string name="YogsBrain_Name_Objective">Mózg Yog\'a</string>
   <string name="YogsBrain_Desc">Mózg Yog-Dzewa. Źródło wszelkiego zła, które kiedykolwiek zdołało wyjść z tego lochu.</string>
   <string name="YogsEye_Name">Oko Yog\'a</string>
   <string name="YogsEye_Gender">neuter</string>
