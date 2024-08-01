@@ -1995,9 +1995,9 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="MageArmor_Desc">Nosząc tę wspaniałą szatę, mag może rzucić zaklęcie wypalenia ziemi: wszyscy wrogowie w zasięgu wzroku staną w płomieniach i będą niezdolni do poruszenia się w tej samej chwili.</string>
   <string name="MageArmor_ACSpecial">WYPALENIE ZIEMI</string>
   <string name="MageArmor_NotMage">Tylko magowie mogą używać tej zbroi!</string>
-  <string name="MailArmor_Name">kolczuga</string>
+  <string name="MailArmor_Name">Kolczuga</string>
   <string name="MailArmor_Desc">Połączone metalowe kółka stwarzają solidny, acz elastyczny element uzbrojenia.</string>
-  <string name="PlateArmor_Name">zbroja płytowa</string>
+  <string name="PlateArmor_Name">Zbroja płytowa</string>
   <string name="PlateArmor_Desc">Ogromne płytki metalu są złączone ze sobą w pancerz, który zapewnia niezrównaną ochronę każdemu poszukiwaczowi przygód, silnemu na tyle, by móc udźwignąć jego przytłaczającą wagę.</string>
   <string name="RogueArmor_Name">Strój łotrzyka</string>
   <string name="RogueArmor_Desc">Kiedy łotrzyk nosi ten ciemny strój, może przygotować specjalny ruch, zwany \"bombą dymną\" (żadne prawdziwe ładunki wybuchowe nie są używane), która oślepia wrogów umożliwiając mu ukrycie się przed ich wzrokiem.</string>
