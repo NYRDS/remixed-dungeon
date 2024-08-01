@@ -1991,7 +1991,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="HuntressArmor_NotHuntress">Tylko łowczynie mogą używać tej zbroi!</string>
   <string name="LeatherArmor_Name">skórzana zbroja</string>
   <string name="LeatherArmor_Desc">Zbroja zrobiona z wygarbowanej skóry potwora. Nie jest tak lekka jak wełniana zbroja, lecz zapewnia lepszą ochronę.</string>
-  <string name="MageArmor_Name">szata maga</string>
+  <string name="MageArmor_Name">Szata maga</string>
   <string name="MageArmor_Desc">Nosząc tę wspaniałą szatę, mag może rzucić zaklęcie wypalenia ziemi: wszyscy wrogowie w zasięgu wzroku staną w płomieniach i będą niezdolni do poruszenia się w tej samej chwili.</string>
   <string name="MageArmor_ACSpecial">WYPALENIE ZIEMI</string>
   <string name="MageArmor_NotMage">Tylko magowie mogą używać tej zbroi!</string>
