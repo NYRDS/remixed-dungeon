@@ -1881,9 +1881,9 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="MimicAmulet_Gender">masculine</string>
   <string name="MimicAmulet_Name_Objective">mimik</string>
   <string name="MimicAmulet_Desc">Najbardziej chwalebny moment twej kariery podróżnika właśnie okazał się być pułapką.</string>
-  <string name="Nightmare_Name">koszmar</string>
+  <string name="Nightmare_Name">Koszmar</string>
   <string name="Nightmare_Gender">masculine</string>
-  <string name="Nightmare_Name_Objective">koszmar</string>
+  <string name="Nightmare_Name_Objective">Koszmar</string>
   <string name="Nightmare_Desc">Groteskowa kreatura złożona z drgających, mięsistych macek. Te istoty, zwane Koszmarami są przedstawieniem złowieszczych myśli Starego Boga.</string>
   <string name="Tengu_Info3">Mam cię, %s!</string>
   <string name="ZombieGnoll_Name">Gnoll zombiak</string>
