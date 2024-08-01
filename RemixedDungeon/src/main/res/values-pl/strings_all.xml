@@ -2915,7 +2915,7 @@ Szczegółowe statystyki bohaterów i potworów\n
     <string name="Pickaxe_InsufficientStr">Za mało siły by kopać!</string>
     <string name="Carcass_Name">Szczątki %s</string>
     <string name="Carcass_Info">Szczątki totalnie martwego %s,</string>
-    <string name="ResultDescriptions_Necromancy">Wyczerpane siły witalne w trakcje próby ożywienia zwłok na poziomie %d</string>
+    <string name="ResultDescriptions_Necromancy">Wyczerpano siły witalne w trakcje próby ożywienia zwłok na poziomie %d</string>
     <string name="Item_ACPickup">Podnieś</string>
   <string name="Necromancy_Death">Wyczerpano siły witalne w trakcje praktykowania nekromancji,</string>
   <string name="AC_Necromancy">Nekromancja</string>
