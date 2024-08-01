@@ -1892,7 +1892,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="ZombieGnoll_Desc">Pogięte i złamane ciało gnolla zombie nie przypomina już humanoida albo hieny. Jest to tylko kawał zgniłego mięsa i kości, napędzany rządzą rozlewu krwi i konsumpcji.</string>
   <string name="Worm_Name">robak</string>
   <string name="Worm_Gender">masculine</string>
-  <string name="Worm_Name_Objective">robak</string>
+  <string name="Worm_Name_Objective">Robak</string>
   <string name="Worm_Desc">Nie ma sposobu by określić faktyczną wielkość tego stworzenia. Częściowo wyłaniająca się z posadzki kreatura pokryta jest płatami zgniłego mięsa i śluzu. Jej ogromna żuwaczka wyraźnie sugeruje w jaki sposób przemieszcza się ona przez zwały mięsa będące budulcem tego kompleksu.</string>
   <string name="YogsBrain_Name">Mózg Yog\'a</string>
   <string name="YogsBrain_Gender">masculine</string>
