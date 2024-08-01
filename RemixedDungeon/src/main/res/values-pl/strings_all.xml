@@ -446,9 +446,9 @@
   <string name="EquipableItem_ACUnequip">ZDEJMIJ</string>
   <string name="EquipableItem_Unequip">%s to przeklęty przedmiot i nie możesz go zostawić!</string>
   <string name="Heap_Mimic">To mimik!</string>
-  <string name="Amulet_Name">Amulet Yendora</string>
+  <string name="Amulet_Name">Amulet Yendoru</string>
   <string name="Amulet_ACEnd">SKOŃCZ GRĘ</string>
-  <string name="Amulet_Info">Amulet Yendora to najpotężniejszy znany artefakt niewiadomego pochodzenia. Mówi się, że amulet może spełnić każde życzenie jego właściciela, oczywiście jeśli jego siła woli jest na tyle potężna by \"przekonać\" artefakt do współpracy.</string>
+  <string name="Amulet_Info">Amulet Yendoru to najpotężniejszy znany artefakt niewiadomego pochodzenia. Mówi się, że amulet może spełnić każde życzenie jego właściciela, oczywiście jeśli jego siła woli jest na tyle potężna by \"przekonać\" artefakt do współpracy.</string>
   <string name="Ankh_Name">Ankh</string>
   <string name="Ankh_Info">Starożytny symbol nieśmiertelności daje możliwość zmartwychwstania po zgonie. Po wskrzeszeniu, wszystkie przedmioty, które nie są wyposażone zostaną utracone.</string>
   <string name="ArmorKit_Name">zestaw narzędzi płatnerskich</string>
