@@ -1079,7 +1079,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="MeleeWeapon_Info1c">ulepszony</string>
   <string name="MeleeWeapon_Info1d">zdegradowany</string>
   <string name="MeleeWeapon_Info2a">Zadaje średnie obrażenia o wartości %d punktów na uderzenie.</string>
-  <string name="MeleeWeapon_Info2b">Jego średnie obrażenia zazwyczaj wynoszą %1$d punktów na uderzenie i wymaga on%2$d punktów Siły.</string>
+  <string name="MeleeWeapon_Info2b">Jego średnie obrażenia zazwyczaj wynoszą %1$d punktów na uderzenie i wymaga on %2$d punktów Siły.</string>
   <string name="MeleeWeapon_Info2c">Prawdopodobnie ta broń jest dla ciebie za ciężka.</string>
   <string name="MeleeWeapon_Info3a">To raczej %s broń.</string>
   <string name="MeleeWeapon_Info3b">szybka</string>
