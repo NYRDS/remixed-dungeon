@@ -200,7 +200,7 @@
   <string name="Wand_Prompt">Wybierz kierunek strzału</string>
   <string name="WandOfAmok_Name">Kostur Szału</string>
   <string name="WandOfAmok_Info">Fioletowe światło wystrzelone z tego kostura sprawi, że cel zacznie atakować wszystkie stworzenia w zasięgu swojego wzroku.</string>
-  <string name="WandOfAmok_Info1">nic się nie wydarzyło</string>
+  <string name="WandOfAmok_Info1">Nic się nie wydarzyło</string>
   <string name="WandOfAvalanche_Name">Kostur Lawiny</string>
   <string name="WandOfAvalanche_Info">Kiedy ładunek tego kostura uderzy w ścianę (lub w jakąkolwiek solidną przeszkodę) wywoła lawinę kamieni, zadając obrażenia i ogłuszając wszystkie stworzenia w zasięgu efektu.</string>
   <string name="WandOfAvalanche_Info1">Przygniotłeś się używając własnego Kostura Lawiny...</string>
