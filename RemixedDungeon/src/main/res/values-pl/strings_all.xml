@@ -1074,7 +1074,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="RatKing_Gender">masculine</string>
   <string name="Weapon_Identify">Zapoznałeś się już wystarczająco dobrze z %1$s by móc to zidentyfikować. Jest to%2$s.</string>
   <string name="Weapon_Incompatible">Interakcja różnych typów magii usunęła zaklęcie z tej broni!</string>
-  <string name="MeleeWeapon_Info1a">Ten %1$s jest %2$s %3$d-ego tieru bronią białą.</string>
+  <string name="MeleeWeapon_Info1a"> %1$s jest %2$s %3$d-ego tieru bronią białą.</string>
   <string name="MeleeWeapon_Info1b"> </string>
   <string name="MeleeWeapon_Info1c">ulepszony</string>
   <string name="MeleeWeapon_Info1d">zdegradowany</string>
