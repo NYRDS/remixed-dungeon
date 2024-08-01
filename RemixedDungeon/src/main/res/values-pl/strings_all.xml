@@ -2005,7 +2005,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="RogueArmor_NotRogue">Tylko łotrzyki mogą nosić tę zbroję!</string>
   <string name="RogueArmor_Fov">Możesz przeskoczyć w puste miejsce znajdujące się w zasięgu wzroku.</string>
   <string name="RogueArmor_Prompt">Wybierz miejsce w które chcesz przeskoczyć</string>
-  <string name="ScaleArmor_Name">zbroja łuskowa</string>
+  <string name="ScaleArmor_Name">Zbroja łuskowa</string>
   <string name="ScaleArmor_Desc">Przyszyte do skórzanej zbroi łuski tworzą elastyczny, acz dobrze chroniący pancerz.</string>
   <string name="WarriorArmor_Name">zbroja wojownika</string>
   <string name="WarriorArmor_Desc">Mimo iż ta zbroja wygląda na ciężką, pozwala wojownikowi przygotować heroiczny sus polegający na tąpnięciu ogłuszającym wszystkich wrogów wokół.</string>
