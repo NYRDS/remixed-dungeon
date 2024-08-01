@@ -252,7 +252,7 @@
   <string name="PortalGate_Desc_Activated">Z wrót wydziela się jakaś dziwna świecąca substancja. Wygląda na to że jest ona całkowicie nieruchoma, poza sporadycznie wypływającymi z jej centrum falami.</string>
   <string name="PortalGate_Activated">Starożytne wrota zostały przebudzone!</string>
   <string name="PortalGate_Used">Dotknąłeś wrót iii... nic się nie wydarzyło...</string>
-  <string name="PortalExit_Desc">Ten wrota zabiorą cię na pierwszy poziom %s.</string>
+  <string name="PortalExit_Desc">Te wrota zabiorą cię na pierwszy poziom %s.</string>
   <string name="PortalExit_Desc_SpiderNest">Leże Pająków</string>
   <string name="PortalExit_Desc_Necropolis">Miasto Umarłych</string>
   <string name="PortalExit_Desc_IceCaves">Lodowe Groty</string>
