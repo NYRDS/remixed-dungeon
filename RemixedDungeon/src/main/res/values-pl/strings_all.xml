@@ -1886,9 +1886,9 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Nightmare_Name_Objective">koszmar</string>
   <string name="Nightmare_Desc">Groteskowa kreatura złożona z drgających, mięsistych macek. Te istoty, zwane Koszmarami są przedstawieniem złowieszczych myśli Starego Boga.</string>
   <string name="Tengu_Info3">Mam cię, %s!</string>
-  <string name="ZombieGnoll_Name">gnoll zombiak</string>
+  <string name="ZombieGnoll_Name">Gnoll zombiak</string>
   <string name="ZombieGnoll_Gender">masculine</string>
-  <string name="ZombieGnoll_Name_Objective">gnoll zombiak</string>
+  <string name="ZombieGnoll_Name_Objective">Gnoll zombiak</string>
   <string name="ZombieGnoll_Desc">Pogięte i złamane ciało gnolla zombie nie przypomina już humanoida albo hieny. Jest to tylko kawał zgniłego mięsa i kości, napędzany rządzą rozlewu krwi i konsumpcji.</string>
   <string name="Worm_Name">Robak</string>
   <string name="Worm_Gender">masculine</string>
