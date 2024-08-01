@@ -119,7 +119,7 @@
   <string name="Possess_PossessionFailed">Wola %s jest zbyt silna</string>
   <string name="Possess_Possessed">%s czeka na twoje rozkazy</string>
   <string name="Possess_CantPossessSelf">Nie możesz opętać samego siebie</string>
-  <string name="Mob_StaControlledStatus">Ten %s jest objęty władaniem siły nieczystej</string>
+  <string name="Mob_StaControlledStatus"> %s jest objęty władaniem siły nieczystej</string>
   <string name="BlackCat_AiStatus">Ten kot wykonuje zwyczajne kocie czynności</string>
   <string name="Shopkeeper_Buy">Wybierz przedmiot do kupienia</string>
   <string name="Shopkeeper_title">Sklep</string>
