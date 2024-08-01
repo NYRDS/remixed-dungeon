@@ -1984,7 +1984,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="ElfArmor_Desc">Z pomocą tej peleryny, elf może przyzwać pradawne siły natury. Wysokie pnącza urosną w mgnieniu oka, nawet mimo litej skały, unieruchamiając wszystkich wrogów w zasięgu wzroku.</string>
   <string name="ElfArmor_ACSpecial">ZEW NATURY</string>
   <string name="ElfArmor_NotElf">Tylko elfy mogą korzystać z tej zbroi!</string>
-  <string name="HuntressArmor_Name">peleryna łowczyni</string>
+  <string name="HuntressArmor_Name">Peleryna łowczyni</string>
   <string name="HuntressArmor_Desc">Łowczyni posiadająca takowy strój może stworzyć wachlarz widmowych ostrzy. Każdy ze sztyletów jest w stanie namierzyć pojedynczego wroga  w zasięgu wzroku łowczyni, zadając obrażenia korelatywne do aktualnie wyekwipowanej broni krótkodystansowej.</string>
   <string name="HuntressArmor_ACSpecial">WIDMOWE OSTRZA</string>
   <string name="HuntressArmor_NoEnemies">Brak wrogów w zasięgu wzroku.</string>
