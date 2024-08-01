@@ -2623,7 +2623,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="Char_Stole_0">%1$sukradł %2$s od %3$s</string>
   <string name="Char_Stole_1">%1$sukradł %2$s od %3$s</string>
   <string name="Char_Stole_2">%1$sukradł %2$s od %3$s</string>
-  <string name="ScrollOfTeleportation_Teleport2">W mgnieniu oka %szostali teleportowani w inne miejsce na poziomie.</string>
+  <string name="ScrollOfTeleportation_Teleport2">W mgnieniu oka teleportowało Cię w inne miejsce na %sm poziomie.</string>
   <string name="ScrollOfTeleportation_NoTeleport2">Silna aura magiczna tego miejsca nie pozwala %s teleportować się!</string>
   <string name="WndModInstall_InstallingMod">Instalowanie moda...</string>
   <string name="WndModInstall_Version">wersja</string>
