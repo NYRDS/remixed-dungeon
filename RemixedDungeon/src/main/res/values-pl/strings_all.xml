@@ -796,7 +796,7 @@ Lufix
   <string name="gdpr_agree">Tak, zgadam się</string>
   <string name="gdpr_disagree">Nie, dziękuję </string>
   <string name="gdpr_choose">Proszę podjąć decyzję </string>
-  <string name="Mob_StaHuntingStatus2">Ten %1$s poluje na%2$s</string>
+  <string name="Mob_StaHuntingStatus2"> %1$s poluje na%2$s</string>
   <string name="Mob_StaFleeingStatus2">%1$s ucieka przed %2$s</string>
   <string name="Mob_StaTerrorStatus">%1$s jest przerażony!</string>
   <string name="Mob_StaTerrorStatus2">%1$s przestraszył się %2$s</string>
