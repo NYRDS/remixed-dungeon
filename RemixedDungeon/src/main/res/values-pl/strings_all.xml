@@ -1939,9 +1939,9 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="OverpricedRation_Name">przeceniona racja żywieniowa</string>
   <string name="OverpricedRation_Info">Wygląda dokładnie jak zwykła racja żywieniowa, ale jest mniejsza.</string>
   <string name="OverpricedRation_Message">To jedzenie smakowało dobrze.</string>
-  <string name="Pasty_Name">pasztecik</string>
+  <string name="Pasty_Name">Pasztecik</string>
   <string name="Pasty_Info">Oryginalny pasztecik Kornwalijski z tradycyjnym nadzieniem ziemniaczanym z kawałeczkami wołowiny.</string>
-  <string name="PseudoPasty_Name">pasztecik</string>
+  <string name="PseudoPasty_Name">Pasztecik</string>
   <string name="PseudoPasty_Info">Oryginalny pasztecik Kornwalijski z tradycyjnym nadzieniem ziemniaczanym z kawałeczkami wołowiny.</string>
   <string name="ResultDescriptions_Mob">Zabity przez %1$s na poziomie %2$d</string>
   <string name="ResultDescriptions_Boss">Zabity przez %1$s na poziomie %2$d</string>
