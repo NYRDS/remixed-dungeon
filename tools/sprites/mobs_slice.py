@@ -80,8 +80,8 @@ for dirName, subdirList, fileList in os.walk(rootDir):
                 x = fw * i
                 y = 0
 
-                while x + fw >= img.width:
-                    x -= img.width
+                if x + fw >= img.width:
+                    x -= int(img.width/fw) * fw
                     y += fh
 
                 frame = img.crop((x, y, x + fw, y + fh))
