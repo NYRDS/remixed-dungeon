@@ -379,15 +379,14 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	}
 	
 	private static void add( Actor actor, float time ) {
-		
+		actor.added = true;
+
 		if (all.contains( actor )) {
 			return;
 		}
 		
 		all.add( actor );
 		actor.time += time;
-
-		actor.added = true;
 
 		if (actor instanceof Char) {
 			Char ch = (Char)actor;

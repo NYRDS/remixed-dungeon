@@ -1239,7 +1239,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (isOnStage() && level().cellValid(getPos())) {
             sprite.setVisible(Dungeon.isCellVisible(getPos()) && invisible >= 0);
         } else {
-            EventCollector.logException("invalid pos for:" + this + ":" + getEntityKind());
+            EventCollector.logException("invalid pos " + getPos() + " for:"  + this + ":" + getEntityKind());
         }
         GameScene.addMobSpriteDirect(this, sprite);
 

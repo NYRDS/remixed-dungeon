@@ -919,13 +919,13 @@ public abstract class Level implements Bundlable {
 		}
 
 		mob.setPos(fromCell);
+
+		Actor.addDelayed(mob, delay);
+		Actor.occupyCell(mob);
+
 		if (GameScene.isSceneReady()) {
 			mob.updateSprite();
 		}
-
-		//mob.setPos(targetPos);
-		Actor.addDelayed(mob, delay);
-		Actor.occupyCell(mob);
 
 		if (GameScene.isSceneReady()) {
 			mob.onSpawn(this);
