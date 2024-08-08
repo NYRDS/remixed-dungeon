@@ -1255,7 +1255,6 @@
   <string name="Statue_Name_Objective">живу статую</string>
   <string name="Statue_Desc">Може здатися, що це просто ще одна звичайна статуя, але червоні очі, що виблискують в темряві, не приховують свої злі наміри. Хоча вона і зроблена з каменю, її _%s_ виглядає справжнім.</string>
   <string name="Succubus_Name">сукуб</string>
-  <string name="Succubus_Gender">femenine</string>
   <string name="Succubus_Name_Objective">сукуба</string>
   <string name="Succubus_Desc">Сукуби - демони, які набувають подоби гарних (зазвичай в готичному стилі) дівчат. Використовуючи магію, сукуби причаровують героя, позбавляючи його здатності атакувати, доки чари не розвіються.</string>
   <string name="Swarm_Name">рій мух</string>
@@ -1582,14 +1581,12 @@
   <string name="WandOfShadowbolt_Name">Паличка стріл тіней</string>
   <string name="WandOfShadowbolt_Info">Ця паличка випромінює темну, зловісну енергію.</string>
   <string name="TownGuardNPC_Name">вартовий</string>
-  <string name="TownGuardNPC_Gender">чоловічий</string>
   <string name="TownGuardNPC_Name_Objective">вартового</string>
   <string name="TownGuardNPC_Desc">Типовий вартовий міста.</string>
   <string name="TownGuardNPC_Message1">Проходимо, не затримуємося.</string>
   <string name="TownGuardNPC_Message2">Завдяки таким шукачам пригод, як ви, тут стало безпечніше.</string>
   <string name="TownGuardNPC_Message3">Гадаєш тут забагато вартових? Це ж єдине місто, в якому знаходиться спуск в гігантське підземелля, яке наповнено монстрами, чи не так?</string>
   <string name="TownsfolkNPC_Name">городянин</string>
-  <string name="TownsfolkNPC_Gender">чоловічий</string>
   <string name="TownsfolkNPC_Name_Objective">городянина</string>
   <string name="TownsfolkNPC_Desc">Один з місцевих городян. Не дивлячись не те, що це звичайний простолюдин, одежа на ньому не з дешевих.</string>
   <string name="TownsfolkNPC_Message1">О! Ще один шукач пригод, чудово! Намагайся винести з підземелля якомога більше цінностей!</string>
@@ -1597,14 +1594,12 @@
   <string name="TownsfolkNPC_Message3">Який чудовий день.</string>
   <string name="TownsfolkNPC_Message4">Сподіваюся цієї весни не затопить каналізацію. Чергового нашестя щурів нам ще не вистачало.</string>
   <string name="HealerNPC_Name">міський священик</string>
-  <string name="HealerNPC_Gender">чоловічий</string>
   <string name="HealerNPC_Name_Objective">міського священика</string>
   <string name="HealerNPC_Desc">Цей старий схожий на того, хто міг би займатись виробництвом чарівних паличок.</string>
   <string name="HealerNPC_Message1">Безкоштовне лікування для кожного шукача пригод!</string>
   <string name="HealerNPC_Message2">Якщо зголодніли чи вас , борони вас боже, поранили - повертайтеся!</string>
   <string name="HealerNPC_Message3">І чому церква не дозволяє носити нам капелюхи... тут так холодно.</string>
   <string name="ServiceManNPC_Name">співробітник</string>
-  <string name="ServiceManNPC_Gender">чоловічий</string>
   <string name="ServiceManNPC_Name_Objective">співробітника</string>
   <string name="ServiceManNPC_Desc">Рядовий робочий місцевих закладів.</string>
   <string name="TownShopkeeper_Name">крамар</string>
@@ -1824,7 +1819,6 @@
   <string name="MimicAmulet_Name_Objective">міміка</string>
   <string name="MimicAmulet_Desc">Найславетніший момент твоєї пригоди щойно обернувся пасткою.</string>
   <string name="Nightmare_Name">сонна мара</string>
-  <string name="Nightmare_Gender">femenine</string>
   <string name="Nightmare_Name_Objective">сонна мара</string>
   <string name="Nightmare_Desc">Гротескна істота, у вигляді вусиків з плоті, що безперестану смикаються. Сонна мара є втіленням зловісних думок Старого Бога.</string>
   <string name="Tengu_Info3">Попався, %s!</string>
@@ -1849,7 +1843,6 @@
   <string name="YogsHeart_Name_Objective">серце Йога</string>
   <string name="YogsHeart_Desc">На протязі багатьох століть люди вірили, що лише безсердечні здатні на справжні злі  вчинки. І все ж ти бачиш перед собою величезне серце Старого Бога, що бється.</string>
   <string name="YogsTeeth_Name">щелепа Йога</string>
-  <string name="YogsTeeth_Gender">femenine</string>
   <string name="YogsTeeth_Name_Objective">щелепа Йога</string>
   <string name="YogsTeeth_Desc">Велетенська щелепа Старого Бога, сповнена гострими як бритва зубами. Досить вдале втілення його прагнення до руйнування та поглинання всього живого.</string>
   <string name="Food_ACEat">З\'ЇСТИ</string>

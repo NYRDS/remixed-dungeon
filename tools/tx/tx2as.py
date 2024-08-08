@@ -119,6 +119,8 @@ for _, _, files in os.walk(translations_dir + dir_name):
 
             jsonData = open("strings_" + locale_code + ".json", "w", encoding='utf8')
 
+            entriesToRemove = []
+
             for entry in transifexData:
 
                 if entry.tag not in ["string", "string-array"]:
@@ -141,7 +143,16 @@ for _, _, files in os.walk(translations_dir + dir_name):
                     jsonData.write(unescape(json.dumps([entry.get("name"), entry.text], ensure_ascii=False)))
                     jsonData.write("\n")
 
+                    if entry_name.endswith("_Gender"):
+                        if entry.text not in ("masculine", "feminine","neuter"):
+                            entriesToRemove.append(entry)
+                            continue
+
+
                 entry.text = processText(entry.text)
+
+            for entry in entriesToRemove:
+                transifexData.remove(entry)
 
             indent(transifexData)
 
