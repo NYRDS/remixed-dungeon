@@ -2573,4 +2573,8 @@
   <string name="AC_Necromancy">Некромантія</string>
   <string name="AC_Devour">Поглинання</string>
   <string name="WndModsDisclaimer_title">Модифікації</string>
+  <string name="PlagueDoctor_Name">чумний лікар</string>
+  <string name="PlagueDoctor_Gender">masculine</string>
+  <string name="PlagueDoctor_Name_Objective">чумний лікар</string>
+  <string name="PlagueDoctor_Desc">Цей горбатий чоловік повністю вкритий шкірою. Від нього тхне гострий запах ліків і... часнику?</string>
 </resources>

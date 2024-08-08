@@ -2566,4 +2566,8 @@ hogy teleportáljon</string>
   <string name="AC_Necromancy">Nekromácia</string>
   <string name="AC_Devour">Felfalás</string>
   <string name="WndModsDisclaimer_title">Modok</string>
+  <string name="PlagueDoctor_Name">pestis doktor</string>
+  <string name="PlagueDoctor_Gender">hím</string>
+  <string name="PlagueDoctor_Name_Objective">pestis doktor</string>
+  <string name="PlagueDoctor_Desc">Ennek a púpos hátú alaknak az egész teste egy bőrből készült kezeslábasban van. Ráadásul keserű gyógyszer és ... hagymaszagot áraszt.</string>
 </resources>

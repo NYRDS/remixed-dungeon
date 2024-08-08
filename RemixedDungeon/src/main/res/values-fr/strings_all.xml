@@ -2662,13 +2662,6 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="BardNPC_Name_Objective">barde</string>
   <string name="BardNPC_Gender">masculine</string>
   <string name="BardNPC_Desc">Le barde de la ville joue de son luth.</string>
-  <string name="Welcome_Text_30">
-    remix.30.0\n
-    - Jouabilité:\n
-    -- Capacités pour tout le monde !\n
-    -- L\'auberge est désormais ouverte !\n
-    - Des bugs ont été corrigés\n
-    </string>
   <string name="Roar_Name">Rugissement</string>
   <string name="Roar_Info">Ce puissant rugissement ne manquera pas de terrifier vos ennemis et d\'inspirer vos alliés.</string>
   <string name="LightningBolt_Name">Trait de foudre</string>
@@ -2872,4 +2865,8 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="AC_Necromancy">Nécromancie</string>
   <string name="AC_Devour">Dévorer</string>
   <string name="WndModsDisclaimer_title">Mods</string>
+  <string name="PlagueDoctor_Name">médecin de la peste</string>
+  <string name="PlagueDoctor_Gender">masculine</string>
+  <string name="PlagueDoctor_Name_Objective">médecin de la peste</string>
+  <string name="PlagueDoctor_Desc">Cet homme bossu est complètement recouvert de cuir. Il sent très fort les préparations médicinales et... l\'aïl ?</string>
 </resources>

@@ -2652,13 +2652,6 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
   <string name="BardNPC_Name_Objective">penyair</string>
   <string name="BardNPC_Gender">feminim</string>
   <string name="BardNPC_Desc">Penyair kota memainkan kecapinya.</string>
-  <string name="Welcome_Text_30">
-   remix.30.0\n
-- Gameplay:\n
--- Kemampuan untuk semua orang!\n
--- Penginapan dibuka sekarang!\n
-- Bug diperbaiki\n
-   </string>
   <string name="Roar_Name">Mengaum</string>
   <string name="Roar_Info">Raungan yang kuat pasti akan menakuti musuh Anda dan menginspirasi sekutu.</string>
   <string name="LightningBolt_Name">cahaya petir</string>
@@ -2862,4 +2855,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
   <string name="AC_Necromancy">Penujuman</string>
   <string name="AC_Devour">Melahap</string>
   <string name="WndModsDisclaimer_title">Mod</string>
+  <string name="PlagueDoctor_Name">dokter wabah</string>
+  <string name="PlagueDoctor_Gender">feminim</string>
+  <string name="PlagueDoctor_Name_Objective">dokter wabah</string>
+  <string name="PlagueDoctor_Desc">Seluruh tubuh orang bungkuk ini disembunyikan di bawah jumpsuit kulit. Juga, dari dia datang bau obat yang pahit dan ... bawang putih?</string>
 </resources>

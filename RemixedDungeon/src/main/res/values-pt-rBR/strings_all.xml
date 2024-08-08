@@ -2656,12 +2656,6 @@ de teletransporte!</string>
   <string name="BardNPC_Name_Objective">bardo</string>
   <string name="BardNPC_Gender">masculino</string>
   <string name="BardNPC_Desc">O bardo da cidade está tocando seu alaúde.</string>
-  <string name="Welcome_Text_30">
-remix.30.0\n
-- Jogabilidade:\n
--- Habilidades para todos!\n
--- A pousada está aberta agora!\n
-- Erros corrigidos\n</string>
   <string name="Roar_Name">Rugido</string>
   <string name="Roar_Info">O rugido poderoso certamente aterrorizará seus inimigos e inspirará aliados.</string>
   <string name="LightningBolt_Name">Relâmpago</string>
@@ -2863,4 +2857,8 @@ remix.31.1\n
   <string name="AC_Necromancy">Necromancia</string>
   <string name="AC_Devour">Devorar</string>
   <string name="WndModsDisclaimer_title">Mods</string>
+  <string name="PlagueDoctor_Name">médico da praga</string>
+  <string name="PlagueDoctor_Gender">masculino</string>
+  <string name="PlagueDoctor_Name_Objective">médico da praga</string>
+  <string name="PlagueDoctor_Desc">Este homem corcunda está totalmente vestido com couro. Ele tem cheiro forte de medicamentos e... alho?</string>
 </resources>

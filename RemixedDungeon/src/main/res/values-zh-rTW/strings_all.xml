@@ -2597,4 +2597,8 @@
   <string name="AC_Necromancy">死靈法術</string>
   <string name="AC_Devour">吞噬</string>
   <string name="WndModsDisclaimer_title">模組</string>
+  <string name="PlagueDoctor_Name">瘟疫巫醫</string>
+  <string name="PlagueDoctor_Gender">男孩</string>
+  <string name="PlagueDoctor_Name_Objective">瘟疫巫醫</string>
+  <string name="PlagueDoctor_Desc">散發奇怪味道的...皮革?下面應該是個人吧...</string>
 </resources>

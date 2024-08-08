@@ -2691,4 +2691,8 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
   <string name="AC_Necromancy">Nekromantie</string>
   <string name="AC_Devour">Verschlingen</string>
   <string name="WndModsDisclaimer_title">Mods</string>
+  <string name="PlagueDoctor_Name">Virendoktor</string>
+  <string name="PlagueDoctor_Gender">männlich</string>
+  <string name="PlagueDoctor_Name_Objective">Virendoktor</string>
+  <string name="PlagueDoctor_Desc">Dieser bucklige Mann ist komplett mit Leder bezogen. Er riecht stark nach Medikamenten und ... Knoblauch?</string>
 </resources>

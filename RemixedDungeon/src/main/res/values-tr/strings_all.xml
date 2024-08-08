@@ -2670,13 +2670,6 @@ seviyenin başka bir yeri.</string>
   <string name="BardNPC_Name_Objective">ozan</string>
   <string name="BardNPC_Gender">erkek</string>
   <string name="BardNPC_Desc">Kasabalı ozan udunu çalıyor.</string>
-  <string name="Welcome_Text_30">
-remix.30.0\n
-- Oynanış:\n
--- Herkes için yetenekler!\n
--- Han şimdi açıldı!\n
-- Hatalar düzeltildi\n
- </string>
   <string name="Roar_Name">Kükreme</string>
   <string name="Roar_Info">Bu kükreme düşmana korku dosta güven vericek.</string>
   <string name="LightningBolt_Name">Yıldırım oku</string>
@@ -2921,4 +2914,8 @@ remix.30.1\n
   <string name="AC_Necromancy">Ölüçağırma</string>
   <string name="AC_Devour">Obur</string>
   <string name="WndModsDisclaimer_title">Modlar</string>
+  <string name="PlagueDoctor_Name">veba doktoru</string>
+  <string name="PlagueDoctor_Gender">erkek</string>
+  <string name="PlagueDoctor_Name_Objective">veba doktoru</string>
+  <string name="PlagueDoctor_Desc">Bu kambur kişinin tüm vücudu deri bir tulumun altında gizlidir. Ayrıca, ondan acı bir ilaç ve ... sarımsak kokusu geliyor?</string>
 </resources>

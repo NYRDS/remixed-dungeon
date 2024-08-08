@@ -2532,4 +2532,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
   <string name="AC_Necromancy">Necromancy</string>
   <string name="AC_Devour">Baham</string>
   <string name="WndModsDisclaimer_title">Mod</string>
+  <string name="PlagueDoctor_Name">doktor wabak</string>
+  <string name="PlagueDoctor_Gender">feminin</string>
+  <string name="PlagueDoctor_Name_Objective">doktor wabak</string>
+  <string name="PlagueDoctor_Desc">Sibongkok ini sepenuh diliputi dengan pakaian berkulit. Dia berbau ubat dan juga... bawang putih?</string>
 </resources>

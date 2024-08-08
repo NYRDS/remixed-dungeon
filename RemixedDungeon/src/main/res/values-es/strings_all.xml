@@ -2666,13 +2666,6 @@ otro lugar del nivel.</string>
   <string name="BardNPC_Name_Objective">bardo</string>
   <string name="BardNPC_Gender">masculino</string>
   <string name="BardNPC_Desc">El bardo del pueblo está tocando su laúd.</string>
-  <string name="Welcome_Text_30">
-    remix.30.0\n
-    - Gameplay:\n
-    -- ¡Habilidades para todos!\n
-    -- ¡La posada ahora está abierta!\n
-    - Bugs arreglados\n
-    </string>
   <string name="Roar_Name">Rugido</string>
   <string name="Roar_Info">El poderoso rugido seguramente aterrorizará a tus enemigos e inspirará a los aliados.</string>
   <string name="LightningBolt_Name">Rayo de luz</string>
@@ -2885,4 +2878,8 @@ otro lugar del nivel.</string>
   <string name="AC_Necromancy">Nigromancia</string>
   <string name="AC_Devour">Devorar</string>
   <string name="WndModsDisclaimer_title">Mods</string>
+  <string name="PlagueDoctor_Name">doctor de la plaga</string>
+  <string name="PlagueDoctor_Gender">masculino</string>
+  <string name="PlagueDoctor_Name_Objective">doctor de la plaga</string>
+  <string name="PlagueDoctor_Desc">Este hombre jorobado está vestido completamente con cuero. Huele fuertemente a medicamentos y ... ¿ajo?</string>
 </resources>

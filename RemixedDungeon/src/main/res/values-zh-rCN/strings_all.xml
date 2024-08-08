@@ -2658,12 +2658,6 @@
   <string name="BardNPC_Name_Objective">吟游诗人</string>
   <string name="BardNPC_Gender">男孩</string>
   <string name="BardNPC_Desc">镇上的吟游诗人正在弹他的琵琶。</string>
-  <string name="Welcome_Text_30">
-remix.30.0\n
-——游戏性：\n
-—面向每个人的技能！\n
-—旅店现在开张了！\n
-——修复错误</string>
   <string name="Roar_Name">咆哮</string>
   <string name="Roar_Info">强有力的咆哮肯定会吓坏你的敌人，激励你的盟友。</string>
   <string name="LightningBolt_Name">闪电箭</string>
@@ -2863,4 +2857,8 @@ remix.31.1\n
   <string name="AC_Necromancy">死灵术</string>
   <string name="AC_Devour">吞噬</string>
   <string name="WndModsDisclaimer_title">MOD</string>
+  <string name="PlagueDoctor_Name">瘟疫巫医</string>
+  <string name="PlagueDoctor_Gender">男孩</string>
+  <string name="PlagueDoctor_Name_Objective">瘟疫巫医</string>
+  <string name="PlagueDoctor_Desc">散发奇怪味道的……皮革？下面应该是个人吧……</string>
 </resources>

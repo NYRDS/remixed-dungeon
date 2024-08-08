@@ -2456,4 +2456,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="AC_Necromancy">강령술</string>
   <string name="AC_Devour">포식</string>
   <string name="WndModsDisclaimer_title">MOD</string>
+  <string name="PlagueDoctor_Name">역병 의사</string>
+  <string name="PlagueDoctor_Gender">남성적인</string>
+  <string name="PlagueDoctor_Name_Objective">역병 의사</string>
+  <string name="PlagueDoctor_Desc">이 곱추 남성은 가죽으로 둘러쌓여 있고, 강한 약냄새가..아니, 마늘 냄새도 나는 것 같다?</string>
 </resources>

@@ -2657,13 +2657,6 @@
   <string name="BardNPC_Name_Objective">βάρδος</string>
   <string name="BardNPC_Gender">masculine</string>
   <string name="BardNPC_Desc">Ο βάρδος της πόλης παίζει τη λύρα του.</string>
-  <string name="Welcome_Text_30">
-    remix.30.0\n
-    - Παιχνίδι:\n
-    -- Ικανότητες για όλους!\n
-    -- Το πανδοχείο είναι πλέον ανοιχτό!\n
-    - Διορθώσεις σφαλμάτων\n
-   </string>
   <string name="Roar_Name">Ιαχή</string>
   <string name="Roar_Info">Μια φοβερή ιαχή που τρομοκρατεί τους εχθρούς και εμπνέει τους συμμάχους.</string>
   <string name="LightningBolt_Name">Αστραπή</string>
@@ -2929,4 +2922,8 @@ remix.32\n
   <string name="WndModsDisclaimer_title">Τροποποιήσεις</string>
   <string name="WndModsDisclaimer_manage">Διαχείριση λίστας τροποποιήσεων</string>
   <string name="WndModsDisclaimer_install">Εγκατάσταση τροποποίησης από συσκευή</string>
+  <string name="PlagueDoctor_Name">γιατρός της πανούκλας</string>
+  <string name="PlagueDoctor_Gender">masculine</string>
+  <string name="PlagueDoctor_Name_Objective">γιατρός της πανούκλας</string>
+  <string name="PlagueDoctor_Desc">Ολόκληρο το σώμα αυτού του καμπουριαστού ατόμου κρύβεται πίσω από μια δερμάτινη στολή. Αναδίδει μια απαίσια μυρωδιά φαρμάκου και... σκόρδου;</string>
 </resources>
