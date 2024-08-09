@@ -891,7 +891,7 @@ Lufix
   <string name="FortuneTellerNPC_Name_Objective">wróżbitka</string>
   <string name="FortuneTellerNPC_Desc">Kobieta ta nosi na sobie długą, jaskrawo ubarwioną szatę. Wygląda ona zaskakująco młodo, jak na kogoś, kto osiągnął mistrzostwo w tajemnej sztuce jasnowidzenia. Po podejściu bliżej słyszysz mamroty wieszczki wpatrującej się w kryształową kulę.</string>
   <string name="ServiceManNPC_Limit_Reached">Przepraszam, ale osiągnąłeś swój obecny limit. Będziesz mógł jednak ponownie skorzystać z naszych usług po osiągnięciu kolejnych poziomów postaci.</string>
-  <string name="WndFortuneTeller_Instruction">Jestem w stanie ujawnić tajemnice które skrywają twoje przedmioty.\nJedna identyfikacja będzie cię kosztować%d monet.</string>
+  <string name="WndFortuneTeller_Instruction">Jestem w stanie ujawnić tajemnice które skrywają twoje przedmioty.\nJedna identyfikacja będzie cię kosztować %d monet.</string>
   <string name="WndFortuneTeller_No_Item">Ostrożnie, nie chciałbyś przecież wydać na marne swoich pieniędzy, nieprawdaż? Nie posiadasz w ekwipunku żadnych niezidentyfikowanych przedmiotów.</string>
   <string name="WndFortuneTeller_Title">Wróżbitka</string>
   <string name="Wnd_Button_Yes">Tak</string>
