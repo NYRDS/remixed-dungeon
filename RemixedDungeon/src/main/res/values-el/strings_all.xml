@@ -744,7 +744,7 @@
   <string name="Deathling_Name">Θανατικός</string>
   <string name="Deathling_Gender">masculine</string>
   <string name="Deathling_Name_Objective">Θανατικός</string>
-  <string name="Deathling_Desc">Ο Θανατικός είναι η ψυχή κάποιου έκπτωτου ήρωα, που είχε την ατυχία να επικαλεστεί από έναν εξερευνητή που εντρυφεί στη νεκρομαντεία.</string>
+  <string name="Deathling_Desc">Ο Θανατικός είναι η ψυχή κάποιου έκπτωτου ήρωα, που είχε την ατυχία να επικαλεστεί από έναν εξερευνητή που εντρυφεί στη Νεκρομαντεία.</string>
   <string name="NecromancerRobe_PetLimitReached">Νεκρομαντεία: έφτασες στο όριο επικλήσεων (τρέχον μέγιστο: %d)!</string>
   <string name="Necromancy_NotEnoughSouls">Δεν έχεις αρκετές ψυχές για να εκτελέσεις το ξόρκι «%1$s».</string>
   <string name="Necromancy_SoulsCountLabel">Ψυχές</string>
