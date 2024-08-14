@@ -285,7 +285,7 @@
   <string name="town_deco_INN_sign_desc">Φαίνεται πως αυτό το κτήριο είναι πανδοχείο.</string>
   <string name="HealthDart_Name">θεραπευτικό βελάκι</string>
   <string name="HealthDart_Gender">neuter</string>
-  <string name="HealthDart_Info">Η αιχμή σε αυτό το βελάκι είναι καλυμμένη με φίλτρο θεραπείας.</string>
+  <string name="HealthDart_Info">Η αιχμή σε αυτό το βελάκι είναι καλυμμένη με φίλτρο της ζωής.</string>
   <string name="HealthArrow_Name">θεραπευτικό βέλος</string>
   <string name="HealthArrow_Gender">neuter</string>
   <string name="HealthArrow_Info">Η αιχμή αυτού του βέλους είναι επικαλυμμένη με φίλτρο θεραπείας.</string>
