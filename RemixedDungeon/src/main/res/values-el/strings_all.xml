@@ -288,7 +288,7 @@
   <string name="HealthDart_Info">Η αιχμή σε αυτό το βελάκι είναι καλυμμένη με φίλτρο της ζωής.</string>
   <string name="HealthArrow_Name">θεραπευτικό βέλος</string>
   <string name="HealthArrow_Gender">neuter</string>
-  <string name="HealthArrow_Info">Η αιχμή αυτού του βέλους είναι επικαλυμμένη με φίλτρο θεραπείας.</string>
+  <string name="HealthArrow_Info">Η αιχμή αυτού του βέλους είναι επικαλυμμένη με φίλτρο της ζωής.</string>
   <string name="AmokDart_Name">βελάκι αμόκ</string>
   <string name="AmokDart_Gender">neuter</string>
   <string name="AmokDart_Info">Το διάλυμα στην αιχμή από αυτό το βελάκι θα μετατρέψει οποιονδήποτε στόχο σε ένα άμυαλο, ανελέητο θηρίο.</string>
