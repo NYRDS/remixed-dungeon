@@ -2170,7 +2170,7 @@
   <string name="PotionOfExperience_Info">Εξιστορημένες εμπειρίες από πληθώρα μαχών, συμπυκνωμένες σε υγρή μορφή. Αυτό το ποτό θα αυξήσει άμεσα το επίπεδο εμπειρίας σου.</string>
   <string name="PotionOfFrost_Name">φίλτρο του παγετού</string>
   <string name="PotionOfFrost_Info">Με την έκθεση στον αέρα, το χημικό αυτό θα εξατμιστεί σε ένα παγωμένο νέφος. Κάθε πλάσμα που έρχεται σε επαφή μαζί του θα παγώνει σε εκείνο το σημείο - ανίκανο να κινηθεί και να δράσει.</string>
-  <string name="PotionOfHealing_Name">φίλτρο θεραπείας</string>
+  <string name="PotionOfHealing_Name">φίλτρο της ζωής</string>
   <string name="PotionOfHealing_Info">Ένα ελιξίριο που θα σε επαναφέρει άμεσα σε πλήρη ζωή και θα θεραπεύσει τη δηλητηρίαση.</string>
   <string name="PotionOfHealing_Apply">Οι πληγές σου θεραπεύτηκαν πλήρως.</string>
   <string name="PotionOfInvisibility_Name">φίλτρο αορατότητας</string>
@@ -2428,7 +2428,7 @@
   <string name="HeroClass_NecromancerPerks_1">Οι Νεκρομάντες χρησιμοποιούν μαγική ενέργεια για να εκτελέσουν ξόρκια θανάτου.</string>
   <string name="HeroClass_NecromancerPerks_2">Οι Νεκρομάντες ξεκινούν με τον μοναδικό Χιτώνα του Νεκρομάντη, που προσφέρει 1 πόντο μαγικής ενέργειας για κάθε εξοντωμένο πλάσμα.</string>
   <string name="HeroClass_NecromancerPerks_3">Οι Νεκρομάντες ξεκινούν με ένα σκελετικό κλειδί του 7ου επιπέδου.</string>
-  <string name="HeroClass_NecromancerPerks_4">Τα φίλτρα θεραπείας αναγνωρίζονται εξ αρχής.</string>
+  <string name="HeroClass_NecromancerPerks_4">Τα φίλτρα της ζωής αναγνωρίζονται εξ αρχής.</string>
   <string name="HeroClass_WarPerks_0">Οι Πολεμιστές ξεκινούν με 11 πόντους δύναμης.</string>
   <string name="HeroClass_WarPerks_1">Οι Πολεμιστές ξεκινούν με ένα μοναδικό ξίφος. Το ξίφος αυτό μπορεί να «σφυρηλατηθεί» για να αναβαθμίσει κάποιο άλλο όπλο μάχης.</string>
   <string name="HeroClass_WarPerks_2">Οι Πολεμιστές είναι λιγότερο επιδέξιοι με τα όπλα απόστασης.</string>
