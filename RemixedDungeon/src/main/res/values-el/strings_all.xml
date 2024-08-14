@@ -736,7 +736,7 @@
   <string name="BlackSkull_Deactivated">Το μαύρο κρανίο είναι και πάλι αδρανές...</string>
   <string name="NecromancerArmor_Name">κοκκάλινη πανοπλία</string>
   <string name="NecromancerArmor_Info">Αυτή η πανοπλία επιτρέπει στον Νεκρομάντη να υλοποιεί έως και δύο Θανατικούς, με κόστος 5 ψυχών για τον καθένα. Αυτοί οι απέθαντοι υπήκοοι θα ακολουθούν τον αφέντη τους και θα επιτίθενται στους εχθρούς του. Οι Θανατικοί γίνονται ισχυρότεροι με κάθε νέο επίπεδο του ήρωα.</string>
-  <string name="NecromancerArmor_NotNecromancer">Αυτή η πανοπλία είναι μόνο για νεκρομάντες!</string>
+  <string name="NecromancerArmor_NotNecromancer">Αυτή η πανοπλία είναι μόνο για Νεκρομάντες!</string>
   <string name="NecromancerRobe_Name">ρόμπα νεκρομάντεων</string>
   <string name="NecromancerRobe_Info">Αυτός ο χιτώνας επιτρέπει στον Νεκρομάντη να υλοποιεί έναν Θανατικό με κόστος 5 ψυχών. Ο Θανατικός είναι ένας απέθαντος ακόλουθος που ενδυναμώνεται μαζί με τον αφέντη του.</string>
   <string name="HeroClass_Necromancer">Νεκρομάντης</string>
