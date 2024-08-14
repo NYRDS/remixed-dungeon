@@ -1342,7 +1342,7 @@
   <string name="Warlock_Name">νάνος νεκροτιστής</string>
   <string name="Warlock_Gender">masculine</string>
   <string name="Warlock_Name_Objective">νάνος νεκροτιστής</string>
-  <string name="Warlock_Desc">Όταν τα ενδιαφέροντα των νάνων στράφηκαν από τη μηχανική στις απόκρυφες τέχνες, οι αρχιμάγοι απέκτησαν δύναμη στην πόλη. Ξεκίνησαν με τη στοιχειακή μαγεία και σύντομα μεταστράφηκαν στη δαιμονολογία και τη νεκρομαντεία.</string>
+  <string name="Warlock_Desc">Όταν τα ενδιαφέροντα των νάνων στράφηκαν από τη μηχανική στις απόκρυφες τέχνες, οι νεκροτιστές απέκτησαν δύναμη στην πόλη. Ξεκίνησαν με τη στοιχειακή μαγεία και σύντομα μεταστράφηκαν στη δαιμονολογία και τη νεκρομαντεία.</string>
   <string name="Warlock_Killed">Ο %s σε εξόντωσε με μια ριπή σκότους...</string>
   <string name="Wraith_Name">στοιχειό</string>
   <string name="Wraith_Gender">neuter</string>
