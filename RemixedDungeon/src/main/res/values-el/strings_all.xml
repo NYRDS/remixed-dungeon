@@ -982,7 +982,7 @@
   <string name="HeroSubClass_NameWarL">Νεκροτιστής</string>
   <string name="HeroSubClass_DescWarL">Αφού εξοντώσει έναν εχθρό, ο _Νεκροτιστής_ καταναλώνει την ψυχή του. Έτσι θεραπεύει τις πληγές και ικανοποιεί την πείνα του.</string>
   <string name="HeroSubClass_NameBatM">Μαγομαχητής</string>
-  <string name="HeroSubClass_DescBatM">Όταν μάχεται με εξοπλισμένο ραβδί, ο _Μάγος-μαχητής_ προκαλεί επιπλέον ζημιά βάσει του τρέχοντος φορτίου. Κάθε επιτυχημένο χτύπημα αναπληρώνει 1 φορτίο στο ραβδί.</string>
+  <string name="HeroSubClass_DescBatM">Όταν μάχεται με εξοπλισμένο ραβδί, ο _Μαγομαχητής_ προκαλεί επιπλέον ζημιά βάσει του τρέχοντος φορτίου. Κάθε επιτυχημένο χτύπημα αναπληρώνει 1 φορτίο στο ραβδί.</string>
   <string name="HeroSubClass_NameAssa">Δολοφόνος</string>
   <string name="HeroSubClass_DescAssa">Όταν εκτελεί μια αιφνίδια επίθεση, ο _Δολοφόνος_ προκαλεί επιπλέον ζημιά στον στόχο του.</string>
   <string name="HeroSubClass_NameFreR">Δρομέας</string>
