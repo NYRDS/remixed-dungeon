@@ -752,7 +752,7 @@
   <string name="Necromancer_ACSpecial">死霊術</string>
   <string name="Necromancy_ReincarnationName">リインカーネイション</string>
   <string name="Necromancy_ReincarnationTriggered">あなたの力は死そのものを拒絶する！しかし、あなたは集めた魂と財産をすべて失った。</string>
-  <string name="Necromancy_SummonDeathlingName">デスリングを召喚</string>
+  <string name="Necromancy_SummonDeathlingName">デスリング召喚</string>
   <string name="Necromancy_BecameALich">あなたはリッチになった！能力が上昇し、魂の容量が2倍になった！しかし、力は%1$dポイント減少した。</string>
   <string name="StartScene_UnlockNecromancer">このキャラクタークラスをアンロックするには、他のクラスでリッチを倒す必要があります。</string>
   <string name="Necromancy_Title">死霊術</string>
