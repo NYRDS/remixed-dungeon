@@ -2027,7 +2027,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="DeferedDamageBuff_Info">Ból został zamieniony w spowolniony ból, zmniejszając otrzymywane obrażenia. \nDamage wobec %d.</string>
   <string name="DeferedDamage_Killed_Txt">%s zabił cię...</string>
   <string name="Plant_ACPlant">ZASADŹ</string>
-  <string name="Plant_Info">Rzuć nasionem w miejsce, gdzie chcesz żeby wyrosła roślina: %1$s.\n\n%2$s</string>
+  <string name="Plant_Info">Rzuć nasionem w miejsce, gdzie chcesz żeby wyrosła roślina %1$s.\n\n%2$s</string>
   <string name="Plant_Seed">nasiono %s</string>
   <string name="Dreamweed_Name">Marzyziela</string>
   <string name="Dreamweed_Desc">Po dotknięciu Marzyziele wyzwoli migoczącą chmurę narkotyzującego gazu.</string>
