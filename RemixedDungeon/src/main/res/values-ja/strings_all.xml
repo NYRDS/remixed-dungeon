@@ -51,7 +51,7 @@
   <string name="RingOfEvasion_Name">回避のリング</string>
   <string name="RingOfEvasion_Info">このリングは、敵の攻撃を回避する確率を上昇させる。</string>
   <string name="RingOfHaggler_Name">値切りのリング</string>
-  <string name="RingOfHaggler_Info">このリングには魔法の効果はないが、店主や行商人に指輪の持ち主が盗賊ギルドのメンバーであることを示すことができる。彼らは店を守るために喜んで値引きをしてくれるだろう。この指輪をアップグレードしても、追加のボーナスは得られない。</string>
+  <string name="RingOfHaggler_Info">このリングには魔法の効果はないが、店主や行商人にリングの持ち主が盗賊ギルドのメンバーであることを示すことができる。彼らは店を守るために喜んで値引きをしてくれるだろう。このリングをアップグレードしても、追加のボーナスは得られない。</string>
   <string name="RingOfHaste_Name">加速のリング</string>
   <string name="RingOfHaste_Info">このリングは、装着者の時間の流れを加速させ、あらゆる行動を少し速く行えるようにする。</string>
   <string name="RingOfHerbalism_Name">草学のリング</string>
