@@ -133,7 +133,7 @@
   <string name="town_deco_weaponboard_name">武器</string>
   <string name="town_deco_weaponboard_desc">武器がボードにぶら下がっている。</string>
   <string name="town_deco_shieldboard_name">盾</string>
-  <string name="town_deco_shieldboard_desc">ボードに掲げられた様々な盾。非売品。</string>
+  <string name="town_deco_shieldboard_desc">様々な盾がボードに掲げられている。売り物ではなさそうだ。</string>
   <string name="town_deco_armoronhanger_name">鎧</string>
   <string name="town_deco_armoronhanger_desc">ハンガーにかけられた鎧のようなもの。</string>
   <string name="town_deco_potions_name">ポーション</string>
