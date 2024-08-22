@@ -188,7 +188,7 @@
   <string name="Necrotism_Death">あなたは壊死症で死んだ...</string>
   <string name="Badges_DeathNecrotism">壊死症による死亡</string>
   <string name="Spell_SelectACell">対象のセルを選択する。</string>
-  <string name="WndJournal_Levels">レベル</string>
+  <string name="WndJournal_Levels">階層</string>
   <string name="WndJournal_Logbook">ログブック</string>
   <string name="Wand_Name">%s の杖</string>
   <string name="Wand_ACZap">振る</string>
