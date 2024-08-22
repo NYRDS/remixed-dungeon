@@ -131,7 +131,7 @@
   <string name="WndTradeItem_SellN">%1$dを%2$dgで売る</string>
   <string name="WndBag_BuySubtitle">(所持金：%dg)</string>
   <string name="town_deco_weaponboard_name">武器</string>
-  <string name="town_deco_weaponboard_desc">ボードにぶら下がっている武器のようなもの。</string>
+  <string name="town_deco_weaponboard_desc">武器がボードにぶら下がっている。</string>
   <string name="town_deco_shieldboard_name">盾</string>
   <string name="town_deco_shieldboard_desc">ボードに掲げられた様々な盾。非売品。</string>
   <string name="town_deco_armoronhanger_name">鎧</string>
