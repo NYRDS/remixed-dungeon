@@ -3,7 +3,9 @@ package com.watabou.pixeldungeon.actors;
 import androidx.annotation.NonNull;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Sleeping;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.Treasury;
@@ -30,6 +32,7 @@ import com.nyrds.pixeldungeon.ml.actions.Taunt;
 import com.nyrds.pixeldungeon.ml.actions.Unlock;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
 import com.nyrds.platform.EventCollector;
@@ -37,6 +40,7 @@ import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -45,6 +49,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
+import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
@@ -500,5 +505,32 @@ public class CharUtils {
             marker.killAndErase();
         }
         markers.clear();
+    }
+
+    public static @NonNull Item tryToSpawnMimic(Item item, Char ch, int pos, String mimicKind) {
+        Level level = ch.level();
+
+        int spawnPos = pos;
+
+        if(ch.getPos() == pos) {
+            spawnPos = level.getEmptyCellNextTo(ch.getPos());
+
+            if (!level.cellValid(spawnPos)) {
+                return item;
+            }
+        }
+
+        Mob mimic = MobFactory.mobByName(mimicKind);
+        mimic.setPos(spawnPos);
+        mimic.setState(MobAi.getStateByClass(Wandering.class));
+        mimic.adjustStats(Dungeon.depth);
+
+        level.spawnMob( mimic );
+        ch.checkVisibleEnemies();
+
+        CellEmitter.get(pos).burst( Speck.factory( Speck.STAR ), 10 );
+        Sample.INSTANCE.play( Assets.SND_MIMIC );
+
+        return ItemsList.DUMMY;
     }
 }
