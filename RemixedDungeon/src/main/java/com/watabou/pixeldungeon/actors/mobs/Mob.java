@@ -616,4 +616,7 @@ public abstract class Mob extends Char {
     public Item carcass() {
         return new Carcass(this);
     }
+
+    public void adjustStats(int depth) {
+    }
 }

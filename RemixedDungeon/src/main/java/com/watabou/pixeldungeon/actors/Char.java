@@ -2146,7 +2146,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public int expToLevel() {
-        return 5 + lvl() * 5;
+        return (int) (5 + lvl() * 5 + Math.pow(1.3, lvl()));
     }
 
     public boolean isReady() {
