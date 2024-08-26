@@ -2684,6 +2684,7 @@ remix.31.1\n
 —新的蜘蛛类型！\n
 —灵能催眠蜘蛛将会给其它蜘蛛施加buff，而不是向玩家施加debuff。\n
 ——修复错误\n</string>
+  <string name="WndTilesKind_Title">还有一件事。</string>
   <string name="WndTilesKind_text">你将进入一个被魔法所扭曲的地下城，但你现在可以选择你所看到地下城的样子：\n你喜欢它是较新的伪3D楼层外观还是经典的平面楼层外观？\n稍后你可以在游戏选项菜单中更改它。</string>
   <string name="WndTilesKind_NewLook">新的外观</string>
   <string name="WndTilesKind_ClassicLook">经典外观</string>
@@ -2694,6 +2695,24 @@ remix.31.1\n
   <string name="SpiderQueen_DieInfo">蜘蛛女王已经被杀死了！现在我应该回到第5层继续我的地牢探险</string>
   <string name="WndModSelect_ReallyDelete">真的要删除吗？</string>
   <string name="WndModSelect_AreYouSure">删除mod：%s，你确定吗？</string>
+  <string name="Challenges_Names_8">没有城镇</string>
+  <string name="Challenges_Descriptions_8">你的旅程将从黑暗和危险的城镇下水道开始，通往地面的唯一途径将被封锁。 更糟糕的是，你只能使用你在地牢里找到的装备。 由于有限的资源和装备，你的生存将取决于你的技能和策略。</string>
+  <string name="EncumbranceBuff_CharAct_1">我不够强壮去正确的使用%s。</string>
+  <string name="EncumbranceBuff_CharAct_2">这个%s对我来说太重了，无法正确使用。</string>
+  <string name="EncumbranceBuff_CharAct_3">在我使用%s之前，我需要锻炼我的力量。</string>
+  <string name="EncumbranceBuff_CharAct_4">我缺乏足够的力量使用%s以发挥它的全部潜能。</string>
+  <string name="EncumbranceBuff_CharAct_5">%s现在处理起来对我来说太难了。</string>
+  <string name="Typical_Damage">典型损伤</string>
+  <string name="Damage_Reduction">伤害减免</string>
+  <string name="Attack_Range">攻击范围</string>
+  <string name="Movement_Speed">移动速度</string>
+  <string name="Attack_Cooldown">攻击间隔</string>
+  <string name="View_Distance">视野距离</string>
+  <string name="ChaosShield_name">混沌之盾</string>
+  <string name="ChaosShield_desc">混沌之盾是将混沌水晶与普通盾牌融合的结果，一旦成功阻挡，就会产生随机的混沌效果。</string>
+  <string name="ChaosCrystal_ShieldFused">水晶与你的盾牌融为一体，形成了混沌形态。</string>
+  <string name="ChampionOfFireBuff_Name">火焰君王</string>
+  <string name="ChampionOfFireBuff_Info">“注入了火焰的狂暴，这一特质增强了生物的凶猛和战斗力。火焰冠军是一个可怕的对手，它能发动毁灭性的攻击，将敌人吞没在灼热的火焰中，让所有敢于对抗它的人感到恐惧。</string>
   <string name="AC_Necromancy">死灵术</string>
   <string name="AC_Devour">吞噬</string>
   <string name="WndModsDisclaimer_title">MOD</string>

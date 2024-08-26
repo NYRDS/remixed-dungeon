@@ -2438,6 +2438,7 @@
   <string name="Hunger_Starving_0">Ты истощено!</string>
   <string name="Hunger_Starving_1">Ты истощён!</string>
   <string name="Hunger_Starving_2">Ты истощена!</string>
+  <string name="HeroClass_NecromancerPerks_0">Некроманты начинают с 15 очками Здоровья.</string>
   <string name="HeroClass_NecromancerPerks_1">Некроманты используют ману для заклятий Смерти.</string>
   <string name="HeroClass_NecromancerPerks_2">Некроманты начинают с уникальной робой некроманта, которая восстанавливает одно очко маны за каждое убитое существо.</string>
   <string name="HeroClass_NecromancerPerks_3">Некроманты начинают с ключом-скелетом от 7 уровня.</string>
@@ -2919,8 +2920,26 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- Свечение для мобов\n
     - Багофиксы\n
     </string>
+  <string name="Pickaxe_NothingToMine">Тут копать нечего!</string>
+  <string name="Pickaxe_InsufficientStr">Недостаточно силы чтобы копать!</string>
+  <string name="Carcass_Name">Останки %s</string>
+  <string name="Carcass_Info">Останки абсолютно мертвого монстра %s.</string>
+  <string name="ResultDescriptions_Necromancy">Исчерпал все жизненные силы при попытке поднять нежить на уровне %d</string>
+  <string name="Item_ACPickup">Подобрать</string>
+  <string name="Necromancy_Death">Ты исчерпал все жизненные силы занимаясь некромантией.</string>
   <string name="AC_Necromancy">Некромантия</string>
   <string name="AC_Devour">Пожирание</string>
+  <string name="AC_Kick">Пнуть</string>
+  <string name="Carcass_Kick">Это существо, %s, совершенно мертво, нет смысла бить его дальше.</string>
+  <string name="Carcass_Devoured">Ты пожрал труп %s!</string>
+  <string name="Carcass_Necromancy">Ты поднял нежить %s!</string>
+  <string name="Carcass_Necromancy_Failed">Твоя попытка поднять нежить %s провалилась!</string>
+  <string name="WndInstallingMod_please_wait">Устанавливаем мод, подождите...</string>
+  <string name="WndInstallingMod_copying_file">Копируем %s во внутреннее хранилище Remixed Dungeon</string>
+  <string name="WndInstallingMod_skipping_file">Пропускаем %s</string>
+  <string name="WndLocalModInstall_title">Установить мод из директории</string>
+  <string name="WndLocalModInstall_text">Выбирете директорию откуда установить мод</string>
+  <string name="WndLocalModInstall_pick">Выбери директорию с модом</string>
   <string name="WndModsDisclaimer_title">Моды</string>
   <string name="WndModsDisclaimer_manage">Управление списком модов.</string>
   <string name="WndModsDisclaimer_install">Установить локальный мод.</string>
@@ -2961,4 +2980,16 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="PlagueDoctorMaskHood_Info">Вырезанный из черного дерева череп, его полые глазницы сияют неземным мерцанием аметистовых самоцветов. Каждый ваш вдох проходит через целый лабиринт трубок и фильтров, неся с собой аромат целебных трав и специй, маскирующих налипшую на вас гниль. Но это не просто маска. Тяжелый капюшон из однотонного бархата окутывает лицо и голову тенью. Капюшон, словно крыло ворона, струится по спине, а его края оторочены бахромой из костяно-белого кружева, что создает леденящий душу контраст. Вместе маска и капюшон создают призрачный образ, мрачное свидетельство бесконечной борьбы с силами разложения.</string>
   <string name="PlagueDoctorQuest_AllDone">Он издал сухой, хриплый смех. "Твои деяния открыли тайны сверх меры! Полученные знания... они пульсируют во мне, как симфония открытий. Но знание, - добавляет он, понижая голос до заговорщического шепота, - знание - это сила. А власть... ах... это самый пьянящий эликсир". На мгновение он пристально смотрит на вас, его аметистовые глаза горят лихорадочным огнем. "Возможно, - пробормотал он, - наши пути еще пересекутся. Ведь есть еще много... тайн... которые еще предстоит разгадать".</string>
   <string name="CharAction_Expel">Выгнать</string>
+  <string name="Welcome_Text_32_1"> remix.32.1\n
+- Геймплей:\n
+-- Линия квестов Чумного Доктора.
+--Туши мобов теперь в каком-то смысле полезные предметы\n
+-- Улучшенное управление питомцами\n
+- UX:\n
+-- Улучшено управление сейвами\n
+- Моддинг:\n
+--Методы локальной установки модов\n
+-- Пользовательские предметы теперь могут выполнять действия, находясь в кучах\n
+- Багофиксы\n
+</string>
 </resources>

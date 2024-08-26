@@ -886,7 +886,7 @@ Lufix
   <string name="FortuneTellerNPC_Name_Objective">wróżbitka</string>
   <string name="FortuneTellerNPC_Desc">Kobieta ta nosi na sobie długą, jaskrawo ubarwioną szatę. Wygląda ona zaskakująco młodo, jak na kogoś, kto osiągnął mistrzostwo w tajemnej sztuce jasnowidzenia. Po podejściu bliżej słyszysz mamroty wieszczki wpatrującej się w kryształową kulę.</string>
   <string name="ServiceManNPC_Limit_Reached">Przepraszam, ale osiągnąłeś swój obecny limit. Będziesz mógł jednak ponownie skorzystać z naszych usług po osiągnięciu kolejnych poziomów postaci.</string>
-  <string name="WndFortuneTeller_Instruction">Jestem w stanie ujawnić tajemnice które skrywają twoje przedmioty.\nJedna identyfikacja będzie cię kosztować%d monet.</string>
+  <string name="WndFortuneTeller_Instruction">Jestem w stanie ujawnić tajemnice które skrywają twoje przedmioty.\nJedna identyfikacja będzie cię kosztować %d monet.</string>
   <string name="WndFortuneTeller_No_Item">Ostrożnie, nie chciałbyś przecież wydać na marne swoich pieniędzy, nieprawdaż? Nie posiadasz w ekwipunku żadnych niezidentyfikowanych przedmiotów.</string>
   <string name="WndFortuneTeller_Title">Wróżbitka</string>
   <string name="Wnd_Button_Yes">Tak</string>
@@ -1771,7 +1771,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="ScrollOfDomination_Info">Ten zwój podporządkuje wolę pobliskiej widocznej istoty twoim rozkazom. Stwór będzie dla ciebie walczyć aż do własnej śmierci.</string>
   <string name="ScrollOfCurse_Name">Zwój Klątwy</string>
   <string name="ScrollOfCurse_Info">Ten zwój powstał by karać złodziei na tyle głupich, by igrać z magią, której nie rozumieją. Magia zwoju jest bezużyteczna, a nawet groźna dla zwykłego podróżnego, ale jest ceniona przez kupców.</string>
-  <string name="Claymore_Name">Miecz obusieczny</string>
+  <string name="Claymore_Name">Claymore</string>
   <string name="Claymore_Info">Ten masywny miecz powinien być zdolny do przecięcia wszystkiego.</string>
   <string name="Claymore_Gender">masculine</string>
   <string name="Halberd_Name">Halabarda</string>
@@ -1828,10 +1828,10 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Imp_Name">ambitny imp</string>
   <string name="Imp_Desc">Impy to pomniejsze demony. Nie są podziwiane ze względu na ich siłę czy talent magiczny, lecz ich inteligencję i zdolności retoryczne. Wiele impów woli żyć pośród nie-demonów.</string>
   <string name="Imp_Defense">unik</string>
-  <string name="Imp_Golems1">Jesteś podróżnikiem? Kocham podróżników! Możesz na nich zawsze polegać jeśli chodzi o zabijanie czegoś. Mam rację? Oczywiście nie bez nagrody ;)\nW moim przypadku są to  _Golemy_, które muszą zostać wykończone. Widzisz, zamierzam założyć tutaj mój mały interes, lecz te głupie golemy mu nie służą! Przeciwnie! Wiesz, trudno negocjować z chodzącymi kupami granitu, niech je szlag! Więc proszę, zabij powiedzmy... _6 z nich_, a nagroda będzie twoja!</string>
+  <string name="Imp_Golems1">Jesteś podróżnikiem? Kocham podróżników! Możesz na nich zawsze polegać jeśli chodzi o zabijanie czegoś. Mam rację? Oczywiście nie bez nagrody ;)\nW moim przypadku to  _Golemy_, które muszą zostać wykończone. Widzisz, zamierzam założyć tutaj mój mały interes, lecz te głupie golemy mu nie służą! Przeciwnie! Wiesz, trudno negocjować z chodzącymi kupami granitu, niech je szlag! Więc proszę, zabij powiedzmy... _6 z nich_, a nagroda będzie twoja!</string>
   <string name="Imp_Golems2">Jak tam idzie twoje safari z golemami?</string>
-  <string name="Imp_Monks1">Jesteś podróżnikiem? Kocham podróżników! Możesz na nich zawsze polegać jeśli chodzi o zabijanie czegoś. Mam rację? Oczywiście nie bez nagrody ;)\nW moim przypadku są to _Golemy_, które muszą zostać wykończone. Widzisz, zamierzam założyć tutaj mój mały interes, lecz te głupie golemy mu nie służą! Przeciwnie! Wiesz, trudno negocjować z chodzącymi kupami granitu, niech je szlag! Więc proszę, zabij powiedzmy... _8 z nich_, a nagroda będzie twoja!</string>
-  <string name="Imp_Monks2">Oh, ty jeszcze żyjesz! Wiedziałem że twoje kung-fu jest silniejsze ;) Nie zapomnij zabrać tokenów z ciał poległych mnichów.</string>
+  <string name="Imp_Monks1">Jesteś podróżnikiem? Kocham podróżników! Możesz na nich zawsze polegać jeśli chodzi o zabijanie czegoś. Mam rację? Oczywiście nie bez nagrody ;)\nW moim przypadku są to _Akolici_, które muszą zostać wykończone. Widzisz, zamierzam założyć tutaj mój mały interes, lecz te głupie golemy mu nie służą! Przeciwnie! Wiesz, trudno negocjować z chodzącymi kupami granitu, niech je szlag! Więc proszę, zabij powiedzmy... _8 z nich_, a nagroda będzie twoja!</string>
+  <string name="Imp_Monks2">Oh, ty jeszcze żyjesz! Wiedziałem że twoje kung-fu jest silniejsze ;) Nie zapomnij zabrać tokenów z ciał poległych akolitów.</string>
   <string name="Imp_Cya">Do zobaczenia, %s!</string>
   <string name="Imp_Hey">Psst, %s!</string>
   <string name="ImpShopkeeper_Name">ambitny imp</string>
@@ -2018,7 +2018,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="DeferedDamageBuff_Info">Ból został zamieniony w spowolniony ból, zmniejszając otrzymywane obrażenia. \nDamage wobec %d.</string>
   <string name="DeferedDamage_Killed_Txt">%s zabił cię...</string>
   <string name="Plant_ACPlant">ZASADŹ</string>
-  <string name="Plant_Info">Rzuć nasieniem w miejsce, gdzie chcesz żeby wyrosła roślina: %1$s.\n\n%2$s</string>
+  <string name="Plant_Info">Rzuć nasionem w miejsce, gdzie chcesz żeby wyrosła roślina %1$s.\n\n%2$s</string>
   <string name="Plant_Seed">nasiono %s</string>
   <string name="Dreamweed_Name">Marzyziela</string>
   <string name="Dreamweed_Desc">Po dotknięciu Marzyziele wyzwoli migoczącą chmurę narkotyzującego gazu.</string>
@@ -2344,18 +2344,18 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Badges_MonsterSlain5">1000 wrogów pokonanych</string>
   <string name="Spells_NotInOwnBody">Nie możesz wykonać %s, gdy twoja dusza oddzieliła się od ciała.</string>
   <string name="WndHero_Satiety">Sytość</string>
-  <string name="Ring_Gems_0">diamentową</string>
+  <string name="Ring_Gems_0">diamentowy</string>
   <string name="Ring_Gems_1">opalizującą</string>
-  <string name="Ring_Gems_2">granatową</string>
-  <string name="Ring_Gems_3">rubinową</string>
-  <string name="Ring_Gems_4">ametystową</string>
-  <string name="Ring_Gems_5">topazową</string>
-  <string name="Ring_Gems_6">onyksową</string>
-  <string name="Ring_Gems_7">turmalinową</string>
-  <string name="Ring_Gems_8">szmaragdową</string>
-  <string name="Ring_Gems_9">szafirową</string>
-  <string name="Ring_Gems_10">kwarcową</string>
-  <string name="Ring_Gems_11">agatową</string>
+  <string name="Ring_Gems_2">granatowy</string>
+  <string name="Ring_Gems_3">rubinowy</string>
+  <string name="Ring_Gems_4">ametystowy</string>
+  <string name="Ring_Gems_5">topazowy</string>
+  <string name="Ring_Gems_6">onyksowy</string>
+  <string name="Ring_Gems_7">turmalinowy</string>
+  <string name="Ring_Gems_8">szmaragdowy</string>
+  <string name="Ring_Gems_9">szafirowy</string>
+  <string name="Ring_Gems_10">kwarcowy</string>
+  <string name="Ring_Gems_11">agatowy</string>
   <string name="Wand_Wood_Types_0">ostrokrzewowy</string>
   <string name="Wand_Wood_Types_1">cisowy</string>
   <string name="Wand_Wood_Types_2">ebonitowy</string>
@@ -2953,7 +2953,7 @@ Szczegółowe statystyki bohaterów i potworów\n
   <string name="PlagueDoctorMaskHood_Info">Wyrzeźbiona hebanowa czaszka, której puste oczodoły świecą eterycznym blaskiem ametystów . Każdy oddech, który wdychasz, szepcze przez labirynt rurek i filtrów, niosąc zapach silnych ziół i przypraw, które maskują przylegający do ciebie rozkład. Ale nie chodzi tylko o maskę. Ciężki kaptur z nocnego aksamitu,
 zasłaniając twarz i głowę cieniem. Kaptur niczym skrzydło kruka spływa po plecach, a jego brzegi obszyte są frędzlami z kościstobiałej koronki, co stanowi przerażająco piękny kontrast. Razem maska ​​i kaptur tworzą widmowe oblicze, ponure świadectwo niekończącej się walki z siłami rozkładu.</string>
   <string name="PlagueDoctorQuest_AllDone">*Wypuszcza suchy, świszczący śmiech.* „Twoje czyny odsłoniły tajemnice ponad miarę! Zdobyta wiedza… pulsuje we mnie, symfonia odkryć. Ale wiedza” – dodaje, a jego głos zniża się do konspiracyjnego szeptu , „wiedza to potęga. A moc… ach… to najbardziej odurzający eliksir”. Przez chwilę patrzy na ciebie uważnie,
-jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” – mruczy – „nasze ścieżki znów się skrzyżują. Jest jeszcze wiele… tajemnic… do rozwiązania.</string>
+Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” – mruczy – „nasze ścieżki znów się skrzyżują. Jest jeszcze wiele… tajemnic… do rozwiązania.</string>
   <string name="CharAction_Expel">Wygnaj</string>
   <string name="Welcome_Text_32_1">
 remix.32.1\n
@@ -2966,6 +2966,5 @@ remix.32.1\n
 -  Modyfikacje:\n
 - Teraz można instalować mody lokalnie\n
 -- Przedmioty mogą teraz pełnić funkcje gdy są w jeden na drugim\n
-- Naprawa błędów\n
-</string>
+- Naprawa błędów\n</string>
 </resources>
