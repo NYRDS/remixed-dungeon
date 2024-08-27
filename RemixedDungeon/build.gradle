@@ -163,16 +163,18 @@ dependencies {
         exclude group: "org.bidon", module: "meta-adapter"
     }
 
+    implementation 'com.yandex.android:mobileads:7.4.0'
     
     implementation 'org.jetbrains:annotations:23.0.0'
 
-    annotationProcessor 'org.projectlombok:lombok:1.18.22'
-    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.3.0'
     googlePlayImplementation 'com.google.android.gms:play-services-auth:21.0.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:23.1.0"
     googlePlayImplementation 'com.google.android.gms:play-services-ads:23.0.0'
+
 
 
     googlePlayImplementation 'com.android.billingclient:billing:6.2.1'
@@ -183,7 +185,7 @@ dependencies {
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
     googlePlayImplementation 'com.google.firebase:firebase-perf'
 
-    ruStoreImplementation 'ru.rustore.sdk:billingclient:3.2.0'
+    ruStoreImplementation 'ru.rustore.sdk:billingclient:6.0.0'
 
     huaweiImplementation 'com.huawei.hms:ads-lite:13.4.30.301'
     huaweiImplementation 'com.huawei.hms:hianalytics:5.0.0.300'

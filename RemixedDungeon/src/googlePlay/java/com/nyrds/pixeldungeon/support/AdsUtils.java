@@ -7,16 +7,12 @@ import android.widget.LinearLayout;
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerView;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.util.StringsManager;
-import com.nyrds.util.ModdingMode;
-import com.watabou.pixeldungeon.utils.GLog;
+import com.yandex.mobile.ads.common.InitializationListener;
+import com.yandex.mobile.ads.common.MobileAds;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -31,20 +27,34 @@ public class AdsUtils {
     static Map<AdsUtilsCommon.IRewardVideoProvider, Integer> rewardVideoFails = new ConcurrentHashMap<>();
 
     static InitializationStatus initializationStatus;
+    static boolean YandexInitialized = false;
 
     static {
         try {
+            //AdMob
+/*
             MobileAds.initialize(RemixedDungeonApp.getContext(), initializationStatus -> {
                 AdsUtils.initializationStatus = initializationStatus;
                 var status = initializationStatus.getAdapterStatusMap();
 
                 GLog.debug("admob status: %s", status.toString());
             });
-
+*/
+            MobileAds.initialize(RemixedDungeonApp.getContext(), new InitializationListener() {
+                @Override
+                public void onInitializationCompleted() {
+                    YandexInitialized = true;
+                }
+            });
+/*
             if (!GamePreferences.uiLanguage().equals("ru")) {
                 bannerFails.put(new AdMobBannerProvider(StringsManager.getVar(R.string.easyModeAdUnitId)), -2);
                 interstitialFails.put(new AdMobInterstitialProvider(ModdingMode.getInterstitialId()), -2);
             }
+*/
+
+            bannerFails.put(new YandexBannerProvider("demo-banner-yandex"), -20);
+            interstitialFails.put(new YandexInterstitialProvider("demo-interstitial-yandex"), -20);
 
             if (!RemixedDungeonApp.checkOwnSignature()) {
                 bannerFails.put(new AAdsComboProvider(), 0);
@@ -70,9 +80,13 @@ public class AdsUtils {
             if (AppodealAdapter.usable()) {
                 rewardVideoFails.put(new AppodealRewardVideoProvider(), -1);
             }
+
+            rewardVideoFails.put(new YandexRewardVideoAds("demo-reward-video-yandex"), -20);
+/*
             if (!GamePreferences.uiLanguage().equals("ru")) {
                 rewardVideoFails.put(new GoogleRewardVideoAds(ModdingMode.getRewardedVideoId()), -20);
             }
+ */
         } catch (Exception e) {
             EventCollector.logException(e,"AdsUtils init rw");
         }
