@@ -113,7 +113,7 @@ public class AdsUtils {
         int childs = layout.getChildCount();
         for (int i = 0; i < childs; ++i) {
             View view = layout.getChildAt(i);
-            if (view instanceof AdView || view instanceof WebView || view instanceof BannerView) {
+            if (view instanceof AdView || view instanceof WebView || view instanceof BannerView || view instanceof BannerAdView) {
                 return i;
             }
         }

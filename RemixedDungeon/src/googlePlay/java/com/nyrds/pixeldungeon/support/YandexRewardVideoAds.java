@@ -87,6 +87,7 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 	public void showRewardVideo(InterstitialPoint ret) {
 		returnTo = ret;
 		if(mCinemaRewardAd!=null) {
+			rewardEarned = false;
 			mCinemaRewardAd.setAdEventListener(new RewardedAdEventListener() {
 				@Override
 				public void onAdShown() {
@@ -109,6 +110,7 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 					// Now you can preload the next interstitial ad.
 					loadRewardedAd();
+					returnTo.returnToWork(rewardEarned);
 				}
 
 				@Override
@@ -125,8 +127,6 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 				public void onRewarded(@NonNull final Reward reward) {
 					rewardEarned = true;
 					GLog.debug("reward: %s %d", reward.getType(), reward.getAmount());
-					returnTo.returnToWork(true);
-
 				}
 			});
 			mCinemaRewardAd.show(Game.instance());
