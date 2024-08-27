@@ -11,6 +11,7 @@ import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
+import com.yandex.mobile.ads.banner.BannerAdView;
 import com.yandex.mobile.ads.common.InitializationListener;
 import com.yandex.mobile.ads.common.MobileAds;
 
@@ -81,7 +82,7 @@ public class AdsUtils {
                 rewardVideoFails.put(new AppodealRewardVideoProvider(), -1);
             }
 
-            rewardVideoFails.put(new YandexRewardVideoAds("demo-reward-video-yandex"), -20);
+            rewardVideoFails.put(new YandexRewardVideoAds("demo-rewarded-yandex"), -20);
 /*
             if (!GamePreferences.uiLanguage().equals("ru")) {
                 rewardVideoFails.put(new GoogleRewardVideoAds(ModdingMode.getRewardedVideoId()), -20);
@@ -98,6 +99,9 @@ public class AdsUtils {
         }
         if (adview instanceof AdView) {
             ((AdView) adview).destroy();
+        }
+        if(adview instanceof BannerAdView) {
+            ((BannerAdView) adview).destroy();
         }
 
         Game.instance().getLayout().removeViewAt(index);

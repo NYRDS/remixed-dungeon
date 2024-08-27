@@ -8,6 +8,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.yandex.mobile.ads.common.AdError;
+import com.yandex.mobile.ads.common.AdRequestConfiguration;
 import com.yandex.mobile.ads.common.AdRequestError;
 import com.yandex.mobile.ads.common.ImpressionData;
 import com.yandex.mobile.ads.interstitial.InterstitialAd;
@@ -29,7 +30,6 @@ public class YandexInterstitialProvider implements AdsUtilsCommon.IInterstitialP
     }
 
     private void requestNewInterstitial() {
-
         if (mInterstitialAd!=null) {
             return;
         }
@@ -51,6 +51,16 @@ public class YandexInterstitialProvider implements AdsUtilsCommon.IInterstitialP
                 EventCollector.logEvent("Interstitial failed", adRequestError.toString());
             }
         });
+        loadInterstitialAd();
+    }
+
+
+    private void loadInterstitialAd() {
+        if (mInterstitialAdLoader != null ) {
+            final AdRequestConfiguration adRequestConfiguration =
+                    new AdRequestConfiguration.Builder(adId).build();
+            mInterstitialAdLoader.loadAd(adRequestConfiguration);
+        }
     }
 
     @Override
