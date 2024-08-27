@@ -39,10 +39,8 @@ public class Ads {
         GameLoop.runOnMainThread(() -> {
             int index = AdsUtils.bannerIndex();
             if (index >= 0) {
-
                 View adview = Game.instance().getLayout().getChildAt(index);
                 AdsUtils.removeBannerView(index, adview);
-
             }
         });
     }

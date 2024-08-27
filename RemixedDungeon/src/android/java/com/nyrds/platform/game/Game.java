@@ -36,6 +36,7 @@ import android.provider.DocumentsContract;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewParent;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -173,12 +174,14 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         // view.setEGLConfigChooser( false );
         view.setRenderer(this);
         view.setOnTouchListener(this);
-
+/*
         layout = new LinearLayout(this);
         getLayout().setOrientation(LinearLayout.VERTICAL);
         getLayout().addView(view);
 
         setContentView(getLayout());
+
+ */
     }
 
     public static void syncAdsState() {
@@ -201,6 +204,17 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @Override
     public void onResume() {
         super.onResume();
+
+        ViewParent parent = view.getParent();
+        if (parent != null) {
+            layout.removeView(view);
+        }
+
+        layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        layout.addView(view);
+        setContentView(layout);
+
         instance = this;
 
         view.onResume();

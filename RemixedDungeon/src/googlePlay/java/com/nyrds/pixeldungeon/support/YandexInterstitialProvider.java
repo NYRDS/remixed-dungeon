@@ -92,6 +92,7 @@ public class YandexInterstitialProvider implements AdsUtilsCommon.IInterstitialP
 
                     // Now you can preload the next interstitial ad.
                     requestNewInterstitial();
+                    ret.returnToWork(true);
                 }
 
                 @Override

@@ -33,8 +33,8 @@ android {
         manifestPlaceholders = ["admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1211
-        versionName "32.1.beta.4"
+        versionCode 1212
+        versionName "32.1.beta.5"
         targetSdkVersion 34
         compileSdkVersion 34
         minSdkVersion 21
@@ -150,7 +150,7 @@ dependencies {
     implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices
 
 
-    implementation ("com.appodeal.ads:sdk:3.3.0.0") {
+    implementation ("com.appodeal.ads:sdk:3.3.2.0") {
         exclude group: "com.appodeal.ads.sdk.networks", module: "meta"
         exclude group: "com.appodeal.ads.sdk.services", module: "adjust"
         exclude group: "com.appodeal.ads.sdk.services", module: "appsflyer"
@@ -164,7 +164,7 @@ dependencies {
     }
 
     implementation 'com.yandex.android:mobileads:7.4.0'
-    
+
     implementation 'org.jetbrains:annotations:23.0.0'
 
     annotationProcessor 'org.projectlombok:lombok:1.18.30'

@@ -45,8 +45,6 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 	@MainThread
 	private void loadNextVideo() {
 		try {
-			// Interstitial ads loading should occur after initialization of the SDK.
-			// Initialize SDK as early as possible, for example in Application.onCreate or Activity.onCreate
 			mRewardedAdLoader = new RewardedAdLoader(Game.instance());
 			mRewardedAdLoader.setAdLoadListener(new RewardedAdLoadListener() {
 				@Override
@@ -58,7 +56,6 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 				public void onAdLoaded(@NonNull final RewardedAd rewardedAd) {
 					mCinemaRewardAd = rewardedAd;
 					AdsUtilsCommon.rewardVideoLoaded(YandexRewardVideoAds.this);
-					// The ad was loaded successfully. You can now show the ad.
 				}
 
 			});
@@ -66,7 +63,7 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 		} catch (Exception e) {
 			AdsUtilsCommon.rewardVideoFailed(YandexRewardVideoAds.this);
-			EventCollector.logException(e, "GoogleRewardVideoAds");
+			EventCollector.logException(e, "YandexRewardVideoAds");
 		}
 	}
 
@@ -92,35 +89,42 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 				@Override
 				public void onAdShown() {
 					// Called when an ad is shown.
+					GLog.debug("onAdShown");
 				}
 
 				@Override
 				public void onAdFailedToShow(@NonNull final AdError adError) {
+					GLog.debug("onAdFailedToShow: %s", adError.toString());
+					returnTo.returnToWork(rewardEarned);
 					// Called when an InterstitialAd failed to show.
 				}
 
 				@Override
 				public void onAdDismissed() {
+					GLog.debug("onAdDismissed");
 					// Called when an ad is dismissed.
 					// Clean resources after Ad dismissed
+
 					if (mCinemaRewardAd != null) {
 						mCinemaRewardAd.setAdEventListener(null);
 						mCinemaRewardAd = null;
 					}
 
-					// Now you can preload the next interstitial ad.
+					// Now you can preload the next reward ad.
 					loadRewardedAd();
 					returnTo.returnToWork(rewardEarned);
 				}
 
 				@Override
 				public void onAdClicked() {
+					GLog.debug("onAdClicked");
 					// Called when a click is recorded for an ad.
 				}
 
 				@Override
 				public void onAdImpression(@Nullable final ImpressionData impressionData) {
 					// Called when an impression is recorded for an ad.
+					GLog.debug("onAdImpression: %s", impressionData);
 				}
 
 				@Override
