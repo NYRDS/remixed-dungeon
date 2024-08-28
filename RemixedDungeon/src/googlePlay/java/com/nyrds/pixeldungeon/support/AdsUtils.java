@@ -8,9 +8,11 @@ import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerView;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.util.StringsManager;
 import com.yandex.mobile.ads.banner.BannerAdView;
 import com.yandex.mobile.ads.common.InitializationListener;
 import com.yandex.mobile.ads.common.MobileAds;
@@ -54,8 +56,8 @@ public class AdsUtils {
             }
 */
 
-            bannerFails.put(new YandexBannerProvider("demo-banner-yandex"), -20);
-            interstitialFails.put(new YandexInterstitialProvider("demo-interstitial-yandex"), -20);
+            bannerFails.put(new YandexBannerProvider(StringsManager.getVar(R.string.banner_yandex)), -2);
+            interstitialFails.put(new YandexInterstitialProvider(StringsManager.getVar(R.string.interstitial_yandex)), -2);
 
             if (!RemixedDungeonApp.checkOwnSignature()) {
                 bannerFails.put(new AAdsComboProvider(), 0);
@@ -82,12 +84,12 @@ public class AdsUtils {
                 rewardVideoFails.put(new AppodealRewardVideoProvider(), -1);
             }
 
-            rewardVideoFails.put(new YandexRewardVideoAds("demo-rewarded-yandex"), -20);
+            rewardVideoFails.put(new YandexRewardVideoAds(StringsManager.getVar(R.string.rewarded_yandex)), -2);
 /*
             if (!GamePreferences.uiLanguage().equals("ru")) {
                 rewardVideoFails.put(new GoogleRewardVideoAds(ModdingMode.getRewardedVideoId()), -20);
             }
- */
+*/
         } catch (Exception e) {
             EventCollector.logException(e,"AdsUtils init rw");
         }
