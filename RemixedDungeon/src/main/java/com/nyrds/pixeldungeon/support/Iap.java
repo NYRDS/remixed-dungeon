@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.app.Activity;
+import android.content.Intent;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
@@ -135,5 +136,9 @@ public class Iap implements IPurchasesUpdated {
 
     public boolean isReady() {
         return mIap.isServiceConnected();
+    }
+
+    public void onNewIntent(Intent intent) {
+        mIap.onNewIntent(intent);
     }
 }

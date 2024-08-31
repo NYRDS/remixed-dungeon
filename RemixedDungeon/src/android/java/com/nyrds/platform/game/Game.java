@@ -152,12 +152,22 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         super.onSaveInstanceState(outState);
     }
 
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        iap.onNewIntent(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         instance = this;
 
         iap = new Iap(this);
+        if (savedInstanceState == null) {
+            iap.onNewIntent(getIntent());
+        }
 
         try {
             version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
