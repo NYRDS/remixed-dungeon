@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.app.Activity;
+import android.content.Intent;
 
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -33,5 +34,8 @@ class IapAdapter {
 
     public boolean isServiceConnected() {
         return false;
+    }
+
+    public void onNewIntent(Intent intent) {
     }
 }
