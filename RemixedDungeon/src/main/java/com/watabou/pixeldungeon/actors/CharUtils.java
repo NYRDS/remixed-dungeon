@@ -229,6 +229,9 @@ public class CharUtils {
 
 
         if (controlTarget instanceof Hero && (target == null || target.friendly(controlTarget)) ) {
+            CharAction charAction = handleObjectOrHeap(actor, cell, level);
+            if (charAction != null) return charAction;
+
             if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
                 return new Unlock(cell);
             }
@@ -264,6 +267,18 @@ public class CharUtils {
             }
         }
 
+        CharAction charAction = handleObjectOrHeap(actor, cell, level);
+        if (charAction != null) return charAction;
+
+
+        if (actor.getPos() != cell) {
+            return new Move(cell);
+        }
+
+        return new NoAction();
+    }
+
+    private static @androidx.annotation.Nullable CharAction handleObjectOrHeap(@NonNull Char actor, int cell, @NonNull Level level) {
         final LevelObject topLevelObject = level.getTopLevelObject(cell);
 
         if (cell != actor.getPos() && topLevelObject != null) {
@@ -284,13 +299,7 @@ public class CharUtils {
                 return new OpenChest(cell);
             }
         }
-
-
-        if (actor.getPos() != cell) {
-            return new Move(cell);
-        }
-
-        return new NoAction();
+        return null;
     }
 
     public static void execute(Char target, Char hero, @NotNull String action) {

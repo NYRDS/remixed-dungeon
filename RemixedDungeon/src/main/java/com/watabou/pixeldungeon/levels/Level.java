@@ -418,6 +418,7 @@ public abstract class Level implements Bundlable {
 	protected int height = 32;
 
 	public static int[] NEIGHBOURS4;
+	public static int[] NEIGHBOURS5;
 	public static int[] NEIGHBOURS8;
 	public static int[] NEIGHBOURS9;
 	public static int[] NEIGHBOURS16;
@@ -540,6 +541,7 @@ public abstract class Level implements Bundlable {
 
 		Dungeon.initSizeDependentStuff(getWidth(), getHeight());
 		NEIGHBOURS4 = new int[]{-getWidth(), +1, +getWidth(), -1};
+		NEIGHBOURS5 = new int[]{0, -getWidth(), +1, +getWidth(), -1};
 		NEIGHBOURS8 = new int[]{+1, -1, +getWidth(), -getWidth(),
 				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(),
 				-1 - getWidth()};

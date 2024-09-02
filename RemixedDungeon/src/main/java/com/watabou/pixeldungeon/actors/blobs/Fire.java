@@ -26,47 +26,24 @@ public class Fire extends Blob {
 		
 		int from = getWidth() + 1;
 		int to   = getLength() - getWidth() - 1;
-		
-		boolean observe = false;
-		
+
 		for (int pos=from; pos < to; pos++) {
 			
 			int fire;
 			
 			if (cur[pos] > 0) {
-				
 				burn( pos );
-				
 				fire = cur[pos] - 1;
-				if (fire <= 0 && flammable[pos]) {
-					
-					level.set( pos, Terrain.EMBERS );
-					
-					observe = true;
-					GameScene.updateMapPair(pos);
-
-					if (Dungeon.isCellVisible(pos)) {
-						GameScene.discoverTile( pos);
-					}
-				}
-				
 			} else {
-				
 				if (flammable[pos] && (cur[pos-1] > 0 || cur[pos+1] > 0 || cur[pos-getWidth()] > 0 || cur[pos+getWidth()] > 0)) {
 					fire = 4;
 					burn( pos );
 				} else {
 					fire = 0;
 				}
-
 			}
 			
 			setVolume(getVolume() + (off[pos] = fire));
-
-		}
-		
-		if (observe) {
-			Dungeon.observe();
 		}
 	}
 	
@@ -88,6 +65,20 @@ public class Fire extends Blob {
 		if (levelObject != null) {
 			//GLog.debug("Obj %s %d", levelObject.getEntityKind(), pos);
 			levelObject.burn();
+		}
+
+		if(pos == level.entrance || level.isExit(pos)) {
+			return;
+		}
+
+		if(level.flammable[pos]) {
+			level.set( pos, Terrain.EMBERS );
+			GameScene.updateMapPair(pos);
+
+			if (Dungeon.isCellVisible(pos)) {
+				GameScene.discoverTile( pos);
+			}
+			Dungeon.observe();
 		}
 	}
 	
