@@ -862,7 +862,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         float hasteLevel = bf[0];
 
-        return Util.clamp(0.25f, 3.f, (float) Math.pow(1.1f, -hasteLevel));
+        return Util.clamp((float) Math.pow(1.1f, -hasteLevel), 0.25f, 4.f );
     }
 
     @Override
