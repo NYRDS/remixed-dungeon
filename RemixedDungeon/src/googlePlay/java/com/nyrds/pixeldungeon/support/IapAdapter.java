@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.content.Context;
+import android.content.Intent;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -257,5 +258,8 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
         } else {
             // Handle any other error codes.
         }
+    }
+
+    public void onNewIntent(Intent intent) {
     }
 }
