@@ -5,6 +5,8 @@ import android.net.Uri;
 
 import androidx.documentfile.provider.DocumentFile;
 
+import com.nyrds.platform.EventCollector;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -89,7 +91,7 @@ public class copyFromSAF {
             fos.close();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e, "copyModToAppStorage");
         } finally {
             mBasePath = null;
             if (mListener != null) {
@@ -119,7 +121,6 @@ public class copyFromSAF {
         InputStream inputStream = FileSystem.getContext().getContentResolver().openInputStream(file.getUri());
         String filePath = pathPrefix + File.separator + file.getName();
         File outputFile = FileSystem.getExternalStorageFile(rootPath + File.separator + filePath);
-
 
         if (outputFile.exists()) {
             if (outputFile.lastModified() > file.lastModified()) {
@@ -164,7 +165,7 @@ public class copyFromSAF {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e, "getFileTimestampMap");
         } finally {
             return fileTimestampMap;
         }

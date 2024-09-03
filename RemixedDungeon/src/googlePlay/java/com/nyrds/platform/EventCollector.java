@@ -134,23 +134,23 @@ public class EventCollector {
 	}
 
 	static private void logException(Throwable e, int level) {
+
+		StackTraceElement [] stackTraceElements = e.getStackTrace();
+		e.setStackTrace(Arrays.copyOfRange(stackTraceElements,level,stackTraceElements.length));
+
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		PrintStream ps = new PrintStream(baos);
+		e.printStackTrace(ps);
+		ps.close();
+		GLog.toFile(baos.toString());
+
 		if(!mDisabled) {
-			StackTraceElement [] stackTraceElements = e.getStackTrace();
-			e.setStackTrace(Arrays.copyOfRange(stackTraceElements,level,stackTraceElements.length));
 			FirebaseCrashlytics.getInstance().recordException(e);
-
-			ByteArrayOutputStream baos = new ByteArrayOutputStream();
-			PrintStream ps = new PrintStream(baos);
-			e.printStackTrace(ps);
-			ps.close();
-
 			FirebaseCrashlytics.getInstance().log(Utils.EMPTY_STRING+System.currentTimeMillis()+":"+e.getMessage() + ":"+ baos.toString());
+		}
 
-			GLog.toFile(baos.toString());
-
-			if(Util.isDebug()) {
-				throw new RuntimeException(new Exception(e));
-			}
+		if(Util.isDebug()) {
+			throw new RuntimeException(new Exception(e));
 		}
 	}
 
@@ -159,9 +159,9 @@ public class EventCollector {
 	}
 
 	static public void logException(Throwable e, String desc) {
+		logException(e, 0);
 		if(!mDisabled) {
 			FirebaseCrashlytics.getInstance().log(desc);
-			logException(e, 0);
 		}
 	}
 
