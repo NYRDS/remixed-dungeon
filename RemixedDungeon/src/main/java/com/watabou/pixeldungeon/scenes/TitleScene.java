@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.WndLocalModInstall;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.InstallMod;
@@ -14,6 +15,7 @@ import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.copyFromSAF;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
+import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
@@ -33,6 +35,8 @@ import com.watabou.pixeldungeon.ui.PrefsButton;
 import com.watabou.pixeldungeon.ui.PremiumPrefsButton;
 import com.watabou.pixeldungeon.ui.StatisticsButton;
 import com.watabou.pixeldungeon.utils.Utils;
+
+import org.luaj.vm2.LuaError;
 
 public class TitleScene extends PixelScene {
 
@@ -232,7 +236,14 @@ public class TitleScene extends PixelScene {
 
     @Override
     public void update() {
-        super.update();
+        try {
+            super.update();
+        } catch (LuaError e) {
+            EventCollector.logException(e, "TitleScene lua error");
+            ModdingMode.selectMod(ModdingMode.REMIXED);
+            RemixedDungeon.instance().doRestart();
+        }
+
         time += GameLoop.elapsed;
         float cl = (float) Math.sin(time) * 0.5f + 0.5f;
         if (!donationAdded) {

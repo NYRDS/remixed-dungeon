@@ -29,9 +29,18 @@ public class WndInstallingMod extends WndTitledMessage implements copyFromSAF.IL
     }
 
     @Override
+    public void onFileDelete(String entry) {
+        GameLoop.pushUiTask( () -> {
+            setText(Utils.format(R.string.WndInstallingMod_deleting_file, entry));
+        });
+    }
+
+
+    @Override
     public void onComplete() {
         hide();
     }
+
 
     @Override
     public void hide()  {

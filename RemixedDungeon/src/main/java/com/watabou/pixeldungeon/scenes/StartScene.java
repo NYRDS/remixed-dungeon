@@ -26,6 +26,7 @@ import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.WndDifficultyOptions;
+import com.nyrds.pixeldungeon.windows.WndLocalModInstall;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.copyFromSAF;
@@ -254,7 +255,9 @@ public class StartScene extends PixelScene {
         ServiceManNPC.resetLimit();
 
         fadeIn();
-        copyFromSAF.autoSyncModDirectory(ModdingMode.activeMod());
+        if(copyFromSAF.isAutoSyncMaybeNeeded(ModdingMode.activeMod())) {
+            WndLocalModInstall.onDirectoryPicked();
+        }
     }
 
     private void updateUnlockLabel(String text) {

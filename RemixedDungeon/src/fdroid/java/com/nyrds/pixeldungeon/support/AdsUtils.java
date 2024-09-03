@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.support;
 import android.view.View;
 import android.webkit.WebView;
 
-import com.appodeal.ads.BannerView;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
@@ -35,7 +34,7 @@ public class AdsUtils {
         int childs = Game.instance().getLayout().getChildCount();
         for (int i = 0; i < childs; ++i) {
             View view = Game.instance().getLayout().getChildAt(i);
-            if (view instanceof WebView || view instanceof BannerView) {
+            if (view instanceof WebView) {
                 return i;
             }
         }

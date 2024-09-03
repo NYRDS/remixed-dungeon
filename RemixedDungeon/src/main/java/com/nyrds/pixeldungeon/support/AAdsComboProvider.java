@@ -52,7 +52,9 @@ class AAdsComboProvider implements AdsUtilsCommon.IBannerProvider, AdsUtilsCommo
     @Override
     public void showInterstitial(final InterstitialPoint ret) {
 
-        final AlertDialog.Builder alert = new AlertDialog.Builder(Game.instance());
+        final AlertDialog.Builder alert = new AlertDialog.Builder(Game.instance())
+                .setCancelable(true)
+                .setNeutralButton("OK", (dialog, which) -> {ret.returnToWork(true);});
 
         WebView adView = new WebView(Game.instance());
 
@@ -66,7 +68,6 @@ class AAdsComboProvider implements AdsUtilsCommon.IBannerProvider, AdsUtilsCommo
 
             public void onPageFinished(WebView view, String url) {
                 final AlertDialog dialog = alert.create();
-
                 dialog.setCanceledOnTouchOutside(true);
                 dialog.setOnCancelListener(dialog1 -> {
                     dialog1.dismiss();

@@ -2,6 +2,7 @@ package com.nyrds.platform.storage;
 
 import android.content.Context;
 import android.net.Uri;
+import android.util.Pair;
 
 import androidx.documentfile.provider.DocumentFile;
 
@@ -10,6 +11,7 @@ import com.nyrds.platform.EventCollector;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -37,10 +39,10 @@ public class copyFromSAF {
     }
 
     @SneakyThrows
-    static public void autoSyncModDirectory(String modName) {
+    static public boolean isAutoSyncMaybeNeeded(String modName) {
         File uriFile= FileSystem.getExternalStorageFile(modName + File.separator+"src_uri.sync");
         if (!uriFile.exists()) {
-            return;
+            return false;
         }
         InputStream fis = new FileInputStream(uriFile);
         //read uri from file
@@ -48,10 +50,10 @@ public class copyFromSAF {
             String line = reader.readLine();
             Uri uri = Uri.parse(line);
             pickModDirectory(uri);
-            copyModToAppStorage();
         }
+        return true;
     }
-
+    
     static private  void copyModToAppStorage(Context context, Uri parentDirectoryUri) {
         try {
             DocumentFile file = DocumentFile.fromTreeUri(context, parentDirectoryUri);
@@ -63,12 +65,17 @@ public class copyFromSAF {
             var externalMap = getFileTimestampMap(file, "");
             var internalMap = FileSystem.getFileTimestampMap(FileSystem.getExternalStorageFile(modName), "");
 
-            Set<String> newerFiles = new HashSet<>();
+
+            Map<String, DocumentFile> newerFiles = new HashMap<>();
             //build map of newer external files
             for (val entry : externalMap.entrySet()) {
-                if (internalMap.get(entry.getKey()) == null || internalMap.get(entry.getKey()).compareTo(entry.getValue()) < 0) {
-                    newerFiles.add(entry.getKey());
+                if (internalMap.get(entry.getKey()) == null || internalMap.get(entry.getKey()).compareTo(entry.getValue().first) < 0) {
+                    newerFiles.put(entry.getKey(), entry.getValue().second);
                 }
+            }
+
+            for(val entry : newerFiles.entrySet()) {
+                copyDocumentToFile(entry.getValue(), entry.getKey(), FileSystem.getExternalStorageFile(modName + File.separator + entry.getKey()));
             }
 
             Set<String> deletedFiles = new HashSet<>();
@@ -78,12 +85,15 @@ public class copyFromSAF {
                     deletedFiles.add(entry.getKey());
                 }
             }
-
+            
             for (val entry : deletedFiles) {
                 FileSystem.getExternalStorageFile(modName+File.separator+entry).delete();
+                if (mListener != null) {
+                    mListener.onFileDelete(entry);
+                }
             }
 
-            copyDirToAppStorage(file, "", modName);
+            //copyDirToAppStorage(file, "", modName);
 
             File uri = FileSystem.getExternalStorageFile(modName + File.separator+"src_uri.sync");
             FileOutputStream fos = new FileOutputStream(uri);
@@ -118,7 +128,6 @@ public class copyFromSAF {
 
     @SneakyThrows
     private static void copyToAppStorage(String pathPrefix, String rootPath, DocumentFile file) {
-        InputStream inputStream = FileSystem.getContext().getContentResolver().openInputStream(file.getUri());
         String filePath = pathPrefix + File.separator + file.getName();
         File outputFile = FileSystem.getExternalStorageFile(rootPath + File.separator + filePath);
 
@@ -131,6 +140,10 @@ public class copyFromSAF {
             }
         }
 
+        copyDocumentToFile(file, filePath, outputFile);
+    }
+
+    private static void copyDocumentToFile(DocumentFile file, String filePath, File outputFile) throws FileNotFoundException {
         if (mListener != null) {
             mListener.onFileCopy(filePath);
         }
@@ -139,11 +152,13 @@ public class copyFromSAF {
         if (!dir.exists()) {
             dir.mkdirs();
         }
+
+        InputStream inputStream = FileSystem.getContext().getContentResolver().openInputStream(file.getUri());
         FileSystem.copyStream(inputStream, new FileOutputStream(outputFile));
     }
 
-    public static Map<String, Long> getFileTimestampMap(DocumentFile directory, String pathPrefix) {
-        Map<String, Long> fileTimestampMap = new HashMap<>();
+    public static Map<String, Pair<Long,DocumentFile>> getFileTimestampMap(DocumentFile directory, String pathPrefix) {
+        Map<String, Pair<Long,DocumentFile>> fileTimestampMap = new HashMap<>();
 
         try {
             DocumentFile[] files = directory.listFiles();
@@ -158,9 +173,9 @@ public class copyFromSAF {
                     }
                 } else {
                     if (pathPrefix.isEmpty()) {
-                        fileTimestampMap.put(file.getName(), file.lastModified());
+                        fileTimestampMap.put(file.getName(), new Pair<>(file.lastModified(), file));
                     } else {
-                        fileTimestampMap.put(pathPrefix + File.separator + file.getName(), file.lastModified());
+                        fileTimestampMap.put(pathPrefix + File.separator + file.getName(), new Pair<>(file.lastModified(), file));
                     }
                 }
             }
@@ -181,5 +196,7 @@ public class copyFromSAF {
         void onFileSkip(String path);
 
         void onComplete();
+
+        void onFileDelete(String entry);
     }
 }

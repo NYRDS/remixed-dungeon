@@ -33,8 +33,8 @@ android {
         manifestPlaceholders = ["admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1213
-        versionName "32.1.beta.6"
+        versionCode 1214
+        versionName "32.1.beta.7"
         targetSdkVersion 34
         compileSdkVersion 34
         minSdkVersion 21
@@ -133,24 +133,28 @@ android {
 
 dependencies {
     implementation project(':annotation')
-    implementation 'androidx.documentfile:documentfile:1.0.1'
+
     annotationProcessor project(':processor')
 
     implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
     implementation 'org.hjson:hjson:3.0.0'
+    implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices
+    implementation 'org.jetbrains:annotations:23.0.0'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
 
+    androidImplementation 'androidx.documentfile:documentfile:1.0.1'
     androidImplementation 'com.google.guava:guava:31.1-android'
-
-    androidImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
-
     androidImplementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices
+    fdroidImplementation  'androidx.appcompat:appcompat:1.6.1' //don't upgrade will break build
 
 
-    implementation ("com.appodeal.ads:sdk:3.3.2.0") {
+    googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
+
+    googlePlayImplementation ("com.appodeal.ads:sdk:3.3.2.0") {
         exclude group: "com.appodeal.ads.sdk.networks", module: "meta"
         exclude group: "com.appodeal.ads.sdk.services", module: "adjust"
         exclude group: "com.appodeal.ads.sdk.services", module: "appsflyer"
@@ -163,18 +167,29 @@ dependencies {
         exclude group: "org.bidon", module: "meta-adapter"
     }
 
-    implementation 'com.yandex.android:mobileads:7.4.0'
+    googlePlayImplementation 'com.yandex.android:mobileads:7.4.0'
 
-    implementation 'org.jetbrains:annotations:23.0.0'
+    ruStoreImplementation ("com.appodeal.ads:sdk:3.3.2.0") {
+        exclude group: "com.appodeal.ads.sdk.networks", module: "meta"
+        exclude group: "com.appodeal.ads.sdk.services", module: "adjust"
+        exclude group: "com.appodeal.ads.sdk.services", module: "appsflyer"
+        exclude group: "com.appodeal.ads.sdk.services", module: "facebook_analytics"
+        exclude group: "com.appodeal.ads.sdk.services", module: "firebase"
+        exclude group: "com.applovin.mediation", module: "google-adapter"
+        exclude group: "com.applovin.mediation", module: "facebook-adapter"
+        exclude group: "io.bidmachine", module: "ads.networks.meta_audience"
+        exclude group: "org.bidon", module: "admob-adapter"
+        exclude group: "org.bidon", module: "meta-adapter"
+    }
 
-    annotationProcessor 'org.projectlombok:lombok:1.18.30'
-    compileOnly 'org.projectlombok:lombok:1.18.30'
+    ruStoreImplementation 'com.yandex.android:mobileads:7.4.0'
+    ruStoreImplementation 'ru.rustore.sdk:billingclient:6.0.0'
+
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.3.0'
     googlePlayImplementation 'com.google.android.gms:play-services-auth:21.0.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:23.1.0"
     googlePlayImplementation 'com.google.android.gms:play-services-ads:23.0.0'
-
 
 
     googlePlayImplementation 'com.android.billingclient:billing:6.2.1'
@@ -184,8 +199,6 @@ dependencies {
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
     googlePlayImplementation 'com.google.firebase:firebase-perf'
-
-    ruStoreImplementation 'ru.rustore.sdk:billingclient:6.0.0'
 
     huaweiImplementation 'com.huawei.hms:ads-lite:13.4.30.301'
     huaweiImplementation 'com.huawei.hms:hianalytics:5.0.0.300'
