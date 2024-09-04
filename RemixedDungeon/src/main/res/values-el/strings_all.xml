@@ -1801,7 +1801,7 @@
   <string name="Blacksmith_Txt3">Μετάλλευμα σκοτεινού χρυσού. 15 κομμάτια. Καλά, τόσο δύσκολο είναι;</string>
   <string name="Blacksmith_Txt4">Είπα θέλω αίμα νυχτερίδας στην αξίνα. Άντε, άντε!</string>
   <string name="Blacksmith_Completed">Α, γύρισες. Κάλλιο αργά παρά ποτέ.</string>
-  <string name="Blacksmith_GetLost">Έχω δουλειά. Φύγε!</string>
+  <string name="Blacksmith_GetLost">Έχω δουλειά. Φεύγα!</string>
   <string name="Blacksmith_LooksBetter">Το εφόδιο (%s) δείχνει καλύτερο πλέον.</string>
   <string name="Blacksmith_Verify1">Δώσε μου δύο 2 αντικείμενα, όχι το ίδιο δύο φορές!</string>
   <string name="Blacksmith_Verify2">Δώσε μου 2 αντικείμενα του ίδιου τύπου!</string>
