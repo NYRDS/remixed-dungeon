@@ -8,6 +8,7 @@ import android.os.Build;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
+import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -18,8 +19,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Field;
@@ -92,15 +91,10 @@ public class StringsManager {
 
 	@SneakyThrows
 	private static void parseStrings(String resource) {
-		File jsonFile = ModdingMode.getFile(resource);
-		if (jsonFile == null || !jsonFile.exists()) {
-			return;
-		}
-
 		String line = Utils.EMPTY_STRING;
 
 		try {
-			InputStream fis = new FileInputStream(jsonFile);
+			InputStream fis = ModdingMode.getInputStream(resource);
 			InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
 			BufferedReader br = new BufferedReader(isr);
 
@@ -136,7 +130,8 @@ public class StringsManager {
 			br.close();
 		} catch (JSONException e) {
 			Game.toast("malformed json: [%s] in [%s] ignored ", line, resource);
-		}
+		} catch (ModError ignored) {
+        }
 	}
 
 	private static Locale userSelectedLocale;
