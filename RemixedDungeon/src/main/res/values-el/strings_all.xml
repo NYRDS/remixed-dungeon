@@ -586,7 +586,7 @@
   <string name="LevitationBuff_Name">Αιώρηση</string>
   <string name="LevitationBuff_Info">Το σώμα ίπταται πάνω από το έδαφος, αποφεύγοντας παγίδες κι άλλους επίγειους κινδύνους.</string>
   <string name="LightBuff_Name">Φωτισμός</string>
-  <string name="LightBuff_Info">Φως εκπέμπεται από το σώμα, φωτίζοντας τα πάντα τριγύρω.</string>
+  <string name="LightBuff_Info">Το σώμα εκπέμπει φως που φωτίζει τα πάντα τριγύρω.</string>
   <string name="MindVisionBuff_Name">Ενόραση</string>
   <string name="MindVisionBuff_Info">Η εσωτερική όραση επιτρέπει τον εντοπισμό των κινήσεων όλων των ορατών πλασμάτων στον όροφο.</string>
   <string name="OozeBuff_Name">Καυστική γλίτσα</string>
