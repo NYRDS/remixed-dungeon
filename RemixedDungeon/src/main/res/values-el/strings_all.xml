@@ -1253,7 +1253,7 @@
   <string name="King_Desc">Ο τελευταίος βασιλιάς των νάνων είχε βαθιά επίγνωση πάνω στις διαδικασίες της ζωής και του θανάτου. Είχε πείσει τα μέλη της αυλής του να συμμετάσχουν σε ένα τελετουργικό, το οποίο υποτίθεται ότι θα τους χάριζε την αιώνια νιότη. Τελικά αυτός ήταν ο μόνος που την απέκτησε--μαζί με έναν στρατό από απέθαντους αυλικούς.</string>
   <string name="King_Defense">απέκρουσε</string>
   <string name="King_Info1">%s... Δεν μπορείς να με σκοτώσεις... είμαι... αθάνατος...</string>
-  <string name="King_Info2">Εγερθείτε, σκλάβοι!</string>
+  <string name="King_Info2">Σηκωθείτε, σκλάβοι!</string>
   <string name="King_Info3">Πώς τολμάς!</string>
   <string name="Undead_Name">απέθαντος νάνος</string>
   <string name="Undead_Gender">masculine</string>
