@@ -369,9 +369,9 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
     @Override
     public int damageRoll(Char user) {
-        int tier = 1 + effectiveLevel() / 3;
-        MIN = tier + user.skillLevel();
-        MAX = (tier * tier - tier + 10) / 2 + user.skillLevel() * tier + effectiveLevel();
+        float tier = 1 + effectiveLevel() / 3.0f;
+        MIN = (int) (tier + user.skillLevel());
+        MAX = (int) ((tier * tier - tier + 10) / 2 + user.skillLevel() * tier + effectiveLevel());
 
         return super.damageRoll(user);
     }
