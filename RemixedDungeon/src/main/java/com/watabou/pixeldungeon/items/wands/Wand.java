@@ -197,9 +197,9 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
     public String info() {
         StringBuilder info = new StringBuilder(isKnown() ? desc()
                 : Utils.format(R.string.Wand_Wood, wood));
-        if (Dungeon.hero.getHeroClass() == HeroClass.MAGE
-                || Dungeon.hero.getSubClass() == HeroSubClass.SHAMAN) {
-            damageRoll(Dungeon.hero);
+        Char owner = getOwner();
+        if (owner.getHeroClass() == HeroClass.MAGE || owner.getSubClass() == HeroSubClass.SHAMAN) {
+            damageRoll(owner);
             info.append("\n\n");
             if (isLevelKnown()) {
                 info.append(Utils.format(R.string.Wand_Damage, MIN + (MAX - MIN) / 2));
