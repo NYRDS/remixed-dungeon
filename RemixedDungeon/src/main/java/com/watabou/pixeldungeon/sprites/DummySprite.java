@@ -3,11 +3,13 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
+import com.watabou.noosa.Group;
 import com.watabou.noosa.TextureFilm;
 
 public class DummySprite extends MobSprite {
 
 	public static final DummySprite instance = new DummySprite();
+	public static final Group dummyGroup = new Group();
 
 	public DummySprite() {
 		super();
@@ -59,5 +61,10 @@ public class DummySprite extends MobSprite {
 	@Override
 	public boolean isVisible() {
 		return false;
+	}
+
+	@Override
+	public Group getParent() {
+		return dummyGroup;
 	}
 }
