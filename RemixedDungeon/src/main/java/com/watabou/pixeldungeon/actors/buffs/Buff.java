@@ -50,10 +50,6 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     @Packable(defaultValue = "-1")
     protected int source = -1;
 
-    {
-        Actor.add(this);
-    }
-
     @Override
     public String name() {
         String id = getEntityKind() + "Buff_Name";

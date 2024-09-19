@@ -59,10 +59,20 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 	protected abstract boolean act();
 
+	private static final float SPEND_EMA_ALPHA = 0.1f;
+	private float spendEma = 1f;
+
 	public void spend( float time ) {
 		GLog.debug("%s spend %4.1f", getEntityKind(), time);
+		if (time < 0.01) {
+			GLog.debug("sus!");
+		}
 		checkTime();
 		this.time += time;
+		spendEma = (1 - SPEND_EMA_ALPHA) * spendEma + SPEND_EMA_ALPHA * time;
+		if (spendEma < 0.01) {
+			GLog.debug("spendEma = %4.2f", spendEma);
+		}
 	}
 
 	public void postpone( float time ) {
