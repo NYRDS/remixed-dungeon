@@ -1787,7 +1787,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Halberd_Info">Broń drzewcowa składająca się z toporu na końcu kija.</string>
   <string name="Halberd_Gender">feminine</string>
   <string name="WoodenCrossbow_Name">Drewniana kusza</string>
-  <string name="WoodenCrossbow_Info">Podstawowa drewniana kusza, wygląda na to że została zaprojektowana z myślą o strzelaniu strzałami do łuku.</string>
+  <string name="WoodenCrossbow_Info">Standardowa drewniana kusza, wygląda na to że została zaprojektowana z myślą o strzelaniu strzałami zamiast bełtów. </string>
   <string name="WoodenCrossbow_Gender">feminine</string>
   <string name="CompositeCrossbow_Name">Kusza kompozytowa</string>
   <string name="CompositeCrossbow_Info">Ta wzmocniona kusza wydaje się być efektywniejszym narzędziem, w porównaniu do jej drewnianego odpowiednika.</string>
