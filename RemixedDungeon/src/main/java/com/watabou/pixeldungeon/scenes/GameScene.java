@@ -403,6 +403,7 @@ public class GameScene extends PixelScene {
         InterlevelScene.Mode appearMode = InterlevelScene.mode;
         InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
 
+        Actor.add(hero);
         hero.regenSprite();
         //it is a chance for another level change right here if level entrance is at CHASM for example
         switch (appearMode) {

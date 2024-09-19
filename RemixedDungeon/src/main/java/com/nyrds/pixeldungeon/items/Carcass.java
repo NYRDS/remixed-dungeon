@@ -10,6 +10,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Doom;
@@ -54,8 +55,8 @@ public class Carcass extends Item implements Doom {
 
     public Carcass(Char src) {
         this.src = src;
+        Actor.add(this);
         spend(10);
-
     }
 
     @Override

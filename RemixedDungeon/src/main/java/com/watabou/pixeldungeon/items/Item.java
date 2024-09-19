@@ -781,7 +781,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     }
 
     public void setOwner(Char owner) {
-        add(this);
+        Actor.add(this);
         this.owner = owner;
         if (owner.valid()) {
             setHeap(null);

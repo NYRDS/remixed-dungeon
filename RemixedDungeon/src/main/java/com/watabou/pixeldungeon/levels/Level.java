@@ -762,7 +762,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		for (Blob blob : bundle.getCollection(BLOBS, Blob.class)) {
-			blobs.put(blob.getClass(), blob);
+			blobPut(blob.getClass(), blob);
 		}
 
 		for (ScriptedActor actor : bundle.getCollection(SCRIPTS, ScriptedActor.class)) {
@@ -1926,7 +1926,7 @@ public abstract class Level implements Bundlable {
 				}
 			}
 		}
-		blobs.put(blobClass, blob);
+		blobPut(blobClass, blob);
 	}
 
 	public void clearAreaFrom(Class<? extends Blob> blobClass, int cell, int xs, int ys) {
@@ -2139,5 +2139,10 @@ public abstract class Level implements Bundlable {
 			}
 		}
 		return false;
+	}
+
+	public void blobPut(Class<? extends Blob> clazz, Blob blob) {
+		Actor.add(blob);
+		blobs.put(clazz, blob);
 	}
 }

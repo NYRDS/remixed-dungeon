@@ -80,14 +80,19 @@ local function levelsTestModeOnStep(self, scene)
     end
 end
 
-local modes = {}
-modes["std"] = stdModeOnStep
-modes["levelsTest"] = levelsTestModeOnStep
+local onStepModes = {}
+onStepModes["std"] = stdModeOnStep
+onStepModes["levelsTest"] = levelsTestModeOnStep
+
+local selectCellModes = {}
+selectCellModes["std"] = gameScene.selectCell
+selectCellModes["levelsTest"] = autoTestAi.selectCell
 
 service.onStep = stdModeOnStep
 
 service.setMode = function(self, mode)
-    service.onStep = modes[mode] or noneMode
+    service.onStep = onStepModes[mode] or noneMode
+    service.selectCell = selectCellModes[mode] or noneMode
 end
 
 service.selectCell = function(self)

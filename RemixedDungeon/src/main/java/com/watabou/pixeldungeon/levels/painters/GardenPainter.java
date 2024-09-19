@@ -43,6 +43,6 @@ public class GardenPainter extends Painter {
 				light.seed( j + level.getWidth() * i, 1 );
 			}
 		}
-		level.blobs.put( Foliage.class, light );
+		level.blobPut( Foliage.class, light );
 	}
 }

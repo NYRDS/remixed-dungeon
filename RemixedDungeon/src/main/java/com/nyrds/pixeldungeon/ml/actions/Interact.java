@@ -13,6 +13,9 @@ public class Interact extends CharAction {
     }
 
     public boolean act(Char hero) {
+        if(!chr.isOnStage()) {
+            return true;
+        }
 
         if (hero.adjacent(chr)) {
 
@@ -32,8 +35,6 @@ public class Interact extends CharAction {
                 return false;
             }
         }
-
-
 
         if (Dungeon.level.fieldOfView[chr.getPos()] && hero.getCloser(chr.getPos())) {
             return true;

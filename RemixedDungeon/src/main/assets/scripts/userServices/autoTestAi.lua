@@ -258,4 +258,8 @@ ai.step = function()
     hero:handle(cell)
 end
 
+ai.selectCell = function(self)
+    RPD.GameScene:handleCell(RPD.Dungeon.level:randomDestination())
+end
+
 return ai

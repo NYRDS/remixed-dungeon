@@ -76,6 +76,7 @@ import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
+import com.watabou.pixeldungeon.sprites.DummySprite;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -138,7 +139,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     protected AiState state = MobAi.getStateByClass(Sleeping.class);
 
     private Belongings belongings;
-
 
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
     private int owner = EntityIdSource.INVALID_ID;
@@ -1236,7 +1236,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     private void updateSprite(CharSprite sprite) {
-        if (isOnStage() && level().cellValid(getPos())) {
+        if(! isOnStage()) {
+            sprite = DummySprite.instance;
+        }
+        if ( level().cellValid(getPos())) {
             sprite.setVisible(Dungeon.isCellVisible(getPos()) && invisible >= 0);
         } else {
             EventCollector.logException("invalid pos " + getPos() + " for:"  + this + ":" + getEntityKind());

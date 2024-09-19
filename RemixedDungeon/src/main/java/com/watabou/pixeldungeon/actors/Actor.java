@@ -24,10 +24,11 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -43,6 +44,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	private static float realTimeMultiplier = 1f;
 
 	private static final Map<Actor, Integer> skipCounter = new HashMap<>();
+	private static ArrayList<Actor> npcActors;
 
 	@Packable
 	float time = 0;
@@ -58,20 +60,13 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	protected abstract boolean act();
 
 	public void spend( float time ) {
-		//GLog.debug("%s spend %2.4f", getEntityKind(), time);
-		if(Util.isDebug() && current!=this) {
-			if(this instanceof Char) {
-				GLog.debug("%s spends time on %s move!", getEntityKind(), current!=null?current.getEntityKind():"no one");
-				//throw new TrackedRuntimeException(String.format("%s spends time on %s move!", getEntityKind(), current!=null?current.getEntityKind():"no one"));
-			}
-			if(this instanceof Hero && time > 5) {
-				GLog.debug("hero long spend!");
-			}
-		}
+		GLog.debug("%s spend %4.1f", getEntityKind(), time);
+		checkTime();
 		this.time += time;
 	}
 
 	public void postpone( float time ) {
+		checkTime();
 		if (this.time < now + time) {
 			this.time = now + time;
 		}
@@ -106,7 +101,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	private static Actor current;
 	
 	private static float now = 0;
-	
+
+	{time=now;}
+
 	@SuppressLint("UseSparseArrays")
 	public static final Multimap<Integer, Char> chars = MultimapBuilder.hashKeys().arrayListValues().build();
 	
@@ -141,7 +138,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 			a.time -= min;
 			a.prevTime -= min;
 		}
-		now = 0;
+		now = min;
 	}
 	
 	public static void init(@NotNull Level level) {
@@ -202,62 +199,42 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 	}
 
+	static private boolean batchInProgress = false;
+
 	public static void processTurnBased() {
 
 		// action still in progress
-		if (current != null && !current.timeout()) {
-			checkSkips(current);
+		if (current == Dungeon.hero && !current.timeout()) {
 			return;
 		}
 
-		Actor actor;
+		GLog.debug("Main loop start");
 
-		//Log.i("Main loop", "start");
-		while ((actor=getNextActor(Util.BIG_FLOAT)) != null) {
-
-			if (actor instanceof Char && ((Char)actor).isAlive() && ((Char)actor).hasSprite() && ((Char)actor).getSprite().doingSomething()) {
-				checkSkips(actor);
-				GLog.debug("skip: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
-				// If it's character's turn to act, but its sprite
-				// is moving, wait till the movement is over
-
+		if(!batchInProgress) {
+			npcActors = actBeforeHero();
+			GLog.debug("got %d actors", npcActors.size());
+			if(!npcActors.isEmpty()) {
+				for (var actor : npcActors) {
+					GLog.debug("actor %s %4.1f hero: %4.1f now: %4.1f",actor, actor.time, Dungeon.hero.actorTime(), now);
+					actor.act();
+					current = actor;
+					actor.next();
+				}
 				return;
 			}
-
-			resetSkips(actor);
-
-			GLog.debug("Main actor loop: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
-			if(actor instanceof Char) {
-				//GLog.debug("%s %d action %s",actor.getEntityKind(), ((Char) actor).getId(),((Char) actor).curAction);
-			}
-
-			current = actor;
-
-			float timeBefore = actor.time;
-
-			EventCollector.setSessionData("actor", actor.getEntityKind());
-
-			if (actor.act() && Dungeon.hero.isAlive()) {
-				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
-				actor.next();
-			} else {
-				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
-				break;
-			}
-
-			if(actor.time == timeBefore && all.contains(actor)) { // don't need this check for removed actors
-				var error = String.format("actor %s has same timestamp after act!", actor.getEntityKind());
-				if(Util.isDebug()) {
-					EventCollector.logException(error);
-				} else {
-					actor.spend(TICK);
-					EventCollector.logException(error);
+			current = Dungeon.hero;
+			now = current.time;
+			GLog.debug("hero move!");
+			Dungeon.hero.act();
+		} else {
+			for (val actor: npcActors) {
+				if (actor instanceof Char && ((Char)actor).isAlive() && ((Char)actor).hasSprite() && ((Char)actor).getSprite().doingSomething()) {
+					GLog.debug("%s still acting", actor);
+					return;
 				}
 			}
-
-			if(SystemTime.timeSinceTick() > 50) {
-				break;
-			}
+			batchInProgress = false;
+			processTurnBased();
 		}
 	}
 
@@ -366,6 +343,21 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		return next;
 	}
 
+	//get sorted array of actor to act before Dungeon.hero
+	static ArrayList<Actor> actBeforeHero() {
+		ArrayList<Actor> toActBeforeHero = new ArrayList<Actor>();
+
+		for (Actor actor : all) {
+			if (actor != Dungeon.hero && actor.time < Dungeon.hero.actorTime()) {
+				toActBeforeHero.add(actor);
+			}
+		}
+
+		Collections.sort(toActBeforeHero, (a1, a2) -> Float.compare(a1.time, a2.time));
+
+		return toActBeforeHero;
+	}
+
 	protected boolean timeout() {
 		return false;
 	}
@@ -395,10 +387,6 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 			chars.put(ch.getPos(), ch);
 			all.addAll(ch.buffs());
-
-			for(var item: ch.getBelongings()) {
-				all.add(item);
-			}
 		}
 
 
@@ -409,6 +397,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		if (actor != null) {
 			actor.next();
 			actor.added = false;
+			if (actor instanceof Char) {
+				freeCell((Char)actor);
+			}
 			all.remove( actor );
 		}
 	}
@@ -437,10 +428,16 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	public static Char findChar(int pos) {
 		val ret = chars.get(pos);
 		if (ret.isEmpty()) {
-
 			return null;
 		}
-		return ret.iterator().next();
+
+		val retChar = ret.iterator().next();
+
+		if (retChar.isOnStage()) {
+			return retChar;
+		}
+
+		return null;
 	}
 
 	@LuaInterface
@@ -454,7 +451,17 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 	@LuaInterface
 	public float actorTime() {
+		checkTime();
 		return time;
+	}
+
+	private void checkTime() {
+		if (this==Dungeon.hero) {
+			return;
+		}
+		if(time < now - 0.00001f) {
+			throw new IllegalStateException("Actor time for " + getEntityKind() + " is in the past: " + time + " < " + now);
+		}
 	}
 
 	@LuaInterface
