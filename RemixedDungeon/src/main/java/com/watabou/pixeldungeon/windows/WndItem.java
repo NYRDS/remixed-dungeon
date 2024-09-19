@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.ml.actions.UseItem;
@@ -21,6 +22,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 public class WndItem extends Window {
 
     private static final float BUTTON_WIDTH = 36;
+    private VHBox actions;
 
     public WndItem(final WndBag bag, final Item item) {
 
@@ -49,7 +51,7 @@ public class WndItem extends Window {
 
         float y = info.getY() + info.height() + GAP;
 
-        VHBox actions = new VHBox(WIDTH);
+        actions = new VHBox(WIDTH);
         actions.setAlign(HBox.Align.Width);
         actions.setGap(GAP);
 
@@ -118,7 +120,7 @@ public class WndItem extends Window {
 
         float y = info.getY() + info.height() + GAP;
 
-        VHBox actions = new VHBox(WIDTH);
+        actions = new VHBox(WIDTH);
         actions.setAlign(HBox.Align.Width);
         actions.setGap(GAP);
 
@@ -148,6 +150,11 @@ public class WndItem extends Window {
         actions.setPos(titlebar.left(), y);
 
         resize(WIDTH, (int) (actions.bottom() + GAP));
+    }
+
+   @LuaInterface
+   public  void onSelect(int idx) {
+        ((RedButton)actions.getByIndex(idx)).simulateClick();
     }
 
 }

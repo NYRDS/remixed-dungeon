@@ -45,6 +45,12 @@ local function handleWindow(hero)
         return true
     end
 
+    if wndClass:match('WndItem') then
+        activeWindow:onSelect(0)
+        activeWindow:hide()
+        return true
+    end
+
     if wndClass:match('WndChasmJump') then
         if math.random() < 0.05 then
             activeWindow:onSelect(0)

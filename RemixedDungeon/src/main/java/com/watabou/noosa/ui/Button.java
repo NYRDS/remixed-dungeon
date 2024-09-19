@@ -93,6 +93,10 @@ public class Button extends Component {
 		return false;
 	}
 
+	public void simulateClick() {
+		onClick();
+	}
+
 	@Override
 	protected void layout() {
 		//GLog.debug("hot area: %3.0f %3.0f %3.0f %3.0f", x, y, width, height);

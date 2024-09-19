@@ -66,6 +66,10 @@ public class VHBox extends VBox {
         allMembers.remove(g);
     }
 
+    public Gizmo getByIndex(int index) {
+        return allMembers.get(index);
+    }
+
     private void putInNextRow(Gizmo g) {
         HBox hBox = new HBox(maxWidth);
         hBox.setGap(hGap);
