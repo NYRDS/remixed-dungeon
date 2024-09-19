@@ -145,6 +145,8 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
     compileOnly 'org.projectlombok:lombok:1.18.30'
 
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+
     androidImplementation 'androidx.documentfile:documentfile:1.0.1'
     androidImplementation 'com.google.guava:guava:31.1-android'
     androidImplementation 'androidx.multidex:multidex:2.0.1'

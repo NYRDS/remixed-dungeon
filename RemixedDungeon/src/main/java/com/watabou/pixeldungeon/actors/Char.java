@@ -1927,12 +1927,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public int getViewDistance() {
         int computedViewDistance = viewDistance;
+        int levelViewDistance = level() != null ? level().getViewDistance() : viewDistance;
 
-        if (hasBuff(Light.class)) {
-            if (level() != null) {
-                computedViewDistance = Utils.max(computedViewDistance, Level.MIN_VIEW_DISTANCE + 1, level().getViewDistance());
-            } else {
-                computedViewDistance = Math.max(computedViewDistance, Level.MIN_VIEW_DISTANCE + 1);
+        if (hasBuff(BuffFactory.BLINDNESS)) {
+            computedViewDistance = 1;
+        } else {
+            if (hasBuff(Light.class)) {
+                computedViewDistance = Utils.max(computedViewDistance, Level.MIN_VIEW_DISTANCE + 1, levelViewDistance);
             }
         }
 
