@@ -47,7 +47,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	private static ArrayList<Actor> npcActors;
 
 	@Packable
-	float time = 0;
+	float time;
 	@Packable
 	float prevTime = -1;
 
@@ -77,9 +77,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 	public void postpone( float time ) {
 		checkTime();
-		if (this.time < now + time) {
-			this.time = now + time;
-		}
+		this.time = now + time;
 	}
 
 	protected float cooldown() {
@@ -112,10 +110,11 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	
 	private static float now = 0;
 
-	{time=now;}
+	{
+		time=now;
+	}
 
-	@SuppressLint("UseSparseArrays")
-	public static final Multimap<Integer, Char> chars = MultimapBuilder.hashKeys().arrayListValues().build();
+	public static final Multimap<Integer, Char> chars = MultimapBuilder.hashKeys().hashSetValues().build();
 	
 	public static void clearActors() {
 		now = 0;
@@ -177,7 +176,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		chars.remove(actor.getPos(), actor);
 	}
 	
-	/*protected*/final public void next() {
+	final public void next() {
 		//Log.i("Main loop", String.format("next:\nNext: %s Current: %s", this, current));
 		if (current == this) {
 			//Log.i("Main loop", "next == current");
@@ -356,9 +355,12 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 	//get sorted array of actor to act before Dungeon.hero
 	static ArrayList<Actor> actBeforeHero() {
 		ArrayList<Actor> toActBeforeHero = new ArrayList<Actor>();
+		chars.clear();
+		Hero hero = Dungeon.hero;
 
 		for (Actor actor : all) {
-			if (actor != Dungeon.hero && actor.time < Dungeon.hero.actorTime()) {
+			actor.useCell();
+			if (actor != hero && actor.time < hero.actorTime()) {
 				toActBeforeHero.add(actor);
 			}
 		}
@@ -366,6 +368,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		Collections.sort(toActBeforeHero, (a1, a2) -> Float.compare(a1.time, a2.time));
 
 		return toActBeforeHero;
+	}
+
+	protected void useCell() {
 	}
 
 	protected boolean timeout() {
@@ -388,7 +393,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 		}
 		
 		all.add( actor );
-		actor.time += time;
+		actor.time = time;
 
 		if (actor instanceof Char) {
 			Char ch = (Char)actor;

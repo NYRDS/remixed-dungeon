@@ -2260,4 +2260,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void unequip(EquipableItem equipableItem) {
         getBelongings().unequip(equipableItem);
     }
+
+    @Override
+    protected void useCell() {
+        Actor.occupyCell(this);
+    }
 }
