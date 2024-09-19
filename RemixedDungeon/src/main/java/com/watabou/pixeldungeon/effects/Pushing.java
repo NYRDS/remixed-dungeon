@@ -58,6 +58,7 @@ public class Pushing extends Actor {
 				return;
 			}
 
+			Actor.add(ch);
 			if(!ch.hasSprite() ||ch.getSprite().getParent()==null) {
 				EventCollector.logException("pushing orphaned char");
 				Actor.remove( Pushing.this );

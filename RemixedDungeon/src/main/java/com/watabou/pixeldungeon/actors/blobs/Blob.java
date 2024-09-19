@@ -190,7 +190,6 @@ public class Blob extends Actor implements NamedEntityKind {
 		if (gas == null) {
 			gas = type.newInstance();
 			level.blobPut(type, gas);
-			Actor.add(gas);
 		}
 
 		gas.seed(cell, amount);
