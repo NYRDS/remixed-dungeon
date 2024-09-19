@@ -2613,7 +2613,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="StartScene_DifficultyEasyNoAds">Łatwy</string>
   <string name="StartScene_DifficultyNormalWithSavesNoAds">Normalny z zapisem</string>
   <string name="Backstab_Name">Cios w plecy</string>
-  <string name="Backstab_Info">Cichy cios w plecy. Nieuczciwy ale ekstremalnie efektywny, obrażenia będą rosnąc razem z poziom postaci.n\n Udany cios ignoruje pancerz  i specjalne umiejętności obronne ofiary.</string>
+  <string name="Backstab_Info">Cichy cios w plecy. Nieuczciwy ale ekstremalnie efektywny, obrażenia będą rosnąc razem z poziom postaci.\n\n Udany cios ignoruje pancerz  i specjalne umiejętności obronne ofiary.</string>
   <string name="Backstab_TooFar">Ofiara jest za daleko.</string>
   <string name="Backstab_Aware">Ofiara nie powinna się spodziewać dobrego dźganka w plecy.</string>
   <string name="KunaiThrow_Name">Rzut Kunai</string>
