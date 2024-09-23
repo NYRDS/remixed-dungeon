@@ -2617,7 +2617,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="Backstab_TooFar">Ofiara jest za daleko.</string>
   <string name="Backstab_Aware">Ofiara nie powinna się spodziewać dobrego dźganka w plecy.</string>
   <string name="KunaiThrow_Name">Rzut Kunai</string>
-  <string name="KunaiThrow_Info">Ten Śmiercionośny Rzut Kunai jest wykonywany tak szybko, że nie zdążysz nawet wybrać swojego celu.\n\nPrawdziwy Mistrz jest w stanie wykonać więcej niż jeden rzut na raz.</string>
+  <string name="KunaiThrow_Info">Ten śmiercionośny rzut jest wykonywany tak szybko, że nie zdążysz nawet wybrać swojego celu.\n\nPrawdziwy Mistrz jest w stanie wykonać więcej niż jeden rzut na raz.</string>
   <string name="Haste_Name">Ekstremalny Pośpiech</string>
   <string name="Haste_Info">Używająć Pośpiechu zyskuje się niesamowite prędkości, takie aż wszytko wokół zamiera w miejscu .Wykorzystuje ono jednak dużo energii, więc można go urzywać jedynie przez krótki okres czasu.\n\nMistrzowie Pośpiechu są w stanie zostać w nim dłużej.</string>
   <string name="Char_Stole_0">%1$sukradł %2$s od %3$s</string>
