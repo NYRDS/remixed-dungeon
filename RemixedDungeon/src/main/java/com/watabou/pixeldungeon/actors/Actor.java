@@ -447,10 +447,10 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
             return null;
         }
 
-        val retChar = ret.iterator().next();
-
-        if (retChar.isOnStage()) {
-            return retChar;
+        for (val retChar:  ret) {
+            if (retChar.isOnStage() && retChar.isAlive()) {
+                return retChar;
+            }
         }
 
         return null;

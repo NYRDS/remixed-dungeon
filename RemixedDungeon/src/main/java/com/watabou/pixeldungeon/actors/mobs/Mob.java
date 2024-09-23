@@ -275,7 +275,10 @@ public abstract class Mob extends Char {
 
     @Override
     public final void onZapComplete() {
-        zap(getEnemy());
+        Char enemy = getEnemy();
+        if(enemy.valid()) {
+            zap(enemy);
+        }
         super.onZapComplete();
     }
 
@@ -287,12 +290,8 @@ public abstract class Mob extends Char {
 
     @Override
     public void destroy() {
-
-        spend(MICRO_TICK);
-
-        super.destroy();
-
         level().mobs.remove(this);
+        super.destroy();
     }
 
     public void remove() {
@@ -300,10 +299,6 @@ public abstract class Mob extends Char {
     }
 
     public void die(@NotNull NamedEntityKind cause) {
-
-        spend(Actor.MICRO_TICK);
-
-
         Badges.validateRare(this);
 
         Hero hero = Dungeon.hero;

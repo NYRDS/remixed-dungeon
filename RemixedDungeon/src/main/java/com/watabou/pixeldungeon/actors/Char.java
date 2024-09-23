@@ -438,9 +438,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
                 Sample.INSTANCE.play(Assets.SND_HIT, 1, 1, Random.Float(0.8f, 1.25f));
 
                 final CharSprite enemySprite = enemy.getSprite();
+                final CharSprite mySprite = getSprite();
 
-                enemySprite.bloodBurstA(
-                        getSprite().center(), effectiveDamage);
+                enemySprite.bloodBurstA(mySprite.center(), effectiveDamage);
                 enemySprite.flash();
             }
 
@@ -1108,20 +1108,21 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void onAttackComplete() {
-        Char enemy = getEnemy();
+        if(isAlive()) {
+            Char enemy = getEnemy();
 
-        if (enemy.valid()) {
-            belongings.forEachEquipped(item -> item.preAttack(enemy));
+            if (enemy.valid()) {
+                belongings.forEachEquipped(item -> item.preAttack(enemy));
 
-            if (attack(enemy)) {
-                belongings.forEachEquipped(item -> item.postAttack(enemy));
+                if (attack(enemy)) {
+                    belongings.forEachEquipped(item -> item.postAttack(enemy));
+                }
             }
+
+            setCurAction(null);
+
+            Invisibility.dispel(this);
         }
-
-        setCurAction(null);
-
-        Invisibility.dispel(this);
-
         next();
     }
 
