@@ -73,13 +73,11 @@ public class ModdingMode {
 		trustedMods.add(THE_EPIC_DUNGEON);
 
 
-		rewardVideoIds.put(THE_EPIC_DUNGEON, "ca-app-pub-4791779564989579/1063117964");
-		rewardVideoIds.put(REMIXED_ADDITIONS, "ca-app-pub-4791779564989579/1515968557");
-		rewardVideoIds.put(REMIXED_RPG, "ca-app-pub-4791779564989579/6811870723");
+		rewardVideoIds.put(THE_EPIC_DUNGEON, "R-M-7590884-4");
+		rewardVideoIds.put(REMIXED_RPG, "R-M-7590884-5");
 
-		interstitialIds.put(THE_EPIC_DUNGEON, "ca-app-pub-4791779564989579/6507016335");
-		interstitialIds.put(REMIXED_ADDITIONS, "ca-app-pub-4791779564989579/9438034069");
-		interstitialIds.put(REMIXED_RPG, "ca-app-pub-4791779564989579/5368934724");
+		interstitialIds.put(THE_EPIC_DUNGEON, "R-M-7590884-6");
+		interstitialIds.put(REMIXED_RPG, "R-M-7590884-7");
 
 		dlcSet.add(REMIXED_ADDITIONS);
 		dlcSet.add(REMIXED_RPG);
@@ -379,7 +377,7 @@ public class ModdingMode {
 			return rewardVideoIds.get(activeMod());
 		}
 
-		return StringsManager.getVar(R.string.cinemaRewardAdUnitId);
+		return StringsManager.getVar(R.string.rewarded_yandex);
 	}
 
 	public static String getInterstitialId() {
@@ -387,6 +385,6 @@ public class ModdingMode {
 			return interstitialIds.get(activeMod());
 		}
 
-		return StringsManager.getVar(R.string.saveLoadAdUnitId);
+		return StringsManager.getVar(R.string.interstitial_yandex);
 	}
 }

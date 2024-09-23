@@ -57,7 +57,7 @@ public class AdsUtils {
 */
 
             bannerFails.put(new YandexBannerProvider(StringsManager.getVar(R.string.banner_yandex)), -2);
-            interstitialFails.put(new YandexInterstitialProvider(StringsManager.getVar(R.string.interstitial_yandex)), -2);
+            interstitialFails.put(new YandexInterstitialProvider(ModdingMode.getInterstitialId()), -2);
 
             if (!RemixedDungeonApp.checkOwnSignature()) {
                 bannerFails.put(new AAdsComboProvider(), 0);
@@ -84,7 +84,7 @@ public class AdsUtils {
                 rewardVideoFails.put(new AppodealRewardVideoProvider(), -1);
             }
 
-            rewardVideoFails.put(new YandexRewardVideoAds(StringsManager.getVar(R.string.rewarded_yandex)), -2);
+            rewardVideoFails.put(new YandexRewardVideoAds(ModdingMode.getRewardedVideoId()), -2);
 /*
             if (!GamePreferences.uiLanguage().equals("ru")) {
                 rewardVideoFails.put(new GoogleRewardVideoAds(ModdingMode.getRewardedVideoId()), -20);
