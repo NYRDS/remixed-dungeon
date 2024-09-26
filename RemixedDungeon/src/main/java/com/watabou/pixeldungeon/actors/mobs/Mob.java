@@ -206,7 +206,7 @@ public abstract class Mob extends Char {
 		if(actorTime() == timeBeforeAct) {
 			var error = String.format("actor %s has same timestamp after %s act!", getEntityKind(), getState().getTag());
             spend(TICK);
-            EventCollector.logException(error);
+            //EventCollector.logException(error);
 		}
         return true;
     }

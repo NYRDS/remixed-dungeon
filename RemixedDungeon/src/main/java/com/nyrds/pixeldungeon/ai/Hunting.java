@@ -43,6 +43,7 @@ public class Hunting extends MobAi implements AiState {
             if(!me.doStepTo(me.getTarget())) {
                 me.setTarget(me.level().randomDestination());
                 me.setState(getStateByClass(Wandering.class));
+                me.spend(Actor.TICK);
             }
         }
     }
