@@ -226,7 +226,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
                 }
             }
 
-            GLog.debug("actor %s %4.1f hero: %4.1f now: %4.1f", current, current.time, hero.actorTime(), now);
+            GLog.debug("actor %s %4.1f hero: %4.1f now: %4.1f", current.getEntityKind(), current.time, hero.actorTime(), now);
 
             if (current != hero) {
                 current.act();

@@ -1420,7 +1420,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             //GLog.debug("%s now will %s, was doing %s before", getEntityKind(), this.state.getTag(), state.getTag());
             this.state = state;
         }
-        spend(Actor.MICRO_TICK);
     }
 
     public void onSpawn(Level level) {

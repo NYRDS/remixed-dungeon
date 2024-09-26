@@ -16,7 +16,6 @@ public class Wandering extends MobAi implements AiState {
     public void act(@NotNull Char me) {
 
         if(returnToOwnerIfTooFar(me, 2)) {
-            me.spend(Actor.MICRO_TICK);
             return;
         }
 

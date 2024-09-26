@@ -1,10 +1,5 @@
 {
   "common": {
-    "armor": {
-      "kind": "GothicArmor",
-      "identified": true,
-      "level": 10
-    },
     "allies" : [
       {
         "kind" : "Rat",
@@ -39,7 +34,7 @@
     "sp": 100,
     "maxSp": 100,
     "sl": 10,
-    "lvl": 30
+    "lvl": 5
   },
   "non_expert": {
     "items": [
