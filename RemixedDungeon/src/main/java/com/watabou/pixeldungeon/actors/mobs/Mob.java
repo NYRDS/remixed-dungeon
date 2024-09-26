@@ -198,16 +198,33 @@ public abstract class Mob extends Char {
         }
 
         float timeBeforeAct = actorTime();
+        StringBuilder tags = new StringBuilder();
+
+        String aiTag = getState().getTag();
+
+        tags.append(aiTag);
+
+        int tryCount = 5;
+        for (int i = 0;i < tryCount;i++) {
+            GLog.debug("%s is %s", getEntityKind(), getState().getTag());
+            getState().act(this);
+            if(actorTime() != timeBeforeAct) {
+                return true;
+            }
+            String newTag = getState().getTag();
+            if(aiTag.equals(newTag)) { //mob decided to do nothing, this is ok
+                spend(TICK);
+                return true;
+            }
+            aiTag = newTag;
+            tags.append(aiTag);
+        }
 
 
-        //GLog.debug("%s is %s", getEntityKind(), getState().getTag());
-        getState().act(this);
+        var error = String.format("actor %s get really confused!", getEntityKind(), tags);
+        spend(TICK);
+        EventCollector.logException(error);
 
-		if(actorTime() == timeBeforeAct) {
-			var error = String.format("actor %s has same timestamp after %s act!", getEntityKind(), getState().getTag());
-            spend(TICK);
-            //EventCollector.logException(error);
-		}
         return true;
     }
 

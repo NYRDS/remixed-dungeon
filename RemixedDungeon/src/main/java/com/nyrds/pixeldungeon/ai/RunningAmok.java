@@ -1,9 +1,9 @@
 package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -13,7 +13,7 @@ public class RunningAmok extends MobAi implements AiState {
     @Override
     public void act(@NotNull Char me) {
 
-        if(!me.hasBuff(Amok.class)) {
+        if(!me.hasBuff(BuffFactory.AMOK)) {
             me.setState(MobAi.getStateByClass(Wandering.class));
             return;
         }
