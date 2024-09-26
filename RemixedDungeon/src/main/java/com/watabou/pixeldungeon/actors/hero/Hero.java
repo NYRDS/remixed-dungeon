@@ -406,6 +406,10 @@ public class Hero extends Char {
         restoreHealth = false;
         super.damage(dmg, src);
 
+        if (!isAlive()) {
+            return;
+        }
+
         setControlTarget(this);
 
         if (!myMove()) {

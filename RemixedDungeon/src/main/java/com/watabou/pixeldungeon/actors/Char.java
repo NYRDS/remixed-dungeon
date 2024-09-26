@@ -1237,20 +1237,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     private void updateSprite(CharSprite sprite) {
-        if(! isOnStage()) {
+        if(!isOnStage()) {
             sprite = DummySprite.instance;
-        }
-        if ( level().cellValid(getPos())) {
-            sprite.setVisible(Dungeon.isCellVisible(getPos()) && invisible >= 0);
         } else {
-            EventCollector.logException("invalid pos " + getPos() + " for:"  + this + ":" + getEntityKind());
+            if (level().cellValid(getPos())) {
+                sprite.setVisible(Dungeon.isCellVisible(getPos()) && invisible >= 0);
+            } else {
+                EventCollector.logException("invalid pos " + getPos() + " for:" + this + ":" + getEntityKind());
+            }
         }
         GameScene.addMobSpriteDirect(this, sprite);
-
-        if (isOnStage()) {
-            assert (sprite.getParent() != null);
-        }
-
 
         if (sprite.getParent() == null) {
             String err = String.format("sprite addition failed for %s %b", getEntityKind(), GameScene.isSceneReady());
@@ -1281,19 +1277,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         if (sprite == null) {
-
             if (!GameScene.mayCreateSprites()) {
                 throw new TrackedRuntimeException("scene not ready for " + getEntityKind());
             }
-
-            if (Util.isDebug()) {
-                if (!isAlive()) {
-                    //throw new TrackedRuntimeException("its dead! leave it alone! " + getEntityKind());
-                }
+            if (isAlive()) {
+                sprite = newSprite();
+                sprite.lightness(lightness);
+                setGlowing(glowColor, glowPeriod);
+            } else {
+                sprite = DummySprite.instance;
             }
-            sprite = newSprite();
-            sprite.lightness(lightness);
-            setGlowing(glowColor, glowPeriod);
         }
 
         if (sprite == null) {
@@ -1306,7 +1299,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             updateSprite(sprite);
         }
 
-        assert (sprite.getParent() != null);
+        if(sprite.getParent() == null) {
+            sprite = DummySprite.instance;
+        }
 
         return sprite;
     }

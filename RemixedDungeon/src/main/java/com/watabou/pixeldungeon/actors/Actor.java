@@ -206,12 +206,15 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
     public static void processTurnBased(float elapsed) {
         Hero hero = Dungeon.hero;
+        if(!hero.isAlive()) {
+            if (motionInProgress()) {
+                return;
+            }
+        }
         // action still in progress
         if (current == hero && !current.timeout()) {
             return;
         }
-
-        CharSprite heroSprite = hero.getSprite();
 
         GLog.debug("Main loop start");
         while ((current = nextActor()) != null) {
@@ -222,11 +225,15 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
                     return;
                 }
             }
+
             GLog.debug("actor %s %4.1f hero: %4.1f now: %4.1f", current, current.time, hero.actorTime(), now);
 
             if (current != hero) {
                 current.act();
                 current = null;
+                if(!hero.isAlive()) {
+                    break;
+                }
             } else {
                 current.act();
                 break;
