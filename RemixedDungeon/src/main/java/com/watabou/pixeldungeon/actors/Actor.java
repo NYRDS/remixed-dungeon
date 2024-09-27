@@ -82,6 +82,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
     @LuaInterface
     public void deactivateActor() {
         time = Util.BIG_FLOAT;
+        Actor.remove(this);
     }
 
     @Override
