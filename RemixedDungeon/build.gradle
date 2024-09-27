@@ -34,7 +34,7 @@ android {
 
         applicationId "com.nyrds.pixeldungeon.ml"
         versionCode 1218
-        versionName "32.1.beta.1"
+        versionName "32.1.beta.11"
         targetSdkVersion 34
         compileSdkVersion 34
         minSdkVersion 21
