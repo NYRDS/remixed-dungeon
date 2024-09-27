@@ -9,6 +9,7 @@ import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
@@ -44,6 +45,9 @@ public class WndItem extends Window {
         }
 
         Text info = PixelScene.createMultiline(item.info(), GuiProperties.regularFontSize());
+        if(Util.isDebug()) {
+            info.text(info.text()+Utils.format("\ncooldown %.1f\nowner %s",item.cooldown(),item.getOwner().getEntityKind()));
+        }
         info.maxWidth(WIDTH);
         info.setX(titlebar.left());
         info.setY(titlebar.bottom() + GAP);

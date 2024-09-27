@@ -486,7 +486,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
         return owner;
     }
 
-    private class ItemIterator implements Iterator<Item> {
+    public class ItemIterator implements Iterator<Item> {
 
         private int index = 0;
 

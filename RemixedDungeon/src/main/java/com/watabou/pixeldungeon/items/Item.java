@@ -317,6 +317,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
     protected void onDetach() {
         setOwner(CharsList.DUMMY);
+        Actor.remove(this);
     }
 
     public Item upgrade() {
@@ -495,13 +496,14 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
     @Override
     public void storeInBundle(Bundle bundle) {
+        super.storeInBundle(bundle);
         bundle.put(QUANTITY, quantity());
         bundle.put(LEVEL, level());
     }
 
     @Override
     public void restoreFromBundle(Bundle bundle) {
-
+        super.restoreFromBundle(bundle);
         getId();
 
         quantity(bundle.getInt(QUANTITY));
@@ -513,6 +515,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
             degrade(-level);
         }
 
+        setOwner(getOwner());
         //We still need this because upgrade erase cursed flag
         setCursed(bundle.optBoolean("cursed", false));
 
@@ -781,6 +784,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     }
 
     public void setOwner(Char owner) {
+        GLog.debug("%s owner %s", getEntityKind(), owner.getEntityKind());
         Actor.add(this);
         this.owner = owner;
         if (owner.valid()) {
@@ -822,5 +826,6 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
             owner.getBelongings().removeItem(this);
         }
+        Actor.remove(this);
     }
 }

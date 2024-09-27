@@ -74,7 +74,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
         this.time = now + time;
     }
 
-    protected float cooldown() {
+    @LuaInterface
+    public float cooldown() {
         return time - now;
     }
 
@@ -409,6 +410,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
             chars.put(ch.getPos(), ch);
             all.addAll(ch.buffs());
+            for (var item : ch.getBelongings()) {
+                all.add(item);
+            }
         }
 
 
