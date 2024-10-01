@@ -2259,6 +2259,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Override
     protected void useCell() {
-        Actor.occupyCell(this);
+        if(level().cellValid(getPos())) {
+            Actor.occupyCell(this);
+            if (hasSprite() && !sprite.isMoving) {
+                sprite.place(getPos());
+            }
+        }
     }
 }
