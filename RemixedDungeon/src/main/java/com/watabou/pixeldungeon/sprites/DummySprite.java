@@ -1,18 +1,23 @@
 
 package com.watabou.pixeldungeon.sprites;
 
+import static com.watabou.pixeldungeon.sprites.ModernHeroSpriteDef.HERO_MODERN_SPRITES_DESC_HERO_JSON;
+
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 
-public class DummySprite extends MobSprite {
+import org.jetbrains.annotations.NotNull;
+
+public class DummySprite extends HeroSpriteDef {
 
 	public static final DummySprite instance = new DummySprite();
 	public static final Group dummyGroup = new Group();
 
 	public DummySprite() {
-		super();
+		super(HERO_MODERN_SPRITES_DESC_HERO_JSON,0);
 		
 		texture("hero/empty.png");
 		
@@ -66,5 +71,20 @@ public class DummySprite extends MobSprite {
 	@Override
 	public Group getParent() {
 		return dummyGroup;
+	}
+
+	@Override
+	public String[] getLayersDesc() {
+		return new String[0];
+	}
+
+	@Override
+	public @NotNull String getDeathEffect() {
+		return "";
+	}
+
+	@Override
+	public void heroUpdated(Hero hero) {
+
 	}
 }

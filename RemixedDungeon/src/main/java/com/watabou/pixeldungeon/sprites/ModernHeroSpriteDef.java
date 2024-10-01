@@ -53,7 +53,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 	private static final String LAYER_LEFT_ITEM_BACK  = "left_back_item";
 	private static final String LAYER_RIGHT_ITEM_BACK = "right_back_item";
 
-	private static final String HERO_MODERN_SPRITES_DESC_HERO_JSON   = "hero_modern/spritesDesc/Hero.json";
+	static final String HERO_MODERN_SPRITES_DESC_HERO_JSON   = "hero_modern/spritesDesc/Hero.json";
 	private static final String HERO_MODERN_SPRITES_DESC_STATUE_JSON = "hero_modern/spritesDesc/Statue.json";
 
 	private static final String BODY_TYPE = "bodyType";
