@@ -137,22 +137,16 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
         if (hero.valid() && all.contains(hero)) {
             Statistics.duration = hero.actorTime();
         }
-/*
-        float min = Util.BIG_FLOAT;
+
+        float heroTime = hero.actorTime();
+
+        now = heroTime;
+
         for (Actor a : all) {
-            if (a.time < min) {
-                min = a.time;
+            if (a.time < now) {
+                a.time = now;
             }
         }
-
-        GLog.debug("time fix: %.1f", min);
-
-        for (Actor a : all) {
-            a.time -= min;
-            a.prevTime -= min;
-        }
-        now = 0;
- */
     }
 
     public static void init(@NotNull Level level) {
@@ -217,6 +211,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
     public static void processTurnBased(float elapsed) {
         Hero hero = Dungeon.hero;
         if(!hero.isAlive()) {
+            if(Util.isDebug()) {
+                return;
+            }
             if (motionInProgress()) {
                 return;
             }
@@ -226,7 +223,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
             return;
         }
 
-        GLog.debug("Main loop start");
+        GLog.debug("Main loop start - %d actors", all.size());
         while ((current = nextActor()) != null) {
             now = current.time;
 
@@ -249,35 +246,6 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
                 break;
             }
         }
-
-		/*
-		if(!batchInProgress) {
-			npcActors = actBeforeHero();
-			GLog.debug("got %d actors", npcActors.size());
-			if(!npcActors.isEmpty()) {
-				for (var actor : npcActors) {
-					GLog.debug("actor %s %4.1f hero: %4.1f now: %4.1f",actor, actor.time, Dungeon.hero.actorTime(), now);
-					actor.act();
-					current = actor;
-					actor.next();
-				}
-				return;
-			}
-			current = Dungeon.hero;
-			now = current.time;
-			GLog.debug("hero move!");
-			Dungeon.hero.act();
-		} else {
-			for (val actor: npcActors) {
-				if (actor instanceof Char && ((Char)actor).isAlive() && ((Char)actor).hasSprite() && ((Char)actor).getSprite().doingSomething()) {
-					GLog.debug("%s still acting", actor);
-					return;
-				}
-			}
-			batchInProgress = false;
-			processTurnBased();
-		}
-		 */
     }
 
     public static void process(float elapsed) {
@@ -354,24 +322,6 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
         return next;
     }
 
-    //get sorted array of actor to act before Dungeon.hero
-    static ArrayList<Actor> actBeforeHero() {
-        ArrayList<Actor> toActBeforeHero = new ArrayList<>();
-        chars.clear();
-        Hero hero = Dungeon.hero;
-
-        for (Actor actor : all) {
-            actor.useCell();
-            if (actor != hero && actor.time < hero.actorTime()) {
-                toActBeforeHero.add(actor);
-            }
-        }
-
-        Collections.sort(toActBeforeHero, (a1, a2) -> Float.compare(a1.time, a2.time));
-
-        return toActBeforeHero;
-    }
-
     static ArrayList<Actor> toActBeforeHero = new ArrayList<>();
 
     static Actor nextActor() {
@@ -403,7 +353,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
         add(actor, now + delay);
     }
 
-    private static void add(Actor actor, float time) {
+    private static void add(Actor actor, float new_time) {
         actor.added = true;
 
         if (all.contains(actor)) {
@@ -411,7 +361,10 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
         }
 
         all.add(actor);
-        actor.time = time;
+
+        if(actor.time < new_time) {
+            actor.time = new_time;
+        }
 
         if (actor instanceof Char) {
             Char ch = (Char) actor;

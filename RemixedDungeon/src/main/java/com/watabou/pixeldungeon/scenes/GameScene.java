@@ -446,7 +446,9 @@ public class GameScene extends PixelScene {
         mapBuildingComplete = true; // Epic level gen compatibility speedup
         updateMap();
 
+
         fadeIn();
+        Actor.fixTime();
 
         Dungeon.observe();
         hero.updateSprite();
