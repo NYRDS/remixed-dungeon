@@ -353,7 +353,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
 
         GameLoop.pushUiTask(() -> {
             if (!saving) {
-                SaveUtils.loadGame(slot, Dungeon.hero.getHeroClass());
+                SaveUtils.loadGame(slot, Dungeon.heroClass);
             } else {
                 if (GamePreferences.donated() == 0 && RemixedDungeon.canDonate()) {
 
