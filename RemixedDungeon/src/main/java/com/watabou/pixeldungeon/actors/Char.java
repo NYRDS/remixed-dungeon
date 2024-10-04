@@ -866,8 +866,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     @Override
-    public void spend(float time) {
-        float scaledTime = time * timeScale();
+    public void spend(float d_t) {
+        float scaledTime = d_t * timeScale();
 
         for (Item item : getBelongings()) {
             if (item instanceof IActingItem && item.isEquipped(this)) {

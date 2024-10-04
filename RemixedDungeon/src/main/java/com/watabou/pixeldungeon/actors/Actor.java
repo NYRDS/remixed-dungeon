@@ -56,22 +56,27 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
     private static final float SPEND_EMA_ALPHA = 0.1f;
     private float spendEma = 1f;
 
-    public void spend(float time) {
-        GLog.debug("%s spend %4.1f", getEntityKind(), time);
-        if (time < 0.01) {
-            GLog.debug("sus!");
+    public void spend(float d_t) {
+        GLog.debug("%s spend %4.1f", getEntityKind(), d_t);
+        if(this instanceof Char) {
+            if (d_t < 0.01) {
+                GLog.debug("sus!");
+            }
+            if (d_t > 5) {
+                GLog.debug("sus!");
+            }
         }
-        checkTime();
-        this.time += time;
-        spendEma = (1 - SPEND_EMA_ALPHA) * spendEma + SPEND_EMA_ALPHA * time;
+        time += d_t;
+        spendEma = (1 - SPEND_EMA_ALPHA) * spendEma + SPEND_EMA_ALPHA * d_t;
         if (spendEma < 0.01) {
             GLog.debug("spendEma = %4.2f", spendEma);
         }
     }
 
-    public void postpone(float time) {
-        checkTime();
-        this.time = now + time;
+    public void postpone(float d_t) {
+        if (time < now + d_t) {
+            time = now + d_t;
+        }
     }
 
     @LuaInterface
@@ -130,20 +135,24 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
         Hero hero = Dungeon.hero;
 
         if (hero.valid() && all.contains(hero)) {
-            Statistics.duration += now;
+            Statistics.duration = hero.actorTime();
         }
-
+/*
         float min = Util.BIG_FLOAT;
         for (Actor a : all) {
             if (a.time < min) {
                 min = a.time;
             }
         }
+
+        GLog.debug("time fix: %.1f", min);
+
         for (Actor a : all) {
             a.time -= min;
             a.prevTime -= min;
         }
-        now = min;
+        now = 0;
+ */
     }
 
     public static void init(@NotNull Level level) {
@@ -478,21 +487,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
     @LuaInterface
     public float actorTime() {
-        checkTime();
         return time;
-    }
-
-    private void checkTime() {
-        return;
-        /*
-        if (this == Dungeon.hero) {
-            return;
-        }
-        if (time < now - 0.00001f) {
-            EventCollector.logException("Actor time for " + getEntityKind() + " is in the past: " + time + " < " + now);
-        }
-
-         */
     }
 
     @LuaInterface

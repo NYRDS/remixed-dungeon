@@ -46,7 +46,9 @@ public class WndItem extends Window {
 
         Text info = PixelScene.createMultiline(item.info(), GuiProperties.regularFontSize());
         if(Util.isDebug()) {
-            info.text(info.text()+Utils.format("\ncooldown %.1f\nowner %s",item.cooldown(),item.getOwner().getEntityKind()));
+            if(item.cooldown()<Util.BIG_FLOAT/2) {
+                info.text(info.text() + Utils.format("\ncooldown %.1f\nowner %s", item.cooldown(), item.getOwner().getEntityKind()));
+            }
         }
         info.maxWidth(WIDTH);
         info.setX(titlebar.left());
