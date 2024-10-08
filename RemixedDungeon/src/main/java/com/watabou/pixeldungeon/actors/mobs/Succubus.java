@@ -31,6 +31,7 @@ public class Succubus extends Mob {
 
 		expForKill = 12;
 		maxLvl = 25;
+		carcassChance = 0;
 
 		loot(new ScrollOfLullaby(), 0.05f);
 
