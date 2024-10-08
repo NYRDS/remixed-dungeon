@@ -79,6 +79,7 @@ import java.util.Collection;
 import java.util.GregorianCalendar;
 import java.util.HashSet;
 
+import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.val;
 
@@ -90,7 +91,9 @@ public class Dungeon {
     public static boolean dewVial; // true if the dew vial can be spawned
     public static int transmutation; // depth number for a well of transmutation
 
+    @Getter
     private static int challenges;
+    @Getter
     private static int facilitations;
 
     @NotNull
@@ -121,6 +124,7 @@ public class Dungeon {
 
     public static HeroClass heroClass;
 
+    @Getter
     private static boolean isometricMode = false;
     public static boolean isometricModeAllowed = false;
 
@@ -876,7 +880,12 @@ public class Dungeon {
                 return Level.INVALID_CELL;
             }
 
-            Char chr = Actor.findChar(to);
+            Char chr = null;
+
+            if (level.fieldOfView[to]) {
+                chr = Actor.findChar(to);
+            }
+
 
             if (chr instanceof Mob) {
                 Mob mob = (Mob) chr;
@@ -971,10 +980,6 @@ public class Dungeon {
         saveLevel(getLevelSaveFile(currentPosition()), Dungeon.level);
     }
 
-    public static int getChallenges() {
-        return challenges;
-    }
-
 
     public static void setFacilitation(int mask) {
         facilitations = facilitations | mask;
@@ -1001,10 +1006,6 @@ public class Dungeon {
     public static void resetChallenge(int mask) {
         challenges = challenges & ~mask;
         setChallenges(challenges);
-    }
-
-    public static int getFacilitations() {
-        return facilitations;
     }
 
     public static void setChallenges(int challenges) {
@@ -1062,7 +1063,4 @@ public class Dungeon {
         Dungeon.isometricMode = isometricMode;
     }
 
-    public static boolean isIsometricMode() {
-        return isometricMode;
-    }
 }
