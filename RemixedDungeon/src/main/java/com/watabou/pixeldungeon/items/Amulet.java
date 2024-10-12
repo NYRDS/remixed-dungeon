@@ -16,62 +16,55 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
 public class Amulet extends Item {
-	
-	private static final String AC_END = "Amulet_ACEnd";
-	
-	{
+
+    private static final String AC_END = "Amulet_ACEnd";
+
+    {
         name = StringsManager.getVar(R.string.Amulet_Name);
-		image = ItemSpriteSheet.AMULET;
-	}
-	
-	@Override
-	public ArrayList<String> actions(Char hero ) {
-		ArrayList<String> actions = super.actions( hero );
-		actions.remove(AC_THROW);
-		actions.remove(AC_DROP);
-		actions.add( AC_END );
-		return actions;
-	}
-	
-	@Override
-	public void _execute(@NotNull Char chr, @NotNull String action ) {
-		if (action.equals(AC_END)) {
-			showAmuletScene( false );
-		} else {
-			super._execute(chr, action );
-		}
-	}
-	
-	@Override
-	public boolean doPickUp(@NotNull Char hero ) {
-		if (super.doPickUp( hero )) {
-			
-			if (!Statistics.amuletObtained) {
-				Statistics.amuletObtained = true;
-				Badges.validateVictory();
+        image = ItemSpriteSheet.AMULET;
+    }
 
-				showAmuletScene( true );
-			}
-			
-			return true;
-		}
+    @Override
+    public ArrayList<String> actions(Char hero) {
+        ArrayList<String> actions = super.actions(hero);
+        actions.remove(AC_THROW);
+        actions.remove(AC_DROP);
+        actions.add(AC_END);
+        return actions;
+    }
 
-		return false;
-	}
-	
-	private void showAmuletScene( boolean showText ) {
-		Dungeon.save(false);
-		AmuletScene.noText = !showText;
-		GameLoop.switchScene( AmuletScene.class );
-	}
-	
-	@Override
-	public boolean isIdentified() {
-		return true;
-	}
-	
-	@Override
-	public boolean isUpgradable() {
-		return false;
-	}
+    @Override
+    public void _execute(@NotNull Char chr, @NotNull String action) {
+        if (action.equals(AC_END)) {
+            showAmuletScene(false);
+        } else {
+            super._execute(chr, action);
+        }
+    }
+
+    @Override
+    public void pickedUp(@NotNull Char hero) {
+        if (!Statistics.amuletObtained) {
+            Statistics.amuletObtained = true;
+            Badges.validateVictory();
+
+            showAmuletScene(true);
+        }
+    }
+
+    private void showAmuletScene(boolean showText) {
+        Dungeon.save(false);
+        AmuletScene.noText = !showText;
+        GameLoop.switchScene(AmuletScene.class);
+    }
+
+    @Override
+    public boolean isIdentified() {
+        return true;
+    }
+
+    @Override
+    public boolean isUpgradable() {
+        return false;
+    }
 }

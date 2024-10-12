@@ -831,4 +831,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
     @LuaInterface
     public void setChargeKnown(boolean chargeKnown) {} //RA compatibility
+
+    public void pickedUp(Char hero) {
+    }
 }

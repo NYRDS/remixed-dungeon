@@ -478,6 +478,7 @@ public class CharUtils {
                     GLog.i(StringsManager.getVar(R.string.Hero_SomethingElse));
                 }
             }
+            item.pickedUp(hero);
 
         } else {
             Heap newHeap = hero.level().drop(item, heapPos);
