@@ -229,13 +229,13 @@ return itemLib.init{
 
     activate = function(self, item, hero)
 
-        local Buff = RPD.affectBuff(hero,"NotImplementedTestBuff", 10)
-        Buff:level(3)
-        Buff:setSource(item)
+      --  local Buff = RPD.affectBuff(hero,"NotImplementedTestBuff", 10)
+      --  Buff:level(3)
+      --  Buff:setSource(item)
     end,
 
     deactivate = function(self, item, hero)
-        RPD.removeBuff(hero,"NotImplementedTestBuff")
+      --  RPD.removeBuff(hero,"NotImplementedTestBuff")
     end,
 
     act = function(self,item)
