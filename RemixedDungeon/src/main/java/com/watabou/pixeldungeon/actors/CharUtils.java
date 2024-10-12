@@ -117,7 +117,7 @@ public class CharUtils {
         }
 
         if (enemy.level().water[enemy.getPos()] && !enemy.isFlying()) {
-            damage *= 2f;
+            damage *= 2;
         }
 
         enemy.damage(damage, LightningTrap.LIGHTNING);
@@ -224,7 +224,12 @@ public class CharUtils {
 
     @NotNull
     public static CharAction actionForCell(@NonNull Char actor, int cell, @NotNull Level level) {
-        final Char target = Actor.findChar(cell);
+        Char target = null;
+
+        if(level.fieldOfView[cell]) {
+            target = Actor.findChar(cell);
+        }
+
         final Char controlTarget = actor.getControlTarget();
 
 
@@ -245,7 +250,7 @@ public class CharUtils {
             }
         }
 
-        if (level.fieldOfView[cell] && target != null && target != controlTarget) {
+        if (target != null && target != controlTarget) {
             if (target.friendly(controlTarget)) {
                 return new Interact(target);
             } else {
@@ -303,34 +308,25 @@ public class CharUtils {
     }
 
     public static void execute(Char target, Char hero, @NotNull String action) {
-        if (action.equals(CommonActions.MAC_STEAL)) {
-            hero.nextAction(new Steal(target));
-            return;
-        }
-
-        if (action.equals(CommonActions.MAC_TAUNT)) {
-            hero.nextAction(new Taunt(target));
-            return;
-        }
-
-        if (action.equals(CommonActions.MAC_PUSH)) {
-            hero.nextAction(new Push(target));
-            return;
-        }
-
-        if (action.equals(CommonActions.MAC_HIT)) {
-            hero.nextAction(new Attack(target));
-            return;
-        }
-
-        if (action.equals(CommonActions.MAC_ORDER)) {
-            hero.nextAction(new Order(target));
-            return;
-        }
-
-        if(action.equals(CommonActions.MAC_EXPEL)){
-            hero.nextAction(new Expel(target));
-            return;
+        switch (action) {
+            case CommonActions.MAC_STEAL:
+                hero.nextAction(new Steal(target));
+                return;
+            case CommonActions.MAC_TAUNT:
+                hero.nextAction(new Taunt(target));
+                return;
+            case CommonActions.MAC_PUSH:
+                hero.nextAction(new Push(target));
+                return;
+            case CommonActions.MAC_HIT:
+                hero.nextAction(new Attack(target));
+                return;
+            case CommonActions.MAC_ORDER:
+                hero.nextAction(new Order(target));
+                return;
+            case CommonActions.MAC_EXPEL:
+                hero.nextAction(new Expel(target));
+                return;
         }
 
         target.getScript().run("executeAction", target, action);
