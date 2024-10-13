@@ -66,4 +66,9 @@ public class DummyItem extends EquipableItem {
     public String getEntityKind() {
         return "DummyItem";
     }
+
+    @Override
+    public boolean doPickUp(@NotNull Char hero) {
+        return false;
+    }
 }

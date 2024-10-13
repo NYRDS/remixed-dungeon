@@ -219,7 +219,7 @@ public class Heap implements Bundlable, NamedEntityKind  {
     public void drop(@NotNull Item item) {
 
         if (!item.valid()) {
-            EventCollector.logException("Invalid item");
+//            EventCollector.logException("Invalid item");
             return;
         }
 
