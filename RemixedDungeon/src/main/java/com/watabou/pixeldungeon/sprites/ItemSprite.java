@@ -77,10 +77,6 @@ public class ItemSprite extends MovieClip {
 		setOrigin(scale.x * SIZE / 2, scale.y * SIZE / 2);
 	}
 
-	public void link() {
-		link(heap);
-	}
-
 	public void link(@NotNull Heap heap) {
 		this.heap = heap;
 		float scale = heap.scale();

@@ -71,7 +71,7 @@ public class WellWater extends Blob {
 							heap.replace( oldItem, newItem );
 						}
 					}
-					heap.sprite.link();
+					heap.sprite.link(heap);
 					setVolume(off[pos] = cur[pos] = 0);
 					return true;
 				} else {

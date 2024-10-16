@@ -170,7 +170,7 @@ public class Heap implements Bundlable, NamedEntityKind  {
 
         if (type != Type.MIMIC) {
             type = Type.HEAP;
-            sprite.link();
+            sprite.link(this);
             sprite.drop();
         }
     }
