@@ -1446,7 +1446,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Zombie_Gender">masculine</string>
   <string name="Zombie_Name_Objective">zombiak</string>
   <string name="Zombie_Desc">Loch od zawsze był niebezpiecznym miejscem by zacząć swą przygodę, co wielu awanturników przypłaciło życiem. Jednakże ci najbardziej pechowi, którzy to umarli na terenie Nekropolii są zmuszeni do poruszania się po jej salach jako żywe, gnijące ścierwa.</string>
-  <string name="NecromancerNPC_Intro2">Ah! Cóż za rzadki widok! Łowca przygód, ponadto nie będący po prostu kolejnymi szczątkami. Niewiarygodne! Oh... błagam o wybaczenie, czasami zbyt się ekscytuję. Osobiście jestem nekromantą, i pomimo tego, że studiuję śmierć i jest to mój jedyny sposób na życie, ciągłe patrzenie na zwłoki potrafi być nużące. Z drugiej strony, po to tu właśnie jestem. Z moich obliczeń wynika, że w przeciągu paru tygodni zdarzy się tu, w tych lochach, wydarzy się coś niespotykanego! _Necropolis_, starożytne miasto śmierci otworzy swe podwoje! I... to w sumie tyle co na ten moment wiem, zmarnowałem już i tak wystarczająco dużo czasu. Pójdę zaraz za tobą, tylko muszę się najsampierw przygotować.</string>
+  <string name="NecromancerNPC_Intro2">Ah! Cóż za rzadki widok! Łowca przygód, ponadto nie będący po prostu kolejnymi szczątkami. Niewiarygodne! Oh... błagam o wybaczenie, czasami zbyt się ekscytuję. Osobiście jestem nekromantą, i pomimo tego, że studiuję śmierć i jest to mój jedyny sposób na życie, ciągłe patrzenie na zwłoki potrafi być nużące. Z drugiej strony, po to tu właśnie jestem. Z moich obliczeń wynika, że w przeciągu paru tygodni zdarzy się tu, w tych lochach, wydarzy się coś niespotykanego! _Necropolis_, starożytne miasto śmierci otworzy swe podwoje! I... to w sumie tyle co na ten moment wiem, zmarnowałem już i tak wystarczająco dużo czasu. Pójdę zaraz za tobą, tylko muszę się najpierw sam przygotować.</string>
   <string name="Badges_Lich_Slain">Lich pokonany</string>
   <string name="ElvenDagger_Name">elficki sztylet</string>
   <string name="ElvenDagger_Info">Broń tą wykonano ze specyficznego stopu metali, sprawiając że jest dużo lżejsza w porównaniu do zwykłego sztyletu.</string>
@@ -2205,7 +2205,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="WndSettings_Quickslots">Sloty szybkiego wyboru</string>
   <string name="Abilities_Default">Mistrzostwo</string>
   <string name="Abilities_Common">Pospolite Zaklęcia</string>
-  <string name="Abilities_Elemental">Zaklęcia Elementarne</string>
+  <string name="Abilities_Elemental">Zaklęcia żywiołów</string>
   <string name="Abilities_Necromancy">Nekromancja</string>
   <string name="WndSettings_UiSettings">Ustawienia Interfejsu</string>
   <string name="WndSettings_ActionButtonSize">Rozmiar przycisku akcji</string>
@@ -2439,7 +2439,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="HeroClass_MagPerks_1">Magowie ładują swoje różdżki dużo szybciej.</string>
   <string name="HeroClass_MagPerks_2">Każde zjedzone pożywienie przywraca 1 ładunek wszystkim rożkom w ekwipunku.</string>
   <string name="HeroClass_MagPerks_3">Magowie mogą używać kostury do walki wręcz.</string>
-  <string name="HeroClass_MagPerks_4">Magowie mogą rzucać zaklęcia Elementarne.</string>
+  <string name="HeroClass_MagPerks_4">Magowie mogą rzucać zaklęcia żywiołów.</string>
   <string name="HeroClass_MagPerks_5">Zwój Identyfikacji jest ci znany od samego początku rozgrywki.</string>
   <string name="HeroClass_RogPerks_0">Łotrzyki zaczynają z Pierścieniem Cieni+1</string>
   <string name="HeroClass_RogPerks_1">Łotrzyki identyfikują pierścień natychmiast po założeniu.</string>
@@ -2610,7 +2610,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="KunaiThrow_Name">Rzut Kunai</string>
   <string name="KunaiThrow_Info">Ten Śmiercionośny Rzut Kunai jest wykonywany tak szybko, że nie zdążysz nawet wybrać swojego celu.\n\nPrawdziwy Mistrz jest w stanie wykonać więcej niż jeden rzut na raz.</string>
   <string name="Haste_Name">Ekstremalny Pośpiech</string>
-  <string name="Haste_Info">Używająć Pośpiechu zyskuje się niesamowite prędkości, takie aż wszytko wokół zamiera w miejscu .Wykorzystuje ono jednak dużo energii, więc można go urzywać jedynie przez krótki okres czasu.\n\nMistrzowie Pośpiechu są w stanie zostać w nim dłużej.</string>
+  <string name="Haste_Info">Pośpiech pozwoli poruszać się z ekstremalną prędkością, wszystko wokół niego będzie się wydawać statyczne. Taki pośpiech zużywa dużo energii, więc jest to możliwe tylko przez krótki okres czasu.\n\n Uzdolniony mistrz jest w stanie działać w pośpiechu przez dłuższy czas.</string>
   <string name="Char_Stole_0">%1$sukradł %2$s od %3$s</string>
   <string name="Char_Stole_1">%1$sukradł %2$s od %3$s</string>
   <string name="Char_Stole_2">%1$sukradł %2$s od %3$s</string>
