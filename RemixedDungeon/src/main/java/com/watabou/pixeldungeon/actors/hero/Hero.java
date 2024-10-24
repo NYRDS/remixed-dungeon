@@ -399,12 +399,13 @@ public class Hero extends Char {
 
     @Override
     public void damage(int dmg, @NotNull NamedEntityKind src) {
-        restoreHealth = false;
-        super.damage(dmg, src);
-
         if (!isAlive()) {
             return;
         }
+
+        restoreHealth = false;
+        super.damage(dmg, src);
+
 
         setControlTarget(this);
 
