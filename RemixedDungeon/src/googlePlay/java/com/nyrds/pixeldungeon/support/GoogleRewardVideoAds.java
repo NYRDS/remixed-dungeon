@@ -10,7 +10,6 @@ import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
-import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -50,6 +49,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 						public void onAdDismissedFullScreenContent() {
 							mCinemaRewardAd = null;
 							GLog.debug("reward state " + rewardEarned);
+							EventCollector.logEvent("Admob reward shown");
 							GameLoop.runOnMainThread(GoogleRewardVideoAds.this::loadNextVideo);
 							returnTo.returnToWork(rewardEarned);
 							rewardEarned = false;

@@ -37,10 +37,6 @@ public class AppodealAdapter {
             return;
         }
 
-//        Appodeal.disableWriteExternalStoragePermissionCheck();
-//        Appodeal.disableLocationPermissionCheck();
-
-
         if (Util.isDebug()) {
             Appodeal.setLogLevel(Log.LogLevel.verbose);
             Appodeal.setTesting(true);

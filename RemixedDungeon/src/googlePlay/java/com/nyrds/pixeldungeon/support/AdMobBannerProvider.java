@@ -7,10 +7,8 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.LoadAdError;
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.util.StringsManager;
 
 public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
     private AdView adView;
@@ -44,6 +42,12 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
         public void onAdLoaded() {
             Ads.updateBanner(adView);
             loaded = true;
+        }
+
+        @Override
+        public void onAdImpression() {
+            super.onAdImpression();
+            EventCollector.logEvent("admob banner shown");
         }
 
         @Override
