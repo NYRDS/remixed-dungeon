@@ -14,10 +14,8 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
-import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.yandex.mobile.ads.banner.BannerAdView;
-import com.yandex.mobile.ads.common.InitializationListener;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -36,12 +34,7 @@ public class AdsUtils {
 
     static {
         try {
-            com.yandex.mobile.ads.common.MobileAds.initialize(RemixedDungeonApp.getContext(), new InitializationListener() {
-                @Override
-                public void onInitializationCompleted() {
-                    YandexInitialized = true;
-                }
-            });
+            com.yandex.mobile.ads.common.MobileAds.initialize(RemixedDungeonApp.getContext(), () -> YandexInitialized = true);
 
             if (!GamePreferences.uiLanguage().equals("ru")) {
                 //AdMob
@@ -52,13 +45,13 @@ public class AdsUtils {
                     GLog.debug("admob status: %s", status.toString());
                 });
 
-                bannerFails.put(new AdMobBannerProvider(StringsManager.getVar(R.string.easyModeAdUnitId)), -2);
-                interstitialFails.put(new AdMobInterstitialProvider(ModdingMode.getInterstitialId()), -2);
+                bannerFails.put(new AdMobBannerProvider(StringsManager.getVar(R.string.easyModeAdUnitId)), -3);
+                interstitialFails.put(new AdMobInterstitialProvider(StringsManager.getVar(R.string.saveLoadAdUnitId)), -3);
             }
 
 
             bannerFails.put(new YandexBannerProvider(StringsManager.getVar(R.string.banner_yandex)), -2);
-            interstitialFails.put(new YandexInterstitialProvider(ModdingMode.getInterstitialId()), -2);
+            interstitialFails.put(new YandexInterstitialProvider(StringsManager.getVar(R.string.interstitial_yandex)), -2);
 
             if (!RemixedDungeonApp.checkOwnSignature()) {
                 bannerFails.put(new AAdsComboProvider(), 0);
@@ -85,10 +78,10 @@ public class AdsUtils {
                 rewardVideoFails.put(new AppodealRewardVideoProvider(), -1);
             }
 
-            rewardVideoFails.put(new YandexRewardVideoAds(ModdingMode.getRewardedVideoId()), -2);
+            rewardVideoFails.put(new YandexRewardVideoAds(StringsManager.getVar(R.string.rewarded_yandex)), -2);
 
             if (!GamePreferences.uiLanguage().equals("ru")) {
-                rewardVideoFails.put(new GoogleRewardVideoAds(ModdingMode.getRewardedVideoId()), -20);
+                rewardVideoFails.put(new GoogleRewardVideoAds(StringsManager.getVar(R.string.cinemaRewardAdUnitId)), -20);
             }
 
         } catch (Exception e) {

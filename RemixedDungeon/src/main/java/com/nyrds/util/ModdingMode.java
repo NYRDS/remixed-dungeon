@@ -1,12 +1,10 @@
 package com.nyrds.util;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.Assets;
 import com.nyrds.platform.storage.FileSystem;
-import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -369,22 +367,5 @@ public class ModdingMode {
 
 	public static RuntimeException modException(String s, Exception e) {
 		return new ModError(mActiveMod + ":" + s, e);
-	}
-
-	public static String getRewardedVideoId() {
-
-		if(!Util.isDebug() && rewardVideoIds.containsKey(activeMod())) {
-			return rewardVideoIds.get(activeMod());
-		}
-
-		return StringsManager.getVar(R.string.rewarded_yandex);
-	}
-
-	public static String getInterstitialId() {
-		if(!Util.isDebug() && interstitialIds.containsKey(activeMod())) {
-			return interstitialIds.get(activeMod());
-		}
-
-		return StringsManager.getVar(R.string.interstitial_yandex);
 	}
 }
