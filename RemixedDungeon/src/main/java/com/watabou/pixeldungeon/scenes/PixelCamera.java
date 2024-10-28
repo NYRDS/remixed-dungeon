@@ -3,7 +3,7 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Visual;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
@@ -21,7 +21,7 @@ class PixelCamera extends Camera {
         _scroll.reset();
     }
 
-    public void setTarget(Visual target) {
+    public void setTarget(CharSprite target) {
         if (target == null) {
             scroll.set(_scroll);
         }

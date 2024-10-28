@@ -20,6 +20,7 @@ package com.watabou.noosa;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.watabou.glwrap.Matrix;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
@@ -52,7 +53,7 @@ public class Camera extends Gizmo {
 	
 	public final PointF scroll = new PointF();
 
-	protected Visual target;
+	protected CharSprite target;
 	
 	private float shakeMagX		= 10f;
 	private float shakeMagY		= 10f;
@@ -205,7 +206,7 @@ public class Camera extends Gizmo {
 		focusOn( point.x, point.y );
 	}
 	
-	public void focusOn( Visual visual ) {
+	public void focusOn(CharSprite visual ) {
 		focusOn( visual.center() );
 	}
 	
@@ -255,7 +256,7 @@ public class Camera extends Gizmo {
 		return target;
 	}
 
-	public void setTarget(Visual target) {
+	public void setTarget(CharSprite target) {
 		this.target = target;
 		if( target != null ) {
 			focusOn(target);

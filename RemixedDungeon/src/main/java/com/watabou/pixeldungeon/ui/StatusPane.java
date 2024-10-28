@@ -23,6 +23,7 @@ import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndChar;
 import com.watabou.pixeldungeon.windows.WndGame;
@@ -79,7 +80,7 @@ public class StatusPane extends Component {
         add(new TouchArea(0, 1, 30, 30) {
             @Override
             protected void onClick(Touch touch) {
-                Image sprite = hero.getSprite();
+                CharSprite sprite = hero.getSprite();
                 if (!sprite.isVisible()) {
                     Camera.main.focusOn(sprite);
                 }

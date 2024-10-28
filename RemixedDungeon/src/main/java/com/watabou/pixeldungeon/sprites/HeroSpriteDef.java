@@ -114,8 +114,9 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
     @Override
     public void place(int p) {
         ch.ifPresent(chr -> {
+            boolean positionChanged = chr.getPos() != p;
             super.place(p);
-            if (chr == Dungeon.hero) {
+            if (chr == Dungeon.hero && positionChanged) {
                 Camera.main.setTarget(this);
             }
         });
