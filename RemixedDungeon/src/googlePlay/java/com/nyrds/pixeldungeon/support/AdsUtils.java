@@ -41,8 +41,7 @@ public class AdsUtils {
                 com.google.android.gms.ads.MobileAds.initialize(RemixedDungeonApp.getContext(), initializationStatus -> {
                     AdsUtils.initializationStatus = initializationStatus;
                     var status = initializationStatus.getAdapterStatusMap();
-
-                    GLog.debug("admob status: %s", status.toString());
+                    EventCollector.logEvent("AdMob", "status", status.toString());
                 });
 
                 bannerFails.put(new AdMobBannerProvider(StringsManager.getVar(R.string.easyModeAdUnitId)), -3);

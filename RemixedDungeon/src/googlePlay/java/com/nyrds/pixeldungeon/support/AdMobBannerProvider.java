@@ -42,6 +42,7 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
         public void onAdLoaded() {
             Ads.updateBanner(adView);
             loaded = true;
+            EventCollector.logEvent("admob banner loaded");
         }
 
         @Override

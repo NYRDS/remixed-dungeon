@@ -35,11 +35,12 @@ public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialPr
                     @Override
                     public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
                         mInterstitialAd = interstitialAd;
+                        EventCollector.logEvent("admob interstitial loaded");
                     }
 
                     @Override
                     public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        EventCollector.logEvent("Interstitial failed", loadAdError.toString());
+                        EventCollector.logEvent("admob interstitial failed", loadAdError.toString());
                     }
                 }
         );
