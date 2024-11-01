@@ -141,7 +141,7 @@ dependencies {
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
     implementation 'org.hjson:hjson:3.0.0'
     implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices
-    implementation 'org.jetbrains:annotations:23.0.0'
+    implementation 'org.jetbrains:annotations:24.1.0'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
     compileOnly 'org.projectlombok:lombok:1.18.30'
 
@@ -196,15 +196,15 @@ dependencies {
     ruStoreImplementation 'ru.rustore.sdk:billingclient:6.0.0'
 
 
-    googlePlayImplementation 'com.google.android.gms:play-services-base:18.3.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:21.0.0'
-    googlePlayImplementation "com.google.android.gms:play-services-games:23.1.0"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:23.3.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-base:18.5.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:21.2.0'
+    googlePlayImplementation "com.google.android.gms:play-services-games:23.2.0"
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:23.5.0'
 
 
     googlePlayImplementation 'com.android.billingclient:billing:6.2.1'
 
-    googlePlayImplementation platform('com.google.firebase:firebase-bom:30.3.0')
+    googlePlayImplementation platform('com.google.firebase:firebase-bom:33.5.1')
 
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
