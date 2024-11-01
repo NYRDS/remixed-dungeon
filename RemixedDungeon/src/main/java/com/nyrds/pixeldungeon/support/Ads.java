@@ -57,9 +57,7 @@ public class Ads {
                 if(adview == view) {
                     return;
                 }
-
                 AdsUtils.removeBannerView(index, adview);
-
             }
 
             try {

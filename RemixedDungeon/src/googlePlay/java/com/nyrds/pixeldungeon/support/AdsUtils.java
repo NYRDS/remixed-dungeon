@@ -89,17 +89,27 @@ public class AdsUtils {
     }
 
     static void removeBannerView(int index, View adview) {
+        boolean bannerFound = false;
         if (adview instanceof BannerView) {
             Appodeal.hide(Game.instance(), Appodeal.BANNER);
+            bannerFound = true;
         }
         if (adview instanceof AdView) {
             ((AdView) adview).destroy();
+            bannerFound = true;
         }
         if(adview instanceof BannerAdView) {
             ((BannerAdView) adview).destroy();
+            bannerFound = true;
+        }
+        if(adview instanceof WebView) {
+            ((WebView) adview).destroy();
+            bannerFound = true;
         }
 
-        Game.instance().getLayout().removeViewAt(index);
+        if(bannerFound) {
+            Game.instance().getLayout().removeViewAt(index);
+        }
     }
 
     static int bannerIndex() {

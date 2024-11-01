@@ -99,7 +99,7 @@ class AdsUtilsCommon {
     }
 
     static void displayTopBanner() {
-        if(AdsUtils.bannerIndex() <0) {
+        if(AdsUtils.bannerIndex()<0) {
             tryNextBanner();
         }
     }

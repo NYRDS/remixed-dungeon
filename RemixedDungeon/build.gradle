@@ -173,7 +173,7 @@ dependencies {
         exclude group: "org.bidon", module: "meta-adapter"
     }
 
-    googlePlayImplementation 'com.yandex.android:mobileads:7.4.0'
+    googlePlayImplementation 'com.yandex.android:mobileads:7.6.0'
 
     ruStoreImplementation ("com.appodeal.ads:sdk:3.3.3.0") {
         exclude group: "com.appodeal.ads.sdk.networks", module: "amazon"
@@ -192,14 +192,14 @@ dependencies {
         exclude group: "org.bidon", module: "meta-adapter"
     }
 
-    ruStoreImplementation 'com.yandex.android:mobileads:7.4.0'
+    ruStoreImplementation 'com.yandex.android:mobileads:7.6.0'
     ruStoreImplementation 'ru.rustore.sdk:billingclient:6.0.0'
 
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.3.0'
     googlePlayImplementation 'com.google.android.gms:play-services-auth:21.0.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:23.1.0"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:23.0.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:23.3.0'
 
 
     googlePlayImplementation 'com.android.billingclient:billing:6.2.1'
