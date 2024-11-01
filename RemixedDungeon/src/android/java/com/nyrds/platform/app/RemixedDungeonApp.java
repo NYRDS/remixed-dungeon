@@ -57,7 +57,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
                 Log.d("Classes", ignore.toString());
             }
         }
-
+/*
             WebServer server = new WebServer(8080);
             try {
                 server.start();
@@ -74,6 +74,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
             } catch (SocketException e) {
                 EventCollector.logException(e,"IP");
             }
+*/
     }
 
     @Override

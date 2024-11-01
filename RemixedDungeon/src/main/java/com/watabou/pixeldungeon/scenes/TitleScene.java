@@ -163,24 +163,34 @@ public class TitleScene extends PixelScene {
         }
 
         String lang = GamePreferences.uiLanguage();
-        final boolean useVk = lang.equals("ru");
+        final boolean ruUser = lang.equals("ru");
 
-        Icons social = useVk ? Icons.VK : Icons.FB;
-        if (useVk) {
+        Icons social = ruUser ? Icons.VK : Icons.FB;
+        if (ruUser) {
             leftGroup.add(new ImageButton(social.get()) {
                 @Override
                 protected void onClick() {
-                    Game.instance().openUrl("Visit us on social network", useVk ? "https://vk.com/pixel_dungeon_remix" : "https://fb.me/RemixedDungeon");
+                    Game.instance().openUrl("Visit us on social network", ruUser ? "https://vk.com/pixel_dungeon_remix" : "https://fb.me/RemixedDungeon");
                 }
             });
         }
 
-        leftGroup.add(new ImageButton(Icons.DISCORD.get()) {
+        if(!ruUser) {
+            leftGroup.add(new ImageButton(Icons.DISCORD.get()) {
+                @Override
+                protected void onClick() {
+                    Game.instance().openUrl("Let talk on Discord", "https://discord.gg/AMXrhQZ");
+                }
+            });
+        }
+
+        leftGroup.add(new ImageButton(Icons.TG.get()) {
             @Override
             protected void onClick() {
-                Game.instance().openUrl("Let talk on Discord", "https://discord.gg/AMXrhQZ");
+                Game.instance().openUrl("Join our Telegram group", "https://t.me/RemixedDungeon");
             }
         });
+
 
         Image img = new Image(Assets.DASHBOARD, DashboardItem.IMAGE_SIZE, 1);
 
