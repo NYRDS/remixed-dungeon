@@ -11,7 +11,6 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -37,6 +36,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 	@MainThread
 	private void loadNextVideo() {
+		EventCollector.logEvent("Admob reward requested");
 		try {
 			FullScreenContentCallback fullScreenContentCallback =
 					new FullScreenContentCallback() {

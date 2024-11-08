@@ -22,11 +22,12 @@ public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialPr
     }
 
     private void requestNewInterstitial() {
-
+        EventCollector.logEvent("Admob interstitial requested");
         if (mInterstitialAd!=null) {
             return;
         }
 
+        EventCollector.logEvent("Admob interstitial load attempt");
         InterstitialAd.load(
                 Game.instance(),
                 adId,

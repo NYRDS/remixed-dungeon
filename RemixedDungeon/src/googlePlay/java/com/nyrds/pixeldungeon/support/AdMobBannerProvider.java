@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.support;
 
-import android.annotation.SuppressLint;
 import android.graphics.Color;
 
 import com.google.android.gms.ads.AdListener;
@@ -20,7 +19,7 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
         adId = id;
     }
 
-    @SuppressLint("MissingPermission")
+
     @Override
     public void displayBanner() {
         adView = new AdView(Game.instance());
@@ -29,6 +28,7 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
         adView.setAdListener(new AdMobBannerListener());
         adView.setAdSize(AdSize.SMART_BANNER);
         adView.loadAd(AdMob.makeAdRequest());
+        EventCollector.logEvent("admob banner requested");
     }
 
     @Override

@@ -45,6 +45,7 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 	@MainThread
 	private void loadNextVideo() {
 		try {
+			EventCollector.logEvent("yandex reward requested");
 			mRewardedAdLoader = new RewardedAdLoader(Game.instance());
 			mRewardedAdLoader.setAdLoadListener(new RewardedAdLoadListener() {
 				@Override

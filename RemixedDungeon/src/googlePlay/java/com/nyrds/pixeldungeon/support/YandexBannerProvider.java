@@ -54,6 +54,8 @@ public class YandexBannerProvider implements AdsUtilsCommon.IBannerProvider {
         adView.setAdSize(getAdSize());
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
+        EventCollector.logEvent("yandex banner requested");
+
     }
 
     @Override

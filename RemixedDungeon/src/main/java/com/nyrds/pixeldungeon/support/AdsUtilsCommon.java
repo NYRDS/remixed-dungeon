@@ -3,8 +3,8 @@ package com.nyrds.pixeldungeon.support;
 import androidx.annotation.MainThread;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.EventCollector;
 import com.watabou.noosa.InterstitialPoint;
-import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -17,6 +17,7 @@ class AdsUtilsCommon {
     static int rvAttempts;
 
     static void bannerFailed(IBannerProvider provider) {
+        EventCollector.logEvent("banner load failed", provider.getClass().getSimpleName());
         incFailCount(AdsUtils.bannerFails,provider);
         //if(bannerAttempts-- > 0) {
         //    tryNextBanner();
@@ -24,6 +25,7 @@ class AdsUtilsCommon {
     }
 
     static void interstitialFailed(IInterstitialProvider provider, InterstitialPoint retTo) {
+        EventCollector.logEvent("interstitial load failed", provider.getClass().getSimpleName());
         incFailCount(AdsUtils.interstitialFails,provider);
         if(interstitialAttempts-- > 0) {
             tryNextInterstitial(retTo);
@@ -36,7 +38,7 @@ class AdsUtilsCommon {
         if(rvAttempts-- > 0) {
             incFailCount(AdsUtils.rewardVideoFails, provider);
         }
-        GLog.debug("reward video load failed: %s", provider.getClass().getSimpleName());
+        EventCollector.logEvent("reward video load failed", provider.getClass().getSimpleName());
     }
 
     private static <T> void incFailCount(Map<T,Integer> map, T provider) {
@@ -74,6 +76,7 @@ class AdsUtilsCommon {
         final IRewardVideoProvider chosenProvider = choseLessFailedFrom(AdsUtils.rewardVideoFails, Integer.MAX_VALUE);
 
         if(chosenProvider!=null) {
+            EventCollector.logEvent("trying reward video", chosenProvider.getClass().getSimpleName());
             GameLoop.runOnMainThread(() -> chosenProvider.showRewardVideo(retTo));
         } else {
             retTo.returnToWork(false);
@@ -84,6 +87,7 @@ class AdsUtilsCommon {
         final IInterstitialProvider chosenProvider = choseLessFailedFrom(AdsUtils.interstitialFails, Integer.MAX_VALUE);
 
         if(chosenProvider!=null) {
+            EventCollector.logEvent("trying interstitial", chosenProvider.getClass().getSimpleName());
             GameLoop.runOnMainThread(() -> chosenProvider.showInterstitial(retTo));
         } else {
             retTo.returnToWork(false);
@@ -94,6 +98,7 @@ class AdsUtilsCommon {
         IBannerProvider chosenProvider = choseLessFailedFrom(AdsUtils.bannerFails, Integer.MAX_VALUE);
 
         if(chosenProvider!=null) {
+            EventCollector.logEvent("trying banner", chosenProvider.getClass().getSimpleName());
             GameLoop.runOnMainThread(chosenProvider::displayBanner);
         }
     }
@@ -125,7 +130,7 @@ class AdsUtilsCommon {
     }
 
     public static void rewardVideoLoaded(IRewardVideoProvider provider) {
-        GLog.debug("reward video loaded: %s", provider.getClass().getSimpleName());
+        EventCollector.logEvent("reward video loaded", provider.getClass().getSimpleName());
 
     }
 

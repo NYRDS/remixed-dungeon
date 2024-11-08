@@ -42,13 +42,14 @@ public class YandexInterstitialProvider implements AdsUtilsCommon.IInterstitialP
             public void onAdLoaded(@NonNull final InterstitialAd interstitialAd) {
                 mInterstitialAd = interstitialAd;
                 // The ad was loaded successfully. You can now show the ad.
+                EventCollector.logEvent("yandex Interstitial loaded");
             }
 
             @Override
             public void onAdFailedToLoad(@NonNull final AdRequestError adRequestError) {
                 // Ad failed to load with AdRequestError.
                 // Attempting to load a new ad from the onAdFailedToLoad() method is strongly discouraged.
-                EventCollector.logEvent("Interstitial failed", adRequestError.toString());
+                EventCollector.logEvent("yandex Interstitial failed", adRequestError.toString());
             }
         });
         loadInterstitialAd();
@@ -73,11 +74,13 @@ public class YandexInterstitialProvider implements AdsUtilsCommon.IInterstitialP
             mInterstitialAd.setAdEventListener(new InterstitialAdEventListener() {
                 @Override
                 public void onAdShown() {
+                    EventCollector.logEvent("yandex interstitial shown");
                     // Called when ad is shown.
                 }
 
                 @Override
                 public void onAdFailedToShow(@NonNull final AdError adError) {
+                    EventCollector.logEvent("yandex interstitial failed", adError.toString());
                     // Called when an InterstitialAd failed to show.
                 }
 

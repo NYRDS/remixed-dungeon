@@ -3,8 +3,8 @@ package com.nyrds.pixeldungeon.support;
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.InterstitialCallbacks;
 import com.nyrds.platform.EventCollector;
-import com.watabou.noosa.InterstitialPoint;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.watabou.noosa.InterstitialPoint;
 
 class AppodealInterstitialProvider implements AdsUtilsCommon.IInterstitialProvider {
 
@@ -36,11 +36,12 @@ class AppodealInterstitialProvider implements AdsUtilsCommon.IInterstitialProvid
     private class AppodealInterstitialCallbacks implements InterstitialCallbacks {
         @Override
         public void onInterstitialLoaded(boolean b) {
+            EventCollector.logException("appodeal interstitial loaded");
         }
 
         @Override
         public void onInterstitialFailedToLoad() {
-            //EventCollector.logException("appodeal load error");
+            EventCollector.logException("appodeal interstitial load error");
             AdsUtilsCommon.interstitialFailed(AppodealInterstitialProvider.this, returnTo);
         }
 
@@ -50,7 +51,7 @@ class AppodealInterstitialProvider implements AdsUtilsCommon.IInterstitialProvid
 
         @Override
         public void onInterstitialShowFailed() {
-            //EventCollector.logException("appodeal show error");
+            EventCollector.logException("appodeal interstitial show error");
             AdsUtilsCommon.interstitialFailed(AppodealInterstitialProvider.this, returnTo);
         }
 

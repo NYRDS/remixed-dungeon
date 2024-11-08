@@ -32,8 +32,10 @@ class AppodealBannerProvider implements AdsUtilsCommon.IBannerProvider {
 
         adView = Appodeal.getBannerView(Game.instance());
 
+        EventCollector.logException("appodeal banner requested");
+
         if(!Appodeal.show(Game.instance(), Appodeal.BANNER_VIEW)){
-            //EventCollector.logException("appodeal_show_failed");
+            EventCollector.logException("appodeal_show_failed");
             AdsUtilsCommon.bannerFailed(AppodealBannerProvider.this);
             return;
         }

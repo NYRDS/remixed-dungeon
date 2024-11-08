@@ -14,7 +14,6 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.yandex.mobile.ads.banner.BannerAdView;
 
 import java.util.Map;
@@ -34,20 +33,29 @@ public class AdsUtils {
 
     static {
         try {
-            com.yandex.mobile.ads.common.MobileAds.initialize(RemixedDungeonApp.getContext(), () -> YandexInitialized = true);
+            com.yandex.mobile.ads.common.MobileAds.initialize(RemixedDungeonApp.getContext(), () -> {
+                YandexInitialized = true;
+                EventCollector.logEvent("Yandex initialized");
+
+            });
 
             if (!GamePreferences.uiLanguage().equals("ru")) {
                 //AdMob
                 com.google.android.gms.ads.MobileAds.initialize(RemixedDungeonApp.getContext(), initializationStatus -> {
                     AdsUtils.initializationStatus = initializationStatus;
                     var status = initializationStatus.getAdapterStatusMap();
-                    EventCollector.logEvent("AdMob", "status", status.toString());
+
+                    String statusString = "";
+                    for (var entry : status.entrySet()) {
+                        statusString += entry.getKey() + " : " + entry.getValue() + "\n";
+                    }
+
+                    EventCollector.logEvent("AdMob", "status", statusString);
                 });
 
                 bannerFails.put(new AdMobBannerProvider(StringsManager.getVar(R.string.easyModeAdUnitId)), -3);
                 interstitialFails.put(new AdMobInterstitialProvider(StringsManager.getVar(R.string.saveLoadAdUnitId)), -3);
             }
-
 
             bannerFails.put(new YandexBannerProvider(StringsManager.getVar(R.string.banner_yandex)), -2);
             interstitialFails.put(new YandexInterstitialProvider(StringsManager.getVar(R.string.interstitial_yandex)), -2);

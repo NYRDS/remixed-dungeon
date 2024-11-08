@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.support;
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.RewardedVideoCallbacks;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -18,7 +19,7 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
             Appodeal.cache(RemixedDungeon.instance(), Appodeal.REWARDED_VIDEO);
             Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
-
+            EventCollector.logEvent("Appodeal reward requested");
             Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 
                 @Override
