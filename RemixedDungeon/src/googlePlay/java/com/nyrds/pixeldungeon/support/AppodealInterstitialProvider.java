@@ -36,7 +36,7 @@ class AppodealInterstitialProvider implements AdsUtilsCommon.IInterstitialProvid
     private class AppodealInterstitialCallbacks implements InterstitialCallbacks {
         @Override
         public void onInterstitialLoaded(boolean b) {
-            EventCollector.logException("appodeal interstitial loaded");
+            EventCollector.logEvent("appodeal interstitial loaded");
         }
 
         @Override

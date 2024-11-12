@@ -47,7 +47,7 @@ public class AdsUtils {
 
                     String statusString = "";
                     for (var entry : status.entrySet()) {
-                        statusString += entry.getKey() + " : " + entry.getValue() + "\n";
+                        statusString += entry.getKey() + " : " + entry.getValue().getInitializationState() + "\n";
                     }
 
                     EventCollector.logEvent("AdMob", "status", statusString);
