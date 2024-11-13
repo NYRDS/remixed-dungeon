@@ -22,12 +22,12 @@ public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialPr
     }
 
     private void requestNewInterstitial() {
-        EventCollector.logEvent("Admob interstitial requested");
+        EventCollector.logEvent("admob_interstitial_requested");
         if (mInterstitialAd!=null) {
             return;
         }
 
-        EventCollector.logEvent("Admob interstitial load attempt");
+        EventCollector.logEvent("admob_interstitial_load_attempt");
         InterstitialAd.load(
                 Game.instance(),
                 adId,
@@ -36,12 +36,12 @@ public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialPr
                     @Override
                     public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
                         mInterstitialAd = interstitialAd;
-                        EventCollector.logEvent("admob interstitial loaded");
+                        EventCollector.logEvent("admob_interstitial_loaded");
                     }
 
                     @Override
                     public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        EventCollector.logEvent("admob interstitial failed", loadAdError.toString());
+                        EventCollector.logEvent("admob_interstitial_failed", loadAdError.toString());
                     }
                 }
         );
@@ -58,7 +58,7 @@ public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialPr
             FullScreenContentCallback fullScreenContentCallback = new FullScreenContentCallback() {
                 @Override
                 public void onAdDismissedFullScreenContent() {
-                    EventCollector.logEvent("Admob interstitial shown");
+                    EventCollector.logEvent("admob_interstitial_shown");
                     mInterstitialAd = null;
                     requestNewInterstitial();
                     ret.returnToWork(true);

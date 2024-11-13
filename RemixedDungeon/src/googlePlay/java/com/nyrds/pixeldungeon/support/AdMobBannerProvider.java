@@ -28,7 +28,7 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
         adView.setAdListener(new AdMobBannerListener());
         adView.setAdSize(AdSize.SMART_BANNER);
         adView.loadAd(AdMob.makeAdRequest());
-        EventCollector.logEvent("admob banner requested");
+        EventCollector.logEvent("admob_banner_requested");
     }
 
     @Override
@@ -42,18 +42,18 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
         public void onAdLoaded() {
             Ads.updateBanner(adView);
             loaded = true;
-            EventCollector.logEvent("admob banner loaded");
+            EventCollector.logEvent("admob_banner_loaded");
         }
 
         @Override
         public void onAdImpression() {
             super.onAdImpression();
-            EventCollector.logEvent("admob banner shown");
+            EventCollector.logEvent("admob_banner_shown");
         }
 
         @Override
         public void onAdFailedToLoad(LoadAdError reason) {
-            EventCollector.logEvent("Banner failed", reason.toString());
+            EventCollector.logEvent("admob_banner_failed", reason.toString());
             loaded = false;
             AdsUtilsCommon.bannerFailed(AdMobBannerProvider.this);
         }

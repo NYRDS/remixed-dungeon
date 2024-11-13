@@ -450,7 +450,7 @@ public abstract class Mob extends Char {
     public boolean friendly(@NotNull Char chr, int r_level) {
 
         if (r_level > 7) {
-            EventCollector.logEvent("too high r_level in Mob::friendly");
+            EventCollector.logException("too high r_level in Mob::friendly");
             return false;
         }
 

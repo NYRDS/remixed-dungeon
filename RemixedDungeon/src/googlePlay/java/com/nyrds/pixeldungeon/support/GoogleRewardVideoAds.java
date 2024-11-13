@@ -36,7 +36,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 
 	@MainThread
 	private void loadNextVideo() {
-		EventCollector.logEvent("Admob reward requested");
+		EventCollector.logEvent("admob_reward_requested");
 		try {
 			FullScreenContentCallback fullScreenContentCallback =
 					new FullScreenContentCallback() {
@@ -48,7 +48,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 						@Override
 						public void onAdDismissedFullScreenContent() {
 							mCinemaRewardAd = null;
-							EventCollector.logEvent("Admob reward shown");
+							EventCollector.logEvent("admob_reward_shown");
 							GameLoop.runOnMainThread(GoogleRewardVideoAds.this::loadNextVideo);
 							returnTo.returnToWork(rewardEarned);
 							rewardEarned = false;
@@ -64,13 +64,13 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 							mCinemaRewardAd = ad;
 							mCinemaRewardAd.setFullScreenContentCallback(fullScreenContentCallback);
 							AdsUtilsCommon.rewardVideoLoaded(GoogleRewardVideoAds.this);
-							EventCollector.logEvent("Admob reward loaded");
+							EventCollector.logEvent("admob_reward_loaded");
 						}
 
 						@Override
 						public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
 							AdsUtilsCommon.rewardVideoFailed(GoogleRewardVideoAds.this);
-							EventCollector.logEvent("Admob reward failed", loadAdError.toString());
+							EventCollector.logEvent("admob_reward_failed", loadAdError.toString());
 						}
 					});
 		} catch (Exception e) {
@@ -91,7 +91,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 			mCinemaRewardAd.show(Game.instance(),
 					rewardItem -> {
 						rewardEarned = true;
-						EventCollector.logEvent("Admob reward earned", rewardItem.toString());
+						EventCollector.logEvent("admob_reward_earned", rewardItem.toString());
 						returnTo.returnToWork(true);
 					}
 

@@ -1025,7 +1025,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         Hunger hunger = buff(Hunger.class);
 
         if (hunger == null) {
-            EventCollector.logEvent("null hunger on alive Char!");
+            EventCollector.logEvent("null_hunger_on_alive_char");
             hunger = new Hunger();
             hunger.attachTo(this);
         }

@@ -45,7 +45,7 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 	@MainThread
 	private void loadNextVideo() {
 		try {
-			EventCollector.logEvent("yandex reward requested");
+			EventCollector.logEvent("yandex_reward_requested");
 			mRewardedAdLoader = new RewardedAdLoader(Game.instance());
 			mRewardedAdLoader.setAdLoadListener(new RewardedAdLoadListener() {
 				@Override
@@ -90,12 +90,13 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 				@Override
 				public void onAdShown() {
 					// Called when an ad is shown.
-					GLog.debug("onAdShown");
+					EventCollector.logEvent("yandex_reward_shown");
 				}
 
 				@Override
 				public void onAdFailedToShow(@NonNull final AdError adError) {
-					GLog.debug("onAdFailedToShow: %s", adError.toString());
+					EventCollector.logEvent("yandex_reward_show_failed", adError.toString());
+
 					returnTo.returnToWork(rewardEarned);
 					// Called when an InterstitialAd failed to show.
 				}
@@ -125,13 +126,14 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 				@Override
 				public void onAdImpression(@Nullable final ImpressionData impressionData) {
 					// Called when an impression is recorded for an ad.
+					EventCollector.logEvent("yandex_reward_impression", impressionData.toString());
 					GLog.debug("onAdImpression: %s", impressionData);
 				}
 
 				@Override
 				public void onRewarded(@NonNull final Reward reward) {
 					rewardEarned = true;
-					GLog.debug("reward: %s %d", reward.getType(), reward.getAmount());
+					EventCollector.logEvent("yandex_reward_rewarded");
 				}
 			});
 			mCinemaRewardAd.show(Game.instance());

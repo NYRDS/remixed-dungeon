@@ -1145,7 +1145,7 @@ public abstract class Level implements Bundlable {
 	public void set(int cell, int terrain) {
 
 		if(!cellValid(cell)) {
-			EventCollector.logEvent(Utils.format("Attempt set invalid cell %d on %s to %d", cell, levelId, terrain));
+			EventCollector.logException(Utils.format("Attempt set invalid cell %d on %s to %d", cell, levelId, terrain));
 			return;
 		}
 

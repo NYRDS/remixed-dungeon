@@ -35,7 +35,7 @@ public class AdsUtils {
         try {
             com.yandex.mobile.ads.common.MobileAds.initialize(RemixedDungeonApp.getContext(), () -> {
                 YandexInitialized = true;
-                EventCollector.logEvent("Yandex initialized");
+                EventCollector.logEvent("yandex_initialized");
 
             });
 

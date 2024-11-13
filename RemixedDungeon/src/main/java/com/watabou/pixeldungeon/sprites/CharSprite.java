@@ -535,7 +535,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
             int chrPos = chr.getPos();
             if(!isMoving && cellIndex!= chrPos) {
-                EventCollector.logEvent(Utils.format("CharSprite desync %s (%d not %d)", chr.getEntityKind(), cellIndex, chrPos));
+                EventCollector.logException(Utils.format("CharSprite desync %s (%d not %d)", chr.getEntityKind(), cellIndex, chrPos));
                 place(chrPos);
             }
         });

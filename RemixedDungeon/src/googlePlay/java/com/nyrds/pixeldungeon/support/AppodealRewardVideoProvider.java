@@ -19,7 +19,7 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
             Appodeal.cache(RemixedDungeon.instance(), Appodeal.REWARDED_VIDEO);
             Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
-            EventCollector.logEvent("Appodeal reward requested");
+            EventCollector.logEvent("appodeal_reward_requested");
             Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 
                 @Override

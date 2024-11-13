@@ -36,12 +36,12 @@ class AppodealInterstitialProvider implements AdsUtilsCommon.IInterstitialProvid
     private class AppodealInterstitialCallbacks implements InterstitialCallbacks {
         @Override
         public void onInterstitialLoaded(boolean b) {
-            EventCollector.logEvent("appodeal interstitial loaded");
+            EventCollector.logEvent("appodeal_interstitial_loaded");
         }
 
         @Override
         public void onInterstitialFailedToLoad() {
-            EventCollector.logException("appodeal interstitial load error");
+            EventCollector.logException("appodeal_interstitial_load_error");
             AdsUtilsCommon.interstitialFailed(AppodealInterstitialProvider.this, returnTo);
         }
 
@@ -51,7 +51,7 @@ class AppodealInterstitialProvider implements AdsUtilsCommon.IInterstitialProvid
 
         @Override
         public void onInterstitialShowFailed() {
-            EventCollector.logException("appodeal interstitial show error");
+            EventCollector.logException("appodeal_interstitial_show_error");
             AdsUtilsCommon.interstitialFailed(AppodealInterstitialProvider.this, returnTo);
         }
 
