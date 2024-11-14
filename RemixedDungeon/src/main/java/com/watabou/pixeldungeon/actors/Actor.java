@@ -214,7 +214,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
             if(Util.isDebug()) {
                 return;
             }
-            if (motionInProgress()) {
+            if (heroMotionInProgress() || motionInProgress()) {
                 return;
             }
         }
@@ -394,6 +394,15 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
     }
 
     @LuaInterface
+    public static boolean heroMotionInProgress() {
+        if(!Dungeon.hero.valid()) {
+            return false;
+        }
+
+        return Dungeon.hero.getSprite().doingSomething();
+    }
+
+    @LuaInterface
     public static boolean motionInProgress() {
         for (Actor ch : all.toArray(new Actor[0])) {
             if (ch instanceof Char) {
@@ -402,7 +411,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
                 }
             }
         }
-        GLog.debug("no motion in progress");
+
         return false;
     }
 
