@@ -24,11 +24,13 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
                 @Override
                 public void onRewardedVideoLoaded(boolean b) {
+                    EventCollector.logEvent("appodeal_reward_loaded");
                     AdsUtilsCommon.rewardVideoLoaded(AppodealRewardVideoProvider.this);
                 }
 
                 @Override
                 public void onRewardedVideoFailedToLoad() {
+                    EventCollector.logEvent("appodeal_failed_To_load_reward");
                     AdsUtilsCommon.rewardVideoFailed(AppodealRewardVideoProvider.this);
                 }
 
@@ -38,11 +40,13 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
                 @Override
                 public void onRewardedVideoShowFailed() {
+                    EventCollector.logEvent("appodeal_reward_failed");
                     returnTo.returnToWork(false);
                 }
 
                 @Override
                 public void onRewardedVideoFinished(double amount, String name) {
+                    EventCollector.logEvent("appodeal_reward_shown");
                     returnTo.returnToWork(true);
                 }
 

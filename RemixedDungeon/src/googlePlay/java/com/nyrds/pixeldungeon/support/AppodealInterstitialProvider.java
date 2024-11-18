@@ -41,22 +41,24 @@ class AppodealInterstitialProvider implements AdsUtilsCommon.IInterstitialProvid
 
         @Override
         public void onInterstitialFailedToLoad() {
-            EventCollector.logException("appodeal_interstitial_load_error");
+            EventCollector.logEvent("appodeal_interstitial_load_error");
             AdsUtilsCommon.interstitialFailed(AppodealInterstitialProvider.this, returnTo);
         }
 
         @Override
         public void onInterstitialShown() {
+            EventCollector.logEvent("appodeal_interstitial_shown");
         }
 
         @Override
         public void onInterstitialShowFailed() {
-            EventCollector.logException("appodeal_interstitial_show_error");
+            EventCollector.logEvent("appodeal_interstitial_show_error");
             AdsUtilsCommon.interstitialFailed(AppodealInterstitialProvider.this, returnTo);
         }
 
         @Override
         public void onInterstitialClicked() {
+            EventCollector.logEvent("appodeal_interstitial_clicked");
         }
 
         @Override

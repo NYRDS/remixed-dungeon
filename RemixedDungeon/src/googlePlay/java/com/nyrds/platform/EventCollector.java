@@ -149,9 +149,9 @@ public class EventCollector {
 			FirebaseCrashlytics.getInstance().log(Utils.EMPTY_STRING+System.currentTimeMillis()+":"+e.getMessage() + ":"+ baos.toString());
 		}
 
-		if(Util.isDebug()) {
-			throw new RuntimeException(new Exception(e));
-		}
+//		if(Util.isDebug()) {
+//			throw new RuntimeException(new Exception(e));
+//		}
 	}
 
 	static public void logException(Throwable e) {
