@@ -30,9 +30,7 @@ import android.net.Uri;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Vibrator;
-import android.provider.DocumentsContract;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -73,7 +71,8 @@ import javax.microedition.khronos.opengles.GL10;
 @SuppressLint("Registered")
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
-    public static final int REQUEST_CODE_OPEN_DOCUMENT_TREE  = 37372;
+    public static final int REQUEST_CODE_OPEN_DOCUMENT_TREE_MOD_DIR_INSTALL = 37372;
+    public static final int REQUEST_CODE_OPEN_DOCUMENT_TREE_MOD_DIR_EXPORT = 37373;
     @SuppressLint("StaticFieldLeak")
     private static Game instance;
 
@@ -427,9 +426,4 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Game.instance().startActivity(Intent.createChooser(intent, prompt));
     }
 
-    public void pickDirectory() {
-        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
-        intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, Environment.getExternalStorageDirectory());
-        startActivityForResult(intent, REQUEST_CODE_OPEN_DOCUMENT_TREE);
-    }
 }

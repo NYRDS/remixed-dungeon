@@ -18,8 +18,8 @@ import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.storage.AndroidSAF;
 import com.nyrds.platform.storage.Preferences;
-import com.nyrds.platform.storage.copyFromSAF;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Scene;
@@ -144,13 +144,22 @@ public class RemixedDungeon extends Game {
 			return;
 		}
 
-		if (requestCode == REQUEST_CODE_OPEN_DOCUMENT_TREE && resultCode == RESULT_OK && data != null) {
+		if (requestCode == REQUEST_CODE_OPEN_DOCUMENT_TREE_MOD_DIR_INSTALL && resultCode == RESULT_OK && data != null) {
 			Uri selectedDirectoryUri = data.getData();
 			int flags = Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION;
 			getContentResolver().takePersistableUriPermission(selectedDirectoryUri, flags);
 
 			GLog.debug("selectedDirectoryUri="  + selectedDirectoryUri);
-			copyFromSAF.pickModDirectory(selectedDirectoryUri);
+			AndroidSAF.pickModDirectory(selectedDirectoryUri);
+		}
+
+		if (requestCode == REQUEST_CODE_OPEN_DOCUMENT_TREE_MOD_DIR_EXPORT && resultCode == RESULT_OK && data != null) {
+			Uri selectedDirectoryUri = data.getData();
+			int flags = Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION;
+			getContentResolver().takePersistableUriPermission(selectedDirectoryUri, flags);
+
+			GLog.debug("selectedDirectoryUri="  + selectedDirectoryUri);
+			AndroidSAF.pickModDirectory(selectedDirectoryUri);
 		}
 
 		super.onActivityResult(requestCode, resultCode, data);

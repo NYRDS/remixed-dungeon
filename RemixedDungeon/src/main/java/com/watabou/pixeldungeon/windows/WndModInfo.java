@@ -14,10 +14,13 @@ import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 
 
 public class WndModInfo extends Window {
+
+    public static String exportedModDir;
 
     public WndModInfo(ModDesc desc) {
         super();
@@ -69,6 +72,12 @@ public class WndModInfo extends Window {
         }
 
         HBox buttons = new HBox(width);
+        buttons.add(new RedButton("Save on Device"){
+            @Override
+            protected void onClick() {
+                super.onClick();
+            }
+        });
         mainLayout.add(buttons);
         add(mainLayout);
 

@@ -2,13 +2,13 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.storage.copyFromSAF;
+import com.nyrds.platform.storage.AndroidSAF;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.ui.BusyIndicator;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 
-public class WndInstallingMod extends WndTitledMessage implements copyFromSAF.IListener {
+public class WndInstallingMod extends WndTitledMessage implements AndroidSAF.IListener {
 
     public WndInstallingMod() {
         super(new BusyIndicator(), StringsManager.getVar(R.string.WndInstallingMod_please_wait), "");
@@ -45,7 +45,7 @@ public class WndInstallingMod extends WndTitledMessage implements copyFromSAF.IL
     @Override
     public void hide()  {
         super.hide();
-        copyFromSAF.setListener(null);
+        AndroidSAF.setListener(null);
     }
 
     @Override

@@ -1,20 +1,26 @@
 package com.nyrds.platform.storage;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
+import android.os.Environment;
+import android.provider.DocumentsContract;
 import android.util.Pair;
 
 import androidx.documentfile.provider.DocumentFile;
 
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -23,7 +29,7 @@ import java.util.Set;
 import lombok.SneakyThrows;
 import lombok.val;
 
-public class copyFromSAF {
+public class AndroidSAF {
     public static Uri mBasePath;
     static IListener mListener;
 
@@ -157,6 +163,18 @@ public class copyFromSAF {
         FileSystem.copyStream(inputStream, new FileOutputStream(outputFile));
     }
 
+
+    public static OutputStream outputStreamToDocument(Context context, Uri directoryUri, String fileName) throws IOException {
+        DocumentFile directory = DocumentFile.fromTreeUri(context, directoryUri);
+        if (directory != null && directory.isDirectory()) {
+            DocumentFile newFile = directory.createFile("application/octet-stream", fileName);
+            if (newFile != null) {
+                return context.getContentResolver().openOutputStream(newFile.getUri());
+            }
+        }
+        throw new IOException("Failed to create new document in " + directoryUri);
+    }
+
     public static Map<String, Pair<Long,DocumentFile>> getFileTimestampMap(DocumentFile directory, String pathPrefix) {
         Map<String, Pair<Long,DocumentFile>> fileTimestampMap = new HashMap<>();
 
@@ -188,6 +206,18 @@ public class copyFromSAF {
 
     public static void setListener(IListener listener) {
         mListener = listener;
+    }
+
+    static public void pickDirectoryForModInstall() {
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+        intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, Environment.getExternalStorageDirectory());
+        Game.instance().startActivityForResult(intent, Game.REQUEST_CODE_OPEN_DOCUMENT_TREE_MOD_DIR_INSTALL);
+    }
+
+    static public void pickDirectoryForModExport() {
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+        intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, Environment.getExternalStorageDirectory());
+        Game.instance().startActivityForResult(intent, Game.REQUEST_CODE_OPEN_DOCUMENT_TREE_MOD_DIR_EXPORT);
     }
 
     public interface IListener {

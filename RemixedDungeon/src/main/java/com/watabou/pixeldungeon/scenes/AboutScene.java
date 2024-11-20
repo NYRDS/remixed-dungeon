@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.input.Touchscreen.Touch;
+import com.nyrds.platform.storage.AndroidSAF;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
@@ -155,7 +156,7 @@ public class AboutScene extends PixelScene {
 			@Override
 			protected void onClick( Touch touch ) {
 				Game.toast("Entering dev mode, pick directory");
-				RemixedDungeon.instance().pickDirectory();
+				AndroidSAF.pickDirectoryForModInstall();
 			}
 		};
 

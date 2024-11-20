@@ -29,7 +29,7 @@ import com.nyrds.pixeldungeon.windows.WndDifficultyOptions;
 import com.nyrds.pixeldungeon.windows.WndLocalModInstall;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.RemixedDungeon;
-import com.nyrds.platform.storage.copyFromSAF;
+import com.nyrds.platform.storage.AndroidSAF;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.ModdingMode;
@@ -255,7 +255,7 @@ public class StartScene extends PixelScene {
         ServiceManNPC.resetLimit();
 
         fadeIn();
-        if(copyFromSAF.isAutoSyncMaybeNeeded(ModdingMode.activeMod())) {
+        if(AndroidSAF.isAutoSyncMaybeNeeded(ModdingMode.activeMod())) {
             WndLocalModInstall.onDirectoryPicked();
         }
     }

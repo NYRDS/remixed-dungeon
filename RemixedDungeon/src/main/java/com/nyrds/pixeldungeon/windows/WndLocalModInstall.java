@@ -2,8 +2,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.game.Game;
-import com.nyrds.platform.storage.copyFromSAF;
+import com.nyrds.platform.storage.AndroidSAF;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
@@ -14,17 +13,17 @@ public class WndLocalModInstall extends WndOptions  {
 
     @Override
     public void onSelect(int index) {
-        Game.instance().pickDirectory();
+        AndroidSAF.pickDirectoryForModInstall();
     }
 
     public static void onDirectoryPicked()  {
-        if(copyFromSAF.mBasePath != null) {
+        if(AndroidSAF.mBasePath != null) {
             var wnd = new WndInstallingMod();
-            copyFromSAF.setListener(wnd);
+            AndroidSAF.setListener(wnd);
             GameLoop.pushUiTask(() -> {
                 GameLoop.addToScene(wnd);
             });
-            GameLoop.execute(() -> copyFromSAF.copyModToAppStorage());
+            GameLoop.execute(() -> AndroidSAF.copyModToAppStorage());
         }
     }
 }

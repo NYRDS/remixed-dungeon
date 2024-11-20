@@ -12,7 +12,7 @@ import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.InstallMod;
 import com.nyrds.platform.game.RemixedDungeon;
-import com.nyrds.platform.storage.copyFromSAF;
+import com.nyrds.platform.storage.AndroidSAF;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.ModdingMode;
@@ -231,7 +231,7 @@ public class TitleScene extends PixelScene {
 
         fadeIn();
 
-        if (copyFromSAF.mBasePath!=null) {
+        if (AndroidSAF.mBasePath!=null) {
             GameLoop.pushUiTask(() -> WndLocalModInstall.onDirectoryPicked());
         }
 
