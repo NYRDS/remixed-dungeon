@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.util.ModError;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -139,18 +140,18 @@ public class FileSystem {
 
     private static void addFolderToZip(File rootFolder, File srcFolder, int depth,
                                        ZipOutputStream zip, FileFilter filter) throws IOException {
-
+        GLog.debug("dir=" + srcFolder.getAbsolutePath());
         for (File file : srcFolder.listFiles(filter)) {
-
+            GLog.debug("file=" + file.getAbsolutePath());
             if (file.isFile()) {
                 addFileToZip(rootFolder, file, zip);
                 continue;
             }
 
             if (depth > 0 && file.isDirectory()) {
-                zip.putNextEntry(new ZipEntry(getRelativePath(file, rootFolder)));
-                addFolderToZip(rootFolder, srcFolder, depth - 1, zip, filter);
-                zip.closeEntry();
+                //zip.putNextEntry(new ZipEntry(getRelativePath(file, rootFolder)));
+                addFolderToZip(rootFolder, file, depth - 1, zip, filter);
+                //zip.closeEntry();
             }
         }
     }
@@ -159,6 +160,7 @@ public class FileSystem {
         byte[] buf = new byte[4096];
         int len;
         try (FileInputStream in = new FileInputStream(file)) {
+            GLog.debug("relpath=" + getRelativePath(file, rootFolder));
             zip.putNextEntry(new ZipEntry(getRelativePath(file, rootFolder)));
             while ((len = in.read(buf)) > 0) {
                 zip.write(buf, 0, len);

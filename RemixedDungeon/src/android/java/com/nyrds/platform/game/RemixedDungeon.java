@@ -149,7 +149,7 @@ public class RemixedDungeon extends Game {
 			int flags = Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION;
 			getContentResolver().takePersistableUriPermission(selectedDirectoryUri, flags);
 
-			GLog.debug("selectedDirectoryUri="  + selectedDirectoryUri);
+			GLog.debug("for install selectedDirectoryUri="  + selectedDirectoryUri);
 			AndroidSAF.pickModSourceDirectory(selectedDirectoryUri);
 		}
 
@@ -158,7 +158,7 @@ public class RemixedDungeon extends Game {
 			int flags = Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION;
 			getContentResolver().takePersistableUriPermission(selectedDirectoryUri, flags);
 
-			GLog.debug("selectedDirectoryUri="  + selectedDirectoryUri);
+			GLog.debug("for export selectedDirectoryUri="  + selectedDirectoryUri);
 			AndroidSAF.pickModDstDirectory(selectedDirectoryUri);
 		}
 

@@ -6,7 +6,6 @@ import android.net.Uri;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ModDesc;
-import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Touchscreen;
@@ -78,16 +77,19 @@ public class WndModInfo extends Window {
             add(siteTouch);
         }
 
-        HBox buttons = new HBox(width);
-        buttons.add(new RedButton("Save on Device"){
-            @Override
-            protected void onClick() {
-                exportedModDir = desc.installDir;
-                AndroidSAF.pickDirectoryForModInstall();
-                super.onClick();
-            }
-        });
-        mainLayout.add(buttons);
+        if(desc.installed) {
+            RedButton exportButton = new RedButton("Save on Device") {
+                @Override
+                protected void onClick() {
+                    exportedModDir = desc.installDir;
+                    AndroidSAF.pickDirectoryForModExport();
+                    super.onClick();
+                }
+            };
+
+            exportButton.setSize(width, Window.BUTTON_HEIGHT);
+            mainLayout.add(exportButton);
+        }
         add(mainLayout);
 
         mainLayout.setRect(0,0, width, mainLayout.childsHeight());
@@ -107,7 +109,7 @@ public class WndModInfo extends Window {
             GameLoop.execute(() -> {
                 try {
                     var outputStream = AndroidSAF.outputStreamToDocument(Game.instance(), AndroidSAF.mBaseDstPath, exportedModDir + ".zip");
-                    FileSystem.zipFolderTo(outputStream, FileSystem.getExternalStorageFile(exportedModDir), 1, new FileFilter() {
+                    FileSystem.zipFolderTo(outputStream, FileSystem.getExternalStorageFile(exportedModDir), 99, new FileFilter() {
                         @Override
                         public boolean accept(File pathname) {
                             return true;

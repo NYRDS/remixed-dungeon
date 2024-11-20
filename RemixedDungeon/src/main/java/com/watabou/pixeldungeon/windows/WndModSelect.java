@@ -105,6 +105,8 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 				@Override
 				protected void onClick() {
 					ModDesc infoDesc = Mods.getModDesc(desc.name, GamePreferences.uiLanguage());
+					infoDesc.installed = desc.installed;
+					infoDesc.installDir = desc.installDir;
 					GameLoop.addToScene(new WndModInfo(infoDesc));
 				}
 			};

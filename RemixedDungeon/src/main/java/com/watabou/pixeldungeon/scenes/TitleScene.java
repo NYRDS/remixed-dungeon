@@ -35,6 +35,7 @@ import com.watabou.pixeldungeon.ui.PrefsButton;
 import com.watabou.pixeldungeon.ui.PremiumPrefsButton;
 import com.watabou.pixeldungeon.ui.StatisticsButton;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndModInfo;
 
 import org.luaj.vm2.LuaError;
 
@@ -236,7 +237,7 @@ public class TitleScene extends PixelScene {
         }
 
         if (AndroidSAF.mBaseDstPath !=null) {
-            GameLoop.pushUiTask(() -> WndLocalModInstall.onDirectoryPicked());
+            GameLoop.pushUiTask(() -> WndModInfo.onDirectoryPicked());
         }
 
 

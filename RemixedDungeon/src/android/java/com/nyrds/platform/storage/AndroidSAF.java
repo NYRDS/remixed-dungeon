@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.DocumentsContract;
+import android.util.Log;
 import android.util.Pair;
 
 import androidx.documentfile.provider.DocumentFile;
@@ -30,8 +31,8 @@ import lombok.SneakyThrows;
 import lombok.val;
 
 public class AndroidSAF {
-    public static Uri mBaseSrcPath;
-    public static Uri mBaseDstPath;
+    public static Uri mBaseSrcPath = null;
+    public static Uri mBaseDstPath = null;
     static IListener mListener;
 
     public static void copyModToAppStorage() {
@@ -43,10 +44,12 @@ public class AndroidSAF {
 
     public static void pickModSourceDirectory(Uri selectedDirectoryUri) {
         mBaseSrcPath = selectedDirectoryUri;
+        mBaseDstPath = null;
     }
 
     public static void pickModDstDirectory(Uri selectedDirectoryUri) {
         mBaseDstPath = selectedDirectoryUri;
+        mBaseSrcPath = null;
     }
 
 
@@ -169,14 +172,18 @@ public class AndroidSAF {
         FileSystem.copyStream(inputStream, new FileOutputStream(outputFile));
     }
 
-
     public static OutputStream outputStreamToDocument(Context context, Uri directoryUri, String fileName) throws IOException {
         DocumentFile directory = DocumentFile.fromTreeUri(context, directoryUri);
         if (directory != null && directory.isDirectory()) {
             DocumentFile newFile = directory.createFile("application/octet-stream", fileName);
             if (newFile != null) {
+                Log.v("AndroidSAF", "Created new document in " + directoryUri + " with name " + fileName);
                 return context.getContentResolver().openOutputStream(newFile.getUri());
+            } else {
+                Log.e("AndroidSAF", "Failed to create new document in " + directoryUri + " with name " + fileName);
             }
+        } else {
+            Log.e("AndroidSAF", "Uri " + directoryUri + " doesn't point to a directory");
         }
         throw new IOException("Failed to create new document in " + directoryUri);
     }
