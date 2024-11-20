@@ -150,7 +150,7 @@ public class RemixedDungeon extends Game {
 			getContentResolver().takePersistableUriPermission(selectedDirectoryUri, flags);
 
 			GLog.debug("selectedDirectoryUri="  + selectedDirectoryUri);
-			AndroidSAF.pickModDirectory(selectedDirectoryUri);
+			AndroidSAF.pickModSourceDirectory(selectedDirectoryUri);
 		}
 
 		if (requestCode == REQUEST_CODE_OPEN_DOCUMENT_TREE_MOD_DIR_EXPORT && resultCode == RESULT_OK && data != null) {
@@ -159,7 +159,7 @@ public class RemixedDungeon extends Game {
 			getContentResolver().takePersistableUriPermission(selectedDirectoryUri, flags);
 
 			GLog.debug("selectedDirectoryUri="  + selectedDirectoryUri);
-			AndroidSAF.pickModDirectory(selectedDirectoryUri);
+			AndroidSAF.pickModDstDirectory(selectedDirectoryUri);
 		}
 
 		super.onActivityResult(requestCode, resultCode, data);

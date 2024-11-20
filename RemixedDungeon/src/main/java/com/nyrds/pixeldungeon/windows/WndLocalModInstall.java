@@ -17,7 +17,7 @@ public class WndLocalModInstall extends WndOptions  {
     }
 
     public static void onDirectoryPicked()  {
-        if(AndroidSAF.mBasePath != null) {
+        if(AndroidSAF.mBaseSrcPath != null) {
             var wnd = new WndInstallingMod();
             AndroidSAF.setListener(wnd);
             GameLoop.pushUiTask(() -> {

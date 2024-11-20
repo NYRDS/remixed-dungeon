@@ -30,19 +30,25 @@ import lombok.SneakyThrows;
 import lombok.val;
 
 public class AndroidSAF {
-    public static Uri mBasePath;
+    public static Uri mBaseSrcPath;
+    public static Uri mBaseDstPath;
     static IListener mListener;
 
     public static void copyModToAppStorage() {
-        if (mBasePath == null) {
+        if (mBaseSrcPath == null) {
             return;
         }
-        copyModToAppStorage(FileSystem.getContext(), mBasePath);
+        copyModToAppStorage(FileSystem.getContext(), mBaseSrcPath);
     }
 
-    public static void pickModDirectory(Uri selectedDirectoryUri) {
-        mBasePath = selectedDirectoryUri;
+    public static void pickModSourceDirectory(Uri selectedDirectoryUri) {
+        mBaseSrcPath = selectedDirectoryUri;
     }
+
+    public static void pickModDstDirectory(Uri selectedDirectoryUri) {
+        mBaseDstPath = selectedDirectoryUri;
+    }
+
 
     @SneakyThrows
     static public boolean isAutoSyncMaybeNeeded(String modName) {
@@ -55,7 +61,7 @@ public class AndroidSAF {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(fis))) {
             String line = reader.readLine();
             Uri uri = Uri.parse(line);
-            pickModDirectory(uri);
+            pickModSourceDirectory(uri);
         }
         return true;
     }
@@ -109,7 +115,7 @@ public class AndroidSAF {
         } catch (Exception e) {
             EventCollector.logException(e, "copyModToAppStorage");
         } finally {
-            mBasePath = null;
+            mBaseSrcPath = null;
             if (mListener != null) {
                 mListener.onComplete();
             }

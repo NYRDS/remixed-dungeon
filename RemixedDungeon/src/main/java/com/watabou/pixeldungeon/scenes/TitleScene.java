@@ -231,9 +231,14 @@ public class TitleScene extends PixelScene {
 
         fadeIn();
 
-        if (AndroidSAF.mBasePath!=null) {
+        if (AndroidSAF.mBaseSrcPath !=null) {
             GameLoop.pushUiTask(() -> WndLocalModInstall.onDirectoryPicked());
         }
+
+        if (AndroidSAF.mBaseDstPath !=null) {
+            GameLoop.pushUiTask(() -> WndLocalModInstall.onDirectoryPicked());
+        }
+
 
         if(Game.instance() instanceof InstallMod) {
             GameLoop.pushUiTask(()  -> {((InstallMod) Game.instance()).installMod();});
