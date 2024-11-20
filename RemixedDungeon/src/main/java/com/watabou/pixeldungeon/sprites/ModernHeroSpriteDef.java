@@ -33,6 +33,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 
 	// body goes as main texture
 	private static final String LAYER_ARMOR       = "armor";
+	private static final String LAYER_ARMOR_BOOTS = "armor_boots";
 	private static final String LAYER_HEAD        = "head";
 	private static final String LAYER_HAIR        = "hair";
 	private static final String LAYER_FACIAL_HAIR = "facial_hair";
@@ -168,6 +169,8 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		layersDesc.put(LAYER_HEAD, "hero_modern/head/" + classDescriptor + ".png");
 		layersDesc.put(LAYER_HAIR, hairDescriptor);
 		layersDesc.put(LAYER_ARMOR, armorDescriptor(armor));
+		layersDesc.put(LAYER_ARMOR_BOOTS, armorBootsDescriptor(armor, bodyType));
+
 		layersDesc.put(LAYER_FACIAL_HAIR, facialHairDescriptor);
 		layersDesc.put(LAYER_HELMET, helmetDescriptor);
 
@@ -310,6 +313,14 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			return HERO_EMPTY_PNG;
 		}
 		return "hero_modern/armor/" +armor.getVisualName()+".png";
+	}
+
+	private String armorBootsDescriptor(EquipableItem armor, String bodyType) {
+		String visualName = armor.getVisualName();
+		if(visualName.equals("none")) {
+			return HERO_EMPTY_PNG;
+		}
+		return "hero_modern/armor/boots/" +armor.getVisualName()+"_"+bodyType+".png";
 	}
 
 	private String armorShoulderDescriptor(EquipableItem armor, EquipableItem item, String hand) {
