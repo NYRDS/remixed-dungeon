@@ -5,7 +5,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.SharedPreferences;
 
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.util.UserKey;
 import com.nyrds.util.Utils;

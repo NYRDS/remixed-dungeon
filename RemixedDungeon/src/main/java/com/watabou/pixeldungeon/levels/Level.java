@@ -24,7 +24,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
@@ -36,6 +36,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.nyrds.pixeldungeon.DungeonOptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.RespawnerActor;
@@ -815,7 +816,7 @@ public abstract class Level implements Bundlable {
 
 	public String getTilesTex() {
 
-		if(Dungeon.isIsometricMode()) {
+		if(DungeonOptions.isIsometricMode()) {
 			return tilesTexXyz();
 		}
 

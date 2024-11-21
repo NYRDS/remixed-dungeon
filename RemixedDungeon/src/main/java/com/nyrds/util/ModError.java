@@ -1,7 +1,7 @@
 package com.nyrds.util;
 
 import com.nyrds.lua.LuaEngine;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.app.Notifications;
 import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.utils.GLog;

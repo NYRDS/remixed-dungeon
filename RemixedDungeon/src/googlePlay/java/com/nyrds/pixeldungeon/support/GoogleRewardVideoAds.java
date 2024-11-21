@@ -8,9 +8,9 @@ import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.game.Game;
-import com.watabou.noosa.InterstitialPoint;
+import com.nyrds.util.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;

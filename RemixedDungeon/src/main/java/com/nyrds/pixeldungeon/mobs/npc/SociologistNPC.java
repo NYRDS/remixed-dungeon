@@ -12,7 +12,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.DownloadStateListener;
 import com.nyrds.util.DownloadTask;
 import com.nyrds.util.JsonHelper;
-import com.watabou.noosa.InterstitialPoint;
+import com.nyrds.util.InterstitialPoint;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndOptions;

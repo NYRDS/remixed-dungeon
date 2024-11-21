@@ -15,7 +15,7 @@ import com.nyrds.pixeldungeon.levels.objects.sprites.LevelObjectSprite;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
@@ -39,6 +39,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.ClassicDungeonTilemap;
 import com.watabou.pixeldungeon.CustomLayerTilemap;
 import com.watabou.pixeldungeon.Dungeon;
+import com.nyrds.pixeldungeon.DungeonOptions;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.FogOfWar;
 import com.watabou.pixeldungeon.Statistics;
@@ -716,7 +717,7 @@ public class GameScene extends PixelScene {
     public static Group particleEffect(String effectName, int cell) {
         if (isSceneReady()) {
             Group effect = ParticleEffect.addToCell(effectName, cell);
-            effect.setIsometricShift(Dungeon.isIsometricMode());
+            effect.setIsometricShift(DungeonOptions.isIsometricMode());
             scene.add(effect);
             return effect;
         }

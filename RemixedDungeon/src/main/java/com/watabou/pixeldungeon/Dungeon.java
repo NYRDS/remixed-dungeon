@@ -6,6 +6,7 @@ import static com.nyrds.platform.game.RemixedDungeon.MOVE_TIMEOUTS;
 import com.google.common.base.Optional;
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
+import com.nyrds.pixeldungeon.DungeonOptions;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.game.GameLoop;
@@ -27,7 +28,7 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.utils.Position;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.storage.Preferences;
@@ -64,7 +65,7 @@ import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.nyrds.util.Random;
-import com.nyrds.util.SystemTime;
+import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
@@ -123,10 +124,6 @@ public class Dungeon {
     private static boolean[] passable;
 
     public static HeroClass heroClass;
-
-    @Getter
-    private static boolean isometricMode = false;
-    public static boolean isometricModeAllowed = false;
 
 
     public static void initSizeDependentStuff(int w, int h) {
@@ -300,13 +297,13 @@ public class Dungeon {
     public static void switchLevel(@NotNull final Level level, int pos, Collection<Mob> followers) {
         EventCollector.setSessionData("level", level.levelId);
 
-        isometricModeAllowed = level.isPlainTile(1); //TODO check entire level
+        DungeonOptions.isometricModeAllowed = level.isPlainTile(1); //TODO check entire level
 
         if(ModQuirks.only2dTiles) {
-            isometricModeAllowed = false;
+            DungeonOptions.isometricModeAllowed = false;
         }
         
-        if (isometricModeAllowed) {
+        if (DungeonOptions.isometricModeAllowed) {
             setIsometricMode(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false));
         } else {
             setIsometricMode(false);
@@ -1036,7 +1033,7 @@ public class Dungeon {
     }
 
     public static boolean isNorthWallVisible(int cell) {
-        if (!Dungeon.isIsometricMode()) {
+        if (!DungeonOptions.isIsometricMode()) {
             return isCellVisible(cell);
         }
 
@@ -1060,7 +1057,7 @@ public class Dungeon {
 
     public static void setIsometricMode(boolean isometricMode) {
         EventCollector.setSessionData("isometricMode", String.valueOf(isometricMode));
-        Dungeon.isometricMode = isometricMode;
+        DungeonOptions.isometricMode = isometricMode;
     }
 
 }

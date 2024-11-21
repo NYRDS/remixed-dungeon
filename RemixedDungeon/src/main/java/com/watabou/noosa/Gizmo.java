@@ -17,7 +17,7 @@
 
 package com.watabou.noosa;
 
-import com.watabou.pixeldungeon.Dungeon;
+import com.nyrds.pixeldungeon.DungeonOptions;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -44,7 +44,7 @@ public class Gizmo {
 	}
 
 	public static int isometricShift() {
-		if(Dungeon.isIsometricMode()) {
+		if(DungeonOptions.isIsometricMode()) {
 			return isometricModeShift;
 		}
 		return 0;
@@ -130,7 +130,7 @@ public class Gizmo {
 	}
 
 	public void setIsometricShift(boolean isometricShift) {
-		if(Dungeon.isIsometricMode()) {
+		if(DungeonOptions.isIsometricMode()) {
 			this.isometricShift = isometricShift;
 		}
 	}

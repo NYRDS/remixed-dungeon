@@ -4,7 +4,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.UseSpell;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModError;
 import com.watabou.gltextures.TextureCache;

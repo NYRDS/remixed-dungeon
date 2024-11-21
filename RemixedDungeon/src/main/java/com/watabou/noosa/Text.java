@@ -1,7 +1,7 @@
 package com.watabou.noosa;
 
-import com.nyrds.pixeldungeon.windows.IPlaceable;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.IPlaceable;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;

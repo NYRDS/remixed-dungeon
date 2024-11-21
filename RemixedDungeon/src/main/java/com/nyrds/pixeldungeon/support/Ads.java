@@ -4,9 +4,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.game.Game;
-import com.watabou.noosa.InterstitialPoint;
+import com.nyrds.util.InterstitialPoint;
 
 /**
  * Created by mike on 24.05.2016.

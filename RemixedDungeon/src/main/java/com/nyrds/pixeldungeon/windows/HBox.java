@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.util.IPlaceable;
 import com.watabou.noosa.Gizmo;
 import com.watabou.pixeldungeon.utils.GLog;
 

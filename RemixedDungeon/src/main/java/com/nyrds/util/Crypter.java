@@ -2,7 +2,7 @@ package com.nyrds.util;
 
 import android.util.Base64;
 
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 
 import java.security.spec.KeySpec;
 

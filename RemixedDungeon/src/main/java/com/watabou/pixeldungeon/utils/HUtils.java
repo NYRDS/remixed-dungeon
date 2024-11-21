@@ -1,10 +1,10 @@
 package com.watabou.pixeldungeon.utils;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
-import com.watabou.noosa.InterstitialPoint;
+import com.nyrds.util.InterstitialPoint;
 
 import org.jetbrains.annotations.NotNull;
 

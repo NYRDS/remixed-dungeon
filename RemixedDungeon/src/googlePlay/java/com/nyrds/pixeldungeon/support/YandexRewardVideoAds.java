@@ -4,9 +4,9 @@ import androidx.annotation.MainThread;
 import androidx.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.game.Game;
-import com.watabou.noosa.InterstitialPoint;
+import com.nyrds.util.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.HUtils;
 import com.yandex.mobile.ads.common.AdError;

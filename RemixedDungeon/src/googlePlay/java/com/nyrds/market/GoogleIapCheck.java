@@ -4,7 +4,7 @@ import android.text.TextUtils;
 import android.util.Base64;
 
 import com.nyrds.platform.util.TrackedRuntimeException;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 
 import java.io.IOException;
 import java.security.InvalidKeyException;

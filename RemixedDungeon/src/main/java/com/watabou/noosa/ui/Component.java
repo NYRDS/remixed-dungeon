@@ -17,7 +17,7 @@
 
 package com.watabou.noosa.ui;
 
-import com.nyrds.pixeldungeon.windows.IPlaceable;
+import com.nyrds.util.IPlaceable;
 import com.watabou.noosa.Group;
 
 public class Component extends Group implements IPlaceable {

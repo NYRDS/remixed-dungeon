@@ -2,7 +2,7 @@ package com.nyrds.util;
 
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.utils.ModDesc;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 
 import org.jetbrains.annotations.NotNull;

@@ -5,7 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.Unzip;
 import com.nyrds.util.UnzipStateListener;

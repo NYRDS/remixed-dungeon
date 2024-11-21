@@ -1,4 +1,4 @@
-package com.nyrds.util;
+package com.watabou.utils;
 
 public class SystemTime {
 

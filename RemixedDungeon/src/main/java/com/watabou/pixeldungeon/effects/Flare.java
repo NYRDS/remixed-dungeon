@@ -10,7 +10,7 @@ import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.Visual;
-import com.nyrds.util.SystemTime;
+import com.watabou.utils.SystemTime;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

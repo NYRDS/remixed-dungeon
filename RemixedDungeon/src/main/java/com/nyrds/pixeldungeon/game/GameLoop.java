@@ -4,7 +4,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
@@ -21,7 +21,7 @@ import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
-import com.nyrds.util.SystemTime;
+import com.watabou.utils.SystemTime;
 
 import org.luaj.vm2.LuaError;
 

@@ -1,6 +1,6 @@
 package com.nyrds.platform.util;
 
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.app.Notifications;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.nyrds.util.Utils;

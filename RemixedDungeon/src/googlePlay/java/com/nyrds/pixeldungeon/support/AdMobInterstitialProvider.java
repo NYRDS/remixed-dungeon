@@ -7,9 +7,9 @@ import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.game.Game;
-import com.watabou.noosa.InterstitialPoint;
+import com.nyrds.util.InterstitialPoint;
 
 public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialProvider {
     private InterstitialAd mInterstitialAd = null;

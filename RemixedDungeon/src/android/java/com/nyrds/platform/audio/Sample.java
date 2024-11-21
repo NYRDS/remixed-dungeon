@@ -25,7 +25,7 @@ import android.media.SoundPool;
 import androidx.annotation.NonNull;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.ModdingMode;
 

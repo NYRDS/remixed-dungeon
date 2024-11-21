@@ -15,16 +15,9 @@ import androidx.multidex.MultiDexApplication;
 import com.nyrds.market.MarketApp;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.EventCollector;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 
-import java.io.IOException;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.util.Collections;
-import java.util.Enumeration;
 import java.util.concurrent.ThreadPoolExecutor;
 
 public class RemixedDungeonApp extends MultiDexApplication {

@@ -1,6 +1,7 @@
 package com.watabou.noosa;
 
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.InterstitialPoint;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.util.Utils;
 
 public class ReturnOnlyOnce implements InterstitialPoint {

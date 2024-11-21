@@ -11,7 +11,7 @@ import com.nyrds.util.DownloadStateListener;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
-import com.watabou.noosa.InterstitialPoint;
+import com.nyrds.util.InterstitialPoint;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Assets;

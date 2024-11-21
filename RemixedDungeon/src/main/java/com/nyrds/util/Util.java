@@ -13,7 +13,7 @@ import android.os.StatFs;
 import android.util.Base64;
 
 import com.nyrds.pixeldungeon.ml.BuildConfig;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 

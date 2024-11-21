@@ -10,7 +10,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;

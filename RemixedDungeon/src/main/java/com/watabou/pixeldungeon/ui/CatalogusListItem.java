@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;

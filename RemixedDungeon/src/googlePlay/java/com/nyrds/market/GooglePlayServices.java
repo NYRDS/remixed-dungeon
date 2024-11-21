@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 
 /**
  * Created by mike on 19.02.2017.

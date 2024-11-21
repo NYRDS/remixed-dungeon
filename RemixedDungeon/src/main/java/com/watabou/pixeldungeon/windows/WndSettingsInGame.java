@@ -10,6 +10,7 @@ import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.Dungeon;
+import com.nyrds.pixeldungeon.DungeonOptions;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -40,7 +41,7 @@ public class WndSettingsInGame extends WndMenuCommon {
             }
         };
 
-        isometricModeCheckBox.enable(Dungeon.isometricModeAllowed);
+        isometricModeCheckBox.enable(DungeonOptions.isometricModeAllowed);
         menuItems.add(isometricModeCheckBox);
 
 

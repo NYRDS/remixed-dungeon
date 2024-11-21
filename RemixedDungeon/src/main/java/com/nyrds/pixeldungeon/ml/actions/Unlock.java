@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.ml.actions;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;

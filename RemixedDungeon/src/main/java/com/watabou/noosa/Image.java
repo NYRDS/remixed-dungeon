@@ -17,7 +17,7 @@
 
 package com.watabou.noosa;
 
-import com.nyrds.pixeldungeon.windows.IPlaceable;
+import com.nyrds.util.IPlaceable;
 import com.nyrds.platform.compatibility.RectF;
 import com.nyrds.util.ModError;
 import com.watabou.gltextures.SmartTexture;

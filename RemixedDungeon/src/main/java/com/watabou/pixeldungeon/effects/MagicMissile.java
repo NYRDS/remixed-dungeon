@@ -7,6 +7,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Dungeon;
+import com.nyrds.pixeldungeon.DungeonOptions;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.effects.particles.LeafParticle;
@@ -40,7 +41,7 @@ public class MagicMissile extends Emitter {
 			PointF pf = DungeonTilemap.tileCenterToWorld(from);
 			PointF pt = DungeonTilemap.tileCenterToWorld(to);
 
-			if(Dungeon.isIsometricMode()) {
+			if(DungeonOptions.isIsometricMode()) {
 				pf.offset(0, Image.isometricModeShift);
 				pt.offset(0, Image.isometricModeShift);
 			}

@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.nyrds.util.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
-import com.nyrds.util.SystemTime;
+import com.watabou.utils.SystemTime;
 
 import java.io.IOException;
 import java.io.InputStream;

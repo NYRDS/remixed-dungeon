@@ -1,7 +1,7 @@
 package com.nyrds.util;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.Assets;
 import com.nyrds.platform.storage.FileSystem;

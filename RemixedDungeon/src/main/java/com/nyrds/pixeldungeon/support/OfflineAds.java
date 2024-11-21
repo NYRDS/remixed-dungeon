@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.Util;
-import com.watabou.noosa.InterstitialPoint;
+import com.nyrds.util.InterstitialPoint;
 import com.nyrds.util.Utils;
 
 /**

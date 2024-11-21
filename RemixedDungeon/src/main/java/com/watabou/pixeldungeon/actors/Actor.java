@@ -7,7 +7,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.utils.CharsList;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Dungeon;

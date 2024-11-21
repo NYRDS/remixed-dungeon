@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.items.common;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;

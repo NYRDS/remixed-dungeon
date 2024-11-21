@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.windows;
+package com.nyrds.util;
 
 /**
  * Created by mike on 25.06.2018.

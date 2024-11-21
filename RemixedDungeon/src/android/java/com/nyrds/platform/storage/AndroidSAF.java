@@ -10,7 +10,7 @@ import android.util.Pair;
 
 import androidx.documentfile.provider.DocumentFile;
 
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.game.Game;
 
 import java.io.BufferedReader;

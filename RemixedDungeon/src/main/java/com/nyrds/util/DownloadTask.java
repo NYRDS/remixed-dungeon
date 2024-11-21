@@ -1,6 +1,6 @@
 package com.nyrds.util;
 
-import com.nyrds.platform.EventCollector;
+import com.nyrds.util.events.EventCollector;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import java.io.File;
