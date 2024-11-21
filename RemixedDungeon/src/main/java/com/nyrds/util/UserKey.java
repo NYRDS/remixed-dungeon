@@ -15,13 +15,11 @@ public class UserKey {
 
 	private static void init() {
 
-		SharedPreferences prefs = Preferences.INSTANCE.get();
-
-		String key = prefs.getString("userKey", noKey);
+		String key = Preferences.INSTANCE.getString("userKey", noKey);
 		if(key.equals(noKey)) { 
 			userId = UUID.randomUUID();
-			
-			prefs.edit().putString("userKey", userId.toString()).apply();
+
+			Preferences.INSTANCE.put("userKey", userId.toString());
 		} else {
 			userId = UUID.fromString(key);
 		}
@@ -30,7 +28,7 @@ public class UserKey {
 	}
 
 	public static int someValue(){
-		if(userId == null){
+		if(userId == null) {
 			init();
 		}
 
