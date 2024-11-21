@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class PreferencesAndroid implements IPreferences {
 
-    SharedPreferences prefs;
+    private SharedPreferences prefs;
 
     public PreferencesAndroid(SharedPreferences prefs) {
         this.prefs = prefs;

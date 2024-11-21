@@ -38,11 +38,10 @@ public class RemixedDungeonApp extends MultiDexApplication {
             defaultExecutor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
         }
 
-        if(checkOwnSignature()) {
-            MarketApp.init(this);
-        }
-
         try {
+            if(checkOwnSignature()) {
+                MarketApp.init(this);
+            }
             ModdingMode.selectMod(GamePreferences.activeMod());
             Class.forName("android.os.AsyncTask");
         } catch (Throwable ignore) {
@@ -69,6 +68,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
             }
 */
     }
+
 
     @Override
     public void registerActivityLifecycleCallbacks(ActivityLifecycleCallbacks callback) {

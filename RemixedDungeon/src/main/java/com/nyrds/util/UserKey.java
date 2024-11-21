@@ -1,7 +1,9 @@
 package com.nyrds.util;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.storage.Preferences;
 
 import java.util.UUID;
@@ -15,11 +17,13 @@ public class UserKey {
 
 	private static void init() {
 
-		String key = Preferences.INSTANCE.getString("userKey", noKey);
+		SharedPreferences prefs = RemixedDungeonApp.getContext().getSharedPreferences("com.watabou.pixeldungeon.RemixedDungeon", Context.MODE_PRIVATE);
+
+		String key = prefs.getString("userKey", noKey);
 		if(key.equals(noKey)) { 
 			userId = UUID.randomUUID();
 
-			Preferences.INSTANCE.put("userKey", userId.toString());
+			prefs.edit().putString("userKey", userId.toString()).apply();
 		} else {
 			userId = UUID.fromString(key);
 		}
@@ -28,7 +32,7 @@ public class UserKey {
 	}
 
 	public static int someValue(){
-		if(userId == null) {
+		if(userId == null){
 			init();
 		}
 
