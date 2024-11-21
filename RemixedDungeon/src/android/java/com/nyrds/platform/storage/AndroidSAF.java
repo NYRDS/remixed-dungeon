@@ -71,15 +71,34 @@ public class AndroidSAF {
     
     static private  void copyModToAppStorage(Context context, Uri parentDirectoryUri) {
         try {
+
+            if (mListener != null) {
+                mListener.onMessage("Syncing mod with app storage...");
+            }
+
             DocumentFile file = DocumentFile.fromTreeUri(context, parentDirectoryUri);
 
             String modPath = parentDirectoryUri.getLastPathSegment();
             String[] parts = modPath.split("/");
 
             String modName = parts[parts.length - 1];
+
+
+            if (mListener != null) {
+                mListener.onMessage("Building SAF timestamp map...");
+            }
+
             var externalMap = getFileTimestampMap(file, "");
+
+            if (mListener != null) {
+                mListener.onMessage("Building app storage timestamp map...");
+            }
+
             var internalMap = FileSystem.getFileTimestampMap(FileSystem.getExternalStorageFile(modName), "");
 
+            if (mListener != null) {
+                mListener.onMessage("Finding newer files...");
+            }
 
             Map<String, DocumentFile> newerFiles = new HashMap<>();
             //build map of newer external files
@@ -91,6 +110,10 @@ public class AndroidSAF {
 
             for(val entry : newerFiles.entrySet()) {
                 copyDocumentToFile(entry.getValue(), entry.getKey(), FileSystem.getExternalStorageFile(modName + File.separator + entry.getKey()));
+            }
+
+            if (mListener != null) {
+                mListener.onMessage("Finding deleted files...");
             }
 
             Set<String> deletedFiles = new HashSet<>();
@@ -108,7 +131,9 @@ public class AndroidSAF {
                 }
             }
 
-            //copyDirToAppStorage(file, "", modName);
+            if (mListener != null) {
+                mListener.onMessage("Saving sync uri...");
+            }
 
             File uri = FileSystem.getExternalStorageFile(modName + File.separator+"src_uri.sync");
             FileOutputStream fos = new FileOutputStream(uri);
@@ -234,6 +259,7 @@ public class AndroidSAF {
     }
 
     public interface IListener {
+        void onMessage(String message);
         void onFileCopy(String path);
 
         void onFileSkip(String path);

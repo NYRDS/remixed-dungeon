@@ -14,33 +14,36 @@ public class WndInstallingMod extends WndTitledMessage implements AndroidSAF.ILi
         super(new BusyIndicator(), StringsManager.getVar(R.string.WndInstallingMod_please_wait), "");
     }
 
+    private void showText(String text) {
+        GameLoop.pushUiTask( () -> {
+            setText(text);
+        });
+    }
+
+    @Override
+    public void onMessage(String message) {
+        showText(String.format(message));
+    }
+
     @Override
     public void onFileCopy(String path) {
-        GameLoop.pushUiTask( () -> {
-            setText(String.format(StringsManager.getVar(R.string.WndInstallingMod_copying_file), path));
-        });
+        showText(String.format(StringsManager.getVar(R.string.WndInstallingMod_copying_file), path));
     }
 
     @Override
     public void onFileSkip(String path) {
-        GameLoop.pushUiTask( () -> {
-            setText(Utils.format(R.string.WndInstallingMod_skipping_file, path));
-        });
+        showText(Utils.format(R.string.WndInstallingMod_skipping_file, path));
     }
 
     @Override
     public void onFileDelete(String entry) {
-        GameLoop.pushUiTask( () -> {
-            setText(Utils.format(R.string.WndInstallingMod_deleting_file, entry));
-        });
+        showText(Utils.format(R.string.WndInstallingMod_deleting_file, entry));
     }
-
 
     @Override
     public void onComplete() {
         hide();
     }
-
 
     @Override
     public void hide()  {
