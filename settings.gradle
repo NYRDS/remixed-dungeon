@@ -1,4 +1,4 @@
-include ':RemixedDungeon', ':processor', ':annotation'
+include ':processor', ':annotation'
 
 // Example project-level settings.gradle
 dependencyResolutionManagement {
@@ -14,3 +14,6 @@ dependencyResolutionManagement {
     }
 }
 include ':RemixedDungeonBase'
+
+include ':RemixedDungeonDesktop'
+include ':RemixedDungeon'

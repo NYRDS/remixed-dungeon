@@ -1,0 +1,25 @@
+plugins {
+    id 'application' // Apply the application plugin
+    id 'java'        // Keep the Java plugin
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_10
+    targetCompatibility = JavaVersion.VERSION_1_10
+}
+
+// Specify the main class for the application
+application {
+    mainClassName = 'com.nyrds.pixeldungeon.ml.descktop.DesktopLauncher' // Replace with your actual main class path
+}
+
+dependencies {
+    implementation project(':RemixedDungeonBase') {
+        ext.android = false
+    }
+}
+
+// Optional: Define tasks or configurations specific to your application
+tasks.named('run') {
+    // You can configure the run task if needed
+}

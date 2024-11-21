@@ -2,6 +2,10 @@ plugins {
     id 'java-library'
 }
 
+if (project.hasProperty('android') && project.android == 'true') {
+    apply plugin: 'com.android.library'
+}
+
 java {
     sourceCompatibility = JavaVersion.VERSION_1_10
     targetCompatibility = JavaVersion.VERSION_1_10

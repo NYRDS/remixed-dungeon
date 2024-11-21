@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.support;
 import android.app.Activity;
 import android.content.Intent;
 
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 import java.util.List;
 

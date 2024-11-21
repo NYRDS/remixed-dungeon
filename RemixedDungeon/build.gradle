@@ -129,11 +129,11 @@ android {
 
 }
 
-
-
 dependencies {
     implementation project(':annotation')
-    implementation project(':RemixedDungeonBase')
+    implementation project(':RemixedDungeonBase') {
+        ext.android = true
+    }
 
     annotationProcessor project(':processor')
 
