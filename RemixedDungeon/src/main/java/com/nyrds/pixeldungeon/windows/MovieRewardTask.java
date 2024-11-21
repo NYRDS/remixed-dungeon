@@ -6,7 +6,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.Ads;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;

@@ -7,7 +7,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
 import com.nyrds.pixeldungeon.windows.WndSurvey;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.FileSystem;
+import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.DownloadStateListener;
 import com.nyrds.util.DownloadTask;

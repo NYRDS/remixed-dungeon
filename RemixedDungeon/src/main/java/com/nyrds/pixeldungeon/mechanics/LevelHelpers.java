@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics;
 
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;

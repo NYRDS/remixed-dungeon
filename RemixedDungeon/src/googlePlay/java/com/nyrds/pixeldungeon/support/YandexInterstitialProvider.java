@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.InterstitialPoint;
 import com.yandex.mobile.ads.common.AdError;

@@ -4,7 +4,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;

@@ -8,7 +8,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
 
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.InterstitialPoint;
 

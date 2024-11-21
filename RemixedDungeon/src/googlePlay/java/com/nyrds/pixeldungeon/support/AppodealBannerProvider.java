@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.support;
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerCallbacks;
 import com.appodeal.ads.BannerView;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.game.Game;
 
 import org.jetbrains.annotations.NotNull;

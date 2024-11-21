@@ -6,7 +6,7 @@ import android.content.Intent;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 
 import org.jetbrains.annotations.NotNull;
 

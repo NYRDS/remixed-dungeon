@@ -1,4 +1,4 @@
-package com.nyrds.util.events;
+package com.nyrds.platform.events;
 
 import java.util.Map;
 

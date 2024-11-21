@@ -1,7 +1,7 @@
 
 package com.watabou.pixeldungeon.levels;
 
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.painters.ArmoryPainter;
 import com.watabou.pixeldungeon.levels.painters.BlacksmithPainter;

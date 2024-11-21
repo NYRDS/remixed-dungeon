@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.items.accessories;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.Iap;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;

@@ -3,7 +3,7 @@ package com.watabou.pixeldungeon;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;

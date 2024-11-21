@@ -5,7 +5,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.SharedPreferences;
 
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.util.UserKey;
 import com.nyrds.util.Utils;
@@ -53,13 +53,13 @@ public enum Preferences {
 	public static final String KEY_USE_SMOOTH_CAMERA = "use_smooth_camera";
 
 
-
     private SharedPreferences prefs;
 
 	private final Map<String, Integer> intCache    = new HashMap<>();
 	private final Map<String, String>  stringCache = new HashMap<>();
 	private final Map<String, Boolean> boolCache   = new HashMap<>();
 	private final Map<String, Double>  doubleCache = new HashMap<>();
+
 
 	public SharedPreferences get() {
 		if (prefs == null) {

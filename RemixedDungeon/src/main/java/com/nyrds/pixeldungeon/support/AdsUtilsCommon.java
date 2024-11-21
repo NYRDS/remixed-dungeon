@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.support;
 import androidx.annotation.MainThread;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.util.InterstitialPoint;
 
 import org.jetbrains.annotations.Nullable;

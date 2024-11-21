@@ -1,7 +1,7 @@
 package com.nyrds.util;
 
-import com.nyrds.util.events.EventCollector;
-import com.nyrds.platform.FileSystem;
+import com.nyrds.platform.events.EventCollector;
+import com.nyrds.platform.storage.FileSystem;
 
 import java.io.File;
 

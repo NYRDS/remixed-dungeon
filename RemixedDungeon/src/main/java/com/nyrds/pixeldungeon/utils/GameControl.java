@@ -4,7 +4,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;

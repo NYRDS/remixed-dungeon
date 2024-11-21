@@ -3,7 +3,7 @@ package com.watabou.utils;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.generated.BundleHelper;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.Util;
 

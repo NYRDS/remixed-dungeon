@@ -2,7 +2,6 @@ package com.nyrds.platform.storage;
 
 import android.content.Context;
 
-import com.nyrds.platform.IFileSystem;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.util.ModError;
 

@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.InterstitialPoint;
 

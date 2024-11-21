@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics;
 
 import com.nyrds.lua.LuaEngine;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;

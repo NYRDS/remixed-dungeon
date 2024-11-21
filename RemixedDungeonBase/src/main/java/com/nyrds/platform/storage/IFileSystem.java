@@ -1,4 +1,4 @@
-package com.nyrds.platform;
+package com.nyrds.platform.storage;
 
 import org.jetbrains.annotations.NotNull;
 

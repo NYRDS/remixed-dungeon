@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.support;
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.RewardedVideoCallbacks;
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.HUtils;

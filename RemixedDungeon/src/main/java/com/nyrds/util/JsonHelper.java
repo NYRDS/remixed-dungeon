@@ -1,8 +1,8 @@
 package com.nyrds.util;
 
 import com.google.gson.JsonParser;
-import com.nyrds.util.events.EventCollector;
-import com.nyrds.platform.FileSystem;
+import com.nyrds.platform.events.EventCollector;
+import com.nyrds.platform.storage.FileSystem;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 

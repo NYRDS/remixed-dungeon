@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.support;
 
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.InterstitialCallbacks;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.InterstitialPoint;
 

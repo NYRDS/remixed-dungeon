@@ -17,7 +17,7 @@
 
 package com.watabou.glscripts;
 
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.gl.Program;
 import com.nyrds.platform.gl.Shader;
 

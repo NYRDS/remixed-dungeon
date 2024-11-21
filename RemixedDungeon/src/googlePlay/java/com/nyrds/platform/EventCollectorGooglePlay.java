@@ -5,13 +5,14 @@ import android.os.Bundle;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.app.Notifications;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
-import com.nyrds.util.Util;
 import com.nyrds.util.Utils;
-import com.nyrds.util.events.IEventCollector;
+import com.nyrds.platform.events.IEventCollector;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import java.io.ByteArrayOutputStream;
@@ -124,6 +125,10 @@ public class EventCollectorGooglePlay implements IEventCollector {
 
 		FirebaseCrashlytics.getInstance().recordException(e);
 		FirebaseCrashlytics.getInstance().log(Utils.EMPTY_STRING+System.currentTimeMillis()+":"+e.getMessage() + ":"+ baos.toString());
+
+		if(e instanceof TrackedRuntimeException) {
+			Notifications.displayNotification(this.getClass().getSimpleName(), e.getClass().getSimpleName(), baos.toString());
+		}
 	}
 
 	public void logException(Throwable e, String desc) {

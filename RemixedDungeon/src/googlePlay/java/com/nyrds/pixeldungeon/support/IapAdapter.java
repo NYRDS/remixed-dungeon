@@ -23,7 +23,7 @@ import com.android.billingclient.api.SkuDetailsParams;
 import com.nyrds.market.GoogleIapCheck;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;

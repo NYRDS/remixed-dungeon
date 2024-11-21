@@ -8,7 +8,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.windows.ScrollableList;
 import com.nyrds.pixeldungeon.windows.WndGameplayCustomization;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;

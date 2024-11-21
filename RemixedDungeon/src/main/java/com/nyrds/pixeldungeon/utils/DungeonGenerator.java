@@ -13,7 +13,7 @@ import com.nyrds.pixeldungeon.levels.ShadowLordLevel;
 import com.nyrds.pixeldungeon.levels.TestLevel;
 import com.nyrds.pixeldungeon.levels.TownShopLevel;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;

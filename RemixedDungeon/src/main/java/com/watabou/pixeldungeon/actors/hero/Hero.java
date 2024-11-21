@@ -16,7 +16,7 @@ import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.pixeldungeon.windows.MovieRewardTask;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;

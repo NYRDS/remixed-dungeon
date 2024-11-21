@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.game;
 import android.annotation.SuppressLint;
 
 import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;

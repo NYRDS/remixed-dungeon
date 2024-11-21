@@ -1,10 +1,10 @@
 package com.nyrds.util;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.util.events.EventCollector;
+import com.nyrds.platform.events.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.Assets;
-import com.nyrds.platform.FileSystem;
+import com.nyrds.platform.storage.FileSystem;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
