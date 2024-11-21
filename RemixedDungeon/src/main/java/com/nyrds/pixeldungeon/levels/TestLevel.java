@@ -16,7 +16,7 @@ import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
 import java.util.List;

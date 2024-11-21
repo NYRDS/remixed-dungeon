@@ -32,7 +32,8 @@ import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.elements.RankingTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
@@ -136,7 +137,7 @@ public class WndRanking extends WndTabbed {
 
             IconTitle title = new IconTitle();
             title.icon(hero.newSprite());
-            title.label(Utils.format(R.string.WndRanking_StaTitle, hero.lvl(), heroClass).toUpperCase(Locale.ENGLISH));
+            title.label(HUtils.format(R.string.WndRanking_StaTitle, hero.lvl(), heroClass).toUpperCase(Locale.ENGLISH));
             title.setRect(0, 0, WIDTH, 0);
             title.color(0xCC33FF);
             add(title);

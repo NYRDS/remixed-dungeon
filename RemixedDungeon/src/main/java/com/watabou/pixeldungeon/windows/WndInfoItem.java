@@ -9,7 +9,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 import com.watabou.pixeldungeon.windows.elements.GenericInfo;
 
 import org.jetbrains.annotations.NotNull;
@@ -45,7 +45,7 @@ public class WndInfoItem extends Window {
                 info = StringsManager.getVar(R.string.WndInfoItem_Remains);
 			} else if (heap.type == Type.CRYSTAL_CHEST) {
                 title = StringsManager.getVar(R.string.WndInfoItem_CrystalChest);
-                info = Utils.format(R.string.WndInfoItem_Inside, Utils.indefinite( heap.peek().name() ) );
+                info = HUtils.format(R.string.WndInfoItem_Inside, HUtils.indefinite( heap.peek().name() ) );
 			} else {
                 title = StringsManager.getVar(R.string.WndInfoItem_LockedChest);
                 info = StringsManager.getVar(R.string.WndInfoItem_WontKnow) +" "+ StringsManager.getVar(R.string.WndInfoItem_NeedKey);

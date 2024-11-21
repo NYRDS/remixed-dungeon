@@ -19,7 +19,7 @@ import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
-import com.watabou.utils.PointF;
+import com.nyrds.util.PointF;
 
 import lombok.val;
 

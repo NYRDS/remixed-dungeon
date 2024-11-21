@@ -7,7 +7,7 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.utils.PointF;
+import com.nyrds.util.PointF;
 
 public class BadgeBanner extends Image {
 

@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.plants.Icecap;
 import com.watabou.pixeldungeon.plants.Moongrace;
 import com.watabou.pixeldungeon.plants.Sorrowmoss;
 import com.watabou.pixeldungeon.plants.Sungrass;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;

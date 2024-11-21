@@ -8,7 +8,7 @@ import com.nyrds.platform.audio.Sample;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.watabou.utils.PointF;
+import com.nyrds.util.PointF;
 
 import javax.microedition.khronos.opengles.GL10;
 

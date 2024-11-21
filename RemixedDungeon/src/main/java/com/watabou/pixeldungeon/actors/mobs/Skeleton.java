@@ -15,7 +15,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -65,7 +66,7 @@ public class Skeleton extends UndeadMob {
 		}
 		
 		if (heroKilled) {
-			Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB), Utils.indefinite( getName() ), Dungeon.depth ) );
+			Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB), HUtils.indefinite( getName() ), Dungeon.depth ) );
             GLog.n(StringsManager.getVar(R.string.Skeleton_Killed));
 		}
 	}

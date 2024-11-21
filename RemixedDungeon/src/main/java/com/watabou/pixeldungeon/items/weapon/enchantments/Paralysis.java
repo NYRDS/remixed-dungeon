@@ -6,7 +6,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.sprites.Glowing;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class Paralysis extends Weapon.Enchantment {
 	

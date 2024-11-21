@@ -10,7 +10,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.sprites.LarvaSprite;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class Larva extends Mob {
 

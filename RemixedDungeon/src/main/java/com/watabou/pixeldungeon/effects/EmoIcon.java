@@ -6,7 +6,7 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.Icons;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class EmoIcon extends Image {
 

@@ -6,7 +6,8 @@ import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.support.AdsRewardVideo;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.ui.RedButton;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.WndQuest;
 
 public class WndMovieTheatre extends WndQuest{
@@ -15,7 +16,7 @@ public class WndMovieTheatre extends WndQuest{
 
 	public WndMovieTheatre(final ServiceManNPC npc, int filmsSeen, int limit) {
 
-		super(npc, Utils.format(R.string.WndMovieTheatre_Instruction, ServiceManNPC.getReward().quantity()) + "\n\n" + Utils.format(StringsManager.getVar(R.string.WndMovieTheatre_Instruction_2), filmsSeen, limit));
+		super(npc, HUtils.format(R.string.WndMovieTheatre_Instruction, ServiceManNPC.getReward().quantity()) + "\n\n" + Utils.format(StringsManager.getVar(R.string.WndMovieTheatre_Instruction_2), filmsSeen, limit));
 
 		float y = height + 2*GAP;
 

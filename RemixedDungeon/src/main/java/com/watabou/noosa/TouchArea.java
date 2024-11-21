@@ -19,7 +19,7 @@ package com.watabou.noosa;
 
 import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.input.Touchscreen.Touch;
-import com.watabou.utils.Signal;
+import com.nyrds.util.Signal;
 
 public class TouchArea extends Visual implements Signal.Listener<Touchscreen.Touch> {
 

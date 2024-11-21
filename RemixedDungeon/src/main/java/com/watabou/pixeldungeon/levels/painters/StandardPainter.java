@@ -11,8 +11,8 @@ import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.utils.Point;
-import com.watabou.utils.Random;
+import com.nyrds.util.Point;
+import com.nyrds.util.Random;
 
 public class StandardPainter extends Painter {
 

@@ -15,7 +15,7 @@ import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 

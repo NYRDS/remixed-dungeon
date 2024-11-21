@@ -30,7 +30,7 @@ import com.nyrds.util.ModError;
 import com.nyrds.util.Unzip;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Rankings;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 import org.jetbrains.annotations.Nullable;
 

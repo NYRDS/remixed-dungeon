@@ -17,9 +17,9 @@ import com.watabou.pixeldungeon.levels.painters.ExitPainter;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Graph;
-import com.watabou.utils.Random;
-import com.watabou.utils.Rect;
+import com.nyrds.util.Graph;
+import com.nyrds.util.Random;
+import com.nyrds.util.Rect;
 
 import org.jetbrains.annotations.NotNull;
 

@@ -9,7 +9,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import java.util.Arrays;
 

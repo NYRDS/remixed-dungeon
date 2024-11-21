@@ -12,7 +12,7 @@ import com.watabou.noosa.Group;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.Nullable;

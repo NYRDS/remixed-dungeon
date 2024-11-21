@@ -14,7 +14,7 @@ import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.utils.Signal;
+import com.nyrds.util.Signal;
 
 import lombok.Getter;
 

@@ -4,7 +4,7 @@ package com.watabou.pixeldungeon;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 import com.watabou.utils.Bundle;
 
 public class Assets {

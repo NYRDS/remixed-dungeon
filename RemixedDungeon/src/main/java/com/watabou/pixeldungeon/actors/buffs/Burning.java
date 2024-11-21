@@ -20,8 +20,9 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
+import com.nyrds.util.Random;
 
 public class Burning extends Buff implements Doom {
 
@@ -39,7 +40,7 @@ public class Burning extends Buff implements Doom {
 		}
 		@Override
 		public String actionText(Item srcItem) {
-            return Utils.format(R.string.Burning_Burns, srcItem.toString());
+            return HUtils.format(R.string.Burning_Burns, srcItem.toString());
 		}
 	}
 		

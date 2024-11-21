@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.ai;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -26,10 +26,10 @@ public class Fleeing extends MobAi implements AiState {
     public String status(Char me) {
         Char enemy = me.getEnemy();
         if(enemy.valid()) {
-            return Utils.format(R.string.Mob_StaFleeingStatus2,
+            return HUtils.format(R.string.Mob_StaFleeingStatus2,
                     me.getName(), enemy.getName_objective());
         }
-        return Utils.format(R.string.Mob_StaFleeingStatus,
+        return HUtils.format(R.string.Mob_StaFleeingStatus,
                 me.getName());
     }
 

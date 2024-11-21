@@ -22,11 +22,12 @@ import com.watabou.pixeldungeon.levels.CityLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ImpSprite;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.WndImp;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -43,7 +44,7 @@ public class Imp extends NPC {
 		
 		if (!Quest.given && CharUtils.isVisible(this)) {
 			if (!seenBefore) {
-                say( Utils.format(R.string.Imp_Hey, Dungeon.hero.className() ) );
+                say( HUtils.format(R.string.Imp_Hey, Dungeon.hero.className() ) );
 			}
 			seenBefore = true;
 		} else {
@@ -110,7 +111,7 @@ public class Imp extends NPC {
 	
 	public void flee() {
 
-        say( Utils.format(R.string.Imp_Cya, Dungeon.hero.className() ) );
+        say( HUtils.format(R.string.Imp_Cya, Dungeon.hero.className() ) );
 		
 		destroy();
 		getSprite().die();

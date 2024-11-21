@@ -39,7 +39,7 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.SimpleButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
 import java.util.ArrayList;

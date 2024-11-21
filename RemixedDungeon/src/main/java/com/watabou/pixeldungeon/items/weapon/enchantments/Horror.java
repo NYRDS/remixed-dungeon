@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.sprites.Glowing;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class Horror extends Weapon.Enchantment {
 

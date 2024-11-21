@@ -11,7 +11,7 @@ import com.nyrds.platform.storage.Preferences;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

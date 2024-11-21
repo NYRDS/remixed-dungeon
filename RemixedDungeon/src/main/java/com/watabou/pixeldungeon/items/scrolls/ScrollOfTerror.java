@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -43,7 +43,7 @@ public class ScrollOfTerror extends Scroll {
             GLog.i(StringsManager.getVar(R.string.ScrollOfTerror_Info1));
 			break;
 		case 1:
-            GLog.i(Utils.format(R.string.ScrollOfTerror_Info2, affected.getName()));
+            GLog.i(HUtils.format(R.string.ScrollOfTerror_Info2, affected.getName()));
 			break;
 		default:
             GLog.i(StringsManager.getVar(R.string.ScrollOfTerror_Info3));

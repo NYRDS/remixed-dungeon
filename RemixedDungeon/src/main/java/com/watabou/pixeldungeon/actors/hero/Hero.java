@@ -79,8 +79,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.pixeldungeon.windows.WndSaveSlotSelect;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
-import com.watabou.utils.SystemTime;
+import com.nyrds.util.Random;
+import com.nyrds.util.SystemTime;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

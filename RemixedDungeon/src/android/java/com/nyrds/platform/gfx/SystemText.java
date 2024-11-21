@@ -19,7 +19,7 @@ import com.watabou.noosa.Group;
 import com.watabou.noosa.SystemTextLine;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 import org.jetbrains.annotations.NotNull;
 

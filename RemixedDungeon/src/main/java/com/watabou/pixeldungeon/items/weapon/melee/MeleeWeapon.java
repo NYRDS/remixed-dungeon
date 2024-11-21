@@ -8,8 +8,9 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
+import com.nyrds.util.Random;
 
 public class MeleeWeapon extends Weapon {
 
@@ -82,14 +83,14 @@ public class MeleeWeapon extends Weapon {
         String degraded = StringsManager.getVar(R.string.MeleeWeapon_Info1d);
 		String quality = isLevelKnown() && level() != 0 ? (level() > 0 ? upgraded : degraded) : typical;
 		info.append(p);
-        info.append(Utils.capitalize(Utils.format(R.string.MeleeWeapon_Info1a, name, quality, tier)));
+        info.append(Utils.capitalize(HUtils.format(R.string.MeleeWeapon_Info1a, name, quality, tier)));
 		info.append(" ");
 
 		final Hero hero = Dungeon.hero;
 		if (isLevelKnown()) {
-            info.append(Utils.format(R.string.MeleeWeapon_Info2a, (MIN + (MAX - MIN) / 2)));
+            info.append(HUtils.format(R.string.MeleeWeapon_Info2a, (MIN + (MAX - MIN) / 2)));
 		} else {
-            info.append(Utils.format(R.string.MeleeWeapon_Info2b, (min() + (max() - min()) / 2), typicalSTR()));
+            info.append(HUtils.format(R.string.MeleeWeapon_Info2b, (min() + (max() - min()) / 2), typicalSTR()));
 			if (typicalSTR() > hero.effectiveSTR()) {
                 info.append(" ").append(StringsManager.getVar(R.string.MeleeWeapon_Info2c));
 			}
@@ -134,20 +135,20 @@ public class MeleeWeapon extends Weapon {
 		if (isLevelKnown() && hero.getBelongings().backpack.items.contains( this )) {
 			info.append(p);
 			if (this.requiredSTR() > hero.effectiveSTR()) {
-				info.append(Utils.format(R.string.MeleeWeapon_Info6a, name));
+				info.append(HUtils.format(R.string.MeleeWeapon_Info6a, name));
 			}
 			if (this.requiredSTR() < hero.effectiveSTR()) {
-				info.append(Utils.format(R.string.MeleeWeapon_Info6b, name));
+				info.append(HUtils.format(R.string.MeleeWeapon_Info6b, name));
 			}
 		}
 		
 		if (isEquipped(hero)) {
 			info.append(p);
-            info.append(Utils.format(R.string.MeleeWeapon_Info7a, name, (isCursed() ? StringsManager.getVar(R.string.MeleeWeapon_Info7b) : Utils.EMPTY_STRING)) );
+            info.append(HUtils.format(R.string.MeleeWeapon_Info7a, name, (isCursed() ? StringsManager.getVar(R.string.MeleeWeapon_Info7b) : Utils.EMPTY_STRING)) );
 		} else {
 			if (isCursedKnown() && isCursed()) {
 				info.append(p);
-				info.append(Utils.format(R.string.MeleeWeapon_Info7c, name));
+				info.append(HUtils.format(R.string.MeleeWeapon_Info7c, name));
 			}
 		}
 		

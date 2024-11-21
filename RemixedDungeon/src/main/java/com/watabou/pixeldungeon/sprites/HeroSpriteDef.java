@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Callback;
+import com.nyrds.util.Callback;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;

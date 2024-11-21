@@ -5,7 +5,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class CurareDart extends Dart {
 

@@ -12,7 +12,7 @@ import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class PoolPainter extends Painter {
 

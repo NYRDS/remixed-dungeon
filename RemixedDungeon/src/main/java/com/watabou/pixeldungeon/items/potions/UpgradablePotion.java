@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.items.potions;
 
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 /**
  * Created by mike on 28.05.2017.

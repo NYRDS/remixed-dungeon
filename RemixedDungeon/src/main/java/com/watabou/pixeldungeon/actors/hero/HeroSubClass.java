@@ -26,7 +26,7 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.json.JSONObject;
 

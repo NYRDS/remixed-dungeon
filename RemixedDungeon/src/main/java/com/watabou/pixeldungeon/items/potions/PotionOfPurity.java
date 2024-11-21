@@ -18,7 +18,7 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.food.RottenFood;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
-import com.watabou.pixeldungeon.utils.BArray;
+import com.nyrds.util.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.PathFinder;
 

@@ -4,7 +4,7 @@ package com.watabou.pixeldungeon.effects;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.PointF;
+import com.nyrds.util.PointF;
 
 import org.jetbrains.annotations.NotNull;
 

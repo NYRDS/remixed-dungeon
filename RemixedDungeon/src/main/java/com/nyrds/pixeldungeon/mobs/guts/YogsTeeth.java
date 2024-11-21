@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 

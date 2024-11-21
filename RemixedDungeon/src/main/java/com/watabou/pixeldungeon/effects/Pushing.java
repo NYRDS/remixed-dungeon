@@ -9,7 +9,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.PointF;
+import com.nyrds.util.PointF;
 
 import org.jetbrains.annotations.NotNull;
 

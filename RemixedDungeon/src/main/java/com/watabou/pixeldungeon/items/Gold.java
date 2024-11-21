@@ -11,8 +11,8 @@ import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.nyrds.util.Utils;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 

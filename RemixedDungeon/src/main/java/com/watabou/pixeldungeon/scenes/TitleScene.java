@@ -34,7 +34,7 @@ import com.watabou.pixeldungeon.ui.PlayGamesButton;
 import com.watabou.pixeldungeon.ui.PrefsButton;
 import com.watabou.pixeldungeon.ui.PremiumPrefsButton;
 import com.watabou.pixeldungeon.ui.StatisticsButton;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 import com.watabou.pixeldungeon.windows.WndModInfo;
 
 import org.luaj.vm2.LuaError;
@@ -214,7 +214,7 @@ public class TitleScene extends PixelScene {
         add(btnExit);
 
         if (GamePreferences.version() != Game.versionCode) {
-            if (Utils.differentVersions(GamePreferences.versionString(), Game.version)) {
+            if (HUtils.differentVersions(GamePreferences.versionString(), Game.version)) {
                 changelogUpdated = true;
             }
         }

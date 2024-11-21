@@ -10,8 +10,8 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.watabou.utils.Callback;
-import com.watabou.utils.Random;
+import com.nyrds.util.Callback;
+import com.nyrds.util.Random;
 
 import javax.microedition.khronos.opengles.GL10;
 

@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.painters.NecroExitPainter;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class PrisonLevel extends RegularLevel {
 

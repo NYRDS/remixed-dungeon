@@ -1,4 +1,3 @@
-
 package com.watabou.pixeldungeon.utils;
 
 import com.nyrds.pixeldungeon.ml.R;
@@ -10,19 +9,12 @@ import com.watabou.noosa.InterstitialPoint;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Locale;
-import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import lombok.SneakyThrows;
 
-public class Utils {
-
-    public static final String UNKNOWN = "unknown";
-    public static final String EMPTY_STRING = "";
-    public static final String[] EMPTY_STRING_ARRAY = new String[0];
-
-
+public class HUtils {
     @NotNull
     private static final Class<?> strings = getR_Field("string");
     @NotNull
@@ -31,35 +23,6 @@ public class Utils {
     @SneakyThrows
     static private Class<?> getR_Field(String field) {
         return Class.forName("com.nyrds.pixeldungeon.ml.R$" + field);
-    }
-
-    public static String capitalize(String str) {
-        if(str.isEmpty()) {
-            return str;
-        }
-        return Character.toUpperCase(str.charAt(0)) + str.substring(1);
-    }
-
-    public static String format(int StringFormatId, Object... args) {
-        return String.format(Locale.ROOT, StringsManager.getVar(StringFormatId), args);
-    }
-
-    public static String format(String format, Object... args) {
-        return String.format(Locale.ROOT, format, args);
-    }
-
-    public static String indefinite(String noun) {
-        //In a pt_BR language(and another), there is no specific rule.
-        if (StringsManager.getVar(R.string.Utils_IsIndefinte).equals("0")) {
-            return noun;
-        }
-
-        if (noun.isEmpty()) {
-            return "a";
-        } else {
-            String VOWELS = "aoeiu";
-            return (VOWELS.indexOf(Character.toLowerCase(noun.charAt(0))) != -1 ? "an " : "a ") + noun;
-        }
     }
 
     @SneakyThrows
@@ -98,56 +61,6 @@ public class Utils {
         return defaultValue;
     }
 
-    public static int genderFromString(String sGender) {
-        int gender = Utils.NEUTER;
-
-        if (sGender.equals("masculine")) {
-            gender = Utils.MASCULINE;
-        }
-        if (sGender.equals("feminine")) {
-            gender = Utils.FEMININE;
-        }
-        return gender;
-    }
-
-    public static final int NEUTER = 0;
-    public static final int MASCULINE = 1;
-    public static final int FEMININE = 2;
-
-
-    public static boolean canUseClassicFont(String localeCode) {
-        return !(localeCode.startsWith("ko")
-                || localeCode.startsWith("zh")
-                || localeCode.startsWith("ja")
-                || localeCode.startsWith("tr")
-                || localeCode.startsWith("el"));
-    }
-
-    @SafeVarargs
-    public static<T> boolean isOneOf(T value, T... array ) {
-        for (T item:array) {
-            if(value.equals(item)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static int max(int a, int b, int c) {
-        return Math.max(a,Math.max(b,c));
-    }
-    public static int min(int a, int b, int c) {
-        return Math.min(a,Math.min(b,c));
-    }
-
-
-    public static float max(float a, float b, float c) {
-        return Math.max(a,Math.max(b,c));
-    }
-    public static float min(float a, float b, float c) {
-        return Math.min(a,Math.min(b,c));
-    }
-
     public static boolean differentVersions(String v1, String v2) {
         try {
             Pattern p = Pattern.compile("\\d+(\\.\\d+)?");
@@ -170,9 +83,22 @@ public class Utils {
         return false;
     }
 
-    public static <T extends Enum<?>> T randomEnum(Class<T> clazz){
-        int x = new Random().nextInt(clazz.getEnumConstants().length);
-        return clazz.getEnumConstants()[x];
+    public static String format(int StringFormatId, Object... args) {
+        return String.format(Locale.ROOT, StringsManager.getVar(StringFormatId), args);
+    }
+
+    public static String indefinite(String noun) {
+        //In a pt_BR language(and another), there is no specific rule.
+        if (StringsManager.getVar(R.string.Utils_IsIndefinte).equals("0")) {
+            return noun;
+        }
+
+        if (noun.isEmpty()) {
+            return "a";
+        } else {
+            String VOWELS = "aoeiu";
+            return (VOWELS.indexOf(Character.toLowerCase(noun.charAt(0))) != -1 ? "an " : "a ") + noun;
+        }
     }
 
     public static class SpuriousReturn implements InterstitialPoint {

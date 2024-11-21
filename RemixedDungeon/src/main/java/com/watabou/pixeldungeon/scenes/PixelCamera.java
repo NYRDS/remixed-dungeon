@@ -4,8 +4,8 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.utils.Point;
-import com.watabou.utils.PointF;
+import com.nyrds.util.Point;
+import com.nyrds.util.PointF;
 
 class PixelCamera extends Camera {
 

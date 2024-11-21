@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -38,7 +38,7 @@ public class Sorrowmoss extends Plant {
 		{
             plantName = StringsManager.getVar(R.string.Sorrowmoss_Name);
 
-            name = Utils.format(R.string.Plant_Seed, plantName);
+            name = HUtils.format(R.string.Plant_Seed, plantName);
 			image = 2;
 
 			plantClass = Sorrowmoss.class;

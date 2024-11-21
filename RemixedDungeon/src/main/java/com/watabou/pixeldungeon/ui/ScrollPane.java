@@ -7,8 +7,8 @@ import com.watabou.noosa.TouchArea;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Point;
-import com.watabou.utils.PointF;
+import com.nyrds.util.Point;
+import com.nyrds.util.PointF;
 
 public class ScrollPane extends Component {
 

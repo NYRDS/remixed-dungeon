@@ -57,14 +57,14 @@ import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.ui.QuickSlot;
-import com.watabou.pixeldungeon.utils.BArray;
+import com.nyrds.util.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
-import com.watabou.utils.Random;
-import com.watabou.utils.SystemTime;
+import com.nyrds.util.Random;
+import com.nyrds.util.SystemTime;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;

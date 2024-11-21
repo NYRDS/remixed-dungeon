@@ -12,7 +12,8 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 
 public class WndWandmaker extends Window {
 	
@@ -63,7 +64,7 @@ public class WndWandmaker extends Window {
 		reward.identify();
 		Dungeon.hero.collectAnimated(reward);
 
-        wandmaker.say(Utils.format(R.string.WndWandmaker_Farawell, Dungeon.hero.className() ) );
+        wandmaker.say(HUtils.format(R.string.WndWandmaker_Farawell, Dungeon.hero.className() ) );
 		wandmaker.destroy();
 		
 		wandmaker.getSprite().die();

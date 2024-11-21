@@ -26,10 +26,11 @@ import com.watabou.pixeldungeon.items.armor.glyphs.Stench;
 import com.watabou.pixeldungeon.items.armor.glyphs.Viscosity;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -105,7 +106,7 @@ public class Armor extends EquipableItem {
 	@NotNull
     @Override
 	public String toString() {
-        return isLevelKnown() ? Utils.format(R.string.Armor_ToString, super.toString(), requiredSTR() ) : super.toString();
+        return isLevelKnown() ? HUtils.format(R.string.Armor_ToString, super.toString(), requiredSTR() ) : super.toString();
 	}
 	
 	@Override
@@ -125,7 +126,7 @@ public class Armor extends EquipableItem {
 
 		if (isLevelKnown()) {
 			info.append(p);
-            info.append(Utils.capitalize(Utils.format(R.string.Armor_Info1, name, Math.max( effectiveDr(), 0 ))));
+            info.append(Utils.capitalize(HUtils.format(R.string.Armor_Info1, name, Math.max( effectiveDr(), 0 ))));
 			
 			if (requiredSTR() > hero.effectiveSTR()) {
 				if (isEquipped(hero)) {
@@ -135,7 +136,7 @@ public class Armor extends EquipableItem {
 				}
 			}
 		} else {
-            info.append(Utils.format(R.string.Armor_Info4, name, typicalDR(), typicalSTR()));
+            info.append(HUtils.format(R.string.Armor_Info4, name, typicalDR(), typicalSTR()));
 			if (typicalSTR() > hero.effectiveSTR()) {
 				info.append(" ");
                 info.append(StringsManager.getVar(R.string.Armor_Info5));
@@ -147,11 +148,11 @@ public class Armor extends EquipableItem {
 		}
 		
 		if (isEquipped(hero)) {
-            info.append(Utils.format(R.string.Armor_Info7a, name,
+            info.append(HUtils.format(R.string.Armor_Info7a, name,
 				(isCursed() ? StringsManager.getVar(R.string.Armor_Info7b) : Utils.EMPTY_STRING) ));
 		} else {
 			if (isCursedKnown() && isCursed()) {
-                info.append(Utils.format(R.string.Armor_Info8, name));
+                info.append(HUtils.format(R.string.Armor_Info8, name));
 			}
 		}
 		

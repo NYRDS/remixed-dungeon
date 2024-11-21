@@ -31,7 +31,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.utils.Callback;
+import com.nyrds.util.Callback;
 
 import org.jetbrains.annotations.NotNull;
 

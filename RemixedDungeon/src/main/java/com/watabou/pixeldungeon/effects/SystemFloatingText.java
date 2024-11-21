@@ -6,7 +6,7 @@ import com.nyrds.util.GuiProperties;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 import java.util.ArrayList;
 import java.util.HashMap;

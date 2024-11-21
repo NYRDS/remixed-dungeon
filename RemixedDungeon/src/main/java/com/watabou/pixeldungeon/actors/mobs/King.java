@@ -28,8 +28,8 @@ import com.watabou.pixeldungeon.items.ArmorKit;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.wands.WandOfDisintegration;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -120,7 +120,7 @@ public class King extends Boss {
 		
 		Badges.validateBossSlain(Badges.Badge.BOSS_SLAIN_4);
 
-        yell(Utils.format(R.string.King_Info1, Dungeon.hero.getHeroClass().title()));
+        yell(HUtils.format(R.string.King_Info1, Dungeon.hero.getHeroClass().title()));
 	}
 	
 	private int maxArmySize() {

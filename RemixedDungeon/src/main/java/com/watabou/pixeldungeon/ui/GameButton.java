@@ -3,7 +3,7 @@ package com.watabou.pixeldungeon.ui;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 public class GameButton extends RedButton {
 

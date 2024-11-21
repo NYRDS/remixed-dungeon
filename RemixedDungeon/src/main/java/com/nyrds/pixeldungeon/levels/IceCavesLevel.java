@@ -14,8 +14,8 @@ import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.utils.Random;
-import com.watabou.utils.Rect;
+import com.nyrds.util.Random;
+import com.nyrds.util.Rect;
 
 public class IceCavesLevel extends RegularLevel {
 

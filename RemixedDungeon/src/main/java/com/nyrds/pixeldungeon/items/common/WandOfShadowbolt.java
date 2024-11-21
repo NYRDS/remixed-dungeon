@@ -9,8 +9,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.items.wands.Wand;
-import com.watabou.utils.Callback;
-import com.watabou.utils.Random;
+import com.nyrds.util.Callback;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.Nullable;
 

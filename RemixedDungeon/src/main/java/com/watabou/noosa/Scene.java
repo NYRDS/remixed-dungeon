@@ -22,7 +22,7 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Keys;
 import com.watabou.pixeldungeon.ui.IWindow;
-import com.watabou.utils.Signal;
+import com.nyrds.util.Signal;
 
 import java.util.ArrayList;
 

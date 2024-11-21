@@ -12,7 +12,7 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class HallsBossLevel extends BossLevel {
 	

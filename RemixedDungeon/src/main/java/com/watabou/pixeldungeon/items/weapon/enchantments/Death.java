@@ -7,7 +7,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.sprites.Glowing;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class Death extends Weapon.Enchantment {
 

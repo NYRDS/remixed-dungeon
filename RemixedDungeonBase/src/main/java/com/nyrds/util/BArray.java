@@ -1,5 +1,4 @@
-
-package com.watabou.pixeldungeon.utils;
+package com.nyrds.util;
 
 
 import org.jetbrains.annotations.NotNull;

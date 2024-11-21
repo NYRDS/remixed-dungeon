@@ -9,7 +9,7 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.Util;
 import com.watabou.noosa.InterstitialPoint;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 /**
  * Created by mike on 18.09.2016.

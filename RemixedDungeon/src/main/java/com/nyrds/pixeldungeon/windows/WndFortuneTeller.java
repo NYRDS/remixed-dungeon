@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.ui.RedButton;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndQuest;
 
@@ -29,7 +29,7 @@ public class WndFortuneTeller extends WndQuest {
 		{
 			goldCost = (int) (goldCost * 0.9);
 		}
-        return Utils.format(R.string.WndFortuneTeller_Instruction, goldCost);
+        return HUtils.format(R.string.WndFortuneTeller_Instruction, goldCost);
 	}
 
 	public WndFortuneTeller(FortuneTellerNPC fortuneTellerNPC, final Char hero) {

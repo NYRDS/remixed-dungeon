@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.items.wands;
 
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import lombok.SneakyThrows;
 

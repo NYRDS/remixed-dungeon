@@ -5,7 +5,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.Glowing;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class Leech extends Weapon.Enchantment {
 

@@ -1,7 +1,7 @@
 
 package com.watabou.pixeldungeon.levels;
 
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class Patch {
 	

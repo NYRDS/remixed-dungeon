@@ -16,10 +16,10 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.SheepSprite;
-import com.watabou.pixeldungeon.utils.BArray;
-import com.watabou.utils.Callback;
+import com.nyrds.util.BArray;
+import com.nyrds.util.Callback;
 import com.watabou.utils.PathFinder;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 

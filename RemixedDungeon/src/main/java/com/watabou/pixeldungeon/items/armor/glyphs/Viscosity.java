@@ -15,8 +15,9 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -53,7 +54,7 @@ public class Viscosity extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-        return Utils.format(R.string.Viscosity_Txt, weaponName );
+        return HUtils.format(R.string.Viscosity_Txt, weaponName );
 	}
 
 	@Override

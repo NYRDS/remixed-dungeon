@@ -13,9 +13,9 @@ import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.utils.Graph;
-import com.watabou.utils.Point;
-import com.watabou.utils.Random;
+import com.nyrds.util.Graph;
+import com.nyrds.util.Point;
+import com.nyrds.util.Random;
 
 import java.util.List;
 

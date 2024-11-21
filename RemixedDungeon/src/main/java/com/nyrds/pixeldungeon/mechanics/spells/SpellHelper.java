@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.mechanics.spells;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -54,7 +54,7 @@ public class SpellHelper {
     }
 
     public static String getMasteryTitleByAffinity(String affinity) {
-        return Utils.getClassParam("Abilities", affinity, StringsManager.getVar(R.string.Abilities_Default),false);
+        return HUtils.getClassParam("Abilities", affinity, StringsManager.getVar(R.string.Abilities_Default),false);
     }
 
 

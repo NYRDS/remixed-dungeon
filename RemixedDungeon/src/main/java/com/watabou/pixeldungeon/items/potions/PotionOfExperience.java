@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 public class PotionOfExperience extends Potion {
 
@@ -31,7 +31,7 @@ public class PotionOfExperience extends Potion {
 			apply(chr);
 			return;
 		}
-		GLog.i(Utils.format(R.string.Potion_Shatter, color()));
+		GLog.i(HUtils.format(R.string.Potion_Shatter, color()));
 	}
 
 	@Override

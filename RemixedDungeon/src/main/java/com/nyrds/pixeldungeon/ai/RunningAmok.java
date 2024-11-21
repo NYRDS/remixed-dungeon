@@ -4,7 +4,7 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -41,7 +41,7 @@ public class RunningAmok extends MobAi implements AiState {
 
     @Override
     public String status(Char me) {
-        return Utils.format(R.string.Mob_StaAmokStatus,
+        return HUtils.format(R.string.Mob_StaAmokStatus,
                 me.getName());
     }
 }

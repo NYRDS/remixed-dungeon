@@ -21,7 +21,8 @@ import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
 import org.jetbrains.annotations.NotNull;
@@ -250,7 +251,7 @@ public class WndBag extends WndTabbed {
 			if(txtSubTitle != null) {
 				txtSubTitle.killAndErase();
 			}
-			txtSubTitle = PixelScene.createMultiline( Utils.format(R.string.WndBag_BuySubtitle, Dungeon.hero.gold()) , GuiProperties.titleFontSize());
+			txtSubTitle = PixelScene.createMultiline( HUtils.format(R.string.WndBag_BuySubtitle, Dungeon.hero.gold()) , GuiProperties.titleFontSize());
 			txtSubTitle.maxWidth(panelWidth);
 			txtSubTitle.hardlight( TITLE_COLOR );
 			txtSubTitle.setX(PixelScene.align((panelWidth - txtSubTitle.width()) / 2));

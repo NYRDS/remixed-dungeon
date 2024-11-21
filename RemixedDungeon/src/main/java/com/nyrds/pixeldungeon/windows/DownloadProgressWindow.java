@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.util.DownloadStateListener;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.WndMessage;
 
 import org.jetbrains.annotations.NotNull;

@@ -10,7 +10,7 @@ import com.watabou.pixeldungeon.actors.buffs.FlavourBuff;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 

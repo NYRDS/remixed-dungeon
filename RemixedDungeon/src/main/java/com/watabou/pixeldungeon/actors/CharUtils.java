@@ -66,8 +66,9 @@ import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -100,7 +101,7 @@ public class CharUtils {
     public static void checkDeathReport(Char attacker, @NotNull Char victim, String desc) {
         if (!victim.isAlive() && victim == Dungeon.hero) {
             Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
-                    Utils.indefinite(attacker.getName()), Dungeon.depth));
+                    HUtils.indefinite(attacker.getName()), Dungeon.depth));
             GLog.n(desc, attacker.getName());
         }
     }
@@ -158,19 +159,19 @@ public class CharUtils {
     public static void teleportRandom(@NotNull Char ch) {
         Level level = ch.level();
         if (level.isBossLevel() || !ch.isMovable()) {
-            GLog.w(Utils.format(R.string.ScrollOfTeleportation_NoTeleport2, ch.getName_objective()));
+            GLog.w(HUtils.format(R.string.ScrollOfTeleportation_NoTeleport2, ch.getName_objective()));
             return;
         }
 
         int pos = level.randomRespawnCell();
 
         if (!level.cellValid(pos)) {
-            GLog.w(Utils.format(R.string.ScrollOfTeleportation_NoTeleport2, ch.getName_objective()));
+            GLog.w(HUtils.format(R.string.ScrollOfTeleportation_NoTeleport2, ch.getName_objective()));
         } else {
             WandOfBlink.appear(ch, pos);
             level.press(pos, ch);
             ch.observe();
-            GLog.i(Utils.format(R.string.ScrollOfTeleportation_Teleport2, ch.getName_objective()));
+            GLog.i(HUtils.format(R.string.ScrollOfTeleportation_Teleport2, ch.getName_objective()));
         }
     }
 

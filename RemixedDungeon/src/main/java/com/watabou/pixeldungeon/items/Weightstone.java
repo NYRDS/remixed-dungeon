@@ -15,7 +15,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 import com.watabou.pixeldungeon.windows.IconTitle;
 import com.watabou.pixeldungeon.windows.WndBag;
 
@@ -102,7 +102,7 @@ public class Weightstone extends Item {
 			titlebar.setRect( 0, 0, WIDTH, 0 );
 			add( titlebar );
 
-            Text tfMesage = PixelScene.createMultiline( Utils.format(R.string.Weightstone_WndChoice, weapon.name() ), GuiProperties.regularFontSize());
+            Text tfMesage = PixelScene.createMultiline( HUtils.format(R.string.Weightstone_WndChoice, weapon.name() ), GuiProperties.regularFontSize());
 			tfMesage.maxWidth(WIDTH - GAP * 2);
 			tfMesage.setX(GAP);
 			tfMesage.setY(titlebar.bottom() + GAP);

@@ -19,7 +19,7 @@ package com.watabou.noosa;
 
 import com.nyrds.platform.compatibility.RectF;
 import com.watabou.glwrap.Quad;
-import com.watabou.utils.PointF;
+import com.nyrds.util.PointF;
 
 public class BitmapTextMultiline extends BitmapText {
 

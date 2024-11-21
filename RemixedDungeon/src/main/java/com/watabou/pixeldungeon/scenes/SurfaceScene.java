@@ -26,8 +26,8 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.RedButton;
-import com.watabou.utils.Point;
-import com.watabou.utils.Random;
+import com.nyrds.util.Point;
+import com.nyrds.util.Random;
 
 import java.nio.FloatBuffer;
 

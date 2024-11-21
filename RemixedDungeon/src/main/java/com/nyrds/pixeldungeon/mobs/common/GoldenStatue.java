@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -21,7 +21,7 @@ public class GoldenStatue extends Statue {
 
 	@Override
 	public String getDescription() {
-        return Utils.format(R.string.GoldenStatue_Desc, getItem().name());
+        return HUtils.format(R.string.GoldenStatue_Desc, getItem().name());
 	}
 
 	@NotNull

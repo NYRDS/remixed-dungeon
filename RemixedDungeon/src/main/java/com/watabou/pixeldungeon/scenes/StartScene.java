@@ -54,7 +54,7 @@ import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.FacilitaionButton;
 import com.watabou.pixeldungeon.ui.GameButton;
 import com.watabou.pixeldungeon.ui.IconButton;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 import com.watabou.pixeldungeon.windows.WndClass;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndSaveSlotSelect;
@@ -462,7 +462,7 @@ public class StartScene extends PixelScene {
                 selectDifficulty();
                 hide();
             } else {
-                eraseWarning.text(eraseWarning.text() + ":\n" + Utils.format(R.string.StartScene_Depth, info.depth, info.level)+"\n" + StringsManager.getVar(WndDifficultyOptions.descs[info.difficulty])+"\n");
+                eraseWarning.text(eraseWarning.text() + ":\n" + HUtils.format(R.string.StartScene_Depth, info.depth, info.level)+"\n" + StringsManager.getVar(WndDifficultyOptions.descs[info.difficulty])+"\n");
                 layout();
             }
 
@@ -485,7 +485,7 @@ public class StartScene extends PixelScene {
                 onSelect(1);
                 hide();
             } else {
-                newGameButton.text(Utils.format(R.string.StartScene_Depth, info.depth, info.level));
+                newGameButton.text(HUtils.format(R.string.StartScene_Depth, info.depth, info.level));
                 newGameButton.icon(MobFactory.avatar(WndDifficultyOptions.difficulties[info.difficulty]));
             }
 

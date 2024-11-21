@@ -8,8 +8,8 @@ import com.watabou.noosa.Tilemap;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
-import com.watabou.pixeldungeon.utils.BArray;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.BArray;
+import com.nyrds.util.Utils;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

@@ -15,7 +15,7 @@ import com.watabou.pixeldungeon.items.rings.RingOfHerbalism.Herbalism;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.Nullable;
 

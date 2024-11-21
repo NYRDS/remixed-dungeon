@@ -10,7 +10,7 @@ import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.Unzip;
 import com.nyrds.util.UnzipStateListener;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndModInstall;

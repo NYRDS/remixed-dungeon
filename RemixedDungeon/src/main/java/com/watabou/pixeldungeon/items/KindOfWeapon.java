@@ -3,7 +3,7 @@ package com.watabou.pixeldungeon.items;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class KindOfWeapon extends EquipableItem {
 

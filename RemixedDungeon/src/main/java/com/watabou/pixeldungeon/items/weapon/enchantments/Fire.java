@@ -7,7 +7,7 @@ import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.sprites.Glowing;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class Fire extends Weapon.Enchantment {
 	

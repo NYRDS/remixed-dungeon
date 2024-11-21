@@ -10,8 +10,8 @@ import com.watabou.pixeldungeon.Logbook;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Signal;
+import com.nyrds.util.Utils;
+import com.nyrds.util.Signal;
 
 import java.util.regex.Pattern;
 

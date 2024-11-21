@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.ui.RedButton;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 /**
  * Created by mike on 15.05.2018.

@@ -6,7 +6,7 @@ import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

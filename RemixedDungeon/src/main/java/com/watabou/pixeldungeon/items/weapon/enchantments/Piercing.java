@@ -6,7 +6,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class Piercing extends Enchantment {
 	

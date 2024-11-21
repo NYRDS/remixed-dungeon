@@ -14,7 +14,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
 import com.watabou.pixeldungeon.ui.RedButton;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.WndQuest;
 
 import java.util.Collection;
@@ -37,7 +38,7 @@ public class WndPriest extends WndQuest {
 
 		VBox vbox = new VBox();
 
-		RedButton btnHealHero = new RedButton(  Utils.format(R.string.WndPriest_Heal, goldCost) ) {
+		RedButton btnHealHero = new RedButton(  HUtils.format(R.string.WndPriest_Heal, goldCost) ) {
 			@Override
 			protected void onClick() {
 				Vector<Integer> patients = new Vector<>();
@@ -59,7 +60,7 @@ public class WndPriest extends WndQuest {
 
 			if (minions > 0) {
 				final int healAllMinionsCost = goldCostPerMinion * minions;
-				RedButton btnHealMinions = new RedButton(Utils.format(R.string.WndPriest_Heal_Minions, healAllMinionsCost)) {
+				RedButton btnHealMinions = new RedButton(HUtils.format(R.string.WndPriest_Heal_Minions, healAllMinionsCost)) {
 					@Override
 					protected void onClick() {
 						doHeal(priest, hero, hero.getPets(), healAllMinionsCost);
@@ -102,7 +103,7 @@ public class WndPriest extends WndQuest {
 			instruction = R.string.WndPriest_Instruction2_f;
 		}
 
-		return Utils.format(instruction) +"\n"+ Utils.format(R.string.WndPriest_Instruction2, goldCost);
+		return HUtils.format(instruction) +"\n"+ HUtils.format(R.string.WndPriest_Instruction2, goldCost);
 	}
 
 	private void doHeal(HealerNPC priest, Char payer, Collection<Integer> patients, int healingCost) {

@@ -9,9 +9,9 @@ import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.PointF;
-import com.watabou.utils.Random;
+import com.nyrds.util.Utils;
+import com.nyrds.util.PointF;
+import com.nyrds.util.Random;
 
 public class Bleeding extends Buff {
 

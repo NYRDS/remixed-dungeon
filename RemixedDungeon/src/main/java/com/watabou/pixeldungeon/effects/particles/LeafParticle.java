@@ -5,8 +5,8 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.Emitter.Factory;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.utils.ColorMath;
-import com.watabou.utils.Random;
+import com.nyrds.util.ColorMath;
+import com.nyrds.util.Random;
 
 public class LeafParticle extends PixelParticle.Shrinking {
 	

@@ -5,7 +5,7 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Web;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class SpiderArmor extends Armor {
 

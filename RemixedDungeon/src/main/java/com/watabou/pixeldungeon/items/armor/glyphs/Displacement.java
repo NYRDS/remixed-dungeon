@@ -9,8 +9,8 @@ import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.sprites.Glowing;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Random;
 
 public class Displacement extends Glyph {
 	
@@ -41,7 +41,7 @@ public class Displacement extends Glyph {
 	
 	@Override
 	public String name( String weaponName) {
-        return Utils.format(R.string.Displacement_Txt, weaponName );
+        return HUtils.format(R.string.Displacement_Txt, weaponName );
 	}
 
 	@Override

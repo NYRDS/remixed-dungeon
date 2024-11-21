@@ -23,8 +23,8 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Visual;
-import com.watabou.utils.PointF;
-import com.watabou.utils.Random;
+import com.nyrds.util.PointF;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 

@@ -52,7 +52,7 @@ import com.watabou.pixeldungeon.items.rings.RingOfPower;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.plants.Sungrass;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 import org.jetbrains.annotations.NotNull;
 

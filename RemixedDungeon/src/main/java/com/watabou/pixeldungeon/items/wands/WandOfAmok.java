@@ -12,7 +12,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Callback;
+import com.nyrds.util.Callback;
 
 public class WandOfAmok extends SimpleWand {
 

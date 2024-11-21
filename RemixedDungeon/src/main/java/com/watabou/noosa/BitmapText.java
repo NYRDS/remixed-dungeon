@@ -20,8 +20,8 @@ package com.watabou.noosa;
 import com.nyrds.platform.compatibility.RectF;
 import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.PointF;
+import com.nyrds.util.Utils;
+import com.nyrds.util.PointF;
 
 import java.nio.FloatBuffer;
 

@@ -9,7 +9,7 @@ import com.nyrds.pixeldungeon.ml.actions.UseSpell;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -59,7 +59,7 @@ public class SpellBook extends Artifact {
 	@Override
 	public String desc(){
 		if(isIdentified()){
-			return  Utils.format(R.string.SpellBook_Info_Identified, spell().name(), spell().desc());
+			return  HUtils.format(R.string.SpellBook_Info_Identified, spell().name(), spell().desc());
 		}
 		return super.desc();
 	}

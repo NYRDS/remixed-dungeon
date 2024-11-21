@@ -14,8 +14,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.TestOnly;
@@ -58,7 +58,7 @@ public class Spell implements NamedEntityKind {
         if(timeToCast < 0) {
 
             if(reallyCast) {
-                GLog.w(Utils.format(R.string.Spells_NotTooFast, name));
+                GLog.w(HUtils.format(R.string.Spells_NotTooFast, name));
             }
 
             return false;
@@ -69,14 +69,14 @@ public class Spell implements NamedEntityKind {
 
             if(hero.getControlTarget().getId()!=hero.getId()) {
                 if(reallyCast) {
-                    GLog.w(Utils.format(R.string.Spells_NotInOwnBody, name));
+                    GLog.w(HUtils.format(R.string.Spells_NotInOwnBody, name));
                 }
                 return false;
             }
 
             if (!hero.enoughSP(spellCost())) {
                 if(reallyCast) {
-                    GLog.w(Utils.format(R.string.Spells_NotEnoughSP, name));
+                    GLog.w(HUtils.format(R.string.Spells_NotEnoughSP, name));
                 }
                 return false;
             }
@@ -188,7 +188,7 @@ public class Spell implements NamedEntityKind {
     }
 
     private String getClassParam(String paramName, String defaultValue) {
-        return Utils.getClassParam(getEntityKind(), paramName, defaultValue, false);
+        return HUtils.getClassParam(getEntityKind(), paramName, defaultValue, false);
     }
 
     public int level() {

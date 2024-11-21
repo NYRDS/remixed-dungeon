@@ -2,7 +2,7 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.util.Util;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 //Special kind of buff, that doesn't perform any kind actions
 public class FlavourBuff extends Buff {

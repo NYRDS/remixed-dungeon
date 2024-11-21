@@ -12,7 +12,7 @@ import com.watabou.pixeldungeon.levels.Patch;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class NecroLevel extends RegularLevel {
 

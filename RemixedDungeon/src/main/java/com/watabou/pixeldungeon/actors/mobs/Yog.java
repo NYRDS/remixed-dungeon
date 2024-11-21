@@ -38,7 +38,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.LarvaSprite;
 import com.watabou.pixeldungeon.sprites.RottingFistSprite;
 import com.watabou.pixeldungeon.sprites.YogSprite;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 

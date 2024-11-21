@@ -19,7 +19,7 @@ package com.watabou.noosa.tweeners;
 
 import com.nyrds.LuaInterface;
 import com.watabou.noosa.Visual;
-import com.watabou.utils.PointF;
+import com.nyrds.util.PointF;
 
 public class PosTweener extends Tweener {
 

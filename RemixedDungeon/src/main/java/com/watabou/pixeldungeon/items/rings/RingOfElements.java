@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.mobs.Eye;
 import com.watabou.pixeldungeon.actors.mobs.Warlock;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import java.util.HashSet;
 import java.util.Set;

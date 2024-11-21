@@ -8,7 +8,8 @@ import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
-import com.watabou.utils.Signal;
+import com.nyrds.util.Signal;
+import com.nyrds.util.Utils;
 
 import java.io.File;
 import java.io.FileWriter;

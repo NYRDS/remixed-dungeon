@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 import com.watabou.pixeldungeon.windows.WndQuest;
 
 public class ServiceManNPC extends ImmortalNPC {
@@ -43,7 +43,7 @@ public class ServiceManNPC extends ImmortalNPC {
         }
 
         if (filmsSeen >= getLimit()) {
-            GameScene.show(new WndQuest(this, Utils.format(R.string.ServiceManNPC_Limit_Reached, getLimit())));
+            GameScene.show(new WndQuest(this, HUtils.format(R.string.ServiceManNPC_Limit_Reached, getLimit())));
             return true;
         }
 

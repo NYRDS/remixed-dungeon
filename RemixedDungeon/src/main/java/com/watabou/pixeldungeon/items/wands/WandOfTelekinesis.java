@@ -18,7 +18,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Callback;
+import com.nyrds.util.Callback;
 
 public class WandOfTelekinesis extends Wand {
 

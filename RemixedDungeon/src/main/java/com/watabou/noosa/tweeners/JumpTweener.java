@@ -3,7 +3,7 @@ package com.watabou.noosa.tweeners;
 import com.nyrds.LuaInterface;
 import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.utils.PointF;
+import com.nyrds.util.PointF;
 
 /**
  * Created by mike on 16.04.2016.

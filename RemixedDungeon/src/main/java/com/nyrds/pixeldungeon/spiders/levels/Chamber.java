@@ -5,7 +5,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.plants.Seed;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class Chamber {
 	final int x;

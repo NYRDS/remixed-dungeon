@@ -31,10 +31,10 @@ import com.watabou.pixeldungeon.levels.painters.WarehousePainter;
 import com.watabou.pixeldungeon.levels.painters.WeakFloorPainter;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Graph;
-import com.watabou.utils.Point;
-import com.watabou.utils.Random;
-import com.watabou.utils.Rect;
+import com.nyrds.util.Graph;
+import com.nyrds.util.Point;
+import com.nyrds.util.Random;
+import com.nyrds.util.Rect;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;

@@ -4,7 +4,7 @@ import android.opengl.GLES20;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.pixeldungeon.effects.Halo;
-import com.watabou.utils.PointF;
+import com.nyrds.util.PointF;
 
 import javax.microedition.khronos.opengles.GL10;
 

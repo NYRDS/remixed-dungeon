@@ -12,7 +12,7 @@ import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.utils.Callback;
+import com.nyrds.util.Callback;
 
 import org.jetbrains.annotations.NotNull;
 

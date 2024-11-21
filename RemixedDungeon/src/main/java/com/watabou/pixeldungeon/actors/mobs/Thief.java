@@ -10,7 +10,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -59,7 +60,7 @@ public class Thief extends Mob {
         String desc = StringsManager.getVar(R.string.Thief_Desc);
 		val item = getBelongings().randomUnequipped();
 		if (item != ItemsList.DUMMY) {
-            desc += Utils.format(R.string.Thief_Carries,
+            desc += HUtils.format(R.string.Thief_Carries,
 						Utils.capitalize( this.getName() ), item.name() );
 		}
 		

@@ -8,8 +8,8 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.levels.Room.Type;
-import com.watabou.utils.Graph;
-import com.watabou.utils.Random;
+import com.nyrds.util.Graph;
+import com.nyrds.util.Random;
 
 import java.util.List;
 

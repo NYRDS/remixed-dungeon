@@ -13,9 +13,9 @@ import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -161,12 +161,12 @@ public abstract class Scroll extends Item implements UnknownItem {
 	
 	@Override
 	public String name() {
-        return isKnown() ? name : Utils.format(R.string.Scroll_Name, rune);
+        return isKnown() ? name : HUtils.format(R.string.Scroll_Name, rune);
 	}
 	
 	@Override
 	public String info() {
-        return isKnown() ? desc() : Utils.format(R.string.Scroll_Info, rune);
+        return isKnown() ? desc() : HUtils.format(R.string.Scroll_Info, rune);
 	}
 	
 	@Override

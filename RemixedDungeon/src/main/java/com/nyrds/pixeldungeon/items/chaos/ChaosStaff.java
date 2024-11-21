@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class ChaosStaff extends Wand {
 

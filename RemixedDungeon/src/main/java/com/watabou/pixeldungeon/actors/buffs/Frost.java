@@ -9,7 +9,7 @@ import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -25,7 +25,7 @@ public class Frost extends FlavourBuff {
 
 		public String actionText(Item srcItem) {
 			if(srcItem instanceof Potion) {
-                return Utils.format(R.string.Frost_Shatter, srcItem.toString());
+                return HUtils.format(R.string.Frost_Shatter, srcItem.toString());
 			}
 			return null;
 		}

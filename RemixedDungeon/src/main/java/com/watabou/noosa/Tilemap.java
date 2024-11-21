@@ -21,7 +21,7 @@ import com.nyrds.platform.compatibility.RectF;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
-import com.watabou.utils.Rect;
+import com.nyrds.util.Rect;
 
 import org.jetbrains.annotations.NotNull;
 

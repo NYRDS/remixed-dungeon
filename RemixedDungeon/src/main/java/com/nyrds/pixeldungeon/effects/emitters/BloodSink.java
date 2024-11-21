@@ -6,9 +6,9 @@ import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.ColorMath;
-import com.watabou.utils.PointF;
-import com.watabou.utils.Random;
+import com.nyrds.util.ColorMath;
+import com.nyrds.util.PointF;
+import com.nyrds.util.Random;
 
 public class BloodSink extends Emitter {
 

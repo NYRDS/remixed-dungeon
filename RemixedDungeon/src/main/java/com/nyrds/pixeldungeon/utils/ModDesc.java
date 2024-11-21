@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.platform.game.RemixedDungeon;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;

@@ -8,7 +8,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 import com.yandex.mobile.ads.common.AdError;
 import com.yandex.mobile.ads.common.AdRequestConfiguration;
 import com.yandex.mobile.ads.common.AdRequestError;
@@ -31,7 +31,7 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 	@Nullable
 	private RewardedAdLoader mRewardedAdLoader = null;
 	private RewardedAd mCinemaRewardAd;
-	private InterstitialPoint returnTo = new Utils.SpuriousReturn();
+	private InterstitialPoint returnTo = new HUtils.SpuriousReturn();
 
 	private boolean rewardEarned = false;
 	private final String adId;

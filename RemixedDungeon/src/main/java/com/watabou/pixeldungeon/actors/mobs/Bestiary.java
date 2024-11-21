@@ -7,7 +7,7 @@ import com.nyrds.platform.game.Game;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModError;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.json.JSONException;
 import org.json.JSONObject;

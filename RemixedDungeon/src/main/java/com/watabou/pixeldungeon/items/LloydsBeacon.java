@@ -15,7 +15,8 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -109,6 +110,6 @@ public class LloydsBeacon extends Item {
 	
 	@Override
 	public String info() {
-        return StringsManager.getVar(R.string.LloidsBeacon_Info) + (returnTo.cellId == -1 ? Utils.EMPTY_STRING : Utils.format(R.string.LloidsBeacon_Set, DungeonGenerator.getLevelDepth(returnTo.levelId) ) );
+        return StringsManager.getVar(R.string.LloidsBeacon_Info) + (returnTo.cellId == -1 ? Utils.EMPTY_STRING : HUtils.format(R.string.LloidsBeacon_Set, DungeonGenerator.getLevelDepth(returnTo.levelId) ) );
 	}
 }

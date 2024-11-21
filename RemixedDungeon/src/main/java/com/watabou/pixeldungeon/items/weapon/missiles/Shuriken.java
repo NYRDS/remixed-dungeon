@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class Shuriken extends MissileWeapon {
 

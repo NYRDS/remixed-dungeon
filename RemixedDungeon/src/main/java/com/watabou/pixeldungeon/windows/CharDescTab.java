@@ -9,7 +9,7 @@ import com.nyrds.pixeldungeon.windows.VHBox;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.ui.Highlighter;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.elements.CharTitle;
 import com.watabou.pixeldungeon.windows.elements.TabContent;
 

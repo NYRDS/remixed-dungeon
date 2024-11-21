@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.storage.AndroidSAF;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.ui.BusyIndicator;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 
 public class WndInstallingMod extends WndTitledMessage implements AndroidSAF.IListener {
@@ -32,12 +32,12 @@ public class WndInstallingMod extends WndTitledMessage implements AndroidSAF.ILi
 
     @Override
     public void onFileSkip(String path) {
-        showText(Utils.format(R.string.WndInstallingMod_skipping_file, path));
+        showText(HUtils.format(R.string.WndInstallingMod_skipping_file, path));
     }
 
     @Override
     public void onFileDelete(String entry) {
-        showText(Utils.format(R.string.WndInstallingMod_deleting_file, entry));
+        showText(HUtils.format(R.string.WndInstallingMod_deleting_file, entry));
     }
 
     @Override

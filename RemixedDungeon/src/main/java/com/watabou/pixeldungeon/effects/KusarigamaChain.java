@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.utils.PointF;
+import com.nyrds.util.PointF;
 
 public class KusarigamaChain extends Image {
 

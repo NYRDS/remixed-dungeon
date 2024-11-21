@@ -3,7 +3,7 @@ package com.watabou.pixeldungeon.items.weapon.missiles;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class HealthDart extends Dart {
 

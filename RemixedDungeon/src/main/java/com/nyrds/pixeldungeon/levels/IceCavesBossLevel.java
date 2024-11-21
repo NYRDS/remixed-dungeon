@@ -15,8 +15,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.BossLevel;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Random;
 
 import java.util.HashSet;
 
@@ -174,7 +174,7 @@ public class IceCavesBossLevel extends BossLevel {
 			case Terrain.STATUE_SP:
                 return StringsManager.getVar(R.string.IceCaves_TileDescStatue);
             case Terrain.UNLOCKED_EXIT:
-                return Utils.format(R.string.PortalExit_Desc, StringsManager.getVar(R.string.PortalExit_Desc_IceCaves));
+                return HUtils.format(R.string.PortalExit_Desc, StringsManager.getVar(R.string.PortalExit_Desc_IceCaves));
 			default:
 				return super.tileDesc( tile );
 		}

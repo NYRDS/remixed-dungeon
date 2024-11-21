@@ -8,7 +8,7 @@ import android.content.SharedPreferences;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.util.UserKey;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 import java.util.HashMap;
 import java.util.Map;

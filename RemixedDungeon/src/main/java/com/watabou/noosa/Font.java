@@ -5,8 +5,8 @@ import android.opengl.GLES20;
 
 import com.nyrds.platform.compatibility.RectF;
 import com.watabou.gltextures.SmartTexture;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.PointF;
+import com.nyrds.util.Utils;
+import com.nyrds.util.PointF;
 
 import java.util.HashMap;
 

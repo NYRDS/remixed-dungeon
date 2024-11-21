@@ -16,7 +16,7 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.EarthParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfParalyticGas;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -44,7 +44,7 @@ public class Earthroot extends Plant {
         {
             plantName = StringsManager.getVar(R.string.Earthroot_Name);
 
-            name = Utils.format(R.string.Plant_Seed, plantName);
+            name = HUtils.format(R.string.Plant_Seed, plantName);
             image = 5;
 
             plantClass = Earthroot.class;

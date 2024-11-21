@@ -3,8 +3,8 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.nyrds.util.Utils;
+import com.nyrds.util.Random;
 
 public class WndQuest extends WndTitledMessage {
 	

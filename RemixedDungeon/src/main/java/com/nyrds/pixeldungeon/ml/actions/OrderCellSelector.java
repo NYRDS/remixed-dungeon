@@ -8,7 +8,8 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.scenes.CellSelector;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -46,12 +47,12 @@ class OrderCellSelector implements CellSelector.Listener {
             return;
         }
 
-        target.say(Utils.format(R.string.Mob_CantDoIt));
+        target.say(HUtils.format(R.string.Mob_CantDoIt));
     }
 
     @Override
     public String prompt() {
-        return Utils.capitalize(Utils.format(R.string.Mob_ReadyForOrder, target.getName()));
+        return Utils.capitalize(HUtils.format(R.string.Mob_ReadyForOrder, target.getName()));
     }
 
     @Override

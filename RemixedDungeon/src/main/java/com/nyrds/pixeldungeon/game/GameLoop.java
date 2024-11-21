@@ -21,7 +21,7 @@ import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
-import com.watabou.utils.SystemTime;
+import com.nyrds.util.SystemTime;
 
 import org.luaj.vm2.LuaError;
 

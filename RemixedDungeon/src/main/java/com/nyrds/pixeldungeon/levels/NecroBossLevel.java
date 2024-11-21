@@ -10,8 +10,8 @@ import com.watabou.pixeldungeon.levels.BossLevel;
 import com.watabou.pixeldungeon.levels.CityLevel;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Random;
 
 public class NecroBossLevel extends BossLevel {
 	
@@ -127,7 +127,7 @@ public class NecroBossLevel extends BossLevel {
 		case Terrain.BOOKSHELF:
             return StringsManager.getVar(R.string.Halls_TileDescBookshelf);
             case Terrain.UNLOCKED_EXIT:
-                return Utils.format(R.string.PortalExit_Desc, StringsManager.getVar(R.string.PortalExit_Desc_Necropolis));
+                return HUtils.format(R.string.PortalExit_Desc, StringsManager.getVar(R.string.PortalExit_Desc_Necropolis));
 		default:
 			return super.tileDesc( tile );
 		}

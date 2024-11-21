@@ -17,12 +17,12 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.utils.BArray;
+import com.nyrds.util.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Callback;
+import com.nyrds.util.Utils;
+import com.nyrds.util.Callback;
 import com.watabou.utils.PathFinder;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class WandOfAvalanche extends SimpleWand {
 	{

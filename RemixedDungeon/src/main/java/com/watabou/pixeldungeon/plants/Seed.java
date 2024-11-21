@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -107,7 +107,7 @@ public class Seed extends Item {
 
     @Override
     public String info() {
-        return Utils.format(R.string.Plant_Info, Utils.indefinite(plantName), desc());
+        return HUtils.format(R.string.Plant_Info, HUtils.indefinite(plantName), desc());
     }
 
     @Override

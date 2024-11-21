@@ -133,6 +133,7 @@ android {
 
 dependencies {
     implementation project(':annotation')
+    implementation project(':RemixedDungeonBase')
 
     annotationProcessor project(':processor')
 

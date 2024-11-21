@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class ChaosCommon {
 	

@@ -23,7 +23,8 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.sprites.DummySprite;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -91,12 +92,12 @@ public class Carcass extends Item implements Doom {
 
     @Override
     public String name() {
-        return Utils.format(R.string.Carcass_Name, src.getName());
+        return HUtils.format(R.string.Carcass_Name, src.getName());
     }
 
     @Override
     public String desc() {
-        return Utils.format(R.string.Carcass_Info, src.getName());
+        return HUtils.format(R.string.Carcass_Info, src.getName());
     }
 
     @Override
@@ -123,7 +124,7 @@ public class Carcass extends Item implements Doom {
     @Override
     public void _execute(@NotNull Char chr, @NotNull String action){
         if(action.equals(AC_KICK)) {
-            GLog.i(Utils.format(R.string.Carcass_Kick, src.getName()));
+            GLog.i(HUtils.format(R.string.Carcass_Kick, src.getName()));
             removeItem();
         }
 
@@ -145,15 +146,15 @@ public class Carcass extends Item implements Doom {
                 pet.heal(pet.ht() * chr.skillLevel() / 10);
                 pet.setPos(spawnPos);
                 level.spawnMob(pet, 0, casterPos);
-                GLog.p(Utils.format(R.string.Carcass_Necromancy, pet.getName()));
+                GLog.p(HUtils.format(R.string.Carcass_Necromancy, pet.getName()));
             } else {
-                GLog.n(Utils.format(R.string.Carcass_Necromancy_Failed, src.getName()));
+                GLog.n(HUtils.format(R.string.Carcass_Necromancy_Failed, src.getName()));
             }
             removeItem();
 
         } else if (action.equals(AC_DEVOUR)) {
             Devour.hit(chr);
-            chr.eat(this, src.ht(), Utils.format(R.string.Carcass_Devoured, src.getName()));
+            chr.eat(this, src.ht(), HUtils.format(R.string.Carcass_Devoured, src.getName()));
             chr.heal(src.ht()/10, this);
 
             removeItem();

@@ -2,7 +2,7 @@ package com.nyrds.platform.game;
 
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 public class PlayTest extends RemixedDungeon{
 

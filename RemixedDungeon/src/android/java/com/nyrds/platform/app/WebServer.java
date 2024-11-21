@@ -1,17 +1,12 @@
 package com.nyrds.platform.app;
 
-import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 

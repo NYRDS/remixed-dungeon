@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -53,12 +53,12 @@ public class Horrified extends MobAi implements AiState{
                 NamedEntityKind src = terror.getSource();
 
                 if (src instanceof Char) {
-                    return Utils.format(R.string.Mob_StaTerrorStatus2,
+                    return HUtils.format(R.string.Mob_StaTerrorStatus2,
                             me.getName(), ((Char) src).getName_objective());
                 }
         }
 
-        return Utils.format(R.string.Mob_StaTerrorStatus,
+        return HUtils.format(R.string.Mob_StaTerrorStatus,
                 me.getName());
     }
 }

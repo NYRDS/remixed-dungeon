@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 //This can be just config file
 public class SummonDeathling extends SummoningSpell {

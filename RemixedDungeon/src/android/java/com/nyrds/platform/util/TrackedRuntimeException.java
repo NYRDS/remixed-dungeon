@@ -3,7 +3,7 @@ package com.nyrds.platform.util;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.Notifications;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 /**
  * Created by DeadDie on 18.03.2016

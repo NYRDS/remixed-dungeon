@@ -6,7 +6,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.utils.BArray;
+import com.nyrds.util.BArray;
 
 import java.util.Arrays;
 

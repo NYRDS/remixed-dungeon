@@ -7,7 +7,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.windows.WndStory;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.json.JSONException;
 import org.json.JSONObject;

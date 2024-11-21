@@ -41,7 +41,8 @@ import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 
@@ -594,7 +595,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     }
 
     protected String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
-        return Utils.getClassParam(getEntityKind(), paramName, defaultValue, warnIfAbsent);
+        return HUtils.getClassParam(getEntityKind(), paramName, defaultValue, warnIfAbsent);
     }
 
     @SneakyThrows

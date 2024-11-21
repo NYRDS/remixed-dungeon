@@ -12,7 +12,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Callback;
+import com.nyrds.util.Callback;
 
 import org.jetbrains.annotations.NotNull;
 

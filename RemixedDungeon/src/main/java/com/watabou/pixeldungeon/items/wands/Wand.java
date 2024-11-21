@@ -28,10 +28,11 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Callback;
-import com.watabou.utils.Random;
+import com.nyrds.util.Callback;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -190,19 +191,19 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
     @Override
     public String name() {
-        return isKnown() ? name : Utils.format(R.string.Wand_Name, wood);
+        return isKnown() ? name : HUtils.format(R.string.Wand_Name, wood);
     }
 
     @Override
     public String info() {
         StringBuilder info = new StringBuilder(isKnown() ? desc()
-                : Utils.format(R.string.Wand_Wood, wood));
+                : HUtils.format(R.string.Wand_Wood, wood));
         Char owner = getOwner();
         if (owner.getHeroClass() == HeroClass.MAGE || owner.getSubClass() == HeroSubClass.SHAMAN) {
             damageRoll(owner);
             info.append("\n\n");
             if (isLevelKnown()) {
-                info.append(Utils.format(R.string.Wand_Damage, MIN + (MAX - MIN) / 2));
+                info.append(HUtils.format(R.string.Wand_Damage, MIN + (MAX - MIN) / 2));
             } else {
                 info.append(StringsManager.getVar(R.string.Wand_Weapon));
             }

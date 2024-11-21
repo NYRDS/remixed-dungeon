@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.effects;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 import org.json.JSONObject;
 

@@ -14,8 +14,8 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
 import com.watabou.pixeldungeon.items.Torch;
-import com.watabou.utils.PointF;
-import com.watabou.utils.Random;
+import com.nyrds.util.PointF;
+import com.nyrds.util.Random;
 
 import javax.microedition.khronos.opengles.GL10;
 

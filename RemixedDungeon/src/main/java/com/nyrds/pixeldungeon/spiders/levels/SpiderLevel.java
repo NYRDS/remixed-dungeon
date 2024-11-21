@@ -12,8 +12,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.CommonLevel;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -251,7 +251,7 @@ public class SpiderLevel extends CommonLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 			case Terrain.UNLOCKED_EXIT:
-                return Utils.format(R.string.PortalExit_Desc, StringsManager.getVar(R.string.PortalExit_Desc_SpiderNest));
+                return HUtils.format(R.string.PortalExit_Desc, StringsManager.getVar(R.string.PortalExit_Desc_SpiderNest));
 			default:
 				return super.tileDesc( tile );
 		}

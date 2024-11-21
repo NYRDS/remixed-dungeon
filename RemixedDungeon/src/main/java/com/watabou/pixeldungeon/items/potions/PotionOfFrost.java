@@ -11,7 +11,7 @@ import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.FrostArrow;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.utils.BArray;
+import com.nyrds.util.BArray;
 import com.watabou.utils.PathFinder;
 
 public class PotionOfFrost extends UpgradablePotion {

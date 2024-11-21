@@ -11,7 +11,8 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -54,7 +55,7 @@ public class MasteryItem extends Item {
 
 		if (way == HeroSubClass.LICH) {
 			int penalty = 2;
-            GLog.w(Utils.format(R.string.Necromancy_BecameALich, penalty) );
+            GLog.w(HUtils.format(R.string.Necromancy_BecameALich, penalty) );
 			hero.STR(hero.STR() - penalty);
 			hero.setMaxSkillPoints(hero.getSkillPointsMax() * 2);
 		}

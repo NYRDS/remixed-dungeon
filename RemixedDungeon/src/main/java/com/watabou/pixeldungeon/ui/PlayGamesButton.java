@@ -2,7 +2,7 @@ package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
-import com.watabou.utils.SystemTime;
+import com.nyrds.util.SystemTime;
 
 public class PlayGamesButton extends ImageButton {
 

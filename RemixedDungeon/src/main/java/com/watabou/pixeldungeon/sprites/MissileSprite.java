@@ -6,8 +6,8 @@ import com.watabou.noosa.tweeners.PosTweener;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.utils.Callback;
-import com.watabou.utils.PointF;
+import com.nyrds.util.Callback;
+import com.nyrds.util.PointF;
 
 public class MissileSprite extends ItemSprite implements Tweener.Listener {
 

@@ -7,7 +7,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -55,6 +55,6 @@ public class IronKey extends Key {
 	@NotNull
     @Override
 	public String toString() {
-        return Utils.format(R.string.IronKey_FromDepth, getDepth());
+        return HUtils.format(R.string.IronKey_FromDepth, getDepth());
 	}
 }

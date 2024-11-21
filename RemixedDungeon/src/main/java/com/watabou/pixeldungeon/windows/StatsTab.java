@@ -12,7 +12,8 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.elements.TabContent;
 
 class StatsTab extends TabContent {
@@ -23,7 +24,7 @@ class StatsTab extends TabContent {
 
     public StatsTab(final Char chr) {
         Text title = PixelScene.createText(
-                Utils.format(R.string.WndHero_StaTitle, chr.lvl(), chr.className()).toUpperCase(), GuiProperties.titleFontSize());
+                HUtils.format(R.string.WndHero_StaTitle, chr.lvl(), chr.className()).toUpperCase(), GuiProperties.titleFontSize());
         title.hardlight(Window.TITLE_COLOR);
         add(title);
 

@@ -4,8 +4,8 @@ package com.watabou.pixeldungeon.levels.painters;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.utils.Point;
-import com.watabou.utils.Rect;
+import com.nyrds.util.Point;
+import com.nyrds.util.Rect;
 
 import java.util.Arrays;
 

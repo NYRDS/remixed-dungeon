@@ -22,8 +22,8 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.windows.IPlaceable;
 import com.watabou.glwrap.Matrix;
 import com.watabou.utils.GameMath;
-import com.watabou.utils.Point;
-import com.watabou.utils.PointF;
+import com.nyrds.util.Point;
+import com.nyrds.util.PointF;
 
 public class Visual extends Gizmo implements IPlaceable{
 

@@ -14,9 +14,9 @@ import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -114,20 +114,20 @@ public class Ring extends Artifact implements UnknownItem {
 
     @Override
     public String name() {
-        return isKnown() ? name : Utils.format(R.string.Ring_Name, gem);
+        return isKnown() ? name : HUtils.format(R.string.Ring_Name, gem);
     }
 
     @Override
     public String desc() {
-        return Utils.format(R.string.Ring_Info, gem);
+        return HUtils.format(R.string.Ring_Info, gem);
     }
 
     @Override
     public String info() {
         if (isEquipped(Dungeon.hero)) {
-            return Utils.format(R.string.Ring_Info3a, desc(), name(), (isCursed() ? StringsManager.getVar(R.string.Ring_Info3b) : "."));
+            return HUtils.format(R.string.Ring_Info3a, desc(), name(), (isCursed() ? StringsManager.getVar(R.string.Ring_Info3b) : "."));
         } else if (isCursed() && isCursedKnown()) {
-            return Utils.format(R.string.Ring_Info4, desc(), name());
+            return HUtils.format(R.string.Ring_Info4, desc(), name());
         } else {
             return desc();
         }

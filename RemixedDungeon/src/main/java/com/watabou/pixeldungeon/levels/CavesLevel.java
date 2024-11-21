@@ -10,8 +10,8 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.utils.Random;
-import com.watabou.utils.Rect;
+import com.nyrds.util.Random;
+import com.nyrds.util.Rect;
 
 public class CavesLevel extends RegularLevel {
 

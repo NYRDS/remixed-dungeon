@@ -16,7 +16,7 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 /**
  * Created by DeadDie on 07.07.2016

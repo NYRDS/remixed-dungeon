@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -24,7 +24,7 @@ public class ScrollOfSummoning extends Scroll {
 		Level level = Dungeon.level;
 
 		if(level.isBossLevel() || !level.cellValid(level.randomRespawnCell())) {
-			GLog.w( Utils.format(R.string.Using_Failed_Because_Magic, this.name()) );
+			GLog.w( HUtils.format(R.string.Using_Failed_Because_Magic, this.name()) );
 			return;
 		}
 
@@ -36,7 +36,7 @@ public class ScrollOfSummoning extends Scroll {
 			if(mob.canBePet()){
 				Mob.makePet(mob, reader.getId());
 			} else {
-				GLog.w( Utils.format(R.string.Mob_Cannot_Be_Pet, mob.getName()));
+				GLog.w( HUtils.format(R.string.Mob_Cannot_Be_Pet, mob.getName()));
 			}
 			WandOfBlink.appear( mob, cell );
 		} else {

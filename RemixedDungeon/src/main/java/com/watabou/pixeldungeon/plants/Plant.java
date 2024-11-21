@@ -16,8 +16,9 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.LeafParticle;
 import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
+import com.nyrds.util.Random;
 
 public class Plant extends LevelObject {
 
@@ -78,12 +79,12 @@ public class Plant extends LevelObject {
 	}
 
 	public String desc() {
-		return Utils.getClassParam(this.getClass().getSimpleName(), "Desc", Utils.EMPTY_STRING, true);
+		return HUtils.getClassParam(this.getClass().getSimpleName(), "Desc", Utils.EMPTY_STRING, true);
 	}
 
 	@Override
 	public String name() {
-		return Utils.getClassParam(this.getClass().getSimpleName(), "Name", Utils.EMPTY_STRING, true);
+		return HUtils.getClassParam(this.getClass().getSimpleName(), "Name", Utils.EMPTY_STRING, true);
 	}
 
 	public void effect(int pos, Presser ch) {

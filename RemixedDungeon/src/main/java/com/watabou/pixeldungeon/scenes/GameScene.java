@@ -81,12 +81,13 @@ import com.watabou.pixeldungeon.ui.Toast;
 import com.watabou.pixeldungeon.ui.Toolbar;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndBag.Mode;
 import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -466,7 +467,7 @@ public class GameScene extends PixelScene {
             if(realtime) {
                 msg += StringsManager.getVar(R.string.WrnExperimental_realtime);
             } else {
-                msg += Utils.format(R.string.WrnExperimental_moveTimeout, (int)moveTimeout);
+                msg += HUtils.format(R.string.WrnExperimental_moveTimeout, (int)moveTimeout);
             }
 
             msg += "\n\n";

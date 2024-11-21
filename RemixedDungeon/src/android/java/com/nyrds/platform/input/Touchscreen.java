@@ -19,8 +19,8 @@ package com.nyrds.platform.input;
 
 import android.view.MotionEvent;
 
-import com.watabou.utils.PointF;
-import com.watabou.utils.Signal;
+import com.nyrds.util.PointF;
+import com.nyrds.util.Signal;
 
 import java.util.HashMap;
 

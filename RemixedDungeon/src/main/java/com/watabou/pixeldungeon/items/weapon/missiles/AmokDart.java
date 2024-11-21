@@ -7,7 +7,7 @@ import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Speed;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class AmokDart extends Dart {
 

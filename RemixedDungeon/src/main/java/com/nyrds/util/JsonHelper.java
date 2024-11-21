@@ -5,7 +5,6 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
-import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;

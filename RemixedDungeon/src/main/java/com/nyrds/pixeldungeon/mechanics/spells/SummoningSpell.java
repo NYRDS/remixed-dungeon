@@ -10,7 +10,7 @@ import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -89,7 +89,7 @@ public class SummoningSpell extends Spell {
     }
 
     private String getLimitWarning(int limit) {
-        return Utils.format(R.string.Spells_SummonLimitReached, this.name(), limit);
+        return HUtils.format(R.string.Spells_SummonLimitReached, this.name(), limit);
     }
 
     public int getSummonLimit() {

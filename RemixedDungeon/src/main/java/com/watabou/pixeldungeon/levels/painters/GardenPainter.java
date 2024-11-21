@@ -7,7 +7,7 @@ import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.plants.Moongrace;
 import com.watabou.pixeldungeon.plants.Sungrass;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class GardenPainter extends Painter {
 

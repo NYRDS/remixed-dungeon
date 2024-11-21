@@ -1,7 +1,7 @@
 package com.watabou.noosa;
 
 import com.nyrds.platform.EventCollector;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 public class ReturnOnlyOnce implements InterstitialPoint {
 

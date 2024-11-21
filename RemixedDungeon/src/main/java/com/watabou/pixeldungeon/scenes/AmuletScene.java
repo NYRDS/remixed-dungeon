@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.ui.RedButton;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class AmuletScene extends PixelScene {
 

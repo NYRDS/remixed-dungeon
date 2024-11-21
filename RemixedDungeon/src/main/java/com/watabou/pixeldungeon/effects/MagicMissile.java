@@ -14,10 +14,10 @@ import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.effects.particles.WoolParticle;
-import com.watabou.utils.Callback;
-import com.watabou.utils.ColorMath;
-import com.watabou.utils.PointF;
-import com.watabou.utils.Random;
+import com.nyrds.util.Callback;
+import com.nyrds.util.ColorMath;
+import com.nyrds.util.PointF;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.Nullable;
 

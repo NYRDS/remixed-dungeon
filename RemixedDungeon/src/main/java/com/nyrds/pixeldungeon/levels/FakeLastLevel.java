@@ -10,7 +10,7 @@ import com.watabou.pixeldungeon.levels.HallsLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import java.util.Arrays;
 

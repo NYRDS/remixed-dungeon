@@ -11,7 +11,7 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -23,7 +23,7 @@ import org.jetbrains.annotations.NotNull;
 public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider {
 
 	private RewardedAd mCinemaRewardAd;
-	private InterstitialPoint returnTo = new Utils.SpuriousReturn();
+	private InterstitialPoint returnTo = new HUtils.SpuriousReturn();
 
 	private boolean rewardEarned = false;
 	private final String adId;

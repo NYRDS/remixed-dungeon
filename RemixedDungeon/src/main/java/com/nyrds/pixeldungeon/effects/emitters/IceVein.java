@@ -5,8 +5,8 @@ import com.watabou.noosa.Group;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.watabou.utils.PointF;
-import com.watabou.utils.Random;
+import com.nyrds.util.PointF;
+import com.nyrds.util.Random;
 
 public class IceVein extends Group {
 

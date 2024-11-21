@@ -12,10 +12,10 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.utils.BArray;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.BArray;
+import com.watabou.pixeldungeon.utils.HUtils;
 import com.watabou.utils.PathFinder;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -42,7 +42,7 @@ public class Icecap extends Plant {
 		{
             plantName = StringsManager.getVar(R.string.Icecap_Name);
 
-            name = Utils.format(R.string.Plant_Seed, plantName);
+            name = HUtils.format(R.string.Plant_Seed, plantName);
 			image = 1;
 			
 			plantClass = Icecap.class;

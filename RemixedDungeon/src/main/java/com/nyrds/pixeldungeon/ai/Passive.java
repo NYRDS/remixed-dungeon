@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.ai;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -18,7 +18,7 @@ public class Passive extends MobAi implements AiState {
 
     @Override
     public String status(Char me) {
-        return Utils.format(R.string.Mob_StaPassiveStatus,
+        return HUtils.format(R.string.Mob_StaPassiveStatus,
                 me.getName());
     }
 

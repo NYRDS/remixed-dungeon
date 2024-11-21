@@ -25,7 +25,7 @@ import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -85,11 +85,11 @@ public class Statue extends Mob {
 		val item = getItem();
 
 		if(ItemUtils.usableAsWeapon(item)) {
-            return Utils.format(R.string.Statue_Desc, getItem().name());
+            return HUtils.format(R.string.Statue_Desc, getItem().name());
 		}
 
 		if(ItemUtils.usableAsArmor(item)) {
-            return Utils.format(R.string.ArmoredStatue_Desc, getItem().name());
+            return HUtils.format(R.string.ArmoredStatue_Desc, getItem().name());
 		}
 
 		throw new TrackedRuntimeException("Can't equip statue with " + item.getEntityKind());

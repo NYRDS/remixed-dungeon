@@ -16,7 +16,6 @@ import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
-import com.watabou.utils.Callback;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

@@ -6,7 +6,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -47,6 +47,6 @@ public class Artifact extends EquipableItem {
 
 	@Override
 	public void equippedCursed() {
-        GLog.n(Utils.format(R.string.Ring_Info2, name()));
+        GLog.n(HUtils.format(R.string.Ring_Info2, name()));
 	}
 }

@@ -5,7 +5,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.effects.Halo;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
-import com.watabou.utils.PointF;
+import com.nyrds.util.PointF;
 
 public class Candle extends Emitter {
 

@@ -38,7 +38,7 @@ import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.Utils;
 
 import javax.microedition.khronos.opengles.GL10;
 

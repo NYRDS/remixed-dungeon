@@ -17,8 +17,8 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.utils.Callback;
-import com.watabou.utils.Random;
+import com.nyrds.util.Callback;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 

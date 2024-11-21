@@ -80,10 +80,11 @@ import com.watabou.pixeldungeon.sprites.DummySprite;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Callback;
-import com.watabou.utils.Random;
+import com.nyrds.util.Callback;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -358,7 +359,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     private String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
-        return Utils.getClassParam(getEntityKind(), paramName, defaultValue, warnIfAbsent);
+        return HUtils.getClassParam(getEntityKind(), paramName, defaultValue, warnIfAbsent);
     }
 
     protected void setupCharData() {
@@ -456,7 +457,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
                             Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.BOSS), getName(), Dungeon.depth));
                         } else {
                             Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
-                                    Utils.indefinite(getName()), Dungeon.depth));
+                                    HUtils.indefinite(getName()), Dungeon.depth));
                         }
 
                         GLog.n(StringsManager.getVars(R.array.Char_Kill)[getGender()], getName());

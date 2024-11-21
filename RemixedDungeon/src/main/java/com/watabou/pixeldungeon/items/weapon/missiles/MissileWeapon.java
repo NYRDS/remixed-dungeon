@@ -11,7 +11,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Quiver;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
@@ -140,7 +141,7 @@ public class MissileWeapon extends Weapon {
 
         StringBuilder info = new StringBuilder(desc());
 
-        info.append(Utils.format(R.string.MissileWeapon_Info1, MIN + (MAX - MIN) / 2));
+        info.append(HUtils.format(R.string.MissileWeapon_Info1, MIN + (MAX - MIN) / 2));
         info.append(" ");
 
         final Char hero = Dungeon.hero;
@@ -149,15 +150,15 @@ public class MissileWeapon extends Weapon {
             int effectiveSTR = hero.effectiveSTR();
             int requiredSTR = requiredSTR();
             if (requiredSTR > effectiveSTR) {
-                info.append(Utils.format(R.string.MissileWeapon_Info2, name));
+                info.append(HUtils.format(R.string.MissileWeapon_Info2, name));
             }
             if (requiredSTR < effectiveSTR) {
-                info.append(Utils.format(R.string.MissileWeapon_Info3, name));
+                info.append(HUtils.format(R.string.MissileWeapon_Info3, name));
             }
         }
 
         if (isEquipped(hero)) {
-            info.append(Utils.format(R.string.MissileWeapon_Info4, name));
+            info.append(HUtils.format(R.string.MissileWeapon_Info4, name));
         }
 
         return info.toString();

@@ -21,9 +21,9 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.watabou.glwrap.Matrix;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.utils.Point;
-import com.watabou.utils.PointF;
-import com.watabou.utils.Random;
+import com.nyrds.util.Point;
+import com.nyrds.util.PointF;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 

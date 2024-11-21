@@ -9,9 +9,9 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.sprites.Glowing;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 import com.watabou.utils.GameMath;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class Affection extends Glyph {
 
@@ -38,7 +38,7 @@ public class Affection extends Glyph {
 
 	@Override
 	public String name(String weaponName) {
-        return Utils.format(R.string.Affection_Txt, weaponName);
+        return HUtils.format(R.string.Affection_Txt, weaponName);
 	}
 
 	@Override

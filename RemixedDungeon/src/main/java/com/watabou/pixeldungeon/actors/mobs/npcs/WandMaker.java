@@ -43,11 +43,12 @@ import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.WandmakerSprite;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.pixeldungeon.windows.WndWandmaker;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -305,7 +306,7 @@ public class WandMaker extends NPC {
 			{
                 plantName = StringsManager.getVar(R.string.WandMaker_RotberryName);
 
-                name = Utils.format(R.string.Plant_Seed, plantName);
+                name = HUtils.format(R.string.Plant_Seed, plantName);
 				image = 7;
 				
 				plantClass = Rotberry.class;

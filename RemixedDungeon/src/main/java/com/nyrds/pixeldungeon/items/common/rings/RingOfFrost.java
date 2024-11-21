@@ -10,7 +10,7 @@ import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class RingOfFrost extends Artifact {
 

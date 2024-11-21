@@ -1,7 +1,7 @@
 package com.watabou.noosa.tweeners;
 
 import com.watabou.noosa.Visual;
-import com.watabou.utils.PointF;
+import com.nyrds.util.PointF;
 
 public class FallTweener extends ScaleTweener {
     private final Visual sprite;

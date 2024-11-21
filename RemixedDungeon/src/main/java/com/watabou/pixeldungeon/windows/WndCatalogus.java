@@ -31,7 +31,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.CatalogusListItem;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
 import com.watabou.pixeldungeon.windows.elements.LabeledTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
@@ -86,7 +86,7 @@ public class WndCatalogus extends WndTabbed {
 
 	private void updateList() {
 
-        txtTitle.text(Utils.format(R.string.WndCatalogus_Title, showPotions ?
+        txtTitle.text(HUtils.format(R.string.WndCatalogus_Title, showPotions ?
                 StringsManager.getVar(R.string.WndCatalogus_Potions) : StringsManager.getVar(R.string.WndCatalogus_Scrolls)));
 		txtTitle.setX(PixelScene.align(PixelScene.uiCamera, (width - txtTitle.width()) / 2));
 

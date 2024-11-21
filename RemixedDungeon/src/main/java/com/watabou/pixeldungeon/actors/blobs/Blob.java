@@ -8,8 +8,8 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.utils.BArray;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.util.BArray;
+import com.nyrds.util.Utils;
 import com.watabou.utils.Bundle;
 
 import java.util.Arrays;

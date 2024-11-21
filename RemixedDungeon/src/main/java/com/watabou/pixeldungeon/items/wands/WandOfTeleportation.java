@@ -10,8 +10,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Callback;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Callback;
 
 public class WandOfTeleportation extends Wand {
 
@@ -26,7 +26,7 @@ public class WandOfTeleportation extends Wand {
 		ch.setPos(pos);
 		ch.getSprite().place(ch.getPos());
 		ch.getSprite().setVisible(Dungeon.isCellVisible(pos));
-        GLog.i(Utils.format(R.string.WandOfTeleportation_Info1, caster.getName(),
+        GLog.i(HUtils.format(R.string.WandOfTeleportation_Info1, caster.getName(),
 				ch.getName_objective()));
 	}
 

@@ -5,7 +5,7 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.utils.Random;
+import com.nyrds.util.Random;
 
 public class MonkSprite extends MobSprite {
 	

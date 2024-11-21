@@ -5,7 +5,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.utils.PointF;
+import com.nyrds.util.PointF;
 
 public class Compass extends Image {
 

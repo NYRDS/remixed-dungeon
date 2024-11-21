@@ -11,7 +11,8 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.HUtils;
+import com.nyrds.util.Utils;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -101,7 +102,7 @@ public class Accessory {
     }
 
     private String getClassParam(String paramName, String defaultValue) {
-        return Utils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, false);
+        return HUtils.getClassParam(this.getClass().getSimpleName(), paramName, defaultValue, false);
     }
 
     public Image getImage() {

@@ -6,7 +6,6 @@ import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.Assets;
 import com.nyrds.platform.storage.FileSystem;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
