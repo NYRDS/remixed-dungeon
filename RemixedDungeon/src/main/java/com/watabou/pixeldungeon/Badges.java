@@ -9,7 +9,7 @@ import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.actors.hero.Hero;

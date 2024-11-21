@@ -2,9 +2,9 @@ package com.nyrds.platform.storage;
 
 import android.content.Context;
 
+import com.nyrds.platform.IFileSystem;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.util.ModError;
-import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -18,26 +18,24 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import lombok.SneakyThrows;
-
-public class FileSystem {
-
-    static public @NotNull File getInternalStorageFile(String fileName) {
+public class FileSystemAndroid implements IFileSystem {
+    // Move all static methods and members here
+    @Override
+    public @NotNull File getInternalStorageFile(String fileName) {
         File storageDir = getContext().getFilesDir();
         return new File(storageDir, fileName);
     }
 
-    static public String[] listInternalStorage() {
+    @Override
+    public String[] listInternalStorage() {
         File storageDir = getContext().getFilesDir();
         return storageDir.list();
     }
 
-    @NotNull
-    static public File[] listExternalStorage() {
-
+    @Override
+    public @NotNull File[] listExternalStorage() {
         File storageDir = getExternalStorageFile(".");
         if (storageDir != null) {
             File[] ret = storageDir.listFiles();
@@ -45,78 +43,81 @@ public class FileSystem {
                 return ret;
             }
         }
-
         return new File[0];
     }
 
-    static public OutputStream getOutputStream(String filename) throws FileNotFoundException {
+    @Override
+    public OutputStream getOutputStream(String filename) throws FileNotFoundException {
         File dir = new File(filename).getParentFile();
         if (dir != null && !dir.exists()) {
             dir.mkdirs();
         }
-
-        return new FileOutputStream(FileSystem.getInternalStorageFile(filename));
+        return new FileOutputStream(FileSystemAndroid.this.getInternalStorageFile(filename));
     }
 
-    static public InputStream getInputStream(String filename) throws FileNotFoundException {
-        return new FileInputStream(FileSystem.getInternalStorageFile(filename));
+    @Override
+    public InputStream getInputStream(String filename) throws FileNotFoundException {
+        return new FileInputStream(FileSystemAndroid.this.getInternalStorageFile(filename));
     }
 
-    static public String getInternalStorageFileName(String fileName) {
+    @Override
+    public String getInternalStorageFileName(String fileName) {
         return getInternalStorageFile(fileName).getAbsolutePath();
     }
 
-    static public File getExternalStorageFile(String fileName) {
+    @Override
+    public File getExternalStorageFile(String fileName) {
         File storageDir = getContext().getExternalFilesDir(null);
         return new File(storageDir, fileName);
     }
 
-    static public String getExternalStorageFileName(String fname) {
+    @Override
+    public String getExternalStorageFileName(String fname) {
         return getExternalStorageFile(fname).getAbsolutePath();
     }
 
-    static public File getFile(String fname) {
+    @Override
+    public File getFile(String fname) {
         return getInternalStorageFile(fname);
     }
 
-    static public void deleteRecursive(File fileOrDirectory) {
+    @Override
+    public void deleteRecursive(File fileOrDirectory) {
         if (fileOrDirectory.isDirectory())
             for (File child : fileOrDirectory.listFiles())
                 deleteRecursive(child);
-
         fileOrDirectory.delete();
     }
 
-    @SneakyThrows
-    static public void copyStream(InputStream in, OutputStream out) {
+    @Override
+    public void copyStream(InputStream in, OutputStream out) throws IOException {
         byte[] buffer = new byte[4096];
         int read;
         while ((read = in.read(buffer)) != -1) {
             out.write(buffer, 0, read);
         }
         in.close();
-
         out.flush();
         out.close();
     }
 
-    @SneakyThrows
-    static public void copyFile(String inputFile, OutputStream out) {
+    @Override
+    public void copyFile(String inputFile, OutputStream out) throws IOException {
         InputStream in = new FileInputStream(inputFile);
         copyStream(in, out);
     }
 
-    @SneakyThrows
-    static public void copyFile(String inputFile, String outputFile) {
+    @Override
+    public void copyFile(String inputFile, String outputFile) throws IOException {
         File dir = new File(outputFile).getParentFile();
         if (!dir.exists()) {
             dir.mkdirs();
         }
-
         copyFile(inputFile, new FileOutputStream(outputFile));
     }
 
-    public static Map<String, Long> getFileTimestampMap(File directory, String pathPrefix) {
+    @Override
+    public Map<String, Long> getFileTimestampMap(File directory, String pathPrefix) {
         Map<String, Long> ret = new HashMap<>();
         if (directory.isDirectory()) {
             for (File file : directory.listFiles()) {
@@ -130,46 +131,16 @@ public class FileSystem {
         return ret;
     }
 
-    public static void zipFolderTo(OutputStream out, File srcFolder, int depth, FileFilter filter) throws IOException {
+    @Override
+    public void zipFolderTo(OutputStream out, File srcFolder, int depth, FileFilter filter) throws IOException {
         ZipOutputStream zip = new ZipOutputStream(out);
         addFolderToZip(srcFolder, srcFolder, depth, zip, filter);
-
         zip.flush();
         zip.close();
     }
 
-    private static void addFolderToZip(File rootFolder, File srcFolder, int depth,
-                                       ZipOutputStream zip, FileFilter filter) throws IOException {
-        GLog.debug("dir=" + srcFolder.getAbsolutePath());
-        for (File file : srcFolder.listFiles(filter)) {
-            GLog.debug("file=" + file.getAbsolutePath());
-            if (file.isFile()) {
-                addFileToZip(rootFolder, file, zip);
-                continue;
-            }
-
-            if (depth > 0 && file.isDirectory()) {
-                //zip.putNextEntry(new ZipEntry(getRelativePath(file, rootFolder)));
-                addFolderToZip(rootFolder, file, depth - 1, zip, filter);
-                //zip.closeEntry();
-            }
-        }
-    }
-
-    private static void addFileToZip(File rootFolder, File file, ZipOutputStream zip) throws IOException {
-        byte[] buf = new byte[4096];
-        int len;
-        try (FileInputStream in = new FileInputStream(file)) {
-            GLog.debug("relpath=" + getRelativePath(file, rootFolder));
-            zip.putNextEntry(new ZipEntry(getRelativePath(file, rootFolder)));
-            while ((len = in.read(buf)) > 0) {
-                zip.write(buf, 0, len);
-            }
-            zip.closeEntry();
-        }
-    }
-
-    public static String getRelativePath(File file, File folder) {
+    @Override
+    public String getRelativePath(File file, File folder) {
         String filePath = file.getAbsolutePath();
         String folderPath = folder.getAbsolutePath();
         if (filePath.startsWith(folderPath)) {
@@ -179,21 +150,19 @@ public class FileSystem {
         }
     }
 
-    static Context getContext() {
+    public Context getContext() {
         return RemixedDungeonApp.getContext();
     }
 
-    public static void ensureDir(String dir) {
+    @Override
+    public void ensureDir(String dir) throws ModError {
         File f = new File(dir);
-
         if (f.exists() && f.isDirectory()) {
             return;
         }
-
         if (f.exists() && !f.delete()) {
             throw new ModError("Can't cleanup:" + dir);
         }
-
         if (!f.mkdirs()) {
             throw new ModError("Can't create directory:" + dir);
         }

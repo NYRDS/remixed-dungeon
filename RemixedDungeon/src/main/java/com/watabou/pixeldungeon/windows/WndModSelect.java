@@ -10,7 +10,7 @@ import com.nyrds.pixeldungeon.windows.ScrollableList;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.game.RemixedDungeon;
-import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.DownloadStateListener;
 import com.nyrds.util.DownloadTask;

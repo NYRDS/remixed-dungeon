@@ -10,6 +10,8 @@ import android.util.Pair;
 
 import androidx.documentfile.provider.DocumentFile;
 
+import com.nyrds.platform.FileSystem;
+import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.game.Game;
 
@@ -39,7 +41,7 @@ public class AndroidSAF {
         if (mBaseSrcPath == null) {
             return;
         }
-        copyModToAppStorage(FileSystem.getContext(), mBaseSrcPath);
+        copyModToAppStorage(RemixedDungeonApp.getContext(), mBaseSrcPath);
     }
 
     public static void pickModSourceDirectory(Uri selectedDirectoryUri) {
@@ -193,7 +195,7 @@ public class AndroidSAF {
             dir.mkdirs();
         }
 
-        InputStream inputStream = FileSystem.getContext().getContentResolver().openInputStream(file.getUri());
+        InputStream inputStream = RemixedDungeonApp.getContext().getContentResolver().openInputStream(file.getUri());
         FileSystem.copyStream(inputStream, new FileOutputStream(outputFile));
     }
 

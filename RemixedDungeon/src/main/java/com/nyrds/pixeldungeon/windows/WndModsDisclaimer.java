@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.DownloadTask;
 import com.nyrds.util.Mods;

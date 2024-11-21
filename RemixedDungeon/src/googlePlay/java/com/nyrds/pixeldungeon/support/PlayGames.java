@@ -23,7 +23,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.util.events.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.FileSystem;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModError;

@@ -10,7 +10,7 @@ import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.storage.AndroidSAF;
-import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;

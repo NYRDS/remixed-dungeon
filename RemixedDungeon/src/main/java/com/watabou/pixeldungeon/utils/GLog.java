@@ -5,7 +5,7 @@ import android.util.Log;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.nyrds.util.Signal;

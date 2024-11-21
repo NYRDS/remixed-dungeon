@@ -2,7 +2,7 @@ package com.watabou.pixeldungeon;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.FileSystem;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.GamesInProgress.Info;
 import com.watabou.pixeldungeon.actors.Char;
