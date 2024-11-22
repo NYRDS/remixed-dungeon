@@ -582,7 +582,7 @@
   <string name="HungerBuff_Info1">Jesteś głodny!</string>
   <string name="HungerBuff_Name2">Wygłodzony</string>
   <string name="HungerBuff_Info2">Umierasz z głodu, musisz coś zjeść!</string>
-  <string name="InvisibilityBuff_Name">Niewidzialny</string>
+  <string name="InvisibilityBuff_Name">Niewidzialność</string>
   <string name="InvisibilityBuff_Info">Zupełna niewidzialność, pozwala na unikanie zagrożeń lub stanie się jednym z nich.</string>
   <string name="LevitationBuff_Name">Lewitacja</string>
   <string name="LevitationBuff_Info">Ciało unosi się nad podłożem, możesz teraz uniknąć pułapek i innych tego typu zagrożeń.</string>
