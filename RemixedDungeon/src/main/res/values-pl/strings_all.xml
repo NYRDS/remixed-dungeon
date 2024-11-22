@@ -586,7 +586,7 @@
   <string name="InvisibilityBuff_Info">Zupełna niewidzialność, pozwala na unikanie zagrożeń lub stanie się jednym z nich.</string>
   <string name="LevitationBuff_Name">Lewitacja</string>
   <string name="LevitationBuff_Info">Ciało unosi się nad podłożem, możesz teraz uniknąć pułapek i innych tego typu zagrożeń.</string>
-  <string name="LightBuff_Name">Oświecony</string>
+  <string name="LightBuff_Name">Oświecenie</string>
   <string name="LightBuff_Info">Światło wydziela się z ciała, rozjaśniając wszystko wokół.</string>
   <string name="MindVisionBuff_Name">Telepatyczna Wizja</string>
   <string name="MindVisionBuff_Info">Twa podświadomość jasno obrazuje ci położenie wszystkich żywych istot na piętrze. </string>
