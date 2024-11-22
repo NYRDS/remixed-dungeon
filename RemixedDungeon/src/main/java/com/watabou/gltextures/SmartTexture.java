@@ -17,9 +17,8 @@
 
 package com.watabou.gltextures;
 
-import android.graphics.Bitmap;
-
 import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
 
 import org.jetbrains.annotations.NotNull;
@@ -34,70 +33,75 @@ public class SmartTexture extends Texture {
 
 	public int wModeH;
 	public int wModeV;
-	boolean loaded;
 
-	public Bitmap bitmap;
+	public BitmapData bitmap;
 
-	public SmartTexture() {
-		super();
-	}
+	public Atlas atlas;
 
-	public SmartTexture(@NotNull Bitmap bitmap ) {
+	public SmartTexture(@NotNull BitmapData bitmap ) {
 		this( bitmap, NEAREST, CLAMP );
 	}
 
-	public SmartTexture(@NotNull Bitmap bitmap, int filtering, int wrapping ) {
+	public SmartTexture(@NotNull BitmapData bitmap, int filtering, int wrapping ) {
+
 		super();
-		
+
 		bitmap( bitmap );
 		filter( filtering, filtering );
 		wrap( wrapping, wrapping );
+
+	}
+
+	public SmartTexture(int width, int height, int[] pixels){
+		super();
+		pixels(width, height, pixels);
+		filter( NEAREST,NEAREST );
+		wrap( CLAMP, CLAMP);
+	}
+
+	public SmartTexture(int width, int height, byte[] pixels){
+		super();
+		pixels(width, height, pixels);
+		filter( NEAREST,NEAREST );
+		wrap( CLAMP, CLAMP);
 	}
 
 	@Override
 	public void filter(int minMode, int maxMode) {
-		fModeMin = minMode;
-		fModeMax = maxMode;
+		super.filter( fModeMin = minMode, fModeMax = maxMode);
 	}
-	
+
 	@Override
 	public void wrap( int s, int t ) {
-		wModeH = s;
-		wModeV = t;
+		super.wrap( wModeH = s, wModeV = t );
 	}
 
-	public void bind() {
-		_bind();
-		if(!loaded) {
-			super.filter(fModeMin,fModeMax);
-			super.wrap(wModeH,wModeV);
+	@Override
+	public void bitmap( BitmapData bitmap ) {
+		handMade(bitmap, true );
 
-			if(bitmap!=null) {
-				handMade(bitmap);
-			}
-
-			loaded = true;
-		}
-	}
-
-	public void bitmap( Bitmap bitmap) {
 		this.bitmap = bitmap;
 		width = bitmap.getWidth();
 		height = bitmap.getHeight();
 	}
 
+	public void reload() {
+		id = new SmartTexture( bitmap ).id;
+		filter( fModeMin, fModeMax );
+		wrap( wModeH, wModeV );
+	}
+
 	@Override
 	public void delete() {
 		super.delete();
-		//bitmap = null;
-		loaded = false;
+		bitmap = null;
 	}
-	
+
 	public RectF uvRect( int left, int top, int right, int bottom ) {
 		return new RectF(
-			(float)left / width,
-			(float)top	/ height,
-			(float)right / width,
-			(float)bottom / height );
+				(float)left / width,
+				(float)top	/ height,
+				(float)right / width,
+				(float)bottom / height );
 	}
 }

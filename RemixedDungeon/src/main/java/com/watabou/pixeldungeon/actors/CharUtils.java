@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.actors;
 
-import androidx.annotation.NonNull;
+
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ai.MobAi;
@@ -223,7 +223,7 @@ public class CharUtils {
     }
 
     @NotNull
-    public static CharAction actionForCell(@NonNull Char actor, int cell, @NotNull Level level) {
+    public static CharAction actionForCell(@NotNull Char actor, int cell, @NotNull Level level) {
         Char target = null;
 
         if (level.fieldOfView[cell]) {
@@ -283,7 +283,7 @@ public class CharUtils {
         return new NoAction();
     }
 
-    private static @androidx.annotation.Nullable CharAction handleObjectOrHeap(@NonNull Char actor, int cell, @NonNull Level level) {
+    private static @androidx.annotation.Nullable CharAction handleObjectOrHeap(@NotNull Char actor, int cell, @NotNull Level level) {
         final LevelObject topLevelObject = level.getTopLevelObject(cell);
 
         if (cell != actor.getPos() && topLevelObject != null) {
@@ -431,8 +431,8 @@ public class CharUtils {
         return CharsList.DUMMY;
     }
 
-    @NonNull
-    public static VHBox makeActionsBlock(int maxWidth, Char mob, @NonNull Char selector) {
+    @NotNull
+    public static VHBox makeActionsBlock(int maxWidth, Char mob, @NotNull Char selector) {
 
         VHBox actions = new VHBox(maxWidth - 2 * Window.GAP);
         actions.setAlign(HBox.Align.Width);
@@ -458,7 +458,7 @@ public class CharUtils {
         return actions;
     }
 
-    public static void tryPickUp(Char hero, @NonNull Item item) {
+    public static void tryPickUp(Char hero, @NotNull Item item) {
         Heap oldHeap = item.getHeap();
 
         int heapPos = hero.getPos();
@@ -523,7 +523,7 @@ public class CharUtils {
         markers.clear();
     }
 
-    public static @NonNull Item tryToSpawnMimic(Item item, Char ch, int pos, String mimicKind) {
+    public static @NotNull Item tryToSpawnMimic(Item item, Char ch, int pos, String mimicKind) {
         Level level = ch.level();
 
         for (int i = 0; i < item.quantity();i++) {

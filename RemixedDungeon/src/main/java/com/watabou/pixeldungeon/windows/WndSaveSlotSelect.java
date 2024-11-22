@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.windows;
 
-import androidx.annotation.NonNull;
+
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
@@ -239,7 +239,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
         resize(width, (int) (height + bottomRow.height()));
     }
 
-    @NonNull
+    @NotNull
     private SimpleButton getRefreshBtn(int WIDTH, Text tfTitle) {
         SimpleButton refreshBtn = new SimpleButton(Icons.get(Icons.BTN_SYNC_REFRESH)) {
             @Override

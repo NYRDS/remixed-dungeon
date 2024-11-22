@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.support;
 
 import androidx.annotation.MainThread;
-import androidx.annotation.NonNull;
+
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
@@ -49,12 +49,12 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 			mRewardedAdLoader = new RewardedAdLoader(Game.instance());
 			mRewardedAdLoader.setAdLoadListener(new RewardedAdLoadListener() {
 				@Override
-				public void onAdFailedToLoad(@NonNull AdRequestError adRequestError) {
+				public void onAdFailedToLoad(@NotNull AdRequestError adRequestError) {
 					AdsUtilsCommon.rewardVideoFailed(YandexRewardVideoAds.this);
 				}
 
 				@Override
-				public void onAdLoaded(@NonNull final RewardedAd rewardedAd) {
+				public void onAdLoaded(@NotNull final RewardedAd rewardedAd) {
 					mCinemaRewardAd = rewardedAd;
 					AdsUtilsCommon.rewardVideoLoaded(YandexRewardVideoAds.this);
 				}
@@ -94,7 +94,7 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 				}
 
 				@Override
-				public void onAdFailedToShow(@NonNull final AdError adError) {
+				public void onAdFailedToShow(@NotNull final AdError adError) {
 					EventCollector.logEvent("yandex_reward_show_failed", adError.toString());
 
 					returnTo.returnToWork(rewardEarned);
@@ -131,7 +131,7 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 				}
 
 				@Override
-				public void onRewarded(@NonNull final Reward reward) {
+				public void onRewarded(@NotNull final Reward reward) {
 					rewardEarned = true;
 					EventCollector.logEvent("yandex_reward_rewarded");
 				}

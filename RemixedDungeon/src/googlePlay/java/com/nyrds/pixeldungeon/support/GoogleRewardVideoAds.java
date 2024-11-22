@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.support;
 
 import androidx.annotation.MainThread;
-import androidx.annotation.NonNull;
+
 
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
@@ -68,7 +68,7 @@ public class GoogleRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 						}
 
 						@Override
-						public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+						public void onAdFailedToLoad(@NotNull LoadAdError loadAdError) {
 							AdsUtilsCommon.rewardVideoFailed(GoogleRewardVideoAds.this);
 							EventCollector.logEvent("admob_reward_failed", loadAdError.toString());
 						}

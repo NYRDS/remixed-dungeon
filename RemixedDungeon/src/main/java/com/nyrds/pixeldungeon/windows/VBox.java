@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.windows;
 
-import androidx.annotation.NonNull;
+
 
 import com.watabou.noosa.Gizmo;
 
@@ -145,7 +145,7 @@ public class VBox extends BasicBox {
         super.layout();
     }
 
-    public void addRow(int maxWidth, HBox.Align align, @NonNull Gizmo ...elements) {
+    public void addRow(int maxWidth, HBox.Align align, @NotNull Gizmo ...elements) {
         HBox box = new HBox(maxWidth);
         box.setAlign(align);
         for(Gizmo c : elements) {

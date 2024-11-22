@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.support;
 
-import androidx.annotation.NonNull;
+
 import androidx.annotation.Nullable;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
@@ -39,14 +39,14 @@ public class YandexInterstitialProvider implements AdsUtilsCommon.IInterstitialP
         mInterstitialAdLoader = new InterstitialAdLoader(Game.instance());
         mInterstitialAdLoader.setAdLoadListener(new InterstitialAdLoadListener() {
             @Override
-            public void onAdLoaded(@NonNull final InterstitialAd interstitialAd) {
+            public void onAdLoaded(@NotNull final InterstitialAd interstitialAd) {
                 mInterstitialAd = interstitialAd;
                 // The ad was loaded successfully. You can now show the ad.
                 EventCollector.logEvent("yandex_interstitial_loaded");
             }
 
             @Override
-            public void onAdFailedToLoad(@NonNull final AdRequestError adRequestError) {
+            public void onAdFailedToLoad(@NotNull final AdRequestError adRequestError) {
                 // Ad failed to load with AdRequestError.
                 // Attempting to load a new ad from the onAdFailedToLoad() method is strongly discouraged.
                 EventCollector.logEvent("yandex_interstitial_failed", adRequestError.toString());
@@ -79,7 +79,7 @@ public class YandexInterstitialProvider implements AdsUtilsCommon.IInterstitialP
                 }
 
                 @Override
-                public void onAdFailedToShow(@NonNull final AdError adError) {
+                public void onAdFailedToShow(@NotNull final AdError adError) {
                     EventCollector.logEvent("yandex_interstitial_failed", adError.toString());
                     // Called when an InterstitialAd failed to show.
                 }

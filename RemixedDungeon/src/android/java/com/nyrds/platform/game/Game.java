@@ -1,20 +1,3 @@
-/*
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
-
 package com.nyrds.platform.game;
 
 import android.annotation.SuppressLint;
@@ -44,6 +27,7 @@ import androidx.core.content.PermissionChecker;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.EventCollector;
@@ -52,7 +36,7 @@ import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.input.Keys;
-import com.nyrds.util.ReportingExecutor;
+import com.nyrds.platform.input.PointerEvent;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.InterstitialPoint;
@@ -63,8 +47,6 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.concurrent.Executor;
-
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
@@ -73,15 +55,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public static final int REQUEST_CODE_OPEN_DOCUMENT_TREE_MOD_DIR_INSTALL = 37372;
     public static final int REQUEST_CODE_OPEN_DOCUMENT_TREE_MOD_DIR_EXPORT = 37373;
+
+    public static boolean softPaused;
     @SuppressLint("StaticFieldLeak")
     private static Game instance;
 
-    // Actual size of the screen
-    private static int width;
-    private static int height;
-
-    public static String version = Utils.EMPTY_STRING;
-    public static int versionCode = 0;
     public PlayGames playGames;
     public Iap iap;
 
@@ -89,19 +67,20 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     private GLSurfaceView view;
     private LinearLayout layout;
 
-    private static volatile boolean paused = true;
+    private static volatile boolean paused = false;
 
-    public static volatile boolean softPaused = false;
-
-
-    public Executor serviceExecutor = new ReportingExecutor();
-
-    protected final GameLoop gameLoop;
+    protected GameLoop gameLoop;
 
     public Game(Class<? extends Scene> c) {
         super();
         instance = this;
         gameLoop = new GameLoop(c);
+    }
+
+    static public void runOnMainThread(Runnable runnable) {
+        GameLoop.pushUiTask( () -> {
+            instance().runOnUiThread(runnable);
+        });
     }
 
     public void doRestart() {
@@ -137,7 +116,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
         String finalToastText = toastText;
 
-        GameLoop.runOnMainThread(() -> {
+        runOnMainThread(() -> {
 
             Toast toast = Toast.makeText(RemixedDungeonApp.getContext(), finalToastText,
                     Toast.LENGTH_SHORT);
@@ -169,8 +148,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
 
         try {
-            version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
-            versionCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
+            GameLoop.version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+            GameLoop.versionCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
         } catch (NameNotFoundException ignored) {
         }
 
@@ -196,7 +175,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public static void syncAdsState() {
 
         if(GamePreferences.donated() > 0) {
-            Ads.removeEasyModeBanner();
+            AdsUtils.removeTopBanner();
             return;
         }
 
@@ -205,7 +184,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
 
         if (GameLoop.getDifficulty() >= 2) {
-            Ads.removeEasyModeBanner();
+            AdsUtils.removeTopBanner();
         }
 
     }
@@ -260,7 +239,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @SuppressLint({"Recycle", "ClickableViewAccessibility"})
     @Override
     public boolean onTouch(View view, MotionEvent event) {
-        gameLoop.motionEvents.add(MotionEvent.obtain(event));
+        gameLoop.motionEvents.add(new PointerEvent(MotionEvent.obtain(event)));
         return true;
     }
 
@@ -290,7 +269,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     @Override
     public void onDrawFrame(GL10 gl) {
-        if (instance() == null || width() == 0 || height() == 0) {
+        if (instance() == null || GameLoop.width == 0 || GameLoop.height == 0) {
             gameLoop.framesSinceInit = 0;
             return;
         }
@@ -303,8 +282,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         if(!isFinishing()) {
             gameLoop.onFrame();
         }
-
-
     }
 
     @Override
@@ -313,11 +290,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
         //GLog.i("viewport: %d %d",width, height );
 
-        Game.width(width);
-        Game.height(height);
-
-        SystemText.invalidate();
-        TextureCache.clear();
+        GameLoop.width = width;
+        GameLoop.height = height;
 
         GameLoop.setNeedSceneRestart();
     }
@@ -328,6 +302,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         GLES20.glBlendFunc(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA);
 
         GLES20.glEnable(GL10.GL_SCISSOR_TEST);
+
 
         SystemText.invalidate();
         TextureCache.clear();
@@ -352,27 +327,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         return instance;
     }
 
-    public static boolean smallResScreen() {
-        return width() <= 320 && height() <= 320;
-    }
-
-    public static int width() {
-        return width;
-    }
-
-    private static void width(int width) {
-        Game.width = width;
-    }
-
-    public static int height() {
-        return height;
-    }
-
-    private static void height(int height) {
-        Game.height = height;
-    }
-
-    private InterstitialPoint permissionsPoint = new Utils.SpuriousReturn();
+    private InterstitialPoint permissionsPoint = new Utils.SpuriousReturn();;
 
     public void doPermissionsRequest(@NotNull InterstitialPoint returnTo, String[] permissions) {
         boolean havePermissions = true;
@@ -424,6 +379,25 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public void openUrl(String prompt, String address) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(address));
         Game.instance().startActivity(Intent.createChooser(intent, prompt));
+    }
+
+    public void sendEmail(String emailUri, String subject) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("message/rfc822");
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[] { emailUri });
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+
+        Game.instance().startActivity(Intent.createChooser(intent, emailUri));
+    }
+
+
+    public static void openPlayStore() {
+        final String appPackageName = instance().getPackageName();
+        try {
+            instance().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+        } catch (android.content.ActivityNotFoundException anfe) {
+            instance().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+        }
     }
 
 }

@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.support;
 
-import androidx.annotation.NonNull;
+
 
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
@@ -34,13 +34,13 @@ public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialPr
                 AdMob.makeAdRequest(),
                 new InterstitialAdLoadCallback() {
                     @Override
-                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                    public void onAdLoaded(@NotNull InterstitialAd interstitialAd) {
                         mInterstitialAd = interstitialAd;
                         EventCollector.logEvent("admob_interstitial_loaded");
                     }
 
                     @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                    public void onAdFailedToLoad(@NotNull LoadAdError loadAdError) {
                         EventCollector.logEvent("admob_interstitial_failed", loadAdError.toString());
                     }
                 }

@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 
-import androidx.annotation.NonNull;
+
 import androidx.annotation.Nullable;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
@@ -115,37 +115,37 @@ public class RemixedDungeonApp extends MultiDexApplication {
 
     private class RemixedActivityLifecycleCallbacks implements ActivityLifecycleCallbacks {
         @Override
-        public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle savedInstanceState) {
+        public void onActivityCreated(@NotNull Activity activity, @Nullable Bundle savedInstanceState) {
             remixedDungeonApp = RemixedDungeonApp.this;
         }
 
         @Override
-        public void onActivityStarted(@NonNull Activity activity) {
+        public void onActivityStarted(@NotNull Activity activity) {
             remixedDungeonApp = RemixedDungeonApp.this;
         }
 
         @Override
-        public void onActivityResumed(@NonNull Activity activity) {
+        public void onActivityResumed(@NotNull Activity activity) {
             remixedDungeonApp = RemixedDungeonApp.this;
         }
 
         @Override
-        public void onActivityPaused(@NonNull Activity activity) {
+        public void onActivityPaused(@NotNull Activity activity) {
 
         }
 
         @Override
-        public void onActivityStopped(@NonNull Activity activity) {
+        public void onActivityStopped(@NotNull Activity activity) {
 
         }
 
         @Override
-        public void onActivitySaveInstanceState(@NonNull Activity activity, @NonNull Bundle outState) {
+        public void onActivitySaveInstanceState(@NotNull Activity activity, @NotNull Bundle outState) {
 
         }
 
         @Override
-        public void onActivityDestroyed(@NonNull Activity activity) {
+        public void onActivityDestroyed(@NotNull Activity activity) {
 
         }
     }

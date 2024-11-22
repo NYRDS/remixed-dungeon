@@ -1,9 +1,5 @@
 package com.nyrds.pixeldungeon.support;
 
-import android.content.Intent;
-
-import com.watabou.pixeldungeon.ui.WndPlayGames;
-
 import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
@@ -15,10 +11,6 @@ public class PlayGames {
     }
 
     public void connect() {
-    }
-
-    public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
-        return false;
     }
 
     public boolean isConnected() {

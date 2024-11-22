@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
-import androidx.annotation.NonNull;
+
 
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Group;
@@ -50,7 +50,7 @@ public class Highlighter {
         this.text = sb.toString();
     }
 
-    @NonNull
+    @NotNull
     public static Text addHilightedText(float x, float y, int maxWidth, Group parent, String message) {
         Highlighter hl = new Highlighter(message);
 

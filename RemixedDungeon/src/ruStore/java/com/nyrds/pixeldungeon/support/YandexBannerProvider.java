@@ -6,7 +6,7 @@ import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.util.DisplayMetrics;
 
-import androidx.annotation.NonNull;
+
 import androidx.annotation.Nullable;
 
 import com.nyrds.platform.EventCollector;
@@ -28,7 +28,7 @@ public class YandexBannerProvider implements AdsUtilsCommon.IBannerProvider {
         adId = id;
     }
 
-    @NonNull
+    @NotNull
     private BannerAdSize getAdSize() {
         final DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
         // Calculate the width of the ad, taking into account the padding in the ad container.
@@ -70,7 +70,7 @@ public class YandexBannerProvider implements AdsUtilsCommon.IBannerProvider {
         }
 
         @Override
-        public void onAdFailedToLoad(@NonNull AdRequestError adRequestError) {
+        public void onAdFailedToLoad(@NotNull AdRequestError adRequestError) {
             EventCollector.logEvent("Banner failed", adRequestError.toString());
             loaded = false;
             AdsUtilsCommon.bannerFailed(YandexBannerProvider.this);

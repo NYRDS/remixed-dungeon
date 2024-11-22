@@ -18,6 +18,7 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.annotation.processing.AbstractProcessor;
+import javax.annotation.processing.FilerException;
 import javax.annotation.processing.Messager;
 import javax.annotation.processing.Processor;
 import javax.annotation.processing.RoundEnvironment;
@@ -215,9 +216,6 @@ PdAnnotationProcessor extends AbstractProcessor{
 		try { // write the file
 			JavaFileObject source = processingEnv.getFiler().createSourceFile("com.nyrds.generated.BundleHelper");
 
-
-			System.out.println("Writing file: " + source.toUri());
-
 			messager.printMessage(Diagnostic.Kind.NOTE, "Writing file: " + source.toUri());
 
 			Writer writer = source.openWriter();
@@ -226,7 +224,7 @@ PdAnnotationProcessor extends AbstractProcessor{
 			writer.close();
 
 		} catch (IOException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 			// Note: calling e.printStackTrace() will print IO errors
 			// that occur from the file already existing after its first run, this is normal
 		}
@@ -244,4 +242,6 @@ PdAnnotationProcessor extends AbstractProcessor{
 	public SourceVersion getSupportedSourceVersion() {
 		return SourceVersion.latestSupported();
 	}
+
+
 }

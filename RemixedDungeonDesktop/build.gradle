@@ -35,7 +35,7 @@ ext {
     gdxVersion = '1.10.0'
 }
 tasks.withType(JavaCompile) {
-    options.compilerArgs += ["-Xlint:all"]
+
 }
 
 dependencies {

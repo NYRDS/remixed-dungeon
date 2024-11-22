@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import androidx.annotation.NonNull;
+
 
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
@@ -164,7 +164,7 @@ public class RankingsScene extends PixelScene {
         fadeIn();
     }
 
-    @NonNull
+    @NotNull
     private RedButton getBtnNext(int w, int h, float btnHeight) {
         RedButton btnNext = new RedButton(">") {
             @Override

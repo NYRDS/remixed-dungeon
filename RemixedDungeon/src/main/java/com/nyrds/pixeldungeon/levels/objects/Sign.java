@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import androidx.annotation.Keep;
-import androidx.annotation.NonNull;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.ItemUtils;
@@ -16,6 +15,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndMessage;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -40,12 +40,12 @@ public class Sign extends LevelObject {
 	}
 
 	@Override
-	void setupFromJson(Level level, @NonNull JSONObject obj) throws JSONException {
+	void setupFromJson(Level level, @NotNull JSONObject obj) throws JSONException {
 		text = StringsManager.maybeId(obj.getString(TEXT));
 	}
 
 	@Override
-	public boolean interact(@NonNull Char hero) {
+	public boolean interact(@NotNull Char hero) {
 		if(!hero.getHeroClass().forbidden(CommonActions.AC_READ)) {
 			if (hero.hasBuff(BuffFactory.BLINDNESS)) {
 				GLog.w(StringsManager.getVar(R.string.Codex_Blinded));
