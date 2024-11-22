@@ -578,7 +578,7 @@
   <string name="GasImmuneBuff_Name">Odporność na gazy</string>
   <string name="GasImmuneBuff_Info">Odporność na wszystkie gazy</string>
   <string name="Hunger_Death">Smierć głodowa...</string>
-  <string name="HungerBuff_Name1">Głodny</string>
+  <string name="HungerBuff_Name1">Głód</string>
   <string name="HungerBuff_Info1">Czujesz głód!</string>
   <string name="HungerBuff_Name2">Wygłodzenie</string>
   <string name="HungerBuff_Info2">Umierasz z głodu, musisz coś zjeść!</string>
