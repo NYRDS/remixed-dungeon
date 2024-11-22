@@ -597,7 +597,7 @@
   <string name="ParalysisBuff_Info">Zupełnie sparaliżowany!</string>
   <string name="PoisonBuff_Name">Zatruty</string>
   <string name="PoisonBuff_Info">Organizm jest powoli wykańczany przez truciznę!</string>
-  <string name="Poison_Death">Zmarłeś poprzez zatrucie...</string>
+  <string name="Poison_Death">Smierć poprzez zatrucie...</string>
   <string name="RegenerationBuff_Name">Naturalna Regeneracja</string>
   <string name="RegenerationBuff_Info">Mechanika naturalnej regeneracji istnieje w formie umiejętności, co ma na celu uczynienie mechaniki klarowniejszej.</string>
   <string name="RootsBuff_Name">Przykorzeniony</string>
