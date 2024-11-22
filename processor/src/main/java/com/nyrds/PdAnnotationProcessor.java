@@ -42,7 +42,7 @@ PdAnnotationProcessor extends AbstractProcessor{
 	@Override
 	public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
 		messager = processingEnv.getMessager();
-		messager.printMessage(Diagnostic.Kind.ERROR, "This is a note message from the annotation processor.");
+		//messager.printMessage(Diagnostic.Kind.ERROR, "This is a note message from the annotation processor.");
 
 		final TypeMirror bundlable = processingEnv.getElementUtils().getTypeElement("com.watabou.utils.Bundlable").asType();
 		//final TypeMirror CharList = processingEnv.getElementUtils().getTypeElement("com.nyrds.pixeldungeon.utils.CharList").asType();
@@ -215,7 +215,10 @@ PdAnnotationProcessor extends AbstractProcessor{
 		try { // write the file
 			JavaFileObject source = processingEnv.getFiler().createSourceFile("com.nyrds.generated.BundleHelper");
 
+
 			System.out.println("Writing file: " + source.toUri());
+
+			messager.printMessage(Diagnostic.Kind.NOTE, "Writing file: " + source.toUri());
 
 			Writer writer = source.openWriter();
 			javaFile.writeTo(writer);
