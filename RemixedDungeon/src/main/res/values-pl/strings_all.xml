@@ -577,7 +577,7 @@
   <string name="FuryBuff_Info">Twe oczy nabiegają krwistą czerwienią, co jest spowodowane całą tą furią, która cię wypełnia.</string>
   <string name="GasImmuneBuff_Name">Odporność na gazy</string>
   <string name="GasImmuneBuff_Info">Odporność na wszystkie gazy</string>
-  <string name="Hunger_Death">Zdechłeś z głodu...</string>
+  <string name="Hunger_Death">Smierć głodowa...</string>
   <string name="HungerBuff_Name1">Głodny</string>
   <string name="HungerBuff_Info1">Jesteś głodny!</string>
   <string name="HungerBuff_Name2">Wygłodzony</string>
