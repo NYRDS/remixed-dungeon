@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
-import json
-import os
 import pprint
 import re
-from langdetect import detect
 from lxml import etree as ElementTree
 
 dstDir = "../../RemixedDungeon/src/main/res/"
@@ -65,7 +62,7 @@ def processText(arg):
 
 
 def makeRJava(strings, arrays):
-    rJava = open("R.java", "w", encoding='utf8')
+    rJava = open("src/none/java/com/nyrds/pixeldungeon/ml/R.java", "w", encoding='utf8')
     rJava.write('''
     package com.nyrds.pixeldungeon.ml;
 
@@ -111,7 +108,7 @@ strings_files = ['RemixedDungeon/src/main/res/values/strings_not_translate.xml',
                  'RemixedDungeon/src/main/res/values/strings_all.xml']
 
 for file in strings_files:
-    pfile = ElementTree.parse('../../' + file).getroot()
+    pfile = ElementTree.parse('../' + file).getroot()
 
     for entry in pfile:
         if entry.tag not in ["string", "string-array"]:
@@ -127,79 +124,6 @@ for file in strings_files:
                 d_arrays[entry_name].append(e.text.replace("@string/", ""))
 
             r_arrays.add(entry_name)
-
-
-for _, _, files in os.walk(translations_dir + dir_name):
-
-    arrays = ElementTree.Element("resources")
-    for file_name in files:
-
-        locale_code = file_name[:-4]
-
-        if not locale_code in source_locales:
-            continue
-
-        if locale_code in locale_remap:
-            locale_code = locale_remap[locale_code]
-
-        d_strings[locale_code] = {}
-        locales.append(locale_code)
-
-        if locale_code not in totalCounter:
-            totalCounter[locale_code] = 0
-
-        counters[resource_name][locale_code] = 0
-
-        if locale_code == 'en':
-            resource_dir = dstDir + "values"
-        else:
-            resource_dir = dstDir + "values-" + locale_code
-
-        if not os.path.isdir(resource_dir):
-            os.makedirs(resource_dir)
-
-        currentFilePath = translations_dir + dir_name + "/" + file_name
-
-        print("file:", currentFilePath)
-        try:
-            transifexData = ElementTree.parse(currentFilePath).getroot()
-
-            jsonData = open("strings_" + locale_code + ".json", "w", encoding='utf8')
-
-            for entry in transifexData:
-                if entry.tag not in ["string", "string-array"]:
-                    continue
-
-                counters[resource_name][locale_code] += 1
-                totalCounter[locale_code] += 1
-
-                if entry.tag == "string":
-                    text = entry.text
-                    if text is None:
-                        text = ""
-
-                    jsonStr = unescape(text).replace(r"\'", "'").replace(r"\’", "’").replace(r"\?","?")
-
-                    d_strings[locale_code][entry.get("name")] = jsonStr
-
-                entry.text = processText(entry.text)
-
-            indent(transifexData)
-
-            xml_out_name = resource_dir + "/" + resource_name
-            ElementTree.ElementTree(transifexData).write(xml_out_name, encoding="utf-8", method="xml")
-
-            with open(xml_out_name, "r") as fi:
-                lines = fi.readlines()
-                with open(xml_out_name, "w") as fo:
-                    for line in lines:
-                        fo.write(unescape(line))
-
-        except ElementTree.ParseError as error:
-            print("shit happens with " + currentFilePath)
-            print(error)
-
-
 
 pprint.pprint(totalCounter)
 

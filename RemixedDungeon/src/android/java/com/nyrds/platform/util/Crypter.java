@@ -1,4 +1,4 @@
-package com.nyrds.util;
+package com.nyrds.platform.util;
 
 import android.util.Base64;
 

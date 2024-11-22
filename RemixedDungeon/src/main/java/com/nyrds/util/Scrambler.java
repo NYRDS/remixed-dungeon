@@ -1,5 +1,7 @@
 package com.nyrds.util;
 
+import com.nyrds.platform.util.UserKey;
+
 public class Scrambler {
 	static private final int k = 0xAAAAAAAA;
 
