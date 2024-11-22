@@ -1,0 +1,76 @@
+plugins {
+    id 'java-library'
+    id 'application'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+application {
+    applicationName = 'RemixedDungeon-desktop'
+    mainClass = 'com.watabou.pixeldungeon.desktop.DesktopLauncher'
+    sourceSets {
+        main {
+            java {
+                srcDir '../RemixedDungeon/src/main/java'
+            }
+        }
+        desktop {
+            java {
+                srcDir 'src/desktop/java'
+            }
+        }
+        market_none {
+            java {
+                srcDir 'src/none/java'
+            }
+        }
+        libgdx {
+            java {
+                srcDir 'src/libgdx/java'
+            }
+        }
+
+    }
+}
+
+compileJava {
+    source sourceSets.desktop.java
+    source sourceSets.main.java
+    source sourceSets.market_none.java
+    source sourceSets.libgdx.java
+    classpath = configurations.compileClasspath
+}
+
+run {
+    classpath = sourceSets.desktop.runtimeClasspath
+}
+
+ext {
+    gdxVersion = '1.10.0'
+}
+
+dependencies {
+    implementation project(':annotation')
+    implementation project(':json_clone')
+
+    annotationProcessor project(':processor')
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'org.luaj:luaj-jse:3.0.1'
+    implementation 'info.guardianproject.netcipher:netcipher:1.2'
+    implementation 'org.hjson:hjson:3.0.0'
+    implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices
+    implementation 'org.jetbrains:annotations:24.1.0'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+
+    libgdxImplementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+    libgdxImplementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+    libgdxImplementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+    libgdxImplementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+}
