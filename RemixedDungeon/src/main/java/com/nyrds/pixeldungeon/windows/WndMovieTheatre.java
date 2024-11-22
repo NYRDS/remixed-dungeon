@@ -3,7 +3,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
-import com.nyrds.pixeldungeon.support.AdsRewardVideo;
+import com.nyrds.platform.support.AdsRewardVideo;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.utils.Utils;

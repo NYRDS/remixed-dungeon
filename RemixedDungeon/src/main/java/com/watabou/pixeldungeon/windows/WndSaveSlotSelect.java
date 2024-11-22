@@ -6,8 +6,8 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.pixeldungeon.support.Iap;
+import com.nyrds.platform.support.Ads;
+import com.nyrds.platform.support.Iap;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.ImageTab;
 import com.nyrds.pixeldungeon.windows.WndDifficultyOptions;
@@ -41,6 +41,8 @@ import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.Tab;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 

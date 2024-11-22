@@ -1,9 +1,11 @@
-package com.nyrds.pixeldungeon.support;
+package com.nyrds.platform.support;
 
 import android.view.View;
 import android.widget.LinearLayout;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.support.AdsUtils;
+import com.nyrds.pixeldungeon.support.AdsUtilsCommon;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;

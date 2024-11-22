@@ -84,7 +84,7 @@ public enum Rankings {
 		resDesc.put("duration", Float.toString(Statistics.duration));
 
 		resDesc.put("difficulty", Integer.toString(GameLoop.getDifficulty()));
-		resDesc.put("version",   Game.version);
+		resDesc.put("version",   GameLoop.version);
 		resDesc.put("mod",       ModdingMode.activeMod());
 		resDesc.put("modVersion",Integer.toString(ModdingMode.activeModVersion()));
 		resDesc.put("donation",  Integer.toString(GamePreferences.donated()));

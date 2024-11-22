@@ -87,8 +87,8 @@ public class WelcomeScene extends PixelScene {
         RedButton okay = new RedButton(StringsManager.getVar(R.string.Welcome_Ok)) {
 			@Override
 			protected void onClick() {
-				GamePreferences.version(Game.versionCode);
-				GamePreferences.versionString(Game.version);
+				GamePreferences.version(GameLoop.versionCode);
+				GamePreferences.versionString(GameLoop.version);
 
 				if (Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS, 1) == 0) {
 					GameLoop.switchScene(AllowStatisticsCollectionScene.class);

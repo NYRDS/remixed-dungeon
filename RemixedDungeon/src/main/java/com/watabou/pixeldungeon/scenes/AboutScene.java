@@ -1,8 +1,6 @@
 
 package com.watabou.pixeldungeon.scenes;
 
-import android.content.Intent;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -47,12 +45,7 @@ public class AboutScene extends PixelScene {
 		TouchArea area = new TouchArea( text ) {
 			@Override
 			protected void onClick( Touch touch ) {
-				Intent intent = new Intent( Intent.ACTION_SEND);
-				intent.setType("message/rfc822");
-				intent.putExtra(Intent.EXTRA_EMAIL, new String[]{address} );
-                intent.putExtra(Intent.EXTRA_SUBJECT, StringsManager.getVar(R.string.app_name));
-
-                Game.instance().startActivity( Intent.createChooser(intent, StringsManager.getVar(R.string.AboutScene_Snd)) );
+				Game.instance().sendEmail(address, StringsManager.getVar(R.string.app_name));
 			}
 		};
 		add(area);

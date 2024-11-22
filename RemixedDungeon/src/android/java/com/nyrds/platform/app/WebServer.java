@@ -29,7 +29,7 @@ public class WebServer extends NanoHTTPD {
     private String serveRoot() {
         String msg = "<html><body>";
         msg += defaultHead();
-        msg += Utils.format("<br>RemixedDungeon: %s (%d)" ,RemixedDungeon.version, RemixedDungeon.versionCode);
+        msg += Utils.format("<br>RemixedDungeon: %s (%d)" ,GameLoop.version, GameLoop.versionCode);
         msg += Utils.format("<br>Mod: %s (%d)", ModdingMode.activeMod(), ModdingMode.activeModVersion());
         if(Dungeon.level != null) {
             msg += Utils.format("<br>Level: %s", Dungeon.level.levelId);

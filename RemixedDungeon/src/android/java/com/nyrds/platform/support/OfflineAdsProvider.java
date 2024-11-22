@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.support;
+package com.nyrds.platform.support;
 
 import android.app.AlertDialog;
 import android.view.ViewGroup;

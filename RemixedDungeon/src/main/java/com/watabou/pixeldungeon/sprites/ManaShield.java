@@ -1,12 +1,9 @@
 package com.watabou.pixeldungeon.sprites;
 
-import android.opengl.GLES20;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.gl.Gl;
 import com.watabou.pixeldungeon.effects.Halo;
 import com.watabou.utils.PointF;
-
-import javax.microedition.khronos.opengles.GL10;
 
 public class ManaShield extends Halo {
 
@@ -32,7 +29,7 @@ public class ManaShield extends Halo {
             if ((phase -= GameLoop.elapsed) <= 0) {
                 killAndErase();
             } else {
-                setScale( (2 - phase) * radius / RADIUS );
+                scale.set( (2 - phase) * radius / RADIUS );
                 am = phase * (-1);
                 aa = phase * (+1);
             }
@@ -40,15 +37,15 @@ public class ManaShield extends Halo {
 
         if (setVisible(charSprite.getVisible())) {
             PointF p = charSprite.center();
-            point(p.x + visualOffsetX(), p.y + charSprite.visualOffsetY());
+            point(p.x, p.y );
         }
     }
 
     @Override
     public void draw() {
-        GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE );
+        Gl.blendSrcAlphaOne();
         super.draw();
-        GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA );
+        Gl.blendSrcAlphaOneMinusAlpha();
     }
 
     public void putOut() {

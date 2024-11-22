@@ -6,6 +6,7 @@ import android.webkit.WebView;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.support.AAdsComboProvider;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,7 +31,7 @@ public class AdsUtils {
         }
     }
 
-    static int bannerIndex() {
+    public static int bannerIndex() {
         int childs = Game.instance().getLayout().getChildCount();
         for (int i = 0; i < childs; ++i) {
             View view = Game.instance().getLayout().getChildAt(i);

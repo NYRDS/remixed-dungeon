@@ -283,7 +283,7 @@ public class CharUtils {
         return new NoAction();
     }
 
-    private static @androidx.annotation.Nullable CharAction handleObjectOrHeap(@NotNull Char actor, int cell, @NotNull Level level) {
+    private static @Nullable CharAction handleObjectOrHeap(@NotNull Char actor, int cell, @NotNull Level level) {
         final LevelObject topLevelObject = level.getTopLevelObject(cell);
 
         if (cell != actor.getPos() && topLevelObject != null) {

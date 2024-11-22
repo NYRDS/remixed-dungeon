@@ -135,7 +135,7 @@ public class TitleScene extends PixelScene {
         archs.setSize(w, h);
         sendToBack(archs);
 
-        Text version = Text.createBasicText(Game.version, font1x);
+        Text version = Text.createBasicText(GameLoop.version, font1x);
         version.hardlight(0x888888);
         version.setPos(w - version.width(), h - version.height());
         add(version);
@@ -213,8 +213,8 @@ public class TitleScene extends PixelScene {
         btnExit.setPos(w - btnExit.width(), 0);
         add(btnExit);
 
-        if (GamePreferences.version() != Game.versionCode) {
-            if (Utils.differentVersions(GamePreferences.versionString(), Game.version)) {
+        if (GamePreferences.version() != GameLoop.versionCode) {
+            if (Utils.differentVersions(GamePreferences.versionString(), GameLoop.version)) {
                 changelogUpdated = true;
             }
         }

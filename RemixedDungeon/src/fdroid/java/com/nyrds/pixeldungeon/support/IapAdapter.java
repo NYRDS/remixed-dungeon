@@ -3,11 +3,12 @@ package com.nyrds.pixeldungeon.support;
 import android.app.Activity;
 import android.content.Intent;
 
+import com.nyrds.platform.support.Iap;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.List;
 
-class IapAdapter {
+public class IapAdapter {
     public IapAdapter(Activity context, Iap iap) {
 
     }

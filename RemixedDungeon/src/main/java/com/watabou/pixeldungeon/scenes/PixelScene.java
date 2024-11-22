@@ -8,6 +8,7 @@ import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.gl.Gl;
 import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Camera;
@@ -55,14 +56,14 @@ public class PixelScene extends Scene {
 
 		defaultZoom = 20;
 
-		while ((GameLoop.width() / defaultZoom < minWidth || GameLoop.height()
+		while ((GameLoop.width / defaultZoom < minWidth || GameLoop.height
 				/ defaultZoom < minHeight)
 				&& defaultZoom > 1) {
 
 			defaultZoom-=0.01;
 		}
 
-		WndHelper.update(GameLoop.width() / defaultZoom, GameLoop.height() / defaultZoom);
+		WndHelper.update(GameLoop.width / defaultZoom, GameLoop.height / defaultZoom);
 
 		minZoom = 1;
 		maxZoom = defaultZoom * 2;
@@ -105,7 +106,7 @@ public class PixelScene extends Scene {
 
 		scale /= 1.8;
 
-		if(GameLoop.smallResScreen()) {
+		if(Game.smallResScreen()) {
 			scale /= 2;
 		}
 
@@ -239,10 +240,10 @@ public class PixelScene extends Scene {
 
 		PixelCamera(float zoom) {
 			super(
-					(int) (GameLoop.width() - Math.ceil(GameLoop.width() / zoom) * zoom) / 2,
-					(int) (GameLoop.height() - Math.ceil(GameLoop.height() / zoom)* zoom) / 2,
-					(int) Math.ceil(GameLoop.width() / zoom),
-					(int) Math.ceil(GameLoop.height() / zoom),
+					(int) (GameLoop.width - Math.ceil(GameLoop.width / zoom) * zoom) / 2,
+					(int) (GameLoop.height - Math.ceil(GameLoop.height / zoom)* zoom) / 2,
+					(int) Math.ceil(GameLoop.width / zoom),
+					(int) Math.ceil(GameLoop.height / zoom),
 					zoom);
 		}
 

@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.items.accessories;
 
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.Iap;
+import com.nyrds.platform.support.Iap;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.Preferences;

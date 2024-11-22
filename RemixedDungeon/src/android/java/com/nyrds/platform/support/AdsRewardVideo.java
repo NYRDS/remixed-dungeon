@@ -1,7 +1,8 @@
-package com.nyrds.pixeldungeon.support;
+package com.nyrds.platform.support;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.support.AdsUtilsCommon;
 import com.nyrds.pixeldungeon.windows.MovieRewardTask;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;

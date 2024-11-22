@@ -51,7 +51,7 @@ public class GameLoop {
     public static volatile boolean softPaused = false;
 
     private final Executor executor = new ReportingExecutor();
-    public Executor serviceExecutor = new ReportingExecutor();
+    public Executor soundExecutor = new ReportingExecutor();
 
     private final ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
 

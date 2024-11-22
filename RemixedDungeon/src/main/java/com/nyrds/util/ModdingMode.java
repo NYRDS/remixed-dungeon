@@ -1,6 +1,7 @@
 package com.nyrds.util;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.Assets;
@@ -121,7 +122,7 @@ public class ModdingMode {
 
 	public static int activeModVersion() {
 		if (mActiveMod.equals(ModdingMode.REMIXED)) {
-			return RemixedDungeon.versionCode;
+			return GameLoop.versionCode;
 		}
 
 		JSONObject version = JsonHelper.tryReadJsonFromAssets("version.json");

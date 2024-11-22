@@ -8,13 +8,13 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
 
-class AdsUtilsCommon {
+public class AdsUtilsCommon {
 
     static int bannerAttempts;
     static int interstitialAttempts;
     static int rvAttempts;
 
-    static void bannerFailed(IBannerProvider provider) {
+    public static void bannerFailed(IBannerProvider provider) {
         EventCollector.logEvent("banner load failed", provider.getClass().getSimpleName());
         incFailCount(AdsUtils.bannerFails,provider);
         //if(bannerAttempts-- > 0) {
@@ -101,24 +101,24 @@ class AdsUtilsCommon {
         }
     }
 
-    static void displayTopBanner() {
+    public static void displayTopBanner() {
         if(AdsUtils.bannerIndex()<0) {
             tryNextBanner();
         }
     }
 
-    static void showInterstitial(InterstitialPoint retTo) {
+    public static void showInterstitial(InterstitialPoint retTo) {
         interstitialAttempts = 3;
         tryNextInterstitial(retTo);
     }
 
 
-    static void showRewardVideo(InterstitialPoint retTo) {
+    public static void showRewardVideo(InterstitialPoint retTo) {
         tryNextRewardVideo(retTo);
     }
 
 
-    static boolean isRewardVideoReady() {
+    public static boolean isRewardVideoReady() {
         for(IRewardVideoProvider provider: AdsUtils.rewardVideoFails.keySet()) {
             if(provider.isReady()) {
                 return true;
@@ -136,11 +136,11 @@ class AdsUtilsCommon {
         boolean isReady();
     }
 
-    interface IBannerProvider extends IProvider {
+    public interface IBannerProvider extends IProvider {
         void displayBanner();
     }
 
-    interface IInterstitialProvider extends IProvider  {
+    public interface IInterstitialProvider extends IProvider  {
         void showInterstitial(final InterstitialPoint ret);
     }
 

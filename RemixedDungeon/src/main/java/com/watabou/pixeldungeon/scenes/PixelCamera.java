@@ -13,10 +13,10 @@ class PixelCamera extends Camera {
 
     PixelCamera(float zoom) {
         super(
-                (int) (Game.width() - Math.ceil(Game.width() / zoom) * zoom) / 2,
-                (int) (Game.height() - Math.ceil(Game.height() / zoom) * zoom) / 2,
-                (int) Math.ceil(Game.width() / zoom),
-                (int) Math.ceil(Game.height() / zoom),
+                (int) (GameLoop.width - Math.ceil(GameLoop.width / zoom) * zoom) / 2,
+                (int) (GameLoop.height - Math.ceil(GameLoop.height / zoom) * zoom) / 2,
+                (int) Math.ceil(GameLoop.width / zoom),
+                (int) Math.ceil(GameLoop.height / zoom),
                 zoom);
         _scroll.reset();
     }

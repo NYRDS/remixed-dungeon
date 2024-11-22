@@ -1,4 +1,4 @@
-package com.nyrds.pixeldungeon.support;
+package com.nyrds.platform.support;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -8,11 +8,12 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
 
+import com.nyrds.pixeldungeon.support.AdsUtilsCommon;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;
 
-class AAdsComboProvider implements AdsUtilsCommon.IBannerProvider, AdsUtilsCommon.IInterstitialProvider {
+public class AAdsComboProvider implements AdsUtilsCommon.IBannerProvider, AdsUtilsCommon.IInterstitialProvider {
 
     @Override
     public void displayBanner() {

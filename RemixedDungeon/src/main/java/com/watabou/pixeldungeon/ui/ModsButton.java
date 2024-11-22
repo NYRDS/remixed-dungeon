@@ -1,7 +1,5 @@
 package com.watabou.pixeldungeon.ui;
 
-import android.Manifest;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
@@ -69,8 +67,7 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
 
     @Override
     protected void onClick() {
-        String[] requiredPermissions = {Manifest.permission.INTERNET};
-        Game.instance().doPermissionsRequest(this, requiredPermissions);
+        Game.requestInternetPermission(this);
     }
 
     @Override

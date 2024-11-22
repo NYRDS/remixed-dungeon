@@ -22,6 +22,8 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.security.MessageDigest;
 import java.util.concurrent.ThreadPoolExecutor;
 

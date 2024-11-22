@@ -20,6 +20,10 @@ public class BitmapData {
         return new BitmapData(Bitmap.createBitmap(width,height, Bitmap.Config.ARGB_8888));
     }
 
+    public static BitmapData createBitmap4(int width, int height) {
+        return new BitmapData(Bitmap.createBitmap(width,height, Bitmap.Config.ARGB_4444));
+    }
+
     public int getWidth() {
         return bmp.getWidth();
     }

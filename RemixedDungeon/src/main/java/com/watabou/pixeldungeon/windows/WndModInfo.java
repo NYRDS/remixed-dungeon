@@ -1,8 +1,5 @@
 package com.watabou.pixeldungeon.windows;
 
-import android.content.Intent;
-import android.net.Uri;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ModDesc;
@@ -19,8 +16,6 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 
-import java.io.File;
-import java.io.FileFilter;
 import java.io.IOException;
 
 
@@ -70,8 +65,7 @@ public class WndModInfo extends Window {
             TouchArea siteTouch = new TouchArea(site) {
                 @Override
                 protected void onClick(Touchscreen.Touch touch) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(siteUrl));
-                    Game.instance().startActivity(Intent.createChooser(intent, siteUrl));
+                    Game.openUrl(StringsManager.getVar(R.string.Mods_AuthorSite), siteUrl);
                 }
             };
             add(siteTouch);
@@ -99,22 +93,10 @@ public class WndModInfo extends Window {
 
     public static void onDirectoryPicked()  {
         if(AndroidSAF.mBaseDstPath != null) {
-            /*
-            var wnd = new WndInstallingMod();
-            AndroidSAF.setListener(wnd);
-            GameLoop.pushUiTask(() -> {
-                GameLoop.addToScene(wnd);
-            });
-             */
             GameLoop.execute(() -> {
                 try {
                     var outputStream = AndroidSAF.outputStreamToDocument(Game.instance(), AndroidSAF.mBaseDstPath, exportedModDir + ".zip");
-                    FileSystem.zipFolderTo(outputStream, FileSystem.getExternalStorageFile(exportedModDir), 99, new FileFilter() {
-                        @Override
-                        public boolean accept(File pathname) {
-                            return true;
-                        }
-                    });
+                    FileSystem.zipFolderTo(outputStream, FileSystem.getExternalStorageFile(exportedModDir), 99, pathname -> true);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }

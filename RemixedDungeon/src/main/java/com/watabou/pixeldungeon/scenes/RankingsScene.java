@@ -44,6 +44,8 @@ import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndRanking;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class RankingsScene extends PixelScene {

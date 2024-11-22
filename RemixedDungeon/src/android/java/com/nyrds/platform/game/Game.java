@@ -1,5 +1,6 @@
 package com.nyrds.platform.game;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -26,9 +27,9 @@ import androidx.core.content.PermissionChecker;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.platform.support.Ads;
 import com.nyrds.pixeldungeon.support.AdsUtils;
-import com.nyrds.pixeldungeon.support.Iap;
+import com.nyrds.platform.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
@@ -43,6 +44,7 @@ import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -81,6 +83,15 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         GameLoop.pushUiTask( () -> {
             instance().runOnUiThread(runnable);
         });
+    }
+
+    static public void requestInternetPermission(InterstitialPoint returnTo) {
+        String[] requiredPermissions = {Manifest.permission.INTERNET};
+        instance().doPermissionsRequest(returnTo, requiredPermissions);
+    }
+
+    public static boolean smallResScreen() {
+        return false;
     }
 
     public void doRestart() {
@@ -142,7 +153,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         super.onCreate(savedInstanceState);
         instance = this;
 
-        iap = new Iap(this);
+        iap = new Iap();
         if (savedInstanceState == null) {
             iap.onNewIntent(getIntent());
         }
@@ -327,7 +338,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         return instance;
     }
 
-    private InterstitialPoint permissionsPoint = new Utils.SpuriousReturn();;
+    private InterstitialPoint permissionsPoint = new Utils.SpuriousReturn();
 
     public void doPermissionsRequest(@NotNull InterstitialPoint returnTo, String[] permissions) {
         boolean havePermissions = true;
@@ -376,12 +387,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         return layout;
     }
 
-    public void openUrl(String prompt, String address) {
+    static public void openUrl(String prompt, String address) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(address));
         Game.instance().startActivity(Intent.createChooser(intent, prompt));
     }
 
-    public void sendEmail(String emailUri, String subject) {
+    static public void sendEmail(String emailUri, String subject) {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("message/rfc822");
         intent.putExtra(Intent.EXTRA_EMAIL, new String[] { emailUri });

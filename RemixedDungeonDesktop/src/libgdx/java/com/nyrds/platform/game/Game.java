@@ -3,20 +3,23 @@ package com.nyrds.platform.game;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
+import com.badlogic.gdx.files.FileHandle;
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.pixeldungeon.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.audio.Music;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.gl.Gl;
 import com.nyrds.platform.input.PointerEvent;
+import com.nyrds.platform.support.Iap;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
 
 import org.jetbrains.annotations.NotNull;
+
+import java.io.File;
 
 
 public class Game implements ApplicationListener, InputProcessor {
@@ -25,9 +28,9 @@ public class Game implements ApplicationListener, InputProcessor {
     private static volatile boolean paused = true;
 
     protected GameLoop gameLoop;
+    public Iap iap;
 
     public PlayGames playGames = new PlayGames();
-    public Iap iap = new Iap();
 
     public Game(Class<? extends Scene> c) {
         super();
@@ -53,6 +56,9 @@ public class Game implements ApplicationListener, InputProcessor {
         GameLoop.pushUiTask( runnable );
     }
 
+    public static boolean smallResScreen() {
+        return false;
+    }
 
     public static void syncAdsState() {
     }
@@ -198,5 +204,13 @@ public class Game implements ApplicationListener, InputProcessor {
     @Override
     public boolean scrolled(float amountX, float amountY) {
         return false;
+    }
+
+
+    public static void deleteFile(String path) {
+        FileHandle file = Gdx.files.external(path);
+        if (file.exists()) {
+            file.delete();
+        }
     }
 }

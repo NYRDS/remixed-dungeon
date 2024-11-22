@@ -1,5 +1,7 @@
 package com.watabou.noosa;
 
+import com.nyrds.platform.gl.NoosaScript;
+
 import java.util.ArrayList;
 import java.util.List;
 

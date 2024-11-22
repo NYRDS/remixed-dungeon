@@ -1,6 +1,9 @@
 
 package com.nyrds.platform.game;
 
+import static com.nyrds.pixeldungeon.game.GameLoop.height;
+import static com.nyrds.pixeldungeon.game.GameLoop.width;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -75,7 +78,7 @@ public class RemixedDungeon extends Game {
 	}
 
     public static boolean isAlpha() {
-        return version.contains("alpha") || isDev;
+        return GameLoop.version.contains("alpha") || isDev;
     }
 
 	public static boolean isDev() {
@@ -86,7 +89,7 @@ public class RemixedDungeon extends Game {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		isDev = version.contains("in_dev");
+		isDev = GameLoop.version.contains("in_dev");
 		
 		EuConsent.check(this);
 		playGames = new PlayGames();
@@ -191,7 +194,7 @@ public class RemixedDungeon extends Game {
 	}
 
 	public static boolean landscape() {
-		return width() > height();
+		return width > height;
 	}
 
 
