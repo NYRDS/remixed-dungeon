@@ -16,7 +16,9 @@ application {
             java {
                 srcDir '../RemixedDungeon/src/main/java'
             }
+            compileClasspath += configurations.annotationProcessor
         }
+
         desktop {
             java {
                 srcDir 'src/desktop/java'
@@ -45,6 +47,7 @@ task generateJavaClasses(type: Exec) {
 compileJava.dependsOn generateJavaClasses
 
 compileJava {
+    options.annotationProcessorPath = configurations.annotationProcessor
     source sourceSets.desktop.java
     source sourceSets.main.java
     source sourceSets.market_none.java
@@ -74,6 +77,7 @@ dependencies {
     implementation 'org.jetbrains:annotations:24.1.0'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
     compileOnly 'org.projectlombok:lombok:1.18.30'
+    implementation 'com.google.guava:guava:32.0.1-jre'
 
     implementation 'org.nanohttpd:nanohttpd:2.3.1'
 

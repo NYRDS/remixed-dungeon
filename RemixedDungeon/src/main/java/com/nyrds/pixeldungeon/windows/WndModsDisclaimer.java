@@ -3,10 +3,10 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.Os;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.DownloadTask;
 import com.nyrds.util.Mods;
-import com.nyrds.util.Util;
 import com.watabou.noosa.Group;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ModsButton;
@@ -33,7 +33,7 @@ public class WndModsDisclaimer extends WndOptions {
     private void modsList() {
         GameLoop.pushUiTask(() -> {
             if (result) {
-                if (Util.isConnectedToInternet()) {
+                if (Os.isConnectedToInternet()) {
                     File modsCommon = FileSystem.getExternalStorageFile(Mods.MODS_COMMON_JSON);
                     modsCommon.delete();
                     String downloadTo = modsCommon.getAbsolutePath();
