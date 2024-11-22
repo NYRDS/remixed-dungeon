@@ -18,7 +18,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-import clone.org.json.JSONArray;
+import org.json.JSONArray;
 import lombok.SneakyThrows;
 
 /**

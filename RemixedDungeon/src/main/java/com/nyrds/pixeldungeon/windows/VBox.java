@@ -4,6 +4,8 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.watabou.noosa.Gizmo;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Created by mike on 01.05.2018.
  * This file is part of Remixed Pixel Dungeon.

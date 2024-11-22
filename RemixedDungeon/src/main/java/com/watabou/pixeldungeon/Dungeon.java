@@ -1,8 +1,5 @@
 package com.watabou.pixeldungeon;
 
-
-import static com.nyrds.platform.game.RemixedDungeon.MOVE_TIMEOUTS;
-
 import com.google.common.base.Optional;
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
@@ -433,7 +430,7 @@ public class Dungeon {
         Bundle bundle = new Bundle();
 
         bundle.put(GAME_ID, gameId);
-        bundle.put(VERSION, Game.version);
+        bundle.put(VERSION, GameLoop.version);
         bundle.put(HERO, hero);
         bundle.put(DEPTH, depth);
 
@@ -973,7 +970,7 @@ public class Dungeon {
     }
 
     public static double moveTimeout() {
-        return MOVE_TIMEOUTS[moveTimeoutIndex];
+        return GameLoop.MOVE_TIMEOUTS[moveTimeoutIndex];
     }
 
     public static void saveCurrentLevel() {

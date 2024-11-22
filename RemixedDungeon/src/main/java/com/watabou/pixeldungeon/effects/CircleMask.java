@@ -1,12 +1,6 @@
 package com.watabou.pixeldungeon.effects;
 
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
-
+import com.nyrds.platform.gfx.BitmapData;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
@@ -23,7 +17,9 @@ public class CircleMask extends Image {
 	public static void ensureTexture() {
 		if (!TextureCache.contains( CACHE_KEY )) {
 
-			Bitmap bmp = Bitmap.createBitmap( RADIUS * 2, RADIUS * 2, Bitmap.Config.ARGB_8888 );
+			BitmapData bmp = BitmapData.createBitmap( RADIUS * 2, RADIUS * 2 );
+			//TODO implempent circle mask generation
+			/*
 			Canvas canvas = new Canvas( bmp );
 			Paint paint = new Paint();
 			canvas.drawColor(Color.WHITE, PorterDuff.Mode.SRC);
@@ -37,6 +33,7 @@ public class CircleMask extends Image {
 
 			paint.setColor( 0x00ffffff);
 			canvas.drawCircle( RADIUS, RADIUS, RADIUS*0.5f, paint );
+			 */
 			TextureCache.add( CACHE_KEY, new SmartTexture( bmp ) );
 		}
 	}
@@ -46,22 +43,22 @@ public class CircleMask extends Image {
 
 		texture( CACHE_KEY );
 
-		setOrigin( RADIUS );
+		origin.set( RADIUS );
 	}
 
 	public CircleMask(float radius) {
-		
+
 		this();
 		radius( radius );
 	}
-	
+
 	public CircleMask point(float x, float y ) {
-		this.setX(x - RADIUS);
-		this.setY(y - RADIUS);
+		this.x = x - RADIUS;
+		this.y = y - RADIUS;
 		return this;
 	}
-	
+
 	public void radius( float value ) {
-		setScale(  (this.radius = value) / RADIUS );
+		scale.set(  (this.radius = value) / RADIUS );
 	}
 }

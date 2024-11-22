@@ -1,12 +1,10 @@
 package com.nyrds.pixeldungeon.support;
 
-import android.app.Activity;
-import android.content.Intent;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.Game;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -28,8 +26,8 @@ public class Iap implements IPurchasesUpdated {
 
     private IIapCallback mIapCallback = null;
 
-    public Iap(Activity context) {
-        mIap = new IapAdapter(context, this);
+    public Iap() {
+        mIap = new IapAdapter(Game.instance(), this);
 
         List<String> items = new ArrayList<>();
 
@@ -50,7 +48,7 @@ public class Iap implements IPurchasesUpdated {
     }
 
     public boolean checkPurchase(String item) {
-	    return mIap.checkPurchase(item);
+        return mIap.checkPurchase(item);
     }
 
     private void checkPurchases() {
@@ -91,7 +89,7 @@ public class Iap implements IPurchasesUpdated {
 
     public void doPurchase(@NotNull String sku, IIapCallback callback) {
         mIapCallback = callback;
-	    mIap.doPurchase(sku.toLowerCase(Locale.ROOT));
+        mIap.doPurchase(sku.toLowerCase(Locale.ROOT));
     }
 
 

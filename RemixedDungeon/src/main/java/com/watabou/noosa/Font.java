@@ -1,9 +1,8 @@
 package com.watabou.noosa;
 
-import android.graphics.Bitmap;
-import android.opengl.GLES20;
-
 import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gfx.BitmapData;
+import com.nyrds.platform.gl.Texture;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
@@ -25,35 +24,36 @@ public class Font extends TextureFilm {
 
 	public static final String CYRILLIC_LOWER =
 	"абвгдеёжзийклмнопрстуфхцчшщъыьэюяіїєґў";
-	
+
 	public static final String ALL_CHARS = LATIN_FULL+SPECIAL_CHAR+CYRILLIC_UPPER+CYRILLIC_LOWER;
 
 	public final SmartTexture texture;
-	
+
 	public float tracking = 0;
 	public float baseLine;
 
 	public boolean autoUppercase = false;
-	
+
 	public float lineHeight;
-	
+
 	private boolean endOfRow = false;
-	
+
 	final HashMap<Object, PointF> glyphShift = new HashMap<>();
-	
+
 	protected Font( SmartTexture tx ) {
 		super( tx );
-		
+
 		texture = tx;
-		texture.filter(GLES20.GL_LINEAR,GLES20.GL_NEAREST);
+		texture.filter(Texture.LINEAR,Texture.NEAREST);
+		texture.reload();
 	}
 
-	private int findNextEmptyLine(Bitmap bitmap, int startFrom, int color){
+	private int findNextEmptyLine(BitmapData bitmap, int startFrom, int color){
 		int width  = bitmap.getWidth();
 		int height = bitmap.getHeight();
-		
+
 		int nextEmptyLine = startFrom;
-		
+
 		for(; nextEmptyLine < height; ++nextEmptyLine){
 			boolean lineEmpty = true;
 			for(int i = 0;i<width; ++i){
@@ -68,8 +68,8 @@ public class Font extends TextureFilm {
 		}
 		return nextEmptyLine;
 	}
-	
-	private boolean isColumnEmpty(Bitmap bitmap, int x, int sy, int ey, int color){
+
+	private boolean isColumnEmpty(BitmapData bitmap, int x, int sy, int ey, int color){
 		for(int j = sy; j < ey; ++j){
 			if(bitmap.getPixel(x, j) != color){
 				return false;
@@ -78,9 +78,9 @@ public class Font extends TextureFilm {
 		return true;
 	}
 
-	private int findNextCharColumn(Bitmap bitmap, int sx, int sy, int ey, int color){
+	private int findNextCharColumn(BitmapData bitmap, int sx, int sy, int ey, int color){
 		int width = bitmap.getWidth();
-		
+
 		int nextEmptyColumn;
 		// find first empty column
 		for(nextEmptyColumn = sx; nextEmptyColumn < width; ++nextEmptyColumn){
@@ -90,35 +90,35 @@ public class Font extends TextureFilm {
 		}
 
 		int nextCharColumn;
-		
+
 		for(nextCharColumn = nextEmptyColumn; nextCharColumn < width; ++nextCharColumn){
 			if(!isColumnEmpty(bitmap,nextCharColumn, sy, ey, color)){
 				break;
 			}
 		}
-		
+
 		if(nextCharColumn == width){
 			endOfRow = true;
 			return nextEmptyColumn - 1;
 		}
-		
+
 		return nextCharColumn-1;
 	}
-	
-	
-	protected void splitBy(Bitmap bitmap, int color, String chars) {
-		
+
+
+	protected void splitBy(BitmapData bitmap, int color, String chars) {
+
 		autoUppercase = chars.equals( LATIN_UPPER );
 		int length    = chars.length();
-		
+
 		int bWidth  = bitmap.getWidth();
 		int bHeight = bitmap.getHeight();
-		
+
 		int charsProcessed = 0;
 		int lineTop        = 0;
 		int lineBottom     = 0;
-		
-		
+
+
 		while(lineBottom<bHeight){
 			while(lineTop==findNextEmptyLine(bitmap, lineTop, color) && lineTop<bHeight) {
 				lineTop++;
@@ -127,15 +127,15 @@ public class Font extends TextureFilm {
 			//GLog.w("Empty line: %d", lineBottom);
 			int charColumn = 0;
 			int charBorder;
-			
+
 			endOfRow = false;
 			while (! endOfRow){
 				if(charsProcessed == length) {
 					break;
 				}
-				
+
 				charBorder = findNextCharColumn(bitmap,charColumn+1,lineTop,lineBottom,color);
-				
+
 				int glyphBorder = charBorder;
 				if(chars.charAt(charsProcessed) != 32) {
 
@@ -146,20 +146,20 @@ public class Font extends TextureFilm {
 					}
 					glyphBorder++;
 				}
-				
-				//GLog.w("addeded: %d %d %d %d %d",(int)chars.charAt(charsProcessed) ,charColumn, lineTop, glyphBorder, lineBottom);
+
+				//GLog.debug("addeded: %d %d %d %d %d",(int)chars.charAt(charsProcessed) ,charColumn, lineTop, glyphBorder, lineBottom);
 				add(chars.charAt(charsProcessed),
-					new RectF( (float)(charColumn)/bWidth,
-							   (float)lineTop/bHeight,
-							   (float)(glyphBorder)/bWidth,
-							   (float)lineBottom/bHeight ) );
+						new RectF( (float)(charColumn)/bWidth,
+								(float)lineTop/bHeight,
+								(float)(glyphBorder)/bWidth,
+								(float)lineBottom/bHeight ) );
 				++charsProcessed;
 				charColumn = charBorder;
 			}
 
 			lineTop = lineBottom+1;
 		}
-		
+
 		//lineHeight = baseLine = height( frames.get( chars.charAt( 0 ) ) );
 		lineHeight = baseLine = height( frames.values().iterator().next());
 	}
@@ -170,7 +170,7 @@ public class Font extends TextureFilm {
 		font.splitBy( tex.bitmap, color, chars );
 		return font;
 	}
-	 
+
 	public static Font colorMarked(SmartTexture tex, int height, int color, String chars ) {
 		Font font = new Font( tex );
 		font.splitBy( tex.bitmap, color, chars );

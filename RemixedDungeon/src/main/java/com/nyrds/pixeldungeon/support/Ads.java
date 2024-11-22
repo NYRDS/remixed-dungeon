@@ -14,7 +14,7 @@ import com.watabou.noosa.InterstitialPoint;
 public class Ads {
 
     private static boolean isSmallScreen() {
-        return (Game.width() < 400 || Game.height() < 400);
+        return (GameLoop.width < 400 || GameLoop.height < 400);
     }
 
     public static void displayEasyModeBanner() {

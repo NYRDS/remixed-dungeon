@@ -1,14 +1,10 @@
 package com.nyrds.pixeldungeon.support;
 
-import android.app.Activity;
-import android.content.Intent;
-
-import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.List;
 
 class IapAdapter {
-    public IapAdapter(Activity context, Iap iap) {
+    public IapAdapter(Object context, Object iap) {
 
     }
 
@@ -36,6 +32,6 @@ class IapAdapter {
         return false;
     }
 
-    public void onNewIntent(Intent intent) {
+    public void onNewIntent(Object intent) {
     }
 }

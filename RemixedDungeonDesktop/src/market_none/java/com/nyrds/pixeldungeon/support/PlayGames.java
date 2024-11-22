@@ -29,10 +29,10 @@ public class PlayGames {
     public void showLeaderboard() {
     }
 
-    public void backupProgress(WndPlayGames.ResultHandler resultHandler) {
+    public void backupProgress(Object resultHandler) {
     }
 
-    public void restoreProgress(WndPlayGames.ResultHandler resultHandler) {
+    public void restoreProgress(Object resultHandler) {
 
     }
 
