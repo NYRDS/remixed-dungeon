@@ -26,6 +26,7 @@ import javax.lang.model.element.Element;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
 import javax.lang.model.type.TypeMirror;
+import javax.tools.Diagnostic;
 import javax.tools.JavaFileObject;
 
 import lombok.val;
@@ -33,14 +34,15 @@ import lombok.val;
 @AutoService(Processor.class)
 public class
 PdAnnotationProcessor extends AbstractProcessor{
-	private Messager messager = processingEnv.getMessager();
+	private Messager messager;
 
 	public static final String COM_NYRDS_PLATFORM_UTIL = "com.nyrds.platform.util";
 	public static final String TRACKED_RUNTIME_EXCEPTION = "TrackedRuntimeException";
 
 	@Override
 	public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
-		//messager.printMessage(Diagnostic.Kind.ERROR, "This is a note message from the annotation processor.");
+		messager = processingEnv.getMessager();
+		messager.printMessage(Diagnostic.Kind.ERROR, "This is a note message from the annotation processor.");
 
 		final TypeMirror bundlable = processingEnv.getElementUtils().getTypeElement("com.watabou.utils.Bundlable").asType();
 		//final TypeMirror CharList = processingEnv.getElementUtils().getTypeElement("com.nyrds.pixeldungeon.utils.CharList").asType();
