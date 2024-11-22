@@ -594,7 +594,7 @@
   <string name="OozeBuff_Info">Toksyczny Szlam pożera ścierwo!</string>
   <string name="Ooze_Death">%s zabił cię...</string>
   <string name="ParalysisBuff_Name">Sparaliżowany</string>
-  <string name="ParalysisBuff_Info">Zupełnie sparaliżowany!</string>
+  <string name="ParalysisBuff_Info">Zupełny paraliż!</string>
   <string name="PoisonBuff_Name">Zatrucie</string>
   <string name="PoisonBuff_Info">Organizm jest powoli wykańczany przez truciznę!</string>
   <string name="Poison_Death">Smierć poprzez zatrucie...</string>
