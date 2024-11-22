@@ -2863,7 +2863,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="MobAi_status">%sto%s</string>
   <string name="WndCustomizations_Title">Modyfikacje</string>
   <string name="IceGuardianCore_DieInfo">Zimno tutaj, Lepiej wrócę na poziom 14 i poszukam jakiegoś cieplejszego miejsca.</string>
-  <string name="Lich_DieInfo">Nigdy nie lubiłem/am Nekromantów. To dobra pora by wrócić na poziom 7 i poszukać drogi ku nowej przygodzie.</string>
+  <string name="Lich_DieInfo">Nigdy nie polubie tego Nekromanty. To dobra pora by wrócić na poziom 7 i poszukać drogi ku nowej przygodzie.</string>
   <string name="SpiderQueen_DieInfo">Królowa pająków została zabita! Teraz powinienem wrócić na poziom 5 i kontynuować moją przygodę w głębiny .</string>
   <string name="WndModSelect_ReallyDelete">Na pewno usunąć? </string>
   <string name="WndModSelect_AreYouSure">Usuwanie modyfikacji %s, Jesteś pewien?</string>
