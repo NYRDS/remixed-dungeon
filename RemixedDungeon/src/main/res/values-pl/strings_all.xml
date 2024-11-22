@@ -569,7 +569,7 @@
   <string name="ComboBuff_Info">Następny atak będzie kombinacją ciosów.</string>
   <string name="Combo_Combo">Udało ci się wykonać kombinację %d ciosów!</string>
   <string name="CrippleBuff_Name">Sponiewierany </string>
-  <string name="CrippleBuff_Info">Twe ciało jest pokryte rozlicznymi ranami, lecz to jeszcze nie koniec walki.</string>
+  <string name="CrippleBuff_Info">Twe ciało jest pokryte licznymi ranami, lecz to jeszcze nie koniec walki.</string>
   <string name="FrostBuff_Name">Zamrożony </string>
   <string name="FrostBuff_Info">Bryła lodu uniemożliwia podjęcie żadnej akcji.</string>
   <string name="Frost_Shatter">Mróz sprawia, że %s roztrzaskuje się!</string>
