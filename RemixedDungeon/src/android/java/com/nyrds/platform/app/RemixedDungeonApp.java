@@ -25,6 +25,8 @@ import com.nyrds.util.Util;
 import java.security.MessageDigest;
 import java.util.concurrent.ThreadPoolExecutor;
 
+import lombok.SneakyThrows;
+
 public class RemixedDungeonApp extends MultiDexApplication {
 
     @SuppressLint("StaticFieldLeak")
@@ -85,6 +87,7 @@ public class RemixedDungeonApp extends MultiDexApplication {
 //        }
     }
 
+    @SneakyThrows
     static public boolean checkOwnSignature() {
         //Log.i("Game", Utils.format("own signature %s", Util.getSignature(this)));
         if(Util.isDebug()) {

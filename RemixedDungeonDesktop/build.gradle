@@ -1,5 +1,5 @@
 plugins {
-    id 'java-library'
+    id 'java'
     id 'application'
 }
 
@@ -16,7 +16,6 @@ application {
             java {
                 srcDir '../RemixedDungeon/src/main/java'
             }
-            compileClasspath += configurations.annotationProcessor
         }
 
         desktop {
@@ -26,7 +25,7 @@ application {
         }
         market_none {
             java {
-                srcDir 'src/none/java'
+                srcDir 'src/market_none/java'
             }
         }
         libgdx {
@@ -47,7 +46,8 @@ task generateJavaClasses(type: Exec) {
 compileJava.dependsOn generateJavaClasses
 
 compileJava {
-    options.annotationProcessorPath = configurations.annotationProcessor
+    options.compilerArgs += ['-processor', 'com.nyrds.PdAnnotationProcessor']
+    options.compilerArgs += ['-Xdiags:verbose']
     source sourceSets.desktop.java
     source sourceSets.main.java
     source sourceSets.market_none.java

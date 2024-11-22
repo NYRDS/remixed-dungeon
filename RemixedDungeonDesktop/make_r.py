@@ -62,7 +62,7 @@ def processText(arg):
 
 
 def makeRJava(strings, arrays):
-    rJava = open("src/none/java/com/nyrds/pixeldungeon/ml/R.java", "w", encoding='utf8')
+    rJava = open("src/market_none/java/com/nyrds/pixeldungeon/ml/R.java", "w", encoding='utf8')
     rJava.write('''
     package com.nyrds.pixeldungeon.ml;
 
