@@ -15,58 +15,34 @@ application {
         main {
             java {
                 srcDir '../RemixedDungeon/src/main/java'
-            }
-        }
-
-        desktop {
-            java {
                 srcDir 'src/desktop/java'
-            }
-        }
-        market_none {
-            java {
                 srcDir 'src/market_none/java'
-            }
-        }
-        libgdx {
-            java {
                 srcDir 'src/libgdx/java'
             }
         }
-
     }
 }
 
 // Custom task to run the Python script
-task generateJavaClasses(type: Exec) {
+tasks.register('generateJavaClasses', Exec) {
     commandLine 'python3', 'make_r.py'
 }
 
 // Ensure the generateJavaClasses task runs before compileJava
 compileJava.dependsOn generateJavaClasses
 
-compileJava {
-    options.compilerArgs += ['-processor', 'com.nyrds.PdAnnotationProcessor']
-    options.compilerArgs += ['-Xdiags:verbose']
-    source sourceSets.desktop.java
-    source sourceSets.main.java
-    source sourceSets.market_none.java
-    source sourceSets.libgdx.java
-    classpath = configurations.compileClasspath
-}
-
-run {
-    classpath = sourceSets.desktop.runtimeClasspath
-}
-
 ext {
     gdxVersion = '1.10.0'
+}
+tasks.withType(JavaCompile) {
+    options.compilerArgs += ["-Xlint:all"]
 }
 
 dependencies {
     implementation project(':annotation')
     implementation project(':json_clone')
 
+    compileOnly project(':processor')
     annotationProcessor project(':processor')
 
     implementation 'com.google.code.gson:gson:2.10.1'
@@ -81,8 +57,8 @@ dependencies {
 
     implementation 'org.nanohttpd:nanohttpd:2.3.1'
 
-    libgdxImplementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
-    libgdxImplementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
-    libgdxImplementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
-    libgdxImplementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+    implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+    implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
 }
