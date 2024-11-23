@@ -210,11 +210,11 @@ public class GamePreferences {
     }
 
     public static int limitTimeoutIndex(int value) {
-        return 	Math.max(Math.min(value, RemixedDungeon.MOVE_TIMEOUTS.length-1),0);
+        return 	Math.max(Math.min(value, GameLoop.MOVE_TIMEOUTS.length-1),0);
     }
 
     public static double getMoveTimeout() {
-        return RemixedDungeon.MOVE_TIMEOUTS[limitTimeoutIndex(moveTimeout())];
+        return GameLoop.MOVE_TIMEOUTS[limitTimeoutIndex(moveTimeout())];
     }
 
     public static int quickSlots() {

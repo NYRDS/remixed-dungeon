@@ -15,15 +15,13 @@ public class WndUiSettings extends WndMenuCommon {
 	@Override
 	protected void createItems() {
 
-		if (android.os.Build.VERSION.SDK_INT >= 19) {
-            menuItems.add( new MenuCheckBox(R.string.WndSettings_Immersive, GamePreferences.immersed()) {
-				@Override
-				protected void onClick() {
-					super.onClick();
-					GamePreferences.immerse(checked());
-				}
-			});
-		}
+		menuItems.add( new MenuCheckBox(R.string.WndSettings_Immersive, GamePreferences.immersed()) {
+			@Override
+			protected void onClick() {
+				super.onClick();
+				GamePreferences.immerse(checked());
+			}
+		});
 
 		if(!GamePreferences.classicFont()){
 			menuItems.add(createTextScaleButtons());

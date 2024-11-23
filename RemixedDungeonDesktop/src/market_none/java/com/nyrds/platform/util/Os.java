@@ -7,4 +7,8 @@ public class Os {
         File path = new File(System.getProperty("user.dir"));
         return path.getUsableSpace();
     }
+
+    public static boolean isConnectedToInternet() {
+        return true;
+    }
 }

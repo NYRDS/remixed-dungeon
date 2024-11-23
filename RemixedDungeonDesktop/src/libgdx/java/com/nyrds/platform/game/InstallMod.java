@@ -1,5 +1,6 @@
 package com.nyrds.platform.game;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 
@@ -71,40 +72,10 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, In
     @SneakyThrows
     @Override
     public void returnToWork(boolean result) {
-
         GLog.i("Install mod: %b", result);
+    }
 
-        if(!result) {
-            return;
-        }
+    public void installMod() {
 
-        if(gameLoop.scene == null) {
-            return;
-        }
-
-        Intent intent = getIntent();
-        Uri data = intent.getData();
-
-        if(data==null) {
-            shutdown();
-        }
-
-        toast("Checking %s", String.valueOf(data.getPath()));
-
-        var modDesc = Unzip.inspectMod(getContentResolver().openInputStream(data));
-        modFileName = modDesc.name;
-
-        EventCollector.logEvent("ManualModInstall", modDesc.name, String.valueOf(modDesc.version));
-
-        WndModInstall wndModInstall = new WndModInstall(modDesc,
-                () -> GameLoop.execute(
-                        () -> {
-                            try {
-                                Unzip.unzipStream(getContentResolver().openInputStream(data), FileSystem.getExternalStorageFileName("./"), this);
-                            } catch (FileNotFoundException e) {
-                                EventCollector.logException(e);
-                            }
-                        }));
-        gameLoop.scene.add(wndModInstall);
     }
 }

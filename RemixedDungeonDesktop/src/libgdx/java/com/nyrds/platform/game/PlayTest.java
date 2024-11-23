@@ -9,9 +9,9 @@ public class PlayTest extends RemixedDungeon{
     public PlayTest() {
     }
 
-    @Override
+
     public void onResume() {
-        super.onResume();
+
         GameControl.startNewGame(Utils.randomEnum(HeroClass.class).name(), 2, true);
     }
 }

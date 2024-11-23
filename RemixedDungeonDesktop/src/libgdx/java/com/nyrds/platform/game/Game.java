@@ -19,13 +19,14 @@ import com.watabou.noosa.Scene;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.File;
+import java.io.InputStream;
 
 
 public class Game implements ApplicationListener, InputProcessor {
     private static Game instance;
 
     private static volatile boolean paused = true;
+    public static boolean softPaused;
 
     protected GameLoop gameLoop;
     public Iap iap;
@@ -79,10 +80,10 @@ public class Game implements ApplicationListener, InputProcessor {
         returnTo.returnToWork(true);
     }
 
-    public void openUrl(String prompt, String address) {
+    public static void openUrl(String prompt, String address) {
     }
 
-    public void sendEmail(String emailUri, String subject) {
+    public static void sendEmail(String emailUri, String subject) {
     }
 
     static public void openPlayStore() {
@@ -106,14 +107,14 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public void resize(int width, int height) {
-        GameLoop.width(width);
-        GameLoop.height(height);
+        GameLoop.width=width;
+        GameLoop.height=height;
         GameLoop.setNeedSceneRestart();
     }
 
     @Override
     public void render() {
-        if (instance() == null || GameLoop.width() == 0 || GameLoop.height() == 0) {
+        if (instance() == null || GameLoop.width == 0 || GameLoop.height == 0) {
             gameLoop.framesSinceInit = 0;
             return;
         }
@@ -207,10 +208,32 @@ public class Game implements ApplicationListener, InputProcessor {
     }
 
 
-    public static void deleteFile(String path) {
+    public static boolean deleteFile(String path) {
         FileHandle file = Gdx.files.external(path);
         if (file.exists()) {
             file.delete();
+            return true;
+        }
+        return false;
+    }
+
+    public final void runOnUiThread(Runnable action) {
+            action.run();
+    }
+
+    static public void requestInternetPermission(InterstitialPoint returnTo) {
+        returnTo.returnToWork(true);
+    }
+
+    public String[] fileList() {
+        return Gdx.files.external("").file().list();
+    }
+
+    public InputStream openFileInput(String bonesFile) {
+        try {
+            return Gdx.files.external(bonesFile).read();
+        } catch (Exception e) {
+            return null;
         }
     }
 }

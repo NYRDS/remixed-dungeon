@@ -136,7 +136,7 @@ public class MaskedTilemapScript extends Script {
 
             Gdx.gl20.glScissor(
                     camera.x,
-                    GameLoop.height() - camera.screenHeight - camera.y,
+                    GameLoop.height - camera.screenHeight - camera.y,
                     camera.screenWidth,
                     camera.screenHeight);
         }

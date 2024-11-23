@@ -21,6 +21,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.watabou.noosa.Scene;
+import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -65,6 +66,16 @@ public class RemixedDungeon extends Game {
 	@LuaInterface
 	public static void resetScene() {
 		GameLoop.resetScene();
+	}
+
+
+	public static void switchNoFade(Class<? extends PixelScene> c) {
+		PixelScene.noFade = true;
+		GameLoop.switchScene(c);
+	}
+
+	public static boolean isDev() {
+		return true;
 	}
 
 

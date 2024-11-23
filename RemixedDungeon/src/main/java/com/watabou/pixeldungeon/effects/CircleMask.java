@@ -18,7 +18,7 @@ public class CircleMask extends Image {
 		if (!TextureCache.contains( CACHE_KEY )) {
 
 			BitmapData bmp = BitmapData.createBitmap( RADIUS * 2, RADIUS * 2 );
-			//TODO implempent circle mask generation
+			//TODO implement circle mask generation
 			/*
 			Canvas canvas = new Canvas( bmp );
 			Paint paint = new Paint();

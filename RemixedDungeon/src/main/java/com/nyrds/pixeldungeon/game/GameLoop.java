@@ -253,7 +253,7 @@ public class GameLoop {
         synchronized (stepLock) {
             elapsed = timeScale * step * 0.001f;
             if (scene != null) {
-                scene.update();
+                Game.runOnMainThread(scene::update);
             }
             Camera.updateAll();
         }

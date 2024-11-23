@@ -8,14 +8,14 @@ import java.io.InputStream;
 
 public class BitmapData {
 
-    Gdx2DPixmap bitmap;
+    public Gdx2DPixmap bmp;
 
     public BitmapData(int w, int h) {
-        bitmap = Gdx2DPixmap.newPixmap(w,h,GDX2D_FORMAT_RGBA8888);
+        bmp = Gdx2DPixmap.newPixmap(w,h,GDX2D_FORMAT_RGBA8888);
     }
 
     public BitmapData(InputStream inputStream) {
-        bitmap = Gdx2DPixmap.newPixmap(inputStream,GDX2D_FORMAT_RGBA8888);
+        bmp = Gdx2DPixmap.newPixmap(inputStream,GDX2D_FORMAT_RGBA8888);
     }
 
     public static BitmapData createBitmap(int w, int h) {
@@ -27,19 +27,19 @@ public class BitmapData {
     }
 
     public int getWidth() {
-        return bitmap.getWidth();
+        return bmp.getWidth();
     }
 
     public int getHeight() {
-        return bitmap.getHeight();
+        return bmp.getHeight();
     }
 
     public void getAllPixels(int[] pixels) {
-        bitmap.getPixels().asIntBuffer().get(pixels);
+        bmp.getPixels().asIntBuffer().get(pixels);
     }
 
     public int getPixel(int x, int y) {
-        return bitmap.getPixel(x,y);
+        return bmp.getPixel(x,y);
     }
 
     private int color(int color) {
@@ -56,10 +56,10 @@ public class BitmapData {
     }
 
     public void eraseColor(int color) {
-        bitmap.clear(color(color));
+        bmp.clear(color(color));
     }
 
     public void setPixel(int x, int y, int color) {
-        bitmap.setPixel(x,y, color(color));
+        bmp.setPixel(x,y, color(color));
     }
 }

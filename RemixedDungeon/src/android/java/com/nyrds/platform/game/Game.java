@@ -27,9 +27,7 @@ import androidx.core.content.PermissionChecker;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.platform.support.Ads;
 import com.nyrds.pixeldungeon.support.AdsUtils;
-import com.nyrds.platform.support.Iap;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
@@ -38,13 +36,14 @@ import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.input.Keys;
 import com.nyrds.platform.input.PointerEvent;
+import com.nyrds.platform.support.Ads;
+import com.nyrds.platform.support.Iap;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
