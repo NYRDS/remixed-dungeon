@@ -172,14 +172,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         // view.setEGLConfigChooser( false );
         view.setRenderer(this);
         view.setOnTouchListener(this);
-/*
-        layout = new LinearLayout(this);
-        getLayout().setOrientation(LinearLayout.VERTICAL);
-        getLayout().addView(view);
-
-        setContentView(getLayout());
-
- */
     }
 
     public static void syncAdsState() {

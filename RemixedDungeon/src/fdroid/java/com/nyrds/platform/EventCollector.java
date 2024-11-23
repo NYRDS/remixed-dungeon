@@ -82,7 +82,7 @@ public class EventCollector {
         GLog.toFile(baos.toString());
 
         if (Util.isDebug()) {
-            throw new RuntimeException(new Exception(e));
+            //throw new RuntimeException(new Exception(e));
         }
     }
 

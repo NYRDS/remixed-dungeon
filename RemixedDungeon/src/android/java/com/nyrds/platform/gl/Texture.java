@@ -1,6 +1,5 @@
 package com.nyrds.platform.gl;
 
-import android.graphics.Bitmap;
 import android.opengl.GLES20;
 import android.opengl.GLUtils;
 
@@ -25,11 +24,11 @@ public class Texture {
         int[] ids = new int[1];
         GLES20.glGenTextures( 1, ids, 0 );
         id = ids[0];
-/*
+
         if(id==0) {
             throw new AssertionError();
         }
-*/
+
         //Log.i("texture",Utils.format("creating %d", id));
         bind();
     }

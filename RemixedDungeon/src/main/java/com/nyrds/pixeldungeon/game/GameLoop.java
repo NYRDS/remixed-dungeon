@@ -21,7 +21,6 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
-import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
 
@@ -234,12 +233,11 @@ public class GameLoop {
         }
 
         if (framesSinceInit > 2 && !Game.softPaused && loadingOrSaving.get() == 0) {
-            stepExecutor.execute(this::step);
+            update();
         }
 
-            NoosaScript.get().resetCamera();
-
-            Gl.clear();
+        NoosaScript.get().resetCamera();
+        Gl.clear();
 
         synchronized (stepLock) {
             if (scene != null) {
@@ -249,11 +247,11 @@ public class GameLoop {
     }
 
     @SneakyThrows
-    public void step() {
+    public void update() {
         synchronized (stepLock) {
             elapsed = timeScale * step * 0.001f;
             if (scene != null) {
-                Game.runOnMainThread(scene::update);
+                scene.update();
             }
             Camera.updateAll();
         }
