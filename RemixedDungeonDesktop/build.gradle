@@ -10,7 +10,7 @@ java {
 
 application {
     applicationName = 'RemixedDungeon-desktop'
-    mainClass = 'com.watabou.pixeldungeon.desktop.DesktopLauncher'
+    mainClass = 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
     sourceSets {
         main {
             java {

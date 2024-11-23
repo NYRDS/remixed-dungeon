@@ -140,7 +140,9 @@ for _, _, files in os.walk(translations_dir + dir_name):
                             changelog_key = entry_name
                             changelog[locale_code] = entry.text
 
-                    jsonData.write(unescape(json.dumps([entry.get("name"), entry.text], ensure_ascii=False)))
+
+
+                    jsonData.write(json.dumps([entry.get("name"), unescape(str(entry.text))], ensure_ascii=False))
                     jsonData.write("\n")
 
                     if entry_name.endswith("_Gender"):
