@@ -10,8 +10,16 @@ public class BitmapData {
 
     public Gdx2DPixmap bmp;
 
+    public BitmapData(Gdx2DPixmap bmp) {
+        this.bmp = bmp;
+    }
+
     public BitmapData(int w, int h) {
         bmp = Gdx2DPixmap.newPixmap(w,h,GDX2D_FORMAT_RGBA8888);
+    }
+
+    public BitmapData(int w, int h, int pixelFormat) {
+        bmp = Gdx2DPixmap.newPixmap(w,h,pixelFormat);
     }
 
     public BitmapData(InputStream inputStream) {
