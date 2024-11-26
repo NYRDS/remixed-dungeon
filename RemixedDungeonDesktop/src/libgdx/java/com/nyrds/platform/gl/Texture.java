@@ -2,6 +2,7 @@ package com.nyrds.platform.gl;
 
 import com.badlogic.gdx.Gdx;
 import com.nyrds.platform.gfx.BitmapData;
+import com.nyrds.platform.util.PUtil;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -25,7 +26,7 @@ public class Texture {
 			throw new AssertionError();
 		}
 
-		//Log.i("texture",Utils.format("creating %d", id));
+		PUtil.slog("texture", "creating " + id);
 		bind();
 	}
 	
@@ -51,7 +52,7 @@ public class Texture {
 	
 	public void delete() {
 		Gdx.gl20.glDeleteTexture(id);
-		//Log.i("texture",Utils.format("deleting %d", id));
+		PUtil.slog("texture", "deleting " + id);
 	}
 	
 	public void bitmap( BitmapData bitmap ) {
@@ -68,7 +69,7 @@ public class Texture {
 			asIntBuffer();
 		imageBuffer.put( pixels );
 		imageBuffer.position( 0 );
-		
+
 		Gdx.gl20.glTexImage2D(
 			Gdx.gl20.GL_TEXTURE_2D, 
 			0, 
@@ -79,6 +80,10 @@ public class Texture {
 			Gdx.gl20.GL_RGBA, 
 			Gdx.gl20.GL_UNSIGNED_BYTE, 
 			imageBuffer );
+
+		if( Gdx.gl20.glGetError() != Gdx.gl20.GL_NO_ERROR ) {
+			throw new RuntimeException();
+		}
 	}
 	
 	public void pixels( int w, int h, byte[] pixels ) {
@@ -103,6 +108,10 @@ public class Texture {
 			Gdx.gl20.GL_ALPHA, 
 			Gdx.gl20.GL_UNSIGNED_BYTE, 
 			imageBuffer );
+
+		if( Gdx.gl20.glGetError() != Gdx.gl20.GL_NO_ERROR ) {
+			throw new RuntimeException();
+		}
 	}
 	
 

@@ -50,7 +50,10 @@ public class Touchscreen {
 
 		case TOUCH_UP:
 			touched = false;
-			event.dispatch(pointers.remove(e.ptr).up());
+			Touch t = pointers.remove(e.ptr);
+			if(t != null) {
+				event.dispatch(t.up());
+			}
 			break;
 
 		}

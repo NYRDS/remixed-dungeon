@@ -39,7 +39,12 @@ public class SystemText extends Text {
 	public void kill() {
 	}
 
+	@Override
+	public void draw() {
+		return;
+	}
 
+	@Override
 	public void measure() {
 		GlyphLayout layout = new GlyphLayout(font, text);
 		width = layout.width;
