@@ -16,7 +16,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
@@ -162,8 +162,8 @@ public class GameScene extends PixelScene {
             EventCollector.logException("attempt to play music on null level");
             return;
         }
-        Music.INSTANCE.play(Dungeon.level.music(), true);
-        Music.INSTANCE.volume(1f);
+        MusicManager.INSTANCE.play(Dungeon.level.music(), true);
+        MusicManager.INSTANCE.volume(1f);
     }
 
     @Override

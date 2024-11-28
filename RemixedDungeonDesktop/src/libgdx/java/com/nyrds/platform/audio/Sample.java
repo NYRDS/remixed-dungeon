@@ -1,53 +1,104 @@
-/*
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
-
 package com.nyrds.platform.audio;
 
-public enum Sample  {
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
+import com.badlogic.gdx.files.FileHandle;
+import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.util.PUtil;
+import com.nyrds.util.ModdingMode;
+import org.jetbrains.annotations.NotNull;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+public enum Sample {
 
 	INSTANCE;
 
+	public static final int MAX_STREAMS = 8;
+	String playOnComplete;
+
+	@NotNull
+	private final Set<String> missingAssets = new HashSet<>();
+
+	@NotNull
+	private final Map<String, Sound> sounds = new HashMap<>();
+
+	private boolean enabled = true;
 
 	public void reset() {
-}
+		for (Sound sound : sounds.values()) {
+			sound.dispose();
+		}
+		sounds.clear();
+	}
 
 	public void pause() {
+		for (Sound sound : sounds.values()) {
+			sound.pause();
+		}
 	}
 
 	public void resume() {
+		for (Sound sound : sounds.values()) {
+			sound.resume();
+		}
 	}
 
 	private void load(String asset) {
+		if (!sounds.containsKey(asset) && !missingAssets.contains(asset)) {
+			try {
+				String assetFile = ModdingMode.getSoundById("sound/" + asset);
+
+				Sound sound = Gdx.audio.newSound(Gdx.files.internal(assetFile));
+
+
+				sounds.put(asset, sound);
+
+			} catch (Exception e) {
+				missingAssets.add(asset);
+				playOnComplete = null;
+				EventCollector.logException(e, asset);
+			}
+		}
 	}
 
-
-	public int play(String id) {
-		return 0;
+	public void play(String id) {
+		play(id, 1, 1, 1);
 	}
 
-	public int play(String id, float volume) {
-		return 0;
+	public void play(String id, float volume) {
+		play(id, volume, volume, 1);
 	}
 
-	public int play(String id, float leftVolume, float rightVolume, float rate) {
-		return 0;
+	public void play(String id, float leftVolume, float rightVolume, float rate) {
+		if (!enabled) {
+			return;
+		}
+		GameLoop.instance().soundExecutor.execute(() -> {
+			Sound sound = sounds.get(id);
+			PUtil.slog("sound", "playing " + id);
+			if (sound != null) {
+				sound.play(leftVolume, rate, 0);
+			} else {
+				playOnComplete = id;
+				GameLoop.execute(() -> load(id));
+			}
+		});
 	}
 
 	public void enable(boolean value) {
+		enabled = value;
 	}
 
+	public void onLoadComplete(String id) {
+		if (playOnComplete != null && playOnComplete.equals(id)) {
+			play(playOnComplete);
+			playOnComplete = null;
+		}
+	}
 }

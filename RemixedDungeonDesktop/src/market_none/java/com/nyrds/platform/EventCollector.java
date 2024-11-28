@@ -80,10 +80,11 @@ public class EventCollector {
         e.printStackTrace(ps);
         ps.close();
         GLog.toFile(baos.toString());
-
+/*
         if (Util.isDebug()) {
             throw new RuntimeException(new Exception(e));
         }
+ */
     }
 
     static public void logException(Throwable e) {

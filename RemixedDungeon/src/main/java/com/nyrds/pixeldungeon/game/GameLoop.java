@@ -4,7 +4,7 @@ import android.view.KeyEvent;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.gfx.SystemText;
@@ -179,7 +179,7 @@ public class GameLoop {
         SystemText.invalidate();
         TextureCache.clear();
 
-        Music.INSTANCE.resume();
+        MusicManager.INSTANCE.resume();
         Sample.INSTANCE.resume();
 
         if (doOnResume != null) {

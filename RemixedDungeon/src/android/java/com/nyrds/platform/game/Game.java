@@ -31,7 +31,7 @@ import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
-import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.input.Keys;
@@ -224,7 +224,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
             }
         }
 
-        Music.INSTANCE.pause();
+        MusicManager.INSTANCE.pause();
         Sample.INSTANCE.pause();
 
         Script.reset();
@@ -234,7 +234,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public void onDestroy() {
         super.onDestroy();
 
-        Music.INSTANCE.mute();
+        MusicManager.INSTANCE.mute();
         Sample.INSTANCE.reset();
     }
 

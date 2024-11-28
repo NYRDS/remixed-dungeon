@@ -6,7 +6,7 @@ import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.files.FileHandle;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.support.PlayGames;
-import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.gl.Gl;
@@ -132,7 +132,7 @@ public class Game implements ApplicationListener, InputProcessor {
             gameLoop.scene.pause();
         }
 
-        Music.INSTANCE.pause();
+        MusicManager.INSTANCE.pause();
         Sample.INSTANCE.pause();
 
         Script.reset();
@@ -157,7 +157,7 @@ public class Game implements ApplicationListener, InputProcessor {
             gameLoop.scene = null;
         }
 
-        Music.INSTANCE.mute();
+        MusicManager.INSTANCE.mute();
         Sample.INSTANCE.reset();
     }
 

@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 
 import com.nyrds.platform.support.Ads;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -31,7 +31,7 @@ public class GamePreferences {
     }
 
     public static void music(boolean value) {
-        Music.INSTANCE.enable(value);
+        MusicManager.INSTANCE.enable(value);
         Preferences.INSTANCE.put(Preferences.KEY_MUSIC, value);
     }
 

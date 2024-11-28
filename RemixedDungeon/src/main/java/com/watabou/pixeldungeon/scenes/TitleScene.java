@@ -8,7 +8,7 @@ import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.WndLocalModInstall;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.InstallMod;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -50,8 +50,8 @@ public class TitleScene extends PixelScene {
     public void create() {
         super.create();
 
-        Music.INSTANCE.play(Assets.THEME, true);
-        Music.INSTANCE.volume(1f);
+        MusicManager.INSTANCE.play(Assets.THEME, true);
+        MusicManager.INSTANCE.volume(1f);
 
         uiCamera.setVisible(false);
 

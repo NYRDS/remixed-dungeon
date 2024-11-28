@@ -17,10 +17,6 @@
  */
 package com.watabou.pixeldungeon.effects;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.graphics.Pixmap;
-import com.badlogic.gdx.graphics.PixmapIO;
 import com.nyrds.platform.gfx.BitmapData;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
@@ -40,7 +36,6 @@ public class Halo extends Image {
 			BitmapData bmp = BitmapData.createBitmap( RADIUS * 2, RADIUS * 2 );
 			bmp.makeHalo(RADIUS, 0x88FFFFFF, 0xFFFFFFFF );
 			TextureCache.add( CACHE_KEY, new SmartTexture( bmp ) );
-			bmp.save("Halo.png");
 		}
 
 		texture( CACHE_KEY );

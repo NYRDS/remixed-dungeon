@@ -22,6 +22,7 @@ import lombok.SneakyThrows;
 public class FileSystem {
 
 	static public @NotNull File getInternalStorageFile(String fileName) {
+		PUtil.slog("storage", "getInternalStorageFile " + fileName);
 		return Gdx.files.internal("../assets/"+fileName).file();
 	}
 

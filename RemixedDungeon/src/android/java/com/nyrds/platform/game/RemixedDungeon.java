@@ -19,7 +19,7 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.support.PlayGames;
-import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.storage.AndroidSAF;
 import com.nyrds.platform.storage.Preferences;
@@ -115,7 +115,7 @@ public class RemixedDungeon extends Game {
 			landscape(!landscape);
 		}
 
-		Music.INSTANCE.enable(GamePreferences.music());
+		MusicManager.INSTANCE.enable(GamePreferences.music());
 		Sample.INSTANCE.enable(GamePreferences.soundFx());
 
 		if (Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)) {

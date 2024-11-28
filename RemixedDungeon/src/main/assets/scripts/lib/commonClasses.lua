@@ -17,7 +17,7 @@ local DungeonGenerator = luajava.bindClass("com.nyrds.pixeldungeon.utils.Dungeon
 local PathFinder       = luajava.bindClass("com.watabou.utils.PathFinder")
 
 local Sample           = luajava.bindClass("com.nyrds.platform.audio.Sample")
-local Music            = luajava.bindClass("com.nyrds.platform.audio.Music")
+local Music            = luajava.bindClass("com.nyrds.platform.audio.MusicManager")
 local StringsManager   = luajava.bindClass("com.nyrds.platform.util.StringsManager")
 local CharUtils        = luajava.bindClass("com.watabou.pixeldungeon.actors.CharUtils")
 local ModQuirks        = luajava.bindClass("com.nyrds.pixeldungeon.game.ModQuirks")

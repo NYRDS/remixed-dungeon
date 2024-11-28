@@ -32,7 +32,7 @@ import org.jetbrains.annotations.Nullable;
 import java.io.File;
 import java.io.IOException;
 
-public enum Music implements MediaPlayer.OnPreparedListener,
+public enum MusicManager implements MediaPlayer.OnPreparedListener,
 		MediaPlayer.OnErrorListener {
 
 	INSTANCE;
