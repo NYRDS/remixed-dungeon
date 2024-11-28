@@ -62,7 +62,7 @@ public class NoosaScript extends Script {
 		vertices.position( 2 );
 		aUV.vertexPointer( 2, 4, vertices );
 		
-		Gdx.gl20.glDrawElements( Gdx.gl20.GL_TRIANGLES, size, Gdx.gl20.GL_UNSIGNED_SHORT, indices );
+		Gdx.gl20.glDrawElements( Gdx.gl20.GL_TRIANGLES, Quad.SIZE * size, Gdx.gl20.GL_UNSIGNED_SHORT, indices );
 	}
 	
 	public void drawQuad( FloatBuffer vertices ) {

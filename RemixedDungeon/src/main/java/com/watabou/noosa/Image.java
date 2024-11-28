@@ -8,7 +8,6 @@ import com.nyrds.util.ModError;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
-import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -58,9 +57,12 @@ public class Image extends Visual implements IPlaceable {
         TextureFilm film = TextureCache.getFilm(tx, cellSize, cellSize);
 
         RectF frame = film.get(index);
+ /*
         if (frame == null) {
             throw new ModError(Utils.format("bad index %d for image %s", index, String.valueOf(TextureCache.getKey(TextureCache.get(tx)))));
         }
+
+  */
         frame(frame);
     }
 
@@ -86,12 +88,12 @@ public class Image extends Visual implements IPlaceable {
 
     public void frame(int left, int top, int width, int height) {
         frame(texture.uvRect(left, top, left + width, top + height));
-
+/*
         if(frame.top < 0 || frame.top > 1 || frame.left < 0 || frame.left > 1 || frame.bottom < 0 || frame.bottom > 1 || frame.right < 0 || frame.right > 1
                 || frame.top > frame.bottom || frame.left > frame.right) {
             throw new ModError("frame out of bounds");
         }
-
+*/
     }
 
     public RectF frame() {
@@ -179,7 +181,7 @@ public class Image extends Visual implements IPlaceable {
                 rm, gm, bm, am,
                 ra, ga, ba, aa);
 
-        //updateFrame();
+        updateFrame();
         updateVerticesBuffer();
 /*
         if(verticesBuffer.get(2) < 0 || verticesBuffer.get(2) > 1 || verticesBuffer.get(6) < 0 || verticesBuffer.get(6) > 1 || verticesBuffer.get(3) < 0 || verticesBuffer.get(3) > 1 || verticesBuffer.get(11) < 0 || verticesBuffer.get(11) > 1) {
