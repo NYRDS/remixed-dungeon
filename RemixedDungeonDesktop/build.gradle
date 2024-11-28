@@ -8,6 +8,14 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
+    }
+}
+
 application {
     applicationName = 'RemixedDungeon-desktop'
     mainClass = 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
@@ -32,7 +40,7 @@ tasks.register('generateJavaClasses', Exec) {
 compileJava.dependsOn generateJavaClasses
 
 ext {
-    gdxVersion = '1.10.0'
+    gdxVersion = '1.13.0'
 }
 tasks.withType(JavaCompile) {
 

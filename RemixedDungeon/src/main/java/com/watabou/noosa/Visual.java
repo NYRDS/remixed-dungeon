@@ -20,7 +20,6 @@ package com.watabou.noosa;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.windows.IPlaceable;
-import com.nyrds.platform.util.PUtil;
 import com.watabou.glwrap.Matrix;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.Point;
@@ -80,7 +79,7 @@ public class Visual extends Gizmo implements IPlaceable{
 	
 	@Override
 	public void draw() {
-		PUtil.slog("visual", "drawing " + this);
+		//PUtil.slog("visual", "drawing " + this);
 		updateMatrix();
 	}
 	
@@ -116,11 +115,6 @@ public class Visual extends Gizmo implements IPlaceable{
 		setY(p.y);
 		return p;
 	}
-	
-//	public PointF center() {
-//		return new PointF( x + width / 2 + visualOffsetX(), y + height / 2 + visualOffsetY());
-//	}
-
 
 	public PointF center() {
 		return new PointF( getX() + width / 2, getY() + height / 2);

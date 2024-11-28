@@ -3,7 +3,6 @@ package com.nyrds.platform.util;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.util.ModdingMode;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -88,14 +87,14 @@ public class StringsManager {
 		String line = Utils.EMPTY_STRING;
 
 		while ((line = br.readLine()) != null) {
-			GLog.debug("line: %s", line);
+			//GLog.debug("line: %s", line);
 			JSONArray entry = new JSONArray(line);
 
 			String keyString = entry.getString(0);
 			Integer key = keyToInt.get(keyString);
 
 			if (entry.length() == 2) {
-				GLog.debug("key: %s", keyString);
+				//GLog.debug("key: %s", keyString);
 				String value = entry.getString(1);
 
 				if (key != null) {

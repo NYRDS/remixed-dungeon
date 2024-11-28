@@ -5,7 +5,6 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.watabou.noosa.Text;
-import com.watabou.pixeldungeon.utils.GLog;
 
 public class SystemText extends Text {
 	static FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("fonts/pixel_font.ttf"));
@@ -17,7 +16,7 @@ public class SystemText extends Text {
 		super(0,0,0,0);
 		fontParameters.size = (int) baseLine;
 		font = generator.generateFont(fontParameters);
-		GLog.debug("SystemText");
+		//GLog.debug("SystemText");
 	}
 
 	public SystemText(final String text, float size, boolean multiline) {
@@ -25,7 +24,7 @@ public class SystemText extends Text {
 		fontParameters.size = (int) size;
 		font = generator.generateFont(fontParameters);
 		text(text);
-		GLog.debug("SystemText: %s", text);
+		//GLog.debug("SystemText: %s", text);
 	}
 
 	public static void updateFontScale() {
@@ -49,7 +48,7 @@ public class SystemText extends Text {
 		GlyphLayout layout = new GlyphLayout(font, text);
 		width = layout.width;
 		height = layout.height;
-		GLog.debug("SystemText: %s -> %3.0fx%3.0f", text, width, height);
+		//GLog.debug("SystemText: %s -> %3.0fx%3.0f", text, width, height);
 	}
 
 
@@ -60,7 +59,7 @@ public class SystemText extends Text {
 
 	@Override
 	public int lines() {
-		return 0;
+		return 1;
 	}
 
 	public static void invalidate() {

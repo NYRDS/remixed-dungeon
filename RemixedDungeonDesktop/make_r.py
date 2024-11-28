@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import pprint
 import re
 from lxml import etree as ElementTree
 
@@ -125,8 +124,8 @@ for file in strings_files:
 
             r_arrays.add(entry_name)
 
-pprint.pprint(totalCounter)
 
-pprint.pprint(d_arrays)
+
+#pprint.pprint(d_arrays)
 
 makeRJava(r_strings, r_arrays)

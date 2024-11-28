@@ -18,6 +18,8 @@ public class Texture {
 	public static final int CLAMP	= Gdx.gl20.GL_CLAMP_TO_EDGE;
 	
 	protected int id;
+
+	static private int binded;
 	
 	public Texture() {
 		id = Gdx.gl20.glGenTexture();
@@ -35,19 +37,27 @@ public class Texture {
 	}
 	
 	public void bind() {
-		Gdx.gl20.glBindTexture( Gdx.gl20.GL_TEXTURE_2D, id );
+		if( binded != id ) {
+			//PUtil.slog("texture", "binding " + id);
+			Gdx.gl20.glBindTexture(Gdx.gl20.GL_TEXTURE_2D, id);
+			Gl.glCheck();
+			binded = id;
+		}
+
 	}
 	
 	public void filter( int minMode, int maxMode ) {
 		bind();
 		Gdx.gl20.glTexParameterf( Gdx.gl20.GL_TEXTURE_2D, Gdx.gl20.GL_TEXTURE_MIN_FILTER, minMode );
 		Gdx.gl20.glTexParameterf( Gdx.gl20.GL_TEXTURE_2D, Gdx.gl20.GL_TEXTURE_MAG_FILTER, maxMode );
+		Gl.glCheck();
 	}
 	
 	public void wrap( int s, int t ) {
 		bind();
 		Gdx.gl20.glTexParameterf( Gdx.gl20.GL_TEXTURE_2D, Gdx.gl20.GL_TEXTURE_WRAP_S, s );
 		Gdx.gl20.glTexParameterf( Gdx.gl20.GL_TEXTURE_2D, Gdx.gl20.GL_TEXTURE_WRAP_T, t );
+		Gl.glCheck();
 	}
 	
 	public void delete() {
@@ -81,11 +91,9 @@ public class Texture {
 			Gdx.gl20.GL_UNSIGNED_BYTE, 
 			imageBuffer );
 
-		if( Gdx.gl20.glGetError() != Gdx.gl20.GL_NO_ERROR ) {
-			throw new RuntimeException();
-		}
+		Gl.glCheck();
 	}
-	
+
 	public void pixels( int w, int h, byte[] pixels ) {
 		
 		bind();
@@ -109,16 +117,15 @@ public class Texture {
 			Gdx.gl20.GL_UNSIGNED_BYTE, 
 			imageBuffer );
 
-		if( Gdx.gl20.glGetError() != Gdx.gl20.GL_NO_ERROR ) {
-			throw new RuntimeException();
-		}
+		Gl.glCheck();
 	}
 	
 
 	public void handMade( BitmapData bitmap, boolean recode ) {
 		int w = bitmap.getWidth();
 		int h = bitmap.getHeight();
-		
+
+		PUtil.slog("texture", "handmade " + w + "x" + h);
 		int[] pixels = new int[w * h]; 
 		bitmap.getAllPixels(pixels);
 

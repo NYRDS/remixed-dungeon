@@ -1,20 +1,3 @@
-/*
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
-
 package com.watabou.glwrap;
 
 public class Matrix {
@@ -85,7 +68,6 @@ public class Matrix {
 		m[5] *= y;
 		m[6] *= y;
 		m[7] *= y;
-	//	android.opengl.Matrix.scaleM( m, 0, x, y, 1 );
 	}
 	
 	public static void translate( float[] m, float x, float y ) {
