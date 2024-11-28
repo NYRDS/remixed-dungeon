@@ -3,7 +3,9 @@ package com.watabou.noosa;
 import com.nyrds.platform.compatibility.RectF;
 import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
+import com.nyrds.platform.util.PUtil;
 import com.watabou.gltextures.SmartTexture;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
 
@@ -48,7 +50,7 @@ public class Font extends TextureFilm {
 		texture.reload();
 	}
 
-	private int findNextEmptyLine(BitmapData bitmap, int startFrom, int color){
+	private int findNextEmptyLine(BitmapData bitmap, int startFrom){
 		int width  = bitmap.getWidth();
 		int height = bitmap.getHeight();
 
@@ -57,7 +59,7 @@ public class Font extends TextureFilm {
 		for(; nextEmptyLine < height; ++nextEmptyLine){
 			boolean lineEmpty = true;
 			for(int i = 0;i<width; ++i){
-				lineEmpty = (bitmap.getPixel (i, nextEmptyLine ) == color);
+				lineEmpty = bitmap.isEmptyPixel(i, nextEmptyLine );
 				if(!lineEmpty){
 					break;
 				}
@@ -69,22 +71,24 @@ public class Font extends TextureFilm {
 		return nextEmptyLine;
 	}
 
-	private boolean isColumnEmpty(BitmapData bitmap, int x, int sy, int ey, int color){
+	private boolean isColumnEmpty(BitmapData bitmap, int x, int sy, int ey){
 		for(int j = sy; j < ey; ++j){
-			if(bitmap.getPixel(x, j) != color){
+			if(!bitmap.isEmptyPixel(x,j)){
+				//PUtil.slog("Font", "pixel color: " + bitmap.getPixel(x, j) + " color: " + color + " x: " + x + " y: " + j);
 				return false;
 			}
 		}
+		PUtil.slog("Font", "Column " + x + " is empty");
 		return true;
 	}
 
-	private int findNextCharColumn(BitmapData bitmap, int sx, int sy, int ey, int color){
+	private int findNextCharColumn(BitmapData bitmap, int sx, int sy, int ey){
 		int width = bitmap.getWidth();
 
 		int nextEmptyColumn;
 		// find first empty column
 		for(nextEmptyColumn = sx; nextEmptyColumn < width; ++nextEmptyColumn){
-			if(isColumnEmpty(bitmap,nextEmptyColumn, sy, ey, color)){
+			if(isColumnEmpty(bitmap,nextEmptyColumn, sy, ey)){
 				break;
 			}
 		}
@@ -92,7 +96,7 @@ public class Font extends TextureFilm {
 		int nextCharColumn;
 
 		for(nextCharColumn = nextEmptyColumn; nextCharColumn < width; ++nextCharColumn){
-			if(!isColumnEmpty(bitmap,nextCharColumn, sy, ey, color)){
+			if(!isColumnEmpty(bitmap,nextCharColumn, sy, ey)){
 				break;
 			}
 		}
@@ -106,7 +110,7 @@ public class Font extends TextureFilm {
 	}
 
 
-	protected void splitBy(BitmapData bitmap, int color, String chars) {
+	protected void splitByAlpha(BitmapData bitmap, String chars) {
 
 		autoUppercase = chars.equals( LATIN_UPPER );
 		int length    = chars.length();
@@ -120,11 +124,11 @@ public class Font extends TextureFilm {
 
 
 		while(lineBottom<bHeight){
-			while(lineTop==findNextEmptyLine(bitmap, lineTop, color) && lineTop<bHeight) {
+			while(lineTop==findNextEmptyLine(bitmap, lineTop) && lineTop<bHeight) {
 				lineTop++;
 			}
-			lineBottom = findNextEmptyLine(bitmap, lineTop, color);
-			//GLog.w("Empty line: %d", lineBottom);
+			lineBottom = findNextEmptyLine(bitmap, lineTop);
+			GLog.w("Empty line: %d", lineBottom);
 			int charColumn = 0;
 			int charBorder;
 
@@ -134,13 +138,13 @@ public class Font extends TextureFilm {
 					break;
 				}
 
-				charBorder = findNextCharColumn(bitmap,charColumn+1,lineTop,lineBottom,color);
+				charBorder = findNextCharColumn(bitmap,charColumn+1,lineTop,lineBottom);
 
 				int glyphBorder = charBorder;
 				if(chars.charAt(charsProcessed) != 32) {
 
 					for (;glyphBorder > charColumn + 1; --glyphBorder) {
-						if( !isColumnEmpty(bitmap,glyphBorder, lineTop, lineBottom, color)) {
+						if( !isColumnEmpty(bitmap,glyphBorder, lineTop, lineBottom)) {
 							break;
 						}
 					}
@@ -164,16 +168,16 @@ public class Font extends TextureFilm {
 		lineHeight = baseLine = height( frames.values().iterator().next());
 	}
 
-	public static Font colorMarked(SmartTexture tex, int color, String chars ) {
+	public static Font colorMarked(SmartTexture tex, String chars ) {
 		Font font = new Font( tex );
 
-		font.splitBy( tex.bitmap, color, chars );
+		font.splitByAlpha( tex.bitmap, chars );
 		return font;
 	}
 
-	public static Font colorMarked(SmartTexture tex, int height, int color, String chars ) {
+	public static Font colorMarked(SmartTexture tex, int height, String chars ) {
 		Font font = new Font( tex );
-		font.splitBy( tex.bitmap, color, chars );
+		font.splitByAlpha( tex.bitmap, chars );
 		return font;
 	}
 

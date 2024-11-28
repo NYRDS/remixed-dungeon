@@ -77,4 +77,8 @@ public class BitmapData {
         paint.setColor( c1 );
         canvas.drawCircle( radius, radius, radius*0.5f, paint );
     }
+
+    public boolean isEmptyPixel(int x, int y) {
+        return (getPixel (x,y) & 0xff000000) == 0;
+    }
 }

@@ -55,6 +55,10 @@ public class BitmapData {
         return bmp.getPixel(x,y);
     }
 
+    public boolean isEmptyPixel(int x, int y) {
+        return (getPixel (x,y) & 0xff) == 0;
+    }
+
     private int color(int color) {
         final int as = 0;
         final int rs = 8;
