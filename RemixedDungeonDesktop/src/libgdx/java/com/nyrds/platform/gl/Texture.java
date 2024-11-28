@@ -19,7 +19,8 @@ public class Texture {
 	
 	protected int id;
 
-	static private int binded;
+	static private int[] binded = new int[32];
+	static private int active = 0;
 	
 	public Texture() {
 		id = Gdx.gl20.glGenTexture();
@@ -33,15 +34,16 @@ public class Texture {
 	}
 	
 	public static void activate( int index ) {
+		active = index;
 		Gdx.gl20.glActiveTexture( Gdx.gl20.GL_TEXTURE0 + index );
 	}
 	
 	public void bind() {
-		if( binded != id ) {
+		if( binded[active] != id ) {
 			//PUtil.slog("texture", "binding " + id);
 			Gdx.gl20.glBindTexture(Gdx.gl20.GL_TEXTURE_2D, id);
 			Gl.glCheck();
-			binded = id;
+			binded[active] = id;
 		}
 
 	}

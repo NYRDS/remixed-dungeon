@@ -2,6 +2,11 @@ package com.nyrds.platform.gfx;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 
 import java.io.InputStream;
 
@@ -46,5 +51,30 @@ public class BitmapData {
 
     public void setPixel(int i, int i1, int color) {
         bmp.setPixel(i,i1,color);
+    }
+
+    public void makeHalo(int radius, int c1, int c2) {
+        Canvas canvas = new Canvas( bmp );
+        Paint paint = new Paint();
+        paint.setColor( c2 );
+        canvas.drawCircle( radius, radius, radius * 0.75f, paint );
+        paint.setColor( c1 );
+        canvas.drawCircle( radius, radius, radius, paint );
+    }
+
+    public void makeCircleMask(int radius, int c1, int c2, int c3) {
+        Canvas canvas = new Canvas( bmp );
+        Paint paint = new Paint();
+        canvas.drawColor(Color.WHITE, PorterDuff.Mode.SRC);
+
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
+        paint.setColor( c3 );
+        canvas.drawCircle( radius, radius, radius, paint );
+
+        paint.setColor( c2 );
+        canvas.drawCircle( radius, radius, radius*0.75f, paint );
+
+        paint.setColor( c1 );
+        canvas.drawCircle( radius, radius, radius*0.5f, paint );
     }
 }

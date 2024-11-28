@@ -106,8 +106,6 @@ public class MaskedTilemapScript extends Script {
         aUV.vertexPointer(2, 4, vertices);
 
         mask.position(0);
-        //vertices.position(2);
-        //aUV_mask.vertexPointer(2, 4, vertices);
         aUV_mask.vertexPointer(2, 2, mask);
 
         Gdx.gl20.glDrawElements(

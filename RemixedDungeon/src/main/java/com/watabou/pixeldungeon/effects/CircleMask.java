@@ -18,22 +18,7 @@ public class CircleMask extends Image {
 		if (!TextureCache.contains( CACHE_KEY )) {
 
 			BitmapData bmp = BitmapData.createBitmap( RADIUS * 2, RADIUS * 2 );
-			//TODO implement circle mask generation
-			/*
-			Canvas canvas = new Canvas( bmp );
-			Paint paint = new Paint();
-			canvas.drawColor(Color.WHITE, PorterDuff.Mode.SRC);
-
-			paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
-			paint.setColor( 0xf7ffffff);
-			canvas.drawCircle( RADIUS, RADIUS, RADIUS, paint );
-
-			paint.setColor( 0x77ffffff);
-			canvas.drawCircle( RADIUS, RADIUS, RADIUS*0.75f, paint );
-
-			paint.setColor( 0x00ffffff);
-			canvas.drawCircle( RADIUS, RADIUS, RADIUS*0.5f, paint );
-			 */
+			bmp.makeCircleMask(RADIUS, 0x00ffffff, 0x77ffffff, 0xf7ffffff);
 			TextureCache.add( CACHE_KEY, new SmartTexture( bmp ) );
 		}
 	}

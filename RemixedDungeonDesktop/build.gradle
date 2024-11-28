@@ -18,6 +18,7 @@ jar {
 
 application {
     applicationName = 'RemixedDungeon-desktop'
+    applicationDefaultJvmArgs = ['-Dassets.dir=assets']
     mainClass = 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
     sourceSets {
         main {
@@ -44,6 +45,16 @@ ext {
 }
 tasks.withType(JavaCompile) {
 
+}
+
+distributions {
+    main {
+        contents {
+            from('../RemixedDungeon/src/main/assets') {
+                into 'assets'
+            }
+        }
+    }
 }
 
 dependencies {

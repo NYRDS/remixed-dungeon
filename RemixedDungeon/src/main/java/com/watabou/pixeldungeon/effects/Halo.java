@@ -17,6 +17,10 @@
  */
 package com.watabou.pixeldungeon.effects;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Pixmap;
+import com.badlogic.gdx.graphics.PixmapIO;
 import com.nyrds.platform.gfx.BitmapData;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
@@ -34,19 +38,14 @@ public class Halo extends Image {
 	public Halo() {
 		if (!TextureCache.contains( CACHE_KEY )) {
 			BitmapData bmp = BitmapData.createBitmap( RADIUS * 2, RADIUS * 2 );
-			//TODO make halo
-			/*
-			Canvas canvas = new Canvas( bmp );
-			Paint paint = new Paint();
-			paint.setColor( 0xFFFFFFFF );
-			canvas.drawCircle( RADIUS, RADIUS, RADIUS * 0.75f, paint );
-			paint.setColor( 0x88FFFFFF );
-			canvas.drawCircle( RADIUS, RADIUS, RADIUS, paint );
-			 */
+			bmp.makeHalo(RADIUS, 0x88FFFFFF, 0xFFFFFFFF );
 			TextureCache.add( CACHE_KEY, new SmartTexture( bmp ) );
+			bmp.save("Halo.png");
 		}
 
 		texture( CACHE_KEY );
+
+
 
 		origin.set( RADIUS );
 	}

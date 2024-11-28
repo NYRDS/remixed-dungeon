@@ -1,6 +1,7 @@
 package com.nyrds.platform.storage;
 
 import com.badlogic.gdx.Gdx;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.util.ModError;
 
 import org.jetbrains.annotations.NotNull;
@@ -21,11 +22,11 @@ import lombok.SneakyThrows;
 public class FileSystem {
 
 	static public @NotNull File getInternalStorageFile(String fileName) {
-		return Gdx.files.internal(fileName).file();
+		return Gdx.files.internal("../assets/"+fileName).file();
 	}
 
 	static public String[] listInternalStorage() {
-		return new File(Gdx.files.getLocalStoragePath()).list();
+		return getInternalStorageFile(".").list();
 	}
 
 	@NotNull

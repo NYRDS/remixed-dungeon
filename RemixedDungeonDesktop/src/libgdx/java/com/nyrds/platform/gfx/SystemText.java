@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.watabou.noosa.Text;
 
 public class SystemText extends Text {
-	static FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("fonts/pixel_font.ttf"));
+	static FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("../assets/fonts/pixel_font.ttf"));
 	FreeTypeFontGenerator.FreeTypeFontParameter fontParameters = new FreeTypeFontGenerator.FreeTypeFontParameter();
 
 	BitmapFont font;

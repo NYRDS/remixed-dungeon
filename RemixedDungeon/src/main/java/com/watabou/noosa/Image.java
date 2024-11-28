@@ -183,15 +183,7 @@ public class Image extends Visual implements IPlaceable {
 
         updateFrame();
         updateVerticesBuffer();
-/*
-        if(verticesBuffer.get(2) < 0 || verticesBuffer.get(2) > 1 || verticesBuffer.get(6) < 0 || verticesBuffer.get(6) > 1 || verticesBuffer.get(3) < 0 || verticesBuffer.get(3) > 1 || verticesBuffer.get(11) < 0 || verticesBuffer.get(11) > 1) {
-            PUtil.slog("vertices", String.format("left: %f, top: %f, right: %f, bottom: %f", verticesBuffer.get(2), verticesBuffer.get(3), verticesBuffer.get(6), verticesBuffer.get(11)));
-            PUtil.slog("frame", String.format("left: %f, top: %f, right: %f, bottom: %f", frame.left, frame.top, frame.right, frame.bottom));
-            PUtil.slog("texture", String.format("width: %d, height: %d", texture.width, texture.height));
-            return;
-            //throw new AssertionError();
-        }
-*/
+
         script.drawQuad(verticesBuffer);
     }
 

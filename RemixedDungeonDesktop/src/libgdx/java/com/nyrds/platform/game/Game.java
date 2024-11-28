@@ -93,13 +93,6 @@ public class Game implements ApplicationListener, InputProcessor {
     public void create() {
         paused = false; // we may not get resume
 
-        Gdx.gl20.glEnable(Gdx.gl20.GL_BLEND);
-
-        Gl.blendSrcAlphaOneMinusAlpha();
-
-        Gdx.gl20.glEnable(Gdx.gl20.GL_SCISSOR_TEST);
-
-
         SystemText.invalidate();
         TextureCache.clear();
         Gdx.input.setInputProcessor(this);
@@ -124,6 +117,9 @@ public class Game implements ApplicationListener, InputProcessor {
             return;
         }
 
+        Gdx.gl20.glEnable(Gdx.gl20.GL_BLEND);
+        Gl.blendSrcAlphaOneMinusAlpha();
+        Gdx.gl20.glEnable(Gdx.gl20.GL_SCISSOR_TEST);
 
         gameLoop.onFrame();
     }
