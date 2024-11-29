@@ -19,7 +19,7 @@ public class Texture {
 	
 	protected int id;
 
-	static private int[] binded = new int[32];
+	static private final int[] binded = new int[32];
 	static private int active = 0;
 	
 	public Texture() {

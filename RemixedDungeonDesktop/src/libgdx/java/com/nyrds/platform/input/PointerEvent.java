@@ -16,6 +16,7 @@ public class PointerEvent {
 
     public enum Type {
         TOUCH_DOWN,
-        TOUCH_UP
+        TOUCH_UP,
+        TOUCH_DRAGGED
     }
 }

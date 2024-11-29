@@ -190,7 +190,8 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public boolean touchDragged(int screenX, int screenY, int pointer) {
-        return false;
+        gameLoop.motionEvents.add( new PointerEvent(screenX, screenY, pointer, 0, PointerEvent.Type.TOUCH_DRAGGED));
+        return true;
     }
 
     @Override
