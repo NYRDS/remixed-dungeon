@@ -29,7 +29,7 @@ public class Game implements ApplicationListener, InputProcessor {
     public static boolean softPaused;
 
     protected GameLoop gameLoop;
-    public Iap iap;
+    public Iap iap = new Iap();
 
     public PlayGames playGames = new PlayGames();
 

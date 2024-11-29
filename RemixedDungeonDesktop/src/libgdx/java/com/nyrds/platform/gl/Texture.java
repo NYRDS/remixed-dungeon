@@ -29,7 +29,7 @@ public class Texture {
 			throw new AssertionError();
 		}
 
-		PUtil.slog("texture", "creating " + id);
+		//PUtil.slog("texture", "creating " + id);
 		bind();
 	}
 	
@@ -67,7 +67,7 @@ public class Texture {
 	
 	public void delete() {
 		Gdx.gl20.glDeleteTexture(id);
-		PUtil.slog("texture", "deleting " + id);
+		//PUtil.slog("texture", "deleting " + id);
 	}
 	
 	public void bitmap( BitmapData bitmap ) {
@@ -130,7 +130,7 @@ public class Texture {
 		int w = bitmap.getWidth();
 		int h = bitmap.getHeight();
 
-		PUtil.slog("texture", "handmade " + w + "x" + h);
+		//PUtil.slog("texture", "handmade " + w + "x" + h);
 		int[] pixels = new int[w * h]; 
 		bitmap.getAllPixels(pixels);
 

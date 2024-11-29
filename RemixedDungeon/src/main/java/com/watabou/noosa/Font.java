@@ -78,7 +78,7 @@ public class Font extends TextureFilm {
 				return false;
 			}
 		}
-		PUtil.slog("Font", "Column " + x + " is empty");
+		//PUtil.slog("Font", "Column " + x + " is empty");
 		return true;
 	}
 
@@ -128,7 +128,7 @@ public class Font extends TextureFilm {
 				lineTop++;
 			}
 			lineBottom = findNextEmptyLine(bitmap, lineTop);
-			GLog.w("Empty line: %d", lineBottom);
+			//GLog.w("Empty line: %d", lineBottom);
 			int charColumn = 0;
 			int charBorder;
 

@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.util.PUtil;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.Text;
@@ -24,9 +25,12 @@ public class TextButton extends Button {
 		bg.setX(x);
 		bg.setY(y);
 		bg.size( width, height );
-		
+
+
 		text.setX(x + (int)(width - text.width()) / 2);
 		text.setY(y + (int)(height - Math.max(text.height(),text.baseLine())) / 2);
+
+		//PUtil.slog("TextButton", "text: " + text.text() + " x: " + text.getX() + " y: " + text.getY() + " width: " + text.width() + " height: " + text.height());
 
 		if (icon != null) {
 			icon.setX(x + text.getX() - icon.width() - 2);

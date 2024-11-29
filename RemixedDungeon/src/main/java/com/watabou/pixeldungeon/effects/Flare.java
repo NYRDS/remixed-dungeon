@@ -54,7 +54,7 @@ public class Flare extends Visual {
 				asFloatBuffer();
 
 		indices = ByteBuffer.
-				allocateDirect( nRays * 3 * Short.SIZE / 8 ).
+				allocateDirect( nRays * 3 * Short.SIZE).
 				order( ByteOrder.nativeOrder() ).
 				asShortBuffer();
 

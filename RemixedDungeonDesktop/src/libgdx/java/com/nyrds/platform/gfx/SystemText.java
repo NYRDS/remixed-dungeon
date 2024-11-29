@@ -8,188 +8,222 @@ import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.platform.util.PUtil;
 import com.watabou.glwrap.Matrix;
 import com.watabou.noosa.Text;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class SystemText extends Text {
-	private static FreeTypeFontGenerator generator;
-	private final FreeTypeFontParameter fontParameters;
-	private final BitmapFont font;
-	private final GlyphLayout glyphLayout;
-	private ArrayList<String> lines;
+    private static FreeTypeFontGenerator generator;
+    private final FreeTypeFontParameter fontParameters;
+    private final BitmapFont font;
+    private final GlyphLayout glyphLayout;
+    private boolean multiline = false;
 
-	private static float fontScale = Float.NaN;
+    private ArrayList<String> lines = new ArrayList<>();;
 
-	private static SystemTextPseudoBatch batch = new SystemTextPseudoBatch();
-	private static float oversample = 4;
+    private static float fontScale = Float.NaN;
 
-	static {
-		generator = new FreeTypeFontGenerator(Gdx.files.internal("../assets/fonts/pixel_font.ttf"));
-	}
+    private static final SystemTextPseudoBatch batch = new SystemTextPseudoBatch();
+    private static final float oversample = 4;
 
-	public SystemText(float baseLine) {
-		super(0, 0, 0, 0);
-		fontParameters = getFontParameters(baseLine);
+    static {
+        generator = new FreeTypeFontGenerator(Gdx.files.internal("../assets/fonts/pixel_font.ttf"));
+    }
 
-		font = generator.generateFont(fontParameters);
-		glyphLayout = new GlyphLayout();
-	}
+    public SystemText(float baseLine) {
+        super(0, 0, 0, 0);
+        fontParameters = getFontParameters(baseLine);
 
-	private FreeTypeFontParameter getFontParameters(float baseLine) {
-		if (fontScale != fontScale) {
-			updateFontScale();
-		}
+        font = generator.generateFont(fontParameters);
+        glyphLayout = new GlyphLayout();
+    }
 
-		final FreeTypeFontParameter fontParameters;
-		fontParameters = new FreeTypeFontParameter();
-		fontParameters.size = (int) (baseLine * oversample * fontScale);
-		fontParameters.borderColor = Color.BLACK;
-		fontParameters.borderWidth = oversample;
-		fontParameters.flip = true;
-		fontParameters.genMipMaps = true;
-		fontParameters.magFilter = Texture.TextureFilter.Linear;
-		fontParameters.minFilter = Texture.TextureFilter.MipMapLinearLinear;
-		fontParameters.spaceX = 0;
-		fontParameters.spaceY = 0;
-		return fontParameters;
-	}
+    private FreeTypeFontParameter getFontParameters(float baseLine) {
+        if (fontScale != fontScale) {
+            updateFontScale();
+        }
 
-	public SystemText(final String text, float size, boolean multiline) {
-		super(0, 0, 0, 0);
-		fontParameters = getFontParameters(size);
+        final FreeTypeFontParameter fontParameters;
+        fontParameters = new FreeTypeFontParameter();
+        fontParameters.size = (int) (baseLine * oversample * fontScale);
+        fontParameters.borderColor = Color.BLACK;
+        fontParameters.borderWidth = oversample * fontScale;
+        fontParameters.flip = true;
+        fontParameters.genMipMaps = true;
+        fontParameters.magFilter = Texture.TextureFilter.Linear;
+        fontParameters.minFilter = Texture.TextureFilter.MipMapLinearLinear;
+        fontParameters.spaceX = 0;
+        fontParameters.spaceY = 0;
+        return fontParameters;
+    }
 
-		font = generator.generateFont(fontParameters);
-		glyphLayout = new GlyphLayout();
-		this.text(text);
-		if (multiline) {
-			lines = new ArrayList<>();
-			splitLines(text);
-		}
-	}
+    public SystemText(final String text, float size, boolean multiline) {
+        super(0, 0, 0, 0);
+        fontParameters = getFontParameters(size);
 
-	public static void updateFontScale() {
-		float scale = 0.5f + 0.01f * GamePreferences.fontScale();
+        font = generator.generateFont(fontParameters);
+        glyphLayout = new GlyphLayout();
+        this.text(text);
+        this.multiline = multiline;
+        wrapText();
+    }
 
-		scale *= 1.2f;
+    public static void updateFontScale() {
+        float scale = 0.5f + 0.01f * GamePreferences.fontScale();
 
-		if (scale < 0.1f) {
-			fontScale = 0.1f;
-			return;
-		}
-		if (scale > 4) {
-			fontScale = 4f;
-			return;
-		}
+        scale *= 1.2f;
 
-		fontScale = scale;
-	}
+        if (scale < 0.1f) {
+            fontScale = 0.1f;
+            return;
+        }
+        if (scale > 4) {
+            fontScale = 4f;
+            return;
+        }
 
-	private void splitLines(String text) {
-		lines.clear();
-		String[] split = text.split("\n");
-		for (String line : split) {
-			lines.add(line);
-		}
-	}
+        fontScale = scale;
+    }
 
-	@Override
-	public void destroy() {
-		font.dispose();
+    private void wrapText() {
 
-	}
+        if (multiline && maxWidth == Integer.MAX_VALUE) {
+            return;
+        }
 
-	@Override
-	public void kill() {
-		destroy();
-	}
+        lines.clear();
 
-	@Override
-	protected void updateMatrix() {
-		if (dirtyMatrix) {
+        // Perform wrapping based on maxWidth
+        String[] paragraphs = text.split("\n");
+        for (String paragraph : paragraphs) {
+            if (paragraph.isEmpty()) {
+                lines.add("");
+                continue;
+            }
+            String[] words = paragraph.split("\\s+");
+            String line = "";
+            for (String word : words) {
+                if (line.isEmpty()) {
+                    line = word;
+                } else {
+                    String candidate = line + " " + word;
+                    glyphLayout.setText(font, candidate);
+                    if (glyphLayout.width / oversample <= maxWidth) {
+                        PUtil.slog("text", "line: " + line + " width: " + glyphLayout.width + " max: " + maxWidth);
+                        line = candidate;
+                    } else {
+                        PUtil.slog("text", "line: " + line + " width: " + glyphLayout.width + " max: " + maxWidth);
+                        lines.add(line);
+                        line = word;
+                    }
+                }
+            }
+            if (!line.isEmpty()) {
+                lines.add(line);
+            }
+        }
+    }
 
-			Matrix.setIdentity(matrix);
-			Matrix.translate(matrix, x, y);
-			if (angle != 0) {
-				Matrix.rotate(matrix, angle);
-			}
+    @Override
+    public void destroy() {
+        font.dispose();
 
-			Matrix.scale(matrix, scale.x/oversample, scale.y/oversample);
+    }
 
-			dirtyMatrix = false;
-		}
-	}
+    @Override
+    public void kill() {
+        destroy();
+    }
 
-	@Override
-	public void draw() {
-		updateMatrix();
+    @Override
+    protected void updateMatrix() {
+        if (dirtyMatrix) {
 
-		SystemTextPseudoBatch.textBeingRendered = this;
+            Matrix.setIdentity(matrix);
+            Matrix.translate(matrix, x, y);
+            if (angle != 0) {
+                Matrix.rotate(matrix, angle);
+            }
 
-		if (lines != null && !lines.isEmpty()) {
-			float y = 0;
-			for (String line : lines) {
-				glyphLayout.setText(font, line);
-				font.draw(batch, glyphLayout, 0,  y);
-				y -= glyphLayout.height;
-			}
-		} else {
-			glyphLayout.setText(font, text);
-			font.draw(batch, glyphLayout, 0, 0);
-		}
-	}
+            Matrix.scale(matrix, scale.x / oversample, scale.y / oversample);
 
-	@Override
-	public void setWidth(float width) {
-		super.setWidth(width/oversample);
-	}
+            dirtyMatrix = false;
+        }
+    }
 
-	@Override
-	public void setHeight(float height) {
-		super.setHeight(height/oversample);
-	}
+    @Override
+    public void draw() {
+        updateMatrix();
+        SystemTextPseudoBatch.textBeingRendered = this;
 
-	@Override
-	public void measure() {
-		if (lines != null && !lines.isEmpty()) {
-			float totalHeight = 0;
-			for (String line : lines) {
-				glyphLayout.setText(font, line);
-				totalHeight += glyphLayout.height;
-			}
-			setHeight(totalHeight);
-			for (String line : lines) {
-				glyphLayout.setText(font, line);
-				if (glyphLayout.width > width) {
-					setWidth(glyphLayout.width);
+        float y = 0;
+        for (String line : lines) {
+            if (!line.isEmpty()) {
+                glyphLayout.setText(font, line);
+                font.draw(batch, glyphLayout, 0, y);
+            }
+            y += glyphLayout.height + 5;
+        }
 
-				}
-			}
-		} else {
-			glyphLayout.setText(font, text);
-			setWidth(glyphLayout.width);
-			setHeight(glyphLayout.height);
-		}
-	}
+    }
 
-	@Override
-	public float baseLine() {
-		return height();
-	}
+    @Override
+    public void setWidth(float width) {
+        super.setWidth(width / oversample);
+    }
 
-	@Override
-	public int lines() {
-		if (lines != null) {
-			return lines.size();
-		}
-		return 1;
-	}
+    @Override
+    public void setHeight(float height) {
+        super.setHeight(height / oversample);
+    }
 
-	public static void invalidate() {
-		if (generator != null) {
-			generator.dispose();
-			generator = new FreeTypeFontGenerator(Gdx.files.internal("../assets/fonts/pixel_font.ttf"));
-		}
-	}
+    @Override
+    protected void measure() {
+        if (lines.isEmpty()) {
+            wrapText();
+        }
+
+        // Calculate total height and maximum width for wrapped lines
+        float totalHeight = 0;
+        float maxWidth = 0;
+        for (String line : lines) {
+            if (!line.isEmpty()) {
+                glyphLayout.setText(font, line);
+                totalHeight += glyphLayout.height + 5;
+                if (glyphLayout.width > maxWidth) {
+                    maxWidth = glyphLayout.width;
+                }
+            }
+        }
+        setWidth(maxWidth);
+        setHeight(totalHeight);
+    }
+
+    @Override
+    public float baseLine() {
+        return font.getLineHeight() / oversample;
+    }
+
+    @Override
+    public int lines() {
+        return lines.size();
+    }
+
+    public static void invalidate() {
+        if (generator != null) {
+            generator.dispose();
+            generator = new FreeTypeFontGenerator(Gdx.files.internal("../assets/fonts/pixel_font.ttf"));
+        }
+    }
+
+    @Override
+    public void text(@NotNull String str) {
+        lines.clear();
+        super.text(str);
+    }
 }

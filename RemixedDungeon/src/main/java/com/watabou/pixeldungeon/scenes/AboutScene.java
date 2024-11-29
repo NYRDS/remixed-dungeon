@@ -45,7 +45,7 @@ public class AboutScene extends PixelScene {
 		TouchArea area = new TouchArea( text ) {
 			@Override
 			protected void onClick( Touch touch ) {
-				Game.instance().sendEmail(address, StringsManager.getVar(R.string.app_name));
+				Game.sendEmail(address, StringsManager.getVar(R.string.app_name));
 			}
 		};
 		add(area);
@@ -60,7 +60,7 @@ public class AboutScene extends PixelScene {
 		TouchArea area = new TouchArea( text ) {
 			@Override
 			protected void onClick( Touch touch ) {
-                Game.instance().openUrl(StringsManager.getVar(R.string.AboutScene_OurSite), address);
+                Game.openUrl(StringsManager.getVar(R.string.AboutScene_OurSite), address);
 			}
 		};
 		add(area);
@@ -153,8 +153,6 @@ public class AboutScene extends PixelScene {
 			}
 		};
 
-
-		
 		Archs archs = new Archs();
 		archs.setSize( Camera.main.width, Camera.main.height );
         sendToBack(archs);
