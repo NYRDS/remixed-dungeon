@@ -27,6 +27,7 @@ public enum MusicManager {
 
 	public void play(@NotNull String assetName, boolean looping) {
 		if (!enabled) {
+			lastPlayed = assetName;
 			return;
 		}
 

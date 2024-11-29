@@ -91,11 +91,11 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public void create() {
-        paused = false; // we may not get resume
-
         SystemText.invalidate();
         TextureCache.clear();
         Gdx.input.setInputProcessor(this);
+
+        resume();
     }
 
     @Override

@@ -15,7 +15,6 @@ import com.watabou.noosa.Text;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class SystemText extends Text {
     private static FreeTypeFontGenerator generator;
@@ -24,7 +23,7 @@ public class SystemText extends Text {
     private final GlyphLayout glyphLayout;
     private boolean multiline = false;
 
-    private ArrayList<String> lines = new ArrayList<>();;
+    private final ArrayList<String> lines = new ArrayList<>();;
 
     private static float fontScale = Float.NaN;
 
@@ -131,12 +130,14 @@ public class SystemText extends Text {
 
     @Override
     public void destroy() {
+        super.destroy();
         font.dispose();
 
     }
 
     @Override
     public void kill() {
+        super.kill();
         destroy();
     }
 
@@ -194,7 +195,7 @@ public class SystemText extends Text {
         for (String line : lines) {
             if (!line.isEmpty()) {
                 glyphLayout.setText(font, line);
-                totalHeight += glyphLayout.height + 5;
+                totalHeight += glyphLayout.height + 7;
                 if (glyphLayout.width > maxWidth) {
                     maxWidth = glyphLayout.width;
                 }
@@ -206,7 +207,7 @@ public class SystemText extends Text {
 
     @Override
     public float baseLine() {
-        return font.getLineHeight() / oversample;
+        return (font.getLineHeight() + 7) / oversample;
     }
 
     @Override

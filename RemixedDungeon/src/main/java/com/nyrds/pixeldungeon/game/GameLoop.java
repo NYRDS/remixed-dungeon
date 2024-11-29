@@ -179,7 +179,10 @@ public class GameLoop {
         SystemText.invalidate();
         TextureCache.clear();
 
+        MusicManager.INSTANCE.enable(GamePreferences.music());
         MusicManager.INSTANCE.resume();
+
+        Sample.INSTANCE.enable(GamePreferences.soundFx());
         Sample.INSTANCE.resume();
 
         if (doOnResume != null) {
