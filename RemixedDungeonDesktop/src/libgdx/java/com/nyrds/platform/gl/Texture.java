@@ -45,9 +45,12 @@ public class Texture {
 			Gl.glCheck();
 			binded[active] = id;
 		}
-
 	}
-	
+
+	static public void unbind() {
+		binded[active] = -1;
+	}
+
 	public void filter( int minMode, int maxMode ) {
 		bind();
 		Gdx.gl20.glTexParameterf( Gdx.gl20.GL_TEXTURE_2D, Gdx.gl20.GL_TEXTURE_MIN_FILTER, minMode );

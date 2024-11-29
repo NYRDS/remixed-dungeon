@@ -37,7 +37,7 @@ public class Visual extends Gizmo implements IPlaceable{
 
 	public boolean dirtyMatrix;
 	
-	protected final float[] matrix;
+	public final float[] matrix;
 	
 	public float rm;
 	public float gm;

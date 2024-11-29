@@ -8,15 +8,10 @@
     ],
     "items": [
       {
-        "kind": "Carcass of Rat",
+        "kind": "Torch",
         "level": 1,
         "quantity": 100,
         "identetifyLevel": 2
-      },
-      {
-        "kind": "test/TestItem",
-        "identified": true,
-        "level": 10
       },
       {
         "kind": "WandOfIcebolt",
