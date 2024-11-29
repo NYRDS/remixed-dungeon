@@ -54,7 +54,7 @@ public enum Sample {
 			try {
 				String assetFile = ModdingMode.getSoundById("sound/" + asset);
 
-				Sound sound = Gdx.audio.newSound(Gdx.files.internal(assetFile));
+				Sound sound = Gdx.audio.newSound(Gdx.files.internal("../assets/" +	assetFile));
 
 
 				sounds.put(asset, sound);

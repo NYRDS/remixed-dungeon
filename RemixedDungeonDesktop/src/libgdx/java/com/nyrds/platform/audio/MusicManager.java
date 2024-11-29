@@ -48,7 +48,7 @@ public enum MusicManager {
 		lastLooping = looping;
 
 		try {
-			player = Gdx.audio.newMusic(Gdx.files.internal(assetFilename));
+			player = Gdx.audio.newMusic(Gdx.files.internal("../assets/" + assetFilename));
 			player.setLooping(looping);
 			player.play();
 			PUtil.slog("music", "playing " + assetFilename);
