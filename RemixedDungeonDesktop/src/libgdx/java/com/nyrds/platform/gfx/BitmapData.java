@@ -1,7 +1,6 @@
 package com.nyrds.platform.gfx;
 
 import static com.badlogic.gdx.graphics.g2d.Gdx2DPixmap.GDX2D_BLEND_NONE;
-import static com.badlogic.gdx.graphics.g2d.Gdx2DPixmap.GDX2D_BLEND_SRC_OVER;
 import static com.badlogic.gdx.graphics.g2d.Gdx2DPixmap.GDX2D_FORMAT_RGBA8888;
 
 import com.badlogic.gdx.Gdx;
@@ -86,11 +85,11 @@ public class BitmapData {
         int innerRadius = (int) (0.75f * radius);
         int outerRadius = radius;
 
-        bmp.clear(0xffffffff);
+        bmp.clear(0);
         bmp.setBlend(GDX2D_BLEND_NONE);
 
-        bmp.fillCircle(centerX, centerY, outerRadius, color(c2));
-        bmp.fillCircle(centerX, centerY, innerRadius, color(c1));
+        bmp.fillCircle(centerX, centerY, outerRadius, color(c1));
+        bmp.fillCircle(centerX, centerY, innerRadius, color(c2));
     }
 
     public void makeCircleMask(int radius, int c1, int c2, int c3) {

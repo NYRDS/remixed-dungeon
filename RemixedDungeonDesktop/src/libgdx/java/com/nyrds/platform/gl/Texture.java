@@ -2,7 +2,6 @@ package com.nyrds.platform.gl;
 
 import com.badlogic.gdx.Gdx;
 import com.nyrds.platform.gfx.BitmapData;
-import com.nyrds.platform.util.PUtil;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -151,30 +150,5 @@ public class Texture {
 		}
 
 		pixels( w, h, pixels );
-	}
-	
-	public static Texture create( BitmapData bmp ) {
-		Texture tex = new Texture();
-		tex.bitmap( bmp );
-		
-		return tex;
-	}
-	
-	public static Texture create( int width, int height, int[] pixels ) {
-		Texture tex = new Texture();
-		tex.pixels( width, height, pixels );
-		
-		return tex;
-	}
-	
-	public static Texture create( int width, int height, byte[] pixels ) {
-		Texture tex = new Texture();
-		tex.pixels( width, height, pixels );
-		
-		return tex;
-	}
-
-	public int getId() {
-		return id;
 	}
 }

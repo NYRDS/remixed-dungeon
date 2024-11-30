@@ -52,20 +52,6 @@ public class SmartTexture extends Texture {
 
 	}
 
-	public SmartTexture(int width, int height, int[] pixels){
-		super();
-		pixels(width, height, pixels);
-		filter( NEAREST,NEAREST );
-		wrap( CLAMP, CLAMP);
-	}
-
-	public SmartTexture(int width, int height, byte[] pixels){
-		super();
-		pixels(width, height, pixels);
-		filter( NEAREST,NEAREST );
-		wrap( CLAMP, CLAMP);
-	}
-
 	@Override
 	public void filter(int minMode, int maxMode) {
 		super.filter( fModeMin = minMode, fModeMax = maxMode);

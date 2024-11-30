@@ -40,8 +40,6 @@ public class Halo extends Image {
 
 		texture( CACHE_KEY );
 
-
-
 		origin.set( RADIUS );
 	}
 
