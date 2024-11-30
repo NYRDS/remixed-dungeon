@@ -141,11 +141,12 @@ public class Texture {
 		if (recode) {
 			for (int i=0; i < pixels.length; i++) {
 				int color = pixels[i];
-				int a = (color & (0xFF << as)) >> as;
-				int r = (color & (0xFF << rs)) >> rs;
-				int g = (color & (0xFF << gs)) >> gs;
-				int b = (color & (0xFF << bs)) >> bs;
-				pixels[i] = (a << 24) + (r << 16) + (g << 8) + (b);
+				int a = (color >> as) & 0xFF;
+				int r = (color >> rs) & 0xFF;
+				int g = (color >> gs) & 0xFF;
+				int b = (color >> bs) & 0xFF;
+
+				pixels[i] = (a << 24) | (r << 16) | (g << 8) | (b);
 			}
 		}
 

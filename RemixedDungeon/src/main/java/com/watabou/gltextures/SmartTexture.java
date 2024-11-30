@@ -49,7 +49,6 @@ public class SmartTexture extends Texture {
 		bitmap( bitmap );
 		filter( filtering, filtering );
 		wrap( wrapping, wrapping );
-
 	}
 
 	@Override

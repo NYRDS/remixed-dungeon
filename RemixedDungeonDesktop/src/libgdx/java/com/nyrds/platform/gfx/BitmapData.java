@@ -58,17 +58,13 @@ public class BitmapData {
         return (getPixel (x,y) & 0xff) == 0;
     }
 
-    private int color(int color) {
-        final int as = 0;
-        final int rs = 8;
-        final int gs = 16;
-        final int bs = 24;
-
-        int a = (color >> as) & 0xFF;
-        int r = (color >> rs) & 0xFF;
-        int g = (color >> gs) & 0xFF;
-        int b = (color >> bs) & 0xFF;
-        return (a << 24) + (r << 16) + (g << 8) + (b);
+    public static int color(int color) {
+        int a = (color >> 24) & 0xFF; // Extract A
+        int r = (color >> 16) & 0xFF; // Extract R
+        int g = (color >> 8) & 0xFF;  // Extract G
+        int b = color & 0xFF;         // Extract B
+        int ret =  (r << 24) | (g << 16) | (b << 8) | a; // Combine as RGBA
+        return ret;
     }
 
     public void eraseColor(int color) {
