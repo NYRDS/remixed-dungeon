@@ -263,12 +263,10 @@
   <string name="Welcome_Ok">Jasne!</string>
   <string name="Welcome_Title">Witaj!</string>
   <string name="BlackCat_Name">Czarny kot</string>
-  <string name="BlackCat_Gender">niewieści </string>
   <string name="BlackCat_Name_Objective">kot</string>
   <string name="BlackCat_Desc">to jest czarny kot</string>
   <string name="Str_lose">-1 siły</string>
   <string name="SociologistNPC_Name">Socjolog</string>
-  <string name="SociologistNPC_Gender">męski</string>
   <string name="SociologistNPC_Name_Objective">Sociolog</string>
   <string name="SociologistNPC_Desc">To jest socjolog na świętej misji zbierania opinii publicznej</string>
   <string name="SociologistNPC_AlreadyTaken">Już wypełniłeś ankietę, proszę przyjść później</string>
@@ -284,13 +282,10 @@
   <string name="town_deco_INN_sign_name">szyld Tawerniany</string>
   <string name="town_deco_INN_sign_desc">Wygląda na to że w środku tego budynku znajduje się tawerna</string>
   <string name="HealthDart_Name">Uzdrawiająca Rzutka </string>
-  <string name="HealthDart_Gender">męski</string>
   <string name="HealthDart_Info">Czubek tej rzutki pokryty jest leczniczym eliksirem</string>
   <string name="HealthArrow_Name">Uzdrawiająca Strzała</string>
-  <string name="HealthArrow_Gender">niewieścia</string>
   <string name="HealthArrow_Info">Grot tej strzały pokryty jest leczniczym eliksirem</string>
   <string name="AmokDart_Name">Rzutka Szału</string>
-  <string name="AmokDart_Gender">męska</string>
   <string name="AmokDart_Info">Roztwór na grocie tej rzutki zamieni każdego w  bezmyślnego i okrutnego berserka.</string>
   <string name="AmokArrow_Name">Strzała Szału</string>
   <string name="AmokArrow_Gender">feminine</string>
@@ -524,7 +519,7 @@
   <string name="CorpseDust_Info">Ta kulka trupiego pyłu nie różni się nadzwyczajnie od zwykłej kuli pyłu. W każdym razie, wiesz, że najlepiej pozbyć się tego najszybciej jak to tylko możliwe.</string>
   <string name="CorpseDust_Info2">Może to dla tego, że samo trzymanie tego sprawia że jesteś niespokojny i rozgniewany.</string>
   <string name="DarkGold_Name">ruda mrocznego złota</string>
-  <string name="DarkGold_Info">Ta ruda złota jest nazywana mroczną nie ze względu na kolor (nie różni się od zwykłego złota), ale dlatego, że ulega stopieniu w świetle dnia, czyniąc go bezużytecznym na powierzchni.</string>
+  <string name="DarkGold_Info">Metal ten jest nazywany mrocznym nie ze względu na kolor (nie różni się od zwykłego złota), ale dlatego, że ulega stopieniu w świetle dnia, czyniąc go bezużytecznym na Powierzchni.</string>
   <string name="DriedRose_Name">wysuszona róża</string>
   <string name="DriedRose_Info">Ta róża wyschła dawno temu, ale jakoś zachowała wszystkie płatki.</string>
   <string name="DriedRose_Info2">I nie straciła swojego uroku. Jest tak śliczna, że pragniesz zatrzymać ją na zawsze.</string>
@@ -569,7 +564,7 @@
   <string name="ComboBuff_Info">Następny atak będzie kombinacją ciosów.</string>
   <string name="Combo_Combo">Udało ci się wykonać kombinację %d ciosów!</string>
   <string name="CrippleBuff_Name">Sponiewierany </string>
-  <string name="CrippleBuff_Info">Twe ciało jest pokryte licznymi ranami, lecz to jeszcze nie koniec walki.</string>
+  <string name="CrippleBuff_Info">Twe ciało jest pokryte rozlicznymi ranami, lecz to jeszcze nie koniec walki.</string>
   <string name="FrostBuff_Name">Zamrożony </string>
   <string name="FrostBuff_Info">Bryła lodu uniemożliwia podjęcie żadnej akcji.</string>
   <string name="Frost_Shatter">Mróz sprawia, że %s roztrzaskuje się!</string>
@@ -577,27 +572,27 @@
   <string name="FuryBuff_Info">Twe oczy nabiegają krwistą czerwienią, co jest spowodowane całą tą furią, która cię wypełnia.</string>
   <string name="GasImmuneBuff_Name">Odporność na gazy</string>
   <string name="GasImmuneBuff_Info">Odporność na wszystkie gazy</string>
-  <string name="Hunger_Death">Smierć głodowa...</string>
-  <string name="HungerBuff_Name1">Głód</string>
-  <string name="HungerBuff_Info1">Czujesz głód!</string>
-  <string name="HungerBuff_Name2">Wygłodzenie</string>
+  <string name="Hunger_Death">Zdechłeś z głodu...</string>
+  <string name="HungerBuff_Name1">Głodny</string>
+  <string name="HungerBuff_Info1">Jesteś głodny!</string>
+  <string name="HungerBuff_Name2">Wygłodzony</string>
   <string name="HungerBuff_Info2">Umierasz z głodu, musisz coś zjeść!</string>
-  <string name="InvisibilityBuff_Name">Niewidzialność</string>
+  <string name="InvisibilityBuff_Name">Niewidzialny</string>
   <string name="InvisibilityBuff_Info">Zupełna niewidzialność, pozwala na unikanie zagrożeń lub stanie się jednym z nich.</string>
   <string name="LevitationBuff_Name">Lewitacja</string>
   <string name="LevitationBuff_Info">Ciało unosi się nad podłożem, możesz teraz uniknąć pułapek i innych tego typu zagrożeń.</string>
-  <string name="LightBuff_Name">Oświecenie</string>
+  <string name="LightBuff_Name">Oświecony</string>
   <string name="LightBuff_Info">Światło wydziela się z ciała, rozjaśniając wszystko wokół.</string>
   <string name="MindVisionBuff_Name">Telepatyczna Wizja</string>
   <string name="MindVisionBuff_Info">Twa podświadomość jasno obrazuje ci położenie wszystkich żywych istot na piętrze. </string>
   <string name="OozeBuff_Name">Toksyczny Szlam</string>
   <string name="OozeBuff_Info">Toksyczny Szlam pożera ścierwo!</string>
   <string name="Ooze_Death">%s zabił cię...</string>
-  <string name="ParalysisBuff_Name">Paraliż</string>
-  <string name="ParalysisBuff_Info">Zupełny paraliż!</string>
-  <string name="PoisonBuff_Name">Zatrucie</string>
+  <string name="ParalysisBuff_Name">Sparaliżowany</string>
+  <string name="ParalysisBuff_Info">Zupełnie sparaliżowany!</string>
+  <string name="PoisonBuff_Name">Zatruty</string>
   <string name="PoisonBuff_Info">Organizm jest powoli wykańczany przez truciznę!</string>
-  <string name="Poison_Death">Smierć poprzez zatrucie...</string>
+  <string name="Poison_Death">Zmarłeś poprzez zatrucie...</string>
   <string name="RegenerationBuff_Name">Naturalna Regeneracja</string>
   <string name="RegenerationBuff_Info">Mechanika naturalnej regeneracji istnieje w formie umiejętności, co ma na celu uczynienie mechaniki klarowniejszej.</string>
   <string name="RootsBuff_Name">Przykorzeniony</string>
@@ -1271,11 +1266,9 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Mimic_Name_Objective">mimik</string>
   <string name="Mimic_Desc">Mimiki są magicznymi stworzeniami, które mogą przybrać dowolny kształt. W lochach prawie zawsze przybierają kształt skrzyni ze skarbami, ponieważ wiedzą że tak najłatwiej zwiodą każdego poszukiwacza przygód.</string>
   <string name="MimicPie_Name">mimik</string>
-  <string name="MimicPie_Gender">męski</string>
   <string name="MimicPie_Name_Objective">mimik</string>
   <string name="MimicPie_Desc">Mimiki są magicznymi stworzeniami, które mogą przybrać dowolny kształt. Ten akurat przeobraził się w przepysznie wyglądający pasztecik.</string>
   <string name="Monk_Name">krasnolud mnich</string>
-  <string name="Monk_Gender">męski</string>
   <string name="Monk_Name_Objective">Krasnoludzki Mnich</string>
   <string name="Monk_Desc">Ci mnisi to fanatycy którzy zobowiązali się chronić sekrety ich miasta przed wszystkimi obcymi z zewnątrz. Nie używają żadnego pancerza ani broni, polegając wyłącznie na sztuce tradycyjnej walki wręcz.</string>
   <string name="Monk_Defense">sparowano</string>
@@ -1289,7 +1282,6 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Rat_Name_Objective">ściekoszczur</string>
   <string name="Rat_Desc">Ściekoszczury są agresywnymi, acz z reguły nieszkodliwymi mieszkańcami podmiejskich kanałów. Niebezpieczne są jedynie w większych grupach.</string>
   <string name="Scorpio_Name">skorpion</string>
-  <string name="Scorpio_Gender">męski</string>
   <string name="Scorpio_Name_Objective">skorpion</string>
   <string name="Scorpio_Desc">Te ogromne pająkopodobne demoniczne kreatury za wszelką cenę unikają walki w zwarciu, zdecydowanie preferują ostrzeliwanie swej ofiary ząbkowanymi kolcami z pewnej odległości</string>
   <string name="Senior_Name">starszy mnich</string>
@@ -1297,11 +1289,9 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="Senior_Name_Objective">starszy akolita</string>
   <string name="Senior_Desc">Ci mnisi to fanatycy którzy zobowiązali się chronić sekrety ich miasta przed wszystkimi obcymi z zewnątrz. Nie używają żadnego pancerza ani broni, polegając wyłącznie na sztuce tradycyjnej walki wręcz. Ten konkretny mnich wytrenował do perfekcji sztukę obezwładniania przeciwnika.</string>
   <string name="Shadow_Name">cień</string>
-  <string name="Shadow_Gender">niewieści </string>
   <string name="Shadow_Name_Objective">cień</string>
   <string name="Shadow_Desc">Cienie cicho przemykają poprzez ruiny starożytnego więzienia, ujawniając się awanturnikom jedynie od czasu do czasu, przeważnie w ich ostatniej przygodzie.</string>
   <string name="Shaman_Name">gnoll szaman</string>
-  <string name="Shaman_Gender">męski</string>
   <string name="Shaman_Name_Objective">gnoll szaman</string>
   <string name="Shaman_Desc">Najinteligentniejsze spośród gnolli są w stanie opanować magię szamańską. Szamani gnolli preferują bojowe zaklęcia w ramach rekompensaty za ich brak siły fizycznej. Nie wahają się używać ich przeciwko tym, którzy kwestionują ich status w stadzie.</string>
   <string name="Shaman_Killed">%s zabił cię za pomocą wiązki pioruna</string>
@@ -2820,7 +2810,6 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="Froth_ArrowInKnee">Byłem kiedyś podróżnikiem jak ty,\nAle wtedy dostałem strzałą w kolano</string>
   <string name="BardSong_1">Moja żona i ja mieszkamy całkiem sami,\nW małej chatce z bali, którą nazywamy naszą własną\nOna uwielbiała gin, a ja kochałem rum\nMówię ci, że świetnie się bawiliśmy.</string>
   <string name="SpiderElite_Name">Pajęczy elitarny strażnik</string>
-  <string name="SpiderElite_Gender">męski</string>
   <string name="SpiderElite_Name_Objective">Pajęczy elitarny strażnik</string>
   <string name="SpiderElite_Desc">Podobnie jak żołnierze, pajączy strażnicy przysięgają chronić swoje królestwo. Jad elitarnego strażnika jest używany do dezorientacji celu.</string>
   <string name="Shaman_ZapMiss">*przeklina po gnomsku*</string>
@@ -2857,8 +2846,8 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="MobAi_status">%sto%s</string>
   <string name="WndCustomizations_Title">Modyfikacje</string>
   <string name="IceGuardianCore_DieInfo">Zimno tutaj, Lepiej wrócę na poziom 14 i poszukam jakiegoś cieplejszego miejsca.</string>
-  <string name="Lich_DieInfo">Nigdy nie polubie tego Nekromanty. To dobra pora by wrócić na poziom 7 i poszukać drogi ku nowej przygodzie.</string>
-  <string name="SpiderQueen_DieInfo">Królowa pająków została zabita! Teraz wracam na poziom 5 i kontynuuje moją przygodę w głębiny .</string>
+  <string name="Lich_DieInfo">Nigdy nie lubiłem/am Nekromantów. To dobra pora by wrócić na poziom 7 i poszukać drogi ku nowej przygodzie.</string>
+  <string name="SpiderQueen_DieInfo">Królowa pająków została zabita! Teraz powinienem wrócić na poziom 5 i kontynuować moją przygodę w głębiny .</string>
   <string name="WndModSelect_ReallyDelete">Na pewno usunąć? </string>
   <string name="WndModSelect_AreYouSure">Usuwanie modyfikacji %s, Jesteś pewien?</string>
   <string name="Challenges_Names_8">Żadnego miasta</string>
@@ -2904,12 +2893,12 @@ Szczegółowe statystyki bohaterów i potworów\n
 --Własne skrypty dla wbudowanych potworów\n
 --Świecenie dla potworów\n
 </string>
-    <string name="Pickaxe_NothingToMine">Nie ma tu nic do wydobycia!</string>
-    <string name="Pickaxe_InsufficientStr">Za mało siły by kopać!</string>
-    <string name="Carcass_Name">Szczątki %s</string>
-    <string name="Carcass_Info">Szczątki totalnie martwego %s,</string>
-    <string name="ResultDescriptions_Necromancy">Wyczerpano siły witalne w trakcje próby ożywienia zwłok na poziomie %d</string>
-    <string name="Item_ACPickup">Podnieś</string>
+  <string name="Pickaxe_NothingToMine">Nie ma tu nic do wydobycia!</string>
+  <string name="Pickaxe_InsufficientStr">Za mało siły by kopać!</string>
+  <string name="Carcass_Name">Szczątki %s</string>
+  <string name="Carcass_Info">Szczątki totalnie martwego %s,</string>
+  <string name="ResultDescriptions_Necromancy">Wyczerpano siły witalne w trakcje próby ożywienia zwłok na poziomie %d</string>
+  <string name="Item_ACPickup">Podnieś</string>
   <string name="Necromancy_Death">Wyczerpano siły witalne w trakcje praktykowania nekromancji,</string>
   <string name="AC_Necromancy">Nekromancja</string>
   <string name="AC_Devour">Pożerać ?</string>
@@ -2927,61 +2916,45 @@ Szczegółowe statystyki bohaterów i potworów\n
   <string name="WndModsDisclaimer_title">Mody</string>
   <string name="WndModsDisclaimer_manage">Organizuj liste modyfikacji</string>
   <string name="WndModsDisclaimer_install">Zainstaluj lokalną modyfikacje</string>
-
   <string name="PlagueDoctor_Name">lekarz plagi</string>
-  <string name="PlagueDoctor_Gender">męski</string>
   <string name="PlagueDoctor_Name_Objective">lekarz plagi</string>
   <string name="PlagueDoctor_Desc">Ten przygarbiony osobnik jest pokryty od stóp do głów skórzanym kombinezonem. Czuć od niego ostrą woń medykamentów i ... czosnku?</string>
-
-
   <string name="PlagueDoctorQuest_1_1_Prologue">APSIIIIK!\n Przeklęta zaraza! Rozprzestrzenia się jak ogień w lesie, ropiejąc w kościach niczego niepodejrzewającego społeczeństwa. Myślisz że te żałosne straże staną na przeciw tej podstępnej zarazy? TY, tak ty! Silny, Zdrowy okaz... Może ty możesz mi pomóc. Te paskudne szczury ściekowe, one to przenoszą, Mówię wam, nasiona zarazy są w ich zgniłych ciałkach! Przynieś mi _PIĘĆ_ tych nieszczęsnych stworzeń, oczywiście _MARTWYCH_! Ich skóry będą bezcenne w moich badaniach. Stworzę dla ciebie cudowną zbroję, barierę ochronną przed zarazą, z której ona pochodzi!</string>
   <string name="PlagueDoctorQuest_1_1_InProgress">Przynieś mi _pięć martwych szczurów_! Każdy  przybliża nas do zrozumienia tej strasznej plagi.</string>
   <string name="PlagueDoctorQuest_1_1_Epilogue">O, _Pięć martwych szczurów_, Idealnie! Ich skóra będzie kluczowa dla moich badań. Jak obiecałem, za twoje zasługi, Prezentuje ci tą zbroje z tych właśnie skór. Jest nasycona zarazą ale ,Nie ma czym się martwić! To chroni! Teraz idź! Chroń miasto!</string>
-
   <string name="PlagueDoctorQuest_1_2_Prologue">*Kaszle* Apsik!\n_ślimaki_... Pełzną. Zostawiają Śluz, I szepczą historie z zapomnianych czasów... Potrzebuje _dziesięciu_... dziesięć nienaruszonych muszel. Czy według Ciebie marne _50 złotych monet_ to wystarczająco dużo za tą cenną wiedze? /n Bez znaczenia. informacje które będę mógł zdobyć mogą być kluczem do powstrzymania tej epidemii. Albo... mogą nas doprowadzić do czegoś dużo gorszego. Twój wybór.</string>
   <string name="PlagueDoctorQuest_1_2_InProgress">_10 muszli_ 10 szepczących z otchłani! ich szlam bedzie badany, ich esencja studiowana. Sekrety które trzymają są na wyciągniecie ręki.</string>
   <string name="PlagueDoctorQuest_1_2_Epilogue">AAA.. Doskonale! Dziesięć _muszli_, Sekrety rozwijają się jak płatki w świetle księżyca. Rzeczywiście mnóstwo informacji! Ale masz rację, _pięćdziesiąt sztuk złota_ nie jest odpowiednią nagrodą *Szaleńczy śmiech*</string>
-
   <string name="PlagueDoctorQuest_2_1_Prologue">_Nasiono Księżycowego wdzięku_... te eteryczne kwiaty, szepczące magią samego księżyca. Od tygodni badam ich dziwną luminescencję. Ich esencja ma moc, ukrytą energię, która może być kluczem do… czegoś. *W zamyśleniu stuka kościstym palcem w brodę*\n Niestety, są rzadkie. Można je znaleźć tylko w najgłębszych jaskiniach, gdzie światło księżyca ledwo przenika .Potrzebuję tylko dwa, Dwa nasiona, które odkryją sekrety ich mocy. W zamian mogę zaoferować Ci coś… Smak czystej, potężnej magii. _Mikstura Many_, przepełniona samą esencją księżycowej łaski. Uzupełni twoją zmęczoną duszę i pozwoli ci władać tajemną mocą z nową siłą.</string>
   <string name="PlagueDoctorQuest_2_1_InProgress">Szukaj _Księżycowego wdzięku_  tam gdzie ciemność spotyka się z najsłabszym przebłyskiem księżyca. _Dwa nasiona_ ich esencja odkryje pewne tajemnice.</string>
   <string name="PlagueDoctorQuest_2_1_Epilogue">_Księżycowy wdzięk_...świadectwo magii, która przenika przez ten świat. Wiele się nauczyłem o ich istocie, hmm twoja nagroda… cóż, została przygotowana z najwyższą starannością. *Wręcza bohaterowi połyskującą _Miksturę Many_ Niech ta moc kieruje cię przez niebezpieczeństwa które na Ciebie czekają. </string>
-
   <string name="PlagueDoctorQuest_2_2_Prologue">Ah,_Słonokłoś_! Delikatny kwiat którego kwiatki promieniują ciepłem słońca. Domyślam się że ich esencja skrywa klucz do... zapomnij o szczegółach. Dość powiedzieć, że ma to kluczowe znaczenie dla moich badań. _Dwa Nasiona Słonokłosia_ Zdobądź je dla mnie a nagrodzę cię czymś co na pewno ci się przyda _Mikstura Leczenia_ Przepełniona witalnością słońca.</string>
   <string name="PlagueDoctorQuest_2_2_InProgress">_Dwa nasiona słonokłosia_. Ich złote płatki skrywają potężną energie którą chce zrozumieć. Znajdź je, i pozwól mi poznać ich tajemnice!</string>
   <string name="PlagueDoctorQuest_2_2_Epilogue">Imponujące! _Nasiona Słonokłosia_ Te złote listki pulsują życiem. Nauczyłem się wiele o ich delikatnej strukturze... *Wręcza ci _Miksturę Życia_ ,płyn mieni się słabym, złotym światłem.* Wypij to, gdy świat ciąży na Tobie i poczuj, jak ciepło słońca ożywia Twojego ducha.</string>
-
   <string name="PlagueDoctorQuest_3_1_Prologue">*Jego oczy błyszczą dziwną, gorączkową intensywnością* O _NIETOPERZ WAMPIR_ stworzenie nocy, żerujące na siłach witalnych swoich ofiar. Fascynujące... Naprawdę fascynujące. Potrzebuje jednego, oczywiście żywego żeby przestudiować ich unikatową fizjologie. To wszystko ... żeby zrozumieć ... *Urywa, mamrocząc do siebie ciąg tajemnych słów*. TAK! nietoperzy zmysł _echolokacji_  to umiejętność nawigowania w kompletnych ciemnościach... to klucz który otworzy nam oczy.</string>
   <string name="PlagueDoctorQuest_3_1_InProgress">Przyprowadź do mnie _nietoperza wampira_ żywego i żeby włos mu z głowy nie spadł! Jego krew jego skrzydła .... to tajemnica którą musze odkryć!</string>
   <string name="PlagueDoctorQuest_3_1_Epilogue">*Głaszcze nietoperza przyglądając się tej maleńkiej istocie z niepokojącą fascynacją* Doskonale! Echolokacja nietoperza… nie przypomina niczego, co spotkałem. Ta.. Precyzja Ta... Kontrola. *Obraca sie do ciebie,* To za twój wysiłek _Zwój ulepszenia_. Użyj go mądrze, ponieważ kryje w sobie potencjał, aby… uszlachetnić twoją prawdziwą naturę.*Podaje ci zwój, a jego głos przechodzi w przyciszony szept* Ten _nietoperz_ to okno do ukrytego świata... świata gdzie cienie tańczą a sekrety szepczą.</string>
-
   <string name="PlagueDoctorQuest_3_2_Prologue">Rycerz Śmierci! *Jego głos łamie się z powodu ekscytacji, jego kościste palce trzęsą się ściskając bulgoczącą fiolkę wypełnioną mętną, fosforyzującą cieczą. Takie stworzenie… Schwytanie jednego żywego… byłoby… monumentalne .Wyobraź sobie sekrety, które moglibyśmy odkryć! Moc, która przepływa przez jego tkanki kostne! Tak, _Rycerz Śmierci_! Ma  kluczowe znaczenie dla moich badań! Pozwoli nam bowiem zagłębić się… w tajemnice życia… i samej śmierci!</string>
   <string name="PlagueDoctorQuest_3_2_InProgress">To nie jest zwykła bestia! To chodzący dowód mocy nekromancji! przyprowadź jednego do mnie, ŻYWEGO! Ten _Rycerz Śmierci_... jest kluczowy!</string>
   <string name="PlagueDoctorQuest_3_2_Epilogue">*Odrzuca głowę do tyłu i chichocze, a dźwięk odbija się echem po jego wilgotnym laboratorium* Wybornie! _Rycerz Śmierci_ w pełnej okazałości! Moc która emanuje z tego martwego ciała jest upojna! *Zwraca swój wzrok ku tobie a jego oczy błyszczą gorączkową intensywnością* A dla ciebie nagroda godna dzielności: _Mikstura Siły_! Niech da ci moc pokonania każdego wroga! Teraz musze przebadać nasz okaz. Sama jego istota kryje w sobie tajemnice, które mogą zmienić prawa życia! Podchodzi do _Rycerza Śmierci_ z maniakalnym uśmiechem, wymachując fiolką z bulgoczącym zielonym płynem*</string>
-
   <string name="PlagueDoctorQuest_4_1_Prologue">APSIK! Krasnoludy! Ci uparci, podziemni mieszkańcy, mający obsesję na punkcie klejnotów i złota, Ale _Krasnoluda czarnoksiężnika_ pragnę... Ich pokręconą magię, napędzaną głębinami, które zamieszkują. Tak, potrzebuję pięciu tych zwiędłych dusz! W ich ciałach kryje się klucz do zrozumienia pewnego… fenomenu. Coś o kierowaniu tajemnych energii przez samą ziemię. Wierzę, że jestem blisko przełomu, ale potrzebuję ich esencji, ich zepsutej magii! *Kaszle gwałtownie w chusteczkę, a na delikatnym materiale pojawia się ciemna plama*</string>
   <string name="PlagueDoctorQuest_4_1_InProgress">Pięć _Krasnoludów czarnoksiężników_, Ich ciała wciąż pulsują z słabym echem ciemnej magii! Zdobądź je dla mnie, a nagrodzę cię eliksirem niezrównanej mocy – _Miksturą Potęgi_, która nasyci cię siłą dziesięciu ludzi!</string>
   <string name="PlagueDoctorQuest_4_1_Epilogue">Znakomicie _Krasnoludy czarnoksiężnicy_  Ich esencja jest teraz moja do zbadania! Taka pokręcona, plugawa magia… naprawdę fascynująca. *Podnosi połyskującą fiolkę wypełnioną lepkim, szkarłatnym płynem. To jest dla ciebie _Mikstura Potęgi_! Wchłoń tą moc, a poczujesz siłę gór płynącą w twoich żyłach! Pamiętaj, że wiedza zdobyta dzięki tym poświęceniom ostatecznie posłuży wyższemu celowi… może nawet uratuje nas wszystkich przed losem gorszym niż śmierć.</string>
-
   <string name="PlagueDoctorQuest_4_2_Prologue">*Jego kościste palce uderzają rytmicznie o bulgoczący kocioł, powietrze wokół niego gęste jest od gryzącego smrodu siarki i zgnilizny* \n_Kobold Kriomanta_! Te żałosne stworzenia, skuleni w swoich zamarzniętych jaskiniach, desperacko trzymając się swojej magii lodu. Potrzebuję pięciu, ich zamarznięte zwłoki będą… pouczające. Ich mistrzostwo w lodzie jest… osobliwe. Wierzę, że czerpią z pierwotnej energii, mocy drzemiącej pod powierzchnią tego właśnie świata.</string>
   <string name="PlagueDoctorQuest_4_2_InProgress">Przynieś tu 5 ciał _Koboldów Kriomantów_! ich zmarznięte zwłoki to klucz który otworzy nam sekrety ich mrożącej magii!</string>
   <string name="PlagueDoctorQuest_4_2_Epilogue">Świetnie! 5 ciał _Koboldów kriomantów_  ich lodowata esencja teraz jest pod moją opieką. Ich połączenie z zamarzniętymi pustkowiami jest naprawdę fascynujące .Sposób, w jaki manipulują samą wodą… naprawdę niezwykły. *Wręcza ci lśniącą fiolkę wypełnioną żywym szkarłatnym płynem* To za twoje waleczne wysiłki :_Mikstura Potęgi_! Pij i poczuj, jak moc dziesięciu wojowników przepływa przez Twoje żyły! Pamiętaj, wiedza to potęga… a moc to jedyna broń, jaką mamy przeciwko nadciągającej ciemności!</string>
-
   <string name="PlagueDoctorQuest_5_1_Prologue">*Jąka, a jego głos łamie się jak krucha gałązka*. A-ach, _sukkuby_! Dwa… tak, dwa, żywe! To… hm… na moje badania! Widzisz… ich feromony… jest to kluczowe dla zrozumienia delikatnej równowagi… ach… *Urywa, jego koścista dłoń wyciąga się, by nerwowo poprawić maskę, a jego oczy rzucają się na ciebie z gorączkową intensywnością.
 *Ich… esencja… to łamigłówka… piękna, enigmatyczna łamigłówka! *Kaszle gwałtownie, próbując odzyskać panowanie nad sobą.* Obiecuję, że za przyprowadzenie mi dwóch z tych… stworzeń… będziesz miał moją dozgonną wdzięczność. Potraktuj to jako… dobrodziejstwo wiedzy! Tak! Do wiedzy!</string>
   <string name="PlagueDoctorQuest_5_1_InProgress">*Jego myśli błądzą, kiedy mówi, jego głos staje się cichszy, ledwie szeptem.* Przyprowadź mi dwa _sukkuby_... żywe. Ich… moc… jest zniewalająca.</string>
   <string name="PlagueDoctorQuest_5_1_Epilogue">*Wpatruje się w dwójkę _sukubów_ błogo się uśmiechając* Świetnie! Doskonale! To odblokuje wiele... możliwości! *Obraca się ku tobie w jego głosie słychać było wdzięczność… i coś jeszcze.* Twoje zasługi... nie będą zapomniane, Jestem winien ci najserdeczniejszą wdzięczność. *Jego wzrok zatrzymuje się na sukubie o chwilę za długo, po czym wraca do swojego laboratorium, mamrocząc o odkrywaniu tajemnic uwodzenia.*</string>
-
   <string name="PlagueDoctorMask_Name">Maska Doktora Plagi</string>
   <string name="PlagueDoctorMask_Info">To nie jest zwykła maska. To bariera. Tarcza chroniąca przed siłami rozkładu z którymi Lekarz Plagi bez wytchnienia walczy od tak dawna. Stworzona z najlepszego hebanu misternie wyrzeźbiony wizerunek wygłodniałej czaszki. Jego puste oczodoły wypełnione są błyszczącymi, ametystami, które pulsują jak dogasający żar ognia. Każdy oddech, który bierzesz, każda wypowiedź, którą wypowiadasz, jest filtrowana przez sieć rurek i filtrów. Mieszanka silnych ziół i egzotycznych przypraw napełnia powietrze wnętrzem, maskując smród śmierci, który przylega do ciebie jak całun.</string>
-
   <string name="PlagueDoctorMaskHood_Name">Maska Doktora Plagi z kapturem</string>
   <string name="PlagueDoctorMaskHood_Info">Wyrzeźbiona hebanowa czaszka, której puste oczodoły świecą eterycznym blaskiem ametystów . Każdy oddech, który wdychasz, szepcze przez labirynt rurek i filtrów, niosąc zapach silnych ziół i przypraw, które maskują przylegający do ciebie rozkład. Ale nie chodzi tylko o maskę. Ciężki kaptur z nocnego aksamitu,
 zasłaniając twarz i głowę cieniem. Kaptur niczym skrzydło kruka spływa po plecach, a jego brzegi obszyte są frędzlami z kościstobiałej koronki, co stanowi przerażająco piękny kontrast. Razem maska ​​i kaptur tworzą widmowe oblicze, ponure świadectwo niekończącej się walki z siłami rozkładu.</string>
-
   <string name="PlagueDoctorQuest_AllDone">*Wypuszcza suchy, świszczący śmiech.* „Twoje czyny odsłoniły tajemnice ponad miarę! Zdobyta wiedza… pulsuje we mnie, symfonia odkryć. Ale wiedza” – dodaje, a jego głos zniża się do konspiracyjnego szeptu , „wiedza to potęga. A moc… ach… to najbardziej odurzający eliksir”. Przez chwilę patrzy na ciebie uważnie,
 Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” – mruczy – „nasze ścieżki znów się skrzyżują. Jest jeszcze wiele… tajemnic… do rozwiązania.</string>
   <string name="CharAction_Expel">Wygnaj</string>
-
   <string name="Welcome_Text_32_1">
 remix.32.1\n
 - Rozgrywka:\n
@@ -2994,5 +2967,4 @@ remix.32.1\n
 - Teraz można instalować mody lokalnie\n
 -- Przedmioty mogą teraz pełnić funkcje gdy są w jeden na drugim\n
 - Naprawa błędów\n</string>
-
 </resources>
