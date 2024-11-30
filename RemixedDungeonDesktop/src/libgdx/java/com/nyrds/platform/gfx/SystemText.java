@@ -8,7 +8,6 @@ import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter;
 import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.platform.util.PUtil;
 import com.watabou.glwrap.Matrix;
 import com.watabou.noosa.Text;
 
@@ -113,10 +112,10 @@ public class SystemText extends Text {
                     String candidate = line + " " + word;
                     glyphLayout.setText(font, candidate);
                     if (glyphLayout.width / oversample <= maxWidth) {
-                        PUtil.slog("text", "line: " + line + " width: " + glyphLayout.width + " max: " + maxWidth);
+                        //PUtil.slog("text", "line: " + line + " width: " + glyphLayout.width + " max: " + maxWidth);
                         line = candidate;
                     } else {
-                        PUtil.slog("text", "line: " + line + " width: " + glyphLayout.width + " max: " + maxWidth);
+                        //PUtil.slog("text", "line: " + line + " width: " + glyphLayout.width + " max: " + maxWidth);
                         lines.add(line);
                         line = word;
                     }
