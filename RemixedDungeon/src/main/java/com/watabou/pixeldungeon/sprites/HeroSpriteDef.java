@@ -9,6 +9,7 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.JumpTweener;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -100,10 +101,14 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
             if (chr.isFlying()) {
                 play(fly);
             }
-            if (chr == Dungeon.hero) {
-                Camera.main.setTarget(this);
-            }
+            focusCamera(chr);
         });
+    }
+
+    private void focusCamera(Char chr) {
+        if (chr == Dungeon.hero) {
+            Camera.main.setTarget(this);
+        }
     }
 
     @NotNull
@@ -114,9 +119,10 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
     @Override
     public void place(int p) {
         ch.ifPresent(chr -> {
+            boolean positionChanged = chr.getPos() != p;
             super.place(p);
-            if (chr == Dungeon.hero) {
-                Camera.main.setTarget(this);
+            if (positionChanged) {
+                focusCamera(chr);
             }
         });
     }
@@ -139,6 +145,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
                     height / 40);
 
             GameScene.addToMobLayer(jumpTweener);
+            focusCamera(chr);
         });
     }
 
@@ -154,6 +161,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 
         turnTo(from, to);
         play(fly);
+        ch.ifPresent(this::focusCamera);
     }
 
 
@@ -168,6 +176,7 @@ public abstract class HeroSpriteDef extends MobSpriteDef {
 
         turnTo(from, to);
         play(fly);
+        ch.ifPresent(this::focusCamera);
     }
 
     @Override

@@ -1,29 +1,11 @@
-/*
- * Pixel Dungeon
- * Copyright (C) 2012-2015 Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
 package com.watabou.pixeldungeon.scenes;
-
-import android.opengl.GLES20;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.gfx.SystemText;
+import com.nyrds.platform.gl.Gl;
 import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
@@ -39,8 +21,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import javax.microedition.khronos.opengles.GL10;
 
 public class PixelScene extends Scene {
 
@@ -76,14 +56,14 @@ public class PixelScene extends Scene {
 
 		defaultZoom = 20;
 
-		while ((Game.width() / defaultZoom < minWidth || Game.height()
+		while ((GameLoop.width / defaultZoom < minWidth || GameLoop.height
 				/ defaultZoom < minHeight)
 				&& defaultZoom > 1) {
 
 			defaultZoom-=0.01;
 		}
 
-		WndHelper.update(Game.width() / defaultZoom, Game.height() / defaultZoom);
+		WndHelper.update(GameLoop.width / defaultZoom, GameLoop.height / defaultZoom);
 
 		minZoom = 1;
 		maxZoom = defaultZoom * 2;
@@ -107,17 +87,10 @@ public class PixelScene extends Scene {
 	static private void createFonts() {
 		// 3x5 (6)
 		font1x = Font.colorMarked(TextureCache.get(Assets.FONTS1X),
-				0x00000000, Font.LATIN_FULL);
+				Font.LATIN_FULL);
 		font1x.baseLine = 6;
 		font1x.tracking = -1;
 
-		// 7x12 (15)
-		/*
-		font25x = Font.colorMarked(
-			TextureCache.get( Assets.FONTS25X ), 17, 0x00000000, Font.ALL_CHARS);
-		font25x.baseLine = 13;
-		font25x.tracking = -1;
-		*/
 	}
 
 	@Override
@@ -177,8 +150,8 @@ public class PixelScene extends Scene {
 
 	public static void align(Visual v) {
 		Camera c = v.camera();
-		v.setX(align(c, v.getX()));
-		v.setY(align(c, v.getY()));
+		v.x = align(c, v.x);
+		v.y = align(c, v.y);
 	}
 
 	public static boolean noFade = false;
@@ -199,14 +172,14 @@ public class PixelScene extends Scene {
 		if(!(GameLoop.scene() instanceof GameScene)) {
 			return;
 		}
-		
+
 		if (uiCamera != null && !Game.isPaused()) {
 			BadgeBanner banner = BadgeBanner.show(badge.image);
 			banner.camera = uiCamera;
-            banner.setX(align(banner.camera,
-					(banner.camera.width - banner.width) / 2));
-			banner.setY(align(banner.camera,
-					(banner.camera.height - banner.height) / 3));
+			banner.x = align(banner.camera,
+					(banner.camera.width - banner.width) / 2);
+			banner.y = align(banner.camera,
+					(banner.camera.height - banner.height) / 3);
 			GameLoop.addToScene(banner);
 		}
 	}
@@ -254,14 +227,37 @@ public class PixelScene extends Scene {
 		@Override
 		public void draw() {
 			if (light) {
-				GLES20.glBlendFunc(GL10.GL_SRC_ALPHA, GL10.GL_ONE);
+				Gl.blendSrcAlphaOne();
 				super.draw();
-				GLES20.glBlendFunc(GL10.GL_SRC_ALPHA,
-						GL10.GL_ONE_MINUS_SRC_ALPHA);
+				Gl.blendSrcAlphaOneMinusAlpha();
 			} else {
 				super.draw();
 			}
 		}
 	}
 
+	private static class PixelCamera extends Camera {
+
+		PixelCamera(float zoom) {
+			super(
+					(int) (GameLoop.width - Math.ceil(GameLoop.width / zoom) * zoom) / 2,
+					(int) (GameLoop.height - Math.ceil(GameLoop.height / zoom)* zoom) / 2,
+					(int) Math.ceil(GameLoop.width / zoom),
+					(int) Math.ceil(GameLoop.height / zoom),
+					zoom);
+		}
+
+		@Override
+		protected void updateMatrix() {
+			float sx = align(this, scroll.x + shakeX);
+			float sy = align(this, scroll.y + shakeY);
+
+			matrix[0] = +zoom * invW2;
+			matrix[5] = -zoom * invH2;
+
+			matrix[12] = -1 + x * invW2 - sx * matrix[0];
+			matrix[13] = +1 - y * invH2 - sy * matrix[5];
+
+		}
+	}
 }

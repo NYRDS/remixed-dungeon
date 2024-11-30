@@ -7,7 +7,6 @@ import android.widget.LinearLayout;
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerView;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.pixeldungeon.game.GamePreferences;
@@ -16,8 +15,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
-import com.nyrds.util.ModdingMode;
-import com.watabou.pixeldungeon.utils.GLog;
+import com.yandex.mobile.ads.banner.BannerAdView;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -32,20 +30,36 @@ public class AdsUtils {
     static Map<AdsUtilsCommon.IRewardVideoProvider, Integer> rewardVideoFails = new ConcurrentHashMap<>();
 
     static InitializationStatus initializationStatus;
+    static boolean YandexInitialized = false;
 
     static {
         try {
-            MobileAds.initialize(RemixedDungeonApp.getContext(), initializationStatus -> {
-                AdsUtils.initializationStatus = initializationStatus;
-                var status = initializationStatus.getAdapterStatusMap();
+            com.yandex.mobile.ads.common.MobileAds.initialize(RemixedDungeonApp.getContext(), () -> {
+                YandexInitialized = true;
+                EventCollector.logEvent("yandex_initialized");
 
-                GLog.debug("admob status: %s", status.toString());
             });
 
             if (!GamePreferences.uiLanguage().equals("ru")) {
-                bannerFails.put(new AdMobBannerProvider(StringsManager.getVar(R.string.easyModeAdUnitId)), -2);
-                interstitialFails.put(new AdMobInterstitialProvider(ModdingMode.getInterstitialId()), -2);
+                //AdMob
+                com.google.android.gms.ads.MobileAds.initialize(RemixedDungeonApp.getContext(), initializationStatus -> {
+                    AdsUtils.initializationStatus = initializationStatus;
+                    var status = initializationStatus.getAdapterStatusMap();
+
+                    String statusString = "";
+                    for (var entry : status.entrySet()) {
+                        statusString += entry.getKey() + " : " + entry.getValue().getInitializationState() + "\n";
+                    }
+
+                    EventCollector.logEvent("AdMob", "status", statusString);
+                });
+
+                bannerFails.put(new AdMobBannerProvider(StringsManager.getVar(R.string.easyModeAdUnitId)), -3);
+                interstitialFails.put(new AdMobInterstitialProvider(StringsManager.getVar(R.string.saveLoadAdUnitId)), -3);
             }
+
+            bannerFails.put(new YandexBannerProvider(StringsManager.getVar(R.string.banner_yandex)), -2);
+            interstitialFails.put(new YandexInterstitialProvider(StringsManager.getVar(R.string.interstitial_yandex)), -2);
 
             if (!RemixedDungeonApp.checkOwnSignature()) {
                 bannerFails.put(new AAdsComboProvider(), 0);
@@ -71,23 +85,40 @@ public class AdsUtils {
             if (AppodealAdapter.usable()) {
                 rewardVideoFails.put(new AppodealRewardVideoProvider(), -1);
             }
+
+            rewardVideoFails.put(new YandexRewardVideoAds(StringsManager.getVar(R.string.rewarded_yandex)), -2);
+
             if (!GamePreferences.uiLanguage().equals("ru")) {
-                rewardVideoFails.put(new GoogleRewardVideoAds(ModdingMode.getRewardedVideoId()), -20);
+                rewardVideoFails.put(new GoogleRewardVideoAds(StringsManager.getVar(R.string.cinemaRewardAdUnitId)), -20);
             }
+
         } catch (Exception e) {
             EventCollector.logException(e,"AdsUtils init rw");
         }
     }
 
     static void removeBannerView(int index, View adview) {
+        boolean bannerFound = false;
         if (adview instanceof BannerView) {
             Appodeal.hide(Game.instance(), Appodeal.BANNER);
+            bannerFound = true;
         }
         if (adview instanceof AdView) {
             ((AdView) adview).destroy();
+            bannerFound = true;
+        }
+        if(adview instanceof BannerAdView) {
+            ((BannerAdView) adview).destroy();
+            bannerFound = true;
+        }
+        if(adview instanceof WebView) {
+            ((WebView) adview).destroy();
+            bannerFound = true;
         }
 
-        Game.instance().getLayout().removeViewAt(index);
+        if(bannerFound) {
+            Game.instance().getLayout().removeViewAt(index);
+        }
     }
 
     static int bannerIndex() {
@@ -96,7 +127,7 @@ public class AdsUtils {
         int childs = layout.getChildCount();
         for (int i = 0; i < childs; ++i) {
             View view = layout.getChildAt(i);
-            if (view instanceof AdView || view instanceof WebView || view instanceof BannerView) {
+            if (view instanceof AdView || view instanceof WebView || view instanceof BannerView || view instanceof BannerAdView) {
                 return i;
             }
         }

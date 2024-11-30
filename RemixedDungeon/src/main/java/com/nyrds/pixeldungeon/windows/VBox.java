@@ -1,8 +1,10 @@
 package com.nyrds.pixeldungeon.windows;
 
-import androidx.annotation.NonNull;
+
 
 import com.watabou.noosa.Gizmo;
+
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by mike on 01.05.2018.
@@ -145,7 +147,7 @@ public class VBox extends BasicBox {
         super.layout();
     }
 
-    public void addRow(int maxWidth, HBox.Align align, @NonNull Gizmo ...elements) {
+    public void addRow(int maxWidth, HBox.Align align, @NotNull Gizmo ...elements) {
         HBox box = new HBox(maxWidth);
         box.setAlign(align);
         for(Gizmo c : elements) {

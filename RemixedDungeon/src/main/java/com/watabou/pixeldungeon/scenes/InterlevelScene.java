@@ -7,7 +7,7 @@ import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
@@ -177,7 +177,7 @@ public class InterlevelScene extends PixelScene {
 
                 if (mode == Mode.CONTINUE
                         || (mode == Mode.DESCEND && Dungeon.depth == 1)) {
-                    Music.INSTANCE.volume(p);
+                    MusicManager.INSTANCE.volume(p);
                 }
                 if ((timeLeft -= GameLoop.elapsed) <= 0) {
                     GameLoop.switchScene(GameScene.class);

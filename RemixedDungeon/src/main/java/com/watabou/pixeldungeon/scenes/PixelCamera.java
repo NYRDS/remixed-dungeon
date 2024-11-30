@@ -3,7 +3,7 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Visual;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 
@@ -13,15 +13,15 @@ class PixelCamera extends Camera {
 
     PixelCamera(float zoom) {
         super(
-                (int) (Game.width() - Math.ceil(Game.width() / zoom) * zoom) / 2,
-                (int) (Game.height() - Math.ceil(Game.height() / zoom) * zoom) / 2,
-                (int) Math.ceil(Game.width() / zoom),
-                (int) Math.ceil(Game.height() / zoom),
+                (int) (GameLoop.width - Math.ceil(GameLoop.width / zoom) * zoom) / 2,
+                (int) (GameLoop.height - Math.ceil(GameLoop.height / zoom) * zoom) / 2,
+                (int) Math.ceil(GameLoop.width / zoom),
+                (int) Math.ceil(GameLoop.height / zoom),
                 zoom);
         _scroll.reset();
     }
 
-    public void setTarget(Visual target) {
+    public void setTarget(CharSprite target) {
         if (target == null) {
             scroll.set(_scroll);
         }

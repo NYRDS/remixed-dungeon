@@ -1,9 +1,13 @@
 
 package com.nyrds.platform.game;
 
+import static com.nyrds.pixeldungeon.game.GameLoop.height;
+import static com.nyrds.pixeldungeon.game.GameLoop.width;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -15,9 +19,11 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
 import com.nyrds.pixeldungeon.support.PlayGames;
-import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.storage.AndroidSAF;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.Os;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Scene;
@@ -72,7 +78,7 @@ public class RemixedDungeon extends Game {
 	}
 
     public static boolean isAlpha() {
-        return version.contains("alpha") || isDev;
+        return GameLoop.version.contains("alpha") || isDev;
     }
 
 	public static boolean isDev() {
@@ -83,7 +89,7 @@ public class RemixedDungeon extends Game {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		isDev = version.contains("in_dev");
+		isDev = GameLoop.version.contains("in_dev");
 		
 		EuConsent.check(this);
 		playGames = new PlayGames();
@@ -109,7 +115,7 @@ public class RemixedDungeon extends Game {
 			landscape(!landscape);
 		}
 
-		Music.INSTANCE.enable(GamePreferences.music());
+		MusicManager.INSTANCE.enable(GamePreferences.music());
 		Sample.INSTANCE.enable(GamePreferences.soundFx());
 
 		if (Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)) {
@@ -133,13 +139,31 @@ public class RemixedDungeon extends Game {
 
 		String extras = Utils.EMPTY_STRING;
 		if(data!=null) {
-			extras = Util.bundle2string(data.getExtras());
+			extras = Os.bundle2string(data.getExtras());
 		}
 
 		GLog.debug("onActivityResult(" + requestCode + "," + resultCode + "," + data +" "+extras);
 
 		if(playGames.onActivityResult(requestCode, resultCode, data)) {
 			return;
+		}
+
+		if (requestCode == REQUEST_CODE_OPEN_DOCUMENT_TREE_MOD_DIR_INSTALL && resultCode == RESULT_OK && data != null) {
+			Uri selectedDirectoryUri = data.getData();
+			int flags = Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION;
+			getContentResolver().takePersistableUriPermission(selectedDirectoryUri, flags);
+
+			GLog.debug("for install selectedDirectoryUri="  + selectedDirectoryUri);
+			AndroidSAF.pickModSourceDirectory(selectedDirectoryUri);
+		}
+
+		if (requestCode == REQUEST_CODE_OPEN_DOCUMENT_TREE_MOD_DIR_EXPORT && resultCode == RESULT_OK && data != null) {
+			Uri selectedDirectoryUri = data.getData();
+			int flags = Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION;
+			getContentResolver().takePersistableUriPermission(selectedDirectoryUri, flags);
+
+			GLog.debug("for export selectedDirectoryUri="  + selectedDirectoryUri);
+			AndroidSAF.pickModDstDirectory(selectedDirectoryUri);
 		}
 
 		super.onActivityResult(requestCode, resultCode, data);
@@ -170,7 +194,7 @@ public class RemixedDungeon extends Game {
 	}
 
 	public static boolean landscape() {
-		return width() > height();
+		return width > height;
 	}
 
 

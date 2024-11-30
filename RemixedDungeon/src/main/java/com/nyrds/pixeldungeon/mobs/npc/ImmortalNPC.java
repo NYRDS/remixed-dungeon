@@ -9,7 +9,7 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 
 import org.jetbrains.annotations.NotNull;
 
-public class ImmortalNPC extends NPC {
+public abstract class ImmortalNPC extends NPC {
 
 
 	public ImmortalNPC() {

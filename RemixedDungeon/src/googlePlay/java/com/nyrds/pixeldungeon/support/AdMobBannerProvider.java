@@ -1,16 +1,13 @@
 package com.nyrds.pixeldungeon.support;
 
-import android.annotation.SuppressLint;
 import android.graphics.Color;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.LoadAdError;
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.util.StringsManager;
 
 public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
     private AdView adView;
@@ -22,7 +19,7 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
         adId = id;
     }
 
-    @SuppressLint("MissingPermission")
+
     @Override
     public void displayBanner() {
         adView = new AdView(Game.instance());
@@ -31,6 +28,7 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
         adView.setAdListener(new AdMobBannerListener());
         adView.setAdSize(AdSize.SMART_BANNER);
         adView.loadAd(AdMob.makeAdRequest());
+        EventCollector.logEvent("admob_banner_requested");
     }
 
     @Override
@@ -44,11 +42,18 @@ public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
         public void onAdLoaded() {
             Ads.updateBanner(adView);
             loaded = true;
+            EventCollector.logEvent("admob_banner_loaded");
+        }
+
+        @Override
+        public void onAdImpression() {
+            super.onAdImpression();
+            EventCollector.logEvent("admob_banner_shown");
         }
 
         @Override
         public void onAdFailedToLoad(LoadAdError reason) {
-            EventCollector.logEvent("Banner failed", reason.toString());
+            EventCollector.logEvent("admob_banner_failed", reason.toString());
             loaded = false;
             AdsUtilsCommon.bannerFailed(AdMobBannerProvider.this);
         }

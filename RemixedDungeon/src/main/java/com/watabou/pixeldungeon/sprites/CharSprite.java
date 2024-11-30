@@ -191,7 +191,9 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     }
 
     public void idle() {
-        play(idle);
+        if(curAnim==null || curAnim==run) {
+            play(idle);
+        }
     }
 
     @LuaInterface
@@ -496,6 +498,10 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
             if (controlled && visible) {
                 showMindControl(chr);
+            } else {
+                if (emo instanceof EmoIcon.Controlled) {
+                    removeEmo();
+                }
             }
 
             if (emo != null) {
@@ -529,7 +535,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
             int chrPos = chr.getPos();
             if(!isMoving && cellIndex!= chrPos) {
-                EventCollector.logEvent(Utils.format("CharSprite desync %s (%d not %d)", chr.getEntityKind(), cellIndex, chrPos));
+                EventCollector.logException(Utils.format("CharSprite desync %s (%d not %d)", chr.getEntityKind(), cellIndex, chrPos));
                 place(chrPos);
             }
         });

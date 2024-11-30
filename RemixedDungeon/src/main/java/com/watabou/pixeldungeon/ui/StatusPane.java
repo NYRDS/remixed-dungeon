@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.market.MarketOptions;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapText;
@@ -23,6 +24,7 @@ import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndChar;
 import com.watabou.pixeldungeon.windows.WndGame;
@@ -79,7 +81,7 @@ public class StatusPane extends Component {
         add(new TouchArea(0, 1, 30, 30) {
             @Override
             protected void onClick(Touch touch) {
-                Image sprite = hero.getSprite();
+                CharSprite sprite = hero.getSprite();
                 if (!sprite.isVisible()) {
                     Camera.main.focusOn(sprite);
                 }
@@ -163,7 +165,7 @@ public class StatusPane extends Component {
         add(btnHats);
 
         verText = new BitmapText(PixelScene.font1x);
-        verText.text(String.valueOf(Game.versionCode-10000));
+        verText.text(String.valueOf(GameLoop.versionCode-10000));
         verText.hardlight(0xaaaaaa);
         verText.alpha(0.6f);
         verText.setScaleXY(0.5f,0.5f);

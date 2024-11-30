@@ -15,6 +15,7 @@ public class CommonActions {
     public static final String MAC_PUSH = "CharAction_Push";
     public static final String MAC_ORDER = "CharAction_Order";
     public static final String MAC_HIT = "CharAction_Hit";
+    public static final String MAC_EXPEL = "CharAction_Expel";
     public static final String AC_EQUIP = "EquipableItem_ACEquip";
     public static final String AC_UNEQUIP = "EquipableItem_ACUnequip";
     public static final String AC_DRINK = "Potion_ACDrink";

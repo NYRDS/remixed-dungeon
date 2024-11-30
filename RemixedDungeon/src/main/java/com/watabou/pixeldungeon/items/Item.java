@@ -317,6 +317,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
     protected void onDetach() {
         setOwner(CharsList.DUMMY);
+        Actor.remove(this);
     }
 
     public Item upgrade() {
@@ -495,13 +496,14 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
     @Override
     public void storeInBundle(Bundle bundle) {
+        super.storeInBundle(bundle);
         bundle.put(QUANTITY, quantity());
         bundle.put(LEVEL, level());
     }
 
     @Override
     public void restoreFromBundle(Bundle bundle) {
-
+        super.restoreFromBundle(bundle);
         getId();
 
         quantity(bundle.getInt(QUANTITY));
@@ -513,6 +515,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
             degrade(-level);
         }
 
+        setOwner(getOwner());
         //We still need this because upgrade erase cursed flag
         setCursed(bundle.optBoolean("cursed", false));
 
@@ -586,7 +589,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     public void setHeap(Heap heap) {
         this.heap = heap;
         if (heap != null) {
-            add(this);
+            Actor.add(this);
         }
     }
 
@@ -781,7 +784,8 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     }
 
     public void setOwner(Char owner) {
-        add(this);
+        GLog.debug("%s owner %s", getEntityKind(), owner.getEntityKind());
+        Actor.add(this);
         this.owner = owner;
         if (owner.valid()) {
             setHeap(null);
@@ -815,7 +819,19 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
         if(heap!= null) {
             heap.pickUp(this);
         } else  {
+
+            if(isEquipped(owner)) {
+                owner.unequip((EquipableItem) this);
+            }
+
             owner.getBelongings().removeItem(this);
         }
+        Actor.remove(this);
+    }
+
+    @LuaInterface
+    public void setChargeKnown(boolean chargeKnown) {} //RA compatibility
+
+    public void pickedUp(Char hero) {
     }
 }

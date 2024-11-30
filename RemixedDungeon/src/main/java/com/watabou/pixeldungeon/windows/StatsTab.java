@@ -84,8 +84,8 @@ class StatsTab extends TabContent {
         String chrAttackDelay = "???";
 
         try {
-            chrSpeed = String.format("%3.2f%%", chr.speed()*100 / timeScale);
-            chrAttackDelay = String.format("%3.2f", chr.attackDelay()*timeScale);
+            chrSpeed = Utils.format("%3.2f%%", chr.speed()*100 / timeScale);
+            chrAttackDelay = Utils.format("%3.2f", chr.attackDelay()*timeScale);
         } catch (Exception e) {
         }
 

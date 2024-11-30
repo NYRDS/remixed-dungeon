@@ -1,0 +1,36 @@
+name: build
+
+on:
+  push:
+    branches: [ "*" ]  # This will trigger the workflow on push to any branch
+  pull_request:
+    branches: [ "*" ]  # This will trigger the workflow on pull requests to any branch
+
+jobs:
+  apk:
+    name: Generate APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: '${{ github.ref }}'
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build with Gradle
+        run: ./gradlew assembleAndroidFdroidRelease
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: apk
+          path: '**/*.apk'

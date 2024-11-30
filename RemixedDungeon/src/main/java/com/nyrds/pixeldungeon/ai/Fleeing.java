@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -20,9 +19,7 @@ public class Fleeing extends MobAi implements AiState {
             me.setTarget(me.getEnemy().getPos());
         }
 
-        if(!me.doStepFrom(me.getTarget())) {
-            me.spend(Actor.TICK);
-        }
+        me.doStepFrom(me.getTarget());
     }
 
     @Override

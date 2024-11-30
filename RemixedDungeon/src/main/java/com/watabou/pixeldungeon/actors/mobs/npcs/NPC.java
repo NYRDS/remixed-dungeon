@@ -6,11 +6,9 @@ import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -22,6 +20,7 @@ public abstract class NPC extends Mob {
 	protected NPC() {
 		hp(ht(1));
 		expForKill = 0;
+		carcassChance= 0f;
 
 		setState(MobAi.getStateByClass(Passive.class));
 		

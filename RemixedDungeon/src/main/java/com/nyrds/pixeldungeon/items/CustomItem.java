@@ -391,6 +391,10 @@ public class CustomItem extends EquipableItem {
         return super.doPickUp(hero);
     }
 
+    public void pickedUp(@NotNull Char hero) {
+        script.runOptionalNoRet("pickedUp", hero);
+    }
+
     @Override
     public float time2equipBase() {
         return script.runOptional("time2equip",super.time2equipBase());
@@ -413,7 +417,7 @@ public class CustomItem extends EquipableItem {
 
     @Override
     public boolean getBoolean(String key) {
-        return script.runOptional("getBoolean", super.getBoolean(key));
+        return script.runOptional("getBoolean", super.getBoolean(key), key);
     }
 
     @Override

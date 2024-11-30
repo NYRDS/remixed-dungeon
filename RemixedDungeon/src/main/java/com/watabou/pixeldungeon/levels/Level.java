@@ -17,6 +17,7 @@ import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
@@ -404,6 +405,8 @@ public abstract class Level implements Bundlable {
 				it.remove();
 			}
 		}
+
+		Dungeon.saveCurrentLevel(); //save level
 		return mobsToNextLevel;
 	}
 
@@ -415,6 +418,7 @@ public abstract class Level implements Bundlable {
 	protected int height = 32;
 
 	public static int[] NEIGHBOURS4;
+	public static int[] NEIGHBOURS5;
 	public static int[] NEIGHBOURS8;
 	public static int[] NEIGHBOURS9;
 	public static int[] NEIGHBOURS16;
@@ -537,6 +541,7 @@ public abstract class Level implements Bundlable {
 
 		Dungeon.initSizeDependentStuff(getWidth(), getHeight());
 		NEIGHBOURS4 = new int[]{-getWidth(), +1, +getWidth(), -1};
+		NEIGHBOURS5 = new int[]{0, -getWidth(), +1, +getWidth(), -1};
 		NEIGHBOURS8 = new int[]{+1, -1, +getWidth(), -getWidth(),
 				+1 + getWidth(), +1 - getWidth(), -1 + getWidth(),
 				-1 - getWidth()};
@@ -757,7 +762,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		for (Blob blob : bundle.getCollection(BLOBS, Blob.class)) {
-			blobs.put(blob.getClass(), blob);
+			blobPut(blob.getClass(), blob);
 		}
 
 		for (ScriptedActor actor : bundle.getCollection(SCRIPTS, ScriptedActor.class)) {
@@ -916,13 +921,13 @@ public abstract class Level implements Bundlable {
 		}
 
 		mob.setPos(fromCell);
+
+		Actor.addDelayed(mob, delay);
+		Actor.occupyCell(mob);
+
 		if (GameScene.isSceneReady()) {
 			mob.updateSprite();
 		}
-
-		//mob.setPos(targetPos);
-		Actor.addDelayed(mob, delay);
-		Actor.occupyCell(mob);
 
 		if (GameScene.isSceneReady()) {
 			mob.onSpawn(this);
@@ -1140,7 +1145,7 @@ public abstract class Level implements Bundlable {
 	public void set(int cell, int terrain) {
 
 		if(!cellValid(cell)) {
-			EventCollector.logEvent(Utils.format("Attempt set invalid cell %d on %s to %d", cell, levelId, terrain));
+			EventCollector.logException(Utils.format("Attempt set invalid cell %d on %s to %d", cell, levelId, terrain));
 			return;
 		}
 
@@ -1555,6 +1560,10 @@ public abstract class Level implements Bundlable {
 		return Math.max(Math.abs(ax - bx), Math.abs(ay - by));
 	}
 
+	public float distanceL2(HasPositionOnLevel oa, HasPositionOnLevel ob) {
+		return distanceL2(oa.getPos(), ob.getPos());
+	}
+
 	public float distanceL2(int a, int b) {
 		int ax = cellX(a);
 		int ay = cellY(a);
@@ -1917,7 +1926,7 @@ public abstract class Level implements Bundlable {
 				}
 			}
 		}
-		blobs.put(blobClass, blob);
+		blobPut(blobClass, blob);
 	}
 
 	public void clearAreaFrom(Class<? extends Blob> blobClass, int cell, int xs, int ys) {
@@ -2130,5 +2139,10 @@ public abstract class Level implements Bundlable {
 			}
 		}
 		return false;
+	}
+
+	public void blobPut(Class<? extends Blob> clazz, Blob blob) {
+		Actor.add(blob);
+		blobs.put(clazz, blob);
 	}
 }

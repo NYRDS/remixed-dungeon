@@ -35,6 +35,6 @@ return buff.init{
     end,
 
     defenceSkillBonus = function(self, buff)
-        return buff.target:lvl() * 2
+        return buff.target:lvl() * 1.25
     end
 }

@@ -37,7 +37,7 @@ public class LaboratoryPainter extends Painter {
 		
 		Alchemy alchemy = new Alchemy();
 		alchemy.seed( pot.x + level.getWidth() * pot.y, 1 );
-		level.blobs.put( Alchemy.class, alchemy );
+		level.blobPut( Alchemy.class, alchemy );
 		
 		int n = Random.IntRange( 2, 3 );
 		for (int i=0; i < n; i++) {

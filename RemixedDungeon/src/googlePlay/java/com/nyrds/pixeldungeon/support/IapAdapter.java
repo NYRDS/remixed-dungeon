@@ -1,8 +1,9 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.content.Context;
+import android.content.Intent;
 
-import androidx.annotation.NonNull;
+
 import androidx.annotation.Nullable;
 
 import com.android.billingclient.api.AcknowledgePurchaseParams;
@@ -145,7 +146,7 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
                             .setProductType(BillingClient.ProductType.INAPP)
                             .build(),
                     new PurchasesResponseListener() {
-                        public void onQueryPurchasesResponse(@NonNull BillingResult billingResult, List purchases) {
+                        public void onQueryPurchasesResponse(@NotNull BillingResult billingResult, List purchases) {
                             onPurchasesUpdated(billingResult, purchases);
                         }
                     }
@@ -257,5 +258,8 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
         } else {
             // Handle any other error codes.
         }
+    }
+
+    public void onNewIntent(Intent intent) {
     }
 }

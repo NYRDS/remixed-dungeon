@@ -8,6 +8,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.PointF;
 
 import org.jetbrains.annotations.NotNull;
@@ -58,11 +59,14 @@ public class Pushing extends Actor {
 				return;
 			}
 
+			Actor.add(ch);
 			if(!ch.hasSprite() ||ch.getSprite().getParent()==null) {
 				EventCollector.logException("pushing orphaned char");
 				Actor.remove( Pushing.this );
 				return;
 			}
+
+			GLog.debug("pushing %s (%d) %d->%d", ch, ch.getPos(), from, to);
 			CharSprite sprite = ch.getSprite();
 
 			sprite.point(point( sprite.worldToCamera( from ) ));
@@ -84,6 +88,7 @@ public class Pushing extends Actor {
 				sprite.setX(getX());
 				sprite.setY(getY());
 			} else {
+				GLog.debug("pushing %s (%d) %d->%d complete", ch, ch.getPos(), from, to);
 				sprite.point( end );
 				killAndErase();
 				Actor.remove( Pushing.this );

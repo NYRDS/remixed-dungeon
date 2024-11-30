@@ -123,24 +123,37 @@ return itemLib.init{
 
         local owner = item:getOwner()
 
-        RPD.affectBuff(owner, RPD.Buffs.Blindness, 100)
+        --RPD.affectBuff(owner, RPD.Buffs.Blindness, 100)
 
         RPD.glog("execute owner: %s", tostring(owner))
 
         if action == "action1" then
+            owner:playExtra("zan")
+            --local ads = require("scripts/lib/ads")
+--[[
+            local a = storage.gameGet("action1")
+            local b = storage.get("action1")
+            local c = storage.modGet("action1")
 
-            local ads = require("scripts/lib/ads")
+            RPD.glog("stored data: "..tostring(a).."|"..tostring(b)..""..tostring(c))
+
 
             storage.gamePut("action1", true)
             storage.put("action1", true)
+            storage.modPut("action1", true)
 
-            --[[
+            a = storage.gameGet("action1")
+            b = storage.get("action1")
+            c = storage.modGet("action1")
+
+            RPD.glog("stored data: "..tostring(a).."|"..tostring(b)..""..tostring(c))
+
+
             if ads.rewardVideoReady() then
                 ads.rewardVideoShow(RPD.createItem("Gold",'{"quantity":500}'))
             else
                 RPD.glogn("Reward video not ready")
             end
-]]
 
             --ads.interstitialShow()
 
@@ -150,7 +163,7 @@ return itemLib.init{
 
             local banner = RPD.new(RPD.Objects.Ui.Banner,"amulet.png")
             banner:show(0xFFAA55, 5, 10)
-            RPD.GameScene:showBanner(banner)
+            RPD.GameScene:showBanner(banner) ]]--
         end
 
         if action == "action2" then
@@ -215,13 +228,13 @@ return itemLib.init{
 
     activate = function(self, item, hero)
 
-        local Buff = RPD.affectBuff(hero,"TestBuff", 10)
-        Buff:level(3)
-        Buff:setSource(item)
+      --  local Buff = RPD.affectBuff(hero,"NotImplementedTestBuff", 10)
+      --  Buff:level(3)
+      --  Buff:setSource(item)
     end,
 
     deactivate = function(self, item, hero)
-        RPD.removeBuff(hero,"TestBuff")
+      --  RPD.removeBuff(hero,"NotImplementedTestBuff")
     end,
 
     act = function(self,item)

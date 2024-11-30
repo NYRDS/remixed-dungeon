@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Awareness;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
@@ -17,6 +18,7 @@ import com.watabou.pixeldungeon.actors.buffs.CandleOfMindVisionBuff;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.actors.buffs.Combo;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
+import com.watabou.pixeldungeon.actors.buffs.DummyBuff;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
@@ -209,6 +211,11 @@ public class BuffFactory {
             }
             return buffClass.newInstance();
         }
+
+        if (!Util.isDebug()) {
+            return DummyBuff.instance;
+        }
+
 
         throw new ModError(name, new Exception("Unknown Buff:"+name));
     }

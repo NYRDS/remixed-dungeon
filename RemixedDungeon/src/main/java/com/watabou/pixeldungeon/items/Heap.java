@@ -170,7 +170,7 @@ public class Heap implements Bundlable, NamedEntityKind  {
 
         if (type != Type.MIMIC) {
             type = Type.HEAP;
-            sprite.link();
+            sprite.link(this);
             sprite.drop();
         }
     }
@@ -219,7 +219,7 @@ public class Heap implements Bundlable, NamedEntityKind  {
     public void drop(@NotNull Item item) {
 
         if (!item.valid()) {
-            EventCollector.logException("Invalid item");
+//            EventCollector.logException("Invalid item");
             return;
         }
 

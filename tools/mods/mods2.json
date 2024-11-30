@@ -1,0 +1,146 @@
+{
+  "known_mods": {
+    "common": [
+      {
+        "name": "HiFi DLC",
+        "url": "http://nyrds.net/rpd/mods/HiFiDLC.rpd",
+        "version": 2,
+        "rpdVersion": 964
+      },
+      {
+        "name": "Remixed RPG",
+        "url": "http://nyrds.net/rpd/mods/Remixed_RPG_v27.zip",
+        "version": 27,
+        "rpdVersion": 1155
+      },
+      {
+        "name": "Faith",
+        "url": "http://nyrds.net/rpd/mods/Faith_v5.zip",
+        "version": 6,
+        "rpdVersion": 610
+      },
+      {
+        "name": "Remixed Additions",
+        "url": "http://nyrds.net/rpd/mods/Remixed_Additions_v18.zip",
+        "version": 18,
+        "rpdVersion": 1006
+      },
+      {
+        "name": "The epic dungeon",
+        "url": "http://nyrds.net/rpd/mods/The_epic_dungeon_v43_1.zip",
+        "version": 43,
+        "rpdVersion": 1111
+      },
+      {
+        "name": "Maze",
+        "url": "http://nyrds.net/rpd/mods/Maze.zip",
+        "version": 24,
+        "rpdVersion": 599
+      }
+    ],
+    "ru": [
+      {
+        "name": "D.U.N.G.E.O.N",
+        "url": "http://nyrds.net/rpd/mods/D.U.N.G.E.O.N_v9.zip",
+        "version": 9,
+        "rpdVersion": 929
+      },
+      {
+        "name": "Conundrum",
+        "url": "http://nyrds.net/rpd/mods/Conundrum.zip",
+        "version": 24,
+        "rpdVersion": 568
+      }
+    ]
+  },
+  "info": {
+    "The epic dungeon": {
+      "en": {
+        "Mod_Name": "The epic dungeon",
+        "Mod_Description": "This mod adds around 8 extra hours of gameplay. Over 160 new mobs, 70 new items, 20 (perhaps more) new locations & stages and more!",
+        "Mod_Author": "Bogdan Ivanov (creator); Insaf Nazipov & Sergey Retunov (game designers); Danil Yegitsky (Russian grammar & ortography revision); Stanislav Lushin (musician); Yaroslav Tomilov, Timofei Chernenko, Sergey Kiselev & Danil Yegitsky (retired integrants); Krakozyabra; Ømicrónrg9 (translation)",
+        "Mod_Link": "https://m.vk.com/topic-84207769_32141866?offset=last#last"
+      },
+      "ru": {
+        "Mod_Name": "The epic dungeon",
+        "Mod_Description": "Мод добавит в игру дополнительные 8 часов игры. (Более 160 новых мобов, более 70 новых предметов, 20 (а может и больше) новых локаций)",
+        "Mod_Author": "Богдан Иванов (создатель), Инсаф Назипов (художник-геймдизайнер), Ярослав Томилов (художник, выбыл), Тимофей Черненко (гемдизайнер, выбыл),Сергей Киселёв (владелец сервера),Сергей Ретунов (геймдизайнер), Данил Ежитский (орфография), Станислав Лушин (музыкант), Неизвестный Krakozyabra",
+        "Mod_Link": "https://m.vk.com/topic-84207769_32141866?offset=last#last"
+      }
+    },
+    "Remixed RPG": {
+      "en": {
+        "Mod_Name": "Remixed RPG",
+        "Mod_Description": "This mod adds RPG mechanics to the game. Mainly a skill system, stats managment & makeshift equipment! GitHub: https://github.com/MiniMongol/RemixedRPG",
+        "Mod_Author": "Nazipov Insaf(Mongol)",
+        "Mod_Email": "insafnazipov2005@gmail.com",
+        "Mod_Link": "https://vk.com/remixed_rpg"
+      },
+      "ru": {
+        "Mod_Name": "Remixed RPG",
+        "Mod_Description": "Этот мод добавляет механики RPG в игру. GitHub: https://github.com/MiniMongol/RemixedRPG",
+        "Mod_Author": "Назипов Инсаф(Mongol)",
+        "Mod_Email": "insafnazipov2005@gmail.com",
+        "Mod_Link": "https://vk.com/remixed_rpg"
+      }
+    },
+    "Faith": {
+      "en": {
+        "Mod_Name": "Faith",
+        "Mod_Description": "Trying to create something...",
+        "Mod_Author": "Pavel Provotorov&Neyromantik"
+      },
+      "ru": {
+        "Mod_Name": "Faith",
+        "Mod_Description": "Попытка создать нечто...",
+        "Mod_Author": "Pavel Provotorov&Neyromantik"
+      }
+    },
+    "Remixed Additions": {
+      "en": {
+        "Mod_Name": "Remixed Additions",
+        "Mod_Description": "Trying to add more content to the game.",
+        "Mod_Author": "Monika"
+      },
+      "fr": {
+        "Mod_Name": "Remixed Additions",
+        "Mod_Description": "Essaye d'ajouter plus de contenu au jeu.",
+        "Mod_Author": "Monika, trad fr par Machiavel Dhy'v"
+      }
+    },
+    "HiFi DLC": {
+      "en": {
+        "Mod_Name": "HiFi DLC",
+        "Mod_Description": "This mod contains a set of tracks created by Shinori's Team specially for Remixed Dungeon as well as a high bit rate variant of built-in Remixed Dungeon tracks.",
+        "Mod_Author": "Shinori's Team & NYRDS"
+      },
+      "ru": {
+        "Mod_Name": "HiFi DLC",
+        "Mod_Description": "Этот мод содержит набор треков, созданных командой Shinori's Team специально для Remixed Dungeon, а также варианты оригинальных треков Remixed Dungeon с повышенным битрейтом.",
+        "Mod_Author": "Shinori's Team & NYRDS"
+      }
+    },
+    "Conundrum": {
+      "ru": {
+        "Mod_Name": "Conundrum",
+        "Mod_Description": "История одного короля.",
+        "Mod_Author": "Пьер Шрёдингер",
+        "Mod_Link": "https://vk.com/conundrum_rpd"
+      }
+    },
+    "Maze": {
+      "en": {
+        "Mod_Name": "Maze",
+        "Mod_Description": "Modification for RPD, full of mysteries, mazes, puzzles & Predesigned-levels. Even the authors question the reality of the passage without saving.",
+        "Mod_Author": "Nice(no) ogres, timelords, demonic eyes, eagles, skeleton welders, crawfish in glasses, cyclops, wolves and other very eccentric persons",
+        "Mod_Link": "https://vk.com/rpdmodmaze ; https://www.reddit.com/user/Eccentric_eye ; naKaxoHTac@gmail.com"
+      },
+      "ru": {
+        "Mod_Name": "Maze",
+        "Mod_Description": "Модификация RPD, полная загадок, лабиринтов, головоломок и Predesigned-этажей. Даже создатели сомневаются в реальности прохождения без сохранений.",
+        "Mod_Author": "Добрые(нет) огры, таймлорды, глаза, орлы, скелеты-сварщики, раки в очках, циклопы, волки и прочие весьма эксцентричные личности",
+        "Mod_Link": "https://vk.com/rpdmodmaze ; naKaxoHTac@gmail.com"
+      }
+    }
+  }
+}

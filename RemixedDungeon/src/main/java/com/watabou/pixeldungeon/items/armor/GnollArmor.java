@@ -11,6 +11,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
@@ -45,7 +46,8 @@ public class GnollArmor extends ClassArmor {
 
         for (Mob mob : level.getCopyOfMobsArray()) {
 
-            if (level.fieldOfView[mob.getPos()]) {
+            if (level.fieldOfView[mob.getPos()] && level.distanceL2(user, mob) <= ShadowCaster.MAX_DISTANCE) {
+
                 if(mobsDominated > user.lvl() / 6) {
                     break;
                 }

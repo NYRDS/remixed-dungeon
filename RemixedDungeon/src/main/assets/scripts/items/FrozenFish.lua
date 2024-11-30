@@ -31,5 +31,6 @@ return item.init{
         else
             item:dropTo(cell)
         end
-    end
+    end,
+    burn   = function() return RPD.ItemFactory:itemByName("FriedFish") end,
 }

@@ -1,12 +1,11 @@
 
 package com.watabou.pixeldungeon.scenes;
 
-import android.content.Intent;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.input.Touchscreen.Touch;
+import com.nyrds.platform.storage.AndroidSAF;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
@@ -15,6 +14,8 @@ import com.watabou.noosa.Scene;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.effects.Flare;
+import com.watabou.pixeldungeon.items.ArmorKit;
+import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
@@ -44,12 +45,7 @@ public class AboutScene extends PixelScene {
 		TouchArea area = new TouchArea( text ) {
 			@Override
 			protected void onClick( Touch touch ) {
-				Intent intent = new Intent( Intent.ACTION_SEND);
-				intent.setType("message/rfc822");
-				intent.putExtra(Intent.EXTRA_EMAIL, new String[]{address} );
-                intent.putExtra(Intent.EXTRA_SUBJECT, StringsManager.getVar(R.string.app_name));
-
-                Game.instance().startActivity( Intent.createChooser(intent, StringsManager.getVar(R.string.AboutScene_Snd)) );
+				Game.sendEmail(address, StringsManager.getVar(R.string.app_name));
 			}
 		};
 		add(area);
@@ -64,7 +60,7 @@ public class AboutScene extends PixelScene {
 		TouchArea area = new TouchArea( text ) {
 			@Override
 			protected void onClick( Touch touch ) {
-                Game.instance().openUrl(StringsManager.getVar(R.string.AboutScene_OurSite), address);
+                Game.openUrl(StringsManager.getVar(R.string.AboutScene_OurSite), address);
 			}
 		};
 		add(area);
@@ -142,7 +138,21 @@ public class AboutScene extends PixelScene {
 		add(area);
 
 		new Flare( 7, 64 ).color( 0x332211, true ).show( nyrdie, 0 ).angularSpeed = -20;
-		
+
+		ItemSprite sprite = new ItemSprite(new ArmorKit());
+		sprite.alpha(0.1f);
+		sprite.setX(align( text.getX() + (text.width() - sprite.width()) / 2 ));
+		sprite.setY(nyrdie.getY() - sprite.height() - 8);
+		add(sprite);
+
+		TouchArea area2 = new TouchArea( sprite )  {
+			@Override
+			protected void onClick( Touch touch ) {
+				Game.toast("Entering dev mode, pick directory");
+				AndroidSAF.pickDirectoryForModInstall();
+			}
+		};
+
 		Archs archs = new Archs();
 		archs.setSize( Camera.main.width, Camera.main.height );
         sendToBack(archs);

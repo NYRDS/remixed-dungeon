@@ -13,6 +13,7 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
+import com.watabou.pixeldungeon.sprites.DummySprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 
 import org.jetbrains.annotations.NotNull;
@@ -69,15 +70,10 @@ public class MirrorImage extends Mob {
             if (Dungeon.hero.valid()) {
                 look = Dungeon.hero.getHeroSprite().getLayersDesc();
                 deathEffect = Dungeon.hero.getHeroSprite().getDeathEffect();
-            } else { // dirty hack here
-                EventCollector.logException("MirrorImage sprite created before hero");
-                Hero hero = new Hero();
-                HeroSpriteDef spriteDef = HeroSpriteDef.createHeroSpriteDef(hero);
-                look = spriteDef.getLayersDesc();
-                deathEffect = spriteDef.getDeathEffect();
+                return HeroSpriteDef.createHeroSpriteDef(look, deathEffect);
             }
-
-            return newSprite();
+            EventCollector.logException("MirrorImage sprite created before hero");
+            return DummySprite.instance;
         }
     }
 }

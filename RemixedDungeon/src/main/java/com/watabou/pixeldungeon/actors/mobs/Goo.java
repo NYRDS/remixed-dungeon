@@ -116,9 +116,9 @@ public class Goo extends Boss {
 	}
 	
 	@Override
-	public boolean getCloser(int target) {
+	public boolean getCloser(int target,  boolean ignorePets) {
 		pumpedUp = false;
-		return super.getCloser( target );
+		return super.getCloser( target, ignorePets );
 	}
 
 	@Override

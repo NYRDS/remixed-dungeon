@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 
 public class Freezing {
@@ -19,9 +20,9 @@ public class Freezing {
 	// It's not really a blob...
 	
 	public static void affect( int cell ) {
-
-
-		Blob fire = Dungeon.level.blobs.get( Fire.class );
+		Level level = Dungeon.level;
+		Blob fire = level.blobs.get( Fire.class );
+		Blob liquidFlame = level.blobs.get( LiquidFlame.class );
 
 		Char ch = Actor.findChar( cell ); 
 		if (ch != null) {
@@ -31,8 +32,12 @@ public class Freezing {
 		if (fire != null) {
 			fire.clearBlob( cell );
 		}
+
+		if (liquidFlame != null) {
+			liquidFlame.clearBlob( cell );
+		}
 		
-		Heap heap = Dungeon.level.getHeap( cell );
+		Heap heap = level.getHeap( cell );
 		if (heap != null) {
 			heap.freeze();
 		}

@@ -11,6 +11,7 @@ import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.Os;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.DownloadStateListener;
 import com.nyrds.util.DownloadTask;
@@ -19,7 +20,6 @@ import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Mods;
 import com.nyrds.util.UnzipStateListener;
 import com.nyrds.util.UnzipTask;
-import com.nyrds.util.Util;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.SaveUtils;
@@ -54,7 +54,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 
 		modsList = Mods.buildModsList();
 
-		boolean haveInternet = Util.isConnectedToInternet();
+		boolean haveInternet = Os.isConnectedToInternet();
 
         Text tfTitle = PixelScene.createMultiline(R.string.ModsButton_SelectMod, GuiProperties.titleFontSize());
 		tfTitle.hardlight(TITLE_COLOR);
@@ -105,6 +105,8 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 				@Override
 				protected void onClick() {
 					ModDesc infoDesc = Mods.getModDesc(desc.name, GamePreferences.uiLanguage());
+					infoDesc.installed = desc.installed;
+					infoDesc.installDir = desc.installDir;
 					GameLoop.addToScene(new WndModInfo(infoDesc));
 				}
 			};

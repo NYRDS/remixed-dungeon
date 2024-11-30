@@ -13,9 +13,7 @@ public class MoveOrder extends MobAi implements AiState {
 
     @Override
     public void act(@NotNull Char me) {
-        if(!me.doStepTo(me.getTarget())) {
-            me.setState(getStateByClass(Hunting.class));
-        }
+        me.doStepTo(me.getTarget());
     }
 
     @Override

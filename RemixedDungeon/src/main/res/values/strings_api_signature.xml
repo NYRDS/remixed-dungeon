@@ -38,4 +38,8 @@
     <string name="leaderboard_normal" translatable="false"></string>
     <string name="leaderboard_expert" translatable="false"></string>
 
+    <string name="banner_yandex" translatable="false">demo-banner-yandex</string>
+    <string name="interstitial_yandex" translatable="false">demo-interstitial-yandex</string>
+    <string name="rewarded_yandex" translatable="false">demo-rewarded-yandex</string>
+
 </resources>

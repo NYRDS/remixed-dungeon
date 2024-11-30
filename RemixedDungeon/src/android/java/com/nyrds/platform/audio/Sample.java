@@ -22,7 +22,7 @@ import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.SoundPool;
 
-import androidx.annotation.NonNull;
+
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
@@ -48,7 +48,7 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 	private SoundPool pool =
 			new SoundPool(MAX_STREAMS, AudioManager.STREAM_MUSIC, 0);
 
-	@NonNull
+	@NotNull
 	private final Set<String> missingAssets = new HashSet<>();
 
 	@NotNull

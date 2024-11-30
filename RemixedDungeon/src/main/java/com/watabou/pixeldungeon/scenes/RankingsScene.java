@@ -17,11 +17,11 @@
  */
 package com.watabou.pixeldungeon.scenes;
 
-import androidx.annotation.NonNull;
+
 
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
@@ -43,6 +43,8 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndRanking;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -68,8 +70,8 @@ public class RankingsScene extends PixelScene {
     public void create() {
         super.create();
 
-        Music.INSTANCE.play(Assets.THEME, true);
-        Music.INSTANCE.volume(1f);
+        MusicManager.INSTANCE.play(Assets.THEME, true);
+        MusicManager.INSTANCE.volume(1f);
 
         uiCamera.setVisible(false);
 
@@ -164,7 +166,7 @@ public class RankingsScene extends PixelScene {
         fadeIn();
     }
 
-    @NonNull
+    @NotNull
     private RedButton getBtnNext(int w, int h, float btnHeight) {
         RedButton btnNext = new RedButton(">") {
             @Override

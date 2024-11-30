@@ -1,48 +1,106 @@
 package com.nyrds.platform;
 
+import com.nyrds.platform.storage.Preferences;
+import com.nyrds.util.Util;
+import com.watabou.pixeldungeon.utils.GLog;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.Arrays;
 import java.util.Map;
 
+
 public class EventCollector {
-    public static void logException(Exception e, String s) {
+
+    private static boolean analyticsUsable() {
+        return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS, 1) > 0;
     }
 
-    public static void logException(Throwable e) {
+    static public void init() {
+
     }
 
-    public static void collectSessionData(String freeInternalMemorySize, String toString) {
+    static public void logCountedEvent(String event, int threshold) {
+        final String key = "CountedEvent_" + event;
+        int count = Preferences.INSTANCE.getInt(key, 0);
+        count++;
+
+        if (count == threshold) {
+            logEvent(event);
+        }
+        Preferences.INSTANCE.put(key, count);
     }
 
-    public static void logException(String s) {
+    static public void logEvent(String event) {
+
     }
 
-    public static void logEvent(String s) {
+    static public void logEvent(String event, double value) {
+
     }
 
-    public static void logEvent(String s1, String s2) {
+    static public void logEvent(String category, String event) {
+
     }
 
+    static public void levelUp(String character, long level) {
 
-    public static void logEvent(String gameover, Map<String, String> resDesc) {
     }
 
-    public static void levelUp(String s, int lvl) {
+    static public void badgeUnlocked(String badgeId) {
+
     }
 
-    public static void badgeUnlocked(String name) {
+    static public void logEvent(String category, Map<String, String> eventData) {
+
     }
 
-    public static void logEvent(String survey, String questionString, String answer) {
+    static public void logEvent(String category, String event, String label) {
+
+    }
+
+    static public void logScene(final String scene) {
+    }
+
+    static public void logException() {
+        logException(new Exception(), 1);
+    }
+
+    static public void logException(String desc) {
+        logException(new Exception(desc), 1);
+    }
+
+    static private void logException(Throwable e, int level) {
+
+        StackTraceElement[] stackTraceElements = e.getStackTrace();
+        e.setStackTrace(Arrays.copyOfRange(stackTraceElements, level, stackTraceElements.length));
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        PrintStream ps = new PrintStream(baos);
+        e.printStackTrace(ps);
+        ps.close();
+        GLog.toFile(baos.toString());
+
+        if (Util.isDebug()) {
+            //throw new RuntimeException(new Exception(e));
+        }
+    }
+
+    static public void logException(Throwable e) {
+        logException(e, 0);
+    }
+
+    static public void logException(Throwable e, String desc) {
+        logException(e, 0);
+    }
+
+    public static void setSessionData(String key, boolean value) {
+
+    }
+
+    public static void setSessionData(String key, String value) {
     }
 
     public static void disable() {
-    }
-
-    public static void logCountedEvent(String ad_reward5, int i) {
-    }
-
-    public static void logScene(String s) {
-    }
-
-    public static void setSessionData(String rpd_active_mod, String activeMod) {
     }
 }

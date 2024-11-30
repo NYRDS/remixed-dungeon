@@ -1,13 +1,13 @@
 package com.watabou.pixeldungeon.windows;
 
-import androidx.annotation.NonNull;
+
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.pixeldungeon.support.Ads;
-import com.nyrds.pixeldungeon.support.Iap;
+import com.nyrds.platform.support.Ads;
+import com.nyrds.platform.support.Iap;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.ImageTab;
 import com.nyrds.pixeldungeon.windows.WndDifficultyOptions;
@@ -42,6 +42,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 
@@ -75,7 +77,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
         this._saving = _saving;
         this.title = title;
         this.start_scene = start_scene;
-        this.initial_difficulty = this.difficulty = difficulty;
+        this.initial_difficulty = this.difficulty = Util.clamp(difficulty, 0, 3);
 
 
         for (int i = 0; i < 2; i++) {
@@ -239,7 +241,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
         resize(width, (int) (height + bottomRow.height()));
     }
 
-    @NonNull
+    @NotNull
     private SimpleButton getRefreshBtn(int WIDTH, Text tfTitle) {
         SimpleButton refreshBtn = new SimpleButton(Icons.get(Icons.BTN_SYNC_REFRESH)) {
             @Override
@@ -353,7 +355,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
 
         GameLoop.pushUiTask(() -> {
             if (!saving) {
-                SaveUtils.loadGame(slot, Dungeon.hero.getHeroClass());
+                SaveUtils.loadGame(slot, Dungeon.heroClass);
             } else {
                 if (GamePreferences.donated() == 0 && RemixedDungeon.canDonate()) {
 

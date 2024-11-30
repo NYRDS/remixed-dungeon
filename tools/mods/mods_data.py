@@ -1,10 +1,8 @@
+import codecs
 import json
 import os
 import requests
 import zipfile
-import codecs
-
-
 
 properties = ["Mod_Author", "Mod_Link","Mod_Email","Mod_Name","Mod_Description"]
 

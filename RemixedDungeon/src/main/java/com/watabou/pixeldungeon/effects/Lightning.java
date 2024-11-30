@@ -1,10 +1,9 @@
 
 package com.watabou.pixeldungeon.effects;
 
-import android.opengl.GLES20;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.gl.Gl;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
@@ -13,21 +12,19 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
-import javax.microedition.khronos.opengles.GL10;
-
 public class Lightning extends Group {
 
 	private static final float DURATION = 0.3f;
-	
+
 	private float life;
-	
+
 	private int length;
 	private float[] cx;
 	private float[] cy;
-	
+
 	private Image[] arcsS;
 	private Image[] arcsE;
-	
+
 	private Callback callback;
 
 	public Lightning (int from, int to, Callback callback) {
@@ -47,78 +44,76 @@ public class Lightning extends Group {
 
 	private void init ( int[] cells, Callback callback ) {
 		this.callback = callback;
-		
+
 		Image proto = Effects.get( Effects.Type.LIGHTNING );
 		float ox = 0;
 		float oy = proto.height / 2;
-		
+
 		this.length = cells.length;
 		cx = new float[length];
 		cy = new float[length];
-		
+
 		for (int i=0; i < length; i++) {
 			int c = cells[i];
-			int width = Dungeon.level.getWidth();
-
-			cx[i] = (c % width + 0.5f) * DungeonTilemap.SIZE;
-			cy[i] = (c / width + 0.5f) * DungeonTilemap.SIZE + Image.isometricShift();
+			cx[i] = (c % Dungeon.level.getWidth() + 0.5f) * DungeonTilemap.SIZE;
+			cy[i] = (c / Dungeon.level.getWidth() + 0.5f) * DungeonTilemap.SIZE;
 		}
-		
+
 		arcsS = new Image[length - 1];
 		arcsE = new Image[length - 1];
 		for (int i=0; i < length - 1; i++) {
-			
+
 			Image arc = arcsS[i] = new Image( proto );
 
-			arc.setX(cx[i] - arc.origin.x);
-			arc.setY(cy[i] - arc.origin.y);
-			arc.setOrigin( ox, oy );
+			arc.x = cx[i] - arc.origin.x;
+			arc.y = cy[i] - arc.origin.y;
+			arc.origin.set( ox, oy );
 			add( arc );
-			
+
 			arc = arcsE[i] = new Image( proto );
-			arc.setOrigin( ox, oy );
+			arc.origin.set( ox, oy );
 			add( arc );
 		}
-		
+
 		life = DURATION;
-		
+
 		Sample.INSTANCE.play( Assets.SND_LIGHTNING );
 	}
-	
+
 	private static final double A = 180 / Math.PI;
-	
+
 	@Override
 	public void update() {
 		super.update();
-		
+
 		if ((life -= GameLoop.elapsed) < 0) {
-			
+
 			killAndErase();
 			if (callback != null) {
 				callback.call();
 			}
-			
+
 		} else {
-			
+
 			float alpha = life / DURATION;
-			
+
 			for (int i=0; i < length - 1; i++) {
-				
+
 				float sx = cx[i];
 				float sy = cy[i];
 				float ex = cx[i+1];
 				float ey = cy[i+1];
-				
+
 				float x2 = (sx + ex) / 2 + Random.Float( -4, +4 );
 				float y2 = (sy + ey) / 2 + Random.Float( -4, +4 );
-				
+
 				float dx = x2 - sx;
 				float dy = y2 - sy;
 				Image arcS = arcsS[i];
 				arcS.am = alpha;
-				arcS.setAngle((float)(Math.atan2( dy, dx ) * A));
-                arcS.setScaleX ((float)Math.sqrt( dx * dx + dy * dy ) / arcS.width);
-				
+				arcS.angle = (float)(Math.atan2( dy, dx ) * A);
+				arcS.scale.x = (float)Math.sqrt( dx * dx + dy * dy ) / arcS.width;
+
 				dx = ex - x2;
 				dy = ey - y2;
 				Image arcE = arcsE[i];
@@ -130,11 +125,11 @@ public class Lightning extends Group {
 			}
 		}
 	}
-	
+
 	@Override
 	public void draw() {
-		GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE );
+		Gl.blendSrcAlphaOne();
 		super.draw();
-		GLES20.glBlendFunc( GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA );
+		Gl.blendSrcAlphaOneMinusAlpha();
 	}
 }

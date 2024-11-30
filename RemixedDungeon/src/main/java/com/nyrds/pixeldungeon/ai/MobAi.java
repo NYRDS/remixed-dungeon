@@ -163,6 +163,8 @@ public abstract class MobAi implements AiState {
         ) {
             me.setTarget(ownerPos);
             me.setState(getStateByClass(Wandering.class));
+
+            me.doStepTo(me.getTarget());
             return true;
         }
         return false;

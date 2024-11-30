@@ -1,9 +1,11 @@
 package com.watabou.pixeldungeon.actors;
 
-import androidx.annotation.NonNull;
+
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Sleeping;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.Treasury;
@@ -16,6 +18,7 @@ import com.nyrds.pixeldungeon.ml.actions.Attack;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.ml.actions.Descend;
 import com.nyrds.pixeldungeon.ml.actions.Examine;
+import com.nyrds.pixeldungeon.ml.actions.Expel;
 import com.nyrds.pixeldungeon.ml.actions.Interact;
 import com.nyrds.pixeldungeon.ml.actions.InteractObject;
 import com.nyrds.pixeldungeon.ml.actions.MapItemAction;
@@ -29,6 +32,7 @@ import com.nyrds.pixeldungeon.ml.actions.Taunt;
 import com.nyrds.pixeldungeon.ml.actions.Unlock;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
 import com.nyrds.platform.EventCollector;
@@ -36,13 +40,16 @@ import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
+import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
@@ -110,7 +117,7 @@ public class CharUtils {
         }
 
         if (enemy.level().water[enemy.getPos()] && !enemy.isFlying()) {
-            damage *= 2f;
+            damage *= 2;
         }
 
         enemy.damage(damage, LightningTrap.LIGHTNING);
@@ -216,11 +223,34 @@ public class CharUtils {
     }
 
     @NotNull
-    public static CharAction actionForCell(@NonNull Char actor, int cell, @NotNull Level level) {
-        Char target;
+    public static CharAction actionForCell(@NotNull Char actor, int cell, @NotNull Level level) {
+        Char target = null;
+
+        if (level.fieldOfView[cell]) {
+            target = Actor.findChar(cell);
+        }
+
         final Char controlTarget = actor.getControlTarget();
 
-        if (level.fieldOfView[cell] && (target = Actor.findChar(cell)) != null && target != controlTarget) {
+
+        if (controlTarget instanceof Hero && (target == null || target.friendly(controlTarget))) {
+            CharAction charAction = handleObjectOrHeap(actor, cell, level);
+            if (charAction != null) return charAction;
+
+            if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
+                return new Unlock(cell);
+            }
+
+            if (level.isExit(cell)) {
+                return new Descend(cell);
+            }
+
+            if (cell == level.entrance) {
+                return new Ascend(cell);
+            }
+        }
+
+        if (target != null && target != controlTarget) {
             if (target.friendly(controlTarget)) {
                 return new Interact(target);
             } else {
@@ -242,6 +272,18 @@ public class CharUtils {
             }
         }
 
+        CharAction charAction = handleObjectOrHeap(actor, cell, level);
+        if (charAction != null) return charAction;
+
+
+        if (actor.getPos() != cell) {
+            return new Move(cell);
+        }
+
+        return new NoAction();
+    }
+
+    private static @Nullable CharAction handleObjectOrHeap(@NotNull Char actor, int cell, @NotNull Level level) {
         final LevelObject topLevelObject = level.getTopLevelObject(cell);
 
         if (cell != actor.getPos() && topLevelObject != null) {
@@ -262,50 +304,29 @@ public class CharUtils {
                 return new OpenChest(cell);
             }
         }
-
-        if (level.map[cell] == Terrain.LOCKED_DOOR || level.map[cell] == Terrain.LOCKED_EXIT) {
-            return new Unlock(cell);
-        }
-
-        if (level.isExit(cell)) {
-            return new Descend(cell);
-        }
-
-        if (cell == level.entrance) {
-            return new Ascend(cell);
-        }
-
-        if (actor.getPos() != cell) {
-            return new Move(cell);
-        }
-
-        return new NoAction();
+        return null;
     }
 
     public static void execute(Char target, Char hero, @NotNull String action) {
-        if (action.equals(CommonActions.MAC_STEAL)) {
-            hero.nextAction(new Steal(target));
-            return;
-        }
-
-        if (action.equals(CommonActions.MAC_TAUNT)) {
-            hero.nextAction(new Taunt(target));
-            return;
-        }
-
-        if (action.equals(CommonActions.MAC_PUSH)) {
-            hero.nextAction(new Push(target));
-            return;
-        }
-
-        if (action.equals(CommonActions.MAC_HIT)) {
-            hero.nextAction(new Attack(target));
-            return;
-        }
-
-        if (action.equals(CommonActions.MAC_ORDER)) {
-            hero.nextAction(new Order(target));
-            return;
+        switch (action) {
+            case CommonActions.MAC_STEAL:
+                hero.nextAction(new Steal(target));
+                return;
+            case CommonActions.MAC_TAUNT:
+                hero.nextAction(new Taunt(target));
+                return;
+            case CommonActions.MAC_PUSH:
+                hero.nextAction(new Push(target));
+                return;
+            case CommonActions.MAC_HIT:
+                hero.nextAction(new Attack(target));
+                return;
+            case CommonActions.MAC_ORDER:
+                hero.nextAction(new Order(target));
+                return;
+            case CommonActions.MAC_EXPEL:
+                hero.nextAction(new Expel(target));
+                return;
         }
 
         target.getScript().run("executeAction", target, action);
@@ -336,6 +357,7 @@ public class CharUtils {
 
         if (target.getOwnerId() == hero.getId()) {
             actions.add(CommonActions.MAC_ORDER);
+            actions.add(CommonActions.MAC_EXPEL);
         }
 
         actions.removeAll(hero.getHeroClass().getForbiddenActions());
@@ -409,8 +431,8 @@ public class CharUtils {
         return CharsList.DUMMY;
     }
 
-    @NonNull
-    public static VHBox makeActionsBlock(int maxWidth, Char mob, @NonNull Char selector) {
+    @NotNull
+    public static VHBox makeActionsBlock(int maxWidth, Char mob, @NotNull Char selector) {
 
         VHBox actions = new VHBox(maxWidth - 2 * Window.GAP);
         actions.setAlign(HBox.Align.Width);
@@ -436,43 +458,54 @@ public class CharUtils {
         return actions;
     }
 
-    public static void tryPickUp(Char hero, @NonNull Item item) {
+    public static void tryPickUp(Char hero, @NotNull Item item) {
         Heap oldHeap = item.getHeap();
 
         int heapPos = hero.getPos();
-        if (oldHeap!= null) {
-            heapPos  = oldHeap.pos;
+        if (oldHeap != null) {
+            heapPos = oldHeap.pos;
         }
 
         item = item.pick(hero, hero.getPos());
 
-        if (item.doPickUp(hero)) {
-
-            hero.itemPickedUp(item);
-
-            if (oldHeap != null) {
-                oldHeap.pickUp();
-                if (!oldHeap.isEmpty()) {
-                    GLog.i(StringsManager.getVar(R.string.Hero_SomethingElse));
-                }
-            }
-
+        if (!item.valid()) {
+            removeFromHeap(oldHeap);
         } else {
-            Heap newHeap = hero.level().drop(item, heapPos);
+            if (item.doPickUp(hero)) {
 
-            newHeap.sprite.drop();
-            newHeap.pickUpFailed();
+                hero.itemPickedUp(item);
+
+                removeFromHeap(oldHeap);
+                item.pickedUp(hero);
+
+            } else {
+                Heap newHeap = hero.level().drop(item, heapPos);
+
+                newHeap.sprite.drop();
+                newHeap.pickUpFailed();
+            }
         }
+
         hero.readyAndIdle();
     }
 
+    private static void removeFromHeap(Heap oldHeap) {
+        if (oldHeap != null) {
+            oldHeap.pickUp();
+            if (!oldHeap.isEmpty()) {
+                GLog.i(StringsManager.getVar(R.string.Hero_SomethingElse));
+            }
+        }
+    }
+
     static public final Set<Image> markers = new HashSet<>();
+
     static public void mark(Char chr) {
         var marker = Icons.TARGET.get();
         chr.getSprite().getParent().add(marker);
 
         marker.point(DungeonTilemap.tileToWorld(chr.getPos()));
-        marker.y+=chr.getSprite().visualOffsetY();
+        marker.y += chr.getSprite().visualOffsetY();
         markers.add(marker);
     }
 
@@ -484,9 +517,38 @@ public class CharUtils {
     }
 
     static public void clearMarkers() {
-        for(var marker: markers) {
+        for (var marker : markers) {
             marker.killAndErase();
         }
         markers.clear();
+    }
+
+    public static @NotNull Item tryToSpawnMimic(Item item, Char ch, int pos, String mimicKind) {
+        Level level = ch.level();
+
+        for (int i = 0; i < item.quantity();i++) {
+            int spawnPos = pos;
+
+            if (ch.getPos() == pos) {
+                spawnPos = level.getEmptyCellNextTo(ch.getPos());
+
+                if (!level.cellValid(spawnPos)) {
+                    return item;
+                }
+            }
+
+            Mob mimic = MobFactory.mobByName(mimicKind);
+            mimic.setPos(spawnPos);
+            mimic.setState(MobAi.getStateByClass(Wandering.class));
+            mimic.adjustStats(Dungeon.depth);
+
+            level.spawnMob(mimic);
+            ch.checkVisibleEnemies();
+
+            CellEmitter.get(pos).burst(Speck.factory(Speck.STAR), 10);
+            Sample.INSTANCE.play(Assets.SND_MIMIC);
+            item.quantity(item.quantity()-1);
+        }
+        return ItemsList.DUMMY;
     }
 }

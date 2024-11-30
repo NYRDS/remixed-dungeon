@@ -66,7 +66,7 @@ public class King extends Boss {
 	}
 
 	@Override
-	public boolean getCloser(int target) {
+	public boolean getCloser(int target, boolean ignorePets) {
 
  		targetPedestal = level().getNearestTerrain(getPos(),
 				(level, cell) -> {
@@ -77,10 +77,10 @@ public class King extends Boss {
 				});
 
 		if(canTryToSummon()) {
-			return super.getCloser( targetPedestal );
+			return super.getCloser( targetPedestal, ignorePets );
 		}
 
-		return super.getCloser(target);
+		return super.getCloser(target, ignorePets);
 	}
 	
 	@Override

@@ -1,4 +1,4 @@
-include ':RemixedDungeon', ':processor', ':annotation'
+include ':processor', ':annotation', ':json_clone'
 
 // Example project-level settings.gradle
 dependencyResolutionManagement {
@@ -13,3 +13,5 @@ dependencyResolutionManagement {
         maven { url 'https://developer.huawei.com/repo/' }
     }
 }
+//include ':RemixedDungeon'
+include ':RemixedDungeonDesktop'

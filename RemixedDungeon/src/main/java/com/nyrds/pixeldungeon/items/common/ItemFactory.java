@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.items.common;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.CustomItem;
-import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
@@ -442,7 +441,7 @@ public class ItemFactory {
         registerItemClass(CandyOfDeath.class);
         //registerItemClass(TacticalCrossbow.class); // no item pic
 
-        registerItemClass(DummyItem.class);
+        //registerItemClass(DummyItem.class);
         registerItemClass(GuardianArmor.class);
         registerItemClass(WitchdoctorArmor.class);
         registerItemClass(PotionOfMana.class);

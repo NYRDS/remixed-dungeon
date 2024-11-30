@@ -230,6 +230,15 @@ public class Belongings implements Iterable<Item>, Bundlable {
         }
         return null;
     }
+
+    @LuaInterface
+    public Item checkItem(String itemClass) {
+        for (Item item : this) {
+            if (item.getEntityKind().equals(itemClass))
+                return item;
+        }
+        return ItemsList.DUMMY;
+    }
     @LuaInterface
     public Item getItemPartialMatch(String itemClass) {
         for (Item item : this) {
@@ -477,7 +486,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
         return owner;
     }
 
-    private class ItemIterator implements Iterator<Item> {
+    public class ItemIterator implements Iterator<Item> {
 
         private int index = 0;
 

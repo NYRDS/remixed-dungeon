@@ -86,6 +86,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -100,6 +101,8 @@ public class Hero extends Char {
 
     @Nullable
     static public Runnable doOnNextAction;
+
+    public Set<Mob> initialAlies = new HashSet<>();
 
     private HeroClass heroClass = HeroClass.ROGUE;
     private HeroSubClass subClass = HeroSubClass.NONE;
@@ -261,10 +264,6 @@ public class Hero extends Char {
         return (int) (super.attackSkill(target) * attackSkillFactor);
     }
 
-    @Override
-    public void spend(float time) {
-        super.spend(time);
-    }
 
     @Override
     public int dr() {
@@ -400,8 +399,13 @@ public class Hero extends Char {
 
     @Override
     public void damage(int dmg, @NotNull NamedEntityKind src) {
+        if (!isAlive()) {
+            return;
+        }
+
         restoreHealth = false;
         super.damage(dmg, src);
+
 
         setControlTarget(this);
 
@@ -429,129 +433,6 @@ public class Hero extends Char {
 
         AttackIndicator.updateState(this);
         return newMob;
-    }
-
-    public boolean getCloser(final int target) {
-
-        if (hasBuff(BuffFactory.ROOTS)) {
-            return false;
-        }
-
-        int step = -1;
-
-        Level level = level();
-
-        Buff wallWalkerBuff = null;
-
-        if (!level.isBossLevel()) {
-            wallWalkerBuff = buff(BuffFactory.RING_OF_STONE_WALKING);
-        }
-
-        if (level.adjacent(getPos(), target)) {
-
-            if (Actor.findChar(target) == null) {
-                if (!hasBuff(BuffFactory.BLINDNESS)) {
-                    if (level.pit[target] && !isFlying() && !Chasm.jumpConfirmed) {
-                        Chasm.heroJump(this);
-                        interrupt();
-                        return false;
-                    }
-                    if (TrapHelper.isVisibleTrap(level, target) && !isFlying() && !TrapHelper.stepConfirmed) {
-                        TrapHelper.heroTriggerTrap(this);
-                        interrupt();
-                        return false;
-                    }
-                }
-
-                if (wallWalkerBuff == null && (level.passable[target] || level.avoid[target])) {
-                    step = target;
-                }
-                if (wallWalkerBuff != null && level.solid[target]) {
-                    step = target;
-                }
-
-                LevelObject obj = level.getTopLevelObject(target);
-
-                if (obj != null && obj.pushable(this)) {
-
-                    if (obj.pushable(this)) {
-                        interrupt();
-                        if (!obj.push(this)) {
-                            return false;
-                        }
-                    }
-
-                    if (obj.nonPassable(this)) {
-                        interrupt();
-                        return false;
-                    }
-                }
-            }
-
-        } else {
-
-            int len = level.getLength();
-            boolean[] p = wallWalkerBuff != null ? level.solid : level.passable;
-            boolean[] v = level.visited;
-            boolean[] m = level.mapped;
-            boolean[] passable = new boolean[len];
-            for (int i = 0; i < len; i++) {
-                passable[i] = p[i] && (v[i] || m[i]);
-            }
-
-            step = Dungeon.findPath(this, target, passable, level.fieldOfView);
-        }
-
-        if (level.cellValid(step)) {
-
-            int oldPos = getPos();
-
-            LevelObject obj = level.getTopLevelObject(step);
-            if (obj != null) {
-
-                if (obj.nonPassable(this)) {
-                    interrupt();
-                    return false;
-                }
-
-                if (step == target) {
-                    interrupt();
-                    if (!obj.interact(this)) {
-                        return false;
-                    }
-                } else {
-                    if (!obj.stepOn(this)) {
-                        interrupt();
-                        return false;
-                    }
-                }
-            }
-
-            Char actor = Actor.findChar(step);
-            if (actor instanceof Mob) {
-                Mob mob = ((Mob) actor);
-                if (actor.friendly(this)) {
-                    if (!mob.swapPosition(this)) {
-                        return false;
-                    }
-                    observe();
-                }
-            }
-
-            move(step);
-            moveSprite(oldPos, getPos());
-
-            if (wallWalkerBuff != null) {
-                int dmg = Math.max(hp() / 2, 2);
-                damage(dmg, wallWalkerBuff);
-            }
-
-            spend(1 / speed());
-
-            return true;
-        }
-
-        return false;
     }
 
     @Override
@@ -709,7 +590,7 @@ public class Hero extends Char {
         deathDesc.put("duration", Float.toString(Statistics.duration));
 
         deathDesc.put("difficulty", Integer.toString(GameLoop.getDifficulty()));
-        deathDesc.put("version", Game.version);
+        deathDesc.put("version", GameLoop.version);
         deathDesc.put("mod", ModdingMode.activeMod());
         deathDesc.put("modVersion", Integer.toString(ModdingMode.activeModVersion()));
 
@@ -1104,6 +985,129 @@ public class Hero extends Char {
     @Override
     protected void moveSprite(int oldPos, int pos) {
         getSprite().move(oldPos, getPos());
+
+    }
+
+    @Override
+    public boolean getCloser(int target, boolean ignorePets) {
+        if (hasBuff(BuffFactory.ROOTS)) {
+            return false;
+        }
+
+        int step = -1;
+
+        Level level = level();
+
+        Buff wallWalkerBuff = null;
+
+        if (!level.isBossLevel()) {
+            wallWalkerBuff = buff(BuffFactory.RING_OF_STONE_WALKING);
+        }
+
+        if (level.adjacent(getPos(), target)) {
+            if (Actor.findChar(target) == null) {
+                if (!hasBuff(BuffFactory.BLINDNESS)) {
+                    if (level.pit[target] && !isFlying() && !Chasm.jumpConfirmed) {
+                        Chasm.heroJump(this);
+                        interrupt();
+                        return false;
+                    }
+                    if (TrapHelper.isVisibleTrap(level, target) && !isFlying() && !TrapHelper.stepConfirmed) {
+                        TrapHelper.heroTriggerTrap(this);
+                        interrupt();
+                        return false;
+                    }
+                }
+
+                if (wallWalkerBuff == null && (level.passable[target] || level.avoid[target])) {
+                    step = target;
+                }
+                if (wallWalkerBuff != null && level.solid[target]) {
+                    step = target;
+                }
+
+                LevelObject obj = level.getTopLevelObject(target);
+
+                if (obj != null && obj.pushable(this)) {
+
+                    if (obj.pushable(this)) {
+                        interrupt();
+                        if (!obj.push(this)) {
+                            return false;
+                        }
+                    }
+
+                    if (obj.nonPassable(this)) {
+                        interrupt();
+                        return false;
+                    }
+                }
+            }
+
+        } else {
+
+            int len = level.getLength();
+            boolean[] p = wallWalkerBuff != null ? level.solid : level.passable;
+            boolean[] v = level.visited;
+            boolean[] m = level.mapped;
+            boolean[] passable = new boolean[len];
+            for (int i = 0; i < len; i++) {
+                passable[i] = p[i] && (v[i] || m[i]);
+            }
+
+            step = Dungeon.findPath(this, target, passable, level.fieldOfView);
+        }
+
+        if (level.cellValid(step)) {
+
+            int oldPos = getPos();
+
+            LevelObject obj = level.getTopLevelObject(step);
+            if (obj != null) {
+
+                if (obj.nonPassable(this)) {
+                    interrupt();
+                    return false;
+                }
+
+                if (step == target) {
+                    interrupt();
+                    if (!obj.interact(this)) {
+                        return false;
+                    }
+                } else {
+                    if (!obj.stepOn(this)) {
+                        interrupt();
+                        return false;
+                    }
+                }
+            }
+
+            Char actor = Actor.findChar(step);
+            if (actor instanceof Mob) {
+                Mob mob = ((Mob) actor);
+                if (actor.friendly(this)) {
+                    if (!mob.swapPosition(this)) {
+                        return false;
+                    }
+                    observe();
+                }
+            }
+
+            move(step);
+            moveSprite(oldPos, getPos());
+
+            if (wallWalkerBuff != null) {
+                int dmg = Math.max(hp() / 2, 2);
+                damage(dmg, wallWalkerBuff);
+            }
+
+            spend(1 / speed());
+
+            return true;
+        }
+
+        return false;
 
     }
 

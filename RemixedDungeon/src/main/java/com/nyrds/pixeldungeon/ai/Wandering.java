@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -16,7 +15,6 @@ public class Wandering extends MobAi implements AiState {
     public void act(@NotNull Char me) {
 
         if(returnToOwnerIfTooFar(me, 2)) {
-            me.spend(Actor.MICRO_TICK);
             return;
         }
 
@@ -31,7 +29,6 @@ public class Wandering extends MobAi implements AiState {
 
             if(!me.doStepTo(me.getTarget())) {
                 me.setTarget(me.level().randomDestination());
-                me.spend(Actor.TICK);
             }
         }
     }

@@ -3,7 +3,8 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.MusicManager;
+import com.nyrds.platform.gl.NoosaScript;
 import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.gltextures.Gradient;
 import com.watabou.gltextures.SmartTexture;
@@ -16,7 +17,6 @@ import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.MovieClip;
-import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.TouchArea;
 import com.watabou.noosa.Visual;
@@ -45,8 +45,8 @@ public class SurfaceScene extends PixelScene {
 		
 		super.create();
 		
-		Music.INSTANCE.play( Assets.HAPPY, true );
-		Music.INSTANCE.volume( 1f );
+		MusicManager.INSTANCE.play( Assets.HAPPY, true );
+		MusicManager.INSTANCE.volume( 1f );
 		
 		uiCamera.setVisible(false);
 		

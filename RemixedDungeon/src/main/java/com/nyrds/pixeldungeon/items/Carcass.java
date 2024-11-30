@@ -10,10 +10,13 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.effects.CellEmitter;
+import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
@@ -42,11 +45,17 @@ public class Carcass extends Item implements Doom {
 
     static final int MAX_TTL = 10;
 
+    {
+        stackable = true;
+    }
+
     @Keep
     public Carcass() {
     }
+
     public Carcass(Char src) {
         this.src = src;
+        Actor.add(this);
         spend(10);
     }
 
@@ -63,6 +72,7 @@ public class Carcass extends Item implements Doom {
             if(heap!= null) {
                 heap.replace(this, null);
                 heap.updateHeap();
+                CellEmitter.center(heap.pos).burst(Speck.factory(Speck.EVOKE), 3);
             }
 
         }
@@ -123,7 +133,7 @@ public class Carcass extends Item implements Doom {
             int spawnPos = level.getEmptyCellNextTo(casterPos);
 
             Wound.hit(chr);
-            chr.damage(src.ht()/5, this);
+            chr.damage(src.ht()/4, this);
             Buff.detach(chr, Sungrass.Health.class);
 
             if (level.cellValid(spawnPos)) {

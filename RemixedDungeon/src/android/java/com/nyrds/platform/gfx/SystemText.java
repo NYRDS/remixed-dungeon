@@ -49,7 +49,7 @@ public class SystemText extends Text {
 
     private static float fontScale = Float.NaN;
 
-    private static final LRUCache<String, Bitmap> bitmapCache = new LRUCache<>(256);
+    private static final LRUCache<String, BitmapData> bitmapCache = new LRUCache<>(256);
 
     private static int cacheHits = 0;
     private static int cacheMiss = 0;
@@ -281,15 +281,16 @@ public class SystemText extends Text {
                     }
 
                     if (!bitmapCache.containsKey(key)) {
-                        Bitmap bitmap = Bitmap.createBitmap(
+
+                        BitmapData bitmap = BitmapData.createBitmap4(
                                 (int) (lineWidth * oversample),
-                                (int) (fontHeight * oversample + textPaint.descent()),
-                                Bitmap.Config.ARGB_4444);
+                                (int) (fontHeight * oversample + textPaint.descent()));
                         bitmapCache.put(key, bitmap);
 
-                        Canvas canvas = new Canvas(bitmap);
+                        Canvas canvas = new Canvas(bitmap.bmp);
                         drawTextLine(charIndex, canvas, contourPaint);
                         charIndex = drawTextLine(charIndex, canvas, textPaint);
+
                         cacheMiss++;
                     } else {
                         cacheHits++;

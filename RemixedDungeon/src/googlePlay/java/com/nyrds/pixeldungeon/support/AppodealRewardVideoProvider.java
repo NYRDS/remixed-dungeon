@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.support;
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.RewardedVideoCallbacks;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -18,16 +19,18 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
             Appodeal.cache(RemixedDungeon.instance(), Appodeal.REWARDED_VIDEO);
             Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
-
+            EventCollector.logEvent("appodeal_reward_requested");
             Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
 
                 @Override
                 public void onRewardedVideoLoaded(boolean b) {
+                    EventCollector.logEvent("appodeal_reward_loaded");
                     AdsUtilsCommon.rewardVideoLoaded(AppodealRewardVideoProvider.this);
                 }
 
                 @Override
                 public void onRewardedVideoFailedToLoad() {
+                    EventCollector.logEvent("appodeal_failed_To_load_reward");
                     AdsUtilsCommon.rewardVideoFailed(AppodealRewardVideoProvider.this);
                 }
 
@@ -37,11 +40,13 @@ class AppodealRewardVideoProvider implements AdsUtilsCommon.IRewardVideoProvider
 
                 @Override
                 public void onRewardedVideoShowFailed() {
+                    EventCollector.logEvent("appodeal_reward_failed");
                     returnTo.returnToWork(false);
                 }
 
                 @Override
                 public void onRewardedVideoFinished(double amount, String name) {
+                    EventCollector.logEvent("appodeal_reward_shown");
                     returnTo.returnToWork(true);
                 }
 

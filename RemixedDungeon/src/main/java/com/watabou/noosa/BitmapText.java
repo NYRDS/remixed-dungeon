@@ -18,6 +18,8 @@
 package com.watabou.noosa;
 
 import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gl.NoosaScript;
+import com.nyrds.platform.util.PUtil;
 import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -93,7 +95,11 @@ public class BitmapText extends Text {
 		
 		int length = text.length();
 		for (int i=0; i < length; i++) {
-			RectF rect = font.get( text.charAt( i ) );
+			int index = text.charAt( i );
+
+			PUtil.slog("BitmapText", "char: " + text.charAt(i) + ", index: " + index);
+
+			RectF rect = font.get( index );
 	
 			if (rect == null) {
 				rect = font.get(INVALID_CHAR);
@@ -104,7 +110,7 @@ public class BitmapText extends Text {
 			float sx = 0;
 			float sy = 0;
 			
-			PointF sp = font.glyphShift.get(text.charAt( i ));
+			PointF sp = font.glyphShift.get(index);
 			
 			if(sp != null) {
 				sx = sp.x;
@@ -143,7 +149,10 @@ public class BitmapText extends Text {
 				setHeight(h + sy);
 			}
 		}
-		
+
+
+		quads.compact();
+
 		if (length > 0) {
             setWidth(width - font.tracking);
 		}

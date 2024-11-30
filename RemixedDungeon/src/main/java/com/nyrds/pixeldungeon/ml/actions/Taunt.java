@@ -4,7 +4,6 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 
 public class Taunt extends CharAction {
@@ -25,9 +24,7 @@ public class Taunt extends CharAction {
 
         Sample.INSTANCE.play(Assets.SND_MIMIC);
 
-        hero.spend(Actor.MICRO_TICK);
         hero.readyAndIdle();
-
         return false;
     }
 }

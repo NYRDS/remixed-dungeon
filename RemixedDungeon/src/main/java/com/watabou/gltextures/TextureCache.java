@@ -1,26 +1,7 @@
-/*
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
-
 package com.watabou.gltextures;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
@@ -41,27 +22,15 @@ public class TextureCache {
 	private static final Map<Object, SmartTexture> all = new HashMap<>();
 	private static final Map<Object, TextureFilm> allFilm = new HashMap<>();
 
-	// No dithering, no scaling, 32 bits per pixel
-	private static final BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
-	static {
-		bitmapOptions.inScaled = false;
-		bitmapOptions.inDither = false;
-		bitmapOptions.inPreferredConfig = Bitmap.Config.ARGB_8888;
-	}
-
-	@Synchronized
 	public static SmartTexture createSolid(int color) {
 		String key = "1x1:" + color;
 
 		if (all.containsKey(key)) {
-
 			return all.get(key);
-
 		} else {
 
-			Bitmap bmp = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888);
+			BitmapData bmp = BitmapData.createBitmap(1, 1);
 			bmp.eraseColor(color);
-
 			SmartTexture tx = new SmartTexture(bmp);
 			all.put(key, tx);
 
@@ -101,7 +70,7 @@ public class TextureCache {
 		} else if (src instanceof SmartTexture) {
 			return (SmartTexture) src;
 		} else {
-			SmartTexture tx = new SmartTexture(getBitmap(src));
+			SmartTexture tx = new SmartTexture(getBitmapData(src));
 			all.put(src, tx);
 			return tx;
 		}
@@ -120,22 +89,20 @@ public class TextureCache {
 
 	@Synchronized
 	public static void clear() {
-
 		for (Texture txt : all.values()) {
 			txt.delete();
 		}
 		all.clear();
-		allFilm.clear();
 	}
 
 	@SneakyThrows
-	private static @NotNull Bitmap getBitmap(Object src) {
+	private static @NotNull BitmapData getBitmapData(Object src) {
 		if (src instanceof String) {
 			String resName = (String) src;
 
-			Bitmap modAsset = BitmapFactory.decodeStream(ModdingMode.getInputStream(resName));
+			BitmapData modAsset = BitmapData.decodeStream(ModdingMode.getInputStream(resName));
 
-			if(modAsset==null) {
+			if(modAsset.bmp==null) {
 				throw new ModError("Bad bitmap: "+ resName);
 			}
 
@@ -144,9 +111,9 @@ public class TextureCache {
 			}
 
 			if(ModdingMode.isAssetExist(resName)) {
-				Bitmap baseAsset = BitmapFactory.decodeStream(ModdingMode.getInputStreamBuiltIn(resName));
+				BitmapData baseAsset = BitmapData.decodeStream(ModdingMode.getInputStreamBuiltIn(resName));
 
-				if(baseAsset==null) {
+				if(baseAsset.bmp==null) {
 					throw new ModError("Bad builtin bitmap: "+ resName);
 				}
 
@@ -157,8 +124,8 @@ public class TextureCache {
 			}
 
 			return modAsset;
-		} else if (src instanceof Bitmap) {
-			return (Bitmap) src;
+		} else if (src instanceof BitmapData) {
+			return (BitmapData) src;
 		}
 
 		throw new ModError("Bad resource source for Bitmap "+ src.getClass().getName());

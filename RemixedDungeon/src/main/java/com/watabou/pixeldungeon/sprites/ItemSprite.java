@@ -1,15 +1,13 @@
 
 package com.watabou.pixeldungeon.sprites;
 
-import android.graphics.Bitmap;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.gl.NoosaScript;
 import com.nyrds.util.ModError;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.MovieClip;
-import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -77,10 +75,6 @@ public class ItemSprite extends MovieClip {
 		setOrigin(scale.x * SIZE / 2, scale.y * SIZE / 2);
 	}
 
-	public void link() {
-		link(heap);
-	}
-
 	public void link(@NotNull Heap heap) {
 		this.heap = heap;
 		float scale = heap.scale();
@@ -144,11 +138,11 @@ public class ItemSprite extends MovieClip {
 		if (heap!= null && heap.pos == from) {
 			drop();
 		} else {
-			float px = getX();
-			float py = getY();
+			float px = x;
+			float py = y;
 			drop();
 			place(from);
-			speed.offset((px - getX()) / DROP_INTERVAL, (py - getY()) / DROP_INTERVAL);
+			speed.offset((px - x) / DROP_INTERVAL, (py - y) / DROP_INTERVAL);
 		}
 	}
 
@@ -205,7 +199,7 @@ public class ItemSprite extends MovieClip {
 			}
 		}
 
-		if (getVisible()) {
+		if (getVisible())
 			if (glowing != null && glowing != Glowing.NO_GLOWING) {
 				if (glowUp && (phase += elapsed) > glowing.period) {
 					glowUp = false;
@@ -222,7 +216,6 @@ public class ItemSprite extends MovieClip {
 				ga = glowing.green * value;
 				ba = glowing.blue * value;
 			}
-		}
 	}
 
 	@Override
@@ -239,7 +232,7 @@ public class ItemSprite extends MovieClip {
 	}
 
 	public static int pick(int index, int x, int y) {
-		Bitmap bmp = TextureCache.get(Assets.ITEMS).bitmap;
+		var bmp = TextureCache.get(Assets.ITEMS).bitmap;
 		int rows = bmp.getWidth() / SIZE;
 		int row = index / rows;
 		int col = index % rows;

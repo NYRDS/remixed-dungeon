@@ -1,0 +1,83 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_10
+    targetCompatibility = JavaVersion.VERSION_1_10
+}
+
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
+    }
+}
+
+application {
+    applicationName = 'RemixedDungeon-desktop'
+    applicationDefaultJvmArgs = ['-Dassets.dir=assets']
+    mainClass = 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
+    sourceSets {
+        main {
+            java {
+                srcDir '../RemixedDungeon/src/main/java'
+                srcDir 'src/desktop/java'
+                srcDir 'src/market_none/java'
+                srcDir 'src/libgdx/java'
+            }
+        }
+    }
+}
+
+// Custom task to run the Python script
+tasks.register('generateJavaClasses', Exec) {
+    commandLine 'python3', 'make_r.py'
+}
+
+// Ensure the generateJavaClasses task runs before compileJava
+compileJava.dependsOn generateJavaClasses
+
+ext {
+    gdxVersion = '1.13.0'
+}
+tasks.withType(JavaCompile) {
+
+}
+
+distributions {
+    main {
+        contents {
+            from('../RemixedDungeon/src/main/assets') {
+                into 'assets'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation project(':annotation')
+    implementation project(':json_clone')
+
+    compileOnly project(':processor')
+    annotationProcessor project(':processor')
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'org.luaj:luaj-jse:3.0.1'
+    implementation 'info.guardianproject.netcipher:netcipher:1.2'
+    implementation 'org.hjson:hjson:3.0.0'
+    implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices
+    implementation 'org.jetbrains:annotations:24.1.0'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    implementation 'com.google.guava:guava:32.0.1-jre'
+
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+
+    implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+    implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+}

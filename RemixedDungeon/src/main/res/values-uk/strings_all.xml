@@ -907,6 +907,7 @@
   <string name="HeroClass_Rog">крадій</string>
   <string name="HeroClass_Hun">мисливиця</string>
   <string name="HeroClass_Elf">ельф</string>
+  <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">гладіатор</string>
   <string name="HeroSubClass_DescGlad">Вдала атака ближнього бою дозволяє _Гладіатору_ почати серію комбо-ударів, на протязі яких кожне наступне вдале попадання наносить більше шкоди.</string>
   <string name="HeroSubClass_NameBers">берсеркер</string>
@@ -1178,7 +1179,6 @@
   <string name="Goo_Name">Жижа</string>
   <string name="Goo_Gender">feminine</string>
   <string name="Goo_Name_Objective">Жижу</string>
-  <string name="Goo_Desc">Мало що відомо про Жижу. Скоріш за все, це навіть не істота, а згусток каналізаційної субстанції, в якій тільки-но зародилась свідомість. В будь-якому випадку тут не обійшлося без темної магії.</string>
   <string name="Goo_Info1">Жижа нагнічує себе!</string>
   <string name="Goo_Info2">хлюп... хлюп...</string>
   <string name="Goo_Info3">ХЛЮП-ХЛЮП!</string>
@@ -1255,7 +1255,6 @@
   <string name="Statue_Name_Objective">живу статую</string>
   <string name="Statue_Desc">Може здатися, що це просто ще одна звичайна статуя, але червоні очі, що виблискують в темряві, не приховують свої злі наміри. Хоча вона і зроблена з каменю, її _%s_ виглядає справжнім.</string>
   <string name="Succubus_Name">сукуб</string>
-  <string name="Succubus_Gender">femenine</string>
   <string name="Succubus_Name_Objective">сукуба</string>
   <string name="Succubus_Desc">Сукуби - демони, які набувають подоби гарних (зазвичай в готичному стилі) дівчат. Використовуючи магію, сукуби причаровують героя, позбавляючи його здатності атакувати, доки чари не розвіються.</string>
   <string name="Swarm_Name">рій мух</string>
@@ -1582,14 +1581,12 @@
   <string name="WandOfShadowbolt_Name">Паличка стріл тіней</string>
   <string name="WandOfShadowbolt_Info">Ця паличка випромінює темну, зловісну енергію.</string>
   <string name="TownGuardNPC_Name">вартовий</string>
-  <string name="TownGuardNPC_Gender">чоловічий</string>
   <string name="TownGuardNPC_Name_Objective">вартового</string>
   <string name="TownGuardNPC_Desc">Типовий вартовий міста.</string>
   <string name="TownGuardNPC_Message1">Проходимо, не затримуємося.</string>
   <string name="TownGuardNPC_Message2">Завдяки таким шукачам пригод, як ви, тут стало безпечніше.</string>
   <string name="TownGuardNPC_Message3">Гадаєш тут забагато вартових? Це ж єдине місто, в якому знаходиться спуск в гігантське підземелля, яке наповнено монстрами, чи не так?</string>
   <string name="TownsfolkNPC_Name">городянин</string>
-  <string name="TownsfolkNPC_Gender">чоловічий</string>
   <string name="TownsfolkNPC_Name_Objective">городянина</string>
   <string name="TownsfolkNPC_Desc">Один з місцевих городян. Не дивлячись не те, що це звичайний простолюдин, одежа на ньому не з дешевих.</string>
   <string name="TownsfolkNPC_Message1">О! Ще один шукач пригод, чудово! Намагайся винести з підземелля якомога більше цінностей!</string>
@@ -1597,22 +1594,19 @@
   <string name="TownsfolkNPC_Message3">Який чудовий день.</string>
   <string name="TownsfolkNPC_Message4">Сподіваюся цієї весни не затопить каналізацію. Чергового нашестя щурів нам ще не вистачало.</string>
   <string name="HealerNPC_Name">міський священик</string>
-  <string name="HealerNPC_Gender">чоловічий</string>
   <string name="HealerNPC_Name_Objective">міського священика</string>
   <string name="HealerNPC_Desc">Цей старий схожий на того, хто міг би займатись виробництвом чарівних паличок.</string>
   <string name="HealerNPC_Message1">Безкоштовне лікування для кожного шукача пригод!</string>
   <string name="HealerNPC_Message2">Якщо зголодніли чи вас , борони вас боже, поранили - повертайтеся!</string>
   <string name="HealerNPC_Message3">І чому церква не дозволяє носити нам капелюхи... тут так холодно.</string>
   <string name="ServiceManNPC_Name">співробітник</string>
-  <string name="ServiceManNPC_Gender">чоловічий</string>
   <string name="ServiceManNPC_Name_Objective">співробітника</string>
   <string name="ServiceManNPC_Desc">Рядовий робочий місцевих закладів.</string>
   <string name="TownShopkeeper_Name">крамар</string>
   <string name="TownShopkeeper_Desc">Цей чоловік - типовий крамар. Можеш не сумніватися, він вже знає тобі ціну.</string>
-  <string name="WndMovieTheatre_Watch">переглянути фільм</string>
+  <string name="TownShopkeeper_Objective">крамар</string>
   <string name="WndMovieTheatre_No">піти</string>
   <string name="WndMovieTheatre_Bye">Повертайся будь-коли, ми завжди раді вас бачити!</string>
-  <string name="WndMovieTheatre_Instruction">Вітаємо і ласкаво просимо до нашого кінотеатру! Ви маєте змогу взяти участь в особливій акції, перегляньте фільм, до того ж абсолютно безкоштовно. І якщо ви додивитесь його до кінця, то отримаєте у винагороду %d золотих монет!</string>
   <string name="WndMovieTheatre_Title">Кінотеатр</string>
   <string name="WndMovieTheatre_Thank_You">Дякуємо за участь!</string>
   <string name="WndPriest_Heal">лікування - %d золотих монет</string>
@@ -1739,7 +1733,6 @@
   <string name="GothicArmor_Info">Готична броня є вершиною мистецтва кованої броні.</string>
   <string name="ChaosArmor_Name">Обладунки Хаосу</string>
   <string name="ChaosArmor_Info">Криваво червоні пластини цієї броні з\'єднані темно-червоними ланцюгами. Вини випромінюють енергію Хаосу, щоразу, як тільки ти її торкаєшся.</string>
-  <string name="ChaosCrystal_ArmorFused">Кристал всмоктало в твою броню, і вона набула форми складеної броні</string>
   <string name="Blacksmith_Name">Троль-коваль</string>
   <string name="Blacksmith_Desc">Цей коваль-троль нічим не відрізняється від інших тролів: високий, сутулий, шкіра наче каміння за кольором і текстурою. Коваль користується не пропорційно маленькими інструментами.</string>
   <string name="Blacksmith_Gold1">Агов, людинка! Хочеш бути чимось корисним, га?  Візьми цю кірку, та наколупай мені _самородків чорного золота_, _штук 15_ буде досить. Скільки заплачу? Ти гляди який жадібний...
@@ -1826,7 +1819,6 @@
   <string name="MimicAmulet_Name_Objective">міміка</string>
   <string name="MimicAmulet_Desc">Найславетніший момент твоєї пригоди щойно обернувся пасткою.</string>
   <string name="Nightmare_Name">сонна мара</string>
-  <string name="Nightmare_Gender">femenine</string>
   <string name="Nightmare_Name_Objective">сонна мара</string>
   <string name="Nightmare_Desc">Гротескна істота, у вигляді вусиків з плоті, що безперестану смикаються. Сонна мара є втіленням зловісних думок Старого Бога.</string>
   <string name="Tengu_Info3">Попався, %s!</string>
@@ -1851,7 +1843,6 @@
   <string name="YogsHeart_Name_Objective">серце Йога</string>
   <string name="YogsHeart_Desc">На протязі багатьох століть люди вірили, що лише безсердечні здатні на справжні злі  вчинки. І все ж ти бачиш перед собою величезне серце Старого Бога, що бється.</string>
   <string name="YogsTeeth_Name">щелепа Йога</string>
-  <string name="YogsTeeth_Gender">femenine</string>
   <string name="YogsTeeth_Name_Objective">щелепа Йога</string>
   <string name="YogsTeeth_Desc">Велетенська щелепа Старого Бога, сповнена гострими як бритва зубами. Досить вдале втілення його прагнення до руйнування та поглинання всього живого.</string>
   <string name="Food_ACEat">З\'ЇСТИ</string>
@@ -2376,7 +2367,6 @@
   <string name="Hunger_Starving_0">Ти виснажено!</string>
   <string name="Hunger_Starving_1">Ти виснажений!</string>
   <string name="Hunger_Starving_2">Ти виснажена!</string>
-  <string name="HeroClass_NecromancerPerks_0">Некромант починає з 15 одиницями здоров\'я.</string>
   <string name="HeroClass_NecromancerPerks_1">Некроманти використовують ману для заклять смерті.</string>
   <string name="HeroClass_NecromancerPerks_2">Некроманти починають з унікальною робою некроманта, яка дає 1 бал мани за кожну вбиту істоту.</string>
   <string name="HeroClass_NecromancerPerks_3">Некроманти мають на початку ключ-череп від рівня 7.</string>
@@ -2403,7 +2393,6 @@
   <string name="HeroClass_HunPerks_2">Мисливиці чудово володіють зброєю дальнього бою і отримують бонус пошкодження за кожну одиниці сили понад вимоги зброї.</string>
   <string name="HeroClass_HunPerks_3">Мисливиці отримують більше одиниць здоров\'я з краплин роси.</string>
   <string name="HeroClass_HunPerks_4">Мисливиці відчувають монстрів, що поряд, навіть якщо вони ховаються за перешкодами.</string>
-  <string name="HeroClass_ElfPerks_0">Ельфи починають із 15 одиницями здоров\'я та 9 сили.</string>
   <string name="HeroClass_ElfPerks_1">Ельфи мають імунітет проти сплутування коріннями.</string>
   <string name="HeroClass_ElfPerks_2">Ельфи починають із покращеним дерев\'яним луком та в\'язанкою стріл.</string>
   <string name="HeroClass_ElfPerks_3">Ельфи чудово справляються з луками та дуже швидкі.</string>
@@ -2574,4 +2563,11 @@
   <string name="ShamanElder_Gender">masculine</string>
   <string name="Bee_Gender">masculine</string>
   <string name="SpiderElite_Gender">masculine</string>
+  <string name="AC_Necromancy">Некромантія</string>
+  <string name="AC_Devour">Поглинання</string>
+  <string name="WndModsDisclaimer_title">Модифікації</string>
+  <string name="PlagueDoctor_Name">чумний лікар</string>
+  <string name="PlagueDoctor_Gender">masculine</string>
+  <string name="PlagueDoctor_Name_Objective">чумний лікар</string>
+  <string name="PlagueDoctor_Desc">Цей горбатий чоловік повністю вкритий шкірою. Від нього тхне гострий запах ліків і... часнику?</string>
 </resources>

@@ -6,82 +6,203 @@
 
 local RPD = require "scripts/lib/commonClasses"
 
-local mob = require"scripts/lib/mob"
+local mob = require "scripts/lib/mob"
 
-local npc
-local client
+questList = {
+    {
+        {
+            prologue = { text = 'PlagueDoctorQuest_1_1_Prologue' },
+            requirements = { item = { kind = "Carcass of Rat", quantity = 5 } },
+            in_progress = { text = "PlagueDoctorQuest_1_1_InProgress" },
+            reward = { item = { kind = "RatArmor", quantity = 1 } },
+            epilogue = { text = "PlagueDoctorQuest_1_1_Epilogue" }
+        },
+        {
+            prologue = { text = 'PlagueDoctorQuest_1_2_Prologue' },
+            requirements = { item = { kind = "Carcass of Snail", quantity = 10 } },
+            in_progress = { text = "PlagueDoctorQuest_1_2_InProgress" },
+            reward = { item = { kind = "Gold", quantity = 50 } },
+            epilogue = { text = "PlagueDoctorQuest_1_2_Epilogue" }
+        }
+    },
+    {
+        {
+            prologue = { text = 'PlagueDoctorQuest_2_1_Prologue' },
+            requirements = { item = { kind = "Moongrace.Seed", quantity = 2 } },
+            in_progress = { text = "PlagueDoctorQuest_2_1_InProgress" },
+            reward = { item = { kind = "PotionOfMana", quantity = 1 } },
+            epilogue = { text = "PlagueDoctorQuest_2_1_Epilogue" }
+        },
+        {
+            prologue = { text = 'PlagueDoctorQuest_2_2_Prologue' },
+            requirements = { item = { kind = "Sungrass.Seed", quantity = 2 } },
+            in_progress = { text = "PlagueDoctorQuest_2_2_InProgress" },
+            reward = { item = { kind = "PotionOfHealing", quantity = 1 } },
+            epilogue = { text = "PlagueDoctorQuest_2_2_Epilogue" }
+        }
+    },
+    {
+        {
+            prologue = { text = 'PlagueDoctorQuest_3_1_Prologue' },
+            requirements = { mob = { kind = "Bat", quantity = 1 } },
+            in_progress = { text = "PlagueDoctorQuest_3_1_InProgress" },
+            reward = { item = { kind = "ScrollOfUpgrade", quantity = 1 } },
+            epilogue = { text = "PlagueDoctorQuest_3_1_Epilogue" }
+        },
+        {
+            prologue = { text = 'PlagueDoctorQuest_3_2_Prologue' },
+            requirements = { mob = { kind = "DeathKnight", quantity = 1 } },
+            in_progress = { text = "PlagueDoctorQuest_3_2_InProgress" },
+            reward = { item = { kind = "PotionOfStrength", quantity = 1 } },
+            epilogue = { text = "PlagueDoctorQuest_3_2_Epilogue" }
+        }
+    },
+    {
+        {
+            prologue = { text = 'PlagueDoctorQuest_4_1_Prologue' },
+            requirements = { item = { kind = "Carcass of Warlock", quantity = 5 } },
+            in_progress = { text = "PlagueDoctorQuest_4_1_InProgress" },
+            reward = { item = { kind = "PotionOfMight", quantity = 1 } },
+            epilogue = { text = "PlagueDoctorQuest_4_1_Epilogue" }
+        },
+        {
+            prologue = { text = 'PlagueDoctorQuest_4_2_Prologue' },
+            requirements = { item = { kind = "Carcass of KoboldIcemancer", quantity = 5 } },
+            in_progress = { text = "PlagueDoctorQuest_4_2_InProgress" },
+            reward = { item = { kind = "PotionOfMight", quantity = 1 } },
+            epilogue = { text = "PlagueDoctorQuest_4_2_Epilogue" }
+        }
+    },
+    {
+        {
+            prologue = { text = 'PlagueDoctorQuest_5_1_Prologue' },
+            requirements = { mob = { kind = "Succubus", quantity = 2 } },
+            in_progress = { text = "PlagueDoctorQuest_5_1_InProgress" },
+            reward = { special = {} },
+            epilogue = { text = "PlagueDoctorQuest_5_1_Epilogue" }
+        }
+    }
 
-local lesserPrice
-local greatPrice
-local removeCursePrice
-
-local dialog = function(index)
-    if index == 0 then
-        if client:gold() >= lesserPrice then
-            client:spendGold(lesserPrice)
-            client:getSprite():emitter():burst( RPD.Sfx.ShaftParticle.FACTORY, 2 );
-            RPD.affectBuff(client,RPD.Buffs.Blessed,100)
-            return
-        end
-        npc:say("Bishop_no_money")
-    end
-
-    if index == 1 then
-        if client:gold() >= greatPrice then
-            client:spendGold(greatPrice)
-            client:getSprite():emitter():burst( RPD.Sfx.ShaftParticle.FACTORY, 5 );
-            RPD.affectBuff(client,RPD.Buffs.Blessed,500)
-            RPD.affectBuff(client,RPD.Buffs.Blessed,500)
-            return
-        end
-        npc:say("Bishop_no_money")
-    end
-
-    if index == 2 then
-        if client:gold() >= removeCursePrice then
-            client:spendGold(removeCursePrice)
-            RPD.item("ScrollOfRemoveCurse"):uncurse(client:getBelongings())
-            RPD.glogp("ScrollOfRemoveCurse_Proced")
-            client:getSprite():emitter():start(RPD.Sfx.ShadowParticle.UP, 0.05, 10);
-            return
-        end
-
-        npc:say("Bishop_no_money")
-    end
-
-    if index == 3 then
-        npc:say("Bishop_bye")
-    end
-end
-
+}
 
 return mob.init({
     interact = function(self, chr)
-        client = chr
-        npc = self
+        local data = mob.restoreData(self)
 
-        local priceFactor = RPD.RemixedDungeon:getDifficultyFactor() * math.pow( 1.05, (client:lvl()-1))
+        local questIndex = data["questIndex"]
+        local questVariant = data["questVariant"]
 
-        lesserPrice      = math.floor(100 * priceFactor)
-        greatPrice       = math.floor(500 * priceFactor)
-        removeCursePrice = math.floor(200 * priceFactor)
+        if data['needToGiveSpecialReward'] then
+            local npc = luajava.bindClass("com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC")
+            npc:questCompleted()
 
-        RPD.chooseOption( dialog,
-                "Bishop_title",
-                "Bishop_text",
-                RPD.textById("Bishop_lesser_bless"):format(lesserPrice),
-                RPD.textById("Bishop_great_bless"):format(greatPrice),
-                RPD.textById("Bishop_remove_curse"):format(removeCursePrice),
-                "Bishop_not_interested"
-        )
+            data['needToGiveSpecialReward'] = false
+            mob.storeData(self, data)
+            return
+        end
+
+        if data["questIndex"] > #questList then
+            RPD.showQuestWindow(self, "PlagueDoctorQuest_AllDone")
+            return
+        end
+
+        if not data["questInProgress"] then
+            questVariant = math.random(1, #questList[questIndex])
+            RPD.debug("Quest "..questIndex.." "..questVariant.." "..#questList[questIndex])
+
+            RPD.showQuestWindow(self, questList[questIndex][questVariant].prologue.text)
+
+            data["questInProgress"] = true
+            data["questVariant"] = questVariant
+
+            mob.storeData(self, data)
+            return
+        else
+            local quest = questList[questIndex][questVariant]
+
+            local function giveReward()
+                local rewardItem = quest.reward.item
+                if rewardItem then
+                    local reward = RPD.item(rewardItem.kind, rewardItem.quantity)
+                    chr:collectAnimated(reward)
+                end
+
+                if quest.reward.special then
+                    data['needToGiveSpecialReward'] = true
+                end
+
+                RPD.showQuestWindow(self, quest.epilogue.text)
+
+                data["questInProgress"] = false
+                data["questIndex"] = questIndex + 1
+                mob.storeData(self, data)
+
+
+            end
+
+            local function inProgress()
+                RPD.showQuestWindow(self, quest.in_progress.text)
+            end
+
+            local requirements = quest.requirements
+
+            if requirements.item then
+
+                local itemDesc = requirements.item
+                local wantedItem = chr:checkItem(itemDesc.kind)
+                local wantedQty = itemDesc.quantity
+                local actualQty = wantedItem:quantity()
+
+                if actualQty >= wantedQty then
+                    if wantedQty == actualQty then
+                        wantedItem:removeItem()
+                    else
+                        wantedItem:quantity(actualQty - wantedQty)
+                    end
+
+                    return giveReward()
+                end
+                return inProgress()
+            end
+
+            if requirements.mob then
+                local wantedMob = requirements.mob.kind
+                local wantedQty = requirements.mob.quantity
+
+                local pets = chr:getPets_l()
+
+                local actualQty = 0
+
+                for _, mob in pairs(pets) do
+                    if mob:getEntityKind() == wantedMob then
+                        actualQty = actualQty + 1
+                    end
+                end
+
+                if actualQty >= wantedQty then
+
+                    for _, mob in pairs(pets) do
+                        if mob:getEntityKind() == wantedMob and wantedQty > 0 then
+                            wantedQty = wantedQty - 1
+                            mob:makePet(self)
+                        end
+                    end
+
+                    return giveReward()
+                end
+                return inProgress()
+            end
+        end
     end,
-    die = function(self, cause)
-        local hero = RPD.Dungeon.hero
-        hero:ht(math.max(hero:ht()/2,1))
-        hero:damage(hero:ht(), self)
 
-        hero:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
-
-        RPD.playSound( "snd_cursed" )
-    end,
+    spawn = function(self, level)
+        level:setCompassTarget(self:getPos())
+        local data = mob.restoreData(self)
+        local questIndex = data["questIndex"]
+        if not questIndex then
+            data["questIndex"] = 1
+            data["questInProgress"] = false
+            mob.storeData(self, data)
+        end
+    end
 })

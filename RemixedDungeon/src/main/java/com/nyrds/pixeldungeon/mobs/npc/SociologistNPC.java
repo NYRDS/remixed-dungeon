@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
-import android.Manifest;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.DownloadProgressWindow;
@@ -44,8 +42,7 @@ public class SociologistNPC extends ImmortalNPC implements DownloadStateListener
             @Override
             public void onSelect(int index) {
                 if (index == 0) {
-                    String[] requiredPermissions = {Manifest.permission.INTERNET};
-                    Game.instance().doPermissionsRequest(SociologistNPC.this, requiredPermissions);
+                    Game.requestInternetPermission(SociologistNPC.this);
                 }
             }
         });

@@ -77,12 +77,12 @@ public class Tengu extends Boss implements IZapper {
 	}
 	
 	@Override
-	public boolean getCloser(int target) {
+	public boolean getCloser(int target,  boolean ignorePets) {
 		if (level().fieldOfView[target]) {
 			jump();
 			return true;
 		} else {
-			return super.getCloser( target );
+			return super.getCloser( target, ignorePets );
 		}
 	}
 	

@@ -43,7 +43,7 @@ public class MagicWellPainter extends Painter {
 			water = waterClass.newInstance();
 		}
 		water.seed( c.x + level.getWidth() * c.y, 1 );
-		level.blobs.put( waterClass, water );
+		level.blobPut( waterClass, water );
 		
 		room.entrance().set( Room.Door.Type.REGULAR );
 	}

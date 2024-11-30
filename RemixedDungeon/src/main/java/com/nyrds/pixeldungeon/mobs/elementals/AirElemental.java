@@ -30,6 +30,16 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 		setSkillLevel(3 + lvl() / 10);
 	}
 
+	@Override
+	public boolean getCloser(int cell, boolean ignorePets) {
+		if (getState() instanceof Hunting
+				&& level().distance(getPos(), cell) < skillLevel() - 1) {
+			return getFurther(cell);
+		}
+
+		return super.getCloser(cell, ignorePets);
+	}
+
 	public void adjustStats(int depth) {
 		hp(ht(depth * 3 + 1));
 		baseDefenseSkill = depth * 2 + 1;
@@ -41,15 +51,6 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 		dmgMax = ht() / 4;
 	}
 
-	@Override
-	public boolean getCloser(int target) {
-		if (getState() instanceof Hunting
-				&& level().distance(getPos(), target) < skillLevel() - 1) {
-			return getFurther(target);
-		}
-
-		return super.getCloser(target);
-	}
 
 	@Override
     public boolean canAttack(@NotNull Char enemy) {

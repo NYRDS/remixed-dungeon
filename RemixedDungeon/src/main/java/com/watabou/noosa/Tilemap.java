@@ -30,7 +30,7 @@ import java.util.Arrays;
 
 import lombok.Getter;
 import lombok.Setter;
-
+import com.nyrds.platform.gl.NoosaScript;
 public class Tilemap extends Visual {
 
 	@Getter

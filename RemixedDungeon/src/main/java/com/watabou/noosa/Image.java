@@ -1,29 +1,15 @@
-/*
- * Copyright (C) 2012-2014  Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
 
 package com.watabou.noosa;
 
 import com.nyrds.pixeldungeon.windows.IPlaceable;
 import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gl.NoosaScript;
 import com.nyrds.util.ModError;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
-import com.watabou.pixeldungeon.utils.Utils;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.nio.FloatBuffer;
 
@@ -71,9 +57,12 @@ public class Image extends Visual implements IPlaceable {
         TextureFilm film = TextureCache.getFilm(tx, cellSize, cellSize);
 
         RectF frame = film.get(index);
+ /*
         if (frame == null) {
             throw new ModError(Utils.format("bad index %d for image %s", index, String.valueOf(TextureCache.getKey(TextureCache.get(tx)))));
         }
+
+  */
         frame(frame);
     }
 
@@ -82,8 +71,13 @@ public class Image extends Visual implements IPlaceable {
         frame(defaultFrame);
     }
 
-    public void frame(RectF frame) {
+    public void frame(@NotNull RectF frame) {
         this.frame = frame;
+
+        if(frame.top < 0 || frame.top > 1 || frame.left < 0 || frame.left > 1 || frame.bottom < 0 || frame.bottom > 1 || frame.right < 0 || frame.right > 1
+            || frame.top > frame.bottom || frame.left > frame.right) {
+            throw new ModError("frame out of bounds");
+        }
 
         setWidth(frame.width() * texture.width);
         setHeight(frame.height() * texture.height);
@@ -94,6 +88,12 @@ public class Image extends Visual implements IPlaceable {
 
     public void frame(int left, int top, int width, int height) {
         frame(texture.uvRect(left, top, left + width, top + height));
+/*
+        if(frame.top < 0 || frame.top > 1 || frame.left < 0 || frame.left > 1 || frame.bottom < 0 || frame.bottom > 1 || frame.right < 0 || frame.right > 1
+                || frame.top > frame.bottom || frame.left > frame.right) {
+            throw new ModError("frame out of bounds");
+        }
+*/
     }
 
     public RectF frame() {
@@ -181,6 +181,7 @@ public class Image extends Visual implements IPlaceable {
                 rm, gm, bm, am,
                 ra, ga, ba, aa);
 
+        updateFrame();
         updateVerticesBuffer();
 
         script.drawQuad(verticesBuffer);

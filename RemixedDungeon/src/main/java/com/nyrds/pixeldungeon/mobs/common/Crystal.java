@@ -40,31 +40,31 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 	public Crystal() {
 
 		adjustStats(Dungeon.depth);
-		ensureWand();
+		ensureWand(false);
 	}
 
 	static public Crystal makeShadowLordCrystal() {
 		Crystal crystal = new Crystal();
 		crystal.kind = 2;
-		crystal.ensureWand();
+		crystal.ensureWand(true);
 		return crystal;
 	}
 
 	@NotNull
-	private Wand ensureWand() {
+	private Wand ensureWand(boolean regen) {
 		Wand wand = getBelongings().getItem(Wand.class);
-		if (wand != null) {
+		if (wand != null && !regen) {
 			return wand;
 		}
 
 		var item = SimpleWand.createRandomSimpleWand().upgrade(Dungeon.depth/3);
-		if(kind == 2) {
+		if(kind == 2 && Random.Float(1) < 0.25f) {
 			item = new WandOfShadowbolt().upgrade(Dungeon.depth/2);
 		}
 
 		item.collect(this); //no treasury check, we want to keep the wand in the crystal
 
-		return ensureWand();
+		return ensureWand(false);
 	}
 
 	public void adjustStats(int depth) {
@@ -130,7 +130,6 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 		Level level = level();
 
-
 		LevelObject obj = level.getTopLevelObject(pos);
 
 		if (obj != null && obj.getEntityKind().equals(PEDESTAL)) {
@@ -156,7 +155,7 @@ public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
 
 	@Override
 	protected int zapProc(@NotNull Char enemy, int damage) {
-		ensureWand().mobWandUse(this, enemy.getPos());
+		ensureWand(false).mobWandUse(this, enemy.getPos());
 		return 0;
 	}
 

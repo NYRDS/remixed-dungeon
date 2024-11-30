@@ -4,8 +4,6 @@ import static com.watabou.pixeldungeon.actors.Actor.TICK;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.windows.WndChar;
 
 public class Interact extends CharAction {
     public final Char chr;
@@ -15,6 +13,9 @@ public class Interact extends CharAction {
     }
 
     public boolean act(Char hero) {
+        if(!chr.isOnStage()) {
+            return true;
+        }
 
         if (hero.adjacent(chr)) {
 
@@ -34,8 +35,6 @@ public class Interact extends CharAction {
                 return false;
             }
         }
-
-
 
         if (Dungeon.level.fieldOfView[chr.getPos()] && hero.getCloser(chr.getPos())) {
             return true;

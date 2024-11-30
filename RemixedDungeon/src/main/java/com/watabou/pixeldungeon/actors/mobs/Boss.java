@@ -4,7 +4,7 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.ShadowLord;
-import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
@@ -44,7 +44,7 @@ abstract public class Boss extends Mob {
 	public boolean act() {
 		if (state instanceof Hunting) {
 			if (battleMusic != null) {
-				Music.INSTANCE.play(battleMusic, true);
+				MusicManager.INSTANCE.play(battleMusic, true);
 			}
 		}
 		return super.act();

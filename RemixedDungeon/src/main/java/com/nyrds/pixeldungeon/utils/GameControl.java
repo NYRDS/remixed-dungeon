@@ -53,7 +53,7 @@ public class GameControl {
         resDesc.put("modVersion", String.valueOf(ModdingMode.activeModVersion()));
         resDesc.put("difficulty",  String.valueOf(difficulty));
 
-        resDesc.put("version", Game.version);
+        resDesc.put("version", GameLoop.version);
         resDesc.put("donation",Integer.toString(GamePreferences.donated()));
 
         EventCollector.logEvent("game", resDesc);

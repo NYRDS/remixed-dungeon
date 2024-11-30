@@ -721,7 +721,6 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
   <string name="ZombieGnoll_Info">Le Gnoll-Zombie a ressuscité!</string>
   <string name="HeartOfDarkness_Name">Coeur des ténébres</string>
   <string name="HeartOfDarkness_Info">Le coeur noir et palpitant de l\'Esprit perfide.</string>
-  <string name="HeartOfDarkness_Gender">masuculine</string>
   <string name="Badges_Yog_Slain">Yog-Dzewa tué</string>
   <string name="Badges_ShadowLord_Slain">Seigneur de l\'Ombre tué</string>
   <string name="Badges_SpiderQueen_Slain">Reine des Araignées tuée</string>
@@ -1055,7 +1054,6 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
   <string name="GoldenSword_Info">Normalement les armes faites d\'un tel métal sont considérées comme de la décoration. Cependant cette lame semble être très coupante.</string>
   <string name="GoldenSword_Gender">feminine</string>
   <string name="GoldenStatue_Name">statue en or</string>
-  <string name="GoldenStatue_Gender">féminine</string>
   <string name="GoldenStatue_Name_Objective">statue en or</string>
   <string name="GoldenStatue_Desc">C\'est impensable, cette magnifique statue n\'est pas une décoration, mais une créature malicieuse attendant l\'aventurier sans méfiance. Au premier abord vous auriez juré que cette _%s_ était juste une partie de son bras.</string>
   <string name="NecromancerNPC_Name">nécromancien</string>
@@ -1160,7 +1158,6 @@ Vous maintenez le %s prête à l\'emploi.</string>
   <string name="Shuriken_Gender">masculine</string>
   <string name="Tamahawk_Name">tomahawk</string>
   <string name="Tamahawk_Info">Cette hache de jet n\'est pas si lourde, mais la manier efficacement requiert une force importante.</string>
-  <string name="Tamahawk_Gender">masculin</string>
   <string name="Kusarigama_Name">kusarigama</string>
   <string name="Kusarigama_Info">Cette arme est constituée d\'une chaîne de métal, avec une faux à une extrémité, et une lourde masse en fer à l\'autre.</string>
   <string name="Kusarigama_Gender">masculine</string>
@@ -1668,6 +1665,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="ServiceManNPC_Desc">Un employé habituel d\'un établissement local.</string>
   <string name="TownShopkeeper_Name">commerçant</string>
   <string name="TownShopkeeper_Desc">Ce type est un commerçant typique. Vous devinez qu\'il sait déjà quel est votre prix. </string>
+  <string name="TownShopkeeper_Objective">commerçant</string>
   <string name="WndMovieTheatre_Watch">Regarder une publicité</string>
   <string name="WndMovieTheatre_No">s\'en aller</string>
   <string name="WndMovieTheatre_Bye">Revenez quand vous le voulez, nous serons ravis de vous revoir ! </string>
@@ -2431,7 +2429,6 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
   <string name="Hunger_Starving_0">Vous êtes affamé !</string>
   <string name="Hunger_Starving_1">Vous êtes affamé !</string>
   <string name="Hunger_Starving_2">Vous êtes affamé !</string>
-  <string name="HeroClass_NecromancerPerks_0">Les Nécromanciens commencent avec 15 points de vie.</string>
   <string name="HeroClass_NecromancerPerks_1">Les Nécromanciens utilisent le mana pour lancer les sorts de la Mort.</string>
   <string name="HeroClass_NecromancerPerks_2">Les Nécromanciens commencent avec une robe de Nécromancien unique, qui fournit 1 point de mana pour chaque créature tuée.</string>
   <string name="HeroClass_NecromancerPerks_3">Les Nécromanciens commencent avec une Clé Squelette de l\'étage 7.</string>
@@ -2662,13 +2659,6 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="BardNPC_Name_Objective">barde</string>
   <string name="BardNPC_Gender">masculine</string>
   <string name="BardNPC_Desc">Le barde de la ville joue de son luth.</string>
-  <string name="Welcome_Text_30">
-    remix.30.0\n
-    - Jouabilité:\n
-    -- Capacités pour tout le monde !\n
-    -- L\'auberge est désormais ouverte !\n
-    - Des bugs ont été corrigés\n
-    </string>
   <string name="Roar_Name">Rugissement</string>
   <string name="Roar_Info">Ce puissant rugissement ne manquera pas de terrifier vos ennemis et d\'inspirer vos alliés.</string>
   <string name="LightningBolt_Name">Trait de foudre</string>
@@ -2869,4 +2859,11 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
   <string name="WndModSelect_ReallyDelete">Voulez-vous vraiment l\'effacer ?</string>
   <string name="WndModSelect_AreYouSure">Effacer le mod: %s, en êtes-vous sûr?</string>
   <string name="Challenges_Names_8">Pas de ville</string>
+  <string name="AC_Necromancy">Nécromancie</string>
+  <string name="AC_Devour">Dévorer</string>
+  <string name="WndModsDisclaimer_title">Mods</string>
+  <string name="PlagueDoctor_Name">médecin de la peste</string>
+  <string name="PlagueDoctor_Gender">masculine</string>
+  <string name="PlagueDoctor_Name_Objective">médecin de la peste</string>
+  <string name="PlagueDoctor_Desc">Cet homme bossu est complètement recouvert de cuir. Il sent très fort les préparations médicinales et... l\'aïl ?</string>
 </resources>

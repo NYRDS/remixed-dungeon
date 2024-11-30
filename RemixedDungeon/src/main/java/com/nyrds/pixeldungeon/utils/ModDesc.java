@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.utils;
 
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -30,6 +31,6 @@ public class ModDesc {
     }
 
     public boolean isCompatible() {
-        return rpdVersion <= (RemixedDungeon.versionCode % 2000);
+        return rpdVersion <= (GameLoop.versionCode % 2000);
     }
 }

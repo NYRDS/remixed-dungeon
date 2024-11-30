@@ -1,16 +1,17 @@
 package com.nyrds.pixeldungeon.game;
 
 import android.view.KeyEvent;
-import android.view.MotionEvent;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.gl.Gl;
+import com.nyrds.platform.gl.NoosaScript;
 import com.nyrds.platform.input.Keys;
+import com.nyrds.platform.input.PointerEvent;
 import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingMode;
@@ -18,9 +19,9 @@ import com.nyrds.util.ReportingExecutor;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Gizmo;
-import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
 
 import org.luaj.vm2.LuaError;
@@ -35,6 +36,18 @@ public class GameLoop {
 
     public static final AtomicInteger loadingOrSaving = new AtomicInteger();
     public static final Object stepLock = new Object();
+    private final Executor stepExecutor = new ReportingExecutor();
+
+    public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
+
+    public static String version = Utils.EMPTY_STRING;
+    public static int versionCode = 0;
+
+    // Actual size of the screen
+    public static int width;
+    public static int height;
+
+    public static volatile boolean softPaused = false;
 
     public static final Object stepLock = new Object();
     public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
@@ -49,8 +62,7 @@ public class GameLoop {
     public static volatile boolean softPaused = false;
 
     private final Executor executor = new ReportingExecutor();
-    private final Executor stepExecutor = new ReportingExecutor();
-    public final Executor soundExecutor = new ReportingExecutor();
+    public Executor soundExecutor = new ReportingExecutor();
 
     public Executor serviceExecutor = new ReportingExecutor();
 
@@ -81,7 +93,7 @@ public class GameLoop {
     public Runnable doOnResume;
 
     // Accumulated touch events
-    public final ConcurrentLinkedQueue<MotionEvent> motionEvents = new ConcurrentLinkedQueue<>();
+    public final ConcurrentLinkedQueue<PointerEvent> motionEvents = new ConcurrentLinkedQueue<>();
 
     // Accumulated key events
     public final ConcurrentLinkedQueue<KeyEvent> keysEvents = new ConcurrentLinkedQueue<>();
@@ -110,8 +122,8 @@ public class GameLoop {
     }
 
     public static void setNeedSceneRestart() {
-            if (!(instance().scene instanceof InterlevelScene)) {
-                instance().requestedReset = true;
+        if (!(instance().scene instanceof InterlevelScene)) {
+            instance().requestedReset = true;
         }
     }
 
@@ -214,11 +226,14 @@ public class GameLoop {
         SystemText.invalidate();
         TextureCache.clear();
 
-        Music.INSTANCE.resume();
+        MusicManager.INSTANCE.enable(GamePreferences.music());
+        MusicManager.INSTANCE.resume();
+
+        Sample.INSTANCE.enable(GamePreferences.soundFx());
         Sample.INSTANCE.resume();
 
         if (doOnResume != null) {
-            GameLoop.pushUiTask(() -> {
+            GameLoop.pushUiTask( () -> {
                         doOnResume.run();
                         doOnResume = null;
                     }
@@ -230,7 +245,7 @@ public class GameLoop {
     public void onFrame() {
         SystemTime.tick();
         long rightNow = SystemTime.now();
-        step = Math.min((now == 0 ? 0 : rightNow - now), 250);
+        step = Math.min((now == 0 ? 0 : rightNow - now),250);
         now = rightNow;
 
         framesSinceInit++;
@@ -286,7 +301,7 @@ public class GameLoop {
         }
 
         if (framesSinceInit > 2 && !Game.softPaused && loadingOrSaving.get() == 0) {
-            stepExecutor.execute(this::step);
+            update();
         }
 
         NoosaScript.get().resetCamera();
@@ -300,7 +315,7 @@ public class GameLoop {
     }
 
     @SneakyThrows
-    public void step() {
+    public void update() {
         synchronized (stepLock) {
             elapsed = timeScale * step * 0.001f;
             if (scene != null) {
@@ -317,12 +332,12 @@ public class GameLoop {
         Camera.reset();
 
         if (scene != null) {
-            EventCollector.setSessionData("pre_scene", scene.getClass().getSimpleName());
+            EventCollector.setSessionData("pre_scene",scene.getClass().getSimpleName());
             scene.destroy();
         }
         scene = requestedScene;
         scene.create();
-        EventCollector.setSessionData("scene", scene.getClass().getSimpleName());
+        EventCollector.setSessionData("scene",scene.getClass().getSimpleName());
 
         elapsed = 0f;
         timeScale = 1f;

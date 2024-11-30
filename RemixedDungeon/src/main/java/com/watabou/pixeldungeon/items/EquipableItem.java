@@ -110,7 +110,7 @@ public abstract class EquipableItem extends Item {
 
 		hero.spend( time2equip( hero ) );
 		
-		if (collect && !collect( hero.getBelongings().backpack )) {
+		if (collect && !collect( belongings.backpack )) {
 			doDrop(hero);
 		}
 				

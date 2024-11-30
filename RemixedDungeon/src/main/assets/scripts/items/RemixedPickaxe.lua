@@ -39,7 +39,7 @@ return itemLib.init{
         return {action_mine}
     end,
 
-    getBoolean = function(self, key)
+    getBoolean = function(self,item, key)
         return self.data[key]
     end,
 
@@ -57,11 +57,12 @@ return itemLib.init{
                 return
             end
 
-           --[[
+
             if not mineableLevels[levelKind] then
                 return
             end
-]]
+
+            local time_to_mine = 1
             local mined = false
             local tryMine = function(cell)
                 if mined then

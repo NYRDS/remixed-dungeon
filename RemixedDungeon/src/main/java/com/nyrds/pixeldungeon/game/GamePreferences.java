@@ -2,9 +2,9 @@ package com.nyrds.pixeldungeon.game;
 
 import android.annotation.SuppressLint;
 
-import com.nyrds.pixeldungeon.support.Ads;
+import com.nyrds.platform.support.Ads;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.audio.Music;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -31,7 +31,7 @@ public class GamePreferences {
     }
 
     public static void music(boolean value) {
-        Music.INSTANCE.enable(value);
+        MusicManager.INSTANCE.enable(value);
         Preferences.INSTANCE.put(Preferences.KEY_MUSIC, value);
     }
 
@@ -210,11 +210,11 @@ public class GamePreferences {
     }
 
     public static int limitTimeoutIndex(int value) {
-        return 	Math.max(Math.min(value, RemixedDungeon.MOVE_TIMEOUTS.length-1),0);
+        return 	Math.max(Math.min(value, GameLoop.MOVE_TIMEOUTS.length-1),0);
     }
 
     public static double getMoveTimeout() {
-        return RemixedDungeon.MOVE_TIMEOUTS[limitTimeoutIndex(moveTimeout())];
+        return GameLoop.MOVE_TIMEOUTS[limitTimeoutIndex(moveTimeout())];
     }
 
     public static int quickSlots() {

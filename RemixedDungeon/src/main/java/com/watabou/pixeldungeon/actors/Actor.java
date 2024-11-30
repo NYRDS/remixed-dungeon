@@ -1,8 +1,6 @@
 
 package com.watabou.pixeldungeon.actors;
 
-import android.annotation.SuppressLint;
-
 import com.google.common.collect.Multimap;
 import com.google.common.collect.MultimapBuilder;
 import com.nyrds.LuaInterface;
@@ -24,460 +22,456 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-import com.watabou.utils.SystemTime;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 import lombok.val;
 
 
 public abstract class Actor implements Bundlable, NamedEntityKind {
-	
-	public static final float TICK	= 1f;
-	public static final float MICRO_TICK	= 0.001f;
-	private static float realTimeMultiplier = 1f;
 
-	private static final Map<Actor, Integer> skipCounter = new HashMap<>();
+    public static final float TICK = 1f;
+    private static float realTimeMultiplier = 1f;
 
-	@Packable
-	float time = 0;
-	@Packable
-	float prevTime = -1;
+    private static ArrayList<Actor> npcActors;
 
-	private boolean added = false;
+    @Packable
+    float time;
+    @Packable
+    float prevTime = -1;
 
-	public static void setRealTimeMultiplier(float realTimeMultiplier) {
-		Actor.realTimeMultiplier = realTimeMultiplier;
-	}
+    private boolean added = false;
 
-	protected abstract boolean act();
+    public static void setRealTimeMultiplier(float realTimeMultiplier) {
+        Actor.realTimeMultiplier = realTimeMultiplier;
+    }
 
-	public void spend( float time ) {
-		//GLog.debug("%s spend %2.4f", getEntityKind(), time);
-		if(Util.isDebug() && current!=this) {
-			if(this instanceof Char) {
-				GLog.debug("%s spends time on %s move!", getEntityKind(), current!=null?current.getEntityKind():"no one");
-				//throw new TrackedRuntimeException(String.format("%s spends time on %s move!", getEntityKind(), current!=null?current.getEntityKind():"no one"));
-			}
-			if(this instanceof Hero && time > 5) {
-				GLog.debug("hero long spend!");
-			}
-		}
-		this.time += time;
-	}
+    protected abstract boolean act();
 
-	public void postpone( float time ) {
-		if (this.time < now + time) {
-			this.time = now + time;
-		}
-	}
+    private static final float SPEND_EMA_ALPHA = 0.1f;
+    private float spendEma = 1f;
 
-	protected float cooldown() {
-		return time - now;
-	}
+    public void spend(float d_t) {
+        GLog.debug("%s spend %4.1f", getEntityKind(), d_t);
+        if(this instanceof Char) {
+            if (d_t < 0.01) {
+                GLog.debug("sus!");
+            }
+            if (d_t > 5) {
+                GLog.debug("sus!");
+            }
+        }
+        time += d_t;
+        spendEma = (1 - SPEND_EMA_ALPHA) * spendEma + SPEND_EMA_ALPHA * d_t;
+        if (spendEma < 0.01) {
+            GLog.debug("spendEma = %4.2f", spendEma);
+        }
+    }
 
-	@LuaInterface
-	public void deactivateActor() {
-		time = Util.BIG_FLOAT;
-	}
+    public void postpone(float d_t) {
+        if (time < now + d_t) {
+            time = now + d_t;
+        }
+    }
 
-	@Override
-	public void storeInBundle( Bundle bundle ) {
-	}
+    @LuaInterface
+    public float cooldown() {
+        return time - now;
+    }
 
-	@Override
-	public void restoreFromBundle( Bundle bundle ) {
-	}
+    @LuaInterface
+    public void deactivateActor() {
+        time = Util.BIG_FLOAT;
+        Actor.remove(this);
+    }
 
-	@Override
-	public boolean dontPack() {
-		return false;
-	}
-	
-	// **********************
-	// *** Static members ***
-	
-	private static final HashSet<Actor> all = new HashSet<>();
-	private static Actor current;
-	
-	private static float now = 0;
-	
-	@SuppressLint("UseSparseArrays")
-	public static final Multimap<Integer, Char> chars = MultimapBuilder.hashKeys().arrayListValues().build();
-	
-	public static void clearActors() {
-		now = 0;
-		chars.clear();
+    @Override
+    public void storeInBundle(Bundle bundle) {
+    }
 
-		for(Actor a : all) {
-			a.added = false;
-		}
+    @Override
+    public void restoreFromBundle(Bundle bundle) {
+    }
 
-		all.clear();
+    @Override
+    public boolean dontPack() {
+        return false;
+    }
 
-		CharsList.reset();
-		current = null;
-	}
-	
-	public static void fixTime() {
-		Hero hero = Dungeon.hero;
+    // **********************
+    // *** Static members ***
 
-		if (hero.valid() && all.contains(hero)) {
-			Statistics.duration += now;
-		}
-		
-		float min = Util.BIG_FLOAT;
-		for (Actor a : all) {
-			if (a.time < min) {
-				min = a.time;
-			}
-		}
-		for (Actor a : all) {
-			a.time -= min;
-			a.prevTime -= min;
-		}
-		now = 0;
-	}
-	
-	public static void init(@NotNull Level level) {
-		clearActors();
-		
-		addDelayed( Dungeon.hero, -Float.MIN_VALUE );
-		
-		for (Mob mob : level.mobs) {
-			mob.regenSprite();
-			add( mob );
-		}
-		
-		for (Blob blob : level.blobs.values()) {
-			add( blob );
-		}
-	}
-	
-	public static void occupyCell(@NotNull Char ch ) {
-		if(ch.getPos() == Level.INVALID_CELL && ! (ch instanceof DummyChar)) {
-			throw new TrackedRuntimeException("trying to spawn mob in void");
-		}
-		chars.put(ch.getPos(), ch);
-	}
-	
-	public static void freeCell( Char actor ) {
-		chars.remove(actor.getPos(), actor);
-	}
-	
-	/*protected*/final public void next() {
-		//Log.i("Main loop", String.format("next:\nNext: %s Current: %s", this, current));
-		if (current == this) {
-			//Log.i("Main loop", "next == current");
+    private static final HashSet<Actor> all = new HashSet<>();
+    private static Actor current;
 
-			current = null;
-		}
-	}
+    private static float now = 0;
 
-	private static void processReaTime(float elapsed) {
+    {
+        time = now;
+    }
 
-		now += elapsed * realTimeMultiplier;
+    public static final Multimap<Integer, Char> chars = MultimapBuilder.hashKeys().hashSetValues().build();
 
-		Actor next;
-		while ((next=getNextActor(now)) != null) {
+    public static void clearActors() {
+        now = 0;
+        chars.clear();
 
-			//Log.i("Main loop", String.format("%s %4.2f %4.2f",next.getClass().getSimpleName(),now,next.time));
+        for (Actor a : all) {
+            a.added = false;
+        }
 
-			//float timeBefore = next.time;
+        all.clear();
 
-			current = next;
-			EventCollector.setSessionData("actor", next.getEntityKind());
-			next.act();
+        CharsList.reset();
+        current = null;
+    }
+
+    public static void fixTime() {
+        Hero hero = Dungeon.hero;
+
+        if (hero.valid() && all.contains(hero)) {
+            Statistics.duration = hero.actorTime();
+        }
+
+        float heroTime = hero.actorTime();
+
+        now = heroTime;
+
+        for (Actor a : all) {
+            if (a.time < now) {
+                a.time = now;
+            }
+        }
+    }
+
+    public static void init(@NotNull Level level) {
+        clearActors();
+
+        addDelayed(Dungeon.hero, -Float.MIN_VALUE);
+
+        for (Mob mob : level.mobs) {
+            mob.regenSprite();
+            add(mob);
+        }
+
+        for (Blob blob : level.blobs.values()) {
+            add(blob);
+        }
+    }
+
+    public static void occupyCell(@NotNull Char ch) {
+        if (ch.getPos() == Level.INVALID_CELL && !(ch instanceof DummyChar)) {
+            throw new TrackedRuntimeException("trying to spawn mob in void");
+        }
+        chars.put(ch.getPos(), ch);
+    }
+
+    public static void freeCell(Char actor) {
+        chars.remove(actor.getPos(), actor);
+    }
+
+    final public void next() {
+        //Log.i("Main loop", String.format("next:\nNext: %s Current: %s", this, current));
+        if (current == this) {
+            //Log.i("Main loop", "next == current");
+
+            current = null;
+        }
+    }
+
+    private static void processReaTime(float elapsed) {
+
+        now += elapsed * realTimeMultiplier;
+
+        Actor next;
+        while ((next = getNextActor(now)) != null) {
+
+            //Log.i("Main loop", String.format("%s %4.2f %4.2f",next.getClass().getSimpleName(),now,next.time));
+
+            //float timeBefore = next.time;
+
+            current = next;
+            EventCollector.setSessionData("actor", next.getEntityKind());
+            next.act();
 /*
 			if(!(next.time>timeBefore)) {
 				//Log.i("Main loop", String.format("%s %4.2f, time not increased!",next.getClass().getSimpleName(),next.time));
 			}
 */
-		}
-
-	}
-
-	public static void processTurnBased() {
-
-		// action still in progress
-		if (current != null && !current.timeout()) {
-			checkSkips(current);
-			return;
-		}
+        }
+
+    }
+
+
+    public static void processTurnBased(float elapsed) {
+        Hero hero = Dungeon.hero;
+        if(!hero.isAlive()) {
+            if(Util.isDebug()) {
+                return;
+            }
+            if (heroMotionInProgress() || motionInProgress()) {
+                return;
+            }
+        }
+        // action still in progress
+        if (current == hero && !current.timeout()) {
+            return;
+        }
+
+        GLog.debug("Main loop start - %d actors", all.size());
+        while ((current = nextActor()) != null) {
+            now = current.time;
+
+            if (hero.actorTime() > now + TICK * 2) {
+                if (motionInProgress()) {
+                    return;
+                }
+            }
+
+            GLog.debug("actor %s %4.1f hero: %4.1f now: %4.1f", current.getEntityKind(), current.time, hero.actorTime(), now);
+
+            if (current != hero) {
+                current.act();
+                current = null;
+                if(!hero.isAlive()) {
+                    break;
+                }
+            } else {
+                current.act();
+                break;
+            }
+        }
+    }
 
-		Actor actor;
+    public static void process(float elapsed) {
+        if (Dungeon.realtime()) {
+            processReaTime(elapsed);
+        } else {
+            processTurnBased(elapsed);
+        }
+    }
 
-		//Log.i("Main loop", "start");
-		while ((actor=getNextActor(Util.BIG_FLOAT)) != null) {
+    public static Actor getNextActor(float upTo) {
 
-			if (actor instanceof Char && ((Char)actor).isAlive() && ((Char)actor).hasSprite() && ((Char)actor).getSprite().doingSomething()) {
-				checkSkips(actor);
-				GLog.debug("skip: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
-				// If it's character's turn to act, but its sprite
-				// is moving, wait till the movement is over
-
-				return;
-			}
-
-			resetSkips(actor);
-
-			GLog.debug("Main actor loop: %s %4.4f %x",actor.getEntityKind(), actor.time, actor.hashCode());
-			if(actor instanceof Char) {
-				//GLog.debug("%s %d action %s",actor.getEntityKind(), ((Char) actor).getId(),((Char) actor).curAction);
-			}
+        var copyOfAll = all.toArray(new Actor[0]);
 
-			current = actor;
+        Set<Char> toRemove = new HashSet<>();
+        Actor next = null;
 
-			float timeBefore = actor.time;
+        chars.clear();
 
-			EventCollector.setSessionData("actor", actor.getEntityKind());
+        //Log.i("Main loop","getNextActor");
 
-			if (actor.act() && Dungeon.hero.isAlive()) {
-				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
-				actor.next();
-			} else {
-				//Log.i("Main loop", String.format("%s next %x",actor.getEntityKind(), actor.hashCode()));
-				break;
-			}
+        for (Actor actor : copyOfAll) {
+            if (actor instanceof Char) {
+                Char ch = (Char) actor;
 
-			if(actor.time == timeBefore && all.contains(actor)) { // don't need this check for removed actors
-				var error = String.format("actor %s has same timestamp after act!", actor.getEntityKind());
-				if(Util.isDebug()) {
-					EventCollector.logException(error);
-				} else {
-					actor.spend(TICK);
-					EventCollector.logException(error);
-				}
-			}
+                if (!ch.level().cellValid(ch.getPos())) {
+                    actor.next();
+                    toRemove.add(ch);
+                }
+            }
+        }
 
-			if(SystemTime.timeSinceTick() > 50) {
-				break;
-			}
-		}
-	}
+        for (Char ch : toRemove) {
+            ch.regenSprite();
+        }
 
-	private static void resetSkips(Actor actor) {
-		if(!Util.isDebug()) {
-			return;
-		}
-		skipCounter.put(actor, 0);
-	}
+        all.removeAll(toRemove);
+        copyOfAll = all.toArray(new Actor[0]);
 
-	private static void checkSkips(Actor actor) {
-		if(!Util.isDebug()) {
-			return;
-		}
 
-		if(actor.getEntityKind().equals("Hero")) {
-			return;
-		}
+        for (Actor actor : copyOfAll) {
 
-		Integer skips = skipCounter.get(actor);
-		if(skips == null) {
-			skips = 0;
-		}
-		skips++;
-
-		if (skips > 1000) {
-			GLog.debug("Stall!");
-		}
-
-		skipCounter.put(actor, skips);
-
-		//GLog.debug("skip: %s ", skipCounter.toString());
-	}
-
-	public static void process(float elapsed) {
-		if(Dungeon.realtime()) {
-			processReaTime(elapsed);
-		} else {
-			processTurnBased();
-		}
-	}
+            boolean busy = false;
 
-	public static Actor getNextActor(float upTo) {
+            //fill chars
+            if (actor instanceof Char) {
+                Char ch = (Char) actor;
 
-		var copyOfAll = all.toArray(new Actor[0]);
+                if (ch.hasSprite()) {
+                    final CharSprite chSprite = ch.getSprite();
 
-		Set<Char> toRemove = new HashSet<>();
-		Actor next     = null;
+                    if (chSprite.doingSomething()) {
+                        busy = true;
+                    }
+                }
 
-		chars.clear();
+                chars.put(ch.getPos(), ch);
+            }
 
-		//Log.i("Main loop","getNextActor");
+            //select actor to act
+            if (actor.time < upTo) {
+                upTo = actor.time;
+                next = actor;
+            }
 
-		for (Actor actor : copyOfAll) {
-			if (actor instanceof Char) {
-				Char ch = (Char)actor;
+            if (actor.time == upTo && !busy) {
+                next = actor;
+                //GLog.debug("not busy");
+            }
+        }
 
-				if(!ch.level().cellValid(ch.getPos())) {
-					actor.next();
-					toRemove.add(ch);
-				}
-			}
-		}
-
-		for(Char ch : toRemove) {
-			ch.regenSprite();
-		}
-
-		all.removeAll(toRemove);
-		copyOfAll = all.toArray(new Actor[0]);
-
-
-		for (Actor actor : copyOfAll) {
-
-			boolean busy = false;
-
-			//fill chars
-			if (actor instanceof Char) {
-				Char ch = (Char)actor;
-
-				if(ch.hasSprite()) {
-					final CharSprite chSprite = ch.getSprite();
-
-					if (chSprite.doingSomething()) {
-						busy = true;
-					}
-				}
-
-				chars.put(ch.getPos(), ch);
-			}
-
-			//select actor to act
-			if (actor.time < upTo) {
-				upTo = actor.time;
-				next = actor;
-			}
-
-			if(actor.time == upTo && !busy) {
-				next = actor;
-				//GLog.debug("not busy");
-			}
-		}
-
-		Actor.now = upTo;
-
-		return next;
-	}
-
-	protected boolean timeout() {
-		return false;
-	}
-
-	public static void add( Actor actor ) {
-		add( actor, now );
-	}
-	
-	public static void addDelayed( Actor actor, float delay ) {
-		add( actor, now + delay );
-	}
-	
-	private static void add( Actor actor, float time ) {
-		
-		if (all.contains( actor )) {
-			return;
-		}
-		
-		all.add( actor );
-		actor.time += time;
-
-		actor.added = true;
-
-		if (actor instanceof Char) {
-			Char ch = (Char)actor;
-
-			CharsList.add(ch,ch.getId());
-
-			chars.put(ch.getPos(), ch);
-			all.addAll(ch.buffs());
-
-			for(var item: ch.getBelongings()) {
-				all.add(item);
-			}
-		}
-
-
-	}
-	
-	public static void remove( Actor actor ) {
-		
-		if (actor != null) {
-			actor.next();
-			actor.added = false;
-			all.remove( actor );
-		}
-	}
-
-	@LuaInterface
-	public static boolean motionInProgress() {
-		for(Actor ch : all) {
-			if (ch instanceof Char){
-				if (((Char) ch).getSprite().doingSomething()) {
-					return true;
-				}
-			}
-		}
-		GLog.debug("no motion in progress");
-		return false;
-	}
-
-	@LuaInterface
-	public static Char getRandomChar() {
-		var ret = Random.element(chars.values());
-		GLog.debug("selected %s at %d", ret.getEntityKind(),ret.getPos());
-		return ret;
-	}
-
-	@LuaInterface
-	public static Char findChar(int pos) {
-		val ret = chars.get(pos);
-		if (ret.isEmpty()) {
-
-			return null;
-		}
-		return ret.iterator().next();
-	}
-
-	@LuaInterface
-	public boolean myMove() {
-		return current == this;
-	}
-
-	public static HashSet<Actor> all() {
-		return all;
-	}
-
-	@LuaInterface
-	public float actorTime() {
-		return time;
-	}
-
-	@LuaInterface
-	static public float localTime() {
-		return now;
-	}
-
-	@Override
-	public String name() {
-		return getEntityKind();
-	}
-
-	@Override
-	public String getEntityKind() {
-		return getClass().getSimpleName();
-	}
-
-	public boolean testAct() {
-		return act();
-	}
-
-	public boolean isOnStage() {
-		return added && GameScene.isSceneReady();
-	}
+        Actor.now = upTo;
+
+        return next;
+    }
+
+    static ArrayList<Actor> toActBeforeHero = new ArrayList<>();
+
+    static Actor nextActor() {
+        toActBeforeHero.clear();
+        chars.clear();
+
+        for (Actor actor : all) {
+            actor.useCell();
+            toActBeforeHero.add(actor);
+        }
+
+        Collections.sort(toActBeforeHero, (a1, a2) -> Float.compare(a1.time, a2.time));
+
+        return toActBeforeHero.get(0);
+    }
+
+    protected void useCell() {
+    }
+
+    protected boolean timeout() {
+        return false;
+    }
+
+    public static void add(Actor actor) {
+        add(actor, now);
+    }
+
+    public static void addDelayed(Actor actor, float delay) {
+        add(actor, now + delay);
+    }
+
+    private static void add(Actor actor, float new_time) {
+        actor.added = true;
+
+        if (all.contains(actor)) {
+            return;
+        }
+
+        all.add(actor);
+
+        if(actor.time < new_time) {
+            actor.time = new_time;
+        }
+
+        if (actor instanceof Char) {
+            Char ch = (Char) actor;
+
+            CharsList.add(ch, ch.getId());
+
+            chars.put(ch.getPos(), ch);
+            all.addAll(ch.buffs());
+            for (var item : ch.getBelongings()) {
+                all.add(item);
+            }
+        }
+
+
+    }
+
+    public static void remove(Actor actor) {
+
+        if (actor != null) {
+            actor.next();
+            actor.added = false;
+            if (actor instanceof Char) {
+                freeCell((Char) actor);
+            }
+            all.remove(actor);
+        }
+    }
+
+    @LuaInterface
+    public static boolean heroMotionInProgress() {
+        if(!Dungeon.hero.valid()) {
+            return false;
+        }
+
+        return Dungeon.hero.getSprite().doingSomething();
+    }
+
+    @LuaInterface
+    public static boolean motionInProgress() {
+        for (Actor ch : all.toArray(new Actor[0])) {
+            if (ch instanceof Char) {
+                if (((Char) ch).getSprite().doingSomething()) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    @LuaInterface
+    public static Char getRandomChar() {
+        var ret = Random.element(chars.values());
+        GLog.debug("selected %s at %d", ret.getEntityKind(), ret.getPos());
+        return ret;
+    }
+
+    @LuaInterface
+    public static Char findChar(int pos) {
+        val ret = chars.get(pos);
+        if (ret.isEmpty()) {
+            return null;
+        }
+
+        for (val retChar:  ret) {
+            if (retChar.isOnStage() && retChar.isAlive()) {
+                return retChar;
+            }
+        }
+
+        return null;
+    }
+
+    @LuaInterface
+    public boolean myMove() {
+        return current == this;
+    }
+
+    public static HashSet<Actor> all() {
+        return all;
+    }
+
+    @LuaInterface
+    public float actorTime() {
+        return time;
+    }
+
+    @LuaInterface
+    static public float localTime() {
+        return now;
+    }
+
+    @Override
+    public String name() {
+        return getEntityKind();
+    }
+
+    @Override
+    public String getEntityKind() {
+        return getClass().getSimpleName();
+    }
+
+    public boolean testAct() {
+        return act();
+    }
+
+    public boolean isOnStage() {
+        return added && GameScene.isSceneReady();
+    }
 }

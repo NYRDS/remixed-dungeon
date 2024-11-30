@@ -2,13 +2,13 @@ package com.nyrds.platform.game;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.Unzip;
 import com.nyrds.util.UnzipStateListener;
-import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndError;
@@ -18,32 +18,24 @@ import com.watabou.pixeldungeon.windows.WndModSelect;
 
 import java.io.FileNotFoundException;
 
-import javax.microedition.khronos.opengles.GL10;
-
 import lombok.SneakyThrows;
 
 
-public class InstallMod extends RemixedDungeon implements UnzipStateListener, InterstitialPoint{
-
-    private boolean permissionsRequested = false;
+public class InstallMod extends RemixedDungeon implements UnzipStateListener {
 
     public InstallMod() {
     }
 
     private String modFileName = Utils.EMPTY_STRING;
 
+    private Intent intent;
 
     @Override
-    public void onDrawFrame(GL10 gl) {
-        super.onDrawFrame(gl);
-
-        if(!permissionsRequested) {
-            permissionsRequested = true;
-
-            String[] requiredPermissions = {};
-            Game.instance().doPermissionsRequest(this, requiredPermissions);
-        }
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        intent = getIntent();
     }
+
 
     private WndMessage unzipProgress;
 
@@ -90,20 +82,14 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, In
     }
 
     @SneakyThrows
-    @Override
-    public void returnToWork(boolean result) {
 
-        GLog.i("Install mod: %b", result);
-
-        if(!result) {
-            return;
-        }
+    public void installMod() {
 
         if(gameLoop.scene == null) {
+            GLog.debug("No scene found");
             return;
         }
 
-        Intent intent = getIntent();
         Uri data = intent.getData();
 
         if(data==null) {
@@ -111,6 +97,7 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener, In
         }
 
         toast("Checking %s", String.valueOf(data.getPath()));
+        GLog.debug("%s", data.getPath());
 
         var modDesc = Unzip.inspectMod(getContentResolver().openInputStream(data));
         modFileName = modDesc.name;

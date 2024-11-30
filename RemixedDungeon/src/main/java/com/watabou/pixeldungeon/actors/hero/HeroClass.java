@@ -25,6 +25,7 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
@@ -83,6 +84,9 @@ public enum HeroClass implements CharModifier {
     private static final String NON_EXPERT = "non_expert";
     public static final String QUICKSLOT = "quickslot";
     public static final String KNOWN_ITEMS = "knownItems";
+    public static final String ALLIES = "allies";
+    public static final String KIND = "kind";
+    public static final String SPELL = "spell";
 
     private final Class<? extends ClassArmor> armorClass;
 
@@ -123,6 +127,7 @@ public enum HeroClass implements CharModifier {
         hero.updateAwareness();
     }
 
+    @SneakyThrows
     private void initForClass(Hero hero, String className) {
         if (initHeroes.has(className)) {
             try {
@@ -130,13 +135,26 @@ public enum HeroClass implements CharModifier {
 
                 hero.getBelongings().setupFromJson(classDesc);
 
+                if(classDesc.has(ALLIES)) {
+                    val allies = classDesc.getJSONArray(ALLIES);
+                    for (int i = 0; i < allies.length(); ++i) {
+                        val desc = allies.getJSONObject(i);
+                        if (desc.has(KIND)) {
+                            var mob = MobFactory.mobByName(desc.getString(KIND));
+                            mob.fromJson(desc);
+                            mob.makePet(hero);
+                            hero.initialAlies.add(mob);
+                        }
+                    }
+                }
+
                 if (classDesc.has(QUICKSLOT)) {
                     int slot = 0;
                     JSONArray quickslots = classDesc.getJSONArray(QUICKSLOT);
                     for (int i = 0; i < quickslots.length(); ++i) {
 
                         val desc = quickslots.getJSONObject(i);
-                        if (desc.has("kind")) {
+                        if (desc.has(KIND)) {
                             Item item = ItemFactory.createItemFromDesc(desc);
                             if (item.valid()) {
                                 item = hero.getItem(item.getEntityKind());
@@ -147,8 +165,8 @@ public enum HeroClass implements CharModifier {
                             }
                         }
 
-                        if (desc.has("spell")) {
-                            String spellKind = desc.getString("spell");
+                        if (desc.has(SPELL)) {
+                            String spellKind = desc.getString(SPELL);
                             if (SpellFactory.hasSpellForName(spellKind)) {
                                 Spell spell = SpellFactory.getSpellByName(spellKind);
                                 QuickSlot.selectItem(spell.itemForSlot(), slot);

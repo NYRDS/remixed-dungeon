@@ -1,23 +1,27 @@
 package com.watabou.pixeldungeon.windows;
 
-import android.content.Intent;
-import android.net.Uri;
-
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ModDesc;
-import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Touchscreen;
+import com.nyrds.platform.storage.AndroidSAF;
+import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
+
+import java.io.IOException;
 
 
 public class WndModInfo extends Window {
+
+    public static String exportedModDir;
 
     public WndModInfo(ModDesc desc) {
         super();
@@ -61,19 +65,42 @@ public class WndModInfo extends Window {
             TouchArea siteTouch = new TouchArea(site) {
                 @Override
                 protected void onClick(Touchscreen.Touch touch) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(siteUrl));
-                    Game.instance().startActivity(Intent.createChooser(intent, siteUrl));
+                    Game.openUrl(StringsManager.getVar(R.string.Mods_AuthorSite), siteUrl);
                 }
             };
             add(siteTouch);
         }
 
-        HBox buttons = new HBox(width);
-        mainLayout.add(buttons);
+        if(desc.installed) {
+            RedButton exportButton = new RedButton("Save on Device") {
+                @Override
+                protected void onClick() {
+                    exportedModDir = desc.installDir;
+                    AndroidSAF.pickDirectoryForModExport();
+                    super.onClick();
+                }
+            };
+
+            exportButton.setSize(width, Window.BUTTON_HEIGHT);
+            mainLayout.add(exportButton);
+        }
         add(mainLayout);
 
         mainLayout.setRect(0,0, width, mainLayout.childsHeight());
 
         resize(width, (int) mainLayout.childsHeight());
+    }
+
+    public static void onDirectoryPicked()  {
+        if(AndroidSAF.mBaseDstPath != null) {
+            GameLoop.execute(() -> {
+                try {
+                    var outputStream = AndroidSAF.outputStreamToDocument(Game.instance(), AndroidSAF.mBaseDstPath, exportedModDir + ".zip");
+                    FileSystem.zipFolderTo(outputStream, FileSystem.getExternalStorageFile(exportedModDir), 99, pathname -> true);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+        }
     }
 }

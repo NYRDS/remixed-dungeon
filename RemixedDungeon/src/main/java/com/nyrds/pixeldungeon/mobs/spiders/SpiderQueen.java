@@ -70,13 +70,13 @@ public class SpiderQueen extends Boss {
 	}
 	
 	@Override
-	public boolean getCloser(int target) {
+	public boolean getCloser(int target,  boolean ignorePets) {
 		if (hp() < ht() / 2) {
 			if (getState() instanceof Hunting && level().distance(getPos(), target) < 5) {
 				return getFurther(target);
 			}
 		}
-		return super.getCloser(target);
+		return super.getCloser(target, ignorePets);
 	}
 
 	@Override

@@ -1,7 +1,6 @@
 package com.watabou.noosa.tweeners;
 
 import com.nyrds.LuaInterface;
-import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.PointF;
