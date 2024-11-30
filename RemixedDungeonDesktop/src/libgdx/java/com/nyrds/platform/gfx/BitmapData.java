@@ -58,7 +58,7 @@ public class BitmapData {
         return (getPixel (x,y) & 0xff) == 0;
     }
 
-    private int color(int color) {
+    public static int color(int color) {
         final int as = 0;
         final int rs = 8;
         final int gs = 16;

@@ -186,6 +186,7 @@ public class Visual extends Gizmo implements IPlaceable{
 	}
 	
 	public void tint( int color, float strength ) {
+		//color = BitmapData.color(color);
 		rm = gm = bm = 1f - strength;
 		ra = ((color >> 16) & 0xFF) / 255f * strength;
 		ga = ((color >> 8) & 0xFF) / 255f * strength;
@@ -200,6 +201,7 @@ public class Visual extends Gizmo implements IPlaceable{
 	}
 	
 	public void color( int color ) {
+		//color = BitmapData.color(color);
 		color( ((color >> 16) & 0xFF) / 255f, ((color >> 8) & 0xFF) / 255f, (color & 0xFF) / 255f );
 	}
 	

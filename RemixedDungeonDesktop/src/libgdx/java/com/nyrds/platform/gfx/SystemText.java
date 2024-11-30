@@ -138,7 +138,6 @@ public class SystemText extends Text {
     @Override
     public void kill() {
         super.kill();
-        destroy();
     }
 
     @Override
