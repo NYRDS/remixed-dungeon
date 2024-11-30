@@ -58,16 +58,16 @@ public class BitmapData {
         return (getPixel (x,y) & 0xff) == 0;
     }
 
-    public static int color(int color) {
+    private int color(int color) {
         final int as = 0;
         final int rs = 8;
         final int gs = 16;
         final int bs = 24;
 
-        int a = (color & (0xFF << as)) >> as;
-        int r = (color & (0xFF << rs)) >> rs;
-        int g = (color & (0xFF << gs)) >> gs;
-        int b = (color & (0xFF << bs)) >> bs;
+        int a = (color >> as) & 0xFF;
+        int r = (color >> rs) & 0xFF;
+        int g = (color >> gs) & 0xFF;
+        int b = (color >> bs) & 0xFF;
         return (a << 24) + (r << 16) + (g << 8) + (b);
     }
 

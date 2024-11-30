@@ -43,11 +43,8 @@ public class TextureCache {
 		String key = "1x1:" + color;
 
 		if (all.containsKey(key)) {
-
 			return all.get(key);
-
 		} else {
-
 			BitmapData bmp = BitmapData.createBitmap(1, 1);
 			bmp.eraseColor(color);
 
