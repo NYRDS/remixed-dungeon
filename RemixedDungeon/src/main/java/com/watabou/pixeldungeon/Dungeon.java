@@ -690,7 +690,7 @@ public class Dungeon {
             try {
                 GameLoop.loadingOrSaving.incrementAndGet();
 
-                val bundle = Bundle.readFromFile(fileName);
+                val bundle = gameBundle(fileName);
                 if (bundle.isPresent()) {
                     loadGameFromBundle(bundle.get(), fullLoad);
                 }

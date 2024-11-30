@@ -49,22 +49,8 @@ public class GameLoop {
 
     public static volatile boolean softPaused = false;
 
-    public static final Object stepLock = new Object();
-    public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
-
-    public static String version = Utils.EMPTY_STRING;
-    public static int versionCode = 0;
-
-    // Actual size of the screen
-    public static int width;
-    public static int height;
-
-    public static volatile boolean softPaused = false;
-
     private final Executor executor = new ReportingExecutor();
     public Executor soundExecutor = new ReportingExecutor();
-
-    public Executor serviceExecutor = new ReportingExecutor();
 
     private final ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
 
@@ -171,39 +157,6 @@ public class GameLoop {
         switchScene(instance().sceneClass);
     }
 
-
-    public static boolean smallResScreen() {
-        return width() <= 320 && height() <= 320;
-    }
-
-    public static int width() {
-        return width;
-    }
-
-    public static void width(int width) {
-        GameLoop.width = width;
-    }
-
-    public static int height() {
-        return height;
-    }
-
-    public static void height(int height) {
-        GameLoop.height = height;
-    }
-
-    public static boolean isAlpha() {
-        return version.contains("alpha") || version.contains("in_dev");
-    }
-
-    public static boolean isDev() {
-        return version.contains("in_dev");
-    }
-
-    public static void switchNoFade(Class<? extends PixelScene> c) {
-        PixelScene.noFade = true;
-        switchScene(c);
-    }
     static public void runOnMainThread(Runnable runnable) {
         pushUiTask(() -> {
             Game.instance().runOnUiThread(runnable);
@@ -256,45 +209,27 @@ public class GameLoop {
                 while ((task = uiTasks.poll()) != null) {
                     task.run();
                 }
-            }
-        }
 
-
-        if (framesSinceInit>2) {
-            Runnable task;
-            while ((task = uiTasks.poll()) != null) {
-                task.run();
-            }
-
-            if (!softPaused) {
-                try {
-                    step();
-                } catch (LuaError e) {
-                    throw ModdingMode.modException(e);
-                } catch (Exception e) {
-                    throw new TrackedRuntimeException(e);
-
-                    if (!Game.softPaused && loadingOrSaving.get() == 0) {
-                        try {
-                            if (requestedReset) {
-                                requestedReset = false;
-                                switchScene(sceneClass.newInstance());
-                                return;
-                            }
-
-                            while (!motionEvents.isEmpty()) {
-                                Touchscreen.processEvent(motionEvents.poll());
-                            }
-
-                            while (!keysEvents.isEmpty()) {
-                                Keys.processEvent(keysEvents.poll());
-                            }
-
-                        } catch (LuaError e) {
-                            throw ModdingMode.modException(e);
-                        } catch (Exception e) {
-                            throw new TrackedRuntimeException(e);
+                if (!Game.softPaused && loadingOrSaving.get() == 0) {
+                    try {
+                        if (requestedReset) {
+                            requestedReset = false;
+                            switchScene(sceneClass.newInstance());
+                            return;
                         }
+
+                        while (!motionEvents.isEmpty()) {
+                            Touchscreen.processEvent(motionEvents.poll());
+                        }
+
+                        while (!keysEvents.isEmpty()) {
+                            Keys.processEvent(keysEvents.poll());
+                        }
+
+                    } catch (LuaError e) {
+                        throw ModdingMode.modException(e);
+                    } catch (Exception e) {
+                        throw new TrackedRuntimeException(e);
                     }
                 }
             }
