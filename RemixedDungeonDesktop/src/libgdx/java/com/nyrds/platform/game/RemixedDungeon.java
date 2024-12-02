@@ -75,7 +75,7 @@ public class RemixedDungeon extends Game {
 	}
 
 	public static boolean isDev() {
-		return true;
+		return false;
 	}
 
 
