@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.platform.util.PUtil;
 import com.watabou.glwrap.Matrix;
 import com.watabou.noosa.Text;
 
@@ -20,15 +21,16 @@ public class SystemText extends Text {
     private final FreeTypeFontParameter fontParameters;
     private final BitmapFont font;
     private final GlyphLayout glyphLayout;
+    private final GlyphLayout spaceLayout; // New instance to measure space width
     private boolean multiline = false;
 
-    private final ArrayList<String> lines = new ArrayList<>();;
+    private final ArrayList<ArrayList<String>> lines = new ArrayList<>();
 
     private static float fontScale = Float.NaN;
 
     private static final SystemTextPseudoBatch batch = new SystemTextPseudoBatch();
     private static final float oversample = 4;
-
+    private ArrayList<Boolean> wordMask = null;
     static {
         generator = new FreeTypeFontGenerator(Gdx.files.internal("../assets/fonts/pixel_font.ttf"));
     }
@@ -39,6 +41,8 @@ public class SystemText extends Text {
 
         font = generator.generateFont(fontParameters);
         glyphLayout = new GlyphLayout();
+        spaceLayout = new GlyphLayout(); // Initialize spaceLayout
+        spaceLayout.setText(font, " "); // Measure the width of a space
     }
 
     private FreeTypeFontParameter getFontParameters(float baseLine) {
@@ -66,6 +70,8 @@ public class SystemText extends Text {
 
         font = generator.generateFont(fontParameters);
         glyphLayout = new GlyphLayout();
+        spaceLayout = new GlyphLayout(); // Initialize spaceLayout
+        spaceLayout.setText(font, " "); // Measure the width of a space
         this.text(text);
         this.multiline = multiline;
         wrapText();
@@ -89,40 +95,44 @@ public class SystemText extends Text {
     }
 
     private void wrapText() {
-
         if (multiline && maxWidth == Integer.MAX_VALUE) {
             return;
         }
 
         lines.clear();
+        if(mask != null) {
+            wordMask = new ArrayList<>();
+        }
 
+        int index = 0;
         // Perform wrapping based on maxWidth
         String[] paragraphs = text.split("\n");
         for (String paragraph : paragraphs) {
             if (paragraph.isEmpty()) {
-                lines.add("");
+                lines.add(new ArrayList<>());
                 continue;
             }
             String[] words = paragraph.split("\\s+");
-            String line = "";
+            ArrayList<String> currentLine = new ArrayList<>();
+            float line_width = 0;
             for (String word : words) {
-                if (line.isEmpty()) {
-                    line = word;
-                } else {
-                    String candidate = line + " " + word;
-                    glyphLayout.setText(font, candidate);
-                    if (glyphLayout.width / oversample <= maxWidth) {
-                        //PUtil.slog("text", "line: " + line + " width: " + glyphLayout.width + " max: " + maxWidth);
-                        line = candidate;
-                    } else {
-                        //PUtil.slog("text", "line: " + line + " width: " + glyphLayout.width + " max: " + maxWidth);
-                        lines.add(line);
-                        line = word;
-                    }
+                glyphLayout.setText(font, word);
+                if(mask != null) {
+                    wordMask.add(mask[index]);
                 }
+                if ((line_width + glyphLayout.width + spaceLayout.width)/oversample <= maxWidth) {
+                    currentLine.add(word);
+                    line_width += glyphLayout.width + spaceLayout.width;
+                } else {
+                    lines.add(currentLine);
+                    currentLine = new ArrayList<>();
+                    currentLine.add(word);
+                    line_width = glyphLayout.width + spaceLayout.width;
+                }
+                index+=word.length();
             }
-            if (!line.isEmpty()) {
-                lines.add(line);
+            if (!currentLine.isEmpty()) {
+                lines.add(currentLine);
             }
         }
     }
@@ -131,7 +141,6 @@ public class SystemText extends Text {
     public void destroy() {
         super.destroy();
         font.dispose();
-
     }
 
     @Override
@@ -142,33 +151,40 @@ public class SystemText extends Text {
     @Override
     protected void updateMatrix() {
         if (dirtyMatrix) {
-
             Matrix.setIdentity(matrix);
             Matrix.translate(matrix, x, y);
             if (angle != 0) {
                 Matrix.rotate(matrix, angle);
             }
-
             Matrix.scale(matrix, scale.x / oversample, scale.y / oversample);
-
             dirtyMatrix = false;
         }
     }
 
     @Override
     public void draw() {
-        updateMatrix();
-        SystemTextPseudoBatch.textBeingRendered = this;
-
-        float y = 0;
-        for (String line : lines) {
-            if (!line.isEmpty()) {
-                glyphLayout.setText(font, line);
-                font.draw(batch, glyphLayout, 0, y);
-            }
-            y += glyphLayout.height + 5;
+        if(dirty) {
+            lines.clear();
+            measure();
         }
 
+        updateMatrix();
+        SystemTextPseudoBatch.textBeingRendered = this;
+        float y = 0;
+        int wi = 0;
+        for (ArrayList<String> line : lines) {
+            float x = 0;
+            for (String word : line) {
+                glyphLayout.setText(font, word);
+                if(wordMask == null || wordMask.get(wi)) {
+                    font.draw(batch, glyphLayout, x, y);
+                }
+                x += glyphLayout.width + spaceLayout.width; // Use spaceLayout.width
+                wi++;
+            }
+
+            y += glyphLayout.height + 5;
+        }
     }
 
     @Override
@@ -190,13 +206,17 @@ public class SystemText extends Text {
         // Calculate total height and maximum width for wrapped lines
         float totalHeight = 0;
         float maxWidth = 0;
-        for (String line : lines) {
+        for (ArrayList<String> line : lines) {
             if (!line.isEmpty()) {
-                glyphLayout.setText(font, line);
-                totalHeight += glyphLayout.height + 7;
-                if (glyphLayout.width > maxWidth) {
-                    maxWidth = glyphLayout.width;
+                float line_width = 0;
+                for (String word : line) {
+                    glyphLayout.setText(font, word);
+                    line_width += glyphLayout.width + spaceLayout.width; // Use spaceLayout.width
                 }
+                if (line_width > maxWidth) {
+                    maxWidth = line_width;
+                }
+                totalHeight += glyphLayout.height + 5;
             }
         }
         setWidth(maxWidth);

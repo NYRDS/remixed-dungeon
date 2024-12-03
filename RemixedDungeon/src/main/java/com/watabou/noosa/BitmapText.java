@@ -97,7 +97,7 @@ public class BitmapText extends Text {
 		for (int i=0; i < length; i++) {
 			int index = text.charAt( i );
 
-			PUtil.slog("BitmapText", "char: " + text.charAt(i) + ", index: " + index);
+			//PUtil.slog("BitmapText", "char: " + text.charAt(i) + ", index: " + index);
 
 			RectF rect = font.get( index );
 	
