@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.util.PUtil;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.glwrap.Matrix;
 import com.watabou.noosa.Text;
 
@@ -52,6 +53,7 @@ public class SystemText extends Text {
 
         final FreeTypeFontParameter fontParameters;
         fontParameters = new FreeTypeFontParameter();
+        fontParameters.characters = FreeTypeFontGenerator.DEFAULT_CHARS + StringsManager.getAllCharsAsString();
         fontParameters.size = (int) (baseLine * oversample * fontScale);
         fontParameters.borderColor = Color.BLACK;
         fontParameters.borderWidth = oversample * fontScale;

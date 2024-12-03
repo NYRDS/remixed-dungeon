@@ -4,6 +4,7 @@ package com.nyrds.platform.util;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndSettings;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -12,7 +13,7 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Field;
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Locale;
@@ -26,188 +27,213 @@ import lombok.SneakyThrows;
  */
 public class StringsManager {
 
-	@NotNull
-	private static final Map<Integer, String>   stringMap  = new HashMap<>();
+    @NotNull
+    private static final Map<Integer, String> stringMap = new HashMap<>();
 
-	@NotNull
-	private static final Map<Integer, String[]> stringsMap = new HashMap<>();
+    @NotNull
+    private static final Map<Integer, String[]> stringsMap = new HashMap<>();
 
-	private static final Map<String, String>   sStringMap  = new HashMap<>();
-	private static final Map<String, String[]> sStringsMap = new HashMap<>();
+    private static final Map<String, String> sStringMap = new HashMap<>();
+    private static final Map<String, String[]> sStringsMap = new HashMap<>();
 
-	private static final Map<String, Integer> keyToInt = new HashMap<>();
+    private static final Map<String, Integer> keyToInt = new HashMap<>();
 
     private static final Set<String> nonModdable = new HashSet<>();
 
 
     public static Set<String> missingStrings = new HashSet<>();
 
-	static {
-		addMappingForClass(R.string.class);
-		addMappingForClass(R.array.class);
+    static {
+        addMappingForClass(R.string.class);
+        addMappingForClass(R.array.class);
 
-		nonModdable.add("easyModeAdUnitId");
-		nonModdable.add("saveLoadAdUnitId");
-		nonModdable.add("iapKey");
-		nonModdable.add("ownSignature");
-		nonModdable.add("appodealRewardAdUnitId");
-		nonModdable.add("admob_publisher_id");
-		nonModdable.add("admob_app_id");
-		nonModdable.add("fabric_api_key");
-		nonModdable.add("pollfish_key");
-	}
+        nonModdable.add("easyModeAdUnitId");
+        nonModdable.add("saveLoadAdUnitId");
+        nonModdable.add("iapKey");
+        nonModdable.add("ownSignature");
+        nonModdable.add("appodealRewardAdUnitId");
+        nonModdable.add("admob_publisher_id");
+        nonModdable.add("admob_app_id");
+        nonModdable.add("fabric_api_key");
+        nonModdable.add("pollfish_key");
+    }
 
-	@SneakyThrows
-	private static void addMappingForClass(@NotNull Class<?> clazz) {
-		for (Field f : clazz.getDeclaredFields()) {
-			if (f.isSynthetic()) {
-				continue;
-			}
-			int key = f.getInt(null);
-			String name = f.getName();
+    @SneakyThrows
+    private static void addMappingForClass(@NotNull Class<?> clazz) {
+        for (Field f : clazz.getDeclaredFields()) {
+            if (f.isSynthetic()) {
+                continue;
+            }
+            int key = f.getInt(null);
+            String name = f.getName();
 
-			keyToInt.put(name, key);
-		}
-	}
+            keyToInt.put(name, key);
+        }
+    }
 
-	private static void clearModStrings() {
-		stringMap.clear();
-		stringsMap.clear();
+    private static void clearModStrings() {
+        stringMap.clear();
+        stringsMap.clear();
 
-		sStringMap.clear();
-		sStringsMap.clear();
-	}
+        sStringMap.clear();
+        sStringsMap.clear();
+        allChars.clear();
+    }
 
-	@SneakyThrows
-	private static void parseStrings(String resource) {
-		InputStream fis = ModdingMode.getInputStream(resource);
-		InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
-		BufferedReader br = new BufferedReader(isr);
+    @SneakyThrows
+    private static void parseStrings(String resource) {
+        InputStream fis = ModdingMode.getInputStream(resource);
+        InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
+        BufferedReader br = new BufferedReader(isr);
 
-		String line = Utils.EMPTY_STRING;
+        String line = Utils.EMPTY_STRING;
 
-		while ((line = br.readLine()) != null) {
-			//GLog.debug("line: %s", line);
-			JSONArray entry = new JSONArray(line);
+        while ((line = br.readLine()) != null) {
+            JSONArray entry = new JSONArray(line);
 
-			String keyString = entry.getString(0);
-			Integer key = keyToInt.get(keyString);
+            String keyString = entry.getString(0);
+            Integer key = keyToInt.get(keyString);
 
-			if (entry.length() == 2) {
-				//GLog.debug("key: %s", keyString);
-				String value = entry.getString(1);
+            if (entry.length() == 2) {
+                String value = entry.getString(1);
 
-				if (key != null) {
-					stringMap.put(key, value);
-				}
+                if (key != null) {
+                    stringMap.put(key, value);
+                }
 
-				sStringMap.put(keyString, value);
-			}
+                sStringMap.put(keyString, value);
 
-			if (entry.length() > 2) {
-				String[] values = new String[entry.length() - 1];
-				for (int i = 1; i < entry.length(); i++) {
-					values[i - 1] = entry.getString(i);
-				}
+                for (char c : value.toCharArray()) {
+                    allChars.add(c);
+                }
+            }
 
-				if (key != null) {
-					stringsMap.put(key, values);
-				}
+            if (entry.length() > 2) {
+                String[] values = new String[entry.length() - 1];
+                for (int i = 1; i < entry.length(); i++) {
+                    values[i - 1] = entry.getString(i);
+                }
 
-				sStringsMap.put(keyString, values);
-			}
-		}
-		br.close();
-	}
+                if (key != null) {
+                    stringsMap.put(key, values);
+                }
 
-	private static Locale userSelectedLocale;
+                sStringsMap.put(keyString, values);
 
+                for (String s : values) {
+                    for (char c : s.toCharArray()) {
+                        allChars.add(c);
+                    }
+                }
+            }
+        }
+        br.close();
+    }
 
-	public static void useLocale(Locale locale, String lang) {
-		userSelectedLocale = locale;
+    public static final Set<Character> allChars = new HashSet<>();
 
-		clearModStrings();
+    public static String getAllCharsAsString() {
+        for (String lang : WndSettings.langNames) {
+            for (char c : lang.toCharArray()) {
+                allChars.add(c);
+            }
+        }
 
-		String modStrings = Utils.format("strings_%s.json", lang);
+        StringBuilder sb = new StringBuilder();
+        for (Character c : allChars) {
+            sb.append(c);
+        }
 
-		parseStrings(modStrings);
-	}
-
-	public static String getVar(int id) {
-		if (stringMap.containsKey(id)) {
-			return stringMap.get(id);
-		}
-
-		return Utils.EMPTY_STRING;
-	}
-
-	public static String @NotNull [] getVars(int id) {
-		String[] baseArray = Utils.EMPTY_STRING_ARRAY;;
-		String[] modStrings = Utils.EMPTY_STRING_ARRAY;
-
-		if (stringsMap.containsKey(id)) {
-			modStrings = stringsMap.get(id);
-		}
-
-		if(baseArray.length > modStrings.length) {
-			return baseArray;
-		}
-
-		return modStrings;
-	}
-
-	public static String getVar(String id) {
-		if(nonModdable.contains(id)) {
-			return Utils.EMPTY_STRING;
-		}
-
-		if (sStringMap.containsKey(id)) {
-			return sStringMap.get(id);
-		}
-
-		if(keyToInt.containsKey(id)) {
-			return getVar(keyToInt.get(id));
-		}
-
-		return Utils.EMPTY_STRING;
-	}
+        return sb.toString();
+    }
+    private static Locale userSelectedLocale;
 
 
-	public static String maybeId(String maybeId, int index) {
-		String[] ret = getVars(maybeId);
-		if (ret.length > index) {
-			missingStrings.add(maybeId);
-			return ret[index];
-		}
-		return Utils.format("%s[%d]", maybeId, index);
-	}
+    public static void useLocale(Locale locale, String lang) {
+        userSelectedLocale = locale;
 
-	public static String maybeId(String maybeId) {
+        clearModStrings();
 
-		String ret = getVar(maybeId);
-		if (ret.isEmpty()) {
-			missingStrings.add(maybeId);
-			return maybeId;
-		}
-		return ret;
-	}
+        String modStrings = Utils.format("strings_%s.json", lang);
 
-	public static String @NotNull [] getVars(String id) {
-		String[] modStrings = Utils.EMPTY_STRING_ARRAY;
-		String[] baseStrings = Utils.EMPTY_STRING_ARRAY;
+        parseStrings(modStrings);
+    }
 
-		if (sStringsMap.containsKey(id)) {
-			modStrings = sStringsMap.get(id);
-		}
+    public static String getVar(int id) {
+        if (stringMap.containsKey(id)) {
+            return stringMap.get(id);
+        }
 
-		if(keyToInt.containsKey(id)) {
-			baseStrings =  getVars(keyToInt.get(id));
-		}
+        return Utils.EMPTY_STRING;
+    }
 
-		if(baseStrings.length > modStrings.length) {
-			return baseStrings;
-		}
+    public static String @NotNull [] getVars(int id) {
+        String[] baseArray = Utils.EMPTY_STRING_ARRAY;
+        String[] modStrings = Utils.EMPTY_STRING_ARRAY;
 
-		return modStrings;
-	}
+        if (stringsMap.containsKey(id)) {
+            modStrings = stringsMap.get(id);
+        }
+
+        if (baseArray.length > modStrings.length) {
+            return baseArray;
+        }
+
+        return modStrings;
+    }
+
+    public static String getVar(String id) {
+        if (nonModdable.contains(id)) {
+            return Utils.EMPTY_STRING;
+        }
+
+        if (sStringMap.containsKey(id)) {
+            return sStringMap.get(id);
+        }
+
+        if (keyToInt.containsKey(id)) {
+            return getVar(keyToInt.get(id));
+        }
+
+        return Utils.EMPTY_STRING;
+    }
+
+
+    public static String maybeId(String maybeId, int index) {
+        String[] ret = getVars(maybeId);
+        if (ret.length > index) {
+            missingStrings.add(maybeId);
+            return ret[index];
+        }
+        return Utils.format("%s[%d]", maybeId, index);
+    }
+
+    public static String maybeId(String maybeId) {
+
+        String ret = getVar(maybeId);
+        if (ret.isEmpty()) {
+            missingStrings.add(maybeId);
+            return maybeId;
+        }
+        return ret;
+    }
+
+    public static String @NotNull [] getVars(String id) {
+        String[] modStrings = Utils.EMPTY_STRING_ARRAY;
+        String[] baseStrings = Utils.EMPTY_STRING_ARRAY;
+
+        if (sStringsMap.containsKey(id)) {
+            modStrings = sStringsMap.get(id);
+        }
+
+        if (keyToInt.containsKey(id)) {
+            baseStrings = getVars(keyToInt.get(id));
+        }
+
+        if (baseStrings.length > modStrings.length) {
+            return baseStrings;
+        }
+
+        return modStrings;
+    }
 }
