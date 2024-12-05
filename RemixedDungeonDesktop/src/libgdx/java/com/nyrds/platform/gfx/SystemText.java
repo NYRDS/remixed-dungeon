@@ -1,8 +1,5 @@
 package com.nyrds.platform.gfx;
 
-import static com.nyrds.pixeldungeon.ml.BuildConfig.ASSETS_PATH;
-
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -11,7 +8,6 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.storage.FileSystem;
-import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.glwrap.Matrix;
 import com.watabou.noosa.Text;

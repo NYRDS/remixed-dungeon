@@ -1,10 +1,9 @@
 package com.nyrds.platform.storage;
 
-import static com.nyrds.pixeldungeon.ml.BuildConfig.ASSETS_PATH;
+import static com.nyrds.pixeldungeon.ml.BuildConfig.SAVES_PATH;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
-import com.nyrds.platform.util.PUtil;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 
@@ -80,17 +79,21 @@ public class FileSystem {
 		return new File[0];
 	}
 
+
+	//Will be used for saves only
 	static public OutputStream getOutputStream(String filename) throws FileNotFoundException {
-		File dir = new File(filename).getParentFile();
-		if (dir != null && !dir.exists()) {
-			dir.mkdirs();
+		filename = SAVES_PATH + filename;
+
+		FileHandle fileHandle = Gdx.files.internal(filename);
+		if(!fileHandle.parent().exists()) {
+			fileHandle.parent().mkdirs();
 		}
 
 		return new FileOutputStream(FileSystem.getInternalStorageFile(filename));
 	}
 
 	static public InputStream getInputStream(String filename) throws FileNotFoundException {
-		return new FileInputStream(FileSystem.getInternalStorageFile(filename));
+		return new FileInputStream(FileSystem.getInternalStorageFile(SAVES_PATH + filename));
 	}
 
 	static public File getExternalStorageFile(String fileName) {
@@ -99,10 +102,6 @@ public class FileSystem {
 
 	static public String getExternalStorageFileName(String fname) {
 		return getExternalStorageFile(fname).getAbsolutePath();
-	}
-
-	static public File getFile(String fname) {
-		return getInternalStorageFile(fname);
 	}
 
 	static public void deleteRecursive(File fileOrDirectory) {

@@ -297,9 +297,9 @@ public class ModdingMode {
 	public static @NotNull InputStream getInputStream(String resName) {
 		try {
 			if(isModdingAllowed(resName)) {
-				return FileSystem.getInputStream(resName);
+				return new FileInputStream(FileSystem.getInternalStorageFile(resName));
 			}
-			return FileSystem.getInputStream(resName);
+			return new FileInputStream(FileSystem.getInternalStorageFile(resName));
 		} catch (IOException | SecurityException | ModError e) {
 			throw new ModError("Missing file: " + resName + " in: " + activeMod() + " " + activeModVersion(),e);
 		}

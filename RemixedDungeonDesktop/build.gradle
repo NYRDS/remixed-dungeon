@@ -135,21 +135,27 @@ construo {
 }
 
 
-task makeDesktopDist(type: Zip) {
-    def originalZip = file("${buildDir}/construo/dist/RemixedDungeon-linuxX64.zip") // Path to the existing ZIP
-    def newDir = file("src/desktop/assets") // Directory you want to add
+construo.targets.each { target ->
+    def tag = target.name
+    tasks.register("makeDesktopDist${tag.capitalize()}", Zip) { zipTask ->
+        // Use the correct file name for the original zip
+        def originalZip = file("${buildDir}/construo/dist/RemixedDungeon-${tag}.zip")
+        zipTask.archiveFileName = "RemixedDungeon-${tag}.zip"
+        zipTask.destinationDirectory = file("../dist")
 
-    // Set the name and destination of the new ZIP file
-    archiveFileName = 'RemixedDungeon-linuxX64.zip'
-    destinationDirectory = file("../dist")
+        doFirst {
+            if (archivePath.exists()) {
+                archivePath.delete()
+            }
+        }
 
-    // Include contents of the original ZIP
-    from(zipTree(originalZip)) {
+        zipTask.from(zipTree(originalZip))
+
+        zipTask.from(file("src/desktop/assets")) {
+            into("RemixedDungeon-${project.ext.version}-${tag}/mods/Remixed")
+        }
+
+        // Declare explicit dependency on the corresponding package task
+        zipTask.dependsOn "package${tag.capitalize()}"
     }
-
-    // Add the new directory's contents
-    from(newDir) {
-        into('RemixedDungeon-'+project.ext.version+'-linuxX64'+"/mods/Remixed")
-    }
-    dependsOn("packageLinuxX64")
 }

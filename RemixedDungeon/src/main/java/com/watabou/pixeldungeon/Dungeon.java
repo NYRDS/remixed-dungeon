@@ -67,6 +67,7 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -742,11 +743,7 @@ public class Dungeon {
                     return newLevel(next);
                 }
 
-                if (!FileSystem.getFile(loadFrom).exists()) {
-                    return newLevel(next);
-                }
-
-                try (InputStream input = new FileInputStream(FileSystem.getFile(loadFrom))) {
+                try (InputStream input = FileSystem.getInputStream(loadFrom)) {
                     Bundle bundle = Bundle.read(input);
 
                     Level level = (Level) bundle.get("level");
@@ -759,7 +756,8 @@ public class Dungeon {
                     level.levelId = next.levelId;
                     initSizeDependentStuff(level.getWidth(), level.getHeight());
                     return level;
-
+                } catch (FileNotFoundException ignore) {
+                    return newLevel(next);
                 }
             } finally {
                 GameLoop.loadingOrSaving.decrementAndGet();
@@ -779,14 +777,12 @@ public class Dungeon {
     }
 
     public static Optional<Bundle> gameBundle(String fileName) throws IOException {
-
-        var saveFile = FileSystem.getFile(fileName);
-        if (saveFile.exists()) {
-            try (InputStream input = new FileInputStream(saveFile)) {
+            try (InputStream input = FileSystem.getInputStream(fileName)) {
                 return Optional.of(Bundle.read(input));
+            } catch (FileNotFoundException ignore) {
             }
-        }
-        return Optional.absent();
+
+            return Optional.absent();
     }
 
     public static void fail(String desc) {
