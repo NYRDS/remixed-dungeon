@@ -4,13 +4,12 @@ package com.nyrds.platform.audio;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.PUtil;
 import com.nyrds.util.ModdingMode;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import java.io.File;
 
 public enum MusicManager {
 
@@ -49,7 +48,7 @@ public enum MusicManager {
 		lastLooping = looping;
 
 		try {
-			player = Gdx.audio.newMusic(Gdx.files.internal("../assets/" + assetFilename));
+			player = Gdx.audio.newMusic(FileSystem.getInternalStorageFileHandle(assetFilename));
 			player.setLooping(looping);
 			player.play();
 			PUtil.slog("music", "playing " + assetFilename);

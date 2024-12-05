@@ -1,9 +1,7 @@
 package com.watabou.gltextures;
 
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
-import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.TextureFilm;
 
@@ -13,7 +11,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.HashMap;
 import java.util.Map;
 
-import lombok.SneakyThrows;
 import lombok.Synchronized;
 import lombok.val;
 
@@ -70,7 +67,7 @@ public class TextureCache {
 		} else if (src instanceof SmartTexture) {
 			return (SmartTexture) src;
 		} else {
-			SmartTexture tx = new SmartTexture(getBitmapData(src));
+			SmartTexture tx = new SmartTexture(ModdingMode.getBitmapData(src));
 			all.put(src, tx);
 			return tx;
 		}
@@ -93,42 +90,6 @@ public class TextureCache {
 			txt.delete();
 		}
 		all.clear();
-	}
-
-	@SneakyThrows
-	private static @NotNull BitmapData getBitmapData(Object src) {
-		if (src instanceof String) {
-			String resName = (String) src;
-
-			BitmapData modAsset = BitmapData.decodeStream(ModdingMode.getInputStream(resName));
-
-			if(modAsset.bmp==null) {
-				throw new ModError("Bad bitmap: "+ resName);
-			}
-
-			if(ModdingMode.sizeAgnosticFiles.contains(resName)) {
-				return modAsset;
-			}
-
-			if(ModdingMode.isAssetExist(resName)) {
-				BitmapData baseAsset = BitmapData.decodeStream(ModdingMode.getInputStreamBuiltIn(resName));
-
-				if(baseAsset.bmp==null) {
-					throw new ModError("Bad builtin bitmap: "+ resName);
-				}
-
-				if (modAsset.getHeight() * modAsset.getWidth() < baseAsset.getWidth() * baseAsset.getHeight()) {
-					RemixedDungeon.toast("%s image in %s smaller than in Remixed, using base version", resName, ModdingMode.activeMod());
-					return baseAsset;
-				}
-			}
-
-			return modAsset;
-		} else if (src instanceof BitmapData) {
-			return (BitmapData) src;
-		}
-
-		throw new ModError("Bad resource source for Bitmap "+ src.getClass().getName());
 	}
 
 	@Synchronized

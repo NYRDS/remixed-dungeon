@@ -1,16 +1,32 @@
+import io.github.fourlastor.construo.Target
+
 plugins {
     id 'java'
     id 'application'
+    id "io.github.fourlastor.construo" version "1.5.1"
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
+
+project.ext.assetsDir = new File("src/desktop/assets")
+
+project.ext.version = '32.2'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_10
     targetCompatibility = JavaVersion.VERSION_1_10
 }
 
-
-
 jar {
+    manifest {
+        attributes 'Main-Class': 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
+    }
+
+}
+
+shadowJar {
+    archiveBaseName.set('RemixedDungeon')
+    archiveVersion.set(project.ext.version)
+    archiveClassifier.set('')
     manifest {
         attributes 'Main-Class': 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
     }
@@ -43,9 +59,7 @@ compileJava.dependsOn generateJavaClasses
 ext {
     gdxVersion = '1.13.0'
 }
-tasks.withType(JavaCompile) {
 
-}
 
 distributions {
     main {
@@ -56,6 +70,16 @@ distributions {
         }
     }
 }
+
+tasks.register('dist', Jar) {
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+    dependsOn configurations.runtimeClasspath
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    with jar
+}
+
 
 dependencies {
     implementation project(':annotation')
@@ -80,4 +104,52 @@ dependencies {
     implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
     implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
     implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+}
+
+construo {
+    name.set("RemixedDungeon")
+    humanName.set("Remixed Dungeon")
+    version.set(project.ext.version)
+
+
+    targets.configure {
+        create("linuxX64", Target.Linux) {
+            architecture.set(Target.Architecture.X86_64)
+            jdkUrl.set("https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.11%2B9/OpenJDK17U-jdk_x64_linux_hotspot_17.0.11_9.tar.gz")
+        }
+        create("macM1", Target.MacOs) {
+            architecture.set(Target.Architecture.AARCH64)
+            jdkUrl.set("https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.11%2B9/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.11_9.tar.gz")
+            // macOS needs an identifier
+            identifier.set("com.nyrds.pixeldungeon.ml")
+            // Optional: icon for macOS
+            //macIcon.set(project.file("path/to/mac-icon.icns"))
+        }
+        create("winX64", Target.Windows) {
+            architecture.set(Target.Architecture.X86_64)
+            jdkUrl.set("https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.11%2B9/OpenJDK17U-jdk_x64_windows_hotspot_17.0.11_9.zip")
+            // use executable with GPU hints, defaults to true
+            useGpuHint.set(false)
+        }
+    }
+}
+
+
+task makeDesktopDist(type: Zip) {
+    def originalZip = file("${buildDir}/construo/dist/RemixedDungeon-linuxX64.zip") // Path to the existing ZIP
+    def newDir = file("src/desktop/assets") // Directory you want to add
+
+    // Set the name and destination of the new ZIP file
+    archiveFileName = 'RemixedDungeon-linuxX64.zip'
+    destinationDirectory = file("../dist")
+
+    // Include contents of the original ZIP
+    from(zipTree(originalZip)) {
+    }
+
+    // Add the new directory's contents
+    from(newDir) {
+        into('RemixedDungeon-'+project.ext.version+'-linuxX64'+"/mods/Remixed")
+    }
+    dependsOn("packageLinuxX64")
 }

@@ -3,8 +3,6 @@ package com.nyrds.util;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.RemixedDungeon;
-import com.nyrds.platform.storage.Assets;
 import com.nyrds.platform.storage.FileSystem;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -368,5 +366,41 @@ public class ModdingMode {
 
 	public static RuntimeException modException(String s, Exception e) {
 		return new ModError(mActiveMod + ":" + s, e);
+	}
+
+	@SneakyThrows
+	public static @NotNull BitmapData getBitmapData(Object src) {
+		if (src instanceof String) {
+			String resName = (String) src;
+
+			BitmapData modAsset = BitmapData.decodeStream(getInputStream(resName));
+
+			if(modAsset.bmp==null) {
+				throw new ModError("Bad bitmap: "+ resName);
+			}
+
+			if(sizeAgnosticFiles.contains(resName)) {
+				return modAsset;
+			}
+
+			if(isAssetExist(resName)) {
+				BitmapData baseAsset = BitmapData.decodeStream(getInputStreamBuiltIn(resName));
+
+				if(baseAsset.bmp==null) {
+					throw new ModError("Bad builtin bitmap: "+ resName);
+				}
+
+				if (modAsset.getHeight() * modAsset.getWidth() < baseAsset.getWidth() * baseAsset.getHeight()) {
+					RemixedDungeon.toast("%s image in %s smaller than in Remixed, using base version", resName, activeMod());
+					return baseAsset;
+				}
+			}
+
+			return modAsset;
+		} else if (src instanceof BitmapData) {
+			return (BitmapData) src;
+		}
+
+		throw new ModError("Bad resource source for Bitmap "+ src.getClass().getName());
 	}
 }

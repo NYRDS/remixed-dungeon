@@ -1,8 +1,12 @@
 package com.nyrds.platform.storage;
 
+import static com.nyrds.pixeldungeon.ml.BuildConfig.ASSETS_PATH;
+
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 import com.nyrds.platform.util.PUtil;
 import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingMode;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -21,10 +25,44 @@ import lombok.SneakyThrows;
 
 public class FileSystem {
 
-	static public @NotNull File getInternalStorageFile(String fileName) {
-		//PUtil.slog("storage", "getInternalStorageFile " + fileName);
-		return Gdx.files.internal("../assets/"+fileName).file();
+
+	static public @NotNull FileHandle getInternalStorageFileHandle(String fileName) {
+		FileHandle fileHandle = null;
+		for(String path : new String[] {
+				"mods/"+ModdingMode.activeMod()+"/",
+				"mods/Remixed/",
+				"../assets/",
+				"./",
+		}) {
+			fileHandle = Gdx.files.internal(path+fileName);
+			if(fileHandle.exists()) {
+				return fileHandle;
+			}
+		}
+
+		return fileHandle;
 	}
+
+	static public @NotNull FileHandle getInternalStorageFileHandleBase(String fileName) {
+		FileHandle fileHandle = null;
+		for(String path : new String[] {
+				"mods/Remixed/",
+				"../assets/",
+				"./",
+		}) {
+			fileHandle = Gdx.files.internal(path+fileName);
+			if(fileHandle.exists()) {
+				return fileHandle;
+			}
+		}
+		return fileHandle;
+	}
+
+
+	static public @NotNull File getInternalStorageFile(String fileName) {
+		return getInternalStorageFileHandle(fileName).file();
+	}
+
 
 	static public String[] listInternalStorage() {
 		return getInternalStorageFile(".").list();

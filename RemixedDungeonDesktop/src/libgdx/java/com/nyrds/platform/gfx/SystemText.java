@@ -1,5 +1,7 @@
 package com.nyrds.platform.gfx;
 
+import static com.nyrds.pixeldungeon.ml.BuildConfig.ASSETS_PATH;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -8,6 +10,7 @@ import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.glwrap.Matrix;
@@ -33,7 +36,7 @@ public class SystemText extends Text {
     private static final float oversample = 4;
     private ArrayList<Boolean> wordMask = null;
     static {
-        generator = new FreeTypeFontGenerator(Gdx.files.internal("../assets/fonts/pixel_font.ttf"));
+        generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/pixel_font.ttf"));
     }
 
     public SystemText(float baseLine) {
@@ -238,7 +241,7 @@ public class SystemText extends Text {
     public static void invalidate() {
         if (generator != null) {
             generator.dispose();
-            generator = new FreeTypeFontGenerator(Gdx.files.internal("../assets/fonts/pixel_font.ttf"));
+            generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/pixel_font.ttf"));
         }
     }
 
