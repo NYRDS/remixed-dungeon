@@ -4,15 +4,14 @@ import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.TextureFilm;
-
+import com.watabou.pixeldungeon.Assets;
+import lombok.Synchronized;
+import lombok.val;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import lombok.Synchronized;
-import lombok.val;
 
 public class TextureCache {
 
@@ -67,8 +66,12 @@ public class TextureCache {
 		} else if (src instanceof SmartTexture) {
 			return (SmartTexture) src;
 		} else {
-			SmartTexture tx = new SmartTexture(ModdingMode.getBitmapData(src));
+			BitmapData bmp = ModdingMode.getBitmapData(src);
+			SmartTexture tx = new SmartTexture(bmp);
 			all.put(src, tx);
+			if (src != Assets.ITEMS && src != Assets.FONTS1X) {
+				bmp.dispose();
+			}
 			return tx;
 		}
 	}

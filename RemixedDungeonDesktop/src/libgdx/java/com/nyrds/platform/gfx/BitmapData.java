@@ -1,14 +1,14 @@
 package com.nyrds.platform.gfx;
 
-import static com.badlogic.gdx.graphics.g2d.Gdx2DPixmap.GDX2D_BLEND_NONE;
-import static com.badlogic.gdx.graphics.g2d.Gdx2DPixmap.GDX2D_FORMAT_RGBA8888;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.PixmapIO;
 import com.badlogic.gdx.graphics.g2d.Gdx2DPixmap;
 
 import java.io.InputStream;
+
+import static com.badlogic.gdx.graphics.g2d.Gdx2DPixmap.GDX2D_BLEND_NONE;
+import static com.badlogic.gdx.graphics.g2d.Gdx2DPixmap.GDX2D_FORMAT_RGBA8888;
 
 public class BitmapData {
 
@@ -110,6 +110,7 @@ public class BitmapData {
     }
 
     public void dispose() {
+
     	bmp.dispose();
     }
 }

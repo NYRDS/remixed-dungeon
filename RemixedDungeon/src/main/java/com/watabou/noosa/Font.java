@@ -3,9 +3,7 @@ package com.watabou.noosa;
 import com.nyrds.platform.compatibility.RectF;
 import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
-import com.nyrds.platform.util.PUtil;
 import com.watabou.gltextures.SmartTexture;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
 
@@ -47,7 +45,7 @@ public class Font extends TextureFilm {
 
 		texture = tx;
 		texture.filter(Texture.LINEAR,Texture.NEAREST);
-		texture.reload();
+		//texture.reload();
 	}
 
 	private int findNextEmptyLine(BitmapData bitmap, int startFrom){

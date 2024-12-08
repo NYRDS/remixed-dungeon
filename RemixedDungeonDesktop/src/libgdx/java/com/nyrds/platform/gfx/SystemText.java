@@ -11,13 +11,16 @@ import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.glwrap.Matrix;
 import com.watabou.noosa.Text;
-
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SystemText extends Text {
     private static FreeTypeFontGenerator generator;
+    private static Map<String, BitmapFont> fontCache = new HashMap<>();
+
     private final FreeTypeFontParameter fontParameters;
     private final BitmapFont font;
     private final GlyphLayout glyphLayout;
@@ -39,37 +42,29 @@ public class SystemText extends Text {
         super(0, 0, 0, 0);
         fontParameters = getFontParameters(baseLine);
 
-        font = generator.generateFont(fontParameters);
+        String fontKey = getFontKey(fontParameters);
+        synchronized (fontCache) {
+            if (!fontCache.containsKey(fontKey)) {
+                fontCache.put(fontKey, generator.generateFont(fontParameters));
+            }
+            font = fontCache.get(fontKey);
+        }
         glyphLayout = new GlyphLayout();
         spaceLayout = new GlyphLayout(); // Initialize spaceLayout
         spaceLayout.setText(font, " "); // Measure the width of a space
-    }
-
-    private FreeTypeFontParameter getFontParameters(float baseLine) {
-        if (fontScale != fontScale) {
-            updateFontScale();
-        }
-
-        final FreeTypeFontParameter fontParameters;
-        fontParameters = new FreeTypeFontParameter();
-        fontParameters.characters = FreeTypeFontGenerator.DEFAULT_CHARS + StringsManager.getAllCharsAsString();
-        fontParameters.size = (int) (baseLine * oversample * fontScale);
-        fontParameters.borderColor = Color.BLACK;
-        fontParameters.borderWidth = oversample * fontScale;
-        fontParameters.flip = true;
-        fontParameters.genMipMaps = true;
-        fontParameters.magFilter = Texture.TextureFilter.Linear;
-        fontParameters.minFilter = Texture.TextureFilter.MipMapLinearLinear;
-        fontParameters.spaceX = 0;
-        fontParameters.spaceY = 0;
-        return fontParameters;
     }
 
     public SystemText(final String text, float size, boolean multiline) {
         super(0, 0, 0, 0);
         fontParameters = getFontParameters(size);
 
-        font = generator.generateFont(fontParameters);
+        String fontKey = getFontKey(fontParameters);
+        synchronized (fontCache) {
+            if (!fontCache.containsKey(fontKey)) {
+                fontCache.put(fontKey, generator.generateFont(fontParameters));
+            }
+            font = fontCache.get(fontKey);
+        }
         glyphLayout = new GlyphLayout();
         spaceLayout = new GlyphLayout(); // Initialize spaceLayout
         spaceLayout.setText(font, " "); // Measure the width of a space
@@ -93,6 +88,30 @@ public class SystemText extends Text {
         }
 
         fontScale = scale;
+    }
+
+    private FreeTypeFontParameter getFontParameters(float baseLine) {
+        if (fontScale != fontScale) {
+            updateFontScale();
+        }
+
+        final FreeTypeFontParameter fontParameters;
+        fontParameters = new FreeTypeFontParameter();
+        fontParameters.characters = FreeTypeFontGenerator.DEFAULT_CHARS + StringsManager.getAllCharsAsString();
+        fontParameters.size = (int) (baseLine * oversample * fontScale);
+        fontParameters.borderColor = Color.BLACK;
+        fontParameters.borderWidth = oversample * fontScale;
+        fontParameters.flip = true;
+        fontParameters.genMipMaps = true;
+        fontParameters.magFilter = Texture.TextureFilter.Linear;
+        fontParameters.minFilter = Texture.TextureFilter.MipMapLinearLinear;
+        fontParameters.spaceX = 0;
+        fontParameters.spaceY = 0;
+        return fontParameters;
+    }
+
+    private String getFontKey(FreeTypeFontParameter params) {
+        return params.size + "_" + params.characters + "_" + params.borderColor + "_" + params.borderWidth + "_" + params.flip + "_" + params.genMipMaps + "_" + params.magFilter + "_" + params.minFilter + "_" + params.spaceX + "_" + params.spaceY;
     }
 
     private void wrapText() {
@@ -141,7 +160,7 @@ public class SystemText extends Text {
     @Override
     public void destroy() {
         super.destroy();
-        font.dispose();
+        // No need to dispose font here as it's managed by the cache
     }
 
     @Override
@@ -238,6 +257,12 @@ public class SystemText extends Text {
         if (generator != null) {
             generator.dispose();
             generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/pixel_font.ttf"));
+        }
+        synchronized (fontCache) {
+            for (BitmapFont font : fontCache.values()) {
+                font.dispose();
+            }
+            fontCache.clear();
         }
     }
 

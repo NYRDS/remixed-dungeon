@@ -36,6 +36,8 @@ application {
     applicationName = 'RemixedDungeon-desktop'
     applicationDefaultJvmArgs = ['-Dassets.dir=assets']
     mainClass = 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
+    applicationDefaultJvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED"]
+
     sourceSets {
         main {
             java {
@@ -46,6 +48,11 @@ application {
             }
         }
     }
+}
+
+
+tasks.withType(JavaExec) {
+    jvmArgs += ["--add-opens", "java.base/java.util=ALL-UNNAMED"]
 }
 
 // Custom task to run the Python script
