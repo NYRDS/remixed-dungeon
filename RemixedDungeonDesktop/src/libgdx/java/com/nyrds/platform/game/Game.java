@@ -211,7 +211,7 @@ public class Game implements ApplicationListener, InputProcessor {
 
 
     public static boolean deleteFile(String path) {
-        FileHandle file = Gdx.files.external(path);
+        FileHandle file = Gdx.files.local(path);
         if (file.exists()) {
             file.delete();
             return true;
@@ -227,13 +227,9 @@ public class Game implements ApplicationListener, InputProcessor {
         returnTo.returnToWork(true);
     }
 
-    public String[] fileList() {
-        return Gdx.files.external("").file().list();
-    }
-
     public InputStream openFileInput(String bonesFile) {
         try {
-            return Gdx.files.external(bonesFile).read();
+            return Gdx.files.local(bonesFile).read();
         } catch (Exception e) {
             return null;
         }

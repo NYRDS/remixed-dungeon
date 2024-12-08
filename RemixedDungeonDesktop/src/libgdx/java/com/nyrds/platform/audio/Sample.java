@@ -2,14 +2,12 @@ package com.nyrds.platform.audio;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
-import com.badlogic.gdx.files.FileHandle;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.util.PUtil;
 import com.nyrds.util.ModdingMode;
+
 import org.jetbrains.annotations.NotNull;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -81,7 +79,7 @@ public enum Sample {
 		}
 		GameLoop.instance().soundExecutor.execute(() -> {
 			Sound sound = sounds.get(id);
-			PUtil.slog("sound", "playing " + id);
+			//PUtil.slog("sound", "playing " + id);
 			if (sound != null) {
 				sound.play(leftVolume, rate, 0);
 			} else {

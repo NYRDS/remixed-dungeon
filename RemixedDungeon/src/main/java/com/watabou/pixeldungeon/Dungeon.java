@@ -28,6 +28,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.storage.SaveUtils;
 import com.nyrds.platform.util.Os;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
@@ -66,7 +67,6 @@ import com.watabou.utils.SystemTime;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;

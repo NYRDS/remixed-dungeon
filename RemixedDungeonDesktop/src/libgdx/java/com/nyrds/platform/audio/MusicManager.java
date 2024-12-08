@@ -5,7 +5,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
-import com.nyrds.platform.util.PUtil;
 import com.nyrds.util.ModdingMode;
 
 import org.jetbrains.annotations.NotNull;
@@ -51,7 +50,7 @@ public enum MusicManager {
 			player = Gdx.audio.newMusic(FileSystem.getInternalStorageFileHandle(assetFilename));
 			player.setLooping(looping);
 			player.play();
-			PUtil.slog("music", "playing " + assetFilename);
+			//PUtil.slog("music", "playing " + assetFilename);
 		} catch (Exception e) {
 			if (player != null) {
 				player.dispose();

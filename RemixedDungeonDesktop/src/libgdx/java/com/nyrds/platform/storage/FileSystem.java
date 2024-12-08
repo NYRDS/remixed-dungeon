@@ -84,16 +84,17 @@ public class FileSystem {
 	static public OutputStream getOutputStream(String filename) throws FileNotFoundException {
 		filename = SAVES_PATH + filename;
 
-		FileHandle fileHandle = Gdx.files.internal(filename);
+		FileHandle fileHandle = Gdx.files.local(filename);
 		if(!fileHandle.parent().exists()) {
 			fileHandle.parent().mkdirs();
 		}
 
-		return new FileOutputStream(FileSystem.getInternalStorageFile(filename));
+		return new FileOutputStream(Gdx.files.local(filename).file());
 	}
 
 	static public InputStream getInputStream(String filename) throws FileNotFoundException {
-		return new FileInputStream(FileSystem.getInternalStorageFile(SAVES_PATH + filename));
+		filename = SAVES_PATH + filename;
+		return new FileInputStream(Gdx.files.local(filename).file());
 	}
 
 	static public File getExternalStorageFile(String fileName) {

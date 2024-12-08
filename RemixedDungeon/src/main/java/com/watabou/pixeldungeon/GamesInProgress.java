@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon;
 
+import com.nyrds.platform.storage.SaveUtils;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 

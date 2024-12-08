@@ -1,13 +1,10 @@
 package com.watabou.pixeldungeon.windows;
 
 
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.platform.support.Ads;
-import com.nyrds.platform.support.Iap;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.ImageTab;
 import com.nyrds.pixeldungeon.windows.WndDifficultyOptions;
@@ -16,6 +13,9 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.storage.SaveUtils;
+import com.nyrds.platform.support.Ads;
+import com.nyrds.platform.support.Iap;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.ModdingMode;
@@ -27,7 +27,6 @@ import com.watabou.noosa.ReturnOnlyOnce;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
-import com.watabou.pixeldungeon.SaveUtils;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.GameScene;
