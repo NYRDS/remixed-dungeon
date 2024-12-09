@@ -7,7 +7,9 @@ import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
@@ -27,7 +29,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
-
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -71,10 +72,12 @@ public class Potion extends Item implements UnknownItem {
 		}
 	}
 
+	public static final String ITEMS_POTIONS_PNG = "items/potions.png";
+
 	{
 		stackable = true;
 		setDefaultAction(CommonActions.AC_DRINK);
-		imageFile = "items/potions.png";
+		imageFile = ITEMS_POTIONS_PNG;
 	}
 	
 	
@@ -293,15 +296,23 @@ public class Potion extends Item implements UnknownItem {
 	public static boolean allKnown() {
 		return handler.known().size() == potions.length;
 	}
-	
-	protected void splash( int cell ) {
 
+	static private final int[] splashColors = new int[13];
+	static {
+		BitmapData bmp = ModdingMode.getBitmapData(ITEMS_POTIONS_PNG);
+		int rows = bmp.getWidth() / ItemSprite.SIZE;
+		for (int i = 0; i < splashColors.length; i++) {
+			int row = i / rows;
+			int col = i % rows;
+			splashColors[i] = bmp.getPixel(col * ItemSprite.SIZE + 8, row * ItemSprite.SIZE + 10);
+		}
+	}
+	protected void splash( int cell ) {
 		if(!GameScene.isSceneReady()) {
 			return;
 		}
 
-		final int color = ItemSprite.pick( image, 8, 10 );
-		Splash.at( cell, color, 5 );
+		Splash.at( cell, splashColors[image], 5 );
 	}
 
 	public int basePrice() {

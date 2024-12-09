@@ -228,12 +228,4 @@ public class ItemSprite extends MovieClip {
 			script.drawQuad(overlay.getVerticesBuffer());
 		}
 	}
-
-	public static int pick(int index, int x, int y) {
-		var bmp = TextureCache.get(Assets.ITEMS).bitmap;
-		int rows = bmp.getWidth() / SIZE;
-		int row = index / rows;
-		int col = index % rows;
-		return bmp.getPixel(col * SIZE + x, row * SIZE + y);
-	}
 }

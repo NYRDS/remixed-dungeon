@@ -2,7 +2,6 @@ package com.watabou.pixeldungeon;
 
 import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
-import com.nyrds.util.Util;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
@@ -133,10 +132,14 @@ public class FogOfWar extends Image {
         super.draw();
     }
 
+    private BitmapData toDispose;
+
     private class FogTexture extends SmartTexture {
 
+
         public FogTexture() {
-            super( BitmapData.createBitmap( width2, height2) );
+            super(toDispose=BitmapData.createBitmap( width2, height2) );
+            toDispose.dispose();
             //filter( Texture.NEAREST, Texture.NEAREST );
             filter( Texture.LINEAR, Texture.LINEAR );
             TextureCache.add( FogOfWar.class, this );

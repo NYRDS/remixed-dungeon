@@ -10,13 +10,7 @@ import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
-import com.watabou.gltextures.TextureCache;
-import com.watabou.noosa.Camera;
-import com.watabou.noosa.ColorBlock;
-import com.watabou.noosa.Font;
-import com.watabou.noosa.Scene;
-import com.watabou.noosa.Text;
-import com.watabou.noosa.Visual;
+import com.watabou.noosa.*;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
@@ -86,7 +80,7 @@ public class PixelScene extends Scene {
 
 	static private void createFonts() {
 		// 3x5 (6)
-		font1x = Font.colorMarked(TextureCache.get(Assets.FONTS1X),
+		font1x = Font.colorMarked(Assets.FONTS1X,
 				Font.LATIN_FULL);
 		font1x.baseLine = 6;
 		font1x.tracking = -1;

@@ -3,7 +3,9 @@ package com.watabou.noosa;
 import com.nyrds.platform.compatibility.RectF;
 import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
+import com.nyrds.util.ModdingMode;
 import com.watabou.gltextures.SmartTexture;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
 
@@ -166,16 +168,12 @@ public class Font extends TextureFilm {
 		lineHeight = baseLine = height( frames.values().iterator().next());
 	}
 
-	public static Font colorMarked(SmartTexture tex, String chars ) {
+	public static Font colorMarked(String tex_src, String chars ) {
+		BitmapData bmp = ModdingMode.getBitmapData(tex_src);
+		SmartTexture tex = TextureCache.get( bmp );
 		Font font = new Font( tex );
-
-		font.splitByAlpha( tex.bitmap, chars );
-		return font;
-	}
-
-	public static Font colorMarked(SmartTexture tex, int height, String chars ) {
-		Font font = new Font( tex );
-		font.splitByAlpha( tex.bitmap, chars );
+		font.splitByAlpha( bmp, chars );
+		bmp.dispose();
 		return font;
 	}
 
