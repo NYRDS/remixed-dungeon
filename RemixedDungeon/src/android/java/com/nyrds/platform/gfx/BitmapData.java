@@ -81,4 +81,8 @@ public class BitmapData {
     public boolean isEmptyPixel(int x, int y) {
         return (getPixel (x,y) & 0xff000000) == 0;
     }
+
+    public void dispose() {
+        bmp.recycle();
+    }
 }
