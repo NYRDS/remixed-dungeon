@@ -4,7 +4,7 @@ Nincs többé terror a csatornákban.
 2. Tengu legyőzve
 Az ördögi lélek többé senkit sem fog kínozni.
 
-3. DM-300 levágva
+3. DM-300 has been slain
 A gép amely elvesztette célját deaktiválva lett.
 
 4. A Király levágva
@@ -30,3 +30,4 @@ Bátorság, Kedvesség, néhány arany érme, és még egy brutális Gnoll is cs
 
 Sebészi maszk megszerezve
 A maszk viselése azt jelzi, hogy törődsz másokkal.
+
