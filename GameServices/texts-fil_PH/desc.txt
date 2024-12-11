@@ -1,0 +1,31 @@
+Ito ay isang open source at roguelike na laro na may grafiks na pixelado.
+
+Noong unang panahon, merong isang maliit na baryo. Ang mga naninirahan dun ay masaya, Pero sa sobrang hirap nila hindi nila kayang pumunta kahit saan tuwing may okasyon, Pero nung araw na ang lahat ng tao ay nawalan na ng pag-asa, merong milagrong naganap. Ang Lupa sa ilalim ng baryo ay yumanig at nagsilabasan dito ang mga masasamang halimaw. Sa mga oras nayun, Lahat ng nakaligtas sa pangyayari ay namuhay ng masaya. Bakit? Kasi ang kulungan ay nakatawag pansin sa mga bayani at manglalakbay. Prinotektahan nila ang mga inosente at tumulong para palakasin ang ekonomiya ng baryo.
+At ngayon ang maliit na bayan ay umuunlad habang nasa itaas ng isang mapanganib na piitan na puno ng mga patay na abenturero at kanilang mga miserableng kaluluwa.
+
+Mga features ng laro:
+- Ang laro nato sumusuporta rin sa user-created na mga mods! At sa karagdagang pagbuo namin ng tampok na ito, sa lalong madaling panahon, magagawa mo ring lumikha ng isang buong bagong laro sa loob ng Remixed Dungeon!
+- Karanasan sa Hardcore roquelike!
+- 7 na klase ng bayani na puweding mapagpipilian
+- Ang Town hub ay ihanda ka para sa iyong paglalakbay at ipakilala ka sa mundo ng laro
+- Mahigit sa 30 na antas ng pangunahing Dungeon ay nahahati sa 6 na uri ng Dungeon
+- 3 bagong level sa Dungeon: Spider Lair, Necropolis, Ice Caves
+- Dose-dosenang mga kagamitan at halimaw
+- Iba`t ibang mga boss
+- Sumbrero! Ang lahat ay gusto ang sumbrero
+
+Sali sa aming Discord Server:
+https://discordapp.com/invite/AMXrhQZ
+
+Suportahan kami sa twitter: 
+https://twitter.com/nyrds
+
+Ang laro nato ay open source software nakalaan sa GPLv3 License. Source code ng Remixed Dungeon ay makikita rin dito:
+https://github.com/NYRDS/remixed-dungeon
+
+Kung nais mong lumahok sa localization sa ibang mga wika maayaring bisitahin ang:
+https://www.transifex.com/projects/p/remixed-dungeon/
+
+maaari mong suriin
+http://wiki.nyrds.net/doku.php?id=rpd:changelog
+para sa punong changelog ay nasa wiki namin
