@@ -1,34 +1,13 @@
 #!/usr/bin/env python3
 import json
 import os
-import pprint
 import re
-from langdetect import detect
 from lxml import etree as ElementTree
 
 xml_ext = '.xml'
 values_dir = '../RemixedDungeon/src/main/res/'
 
-source_locales = {"en","tr","ko","hu","it",'de_DE', 'es', 'fr_FR', 'pl_PL', 'ru',
-                  'uk_UA', 'pt_BR', "ms_MY","zh_CN", "zh_TW", "id", 'el', 'ja'}
-
-locale_remap = {'de_DE': 'de', 'fr_FR': 'fr', 'pl_PL': 'pl', 'nl_NL': 'nl', 'ro_RO': 'ro',
-                'uk_UA': 'uk', 'pt_BR': 'pt-rBR', 'pt_PT': 'pt-rPT', 'es_MX': 'es-rMX', "ms_MY": "ms", "zh_CN":'zh-rCN',
-                "zh_TW":'zh-rTW', 'id':'in'}
-
-counters = {}
-totalCounter = {}
-
-resource_name = "strings_all.xml"
-
-changelog_prefix = "Welcome_Text_"
-changelog_key = "Welcome_Text_0"
-changelog = {}
-
 escape_apostrophe = re.compile(r"(?<!\\)'")
-
-
-counters[resource_name] = {}
 
 r_strings = set()
 r_arrays = set()
