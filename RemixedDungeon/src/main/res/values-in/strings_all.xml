@@ -242,7 +242,7 @@
   <string name="WandOfTeleportation_Info2">tidak terjadi apa-apa</string>
   <string name="WndPortal_Title">Portal</string>
   <string name="WndPortal_Info">Portal ini memungkinkan Anda kembali ke kota. Tampaknya tidak stabil, dan mungkin tidak akan aktif terlalu lama.\nApakah Anda ingin menggunakannya?</string>
-  <string name="WndPortal_Info_Return">Portal ini akan membawamu kembali ke dungeon\Apakah kamu ingin menggunakannya?</string>
+  <string name="WndPortal_Info_Return">Portal ini akan membawamu kembali ke dungeon\nApakah kamu ingin menggunakannya?</string>
   <string name="WndPortal_Warning_Title">Amaran Portal!</string>
   <string name="WndPortal_Warning_Info">Anda belum menggunakan portal pada level ini. Setelah keluar, Anda tidak akan dapat menggunakan portal ini lagi!\nApakah Anda yakin ingin pergi?</string>
   <string name="PortalGate_Name">Portal</string>
@@ -268,7 +268,7 @@
   <string name="SociologistNPC_Name_Objective">Sosiolog</string>
   <string name="SociologistNPC_Desc">Sosiolog ini sedang dalam pencarian suci untuk mengumpulkan opini publik</string>
   <string name="SociologistNPC_AlreadyTaken">Anda sudah mengikuti survei ini, silakan kembali lagi nanti</string>
-  <string name="SociologistNPC_Hi">Hai!\Apakah Anda ingin mengambil bagian dalam survei kami?(Akses internet akan diperlukan)\dalam Pendapat Anda penting!</string>
+  <string name="SociologistNPC_Hi">Hai!\nApakah Anda ingin mengambil bagian dalam survei kami?(Akses internet akan diperlukan)\ndalam Pendapat Anda penting!</string>
   <string name="SociologistNPC_InternetRequired">Maaf, tetapi tanpa akses ke Internet, Anda tidak dapat lulus survei kami</string>
   <string name="SociologistNPC_DownloadError">Maaf, ada yang salah, coba lagi nanti</string>
   <string name="town_deco_library_sign_name">tanda Perpustakaan</string>
@@ -469,8 +469,7 @@
   <string name="LloidsBeacon_Preventing">Suatu aura sihir yang kuat yang ada di sini mencegah Anda menggunakan lloyd\'s beacon!</string>
   <string name="LloidsBeacon_Creatures">Aura psikis dari makhluk disekitar tidak memungkinkan Anda untuk menggunakan lloyd beacon pada saat ini.</string>
   <string name="LloidsBeacon_Return">Lloyd beacon berhasil ditetapkan di lokasi Anda saat ini, sekarang Anda dapat kembali ke sini kapan saja.</string>
-  <string name="LloidsBeacon_Set">
-\in\Suar ini dipasang di suatu tempat pada level %d dari Remixed Dungeon.</string>
+  <string name="LloidsBeacon_Set">Suar ini dipasang di suatu tempat pada level %d dari Remixed Dungeon.</string>
   <string name="Stylus_Name">stylus misterius</string>
   <string name="Stylus_ACInscribe">Menggores</string>
   <string name="Stylus_Info">Stylus misterius ini terbuat dari batu yang gelap dan sangat keras. Dengan menggunakannya, Anda dapat menuliskan glyph atau rune, tetapi Anda tidak memiliki kekuatan untuk memilih apa itu, stylus akan memutuskannya untuk Anda.</string>
@@ -2605,7 +2604,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
   <string name="DeepSnail_Name_Objective">siput dalam</string>
   <string name="DeepSnail_Desc">Moluska jenis ini sering terlihat di dekat sumber air dan jauh lebih cepat daripada siput biasa. Namun, waspadalah terhadap gigitannya, mereka dapat memiliki efek yang tidak menyenangkan pada kulit Anda.</string>
   <string name="CharInfo_Level">Ini adalah level %1$d %2$s.</string>
-  <string name="WrnExperimental_realtime">Waktu sebenarnya! mode diaktifkan: ini adalah roguelike realtime sekarang, ketuk cepat atau mati.\Ingin memeriksa inventaris?\Semoga berhasil melakukannya saat kepiting selokan memeriksa nyali Anda.</string>
+  <string name="WrnExperimental_realtime">Waktu sebenarnya! mode diaktifkan: ini adalah roguelike realtime sekarang, ketuk cepat atau mati.\nIngin memeriksa inventaris?\nSemoga berhasil melakukannya saat kepiting selokan memeriksa nyali Anda.</string>
   <string name="WrnExperimental_moveTimeout">Pindahkan batas waktu yang disetel ke %d milidetik, pikirkan cepat!</string>
   <string name="WrnExperimental_hint">Jika dunia yang aneh dan bengkok ini terlalu keras untuk Anda, nonaktifkan opsi tersebut menggunakan\nLayar Mulai->Opsi->Gameplay\nmenu dan mulai permainan baru atau muat simpanan lain.</string>
   <string name="WrnExperimental_title">Opsi eksperimental diaktifkan!</string>
