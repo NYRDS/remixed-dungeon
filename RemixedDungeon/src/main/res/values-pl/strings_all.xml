@@ -519,7 +519,7 @@
   <string name="CorpseDust_Info">Ta kulka trupiego pyłu nie różni się nadzwyczajnie od zwykłej kuli pyłu. W każdym razie, wiesz, że najlepiej pozbyć się tego najszybciej jak to tylko możliwe.</string>
   <string name="CorpseDust_Info2">Może to dla tego, że samo trzymanie tego sprawia że jesteś niespokojny i rozgniewany.</string>
   <string name="DarkGold_Name">ruda mrocznego złota</string>
-  <string name="DarkGold_Info">Metal ten jest nazywany mrocznym nie ze względu na kolor (nie różni się od zwykłego złota), ale dlatego, że ulega stopieniu w świetle dnia, czyniąc go bezużytecznym na Powierzchni.</string>
+  <string name="DarkGold_Info">Ta ruda złota jest nazywana mroczną nie ze względu na kolor (nie różni się od zwykłego złota), ale dlatego, że ulega stopieniu w świetle dnia, czyniąc go bezużytecznym na powierzchni.</string>
   <string name="DriedRose_Name">wysuszona róża</string>
   <string name="DriedRose_Info">Ta róża wyschła dawno temu, ale jakoś zachowała wszystkie płatki.</string>
   <string name="DriedRose_Info2">I nie straciła swojego uroku. Jest tak śliczna, że pragniesz zatrzymać ją na zawsze.</string>
@@ -564,7 +564,7 @@
   <string name="ComboBuff_Info">Następny atak będzie kombinacją ciosów.</string>
   <string name="Combo_Combo">Udało ci się wykonać kombinację %d ciosów!</string>
   <string name="CrippleBuff_Name">Sponiewierany </string>
-  <string name="CrippleBuff_Info">Twe ciało jest pokryte rozlicznymi ranami, lecz to jeszcze nie koniec walki.</string>
+  <string name="CrippleBuff_Info">Twe ciało jest pokryte licznymi ranami, lecz to jeszcze nie koniec walki.</string>
   <string name="FrostBuff_Name">Zamrożony </string>
   <string name="FrostBuff_Info">Bryła lodu uniemożliwia podjęcie żadnej akcji.</string>
   <string name="Frost_Shatter">Mróz sprawia, że %s roztrzaskuje się!</string>
@@ -572,27 +572,27 @@
   <string name="FuryBuff_Info">Twe oczy nabiegają krwistą czerwienią, co jest spowodowane całą tą furią, która cię wypełnia.</string>
   <string name="GasImmuneBuff_Name">Odporność na gazy</string>
   <string name="GasImmuneBuff_Info">Odporność na wszystkie gazy</string>
-  <string name="Hunger_Death">Zdechłeś z głodu...</string>
-  <string name="HungerBuff_Name1">Głodny</string>
-  <string name="HungerBuff_Info1">Jesteś głodny!</string>
-  <string name="HungerBuff_Name2">Wygłodzony</string>
+  <string name="Hunger_Death">Smierć głodowa...</string>
+  <string name="HungerBuff_Name1">Głód</string>
+  <string name="HungerBuff_Info1">Czujesz głód!</string>
+  <string name="HungerBuff_Name2">Wygłodzenie</string>
   <string name="HungerBuff_Info2">Umierasz z głodu, musisz coś zjeść!</string>
-  <string name="InvisibilityBuff_Name">Niewidzialny</string>
+  <string name="InvisibilityBuff_Name">Niewidzialność</string>
   <string name="InvisibilityBuff_Info">Zupełna niewidzialność, pozwala na unikanie zagrożeń lub stanie się jednym z nich.</string>
   <string name="LevitationBuff_Name">Lewitacja</string>
   <string name="LevitationBuff_Info">Ciało unosi się nad podłożem, możesz teraz uniknąć pułapek i innych tego typu zagrożeń.</string>
-  <string name="LightBuff_Name">Oświecony</string>
+  <string name="LightBuff_Name">Oświecenie</string>
   <string name="LightBuff_Info">Światło wydziela się z ciała, rozjaśniając wszystko wokół.</string>
   <string name="MindVisionBuff_Name">Telepatyczna Wizja</string>
   <string name="MindVisionBuff_Info">Twa podświadomość jasno obrazuje ci położenie wszystkich żywych istot na piętrze. </string>
   <string name="OozeBuff_Name">Toksyczny Szlam</string>
   <string name="OozeBuff_Info">Toksyczny Szlam pożera ścierwo!</string>
   <string name="Ooze_Death">%s zabił cię...</string>
-  <string name="ParalysisBuff_Name">Sparaliżowany</string>
-  <string name="ParalysisBuff_Info">Zupełnie sparaliżowany!</string>
-  <string name="PoisonBuff_Name">Zatruty</string>
+  <string name="ParalysisBuff_Name">Paraliż</string>
+  <string name="ParalysisBuff_Info">Zupełny paraliż!</string>
+  <string name="PoisonBuff_Name">Zatrucie</string>
   <string name="PoisonBuff_Info">Organizm jest powoli wykańczany przez truciznę!</string>
-  <string name="Poison_Death">Zmarłeś poprzez zatrucie...</string>
+  <string name="Poison_Death">Smierć poprzez zatrucie...</string>
   <string name="RegenerationBuff_Name">Naturalna Regeneracja</string>
   <string name="RegenerationBuff_Info">Mechanika naturalnej regeneracji istnieje w formie umiejętności, co ma na celu uczynienie mechaniki klarowniejszej.</string>
   <string name="RootsBuff_Name">Przykorzeniony</string>
@@ -2597,7 +2597,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="PlagueDoctorNPC_After_Quest_2">Jesteś tam jeszcze? Masz! Weź to.</string>
   <string name="FilteredMask_Name">Maska N95</string>
   <string name="FilteredMask_Info">Maska oddechowa to urządzenie zaprojektowane w celu ochrony użytkownika przed wdychaniem niebezpiecznych gazów i cząstek stałych, takich jak pyły i mikroorganizmy zawieszone w powietrzu.
-  \ n\n  a maska ​​służy jednak wyłącznie do celów dekoracyjnych.</string>
+  \n\n  a maska ​​służy jednak wyłącznie do celów dekoracyjnych.</string>
   <string name="FullFaceMask_Name">Maska Przeciwgazowa</string>
   <string name="FullFaceMask_Info">Maska przeciwgazowa jest używana do ochrony użytkownika przed wdychaniem zanieczyszczeń i toksycznych gazów. Maska tworzy szczelną osłonę na nosie, ustach i oczach.
  \n\n Filtrów brakuje w tej masce, ale mimo to wygląda fajnie.</string>
@@ -2846,8 +2846,8 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="MobAi_status">%sto%s</string>
   <string name="WndCustomizations_Title">Modyfikacje</string>
   <string name="IceGuardianCore_DieInfo">Zimno tutaj, Lepiej wrócę na poziom 14 i poszukam jakiegoś cieplejszego miejsca.</string>
-  <string name="Lich_DieInfo">Nigdy nie lubiłem/am Nekromantów. To dobra pora by wrócić na poziom 7 i poszukać drogi ku nowej przygodzie.</string>
-  <string name="SpiderQueen_DieInfo">Królowa pająków została zabita! Teraz powinienem wrócić na poziom 5 i kontynuować moją przygodę w głębiny .</string>
+  <string name="Lich_DieInfo">Nigdy nie polubie tego Nekromanty. To dobra pora by wrócić na poziom 7 i poszukać drogi ku nowej przygodzie.</string>
+  <string name="SpiderQueen_DieInfo">Królowa pająków została zabita! Teraz wracam na poziom 5 i kontynuuje moją przygodę w głębiny .</string>
   <string name="WndModSelect_ReallyDelete">Na pewno usunąć? </string>
   <string name="WndModSelect_AreYouSure">Usuwanie modyfikacji %s, Jesteś pewien?</string>
   <string name="Challenges_Names_8">Żadnego miasta</string>
@@ -2967,4 +2967,5 @@ remix.32.1\n
 - Teraz można instalować mody lokalnie\n
 -- Przedmioty mogą teraz pełnić funkcje gdy są w jeden na drugim\n
 - Naprawa błędów\n</string>
+  <string name="WndInstallingMod_deleting_file">Usuwam %s</string>
 </resources>
