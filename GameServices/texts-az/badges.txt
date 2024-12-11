@@ -4,7 +4,7 @@ Kanalizasiya Terroru Artıq Yoxdur
 2.Tengu Öldürüldü
 Aldadıcı Ruh artıq heç kəsə işgəncə etməyəcək
 
-3.DM-300 öldürüldü
+3. DM-300 has been slain
 Məqsədsiz bir maşın deaktiv edildi
 
 4.Padşah öldürüldü
@@ -30,3 +30,4 @@ Yog-Dzewa və onun dəhşətləri artıq yoxdur.
 
 11. Əməliyyat maskası əldə edildi
 Maska taxmaq digərlərini düşündüyünüz mənasına gəlir
+
