@@ -4,7 +4,7 @@ Terreur van het riool is niet meer.
 2. Tengu is verslagen
 De sluwe geest zal niemand meer martelen.
 
-3. DM-300 is verslagen
+3. DM-300 has been slain
 Een machine die z'n nut heeft verloren is weer geactiveerd.
 
 4. Koning is verslagen 
@@ -30,3 +30,4 @@ Moed, Vriendelijkheid en een aantal gouden munten, en zelfs een brute Gnoll gaan
 
 11. Chirurgisch mondkapje verkregen
 Het dragen van een mondkapje betekent dat je zorg draagt voor anderen. 
+
