@@ -4,7 +4,7 @@ Il terrore delle fogne non esiste più.
 2. Tengu è stato sconfitto
 Lo spirito demoniaco non tormenterà più nessuno.
 
-3. DM-300 è stato distrutto
+3. DM-300 has been slain
 Una macchina che ha perso il suo scopo è stata disattivata.
 
 4. Il Re è stato sconfitto
@@ -30,3 +30,4 @@ Coraggio, gentilezza e qualche moneta d'oro, e perfino lo gnoll più spietato en
 
 11. Maschera chirurgica ottenuta
 Indossare una maschera significa che tieni agli altri.
+
