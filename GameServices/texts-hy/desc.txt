@@ -1,0 +1,31 @@
+This is an open source roguelike game with pixel style graphics
+
+Once upon a time, there was a small town. The townsfolk lived happily, but they were so poor that they couldn’t even afford to go somewhere decent on holidays. But on the day when everybody abandoned all hope, a miracle occurred. The ground beneath the town shook violently and burst out a myriad of despicable monsters. From that point on, all the townsfolk who had survived lived happily ever after. Why? Because the dungeon has attracted all sorts of heroes and adventurers. They protected the innocents and ended up being excellent spenders, boosting the town’s economy.
+And now the little town flourishes, as it stands on top of a dangerous dungeon filled with dead adventurers and their miserable souls.
+
+Խաղի առանձնահատկությունները։
+- Այս խաղը աջակցում է օգտագործողի ստեղծած մոդիֆիկացիայով։ ԵՒ քանի որ մենք հետագայում զարգացնում ենք այս հնարավորությունը, շուտով դուք կկարողանաք ամբողջովին նոր խաղ ստեղծել Remixed Pixel Dungeon- ում:
+- Roguelike ոճով դժվար փորձ!
+- 7 տարբեր կլասի հերոսի ընտրություն
+- Քաղաքի կենտրոն, այնտեղ կարող եք պատրաստվել ձեր ճանապարհորդության համար եւ այնտեղ ներկայացնում է ձեզ խաղի աշխարհը
+-Հիմնական 30-ից ավելի քարանձավ` բաժանված 6 տիպի քարանձավով
+- 3 ընտրովի քարանձավ: Սարդերի Բույն, Նեկրոպոլիս, Սառցե Քարանձավներ
+- Տասնյակ իրեր եւ հրեշներ
+- Տարբեր Տիրակալներ
+- Գլխարկներ! Բոլորը սիրում են գլխարկներ
+
+Join our Discord server:
+https://discordapp.com/invite/AMXrhQZ
+
+Հետևեք մեզ twitter -ում։
+https://twitter.com/nyrds
+
+This game is an open source software under the GPLv3 License. Source code of Remixed Dungeon can be found here: 
+https://github.com/NYRDS/remixed-dungeon
+
+Եթե ​​ցանկանում եք մասնակցել թարգմանման այլ լեզուներին, խնդրում ենք այցելել.
+https://www.transifex.com/projects/p/remixed-dungeon/
+
+You can check 
+http://wiki.nyrds.net/doku.php?id=rpd:changelog
+մեր վիքիում լրիվ փոփոխությունների համար
