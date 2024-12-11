@@ -1,0 +1,31 @@
+This is an open source roguelike game with pixel style graphics
+
+Once upon a time, there was a small town. The townsfolk lived happily, but they were so poor that they couldn’t even afford to go somewhere decent on holidays. But on the day when everybody abandoned all hope, a miracle occurred. The ground beneath the town shook violently and burst out a myriad of despicable monsters. From that point on, all the townsfolk who had survived lived happily ever after. Why? Because the dungeon has attracted all sorts of heroes and adventurers. They protected the innocents and ended up being excellent spenders, boosting the town’s economy.
+And now the little town flourishes, as it stands on top of a dangerous dungeon filled with dead adventurers and their miserable souls.
+
+Spillfunksjoner:
+- Dette spillet støtter spillerlagde mods! Og ettersom vi forsetter å utvikle denne funksjonen vil du kunne lage et helt nytt spill inne i Remiixed Dungeon!
+- Hardcore roguelike opplevelse!
+- 7 helteklasser å velge mellom
+- By område for å forberede deg på reisen og introdusere deg til spillverdenen
+- Hovedfangehullet har over 30 nivåer delt på 6 fangehull typer.
+- 3 extra fangehull: Edderkoppenes leir, De dødes by (Necropolis) og Is grottene
+- Dusinvis av gjenstander og monstre
+- Mange forskjellige "sjef" monstre
+- Hatter! Alle elsker hatter
+
+Join our Discord server:
+https://discordapp.com/invite/AMXrhQZ
+
+Følg oss på twitter:
+https://twitter.com/nyrds
+
+This game is an open source software under the GPLv3 License. Source code of Remixed Dungeon can be found here: 
+https://github.com/NYRDS/remixed-dungeon
+
+Vis du ønsker å være med på å oversette spillet til andre språk, kan du sjekke ut:
+https://www.transifex.com/projects/p/remixed-dungeon/
+
+You can check 
+http://wiki.nyrds.net/doku.php?id=rpd:changelog
+For en full endrings log kan du sjekke ut wikien vår
