@@ -162,6 +162,10 @@ construo.targets.each { target ->
             into("RemixedDungeon-${project.ext.version}-${tag}/mods/Remixed")
         }
 
+        zipTask.from(file("src/desktop/d_assets")) {
+            into("RemixedDungeon-${project.ext.version}-${tag}/mods/Remixed")
+        }
+
         zipTask.from(file("src/desktop/l10ns")) {
             into("RemixedDungeon-${project.ext.version}-${tag}/mods/Remixed")
         }

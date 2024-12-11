@@ -11,6 +11,7 @@ import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.glwrap.Matrix;
 import com.watabou.noosa.Text;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -34,8 +35,9 @@ public class SystemText extends Text {
     private static final SystemTextPseudoBatch batch = new SystemTextPseudoBatch();
     private static final float oversample = 4;
     private ArrayList<Boolean> wordMask = null;
+
     static {
-        generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/pixel_font.ttf"));
+        invalidate();
     }
 
     public SystemText(float baseLine) {
@@ -98,6 +100,7 @@ public class SystemText extends Text {
         final FreeTypeFontParameter fontParameters;
         fontParameters = new FreeTypeFontParameter();
         fontParameters.characters = FreeTypeFontGenerator.DEFAULT_CHARS + StringsManager.getAllCharsAsString();
+        //PUtil.slog("font", "characters " + fontParameters.characters);
         fontParameters.size = (int) (baseLine * oversample * fontScale);
         fontParameters.borderColor = Color.BLACK;
         fontParameters.borderWidth = oversample * fontScale;
@@ -105,7 +108,7 @@ public class SystemText extends Text {
         fontParameters.genMipMaps = true;
         fontParameters.magFilter = Texture.TextureFilter.Linear;
         fontParameters.minFilter = Texture.TextureFilter.MipMapLinearLinear;
-        fontParameters.spaceX = 0;
+        fontParameters.spaceX = -2;
         fontParameters.spaceY = 0;
         return fontParameters;
     }
@@ -120,7 +123,7 @@ public class SystemText extends Text {
         }
 
         lines.clear();
-        if(mask != null) {
+        if (mask != null) {
             wordMask = new ArrayList<>();
         }
 
@@ -137,10 +140,10 @@ public class SystemText extends Text {
             float line_width = 0;
             for (String word : words) {
                 glyphLayout.setText(font, word);
-                if(mask != null) {
+                if (mask != null) {
                     wordMask.add(mask[index]);
                 }
-                if ((line_width + glyphLayout.width + spaceLayout.width)/oversample <= maxWidth) {
+                if ((line_width + glyphLayout.width + spaceLayout.width) / oversample <= maxWidth) {
                     currentLine.add(word);
                     line_width += glyphLayout.width + spaceLayout.width;
                 } else {
@@ -149,7 +152,7 @@ public class SystemText extends Text {
                     currentLine.add(word);
                     line_width = glyphLayout.width + spaceLayout.width;
                 }
-                index+=word.length();
+                index += word.length();
             }
             if (!currentLine.isEmpty()) {
                 lines.add(currentLine);
@@ -183,7 +186,7 @@ public class SystemText extends Text {
 
     @Override
     public void draw() {
-        if(dirty) {
+        if (dirty) {
             lines.clear();
             measure();
         }
@@ -196,7 +199,7 @@ public class SystemText extends Text {
             float x = 0;
             for (String word : line) {
                 glyphLayout.setText(font, word);
-                if(wordMask == null || wordMask.get(wi)) {
+                if (wordMask == null || wordMask.get(wi)) {
                     font.draw(batch, glyphLayout, x, y);
                 }
                 x += glyphLayout.width + spaceLayout.width; // Use spaceLayout.width
@@ -256,8 +259,14 @@ public class SystemText extends Text {
     public static void invalidate() {
         if (generator != null) {
             generator.dispose();
-            generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/pixel_font.ttf"));
         }
+
+        if (GamePreferences.classicFont()) {
+            generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/pixel_font.ttf"));
+        } else {
+            generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/LXGWWenKaiScreen.ttf"));
+        }
+
         synchronized (fontCache) {
             for (BitmapFont font : fontCache.values()) {
                 font.dispose();

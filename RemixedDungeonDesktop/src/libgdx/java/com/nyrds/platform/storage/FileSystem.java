@@ -31,6 +31,7 @@ public class FileSystem {
 				"mods/"+ModdingMode.activeMod()+"/",
 				"mods/Remixed/",
 				"../assets/",
+				"../d_assets/",
 				"../l10ns/",
 				"./",
 		}) {
@@ -48,6 +49,7 @@ public class FileSystem {
 		for(String path : new String[] {
 				"mods/Remixed/",
 				"../assets/",
+				"../d_assets/",
 				"./",
 		}) {
 			fileHandle = Gdx.files.internal(path+fileName);

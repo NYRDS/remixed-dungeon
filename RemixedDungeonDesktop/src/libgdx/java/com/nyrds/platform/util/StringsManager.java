@@ -89,6 +89,7 @@ public class StringsManager {
         String line = Utils.EMPTY_STRING;
 
         while ((line = br.readLine()) != null) {
+            //PUtil.slog("strings",line);
             JSONArray entry = new JSONArray(line);
 
             String keyString = entry.getString(0);
