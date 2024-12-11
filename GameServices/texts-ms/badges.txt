@@ -4,7 +4,7 @@ Ketakutan dari pembentung sudah tiada lagi.
 2. Tengu telah dibunuh
 Roh jahat tidak dapat lagi mengganggu orang ramai lagi.
 
-3. DM-300  telah dibunuh
+3. DM-300 has been slain
 Mesin tersebut telah kehilangan tujuan hidupnya dan telah dinyahaktifkan.
 
 4. Raja telah dibunuh
@@ -30,3 +30,4 @@ Berani, Baik hati dan beberapa keping syiling emas, Gnoll ganas pun akan menyert
 
 11. Topeng muka jur bedah diperoleh
 Memakai topeng muka menunjukkan anda prihatin dengan orang lain.
+
