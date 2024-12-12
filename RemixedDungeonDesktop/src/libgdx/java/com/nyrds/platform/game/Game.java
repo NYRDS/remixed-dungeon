@@ -82,11 +82,12 @@ public class Game implements ApplicationListener, InputProcessor {
     }
 
     public static void openUrl(String prompt, String address) {
+        Gdx.net.openURI(address);
     }
 
     public static void sendEmail(String emailUri, String subject) {
+        Gdx.net.openURI("mailto:" + emailUri + "?subject=" + subject);
     }
-
     static public void openPlayStore() {
     }
 

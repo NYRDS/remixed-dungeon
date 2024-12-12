@@ -222,7 +222,7 @@ public class SystemText extends Text {
 
     @Override
     protected void measure() {
-        if (lines.isEmpty()) {
+        if (lines.isEmpty() || dirty) {
             wrapText();
         }
 

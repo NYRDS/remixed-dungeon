@@ -101,7 +101,7 @@ public class AboutScene extends PixelScene {
         Text visit = createText(StringsManager.getVar(R.string.AboutScene_OurSite), email);
         Text site  = createTouchLink(StringsManager.getVar(R.string.AboutScene_Lnk), visit);
 		
-		createText("\n"+ getTRN(), site);
+		Text trn = createText("\n"+ getTRN(), site);
 		
 		Image nyrdie = Icons.NYRDIE.get();
 		nyrdie.setX(align( text.getX() + (text.width() - nyrdie.width) / 2 ));

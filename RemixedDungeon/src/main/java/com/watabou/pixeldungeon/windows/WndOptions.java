@@ -61,7 +61,6 @@ public abstract class WndOptions extends Window {
 		buttonsVbox.setRect(GAP, 0, STD_WIDTH, buttonsVbox.childsHeight());
 		vbox.setRect(GAP, 0, STD_WIDTH, vbox.childsHeight());
 		resize(STD_WIDTH, (int) vbox.height());
-
 	}
 
     abstract public void onSelect(int index);
