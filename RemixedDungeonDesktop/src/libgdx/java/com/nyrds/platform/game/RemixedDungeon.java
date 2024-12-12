@@ -20,6 +20,8 @@ package com.nyrds.platform.game;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
@@ -82,8 +84,11 @@ public class RemixedDungeon extends Game {
 	@Override
 	public void create() {
 		GLog.debug("create");
-		GamePreferences.classicFont(true);
-		GamePreferences.uiLanguage("en");
+		GamePreferences.classicFont(GamePreferences.classicFont());
+		ModdingMode.selectMod(GamePreferences.activeMod());
+		GamePreferences.uiLanguage(GamePreferences.uiLanguage());
+
+		GameLoop.versionCode = 1227;
 
 		super.create();
 	}

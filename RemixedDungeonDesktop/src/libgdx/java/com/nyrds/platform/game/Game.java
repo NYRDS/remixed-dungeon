@@ -6,6 +6,7 @@ import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.files.FileHandle;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.support.PlayGames;
+import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gfx.SystemText;
@@ -42,6 +43,7 @@ public class Game implements ApplicationListener, InputProcessor {
     }
 
     public void doRestart() {
+        RemixedDungeonApp.restartApp();
     }
 
     public static void shutdown() {

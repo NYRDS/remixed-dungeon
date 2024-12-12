@@ -268,6 +268,7 @@ public class GamePreferences {
         }
 
         StringsManager.useLocale(locale, lang);
+        SystemText.invalidate();
     }
 
     public static void setSelectedLanguage() {

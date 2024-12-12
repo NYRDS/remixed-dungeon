@@ -280,14 +280,34 @@ public class ModdingMode {
         }
     }
 
+    public static @NotNull InputStream getInputMergedInputStream(String resName) {
+        InputStream modStream = null;
+        try {
+            modStream = new FileInputStream(FileSystem.getInternalStorageFile(resName));
+        } catch (Exception e) {
+            // ignore
+        }
+
+        try {
+            InputStream builtInStream = new FileInputStream(FileSystem.getInternalStorageFileBase(resName));
+            if(modStream == null) {
+                return builtInStream;
+            }
+            return new SequenceInputStream(builtInStream, modStream);
+        } catch (IOException | SecurityException | ModError e) {
+            throw new ModError("Missing file: " + resName, e);
+        }
+
+    }
+
     public static @NotNull InputStream getInputStream(String resName) {
         try {
             if (isModdingAllowed(resName)) {
                 return new FileInputStream(FileSystem.getInternalStorageFile(resName));
             }
-            return new FileInputStream(FileSystem.getInternalStorageFile(resName));
+            return new FileInputStream(FileSystem.getInternalStorageFileBase(resName));
         } catch (IOException | SecurityException | ModError e) {
-            throw new ModError("Missing file: " + resName + " in: " + activeMod() + " " + activeModVersion(), e);
+            throw new ModError("Missing file: " + resName, e);
         }
     }
 

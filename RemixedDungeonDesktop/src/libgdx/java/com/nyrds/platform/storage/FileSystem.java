@@ -4,6 +4,8 @@ import static com.nyrds.pixeldungeon.ml.BuildConfig.SAVES_PATH;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
+import com.nyrds.pixeldungeon.ml.actions.Push;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 
@@ -36,7 +38,9 @@ public class FileSystem {
 				"./",
 		}) {
 			fileHandle = Gdx.files.internal(path+fileName);
+			//PUtil.slog("storage", "Trying " + path + fileName);
 			if(fileHandle.exists()) {
+
 				return fileHandle;
 			}
 		}
@@ -50,6 +54,7 @@ public class FileSystem {
 				"mods/Remixed/",
 				"../assets/",
 				"../d_assets/",
+				"../l10ns/",
 				"./",
 		}) {
 			fileHandle = Gdx.files.internal(path+fileName);
@@ -65,6 +70,9 @@ public class FileSystem {
 		return getInternalStorageFileHandle(fileName).file();
 	}
 
+	static public @NotNull File getInternalStorageFileBase(String fileName) {
+		return getInternalStorageFileHandleBase(fileName).file();
+	}
 
 	static public String[] listInternalStorage() {
 		return getInternalStorageFile(".").list();
@@ -72,7 +80,7 @@ public class FileSystem {
 
 	@NotNull
 	static public File[] listExternalStorage() {
-		File storageDir = new File(Gdx.files.getExternalStoragePath());
+		File storageDir = Gdx.files.internal("mods/").file();
 
 		File[] ret = storageDir.listFiles();
 		if(ret != null) {
@@ -101,7 +109,7 @@ public class FileSystem {
 	}
 
 	static public File getExternalStorageFile(String fileName) {
-		return Gdx.files.external(fileName).file();
+		return Gdx.files.internal("mods/"+fileName).file();
 	}
 
 	static public String getExternalStorageFileName(String fname) {

@@ -82,7 +82,8 @@ public class StringsManager {
 
     @SneakyThrows
     private static void parseStrings(String resource) {
-        InputStream fis = ModdingMode.getInputStream(resource);
+        PUtil.slog("Strings", "Parsing Strings from " + resource);
+        InputStream fis = ModdingMode.getInputMergedInputStream(resource);
         InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
         BufferedReader br = new BufferedReader(isr);
 

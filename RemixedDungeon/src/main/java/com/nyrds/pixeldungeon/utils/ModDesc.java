@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;

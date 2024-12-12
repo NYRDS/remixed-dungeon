@@ -261,11 +261,11 @@ public class SystemText extends Text {
             generator.dispose();
         }
 
-        if (GamePreferences.classicFont()) {
-            generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/pixel_font.ttf"));
-        } else {
+        //if (GamePreferences.classicFont()) {
+        //    generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/pixel_font.ttf"));
+        //} else {
             generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/LXGWWenKaiScreen.ttf"));
-        }
+        //}
 
         synchronized (fontCache) {
             for (BitmapFont font : fontCache.values()) {
@@ -277,6 +277,7 @@ public class SystemText extends Text {
 
     @Override
     public void text(@NotNull String str) {
+        dirty = true;
         lines.clear();
         super.text(str);
     }
