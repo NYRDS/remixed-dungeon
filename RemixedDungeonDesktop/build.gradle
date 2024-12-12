@@ -52,7 +52,7 @@ application {
 
 
 tasks.withType(JavaExec).configureEach {
-    jvmArgs += ["--add-opens", "java.base/java.util=ALL-UNNAMED"]
+    jvmArgs += ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
 }
 
 // Custom task to run the Python script

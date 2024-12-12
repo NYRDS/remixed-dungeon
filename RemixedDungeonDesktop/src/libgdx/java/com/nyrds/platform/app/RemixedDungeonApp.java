@@ -1,6 +1,5 @@
 package com.nyrds.platform.app;
 
-import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -10,6 +9,8 @@ public class RemixedDungeonApp {
         return true;
     }
     public static void main(String[] args) {
+        System.setProperty("https.protocols", "TLSv1.2");
+
         Lwjgl3ApplicationConfiguration cfg = new Lwjgl3ApplicationConfiguration();
         cfg.setTitle("Remixed Dungeon");
         cfg.setWindowedMode(480, 800);

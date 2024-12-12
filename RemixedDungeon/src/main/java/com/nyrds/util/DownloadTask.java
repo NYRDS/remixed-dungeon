@@ -1,6 +1,7 @@
 package com.nyrds.util;
 
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.network.HttpConnectionFactory;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import java.io.File;
@@ -8,8 +9,6 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
-import info.guardianproject.netcipher.NetCipher;
 
 public class DownloadTask implements Runnable {
 
@@ -33,10 +32,7 @@ public class DownloadTask implements Runnable {
             URL url = new URL(m_url);
             File file = new File(m_downloadTo);
 
-            HttpURLConnection ucon = NetCipher.getCompatibleHttpURLConnection(url);
-
-            //ucon.setSSLSocketFactory((SSLSocketFactory) SSLCertificateSocketFactory.getDefault());
-
+            HttpURLConnection ucon = HttpConnectionFactory.create(url);
             ucon.setReadTimeout(10000);
             ucon.setInstanceFollowRedirects(true);
             ucon.connect();
