@@ -149,14 +149,24 @@ public class Carcass extends Item implements Doom {
             } else {
                 GLog.n(Utils.format(R.string.Carcass_Necromancy_Failed, src.getName()));
             }
-            removeItem();
+
+            if(getHeap()!=null) {
+                removeItem();
+            } else {
+                detach(chr.getBelongings().backpack, 1);
+            }
 
         } else if (action.equals(AC_DEVOUR)) {
             Devour.hit(chr);
             chr.eat(this, src.ht(), Utils.format(R.string.Carcass_Devoured, src.getName()));
             chr.heal(src.ht()/10, this);
 
-            removeItem();
+            if(getHeap()!=null) {
+                removeItem();
+            } else {
+                detach(chr.getBelongings().backpack, 1);
+            }
+
         } else {
             super._execute(chr, action);
         }

@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -312,7 +313,7 @@ public class Potion extends Item implements UnknownItem {
 			return;
 		}
 
-		Splash.at( cell, splashColors[image], 5 );
+		Splash.at( cell, splashColors[ItemStatusHandler.indexByImage(image, images)], 5 );
 	}
 
 	public int basePrice() {
