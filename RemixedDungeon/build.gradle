@@ -156,9 +156,10 @@ dependencies {
 
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
-    googlePlayImplementation ("com.appodeal.ads:sdk:3.3.3.0") {
+    googlePlayImplementation ("com.appodeal.ads:sdk:3.4.0.0") {
         exclude group: "com.appodeal.ads.sdk.networks", module: "amazon"
         exclude group: "com.appodeal.ads.sdk.networks", module: "meta"
+        exclude group: "com.appodeal.ads.sdk.networks", module: "yandex"
         exclude group: "com.appodeal.ads.sdk.services", module: "adjust"
         exclude group: "com.appodeal.ads.sdk.services", module: "appsflyer"
         exclude group: "com.appodeal.ads.sdk.services", module: "facebook_analytics"
@@ -166,11 +167,13 @@ dependencies {
         exclude group: "com.applovin.mediation", module: "google-adapter"
         exclude group: "com.applovin.mediation", module: "amazon-tam-adapter"
         exclude group: "com.applovin.mediation", module: "facebook-adapter"
+        exclude group: "com.applovin.mediation", module: "yandex-adapter"
         exclude group: "io.bidmachine", module: "ads.networks.amazon"
         exclude group: "io.bidmachine", module: "ads.networks.meta_audience"
         exclude group: "org.bidon", module: "admob-adapter"
         exclude group: "org.bidon", module: "amazon-adapter"
         exclude group: "org.bidon", module: "meta-adapter"
+        exclude group: "org.bidon", module: "yandex-adapter"
     }
 
     googlePlayImplementation 'com.yandex.android:mobileads:7.6.0'
