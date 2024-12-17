@@ -820,7 +820,7 @@ public class Hero extends Char {
 
     @Override
     public void eat(@NotNull Item food, float energy, String message) {
-        food.detach(getBelongings().backpack);
+        food.consumedOneBy(this);
 
         hunger().satisfy(energy);
 

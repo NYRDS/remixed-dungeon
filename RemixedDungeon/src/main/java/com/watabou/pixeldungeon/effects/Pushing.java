@@ -89,10 +89,10 @@ public class Pushing extends Actor {
 				sprite.setY(getY());
 			} else {
 				GLog.debug("pushing %s (%d) %d->%d complete", ch, ch.getPos(), from, to);
-				sprite.point( end );
 				killAndErase();
 				Actor.remove( Pushing.this );
-				ch.setPos(to);
+				ch.placeTo(to);
+				sprite.place(to);
 				next();
 			}
 		}
