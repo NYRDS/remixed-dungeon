@@ -4,7 +4,6 @@ import static com.nyrds.pixeldungeon.ml.BuildConfig.SAVES_PATH;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
-import com.nyrds.pixeldungeon.ml.actions.Push;
 import com.nyrds.platform.util.PUtil;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
@@ -19,6 +18,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -27,25 +28,39 @@ import lombok.SneakyThrows;
 public class FileSystem {
 
 
-	static public @NotNull FileHandle getInternalStorageFileHandle(String fileName) {
+	static public FileHandle getInternalStorageFileHandle(String fileName) {
 		FileHandle fileHandle = null;
-		for(String path : new String[] {
-				"mods/"+ModdingMode.activeMod()+"/",
+		for(String path : getAllResPaths()) {
+			fileHandle = Gdx.files.internal(path+fileName);
+			if(fileHandle.exists()) {
+				return fileHandle;
+			}
+		}
+		PUtil.slog("file", "File not found: " + fileName);
+		return fileHandle;
+	}
+
+	private static String[] getAllResPaths() {
+		return new String[]{
+				"mods/" + ModdingMode.activeMod() + "/",
 				"mods/Remixed/",
 				"../assets/",
 				"../d_assets/",
 				"../l10ns/",
 				"./",
-		}) {
-			fileHandle = Gdx.files.internal(path+fileName);
-			//PUtil.slog("storage", "Trying " + path + fileName);
-			if(fileHandle.exists()) {
+		};
+	}
 
-				return fileHandle;
+	static public String[] listResources(String resName) {
+		Set<String> resList = new HashSet<>();
+		for (String path : getAllResPaths()) {
+			FileHandle fileHandle = Gdx.files.internal(path + resName);
+			FileHandle[] fileHandles = fileHandle.list(file -> true);
+			for (FileHandle file : fileHandles) {
+				resList.add(file.name());
 			}
 		}
-
-		return fileHandle;
+		return resList.toArray(new String[0]);
 	}
 
 	static public @NotNull FileHandle getInternalStorageFileHandleBase(String fileName) {
@@ -62,6 +77,7 @@ public class FileSystem {
 				return fileHandle;
 			}
 		}
+		PUtil.slog("file", "Internal file not found: " + fileName);
 		return fileHandle;
 	}
 
@@ -72,10 +88,6 @@ public class FileSystem {
 
 	static public @NotNull File getInternalStorageFileBase(String fileName) {
 		return getInternalStorageFileHandleBase(fileName).file();
-	}
-
-	static public String[] listInternalStorage() {
-		return getInternalStorageFile(".").list();
 	}
 
 	@NotNull
@@ -172,7 +184,7 @@ public class FileSystem {
 			}
 
 			if(depth > 0 && file.isDirectory()) {
-				zip.putNextEntry(new ZipEntry(getRelativePath(file,rootFolder)));
+				zip.putNextEntry(new ZipEntry(getRelativePath(file, rootFolder)));
 				addFolderToZip(rootFolder, srcFolder, depth-1, zip, filter);
 				zip.closeEntry();
 			}
@@ -215,9 +227,5 @@ public class FileSystem {
 		if (!f.mkdirs()) {
 			throw new ModError("Can't create directory:"+dir);
 		}
-	}
-
-	public static boolean deleteFile(String file) {
-		return new File(file).delete();
 	}
 }

@@ -207,17 +207,9 @@ public class ModdingMode {
 
         Set<String> resList = new HashSet<>();
 
-        String[] fullList = FileSystem.getInternalStorageFile(path).list();
+        String[] fullList = FileSystem.listResources(path);
 
         collectResources(path, filter, resList, fullList);
-
-        if (inMod()) {
-            String resourcesPath = mActiveMod + "/" + path;
-            if (isResourceExistInMod(path)) {
-                String[] modList = FileSystem.getExternalStorageFile(resourcesPath).list();
-                collectResources(path, filter, resList, modList);
-            }
-        }
 
         return Arrays.asList(resList.toArray(new String[0]));
     }
@@ -241,13 +233,6 @@ public class ModdingMode {
         } else {
             return isAssetExist(resName);
         }
-    }
-
-    public static File getFile(String resName) {
-        if (!mActiveMod.equals(REMIXED)) {
-            return FileSystem.getExternalStorageFile(mActiveMod + "/" + resName);
-        }
-        return null;
     }
 
     public static String getResource(String resName) {
