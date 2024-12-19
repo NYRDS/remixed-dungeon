@@ -124,7 +124,7 @@ public class Carcass extends Item implements Doom {
     public void _execute(@NotNull Char chr, @NotNull String action){
         if(action.equals(AC_KICK)) {
             GLog.i(Utils.format(R.string.Carcass_Kick, src.getName()));
-            removeItem();
+            consumedOneBy(chr);
         }
 
         if (action.equals(AC_NECROMANCY)) {
@@ -137,7 +137,7 @@ public class Carcass extends Item implements Doom {
             Buff.detach(chr, Sungrass.Health.class);
 
             if (level.cellValid(spawnPos)) {
-                var pet = Mob.makePet((Mob) src, chr.getId());
+                var pet = Mob.makePet((Mob) src.makeClone(), chr.getId());
                 pet.regenSprite();
                 pet.assigndNextId();
                 pet.setUndead(true);
@@ -149,23 +149,12 @@ public class Carcass extends Item implements Doom {
             } else {
                 GLog.n(Utils.format(R.string.Carcass_Necromancy_Failed, src.getName()));
             }
-
-            if(getHeap()!=null) {
-                removeItem();
-            } else {
-                detach(chr.getBelongings().backpack, 1);
-            }
+            consumedOneBy(chr);
 
         } else if (action.equals(AC_DEVOUR)) {
             Devour.hit(chr);
             chr.eat(this, src.ht(), Utils.format(R.string.Carcass_Devoured, src.getName()));
             chr.heal(src.ht()/10, this);
-
-            if(getHeap()!=null) {
-                removeItem();
-            } else {
-                detach(chr.getBelongings().backpack, 1);
-            }
 
         } else {
             super._execute(chr, action);

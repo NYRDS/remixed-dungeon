@@ -829,6 +829,14 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
         Actor.remove(this);
     }
 
+    public void consumedOneBy(Char chr) {
+        if(heap!=null) {
+            heap.pickUp();
+        } else {
+            detach(chr.getBelongings().backpack);
+        }
+    }
+
     @LuaInterface
     public void setChargeKnown(boolean chargeKnown) {} //RA compatibility
 
