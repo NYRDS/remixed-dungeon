@@ -1,6 +1,5 @@
 package com.nyrds.util;
 
-import com.google.gson.JsonParser;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.watabou.noosa.Animation;
@@ -11,7 +10,6 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONTokener;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -25,8 +23,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-
-import lombok.SneakyThrows;
 
 public class JsonHelper {
 
@@ -63,11 +59,9 @@ public class JsonHelper {
         return readJsonFromStream(new ByteArrayInputStream(in.getBytes()), "String");
     }
 
-    @SneakyThrows(IOException.class)
     @NotNull
     public static JSONObject readJsonFromStream(InputStream stream, String tag) {
         StringBuilder jsonDef = new StringBuilder();
-        Object value = null;
 
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(stream))) {
 
@@ -79,29 +73,9 @@ public class JsonHelper {
             }
             reader.close();
 
-            String sourceString = jsonDef.toString();
-
-            try {
-                value = new JSONTokener(sourceString).nextValue();
-                return (JSONObject) (value);
-            } catch (Exception e) {
-                EventCollector.logException(Utils.format("non std json in %s", tag));
-            }
-
-            sourceString = JsonParser.parseString(sourceString).toString();
-
-            try {
-                value = new JSONTokener(sourceString).nextValue();
-                return (JSONObject) (value);
-            } catch (Exception e) {
-                EventCollector.logException(Utils.format("gson failed in %s", tag));
-                return new JSONObject();
-            }
-
-            //String jsonString = JsonValue.readHjson().toString();
-
-        } catch (ClassCastException e) {
-            EventCollector.logException(e, value.toString());
+            return Util.sanitizeJson(jsonDef.toString());
+        } catch (Exception e) {
+            EventCollector.logException(Utils.format("bad json in %s", tag));
             return new JSONObject();
         }
     }

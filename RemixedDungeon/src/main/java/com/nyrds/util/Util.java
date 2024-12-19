@@ -4,8 +4,10 @@ import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.watabou.utils.Callback;
 
+import org.hjson.JsonValue;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.json.JSONObject;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -62,6 +64,16 @@ public class Util {
 			++index;
 		}
 		return -1;
+	}
+
+	public static JSONObject sanitizeJson(String jsonInput) {
+		// Parse the JSON input
+		JsonValue jsonValue = JsonValue.readHjson(jsonInput);
+
+		// Convert HJSON to JSON (sanitized)
+		String sanitizedJson = jsonValue.toString();
+
+		return new JSONObject(sanitizedJson);
 	}
 
 	public static boolean isDebug() {

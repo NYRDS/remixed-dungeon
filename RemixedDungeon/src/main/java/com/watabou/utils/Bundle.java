@@ -62,7 +62,7 @@ public class Bundle {
     }
 
     public Bundle(String data) throws JSONException {
-        this.data = new JSONObject(data);
+        this.data = Util.sanitizeJson(data);
     }
 
     public Bundle(JSONObject data) {
