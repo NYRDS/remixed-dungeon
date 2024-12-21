@@ -167,11 +167,6 @@ public abstract class Mob extends Char {
     @SneakyThrows
     public CharSprite newSprite() {
 
-        String descName = "spritesDesc/" + getEntityKind() + ".json";
-        if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
-            return new MobSpriteDef(descName, getKind());
-        }
-
         if (spriteClass instanceof Class) {
             CharSprite sprite = (CharSprite) ((Class<?>) spriteClass).newInstance();
             sprite.selectKind(getKind());
@@ -182,7 +177,12 @@ public abstract class Mob extends Char {
             return new MobSpriteDef((String) spriteClass, getKind());
         }
 
-        throw new TrackedRuntimeException(String.format("sprite creation failed - me class %s", getEntityKind()));
+        String descName = "spritesDesc/" + getEntityKind() + ".json";
+        if (ModdingMode.isResourceExist(descName) || ModdingMode.isAssetExist(descName)) {
+            return new MobSpriteDef(descName, getKind());
+        }
+
+        throw new TrackedRuntimeException(String.format("sprite creation failed - me class %s sprite class %s", getEntityKind(), spriteClass));
     }
 
     @Override

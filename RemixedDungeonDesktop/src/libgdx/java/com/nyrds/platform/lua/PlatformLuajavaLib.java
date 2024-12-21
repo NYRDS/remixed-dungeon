@@ -20,9 +20,10 @@ public class PlatformLuajavaLib extends LuajavaLib {
 	static {
 		classRemap.put("com.watabou.pixeldungeon.RemixedDungeon", "com.nyrds.platform.game.RemixedDungeon");
 		classRemap.put("com.watabou.noosa.audio.Sample", "com.nyrds.platform.audio.Sample");
-		classRemap.put("com.watabou.noosa.audio.Music", "com.nyrds.platform.audio.Music");
+		classRemap.put("com.watabou.noosa.audio.Music", "com.nyrds.platform.audio.MusicManager");
 		classRemap.put("com.watabou.noosa.StringsManager", "com.nyrds.platform.util.StringsManager");
 		classRemap.put("com.nyrds.platform.Input", "com.nyrds.platform.app.Input");
+		classRemap.put("com.nyrds.platform.audio.Music","com.nyrds.platform.audio.MusicManager");
 	}
 
 	public PlatformLuajavaLib() {

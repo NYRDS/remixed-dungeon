@@ -17,7 +17,6 @@ public enum Sample {
 
 	INSTANCE;
 
-	public static final int MAX_STREAMS = 8;
 	String playOnComplete;
 
 	@NotNull
@@ -84,19 +83,12 @@ public enum Sample {
 				sound.play(leftVolume, rate, 0);
 			} else {
 				playOnComplete = id;
-				GameLoop.execute(() -> load(id));
+				GameLoop.instance().soundExecutor.execute(() -> load(id));
 			}
 		});
 	}
 
 	public void enable(boolean value) {
 		enabled = value;
-	}
-
-	public void onLoadComplete(String id) {
-		if (playOnComplete != null && playOnComplete.equals(id)) {
-			play(playOnComplete);
-			playOnComplete = null;
-		}
 	}
 }
