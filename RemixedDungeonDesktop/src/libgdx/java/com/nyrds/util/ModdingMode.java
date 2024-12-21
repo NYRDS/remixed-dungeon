@@ -8,12 +8,29 @@ import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.storage.FileSystem;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import lombok.SneakyThrows;
+
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.SequenceInputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import lombok.SneakyThrows;
 
 
 public class ModdingMode {
@@ -92,6 +109,8 @@ public class ModdingMode {
         } catch (Exception e) {
             EventCollector.logException(e);
             mActiveMod = ModdingMode.REMIXED;
+        } finally {
+            FileSystem.invalidateCache();
         }
     }
 
@@ -173,14 +192,11 @@ public class ModdingMode {
     }
 
     public static boolean isResourceExists(String resName) {
-        return isAssetExist(resName) || isResourceExistInMod(resName);
+        return FileSystem.exists(resName);
     }
 
     public static boolean isResourceExistInMod(String resName) {
-        if (!mActiveMod.equals(REMIXED)) {
-            return FileSystem.getExternalStorageFile(mActiveMod + "/" + resName).exists();
-        }
-        return false;
+        return FileSystem.exists(resName);
     }
 
     @NotNull

@@ -27,17 +27,11 @@ import lombok.SneakyThrows;
 
 public class FileSystem {
 
+	static CaseInsensitiveFileCache fileCache = new CaseInsensitiveFileCache(getAllResPaths());
 
 	static public FileHandle getInternalStorageFileHandle(String fileName) {
-		FileHandle fileHandle = null;
-		for(String path : getAllResPaths()) {
-			fileHandle = Gdx.files.internal(path+fileName);
-			if(fileHandle.exists()) {
-				return fileHandle;
-			}
-		}
-		PUtil.slog("file", "File not found: " + fileName);
-		return fileHandle;
+		PUtil.slog("file", "getInternalStorageFileHandle: " + fileName);
+		return fileCache.getFile(fileName);
 	}
 
 	private static String[] getAllResPaths() {
@@ -51,6 +45,7 @@ public class FileSystem {
 		};
 	}
 
+
 	static public String[] listResources(String resName) {
 		Set<String> resList = new HashSet<>();
 		for (String path : getAllResPaths()) {
@@ -62,6 +57,8 @@ public class FileSystem {
 		}
 		return resList.toArray(new String[0]);
 	}
+
+	static public boolean exists(String fileName) { return fileCache.exists(fileName); } // exists
 
 	static public @NotNull FileHandle getInternalStorageFileHandleBase(String fileName) {
 		FileHandle fileHandle = null;
@@ -227,5 +224,9 @@ public class FileSystem {
 		if (!f.mkdirs()) {
 			throw new ModError("Can't create directory:"+dir);
 		}
+	}
+
+	public static void invalidateCache() {
+		fileCache = new CaseInsensitiveFileCache(getAllResPaths());
 	}
 }
