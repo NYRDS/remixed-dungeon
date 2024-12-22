@@ -432,6 +432,7 @@ public class GameScene extends PixelScene {
 
         level.activateScripts();
         LevelTools.upgradeMap(level); // Epic level gen compatibility
+        Dungeon.initSizeDependentStuff(level.getWidth(), level.getHeight());
 
         for (var lo: level.getAllLevelObjects()) {
             lo.lo_sprite.clear();
