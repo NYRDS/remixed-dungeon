@@ -10,6 +10,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
@@ -106,6 +107,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	protected void fillMobStats(boolean restoring) {
 		JSONObject classDesc = getClassDef();
 		if(! classDesc.keys().hasNext()) {
+			GLog.debug("No mob def: " + mobClass);
 			return;
 		}
 

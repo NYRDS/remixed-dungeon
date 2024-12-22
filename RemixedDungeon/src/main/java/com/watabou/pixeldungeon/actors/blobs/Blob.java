@@ -29,7 +29,13 @@ public class Blob extends Actor implements NamedEntityKind {
 	public BlobEmitter emitter;
 
 	protected Blob() {
+		cur = new int[getLength()];
+		off = new int[getLength()];
 
+		setVolume(0);
+	}
+
+	public void reinit() {
 		cur = new int[getLength()];
 		off = new int[getLength()];
 

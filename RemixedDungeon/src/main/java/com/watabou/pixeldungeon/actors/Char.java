@@ -1432,6 +1432,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     protected JSONObject getClassDef() {
         String entityKind = getEntityKind();
         if (!defMap.containsKey(entityKind)) {
+            GLog.debug("Loading mob def: " + entityKind);
             defMap.put(entityKind, JsonHelper.tryReadJsonFromAssets("mobsDesc/" + entityKind + ".json"));
         }
 

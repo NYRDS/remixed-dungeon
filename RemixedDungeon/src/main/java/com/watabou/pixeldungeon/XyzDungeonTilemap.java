@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.utils.BArray;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -634,6 +635,11 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     @Override
     public void updateFow(@NotNull FogOfWar fog) {
+
+        if(Dungeon.visible.length != mVisible.length) {
+            GLog.debug("Dungeon.visible.length != mVisible.length");
+            Utils.printStackTrace();
+        }
 
         System.arraycopy(Dungeon.visible, 0, mVisible, 0, mVisible.length);
 

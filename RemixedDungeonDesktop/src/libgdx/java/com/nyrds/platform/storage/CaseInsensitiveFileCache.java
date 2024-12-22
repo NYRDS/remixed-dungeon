@@ -4,6 +4,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.nyrds.platform.util.PUtil;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -49,13 +51,10 @@ public class CaseInsensitiveFileCache {
         }
     }
 
+    @Nullable
     public FileHandle getFile(String fileName) {
         String lowerCaseName = fileName.toLowerCase();
-        FileHandle file = fileCache.get(lowerCaseName);
-        if (file == null) {
-            throw new IllegalArgumentException("File not found: " + fileName);
-        }
-        return file;
+        return fileCache.get(lowerCaseName);
     }
 
     public boolean exists(String fileName) {

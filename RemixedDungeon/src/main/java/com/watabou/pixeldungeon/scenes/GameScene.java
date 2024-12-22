@@ -117,6 +117,7 @@ public class GameScene extends PixelScene {
 
     private static CellSelector cellSelector;
 
+    private Group terrain;
     private Group ripples;
     private Group bottomEffects;
     private Group objects;
@@ -144,6 +145,7 @@ public class GameScene extends PixelScene {
     private volatile boolean sceneCreated = false;
     private          float   waterSx      = 0, waterSy = -5;
     private boolean mapBuildingComplete = false;
+
 
 
     public void updateUiCamera() {
@@ -196,47 +198,7 @@ public class GameScene extends PixelScene {
 
         scene = this;
 
-        Group terrain = new Group();
-        add(terrain);
-
-        water = new SkinnedBlock(level.getWidth() * DungeonTilemap.SIZE,
-                level.getHeight() * DungeonTilemap.SIZE, level.getWaterTex());
-
-        waterSx = DungeonGenerator.getLevelProperty(level.levelId, "waterSx", waterSx);
-        waterSy = DungeonGenerator.getLevelProperty(level.levelId, "waterSy", waterSy);
-
-        terrain.add(water);
-
-        ripples = new Group();
-        terrain.add(ripples);
-
-        String logicTilesAtlas = level.getProperty("tiles_logic", "");
-
-        if(!logicTilesAtlas.isEmpty()) {
-			logicTiles = new ClassicDungeonTilemap(level,logicTilesAtlas);
-			terrain.add(logicTiles);
-		}
-
-        if (!level.customTiles()) {
-            baseTiles = DungeonTilemap.factory(level);
-
-            if(baseTiles instanceof XyzDungeonTilemap) {
-                doorTiles = ((XyzDungeonTilemap)baseTiles).doorTilemap();
-                roofTiles = ((XyzDungeonTilemap)baseTiles).roofTilemap();
-            }
-
-        } else {
-            CustomLayerTilemap tiles = new CustomLayerTilemap(level, Level.LayerId.Base);
-            tiles.addLayer(Level.LayerId.Deco);
-            tiles.addLayer(Level.LayerId.Deco2);
-            baseTiles = tiles;
-
-            tiles = new CustomLayerTilemap(level, Level.LayerId.Roof_Base);
-            tiles.addLayer(Level.LayerId.Roof_Deco);
-            tiles.setTransparent(true);
-            roofTiles = tiles;
-        }
-        terrain.add(baseTiles);
+        createTerrain(level);
 
         bottomEffects = new Group();
         add(bottomEffects);
@@ -248,16 +210,12 @@ public class GameScene extends PixelScene {
         objectEffects = new Group();
         add(objectEffects);
 
-        level.addVisuals(this);
-
         heaps = new Group();
         add(heaps);
 
         if(doorTiles!=null) {
             add(doorTiles);
         }
-
-
 
         emitters = new Group();
         effects = new Group();
@@ -338,7 +296,6 @@ public class GameScene extends PixelScene {
 
         add(new HealthIndicator());
 
-        add(cellSelector = new CellSelector(baseTiles));
 
         statusPane = new StatusPane(hero, level);
         statusPane.camera = uiCamera;
@@ -431,8 +388,15 @@ public class GameScene extends PixelScene {
         Camera.main.setTarget(hero.getHeroSprite());
 
         level.activateScripts();
-        LevelTools.upgradeMap(level); // Epic level gen compatibility
+
+        // Epic level gen compatibility
+        createTerrain(level);
+        LevelTools.upgradeMap(level);
+        // Yeah, epic level gen compatibility
         Dungeon.initSizeDependentStuff(level.getWidth(), level.getHeight());
+        fog.reinit(level.getWidth(), level.getHeight());
+
+        level.addVisuals(this);
 
         for (var lo: level.getAllLevelObjects()) {
             lo.lo_sprite.clear();
@@ -478,6 +442,66 @@ public class GameScene extends PixelScene {
                     msg
             ));
         }
+    }
+
+    private void createTerrain(Level level) {
+        if(terrain != null) {
+            remove(terrain);
+        }
+
+
+        terrain = new Group();
+        add(terrain);
+        sendToBack(terrain);
+
+        water = new SkinnedBlock(level.getWidth() * DungeonTilemap.SIZE,
+                level.getHeight() * DungeonTilemap.SIZE, level.getWaterTex());
+
+        waterSx = DungeonGenerator.getLevelProperty(level.levelId, "waterSx", waterSx);
+        waterSy = DungeonGenerator.getLevelProperty(level.levelId, "waterSy", waterSy);
+
+        terrain.add(water);
+
+        ripples = new Group();
+        terrain.add(ripples);
+
+        String logicTilesAtlas = level.getProperty("tiles_logic", "");
+
+        if(!logicTilesAtlas.isEmpty()) {
+			logicTiles = new ClassicDungeonTilemap(level,logicTilesAtlas);
+			terrain.add(logicTiles);
+		}
+
+        if (!level.customTiles()) {
+            baseTiles = DungeonTilemap.factory(level);
+
+            if(baseTiles instanceof XyzDungeonTilemap) {
+                doorTiles = ((XyzDungeonTilemap)baseTiles).doorTilemap();
+                roofTiles = ((XyzDungeonTilemap)baseTiles).roofTilemap();
+            }
+
+        } else {
+            CustomLayerTilemap tiles = new CustomLayerTilemap(level, Level.LayerId.Base);
+            tiles.addLayer(Level.LayerId.Deco);
+            tiles.addLayer(Level.LayerId.Deco2);
+            baseTiles = tiles;
+
+            tiles = new CustomLayerTilemap(level, Level.LayerId.Roof_Base);
+            tiles.addLayer(Level.LayerId.Roof_Deco);
+            tiles.setTransparent(true);
+            roofTiles = tiles;
+        }
+        terrain.add(baseTiles);
+
+        if (cellSelector != null) {
+            remove(cellSelector);
+        }
+
+        if (spells!=null && roofTiles!= null) {
+            remove(roofTiles);
+            addAfter(roofTiles, spells);
+        }
+        add(cellSelector = new CellSelector(baseTiles));
     }
 
     private void doSelfTest() {
@@ -552,6 +576,10 @@ public class GameScene extends PixelScene {
 
         if(!Dungeon.level.cellValid(hero.getPos())){
             return;
+        }
+
+        if(Dungeon.visible.length != Dungeon.level.map.length) {
+            throw new TrackedRuntimeException("Dungeon.visible.length != level.map.length");
         }
 
         super.update();
@@ -715,6 +743,10 @@ public class GameScene extends PixelScene {
     @LuaInterface
     public static Group particleEffect(String effectName, int cell) {
         if (isSceneReady()) {
+            if(!Dungeon.level.cellValid(cell)) {
+                throw new TrackedRuntimeException(Utils.format("Invalid cell %d for particle effect %s", cell, effectName));
+            }
+
             Group effect = ParticleEffect.addToCell(effectName, cell);
             effect.setIsometricShift(Dungeon.isIsometricMode());
             scene.add(effect);
@@ -829,18 +861,16 @@ public class GameScene extends PixelScene {
 
     public static void afterObserve() {
         if (isSceneReady() && scene.sceneCreated) {
-            GameLoop.pushUiTask(() -> {
-                final Level level = Dungeon.level;
+            final Level level = Dungeon.level;
 
-                GameScene.updateMap();
-                scene.baseTiles.updateFow(scene.fog);
+            GameScene.updateMap();
+            scene.baseTiles.updateFow(scene.fog);
 
-                for (Mob mob : level.mobs) {
-                    mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
-                }
+            for (Mob mob : level.mobs) {
+                mob.getSprite().setVisible(Dungeon.visible[mob.getPos()]);
+            }
 
-                observeRequested = false;
-            });
+            observeRequested = false;
         }
     }
 

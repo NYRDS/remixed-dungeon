@@ -102,6 +102,17 @@ public class Group extends Gizmo {
 		return g;
 	}
 
+	public Gizmo addAfter(Gizmo g, Gizmo after) {
+		int i = members.indexOf(after);
+		if (i == -1) {
+			return add(g);
+		} else {
+			members.add(i + 1, g);
+			g.setParent(this);
+			sorted = false;
+			return g;
+		}
+	}
 	@SneakyThrows
 	public Gizmo recycle(@NotNull Class<? extends Gizmo> c) {
 

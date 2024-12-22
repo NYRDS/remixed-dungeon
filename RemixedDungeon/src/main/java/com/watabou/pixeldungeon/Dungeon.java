@@ -14,6 +14,7 @@ import com.nyrds.pixeldungeon.levels.IceCavesLevel;
 import com.nyrds.pixeldungeon.levels.NecroLevel;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
@@ -128,8 +129,13 @@ public class Dungeon {
 
 
     public static void initSizeDependentStuff(int w, int h) {
+
+        if(BuildConfig.DEBUG) {
+            GLog.debug("dungeon size: " + w + "x" + h);
+            Utils.printStackTrace();
+        }
+
         int size = w * h;
-        Actor.clearActors();
 
         visible = new boolean[size];
         passable = new boolean[size];
@@ -805,6 +811,7 @@ public class Dungeon {
 
     public static void observeImpl() {
         level.updateFieldOfView(hero.getControlTarget());
+
         System.arraycopy(level.fieldOfView, 0, visible, 0, visible.length);
 
         BArray.or(level.mapped, visible, level.mapped);

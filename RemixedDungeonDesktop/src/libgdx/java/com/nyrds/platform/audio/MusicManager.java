@@ -6,6 +6,7 @@ import com.badlogic.gdx.audio.Music;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -88,6 +89,7 @@ public enum MusicManager {
 	public void volume(float value) {
 		try {
 			if (player != null) {
+				value = Util.clamp(value, 0, 1);
 				player.setVolume(value);
 			}
 		} catch (Exception e) {

@@ -8,7 +8,6 @@ import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.MusicManager;
-
 import com.nyrds.platform.storage.SaveUtils;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;

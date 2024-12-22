@@ -18,6 +18,7 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.food.RottenFood;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.PathFinder;
@@ -32,15 +33,15 @@ public class PotionOfPurity extends UpgradablePotion{
 
 	@Override
 	public void shatter(int cell) {
-
-		PathFinder.buildDistanceMap(cell, BArray.not(Dungeon.level.losBlocking, null), (int) (DISTANCE * qualityFactor()));
+        Level level = getOwner().level();
+		PathFinder.buildDistanceMap(cell, BArray.not(level.losBlocking, null), (int) (DISTANCE * qualityFactor()));
 
 		boolean procd = false;
 
 		Blob[] blobs = {
-				Dungeon.level.blobs.get(ToxicGas.class),
-				Dungeon.level.blobs.get(ParalyticGas.class),
-				Dungeon.level.blobs.get(ConfusionGas.class)
+				level.blobs.get(ToxicGas.class),
+				level.blobs.get(ParalyticGas.class),
+				level.blobs.get(ConfusionGas.class)
 		};
 
 		for (Blob blob : blobs) {
@@ -49,7 +50,7 @@ public class PotionOfPurity extends UpgradablePotion{
 				continue;
 			}
 
-			for (int i = 0; i < Dungeon.level.getLength(); i++) {
+			for (int i = 0; i < level.getLength(); i++) {
 				if (PathFinder.distance[i] < Integer.MAX_VALUE) {
 
 					int value = blob.cur[i];

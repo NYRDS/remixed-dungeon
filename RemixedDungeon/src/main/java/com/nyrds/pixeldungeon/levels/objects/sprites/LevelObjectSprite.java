@@ -11,6 +11,7 @@ import com.watabou.noosa.tweeners.PosTweener;
 import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
@@ -98,8 +99,9 @@ public class LevelObjectSprite extends MovieClip implements Tweener.Listener, Mo
 
 	@Override
 	public boolean getVisible() {
-		if(Dungeon.level != null) {
-			return Dungeon.level.mapped[cell] && super.getVisible();
+		Level level = Dungeon.level;
+		if(level != null && level.cellValid(cell)) {
+			return level.mapped[cell] && super.getVisible();
 		}
 		return false;
 	}

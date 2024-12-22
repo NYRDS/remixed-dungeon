@@ -30,8 +30,16 @@ public class FileSystem {
 	static CaseInsensitiveFileCache fileCache = new CaseInsensitiveFileCache(getAllResPaths());
 
 	static public FileHandle getInternalStorageFileHandle(String fileName) {
-		PUtil.slog("file", "getInternalStorageFileHandle: " + fileName);
-		return fileCache.getFile(fileName);
+		FileHandle fileHandle = null;
+		for(String path : getAllResPaths()) {
+			fileHandle = Gdx.files.internal(path+fileName);
+			if(fileHandle.exists()) {
+				return fileHandle;
+			}
+		}
+
+		fileHandle = fileCache.getFile(fileName);
+		return fileHandle;
 	}
 
 	private static String[] getAllResPaths() {

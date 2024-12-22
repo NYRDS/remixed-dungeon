@@ -30,12 +30,15 @@ public class BlobEmitter extends Emitter {
 		float size = DungeonTilemap.SIZE;
 		final Level level = Dungeon.level;
 
+		if(blob.cur.length != level.getLength()) {
+			blob.reinit();
+			return;
+		}
+
 		for (int i = 0; i < level.getLength(); i++) {
 			if (blob.cur[i] > 0 && Dungeon.isCellVisible(i)) {
 				float x = ((level.cellX(i)) + Random.Float()) * size;
 				float y = ((level.cellY(i)) + Random.Float()) * size;
-
-
 
 				y+= Gizmo.isometricShift();
 				factory.emit( this, index, x, y );

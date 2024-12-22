@@ -10,27 +10,29 @@ import java.util.Arrays;
 
 public class FogOfWar extends Image {
 
-    private static final int VISIBLE	= 0x00000000;
-    private static final int VISITED    = 0xCC111111;
-    private static final int MAPPED		= 0xCC442211;
-    private static final int INVISIBLE	= 0xFF000000;
+    private static final int VISIBLE = 0x00000000;
+    private static final int VISITED = 0xCC111111;
+    private static final int MAPPED = 0xCC442211;
+    private static final int INVISIBLE = 0xFF000000;
 
-    private final int[] pixels;
-    private final int[] old_pixels;
+    private int[] pixels;
+    private int[] old_pixels;
 
-    private final int pWidth;
-    private final int pHeight;
+    private int pWidth;
+    private int pHeight;
 
     private int width2;
     private int height2;
 
-    private final int mWidth;
-    private final int mHeight;
+    private int mWidth;
+    private int mHeight;
 
-    public FogOfWar( int mapWidth, int mapHeight ) {
-
+    public FogOfWar(int mapWidth, int mapHeight) {
         super();
+        reinit(mapWidth, mapHeight);
+    }
 
+    public void reinit(int mapWidth, int mapHeight) {
         mWidth = mapWidth;
         mHeight = mapHeight;
 
@@ -94,7 +96,6 @@ public class FogOfWar extends Image {
                 pos++;
                 int c = INVISIBLE;
 
-
                 int p_minus_w_minus_one = pos - w_minus_one;
                 if (visible[pos] && visible[p_minus_w_minus_one] &&
                         visible[pos - 1] && visible[p_minus_w_minus_one - 1]) {
@@ -123,8 +124,7 @@ public class FogOfWar extends Image {
 
     @Override
     public void draw() {
-
-        if(dirty || !Arrays.equals(pixels, old_pixels)) {
+        if (dirty || !Arrays.equals(pixels, old_pixels)) {
             texture.pixels(width2, height2, pixels);
             System.arraycopy(pixels, 0, old_pixels, 0, pixels.length);
         }
@@ -136,13 +136,11 @@ public class FogOfWar extends Image {
 
     private class FogTexture extends SmartTexture {
 
-
         public FogTexture() {
-            super(toDispose=BitmapData.createBitmap( width2, height2) );
+            super(toDispose = BitmapData.createBitmap(width2, height2));
             toDispose.dispose();
-            //filter( Texture.NEAREST, Texture.NEAREST );
-            filter( Texture.LINEAR, Texture.LINEAR );
-            TextureCache.add( FogOfWar.class, this );
+            filter(Texture.LINEAR, Texture.LINEAR);
+            TextureCache.add(FogOfWar.class, this);
         }
     }
 }
