@@ -447,6 +447,8 @@ public class GameScene extends PixelScene {
     private void createTerrain(Level level) {
         if(terrain != null) {
             remove(terrain);
+            remove(roofTiles);
+            remove(doorTiles);
         }
 
 
@@ -497,9 +499,13 @@ public class GameScene extends PixelScene {
             remove(cellSelector);
         }
 
-        if (spells!=null && roofTiles!= null) {
-            remove(roofTiles);
-            addAfter(roofTiles, spells);
+        if (spells!=null) {
+            if(roofTiles!=null) {
+                addAfter(roofTiles, spells);
+            }
+            if(doorTiles!=null) {
+                addAfter(doorTiles, heaps);
+            }
         }
         add(cellSelector = new CellSelector(baseTiles));
     }
