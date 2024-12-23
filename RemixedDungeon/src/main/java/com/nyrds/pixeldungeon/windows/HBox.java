@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.watabou.noosa.Gizmo;
-import com.watabou.pixeldungeon.utils.GLog;
 
 /**
  * Created by mike on 01.05.2018.
@@ -122,7 +121,7 @@ public class HBox extends BasicBox {
             if (g instanceof IPlaceable) {
                 width += ((IPlaceable) g).width() + gap;
                 height = Math.max(height,((IPlaceable) g).height());
-                GLog.debug("hbox item: %s, %3.0f, %3.0f", g.getClass().getSimpleName(), ((IPlaceable) g).width(), gap);
+                //GLog.debug("hbox item: %s, %3.0f, %3.0f", g.getClass().getSimpleName(), ((IPlaceable) g).width(), gap);
             }
         }
     }

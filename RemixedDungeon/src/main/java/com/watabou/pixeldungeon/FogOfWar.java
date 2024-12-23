@@ -5,6 +5,8 @@ import com.nyrds.platform.gl.Texture;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
+import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.Arrays;
 
@@ -32,7 +34,14 @@ public class FogOfWar extends Image {
         reinit(mapWidth, mapHeight);
     }
 
+    public int getLength() {
+        return mWidth * mHeight;
+    }
+
     public void reinit(int mapWidth, int mapHeight) {
+        GLog.debug("reinit %d %d", mapWidth, mapHeight);
+        Utils.printStackTrace();
+
         mWidth = mapWidth;
         mHeight = mapHeight;
 

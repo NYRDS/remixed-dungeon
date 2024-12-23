@@ -27,7 +27,7 @@ import com.watabou.utils.SystemTime;
 import org.luaj.vm2.LuaError;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.Executor;
+import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import lombok.SneakyThrows;
@@ -36,7 +36,7 @@ public class GameLoop {
 
     public static final AtomicInteger loadingOrSaving = new AtomicInteger();
     public static final Object stepLock = new Object();
-    private final Executor stepExecutor = new ReportingExecutor();
+
 
     public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
 
@@ -49,8 +49,9 @@ public class GameLoop {
 
     public static volatile boolean softPaused = false;
 
-    private final Executor executor = new ReportingExecutor();
-    public Executor soundExecutor = new ReportingExecutor();
+    private final ReportingExecutor stepExecutor = new ReportingExecutor();
+    private final ReportingExecutor executor = new ReportingExecutor();
+    public ReportingExecutor soundExecutor = new ReportingExecutor();
 
     private final ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
 
@@ -99,8 +100,8 @@ public class GameLoop {
         instance().uiTasks.add(task);
     }
 
-    static public void stepExecute(Runnable task) {
-        instance().stepExecutor.execute(task);
+    static public Future<?> stepExecute(Runnable task) {
+        return instance().stepExecutor.submit(task);
     }
 
     static public void execute(Runnable task) {
@@ -236,7 +237,9 @@ public class GameLoop {
         }
 
         if (framesSinceInit > 2 && !Game.softPaused && loadingOrSaving.get() == 0) {
-            update();
+            if(stepExecutor.getQueue().isEmpty()) {
+                update();
+            }
         }
 
         NoosaScript.get().resetCamera();

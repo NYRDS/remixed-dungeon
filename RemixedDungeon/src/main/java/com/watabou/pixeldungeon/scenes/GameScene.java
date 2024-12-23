@@ -387,28 +387,9 @@ public class GameScene extends PixelScene {
 
         Camera.main.setTarget(hero.getHeroSprite());
 
-        int l_w = level.getWidth();
-        int l_h = level.getHeight();
-
         level.activateScripts();
 
-        boolean epicRegen = false;
-        if(l_w != level.getWidth() || l_h != level.getHeight()) {
-            epicRegen = true;
-        }
-
-        if(epicRegen) {
-            // Epic level gen compatibility
-            createTerrain(level);
-        }
-
         LevelTools.upgradeMap(level);
-
-        if(epicRegen) {
-            // Yeah, epic level gen compatibility
-            Dungeon.initSizeDependentStuff(level.getWidth(), level.getHeight());
-            fog.reinit(level.getWidth(), level.getHeight());
-        }
 
         level.addVisuals(this);
 
@@ -600,6 +581,10 @@ public class GameScene extends PixelScene {
 
         if(Dungeon.visible.length != Dungeon.level.map.length) {
             throw new TrackedRuntimeException("Dungeon.visible.length != level.map.length");
+        }
+
+        if(Dungeon.visible.length != fog.getLength()) {
+            throw new TrackedRuntimeException("Dungeon.visible.length != fog.getLength()");
         }
 
         super.update();

@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Keys;
 import com.watabou.pixeldungeon.ui.IWindow;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Signal;
 
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ public class Scene extends Group {
 	static public String sceneMode = "none";
 
 	public void create() {
+		GLog.debug("Creating scene %s", this.getClass().getSimpleName());
 		Keys.event.add( keyListener = key -> {
 			if (Game.instance() != null && key.pressed) {
 				switch (key.code) {
@@ -90,6 +92,7 @@ public class Scene extends Group {
 
 	@Override
 	public void destroy() {
+		GLog.debug("Destroying scene %s", this.getClass().getSimpleName());
 		Keys.event.remove( keyListener );
 		super.destroy();
 	}

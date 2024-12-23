@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.windows.WndError;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Collection;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.Future;
 
 import lombok.SneakyThrows;
 
@@ -52,7 +52,7 @@ public class InterlevelScene extends PixelScene {
 
     private Text message;
 
-    private FutureTask<Boolean> levelChanger;
+    private Future<?> levelChanger;
 
     volatile private String error = null;
 
@@ -134,8 +134,7 @@ public class InterlevelScene extends PixelScene {
         phase = Phase.FADE_IN;
         timeLeft = TIME_TO_FADE;
 
-        levelChanger = new FutureTask<>(new LevelChanger(), true);
-        GameLoop.stepExecute(levelChanger);
+        levelChanger = GameLoop.stepExecute(new LevelChanger());
     }
 
     @Override
@@ -163,7 +162,7 @@ public class InterlevelScene extends PixelScene {
             case FADE_IN:
                 message.alpha(1 - p);
                 if ((timeLeft -= GameLoop.elapsed) <= 0) {
-                    if (error == null && levelChanger.isDone()) {
+                    if (error == null) {
                         phase = Phase.STATIC;
                         timeLeft = TIME_TO_FADE;
                     } else {
@@ -185,7 +184,7 @@ public class InterlevelScene extends PixelScene {
                 break;
 
             case STATIC:
-                if (script.runOptional("interlevel", true, mode.name(), levelChanger.isDone())) {
+                if (script.runOptional("interlevel", true, mode.name(), levelChanger.isDone()) && levelChanger.isDone()) {
                     phase = Phase.FADE_OUT;
                 }
                 break;
