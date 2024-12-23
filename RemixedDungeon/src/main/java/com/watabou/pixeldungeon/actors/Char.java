@@ -397,8 +397,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         getSprite().showStatus(color, text);
     }
 
-    @LuaInterface
-    public void showStatus(int color, String text, Object... args) {
+    public void showStatus_a(int color, String text, Object... args) {
         getSprite().showStatus(color, text, args);
     }
 

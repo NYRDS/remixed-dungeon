@@ -46,7 +46,7 @@ return spell.init{
             return false
         end
 
-        victim:getSprite():showStatus(0xff2030,"backstab")
+        victim:showStatus(0xff2030,"backstab")
 
         local weapon = caster:getBelongings().weapon
         local secondaryWeapon = caster:getBelongings().leftHand

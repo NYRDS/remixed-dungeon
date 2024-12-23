@@ -33,6 +33,6 @@ return buff.init{
         RPD.debug("counter: %d", self.data.counter)
         storage.gamePut("CounterBuffTest", self.data.counter)
         storage.put("CounterBuffTest", self.data.counter)
-        buff.target:getSprite():showStatus( 0xFF00FF, tostring(self.data.counter))
+        buff.target:showStatus( 0xFF00FF, tostring(self.data.counter))
     end
 }

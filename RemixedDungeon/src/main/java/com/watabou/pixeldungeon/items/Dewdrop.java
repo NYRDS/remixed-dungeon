@@ -42,7 +42,7 @@ public class Dewdrop extends Item {
 			int effect = Math.min( hero.ht() - hero.hp(), value[0] * quantity() );
 			if (effect > 0) {
 				hero.heal(effect, this);
-				hero.showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
+				hero.showStatus_a( CharSprite.POSITIVE, TXT_VALUE, effect );
 				collected = true;
 			}
 		}

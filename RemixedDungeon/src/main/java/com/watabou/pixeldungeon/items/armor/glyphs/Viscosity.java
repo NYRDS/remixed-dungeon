@@ -42,7 +42,7 @@ public class Viscosity extends Glyph {
 			}
 			debuff.prolong( damage );
 
-            defender.showStatus( CharSprite.WARNING, StringsManager.getVar(R.string.Viscosity_Status), damage );
+            defender.showStatus_a( CharSprite.WARNING, StringsManager.getVar(R.string.Viscosity_Status), damage );
 			
 			return 0;
 			

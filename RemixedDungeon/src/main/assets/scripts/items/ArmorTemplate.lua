@@ -37,7 +37,7 @@ return item.init{
     end,
 
     defenceProc        = function(self, item, attacker, defender, damage)
-        defender:getSprite():showStatus(0x00b77070,"ouch!")
+        defender:showStatus(0x00b77070,"ouch!")
         return damage
     end,
 }

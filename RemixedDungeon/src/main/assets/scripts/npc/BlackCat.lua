@@ -19,7 +19,7 @@ return mob.init({
         local hero = RPD.Dungeon.hero
         hero:STR(math.max(hero:STR()-1,1))
         hero:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
-        hero:getSprite():showStatus( 0xFF0000, RPD.textById("Str_lose"))
+        hero:showStatus( 0xFF0000, RPD.textById("Str_lose"))
         RPD.playSound( "snd_cursed" )
     end,
 

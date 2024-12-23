@@ -387,14 +387,28 @@ public class GameScene extends PixelScene {
 
         Camera.main.setTarget(hero.getHeroSprite());
 
+        int l_w = level.getWidth();
+        int l_h = level.getHeight();
+
         level.activateScripts();
 
-        // Epic level gen compatibility
-        createTerrain(level);
+        boolean epicRegen = false;
+        if(l_w != level.getWidth() || l_h != level.getHeight()) {
+            epicRegen = true;
+        }
+
+        if(epicRegen) {
+            // Epic level gen compatibility
+            createTerrain(level);
+        }
+
         LevelTools.upgradeMap(level);
-        // Yeah, epic level gen compatibility
-        Dungeon.initSizeDependentStuff(level.getWidth(), level.getHeight());
-        fog.reinit(level.getWidth(), level.getHeight());
+
+        if(epicRegen) {
+            // Yeah, epic level gen compatibility
+            Dungeon.initSizeDependentStuff(level.getWidth(), level.getHeight());
+            fog.reinit(level.getWidth(), level.getHeight());
+        }
 
         level.addVisuals(this);
 
