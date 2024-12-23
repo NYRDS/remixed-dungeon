@@ -150,6 +150,8 @@ public class Dungeon {
         if (!Scene.sceneMode.equals(Scene.LEVELS_TEST)) {
             LuaEngine.reset();
             loadModData();
+        } else {
+            LuaEngine.runScriptFile("scripts/startup/quirks.lua");
         }
 
         DungeonGenerator.reset();
