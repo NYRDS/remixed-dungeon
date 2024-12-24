@@ -13,6 +13,9 @@ public class RemixedDungeonApp {
     }
     public static void main(String[] args) {
         System.setProperty("https.protocols", "TLSv1.2");
+        System.setProperty("jdk.module.addOpens", "java.base/java.util=ALL-UNNAMED");
+
+        probeModules();
 
         Lwjgl3ApplicationConfiguration cfg = new Lwjgl3ApplicationConfiguration();
         cfg.setTitle("Remixed Dungeon");
@@ -21,6 +24,17 @@ public class RemixedDungeonApp {
         cfg.enableGLDebugOutput(true, System.err);
 
         final Lwjgl3Application app = new Lwjgl3Application(new RemixedDungeon(), cfg);
+    }
+
+    private static void probeModules() {
+        // Get the module of the current class
+        Module currentModule = RemixedDungeonApp.class.getModule();
+
+        // Get the module for java.base
+        Module javaBaseModule = Object.class.getModule();
+
+        // Open the java.util package to the current module
+        javaBaseModule.addOpens("java.util", currentModule);
     }
 
     public static void restartApp() {
@@ -38,7 +52,7 @@ public class RemixedDungeonApp {
             String mainClass = RemixedDungeonApp.class.getName();
 
             // Create the command to restart the application
-            String[] command = new String[]{java, "-cp", classPath, mainClass, "restart"};
+            String[] command = new String[]{java,"--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2",  "-cp", classPath, mainClass};
 
             // Execute the command
             Process process = runtime.exec(command);
