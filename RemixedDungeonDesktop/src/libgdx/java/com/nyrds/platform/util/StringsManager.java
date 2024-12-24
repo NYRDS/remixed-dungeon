@@ -3,9 +3,11 @@ package com.nyrds.platform.util;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndSettings;
 
+import org.apache.commons.io.input.BOMInputStream;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 
@@ -84,13 +86,13 @@ public class StringsManager {
     private static void parseStrings(String resource) {
         PUtil.slog("Strings", "Parsing Strings from " + resource);
         InputStream fis = ModdingMode.getInputMergedInputStream(resource);
-        InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
+        InputStreamReader isr = new InputStreamReader(new BOMInputStream(fis), StandardCharsets.UTF_8);
         BufferedReader br = new BufferedReader(isr);
 
         String line = Utils.EMPTY_STRING;
 
         while ((line = br.readLine()) != null) {
-            //PUtil.slog("strings",line);
+            //PUtil.slog("strings","line"+line);
             JSONArray entry = new JSONArray(line);
 
             String keyString = entry.getString(0);

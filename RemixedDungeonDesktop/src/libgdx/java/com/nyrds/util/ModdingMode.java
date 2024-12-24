@@ -9,6 +9,7 @@ import com.nyrds.platform.storage.FileSystem;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.apache.commons.io.input.BOMInputStream;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
@@ -284,13 +285,13 @@ public class ModdingMode {
     public static @NotNull InputStream getInputMergedInputStream(String resName) {
         InputStream modStream = null;
         try {
-            modStream = new FileInputStream(FileSystem.getInternalStorageFile(resName));
+            modStream = new BOMInputStream(new FileInputStream(FileSystem.getInternalStorageFile(resName)));
         } catch (Exception e) {
             // ignore
         }
 
         try {
-            InputStream builtInStream = new FileInputStream(FileSystem.getInternalStorageFileBase(resName));
+            InputStream builtInStream = new BOMInputStream(new FileInputStream(FileSystem.getInternalStorageFileBase(resName)));
             if(modStream == null) {
                 return builtInStream;
             }

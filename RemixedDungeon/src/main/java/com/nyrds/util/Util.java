@@ -2,8 +2,10 @@ package com.nyrds.util;
 
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.PUtil;
 import com.watabou.utils.Callback;
 
+import org.hjson.HjsonOptions;
 import org.hjson.JsonValue;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -68,7 +70,9 @@ public class Util {
 
 	public static JSONObject sanitizeJson(String jsonInput) {
 		// Parse the JSON input
-		JsonValue jsonValue = JsonValue.readHjson(jsonInput);
+		//PUtil.slog("json", jsonInput);
+		JsonValue jsonValue = JsonValue.readHjson(jsonInput).asObject();
+		//PUtil.slog("json", jsonValue.toString());
 
 		// Convert HJSON to JSON (sanitized)
 		String sanitizedJson = jsonValue.toString();

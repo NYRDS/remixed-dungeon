@@ -22,10 +22,12 @@ public class CaseInsensitiveFileCache {
         for (int i = rootPaths.length - 1; i >= 0; --i) {
             cacheFiles(rootPaths[i]);
         }
-
+/*
         for (String key : fileCache.keySet()) {
             PUtil.slog("file", "Cached file: " + key);
         }
+ */
+
     }
 
     private void cacheFiles(String... rootPaths) {

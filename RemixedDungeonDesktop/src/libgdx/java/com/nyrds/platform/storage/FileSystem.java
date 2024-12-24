@@ -26,7 +26,6 @@ import java.util.zip.ZipOutputStream;
 import lombok.SneakyThrows;
 
 public class FileSystem {
-
 	static CaseInsensitiveFileCache fileCache = new CaseInsensitiveFileCache(getAllResPaths());
 
 	static public FileHandle getInternalStorageFileHandle(String fileName) {
@@ -88,7 +87,16 @@ public class FileSystem {
 
 
 	static public @NotNull File getInternalStorageFile(String fileName) {
-		return getInternalStorageFileHandle(fileName).file();
+		FileHandle fileHandle = getInternalStorageFileHandle(fileName);
+		if(fileHandle == null) {
+			return new File("file_not_found") {
+				@Override
+				public boolean exists() {
+					return false;
+				}
+			};
+		}
+		return fileHandle.file();
 	}
 
 	static public @NotNull File getInternalStorageFileBase(String fileName) {

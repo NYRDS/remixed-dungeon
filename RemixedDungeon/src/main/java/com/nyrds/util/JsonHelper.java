@@ -6,6 +6,7 @@ import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.apache.commons.io.input.BOMInputStream;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -63,7 +64,7 @@ public class JsonHelper {
     public static JSONObject readJsonFromStream(InputStream stream, String tag) {
         StringBuilder jsonDef = new StringBuilder();
 
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(stream))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new BOMInputStream(stream)))) {
 
             String line = reader.readLine();
 
@@ -73,7 +74,7 @@ public class JsonHelper {
             }
             reader.close();
 
-            return Util.sanitizeJson(jsonDef.toString());
+            return Util.sanitizeJson(jsonDef.toString().strip());
         } catch (Exception e) {
             EventCollector.logException(Utils.format("bad json in %s", tag));
             return new JSONObject();
