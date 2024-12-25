@@ -20,6 +20,7 @@ package com.watabou.gltextures;
 import com.nyrds.platform.compatibility.RectF;
 import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
+
 import org.jetbrains.annotations.NotNull;
 
 public class SmartTexture extends Texture {
@@ -49,7 +50,7 @@ public class SmartTexture extends Texture {
 	public void bitmap( BitmapData bitmap ) {
 		width = bitmap.getWidth();
 		height = bitmap.getHeight();
-		handMade(bitmap, true );
+		super.bitmap( bitmap );
 	}
 
 	public RectF uvRect( int left, int top, int right, int bottom ) {

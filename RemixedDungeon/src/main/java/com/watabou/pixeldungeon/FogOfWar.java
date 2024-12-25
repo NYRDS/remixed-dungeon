@@ -147,7 +147,7 @@ public class FogOfWar extends Image {
 
         public FogTexture() {
             super(toDispose = BitmapData.createBitmap(width2, height2));
-            toDispose.dispose();
+            //toDispose.dispose();
             filter(Texture.LINEAR, Texture.LINEAR);
             TextureCache.add(FogOfWar.class, this);
         }

@@ -17,6 +17,7 @@ import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.io.InputStream;
@@ -32,6 +33,7 @@ public class Game implements ApplicationListener, InputProcessor {
     public Iap iap = new Iap();
 
     public PlayGames playGames = new PlayGames();
+    public long renderThreadId;
 
     public Game(Class<? extends Scene> c) {
         super();
@@ -122,6 +124,8 @@ public class Game implements ApplicationListener, InputProcessor {
         Gdx.gl20.glEnable(Gdx.gl20.GL_BLEND);
         Gl.blendSrcAlphaOneMinusAlpha();
         Gdx.gl20.glEnable(Gdx.gl20.GL_SCISSOR_TEST);
+
+        renderThreadId = Thread.currentThread().getId();
 
         gameLoop.onFrame();
     }
@@ -222,6 +226,7 @@ public class Game implements ApplicationListener, InputProcessor {
     }
 
     public final void runOnUiThread(Runnable action) {
+
             action.run();
     }
 

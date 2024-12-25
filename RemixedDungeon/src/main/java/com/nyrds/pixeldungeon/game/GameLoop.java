@@ -237,9 +237,9 @@ public class GameLoop {
         }
 
         if (framesSinceInit > 2 && !Game.softPaused && loadingOrSaving.get() == 0) {
-            if(stepExecutor.getQueue().isEmpty()) {
+            stepExecutor.submit(() -> {
                 update();
-            }
+            });
         }
 
         NoosaScript.get().resetCamera();
