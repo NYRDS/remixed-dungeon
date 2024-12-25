@@ -24,6 +24,7 @@ public class Utils {
     public static final String UNKNOWN = "unknown";
     public static final String EMPTY_STRING = "";
     public static final String[] EMPTY_STRING_ARRAY = new String[0];
+    public static final String PLATFORM_ANDROID = "android";
 
 
     @NotNull

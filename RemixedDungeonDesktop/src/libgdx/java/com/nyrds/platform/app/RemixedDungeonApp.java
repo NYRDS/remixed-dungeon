@@ -2,8 +2,8 @@ package com.nyrds.platform.app;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
-import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.PUtil;
 
 import java.io.IOException;
 
@@ -53,6 +53,8 @@ public class RemixedDungeonApp {
 
             // Create the command to restart the application
             String[] command = new String[]{java,"--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2",  "-cp", classPath, mainClass};
+
+            PUtil.slog("app", "Restarting application with command: " + String.join(" ", command));
 
             // Execute the command
             Process process = runtime.exec(command);
