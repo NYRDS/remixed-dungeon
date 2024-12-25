@@ -1,14 +1,11 @@
-import io.github.fourlastor.construo.Target
-
 plugins {
     id 'java'
     id 'application'
-    id "io.github.fourlastor.construo" version "1.5.1"
     id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'de.undercouch.download' version '5.4.0' // Ensure the plugin is applied
 }
 
 project.ext.assetsDir = new File("src/desktop/assets")
-
 project.ext.version = '32.2'
 
 java {
@@ -20,12 +17,11 @@ jar {
     manifest {
         attributes 'Main-Class': 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
     }
-
 }
 
 shadowJar {
     archiveBaseName.set('RemixedDungeon')
-    archiveVersion.set(project.ext.version)
+    archiveVersion.set('') // Remove version from the JAR filename
     archiveClassifier.set('')
     manifest {
         attributes 'Main-Class': 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
@@ -50,12 +46,10 @@ application {
     }
 }
 
-
 tasks.withType(JavaExec).configureEach {
     jvmArgs += ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
 }
 
-// Custom task to run the Python script
 tasks.register('codegen', Exec) {
     commandLine 'python3', 'make_r.py'
     commandLine 'python3', 'make_json.py'
@@ -66,7 +60,6 @@ compileJava.dependsOn codegen
 ext {
     gdxVersion = '1.13.0'
 }
-
 
 distributions {
     main {
@@ -87,7 +80,6 @@ tasks.register('dist', Jar) {
     with jar
 }
 
-
 dependencies {
     implementation project(':annotation')
     implementation project(':json_clone')
@@ -97,15 +89,12 @@ dependencies {
 
     implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'org.luaj:luaj-jse:3.0.1'
-    implementation 'info.guardianproject.netcipher:netcipher:1.2'
     implementation 'org.hjson:hjson:3.0.0'
-    implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices
+    implementation 'commons-io:commons-io:2.6'
     implementation 'org.jetbrains:annotations:24.1.0'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
     compileOnly 'org.projectlombok:lombok:1.18.30'
     implementation 'com.google.guava:guava:32.0.1-jre'
-
-    implementation 'org.nanohttpd:nanohttpd:2.3.1'
 
     implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
     implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
@@ -113,64 +102,179 @@ dependencies {
     implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
 }
 
-construo {
-    name.set("RemixedDungeon")
-    humanName.set("Remixed Dungeon")
-    version.set(project.ext.version)
+// URLs for JDK downloads
+def jdkUrls = [
+        linux: "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.11%2B9/OpenJDK17U-jdk_x64_linux_hotspot_17.0.11_9.tar.gz",
+        mac: "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.11%2B9/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.11_9.tar.gz",
+        windows: "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.11%2B9/OpenJDK17U-jdk_x64_windows_hotspot_17.0.11_9.zip"
+]
 
+// Directories for downloaded and minimized JDKs
+def jdkDownloadDir = file("${buildDir}/jdk-download")
+def jdkMinimizedDir = file("${buildDir}/jdk-minimized")
 
-    targets.configure {
-        register("linuxX64", Target.Linux) {
-            architecture.set(Target.Architecture.X86_64)
-            jdkUrl.set("https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.11%2B9/OpenJDK17U-jdk_x64_linux_hotspot_17.0.11_9.tar.gz")
-        }
-        register("macM1", Target.MacOs) {
-            architecture.set(Target.Architecture.AARCH64)
-            jdkUrl.set("https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.11%2B9/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.11_9.tar.gz")
-            // macOS needs an identifier
-            identifier.set("com.nyrds.pixeldungeon.ml")
-            // Optional: icon for macOS
-            //macIcon.set(project.file("path/to/mac-icon.icns"))
-        }
-        register("winX64", Target.Windows) {
-            architecture.set(Target.Architecture.X86_64)
-            jdkUrl.set("https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.11%2B9/OpenJDK17U-jdk_x64_windows_hotspot_17.0.11_9.zip")
-            // use executable with GPU hints, defaults to true
-            useGpuHint.set(false)
+// Task to download JDKs
+tasks.register('downloadJdks') {
+    doLast {
+        jdkUrls.each { platform, url ->
+            def outputFile = new File(jdkDownloadDir, "${platform}.${url.endsWith('.zip') ? 'zip' : 'tar.gz'}")
+            outputFile.parentFile.mkdirs()
+
+            // Check if the file already exists
+            if (!outputFile.exists()) {
+                println "Downloading JDK for ${platform}..."
+                ant.get(src: url, dest: outputFile)
+            } else {
+                println "JDK for ${platform} already exists. Skipping download."
+            }
         }
     }
 }
 
+tasks.register('extractJdks') {
+    dependsOn 'downloadJdks'
+    doLast {
+        jdkUrls.each { platform, url ->
+            def archiveFile = new File(jdkDownloadDir, "${platform}.${url.endsWith('.zip') ? 'zip' : 'tar.gz'}")
+            def outputDir = new File(jdkDownloadDir, platform)
+            outputDir.mkdirs()
 
-construo.targets.each { target ->
-    def tag = target.name
-    tasks.register("makeDesktopDist${tag.capitalize()}", Zip) { zipTask ->
-        // Use the correct file name for the original zip
-        def originalZip = file("${buildDir}/construo/dist/RemixedDungeon-${tag}.zip")
-        zipTask.archiveFileName = "RemixedDungeon-${tag}.zip"
-        zipTask.destinationDirectory = file("../dist")
-
-        doFirst {
-            if (archivePath.exists()) {
-                archivePath.delete()
+            if (archiveFile.exists()) {
+                if (archiveFile.name.endsWith('.zip')) {
+                    copy {
+                        from zipTree(archiveFile)
+                        into outputDir
+                        fileMode 0755
+                    }
+                } else if (archiveFile.name.endsWith('.tar.gz')) {
+                    exec {
+                        commandLine 'tar', '-xzf', archiveFile, '-C', outputDir
+                    }
+                }
+            } else {
+                logger.warn("Archive for ${platform} does not exist at ${archiveFile}")
             }
         }
-
-        zipTask.from(zipTree(originalZip))
-
-        zipTask.from(file("src/desktop/assets")) {
-            into("RemixedDungeon-${project.ext.version}-${tag}/mods/Remixed")
-        }
-
-        zipTask.from(file("src/desktop/d_assets")) {
-            into("RemixedDungeon-${project.ext.version}-${tag}/mods/Remixed")
-        }
-
-        zipTask.from(file("src/desktop/l10ns")) {
-            into("RemixedDungeon-${project.ext.version}-${tag}/mods/Remixed")
-        }
-
-        // Declare explicit dependency on the corresponding package task
-        zipTask.dependsOn "package${tag.capitalize()}"
     }
+}
+
+tasks.register('minimizeJdks') {
+    dependsOn 'extractJdks'
+    doLast {
+        jdkUrls.each { platform, url ->
+            def jdkDir = new File(jdkDownloadDir, platform).listFiles().find { it.name.startsWith('jdk') }
+            def minimizedJdkDir = new File(jdkMinimizedDir, platform)
+            if (minimizedJdkDir.exists()) {
+                minimizedJdkDir.deleteDir()
+            }
+
+            exec {
+                commandLine "${jdkDownloadDir}/linux/jdk-17.0.11+9/bin/jlink",
+                        '--module-path', "${jdkDir}/jmods",
+                        '--add-modules', 'java.base,java.compiler,java.desktop,java.scripting,java.sql,jdk.unsupported',
+                        '--output', minimizedJdkDir,
+                        '--strip-debug',
+                        '--no-header-files',
+                        '--no-man-pages'
+            }
+        }
+    }
+}
+
+// Custom tasks for platform-specific bundles
+tasks.register('packageLinuxX64', Zip) {
+    dependsOn 'minimizeJdks'
+    archiveFileName = "RemixedDungeon-${project.ext.version}-linuxX64.zip"
+    destinationDirectory = file("../dist")
+
+    from(shadowJar) {
+        into "RemixedDungeon-${project.ext.version}-linuxX64"
+    }
+
+    from(file("src/desktop/assets")) {
+        into "RemixedDungeon-${project.ext.version}-linuxX64/mods/Remixed"
+    }
+
+    from(file("src/desktop/d_assets")) {
+        into "RemixedDungeon-${project.ext.version}-linuxX64/mods/Remixed"
+    }
+
+    from(file("src/desktop/l10ns")) {
+        into "RemixedDungeon-${project.ext.version}-linuxX64/mods/Remixed"
+    }
+
+    from(new File(jdkMinimizedDir, 'linux')) {
+        into "RemixedDungeon-${project.ext.version}-linuxX64/jdk"
+    }
+
+    from(file("src/desktop/run.sh")) {
+        into "RemixedDungeon-${project.ext.version}-linuxX64"
+        fileMode 0755
+    }
+}
+
+tasks.register('packageMacM1', Zip) {
+    dependsOn 'minimizeJdks'
+    archiveFileName = "RemixedDungeon-${project.ext.version}-macM1.zip"
+    destinationDirectory = file("../dist")
+
+    from(shadowJar) {
+        into "RemixedDungeon-${project.ext.version}-macM1"
+    }
+
+    from(file("src/desktop/assets")) {
+        into "RemixedDungeon-${project.ext.version}-macM1/mods/Remixed"
+    }
+
+    from(file("src/desktop/d_assets")) {
+        into "RemixedDungeon-${project.ext.version}-macM1/mods/Remixed"
+    }
+
+    from(file("src/desktop/l10ns")) {
+        into "RemixedDungeon-${project.ext.version}-macM1/mods/Remixed"
+    }
+
+    from(new File(jdkMinimizedDir, 'mac')) {
+        into "RemixedDungeon-${project.ext.version}-macM1/jdk"
+    }
+
+    from(file("src/desktop/run-mac.sh")) {
+        into "RemixedDungeon-${project.ext.version}-macM1"
+        fileMode 0755
+    }
+}
+
+tasks.register('packageWinX64', Zip) {
+    dependsOn 'minimizeJdks'
+    archiveFileName = "RemixedDungeon-${project.ext.version}-winX64.zip"
+    destinationDirectory = file("../dist")
+
+    from(shadowJar) {
+        into "RemixedDungeon-${project.ext.version}-winX64"
+    }
+
+    from(file("src/desktop/assets")) {
+        into "RemixedDungeon-${project.ext.version}-winX64/mods/Remixed"
+    }
+
+    from(file("src/desktop/d_assets")) {
+        into "RemixedDungeon-${project.ext.version}-winX64/mods/Remixed"
+    }
+
+    from(file("src/desktop/l10ns")) {
+        into "RemixedDungeon-${project.ext.version}-winX64/mods/Remixed"
+    }
+
+    from(new File(jdkMinimizedDir, 'windows')) {
+        into "RemixedDungeon-${project.ext.version}-winX64/jdk"
+    }
+
+    from(file("src/desktop/run.bat")) {
+        into "RemixedDungeon-${project.ext.version}-winX64"
+    }
+}
+
+// Task to build all platform-specific bundles
+tasks.register('buildAllBundles') {
+    dependsOn 'packageLinuxX64', 'packageMacM1', 'packageWinX64'
 }
