@@ -237,13 +237,14 @@ public class GameLoop {
         }
 
         if (framesSinceInit > 2 && !Game.softPaused && loadingOrSaving.get() == 0) {
-            stepExecutor.submit(() -> {
+            stepExecutor.execute(() -> {
                 update();
             });
         }
 
         NoosaScript.get().resetCamera();
         Gl.clear();
+        Gl.flush();
 
         synchronized (stepLock) {
             if (scene != null) {
@@ -260,7 +261,7 @@ public class GameLoop {
                 scene.update();
             }
             Camera.updateAll();
-        }
+       }
     }
 
     private void switchScene(Scene requestedScene) {

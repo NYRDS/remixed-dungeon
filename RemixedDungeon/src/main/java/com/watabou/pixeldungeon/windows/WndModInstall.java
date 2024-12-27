@@ -110,7 +110,7 @@ public class WndModInstall extends Window {
             var pleaseUpdateButton = new RedButton(R.string.Wnd_Button_Ok) {
                 @Override
                 protected void onClick() {
-                    InstallMod.openPlayStore();
+                    Game.openPlayStore();
                 }
             };
             pleaseUpdateButton.setSize(width / 2f - 4, BUTTON_HEIGHT);
