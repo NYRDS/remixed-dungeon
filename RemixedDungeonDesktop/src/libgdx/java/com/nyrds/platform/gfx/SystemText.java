@@ -1,6 +1,5 @@
 package com.nyrds.platform.gfx;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -8,7 +7,6 @@ import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter;
 import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.glwrap.Matrix;
@@ -19,16 +17,19 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.CountDownLatch;
 
 public class SystemText extends Text {
     private static FreeTypeFontGenerator generator;
     private static final Map<String, BitmapFont> fontCache = new HashMap<>();
+    private static final Map<String, BitmapFont.BitmapFontData> pseudoFontCache = new HashMap<>();
 
     private final FreeTypeFontParameter fontParameters;
-    private final BitmapFont font;
-    private final GlyphLayout glyphLayout;
-    private final GlyphLayout spaceLayout;
+    private BitmapFont font;
+    private BitmapFont.BitmapFontData fontData;
+    private final PseudoGlyphLayout pseudoGlyphLayout;
+    private GlyphLayout glyphLayout;
+
+    private final PseudoGlyphLayout spaceLayout; // New instance to measure space width
     private boolean multiline = false;
 
     private final ArrayList<ArrayList<String>> lines = new ArrayList<>();
@@ -43,71 +44,36 @@ public class SystemText extends Text {
         invalidate();
     }
 
+    final private String fontKey;
+
     public SystemText(float baseLine) {
         super(0, 0, 0, 0);
-        fontParameters = getFontParameters(baseLine);
+        fontParameters = getPseudoFontParameters(baseLine);
 
-        String fontKey = getFontKey(fontParameters);
-        font = generateFontOnRenderThread(fontKey, fontParameters);
+        fontKey = getFontKey(fontParameters);
+        synchronized (pseudoFontCache) {
+            if (!pseudoFontCache.containsKey(fontKey)) {
+                BitmapFont.BitmapFontData fontData = generator.generateData(fontParameters);
+                pseudoFontCache.put(fontKey, fontData);
+            }
+            fontData = pseudoFontCache.get(fontKey);
+        }
 
-        glyphLayout = new GlyphLayout();
-        spaceLayout = new GlyphLayout();
-        spaceLayout.setText(font, " ");
+        pseudoGlyphLayout = new PseudoGlyphLayout();
+        spaceLayout = new PseudoGlyphLayout(); // Initialize spaceLayout
+        spaceLayout.setText(fontData, " "); // Measure the width of a space
     }
 
     public SystemText(final String text, float size, boolean multiline) {
-        super(0, 0, 0, 0);
-        fontParameters = getFontParameters(size);
-
-        String fontKey = getFontKey(fontParameters);
-        font = generateFontOnRenderThread(fontKey, fontParameters);
-
-        glyphLayout = new GlyphLayout();
-        spaceLayout = new GlyphLayout();
-        spaceLayout.setText(font, " ");
+        this(size);
         this.text(text);
         this.multiline = multiline;
         wrapText();
     }
 
-    private BitmapFont generateFontOnRenderThread(String fontKey, FreeTypeFontParameter params) {
-        // Check if the current thread is the render thread
-        if (Thread.currentThread().getId() == Game.instance().renderThreadId) {
-            // Already on the render thread, generate the font directly
-            synchronized (fontCache) {
-                if (!fontCache.containsKey(fontKey)) {
-                    fontCache.put(fontKey, generator.generateFont(params));
-                }
-                return fontCache.get(fontKey);
-            }
-        } else {
-            // Not on the render thread, use postRunnable and CountDownLatch
-            final BitmapFont[] generatedFont = new BitmapFont[1];
-            final CountDownLatch latch = new CountDownLatch(1);
-
-            Gdx.app.postRunnable(() -> {
-                synchronized (fontCache) {
-                    if (!fontCache.containsKey(fontKey)) {
-                        fontCache.put(fontKey, generator.generateFont(params));
-                    }
-                    generatedFont[0] = fontCache.get(fontKey);
-                }
-                latch.countDown();
-            });
-
-            try {
-                latch.await(); // Wait for the font generation to complete
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-                throw new RuntimeException("Font generation interrupted", e);
-            }
-
-            return generatedFont[0];
-        }
-    }
-
     public static void updateFontScale() {
         float scale = 0.5f + 0.01f * GamePreferences.fontScale();
+
         scale *= 1.2f;
 
         if (scale < 0.1f) {
@@ -123,12 +89,14 @@ public class SystemText extends Text {
     }
 
     private FreeTypeFontParameter getFontParameters(float baseLine) {
-        if (Float.isNaN(fontScale)) {
+        if (fontScale != fontScale) {
             updateFontScale();
         }
 
-        final FreeTypeFontParameter fontParameters = new FreeTypeFontParameter();
+        final FreeTypeFontParameter fontParameters;
+        fontParameters = new FreeTypeFontParameter();
         fontParameters.characters = FreeTypeFontGenerator.DEFAULT_CHARS + StringsManager.getAllCharsAsString();
+        //PUtil.slog("font", "characters " + fontParameters.characters);
         fontParameters.size = (int) (baseLine * oversample * fontScale);
         fontParameters.borderColor = Color.BLACK;
         fontParameters.borderWidth = oversample * fontScale;
@@ -139,6 +107,12 @@ public class SystemText extends Text {
         fontParameters.spaceX = -2;
         fontParameters.spaceY = 0;
         return fontParameters;
+    }
+
+    private FreeTypeFontParameter getPseudoFontParameters(float baseLine) {
+        FreeTypeFontParameter fontParameter = getFontParameters(baseLine);
+        fontParameter.packer = new PseudoPixmapPacker();
+        return fontParameter;
     }
 
     private String getFontKey(FreeTypeFontParameter params) {
@@ -156,6 +130,7 @@ public class SystemText extends Text {
         }
 
         int index = 0;
+        // Perform wrapping based on maxWidth
         String[] paragraphs = text.split("\n");
         for (String paragraph : paragraphs) {
             if (paragraph.isEmpty()) {
@@ -166,18 +141,18 @@ public class SystemText extends Text {
             ArrayList<String> currentLine = new ArrayList<>();
             float line_width = 0;
             for (String word : words) {
-                glyphLayout.setText(font, word);
+                pseudoGlyphLayout.setText(fontData, word);
                 if (mask != null) {
                     wordMask.add(mask[index]);
                 }
-                if ((line_width + glyphLayout.width + spaceLayout.width) / oversample <= maxWidth) {
+                if ((line_width + pseudoGlyphLayout.width + spaceLayout.width) / oversample <= maxWidth) {
                     currentLine.add(word);
-                    line_width += glyphLayout.width + spaceLayout.width;
+                    line_width += pseudoGlyphLayout.width + spaceLayout.width;
                 } else {
                     lines.add(currentLine);
                     currentLine = new ArrayList<>();
                     currentLine.add(word);
-                    line_width = glyphLayout.width + spaceLayout.width;
+                    line_width = pseudoGlyphLayout.width + spaceLayout.width;
                 }
                 index += word.length();
             }
@@ -190,6 +165,7 @@ public class SystemText extends Text {
     @Override
     public void destroy() {
         super.destroy();
+        // No need to dispose font here as it's managed by the cache
     }
 
     @Override
@@ -217,6 +193,18 @@ public class SystemText extends Text {
             measure();
         }
 
+        synchronized (fontCache) {
+            if (!fontCache.containsKey(fontKey)) {
+                fontParameters.packer = null;
+                fontCache.put(fontKey, generator.generateFont(fontParameters));
+            }
+            font = fontCache.get(fontKey);
+        }
+
+        if(glyphLayout == null) {
+            glyphLayout = new GlyphLayout();
+        }
+
         updateMatrix();
         SystemTextPseudoBatch.textBeingRendered = this;
         float y = 0;
@@ -228,9 +216,10 @@ public class SystemText extends Text {
                 if (wordMask == null || wordMask.get(wi)) {
                     font.draw(batch, glyphLayout, x, y);
                 }
-                x += glyphLayout.width + spaceLayout.width;
+                x += glyphLayout.width + spaceLayout.width; // Use spaceLayout.width
                 wi++;
             }
+
             y += glyphLayout.height + 5;
         }
     }
@@ -251,19 +240,20 @@ public class SystemText extends Text {
             wrapText();
         }
 
+        // Calculate total height and maximum width for wrapped lines
         float totalHeight = 0;
         float maxWidth = 0;
         for (ArrayList<String> line : lines) {
             if (!line.isEmpty()) {
                 float line_width = 0;
                 for (String word : line) {
-                    glyphLayout.setText(font, word);
-                    line_width += glyphLayout.width + spaceLayout.width;
+                    pseudoGlyphLayout.setText(fontData, word);
+                    line_width += pseudoGlyphLayout.width + spaceLayout.width; // Use spaceLayout.width
                 }
                 if (line_width > maxWidth) {
                     maxWidth = line_width;
                 }
-                totalHeight += glyphLayout.height + 5;
+                totalHeight += pseudoGlyphLayout.height + 5;
             }
         }
         setWidth(maxWidth);
@@ -272,7 +262,7 @@ public class SystemText extends Text {
 
     @Override
     public float baseLine() {
-        return (font.getLineHeight() + 7) / oversample;
+        return (fontData.lineHeight + 7) / oversample;
     }
 
     @Override
@@ -285,7 +275,11 @@ public class SystemText extends Text {
             generator.dispose();
         }
 
+        //if (GamePreferences.classicFont()) {
+        //    generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/pixel_font.ttf"));
+        //} else {
         generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/LXGWWenKaiScreen.ttf"));
+        //}
 
         synchronized (fontCache) {
             for (BitmapFont font : fontCache.values()) {
