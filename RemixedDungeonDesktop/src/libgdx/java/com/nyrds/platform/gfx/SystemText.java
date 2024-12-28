@@ -24,8 +24,7 @@ public class SystemText extends Text {
     private static final Map<String, BitmapFont.BitmapFontData> pseudoFontCache = new HashMap<>();
 
     private final FreeTypeFontParameter fontParameters;
-    private BitmapFont font;
-    private BitmapFont.BitmapFontData fontData;
+    private final BitmapFont.BitmapFontData fontData;
     private final PseudoGlyphLayout pseudoGlyphLayout;
     private GlyphLayout glyphLayout;
 
@@ -193,6 +192,7 @@ public class SystemText extends Text {
             measure();
         }
 
+        BitmapFont font;
         synchronized (fontCache) {
             if (!fontCache.containsKey(fontKey)) {
                 fontParameters.packer = null;
