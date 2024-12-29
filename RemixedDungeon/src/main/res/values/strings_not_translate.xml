@@ -29,8 +29,7 @@
 
     <string name="AboutScene_Code_Names" translatable="false">Watabou &amp; NYRDS</string>
     <string name="AboutScene_Graphics_Names" translatable="false">Watabou  &amp; NYRDS &amp; ThEnigma314 &amp; Pavel Provotorov</string>
-    <string name="AboutScene_Music_Names" translatable="false">Cube_Code &amp; Misaerit &amp;
-        GILSIDISY</string>
+    <string name="AboutScene_Music_Names" translatable="false">Cube_Code &amp; Misaerit &amp; GILSIDISY</string>
     <string name="AboutScene_Sound_Names" translatable="false">Watabou &amp; Freesound.org (sonidotv, kantouth)</string>
     <string name="AboutScene_Thanks_Names" translatable="false">rodriformiga for PD i18n code</string>
 

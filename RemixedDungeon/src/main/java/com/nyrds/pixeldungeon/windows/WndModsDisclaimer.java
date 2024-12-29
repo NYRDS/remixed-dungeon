@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.Os;
@@ -10,6 +11,7 @@ import com.nyrds.util.Mods;
 import com.watabou.noosa.Group;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ModsButton;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 
@@ -20,11 +22,22 @@ public class WndModsDisclaimer extends WndOptions {
     private final boolean result;
     private final Group parent;
 
+    static String [] platformOptions;
+    static {
+        if (BuildConfig.FLAVOR_platform.equals(Utils.PLATFORM_ANDROID)) {
+            platformOptions = new String[] {StringsManager.getVar(R.string.WndModsDisclaimer_manage),
+                    StringsManager.getVar(R.string.WndModsDisclaimer_install)};
+        } else {
+            platformOptions =  new String[] {StringsManager.getVar(R.string.WndModsDisclaimer_manage)};
+        }
+
+    }
+
     public WndModsDisclaimer(ModsButton modsButton, boolean result, Group parent) {
+
         super(StringsManager.getVar(R.string.WndModsDisclaimer_title),
-                StringsManager.getVar(R.string.Mods_Disclaimer),
-                StringsManager.getVar(R.string.WndModsDisclaimer_manage),
-                StringsManager.getVar(R.string.WndModsDisclaimer_install));
+                StringsManager.getVar(R.string.Mods_Disclaimer),platformOptions);
+
         this.modsButton = modsButton;
         this.result = result;
         this.parent = parent;

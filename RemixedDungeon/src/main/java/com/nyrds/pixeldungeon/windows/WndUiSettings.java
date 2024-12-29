@@ -28,13 +28,14 @@ public class WndUiSettings extends WndMenuCommon {
 		if(!GamePreferences.classicFont()){
 			menuItems.add(createTextScaleButtons());
 		}
-
-		menuItems.add(new MenuButton(orientationText()) {
-			@Override
-			protected void onClick() {
-				RemixedDungeon.landscape(!RemixedDungeon.landscape());
-			}
-		});
+		if(BuildConfig.FLAVOR_platform.equals(Utils.PLATFORM_ANDROID)) {
+			menuItems.add(new MenuButton(orientationText()) {
+				@Override
+				protected void onClick() {
+					RemixedDungeon.landscape(!RemixedDungeon.landscape());
+				}
+			});
+		}
 
         final String[] texts = {StringsManager.getVar(R.string.WndSettings_ExperementalFont),
                 StringsManager.getVar(R.string.WndSettings_ClassicFont)

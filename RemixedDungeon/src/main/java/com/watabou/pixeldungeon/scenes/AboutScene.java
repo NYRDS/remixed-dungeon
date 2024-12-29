@@ -70,7 +70,7 @@ public class AboutScene extends PixelScene {
 	private void placeBellow(Text elem, Text upper)
 	{
 		elem.setX(upper.getX());
-		elem.setY(upper.getY() + upper.height());
+		elem.setY(upper.getY() + upper.height() + 1);
 	}
 
 	private Text createText(String text, Text upper)
