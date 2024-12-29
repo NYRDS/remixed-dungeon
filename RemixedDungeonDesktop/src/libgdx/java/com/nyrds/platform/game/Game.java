@@ -17,6 +17,7 @@ import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.io.InputStream;
@@ -222,6 +223,7 @@ public class Game implements ApplicationListener, InputProcessor {
     }
 
     public final void runOnUiThread(Runnable action) {
+
             action.run();
     }
 

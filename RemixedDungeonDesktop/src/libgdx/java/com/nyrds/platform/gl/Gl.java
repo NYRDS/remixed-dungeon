@@ -24,4 +24,8 @@ public class Gl {
             throw new RuntimeException();
         }
     }
+
+    public static void flush() {
+        Gdx.gl20.glFlush();
+    }
 }

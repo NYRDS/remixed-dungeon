@@ -19,9 +19,10 @@ public class RemixedDungeonApp {
 
         Lwjgl3ApplicationConfiguration cfg = new Lwjgl3ApplicationConfiguration();
         cfg.setTitle("Remixed Dungeon");
-        cfg.setWindowedMode(480, 800);
+        cfg.setWindowedMode(800, 480);
         cfg.setBackBufferConfig(8, 8, 8, 8, 16, 0, 0);
         cfg.enableGLDebugOutput(true, System.err);
+        cfg.setForegroundFPS(30);
 
         final Lwjgl3Application app = new Lwjgl3Application(new RemixedDungeon(), cfg);
     }

@@ -20,7 +20,6 @@ package com.nyrds.platform.game;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -47,7 +46,7 @@ public class RemixedDungeon extends Game {
 	}
 
 	public static boolean landscape() {
-		return false;
+		return true;
 	}
 
 

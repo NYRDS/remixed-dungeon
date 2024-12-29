@@ -4,13 +4,15 @@ import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.TextureFilm;
-import lombok.Synchronized;
-import lombok.val;
+
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import lombok.Synchronized;
+import lombok.val;
 
 public class TextureCache {
 
@@ -77,7 +79,7 @@ public class TextureCache {
 		BitmapData bmp = ModdingMode.getBitmapData((String) src);
 		SmartTexture tx = new SmartTexture(bmp);
 		all.put(src, tx);
-		bmp.dispose();
+		//bmp.dispose();
 		return tx;
 
 	}

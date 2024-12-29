@@ -173,7 +173,7 @@ public class Font extends TextureFilm {
 		SmartTexture tex = TextureCache.get( bmp );
 		Font font = new Font( tex );
 		font.splitByAlpha( bmp, chars );
-		bmp.dispose();
+		//bmp.dispose();
 		return font;
 	}
 

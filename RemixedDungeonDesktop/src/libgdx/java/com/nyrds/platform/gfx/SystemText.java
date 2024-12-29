@@ -20,12 +20,15 @@ import java.util.Map;
 
 public class SystemText extends Text {
     private static FreeTypeFontGenerator generator;
-    private static Map<String, BitmapFont> fontCache = new HashMap<>();
+    private static final Map<String, BitmapFont> fontCache = new HashMap<>();
+    private static final Map<String, BitmapFont.BitmapFontData> pseudoFontCache = new HashMap<>();
 
     private final FreeTypeFontParameter fontParameters;
-    private final BitmapFont font;
-    private final GlyphLayout glyphLayout;
-    private final GlyphLayout spaceLayout; // New instance to measure space width
+    private final BitmapFont.BitmapFontData fontData;
+    private final PseudoGlyphLayout pseudoGlyphLayout;
+    private GlyphLayout glyphLayout;
+
+    private final PseudoGlyphLayout spaceLayout; // New instance to measure space width
     private boolean multiline = false;
 
     private final ArrayList<ArrayList<String>> lines = new ArrayList<>();
@@ -40,36 +43,28 @@ public class SystemText extends Text {
         invalidate();
     }
 
+    final private String fontKey;
+
     public SystemText(float baseLine) {
         super(0, 0, 0, 0);
-        fontParameters = getFontParameters(baseLine);
+        fontParameters = getPseudoFontParameters(baseLine);
 
-        String fontKey = getFontKey(fontParameters);
-        synchronized (fontCache) {
-            if (!fontCache.containsKey(fontKey)) {
-                fontCache.put(fontKey, generator.generateFont(fontParameters));
+        fontKey = getFontKey(fontParameters);
+        synchronized (pseudoFontCache) {
+            if (!pseudoFontCache.containsKey(fontKey)) {
+                BitmapFont.BitmapFontData fontData = generator.generateData(fontParameters);
+                pseudoFontCache.put(fontKey, fontData);
             }
-            font = fontCache.get(fontKey);
+            fontData = pseudoFontCache.get(fontKey);
         }
-        glyphLayout = new GlyphLayout();
-        spaceLayout = new GlyphLayout(); // Initialize spaceLayout
-        spaceLayout.setText(font, " "); // Measure the width of a space
+
+        pseudoGlyphLayout = new PseudoGlyphLayout();
+        spaceLayout = new PseudoGlyphLayout(); // Initialize spaceLayout
+        spaceLayout.setText(fontData, " "); // Measure the width of a space
     }
 
     public SystemText(final String text, float size, boolean multiline) {
-        super(0, 0, 0, 0);
-        fontParameters = getFontParameters(size);
-
-        String fontKey = getFontKey(fontParameters);
-        synchronized (fontCache) {
-            if (!fontCache.containsKey(fontKey)) {
-                fontCache.put(fontKey, generator.generateFont(fontParameters));
-            }
-            font = fontCache.get(fontKey);
-        }
-        glyphLayout = new GlyphLayout();
-        spaceLayout = new GlyphLayout(); // Initialize spaceLayout
-        spaceLayout.setText(font, " "); // Measure the width of a space
+        this(size);
         this.text(text);
         this.multiline = multiline;
         wrapText();
@@ -113,6 +108,12 @@ public class SystemText extends Text {
         return fontParameters;
     }
 
+    private FreeTypeFontParameter getPseudoFontParameters(float baseLine) {
+        FreeTypeFontParameter fontParameter = getFontParameters(baseLine);
+        fontParameter.packer = new PseudoPixmapPacker();
+        return fontParameter;
+    }
+
     private String getFontKey(FreeTypeFontParameter params) {
         return params.size + "_" + params.characters + "_" + params.borderColor + "_" + params.borderWidth + "_" + params.flip + "_" + params.genMipMaps + "_" + params.magFilter + "_" + params.minFilter + "_" + params.spaceX + "_" + params.spaceY;
     }
@@ -139,18 +140,18 @@ public class SystemText extends Text {
             ArrayList<String> currentLine = new ArrayList<>();
             float line_width = 0;
             for (String word : words) {
-                glyphLayout.setText(font, word);
+                pseudoGlyphLayout.setText(fontData, word);
                 if (mask != null) {
                     wordMask.add(mask[index]);
                 }
-                if ((line_width + glyphLayout.width + spaceLayout.width) / oversample <= maxWidth) {
+                if ((line_width + pseudoGlyphLayout.width + spaceLayout.width) / oversample <= maxWidth) {
                     currentLine.add(word);
-                    line_width += glyphLayout.width + spaceLayout.width;
+                    line_width += pseudoGlyphLayout.width + spaceLayout.width;
                 } else {
                     lines.add(currentLine);
                     currentLine = new ArrayList<>();
                     currentLine.add(word);
-                    line_width = glyphLayout.width + spaceLayout.width;
+                    line_width = pseudoGlyphLayout.width + spaceLayout.width;
                 }
                 index += word.length();
             }
@@ -189,6 +190,19 @@ public class SystemText extends Text {
         if (dirty) {
             lines.clear();
             measure();
+        }
+
+        BitmapFont font;
+        synchronized (fontCache) {
+            if (!fontCache.containsKey(fontKey)) {
+                fontParameters.packer = null;
+                fontCache.put(fontKey, generator.generateFont(fontParameters));
+            }
+            font = fontCache.get(fontKey);
+        }
+
+        if(glyphLayout == null) {
+            glyphLayout = new GlyphLayout();
         }
 
         updateMatrix();
@@ -233,13 +247,13 @@ public class SystemText extends Text {
             if (!line.isEmpty()) {
                 float line_width = 0;
                 for (String word : line) {
-                    glyphLayout.setText(font, word);
-                    line_width += glyphLayout.width + spaceLayout.width; // Use spaceLayout.width
+                    pseudoGlyphLayout.setText(fontData, word);
+                    line_width += pseudoGlyphLayout.width + spaceLayout.width; // Use spaceLayout.width
                 }
                 if (line_width > maxWidth) {
                     maxWidth = line_width;
                 }
-                totalHeight += glyphLayout.height + 5;
+                totalHeight += pseudoGlyphLayout.height + 5;
             }
         }
         setWidth(maxWidth);
@@ -248,7 +262,7 @@ public class SystemText extends Text {
 
     @Override
     public float baseLine() {
-        return (font.getLineHeight() + 7) / oversample;
+        return (fontData.lineHeight + 7) / oversample;
     }
 
     @Override
@@ -264,7 +278,7 @@ public class SystemText extends Text {
         //if (GamePreferences.classicFont()) {
         //    generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/pixel_font.ttf"));
         //} else {
-            generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/LXGWWenKaiScreen.ttf"));
+        generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/LXGWWenKaiScreen.ttf"));
         //}
 
         synchronized (fontCache) {
