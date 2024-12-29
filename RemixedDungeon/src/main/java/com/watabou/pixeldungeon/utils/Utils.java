@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.utils;
 
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.PUtil;
@@ -187,6 +188,11 @@ public class Utils {
         e.printStackTrace(ps);
         ps.close();
         PUtil.slog("stacktrace", baos.toString());
+    }
+
+    public static boolean isAndroid() {
+        //noinspection ConstantValue
+        return BuildConfig.FLAVOR_platform.equals(PLATFORM_ANDROID);
     }
 
     public static class SpuriousReturn implements InterstitialPoint {

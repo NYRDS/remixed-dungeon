@@ -15,6 +15,7 @@ import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import java.io.IOException;
 
@@ -71,7 +72,7 @@ public class WndModInfo extends Window {
             add(siteTouch);
         }
 
-        if(desc.installed) {
+        if(desc.installed && Utils.isAndroid()) {
             RedButton exportButton = new RedButton("Save on Device") {
                 @Override
                 protected void onClick() {

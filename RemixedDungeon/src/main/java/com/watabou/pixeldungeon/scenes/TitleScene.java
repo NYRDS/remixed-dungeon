@@ -171,7 +171,7 @@ public class TitleScene extends PixelScene {
             leftGroup.add(new ImageButton(social.get()) {
                 @Override
                 protected void onClick() {
-                    Game.instance().openUrl("Visit us on social network", ruUser ? "https://vk.com/pixel_dungeon_remix" : "https://fb.me/RemixedDungeon");
+                    Game.openUrl("Visit us on social network", ruUser ? "https://vk.com/pixel_dungeon_remix" : "https://fb.me/RemixedDungeon");
                 }
             });
         }
@@ -180,7 +180,7 @@ public class TitleScene extends PixelScene {
             leftGroup.add(new ImageButton(Icons.DISCORD.get()) {
                 @Override
                 protected void onClick() {
-                    Game.instance().openUrl("Let talk on Discord", "https://discord.gg/AMXrhQZ");
+                    Game.openUrl("Let talk on Discord", "https://discord.gg/AMXrhQZ");
                 }
             });
         }
@@ -188,7 +188,7 @@ public class TitleScene extends PixelScene {
         leftGroup.add(new ImageButton(Icons.TG.get()) {
             @Override
             protected void onClick() {
-                Game.instance().openUrl("Join our Telegram group", "https://t.me/RemixedDungeon");
+                Game.openUrl("Join our Telegram group", "https://t.me/RemixedDungeon");
             }
         });
 
@@ -224,25 +224,31 @@ public class TitleScene extends PixelScene {
 
         add(btnChangelog);
 
-        StatisticsButton btnStats = new StatisticsButton();
-        btnStats.setPos(w - btnStats.width(), btnChangelog.bottom() + 2);
-        add(btnStats);
+        if(Utils.isAndroid()) {
+            StatisticsButton btnStats = new StatisticsButton();
+            btnStats.setPos(w - btnStats.width(), btnChangelog.bottom() + 2);
+            add(btnStats);
+        }
 
         Dungeon.reset();
 
         fadeIn();
 
-        if (AndroidSAF.mBaseSrcPath !=null) {
-            GameLoop.pushUiTask(() -> WndLocalModInstall.onDirectoryPicked());
-        }
+        if(Utils.isAndroid()) {
+            if (AndroidSAF.mBaseSrcPath != null) {
+                GameLoop.pushUiTask(() -> WndLocalModInstall.onDirectoryPicked());
+            }
 
-        if (AndroidSAF.mBaseDstPath !=null) {
-            GameLoop.pushUiTask(() -> WndModInfo.onDirectoryPicked());
-        }
+            if (AndroidSAF.mBaseDstPath != null) {
+                GameLoop.pushUiTask(() -> WndModInfo.onDirectoryPicked());
+            }
 
 
-        if(Game.instance() instanceof InstallMod) {
-            GameLoop.pushUiTask(()  -> {((InstallMod) Game.instance()).installMod();});
+            if (Game.instance() instanceof InstallMod) {
+                GameLoop.pushUiTask(() -> {
+                    ((InstallMod) Game.instance()).installMod();
+                });
+            }
         }
 
     }

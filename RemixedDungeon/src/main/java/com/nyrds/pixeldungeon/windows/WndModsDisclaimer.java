@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.Os;
@@ -24,7 +23,7 @@ public class WndModsDisclaimer extends WndOptions {
 
     static String [] platformOptions;
     static {
-        if (BuildConfig.FLAVOR_platform.equals(Utils.PLATFORM_ANDROID)) {
+        if (Utils.isAndroid()) {
             platformOptions = new String[] {StringsManager.getVar(R.string.WndModsDisclaimer_manage),
                     StringsManager.getVar(R.string.WndModsDisclaimer_install)};
         } else {

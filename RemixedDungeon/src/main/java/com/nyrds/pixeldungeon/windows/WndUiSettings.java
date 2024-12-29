@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
@@ -16,7 +15,7 @@ public class WndUiSettings extends WndMenuCommon {
 	@Override
 	protected void createItems() {
 
-		if(BuildConfig.FLAVOR_platform.equals(Utils.PLATFORM_ANDROID)) {
+		if(Utils.isAndroid()) {
 			menuItems.add(new MenuCheckBox(R.string.WndSettings_Immersive, GamePreferences.immersed()) {
 				@Override
 				protected void onClick() {
@@ -28,7 +27,7 @@ public class WndUiSettings extends WndMenuCommon {
 		if(!GamePreferences.classicFont()){
 			menuItems.add(createTextScaleButtons());
 		}
-		if(BuildConfig.FLAVOR_platform.equals(Utils.PLATFORM_ANDROID)) {
+		if(Utils.isAndroid()) {
 			menuItems.add(new MenuButton(orientationText()) {
 				@Override
 				protected void onClick() {
