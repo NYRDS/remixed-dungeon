@@ -3,7 +3,6 @@ package com.nyrds.platform.util;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.util.ModdingMode;
-import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndSettings;
 

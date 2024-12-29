@@ -6,10 +6,10 @@ package com.nyrds.market;
  */
 public class MarketOptions {
 	public static boolean haveHats() {
-		return true;
+		return false;
 	}
 
 	public static boolean haveDonations() {
-		return true;
+		return false;
 	}
 }

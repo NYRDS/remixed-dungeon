@@ -1,9 +1,6 @@
 package com.nyrds.platform.storage;
 
-import com.nyrds.pixeldungeon.windows.WndInstallingMod;
 import com.nyrds.platform.game.Game;
-
-import org.lwjgl.system.CallbackI;
 
 import java.io.OutputStream;
 

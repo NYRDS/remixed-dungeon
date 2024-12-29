@@ -20,6 +20,7 @@ import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class AboutScene extends PixelScene {
 
@@ -90,8 +91,6 @@ public class AboutScene extends PixelScene {
 
 		Text text = createText(getTXT(), null );
 		
-		text.camera = uiCamera;
-		
 		text.setX(align( (Camera.main.width - text.width()) / 2 ));
 		text.setY(align( (Camera.main.height - text.height()) / 3 ));
 
@@ -139,20 +138,21 @@ public class AboutScene extends PixelScene {
 
 		new Flare( 7, 64 ).color( 0x332211, true ).show( nyrdie, 0 ).angularSpeed = -20;
 
-		ItemSprite sprite = new ItemSprite(new ArmorKit());
-		sprite.alpha(0.1f);
-		sprite.setX(align( text.getX() + (text.width() - sprite.width()) / 2 ));
-		sprite.setY(nyrdie.getY() - sprite.height() - 8);
-		add(sprite);
+		if(Utils.isAndroid()) {
+			ItemSprite sprite = new ItemSprite(new ArmorKit());
+			sprite.alpha(0.1f);
+			sprite.setX(align(text.getX() + (text.width() - sprite.width()) / 2));
+			sprite.setY(nyrdie.getY() - sprite.height() - 8);
+			add(sprite);
 
-		TouchArea area2 = new TouchArea( sprite )  {
-			@Override
-			protected void onClick( Touch touch ) {
-				Game.toast("Entering dev mode, pick directory");
-				AndroidSAF.pickDirectoryForModInstall();
-			}
-		};
-
+			TouchArea area2 = new TouchArea(sprite) {
+				@Override
+				protected void onClick(Touch touch) {
+					Game.toast("Entering dev mode, pick directory");
+					AndroidSAF.pickDirectoryForModInstall();
+				}
+			};
+		}
 		Archs archs = new Archs();
 		archs.setSize( Camera.main.width, Camera.main.height );
         sendToBack(archs);
