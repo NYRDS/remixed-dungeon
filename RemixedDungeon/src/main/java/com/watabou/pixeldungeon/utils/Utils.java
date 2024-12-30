@@ -194,7 +194,7 @@ public class Utils {
         //noinspection ConstantValue
         return BuildConfig.FLAVOR_platform.equals(PLATFORM_ANDROID);
     }
-
+    
     public static class SpuriousReturn implements InterstitialPoint {
 
         @Override

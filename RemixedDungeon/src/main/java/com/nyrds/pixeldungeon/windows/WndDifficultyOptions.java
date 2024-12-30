@@ -17,7 +17,7 @@ public class WndDifficultyOptions extends WndOptions {
     static public final int [] descs  = {R.string.StartScene_DifficultyEasyNoAds,R.string.StartScene_DifficultyNormalWithSavesNoAds,R.string.StartScene_DifficultyNormal,R.string.StartScene_DifficultyExpert};
 
     public WndDifficultyOptions(StartScene startScene) {
-        super(StringsManager.getVar(R.string.StartScene_DifficultySelect), Utils.EMPTY_STRING, StringsManager.getVar(GamePreferences.donated() > 0 ? R.string.StartScene_DifficultyEasyNoAds : R.string.StartScene_DifficultyEasy), StringsManager.getVar(GamePreferences.donated() > 0 ? R.string.StartScene_DifficultyNormalWithSavesNoAds : R.string.StartScene_DifficultyNormalWithSaves), StringsManager.getVar(R.string.StartScene_DifficultyNormal), StringsManager.getVar(R.string.StartScene_DifficultyExpert));
+        super(StringsManager.getVar(R.string.StartScene_DifficultySelect), Utils.EMPTY_STRING, StringsManager.getVar(GamePreferences.donated() > 0 || ! Utils.isAndroid() ? R.string.StartScene_DifficultyEasyNoAds : R.string.StartScene_DifficultyEasy), StringsManager.getVar(GamePreferences.donated() > 0 || ! Utils.isAndroid() ? R.string.StartScene_DifficultyNormalWithSavesNoAds : R.string.StartScene_DifficultyNormalWithSaves), StringsManager.getVar(R.string.StartScene_DifficultyNormal), StringsManager.getVar(R.string.StartScene_DifficultyExpert));
         this.startScene = startScene;
 
         for (int i = 0; i < buttonsVbox.getLength(); i++) {

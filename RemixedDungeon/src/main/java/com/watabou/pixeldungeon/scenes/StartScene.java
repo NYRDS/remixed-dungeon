@@ -289,7 +289,7 @@ public class StartScene extends PixelScene {
 
         curShield = shield;
         curShield.highlight(true);
-
+        bringToFront(curShield);
 
         if (!Util.isDebug()) {
             if (curShield.cl == HeroClass.HUNTRESS && !huntressUnlocked) {
@@ -462,7 +462,7 @@ public class StartScene extends PixelScene {
                 selectDifficulty();
                 hide();
             } else {
-                eraseWarning.text(eraseWarning.text() + ":\n" + Utils.format(R.string.StartScene_Depth, info.depth, info.level)+"\n" + StringsManager.getVar(WndDifficultyOptions.descs[info.difficulty])+"\n");
+                eraseWarning.text(eraseWarning.text() + "\n" + Utils.format(R.string.StartScene_Depth, info.depth, info.level)+"\n" + StringsManager.getVar(WndDifficultyOptions.descs[info.difficulty])+"\n");
                 layout();
             }
 
