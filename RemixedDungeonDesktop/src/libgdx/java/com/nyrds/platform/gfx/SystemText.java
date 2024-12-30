@@ -254,15 +254,15 @@ public class SystemText extends Text {
                     maxWidth = line_width;
                 }
             }
-            totalHeight += pseudoGlyphLayout.height + 5;
+            totalHeight += pseudoGlyphLayout.height - fontData.descent;
         }
         setWidth(maxWidth);
-        setHeight(totalHeight - 5);
+        setHeight(totalHeight);
     }
 
     @Override
     public float baseLine() {
-        return (fontData.ascent - fontData.descent) / oversample;
+        return (fontData.lineHeight) / oversample;
     }
 
     @Override
