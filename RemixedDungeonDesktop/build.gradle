@@ -2,11 +2,14 @@ plugins {
     id 'java'
     id 'application'
     id 'com.github.johnrengelman.shadow' version '7.1.2'
-    id 'de.undercouch.download' version '5.4.0' // Ensure the plugin is applied
+    id 'de.undercouch.download' version '5.4.0'
 }
 
-project.ext.assetsDir = new File("src/desktop/assets")
-project.ext.version = '32.2'
+project.ext {
+    version = '32.2'
+    version_code = 1229
+}
+
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_10
@@ -21,7 +24,7 @@ jar {
 
 shadowJar {
     archiveBaseName.set('RemixedDungeon')
-    archiveVersion.set('') // Remove version from the JAR filename
+    archiveVersion.set('')
     archiveClassifier.set('')
     manifest {
         attributes 'Main-Class': 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
@@ -30,9 +33,7 @@ shadowJar {
 
 application {
     applicationName = 'RemixedDungeon-desktop'
-    applicationDefaultJvmArgs = ['-Dassets.dir=assets']
     mainClass = 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
-    applicationDefaultJvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED"]
 
     sourceSets {
         main {
@@ -47,7 +48,7 @@ application {
 }
 
 tasks.withType(JavaExec).configureEach {
-    jvmArgs += ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
 }
 
 tasks.register('codegen', Exec) {
@@ -55,6 +56,29 @@ tasks.register('codegen', Exec) {
     commandLine 'python3', 'make_json.py'
 }
 
+tasks.register('generateBuildConfig') {
+    def debugProvider = project.providers.gradleProperty('debug').orElse('false')
+    def version = project.ext.version
+    def version_code = project.ext.version_code
+    doLast {
+        def debug = debugProvider.get().toBoolean()
+        def buildConfigFile = new File("src/libgdx/java/com/nyrds/pixeldungeon/ml/BuildConfig.java")
+        buildConfigFile.parentFile.mkdirs()
+        buildConfigFile.text = """
+package com.nyrds.pixeldungeon.ml;
+
+public class BuildConfig {
+    public static final boolean DEBUG = ${debug};
+    public static final String SAVES_PATH = "./saves/";
+    public static final String FLAVOR_platform = "desktop";
+    public static final String VERSION_NAME = "${version}";
+    public static final int VERSION_CODE = ${version_code};
+}
+        """
+    }
+}
+
+compileJava.dependsOn generateBuildConfig
 compileJava.dependsOn codegen
 
 ext {
@@ -120,7 +144,6 @@ tasks.register('downloadJdks') {
             def outputFile = new File(jdkDownloadDir, "${platform}.${url.endsWith('.zip') ? 'zip' : 'tar.gz'}")
             outputFile.parentFile.mkdirs()
 
-            // Check if the file already exists
             if (!outputFile.exists()) {
                 println "Downloading JDK for ${platform}..."
                 ant.get(src: url, dest: outputFile)
@@ -274,7 +297,6 @@ tasks.register('packageWinX64', Zip) {
     }
 }
 
-// Task to build all platform-specific bundles
 tasks.register('buildAllBundles') {
     dependsOn 'packageLinuxX64', 'packageMacM1', 'packageWinX64'
 }

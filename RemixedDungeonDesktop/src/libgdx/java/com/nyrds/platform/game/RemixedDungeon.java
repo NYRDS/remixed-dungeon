@@ -87,8 +87,6 @@ public class RemixedDungeon extends Game {
 		ModdingMode.selectMod(GamePreferences.activeMod());
 		GamePreferences.uiLanguage(GamePreferences.uiLanguage());
 
-		GameLoop.versionCode = 1227;
-
 		super.create();
 	}
 

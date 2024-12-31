@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.files.FileHandle;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.audio.MusicManager;
@@ -18,14 +19,15 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.io.InputStream;
+
+import lombok.Getter;
 
 
 public class Game implements ApplicationListener, InputProcessor {
     private static Game instance;
 
+    @Getter
     private static volatile boolean paused = true;
     public static boolean softPaused;
 
@@ -39,8 +41,8 @@ public class Game implements ApplicationListener, InputProcessor {
         instance = this;
         gameLoop = new GameLoop(c);
 
-        GameLoop.version = "None";
-        GameLoop.versionCode = 0;
+        GameLoop.version = BuildConfig.VERSION_NAME;
+        GameLoop.versionCode = BuildConfig.VERSION_CODE;
     }
 
     public void doRestart() {
@@ -66,20 +68,12 @@ public class Game implements ApplicationListener, InputProcessor {
     public static void syncAdsState() {
     }
 
-    public static boolean isPaused() {
-        return paused;
-    }
-
 
     public static void vibrate(int milliseconds) {
     }
 
     public synchronized static Game instance() {
         return instance;
-    }
-
-    public void doPermissionsRequest(@NotNull InterstitialPoint returnTo, String[] permissions) {
-        returnTo.returnToWork(true);
     }
 
     public static void openUrl(String prompt, String address) {
