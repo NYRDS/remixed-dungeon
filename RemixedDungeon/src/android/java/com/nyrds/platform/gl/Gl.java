@@ -20,4 +20,8 @@ public class Gl {
     public static void blendSrcAlphaOneMinusAlpha() {
         GLES20.glBlendFunc( GLES20.GL_SRC_ALPHA, GLES20.GL_ONE_MINUS_SRC_ALPHA );
     }
+
+    public static void flush() {
+        GLES20.glFlush();
+    }
 }

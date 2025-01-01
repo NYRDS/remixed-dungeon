@@ -66,6 +66,7 @@ public class Util {
 		return -1;
 	}
 
+	@SneakyThrows
 	public static JSONObject sanitizeJson(String jsonInput) {
 		// Parse the JSON input
 		//PUtil.slog("json", jsonInput);
