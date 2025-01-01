@@ -157,6 +157,10 @@ public class StringsManager {
 
         clearModStrings();
 
+        if(!locale.equals("en")) {
+            parseStrings("strings_en.json");
+        }
+
         String modStrings = Utils.format("strings_%s.json", lang);
 
         parseStrings(modStrings);
