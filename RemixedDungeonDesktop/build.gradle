@@ -89,7 +89,7 @@ compileJava.dependsOn generateBuildConfig
 compileJava.dependsOn codegen
 
 ext {
-    gdxVersion = '1.13.0'
+    gdxVersion = '1.12.1'
 }
 
 tasks.register('dist', Jar) {
