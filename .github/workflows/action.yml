@@ -82,7 +82,8 @@ jobs:
         run: |
           echo "Bundles found:"
           ls -1 dist/
-          echo "::set-output name=bundles::[\"$(ls -1 dist/ | tr '\n' ',' | sed 's/,$//' | sed 's/,/","/g')\"]"
+          bundles=$(ls -1 dist/ | jq -R -s -c 'split("\n")[:-1]')
+          echo "bundles=$bundles" >> $GITHUB_OUTPUT
 
   upload-desktop:
     name: Upload Desktop Bundles
@@ -90,7 +91,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        bundle: ${{ fromJson(needs.desktop.outputs.list-bundles.bundles) }}
+        bundle: ${{ fromJson(needs.desktop.outputs.bundles) }}
     steps:
       - name: Download Artifacts
         uses: actions/download-artifact@v4
