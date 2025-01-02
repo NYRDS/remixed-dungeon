@@ -41,39 +41,23 @@ jobs:
             echo "dist directory is empty or does not exist"
             exit 1
           fi
-      - name: List Desktop Bundles
-        id: list-bundles
+      - name: Upload files in dist/ as separate artifacts
         run: |
-          echo "Bundles found:"
-          ls -1 dist/
-          bundles=$(ls -1 dist/ | jq -R -s -c 'split("\n") | map(select(length > 0))')
-          echo "Bundles array: $bundles"
-          printf "bundles=%s\n" "$bundles" >> $GITHUB_OUTPUT
-          if [ $? -ne 0 ]; then
-            echo "jq command failed"
-            exit 1
-          fi
-      - name: Upload dist directory
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: dist/
+          cd dist
+          for file in *; do
+            echo "Uploading $file as artifact"
+            artifact_name="${file%.*}"  # Remove file extension for the artifact name
+            echo "Artifact name: $artifact_name"
+            # Use the GitHub Actions built-in artifact upload action
+            echo "::set-output name=artifact_name::$artifact_name"
+            echo "::set-output name=file_path::dist/$file"
+          done
+        id: upload_files
 
-  upload-desktop:
-    name: Upload Desktop Bundles
-    needs: desktop
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        bundle: ${{ fromJson(needs.desktop.outputs.bundles) }}
-    steps:
-      - name: Download dist directory
-        uses: actions/download-artifact@v4
+      - name: Upload each file as an artifact
+        uses: actions/upload-artifact@v3
         with:
-          name: dist
-          path: dist
-      - name: Upload Desktop Bundle
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.bundle }}
-          path: dist/${{ matrix.bundle }}
+          name: ${{ steps.upload_files.outputs.artifact_name }}
+          path: ${{ steps.upload_files.outputs.file_path }}
+
+
