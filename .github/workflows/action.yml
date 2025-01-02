@@ -48,16 +48,12 @@ jobs:
             echo "Uploading $file as artifact"
             artifact_name="${file%.*}"  # Remove file extension for the artifact name
             echo "Artifact name: $artifact_name"
-            # Use the GitHub Actions built-in artifact upload action
-            echo "::set-output name=artifact_name::$artifact_name"
-            echo "::set-output name=file_path::dist/$file"
+            # Upload the file as a separate artifact
+            gh api -X POST /repos/${{ github.repository }}/actions/artifacts \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Accept: application/vnd.github+json" \
+              -F "name=$artifact_name" \
+              -F "path=dist/$file"
           done
-        id: upload_files
-
-      - name: Upload each file as an artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ steps.upload_files.outputs.artifact_name }}
-          path: ${{ steps.upload_files.outputs.file_path }}
 
 
