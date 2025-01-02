@@ -68,11 +68,12 @@ jobs:
         run: ./gradlew -c settings.desktop.gradle buildAllBundles --no-configuration-cache
 
       - name: Upload Desktop Bundles
-        env:
-          GH_TOKEN: ${{ github.token }}  # Authenticate gh CLI
         run: |
           for bundle in dist/*; do
             bundle_name=$(basename "$bundle")
             echo "Uploading $bundle_name..."
-            gh release upload ${{ github.ref }} "$bundle" --clobber
+            actions/upload-artifact@v4
+            with:
+              name: $bundle_name
+              path: $bundle
           done
