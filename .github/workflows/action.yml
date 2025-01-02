@@ -68,9 +68,7 @@ jobs:
         run: ./gradlew -c settings.desktop.gradle buildAllBundles --no-configuration-cache
 
       - name: Upload Desktop Bundles
-        run: |
-          for bundle in dist/*; do
-            bundle_name=$(basename "$bundle")
-            echo "Uploading $bundle_name..."
-            gh release upload ${{ github.ref }} "$bundle" --clobber
-          done
+        uses: actions/upload-artifact@v4
+        with:
+          name: desktop-bundles
+          path: 'dist/*'  # Adjust this path to match the output of your desktop bundles
