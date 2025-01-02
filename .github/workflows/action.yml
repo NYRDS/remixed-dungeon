@@ -74,11 +74,22 @@ jobs:
           ls -1 dist/
           echo "::set-output name=bundles::$(ls -1 dist/ | jq -R -s -c 'split("\n")[:-1]')"
 
-      - name: Upload Desktop Bundles
+  upload-desktop:
+    name: Upload Desktop Bundles
+    needs: desktop
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        bundle: ${{ fromJson(needs.desktop.outputs.list-bundles.bundles) }}
+    steps:
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: Upload Desktop Bundle
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.bundle }}
           path: dist/${{ matrix.bundle }}
-        strategy:
-          matrix:
-            bundle: ${{ fromJson(steps.list-bundles.outputs.bundles) }}
