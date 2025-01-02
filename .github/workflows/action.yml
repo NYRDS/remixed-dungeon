@@ -2,39 +2,11 @@ name: build
 
 on:
   push:
-    branches: [ "*" ]  # This will trigger the workflow on push to any branch
+    branches: [ "*" ]
   pull_request:
-    branches: [ "*" ]  # This will trigger the workflow on pull requests to any branch
+    branches: [ "*" ]
 
 jobs:
-  apk:
-    name: Generate APK
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: '${{ github.ref }}'
-
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: 17
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
-      - name: Build with Gradle
-        run: ./gradlew assembleAndroidFdroidRelease
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: apk
-          path: '**/*.apk'
-          
   desktop:
     name: Build Desktop Bundles
     runs-on: ubuntu-latest
@@ -74,10 +46,21 @@ jobs:
         run: |
           echo "Bundles found:"
           ls -1 dist/
-          bundles=$(ls -1 dist/ | jq -R -s -c 'split("\n")[:-1]')
-          echo "bundles=$bundles" >> $GITHUB_OUTPUT
+          bundles=$(ls -1 dist/ | jq -R -s -c 'split("\n") | select(length > 0)')
+          echo "Bundles array: $bundles"
+          printf "bundles=%s\n" "$bundles" >> $GITHUB_OUTPUT
+          if [ $? -ne 0 ]; then
+            echo "jq command failed"
+            exit 1
+          fi
+      - name: Upload dist directory
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - name: Debug bundles output
+        run: echo "bundles output: ${{ steps.list-bundles.outputs.bundles }}"
 
-        
   upload-desktop:
     name: Upload Desktop Bundles
     needs: desktop
@@ -86,12 +69,13 @@ jobs:
       matrix:
         bundle: ${{ fromJson(needs.desktop.outputs.bundles) }}
     steps:
-      - name: Download Artifacts
+      - name: Download dist directory
         uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
-
+      - name: Debug matrix
+        run: echo "Matrix bundle: ${{ matrix.bundle }}"
       - name: Upload Desktop Bundle
         uses: actions/upload-artifact@v4
         with:
