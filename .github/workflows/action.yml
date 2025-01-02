@@ -58,8 +58,6 @@ jobs:
         with:
           name: dist
           path: dist/
-      - name: Debug bundles output
-        run: echo "bundles output: ${{ steps.list-bundles.outputs.bundles }}"
 
   upload-desktop:
     name: Upload Desktop Bundles
@@ -74,8 +72,6 @@ jobs:
         with:
           name: dist
           path: dist
-      - name: Debug matrix
-        run: echo "Matrix bundle: ${{ matrix.bundle }}"
       - name: Upload Desktop Bundle
         uses: actions/upload-artifact@v4
         with:
