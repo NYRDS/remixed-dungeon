@@ -67,13 +67,18 @@ jobs:
       - name: Build Desktop Bundles with Gradle
         run: ./gradlew -c settings.desktop.gradle buildAllBundles --no-configuration-cache
 
-      - name: Upload Desktop Bundles
+      - name: List Desktop Bundles
+        id: list-bundles
         run: |
-          for bundle in dist/*; do
-            bundle_name=$(basename "$bundle")
-            echo "Uploading $bundle_name..."
-            actions/upload-artifact@v4
-            with:
-              name: $bundle_name
-              path: $bundle
-          done
+          echo "Bundles found:"
+          ls -1 dist/
+          echo "::set-output name=bundles::$(ls -1 dist/ | jq -R -s -c 'split("\n")[:-1]')"
+
+      - name: Upload Desktop Bundles
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.bundle }}
+          path: dist/${{ matrix.bundle }}
+        strategy:
+          matrix:
+            bundle: ${{ fromJson(steps.list-bundles.outputs.bundles) }}
