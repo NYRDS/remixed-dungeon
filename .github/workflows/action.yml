@@ -67,12 +67,22 @@ jobs:
       - name: Build Desktop Bundles with Gradle
         run: ./gradlew -c settings.desktop.gradle buildAllBundles --no-configuration-cache
 
+      - name: Verify dist directory
+        id: verify-dist
+        run: |
+          if [ -d dist ] && [ "$(ls -A dist)" ]; then
+            echo "dist directory exists and is not empty"
+          else
+            echo "dist directory is empty or does not exist"
+            exit 1
+          fi
+
       - name: List Desktop Bundles
         id: list-bundles
         run: |
           echo "Bundles found:"
           ls -1 dist/
-          echo "::set-output name=bundles::$(ls -1 dist/ | jq -R -s -c 'split("\n")[:-1]')"
+          echo "::set-output name=bundles::[\"$(ls -1 dist/ | tr '\n' ',' | sed 's/,$//' | sed 's/,/","/g')\"]"
 
   upload-desktop:
     name: Upload Desktop Bundles
