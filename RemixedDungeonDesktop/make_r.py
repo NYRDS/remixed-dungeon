@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
+import os
 from lxml import etree as ElementTree
 
+
 def makeRJava(strings, arrays):
-    rJava = open("src/libgdx/java/com/nyrds/pixeldungeon/ml/R.java", "w", encoding='utf8')
+    target_dir = 'src/libgdx/java/com/nyrds/pixeldungeon/ml'
+    os.makedirs(target_dir, exist_ok=True)
+    rJava = open(f"{target_dir}/R.java", "w", encoding='utf8')
     rJava.write('''
     package com.nyrds.pixeldungeon.ml;
 
