@@ -2,60 +2,111 @@ name: build
 
 on:
   push:
-    branches: [ "*" ]
+    branches: [ "*" ]  # This will trigger the workflow on push to any branch
   pull_request:
-    branches: [ "*" ]
+    branches: [ "*" ]  # This will trigger the workflow on pull requests to any branch
 
 jobs:
-  desktop:
-    name: Build Desktop Bundles
+  apk:
+    name: Generate APK
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: '${{ github.ref }}'
+
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build with Gradle
+        run: ./gradlew assembleAndroidFdroidRelease
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: apk
+          path: '**/*.apk'
+
+  package-linux:
+    name: Package Linux X64
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: '${{ github.ref }}'
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.x'  # Use the latest version of Python 3
+
       - name: Install Python dependencies
         run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install lxml
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-      - name: Build Desktop Bundles with Gradle
-        run: ./gradlew -c settings.desktop.gradle buildAllBundles --no-configuration-cache
-      - name: Verify dist directory
-        id: verify-dist
-        run: |
-          if [ -d dist ] && [ "$(ls -A dist)" ]; then
-            echo "dist directory exists and is not empty"
-          else
-            echo "dist directory is empty or does not exist"
-            exit 1
-          fi
-      - name: Upload files in dist/ as separate artifacts
-        run: |
-          cd dist
-          for file in *; do
-            echo "Uploading $file as artifact"
-            artifact_name="${file%.*}"  # Remove file extension for the artifact name
-            echo "Artifact name: $artifact_name"
-            # Upload the file as a separate artifact
-            gh api -X POST /repos/${{ github.repository }}/actions/artifacts \
-              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-              -H "Accept: application/vnd.github+json" \
-              -F "name=$artifact_name" \
-              -F "path=dist/$file"
-          done
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Package Linux X64 with Gradle
+        run: ./gradlew -c settings.desktop.gradle packageLinuxX64 --no-configuration-cache
 
+      - name: Upload Linux Bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-bundle
+          path: 'dist/*'  # Adjust this path to match the output of your Linux bundle
+
+  package-windows:
+    name: Package Windows X64
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: '${{ github.ref }}'
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'  # Use the latest version of Python 3
+
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install lxml
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Package Windows X64 with Gradle
+        run: ./gradlew -c settings.desktop.gradle packageWinX64 --no-configuration-cache
+
+      - name: Upload Windows Bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-bundle
+          path: 'dist/*'  # Adjust this path to match the output of your Windows bundle
