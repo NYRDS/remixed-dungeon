@@ -56,7 +56,11 @@ tasks.withType(JavaExec).configureEach {
 
 tasks.register('codegen', Exec) {
     commandLine 'python3', 'make_r.py'
-    commandLine 'python3', 'make_json.py'
+    doLast {
+        exec {
+            commandLine 'python3', 'make_json.py'
+        }
+    }
 }
 
 tasks.register('generateBuildConfig') {
