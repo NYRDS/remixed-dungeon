@@ -46,7 +46,7 @@ jobs:
         run: |
           echo "Bundles found:"
           ls -1 dist/
-          bundles=$(ls -1 dist/ | jq -R -s -c 'split("\n") | select(length > 0)')
+          bundles=$(ls -1 dist/ | jq -R -s -c 'split("\n") | map(select(length > 0))')
           echo "Bundles array: $bundles"
           printf "bundles=%s\n" "$bundles" >> $GITHUB_OUTPUT
           if [ $? -ne 0 ]; then
