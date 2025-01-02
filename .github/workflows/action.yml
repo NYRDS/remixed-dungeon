@@ -56,6 +56,11 @@ jobs:
         with:
           python-version: '3.x'  # Use the latest version of Python 3
 
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install lxml
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
