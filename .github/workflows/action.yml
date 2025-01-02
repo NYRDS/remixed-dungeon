@@ -34,39 +34,32 @@ jobs:
         with:
           name: apk
           path: '**/*.apk'
-
+          
   desktop:
     name: Build Desktop Bundles
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: '${{ github.ref }}'
-
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'  # Use the latest version of Python 3
-
+          python-version: '3.x'
       - name: Install Python dependencies
         run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install lxml
-
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-
       - name: Build Desktop Bundles with Gradle
         run: ./gradlew -c settings.desktop.gradle buildAllBundles --no-configuration-cache
-
       - name: Verify dist directory
         id: verify-dist
         run: |
@@ -76,7 +69,6 @@ jobs:
             echo "dist directory is empty or does not exist"
             exit 1
           fi
-
       - name: List Desktop Bundles
         id: list-bundles
         run: |
@@ -85,9 +77,7 @@ jobs:
           bundles=$(ls -1 dist/ | jq -R -s -c 'split("\n")[:-1]')
           echo "bundles=$bundles" >> $GITHUB_OUTPUT
 
-      - name: Debug bundles output
-        run: echo "bundles output: ${{ steps.list-bundles.outputs.bundles }}"
-
+        
   upload-desktop:
     name: Upload Desktop Bundles
     needs: desktop
