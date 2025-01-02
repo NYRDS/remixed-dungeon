@@ -35,8 +35,8 @@ jobs:
           name: apk
           path: '**/*.apk'
 
-  desktop:
-    name: Build Desktop Bundles
+  package-linux:
+    name: Package Linux X64
     runs-on: ubuntu-latest
 
     steps:
@@ -64,11 +64,49 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build Desktop Bundles with Gradle
-        run: ./gradlew -c settings.desktop.gradle buildAllBundles --no-configuration-cache
+      - name: Package Linux X64 with Gradle
+        run: ./gradlew -c settings.desktop.gradle packageLinuxX64 --no-configuration-cache
 
-      - name: Upload Desktop Bundles
+      - name: Upload Linux Bundle
         uses: actions/upload-artifact@v4
         with:
-          name: desktop-bundles
-          path: 'dist/*'  # Adjust this path to match the output of your desktop bundles
+          name: linux-bundle
+          path: 'dist/*'  # Adjust this path to match the output of your Linux bundle
+
+  package-windows:
+    name: Package Windows X64
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: '${{ github.ref }}'
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'  # Use the latest version of Python 3
+
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install lxml
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Package Windows X64 with Gradle
+        run: ./gradlew -c settings.desktop.gradle packageWinX64 --no-configuration-cache
+
+      - name: Upload Windows Bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-bundle
+          path: 'dist/*'  # Adjust this path to match the output of your Windows bundle
