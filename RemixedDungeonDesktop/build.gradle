@@ -3,13 +3,13 @@ plugins {
     id 'application'
     id 'com.github.johnrengelman.shadow' version '7.1.2'
     id 'de.undercouch.download' version '5.4.0'
+    id 'edu.sc.seis.launch4j' version '2.5.4' // Launch4j plugin for creating .exe files
 }
 
 project.ext {
     version = '32.2'
     version_code = 1229
 }
-
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_10
@@ -201,6 +201,25 @@ tasks.register('minimizeJdks') {
     }
 }
 
+// Launch4j configuration for creating .exe files
+launch4j {
+    mainClassName = 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
+    outfile = 'RemixedDungeon.exe'
+    icon = "${projectDir}/src/desktop/d_assets/icons/icon.ico"
+    jreMinVersion = '10'
+    jreMaxVersion = '17'
+    bundledJrePath = 'jdk'
+    bundledJre64Bit = true
+    stayAlive = false
+    dontWrapJar = false
+    jar = shadowJar.archiveFile.get().asFile
+
+    jvmOptions = [
+            '--add-opens', 'java.base/java.util=ALL-UNNAMED',
+            '-Dhttps.protocols=TLSv1.2'
+    ]
+}
+
 // Custom tasks for platform-specific bundles
 tasks.register('packageLinuxX64', Zip) {
     dependsOn 'minimizeJdks'
@@ -265,13 +284,9 @@ tasks.register('packageMacM1', Zip) {
 }
 
 tasks.register('packageWinX64', Zip) {
-    dependsOn 'minimizeJdks'
+    dependsOn 'minimizeJdks', 'createExe'
     archiveFileName = "RemixedDungeon-${project.ext.version}-winX64.zip"
     destinationDirectory = file("../dist")
-
-    from(shadowJar) {
-        into "RemixedDungeon-${project.ext.version}-winX64"
-    }
 
     from(file("src/desktop/assets")) {
         into "RemixedDungeon-${project.ext.version}-winX64/mods/Remixed"
@@ -289,7 +304,7 @@ tasks.register('packageWinX64', Zip) {
         into "RemixedDungeon-${project.ext.version}-winX64/jdk"
     }
 
-    from(file("src/desktop/run.bat")) {
+    from("${projectDir}/build/launch4j/${launch4j.outfile}") {
         into "RemixedDungeon-${project.ext.version}-winX64"
     }
 }

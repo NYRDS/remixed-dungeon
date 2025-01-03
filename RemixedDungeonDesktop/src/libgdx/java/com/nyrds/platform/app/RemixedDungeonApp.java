@@ -6,12 +6,16 @@ import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.PUtil;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class RemixedDungeonApp {
-    static public boolean checkOwnSignature() {
-        return true;
-    }
+    private static String[] savedArgs = new String[0];
+
     public static void main(String[] args) {
+        savedArgs = args; // Save the command-line arguments
+
         System.setProperty("https.protocols", "TLSv1.2");
         System.setProperty("jdk.module.addOpens", "java.base/java.util=ALL-UNNAMED");
 
@@ -19,7 +23,7 @@ public class RemixedDungeonApp {
 
         Lwjgl3ApplicationConfiguration cfg = new Lwjgl3ApplicationConfiguration();
         cfg.setTitle("Remixed Dungeon");
-        cfg.setWindowedMode(800, 480);
+        cfg.setWindowedMode(800, 450);
         cfg.setBackBufferConfig(8, 8, 8, 8, 16, 0, 0);
         cfg.enableGLDebugOutput(true, System.err);
         cfg.setForegroundFPS(30);
@@ -43,22 +47,38 @@ public class RemixedDungeonApp {
             // Get the Java Runtime
             Runtime runtime = Runtime.getRuntime();
 
-            // Get the path to the current Java executable
-            String java = System.getProperty("java.home") + "/bin/java";
-
-            // Get the classpath of the current application
-            String classPath = System.getProperty("java.class.path");
-
-            // Get the main class name
-            String mainClass = RemixedDungeonApp.class.getName();
+            // Determine the operating system
+            String os = System.getProperty("os.name").toLowerCase();
 
             // Create the command to restart the application
-            String[] command = new String[]{java,"--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2",  "-cp", classPath, mainClass};
+            List<String> command = new ArrayList<>();
+
+            if (os.contains("win")) {
+                // On Windows, use the RemixedDungeon.exe executable
+                String exePath = System.getProperty("user.dir") + "/RemixedDungeon.exe";
+                command.add(exePath);
+
+                // Add saved arguments
+                command.addAll(Arrays.asList(savedArgs));
+            } else {
+                // On other platforms, use the Java command
+                String java = System.getProperty("java.home") + "/bin/java";
+                command.add(java);
+                command.add("--add-opens");
+                command.add("java.base/java.util=ALL-UNNAMED");
+                command.add("-Dhttps.protocols=TLSv1.2");
+                command.add("-cp");
+                command.add(System.getProperty("java.class.path"));
+                command.add(RemixedDungeonApp.class.getName());
+
+                // Add saved arguments
+                command.addAll(Arrays.asList(savedArgs));
+            }
 
             PUtil.slog("app", "Restarting application with command: " + String.join(" ", command));
 
             // Execute the command
-            Process process = runtime.exec(command);
+            Process process = runtime.exec(command.toArray(new String[0]));
 
             // Print the process ID of the new process
             System.out.println("Restarting application with process ID: " + process.pid());
