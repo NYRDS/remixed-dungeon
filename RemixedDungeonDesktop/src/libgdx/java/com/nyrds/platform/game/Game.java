@@ -2,8 +2,11 @@ package com.nyrds.platform.game;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Pixmap;
+import com.badlogic.gdx.graphics.PixmapIO;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.support.PlayGames;
@@ -20,6 +23,7 @@ import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
 
 import java.io.InputStream;
+import java.util.zip.Deflater;
 
 import lombok.Getter;
 
@@ -119,6 +123,11 @@ public class Game implements ApplicationListener, InputProcessor {
         Gdx.gl20.glEnable(Gdx.gl20.GL_SCISSOR_TEST);
 
         gameLoop.onFrame();
+
+
+        if (Gdx.input.isButtonPressed(Input.Buttons.RIGHT)) {
+            takeScreenshot();
+        }
     }
 
     @Override
@@ -231,5 +240,18 @@ public class Game implements ApplicationListener, InputProcessor {
         } catch (Exception e) {
             return null;
         }
+    }
+
+    public static void takeScreenshot() {
+        int width = Gdx.graphics.getWidth();
+        int height = Gdx.graphics.getHeight();
+
+        Pixmap pixmap = Pixmap.createFromFrameBuffer(0, 0, width, height);
+
+        long timestamp = System.currentTimeMillis();
+
+        PixmapIO.writePNG(Gdx.files.local("screenshot" + timestamp + ".png"), pixmap, Deflater.DEFAULT_COMPRESSION, true);
+
+        pixmap.dispose();
     }
 }

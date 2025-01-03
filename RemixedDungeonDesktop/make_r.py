@@ -68,5 +68,6 @@ for file in strings_files:
                 d_arrays[entry_name].append(e.text.replace("@string/", ""))
 
             r_arrays.add(entry_name)
-
+print("Making R.java")
 makeRJava(r_strings, r_arrays)
+print("Done")
