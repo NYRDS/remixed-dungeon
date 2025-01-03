@@ -17,14 +17,18 @@
  */
 package com.nyrds.platform.game;
 
+import com.badlogic.gdx.Gdx;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.utils.GLog;
+
+import java.util.Arrays;
 
 public class RemixedDungeon extends Game {
 
@@ -82,7 +86,11 @@ public class RemixedDungeon extends Game {
 
 	@Override
 	public void create() {
-		GLog.debug("create");
+
+
+		PUtil.slog("game", "Creating game");
+		PUtil.slog("game", "audio devices: " + Arrays.toString(Gdx.audio.getAvailableOutputDevices()));
+
 		GamePreferences.classicFont(GamePreferences.classicFont());
 		ModdingMode.selectMod(GamePreferences.activeMod());
 		GamePreferences.uiLanguage(GamePreferences.uiLanguage());

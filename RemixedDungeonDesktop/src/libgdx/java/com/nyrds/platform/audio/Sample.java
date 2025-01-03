@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
 
 import org.jetbrains.annotations.NotNull;
@@ -48,8 +49,7 @@ public enum Sample {
 		if (!sounds.containsKey(asset) && !missingAssets.contains(asset)) {
 			try {
 				String assetFile = ModdingMode.getSoundById("sound/" + asset);
-
-				Sound sound = Gdx.audio.newSound(Gdx.files.internal("../assets/" +	assetFile));
+				Sound sound = Gdx.audio.newSound(FileSystem.getInternalStorageFileHandle(assetFile));
 				sounds.put(asset, sound);
 			} catch (Exception e) {
 				missingAssets.add(asset);
@@ -80,7 +80,7 @@ public enum Sample {
 			sound = sounds.get(id);
 
 			if (sound != null) {
-				sound.play(leftVolume, rate, 0);
+				long s_id = sound.play(leftVolume, rate, 0);
 			} else {
 				EventCollector.logException("Sound " + id + " not found");
 			}
