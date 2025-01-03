@@ -220,6 +220,9 @@ launch4j {
     ]
 }
 
+
+createExe.dependsOn 'shadowJar'
+
 // Custom tasks for platform-specific bundles
 tasks.register('packageLinuxX64', Zip) {
     dependsOn 'minimizeJdks'
