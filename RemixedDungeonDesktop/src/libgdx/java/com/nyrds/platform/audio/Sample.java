@@ -17,8 +17,6 @@ public enum Sample {
 
 	INSTANCE;
 
-	String playOnComplete;
-
 	@NotNull
 	private final Set<String> missingAssets = new HashSet<>();
 
@@ -52,13 +50,9 @@ public enum Sample {
 				String assetFile = ModdingMode.getSoundById("sound/" + asset);
 
 				Sound sound = Gdx.audio.newSound(Gdx.files.internal("../assets/" +	assetFile));
-
-
 				sounds.put(asset, sound);
-
 			} catch (Exception e) {
 				missingAssets.add(asset);
-				playOnComplete = null;
 				EventCollector.logException(e, asset);
 			}
 		}
@@ -78,12 +72,17 @@ public enum Sample {
 		}
 		GameLoop.instance().soundExecutor.execute(() -> {
 			Sound sound = sounds.get(id);
-			//PUtil.slog("sound", "playing " + id);
+
+			if(sound==null) {
+				load(id);
+			}
+
+			sound = sounds.get(id);
+
 			if (sound != null) {
 				sound.play(leftVolume, rate, 0);
 			} else {
-				playOnComplete = id;
-				GameLoop.instance().soundExecutor.execute(() -> load(id));
+				EventCollector.logException("Sound " + id + " not found");
 			}
 		});
 	}
