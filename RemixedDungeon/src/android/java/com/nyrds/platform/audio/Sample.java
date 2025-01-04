@@ -131,7 +131,9 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 		GameLoop.instance().soundExecutor.execute(() -> {
 			Integer sampleId = ids.get(id);
 			if (sampleId != null) {
-				pool.play(sampleId, leftVolume, rightVolume, 0, 0, rate);
+				float g_volume = GamePreferences.soundFxVolume() / 10f;
+
+				pool.play(sampleId, leftVolume * g_volume, rightVolume * g_volume, 0, 0, rate);
 			} else {
 				playOnComplete = id;
 				GameLoop.execute(() -> load(id));

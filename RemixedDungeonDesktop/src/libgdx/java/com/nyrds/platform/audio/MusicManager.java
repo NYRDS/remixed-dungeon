@@ -3,6 +3,7 @@ package com.nyrds.platform.audio;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
@@ -35,8 +36,6 @@ public enum MusicManager {
 		}
 
 		String assetFilename = ModdingMode.getSoundById("sound/" + assetName);
-
-
 
 		if (assetFilename.isEmpty()) {
 			return;
@@ -89,6 +88,7 @@ public enum MusicManager {
 	public void volume(float value) {
 		try {
 			if (player != null) {
+				value *= GamePreferences.musicVolume() / 10f;
 				value = Util.clamp(value, 0, 1);
 				player.setVolume(value);
 			}

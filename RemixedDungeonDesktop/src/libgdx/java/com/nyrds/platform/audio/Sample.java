@@ -3,6 +3,7 @@ package com.nyrds.platform.audio;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
@@ -80,7 +81,8 @@ public enum Sample {
 			sound = sounds.get(id);
 
 			if (sound != null) {
-				long s_id = sound.play(leftVolume, rate, 0);
+				float volume = leftVolume * GamePreferences.soundFxVolume() / 10f;
+				long s_id = sound.play(volume, rate, 0);
 			} else {
 				EventCollector.logException("Sound " + id + " not found");
 			}

@@ -49,6 +49,22 @@ public class GamePreferences {
         return Preferences.INSTANCE.getBoolean(CommonPrefs.KEY_SOUND_FX, true);
     }
 
+    public static int soundFxVolume() {
+        return Preferences.INSTANCE.getInt(CommonPrefs.KEY_SOUND_FX_VOLUME, 10);
+    }
+
+    public static void soundFxVolume(int value) {
+        Preferences.INSTANCE.put(CommonPrefs.KEY_SOUND_FX_VOLUME, value);
+    }
+
+    public static void musicVolume(int value) {
+        Preferences.INSTANCE.put(CommonPrefs.KEY_MUSIC_VOLUME, value);
+    }
+
+    public static int musicVolume() {
+        return Preferences.INSTANCE.getInt(CommonPrefs.KEY_MUSIC_VOLUME, 10);
+    }
+
     public static void brightness(boolean value) {
         Preferences.INSTANCE.put(CommonPrefs.KEY_BRIGHTNESS, value);
         if (GameLoop.scene() instanceof GameScene) {

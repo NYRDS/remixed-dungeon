@@ -4,6 +4,7 @@ package com.watabou.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.VBox;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
@@ -37,6 +38,7 @@ public abstract class WndMenuCommon extends Window {
     }
 
     protected void addSoundControls(VBox menuItems) {
+        /*
         menuItems.add(new MenuCheckBox(R.string.WndSettings_Music, GamePreferences.music()) {
             @Override
             protected void onClick() {
@@ -54,16 +56,33 @@ public abstract class WndMenuCommon extends Window {
                 Sample.INSTANCE.play(Assets.SND_CLICK);
             }
         });
+        */
 
-        Slider sfx = new Slider(R.string.WndSettings_Sound, "silent", "loud", 0, 10) {
+        Slider sfx = new Slider(R.string.WndSettings_Sound, "0", "1", 0, 10) {
             @Override
             protected void onChange() {
-
+                int value = getSelectedValue();
+                GamePreferences.soundFxVolume(value);
+                GamePreferences.soundFx(value > 0);
+                Sample.INSTANCE.play(Assets.SND_CLICK);
             }
         };
+        sfx.setSelectedValue(GamePreferences.soundFxVolume());
         sfx.setSize(WIDTH,BUTTON_HEIGHT);
         menuItems.add(sfx);
 
+        Slider music = new Slider(R.string.WndSettings_Music, "0", "1", 0, 10) {
+            @Override
+            protected void onChange() {
+                int value = getSelectedValue();
+                GamePreferences.musicVolume(value);
+                GamePreferences.music(value > 0);
+                MusicManager.INSTANCE.volume(value/10.f);
+            }
+        };
+        music.setSelectedValue(GamePreferences.musicVolume());
+        music.setSize(WIDTH,BUTTON_HEIGHT);
+        menuItems.add(music);
     }
 
 

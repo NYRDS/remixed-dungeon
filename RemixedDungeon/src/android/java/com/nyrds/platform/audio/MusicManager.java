@@ -152,6 +152,7 @@ public enum MusicManager implements MediaPlayer.OnPreparedListener,
 	public void volume(float value) {
 		try {
 			if (player != null) {
+				value *= GamePreferences.musicVolume() / 10f;
 				player.setVolume(value, value);
 			}
 		} catch (Exception e) {
