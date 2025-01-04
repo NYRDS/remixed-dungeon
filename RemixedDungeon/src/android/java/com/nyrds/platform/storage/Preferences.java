@@ -17,6 +17,10 @@ public enum Preferences {
 
 	INSTANCE;
 
+	public static final String KEY_LANDSCAPE        = "landscape";
+	public static final String KEY_USE_PLAY_GAMES   = "use_play_games";
+	public static final String KEY_EU_CONSENT_LEVEL = "eu_consent_level";
+
     private SharedPreferences prefs;
 
 	private final Map<String, Integer> intCache    = new HashMap<>();
