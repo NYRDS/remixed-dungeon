@@ -169,12 +169,7 @@ public class SaveUtils {
 	}
 
 	public static String depthFileForLoad(HeroClass cl, int depth, String levelKind, String levelId) {
-		String newFormat = depthFileForSave(cl, depth, levelKind, levelId);
-		if( Gdx.files.local(newFormat).exists()) {
-			return newFormat;
-		}
-		
-		return Utils.format(levelKind + "_" + _depthFile(cl), depth);
+		return depthFileForSave(cl, depth, levelKind, levelId);
 	}
 
 	public static String depthFileForSave(HeroClass heroClass, int levelDepth, String levelKind, String levelId) {
@@ -189,11 +184,6 @@ public class SaveUtils {
 		return ModdingMode.activeMod() + "_" + tag + "_" + difficulty;
 	}
 
-	static public String buildSlotFromTag(String tag) {
-		return buildSlotFromTag(tag, GameLoop.getDifficulty());
-	}
-
-
 	public static String getAutoSave() {
 		return getAutoSave(GameLoop.getDifficulty());
 	}
@@ -204,10 +194,6 @@ public class SaveUtils {
 
 	public static String getAutoSave(int dif) {
 		return buildSlotFromTag(AUTO_SAVE, dif);
-	}
-
-	public static String getPrevSave(int dif) {
-		return buildSlotFromTag(PREV_SAVE, dif);
 	}
 
 	public static void preview(Info info, Bundle bundle) {
