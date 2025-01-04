@@ -7,6 +7,7 @@ import com.watabou.utils.Callback;
 import org.hjson.JsonValue;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.PrintWriter;
@@ -68,15 +69,14 @@ public class Util {
 
 	@SneakyThrows
 	public static JSONObject sanitizeJson(String jsonInput) {
-		// Parse the JSON input
-		//PUtil.slog("json", jsonInput);
 		JsonValue jsonValue = JsonValue.readHjson(jsonInput).asObject();
-		//PUtil.slog("json", jsonValue.toString());
+        return new JSONObject(jsonValue.toString());
+	}
 
-		// Convert HJSON to JSON (sanitized)
-		String sanitizedJson = jsonValue.toString();
-
-		return new JSONObject(sanitizedJson);
+	@SneakyThrows
+	public static JSONArray sanitizeJsonArray(String jsonInput) {
+		JsonValue jsonValue = JsonValue.readHjson(jsonInput).asArray();
+		return new JSONArray(jsonValue.toString());
 	}
 
 	public static boolean isDebug() {

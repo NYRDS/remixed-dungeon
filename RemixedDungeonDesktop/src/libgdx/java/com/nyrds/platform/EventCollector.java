@@ -2,6 +2,7 @@ package com.nyrds.platform;
 
 import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.util.PUtil;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import java.io.ByteArrayOutputStream;
@@ -52,7 +53,6 @@ public class EventCollector {
     }
 
     static public void logEvent(String category, Map<String, String> eventData) {
-
     }
 
     static public void logEvent(String category, String event, String label) {
@@ -92,7 +92,12 @@ public class EventCollector {
     }
 
     static public void logException(Throwable e, String desc) {
-        logException(e, 0);
+        PUtil.slog("exception", desc);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        PrintStream ps = new PrintStream(baos);
+        e.printStackTrace(ps);
+        ps.close();
+        GLog.toFile(baos.toString());
     }
 
     public static void setSessionData(String key, boolean value) {

@@ -5,7 +5,6 @@ import static com.nyrds.pixeldungeon.ml.BuildConfig.SAVES_PATH;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.game.Game;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
@@ -144,20 +143,19 @@ public class SaveUtils {
 	}
 
 	public static void deleteLevels(HeroClass cl) {
-		String[] files = Gdx.files.local(SAVES_PATH).file().list();
+		FileHandle[] files = Gdx.files.local(SAVES_PATH).list();
 
-		for (String file : files) {
-			if (file.endsWith(".dat") && hasClassTag(cl, file)) {
-				if(!Game.deleteFile(file)){
-					GLog.toFile("Failed to delete file: %s !", file);
-				}
+		for (FileHandle file : files) {
+			String path = file.path();
+			if (path.endsWith(".dat") && hasClassTag(cl, path)) {
+				file.delete();
 			}
 		}
 	}
 
 	public static void deleteGameFile(HeroClass cl) {
 		String gameFile = gameFile(cl);
-		Game.deleteFile(gameFile);
+		Gdx.files.local(SAVES_PATH).child(gameFile).delete();
 	}
 
 	public static String gameFile(HeroClass cl) {

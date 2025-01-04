@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.windows.WndSettings;
 import org.apache.commons.io.input.BOMInputStream;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -91,43 +92,47 @@ public class StringsManager {
         String line = Utils.EMPTY_STRING;
 
         while ((line = br.readLine()) != null) {
-            //PUtil.slog("strings","line"+line);
-            JSONArray entry = new JSONArray(line);
+            try {
+                JSONArray entry = new JSONArray(line);
 
-            String keyString = entry.getString(0);
-            Integer key = keyToInt.get(keyString);
+                String keyString = entry.getString(0);
+                Integer key = keyToInt.get(keyString);
 
-            if (entry.length() == 2) {
-                String value = entry.getString(1);
+                if (entry.length() == 2) {
+                    String value = entry.getString(1);
 
-                if (key != null) {
-                    stringMap.put(key, value);
-                }
+                    if (key != null) {
+                        stringMap.put(key, value);
+                    }
 
-                sStringMap.put(keyString, value);
+                    sStringMap.put(keyString, value);
 
-                for (char c : value.toCharArray()) {
-                    allChars.add(c);
-                }
-            }
-
-            if (entry.length() > 2) {
-                String[] values = new String[entry.length() - 1];
-                for (int i = 1; i < entry.length(); i++) {
-                    values[i - 1] = entry.getString(i);
-                }
-
-                if (key != null) {
-                    stringsMap.put(key, values);
-                }
-
-                sStringsMap.put(keyString, values);
-
-                for (String s : values) {
-                    for (char c : s.toCharArray()) {
+                    for (char c : value.toCharArray()) {
                         allChars.add(c);
                     }
                 }
+
+                if (entry.length() > 2) {
+                    String[] values = new String[entry.length() - 1];
+                    for (int i = 1; i < entry.length(); i++) {
+                        values[i - 1] = entry.getString(i);
+                    }
+
+                    if (key != null) {
+                        stringsMap.put(key, values);
+                    }
+
+                    sStringsMap.put(keyString, values);
+
+                    for (String s : values) {
+                        for (char c : s.toCharArray()) {
+                            allChars.add(c);
+                        }
+                    }
+                }
+            } catch (JSONException e) {
+
+                PUtil.slog("linw", "bad json("+ e.getMessage() + ") in:" + line);
             }
         }
         br.close();
