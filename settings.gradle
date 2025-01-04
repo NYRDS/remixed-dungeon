@@ -14,4 +14,3 @@ dependencyResolutionManagement {
     }
 }
 include ':RemixedDungeon'
-include ':RemixedDungeonDesktop'
