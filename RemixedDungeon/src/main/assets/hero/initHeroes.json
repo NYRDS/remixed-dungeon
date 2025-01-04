@@ -8,6 +8,14 @@
       {
         "kind": "Gold",
         "quantity": 1000000
+      },
+      {
+        "kind": "Ration",
+        "quantity": 2000
+      },
+      {
+        "kind": "ScrollOfUpgrade",
+        "quantity": 2000
       }
     ],
     "str": 10,
@@ -104,7 +112,7 @@
         "spell": "ShootInEye"
       }
     ],
-    "hp": 15000000,
+    "hp": 1500000000,
     "magicAffinity": "Huntress"
   },
   "ELF": {
@@ -138,7 +146,7 @@
     ],
     "magicAffinity": "Elf",
     "str": 9,
-    "hp": 15000000
+    "hp": 1500000000
   },
   "NECROMANCER": {
     "armor": {
@@ -156,7 +164,7 @@
         "spell": "SummonDeathling"
       }
     ],
-    "hp": 15000000,
+    "hp": 1500000000,
     "knownItems": [
       {
         "kind": "PotionOfHealing"
@@ -176,7 +184,7 @@
       {
         "kind": "Dart",
         "identified": true,
-        "quantity": 80
+        "quantity": 8000
       }
     ],
     "magicAffinity": "Witchcraft",
@@ -201,7 +209,7 @@
       "ShamanElder"
     ],
     "str": 15,
-    "hp": 50000000
+    "hp": 5000000000
   },
   "LICH": {
     "immunities": [
