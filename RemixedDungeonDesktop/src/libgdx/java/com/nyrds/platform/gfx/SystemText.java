@@ -71,7 +71,7 @@ public class SystemText extends Text {
     }
 
     public static void updateFontScale() {
-        float scale = 0.5f + 0.01f * GamePreferences.fontScale();
+        float scale = 0.5f + 0.01f * (GamePreferences.fontScale() + 9);
 
         scale *= 1.2f;
 
@@ -95,14 +95,13 @@ public class SystemText extends Text {
         final FreeTypeFontParameter fontParameters;
         fontParameters = new FreeTypeFontParameter();
         fontParameters.characters = FreeTypeFontGenerator.DEFAULT_CHARS + StringsManager.getAllCharsAsString();
-        //PUtil.slog("font", "characters " + fontParameters.characters);
         fontParameters.size = (int) (baseLine * oversample * fontScale);
         fontParameters.borderColor = Color.BLACK;
         fontParameters.borderWidth = oversample * fontScale;
         fontParameters.flip = true;
-        fontParameters.genMipMaps = true;
+        fontParameters.genMipMaps = false;
         fontParameters.magFilter = Texture.TextureFilter.Linear;
-        fontParameters.minFilter = Texture.TextureFilter.MipMapLinearLinear;
+        fontParameters.minFilter = Texture.TextureFilter.Linear;
         fontParameters.spaceX = -2;
         fontParameters.spaceY = 0;
         return fontParameters;
@@ -159,17 +158,6 @@ public class SystemText extends Text {
                 lines.add(currentLine);
             }
         }
-    }
-
-    @Override
-    public void destroy() {
-        super.destroy();
-        // No need to dispose font here as it's managed by the cache
-    }
-
-    @Override
-    public void kill() {
-        super.kill();
     }
 
     @Override
