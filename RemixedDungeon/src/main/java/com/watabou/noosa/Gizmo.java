@@ -18,6 +18,7 @@
 package com.watabou.noosa;
 
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.scenes.PixelScene;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -78,7 +79,7 @@ public class Gizmo {
 		} else if (parent != null) {
 			return parent.camera();
 		} else {
-			return null;
+			return PixelScene.uiCamera;
 		}
 	}
 	
