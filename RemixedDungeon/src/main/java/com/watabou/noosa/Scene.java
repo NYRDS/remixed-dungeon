@@ -48,9 +48,14 @@ public class Scene extends Group {
 				case Keys.MENU:
 					onMenuPressed();
 					break;
+				default:
+					onKeyPressed(key.code);
 				}
 			}
 		});
+	}
+
+	protected void onKeyPressed(int code) {
 	}
 
 	@LuaInterface

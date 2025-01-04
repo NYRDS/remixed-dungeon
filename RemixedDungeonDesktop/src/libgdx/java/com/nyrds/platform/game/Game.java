@@ -1,5 +1,7 @@
 package com.nyrds.platform.game;
 
+import android.view.KeyEvent;
+
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -169,12 +171,14 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public boolean keyDown(int keycode) {
+        GameLoop.instance().keysEvents.add(new KeyEvent(keycode, KeyEvent.ACTION_DOWN));
         return false;
     }
 
     @Override
     public boolean keyUp(int keycode) {
-        return false;
+        GameLoop.instance().keysEvents.add(new KeyEvent(keycode, KeyEvent.ACTION_UP));
+        return true;
     }
 
     @Override

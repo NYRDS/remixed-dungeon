@@ -1,6 +1,8 @@
 
 package com.watabou.pixeldungeon.scenes;
 
+import android.view.KeyEvent;
+
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.effects.EffectsFactory;
@@ -614,6 +616,38 @@ public class GameScene extends PixelScene {
         if (Dungeon.hero.isReady()) {
             selectItem(Dungeon.hero, null, Mode.ALL, null);
         }
+    }
+
+    @Override
+    protected void onKeyPressed(int keyCode) {
+       if(!isSceneReady()) {
+           return;
+       }
+
+        Hero hero = Dungeon.hero;
+        Level level = Dungeon.level;
+
+        int pos = hero.getPos();
+        int x = level.cellX(pos);
+        int y = level.cellY(pos);
+
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_DPAD_UP:
+                y--;
+            break;
+            case KeyEvent.KEYCODE_DPAD_DOWN:
+                y++;
+            break;
+            case KeyEvent.KEYCODE_DPAD_LEFT:
+                x--;
+            break;
+            case KeyEvent.KEYCODE_DPAD_RIGHT:
+                x++;
+            break;
+            default:
+                return;
+        }
+        handleCell(level.cell(x,y));
     }
 
     public void brightness(boolean value) {
