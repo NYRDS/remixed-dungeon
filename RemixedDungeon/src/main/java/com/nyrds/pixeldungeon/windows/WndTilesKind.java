@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
@@ -66,12 +67,12 @@ public class WndTilesKind extends Window {
 
 	@LuaInterface
 	public boolean shownBefore() {
-		return Preferences.INSTANCE.getBoolean(Preferences.KEY_TILES_QUESTION_ASKED, false);
+		return Preferences.INSTANCE.getBoolean(CommonPrefs.KEY_TILES_QUESTION_ASKED, false);
 	}
 
 	private void setTilesMode(boolean newTiles) {
-		Preferences.INSTANCE.put(Preferences.KEY_TILES_QUESTION_ASKED, true);
-		Preferences.INSTANCE.put(Preferences.KEY_USE_ISOMETRIC_TILES, newTiles);
+		Preferences.INSTANCE.put(CommonPrefs.KEY_TILES_QUESTION_ASKED, true);
+		Preferences.INSTANCE.put(CommonPrefs.KEY_USE_ISOMETRIC_TILES, newTiles);
 		Dungeon.setIsometricMode(newTiles);
 		hide();
 	}

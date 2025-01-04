@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -170,7 +171,7 @@ public class Assets {
     static {
         Bundle premiumSettings;
         try {
-            premiumSettings = new Bundle(Preferences.INSTANCE.getString(Preferences.KEY_PREMIUM_SETTINGS, Utils.EMPTY_STRING));
+            premiumSettings = new Bundle(Preferences.INSTANCE.getString(CommonPrefs.KEY_PREMIUM_SETTINGS, Utils.EMPTY_STRING));
             chromeType = premiumSettings.getInt(KEY_CHROME);
             statusType = premiumSettings.getInt(KEY_STATUS);
             toolbarType = premiumSettings.getInt(KEY_TOOLBAR);
@@ -249,7 +250,7 @@ public class Assets {
         premiumSettings.put(KEY_TOOLBAR, toolbarType);
         premiumSettings.put(KEY_BANNERS, bannersType);
 
-        Preferences.INSTANCE.put(Preferences.KEY_PREMIUM_SETTINGS, premiumSettings.serialize());
+        Preferences.INSTANCE.put(CommonPrefs.KEY_PREMIUM_SETTINGS, premiumSettings.serialize());
     }
 
     public static String getTitle() {

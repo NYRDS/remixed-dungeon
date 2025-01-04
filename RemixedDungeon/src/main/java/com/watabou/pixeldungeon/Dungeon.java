@@ -27,6 +27,7 @@ import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.storage.SaveUtils;
@@ -313,7 +314,7 @@ public class Dungeon {
         }
         
         if (isometricModeAllowed) {
-            setIsometricMode(Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false));
+            setIsometricMode(Preferences.INSTANCE.getBoolean(CommonPrefs.KEY_USE_ISOMETRIC_TILES, false));
         } else {
             setIsometricMode(false);
         }

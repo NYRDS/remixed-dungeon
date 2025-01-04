@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.scenes;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
@@ -89,7 +90,7 @@ public class WelcomeScene extends PixelScene {
 				GamePreferences.version(GameLoop.versionCode);
 				GamePreferences.versionString(GameLoop.version);
 
-				if (Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS, 1) == 0) {
+				if (Preferences.INSTANCE.getInt(CommonPrefs.KEY_COLLECT_STATS, 1) == 0) {
 					GameLoop.switchScene(AllowStatisticsCollectionScene.class);
 				} else {
 					GameLoop.switchScene(TitleScene.class);

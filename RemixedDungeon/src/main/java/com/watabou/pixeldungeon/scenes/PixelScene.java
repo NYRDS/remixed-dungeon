@@ -7,10 +7,16 @@ import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.gl.Gl;
 import com.nyrds.platform.input.Touchscreen;
+import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
-import com.watabou.noosa.*;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.ColorBlock;
+import com.watabou.noosa.Font;
+import com.watabou.noosa.Scene;
+import com.watabou.noosa.Text;
+import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
@@ -64,7 +70,7 @@ public class PixelScene extends Scene {
 
 		Camera.reset(new PixelCamera(defaultZoom));
 
-		float uiZoom = (float) Preferences.INSTANCE.getDouble(Preferences.KEY_UI_ZOOM, defaultZoom);
+		float uiZoom = (float) Preferences.INSTANCE.getDouble(CommonPrefs.KEY_UI_ZOOM, defaultZoom);
 		uiCamera = Camera.createFullscreen(uiZoom);
 		Camera.add(uiCamera);
 	}

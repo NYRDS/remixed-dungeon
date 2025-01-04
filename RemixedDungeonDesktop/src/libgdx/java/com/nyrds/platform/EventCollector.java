@@ -1,5 +1,6 @@
 package com.nyrds.platform;
 
+import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -12,7 +13,7 @@ import java.util.Map;
 public class EventCollector {
 
     private static boolean analyticsUsable() {
-        return Preferences.INSTANCE.getInt(Preferences.KEY_COLLECT_STATS, 1) > 0;
+        return Preferences.INSTANCE.getInt(CommonPrefs.KEY_COLLECT_STATS, 1) > 0;
     }
 
     static public void init() {

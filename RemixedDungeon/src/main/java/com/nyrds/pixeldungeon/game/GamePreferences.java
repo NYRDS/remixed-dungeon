@@ -2,14 +2,15 @@ package com.nyrds.pixeldungeon.game;
 
 import android.annotation.SuppressLint;
 
-import com.nyrds.platform.support.Ads;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.gfx.SystemText;
+import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.support.Ads;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Assets;
@@ -23,119 +24,119 @@ import java.util.Locale;
 
 public class GamePreferences {
     public static void zoom(double value) {
-        Preferences.INSTANCE.put(Preferences.KEY_ZOOM, value);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_ZOOM, value);
     }
 
     public static double zoom() {
-        return Preferences.INSTANCE.getDouble(Preferences.KEY_ZOOM, 0);
+        return Preferences.INSTANCE.getDouble(CommonPrefs.KEY_ZOOM, 0);
     }
 
     public static void music(boolean value) {
         MusicManager.INSTANCE.enable(value);
-        Preferences.INSTANCE.put(Preferences.KEY_MUSIC, value);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_MUSIC, value);
     }
 
     public static boolean music() {
-        return Preferences.INSTANCE.getBoolean(Preferences.KEY_MUSIC, true);
+        return Preferences.INSTANCE.getBoolean(CommonPrefs.KEY_MUSIC, true);
     }
 
     public static void soundFx(boolean value) {
         Sample.INSTANCE.enable(value);
-        Preferences.INSTANCE.put(Preferences.KEY_SOUND_FX, value);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_SOUND_FX, value);
     }
 
     public static boolean soundFx() {
-        return Preferences.INSTANCE.getBoolean(Preferences.KEY_SOUND_FX, true);
+        return Preferences.INSTANCE.getBoolean(CommonPrefs.KEY_SOUND_FX, true);
     }
 
     public static void brightness(boolean value) {
-        Preferences.INSTANCE.put(Preferences.KEY_BRIGHTNESS, value);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_BRIGHTNESS, value);
         if (GameLoop.scene() instanceof GameScene) {
             ((GameScene) GameLoop.scene()).brightness(value);
         }
     }
 
     public static boolean brightness() {
-        return Preferences.INSTANCE.getBoolean(Preferences.KEY_BRIGHTNESS,
+        return Preferences.INSTANCE.getBoolean(CommonPrefs.KEY_BRIGHTNESS,
                 false);
     }
 
     private static void donated(int value) {
-        Preferences.INSTANCE.put(Preferences.KEY_DONATED, value);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_DONATED, value);
     }
 
     public static int donated() {
-        return Preferences.INSTANCE.getInt(Preferences.KEY_DONATED, 0);
+        return Preferences.INSTANCE.getInt(CommonPrefs.KEY_DONATED, 0);
     }
 
     public static void lastClass(int value) {
-        Preferences.INSTANCE.put(Preferences.KEY_LAST_CLASS, value);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_LAST_CLASS, value);
     }
 
     public static int lastClass() {
-        return Preferences.INSTANCE.getInt(Preferences.KEY_LAST_CLASS, 0);
+        return Preferences.INSTANCE.getInt(CommonPrefs.KEY_LAST_CLASS, 0);
     }
 
     public static void intro(boolean value) {
-        Preferences.INSTANCE.put(Preferences.KEY_INTRO, value);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_INTRO, value);
     }
 
     public static boolean intro() {
-        return Preferences.INSTANCE.getBoolean(Preferences.KEY_INTRO, true);
+        return Preferences.INSTANCE.getBoolean(CommonPrefs.KEY_INTRO, true);
     }
 
     public static String uiLanguage() {
         String deviceLocale = Locale.getDefault().getLanguage();
         EventCollector.setSessionData("device_locale", deviceLocale);
-        return Preferences.INSTANCE.getString(Preferences.KEY_LOCALE,
+        return Preferences.INSTANCE.getString(CommonPrefs.KEY_LOCALE,
                 deviceLocale);
     }
 
     public static void uiLanguage(String lang) {
-        Preferences.INSTANCE.put(Preferences.KEY_LOCALE, lang);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_LOCALE, lang);
 
         setSelectedLanguage();
         GameLoop.resetScene();
     }
 
     public static void version(int value)  {
-        Preferences.INSTANCE.put( Preferences.KEY_VERSION, value );
+        Preferences.INSTANCE.put( CommonPrefs.KEY_VERSION, value );
     }
 
     public static int version() {
-        return Preferences.INSTANCE.getInt( Preferences.KEY_VERSION, 0 );
+        return Preferences.INSTANCE.getInt( CommonPrefs.KEY_VERSION, 0 );
     }
 
     public static void versionString(String value)  {
-        Preferences.INSTANCE.put( Preferences.KEY_VERSION_STRING, value );
+        Preferences.INSTANCE.put( CommonPrefs.KEY_VERSION_STRING, value );
     }
 
     public static String versionString() {
-        return Preferences.INSTANCE.getString( Preferences.KEY_VERSION_STRING, Utils.UNKNOWN);
+        return Preferences.INSTANCE.getString( CommonPrefs.KEY_VERSION_STRING, Utils.UNKNOWN);
     }
 
     public static void fontScale(int value) {
-        Preferences.INSTANCE.put(Preferences.KEY_FONT_SCALE, value);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_FONT_SCALE, value);
         SystemText.updateFontScale();
     }
 
     public static int fontScale() {
-        return Preferences.INSTANCE.getInt(Preferences.KEY_FONT_SCALE, 0);
+        return Preferences.INSTANCE.getInt(CommonPrefs.KEY_FONT_SCALE, 0);
     }
 
     public static boolean classicFont() {
-        boolean val = Preferences.INSTANCE.getBoolean(Preferences.KEY_CLASSIC_FONT, false);
+        boolean val = Preferences.INSTANCE.getBoolean(CommonPrefs.KEY_CLASSIC_FONT, false);
         ModdingMode.setClassicTextRenderingMode(val);
         return val;
     }
 
     public static void classicFont(boolean value) {
         ModdingMode.setClassicTextRenderingMode(value);
-        Preferences.INSTANCE.put(Preferences.KEY_CLASSIC_FONT, value);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_CLASSIC_FONT, value);
     }
 
     public static void activeMod(String mod) {
-        Preferences.INSTANCE.put(Preferences.KEY_ACTIVE_MOD, mod);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_ACTIVE_MOD, mod);
         ModdingMode.selectMod(activeMod());
 
         setSelectedLanguage();
@@ -146,21 +147,21 @@ public class GamePreferences {
     }
 
     public static String activeMod() {
-        return Preferences.INSTANCE.getString(Preferences.KEY_ACTIVE_MOD, ModdingMode.REMIXED);
+        return Preferences.INSTANCE.getString(CommonPrefs.KEY_ACTIVE_MOD, ModdingMode.REMIXED);
     }
 
     public static boolean realtime() {
-            return Preferences.INSTANCE.getBoolean(Preferences.KEY_REALTIME, false);
+            return Preferences.INSTANCE.getBoolean(CommonPrefs.KEY_REALTIME, false);
     }
 
     public static void realtime(boolean value) {
-        Preferences.INSTANCE.put(Preferences.KEY_REALTIME, value);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_REALTIME, value);
     }
 
     // *** IMMERSIVE MODE ****
     @SuppressLint("NewApi")
     public static void immerse(boolean value) {
-        Preferences.INSTANCE.put(Preferences.KEY_IMMERSIVE, value);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_IMMERSIVE, value);
 
         GameLoop.runOnMainThread(() -> {
             RemixedDungeon.updateImmersiveMode();
@@ -170,7 +171,7 @@ public class GamePreferences {
 
     public static boolean immersed() {
         return Preferences.INSTANCE
-                .getBoolean(Preferences.KEY_IMMERSIVE, true);
+                .getBoolean(CommonPrefs.KEY_IMMERSIVE, true);
     }
 
     /*
@@ -202,11 +203,11 @@ public class GamePreferences {
 
     //--- Move timeouts
     public static int moveTimeout() {
-        return Preferences.INSTANCE.getInt(Preferences.KEY_MOVE_TIMEOUT, Integer.MAX_VALUE);
+        return Preferences.INSTANCE.getInt(CommonPrefs.KEY_MOVE_TIMEOUT, Integer.MAX_VALUE);
     }
 
     public static void moveTimeout(int value) {
-        Preferences.INSTANCE.put(Preferences.KEY_MOVE_TIMEOUT,value);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_MOVE_TIMEOUT,value);
     }
 
     public static int limitTimeoutIndex(int value) {
@@ -218,33 +219,33 @@ public class GamePreferences {
     }
 
     public static int quickSlots() {
-        return Preferences.INSTANCE.getInt(Preferences.KEY_QUICKSLOTS, -1);
+        return Preferences.INSTANCE.getInt(CommonPrefs.KEY_QUICKSLOTS, -1);
 }
 
     public static void quickSlots(int slots) {
-        Preferences.INSTANCE.put(Preferences.KEY_QUICKSLOTS, slots);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_QUICKSLOTS, slots);
         if (GameLoop.scene() instanceof GameScene) {
             ((GameScene) GameLoop.scene()).updateToolbar(false);
         }
     }
 
     public static String toolStyle() {
-        return Preferences.INSTANCE.getString(Preferences.KEY_TOOL_STYLE, Tool.Size.Std.name());
+        return Preferences.INSTANCE.getString(CommonPrefs.KEY_TOOL_STYLE, Tool.Size.Std.name());
     }
 
     public static void toolStyle(String style) {
-        Preferences.INSTANCE.put(Preferences.KEY_TOOL_STYLE, style);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_TOOL_STYLE, style);
         if (GameLoop.scene() instanceof GameScene) {
             ((GameScene) GameLoop.scene()).updateToolbar(true);
         }
     }
 
     public static Boolean handedness() {
-        return Preferences.INSTANCE.getBoolean(Preferences.KEY_HANDEDNESS, false);
+        return Preferences.INSTANCE.getBoolean(CommonPrefs.KEY_HANDEDNESS, false);
     }
 
     public static void handedness(Boolean left) {
-        Preferences.INSTANCE.put(Preferences.KEY_HANDEDNESS, left);
+        Preferences.INSTANCE.put(CommonPrefs.KEY_HANDEDNESS, left);
         if (GameLoop.scene() instanceof GameScene) {
             ((GameScene) GameLoop.scene()).updateToolbar(false);
         }

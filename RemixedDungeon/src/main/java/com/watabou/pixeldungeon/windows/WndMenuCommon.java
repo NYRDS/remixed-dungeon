@@ -10,6 +10,7 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.Slider;
 import com.watabou.pixeldungeon.ui.Window;
 
 public abstract class WndMenuCommon extends Window {
@@ -53,6 +54,16 @@ public abstract class WndMenuCommon extends Window {
                 Sample.INSTANCE.play(Assets.SND_CLICK);
             }
         });
+
+        Slider sfx = new Slider(R.string.WndSettings_Sound, "silent", "loud", 0, 10) {
+            @Override
+            protected void onChange() {
+
+            }
+        };
+        sfx.setSize(WIDTH,BUTTON_HEIGHT);
+        menuItems.add(sfx);
+
     }
 
 

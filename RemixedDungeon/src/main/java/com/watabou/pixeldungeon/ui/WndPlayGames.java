@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
@@ -36,7 +37,7 @@ public class WndPlayGames extends Window {
         y += listTitle.height() + GAP;
 
         CheckBox usePlayGames = new CheckBox(StringsManager.getVar(R.string.WndPlayGames_Use),
-                Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)
+                Preferences.INSTANCE.getBoolean(CommonPrefs.KEY_USE_PLAY_GAMES, false)
                 && Game.instance().playGames.isConnected()
                 )
         {

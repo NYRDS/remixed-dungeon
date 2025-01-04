@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Camera;
@@ -65,7 +66,7 @@ public class AllowStatisticsCollectionScene extends PixelScene {
         RedButton allow = new RedButton(R.string.AllowStatisticsCollectionScene_Allow) {
 			@Override
 			protected void onClick() {
-				Preferences.INSTANCE.put(Preferences.KEY_COLLECT_STATS, 100);
+				Preferences.INSTANCE.put(CommonPrefs.KEY_COLLECT_STATS, 100);
 				GameLoop.switchScene(TitleScene.class);
 			}
 		};
@@ -73,7 +74,7 @@ public class AllowStatisticsCollectionScene extends PixelScene {
         RedButton deny = new RedButton(R.string.AllowStatisticsCollectionScene_Deny) {
 			@Override
 			protected void onClick() {
-				Preferences.INSTANCE.put(Preferences.KEY_COLLECT_STATS, -100);
+				Preferences.INSTANCE.put(CommonPrefs.KEY_COLLECT_STATS, -100);
 				GameLoop.switchScene(TitleScene.class);
 			}
 		};

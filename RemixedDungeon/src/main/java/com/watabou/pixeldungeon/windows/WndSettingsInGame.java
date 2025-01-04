@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndInGameUiSettings;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
@@ -30,11 +31,11 @@ public class WndSettingsInGame extends WndMenuCommon {
 
         menuItems.add(createZoomButtons());
 
-        var isometricModeCheckBox = new MenuCheckBox(R.string.WndSettingsInGame_IsometricTiles, Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_ISOMETRIC_TILES, false)) {
+        var isometricModeCheckBox = new MenuCheckBox(R.string.WndSettingsInGame_IsometricTiles, Preferences.INSTANCE.getBoolean(CommonPrefs.KEY_USE_ISOMETRIC_TILES, false)) {
             @Override
             protected void onClick() {
                 super.onClick();
-                Preferences.INSTANCE.put(Preferences.KEY_USE_ISOMETRIC_TILES, checked());
+                Preferences.INSTANCE.put(CommonPrefs.KEY_USE_ISOMETRIC_TILES, checked());
                 Dungeon.setIsometricMode(checked());
                 GameLoop.pushUiTask(GameLoop::resetScene);
             }

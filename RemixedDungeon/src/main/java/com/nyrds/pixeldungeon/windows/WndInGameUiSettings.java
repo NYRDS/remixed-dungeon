@@ -4,6 +4,7 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -83,7 +84,7 @@ public class WndInGameUiSettings extends WndMenuCommon {
 			private void uiZoom(float value, Selector s) {
 				PixelScene.uiCamera.updateFullscreenCameraZoom(value);
 				((GameScene) GameLoop.scene()).updateUiCamera();
-				Preferences.INSTANCE.put(Preferences.KEY_UI_ZOOM, value);
+				Preferences.INSTANCE.put(CommonPrefs.KEY_UI_ZOOM, value);
 
 				float zoom = PixelScene.uiCamera.zoom;
 				s.enable(zoom < PixelScene.maxZoom, zoom > PixelScene.minZoom, true);
