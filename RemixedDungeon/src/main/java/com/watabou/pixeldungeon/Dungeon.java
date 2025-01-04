@@ -739,7 +739,7 @@ public class Dungeon {
 
                 DungeonGenerator.loadingLevel(next);
 
-                String loadFrom = SaveUtils.depthFileForLoad(heroClass,
+                String loadFrom = SaveUtils.depthFileForSave(heroClass,
                         DungeonGenerator.getLevelDepth(levelId),
                         DungeonGenerator.getLevelKind(levelId),
                         levelId);

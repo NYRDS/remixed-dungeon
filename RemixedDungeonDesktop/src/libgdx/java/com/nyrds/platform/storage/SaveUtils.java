@@ -168,10 +168,6 @@ public class SaveUtils {
 		return "ModDataFor_"+ModdingMode.activeMod() + ".dat";
 	}
 
-	public static String depthFileForLoad(HeroClass cl, int depth, String levelKind, String levelId) {
-		return depthFileForSave(cl, depth, levelKind, levelId);
-	}
-
 	public static String depthFileForSave(HeroClass heroClass, int levelDepth, String levelKind, String levelId) {
 		return Utils.format(levelKind + "_" + levelId + "_" + _depthFile(heroClass), levelDepth);
 	}
