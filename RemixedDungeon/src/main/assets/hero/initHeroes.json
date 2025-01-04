@@ -7,11 +7,11 @@
     "items": [
       {
         "kind": "Gold",
-        "quantity": 100
+        "quantity": 1000000
       }
     ],
     "str": 10,
-    "hp": 20,
+    "hp": 20000000,
     "magicAffinity": "Common",
     "sp": 10,
     "maxSp": 10
@@ -19,7 +19,12 @@
   "non_expert": {
     "items": [
       {
-        "kind": "Ration"
+        "kind": "Ration",
+        "quantity": 2000
+      },
+      {
+        "kind": "ScrollOfUpgrade",
+        "quantity": 2000
       }
     ]
   },
@@ -70,7 +75,7 @@
     "ring1": {
       "kind": "RingOfShadows",
       "identified": true,
-      "level": 1
+      "level": 10
     },
     "knownItems": [
       {
@@ -99,14 +104,14 @@
         "spell": "ShootInEye"
       }
     ],
-    "hp": 15,
+    "hp": 15000000,
     "magicAffinity": "Huntress"
   },
   "ELF": {
     "weapon": {
       "kind": "ElvenBow",
       "identified": true,
-      "level": 1
+      "level": 10
     },
     "items": [
       {
@@ -133,7 +138,7 @@
     ],
     "magicAffinity": "Elf",
     "str": 9,
-    "hp": 15
+    "hp": 15000000
   },
   "NECROMANCER": {
     "armor": {
@@ -151,7 +156,7 @@
         "spell": "SummonDeathling"
       }
     ],
-    "hp": 15,
+    "hp": 15000000,
     "knownItems": [
       {
         "kind": "PotionOfHealing"
@@ -171,7 +176,7 @@
       {
         "kind": "Dart",
         "identified": true,
-        "quantity": 8
+        "quantity": 80
       }
     ],
     "magicAffinity": "Witchcraft",
@@ -196,7 +201,7 @@
       "ShamanElder"
     ],
     "str": 15,
-    "hp": 5
+    "hp": 50000000
   },
   "LICH": {
     "immunities": [
