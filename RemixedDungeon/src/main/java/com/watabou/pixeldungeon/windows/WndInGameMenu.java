@@ -7,8 +7,6 @@ import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.windows.WndGameplayCustomization;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
-import com.nyrds.util.Util;
-import com.watabou.noosa.Gizmo;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -16,7 +14,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.RankingsScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.ui.Icons;
-import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndInGameMenu extends WndMenuCommon {
 
@@ -28,10 +25,6 @@ public class WndInGameMenu extends WndMenuCommon {
 		if (hero.invalid()) {
 			GameLoop.switchScene(TitleScene.class);
 			return;
-		}
-
-		if(Util.isDebug()) {
-			menuItems.add(createIsometricShift());
 		}
 
 		menuItems.add( new MenuButton(R.string.WndGame_Settings) {
@@ -113,29 +106,5 @@ public class WndInGameMenu extends WndMenuCommon {
 				hide();
 			}
 		} );
-	}
-
-	private Selector createIsometricShift() {
-		return new Selector(WIDTH, BUTTON_HEIGHT, "Shift", new Selector.PlusMinusDefault() {
-
-			@Override
-			public void onPlus(Selector s) {
-				Gizmo.isometricModeShift += 1;
-				s.setText(Utils.format("Shift: %d", Gizmo.isometricModeShift));
-			}
-
-			@Override
-			public void onMinus(Selector s) {
-				Gizmo.isometricModeShift -= 1;
-				s.setText(Utils.format("Shift: %d", Gizmo.isometricModeShift));
-			}
-
-			@Override
-			public void onDefault(Selector s) {
-				Gizmo.isometricModeShift = 0;
-				s.setText(Utils.format("Shift: %d", Gizmo.isometricModeShift));
-			}
-
-		});
 	}
 }
