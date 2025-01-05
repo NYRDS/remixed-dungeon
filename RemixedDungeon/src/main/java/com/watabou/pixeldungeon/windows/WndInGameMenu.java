@@ -18,7 +18,7 @@ import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.utils.Utils;
 
-public class WndGame extends WndMenuCommon {
+public class WndInGameMenu extends WndMenuCommon {
 
 	@Override
 	protected void createItems() {

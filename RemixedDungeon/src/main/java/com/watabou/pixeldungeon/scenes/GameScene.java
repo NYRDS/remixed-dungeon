@@ -86,7 +86,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndBag.Mode;
-import com.watabou.pixeldungeon.windows.WndGame;
+import com.watabou.pixeldungeon.windows.WndInGameMenu;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 import com.watabou.utils.Random;
 
@@ -606,9 +606,7 @@ public class GameScene extends PixelScene {
 
     @Override
     protected void onBackPressed() {
-        if (!cancel()) {
-            add(new WndGame());
-        }
+        add(new WndInGameMenu());
     }
 
     @Override

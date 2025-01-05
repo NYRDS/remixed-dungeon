@@ -26,8 +26,8 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndChar;
-import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.pixeldungeon.windows.WndHats;
+import com.watabou.pixeldungeon.windows.WndInGameMenu;
 
 public class StatusPane extends Component {
 
@@ -152,7 +152,7 @@ public class StatusPane extends Component {
         buffs = new BuffIndicator(hero);
         add(buffs);
 
-        btnMenu = new MenuButton(new Image(Assets.getStatus(), 114, 3, 12, 11), WndGame.class);
+        btnMenu = new MenuButton(new Image(Assets.getStatus(), 114, 3, 12, 11), WndInGameMenu.class);
         add(btnMenu);
 
         btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
