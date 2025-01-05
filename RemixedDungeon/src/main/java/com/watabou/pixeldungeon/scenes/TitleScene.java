@@ -51,7 +51,6 @@ public class TitleScene extends PixelScene {
         super.create();
 
         MusicManager.INSTANCE.play(Assets.THEME, true);
-        MusicManager.INSTANCE.volume(1f);
 
         uiCamera.setVisible(false);
 

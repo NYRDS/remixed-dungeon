@@ -167,7 +167,6 @@ public class GameScene extends PixelScene {
             return;
         }
         MusicManager.INSTANCE.play(Dungeon.level.music(), true);
-        MusicManager.INSTANCE.volume(1f);
     }
 
     @Override

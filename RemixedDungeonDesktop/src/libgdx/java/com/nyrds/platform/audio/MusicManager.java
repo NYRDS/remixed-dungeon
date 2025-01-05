@@ -49,6 +49,7 @@ public enum MusicManager {
 		try {
 			player = Gdx.audio.newMusic(FileSystem.getInternalStorageFileHandle(assetFilename));
 			player.setLooping(looping);
+			volume(1);
 			player.play();
 			//PUtil.slog("music", "playing " + assetFilename);
 		} catch (Exception e) {

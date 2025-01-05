@@ -46,7 +46,6 @@ public class SurfaceScene extends PixelScene {
 		super.create();
 		
 		MusicManager.INSTANCE.play( Assets.HAPPY, true );
-		MusicManager.INSTANCE.volume( 1f );
 		
 		uiCamera.setVisible(false);
 		

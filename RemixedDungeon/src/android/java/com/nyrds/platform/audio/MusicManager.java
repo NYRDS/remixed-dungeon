@@ -94,6 +94,7 @@ public enum MusicManager implements MediaPlayer.OnPreparedListener,
 			player.setOnPreparedListener(this);
 			player.setOnErrorListener(this);
 			player.setLooping(looping);
+			volume(1);
 			player.prepareAsync();
 		}
 
