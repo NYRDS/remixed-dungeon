@@ -285,7 +285,8 @@ public class GamePreferences {
         }
 
         StringsManager.useLocale(locale, lang);
-        SystemText.invalidate();
+        GameLoop.pushUiTask(SystemText::invalidate);
+
     }
 
     public static void setSelectedLanguage() {
