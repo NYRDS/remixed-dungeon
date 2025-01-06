@@ -53,8 +53,8 @@ class StatsTab extends TabContent {
             pos = title.bottom() + GAP;
         }
 
-        statSlot(StringsManager.getVar(R.string.WndHero_Health), chr.hp() + "/" + chr.ht());
-        statSlot(StringsManager.getVar(R.string.Mana_Title), chr.getSkillPoints() + "/" + chr.getSkillPointsMax());
+        statSlot(R.string.WndHero_Health, chr.hp() + "/" + chr.ht());
+        statSlot(R.string.Mana_Title, chr.getSkillPoints() + "/" + chr.getSkillPointsMax());
 
         int dmgMin = Integer.MAX_VALUE, dmgMax = 0;
         int drMin = Integer.MAX_VALUE, drMax = 0;
@@ -90,43 +90,43 @@ class StatsTab extends TabContent {
         }
 
 
-        statSlot(StringsManager.getVar(R.string.Typical_Damage), Utils.format("%d - %d", dmgMin, dmgMax));
-        statSlot(StringsManager.getVar(R.string.Damage_Reduction), Utils.format("%d - %d", drMin, drMax));
-        statSlot(StringsManager.getVar(R.string.Movement_Speed), chrSpeed);
-        statSlot(StringsManager.getVar(R.string.Attack_Cooldown), chrAttackDelay);
-        statSlot(StringsManager.getVar(R.string.Actions_Speed), Utils.format("%3.2f%%" ,100/timeScale));
-        statSlot(StringsManager.getVar(R.string.Attack_Range), Utils.EMPTY_STRING + chr.getAttackRange());
-        statSlot(StringsManager.getVar(R.string.View_Distance), Utils.EMPTY_STRING + chr.getViewDistance());
+        statSlot(R.string.Typical_Damage, Utils.format("%d - %d", dmgMin, dmgMax));
+        statSlot(R.string.Damage_Reduction, Utils.format("%d - %d", drMin, drMax));
+        statSlot(R.string.Movement_Speed, chrSpeed);
+        statSlot(R.string.Attack_Cooldown, chrAttackDelay);
+        statSlot(R.string.Actions_Speed, Utils.format("%3.2f%%" ,100/timeScale));
+        statSlot(R.string.Attack_Range, Utils.EMPTY_STRING + chr.getAttackRange());
+        statSlot(R.string.View_Distance, Utils.EMPTY_STRING + chr.getViewDistance());
 
 
         if(chr instanceof Hero) {
             Hunger hunger = chr.hunger();
 
-            statSlot(StringsManager.getVar(R.string.WndHero_Satiety),
+            statSlot(R.string.WndHero_Satiety,
                     Utils.EMPTY_STRING + ((int) ((Hunger.STARVING - hunger.getHungerLevel()) / Hunger.STARVING * 100)) + "%");
 
-            statSlot(StringsManager.getVar(R.string.WndHero_Stealth), chr.stealth());
+            statSlot(R.string.WndHero_Stealth, chr.stealth());
 
             Hero hero = ((Hero) chr);
-            statSlot(StringsManager.getVar(R.string.WndHero_Awareness), Utils.format("%3.2f%%",(hero.getAwareness() * 100)));
+            statSlot(R.string.WndHero_Awareness, Utils.format("%3.2f%%",(hero.getAwareness() * 100)));
         }
 
-        statSlot(StringsManager.getVar(R.string.WndHero_AttackSkill), chr.attackSkill(CharsList.DUMMY));
-        statSlot(StringsManager.getVar(R.string.WndHero_DefenceSkill), chr.defenseSkill(CharsList.DUMMY));
+        statSlot(R.string.WndHero_AttackSkill, chr.attackSkill(CharsList.DUMMY));
+        statSlot(R.string.WndHero_DefenceSkill, chr.defenseSkill(CharsList.DUMMY));
 
 
-        statSlot(StringsManager.getVar(R.string.WndHero_Exp), chr.getExpForLevelUp() + "/" + chr.expToLevel());
+        statSlot(R.string.WndHero_Exp, chr.getExpForLevelUp() + "/" + chr.expToLevel());
 
         pos += GAP;
-        statSlot(StringsManager.getVar(R.string.WndHero_Str), chr.effectiveSTR());
-        statSlot(StringsManager.getVar(R.string.WndHero_SkillLevel), chr.skillLevel());
+        statSlot(R.string.WndHero_Str, chr.effectiveSTR());
+        statSlot(R.string.WndHero_SkillLevel, chr.skillLevel());
 
         pos += GAP;
     }
 
-    private void statSlot(String label, String value) {
+    private void statSlot(int label, String value) {
 
-        Text txt = PixelScene.createText(label, GuiProperties.regularFontSize());
+        Text txt = PixelScene.createText(StringsManager.getVar(label), GuiProperties.regularFontSize());
         txt.setY(pos);
         add(txt);
 
@@ -135,10 +135,10 @@ class StatsTab extends TabContent {
         txt.setY(pos);
         add(txt);
 
-        pos += GAP + txt.baseLine();
+        pos += txt.baseLine();
     }
 
-    private void statSlot(String label, int value) {
+    private void statSlot(int label, int value) {
         statSlot(label, Integer.toString(value));
     }
 
