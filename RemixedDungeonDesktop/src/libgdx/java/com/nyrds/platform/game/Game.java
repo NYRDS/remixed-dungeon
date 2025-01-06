@@ -4,6 +4,7 @@ import android.view.KeyEvent;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.files.FileHandle;
@@ -170,9 +171,28 @@ public class Game implements ApplicationListener, InputProcessor {
         MusicManager.INSTANCE.mute();
     }
 
+    public void toggleFullscreen() {
+        Graphics graphics = Gdx.graphics;
+
+        if (graphics.isFullscreen()) {
+            graphics.setWindowedMode(GameLoop.width, GameLoop.height);
+        } else {
+            GameLoop.width = graphics.getWidth();
+            GameLoop.height = graphics.getHeight();
+
+            Graphics.DisplayMode displayMode = graphics.getDisplayMode();
+            graphics.setFullscreenMode(displayMode);
+        }
+    }
+
     @Override
     public boolean keyDown(int keycode) {
         GameLoop.instance().keysEvents.add(new KeyEvent(keycode, KeyEvent.ACTION_DOWN));
+
+        if (keycode==Input.Keys.F11) {
+            toggleFullscreen();
+        }
+
         return false;
     }
 

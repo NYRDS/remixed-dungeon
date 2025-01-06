@@ -97,18 +97,6 @@ public class RemixedDungeon extends Game {
 	}
 
 	@Override
-	public void resize(int width, int height) {
-		GLog.debug("resize: %dx%d", width, height);
-		super.resize(width, height);
-	}
-
-	@Override
-	public void render() {
-		//GLog.debug("frame");
-		super.render();
-	}
-
-	@Override
 	public void pause() {
 		GLog.debug("pause");
 		super.pause();
