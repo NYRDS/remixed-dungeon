@@ -402,4 +402,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
     }
 
+    public static void updateFpsLimit() {
+
+    }
+
 }

@@ -10,6 +10,7 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.PixmapIO;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.app.RemixedDungeonApp;
@@ -257,5 +258,10 @@ public class Game implements ApplicationListener, InputProcessor {
         PixmapIO.writePNG(Gdx.files.local("screenshot" + timestamp + ".png"), pixmap, Deflater.DEFAULT_COMPRESSION, true);
 
         pixmap.dispose();
+    }
+
+    public static void updateFpsLimit() {
+        int[] limit = {30, 60, 120};
+        Gdx.graphics.setForegroundFPS(limit[GamePreferences.fps_limit()]);
     }
 }

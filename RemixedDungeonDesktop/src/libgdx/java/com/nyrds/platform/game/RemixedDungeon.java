@@ -45,10 +45,6 @@ public class RemixedDungeon extends Game {
 	public static void landscape(boolean value) {
 	}
 
-	public static boolean storedLandscape() {
-		return true;
-	}
-
 	public static boolean landscape() {
 		return true;
 	}
@@ -94,6 +90,8 @@ public class RemixedDungeon extends Game {
 		GamePreferences.classicFont(GamePreferences.classicFont());
 		ModdingMode.selectMod(GamePreferences.activeMod());
 		GamePreferences.uiLanguage(GamePreferences.uiLanguage());
+
+		updateFpsLimit();
 
 		super.create();
 	}

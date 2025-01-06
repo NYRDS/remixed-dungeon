@@ -29,4 +29,5 @@ public class CommonPrefs {
 
     public static final String KEY_MUSIC_VOLUME = "music_volume";
     public static final String KEY_SOUND_FX_VOLUME = "soundfx_volume";
+    public static final String KEY_FPS_LIMIT = "fps_limit";
 }

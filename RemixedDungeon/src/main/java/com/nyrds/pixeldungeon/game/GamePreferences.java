@@ -291,4 +291,12 @@ public class GamePreferences {
     public static void setSelectedLanguage() {
         useLocale(uiLanguage());
     }
+
+    public static void fps_limit(int value) {
+        Preferences.INSTANCE.put(CommonPrefs.KEY_FPS_LIMIT, value);
+    }
+
+    public static int fps_limit() {
+        return Preferences.INSTANCE.getInt(CommonPrefs.KEY_FPS_LIMIT, 0);
+    }
 }

@@ -218,15 +218,6 @@ public class GameLoop {
                             switchScene(sceneClass.newInstance());
                             return;
                         }
-
-                        while (!motionEvents.isEmpty()) {
-                            Touchscreen.processEvent(motionEvents.poll());
-                        }
-
-                        while (!keysEvents.isEmpty()) {
-                            Keys.processEvent(keysEvents.poll());
-                        }
-
                     } catch (LuaError e) {
                         throw ModdingMode.modException(e);
                     } catch (Exception e) {
@@ -256,6 +247,14 @@ public class GameLoop {
     @SneakyThrows
     public void update() {
         synchronized (stepLock) {
+            while (!motionEvents.isEmpty()) {
+                Touchscreen.processEvent(motionEvents.poll());
+            }
+
+            while (!keysEvents.isEmpty()) {
+                Keys.processEvent(keysEvents.poll());
+            }
+
             elapsed = timeScale * step * 0.001f;
             if (scene != null) {
                 scene.update();
