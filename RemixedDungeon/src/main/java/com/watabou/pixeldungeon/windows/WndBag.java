@@ -28,6 +28,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
+import lombok.Getter;
 
 
 public class WndBag extends WndTabbed {
@@ -36,19 +37,7 @@ public class WndBag extends WndTabbed {
 	private final Text txtTitle;
 	private Text txtSubTitle;
 
-	public static WndBag getInstance() {
-		return instance;
-	}
-
-	public Listener getListener() {
-		return listener;
-	}
-
-	public Mode getMode() {
-		return mode;
-	}
-
-	public enum Mode {
+    public enum Mode {
 		ALL,
 		UNIDENTIFED,
 		UPGRADEABLE,
@@ -76,8 +65,10 @@ public class WndBag extends WndTabbed {
 	private static final int TAB_WIDTH_P	= 18;
 	private static final int TAB_WIDTH_L	= 26;
 		
-	private final Listener listener;
-	private final WndBag.Mode mode;
+	@Getter
+    private final Listener listener;
+	@Getter
+    private final WndBag.Mode mode;
 	private final String title;
 
 	protected int count;
@@ -92,9 +83,10 @@ public class WndBag extends WndTabbed {
 	private static Mode lastMode;
 	private static Bag lastBag;
 
-	private static WndBag instance;
+	@Getter
+    private static WndBag instance;
 
-	private Belongings stuff;
+	private final Belongings stuff;
 
 	public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title) {
 		
@@ -239,6 +231,7 @@ public class WndBag extends WndTabbed {
 		}
 
 		for(var child:childsToRemove) {
+			child.destroy();
 			remove(child);
 		}
 	}
