@@ -26,6 +26,10 @@ public class SaveUtils {
 	private static final String AUTO_SAVE = "autoSave";
 	private static final String PREV_SAVE = "prevSave";
 
+	static FileHandle local(String filename) {
+		return Gdx.files.local(SAVES_PATH + File.separator + filename);
+	}
+
 	static private boolean hasClassTag(HeroClass cl, String fname) {
 		return fname.contains(cl.tag());
 	}
@@ -53,7 +57,7 @@ public class SaveUtils {
 	}
 	
 	public static boolean slotUsed(String slot, HeroClass cl) {
-		FileHandle[] slotFiles = Gdx.files.local(SAVES_PATH+slot).list();
+		FileHandle[] slotFiles = local(slot).list();
 		if (slotFiles == null) {
 			return false;
 		}
@@ -91,8 +95,7 @@ public class SaveUtils {
 	}
 	
 	private static void copyFromSaveSlot(String slot, HeroClass heroClass) {
-		slot = SAVES_PATH+slot;
-		FileHandle[] files = Gdx.files.local(slot).list();
+		FileHandle[] files = local(slot).list();
 
 		if(files == null) {
 			return;
@@ -101,16 +104,16 @@ public class SaveUtils {
 		for (FileHandle file : files) {
 			if (isRelatedTo(file.name(), heroClass)) {
 
-				String from = Gdx.files.local(slot + File.separator + file.name()).file().getAbsolutePath();
-				String to = Gdx.files.local(file.name()).file().getAbsolutePath();
+				String from = local(slot + File.separator + file.name()).file().getAbsolutePath();
+				String to = local(file.name()).file().getAbsolutePath();
 				FileSystem.copyFile(from, to);
 			}
 		}
 	}
 
 	public static void deleteSaveFromSlot(String slot, HeroClass cl) {
-		slot = SAVES_PATH + slot;
-		File slotDir = Gdx.files.local(slot).file().getAbsoluteFile();
+
+		File slotDir = local(slot).file().getAbsoluteFile();
 
 		File[] slotFiles = slotDir.listFiles();
 
@@ -129,13 +132,13 @@ public class SaveUtils {
 	public static void copySaveToSlot(String slot, HeroClass cl) {
 		deleteSaveFromSlot(slot, cl);
 
-		String[] files = Gdx.files.local(SAVES_PATH).file().list();
+		String[] files = local("").file().list();
 
 		for (String file : files) {
 			if (isRelatedTo(file, cl)) {
 				
-				String from = Gdx.files.local(SAVES_PATH+file).file().getAbsolutePath();
-				String to = Gdx.files.local(SAVES_PATH + slot + File.separator + file).file().getAbsolutePath();
+				String from = local(file).file().getAbsolutePath();
+				String to = local(slot + File.separator + file).file().getAbsolutePath();
 
 				FileSystem.copyFile(from,to);
 			}
@@ -143,7 +146,7 @@ public class SaveUtils {
 	}
 
 	public static void deleteLevels(HeroClass cl) {
-		FileHandle[] files = Gdx.files.local(SAVES_PATH).list();
+		FileHandle[] files = local("").list();
 
 		for (FileHandle file : files) {
 			String path = file.path();
@@ -155,7 +158,7 @@ public class SaveUtils {
 
 	public static void deleteGameFile(HeroClass cl) {
 		String gameFile = gameFile(cl);
-		Gdx.files.local(SAVES_PATH).child(gameFile).delete();
+		local("").child(gameFile).delete();
 	}
 
 	public static String gameFile(HeroClass cl) {
