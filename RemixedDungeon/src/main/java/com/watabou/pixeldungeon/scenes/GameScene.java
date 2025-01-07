@@ -641,6 +641,13 @@ public class GameScene extends PixelScene {
             case KeyEvent.KEYCODE_DPAD_RIGHT:
                 x++;
             break;
+
+            case KeyEvent.KEYCODE_I:
+                if (Dungeon.hero.isReady()) {
+                    selectItem(Dungeon.hero, null, Mode.ALL, null);
+                }
+                return;
+
             default:
                 return;
         }

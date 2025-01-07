@@ -24,7 +24,6 @@ import java.io.File;
 public class SaveUtils {
 
 	private static final String AUTO_SAVE = "autoSave";
-	private static final String PREV_SAVE = "prevSave";
 
 	static FileHandle local(String filename) {
 		return Gdx.files.local(SAVES_PATH + File.separator + filename);

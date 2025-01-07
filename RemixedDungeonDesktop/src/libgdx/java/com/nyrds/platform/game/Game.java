@@ -23,8 +23,10 @@ import com.nyrds.platform.input.PointerEvent;
 import com.nyrds.platform.support.Iap;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
+import com.watabou.noosa.Camera;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
+import com.watabou.pixeldungeon.scenes.GameScene;
 
 import java.io.InputStream;
 import java.util.zip.Deflater;
@@ -237,7 +239,11 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public boolean scrolled(float amountX, float amountY) {
-        return false;
+        if(GameLoop.scene() instanceof GameScene) {
+            GamePreferences.zoom(GamePreferences.zoom() + amountY / 20);
+            Camera.main.zoom((float) (GameScene.defaultZoom + GamePreferences.zoom()));
+        }
+        return true;
     }
 
 
