@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.items.common.MasteryItem;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -23,6 +24,7 @@ import org.jetbrains.annotations.NotNull;
 public class WndChooseWay extends Window {
 	
 	private static final int WIDTH		= 120;
+	private static final int L_WIDTH    = 160;
 	private static final int BTN_HEIGHT	= 18;
 
 	public WndChooseWay(@NotNull Char chr,final Item item, final HeroSubClass way){
@@ -49,10 +51,13 @@ public class WndChooseWay extends Window {
 	}
 
 	private void chooseWay(@NotNull Char chr, final Item item, final HeroSubClass way1, final HeroSubClass way2) {
+
+		int width = RemixedDungeon.landscape() ? L_WIDTH : WIDTH;
+
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite( item ) );
 		titlebar.label( item.name() );
-		titlebar.setRect( 0, 0, WIDTH, 0 );
+		titlebar.setRect( 0, 0, width, 0 );
 		add( titlebar );
 
 		Text normal = Highlighter.addHilightedText(titlebar.left(), titlebar.bottom() +  GAP, width,this,  getWayDesc(way1, way2) );
@@ -64,7 +69,7 @@ public class WndChooseWay extends Window {
 				MasteryItem.choose(chr, item, way1 );
 			}
 		};
-		btnWay1.setRect( 0, normal.getY() + normal.height() + GAP, (WIDTH - GAP) / 2, BTN_HEIGHT );
+		btnWay1.setRect( 0, normal.getY() + normal.height() + GAP, (width - GAP) / 2, BTN_HEIGHT );
 		add( btnWay1 );
 
 		if (way1 != HeroSubClass.LICH){
@@ -87,10 +92,10 @@ public class WndChooseWay extends Window {
 				hide();
 			}
 		};
-		btnCancel.setRect( 0, btnWay1.bottom() + GAP, WIDTH, BTN_HEIGHT );
+		btnCancel.setRect( 0, btnWay1.bottom() + GAP, width, BTN_HEIGHT );
 		add( btnCancel );
 		
-		resize( WIDTH, (int)btnCancel.bottom() );
+		resize( width, (int)btnCancel.bottom() );
 	}
 
 	private void btnBreakSpell(RedButton btnWay1){

@@ -298,7 +298,7 @@ public class CharUtils {
         Heap heap;
         if ((heap = level.getHeap(cell)) != null) {
             if (heap.type == Heap.Type.HEAP) {
-                if (heap.peek() instanceof Carcass) {
+                if (heap.peek() instanceof Carcass && actor.getPos() != heap.pos) {
                     return new MapItemAction(cell);
                 } else {
                     return new PickUp(cell);
