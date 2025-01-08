@@ -229,6 +229,7 @@ public class GameScene extends PixelScene {
 
         for (Heap heap : level.allHeaps()) { //so carcases cloud ne loaded
             addHeapSprite(heap);
+            heap.addActors();
         }
 
         add(mobs);
@@ -689,12 +690,12 @@ public class GameScene extends PixelScene {
     }
 
     private void addDiscardedSprite(@NotNull Heap heap) {
-        heap.sprite = (DiscardedItemSprite) heaps.recycle(DiscardedItemSprite.class);
-        heap.sprite.setIsometricShift(true);
-        heap.sprite.revive();
-        heap.sprite.link(heap);
-        heap.sprite.setIsometricShift(true);
-        heaps.add(heap.sprite);
+        ItemSprite sprite = heap.sprite = (DiscardedItemSprite) heaps.recycle(DiscardedItemSprite.class);
+        sprite.setIsometricShift(true);
+        sprite.revive();
+        sprite.link(heap);
+        sprite.setIsometricShift(true);
+        heaps.add(sprite);
     }
 
     private static void addBlobSprite(final Blob gas) {

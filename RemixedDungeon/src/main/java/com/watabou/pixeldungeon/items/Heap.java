@@ -15,6 +15,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -58,6 +59,12 @@ public class Heap implements Bundlable, NamedEntityKind  {
     @Override
     public String name() {
         return getEntityKind();
+    }
+
+    public void addActors() {
+        for (Item item : items) {
+            Actor.add(item);
+        }
     }
 
     public enum Type {
