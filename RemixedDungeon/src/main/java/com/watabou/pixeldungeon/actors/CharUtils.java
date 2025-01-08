@@ -290,6 +290,9 @@ public class CharUtils {
             if (topLevelObject.interactive()) {
                 return new InteractObject(topLevelObject);
             }
+            if(topLevelObject.nonPassable(actor)) {
+                return new Move(cell);
+            }
         }
 
         Heap heap;
