@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
@@ -21,7 +22,7 @@ class StatsTab extends TabContent {
 
     private float pos;
 
-    public StatsTab(final Char chr) {
+    public StatsTab(final Char chr, int width) {
         Text title = PixelScene.createText(
                 Utils.format(R.string.WndHero_StaTitle, chr.lvl(), chr.className()).toUpperCase(), GuiProperties.titleFontSize());
         title.hardlight(Window.TITLE_COLOR);
@@ -122,6 +123,7 @@ class StatsTab extends TabContent {
         statSlot(R.string.WndHero_SkillLevel, chr.skillLevel());
 
         pos += GAP;
+        setMaxWidth(width);
     }
 
     private void statSlot(int label, String value) {
@@ -131,7 +133,9 @@ class StatsTab extends TabContent {
         add(txt);
 
         txt = PixelScene.createText(value, GuiProperties.regularFontSize());
-        txt.setX(PixelScene.align(WndChar.WIDTH * 0.65f));
+
+        txt.setX(PixelScene.align(maxWidth - txt.width() - GAP));
+        PUtil.slog("text","txt:"+txt.width());
         txt.setY(pos);
         add(txt);
 

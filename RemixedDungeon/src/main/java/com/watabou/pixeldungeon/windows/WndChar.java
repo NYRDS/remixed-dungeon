@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
@@ -15,7 +16,8 @@ import lombok.val;
 
 public class WndChar extends WndTabbed {
     public static final int WIDTH = 100;
-    private static final int TAB_WIDTH = 33;
+    public static final int L_WIDTH = 140;
+
     private final Char target;
     private final Char selector;
 
@@ -30,13 +32,15 @@ public class WndChar extends WndTabbed {
             CharUtils.markTarget(target);
         }
 
-        var desc = new CharDescTab(chr, selector, WIDTH);
+        int width = RemixedDungeon.landscape() ? L_WIDTH : WIDTH;
+
+        var desc = new CharDescTab(chr, selector, width);
         add(desc);
 
-        var stats = new StatsTab(chr);
+        var stats = new StatsTab(chr, width);
         add(stats);
 
-        var buffs = new BuffsTab(chr);
+        var buffs = new BuffsTab(chr, width);
         add(buffs);
 
 
@@ -72,11 +76,10 @@ public class WndChar extends WndTabbed {
         }
 
         for (Tab tab : tabs) {
-            tab.setSize(TAB_WIDTH, tabHeight());
+            tab.setSize((float) width /3, tabHeight());
         }
 
-
-        resize(WIDTH, (int) Utils.max(desc.height() + GAP,stats.height() + GAP, buffs.height() + GAP));
+        resize(width, (int) Utils.max(desc.height() + GAP, stats.height() + GAP, buffs.height() + GAP));
 
         select(0);
     }

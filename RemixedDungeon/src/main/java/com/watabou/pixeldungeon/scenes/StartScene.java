@@ -478,7 +478,7 @@ public class StartScene extends PixelScene {
 
     private class LoadGameOptions extends WndOptions {
         public LoadGameOptions() {
-            super(StringsManager.getVar(R.string.StartScene_Load), "Continue your latest game or choose from a save slot", "Continue_your_latest_game", "Choose from a save slot");
+            super(StringsManager.getVar(R.string.StartScene_Load), StringsManager.getVar(R.string.StartScene_ContinueLatest), "Continue_your_latest_game", StringsManager.getVar(R.string.StartScene_ChooseFromSlot));
             var info = GamesInProgress.check(curShield.cl);
             IconButton newGameButton  = ((IconButton)buttonsVbox.getMember(0));
             if (info == null)  {

@@ -5,7 +5,6 @@ import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.Util;
 import com.watabou.gltextures.TextureCache;
-import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
@@ -15,17 +14,19 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.ImageButton;
+import com.watabou.pixeldungeon.windows.elements.TabContent;
 
 import lombok.val;
 
-class BuffsTab extends Group {
+class BuffsTab extends TabContent {
 
     private static final int GAP = 2;
 
     private float pos;
 
-    public BuffsTab(final Char chr) {
+    public BuffsTab(final Char chr, int width) {
         chr.forEachBuff(this::buffSlot);
+        this.width = width;
     }
 
     private void buffSlot(CharModifier buff) {
