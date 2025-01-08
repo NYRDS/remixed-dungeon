@@ -18,8 +18,8 @@ public class KeyEvent {
     public static final int ACTION_DOWN = 5;
     public static final int ACTION_UP = 6;
 
-    private int code;
-    private int action;
+    private final int code;
+    private final int action;
 
     public KeyEvent(int keyCode, int action) {
         code = keyCode;

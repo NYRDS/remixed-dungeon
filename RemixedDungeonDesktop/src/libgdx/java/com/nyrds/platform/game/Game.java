@@ -29,10 +29,11 @@ import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
 import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.zip.Deflater;
 
 import lombok.Getter;
-
 
 public class Game implements ApplicationListener, InputProcessor {
     private static Game instance;
@@ -43,8 +44,10 @@ public class Game implements ApplicationListener, InputProcessor {
 
     protected GameLoop gameLoop;
     public Iap iap = new Iap();
-
     public PlayGames playGames = new PlayGames();
+
+    private final Map<Integer, Long> keyDownTimes = new HashMap<>();
+    private static final long AUTO_FIRE_INTERVAL = 250;
 
     public Game(Class<? extends Scene> c) {
         super();
@@ -66,9 +69,8 @@ public class Game implements ApplicationListener, InputProcessor {
 
     public static void toast(final String text, final Object... args) { }
 
-
     static public void runOnMainThread(Runnable runnable) {
-        GameLoop.pushUiTask( runnable );
+        GameLoop.pushUiTask(runnable);
     }
 
     public static boolean smallResScreen() {
@@ -77,7 +79,6 @@ public class Game implements ApplicationListener, InputProcessor {
 
     public static void syncAdsState() {
     }
-
 
     public static void vibrate(int milliseconds) {
     }
@@ -93,6 +94,7 @@ public class Game implements ApplicationListener, InputProcessor {
     public static void sendEmail(String emailUri, String subject) {
         Gdx.net.openURI("mailto:" + emailUri + "?subject=" + subject);
     }
+
     static public void openPlayStore() {
     }
 
@@ -107,8 +109,8 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public void resize(int width, int height) {
-        GameLoop.width=width;
-        GameLoop.height=height;
+        GameLoop.width = width;
+        GameLoop.height = height;
         GameLoop.setNeedSceneRestart();
     }
 
@@ -130,6 +132,16 @@ public class Game implements ApplicationListener, InputProcessor {
 
         gameLoop.onFrame();
 
+        // Check for auto-fire events
+        long currentTime = System.currentTimeMillis();
+        for (Map.Entry<Integer, Long> entry : keyDownTimes.entrySet()) {
+            int keycode = entry.getKey();
+            long lastFireTime = entry.getValue();
+            if (currentTime - lastFireTime >= AUTO_FIRE_INTERVAL) {
+                GameLoop.instance().keysEvents.add(new KeyEvent(keycode, KeyEvent.ACTION_DOWN));
+                keyDownTimes.put(keycode, currentTime); // Update the last fire time
+            }
+        }
 
         if (Gdx.input.isButtonPressed(Input.Buttons.RIGHT)) {
             takeScreenshot();
@@ -190,8 +202,9 @@ public class Game implements ApplicationListener, InputProcessor {
     @Override
     public boolean keyDown(int keycode) {
         GameLoop.instance().keysEvents.add(new KeyEvent(keycode, KeyEvent.ACTION_DOWN));
+        keyDownTimes.put(keycode, System.currentTimeMillis()); // Record the time when the key was pressed
 
-        if (keycode==Input.Keys.F11) {
+        if (keycode == Input.Keys.F11) {
             toggleFullscreen();
         }
 
@@ -201,6 +214,7 @@ public class Game implements ApplicationListener, InputProcessor {
     @Override
     public boolean keyUp(int keycode) {
         GameLoop.instance().keysEvents.add(new KeyEvent(keycode, KeyEvent.ACTION_UP));
+        keyDownTimes.remove(keycode); // Remove the key from the map when it's released
         return true;
     }
 
@@ -211,19 +225,19 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-        gameLoop.motionEvents.add( new PointerEvent(screenX, screenY, pointer, button, PointerEvent.Type.TOUCH_DOWN));
+        gameLoop.motionEvents.add(new PointerEvent(screenX, screenY, pointer, button, PointerEvent.Type.TOUCH_DOWN));
         return true;
     }
 
     @Override
     public boolean touchUp(int screenX, int screenY, int pointer, int button) {
-        gameLoop.motionEvents.add( new PointerEvent(screenX, screenY, pointer, button, PointerEvent.Type.TOUCH_UP));
+        gameLoop.motionEvents.add(new PointerEvent(screenX, screenY, pointer, button, PointerEvent.Type.TOUCH_UP));
         return true;
     }
 
     @Override
     public boolean touchDragged(int screenX, int screenY, int pointer) {
-        gameLoop.motionEvents.add( new PointerEvent(screenX, screenY, pointer, 0, PointerEvent.Type.TOUCH_DRAGGED));
+        gameLoop.motionEvents.add(new PointerEvent(screenX, screenY, pointer, 0, PointerEvent.Type.TOUCH_DRAGGED));
         return true;
     }
 
@@ -239,13 +253,12 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public boolean scrolled(float amountX, float amountY) {
-        if(GameLoop.scene() instanceof GameScene) {
+        if (GameLoop.scene() instanceof GameScene) {
             GamePreferences.zoom(GamePreferences.zoom() + amountY / 20);
             Camera.main.zoom((float) (GameScene.defaultZoom + GamePreferences.zoom()));
         }
         return true;
     }
-
 
     public static boolean deleteFile(String path) {
         FileHandle file = Gdx.files.local(path);
@@ -257,8 +270,7 @@ public class Game implements ApplicationListener, InputProcessor {
     }
 
     public final void runOnUiThread(Runnable action) {
-
-            action.run();
+        action.run();
     }
 
     static public void requestInternetPermission(InterstitialPoint returnTo) {
