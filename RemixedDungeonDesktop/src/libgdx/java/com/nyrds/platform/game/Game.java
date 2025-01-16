@@ -185,14 +185,15 @@ public class Game implements ApplicationListener, InputProcessor {
         MusicManager.INSTANCE.mute();
     }
 
+    private int w_width = 800, w_height = 450;
     public void toggleFullscreen() {
         Graphics graphics = Gdx.graphics;
 
         if (graphics.isFullscreen()) {
-            graphics.setWindowedMode(GameLoop.width, GameLoop.height);
+            graphics.setWindowedMode(w_width, w_height);
         } else {
-            GameLoop.width = graphics.getWidth();
-            GameLoop.height = graphics.getHeight();
+            w_width = graphics.getWidth();
+            w_height = graphics.getHeight();
 
             Graphics.DisplayMode displayMode = graphics.getDisplayMode();
             graphics.setFullscreenMode(displayMode);
