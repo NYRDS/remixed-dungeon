@@ -79,8 +79,7 @@ public class AttackIndicator extends Tag {
 	private void checkEnemies(Hero hero) {
 		var candidates = new ArrayList<Char>();
 
-		candidates.clear();
-		int v = hero.visibleEnemies();
+        int v = hero.visibleEnemies();
 		for (int i=0; i < v; i++) {
 			Char mob = hero.visibleEnemy( i );
 
