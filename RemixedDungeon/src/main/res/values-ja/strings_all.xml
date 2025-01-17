@@ -496,7 +496,7 @@
   <string name="Weightstone_Info">重石を使うことで、近接武器のバランスを整えて速度や精度を高めることが出来る。</string>
   <string name="Weightstone_Select">バランスを調整する武器を選択</string>
   <string name="Weightstone_Fast">あなたの %s を速くするためにバランスを調整した</string>
-  <string name="Weightstone_Accurate">あなたの %s をより正確にするためにバランスをとった</string>
+  <string name="Weightstone_Accurate">あなたの %s をより正確にするためにバランスを調整した</string>
   <string name="Weightstone_WndChoice">あなたは %s の何を重視する？</string>
   <string name="Weightstone_WndSpeed">速さを</string>
   <string name="Weightstone_WndAccuracy">正確さを</string>
