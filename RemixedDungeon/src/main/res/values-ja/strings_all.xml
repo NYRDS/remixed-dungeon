@@ -26,7 +26,7 @@
   <string name="TomeOfKnowledge_Info">この古代の書物には難解な謎とミステリーが詰まっている！読むのは難しいかもしれないが、読みこなせば魔法の力がアップすること間違いなし。</string>
   <string name="SpellBook_Name">呪文書</string>
   <string name="SpellBook_Info">実際の本というよりは、いろいろなページを縫い合わせたもののように見える。十分に注意を払えば、そこから何かを作ることができるかもしれない。</string>
-  <string name="SpellBook_Info_Identified">このページの中で、あなたは「%1$s」の呪文の全文を発見した。「%2$s」</string>
+  <string name="SpellBook_Info_Identified">このページの中で、あなたは「%1$s」の呪文の全文を発見した。%2$s</string>
   <string name="ManaPotion_Name">マナポーション</string>
   <string name="ManaPotion_Info">この薬はあなたの精神的エネルギーを回復させる。</string>
   <string name="Mushroom_Eat_Message">そのキノコは変な味がする！</string>
