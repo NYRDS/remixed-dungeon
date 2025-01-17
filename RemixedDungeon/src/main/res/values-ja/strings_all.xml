@@ -29,7 +29,7 @@
   <string name="SpellBook_Info_Identified">このページの中で、あなたは「%1$s」の呪文の全文を発見した。%2$s</string>
   <string name="ManaPotion_Name">マナポーション</string>
   <string name="ManaPotion_Info">この薬はあなたの精神的エネルギーを回復させる。</string>
-  <string name="Mushroom_Eat_Message">そのキノコは変な味がする！</string>
+  <string name="Mushroom_Eat_Message">変な味がする！</string>
   <string name="Torch_Info2">周囲の照明が乏しいことで有名なダンジョンでは欠かせないアイテムだ。</string>
   <string name="WndSpells_Title">呪文</string>
   <string name="WndSpells_Level">魔法レベル：</string>
