@@ -2911,7 +2911,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="Carcass_Name">%sの死体</string>
   <string name="Carcass_Info">完全に死んだ %sの死体</string>
   <string name="ResultDescriptions_Necromancy">階層%dで死体を生き返らせようとして生命力が枯渇した。</string>
-  <string name="Item_ACPickup">選ぶ</string>
+  <string name="Item_ACPickup">拾う</string>
   <string name="Necromancy_Death">あなたは死霊術の練習中に生命力を使い果たした。</string>
   <string name="AC_Necromancy">死霊術</string>
   <string name="AC_Devour">ディバウアー</string>
