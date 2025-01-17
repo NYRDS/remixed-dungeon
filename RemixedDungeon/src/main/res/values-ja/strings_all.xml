@@ -1077,7 +1077,7 @@
   <string name="MeleeWeapon_Info2b">平均ダメージは %1$d ポイントで、%2$d の力が必要だ。</string>
   <string name="MeleeWeapon_Info2c">この武器はあなたには重すぎるようだ。</string>
   <string name="MeleeWeapon_Info3a">これはかなり %s な武器だ。</string>
-  <string name="MeleeWeapon_Info3b">速い</string>
+  <string name="MeleeWeapon_Info3b">迅速</string>
   <string name="MeleeWeapon_Info3c">遅い</string>
   <string name="MeleeWeapon_Info3d">と</string>
   <string name="MeleeWeapon_Info3e">だが</string>
