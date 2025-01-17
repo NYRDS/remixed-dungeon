@@ -56,7 +56,7 @@
   <string name="RingOfHaste_Info">このリングは、装着者の時間の流れを加速させ、あらゆる行動を少し速く行えるようにする。</string>
   <string name="RingOfHerbalism_Name">草学のリング</string>
   <string name="RingOfHerbalism_Info">このリングは、草を踏みつけた時の、雫や種子を得られる確率を増加させる。</string>
-  <string name="RingOfMending_Name">修復のリング</string>
+  <string name="RingOfMending_Name">再生のリング</string>
   <string name="RingOfMending_Info">このリングは身体の再生能力を高め、失われた体力を加速度的に回復させる。劣化したリングは自然再生を減少させ、あるいは停止させる。</string>
   <string name="RingOfPower_Name">威力のリング</string>
   <string name="RingOfPower_Info">このリングから放射されるエネルギーフィールドの中で、あなたの杖はより強力になる。劣化した威力のリングは、逆にあなたの杖を弱める。</string>
