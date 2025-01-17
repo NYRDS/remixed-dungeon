@@ -745,7 +745,7 @@
   <string name="Deathling_Name">デスリング</string>
   <string name="Deathling_Gender">男性的</string>
   <string name="Deathling_Name_Objective">デスリング</string>
-  <string name="Deathling_Desc">デスリングとは、不運にも仲間の死霊術師に召喚されてしまった堕落した英雄の魂だ。</string>
+  <string name="Deathling_Desc">デスリングとは、不運にも仲間の死霊術師に召喚されてしまった、堕落した英雄の魂だ。</string>
   <string name="NecromancerRobe_PetLimitReached">死霊術：召喚数が限界に達した（現在の最大数：%d）！</string>
   <string name="Necromancy_NotEnoughSouls">あなたには「%1$s」の呪文を唱えるだけのソウルがない。</string>
   <string name="Necromancy_SoulsCountLabel">ソウル</string>
