@@ -907,7 +907,7 @@
   <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
   <string name="ConcreteBlock_Name">重いコンクリートブロック</string>
   <string name="ConcreteBlock_Description">このブロックを押すには%dポイントの力が必要なようだ。</string>
-  <string name="Hero_AnotherTry">あなたは死んでしまった。もう一度やってみますか？</string>
+  <string name="Hero_AnotherTry">あなたは死んでしまった。もう一度挑戦してみますか？</string>
   <string name="ShadowLord_Name">影の君主</string>
   <string name="ShadowLord_Gender">男性的</string>
   <string name="ShadowLord_Name_Objective">影の君主</string>
