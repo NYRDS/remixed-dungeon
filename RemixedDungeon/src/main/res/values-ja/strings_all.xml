@@ -536,7 +536,7 @@
   <string name="Pickaxe_NoVein">あなたの近くに採掘できる影金鉱脈はない</string>
   <string name="RatSkull_Name">巨大なネズミの頭蓋骨</string>
   <string name="RatSkull_Info">狩猟のトロフィーにはいいかもしれないが、壁に飾るには臭すぎる。</string>
-  <string name="RatSkull_Info2">その一方で、所有者がネズミ、それも大きくて臭いネズミを殺すことができることも示している。</string>
+  <string name="RatSkull_Info2">その一方で、所有者がネズミ、それも大きくて臭いネズミを殺すことができることの証明になる。</string>
   <string name="ConfusionGas_Info">混乱のガスが渦巻いている。</string>
   <string name="Fire_Info">ここで炎が燃え盛っている。</string>
   <string name="Foliage_Info">地下の庭の暗がりを光線が貫いている。</string>
