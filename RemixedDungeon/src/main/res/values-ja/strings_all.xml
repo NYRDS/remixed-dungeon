@@ -1905,7 +1905,7 @@
   <string name="YogsTeeth_Name_Objective">ヨグの歯</string>
   <string name="YogsTeeth_Desc">カミソリのような鋭い歯で満たされた旧神の巨大な口。あらゆる存在を破壊し、貪り尽くそうとする彼の衝動にふさわしい造形だ。</string>
   <string name="Food_ACEat">食べる</string>
-  <string name="Food_Message">その食べ物はとても美味しい！</string>
+  <string name="Food_Message">とても美味しい！</string>
   <string name="Ration_Name">糧食</string>
   <string name="Ration_Info">乾燥肉、ビスケット、そんなものだ。</string>
   <string name="ChargrilledMeat_Name">炭火焼肉</string>
