@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon;
 
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
@@ -254,6 +255,10 @@ public class Assets {
     }
 
     public static String getTitle() {
+        if (BuildConfig.FLAVOR_platform.equals("desktop")) {
+            return "ui/title_pc.png";
+        }
+
         switch (bannersType) {
             default:
                 return "ui/title.png";

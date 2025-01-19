@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.pixeldungeon.windows.VBox;
@@ -184,13 +185,14 @@ public class TitleScene extends PixelScene {
             });
         }
 
-        leftGroup.add(new ImageButton(Icons.TG.get()) {
-            @Override
-            protected void onClick() {
-                Game.openUrl("Join our Telegram group", "https://t.me/RemixedDungeon");
-            }
-        });
-
+        if(!BuildConfig.FLAVOR_market.equals("vkplay")) {
+            leftGroup.add(new ImageButton(Icons.TG.get()) {
+                @Override
+                protected void onClick() {
+                    Game.openUrl("Join our Telegram group", "https://t.me/RemixedDungeon");
+                }
+            });
+        }
 
         Image img = new Image(Assets.DASHBOARD, DashboardItem.IMAGE_SIZE, 1);
 
