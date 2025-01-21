@@ -2638,7 +2638,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="StunBuff_Name">びっくり</string>
   <string name="StunBuff_Info">びっくりした！</string>
   <string name="Char_StaStunned">びっくり</string>
-  <string name="Mob_ReadyForOrder">%sのご注文をお待ちしております。</string>
+  <string name="Mob_ReadyForOrder">%sは命令を待っている。</string>
   <string name="Mob_CantDoIt">僕にはできないよ。前足が小さいから。</string>
   <string name="InnKeeperNPC_Name">宿の主人</string>
   <string name="InnKeeperNPC_Name_Objective">宿の主人</string>
