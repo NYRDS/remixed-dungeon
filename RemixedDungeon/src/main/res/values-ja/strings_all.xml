@@ -2858,7 +2858,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="MobAi_status">この%sは%sである</string>
   <string name="WndCustomizations_Title">カスタマイズ</string>
   <string name="IceGuardianCore_DieInfo">ここはとても寒いから、レベル14に戻って暖かい場所に行く方法を探したほうがいいね。</string>
-  <string name="Lich_DieInfo">絶対にこのネクロマンサーのようにはなりたくないな。さて、7階に戻って別の道を探そう。</string>
+  <string name="Lich_DieInfo">絶対にこのネクロマンサーのようにはなりたくないな。さて、7階に戻って別の道を探すとしよう。</string>
   <string name="SpiderQueen_DieInfo">スパイダークイーンを倒した！さて、5階に戻り、深層への旅を続けよう。</string>
   <string name="WndModSelect_ReallyDelete">本当に削除しますか？</string>
   <string name="WndModSelect_AreYouSure">MOD %s を削除します。よろしいですか？</string>
