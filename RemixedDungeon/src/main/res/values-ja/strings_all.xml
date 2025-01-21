@@ -1468,7 +1468,7 @@
   <string name="LibraryBook_Description">この書物は実に巨大だ。冒険者たちが発見し、ダンジョンから持ち帰ったすべての知識が収められている。</string>
   <string name="WndSettings_moveTimeout">Move timeout: %s</string>
   <string name="TrapWnd_Title">罠</string>
-  <string name="TrapWnd_Step">本当にこの罠を踏みたいのか？おそらく死ぬだろうが。</string>
+  <string name="TrapWnd_Step">本当にこの罠を踏みたいのか？死ぬかもしれないぞ。</string>
   <string name="BadgesScene_Title">あなたのバッジ</string>
   <string name="Badges_Info1">獲得したバッジ: %s</string>
   <string name="Badges_Info2">新しいスーパーバッジ: %s</string>
