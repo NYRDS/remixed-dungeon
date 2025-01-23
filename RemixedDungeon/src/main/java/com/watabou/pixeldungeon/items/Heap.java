@@ -4,7 +4,6 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
-import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
@@ -12,9 +11,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -25,11 +22,9 @@ import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Effects;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.plants.Seed;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -48,8 +43,6 @@ import java.util.Map;
 import lombok.Getter;
 
 public class Heap implements Bundlable, NamedEntityKind  {
-
-    private static final int SEEDS_TO_POTION = 3;
 
     @Override
     public String getEntityKind() {
@@ -368,67 +361,6 @@ public class Heap implements Bundlable, NamedEntityKind  {
         }
 
         updateHeap();
-    }
-
-    public Item transmute() {
-
-        CellEmitter.get(pos).burst(Speck.factory(Speck.BUBBLE), 3);
-        Splash.at(pos, 0xFFFFFF, 3);
-
-        float[] chances = new float[items.size()];
-        int count = 0;
-
-        int index = 0;
-        for (Item item : items) {
-            if (item instanceof Seed) {
-                count += item.quantity();
-                chances[index++] = item.quantity();
-            } else {
-                count = 0;
-                break;
-            }
-        }
-
-        if (count >= SEEDS_TO_POTION) {
-
-            CellEmitter.get(pos).burst(Speck.factory(Speck.WOOL), 6);
-            Sample.INSTANCE.play(Assets.SND_PUFF);
-
-            if (Random.Int(count) == 0) {
-
-                CellEmitter.center(pos).burst(Speck.factory(Speck.EVOKE), 3);
-
-                destroy();
-
-                Statistics.potionsCooked++;
-                Badges.validatePotionsCooked();
-
-                return Treasury.getLevelTreasury().random(Treasury.Category.POTION);
-
-            } else {
-
-                Seed proto = (Seed) items.get(Random.chances(chances));
-                Class<? extends Item> itemClass = proto.alchemyClass;
-
-                destroy();
-
-                Statistics.potionsCooked++;
-                Badges.validatePotionsCooked();
-
-                if (itemClass == null) {
-                    return Treasury.getLevelTreasury().random(Treasury.Category.POTION);
-                } else {
-                    try {
-                        return itemClass.newInstance();
-                    } catch (Exception e) {
-                        return ItemsList.DUMMY;
-                    }
-                }
-            }
-
-        } else {
-            return ItemsList.DUMMY;
-        }
     }
 
     public boolean isEmpty() {

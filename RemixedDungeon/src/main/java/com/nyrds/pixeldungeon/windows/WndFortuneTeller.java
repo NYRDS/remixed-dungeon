@@ -50,7 +50,7 @@ public class WndFortuneTeller extends WndQuest {
 
 		int finalUnknownItemsCount = unknownItemsCount;
 
-        RedButton btnYes = new RedButton( StringsManager.getVar(R.string.Wnd_Button_Yes) + " ( " + goldCost + " )" ) {
+        RedButton btnYes = new RedButton( StringsManager.getVar(R.string.Wnd_Button_Yes) + " (" + goldCost + ")" ) {
 			@Override
 			protected void onClick() {
 				if (finalUnknownItemsCount > 0) {
