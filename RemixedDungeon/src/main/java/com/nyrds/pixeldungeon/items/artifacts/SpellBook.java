@@ -35,14 +35,24 @@ public class SpellBook extends Artifact {
 		return retSpell;
 	}
 
+
+	@Override
+	public void activate(@NotNull Char ch) {
+		setDefaultAction(CommonActions.AC_READ);
+		super.activate(ch);
+	}
+
+	@Override
+	public void deactivate(@NotNull Char ch) {
+		setDefaultAction(AC_THROW);
+		super.deactivate(ch);
+	}
+
 	@Override
 	public ArrayList<String> actions(Char hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		if (isEquipped(hero)){
 			actions.add(CommonActions.AC_READ );
-			setDefaultAction(CommonActions.AC_READ);
-		} else {
-			setDefaultAction(AC_THROW);
 		}
 		return actions;
 	}
