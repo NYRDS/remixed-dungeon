@@ -20,6 +20,10 @@ import org.jetbrains.annotations.NotNull;
 
 public class AzuterronNPC extends Shopkeeper {
 
+    {
+        spriteClass = "spritesDesc/AzuterronNPC.json";
+    }
+
     public AzuterronNPC() {
         movable = false;
         addImmunity(Paralysis.class);
