@@ -1,9 +1,12 @@
 
 package com.watabou.pixeldungeon.windows;
 
+import android.view.KeyEvent;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.input.Keys;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
@@ -310,7 +313,19 @@ public class WndBag extends WndTabbed {
 		
 		count++;
 	}
-	
+
+	@Override
+	public void onSignal( Keys.Key key ) {
+		if (key.pressed) {
+			switch (key.code) {
+				case KeyEvent.KEYCODE_I:
+					hide();
+					break;
+			}
+		}
+		super.onSignal(key);
+	}
+
 	@Override
 	public void onMenuPressed() {
 		if (listener == null) {
