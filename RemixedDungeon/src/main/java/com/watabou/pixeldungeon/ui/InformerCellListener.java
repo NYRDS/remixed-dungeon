@@ -18,7 +18,7 @@ import com.watabou.pixeldungeon.windows.WndMessage;
 
 import org.jetbrains.annotations.NotNull;
 
-class InformerCellListener implements CellSelector.Listener {
+public class InformerCellListener implements CellSelector.Listener {
     @Override
     public void onSelect(Integer cell, @NotNull Char selector) {
         if (cell == null) {

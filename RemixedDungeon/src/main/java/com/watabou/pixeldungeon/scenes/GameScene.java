@@ -76,6 +76,7 @@ import com.watabou.pixeldungeon.ui.BusyIndicator;
 import com.watabou.pixeldungeon.ui.GameLog;
 import com.watabou.pixeldungeon.ui.HealthIndicator;
 import com.watabou.pixeldungeon.ui.Icons;
+import com.watabou.pixeldungeon.ui.InformerCellListener;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.ui.ResumeIndicator;
 import com.watabou.pixeldungeon.ui.StatusPane;
@@ -100,6 +101,7 @@ import java.util.HashSet;
 public class GameScene extends PixelScene {
 
     private static final float MAX_BRIGHTNESS = 1.22f;
+    public static final CellSelector.Listener informer = new InformerCellListener();
 
     private static volatile GameScene scene;
 
@@ -646,6 +648,24 @@ public class GameScene extends PixelScene {
             case KeyEvent.KEYCODE_I:
                 if (Dungeon.hero.isReady()) {
                     selectItem(Dungeon.hero, null, Mode.ALL, null);
+                }
+                return;
+
+            case KeyEvent.KEYCODE_E:
+                if (hero.isReady()) {
+                    hero.selectCell(informer);
+                }
+                return;
+
+            case KeyEvent.KEYCODE_S:
+                if (hero.isReady()) {
+                    hero.search(true);
+                }
+                return;
+
+            case KeyEvent.KEYCODE_SPACE:
+                if (hero.isReady()) {
+                    hero.rest(false);
                 }
                 return;
 

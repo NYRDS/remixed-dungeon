@@ -10,8 +10,12 @@ public class KeyEvent {
     public static final int KEYCODE_DPAD_DOWN = Input.Keys.DOWN;
     public static final int KEYCODE_DPAD_LEFT = Input.Keys.LEFT;
     public static final int KEYCODE_DPAD_RIGHT = Input.Keys.RIGHT;
+    public static final int KEYCODE_SPACE = Input.Keys.SPACE;
+
 
     public static final int KEYCODE_I = Input.Keys.I;
+    public static final int KEYCODE_E = Input.Keys.E;
+    public static final int KEYCODE_S = Input.Keys.S;
 
     public static final int KEYCODE_VOLUME_UP = 3;
     public static final int KEYCODE_VOLUME_DOWN = 4;

@@ -11,7 +11,6 @@ import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.elements.Tool;
 
@@ -73,7 +72,7 @@ public class Toolbar extends Component {
             @Override
             protected void onClick() {
                 if (hero.isReady()) {
-                    hero.selectCell(informer);
+                    hero.selectCell(GameScene.informer);
                 }
             }
         };
@@ -202,8 +201,6 @@ public class Toolbar extends Component {
         toolbar.setRect(x, camera.height - toolbar.height(), camera.width, toolbar.height());
         add(toolbar);
     }
-
-    private static final CellSelector.Listener informer = new InformerCellListener();
 
     public void pickup(Item item) {
         btnInventory.pickUp(item);
