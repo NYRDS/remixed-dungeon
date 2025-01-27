@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.lua.LuaEngine;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.levels.CommonLevel;
@@ -11,6 +12,8 @@ import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
 
 import java.io.ByteArrayInputStream;
+
+import lombok.val;
 
 /**
  * Created by mike on 13.11.2016.
@@ -27,13 +30,27 @@ public abstract class CustomLevel extends CommonLevel {
 	private final String DESC_FILE = "descFile";
 
 	protected void readDescFile(String descFile) {
+
+		//remove extension
+		val baseFile = descFile.substring(0, descFile.lastIndexOf("."));
+
 		if(descFile.endsWith(".json")) {
+
+			if(BuildConfig.FLAVOR_platform.equals("desktop") && ModdingMode.isResourceExist(baseFile+"_desktop.json")) {
+				mLevelDesc = JsonHelper.readJsonFromAsset(baseFile+"_desktop.json");
+				return;
+			}
+
 			mLevelDesc = JsonHelper.readJsonFromAsset(descFile);
 			return;
 		}
 
 		if(descFile.endsWith(".lua")) {
-			LuaEngine.runScriptFile(descFile);
+			if(BuildConfig.FLAVOR_platform.equals("desktop") && ModdingMode.isResourceExist(baseFile+"_desktop.lua")) {
+				LuaEngine.runScriptFile(baseFile+"_desktop.lua");
+			} else {
+				LuaEngine.runScriptFile(descFile);
+			}
 			String desc = LuaEngine.call("getJson").tojstring();
 			try {
 				mLevelDesc = JsonHelper.readJsonFromStream(new ByteArrayInputStream(desc.getBytes()),descFile);
