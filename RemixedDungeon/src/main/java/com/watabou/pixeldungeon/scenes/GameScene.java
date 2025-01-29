@@ -634,7 +634,7 @@ public class GameScene extends PixelScene {
 
         Level level = Dungeon.level;
 
-
+        //GLog.debug("Keycode: %d", keyCode);
         switch (keyCode) {
             case Keys.Key.BEGIN_OF_FRAME:
                 int pos = hero.getPos();
@@ -647,6 +647,8 @@ public class GameScene extends PixelScene {
                 ty = Util.clamp(ty,oy-1, oy+1);
                 if(tx != ox || ty != oy) {
                     handleCell(level.cell(tx, ty));
+                    tx = ox; //Because BEGIN_OF_FRAME cloud be consumed by active window.
+                    ty = oy;
                 }
                 return;
 
