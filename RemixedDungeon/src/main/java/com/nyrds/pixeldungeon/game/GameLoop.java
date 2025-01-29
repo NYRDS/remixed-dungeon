@@ -247,6 +247,9 @@ public class GameLoop {
     @SneakyThrows
     public void update() {
         synchronized (stepLock) {
+
+            Keys.processEvent(new KeyEvent(Keys.Key.BEGIN_OF_FRAME, KeyEvent.ACTION_DOWN));
+
             while (!motionEvents.isEmpty()) {
                 Touchscreen.processEvent(motionEvents.poll());
             }
@@ -254,6 +257,8 @@ public class GameLoop {
             while (!keysEvents.isEmpty()) {
                 Keys.processEvent(keysEvents.poll());
             }
+
+            Keys.processEvent(new KeyEvent(Keys.Key.END_OF_FRAME, KeyEvent.ACTION_DOWN));
 
             elapsed = timeScale * step * 0.001f;
             if (scene != null) {

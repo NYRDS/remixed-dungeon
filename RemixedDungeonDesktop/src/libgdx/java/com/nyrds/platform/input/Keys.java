@@ -39,11 +39,13 @@ public class Keys {
 			event.dispatch(new Key(e.getKeyCode(), false));
 			break;
 		}
-
 	}
 	
 	public static class Key {
-		
+
+		public final static int END_OF_FRAME = -1;
+		public final static int BEGIN_OF_FRAME = -2;
+
 		public int code;
 		public boolean pressed;
 		

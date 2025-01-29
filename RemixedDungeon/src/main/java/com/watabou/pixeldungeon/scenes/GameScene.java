@@ -21,6 +21,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.input.Keys;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModError;
@@ -616,6 +617,8 @@ public class GameScene extends PixelScene {
         }
     }
 
+
+    private static int tx, ty, ox, oy;
     @Override
     protected void onKeyPressed(int keyCode) {
         if (!isSceneReady()) {
@@ -631,22 +634,33 @@ public class GameScene extends PixelScene {
 
         Level level = Dungeon.level;
 
-        int pos = hero.getPos();
-        int x = level.cellX(pos);
-        int y = level.cellY(pos);
 
         switch (keyCode) {
+            case Keys.Key.BEGIN_OF_FRAME:
+                int pos = hero.getPos();
+                tx = ox = level.cellX(pos);
+                ty = oy = level.cellY(pos);
+                return;
+
+            case Keys.Key.END_OF_FRAME:
+                tx = Util.clamp(tx, ox-1,ox+1);
+                ty = Util.clamp(ty,oy-1, oy+1);
+                if(tx != ox || ty != oy) {
+                    handleCell(level.cell(tx, ty));
+                }
+                return;
+
             case KeyEvent.KEYCODE_DPAD_UP:
-                y--;
+                ty--;
                 break;
             case KeyEvent.KEYCODE_DPAD_DOWN:
-                y++;
+                ty++;
                 break;
             case KeyEvent.KEYCODE_DPAD_LEFT:
-                x--;
+                tx--;
                 break;
             case KeyEvent.KEYCODE_DPAD_RIGHT:
-                x++;
+                tx++;
                 break;
 
             case KeyEvent.KEYCODE_I:
@@ -664,11 +678,8 @@ public class GameScene extends PixelScene {
             case KeyEvent.KEYCODE_SPACE:
                 hero.rest(false);
                 return;
-
             default:
-                return;
         }
-        handleCell(level.cell(x, y));
     }
 
     public void brightness(boolean value) {
