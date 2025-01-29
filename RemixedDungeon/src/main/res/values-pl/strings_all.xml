@@ -2597,7 +2597,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="PlagueDoctorNPC_After_Quest_2">Jesteś tam jeszcze? Masz! Weź to.</string>
   <string name="FilteredMask_Name">Maska N95</string>
   <string name="FilteredMask_Info">Maska oddechowa to urządzenie zaprojektowane w celu ochrony użytkownika przed wdychaniem niebezpiecznych gazów i cząstek stałych, takich jak pyły i mikroorganizmy zawieszone w powietrzu.
-  \n\n  a maska ​​służy jednak wyłącznie do celów dekoracyjnych.</string>
+  \ n\n  a maska ​​służy jednak wyłącznie do celów dekoracyjnych.</string>
   <string name="FullFaceMask_Name">Maska Przeciwgazowa</string>
   <string name="FullFaceMask_Info">Maska przeciwgazowa jest używana do ochrony użytkownika przed wdychaniem zanieczyszczeń i toksycznych gazów. Maska tworzy szczelną osłonę na nosie, ustach i oczach.
  \n\n Filtrów brakuje w tej masce, ale mimo to wygląda fajnie.</string>
@@ -2968,4 +2968,8 @@ remix.32.1\n
 -- Przedmioty mogą teraz pełnić funkcje gdy są w jeden na drugim\n
 - Naprawa błędów\n</string>
   <string name="WndInstallingMod_deleting_file">Usuwam %s</string>
+  <string name="Badges_ThisIsSparta">TO JEST SPARTA!</string>
+  <string name="WndSettings_FpsLimit">Limit FPS</string>
+  <string name="StartScene_ContinueLatest">Kontynuuj grę z ostatniego zapisu lub wybierz slot zapisu </string>
+  <string name="StartScene_ChooseFromSlot">Wybierz zapis ze slota</string>
 </resources>

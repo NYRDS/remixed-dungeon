@@ -26,20 +26,20 @@
   <string name="TomeOfKnowledge_Info">この古代の書物には難解な謎とミステリーが詰まっている！読むのは難しいかもしれないが、読みこなせば魔法の力がアップすること間違いなし。</string>
   <string name="SpellBook_Name">呪文書</string>
   <string name="SpellBook_Info">実際の本というよりは、いろいろなページを縫い合わせたもののように見える。十分に注意を払えば、そこから何かを作ることができるかもしれない。</string>
-  <string name="SpellBook_Info_Identified">このページの中で、あなたは「%1$s」の呪文の全文を発見した。「%2$s」</string>
+  <string name="SpellBook_Info_Identified">このページの中で、あなたは「%1$s」の呪文の全文を発見した。%2$s</string>
   <string name="ManaPotion_Name">マナポーション</string>
   <string name="ManaPotion_Info">この薬はあなたの精神的エネルギーを回復させる。</string>
-  <string name="Mushroom_Eat_Message">そのキノコは変な味がする！</string>
+  <string name="Mushroom_Eat_Message">変な味がする！</string>
   <string name="Torch_Info2">周囲の照明が乏しいことで有名なダンジョンでは欠かせないアイテムだ。</string>
   <string name="WndSpells_Title">呪文</string>
   <string name="WndSpells_Level">魔法レベル</string>
   <string name="Ring_Name">%s リング</string>
   <string name="Ring_Info">この金属の環は暗闇で輝く大きな %s の宝石で飾られている。身につけるとどんな効果があるのかは、誰にもわからない。</string>
-  <string name="Ring_Identify">あなたは今 %1$s を識別するために十分精通している。これは %2$s だ。</string>
+  <string name="Ring_Identify">あなたは今 %1$s を識別するために十分に精通した。これは %2$s だ。</string>
   <string name="Ring_Info1">あなたは一度に2つのリングを身につけることが出来る。</string>
   <string name="Ring_Info2">%s があなたの指を痛いくらい締め付けた</string>
-  <string name="Ring_Info3a">%1$sあなたの指の %3$s に %2$s がある。</string>
-  <string name="Ring_Info3b">、それは呪われているため、取り除くことが出来ない</string>
+  <string name="Ring_Info3a">%1$sあなたの指に%3$s %2$s がある。</string>
+  <string name="Ring_Info3b">それは呪われているため、取り除くことが出来ない</string>
   <string name="Ring_Info4">%1$sあなたは %2$s の中に潜む邪悪な魔力を感じることが出来る。</string>
   <string name="Ring_BuffKnown">これは %s だ</string>
   <string name="RingOfAccuracy_Name">命中のリング</string>
@@ -56,7 +56,7 @@
   <string name="RingOfHaste_Info">このリングは、装着者の時間の流れを加速させ、あらゆる行動を少し速く行えるようにする。</string>
   <string name="RingOfHerbalism_Name">草学のリング</string>
   <string name="RingOfHerbalism_Info">このリングは、草を踏みつけた時の、雫や種子を得られる確率を増加させる。</string>
-  <string name="RingOfMending_Name">修復のリング</string>
+  <string name="RingOfMending_Name">再生のリング</string>
   <string name="RingOfMending_Info">このリングは身体の再生能力を高め、失われた体力を加速度的に回復させる。劣化したリングは自然再生を減少させ、あるいは停止させる。</string>
   <string name="RingOfPower_Name">威力のリング</string>
   <string name="RingOfPower_Info">このリングから放射されるエネルギーフィールドの中で、あなたの杖はより強力になる。劣化した威力のリングは、逆にあなたの杖を弱める。</string>
@@ -452,7 +452,7 @@
   <string name="Dewdrop_Info">澄み切った雫。</string>
   <string name="DewVial_Name">雫用の瓶</string>
   <string name="DewVial_ACDRINK">飲む</string>
-  <string name="DewVial_Info">この小さな容器に余分な雫を貯めておけば、後で飲むことができる。小瓶が満杯になれば、命がけの瞬間、雫は自動的に消費される。</string>
+  <string name="DewVial_Info">この小さな容器に余分な雫を貯めておけば、後で飲むことができる。小瓶が満杯であれば、死に瀕した時、雫は自動的に消費される。</string>
   <string name="DewVial_AutoDrink">雫用の瓶は、あなたの傷を癒やして空になった。</string>
   <string name="DewVial_Collected">あなたは雫を瓶に集めた。</string>
   <string name="DewVial_Full">雫用の瓶は満杯だ！</string>
@@ -527,7 +527,7 @@
   <string name="Pickaxe_NoVein">あなたの近くに採掘できる影金鉱脈はない</string>
   <string name="RatSkull_Name">巨大なネズミの頭蓋骨</string>
   <string name="RatSkull_Info">狩猟のトロフィーにはいいかもしれないが、壁に飾るには臭すぎる。</string>
-  <string name="RatSkull_Info2">その一方で、所有者がネズミ、それも大きくて臭いネズミを殺すことができることも示している。</string>
+  <string name="RatSkull_Info2">その一方で、所有者がネズミ、それも大きくて臭いネズミを殺すことができることの証明になる。</string>
   <string name="ConfusionGas_Info">混乱のガスが渦巻いている。</string>
   <string name="Fire_Info">ここで炎が燃え盛っている。</string>
   <string name="Foliage_Info">地下の庭の暗がりを光線が貫いている。</string>
@@ -599,7 +599,7 @@
   <string name="SleepBuff_Name">睡眠</string>
   <string name="SleepBuff_Info">完全に眠っている。</string>
   <string name="SnipersMarkBuff_Name">標的</string>
-  <string name="SnipersMarkBuff_Info">このマークは狙撃手によるものだ。</string>
+  <string name="SnipersMarkBuff_Info">狙撃手に狙われている。</string>
   <string name="SpeedBuff_Name">加速</string>
   <string name="SpeedBuff_Info">活力とエネルギーが体から発散され、動きがいつもより速く感じられる。</string>
   <string name="TerrorBuff_Name">恐怖</string>
@@ -729,7 +729,7 @@
   <string name="HeroSubClass_NameLich">リッチ</string>
   <string name="Deathling_Name">デスリング</string>
   <string name="Deathling_Name_Objective">デスリング</string>
-  <string name="Deathling_Desc">デスリングとは、不運にも仲間の冒険者に召喚されてしまった死した英雄の魂のことで、彼は死霊術を実践している。</string>
+  <string name="Deathling_Desc">デスリングとは、不運にも仲間の死霊術師に召喚されてしまった、堕落した英雄の魂だ。</string>
   <string name="NecromancerRobe_PetLimitReached">死霊術：召喚数が限界に達した（現在の最大数：%d）！</string>
   <string name="Necromancy_NotEnoughSouls">あなたには「%1$s」の呪文を唱えるだけのソウルがない。</string>
   <string name="Necromancy_SoulsCountLabel">ソウル</string>
@@ -881,7 +881,7 @@
   <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
   <string name="ConcreteBlock_Name">重いコンクリートブロック</string>
   <string name="ConcreteBlock_Description">このブロックを押すには%dポイントの力が必要なようだ。</string>
-  <string name="Hero_AnotherTry">あなたは死んでしまった。もう一度やってみますか？</string>
+  <string name="Hero_AnotherTry">あなたは死んでしまった。もう一度挑戦してみますか？</string>
   <string name="ShadowLord_Name">影の君主</string>
   <string name="ShadowLord_Name_Objective">影の君主</string>
   <string name="ShadowLord_Desc">この生き物は純粋な悪と不可解な闇でできている。その力の強さから、多くの者は彼こそが旧神そのものだと信じている。一方で、彼は旧神の部屋の守護者に過ぎないという説もある。</string>
@@ -917,7 +917,8 @@
   <string name="Hero_Name_Objective">あなた</string>
   <string name="Hero_Leave">Remixed Dungeonから簡単に出ることはできない。</string>
   <string name="Hero_LevelUp">レベルアップ！</string>
-  <string name="Hero_NewLevel">レベル %d へようこそ！今、あなたはより健康で、より集中している。敵に攻撃を当てたり、かわしたりするのがより簡単になった。</string>
+  <string name="Hero_NewLevel">レベル %d へようこそ！
+今、あなたはより健康で、より集中している。敵に攻撃を当てたり、回避するのがより簡単になった。</string>
   <string name="Hero_YouNowHave">%s を手に入れた</string>
   <string name="Hero_SomethingElse">ここには何かがある</string>
   <string name="Hero_LockedChest">箱には鍵がかかっているが、合う鍵を持っていない。</string>
@@ -1036,7 +1037,7 @@
   <string name="MeleeWeapon_Info2b">平均ダメージは %1$d ポイントで、%2$d の力が必要だ。</string>
   <string name="MeleeWeapon_Info2c">この武器はあなたには重すぎるようだ。</string>
   <string name="MeleeWeapon_Info3a">これはかなり %s な武器だ。</string>
-  <string name="MeleeWeapon_Info3b">速い</string>
+  <string name="MeleeWeapon_Info3b">迅速</string>
   <string name="MeleeWeapon_Info3c">遅い</string>
   <string name="MeleeWeapon_Info3d">と</string>
   <string name="MeleeWeapon_Info3e">だが</string>
@@ -1047,7 +1048,7 @@
   <string name="MeleeWeapon_Info5">これは魔術がかかっている。</string>
   <string name="MeleeWeapon_Info6a">あなたの力が不足しているため、この %s の正確さと攻撃速度が低下している。</string>
   <string name="MeleeWeapon_Info6b">あなたの力が十分なので、この %s のダメージが増加する。</string>
-  <string name="MeleeWeapon_Info7a">%1$sを %2$sに構えた。</string>
+  <string name="MeleeWeapon_Info7a">%1$sを %2$s構えた。</string>
   <string name="MeleeWeapon_Info7b">、それは呪われているため、手放すことが出来ない</string>
   <string name="MeleeWeapon_Info7c">あなたは %s に潜んでいる邪悪な魔力を感じることが出来る。</string>
   <string name="BattleAxe_Name">バトルアックス</string>
@@ -1344,7 +1345,7 @@
   <string name="LibraryBook_Description">この書物は実に巨大だ。冒険者たちが発見し、ダンジョンから持ち帰ったすべての知識が収められている。</string>
   <string name="WndSettings_moveTimeout">Move timeout: %s</string>
   <string name="TrapWnd_Title">罠</string>
-  <string name="TrapWnd_Step">本当にこの罠を踏みたいのか？おそらく死ぬだろうが。</string>
+  <string name="TrapWnd_Step">本当にこの罠を踏みたいのか？死ぬかもしれないぞ。</string>
   <string name="BadgesScene_Title">あなたのバッジ</string>
   <string name="Badges_Info1">獲得したバッジ: %s</string>
   <string name="Badges_Info2">新しいスーパーバッジ: %s</string>
@@ -1757,7 +1758,7 @@
   <string name="YogsTeeth_Name_Objective">ヨグの歯</string>
   <string name="YogsTeeth_Desc">カミソリのような鋭い歯で満たされた旧神の巨大な口。あらゆる存在を破壊し、貪り尽くそうとする彼の衝動にふさわしい造形だ。</string>
   <string name="Food_ACEat">食べる</string>
-  <string name="Food_Message">その食べ物はとても美味しい！</string>
+  <string name="Food_Message">とても美味しい！</string>
   <string name="Ration_Name">糧食</string>
   <string name="Ration_Info">乾燥肉、ビスケット、そんなものだ。</string>
   <string name="ChargrilledMeat_Name">炭火焼肉</string>
@@ -1774,7 +1775,7 @@
   <string name="MysteryMeat_Info2">あなたは足の感覚がなくなった！</string>
   <string name="MysteryMeat_Info3">あなたは体調が良くない。</string>
   <string name="MysteryMeat_Info4">あなたは満腹だ。</string>
-  <string name="MysteryMeat_Message">あの食べ物は...奇妙な味がした。</string>
+  <string name="MysteryMeat_Message">奇妙な味がした...</string>
   <string name="RottenFood_Message">うんざりだ！</string>
   <string name="RottenMeat_Name">腐った肉</string>
   <string name="RottenMeat_Info">腐った肉。ひどい臭いがする</string>
@@ -2286,7 +2287,7 @@
   <string name="HeroClass_WarPerks_2">ウォリアーは遠隔武器の扱いが苦手だ。</string>
   <string name="HeroClass_WarPerks_3">どんな食べ物でも、食べればいくらかの体力を回復することができる。</string>
   <string name="HeroClass_WarPerks_4">力のポーションは最初から特定されている。</string>
-  <string name="HeroClass_MagPerks_0">魔法使いは、後で「魔法解除」して別の杖をアップグレードすることができるユニークな魔弾の杖を持ってスタートする。</string>
+  <string name="HeroClass_MagPerks_0">メイジは、後で「魔法解除」して別の杖をアップグレードすることができるユニークな魔弾の杖を持ってスタートする。</string>
   <string name="HeroClass_MagPerks_1">メイジは杖のリチャージが早い。</string>
   <string name="HeroClass_MagPerks_2">食品を食べると、インベントリ内のすべての杖のチャージが1回復する。</string>
   <string name="HeroClass_MagPerks_3">メイジは杖を近接武器として使うことができる。</string>
@@ -2398,7 +2399,7 @@
   <string name="Scroll_Runes_13">にてちつ</string>
   <string name="Scroll_Runes_14">ちりきにつ</string>
   <string name="Scroll_Runes_15">しちきちつ</string>
-  <string name="HeroClass_GnollPerks_0">ノールはスタート時に15ポイントの体力がある。</string>
+  <string name="HeroClass_GnollPerks_0">ノールはスタート時に15ポイントの力がある。</string>
   <string name="HeroClass_GnollPerks_1">ノールはスタート時に5ポイントしか体力がない</string>
   <string name="HeroClass_GnollPerks_2">ノールは鎧なしでスタートするが、ユニークなトマホークを持っている。</string>
   <string name="HeroClass_GnollPerks_3">ノールは読み書きができない</string>
@@ -2489,7 +2490,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="StunBuff_Name">唖然</string>
   <string name="StunBuff_Info">唖然とした！</string>
   <string name="Char_StaStunned">びっくり</string>
-  <string name="Mob_ReadyForOrder">%sのご注文をお待ちしております。</string>
+  <string name="Mob_ReadyForOrder">%sは命令を待っている。</string>
   <string name="Mob_CantDoIt">僕にはできないよ。前足が小さいから。</string>
   <string name="InnKeeperNPC_Name">宿の番人</string>
   <string name="InnKeeperNPC_Name_Objective">宿の番人</string>
@@ -2696,8 +2697,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="WndTilesKind_ClassicLook">クラシックな方</string>
   <string name="MobAi_status">この%sは%sである</string>
   <string name="WndCustomizations_Title">カスタマイズ</string>
-  <string name="IceGuardianCore_DieInfo">ここはとても寒いから、レベル14に戻って暖かい場所に行く方法を探したほうがいいね。</string>
-  <string name="Lich_DieInfo">絶対にこのネクロマンサーのようにはなりたくない。というわけで、7階に戻り、新たな冒険への別の道を探す時が来た。</string>
+  <string name="IceGuardianCore_DieInfo">ここはとても寒いから、14階に戻って暖かい場所に行く方法を探したほうが良さそうだ。</string>
+  <string name="Lich_DieInfo">絶対にこのネクロマンサーのようにはなりたくないな。さて、7階に戻って別の道を探すとしよう。</string>
   <string name="SpiderQueen_DieInfo">スパイダークイーンを倒した！さて、5階に戻り、深層への旅を続けよう。</string>
   <string name="WndModSelect_ReallyDelete">本当に削除しますか？</string>
   <string name="WndModSelect_AreYouSure">MOD %s を削除します。よろしいですか？</string>
@@ -2750,7 +2751,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="Carcass_Name">%sの死体</string>
   <string name="Carcass_Info">完全に死んだ %sの死体</string>
   <string name="ResultDescriptions_Necromancy">階層%dで死体を生き返らせようとして生命力が枯渇した。</string>
-  <string name="Item_ACPickup">選ぶ</string>
+  <string name="Item_ACPickup">拾う</string>
   <string name="Necromancy_Death">あなたは死霊術の練習中に生命力を使い果たした。</string>
   <string name="AC_Necromancy">死霊術</string>
   <string name="AC_Devour">ディバウアー</string>
@@ -2817,4 +2818,9 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     -- Custom items now can perform actions while being in heaps\n
     - Bugs fixed\n
     </string>
+  <string name="WndInstallingMod_deleting_file">消滅の%s</string>
+  <string name="Badges_ThisIsSparta">これがスパルタだ!!!</string>
+  <string name="WndSettings_FpsLimit">FPS制限</string>
+  <string name="StartScene_ContinueLatest">直近の冒険を続けるか、セーブスロットから選択する</string>
+  <string name="StartScene_ChooseFromSlot">セーブスロットから選択する</string>
 </resources>
