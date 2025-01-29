@@ -71,7 +71,7 @@ public abstract class WndMenuCommon extends Window {
                 int value = getSelectedValue();
                 GamePreferences.musicVolume(value);
                 GamePreferences.music(value > 0);
-                MusicManager.INSTANCE.volume(value/10.f);
+                MusicManager.INSTANCE.resume();
             }
         };
         music.setSelectedValue(GamePreferences.musicVolume());

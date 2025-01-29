@@ -143,7 +143,7 @@ public class Game implements ApplicationListener, InputProcessor {
             }
         }
 
-        if (Gdx.input.isButtonPressed(Input.Buttons.RIGHT)) {
+        if (BuildConfig.DEBUG && Gdx.input.isButtonPressed(Input.Buttons.RIGHT)) {
             takeScreenshot();
         }
     }
@@ -255,7 +255,7 @@ public class Game implements ApplicationListener, InputProcessor {
     @Override
     public boolean scrolled(float amountX, float amountY) {
         if (GameLoop.scene() instanceof GameScene) {
-            GamePreferences.zoom(GamePreferences.zoom() + amountY / 20);
+            GamePreferences.zoom(GamePreferences.zoom() - amountY / 10);
             Camera.main.zoom((float) (GameScene.defaultZoom + GamePreferences.zoom()));
         }
         return true;

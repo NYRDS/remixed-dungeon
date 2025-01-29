@@ -25,6 +25,8 @@ public enum MusicManager {
 
 	private boolean enabled = true;
 
+	private float volume = 1;
+
 	public void play(@NotNull String assetName, boolean looping) {
 		if (!enabled) {
 			lastPlayed = assetName;
@@ -49,7 +51,7 @@ public enum MusicManager {
 		try {
 			player = Gdx.audio.newMusic(FileSystem.getInternalStorageFileHandle(assetFilename));
 			player.setLooping(looping);
-			volume(1);
+			volume(volume);
 			player.play();
 			//PUtil.slog("music", "playing " + assetFilename);
 		} catch (Exception e) {
@@ -73,7 +75,8 @@ public enum MusicManager {
 	}
 
 	public void resume() {
-		if (isPlaying()) {
+		if (player != null) {
+			volume(volume);
 			player.play();
 		}
 	}
@@ -87,6 +90,8 @@ public enum MusicManager {
 	}
 
 	public void volume(float value) {
+
+		volume = value;
 		try {
 			if (player != null) {
 				value *= GamePreferences.musicVolume() / 10f;
