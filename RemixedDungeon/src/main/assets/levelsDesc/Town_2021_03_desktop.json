@@ -19,11 +19,6 @@
          "y":21
         }, 
         {
-         "kind":"TownsfolkMovieNPC",
-         "x":12,
-         "y":15
-        }, 
-        {
          "kind":"TownsfolkSilentNPC",
          "x":4,
          "y":10
@@ -42,6 +37,11 @@
          "kind":"TownsfolkNPC",
          "x":23,
          "y":7
+        }, 
+        {
+         "kind":"TownsfolkNPC",
+         "x":12,
+         "y":16
         }, 
         {
          "kind":"TownGuardNPC",

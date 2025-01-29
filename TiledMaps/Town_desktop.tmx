@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.1" orientation="orthogonal" renderorder="left-up" width="32" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="22">
+<map version="1.10" tiledversion="1.11.1" orientation="orthogonal" renderorder="left-up" width="32" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="23">
  <tileset firstgid="1" source="tilesets/tiles_town_outside_winter.tsx"/>
  <tileset firstgid="257" source="tilesets/tiles_town_inside.tsx"/>
  <tileset firstgid="1281" source="tilesets/logic.tsx"/>
  <tileset firstgid="1345" source="tilesets/Objects.tsx"/>
- <layer id="1" name="logic" width="32" height="32">
+ <layer id="1" name="logic" width="32" height="32" locked="1">
   <data encoding="csv">
 1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1282,1282,1282,1282,1282,1282,1282,1285,1285,1285,1285,1285,1285,1285,1282,1282,
 1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1282,1282,1285,1285,1285,1285,1285,1285,1285,1285,1282,
@@ -40,7 +40,7 @@
 1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1285,1282,1282,1282,1282,1282,1282,1282,1282,1285
 </data>
  </layer>
- <objectgroup id="10" name="objects" locked="1">
+ <objectgroup id="10" name="objects">
   <object id="11" name="PortalGateReceiver" type="object" x="200" y="460">
    <point/>
   </object>
@@ -50,19 +50,19 @@
   <object id="13" name="TownGuardNPC" type="mob" x="280" y="348">
    <point/>
   </object>
-  <object id="14" name="TownsfolkMovieNPC" type="mob" x="200" y="252">
-   <point/>
-  </object>
   <object id="15" name="TownsfolkSilentNPC" type="mob" x="72" y="172">
    <point/>
   </object>
   <object id="16" name="HealerNPC" type="mob" x="120" y="172">
    <point/>
   </object>
-  <object id="17" name="PlagueDoctorNPC" type="mob" x="232" y="188">
+  <object id="17" name="PlagueDoctor" type="mob" x="232" y="188">
    <point/>
   </object>
   <object id="18" name="TownsfolkNPC" type="mob" x="376" y="124">
+   <point/>
+  </object>
+  <object id="22" name="TownsfolkNPC" type="mob" x="201" y="256.333">
    <point/>
   </object>
   <object id="19" name="TownGuardNPC" type="mob" x="232" y="92">
