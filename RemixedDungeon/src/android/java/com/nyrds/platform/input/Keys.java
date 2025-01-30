@@ -45,15 +45,18 @@ public class Keys {
 		}
 
 	}
-	
 	public static class Key {
-		
-		public final int code;
-		public final boolean pressed;
-		
+
+		public final static int END_OF_FRAME = -1;
+		public final static int BEGIN_OF_FRAME = -2;
+
+		public int code;
+		public boolean pressed;
+
 		public Key( int code, boolean pressed ) {
 			this.code = code;
 			this.pressed = pressed;
 		}
 	}
+
 }
