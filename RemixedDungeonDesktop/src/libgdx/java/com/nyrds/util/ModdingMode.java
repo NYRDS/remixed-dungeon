@@ -64,6 +64,7 @@ public class ModdingMode {
     public static final String THE_EPIC_DUNGEON = "The epic dungeon";
 
     public static final String HI_FI_DLC = "HiFi DLC";
+    public static final String GACHI_RPD = "Gachi RPD; Ascension";
 
     static {
         trustedMods.add(MAZE);
@@ -72,6 +73,7 @@ public class ModdingMode {
         trustedMods.add(REMIXED_ADDITIONS);
         trustedMods.add(REMIXED_RPG);
         trustedMods.add(THE_EPIC_DUNGEON);
+        trustedMods.add(GACHI_RPD);
 
         dlcSet.add(REMIXED_ADDITIONS);
         dlcSet.add(REMIXED_RPG);
