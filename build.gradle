@@ -1,5 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
+    ext {
+        agp_version = '8.5.2'
+    }
     repositories {
         mavenCentral()
         google()
@@ -10,9 +13,11 @@ buildscript {
         
         maven { url 'https://developer.huawei.com/repo/' }
 
+
+
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.3.2'
+        classpath "com.android.tools.build:gradle:$agp_version"
         classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.9'
         classpath 'com.google.firebase:perf-plugin:1.4.2'
         classpath 'com.google.gms:google-services:4.4.1' // google-services plugin

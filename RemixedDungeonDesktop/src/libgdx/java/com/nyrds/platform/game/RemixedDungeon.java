@@ -74,6 +74,8 @@ public class RemixedDungeon extends Game {
 
 		updateFpsLimit();
 
+		toggleFullscreen();
+
 		super.create();
 	}
 

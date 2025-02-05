@@ -35,7 +35,7 @@ public class AboutScene extends PixelScene {
 	}
 
 	private static String getTRN() {
-        return StringsManager.getVar(R.string.AboutScene_Translation) + "\n\t" + StringsManager.getVar(R.string.AboutScene_Translation_Names);
+        return StringsManager.getVar(R.string.AboutScene_Translation) + "\n" + StringsManager.getVar(R.string.AboutScene_Translation_Names);
 	}
 
 	private Text createTouchEmail(final String address, Text text2)
@@ -53,7 +53,7 @@ public class AboutScene extends PixelScene {
 		return text;
 	}
 	
-	private Text createTouchLink(final String address, Text visit)
+	private Text createTouchLink(final int desc_res, final String address, Text visit)
 	{
 		Text text = createText(address, visit);
 		text.hardlight( Window.TITLE_COLOR );
@@ -61,7 +61,7 @@ public class AboutScene extends PixelScene {
 		TouchArea area = new TouchArea( text ) {
 			@Override
 			protected void onClick( Touch touch ) {
-                Game.openUrl(StringsManager.getVar(R.string.AboutScene_OurSite), address);
+                Game.openUrl(StringsManager.getVar(desc_res), address);
 			}
 		};
 		add(area);
@@ -98,9 +98,11 @@ public class AboutScene extends PixelScene {
         Text email = createTouchEmail(StringsManager.getVar(R.string.AboutScene_Mail), text);
 
         Text visit = createText(StringsManager.getVar(R.string.AboutScene_OurSite), email);
-        Text site  = createTouchLink(StringsManager.getVar(R.string.AboutScene_Lnk), visit);
+        Text site  = createTouchLink(R.string.AboutScene_OurSite, StringsManager.getVar(R.string.AboutScene_Lnk), visit);
 		
-		Text trn = createText("\n"+ getTRN(), site);
+		Text trn = createText(getTRN(), site);
+		Text getCode = createText(StringsManager.getVar(R.string.AboutScene_SourceCode), trn);
+		Text code = createTouchLink(R.string.AboutScene_SourceCode, "https://github.com/NYRDS/remixed-dungeon", getCode);
 		
 		Image nyrdie = Icons.NYRDIE.get();
 		nyrdie.setX(align( text.getX() + (text.width() - nyrdie.width) / 2 ));
