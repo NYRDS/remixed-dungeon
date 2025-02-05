@@ -7,3 +7,4 @@
 local RPD = require "scripts/lib/commonClasses"
 
 RPD.ModQuirks.mobLeveling = true
+RPD.ModQuirks.noMovingArcs = false

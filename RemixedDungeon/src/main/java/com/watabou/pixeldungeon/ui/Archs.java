@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.watabou.noosa.SkinnedBlock;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
@@ -42,7 +43,9 @@ public class Archs extends Component {
 	public void update() {
 		
 		super.update();
-		
+		if(ModQuirks.noMovingArcs) {
+			return;
+		}
 		float shift = GameLoop.elapsed * SCROLL_SPEED;
 		if (reversed) {
 			shift = -shift;
