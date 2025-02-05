@@ -107,6 +107,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         shutdown();
     }
 
+    //TODO investigate how it behaves
     public static void shutdown() {
         paused = true;
         instance().gameLoop.shutdown();
