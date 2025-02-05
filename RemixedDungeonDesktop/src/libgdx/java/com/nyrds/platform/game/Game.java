@@ -63,8 +63,11 @@ public class Game implements ApplicationListener, InputProcessor {
     }
 
     public static void shutdown() {
-        paused = true;
-        System.exit(0);
+        GameLoop.pushUiTask(() -> {
+            instance.pause();
+            instance.dispose();
+            System.exit(0);
+        });
     }
 
     public static void toast(final String text, final Object... args) { }
@@ -187,6 +190,7 @@ public class Game implements ApplicationListener, InputProcessor {
 
     private int w_width = 800, w_height = 450;
     public void toggleFullscreen() {
+        pause();
         Graphics graphics = Gdx.graphics;
 
         if (graphics.isFullscreen()) {
@@ -198,6 +202,7 @@ public class Game implements ApplicationListener, InputProcessor {
             Graphics.DisplayMode displayMode = graphics.getDisplayMode();
             graphics.setFullscreenMode(displayMode);
         }
+        resume();
     }
 
     @Override
