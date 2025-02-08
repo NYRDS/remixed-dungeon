@@ -33,13 +33,7 @@ import java.util.Set;
 import lombok.SneakyThrows;
 
 
-public class ModdingMode {
-	public static final String REMIXED = "Remixed";
-	public static final String NO_FILE = "___no_file";
-
-	private static final Set<String> trustedMods = new HashSet<>();
-	private static final Set<String> dlcSet = new HashSet<>();
-
+public class ModdingMode extends ModdingBase{
 	public static boolean useRetroHeroSprites = false;
 
 	private static final Set<String> pathsChecked = new HashSet<>();
@@ -50,50 +44,12 @@ public class ModdingMode {
 	private static final Map<String, String> rewardVideoIds = new HashMap<>();
 	private static final Map<String, String> interstitialIds = new HashMap<>();
 
-	public static final Set<String> sizeAgnosticFiles = new HashSet<>();
-
-	public static final String MAZE = "Maze";
-
-	public static final String CONUNDRUM = "Conundrum";
-
-	public static final String REMIXED_ADDITIONS = "Remixed Additions";
-
-	public static final String REMIXED_RPG = "Remixed RPG";
-
-	public static final String THE_EPIC_DUNGEON = "The epic dungeon";
-
-	public static final String HI_FI_DLC = "HiFi DLC";
-	public static final String GACHI_RPD = "Gachi RPD; Ascension";
-
 	static {
-		trustedMods.add(MAZE);
-		trustedMods.add(CONUNDRUM);
-
-		trustedMods.add(REMIXED_ADDITIONS);
-		trustedMods.add(REMIXED_RPG);
-		trustedMods.add(THE_EPIC_DUNGEON);
-		trustedMods.add(GACHI_RPD);
-
-
 		rewardVideoIds.put(THE_EPIC_DUNGEON, "R-M-7590884-4");
 		rewardVideoIds.put(REMIXED_RPG, "R-M-7590884-5");
 
 		interstitialIds.put(THE_EPIC_DUNGEON, "R-M-7590884-6");
 		interstitialIds.put(REMIXED_RPG, "R-M-7590884-7");
-
-		dlcSet.add(REMIXED_ADDITIONS);
-		dlcSet.add(REMIXED_RPG);
-		dlcSet.add(THE_EPIC_DUNGEON);
-
-		dlcSet.add(HI_FI_DLC);
-		dlcSet.add(REMIXED);
-
-		resourcesRemap.put("spellsIcons/elemental(new).png", "spellsIcons/elemental_all.png");
-
-		sizeAgnosticFiles.add("ui/title.png");
-		sizeAgnosticFiles.add("amulet.png");
-		sizeAgnosticFiles.add("ui/arcs1.png");
-		sizeAgnosticFiles.add("ui/arcs2.png");
 	}
 
 	@NotNull
@@ -328,10 +284,6 @@ public class ModdingMode {
 		}
 
 		return trustedMod() || !(resName.contains("accessories") || resName.contains("banners"));
-	}
-
-	private static boolean trustedMod() {
-		return trustedMods.contains(mActiveMod);
 	}
 
 	public static void setClassicTextRenderingMode(boolean val) {

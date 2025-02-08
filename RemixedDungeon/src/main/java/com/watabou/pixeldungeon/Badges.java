@@ -11,7 +11,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
-import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ModdingBase;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
@@ -304,7 +304,7 @@ public class Badges {
 	}
 
 	private static void saveGlobal() {
-		if (!ModdingMode.inRemixed()) {
+		if (!ModdingBase.inRemixed()) {
 			return;
 		}
 
@@ -974,7 +974,7 @@ public class Badges {
 	}
 
 	private static void unlockPlayGamesBadge(Badge badge) {
-		if (ModdingMode.inRemixed()) {
+		if (ModdingBase.inRemixed()) {
 			String achievementCode = StringsManager.getVar("achievement_" + badge.name().toLowerCase(Locale.ROOT));
 
 			if(achievementCode.isEmpty()) {

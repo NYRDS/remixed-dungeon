@@ -1,7 +1,5 @@
 package com.nyrds.util;
 
-import com.nyrds.LuaInterface;
-import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.gfx.BitmapData;
@@ -11,7 +9,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import org.apache.commons.io.input.BOMInputStream;
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -23,8 +20,6 @@ import java.io.InputStreamReader;
 import java.io.SequenceInputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -34,64 +29,12 @@ import java.util.Set;
 import lombok.SneakyThrows;
 
 
-public class ModdingMode {
-    public static final String REMIXED = "Remixed";
-    public static final String NO_FILE = "___no_file";
-
-    private static final Set<String> trustedMods = new HashSet<>();
-    private static final Set<String> dlcSet = new HashSet<>();
+public class ModdingMode extends ModdingBase {
 
     public static boolean useRetroHeroSprites = false;
 
     private static final Set<String> pathsChecked = new HashSet<>();
     private static final Map<String, Boolean> assetsExistenceCache = new HashMap<>();
-
-    private static final Map<String, String> resourcesRemap = new HashMap<>();
-
-    private static final Map<String, String> rewardVideoIds = new HashMap<>();
-    private static final Map<String, String> interstitialIds = new HashMap<>();
-
-    public static final Set<String> sizeAgnosticFiles = new HashSet<>();
-
-    public static final String MAZE = "Maze";
-
-    public static final String CONUNDRUM = "Conundrum";
-
-    public static final String REMIXED_ADDITIONS = "Remixed Additions";
-
-    public static final String REMIXED_RPG = "Remixed RPG";
-
-    public static final String THE_EPIC_DUNGEON = "The epic dungeon";
-
-    public static final String HI_FI_DLC = "HiFi DLC";
-    public static final String GACHI_RPD = "Gachi RPD; Ascension";
-
-    static {
-        trustedMods.add(MAZE);
-        trustedMods.add(CONUNDRUM);
-
-        trustedMods.add(REMIXED_ADDITIONS);
-        trustedMods.add(REMIXED_RPG);
-        trustedMods.add(THE_EPIC_DUNGEON);
-        trustedMods.add(GACHI_RPD);
-
-        dlcSet.add(REMIXED_ADDITIONS);
-        dlcSet.add(REMIXED_RPG);
-        dlcSet.add(THE_EPIC_DUNGEON);
-
-        dlcSet.add(HI_FI_DLC);
-        dlcSet.add(REMIXED);
-
-        resourcesRemap.put("spellsIcons/elemental(new).png", "spellsIcons/elemental_all.png");
-
-        sizeAgnosticFiles.add("ui/title.png");
-        sizeAgnosticFiles.add("amulet.png");
-        sizeAgnosticFiles.add("ui/arcs1.png");
-        sizeAgnosticFiles.add("ui/arcs2.png");
-    }
-
-    @NotNull
-    static private String mActiveMod = REMIXED;
 
     static private boolean mTextRenderingMode = false;
 
@@ -102,32 +45,19 @@ public class ModdingMode {
             assetsExistenceCache.clear();
 
             File modPath = FileSystem.getExternalStorageFile(mod);
-            if ((modPath.exists() && modPath.isDirectory()) || mod.equals(ModdingMode.REMIXED)) {
+            if ((modPath.exists() && modPath.isDirectory()) || mod.equals(ModdingBase.REMIXED)) {
                 mActiveMod = mod;
             }
 
-            if (!mod.equals(ModdingMode.REMIXED)) {
+            if (!mod.equals(ModdingBase.REMIXED)) {
                 useRetroHeroSprites = !isResourceExistInMod("hero_modern");
             }
         } catch (Exception e) {
             EventCollector.logException(e);
-            mActiveMod = ModdingMode.REMIXED;
+            mActiveMod = ModdingBase.REMIXED;
         } finally {
             FileSystem.invalidateCache();
         }
-    }
-
-    public static int activeModVersion() {
-        if (mActiveMod.equals(ModdingMode.REMIXED)) {
-            return GameLoop.versionCode;
-        }
-
-        JSONObject version = JsonHelper.tryReadJsonFromAssets("version.json");
-        return version.optInt("version");
-    }
-
-    public static String activeMod() {
-        return mActiveMod;
     }
 
     public static String getSoundById(String id) {
@@ -185,15 +115,6 @@ public class ModdingMode {
         return res;
     }
 
-    public static boolean inMod() {
-        return !mActiveMod.equals(REMIXED);
-    }
-
-    @LuaInterface
-    public static boolean inRemixed() {
-        return dlcSet.contains(mActiveMod);
-    }
-
     public static boolean isResourceExists(String resName) {
         return FileSystem.exists(resName);
     }
@@ -208,9 +129,7 @@ public class ModdingMode {
 
         var list = _listResources(path, filter);
 
-        for (int i = 0; i < list.size(); ++i) {
-            list.set(i, list.get(i).replaceFirst(path + "/", ""));
-        }
+        list.replaceAll(s -> s.replaceFirst(path + "/", ""));
 
         return list;
     }
@@ -324,39 +243,12 @@ public class ModdingMode {
         return trustedMod() || !(resName.contains("accessories") || resName.contains("banners"));
     }
 
-    private static boolean trustedMod() {
-        return trustedMods.contains(mActiveMod);
-    }
-
     public static void setClassicTextRenderingMode(boolean val) {
         mTextRenderingMode = val;
     }
 
     public static boolean getClassicTextRenderingMode() {
         return mTextRenderingMode;
-    }
-
-    public static boolean isHalloweenEvent() {
-
-        Calendar now = new GregorianCalendar();
-        Calendar halloween = new GregorianCalendar();
-        halloween.set(Calendar.MONTH, Calendar.OCTOBER);
-        halloween.set(Calendar.DAY_OF_MONTH, 31);
-
-        long milisPerDay = (1000 * 60 * 60 * 24);
-
-        long nowMilis = now.getTimeInMillis() / milisPerDay;
-        long hallMilis = halloween.getTimeInMillis() / milisPerDay;
-
-        long daysDiff;
-
-        if (nowMilis > hallMilis) {
-            daysDiff = (nowMilis - hallMilis);
-        } else {
-            daysDiff = (hallMilis - nowMilis);
-        }
-
-        return daysDiff < 14;
     }
 
     public static RuntimeException modException(Exception e) {
@@ -370,27 +262,25 @@ public class ModdingMode {
     @SneakyThrows
     public static @NotNull BitmapData getBitmapData(String src) {
 
-        String resName = (String) src;
-
-        BitmapData modAsset = BitmapData.decodeStream(getInputStream(resName));
+        BitmapData modAsset = BitmapData.decodeStream(getInputStream(src));
 
         if (modAsset.bmp == null) {
-            throw new ModError("Bad bitmap: " + resName);
+            throw new ModError("Bad bitmap: " + src);
         }
 
-        if (sizeAgnosticFiles.contains(resName)) {
+        if (sizeAgnosticFiles.contains(src)) {
             return modAsset;
         }
 
-        if (isAssetExist(resName)) {
-            BitmapData baseAsset = BitmapData.decodeStream(getInputStreamBuiltIn(resName));
+        if (isAssetExist(src)) {
+            BitmapData baseAsset = BitmapData.decodeStream(getInputStreamBuiltIn(src));
 
             if (baseAsset.bmp == null) {
-                throw new ModError("Bad builtin bitmap: " + resName);
+                throw new ModError("Bad builtin bitmap: " + src);
             }
 
             if (modAsset.getHeight() * modAsset.getWidth() < baseAsset.getWidth() * baseAsset.getHeight()) {
-                RemixedDungeon.toast("%s image in %s smaller than in Remixed, using base version", resName, activeMod());
+                RemixedDungeon.toast("%s image in %s smaller than in Remixed, using base version", src, activeMod());
                 return baseAsset;
             }
         }

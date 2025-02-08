@@ -34,7 +34,7 @@ import com.nyrds.platform.storage.SaveUtils;
 import com.nyrds.platform.util.Os;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
-import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ModdingBase;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Rankings.gameOver;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -495,7 +495,7 @@ public class Dungeon {
 
         bundle.put(LAST_USED_ID, EntityIdSource.getNextId());
         CharsList.storeInBundle(bundle);
-        bundle.put(MOD, ModdingMode.activeMod());
+        bundle.put(MOD, ModdingBase.activeMod());
 
         OutputStream output = FileSystem.getOutputStream(fileName);
         Bundle.write(bundle, output);
@@ -608,8 +608,8 @@ public class Dungeon {
 
     private static void loadGameFromBundle(Bundle bundle, boolean fullLoad) {
 
-        String saveMod = bundle.optString(MOD, ModdingMode.REMIXED);
-        String activeMod = ModdingMode.activeMod();
+        String saveMod = bundle.optString(MOD, ModdingBase.REMIXED);
+        String activeMod = ModdingBase.activeMod();
 
         if (fullLoad && !saveMod.equals(activeMod)) {
             EventCollector.logException(new Exception(
@@ -995,7 +995,7 @@ public class Dungeon {
     }
 
     public static boolean setChallenge(int mask) {
-        if (ModdingMode.inMod()) {
+        if (ModdingBase.inMod()) {
             if (mask == Challenges.NO_TOWN) {
                 return false;
             }

@@ -9,7 +9,7 @@ import com.nyrds.platform.input.Touchscreen.Touch;
 import com.nyrds.platform.storage.SaveUtils;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
-import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ModdingBase;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -32,7 +32,7 @@ public class WndModDescription extends Window {
 
         yPos = 0;
 
-        if (!option.equals(ModdingMode.REMIXED)) {
+        if (!option.equals(ModdingBase.REMIXED)) {
             Text title = PixelScene.createMultiline(GuiProperties.titleFontSize());
             title.maxWidth(width);
             title.text(StringsManager.getVar(R.string.Mod_Name) + "\n ");

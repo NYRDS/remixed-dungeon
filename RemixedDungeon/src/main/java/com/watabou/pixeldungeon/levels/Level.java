@@ -29,6 +29,7 @@ import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingBase;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Scene;
@@ -289,12 +290,12 @@ public abstract class Level implements Bundlable {
 			return levelId;
 		}
 
-		String music = DungeonGenerator.getLevelProperty(levelId, "music", ModdingMode.NO_FILE);
+		String music = DungeonGenerator.getLevelProperty(levelId, "music", ModdingBase.NO_FILE);
 		if(ModdingMode.isSoundExists(music)) {
 			return music;
 		}
 
-		music = DungeonGenerator.getLevelProperty(levelId, "fallbackMusic", ModdingMode.NO_FILE);
+		music = DungeonGenerator.getLevelProperty(levelId, "fallbackMusic", ModdingBase.NO_FILE);
 		if(ModdingMode.isSoundExists(music)) {
 			return music;
 		}
@@ -828,7 +829,7 @@ public abstract class Level implements Bundlable {
 			return tilesTex();
 		}
 
-		if (ModdingMode.inMod() && !ModdingMode.isResourceExistInMod(tilesTexEx())
+		if (ModdingBase.inMod() && !ModdingMode.isResourceExistInMod(tilesTexEx())
 				&& ModdingMode.isResourceExistInMod(tilesTex())) {
 			return tilesTex();
 		}

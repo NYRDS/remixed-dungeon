@@ -21,7 +21,7 @@ import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
-import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ModdingBase;
 import com.nyrds.util.Scrambler;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.Assets;
@@ -591,8 +591,8 @@ public class Hero extends Char {
 
         deathDesc.put("difficulty", Integer.toString(GameLoop.getDifficulty()));
         deathDesc.put("version", GameLoop.version);
-        deathDesc.put("mod", ModdingMode.activeMod());
-        deathDesc.put("modVersion", Integer.toString(ModdingMode.activeModVersion()));
+        deathDesc.put("mod", ModdingBase.activeMod());
+        deathDesc.put("modVersion", Integer.toString(ModdingBase.activeModVersion()));
 
         deathDesc.put("donation", Integer.toString(GamePreferences.donated()));
         deathDesc.put("heroLevel", Integer.toString(lvl()));

@@ -25,7 +25,7 @@ import com.nyrds.platform.input.Keys;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModError;
-import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ModdingBase;
 import com.nyrds.util.Util;
 import com.nyrds.util.WeakOptional;
 import com.watabou.noosa.Camera;
@@ -519,7 +519,7 @@ public class GameScene extends PixelScene {
             GLog.debug(Dungeon.hero.immunities().toString());
             //GLog.toFile(StringsManager.missingStrings.toString());
 
-            if (!(level instanceof TestLevel) && !ModdingMode.inMod()) {
+            if (!(level instanceof TestLevel) && !ModdingBase.inMod()) {
                 for (var lo : level.getAllLevelObjects()) {
                     int pos = lo.getPos();
                     if (!TerrainFlags.is(level.map[pos], TerrainFlags.PASSABLE)) {

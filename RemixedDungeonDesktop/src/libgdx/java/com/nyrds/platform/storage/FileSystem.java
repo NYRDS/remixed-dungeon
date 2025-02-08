@@ -6,7 +6,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.nyrds.platform.util.PUtil;
 import com.nyrds.util.ModError;
-import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ModdingBase;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -43,7 +43,7 @@ public class FileSystem {
 
 	private static String[] getAllResPaths() {
 		return new String[]{
-				"mods/" + ModdingMode.activeMod() + "/",
+				"mods/" + ModdingBase.activeMod() + "/",
 				"mods/Remixed/",
 				"../assets/",
 				"../d_assets/",

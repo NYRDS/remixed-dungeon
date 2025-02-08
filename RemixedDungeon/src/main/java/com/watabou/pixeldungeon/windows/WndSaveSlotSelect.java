@@ -18,7 +18,7 @@ import com.nyrds.platform.support.Ads;
 import com.nyrds.platform.support.Iap;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
-import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ModdingBase;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Image;
@@ -300,7 +300,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
     }
 
     private static String slotNameFromIndexAndMod(int i) {
-        return ModdingMode.activeMod() + "_" + slotNameFromIndex(i);
+        return ModdingBase.activeMod() + "_" + slotNameFromIndex(i);
     }
 
 

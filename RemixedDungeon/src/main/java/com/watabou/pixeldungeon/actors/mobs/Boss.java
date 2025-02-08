@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mobs.common.ShadowLord;
 import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.util.ModdingBase;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
@@ -62,7 +63,7 @@ abstract public class Boss extends Mob {
 	@Override
 	protected void setupCharData() {
 		super.setupCharData();
-		battleMusic = getClassDef().optString(BATTLE_MUSIC, ModdingMode.NO_FILE);
+		battleMusic = getClassDef().optString(BATTLE_MUSIC, ModdingBase.NO_FILE);
 		if(ModdingMode.isSoundExists(battleMusic)) {
 			return;
 		}

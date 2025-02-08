@@ -17,6 +17,7 @@ import com.nyrds.platform.storage.AndroidSAF;
 import com.nyrds.platform.util.Os;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
+import com.nyrds.util.ModdingBase;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
@@ -263,7 +264,7 @@ public class TitleScene extends PixelScene {
             super.update();
         } catch (LuaError e) {
             EventCollector.logException(e, "TitleScene lua error");
-            ModdingMode.selectMod(ModdingMode.REMIXED);
+            ModdingMode.selectMod(ModdingBase.REMIXED);
             RemixedDungeon.instance().doRestart();
         }
 

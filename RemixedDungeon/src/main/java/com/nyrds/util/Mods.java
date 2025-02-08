@@ -65,10 +65,10 @@ public class Mods {
         }
 
         ModDesc Remixed = new ModDesc();
-        Remixed.installDir = Remixed.name = ModdingMode.REMIXED;
+        Remixed.installDir = Remixed.name = ModdingBase.REMIXED;
         Remixed.needUpdate = false;
         Remixed.installed = true;
-        modsList.put(ModdingMode.REMIXED, Remixed);
+        modsList.put(ModdingBase.REMIXED, Remixed);
 
         return modsList;
     }

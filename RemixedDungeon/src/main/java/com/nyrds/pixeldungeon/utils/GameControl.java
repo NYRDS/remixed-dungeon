@@ -5,8 +5,7 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.game.Game;
-import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ModdingBase;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Logbook;
@@ -50,7 +49,7 @@ public class GameControl {
         Map<String,String> resDesc = new HashMap<>();
         resDesc.put("class",className);
         resDesc.put("mod", GamePreferences.activeMod());
-        resDesc.put("modVersion", String.valueOf(ModdingMode.activeModVersion()));
+        resDesc.put("modVersion", String.valueOf(ModdingBase.activeModVersion()));
         resDesc.put("difficulty",  String.valueOf(difficulty));
 
         resDesc.put("version", GameLoop.version);

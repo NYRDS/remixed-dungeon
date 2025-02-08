@@ -1,7 +1,7 @@
 package com.nyrds.platform.lua;
 
 import com.nyrds.util.ModError;
-import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ModdingBase;
 
 import org.luaj.vm2.lib.jse.LuajavaLib;
 
@@ -44,7 +44,7 @@ public class PlatformLuajavaLib extends LuajavaLib {
 			Class clazz = Class.forName(actualClassName, true, classLoader);
 			return clazz;
 		} catch (ClassNotFoundException e) {
-			ModError.doReport("Failed to load class ["+classLoader.toString() + "] in mod "+ ModdingMode.activeMod(), e);
+			ModError.doReport("Failed to load class ["+classLoader.toString() + "] in mod "+ ModdingBase.activeMod(), e);
 			return Object.class;
 		}
 	}

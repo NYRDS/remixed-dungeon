@@ -12,6 +12,7 @@ import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.support.Ads;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.ModdingBase;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
@@ -157,13 +158,13 @@ public class GamePreferences {
 
         setSelectedLanguage();
 
-        EventCollector.setSessionData("RPD_active_mod", ModdingMode.activeMod());
-        EventCollector.setSessionData("active_mod_version", Integer.toString(ModdingMode.activeModVersion()));
+        EventCollector.setSessionData("RPD_active_mod", ModdingBase.activeMod());
+        EventCollector.setSessionData("active_mod_version", Integer.toString(ModdingBase.activeModVersion()));
         ModsButton.modUpdated();
     }
 
     public static String activeMod() {
-        return Preferences.INSTANCE.getString(CommonPrefs.KEY_ACTIVE_MOD, ModdingMode.REMIXED);
+        return Preferences.INSTANCE.getString(CommonPrefs.KEY_ACTIVE_MOD, ModdingBase.REMIXED);
     }
 
     public static boolean realtime() {

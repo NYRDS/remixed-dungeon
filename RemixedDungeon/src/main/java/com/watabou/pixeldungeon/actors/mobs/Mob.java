@@ -26,6 +26,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.ModdingBase;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -70,7 +71,7 @@ public abstract class Mob extends Char {
     protected int expForKill = 1;
 
     protected int maxLvl = 50;
-    protected float carcassChance = ModdingMode.inMod() ? ModQuirks.defaultCarcassChance : 0.5f;
+    protected float carcassChance = ModdingBase.inMod() ? ModQuirks.defaultCarcassChance : 0.5f;
 
     public static final float TIME_TO_WAKE_UP = 1f;
 

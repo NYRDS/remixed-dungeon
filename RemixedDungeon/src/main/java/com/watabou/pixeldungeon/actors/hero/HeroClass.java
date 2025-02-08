@@ -28,6 +28,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.JsonHelper;
+import com.nyrds.util.ModdingBase;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Image;
@@ -98,7 +99,7 @@ public enum HeroClass implements CharModifier {
 
 
     private final Integer titleId;
-    static public final JSONObject initHeroes = JsonHelper.readJsonFromAsset(Util.isDebug() && !ModdingMode.inMod() ? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
+    static public final JSONObject initHeroes = JsonHelper.readJsonFromAsset(Util.isDebug() && !ModdingBase.inMod() ? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
 
     private String magicAffinity = Utils.EMPTY_STRING;
 

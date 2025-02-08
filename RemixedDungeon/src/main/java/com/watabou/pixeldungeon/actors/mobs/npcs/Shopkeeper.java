@@ -7,7 +7,7 @@ import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.windows.WndShopOptions;
-import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ModdingBase;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -78,7 +78,7 @@ public class Shopkeeper extends NPC {
 
 		final Bag backpack = getBelongings().backpack;
 
-		if(ModdingMode.inRemixed() && GameLoop.getDifficulty() < 2) {
+		if(ModdingBase.inRemixed() && GameLoop.getDifficulty() < 2) {
 			if (countFood(backpack) < 3) {
 				var foodSupply = new OverpricedRation();
 				foodSupply.quantity(5);

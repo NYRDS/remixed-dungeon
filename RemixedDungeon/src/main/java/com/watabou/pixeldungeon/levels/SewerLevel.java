@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.effects.emitters.WaterSink;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.platform.util.StringsManager;
-import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ModdingBase;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -99,7 +99,7 @@ public class SewerLevel extends RegularLevel {
 
 		Ghost.Quest.spawn(this);
 
-		if (ModdingMode.isHalloweenEvent()) {
+		if (ModdingBase.isHalloweenEvent()) {
 			if (Dungeon.depth == 2) {
 				ScarecrowNPC.spawn(this);
 			}

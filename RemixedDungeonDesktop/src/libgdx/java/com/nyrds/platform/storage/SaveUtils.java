@@ -5,7 +5,7 @@ import static com.nyrds.pixeldungeon.ml.BuildConfig.SAVES_PATH;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ModdingBase;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
@@ -165,7 +165,7 @@ public class SaveUtils {
 	}
 
 	public static String modDataFile() {
-		return "ModDataFor_"+ModdingMode.activeMod() + ".dat";
+		return "ModDataFor_"+ ModdingBase.activeMod() + ".dat";
 	}
 
 	public static String depthFileForSave(HeroClass heroClass, int levelDepth, String levelKind, String levelId) {
@@ -177,7 +177,7 @@ public class SaveUtils {
 	}
 
 	static public String buildSlotFromTag(String tag, int difficulty)  {
-		return ModdingMode.activeMod() + "_" + tag + "_" + difficulty;
+		return ModdingBase.activeMod() + "_" + tag + "_" + difficulty;
 	}
 
 	public static String getAutoSave() {

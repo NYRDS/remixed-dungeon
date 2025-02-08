@@ -17,7 +17,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.DownloadStateListener;
 import com.nyrds.util.DownloadTask;
 import com.nyrds.util.GuiProperties;
-import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ModdingBase;
 import com.nyrds.util.Mods;
 import com.nyrds.util.UnzipStateListener;
 import com.nyrds.util.UnzipTask;
@@ -113,7 +113,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 
 			modRow.add(modInfo);
 
-			if (desc.installed && !ModdingMode.REMIXED.equals(desc.name)) {
+			if (desc.installed && !ModdingBase.REMIXED.equals(desc.name)) {
 				SimpleButton deleteBtn = new SimpleButton(Icons.get(Icons.CLOSE)) {
 					protected void onClick() {
 						GameLoop.addToScene(new WndOptions(StringsManager.getVar(R.string.WndModSelect_ReallyDelete),
@@ -156,8 +156,8 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 
 		if (GamePreferences.activeMod().equals(name)) {
 			SaveUtils.deleteGameAllClasses();
-			SaveUtils.copyAllClassesFromSlot(ModdingMode.REMIXED);
-			GamePreferences.activeMod(ModdingMode.REMIXED);
+			SaveUtils.copyAllClassesFromSlot(ModdingBase.REMIXED);
+			GamePreferences.activeMod(ModdingBase.REMIXED);
 			RemixedDungeon.instance().doRestart();
 		}
 
@@ -167,7 +167,7 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 	protected void onSelect(String option) {
 
 		ModDesc desc = modsList.get(option);
-		if (!option.equals(ModdingMode.REMIXED) || desc.needUpdate) {
+		if (!option.equals(ModdingBase.REMIXED) || desc.needUpdate) {
 
 			if (desc.needUpdate) {
 				FileSystem.deleteRecursive(FileSystem.getExternalStorageFile(desc.installDir));

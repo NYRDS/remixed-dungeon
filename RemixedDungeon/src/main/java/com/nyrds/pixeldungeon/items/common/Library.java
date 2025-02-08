@@ -7,7 +7,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
-import com.nyrds.util.ModdingMode;
+import com.nyrds.util.ModdingBase;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
@@ -169,7 +169,7 @@ public class Library {
     }
 
     public static String getLibraryFile() {
-        return ModdingMode.activeMod() + "_" + LIBRARY_FILE;
+        return ModdingBase.activeMod() + "_" + LIBRARY_FILE;
     }
 
     public static class EntryHeader {

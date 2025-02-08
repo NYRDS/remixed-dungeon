@@ -16,6 +16,7 @@ import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingBase;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Challenges;
@@ -88,13 +89,13 @@ public class DungeonGenerator {
 	}
 
 	private static void initLevelsMap() {
-		if (Util.isDebug() && !ModdingMode.inMod()) {
+		if (Util.isDebug() && !ModdingBase.inMod()) {
 			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon_debug.json");
 		} else {
 			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon.json");
 		}
 
-		if (Dungeon.isChallenged(Challenges.NO_TOWN) && !ModdingMode.inMod()) {
+		if (Dungeon.isChallenged(Challenges.NO_TOWN) && !ModdingBase.inMod()) {
 			mDungeonMap = JsonHelper.readJsonFromAsset("levelsDesc/Dungeon_no_town.json");
 		}
 
