@@ -28,7 +28,9 @@ Remixed Dungeon in [Google Play](https://play.google.com/store/apps/details?id=c
 
 Это форк Знаменитой Pixel Dungeon с Английской, Русской и множеством других локализаций.
 
-Remixed Dungeon в [Google Play](https://play.google.com/store/apps/details?id=com.nyrds.pixeldungeon.ml&referrer=utm_source%3Dgithub%26utm_content%3Dreadme), в [ruStore](https://apps.rustore.ru/app/com.nyrds.pixeldungeon.ml)
+Андроид версия Remixed Dungeon в [Google Play](https://play.google.com/store/apps/details?id=com.nyrds.pixeldungeon.ml&referrer=utm_source%3Dgithub%26utm_content%3Dreadme), в [ruStore](https://apps.rustore.ru/app/com.nyrds.pixeldungeon.ml)
+
+ПК версия Remixed Dungeon в [VkPlay](https://vkplay.ru/play/game/remixed-dungeon-pixel-rogue/)
 
 [Проект по переводу Remixed Dungeon](https://www.transifex.com/projects/p/remixed-dungeon/)
 
