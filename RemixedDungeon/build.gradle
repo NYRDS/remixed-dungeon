@@ -88,20 +88,16 @@ android {
         fdroid {
             dimension "market"
         }
-
+/*
         huawei {
             minSdkVersion 19
             dimension "market"
             applicationIdSuffix ".huawei"
         }
-
+*/
         android {
             dimension "platform"
 
-        }
-
-        libgdx {
-            dimension "platform"
         }
 
         none {
@@ -142,6 +138,8 @@ dependencies {
     implementation 'org.hjson:hjson:3.0.0'
     implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices
     implementation 'org.jetbrains:annotations:24.1.0'
+    implementation  'androidx.appcompat:appcompat:1.6.1' //don't upgrade will break build
+
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
     compileOnly 'org.projectlombok:lombok:1.18.30'
 
@@ -150,8 +148,6 @@ dependencies {
     androidImplementation 'androidx.documentfile:documentfile:1.0.1'
     androidImplementation 'com.google.guava:guava:31.1-android'
     androidImplementation 'androidx.multidex:multidex:2.0.1'
-
-    fdroidImplementation  'androidx.appcompat:appcompat:1.6.1' //don't upgrade will break build
 
 
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
@@ -176,11 +172,12 @@ dependencies {
         exclude group: "org.bidon", module: "yandex-adapter"
     }
 
-    googlePlayImplementation 'com.yandex.android:mobileads:7.6.0'
+    googlePlayImplementation 'com.yandex.android:mobileads:7.9.0'
 
-    ruStoreImplementation ("com.appodeal.ads:sdk:3.3.3.0") {
+    googlePlayImplementation ("com.appodeal.ads:sdk:3.4.0.0") {
         exclude group: "com.appodeal.ads.sdk.networks", module: "amazon"
         exclude group: "com.appodeal.ads.sdk.networks", module: "meta"
+        exclude group: "com.appodeal.ads.sdk.networks", module: "yandex"
         exclude group: "com.appodeal.ads.sdk.services", module: "adjust"
         exclude group: "com.appodeal.ads.sdk.services", module: "appsflyer"
         exclude group: "com.appodeal.ads.sdk.services", module: "facebook_analytics"
@@ -188,34 +185,37 @@ dependencies {
         exclude group: "com.applovin.mediation", module: "google-adapter"
         exclude group: "com.applovin.mediation", module: "amazon-tam-adapter"
         exclude group: "com.applovin.mediation", module: "facebook-adapter"
+        exclude group: "com.applovin.mediation", module: "yandex-adapter"
         exclude group: "io.bidmachine", module: "ads.networks.amazon"
         exclude group: "io.bidmachine", module: "ads.networks.meta_audience"
         exclude group: "org.bidon", module: "admob-adapter"
         exclude group: "org.bidon", module: "amazon-adapter"
         exclude group: "org.bidon", module: "meta-adapter"
+        exclude group: "org.bidon", module: "yandex-adapter"
     }
 
-    ruStoreImplementation 'com.yandex.android:mobileads:7.6.0'
+    ruStoreImplementation 'com.yandex.android:mobileads:7.9.0'
     ruStoreImplementation 'ru.rustore.sdk:billingclient:6.0.0'
 
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.5.0'
-    googlePlayImplementation 'com.google.android.gms:play-services-auth:21.2.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-auth:21.3.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:23.2.0"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:23.5.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:23.6.0'
 
 
-    googlePlayImplementation 'com.android.billingclient:billing:6.2.1'
+    googlePlayImplementation 'com.android.billingclient:billing:7.1.1'
 
-    googlePlayImplementation platform('com.google.firebase:firebase-bom:33.5.1')
+    googlePlayImplementation platform('com.google.firebase:firebase-bom:33.9.0')
 
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
     googlePlayImplementation 'com.google.firebase:firebase-perf'
-
+/*
     huaweiImplementation 'com.huawei.hms:ads-lite:13.4.30.301'
     huaweiImplementation 'com.huawei.hms:hianalytics:5.0.0.300'
     huaweiImplementation 'com.huawei.agconnect:agconnect-crash:1.4.1.300'
+ */
 }
 
 if (getGradle().getStartParameter().getTaskRequests()
@@ -223,10 +223,11 @@ if (getGradle().getStartParameter().getTaskRequests()
     apply plugin: 'com.google.firebase.crashlytics'
     apply plugin: 'com.google.gms.google-services'
     apply plugin: 'com.google.firebase.firebase-perf'
-
 }
 
+/*
 if (getGradle().getStartParameter().getTaskRequests()
         .toString().contains("Huawei")) {
     apply plugin: 'com.huawei.agconnect'
 }
+*/
