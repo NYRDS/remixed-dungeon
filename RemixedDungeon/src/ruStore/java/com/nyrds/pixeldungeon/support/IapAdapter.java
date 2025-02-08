@@ -4,13 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 
 import com.nyrds.pixeldungeon.support.di.PaymentsModule;
+import com.nyrds.platform.support.Iap;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import java.util.List;
 
 import ru.rustore.sdk.billingclient.RuStoreBillingClient;
 
-class IapAdapter {
+public class IapAdapter {
     // Previously created with RuStoreBillingClientFactory.create()
     private RuStoreBillingClient billingClient = PaymentsModule.provideRuStorebillingClient();
     public IapAdapter(Activity context, Iap iap) {
