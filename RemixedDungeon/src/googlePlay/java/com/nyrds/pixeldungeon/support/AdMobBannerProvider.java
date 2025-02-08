@@ -8,6 +8,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.LoadAdError;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.support.Ads;
 
 public class AdMobBannerProvider implements  AdsUtilsCommon.IBannerProvider {
     private AdView adView;

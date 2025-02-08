@@ -13,6 +13,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.support.AAdsComboProvider;
 import com.nyrds.platform.util.StringsManager;
 import com.yandex.mobile.ads.banner.BannerAdView;
 
@@ -96,7 +97,7 @@ public class AdsUtils {
         }
     }
 
-    static void removeBannerView(int index, View adview) {
+    public static void removeBannerView(int index, View adview) {
         boolean bannerFound = false;
         if (adview instanceof BannerView) {
             Appodeal.hide(Game.instance(), Appodeal.BANNER);
@@ -120,7 +121,7 @@ public class AdsUtils {
         }
     }
 
-    static int bannerIndex() {
+    public static int bannerIndex() {
         final LinearLayout layout = Game.instance().getLayout();
 
         int childs = layout.getChildCount();

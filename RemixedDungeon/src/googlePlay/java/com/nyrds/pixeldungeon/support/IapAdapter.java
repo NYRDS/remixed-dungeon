@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.support;
 import android.content.Context;
 import android.content.Intent;
 
-
 import androidx.annotation.Nullable;
 
 import com.android.billingclient.api.AcknowledgePurchaseParams;
@@ -26,6 +25,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
+import com.nyrds.platform.support.IPurchasesUpdated;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;

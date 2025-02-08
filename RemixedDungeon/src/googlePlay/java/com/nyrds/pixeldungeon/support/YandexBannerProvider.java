@@ -6,17 +6,19 @@ import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.util.DisplayMetrics;
 
-
 import androidx.annotation.Nullable;
 
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.support.Ads;
 import com.yandex.mobile.ads.banner.BannerAdEventListener;
 import com.yandex.mobile.ads.banner.BannerAdSize;
 import com.yandex.mobile.ads.banner.BannerAdView;
 import com.yandex.mobile.ads.common.AdRequest;
 import com.yandex.mobile.ads.common.AdRequestError;
 import com.yandex.mobile.ads.common.ImpressionData;
+
+import org.jetbrains.annotations.NotNull;
 
 public class YandexBannerProvider implements AdsUtilsCommon.IBannerProvider {
     private BannerAdView adView;

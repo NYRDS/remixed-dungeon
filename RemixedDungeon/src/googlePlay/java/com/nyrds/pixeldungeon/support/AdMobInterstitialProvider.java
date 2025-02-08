@@ -11,6 +11,8 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;
 
+import org.jetbrains.annotations.NotNull;
+
 public class AdMobInterstitialProvider implements AdsUtilsCommon.IInterstitialProvider {
     private InterstitialAd mInterstitialAd = null;
 

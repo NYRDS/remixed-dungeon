@@ -16,6 +16,8 @@ import com.yandex.mobile.ads.interstitial.InterstitialAdEventListener;
 import com.yandex.mobile.ads.interstitial.InterstitialAdLoadListener;
 import com.yandex.mobile.ads.interstitial.InterstitialAdLoader;
 
+import org.jetbrains.annotations.NotNull;
+
 public class YandexInterstitialProvider implements AdsUtilsCommon.IInterstitialProvider {
     @Nullable
     private InterstitialAd mInterstitialAd = null;

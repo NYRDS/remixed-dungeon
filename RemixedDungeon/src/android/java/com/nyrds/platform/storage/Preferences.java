@@ -20,6 +20,8 @@ public enum Preferences {
 	public static final String KEY_LANDSCAPE        = "landscape";
 	public static final String KEY_USE_PLAY_GAMES   = "use_play_games";
 	public static final String KEY_EU_CONSENT_LEVEL = "eu_consent_level";
+	public static final String KEY_PLAY_GAMES_CONNECT_FAILURES = "play_games_connect_failures";
+	public static final String KEY_COLLECT_STATS    = "collect_stats";
 
     private SharedPreferences prefs;
 

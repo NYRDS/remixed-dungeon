@@ -47,7 +47,7 @@ public class Ads {
         });
     }
 
-    static void updateBanner(final View view) {
+    public static void updateBanner(final View view) {
         GameLoop.runOnMainThread(() -> {
 
             int index = AdsUtils.bannerIndex();

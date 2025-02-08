@@ -22,8 +22,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -292,29 +290,6 @@ public class ModdingMode extends ModdingBase{
 
 	public static boolean getClassicTextRenderingMode() {
 		return mTextRenderingMode;
-	}
-
-	public static boolean isHalloweenEvent() {
-
-		Calendar now = new GregorianCalendar();
-		Calendar halloween = new GregorianCalendar();
-		halloween.set(Calendar.MONTH, Calendar.OCTOBER);
-		halloween.set(Calendar.DAY_OF_MONTH, 31);
-
-		long milisPerDay = (1000 * 60 * 60 * 24);
-
-		long nowMilis = now.getTimeInMillis() / milisPerDay;
-		long hallMilis = halloween.getTimeInMillis() / milisPerDay;
-
-		long daysDiff;
-
-		if (nowMilis > hallMilis) {
-			daysDiff = (nowMilis - hallMilis);
-		} else {
-			daysDiff = (hallMilis - nowMilis);
-		}
-
-		return daysDiff < 14;
 	}
 
 	public static RuntimeException modException(Exception e) {

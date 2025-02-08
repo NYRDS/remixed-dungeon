@@ -27,7 +27,6 @@ import androidx.core.content.PermissionChecker;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
@@ -48,8 +47,12 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.concurrent.Executor;
+
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
+
+import lombok.Getter;
 
 @SuppressLint("Registered")
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
@@ -63,11 +66,14 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public PlayGames playGames;
     public Iap iap;
+    public Executor serviceExecutor;
 
 
     private GLSurfaceView view;
+    @Getter
     private LinearLayout layout;
 
+    @Getter
     private static volatile boolean paused = false;
 
     protected GameLoop gameLoop;
@@ -178,7 +184,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public static void syncAdsState() {
 
         if(GamePreferences.donated() > 0) {
-            AdsUtils.removeTopBanner();
+            Ads.removeEasyModeBanner();
             return;
         }
 
@@ -187,7 +193,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
 
         if (GameLoop.getDifficulty() >= 2) {
-            AdsUtils.removeTopBanner();
+            Ads.removeEasyModeBanner();
         }
 
     }
@@ -317,10 +323,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
     }
 
-    public static boolean isPaused() {
-        return paused;
-    }
-
 
     public static void vibrate(int milliseconds) {
         ((Vibrator) instance().getSystemService(VIBRATOR_SERVICE)).vibrate(milliseconds);
@@ -350,7 +352,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         }
     }
 
-    public void onRequestPermissionsResult(int requestCode, @NotNull String @NotNull [] permissions, @NotNull int @NotNull [] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NotNull String @NotNull [] permissions, int @NotNull [] grantResults) {
         boolean res = true;
 
         if (permissions.length == 0) {
@@ -373,10 +375,6 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
             permissionsPoint.returnToWork(result);
         };
 
-    }
-
-    public LinearLayout getLayout() {
-        return layout;
     }
 
     static public void openUrl(String prompt, String address) {

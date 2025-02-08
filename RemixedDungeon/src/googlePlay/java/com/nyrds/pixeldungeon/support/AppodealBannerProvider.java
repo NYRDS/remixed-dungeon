@@ -5,6 +5,7 @@ import com.appodeal.ads.BannerCallbacks;
 import com.appodeal.ads.BannerView;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
+import com.nyrds.platform.support.Ads;
 
 import org.jetbrains.annotations.NotNull;
 
