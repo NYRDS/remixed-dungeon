@@ -35,6 +35,28 @@ jobs:
           name: apk
           path: '**/*.apk'
 
+  build_check:
+    name: Generate APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: '${{ github.ref }}'
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build with Gradle
+        run: ./gradlew assemble -c settings.android.gradle
+
   package-linux:
     name: Package Linux X64
     runs-on: ubuntu-latest
