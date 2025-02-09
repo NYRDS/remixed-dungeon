@@ -115,11 +115,11 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     //TODO investigate how it behaves
     public static void shutdown() {
-        paused = true;
-        instance().gameLoop.shutdown();
-
-        instance().finish();
-        System.exit(0);
+        GameLoop.pushUiTask(() -> {
+            instance.pause();
+            instance().finish();
+            System.exit(0);
+        });
     }
 
     public static void toast(final String text, final Object... args) {
@@ -219,11 +219,8 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         gameLoop.onResume();
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
+    public void pause() {
         paused = true;
-        view.onPause();
 
         synchronized (GameLoop.stepLock) {
             if (gameLoop.scene != null) { // view.onPause will wait for gl thread, so it safe to access scene here
@@ -235,6 +232,13 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         Sample.INSTANCE.pause();
 
         Script.reset();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        view.onPause();
+        pause();
     }
 
     @Override

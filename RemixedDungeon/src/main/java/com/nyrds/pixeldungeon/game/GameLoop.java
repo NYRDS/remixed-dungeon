@@ -47,6 +47,7 @@ public class GameLoop {
     public static int width;
     public static int height;
 
+    @SuppressWarnings("unused")
     public static volatile boolean softPaused = false;
 
     private final ReportingExecutor stepExecutor = new ReportingExecutor();
@@ -162,13 +163,6 @@ public class GameLoop {
         pushUiTask(() -> {
             Game.instance().runOnUiThread(runnable);
         });
-    }
-
-    public void shutdown() {
-        if (instance().scene != null) {
-            instance().scene.pause();
-            instance().scene.destroy();
-        }
     }
 
     public void onResume() {
