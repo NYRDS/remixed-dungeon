@@ -25,7 +25,6 @@ import com.nyrds.platform.storage.AndroidSAF;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.Os;
 import com.nyrds.util.ModdingMode;
-import com.nyrds.util.Util;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
@@ -175,7 +174,7 @@ public class RemixedDungeon extends Game {
 	}
 
 	public static boolean canDonate() {
-		return MarketOptions.haveDonations() && Game.instance().iap.isReady() || Util.isDebug();
+		return MarketOptions.haveDonations() && Game.instance().iap.isReady();/* || Util.isDebug();*/
 	}
 	
 	/*

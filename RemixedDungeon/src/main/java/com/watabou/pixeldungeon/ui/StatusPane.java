@@ -1,7 +1,6 @@
 
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.market.MarketOptions;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapText;
@@ -157,9 +156,10 @@ public class StatusPane extends Component {
 
         btnHats = new MenuButton(new Image(Assets.getStatus(), 114, 18, 12, 11), WndHats.class);
 
+        /*
         if (!MarketOptions.haveHats()) {
             btnHats.enable(false);
-        }
+        }*/
 
         add(btnHats);
 

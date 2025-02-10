@@ -275,6 +275,8 @@ public class TitleScene extends PixelScene {
             if (RemixedDungeon.canDonate()) {
                 add(pleaseSupport);
                 add(btnDonate);
+            } else {
+                btnDonate.enable(false);
             }
 
             donationAdded = true;

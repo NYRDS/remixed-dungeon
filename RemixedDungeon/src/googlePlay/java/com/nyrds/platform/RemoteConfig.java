@@ -11,6 +11,7 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigValue;
 import com.nyrds.platform.util.PUtil;
+import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -144,7 +145,9 @@ public class RemoteConfig {
 
     // Get the cached value for a specific parameter (Boolean)
     public boolean getBoolean(String parameterName, boolean defaultValue) {
-        return sharedPreferences.getBoolean(parameterName, defaultValue);
+        boolean ret = sharedPreferences.getBoolean(parameterName, defaultValue);
+        GLog.debug("RemoteConfig: getBoolean: " + parameterName + " = " + ret);
+        return ret;
     }
 
     // Get the cached value for a specific parameter (String)

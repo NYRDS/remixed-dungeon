@@ -148,7 +148,7 @@ dependencies {
 
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
-    googlePlayImplementation ("com.appodeal.ads:sdk:3.4.0.0") {
+    googlePlayImplementation ("com.appodeal.ads:sdk:3.4.1.0") {
         exclude group: "com.appodeal.ads.sdk.networks", module: "amazon"
         exclude group: "com.appodeal.ads.sdk.networks", module: "meta"
         exclude group: "com.appodeal.ads.sdk.networks", module: "yandex"
