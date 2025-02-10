@@ -271,10 +271,12 @@ public class TitleScene extends PixelScene {
         time += GameLoop.elapsed;
         float cl = (float) Math.sin(time) * 0.5f + 0.5f;
         if (!donationAdded) {
+
             if (RemixedDungeon.canDonate()) {
                 add(pleaseSupport);
                 add(btnDonate);
             }
+
             donationAdded = true;
         } else {
             pleaseSupport.hardlight(cl, cl, cl);

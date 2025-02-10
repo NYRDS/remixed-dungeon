@@ -187,6 +187,7 @@ dependencies {
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
     googlePlayImplementation 'com.google.firebase:firebase-perf'
+    googlePlayImplementation 'com.google.firebase:firebase-config'
 /*
     huaweiImplementation 'com.huawei.hms:ads-lite:13.4.30.301'
     huaweiImplementation 'com.huawei.hms:hianalytics:5.0.0.300'

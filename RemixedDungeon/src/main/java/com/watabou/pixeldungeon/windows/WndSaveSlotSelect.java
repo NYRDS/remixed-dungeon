@@ -9,13 +9,11 @@ import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.ImageTab;
 import com.nyrds.pixeldungeon.windows.WndDifficultyOptions;
 import com.nyrds.pixeldungeon.windows.WndHelper;
-import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.storage.SaveUtils;
 import com.nyrds.platform.support.Ads;
-import com.nyrds.platform.support.Iap;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.ModdingBase;
@@ -27,7 +25,6 @@ import com.watabou.noosa.ReturnOnlyOnce;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -357,7 +354,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
                 SaveUtils.loadGame(slot, Dungeon.heroClass);
             } else {
                 if (GamePreferences.donated() == 0 && RemixedDungeon.canDonate()) {
-
+                    /*
                     if (Math.random() < 0.1) {
                         GameLoop.pushUiTask(() -> {
                             Iap iap = Game.instance().iap;
@@ -369,6 +366,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
                             }
                         });
                     }
+                     */
 
                 }
             }

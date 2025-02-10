@@ -23,6 +23,8 @@ import com.nyrds.market.GoogleIapCheck;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.RemoteConfig;
+import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.support.IPurchasesUpdated;
@@ -228,7 +230,7 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
     }
 
     public boolean isServiceConnected() {
-        return mIsServiceConnected && !mIsServiceConnecting;
+        return mIsServiceConnected && !mIsServiceConnecting && RemoteConfig.getInstance(RemixedDungeonApp.getContext()).getBoolean("GoogleIapEnabled", false);
     }
 
 
