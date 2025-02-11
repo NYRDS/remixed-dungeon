@@ -36,7 +36,7 @@ jobs:
           path: '**/*.apk'
 
   build_check:
-    name: Generate APK
+    name: Flavors build check
     runs-on: ubuntu-latest
 
     steps:
