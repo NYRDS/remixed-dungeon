@@ -37,6 +37,7 @@ import com.nyrds.platform.input.Keys;
 import com.nyrds.platform.input.PointerEvent;
 import com.nyrds.platform.support.Ads;
 import com.nyrds.platform.support.Iap;
+import com.nyrds.util.ReportingExecutor;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.InterstitialPoint;
@@ -66,7 +67,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public PlayGames playGames;
     public Iap iap;
-    public Executor serviceExecutor;
+    public Executor serviceExecutor = new ReportingExecutor();
 
 
     private GLSurfaceView view;
