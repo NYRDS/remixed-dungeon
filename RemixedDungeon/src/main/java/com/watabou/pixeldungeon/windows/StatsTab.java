@@ -27,6 +27,7 @@ class StatsTab extends TabContent {
                 Utils.format(R.string.WndHero_StaTitle, chr.lvl(), chr.className()).toUpperCase(), GuiProperties.titleFontSize());
         title.hardlight(Window.TITLE_COLOR);
         add(title);
+        setMaxWidth(width);
 
         if (chr instanceof Hero) {
             RedButton btnCatalogus = new RedButton(R.string.WndHero_StaCatalogus) {
@@ -123,7 +124,6 @@ class StatsTab extends TabContent {
         statSlot(R.string.WndHero_SkillLevel, chr.skillLevel());
 
         pos += GAP;
-        setMaxWidth(width);
     }
 
     private void statSlot(int label, String value) {
