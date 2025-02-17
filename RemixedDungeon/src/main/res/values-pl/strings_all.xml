@@ -2972,4 +2972,5 @@ remix.32.1\n
   <string name="WndSettings_FpsLimit">Limit FPS</string>
   <string name="StartScene_ContinueLatest">Kontynuuj grę z ostatniego zapisu lub wybierz slot zapisu </string>
   <string name="StartScene_ChooseFromSlot">Wybierz zapis ze slota</string>
+  <string name="AboutScene_SourceCode">Tutaj znajdziesz kod źródłowy gry:</string>
 </resources>
