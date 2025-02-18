@@ -2,7 +2,6 @@ package com.nyrds.platform.storage;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
-import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
@@ -22,7 +21,6 @@ import java.io.File;
 public class SaveUtils {
 
 	private static final String AUTO_SAVE = "autoSave";
-	private static final String PREV_SAVE = "prevSave";
 
 	static private boolean hasClassTag(HeroClass cl, String fname) {
 		return fname.contains(cl.tag());
@@ -176,11 +174,6 @@ public class SaveUtils {
 		return ModdingMode.activeMod() + "_" + tag + "_" + difficulty;
 	}
 
-	static public String buildSlotFromTag(String tag) {
-		return buildSlotFromTag(tag, GameLoop.getDifficulty());
-	}
-
-
 	public static String getAutoSave() {
 		return getAutoSave(GameLoop.getDifficulty());
 	}
@@ -191,10 +184,6 @@ public class SaveUtils {
 
 	public static String getAutoSave(int dif) {
 		return buildSlotFromTag(AUTO_SAVE, dif);
-	}
-
-	public static String getPrevSave(int dif) {
-		return buildSlotFromTag(PREV_SAVE, dif);
 	}
 
 	public static void preview(Info info, Bundle bundle) {
