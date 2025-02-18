@@ -21,7 +21,7 @@ local function handleWindow(hero)
     local wndClass = tostring(activeWindow:getClass())
 
     if wndClass:match('CellSelector') then
-        RPD.debug("cell selector: %s", wndClass)
+        --RPD.debug("cell selector: %s", wndClass)
         activeWindow = RPD.RemixedDungeon:scene():getWindow(1)
         if not activeWindow then
             return false

@@ -11,6 +11,7 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.json.JSONTokener;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -56,7 +57,7 @@ public class JsonHelper {
     }
 
 
-    public static JSONObject readJsonFromString(final String in) throws JSONException {
+    public static JSONObject readJsonFromString(final String in) {
         return readJsonFromStream(new ByteArrayInputStream(in.getBytes()), "String");
     }
 
@@ -74,11 +75,23 @@ public class JsonHelper {
             }
             reader.close();
 
-            return Util.sanitizeJson(jsonDef.toString().strip());
+            String sourceString = jsonDef.toString().strip();
+
+            try {
+                return Util.sanitizeJson(sourceString);
+            } catch (Exception e) {
+                EventCollector.logException(e, Utils.format("bad json, hjson sanitization failed in %s", tag));
+            }
+
+            try {
+                return (JSONObject) new JSONTokener(sourceString).nextValue();
+            } catch (Exception e) {
+                EventCollector.logException(e, Utils.format("gson failed in %s", tag));
+            }
         } catch (Exception e) {
-            EventCollector.logException(Utils.format("bad json in %s", tag));
-            return new JSONObject();
+            EventCollector.logException(e, Utils.format("failed to read json in %s", tag));
         }
+        return new JSONObject();
     }
 
     public static void readStringSet(JSONObject desc, String field, Set<String> placeTo) throws JSONException {
