@@ -21,6 +21,7 @@ import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.levels.CavesBossLevel;
 import com.watabou.pixeldungeon.levels.CavesLevel;
 import com.watabou.pixeldungeon.levels.CityBossLevel;
@@ -337,6 +338,7 @@ public class DungeonGenerator {
 	@NotNull
 	@SneakyThrows
 	public static Level createLevel(@NotNull Position pos) {
+		Actor.clearActors();
 		String newLevelKind = getLevelKind(pos.levelId);
 		Class<? extends Level> levelClass = mLevelKindList.get(newLevelKind);
 
