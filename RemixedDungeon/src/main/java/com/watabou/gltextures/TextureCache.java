@@ -1,5 +1,6 @@
 package com.watabou.gltextures;
 
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
 import com.nyrds.util.ModdingMode;
@@ -61,9 +62,9 @@ public class TextureCache {
 
 	@Synchronized
 	public static SmartTexture get(@NotNull Object src) {
-		SmartTexture ret = rawget(src);
-		if (ret!=null) {
-			return ret;
+		SmartTexture tx = rawget(src);
+		if (tx!=null) {
+			return tx;
 		}
 
 		if (src instanceof SmartTexture) {
@@ -71,17 +72,26 @@ public class TextureCache {
 		}
 
 		if (src instanceof BitmapData) {
-			SmartTexture tx = new SmartTexture((BitmapData) src);
+			tx = new SmartTexture((BitmapData) src);
 			all.put(src, tx);
 			return tx;
 		}
 
-		BitmapData bmp = ModdingMode.getBitmapData((String) src);
-		SmartTexture tx = new SmartTexture(bmp);
-		all.put(src, tx);
-		//bmp.dispose();
-		return tx;
+		if(src instanceof String) {
+			String strSrc = (String) src;
+			strSrc = strSrc.strip();
 
+			if(strSrc.isEmpty()) {
+				EventCollector.logException(new Exception(), "Empty texture name");
+				return createSolid(0);
+			}
+
+			BitmapData bmp = ModdingMode.getBitmapData(strSrc);
+			tx = new SmartTexture(bmp);
+		}
+
+		all.put(src, tx);
+		return tx;
 	}
 
 	@Synchronized

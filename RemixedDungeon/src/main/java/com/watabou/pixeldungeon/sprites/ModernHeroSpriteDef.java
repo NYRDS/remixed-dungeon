@@ -278,11 +278,15 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			if (layersDesc.containsKey(layer)) {
 				String override = layerOverrides.get(layer);
 				if(override==null) {
-					ret.add(layersDesc.get(layer));
+					String layerDesc = layersDesc.get(layer).strip();
+					if(!layerDesc.isEmpty()) {
+						ret.add(layersDesc.get(layer));
+					}
 					continue;
 				}
 
-				if(override.equals("remove")) {
+				override = override.strip();
+				if(override.equals("remove") || override.isEmpty()) {
 					continue;
 				}
 
