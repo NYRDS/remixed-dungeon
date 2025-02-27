@@ -3,6 +3,7 @@ package com.nyrds.platform.storage;
 import android.content.Context;
 
 import com.nyrds.platform.app.RemixedDungeonApp;
+import com.nyrds.platform.game.Game;
 import com.nyrds.util.ModError;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -141,6 +142,12 @@ public class FileSystem {
     private static void addFolderToZip(File rootFolder, File srcFolder, int depth,
                                        ZipOutputStream zip, FileFilter filter) throws IOException {
         GLog.debug("dir=" + srcFolder.getAbsolutePath());
+        var filesList = srcFolder.listFiles(filter);
+        if (filesList == null || filesList.length == 0) {
+            Game.toast("Trying to zip something strange");
+            return;
+        }
+
         for (File file : srcFolder.listFiles(filter)) {
             GLog.debug("file=" + file.getAbsolutePath());
             if (file.isFile()) {

@@ -84,7 +84,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
         }
 
         baseMark = members.size() - 2;
-        select(difficulty);
+        select(Util.clamp(difficulty, 0,1));
     }
 
     private void createContent(int difficulty) {
