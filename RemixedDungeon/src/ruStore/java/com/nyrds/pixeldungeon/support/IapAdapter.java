@@ -15,7 +15,6 @@ public class IapAdapter {
     // Previously created with RuStoreBillingClientFactory.create()
     private RuStoreBillingClient billingClient = PaymentsModule.provideRuStorebillingClient();
     public IapAdapter(Activity context, Iap iap) {
-
     }
 
     public void querySkuList(List<String> items) {

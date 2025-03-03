@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 
-
 import androidx.annotation.Nullable;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
@@ -109,6 +108,10 @@ public class RemixedDungeonApp extends MultiDexApplication {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);
+    }
+
+    static public RemixedDungeonApp getApp() {
+        return remixedDungeonApp;
     }
 
     static public Context getContext() {
