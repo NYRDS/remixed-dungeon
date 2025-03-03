@@ -40,6 +40,7 @@ public class Spell implements NamedEntityKind {
     protected String info = getClassParam("Info", StringsManager.getVar(R.string.Item_Info));
 
     protected int image = 0;
+    protected int imageSize = 16;
 
     private SpellItem spellItem;
 
@@ -170,7 +171,7 @@ public class Spell implements NamedEntityKind {
         val texture = TextureCache.get(texture());
         var spellImage = new Image(texture);
 
-        spellImage.frame(TextureCache.getFilm(texture, 16, 16).get(getImage(caster)));
+        spellImage.frame(TextureCache.getFilm(texture, imageSize, imageSize).get(getImage(caster)));
 
         return spellImage;
     }

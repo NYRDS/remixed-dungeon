@@ -95,6 +95,7 @@ public class TextureCache {
 	}
 
 	@Synchronized
+	@NotNull
 	public static TextureFilm getFilm(@NotNull Object key, int w, int h) {
 		if (allFilm.containsKey(key)) {
 			return allFilm.get(key);

@@ -25,6 +25,7 @@ public class CustomSpell extends Spell {
         LuaTable desc = script.run("spellDesc").checktable();
 
         image = desc.rawget("image").checkint();
+        imageSize = desc.rawget("imageSize").optint(imageSize);
         imageFile = desc.rawget("imageFile").checkjstring();
         name = StringsManager.maybeId(desc.rawget("name").checkjstring());
         info = StringsManager.maybeId(desc.rawget("info").checkjstring());
