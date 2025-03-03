@@ -5,7 +5,6 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
-import com.nyrds.util.Util;
 import com.nyrds.util.WeakOptional;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.CompositeMovieClip;
@@ -652,11 +651,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
     @Override
     public void play(@NotNull Animation anim) {
-
-        if(Util.isDebug()) {
-            assert (anim != null);
-        }
-
         if (curAnim == die) {
             return;
         }

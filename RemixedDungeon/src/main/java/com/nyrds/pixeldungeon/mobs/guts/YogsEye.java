@@ -28,7 +28,6 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.sprites.YogSprite;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -43,8 +42,7 @@ public class YogsEye extends Boss {
     int [] trace;
     int distance = 0;
 
-    public YogsEye() {
-        spriteClass = YogSprite.class;
+    public YogsEye() {;
         movable = false;
         hp(ht(1000));
 
