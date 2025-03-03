@@ -7,6 +7,8 @@ public class ModQuirks {
     public static boolean only3dTiles;
     public static boolean noMovingArcs;
 
+    public static int moveTimeout = 0;
+
     public static float defaultCarcassChance = 0;
 
     public static void reset() {
@@ -15,5 +17,6 @@ public class ModQuirks {
         only3dTiles = false;
         defaultCarcassChance = 0;
         noMovingArcs = false;
+        moveTimeout = 0;
     }
 }

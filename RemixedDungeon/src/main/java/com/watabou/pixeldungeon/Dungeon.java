@@ -976,6 +976,10 @@ public class Dungeon {
     }
 
     public static double moveTimeout() {
+        if (ModQuirks.moveTimeout>0) {
+            return ModQuirks.moveTimeout;
+        }
+
         return GameLoop.MOVE_TIMEOUTS[moveTimeoutIndex];
     }
 
