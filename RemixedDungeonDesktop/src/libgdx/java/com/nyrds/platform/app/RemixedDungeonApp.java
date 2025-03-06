@@ -5,16 +5,49 @@ import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.PUtil;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintStream;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 public class RemixedDungeonApp {
     private static String[] savedArgs = new String[0];
 
-    public static void main(String[] args) {
-        savedArgs = args; // Save the command-line arguments
+    public static void main(String[] args){
+        savedArgs = args;
+
+        Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> {
+
+            StringWriter stringWriter = new StringWriter();
+            PrintWriter printWriter = new PrintWriter(stringWriter);
+            throwable.printStackTrace(printWriter);
+            String stackTrace = stringWriter.toString();
+
+            javax.swing.SwingUtilities.invokeLater(() -> {
+                JOptionPane.showMessageDialog(
+                        null,
+                        "Unhandled Exception:\n" + throwable.getMessage() + "\n\nStack Trace:\n" + stackTrace,
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE
+                );
+
+                System.exit(1);
+            });
+        });
+
+        try {
+            System.setOut(new PrintStream(new FileOutputStream("stdout.log")));
+            System.setErr(new PrintStream(new FileOutputStream("stderr.log")));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
         System.setProperty("https.protocols", "TLSv1.2");
         System.setProperty("jdk.module.addOpens", "java.base/java.util=ALL-UNNAMED");

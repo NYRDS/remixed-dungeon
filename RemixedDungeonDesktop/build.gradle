@@ -1,14 +1,14 @@
 plugins {
     id 'java'
     id 'application'
-    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
     id 'de.undercouch.download' version '5.4.0'
-    id 'edu.sc.seis.launch4j' version '2.5.4' // Launch4j plugin for creating .exe files
+    id 'edu.sc.seis.launch4j' version '3.0.6' // Launch4j plugin for creating .exe files
 }
 
 project.ext {
     version = '32.2'
-    version_code = 1229
+    version_code = 1234
 }
 
 java {
@@ -111,7 +111,7 @@ dependencies {
 
     implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'org.luaj:luaj-jse:3.0.1'
-    implementation 'org.hjson:hjson:3.0.0'
+    implementation 'org.hjson:hjson:3.1.0'
     implementation 'commons-io:commons-io:2.6'
     implementation 'org.jetbrains:annotations:24.1.0'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
@@ -126,9 +126,9 @@ dependencies {
 
 // URLs for JDK downloads
 def jdkUrls = [
-        linux: "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.11%2B9/OpenJDK17U-jdk_x64_linux_hotspot_17.0.11_9.tar.gz",
-        mac: "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.11%2B9/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.11_9.tar.gz",
-        windows: "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.11%2B9/OpenJDK17U-jdk_x64_windows_hotspot_17.0.11_9.zip"
+        linux: "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.14%2B7/OpenJDK17U-jdk_x64_linux_hotspot_17.0.14_7.tar.gz",
+        mac: "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.14%2B7/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.14_7.tar.gz",
+        windows: "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.14%2B7/OpenJDK17U-jdk_x64_windows_hotspot_17.0.14_7.zip"
 ]
 
 // Directories for downloaded and minimized JDKs
@@ -190,7 +190,7 @@ tasks.register('minimizeJdks') {
             }
 
             exec {
-                commandLine "${jdkDownloadDir}/linux/jdk-17.0.11+9/bin/jlink",
+                commandLine "${jdkDownloadDir}/linux/jdk-17.0.14+7/bin/jlink",
                         '--module-path', "${jdkDir}/jmods",
                         '--add-modules', 'java.base,java.compiler,java.desktop,java.scripting,java.sql,jdk.unsupported',
                         '--output', minimizedJdkDir,
@@ -207,13 +207,13 @@ launch4j {
     mainClassName = 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
     outfile = 'RemixedDungeon.exe'
     icon = "${projectDir}/src/desktop/d_assets/icons/icon.ico"
+    productName = 'RemixedDungeon'
     jreMinVersion = '10'
-    jreMaxVersion = '17'
     bundledJrePath = 'jdk'
-    bundledJre64Bit = true
-    stayAlive = false
+    stayAlive = true
     dontWrapJar = false
-    jar = shadowJar.archiveFile.get().asFile
+    jarTask = project.tasks.shadowJar
+    copyConfigurable = []
 
     jvmOptions = [
             '--add-opens', 'java.base/java.util=ALL-UNNAMED',
@@ -308,7 +308,7 @@ tasks.register('packageWinX64', Zip) {
         into "RemixedDungeon-${project.ext.version}-winX64/jdk"
     }
 
-    from("${projectDir}/build/launch4j/${launch4j.outfile}") {
+    from("${projectDir}/build/launch4j/RemixedDungeon.exe") {
         into "RemixedDungeon-${project.ext.version}-winX64"
     }
 }
