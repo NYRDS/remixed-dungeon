@@ -34,6 +34,7 @@ public enum MusicManager {
 		}
 
 		if (isPlaying() && assetName.equals(lastPlayed)) {
+			volume(1);
 			return;
 		}
 
@@ -51,7 +52,7 @@ public enum MusicManager {
 		try {
 			player = Gdx.audio.newMusic(FileSystem.getInternalStorageFileHandle(assetFilename));
 			player.setLooping(looping);
-			volume(volume);
+			volume(1);
 			player.play();
 			//PUtil.slog("music", "playing " + assetFilename);
 		} catch (Exception e) {
