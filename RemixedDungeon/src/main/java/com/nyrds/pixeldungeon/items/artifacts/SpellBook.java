@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.UseSpell;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -90,5 +91,10 @@ public class SpellBook extends Artifact {
 	@Override
 	public int price() {
 		return 500;
+	}
+
+	@Override
+	public String bag() {
+		return ScrollHolder.class.getSimpleName();
 	}
 }
