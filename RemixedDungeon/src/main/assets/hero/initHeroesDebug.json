@@ -14,6 +14,16 @@
         "identetifyLevel": 2
       },
       {
+        "kind": "ScrollHolder",
+        "level": 1,
+        "identetifyLevel": 2
+      },
+      {
+        "kind": "SpellBook",
+        "level": 1,
+        "identetifyLevel": 2
+      },
+      {
         "kind": "WandOfIcebolt",
         "identified": true,
         "level": 3
@@ -229,5 +239,11 @@
       "Vertigo",
       "Bleeding"
     ]
+  },
+  "PRIEST": {
+
+  },
+  "PLAGUE_DOCTOR": {
+
   }
 }

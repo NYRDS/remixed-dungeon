@@ -1,20 +1,3 @@
-/*
- * Pixel Dungeon
- * Copyright (C) 2012-2015 Oleg Dolya
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
@@ -27,7 +10,6 @@ import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.WndDifficultyOptions;
 import com.nyrds.pixeldungeon.windows.WndLocalModInstall;
-import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.AndroidSAF;
 import com.nyrds.platform.util.StringsManager;
@@ -37,9 +19,6 @@ import com.nyrds.util.Util;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
-import com.watabou.noosa.particles.Emitter;
-import com.watabou.noosa.ui.Button;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
@@ -47,9 +26,9 @@ import com.watabou.pixeldungeon.Logbook;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.BannerSprites;
 import com.watabou.pixeldungeon.effects.BannerSprites.Type;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ChallengeButton;
+import com.watabou.pixeldungeon.ui.ClassShield;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.FacilitaionButton;
 import com.watabou.pixeldungeon.ui.GameButton;
@@ -60,7 +39,6 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndSaveSlotSelect;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class StartScene extends PixelScene {
 
@@ -164,7 +142,7 @@ public class StartScene extends PixelScene {
         for (HeroClass cl : HeroClass.values()) {
             if (cl.allowed()) {
                 usableClasses++;
-                ClassShield shield = new ClassShield(cl);
+                ClassShield shield = new ClassShield(this, cl);
                 shields.add(shield);
                 add(shield);
             }
@@ -174,7 +152,7 @@ public class StartScene extends PixelScene {
         facilitaionButton = new FacilitaionButton(this);
 
         if (RemixedDungeon.landscape()) {
-            float shieldW = width / usableClasses;
+            float shieldW = width / (usableClasses);
             float shieldH = Math.min(centralHeight, shieldW);
             top = title.getY() + title.height + (centralHeight - shieldH) / 2;
             int i = 0;
@@ -186,14 +164,13 @@ public class StartScene extends PixelScene {
             float y = title.getY() + title.height / 2;
 
             HBox customizations = new HBox(width);
-            customizations.setAlign(HBox.Align.Width);
+            customizations.setAlign(HBox.Align.Center);
             customizations.setGap(2);
 
             customizations.add(challengeButton);
             customizations.add(title);
             customizations.add(facilitaionButton);
 
-            remove(title);
             customizations.setPos(left, y - customizations.height() / 2);
             add(customizations);
 
@@ -276,7 +253,7 @@ public class StartScene extends PixelScene {
         btnNewGame.setVisible(false);
     }
 
-    private void updateShield(ClassShield shield) {
+    public void updateShield(ClassShield shield) {
         if (curShield == shield) {
             add(new WndClass(shield.cl));
             return;
@@ -307,6 +284,11 @@ public class StartScene extends PixelScene {
                 return;
             }
 
+            if(curShield.cl == HeroClass.PLAGUE_DOCTOR || curShield.cl == HeroClass.PRIEST) {
+                updateUnlockLabel(StringsManager.getVar(R.string.StartScene_ComingSoon));
+                return;
+            }
+
         }
 
         unlock.setVisible(false);
@@ -334,123 +316,6 @@ public class StartScene extends PixelScene {
     @Override
     protected void onBackPressed() {
         RemixedDungeon.switchNoFade(TitleScene.class);
-    }
-
-    private class ClassShield extends Button {
-
-        private static final float MIN_BRIGHTNESS = 0.6f;
-
-        private static final int BASIC_NORMAL = 0x444444;
-        private static final int BASIC_HIGHLIGHTED = 0xCACFC2;
-
-        private static final int MASTERY_NORMAL = 0x7711AA;
-        private static final int MASTERY_HIGHLIGHTED = 0xCC33FF;
-
-        private static final int WIDTH = 24;
-        private static final int HEIGHT = 28;
-        private static final float SCALE = 1.5f;
-
-        private final HeroClass cl;
-
-        private Image avatar;
-        private Text name;
-        private Emitter emitter;
-
-        private float brightness;
-
-        private final int normal;
-        private final int highlighted;
-
-        public ClassShield(HeroClass cl) {
-            super();
-
-            this.cl = cl;
-
-            avatar.frame(cl.classIndex() * WIDTH, 0, WIDTH, HEIGHT);
-            avatar.setScale(SCALE);
-
-            if (Badges.isUnlocked(cl.masteryBadge())) {
-                normal = MASTERY_NORMAL;
-                highlighted = MASTERY_HIGHLIGHTED;
-            } else {
-                normal = BASIC_NORMAL;
-                highlighted = BASIC_HIGHLIGHTED;
-            }
-
-            name.text(cl.title().toUpperCase(Locale.getDefault()));
-            name.hardlight(normal);
-
-            brightness = MIN_BRIGHTNESS;
-            updateBrightness();
-        }
-
-        @Override
-        protected void createChildren() {
-
-            super.createChildren();
-
-            avatar = new Image(Assets.AVATARS);
-            add(avatar);
-
-            name = PixelScene.createText(GuiProperties.titleFontSize());
-            add(name);
-
-            emitter = new Emitter();
-            add(emitter);
-        }
-
-        @Override
-        protected void layout() {
-
-            super.layout();
-
-            avatar.setX(align(x + (width - avatar.width()) / 2));
-            avatar.setY(align(y + (height - avatar.height() - name.height()) / 2));
-
-            name.setX(align(x + (width - name.width()) / 2));
-            name.setY(avatar.getY() + avatar.height() + SCALE);
-
-            emitter.pos(avatar.getX(), avatar.getY(), avatar.width(), avatar.height());
-        }
-
-        @Override
-        protected void onTouchDown() {
-
-            emitter.revive();
-            emitter.start(Speck.factory(Speck.LIGHT), 0.05f, 7);
-
-            Sample.INSTANCE.play(Assets.SND_CLICK, 1, 1, 1.2f);
-            updateShield(this);
-        }
-
-        @Override
-        public void update() {
-            super.update();
-
-            if (brightness < 1.0f && brightness > MIN_BRIGHTNESS) {
-                if ((brightness -= GameLoop.elapsed) <= MIN_BRIGHTNESS) {
-                    brightness = MIN_BRIGHTNESS;
-                }
-                updateBrightness();
-            }
-        }
-
-        public void highlight(boolean value) {
-            if (value) {
-                brightness = 1.0f;
-                name.hardlight(highlighted);
-
-            } else {
-                brightness = 0.999f;
-                name.hardlight(normal);
-            }
-
-            updateBrightness();
-        }
-
-        private void updateBrightness() {
-            avatar.gm = avatar.bm = avatar.rm = avatar.am = brightness;
-        }
     }
 
     private class WndReallyStartNewGame extends WndOptions {

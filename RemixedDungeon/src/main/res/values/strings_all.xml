@@ -2983,5 +2983,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="StartScene_ChooseFromSlot">Choose from a save slot</string>
 
   <string name="AboutScene_SourceCode">Get Remixed Dungeon source code:</string>
+  <string name="HeroClass_Priest">Priest</string>
+  <string name="HeroClass_PlagueDoctor">Plague Doctor</string>
+  <string name="StartScene_ComingSoon">Coming soon</string>
 
 </resources>

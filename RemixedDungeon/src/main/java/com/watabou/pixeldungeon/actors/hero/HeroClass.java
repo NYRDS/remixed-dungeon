@@ -21,6 +21,8 @@ package com.watabou.pixeldungeon.actors.hero;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
+import com.nyrds.pixeldungeon.items.common.armor.PlagueDoctorArmor;
+import com.nyrds.pixeldungeon.items.common.armor.PriestArmor;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
@@ -76,7 +78,9 @@ public enum HeroClass implements CharModifier {
     HUNTRESS(R.string.HeroClass_Hun, HuntressArmor.class),
     ELF(R.string.HeroClass_Elf, ElfArmor.class),
     NECROMANCER(R.string.HeroClass_Necromancer, NecromancerArmor.class),
-    GNOLL(R.string.HeroClass_Gnoll, GnollArmor.class);
+    GNOLL(R.string.HeroClass_Gnoll, GnollArmor.class),
+    PRIEST(R.string.HeroClass_Priest, PriestArmor.class),
+    PLAGUE_DOCTOR(R.string.HeroClass_PlagueDoctor, PlagueDoctorArmor.class);
 
     private static final String FORBIDDEN_ACTIONS = "forbiddenActions";
     private static final String FRIENDLY_MOBS = "friendlyMobs";
