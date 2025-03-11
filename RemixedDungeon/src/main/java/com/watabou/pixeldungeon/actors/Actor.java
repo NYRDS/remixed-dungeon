@@ -332,6 +332,10 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
             toActBeforeHero.add(actor);
         }
 
+        if(toActBeforeHero.isEmpty()) {
+            return null;
+        }
+
         Collections.sort(toActBeforeHero, (a1, a2) -> Float.compare(a1.time, a2.time));
 
         return toActBeforeHero.get(0);
