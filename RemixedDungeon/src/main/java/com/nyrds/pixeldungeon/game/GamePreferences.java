@@ -299,6 +299,6 @@ public class GamePreferences {
     }
 
     public static int fps_limit() {
-        return Preferences.INSTANCE.getInt(CommonPrefs.KEY_FPS_LIMIT, 0);
+        return Preferences.INSTANCE.getInt(CommonPrefs.KEY_FPS_LIMIT, 1);
     }
 }
