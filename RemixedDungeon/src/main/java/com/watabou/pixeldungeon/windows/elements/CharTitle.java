@@ -30,7 +30,7 @@ public class CharTitle extends Component {
 
     public CharTitle(@NotNull Char mob) {
 
-        hp = (float) mob.hp() / mob.ht();
+        hp = (float) mob.hp() / Math.max(mob.ht(), mob.hp());
 
         name = PixelScene.createText(Utils.capitalize(mob.getName()), GuiProperties.titleFontSize());
         name.hardlight(Window.TITLE_COLOR);

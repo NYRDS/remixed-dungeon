@@ -237,7 +237,7 @@ public class StatusPane extends Component {
             hpText.text(Utils.format("%d/%d",hp, ht));
         }
 
-        float health =  (float) hp / ht;
+        float health =  (float) hp / Math.max(ht, hp);
 
 
         int n_sp = chr.getSkillPoints();
@@ -249,7 +249,7 @@ public class StatusPane extends Component {
             manaText.text(Utils.format("%d/%d",sp, st));
         }
 
-        float sPoints = (float) sp / st;
+        float sPoints = (float) sp / Math.max(sp, st);
 
         if(avatar!=chr.getSprite().avatar()) {
             remove(avatar);
