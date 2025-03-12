@@ -90,9 +90,14 @@ public class WndChar extends WndTabbed {
     }
 
     @Override
+    public void hide() {
+        CharUtils.clearMarkers();
+        super.hide();
+    }
+
+    @Override
     public void onBackPressed() {
         super.onBackPressed();
         selector.readyAndIdle();
-        CharUtils.clearMarkers();
     }
 }
