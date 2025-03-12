@@ -43,6 +43,18 @@ public class WellWater extends Blob {
 		}
 	}
 
+	protected void clear() {
+		setVolume(off[pos] = cur[pos] = 0);
+		if (this instanceof WaterOfAwareness) {
+			Journal.remove( Feature.WELL_OF_AWARENESS.desc() );
+		} else if (this instanceof WaterOfHealth) {
+			Journal.remove( Feature.WELL_OF_HEALTH.desc() );
+		} else if (this instanceof WaterOfTransmutation) {
+			Journal.remove( Feature.WELL_OF_TRANSMUTATION.desc() );
+		}
+	}
+
+
 	@LuaInterface
 	public boolean affect() {
 
@@ -72,7 +84,6 @@ public class WellWater extends Blob {
 						}
 					}
 					heap.sprite.link(heap);
-					setVolume(off[pos] = cur[pos] = 0);
 					return true;
 				} else {
 					ItemUtils.throwItemAway(pos);

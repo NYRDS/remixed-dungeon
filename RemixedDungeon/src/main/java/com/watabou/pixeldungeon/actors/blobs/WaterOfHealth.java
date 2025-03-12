@@ -5,8 +5,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Journal;
-import com.watabou.pixeldungeon.Journal.Feature;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
@@ -35,7 +33,7 @@ public class WaterOfHealth extends WellWater {
 
         GLog.p(StringsManager.getVar(R.string.WaterOfHealth_Procced));
 		
-		Journal.remove( Feature.WELL_OF_HEALTH.desc() );
+		clear();
 		
 		return true;
 	}
@@ -44,7 +42,7 @@ public class WaterOfHealth extends WellWater {
 	protected Item affectItem( Item item ) {
 		if (item instanceof DewVial && !((DewVial)item).isFull()) {
 			((DewVial)item).fill();
-			Journal.remove( Feature.WELL_OF_HEALTH.desc() );
+			clear();
 			return item;
 		}
 		

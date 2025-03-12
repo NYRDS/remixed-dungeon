@@ -10,8 +10,6 @@ import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
-import com.watabou.pixeldungeon.Journal;
-import com.watabou.pixeldungeon.Journal.Feature;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
@@ -41,7 +39,6 @@ public class WaterOfTransmutation extends WellWater {
 
     @Override
     protected Item affectItem(Item item) {
-        boolean transmuted = true;
         Item transmutedItem = item;
 
         if (item instanceof SpellBook) {
@@ -58,12 +55,10 @@ public class WaterOfTransmutation extends WellWater {
             transmutedItem = changeWand(item);
         } else if (item instanceof Seed) {
             transmutedItem = changeSeed(item);
-        } else {
-            transmuted = false;
         }
 
-        if (transmuted) {
-            Journal.remove(Feature.WELL_OF_TRANSMUTATION.desc());
+        if (transmutedItem != item) {
+            clear();
         }
         return transmutedItem;
     }
