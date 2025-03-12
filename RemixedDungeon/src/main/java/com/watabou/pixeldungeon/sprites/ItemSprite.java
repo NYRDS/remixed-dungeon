@@ -2,9 +2,9 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gl.NoosaScript;
-import com.nyrds.util.ModError;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.MovieClip;
@@ -20,9 +20,11 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
-import lombok.val;
+
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import lombok.val;
 
 public class ItemSprite extends MovieClip {
 
@@ -168,8 +170,9 @@ public class ItemSprite extends MovieClip {
 		updateTexture(file);
 		try {
 			frame(film.get(image));
-		}catch (Exception e) {
-			throw new ModError("Something wrong with "+file+" frame: "+ image);
+		} catch (Exception e) {
+			view(Assets.ITEMS, ItemSpriteSheet.SMTH, null);
+			EventCollector.logException("Something wrong with "+file+" frame: "+ image);
 		}
 		if ((this.glowing = glowing) == null) {
 			resetColor();
