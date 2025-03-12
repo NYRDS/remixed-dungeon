@@ -72,19 +72,23 @@ public enum Sample {
 			return;
 		}
 		GameLoop.instance().soundExecutor.execute(() -> {
-			Sound sound = sounds.get(id);
+			try {
+				Sound sound = sounds.get(id);
 
-			if(sound==null) {
-				load(id);
-			}
+				if (sound == null) {
+					load(id);
+				}
 
-			sound = sounds.get(id);
+				sound = sounds.get(id);
 
-			if (sound != null) {
-				float volume = leftVolume * GamePreferences.soundFxVolume() / 10f;
-				long s_id = sound.play(volume, rate, 0);
-			} else {
-				EventCollector.logException("Sound " + id + " not found");
+				if (sound != null) {
+					float volume = leftVolume * GamePreferences.soundFxVolume() / 10f;
+					long s_id = sound.play(volume, rate, 0);
+				} else {
+					EventCollector.logException("Sound " + id + " not found");
+				}
+			} catch (Exception e) {
+				EventCollector.logException(e, id);
 			}
 		});
 	}
