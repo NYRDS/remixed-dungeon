@@ -62,7 +62,7 @@ public class ArmoredStatue extends Statue {
 			if(armor instanceof Armor) {
 				((Armor)armor).inscribe(Armor.Glyph.random());
 			}
-
+			STR(Math.max(12,armor.requiredSTR()));
 			armor.doEquip(this);
 		}
 		return getItemFromSlot(Belongings.Slot.ARMOR);

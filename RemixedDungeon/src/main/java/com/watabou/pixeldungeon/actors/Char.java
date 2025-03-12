@@ -2093,6 +2093,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void STR(int sTR) {
+        baseStr = sTR;
     }
 
     public int STR() {

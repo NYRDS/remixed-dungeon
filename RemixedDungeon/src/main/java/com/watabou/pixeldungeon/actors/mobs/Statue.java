@@ -46,8 +46,6 @@ public class Statue extends Mob {
 		dmgMin = Dungeon.depth / 4 + 1;
 		dmgMax = Dungeon.depth;
 
-		baseStr = 18;
-
 		addImmunity( ToxicGas.class );
 		addImmunity( Poison.class );
 		addResistance( Death.class );
@@ -119,6 +117,7 @@ public class Statue extends Mob {
 				((MeleeWeapon) chosenItem).enchant(Enchantment.random());
 			}
 
+			STR(Math.max(12,chosenItem.requiredSTR()));
 			chosenItem.doEquip(this);
 		}
 		return getItemFromSlot(Belongings.Slot.WEAPON);
