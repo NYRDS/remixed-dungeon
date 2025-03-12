@@ -2998,4 +2998,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="StartScene_ContinueLatest">Продолжить последнюю игру или выбрать слот сохранения</string>
   <string name="StartScene_ChooseFromSlot">Выбери слот сохранения</string>
   <string name="AboutScene_SourceCode">Получить исходники Remixed Dungeon:</string>
+  <string name="HeroClass_Priest">Священник</string>
+  <string name="HeroClass_PlagueDoctor">Чумной Доктор</string>
+  <string name="StartScene_ComingSoon">Скоро будет</string>
 </resources>
