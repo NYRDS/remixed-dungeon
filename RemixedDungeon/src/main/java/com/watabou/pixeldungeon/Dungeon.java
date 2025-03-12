@@ -174,6 +174,7 @@ public class Dungeon {
         Badges.reset();
         ItemsList.reset();
         CharsList.reset();
+        QuickSlot.reset();
 
         hero = CharsList.DUMMY_HERO;
     }

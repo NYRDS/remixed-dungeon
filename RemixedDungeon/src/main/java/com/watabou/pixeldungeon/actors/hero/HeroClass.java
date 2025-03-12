@@ -217,7 +217,7 @@ public enum HeroClass implements CharModifier {
     }
 
     private void initCommon(Hero hero) {
-        QuickSlot.cleanStorage();
+        QuickSlot.reset();
         initForClass(hero, COMMON);
         if (hero.getDifficulty() < 3) {
             initForClass(hero, NON_EXPERT);

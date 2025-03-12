@@ -41,6 +41,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     private static final String QUICKSLOT       = "quickslot";
 
     private static final ArrayList<QuickSlot>     slots   = new ArrayList<>();
+
     @SuppressLint("UseSparseArrays")
     private static final Map<Integer, Item> qsStorage = new HashMap<>();
 
@@ -296,7 +297,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         return null;
     }
 
-    public static void cleanStorage() {
+    public static void reset() {
         qsStorage.clear();
     }
 
