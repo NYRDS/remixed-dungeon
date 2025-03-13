@@ -332,7 +332,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 			return "hero_modern/armor/shoulders/" + armor.getVisualName() + "_" + hand + ".png";
 		}
 
-		return "hero_modern/armor/shoulders/" + armor.getVisualName() + "_" + item.getAttackAnimationClass() + "_" + hand + ".png";
+		return "hero_modern/armor/shoulders/" + armor.getVisualName() + "_" + item.getAttackAnimationClass()  + ".png";
 	}
 
 
