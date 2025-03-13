@@ -12,6 +12,21 @@ public class KeyEvent {
     public static final int KEYCODE_DPAD_RIGHT = Input.Keys.RIGHT;
     public static final int KEYCODE_SPACE = Input.Keys.SPACE;
 
+    public static final int KEYCODE_NUMPAD_1 = Input.Keys.NUMPAD_1;
+    public static final int KEYCODE_NUMPAD_2 = Input.Keys.NUMPAD_2;
+    public static final int KEYCODE_NUMPAD_3 = Input.Keys.NUMPAD_3;
+    public static final int KEYCODE_NUMPAD_4 = Input.Keys.NUMPAD_4;
+    public static final int KEYCODE_NUMPAD_5 = Input.Keys.NUMPAD_5;
+    public static final int KEYCODE_NUMPAD_6 = Input.Keys.NUMPAD_6;
+    public static final int KEYCODE_NUMPAD_7 = Input.Keys.NUMPAD_7;
+    public static final int KEYCODE_NUMPAD_8 = Input.Keys.NUMPAD_8;
+    public static final int KEYCODE_NUMPAD_9 = Input.Keys.NUMPAD_9;
+
+    public static final int KEYCODE_DPAD_DOWN_LEFT = Input.Keys.END;
+    public static final int KEYCODE_DPAD_DOWN_RIGHT = Input.Keys.PAGE_DOWN;
+    public static final int KEYCODE_DPAD_UP_LEFT = Input.Keys.HOME;
+    public static final int KEYCODE_DPAD_UP_RIGHT = Input.Keys.PAGE_UP;
+
 
     public static final int KEYCODE_I = Input.Keys.I;
     public static final int KEYCODE_E = Input.Keys.E;

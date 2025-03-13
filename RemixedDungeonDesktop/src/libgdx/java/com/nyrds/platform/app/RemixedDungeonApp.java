@@ -2,6 +2,7 @@ package com.nyrds.platform.app;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.PUtil;
 
@@ -23,30 +24,32 @@ public class RemixedDungeonApp {
     public static void main(String[] args){
         savedArgs = args;
 
-        Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> {
+        if(!BuildConfig.DEBUG) {
+            Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> {
 
-            StringWriter stringWriter = new StringWriter();
-            PrintWriter printWriter = new PrintWriter(stringWriter);
-            throwable.printStackTrace(printWriter);
-            String stackTrace = stringWriter.toString();
+                StringWriter stringWriter = new StringWriter();
+                PrintWriter printWriter = new PrintWriter(stringWriter);
+                throwable.printStackTrace(printWriter);
+                String stackTrace = stringWriter.toString();
 
-            javax.swing.SwingUtilities.invokeLater(() -> {
-                JOptionPane.showMessageDialog(
-                        null,
-                        "Unhandled Exception:\n" + throwable.getMessage() + "\n\nStack Trace:\n" + stackTrace,
-                        "Error",
-                        JOptionPane.ERROR_MESSAGE
-                );
+                javax.swing.SwingUtilities.invokeLater(() -> {
+                    JOptionPane.showMessageDialog(
+                            null,
+                            "Unhandled Exception:\n" + throwable.getMessage() + "\n\nStack Trace:\n" + stackTrace,
+                            "Error",
+                            JOptionPane.ERROR_MESSAGE
+                    );
 
-                System.exit(1);
+                    System.exit(1);
+                });
             });
-        });
 
-        try {
-            System.setOut(new PrintStream(new FileOutputStream("stdout.log")));
-            System.setErr(new PrintStream(new FileOutputStream("stderr.log")));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            try {
+                System.setOut(new PrintStream(new FileOutputStream("stdout.log")));
+                System.setErr(new PrintStream(new FileOutputStream("stderr.log")));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
         }
 
         System.setProperty("https.protocols", "TLSv1.2");
@@ -55,9 +58,9 @@ public class RemixedDungeonApp {
         probeModules();
 
         Lwjgl3ApplicationConfiguration cfg = new Lwjgl3ApplicationConfiguration();
-        cfg.setTitle("Remixed Dungeon");
+        cfg.setTitle("Remixed Pixel Dungeon");
         cfg.setBackBufferConfig(8, 8, 8, 8, 16, 0, 0);
-        cfg.setForegroundFPS(30);
+        cfg.setForegroundFPS(60);
 
         cfg.setFullscreenMode(Lwjgl3ApplicationConfiguration.getDisplayMode());
         cfg.enableGLDebugOutput(true, System.err);

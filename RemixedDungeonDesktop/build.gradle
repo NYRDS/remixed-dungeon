@@ -8,7 +8,7 @@ plugins {
 
 project.ext {
     version = '32.2'
-    version_code = 1234
+    version_code = 1235
 }
 
 java {
@@ -64,11 +64,10 @@ tasks.register('codegen', Exec) {
 }
 
 tasks.register('generateBuildConfig') {
-    def debugProvider = project.providers.gradleProperty('debug').orElse('false')
     def version = project.ext.version
     def version_code = project.ext.version_code
     doLast {
-        def debug = debugProvider.get().toBoolean()
+        def debug = false
         def buildConfigFile = new File("${projectDir}/src-generated/com/nyrds/pixeldungeon/ml/BuildConfig.java")
         buildConfigFile.parentFile.mkdirs()
         buildConfigFile.text = """

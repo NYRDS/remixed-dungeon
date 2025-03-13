@@ -207,6 +207,7 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public boolean keyDown(int keycode) {
+        //PUtil.slog("key", "keyDown: " +  keycode + " " + Input.Keys.toString(keycode));
         GameLoop.instance().keysEvents.add(new KeyEvent(keycode, KeyEvent.ACTION_DOWN));
         keyDownTimes.put(keycode, System.currentTimeMillis()); // Record the time when the key was pressed
 

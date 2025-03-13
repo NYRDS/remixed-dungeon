@@ -652,17 +652,38 @@ public class GameScene extends PixelScene {
                 }
                 return;
 
+
             case KeyEvent.KEYCODE_DPAD_UP:
+            case KeyEvent.KEYCODE_NUMPAD_8:
                 ty--;
                 break;
             case KeyEvent.KEYCODE_DPAD_DOWN:
+            case KeyEvent.KEYCODE_NUMPAD_2:
                 ty++;
                 break;
             case KeyEvent.KEYCODE_DPAD_LEFT:
+            case KeyEvent.KEYCODE_NUMPAD_4:
                 tx--;
                 break;
             case KeyEvent.KEYCODE_DPAD_RIGHT:
+            case KeyEvent.KEYCODE_NUMPAD_6:
                 tx++;
+                break;
+            case KeyEvent.KEYCODE_DPAD_DOWN_LEFT:
+            case KeyEvent.KEYCODE_NUMPAD_1:
+                tx--;ty++;
+                break;
+            case KeyEvent.KEYCODE_DPAD_DOWN_RIGHT:
+            case KeyEvent.KEYCODE_NUMPAD_3:
+                tx++;ty++;
+                break;
+            case KeyEvent.KEYCODE_DPAD_UP_LEFT:
+            case KeyEvent.KEYCODE_NUMPAD_7:
+                tx--;ty--;
+                break;
+            case KeyEvent.KEYCODE_DPAD_UP_RIGHT:
+            case KeyEvent.KEYCODE_NUMPAD_9:
+                tx++;ty--;
                 break;
 
             case KeyEvent.KEYCODE_I:
