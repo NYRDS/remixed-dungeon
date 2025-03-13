@@ -74,6 +74,7 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
 		LAYER_HEAD,
 		LAYER_HAIR,
 		LAYER_ARMOR,
+		LAYER_ARMOR_BOOTS,
 		LAYER_FACIAL_HAIR,
 		LAYER_HELMET,
 		LAYER_LEFT_HAND,
