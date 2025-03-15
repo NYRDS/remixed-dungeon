@@ -20,7 +20,7 @@ https://discordapp.com/invite/AMXrhQZ
 Theo dõi chúng tôi trên Twitter:
 https://twitter.com/nyrds
 
-This game is an open source software under the GPLv3 License. Source code of Remixed Dungeon can be found here: 
+Trò chơi này là phần mềm mã nguồn mở theo Giấy phép GPLv3. Mã nguồn của Remixed Dungeon có thể được tìm thấy tại đây:
 https://github.com/NYRDS/remixed-dungeon
 
 If  you wish participate in localization to other languages please visit:
