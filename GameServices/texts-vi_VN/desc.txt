@@ -5,7 +5,7 @@ Và giờ đây thị trấn nhỏ này trở nên thịnh vượng khi tọa l�
 
 Tính năng của trò chơi:
 - Trò chơi này hỗ trợ các bản mod do người dùng tạo! Và khi chúng tôi phát triển thêm tính năng này, bạn sẽ sớm có thể tạo ra một trò chơi hoàn toàn mới bên trong Remixed Dungeon!
-- Hardcore roguelike experience!
+- Trải nghiệm roguelike cực đỉnh!
 - 7 hero classes to chose from
 - Town hub to prepare you for your journey and introduce you to the game world
 - Over 30 dungeon levels of main dungeon split in 6 dungeon types
