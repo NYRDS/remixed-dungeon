@@ -4,7 +4,7 @@ Ngày xửa ngày xưa, có một thị trấn nhỏ. Người dân thị trấn
 Và giờ đây thị trấn nhỏ này trở nên thịnh vượng khi tọa lạc trên một ngục tối nguy hiểm chứa đầy những nhà thám hiểm đã chết và linh hồn khốn khổ của họ.
 
 Tính năng của trò chơi:
-- This game supports user-created mods! And as we further develop this feature, soon you will be able to create whole new game inside Remixed Dungeon!
+- Trò chơi này hỗ trợ các bản mod do người dùng tạo! Và khi chúng tôi phát triển thêm tính năng này, bạn sẽ sớm có thể tạo ra một trò chơi hoàn toàn mới bên trong Remixed Dungeon!
 - Hardcore roguelike experience!
 - 7 hero classes to chose from
 - Town hub to prepare you for your journey and introduce you to the game world
