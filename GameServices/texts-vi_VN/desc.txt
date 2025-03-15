@@ -7,7 +7,7 @@ Tính năng của trò chơi:
 - Trò chơi này hỗ trợ các bản mod do người dùng tạo! Và khi chúng tôi phát triển thêm tính năng này, bạn sẽ sớm có thể tạo ra một trò chơi hoàn toàn mới bên trong Remixed Dungeon!
 - Trải nghiệm roguelike cực đỉnh!
 - 7 lớp anh hùng để lựa chọn
-- Town hub to prepare you for your journey and introduce you to the game world
+- Trung tâm thị trấn để chuẩn bị cho chuyến hành trình của bạn và giới thiệu bạn với thế giới trò chơi
 - Over 30 dungeon levels of main dungeon split in 6 dungeon types
 - 3 optional dungeons: Spider Lair, Necropolis, Ice Caves
 - Dozens of items and monsters
