@@ -28,4 +28,4 @@ https://www.transifex.com/projects/p/remixed-dungeon/
 
 You can check 
 http://wiki.nyrds.net/doku.php?id=rpd:changelog
-for full changelog on our wiki
+để biết nhật ký thay đổi đầy đủ trên wiki của chúng tôi 
