@@ -9,7 +9,7 @@ Tính năng của trò chơi:
 - 7 lớp anh hùng để lựa chọn
 - Trung tâm thị trấn để chuẩn bị cho chuyến hành trình của bạn và giới thiệu bạn với thế giới trò chơi
 - Hơn 30 cấp độ ngục tối của ngục tối chính được chia thành 6 loại ngục tối
-- 3 optional dungeons: Spider Lair, Necropolis, Ice Caves
+- 3 ngục tối tùy chọn: Hang Nhện, Nghĩa trang, Hang băng
 - Dozens of items and monsters
 - Various bosses
 - Hats! Everyone likes hats
