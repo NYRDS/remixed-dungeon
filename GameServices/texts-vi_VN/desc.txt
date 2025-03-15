@@ -17,7 +17,7 @@ Tính năng của trò chơi:
 Tham gia máy chủ Discord của chúng tôi:
 https://discordapp.com/invite/AMXrhQZ
 
-Follow us on twitter:
+Theo dõi chúng tôi trên Twitter:
 https://twitter.com/nyrds
 
 This game is an open source software under the GPLv3 License. Source code of Remixed Dungeon can be found here: 
