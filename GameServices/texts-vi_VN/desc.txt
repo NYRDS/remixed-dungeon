@@ -1,7 +1,7 @@
 Đây là một trò chơi roguelike mã nguồn mở với đồ họa theo phong cách pixel
 
 Ngày xửa ngày xưa, có một thị trấn nhỏ. Người dân thị trấn sống hạnh phúc, nhưng họ quá nghèo đến nỗi họ thậm chí không đủ khả năng để đi đến một nơi tử tế nào đó vào kỳ nghỉ. Nhưng vào ngày mà mọi người từ bỏ mọi hy vọng, một phép màu đã xảy ra. Mặt đất bên dưới thị trấn rung chuyển dữ dội và vô số quái vật đáng khinh xuất hiện. Từ thời điểm đó, tất cả những người dân thị trấn sống sót đều sống hạnh phúc mãi mãi. Tại sao? Bởi vì ngục tối đã thu hút đủ loại anh hùng và nhà thám hiểm. Họ bảo vệ những người vô tội và cuối cùng trở thành những người tiêu tiền xuất sắc, thúc đẩy nền kinh tế của thị trấn.
-And now the little town flourishes, as it stands on top of a dangerous dungeon filled with dead adventurers and their miserable souls.
+Và giờ đây thị trấn nhỏ này trở nên thịnh vượng khi tọa lạc trên một ngục tối nguy hiểm chứa đầy những nhà thám hiểm đã chết và linh hồn khốn khổ của họ.
 
 Game features:
 - This game supports user-created mods! And as we further develop this feature, soon you will be able to create whole new game inside Remixed Dungeon!
