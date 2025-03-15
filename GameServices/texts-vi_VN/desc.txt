@@ -11,7 +11,7 @@ Tính năng của trò chơi:
 - Hơn 30 cấp độ ngục tối của ngục tối chính được chia thành 6 loại ngục tối
 - 3 ngục tối tùy chọn: Hang Nhện, Nghĩa trang, Hang băng
 - Hàng chục vật phẩm và quái vật
-- Various bosses
+- Nhiều Boss khác nhau
 - Hats! Everyone likes hats
 
 Join our Discord server:
