@@ -8,7 +8,7 @@ Tính năng của trò chơi:
 - Trải nghiệm roguelike cực đỉnh!
 - 7 lớp anh hùng để lựa chọn
 - Trung tâm thị trấn để chuẩn bị cho chuyến hành trình của bạn và giới thiệu bạn với thế giới trò chơi
-- Over 30 dungeon levels of main dungeon split in 6 dungeon types
+- Hơn 30 cấp độ ngục tối của ngục tối chính được chia thành 6 loại ngục tối
 - 3 optional dungeons: Spider Lair, Necropolis, Ice Caves
 - Dozens of items and monsters
 - Various bosses
