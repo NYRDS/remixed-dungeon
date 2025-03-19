@@ -62,12 +62,11 @@ public class RemixedDungeonApp {
         cfg.setBackBufferConfig(8, 8, 8, 8, 16, 0, 0);
         cfg.setForegroundFPS(60);
 
-        if (!BuildConfig.DEBUG) {
-            cfg.setFullscreenMode(Lwjgl3ApplicationConfiguration.getDisplayMode());
+        if(BuildConfig.DEBUG) {
+            cfg.setWindowedMode(800,450);
         } else {
-            cfg.setWindowedMode(800, 450);
+            cfg.setFullscreenMode(Lwjgl3ApplicationConfiguration.getDisplayMode());
         }
-
         cfg.enableGLDebugOutput(true, System.err);
 
 

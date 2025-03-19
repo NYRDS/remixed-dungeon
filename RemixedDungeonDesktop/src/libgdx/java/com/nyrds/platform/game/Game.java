@@ -276,8 +276,8 @@ public class Game implements ApplicationListener, InputProcessor {
         return false;
     }
 
-    public final void runOnUiThread(Runnable action) {
-        action.run();
+    public static void runOnUiThread(Runnable action) {
+        Gdx.app.postRunnable(action);
     }
 
     static public void requestInternetPermission(InterstitialPoint returnTo) {
