@@ -5,7 +5,7 @@ import com.watabou.pixeldungeon.items.armor.ClassArmor;
 
 import org.jetbrains.annotations.NotNull;
 
-public class PlagueDoctorArmor extends ClassArmor {
+public class DoctorArmor extends ClassArmor {
     @Override
     public String special() {
         return "";

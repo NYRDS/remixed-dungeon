@@ -20,8 +20,8 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
+import com.nyrds.pixeldungeon.items.common.armor.DoctorArmor;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
-import com.nyrds.pixeldungeon.items.common.armor.PlagueDoctorArmor;
 import com.nyrds.pixeldungeon.items.common.armor.PriestArmor;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
@@ -80,7 +80,7 @@ public enum HeroClass implements CharModifier {
     NECROMANCER(R.string.HeroClass_Necromancer, NecromancerArmor.class),
     GNOLL(R.string.HeroClass_Gnoll, GnollArmor.class),
     PRIEST(R.string.HeroClass_Priest, PriestArmor.class),
-    PLAGUE_DOCTOR(R.string.HeroClass_PlagueDoctor, PlagueDoctorArmor.class);
+    DOCTOR(R.string.HeroClass_Doctor, DoctorArmor.class);
 
     private static final String FORBIDDEN_ACTIONS = "forbiddenActions";
     private static final String FRIENDLY_MOBS = "friendlyMobs";
@@ -240,6 +240,10 @@ public enum HeroClass implements CharModifier {
                 return Badges.Badge.MASTERY_NECROMANCER;
             case GNOLL:
                 return Badges.Badge.MASTERY_GNOLL;
+            case PRIEST:
+                return Badges.Badge.MASTERY_PRIEST;
+            case DOCTOR:
+                return Badges.Badge.MASTERY_DOCTOR;
         }
         return null;
     }

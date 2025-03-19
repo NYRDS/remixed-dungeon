@@ -284,7 +284,7 @@ public class StartScene extends PixelScene {
                 return;
             }
 
-            if(curShield.cl == HeroClass.PLAGUE_DOCTOR || curShield.cl == HeroClass.PRIEST) {
+            if(curShield.cl == HeroClass.DOCTOR || curShield.cl == HeroClass.PRIEST) {
                 updateUnlockLabel(StringsManager.getVar(R.string.StartScene_ComingSoon));
                 return;
             }

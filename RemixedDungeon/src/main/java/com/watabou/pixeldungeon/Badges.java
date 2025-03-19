@@ -193,7 +193,10 @@ public class Badges {
 		GNOLL_UNLOCKED(R.string.Badges_GnollUnlocked,72, true),
 		DOCTOR_QUEST_COMPLETED(R.string.MedicineMask_Obtained,81),
 		MASTERY_GNOLL,
-		THIS_IS_SPARTA(R.string.Badges_ThisIsSparta, 82);
+		THIS_IS_SPARTA(R.string.Badges_ThisIsSparta, 82),
+		MASTERY_PRIEST, MASTERY_DOCTOR,
+		VICTORY_PRIEST, VICTORY_DOCTOR,
+		BOSS_SLAIN_1_DOCTOR, BOSS_1_SLAIN_PRIEST;
 
 		public final boolean meta;
 

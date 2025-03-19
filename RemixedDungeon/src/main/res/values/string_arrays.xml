@@ -185,6 +185,21 @@
     <item>@string/HeroClass_ElfPerks_4</item>
     <item>@string/HeroClass_ElfPerks_5</item>
   </string-array>
+  <!--string-array name="HeroClass_PriestPerks">
+    <item>@string/HeroClass_PriestPerks_0</item>
+    <item>@string/HeroClass_PriestPerks_1</item>
+    <item>@string/HeroClass_PriestPerks_2</item>
+    <item>@string/HeroClass_PriestPerks_3</item>
+    <item>@string/HeroClass_PriestPerks_4</item>
+  </string-array>
+  <string-array name="HeroClass_PlagueDoctorPerks">
+    <item>@string/HeroClass_PlagueDoctorPerks_0</item>
+    <item>@string/HeroClass_PlagueDoctorPerks_1</item>
+    <item>@string/HeroClass_PlagueDoctorPerks_2</item>
+    <item>@string/HeroClass_PlagueDoctorPerks_3</item>
+    <item>@string/HeroClass_PlagueDoctorPerks_4</item>
+  </string-array-->
+
   <string-array name="Death_Name">
     <item>@string/Death_Name_0</item>
     <item>@string/Death_Name_1</item>
