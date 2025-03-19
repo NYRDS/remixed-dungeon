@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
@@ -28,7 +29,7 @@ public class ClassShield extends Button {
 
     private static final int WIDTH = 24;
     private static final int HEIGHT = 28;
-    private static final float SCALE = 1.5f;
+    private static float SCALE = 1.5f;
 
     private final StartScene startScene;
     public final HeroClass cl;
@@ -49,6 +50,11 @@ public class ClassShield extends Button {
         this.cl = cl;
 
         avatar.frame(cl.classIndex() * WIDTH, 0, WIDTH, HEIGHT);
+
+        if(RemixedDungeon.landscape()) {
+            SCALE = 1.25f;
+        }
+
         avatar.setScale(SCALE);
 
         if (Badges.isUnlocked(cl.masteryBadge())) {
