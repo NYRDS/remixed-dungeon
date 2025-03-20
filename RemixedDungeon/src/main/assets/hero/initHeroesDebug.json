@@ -245,7 +245,8 @@
       {
         "kind": "ScrollOfRemoveCurse"
       }
-    ]
+    ],
+    "magicAffinity": "Priest"
   },
   "DOCTOR": {
     "knownItems": [
@@ -258,6 +259,7 @@
       {
         "kind": "PotionOfParalyticGas"
       }
-    ]
+    ],
+    "magicAffinity": "PlagueDoctor"
   }
 }
