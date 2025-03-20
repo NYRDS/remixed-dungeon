@@ -11,6 +11,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.items.EquipableItem;
@@ -29,7 +30,6 @@ import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -239,7 +239,7 @@ public class Armor extends EquipableItem {
 		return Math.max(typicalSTR() - level(),2);
 	}
 
-	public static abstract class Glyph implements Bundlable, NamedEntityKind, Doom {
+	public static abstract class Glyph extends Buff implements Bundlable, NamedEntityKind, Doom{
 		
 		private static final Class<?>[] glyphs = new Class<?>[]{ 
 			Bounce.class, Affection.class, AntiEntropy.class, Multiplicity.class, 
@@ -258,24 +258,6 @@ public class Armor extends EquipableItem {
 			return armorName;
 		}
 
-		@Override
-		public void restoreFromBundle( Bundle bundle ) {
-		}
-
-		@Override
-		public void storeInBundle( Bundle bundle ) {
-		}
-
-		@Override
-		public String getEntityKind() {
-			return getClass().getSimpleName();
-		}
-
-		@Override
-		public boolean dontPack() {
-			return false;
-		}
-		
 		public Glowing glowing() {
 			return Glowing.WHITE;
 		}

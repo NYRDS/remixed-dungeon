@@ -11,6 +11,7 @@ import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
@@ -40,6 +41,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.SneakyThrows;
 
 @EqualsAndHashCode(callSuper = true)
@@ -71,7 +73,8 @@ public class Weapon extends KindOfWeapon {
 	
 	private int hitsToKnow = 20;
 
-	@Packable
+	@Getter
+    @Packable
 	private Enchantment enchantment;
 	
 	public void usedForHit() {
@@ -214,12 +217,8 @@ public class Weapon extends KindOfWeapon {
 	public Glowing glowing() {
 		return getEnchantment() != null ? getEnchantment().glowing() : null;
 	}
-	
-	public Enchantment getEnchantment() {
-		return enchantment;
-	}
 
-	@Override
+    @Override
 	public void fromJson(JSONObject itemDesc) throws JSONException {
 		super.fromJson(itemDesc);
 
@@ -228,7 +227,7 @@ public class Weapon extends KindOfWeapon {
 		}
 	}
 
-	public static abstract class Enchantment implements Bundlable, NamedEntityKind {
+	public static abstract class Enchantment extends Buff implements Bundlable, NamedEntityKind {
 		
 		final String[] TXT_NAME = Utils.getClassParams(getEntityKind(), "Name", new String[]{Utils.EMPTY_STRING, Utils.EMPTY_STRING, Utils.EMPTY_STRING}, true);
 		
@@ -249,27 +248,6 @@ public class Weapon extends KindOfWeapon {
 			return weaponName;
 		}
 
-		@Override
-		public String name() {
-			return getEntityKind();
-		}
-
-		public String getEntityKind() {
-			return getClass().getSimpleName();
-		}
-
-		@Override
-		public void restoreFromBundle( Bundle bundle ) {
-		}
-
-		@Override
-		public void storeInBundle( Bundle bundle ) {
-		}
-
-		public boolean dontPack() {
-			return false;
-		}
-		
 		public Glowing glowing() {
 			return Glowing.WHITE;
 		}
