@@ -51,6 +51,7 @@ import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
+import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
@@ -104,7 +105,7 @@ import lombok.Setter;
 import lombok.val;
 
 
-public abstract class Char extends Actor implements HasPositionOnLevel, Presser, ItemOwner, NamedEntityKindWithId {
+public abstract class Char extends Actor implements HasPositionOnLevel, Presser, ItemOwner, NamedEntityKindWithId, Doom {
 
     public static final String IMMUNITIES = "immunities";
     public static final String RESISTANCES = "resistances";
@@ -440,30 +441,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
                 enemySprite.bloodBurstA(mySprite.center(), effectiveDamage);
                 enemySprite.flash();
-            }
 
-            if (!enemy.isAlive() && visibleFight) {
-                Hero hero = Dungeon.hero;
-                if (enemy == hero) {
-
-                    if (hero.killerGlyph != null) {
-                        Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.GLYPH), hero.killerGlyph.name(), Dungeon.depth));
-                        GLog.n(StringsManager.getVars(R.array.Char_Kill)[hero.getGender()], hero.killerGlyph.name());
-                    } else {
-                        if (isBoss()) {
-                            Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.BOSS), getName(), Dungeon.depth));
-                        } else {
-                            Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
-                                    Utils.indefinite(getName()), Dungeon.depth));
-                        }
-
-                        GLog.n(StringsManager.getVars(R.array.Char_Kill)[getGender()], getName());
-                    }
-
-                } else {
+                if (!enemy.isAlive() && enemy != Dungeon.hero ) {
                     GLog.i(StringsManager.getVars(R.array.Char_Defeat)[getGender()], getName(), enemy.getName_objective());
                 }
             }
+
+
             return true;
         } else {
 
@@ -2265,5 +2249,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
                 sprite.place(getPos());
             }
         }
+    }
+
+    public void onHeroDeath() {
+        if (isBoss()) {
+            Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.BOSS), getName(), Dungeon.depth));
+        } else {
+            Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.MOB),
+                    Utils.indefinite(getName()), Dungeon.depth));
+        }
+
+        GLog.n(StringsManager.getVars(R.array.Char_Kill)[getGender()], getName());
     }
 }

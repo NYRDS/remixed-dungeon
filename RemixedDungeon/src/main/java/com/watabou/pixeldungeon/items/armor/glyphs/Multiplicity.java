@@ -36,8 +36,6 @@ public class Multiplicity extends Glyph {
 				if(defender instanceof Mob) {
 					((Mob) defender).split(imgCell, damage);
 				}
-
-				checkOwner( defender );
 			}
 			
 		}

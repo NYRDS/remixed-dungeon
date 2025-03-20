@@ -9,9 +9,10 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.glyphs.Affection;
@@ -238,7 +239,7 @@ public class Armor extends EquipableItem {
 		return Math.max(typicalSTR() - level(),2);
 	}
 
-	public static abstract class Glyph implements Bundlable, NamedEntityKind {
+	public static abstract class Glyph implements Bundlable, NamedEntityKind, Doom {
 		
 		private static final Class<?>[] glyphs = new Class<?>[]{ 
 			Bounce.class, Affection.class, AntiEntropy.class, Multiplicity.class, 
@@ -278,18 +279,18 @@ public class Armor extends EquipableItem {
 		public Glowing glowing() {
 			return Glowing.WHITE;
 		}
-		
-		public void checkOwner( Char owner ) {
-			if (!owner.isAlive() && owner instanceof Hero) {
-				((Hero)owner).killerGlyph = this;
-				Badges.validateDeathFromGlyph();
-			}
-		}
-		
+
 		@SuppressWarnings("unchecked")
 		@SneakyThrows
 		public static Glyph random() {
 			return ((Class<Glyph>)glyphs[ Random.chances( chances ) ]).newInstance();
+		}
+
+		@Override
+		public void onHeroDeath() {
+			Badges.validateDeathFromGlyph();
+			Dungeon.fail(Utils.format(ResultDescriptions.getDescription(ResultDescriptions.Reason.GLYPH),name(), Dungeon.depth));
+			GLog.n(StringsManager.getVars(R.array.Char_Kill)[Utils.MASCULINE], name());
 		}
 	}
 }

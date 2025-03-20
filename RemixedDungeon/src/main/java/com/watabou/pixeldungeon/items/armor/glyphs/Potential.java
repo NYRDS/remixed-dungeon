@@ -29,8 +29,7 @@ public class Potential extends Glyph {
 			attacker.damage( dmg, LightningTrap.LIGHTNING );
 			dmg = Random.IntRange( 1, dmg );
 			defender.damage( dmg, LightningTrap.LIGHTNING );
-			
-			checkOwner( defender );
+
 			if (defender == Dungeon.hero) {
 				Camera.main.shake( 2, 0.3f );
 			}

@@ -57,7 +57,6 @@ import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
@@ -117,8 +116,6 @@ public class Hero extends Char {
 
     @Packable
     public static Item movieRewardPrize = ItemsList.DUMMY;
-
-    public Armor.Glyph killerGlyph = null;
 
     public boolean restoreHealth = false;
 
@@ -580,7 +577,6 @@ public class Hero extends Char {
 
     @Override
     public void die(@NotNull NamedEntityKind cause) {
-
         Map<String, String> deathDesc = new HashMap<>();
 
         deathDesc.put("class", heroClass.name());
@@ -615,6 +611,7 @@ public class Hero extends Char {
         }
 
         Actor.fixTime();
+
         super.die(cause);
 
         if (!Ankh.resurrect(this, cause)) {
