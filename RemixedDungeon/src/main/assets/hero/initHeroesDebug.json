@@ -241,9 +241,23 @@
     ]
   },
   "PRIEST": {
-
+    "knownItems": [
+      {
+        "kind": "ScrollOfRemoveCurse"
+      }
+    ]
   },
   "DOCTOR": {
-
+    "knownItems": [
+      {
+        "kind": "PotionOfHealing"
+      },
+      {
+        "kind": "PotionOfToxicGas"
+      },
+      {
+        "kind": "PotionOfParalyticGas"
+      }
+    ]
   }
 }

@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.hero.Backpack;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
@@ -163,6 +164,10 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
             GameScene.pickUp(this);
             Sample.INSTANCE.play(Assets.SND_ITEM);
             hero.spend(TIME_TO_PICK_UP);
+
+            if (hero.getHeroClass() == HeroClass.PRIEST) {
+                setChargeKnown(true);
+            }
             return true;
         } else {
             return false;

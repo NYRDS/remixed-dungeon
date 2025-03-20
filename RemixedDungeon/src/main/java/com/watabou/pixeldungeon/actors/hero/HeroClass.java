@@ -92,6 +92,7 @@ public enum HeroClass implements CharModifier {
     public static final String ALLIES = "allies";
     public static final String KIND = "kind";
     public static final String SPELL = "spell";
+    public static final String BONE_SAW = "BoneSaw";
 
     private final Class<? extends ClassArmor> armorClass;
 
@@ -433,6 +434,12 @@ public enum HeroClass implements CharModifier {
 
     @Override
     public int attackSkillBonus(Char chr) {
+        switch (this) {
+            case DOCTOR:
+                if(!chr.getActiveWeapon().getEntityKind().equals(BONE_SAW) && !chr.getSecondaryWeapon().getEntityKind().equals(BONE_SAW)) {
+                    return -5;
+                }
+        }
         return 0;
     }
 
