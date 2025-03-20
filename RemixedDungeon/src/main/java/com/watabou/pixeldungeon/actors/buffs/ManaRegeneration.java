@@ -23,7 +23,7 @@ public class ManaRegeneration extends Buff {
                 bonus[0] += 10;
             }
 
-            target.forEachBuff(b-> bonus[0] +=b.manaRegenerationBonus());
+            target.forEachBuff(b-> bonus[0] +=b.manaRegenerationBonus(target));
 
             spend((float) (REGENERATION_DELAY / Math.pow(1.2, bonus[0])));
         } else {

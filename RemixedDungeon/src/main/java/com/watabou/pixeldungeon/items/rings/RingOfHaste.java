@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
+import com.watabou.pixeldungeon.actors.Char;
 
 public class RingOfHaste extends Ring {
 	
@@ -18,7 +19,7 @@ public class RingOfHaste extends Ring {
 	
 	public class Haste extends RingBuff {
 		@Override
-		public float hasteLevel() {
+		public float hasteLevel(Char chr) {
 			return level();
 		}
 	}

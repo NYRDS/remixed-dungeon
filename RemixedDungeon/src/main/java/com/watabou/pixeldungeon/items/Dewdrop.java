@@ -37,7 +37,7 @@ public class Dewdrop extends Item {
 		if(!collected && hero.hp() < hero.ht()) {
 			final int[] value = {1 + (Dungeon.depth - 1) / 5};
 
-			hero.forEachBuff(b-> value[0] +=b.dewBonus());
+			hero.forEachBuff(b-> value[0] +=b.dewBonus(hero));
 
 			int effect = Math.min( hero.ht() - hero.hp(), value[0] * quantity() );
 			if (effect > 0) {

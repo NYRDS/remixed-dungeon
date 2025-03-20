@@ -21,7 +21,7 @@ public class Regeneration extends Buff {
                 bonus[0] += 10;
             }
 
-            target.forEachBuff(b-> bonus[0] +=b.regenerationBonus());
+            target.forEachBuff(b-> bonus[0] +=b.regenerationBonus(target));
 
             int healPoints = 1;
             float healRate = (float) Math.pow(1.2, bonus[0]);

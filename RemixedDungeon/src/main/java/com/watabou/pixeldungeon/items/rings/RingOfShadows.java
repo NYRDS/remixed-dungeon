@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
+import com.watabou.pixeldungeon.actors.Char;
 
 public class RingOfShadows extends Ring {
 	
@@ -18,7 +19,7 @@ public class RingOfShadows extends Ring {
 	
 	public class Shadows extends RingBuff {
 		@Override
-		public int stealthBonus() {
+		public int stealthBonus(Char chr) {
 			return level();
 		}
 	}

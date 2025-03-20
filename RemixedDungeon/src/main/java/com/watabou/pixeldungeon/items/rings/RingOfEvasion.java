@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
+import com.watabou.pixeldungeon.actors.Char;
 
 public class RingOfEvasion extends Ring {
 	
@@ -18,7 +19,7 @@ public class RingOfEvasion extends Ring {
 	
 	public class Evasion extends RingBuff {
 		@Override
-		public int defenceSkillBonus() {
+		public int defenceSkillBonus(Char chr) {
 			return level();
 		}
 	}

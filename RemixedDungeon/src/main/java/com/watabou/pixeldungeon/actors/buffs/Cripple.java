@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
@@ -16,7 +17,7 @@ public class Cripple extends FlavourBuff {
 	}
 
 	@Override
-	public float speedMultiplier() {
+	public float speedMultiplier(Char chr) {
 		return 0.5f;
 	}
 

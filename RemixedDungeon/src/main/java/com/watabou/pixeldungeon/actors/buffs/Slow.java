@@ -23,7 +23,7 @@ public class Slow extends FlavourBuff {
 	}
 
 	@Override
-	public float hasteLevel() {
+	public float hasteLevel(Char chr) {
 		return -7.27254f;
 	}
 

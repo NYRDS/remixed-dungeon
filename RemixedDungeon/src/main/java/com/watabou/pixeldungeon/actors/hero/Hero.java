@@ -776,16 +776,16 @@ public class Hero extends Char {
     @Override
     public Set<String> resistances() {
         Set<String> resistances = super.resistances();
-        resistances.addAll(heroClass.resistances());
-        resistances.addAll(subClass.resistances());
+        resistances.addAll(heroClass.resistances(this));
+        resistances.addAll(subClass.resistances(this));
         return resistances;
     }
 
     @Override
     public Set<String> immunities() {
         Set<String> immunities = super.immunities();
-        immunities.addAll(heroClass.immunities());
-        immunities.addAll(subClass.immunities());
+        immunities.addAll(heroClass.immunities(this));
+        immunities.addAll(subClass.immunities(this));
         return immunities;
     }
 

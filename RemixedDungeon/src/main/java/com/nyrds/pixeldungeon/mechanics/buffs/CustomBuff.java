@@ -123,28 +123,28 @@ public class CustomBuff extends Buff {
     }
 
     @Override
-    public int drBonus() {
-        return script.runOptional("drBonus",0);
+    public int drBonus(Char chr) {
+        return script.runOptional("drBonus",0, chr);
     }
 
     @Override
-    public int stealthBonus() {
-        return script.runOptional("stealthBonus",0);
+    public int stealthBonus(Char chr) {
+        return script.runOptional("stealthBonus",0, chr);
     }
 
     @Override
-    public float speedMultiplier() {
-        return script.runOptional("speedMultiplier",1.f);
+    public float speedMultiplier(Char chr) {
+        return script.runOptional("speedMultiplier",1.f, chr);
     }
 
     @Override
-    public int regenerationBonus() {
-        return script.runOptional("regenerationBonus",0);
+    public int regenerationBonus(Char chr) {
+        return script.runOptional("regenerationBonus",0, chr);
     }
 
     @Override
-    public void charAct() {
-        script.runOptional("charAct");
+    public void charAct(Char chr) {
+        script.runOptional("charAct", chr);
     }
 
     @Override
@@ -158,18 +158,18 @@ public class CustomBuff extends Buff {
     }
 
     @Override
-    public int defenceSkillBonus() {
-        return script.runOptional("defenceSkillBonus",super.defenceSkillBonus());
+    public int defenceSkillBonus(Char chr) {
+        return script.runOptional("defenceSkillBonus",super.defenceSkillBonus(chr), chr);
     }
 
     @Override
-    public int attackSkillBonus() {
-        return script.runOptional("attackSkillBonus",super.attackSkillBonus());
+    public int attackSkillBonus(Char chr) {
+        return script.runOptional("attackSkillBonus",super.attackSkillBonus(chr), chr);
     }
 
     @Override
-    public float hasteLevel() {
-        return script.runOptional("hasteLevel",super.hasteLevel());
+    public float hasteLevel(Char chr) {
+        return script.runOptional("hasteLevel",super.hasteLevel(chr), chr);
     }
 
     @Override
@@ -190,8 +190,8 @@ public class CustomBuff extends Buff {
     }
 
     @Override
-    public Set<String> immunities() {
-        val table = script.runOptional("immunities", LuaEngine.emptyTable);
+    public Set<String> immunities(Char chr) {
+        val table = script.runOptional("immunities", LuaEngine.emptyTable, chr);
 
         var ret = new HashSet<String>();
 
@@ -200,8 +200,8 @@ public class CustomBuff extends Buff {
     }
 
     @Override
-    public Set<String> resistances() {
-        val table = script.runOptional("resistances", LuaEngine.emptyTable);
+    public Set<String> resistances(Char chr) {
+        val table = script.runOptional("resistances", LuaEngine.emptyTable, chr);
 
         var ret = new HashSet<String>();
 

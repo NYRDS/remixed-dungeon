@@ -258,20 +258,20 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         return level;
     }
 
-    public int drBonus() {
+    public int drBonus(Char chr) {
         return 0;
     }
 
-    public int stealthBonus() {
+    public int stealthBonus(Char chr) {
         return 0;
     }
 
-    public float speedMultiplier() {
+    public float speedMultiplier(Char chr) {
         return 1;
     }
 
     @Override
-    public float hasteLevel() {
+    public float hasteLevel(Char chr) {
         return 0;
     }
 
@@ -290,43 +290,43 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     @Override
-    public int regenerationBonus() {
+    public int regenerationBonus(Char chr) {
         return 0;
     }
 
     @Override
-    public int manaRegenerationBonus() {
+    public int manaRegenerationBonus(Char chr) {
         return 0;
     }
 
     @Override
-    public void charAct() { }
+    public void charAct(Char chr) { }
 
     @Override
     public void spellCasted(Char caster, Spell spell) { }
 
     @Override
-    public int dewBonus() {
+    public int dewBonus(Char chr) {
         return 0;
     }
 
     @Override
-    public int defenceSkillBonus() {
+    public int defenceSkillBonus(Char chr) {
         return 0;
     }
 
     @Override
-    public int attackSkillBonus() {
+    public int attackSkillBonus(Char chr) {
         return 0;
     }
 
     @Override
-    public Set<String> resistances() {
+    public Set<String> resistances(Char chr) {
         return EMPTY_STRING_SET;
     }
 
     @Override
-    public Set<String> immunities() {
+    public Set<String> immunities(Char chr) {
         return EMPTY_STRING_SET;
     }
 

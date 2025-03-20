@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Barkskin extends Buff {
@@ -27,7 +28,7 @@ public class Barkskin extends Buff {
 	}
 
 	@Override
-	public int drBonus() {
+	public int drBonus(Char chr) {
 		return level();
 	}
 

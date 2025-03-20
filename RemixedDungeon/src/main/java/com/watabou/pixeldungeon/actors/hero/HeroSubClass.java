@@ -113,17 +113,17 @@ public enum HeroSubClass implements CharModifier {
 	}
 
 	@Override
-	public int drBonus() {
+	public int drBonus(Char chr) {
 		return 0;
 	}
 
 	@Override
-	public int stealthBonus() {
+	public int stealthBonus(Char chr) {
 		return 0;
 	}
 
 	@Override
-	public float speedMultiplier() {
+	public float speedMultiplier(Char chr) {
 		return 1;
 	}
 
@@ -205,17 +205,17 @@ public enum HeroSubClass implements CharModifier {
 	}
 
 	@Override
-	public int regenerationBonus() {
+	public int regenerationBonus(Char chr) {
 		return 0;
 	}
 
 	@Override
-	public int manaRegenerationBonus() {
+	public int manaRegenerationBonus(Char chr) {
 		return 0;
 	}
 
 	@Override
-	public void charAct() { }
+	public void charAct(Char chr) { }
 
 	@Override
 	public void spellCasted(Char caster, Spell spell) {
@@ -228,7 +228,7 @@ public enum HeroSubClass implements CharModifier {
 	}
 
 	@Override
-	public int dewBonus() {
+	public int dewBonus(Char chr) {
 		switch (this) {
 			case WARDEN:
 			case SHAMAN:
@@ -239,22 +239,22 @@ public enum HeroSubClass implements CharModifier {
 	}
 
 	@Override
-	public int defenceSkillBonus() {
+	public int defenceSkillBonus(Char chr) {
 		return 0;
 	}
 
 	@Override
-	public int attackSkillBonus() {
+	public int attackSkillBonus(Char chr) {
 		return 0;
 	}
 
 	@Override
-	public Set<String> resistances() {
+	public Set<String> resistances(Char chr) {
 		return resistances;
 	}
 
 	@Override
-	public Set<String> immunities() {
+	public Set<String> immunities(Char chr) {
 		return immunities;
 	}
 
@@ -284,7 +284,7 @@ public enum HeroSubClass implements CharModifier {
 	}
 
 	@Override
-	public float hasteLevel() {
+	public float hasteLevel(Char chr) {
 		if (this == HeroSubClass.SCOUT) {
 			return 1;
 		}

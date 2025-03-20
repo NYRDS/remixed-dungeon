@@ -44,7 +44,6 @@ import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
-import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
@@ -270,7 +269,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
             getScript().runOptional("onAct");
 
-            forEachBuff(CharModifier::charAct);
+            forEachBuff(b -> b.charAct(this));
 
             for (Item item : getBelongings()) {
                 item.charAct();
@@ -499,7 +498,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public int attackSkill(Char target) {
 
         int[] bf = {0};
-        forEachBuff(b -> bf[0] += b.attackSkillBonus());
+        forEachBuff(b -> bf[0] += b.attackSkillBonus(this));
 
         int bonus = bf[0];
 
@@ -530,7 +529,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         int defenseSkill = baseDefenseSkill + lvl();
 
         final int[] bf = {0};
-        forEachBuff(b -> bf[0] += b.defenceSkillBonus());
+        forEachBuff(b -> bf[0] += b.defenceSkillBonus(this));
 
         int bonus = bf[0];
 
@@ -573,7 +572,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         final int[] dr = {dr()};
-        forEachBuff(b -> dr[0] += b.drBonus());
+        forEachBuff(b -> dr[0] += b.drBonus(this));
         return Random.IntRange(0, dr[0]);
     }
 
@@ -712,7 +711,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public float speed() {
         final float[] speed = {baseSpeed};
-        forEachBuff(b -> speed[0] *= b.speedMultiplier());
+        forEachBuff(b -> speed[0] *= b.speedMultiplier(this));
 
         return speed[0];
     }
@@ -857,7 +856,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public float timeScale() {
         final int[] bf = {0};
-        forEachBuff(b -> bf[0] += b.hasteLevel());
+        forEachBuff(b -> bf[0] += b.hasteLevel(this));
 
         float hasteLevel = bf[0];
 
@@ -1041,7 +1040,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public int stealth() {
         final int[] bonus = {0};
 
-        forEachBuff(b -> bonus[0] += b.stealthBonus());
+        forEachBuff(b -> bonus[0] += b.stealthBonus(this));
 
         return bonus[0];
     }
@@ -1214,7 +1213,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public Set<String> resistances() {
         HashSet<String> ret = new HashSet<>(resistances);
 
-        forEachBuff(b -> ret.addAll(b.resistances()));
+        forEachBuff(b -> ret.addAll(b.resistances(this)));
 
         return ret;
     }
@@ -1222,7 +1221,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public Set<String> immunities() {
         HashSet<String> ret = new HashSet<>(immunities);
 
-        forEachBuff(b -> ret.addAll(b.immunities()));
+        forEachBuff(b -> ret.addAll(b.immunities(this)));
 
         return ret;
     }
