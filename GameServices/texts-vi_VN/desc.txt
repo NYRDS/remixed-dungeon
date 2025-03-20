@@ -1,0 +1,31 @@
+Đây là một trò chơi roguelike mã nguồn mở với đồ họa theo phong cách pixel
+
+Ngày xửa ngày xưa, có một thị trấn nhỏ. Người dân thị trấn sống hạnh phúc, nhưng họ quá nghèo đến nỗi họ thậm chí không đủ khả năng để đi đến một nơi tử tế nào đó vào kỳ nghỉ. Nhưng vào ngày mà mọi người từ bỏ mọi hy vọng, một phép màu đã xảy ra. Mặt đất bên dưới thị trấn rung chuyển dữ dội và vô số quái vật đáng khinh xuất hiện. Từ thời điểm đó, tất cả những người dân thị trấn sống sót đều sống hạnh phúc mãi mãi. Tại sao? Bởi vì ngục tối đã thu hút đủ loại anh hùng và nhà thám hiểm. Họ bảo vệ những người vô tội và cuối cùng trở thành những người tiêu tiền xuất sắc, thúc đẩy nền kinh tế của thị trấn.
+Và giờ đây thị trấn nhỏ này trở nên thịnh vượng khi tọa lạc trên một ngục tối nguy hiểm chứa đầy những nhà thám hiểm đã chết và linh hồn khốn khổ của họ.
+
+Tính năng của trò chơi:
+- Trò chơi này hỗ trợ các bản mod do người dùng tạo! Và khi chúng tôi phát triển thêm tính năng này, bạn sẽ sớm có thể tạo ra một trò chơi hoàn toàn mới bên trong Remixed Dungeon!
+- Trải nghiệm roguelike cực đỉnh!
+- 7 lớp anh hùng để lựa chọn
+- Trung tâm thị trấn để chuẩn bị cho chuyến hành trình của bạn và giới thiệu bạn với thế giới trò chơi
+- Hơn 30 cấp độ ngục tối của ngục tối chính được chia thành 6 loại ngục tối
+- 3 ngục tối tùy chọn: Hang Nhện, Nghĩa trang, Hang băng
+- Hàng chục vật phẩm và quái vật
+- Nhiều Boss khác nhau
+- Mũ! Mọi người đều thích mũ
+
+Tham gia máy chủ Discord của chúng tôi:
+https://discordapp.com/invite/AMXrhQZ
+
+Theo dõi chúng tôi trên Twitter:
+https://twitter.com/nyrds
+
+Trò chơi này là phần mềm mã nguồn mở theo Giấy phép GPLv3. Mã nguồn của Remixed Dungeon có thể được tìm thấy tại đây:
+https://github.com/NYRDS/remixed-dungeon
+
+Nếu bạn muốn tham gia bản địa hóa sang các ngôn ngữ khác, vui lòng truy cập:
+https://www.transifex.com/projects/p/remixed-dungeon/
+
+You can check 
+http://wiki.nyrds.net/doku.php?id=rpd:changelog
+để biết nhật ký thay đổi đầy đủ trên wiki của chúng tôi 
