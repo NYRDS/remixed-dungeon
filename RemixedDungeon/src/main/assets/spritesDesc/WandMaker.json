@@ -1,0 +1,21 @@
+{
+  "texture"    : "wandmaker.png",
+  "width"      : 12,
+  "height"     : 14,
+  "idle"       : {
+    "fps"     : 10,
+    "looped"  : true,
+    "frames"  : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 3, 3, 3, 3, 3, 2, 1]
+  },
+  "run"        : {
+    "fps"     : 20,
+    "looped"  : true,
+    "frames"  : [0]
+  },
+  "die"        : {
+    "fps"     : 20,
+    "looped"  : false,
+    "frames"  : [0]
+  },
+  "spriteEffects" : ["ManaShield"]
+}

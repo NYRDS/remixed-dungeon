@@ -1,11 +1,12 @@
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.pixeldungeon.effects.ISpriteEffect;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.gl.Gl;
 import com.watabou.pixeldungeon.effects.Halo;
 import com.watabou.utils.PointF;
 
-public class ManaShield extends Halo {
+public class ManaShield extends Halo implements ISpriteEffect {
 
     private final CharSprite charSprite;
     private float phase;
@@ -35,20 +36,21 @@ public class ManaShield extends Halo {
             }
         }
 
-        if (setVisible(charSprite.getVisible())) {
-            PointF p = charSprite.center();
-            point(p.x, p.y );
-        }
+        PointF p = charSprite.center();
+        point(p.x, p.y );
+
+        setVisible(charSprite.getVisible());
     }
 
     @Override
     public void draw() {
+        camera = charSprite.camera();
         Gl.blendSrcAlphaOne();
         super.draw();
         Gl.blendSrcAlphaOneMinusAlpha();
     }
 
-    public void putOut() {
+    public void die() {
         phase = 0.999f;
     }
 }

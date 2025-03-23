@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.pixeldungeon.effects.ISpriteEffect;
 import com.nyrds.pixeldungeon.effects.ZapEffect;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
@@ -7,6 +8,7 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.json.JSONArray;
@@ -26,6 +28,7 @@ public class MobSpriteDef extends MobSprite {
 
 	private static final String DEATH_EFFECT = "deathEffect";
 	private static final String ZAP_EFFECT = "zapEffect";
+	private static final String SPRITE_EFFECT = "spriteEffects";
 	private static final String ZAP = "zap";
 	private static final String ATTACK = "attack";
 	private static final String LAYERS = "layers";
@@ -48,6 +51,9 @@ public class MobSpriteDef extends MobSprite {
 
 	private final String name;
 	private String deathEffect;
+	private Set<String> spriteEffects = new HashSet<>();
+
+	private Set<ISpriteEffect> effects = new HashSet<>();
 
 	public MobSpriteDef(String defName, int kind) {
 		super();
@@ -136,6 +142,9 @@ public class MobSpriteDef extends MobSprite {
 				deathEffect = json.getString(DEATH_EFFECT);
 			}
 
+			JsonHelper.readStringSet(json, SPRITE_EFFECT, spriteEffects);
+
+
 			extras.put("std_idle", idle.clone());
 			extras.put("std_run", run.clone());
 			extras.put("std_attack", attack.clone());
@@ -172,6 +181,15 @@ public class MobSpriteDef extends MobSprite {
 		for(CharSprite.State state:initialState) {
 			add(state);
 		}
+
+		for (String effect : spriteEffects) {
+			if(effect.equals("ManaShield")) {
+				var eff = new ManaShield(this);
+				effects.add(eff);
+				eff.setIsometricShift(true);
+				GameScene.addToMobLayer(eff);
+			}
+		}
 	}
 
 	@Override
@@ -182,6 +200,11 @@ public class MobSpriteDef extends MobSprite {
 		}});
 
 		removeAllStates();
+
+		for (ISpriteEffect eff: effects) {
+			eff.die();
+		}
+
 		super.die();
 	}
 

@@ -133,7 +133,7 @@ public class Dungeon {
 
         if(BuildConfig.DEBUG) {
             GLog.debug("dungeon size: " + w + "x" + h);
-            Utils.printStackTrace();
+            //Utils.printStackTrace();
         }
 
         int size = w * h;

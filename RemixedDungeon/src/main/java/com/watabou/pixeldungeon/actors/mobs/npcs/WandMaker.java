@@ -41,7 +41,6 @@ import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.WandmakerSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndQuest;
@@ -54,10 +53,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
 public class WandMaker extends NPC {
-
-	{	
-		spriteClass = WandmakerSprite.class;
-	}
 
 	@Override
     public boolean act() {
