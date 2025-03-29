@@ -176,6 +176,7 @@ public class Lich extends Boss {
     private void useSkull(){
         getSprite().zap(getPos(), Util.nullCallback);
 
+        Level level = level();
         switch (activatedSkull.getKind()) {
             case RunicSkull.RED_SKULL:
                 PotionOfHealing.heal(this,0.07f * skulls.size());
@@ -184,12 +185,12 @@ public class Lich extends Boss {
             case RunicSkull.BLUE_SKULL:
                 int i = 0;
                 while (i < skulls.size()){
-                    int pos = Dungeon.level.getEmptyCellNextTo(getPos());
-                    if (Dungeon.level.cellValid(pos)) {
+                    int pos = level.getEmptyCellNextTo(getPos());
+                    if (level.cellValid(pos)) {
                         Skeleton skeleton = new Skeleton();
                         skeleton.setPos(pos);
                         skeleton.setState(MobAi.getStateByClass(Hunting.class));
-                        Dungeon.level.spawnMob(skeleton, 0, getPos());
+                        level.spawnMob(skeleton, 0, getPos());
                         i++;
                     } else {
                         break;
