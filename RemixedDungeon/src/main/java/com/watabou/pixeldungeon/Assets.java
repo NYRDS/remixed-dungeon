@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
@@ -256,7 +257,9 @@ public class Assets {
 
     public static String getTitle() {
         if (BuildConfig.FLAVOR_platform.equals("desktop")) {
-            return "ui/title_pc.png";
+            if(ModdingMode.activeMod().equals("Remixed")) {
+                return "ui/title_pc.png";
+            }
         }
 
         switch (bannersType) {
