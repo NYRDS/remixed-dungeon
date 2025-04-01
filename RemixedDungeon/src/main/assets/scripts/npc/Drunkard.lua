@@ -22,5 +22,5 @@ return mob.init({
 
     act = function(self)
         self:setState("Sleeping")
-    end
+    end,
 })

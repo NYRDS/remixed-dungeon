@@ -84,4 +84,8 @@ return mob.init({
 
         RPD.playSound( "snd_cursed" )
     end,
+
+    spawn = function(me, level)
+        RPD.setAi(me,"NpcDefault")
+    end
 })

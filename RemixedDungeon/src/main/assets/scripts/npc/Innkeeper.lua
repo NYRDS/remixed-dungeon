@@ -23,5 +23,9 @@ return mob.init({
 
     priceForSell = function(self, item)
         return item:price() * 10
+    end,
+
+    spawn = function(me, level)
+        RPD.setAi(me,"NpcDefault")
     end
 })

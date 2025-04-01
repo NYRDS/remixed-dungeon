@@ -195,14 +195,15 @@ return mob.init({
         end
     end,
 
-    spawn = function(self, level)
-        level:setCompassTarget(self:getPos())
-        local data = mob.restoreData(self)
+    spawn = function(me, level)
+        RPD.setAi(me,"NpcDefault")
+        level:setCompassTarget(me:getPos())
+        local data = mob.restoreData(me)
         local questIndex = data["questIndex"]
         if not questIndex then
             data["questIndex"] = 1
             data["questInProgress"] = false
-            mob.storeData(self, data)
+            mob.storeData(me, data)
         end
     end
 })

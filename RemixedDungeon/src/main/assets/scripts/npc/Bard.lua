@@ -14,6 +14,7 @@ return mob.init({
     interact = function(self, chr)
         self:say("BardSong_1")
     end,
+
     act = function(self)
         if not speckAdded then
             local factory = RPD.speckEffectFactory(RPD.Sfx.Speck.NOTE, RPD.Sfx.Speck.UP)
@@ -21,4 +22,9 @@ return mob.init({
             speckAdded = true
         end
     end,
+
+    spawn = function(me, level)
+        RPD.setAi(me,"NpcDefault")
+    end
+
 })
