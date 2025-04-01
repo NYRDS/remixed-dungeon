@@ -244,7 +244,9 @@ public class Lich extends Boss {
         skulls.clear();
 
         for(Mob mob:level().getCopyOfMobsArray()) {
-            mob.remove();
+            if(!mob.isPet()) {
+                mob.remove();
+            }
         }
 
         Badges.validateBossSlain(Badges.Badge.LICH_SLAIN);
