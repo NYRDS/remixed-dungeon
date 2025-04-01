@@ -88,6 +88,7 @@ public class CagedKobold extends ImmortalNPC {
 			completed = false;
 			processed = false;
 			given = false;
+			spawned = false;
 		}
 
 		private static final String COMPLETED   = "completed";
