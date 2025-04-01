@@ -351,34 +351,29 @@ public class Dungeon {
                 level.mobs.remove(dup);
             }
 
-            int cell = level.getEmptyCellNextTo(hero.getPos());
-            if (!level.cellValid(cell)) {
-                cell = hero.getPos();
-            }
-            mob.setPos(cell);
-
-            mob.setEnemy(CharsList.DUMMY);
-            mob.setState(MobAi.getStateByClass(Wandering.class));
-            level.spawnMob(mob);
+            spawnPet(level, mob);
         }
 
         for (Mob mob : hero.initialAlies) {
-
-            int cell = level.getEmptyCellNextTo(hero.getPos());
-            if (!level.cellValid(cell)) {
-                cell = hero.getPos();
-            }
-            mob.setPos(cell);
-
-            mob.setEnemy(CharsList.DUMMY);
-            mob.setState(MobAi.getStateByClass(Wandering.class));
-            level.spawnMob(mob);
+            spawnPet(level, mob);
         }
         hero.initialAlies.clear();
 
         previousLevelId = levelId;
         levelId = level.levelId;
         Dungeon.level = level;
+    }
+
+    private static void spawnPet(Level level, Mob mob) {
+        mob.setPos(level.getNearestTerrain(hero.getPos(), mob::canSpawnAt));
+
+        if (mob.getPos() == Level.INVALID_CELL) {
+            mob.setPos(hero.getPos());
+        }
+
+        mob.setEnemy(CharsList.DUMMY);
+        mob.setState(MobAi.getStateByClass(Wandering.class));
+        level.spawnMob(mob);
     }
 
     public static boolean posNeeded() {
