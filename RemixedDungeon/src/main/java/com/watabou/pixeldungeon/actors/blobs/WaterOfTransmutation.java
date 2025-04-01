@@ -42,7 +42,7 @@ public class WaterOfTransmutation extends WellWater {
         Item transmutedItem = item;
 
         if (item instanceof SpellBook) {
-            ((SpellBook) item).spell(SpellFactory.getRandomSpell().name());
+            transmutedItem = new SpellBook();
         } else if (item instanceof MeleeWeapon) {
             transmutedItem = changeWeapon((MeleeWeapon) item);
         } else if (item instanceof Scroll) {
