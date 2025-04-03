@@ -2995,4 +2995,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="HeroClass_PlagueDoctorPerks_3">Enemies killed by Toxic Gas explode into Toxic Mist, healing you for 1 HP per affected enemy.</string>
   <string name="HeroClass_PlagueDoctorPerks_4">Plague Doctors suffer -20% accuracy with all non-saw weapons and cannot use ranged weapons.</string>
 
+  <string name="BoneSaw_Name">Bone Saw</string>
+  <string name="BoneSaw_Info">A precision-engineered surgical saw designed for rapid dissection. Its damage and attack speed grow deadlier with the Plague Doctor's skill. Critical hits carve extra harvestable parts from enemies, and it strikes with ruthless efficiency against paralyzed foes.</string>
+
 </resources>

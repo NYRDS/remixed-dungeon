@@ -111,4 +111,20 @@ function item.makeGlowing(color, period)
     return luajava.newInstance('com.watabou.pixeldungeon.sprites.Glowing', color, period)
 end
 
+--helpers
+
+function item.slot_bothHands(self, item, belongings)
+    local rb, lb = belongings:slotBlocked(RPD.Slots.weapon), belongings:slotBlocked(RPD.Slots.leftHand)
+
+    if rb and lb then
+        return RPD.Slots.leftHand
+    end
+
+    if lb then
+        return RPD.Slots.weapon
+    end
+
+    return RPD.Slots.leftHand
+end
+
 return item
