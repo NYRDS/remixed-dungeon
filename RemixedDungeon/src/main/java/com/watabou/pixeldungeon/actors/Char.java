@@ -42,14 +42,25 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
+import com.watabou.pixeldungeon.actors.buffs.Amok;
+import com.watabou.pixeldungeon.actors.buffs.Bleeding;
+import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
+import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.buffs.Light;
+import com.watabou.pixeldungeon.actors.buffs.Paralysis;
+import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
+import com.watabou.pixeldungeon.actors.buffs.Sleep;
+import com.watabou.pixeldungeon.actors.buffs.Stun;
+import com.watabou.pixeldungeon.actors.buffs.Terror;
+import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -64,6 +75,7 @@ import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -120,6 +132,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
     protected int enemyId = EntityIdSource.INVALID_ID;
 
+    @Getter
     @Packable(defaultValue = "0")
     protected int expForLevelUp = 0;
 
@@ -967,6 +980,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         //GLog.debug("%s (%s) added to %s", buff.getEntityKind(), buff.getSource().getEntityKind(), getEntityKind());
 
+        if (!Dungeon.isLoading()) {
+            if (buff instanceof Burning
+            ) {
+                damage(Random.NormalIntRange(1, ht() / 8), buff);
+            }
+        }
+
         buffs.add(buff);
         Actor.add(buff);
 
@@ -1206,6 +1226,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         HashSet<String> ret = new HashSet<>(immunities);
 
         forEachBuff(b -> ret.addAll(b.immunities(this)));
+
+
 
         return ret;
     }
@@ -2100,10 +2122,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return Math.max(attackRange, getBelongings().getItemFromSlot(Belongings.Slot.WEAPON).range());
     }
 
-    public int getExpForLevelUp() {
-        return expForLevelUp;
-    }
-
     public void earnExp(int exp) {
         if (undead) {
             return;
@@ -2228,7 +2246,35 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void setUndead(boolean flag) {
         undead = flag;
         if (undead) {
+            addImmunity(Paralysis.class);
+            addImmunity(Stun.class);
+            addImmunity(ToxicGas.class);
+            addImmunity(Terror.class);
+            addImmunity(Death.class);
+            addImmunity(Amok.class);
+            addImmunity(Blindness.class);
+            addImmunity(Sleep.class);
+            addImmunity(Poison.class);
+            addImmunity(Vertigo.class);
+            addImmunity(Bleeding.class);
+            addImmunity(Regeneration.class);
+
             setGlowing(0xff333333, 5f);
+        } else {
+            removeImmunity(Paralysis.class);
+            removeImmunity(Stun.class);
+            removeImmunity(ToxicGas.class);
+            removeImmunity(Terror.class);
+            removeImmunity(Death.class);
+            removeImmunity(Amok.class);
+            removeImmunity(Blindness.class);
+            removeImmunity(Sleep.class);
+            removeImmunity(Poison.class);
+            removeImmunity(Vertigo.class);
+            removeImmunity(Bleeding.class);
+            removeImmunity(Regeneration.class);
+
+            setGlowing(0xffffffff, 0f);
         }
     }
 

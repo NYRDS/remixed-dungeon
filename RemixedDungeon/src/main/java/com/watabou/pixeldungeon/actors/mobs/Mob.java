@@ -22,6 +22,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
@@ -56,6 +57,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
 
+import java.lang.ref.WeakReference;
+
 import lombok.SneakyThrows;
 
 public abstract class Mob extends Char {
@@ -82,6 +85,8 @@ public abstract class Mob extends Char {
     protected final int attackSkill = 0;
     protected int dr = 0;
     protected boolean isBoss = false;
+
+    private Carcass carcassRef;
 
     public Mob() {
         super();
@@ -424,6 +429,12 @@ public abstract class Mob extends Char {
             loot(ItemFactory.createItemFromDesc(mobDesc.getJSONObject(LOOT)), lootChance);
         }
 
+        if(mobDesc.has("undead")) {
+            if(mobDesc.getBoolean("undead")) {
+                setUndead(true);
+            }
+        }
+
         getBelongings().setupFromJson(mobDesc);
 
         if (this instanceof IDepthAdjustable) {
@@ -619,8 +630,18 @@ public abstract class Mob extends Char {
     }
 
     @Override
+    @LuaInterface
     public Item carcass() {
-        return new Carcass(this);
+        if(carcassRef != null) {
+            return carcassRef;
+        }
+        carcassRef = new Carcass(this);
+        return carcassRef;
+    }
+
+    public void revive() {
+        carcassRef = null;
+
     }
 
     public void adjustStats(int depth) {

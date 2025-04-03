@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.NecroBossLevel;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
@@ -19,7 +18,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Skeleton extends UndeadMob {
+public class Skeleton extends Mob {
 
 	public Skeleton() {
 		hp(ht(25));
@@ -31,6 +30,7 @@ public class Skeleton extends UndeadMob {
 		
 		expForKill = 5;
 		maxLvl = 10;
+		setUndead(true);
 
 		loot(getLoot(), 0.2f);
 	}

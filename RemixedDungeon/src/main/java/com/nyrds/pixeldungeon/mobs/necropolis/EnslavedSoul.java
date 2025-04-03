@@ -10,6 +10,7 @@ import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
 
@@ -18,7 +19,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by DeadDie on 12.02.2016
  */
-public class EnslavedSoul extends UndeadMob {
+public class EnslavedSoul extends Mob {
 
     static final Class<?>[] BuffsForEnemy = {
             Blindness.class,
@@ -44,6 +45,7 @@ public class EnslavedSoul extends UndeadMob {
         expForKill = 5;
         maxLvl = 15;
 
+        setUndead(true);
         loot(Gold.class, 0.02f);
     }
 

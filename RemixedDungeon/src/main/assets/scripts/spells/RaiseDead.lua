@@ -52,6 +52,8 @@ return spell.init{
             if level:cellValid(mobPos) then
                 mob:setPos(mobPos)
                 mob:loot(RPD.ItemFactory:itemByName("Gold"))
+                mob:setUndead(true)
+                RPD.removeAllItems(mob)
                 RPD.Mob:makePet(mob, chr)
                 level:spawnMob(mob)
                 chr:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )

@@ -9,7 +9,6 @@ import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
@@ -162,7 +161,7 @@ public class King extends Boss {
         yell(StringsManager.getVar(R.string.King_Info3));
 	}
 	
-	public static class Undead extends UndeadMob {
+	public static class Undead extends Mob {
 
 		public Undead() {
 			hp(ht(28));
@@ -174,7 +173,8 @@ public class King extends Boss {
 			dr = 5;
 			
 			expForKill = 0;
-			
+
+			setUndead(true);
 			setState(MobAi.getStateByClass(Wandering.class));
 		}
 

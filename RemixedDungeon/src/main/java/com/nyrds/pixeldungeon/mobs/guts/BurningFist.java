@@ -43,7 +43,6 @@ public class BurningFist extends Mob implements IZapper {
         addImmunity(Amok.class);
         addImmunity(Sleep.class);
         addImmunity(Terror.class);
-        addImmunity(Fire.class);
         addImmunity(Burning.class);
         addImmunity(WandOfFirebolt.class);
     }

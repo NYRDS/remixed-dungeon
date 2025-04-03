@@ -1,13 +1,13 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.Packable;
-import com.nyrds.pixeldungeon.mobs.necropolis.UndeadMob;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 
 /**
  * Created by DeadDie on 20.08.2016
  */
-public class Deathling extends UndeadMob {
+public class Deathling extends Mob {
 
     private static final int HEALTH = 4;
     @Packable
@@ -21,6 +21,8 @@ public class Deathling extends UndeadMob {
 
         expForKill = 0;
         maxLvl = 32;
+
+        setUndead(true);
         setSkillLevel(3);
     }
 

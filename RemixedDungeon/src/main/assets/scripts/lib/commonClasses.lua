@@ -415,6 +415,26 @@ local RPD = {
         return item
     end,
 
+    removeAllItems = function(chr)
+        local items = { "weapon", "armor", "leftHand", "ring1", "ring2" }
+        local belongings = chr:getBelongings()
+
+        for _, slot in pairs(items) do
+            local item = belongings[slot]
+            item:removeItemFrom(chr)
+        end
+
+        local itemsToRemove = {}
+
+        for i = 0, belongings.backpack.items:size()-1 do
+            table.insert(itemsToRemove,belongings.backpack.items:get(i))
+        end
+
+        for _,item in pairs(itemsToRemove) do
+            item:removeItemFrom(chr)
+        end
+    end,
+
     spawnMob = function(mobClass, cell, mobDesc)
         local mob = MobFactory:createMob(mobClass, json.encode(mobDesc or {_=""}))
         mob:setPos(cell)
@@ -480,7 +500,6 @@ local RPD = {
 
         return tgt
     end,
-
 
     shakeCamera = function(time, power)
         Camera.main:shake(time, power)

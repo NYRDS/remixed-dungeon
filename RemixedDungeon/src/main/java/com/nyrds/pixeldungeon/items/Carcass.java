@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.items;
 
 import androidx.annotation.Keep;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.effects.Devour;
 import com.nyrds.pixeldungeon.ml.R;
@@ -120,6 +121,10 @@ public class Carcass extends Item implements Doom {
         return actions;
     }
 
+
+
+
+    @LuaInterface
     @Override
     public void _execute(@NotNull Char chr, @NotNull String action){
         if(action.equals(AC_KICK)) {
@@ -128,28 +133,7 @@ public class Carcass extends Item implements Doom {
         }
 
         if (action.equals(AC_NECROMANCY)) {
-            Level level = chr.level();
-            int casterPos = chr.getPos();
-            int spawnPos = level.getEmptyCellNextTo(casterPos);
-
-            Wound.hit(chr);
-            chr.damage(src.ht()/4, this);
-            Buff.detach(chr, Sungrass.Health.class);
-
-            if (level.cellValid(spawnPos)) {
-                var pet = Mob.makePet((Mob) src.makeClone(), chr.getId());
-                pet.regenSprite();
-                pet.assigndNextId();
-                pet.setUndead(true);
-                pet.hp(1); //it's alive!
-                pet.heal(pet.ht() * chr.skillLevel() / 10);
-                pet.setPos(spawnPos);
-                level.spawnMob(pet, 0, casterPos);
-                GLog.p(Utils.format(R.string.Carcass_Necromancy, pet.getName()));
-            } else {
-                GLog.n(Utils.format(R.string.Carcass_Necromancy_Failed, src.getName()));
-            }
-            consumedOneBy(chr);
+            reanimate(chr, false);
 
         } else if (action.equals(AC_DEVOUR)) {
             Devour.hit(chr);
@@ -159,6 +143,40 @@ public class Carcass extends Item implements Doom {
         } else {
             super._execute(chr, action);
         }
+    }
+
+    @LuaInterface
+    public Char reanimate(Char caster, boolean byMagic) {
+        Level level = caster.level();
+        int casterPos = caster.getPos();
+        int spawnPos = level.getEmptyCellNextTo(casterPos);
+
+        Wound.hit(caster);
+        if(!byMagic) {
+            caster.damage(src.ht() / 4, this);
+        }
+
+        Buff.detach(caster, Sungrass.Health.class);
+
+        if (level.cellValid(spawnPos)) {
+            var pet = Mob.makePet((Mob) src.makeClone(), caster.getId());
+            pet.regenSprite();
+            pet.assigndNextId();
+            pet.setUndead(true);
+            pet.hp(1); //it's alive!
+            pet.heal(pet.ht() * caster.skillLevel() / 10);
+            if (byMagic) {
+                pet.heal(pet.ht());
+            }
+            pet.setPos(spawnPos);
+            level.spawnMob(pet, 0, casterPos);
+            GLog.p(Utils.format(R.string.Carcass_Necromancy, pet.getName()));
+        } else {
+            GLog.n(Utils.format(R.string.Carcass_Necromancy_Failed, src.getName()));
+            return CharsList.DUMMY;
+        }
+        consumedOneBy(caster);
+        return caster;
     }
 
     @Override

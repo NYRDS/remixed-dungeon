@@ -216,6 +216,16 @@ public class Heap implements Bundlable, NamedEntityKind  {
         return ItemsList.DUMMY;
     }
 
+    @LuaInterface
+    public Item peekByPrefix(String entityPrefix) {
+        for (Item item : items) {
+            if (item.getEntityKind().startsWith(entityPrefix)) {
+                return item;
+            }
+        }
+        return ItemsList.DUMMY;
+    }
+
     public void drop(@NotNull Item item) {
 
         if (!item.valid()) {

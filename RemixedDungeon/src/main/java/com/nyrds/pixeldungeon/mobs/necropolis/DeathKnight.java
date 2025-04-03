@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.nyrds.pixeldungeon.effects.DeathStroke;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
 
@@ -10,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by DeadDie on 12.02.2016
  */
-public class DeathKnight extends UndeadMob {
+public class DeathKnight extends Mob {
     {
         hp(ht(35));
         baseDefenseSkill = 12;
@@ -23,6 +24,7 @@ public class DeathKnight extends UndeadMob {
         expForKill = 7;
         maxLvl = 15;
 
+        setUndead(true);
         loot(Gold.class, 0.02f);
     }
 

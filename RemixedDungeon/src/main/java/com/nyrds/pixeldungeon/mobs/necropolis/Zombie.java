@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.mobs.necropolis;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
 
@@ -11,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by DeadDie on 12.02.2016
  */
-public class Zombie extends UndeadMob {
+public class Zombie extends Mob {
     {
         hp(ht(33));
         baseDefenseSkill = 10;
@@ -23,6 +24,7 @@ public class Zombie extends UndeadMob {
         expForKill = 6;
         maxLvl = 15;
 
+        setUndead(true);
         loot(Gold.class, 0.02f);
     }
 

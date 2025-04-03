@@ -16,7 +16,7 @@ return trap.init(function(cell, char, data)
 
     local notRemoveClass = data or " "
 
-    local items = { "weapon", "armor", "ring1", "ring2" }
+    local items = { "weapon", "armor", "leftHand", "ring1", "ring2" }
 
     local function removeItemFromHero(item)
         if item and not ( string.len(notRemoveClass) > 0 and string.match(tostring(item:getClass()), notRemoveClass) ) then

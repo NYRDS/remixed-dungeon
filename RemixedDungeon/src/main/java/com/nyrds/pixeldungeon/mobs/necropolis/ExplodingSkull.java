@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.necropolis;
 
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 
 import org.jetbrains.annotations.NotNull;
@@ -8,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by DeadDie on 12.02.2016
  */
-public class ExplodingSkull extends UndeadMob {
+public class ExplodingSkull extends Mob {
     {
         carcassChance = 0;
         hp(ht(10));
@@ -24,6 +25,7 @@ public class ExplodingSkull extends UndeadMob {
         expForKill = 1;
         maxLvl = 1;
 
+        setUndead(true);
         loot(Gold.class, 0.02f);
     }
 

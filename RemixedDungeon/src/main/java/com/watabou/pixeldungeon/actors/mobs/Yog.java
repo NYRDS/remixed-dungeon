@@ -226,7 +226,6 @@ public class Yog extends Boss {
 			addImmunity(Amok.class);
 			addImmunity(Sleep.class);
 			addImmunity(Terror.class);
-			addImmunity(Fire.class );
 			addImmunity(Burning.class );
 			addImmunity(WandOfFirebolt.class );
 		}
