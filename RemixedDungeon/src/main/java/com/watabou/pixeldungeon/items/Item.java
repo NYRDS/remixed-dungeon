@@ -9,6 +9,7 @@ import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
@@ -62,7 +63,7 @@ import lombok.SneakyThrows;
 import lombok.val;
 
 
-public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWithId {
+public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWithId, HasPositionOnLevel {
 
     private static final String TXT_TO_STRING = "%s";
     private static final String TXT_TO_STRING_X = "%s x%d";
@@ -824,7 +825,6 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
         if(heap!= null) {
             heap.pickUp(this);
         } else  {
-
             if(isEquipped(owner)) {
                 owner.unequip((EquipableItem) this);
             }
@@ -846,5 +846,13 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     public void setChargeKnown(boolean chargeKnown) {} //RA compatibility
 
     public void pickedUp(Char hero) {
+    }
+
+    @Override
+    public int getPos() {
+        if(heap!= null) {
+            return heap.pos;
+        }
+        return owner.getPos();
     }
 }

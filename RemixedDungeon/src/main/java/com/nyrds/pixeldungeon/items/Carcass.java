@@ -36,8 +36,10 @@ public class Carcass extends Item implements Doom {
     public static final String AC_NECROMANCY = "AC_Necromancy";
     public static final String AC_DEVOUR = "AC_Devour";
     public static final String AC_KICK = "AC_Kick";
+    private static final String AC_DISSECT = "AC_Dissect";
     public static final String CARCASS_OF = "Carcass of ";
     public static final String CARCASS = "Carcass";
+
     @Packable
     Char src = CharsList.DUMMY;
 
@@ -116,12 +118,13 @@ public class Carcass extends Item implements Doom {
                     actions.add(AC_DEVOUR);
                 }
             break;
+            case DOCTOR:
+                actions.add(AC_DISSECT);
+            break;
         }
 
         return actions;
     }
-
-
 
 
     @LuaInterface
@@ -134,12 +137,13 @@ public class Carcass extends Item implements Doom {
 
         if (action.equals(AC_NECROMANCY)) {
             reanimate(chr, false);
-
         } else if (action.equals(AC_DEVOUR)) {
             Devour.hit(chr);
             chr.eat(this, src.ht(), Utils.format(R.string.Carcass_Devoured, src.getName()));
             chr.heal(src.ht()/10, this);
 
+        } else if (action.equals(AC_DISSECT)) {
+            Wound.hit(getPos());
         } else {
             super._execute(chr, action);
         }

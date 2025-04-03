@@ -2987,4 +2987,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="HeroClass_Doctor">Plague Doctor</string>
   <string name="StartScene_ComingSoon">Coming soon</string>
 
+  <string name="AC_Dissect">Dissect</string>
+
+  <string name="HeroClass_PlagueDoctorPerks_0">Plague Doctors harvest Toxic Glands, Rotten Organs, Bone Shards, and Vile Essence from slain enemies. Blood are collected over time and used to perform alchemy.</string>
+  <string name="HeroClass_PlagueDoctorPerks_1">Start with a Plague Mask (immune to all Gases) and a Bone Saw. Critical hits drop extra parts, and the Saw deals +50% damage to paralyzed foes.</string>
+  <string name="HeroClass_PlagueDoctorPerks_2">Potions of Paralysis Gas and Toxic Gas are pre-identified.</string>
+  <string name="HeroClass_PlagueDoctorPerks_3">Enemies killed by Toxic Gas explode into Toxic Mist, healing you for 1 HP per affected enemy.</string>
+  <string name="HeroClass_PlagueDoctorPerks_4">Plague Doctors suffer -20% accuracy with all non-saw weapons and cannot use ranged weapons.</string>
+
 </resources>

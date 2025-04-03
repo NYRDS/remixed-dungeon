@@ -4,6 +4,7 @@ package com.watabou.pixeldungeon.items;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
@@ -42,7 +43,7 @@ import java.util.Map;
 
 import lombok.Getter;
 
-public class Heap implements Bundlable, NamedEntityKind  {
+public class Heap implements Bundlable, NamedEntityKind, HasPositionOnLevel {
 
     @Override
     public String getEntityKind() {
@@ -58,6 +59,11 @@ public class Heap implements Bundlable, NamedEntityKind  {
         for (Item item : items) {
             Actor.add(item);
         }
+    }
+
+    @Override
+    public int getPos() {
+        return pos;
     }
 
     public enum Type {

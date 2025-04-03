@@ -273,6 +273,8 @@ public enum HeroClass implements CharModifier {
                 return StringsManager.getVars(R.array.HeroClass_NecromancerPerks);
             case GNOLL:
                 return StringsManager.getVars(R.array.HeroClass_GnollPerks);
+            case DOCTOR:
+                return StringsManager.getVars(R.array.HeroClass_PlagueDoctorPerks);
         }
     }
 
