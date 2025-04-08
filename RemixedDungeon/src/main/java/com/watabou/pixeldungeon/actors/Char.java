@@ -386,6 +386,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     @LuaInterface
+    public void yell(int str) {
+        GLog.n(StringsManager.getVar(R.string.Mob_Yell), getName(), StringsManager.getVar(str));
+    }
+
+
+    @LuaInterface
     public void yell(String str) {
         GLog.n(StringsManager.getVar(R.string.Mob_Yell), getName(), StringsManager.maybeId(str));
     }
@@ -446,6 +452,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             effectiveDamage = enemy.defenseProc(this, effectiveDamage);
             enemy.damage(effectiveDamage, this);
 
+            if(effectiveDamage > 0) {
+                for (Item item : getBelongings()) {
+                    if (item.isEquipped(this)) {
+                        item.ownerDoesDamage(effectiveDamage);
+                    }
+                }
+            }
+
             if (visibleFight) {
                 Sample.INSTANCE.play(Assets.SND_HIT, 1, 1, Random.Float(0.8f, 1.25f));
 
@@ -482,6 +496,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public boolean shoot(Char enemy, MissileWeapon wep) {
 
         rangedWeapon = wep;
+
         boolean result = attack(enemy);
         rangedWeapon = ItemsList.DUMMY;
 
@@ -627,12 +642,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public int attackProc(@NotNull Char enemy, int damage) {
         final int[] dmg = {damage};
         forEachBuff(b -> dmg[0] = b.attackProc(this, enemy, dmg[0]));
-
-        for (Item item : getBelongings()) {
-            if (item.isEquipped(this)) {
-                item.ownerDoesDamage(dmg[0]);
-            }
-        }
 
         int d = level().distance(getPos(), enemy.getPos());
 

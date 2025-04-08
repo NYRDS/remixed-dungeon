@@ -83,8 +83,8 @@ public abstract class Arrow extends MissileWeapon {
 			}
 
 			if (thrower.getHeroClass() == HeroClass.ELF) {
-				ACU *= 1.1;
-				DLY *= 0.9;
+				ACU *= 1.1f;
+				DLY *= 0.9f;
 			}
 
 			firedFrom.usedForHit();

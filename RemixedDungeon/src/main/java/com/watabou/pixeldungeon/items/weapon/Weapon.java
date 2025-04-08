@@ -115,10 +115,13 @@ public class Weapon extends KindOfWeapon {
 		
 		int encumbrance = STR - user.effectiveSTR();
 		
-		if (this instanceof MissileWeapon) {
+		if (this instanceof MissileWeapon || this instanceof KindOfBow) {
 			switch (user.getHeroClass()) {
 			case WARRIOR:
 				encumbrance += 3;
+				break;
+			case DOCTOR:
+				encumbrance += 5;
 				break;
 			case HUNTRESS:
 				encumbrance -= 2;
@@ -132,8 +135,13 @@ public class Weapon extends KindOfWeapon {
 				encumbrance += 3;
 			}
 		}
-		
-		return 
+
+		if(encumbrance > 0 && Math.random() < 0.05) {
+			user.yell(Utils.format(R.string.Accuracy_Decreased, this.name()));
+		}
+
+
+		return
 			(encumbrance > 0 ? (float)(ACU / Math.pow( 1.5, encumbrance )) : ACU) *
 			(imbue == Imbue.ACCURACY ? 1.5f : 1.0f);
 	}
@@ -142,10 +150,14 @@ public class Weapon extends KindOfWeapon {
 	public float attackDelayFactor(Char user) {
 
 		int encumbrance = STR - user.effectiveSTR();
-		if (this instanceof MissileWeapon && user.getHeroClass() == HeroClass.HUNTRESS) {
+		if ((this instanceof MissileWeapon || this instanceof KindOfBow) && user.getHeroClass() == HeroClass.HUNTRESS) {
 			encumbrance -= 2;
 		}
-		
+
+		if(encumbrance > 0 && Math.random() < 0.05) {
+			user.yell(Utils.format(R.string.AttackDelay_Increased, this.name()));
+		}
+
 		return 
 			(encumbrance > 0 ? (float)(DLY * Math.pow( 1.2, encumbrance )) : DLY) *
 			(imbue == Imbue.SPEED ? 0.6f : 1.0f);

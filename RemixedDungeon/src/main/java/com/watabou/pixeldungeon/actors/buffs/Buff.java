@@ -85,6 +85,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         return Assets.BUFFS_LARGE;
     }
 
+
     @Override
     public Image smallIcon() {
         int icon = icon();

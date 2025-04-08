@@ -65,6 +65,7 @@ import java.util.Locale;
 import java.util.Set;
 
 import lombok.Getter;
+import lombok.Setter;
 import lombok.SneakyThrows;
 import lombok.val;
 
@@ -106,6 +107,8 @@ public enum HeroClass implements CharModifier {
     private final Integer titleId;
     static public final JSONObject initHeroes = JsonHelper.readJsonFromAsset(Util.isDebug() && !ModdingBase.inMod() ? "hero/initHeroesDebug.json" : "hero/initHeroes.json");
 
+    @Setter
+    @Getter
     private String magicAffinity = Utils.EMPTY_STRING;
 
     HeroClass(Integer titleId, Class<? extends ClassArmor> armorClass) {
@@ -329,14 +332,6 @@ public enum HeroClass implements CharModifier {
         return armorClass.newInstance();
     }
 
-    public String getMagicAffinity() {
-        return magicAffinity;
-    }
-
-    public void setMagicAffinity(String affinity) {
-        magicAffinity = affinity;
-    }
-
     public String tag() {
         if (this == HUNTRESS) {
             return "ranger";
@@ -439,6 +434,17 @@ public enum HeroClass implements CharModifier {
         switch (this) {
             case DOCTOR:
                 if(!chr.getActiveWeapon().getEntityKind().equals(BONE_SAW) && !chr.getSecondaryWeapon().getEntityKind().equals(BONE_SAW)) {
+                    if(Math.random()<0.05) {
+                        Item badWeapon = chr.getActiveWeapon();
+                        if (!badWeapon.valid()) {
+                            badWeapon = chr.getSecondaryWeapon();
+                        }
+                        if(badWeapon.valid()) {
+                            chr.yell(Utils.format(R.string.Accuracy_DecreasedDoctor, badWeapon.name()));
+                        } else {
+                            chr.yell(R.string.Accuracy_DecreasedDoctorBareHands);
+                        }
+                    }
                     return -5;
                 }
         }
