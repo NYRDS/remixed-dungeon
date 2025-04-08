@@ -161,7 +161,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     private int pos = Level.INVALID_CELL;
 
     @Packable(defaultValue = "0")
-    private long layersMask = 0;
+    private int layersMask = 0;
 
     transient private int prevPos = Level.INVALID_CELL;
 
@@ -208,7 +208,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     private int glowColor = 0;
     private float glowPeriod = 0.0f;
 
-    @Packable(defaultValue = "false")//EntityIdSource.INVALID_ID
+    @Packable(defaultValue = "false")
     public boolean undead;
 
     @Getter
@@ -2181,7 +2181,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 
     @LuaInterface
-    public void setLayersMask(long layersMask) {
+    public void setLayersMask(int layersMask) {
         this.layersMask = layersMask;
         updateSprite();
     }
