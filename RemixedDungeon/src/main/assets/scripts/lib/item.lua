@@ -127,4 +127,5 @@ function item.slot_bothHands(self, item, belongings)
     return RPD.Slots.leftHand
 end
 
+
 return item
