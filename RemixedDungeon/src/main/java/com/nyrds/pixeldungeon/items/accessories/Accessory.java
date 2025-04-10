@@ -153,9 +153,9 @@ public class Accessory {
         return false;
     }
 
-    public void equip() {
-        if (!haveIt()) {
-            return;
+    public void equip(boolean force) {
+        if(!force && !haveIt()) {
+                return;
         }
 
         Preferences.INSTANCE.put(Accessory.class.getSimpleName(), getClass().getSimpleName());

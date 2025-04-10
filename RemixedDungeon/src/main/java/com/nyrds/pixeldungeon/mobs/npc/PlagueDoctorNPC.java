@@ -37,7 +37,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
 
         if (!Badges.isUnlocked(Badges.Badge.DOCTOR_QUEST_COMPLETED)) {
             Badges.displayBadge(Badges.Badge.DOCTOR_QUEST_COMPLETED);
-            mask.equip();
+            mask.equip(false);
             GameScene.show(new WndHatInfo(mask.getClass().getSimpleName(), ""));
         }
 
@@ -52,7 +52,7 @@ public class PlagueDoctorNPC extends ImmortalNPC {
                 Badges.displayBadge(Badges.Badge.DOCTOR_QUEST_COMPLETED);
 
                 var mask = new MedicineMask();
-                mask.equip();
+                mask.equip(false);
 
                 GameScene.show(new WndHatInfo(mask.getClass().getSimpleName(), ""));
 

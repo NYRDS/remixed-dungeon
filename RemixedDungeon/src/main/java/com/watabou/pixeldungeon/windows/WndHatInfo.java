@@ -88,7 +88,7 @@ public class WndHatInfo extends Window {
 							EventCollector.logEvent("PurchaseClick",item.name());
 							RemixedDungeon.instance().iap.doPurchase(accessory, () -> {
 								item.ownIt(true);
-								item.equip();
+								item.equip(false);
 								onBackPressed();
 								Window.hideParentWindow(this);
 								if(!Game.isPaused()) {

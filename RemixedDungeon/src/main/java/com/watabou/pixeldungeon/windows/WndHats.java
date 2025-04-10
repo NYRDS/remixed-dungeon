@@ -144,7 +144,7 @@ public class WndHats extends Window {
 					super.onClick();
 
 					if (finalAccessory.haveIt()) {
-						finalAccessory.equip();
+						finalAccessory.equip(false);
 						onBackPressed();
 						return;
 					}

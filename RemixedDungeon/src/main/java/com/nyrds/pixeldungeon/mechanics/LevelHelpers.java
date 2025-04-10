@@ -36,7 +36,7 @@ public class LevelHelpers {
             return Level.INVALID_CELL;
         }
 
-        if(level.solid[nextCell]) {
+        if(!level.passable[nextCell]) {
             return Level.INVALID_CELL;
         }
 

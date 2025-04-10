@@ -9,15 +9,28 @@ local RPD = require "scripts/lib/commonClasses"
 
 local item = require "scripts/lib/item"
 
+
+local PlagueDoctorMask = luajava.newInstance("com.nyrds.pixeldungeon.items.accessories.PlagueDoctorMask")
+
 return item.init{
     desc  = function ()
         return {
-            image     = 27,
+            image     = 26,
             imageFile = "items/artifacts.png",
             name      = "PlagueDoctorMask_Name",
             info      = "PlagueDoctorMask_Info",
             price     = 20,
             equipable = RPD.Slots.artifact
         }
+    end,
+
+    activate = function(self, item, hero)
+        PlagueDoctorMask:equip(true)
+        RPD.permanentBuff(hero, "GasesImmunity")
+    end,
+
+    deactivate = function(self, item, hero)
+        PlagueDoctorMask:unequip(true)
+        RPD.removeBuff(hero, "GasesImmunity")
     end
 }
