@@ -49,8 +49,8 @@ public class ConcreteBlock extends LevelObject {
 	}
 
 	@Override
-	public boolean push(Char hero) {
-		return hero.effectiveSTR() >= requiredStr && super.push(hero);
+	public boolean push(Char chr) {
+		return chr.effectiveSTR() >= requiredStr && super.push(chr);
 	}
 
 	@Override
