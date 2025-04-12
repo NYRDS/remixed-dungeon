@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.ml.actions;
 
-import static com.watabou.pixeldungeon.actors.Actor.TICK;
-
 import com.watabou.pixeldungeon.actors.Char;
 
 import org.jetbrains.annotations.NotNull;
@@ -16,7 +14,7 @@ public class Order extends CharAction {
 
     @Override
     public boolean act(Char hero) {
-        hero.spend(TICK/10);
+        //hero.spend(TICK/10);
         hero.setCurAction(null);
         hero.busy();
         hero.selectCell(new OrderCellSelector(target));
