@@ -3003,4 +3003,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Accuracy_DecreasedDoctorBareHands">Bare hands infect my technique. Without the Saw’s clean cut, my aim festers into chaos.</string>>
 
   <string name="AttackDelay_Increased">Can’t wield the %s like this. Slow swings, heavy breaths…</string>
+  <string name="Mob_GoingTo">Already going!</string>
+  <string name="Mob_Attacking">Count this %s as dead!</string>
 </resources>

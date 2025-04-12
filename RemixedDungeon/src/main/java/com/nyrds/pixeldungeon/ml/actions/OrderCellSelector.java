@@ -36,13 +36,19 @@ class OrderCellSelector implements CellSelector.Listener {
         if (action instanceof Move) {
             target.setState(MobAi.getStateByClass(MoveOrder.class));
             target.setTarget(cell);
+            target.say(Utils.format(R.string.Mob_GoingTo));
             return;
+        }
+
+        if (action instanceof Interact) {
+            action = new Attack(((Interact) action).chr);
         }
 
         if (action instanceof Attack) {
             Attack attack = (Attack) action;
             target.setState(MobAi.getStateByClass(KillOrder.class));
             target.setEnemy(attack.target);
+            target.say(Utils.format(R.string.Mob_Attacking, target.getName()));
             return;
         }
 
