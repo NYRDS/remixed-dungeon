@@ -58,4 +58,9 @@ class OrderCellSelector implements CellSelector.Listener {
     public Image icon() {
         return target.getSprite().avatar();
     }
+
+    @Override
+    public boolean mayBeCanceled() {
+        return false;
+    }
 }

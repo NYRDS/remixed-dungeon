@@ -67,4 +67,8 @@ class SpellCharSelector implements CellSelector.Listener {
     public Image icon() {
         return spell.image(caster);
     }
+
+    public boolean mayBeCanceled() {
+        return true;
+    }
 }

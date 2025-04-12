@@ -32,4 +32,8 @@ class Thrower implements CellSelector.Listener {
     public Image icon() {
         return new ItemSprite(item);
     }
+
+    public boolean mayBeCanceled() {
+        return true;
+    }
 }

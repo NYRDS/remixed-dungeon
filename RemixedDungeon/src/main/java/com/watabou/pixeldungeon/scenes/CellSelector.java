@@ -173,5 +173,6 @@ public class CellSelector extends TouchArea implements IWindow {
 		void onSelect(Integer cell, @NotNull Char selector);
 		String prompt();
         Image icon();
+		boolean mayBeCanceled();
     }
 }

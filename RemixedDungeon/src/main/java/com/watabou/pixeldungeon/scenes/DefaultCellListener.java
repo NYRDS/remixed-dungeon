@@ -31,4 +31,9 @@ class DefaultCellListener implements CellSelector.Listener {
     public Image icon() {
         return null;
     }
+
+    @Override
+    public boolean mayBeCanceled() {
+        return true;
+    }
 }

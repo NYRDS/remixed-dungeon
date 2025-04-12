@@ -40,4 +40,8 @@ class Zapper implements CellSelector.Listener {
     public Image icon() {
         return null;
     }
+
+    public boolean mayBeCanceled() {
+        return true;
+    }
 }

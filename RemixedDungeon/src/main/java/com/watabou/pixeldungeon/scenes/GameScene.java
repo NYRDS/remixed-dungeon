@@ -1022,6 +1022,13 @@ public class GameScene extends PixelScene {
         }
     }
 
+    public static boolean busy(){
+        if(cellSelector != null && cellSelector.listener != null) {
+            return !cellSelector.listener.mayBeCanceled();
+        }
+        return false;
+    }
+
     public static boolean cancelCellSelector() {
         if (cellSelector != null) {
             cellSelector.cancel();

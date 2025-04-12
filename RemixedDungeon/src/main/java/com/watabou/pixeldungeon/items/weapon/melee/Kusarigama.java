@@ -122,5 +122,9 @@ public class Kusarigama extends MeleeWeapon {
         public Image icon() {
             return null;
         }
+
+        public boolean mayBeCanceled() {
+            return true;
+        }
     }
 }

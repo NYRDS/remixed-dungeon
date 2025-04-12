@@ -231,5 +231,9 @@ public class ChaosCrystal extends UsableArtifact {
         public Image icon() {
             return null;
         }
+
+        public boolean mayBeCanceled() {
+            return true;
+        }
     }
 }

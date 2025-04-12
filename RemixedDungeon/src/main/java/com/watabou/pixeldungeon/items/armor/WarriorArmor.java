@@ -104,5 +104,9 @@ public class WarriorArmor extends ClassArmor {
 		public Image icon() {
 			return null;
 		}
+
+		public boolean mayBeCanceled() {
+			return true;
+		}
 	}
 }

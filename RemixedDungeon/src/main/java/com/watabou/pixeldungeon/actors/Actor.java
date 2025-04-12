@@ -16,6 +16,7 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundlable;
@@ -221,6 +222,11 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
         if (current == hero && !current.timeout()) {
             return;
         }
+
+        if(GameScene.busy()) {
+            return;
+        }
+
 
         GLog.debug("Main loop start - %d actors", all.size());
         while ((current = nextActor()) != null) {
