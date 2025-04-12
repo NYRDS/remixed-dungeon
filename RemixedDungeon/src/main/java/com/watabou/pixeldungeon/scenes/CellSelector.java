@@ -53,29 +53,13 @@ public class CellSelector extends TouchArea implements IWindow {
 	public void select( int cell ) {
 		Hero hero = Dungeon.hero;
 
-		if (!Dungeon.realtime()) {
-			enabled = hero.isReady();
-		} else {
-			enabled = hero.isAlive();
-		}
-
-		boolean defaultListener = listener instanceof DefaultCellListener;
-		if(hero.myMove() && !defaultListener) {
-			enabled = true;
-		}
+		enabled = hero.isAlive();
 
 		GLog.debug("CellSelector %b, %s",  enabled, String.valueOf(listener));
 		if (enabled && listener != null && cell != Level.INVALID_CELL) {
 			GLog.debug("CellSelector %s -> %d", listener.getClass().getSimpleName(), cell);
 
-			var oldListener = listener;
-
 			listener.onSelect( cell, selector);
-
-			if(!defaultListener && oldListener == listener) {
-				selector.next();
-			}
-
 			GameScene.ready();
 
 		} else {
