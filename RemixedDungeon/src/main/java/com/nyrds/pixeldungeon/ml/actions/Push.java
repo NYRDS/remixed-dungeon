@@ -24,6 +24,7 @@ public class Push extends CharAction {
             target.notice();
         }
         target.push(hero);
+        target.spend(Actor.TICK);
 
         hero.spend(Actor.TICK);
         hero.readyAndIdle();

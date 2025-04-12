@@ -1627,7 +1627,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         LevelObject lo = level().getTopLevelObject(nextCell);
 
         if (lo != null && !lo.push(this)) {
-            return false;
+            lo.bump(this);
+            if(lo.nonPassable(this)) {
+                return false;
+            }
         }
 
         Char ch = Actor.findChar(nextCell);

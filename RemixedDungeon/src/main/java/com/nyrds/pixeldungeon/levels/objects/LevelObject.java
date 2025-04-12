@@ -163,15 +163,15 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
         return false;
     }
 
-    public boolean push(Char hero) {
+    public boolean push(Char chr) {
 
-        if(!pushable(hero)) {
+        if(!pushable(chr)) {
             return false;
         }
 
-        int nextCell = LevelHelpers.pushDst(hero, this, true);
+        int nextCell = LevelHelpers.pushDst(chr, this, true);
 
-        Level level = hero.level();
+        Level level = chr.level();
 
         if (!level.cellValid(nextCell)) {
             return false;
