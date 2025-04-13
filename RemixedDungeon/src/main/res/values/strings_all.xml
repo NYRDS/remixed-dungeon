@@ -3000,7 +3000,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
   <string name="Accuracy_Decreased">Why’d I think I could use a %s? Wrong tool, wrong hands!</string>
   <string name="Accuracy_DecreasedDoctor">Every swing of this %s spreads imperfection. My Bone Saw cures… this infects.</string>
-  <string name="Accuracy_DecreasedDoctorBareHands">Bare hands infect my technique. Without the Saw’s clean cut, my aim festers into chaos.</string>>
+  <string name="Accuracy_DecreasedDoctorBareHands">Bare hands infect my technique. Without the Saw’s clean cut, my aim festers into chaos.</string>
 
   <string name="AttackDelay_Increased">Can’t wield the %s like this. Slow swings, heavy breaths…</string>
   <string name="Mob_GoingTo">Already going!</string>

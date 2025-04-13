@@ -67,7 +67,7 @@ tasks.register('generateBuildConfig') {
     def version = project.ext.version
     def version_code = project.ext.version_code
     doLast {
-        def debug = true
+        def debug = false
         def buildConfigFile = new File("${projectDir}/src-generated/com/nyrds/pixeldungeon/ml/BuildConfig.java")
         buildConfigFile.parentFile.mkdirs()
         buildConfigFile.text = """
