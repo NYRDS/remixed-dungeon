@@ -2973,4 +2973,14 @@ remix.32.1\n
   <string name="StartScene_ContinueLatest">Kontynuuj grę z ostatniego zapisu lub wybierz slot zapisu </string>
   <string name="StartScene_ChooseFromSlot">Wybierz zapis ze slota</string>
   <string name="AboutScene_SourceCode">Tutaj znajdziesz kod źródłowy gry:</string>
+  <string name="HeroClass_Priest">Kapłan</string>
+  <string name="HeroClass_Doctor">Lekarz Plagi</string>
+  <string name="StartScene_ComingSoon">Wkrótce</string>
+  <string name="AC_Dissect">Sekcja zwłok</string>
+  <string name="HeroClass_PlagueDoctorPerks_0">Lekarz Plagi zbierają toksyczne gruczoły, rozkładające się organy, odłamki kości i nikczemną esencję zabitych wrogów. Krew jest zbierana z czasem i wykorzystywana do wykonywania alchemii.</string>
+  <string name="HeroClass_PlagueDoctorPerks_1">Zaczyna z maską plagi (nie wrażliwość na gazy) i piłą chirurgiczną. Krytyczne trafienia odrzynają części ciała, Piła zadaje +50% obrażeń sparaliżowanym przeciwnikom.</string>
+  <string name="HeroClass_PlagueDoctorPerks_2">Mikstura Gazu paraliżującego i toksycznego gazu są odkryte od początku.</string>
+  <string name="HeroClass_PlagueDoctorPerks_3">Przeciwnicy zabici przez toksyczny gaz zamieniają się w toksyczną mgłę, lecząc cię 1 PŻ za każdego przeciwnika.</string>
+  <string name="BoneSaw_Name">Piła chirurgiczna</string>
+  <string name="BoneSaw_Info">Precyzyjnie zaprojektowana chirurgiczna piła z przeznaczona do sekcji zwłok. Jej obrażenia i prędkość ataku stają się bardziej śmiercionośne dzięki umiejętnościom lekarza plagi. Krytyczne trafienia odrzynają dodatkowe części ciała  wrogów ,bezwzględnie wydajna wobec sparaliżowanych przeciwników.</string>
 </resources>

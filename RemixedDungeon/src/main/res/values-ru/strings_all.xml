@@ -2999,6 +2999,20 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="StartScene_ChooseFromSlot">Выбери слот сохранения</string>
   <string name="AboutScene_SourceCode">Получить исходники Remixed Dungeon:</string>
   <string name="HeroClass_Priest">Священник</string>
-  <string name="HeroClass_PlagueDoctor">Чумной Доктор</string>
+  <string name="HeroClass_Doctor">Чумной Доктор</string>
   <string name="StartScene_ComingSoon">Скоро будет</string>
+  <string name="AC_Dissect">Вскрытие</string>
+  <string name="HeroClass_PlagueDoctorPerks_0">Чумные доктора собирают Токсические железы, Гнилые органы, Осколки костей и Гнусную эссенцию с поверженных врагов. Кровь собирается со временем и используется для алхимии.</string>
+  <string name="HeroClass_PlagueDoctorPerks_1">Начинают с Маской Чумного Доктора (иммунитет ко всем газам) и Костяной пилой. Критические удары выбивают дополнительные части, а Пила наносит +50% урона парализованным врагам.</string>
+  <string name="HeroClass_PlagueDoctorPerks_2">Зелья Парализующего газа и Токсичного газа опознаны изначально.</string>
+  <string name="HeroClass_PlagueDoctorPerks_3">Враги, убитые Токсичным газом, взрываются в Ядовитым Туманом, восстанавливая вам 1 HP за каждого поверженного врага.</string>
+  <string name="HeroClass_PlagueDoctorPerks_4">Чумные доктора получают большой штраф к меткости без своей Костяной пилы и не могут использовать дальнобойное оружие.</string>
+  <string name="BoneSaw_Name">Костяная пила</string>
+  <string name="BoneSaw_Info">Хирургическая пила тонкой работы, созданная для быстрого вскрытия. Её урон и скорость атаки растут с мастерством Чумного доктора. Критические удары выбивают дополнительные собираемые части, безжалостно эффективна против парализованных врагов.</string>
+  <string name="Accuracy_Decreased">Зачем я думал, что смогу использовать предмет %s? Не тот инструмент, не те руки!</string>
+  <string name="Accuracy_DecreasedDoctor">Каждый взмах этим предметом %s сеет несовершенство. Моя Пила лечит… а это калечит.</string>
+  <string name="Accuracy_DecreasedDoctorBareHands">Голые руки оскверняют технику. Без чистого реза Пилы моя точность никуда не годиться.</string>
+  <string name="AttackDelay_Increased">Не получается использовать предмет %s как следует. Медленные взмахи, тяжёлое дыхание…</string>
+  <string name="Mob_GoingTo">Уже бегу!</string>
+  <string name="Mob_Attacking">Считай этого %s мёртвым!</string>
 </resources>
