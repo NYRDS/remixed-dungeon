@@ -2996,7 +2996,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="HeroClass_PlagueDoctorPerks_4">Plague Doctors suffer great accuracy penalties without beloved Bone Saw in hand and cannot use ranged weapons.</string>
 
   <string name="BoneSaw_Name">Bone Saw</string>
-  <string name="BoneSaw_Info">A precision-engineered surgical saw designed for rapid dissection. Its damage and attack speed grow deadlier with the Plague Doctor's skill. Critical hits carve extra harvestable parts from enemies, and it strikes with ruthless efficiency against paralyzed foes.</string>
+  <string name="BoneSaw_Info">A precision-engineered surgical saw designed for rapid dissection. Its damage and attack speed grow deadlier with the Plague Doctor’s skill. Critical hits carve extra harvestable parts from enemies, and it strikes with ruthless efficiency against paralyzed foes.</string>
 
   <string name="Accuracy_Decreased">Why’d I think I could use a %s? Wrong tool, wrong hands!</string>
   <string name="Accuracy_DecreasedDoctor">Every swing of this %s spreads imperfection. My Bone Saw cures… this infects.</string>
