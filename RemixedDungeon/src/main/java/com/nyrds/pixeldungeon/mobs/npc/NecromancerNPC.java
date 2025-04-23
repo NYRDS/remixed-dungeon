@@ -51,7 +51,7 @@ public class NecromancerNPC extends ImmortalNPC {
 			int cell;
 			do {
 				cell = room.random(level);
-			} while (level.map[cell] == Terrain.LOCKED_EXIT);
+			} while (level.map[cell] == Terrain.LOCKED_EXIT || !level.isCellNonOccupied(cell));
 			npc.setPos(cell);
 			level.spawnMob(npc);
 	}

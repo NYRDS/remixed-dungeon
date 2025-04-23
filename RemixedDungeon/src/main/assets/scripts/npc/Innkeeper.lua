@@ -15,6 +15,7 @@ return mob.init({
         self:collect(RPD.createItem("FriedFish",{quantity=10}))
         self:collect(RPD.createItem("ChargrilledMeat",{quantity=10}))
         self:collect(RPD.createItem("FrozenCarpaccio",{quantity=10}))
+        RPD.setAi(self,"NpcDefault")
     end,
 
     interact = function(self, chr)
@@ -23,9 +24,5 @@ return mob.init({
 
     priceForSell = function(self, item)
         return item:price() * 10
-    end,
-
-    spawn = function(me, level)
-        RPD.setAi(me,"NpcDefault")
     end
 })

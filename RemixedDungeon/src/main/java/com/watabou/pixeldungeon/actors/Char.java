@@ -1439,6 +1439,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (!undead) {
             Buff.affect(this, Regeneration.class);
         }
+
         getScript().run("onSpawn", level);
     }
 
