@@ -830,10 +830,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         getScript().run("onDie", cause);
 
-        if (level().pit[getPos()]) {
-            getSprite().fall();
-        } else {
-            getSprite().die();
+        Level level = level();
+
+        if (level.cellValid(getPos())) {
+            if (level.pit[getPos()]) {
+                getSprite().fall();
+            } else {
+                getSprite().die();
+            }
         }
         destroy();
     }
