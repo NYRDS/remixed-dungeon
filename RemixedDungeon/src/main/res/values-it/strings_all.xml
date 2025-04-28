@@ -1338,6 +1338,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
   <string name="HealerNPC_Name">prete di paese</string>
   <string name="HealerNPC_Name_Objective">prete di paese</string>
   <string name="HealerNPC_Message1">Trattamento gratis per ogni avventuriero!</string>
+  <string name="HealerNPC_Message2">Torna pure ogniqualvolta ti senti male o sei affamato!</string>
   <string name="ServiceManNPC_Name">lavoratore</string>
   <string name="ServiceManNPC_Name_Objective">lavoratore</string>
   <string name="TownShopkeeper_Name">Negoziante</string>

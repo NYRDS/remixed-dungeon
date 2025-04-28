@@ -2981,6 +2981,13 @@ remix.32.1\n
   <string name="HeroClass_PlagueDoctorPerks_1">Zaczyna z maską plagi (nie wrażliwość na gazy) i piłą chirurgiczną. Krytyczne trafienia odrzynają części ciała, Piła zadaje +50% obrażeń sparaliżowanym przeciwnikom.</string>
   <string name="HeroClass_PlagueDoctorPerks_2">Mikstura Gazu paraliżującego i toksycznego gazu są odkryte od początku.</string>
   <string name="HeroClass_PlagueDoctorPerks_3">Przeciwnicy zabici przez toksyczny gaz zamieniają się w toksyczną mgłę, lecząc cię 1 PŻ za każdego przeciwnika.</string>
+  <string name="HeroClass_PlagueDoctorPerks_4">Lekarz plagi traci na  celności podczas używania każdej broni oprócz piły chirurgicznej i nie może używać broni dystansowej.</string>
   <string name="BoneSaw_Name">Piła chirurgiczna</string>
   <string name="BoneSaw_Info">Precyzyjnie zaprojektowana chirurgiczna piła z przeznaczona do sekcji zwłok. Jej obrażenia i prędkość ataku stają się bardziej śmiercionośne dzięki umiejętnościom lekarza plagi. Krytyczne trafienia odrzynają dodatkowe części ciała  wrogów ,bezwzględnie wydajna wobec sparaliżowanych przeciwników.</string>
+  <string name="Accuracy_Decreased">Dlaczego uważasz ze mogę używać %s? Nieodpowiednie narzędzie w nieodpowiednich rękach!!</string>
+  <string name="Accuracy_DecreasedDoctor">Każdy cios z %s rozsiewa ułomność.. Piła chirurgiczna.. Leczy ta ułomność </string>
+  <string name="Accuracy_DecreasedDoctorBareHands">Gołe ręce nie są w moim stylu. Bez piły mam cela jak baba z wesela.</string>
+  <string name="AttackDelay_Increased">Nie mogę używać %s.  Ciężkie i powolne to...</string>
+  <string name="Mob_GoingTo">Nadchodzi!</string>
+  <string name="Mob_Attacking">Uznaj %sza trupa</string>
 </resources>
