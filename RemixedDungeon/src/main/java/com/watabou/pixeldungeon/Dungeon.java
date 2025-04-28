@@ -365,9 +365,11 @@ public class Dungeon {
     }
 
     private static void spawnPet(Level level, Mob mob) {
-        mob.setPos(level.getNearestTerrain(hero.getPos(), mob::canSpawnAt));
+        int pos = level.getNearestTerrain(hero.getPos(), mob::canSpawnAt);
 
-        if (mob.getPos() == Level.INVALID_CELL) {
+        if (level.cellValid(pos)) {
+            mob.setPos(pos);
+        } else {
             mob.setPos(hero.getPos());
         }
 
