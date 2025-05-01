@@ -94,6 +94,9 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         for(int i=0;i<mSize;i++) {
             int cellN = i - mWidth;
             int cellS = i + mWidth;
+
+
+            //or it give up all secret doors
             if(level.mapped[i]) {
                 mIsometricMap[i] = level.map[i];
             } else if(level.cellValid(cellN) && level.mapped[cellN] && mayPeek(i) && mayPeek(cellN)) {

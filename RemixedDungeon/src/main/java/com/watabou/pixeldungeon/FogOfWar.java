@@ -11,8 +11,8 @@ import java.util.Arrays;
 public class FogOfWar extends Image {
 
     private static final int VISIBLE = 0x00000000;
-    private static final int VISITED = 0xCC111111;
-    private static final int MAPPED = 0xCC442211;
+    private static final int VISITED = 0xAA111111;
+    private static final int MAPPED = 0xCC111111;
     private static final int INVISIBLE = 0xFF000000;
 
     private int[] pixels;
@@ -20,9 +20,6 @@ public class FogOfWar extends Image {
 
     private int pWidth;
     private int pHeight;
-
-    private int width2;
-    private int height2;
 
     private int mWidth;
     private int mHeight;
@@ -43,22 +40,13 @@ public class FogOfWar extends Image {
         pWidth = mapWidth + 1;
         pHeight = mapHeight + 1;
 
-        width2 = 1;
-        while (width2 < pWidth) {
-            width2 <<= 1;
-        }
-
-        height2 = 1;
-        while (height2 < pHeight) {
-            height2 <<= 1;
-        }
 
         float size = DungeonTilemap.SIZE;
-        setWidth(width2 * size);
-        setHeight(height2 * size);
+        setWidth(width * size);
+        setHeight(height * size);
 
-        pixels = new int[width2 * height2];
-        old_pixels = new int[width2 * height2];
+        pixels = new int[(int) (mWidth * mHeight)];
+        old_pixels = new int[(int) (mWidth * mHeight)];
 
         Arrays.fill(pixels, INVISIBLE);
         Arrays.fill(old_pixels, VISIBLE);
@@ -81,7 +69,7 @@ public class FogOfWar extends Image {
             for (int j = 1; j < mWidth; j++) {
                 pos++;
                 int c = INVISIBLE;
-
+/*
                 if (visible[pos + pWidth]) {
                     c = VISIBLE;
                 } else if (visited[pos + pWidth]) {
@@ -89,6 +77,8 @@ public class FogOfWar extends Image {
                 } else if (mapped[pos + pWidth]) {
                     c = MAPPED;
                 }
+
+ */
                 pixels[j] = c;
             }
         }
@@ -104,12 +94,18 @@ public class FogOfWar extends Image {
                 if (visible[pos] && visible[p_minus_w_minus_one] &&
                         visible[pos - 1] && visible[p_minus_w_minus_one - 1]) {
                     c = VISIBLE;
-                } else if (visited[pos] || visited[p_minus_w_minus_one] ||
-                        visited[pos - 1] || visited[p_minus_w_minus_one - 1]) {
-                    c = VISITED;
-                } else if (mapped[pos] && mapped[p_minus_w_minus_one] &&
-                        mapped[pos - 1] && mapped[p_minus_w_minus_one - 1]) {
-                    c = MAPPED;
+                } else {
+
+                    if (mapped[pos] && mapped[p_minus_w_minus_one] &&
+                            mapped[pos - 1] && mapped[p_minus_w_minus_one - 1]) {
+                        c = MAPPED;
+                    }
+
+                    if (visited[pos] || visited[p_minus_w_minus_one] ||
+                            visited[pos - 1] || visited[p_minus_w_minus_one - 1]) {
+                        c = VISITED;
+                    }
+
                 }
 /*
                 if (Util.isDebug()) {
@@ -121,7 +117,7 @@ public class FogOfWar extends Image {
                     }
                 }
 */
-                pixels[i * width2 + j] = c;
+                pixels[i * mWidth + j] = c;
             }
         }
     }
@@ -129,7 +125,7 @@ public class FogOfWar extends Image {
     @Override
     public void draw() {
         if (dirty || !Arrays.equals(pixels, old_pixels)) {
-            texture.pixels(width2, height2, pixels);
+            texture.pixels(mWidth, mHeight, pixels);
             System.arraycopy(pixels, 0, old_pixels, 0, pixels.length);
         }
 
@@ -141,9 +137,10 @@ public class FogOfWar extends Image {
     private class FogTexture extends SmartTexture {
 
         public FogTexture() {
-            super(toDispose = BitmapData.createBitmap(width2, height2));
+            super(toDispose = BitmapData.createBitmap(mWidth,mHeight));
             //toDispose.dispose();
             filter(Texture.LINEAR, Texture.LINEAR);
+
             TextureCache.add(FogOfWar.class, this);
         }
     }
