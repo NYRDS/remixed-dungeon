@@ -582,7 +582,7 @@ public abstract class RegularLevel extends CustomLevel {
 	protected void placeBarrels(int num) {
 		for (int i = 0; i < num; i++) {
 			int pos = getRandomTerrainCell(Terrain.EMPTY);
-			if (cellValid(pos) && getHeap(pos) == null) {
+			if (cellValid(pos) && isCellNonOccupied(pos)) {
 				addLevelObject(new Barrel(pos));
 			}
 		}

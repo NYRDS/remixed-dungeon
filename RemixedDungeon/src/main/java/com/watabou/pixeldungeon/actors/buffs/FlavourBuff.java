@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -12,7 +13,8 @@ public class FlavourBuff extends Buff {
 		String ret = super.desc();
 		float cooldown = cooldown();
 		if (cooldown <= Util.BIG_FLOAT / 2) {
-			ret += Utils.format("\ncooldown %.2f", cooldown());
+			ret += "\n";
+			ret += Utils.format(R.string.BuffParam_Cooldown, cooldown());
 		}
 		return ret;
 	}
