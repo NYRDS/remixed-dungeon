@@ -30,7 +30,6 @@ public class Interact extends CharAction {
             if (chr.getOwnerId() == hero.getId()) {
                 hero.spend(TICK/10);
                 hero.setCurAction(null);
-                hero.busy();
                 hero.selectCell(new OrderCellSelector(chr));
                 return false;
             }

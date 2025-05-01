@@ -280,12 +280,6 @@ public class Hero extends Char {
     }
 
     @Override
-    public void spendAndNext(float time) {
-        busy();
-        super.spendAndNext(time);
-    }
-
-    @Override
     public boolean act() {
         if (controlTargetId == getId()) {
             super.act();
@@ -316,11 +310,8 @@ public class Hero extends Char {
 
             if (Dungeon.realtime() ||
                     (controlTargetId != getId() && getControlTarget().getCurAction() != null)) {
-                if (!ready) {
-                    readyAndIdle();
-                }
-                spend(TICK);
-                next();
+                    spend(TICK);
+                    next();
             } else {
                 readyAndIdle();
             }
@@ -330,19 +321,10 @@ public class Hero extends Char {
         SystemTime.updateLastActionTime();
 
         restoreHealth = false;
-        if (!Dungeon.realtime()) {
-            busy();
-        }
 
         GLog.debug("action: %s", getCurAction());
 
         return getCurAction().act(this);
-    }
-
-    @Override
-    public void busy() {
-        GLog.debug("busy");
-        ready = false;
     }
 
     public void readyAndIdle() {
@@ -916,7 +898,10 @@ public class Hero extends Char {
     }
 
     public boolean isReady() {
-        return isAlive() && ready;
+        if(Dungeon.realtime()) {
+            return isAlive();
+        }
+        return isAlive() && myMove();
     }
 
     public int getDifficulty() {

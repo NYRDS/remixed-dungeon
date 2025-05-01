@@ -113,7 +113,6 @@ public class Spell implements NamedEntityKind {
         }
 
         chr.spend(castTime);
-        chr.busy();
         chr.getSprite().zap(chr.getPos());
         return true;
     }

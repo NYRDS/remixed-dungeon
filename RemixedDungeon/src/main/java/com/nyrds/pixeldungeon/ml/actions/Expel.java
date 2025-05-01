@@ -20,7 +20,6 @@ public class Expel extends CharAction {
     public boolean act(Char hero) {
         hero.spend(TICK/10);
         hero.setCurAction(null);
-        hero.busy();
         target.setOwnerId(target.getId());
         target.setFraction(Fraction.DUNGEON);
         CharUtils.clearMarkers();

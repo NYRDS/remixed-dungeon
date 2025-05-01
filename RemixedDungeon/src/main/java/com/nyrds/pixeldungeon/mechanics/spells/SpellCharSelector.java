@@ -51,7 +51,6 @@ class SpellCharSelector implements CellSelector.Listener {
                 spell.cast(caster, target);
 
                 caster.spend(spell.castTime);
-                caster.busy();
                 caster.getSprite().zap(target.getPos());
             }
         }

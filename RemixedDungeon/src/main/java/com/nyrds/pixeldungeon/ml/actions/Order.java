@@ -14,9 +14,7 @@ public class Order extends CharAction {
 
     @Override
     public boolean act(Char hero) {
-        //hero.spend(TICK/10);
         hero.setCurAction(null);
-        hero.busy();
         hero.selectCell(new OrderCellSelector(target));
         return false;
     }

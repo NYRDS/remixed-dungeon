@@ -25,7 +25,6 @@ class SpellCellSelector implements CellSelector.Listener {
             spell.cast(caster, cell);
 
             caster.spend(spell.castTime);
-            caster.busy();
         }
     }
 
