@@ -93,6 +93,10 @@ public class WndInfoCell extends Window {
 			desc.append(Utils.format("\navoid: %b", level.avoid[cell]));
 			desc.append(Utils.format("\nsolid: %b", level.solid[cell]));
 			desc.append(Utils.format("\nflammable: %b", level.flammable[cell]));
+			desc.append(Utils.format("\nvisible: %b", Dungeon.visible[cell]));
+			desc.append(Utils.format("\nvisited: %b", level.visited[cell]));
+			desc.append(Utils.format("\nmapped: %b", level.mapped[cell]));
+
 			if(obj!=null) {
 				desc.append(Utils.format("\nlo: %s layer: %d", obj.getEntityKind(), obj.getLayer()));
 				desc.append(Utils.format("\nnonPassable: %b", obj.nonPassable(CharsList.DUMMY)));

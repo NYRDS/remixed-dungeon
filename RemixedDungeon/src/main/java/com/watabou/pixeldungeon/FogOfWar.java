@@ -64,6 +64,8 @@ public class FogOfWar extends Image {
     public void updateVisibility(boolean[] visible, boolean[] visited, boolean[] mapped, boolean firstRowHack) {
         dirty = true;
 
+        Arrays.fill(pixels, INVISIBLE);
+
         if (firstRowHack) {
             int pos = 0;
             for (int j = 1; j < mWidth; j++) {
@@ -84,18 +86,17 @@ public class FogOfWar extends Image {
         }
 
         for (int i = 1; i < pHeight - 1; i++) {
-            int w_minus_one = pWidth - 1;
-            int pos = w_minus_one * i;
-            for (int j = 1; j < w_minus_one; j++) {
+
+            int pos = mWidth * i;
+            for (int j = 1; j < mWidth; j++) {
                 pos++;
                 int c = INVISIBLE;
 
-                int p_minus_w_minus_one = pos - w_minus_one;
+                int p_minus_w_minus_one = pos - mWidth;
                 if (visible[pos] && visible[p_minus_w_minus_one] &&
                         visible[pos - 1] && visible[p_minus_w_minus_one - 1]) {
                     c = VISIBLE;
                 } else {
-
                     if (mapped[pos] && mapped[p_minus_w_minus_one] &&
                             mapped[pos - 1] && mapped[p_minus_w_minus_one - 1]) {
                         c = MAPPED;
@@ -105,7 +106,6 @@ public class FogOfWar extends Image {
                             visited[pos - 1] || visited[p_minus_w_minus_one - 1]) {
                         c = VISITED;
                     }
-
                 }
 /*
                 if (Util.isDebug()) {
@@ -140,6 +140,7 @@ public class FogOfWar extends Image {
             super(toDispose = BitmapData.createBitmap(mWidth,mHeight));
             //toDispose.dispose();
             filter(Texture.LINEAR, Texture.LINEAR);
+            //wrap(Texture.MIRROR,Texture.MIRROR);
 
             TextureCache.add(FogOfWar.class, this);
         }
