@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon;
 
 import com.nyrds.platform.gfx.BitmapData;
+import com.nyrds.platform.gl.Gl;
 import com.nyrds.platform.gl.Texture;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
@@ -10,10 +11,10 @@ import java.util.Arrays;
 
 public class FogOfWar extends Image {
 
-    private static final int VISIBLE = 0x00000000;
-    private static final int VISITED = 0xAA111111;
-    private static final int MAPPED = 0xCC111111;
-    private static final int INVISIBLE = 0xFF000000;
+    private static final int VISIBLE = 0xFF000000;
+    private static final int VISITED = 0x60000000;
+    private static final int MAPPED = 0x30000000;
+    private static final int INVISIBLE = 0x00000000;
 
     private int[] pixels;
     private int[] old_pixels;
@@ -71,7 +72,7 @@ public class FogOfWar extends Image {
             for (int j = 1; j < mWidth; j++) {
                 pos++;
                 int c = INVISIBLE;
-/*
+
                 if (visible[pos + pWidth]) {
                     c = VISIBLE;
                 } else if (visited[pos + pWidth]) {
@@ -80,7 +81,7 @@ public class FogOfWar extends Image {
                     c = MAPPED;
                 }
 
- */
+
                 pixels[j] = c;
             }
         }
@@ -128,8 +129,9 @@ public class FogOfWar extends Image {
             texture.pixels(mWidth, mHeight, pixels);
             System.arraycopy(pixels, 0, old_pixels, 0, pixels.length);
         }
-
+        Gl.fowBlend();
         super.draw();
+        Gl.blendSrcAlphaOneMinusAlpha();
     }
 
     private BitmapData toDispose;
@@ -138,10 +140,7 @@ public class FogOfWar extends Image {
 
         public FogTexture() {
             super(toDispose = BitmapData.createBitmap(mWidth,mHeight));
-            //toDispose.dispose();
             filter(Texture.LINEAR, Texture.LINEAR);
-            //wrap(Texture.MIRROR,Texture.MIRROR);
-
             TextureCache.add(FogOfWar.class, this);
         }
     }

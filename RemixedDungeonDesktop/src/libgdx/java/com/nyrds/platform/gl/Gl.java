@@ -19,6 +19,11 @@ public class Gl {
         Gdx.gl20.glBlendFunc(Gdx.gl20.GL_SRC_ALPHA, Gdx.gl20.GL_ONE_MINUS_SRC_ALPHA);
     }
 
+    public static void fowBlend() {
+        Gdx.gl.glBlendFunc(Gdx.gl20.GL_ZERO, Gdx.gl20.GL_SRC_ALPHA);
+    }
+
+
     public static void glCheck() {
         if( Gdx.gl20.glGetError() != Gdx.gl20.GL_NO_ERROR ) {
             throw new RuntimeException();
