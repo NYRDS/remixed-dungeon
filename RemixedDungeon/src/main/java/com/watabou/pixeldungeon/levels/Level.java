@@ -1209,6 +1209,12 @@ public abstract class Level implements Bundlable {
 		if(item == ItemsList.DUMMY) {
 			return;
 		}
+
+		if(!cellValid(cell)) {
+			EventCollector.logException("trying to do animated drop "+item.getEntityKind()+" on invalid cell "+String.valueOf(cell));
+			return;
+		}
+
 		var heap = drop(item,cell);
 
 		assert(heap!=null);
@@ -1223,6 +1229,10 @@ public abstract class Level implements Bundlable {
 	@NotNull
 	@LuaInterface
 	public Heap drop(Item item, int cell) {
+		if(!cellValid(cell)) {
+			EventCollector.logException("trying to drop "+item.getEntityKind()+" on invalid cell "+String.valueOf(cell));
+			return null;
+		}
 
 		item = Treasury.getLevelTreasury().check(item);
 

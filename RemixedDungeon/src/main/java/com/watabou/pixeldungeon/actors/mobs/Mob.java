@@ -22,7 +22,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
-import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
@@ -56,8 +55,6 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
-
-import java.lang.ref.WeakReference;
 
 import lombok.SneakyThrows;
 
@@ -558,6 +555,7 @@ public abstract class Mob extends Char {
         Bundle storedMob = new Bundle();
         storeInBundle(storedMob);
         Mob new_mob = MobFactory.mobByName(getEntityKind());
+        new_mob.setPos(getPos());
         new_mob.restoreFromBundle(storedMob);
         new_mob.getId(); //Ensure valid id
 
