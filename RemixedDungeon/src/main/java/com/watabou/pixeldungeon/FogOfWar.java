@@ -66,6 +66,7 @@ public class FogOfWar extends Image {
         dirty = true;
 
         Arrays.fill(pixels, INVISIBLE);
+        boolean noVisited = Dungeon.isChallenged(Challenges.NO_MAP);
 
         if (firstRowHack) {
             int pos = 0;
@@ -75,10 +76,16 @@ public class FogOfWar extends Image {
 
                 if (visible[pos + pWidth]) {
                     c = VISIBLE;
-                } else if (visited[pos + pWidth]) {
-                    c = VISITED;
-                } else if (mapped[pos + pWidth]) {
-                    c = MAPPED;
+                } else {
+                    if (!noVisited) {
+                        if (mapped[pos + pWidth]) {
+                            c = MAPPED;
+                        }
+
+                        if (visited[pos + pWidth]) {
+                            c = VISITED;
+                        }
+                    }
                 }
 
 
@@ -98,14 +105,16 @@ public class FogOfWar extends Image {
                         visible[pos - 1] && visible[p_minus_w_minus_one - 1]) {
                     c = VISIBLE;
                 } else {
-                    if (mapped[pos] && mapped[p_minus_w_minus_one] &&
-                            mapped[pos - 1] && mapped[p_minus_w_minus_one - 1]) {
-                        c = MAPPED;
-                    }
+                    if(!noVisited) {
+                        if (mapped[pos] && mapped[p_minus_w_minus_one] &&
+                                mapped[pos - 1] && mapped[p_minus_w_minus_one - 1]) {
+                            c = MAPPED;
+                        }
 
-                    if (visited[pos] || visited[p_minus_w_minus_one] ||
-                            visited[pos - 1] || visited[p_minus_w_minus_one - 1]) {
-                        c = VISITED;
+                        if (visited[pos] || visited[p_minus_w_minus_one] ||
+                                visited[pos - 1] || visited[p_minus_w_minus_one - 1]) {
+                            c = VISITED;
+                        }
                     }
                 }
 /*
