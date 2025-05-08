@@ -972,6 +972,8 @@
   <string name="HeroClass_Rog">вор</string>
   <string name="HeroClass_Hun">охотница</string>
   <string name="HeroClass_Elf">эльф</string>
+  <string name="HeroClass_None">commoner</string>
+  <string name="HeroSubClass_NameNone">none</string>
   <string name="HeroSubClass_DescNone"/>
   <string name="HeroSubClass_NameGlad">гладиатор</string>
   <string name="HeroSubClass_DescGlad">Успешная атака ближнего боя позволяет, _Гладиатору_ начать серию комбо-ударов, в течение которой каждое последующее попадание наносит больше урона.</string>
@@ -2685,7 +2687,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Calm_Name">Успокоение</string>
   <string name="Calm_Info">Вокруг так много злобы и агрессии, давайте поможем им.</string>
   <string name="CharmSpell_Name">Очарование</string>
-  <string name="CharmSpell_Info">Каждый нужно немного любви, ведь так?</string>
+  <string name="CharmSpell_Info">Каждому нужно немного любви, ведь так?</string>
   <string name="HideInGrassSpell_Name">Прятки</string>
   <string name="HideInGrassSpell_Info">Твоё искусство игры в прятки совершенно.</string>
   <string name="HideInGrassSpell_NeedGrassToHide">Даже я не могу спрятаться на пустом месте.</string>
@@ -3015,4 +3017,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="AttackDelay_Increased">Не получается использовать предмет %s как следует. Медленные взмахи, тяжёлое дыхание…</string>
   <string name="Mob_GoingTo">Уже бегу!</string>
   <string name="Mob_Attacking">Считай этого %s мёртвым!</string>
+  <string name="BuffParam_Cooldown">Время: 1%.2f</string>
+  <string name="Challenges_Names_9">Амнезия</string>
+  <string name="Challenges_Descriptions_9">Новый \'медикамент\' Доктора выжег вам ориентацию в пространстве. Всё, что скрыто из виду — тут же забывается.</string>
 </resources>

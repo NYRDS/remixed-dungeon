@@ -2990,4 +2990,5 @@ remix.32.1\n
   <string name="AttackDelay_Increased">Nie mogę używać %s.  Ciężkie i powolne to...</string>
   <string name="Mob_GoingTo">Nadchodzi!</string>
   <string name="Mob_Attacking">Uznaj %sza trupa</string>
+  <string name="BuffParam_Cooldown">Odnowienie %.2f</string>
 </resources>
