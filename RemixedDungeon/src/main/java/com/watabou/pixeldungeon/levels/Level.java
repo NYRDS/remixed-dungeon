@@ -971,27 +971,30 @@ public abstract class Level implements Bundlable {
 		return randomRespawnCell(passable);
 	}
 
-	///TODO FIX ME
 	public int randomRespawnCell(boolean[] selectFrom) {
 
 		if (isBossLevel() || noFogOfWar()) {
 			return INVALID_CELL;
 		}
 
-		int counter = 0;
-		int cell;
-		do {
-			if (++counter > 1000) {
-				return INVALID_CELL;
+		ArrayList<Integer> candidateCell = new ArrayList<>();
+		for (int i = width;i<getLength()-width;i++) {
+			if(selectFrom[i]
+				&& i != entrance
+				&& !Dungeon.isCellVisible(i)
+				&& Actor.findChar(i) == null
+				&& getTopLevelObject(i) == null
+			) {
+				candidateCell.add(i);
 			}
-			cell = Random.Int(getLength());
 		}
-		while (!selectFrom[cell]
-				|| Dungeon.isCellVisible(cell)
-				|| Actor.findChar(cell) != null
-				|| getTopLevelObject(cell) != null
-				|| cell == entrance);
-		return cell;
+
+		if(candidateCell.isEmpty()) {
+			return INVALID_CELL;
+		}
+
+		return candidateCell.get(Random.index(candidateCell));
+
 	}
 
 	@LuaInterface
