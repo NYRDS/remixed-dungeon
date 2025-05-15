@@ -151,7 +151,7 @@ public class LastShopLevel extends RegularLevel {
 	
 	@Override
 	public int randomRespawnCell() {
-		return -1;
+		return INVALID_CELL;
 	}
 	
 	@Override

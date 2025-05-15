@@ -10,6 +10,7 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.Ring;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -67,6 +68,7 @@ public class Bones {
 					return get();
 				}
 			}  catch (Exception ignored) {
+				GLog.debug("WOW!!!");
 			}
 			return ItemsList.DUMMY;
 		} else {

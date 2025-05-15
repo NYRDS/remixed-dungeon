@@ -40,6 +40,8 @@ public abstract class RegularLevel extends CustomLevel {
 
 	protected Room roomEntrance;
 
+	Room.Type []roomMap;
+
 	public int secretDoors;
 
 	protected boolean placeEntranceAndExit() {
@@ -117,7 +119,35 @@ public abstract class RegularLevel extends CustomLevel {
 
 		placeTraps();
 
+
+
+		roomMap = new Room.Type[getLength()];
+		checkRoomMap();
+
 		return true;
+	}
+
+	private void checkRoomMap() {
+		boolean roomMapValid = false;
+
+		for (int i = 0; i < getLength(); i++) {
+			roomMap[i] = Type.NULL;
+			for (Room r: rooms) {
+				if(r.inside(this,i)) {
+					roomMap[i] = r.type;
+
+					if(r.type==Type.STANDARD) {
+						roomMapValid = true;
+					}
+
+					break;
+				}
+			}
+		}
+
+		if(!roomMapValid) {
+			GLog.debug("Wow!");
+		}
 	}
 
 	protected void connectRooms(Set<Room.Type> ignored) {
@@ -531,7 +561,6 @@ public abstract class RegularLevel extends CustomLevel {
 			}
 
 			w.top += 1;
-			w.bottom -= 0;
 
 			w.right++;
 
@@ -552,7 +581,6 @@ public abstract class RegularLevel extends CustomLevel {
 			}
 
 			w.left += 1;
-			w.right -= 0;
 
 			w.bottom++;
 
@@ -590,26 +618,20 @@ public abstract class RegularLevel extends CustomLevel {
 
 	@Override
 	public int randomRespawnCell() {
-		int count = 0;
-		int cell;
+		checkRoomMap();
+		int ret = getRandomTerrain(
+				(level, cell) -> passable[cell]
+						&& (roomMap[cell] == Type.STANDARD || roomMap[cell] == Type.TUNNEL || roomMap[cell] == Type.PASSAGE)
+						&& cell != entrance
+						&& !Dungeon.isCellVisible(cell)
+						&& Actor.findChar(cell) == null
+						&& getTopLevelObject(cell) == null
+		);
 
-		while (true) {
-
-			if (++count > 100) {
-				return INVALID_CELL;
-			}
-
-			Room room = randomRoom(Room.Type.STANDARD, 10);
-			if (room == null) {
-				continue;
-			}
-
-			cell = room.random(this);
-			if (!Dungeon.isCellVisible(cell) && Actor.findChar(cell) == null && passable[cell]) {
-				return cell;
-			}
-
+		if (ret==INVALID_CELL) {
+			GLog.debug("Wow!");
 		}
+		return ret;
 	}
 
 	@Override
