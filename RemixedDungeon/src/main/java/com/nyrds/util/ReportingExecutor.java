@@ -1,5 +1,7 @@
 package com.nyrds.util;
 
+import com.nyrds.platform.EventCollector;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CancellationException;
@@ -9,8 +11,6 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-
-import lombok.SneakyThrows;
 
 public class ReportingExecutor extends ThreadPoolExecutor {
     public ReportingExecutor() {
@@ -30,7 +30,7 @@ public class ReportingExecutor extends ThreadPoolExecutor {
         );
     }
 
-    @SneakyThrows
+
     protected void afterExecute(Runnable r, Throwable t) {
         super.afterExecute(r, t);
         if (t == null && r instanceof Future<?>) {
@@ -48,7 +48,7 @@ public class ReportingExecutor extends ThreadPoolExecutor {
             }
         }
         if (t != null) {
-            throw t;
+            EventCollector.logException(t, this.toString());
         }
     }
 

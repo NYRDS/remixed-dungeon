@@ -119,16 +119,15 @@ public abstract class RegularLevel extends CustomLevel {
 
 		placeTraps();
 
-
-
-		roomMap = new Room.Type[getLength()];
-		checkRoomMap();
-
 		return true;
 	}
 
 	private void checkRoomMap() {
 		boolean roomMapValid = false;
+
+		if (roomMap == null && !rooms.isEmpty()) {
+			roomMap = new Room.Type[getLength()];
+		}
 
 		for (int i = 0; i < getLength(); i++) {
 			roomMap[i] = Type.NULL;
@@ -619,14 +618,28 @@ public abstract class RegularLevel extends CustomLevel {
 	@Override
 	public int randomRespawnCell() {
 		checkRoomMap();
-		int ret = getRandomTerrain(
-				(level, cell) -> passable[cell]
-						&& (roomMap[cell] == Type.STANDARD || roomMap[cell] == Type.TUNNEL || roomMap[cell] == Type.PASSAGE)
-						&& cell != entrance
-						&& !Dungeon.isCellVisible(cell)
-						&& Actor.findChar(cell) == null
-						&& getTopLevelObject(cell) == null
-		);
+
+		int ret;
+
+		if(!rooms.isEmpty()) {
+			ret = getRandomTerrain(
+					(level, cell) -> passable[cell]
+							&& (roomMap[cell] == Type.STANDARD || roomMap[cell] == Type.TUNNEL || roomMap[cell] == Type.PASSAGE)
+							&& cell != entrance
+							&& !Dungeon.isCellVisible(cell)
+							&& Actor.findChar(cell) == null
+							&& getTopLevelObject(cell) == null
+			);
+		} else {
+			ret = getRandomTerrain(
+					(level, cell) -> passable[cell]
+							&& cell != entrance
+							&& !Dungeon.isCellVisible(cell)
+							&& Actor.findChar(cell) == null
+							&& getTopLevelObject(cell) == null
+			);
+
+		}
 
 		if (ret==INVALID_CELL) {
 			GLog.debug("Wow!");
