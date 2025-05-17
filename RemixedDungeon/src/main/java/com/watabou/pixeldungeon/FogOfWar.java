@@ -58,8 +58,8 @@ public class FogOfWar extends Image {
                 DungeonTilemap.SIZE,
                 DungeonTilemap.SIZE);
 
-        setX(-size / 2);
-        setY(-size / 2);
+        setX(-size / 2 + DungeonTilemap.SIZE/2);
+        setY(-size / 2 + DungeonTilemap.SIZE/2);
     }
 
     public void updateVisibility(boolean[] visible, boolean[] visited, boolean[] mapped, boolean firstRowHack) {
