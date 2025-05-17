@@ -123,10 +123,12 @@ public abstract class RegularLevel extends CustomLevel {
 	}
 
 	private void checkRoomMap() {
-		boolean roomMapValid = false;
-
 		if (roomMap == null && !rooms.isEmpty()) {
 			roomMap = new Room.Type[getLength()];
+		}
+
+		if(roomMap == null) {
+			return;
 		}
 
 		for (int i = 0; i < getLength(); i++) {
@@ -134,18 +136,9 @@ public abstract class RegularLevel extends CustomLevel {
 			for (Room r: rooms) {
 				if(r.inside(this,i)) {
 					roomMap[i] = r.type;
-
-					if(r.type==Type.STANDARD) {
-						roomMapValid = true;
-					}
-
 					break;
 				}
 			}
-		}
-
-		if(!roomMapValid) {
-			GLog.debug("Wow!");
 		}
 	}
 
