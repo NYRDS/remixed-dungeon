@@ -442,7 +442,7 @@
   <string name="Item_Info">何か</string>
   <string name="Item_ACDrop">落とす</string>
   <string name="Item_ACThrow">投げる</string>
-  <string name="Item_PackFull">あなたの荷物は%sで一杯だ。</string>
+  <string name="Item_PackFull">あなたの荷物は一杯で%sは入らない。</string>
   <string name="Item_DirThrow">投げる方向を選ぶ</string>
   <string name="EquipableItem_ACEquip">装備する</string>
   <string name="EquipableItem_ACUnequip">装備解除</string>
