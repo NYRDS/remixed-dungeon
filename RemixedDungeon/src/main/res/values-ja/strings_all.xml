@@ -2388,7 +2388,7 @@
   <string name="Char_Defeat_0">%1$s は %2$s を倒した</string>
   <string name="Char_Defeat_1">%1$s は %2$s を倒した</string>
   <string name="Char_Defeat_2">%1$s は %2$s を倒した</string>
-  <string name="Char_StaDodged_0">身をかわした</string>
+  <string name="Char_StaDodged_0">回避</string>
   <string name="Char_StaDodged_1">回避</string>
   <string name="Char_StaDodged_2">回避</string>
   <string name="Dungeon_Tips_0">自分の力を過信せず、自分が扱える武器や防具を使うこと。</string>
