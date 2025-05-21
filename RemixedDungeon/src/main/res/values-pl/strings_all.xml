@@ -724,7 +724,7 @@ Lufix
   <string name="PseudoRat_Desc">Okropna bestia wyłoniła się z cielska szczura, nie nosząc żadnych oznak podobieństwa do gryzonia ani do żadnego innego zwierzęcia jakie kiedykolwiek widziałeś. Większość jej ciała zajmują ogromne usta, pełne ostrych jak brzytwa zębów.</string>
   <string name="ZombieGnoll_Info">Zombie-Gnoll powstał z martwych!</string>
   <string name="HeartOfDarkness_Name">Serce ciemności</string>
-  <string name="HeartOfDarkness_Info">Czane, pulsujące serce Zdradliwego Ducha.</string>
+  <string name="HeartOfDarkness_Info">Czarne, Pulsujące serce Zdradliwego Ducha.</string>
   <string name="HeartOfDarkness_Gender">neuter</string>
   <string name="Badges_Yog_Slain">Yog-Dzewa pokonany</string>
   <string name="Badges_ShadowLord_Slain">Książę Ciemności pokonany</string>
