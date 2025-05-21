@@ -511,7 +511,7 @@
   <string name="SeedPouch_Info">Ta mała, aksamitna torba pozwala ci na przechowywanie wszelkich ilości nasion. Bardzo sprytne.</string>
   <string name="WandHolster_Name">kabura na kostury</string>
   <string name="WandHolster_Info">Ten smukły uchwyt jest wykonany ze skóry jakiegoś egzotycznego zwierzęcia. Pozwala na przechowywanie %d kosturów.</string>
-  <string name="PotionBelt_Info">Ten silny, skórzany pas jest w stanie przechowywać twe eliksiry, chroniąc je przed popękaniem w wyniku zimna.</string>
+  <string name="PotionBelt_Info">Ten porządny skórzany pas jest w stanie przechowywać twe eliksiry, Chroniąc je przed popękaniem w wyniku zimna.</string>
   <string name="PotionBelt_Name">pas na eliksiry</string>
   <string name="GoldenKey_Name">złoty klucz</string>
   <string name="GoldenKey_Info">Wyszczerbienia na tym złotym kluczu są małe i intrygujące. Może otwierają zamek jakiejś skrzyni?</string>
