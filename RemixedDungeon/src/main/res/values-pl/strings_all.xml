@@ -506,7 +506,7 @@
   <string name="SeedPouch_Info">Ta mała, aksamitna torba pozwala ci na przechowywanie wszelkich ilości nasion. Bardzo sprytne.</string>
   <string name="WandHolster_Name">kabura na kostury</string>
   <string name="WandHolster_Info">Ten smukły uchwyt jest wykonany ze skóry jakiegoś egzotycznego zwierzęcia. Pozwala na przechowywanie %d kosturów.</string>
-  <string name="PotionBelt_Info">Ten silny, skórzany pas jest w stanie przechowywać twe eliksiry, chroniąc je przed popękaniem w wyniku zimna.</string>
+  <string name="PotionBelt_Info">Ten porządny skórzany pas jest w stanie przechowywać twe eliksiry, Chroniąc je przed popękaniem w wyniku zimna.</string>
   <string name="PotionBelt_Name">pas na eliksiry</string>
   <string name="GoldenKey_Name">złoty klucz</string>
   <string name="GoldenKey_Info">Wyszczerbienia na tym złotym kluczu są małe i intrygujące. Może otwierają zamek jakiejś skrzyni?</string>
@@ -719,7 +719,7 @@ Lufix
   <string name="PseudoRat_Desc">Okropna bestia wyłoniła się z cielska szczura, nie nosząc żadnych oznak podobieństwa do gryzonia ani do żadnego innego zwierzęcia jakie kiedykolwiek widziałeś. Większość jej ciała zajmują ogromne usta, pełne ostrych jak brzytwa zębów.</string>
   <string name="ZombieGnoll_Info">Zombie-Gnoll powstał z martwych!</string>
   <string name="HeartOfDarkness_Name">Serce ciemności</string>
-  <string name="HeartOfDarkness_Info">Czane, pulsujące serce Zdradliwego Ducha.</string>
+  <string name="HeartOfDarkness_Info">Czarne, Pulsujące serce Zdradliwego Ducha.</string>
   <string name="HeartOfDarkness_Gender">neuter</string>
   <string name="Badges_Yog_Slain">Yog-Dzewa pokonany</string>
   <string name="Badges_ShadowLord_Slain">Książę Ciemności pokonany</string>
@@ -1407,7 +1407,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
   <string name="SpiderArmor_Info">Ta zbroja została wykonana ze starych, pajęczych karapaksów i dziwnej tkaniny. Zaskakującym jest fakt, że pancerz nadal posiada działające kądziołki przędne, Jeżeli wywołasz wystarczająco duży nacisk na jednej z chitynowych płytek, wystrzeli pajęczą sieć. Kolczaste podeszwy pozwalają ci swobodnie przemierzać tę sieć.</string>
   <string name="SpiderArmor_Gender">masculine</string>
   <string name="BlackSkull_Name">czarna czaszka</string>
-  <string name="BlackSkull_Info">Niewielka, obsydianowa czaszka. Niegdyś była źródłem mocy Nekropolii, lecz po porażce Licza odnosisz wrażenie że utraciła całą swą moc magiczną. Jednakże, gdy trzymasz ją w swych dłoniach, dziwna myśl przechodzi przez twój umysł: \"Łaknienie strawy\".</string>
+  <string name="BlackSkull_Info">Niewielka, obsydianowa czaszka. Niegdyś była źródłem mocy Nekropolii, lecz po porażce Licza odnosisz wrażenie że utraciła całą swą moc magiczną. Jednakże, gdy trzymasz ją w swych dłoniach, dziwna myśl przechodzi przez twój umysł: \"Głoduje\".</string>
   <string name="BlackSkull_Gender">feminine</string>
   <string name="BlackSkull_Name_Awakened">przebudzona czarna czaszka</string>
   <string name="BlackSkull_Info_Awakened">Czaszka pulsuje mocą, która wylewa się z jej pustych oczodołów. Gdy ją trzymasz w ręce, możesz okazjonalnie dosłyszeć mroczny głos mówiący: \"Strzeż się orszaku śmierci\".</string>
@@ -2991,4 +2991,6 @@ remix.32.1\n
   <string name="Mob_GoingTo">Nadchodzi!</string>
   <string name="Mob_Attacking">Uznaj %sza trupa</string>
   <string name="BuffParam_Cooldown">Odnowienie %.2f</string>
+  <string name="Challenges_Names_9">Amnezja</string>
+  <string name="Challenges_Descriptions_9">Najnowsze „Lekarstwo” Doktora Plagi wyszorowało twoją pamięć przestrzenną. Zapominasz o wszystkim co znika z twojego pola widzenia.</string>
 </resources>
