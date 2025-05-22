@@ -623,6 +623,16 @@ public abstract class RegularLevel extends CustomLevel {
 							&& Actor.findChar(cell) == null
 							&& getTopLevelObject(cell) == null
 			);
+
+			if(ret==INVALID_CELL) {
+				ret = getRandomTerrain(
+						(level, cell) -> passable[cell]
+								&& cell != entrance
+								&& !Dungeon.isCellVisible(cell)
+								&& Actor.findChar(cell) == null
+								&& getTopLevelObject(cell) == null
+				);
+			}
 		} else {
 			ret = getRandomTerrain(
 					(level, cell) -> passable[cell]
@@ -631,7 +641,20 @@ public abstract class RegularLevel extends CustomLevel {
 							&& Actor.findChar(cell) == null
 							&& getTopLevelObject(cell) == null
 			);
+		}
 
+		if (ret==INVALID_CELL) {
+			ret = getRandomTerrain(
+					(level, cell) -> passable[cell]
+							&& cell != entrance
+							&& !Dungeon.isCellVisible(cell)
+			);
+		}
+
+		if (ret==INVALID_CELL) {
+			ret = getRandomTerrain(
+					(level, cell) -> passable[cell]
+			);
 		}
 
 		if (ret==INVALID_CELL) {
