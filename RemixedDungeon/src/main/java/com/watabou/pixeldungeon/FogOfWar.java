@@ -50,7 +50,7 @@ public class FogOfWar extends Image {
         old_pixels = new int[(int) (mWidth * mHeight)];
 
         Arrays.fill(pixels, INVISIBLE);
-        Arrays.fill(old_pixels, VISIBLE);
+        Arrays.fill(old_pixels, INVISIBLE);
 
         texture(new FogTexture());
 
@@ -59,7 +59,7 @@ public class FogOfWar extends Image {
                 DungeonTilemap.SIZE);
 
         setX(-size / 2 + DungeonTilemap.SIZE/2);
-        setY(-size / 2 + DungeonTilemap.SIZE/2);
+        setY(-size / 2 );
     }
 
     public void updateVisibility(boolean[] visible, boolean[] visited, boolean[] mapped, boolean firstRowHack) {
@@ -96,24 +96,22 @@ public class FogOfWar extends Image {
 
             int pos = mWidth * i;
             for (int j = 1; j < mWidth-1; j++) {
+                int p_minus_w_minus_one = pos - mWidth;
                 pos++;
                 int c = INVISIBLE;
-
-                int p_minus_w_minus_one = pos - mWidth;
-
 
 
                 if (visible[pos] && visible[p_minus_w_minus_one]) {
                     c = VISIBLE;
                 } else {
                     if(!noVisited) {
-                        if (mapped[pos] && mapped[p_minus_w_minus_one] &&
-                                mapped[pos - 1] && mapped[p_minus_w_minus_one - 1]) {
+                        if (mapped[pos] /*&& mapped[p_minus_w_minus_one] &&
+                                mapped[pos - 1] && mapped[p_minus_w_minus_one - 1]*/) {
                             c = MAPPED;
                         }
 
-                        if (visited[pos] || visited[p_minus_w_minus_one] ||
-                                visited[pos - 1] || visited[p_minus_w_minus_one - 1]) {
+                        if (visited[pos] /*|| visited[p_minus_w_minus_one] /*||
+                                visited[pos - 1] || visited[p_minus_w_minus_one - 1]*/) {
                             c = VISITED;
                         }
                     }
