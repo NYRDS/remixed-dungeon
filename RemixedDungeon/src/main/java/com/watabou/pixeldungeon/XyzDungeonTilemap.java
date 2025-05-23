@@ -8,7 +8,6 @@ import com.watabou.noosa.Tilemap;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
-import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -33,7 +32,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private final int[] mIsometricMap;
     private final boolean[] mVisible;
-    private final boolean[] mMapped;
 
     private final int[] mWallsMap;
     private final int[] mDecoMap;
@@ -59,7 +57,6 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         data = new int[mSize];
         mIsometricMap = new int[mSize];
         mVisible = new boolean[mSize];
-        mMapped = new boolean[mSize];
 
         map(buildGroundMap(), mWidth);
 
@@ -646,16 +643,20 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
         System.arraycopy(Dungeon.visible, 0, mVisible, 0, mVisible.length);
 
-        //System.arraycopy(level.mapped, 0, mMapped, 0, mMapped.length);
-
         for (int i = mWidth; i < level.getLength() - mWidth; i++) {
             if (mVisible[i] && isWallCell(i) ) {
                 mVisible[i - mWidth] = true;
             }
-        }
-        BArray.or(mVisible, level.mapped, mMapped);
 
-        fog.updateVisibility(mVisible, level.visited, mMapped, true);
+        }
+        for (int i = mWidth; i < level.getLength() - mWidth; i++) {
+            if (mIsometricMap[i] == Terrain.WALL && !Dungeon.visible[i]) {
+                mVisible[i] = false;
+            }
+        }
+
+
+        fog.updateVisibility(mVisible, level.visited, level.mapped, true);
     }
 
     class XyzDoorTileMap extends DungeonTilemap {

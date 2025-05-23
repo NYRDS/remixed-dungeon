@@ -88,21 +88,22 @@ public class FogOfWar extends Image {
                     }
                 }
 
-
                 pixels[j] = c;
             }
         }
 
-        for (int i = 1; i < pHeight - 1; i++) {
+        for (int i = 1; i < mHeight - 1; i++) {
 
             int pos = mWidth * i;
-            for (int j = 1; j < mWidth; j++) {
+            for (int j = 1; j < mWidth-1; j++) {
                 pos++;
                 int c = INVISIBLE;
 
                 int p_minus_w_minus_one = pos - mWidth;
-                if (visible[pos] && visible[p_minus_w_minus_one] &&
-                        visible[pos - 1] && visible[p_minus_w_minus_one - 1]) {
+
+
+
+                if (visible[pos] && visible[p_minus_w_minus_one]) {
                     c = VISIBLE;
                 } else {
                     if(!noVisited) {
