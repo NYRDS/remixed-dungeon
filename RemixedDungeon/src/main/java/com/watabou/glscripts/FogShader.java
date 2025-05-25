@@ -1,18 +1,11 @@
 package com.watabou.glscripts;
 
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
-import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.gl.Attribute;
-import com.nyrds.platform.gl.Uniform;
-import com.watabou.glwrap.Quad;
-import com.watabou.noosa.Camera;
-
-import java.nio.FloatBuffer;
+//import com.badlogic.gdx.Gdx;
+//import com.badlogic.gdx.graphics.GL20;
 
 public class FogShader extends Script {
-
+/*
     // Uniform declarations
     public Uniform uCamera;
     public Uniform uModel;
@@ -165,4 +158,5 @@ public class FogShader extends Script {
     public static FogShader get() {
         return Script.use(FogShader.class);
     }
+ */
 }
