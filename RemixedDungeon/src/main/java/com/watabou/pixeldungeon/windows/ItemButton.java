@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.gltextures.TextureCache;
@@ -113,6 +114,9 @@ class ItemButton extends ItemSlot {
                         break;
                     case ARROWS:
                         enableItem=(item instanceof Arrow);
+                        break;
+                    case CARCASS:
+                        enableItem=(item instanceof Carcass);
                         break;
                 }
                 enable(enableItem);

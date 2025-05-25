@@ -1,6 +1,7 @@
 package com.nyrds.platform.gl;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.glscripts.Script;
 import com.watabou.glwrap.Quad;
@@ -62,7 +63,7 @@ public class NoosaScript extends Script {
 		vertices.position( 2 );
 		aUV.vertexPointer( 2, 4, vertices );
 		
-		Gdx.gl20.glDrawElements( Gdx.gl20.GL_TRIANGLES, Quad.SIZE * size, Gdx.gl20.GL_UNSIGNED_SHORT, indices );
+		Gdx.gl20.glDrawElements( GL20.GL_TRIANGLES, Quad.SIZE * size, GL20.GL_UNSIGNED_SHORT, indices );
 	}
 	
 	public void drawQuad( FloatBuffer vertices ) {
@@ -77,7 +78,7 @@ public class NoosaScript extends Script {
 		vertices.position( 2 );
 		aUV.vertexPointer( 2, 4, vertices );
 
-		Gdx.gl20.glDrawElements( Gdx.gl20.GL_TRIANGLES, Quad.SIZE, Gdx.gl20.GL_UNSIGNED_SHORT, Quad.getIndices( 1 ) );
+		Gdx.gl20.glDrawElements( GL20.GL_TRIANGLES, Quad.SIZE, GL20.GL_UNSIGNED_SHORT, Quad.getIndices( 1 ) );
 		
 	}
 	

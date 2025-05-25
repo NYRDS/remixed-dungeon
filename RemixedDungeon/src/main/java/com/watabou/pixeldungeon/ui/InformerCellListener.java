@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.Util;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -27,8 +28,7 @@ public class InformerCellListener implements CellSelector.Listener {
 
         Level level = selector.level();
 
-        if (!level.cellValid(cell)
-                || (!level.visited[cell] && !level.mapped[cell])) {
+        if (!level.cellValid(cell) && !level.visited[cell] && !level.mapped[cell] && !Util.isDebug()) {
             GameScene.show(new WndMessage(StringsManager.getVar(R.string.Toolbar_Info1)));
             return;
         }

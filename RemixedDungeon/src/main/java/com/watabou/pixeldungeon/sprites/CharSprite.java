@@ -43,6 +43,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import lombok.Setter;
 import lombok.val;
 
 public class CharSprite extends CompositeMovieClip implements Tweener.Listener, MovieClip.Listener {
@@ -67,6 +68,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     protected Image carcass;
 
 
+    @Setter
     private Glowing glowing = Glowing.NO_GLOWING;
 
     private float   phase;
@@ -142,6 +144,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                     chr.forEachBuff(b -> this.add(b.charSpriteStatus()));
 
                     isMoving = false;
+                    phase = (float) Math.random();
                 }
         );
     }
@@ -513,7 +516,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
             if (visible) {
                 if (glowing != Glowing.NO_GLOWING) {
-                    final float elapsed = GameLoop.elapsed + chr.getId()/1000f;
+                    final float elapsed = GameLoop.elapsed;
 
                     if (glowUp && (phase += elapsed) > glowing.period) {
                         glowUp = false;
@@ -715,9 +718,5 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         animCallback = null;
 
         reset();
-    }
-
-    public void setGlowing(Glowing glowing) {
-        this.glowing = glowing;
     }
 }

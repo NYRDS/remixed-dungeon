@@ -198,4 +198,9 @@ public class Carcass extends Item implements Doom {
             return CARCASS;
         }
     }
+
+    @Override
+    public int price() {
+        return super.price();
+    }
 }

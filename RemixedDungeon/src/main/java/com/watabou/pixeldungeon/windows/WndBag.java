@@ -55,7 +55,8 @@ public class WndBag extends WndTabbed {
 		FUSEABLE, 
 		UPGRADABLE_WEAPON,
 		FOR_BUY,
-		ARROWS
+		ARROWS,
+		CARCASS
 	}
 
 

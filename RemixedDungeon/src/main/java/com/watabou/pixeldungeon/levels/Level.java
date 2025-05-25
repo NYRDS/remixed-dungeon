@@ -977,24 +977,13 @@ public abstract class Level implements Bundlable {
 			return INVALID_CELL;
 		}
 
-		ArrayList<Integer> candidateCell = new ArrayList<>();
-		for (int i = width;i<getLength()-width;i++) {
-			if(selectFrom[i]
-				&& i != entrance
-				&& !Dungeon.isCellVisible(i)
-				&& Actor.findChar(i) == null
-				&& getTopLevelObject(i) == null
-			) {
-				candidateCell.add(i);
-			}
-		}
-
-		if(candidateCell.isEmpty()) {
-			return INVALID_CELL;
-		}
-
-		return candidateCell.get(Random.index(candidateCell));
-
+		return getRandomTerrain(
+				(level, cell) -> selectFrom[cell]
+				&& cell != level.entrance
+				&& !Dungeon.isCellVisible(cell)
+				&& Actor.findChar(cell) == null
+				&& getTopLevelObject(cell) == null
+		);
 	}
 
 	@LuaInterface

@@ -105,6 +105,6 @@ public class TownShopLevel extends Level {
 
 	@Override
 	public int randomRespawnCell() {
-		return -1;
+		return INVALID_CELL;
 	}
 }

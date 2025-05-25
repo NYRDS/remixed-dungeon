@@ -11,12 +11,13 @@ import java.util.Arrays;
 
 public class FogOfWar extends Image {
 
-    private static final int VISIBLE = 0xFF000000;
-    private static final int VISITED = 0x60000000;
-    private static final int MAPPED = 0x30000000;
-    private static final int INVISIBLE = 0x00000000;
+    private static final int VISIBLE = 0xFF;
+    private static final int VISITED = 0x60;
+    private static final int MAPPED = 0x30;
+    private static final int INVISIBLE = 0x00;
 
     private int[] pixels;
+    private int[] s_pixels;
     private int[] old_pixels;
 
     private int pWidth;
@@ -24,6 +25,7 @@ public class FogOfWar extends Image {
 
     private int mWidth;
     private int mHeight;
+    final private int MARGIN = 4;
 
     public FogOfWar(int mapWidth, int mapHeight) {
         super();
@@ -38,108 +40,140 @@ public class FogOfWar extends Image {
         mWidth = mapWidth;
         mHeight = mapHeight;
 
-        pWidth = mapWidth + 1;
-        pHeight = mapHeight + 1;
+        pWidth = 2*mapWidth + MARGIN * 2;
+        pHeight = 2*mapHeight + MARGIN * 2;
 
+        float size = (float) DungeonTilemap.SIZE / 2;
+        setWidth(pWidth * size);
+        setHeight(pHeight * size);
 
-        float size = DungeonTilemap.SIZE;
-        setWidth(width * size);
-        setHeight(height * size);
-
-        pixels = new int[(int) (mWidth * mHeight)];
-        old_pixels = new int[(int) (mWidth * mHeight)];
+        pixels = new int[(int) (pWidth * pHeight)];
+        s_pixels = new int[(int) (pWidth * pHeight)];
+        old_pixels = new int[(int) (pWidth * pHeight)];
 
         Arrays.fill(pixels, INVISIBLE);
-        Arrays.fill(old_pixels, VISIBLE);
+        Arrays.fill(old_pixels, INVISIBLE);
 
         texture(new FogTexture());
 
-        setScaleXY(
-                DungeonTilemap.SIZE,
-                DungeonTilemap.SIZE);
+        setScaleXY(size,size);
 
-        setX(-size / 2);
-        setY(-size / 2);
+        setX(-MARGIN* size);
+        setY(-MARGIN* size);
     }
 
-    public void updateVisibility(boolean[] visible, boolean[] visited, boolean[] mapped, boolean firstRowHack) {
+    public void updateVisibility(boolean[] visible, boolean[] visited, boolean[] mapped) {
         dirty = true;
 
         Arrays.fill(pixels, INVISIBLE);
+
         boolean noVisited = Dungeon.isChallenged(Challenges.NO_MAP);
 
-        if (firstRowHack) {
-            int pos = 0;
-            for (int j = 1; j < mWidth; j++) {
-                pos++;
+        for (int i = 0; i < mHeight; i++) {
+            for (int j = 0; j < mWidth; j++) {
+
+                int pos = mHeight * i + j;
                 int c = INVISIBLE;
 
-                if (visible[pos + pWidth]) {
+                if (visible[pos]) {
                     c = VISIBLE;
                 } else {
+
                     if (!noVisited) {
-                        if (mapped[pos + pWidth]) {
+                        if (mapped[pos]) {
                             c = MAPPED;
                         }
 
-                        if (visited[pos + pWidth]) {
+                        if (visited[pos]) {
                             c = VISITED;
                         }
                     }
                 }
 
-
-                pixels[j] = c;
+                pixels[(2*i+MARGIN) * pWidth + 2*j+MARGIN] = c;
+                pixels[(2*i+1+MARGIN) * pWidth + 2*j+MARGIN] = c;
+                pixels[(2*i+MARGIN) * pWidth + 2*j+1+MARGIN] = c;
+                pixels[(2*i+1+MARGIN) * pWidth + 2*j+1+MARGIN] = c;
             }
         }
+        applySmoothing();
+    }
 
-        for (int i = 1; i < pHeight - 1; i++) {
+    private void applySmoothing() {
 
-            int pos = mWidth * i;
-            for (int j = 1; j < mWidth; j++) {
-                pos++;
-                int c = INVISIBLE;
+        int[][] weights = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
 
-                int p_minus_w_minus_one = pos - mWidth;
-                if (visible[pos] && visible[p_minus_w_minus_one] &&
-                        visible[pos - 1] && visible[p_minus_w_minus_one - 1]) {
-                    c = VISIBLE;
-                } else {
-                    if(!noVisited) {
-                        if (mapped[pos] && mapped[p_minus_w_minus_one] &&
-                                mapped[pos - 1] && mapped[p_minus_w_minus_one - 1]) {
-                            c = MAPPED;
-                        }
+        int radius = 1; // Kernel radius
 
-                        if (visited[pos] || visited[p_minus_w_minus_one] ||
-                                visited[pos - 1] || visited[p_minus_w_minus_one - 1]) {
-                            c = VISITED;
+        for (int y = 0; y < pHeight; y++) {
+            for (int x = 0; x < pWidth; x++) {
+                int aSum = 0;
+                int weightSum = 0;
+
+                // Get original alpha for this pixel
+                int originalAlpha = pixels[y * pWidth + x];
+                s_pixels[y * pWidth + x] = originalAlpha;
+                if (originalAlpha > 0) {
+                    // Sample neighboring pixels
+                    for (int dy = -radius; dy <= radius; dy++) {
+                        for (int dx = -radius; dx <= radius; dx++) {
+                            int px = x + dx;
+                            int py = y + dy;
+                            if (px >= 0 && px < pWidth && py >= 0 && py < pHeight) {
+                                int weight = weights[dy + radius][dx + radius];
+                                int sampleAlpha = pixels[py * pWidth + px];
+
+
+                                if (originalAlpha == 0xff) {
+                                    if (sampleAlpha < originalAlpha) {
+                                        aSum += sampleAlpha * weight;
+                                        weightSum += weight;
+                                    }
+                                } else {
+                                    aSum += sampleAlpha * weight;
+                                    weightSum += weight;
+                                }
+                            }
                         }
                     }
+
+                    int smoothedAlpha = weightSum > 0 ?
+                            Math.min(originalAlpha, aSum / weightSum) :
+                            originalAlpha;
+
+                    s_pixels[y * pWidth + x] = (smoothedAlpha << 24);
                 }
-/*
-                if (Util.isDebug()) {
-                    var candidates = Dungeon.level.candidates;
-                    if ((candidates.contains(pos) || candidates.contains(pos - 1)
-                            || candidates.contains(p_minus_w_minus_one) || candidates.contains(p_minus_w_minus_one - 1))
-                    ) {
-                        c = 0xaa444499;
-                    }
-                }
-*/
-                pixels[i * mWidth + j] = c;
             }
         }
     }
 
     @Override
     public void draw() {
-        if (dirty || !Arrays.equals(pixels, old_pixels)) {
-            texture.pixels(mWidth, mHeight, pixels);
-            System.arraycopy(pixels, 0, old_pixels, 0, pixels.length);
+        if (dirty || !Arrays.equals(s_pixels, old_pixels)) {
+            texture.pixels(pWidth, pHeight, s_pixels);
+            System.arraycopy(s_pixels, 0, old_pixels, 0, pixels.length);
         }
         Gl.fowBlend();
         super.draw();
+
+/*
+        FogShader script = FogShader.get();
+        script.texSize(pWidth, pHeight);
+        texture.bind();
+
+        script.resetCamera();
+        script.camera(camera());
+
+        script.uModel.valueM4(matrix);
+        script.lighting(
+                rm, gm, bm, am,
+                ra, ga, ba, aa);
+
+        updateFrame();
+        updateVerticesBuffer();
+
+        script.drawQuad(verticesBuffer);
+*/
         Gl.blendSrcAlphaOneMinusAlpha();
     }
 
@@ -148,7 +182,7 @@ public class FogOfWar extends Image {
     private class FogTexture extends SmartTexture {
 
         public FogTexture() {
-            super(toDispose = BitmapData.createBitmap(mWidth,mHeight));
+            super(toDispose = BitmapData.createBitmap(pWidth,pHeight));
             filter(Texture.LINEAR, Texture.LINEAR);
             TextureCache.add(FogOfWar.class, this);
         }

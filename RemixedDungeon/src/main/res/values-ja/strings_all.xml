@@ -38,7 +38,9 @@
   <string name="Ring_Identify">あなたは今 %1$s を識別するために十分に精通した。これは %2$s だ。</string>
   <string name="Ring_Info1">あなたは一度に2つのリングを身につけることが出来る。</string>
   <string name="Ring_Info2">%s があなたの指を痛いくらい締め付けた</string>
-  <string name="Ring_Info3a">%1$sあなたの指に%3$s %2$s がある。</string>
+  <string name="Ring_Info3a">%1$s
+
+あなたの指に%3$s %2$s がある。</string>
   <string name="Ring_Info3b">それは呪われているため、取り除くことが出来ない</string>
   <string name="Ring_Info4">%1$sあなたは %2$s の中に潜む邪悪な魔力を感じることが出来る。</string>
   <string name="Ring_BuffKnown">これは %s だ</string>
@@ -372,7 +374,7 @@
   <string name="WndHero_StaTitle">レベル %1$d %2$s</string>
   <string name="WndHero_StaCatalogus">カタログ</string>
   <string name="WndHero_StaJournal">日記</string>
-  <string name="WndImp_Message">おぉ！やった！あんたはオイラのヒーローだ！報酬についてだけど、あいにくオイラは現金は持ってないだ。だけど、良い物があるぞ。これは家宝のリングで、オイラの爺ちゃんが死んだパラディンの指から取ったものなんだ。</string>
+  <string name="WndImp_Message">おぉ！やった！あんたはオイラのヒーローだ！報酬についてだけど、あいにくオイラは現金は持ってないんだ。だけど、良い物があるぞ。これは家宝のリングで、オイラの爺ちゃんが死んだパラディンの指から取ったものなんだ。</string>
   <string name="WndImp_Reward">リングを受け取る</string>
   <string name="WndInfoCell_Nothing">ここには何もない。</string>
   <string name="WndInfoItem_Chest">箱</string>
@@ -432,7 +434,7 @@
   <string name="Item_Info">何か</string>
   <string name="Item_ACDrop">落とす</string>
   <string name="Item_ACThrow">投げる</string>
-  <string name="Item_PackFull">あなたの荷物は%sで一杯だ。</string>
+  <string name="Item_PackFull">あなたの荷物は一杯で%sは入らない。</string>
   <string name="Item_DirThrow">投げる方向を選ぶ</string>
   <string name="EquipableItem_ACEquip">装備する</string>
   <string name="EquipableItem_ACUnequip">装備解除</string>
@@ -1177,7 +1179,7 @@
   <string name="King_Name_Objective">ドワーフの王</string>
   <string name="King_Desc">ドワーフの最後の王は、生と死のプロセスを深く理解していることで知られていた。彼は宮廷の人々に永遠の若さを与える儀式に参加するよう説得したが、結局、彼だけがそれを手に入れた。アンデッドの軍勢とともに。</string>
   <string name="King_Defense">受け流し</string>
-  <string name="King_Info1">お前は私を殺せない、%s...私は...不滅...</string>
+  <string name="King_Info1">%s、お前は私を殺せない...私は...不滅...</string>
   <string name="King_Info2">いでよ、奴隷たち！</string>
   <string name="King_Info3">さあ、どうする！</string>
   <string name="Undead_Name">アンデッドドワーフ</string>
@@ -1693,9 +1695,11 @@
   <string name="Imp_Name">野心的なインプ</string>
   <string name="Imp_Desc">インプは小悪魔である。強さも魔法の才能も特筆すべきものではないが、非常に賢く社交的である。多くのインプは非魔族の中で暮らすことを好む。</string>
   <string name="Imp_Defense">回避した</string>
-  <string name="Imp_Golems1">あんた冒険者かい？冒険者は大好きだ！何か殺さなければならないとき、彼らはいつでも頼りになるんだ。そうだろ？もちろん、賞金目当てだろうけどね ;)　オイラはこれから商売を始めるんだけど、「ゴーレム」のようなバカは商売にならないんだ！彷徨う花崗岩の塊と交渉するのは流石のオイラでもちょっと難しいわけさ！ということで、ちょいと殺して来てくれないかい？......そうだな...「6体」も殺してくれれば、報酬をあげるよ。</string>
+  <string name="Imp_Golems1">あんた冒険者かい？冒険者は大好きだ！何か殺さなければならないとき、彼らはいつでも頼りになるんだ。そうだろ？もちろん、賞金目当てだろうけどね ;)　オイラはこれから商売を始めるんだけど、「ゴーレム」のようなバカは商売にならないんだ！彷徨う花崗岩の塊と交渉するのは流石のオイラでもちょっと難しいわけさ！ということで、ちょいと殺して来てくれないかい？......そうだな...
+「6体」くらい殺してくれれば、報酬をあげるよ。</string>
   <string name="Imp_Golems2">ゴーレム狩りはどうなった？</string>
-  <string name="Imp_Monks1">あんた冒険者かい？冒険者は大好きだ！何か殺さなければならないとき、彼らはいつでも頼りになるんだ。そうだろ？もちろん、賞金目当てだろうけどね ;)　オイラはこれから商売を始めるんだけど、ここの「モンク」たちは自分では何も買わないし、他のお客さんを怖がらせてしまうしで、本当に邪魔なんだよね。ということで、ちょいと殺して来てくれないかい？......そうだな....「8人」くらい殺してくれたら、報酬をあげるよ。</string>
+  <string name="Imp_Monks1">あんた冒険者かい？冒険者は大好きだ！何か殺さなければならないとき、彼らはいつでも頼りになるんだ。そうだろ？もちろん、賞金目当てだろうけどね ;)　オイラはこれから商売を始めるんだけど、ここの「モンク」たちは自分では何も買わないし、他のお客さんを怖がらせてしまうしで、本当に邪魔なんだよね。ということで、ちょいと殺して来てくれないかい？......そうだな....
+「8人」くらい殺してくれたら、報酬をあげるよ。</string>
   <string name="Imp_Monks2">ああ、まだ生きていたんだね！やっぱり君のカンフーは強いな ;)　あ、ちゃんとモンクのトークンを手に入れるのを忘れないでね。</string>
   <string name="Imp_Cya">またね、%s ！</string>
   <string name="Imp_Hey">ちょっと、%s ！</string>
@@ -2238,9 +2242,9 @@
   <string name="Char_Defeat_0">%1$s は %2$s を倒した</string>
   <string name="Char_Defeat_1">%1$s は %2$s を倒した</string>
   <string name="Char_Defeat_2">%1$s は %2$s を倒した</string>
-  <string name="Char_StaDodged_0">回避した</string>
-  <string name="Char_StaDodged_1">回避した</string>
-  <string name="Char_StaDodged_2">回避した</string>
+  <string name="Char_StaDodged_0">回避</string>
+  <string name="Char_StaDodged_1">回避</string>
+  <string name="Char_StaDodged_2">回避</string>
   <string name="Dungeon_Tips_0">自分の力を過信せず、自分が扱える武器や防具を使うこと。</string>
   <string name="Dungeon_Tips_1">ダンジョン内のすべての扉が初めから見えているわけではない。行き詰まったら、隠し扉を探そう。</string>
   <string name="Dungeon_Tips_2">力を上げることだけが、より良い装備への唯一の道ではないことを覚えておこう。</string>
@@ -2796,9 +2800,9 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="PlagueDoctorQuest_4_2_Prologue">*彼の骨のような指が、泡立つ大釜をリズミカルに叩く。彼の周囲には、硫黄と腐敗の刺激臭が充満している* 「コボルドの氷術師」！ 凍てつく洞窟に身を寄せ、氷の魔法に必死にしがみついている哀れな生き物だ。奴らが5人必要だ。奴らの凍った死体は… 光明となるだろう。奴らの氷の使い方は独特だ。奴らは原始的なエネルギー、この世界の表面下に眠る力を利用していると私は考えている。</string>
   <string name="PlagueDoctorQuest_4_2_InProgress">「コボルドの氷術師」5人の死体を回収するのだ！彼らの凍った死体には、氷の魔法の秘密を解き明かす鍵が隠されている！</string>
   <string name="PlagueDoctorQuest_4_2_Epilogue">素晴らしい！5人の「氷の魔術師」たち、彼らの氷のエッセンスを探求出来るぞ！凍てつく荒野との繋がりは 実に魅力的だ。彼らが水そのものを操る方法は...本当に驚くべきものだ。 *彼はあなたに、鮮やかな深紅の液体で満たされた、きらめく小瓶を手渡した* これは君の勇敢な努力への報酬、「強靭のポーション」だ！深く飲み、10人の戦士の力が漲るのを感じたまえ！覚えておけ、知識は力だ......そして力こそ、迫り来る闇に対抗できる唯一の武器だ。さあ...凍てつく魂を解剖し...その凍てつく秘密を解き明かそう！</string>
-  <string name="PlagueDoctorQuest_5_1_Prologue">*彼はどもり、その声はもろい小枝のようにひび割れている*　あぁ、さ、「サキュバス」2体…そう、い、生きたまま2体！それは…あー…け、研究のためです！ほら…か、彼女たちの、ふ、フェロモン…微妙な、ば、バランスを理解するために…あぁ、ひ、必要なんだ。*骨ばった手が伸びて、緊張しながらマスクを調整する。彼の目は、熱を帯びた激しさであなたのほうを向いている* か、彼女たちの、本質…そ、それはパズル…そう、美しく！謎めいた！パズルだ！ *彼は激しく咳き込み、平静を取り戻そうとする*  ゴホン。や、約束する、に、2体...つ、連れてきてくれたら...え、永遠の感謝を捧げよう。そう！知識への...お、恩恵だと思ってくれ！</string>
-  <string name="PlagueDoctorQuest_5_1_InProgress">*彼は話しながら心をさまよわせ、声は次第に小さくなり、かろうじてささやき声になった。* さ、「サキュバス」を2体…い、生きたまま連れてきて。か、彼女らの…力は、み、み、魅惑的です。</string>
-  <string name="PlagueDoctorQuest_5_1_Epilogue">*彼は 2 体のサキュバスを見つめ、マスクの下に至福の笑みを浮かべた*  す、素晴らしい！ 素晴らしい！ これで多くの、か、可能性が開かれるだろう！ *彼はあなたに向き直り、感謝の気持ち…と、それ以外の何かがこもった声を上げる* あ、あ、ありがとう。あなたの努力…わ、 忘れません。こ、心から感謝します。  *彼は 2 体のサキュバスをしばらく見つめた後、誘惑の秘密を解き明かすことについてつぶやきながら、研究室に戻っていった*</string>
+  <string name="PlagueDoctorQuest_5_1_Prologue">*彼はどもり、その声はもろい小枝のようにひび割れている*　あぁ、さ、「サキュバス」2体…そう、い、生きたまま2体！も、もちろん、け、研究のためだ！ほら…か、彼女たちの、ふ、フェロモン…微妙な、ば、バランスを理解するために…あぁ、ひ、必要なんだ。*骨ばった手が伸びて、緊張しながらマスクを調整する。彼の目は、熱を帯びた激しさであなたの方を向いている* か、彼女たちの、本質…そ、それはパズル…そう、美しく！謎めいた！パズルだ!！ *彼は激しく咳き込み、平静を取り戻そうとする*  ゴホ、ゴホン。や、約束しよう。「2体」...つ、連れてきてくれたら...え、永遠の感謝を捧げよう。そう! 知識への! お、恩恵だと思ってくれ！</string>
+  <string name="PlagueDoctorQuest_5_1_InProgress">*彼は話しながら心をさまよわせ、声は次第に小さくなり、かろうじてささやき声になった。* さ、「サキュバス」を「2体」…い、生きたまま連れてきてくれ。か、彼女らの…力は、み、み、魅惑的だ…あぁ…</string>
+  <string name="PlagueDoctorQuest_5_1_Epilogue">*彼は 2 体のサキュバスを見つめ、マスクの下に至福の笑みを浮かべた*  す、素晴らしい！ 素晴らしい！ これで多くの、か、可能性が開かれるだろう！ *彼はあなたに向き直り、感謝の気持ち…と、それ以外の何かがこもった声を上げる* あ、あ、ありがとう。キミの努力は…わ、 忘れない。こ、心から感謝する。  *彼は 2 体のサキュバスをしばらく見つめた後、誘惑の秘密を解き明かすことについてつぶやきながら、研究室に戻っていった*</string>
   <string name="PlagueDoctorMask_Name">ペストマスク</string>
   <string name="PlagueDoctorMask_Info">これは...単なるマスクではない。これは...障壁だ。ペストドクターがたゆまず戦う腐敗の力に対する盾だ。最高級の黒檀の木から作られ、貪欲な髑髏の顔が精巧に彫られている。その空洞の眼窩は、アメジストの宝石で満たされている。呼吸のひとつひとつが、発話のひとつひとつが、迷宮のようなチューブやフィルターのネットワークを通してろ過される。強力なハーブとエキゾチックなスパイスを調合したものが中の空気に溶け込み、あなたにまとわりつく死臭を覆い隠している。</string>
   <string name="PlagueDoctorMaskHood_Name">フード付きペストマスク</string>
@@ -2823,4 +2827,25 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
   <string name="WndSettings_FpsLimit">FPS制限</string>
   <string name="StartScene_ContinueLatest">直近の冒険を続けるか、セーブスロットから選択する</string>
   <string name="StartScene_ChooseFromSlot">セーブスロットから選択する</string>
+  <string name="AboutScene_SourceCode">Get Remixed Dungeon source code:</string>
+  <string name="HeroClass_Priest">聖職者</string>
+  <string name="HeroClass_Doctor">ペストドクター</string>
+  <string name="StartScene_ComingSoon">Coming soon</string>
+  <string name="AC_Dissect">解剖</string>
+  <string name="HeroClass_PlagueDoctorPerks_0">ペストドクターは倒した敵から毒腺、腐った臓器、骨片、下劣なエッセンスを採取する。血液は時間をかけて集められ、錬金術を行うために使用される。</string>
+  <string name="HeroClass_PlagueDoctorPerks_1">ペストマスク（すべてのガスに免疫）と解剖のこぎりを持ってスタートする。クリティカル・ヒットは追加パーツを落とし、解剖のこぎりは麻痺状態の敵に+50%のダメージを与える。</string>
+  <string name="HeroClass_PlagueDoctorPerks_2">麻痺ガスポーションと毒ガスのポーションは最初から特定されている。</string>
+  <string name="HeroClass_PlagueDoctorPerks_3">毒ガスで倒された敵は毒霧となって爆発し、倒された敵1体につき1HP回復する。</string>
+  <string name="HeroClass_PlagueDoctorPerks_4">ペストドクターは、愛用の解剖のこぎりを手にしていないと命中精度に大きなペナルティを受ける。また、射撃武器を使うことができない。</string>
+  <string name="BoneSaw_Name">解剖のこぎり</string>
+  <string name="BoneSaw_Info">迅速な解剖のために設計された精密機械の外科用のこぎり。そのダメージと攻撃速度はペストドクターのスキルによってより致命的になる。クリティカルヒットは敵から収穫可能な部位を追加で切り出し、麻痺した敵には無慈悲な効率で攻撃を加える。</string>
+  <string name="Accuracy_Decreased">どうして%sで良いと思ったんだ？道具も手も間違っている！</string>
+  <string name="Accuracy_DecreasedDoctor">%sの一振りごとに不完全さが広がる。私の解剖のこぎりは治療し…感染させる。</string>
+  <string name="Accuracy_DecreasedDoctorBareHands">素手は私の技術を蝕む。ノコギリの切れ味がなければ、狙いは狂い、混沌としてしまうだろう。</string>
+  <string name="AttackDelay_Increased">これでは%sを振り回すことはできない。スイングは遅く、 呼吸は重い...</string>
+  <string name="Mob_GoingTo">もう行っている!</string>
+  <string name="Mob_Attacking">%sは死んだことにしてくれ！</string>
+  <string name="BuffParam_Cooldown">クールダウン:%.2f</string>
+  <string name="Challenges_Names_9">記憶喪失</string>
+  <string name="Challenges_Descriptions_9">ペストドクターの最新の「治療」により、あなたの空間記憶は消去された。直接視界に入ったもの以外は何も思い出せない。</string>
 </resources>

@@ -26,9 +26,11 @@ import lombok.Setter;
 
 public abstract class LevelObject extends Actor implements Bundlable, Presser, HasPositionOnLevel, NamedEntityKind {
 
+    @Getter
     @Packable
     protected int pos;
 
+    @Getter
     @Packable
     protected int layer = 0;
 
@@ -141,10 +143,6 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
         return super.dontPack();
     }
 
-    public int getPos() {
-        return pos;
-    }
-
     public void setPos(int pos) {
         lo_sprite.ifPresent(
             sprite -> {
@@ -197,7 +195,7 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
 
     public void fall() {
         lo_sprite.ifPresent(
-                sprite -> sprite.fall());
+                LevelObjectSprite::fall);
 
         level().remove(this);
     }
@@ -219,10 +217,6 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
 
     public int getSpriteYS() {
         return 16;
-    }
-
-    public int getLayer() {
-        return layer;
     }
 
     public Position getPosition() {

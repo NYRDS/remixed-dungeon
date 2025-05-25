@@ -189,10 +189,15 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 	public Door entrance() {
 		return connected.values().iterator().next();
 	}
-	
+
+
 	public boolean inside( int p ) {
-		int x = p % Dungeon.level.getWidth();
-		int y = p / Dungeon.level.getWidth();
+		return inside(Dungeon.level, p);
+	}
+
+	public boolean inside(Level level, int p ) {
+		int x = level.cellX(p);
+		int y = level.cellY(p);
 		return x > left && y > top && x < right && y < bottom;
 	}
 	
