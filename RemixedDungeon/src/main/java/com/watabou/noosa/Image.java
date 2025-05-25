@@ -13,6 +13,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.nio.FloatBuffer;
 
+import lombok.Getter;
+
 public class Image extends Visual implements IPlaceable {
 
     public SmartTexture texture;
@@ -22,7 +24,8 @@ public class Image extends Visual implements IPlaceable {
     public boolean flipVertical;
 
     protected final float[] vertices;
-    private final FloatBuffer verticesBuffer;
+    @Getter
+    protected final FloatBuffer verticesBuffer;
 
     protected boolean dirty;
 
@@ -189,10 +192,6 @@ public class Image extends Visual implements IPlaceable {
 
     public float bottom() {
         return super.bottom();
-    }
-
-    public FloatBuffer getVerticesBuffer() {
-        return verticesBuffer;
     }
 
     @Override

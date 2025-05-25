@@ -176,6 +176,25 @@ public class FogOfWar extends Image {
         }
         Gl.fowBlend();
         super.draw();
+
+/*
+        FogShader script = FogShader.get();
+        script.texSize(pWidth, pHeight);
+        texture.bind();
+
+        script.resetCamera();
+        script.camera(camera());
+
+        script.uModel.valueM4(matrix);
+        script.lighting(
+                rm, gm, bm, am,
+                ra, ga, ba, aa);
+
+        updateFrame();
+        updateVerticesBuffer();
+
+        script.drawQuad(verticesBuffer);
+*/
         Gl.blendSrcAlphaOneMinusAlpha();
     }
 
