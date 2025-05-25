@@ -6,16 +6,15 @@ import com.nyrds.platform.gl.Texture;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
-import com.watabou.pixeldungeon.levels.Level;
 
 import java.util.Arrays;
 
 public class FogOfWar extends Image {
 
-    private static final int VISIBLE = 0xFF000000;
-    private static final int VISITED = 0x60000000;
-    private static final int MAPPED = 0x30000000;
-    private static final int INVISIBLE = 0x00000000;
+    private static final int VISIBLE = 0xFF;
+    private static final int VISITED = 0x60;
+    private static final int MAPPED = 0x30;
+    private static final int INVISIBLE = 0x00;
 
     private int[] pixels;
     private int[] s_pixels;
@@ -63,21 +62,7 @@ public class FogOfWar extends Image {
         setY(-MARGIN* size);
     }
 
-    private int visibleAround(boolean []visible, int pos) {
-        int ret = 0;
-        for (int a : Level.NEIGHBOURS9) {
-            if(!Dungeon.level.cellValid(pos+a)) {
-                continue;
-            }
-
-            if(visible[pos+a]) {
-                ret++;
-            }
-        }
-        return ret;
-    }
-
-    public void updateVisibility(boolean[] visible, boolean[] visited, boolean[] mapped, boolean firstRowHack) {
+    public void updateVisibility(boolean[] visible, boolean[] visited, boolean[] mapped) {
         dirty = true;
 
         Arrays.fill(pixels, INVISIBLE);
@@ -89,7 +74,6 @@ public class FogOfWar extends Image {
 
                 int pos = mHeight * i + j;
                 int c = INVISIBLE;
-
 
                 if (visible[pos]) {
                     c = VISIBLE;
@@ -116,13 +100,9 @@ public class FogOfWar extends Image {
     }
 
     private void applySmoothing() {
-        // Gaussian kernel weights
+
         int[][] weights = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
-/*
-        if(Dungeon.isIsometricMode()) {
-            weights = new int[][]{{0, 0, 0}, {1, 1, 1}, {0, 0, 0}};
-        }
-*/
+
         int radius = 1; // Kernel radius
 
         for (int y = 0; y < pHeight; y++) {
@@ -131,7 +111,7 @@ public class FogOfWar extends Image {
                 int weightSum = 0;
 
                 // Get original alpha for this pixel
-                int originalAlpha = (pixels[y * pWidth + x] >> 24) & 0xFF;
+                int originalAlpha = pixels[y * pWidth + x];
                 s_pixels[y * pWidth + x] = originalAlpha;
                 if (originalAlpha > 0) {
                     // Sample neighboring pixels
@@ -141,7 +121,7 @@ public class FogOfWar extends Image {
                             int py = y + dy;
                             if (px >= 0 && px < pWidth && py >= 0 && py < pHeight) {
                                 int weight = weights[dy + radius][dx + radius];
-                                int sampleAlpha = (pixels[py * pWidth + px] >> 24) & 0xFF;
+                                int sampleAlpha = pixels[py * pWidth + px];
 
 
                                 if (originalAlpha == 0xff) {
@@ -157,7 +137,6 @@ public class FogOfWar extends Image {
                         }
                     }
 
-                    // Calculate smoothed alpha (capped at original value)
                     int smoothedAlpha = weightSum > 0 ?
                             Math.min(originalAlpha, aSum / weightSum) :
                             originalAlpha;
