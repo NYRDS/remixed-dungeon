@@ -142,6 +142,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
                     chr.forEachBuff(b -> this.add(b.charSpriteStatus()));
 
                     isMoving = false;
+                    phase = (float) (chr.getId()/10.0);
                 }
         );
     }
@@ -513,7 +514,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
             if (visible) {
                 if (glowing != Glowing.NO_GLOWING) {
-                    final float elapsed = GameLoop.elapsed + chr.getId()/1000f;
+                    final float elapsed = GameLoop.elapsed;
 
                     if (glowUp && (phase += elapsed) > glowing.period) {
                         glowUp = false;

@@ -93,6 +93,16 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             int cellS = i + mWidth;
 
 
+/*
+            if(level.mapped[i]) {
+                mIsometricMap[i] = level.map[i];
+            } else {
+                mIsometricMap[i] = Terrain.WALL;
+            }
+
+ */
+            mIsometricMap[i] = level.map[i];
+            /*
             //or it give up all secret doors
             if(level.mapped[i]) {
                 mIsometricMap[i] = level.map[i];
@@ -103,6 +113,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             } else {
                 mIsometricMap[i] = Terrain.WALL;
             }
+
+             */
         }
     }
 
@@ -301,7 +313,15 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     boolean isAnyWallCell(int cell) {
-        return isSpWallCell(cell) || isWallCell(cell) ;
+        if(!level.cellValid(cell)) {
+            return true;
+        }
+
+        if (!level.mapped[cell]) {
+            return true;
+        }
+
+        return isSpWallCell(cell) || isWallCell(cell);
     }
 
     boolean isSpWallCell(int cell) {
@@ -642,7 +662,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         }
 
         System.arraycopy(Dungeon.visible, 0, mVisible, 0, mVisible.length);
-
+/*
         for (int i = mWidth; i < level.getLength() - mWidth; i++) {
             if (mVisible[i] && isWallCell(i) ) {
                 mVisible[i - mWidth] = true;
@@ -654,7 +674,7 @@ public class XyzDungeonTilemap extends DungeonTilemap {
                 mVisible[i] = false;
             }
         }
-
+*/
 
         fog.updateVisibility(mVisible, level.visited, level.mapped, true);
     }

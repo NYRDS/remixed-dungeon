@@ -44,6 +44,9 @@ public class ManaShield extends Halo implements ISpriteEffect {
 
     @Override
     public void draw() {
+        PointF p = charSprite.center();
+        point(p.x, p.y );
+
         camera = charSprite.camera();
         Gl.blendSrcAlphaOne();
         super.draw();
