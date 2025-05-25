@@ -301,7 +301,7 @@
   <string name="town_deco_snowy_plate_name">Piso com neve</string>
   <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
   <string name="DogeMask_Name">Máscara de Doge</string>
-  <string name="DogeMask_Info">Você já quis se disfarçar como o famoso Doge? Agora é sua chance!n\Esta máscara! Muitos disfarces! Uau!</string>
+  <string name="DogeMask_Info">Você já quis se disfarçar como o famoso Doge? Agora é sua chance!\nEsta máscara! Muitos disfarces! Uau!</string>
   <string name="IntroScene_Txt">Muitos heróis de todos os tipos se aventuraram no calabouço antes de você. Alguns deles voltaram com tesouros e artefatos mágicos, mas nunca mais se ouviu falar da maioria deles. E nenhum conseguiu recuperar o Amuleto de Yendor, que dizem estar oculto nas profundezas do calabouço.\n\nVocê se considera pronto para o desafio, e o mais importante, você sente que a sorte sorri para você. Está na hora de iniciar a sua própria aventura!</string>
   <string name="AmuletScene_Exit">Foi bom enquanto durou</string>
   <string name="AmuletScene_Stay">Eu não acabei ainda</string>
@@ -2649,7 +2649,7 @@ remix.31.0\n
   <string name="KrampusHead_Name">Cabeça de Krampus</string>
   <string name="KrampusHead_Info">Você já se perguntou como seria assumir um papel mais sinistro em Dungeon? Bem, você certamente trará horror aos ratos bebês locais com essa aparência diabólica.</string>
   <string name="WndSettingsInGame_GameLog">Registro do jogo</string>
-  <string name="Froth_ArrowInKnee">Eu costumava ser um aventureiro como você,\Mas então eu levei uma flechada no joelho...</string>
+  <string name="Froth_ArrowInKnee">Eu costumava ser um aventureiro como você,\nMas então eu levei uma flechada no joelho...</string>
   <string name="BardSong_1">Minha esposa e eu moramos sozinhos,\nEm uma pequena cabana de madeira, nós chamávamos de nossa\nEla adorava gin, e eu adorava rum\nConto o que nos divertimos muito.</string>
   <string name="SpiderElite_Name">guarda de elite aranha</string>
   <string name="SpiderElite_Name_Objective">guarda de elite aranha</string>
