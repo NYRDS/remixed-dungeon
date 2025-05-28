@@ -69,10 +69,10 @@ public class FogOfWar extends Image {
 
         boolean noVisited = Dungeon.isChallenged(Challenges.NO_MAP);
 
-        for (int i = 0; i < mHeight; i++) {
-            for (int j = 0; j < mWidth; j++) {
 
-                int pos = mHeight * i + j;
+        for (int j = 0; j < mHeight; j++) {
+            for (int i = 0; i < mWidth; i++) {
+                int pos =  i + j * mWidth;
                 int c = INVISIBLE;
 
                 if (visible[pos]) {
@@ -90,10 +90,10 @@ public class FogOfWar extends Image {
                     }
                 }
 
-                pixels[(2*i+MARGIN) * pWidth + 2*j+MARGIN] = c;
-                pixels[(2*i+1+MARGIN) * pWidth + 2*j+MARGIN] = c;
-                pixels[(2*i+MARGIN) * pWidth + 2*j+1+MARGIN] = c;
-                pixels[(2*i+1+MARGIN) * pWidth + 2*j+1+MARGIN] = c;
+                pixels[(2*i+MARGIN) + (2*j+MARGIN) * pWidth] = c;
+                pixels[(2*i+1+MARGIN) + (2*j+MARGIN) * pWidth] = c;
+                pixels[(2*i+MARGIN) + (2*j+1+MARGIN) * pWidth] = c;
+                pixels[(2*i+1+MARGIN) + (2*j+1+MARGIN) * pWidth] = c;
             }
         }
         applySmoothing();

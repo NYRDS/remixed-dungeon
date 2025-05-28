@@ -7,8 +7,8 @@ plugins {
 }
 
 project.ext {
-    version = '32.2'
-    version_code = 1235
+    version = '32.3.alpha'
+    version_code = 1236
 }
 
 java {
