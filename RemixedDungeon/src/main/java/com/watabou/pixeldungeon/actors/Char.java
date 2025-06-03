@@ -93,6 +93,7 @@ import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
@@ -2323,5 +2324,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         GLog.n(StringsManager.getVars(R.array.Char_Kill)[getGender()], getName());
+    }
+
+    public WndBag.Mode sellMode(Char chr) {
+        return (WndBag.Mode) getScript().run("sellMode", chr).optuserdata(WndBag.Mode.class, WndBag.Mode.NONE);
+    }
+
+    public WndBag.Mode buyMode(Char chr) {
+        return (WndBag.Mode) getScript().run("buyMode", chr).optuserdata(WndBag.Mode.class, WndBag.Mode.NONE);
     }
 }

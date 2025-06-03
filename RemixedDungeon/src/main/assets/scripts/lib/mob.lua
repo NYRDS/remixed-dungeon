@@ -157,4 +157,19 @@ mob.priceBuy = function(self, mob, item, defaultPrice)
 end
 
 
+mob._buyMode = function(self, mob, chr, defaultMode)
+    if not self.buyMode then
+        return defaultMode
+    end
+    return self.buyMode(mob, chr)
+end
+
+mob._sellMode = function(self, mob, chr, defaultMode)
+    if not self.sellMode then
+        return defaultMode
+    end
+    return self.sellMode(mob, chr)
+end
+
+
 return mob

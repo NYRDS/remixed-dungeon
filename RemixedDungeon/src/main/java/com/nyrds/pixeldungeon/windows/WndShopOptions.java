@@ -45,7 +45,7 @@ public class WndShopOptions extends WndOptions {
             new WndBag(shopkeeper.getBelongings(),
                         backpack,
                         new BuyItemSelector(shopkeeper),
-                        WndBag.Mode.FOR_BUY,
+                        shopkeeper.buyMode(client),
                     StringsManager.getVar(R.string.Shopkeeper_Buy)));
     }
 
@@ -54,7 +54,7 @@ public class WndShopOptions extends WndOptions {
                 new WndBag(client.getBelongings(),
                             client.getBelongings().backpack,
                             new SellItemSelector(shopkeeper),
-                            WndBag.Mode.FOR_SALE,
+                            shopkeeper.sellMode(client),
                         StringsManager.getVar(R.string.Shopkeeper_Sell)));
     }
 }

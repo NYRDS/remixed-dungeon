@@ -41,6 +41,7 @@ public class WndBag extends WndTabbed {
 	private Text txtSubTitle;
 
     public enum Mode {
+		NONE,
 		ALL,
 		UNIDENTIFED,
 		UPGRADEABLE,

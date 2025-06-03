@@ -21,7 +21,7 @@ public class SellItemSelector implements WndBag.Listener {
         if (item != null) {
 
             if(item instanceof Bag && !((Bag)item).items.isEmpty()) {
-                GameScene.selectItemFromBag(this, (Bag)item , WndBag.Mode.FOR_SALE, StringsManager.getVar(R.string.Shopkeeper_Sell));
+                GameScene.selectItemFromBag(this, (Bag)item , shopkeeper.sellMode(selector), StringsManager.getVar(R.string.Shopkeeper_Sell));
                 return;
             }
 
