@@ -7,6 +7,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.windows.BackpackMode;
 import com.watabou.pixeldungeon.windows.WndBag;
 
 public class AlchemyPot {
@@ -20,7 +21,7 @@ public class AlchemyPot {
 		AlchemyPot.hero = hero;
 		AlchemyPot.pos = pos;
 
-        GameScene.selectItem(hero, itemSelector, WndBag.Mode.SEED, StringsManager.getVar(R.string.AlchemyPot_SelectSeed));
+        GameScene.selectItem(hero, itemSelector, BackpackMode.SEED, StringsManager.getVar(R.string.AlchemyPot_SelectSeed));
 	}
 	
 	private static final WndBag.Listener itemSelector = new WndBag.Listener() {

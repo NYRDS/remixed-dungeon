@@ -13,6 +13,7 @@ import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.windows.BackpackMode;
 import com.watabou.pixeldungeon.windows.WndBag;
 
 import org.jetbrains.annotations.NotNull;
@@ -40,7 +41,7 @@ public class ArmorKit extends Item {
 	@Override
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_APPLY)) {
-            GameScene.selectItem(chr, itemSelector, WndBag.Mode.ARMOR, StringsManager.getVar(R.string.ArmorKit_SelectArmor));
+            GameScene.selectItem(chr, itemSelector, BackpackMode.ARMOR, StringsManager.getVar(R.string.ArmorKit_SelectArmor));
 		} else {
 			super._execute(chr, action );
 		}

@@ -166,7 +166,7 @@ public class Carcass extends Item implements Doom {
             src.setPos(caster.getPos());
             var pet = Mob.makePet((Mob) src.makeClone(), caster.getId());
             pet.regenSprite();
-            pet.assigndNextId();
+            pet.assignNextId();
             pet.setUndead(true);
             pet.hp(1); //it's alive!
             pet.heal(pet.ht() * caster.skillLevel() / 10);
@@ -186,7 +186,6 @@ public class Carcass extends Item implements Doom {
 
     @Override
     public void onHeroDeath() {
-
         Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.NECROMANCY), Dungeon.depth ) );
         GLog.n(StringsManager.getVar(R.string.Necromancy_Death));
     }
@@ -202,6 +201,6 @@ public class Carcass extends Item implements Doom {
 
     @Override
     public int price() {
-        return super.price();
+        return src.ht() / 6 + src.lvl() - 1;
     }
 }

@@ -16,6 +16,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.BackpackMode;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Random;
 
@@ -63,7 +64,7 @@ public class WandOfMagicMissile extends SimpleWand  {
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( AC_DISENCHANT )) {
 			chr.getBelongings().setSelectedItem(this);
-            GameScene.selectItem(chr, itemSelector, WndBag.Mode.WAND, StringsManager.getVar(R.string.WandOfMagicMissile_SelectWand));
+            GameScene.selectItem(chr, itemSelector, BackpackMode.WAND, StringsManager.getVar(R.string.WandOfMagicMissile_SelectWand));
 		} else {
 			super._execute(chr, action );
 		}

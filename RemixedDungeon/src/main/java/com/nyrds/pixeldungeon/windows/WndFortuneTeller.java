@@ -12,7 +12,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndBag;
+import com.watabou.pixeldungeon.windows.BackpackMode;
 import com.watabou.pixeldungeon.windows.WndQuest;
 
 public class WndFortuneTeller extends WndQuest {
@@ -58,7 +58,7 @@ public class WndFortuneTeller extends WndQuest {
 						if (item != null) {
 							ScrollOfIdentify.identify(WndFortuneTeller.this.hero, item);
 						}
-					}, WndBag.Mode.UNIDENTIFED, StringsManager.getVar(R.string.ScrollOfIdentify_InvTitle));
+					}, BackpackMode.UNIDENTIFED, StringsManager.getVar(R.string.ScrollOfIdentify_InvTitle));
 					hide();
 					hero.spendGold(goldCost);
 				} else {

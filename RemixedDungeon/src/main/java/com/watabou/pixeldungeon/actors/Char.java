@@ -93,7 +93,7 @@ import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndBag;
+import com.watabou.pixeldungeon.windows.BackpackMode;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
@@ -152,6 +152,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     protected ArrayList<Char> visibleEnemies = new ArrayList<>();
     protected AiState state = MobAi.getStateByClass(Sleeping.class);
 
+    @Setter
     private Belongings belongings;
 
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
@@ -190,6 +191,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     protected boolean flying = false;
     public int invisible = 0;
 
+    @Setter
     private int viewDistance = 8;
 
     protected final Set<String> immunities = new HashSet<>();
@@ -1932,11 +1934,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void teleportTo(Position target) {
     }
 
+    @Getter
     private final Map<String, String> layersOverrides = new HashMap<>();
-
-    public Map<String, String> getLayersOverrides() {
-        return layersOverrides;
-    }
 
     @LuaInterface
     public void overrideSpriteLayer(String layer, String texture) {
@@ -1958,10 +1957,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return Math.min(computedViewDistance, ShadowCaster.MAX_DISTANCE);
     }
 
-    public void setViewDistance(int viewDistance) {
-        this.viewDistance = viewDistance;
-    }
-
     @Override
     public boolean useBags() {
         return true;
@@ -1970,10 +1965,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @LuaInterface
     public boolean canStepOn() {
         return walkingType.canSpawnAt(level(), getPos());
-    }
-
-    public void setBelongings(Belongings belongings) {
-        this.belongings = belongings;
     }
 
     public boolean invalid() {
@@ -2006,14 +1997,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return MobAi.getStateByClass(Passive.class);
     }
 
-    public void assigndNextId() {
+    public void assignNextId() {
         id = EntityIdSource.getNextId();
         CharsList.add(this, id);
     }
 
     public int getId() {
         if (id == EntityIdSource.INVALID_ID || id == EntityIdSource.DUPLICATE_ID) {
-            assigndNextId();
+            assignNextId();
         }
         return id;
     }
@@ -2326,11 +2317,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         GLog.n(StringsManager.getVars(R.array.Char_Kill)[getGender()], getName());
     }
 
-    public WndBag.Mode sellMode(Char chr) {
-        return (WndBag.Mode) getScript().run("sellMode", chr).optuserdata(WndBag.Mode.class, WndBag.Mode.NONE);
+    public BackpackMode sellMode(Char chr) {
+        return (BackpackMode) getScript().run("_sellMode", chr).optuserdata(BackpackMode.class, BackpackMode.NONE);
     }
 
-    public WndBag.Mode buyMode(Char chr) {
-        return (WndBag.Mode) getScript().run("buyMode", chr).optuserdata(WndBag.Mode.class, WndBag.Mode.NONE);
+    public BackpackMode buyMode(Char chr) {
+        return (BackpackMode) getScript().run("_buyMode", chr).optuserdata(BackpackMode.class, BackpackMode.NONE);
     }
 }

@@ -19,6 +19,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.BackpackMode;
 import com.watabou.pixeldungeon.windows.WndBag;
 
 import org.jetbrains.annotations.NotNull;
@@ -110,7 +111,7 @@ public class ChaosCrystal extends UsableArtifact {
     };
 
     private void fuse(Char hero) {
-        GameScene.selectItem(hero, itemSelector, WndBag.Mode.FUSEABLE, StringsManager.getVar(R.string.ChaosCrystal_SelectForFuse));
+        GameScene.selectItem(hero, itemSelector, BackpackMode.FUSEABLE, StringsManager.getVar(R.string.ChaosCrystal_SelectForFuse));
         hero.doOperate();
     }
 

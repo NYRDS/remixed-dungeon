@@ -87,7 +87,7 @@ import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
-import com.watabou.pixeldungeon.windows.WndBag.Mode;
+import com.watabou.pixeldungeon.windows.BackpackMode;
 import com.watabou.pixeldungeon.windows.WndInGameMenu;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 import com.watabou.utils.Random;
@@ -613,7 +613,7 @@ public class GameScene extends PixelScene {
     @Override
     protected void onMenuPressed() {
         if (Dungeon.hero.isReady()) {
-            selectItem(Dungeon.hero, null, Mode.ALL, null);
+            selectItem(Dungeon.hero, null, BackpackMode.ALL, null);
         }
     }
 
@@ -687,7 +687,7 @@ public class GameScene extends PixelScene {
                 break;
 
             case KeyEvent.KEYCODE_I:
-                    selectItem(hero, null, Mode.ALL, null);
+                    selectItem(hero, null, BackpackMode.ALL, null);
                 return;
 
             case KeyEvent.KEYCODE_E:
@@ -1038,14 +1038,14 @@ public class GameScene extends PixelScene {
         }
     }
 
-    public static WndBag selectItemFromBag(WndBag.Listener listener, Bag bag, Mode mode, String title) {
+    public static WndBag selectItemFromBag(WndBag.Listener listener, Bag bag, BackpackMode mode, String title) {
         cancelCellSelector();
         WndBag wnd = new WndBag(Dungeon.hero.getBelongings(), bag, listener, mode, title);
         scene.add(wnd);
         return wnd;
     }
 
-    public static WndBag selectItem(Char selector, WndBag.Listener listener, Mode mode, String title) {
+    public static WndBag selectItem(Char selector, WndBag.Listener listener, BackpackMode mode, String title) {
         cancelCellSelector();
 
         WndBag wnd = WndBag.lastBag(selector, listener, mode, title);

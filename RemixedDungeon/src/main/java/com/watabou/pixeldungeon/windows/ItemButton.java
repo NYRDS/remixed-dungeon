@@ -62,7 +62,7 @@ class ItemButton extends ItemSlot {
         super.layout();
     }
 
-    public void placeItem( Item item, WndBag.Mode mode ) {
+    public void placeItem( Item item, BackpackMode mode ) {
         if (item != null) {
 
             bg.texture( TextureCache.createSolid( item.isEquipped( Dungeon.hero ) ? EQUIPPED : NORMAL ) );

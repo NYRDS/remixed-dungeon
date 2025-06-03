@@ -52,7 +52,7 @@ public class WndBlacksmith extends Window {
 			@Override
 			protected void onClick() {
 				btnPressed = btnItem1;
-                GameScene.selectItem(Dungeon.hero, itemSelector, WndBag.Mode.UPGRADEABLE, StringsManager.getVar(R.string.WndBlacksmith_Select));
+                GameScene.selectItem(Dungeon.hero, itemSelector, BackpackMode.UPGRADEABLE, StringsManager.getVar(R.string.WndBlacksmith_Select));
 			}
 		};
 		btnItem1.setRect( (WIDTH - BTN_GAP) / 2 - BTN_SIZE, message.getY() + message.height() + BTN_GAP, BTN_SIZE, BTN_SIZE );
@@ -62,7 +62,7 @@ public class WndBlacksmith extends Window {
 			@Override
 			protected void onClick() {
 				btnPressed = btnItem2;
-                GameScene.selectItem(Dungeon.hero, itemSelector, WndBag.Mode.UPGRADEABLE, StringsManager.getVar(R.string.WndBlacksmith_Select));
+                GameScene.selectItem(Dungeon.hero, itemSelector, BackpackMode.UPGRADEABLE, StringsManager.getVar(R.string.WndBlacksmith_Select));
 			}
 		};
 		btnItem2.setRect( btnItem1.right() + BTN_GAP, btnItem1.top(), BTN_SIZE, BTN_SIZE );

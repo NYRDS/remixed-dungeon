@@ -16,6 +16,7 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.BackpackMode;
 import com.watabou.pixeldungeon.windows.IconTitle;
 import com.watabou.pixeldungeon.windows.WndBag;
 
@@ -46,7 +47,7 @@ public class Weightstone extends Item {
 	@Override
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_APPLY)) {
-            GameScene.selectItem(chr, itemSelector, WndBag.Mode.WEAPON, StringsManager.getVar(R.string.Weightstone_Select));
+            GameScene.selectItem(chr, itemSelector, BackpackMode.WEAPON, StringsManager.getVar(R.string.Weightstone_Select));
 		} else {
 			super._execute(chr, action );
 		}

@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.BackpackMode;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
@@ -207,7 +208,7 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	private void moisten(Char hero) {
-        GameScene.selectItem(hero, itemSelector, WndBag.Mode.MOISTABLE, StringsManager.getVar(R.string.Potion_SelectForMoisten));
+        GameScene.selectItem(hero, itemSelector, BackpackMode.MOISTABLE, StringsManager.getVar(R.string.Potion_SelectForMoisten));
 		hero.doOperate(TIME_TO_MOISTEN);
 	}
 	

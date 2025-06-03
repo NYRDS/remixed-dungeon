@@ -7,7 +7,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.windows.WndBag;
+import com.watabou.pixeldungeon.windows.BackpackMode;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -87,7 +87,7 @@ public abstract class KindOfBow extends MeleeWeapon {
                                     }
                                 }
                             },
-                    WndBag.Mode.ARROWS, StringsManager.getVar(R.string.KindOfBow_SelectArrowKind));
+                    BackpackMode.ARROWS, StringsManager.getVar(R.string.KindOfBow_SelectArrowKind));
 			return;
 		}
 		super._execute(chr, action);

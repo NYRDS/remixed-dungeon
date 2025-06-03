@@ -40,26 +40,6 @@ public class WndBag extends WndTabbed {
 	private final Text txtTitle;
 	private Text txtSubTitle;
 
-    public enum Mode {
-		NONE,
-		ALL,
-		UNIDENTIFED,
-		UPGRADEABLE,
-		QUICKSLOT,
-		FOR_SALE,
-		WEAPON,
-		ARMOR,
-		WAND,
-		SEED,
-		INSCRIBABLE,
-		MOISTABLE, 
-		FUSEABLE, 
-		UPGRADABLE_WEAPON,
-		FOR_BUY,
-		ARROWS,
-		CARCASS
-	}
-
 
 	private static final int COLS_P	= 4;
 	private static final int COLS_L	= 6;
@@ -73,7 +53,7 @@ public class WndBag extends WndTabbed {
 	@Getter
     private final Listener listener;
 	@Getter
-    private final WndBag.Mode mode;
+    private final BackpackMode mode;
 	private final String title;
 
 	protected int count;
@@ -85,7 +65,7 @@ public class WndBag extends WndTabbed {
 
 	private float titleBottom;
 
-	private static Mode lastMode;
+	private static BackpackMode lastMode;
 	private static Bag lastBag;
 
 	@Getter
@@ -93,7 +73,7 @@ public class WndBag extends WndTabbed {
 
 	private final Belongings stuff;
 
-	public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title) {
+	public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, BackpackMode mode, String title) {
 		
 		super();
 
@@ -167,7 +147,7 @@ public class WndBag extends WndTabbed {
 		instance = this;
 	}
 
-	public static WndBag lastBag(@NotNull Char owner, Listener listener, Mode mode, String title ) {
+	public static WndBag lastBag(@NotNull Char owner, Listener listener, BackpackMode mode, String title ) {
 
 		Belongings belongings = owner.getBelongings();
 
@@ -244,7 +224,7 @@ public class WndBag extends WndTabbed {
 	private void placeItems(Bag container) {
 		titleBottom = txtTitle.bottom();
 
-		if(mode==Mode.FOR_BUY) {
+		if(mode== BackpackMode.FOR_BUY) {
 			if(txtSubTitle != null) {
 				txtSubTitle.killAndErase();
 			}
@@ -368,7 +348,7 @@ public class WndBag extends WndTabbed {
 	}
 
 	public boolean hideOnSelect() {
-		return  !(mode == Mode.FOR_SALE || mode == Mode.FOR_BUY);
+		return  !(mode == BackpackMode.FOR_SALE || mode == BackpackMode.FOR_BUY);
 	}
 
 	public interface Listener {

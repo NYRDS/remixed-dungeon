@@ -19,10 +19,18 @@ return mob.init({
     end,
 
     interact = function(self, chr)
-        RPD.showBuyWindow(self, chr)
+        RPD.showTradeWindow(self, chr)
     end,
 
     priceForSell = function(self, item)
         return item:price() * 10
+    end,
+
+    sellMode = function(self, chr)
+        return RPD.BackpackMode.CARCASS
+    end,
+
+    buyMode = function(self, chr)
+        return RPD.BackpackMode.FOR_BUY
     end
 })
