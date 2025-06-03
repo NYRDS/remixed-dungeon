@@ -163,6 +163,7 @@ public class Carcass extends Item implements Doom {
         Buff.detach(caster, Sungrass.Health.class);
 
         if (level.cellValid(spawnPos)) {
+            src.setPos(caster.getPos());
             var pet = Mob.makePet((Mob) src.makeClone(), caster.getId());
             pet.regenSprite();
             pet.assigndNextId();
