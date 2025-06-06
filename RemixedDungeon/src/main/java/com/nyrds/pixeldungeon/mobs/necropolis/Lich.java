@@ -126,7 +126,7 @@ public class Lich extends Boss {
             if(level.fieldOfView[newPos] &&
                     !adjacent(getEnemy()) &&
                     canSpawnAt(level, newPos)) {
-                getSprite().move( getPos(), newPos );
+
                 move( newPos );
 
                 spend( 1 / speed() );

@@ -137,7 +137,6 @@ public class Tengu extends Boss implements IZapper {
 
 		int newPos = candidates.get(Random.index(candidates));
 
-		getSprite().move( getPos(), newPos );
 		move( newPos );
 		
 		if (CharUtils.isVisible(this)) {

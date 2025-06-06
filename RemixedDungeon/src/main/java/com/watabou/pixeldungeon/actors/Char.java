@@ -1114,6 +1114,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         getScript().run("onMove", step);
+        getSprite().move( getPos(), step );
+
         placeTo(step);
     }
 

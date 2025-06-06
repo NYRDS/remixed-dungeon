@@ -1077,7 +1077,6 @@ public class Hero extends Char {
             }
 
             move(step);
-            moveSprite(oldPos, getPos());
 
             if (wallWalkerBuff != null) {
                 int dmg = Math.max(hp() / 2, 2);
