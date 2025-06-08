@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.BackpackMode;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 
@@ -169,7 +168,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
             return;
         }
 
-        GameScene.selectItem(hero, this, BackpackMode.QUICKSLOT, StringsManager.getVar(R.string.QuickSlot_SelectedItem));
+        GameScene.selectItem(hero, this, WndBag.Mode.QUICKSLOT, StringsManager.getVar(R.string.QuickSlot_SelectedItem));
     }
 
     @Override
@@ -181,7 +180,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         if (hero.isSpellUser()) {
             GameScene.selectSpell(this);
         } else {
-            GameScene.selectItem(hero, this, BackpackMode.QUICKSLOT, StringsManager.getVar(R.string.QuickSlot_SelectedItem));
+            GameScene.selectItem(hero, this, WndBag.Mode.QUICKSLOT, StringsManager.getVar(R.string.QuickSlot_SelectedItem));
         }
         return true;
     }

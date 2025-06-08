@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.windows.BackpackMode;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndCatalogus;
 import com.watabou.pixeldungeon.windows.elements.Tool;
@@ -32,7 +31,7 @@ class InventoryTool extends Tool {
         //if(hero.isReady()) {
             Belongings belongings = hero.getBelongings();
             GameScene.show(new WndBag(belongings, belongings.backpack,
-                    null, BackpackMode.ALL, null));
+                    null, WndBag.Mode.ALL, null));
         //}
     }
 

@@ -21,7 +21,7 @@ import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.food.OverpricedRation;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ShopkeeperSprite;
-import com.watabou.pixeldungeon.windows.BackpackMode;
+import com.watabou.pixeldungeon.windows.WndBag;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -140,11 +140,11 @@ public class Shopkeeper extends NPC {
 	}
 
 	@Override
-	public BackpackMode buyMode(Char chr) {
-		return BackpackMode.FOR_BUY;
+	public WndBag.Mode buyMode(Char chr) {
+		return WndBag.Mode.FOR_BUY;
 	}
 
-	public BackpackMode sellMode(Char chr) {
-		return BackpackMode.FOR_SALE;
+	public WndBag.Mode sellMode(Char chr) {
+		return WndBag.Mode.FOR_SALE;
 	}
 }

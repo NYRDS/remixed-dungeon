@@ -13,7 +13,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.windows.BackpackMode;
 import com.watabou.pixeldungeon.windows.WndBag;
 
 import org.jetbrains.annotations.NotNull;
@@ -51,7 +50,7 @@ public class ShortSword extends MeleeWeapon {
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals(AC_REFORGE)) {
 			chr.getBelongings().setSelectedItem(this);
-            GameScene.selectItem(chr, itemSelector, BackpackMode.WEAPON, StringsManager.getVar(R.string.ShortSword_Select));
+            GameScene.selectItem(chr, itemSelector, WndBag.Mode.WEAPON, StringsManager.getVar(R.string.ShortSword_Select));
 		} else {
 			super._execute(chr, action );
 		}

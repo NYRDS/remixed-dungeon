@@ -10,7 +10,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.BackpackMode;
+import com.watabou.pixeldungeon.windows.WndBag;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -18,7 +18,7 @@ public class ScrollOfIdentify extends InventoryScroll {
 
 	{
         inventoryTitle = StringsManager.getVar(R.string.ScrollOfIdentify_InvTitle);
-		mode = BackpackMode.UNIDENTIFED;
+		mode = WndBag.Mode.UNIDENTIFED;
 	}
 
 	static public void identify(@NotNull Char ch, @NotNull Item item) {

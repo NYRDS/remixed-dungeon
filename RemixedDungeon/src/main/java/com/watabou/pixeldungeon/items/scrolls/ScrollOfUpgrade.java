@@ -8,13 +8,13 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.windows.BackpackMode;
+import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ScrollOfUpgrade extends InventoryScroll {
 
 	{
         inventoryTitle = StringsManager.getVar(R.string.ScrollOfUpgrade_InvTitle);
-		mode = BackpackMode.UPGRADEABLE;
+		mode = WndBag.Mode.UPGRADEABLE;
 	}
 	
 	@Override

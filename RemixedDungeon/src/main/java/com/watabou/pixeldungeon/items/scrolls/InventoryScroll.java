@@ -6,7 +6,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.windows.BackpackMode;
+import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
 import org.jetbrains.annotations.NotNull;
@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 public abstract class InventoryScroll extends Scroll {
 
 	protected String inventoryTitle = StringsManager.getVar(R.string.InventoryScroll_Title);
-    protected BackpackMode mode = BackpackMode.ALL;
+    protected WndBag.Mode mode = WndBag.Mode.ALL;
 
 	private Char reader;
 

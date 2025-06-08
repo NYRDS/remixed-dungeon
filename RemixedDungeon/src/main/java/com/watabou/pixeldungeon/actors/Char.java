@@ -93,7 +93,7 @@ import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.BackpackMode;
+import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
@@ -2319,11 +2319,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         GLog.n(StringsManager.getVars(R.array.Char_Kill)[getGender()], getName());
     }
 
-    public BackpackMode sellMode(Char chr) {
-        return (BackpackMode) getScript().run("_sellMode", chr).optuserdata(BackpackMode.class, BackpackMode.NONE);
+    public WndBag.Mode sellMode(Char chr) {
+        return (WndBag.Mode) getScript().run("_sellMode", chr).optuserdata(WndBag.Mode.class, WndBag.Mode.NONE);
     }
 
-    public BackpackMode buyMode(Char chr) {
-        return (BackpackMode) getScript().run("_buyMode", chr).optuserdata(BackpackMode.class, BackpackMode.NONE);
+    public WndBag.Mode buyMode(Char chr) {
+        return (WndBag.Mode) getScript().run("_buyMode", chr).optuserdata(WndBag.Mode.class, WndBag.Mode.NONE);
     }
 }

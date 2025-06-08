@@ -13,7 +13,7 @@ import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.windows.BackpackMode;
+import com.watabou.pixeldungeon.windows.WndBag;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -53,7 +53,7 @@ public class Stylus extends Item {
                             }
                         }
                     },
-                    BackpackMode.INSCRIBABLE, StringsManager.getVar(R.string.Stylus_SelectArmor));
+                    WndBag.Mode.INSCRIBABLE, StringsManager.getVar(R.string.Stylus_SelectArmor));
 			
 		} else {
 			
