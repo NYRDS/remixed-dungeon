@@ -31,6 +31,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import lombok.SneakyThrows;
+import lombok.val;
 
 public class GameLoop {
 
@@ -245,11 +246,17 @@ public class GameLoop {
             Keys.processEvent(new KeyEvent(Keys.Key.BEGIN_OF_FRAME, KeyEvent.ACTION_DOWN));
 
             while (!motionEvents.isEmpty()) {
-                Touchscreen.processEvent(motionEvents.poll());
+                val event = motionEvents.poll();
+                if (event != null)
+                    Touchscreen.processEvent(event);
+                }
             }
 
             while (!keysEvents.isEmpty()) {
-                Keys.processEvent(keysEvents.poll());
+                val event = keysEvents.poll();
+                if (event != null) {
+                    Keys.processEvent(keysEvents.poll());
+                }
             }
 
             Keys.processEvent(new KeyEvent(Keys.Key.END_OF_FRAME, KeyEvent.ACTION_DOWN));
