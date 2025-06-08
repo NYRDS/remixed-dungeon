@@ -247,7 +247,7 @@ public class GameLoop {
 
             while (!motionEvents.isEmpty()) {
                 val event = motionEvents.poll();
-                if (event != null)
+                if (event != null) {
                     Touchscreen.processEvent(event);
                 }
             }
