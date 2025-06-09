@@ -255,7 +255,7 @@ public class GameLoop {
             while (!keysEvents.isEmpty()) {
                 val event = keysEvents.poll();
                 if (event != null) {
-                    Keys.processEvent(keysEvents.poll());
+                    Keys.processEvent(event);
                 }
             }
 

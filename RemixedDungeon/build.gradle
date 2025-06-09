@@ -33,7 +33,7 @@ android {
         manifestPlaceholders = ["admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1242
+        versionCode 1243
         versionName "32.3.alpha.5"
         targetSdkVersion 34
         compileSdkVersion 34
