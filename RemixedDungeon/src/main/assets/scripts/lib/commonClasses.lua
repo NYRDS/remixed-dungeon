@@ -22,7 +22,7 @@ local StringsManager   = luajava.bindClass("com.nyrds.platform.util.StringsManag
 local CharUtils        = luajava.bindClass("com.watabou.pixeldungeon.actors.CharUtils")
 local ModQuirks        = luajava.bindClass("com.nyrds.pixeldungeon.game.ModQuirks")
 local Util             = luajava.bindClass("com.nyrds.util.Util")
-local BackpackMode     = luajava.bindClass("com.watabou.pixeldungeon.windows.WndBag.Mode")
+local BackpackMode     = luajava.bindClass("com.watabou.pixeldungeon.windows.WndBag").Mode
 
 local Buffs  = {
     Buff         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Buff"),

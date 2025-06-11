@@ -40,6 +40,25 @@ public class WndBag extends WndTabbed {
 	private final Text txtTitle;
 	private Text txtSubTitle;
 
+	public enum Mode { //Can't move it out of class because it used by Remixed RPG directly
+		NONE,
+		ALL,
+		UNIDENTIFED,
+		UPGRADEABLE,
+		QUICKSLOT,
+		FOR_SALE,
+		WEAPON,
+		ARMOR,
+		WAND,
+		SEED,
+		INSCRIBABLE,
+		MOISTABLE,
+		FUSEABLE,
+		UPGRADABLE_WEAPON,
+		FOR_BUY,
+		ARROWS,
+		CARCASS
+	}
 
 	private static final int COLS_P	= 4;
 	private static final int COLS_L	= 6;
@@ -353,26 +372,5 @@ public class WndBag extends WndTabbed {
 
 	public interface Listener {
 		void onSelect(Item item, Char selector);
-	}
-
-
-	public enum Mode { //Can't move it out of class because it used by Remixed RPG directly
-		NONE,
-		ALL,
-		UNIDENTIFED,
-		UPGRADEABLE,
-		QUICKSLOT,
-		FOR_SALE,
-		WEAPON,
-		ARMOR,
-		WAND,
-		SEED,
-		INSCRIBABLE,
-		MOISTABLE,
-		FUSEABLE,
-		UPGRADABLE_WEAPON,
-		FOR_BUY,
-		ARROWS,
-		CARCASS
 	}
 }

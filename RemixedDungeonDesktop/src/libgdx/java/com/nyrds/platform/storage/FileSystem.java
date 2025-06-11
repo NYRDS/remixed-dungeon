@@ -27,6 +27,7 @@ import lombok.SneakyThrows;
 
 public class FileSystem {
 	static CaseInsensitiveFileCache fileCache = new CaseInsensitiveFileCache(getAllResPaths());
+	static CaseInsensitiveFileCache modCache = new CaseInsensitiveFileCache(getModResPaths());
 
 	static public FileHandle getInternalStorageFileHandle(String fileName) {
 		FileHandle fileHandle = null;
@@ -52,6 +53,12 @@ public class FileSystem {
 		};
 	}
 
+	private static String[] getModResPaths() {
+		return new String[]{
+				"mods/" + ModdingBase.activeMod() + "/"
+		};
+	}
+
 
 	static public String[] listResources(String resName) {
 		Set<String> resList = new HashSet<>();
@@ -66,6 +73,7 @@ public class FileSystem {
 	}
 
 	static public boolean exists(String fileName) { return fileCache.exists(fileName); } // exists
+	static public boolean existsInMod(String fileName) { return modCache.exists(fileName); } // exists
 
 	static public @NotNull FileHandle getInternalStorageFileHandleBase(String fileName) {
 		FileHandle fileHandle = null;

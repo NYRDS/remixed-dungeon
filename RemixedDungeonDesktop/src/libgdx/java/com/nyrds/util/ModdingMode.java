@@ -115,12 +115,13 @@ public class ModdingMode extends ModdingBase {
         return res;
     }
 
+
     public static boolean isResourceExists(String resName) {
         return FileSystem.exists(resName);
     }
 
     public static boolean isResourceExistInMod(String resName) {
-        return FileSystem.exists(resName);
+        return FileSystem.existsInMod(resName);
     }
 
     @NotNull
@@ -166,11 +167,7 @@ public class ModdingMode extends ModdingBase {
     }
 
     public static boolean isResourceExist(String resName) {
-        if (isResourceExistInMod(resName)) {
-            return true;
-        } else {
-            return isAssetExist(resName);
-        }
+        return isResourceExists(resName);
     }
 
     public static String getResource(String resName) {

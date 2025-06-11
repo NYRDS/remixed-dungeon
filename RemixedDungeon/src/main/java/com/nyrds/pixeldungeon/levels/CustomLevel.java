@@ -36,7 +36,7 @@ public abstract class CustomLevel extends CommonLevel {
 
 		if(descFile.endsWith(".json")) {
 
-			if(BuildConfig.FLAVOR_platform.equals("desktop") && ModdingMode.isResourceExist(baseFile+"_desktop.json")) {
+			if(BuildConfig.FLAVOR_platform.equals("desktop") && ModdingMode.isResourceExistInMod(baseFile+"_desktop.json")) {
 				mLevelDesc = JsonHelper.readJsonFromAsset(baseFile+"_desktop.json");
 				return;
 			}
@@ -46,7 +46,7 @@ public abstract class CustomLevel extends CommonLevel {
 		}
 
 		if(descFile.endsWith(".lua")) {
-			if(BuildConfig.FLAVOR_platform.equals("desktop") && ModdingMode.isResourceExist(baseFile+"_desktop.lua")) {
+			if(BuildConfig.FLAVOR_platform.equals("desktop") && ModdingMode.isResourceExistInMod(baseFile+"_desktop.lua")) {
 				LuaEngine.runScriptFile(baseFile+"_desktop.lua");
 			} else {
 				LuaEngine.runScriptFile(descFile);
