@@ -33,8 +33,8 @@ android {
         manifestPlaceholders = ["admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1244
-        versionName "32.3.alpha.6"
+        versionCode 1245
+        versionName "32.3.alpha.7"
         targetSdkVersion 34
         compileSdkVersion 34
         minSdkVersion 21
@@ -148,41 +148,53 @@ dependencies {
 
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
-    googlePlayImplementation ("com.appodeal.ads:sdk:3.4.1.0") {
-        exclude group: "com.appodeal.ads.sdk.networks", module: "amazon"
-        exclude group: "com.appodeal.ads.sdk.networks", module: "meta"
-        exclude group: "com.appodeal.ads.sdk.networks", module: "yandex"
-        exclude group: "com.appodeal.ads.sdk.services", module: "adjust"
-        exclude group: "com.appodeal.ads.sdk.services", module: "appsflyer"
-        exclude group: "com.appodeal.ads.sdk.services", module: "facebook_analytics"
-        exclude group: "com.appodeal.ads.sdk.services", module: "firebase"
-        exclude group: "com.applovin.mediation", module: "google-adapter"
-        exclude group: "com.applovin.mediation", module: "amazon-tam-adapter"
-        exclude group: "com.applovin.mediation", module: "facebook-adapter"
-        exclude group: "com.applovin.mediation", module: "yandex-adapter"
-        exclude group: "io.bidmachine", module: "ads.networks.amazon"
-        exclude group: "io.bidmachine", module: "ads.networks.meta_audience"
-        exclude group: "org.bidon", module: "admob-adapter"
-        exclude group: "org.bidon", module: "amazon-adapter"
-        exclude group: "org.bidon", module: "meta-adapter"
-        exclude group: "org.bidon", module: "yandex-adapter"
+    dependencies {
+        implementation("com.appodeal.ads:sdk:3.7.0.0") {
+            exclude(group = "com.applovin.mediation", module = "amazon-tam-adapter")
+            exclude(group = "com.applovin.mediation", module = "facebook-adapter")
+            exclude(group = "com.applovin.mediation", module = "google-ad-manager-adapter")
+            exclude(group = "com.applovin.mediation", module = "google-adapter")
+            exclude(group = "com.applovin.mediation", module = "mytarget-adapter")
+            exclude(group = "com.applovin.mediation", module = "yandex-adapter")
+            exclude(group = "com.appodeal.ads.sdk.networks", module = "admob")
+            exclude(group = "com.appodeal.ads.sdk.networks", module = "amazon")
+            exclude(group = "com.appodeal.ads.sdk.networks", module = "meta")
+            exclude(group = "com.appodeal.ads.sdk.networks", module = "my_target")
+            exclude(group = "com.appodeal.ads.sdk.networks", module = "yandex")
+            exclude(group = "com.appodeal.ads.sdk.services", module = "adjust")
+            exclude(group = "com.appodeal.ads.sdk.services", module = "appsflyer")
+            exclude(group = "com.appodeal.ads.sdk.services", module = "facebook_analytics")
+            exclude(group = "com.appodeal.ads.sdk.services", module = "firebase")
+            exclude(group = "com.unity3d.ads-mediation", module = "admob-adapter")
+            exclude(group = "com.unity3d.ads-mediation", module = "aps-adapter")
+            exclude(group = "com.unity3d.ads-mediation", module = "facebook-adapter")
+            exclude(group = "com.unity3d.ads-mediation", module = "mytarget-adapter")
+            exclude(group = "com.unity3d.ads-mediation", module = "yandex-adapter")
+            exclude(group = "io.bidmachine", module = "ads.networks.amazon")
+            exclude(group = "io.bidmachine", module = "ads.networks.meta_audience")
+            exclude(group = "io.bidmachine", module = "ads.networks.my_target")
+            exclude(group = "org.bidon", module = "amazon-adapter")
+            exclude(group = "org.bidon", module = "meta-adapter")
+            exclude(group = "org.bidon", module = "vkads-adapter")
+            exclude(group = "org.bidon", module = "yandex-adapter")
+        }
     }
 
-    googlePlayImplementation 'com.yandex.android:mobileads:7.11.0'
+    googlePlayImplementation 'com.yandex.android:mobileads:7.13.0'
 
-    ruStoreImplementation 'com.yandex.android:mobileads:7.11.0'
+    ruStoreImplementation 'com.yandex.android:mobileads:7.13.0'
     ruStoreImplementation 'ru.rustore.sdk:billingclient:6.0.0'
 
 
-    googlePlayImplementation 'com.google.android.gms:play-services-base:18.5.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-base:18.7.0'
     googlePlayImplementation 'com.google.android.gms:play-services-auth:21.3.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:23.2.0"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:23.6.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:24.4.0'
 
 
     googlePlayImplementation 'com.android.billingclient:billing:7.1.1'
 
-    googlePlayImplementation platform('com.google.firebase:firebase-bom:33.10.0')
+    googlePlayImplementation platform('com.google.firebase:firebase-bom:33.15.0')
 
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
