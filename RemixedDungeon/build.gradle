@@ -37,7 +37,7 @@ android {
         versionName "32.3.alpha.7"
         targetSdkVersion 34
         compileSdkVersion 34
-        minSdkVersion 21
+        minSdkVersion 23
 
         // Enabling multidex support.
         multiDexEnabled true
@@ -64,6 +64,7 @@ android {
     compileOptions {
         sourceCompatibility "10"
         targetCompatibility "10"
+        coreLibraryDesugaringEnabled true
     }
     packagingOptions {
         resources {
@@ -124,6 +125,8 @@ android {
 
 
 dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.5'
+
     implementation project(':annotation')
 
     annotationProcessor project(':processor')

@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext {
-        agp_version = '8.5.2'
+        agp_version = '8.9.2'
     }
     repositories {
         mavenCentral()
@@ -18,7 +18,7 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$agp_version"
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:3.0.3'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:3.0.4'
         classpath 'com.google.firebase:perf-plugin:1.4.2'
         classpath 'com.google.gms:google-services:4.4.2' // google-services plugin
         classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:1.0.0'

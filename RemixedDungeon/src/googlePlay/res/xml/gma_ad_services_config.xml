@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ad-services-config>
+    <gma-sdk-settings
+        gma_sdk_app_id="@string/admob_app_id"
+        is_service_enabled="true" />
+    <privacy-sandbox
+        is_sdk_runtime_enabled="true" />
+</ad-services-config>
+
+    
