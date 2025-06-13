@@ -84,10 +84,14 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
             var sku = mSkuDetails.get(skuId);
 
             Runnable purchaseFlowRequest = () -> {
-                BillingFlowParams purchaseParams = BillingFlowParams.newBuilder()
-                        .setSkuDetails(sku)
-                        .build();
-                mBillingClient.launchBillingFlow(Game.instance(), purchaseParams);
+                try {
+                    BillingFlowParams purchaseParams = BillingFlowParams.newBuilder()
+                            .setSkuDetails(sku)
+                            .build();
+                    mBillingClient.launchBillingFlow(Game.instance(), purchaseParams);
+                } catch (Throwable e) { //because backward compatibility isn't a thing for Google
+                    EventCollector.logException(e, "GoogleIap.doPurchase");
+                }
             };
 
             executeServiceRequest(purchaseFlowRequest);
