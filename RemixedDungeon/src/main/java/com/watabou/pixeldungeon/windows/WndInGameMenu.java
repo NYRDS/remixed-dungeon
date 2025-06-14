@@ -2,8 +2,10 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.GameControl;
+import com.nyrds.pixeldungeon.windows.WndAlchemy;
 import com.nyrds.pixeldungeon.windows.WndGameplayCustomization;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
@@ -26,6 +28,17 @@ public class WndInGameMenu extends WndMenuCommon {
 			GameLoop.switchScene(TitleScene.class);
 			return;
 		}
+
+		if (BuildConfig.DEBUG) {
+			menuItems.add(new MenuButton("AlchemyTest") {
+				@Override
+				protected void onClick() {
+					super.onClick();
+					WndInGameMenu.this.add(new WndAlchemy());
+				}
+			});
+		}
+
 
 		menuItems.add( new MenuButton(R.string.WndGame_Settings) {
 			@Override
