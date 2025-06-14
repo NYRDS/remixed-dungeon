@@ -90,6 +90,11 @@ public class Belongings implements Iterable<Item>, Bundlable {
     }
 
     public void setItemForSlot(EquipableItem item, Slot slot) {
+
+        if(slot == null) {
+            return;
+        }
+
         usedSlots.put(item, slot);
         item.setOwner(owner);
 
