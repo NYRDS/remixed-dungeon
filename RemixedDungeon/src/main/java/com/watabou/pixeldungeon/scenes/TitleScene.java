@@ -172,12 +172,12 @@ public class TitleScene extends PixelScene {
             leftGroup.add(new ImageButton(social.get()) {
                 @Override
                 protected void onClick() {
-                    Game.openUrl("Visit us on social network", ruUser ? "https://vk.com/pixel_dungeon_remix" : "https://fb.me/RemixedDungeon");
+                    Game.openUrl("Visit us on social network",  "https://vk.com/pixel_dungeon_remix");
                 }
             });
         }
 
-        if(!ruUser) {
+        if(!ruUser && !BuildConfig.FLAVOR_market.equals("vkplay")) {
             leftGroup.add(new ImageButton(Icons.DISCORD.get()) {
                 @Override
                 protected void onClick() {
