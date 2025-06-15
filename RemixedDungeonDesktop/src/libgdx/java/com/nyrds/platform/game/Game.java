@@ -8,6 +8,7 @@ import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.PixmapIO;
 import com.nyrds.pixeldungeon.game.GameLoop;
@@ -129,9 +130,9 @@ public class Game implements ApplicationListener, InputProcessor {
             return;
         }
 
-        Gdx.gl20.glEnable(Gdx.gl20.GL_BLEND);
+        Gdx.gl20.glEnable(GL20.GL_BLEND);
         Gl.blendSrcAlphaOneMinusAlpha();
-        Gdx.gl20.glEnable(Gdx.gl20.GL_SCISSOR_TEST);
+        Gdx.gl20.glEnable(GL20.GL_SCISSOR_TEST);
 
         gameLoop.onFrame();
 

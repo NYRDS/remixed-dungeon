@@ -136,18 +136,20 @@ public class WndTradeItem extends Window {
             for (int i = 0; i < tradeQuantity.length; ++i) {
                 if (item.quantity() > tradeQuantity[i]) {
                     final int priceFor = priceAll / item.quantity() * tradeQuantity[i];
-                    final int finalI = i;
-                    RedButton btnBuyN = new RedButton(Utils.format(R.string.WndTradeItem_BuyN,
-                            tradeQuantity[finalI],
-                            priceFor)) {
-                        @Override
-                        protected void onClick() {
-                            buy(item, tradeQuantity[finalI]);
-                        }
-                    };
-                    btnBuyN.enable(priceFor <= customer.gold());
-                    btnBuyN.setSize(WIDTH, BTN_HEIGHT);
-                    vbox.add(btnBuyN);
+                    if(priceFor>0) {
+                        final int finalI = i;
+                        RedButton btnBuyN = new RedButton(Utils.format(R.string.WndTradeItem_BuyN,
+                                tradeQuantity[finalI],
+                                priceFor)) {
+                            @Override
+                            protected void onClick() {
+                                buy(item, tradeQuantity[finalI]);
+                            }
+                        };
+                        btnBuyN.enable(priceFor <= customer.gold());
+                        btnBuyN.setSize(WIDTH, BTN_HEIGHT);
+                        vbox.add(btnBuyN);
+                    }
                 }
             }
 
@@ -240,7 +242,7 @@ public class WndTradeItem extends Window {
         }
     }
 
-    private void sell(Item item, final int quantity) {
+    private void sell(@NotNull Item item, final int quantity) {
 
         if (item.isEquipped(customer) && !((EquipableItem) item).doUnequip(customer, false)) {
             hide();
