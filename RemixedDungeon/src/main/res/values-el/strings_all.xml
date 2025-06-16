@@ -2980,7 +2980,7 @@ remix.32\n
 
   <string name="AboutScene_SourceCode">Λήψη πηγαίου κώδικα του Remixed Dungeon:</string>
   <string name="HeroClass_Priest">Ιερέας</string>
-  <string name="HeroClass_Doctor">Γιατρός Πανούκλας</string>
+  <string name="HeroClass_Doctor">Γιατρός Επιδημιών</string>
   <string name="StartScene_ComingSoon">Έρχεται σύντομα</string>
 
   <string name="AC_Dissect">Τεμαχισμός</string>
