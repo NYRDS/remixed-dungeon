@@ -66,7 +66,7 @@ public class Succubus extends Mob {
     public boolean getCloser(int target,  boolean ignorePets) {
 		if (level().fieldOfView[target] && level().distance(getPos(), target) > 2 && delay <= 0) {
 			int tgtCell = target;
-			if (level().isCellNonOccupied(target)) {
+			if (!level().isCellNonOccupied(target)) {
 				tgtCell = level().getSafeCellNextTo(target);
 			}
 			teleportTo(tgtCell);
