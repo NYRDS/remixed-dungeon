@@ -385,6 +385,7 @@ public class CharUtils {
         chr.observe();
     }
 
+    @LuaInterface
     public static void blinkTo(@NotNull Char chr, int target) {
         int cell = Ballistica.cast(chr.getPos(), target, true, true);
 
