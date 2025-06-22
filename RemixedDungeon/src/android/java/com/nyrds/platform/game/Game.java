@@ -55,6 +55,7 @@ import javax.microedition.khronos.opengles.GL10;
 
 import lombok.Getter;
 
+
 @SuppressLint("Registered")
 public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTouchListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
@@ -70,7 +71,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     public Executor serviceExecutor = new ReportingExecutor();
 
 
-    private GLSurfaceView view;
+    private GameSurface view;
     @Getter
     private LinearLayout layout;
 
@@ -86,9 +87,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     }
 
     static public void runOnMainThread(Runnable runnable) {
-        GameLoop.pushUiTask( () -> {
-            instance().runOnUiThread(runnable);
-        });
+        GameLoop.pushUiTask( () -> instance().runOnUiThread(runnable));
     }
 
     static public void requestInternetPermission(InterstitialPoint returnTo) {
@@ -173,7 +172,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
-        view = new GLSurfaceView(this);
+        view = new GameSurface(this);
         view.setEGLContextClientVersion(2);
 
         // Hope this allow game work on broader devices list
@@ -358,11 +357,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     }
 
     public void onRequestPermissionsResult(int requestCode, @NotNull String @NotNull [] permissions, int @NotNull [] grantResults) {
-        boolean res = true;
-
-        if (permissions.length == 0) {
-            res = false;
-        }
+        boolean res = permissions.length != 0;
 
         for (int grant : grantResults) {
             if (grant != PackageManager.PERMISSION_GRANTED) {

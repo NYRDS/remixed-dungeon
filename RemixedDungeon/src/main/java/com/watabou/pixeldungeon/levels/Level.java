@@ -1769,6 +1769,19 @@ public abstract class Level implements Bundlable {
 		return oneCellFrom(candidates);
 	}
 
+	public int getSafeCellNextTo(int cell) {
+		ArrayList<Integer> candidates = new ArrayList<>();
+
+		for (int n : Level.NEIGHBOURS8) {
+			int p = n + cell;
+			if (cellValid(p) && passable[p] && Actor.findChar(p) == null) {
+				candidates.add(p);
+			}
+		}
+
+		return oneCellFrom(candidates);
+	}
+
 	public boolean isBossLevel() {
 		return false;
 	}

@@ -75,6 +75,7 @@ import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -109,7 +110,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -1096,21 +1096,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         if (hasBuff(BuffFactory.VERTIGO) && level().adjacent(getPos(), step)) { //ignore vertigo when blinking or teleporting
 
-            List<Integer> candidates = new ArrayList<>();
-            for (int dir : Level.NEIGHBOURS8) {
-                int p = getPos() + dir;
-                if (level().cellValid(p)) {
-                    if ((level().passable[p] || level().avoid[p]) && Actor.findChar(p) == null) {
-                        candidates.add(p);
-                    }
-                }
-            }
+            step = level().getEmptyCellNextTo(step);
 
-            if (candidates.isEmpty()) { // Nowhere to move? just stay then
+            if (!level().cellValid(step)) { // Nowhere to move? just stay then
                 return;
             }
-
-            step = Random.element(candidates);
         }
 
         getScript().run("onMove", step);
@@ -1930,6 +1920,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @LuaInterface
     public void skillLevelUp() {
+    }
+
+
+    @LuaInterface
+    public void teleportTo(int newPos) {
+        if (!level().cellValid(newPos)) {
+            return;
+        }
+
+        WandOfBlink.appear(this, newPos);
+        level().press(newPos, this);
     }
 
     @LuaInterface

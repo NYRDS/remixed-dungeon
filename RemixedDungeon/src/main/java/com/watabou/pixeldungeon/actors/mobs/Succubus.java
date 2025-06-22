@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
@@ -66,7 +65,11 @@ public class Succubus extends Mob {
 	@Override
     public boolean getCloser(int target,  boolean ignorePets) {
 		if (level().fieldOfView[target] && level().distance(getPos(), target) > 2 && delay <= 0) {
-			CharUtils.blinkTo(this, target);
+			int tgtCell = target;
+			if (level().isCellNonOccupied(target)) {
+				tgtCell = level().getSafeCellNextTo(target);
+			}
+			teleportTo(tgtCell);
 			delay = BLINK_DELAY;
 			spend(-1 / speed());
 			return true;
