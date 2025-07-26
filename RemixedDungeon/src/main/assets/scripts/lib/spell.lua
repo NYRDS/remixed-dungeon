@@ -40,7 +40,7 @@ function spell.spellDesc(self)
     local ret = spell.defaultDesc()
     local own = self:desc()
 
-    for k,v in pairs(ret) do
+    for k,v in pairs(own) do
         ret[k] = own[k] or v
     end
 

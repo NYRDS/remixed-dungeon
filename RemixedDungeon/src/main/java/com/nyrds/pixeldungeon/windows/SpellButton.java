@@ -24,8 +24,8 @@ class SpellButton extends Button {
         this.spell = spell;
         this.caster = caster;
 
-        width = image.width + 6;
-        height = image.height + 6;
+        width = image.width * image.scale.x + 6;
+        height = image.height * image.scale.y + 6;
 
         bg = new ColorBlock(width, height, 0xFF4A4D44);
         add(bg);

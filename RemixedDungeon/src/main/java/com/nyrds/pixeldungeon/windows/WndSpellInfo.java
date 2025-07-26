@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.UseSpell;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
-import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -25,7 +24,7 @@ public class WndSpellInfo extends Window {
 	public WndSpellInfo(@NotNull final WndHeroSpells owner, final Hero hero, final Spell spell ) {
 		super();
 
-		IconTitle title = new IconTitle(new Image(spell.image()), spell.name());
+		IconTitle title = new IconTitle(spell.image(), spell.name());
 		title.setRect(0,0,WIDTH,0);
 		add(title);
 

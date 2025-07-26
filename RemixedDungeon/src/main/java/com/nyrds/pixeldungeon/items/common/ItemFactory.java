@@ -523,6 +523,7 @@ public class ItemFactory {
         Item item = itemByName(sourceItem.getEntityKind());
         item.quantity(0);
         item.setImage(sourceItem.image());
+        item.setCustomImage(sourceItem.getCustomImage());
         return item;
     }
 

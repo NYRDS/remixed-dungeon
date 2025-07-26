@@ -7,22 +7,15 @@
 local RPD                 = require "scripts/lib/commonClasses"
 local spell               = require "scripts/lib/spell"
 
-local distracted          = {}
-distracted["PASSIVE"]     = true
-distracted["SLEEPING"]    = true
-distracted["FLEEING"]     = true
-distracted["HORRIFIED"]   = true
-distracted["RUNNINGAMOK"] = true
-
 return spell.init{
     desc  = function ()
         return {
-            image         = 2,
+            image         = 1,
             imageFile     = "spellsIcons/common.png",
             imageSize     = 32,
-            name          = "Backstab_Name",
-            info          = "Backstab_Info",
-            magicAffinity = "Rogue",
+            name          = "TestSpell_Name",
+            info          = "TestSpell_Info",
+            magicAffinity = "Test",
             targetingType = "self",
             level         = 1,
             castTime      = 1,

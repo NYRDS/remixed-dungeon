@@ -104,6 +104,11 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
     private int level = Scrambler.scramble(0);
 
+
+    @Getter
+    @Setter
+    private Image customImage = null;
+
     @Packable
     @Getter
     @Setter
@@ -817,10 +822,6 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
         return false;
     }
 
-    public Image getCustomImage() {
-        return null;
-    }
-
     public void removeItem() {
         if(heap!= null) {
             heap.pickUp(this);
@@ -855,4 +856,5 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
         }
         return owner.getPos();
     }
+
 }

@@ -13,6 +13,8 @@ import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import lombok.Setter;
+
 public class ItemSlot extends Button {
 
     public static final int DEGRADED = 0xFF4444;
@@ -29,6 +31,7 @@ public class ItemSlot extends Button {
     private BitmapText topRight;
     private BitmapText bottomRight;
 
+    @Setter
     private boolean inQuickSlot;
 
     private static final String TXT_LEVEL = "%+d";
@@ -92,8 +95,8 @@ public class ItemSlot extends Button {
     protected void layout() {
         super.layout();
 
-        icon.setX(x + (width - icon.width) / 2);
-        icon.setY(y + (height - icon.height) / 2);
+        icon.setX(x + (width - icon.width * icon.scale.x) / 2);
+        icon.setY(y + (height - icon.height * icon.scale.y) / 2);
 
         emitter.pos(icon);
 
@@ -210,7 +213,4 @@ public class ItemSlot extends Button {
         }
     }
 
-    public void setInQuickSlot(boolean inQuickSlot) {
-        this.inQuickSlot = inQuickSlot;
-    }
 }

@@ -160,6 +160,7 @@ public class ItemSprite extends MovieClip {
 				resetColor();
 			}
 			copy(customImage);
+			setScaleXY(customImage.scale.x, customImage.scale.y);
 			return this;
 		}
 

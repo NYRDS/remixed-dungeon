@@ -5,7 +5,7 @@
 ---
 
 local spells = {}
-spells["Necromancy"] = {"RaiseDead","Exhumation", "DarkSacrifice","Possess"}
+spells["Necromancy"] = {"RaiseDead","Exhumation", "DarkSacrifice","Possess",--[["TestSpell"]]}
 spells["Common"] = {"TownPortal","Heal","RaiseDead","Cloak","Calm","Charm"}
 
 spells["Combat"] = {"DieHard","Dash","BodyArmor","Smash"}

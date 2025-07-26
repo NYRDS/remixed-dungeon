@@ -169,7 +169,7 @@ public class Spell implements NamedEntityKind {
         var spellImage = new Image(texture);
 
         spellImage.frame(TextureCache.getFilm(texture, imageSize, imageSize).get(getImage()));
-        spellImage.setScale(16/imageSize);
+        spellImage.setScale((float) 16 /imageSize);
 
         return spellImage;
     }
