@@ -26,8 +26,21 @@ import java.util.zip.ZipOutputStream;
 import lombok.SneakyThrows;
 
 public class FileSystem {
-	static CaseInsensitiveFileCache fileCache = new CaseInsensitiveFileCache(getAllResPaths());
-	static CaseInsensitiveFileCache modCache = new CaseInsensitiveFileCache(getModResPaths());
+	static CaseInsensitiveFileCache fileCache = null;
+	static CaseInsensitiveFileCache modCache = null;
+
+	private static CaseInsensitiveFileCache getFileCache() {
+		if (fileCache == null) {
+			fileCache = new CaseInsensitiveFileCache(getAllResPaths());
+		}
+		return fileCache;
+	}
+	private static CaseInsensitiveFileCache getModCache() {
+		if (modCache == null) {
+			modCache = new CaseInsensitiveFileCache(getModResPaths());
+		}
+		return modCache;
+	}
 
 	static public FileHandle getInternalStorageFileHandle(String fileName) {
 		FileHandle fileHandle = null;
@@ -38,7 +51,7 @@ public class FileSystem {
 			}
 		}
 
-		fileHandle = fileCache.getFile(fileName);
+		fileHandle = getFileCache().getFile(fileName);
 		return fileHandle;
 	}
 
@@ -72,8 +85,8 @@ public class FileSystem {
 		return resList.toArray(new String[0]);
 	}
 
-	static public boolean exists(String fileName) { return fileCache.exists(fileName); } // exists
-	static public boolean existsInMod(String fileName) { return modCache.exists(fileName); } // exists
+	static public boolean exists(String fileName) { return getFileCache().exists(fileName); } // exists
+	static public boolean existsInMod(String fileName) { return getModCache().exists(fileName); } // exists
 
 	static public @NotNull FileHandle getInternalStorageFileHandleBase(String fileName) {
 		FileHandle fileHandle = null;
@@ -250,7 +263,16 @@ public class FileSystem {
 		}
 	}
 
-	public static void invalidateCache() {
-		fileCache = new CaseInsensitiveFileCache(getAllResPaths());
+	public static void reinitFileCache() {
+		fileCache = null;
+	}
+
+	public static void reinitModCache() {
+		modCache = null;
+	}
+
+	public static void reinitAllCaches() {
+		reinitFileCache();
+		reinitModCache();
 	}
 }

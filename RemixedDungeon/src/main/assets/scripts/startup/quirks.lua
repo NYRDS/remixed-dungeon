@@ -6,5 +6,9 @@
 
 local RPD = require "scripts/lib/commonClasses"
 
-RPD.ModQuirks.mobLeveling = true
-RPD.ModQuirks.noMovingArcs = false
+--RPD.ModQuirks.mobLeveling = true
+--RPD.ModQuirks.only2dTiles = false
+--RPD.ModQuirks.only3dTiles = false
+--RPD.ModQuirks.defaultCarcassChance = 0
+--RPD.ModQuirks.noMovingArcs = false
+--RPD.ModQuirks.moveTimeout = 0

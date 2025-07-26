@@ -20,6 +20,7 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.TestOnly;
 
+import lombok.Getter;
 import lombok.val;
 
 
@@ -32,6 +33,7 @@ public class Spell implements NamedEntityKind {
     protected float cooldown = 1f;
 
     protected String targetingType;
+    @Getter
     protected String magicAffinity;
 
     protected String imageFile = "spellsIcons/common.png";
@@ -158,10 +160,6 @@ public class Spell implements NamedEntityKind {
         return info;
     }
 
-    public String getMagicAffinity() {
-        return magicAffinity;
-    }
-
     public String texture() {
         return imageFile;
     }
@@ -171,6 +169,7 @@ public class Spell implements NamedEntityKind {
         var spellImage = new Image(texture);
 
         spellImage.frame(TextureCache.getFilm(texture, imageSize, imageSize).get(getImage(caster)));
+        spellImage.setScale(16/imageSize);
 
         return spellImage;
     }

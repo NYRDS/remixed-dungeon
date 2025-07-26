@@ -49,14 +49,14 @@ public class ModdingMode extends ModdingBase {
                 mActiveMod = mod;
             }
 
-            if (!mod.equals(ModdingBase.REMIXED)) {
-                useRetroHeroSprites = !isResourceExistInMod("hero_modern");
-            }
         } catch (Exception e) {
             EventCollector.logException(e);
             mActiveMod = ModdingBase.REMIXED;
         } finally {
-            FileSystem.invalidateCache();
+            FileSystem.reinitAllCaches();
+            if (!mod.equals(ModdingBase.REMIXED)) {
+                useRetroHeroSprites = !isResourceExistInMod("hero_modern");
+            }
         }
     }
 
