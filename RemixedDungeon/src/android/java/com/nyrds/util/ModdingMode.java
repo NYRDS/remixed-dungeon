@@ -50,8 +50,6 @@ public class ModdingMode extends ModdingBase{
 		interstitialIds.put(REMIXED_RPG, "R-M-7590884-7");
 	}
 
-	@NotNull
-	static private String mActiveMod = REMIXED;
 
 	static private ArrayList<String> mActiveModsList;
 
