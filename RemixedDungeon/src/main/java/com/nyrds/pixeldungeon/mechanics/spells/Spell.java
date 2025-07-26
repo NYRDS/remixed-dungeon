@@ -164,17 +164,17 @@ public class Spell implements NamedEntityKind {
         return imageFile;
     }
 
-    public Image image(Char caster) {
+    public Image image() {
         val texture = TextureCache.get(texture());
         var spellImage = new Image(texture);
 
-        spellImage.frame(TextureCache.getFilm(texture, imageSize, imageSize).get(getImage(caster)));
+        spellImage.frame(TextureCache.getFilm(texture, imageSize, imageSize).get(getImage()));
         spellImage.setScale(16/imageSize);
 
         return spellImage;
     }
 
-    protected int getImage(Char caster) {
+    protected int getImage() {
         return image;
     }
 
@@ -209,7 +209,12 @@ public class Spell implements NamedEntityKind {
 
                 @Override
                 public int image() {
-                    return Spell.this.getImage(Dungeon.hero);
+                    return Spell.this.getImage();
+                }
+
+                @Override
+                public Image getCustomImage() {
+                    return Spell.this.image();
                 }
 
                 @Override

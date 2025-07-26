@@ -76,7 +76,7 @@ public class CustomSpell extends Spell {
     }
 
     @Override
-    protected int getImage(Char caster) {
-        return script.runOptional("image", super.getImage(caster), caster);
+    protected int getImage() {
+        return script.runOptional("image", super.getImage());
     }
 }
