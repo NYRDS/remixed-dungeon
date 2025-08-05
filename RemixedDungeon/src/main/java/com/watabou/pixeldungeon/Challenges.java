@@ -78,9 +78,9 @@ public class Challenges {
 		}
 	}
 
-	public static void forbidSpells(int challenge) {
+	public static void forbidSpells(int challenges) {
 		for(int mask:MASKS) {
-			if((mask & challenge) != 0 && forbiddenSpells.containsKey(mask)) {
+			if((mask & challenges) != 0 && forbiddenSpells.containsKey(mask)) {
 				for(String spell: Objects.requireNonNull(forbiddenSpells.get(mask))) {
 					SpellFactory.forbid(spell);
 				}

@@ -23,6 +23,7 @@ local CharUtils        = luajava.bindClass("com.watabou.pixeldungeon.actors.Char
 local ModQuirks        = luajava.bindClass("com.nyrds.pixeldungeon.game.ModQuirks")
 local Util             = luajava.bindClass("com.nyrds.util.Util")
 local BackpackMode     = luajava.bindClass("com.watabou.pixeldungeon.windows.WndBag").Mode
+local Treasury         = luajava.bindClass("com.nyrds.pixeldungeon.items.Treasury")
 
 local Buffs  = {
     Buff         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Buff"),
@@ -199,6 +200,7 @@ local RPD = {
     Utils = luajava.bindClass("com.nyrds.lua.LuaUtils"),
     QuickSlot = luajava.bindClass("com.watabou.pixeldungeon.ui.QuickSlot"),
     BackpackMode = BackpackMode,
+    Treasury = Treasury,
 
     System = {
         Input = luajava.bindClass("com.nyrds.platform.app.Input")
@@ -408,13 +410,13 @@ local RPD = {
         quantity = quantity or 1
         local item = ItemFactory:itemByName(itemClass)
         item:quantity(quantity)
-        return item
+        return Treasury:get():check(item)
     end,
 
     createItem = function(itemClass, itemDesc)
         local item = ItemFactory:createItem(itemClass, json.encode(itemDesc or {_=""}))
         assert(item, "can't create item "..itemClass)
-        return item
+        return Treasury:get():check(item)
     end,
 
     removeAllItems = function(chr)
