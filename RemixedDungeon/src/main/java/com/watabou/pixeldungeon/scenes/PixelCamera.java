@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.game.Game;
+import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Point;
@@ -67,19 +67,28 @@ class PixelCamera extends Camera {
 
         //if (Math.abs(_scroll.x - scroll.x) > screenWidth * 0.025f)
         {
-            _scroll.x -= 5 * (_scroll.x - scroll.x) * GameLoop.elapsed;
+            _scroll.x -= ModQuirks.smoothCameraK * (_scroll.x - scroll.x) * GameLoop.elapsed;
         }
 
         //if (Math.abs(_scroll.y - scroll.y) > screenHeight * 0.025f)
         {
-            _scroll.y -= 5 * (_scroll.y - scroll.y) * GameLoop.elapsed;
+            _scroll.y -= ModQuirks.smoothCameraK * (_scroll.y - scroll.y) * GameLoop.elapsed;
         }
     }
 
     @Override
     protected void updateMatrix() {
-        float sx = PixelScene.align(this, _scroll.x + shakeX);
-        float sy = PixelScene.align(this, _scroll.y + shakeY);
+
+        float sx, sy;
+
+        if (ModQuirks.smoothCamera) {
+            sx = PixelScene.align(this, _scroll.x + shakeX);
+            sy = PixelScene.align(this, _scroll.y + shakeY);
+        } else {
+            sx = PixelScene.align(this, scroll.x + shakeX);
+            sy = PixelScene.align(this, scroll.y + shakeY);
+        }
+
 
         matrix[0] = +zoom * invW2;
         matrix[5] = -zoom * invH2;

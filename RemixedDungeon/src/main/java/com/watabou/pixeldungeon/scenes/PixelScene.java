@@ -60,7 +60,7 @@ public class PixelScene extends Scene {
 				/ defaultZoom < minHeight)
 				&& defaultZoom > 1) {
 
-			defaultZoom-=0.01;
+			defaultZoom-=0.01f;
 		}
 
 		WndHelper.update(GameLoop.width / defaultZoom, GameLoop.height / defaultZoom);
@@ -104,7 +104,7 @@ public class PixelScene extends Scene {
 	public static Font chooseFont(float size) {
 		scale = size / 14.f;
 
-		scale /= 1.8;
+		scale /= 1.8f;
 
 		if(Game.smallResScreen()) {
 			scale /= 2;
@@ -236,28 +236,4 @@ public class PixelScene extends Scene {
 		}
 	}
 
-	private static class PixelCamera extends Camera {
-
-		PixelCamera(float zoom) {
-			super(
-					(int) (GameLoop.width - Math.ceil(GameLoop.width / zoom) * zoom) / 2,
-					(int) (GameLoop.height - Math.ceil(GameLoop.height / zoom)* zoom) / 2,
-					(int) Math.ceil(GameLoop.width / zoom),
-					(int) Math.ceil(GameLoop.height / zoom),
-					zoom);
-		}
-
-		@Override
-		protected void updateMatrix() {
-			float sx = align(this, scroll.x + shakeX);
-			float sy = align(this, scroll.y + shakeY);
-
-			matrix[0] = +zoom * invW2;
-			matrix[5] = -zoom * invH2;
-
-			matrix[12] = -1 + x * invW2 - sx * matrix[0];
-			matrix[13] = +1 - y * invH2 - sy * matrix[5];
-
-		}
-	}
 }

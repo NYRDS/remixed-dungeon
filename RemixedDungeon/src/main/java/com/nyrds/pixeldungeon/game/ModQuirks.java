@@ -10,6 +10,8 @@ public class ModQuirks {
     public static int moveTimeout = 0;
 
     public static float defaultCarcassChance = 0;
+    public static boolean smoothCamera = false;
+    public static float smoothCameraK = 5.0f;
 
     public static void reset() {
         mobLeveling =true;
