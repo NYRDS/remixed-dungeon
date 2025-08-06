@@ -95,6 +95,7 @@ import java.util.Map;
 import java.util.Set;
 
 import lombok.Getter;
+import lombok.Setter;
 import lombok.SneakyThrows;
 import lombok.val;
 
@@ -303,15 +304,7 @@ public abstract class Level implements Bundlable {
 		return Assets.TUNE;
 	}
 
-	public Feeling getFeeling() {
-		return feeling;
-	}
-
-	public void setFeeling(Feeling feeling) {
-		this.feeling = feeling;
-	}
-
-	public void discover() {
+    public void discover() {
 		int length = getLength();
 
 		for (int i = 0; i < length; i++) {
@@ -415,8 +408,10 @@ public abstract class Level implements Bundlable {
 		NONE, CHASM, WATER, GRASS, UNDEFINED
 	}
 
-	protected int width  = 32;
-	protected int height = 32;
+	@Getter
+    protected int width  = 32;
+	@Getter
+    protected int height = 32;
 
 	public static int[] NEIGHBOURS4;
 	public static int[] NEIGHBOURS5;
@@ -458,7 +453,9 @@ public abstract class Level implements Bundlable {
 
 	public boolean[] discoverable;
 
-	protected Feeling feeling = Feeling.UNDEFINED;
+	@Setter
+    @Getter
+    protected Feeling feeling = Feeling.UNDEFINED;
 
 	@Packable(defaultValue = "-1")
 	@Getter
@@ -1011,7 +1008,8 @@ public abstract class Level implements Bundlable {
 
 	public void addItemToSpawn(@NotNull Item item) {
 		if (!(item instanceof DummyItem)) {
-			itemsToSpawn.add(item);
+			var checkedItem = Treasury.getLevelTreasury().check(item);
+			itemsToSpawn.add(checkedItem);
 		}
 	}
 
@@ -1222,7 +1220,7 @@ public abstract class Level implements Bundlable {
 	@LuaInterface
 	public Heap drop(Item item, int cell) {
 		if(!cellValid(cell)) {
-			EventCollector.logException("trying to drop "+item.getEntityKind()+" on invalid cell "+String.valueOf(cell));
+			EventCollector.logException("trying to drop "+item.getEntityKind()+" on invalid cell "+ cell);
 			return null;
 		}
 
@@ -1723,15 +1721,7 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
-	public int getWidth() {
-		return width;
-	}
-
-	public int getHeight() {
-		return height;
-	}
-
-	public int getLength() {
+    public int getLength() {
 		return width * height;
 	}
 

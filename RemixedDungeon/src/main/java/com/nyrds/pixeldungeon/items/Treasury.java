@@ -184,12 +184,7 @@ public class Treasury {
 
     public Item random() {
         int categoryIndex = Random.chances(probs);
-
         String categoryName = names.get(categoryIndex);
-        if(forbidden.contains(categoryName)) {
-            GLog.debug("Forbidden category: %s",categoryName);
-            return ItemFactory.itemByName("Gold");
-        }
 
         return random(categoryName);
     }
@@ -216,7 +211,7 @@ public class Treasury {
 
     public Item random(@NotNull Category category){
         if(!names.contains(category.name())) {
-            return new Gold();
+            return randomItem("Gold");
         }
         return random(category.name());
     }
