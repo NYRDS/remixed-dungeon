@@ -19,16 +19,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SystemText extends Text {
-    private static FreeTypeFontGenerator generator;
+    private static FreeTypeFontGenerator pixelGenerator;
+    private static FreeTypeFontGenerator fallbackGenerator;
     private static final Map<String, BitmapFont> fontCache = new HashMap<>();
     private static final Map<String, BitmapFont.BitmapFontData> pseudoFontCache = new HashMap<>();
+    private static BitmapFont.BitmapFontData pixelFontCheckData;
 
     private final FreeTypeFontParameter fontParameters;
-    private final BitmapFont.BitmapFontData fontData;
-    private final PseudoGlyphLayout pseudoGlyphLayout;
-    private GlyphLayout glyphLayout;
+    private BitmapFont.BitmapFontData fontData;
+    private PseudoGlyphLayout pseudoGlyphLayout;
+    private GlyphLayout glyphLayout; //This is fine
 
-    private final PseudoGlyphLayout spaceLayout; // New instance to measure space width
+    private PseudoGlyphLayout spaceLayout; // New instance to measure space width
     private boolean multiline = false;
 
     private final ArrayList<ArrayList<String>> lines = new ArrayList<>();
@@ -43,24 +45,12 @@ public class SystemText extends Text {
         invalidate();
     }
 
-    final private String fontKey;
+    private String fontKey;
+    private boolean useFallbackFont = false;
 
     public SystemText(float baseLine) {
         super(0, 0, 0, 0);
         fontParameters = getPseudoFontParameters(baseLine);
-
-        fontKey = getFontKey(fontParameters);
-        synchronized (pseudoFontCache) {
-            if (!pseudoFontCache.containsKey(fontKey)) {
-                BitmapFont.BitmapFontData fontData = generator.generateData(fontParameters);
-                pseudoFontCache.put(fontKey, fontData);
-            }
-            fontData = pseudoFontCache.get(fontKey);
-        }
-
-        pseudoGlyphLayout = new PseudoGlyphLayout();
-        spaceLayout = new PseudoGlyphLayout(); // Initialize spaceLayout
-        spaceLayout.setText(fontData, " "); // Measure the width of a space
     }
 
     public SystemText(final String text, float size, boolean multiline) {
@@ -117,7 +107,30 @@ public class SystemText extends Text {
         return params.size + "_" + params.characters + "_" + params.borderColor + "_" + params.borderWidth + "_" + params.flip + "_" + params.genMipMaps + "_" + params.magFilter + "_" + params.minFilter + "_" + params.spaceX + "_" + params.spaceY;
     }
 
+    private void ensureFontDataIsReady() {
+        if (fontData != null) {
+            return;
+        }
+
+        FreeTypeFontGenerator activeGenerator = useFallbackFont ? fallbackGenerator : pixelGenerator;
+        fontKey = (useFallbackFont ? "fb_" : "px_") + getFontKey(fontParameters);
+
+        synchronized (pseudoFontCache) {
+            if (!pseudoFontCache.containsKey(fontKey)) {
+                BitmapFont.BitmapFontData generatedData = activeGenerator.generateData(fontParameters);
+                pseudoFontCache.put(fontKey, generatedData);
+            }
+            fontData = pseudoFontCache.get(fontKey);
+        }
+
+        pseudoGlyphLayout = new PseudoGlyphLayout();
+        spaceLayout = new PseudoGlyphLayout();
+        spaceLayout.setText(fontData, " ");
+    }
+
     private void wrapText() {
+        ensureFontDataIsReady();
+
         if (multiline && maxWidth == Integer.MAX_VALUE) {
             return;
         }
@@ -175,16 +188,20 @@ public class SystemText extends Text {
 
     @Override
     public void draw() {
-        if (dirty) {
-            lines.clear();
-            measure();
-        }
+        // The dirty flag is checked by measure, which will call wrapText and prepare lines.
+        measure();
+
+        // ensureFontDataIsReady is called by measure->wrapText, so fontKey and fontData are ready.
+        FreeTypeFontGenerator activeGenerator = useFallbackFont ? fallbackGenerator : pixelGenerator;
 
         BitmapFont font;
         synchronized (fontCache) {
             if (!fontCache.containsKey(fontKey)) {
+                // We must generate the real font for drawing.
                 fontParameters.packer = null;
-                fontCache.put(fontKey, generator.generateFont(fontParameters));
+                fontCache.put(fontKey, activeGenerator.generateFont(fontParameters));
+                // Set packer back for any subsequent pseudo-font generation to work correctly.
+                fontParameters.packer = new PseudoPixmapPacker();
             }
             font = fontCache.get(fontKey);
         }
@@ -224,9 +241,7 @@ public class SystemText extends Text {
 
     @Override
     protected void measure() {
-        if (lines.isEmpty() || dirty) {
-            wrapText();
-        }
+        if (dirty) wrapText();
 
         // Calculate total height and maximum width for wrapped lines
         float totalHeight = 0;
@@ -246,6 +261,7 @@ public class SystemText extends Text {
         }
         setWidth(maxWidth);
         setHeight(totalHeight);
+        dirty = false;
     }
 
     @Override
@@ -258,16 +274,26 @@ public class SystemText extends Text {
         return lines.size();
     }
 
+    private static boolean containsMissingChars(@NotNull String text) {
+        if (pixelFontCheckData == null) return true;
+        for (int i = 0; i < text.length(); i++) {
+            if (pixelFontCheckData.getGlyph(text.charAt(i)) == null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void invalidate() {
-        if (generator != null) {
-            generator.dispose();
+        if (pixelGenerator != null) {
+            pixelGenerator.dispose();
+        }
+        if (fallbackGenerator != null) {
+            fallbackGenerator.dispose();
         }
 
-        //if (GamePreferences.classicFont()) {
-        //    generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/pixel_font.ttf"));
-        //} else {
-        generator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/LXGWWenKaiScreen.ttf"));
-        //}
+        pixelGenerator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/pixel_font.ttf"));
+        fallbackGenerator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/LXGWWenKaiScreen.ttf"));
 
         synchronized (fontCache) {
             for (BitmapFont font : fontCache.values()) {
@@ -275,6 +301,11 @@ public class SystemText extends Text {
             }
             fontCache.clear();
         }
+
+        FreeTypeFontParameter checkParams = new FreeTypeFontParameter();
+        checkParams.characters = FreeTypeFontGenerator.DEFAULT_CHARS + StringsManager.getAllCharsAsString();
+        checkParams.packer = new PseudoPixmapPacker();
+        pixelFontCheckData = pixelGenerator.generateData(checkParams);
     }
 
     @Override
@@ -282,5 +313,9 @@ public class SystemText extends Text {
         dirty = true;
         lines.clear();
         super.text(str);
+
+        // Decide which font to use. If classic font is off, always use fallback.
+        // Otherwise, use fallback only if the string has chars not in the pixel font.
+        this.useFallbackFont = !GamePreferences.classicFont() || containsMissingChars(str);
     }
 }

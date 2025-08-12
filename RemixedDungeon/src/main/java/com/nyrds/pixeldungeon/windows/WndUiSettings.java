@@ -24,9 +24,9 @@ public class WndUiSettings extends WndMenuCommon {
 				}
 			});
 		}
-		if(!GamePreferences.classicFont()){
-			menuItems.add(createTextScaleButtons());
-		}
+
+		menuItems.add(createTextScaleButtons());
+
 		if(Utils.isAndroid()) {
 			menuItems.add(new MenuButton(orientationText()) {
 				@Override
