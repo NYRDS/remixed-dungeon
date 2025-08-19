@@ -2321,10 +2321,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public WndBag.Mode sellMode(Char chr) {
-        return (WndBag.Mode) getScript().run("_sellMode", chr).optuserdata(WndBag.Mode.class, WndBag.Mode.NONE);
+        return (WndBag.Mode) getScript().run("_sellMode", chr).optuserdata(WndBag.Mode.class, WndBag.Mode.ALL);
     }
 
     public WndBag.Mode buyMode(Char chr) {
-        return (WndBag.Mode) getScript().run("_buyMode", chr).optuserdata(WndBag.Mode.class, WndBag.Mode.NONE);
+        return (WndBag.Mode) getScript().run("_buyMode", chr).optuserdata(WndBag.Mode.class, WndBag.Mode.ALL);
     }
 }
