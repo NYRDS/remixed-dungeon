@@ -185,7 +185,7 @@ dependencies {
     googlePlayImplementation 'com.yandex.android:mobileads:7.13.0'
 
     ruStoreImplementation 'com.yandex.android:mobileads:7.13.0'
-    ruStoreImplementation 'ru.rustore.sdk:billingclient:6.0.0'
+    ruStoreImplementation 'ru.rustore.sdk:billingclient:9.1.0'
 
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.7.0'

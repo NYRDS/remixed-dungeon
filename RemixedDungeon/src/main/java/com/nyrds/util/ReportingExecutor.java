@@ -48,7 +48,11 @@ public class ReportingExecutor extends ThreadPoolExecutor {
             }
         }
         if (t != null) {
-            EventCollector.logException(t, this.toString());
+            if (t instanceof Exception) {
+                EventCollector.logException((Exception) t, this.toString());
+            } else {
+                EventCollector.logException(t.toString());
+            }
         }
     }
 

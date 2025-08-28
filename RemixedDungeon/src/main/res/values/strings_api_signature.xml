@@ -42,4 +42,8 @@
     <string name="interstitial_yandex" translatable="false">demo-interstitial-yandex</string>
     <string name="rewarded_yandex" translatable="false">demo-rewarded-yandex</string>
 
+    <!-- RuStore SDK credentials -->
+    <string name="rustore_app_id" translatable="false">YOUR_RUSTORE_APP_ID</string>
+    <string name="rustore_deeplink_scheme" translatable="false">rustoresdkexamplescheme</string>
+
 </resources>
