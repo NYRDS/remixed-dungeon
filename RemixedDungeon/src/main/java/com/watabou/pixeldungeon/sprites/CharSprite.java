@@ -463,6 +463,10 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public boolean doingSomething() {
         return ((curAnim != null) && (curAnim == attack || curAnim == operate || curAnim == zap || extras.containsValue(curAnim))) || isMoving;
     }
+    
+    public boolean isPlayingExtraAnimation() {
+        return (curAnim != null) && extras.containsValue(curAnim);
+    }
 
     @Override
     public void update() {

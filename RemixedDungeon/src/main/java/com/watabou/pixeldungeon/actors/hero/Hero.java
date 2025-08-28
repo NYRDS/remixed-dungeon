@@ -953,6 +953,10 @@ public class Hero extends Char {
     @Override
     protected boolean timeout() {
         if (SystemTime.now() - SystemTime.getLastActionTime() > Dungeon.moveTimeout()) {
+            // Don't timeout if hero sprite is playing an animation from extras
+            if (getSprite().isPlayingExtraAnimation()) {
+                return false;
+            }
             SystemTime.updateLastActionTime();
             spend(TIME_TO_REST);
             return true;
