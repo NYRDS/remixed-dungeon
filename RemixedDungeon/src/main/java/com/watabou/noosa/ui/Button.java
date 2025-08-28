@@ -97,10 +97,25 @@ public class Button extends Component {
 		// Only create and add listener if we have a valid hotkey
 		if (hotKey != -1) {
 			keyListener = new Signal.Listener<Keys.Key>() {
+				private boolean keyDown = false;
+				private long pressStartTime = 0;
+				
 				@Override
 				public void onSignal(Keys.Key key) {
-					if (key.code == hotKey && key.pressed && isVisible() && isActive()) {
-						simulateClick();
+					if (key.code == hotKey && isVisible() && isActive()) {
+						if (key.pressed && !keyDown) {
+							keyDown = true;
+							pressStartTime = System.currentTimeMillis();
+						} else if (!key.pressed && keyDown) {
+							keyDown = false;
+							long pressDuration = System.currentTimeMillis() - pressStartTime;
+
+							if (pressDuration > 500) {
+								onLongClick();
+							} else {
+								onClick();
+							}
+						}
 					}
 				}
 			};

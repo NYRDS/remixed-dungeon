@@ -64,10 +64,12 @@ public class Keys {
 
 		public int code;
 		public boolean pressed;
+		public long pressStartTime;
 		
 		public Key( int code, boolean pressed ) {
 			this.code = code;
 			this.pressed = pressed;
+			this.pressStartTime = pressed ? System.currentTimeMillis() : 0;
 		}
 	}
 }

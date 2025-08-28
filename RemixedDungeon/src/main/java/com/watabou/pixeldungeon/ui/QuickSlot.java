@@ -138,7 +138,6 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         
         // Add hotkey display
         hotkeyDisplay = new BitmapText(PixelScene.font1x);
-        hotkeyDisplay.color(0x77ffffff);
         hotkeyDisplay.setScaleXY(0.6f, 0.6f);
         hotkeyDisplay.setVisible(false);
         add(hotkeyDisplay);
@@ -157,9 +156,9 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
         slot.fill(this);
         
-        // Position hotkey display in top-left corner
+        // Position hotkey display in top-right corner
         if (hotkeyDisplay != null) {
-            hotkeyDisplay.setX(x);
+            hotkeyDisplay.setX(x + width - hotkeyDisplay.width());
             hotkeyDisplay.setY(y);
         }
 
@@ -422,7 +421,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         GameLoop.addToScene(prompt);
     }
 
-    public void setHotKey(int keyCode) {
+        public void setHotKey(int keyCode) {
         // First call the parent method to set up the hotkey functionality
         super.setHotKey(keyCode);
         
