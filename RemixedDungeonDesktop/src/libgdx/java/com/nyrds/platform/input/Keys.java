@@ -12,16 +12,16 @@ public class Keys {
 	public static final int VOLUME_DOWN	= KeyEvent.KEYCODE_VOLUME_DOWN;
 	
 	// Numeric keys
-	public static final int NUM_0		= KeyEvent.KEYCODE_NUMPAD_0;
-	public static final int NUM_1		= KeyEvent.KEYCODE_NUMPAD_1;
-	public static final int NUM_2		= KeyEvent.KEYCODE_NUMPAD_2;
-	public static final int NUM_3		= KeyEvent.KEYCODE_NUMPAD_3;
-	public static final int NUM_4		= KeyEvent.KEYCODE_NUMPAD_4;
-	public static final int NUM_5		= KeyEvent.KEYCODE_NUMPAD_5;
-	public static final int NUM_6		= KeyEvent.KEYCODE_NUMPAD_6;
-	public static final int NUM_7		= KeyEvent.KEYCODE_NUMPAD_7;
-	public static final int NUM_8		= KeyEvent.KEYCODE_NUMPAD_8;
-	public static final int NUM_9		= KeyEvent.KEYCODE_NUMPAD_9;
+	public static final int NUM_0		= KeyEvent.KEYCODE_0;
+	public static final int NUM_1		= KeyEvent.KEYCODE_1;
+	public static final int NUM_2		= KeyEvent.KEYCODE_2;
+	public static final int NUM_3		= KeyEvent.KEYCODE_3;
+	public static final int NUM_4		= KeyEvent.KEYCODE_4;
+	public static final int NUM_5		= KeyEvent.KEYCODE_5;
+	public static final int NUM_6		= KeyEvent.KEYCODE_6;
+	public static final int NUM_7		= KeyEvent.KEYCODE_7;
+	public static final int NUM_8		= KeyEvent.KEYCODE_8;
+	public static final int NUM_9		= KeyEvent.KEYCODE_9;
 
 	public static final Signal<Key> event = new Signal<>(true);
 	

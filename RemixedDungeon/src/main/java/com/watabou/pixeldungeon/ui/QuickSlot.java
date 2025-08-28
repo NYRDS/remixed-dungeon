@@ -138,7 +138,8 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         
         // Add hotkey display
         hotkeyDisplay = new BitmapText(PixelScene.font1x);
-        hotkeyDisplay.setScaleXY(0.8f, 0.8f);
+        hotkeyDisplay.color(0x77777777);
+        hotkeyDisplay.setScaleXY(0.6f, 0.6f);
         hotkeyDisplay.setVisible(false);
         add(hotkeyDisplay);
 
