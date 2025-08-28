@@ -12,7 +12,9 @@ import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
+import com.nyrds.platform.input.Keys;
 import com.nyrds.platform.util.StringsManager;
+import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Dungeon;
@@ -48,6 +50,8 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     private Item quickslotItem;
 
     private ItemSlot slot;
+    
+    private BitmapText hotkeyDisplay;
 
     private Image crossB;
     private Image crossM;
@@ -131,6 +135,12 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         };
         slot.setInQuickSlot(true);
         add(slot);
+        
+        // Add hotkey display
+        hotkeyDisplay = new BitmapText(PixelScene.font1x);
+        hotkeyDisplay.setScaleXY(0.8f, 0.8f);
+        hotkeyDisplay.setVisible(false);
+        add(hotkeyDisplay);
 
         crossB = Icons.TARGET.get();
         crossB.setVisible(false);
@@ -145,6 +155,12 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         super.layout();
 
         slot.fill(this);
+        
+        // Position hotkey display in top-left corner
+        if (hotkeyDisplay != null) {
+            hotkeyDisplay.setX(x);
+            hotkeyDisplay.setY(y);
+        }
 
         crossB.setX(PixelScene.align(x + (width - crossB.width) / 2));
         crossB.setY(PixelScene.align(y + (height - crossB.height) / 2));
@@ -397,6 +413,23 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         prompt.setPos((uiCamera.width - prompt.width()) / 2, uiCamera.height - 60);
 
         GameLoop.addToScene(prompt);
+    }
+
+    public void setHotKey(int keyCode) {
+        // First call the parent method to set up the hotkey functionality
+        super.setHotKey(keyCode);
+        
+        // Then update the display
+        if (keyCode != -1) {
+            // Convert key code to a displayable string
+            String keyLabel = Keys.getKeyLabel(keyCode);
+            hotkeyDisplay.text(keyLabel);
+            hotkeyDisplay.setVisible(true);
+        } else {
+            hotkeyDisplay.setVisible(false);
+        }
+        
+        layout(); // Re-layout to ensure proper positioning
     }
 
     public Item getQuickslotItem() {

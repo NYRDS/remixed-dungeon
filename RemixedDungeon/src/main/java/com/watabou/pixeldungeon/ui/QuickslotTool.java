@@ -54,4 +54,8 @@ class QuickslotTool extends Tool {
         slot.enable(value);
         setActive(value);
     }
+    
+    public void setHotKey(int keyCode) {
+        slot.setHotKey(keyCode);
+    }
 }

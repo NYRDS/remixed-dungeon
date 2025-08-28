@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
+import com.nyrds.platform.input.Keys;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -113,6 +114,13 @@ public class Toolbar extends Component {
 
             if(i>slots.size()-1) {
                 slots.add(new QuickslotTool(hero));
+            }
+
+            // Assign hotkeys 1-9,0 for first 10 slots
+            if (i < 10) {
+                // For slots 0-9, assign keys 1-9,0 respectively
+                int keyCode = (i == 9) ? Keys.NUM_0 : (Keys.NUM_1 + i);
+                slots.get(i).setHotKey(keyCode);
             }
 
             slots.get(i).show(true);
