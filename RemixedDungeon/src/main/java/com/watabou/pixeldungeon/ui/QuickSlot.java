@@ -138,7 +138,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         
         // Add hotkey display
         hotkeyDisplay = new BitmapText(PixelScene.font1x);
-        hotkeyDisplay.color(0x77777777);
+        hotkeyDisplay.color(0x77ffffff);
         hotkeyDisplay.setScaleXY(0.6f, 0.6f);
         hotkeyDisplay.setVisible(false);
         add(hotkeyDisplay);
@@ -182,6 +182,12 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
         if (objectForSlot != null) {
             updateSlotBySelection();
+            return;
+        }
+
+        // If there's an item in the slot, trigger the itemSlot's onClick instead
+        if (quickslotItem != null) {
+            slot.simulateClick();
             return;
         }
 
