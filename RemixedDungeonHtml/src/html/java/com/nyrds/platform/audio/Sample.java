@@ -90,4 +90,13 @@ public enum Sample {
         }
         soundCache.clear();
     }
+
+    // Method needed for HTML version
+    public void enable(boolean value) {
+        if (value) {
+            unMute();
+        } else {
+            mute();
+        }
+    }
 }
