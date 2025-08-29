@@ -4,15 +4,20 @@ This document tracks the compilation errors encountered when trying to build the
 
 ## Current Status
 
-As of August 29, 2025, the HTML build fails with 31 compilation errors. The build process successfully runs the code generation steps (codegen and generateBuildConfig) but fails during the Java compilation phase.
+As of August 29, 2025, the HTML build fails with 40 compilation errors. The build process successfully runs the code generation steps (codegen and generateBuildConfig) but fails during the Java compilation phase.
 
 ## Error Analysis by File
 
-The errors are concentrated in specific files, with SaveUtils.java having the most issues:
+The errors are concentrated in specific files, with GameLoop.java and other files having issues:
 
-1. SaveUtils.java - Multiple errors (missing methods, incorrect method signatures)
-2. CustomLayerTilemap.java - Multiple errors (missing script methods)
-3. Various other files - 1-4 errors each
+1. GameLoop.java - 2 errors (missing methods)
+2. WndInstallingMod.java - 1 error (missing abstract method)
+3. TextureCache.java - 1 error (missing method)
+4. Potion.java - 1 error (missing method)
+5. TitleScene.java - 2 errors (type casting issues)
+6. WndModInfo.java - 1 error (missing method)
+7. WndHatInfo.java - 1 error (functional interface issue)
+8. Various other files - 1 error each
 
 ## Critical Issues
 
@@ -33,21 +38,11 @@ Many errors related to missing methods in platform abstraction classes:
 - Missing methods in FileSystem (various file operations)
 
 ### 3. SaveUtils Implementation Issues
-The HTML implementation of SaveUtils has extensive issues:
-- Missing Hero.getInstance() method - uses `Dungeon.hero` instead
-- Incorrect Dungeon.saveLevel() method signature - requires parameters in HTML
-- Missing Dungeon.getLevelsForSave() method
-- Missing Bundle.toHJSON() method - should use serialize() or similar
-- Missing GLog.error() method - should use GLog.error(String, Exception)
-- Missing Bundle.fromJson() method - should use Bundle constructor
-- Incorrect Bundle.getInt()/getString() method signatures - missing default value parameters
-- Missing Dungeon.loadLevelsFromBundle() method
-- Missing FileHandle.file() method - should use FileHandle.file() alternatives
+The HTML implementation of SaveUtils has been fixed and no longer causes compilation errors. All missing methods and incorrect method signatures have been resolved.
 
 ### 4. Graphics/Rendering Issues
-- Missing GL20 interface method signatures (glGetProgramiv, glGetShaderiv) - incompatible parameter types
+- Fixed GL20 interface method signatures (glGetProgramiv, glGetShaderiv) in Program.java and Shader.java
 - Missing BitmapData methods (eraseColor, getPixel, makeCircleMask)
-- Missing MaskedTilemapScript methods (resetCamera, uModel, lighting, camera, drawQuadSet)
 
 ### 5. UI/Android-Specific Issues
 - Missing Android-specific classes and methods (KeyEvent.KEYCODE_I, AndroidSAF methods)
@@ -118,12 +113,7 @@ The HTML implementation of SaveUtils has extensive issues:
 
 ## Platform Abstraction Class with Most Errors
 
-Based on the error analysis, **SaveUtils** causes the most compilation errors with multiple errors related to:
-- Missing or incorrect method implementations
-- Incorrect method signatures
-- Missing dependencies (Hero, Dungeon, Bundle, GLog classes)
-
-The **CustomLayerTilemap** class also has significant errors due to missing methods in the **MaskedTilemapScript** HTML implementation.
+Based on the error analysis, **AdsUtilsCommon** errors have been successfully fixed by updating the HTML AdsUtils class with properly typed maps.
 
 ## Next Steps
 
@@ -155,8 +145,12 @@ The build process requires:
 ## Error Summary
 
 The compilation errors can be grouped into these main categories:
-1. Platform-specific method implementations (15+ errors)
-2. Android-specific references (8+ errors)
-3. Graphics and rendering interface incompatibilities (5+ errors)
-4. Event handling and input processing (2+ errors)
-5. Ads and monetization interfaces (1+ errors)
+1. Android-specific references (8 errors)
+2. Platform-specific method implementations (7 errors)
+3. Generic type incompatibilities (4 errors)
+4. Missing abstract method implementations (3 errors)
+5. Graphics and rendering interface incompatibilities (3 errors)
+6. Event handling and input processing (2 errors)
+7. Bundle and serialization issues (2 errors)
+8. Constructor and type incompatibilities (2 errors)
+9. UI/Window implementation issues (1 error)

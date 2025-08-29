@@ -96,7 +96,7 @@ We've updated several platform-specific classes in the HTML module to match the 
   - AdsRewardVideo (Reward video ads)
 
 ## Current Status
-The HTML version fails to compile with 31 errors during the `compileJava` phase. The build process successfully completes the code generation steps but fails during Java compilation.
+The HTML version fails to compile with 40 errors during the `compileJava` phase. The build process successfully completes the code generation steps but fails during Java compilation.
 
 ### Remaining Issues
 1. Missing methods in game-specific classes
@@ -142,11 +142,15 @@ We're taking an incremental approach:
 - Java compilation (compileJava task) - 31 errors
 
 ### Error Categories
-1. Platform-specific method implementations (15+ errors)
-2. Android-specific references (8+ errors)
-3. Graphics and rendering interface incompatibilities (5+ errors)
-4. Event handling and input processing (2+ errors)
-5. Ads and monetization interfaces (1+ errors)
+1. Android-specific references (8 errors)
+2. Platform-specific method implementations (7 errors)
+3. Generic type incompatibilities (4 errors)
+4. Missing abstract method implementations (3 errors)
+5. Graphics and rendering interface incompatibilities (3 errors)
+6. Event handling and input processing (2 errors)
+7. Bundle and serialization issues (2 errors)
+8. Constructor and type incompatibilities (2 errors)
+9. UI/Window implementation issues (1 error)
 
 ## Build Commands Tested
 ```

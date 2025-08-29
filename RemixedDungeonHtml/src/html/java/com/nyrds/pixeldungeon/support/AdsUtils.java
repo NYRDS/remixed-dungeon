@@ -7,9 +7,9 @@ import java.util.Map;
  * HTML version of AdsUtils
  */
 public class AdsUtils {
-    static final Map<Object, Integer> bannerFails = new HashMap<>();
-    static final Map<Object, Integer> interstitialFails = new HashMap<>();
-    static final Map<Object, Integer> rewardVideoFails = new HashMap<>();
+    static final Map<AdsUtilsCommon.IBannerProvider, Integer> bannerFails = new HashMap<>();
+    static final Map<AdsUtilsCommon.IInterstitialProvider, Integer> interstitialFails = new HashMap<>();
+    static final Map<AdsUtilsCommon.IRewardVideoProvider, Integer> rewardVideoFails = new HashMap<>();
     
     public static void init() {
         // In HTML version, ads initialization is not needed
