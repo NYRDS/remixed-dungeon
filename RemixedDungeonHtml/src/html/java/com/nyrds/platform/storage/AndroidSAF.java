@@ -1,0 +1,42 @@
+package com.nyrds.platform.storage;
+
+import com.nyrds.platform.game.Game;
+
+import java.io.OutputStream;
+
+/**
+ * HTML version of AndroidSAF
+ */
+public class AndroidSAF {
+    public interface IListener {
+        void onFileSelected(String path);
+        void onFileSelectionCancelled();
+        void onMessage(String message);
+        void onFileCopy(String path);
+        void onFileSkip(String path);
+        void onComplete();
+        void onFileDelete(String entry);
+    }
+    
+    public static void selectFile(IListener listener, String mimeType) {
+        // In HTML version, file selection is not supported
+        System.out.println("File selection not supported in HTML version");
+        listener.onFileSelectionCancelled();
+    }
+    
+    public static void saveFile(IListener listener, String mimeType, String fileName) {
+        // In HTML version, file saving is not supported
+        System.out.println("File saving not supported in HTML version");
+        listener.onFileSelectionCancelled();
+    }
+    
+    public static void setListener(IListener listener) {
+        // In HTML version, setting listener is not supported
+        System.out.println("Setting listener not supported in HTML version");
+    }
+    
+    public static boolean isAutoSyncMaybeNeeded(String s) {
+        // In HTML version, auto sync is not needed
+        return false;
+    }
+}

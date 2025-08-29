@@ -32,6 +32,8 @@ Remixed Dungeon in [Google Play](https://play.google.com/store/apps/details?id=c
 
 ПК версия Remixed Dungeon в [VkPlay](https://vkplay.ru/play/game/remixed-dungeon-pixel-rogue/)
 
+HTML версия находится в разработке. Смотрите инструкции в [RemixedDungeonHtml/README.md](RemixedDungeonHtml/README.md).
+
 [Проект по переводу Remixed Dungeon](https://www.transifex.com/projects/p/remixed-dungeon/)
 
 [Facebook](https://www.facebook.com/RemixedDungeon)

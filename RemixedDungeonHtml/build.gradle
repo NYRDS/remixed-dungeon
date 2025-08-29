@@ -1,0 +1,102 @@
+plugins {
+    id 'java'
+    id 'org.wisepersist.gwt' version '1.1.16'
+}
+
+project.ext {
+    version = '32.3.alpha'
+    version_code = 1236
+    gwtVersion = '2.8.2'
+    gdxVersion = '1.12.1'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_10
+    targetCompatibility = JavaVersion.VERSION_1_10
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = [
+                    '../RemixedDungeon/src/main/java',
+                    'src/html/java',
+                    'src/main/java'
+            ]
+        }
+    }
+}
+
+// Create a task to generate the BuildConfig.java file
+tasks.register('generateBuildConfig') {
+    def version = project.ext.version
+    def version_code = project.ext.version_code
+    doLast {
+        def debug = false
+        def buildConfigFile = new File("${projectDir}/src/html/java/com/nyrds/pixeldungeon/ml/BuildConfig.java")
+        buildConfigFile.parentFile.mkdirs()
+        buildConfigFile.text = """
+        package com.nyrds.pixeldungeon.ml;
+
+        public class BuildConfig {
+            public static final boolean DEBUG = ${debug};
+            public static final String SAVES_PATH = "./saves/";
+            public static final String FLAVOR_platform = "html";
+            public static final String FLAVOR_market = "vkplay";
+            public static final String VERSION_NAME = "${version}";
+            public static final int VERSION_CODE = ${version_code};
+        }
+        """
+    }
+}
+
+tasks.register('codegen', Exec) {
+    commandLine 'python3', 'make_r.py'
+    doLast {
+        exec {
+            commandLine 'python3', 'make_json.py'
+        }
+    }
+}
+
+compileJava.dependsOn generateBuildConfig
+compileJava.dependsOn codegen
+
+repositories {
+    mavenCentral()
+    google()
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+}
+
+dependencies {
+    implementation project(':annotation')
+    implementation project(':json_clone')
+    
+    compileOnly project(':processor')
+    annotationProcessor project(':processor')
+    
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'org.luaj:luaj-jse:3.0.1'
+    implementation 'org.hjson:hjson:3.1.0'
+    implementation 'commons-io:commons-io:2.6'
+    implementation 'org.jetbrains:annotations:24.1.0'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    implementation 'com.google.guava:guava:32.0.1-jre'
+
+    // LibGDX dependencies for HTML backend
+    implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-backend-gwt:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+}
+
+// GWT configuration
+gwt {
+    gwtVersion = project.ext.gwtVersion
+    modules = ['com.nyrds.pixeldungeon.html.GdxDefinition']
+    devModules = ['com.nyrds.pixeldungeon.html.GdxDefinitionSuperdev']
+    compiler {
+        strict = true
+        disableCastChecking = true
+    }
+}

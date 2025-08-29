@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remixed Dungeon</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        
+        #game-container {
+            position: relative;
+            width: 800px;
+            height: 480px;
+            margin: 20px auto;
+        }
+        
+        #game-canvas {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+        }
+        
+        #instructions {
+            width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 14px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="loading">Loading Remixed Dungeon...</div>
+        <canvas id="game-canvas" tabindex="1"></canvas>
+    </div>
+    
+    <div id="instructions">
+        <p>Use arrow keys or WASD to move. Mouse to interact with UI elements.</p>
+        <p>Press F11 to toggle fullscreen mode.</p>
+    </div>
+
+    <script src="html/remixed-dungeon-html/html.nocache.js"></script>
+</body>
+</html>
