@@ -19,8 +19,7 @@ To have a fully functional HTML build, the following would need to be implemente
 2. Resolution of dependencies that are not compatible with GWT
 3. Implementation of Android-specific code that's not available in the browser environment
 4. Asset packaging for web delivery
-5. Fix BundleHelper generation issue
-6. Implement all missing methods identified in compilation errors
+5. Implement all missing methods identified in compilation errors
 
 ## Building
 

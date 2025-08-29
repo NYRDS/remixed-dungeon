@@ -21,7 +21,8 @@ sourceSets {
             srcDirs = [
                     '../RemixedDungeon/src/main/java',
                     'src/html/java',
-                    'src/main/java'
+                    'src/main/java',
+                    'build/generated/sources/annotationProcessor/java/main'
             ]
         }
     }
@@ -59,8 +60,10 @@ tasks.register('codegen', Exec) {
     }
 }
 
+// Ensure BundleHelper is generated before compilation
 compileJava.dependsOn generateBuildConfig
 compileJava.dependsOn codegen
+compileJava.dependsOn ':processor:compileJava'
 
 repositories {
     mavenCentral()
