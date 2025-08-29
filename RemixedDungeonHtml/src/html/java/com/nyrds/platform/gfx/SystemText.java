@@ -81,8 +81,18 @@ public class SystemText extends Text {
         // Reload fonts if needed
     }
     
+    public static void updateFontScale() {
+        // Simple implementation for HTML version
+    }
+    
     @Override
     public float baseLine() {
         return 12f; // Simple implementation for HTML version
+    }
+    
+    @Override
+    public int lines() {
+        // Simple implementation for HTML version
+        return 1;
     }
 }

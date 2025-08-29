@@ -1,5 +1,6 @@
 package com.nyrds.platform.input;
 
+import android.view.KeyEvent;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.watabou.utils.Signal;
@@ -63,13 +64,29 @@ public class Keys {
         }
     }
     
+    public static void processEvent(KeyEvent e) {
+        switch (e.getAction()) {
+            case KeyEvent.ACTION_DOWN:
+                event.dispatch(new Key(e.getKeyCode(), true));
+                break;
+            case KeyEvent.ACTION_UP:
+                event.dispatch(new Key(e.getKeyCode(), false));
+                break;
+        }
+    }
+    
     public static class Key {
+        public final static int END_OF_FRAME = -1;
+        public final static int BEGIN_OF_FRAME = -2;
+        
         public int code;
         public boolean pressed;
+        public long pressStartTime;
         
         public Key(int code, boolean pressed) {
             this.code = code;
             this.pressed = pressed;
+            this.pressStartTime = pressed ? System.currentTimeMillis() : 0;
         }
     }
 }

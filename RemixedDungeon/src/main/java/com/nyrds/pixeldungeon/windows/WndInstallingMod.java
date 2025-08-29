@@ -41,18 +41,6 @@ public class WndInstallingMod extends WndTitledMessage implements AndroidSAF.ILi
     }
 
     @Override
-    public void onFileSelected(String path) {
-        // Handle file selection
-        showText(Utils.format(R.string.WndInstallingMod_selected_file, path));
-    }
-
-    @Override
-    public void onFileSelectionCancelled() {
-        // Handle file selection cancellation
-        hide();
-    }
-
-    @Override
     public void onComplete() {
         hide();
     }

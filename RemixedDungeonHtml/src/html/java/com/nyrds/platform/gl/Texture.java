@@ -2,6 +2,7 @@ package com.nyrds.platform.gl;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Pixmap;
+import com.nyrds.platform.gfx.BitmapData;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -198,5 +199,8 @@ public class Texture {
         this.pixels = null; // Clear pixel data
         this.pixmap = null; // Clear pixmap
         this.dataDirty = true;
+    }
+
+    protected void bitmap(BitmapData bitmap) {
     }
 }
