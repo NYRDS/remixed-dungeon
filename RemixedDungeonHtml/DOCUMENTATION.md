@@ -67,7 +67,7 @@ The build process:
 
 The HTML version is currently in development and not yet fully compilable. We are working on implementing the necessary platform abstraction layer to make the game compile and run in a web browser.
 
-As of August 29, 2025, the build fails with 100 compilation errors. See COMPILATION_ERRORS.md for detailed error information.
+As of August 29, 2025, the build fails with 110 compilation errors. See COMPILATION_ERRORS.md for detailed error information.
 
 ### Recent Improvements
 
@@ -132,7 +132,7 @@ The build process successfully completes these steps:
 2. `generateBuildConfig` - Generates BuildConfig.java with HTML-specific settings
 
 ### Failed Step
-The build fails during `compileJava` with 100 compilation errors.
+The build fails during `compileJava` with 110 compilation errors.
 
 ## Next Steps
 
@@ -165,4 +165,4 @@ Both commands will currently fail with compilation errors.
 
 ## Error Analysis
 
-See COMPILATION_ERRORS.md for a detailed analysis of the 100 compilation errors encountered during the build process. The errors are categorized by type and root cause to help prioritize the implementation work.
+See COMPILATION_ERRORS.md for a detailed analysis of the 110 compilation errors encountered during the build process. The errors are categorized by type and root cause to help prioritize the implementation work.

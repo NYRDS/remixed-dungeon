@@ -4,7 +4,15 @@ This document tracks the compilation errors encountered when trying to build the
 
 ## Current Status
 
-As of August 29, 2025, the HTML build fails with 100 compilation errors. The build process successfully runs the code generation steps (codegen and generateBuildConfig) but fails during the Java compilation phase.
+As of August 29, 2025, the HTML build fails with 110 compilation errors. The build process successfully runs the code generation steps (codegen and generateBuildConfig) but fails during the Java compilation phase.
+
+## Error Analysis by File
+
+The errors are concentrated in specific files, with SaveUtils.java having the most issues:
+
+1. SaveUtils.java - 30 errors (missing methods, incorrect method signatures)
+2. CustomLayerTilemap.java - 10 errors (missing script methods)
+3. Various other files - 1-4 errors each
 
 ## Critical Issues
 
@@ -24,24 +32,39 @@ Many errors related to missing methods in platform abstraction classes:
 - Missing methods in MusicManager (enable method)
 - Missing methods in FileSystem (various file operations)
 
-### 3. Missing Level Methods
-Many errors related to missing methods in the Level class:
-- getWidth() and getHeight() methods
-- getPos() method on Hero objects
-- getLayer() method on LevelObject objects
-- isIsometricMode() method on Dungeon class
+### 3. SaveUtils Implementation Issues
+The HTML implementation of SaveUtils has extensive issues:
+- Missing Hero.getInstance() method
+- Incorrect Dungeon.saveLevel() method signature
+- Missing Dungeon.getLevelsForSave() method
+- Missing Bundle.toHJSON() method
+- Missing GLog.error() method
+- Missing Bundle.fromJson() method
+- Incorrect Bundle.getInt()/getString() method signatures
+- Missing Dungeon.loadLevelsFromBundle() method
+- Missing FileHandle.file() method
 
-### 4. Type Inference Issues
-Many errors related to val keyword and type inference:
-- "incompatible types: Map<Integer,LevelObject> cannot be converted to val"
-- "incompatible types: LevelObject cannot be converted to val"
-- "cannot find symbol" for various methods on val-typed variables
+### 4. Graphics/Rendering Issues
+- Missing GL20 interface method signatures (glGetProgramiv, glGetShaderiv)
+- Missing BitmapData methods (eraseColor, getPixel, makeCircleMask)
+- Missing MaskedTilemapScript methods (resetCamera, uModel, lighting, camera, drawQuadSet)
+
+### 5. UI/Android-Specific Issues
+- Missing Android-specific classes and methods (KeyEvent.KEYCODE_I, AndroidSAF methods)
+- Missing PlayGames class
+- Missing Ads-related methods
+- Missing UI event handling methods
+- Missing Keys.Key constants (BEGIN_OF_FRAME, END_OF_FRAME)
+- Missing KeyEvent constants (ACTION_DOWN)
+- Missing Touchscreen.processEvent method
+- Missing AndroidSAF methods (pickDirectoryForModInstall, copyModToAppStorage, mBaseSrcPath)
 
 ## Detailed Error Categories
 
 ### Bundle/Serialization Issues
 - Missing BundleHelper class
 - Missing save/load methods in SaveUtils
+- Incorrect Bundle method signatures
 
 ### Platform Abstraction Issues
 - Missing methods in ModdingMode (modException, listResources, getClassicTextRenderingMode, setClassicTextRenderingMode, getBitmapData)
@@ -69,7 +92,8 @@ Many errors related to val keyword and type inference:
 - Missing Keys.Key constants
 - Missing Touchscreen.processEvent method
 - Missing GL20 interface method signatures (glGetProgramiv, glGetShaderiv)
-- Missing BitmapData methods (eraseColor, getPixel)
+- Missing BitmapData methods (eraseColor, getPixel, makeCircleMask)
+- Missing MaskedTilemapScript methods
 
 ### Event Handling Issues
 - Missing event processing methods (Keys.processEvent, Touchscreen.processEvent)
@@ -92,6 +116,13 @@ Many errors related to val keyword and type inference:
 6. Incompatible method signatures between HTML and Desktop implementations
 7. Missing abstract method implementations in HTML-specific classes
 
+## Platform Abstraction Class with Most Errors
+
+Based on the error analysis, **SaveUtils** causes the most compilation errors with 30 errors, followed by **CustomLayerTilemap** with 10 errors. SaveUtils has issues with:
+- Missing or incorrect method implementations
+- Incorrect method signatures
+- Missing dependencies (Hero, Dungeon, Bundle, GLog classes)
+
 ## Next Steps
 
 1. Fix the BundleHelper generation issue
@@ -107,9 +138,10 @@ Many errors related to val keyword and type inference:
 ```
 ./gradlew :RemixedDungeonHtml:compileGwt
 ./gradlew :RemixedDungeonHtml:gwtSuperDev
+./gradlew :RemixedDungeonHtml:compileJava
 ```
 
-Both commands fail with the same 100 compilation errors.
+All commands fail with compilation errors during the `compileJava` phase.
 
 ## Required Dependencies
 
@@ -121,9 +153,9 @@ The build process requires:
 ## Error Summary
 
 The compilation errors can be grouped into these main categories:
-1. Platform-specific method implementations (40+ errors)
+1. Platform-specific method implementations (50+ errors)
 2. Android-specific references (20+ errors)
-3. Graphics and rendering interface incompatibilities (10+ errors)
+3. Graphics and rendering interface incompatibilities (15+ errors)
 4. Event handling and input processing (10+ errors)
 5. Ads and monetization interfaces (5+ errors)
 6. Analytics and event collection (5+ errors)

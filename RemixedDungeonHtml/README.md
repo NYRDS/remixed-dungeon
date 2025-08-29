@@ -4,7 +4,7 @@ This module contains the HTML build of Remixed Dungeon using LibGDX's GWT backen
 
 ## Current Status
 
-**NOT COMPILABLE** - As of August 29, 2025, the HTML build fails to compile with 100 compilation errors. See BUILD_ANALYSIS_REPORT.md for details.
+**NOT COMPILABLE** - As of August 29, 2025, the HTML build fails to compile with 110 compilation errors. See COMPILATION_ERRORS.md for details.
 
 The basic structure has been set up with:
 - GWT module definitions
@@ -33,7 +33,7 @@ To have a fully functional HTML build, the following would need to be implemente
 
 ## Building
 
-**Current Status**: Build fails with 100 compilation errors.
+**Current Status**: Build fails with 110 compilation errors.
 
 To build the HTML version of the game, run:
 
@@ -70,7 +70,6 @@ Note that the HTML version has some limitations compared to the desktop version:
 ## Documentation
 
 For detailed information about the current status, see:
-- BUILD_ANALYSIS_REPORT.md - Summary of build analysis
 - PROGRESS_SUMMARY.md - Detailed progress report
 - DOCUMENTATION.md - General documentation
 - COMPILATION_ERRORS.md - Detailed compilation error analysis
