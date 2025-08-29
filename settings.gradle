@@ -13,5 +13,6 @@ dependencyResolutionManagement {
         maven { url 'https://developer.huawei.com/repo/' }
     }
 }
-include ':RemixedDungeon'
-//include ':RemixedDungeonDesktop'
+//include ':RemixedDungeon'
+include ':RemixedDungeonDesktop'
+include ':RemixedDungeonHtml'

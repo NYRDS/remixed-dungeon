@@ -2,6 +2,10 @@
 
 This document tracks the compilation errors encountered when trying to build the HTML version of Remixed Dungeon.
 
+## Current Status
+
+As of August 29, 2025, the HTML build fails with 100 compilation errors. The build process successfully runs the code generation steps (codegen and generateBuildConfig) but fails during the Java compilation phase.
+
 ## Critical Issues
 
 ### 1. Missing BundleHelper Class
@@ -41,23 +45,42 @@ Many errors related to val keyword and type inference:
 
 ### Platform Abstraction Issues
 - Missing methods in ModdingMode (modException, listResources, getClassicTextRenderingMode, setClassicTextRenderingMode, getBitmapData)
-- Missing methods in Preferences (put methods for different types)
+- Missing methods in Preferences (put methods for different types: String, boolean, int, double, float)
 - Missing methods in Game (playGames variable, iap variable)
 - Missing methods in Sample (enable method)
 - Missing methods in MusicManager (enable method)
 - Missing methods in FileSystem (various file operations)
+- Missing methods in SystemText (updateFontScale)
+- Missing methods in StringsManager (useLocale)
 
 ### UI/Android-Specific Issues
 - Missing Android-specific classes and methods (KeyEvent.KEYCODE_I, AndroidSAF methods)
 - Missing PlayGames class
 - Missing Ads-related methods
 - Missing UI event handling methods
+- Missing Keys.Key constants (BEGIN_OF_FRAME, END_OF_FRAME)
+- Missing KeyEvent constants (ACTION_DOWN)
+- Missing Touchscreen.processEvent method
+- Missing AndroidSAF methods (pickDirectoryForModInstall, copyModToAppStorage, mBaseSrcPath)
 
 ### Graphics/Rendering Issues
 - Missing methods in Texture classes
 - Missing Gl.flush() method
 - Missing Keys.Key constants
 - Missing Touchscreen.processEvent method
+- Missing GL20 interface method signatures (glGetProgramiv, glGetShaderiv)
+- Missing BitmapData methods (eraseColor, getPixel)
+
+### Event Handling Issues
+- Missing event processing methods (Keys.processEvent, Touchscreen.processEvent)
+- Missing abstract method implementations (WndInstallingMod.onFileSelectionCancelled)
+
+### Ads and Monetization Issues
+- Missing Ads methods (isRewardVideoReady, removeEasyModeBanner, displayEasyModeBanner)
+- Missing AdsRewardVideo method signatures (show method with parameters)
+
+### Analytics and Event Collection Issues
+- Missing EventCollector methods (logCountedEvent)
 
 ## Root Causes
 
@@ -66,6 +89,8 @@ Many errors related to val keyword and type inference:
 3. There are Android-specific references that don't exist in the HTML version
 4. Some core game methods are not implemented in the HTML version
 5. Missing UI event handling for the HTML platform
+6. Incompatible method signatures between HTML and Desktop implementations
+7. Missing abstract method implementations in HTML-specific classes
 
 ## Next Steps
 
@@ -74,3 +99,33 @@ Many errors related to val keyword and type inference:
 3. Remove or stub Android-specific references
 4. Add HTML-specific implementations for UI event handling
 5. Implement missing graphics/texture methods
+6. Fix method signature incompatibilities
+7. Implement missing abstract methods
+
+## Build Commands Tested
+
+```
+./gradlew :RemixedDungeonHtml:compileGwt
+./gradlew :RemixedDungeonHtml:gwtSuperDev
+```
+
+Both commands fail with the same 100 compilation errors.
+
+## Required Dependencies
+
+The build process requires:
+- lxml Python package (successfully installed)
+- GWT 2.8.2
+- LibGDX dependencies for HTML backend
+
+## Error Summary
+
+The compilation errors can be grouped into these main categories:
+1. Platform-specific method implementations (40+ errors)
+2. Android-specific references (20+ errors)
+3. Graphics and rendering interface incompatibilities (10+ errors)
+4. Event handling and input processing (10+ errors)
+5. Ads and monetization interfaces (5+ errors)
+6. Analytics and event collection (5+ errors)
+7. Bundle and serialization issues (5+ errors)
+8. Abstract class implementation issues (5+ errors)
