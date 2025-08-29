@@ -8,11 +8,13 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.GL20;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.gl.Gl;
 import com.nyrds.platform.input.PointerEvent;
+import com.nyrds.platform.support.Iap;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Camera;
@@ -34,6 +36,8 @@ public class Game implements ApplicationListener, InputProcessor {
     public static boolean softPaused;
 
     protected GameLoop gameLoop;
+    public Iap iap = new Iap();
+    public PlayGames playGames = new PlayGames();
     
     private final Map<Integer, Long> keyDownTimes = new HashMap<>();
     private static final long AUTO_FIRE_INTERVAL = 250;

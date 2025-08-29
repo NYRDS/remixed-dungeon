@@ -22,6 +22,7 @@ sourceSets {
                     '../RemixedDungeon/src/main/java',
                     'src/html/java',
                     'src/main/java',
+                    'src/market_none/java',
                     'build/generated/sources/annotationProcessor/java/main'
             ]
         }
