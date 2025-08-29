@@ -18,4 +18,20 @@ public class Ads {
         // In HTML version, ads are not supported
         return false;
     }
+    
+    // Additional methods needed for HTML version
+    public static void removeEasyModeBanner() {
+        // In HTML version, ads are not supported
+        System.out.println("Easy mode banner removal not supported in HTML version");
+    }
+    
+    public static boolean isRewardVideoReady() {
+        // In HTML version, ads are not supported
+        return false;
+    }
+    
+    public static void displayEasyModeBanner() {
+        // In HTML version, ads are not supported
+        System.out.println("Easy mode banner display not supported in HTML version");
+    }
 }

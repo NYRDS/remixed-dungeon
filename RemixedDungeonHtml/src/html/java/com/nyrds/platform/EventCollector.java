@@ -106,4 +106,10 @@ public class EventCollector {
         // Disable analytics is not supported in HTML build
         System.out.println("Analytics disabled");
     }
+    
+    // Method needed for MovieRewardTask
+    public static void logCountedEvent(String event, int count) {
+        // Counted event logging is not supported in HTML build
+        System.out.println("CountedEvent: " + event + ", Count: " + count);
+    }
 }
