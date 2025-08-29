@@ -5,6 +5,13 @@ We've been working on making the HTML version of Remixed Dungeon compilable by i
 
 As of August 29, 2025, the build fails with 100 compilation errors. See COMPILATION_ERRORS.md for detailed error information.
 
+## Recent Improvements
+
+Recent commits have improved the build configuration:
+- Include `build/generated/sources/annotationProcessor/java/main` in html sourceSets so generated classes (e.g., BundleHelper) are compiled
+- Added compileJava dependency on `:processor:compileJava` to ensure annotation processing runs before HTML compilation
+- Retained generateBuildConfig and codegen dependencies
+
 ## Work Completed
 
 ### 1. Fixed Class Conflicts
@@ -18,7 +25,7 @@ As of August 29, 2025, the build fails with 100 compilation errors. See COMPILAT
 - Successfully configured code generation steps (codegen and generateBuildConfig)
 - Configured build to include generated sources in compilation
 
-### 2. Updated Platform-Specific Classes
+### 3. Updated Platform-Specific Classes
 We've updated several platform-specific classes in the HTML module to match the desktop version's API:
 
 #### StringsManager
@@ -75,7 +82,7 @@ We've updated several platform-specific classes in the HTML module to match the 
 - Added missing methods: `requestInternetPermission`, etc.
 - Implemented proper game handling for HTML environment
 
-### 3. Build Configuration
+### 4. Build Configuration
 - Verified build.gradle configuration for HTML module
 - Ensured proper source sets and dependencies
 - Successfully configured code generation steps (codegen and generateBuildConfig)

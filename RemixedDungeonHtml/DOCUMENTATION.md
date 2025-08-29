@@ -68,6 +68,13 @@ The HTML version is currently in development and not yet fully compilable. We ar
 
 As of August 29, 2025, the build fails with 100 compilation errors. See COMPILATION_ERRORS.md for detailed error information.
 
+### Recent Improvements
+
+Recent commits have improved the build configuration:
+- Include `build/generated/sources/annotationProcessor/java/main` in html sourceSets so generated classes (e.g., BundleHelper) are compiled
+- Added compileJava dependency on `:processor:compileJava` to ensure annotation processing runs before HTML compilation
+- Retained generateBuildConfig and codegen dependencies
+
 ### Work Completed So Far
 
 1. Updated platform-specific classes to match the desktop version's API:

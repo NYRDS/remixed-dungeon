@@ -12,6 +12,13 @@ The basic structure has been set up with:
 - Build configuration for GWT compilation
 - Implementation of many platform abstraction classes
 
+## Recent Improvements
+
+Latest commits have improved the build configuration:
+- Include `build/generated/sources/annotationProcessor/java/main` in html sourceSets so generated classes (e.g., BundleHelper) are compiled
+- Added compileJava dependency on `:processor:compileJava` to ensure annotation processing runs before HTML compilation
+- Retained generateBuildConfig and codegen dependencies
+
 ## What's Missing
 
 To have a fully functional HTML build, the following would need to be implemented:
