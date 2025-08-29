@@ -56,6 +56,7 @@ The HTML build uses:
 - GWT 2.8.2 for Java to JavaScript compilation
 - The same core game code as the desktop version
 - Platform-specific implementations for HTML in the `src/html/java` directory
+- Market-specific implementations in the `src/market_none/java` directory
 
 The build process:
 1. Compiles the Java code to JavaScript using GWT
@@ -74,6 +75,9 @@ Recent commits have improved the build configuration:
 - Include `build/generated/sources/annotationProcessor/java/main` in html sourceSets so generated classes (e.g., BundleHelper) are compiled
 - Added compileJava dependency on `:processor:compileJava` to ensure annotation processing runs before HTML compilation
 - Retained generateBuildConfig and codegen dependencies
+- Created `market_none` folder with platform-specific implementations for HTML
+- Added proper Iap, PlayGames, Ads, and AdsRewardVideo implementations
+- Updated HTML Game class with missing instance variables (iap, playGames)
 
 ### Work Completed So Far
 
@@ -99,6 +103,13 @@ Recent commits have improved the build configuration:
 3. Removed manually created `BundleHelper` to let the annotation processor generate it
 
 4. Configured build to include generated sources in compilation
+
+5. Added market_none flavor implementation:
+   - Created complete Iap implementation with proper stubs
+   - Added IIapCallback interface
+   - Created PlayGames implementation with proper stubs
+   - Added Ads and AdsRewardVideo implementations with proper stubs
+   - Updated Game class with missing instance variables (iap, playGames)
 
 ### Remaining Issues
 

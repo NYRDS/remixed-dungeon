@@ -18,6 +18,9 @@ Latest commits have improved the build configuration:
 - Include `build/generated/sources/annotationProcessor/java/main` in html sourceSets so generated classes (e.g., BundleHelper) are compiled
 - Added compileJava dependency on `:processor:compileJava` to ensure annotation processing runs before HTML compilation
 - Retained generateBuildConfig and codegen dependencies
+- Created `market_none` folder with platform-specific implementations for HTML
+- Added proper Iap, PlayGames, Ads, and AdsRewardVideo implementations
+- Updated HTML Game class with missing instance variables (iap, playGames)
 
 ## What's Missing
 

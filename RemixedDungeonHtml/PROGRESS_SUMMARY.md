@@ -11,6 +11,9 @@ Recent commits have improved the build configuration:
 - Include `build/generated/sources/annotationProcessor/java/main` in html sourceSets so generated classes (e.g., BundleHelper) are compiled
 - Added compileJava dependency on `:processor:compileJava` to ensure annotation processing runs before HTML compilation
 - Retained generateBuildConfig and codegen dependencies
+- Created `market_none` folder with platform-specific implementations for HTML
+- Added proper Iap, PlayGames, Ads, and AdsRewardVideo implementations
+- Updated HTML Game class with missing instance variables (iap, playGames)
 
 ## Work Completed
 
@@ -24,6 +27,7 @@ Recent commits have improved the build configuration:
 - Ensured proper source sets and dependencies
 - Successfully configured code generation steps (codegen and generateBuildConfig)
 - Configured build to include generated sources in compilation
+- Added market_none source set for HTML-specific platform implementations
 
 ### 3. Updated Platform-Specific Classes
 We've updated several platform-specific classes in the HTML module to match the desktop version's API:
@@ -81,11 +85,15 @@ We've updated several platform-specific classes in the HTML module to match the 
 #### Game
 - Added missing methods: `requestInternetPermission`, etc.
 - Implemented proper game handling for HTML environment
+- Added missing instance variables: `iap` and `playGames`
 
-### 4. Build Configuration
-- Verified build.gradle configuration for HTML module
-- Ensured proper source sets and dependencies
-- Successfully configured code generation steps (codegen and generateBuildConfig)
+### 4. Added Market-None Flavor Implementation
+- Created complete market_none implementation with proper stubs for:
+  - Iap (In-app purchases)
+  - IIapCallback (IAP callback interface)
+  - PlayGames (Game services)
+  - Ads (Advertisement services)
+  - AdsRewardVideo (Reward video ads)
 
 ## Current Status
 The HTML version fails to compile with 100 errors during the `compileJava` phase. The build process successfully completes the code generation steps but fails during Java compilation.
