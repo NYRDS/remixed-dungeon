@@ -59,4 +59,10 @@ public class AndroidSAF {
         // In HTML version, copying mods is not supported
         System.out.println("Copying mods to app storage not supported in HTML version");
     }
+    
+    public static OutputStream outputStreamToDocument(Game game, String path, String filename) {
+        // In HTML version, creating output streams is not supported
+        System.out.println("Creating output stream to document not supported in HTML version");
+        return null;
+    }
 }
