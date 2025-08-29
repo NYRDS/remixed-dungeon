@@ -59,6 +59,33 @@ public enum Preferences {
         HtmlPreferences.putString(key, value);
     }
 
+    // Missing put methods with dummy stubs
+    public static void put(String key, boolean value) {
+        putBoolean(key, value);
+    }
+
+    public static void put(String key, int value) {
+        putInt(key, value);
+    }
+
+    public static void put(String key, double value) {
+        putDouble(key, value);
+    }
+
+    public static void put(String key, String value) {
+        putString(key, value);
+    }
+
+    public static void put(String key, Boolean value) {
+        if (value != null) {
+            putBoolean(key, value);
+        }
+    }
+
+    public static void put(String key, float value) {
+        putFloat(key, value);
+    }
+
     public static void remove(String key) {
         HtmlPreferences.remove(key);
     }
