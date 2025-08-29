@@ -3,7 +3,7 @@
 ## Overview
 We've been working on making the HTML version of Remixed Dungeon compilable by implementing the necessary platform abstraction layer. The HTML version uses LibGDX's HTML backend and GWT for compilation to JavaScript.
 
-As of August 29, 2025, the build fails with 110 compilation errors. See COMPILATION_ERRORS.md for detailed error information.
+As of August 29, 2025, the build fails with 31 compilation errors. See COMPILATION_ERRORS.md for detailed error information.
 
 ## Recent Improvements
 
@@ -96,7 +96,7 @@ We've updated several platform-specific classes in the HTML module to match the 
   - AdsRewardVideo (Reward video ads)
 
 ## Current Status
-The HTML version fails to compile with 110 errors during the `compileJava` phase. The build process successfully completes the code generation steps but fails during Java compilation.
+The HTML version fails to compile with 31 errors during the `compileJava` phase. The build process successfully completes the code generation steps but fails during Java compilation.
 
 ### Remaining Issues
 1. Missing methods in game-specific classes
@@ -132,29 +132,27 @@ We're taking an incremental approach:
 4. Test compilation after each change
 5. Continue until the project compiles successfully
 
-## Recent Build Test Results (August 29, 2025)
+### Recent Build Test Results (August 29, 2025)
 
 ### Successful Steps
 - Code generation (codegen task)
 - Build configuration generation (generateBuildConfig task)
 
 ### Failed Steps
-- Java compilation (compileJava task) - 110 errors
+- Java compilation (compileJava task) - 31 errors
 
 ### Error Categories
-1. Platform-specific method implementations (50+ errors)
-2. Android-specific references (20+ errors)
-3. Graphics and rendering interface incompatibilities (15+ errors)
-4. Event handling and input processing (10+ errors)
-5. Ads and monetization interfaces (5+ errors)
-6. Analytics and event collection (5+ errors)
-7. Bundle and serialization issues (5+ errors)
-8. Abstract class implementation issues (5+ errors)
+1. Platform-specific method implementations (15+ errors)
+2. Android-specific references (8+ errors)
+3. Graphics and rendering interface incompatibilities (5+ errors)
+4. Event handling and input processing (2+ errors)
+5. Ads and monetization interfaces (1+ errors)
 
 ## Build Commands Tested
 ```
-./gradlew :RemixedDungeonHtml:compileGwt
-./gradlew :RemixedDungeonHtml:gwtSuperDev
+./gradlew -c settings.html.gradle :RemixedDungeonHtml:compileJava
+./gradlew -c settings.html.gradle :RemixedDungeonHtml:compileGwt
+./gradlew -c settings.html.gradle :RemixedDungeonHtml:gwtSuperDev
 ```
 
-Both commands fail with the same compilation errors during the `compileJava` phase.
+All commands fail with compilation errors during the `compileJava` phase.

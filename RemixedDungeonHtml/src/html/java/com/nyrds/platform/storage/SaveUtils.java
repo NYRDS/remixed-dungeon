@@ -20,6 +20,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import java.io.File;
+import java.io.IOException;
 
 public class SaveUtils {
 
@@ -31,26 +32,10 @@ public class SaveUtils {
     
     public static boolean saveGame(String fileName) {
         try {
-            Bundle bundle = new Bundle();
-            
-            bundle.put("version", GameLoop.version);
-            bundle.put("versionCode", GameLoop.versionCode);
-            bundle.put("hero", Hero.getInstance());
-            bundle.put("depth", Statistics.deepestFloor);
-            
-            bundle.put("challenges", Dungeon.getChallenges());
-            bundle.put("levelId", Dungeon.levelId);
-            
-            Dungeon.saveLevel();
-            
-            bundle.put("levels", Dungeon.getLevelsForSave());
-            
-            FileHandle file = local(fileName);
-            file.writeString(bundle.toHJSON(), false);
-            
+            Dungeon.saveGame(fileName);
             return true;
-        } catch (Exception e) {
-            GLog.error("Failed to save game to " + fileName, e);
+        } catch (IOException e) {
+            GLog.toFile("Failed to save game to " + fileName, e);
             return false;
         }
     }
@@ -72,20 +57,11 @@ public class SaveUtils {
                 return false;
             }
             
-            Bundle bundle = Bundle.fromJson(file.readString());
-            
-            // Load basic game data
-            Hero.getInstance().restoreFromBundle(bundle.getBundle("hero"));
-            Statistics.deepestFloor = bundle.getInt("depth", 0);
-            Dungeon.setChallenges(bundle.getInt("challenges", 0));
-            Dungeon.levelId = bundle.getString("levelId", "test");
-            
-            // Load levels
-            Dungeon.loadLevelsFromBundle(bundle.getBundle("levels"));
-            
+            // Use the existing Dungeon load mechanism
+            Dungeon.loadGame();
             return true;
         } catch (Exception e) {
-            GLog.error("Failed to load game from " + fileName, e);
+            GLog.toFile("Failed to load game from " + fileName, e);
             return false;
         }
     }
@@ -149,8 +125,8 @@ public class SaveUtils {
         for (FileHandle file : files) {
             if (isRelatedTo(file.name(), heroClass)) {
 
-                String from = local(slot + File.separator + file.name()).file().getAbsolutePath();
-                String to = local(file.name()).file().getAbsolutePath();
+                String from = local(slot + File.separator + file.name()).path();
+                String to = local(file.name()).path();
                 FileSystem.copyFile(from, to);
             }
         }
@@ -158,16 +134,16 @@ public class SaveUtils {
     
     public static void deleteSaveFromSlot(String slot, HeroClass cl) {
 
-        File slotDir = local(slot).file().getAbsoluteFile();
+        FileHandle slotDir = local(slot);
 
-        File[] slotFiles = slotDir.listFiles();
+        FileHandle[] slotFiles = slotDir.list();
 
         if (slotFiles != null) {
-            for (File file : slotFiles) {
-                String path = file.getAbsolutePath();
-                if (isRelatedTo(path, cl)) {
+            for (FileHandle file : slotFiles) {
+                String fileName = file.name();
+                if (isRelatedTo(fileName, cl)) {
                     if(!file.delete()) {
-                        GLog.toFile("Failed to delete file: %s !", path);
+                        GLog.toFile("Failed to delete file: %s !", fileName);
                     }
                 }
             }
@@ -177,15 +153,18 @@ public class SaveUtils {
     public static void copySaveToSlot(String slot, HeroClass cl) {
         deleteSaveFromSlot(slot, cl);
 
-        String[] files = local("").file().list();
+        FileHandle[] files = local("").list();
 
-        for (String file : files) {
-            if (isRelatedTo(file, cl)) {
-                
-                String from = local(file).file().getAbsolutePath();
-                String to = local(slot + File.separator + file).file().getAbsolutePath();
+        if (files != null) {
+            for (FileHandle file : files) {
+                String fileName = file.name();
+                if (isRelatedTo(fileName, cl)) {
+                    
+                    String from = file.path();
+                    String to = local(slot + File.separator + fileName).path();
 
-                FileSystem.copyFile(from,to);
+                    FileSystem.copyFile(from,to);
+                }
             }
         }
     }
@@ -195,7 +174,7 @@ public class SaveUtils {
             FileHandle file = local(fileName);
             return file.delete();
         } catch (Exception e) {
-            GLog.error("Failed to delete game file " + fileName, e);
+            GLog.toFile("Failed to delete game file " + fileName, e);
             return false;
         }
     }
@@ -208,10 +187,12 @@ public class SaveUtils {
     public static boolean deleteLevels(HeroClass cl) {
         FileHandle[] files = local("").list();
 
-        for (FileHandle file : files) {
-            String path = file.path();
-            if (path.endsWith(".dat") && hasClassTag(cl, path)) {
-                file.delete();
+        if (files != null) {
+            for (FileHandle file : files) {
+                String path = file.path();
+                if (path.endsWith(".dat") && hasClassTag(cl, path)) {
+                    file.delete();
+                }
             }
         }
         return false;
@@ -258,7 +239,7 @@ public class SaveUtils {
         return buildSlotFromTag(AUTO_SAVE, dif);
     }
 
-    static private String buildSlotFromTag(String tag, int difficulty)  {
+    static public String buildSlotFromTag(String tag, int difficulty)  {
         return ModdingBase.activeMod() + "_" + tag + "_" + difficulty;
     }
     

@@ -4,14 +4,14 @@ This document tracks the compilation errors encountered when trying to build the
 
 ## Current Status
 
-As of August 29, 2025, the HTML build fails with 110 compilation errors. The build process successfully runs the code generation steps (codegen and generateBuildConfig) but fails during the Java compilation phase.
+As of August 29, 2025, the HTML build fails with 31 compilation errors. The build process successfully runs the code generation steps (codegen and generateBuildConfig) but fails during the Java compilation phase.
 
 ## Error Analysis by File
 
 The errors are concentrated in specific files, with SaveUtils.java having the most issues:
 
-1. SaveUtils.java - 30 errors (missing methods, incorrect method signatures)
-2. CustomLayerTilemap.java - 10 errors (missing script methods)
+1. SaveUtils.java - Multiple errors (missing methods, incorrect method signatures)
+2. CustomLayerTilemap.java - Multiple errors (missing script methods)
 3. Various other files - 1-4 errors each
 
 ## Critical Issues
@@ -34,18 +34,18 @@ Many errors related to missing methods in platform abstraction classes:
 
 ### 3. SaveUtils Implementation Issues
 The HTML implementation of SaveUtils has extensive issues:
-- Missing Hero.getInstance() method
-- Incorrect Dungeon.saveLevel() method signature
+- Missing Hero.getInstance() method - uses `Dungeon.hero` instead
+- Incorrect Dungeon.saveLevel() method signature - requires parameters in HTML
 - Missing Dungeon.getLevelsForSave() method
-- Missing Bundle.toHJSON() method
-- Missing GLog.error() method
-- Missing Bundle.fromJson() method
-- Incorrect Bundle.getInt()/getString() method signatures
+- Missing Bundle.toHJSON() method - should use serialize() or similar
+- Missing GLog.error() method - should use GLog.error(String, Exception)
+- Missing Bundle.fromJson() method - should use Bundle constructor
+- Incorrect Bundle.getInt()/getString() method signatures - missing default value parameters
 - Missing Dungeon.loadLevelsFromBundle() method
-- Missing FileHandle.file() method
+- Missing FileHandle.file() method - should use FileHandle.file() alternatives
 
 ### 4. Graphics/Rendering Issues
-- Missing GL20 interface method signatures (glGetProgramiv, glGetShaderiv)
+- Missing GL20 interface method signatures (glGetProgramiv, glGetShaderiv) - incompatible parameter types
 - Missing BitmapData methods (eraseColor, getPixel, makeCircleMask)
 - Missing MaskedTilemapScript methods (resetCamera, uModel, lighting, camera, drawQuadSet)
 
@@ -118,10 +118,12 @@ The HTML implementation of SaveUtils has extensive issues:
 
 ## Platform Abstraction Class with Most Errors
 
-Based on the error analysis, **SaveUtils** causes the most compilation errors with 30 errors, followed by **CustomLayerTilemap** with 10 errors. SaveUtils has issues with:
+Based on the error analysis, **SaveUtils** causes the most compilation errors with multiple errors related to:
 - Missing or incorrect method implementations
 - Incorrect method signatures
 - Missing dependencies (Hero, Dungeon, Bundle, GLog classes)
+
+The **CustomLayerTilemap** class also has significant errors due to missing methods in the **MaskedTilemapScript** HTML implementation.
 
 ## Next Steps
 
@@ -136,9 +138,9 @@ Based on the error analysis, **SaveUtils** causes the most compilation errors wi
 ## Build Commands Tested
 
 ```
-./gradlew :RemixedDungeonHtml:compileGwt
-./gradlew :RemixedDungeonHtml:gwtSuperDev
-./gradlew :RemixedDungeonHtml:compileJava
+./gradlew -c settings.html.gradle :RemixedDungeonHtml:compileJava
+./gradlew -c settings.html.gradle :RemixedDungeonHtml:compileGwt
+./gradlew -c settings.html.gradle :RemixedDungeonHtml:gwtSuperDev
 ```
 
 All commands fail with compilation errors during the `compileJava` phase.
@@ -153,11 +155,8 @@ The build process requires:
 ## Error Summary
 
 The compilation errors can be grouped into these main categories:
-1. Platform-specific method implementations (50+ errors)
-2. Android-specific references (20+ errors)
-3. Graphics and rendering interface incompatibilities (15+ errors)
-4. Event handling and input processing (10+ errors)
-5. Ads and monetization interfaces (5+ errors)
-6. Analytics and event collection (5+ errors)
-7. Bundle and serialization issues (5+ errors)
-8. Abstract class implementation issues (5+ errors)
+1. Platform-specific method implementations (15+ errors)
+2. Android-specific references (8+ errors)
+3. Graphics and rendering interface incompatibilities (5+ errors)
+4. Event handling and input processing (2+ errors)
+5. Ads and monetization interfaces (1+ errors)
