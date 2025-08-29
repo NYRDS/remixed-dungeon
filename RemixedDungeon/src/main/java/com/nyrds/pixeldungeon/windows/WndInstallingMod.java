@@ -46,6 +46,12 @@ public class WndInstallingMod extends WndTitledMessage implements AndroidSAF.ILi
     }
 
     @Override
+    public void onFileSelectionCancelled() {
+        // Handle file selection cancellation
+        hide();
+    }
+
+    @Override
     public void hide()  {
         super.hide();
         AndroidSAF.setListener(null);

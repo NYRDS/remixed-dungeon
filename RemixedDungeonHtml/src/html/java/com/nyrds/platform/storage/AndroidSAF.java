@@ -8,6 +8,10 @@ import java.io.OutputStream;
  * HTML version of AndroidSAF
  */
 public class AndroidSAF {
+    // Variables needed for HTML version
+    public static String mBaseSrcPath = null;
+    public static String mBaseDstPath = null;
+    
     public interface IListener {
         void onFileSelected(String path);
         void onFileSelectionCancelled();
@@ -38,5 +42,21 @@ public class AndroidSAF {
     public static boolean isAutoSyncMaybeNeeded(String s) {
         // In HTML version, auto sync is not needed
         return false;
+    }
+    
+    // Methods needed for HTML version (dummy implementations)
+    public static void pickDirectoryForModInstall() {
+        // In HTML version, directory picking is not supported
+        System.out.println("Directory picking for mod install not supported in HTML version");
+    }
+    
+    public static void pickDirectoryForModExport() {
+        // In HTML version, directory picking is not supported
+        System.out.println("Directory picking for mod export not supported in HTML version");
+    }
+    
+    public static void copyModToAppStorage() {
+        // In HTML version, copying mods is not supported
+        System.out.println("Copying mods to app storage not supported in HTML version");
     }
 }
