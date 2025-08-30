@@ -21,7 +21,6 @@ sourceSets {
             srcDirs = [
                     '../RemixedDungeon/src/main/java',
                     'src/html/java',
-                    'src/main/java',
                     'src/market_none/java',
                     'build/generated/sources/annotationProcessor/java/main'
             ]
@@ -29,6 +28,7 @@ sourceSets {
         resources {
             srcDirs = [
                     'src/main/resources',
+                    'src/html/java',
                     'com'
             ]
         }
@@ -80,12 +80,17 @@ repositories {
 
 dependencies {
     implementation project(':annotation')
+    gwt project(':annotation')
+    
     implementation project(':json_clone')
+    gwt project(':json_clone')
     
     compileOnly project(':processor')
     annotationProcessor project(':processor')
     
     implementation 'com.google.code.gson:gson:2.10.1'
+    gwt 'com.google.code.gson:gson:2.10.1'
+    
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'org.hjson:hjson:3.1.0'
     implementation 'commons-io:commons-io:2.6'
@@ -96,10 +101,8 @@ dependencies {
 
     // LibGDX dependencies for HTML backend
     implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
-    implementation("com.badlogicgames.gdx:gdx-backend-gwt:$gdxVersion") {
-        exclude group: 'com.badlogicgames.gdx', module: 'gdx-backend-gwt'
-    }
-    implementation files('libs/gdx-backend-gwt-modified.jar')
+    implementation "com.badlogicgames.gdx:gdx:$gdxVersion:sources"
+    implementation files('libs/gdx-backend-gwt-fixed-complete-modified.jar')
     implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
 }
 
@@ -112,5 +115,9 @@ gwt {
         strict = true
         disableCastChecking = true
     }
-    src = files(file('src/main/java'), file('src/html/java'), file('src/market_none/java'), file('../RemixedDungeon/src/main/java'), file('build/generated/sources/annotationProcessor/java/main'))
+    src = files(
+        file('src/html/java'),
+        file('../RemixedDungeon/src/main/java'),
+        file('build/generated/sources/annotationProcessor/java/main')
+    )
 }
