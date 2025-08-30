@@ -11,6 +11,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class FileSystem {
     public static boolean deleteFile(String fileName) {
@@ -128,7 +129,8 @@ public class FileSystem {
     }
     
     static public File getInternalStorageFile(String fileName) {
-        return getInternalStorageFileHandle(fileName).file();
+        // In HTML version, we return a File object representing the path
+        return new File(Gdx.files.local(fileName).path());
     }
     
     public static File[] listExternalStorage() {
@@ -184,5 +186,12 @@ public class FileSystem {
     
     public static OutputStream getOutputStream(String fileName) {
         return openFileOutput(fileName);
+    }
+    
+    // Method needed for mod exporting
+    public static void zipFolderTo(OutputStream outputStream, File file, int compressionLevel, Predicate<File> filter) throws IOException {
+        // In HTML version, zipping folders is not supported
+        System.out.println("Zipping folders not supported in HTML version");
+        throw new IOException("Zipping folders not supported in HTML version");
     }
 }

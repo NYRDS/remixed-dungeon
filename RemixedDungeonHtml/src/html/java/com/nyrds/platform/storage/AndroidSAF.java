@@ -2,6 +2,7 @@ package com.nyrds.platform.storage;
 
 import com.nyrds.platform.game.Game;
 
+import java.io.IOException;
 import java.io.OutputStream;
 
 /**
@@ -58,9 +59,9 @@ public class AndroidSAF {
         System.out.println("Copying mods to app storage not supported in HTML version");
     }
     
-    public static OutputStream outputStreamToDocument(Game game, String path, String filename) {
+    public static OutputStream outputStreamToDocument(Game game, String path, String filename) throws IOException {
         // In HTML version, creating output streams is not supported
         System.out.println("Creating output stream to document not supported in HTML version");
-        return null;
+        throw new IOException("Creating output stream to document not supported in HTML version");
     }
 }
