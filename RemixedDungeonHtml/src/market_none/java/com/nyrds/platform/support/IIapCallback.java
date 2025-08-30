@@ -5,5 +5,8 @@ package com.nyrds.platform.support;
  */
 public interface IIapCallback {
     void onPurchaseOk();
-    void onPurchaseFail();
+    
+    default void onPurchaseFail() {
+        // Default empty implementation
+    }
 }

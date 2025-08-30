@@ -13,8 +13,6 @@ public class AndroidSAF {
     public static String mBaseDstPath = null;
     
     public interface IListener {
-        void onFileSelected(String path);
-        void onFileSelectionCancelled();
         void onMessage(String message);
         void onFileCopy(String path);
         void onFileSkip(String path);
@@ -25,13 +23,13 @@ public class AndroidSAF {
     public static void selectFile(IListener listener, String mimeType) {
         // In HTML version, file selection is not supported
         System.out.println("File selection not supported in HTML version");
-        listener.onFileSelectionCancelled();
+        listener.onComplete(); // Use onComplete instead of removed onFileSelectionCancelled
     }
     
     public static void saveFile(IListener listener, String mimeType, String fileName) {
         // In HTML version, file saving is not supported
         System.out.println("File saving not supported in HTML version");
-        listener.onFileSelectionCancelled();
+        listener.onComplete(); // Use onComplete instead of removed onFileSelectionCancelled
     }
     
     public static void setListener(IListener listener) {

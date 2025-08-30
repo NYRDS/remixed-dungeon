@@ -19,24 +19,27 @@ public class SystemText extends Text {
     private GlyphLayout glyphLayout;
     
     public SystemText(String text, float size, boolean multiline) {
-        super(text, 0, 0, 0);
+        super(0, 0, 0, 0);
         initFont();
         glyphLayout = new GlyphLayout();
         updateText();
+        text(text); // Set the text content after calling parent constructor
     }
     
     public SystemText(String text, float x, float y, int align) {
-        super(text, x, y, align);
+        super(x, y, 0, 0);
         initFont();
         glyphLayout = new GlyphLayout();
         updateText();
+        text(text); // Set the text content after calling parent constructor
     }
     
     public SystemText(String text, float x, float y, int maxWidth, int align) {
-        super(text, x, y, maxWidth, align);
+        super(x, y, maxWidth, 0);
         initFont();
         glyphLayout = new GlyphLayout();
         updateText();
+        text(text); // Set the text content after calling parent constructor
     }
     
     public SystemText(float baseLine) {
@@ -88,6 +91,16 @@ public class SystemText extends Text {
     @Override
     public float baseLine() {
         return 12f; // Simple implementation for HTML version
+    }
+    
+    @Override
+    protected void measure() {
+        // Simple implementation for HTML version
+        if (font != null && text != null) {
+            glyphLayout.setText(font, text);
+            width = glyphLayout.width;
+            height = glyphLayout.height;
+        }
     }
     
     @Override
