@@ -23,7 +23,8 @@ public class RemixedDungeonApp extends GwtApplication {
     @Override
     public GwtApplicationConfiguration getConfig() {
         GwtApplicationConfiguration cfg = new GwtApplicationConfiguration(800, 480);
-        cfg.title = "Remixed Pixel Dungeon";
+        // In GWT, we don't set the title directly on the config
+        // cfg.title = "Remixed Pixel Dungeon";
         return cfg;
     }
 

@@ -26,6 +26,12 @@ sourceSets {
                     'build/generated/sources/annotationProcessor/java/main'
             ]
         }
+        resources {
+            srcDirs = [
+                    'src/main/resources',
+                    'com'
+            ]
+        }
     }
 }
 
@@ -90,7 +96,10 @@ dependencies {
 
     // LibGDX dependencies for HTML backend
     implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
-    implementation "com.badlogicgames.gdx:gdx-backend-gwt:$gdxVersion"
+    implementation("com.badlogicgames.gdx:gdx-backend-gwt:$gdxVersion") {
+        exclude group: 'com.badlogicgames.gdx', module: 'gdx-backend-gwt'
+    }
+    implementation files('libs/gdx-backend-gwt-modified.jar')
     implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
 }
 
@@ -103,4 +112,5 @@ gwt {
         strict = true
         disableCastChecking = true
     }
+    src = files(file('src/main/java'), file('src/html/java'), file('src/market_none/java'), file('../RemixedDungeon/src/main/java'), file('build/generated/sources/annotationProcessor/java/main'))
 }

@@ -4,7 +4,12 @@ This module contains the HTML build of Remixed Dungeon using LibGDX's GWT backen
 
 ## Current Status
 
-**NOT COMPILABLE** - As of August 29, 2025, the HTML build fails to compile with 110 compilation errors. See COMPILATION_ERRORS.md for details.
+**PARTIALLY COMPILABLE** - As of August 30, 2025, significant progress has been made:
+- Java compilation is now successful
+- GWT compilation is failing with missing class errors (down from 110 compilation errors)
+- The Chrome theme issue has been resolved
+
+See COMPILATION_ERRORS.md for details on remaining issues.
 
 The basic structure has been set up with:
 - GWT module definitions
@@ -14,13 +19,12 @@ The basic structure has been set up with:
 
 ## Recent Improvements
 
-Latest commits have improved the build configuration:
-- Include `build/generated/sources/annotationProcessor/java/main` in html sourceSets so generated classes (e.g., BundleHelper) are compiled
-- Added compileJava dependency on `:processor:compileJava` to ensure annotation processing runs before HTML compilation
-- Retained generateBuildConfig and codegen dependencies
-- Created `market_none` folder with platform-specific implementations for HTML
-- Added proper Iap, PlayGames, Ads, and AdsRewardVideo implementations
-- Updated HTML Game class with missing instance variables (iap, playGames)
+Latest work has improved the build configuration:
+- Resolved the Chrome theme inheritance issue by creating a modified JAR file
+- Updated build.gradle to use the modified JAR with Chrome theme inheritance removed
+- Created minimal Chrome theme files to satisfy GWT compiler requirements
+- Java compilation now succeeds
+- Reduced compilation errors from 110 to a smaller set of missing class issues
 
 ## What's Missing
 
@@ -33,7 +37,7 @@ To have a fully functional HTML build, the following would need to be implemente
 
 ## Building
 
-**Current Status**: Build fails with 110 compilation errors.
+**Current Status**: Java compilation succeeds, GWT compilation fails with missing class errors.
 
 To build the HTML version of the game, run:
 
@@ -43,9 +47,11 @@ To build the HTML version of the game, run:
 
 The output would be generated in the `build/gwt/out` directory (when fully implemented).
 
+**Progress**: The Chrome theme issue that was causing 110 compilation errors has been resolved. The remaining errors are related to GWT module inheritance and missing class paths.
+
 ## Running
 
-**Current Status**: Cannot run due to compilation failures.
+**Current Status**: Cannot run due to GWT compilation failures.
 
 To run the HTML version in development mode, run:
 
@@ -54,6 +60,8 @@ To run the HTML version in development mode, run:
 ```
 
 Then open http://localhost:8080 in your browser (when fully implemented).
+
+**Progress**: The underlying Java compilation now succeeds, which is a significant step forward. Once the GWT compilation issues are resolved, the superdev server should work.
 
 ## Deployment
 
@@ -73,3 +81,6 @@ For detailed information about the current status, see:
 - PROGRESS_SUMMARY.md - Detailed progress report
 - DOCUMENTATION.md - General documentation
 - COMPILATION_ERRORS.md - Detailed compilation error analysis
+- BUILD_STATUS.md - Current build status and progress report
+- NEXT_STEPS.md - Detailed instructions for next steps
+- SUMMARY.md - Summary of work completed and remaining tasks

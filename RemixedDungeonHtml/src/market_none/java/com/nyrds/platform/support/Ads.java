@@ -24,6 +24,19 @@ public class Ads {
         System.out.println("Banner ads not supported in HTML version");
     }
 
+    public static void displaySaveAndLoadAd(Object returnOnlyOnce) {
+        // Banner ads are not supported in HTML version
+        System.out.println("Banner ads not supported in HTML version");
+        // In HTML, we just call the callback immediately
+        try {
+            // Try to call returnToWork(true) on the returnOnlyOnce object
+            returnOnlyOnce.getClass().getMethod("returnToWork", boolean.class).invoke(returnOnlyOnce, true);
+        } catch (Exception e) {
+            // If we can't call it, just ignore
+            System.out.println("Could not call returnToWork on returnOnlyOnce");
+        }
+    }
+    
     public static void displayEasyModeBanner() {
         // Banner ads are not supported in HTML version
         System.out.println("Banner ads not supported in HTML version");

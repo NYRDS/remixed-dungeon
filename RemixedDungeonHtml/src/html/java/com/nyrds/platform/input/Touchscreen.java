@@ -29,6 +29,12 @@ public class Touchscreen {
 
     public static HashMap<Integer, Touch> pointers = new HashMap<>();
     
+    public static void processEvent(Object e) {
+        // Simple implementation for HTML version
+        // In HTML, touch events are handled differently
+        System.out.println("Touch event processing not fully implemented in HTML version");
+    }
+    
     public static class Touch {
         public PointF start;
         public PointF current;

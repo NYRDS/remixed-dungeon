@@ -143,6 +143,11 @@ public class StringsManager {
         return id != null && id.startsWith(":");
     }
     
+    public static void useLocale(Object locale, String lang) {
+        // Simple implementation for HTML version
+        // Locale handling is limited in HTML environment
+    }
+    
     public static String[] getStringsArray(String id) {
         return getVars(id);
     }

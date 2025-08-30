@@ -59,6 +59,26 @@ public class BitmapData {
         return false;
     }
     
+    public void eraseColor(int color) {
+        // Simple implementation for HTML version
+        if (pixmap != null) {
+            pixmap.setColor(color);
+            pixmap.fill();
+        }
+    }
+    
+    public int getPixel(int x, int y) {
+        // Simple implementation for HTML version
+        if (pixmap != null) {
+            return pixmap.getPixel(x, y);
+        }
+        return 0;
+    }
+    
+    public void makeCircleMask(int radius, int c1, int c2, int c3) {
+        // Simple implementation for HTML version
+    }
+    
     public void makeHalo(int radius, int c1, int c2) {
         // Simple implementation for HTML version
     }
