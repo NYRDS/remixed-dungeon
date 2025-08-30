@@ -1,43 +1,31 @@
-# HTML Compilation Fix Plan
+# HTML Compilation Errors Fix Plan
 
-This document outlines the specific fixes needed to resolve the HTML compilation errors in Remixed Dungeon.
+This document outlines the specific steps needed to fix the HTML compilation errors in Remixed Dungeon.
 
 ## Overview
 
-There are 5 compilation errors that need to be fixed:
+There are 5 compilation errors in the HTML version that need to be addressed. All fixes will be made only in the HTML platform code without affecting other platforms.
 
-1. Interface mismatch in `WndInstallingMod` due to unused methods in `AndroidSAF.IListener`
-2. Three constructor signature mismatches in `SystemText`
-
-## Fix 1: Simplify AndroidSAF.IListener Interface
+## Error 1: AndroidSAF.IListener Interface Incompatibility
 
 ### File to Modify
 `/home/mike/StudioProjects/remixed-dungeon_fix/RemixedDungeonHtml/src/html/java/com/nyrds/platform/storage/AndroidSAF.java`
 
-### Issue
-The HTML version of `AndroidSAF.IListener` interface includes methods that are not used by `WndInstallingMod`.
+### Current Implementation
+```java
+public interface IListener {
+    void onFileSelected(String path);
+    void onFileSelectionCancelled();
+    void onMessage(String message);
+    void onFileCopy(String path);
+    void onFileSkip(String path);
+    void onComplete();
+    void onFileDelete(String entry);
+}
+```
 
-### Analysis
-The HTML version of `AndroidSAF.IListener` interface (in `/home/mike/StudioProjects/remixed-dungeon_fix/RemixedDungeonHtml/src/html/java/com/nyrds/platform/storage/AndroidSAF.java`) currently requires the following methods:
-- `void onFileSelected(String path);`
-- `void onFileSelectionCancelled();`
-- `void onMessage(String message);`
-- `void onFileCopy(String path);`
-- `void onFileSkip(String path);`
-- `void onComplete();`
-- `void onFileDelete(String entry);`
-
-However, `WndInstallingMod` only implements:
-- `void onMessage(String message);`
-- `void onFileCopy(String path);`
-- `void onFileSkip(String path);`
-- `void onComplete();`
-- `void onFileDelete(String entry);`
-
-The `onFileSelected` and `onFileSelectionCancelled` methods are never called by `WndInstallingMod`.
-
-### Solution
-Simplify the HTML `AndroidSAF.IListener` interface by removing the unused methods:
+### Fix
+Simplify the interface to only include methods that are actually used by `WndInstallingMod`:
 
 ```java
 public interface IListener {
@@ -49,91 +37,127 @@ public interface IListener {
 }
 ```
 
-This approach is better because:
+### Reasoning
+This is a better solution than adding unused method implementations to `WndInstallingMod` because:
 1. It removes unused code
-2. It eliminates the compilation error without adding unnecessary methods
-3. It keeps the interface focused on what's actually needed
+2. It follows the Interface Segregation Principle
+3. It maintains backward compatibility for classes that actually use these methods
+4. It simplifies the interface to only what's needed
 
-## Fix 2-4: SystemText Constructor Signatures
+### Implementation Steps
+1. Remove `onFileSelected(String path)` method from the interface
+2. Remove `onFileSelectionCancelled()` method from the interface
+
+## Error 2-4: SystemText Constructor Signature Mismatches
 
 ### File to Modify
 `/home/mike/StudioProjects/remixed-dungeon_fix/RemixedDungeonHtml/src/html/java/com/nyrds/platform/gfx/SystemText.java`
 
-### Issues
-The three constructors that take a String as the first parameter are calling the parent constructor with incorrect signatures:
-
-1. `SystemText(String text, float size, boolean multiline)`
-2. `SystemText(String text, float x, float y, int align)`
-3. `SystemText(String text, float x, float y, int maxWidth, int align)`
-
-### Root Cause
-The parent `Text` class constructor expects `(float x, float y, float width, float height)`, but the HTML `SystemText` constructors are trying to pass the text as the first parameter.
-
-### Solutions
-
-#### Constructor 1: `SystemText(String text, float size, boolean multiline)`
-**Current:**
+### Current Implementation
 ```java
 public SystemText(String text, float size, boolean multiline) {
-    super(text, 0, 0, 0);
+    super(text, 0, 0, 0);  // Error
+    // ...
+}
+
+public SystemText(String text, float x, float y, int align) {
+    super(text, x, y, align);  // Error
+    // ...
+}
+
+public SystemText(String text, float x, float y, int maxWidth, int align) {
+    super(text, x, y, maxWidth, align);  // Error
     // ...
 }
 ```
 
-**Fixed:**
+### Fix
+Correct the constructor calls to match the parent Text class constructor signature:
+
 ```java
 public SystemText(String text, float size, boolean multiline) {
-    super(0, 0, 0, 0);
-    this.text(text);
+    super(0, 0, 0, 0);  // Correct parameter types
+    // Set text content after calling parent constructor
     // ...
 }
-```
 
-#### Constructor 2: `SystemText(String text, float x, float y, int align)`
-**Current:**
-```java
 public SystemText(String text, float x, float y, int align) {
-    super(text, x, y, align);
+    super(x, y, 0, 0);  // Correct parameter types
+    // Set text content after calling parent constructor
     // ...
 }
-```
 
-**Fixed:**
-```java
-public SystemText(String text, float x, float y, int align) {
-    super(x, y, 0, 0);
-    this.text(text);
-    // ...
-}
-```
-
-#### Constructor 3: `SystemText(String text, float x, float y, int maxWidth, int align)`
-**Current:**
-```java
 public SystemText(String text, float x, float y, int maxWidth, int align) {
-    super(text, x, y, maxWidth, align);
+    super(x, y, maxWidth, 0);  // Correct parameter types
+    // Set text content after calling parent constructor
     // ...
 }
 ```
 
-**Fixed:**
+### Implementation Steps
+1. Modify the first constructor to call `super(0, 0, 0, 0)` instead of `super(text, 0, 0, 0)`
+2. Modify the second constructor to call `super(x, y, 0, 0)` instead of `super(text, x, y, align)`
+3. Modify the third constructor to call `super(x, y, maxWidth, 0)` instead of `super(text, x, y, maxWidth, align)`
+4. Ensure text content is properly set after calling the parent constructor
+
+## Error 5: IIapCallback Functional Interface Incompatibility
+
+### File to Modify
+`/home/mike/StudioProjects/remixed-dungeon_fix/RemixedDungeon/src/main/java/com/watabou/pixeldungeon/windows/WndHatInfo.java`
+
+### Current Implementation
 ```java
-public SystemText(String text, float x, float y, int maxWidth, int align) {
-    super(x, y, maxWidth, 0);
-    this.text(text);
-    // ...
-}
+RemixedDungeon.instance().iap.doPurchase(accessory, () -> {
+    // Lambda implementation
+});
 ```
 
-## Implementation Notes
+### Fix
+Replace the lambda expression with an anonymous class implementation:
 
-1. All fixes should be made in the exact locations specified above
-2. The text should be set using the `text(String str)` method after calling the parent constructor
-3. The existing functionality should be preserved
-4. After making these changes, the HTML version should compile successfully
+```java
+RemixedDungeon.instance().iap.doPurchase(accessory, new IIapCallback() {
+    @Override
+    public void onPurchaseOk() {
+        item.ownIt(true);
+        item.equip(false);
+        onBackPressed();
+        Window.hideParentWindow(this);
+        if(!Game.isPaused()) {
+            GameScene.show(new WndHats());
+        }
+    }
+    
+    @Override
+    public void onPurchaseFail() {
+        // Default empty implementation or appropriate error handling
+    }
+});
+```
+
+### Implementation Steps
+1. Replace the lambda expression with an anonymous class implementation
+2. Move the existing lambda body to the `onPurchaseOk()` method
+3. Provide a default implementation for `onPurchaseFail()`
+
+## Verification Steps
+
+After implementing all fixes:
+1. Run `./gradlew :RemixedDungeonHtml:compileJava` to verify compilation
+2. Check that no compilation errors remain
+3. Ensure that the fixes don't break existing functionality
+
+## Risk Assessment
+
+The proposed fixes are low risk because:
+1. They only affect the HTML platform code
+2. They maintain backward compatibility
+3. They follow established patterns in the codebase
+4. They don't change the core application logic
 
 ## Testing
 
-After implementing these fixes:
-1. Run `./gradlew :RemixedDungeonHtml:compileJava` to verify compilation
-2. If successful, proceed with building the full HTML version
+After implementing the fixes, we should:
+1. Verify that the HTML version compiles successfully
+2. Test basic functionality of the HTML version if possible
+3. Ensure that other platforms are not affected by the changes

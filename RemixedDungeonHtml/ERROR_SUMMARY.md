@@ -50,6 +50,15 @@ The SystemText constructors are calling the parent Text class constructor with i
 ### Root Cause
 The parent `Text` class constructor expects `(float x, float y, float width, float height)` but the HTML SystemText is trying to pass the text string as the first parameter.
 
+Looking at the Text class constructor:
+```java
+protected Text(float x, float y, float width, float height) {
+    super(x, y, width, height);
+}
+```
+
+The SystemText constructors should be calling the parent constructor with the correct parameter types and then setting the text separately.
+
 ### Solution
 Fix the constructor calls to properly initialize the parent Text class:
 1. `super(0, 0, 0, 0)` instead of `super(text, 0, 0, 0)`
@@ -73,7 +82,10 @@ multiple non-overriding abstract methods found in interface IIapCallback
 The `IIapCallback` interface has multiple abstract methods, making it incompatible with lambda expressions.
 
 ### Root Cause Analysis
-- The `WndHatInfo.java` file uses a lambda expression with the `IIapCallback` interface
+- The `WndHatInfo.java` file uses a lambda expression with the `IIapCallback` interface at line 89:
+  ```java
+  RemixedDungeon.instance().iap.doPurchase(accessory, () -> {
+  ```
 - The HTML version has its own `IIapCallback` implementation at `/home/mike/StudioProjects/remixed-dungeon_fix/RemixedDungeonHtml/src/market_none/java/com/nyrds/platform/support/IIapCallback.java`
 - This interface has two abstract methods: `onPurchaseOk()` and `onPurchaseFail()`
 - Lambda expressions can only implement interfaces with a single abstract method (SAM)
