@@ -24,7 +24,6 @@ public abstract class Text extends Visual implements IPlaceable {
     protected boolean dirty = true;
 
     public Text baseText;
-    public boolean[] mask;
 
     protected Text(float x, float y, float width, float height) {
         super(x, y, width, height);

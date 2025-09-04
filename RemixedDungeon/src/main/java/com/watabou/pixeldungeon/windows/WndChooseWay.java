@@ -7,14 +7,15 @@ import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.ui.Highlighter;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -60,7 +61,11 @@ public class WndChooseWay extends Window {
 		titlebar.setRect( 0, 0, width, 0 );
 		add( titlebar );
 
-		Text normal = Highlighter.addHilightedText(titlebar.left(), titlebar.bottom() +  GAP, width,this,  getWayDesc(way1, way2) );
+		Text normal = PixelScene.createMultilineHighlighted(getWayDesc(way1, way2), GuiProperties.regularFontSize());
+		normal.maxWidth(width);
+		normal.setX(titlebar.left());
+		normal.setY(titlebar.bottom() + GAP);
+		add(normal);
 
 		RedButton btnWay1 = new RedButton( Utils.capitalize( way1.title() ) ) {
 			@Override

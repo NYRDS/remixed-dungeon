@@ -139,6 +139,17 @@ public class PixelScene extends Scene {
 		return createMultiline(StringsManager.getVar(id), size);
 	}
 
+	/**
+	 * Create multiline text with markup support
+	 * @param text Text with markup (_highlighted text_)
+	 * @param size Font size
+	 * @return SystemText object with parsed markup
+	 */
+	public static Text createMultilineHighlighted(final String text, float size) {
+		Text txt = new SystemText(text, size, true);
+		return txt;
+	}
+
 	public static float align(Camera camera, float pos) {
 		return ((int) (pos * camera.zoom)) / camera.zoom;
 	}

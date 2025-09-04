@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.ui.Highlighter;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.RankingTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
@@ -117,7 +116,11 @@ public class WndClass extends WndTabbed {
                     break;
             }
 
-            Text normal = Highlighter.addHilightedText(MARGIN, MARGIN, WIDTH - MARGIN * 2, this, text);
+            Text normal = PixelScene.createMultilineHighlighted(text, GuiProperties.regularFontSize());
+            normal.maxWidth(WIDTH - MARGIN * 2);
+            normal.setX(MARGIN);
+            normal.setY(MARGIN);
+            add(normal);
 
             height = normal.getY() + normal.height() + MARGIN;
             width = normal.getX() + normal.width() + MARGIN;

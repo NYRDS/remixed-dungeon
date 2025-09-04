@@ -4,8 +4,9 @@ package com.watabou.pixeldungeon.windows;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
-import com.watabou.pixeldungeon.ui.Highlighter;
+import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
+import com.nyrds.util.GuiProperties;
 
 public class WndTitledMessage extends Window {
 
@@ -27,7 +28,11 @@ public class WndTitledMessage extends Window {
 		title = titlebar;
 		add( titlebar );
 
-		text = Highlighter.addHilightedText(titlebar.left(), titlebar.bottom() + 2 * GAP, width,this,  message);
+		text = PixelScene.createMultilineHighlighted(message, GuiProperties.regularFontSize());
+		text.maxWidth(width);
+		text.setX(titlebar.left());
+		text.setY(titlebar.bottom() + 2 * GAP);
+		add(text);
 
 		resize( width, (int)(text.getY() + text.height()+GAP) );
 	}

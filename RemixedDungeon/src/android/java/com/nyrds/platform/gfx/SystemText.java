@@ -1,7 +1,6 @@
 package com.nyrds.platform.gfx;
 
 import android.annotation.SuppressLint;
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -26,6 +25,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.concurrent.ConcurrentHashMap;
 
 import lombok.Synchronized;
@@ -53,6 +54,16 @@ public class SystemText extends Text {
 
     private static int cacheHits = 0;
     private static int cacheMiss = 0;
+
+    // Markup pattern for highlighting (_text_)
+    private static final Pattern HIGHLIGHTER = Pattern.compile("_(.*?)_");
+    private static final Pattern STRIPPER = Pattern.compile("[ \\n]");
+    
+    // Color mapping for different text segments
+    private int[] colorMap;
+    private int defaultColor = Color.WHITE;
+    private int highlightColor = 0xCC33FF; // Same as Window.TITLE_COLOR
+    private boolean hasMarkup = false;
 
     public SystemText(float baseLine) {
         this(Utils.EMPTY_STRING, baseLine, false);
@@ -121,7 +132,13 @@ public class SystemText extends Text {
         textPaint = textPaints.get(textSize);
         contourPaint = contourPaints.get(textSize);
 
-        this.text(text);
+        // Parse markup in the text
+        if (text != null && !text.isEmpty()) {
+            parseMarkup(text);
+        } else {
+            this.text = Utils.EMPTY_STRING;
+        }
+        
         texts.put(this, true);
     }
 
@@ -276,13 +293,9 @@ public class SystemText extends Text {
 
                     String key = Utils.format("%fx%f_%s", lineWidth, fontHeight, currentLine);
 
-                    if (mask != null) {
-                        key += Arrays.toString(mask);
-                    }
-
                     if (!bitmapCache.containsKey(key)) {
 
-                        BitmapData bitmap = BitmapData.createBitmap4(
+                        BitmapData bitmap = BitmapData.createBitmap(
                                 (int) (lineWidth * oversample),
                                 (int) (fontHeight * oversample + textPaint.descent()));
                         bitmapCache.put(key, bitmap);
@@ -315,7 +328,7 @@ public class SystemText extends Text {
         final int charsToDraw = Math.min(currentLine.length(), codePoints.size());
 
 
-        if (mask == null) {
+        if (colorMap == null) {
             if (!xCharPos.isEmpty()) {
                 float x = (xCharPos.get(0) + 0.5f) * oversample;
                 canvas.drawText(currentLine, x, y, paint);
@@ -324,17 +337,25 @@ public class SystemText extends Text {
         }
 
         for (int i = 0; i < charsToDraw; ++i) {
-            if (charIndex < mask.length && mask[charIndex]) {
+            if (charIndex < colorMap.length) {
                 int codepoint = codePoints.get(i);
                 float x = (xCharPos.get(i) + 0.5f) * oversample;
                 if (!Character.isWhitespace(codepoint)) {
+                    // Save original paint color
+                    int originalColor = paint.getColor();
+
+                    // Set color based on color map
+                    paint.setColor(colorMap[charIndex]);
+
+                    // Draw character
                     canvas.drawText(Character.toString((char) codepoint), x, y, paint);
+
+                    // Restore original paint color
+                    paint.setColor(originalColor);
                 }
             }
             charIndex++;
         }
-
-
         return charIndex;
     }
 
@@ -437,6 +458,66 @@ public class SystemText extends Text {
     @Override
     public int lines() {
         return this.lineImage.size();
+    }
+
+    /**
+     * Parse markup in the text and create color mapping
+     */
+    private void parseMarkup(String input) {
+        // First, strip whitespace and newlines to create the base text
+        String stripped = STRIPPER.matcher(input).replaceAll(Utils.EMPTY_STRING);
+        
+        // Initialize color map with default color
+        colorMap = new int[stripped.length()];
+        Arrays.fill(colorMap, defaultColor);
+        
+        // Find highlighted sections and mark them in the color map
+        Matcher m = HIGHLIGHTER.matcher(stripped);
+        int pos = 0;
+        int lastMatch = 0;
+
+        while (m.find()) {
+            pos += (m.start() - lastMatch);
+            int groupLen = m.group(1).length();
+            for (int i = pos; i < pos + groupLen; i++) {
+                if (i < colorMap.length) {
+                    colorMap[i] = highlightColor;
+                }
+            }
+            pos += groupLen;
+            lastMatch = m.end();
+        }
+
+        // Remove markup from the text
+        m.reset(input);
+        StringBuffer sb = new StringBuffer();
+        while (m.find()) {
+            m.appendReplacement(sb, m.group(1));
+        }
+        m.appendTail(sb);
+
+        text = sb.toString();
+        hasMarkup = true;
+    }
+
+    /**
+     * Set the highlight color for marked text
+     */
+    public void highlightColor(int color) {
+        highlightColor = color;
+        if (hasMarkup) {
+            dirty = true;
+        }
+    }
+
+    /**
+     * Set the default color for unmarked text
+     */
+    public void defaultColor(int color) {
+        defaultColor = color;
+        if (hasMarkup) {
+            dirty = true;
+        }
     }
 
     @Synchronized
