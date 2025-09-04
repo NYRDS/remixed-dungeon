@@ -1,5 +1,6 @@
 package com.nyrds.platform.gfx;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.nyrds.platform.gl.NoosaScript;
 import com.watabou.glwrap.Quad;
@@ -9,10 +10,13 @@ import java.nio.Buffer;
 import java.nio.FloatBuffer;
 import java.util.HashMap;
 
+
 public class SystemTextPseudoBatch extends PseudoBatch {
     public static SystemText textBeingRendered = null;
     private static final float[] vertices = new float[16];
     private static final HashMap<Integer, FloatBuffer> buffers = new HashMap<>();
+
+    private static final Color tempColor = new Color();
 
     @Override
     public void draw(Texture texture, float[] spriteVertices, int offset, int count) {
@@ -29,6 +33,7 @@ public class SystemTextPseudoBatch extends PseudoBatch {
             buffers.put(quadCount, verticesBuffer);
         }
 
+        // This loop can remain as is, since we are sending the color via a uniform
         for (int i = 0; i < count; i += 20){
             vertices[0]     = spriteVertices[i+0];
             vertices[1]     = spriteVertices[i+1];
@@ -65,14 +70,21 @@ public class SystemTextPseudoBatch extends PseudoBatch {
         texture.bind(); //bind libgdx texture
 
         script.camera( v.camera() );
-
-
         script.uModel.valueM4( v.matrix);
+
+        float packedColor = spriteVertices[offset + 2];
+
+        Color.abgr8888ToColor(tempColor, packedColor);
+
+        float r = tempColor.r * v.rm;
+        float g = tempColor.g * v.gm;
+        float b = tempColor.b * v.bm;
+        float a = tempColor.a * v.am;
+
         script.lighting(
-                v.rm, v.gm, v.bm, v.am,
+                r, g, b, a,
                 v.ra, v.ga, v.ba, v.aa );
 
         script.drawQuadSet( verticesBuffer, quadCount);
     }
-
 }
