@@ -23,11 +23,10 @@ import com.watabou.pixeldungeon.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.concurrent.ConcurrentHashMap;
 
 import lombok.Synchronized;
 
@@ -62,7 +61,7 @@ public class SystemText extends Text {
     // Color mapping for different text segments
     private int[] colorMap;
     private int defaultColor = Color.WHITE;
-    private int highlightColor = 0xCC33FF; // Same as Window.TITLE_COLOR
+    private int highlightColor = 0xFFCC33FF; // Same as Window.TITLE_COLOR
     private boolean hasMarkup = false;
 
     public SystemText(float baseLine) {
@@ -72,6 +71,7 @@ public class SystemText extends Text {
     public SystemText(final String text, float size, boolean multiline) {
         super(0, 0, 0, 0);
 
+        //noinspection ExpressionComparedToItself
         if (fontScale != fontScale) {
             updateFontScale();
         }
@@ -260,7 +260,6 @@ public class SystemText extends Text {
         return offset;
     }
 
-
     @SuppressLint("NewApi")
     private void createText() {
         if (needWidth && maxWidth == Integer.MAX_VALUE) {
@@ -273,7 +272,7 @@ public class SystemText extends Text {
             setWidth(0);
 
             setHeight(0);
-            int charIndex = 0;
+            // int charIndex = 0; // 1. REMOVE THIS LINE
             int startLine = 0;
 
             while (startLine < text.length()) {
@@ -301,8 +300,9 @@ public class SystemText extends Text {
                         bitmapCache.put(key, bitmap);
 
                         Canvas canvas = new Canvas(bitmap.bmp);
-                        drawTextLine(charIndex, canvas, contourPaint);
-                        charIndex = drawTextLine(charIndex, canvas, textPaint);
+
+                        drawTextLine(startLine, canvas, contourPaint);
+                        drawTextLine(startLine, canvas, textPaint);
 
                         cacheMiss++;
                     } else {
@@ -318,34 +318,74 @@ public class SystemText extends Text {
             }
         }
     }
-
-    private int drawTextLine(int charIndex, Canvas canvas, TextPaint paint) {
+    private void drawTextLine(int charIndex, Canvas canvas, TextPaint paint) {
 
         float y = (fontHeight) * oversample - paint.descent();
 
-        currentLine = currentLine.trim();
-
-        final int charsToDraw = Math.min(currentLine.length(), codePoints.size());
-
+        // Handle empty lines
+        if (codePoints.isEmpty()) {
+            return;
+        }
 
         if (colorMap == null) {
             if (!xCharPos.isEmpty()) {
                 float x = (xCharPos.get(0) + 0.5f) * oversample;
                 canvas.drawText(currentLine, x, y, paint);
             }
-            return charIndex + charsToDraw;
+            return;
         }
 
-        for (int i = 0; i < charsToDraw; ++i) {
-            if (charIndex < colorMap.length) {
-                int codepoint = codePoints.get(i);
-                float x = (xCharPos.get(i) + 0.5f) * oversample;
-                if (!Character.isWhitespace(codepoint)) {
+        // Check if this is the contour paint (should always be black)
+        boolean isContour = (paint.getColor() == Color.BLACK && 
+                            paint.getStyle() == Paint.Style.FILL_AND_STROKE);
+
+        // Create a proper mapping from codePoints indices to colorMap indices
+        int[] codePointToColorMapIndex = new int[codePoints.size()];
+        
+        // Track position in currentLine
+        int currentLineIndex = 0;
+        // Track position in codePoints
+        int codePointIndex = 0;
+        // Track actual position in full text
+        int textPosition = charIndex;
+        
+        // Process each character in currentLine to build the mapping
+        while (currentLineIndex < currentLine.length() && codePointIndex < codePoints.size()) {
+            char currentChar = currentLine.charAt(currentLineIndex);
+            
+            // If this is not whitespace and matches the current codePoint
+            if (!Character.isWhitespace(currentChar) && ((int)currentChar) == codePoints.get(codePointIndex)) {
+                codePointToColorMapIndex[codePointIndex] = textPosition;
+                codePointIndex++;
+            }
+            
+            currentLineIndex++;
+            textPosition++;
+        }
+
+        // Draw each codePoint with the correct color
+        for (int i = 0; i < codePoints.size(); ++i) {
+            int codepoint = codePoints.get(i);
+            float x = (xCharPos.get(i) + 0.5f) * oversample;
+            
+            if (!Character.isWhitespace(codepoint)) {
+                if (isContour) {
+                    // Always draw contour in black
+                    canvas.drawText(Character.toString((char) codepoint), x, y, paint);
+                } else {
+                    // Get the correct index in the colorMap
+                    int colorMapIndex = codePointToColorMapIndex[i];
+                    
                     // Save original paint color
                     int originalColor = paint.getColor();
 
-                    // Set color based on color map
-                    paint.setColor(colorMap[charIndex]);
+                    // Set color based on color map for text
+                    if (colorMapIndex < colorMap.length) {
+                        paint.setColor(colorMap[colorMapIndex]);
+                    } else {
+                        // Fallback to default color if index is out of bounds
+                        paint.setColor(defaultColor);
+                    }
 
                     // Draw character
                     canvas.drawText(Character.toString((char) codepoint), x, y, paint);
@@ -354,9 +394,7 @@ public class SystemText extends Text {
                     paint.setColor(originalColor);
                 }
             }
-            charIndex++;
         }
-        return charIndex;
     }
 
     @Override
@@ -464,39 +502,50 @@ public class SystemText extends Text {
      * Parse markup in the text and create color mapping
      */
     private void parseMarkup(String input) {
-        // First, strip whitespace and newlines to create the base text
-        String stripped = STRIPPER.matcher(input).replaceAll(Utils.EMPTY_STRING);
+        StringBuilder finalText = new StringBuilder();
+        ArrayList<Integer> colorList = new ArrayList<>();
         
-        // Initialize color map with default color
-        colorMap = new int[stripped.length()];
-        Arrays.fill(colorMap, defaultColor);
+        Matcher m = HIGHLIGHTER.matcher(input);
+        int lastEnd = 0;
         
-        // Find highlighted sections and mark them in the color map
-        Matcher m = HIGHLIGHTER.matcher(stripped);
-        int pos = 0;
-        int lastMatch = 0;
-
         while (m.find()) {
-            pos += (m.start() - lastMatch);
-            int groupLen = m.group(1).length();
-            for (int i = pos; i < pos + groupLen; i++) {
-                if (i < colorMap.length) {
-                    colorMap[i] = highlightColor;
-                }
+            // Add text before the highlight
+            String before = input.substring(lastEnd, m.start());
+            for (int i = 0; i < before.length(); i++) {
+                char c = before.charAt(i);
+                finalText.append(c);
+                colorList.add(defaultColor);
             }
-            pos += groupLen;
-            lastMatch = m.end();
+            
+            // Add highlighted text
+            String highlighted = m.group(1);
+            for (int i = 0; i < highlighted.length(); i++) {
+                char c = highlighted.charAt(i);
+                finalText.append(c);
+                colorList.add(highlightColor);
+            }
+            
+            lastEnd = m.end();
         }
-
-        // Remove markup from the text
-        m.reset(input);
-        StringBuffer sb = new StringBuffer();
-        while (m.find()) {
-            m.appendReplacement(sb, m.group(1));
+        
+        // Add remaining text after the last highlight
+        String remaining = input.substring(lastEnd);
+        for (int i = 0; i < remaining.length(); i++) {
+            char c = remaining.charAt(i);
+            finalText.append(c);
+            colorList.add(defaultColor);
         }
-        m.appendTail(sb);
-
-        text = sb.toString();
+        
+        text = finalText.toString();
+        
+        // Convert ArrayList to array for performance
+        if (!colorList.isEmpty()) {
+            colorMap = new int[colorList.size()];
+            for (int i = 0; i < colorList.size(); i++) {
+                colorMap[i] = colorList.get(i);
+            }
+        }
+        
         hasMarkup = true;
     }
 
