@@ -6,12 +6,12 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.watabou.glwrap.Matrix;
-import com.watabou.noosa.Text;
+import com.watabou.noosa.SystemTextBase;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class SystemText extends Text {
+public class SystemText extends SystemTextBase {
     private static final Map<String, BitmapFont> fontCache = new HashMap<>();
     private static BitmapFont defaultFont;
     
