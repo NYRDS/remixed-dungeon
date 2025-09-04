@@ -14,9 +14,9 @@ import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.LRUCache;
 import com.nyrds.util.ModdingMode;
 import com.watabou.glwrap.Matrix;
+import com.watabou.noosa.SystemTextBase;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.SystemTextLine;
-import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -30,7 +30,7 @@ import java.util.regex.Pattern;
 
 import lombok.Synchronized;
 
-public class SystemText extends Text {
+public class SystemText extends SystemTextBase {
 
     static private final Map<Float, TextPaint> textPaints = new ConcurrentHashMap<>();
     private final TextPaint textPaint;
@@ -47,22 +47,19 @@ public class SystemText extends Text {
 
     private final boolean needWidth;
 
-    private static float fontScale = Float.NaN;
-
     private static final LRUCache<String, BitmapData> bitmapCache = new LRUCache<>(256);
 
     private static int cacheHits = 0;
     private static int cacheMiss = 0;
 
-    // Markup pattern for highlighting (_text_)
-    private static final Pattern HIGHLIGHTER = Pattern.compile("_(.*?)_");
     private static final Pattern STRIPPER = Pattern.compile("[ \\n]");
     
     // Color mapping for different text segments
     private int[] colorMap;
     private int defaultColor = Color.WHITE;
+    // highlightColor is now inherited from BaseText
+    // hasMarkup is now inherited from BaseText
     private int highlightColor = 0xFFCC33FF; // Same as Window.TITLE_COLOR
-    private boolean hasMarkup = false;
 
     public SystemText(float baseLine) {
         this(Utils.EMPTY_STRING, baseLine, false);

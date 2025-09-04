@@ -10,7 +10,7 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.glwrap.Matrix;
-import com.watabou.noosa.Text;
+import com.watabou.noosa.SystemTextBase;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class SystemText extends Text {
+public class SystemText extends SystemTextBase {
     private static FreeTypeFontGenerator pixelGenerator;
     private static FreeTypeFontGenerator fallbackGenerator;
     private static final Map<String, BitmapFont> fontCache = new HashMap<>();
@@ -49,8 +49,6 @@ public class SystemText extends Text {
 
     private final ArrayList<ArrayList<ColoredSegment>> lines = new ArrayList<>();
 
-    private static float fontScale = Float.NaN;
-
     private static final SystemTextPseudoBatch batch = new SystemTextPseudoBatch();
     private static final float oversample = 4;
 
@@ -61,12 +59,10 @@ public class SystemText extends Text {
     private String fontKey;
     private boolean useFallbackFont = false;
 
-    // Markup pattern for highlighting (_text_)
-    private static final Pattern HIGHLIGHTER = Pattern.compile("_(.*?)_");
     private Color defaultColor = Color.WHITE;
     private Color highlightColor = new Color(0xcc / 255f, 0x33 / 255f, 0xff / 255f, 1);
-    private boolean hasMarkup = false;
-    private String originalText;
+    // hasMarkup is inherited from BaseText
+    // originalText is inherited from BaseText
 
     public SystemText(float baseLine) {
         super(0, 0, 0, 0);
