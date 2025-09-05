@@ -14,8 +14,8 @@ import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.LRUCache;
 import com.nyrds.util.ModdingMode;
 import com.watabou.glwrap.Matrix;
-import com.watabou.noosa.SystemTextBase;
 import com.watabou.noosa.Group;
+import com.watabou.noosa.SystemTextBase;
 import com.watabou.noosa.SystemTextLine;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -269,7 +269,7 @@ public class SystemText extends SystemTextBase {
             setWidth(0);
 
             setHeight(0);
-            // int charIndex = 0; // 1. REMOVE THIS LINE
+
             int startLine = 0;
 
             while (startLine < text.length()) {
@@ -498,7 +498,7 @@ public class SystemText extends SystemTextBase {
     /**
      * Parse markup in the text and create color mapping
      */
-    private void parseMarkup(String input) {
+    protected void parseMarkup(String input) {
         StringBuilder finalText = new StringBuilder();
         ArrayList<Integer> colorList = new ArrayList<>();
         
