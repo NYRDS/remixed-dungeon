@@ -35,8 +35,8 @@ android {
         applicationId "com.nyrds.pixeldungeon.ml"
         versionCode 1247
         versionName "32.3.alpha.9"
-        targetSdkVersion 34
-        compileSdkVersion 34
+        targetSdkVersion 35
+        compileSdkVersion 35
         minSdkVersion 23
 
         // Enabling multidex support.
