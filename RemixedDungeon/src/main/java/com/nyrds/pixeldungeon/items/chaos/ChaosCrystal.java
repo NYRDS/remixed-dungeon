@@ -35,10 +35,10 @@ public class ChaosCrystal extends UsableArtifact {
     private static final float TIME_TO_FUSE = 10;
 
     @Packable
-    private int identetifyLevel = 0;
+    public int identetifyLevel = 0;
 
     @Packable
-    private int charge = 0;
+    public int charge = 0;
 
     public ChaosCrystal() {
         imageFile = "items/artifacts.png";

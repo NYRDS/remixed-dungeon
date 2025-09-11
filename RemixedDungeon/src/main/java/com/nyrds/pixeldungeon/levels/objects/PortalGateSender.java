@@ -19,7 +19,7 @@ public class PortalGateSender extends PortalGate {
 	private static final String TARGET = "target";
 
 	@Packable
-	protected Position target;
+	public Position target;
 
 	public boolean portalInteract(Hero hero) {
 		if(!used && hero.getBelongings().getItem(Amulet.class) == null){

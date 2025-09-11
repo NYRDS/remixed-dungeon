@@ -28,7 +28,7 @@ public abstract class BossLevel extends RegularLevel {
     protected boolean enteredArena = false;
 
     @Packable
-    protected int stairs = INVALID_CELL;
+    public int stairs = INVALID_CELL;
 
     protected boolean[] water() {
         return Patch.generate(this, 0.45f, 5 );

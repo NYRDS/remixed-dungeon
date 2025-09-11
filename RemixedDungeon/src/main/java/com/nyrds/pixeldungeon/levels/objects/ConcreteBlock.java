@@ -21,7 +21,7 @@ public class ConcreteBlock extends LevelObject {
 	@Packable
 	@Getter
 	@Setter
-	private int requiredStr = 10;
+	public int requiredStr = 10;
 
 	@Keep
 	public ConcreteBlock() {

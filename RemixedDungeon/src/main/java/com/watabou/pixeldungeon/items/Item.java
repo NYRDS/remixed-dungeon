@@ -83,7 +83,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     private String defaultAction = AC_THROW;
 
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
-    private int id = EntityIdSource.INVALID_ID;
+    public int id = EntityIdSource.INVALID_ID;
 
     @NotNull
     protected String name = getClassParam("Name", StringsManager.getVar(R.string.Item_Name), false);
@@ -112,7 +112,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     @Packable
     @Getter
     @Setter
-    private boolean levelKnown = false;
+    public boolean levelKnown = false;
 
     @Packable
     @Getter
@@ -122,12 +122,12 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     @Packable
     @Getter
     @Setter
-    private boolean cursedKnown;
+    public boolean cursedKnown;
 
     @Setter
     @Getter
     @Packable(defaultValue = "-1")
-    private int quickSlotIndex = -1;
+    public int quickSlotIndex = -1;
 
 
     private static final Comparator<Item> itemComparator = (lhs, rhs) -> {

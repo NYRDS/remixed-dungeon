@@ -19,7 +19,7 @@ import com.watabou.utils.Random;
 public class ChaosStaff extends Wand {
 
     @Packable
-    private int charge = 0;
+    public int charge = 0;
 
     public ChaosStaff() {
         imageFile = "items/chaosStaff.png";

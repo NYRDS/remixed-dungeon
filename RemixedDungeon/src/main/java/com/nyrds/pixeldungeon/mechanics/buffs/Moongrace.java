@@ -17,7 +17,7 @@ public class Moongrace extends Buff {
     private static final float STEP = 5f;
 
     @Packable
-    private int pos;
+    public int pos;
 
     @Override
     public boolean attachTo(@NotNull Char target) {

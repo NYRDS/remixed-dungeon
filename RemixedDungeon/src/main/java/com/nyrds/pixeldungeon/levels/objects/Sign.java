@@ -27,7 +27,7 @@ public class Sign extends LevelObject {
 	private static final String TEXT = "text";
 
 	@Packable
-	private String text;
+	public String text;
 
 	@Keep
 	public Sign(){

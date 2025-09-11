@@ -8,7 +8,7 @@ import com.watabou.utils.Bundle;
 public class ChaosBow extends Bow {
 
 	@Packable
-	private int charge = 0;
+	public int charge = 0;
 
 	public ChaosBow() {
 		super( 3, 1f, 1f );

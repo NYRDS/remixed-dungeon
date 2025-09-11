@@ -73,9 +73,9 @@ public class Earthroot extends Plant {
         private static final float STEP = 1f;
 
         @Packable
-        private int pos;
+        public int pos;
         @Packable
-        private int level;
+        public int level;
 
         @Override
         public boolean attachTo(@NotNull Char target) {

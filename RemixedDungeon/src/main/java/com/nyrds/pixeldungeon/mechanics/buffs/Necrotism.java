@@ -20,10 +20,10 @@ import com.watabou.utils.Random;
 
 public class Necrotism extends Buff implements Doom {
 	@Packable
-	protected float left;
+	public float left;
 
 	@Packable
-	protected int iteration;
+	public int iteration;
 
 	public static final int duration = 3;
 

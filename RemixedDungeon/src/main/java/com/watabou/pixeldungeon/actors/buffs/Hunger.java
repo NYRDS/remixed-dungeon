@@ -28,7 +28,7 @@ public class Hunger extends Buff implements Doom {
 	public static final float STARVING	= 400f;
 
 	@Packable
-	private float hungerLevel;
+	public float hungerLevel;
 
 	@Override
 	public boolean act() {

@@ -42,7 +42,7 @@ public class Goo extends Boss {
 	
 
 	@Packable
-	private boolean pumpedUp = false;
+	public boolean pumpedUp = false;
 
 	@Override
 	public int damageRoll() {

@@ -30,7 +30,7 @@ public class LloydsBeacon extends Item {
 
 	@NotNull
 	@Packable
-	private Position returnTo = new Position();
+	public Position returnTo = new Position();
 	
 	public LloydsBeacon() {
 		image = ItemSpriteSheet.BEACON;

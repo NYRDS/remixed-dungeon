@@ -46,26 +46,26 @@ public class Trap extends LevelObject {
 			GrippingTrap.class};
 
 	@Packable
-	private String kind;
+	public String kind;
 	@Packable
-	private int    targetCell;
+	public int    targetCell;
 	@Packable
-	private int    uses;
+	public int    uses;
 
 	@Packable
-	private String script;
+	public String script;
 
 	@Packable
-	private boolean activatedByItem = false;
+	public boolean activatedByItem = false;
 
 	@Packable
-	private boolean activatedByMob = false;
+	public boolean activatedByMob = false;
 
 	@Packable
-	private boolean secret = false;
+	public boolean secret = false;
 
 	@Packable(defaultValue = "-1")
-	private int usedImageIndex = -1;
+	public int usedImageIndex = -1;
 
 	@Keep
 	public Trap() {

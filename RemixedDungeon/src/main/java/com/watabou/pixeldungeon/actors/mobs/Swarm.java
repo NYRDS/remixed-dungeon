@@ -26,7 +26,7 @@ public class Swarm extends Mob {
 	}
 
 	@Packable
-	private int generation = 0;
+	public int generation = 0;
 
 	@Override
 	public int defenseProc( Char enemy, int damage ) {

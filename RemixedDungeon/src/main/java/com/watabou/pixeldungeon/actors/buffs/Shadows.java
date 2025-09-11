@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 public class Shadows extends Invisibility {
 
 	@Packable
-	protected float left;
+	public float left;
 
 	@Override
 	public boolean attachTo(@NotNull Char target ) {

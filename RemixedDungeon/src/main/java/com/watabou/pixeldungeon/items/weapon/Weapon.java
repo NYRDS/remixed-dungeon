@@ -75,7 +75,7 @@ public class Weapon extends KindOfWeapon {
 
 	@Getter
     @Packable
-	private Enchantment enchantment;
+	public Enchantment enchantment;
 	
 	public void usedForHit() {
 		if (!isLevelKnown() && --hitsToKnow <= 0) {

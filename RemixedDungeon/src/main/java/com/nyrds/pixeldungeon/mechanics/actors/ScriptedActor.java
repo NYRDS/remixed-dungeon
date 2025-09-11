@@ -17,7 +17,7 @@ import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 public class ScriptedActor extends Actor {
 	@Packable
-	private String sourceFile;
+	public String sourceFile;
 
 	@Keep
 	public ScriptedActor() {

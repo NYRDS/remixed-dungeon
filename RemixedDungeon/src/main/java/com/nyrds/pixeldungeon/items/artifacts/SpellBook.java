@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class SpellBook extends Artifact {
 
 	@Packable
-	private String spell;
+	public String spell;
 
 	public SpellBook() {
 		imageFile = "items/books.png";

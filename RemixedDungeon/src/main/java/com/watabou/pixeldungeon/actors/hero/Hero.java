@@ -109,7 +109,7 @@ public class Hero extends Char {
     private boolean ready = false;
 
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
-    private int controlTargetId;
+    public int controlTargetId;
 
     @Packable
     public static boolean movieRewardPending;

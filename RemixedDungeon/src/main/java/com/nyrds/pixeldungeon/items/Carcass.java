@@ -41,10 +41,10 @@ public class Carcass extends Item implements Doom {
     public static final String CARCASS = "Carcass";
 
     @Packable
-    Char src = CharsList.DUMMY;
+    public Char src = CharsList.DUMMY;
 
     @Packable
-    int ttl = 10;
+    public int ttl = 10;
 
     static final int MAX_TTL = 10;
 

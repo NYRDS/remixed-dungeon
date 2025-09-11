@@ -50,7 +50,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
     private int curCharges = Scrambler.scramble(maxCharges());
 
     @Packable
-    private boolean curChargeKnown = false;
+    public boolean curChargeKnown = false;
 
     protected boolean hitChars = true;
     protected boolean hitObjects = false;

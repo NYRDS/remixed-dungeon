@@ -28,7 +28,7 @@ import lombok.SneakyThrows;
 public class RandomLevel extends RegularLevel {
 
 	@Packable
-	private int mobsSpawned = 0;
+	public int mobsSpawned = 0;
 
 	@Keep
 	public RandomLevel() {

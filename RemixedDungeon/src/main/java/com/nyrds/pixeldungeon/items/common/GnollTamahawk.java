@@ -18,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 public class GnollTamahawk extends Tamahawk {
 
     @Packable
-    private final int imageIndex;
+    public int imageIndex;
 
     @Keep
     public GnollTamahawk() {

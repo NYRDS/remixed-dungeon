@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 public class RatKing extends NPC {
 
 	@Packable
-	private int anger = 0;
+	public int anger = 0;
 	
 	public RatKing() {
 		setState(MobAi.getStateByClass(Sleeping.class));

@@ -32,7 +32,7 @@ import java.util.ArrayList;
 public class CustomItem extends EquipableItem {
 
     @Packable
-    private String scriptFile = Utils.EMPTY_STRING;
+    public String scriptFile = Utils.EMPTY_STRING;
 
     private boolean upgradable;
     private boolean identified;

@@ -53,10 +53,10 @@ public class Ghost extends NPC {
 	}
 
 	@Packable
-	private boolean persuade = false;
+	public boolean persuade = false;
 
 	@Packable
-	private boolean introduced = false;
+	public boolean introduced = false;
 	private WndSadGhostNecro window;
 
 	public Ghost() {

@@ -28,7 +28,7 @@ public class Burning extends Buff implements Doom {
 	private static final float DURATION = 8f;
 
 	@Packable
-	private float left;
+	public float left;
 
 	class burnItem implements ItemAction {
 		public Item act(Item srcItem){

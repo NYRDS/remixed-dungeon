@@ -15,10 +15,10 @@ import org.json.JSONObject;
 public class Codex extends Book {
 
 	@Packable(defaultValue = "-1")
-	private int codexId=-1;
+	public int codexId=-1;
 
 	@Packable
-	private String text;
+	public String text;
 
 	public Codex(){
 		stackable = false;

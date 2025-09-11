@@ -37,10 +37,10 @@ public class King extends Boss {
 	private static final int MAX_ARMY_SIZE	= 5;
 
 	@Packable
-	private int lastPedestal;
+	public int lastPedestal;
 
 	@Packable
-	private int targetPedestal;
+	public int targetPedestal;
 
 	public King() {
 		hp(ht(300));

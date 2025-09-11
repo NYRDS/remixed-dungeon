@@ -38,7 +38,7 @@ public class SuspiciousRat extends Mob {
 	}
 
 	@Packable
-	private boolean transforming = false;
+	public boolean transforming = false;
 
 	@Override
 	public boolean act() {

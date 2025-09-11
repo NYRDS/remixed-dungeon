@@ -68,7 +68,7 @@ public abstract class Mob extends Char {
     protected Object spriteClass;
 
     @Packable(defaultValue = "1")
-    protected int expForKill = 1;
+    public int expForKill = 1;
 
     protected int maxLvl = 50;
     protected float carcassChance = ModdingBase.inMod() ? ModQuirks.defaultCarcassChance : 0.5f;

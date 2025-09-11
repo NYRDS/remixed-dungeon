@@ -19,10 +19,10 @@ public class BlackSkull extends Artifact {
     private static final int MAXIMUM_CHARGE = 10;
 
     @Packable
-    private boolean activated = false;
+    public boolean activated = false;
 
     @Packable
-    private int charge = 0;
+    public int charge = 0;
 
     public BlackSkull() {
         imageFile = "items/artifacts.png";

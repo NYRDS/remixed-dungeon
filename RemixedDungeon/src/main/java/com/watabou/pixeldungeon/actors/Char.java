@@ -131,11 +131,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @Packable(defaultValue = "false")
     public boolean enemySeen;
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
-    protected int enemyId = EntityIdSource.INVALID_ID;
+    public int enemyId = EntityIdSource.INVALID_ID;
 
     @Getter
     @Packable(defaultValue = "0")
-    protected int expForLevelUp = 0;
+    public int expForLevelUp = 0;
 
     protected LuaScript script;
     protected int baseStr = 10;
@@ -146,7 +146,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @LuaInterface
     @Setter
     @Getter
-    private int target = Level.INVALID_CELL;
+    public int target = Level.INVALID_CELL;
 
     @NotNull
     protected ArrayList<Char> visibleEnemies = new ArrayList<>();
@@ -156,19 +156,19 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     private Belongings belongings;
 
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
-    private int owner = EntityIdSource.INVALID_ID;
+    public int owner = EntityIdSource.INVALID_ID;
 
     @Packable(defaultValue = "-1")//Level.INVALID_CELL
     @Getter
-    private int pos = Level.INVALID_CELL;
+    public int pos = Level.INVALID_CELL;
 
     @Packable(defaultValue = "0")
-    private int layersMask = 0;
+    public int layersMask = 0;
 
     transient private int prevPos = Level.INVALID_CELL;
 
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
-    private int id = EntityIdSource.INVALID_ID;
+    public int id = EntityIdSource.INVALID_ID;
 
     protected int baseAttackSkill = 0;
     protected int baseDefenseSkill = 0;

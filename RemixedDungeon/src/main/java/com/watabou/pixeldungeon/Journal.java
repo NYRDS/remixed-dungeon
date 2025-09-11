@@ -49,7 +49,7 @@ public class Journal {
 		private static final String FEATURE	= "feature";
 
 		@Packable
-		private String feature;
+		public String feature;
 
 		@Packable
 		public int depth;

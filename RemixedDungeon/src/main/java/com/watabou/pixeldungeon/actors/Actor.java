@@ -41,9 +41,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
     private static ArrayList<Actor> npcActors;
 
     @Packable
-    float time;
+    public float time;
     @Packable
-    float prevTime = -1;
+    public float prevTime = -1;
 
     private boolean added = false;
 

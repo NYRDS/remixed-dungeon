@@ -38,9 +38,9 @@ public class Hedgehog extends NPC {
 	private static boolean spawned;
 
 	@Packable
-	private int    action = 0;
+	public int    action = 0;
 	@Packable
-	private float  speed  = 0.5f;
+	public float  speed  = 0.5f;
 
 	public static void spawn( RegularLevel level ) {
 		if (!spawned && Dungeon.depth == 23) {

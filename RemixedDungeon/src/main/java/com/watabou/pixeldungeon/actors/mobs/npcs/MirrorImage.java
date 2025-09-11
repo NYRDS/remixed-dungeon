@@ -46,9 +46,9 @@ public class MirrorImage extends Mob {
     }
 
     @Packable
-    private String[] look = new String[0];
+    public String[] look = new String[0];
     @Packable
-    private String deathEffect;
+    public String deathEffect;
 
 
     @Override

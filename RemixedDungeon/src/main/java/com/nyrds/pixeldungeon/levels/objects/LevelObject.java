@@ -28,24 +28,24 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
 
     @Getter
     @Packable
-    protected int pos;
+    public int pos;
 
     @Getter
     @Packable
-    protected int layer = 0;
+    public int layer = 0;
 
     @Packable(defaultValue = "levelObjects/objects.png")
     @Getter
     @Setter
-    protected String textureFile = "levelObjects/objects.png";
+    public String textureFile = "levelObjects/objects.png";
 
     @Packable(defaultValue = "0")
-    protected int imageIndex = 0;
+    public int imageIndex = 0;
 
     @LuaInterface
     @Getter
     @Packable()
-    protected String data;
+    public String data;
 
     public WeakOptional<LevelObjectSprite> lo_sprite = WeakOptional.empty();
 

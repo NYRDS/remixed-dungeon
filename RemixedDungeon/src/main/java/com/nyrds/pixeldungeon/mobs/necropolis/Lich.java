@@ -56,10 +56,10 @@ public class Lich extends Boss {
     private RunicSkull activatedSkull;
 
     @Packable
-    private boolean skullsSpawned = false;
+    public boolean skullsSpawned = false;
 
     @Packable
-    private boolean timeToJump = false;
+    public boolean timeToJump = false;
 
 	private final HashSet<RunicSkull> skulls = new HashSet<>();
 

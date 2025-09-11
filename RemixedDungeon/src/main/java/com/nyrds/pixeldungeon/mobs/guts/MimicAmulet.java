@@ -16,7 +16,7 @@ import com.watabou.utils.Bundle;
 public class MimicAmulet extends Mob {
 
 	@Packable
-	private int level;
+	public int level;
 
 	public MimicAmulet() {
 		baseSpeed = 1.25f;

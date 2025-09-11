@@ -35,7 +35,7 @@ public class Shopkeeper extends NPC {
 	}
 
 	@Packable
-	private String bagSold = "";
+	public String bagSold = "";
 
 
 	public static int countFood(Bag backpack) {

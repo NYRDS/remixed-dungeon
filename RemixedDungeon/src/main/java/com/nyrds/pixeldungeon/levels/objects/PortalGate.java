@@ -20,16 +20,16 @@ public abstract class PortalGate extends Deco {
 	protected boolean animationRunning = false;
 
 	@Packable
-	protected boolean activated = false;
+	public boolean activated = false;
 
 	@Packable
-	protected boolean used = false;
+	public boolean used = false;
 
 	@Packable
-	protected boolean infiniteUses = false;
+	public boolean infiniteUses = false;
 
 	@Packable
-	protected int uses;
+	public int uses;
 
 	private Animation activation;
 	private Animation activatedLoop;

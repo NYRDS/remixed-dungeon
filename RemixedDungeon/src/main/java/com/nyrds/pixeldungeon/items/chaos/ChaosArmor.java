@@ -8,7 +8,7 @@ import com.watabou.utils.Bundle;
 public class ChaosArmor extends Armor {
 
 	@Packable
-	private int charge = 0;
+	public int charge = 0;
 
 	public ChaosArmor() {
 		super( 3 );

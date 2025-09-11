@@ -8,7 +8,7 @@ import com.watabou.utils.Bundle;
 public class ChaosSword extends MeleeWeapon {
 
 	@Packable
-	private int charge = 0;
+	public int charge = 0;
 	
 	public ChaosSword() {
 		super(3, 1, 1);

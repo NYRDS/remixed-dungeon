@@ -33,7 +33,7 @@ public class CustomBuff extends Buff {
     private int icon;
 
     @Packable
-    private String scriptFile;
+    public String scriptFile;
 
     private LuaScript script;
 

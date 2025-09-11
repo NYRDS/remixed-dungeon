@@ -45,7 +45,7 @@ public class Deco extends LevelObject {
 	@Getter
 	@LuaInterface
 	@Packable
-	protected String objectDesc;
+	public String objectDesc;
 
 	private int width = 16;
 	private int height = 16;

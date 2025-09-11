@@ -28,7 +28,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	private int spriteLayer = 0;
 
 	@Packable
-	private String mobClass = "Unknown";
+	public String mobClass = "Unknown";
 
 	private boolean canBePet = false;
 

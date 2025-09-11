@@ -64,7 +64,7 @@ public class Viscosity extends Glyph {
 	public static class DeferedDamage extends Buff {
 		
 		@Packable
-		protected int damage = 0;
+		public int damage = 0;
 
 		@Override
 		public boolean attachTo(@NotNull Char target ) {

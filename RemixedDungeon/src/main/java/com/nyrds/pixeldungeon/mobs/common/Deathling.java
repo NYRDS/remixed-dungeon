@@ -11,7 +11,7 @@ public class Deathling extends Mob {
 
     private static final int HEALTH = 4;
     @Packable
-    private boolean firstAct = true;
+    public boolean firstAct = true;
 
     public Deathling(){
         hp(ht(HEALTH));

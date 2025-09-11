@@ -38,7 +38,7 @@ public class DewVial extends Item {
 	}
 
 	@Packable
-	private int volume = 0;
+	public int volume = 0;
 
 	@Override
 	public ArrayList<String> actions(Char hero ) {

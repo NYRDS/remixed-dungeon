@@ -41,10 +41,10 @@ import org.jetbrains.annotations.NotNull;
 public class ShadowLord extends Boss implements IZapper {
 
 	@Packable
-	private boolean levelCreated         = false;
+	public boolean levelCreated         = false;
 
 	@Packable
-	private int cooldown                 = -1;
+	public int cooldown                 = -1;
 
 	public ShadowLord() {
 		hp(ht(260));

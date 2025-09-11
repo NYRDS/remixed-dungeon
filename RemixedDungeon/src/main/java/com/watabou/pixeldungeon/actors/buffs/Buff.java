@@ -45,10 +45,10 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     public Char target = CharsList.DUMMY;
 
     @Packable(defaultValue = "1")
-    protected int level = 1;
+    public int level = 1;
 
     @Packable(defaultValue = "-1")
-    protected int source = -1;
+    public int source = -1;
 
     @Override
     public String name() {
