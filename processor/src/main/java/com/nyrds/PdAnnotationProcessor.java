@@ -11,7 +11,6 @@ import com.squareup.javapoet.TypeSpec;
 
 import java.io.IOException;
 import java.io.Writer;
-import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -70,7 +69,7 @@ public class PdAnnotationProcessor extends AbstractProcessor {
 	@Override
 	public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
 		if (generated) {
-			return true; // Skip processing if we've already generated the file
+			return true;
 		}
 
 		messager = processingEnv.getMessager();
@@ -80,6 +79,19 @@ public class PdAnnotationProcessor extends AbstractProcessor {
 		Set<Element> classesToImport = new HashSet<>();
 
 		for (Element element : roundEnvironment.getElementsAnnotatedWith(Packable.class)) {
+			if (element.getKind() == ElementKind.FIELD) {
+				// VALIDATION 1: Enforce public modifier
+				if (!element.getModifiers().contains(Modifier.PUBLIC)) {
+					messager.printMessage(Diagnostic.Kind.ERROR,
+							"Field annotated with @Packable must be public.", element);
+				}
+				// MODIFICATION 1: VALIDATION - Enforce non-final modifier
+				if (element.getModifiers().contains(Modifier.FINAL)) {
+					messager.printMessage(Diagnostic.Kind.ERROR,
+							"Field annotated with @Packable cannot be final, as it cannot be restored during unpacking.", element);
+				}
+			}
+
 			if (element.getKind().isClass()) {
 				classesToImport.add(element);
 				continue;
@@ -112,30 +124,28 @@ public class PdAnnotationProcessor extends AbstractProcessor {
 				.beginControlFlow("try");
 
 		for (Element clazz : fieldsByClass.keySet()) {
+			TypeName clazzType = TypeName.get(clazz.asType());
+
 			CodeBlock.Builder packerBlock = CodeBlock.builder()
-					.beginControlFlow("if (arg instanceof $T)", TypeName.get(clazz.asType()));
+					.beginControlFlow("if (arg instanceof $T)", clazzType)
+					.addStatement("$T typedArg = ($T) arg", clazzType, clazzType);
 
 			CodeBlock.Builder unpackerBlock = CodeBlock.builder()
-					.beginControlFlow("if (arg instanceof $T)", TypeName.get(clazz.asType()));
+					.beginControlFlow("if (arg instanceof $T)", clazzType)
+					.addStatement("$T typedArg = ($T) arg", clazzType, clazzType);
 
 			for (Element field : fieldsByClass.get(clazz)) {
-				String fieldName = field.getSimpleName().toString();
-				TypeMirror fieldType = field.asType();
-				String defaultValue = defaultValues.getOrDefault(field, "");
+				// Don't generate unpack logic for final fields
+				if (!field.getModifiers().contains(Modifier.FINAL)) {
+					String fieldName = field.getSimpleName().toString();
+					TypeMirror fieldType = field.asType();
+					String defaultValue = defaultValues.getOrDefault(field, "");
 
-				packerBlock.addStatement("$T $L = $T.class.getDeclaredField($S)",
-								Field.class, fieldName, TypeName.get(clazz.asType()), fieldName)
-						.addStatement("$L.setAccessible(true)", fieldName);
+					packerBlock.addStatement("bundle.put($S, typedArg.$L)", fieldName, fieldName);
 
-				packerBlock.addStatement("bundle.put($S, ($T) $L.get(arg))",
-						fieldName, TypeName.get(fieldType), fieldName);
-
-				unpackerBlock.addStatement("$T $L = $T.class.getDeclaredField($S)",
-								Field.class, fieldName, TypeName.get(clazz.asType()), fieldName)
-						.addStatement("$L.setAccessible(true)", fieldName);
-
-				CodeBlock unpackCode = generateUnpackCode(field, fieldName, fieldType, defaultValue);
-				unpackerBlock.add(unpackCode);
+					CodeBlock unpackCode = generateDirectUnpackCode(fieldName, fieldType, defaultValue);
+					unpackerBlock.add(unpackCode);
+				}
 			}
 
 			packerBlock.endControlFlow();
@@ -145,24 +155,17 @@ public class PdAnnotationProcessor extends AbstractProcessor {
 			unpackBuilder.addCode(unpackerBlock.build());
 		}
 
-		// Exception handling for pack
-		packBuilder.nextControlFlow("catch ($T e)", NoSuchFieldException.class)
-				.addStatement("throw new $T(e)", ClassName.get(COM_NYRDS_PLATFORM_UTIL, TRACKED_RUNTIME_EXCEPTION))
-				.nextControlFlow("catch ($T e)", IllegalAccessException.class)
+		packBuilder.nextControlFlow("catch ($T e)", Exception.class)
 				.addStatement("throw new $T(e)", ClassName.get(COM_NYRDS_PLATFORM_UTIL, TRACKED_RUNTIME_EXCEPTION))
 				.endControlFlow();
 
-		// Exception handling for unpack
-		unpackBuilder.nextControlFlow("catch ($T e)", NoSuchFieldException.class)
-				.addStatement("throw new $T(e)", ClassName.get(COM_NYRDS_PLATFORM_UTIL, TRACKED_RUNTIME_EXCEPTION))
-				.nextControlFlow("catch ($T e)", IllegalAccessException.class)
+		unpackBuilder.nextControlFlow("catch ($T e)", Exception.class)
 				.addStatement("throw new $T(e)", ClassName.get(COM_NYRDS_PLATFORM_UTIL, TRACKED_RUNTIME_EXCEPTION))
 				.endControlFlow();
 
 		bundleHelperBuilder.addMethod(packBuilder.build())
 				.addMethod(unpackBuilder.build());
 
-		// Add holder fields for imported classes
 		for (Element clazz : classesToImport) {
 			bundleHelperBuilder.addField(ClassName.bestGuess(clazz.asType().toString()),
 					"holder_" + clazz.asType().hashCode(), Modifier.PRIVATE);
@@ -186,41 +189,45 @@ public class PdAnnotationProcessor extends AbstractProcessor {
 		return true;
 	}
 
-	private CodeBlock generateUnpackCode(Element field, String fieldName, TypeMirror fieldType, String defaultValue) {
+	private CodeBlock generateDirectUnpackCode(String fieldName, TypeMirror fieldType, String defaultValue) {
 		CodeBlock.Builder code = CodeBlock.builder();
+		String statementTemplate = "typedArg.$L = ";
 
 		if (processingEnv.getTypeUtils().isSameType(fieldType, intType)) {
 			defaultValue = defaultValue.isEmpty() ? "0" : defaultValue;
-			code.addStatement("$L.setInt(arg, bundle.optInt($S, $L))", fieldName, fieldName, defaultValue);
+			code.addStatement(statementTemplate + "bundle.optInt($S, $L)", fieldName, fieldName, defaultValue);
 		}  else if (processingEnv.getTypeUtils().isSameType(fieldType, booleanType)) {
 			defaultValue = defaultValue.isEmpty() ? "false" : defaultValue;
-			code.addStatement("$L.setBoolean(arg, bundle.optBoolean($S, $L))", fieldName, fieldName, defaultValue);
+			code.addStatement(statementTemplate + "bundle.optBoolean($S, $L)", fieldName, fieldName, defaultValue);
 		} else if (processingEnv.getTypeUtils().isSameType(fieldType, floatType)) {
 			defaultValue = defaultValue.isEmpty() ? "0.0f" : defaultValue;
-			code.addStatement("$L.setFloat(arg, bundle.optFloat($S, $L))", fieldName, fieldName, defaultValue);
+			code.addStatement(statementTemplate + "bundle.optFloat($S, $L)", fieldName, fieldName, defaultValue);
 		} else if (processingEnv.getTypeUtils().isSameType(fieldType, stringType)) {
 			defaultValue = defaultValue.isEmpty() ? "Unknown" : defaultValue;
-			code.addStatement("$L.set(arg, bundle.optString($S, $S))", fieldName, fieldName, defaultValue);
+			code.addStatement(statementTemplate + "bundle.optString($S, $S)", fieldName, fieldName, defaultValue);
 		} else if (processingEnv.getTypeUtils().isAssignable(fieldType, bundlableType)) {
+			// MODIFICATION 2: BUG FIX - Add explicit cast for Bundlable subtypes
+			TypeName fieldTypeName = TypeName.get(fieldType);
 			if (defaultValue.isEmpty()) {
-				code.addStatement("$L.set(arg, bundle.get($S))", fieldName, fieldName);
+				code.addStatement(statementTemplate + "($T) bundle.get($S)", fieldName, fieldTypeName, fieldName);
 			} else {
-				code.addStatement("$L.set(arg, bundle.opt($S, $L))", fieldName, fieldName, defaultValue);
+				code.addStatement(statementTemplate + "($T) bundle.opt($S, $L)", fieldName, fieldTypeName, fieldName, defaultValue);
 			}
 		} else if (isEnumType(fieldType)) {
-			handleEnumUnpack(code, fieldName, fieldType, defaultValue);
+			handleEnumUnpack(code, fieldName, fieldType, defaultValue, statementTemplate);
 		} else if (fieldType.getKind() == TypeKind.ARRAY) {
-			handleArrayUnpack(code, fieldName, (ArrayType) fieldType);
+			handleArrayUnpack(code, fieldName, (ArrayType) fieldType, statementTemplate);
 		} else if (isCollectionType(fieldType)) {
-			handleCollectionUnpack(code, fieldName, fieldType);
+			handleCollectionUnpack(code, fieldName, fieldType, statementTemplate);
 		} else if (isMapType(fieldType)) {
-			handleMapUnpack(code, fieldName, fieldType);
+			handleMapUnpack(code, fieldName, fieldType, statementTemplate);
 		} else {
-			messager.printMessage(Diagnostic.Kind.ERROR, "Unsupported field type: " + fieldType, field);
+			messager.printMessage(Diagnostic.Kind.ERROR, "Unsupported field type for direct access: " + fieldType);
 		}
 
 		return code.build();
 	}
+
 	private boolean isEnumType(TypeMirror type) {
 		Element element = processingEnv.getTypeUtils().asElement(type);
 		return element != null && element.getKind() == ElementKind.ENUM;
@@ -234,7 +241,7 @@ public class PdAnnotationProcessor extends AbstractProcessor {
 		return processingEnv.getTypeUtils().isAssignable(type, mapType);
 	}
 
-	private void handleEnumUnpack(CodeBlock.Builder code, String fieldName, TypeMirror enumType, String defaultValue) {
+	private void handleEnumUnpack(CodeBlock.Builder code, String fieldName, TypeMirror enumType, String defaultValue, String template) {
 		TypeElement enumElement = (TypeElement) processingEnv.getTypeUtils().asElement(enumType);
 		ClassName enumClassName = ClassName.get(enumElement);
 
@@ -253,24 +260,24 @@ public class PdAnnotationProcessor extends AbstractProcessor {
 			defaultValueExpr = CodeBlock.of("$T.valueOf($S)", enumClassName, defaultValue);
 		}
 
-		code.addStatement("$L.set(arg, bundle.getEnum($S, $T.class, $L))",
+		code.addStatement(template + "bundle.getEnum($S, $T.class, $L)",
 				fieldName, fieldName, enumClassName, defaultValueExpr);
 	}
 
-	private void handleArrayUnpack(CodeBlock.Builder code, String fieldName, ArrayType arrayType) {
+	private void handleArrayUnpack(CodeBlock.Builder code, String fieldName, ArrayType arrayType, String template) {
 		TypeMirror componentType = arrayType.getComponentType();
 		if (processingEnv.getTypeUtils().isSameType(componentType, intType)) {
-			code.addStatement("$L.set(arg, bundle.getIntArray($S))", fieldName, fieldName);
+			code.addStatement(template + "bundle.getIntArray($S)", fieldName, fieldName);
 		} else if (processingEnv.getTypeUtils().isSameType(componentType, booleanType)) {
-			code.addStatement("$L.set(arg, bundle.getBooleanArray($S))", fieldName, fieldName);
+			code.addStatement(template + "bundle.getBooleanArray($S)", fieldName, fieldName);
 		} else if (processingEnv.getTypeUtils().isSameType(componentType, stringType)) {
-			code.addStatement("$L.set(arg, bundle.getStringArray($S))", fieldName, fieldName);
+			code.addStatement(template + "bundle.getStringArray($S)", fieldName, fieldName);
 		} else {
 			messager.printMessage(Diagnostic.Kind.ERROR, "Unsupported array component type: " + componentType);
 		}
 	}
 
-	private void handleCollectionUnpack(CodeBlock.Builder code, String fieldName, TypeMirror collectionType) {
+	private void handleCollectionUnpack(CodeBlock.Builder code, String fieldName, TypeMirror collectionType, String template) {
 		DeclaredType declaredType = (DeclaredType) collectionType;
 		List<? extends TypeMirror> typeArgs = declaredType.getTypeArguments();
 		if (typeArgs.size() != 1) {
@@ -283,19 +290,17 @@ public class PdAnnotationProcessor extends AbstractProcessor {
 			return;
 		}
 		ClassName elementClass = ClassName.get((TypeElement) processingEnv.getTypeUtils().asElement(elementType));
-		code.addStatement("$L.set(arg, bundle.getCollection($S, $T.class))", fieldName, fieldName, elementClass);
+		code.addStatement(template + "bundle.getCollection($S, $T.class)", fieldName, fieldName, elementClass);
 	}
 
-	private void handleMapUnpack(CodeBlock.Builder code, String fieldName, TypeMirror mapType) {
+	private void handleMapUnpack(CodeBlock.Builder code, String fieldName, TypeMirror mapType, String template) {
 		DeclaredType declaredType = (DeclaredType) mapType;
 		List<? extends TypeMirror> typeArgs = declaredType.getTypeArguments();
 		if (typeArgs.size() != 2 || !processingEnv.getTypeUtils().isSameType(typeArgs.get(0), stringType)) {
 			messager.printMessage(Diagnostic.Kind.ERROR, "Map must have String keys");
 			return;
 		}
-		TypeMirror valueType = typeArgs.get(1);
-		ClassName valueClass = ClassName.get((TypeElement) processingEnv.getTypeUtils().asElement(valueType));
-		code.addStatement("$L.set(arg, ($T) bundle.getMap($S))", fieldName, TypeName.get(mapType), fieldName);
+		code.addStatement(template + "($T) bundle.getMap($S)", fieldName, TypeName.get(mapType), fieldName);
 	}
 
 	@Override
