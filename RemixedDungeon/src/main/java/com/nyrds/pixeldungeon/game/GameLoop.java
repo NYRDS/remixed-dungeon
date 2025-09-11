@@ -3,7 +3,9 @@ package com.nyrds.pixeldungeon.game;
 import android.view.KeyEvent;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.platform.ConcurrencyProvider;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.PlatformAtomicInteger;
 import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
@@ -26,38 +28,34 @@ import com.watabou.utils.SystemTime;
 
 import org.luaj.vm2.LuaError;
 
-import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.Queue;
 import java.util.concurrent.Future;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import lombok.SneakyThrows;
 import lombok.val;
 
 public class GameLoop {
 
-    public static final AtomicInteger loadingOrSaving = new AtomicInteger();
-    public static final Object stepLock = new Object();
+    public static PlatformAtomicInteger loadingOrSaving;
+    public static Object stepLock;
 
-
-    public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY };
+    public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY};
 
     public static String version = Utils.EMPTY_STRING;
     public static int versionCode = 0;
 
-    // Actual size of the screen
     public static int width;
     public static int height;
 
     @SuppressWarnings("unused")
     public static volatile boolean softPaused = false;
 
-    private final ReportingExecutor stepExecutor = new ReportingExecutor();
-    private final ReportingExecutor executor = new ReportingExecutor();
-    public ReportingExecutor soundExecutor = new ReportingExecutor();
+    private final ReportingExecutor stepExecutor;
+    private final ReportingExecutor executor;
+    public ReportingExecutor soundExecutor;
 
-    private final ConcurrentLinkedQueue<Runnable> uiTasks = new ConcurrentLinkedQueue<>();
+    private final Queue<Runnable> uiTasks;
 
-    // New scene class
     private Class<? extends Scene> sceneClass;
     protected static int difficulty = Integer.MAX_VALUE;
 
@@ -68,30 +66,33 @@ public class GameLoop {
 
     private static GameLoop instance;
 
-    // Current scene
     public Scene scene;
-    // true if scene switch is requested
     protected boolean requestedReset = true;
 
-    // Current time in milliseconds
     private long now;
-    // Milliseconds passed since previous update
     private long step;
-
 
     public Runnable doOnResume;
 
-    // Accumulated touch events
-    public final ConcurrentLinkedQueue<PointerEvent> motionEvents = new ConcurrentLinkedQueue<>();
-
-    // Accumulated key events
-    public final ConcurrentLinkedQueue<KeyEvent> keysEvents = new ConcurrentLinkedQueue<>();
+    public final Queue<PointerEvent> motionEvents;
+    public final Queue<KeyEvent> keysEvents;
 
 
     public GameLoop(Class<? extends Scene> c) {
         super();
         instance = this;
         sceneClass = c;
+
+        ConcurrencyProvider provider = new ConcurrencyProvider();
+
+        loadingOrSaving = provider.createAtomicInteger(0);
+        stepLock = provider.createLock();
+        stepExecutor = provider.createReportingExecutor();
+        executor = provider.createReportingExecutor();
+        soundExecutor = provider.createReportingExecutor();
+        uiTasks = provider.createConcurrentLinkedQueue();
+        motionEvents = provider.createConcurrentLinkedQueue();
+        keysEvents = provider.createConcurrentLinkedQueue();
     }
 
     static public GameLoop instance() {
@@ -136,13 +137,12 @@ public class GameLoop {
     }
 
     public static void addToScene(Gizmo gizmo) {
-        GameLoop.pushUiTask(()->
-            {
-                Scene scene = scene();
-                if (scene != null) {
-                    scene.add(gizmo);
-                }
-            });
+        GameLoop.pushUiTask(() -> {
+            Scene scene = scene();
+            if (scene != null) {
+                scene.add(gizmo);
+            }
+        });
     }
 
     @LuaInterface
@@ -182,19 +182,17 @@ public class GameLoop {
         Sample.INSTANCE.resume();
 
         if (doOnResume != null) {
-            GameLoop.pushUiTask( () -> {
-                        doOnResume.run();
-                        doOnResume = null;
-                    }
-            );
+            GameLoop.pushUiTask(() -> {
+                doOnResume.run();
+                doOnResume = null;
+            });
         }
     }
-
 
     public void onFrame() {
         SystemTime.tick();
         long rightNow = SystemTime.now();
-        step = Math.min((now == 0 ? 0 : rightNow - now),250);
+        step = Math.min((now == 0 ? 0 : rightNow - now), 250);
         now = rightNow;
 
         framesSinceInit++;
@@ -223,9 +221,7 @@ public class GameLoop {
         }
 
         if (framesSinceInit > 2 && !Game.softPaused && loadingOrSaving.get() == 0) {
-            stepExecutor.execute(() -> {
-                update();
-            });
+            stepExecutor.execute(this::update);
         }
 
         NoosaScript.get().resetCamera();
@@ -266,22 +262,21 @@ public class GameLoop {
                 scene.update();
             }
             Camera.updateAll();
-       }
+        }
     }
 
     private void switchScene(Scene requestedScene) {
-
         SystemText.invalidate();
         TextureCache.clear();
         Camera.reset();
 
         if (scene != null) {
-            EventCollector.setSessionData("pre_scene",scene.getClass().getSimpleName());
+            EventCollector.setSessionData("pre_scene", scene.getClass().getSimpleName());
             scene.destroy();
         }
         scene = requestedScene;
         scene.create();
-        EventCollector.setSessionData("scene",scene.getClass().getSimpleName());
+        EventCollector.setSessionData("scene", scene.getClass().getSimpleName());
 
         elapsed = 0f;
         timeScale = 1f;

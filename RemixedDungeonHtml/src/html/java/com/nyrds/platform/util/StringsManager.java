@@ -46,6 +46,7 @@ public class StringsManager {
     }
     
     private static void addMappingForClass(Class<?> clazz) {
+        /*
         try {
             for (Field f : clazz.getDeclaredFields()) {
                 if (f.isSynthetic()) {
@@ -59,6 +60,8 @@ public class StringsManager {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
+
+         */
     }
     
     public static String getVar(int id) {

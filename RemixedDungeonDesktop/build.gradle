@@ -43,7 +43,7 @@ application {
                         'src/desktop/java',
                         'src/market_none/java',
                         'src/libgdx/java',
-                        'src-generated' // New directory for generated sources
+                        'src/generated/java'
                 ]
             }
         }
@@ -68,7 +68,7 @@ tasks.register('generateBuildConfig') {
     def version_code = project.ext.version_code
     doLast {
         def debug = false
-        def buildConfigFile = new File("${projectDir}/src-generated/com/nyrds/pixeldungeon/ml/BuildConfig.java")
+        def buildConfigFile = new File("${projectDir}/src/generated/java/com/nyrds/pixeldungeon/ml/BuildConfig.java")
         buildConfigFile.parentFile.mkdirs()
         buildConfigFile.text = """
         package com.nyrds.pixeldungeon.ml;

@@ -1,26 +1,27 @@
 plugins {
     id 'java'
-    id 'org.wisepersist.gwt' version '1.1.16'
+    id 'org.teavm' version '0.12.3'
 }
 
 project.ext {
     version = '32.3.alpha'
     version_code = 1236
-    gwtVersion = '2.8.2'
+    teaVmVersion = '0.12.3'
     gdxVersion = '1.12.1'
+    gdxTeaVMVersion = '1.3.0'
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_10
-    targetCompatibility = JavaVersion.VERSION_1_10
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
 sourceSets {
     main {
         java {
             srcDirs = [
-                    '../RemixedDungeon/src/main/java',
-                    'src/html/java',
+                    'src/html/java',                    // HTML sources first (higher priority)
+                    '../RemixedDungeon/src/main/java',  // Main sources second
                     'src/market_none/java',
                     'build/generated/sources/annotationProcessor/java/main'
             ]
@@ -76,20 +77,20 @@ repositories {
     mavenCentral()
     google()
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+    maven { url "https://teavm.org/maven/repository/" }
+    maven { url "https://jitpack.io" } // For gdx-teavm
 }
+
 
 dependencies {
     implementation project(':annotation')
-    gwt project(':annotation')
     
     implementation project(':json_clone')
-    gwt project(':json_clone')
     
     compileOnly project(':processor')
     annotationProcessor project(':processor')
     
     implementation 'com.google.code.gson:gson:2.10.1'
-    gwt 'com.google.code.gson:gson:2.10.1'
     
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'org.hjson:hjson:3.1.0'
@@ -102,22 +103,24 @@ dependencies {
     // LibGDX dependencies for HTML backend
     implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
     implementation "com.badlogicgames.gdx:gdx:$gdxVersion:sources"
+    implementation "com.github.xpenatan.gdx-teavm:backend-teavm:$gdxTeaVMVersion" // Correct dependency name
+    implementation "org.teavm:teavm-classlib:$teaVmVersion"
+    implementation "org.teavm:teavm-jso-apis:$teaVmVersion"
+    implementation "org.teavm:teavm-interop:$teaVmVersion"
+
+    compileOnly "org.teavm:teavm-core:$teaVmVersion"
+    annotationProcessor "org.teavm:teavm-core:$teaVmVersion"
+
     implementation files('libs/gdx-backend-gwt-fixed-complete-modified.jar')
     implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
 }
 
-// GWT configuration
-gwt {
-    gwtVersion = project.ext.gwtVersion
-    modules = ['com.nyrds.pixeldungeon.html.GdxDefinition']
-    devModules = ['com.nyrds.pixeldungeon.html.GdxDefinitionSuperdev']
-    compiler {
-        strict = true
-        disableCastChecking = true
+// TeaVM configuration - explicit configuration
+teavm {
+    js {
+        mainClass = 'com.nyrds.platform.app.client.TeaVMLauncher'
+        targetFileName = 'teavm-app.js'
+        
+        properties.put('org.teavm.reflect.enableRef', 'true')
     }
-    src = files(
-        file('src/html/java'),
-        file('../RemixedDungeon/src/main/java'),
-        file('build/generated/sources/annotationProcessor/java/main')
-    )
 }
