@@ -110,9 +110,6 @@ dependencies {
 
     compileOnly "org.teavm:teavm-core:$teaVmVersion"
     annotationProcessor "org.teavm:teavm-core:$teaVmVersion"
-
-    implementation files('libs/gdx-backend-gwt-fixed-complete-modified.jar')
-    implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
 }
 
 // TeaVM configuration - explicit configuration
