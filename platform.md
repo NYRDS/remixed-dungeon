@@ -2,15 +2,15 @@
 
 ## Overview
 
-The Remixed Dungeon project implements a platform abstraction layer that allows the game to run on multiple platforms (Android, Desktop, and HTML) while sharing the majority of the game code. This abstraction layer separates platform-specific implementations from the core game logic, enabling a single codebase to target multiple platforms.
+The Remixed Dungeon project implements a platform abstraction layer that allows the game to run on multiple platforms (Android, Desktop, and Web) while sharing the majority of the game code. This abstraction layer separates platform-specific implementations from the core game logic, enabling a single codebase to target multiple platforms.
 
 ## Architecture
 
 The platform abstraction is implemented through:
 
 1. **Common Interface Layer**: Shared interfaces and base classes that define the contract for platform-specific functionality
-2. **Platform-Specific Implementations**: Separate implementations for each target platform (Android, Desktop, HTML)
-3. **Build System Integration**: Gradle flavors and source sets that include the appropriate platform implementation at build time
+2. **Platform-Specific Implementations**: Separate implementations for each target platform (Android, Desktop, Web)
+3. **Build System Integration**: Gradle modules and source sets that include the appropriate platform implementation at build time
 
 ## Key Platform Abstraction Components
 
@@ -26,9 +26,9 @@ The platform abstraction is implemented through:
 - Uses LWJGL backend for OpenGL rendering
 - Located in `RemixedDungeonDesktop/src/libgdx/java/com/nyrds/platform/game/Game.java`
 
-**HTML Implementation**:
-- Uses LibGDX HTML backend with TeaVM
-- Transpiles Java code to JavaScript
+**Web Implementation** (Work in Progress):
+- Uses LibGDX backend with TeaVM
+- Intended to transpile Java code to JavaScript using TeaVM
 - Located in `RemixedDungeonHtml/src/html/java/com/nyrds/platform/app/client/TeaVMLauncher.java`
 
 ### 2. Audio System
@@ -36,12 +36,12 @@ The platform abstraction is implemented through:
 **Music Management**:
 - Android: Uses `MediaPlayer` API for background music
 - Desktop: Uses LibGDX audio system
-- HTML: Uses Web Audio API via LibGDX
+- Web: Intended to use Web Audio API via LibGDX TeaVM backend
 
 **Sound Effects**:
 - Android: Uses `SoundPool` API for sound effects
 - Desktop: Uses LibGDX sound system
-- HTML: Uses Web Audio API via LibGDX
+- Web: Intended to use Web Audio API via LibGDX TeaVM backend
 
 Both platforms implement the same interface through `MusicManager` and `Sample` classes.
 
@@ -57,8 +57,8 @@ Both platforms implement the same interface through `MusicManager` and `Sample` 
 - Works with the local file system
 - Located in `RemixedDungeonDesktop/src/libgdx/java/com/nyrds/platform/storage/FileSystem.java`
 
-**HTML Implementation**:
-- Uses browser localStorage via LibGDX Preferences API
+**Web Implementation** (Work in Progress):
+- Intended to use browser localStorage via LibGDX Preferences API
 - Located in `RemixedDungeonHtml/src/html/java/com/nyrds/platform/storage/HtmlPreferences.java`
 
 ### 4. Preferences and Settings
@@ -73,9 +73,9 @@ Both platforms implement the same interface through `MusicManager` and `Sample` 
 - Stores preferences in a local file
 - Located in `RemixedDungeonDesktop/src/libgdx/java/com/nyrds/platform/storage/Preferences.java`
 
-**HTML Implementation**:
-- Uses browser localStorage via LibGDX Preferences API
-- Stores preferences in JSON format
+**Web Implementation** (Work in Progress):
+- Intended to use browser localStorage via LibGDX Preferences API
+- Intended to store preferences in JSON format
 - Located in `RemixedDungeonHtml/src/html/java/com/nyrds/platform/storage/Preferences.java`
 
 ### 5. Input Handling
@@ -83,12 +83,12 @@ Both platforms implement the same interface through `MusicManager` and `Sample` 
 **Touch and Pointer Events**:
 - Android: Processes Android `MotionEvent` objects
 - Desktop: Processes LibGDX pointer events
-- HTML: Processes browser touch/mouse events via LibGDX
+- Web: Intended to process browser touch/mouse events via LibGDX TeaVM backend
 
 **Keyboard Input**:
 - Android: Handles Android `KeyEvent` objects
 - Desktop: Uses LibGDX input processor
-- HTML: Uses browser keyboard events via LibGDX
+- Web: Intended to use browser keyboard events via LibGDX TeaVM backend
 
 ### 6. Networking and Analytics
 
@@ -96,7 +96,7 @@ Both platforms implement the same interface through `MusicManager` and `Sample` 
 - Android (Google Play): Integrates with Firebase Analytics and Crashlytics
 - Android (F-Droid): Provides stub implementation without analytics
 - Desktop: Provides stub implementation
-- HTML: Provides stub implementation
+- Web: Intended to provide stub implementation
 
 Located in flavor-specific directories:
 - `RemixedDungeon/src/googlePlay/java/com/nyrds/platform/EventCollector.java`
@@ -116,10 +116,10 @@ Located in flavor-specific directories:
 - Thread pools for background tasks
 - Atomic integers and concurrent collections
 
-**HTML Implementation**:
-- TeaVM is single-threaded, so all operations are synchronous
-- Concurrent collections are replaced with single-threaded equivalents
-- Atomic integers are replaced with regular integers with synchronized access
+**Web Implementation** (Work in Progress):
+- TeaVM is single-threaded, so all operations will be synchronous
+- Concurrent collections will be replaced with single-threaded equivalents
+- Atomic integers will be replaced with regular integers with synchronized access
 - Located in `RemixedDungeonHtml/src/html/java/com/nyrds/platform/ConcurrencyProvider.java`
 
 ### 8. Utilities
@@ -127,7 +127,7 @@ Located in flavor-specific directories:
 **Platform Utilities**:
 - Android: Uses Android logging, connectivity, and system APIs
 - Desktop: Uses LibGDX utilities and standard Java APIs
-- HTML: Uses LibGDX utilities and browser APIs
+- Web: Intended to use LibGDX utilities and browser APIs
 
 ## Build System Configuration
 
@@ -147,11 +147,11 @@ The desktop version uses LibGDX as the platform abstraction layer:
 - Cross-platform file I/O
 - Standard Java APIs for system integration
 
-### HTML
+### Web
 
-The HTML version uses TeaVM with LibGDX HTML backend:
+The web version uses TeaVM with LibGDX backend (Work in Progress):
 - TeaVM 0.12.3 for Java-to-JavaScript transpilation
-- LibGDX HTML backend for graphics, audio, and input
+- LibGDX TeaVM backend for graphics, audio, and input
 - Single-threaded execution model
 - Browser localStorage for persistence
 
@@ -181,7 +181,7 @@ To add support for a new platform:
 2. Implement the required platform abstraction interfaces
 3. Configure the build system to include the appropriate sources
 4. Implement platform-specific features as needed
-5. For web platforms, consider using TeaVM or GWT for Java-to-JavaScript compilation
+5. For web platforms, consider using TeaVM for Java-to-JavaScript compilation
 6. For mobile platforms, consider using platform-specific UI frameworks alongside the core game logic
 
 ## Key Abstraction Classes
@@ -196,6 +196,11 @@ To add support for a new platform:
 - `com.nyrds.platform.input.Touchscreen`: Touch input handling
 - `com.nyrds.platform.ConcurrencyProvider`: Platform-specific concurrency handling
 
+## Current Status
+
+### Web Platform Implementation Status
+The web platform using TeaVM is currently under development and not yet compilable. The build process currently fails with a NullPointerException during the JavaScript generation phase. Work is ongoing to resolve compilation issues and enable browser-based deployment.
+
 ## Benefits
 
 1. **Code Reuse**: The majority of game logic is shared across platforms
@@ -203,4 +208,4 @@ To add support for a new platform:
 3. **Consistency**: Ensures consistent behavior across platforms
 4. **Flexibility**: Easy to add new platforms or modify existing platform implementations
 5. **Testing**: Core game logic can be tested independently of platform-specific code
-6. **Web Deployment**: HTML version allows playing the game directly in browsers
+6. **Web Deployment**: Web version will allow playing the game directly in browsers (when complete)

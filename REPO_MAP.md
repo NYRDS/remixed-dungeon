@@ -20,19 +20,14 @@ remixed-dungeon/
 │   │   ├── market_none/            # No-market flavor
 │   │   └── generated/              # Generated sources
 │   └── build.gradle                # Desktop module build configuration
-├── RemixedDungeonHtml/             # HTML5/WebGL application module (using GWT)
+├── RemixedDungeonHtml/             # HTML5/WebGL application module (using TeaVM)
 │   ├── src/
 │   │   ├── html/                   # HTML5-specific sources
-│   │   │   └── java/               # Java sources (GWT-specific implementations)
-│   │   │       ├── com/nyrds/platform/app/RemixedDungeonApp.java  # GWT Application class
-│   │   │       └── com/nyrds/platform/app/client/HtmlLauncher.java  # GWT Entry point
+│   │   │   └── java/               # Java sources (TeaVM-specific implementations)
+│   │   │       └── com/nyrds/platform/app/client/TeaVMLauncher.java  # TeaVM Entry point
 │   │   ├── main/                   # Main webapp resources
-│   │   │   └── resources/          # GWT module definition files
-│   │   │       ├── com/nyrds/pixeldungeon/html/GdxDefinition.gwt.xml  # Main GWT module
-│   │   │       ├── com/nyrds/pixeldungeon/html/GdxDefinitionSuperdev.gwt.xml  # SuperDev mode module
-│   │   │       └── com/nyrds/platform/Platform.gwt.xml  # Platform module
 │   │   └── market_none/            # No-market flavor
-│   └── build.gradle                # HTML module build configuration (GWT plugin setup)
+│   └── build.gradle                # HTML module build configuration (TeaVM plugin setup)
 ├── annotation/                     # Annotation definitions
 ├── processor/                      # Annotation processor
 ├── json_clone/                     # JSON cloning utilities
@@ -124,11 +119,11 @@ remixed-dungeon/
 - `Game`: LibGDX-based game implementation
 - `RemixedDungeon`: Desktop game launcher
 
-#### HTML Implementation (`com.nyrds.platform.game`)
-- `Game`: GWT-based game implementation using LibGDX HTML backend
-- `RemixedDungeon`: HTML game entry point
-- Uses GWT (Google Web Toolkit) to compile Java to JavaScript
-- Implements platform-specific adaptations for browser environment
+#### Web Implementation (`com.nyrds.platform.game`) (Work in Progress)
+- `Game`: Intended TeaVM-based game implementation using LibGDX backend
+- `TeaVMLauncher`: TeaVM entry point class that creates the application listener
+- Intended to use TeaVM to compile Java code to JavaScript
+- Intended to implement platform-specific adaptations for browser environment
 
 #### Common Platform Services (`com.nyrds.platform`)
 - `Audio`: Sound and music management
@@ -152,7 +147,7 @@ remixed-dungeon/
 ### Gradle Configuration
 - `build.gradle`: Root project configuration
 - `settings.gradle`: Module inclusion
-- Module-specific `build.gradle` files for Android and Desktop
+- Module-specific `build.gradle` files for Android, Desktop, and Web
 
 ### Flavors
 - `googlePlay`: Google Play Store version with ads/analytics
@@ -160,13 +155,11 @@ remixed-dungeon/
 - `ruStore`: Russian app store version
 - `huawei`: Huawei AppGallery version (planned)
 
-### HTML Platform
-- Uses GWT (Google Web Toolkit) to compile Java code to JavaScript
-- Implements LibGDX HTML backend for WebGL rendering
-- Browser-based distribution for web play
-- Uses Gradle GWT plugin for building
-- GWT module definition files control compilation
-- SuperDev mode support for debugging
+### Web Platform (Work in Progress)
+- Intended to use TeaVM to compile Java code to JavaScript
+- Intended to implement LibGDX TeaVM backend for WebGL rendering
+- Intended for browser-based distribution for web play
+- Uses Gradle TeaVM plugin for building
 
 ## Key Patterns and Concepts
 
@@ -193,28 +186,19 @@ remixed-dungeon/
 
 ### 5. Platform Abstraction
 - Common interfaces for platform-specific functionality
-- Separate implementations for Android, Desktop, and HTML
+- Separate implementations for Android, Desktop, and Web
 - Build flavors for different distribution channels
 
-### 6. HTML Platform Implementation
-The HTML platform uses GWT (Google Web Toolkit) to compile Java code to JavaScript, enabling the game to run in web browsers.
+### 6. Web Platform Implementation (Work in Progress)
+The web platform is intended to use TeaVM to compile Java code to JavaScript, enabling the game to run in web browsers.
 
 #### Key Components
-- `Game`: GWT-based game implementation extending LibGDX's ApplicationListener
-- `RemixedDungeonApp`: Main GWT application class that extends GwtApplication
-- `HtmlLauncher`: GWT entry point class that creates the application listener
-- GWT module definitions for compilation (GdxDefinition.gwt.xml, etc.)
+- `TeaVMLauncher.java`: Main TeaVM application class that configures and launches the game
+- TeaVM configuration in build.gradle that specifies the main class and target file name
 
-#### GWT-Specific Files
-- **RemixedDungeonApp.java**: Main GWT application class that configures and launches the game
-- **HtmlLauncher.java**: Entry point class that implements GwtApplication and creates the application listener
-- **GdxDefinition.gwt.xml**: Main GWT module definition file that inherits LibGDX backend
-- **GdxDefinitionSuperdev.gwt.xml**: GWT module for SuperDev mode debugging
-- **Platform.gwt.xml**: Platform-specific GWT module definition
+#### TeaVM-Specific Files
+- **TeaVMLauncher.java**: Entry point class that creates the TeaApplication with the game configuration
+- **build.gradle**: Contains TeaVM plugin configuration and dependencies
 
 #### Current Implementation Status
-- Java compilation successful after removing duplicate class definitions
-- GWT module files have been restored and are found by the compiler
-- GWT compilation in progress but has classpath issues
-- Browser-based deployment with canvas rendering
-- Input handling adapted for mouse/keyboard/web events
+The web platform using TeaVM is currently under development and not yet compilable. The build process currently fails with a NullPointerException during the JavaScript generation phase. Work is ongoing to resolve compilation issues and enable browser-based deployment.

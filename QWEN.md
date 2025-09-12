@@ -1,7 +1,7 @@
 # Remixed Dungeon - Project Overview
 
 ## Project Description
-Remixed Dungeon is a classic roguelike game with pixel graphics and a simple interface. It is a fork of the famous Pixel Dungeon game, featuring English, Russian, and many more localizations. The game is available on multiple platforms including Android (Google Play, ruStore) and desktop (Windows, macOS, Linux).
+Remixed Dungeon is a classic roguelike game with pixel graphics and a simple interface. It is a fork of the famous Pixel Dungeon game, featuring English, Russian, and many more localizations. The game is available on multiple platforms including Android (Google Play, ruStore), desktop (Windows, macOS, Linux), and web browsers.
 
 ## Repository Information
 - **Repository**: https://github.com/NYRDS/remixed-dungeon
@@ -30,6 +30,11 @@ remixed-dungeon/
 │   │   ├── market_none/         # No-market flavor
 │   │   └── generated/           # Generated sources
 │   └── build.gradle             # Desktop module build configuration
+├── RemixedDungeonHtml/          # HTML5/WebGL application module (using TeaVM - work in progress)
+│   ├── src/
+│   │   ├── html/                # HTML5-specific sources
+│   │   └── market_none/         # No-market flavor
+│   └── build.gradle             # HTML module build configuration
 ├── annotation/                  # Annotation definitions
 ├── processor/                   # Annotation processor
 ├── json_clone/                  # JSON cloning utilities
@@ -65,6 +70,14 @@ remixed-dungeon/
   - LibGDX core libraries
   - Same core dependencies as Android version
 
+### Web Version (Work in Progress)
+- **Language**: Java (intended to be transpiled to JavaScript)
+- **Framework**: TeaVM with LibGDX backend
+- **Build System**: Gradle with TeaVM plugin
+- **Dependencies**:
+  - LibGDX TeaVM backend
+  - Same core dependencies as other platforms
+
 ## Build Configuration
 
 ### Android
@@ -80,6 +93,13 @@ The desktop version uses LibGDX for cross-platform compatibility and includes:
 - Bundled JDK minimization for distribution
 - Cross-platform asset packaging
 
+### Web (Work in Progress)
+The web version is intended to use TeaVM to compile Java code to JavaScript:
+- TeaVM 0.12.3 for Java-to-JavaScript transpilation
+- LibGDX TeaVM backend for WebGL rendering
+- Intended for browser-based deployment with canvas rendering
+- Input handling to be adapted for mouse/keyboard/web events
+
 ## Development Environment
 - **Java Version**: 10 (source and target compatibility)
 - **IDE**: Android Studio or IntelliJ IDEA
@@ -89,21 +109,22 @@ The desktop version uses LibGDX for cross-platform compatibility and includes:
 ## Distribution Channels
 - **Android**: Google Play, ruStore, F-Droid (planned)
 - **Desktop**: VkPlay, direct downloads
-- **Web**: Potential future support
+- **Web**: Browser-based deployment (planned, not yet available)
 
 ## Project Modules
 1. **RemixedDungeon**: Main Android application
 2. **RemixedDungeonDesktop**: Desktop port using LibGDX
-3. **annotation**: Custom annotations used in the project
-4. **processor**: Annotation processor for code generation
-5. **json_clone**: Utilities for JSON object cloning
-6. **GameServices**: Integration with various game services
+3. **RemixedDungeonHtml**: Web version using TeaVM (work in progress)
+4. **annotation**: Custom annotations used in the project
+5. **processor**: Annotation processor for code generation
+6. **json_clone**: Utilities for JSON object cloning
+7. **GameServices**: Integration with various game services
 
 ## Key Features
 - Classic roguelike gameplay
 - Pixel art graphics
 - Multiple language localizations
-- Cross-platform support (Android and desktop)
+- Cross-platform support (Android, desktop, and web)
 - Modular architecture with flavor support
 - Extensive modding capabilities
 - Multiple distribution channels
@@ -111,9 +132,9 @@ The desktop version uses LibGDX for cross-platform compatibility and includes:
 ## Build Instructions
 1. **Android**: 
    ```bash
-   ./gradlew assembleGooglePlayRelease
-   ./gradlew assembleRuStoreRelease
-   ./gradlew assembleFdroidRelease
+   ./gradlew :RemixedDungeon:assembleGooglePlayRelease
+   ./gradlew :RemixedDungeon:assembleRuStoreRelease
+   ./gradlew :RemixedDungeon:assembleFdroidRelease
    ```
 
 2. **Desktop**:
@@ -122,6 +143,12 @@ The desktop version uses LibGDX for cross-platform compatibility and includes:
    ./gradlew :RemixedDungeonDesktop:packageLinuxX64
    ./gradlew :RemixedDungeonDesktop:packageMacM1
    ./gradlew :RemixedDungeonDesktop:packageWinX64
+   ```
+
+3. **Web** (Work in Progress):
+   ```bash
+   ./gradlew :RemixedDungeonHtml:build
+   ./gradlew :RemixedDungeonHtml:generateJavaScript  # Currently fails with NullPointerException
    ```
 
 ## Project Links
@@ -133,6 +160,12 @@ The desktop version uses LibGDX for cross-platform compatibility and includes:
 - [YouTube](https://www.youtube.com/c/NYRDS)
 - [Telegram](https://t.me/RemixedDungeon)
 - [Discord](https://discord.gg/AMXrhQZ)
+
+## Platform Abstraction
+The project implements a platform abstraction layer that allows the game to run on multiple platforms while sharing the majority of the game code. For more details, see [platform.md](platform.md).
+
+## Repository Map
+For a detailed map of the repository structure and architecture, see [REPO_MAP.md](REPO_MAP.md).
 
 ## Qwen Added Memories
 - Key files: Hero.java (hero character logic) at RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/Hero.java, CharSprite.java (character sprite rendering) at RemixedDungeon/src/main/java/com/watabou/pixeldungeon/sprites/CharSprite.java, Actor.java (actor system) at RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/Actor.java

@@ -32,7 +32,14 @@ Remixed Dungeon in [Google Play](https://play.google.com/store/apps/details?id=c
 
 ПК версия Remixed Dungeon в [VkPlay](https://vkplay.ru/play/game/remixed-dungeon-pixel-rogue/)
 
-HTML версия находится в разработке. Проект использует TeaVM для компиляции Java в JavaScript.
+### Web
+```bash
+# Build the HTML version
+./gradlew :RemixedDungeonHtml:build
+
+# Attempt to compile TeaVM (currently fails with NullPointerException)
+./gradlew :RemixedDungeonHtml:generateJavaScript  # Currently fails
+```
 
 [Проект по переводу Remixed Dungeon](https://www.transifex.com/projects/p/remixed-dungeon/)
 
