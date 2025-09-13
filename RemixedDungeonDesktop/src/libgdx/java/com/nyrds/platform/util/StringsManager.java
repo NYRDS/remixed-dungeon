@@ -40,24 +40,11 @@ public class StringsManager {
 
     private static final Map<String, Integer> keyToInt = new HashMap<>();
 
-    private static final Set<String> nonModdable = new HashSet<>();
-
-
     public static Set<String> missingStrings = new HashSet<>();
 
     static {
         addMappingForClass(R.string.class);
         addMappingForClass(R.array.class);
-
-        nonModdable.add("easyModeAdUnitId");
-        nonModdable.add("saveLoadAdUnitId");
-        nonModdable.add("iapKey");
-        nonModdable.add("ownSignature");
-        nonModdable.add("appodealRewardAdUnitId");
-        nonModdable.add("admob_publisher_id");
-        nonModdable.add("admob_app_id");
-        nonModdable.add("fabric_api_key");
-        nonModdable.add("pollfish_key");
     }
 
     @SneakyThrows
@@ -89,7 +76,7 @@ public class StringsManager {
         InputStreamReader isr = new InputStreamReader(new BOMInputStream(fis), StandardCharsets.UTF_8);
         BufferedReader br = new BufferedReader(isr);
 
-        String line = Utils.EMPTY_STRING;
+        String line;
 
         while ((line = br.readLine()) != null) {
             try {
@@ -154,15 +141,12 @@ public class StringsManager {
 
         return sb.toString();
     }
-    private static Locale userSelectedLocale;
 
 
-    public static void useLocale(Locale locale, String lang) {
-        userSelectedLocale = locale;
-
+    public static void useLocale(Locale ignoredLocale, String lang) {
         clearModStrings();
 
-        if(!locale.equals("en")) {
+        if(!lang.equals("en")) {
             parseStrings("strings_en.json");
         }
 
@@ -195,10 +179,6 @@ public class StringsManager {
     }
 
     public static String getVar(String id) {
-        if (nonModdable.contains(id)) {
-            return Utils.EMPTY_STRING;
-        }
-
         if (sStringMap.containsKey(id)) {
             return sStringMap.get(id);
         }

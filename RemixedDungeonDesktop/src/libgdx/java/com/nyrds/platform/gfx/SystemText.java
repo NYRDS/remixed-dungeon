@@ -92,7 +92,6 @@ public class SystemText extends SystemTextBase {
         fontParameters.genMipMaps = false;
         fontParameters.magFilter = Texture.TextureFilter.Linear;
         fontParameters.minFilter = Texture.TextureFilter.Linear;
-        fontParameters.spaceX = -2;
         return fontParameters;
     }
 
@@ -116,6 +115,11 @@ public class SystemText extends SystemTextBase {
 
         synchronized (pseudoFontCache) {
             if (!pseudoFontCache.containsKey(fontKey)) {
+                if (useFallbackFont) {
+                    fontParameters.spaceX = -2;
+                } else {
+                    fontParameters.spaceX = 0;
+                }
                 BitmapFont.BitmapFontData generatedData = activeGenerator.generateData(fontParameters);
                 pseudoFontCache.put(fontKey, generatedData);
             }
