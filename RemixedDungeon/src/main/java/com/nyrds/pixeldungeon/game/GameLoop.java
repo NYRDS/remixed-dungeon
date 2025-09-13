@@ -36,8 +36,9 @@ import lombok.val;
 
 public class GameLoop {
 
+    private static final ConcurrencyProvider provider = new ConcurrencyProvider();
     public static PlatformAtomicInteger loadingOrSaving;
-    public static Object stepLock;
+    public static final Object stepLock = provider.createLock();
 
     public static final double[] MOVE_TIMEOUTS = new double[]{250, 500, 1000, 2000, 5000, 10000, 30000, 60000, Double.POSITIVE_INFINITY};
 
@@ -83,10 +84,7 @@ public class GameLoop {
         instance = this;
         sceneClass = c;
 
-        ConcurrencyProvider provider = new ConcurrencyProvider();
-
         loadingOrSaving = provider.createAtomicInteger(0);
-        stepLock = provider.createLock();
         stepExecutor = provider.createReportingExecutor();
         executor = provider.createReportingExecutor();
         soundExecutor = provider.createReportingExecutor();

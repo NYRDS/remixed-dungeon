@@ -31,7 +31,6 @@ public class SystemText extends SystemTextBase {
     private GlyphLayout glyphLayout;
 
     private PseudoGlyphLayout pseudoGlyphLayout;
-    private PseudoGlyphLayout spaceLayout;
 
     private boolean multiline = false;
 
@@ -60,8 +59,6 @@ public class SystemText extends SystemTextBase {
 
     private Color defaultColor = Color.WHITE;
     private Color highlightColor = new Color(0xcc / 255f, 0x33 / 255f, 0xff / 255f, 1);
-    // hasMarkup is inherited from BaseText
-    // originalText is inherited from BaseText
 
     public SystemText(float baseLine) {
         super(0, 0, 0, 0);
@@ -126,8 +123,6 @@ public class SystemText extends SystemTextBase {
         }
 
         pseudoGlyphLayout = new PseudoGlyphLayout();
-        spaceLayout = new PseudoGlyphLayout();
-        spaceLayout.setText(fontData, " ");
     }
 
     private void parseMarkupAndWrap() {
@@ -307,7 +302,12 @@ public class SystemText extends SystemTextBase {
     private static boolean containsMissingChars(@NotNull String text) {
         if (pixelFontCheckData == null) return true;
         for (int i = 0; i < text.length(); i++) {
-            if (pixelFontCheckData.getGlyph(text.charAt(i)) == null) {
+            char ch = text.charAt(i);
+            if (pixelFontCheckData.isWhitespace(ch)) {
+                continue;
+            }
+
+            if (pixelFontCheckData.getGlyph(ch) == null) {
                 return true;
             }
         }
