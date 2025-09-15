@@ -333,19 +333,22 @@ public class WebServer extends NanoHTTPD {
             if(uri.startsWith("/upload")) {
                 // Extract path from query parameters if present
                 String path = "";
+                GLog.debug("Upload URI: " + uri);
                 if (uri.contains("?path=")) {
                     path = uri.substring(uri.indexOf("?path=") + 6);
-                    GLog.debug("Upload path extracted from URI: " + path);
+                    GLog.debug("Upload path extracted from URI: '" + path + "'");
                     // URL decode the path
                     try {
                         path = java.net.URLDecoder.decode(path, "UTF-8");
-                        GLog.debug("Upload path after URL decoding: " + path);
+                        GLog.debug("Upload path after URL decoding: '" + path + "'");
                     } catch (Exception e) {
                         GLog.debug("Upload path URL decoding failed: " + e.getMessage());
                         // If decoding fails, use the path as is
                     }
+                } else {
+                    GLog.debug("No path parameter found in URI");
                 }
-                GLog.debug("Final upload path: " + path);
+                GLog.debug("Final upload path: '" + path + "'");
                 return newFixedLengthResponse(Response.Status.OK, "text/html", serveUploadForm("", path));
             }
 
