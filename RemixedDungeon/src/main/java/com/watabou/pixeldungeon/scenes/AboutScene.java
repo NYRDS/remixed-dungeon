@@ -13,6 +13,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
+import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.items.ArmorKit;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -158,7 +159,7 @@ public class AboutScene extends PixelScene {
 			
 			// Secret button for enabling WebServer (only on Android)
 			ItemSprite webSprite = new ItemSprite();
-			webSprite.view(11, null); // Use scroll image (index 11) without creating actual scroll item
+			webSprite.view(Assets.ITEMS, 11, null);
 			webSprite.alpha(0.1f);
 			webSprite.setX(align(sprite.getX() + sprite.width() + 10));
 			webSprite.setY(sprite.getY());
