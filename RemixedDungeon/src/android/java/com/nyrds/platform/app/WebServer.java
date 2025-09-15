@@ -57,6 +57,7 @@ public class WebServer extends NanoHTTPD {
     }
 
     private static void listDir(StringBuilder msg, String path) {
+        GLog.debug("listDir called with path: '" + path + "'");
         List<String> list = ModdingMode.listResources(path,(dir, name)->true);
         
         // Separate directories and files
@@ -88,6 +89,7 @@ public class WebServer extends NanoHTTPD {
         if (!uploadPath.endsWith("/") && !uploadPath.isEmpty()) {
             uploadPath += "/";
         }
+        GLog.debug("Generating upload link for directory: '" + uploadPath + "'");
         String encodedUploadPath = "";
         try {
             encodedUploadPath = java.net.URLEncoder.encode(uploadPath, "UTF-8");
@@ -131,7 +133,7 @@ public class WebServer extends NanoHTTPD {
             String encodedPath = "";
             try {
                 encodedPath = java.net.URLEncoder.encode(file, "UTF-8");
-                GLog.debug("Encoded directory path: '" + encodedPath + "' from original: '" + file + "'");
+                GLog.debug("Encoded directory path for upload link: '" + encodedPath + "' from original: '" + file + "'");
             } catch (Exception e) {
                 encodedPath = file; // Fallback if encoding fails
                 GLog.debug("Directory path encoding failed, using original: '" + file + "'");
