@@ -213,11 +213,15 @@ public class WebServer extends NanoHTTPD {
         } else {
             msg.append("<div class=\"upload-form\">");
             msg.append("<h2>Upload to Mod: ").append(ModdingMode.activeMod()).append("</h2>");
-            if (!currentPath.isEmpty()) {
+            if (currentPath != null && !currentPath.isEmpty()) {
                 msg.append("<h3>Current Directory: ").append(currentPath).append("</h3>");
+            } else {
+                msg.append("<h3>Current Directory: Root</h3>");
             }
             msg.append("<form method=\"post\" action=\"/upload\" enctype=\"multipart/form-data\">");
-            msg.append("<input type=\"hidden\" name=\"path\" value=\"").append(currentPath).append("\">");
+            // Make sure we handle null paths
+            String safePath = (currentPath != null) ? currentPath : "";
+            msg.append("<input type=\"hidden\" name=\"path\" value=\"").append(safePath).append("\">");
             msg.append("<label for=\"file\">Select file to upload:</label><br>");
             msg.append("<input type=\"file\" name=\"file\" id=\"file\" required><br>");
             msg.append("<button type=\"submit\">Upload File</button>");
@@ -249,11 +253,13 @@ public class WebServer extends NanoHTTPD {
             // Try to get path from parameters
             if (session.getParameters().containsKey("path")) {
                 path = session.getParameters().get("path").get(0);
-                GLog.debug("Upload path from form parameter: " + path);
+                GLog.debug("Upload path from form parameter: '" + path + "'");
             }
             
-            // Sanitize the path
+            // Handle null paths
             if (path == null) path = "";
+            
+            // Sanitize the path
             path = path.replace("..", ""); // Prevent directory traversal
             path = path.replace("//", "/"); // Normalize path separators
             
@@ -262,7 +268,7 @@ public class WebServer extends NanoHTTPD {
                 path += "/";
             }
             
-            GLog.debug("Final sanitized upload path: " + path);
+            GLog.debug("Final sanitized upload path: '" + path + "'");
             
             // Create the full path for the file
             String fullPath = ModdingMode.activeMod() + "/" + path + filename;
