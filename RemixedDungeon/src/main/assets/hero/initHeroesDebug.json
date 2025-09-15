@@ -19,7 +19,7 @@
         "identetifyLevel": 2
       },
       {
-        "kind": "SpellBook",
+        "kind": "test/TestItem",
         "level": 1,
         "identetifyLevel": 2
       },
