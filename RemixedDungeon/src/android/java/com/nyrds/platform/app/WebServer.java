@@ -365,7 +365,6 @@ public class WebServer extends NanoHTTPD {
     public Response serve(IHTTPSession session) {
         String uri = session.getUri();
         GLog.debug("WebServer: " + uri);
-        GLog.debug("Full request URI: " + session.getQueryParameterString());
         
         if (session.getMethod() == Method.GET) {
             if (uri.equals("/")) {
@@ -387,32 +386,24 @@ public class WebServer extends NanoHTTPD {
                 
                 // Parse query parameters manually
                 if (query != null && !query.isEmpty()) {
-                    GLog.debug("Parsing query parameters from query string");
                     // Split by & to get parameter pairs
                     String[] params = query.split("&");
                     for (String param : params) {
-                        GLog.debug("Processing parameter: " + param);
                         if (param.startsWith("path=")) {
                             path = param.substring(5); // Remove "path=" prefix
-                            GLog.debug("Raw path parameter: '" + path + "'");
                             // URL decode the path
                             try {
                                 path = java.net.URLDecoder.decode(path, "UTF-8");
-                                GLog.debug("Upload path after URL decoding: '" + path + "'");
                             } catch (Exception e) {
-                                GLog.debug("Upload path URL decoding failed: " + e.getMessage());
                                 // If decoding fails, use the path as is
                             }
                             // Ensure path is not null
                             if (path == null) {
                                 path = "";
-                                GLog.debug("Path was null, setting to empty string");
                             }
                             break;
                         }
                     }
-                } else {
-                    GLog.debug("No query parameters found in URI");
                 }
                 
                 GLog.debug("Final upload path: '" + path + "'");
