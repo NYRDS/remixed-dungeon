@@ -365,7 +365,8 @@ public class WebServer extends NanoHTTPD {
     public Response serve(IHTTPSession session) {
         String uri = session.getUri();
         GLog.debug("WebServer: " + uri);
-
+        GLog.debug("Full request URI: " + session.getQueryParameterString());
+        
         if (session.getMethod() == Method.GET) {
             if (uri.equals("/")) {
                 return newFixedLengthResponse(Response.Status.OK, "text/html", serveRoot());
@@ -380,11 +381,13 @@ public class WebServer extends NanoHTTPD {
                 String path = "";
                 GLog.debug("Upload URI: " + uri);
                 
+                // Try to get query parameters
+                String query = session.getQueryParameterString();
+                GLog.debug("Query parameter string: " + query);
+                
                 // Parse query parameters manually
-                if (uri.contains("?")) {
-                    String query = uri.substring(uri.indexOf("?") + 1);
-                    GLog.debug("Query string: " + query);
-                    
+                if (query != null && !query.isEmpty()) {
+                    GLog.debug("Parsing query parameters from query string");
                     // Split by & to get parameter pairs
                     String[] params = query.split("&");
                     for (String param : params) {
