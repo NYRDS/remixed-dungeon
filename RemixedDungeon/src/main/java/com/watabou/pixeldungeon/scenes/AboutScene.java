@@ -157,7 +157,8 @@ public class AboutScene extends PixelScene {
 			add(area2);
 			
 			// Secret button for enabling WebServer (only on Android)
-			ItemSprite webSprite = new ItemSprite(new com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation());
+			ItemSprite webSprite = new ItemSprite();
+			webSprite.view(11, null); // Use scroll image (index 11) without creating actual scroll item
 			webSprite.alpha(0.1f);
 			webSprite.setX(align(sprite.getX() + sprite.width() + 10));
 			webSprite.setY(sprite.getY());
