@@ -349,6 +349,7 @@ public class WebServer extends NanoHTTPD {
                     // Split by & to get parameter pairs
                     String[] params = query.split("&");
                     for (String param : params) {
+                        GLog.debug("Processing parameter: " + param);
                         if (param.startsWith("path=")) {
                             path = param.substring(5); // Remove "path=" prefix
                             GLog.debug("Raw path parameter: '" + path + "'");
@@ -359,6 +360,11 @@ public class WebServer extends NanoHTTPD {
                             } catch (Exception e) {
                                 GLog.debug("Upload path URL decoding failed: " + e.getMessage());
                                 // If decoding fails, use the path as is
+                            }
+                            // Ensure path is not null
+                            if (path == null) {
+                                path = "";
+                                GLog.debug("Path was null, setting to empty string");
                             }
                             break;
                         }
