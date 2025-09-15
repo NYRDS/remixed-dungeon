@@ -104,8 +104,10 @@ public class WebServer extends NanoHTTPD {
         for (String name : directories) {
             // Directory
             if(path.isEmpty()) {
+                GLog.debug("Generating directory link for root directory: " + name);
                 msg.append(Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>", name, name));
             } else {
+                GLog.debug("Generating directory link for subdirectory: " + path + name);
                 msg.append(Utils.format("<p>📁 <a href=\"/fs/%s%s/\">%s%s/</a></p>", path, name, path, name));
             }
         }
@@ -168,6 +170,22 @@ public class WebServer extends NanoHTTPD {
                 Collections.sort(files);
                 
                 msg.append("<div class=\"file-list\">");
+                // Add upload link for current directory
+                String uploadPath = file.isEmpty() ? "" : file;
+                if (!uploadPath.endsWith("/") && !uploadPath.isEmpty()) {
+                    uploadPath += "/";
+                }
+                GLog.debug("Generating upload link for directory in serveFs: '" + uploadPath + "'");
+                String encodedUploadPath = "";
+                try {
+                    encodedUploadPath = java.net.URLEncoder.encode(uploadPath, "UTF-8");
+                    GLog.debug("Encoded upload path in serveFs: '" + encodedUploadPath + "' from original: '" + uploadPath + "'");
+                } catch (Exception e) {
+                    encodedUploadPath = uploadPath; // Fallback if encoding fails
+                    GLog.debug("Upload path encoding failed in serveFs, using original: '" + uploadPath + "'");
+                }
+                msg.append(Utils.format("<p>📤 <a href=\"/upload?path=%s\">Upload files to this directory</a></p>", encodedUploadPath));
+                
                 // List directories first
                 for (String name : directories) {
                     msg.append(Utils.format("<p>📁 <a href=\"/fs/%s%s/\">%s/</a></p>", file, name, name));
