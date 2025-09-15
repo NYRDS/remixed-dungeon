@@ -23,7 +23,15 @@ import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import com.watabou.pixeldungeon.scenes.WebViewScene;
+
 public class AboutScene extends PixelScene {
+
+	private static AboutScene instance;
+	
+	private Text webServerText = null;
+	private Text webServerLink = null;
+	private boolean webServerLinkAdded = false;
 
 	private static String getTXT() {
         return StringsManager.getVar(R.string.AboutScene_Txt_Intro) + "\n\n"
@@ -48,6 +56,21 @@ public class AboutScene extends PixelScene {
 			@Override
 			protected void onClick( Touch touch ) {
 				Game.sendEmail(address, StringsManager.getVar(R.string.app_name));
+			}
+		};
+		add(area);
+		return text;
+	}
+	
+	private Text createTouchWebLink(final String address, Text visit)
+	{
+		Text text = createText(address, visit);
+		text.hardlight( Window.TITLE_COLOR );
+		
+		TouchArea area = new TouchArea( text ) {
+			@Override
+			protected void onClick( Touch touch ) {
+				WebViewScene.show(address);
 			}
 		};
 		add(area);
@@ -86,9 +109,51 @@ public class AboutScene extends PixelScene {
 		return multiline;
 	}
 	
+	private void createWebServerLink(Text upper)
+	{
+		// Only show WebServer link on Android platform
+		if (Utils.isAndroid()) {
+			// Check if WebServer is running
+			if (com.nyrds.platform.app.WebServer.isRunning()) {
+				// If we already have the elements, just update them
+				if (webServerLinkAdded) {
+					// Update the link text with current server address
+					String serverAddress = com.nyrds.platform.app.WebServer.getServerAddress();
+					if (webServerLink != null) {
+						webServerLink.text(serverAddress);
+						webServerLink.hardlight(Window.TITLE_COLOR);
+					}
+				} else {
+					// Create new elements
+					// Create text indicating WebServer is running
+					webServerText = createText("\nWebServer is running at:", upper);
+					
+					// Create the link to the WebServer
+					String serverAddress = com.nyrds.platform.app.WebServer.getServerAddress();
+					webServerLink = createTouchWebLink(serverAddress, webServerText);
+					webServerLink.hardlight(Window.TITLE_COLOR);
+					
+					webServerLinkAdded = true;
+				}
+			} else {
+				// Remove existing link if WebServer is not running
+				if (webServerLinkAdded && webServerText != null) {
+					webServerText.destroy();
+					if (webServerLink != null) {
+						webServerLink.destroy();
+					}
+					webServerLinkAdded = false;
+					webServerText = null;
+					webServerLink = null;
+				}
+			}
+		}
+	}
+	
 	@Override
 	public void create() {
 		super.create();
+		instance = this;
 
 		Text text = createText(getTXT(), null );
 		
@@ -104,6 +169,9 @@ public class AboutScene extends PixelScene {
 		Text trn = createText(getTRN(), site);
 		Text getCode = createText(StringsManager.getVar(R.string.AboutScene_SourceCode), trn);
 		Text code = createTouchLink(R.string.AboutScene_SourceCode, "https://github.com/NYRDS/remixed-dungeon", getCode);
+		
+		// Check if WebServer is running and add a link to it
+		createWebServerLink(code);
 		
 		Image nyrdie = Icons.NYRDIE.get();
 		nyrdie.setX(align( text.getX() + (text.width() - nyrdie.width) / 2 ));
@@ -172,16 +240,21 @@ public class AboutScene extends PixelScene {
 				protected void onClick(Touch touch) {
 					clickCounter++;
 					
-					if(clickCounter > 3) {
-						Game.toast("dev mode enabled");
-						// Start WebServer here
-						com.nyrds.platform.app.WebServer server = new com.nyrds.platform.app.WebServer(8080);
-						try {
-							server.start();
-							Game.toast("WebServer started on port 8080");
-						} catch (java.io.IOException e) {
-							com.nyrds.platform.EventCollector.logException(e, "WebServer");
-							Game.toast("Failed to start WebServer");
+					// Only enable WebServer on Android platform
+					if (Utils.isAndroid() && clickCounter > 3) {
+						if (!com.nyrds.platform.app.WebServer.isRunning()) {
+							Game.toast("dev mode enabled");
+							// Start WebServer here
+							com.nyrds.platform.app.WebServer server = new com.nyrds.platform.app.WebServer(8080);
+							try {
+								server.start();
+								Game.toast("WebServer started on port 8080");
+							} catch (java.io.IOException e) {
+								com.nyrds.platform.EventCollector.logException(e, "WebServer");
+								Game.toast("Failed to start WebServer");
+							}
+						} else {
+							Game.toast("WebServer already running");
 						}
 						return;
 					}
@@ -193,6 +266,12 @@ public class AboutScene extends PixelScene {
 			};
 			add(webArea);
 		}
+		
+		// Check if WebServer is running and add a link to it (only on Android)
+		if (Utils.isAndroid()) {
+			createWebServerLink(code);
+		}
+		
 		Archs archs = new Archs();
 		archs.setSize( Camera.main.width, Camera.main.height );
         sendToBack(archs);
@@ -207,5 +286,22 @@ public class AboutScene extends PixelScene {
 	@Override
 	protected void onBackPressed() {
 		RemixedDungeon.switchNoFade( TitleScene.class );
+	}
+	
+	public static void refreshWebServerLink() {
+		if (instance != null && Utils.isAndroid()) {
+			// Find the last text element to position the link after
+			Text lastText = null;
+			if (instance.webServerLink != null) {
+				lastText = instance.webServerLink;
+			} else if (instance.webServerText != null) {
+				lastText = instance.webServerText;
+			} else {
+				// If no web server elements exist yet, find the last regular element
+				// For simplicity, we'll just pass null and let createWebServerLink handle it
+				lastText = null;
+			}
+			instance.createWebServerLink(lastText);
+		}
 	}
 }

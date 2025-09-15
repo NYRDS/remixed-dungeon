@@ -3,9 +3,11 @@ package com.nyrds.platform.app;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.storage.Assets;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.scenes.AboutScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -13,16 +15,71 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
 import java.util.Collections;
+import java.util.Enumeration;
 import java.util.List;
 import java.util.Map;
 
 import fi.iki.elonen.NanoHTTPD;
 
 public class WebServer extends NanoHTTPD {
+    private static WebServer instance = null;
+    private String serverAddress = null;
+    private boolean started = false;
+    
+    public static boolean isRunning() {
+        return instance != null && instance.started;
+    }
+    
+    public static String getServerAddress() {
+        if (instance != null && instance.serverAddress != null) {
+            return instance.serverAddress;
+        }
+        return "http://localhost:8080"; // Default address
+    }
 
     public WebServer(int port) {
         super(port);
+        instance = this;
+        
+        // Try to get the IP address
+        try {
+            for (NetworkInterface networkInterface : Collections.list(NetworkInterface.getNetworkInterfaces())) {
+                Enumeration<InetAddress> addrs = networkInterface.getInetAddresses();
+                while (addrs.hasMoreElements()) {
+                    InetAddress addr = addrs.nextElement();
+                    // Skip loopback addresses
+                    if (!addr.isLoopbackAddress() && addr.getHostAddress().indexOf(':') == -1) {
+                        serverAddress = "http://" + addr.getHostAddress() + ":" + port;
+                        GLog.debug("WebServer address: " + serverAddress);
+                        break;
+                    }
+                }
+                if (serverAddress != null) {
+                    break;
+                }
+            }
+        } catch (SocketException e) {
+            GLog.debug("Failed to get IP address: " + e.getMessage());
+        }
+        
+        // Fallback to localhost
+        if (serverAddress == null) {
+            serverAddress = "http://localhost:" + port;
+        }
+    }
+    
+    @Override
+    public void start() throws IOException {
+        if (!started) {
+            super.start();
+            started = true;
+            // Notify AboutScene to refresh the WebServer link
+            GameLoop.pushUiTask(() -> AboutScene.refreshWebServerLink());
+        }
     }
 
     private String defaultHead() {
@@ -56,6 +113,104 @@ public class WebServer extends NanoHTTPD {
         return msg.toString();
     }
 
+    /**
+     * Check if a path represents a directory for the current mod
+     */
+    private boolean isDirectory(String path) {
+        GLog.debug("Checking if path is directory: '" + path + "'");
+        
+        // Special case: empty path or "/" represents the root directory
+        if (path.isEmpty() || path.equals("/")) {
+            GLog.debug("Path is root directory, returning true");
+            return true;
+        }
+        
+        // For Remixed mod, check assets
+        if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
+            try {
+                // Check if this path exists as an asset directory
+                String[] assetList = Assets.listAssets(path);
+                if (assetList != null && assetList.length > 0) {
+                    GLog.debug("Path '" + path + "' is a directory in assets");
+                    return true;
+                }
+            } catch (Exception e) {
+                // If we can't list assets, treat as file
+                GLog.debug("Failed to list assets for: " + path + " - " + e.getMessage());
+            }
+            GLog.debug("Path '" + path + "' is not a directory in assets");
+            return false;
+        } 
+        // For other mods, check file system
+        else {
+            File modFile = FileSystem.getExternalStorageFile(ModdingMode.activeMod() + "/" + path);
+            boolean result = modFile.exists() && modFile.isDirectory();
+            GLog.debug("Path '" + path + "' is " + (result ? "" : "not ") + "a directory in filesystem");
+            return result;
+        }
+    }
+    
+    /**
+     * List contents of a directory for the current mod
+     */
+    private String[] listDirectoryContents(String path) {
+        GLog.debug("Listing contents of directory: '" + path + "'");
+        
+        // For Remixed mod, get contents from assets
+        if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
+            try {
+                String[] result = Assets.listAssets(path);
+                GLog.debug("Found " + (result != null ? result.length : 0) + " items in assets directory");
+                return result;
+            } catch (Exception e) {
+                GLog.debug("Failed to list assets for directory: " + path + " - " + e.getMessage());
+                return null;
+            }
+        } 
+        // For other mods, get contents from file system
+        else {
+            File modFile = FileSystem.getExternalStorageFile(ModdingMode.activeMod() + "/" + path);
+            if (modFile.exists()) {
+                String[] result = modFile.list();
+                GLog.debug("Found " + (result != null ? result.length : 0) + " items in filesystem directory");
+                return result;
+            }
+            GLog.debug("Filesystem directory does not exist: " + modFile.getAbsolutePath());
+            return null;
+        }
+    }
+    
+    /**
+     * Check if a specific item in a directory is itself a directory
+     */
+    private boolean isDirectoryItem(String parentPath, String itemName) {
+        GLog.debug("Checking if item '" + itemName + "' in directory '" + parentPath + "' is a directory");
+        
+        // For Remixed mod, check assets
+        if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
+            try {
+                String assetPath = (parentPath.isEmpty() ? "" : parentPath + "/") + itemName;
+                String[] assetList = Assets.listAssets(assetPath);
+                if (assetList != null && assetList.length > 0) {
+                    GLog.debug("Item '" + itemName + "' is a directory in assets");
+                    return true;
+                }
+            } catch (Exception e) {
+                GLog.debug("Failed to check if asset is directory: " + itemName + " - " + e.getMessage());
+            }
+            GLog.debug("Item '" + itemName + "' is not a directory in assets");
+            return false;
+        } 
+        // For other mods, check file system
+        else {
+            File modFile = FileSystem.getExternalStorageFile(ModdingMode.activeMod() + "/" + parentPath);
+            File item = new File(modFile, itemName);
+            boolean result = item.isDirectory();
+            GLog.debug("Item '" + itemName + "' is " + (result ? "" : "not ") + "a directory in filesystem");
+            return result;
+        }
+    }
+
     private static void listDir(StringBuilder msg, String path) {
         GLog.debug("listDir called with path: '" + path + "'");
         List<String> list = ModdingMode.listResources(path,(dir, name)->true);
@@ -65,9 +220,30 @@ public class WebServer extends NanoHTTPD {
         List<String> files = new java.util.ArrayList<>();
         
         for (String name : list) {
-            // Check if this is a directory by looking at the filesystem
+            // Check if this is a directory by looking at both the filesystem and assets
+            boolean isDirectory = false;
+            
+            // First check external storage (for mod files)
             File modFile = FileSystem.getExternalStorageFile(ModdingMode.activeMod() + "/" + path + name);
             if (modFile.exists() && modFile.isDirectory()) {
+                isDirectory = true;
+            } 
+            // For the Remixed mod, also check assets
+            else if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
+                try {
+                    // Check if this path exists as an asset directory
+                    String assetPath = (path.isEmpty() ? "" : path + "/") + name;
+                    String[] assetList = Assets.listAssets(assetPath);
+                    if (assetList != null && assetList.length > 0) {
+                        isDirectory = true;
+                    }
+                } catch (Exception e) {
+                    // If we can't list assets, treat as file
+                    GLog.debug("Failed to list assets for: " + name + " - " + e.getMessage());
+                }
+            }
+            
+            if (isDirectory) {
                 directories.add(name);
             } else {
                 files.add(name);
@@ -124,91 +300,119 @@ public class WebServer extends NanoHTTPD {
         msg.append("</div>");
     }
 
-    private Response serveFs(String file) {
-        // Check if this is a directory
-        File modFile = FileSystem.getExternalStorageFile(ModdingMode.activeMod() + "/" + file);
-        if (modFile.exists() && modFile.isDirectory()) {
-            StringBuilder msg = new StringBuilder("<html><body>");
-            msg.append(defaultHead());
-            msg.append("<h1>Directory: ").append(file.isEmpty() ? "/" : file).append("</h1>");
-            msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a> | <a href=\"/upload?path=");
-            String encodedPath = "";
-            try {
-                encodedPath = java.net.URLEncoder.encode(file, "UTF-8");
-                GLog.debug("Encoded directory path for upload link: '" + encodedPath + "' from original: '" + file + "'");
-            } catch (Exception e) {
-                encodedPath = file; // Fallback if encoding fails
-                GLog.debug("Directory path encoding failed, using original: '" + file + "'");
+    /**
+     * Generate HTML for directory listing page
+     */
+    private String generateDirectoryListing(String directoryPath) {
+        StringBuilder msg = new StringBuilder("<html><body>");
+        msg.append(defaultHead());
+        msg.append("<h1>Directory: ").append(directoryPath.isEmpty() ? "/" : directoryPath).append("</h1>");
+        msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a> | <a href=\"/upload?path=");
+        String encodedPath = "";
+        try {
+            encodedPath = java.net.URLEncoder.encode(directoryPath, "UTF-8");
+            GLog.debug("Encoded directory path for upload link: '" + encodedPath + "' from original: '" + directoryPath + "'");
+        } catch (Exception e) {
+            encodedPath = directoryPath; // Fallback if encoding fails
+            GLog.debug("Directory path encoding failed, using original: '" + directoryPath + "'");
+        }
+        msg.append(encodedPath);
+        msg.append("\">📤 Upload Files</a></p>");
+        
+        // Add "up one level" link if not at root
+        if (!directoryPath.isEmpty()) {
+            String upOneLevel = directoryPath.contains("/") ? directoryPath.substring(0, directoryPath.lastIndexOf("/")) : "";
+            if (upOneLevel.isEmpty()) {
+                msg.append("<p><a href=\"/list\">..</a></p>");
+            } else {
+                msg.append(Utils.format("<p><a href=\"/fs/%s/\">..</a></p>", upOneLevel));
             }
-            msg.append(encodedPath);
-            msg.append("\">📤 Upload Files</a></p>");
-            
-            // Add "up one level" link if not at root
-            if (!file.isEmpty()) {
-                String upOneLevel = file.contains("/") ? file.substring(0, file.lastIndexOf("/")) : "";
-                msg.append(Utils.format("<p><a href=\"/fs/%s\">..</a></p>", upOneLevel));
-            }
-            
-            // List directory contents with directories first
-            String[] contents = modFile.list();
-            if (contents != null) {
-                // Separate directories and files
-                List<String> directories = new java.util.ArrayList<>();
-                List<String> files = new java.util.ArrayList<>();
-                
-                for (String name : contents) {
-                    File item = new File(modFile, name);
-                    if (item.isDirectory()) {
-                        directories.add(name);
-                    } else {
-                        files.add(name);
-                    }
-                }
-                
-                // Sort directories and files separately
-                Collections.sort(directories);
-                Collections.sort(files);
-                
-                msg.append("<div class=\"file-list\">");
-                // Add upload link for current directory
-                String uploadPath = file.isEmpty() ? "" : file;
-                if (!uploadPath.endsWith("/") && !uploadPath.isEmpty()) {
-                    uploadPath += "/";
-                }
-                GLog.debug("Generating upload link for directory in serveFs: '" + uploadPath + "'");
-                String encodedUploadPath = "";
-                try {
-                    encodedUploadPath = java.net.URLEncoder.encode(uploadPath, "UTF-8");
-                    GLog.debug("Encoded upload path in serveFs: '" + encodedUploadPath + "' from original: '" + uploadPath + "'");
-                } catch (Exception e) {
-                    encodedUploadPath = uploadPath; // Fallback if encoding fails
-                    GLog.debug("Upload path encoding failed in serveFs, using original: '" + uploadPath + "'");
-                }
-                msg.append(Utils.format("<p>📤 <a href=\"/upload?path=%s\">Upload files to this directory</a></p>", encodedUploadPath));
-                
-                // List directories first
-                for (String name : directories) {
-                    msg.append(Utils.format("<p>📁 <a href=\"/fs/%s%s/\">%s/</a></p>", file, name, name));
-                }
-                // Then list files
-                for (String name : files) {
-                    msg.append(Utils.format("<p>📄 <a href=\"/fs/%s%s\">%s</a></p>", file, name, name));
-                }
-                msg.append("</div>");
-            }
-            
-            msg.append("</body></html>");
-            return newFixedLengthResponse(Response.Status.OK, "text/html", msg.toString());
         }
         
-        // Handle file download
-        if(ModdingMode.isResourceExist(file)) {
+        // List directory contents with directories first
+        String[] contents = listDirectoryContents(directoryPath);
+        
+        if (contents != null) {
+            // Separate directories and files
+            List<String> directories = new java.util.ArrayList<>();
+            List<String> files = new java.util.ArrayList<>();
+            
+            for (String name : contents) {
+                if (isDirectoryItem(directoryPath, name)) {
+                    directories.add(name);
+                } else {
+                    files.add(name);
+                }
+            }
+            
+            // Sort directories and files separately
+            Collections.sort(directories);
+            Collections.sort(files);
+            
+            msg.append("<div class=\"file-list\">");
+            // Add upload link for current directory
+            String uploadPath = directoryPath.isEmpty() ? "" : directoryPath;
+            if (!uploadPath.endsWith("/") && !uploadPath.isEmpty()) {
+                uploadPath += "/";
+            }
+            GLog.debug("Generating upload link for directory in serveFs: '" + uploadPath + "'");
+            String encodedUploadPath = "";
+            try {
+                encodedUploadPath = java.net.URLEncoder.encode(uploadPath, "UTF-8");
+                GLog.debug("Encoded upload path in serveFs: '" + encodedUploadPath + "' from original: '" + uploadPath + "'");
+            } catch (Exception e) {
+                encodedUploadPath = uploadPath; // Fallback if encoding fails
+                GLog.debug("Upload path encoding failed in serveFs, using original: '" + uploadPath + "'");
+            }
+            msg.append(Utils.format("<p>📤 <a href=\"/upload?path=%s\">Upload files to this directory</a></p>", encodedUploadPath));
+            
+            // List directories first
+            for (String name : directories) {
+                msg.append(Utils.format("<p>📁 <a href=\"/fs/%s%s/\">%s/</a></p>", 
+                    directoryPath.isEmpty() ? name : directoryPath + "/" + name,
+                    "",  // Empty string to complete the format
+                    name));
+            }
+            // Then list files
+            for (String name : files) {
+                msg.append(Utils.format("<p>📄 <a href=\"/fs/%s%s\">%s</a></p>", 
+                    directoryPath.isEmpty() ? name : directoryPath + "/" + name,
+                    "",  // Empty string to complete the format
+                    name));
+            }
+            msg.append("</div>");
+        }
+        
+        msg.append("</body></html>");
+        return msg.toString();
+    }
+
+    private Response serveFs(String file) {
+        GLog.debug("serveFs called with file: '" + file + "'");
+        
+        // Remove trailing slash for directory checking (if present)
+        String cleanPath = file;
+        if (cleanPath.endsWith("/")) {
+            cleanPath = cleanPath.substring(0, cleanPath.length() - 1);
+            GLog.debug("Cleaned path from '" + file + "' to '" + cleanPath + "'");
+        }
+        
+        // Handle directory requests
+        if (isDirectory(cleanPath)) {
+            GLog.debug("Serving directory: " + cleanPath);
+            String html = generateDirectoryListing(cleanPath);
+            return newFixedLengthResponse(Response.Status.OK, "text/html", html);
+        }
+        // Handle file download requests
+        else if(ModdingMode.isResourceExist(file)) {
+            GLog.debug("Serving file: " + file);
             InputStream fis = ModdingMode.getInputStream(file);
             Response response = newChunkedResponse(Response.Status.OK, "application/octet-stream", fis);
             response.addHeader("Content-Disposition", "attachment; filename=\"" + file + "\"");
             return response;
         } else {
             // File or directory doesn't exist
+            GLog.debug("File or directory not found: " + file);
             StringBuilder msg = new StringBuilder("<html><body>");
             msg.append(defaultHead());
             msg.append("<h1>Not Found</h1>");

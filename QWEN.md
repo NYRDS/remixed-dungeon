@@ -132,9 +132,9 @@ The web version is intended to use TeaVM to compile Java code to JavaScript:
 ## Build Instructions
 1. **Android**: 
    ```bash
-   ./gradlew :RemixedDungeon:assembleGooglePlayRelease
-   ./gradlew :RemixedDungeon:assembleRuStoreRelease
-   ./gradlew :RemixedDungeon:assembleFdroidRelease
+   ./gradlew :RemixedDungeon:assembleAndroidGooglePlayRelease
+   ./gradlew :RemixedDungeon:assembleAndroidRuStoreRelease
+   ./gradlew :RemixedDungeon:assembleAndroidFdroidRelease
    ```
 
 2. **Desktop**:
@@ -163,6 +163,16 @@ The web version is intended to use TeaVM to compile Java code to JavaScript:
 
 ## Platform Abstraction
 The project implements a platform abstraction layer that allows the game to run on multiple platforms while sharing the majority of the game code. For more details, see [platform.md](platform.md).
+
+## Platform and Market Structure
+Documentation of how the project is structured across different platforms and markets:
+- [Platform and Market Structure](docs/PLATFORM_MARKET_STRUCTURE.md) - Detailed technical documentation
+- [Platform and Market Diagram](docs/PLATFORM_MARKET_DIAGRAM.md) - Visual representation of the structure
+
+## Platform Overlay System
+Documentation of how platforms and markets provide overlays to the core code:
+- [Platform Overlay System](docs/PLATFORM_OVERLAY_SYSTEM.md) - Detailed technical documentation of overlay mechanisms
+- [Platform Overlay Diagram](docs/PLATFORM_OVERLAY_DIAGRAM.md) - Visual representation of the overlay system
 
 ## Repository Map
 For a detailed map of the repository structure and architecture, see [REPO_MAP.md](REPO_MAP.md).

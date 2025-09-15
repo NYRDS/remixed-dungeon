@@ -11,25 +11,20 @@ The WebServer runs on port 8080 and provides a simple web interface for:
 
 This feature is especially valuable for modders and advanced users who want to quickly test changes to their mods without complex file transfer procedures.
 
-## Starting the WebServer
+## Enabling the WebServer
 
-The WebServer needs to be enabled in the code. Currently, the instantiation code is commented out in `RemixedDungeonApp.java`:
+Unlike what was previously documented, the WebServer is not enabled by uncommenting code in `RemixedDungeonApp.java`. Instead, it's enabled through a hidden feature in the AboutScene:
 
-```java
-/*            WebServer server = new WebServer(8080);
-            try {
-                server.start();
-            } catch (IOException e) {
-                EventCollector.logException(e,"WebServer");
-            }
-*/
-```
+1. Navigate to the About section in the game (usually accessible from the main menu)
+2. Find the small icon next to the main logo (it's a very faint item icon)
+3. Click this icon 4 times in quick succession
+4. If successful, you'll see a toast message "dev mode enabled" followed by "WebServer started on port 8080"
 
-To enable the WebServer, remove the comment markers and rebuild the application.
+This hidden method was implemented to prevent casual users from accidentally enabling the WebServer while still making it accessible to developers and advanced users who need it.
 
 ## Web Interface
 
-Once the WebServer is running, you can access it by navigating to `http://[device-ip]:8080/` in a web browser on the same network.
+Once the WebServer is running, you can access it by navigating to `http://[device-ip]:8080/` in a web browser on the same network. The IP address of the device will be displayed in the AboutScene once the WebServer is started.
 
 ### Main Dashboard
 
@@ -43,6 +38,7 @@ The file browser allows you to:
 - Navigate through directories in the active mod
 - Download any file by clicking on its link
 - Browse the file structure of your mod
+- Upload files to any directory using the upload links provided
 
 ### File Upload
 
@@ -70,6 +66,18 @@ Key implementation details:
 - Uses the existing `ModdingMode` system to determine the active mod
 - Leverages `FileSystem` utilities for file operations
 - Implements proper error handling and logging
+
+The WebServer implementation can be found in:
+- `/RemixedDungeon/src/android/java/com/nyrds/platform/app/WebServer.java` (Android implementation)
+- `/RemixedDungeonDesktop/src/libgdx/java/com/nyrds/platform/app/WebServer.java` (Desktop placeholder)
+
+### Directory Detection Fix
+
+A recent fix was implemented to properly handle directory detection for both the main "Remixed" mod (which stores files as APK assets) and third-party mods (which store files in external storage):
+
+1. For the main "Remixed" mod, directories are detected by checking if asset paths can be listed
+2. For third-party mods, directories are detected by checking the file system
+3. This ensures both mod types display their directory structure correctly in the web interface
 
 ## Use Cases
 
@@ -100,14 +108,14 @@ Advanced users can use the WebServer to:
 2. **Network Required**: Both the Android device and the computer need to be on the same network.
 3. **Performance**: Large file transfers may be slower than direct file system access.
 4. **Security**: The WebServer should only be used on trusted networks as it provides file system access.
+5. **Hidden Feature**: The WebServer is not obvious to enable, requiring knowledge of the hidden button in AboutScene.
 
-## Enabling the WebServer
+## Accessing the WebServer
 
-To enable the WebServer in a custom build:
-1. Uncomment the WebServer instantiation code in `RemixedDungeonApp.java`
-2. Rebuild the application
-3. Launch the game on an Android device
-4. Find the device's IP address on the network
-5. Access `http://[device-ip]:8080/` from a web browser
+To access the WebServer once it's running:
+1. Ensure your Android device and computer are on the same network
+2. Find the IP address displayed in the AboutScene after enabling the WebServer
+3. Access `http://[device-ip]:8080/` from a web browser
+4. Use the web interface to browse and manage files
 
-Note: The WebServer is not enabled in official builds for security reasons.
+Note: The WebServer is not enabled in official builds by default, but can be enabled through the hidden button method described above. This design choice balances accessibility for developers with security for general users.
