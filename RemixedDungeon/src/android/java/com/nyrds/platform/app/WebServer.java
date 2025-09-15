@@ -261,10 +261,12 @@ public class WebServer extends NanoHTTPD {
     
     private Response handleFileUpload(IHTTPSession session) {
         try {
+            GLog.debug("=== STARTING FILE UPLOAD PROCESS ===");
             GLog.debug("Handling file upload, URI: " + session.getUri());
             
             // Check if we're trying to upload to the main Remixed mod
             if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
+                GLog.debug("Upload blocked - attempt to upload to main 'Remixed' mod");
                 return newFixedLengthResponse(Response.Status.FORBIDDEN, "text/html", 
                     serveUploadForm("ERROR: Upload to the main 'Remixed' mod is disabled for security reasons.", ""));
             }
@@ -274,16 +276,23 @@ public class WebServer extends NanoHTTPD {
             
             // Get the uploaded file
             String filename = session.getParameters().get("file").get(0);
+            GLog.debug("Uploaded filename: " + filename);
+            
             String path = "";
             
             // Try to get path from parameters
             if (session.getParameters().containsKey("path")) {
                 path = session.getParameters().get("path").get(0);
-                GLog.debug("Upload path from form parameter: '" + path + "'");
+                GLog.debug("Raw upload path from form parameter: '" + path + "'");
+            } else {
+                GLog.debug("No path parameter found in form submission");
             }
             
             // Handle null paths
-            if (path == null) path = "";
+            if (path == null) {
+                path = "";
+                GLog.debug("Path was null, setting to empty string");
+            }
             
             // Sanitize the path
             path = path.replace("..", ""); // Prevent directory traversal
@@ -298,10 +307,13 @@ public class WebServer extends NanoHTTPD {
             
             // Create the full path for the file
             String fullPath = ModdingMode.activeMod() + "/" + path + filename;
+            GLog.debug("Full file path: " + fullPath);
             
             // Get the temporary uploaded file
             String tempFilePath = files.get("file");
+            GLog.debug("Temp file path: " + tempFilePath);
             if (tempFilePath == null) {
+                GLog.debug("No temp file found");
                 return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html", 
                     serveUploadForm("ERROR: No file uploaded.", path));
             }
@@ -309,14 +321,18 @@ public class WebServer extends NanoHTTPD {
             // Move the file to the correct location
             File tempFile = new File(tempFilePath);
             File destFile = FileSystem.getExternalStorageFile(fullPath);
+            GLog.debug("Destination file path: " + destFile.getAbsolutePath());
             
             // Create directories if needed
             File destDir = destFile.getParentFile();
+            GLog.debug("Destination directory: " + (destDir != null ? destDir.getAbsolutePath() : "null"));
             if (destDir != null && !destDir.exists()) {
+                GLog.debug("Creating destination directory");
                 destDir.mkdirs();
             }
             
             // Copy the file
+            GLog.debug("Copying file from temp to destination");
             try (FileOutputStream fos = new FileOutputStream(destFile)) {
                 byte[] buffer = new byte[4096];
                 int bytesRead;
@@ -328,12 +344,15 @@ public class WebServer extends NanoHTTPD {
             }
             
             // Delete the temporary file
+            GLog.debug("Deleting temporary file");
             tempFile.delete();
             
+            GLog.debug("=== FILE UPLOAD COMPLETED SUCCESSFULLY ===");
             return newFixedLengthResponse(Response.Status.OK, "text/html", 
                 serveUploadForm("File uploaded successfully to: " + fullPath, path));
                 
         } catch (Exception e) {
+            GLog.debug("=== FILE UPLOAD FAILED ===");
             GLog.debug("Upload error: " + e.getMessage());
             e.printStackTrace(); // Log the full stack trace for debugging
             return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html", 
