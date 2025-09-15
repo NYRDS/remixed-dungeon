@@ -8,10 +8,8 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -34,7 +32,7 @@ public class WebServer extends NanoHTTPD {
         if(Dungeon.level != null) {
             msg += Utils.format("<br>Level: %s", Dungeon.level.levelId);
         }
-        msg+= "</p></body><html>";
+        msg+= "</body></html>";
         return msg;
     }
 
@@ -42,7 +40,7 @@ public class WebServer extends NanoHTTPD {
         StringBuilder msg = new StringBuilder("<html><body>");
         msg.append(defaultHead());
         listDir(msg, "");
-        msg.append("</p></body><html>");
+        msg.append("</body></html>");
 
         return msg.toString();
     }
@@ -77,7 +75,7 @@ public class WebServer extends NanoHTTPD {
             } else {
                 listDir(msg, "");
             }
-            msg.append("</p></body><html>");
+            msg.append("</body></html>");
             return  newFixedLengthResponse(Response.Status.OK, "text/html",msg.toString());
         }
     }
