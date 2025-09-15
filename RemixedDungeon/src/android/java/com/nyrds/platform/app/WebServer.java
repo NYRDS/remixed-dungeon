@@ -44,17 +44,7 @@ public class WebServer extends NanoHTTPD {
         return msg;
     }
 
-    private String serveList() {
-        StringBuilder msg = new StringBuilder("<html><body>");
-        msg.append(defaultHead());
-        msg.append("<h1>File Browser</h1>");
-        msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/upload?path=\">📤 Upload Files</a></p>");
-        msg.append("<h2>Files in Active Mod: ").append(ModdingMode.activeMod()).append("</h2>");
-        listDir(msg, "");
-        msg.append("</body></html>");
-
-        return msg.toString();
-    }
+    private String serveList() {\n        StringBuilder msg = new StringBuilder(\"<html><body>\");\n        msg.append(defaultHead());\n        msg.append(\"<h1>File Browser</h1>\");\n        msg.append(\"<p><a href=\\\"/\\\">🏠 Home</a> | <a href=\\\"/upload?path=\\\">📤 Upload Files</a></p>\");\n        msg.append(\"<h2>Files in Active Mod: \").append(ModdingMode.activeMod()).append(\"</h2>\");\n        listDir(msg, \"\");\n        msg.append(\"</body></html>\");\n\n        return msg.toString();\n    }
 
     private static void listDir(StringBuilder msg, String path) {
         List<String> list = ModdingMode.listResources(path,(dir, name)->true);
@@ -88,7 +78,13 @@ public class WebServer extends NanoHTTPD {
         if (!uploadPath.endsWith("/") && !uploadPath.isEmpty()) {
             uploadPath += "/";
         }
-        msg.append(Utils.format("<p>\uD83D\uDD3A <a href=\"/upload?path=%s\">Upload files to this directory</a></p>", uploadPath));
+        String encodedUploadPath = "";
+        try {
+            encodedUploadPath = java.net.URLEncoder.encode(uploadPath, "UTF-8");
+        } catch (Exception e) {
+            encodedUploadPath = uploadPath; // Fallback if encoding fails
+        }
+        msg.append(Utils.format("<p>\uD83D\uDD3A <a href=\"/upload?path=%s\">Upload files to this directory</a></p>", encodedUploadPath));
         
         // List directories first
         for (String name : directories) {
@@ -119,7 +115,13 @@ public class WebServer extends NanoHTTPD {
             StringBuilder msg = new StringBuilder("<html><body>");
             msg.append(defaultHead());
             msg.append("<h1>Directory: ").append(file.isEmpty() ? "/" : file).append("</h1>");
-            msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a> | <a href=\"/upload?path=").append(file).append("\">📤 Upload Files</a></p>");
+            msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a> | <a href=\"/upload?path=");
+            try {
+                msg.append(java.net.URLEncoder.encode(file, "UTF-8"));
+            } catch (Exception e) {
+                msg.append(file); // Fallback if encoding fails
+            }
+            msg.append("\">📤 Upload Files</a></p>");
             
             // Add "up one level" link if not at root
             if (!file.isEmpty()) {
