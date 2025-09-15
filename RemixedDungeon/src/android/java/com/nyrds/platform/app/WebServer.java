@@ -60,44 +60,85 @@ public class WebServer extends NanoHTTPD {
         List<String> list = ModdingMode.listResources(path,(dir, name)->true);
         Collections.sort(list);
 
-        if (!path.isEmpty()) {
+        if (!path.isEmpty() && !path.equals("/")) {
             String upOneLevel = path.contains("/") ? path.substring(0, path.lastIndexOf("/")) : "";
             msg.append(Utils.format("<p><a href=\"/fs/%s\">..</a></p>", upOneLevel));
         }
 
         msg.append("<div class=\"file-list\">");
         for (String name : list) {
-            if(path.isEmpty()) {
-                msg.append(Utils.format("<p><a href=\"/fs/%s\">%s</a></p>", name, name));
+            // Check if this is a directory by looking at the filesystem
+            File modFile = FileSystem.getExternalStorageFile(ModdingMode.activeMod() + "/" + path + name);
+            if (modFile.exists() && modFile.isDirectory()) {
+                // Directory
+                if(path.isEmpty()) {
+                    msg.append(Utils.format("<p>\uD83D\uDCC1 <a href=\"/fs/%s/\">%s/</a></p>", name, name));
+                } else {
+                    msg.append(Utils.format("<p>\uD83D\uDCC1 <a href=\"/fs/%s%s/\">%s%s/</a></p>", path, name, path, name));
+                }
             } else {
-                msg.append(Utils.format("<p><a href=\"/fs/%s%s\">%s%s</a></p>", path, name, path, name));
+                // File
+                if(path.isEmpty()) {
+                    msg.append(Utils.format("<p>\uD83D\uDCC4 <a href=\"/fs/%s\">%s</a></p>", name, name));
+                } else {
+                    msg.append(Utils.format("<p>\uD83D\uDCC4 <a href=\"/fs/%s%s\">%s%s</a></p>", path, name, path, name));
+                }
             }
         }
         msg.append("</div>");
     }
 
     private Response serveFs(String file) {
+        // Check if this is a directory
+        File modFile = FileSystem.getExternalStorageFile(ModdingMode.activeMod() + "/" + file);
+        if (modFile.exists() && modFile.isDirectory()) {
+            StringBuilder msg = new StringBuilder("<html><body>");
+            msg.append(defaultHead());
+            msg.append("<h1>Directory: ").append(file.isEmpty() ? "/" : file).append("</h1>");
+            msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a> | <a href=\"/upload\">📤 Upload Files</a></p>");
+            
+            // Add "up one level" link if not at root
+            if (!file.isEmpty()) {
+                String upOneLevel = file.contains("/") ? file.substring(0, file.lastIndexOf("/")) : "";
+                msg.append(Utils.format("<p><a href=\"/fs/%s\">..</a></p>", upOneLevel));
+            }
+            
+            // List directory contents
+            String[] contents = modFile.list();
+            if (contents != null) {
+                msg.append("<div class=\"file-list\">");
+                for (String name : contents) {
+                    File item = new File(modFile, name);
+                    if (item.isDirectory()) {
+                        // Directory link
+                        msg.append(Utils.format("<p>📁 <a href=\"/fs/%s%s/\">%s/</a></p>", file, name, name));
+                    } else {
+                        // File link
+                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s%s\">%s</a></p>", file, name, name));
+                    }
+                }
+                msg.append("</div>");
+            }
+            
+            msg.append("</body></html>");
+            return newFixedLengthResponse(Response.Status.OK, "text/html", msg.toString());
+        }
+        
+        // Handle file download
         if(ModdingMode.isResourceExist(file)) {
             InputStream fis = ModdingMode.getInputStream(file);
             Response response = newChunkedResponse(Response.Status.OK, "application/octet-stream", fis);
             response.addHeader("Content-Disposition", "attachment; filename=\"" + file + "\"");
             return response;
         } else {
+            // File or directory doesn't exist
             StringBuilder msg = new StringBuilder("<html><body>");
             msg.append(defaultHead());
-            msg.append("<h1>Directory: ").append(file.isEmpty() ? "/" : file).append("</h1>");
+            msg.append("<h1>Not Found</h1>");
             msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a> | <a href=\"/upload\">📤 Upload Files</a></p>");
-            String upOneLevel = file.contains("/") ? file.substring(0, file.lastIndexOf("/")) : "";
-            if(!file.isEmpty()) {
-                msg.append(Utils.format("<p><a href=\"/fs/%s\">..</a></p>", upOneLevel));
-            }
-            if(!file.isEmpty()) {
-                listDir(msg, file + "/");
-            } else {
-                listDir(msg, "");
-            }
+            msg.append("<p>The requested file or directory was not found.</p>");
             msg.append("</body></html>");
-            return  newFixedLengthResponse(Response.Status.OK, "text/html",msg.toString());
+            return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", msg.toString());
         }
     }
     
@@ -232,4 +273,3 @@ public class WebServer extends NanoHTTPD {
 }
 
 
-}
