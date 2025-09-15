@@ -1,9 +1,18 @@
+pluginManagement {
+    repositories {
+        mavenLocal() // Check your local Maven repository first
+        gradlePluginPortal() // Then check the Gradle Plugin Portal
+    }
+}
+
+
 include ':processor', ':annotation', ':json_clone'
 
 // Example project-level settings.gradle
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
+        mavenLocal()
         mavenCentral()
         google()
         maven {
