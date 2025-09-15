@@ -18,12 +18,19 @@ import androidx.multidex.MultiDexApplication;
 import com.nyrds.market.MarketApp;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
 import java.security.MessageDigest;
+import java.util.Collections;
+import java.util.Enumeration;
 import java.util.concurrent.ThreadPoolExecutor;
 
 import lombok.SneakyThrows;
@@ -58,24 +65,6 @@ public class RemixedDungeonApp extends MultiDexApplication {
                 Log.d("Classes", ignore.toString());
             }
         }
-/*
-            WebServer server = new WebServer(8080);
-            try {
-                server.start();
-            } catch (IOException e) {
-                EventCollector.logException(e,"WebServer");
-            }
-            try {
-                for (NetworkInterface networkInterface : Collections.list(NetworkInterface.getNetworkInterfaces())) {
-                    Enumeration<InetAddress> addrs = networkInterface.getInetAddresses();
-                    while (addrs.hasMoreElements()) {
-                        Log.d("IP", addrs.nextElement().getHostAddress());
-                    }
-                }
-            } catch (SocketException e) {
-                EventCollector.logException(e,"IP");
-            }
-*/
     }
 
     @Override

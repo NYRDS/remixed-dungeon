@@ -154,6 +154,42 @@ public class AboutScene extends PixelScene {
 					AndroidSAF.pickDirectoryForModInstall();
 				}
 			};
+			add(area2);
+			
+			// Secret button for enabling WebServer (only on Android)
+			ItemSprite webSprite = new ItemSprite(new com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation());
+			webSprite.alpha(0.1f);
+			webSprite.setX(align(sprite.getX() + sprite.width() + 10));
+			webSprite.setY(sprite.getY());
+			add(webSprite);
+			
+			TouchArea webArea = new TouchArea(webSprite) {
+				private int clickCounter = 0;
+				
+				@Override
+				protected void onClick(Touch touch) {
+					clickCounter++;
+					
+					if(clickCounter > 3) {
+						Game.toast("dev mode enabled");
+						// Start WebServer here
+						com.nyrds.platform.app.WebServer server = new com.nyrds.platform.app.WebServer(8080);
+						try {
+							server.start();
+							Game.toast("WebServer started on port 8080");
+						} catch (java.io.IOException e) {
+							com.nyrds.platform.EventCollector.logException(e, "WebServer");
+							Game.toast("Failed to start WebServer");
+						}
+						return;
+					}
+					
+					if(clickCounter > 1) {
+						Game.toast("dev mode?");
+					}
+				}
+			};
+			add(webArea);
 		}
 		Archs archs = new Archs();
 		archs.setSize( Camera.main.width, Camera.main.height );
