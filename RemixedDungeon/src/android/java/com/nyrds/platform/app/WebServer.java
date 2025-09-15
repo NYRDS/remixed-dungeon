@@ -340,20 +340,33 @@ public class WebServer extends NanoHTTPD {
                 // Extract path from query parameters if present
                 String path = "";
                 GLog.debug("Upload URI: " + uri);
-                if (uri.contains("?path=")) {
-                    path = uri.substring(uri.indexOf("?path=") + 6);
-                    GLog.debug("Upload path extracted from URI: '" + path + "'");
-                    // URL decode the path
-                    try {
-                        path = java.net.URLDecoder.decode(path, "UTF-8");
-                        GLog.debug("Upload path after URL decoding: '" + path + "'");
-                    } catch (Exception e) {
-                        GLog.debug("Upload path URL decoding failed: " + e.getMessage());
-                        // If decoding fails, use the path as is
+                
+                // Parse query parameters manually
+                if (uri.contains("?")) {
+                    String query = uri.substring(uri.indexOf("?") + 1);
+                    GLog.debug("Query string: " + query);
+                    
+                    // Split by & to get parameter pairs
+                    String[] params = query.split("&");
+                    for (String param : params) {
+                        if (param.startsWith("path=")) {
+                            path = param.substring(5); // Remove "path=" prefix
+                            GLog.debug("Raw path parameter: '" + path + "'");
+                            // URL decode the path
+                            try {
+                                path = java.net.URLDecoder.decode(path, "UTF-8");
+                                GLog.debug("Upload path after URL decoding: '" + path + "'");
+                            } catch (Exception e) {
+                                GLog.debug("Upload path URL decoding failed: " + e.getMessage());
+                                // If decoding fails, use the path as is
+                            }
+                            break;
+                        }
                     }
                 } else {
-                    GLog.debug("No path parameter found in URI");
+                    GLog.debug("No query parameters found in URI");
                 }
+                
                 GLog.debug("Final upload path: '" + path + "'");
                 return newFixedLengthResponse(Response.Status.OK, "text/html", serveUploadForm("", path));
             }
