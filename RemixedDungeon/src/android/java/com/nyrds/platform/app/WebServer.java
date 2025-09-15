@@ -58,7 +58,24 @@ public class WebServer extends NanoHTTPD {
 
     private static void listDir(StringBuilder msg, String path) {
         List<String> list = ModdingMode.listResources(path,(dir, name)->true);
-        Collections.sort(list);
+        
+        // Separate directories and files
+        List<String> directories = new java.util.ArrayList<>();
+        List<String> files = new java.util.ArrayList<>();
+        
+        for (String name : list) {
+            // Check if this is a directory by looking at the filesystem
+            File modFile = FileSystem.getExternalStorageFile(ModdingMode.activeMod() + "/" + path + name);
+            if (modFile.exists() && modFile.isDirectory()) {
+                directories.add(name);
+            } else {
+                files.add(name);
+            }
+        }
+        
+        // Sort directories and files separately
+        Collections.sort(directories);
+        Collections.sort(files);
 
         if (!path.isEmpty() && !path.equals("/")) {
             String upOneLevel = path.contains("/") ? path.substring(0, path.lastIndexOf("/")) : "";
@@ -72,23 +89,24 @@ public class WebServer extends NanoHTTPD {
             uploadPath += "/";
         }
         msg.append(Utils.format("<p>\uD83D\uDD3A <a href=\"/upload?path=%s\">Upload files to this directory</a></p>", uploadPath));
-        for (String name : list) {
-            // Check if this is a directory by looking at the filesystem
-            File modFile = FileSystem.getExternalStorageFile(ModdingMode.activeMod() + "/" + path + name);
-            if (modFile.exists() && modFile.isDirectory()) {
-                // Directory
-                if(path.isEmpty()) {
-                    msg.append(Utils.format("<p>\uD83D\uDCC1 <a href=\"/fs/%s/\">%s/</a></p>", name, name));
-                } else {
-                    msg.append(Utils.format("<p>\uD83D\uDCC1 <a href=\"/fs/%s%s/\">%s%s/</a></p>", path, name, path, name));
-                }
+        
+        // List directories first
+        for (String name : directories) {
+            // Directory
+            if(path.isEmpty()) {
+                msg.append(Utils.format("<p>\uD83D\uDCC1 <a href=\"/fs/%s/\">%s/</a></p>", name, name));
             } else {
-                // File
-                if(path.isEmpty()) {
-                    msg.append(Utils.format("<p>\uD83D\uDCC4 <a href=\"/fs/%s\">%s</a></p>", name, name));
-                } else {
-                    msg.append(Utils.format("<p>\uD83D\uDCC4 <a href=\"/fs/%s%s\">%s%s</a></p>", path, name, path, name));
-                }
+                msg.append(Utils.format("<p>\uD83D\uDCC1 <a href=\"/fs/%s%s/\">%s%s/</a></p>", path, name, path, name));
+            }
+        }
+        
+        // Then list files
+        for (String name : files) {
+            // File
+            if(path.isEmpty()) {
+                msg.append(Utils.format("<p>\uD83D\uDCC4 <a href=\"/fs/%s\">%s</a></p>", name, name));
+            } else {
+                msg.append(Utils.format("<p>\uD83D\uDCC4 <a href=\"/fs/%s%s\">%s%s</a></p>", path, name, path, name));
             }
         }
         msg.append("</div>");
@@ -109,19 +127,34 @@ public class WebServer extends NanoHTTPD {
                 msg.append(Utils.format("<p><a href=\"/fs/%s\">..</a></p>", upOneLevel));
             }
             
-            // List directory contents
+            // List directory contents with directories first
             String[] contents = modFile.list();
             if (contents != null) {
-                msg.append("<div class=\"file-list\">");
+                // Separate directories and files
+                List<String> directories = new java.util.ArrayList<>();
+                List<String> files = new java.util.ArrayList<>();
+                
                 for (String name : contents) {
                     File item = new File(modFile, name);
                     if (item.isDirectory()) {
-                        // Directory link
-                        msg.append(Utils.format("<p>📁 <a href=\"/fs/%s%s/\">%s/</a></p>", file, name, name));
+                        directories.add(name);
                     } else {
-                        // File link
-                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s%s\">%s</a></p>", file, name, name));
+                        files.add(name);
                     }
+                }
+                
+                // Sort directories and files separately
+                Collections.sort(directories);
+                Collections.sort(files);
+                
+                msg.append("<div class=\"file-list\">");
+                // List directories first
+                for (String name : directories) {
+                    msg.append(Utils.format("<p>📁 <a href=\"/fs/%s%s/\">%s/</a></p>", file, name, name));
+                }
+                // Then list files
+                for (String name : files) {
+                    msg.append(Utils.format("<p>📄 <a href=\"/fs/%s%s\">%s</a></p>", file, name, name));
                 }
                 msg.append("</div>");
             }
