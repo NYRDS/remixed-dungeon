@@ -39,7 +39,7 @@ public class WebServer extends NanoHTTPD {
             msg += Utils.format("<p>Level: %s</p>", Dungeon.level.levelId);
         }
         msg += "<p><a href=\"/list\">📁 Browse Files</a></p>";
-        msg += "<p><a href=\"/upload\">📤 Upload Files</a></p>";
+        msg += "<p><a href=\"/upload?path=\">📤 Upload Files</a></p>";
         msg += "</body></html>";
         return msg;
     }
@@ -48,7 +48,7 @@ public class WebServer extends NanoHTTPD {
         StringBuilder msg = new StringBuilder("<html><body>");
         msg.append(defaultHead());
         msg.append("<h1>File Browser</h1>");
-        msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/upload\">📤 Upload Files</a></p>");
+        msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/upload?path=\">📤 Upload Files</a></p>");
         msg.append("<h2>Files in Active Mod: ").append(ModdingMode.activeMod()).append("</h2>");
         listDir(msg, "");
         msg.append("</body></html>");
@@ -66,6 +66,12 @@ public class WebServer extends NanoHTTPD {
         }
 
         msg.append("<div class=\"file-list\">");
+        // Add upload link for current directory
+        String uploadPath = path.isEmpty() ? "" : path;
+        if (!uploadPath.endsWith("/") && !uploadPath.isEmpty()) {
+            uploadPath += "/";
+        }
+        msg.append(Utils.format("<p>\uD83D\uDD3A <a href=\"/upload?path=%s\">Upload files to this directory</a></p>", uploadPath));
         for (String name : list) {
             // Check if this is a directory by looking at the filesystem
             File modFile = FileSystem.getExternalStorageFile(ModdingMode.activeMod() + "/" + path + name);
@@ -95,7 +101,7 @@ public class WebServer extends NanoHTTPD {
             StringBuilder msg = new StringBuilder("<html><body>");
             msg.append(defaultHead());
             msg.append("<h1>Directory: ").append(file.isEmpty() ? "/" : file).append("</h1>");
-            msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a> | <a href=\"/upload\">📤 Upload Files</a></p>");
+            msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a> | <a href=\"/upload?path=").append(file).append("\">📤 Upload Files</a></p>");
             
             // Add "up one level" link if not at root
             if (!file.isEmpty()) {
@@ -142,7 +148,7 @@ public class WebServer extends NanoHTTPD {
         }
     }
     
-    private String serveUploadForm(String message) {
+    private String serveUploadForm(String message, String currentPath) {
         StringBuilder msg = new StringBuilder("<html><body>");
         msg.append(defaultHead());
         msg.append("<h1>File Upload</h1>");
@@ -162,11 +168,13 @@ public class WebServer extends NanoHTTPD {
         } else {
             msg.append("<div class=\"upload-form\">");
             msg.append("<h2>Upload to Mod: ").append(ModdingMode.activeMod()).append("</h2>");
+            if (!currentPath.isEmpty()) {
+                msg.append("<h3>Current Directory: ").append(currentPath).append("</h3>");
+            }
             msg.append("<form method=\"post\" action=\"/upload\" enctype=\"multipart/form-data\">");
+            msg.append("<input type=\"hidden\" name=\"path\" value=\"").append(currentPath).append("\">");
             msg.append("<label for=\"file\">Select file to upload:</label><br>");
             msg.append("<input type=\"file\" name=\"file\" id=\"file\" required><br>");
-            msg.append("<label for=\"path\">Path in mod (optional):</label><br>");
-            msg.append("<input type=\"text\" name=\"path\" id=\"path\" placeholder=\"subfolder/\" value=\"\"><br>");
             msg.append("<button type=\"submit\">Upload File</button>");
             msg.append("</form>");
             msg.append("</div>");
@@ -181,7 +189,7 @@ public class WebServer extends NanoHTTPD {
             // Check if we're trying to upload to the main Remixed mod
             if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
                 return newFixedLengthResponse(Response.Status.FORBIDDEN, "text/html", 
-                    serveUploadForm("ERROR: Upload to the main 'Remixed' mod is disabled for security reasons."));
+                    serveUploadForm("ERROR: Upload to the main 'Remixed' mod is disabled for security reasons.", ""));
             }
             
             Map<String, String> files = new java.util.HashMap<>();
@@ -196,6 +204,11 @@ public class WebServer extends NanoHTTPD {
             path = path.replace("..", ""); // Prevent directory traversal
             path = path.replace("//", "/"); // Normalize path separators
             
+            // Ensure path ends with / if not empty
+            if (!path.isEmpty() && !path.endsWith("/")) {
+                path += "/";
+            }
+            
             // Create the full path for the file
             String fullPath = ModdingMode.activeMod() + "/" + path + filename;
             
@@ -203,7 +216,7 @@ public class WebServer extends NanoHTTPD {
             String tempFilePath = files.get("file");
             if (tempFilePath == null) {
                 return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html", 
-                    serveUploadForm("ERROR: No file uploaded."));
+                    serveUploadForm("ERROR: No file uploaded.", path));
             }
             
             // Move the file to the correct location
@@ -231,12 +244,12 @@ public class WebServer extends NanoHTTPD {
             tempFile.delete();
             
             return newFixedLengthResponse(Response.Status.OK, "text/html", 
-                serveUploadForm("File uploaded successfully to: " + fullPath));
+                serveUploadForm("File uploaded successfully to: " + fullPath, path));
                 
         } catch (Exception e) {
             GLog.debug("Upload error: " + e.getMessage());
             return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html", 
-                serveUploadForm("ERROR: Failed to upload file - " + e.getMessage()));
+                serveUploadForm("ERROR: Failed to upload file - " + e.getMessage(), ""));
         }
     }
 
@@ -256,7 +269,18 @@ public class WebServer extends NanoHTTPD {
             }
             
             if(uri.equals("/upload")) {
-                return newFixedLengthResponse(Response.Status.OK, "text/html", serveUploadForm(""));
+                // Extract path from query parameters if present
+                String path = "";
+                if (uri.contains("?path=")) {
+                    path = uri.substring(uri.indexOf("?path=") + 6);
+                    // URL decode the path
+                    try {
+                        path = java.net.URLDecoder.decode(path, "UTF-8");
+                    } catch (Exception e) {
+                        // If decoding fails, use the path as is
+                    }
+                }
+                return newFixedLengthResponse(Response.Status.OK, "text/html", serveUploadForm("", path));
             }
 
             if(uri.startsWith("/fs/")) {
