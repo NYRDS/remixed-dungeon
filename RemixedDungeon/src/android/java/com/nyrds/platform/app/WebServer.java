@@ -44,7 +44,17 @@ public class WebServer extends NanoHTTPD {
         return msg;
     }
 
-    private String serveList() {\n        StringBuilder msg = new StringBuilder(\"<html><body>\");\n        msg.append(defaultHead());\n        msg.append(\"<h1>File Browser</h1>\");\n        msg.append(\"<p><a href=\\\"/\\\">🏠 Home</a> | <a href=\\\"/upload?path=\\\">📤 Upload Files</a></p>\");\n        msg.append(\"<h2>Files in Active Mod: \").append(ModdingMode.activeMod()).append(\"</h2>\");\n        listDir(msg, \"\");\n        msg.append(\"</body></html>\");\n\n        return msg.toString();\n    }
+    private String serveList() {
+        StringBuilder msg = new StringBuilder("<html><body>");
+        msg.append(defaultHead());
+        msg.append("<h1>File Browser</h1>");
+        msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/upload?path=\">📤 Upload Files</a></p>");
+        msg.append("<h2>Files in Active Mod: ").append(ModdingMode.activeMod()).append("</h2>");
+        listDir(msg, "");
+        msg.append("</body></html>");
+
+        return msg.toString();
+    }
 
     private static void listDir(StringBuilder msg, String path) {
         List<String> list = ModdingMode.listResources(path,(dir, name)->true);
@@ -84,15 +94,15 @@ public class WebServer extends NanoHTTPD {
         } catch (Exception e) {
             encodedUploadPath = uploadPath; // Fallback if encoding fails
         }
-        msg.append(Utils.format("<p>\uD83D\uDD3A <a href=\"/upload?path=%s\">Upload files to this directory</a></p>", encodedUploadPath));
+        msg.append(Utils.format("<p>📤 <a href=\"/upload?path=%s\">Upload files to this directory</a></p>", encodedUploadPath));
         
         // List directories first
         for (String name : directories) {
             // Directory
             if(path.isEmpty()) {
-                msg.append(Utils.format("<p>\uD83D\uDCC1 <a href=\"/fs/%s/\">%s/</a></p>", name, name));
+                msg.append(Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>", name, name));
             } else {
-                msg.append(Utils.format("<p>\uD83D\uDCC1 <a href=\"/fs/%s%s/\">%s%s/</a></p>", path, name, path, name));
+                msg.append(Utils.format("<p>📁 <a href=\"/fs/%s%s/\">%s%s/</a></p>", path, name, path, name));
             }
         }
         
@@ -100,9 +110,9 @@ public class WebServer extends NanoHTTPD {
         for (String name : files) {
             // File
             if(path.isEmpty()) {
-                msg.append(Utils.format("<p>\uD83D\uDCC4 <a href=\"/fs/%s\">%s</a></p>", name, name));
+                msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", name, name));
             } else {
-                msg.append(Utils.format("<p>\uD83D\uDCC4 <a href=\"/fs/%s%s\">%s%s</a></p>", path, name, path, name));
+                msg.append(Utils.format("<p>📄 <a href=\"/fs/%s%s\">%s%s</a></p>", path, name, path, name));
             }
         }
         msg.append("</div>");
@@ -310,7 +320,7 @@ public class WebServer extends NanoHTTPD {
                 return newFixedLengthResponse(Response.Status.OK, "text/html", serveRoot());
             }
 
-            if(uri.equals("/list")) {
+            if(uri.startsWith("/list")) {
                 return newFixedLengthResponse(Response.Status.OK, "text/html", serveList());
             }
             
@@ -345,5 +355,3 @@ public class WebServer extends NanoHTTPD {
         return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", "Not Found");
     }
 }
-
-
