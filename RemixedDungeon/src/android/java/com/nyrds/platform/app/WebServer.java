@@ -91,8 +91,10 @@ public class WebServer extends NanoHTTPD {
         String encodedUploadPath = "";
         try {
             encodedUploadPath = java.net.URLEncoder.encode(uploadPath, "UTF-8");
+            GLog.debug("Encoded upload path: '" + encodedUploadPath + "' from original: '" + uploadPath + "'");
         } catch (Exception e) {
             encodedUploadPath = uploadPath; // Fallback if encoding fails
+            GLog.debug("Upload path encoding failed, using original: '" + uploadPath + "'");
         }
         msg.append(Utils.format("<p>📤 <a href=\"/upload?path=%s\">Upload files to this directory</a></p>", encodedUploadPath));
         
@@ -126,11 +128,15 @@ public class WebServer extends NanoHTTPD {
             msg.append(defaultHead());
             msg.append("<h1>Directory: ").append(file.isEmpty() ? "/" : file).append("</h1>");
             msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a> | <a href=\"/upload?path=");
+            String encodedPath = "";
             try {
-                msg.append(java.net.URLEncoder.encode(file, "UTF-8"));
+                encodedPath = java.net.URLEncoder.encode(file, "UTF-8");
+                GLog.debug("Encoded directory path: '" + encodedPath + "' from original: '" + file + "'");
             } catch (Exception e) {
-                msg.append(file); // Fallback if encoding fails
+                encodedPath = file; // Fallback if encoding fails
+                GLog.debug("Directory path encoding failed, using original: '" + file + "'");
             }
+            msg.append(encodedPath);
             msg.append("\">📤 Upload Files</a></p>");
             
             // Add "up one level" link if not at root
