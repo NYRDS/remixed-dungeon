@@ -219,6 +219,8 @@ public class WebServer extends NanoHTTPD {
     
     private Response handleFileUpload(IHTTPSession session) {
         try {
+            GLog.debug("Handling file upload, URI: " + session.getUri());
+            
             // Check if we're trying to upload to the main Remixed mod
             if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
                 return newFixedLengthResponse(Response.Status.FORBIDDEN, "text/html", 
@@ -230,7 +232,13 @@ public class WebServer extends NanoHTTPD {
             
             // Get the uploaded file
             String filename = session.getParameters().get("file").get(0);
-            String path = session.getParameters().get("path").get(0);
+            String path = "";
+            
+            // Try to get path from parameters
+            if (session.getParameters().containsKey("path")) {
+                path = session.getParameters().get("path").get(0);
+                GLog.debug("Upload path from form parameter: " + path);
+            }
             
             // Sanitize the path
             if (path == null) path = "";
@@ -241,6 +249,8 @@ public class WebServer extends NanoHTTPD {
             if (!path.isEmpty() && !path.endsWith("/")) {
                 path += "/";
             }
+            
+            GLog.debug("Final sanitized upload path: " + path);
             
             // Create the full path for the file
             String fullPath = ModdingMode.activeMod() + "/" + path + filename;
@@ -281,6 +291,7 @@ public class WebServer extends NanoHTTPD {
                 
         } catch (Exception e) {
             GLog.debug("Upload error: " + e.getMessage());
+            e.printStackTrace(); // Log the full stack trace for debugging
             return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html", 
                 serveUploadForm("ERROR: Failed to upload file - " + e.getMessage(), ""));
         }
@@ -301,18 +312,22 @@ public class WebServer extends NanoHTTPD {
                 return newFixedLengthResponse(Response.Status.OK, "text/html", serveList());
             }
             
-            if(uri.equals("/upload")) {
+            if(uri.startsWith("/upload")) {
                 // Extract path from query parameters if present
                 String path = "";
                 if (uri.contains("?path=")) {
                     path = uri.substring(uri.indexOf("?path=") + 6);
+                    GLog.debug("Upload path extracted from URI: " + path);
                     // URL decode the path
                     try {
                         path = java.net.URLDecoder.decode(path, "UTF-8");
+                        GLog.debug("Upload path after URL decoding: " + path);
                     } catch (Exception e) {
+                        GLog.debug("Upload path URL decoding failed: " + e.getMessage());
                         // If decoding fails, use the path as is
                     }
                 }
+                GLog.debug("Final upload path: " + path);
                 return newFixedLengthResponse(Response.Status.OK, "text/html", serveUploadForm("", path));
             }
 
@@ -320,7 +335,7 @@ public class WebServer extends NanoHTTPD {
                 return serveFs(uri.substring(4));
             }
         } else if (session.getMethod() == Method.POST) {
-            if(uri.equals("/upload")) {
+            if(uri.startsWith("/upload")) {
                 return handleFileUpload(session);
             }
         }
