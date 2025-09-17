@@ -24,14 +24,14 @@ public class Bleeding extends Buff {
 	public boolean act() {
 		if (target.isAlive()) {
 			
-			if ((level = Random.Int( level / 2, level )) > 0) {
+			if ((buffLevel = Random.Int( buffLevel / 2, buffLevel)) > 0) {
 				
-				target.damage( level, this );
+				target.damage(buffLevel, this );
 				final CharSprite targetSprite = target.getSprite();
 
 				if (targetSprite.getVisible()) {
 					Splash.at( targetSprite.center(), -PointF.PI / 2, PointF.PI / 6,
-							targetSprite.blood(), Math.min( 10 * level / target.ht(), 10 ) );
+							targetSprite.blood(), Math.min( 10 * buffLevel / target.ht(), 10 ) );
 				}
 				
 				if (target == Dungeon.hero && !target.isAlive()) {

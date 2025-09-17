@@ -45,7 +45,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     public Char target = CharsList.DUMMY;
 
     @Packable(defaultValue = "1")
-    public int level = 1;
+    public int buffLevel = 1;
 
     @Packable(defaultValue = "-1")
     public int source = -1;
@@ -135,7 +135,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
             buff = buffClass.newInstance();
             buff.attachTo(target);
         } else {
-            buff.level++;
+            buff.buffLevel++;
         }
         return buff;
     }
@@ -161,7 +161,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
             buff = BuffFactory.getBuffByName(buffClass);
             buff.attachTo(target);
         } else {
-            buff.level++;
+            buff.buffLevel++;
         }
 
         return buff;
@@ -251,12 +251,14 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         return source;
     }
 
+    @LuaInterface
     public void level(int level) {
-        this.level = level;
+        this.buffLevel = level;
     }
 
+    @LuaInterface
     public int level() {
-        return level;
+        return buffLevel;
     }
 
     public int drBonus(Char chr) {

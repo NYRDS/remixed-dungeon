@@ -23,7 +23,7 @@ return spell.init{
             castTime      = 0.5
         }
     end,
-    cast = function(self, spell, caster, cell)
+    cast = function(self, spell, caster)
         RPD.topEffect(caster:getPos(),"body_armor")
 
 	    RPD.playSound("body_armor")

@@ -19,7 +19,7 @@ public class Ooze extends Buff {
 	@Override
 	public boolean act() {
 		if (target.isAlive()) {
-			target.damage( level, this );
+			target.damage(buffLevel, this );
 			if (!target.isAlive() && target == Dungeon.hero) {
 				Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.OOZE), Dungeon.depth ) );
                 GLog.n(StringsManager.getVar(R.string.Ooze_Death), name() );
@@ -27,7 +27,7 @@ public class Ooze extends Buff {
 			spend( TICK );
 		}
 		if (target.level().water[target.getPos()]) {
-			if (level--<= 0) {
+			if (buffLevel--<= 0) {
 				detach();
 			}
 		}
