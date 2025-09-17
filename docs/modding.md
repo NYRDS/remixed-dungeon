@@ -16,9 +16,10 @@ Remixed Dungeon features a comprehensive modding system built on Lua scripting t
 8. [Buff Scripting](#buff-scripting)
 9. [Actor Scripting](#actor-scripting)
 10. [Quest Scripting](#quest-scripting)
-11. [Common Patterns](#common-patterns)
-12. [API Reference](#api-reference)
-13. [Best Practices](#best-practices)
+11. [JSON Configuration Files](#json-configuration-files)
+12. [Common Patterns](#common-patterns)
+13. [API Reference](#api-reference)
+14. [Best Practices](#best-practices)
 
 ## Scripting Architecture
 
@@ -441,6 +442,191 @@ if quest.isCompleted("rat_hunt") then
     -- Reward player
 end
 ```
+
+## JSON Configuration Files
+
+### Purpose
+JSON configuration files provide a declarative way to define game entities and their properties without writing Lua scripts. These files are used for mobs, levels, sprites, effects, and other game elements.
+
+### Mob Configuration Files
+
+Mob configuration files are located in `mobsDesc/` directory and define mob properties such as stats, behavior, and appearance.
+
+#### Example (Bee.json):
+```json
+{
+   "defenseSkill"  :10,
+   "attackSkill"   :14,
+   "exp"           :2,
+   "maxLvl"        :10,
+   "dmgMin"        :1,
+   "dmgMax"        :3,
+   "dr"            :1,
+   "baseSpeed"     :1.5,
+   "attackDelay"   :1,
+   "ht"            :35,
+   "viewDistance"  :4,
+   "lootChance"    :0,
+   "name"          :"Bee_Name",
+   "name_objective":"Bee_Name_Objective",
+   "description"   :"Bee_Desc",
+   "gender"        :"Bee_Gender",
+   "spriteDesc"    :"spritesDesc/Bee.json",
+   "scriptFile"    :"scripts/mobs/Stinger",
+   "walkingType"   :"NORMAL",
+   "aiState"       :"Wandering",
+   "canBePet"      : true,
+   "flying"        : true,
+   "friendly"      : false
+}
+```
+
+#### Key Properties:
+- `defenseSkill`: Mob's defense skill level
+- `attackSkill`: Mob's attack skill level
+- `exp`: Experience points awarded for killing this mob
+- `maxLvl`: Maximum level this mob can reach
+- `dmgMin`/`dmgMax`: Minimum and maximum damage dealt
+- `dr`: Damage reduction
+- `baseSpeed`: Base movement speed
+- `attackDelay`: Delay between attacks
+- `ht`: Health points
+- `viewDistance`: How far the mob can see
+- `lootChance`: Chance to drop loot
+- `spriteDesc`: Path to sprite definition file
+- `scriptFile`: Optional Lua script for custom behavior
+- `walkingType`: Movement type (NORMAL, WALL, etc.)
+- `aiState`: Initial AI state
+- `canBePet`: Whether mob can be tamed as a pet
+- `flying`: Whether mob can fly over obstacles
+- `friendly`: Whether mob is initially friendly
+
+### Sprite Configuration Files
+
+Sprite configuration files are located in `spritesDesc/` directory and define how mobs and items are visually represented.
+
+#### Example (Bee.json):
+```json
+{
+  "texture" : "mobs/bee.png",
+  "width"  : 16,
+  "height" : 16,
+  "idle"   : { "fps" : 12,  "looped" : true,     "frames" : [0,1,1,0,2,2] },
+  "run"    : { "fps" : 15, "looped" : true,     "frames" : [0,1,1,0,2,2] },
+  "attack" : { "fps" : 20, "looped" : false,    "frames" : [3,4,5,6] },
+  "die"    : { "fps" : 20, "looped" : false,    "frames" : [7,8,9,10] },
+  "bloodColor": "0xffd500"
+}
+```
+
+#### Key Properties:
+- `texture`: Path to the sprite texture file
+- `width`/`height`: Dimensions of each frame
+- `idle`/`run`/`attack`/`die`: Animation definitions
+- `fps`: Frames per second for the animation
+- `looped`: Whether the animation loops
+- `frames`: Array of frame indices to use
+- `bloodColor`: Color of blood particles when mob is damaged
+
+### Level Configuration Files
+
+Level configuration files define the structure of game levels, including level progression and connections.
+
+#### Example (Dungeon.json - levels section):
+```json
+{
+   "Levels":{
+      "0":{"kind":"SewerLevel", "depth":0, "size":[0,0]},
+      "1":{"kind":"SewerLevel", "depth":1, "size":[24,24], "music":"ost_sewer"},
+      "5":{"kind":"SewerBossLevel", "depth":5, "size":[32,32], "music":"ost_boss_1_ambient"}
+   }
+}
+```
+
+#### Level Types:
+- `SewerLevel`: Standard sewer level
+- `SewerBossLevel`: Sewer boss level
+- `PrisonLevel`: Standard prison level
+- `PredesignedLevel`: Custom designed level from a JSON file
+- And many others for different areas of the dungeon
+
+### Level Object Configuration Files
+
+Level object configuration files define interactive objects like chests, wells, and statues.
+
+#### Example (pot.json):
+```json
+{
+  "kind":"CustomObject",
+  "script": "pot",
+  "layer" : 0,
+  "appearance": {
+    "desc": {
+      "desc": "Level_TileDescAlchemy",
+      "name": "Level_TileAlchemy",
+      "nonPassable" : true
+    },
+    "sprite":{
+      "textureFile": "levelObjects/objects.png",
+      "imageIndex" : 0
+    }
+  }
+}
+```
+
+### Effect Configuration Files
+
+Effect configuration files define visual effects like particle animations.
+
+#### Example (cauldron_effect.json):
+```json
+{
+  "texture" : "effects/cauldron_effect.png",
+  "width"  : 16,
+  "height" : 16,
+  "anim"   : { "fps" : 15,  "looped" : true,    "frames" : [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] }
+}
+```
+
+### Hero Initialization Files
+
+Hero initialization files define starting equipment and stats for different character classes.
+
+#### Example (initHeroes.json):
+```json
+{
+  "WARRIOR": {
+    "weapon": {
+      "kind": "ShortSword",
+      "identified": true
+    },
+    "str": 11,
+    "magicAffinity": "Combat"
+  }
+}
+```
+
+### Treasury Files
+
+Treasury files define what items can be found in shops and their probabilities.
+
+#### Example (TownShopTreasury.json):
+```json
+{
+  "FOOD": {
+    "categoryChance": 10,
+    "OverpricedRation" : 1,
+    "FriedFish" : 0.05
+  }
+}
+```
+
+### Usage Patterns
+
+JSON configurations are used in combination with Lua scripts:
+1. **Pure JSON**: Simple mobs/objects with no custom behavior
+2. **JSON + Lua**: Complex entities that use JSON for static properties and Lua for dynamic behavior
+3. **Predesigned Levels**: Custom level maps defined entirely in JSON with embedded mob and object placements
 
 ## Common Patterns
 
