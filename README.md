@@ -22,7 +22,6 @@ Remixed Dungeon in [Google Play](https://play.google.com/store/apps/details?id=c
 [Telegram](https://t.me/RemixedDungeon)
 
 
-
 Классический рогалик с пиксельной графикой и простым интерфейсом.
 
 Это форк Знаменитой Pixel Dungeon с Английской, Русской и множеством других локализаций.
@@ -47,7 +46,6 @@ Remixed Dungeon in [Google Play](https://play.google.com/store/apps/details?id=c
 [Wiki](https://wiki.nyrds.net/)
 [YouTube](https://www.youtube.com/c/NYRDS)
 [Telegram](https://t.me/RemixedDungeon)
-
 
 ## Star History
 

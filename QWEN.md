@@ -174,8 +174,34 @@ Documentation of how platforms and markets provide overlays to the core code:
 - [Platform Overlay System](docs/PLATFORM_OVERLAY_SYSTEM.md) - Detailed technical documentation of overlay mechanisms
 - [Platform Overlay Diagram](docs/PLATFORM_OVERLAY_DIAGRAM.md) - Visual representation of the overlay system
 
+## UI Composition System
+Documentation of the UI component architecture and composition patterns:
+- [UI Composition Principles](docs/UI_Composition_Principles.md) - Detailed documentation of UI architecture
+
+## Bitmap Manipulation
+Documentation of the cross-platform bitmap manipulation interface:
+- [BitmapData Interface](docs/BitmapData.md) - Detailed documentation of bitmap operations
+
+## Web Server Functionality
+Documentation of the Android-only web server for mod file management:
+- [WebServer Functionality](docs/WebServer.md) - Detailed documentation of web server features and implementation
+
 ## Repository Map
 For a detailed map of the repository structure and architecture, see [REPO_MAP.md](REPO_MAP.md).
+
+## Recent Work Summary
+
+### Platform and Market Documentation
+- Comprehensive documentation of platform and market separation architecture
+- Visual diagrams explaining the overlay system
+- Detailed technical documentation of implementation patterns
+
+### Web Server Improvements
+- Fixed directory listing issues for both Remixed mod (APK assets) and third-party mods (external storage)
+- Refactored WebServer into smaller, more maintainable methods
+- Improved path handling for directory URLs with trailing slashes
+- Enhanced logging for easier debugging
+- Updated documentation to reflect the latest implementation
 
 ## Qwen Added Memories
 - Key files: Hero.java (hero character logic) at RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/Hero.java, CharSprite.java (character sprite rendering) at RemixedDungeon/src/main/java/com/watabou/pixeldungeon/sprites/CharSprite.java, Actor.java (actor system) at RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/Actor.java

@@ -98,107 +98,148 @@ remixed-dungeon/
 
 #### Scenes (`com.watabou.pixeldungeon.scenes`)
 - `TitleScene`: Main menu
-- `GameScene`: Main gameplay screen
-- `InterlevelScene`: Level transitions
-- `PixelScene`: Base UI scene
+- `GameScene`: Main gameplay scene
+- `PixelScene`: Base class for UI scenes with pixel-perfect rendering
+- `AboutScene`: About/credits screen with WebServer information
 
 #### UI Components (`com.watabou.pixeldungeon.ui`)
-- `Toolbar`: Main action toolbar
-- `QuickSlot`: Quick item access slots
-- `StatusPane`: Character status display
-- `Inventory`: Item inventory management
-- `Windows`: Various dialog windows
+- `Button`: Base button class
+- `RedButton`: Styled button with red theme
+- `TextButton`: Button with text label
+- `Window`: Modal dialog windows
+- `ScrollPane`: Scrollable container
+- `Toolbar`: Player action toolbar
+- `StatusPane`: Player status display
 
-### 4. Platform Abstraction
+#### UI Framework (`com.watabou.noosa.ui`)
+- `Component`: Base UI component with layout capabilities
+- `Group`: Container for other UI elements
+- `Image`: Visual image elements
+- `Text`: Text rendering elements
+- `NinePatch`: Scalable UI elements
 
-#### Android Implementation (`com.nyrds.platform.game`)
-- `Game`: Android-specific game implementation
-- `RemixedDungeon`: Main Android activity
+### 4. Platform Abstraction Layer
 
-#### Desktop Implementation (`com.nyrds.platform.game`)
-- `Game`: LibGDX-based game implementation
-- `RemixedDungeon`: Desktop game launcher
+#### Game Management (`com.nyrds.platform.game`)
+- `Game`: Platform-specific game lifecycle management
+- `RemixedDungeon`: Main application class
 
-#### Web Implementation (`com.nyrds.platform.game`) (Work in Progress)
-- `Game`: Intended TeaVM-based game implementation using LibGDX backend
-- `TeaVMLauncher`: TeaVM entry point class that creates the application listener
-- Intended to use TeaVM to compile Java code to JavaScript
-- Intended to implement platform-specific adaptations for browser environment
+#### Audio (`com.nyrds.platform.audio`)
+- `MusicManager`: Background music management
+- `Sample`: Sound effects management
 
-#### Common Platform Services (`com.nyrds.platform`)
-- `Audio`: Sound and music management
-- `Storage`: File system operations
-- `Input`: Input handling
+#### Storage (`com.nyrds.platform.storage`)
+- `FileSystem`: File system operations
+- `Preferences`: User preferences storage
+- `Assets`: Asset management
+
+#### Input (`com.nyrds.platform.input`)
+- `Touchscreen`: Touch input handling
+- `PInputProcessor`: Platform-specific input processor
+
+#### Utilities (`com.nyrds.platform.util`)
+- `PUtil`: Platform utilities
+- `ModdingMode`: Modding system management
+
+#### Graphics (`com.nyrds.platform.gfx`)
+- `BitmapData`: Cross-platform bitmap manipulation
+- `PTextureFilm`: Texture management
+
+#### Concurrency (`com.nyrds.platform`)
+- `ConcurrencyProvider`: Platform-specific concurrency handling
+
+#### Analytics (`com.nyrds.platform`)
 - `EventCollector`: Analytics and error reporting
 
 ### 5. Modding System
 
-#### Lua Integration (`com.nyrds.lua`)
-- `LuaEngine`: Lua script engine
-- `LuaInterface`: Java-Lua bridge
+#### Mod Management (`com.nyrds.util`)
+- `ModdingMode`: Mod selection and resource management
+- `ModdingBase`: Base modding functionality
 
-#### Mod Data (`modding/`)
-- JSON files for character, item, and level definitions
-- Sprite definitions
-- Localization files
+#### Scripting (`com.nyrds.lua`)
+- `LuaInterface`: Lua scripting interface
+- `LuaEngine`: Lua script execution
+
+### 6. Web Server (Android Only)
+
+#### Web Server (`com.nyrds.platform.app`)
+- `WebServer`: HTTP server for mod file management
+- Located in `RemixedDungeon/src/android/java/com/nyrds/platform/app/WebServer.java`
+
+Features:
+- File browsing and downloading
+- File uploading (with security restrictions)
+- Directory navigation
+- Cross-platform mod management
 
 ## Build System
 
-### Gradle Configuration
-- `build.gradle`: Root project configuration
-- `settings.gradle`: Module inclusion
-- Module-specific `build.gradle` files for Android, Desktop, and Web
+### Gradle Modules
 
-### Flavors
-- `googlePlay`: Google Play Store version with ads/analytics
-- `fdroid`: F-Droid version without proprietary dependencies
-- `ruStore`: Russian app store version
-- `huawei`: Huawei AppGallery version (planned)
+1. **RemixedDungeon**: Android application with flavor support
+2. **RemixedDungeonDesktop**: Desktop application using LibGDX
+3. **RemixedDungeonHtml**: Web application using TeaVM (work in progress)
+4. **annotation**: Custom annotation definitions
+5. **processor**: Annotation processor for code generation
+6. **json_clone**: JSON cloning utilities
 
-### Web Platform (Work in Progress)
-- Intended to use TeaVM to compile Java code to JavaScript
-- Intended to implement LibGDX TeaVM backend for WebGL rendering
-- Intended for browser-based distribution for web play
-- Uses Gradle TeaVM plugin for building
+### Android Flavors
 
-## Key Patterns and Concepts
+- **googlePlay**: Google Play Store version with analytics and ads
+- **fdroid**: F-Droid version without proprietary dependencies
+- **ruStore**: ruStore version with Yandex billing
+- **huawei**: Planned Huawei AppGallery support
 
-### 1. Entity System
-- Each game entity (Hero, Mobs, Items) extends from appropriate base classes
-- Entities are identified by class names and can be dynamically created
-- JSON configuration files define entity properties
+## Documentation
 
-### 2. Game Loop
-- Time-based turn system with real-time option
-- Actors take turns based on speed and actions
-- Asynchronous processing for UI updates
+### Platform Documentation
+- `platform.md`: Platform abstraction layer documentation
+- `docs/PLATFORM_MARKET_STRUCTURE.md`: Platform and market separation architecture
+- `docs/PLATFORM_MARKET_DIAGRAM.md`: Visual diagram of platform structure
+- `docs/PLATFORM_OVERLAY_SYSTEM.md`: Platform and market overlay mechanisms
+- `docs/PLATFORM_OVERLAY_DIAGRAM.md`: Visual diagram of overlay system
 
-### 3. Level Generation
-- Room-based procedural generation
-- Different painters for room types
-- Terrain and object placement algorithms
+### UI Documentation
+- `docs/UI_Composition_Principles.md`: UI component architecture and composition patterns
 
-### 4. Modding Support
-- JSON-based entity definitions
-- Lua scripting for behavior customization
-- Asset replacement system
-- Multiple mod directories
+### Utilities Documentation
+- `docs/BitmapData.md`: Cross-platform bitmap manipulation interface
 
-### 5. Platform Abstraction
-- Common interfaces for platform-specific functionality
-- Separate implementations for Android, Desktop, and Web
-- Build flavors for different distribution channels
+### Web Server Documentation
+- `docs/WebServer.md`: Web server functionality for mod management
 
-### 6. Web Platform Implementation (Work in Progress)
-The web platform is intended to use TeaVM to compile Java code to JavaScript, enabling the game to run in web browsers.
+## Resources
 
-#### Key Components
-- `TeaVMLauncher.java`: Main TeaVM application class that configures and launches the game
-- TeaVM configuration in build.gradle that specifies the main class and target file name
+### Assets
+- Graphics, sounds, and other media files
+- Organized by type and module
 
-#### TeaVM-Specific Files
-- **TeaVMLauncher.java**: Entry point class that creates the TeaApplication with the game configuration
-- **build.gradle**: Contains TeaVM plugin configuration and dependencies
+### Maps
+- Tiled map files for level design
+- Located in `TiledMaps/` directory
 
-#### Current Implementation Status
-The web platform using TeaVM is currently under development and not yet compilable. The build process currently fails with a NullPointerException during the JavaScript generation phase. Work is ongoing to resolve compilation issues and enable browser-based deployment.
+### Modding Resources
+- Template files and examples for mod creators
+- Located in `modding/` directory
+
+## Tools
+
+### Development Tools
+- Build scripts and utilities
+- Located in `tools/` directory
+
+### Annotation Processing
+- Custom annotations for code generation
+- Processor for generating boilerplate code
+
+## Distribution
+
+### Build Outputs
+- Android APKs for different markets
+- Desktop executables for Windows, macOS, and Linux
+- Web deployment files (when complete)
+
+### Packaging
+- Gradle tasks for platform-specific packaging
+- Distribution scripts for release management

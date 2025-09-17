@@ -71,9 +71,27 @@ The WebServer implementation can be found in:
 - `/RemixedDungeon/src/android/java/com/nyrds/platform/app/WebServer.java` (Android implementation)
 - `/RemixedDungeonDesktop/src/libgdx/java/com/nyrds/platform/app/WebServer.java` (Desktop placeholder)
 
-### Directory Detection Fix
+### Recent Refactoring Improvements
 
-A recent fix was implemented to properly handle directory detection for both the main "Remixed" mod (which stores files as APK assets) and third-party mods (which store files in external storage):
+The WebServer has been recently refactored to improve maintainability and fix directory access issues:
+
+1. **Modular Design**: The large `serveFs` method was split into smaller, focused helper methods:
+   - `isDirectory()` - Checks if a path represents a directory
+   - `listDirectoryContents()` - Lists directory contents
+   - `isDirectoryItem()` - Checks if an item in a directory is itself a directory
+   - `generateDirectoryListing()` - Generates HTML for directory listings
+
+2. **Path Handling Fix**: Fixed issues with trailing slashes in directory URLs by properly cleaning paths before directory checks
+
+3. **Root Directory Handling**: Added special handling for the root directory (empty path or "/") to ensure it's correctly identified as a directory
+
+4. **Navigation Links**: Fixed "up one level" navigation links to properly handle navigation from the root directory
+
+5. **Enhanced Logging**: Added comprehensive logging throughout the directory handling methods for easier debugging
+
+### Directory Detection for Different Mod Types
+
+The WebServer properly handles directory detection for both the main "Remixed" mod (which stores files as APK assets) and third-party mods (which store files in external storage):
 
 1. For the main "Remixed" mod, directories are detected by checking if asset paths can be listed
 2. For third-party mods, directories are detected by checking the file system
