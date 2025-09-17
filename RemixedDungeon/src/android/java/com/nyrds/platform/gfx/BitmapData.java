@@ -9,10 +9,10 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.platform.EventCollector;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
@@ -39,7 +39,7 @@ public class BitmapData {
         try {
             return new BitmapData(BitmapFactory.decodeStream(inputStream));
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
             return null;
         }
     }
@@ -60,7 +60,7 @@ public class BitmapData {
         try {
             return new BitmapData(Bitmap.createBitmap(width,height, Bitmap.Config.ARGB_4444));
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
             return null;
         }
     }
@@ -218,10 +218,8 @@ public class BitmapData {
                 // Log the full path where the file was saved
                 System.out.println("Bitmap saved to: " + file.getAbsolutePath());
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
@@ -236,7 +234,7 @@ public class BitmapData {
                 canvas.drawLine(startX, startY, endX, endY, paint);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
