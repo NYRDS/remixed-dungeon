@@ -1,7 +1,6 @@
 
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -53,14 +52,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
 public class WandMaker extends NPC {
-
-	@Override
-    public boolean act() {
-		ItemUtils.throwItemAway(getPos());
-
-		return super.act();
-	}
-	
 	@Override
 	public int defenseSkill( Char enemy ) {
 		return 1000;

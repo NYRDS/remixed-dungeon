@@ -36,13 +36,6 @@ public class Blacksmith extends NPC {
     {
         spriteClass = BlacksmithSprite.class;
     }
-
-    @Override
-    public boolean act() {
-        ItemUtils.throwItemAway(getPos());
-        return super.act();
-    }
-
     @Override
     public boolean interact(final Char hero) {
 

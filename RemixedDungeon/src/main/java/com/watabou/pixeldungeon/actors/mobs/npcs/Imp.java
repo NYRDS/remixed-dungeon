@@ -1,7 +1,6 @@
 
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
-import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
@@ -49,8 +48,6 @@ public class Imp extends NPC {
 		} else {
 			seenBefore = false;
 		}
-
-		ItemUtils.throwItemAway(getPos());
 
 		return super.act();
 	}

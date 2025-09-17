@@ -3,12 +3,16 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.platform.util.StringsManager;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -25,6 +29,27 @@ public abstract class NPC extends Mob {
 		setState(MobAi.getStateByClass(Passive.class));
 		
 		fraction = Fraction.NEUTRAL;
+	}
+
+	@Override
+	public boolean act() {
+
+		int pos = getPos();
+
+		ItemUtils.throwItemAway(pos);
+
+		LevelObject levelObject = level().getTopLevelObject(pos);
+		if (levelObject != null) {
+			int newPos = level().getEmptyCellNextTo(pos);
+			if (level().cellValid(newPos) && newPos != pos) {
+				WandOfBlink.appear(this, newPos);
+			}
+		}
+
+		getSprite().turnTo( pos, Dungeon.hero.getPos() );
+
+		// Call parent act method to preserve existing behavior
+		return super.act();
 	}
 
 	@Override

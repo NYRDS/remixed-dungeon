@@ -224,7 +224,7 @@ public abstract class Mob extends Char {
         }
 
 
-        var error = String.format("actor %s get really confused!", getEntityKind(), tags);
+        var error = String.format("actor %s get really confused! (%s)", getEntityKind(), tags);
         spend(TICK);
         EventCollector.logException(error);
 

@@ -55,11 +55,6 @@ public class AzuterronNPC extends Shopkeeper {
         return super.reset();
     }
 
-    @Override
-    public boolean act() {
-
-        return super.act();
-    }
 
     @Override
     public boolean interact(final Char hero) {

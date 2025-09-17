@@ -1,9 +1,7 @@
 package com.nyrds.pixeldungeon.mobs.npc;
 
-import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -34,16 +32,6 @@ public class CagedKobold extends ImmortalNPC {
 			level.spawnMob(npc);
 			spawned = true;
 		}
-	}
-
-	@Override
-    public boolean act() {
-
-		ItemUtils.throwItemAway(getPos());
-
-		getSprite().turnTo( getPos(), Dungeon.hero.getPos() );
-		spend( TICK );
-		return true;
 	}
 
 	@Override

@@ -25,7 +25,7 @@ public class HealerNPC extends ImmortalNPC {
 	@Override
     public boolean act() {
 		Hero hero = Dungeon.hero;
-		if (Dungeon.level.distanceL2(hero.getPos(), getPos()) < 4) {
+		if (level().distanceL2(hero.getPos(), getPos()) < 4) {
 			if(Random.Int(20) == 0) {
 				sayRandomPhrase(R.string.HealerNPC_Message1,
 						        R.string.HealerNPC_Message2,

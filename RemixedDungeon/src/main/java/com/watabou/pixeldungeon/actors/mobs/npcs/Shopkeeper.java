@@ -3,7 +3,6 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.windows.WndShopOptions;
@@ -49,16 +48,6 @@ public class Shopkeeper extends NPC {
         return ret;
     }
 
-    @Override
-    public boolean act() {
-
-		ItemUtils.throwItemAway(getPos());
-
-		getSprite().turnTo( getPos(), Dungeon.hero.getPos() );
-		spend( TICK );
-		return true;
-	}
-	
 	@Override
 	public void damage(int dmg, @NotNull NamedEntityKind src ) {
 		destroy();
