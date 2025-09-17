@@ -2,7 +2,12 @@
 
 ## Overview
 
-Remixed Dungeon features a comprehensive modding system built on Lua scripting that allows developers to extend and customize the game without modifying the core Java code. The scripting system provides APIs for customizing mobs, items, spells, traps, level objects, buffs, and more.
+Remixed Dungeon features a comprehensive modding system that allows developers to extend and customize the game without modifying the core Java code. The system uses two complementary approaches:
+
+1. **Lua Scripting**: Dynamic behavior customization through Lua scripts
+2. **JSON Configuration**: Static property definition through JSON files
+
+These systems work together to provide maximum flexibility while maintaining compatibility with the base game.
 
 ## Table of Contents
 
@@ -48,17 +53,17 @@ Customize mob behavior, combat abilities, and interactions.
 `mob.lua`
 
 ### Key Methods
-- `spawn(mob, level)`: Called when mob is created
-- `die(mob, cause)`: Called when mob dies
-- `attackProc(mob, enemy, damage)`: Called after successful attack
-- `defenceProc(mob, enemy, damage)`: Called after successful defense
-- `zapProc(mob, enemy, damage)`: Called after successful ranged attack
-- `zapMiss(mob, enemy)`: Called when ranged attack misses
-- `interact(mob, chr)`: Called when player interacts with mob
-- `move(mob, cell)`: Called when mob moves
-- `act(mob)`: Called each turn for AI processing
-- `damage(mob, dmg, src)`: Called when mob takes damage
-- `selectCell(mob)`: Called when mob needs to select a cell
+- `onSpawn(mob, level)`: Called when mob is created
+- `onDie(mob, cause)`: Called when mob dies
+- `onAttackProc(mob, enemy, damage)`: Called after successful attack
+- `onDefenceProc(mob, enemy, damage)`: Called after successful defense
+- `onZapProc(mob, enemy, damage)`: Called after successful ranged attack
+- `onZapMiss(mob, enemy)`: Called when ranged attack misses
+- `onInteract(mob, chr)`: Called when player interacts with mob
+- `onMove(mob, cell)`: Called when mob moves
+- `onAct(mob)`: Called each turn for AI processing
+- `onDamage(mob, dmg, src)`: Called when mob takes damage
+- `onSelectCell(mob)`: Called when mob needs to select a cell
 - `actionsList(mob, hero)`: Define custom actions available for the mob
 - `executeAction(mob, hero, action)`: Execute a custom action
 - `priceSell(mob, item, defaultPrice)`: Modify item selling price
