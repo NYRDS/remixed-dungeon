@@ -35,7 +35,11 @@ public class CustomItem extends EquipableItem {
     public String scriptFile = Utils.EMPTY_STRING;
 
     private boolean upgradable;
-    private boolean identified;
+
+    private boolean initialIdentified;
+
+    @Packable
+    public boolean identified = false;
 
     private String equipable;
 
@@ -64,7 +68,7 @@ public class CustomItem extends EquipableItem {
         info         = StringsManager.maybeId(desc.rawget("info").checkjstring());
         stackable    = desc.rawget("stackable").checkboolean();
         upgradable   = desc.rawget("upgradable").checkboolean();
-        identified   = desc.rawget("identified").checkboolean();
+        initialIdentified = desc.rawget("identified").checkboolean();
         gender       = Utils.genderFromString(getClassParam("Gender", "neuter", false));
 
         setDefaultAction(desc.rawget("defaultAction").checkjstring());
@@ -86,7 +90,16 @@ public class CustomItem extends EquipableItem {
 
     @Override
     public boolean isIdentified() {
+        if (initialIdentified) {
+            return true;
+        }
         return identified;
+    }
+
+    @Override
+    public Item identify() {
+        identified = true;
+        return super.identify();
     }
 
     @Override
@@ -219,11 +232,6 @@ public class CustomItem extends EquipableItem {
     @Override
     public int price() {
         return script.runOptional("price", adjustPrice(price * quantity()));
-    }
-
-    @Override
-    public boolean isLevelKnown() {
-        return identified;
     }
 
     @Override

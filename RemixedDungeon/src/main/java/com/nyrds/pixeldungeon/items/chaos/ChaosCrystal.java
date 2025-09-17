@@ -35,7 +35,7 @@ public class ChaosCrystal extends UsableArtifact {
     private static final float TIME_TO_FUSE = 10;
 
     @Packable
-    public int identetifyLevel = 0;
+    public int identifyLevel = 0;
 
     @Packable
     public int charge = 0;
@@ -47,7 +47,7 @@ public class ChaosCrystal extends UsableArtifact {
 
     @Override
     public boolean isIdentified() {
-        return identetifyLevel == 2;
+        return identifyLevel == 2;
     }
 
     @Override
@@ -132,13 +132,13 @@ public class ChaosCrystal extends UsableArtifact {
     @Override
     public ArrayList<String> actions(Char hero) {
         ArrayList<String> actions = super.actions(hero);
-        if (charge == 0 || identetifyLevel == 0) {
+        if (charge == 0 || identifyLevel == 0) {
             actions.remove(AC_USE);
         } else {
             setDefaultAction(AC_USE);
         }
 
-        if (charge >= 50 && identetifyLevel > 1) {
+        if (charge >= 50 && identifyLevel > 1) {
             actions.add(AC_FUSE);
         }
         return actions;
@@ -146,13 +146,13 @@ public class ChaosCrystal extends UsableArtifact {
 
     @Override
     public Item identify() {
-        identetifyLevel++;
+        identifyLevel++;
         return this;
     }
 
     @Override
     public String name() {
-        switch (identetifyLevel) {
+        switch (identifyLevel) {
             default:
                 return super.name();
             case 1:
@@ -164,7 +164,7 @@ public class ChaosCrystal extends UsableArtifact {
 
     @Override
     public String info() {
-        switch (identetifyLevel) {
+        switch (identifyLevel) {
             default:
                 return super.info();
             case 1:
@@ -176,7 +176,7 @@ public class ChaosCrystal extends UsableArtifact {
 
     @Override
     public String getText() {
-        if (identetifyLevel > 0) {
+        if (identifyLevel > 0) {
             return Utils.format("%d/100", charge);
         } else {
             return null;

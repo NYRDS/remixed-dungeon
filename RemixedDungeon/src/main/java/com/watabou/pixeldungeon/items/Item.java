@@ -54,7 +54,6 @@ import org.json.JSONObject;
 import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 import lombok.Getter;
@@ -92,6 +91,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     @NotNull
     protected final String info2 = getClassParam("Info2", StringsManager.getVar(R.string.Item_Info2), false);
 
+    @Setter
     protected int image = 0;
     protected final int overlayIndex = -1;
 
@@ -198,12 +198,16 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     }
 
     protected void _execute(@NotNull Char chr, @NotNull String action) {
-        if (action.equals(AC_DROP)) {
-            doDrop(chr);
-        } else if (action.equals(AC_THROW)) {
-            doThrow(chr);
-        } else if (action.equals(AC_PICK_UP)) {
-            CharUtils.tryPickUp(chr, this);
+        switch (action) {
+            case AC_DROP:
+                doDrop(chr);
+                break;
+            case AC_THROW:
+                doThrow(chr);
+                break;
+            case AC_PICK_UP:
+                CharUtils.tryPickUp(chr, this);
+                break;
         }
     }
 
@@ -265,7 +269,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
         if (items.size() < (container instanceof Backpack ? container.getSize() + 1 : container.getSize())) {
             items.add(this);
-            Collections.sort(items, itemComparator);
+            items.sort(itemComparator);
 
             if (owner == Dungeon.hero && owner.isAlive()) {
                 Badges.validateItemLevelAcquired(this);
@@ -811,10 +815,6 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     @Deprecated
     public String getClassName() { //for old mods compatibility
         return getEntityKind();
-    }
-
-    public void setImage(int image) {
-        this.image = image;
     }
 
 
