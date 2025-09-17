@@ -47,7 +47,7 @@ remixed-dungeon/
 ### Android Version
 - **Language**: Java
 - **Framework**: Android SDK
-- **Target SDK**: 34
+- **Target SDK**: 35
 - **Min SDK**: 23 (Android 6.0)
 - **Build System**: Gradle with Android Gradle Plugin 8.9.2
 - **Dependencies**:
@@ -130,26 +130,30 @@ The web version is intended to use TeaVM to compile Java code to JavaScript:
 - Multiple distribution channels
 
 ## Build Instructions
-1. **Android**: 
-   ```bash
-   ./gradlew :RemixedDungeon:assembleAndroidGooglePlayRelease
-   ./gradlew :RemixedDungeon:assembleAndroidRuStoreRelease
-   ./gradlew :RemixedDungeon:assembleAndroidFdroidRelease
-   ```
 
-2. **Desktop**:
-   ```bash
-   ./gradlew :RemixedDungeonDesktop:build
-   ./gradlew :RemixedDungeonDesktop:packageLinuxX64
-   ./gradlew :RemixedDungeonDesktop:packageMacM1
-   ./gradlew :RemixedDungeonDesktop:packageWinX64
-   ```
+### Android:
+```bash
+# Using the Android-specific settings file
+./gradlew -c settings.android.gradle :RemixedDungeon:assembleAndroidGooglePlayRelease
+./gradlew -c settings.android.gradle :RemixedDungeon:assembleAndroidRuStoreRelease
+./gradlew -c settings.android.gradle :RemixedDungeon:assembleAndroidFdroidRelease
+```
 
-3. **Web** (Work in Progress):
-   ```bash
-   ./gradlew :RemixedDungeonHtml:build
-   ./gradlew :RemixedDungeonHtml:generateJavaScript  # Currently fails with NullPointerException
-   ```
+### Desktop:
+```bash
+# Using the Desktop-specific settings file
+./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:build
+./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:packageLinuxX64
+./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:packageMacM1
+./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:packageWinX64
+```
+
+### Web (Work in Progress):
+```bash
+# Using the HTML-specific settings file
+./gradlew -c settings.html.gradle :RemixedDungeonHtml:build
+./gradlew -c settings.html.gradle :RemixedDungeonHtml:generateJavaScript  # Currently fails with NullPointerException
+```
 
 ## Project Links
 - [Google Play](https://play.google.com/store/apps/details?id=com.nyrds.pixeldungeon.ml)
