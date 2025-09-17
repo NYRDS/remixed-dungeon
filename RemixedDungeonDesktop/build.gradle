@@ -50,6 +50,19 @@ application {
     }
 }
 
+// Add a task for running QuickModTest
+tasks.register('quickModTest', JavaExec) {
+    dependsOn classes
+    mainClass = 'com.nyrds.pixeldungeon.desktop.DesktopQuickModTest'
+    classpath = sourceSets.main.runtimeClasspath
+    
+    if (project.hasProperty('args')) {
+        args project.args.split(',')
+    }
+    
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+}
+
 tasks.withType(JavaExec).configureEach {
     jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
 }

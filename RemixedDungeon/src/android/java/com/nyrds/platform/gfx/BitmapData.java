@@ -27,12 +27,9 @@ public class BitmapData {
     @LuaInterface
     public BitmapData(int width, int height) {
         try {
-            System.out.println("BitmapData constructor called with width=" + width + ", height=" + height);
             this.bmp = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-            System.out.println("BitmapData constructor completed, bmp=" + (this.bmp != null ? "created" : "null"));
         } catch (Exception e) {
-            System.out.println("BitmapData constructor exception: " + e.getMessage());
-            e.printStackTrace();
+            EventCollector.logException(e);
             this.bmp = null;
         }
     }
@@ -50,13 +47,10 @@ public class BitmapData {
     @LuaInterface
     public static BitmapData createBitmap(int width, int height) {
         try {
-            System.out.println("BitmapData.createBitmap called with width=" + width + ", height=" + height);
             BitmapData result = new BitmapData(Bitmap.createBitmap(width,height, Bitmap.Config.ARGB_8888));
-            System.out.println("BitmapData.createBitmap completed, result=" + (result != null ? "created" : "null"));
             return result;
         } catch (Exception e) {
-            System.out.println("BitmapData.createBitmap exception: " + e.getMessage());
-            e.printStackTrace();
+            EventCollector.logException(e);
             return null;
         }
     }
@@ -257,7 +251,7 @@ public class BitmapData {
                 canvas.drawRect(left, top, right, bottom, paint);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
@@ -272,7 +266,7 @@ public class BitmapData {
                 canvas.drawRect(left, top, right, bottom, paint);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
@@ -287,7 +281,7 @@ public class BitmapData {
                 canvas.drawCircle(centerX, centerY, radius, paint);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
@@ -302,7 +296,7 @@ public class BitmapData {
                 canvas.drawCircle(centerX, centerY, radius, paint);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
@@ -328,7 +322,7 @@ public class BitmapData {
                                  null);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
@@ -357,7 +351,7 @@ public class BitmapData {
                                  paint);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 

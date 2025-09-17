@@ -1,15 +1,17 @@
 package com.nyrds.platform.gfx;
 
+import static com.badlogic.gdx.graphics.g2d.Gdx2DPixmap.GDX2D_BLEND_NONE;
+import static com.badlogic.gdx.graphics.g2d.Gdx2DPixmap.GDX2D_FORMAT_RGBA8888;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.PixmapIO;
 import com.badlogic.gdx.graphics.g2d.Gdx2DPixmap;
 import com.nyrds.LuaInterface;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.util.PUtil;
 
 import java.io.InputStream;
-
-import static com.badlogic.gdx.graphics.g2d.Gdx2DPixmap.GDX2D_BLEND_NONE;
-import static com.badlogic.gdx.graphics.g2d.Gdx2DPixmap.GDX2D_FORMAT_RGBA8888;
 
 @LuaInterface
 public class BitmapData {
@@ -23,12 +25,9 @@ public class BitmapData {
     @LuaInterface
     public BitmapData(int w, int h) {
         try {
-            System.out.println("BitmapData constructor called with w=" + w + ", h=" + h);
             bmp = Gdx2DPixmap.newPixmap(w,h,GDX2D_FORMAT_RGBA8888);
-            System.out.println("BitmapData constructor completed, bmp=" + (bmp != null ? "created" : "null"));
         } catch (Exception e) {
-            System.out.println("BitmapData constructor exception: " + e.getMessage());
-            e.printStackTrace();
+            EventCollector.logException(e);
             bmp = null;
         }
     }
@@ -38,7 +37,7 @@ public class BitmapData {
         try {
             bmp = Gdx2DPixmap.newPixmap(w,h,pixelFormat);
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
             bmp = null;
         }
     }
@@ -48,7 +47,7 @@ public class BitmapData {
         try {
             bmp = Gdx2DPixmap.newPixmap(inputStream,GDX2D_FORMAT_RGBA8888);
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
             bmp = null;
         }
     }
@@ -56,13 +55,10 @@ public class BitmapData {
     @LuaInterface
     public static BitmapData createBitmap(int w, int h) {
         try {
-            System.out.println("BitmapData.createBitmap called with w=" + w + ", h=" + h);
             BitmapData result = new BitmapData(w,h);
-            System.out.println("BitmapData.createBitmap completed, result=" + (result != null ? "created" : "null"));
             return result;
         } catch (Exception e) {
-            System.out.println("BitmapData.createBitmap exception: " + e.getMessage());
-            e.printStackTrace();
+            EventCollector.logException(e);
             return null;
         }
     }
@@ -207,12 +203,12 @@ public class BitmapData {
             if (bmp != null) {
                 Pixmap pixmap = new Pixmap(bmp);
                 // Log the path where the file will be saved
-                System.out.println("Bitmap saving to: " + path);
+                PUtil.slog("bitmap","Bitmap saving to: " + path);
                 PixmapIO.writePNG(Gdx.files.local(path), pixmap);
                 pixmap.dispose();
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
@@ -228,7 +224,7 @@ public class BitmapData {
                 bmp.drawLine(startX, startY, endX, endY, color(color));
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
@@ -239,7 +235,7 @@ public class BitmapData {
                 bmp.drawRect(left, top, right, bottom, color(color));
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
@@ -250,7 +246,7 @@ public class BitmapData {
                 bmp.fillRect(left, top, right, bottom, color(color));
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
@@ -261,7 +257,7 @@ public class BitmapData {
                 bmp.drawCircle(centerX, centerY, radius, color(color));
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
@@ -272,7 +268,7 @@ public class BitmapData {
                 bmp.fillCircle(centerX, centerY, radius, color(color));
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
@@ -306,7 +302,7 @@ public class BitmapData {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
@@ -372,7 +368,7 @@ public class BitmapData {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            EventCollector.logException(e);
         }
     }
 
