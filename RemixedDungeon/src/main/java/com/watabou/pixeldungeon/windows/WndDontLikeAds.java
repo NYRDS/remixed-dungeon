@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
@@ -18,7 +19,11 @@ class WndDontLikeAds extends WndQuest {
         IconButton btnDonate = new IconButton(R.string.DonateButton_pleaseDonate,Icons.SUPPORT.get() ){
             @Override
             protected void onClick() {
-                WndDontLikeAds.this.add(new WndDonate());
+                if (RemixedDungeon.canDonate()) {
+                    WndDontLikeAds.this.add(new WndDonate());
+                } else {
+                    WndDontLikeAds.this.add(new WndCryptoDonate());
+                }
                 EventCollector.logEvent(Util.SAVE_ADS_EXPERIMENT,"DonateButtonClicked");
             }
         };

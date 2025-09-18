@@ -803,6 +803,18 @@
   <string name="WndDonate_donate">donate: </string>
   <string name="WndDonate_notConnected">no connection :(</string>
   <string name="WndDonate_commonDonateText">Remixed Dungeon - free to everyone and always will be.\n\nHowever, You can help us make the game even better.\n\nIn addition to our heartfelt thanks you\'ll get some cosmetic improvements.</string>
+  
+  <!-- Crypto Donation Strings -->
+  <string name="WndCryptoDonate_supportDev">Support Developer</string>
+  <string name="WndCryptoDonate_infoText">You can support the development of Remixed Dungeon by sending cryptocurrency donations to the addresses below. Thank you for your generous support!</string>
+  <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
+  <string name="WndCryptoDonate_ethereum">Ethereum</string>
+  <string name="WndCryptoDonate_monero">Monero</string>
+  <string name="WndCryptoDonate_currency">Currency</string>
+  <string name="WndCryptoDonate_walletAddress">Wallet Address</string>
+  <string name="WndCryptoDonate_openWallet">Open Wallet</string>
+  <string name="WndCryptoDonate_copyAddress">Copy Address</string>
+  <string name="WndCryptoDonate_warningText">WARNING: Always verify the address before sending funds. Cryptocurrency transactions are irreversible!</string>
   <string name="WndDonate_silverDonate">silver donation</string>
   <string name="WndDonate_goldDonate">gold donation</string>
   <string name="WndDonate_rubyDonate">ruby donation</string>

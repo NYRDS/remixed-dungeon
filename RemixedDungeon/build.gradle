@@ -138,14 +138,14 @@ dependencies {
 
     implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'org.luaj:luaj-jse:3.0.1'
-    implementation 'info.guardianproject.netcipher:netcipher:1.2'
+    implementation 'info.guardianproject.netcipher:netcipher:2.1.0'
     implementation 'org.hjson:hjson:3.1.0'
     implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices
     implementation 'org.jetbrains:annotations:24.1.0'
     implementation  'androidx.appcompat:appcompat:1.6.1' //don't upgrade will break build
 
-    annotationProcessor 'org.projectlombok:lombok:1.18.30'
-    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.40'
+    compileOnly 'org.projectlombok:lombok:1.18.40'
 
     implementation 'org.nanohttpd:nanohttpd:2.3.1'
 
@@ -157,39 +157,45 @@ dependencies {
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
 
-    googlePlayImplementation("com.appodeal.ads:sdk:3.7.0.0") {
-            exclude(group: "com.applovin.mediation", module: "amazon-tam-adapter")
-            exclude(group: "com.applovin.mediation", module: "facebook-adapter")
-            exclude(group: "com.applovin.mediation", module: "google-ad-manager-adapter")
-            exclude(group: "com.applovin.mediation", module: "google-adapter")
-            exclude(group: "com.applovin.mediation", module: "mytarget-adapter")
-            exclude(group: "com.applovin.mediation", module: "yandex-adapter")
-            exclude(group: "com.appodeal.ads.sdk.networks", module: "admob")
-            exclude(group: "com.appodeal.ads.sdk.networks", module: "amazon")
-            exclude(group: "com.appodeal.ads.sdk.networks", module: "meta")
-            exclude(group: "com.appodeal.ads.sdk.networks", module: "my_target")
-            exclude(group: "com.appodeal.ads.sdk.networks", module: "yandex")
-            exclude(group: "com.appodeal.ads.sdk.services", module: "adjust")
-            exclude(group: "com.appodeal.ads.sdk.services", module: "appsflyer")
-            exclude(group: "com.appodeal.ads.sdk.services", module: "facebook_analytics")
-            exclude(group: "com.appodeal.ads.sdk.services", module: "firebase")
-            exclude(group: "com.unity3d.ads-mediation", module: "admob-adapter")
-            exclude(group: "com.unity3d.ads-mediation", module: "aps-adapter")
-            exclude(group: "com.unity3d.ads-mediation", module: "facebook-adapter")
-            exclude(group: "com.unity3d.ads-mediation", module: "mytarget-adapter")
-            exclude(group: "com.unity3d.ads-mediation", module: "yandex-adapter")
-            exclude(group: "io.bidmachine", module: "ads.networks.amazon")
-            exclude(group: "io.bidmachine", module: "ads.networks.meta_audience")
-            exclude(group: "io.bidmachine", module: "ads.networks.my_target")
-            exclude(group: "org.bidon", module: "amazon-adapter")
-            exclude(group: "org.bidon", module: "meta-adapter")
-            exclude(group: "org.bidon", module: "vkads-adapter")
-            exclude(group: "org.bidon", module: "yandex-adapter")
-        }
+    googlePlayImplementation("com.appodeal.ads:sdk:3.10.0.0") {
+        exclude group: "com.applovin.mediation", module: "facebook-adapter"
+        exclude group: "com.applovin.mediation", module: "google-adapter"
+        exclude group: "com.applovin.mediation", module: "yandex-adapter"
+        exclude group: "com.appodeal.ads.sdk.networks", module: "level_play"
+        exclude group: "com.appodeal.ads.sdk.networks", module: "meta"
+        exclude group: "com.appodeal.ads.sdk.networks", module: "yandex"
+        exclude group: "com.appodeal.ads.sdk.services", module: "adjust"
+        exclude group: "com.appodeal.ads.sdk.services", module: "appsflyer"
+        exclude group: "com.appodeal.ads.sdk.services", module: "facebook_analytics"
+        exclude group: "com.appodeal.ads.sdk.services", module: "firebase"
+        exclude group: "com.unity3d.ads-mediation", module: "admob-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "applovin-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "aps-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "bidmachine-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "bigo-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "facebook-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "fyber-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "inmobi-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "mintegral-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "mobilefuse-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "moloco-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "mytarget-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "ogury-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "pangle-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "smaato-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "unityads-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "verve-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "vungle-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "yandex-adapter"
+        exclude group: "io.bidmachine", module: "ads.adapters.ironsource"
+        exclude group: "io.bidmachine", module: "ads.networks.meta_audience"
+        exclude group: "org.bidon", module: "meta-adapter"
+        exclude group: "org.bidon", module: "yandex-adapter"
+    }
 
     googlePlayImplementation 'com.yandex.android:mobileads:7.16.0'
 
-    ruStoreImplementation 'com.yandex.android:mobileads:7.13.0'
+    ruStoreImplementation 'com.yandex.android:mobileads:7.16.0'
     ruStoreImplementation 'ru.rustore.sdk:billingclient:9.1.0'
 
 

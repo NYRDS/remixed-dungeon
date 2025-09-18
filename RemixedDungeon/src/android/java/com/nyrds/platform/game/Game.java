@@ -5,6 +5,9 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -380,6 +383,18 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     static public void openUrl(String prompt, String address) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(address));
         Game.instance().startActivity(Intent.createChooser(intent, prompt));
+    }
+
+    static public void copyToClipboard(String label, String text) {
+        // Post to the main thread to avoid RuntimeException
+        Game.instance().runOnUiThread(() -> {
+            ClipboardManager clipboard = (ClipboardManager) Game.instance().getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText(label, text);
+            clipboard.setPrimaryClip(clip);
+            
+            // Show a toast to inform the user
+            Toast.makeText(Game.instance(), "Copied to clipboard", Toast.LENGTH_SHORT).show();
+        });
     }
 
     static public void sendEmail(String emailUri, String subject) {
