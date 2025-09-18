@@ -229,4 +229,10 @@ public class RemixedDungeon extends Game {
 		GameLoop.resetScene();
 	}
 
+	// Method for handling Lua callbacks by ID for item selection
+	@LuaInterface
+	public static void luaCallByGlobalId(int callbackId, Object... params) {
+		com.nyrds.pixeldungeon.game.GameLoop.callByGlobalId(callbackId, params);
+	}
+
 }

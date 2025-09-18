@@ -448,6 +448,59 @@ if quest.isCompleted("rat_hunt") then
 end
 ```
 
+```
+## Item Selection
+
+### Purpose
+Allow Lua scripts to prompt the player to select an item from their backpack.
+
+### Library
+`itemSelector.lua`
+
+### Key Methods
+- `selectItem(callback, mode, title, selector)`: Show item selection window
+- `selectAnyItem(callback, title, selector)`: Select any item
+- `selectUnidentifiedItem(callback, title, selector)`: Select unidentified items only
+- `selectUpgradeableItem(callback, title, selector)`: Select upgradeable items only
+- `selectWeapon(callback, title, selector)`: Select weapons only
+- `selectArmor(callback, title, selector)`: Select armor only
+- `selectWand(callback, title, selector)`: Select wands only
+- `selectSeed(callback, title, selector)`: Select seeds only
+- `selectArrow(callback, title, selector)`: Select arrows only
+
+### Parameters
+- `callback`: Function to call when an item is selected (receives item and selector as parameters)
+- `mode`: Selection mode (optional, defaults to ALL)
+- `title`: Window title (optional, defaults to "Select an item")
+- `selector`: Character that is selecting the item (optional, defaults to hero)
+
+### Example
+```lua
+local RPD = require "scripts/lib/commonClasses"
+local itemSelector = require "scripts/lib/itemSelector"
+
+-- Select any item from backpack
+itemSelector.selectItem(function(item, selector)
+    if item then
+        RPD.glog("Selected item: " .. item:name())
+    else
+        RPD.glog("No item selected")
+    end
+end, RPD.BackpackMode.ALL, "Choose an item")
+
+-- Select a weapon
+itemSelector.selectWeapon(function(item, selector)
+    if item then
+        RPD.glog("Selected weapon: " .. item:name())
+        -- Equip the weapon
+        item:execute(selector, "EquipableItem_ACEquip")
+    end
+end, "Choose a weapon to equip")
+```
+
+### Test Spell
+A test spell called "CurseItem" is included in the debug configuration to demonstrate the item selection functionality. This spell can be found in `scripts/spells/CurseItem.lua` and is automatically added to the player's inventory when running in debug mode. The spell allows the player to select any item from their backpack and curse it.
+
 ## JSON Configuration Files
 
 ### Purpose
@@ -610,6 +663,26 @@ Hero initialization files define starting equipment and stats for different char
   }
 }
 ```
+
+#### SpellBook Configuration
+
+To give a hero a spellbook with a specific spell, use the following format:
+
+```json
+{
+  "common": {
+    "items": [
+      {
+        "kind": "SpellBook",
+        "identified": true,
+        "spell": "CurseItem"
+      }
+    ]
+  }
+}
+```
+
+Note that the `spell` field should contain just the name of the spell file without the path or `.lua` extension. The game will automatically look for the spell in the `scripts/spells/` directory.
 
 ### Treasury Files
 

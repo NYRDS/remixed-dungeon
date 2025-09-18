@@ -11,17 +11,17 @@
         "kind": "Torch",
         "level": 1,
         "quantity": 100,
-        "identetifyLevel": 2
+        "identifyLevel": 2
       },
       {
         "kind": "ScrollHolder",
         "level": 1,
-        "identetifyLevel": 2
+        "identifyLevel": 2
       },
       {
         "kind": "test/TestItem",
         "level": 1,
-        "identetifyLevel": 2
+        "identifyLevel": 2
       },
       {
         "kind": "WandOfIcebolt",
@@ -31,6 +31,11 @@
       {
         "kind": "Gold",
         "quantity": 10
+      },
+      {
+        "kind": "SpellBook",
+        "identified": true,
+        "spell": "CurseItem"
       }
     ],
     "str": 20,

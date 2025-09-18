@@ -52,6 +52,12 @@ public class RemixedDungeon extends Game {
 		GameLoop.resetScene();
 	}
 
+	// Method for handling Lua callbacks by ID for item selection
+	@LuaInterface
+	public static void luaCallByGlobalId(int callbackId, Object... params) {
+		GameLoop.callByGlobalId(callbackId, params);
+	}
+
 
 	public static void switchNoFade(Class<? extends PixelScene> c) {
 		PixelScene.noFade = true;

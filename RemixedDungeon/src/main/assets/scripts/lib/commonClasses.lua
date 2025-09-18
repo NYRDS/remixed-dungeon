@@ -105,6 +105,7 @@ local Objects = {
         WndOptionsLua  = "com.nyrds.pixeldungeon.windows.WndOptionsLua",
         WndShopOptions = "com.nyrds.pixeldungeon.windows.WndShopOptions",
         WndChooseWay   = "com.watabou.pixeldungeon.windows.WndChooseWay",
+        WndBag         = "com.watabou.pixeldungeon.windows.WndBag",
         Image          = "com.watabou.noosa.Image",
         Banner         = "com.watabou.pixeldungeon.ui.Banner"
     },

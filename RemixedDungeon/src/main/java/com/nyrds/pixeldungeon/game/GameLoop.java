@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.game;
 import android.view.KeyEvent;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.lua.LuaEngine;
 import com.nyrds.platform.ConcurrencyProvider;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.PlatformAtomicInteger;
@@ -27,6 +28,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
 
 import org.luaj.vm2.LuaError;
+import org.luaj.vm2.LuaValue;
+import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 import java.util.Queue;
 import java.util.concurrent.Future;
@@ -284,5 +287,29 @@ public class GameLoop {
 
     public static void setDifficulty(int difficulty) {
         GameLoop.difficulty = difficulty;
+    }
+
+    @LuaInterface
+    public static void callByGlobalId(int callbackId, Object... params) {
+        // Get the global callbacks table from Lua
+        LuaValue callbacks = LuaEngine.call("getfenv").get("ItemSelectionCallbacks");
+        
+        // If the callbacks table exists and has the callback ID
+        if (callbacks != null && callbacks.istable()) {
+            LuaValue callback = callbacks.get(callbackId);
+            if (callback != null && callback.isfunction()) {
+                // Convert Java objects to Lua values
+                LuaValue[] luaParams = new LuaValue[params.length];
+                for (int i = 0; i < params.length; i++) {
+                    luaParams[i] = CoerceJavaToLua.coerce(params[i]);
+                }
+                
+                // Call the Lua callback function
+                callback.invoke(luaParams);
+                
+                // Remove the callback from the table to prevent memory leaks
+                callbacks.set(callbackId, LuaValue.NIL);
+            }
+        }
     }
 }
