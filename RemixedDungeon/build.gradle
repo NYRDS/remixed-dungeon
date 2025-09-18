@@ -157,7 +157,7 @@ dependencies {
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
 
-    googlePlayImplementation("com.appodeal.ads:sdk:3.9.0.0") {
+    googlePlayImplementation("com.appodeal.ads:sdk:3.7.0.0") {
             exclude(group: "com.applovin.mediation", module: "amazon-tam-adapter")
             exclude(group: "com.applovin.mediation", module: "facebook-adapter")
             exclude(group: "com.applovin.mediation", module: "google-ad-manager-adapter")
