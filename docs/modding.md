@@ -448,7 +448,6 @@ if quest.isCompleted("rat_hunt") then
 end
 ```
 
-```
 ## Item Selection
 
 ### Purpose
