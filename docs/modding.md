@@ -452,14 +452,14 @@ end
 ## Item Selection
 
 ### Purpose
-Allow Lua scripts to prompt the player to select an item from their backpack.
+Allow Lua scripts to prompt the player to select an item from their backpack. This feature enables interactive gameplay where players can choose specific items to interact with through spells, NPC interactions, or other game mechanics.
 
 ### Library
 `itemSelector.lua`
 
 ### Key Methods
-- `selectItem(callback, mode, title, selector)`: Show item selection window
-- `selectAnyItem(callback, title, selector)`: Select any item
+- `selectItem(callback, mode, title, selector)`: Show item selection window with custom filtering
+- `selectAnyItem(callback, title, selector)`: Select any item (equivalent to `selectItem` with `RPD.BackpackMode.ALL`)
 - `selectUnidentifiedItem(callback, title, selector)`: Select unidentified items only
 - `selectUpgradeableItem(callback, title, selector)`: Select upgradeable items only
 - `selectWeapon(callback, title, selector)`: Select weapons only
@@ -469,12 +469,24 @@ Allow Lua scripts to prompt the player to select an item from their backpack.
 - `selectArrow(callback, title, selector)`: Select arrows only
 
 ### Parameters
-- `callback`: Function to call when an item is selected (receives item and selector as parameters)
-- `mode`: Selection mode (optional, defaults to ALL)
-- `title`: Window title (optional, defaults to "Select an item")
-- `selector`: Character that is selecting the item (optional, defaults to hero)
+- `callback`: Function to call when an item is selected. The callback receives two parameters:
+  - `item`: The selected item object, or `nil` if no item was selected
+  - `selector`: The character that selected the item (usually the hero)
+- `mode`: Selection mode that filters which items are shown (optional, defaults to `RPD.BackpackMode.ALL`)
+- `title`: Window title displayed to the player (optional, defaults to "Select an item")
+- `selector`: Character that is selecting the item (optional, defaults to `RPD.Dungeon.hero`)
 
-### Example
+### Available Selection Modes
+- `RPD.BackpackMode.ALL`: Show all items
+- `RPD.BackpackMode.UNIDENTIFED`: Show only unidentified items
+- `RPD.BackpackMode.UPGRADEABLE`: Show only upgradeable items
+- `RPD.BackpackMode.WEAPON`: Show only weapons
+- `RPD.BackpackMode.ARMOR`: Show only armor
+- `RPD.BackpackMode.WAND`: Show only wands
+- `RPD.BackpackMode.SEED`: Show only seeds
+- `RPD.BackpackMode.ARROWS`: Show only arrows
+
+### Example Usage in Spells
 ```lua
 local RPD = require "scripts/lib/commonClasses"
 local itemSelector = require "scripts/lib/itemSelector"
@@ -483,23 +495,133 @@ local itemSelector = require "scripts/lib/itemSelector"
 itemSelector.selectItem(function(item, selector)
     if item then
         RPD.glog("Selected item: " .. item:name())
+        -- Perform actions with the selected item
+        -- For example, identify it
+        item:identify()
     else
         RPD.glog("No item selected")
     end
-end, RPD.BackpackMode.ALL, "Choose an item")
+end, RPD.BackpackMode.ALL, "Choose an item to identify")
 
--- Select a weapon
+-- Select a weapon to upgrade
 itemSelector.selectWeapon(function(item, selector)
     if item then
-        RPD.glog("Selected weapon: " .. item:name())
-        -- Equip the weapon
-        item:execute(selector, "EquipableItem_ACEquip")
+        RPD.glog("Upgrading " .. item:name() .. "!")
+        -- Upgrade the weapon
+        item:upgrade()
+        item:level(item:level() + 1)
     end
-end, "Choose a weapon to equip")
+end, "Choose a weapon to upgrade")
 ```
 
-### Test Spell
+### Example Usage in NPC Interactions
+```lua
+local RPD = require "scripts/lib/commonClasses"
+local itemSelector = require "scripts/lib/itemSelector"
+local mob = require "scripts/lib/mob"
+
+return mob.init({
+    spawn = function(self, level)
+        RPD.setAi(self, "NpcDefault")
+    end,
+
+    interact = function(self, chr)
+        RPD.glog("Hello! I can help you identify items.")
+        
+        -- Show item selection window for unidentified items only
+        itemSelector.selectUnidentifiedItem(function(item, selector)
+            if item then
+                RPD.glog("I've identified your " .. item:name() .. "!")
+                item:identify()
+                -- Play a visual effect
+                RPD.zapEffect(self:getPos(), chr:getPos(), "Identification")
+            else
+                RPD.glog("You didn't select any item.")
+            end
+        end, "Select an item for me to identify")
+    end
+})
+```
+
+### Advanced Example: Curse Item Spell
+Here's a complete example of how to create a spell that allows players to curse an item:
+
+```lua
+local RPD = require "scripts/lib/commonClasses"
+local itemSelector = require "scripts/lib/itemSelector"
+local spell = require "scripts/lib/spell"
+
+return spell.init{
+    desc = function()
+        return {
+            image = 0,
+            imageFile = "spellsIcons/necromancy.png",
+            name = "Curse Item",
+            info = "Select an item from your backpack to curse it.",
+            magicAffinity = "Necromancy",
+            targetingType = "self",
+            level = 1,
+            castTime = 0,
+            spellCost = 3,
+            cooldown = 5
+        }
+    end,
+    
+    cast = function(self, spell, chr)
+        -- Show item selection window
+        itemSelector.selectItem(function(item, selector)
+            if item then
+                -- Check if the item is already cursed
+                if item:isCursed() then
+                    RPD.glog("That item is already cursed!")
+                else
+                    -- Curse the selected item
+                    item:setCursed(true)
+                    item:setCursedKnown(true)
+                    RPD.glog("You have cursed your " .. item:name() .. "!")
+                    
+                    -- Apply a visual effect
+                    RPD.zapEffect(chr:getPos(), chr:getPos(), "ShadowParticle")
+                    
+                    -- Play a sound effect
+                    RPD.playSound("snd_cursed.mp3")
+                end
+            else
+                RPD.glog("You decided not to curse anything.")
+            end
+        end, RPD.BackpackMode.ALL, "Select an item to curse")
+        
+        return true
+    end
+}
+```
+
+### Test Spell and Debug Configuration
 A test spell called "CurseItem" is included in the debug configuration to demonstrate the item selection functionality. This spell can be found in `scripts/spells/CurseItem.lua` and is automatically added to the player's inventory when running in debug mode. The spell allows the player to select any item from their backpack and curse it.
+
+To add this spell to a hero in debug mode, the following configuration is used in `initHeroesDebug.json`:
+
+```json
+{
+  "common": {
+    "items": [
+      {
+        "kind": "SpellBook",
+        "identified": true,
+        "spell": "CurseItem"
+      }
+    ]
+  }
+}
+```
+
+### Best Practices
+1. Always validate that an item was selected before attempting to use it (check if `item` is not `nil`)
+2. Provide clear titles to help players understand what they're selecting
+3. Use appropriate selection modes to filter items and improve user experience
+4. Give feedback to the player about what happened after they selected an item
+5. Consider adding visual or audio effects to enhance the user experience
+6. Handle edge cases such as already cursed, identified, or upgraded items
 
 ## JSON Configuration Files
 
@@ -683,6 +805,25 @@ To give a hero a spellbook with a specific spell, use the following format:
 ```
 
 Note that the `spell` field should contain just the name of the spell file without the path or `.lua` extension. The game will automatically look for the spell in the `scripts/spells/` directory.
+
+##### Spell Categories
+
+Spells are organized into categories in the `CustomSpellsList.lua` file. When creating new spells, you should add them to an appropriate category:
+
+```lua
+spells["Necromancy"] = {"RaiseDead","Exhumation", "DarkSacrifice","Possess"}
+spells["Common"] = {"TownPortal","Heal","RaiseDead","Cloak","Calm","Charm"}
+spells["Combat"] = {"DieHard","Dash","BodyArmor","Smash"}
+spells["Rogue"] = {"Cloak","Backstab","KunaiThrow","Haste"}
+spells["Witchcraft"] = {"Roar","LightningBolt","Heal","Order"}
+spells["Huntress"] = {"Calm","Charm","ShootInEye","SummonBeast"}
+spells["Elf"] = {"MagicArrow","Sprout","HideInGrass","NatureArmor"}
+spells["Priest"] = {"Heal","Calm","Charm","Order"}
+spells["PlagueDoctor"] = {"Heal","Calm","Charm","Order"}
+spells["Dev"] = {"TestSpell", "CurseItem"}
+```
+
+The "Dev" category is specifically for development and testing spells like "CurseItem" that are not meant for regular gameplay.
 
 ### Treasury Files
 
