@@ -32,7 +32,9 @@ return spell.init{
                     RPD.glog("That item is already cursed!")
                 else
                     -- Curse the selected item
-                    item:curse()
+                    item:setCursed(true);
+                    item:setCursedKnown(true);
+
                     RPD.glog("You have cursed your " .. item:name() .. "!")
                     
                     -- Apply a visual effect

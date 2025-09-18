@@ -163,6 +163,10 @@ public class LuaEngine implements ResourceFinder {
 		getEngine().globals.loadfile(fileName).call();
 	}
 
+	static public Globals getGlobals() {
+		return getEngine().globals;
+	}
+
 	@Override
 	public InputStream findResource(String filename) {
 		return new BOMInputStream(ModdingMode.getInputStream(filename));

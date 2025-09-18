@@ -292,7 +292,7 @@ public class GameLoop {
     @LuaInterface
     public static void callByGlobalId(int callbackId, Object... params) {
         // Get the global callbacks table from Lua
-        LuaValue callbacks = LuaEngine.call("getfenv").get("ItemSelectionCallbacks");
+        LuaValue callbacks = LuaEngine.getGlobals().get("ItemSelectionCallbacks");
         
         // If the callbacks table exists and has the callback ID
         if (callbacks != null && callbacks.istable()) {
