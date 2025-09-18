@@ -10,6 +10,11 @@ def jks_keyPassword = System.getenv('jks_keyPassword') ? System.getenv('jks_keyP
 def jks_storePassword = System.getenv('jks_storePassword') ? System.getenv('jks_storePassword') : '123456'
 def jks_storePath = System.getenv('jks_storePath')  ? System.getenv('jks_storePath') : 'testKey/test.jks'
 
+// Load version information from shared properties file
+def versionPropsFile = file("../version.properties")
+def versionProps = new Properties()
+versionPropsFile.withInputStream { versionProps.load(it) }
+
 android {
 
     signingConfigs {
@@ -33,8 +38,8 @@ android {
         manifestPlaceholders = ["admob_app_id":getApiField("admob_app_id")]
 
         applicationId "com.nyrds.pixeldungeon.ml"
-        versionCode 1248
-        versionName "32.3.alpha.10"
+        versionCode versionProps['VERSION_CODE'].toInteger()
+        versionName versionProps['VERSION_NAME']
         targetSdkVersion 35
         compileSdkVersion 35
         minSdkVersion 23

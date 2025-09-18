@@ -6,9 +6,14 @@ plugins {
     id 'edu.sc.seis.launch4j' version '3.0.6' // Launch4j plugin for creating .exe files
 }
 
+// Load version information from shared properties file
+def versionPropsFile = file("../version.properties")
+def versionProps = new Properties()
+versionPropsFile.withInputStream { versionProps.load(it) }
+
 project.ext {
-    version = '32.3.alpha'
-    version_code = 1236
+    version = versionProps['VERSION_NAME']
+    version_code = versionProps['VERSION_CODE'].toInteger()
 }
 
 java {
