@@ -1,0 +1,13 @@
+{
+  "texture": "monk.png",
+  "width": 15,
+  "height": 14,
+  "idle": { "fps": 6, "looped": true, "frames": [18, 17, 18, 19] },
+  "run": { "fps": 15, "looped": true, "frames": [28, 29, 30, 31, 32, 33] },
+  "attack": { "fps": 12, "looped": false, "frames": [20, 21, 20, 21] },
+  "die": { "fps": 15, "looped": false, "frames": [18, 24, 25, 25, 26, 27] },
+  
+  "extras": {
+    "kick": { "fps": 10, "looped": false, "frames": [22, 23, 22] }
+  }
+}

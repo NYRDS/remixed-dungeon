@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
-import com.watabou.pixeldungeon.sprites.MonkSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
@@ -21,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
 public class Monk extends Mob {
 
 	public Monk() {
-		spriteClass = MonkSprite.class;
+		spriteClass = "spritesDesc/Monk.json";
 		
 		hp(ht(70));
 		baseDefenseSkill = 30;

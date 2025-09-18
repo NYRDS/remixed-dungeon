@@ -15,7 +15,6 @@ import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.watabou.pixeldungeon.sprites.SheepSprite;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PathFinder;
@@ -92,7 +91,7 @@ public class WandOfFlock extends SimpleWand  {
 		
 		public Sheep() {
 			super();
-			spriteClass = SheepSprite.class;
+			spriteClass = "spritesDesc/Sheep.json";
 		}
 
 		public float lifespan;

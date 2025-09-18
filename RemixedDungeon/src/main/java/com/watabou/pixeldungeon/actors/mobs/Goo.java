@@ -15,7 +15,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.pixeldungeon.sprites.GooSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
@@ -31,7 +30,7 @@ public class Goo extends Boss {
 		baseDefenseSkill = 12;
 		baseAttackSkill = 11;
 		dr = 2;
-		spriteClass = GooSprite.class;
+		spriteClass = "spritesDesc/Goo.json";
 
 		loot(Treasury.Category.POTION, 0.8f);
 		
@@ -99,7 +98,7 @@ public class Goo extends Boss {
 			pumpedUp = true;
 			spend( PUMP_UP_DELAY );
 			
-			((GooSprite)getSprite()).pumpUp();
+			getSprite().playExtra("pump");
 			
 			if (CharUtils.isVisible(this)) {
                 getSprite().showStatus( CharSprite.NEGATIVE, StringsManager.getVar(R.string.Goo_StaInfo1));

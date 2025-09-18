@@ -1,0 +1,18 @@
+{
+  "texture": "goo.png",
+  "width": 20,
+  "height": 14,
+  "idle": { "fps": 10, "looped": true, "frames": [0, 1] },
+  "run": { "fps": 10, "looped": true, "frames": [0, 1] },
+  "attack": { "fps": 10, "looped": false, "frames": [5, 0, 6] },
+  "zap": { "fps": 10, "looped": false, "frames": [5, 0, 6] },
+  "die": { "fps": 10, "looped": false, "frames": [2, 3, 4] },
+  
+  "extras": {
+    "pump": { "fps": 20, "looped": true, "frames": [0, 1] }
+  },
+  
+  "properties": {
+    "bloodColor": "0xFF000000"
+  }
+}
