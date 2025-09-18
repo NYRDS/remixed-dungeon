@@ -27,13 +27,15 @@ public class WndCryptoDonate extends WndTabbed {
         String[] labels = {
                 StringsManager.getVar(R.string.WndCryptoDonate_bitcoin),
                 StringsManager.getVar(R.string.WndCryptoDonate_ethereum),
-                StringsManager.getVar(R.string.WndCryptoDonate_monero)
+                StringsManager.getVar(R.string.WndCryptoDonate_monero),
+                StringsManager.getVar(R.string.WndCryptoDonate_ton)
         };
         
         Group[] pages = {
                 new CryptoDonateTab("bitcoin", "bitcoin:bc1qdevbitcoinaddressplaceholderhere"),
                 new CryptoDonateTab("ethereum", "ethereum:0xdevethereumaddressplaceholderhere"),
-                new CryptoDonateTab("monero", "monero:4DevMoneroAddressPlaceholderHere4DevMoneroAddressPlaceholderHere4DevMoneroAddressPlaceholderHere4Dev")
+                new CryptoDonateTab("monero", "monero:4DevMoneroAddressPlaceholderHere4DevMoneroAddressPlaceholderHere4DevMoneroAddressPlaceholderHere4Dev"),
+                new CryptoDonateTab("ton", "ton:DevTonAddressPlaceholderHere")
         };
 
         for (int i = 0; i < pages.length; i++) {
