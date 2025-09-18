@@ -310,4 +310,9 @@ public class Game implements ApplicationListener, InputProcessor {
         int[] limit = {30, 60, 120};
         Gdx.graphics.setForegroundFPS(limit[GamePreferences.fps_limit()]);
     }
+
+    static public void copyToClipboard(String label, String text) {
+        Gdx.app.getClipboard().setContents(text);
+        toast("Copied to clipboard", (Object[]) null);
+    }
 }
