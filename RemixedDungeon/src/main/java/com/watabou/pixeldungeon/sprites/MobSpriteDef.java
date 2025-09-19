@@ -7,6 +7,7 @@ import com.nyrds.util.JsonHelper;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Splash;
@@ -35,9 +36,12 @@ public class MobSpriteDef extends MobSprite {
 	private static final String ATTACK = "attack";
 	private static final String LAYERS = "layers";
 	private static final String EVENT_HANDLERS = "eventHandlers";
+	private static final String PARTICLE_EMITTERS = "particleEmitters";
 	
 	private int      bloodColor;
 	private JSONArray deathEffects;
+	private JSONObject particleEmitters;
+	private final Map<String, Emitter> emitterMap = new HashMap<>();
 
 	private int      framesInRow;
 	private int      kind;
@@ -112,6 +116,11 @@ public class MobSpriteDef extends MobSprite {
 
 			if(_bloodColor instanceof String) {
 				bloodColor = Long.decode((String) _bloodColor).intValue();
+			}
+			
+			// Parse particle emitters
+			if(json.has(PARTICLE_EMITTERS)) {
+				particleEmitters = json.getJSONObject(PARTICLE_EMITTERS);
 			}
 			
 			// Parse death effects from event handlers
@@ -203,6 +212,9 @@ public class MobSpriteDef extends MobSprite {
 				GameScene.addToMobLayer(eff);
 			}
 		}
+		
+		// Create particle emitters defined in JSON
+		createParticleEmitters();
 	}
 
 	@Override
@@ -263,15 +275,15 @@ public class MobSpriteDef extends MobSprite {
 	public void onComplete(Animation anim) {
 		if (anim == die && deathEffects != null) {
 			// Handle death effects from JSON definition
-			handleDeathEffects();
+			handleEventActions(deathEffects);
 		}
 		super.onComplete(anim);
 	}
 	
-	private void handleDeathEffects() {
+	private void handleEventActions(JSONArray actions) {
 		try {
-			for (int i = 0; i < deathEffects.length(); i++) {
-				JSONObject effect = deathEffects.getJSONObject(i);
+			for (int i = 0; i < actions.length(); i++) {
+				JSONObject effect = actions.getJSONObject(i);
 				
 				// Check if condition matches (animation is "die")
 				if (effect.has("condition")) {
@@ -283,32 +295,76 @@ public class MobSpriteDef extends MobSprite {
 				
 				// Execute actions
 				if (effect.has("actions")) {
-					JSONArray actions = effect.getJSONArray("actions");
-					for (int j = 0; j < actions.length(); j++) {
-						JSONObject action = actions.getJSONObject(j);
-						String actionType = action.getString("action");
-						
-						switch (actionType) {
-							case "emitParticles":
-								String particleType = action.getString("particleType");
-								int particleTypeId = getParticleTypeId(particleType);
-								int count = action.getInt("count");
-								emitter().burst(Speck.factory(particleTypeId), count);
-								break;
-								
-							case "splash":
-								String colorStr = action.getString("color");
-								int color = Long.decode(colorStr).intValue();
-								int splashCount = action.getInt("count");
-								Splash.at(center(), color, splashCount);
-								break;
-						}
-					}
+					JSONArray actionArray = effect.getJSONArray("actions");
+					executeActions(actionArray);
 				}
 			}
 		} catch (Exception e) {
 			// Log error but don't crash
 			e.printStackTrace();
+		}
+	}
+	
+	private void executeActions(JSONArray actions) throws JSONException {
+		for (int j = 0; j < actions.length(); j++) {
+			JSONObject action = actions.getJSONObject(j);
+			String actionType = action.getString("action");
+			
+			switch (actionType) {
+				case "emitParticles":
+					String particleType = action.getString("particleType");
+					int particleTypeId = getParticleTypeId(particleType);
+					int count = action.getInt("count");
+					emitter().burst(Speck.factory(particleTypeId), count);
+					break;
+					
+				case "splash":
+					String colorStr = action.getString("color");
+					int color = Long.decode(colorStr).intValue();
+					int splashCount = action.getInt("count");
+					Splash.at(center(), color, splashCount);
+					break;
+					
+				case "createParticleEmitter":
+					String emitterId = action.getString("id");
+					String effectName = action.getString("effect");
+					createParticleEmitter(emitterId, effectName);
+					break;
+			}
+		}
+	}
+	
+	private void createParticleEmitter(String emitterId, String effectName) {
+		if (particleEmitters != null && particleEmitters.has(effectName)) {
+			try {
+				JSONObject emitterConfig = particleEmitters.getJSONObject(effectName);
+				
+				String type = emitterConfig.getString("type");
+				if ("Emitter".equals(type)) {
+					Emitter emitter = new Emitter();
+					
+					// Set emitter properties
+					emitter.autoKill = emitterConfig.optBoolean("autoKill", true);
+					
+					// Set position if specified
+					if (emitterConfig.has("position")) {
+						JSONObject position = emitterConfig.getJSONObject("position");
+						float x = (float) position.optDouble("x", 0);
+						float y = (float) position.optDouble("y", 0);
+						emitter.pos(getX() + x, getY() + y);
+					} else {
+						emitter.pos(this);
+					}
+					
+					// Add to game scene
+					GameScene.addToMobLayer(emitter);
+					
+					// Store reference
+					emitterMap.put(emitterId, emitter);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 	}
 	
@@ -344,6 +400,55 @@ public class MobSpriteDef extends MobSprite {
 			case "Speck.CONFUSION": return Speck.CONFUSION;
 			case "Speck.MAGIC": return Speck.MAGIC;
 			default: return Speck.WOOL; // Default fallback
+		}
+	}
+	
+	private void createParticleEmitters() {
+		if (particleEmitters != null) {
+			try {
+				Iterator<String> keys = particleEmitters.keys();
+				while (keys.hasNext()) {
+					String emitterId = keys.next();
+					JSONObject emitterConfig = particleEmitters.getJSONObject(emitterId);
+					
+					String type = emitterConfig.getString("type");
+					if ("Emitter".equals(type)) {
+						Emitter emitter = new Emitter();
+						
+						// Set emitter properties
+						emitter.autoKill = emitterConfig.optBoolean("autoKill", true);
+						
+						// Set position if specified
+						if (emitterConfig.has("position")) {
+							JSONObject position = emitterConfig.getJSONObject("position");
+							float x = (float) position.optDouble("x", 0);
+							float y = (float) position.optDouble("y", 0);
+							emitter.pos(getX() + x, getY() + y);
+						} else {
+							emitter.pos(this);
+						}
+						
+						// Add to game scene
+						GameScene.addToMobLayer(emitter);
+						
+						// Store reference
+						emitterMap.put(emitterId, emitter);
+					}
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	@Override
+	public void update() {
+		super.update();
+		
+		// Update emitter visibility
+		boolean visible = getVisible();
+		for (Emitter emitter : emitterMap.values()) {
+			emitter.setVisible(visible);
 		}
 	}
 }

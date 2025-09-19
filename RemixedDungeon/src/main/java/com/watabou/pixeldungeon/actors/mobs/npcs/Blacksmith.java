@@ -20,7 +20,6 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.BlacksmithSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBlacksmith;
 import com.watabou.pixeldungeon.windows.WndQuest;
@@ -34,7 +33,7 @@ import java.util.Collection;
 public class Blacksmith extends NPC {
 
     {
-        spriteClass = BlacksmithSprite.class;
+        spriteClass = "spritesDesc/Blacksmith.json";
     }
     @Override
     public boolean interact(final Char hero) {

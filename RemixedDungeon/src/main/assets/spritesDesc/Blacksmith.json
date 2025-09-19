@@ -1,0 +1,52 @@
+{
+  "texture": "troll.png",
+  "width": 13,
+  "height": 16,
+  "idle": { "fps": 15, "looped": true, "frames": [0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 3] },
+  "run": { "fps": 20, "looped": true, "frames": [0] },
+  "die": { "fps": 20, "looped": false, "frames": [0] },
+  
+  "particleEmitters": {
+    "forge": {
+      "type": "Emitter",
+      "particleType": "Speck.FORGE",
+      "position": { "x": 7, "y": 12 },
+      "autoKill": false
+    }
+  },
+  
+  "eventHandlers": {
+    "onComplete": [
+      {
+        "condition": { "animation": "idle", "visible": true },
+        "actions": [
+          {
+            "action": "emitParticles",
+            "particleType": "Speck.FORGE",
+            "count": 3
+          },
+          {
+            "action": "playSound",
+            "sound": "SND_EVOKE",
+            "volume": 0.2
+          }
+        ]
+      }
+    ],
+    "onLink": [
+      {
+        "actions": [
+          {
+            "action": "createParticleEmitter",
+            "id": "forge",
+            "effect": "forge"
+          }
+        ]
+      }
+    ]
+  },
+  
+  "properties": {
+    "attack": "idle"
+  }
+}
