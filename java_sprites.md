@@ -29,15 +29,15 @@ The following sprites have been migrated to JSON format:
 The following sprites were successfully migrated using only the extras system:
 
 1. **GooSprite** - Custom `pump` animation
-2. **MonkSprite** - Custom `kick` animation
-3. **SeniorSprite** - Custom `kick` animation
+2. **MonkSprite** - Custom `kick` animation with 50% probability
+3. **SeniorSprite** - Custom `kick` animation with 30% probability
 4. **SheepSprite** - Standard animations only
 
 ## Migration Status
 
 - ✅ GooSprite - Migrated to JSON with extras
-- ✅ MonkSprite - Migrated to JSON with extras
-- ✅ SeniorSprite - Migrated to JSON with extras
+- ✅ MonkSprite - Migrated to JSON with extras and proper callback handling
+- ✅ SeniorSprite - Migrated to JSON with extras and proper callback handling
 - ✅ SheepSprite - Migrated to JSON with standard animations
 - ✅ RatSprite - Example provided in migration guide
 - ⬜ Others - Pending migration

@@ -15,13 +15,13 @@ Analysis of which Java sprite classes can be migrated using only the extras syst
 - Custom animation: `kick` (played randomly during attacks)
 - No other complex behaviors
 - ✅ Can migrate with extras
-- ✅ MIGRATED
+- ✅ MIGRATED (with 50% probability)
 
 ### 3. SeniorSprite
 - Custom animation: `kick` (played randomly during attacks)
 - No other complex behaviors
 - ✅ Can migrate with extras
-- ✅ MIGRATED
+- ✅ MIGRATED (with 30% probability)
 
 ### 4. RatSprite
 - Only standard animations, no extras needed
@@ -87,8 +87,12 @@ Analysis of which Java sprite classes can be migrated using only the extras syst
 ## Sprites Successfully Migrated
 
 1. **GooSprite** - JSON definition created, mob updated to use playExtra
-2. **MonkSprite** - JSON definition created
-3. **SeniorSprite** - JSON definition created
+2. **MonkSprite** - JSON definition created with proper callback handling
+3. **SeniorSprite** - JSON definition created with proper callback handling
 4. **SheepSprite** - JSON definition created
 
-Let's start with these simple cases.
+## Recent Improvements
+
+- **Callback Support**: Added `playExtra(String key, Callback callback)` method to CharSprite to support animation completion callbacks
+- **Proper Animation Flow**: Kick animations now properly trigger `onAttackComplete()` when they finish
+- **Backward Compatibility**: Existing code using `playExtra(key)` continues to work unchanged
