@@ -36,45 +36,50 @@ Analysis of which Java sprite classes can be migrated using only the extras syst
 ### 6. LarvaSprite
 - Custom blood color: `0xbbcc66`
 - Splash effect on death
-- ❌ Has complex behavior (splash effect)
+- ✅ Can migrate with death effects system
+- ✅ MIGRATED
 
 ### 7. DM300Sprite
 - Custom blood color: `0xFFFFFF88`
 - Particle effect on death (wool particles)
-- ❌ Has complex behavior (particles)
+- ✅ Can migrate with death effects system
+- ✅ MIGRATED
 
-### 8. GhostSprite
+### 8. YogSprite
+- Splash effect on death
+- Custom blood color: `0xFF0000FF`
+- ✅ Can migrate with death effects system
+- ✅ MIGRATED
+
+### 9. BlacksmithSprite
+- Particle emitter (forge particles)
+- Sound effects
+- ✅ Can migrate with particle emitters system
+- ✅ MIGRATED
+
+### 10. GhostSprite
 - Custom drawing (blending mode)
 - Particle effects on death
 - Custom blood color: `0xFFFFFF`
 - ❌ Has complex behaviors (drawing, particles)
 
-### 9. ImpSprite
+### 11. ImpSprite
 - Custom alpha transparency
 - Particle effects on death
 - ❌ Has complex behaviors (alpha, particles)
 
-### 10. PiranhaSprite
+### 12. PiranhaSprite
 - Water ripple effect on attack
 - ❌ Has complex behavior (ripple effect)
 
-### 11. RottingFistSprite
+### 13. RottingFistSprite
 - Physics-based attack animation
 - Camera shake effect
 - ❌ Has complex behaviors (physics, camera)
 
-### 12. ShopkeeperSprite
+### 14. ShopkeeperSprite
 - Particle emitter (coin particles)
 - ❌ Has complex behavior (emitter)
-
-### 13. BlacksmithSprite
-- Particle emitter (forge particles)
-- Sound effects
-- ❌ Has complex behaviors (emitter, sound)
-
-### 14. YogSprite
-- Splash effect on death
-- ❌ Has complex behavior (splash effect)
 
 ## Sprites Suitable for Simple Migration
 
@@ -90,9 +95,15 @@ Analysis of which Java sprite classes can be migrated using only the extras syst
 2. **MonkSprite** - JSON definition created with proper callback handling
 3. **SeniorSprite** - JSON definition created with proper callback handling
 4. **SheepSprite** - JSON definition created
+5. **LarvaSprite** - JSON definition created with death effects
+6. **DM300Sprite** - JSON definition created with death effects
+7. **YogSprite** - JSON definition created with death effects
+8. **BlacksmithSprite** - JSON definition created with particle emitters
 
 ## Recent Improvements
 
 - **Callback Support**: Added `playExtra(String key, Callback callback)` method to CharSprite to support animation completion callbacks
+- **Death Effects System**: Added support for particle effects and splash effects on death
+- **Particle Emitters System**: Added support for creating and managing persistent particle emitters
 - **Proper Animation Flow**: Kick animations now properly trigger `onAttackComplete()` when they finish
 - **Backward Compatibility**: Existing code using `playExtra(key)` continues to work unchanged
