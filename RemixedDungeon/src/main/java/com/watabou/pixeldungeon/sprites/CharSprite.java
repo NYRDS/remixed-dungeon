@@ -191,6 +191,15 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
             play(extras.get(key));
         }
     }
+    
+    public void playExtra(String key, Callback callback) {
+        if (extras.containsKey(key)) {
+            if (callback != null) {
+                animCallback = callback;
+            }
+            play(extras.get(key));
+        }
+    }
 
     public void idle() {
         if(curAnim==null || curAnim==run) {

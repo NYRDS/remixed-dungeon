@@ -13,13 +13,12 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
 public class Monk extends Mob {
-	
-	private boolean kicking = false;
 
 	public Monk() {
 		spriteClass = "spritesDesc/Monk.json";
@@ -49,23 +48,21 @@ public class Monk extends Mob {
 	@Override
 	public boolean actMeleeAttack(Char enemy) {
 		if (Random.Float() < 0.5f) {
-			kicking = true;
-			getSprite().playExtra("kick");
+			// Play kick animation with callback to trigger attack logic
+			getSprite().playExtra("kick", new Callback() {
+				@Override
+				public void call() {
+					// After kick animation completes, perform the actual attack
+					if (isAlive()) {
+						onAttackComplete();
+					}
+				}
+			});
+			getSprite().turnTo(getPos(), enemy.getPos());
 			spend(attackDelay());
 			return false;
 		} else {
-			kicking = false;
 			return super.actMeleeAttack(enemy);
-		}
-	}
-	
-	@Override
-	public void onAttackComplete() {
-		if (kicking) {
-			kicking = false;
-			super.attack(getEnemy());
-		} else {
-			super.onAttackComplete();
 		}
 	}
 

@@ -4,13 +4,12 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Stun;
+import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
 public class Senior extends Monk {
-	
-	private boolean kicking = false;
 
 	{
 		spriteClass = "spritesDesc/Senior.json";
@@ -29,23 +28,21 @@ public class Senior extends Monk {
 	@Override
 	public boolean actMeleeAttack(Char enemy) {
 		if (Random.Float() < 0.3f) {
-			kicking = true;
-			getSprite().playExtra("kick");
+			// Play kick animation with callback to trigger attack logic
+			getSprite().playExtra("kick", new Callback() {
+				@Override
+				public void call() {
+					// After kick animation completes, perform the actual attack
+					if (isAlive()) {
+						onAttackComplete();
+					}
+				}
+			});
+			getSprite().turnTo(getPos(), enemy.getPos());
 			spend(attackDelay());
 			return false;
 		} else {
-			kicking = false;
 			return super.actMeleeAttack(enemy);
-		}
-	}
-	
-	@Override
-	public void onAttackComplete() {
-		if (kicking) {
-			kicking = false;
-			super.attack(getEnemy());
-		} else {
-			super.onAttackComplete();
 		}
 	}
 }
