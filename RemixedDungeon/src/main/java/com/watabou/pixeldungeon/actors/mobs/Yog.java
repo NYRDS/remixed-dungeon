@@ -35,9 +35,7 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.LarvaSprite;
 import com.watabou.pixeldungeon.sprites.RottingFistSprite;
-import com.watabou.pixeldungeon.sprites.YogSprite;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -49,7 +47,7 @@ import java.util.ArrayList;
 public class Yog extends Boss {
 
 	public Yog() {
-		spriteClass = YogSprite.class;
+		spriteClass = "spritesDesc/Yog.json";
 
 		hp(ht(1000));
 		movable = false;
@@ -272,7 +270,7 @@ public class Yog extends Boss {
 
 	public static class Larva extends Mob {
 		{
-			spriteClass = LarvaSprite.class;
+			spriteClass = "spritesDesc/Larva.json";
 
 			hp(ht(120));
 			baseDefenseSkill = 20;

@@ -1,0 +1,28 @@
+{
+  "texture": "larva.png",
+  "width": 12,
+  "height": 8,
+  "idle": { "fps": 5, "looped": true, "frames": [4, 4, 4, 4, 4, 5, 5] },
+  "run": { "fps": 12, "looped": true, "frames": [0, 1, 2, 3] },
+  "attack": { "fps": 15, "looped": false, "frames": [6, 5, 7] },
+  "die": { "fps": 10, "looped": false, "frames": [8] },
+  
+  "eventHandlers": {
+    "onComplete": [
+      {
+        "condition": { "animation": "die" },
+        "actions": [
+          {
+            "action": "splash",
+            "color": "0xbbcc66",
+            "count": 10
+          }
+        ]
+      }
+    ]
+  },
+  
+  "properties": {
+    "bloodColor": "0xbbcc66"
+  }
+}

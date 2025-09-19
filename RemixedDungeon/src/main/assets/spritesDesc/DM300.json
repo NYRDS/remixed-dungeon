@@ -1,0 +1,28 @@
+{
+  "texture": "dm300.png",
+  "width": 22,
+  "height": 20,
+  "idle": { "fps": 10, "looped": true, "frames": [0, 1] },
+  "run": { "fps": 10, "looped": true, "frames": [2, 3] },
+  "attack": { "fps": 15, "looped": false, "frames": [4, 5, 6] },
+  "die": { "fps": 20, "looped": false, "frames": [0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 8] },
+  
+  "eventHandlers": {
+    "onComplete": [
+      {
+        "condition": { "animation": "die" },
+        "actions": [
+          {
+            "action": "emitParticles",
+            "particleType": "Speck.WOOL",
+            "count": 15
+          }
+        ]
+      }
+    ]
+  },
+  
+  "properties": {
+    "bloodColor": "0xFFFFFF88"
+  }
+}

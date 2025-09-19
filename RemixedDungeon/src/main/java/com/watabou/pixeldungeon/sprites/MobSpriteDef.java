@@ -8,6 +8,8 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -32,7 +34,10 @@ public class MobSpriteDef extends MobSprite {
 	private static final String ZAP = "zap";
 	private static final String ATTACK = "attack";
 	private static final String LAYERS = "layers";
+	private static final String EVENT_HANDLERS = "eventHandlers";
+	
 	private int      bloodColor;
+	private JSONArray deathEffects;
 
 	private int      framesInRow;
 	private int      kind;
@@ -107,6 +112,14 @@ public class MobSpriteDef extends MobSprite {
 
 			if(_bloodColor instanceof String) {
 				bloodColor = Long.decode((String) _bloodColor).intValue();
+			}
+			
+			// Parse death effects from event handlers
+			if(json.has(EVENT_HANDLERS)) {
+				JSONObject eventHandlers = json.getJSONObject(EVENT_HANDLERS);
+				if(eventHandlers.has("onComplete")) {
+					deathEffects = eventHandlers.getJSONArray("onComplete");
+				}
 			}
 
 			Set<String> states = new HashSet<>();
@@ -244,5 +257,93 @@ public class MobSpriteDef extends MobSprite {
 	@Override
 	public float visualOffsetY() {
 		return visualOffsetY + super.visualOffsetY();
+	}
+	
+	@Override
+	public void onComplete(Animation anim) {
+		if (anim == die && deathEffects != null) {
+			// Handle death effects from JSON definition
+			handleDeathEffects();
+		}
+		super.onComplete(anim);
+	}
+	
+	private void handleDeathEffects() {
+		try {
+			for (int i = 0; i < deathEffects.length(); i++) {
+				JSONObject effect = deathEffects.getJSONObject(i);
+				
+				// Check if condition matches (animation is "die")
+				if (effect.has("condition")) {
+					JSONObject condition = effect.getJSONObject("condition");
+					if (condition.has("animation") && !"die".equals(condition.getString("animation"))) {
+						continue; // Skip if condition doesn't match
+					}
+				}
+				
+				// Execute actions
+				if (effect.has("actions")) {
+					JSONArray actions = effect.getJSONArray("actions");
+					for (int j = 0; j < actions.length(); j++) {
+						JSONObject action = actions.getJSONObject(j);
+						String actionType = action.getString("action");
+						
+						switch (actionType) {
+							case "emitParticles":
+								String particleType = action.getString("particleType");
+								int particleTypeId = getParticleTypeId(particleType);
+								int count = action.getInt("count");
+								emitter().burst(Speck.factory(particleTypeId), count);
+								break;
+								
+							case "splash":
+								String colorStr = action.getString("color");
+								int color = Long.decode(colorStr).intValue();
+								int splashCount = action.getInt("count");
+								Splash.at(center(), color, splashCount);
+								break;
+						}
+					}
+				}
+			}
+		} catch (Exception e) {
+			// Log error but don't crash
+			e.printStackTrace();
+		}
+	}
+	
+	private int getParticleTypeId(String particleType) {
+		switch (particleType) {
+			case "Speck.HEALING": return Speck.HEALING;
+			case "Speck.STAR": return Speck.STAR;
+			case "Speck.LIGHT": return Speck.LIGHT;
+			case "Speck.QUESTION": return Speck.QUESTION;
+			case "Speck.UP": return Speck.UP;
+			case "Speck.SCREAM": return Speck.SCREAM;
+			case "Speck.BONE": return Speck.BONE;
+			case "Speck.WOOL": return Speck.WOOL;
+			case "Speck.ROCK": return Speck.ROCK;
+			case "Speck.NOTE": return Speck.NOTE;
+			case "Speck.CHANGE": return Speck.CHANGE;
+			case "Speck.HEART": return Speck.HEART;
+			case "Speck.BUBBLE": return Speck.BUBBLE;
+			case "Speck.STEAM": return Speck.STEAM;
+			case "Speck.COIN": return Speck.COIN;
+			case "Speck.MIST": return Speck.MIST;
+			case "Speck.SPELL_STAR": return Speck.SPELL_STAR;
+			case "Speck.DISCOVER": return Speck.DISCOVER;
+			case "Speck.EVOKE": return Speck.EVOKE;
+			case "Speck.MASTERY": return Speck.MASTERY;
+			case "Speck.KIT": return Speck.KIT;
+			case "Speck.RATTLE": return Speck.RATTLE;
+			case "Speck.JET": return Speck.JET;
+			case "Speck.TOXIC": return Speck.TOXIC;
+			case "Speck.PARALYSIS": return Speck.PARALYSIS;
+			case "Speck.DUST": return Speck.DUST;
+			case "Speck.FORGE": return Speck.FORGE;
+			case "Speck.CONFUSION": return Speck.CONFUSION;
+			case "Speck.MAGIC": return Speck.MAGIC;
+			default: return Speck.WOOL; // Default fallback
+		}
 	}
 }
