@@ -18,6 +18,8 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 
 public class Monk extends Mob {
+	
+	private boolean kicking = false;
 
 	public Monk() {
 		spriteClass = "spritesDesc/Monk.json";
@@ -45,12 +47,28 @@ public class Monk extends Mob {
 	}
 
 	@Override
-	public void die(@NotNull NamedEntityKind cause) {
-		Imp.Quest.process( this );
-		
-		super.die( cause );
+	public boolean actMeleeAttack(Char enemy) {
+		if (Random.Float() < 0.5f) {
+			kicking = true;
+			getSprite().playExtra("kick");
+			spend(attackDelay());
+			return false;
+		} else {
+			kicking = false;
+			return super.actMeleeAttack(enemy);
+		}
 	}
 	
+	@Override
+	public void onAttackComplete() {
+		if (kicking) {
+			kicking = false;
+			super.attack(getEnemy());
+		} else {
+			super.onAttackComplete();
+		}
+	}
+
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
 		
