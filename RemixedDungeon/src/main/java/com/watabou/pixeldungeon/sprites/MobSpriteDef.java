@@ -2,6 +2,7 @@ package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.pixeldungeon.effects.ISpriteEffect;
 import com.nyrds.pixeldungeon.effects.ZapEffect;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.watabou.gltextures.TextureCache;
@@ -37,6 +38,7 @@ public class MobSpriteDef extends MobSprite {
 	private static final String LAYERS = "layers";
 	private static final String EVENT_HANDLERS = "eventHandlers";
 	private static final String PARTICLE_EMITTERS = "particleEmitters";
+	private static final String PROPERTIES = "properties";
 	
 	private int      bloodColor;
 	private JSONArray deathEffects;
@@ -121,6 +123,13 @@ public class MobSpriteDef extends MobSprite {
 			// Parse particle emitters
 			if(json.has(PARTICLE_EMITTERS)) {
 				particleEmitters = json.getJSONObject(PARTICLE_EMITTERS);
+			}
+			
+			// Parse properties
+			if(json.has(PROPERTIES)) {
+				JSONObject properties = json.getJSONObject(PROPERTIES);
+				// Currently we only handle bloodColor, but we could add more properties here
+				// For example: blendMode, physics, etc.
 			}
 			
 			// Parse death effects from event handlers
@@ -300,8 +309,8 @@ public class MobSpriteDef extends MobSprite {
 				}
 			}
 		} catch (Exception e) {
-			// Log error but don't crash
-			e.printStackTrace();
+			// Log error using EventCollector but don't crash
+			EventCollector.logException(e);
 		}
 	}
 	
@@ -363,7 +372,8 @@ public class MobSpriteDef extends MobSprite {
 					emitterMap.put(emitterId, emitter);
 				}
 			} catch (Exception e) {
-				e.printStackTrace();
+				// Log error using EventCollector but don't crash
+				EventCollector.logException(e);
 			}
 		}
 	}
@@ -436,7 +446,8 @@ public class MobSpriteDef extends MobSprite {
 					}
 				}
 			} catch (Exception e) {
-				e.printStackTrace();
+				// Log error using EventCollector but don't crash
+				EventCollector.logException(e);
 			}
 		}
 	}
