@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.Os;
 import com.nyrds.platform.util.StringsManager;
-import com.nyrds.util.DownloadTask;
+import com.nyrds.util.ParallelDownloadTask;
 import com.nyrds.util.Mods;
 import com.watabou.noosa.Group;
 import com.watabou.pixeldungeon.ui.Icons;
@@ -50,8 +50,14 @@ public class WndModsDisclaimer extends WndOptions {
                     modsCommon.delete();
                     String downloadTo = modsCommon.getAbsolutePath();
 
-                    GameLoop.execute(new DownloadTask(new DownloadProgressWindow("Downloading", modsButton),
-                            "https://nyrds.github.io/NYRDS/mods2.json",
+                    // Try both URLs in parallel - first one to succeed will be used
+                    String[] urls = {
+                        "https://ru.nyrds.net/rpd/mods2.json",
+                        "https://nyrds.net/rpd/mods2.json"
+                    };
+                    
+                    GameLoop.execute(new ParallelDownloadTask(new DownloadProgressWindow("Downloading", modsButton),
+                            urls,
                             downloadTo));
 
                 } else {
