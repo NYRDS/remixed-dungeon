@@ -9,6 +9,8 @@ import java.util.regex.Pattern;
 public abstract class SystemTextBase extends Text {
     // Markup pattern for highlighting (_text_)
     protected static final Pattern HIGHLIGHTER = Pattern.compile("_(.*?)_");
+    // Markup pattern for bronze text ("text")
+    protected static final Pattern BRONZE_HIGHLIGHTER = Pattern.compile("\"(.*?)\"");
     
     protected static float fontScale = Float.NaN;
     
@@ -45,7 +47,7 @@ public abstract class SystemTextBase extends Text {
      */
     protected void parseMarkup(String input) {
         // Basic implementation - subclasses should provide their own
-        if (input != null && HIGHLIGHTER.matcher(input).find()) {
+        if (input != null && (HIGHLIGHTER.matcher(input).find() || BRONZE_HIGHLIGHTER.matcher(input).find())) {
             hasMarkup = true;
         }
     }

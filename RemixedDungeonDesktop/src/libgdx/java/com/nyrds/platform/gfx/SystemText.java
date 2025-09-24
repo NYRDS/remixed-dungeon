@@ -18,10 +18,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SystemText extends SystemTextBase {
     private static FreeTypeFontGenerator pixelGenerator;
     private static FreeTypeFontGenerator fallbackGenerator;
+    // Combined markup pattern for violet highlighting (_text_) and bronze ("text")
+    private static final Pattern MARKUP_PATTERN = Pattern.compile("_(.*?)_|\"(.*?)\"");
+
     private static final Map<String, BitmapFont> fontCache = new HashMap<>();
     private static final Map<String, BitmapFont.BitmapFontData> pseudoFontCache = new HashMap<>();
     private static BitmapFont.BitmapFontData pixelFontCheckData;
@@ -59,6 +63,7 @@ public class SystemText extends SystemTextBase {
 
     private Color defaultColor = Color.WHITE;
     private Color highlightColor = new Color(0xcc / 255f, 0x33 / 255f, 0xff / 255f, 1);
+    private Color bronzeColor = new Color(0xCD / 255f, 0x7F / 255f, 0x32 / 255f, 1);
 
     public SystemText(float baseLine) {
         super(0, 0, 0, 0);
@@ -143,14 +148,20 @@ public class SystemText extends SystemTextBase {
 
         // Create a flat list of colored segments from the original text with markup
         ArrayList<ColoredSegment> allSegments = new ArrayList<>();
-        Matcher m = HIGHLIGHTER.matcher(textToParse);
+        Matcher m = MARKUP_PATTERN.matcher(textToParse);
         int lastEnd = 0;
 
         while (m.find()) {
             if (m.start() > lastEnd) {
                 allSegments.add(new ColoredSegment(textToParse.substring(lastEnd, m.start()), defaultColor));
             }
-            allSegments.add(new ColoredSegment(m.group(1), highlightColor));
+            if (m.group(1) != null) {
+                // Violet highlight for _text_
+                allSegments.add(new ColoredSegment(m.group(1), highlightColor));
+            } else if (m.group(2) != null) {
+                // Bronze color for "text"
+                allSegments.add(new ColoredSegment(m.group(2), bronzeColor));
+            }
             lastEnd = m.end();
         }
         if (lastEnd < textToParse.length()) {
@@ -348,8 +359,7 @@ public class SystemText extends SystemTextBase {
     @Override
     public void text(@NotNull String str) {
         // Build the plain text representation for superclass and measurement
-        Matcher m = HIGHLIGHTER.matcher(str);
-        String plainText = m.replaceAll("$1");
+        String plainText = str.replaceAll("_(.*?)_", "$1").replaceAll("\"(.*?)\"", "$1");
         super.text(plainText); // Superclass holds the plain text
 
         this.originalText = str; // Keep the original text with markup
