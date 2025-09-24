@@ -62,7 +62,9 @@ public class SystemText extends SystemTextBase {
 
     public SystemText(float baseLine) {
         super(0, 0, 0, 0);
-        fontParameters = getPseudoFontParameters(baseLine);
+        FreeTypeFontParameter fontParameter = getFontParameters(baseLine);
+        fontParameter.packer = new PseudoPixmapPacker();
+        fontParameters = fontParameter;
         this.originalText = "";
     }
 
@@ -95,12 +97,6 @@ public class SystemText extends SystemTextBase {
         return fontParameters;
     }
 
-    private FreeTypeFontParameter getPseudoFontParameters(float baseLine) {
-        FreeTypeFontParameter fontParameter = getFontParameters(baseLine);
-        fontParameter.packer = new PseudoPixmapPacker();
-        return fontParameter;
-    }
-
     private String getFontKey(FreeTypeFontParameter params) {
         return params.size + "_" + params.characters + "_" + params.borderColor + "_" + params.borderWidth + "_" + params.flip + "_" + params.genMipMaps + "_" + params.magFilter + "_" + params.minFilter + "_" + params.spaceX;
     }
@@ -115,11 +111,7 @@ public class SystemText extends SystemTextBase {
 
         synchronized (pseudoFontCache) {
             if (!pseudoFontCache.containsKey(fontKey)) {
-                if (useFallbackFont) {
-                    fontParameters.spaceX = -2;
-                } else {
-                    fontParameters.spaceX = 0;
-                }
+                adjustFontParams();
                 BitmapFont.BitmapFontData generatedData = activeGenerator.generateData(fontParameters);
                 pseudoFontCache.put(fontKey, generatedData);
             }
@@ -127,6 +119,16 @@ public class SystemText extends SystemTextBase {
         }
 
         pseudoGlyphLayout = new PseudoGlyphLayout();
+    }
+
+    private void adjustFontParams() {
+        if (useFallbackFont) {
+            fontParameters.spaceX = -1;
+            fontParameters.spaceY = -2;
+        } else {
+            fontParameters.spaceX = 0;
+            fontParameters.spaceY = 0;
+        }
     }
 
     private void parseMarkupAndWrap() {
@@ -221,6 +223,7 @@ public class SystemText extends SystemTextBase {
         synchronized (fontCache) {
             if (!fontCache.containsKey(fontKey)) {
                 fontParameters.packer = null; // Use default packer for real font generation
+                adjustFontParams();
                 fontCache.put(fontKey, activeGenerator.generateFont(fontParameters));
                 fontParameters.packer = new PseudoPixmapPacker(); // Restore for future pseudo-generations
             }

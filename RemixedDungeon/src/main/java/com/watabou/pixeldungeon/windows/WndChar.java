@@ -16,7 +16,7 @@ import lombok.val;
 
 public class WndChar extends WndTabbed {
     public static final int WIDTH = 100;
-    public static final int L_WIDTH = 140;
+    public static final int L_WIDTH = 180;
 
     private final Char target;
     private final Char selector;
