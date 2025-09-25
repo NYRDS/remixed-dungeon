@@ -358,12 +358,11 @@ public class SystemText extends SystemTextBase {
 
     @Override
     public void text(@NotNull String str) {
-        // Build the plain text representation for superclass and measurement
-        String plainText = str.replaceAll("_(.*?)_", "$1").replaceAll("\"(.*?)\"", "$1");
-        super.text(plainText); // Superclass holds the plain text
+        // Use base class implementation for plain text extraction
+        super.text(str);
 
-        this.originalText = str; // Keep the original text with markup
         this.dirty = true;
+        String plainText = extractPlainText(str); // Use base class method
         this.useFallbackFont = !GamePreferences.classicFont() || containsMissingChars(plainText);
 
         // Invalidate font data if font type changes
@@ -389,7 +388,8 @@ public class SystemText extends SystemTextBase {
      * @param color An ARGB integer color, same as used in the Android version.
      */
     public void highlightColor(int color) {
-        this.highlightColor = fromIntColor(color);
+        super.highlightColor(color); // This sets the integer color in the base class
+        this.highlightColor = fromIntColor(color); // Desktop-specific conversion
         if (hasMarkup) {
             dirty = true;
         }
@@ -400,7 +400,20 @@ public class SystemText extends SystemTextBase {
      * @param color An ARGB integer color, same as used in the Android version.
      */
     public void defaultColor(int color) {
-        this.defaultColor = fromIntColor(color);
+        super.defaultColor(color); // This sets the integer color in the base class
+        this.defaultColor = fromIntColor(color); // Desktop-specific conversion
         dirty = true;
+    }
+    
+    /**
+     * Set the bronze color for quoted text.
+     * @param color An ARGB integer color, same as used in the Android version.
+     */
+    public void bronzeColor(int color) {
+        super.bronzeColor(color); // This sets the integer color in the base class
+        this.bronzeColor = fromIntColor(color); // Desktop-specific conversion
+        if (hasMarkup) {
+            dirty = true;
+        }
     }
 }

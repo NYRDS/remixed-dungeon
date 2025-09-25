@@ -15,8 +15,9 @@ public abstract class SystemTextBase extends Text {
     protected static float fontScale = Float.NaN;
     
     // Color properties
-    protected int highlightColor;
-    protected int defaultColor = 0xFFFFFFFF; // White color (ARGB)
+    static protected int highlightColor = 0xFFCC33FF; // Default violet highlight color (ARGB)
+    static protected int defaultColor = 0xFFFFFFFF; // White color (ARGB)
+    static protected int bronzeColor = 0xFFCD7F32; // Bronze color for quoted text (ARGB)
     protected boolean hasMarkup = false;
     protected String originalText = "";
     
@@ -43,13 +44,25 @@ public abstract class SystemTextBase extends Text {
     
     /**
      * Parse markup in the text and create color mapping
-     * This is a basic implementation that subclasses can override
+     * This is a common implementation for handling both _text_ (violet) and "text" (bronze) markup
+     * Subclasses can override if needed
      */
     protected void parseMarkup(String input) {
-        // Basic implementation - subclasses should provide their own
         if (input != null && (HIGHLIGHTER.matcher(input).find() || BRONZE_HIGHLIGHTER.matcher(input).find())) {
             hasMarkup = true;
         }
+    }
+    
+    /**
+     * Extract plain text by removing markup
+     * @param str input string with markup
+     * @return plain text with markup removed
+     */
+    protected String extractPlainText(String str) {
+        if (str == null) return "";
+        
+        // Remove both underscore markup (_text_) and quote markup ("text")
+        return str.replaceAll("_(.*?)_", "$1").replaceAll("\"(.*?)\"", "$1");
     }
     
     /**
@@ -66,8 +79,18 @@ public abstract class SystemTextBase extends Text {
      * Set the default color for unmarked text
      */
     public void defaultColor(int color) {
-        this.defaultColor = color;
+        defaultColor = color;
         dirty = true;
+    }
+    
+    /**
+     * Set the bronze color for quoted text
+     */
+    public void bronzeColor(int color) {
+        bronzeColor = color;
+        if (hasMarkup) {
+            dirty = true;
+        }
     }
     
     @Override
@@ -77,11 +100,14 @@ public abstract class SystemTextBase extends Text {
         }
         
         dirty = true;
-        text = str != null ? str : "";
-        originalText = text;
         
-        // Parse markup in the text
-        parseMarkup(text);
+        // Build the plain text representation for superclass and measurement
+        String plainText = extractPlainText(str);
+        text = plainText != null ? plainText : "";
+        originalText = str; // Keep the original text with markup
+        
+        // Parse markup in the original text
+        parseMarkup(str);
     }
     
     /**

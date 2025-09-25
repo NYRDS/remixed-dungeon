@@ -56,10 +56,7 @@ public class SystemText extends SystemTextBase {
     
     // Color mapping for different text segments
     private int[] colorMap;
-    private int defaultColor = Color.WHITE;
-    // highlightColor is now inherited from BaseText
-    // hasMarkup is now inherited from BaseText
-    private int highlightColor = 0xFFCC33FF; // Same as Window.TITLE_COLOR
+    // Colors are now inherited from BaseText
 
     public SystemText(float baseLine) {
         this(Utils.EMPTY_STRING, baseLine, false);
@@ -495,18 +492,33 @@ public class SystemText extends SystemTextBase {
         return this.lineImage.size();
     }
 
+    @Override
+    public void text(@NotNull String str) {
+        // Use the base implementation for plain text extraction
+        super.text(str);
+        
+        // Parse markup and build color mapping
+        parseMarkupAndBuildColorMap(str);
+        
+        this.dirty = true;
+    }
+    
     /**
-     * Parse markup in the text and create color mapping
+     * Parse markup and build the color mapping array
+     * @param input the text with markup to parse
      */
-    protected void parseMarkup(String input) {
+    protected void parseMarkupAndBuildColorMap(String input) {
         StringBuilder finalText = new StringBuilder();
         ArrayList<Integer> colorList = new ArrayList<>();
         
-        Matcher m = HIGHLIGHTER.matcher(input);
+        // Combined markup pattern for violet highlighting (_text_) and bronze ("text")
+        Pattern markupPattern = Pattern.compile("_(.*?)_|\"(.*?)\"");
+        
+        Matcher m = markupPattern.matcher(input);
         int lastEnd = 0;
         
         while (m.find()) {
-            // Add text before the highlight
+            // Add text before the markup
             String before = input.substring(lastEnd, m.start());
             for (int i = 0; i < before.length(); i++) {
                 char c = before.charAt(i);
@@ -514,18 +526,29 @@ public class SystemText extends SystemTextBase {
                 colorList.add(defaultColor);
             }
             
-            // Add highlighted text
-            String highlighted = m.group(1);
-            for (int i = 0; i < highlighted.length(); i++) {
-                char c = highlighted.charAt(i);
-                finalText.append(c);
-                colorList.add(highlightColor);
+            // Check which group matched and apply the appropriate color
+            if (m.group(1) != null) {
+                // Violet highlight for _text_
+                String highlighted = m.group(1);
+                for (int i = 0; i < highlighted.length(); i++) {
+                    char c = highlighted.charAt(i);
+                    finalText.append(c);
+                    colorList.add(highlightColor);
+                }
+            } else if (m.group(2) != null) {
+                // Bronze color for "text"
+                String quotedText = m.group(2);
+                for (int i = 0; i < quotedText.length(); i++) {
+                    char c = quotedText.charAt(i);
+                    finalText.append(c);
+                    colorList.add(bronzeColor);
+                }
             }
             
             lastEnd = m.end();
         }
         
-        // Add remaining text after the last highlight
+        // Add remaining text after the last markup
         String remaining = input.substring(lastEnd);
         for (int i = 0; i < remaining.length(); i++) {
             char c = remaining.charAt(i);
@@ -550,7 +573,7 @@ public class SystemText extends SystemTextBase {
      * Set the highlight color for marked text
      */
     public void highlightColor(int color) {
-        highlightColor = color;
+        super.highlightColor(color);
         if (hasMarkup) {
             dirty = true;
         }
@@ -560,7 +583,17 @@ public class SystemText extends SystemTextBase {
      * Set the default color for unmarked text
      */
     public void defaultColor(int color) {
-        defaultColor = color;
+        super.defaultColor(color);
+        if (hasMarkup) {
+            dirty = true;
+        }
+    }
+    
+    /**
+     * Set the bronze color for quoted text
+     */
+    public void bronzeColor(int color) {
+        super.bronzeColor(color);
         if (hasMarkup) {
             dirty = true;
         }
