@@ -10,7 +10,6 @@ import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class IconTitle extends Component {
@@ -41,7 +40,7 @@ public class IconTitle extends Component {
 		add( imIcon );
 		
 		tfLabel = PixelScene.createMultiline( GuiProperties.titleFontSize() );
-		tfLabel.hardlight( Window.TITLE_COLOR );
+		//tfLabel.hardlight( Window.TITLE_COLOR );
 		add( tfLabel );
 	}
 	

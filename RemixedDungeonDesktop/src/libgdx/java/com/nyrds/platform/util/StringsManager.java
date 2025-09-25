@@ -157,7 +157,7 @@ public class StringsManager {
 
     public static String getVar(int id) {
         if (stringMap.containsKey(id)) {
-            return stringMap.get(id);
+            return stringMap.get(id).replaceAll("(?<!\")(%(\\d+\\$)?[-+ 0-9.,#()]*[doxXfFeEgGaA])", "\"$1\"");
         }
 
         return Utils.EMPTY_STRING;
@@ -175,12 +175,16 @@ public class StringsManager {
             return baseArray;
         }
 
-        return modStrings;
+        String[] result = modStrings.clone();
+        for (int i = 0; i < result.length; i++) {
+            result[i] = result[i].replaceAll("(?<!\")(%(\\d+\\$)?[-+ 0-9.,#()]*[doxXfFeEgGaA])", "\"$1\"");
+        }
+        return result;
     }
 
     public static String getVar(String id) {
         if (sStringMap.containsKey(id)) {
-            return sStringMap.get(id);
+            return sStringMap.get(id).replaceAll("(?<!\")(%(\\d+\\$)?[-+ 0-9.,#()]*[doxXfFeEgGaA])", "\"$1\"");
         }
 
         if (keyToInt.containsKey(id)) {

@@ -199,7 +199,7 @@ public class Weapon extends KindOfWeapon {
 	@NotNull
     @Override
 	public String toString() {
-		return isLevelKnown() ? Utils.format("%s: %d", super.toString(), STR ) : super.toString();
+		return isLevelKnown() ? Utils.format("%s: \"%d\"", super.toString(), STR ) : super.toString();
 	}
 	
 	@Override
