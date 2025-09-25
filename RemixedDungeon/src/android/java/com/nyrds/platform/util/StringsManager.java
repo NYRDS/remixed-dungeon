@@ -181,12 +181,12 @@ public class StringsManager {
 
 	public static String getVar(int id) {
 		if (stringMap.containsKey(id)) {
-			return stringMap.get(id);
+			return stringMap.get(id).replaceAll("(?<!\")(%(\\d+\\$)?[-+ 0-9.,#()]*[doxXfFeEgGaA])", "\"$1\"");
 		}
 
 		try {
 			ensureCorrectLocale();
-			return getResources().getString(id);
+			return getResources().getString(id).replaceAll("(?<!\")(%(\\d+\\$)?[-+ 0-9.,#()]*[doxXfFeEgGaA])", "\"$1\"");
 		} catch (Resources.NotFoundException notFound) {
 			GLog.w("resource not found: %s", notFound.getMessage());
 		}
@@ -201,12 +201,19 @@ public class StringsManager {
 			modStrings = stringsMap.get(id);
 		}
 
+		String[] arrayToProcess;
 		if(baseArray.length > modStrings.length) {
 			ensureCorrectLocale();
-			return baseArray;
+			arrayToProcess = baseArray;
+		} else {
+			arrayToProcess = modStrings;
 		}
 
-		return modStrings;
+		String[] result = arrayToProcess.clone();
+		for (int i = 0; i < result.length; i++) {
+			result[i] = result[i].replaceAll("(?<!\")(%(\\d+\\$)?[-+ 0-9.,#()]*[doxXfFeEgGaA])", "\"$1\"");
+		}
+		return result;
 	}
 
 	public static String getVar(String id) {
@@ -215,7 +222,7 @@ public class StringsManager {
 		}
 
 		if (sStringMap.containsKey(id)) {
-			return sStringMap.get(id);
+			return sStringMap.get(id).replaceAll("(?<!\")(%(\\d+\\$)?[-+ 0-9.,#()]*[doxXfFeEgGaA])", "\"$1\"");
 		}
 
 		if(keyToInt.containsKey(id)) {
@@ -261,7 +268,11 @@ public class StringsManager {
 			return baseStrings;
 		}
 
-		return modStrings;
+        String[] result = modStrings.clone();
+        for (int i = 0; i < result.length; i++) {
+            result[i] = result[i].replaceAll("(?<!\")(%(\\d+\\$)?[-+ 0-9.,#()]*[doxXfFeEgGaA])", "\"$1\"");
+        }
+        return result;
 	}
 
 	public static Resources getResources() {
