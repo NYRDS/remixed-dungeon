@@ -249,7 +249,6 @@ public class WndBag extends WndTabbed {
 			}
 			txtSubTitle = PixelScene.createMultiline( Utils.format(R.string.WndBag_BuySubtitle, Dungeon.hero.gold()) , GuiProperties.titleFontSize());
 			txtSubTitle.maxWidth(panelWidth);
-			txtSubTitle.hardlight( TITLE_COLOR );
 			txtSubTitle.setX(PixelScene.align((panelWidth - txtSubTitle.width()) / 2));
 			if(txtSubTitle.getX() <0) {
 				txtSubTitle.setX(0);

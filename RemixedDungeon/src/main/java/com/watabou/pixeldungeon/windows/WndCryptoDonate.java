@@ -35,7 +35,7 @@ public class WndCryptoDonate extends WndTabbed {
                 new CryptoDonateTab("bitcoin", "bitcoin:bc1qdevbitcoinaddressplaceholderhere"),
                 new CryptoDonateTab("ethereum", "ethereum:0xdevethereumaddressplaceholderhere"),
                 new CryptoDonateTab("monero", "monero:4DevMoneroAddressPlaceholderHere4DevMoneroAddressPlaceholderHere4DevMoneroAddressPlaceholderHere4Dev"),
-                new CryptoDonateTab("ton", "ton:DevTonAddressPlaceholderHere")
+                new CryptoDonateTab("ton", "ton:UQAmZZFF1ZsafFjlPe9h2I2edpLxgMvQcWRJpk6Nvk_W2TY3")
         };
 
         for (int i = 0; i < pages.length; i++) {
@@ -104,7 +104,7 @@ public class WndCryptoDonate extends WndTabbed {
             RedButton openWalletButton = new RedButton(StringsManager.getVar(R.string.WndCryptoDonate_openWallet)) {
                 @Override
                 protected void onClick() {
-                    Game.instance().openUrl(StringsManager.getVar(R.string.WndCryptoDonate_openWallet), uriScheme);
+                    Game.openUrl(StringsManager.getVar(R.string.WndCryptoDonate_openWallet), uriScheme);
                     EventCollector.logEvent("CryptoDonationOpenWallet", currencyName);
                 }
             };
@@ -112,16 +112,7 @@ public class WndCryptoDonate extends WndTabbed {
             add(openWalletButton);
             pos += openWalletButton.height() + GAP;
 
-            RedButton copyAddressButton = new RedButton(StringsManager.getVar(R.string.WndCryptoDonate_copyAddress)) {
-                @Override
-                protected void onClick() {
-                    // Extract the actual address (without the scheme)
-                    String address = uriScheme.contains(":") ? uriScheme.substring(uriScheme.indexOf(":") + 1) : uriScheme;
-                    Game.instance().copyToClipboard(currencyName + " Address", address);
-                    EventCollector.logEvent("CryptoDonationCopyAddress", currencyName);
-                }
-            };
-            copyAddressButton.setRect(0, pos, width, BUTTON_HEIGHT);
+            RedButton copyAddressButton = makeCopyAddressButton(currencyName, uriScheme, pos);
             add(copyAddressButton);
             pos += copyAddressButton.height() + GAP;
 
@@ -130,6 +121,20 @@ public class WndCryptoDonate extends WndTabbed {
             warningText.hardlight(0xFF0000);
             warningText.setPos(0, pos);
             add(warningText);
+        }
+
+        private RedButton makeCopyAddressButton(String currencyName, String uriScheme, float pos) {
+            RedButton copyAddressButton = new RedButton(StringsManager.getVar(R.string.WndCryptoDonate_copyAddress)) {
+                @Override
+                protected void onClick() {
+                    // Extract the actual address (without the scheme)
+                    String address = uriScheme.contains(":") ? uriScheme.substring(uriScheme.indexOf(":") + 1) : uriScheme;
+                    Game.copyToClipboard(currencyName + " Address", address);
+                    EventCollector.logEvent("CryptoDonationCopyAddress", currencyName);
+                }
+            };
+            copyAddressButton.setRect(0, pos, width, BUTTON_HEIGHT);
+            return copyAddressButton;
         }
     }
 }

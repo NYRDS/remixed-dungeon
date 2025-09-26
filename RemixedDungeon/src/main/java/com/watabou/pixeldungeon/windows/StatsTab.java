@@ -25,7 +25,6 @@ class StatsTab extends TabContent {
     public StatsTab(final Char chr, int width) {
         Text title = PixelScene.createText(
                 Utils.format(R.string.WndHero_StaTitle, chr.lvl(), chr.className()).toUpperCase(), GuiProperties.titleFontSize());
-        title.hardlight(Window.TITLE_COLOR);
         add(title);
         setMaxWidth(width);
 
