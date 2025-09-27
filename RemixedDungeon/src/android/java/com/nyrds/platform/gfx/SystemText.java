@@ -52,11 +52,20 @@ public class SystemText extends SystemTextBase {
     private static int cacheHits = 0;
     private static int cacheMiss = 0;
 
-    // Combined markup pattern for violet highlighting (_text_) and bronze ("text")
     private static final Pattern MARKUP_PATTERN = Pattern.compile("_(.*?)_|\"(.*?)\"");
 
-    // Color mapping for different text segments
-    private int[] colorMap;
+    // A line is composed of segments, each with its own text and color.
+    private static class ColoredSegment {
+        String text;
+        int color;
+
+        ColoredSegment(String text, int color) {
+            this.text = text;
+            this.color = color;
+        }
+    }
+
+    private final ArrayList<ArrayList<ColoredSegment>> linesOfSegments = new ArrayList<>();
 
     public SystemText(float baseLine) {
         this(Utils.EMPTY_STRING, baseLine, false);
@@ -146,7 +155,7 @@ public class SystemText extends SystemTextBase {
         }
 
         if (Game.smallResScreen()) {
-            scale *= 1.5;
+            scale *= 1.5f;
         }
 
         fontScale = scale;
@@ -181,74 +190,81 @@ public class SystemText extends SystemTextBase {
         texts.remove(this);
     }
 
-    private final ArrayList<Float> xCharPos = new ArrayList<>();
-    private final ArrayList<Integer> codePoints = new ArrayList<>();
-    private String currentLine;
-
     private float fontHeight;
 
-    private float lineWidth;
+    private void wrapText() {
+        linesOfSegments.clear();
+        ArrayList<ColoredSegment> allSegments = parseMarkupToSegments(originalText);
+        hasMarkup = !allSegments.isEmpty() && allSegments.size() > 1;
 
-     private int fillLine(int startFrom) {
-        int offset = startFrom;
+        ArrayList<ColoredSegment> currentLine = new ArrayList<>();
+        float currentLineWidth = 0;
 
-        float xPos = 0;
-        lineWidth = 0;
-        xCharPos.clear();
-        codePoints.clear();
+        for (ColoredSegment segment : allSegments) {
+            String[] paragraphs = segment.text.split("\n", -1);
 
-        final int length = text.length();
-        int lastWordOffset = offset;
-        int lastWordEndIndexInList = 0; // Index in codePoints/xCharPos after the last complete word
+            for (int p = 0; p < paragraphs.length; p++) {
+                String paragraph = paragraphs[p];
+                String[] words = paragraph.split("(?<=\\s)|(?=\\s)"); // Split while keeping spaces
 
-        while (offset < length) {
-            int codepoint = text.codePointAt(offset);
-            int codepointCharCount = Character.charCount(codepoint);
+                for (String word : words) {
+                    if (word.isEmpty()) continue;
 
-            if (codepoint == '\n') {
-                return offset + codepointCharCount;
-            }
+                    float wordWidth = symbolWidth(word);
 
-            // Correctly measure width for all characters, including supplementary ones
-            float symbolWidth = symbolWidth(new String(Character.toChars(codepoint)));
-
-            if (maxWidth != Integer.MAX_VALUE && xPos + symbolWidth > maxWidth / scale.x) {
-                if (lastWordOffset != startFrom) {
-                    // Trim the current line lists back to the end of the last word
-                    if (lastWordEndIndexInList < codePoints.size()) {
-                        codePoints.subList(lastWordEndIndexInList, codePoints.size()).clear();
-                        xCharPos.subList(lastWordEndIndexInList, xCharPos.size()).clear();
+                    if (needWidth && !currentLine.isEmpty() && currentLineWidth + wordWidth > (maxWidth / scale.x)) {
+                        linesOfSegments.add(currentLine);
+                        currentLine = new ArrayList<>();
+                        currentLineWidth = 0;
                     }
-                    // Recalculate width
-                    if (xCharPos.isEmpty()) {
-                        lineWidth = 0;
-                    } else {
-                        int lastCodePoint = codePoints.get(xCharPos.size() - 1);
-                        float lastSymbolWidth = symbolWidth(new String(Character.toChars(lastCodePoint)));
-                        lineWidth = xCharPos.get(xCharPos.size() - 1) + lastSymbolWidth;
-                    }
-                    return lastWordOffset;
-                } else { // No whitespace in the line yet, must break mid-character
-                    // The current line is just what we have so far, excluding the current character
-                    return offset;
+
+                    currentLine.add(new ColoredSegment(word, segment.color));
+                    currentLineWidth += wordWidth;
+                }
+
+                if (p < paragraphs.length - 1) { // This was a newline character
+                    linesOfSegments.add(currentLine);
+                    currentLine = new ArrayList<>();
+                    currentLineWidth = 0;
                 }
             }
-
-            xCharPos.add(xPos);
-            codePoints.add(codepoint);
-
-            if (Character.isWhitespace(codepoint)) {
-                lastWordOffset = offset + codepointCharCount;
-                lastWordEndIndexInList = codePoints.size();
-            }
-
-            xPos += symbolWidth;
-            lineWidth = xPos;
-            offset += codepointCharCount;
         }
-        return offset;
+
+        if (!currentLine.isEmpty()) {
+            linesOfSegments.add(currentLine);
+        }
+    }
+    private ArrayList<ColoredSegment> parseMarkupToSegments(String input) {
+        if (input == null) input = "";
+
+        ArrayList<ColoredSegment> segments = new ArrayList<>();
+        Matcher m = MARKUP_PATTERN.matcher(input);
+        int lastEnd = 0;
+
+        while (m.find()) {
+            if (m.start() > lastEnd) {
+                segments.add(new ColoredSegment(input.substring(lastEnd, m.start()), defaultColor));
+            }
+            if (m.group(1) != null) {
+                segments.add(new ColoredSegment(m.group(1), highlightColor));
+            } else if (m.group(2) != null) {
+                segments.add(new ColoredSegment(m.group(2), bronzeColor));
+            }
+            lastEnd = m.end();
+        }
+        if (lastEnd < input.length()) {
+            segments.add(new ColoredSegment(input.substring(lastEnd), defaultColor));
+        }
+        return segments;
     }
 
+    private float measureLine(ArrayList<ColoredSegment> line) {
+        float lineWidth = 0;
+        for(ColoredSegment seg : line) {
+            lineWidth += symbolWidth(seg.text);
+        }
+        return lineWidth;
+    }
 
     @SuppressLint("NewApi")
     private void createText() {
@@ -261,33 +277,22 @@ public class SystemText extends SystemTextBase {
             lineImage.clear();
             setWidth(0);
             setHeight(0);
+            
+            wrapText();
 
-            int startLine = 0;
-            while (startLine < text.length()) {
-                int nextLineStart = fillLine(startLine);
-
-                // Handle case where nothing is consumed to prevent infinite loop
-                if (nextLineStart <= startLine && startLine < text.length()) {
-                    if (startLine < text.length()) nextLineStart = startLine + 1;
-                    else return;
-                }
-
-                // Determine the end of the line's visible content, trimming trailing newlines
-                int endOfLineContent = nextLineStart;
-                if (endOfLineContent > startLine) {
-                    char lastChar = text.charAt(endOfLineContent - 1);
-                    if (lastChar == '\n' || lastChar == '\r') {
-                        endOfLineContent--;
-                    }
-                }
-
+            for (ArrayList<ColoredSegment> line : linesOfSegments) {
                 setHeight(height + fontHeight);
-
+                
+                float lineWidth = measureLine(line);
+                
                 if (lineWidth > 0) {
                     lineWidth += 1; // Add padding
                     setWidth(Math.max(lineWidth, width));
 
-                    currentLine = text.substring(startLine, endOfLineContent);
+                    StringBuilder lineTextBuilder = new StringBuilder();
+                    for (ColoredSegment seg : line) lineTextBuilder.append(seg.text);
+                    String currentLine = lineTextBuilder.toString();
+
                     String key = Utils.format("%fx%f_%s", lineWidth, fontHeight, currentLine);
 
                     if (!bitmapCache.containsKey(key)) {
@@ -297,103 +302,45 @@ public class SystemText extends SystemTextBase {
                         bitmapCache.put(key, bitmap);
 
                         Canvas canvas = new Canvas(bitmap.bmp);
-                        drawTextLine(startLine, canvas, contourPaint);
-                        drawTextLine(startLine, canvas, textPaint);
+                        drawTextLine(line, canvas, contourPaint);
+                        drawTextLine(line, canvas, textPaint);
 
                         cacheMiss++;
                     } else {
                         cacheHits++;
                     }
-                    SystemTextLine line = new SystemTextLine(bitmapCache.get(key));
-                    line.setVisible(getVisible());
-                    lineImage.add(line);
+                    SystemTextLine text_line = new SystemTextLine(bitmapCache.get(key));
+                    text_line.setVisible(getVisible());
+                    lineImage.add(text_line);
                 } else {
                     lineImage.add(SystemTextLine.emptyLine);
                 }
-                startLine = nextLineStart;
-            }
-             // Handle case where text ends with a newline, creating a final empty line
-            if (text.endsWith("\n")) {
-                setHeight(height + fontHeight);
-                lineImage.add(SystemTextLine.emptyLine);
             }
         }
     }
 
-    private void drawTextLine(int charIndex, Canvas canvas, TextPaint paint) {
+    private void drawTextLine(ArrayList<ColoredSegment> line, Canvas canvas, TextPaint paint) {
         float y = (fontHeight) * oversample - paint.descent();
-
-        if (codePoints.isEmpty()) {
-            return;
-        }
-
-        if (colorMap == null) {
-            if (!xCharPos.isEmpty()) {
-                float x = (xCharPos.get(0) + 0.5f) * oversample;
-                canvas.drawText(currentLine, x, y, paint);
-            }
-            return;
-        }
+        float x = 0.5f * oversample;
 
         // Check if this is the contour paint (should always be black)
         boolean isContour = (paint.getColor() == Color.BLACK && 
                             paint.getStyle() == Paint.Style.FILL_AND_STROKE);
+            
+        // Save original paint color
+        int originalColor = paint.getColor();
 
-        // Create a proper mapping from codePoints indices to colorMap indices
-        int[] codePointToColorMapIndex = new int[codePoints.size()];
-        
-        // Track position in currentLine
-        int currentLineIndex = 0;
-        // Track position in codePoints
-        int codePointIndex = 0;
-        // Track actual position in full text
-        int textPosition = charIndex;
-        
-        // Process each character in currentLine to build the mapping
-        while (currentLineIndex < currentLine.length() && codePointIndex < codePoints.size()) {
-            char currentChar = currentLine.charAt(currentLineIndex);
-            
-            // If this is not whitespace and matches the current codePoint
-            if (!Character.isWhitespace(currentChar) && ((int)currentChar) == codePoints.get(codePointIndex)) {
-                codePointToColorMapIndex[codePointIndex] = textPosition;
-                codePointIndex++;
+        for (ColoredSegment segment : line) {
+            if (!isContour) {
+                paint.setColor(segment.color);
             }
-            
-            currentLineIndex++;
-            textPosition++;
+
+            canvas.drawText(segment.text, x, y, paint);
+            x += paint.measureText(segment.text);
         }
 
-        // Draw each codePoint with the correct color
-        for (int i = 0; i < codePoints.size(); ++i) {
-            int codepoint = codePoints.get(i);
-            float x = (xCharPos.get(i) + 0.5f) * oversample;
-            
-            if (!Character.isWhitespace(codepoint)) {
-                if (isContour) {
-                    // Always draw contour in black
-                    canvas.drawText(Character.toString((char) codepoint), x, y, paint);
-                } else {
-                    // Get the correct index in the colorMap
-                    int colorMapIndex = codePointToColorMapIndex[i];
-                    
-                    // Save original paint color
-                    int originalColor = paint.getColor();
-
-                    // Set color based on color map for text
-                    if (colorMapIndex < colorMap.length) {
-                        paint.setColor(colorMap[colorMapIndex]);
-                    } else {
-                        // Fallback to default color if index is out of bounds
-                        paint.setColor(defaultColor);
-                    }
-
-                    // Draw character
-                    canvas.drawText(Character.toString((char) codepoint), x, y, paint);
-
-                    // Restore original paint color
-                    paint.setColor(originalColor);
-                }
-            }
+        if (!isContour) {
+            paint.setColor(originalColor);
         }
     }
 
@@ -488,7 +435,6 @@ public class SystemText extends SystemTextBase {
         }
     }
 
-
     @Override
     public float baseLine() {
         return height();
@@ -497,78 +443,6 @@ public class SystemText extends SystemTextBase {
     @Override
     public int lines() {
         return this.lineImage.size();
-    }
-
-    @Override
-    public void text(@NotNull String str) {
-        // This method now handles both stripping the markup for measurement
-        // and building the color map for rendering.
-        parseMarkupAndBuildColorMap(str);
-        this.dirty = true;
-    }
-
-    /**
-     * Parse markup and build the color mapping array
-     * @param input the text with markup to parse
-     */
-    protected void parseMarkupAndBuildColorMap(String input) {
-        if (input == null) {
-            input = "";
-        }
-        this.originalText = input;
-
-        StringBuilder finalText = new StringBuilder();
-        ArrayList<Integer> colorList = new ArrayList<>();
-
-        Matcher m = MARKUP_PATTERN.matcher(input);
-        int lastEnd = 0;
-
-        while (m.find()) {
-            // Add text before the markup
-            String before = input.substring(lastEnd, m.start());
-            for (char c : before.toCharArray()) {
-                finalText.append(c);
-                colorList.add(defaultColor);
-            }
-
-            // Check which group matched and apply the appropriate color
-            if (m.group(1) != null) {
-                // Violet highlight for _text_
-                String highlighted = m.group(1);
-                for (char c : highlighted.toCharArray()) {
-                    finalText.append(c);
-                    colorList.add(highlightColor);
-                }
-            } else if (m.group(2) != null) {
-                // Bronze color for "text"
-                String quotedText = m.group(2);
-                for (char c : quotedText.toCharArray()) {
-                    finalText.append(c);
-                    colorList.add(bronzeColor);
-                }
-            }
-
-            lastEnd = m.end();
-        }
-
-        // Add remaining text after the last markup
-        String remaining = input.substring(lastEnd);
-        for (char c : remaining.toCharArray()) {
-            finalText.append(c);
-            colorList.add(defaultColor);
-        }
-
-        text = finalText.toString();
-
-        hasMarkup = colorList.stream().anyMatch(c -> c != defaultColor);
-
-        // Convert ArrayList to array for performance
-        if (!colorList.isEmpty()) {
-            colorMap = new int[colorList.size()];
-            for (int i = 0; i < colorList.size(); i++) {
-                colorMap[i] = colorList.get(i);
-            }
-        }
     }
 
     @Synchronized
