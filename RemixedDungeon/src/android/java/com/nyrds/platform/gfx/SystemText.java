@@ -571,31 +571,6 @@ public class SystemText extends SystemTextBase {
         }
     }
 
-    @Override
-    public void highlightColor(int color) {
-        super.highlightColor(color);
-        if (hasMarkup) {
-            this.text(this.originalText); // Reparse with new color
-            dirty = true;
-        }
-    }
-
-    @Override
-    public void defaultColor(int color) {
-        super.defaultColor(color);
-        this.text(this.originalText); // Reparse with new color
-        dirty = true;
-    }
-
-    @Override
-    public void bronzeColor(int color) {
-        super.bronzeColor(color);
-        if (hasMarkup) {
-            this.text(this.originalText); // Reparse with new color
-            dirty = true;
-        }
-    }
-
     @Synchronized
     public static void invalidate() {
         for (SystemText txt : texts.keySet().toArray(new SystemText[0])) {

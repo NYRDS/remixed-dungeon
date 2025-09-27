@@ -382,38 +382,4 @@ public class SystemText extends SystemTextBase {
         float b = (color & 0xFF) / 255.0f;
         return new Color(r, g, b, a);
     }
-
-    /**
-     * Set the highlight color for marked text.
-     * @param color An ARGB integer color, same as used in the Android version.
-     */
-    public void highlightColor(int color) {
-        super.highlightColor(color); // This sets the integer color in the base class
-        this.highlightColor = fromIntColor(color); // Desktop-specific conversion
-        if (hasMarkup) {
-            dirty = true;
-        }
-    }
-
-    /**
-     * Set the default color for unmarked text.
-     * @param color An ARGB integer color, same as used in the Android version.
-     */
-    public void defaultColor(int color) {
-        super.defaultColor(color); // This sets the integer color in the base class
-        this.defaultColor = fromIntColor(color); // Desktop-specific conversion
-        dirty = true;
-    }
-    
-    /**
-     * Set the bronze color for quoted text.
-     * @param color An ARGB integer color, same as used in the Android version.
-     */
-    public void bronzeColor(int color) {
-        super.bronzeColor(color); // This sets the integer color in the base class
-        this.bronzeColor = fromIntColor(color); // Desktop-specific conversion
-        if (hasMarkup) {
-            dirty = true;
-        }
-    }
 }
