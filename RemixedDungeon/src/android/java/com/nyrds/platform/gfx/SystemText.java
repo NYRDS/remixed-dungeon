@@ -52,11 +52,11 @@ public class SystemText extends SystemTextBase {
     private static int cacheHits = 0;
     private static int cacheMiss = 0;
 
-    private static final Pattern STRIPPER = Pattern.compile("[ \\n]");
-    
+    // Combined markup pattern for violet highlighting (_text_) and bronze ("text")
+    private static final Pattern MARKUP_PATTERN = Pattern.compile("_(.*?)_|\"(.*?)\"");
+
     // Color mapping for different text segments
     private int[] colorMap;
-    // Colors are now inherited from BaseText
 
     public SystemText(float baseLine) {
         this(Utils.EMPTY_STRING, baseLine, false);
@@ -126,13 +126,8 @@ public class SystemText extends SystemTextBase {
         textPaint = textPaints.get(textSize);
         contourPaint = contourPaints.get(textSize);
 
-        // Parse markup in the text
-        if (text != null && !text.isEmpty()) {
-            parseMarkup(text);
-        } else {
-            this.text = Utils.EMPTY_STRING;
-        }
-        
+        text(text);
+
         texts.put(this, true);
     }
 
@@ -194,7 +189,7 @@ public class SystemText extends SystemTextBase {
 
     private float lineWidth;
 
-    private int fillLine(int startFrom) {
+     private int fillLine(int startFrom) {
         int offset = startFrom;
 
         float xPos = 0;
@@ -204,55 +199,56 @@ public class SystemText extends SystemTextBase {
 
         final int length = text.length();
         int lastWordOffset = offset;
-
-        int lastWordStart = 0;
-
-        float symbolWidth = 0;
+        int lastWordEndIndexInList = 0; // Index in codePoints/xCharPos after the last complete word
 
         while (offset < length) {
-
             int codepoint = text.codePointAt(offset);
             int codepointCharCount = Character.charCount(codepoint);
 
-            offset += codepointCharCount;
-
-            boolean isWhiteSpace = Character.isWhitespace(codepoint);
-
-            if (isWhiteSpace) {
-                lastWordOffset = offset;
-                lastWordStart = xCharPos.size();
+            if (codepoint == '\n') {
+                return offset + codepointCharCount;
             }
 
-            if (!isWhiteSpace) {
-                xCharPos.add(xPos);
-                codePoints.add(codepoint);
-            }
+            // Correctly measure width for all characters, including supplementary ones
+            float symbolWidth = symbolWidth(new String(Character.toChars(codepoint)));
 
-            if (codepoint == 0x000A || codepoint == 0x000D) {
-                lineWidth += symbolWidth;
-                return offset;
-            }
-
-            symbolWidth = symbolWidth(Character.toString((char) (codepoint)));
-            xPos += symbolWidth;
-            lineWidth = xPos;
-
-            if (maxWidth != Integer.MAX_VALUE
-                    && xPos + symbolWidth > maxWidth / scale.x) {
+            if (maxWidth != Integer.MAX_VALUE && xPos + symbolWidth > maxWidth / scale.x) {
                 if (lastWordOffset != startFrom) {
-                    xCharPos.subList(lastWordStart, xCharPos.size()).clear();
-                    codePoints.subList(lastWordStart, codePoints.size()).clear();
+                    // Trim the current line lists back to the end of the last word
+                    if (lastWordEndIndexInList < codePoints.size()) {
+                        codePoints.subList(lastWordEndIndexInList, codePoints.size()).clear();
+                        xCharPos.subList(lastWordEndIndexInList, xCharPos.size()).clear();
+                    }
+                    // Recalculate width
+                    if (xCharPos.isEmpty()) {
+                        lineWidth = 0;
+                    } else {
+                        int lastCodePoint = codePoints.get(xCharPos.size() - 1);
+                        float lastSymbolWidth = symbolWidth(new String(Character.toChars(lastCodePoint)));
+                        lineWidth = xCharPos.get(xCharPos.size() - 1) + lastSymbolWidth;
+                    }
                     return lastWordOffset;
-                } else {
-                    xCharPos.remove(xCharPos.size() - 1);
-                    codePoints.remove(codePoints.size() - 1);
-                    return offset - 1;
+                } else { // No whitespace in the line yet, must break mid-character
+                    // The current line is just what we have so far, excluding the current character
+                    return offset;
                 }
             }
-        }
 
+            xCharPos.add(xPos);
+            codePoints.add(codepoint);
+
+            if (Character.isWhitespace(codepoint)) {
+                lastWordOffset = offset + codepointCharCount;
+                lastWordEndIndexInList = codePoints.size();
+            }
+
+            xPos += symbolWidth;
+            lineWidth = xPos;
+            offset += codepointCharCount;
+        }
         return offset;
     }
+
 
     @SuppressLint("NewApi")
     private void createText() {
@@ -264,37 +260,43 @@ public class SystemText extends SystemTextBase {
             destroyLines();
             lineImage.clear();
             setWidth(0);
-
             setHeight(0);
 
             int startLine = 0;
-
             while (startLine < text.length()) {
+                int nextLineStart = fillLine(startLine);
 
-                int nextLine = fillLine(startLine);
-                if (nextLine == startLine) { // WTF???
-                    return;
+                // Handle case where nothing is consumed to prevent infinite loop
+                if (nextLineStart <= startLine && startLine < text.length()) {
+                    if (startLine < text.length()) nextLineStart = startLine + 1;
+                    else return;
                 }
+
+                // Determine the end of the line's visible content, trimming trailing newlines
+                int endOfLineContent = nextLineStart;
+                if (endOfLineContent > startLine) {
+                    char lastChar = text.charAt(endOfLineContent - 1);
+                    if (lastChar == '\n' || lastChar == '\r') {
+                        endOfLineContent--;
+                    }
+                }
+
                 setHeight(height + fontHeight);
 
                 if (lineWidth > 0) {
-
-                    lineWidth += 1;
+                    lineWidth += 1; // Add padding
                     setWidth(Math.max(lineWidth, width));
 
-                    currentLine = text.substring(startLine, nextLine);
-
+                    currentLine = text.substring(startLine, endOfLineContent);
                     String key = Utils.format("%fx%f_%s", lineWidth, fontHeight, currentLine);
 
                     if (!bitmapCache.containsKey(key)) {
-
                         BitmapData bitmap = BitmapData.createBitmap(
                                 (int) (lineWidth * oversample),
                                 (int) (fontHeight * oversample + textPaint.descent()));
                         bitmapCache.put(key, bitmap);
 
                         Canvas canvas = new Canvas(bitmap.bmp);
-
                         drawTextLine(startLine, canvas, contourPaint);
                         drawTextLine(startLine, canvas, textPaint);
 
@@ -308,15 +310,19 @@ public class SystemText extends SystemTextBase {
                 } else {
                     lineImage.add(SystemTextLine.emptyLine);
                 }
-                startLine = nextLine;
+                startLine = nextLineStart;
+            }
+             // Handle case where text ends with a newline, creating a final empty line
+            if (text.endsWith("\n")) {
+                setHeight(height + fontHeight);
+                lineImage.add(SystemTextLine.emptyLine);
             }
         }
     }
-    private void drawTextLine(int charIndex, Canvas canvas, TextPaint paint) {
 
+    private void drawTextLine(int charIndex, Canvas canvas, TextPaint paint) {
         float y = (fontHeight) * oversample - paint.descent();
 
-        // Handle empty lines
         if (codePoints.isEmpty()) {
             return;
         }
@@ -478,6 +484,7 @@ public class SystemText extends SystemTextBase {
             fontHeight = (contourPaint.descent() - contourPaint.ascent())
                     / oversample;
             createText();
+            dirty=false;
         }
     }
 
@@ -494,70 +501,67 @@ public class SystemText extends SystemTextBase {
 
     @Override
     public void text(@NotNull String str) {
-        // Use the base implementation for plain text extraction
-        super.text(str);
-        
-        // Parse markup and build color mapping
+        // This method now handles both stripping the markup for measurement
+        // and building the color map for rendering.
         parseMarkupAndBuildColorMap(str);
-        
         this.dirty = true;
     }
-    
+
     /**
      * Parse markup and build the color mapping array
      * @param input the text with markup to parse
      */
     protected void parseMarkupAndBuildColorMap(String input) {
+        if (input == null) {
+            input = "";
+        }
+        this.originalText = input;
+
         StringBuilder finalText = new StringBuilder();
         ArrayList<Integer> colorList = new ArrayList<>();
-        
-        // Combined markup pattern for violet highlighting (_text_) and bronze ("text")
-        Pattern markupPattern = Pattern.compile("_(.*?)_|\"(.*?)\"");
-        
-        Matcher m = markupPattern.matcher(input);
+
+        Matcher m = MARKUP_PATTERN.matcher(input);
         int lastEnd = 0;
-        
+
         while (m.find()) {
             // Add text before the markup
             String before = input.substring(lastEnd, m.start());
-            for (int i = 0; i < before.length(); i++) {
-                char c = before.charAt(i);
+            for (char c : before.toCharArray()) {
                 finalText.append(c);
                 colorList.add(defaultColor);
             }
-            
+
             // Check which group matched and apply the appropriate color
             if (m.group(1) != null) {
                 // Violet highlight for _text_
                 String highlighted = m.group(1);
-                for (int i = 0; i < highlighted.length(); i++) {
-                    char c = highlighted.charAt(i);
+                for (char c : highlighted.toCharArray()) {
                     finalText.append(c);
                     colorList.add(highlightColor);
                 }
             } else if (m.group(2) != null) {
                 // Bronze color for "text"
                 String quotedText = m.group(2);
-                for (int i = 0; i < quotedText.length(); i++) {
-                    char c = quotedText.charAt(i);
+                for (char c : quotedText.toCharArray()) {
                     finalText.append(c);
                     colorList.add(bronzeColor);
                 }
             }
-            
+
             lastEnd = m.end();
         }
-        
+
         // Add remaining text after the last markup
         String remaining = input.substring(lastEnd);
-        for (int i = 0; i < remaining.length(); i++) {
-            char c = remaining.charAt(i);
+        for (char c : remaining.toCharArray()) {
             finalText.append(c);
             colorList.add(defaultColor);
         }
-        
+
         text = finalText.toString();
-        
+
+        hasMarkup = colorList.stream().anyMatch(c -> c != defaultColor);
+
         // Convert ArrayList to array for performance
         if (!colorList.isEmpty()) {
             colorMap = new int[colorList.size()];
@@ -565,36 +569,29 @@ public class SystemText extends SystemTextBase {
                 colorMap[i] = colorList.get(i);
             }
         }
-        
-        hasMarkup = true;
     }
 
-    /**
-     * Set the highlight color for marked text
-     */
+    @Override
     public void highlightColor(int color) {
         super.highlightColor(color);
         if (hasMarkup) {
+            this.text(this.originalText); // Reparse with new color
             dirty = true;
         }
     }
 
-    /**
-     * Set the default color for unmarked text
-     */
+    @Override
     public void defaultColor(int color) {
         super.defaultColor(color);
-        if (hasMarkup) {
-            dirty = true;
-        }
+        this.text(this.originalText); // Reparse with new color
+        dirty = true;
     }
-    
-    /**
-     * Set the bronze color for quoted text
-     */
+
+    @Override
     public void bronzeColor(int color) {
         super.bronzeColor(color);
         if (hasMarkup) {
+            this.text(this.originalText); // Reparse with new color
             dirty = true;
         }
     }
