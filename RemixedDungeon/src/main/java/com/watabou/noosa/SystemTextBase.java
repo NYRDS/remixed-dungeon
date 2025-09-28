@@ -6,16 +6,29 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public abstract class SystemTextBase extends Text {
-    // Combined markup pattern for violet highlighting (_text_) and bronze ("text")
-    protected static final Pattern MARKUP_PATTERN = Pattern.compile("_(.*?)_|\"(.*?)\"");
-    // Markup pattern for highlighting (_text_)
-    protected static final Pattern HIGHLIGHTER = Pattern.compile("_(.*?)_");
-    // Markup pattern for bronze text ("text")
-    protected static final Pattern BRONZE_HIGHLIGHTER = Pattern.compile("\"(.*?)\"");
+    // Combined markup pattern for violet highlighting (_text_), bronze ("text"), and generic color tags ([color:text])
+    protected static final Pattern MARKUP_PATTERN = Pattern.compile("_(.*?)_|\"(.*?)\"|\\[(#?[a-zA-Z0-9]+):(.*?)?\\]");
+
+    private static final Map<String, Integer> COLOR_MAP = new HashMap<>();
+    static {
+        COLOR_MAP.put("red", 0xFFFF0000);
+        COLOR_MAP.put("green", 0xFF00FF00);
+        COLOR_MAP.put("blue", 0xFF0000FF);
+        COLOR_MAP.put("yellow", 0xFFFFFF00);
+        COLOR_MAP.put("cyan", 0xFF00FFFF);
+        COLOR_MAP.put("magenta", 0xFFFF00FF);
+        COLOR_MAP.put("white", 0xFFFFFFFF);
+        COLOR_MAP.put("black", 0xFF000000);
+        COLOR_MAP.put("gray", 0xFF808080);
+        COLOR_MAP.put("orange", 0xFFFFA500);
+        COLOR_MAP.put("purple", 0xFF800080);
+    }
     
     protected static float fontScale = Float.NaN;
     
@@ -67,7 +80,7 @@ public abstract class SystemTextBase extends Text {
      * Subclasses can override if needed
      */
     protected void parseMarkup(String input) {
-        if (input != null && (HIGHLIGHTER.matcher(input).find() || BRONZE_HIGHLIGHTER.matcher(input).find())) {
+        if (input != null && MARKUP_PATTERN.matcher(input).find()) {
             hasMarkup = true;
         }
     }
@@ -80,15 +93,17 @@ public abstract class SystemTextBase extends Text {
     protected String extractPlainText(String str) {
         if (str == null) return "";
         
-        // Remove both underscore markup (_text_) and quote markup ("text")
-        return str.replaceAll("_(.*?)_", "$1").replaceAll("\"(.*?)\"", "$1");
+        // Remove underscore, quote, and color tag markup
+        return str.replaceAll("_(.*?)_", "$1")
+                  .replaceAll("\"(.*?)\"", "$1")
+                  .replaceAll("\\[(#?[a-zA-Z0-9]+):(.*?)?\\]", "$2");
     }
     
     /**
      * Set the highlight color for marked text
      */
     public void highlightColor(int color) {
-        this.highlightColor = color;
+        highlightColor = color;
         if (hasMarkup) {
             dirty = true;
         }
@@ -128,6 +143,32 @@ public abstract class SystemTextBase extends Text {
         // Parse markup in the original text
         parseMarkup(str);
     }
+
+    /**
+     * Parse a color string (hex or name) into an ARGB integer.
+     * @param colorStr The color string (e.g., "#FF0000", "red")
+     * @return The integer ARGB color
+     */
+    private int parseColorString(String colorStr) {
+        if (colorStr == null || colorStr.isEmpty()) {
+            return defaultColor;
+        }
+        String lowerCaseColor = colorStr.toLowerCase();
+        if (COLOR_MAP.containsKey(lowerCaseColor)) {
+            return COLOR_MAP.get(lowerCaseColor);
+        }
+        if (colorStr.startsWith("#")) {
+            try {
+                long color = Long.parseLong(colorStr.substring(1), 16);
+                if (colorStr.length() == 7) { // #RRGGBB
+                    return (int) (0xFF000000 | color);
+                } else if (colorStr.length() == 9) { // #AARRGGBB
+                    return (int) color;
+                }
+            } catch (NumberFormatException ignored) {}
+        }
+        return defaultColor; // Fallback
+    }
     
     /**
      * Parse markup in the input string and convert to a list of colored segments.
@@ -149,6 +190,10 @@ public abstract class SystemTextBase extends Text {
                 segments.add(new ColoredSegment(m.group(1), highlightColor));
             } else if (m.group(2) != null) {
                 segments.add(new ColoredSegment(m.group(2), bronzeColor));
+            } else if (m.group(3) != null) {
+                String text = m.group(4) != null ? m.group(4) : "";
+                int color = parseColorString(m.group(3));
+                segments.add(new ColoredSegment(text, color));
             }
             lastEnd = m.end();
         }
@@ -216,7 +261,7 @@ public abstract class SystemTextBase extends Text {
     /**
      * Store the text lines after parsing and wrapping
      */
-    protected final ArrayList<ArrayList<ColoredSegment>> textLines = new ArrayList<>();
+    protected final List<List<ColoredSegment>> textLines = new ArrayList<>();
     
     /**
      * Invalidate caches - to be implemented by subclasses

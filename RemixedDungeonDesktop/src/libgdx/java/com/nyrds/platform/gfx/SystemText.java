@@ -19,6 +19,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import lombok.val;
+
 public class SystemText extends SystemTextBase {
     private static FreeTypeFontGenerator pixelGenerator;
     private static FreeTypeFontGenerator fallbackGenerator;
@@ -218,9 +220,9 @@ public class SystemText extends SystemTextBase {
             float totalHeight = 0;
             float maxLineWidth = 0;
 
-            for (java.util.List<com.watabou.noosa.SystemTextBase.ColoredSegment> line : textLines) {
+            for (val line : textLines) {
                 float currentLineWidth = 0;
-                for (com.watabou.noosa.SystemTextBase.ColoredSegment segment : line) {
+                for (val segment : line) {
                     pseudoGlyphLayout.setText(fontData, segment.text);
                     currentLineWidth += pseudoGlyphLayout.width;
                 }

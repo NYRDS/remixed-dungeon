@@ -23,10 +23,12 @@ import com.watabou.pixeldungeon.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import lombok.Synchronized;
+import lombok.val;
 
 public class SystemText extends SystemTextBase {
 
@@ -175,50 +177,9 @@ public class SystemText extends SystemTextBase {
 
     private float fontHeight;
 
-    private void wrapText() {
-        textLines.clear();
-        java.util.List<ColoredSegment> allSegments = parseMarkupToSegments(originalText);
-        hasMarkup = !allSegments.isEmpty() && allSegments.size() > 1;
+    
 
-        ArrayList<ColoredSegment> currentLine = new ArrayList<>();
-        float currentLineWidth = 0;
-
-        for (ColoredSegment segment : allSegments) {
-            String[] paragraphs = segment.text.split("\n", -1);
-
-            for (int p = 0; p < paragraphs.length; p++) {
-                String paragraph = paragraphs[p];
-                String[] words = paragraph.split("(?<=\\s)|(?=\\s)"); // Split while keeping spaces
-
-                for (String word : words) {
-                    if (word.isEmpty()) continue;
-
-                    float wordWidth = symbolWidth(word);
-
-                    if (needWidth && !currentLine.isEmpty() && currentLineWidth + wordWidth > (maxWidth / scale.x)) {
-                        textLines.add(new ArrayList<>(currentLine));  // Add a copy as ArrayList to the common List
-                        currentLine = new ArrayList<>();
-                        currentLineWidth = 0;
-                    }
-
-                    currentLine.add(new ColoredSegment(word, segment.color));
-                    currentLineWidth += wordWidth;
-                }
-
-                if (p < paragraphs.length - 1) { // This was a newline character
-                    textLines.add(new ArrayList<>(currentLine));  // Add a copy as ArrayList to the common List
-                    currentLine = new ArrayList<>();
-                    currentLineWidth = 0;
-                }
-            }
-        }
-
-        if (!currentLine.isEmpty()) {
-            textLines.add(new ArrayList<>(currentLine));  // Add a copy as ArrayList to the common List
-        }
-    }
-
-    private float measureLine(ArrayList<ColoredSegment> line) {
+    private float measureLine(List<ColoredSegment> line) {
         float lineWidth = 0;
         for(ColoredSegment seg : line) {
             lineWidth += symbolWidth(seg.text);
@@ -238,9 +199,13 @@ public class SystemText extends SystemTextBase {
             setWidth(0);
             setHeight(0);
             
-            wrapText();
+            // Use the base class wrapText method with appropriate max width
+            float maxWidthForWrapping = needWidth ? (maxWidth / scale.x) : Float.MAX_VALUE;
+            val wrappedLines = wrapText(parseMarkupToSegments(originalText), maxWidthForWrapping);
+            textLines.clear();
+            textLines.addAll(wrappedLines);
 
-            for (var line : textLines) {
+            for (val line : textLines) {
                 setHeight(height + fontHeight);
                 
                 float lineWidth = measureLine(line);  // Convert to ArrayList for measureLine method
@@ -262,8 +227,8 @@ public class SystemText extends SystemTextBase {
                         bitmapCache.put(key, bitmap);
 
                         Canvas canvas = new Canvas(bitmap.bmp);
-                        drawTextLine(line, canvas, contourPaint);  // Convert to ArrayList for drawTextLine
-                        drawTextLine(line, canvas, textPaint);     // Convert to ArrayList for drawTextLine
+                        drawTextLine(line, canvas, contourPaint);
+                        drawTextLine(line, canvas, textPaint);
 
                         cacheMiss++;
                     } else {
@@ -279,7 +244,7 @@ public class SystemText extends SystemTextBase {
         }
     }
 
-    private void drawTextLine(ArrayList<ColoredSegment> line, Canvas canvas, TextPaint paint) {
+    private void drawTextLine(List<ColoredSegment> line, Canvas canvas, TextPaint paint) {
         float y = (fontHeight) * oversample - paint.descent();
         float x = 0.5f * oversample;
 
