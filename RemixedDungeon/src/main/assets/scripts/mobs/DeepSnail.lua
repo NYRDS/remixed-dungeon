@@ -10,7 +10,11 @@ local mob = require "scripts/lib/mob"
 return mob.init{
     defenceProc = function(self, enemy, dmg)
         if math.random() < 0.2 then
-            RPD.affectBuff(enemy, "Ooze", self:skillLevel())
+            local isAdjacent = self:adjacent(enemy)
+            
+            if isAdjacent then
+                RPD.affectBuff(enemy, "Ooze", self:skillLevel())
+            end
         end
     end
 }
