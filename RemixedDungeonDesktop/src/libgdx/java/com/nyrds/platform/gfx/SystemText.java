@@ -16,16 +16,12 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class SystemText extends SystemTextBase {
     private static FreeTypeFontGenerator pixelGenerator;
     private static FreeTypeFontGenerator fallbackGenerator;
-    // Combined markup pattern for violet highlighting (_text_) and bronze ("text")
-    private static final Pattern MARKUP_PATTERN = Pattern.compile("_(.*?)_|\"(.*?)\"");
-
     private static final Map<String, BitmapFont> fontCache = new HashMap<>();
     private static final Map<String, BitmapFont.BitmapFontData> pseudoFontCache = new HashMap<>();
     private static BitmapFont.BitmapFontData pixelFontCheckData;
@@ -38,18 +34,7 @@ public class SystemText extends SystemTextBase {
 
     private boolean multiline = false;
 
-    // A line is composed of segments, each with its own text and color.
-    private static class ColoredSegment {
-        String text;
-        Color color;
-
-        ColoredSegment(String text, Color color) {
-            this.text = text;
-            this.color = color;
-        }
-    }
-
-    private final ArrayList<ArrayList<ColoredSegment>> lines = new ArrayList<>();
+    
 
     private static final SystemTextPseudoBatch batch = new SystemTextPseudoBatch();
     private static final float oversample = 4;
@@ -60,10 +45,6 @@ public class SystemText extends SystemTextBase {
 
     private String fontKey;
     private boolean useFallbackFont = false;
-
-    private Color defaultColor = Color.WHITE;
-    private Color highlightColor = new Color(0xcc / 255f, 0x33 / 255f, 0xff / 255f, 1);
-    private Color bronzeColor = new Color(0xCD / 255f, 0x7F / 255f, 0x32 / 255f, 1);
 
     public SystemText(float baseLine) {
         super(0, 0, 0, 0);
@@ -143,70 +124,20 @@ public class SystemText extends SystemTextBase {
             return;
         }
 
-        lines.clear();
-        String textToParse = (this.originalText == null) ? "" : this.originalText;
-
-        // Create a flat list of colored segments from the original text with markup
-        ArrayList<ColoredSegment> allSegments = new ArrayList<>();
-        Matcher m = MARKUP_PATTERN.matcher(textToParse);
-        int lastEnd = 0;
-
-        while (m.find()) {
-            if (m.start() > lastEnd) {
-                allSegments.add(new ColoredSegment(textToParse.substring(lastEnd, m.start()), defaultColor));
-            }
-            if (m.group(1) != null) {
-                // Violet highlight for _text_
-                allSegments.add(new ColoredSegment(m.group(1), highlightColor));
-            } else if (m.group(2) != null) {
-                // Bronze color for "text"
-                allSegments.add(new ColoredSegment(m.group(2), bronzeColor));
-            }
-            lastEnd = m.end();
-        }
-        if (lastEnd < textToParse.length()) {
-            allSegments.add(new ColoredSegment(textToParse.substring(lastEnd), defaultColor));
-        }
-
+        textLines.clear();
+        
+        // Use the base class method to parse markup into segments
+        var allSegments = parseMarkupToSegments(originalText);
         hasMarkup = !allSegments.isEmpty() && allSegments.size() > 1;
 
-        // Now, wrap the flat list of segments into lines
-        ArrayList<ColoredSegment> currentLine = new ArrayList<>();
-        float currentLineWidth = 0;
+        // Use the base class method to wrap text, but provide the max width adjusted for oversample
+        var wrappedLines =
+            wrapText(allSegments, maxWidth * oversample);
 
-        for (ColoredSegment segment : allSegments) {
-            String[] paragraphs = segment.text.split("\n", -1);
-
-            for (int p = 0; p < paragraphs.length; p++) {
-                String paragraph = paragraphs[p];
-                String[] words = paragraph.split("(?<=\\s)|(?=\\s)"); // Split while keeping spaces
-
-                for (String word : words) {
-                    if (word.isEmpty()) continue;
-
-                    pseudoGlyphLayout.setText(fontData, word);
-                    float wordWidth = pseudoGlyphLayout.width;
-
-                    if (multiline && !currentLine.isEmpty() && currentLineWidth + wordWidth > (maxWidth * oversample)) {
-                        lines.add(currentLine);
-                        currentLine = new ArrayList<>();
-                        currentLineWidth = 0;
-                    }
-
-                    currentLine.add(new ColoredSegment(word, segment.color));
-                    currentLineWidth += wordWidth;
-                }
-
-                if (p < paragraphs.length - 1) { // This was a newline character
-                    lines.add(currentLine);
-                    currentLine = new ArrayList<>();
-                    currentLineWidth = 0;
-                }
-            }
-        }
-
-        if (!currentLine.isEmpty()) {
-            lines.add(currentLine);
+        // Convert the base class segments to our local collection and assign to the base field
+        for (var line : wrappedLines) {
+            ArrayList<ColoredSegment> convertedLine = new ArrayList<>(line);
+            textLines.add(convertedLine);
         }
     }
 
@@ -251,18 +182,19 @@ public class SystemText extends SystemTextBase {
         float yPos = 0;
         Color lastColor = null;
 
-        for (ArrayList<ColoredSegment> line : lines) {
+        for (List<ColoredSegment> line : textLines) {
             float xPos = 0;
             for (ColoredSegment segment : line) {
-                if (!segment.color.equals(lastColor)) {
-                    font.setColor(segment.color);
-                    lastColor = segment.color;
+                Color currentSegmentColor = fromIntColor(segment.color);
+                if (!currentSegmentColor.equals(lastColor)) {
+                    font.setColor(currentSegmentColor);
+                    lastColor = currentSegmentColor;
                 }
                 glyphLayout.setText(font, segment.text);
                 font.draw(batch, glyphLayout, xPos, yPos);
                 xPos += glyphLayout.width;
             }
-            if (!lines.isEmpty()) {
+            if (!textLines.isEmpty()) {
                 yPos += fontData.lineHeight;
             }
         }
@@ -286,19 +218,17 @@ public class SystemText extends SystemTextBase {
             float totalHeight = 0;
             float maxLineWidth = 0;
 
-            if (!lines.isEmpty()){
-                for (ArrayList<ColoredSegment> line : lines) {
-                    float currentLineWidth = 0;
-                    for (ColoredSegment segment : line) {
-                        pseudoGlyphLayout.setText(fontData, segment.text);
-                        currentLineWidth += pseudoGlyphLayout.width;
-                    }
-                    if (currentLineWidth > maxLineWidth) {
-                        maxLineWidth = currentLineWidth;
-                    }
+            for (java.util.List<com.watabou.noosa.SystemTextBase.ColoredSegment> line : textLines) {
+                float currentLineWidth = 0;
+                for (com.watabou.noosa.SystemTextBase.ColoredSegment segment : line) {
+                    pseudoGlyphLayout.setText(fontData, segment.text);
+                    currentLineWidth += pseudoGlyphLayout.width;
                 }
-                totalHeight = lines.size() * fontData.lineHeight;
+                if (currentLineWidth > maxLineWidth) {
+                    maxLineWidth = currentLineWidth;
+                }
             }
+            totalHeight = textLines.size() * fontData.lineHeight;
 
             setWidth(maxLineWidth);
             setHeight(totalHeight);
@@ -314,7 +244,7 @@ public class SystemText extends SystemTextBase {
 
     @Override
     public int lines() {
-        return lines.size();
+        return textLines.size();
     }
 
     private static boolean containsMissingChars(@NotNull String text) {
@@ -354,6 +284,15 @@ public class SystemText extends SystemTextBase {
         checkParams.characters = FreeTypeFontGenerator.DEFAULT_CHARS + StringsManager.getAllCharsAsString();
         checkParams.packer = new PseudoPixmapPacker();
         pixelFontCheckData = pixelGenerator.generateData(checkParams);
+    }
+
+    @Override
+    protected float measureTextWidth(String text) {
+        if (fontData == null) {
+            ensureFontDataIsReady();
+        }
+        pseudoGlyphLayout.setText(fontData, text);
+        return pseudoGlyphLayout.width;
     }
 
     @Override

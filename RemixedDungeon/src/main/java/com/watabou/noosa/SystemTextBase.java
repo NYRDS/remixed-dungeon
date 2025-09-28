@@ -4,9 +4,14 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public abstract class SystemTextBase extends Text {
+    // Combined markup pattern for violet highlighting (_text_) and bronze ("text")
+    protected static final Pattern MARKUP_PATTERN = Pattern.compile("_(.*?)_|\"(.*?)\"");
     // Markup pattern for highlighting (_text_)
     protected static final Pattern HIGHLIGHTER = Pattern.compile("_(.*?)_");
     // Markup pattern for bronze text ("text")
@@ -20,6 +25,20 @@ public abstract class SystemTextBase extends Text {
     static protected int bronzeColor = 0xFFCD7F32; // Bronze color for quoted text (ARGB)
     protected boolean hasMarkup = false;
     protected String originalText = "";
+    
+    /**
+     * A segment of text with its associated color.
+     * Platform-specific implementations will handle color representation differently.
+     */
+    protected static class ColoredSegment {
+        public String text;
+        public int color; // Store as int, subclasses can convert to their platform-specific color type
+        
+        public ColoredSegment(String text, int color) {
+            this.text = text;
+            this.color = color;
+        }
+    }
     
     protected SystemTextBase(float x, float y, float width, float height) {
         super(x, y, width, height);
@@ -109,6 +128,95 @@ public abstract class SystemTextBase extends Text {
         // Parse markup in the original text
         parseMarkup(str);
     }
+    
+    /**
+     * Parse markup in the input string and convert to a list of colored segments.
+     * @param input The original text with markup
+     * @return List of ColoredSegment objects
+     */
+    protected List<ColoredSegment> parseMarkupToSegments(String input) {
+        if (input == null) input = "";
+
+        List<ColoredSegment> segments = new ArrayList<>();
+        Matcher m = MARKUP_PATTERN.matcher(input);
+        int lastEnd = 0;
+
+        while (m.find()) {
+            if (m.start() > lastEnd) {
+                segments.add(new ColoredSegment(input.substring(lastEnd, m.start()), defaultColor));
+            }
+            if (m.group(1) != null) {
+                segments.add(new ColoredSegment(m.group(1), highlightColor));
+            } else if (m.group(2) != null) {
+                segments.add(new ColoredSegment(m.group(2), bronzeColor));
+            }
+            lastEnd = m.end();
+        }
+        if (lastEnd < input.length()) {
+            segments.add(new ColoredSegment(input.substring(lastEnd), defaultColor));
+        }
+        return segments;
+    }
+
+    /**
+     * Wrap lines based on available width.
+     * @param allSegments The list of colored segments to wrap into lines
+     * @param maxWidth The maximum width for a line
+     * @return List of lines, where each line is a list of ColoredSegment
+     */
+    protected List<List<ColoredSegment>> wrapText(List<ColoredSegment> allSegments, float maxWidth) {
+        List<List<ColoredSegment>> linesOfSegments = new ArrayList<>();
+        List<ColoredSegment> currentLine = new ArrayList<>();
+        float currentLineWidth = 0;
+
+        for (ColoredSegment segment : allSegments) {
+            String[] paragraphs = segment.text.split("\n", -1);
+
+            for (int p = 0; p < paragraphs.length; p++) {
+                String paragraph = paragraphs[p];
+                String[] words = paragraph.split("(?<=\\s)|(?=\\s)"); // Split while keeping spaces
+
+                for (String word : words) {
+                    if (word.isEmpty()) continue;
+
+                    float wordWidth = measureTextWidth(word);
+
+                    if (!currentLine.isEmpty() && currentLineWidth + wordWidth > maxWidth) {
+                        linesOfSegments.add(currentLine);
+                        currentLine = new ArrayList<>();
+                        currentLineWidth = 0;
+                    }
+
+                    currentLine.add(new ColoredSegment(word, segment.color));
+                    currentLineWidth += wordWidth;
+                }
+
+                if (p < paragraphs.length - 1) { // This was a newline character
+                    linesOfSegments.add(currentLine);
+                    currentLine = new ArrayList<>();
+                    currentLineWidth = 0;
+                }
+            }
+        }
+
+        if (!currentLine.isEmpty()) {
+            linesOfSegments.add(currentLine);
+        }
+
+        return linesOfSegments;
+    }
+
+    /**
+     * Measure the width of a text string. This must be implemented by platform-specific subclasses.
+     * @param text The text to measure
+     * @return The width of the text
+     */
+    protected abstract float measureTextWidth(String text);
+    
+    /**
+     * Store the text lines after parsing and wrapping
+     */
+    protected final ArrayList<ArrayList<ColoredSegment>> textLines = new ArrayList<>();
     
     /**
      * Invalidate caches - to be implemented by subclasses

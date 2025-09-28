@@ -25,8 +25,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import lombok.Synchronized;
 
@@ -51,21 +49,6 @@ public class SystemText extends SystemTextBase {
 
     private static int cacheHits = 0;
     private static int cacheMiss = 0;
-
-    private static final Pattern MARKUP_PATTERN = Pattern.compile("_(.*?)_|\"(.*?)\"");
-
-    // A line is composed of segments, each with its own text and color.
-    private static class ColoredSegment {
-        String text;
-        int color;
-
-        ColoredSegment(String text, int color) {
-            this.text = text;
-            this.color = color;
-        }
-    }
-
-    private final ArrayList<ArrayList<ColoredSegment>> linesOfSegments = new ArrayList<>();
 
     public SystemText(float baseLine) {
         this(Utils.EMPTY_STRING, baseLine, false);
@@ -193,8 +176,8 @@ public class SystemText extends SystemTextBase {
     private float fontHeight;
 
     private void wrapText() {
-        linesOfSegments.clear();
-        ArrayList<ColoredSegment> allSegments = parseMarkupToSegments(originalText);
+        textLines.clear();
+        java.util.List<ColoredSegment> allSegments = parseMarkupToSegments(originalText);
         hasMarkup = !allSegments.isEmpty() && allSegments.size() > 1;
 
         ArrayList<ColoredSegment> currentLine = new ArrayList<>();
@@ -213,7 +196,7 @@ public class SystemText extends SystemTextBase {
                     float wordWidth = symbolWidth(word);
 
                     if (needWidth && !currentLine.isEmpty() && currentLineWidth + wordWidth > (maxWidth / scale.x)) {
-                        linesOfSegments.add(currentLine);
+                        textLines.add(new ArrayList<>(currentLine));  // Add a copy as ArrayList to the common List
                         currentLine = new ArrayList<>();
                         currentLineWidth = 0;
                     }
@@ -223,7 +206,7 @@ public class SystemText extends SystemTextBase {
                 }
 
                 if (p < paragraphs.length - 1) { // This was a newline character
-                    linesOfSegments.add(currentLine);
+                    textLines.add(new ArrayList<>(currentLine));  // Add a copy as ArrayList to the common List
                     currentLine = new ArrayList<>();
                     currentLineWidth = 0;
                 }
@@ -231,31 +214,8 @@ public class SystemText extends SystemTextBase {
         }
 
         if (!currentLine.isEmpty()) {
-            linesOfSegments.add(currentLine);
+            textLines.add(new ArrayList<>(currentLine));  // Add a copy as ArrayList to the common List
         }
-    }
-    private ArrayList<ColoredSegment> parseMarkupToSegments(String input) {
-        if (input == null) input = "";
-
-        ArrayList<ColoredSegment> segments = new ArrayList<>();
-        Matcher m = MARKUP_PATTERN.matcher(input);
-        int lastEnd = 0;
-
-        while (m.find()) {
-            if (m.start() > lastEnd) {
-                segments.add(new ColoredSegment(input.substring(lastEnd, m.start()), defaultColor));
-            }
-            if (m.group(1) != null) {
-                segments.add(new ColoredSegment(m.group(1), highlightColor));
-            } else if (m.group(2) != null) {
-                segments.add(new ColoredSegment(m.group(2), bronzeColor));
-            }
-            lastEnd = m.end();
-        }
-        if (lastEnd < input.length()) {
-            segments.add(new ColoredSegment(input.substring(lastEnd), defaultColor));
-        }
-        return segments;
     }
 
     private float measureLine(ArrayList<ColoredSegment> line) {
@@ -280,10 +240,10 @@ public class SystemText extends SystemTextBase {
             
             wrapText();
 
-            for (ArrayList<ColoredSegment> line : linesOfSegments) {
+            for (var line : textLines) {
                 setHeight(height + fontHeight);
                 
-                float lineWidth = measureLine(line);
+                float lineWidth = measureLine(line);  // Convert to ArrayList for measureLine method
                 
                 if (lineWidth > 0) {
                     lineWidth += 1; // Add padding
@@ -302,8 +262,8 @@ public class SystemText extends SystemTextBase {
                         bitmapCache.put(key, bitmap);
 
                         Canvas canvas = new Canvas(bitmap.bmp);
-                        drawTextLine(line, canvas, contourPaint);
-                        drawTextLine(line, canvas, textPaint);
+                        drawTextLine(line, canvas, contourPaint);  // Convert to ArrayList for drawTextLine
+                        drawTextLine(line, canvas, textPaint);     // Convert to ArrayList for drawTextLine
 
                         cacheMiss++;
                     } else {
@@ -417,6 +377,11 @@ public class SystemText extends SystemTextBase {
         }
     }
 
+    @Override
+    protected float measureTextWidth(String text) {
+        return contourPaint.measureText(text) / oversample;
+    }
+
     private float symbolWidth(String symbol) {
         return contourPaint.measureText(symbol) / oversample;
     }
@@ -442,7 +407,7 @@ public class SystemText extends SystemTextBase {
 
     @Override
     public int lines() {
-        return this.lineImage.size();
+        return this.textLines.size();
     }
 
     @Synchronized
