@@ -42,6 +42,10 @@ Successfully migrated 8 mob sprites from Java implementations to JSON definition
 1. **CharSprite.java** - Added `playExtra(String key, Callback callback)` method to support animation completion callbacks
 2. **MobSpriteDef.java** - Added death effects handling in `onComplete` method with support for particle effects and splash effects
 3. **MobSpriteDef.java** - Added particle emitter support with creation, management, and visibility control
+4. **JsonHelper.java** - Added `name` property to Animation objects to enable matching event handlers by animation name
+5. **MobSpriteDef.java** - Enhanced event handling system to support multiple animation-based actions with simplified condition checking
+6. **MobSpriteDef.java** - Added sound playback support in event handlers with volume control
+7. **MobSpriteDef.java** - Flattened sprite properties (moved bloodColor to top-level instead of nested in properties)
 
 ### Import Statements Removed
 
@@ -76,6 +80,9 @@ Removed the following Java sprite files:
 6. **Enhanced API** - Added callback support for extra animations
 7. **Death Effects Support** - Sprites can now show particle effects or splash effects when they die
 8. **Particle Emitters Support** - Sprites can create and manage persistent particle emitters
+9. **Animation Event Handling** - Sprites can trigger actions when specific animations complete
+10. **Sound Effects Support** - Sprites can play sound effects during animations
+11. **Simplified JSON Structure** - Reduced nesting of properties for easier editing
 
 ## Testing
 
@@ -100,4 +107,7 @@ These sprites require more complex features that are not supported by the simple
 - **Proper Animation Handling**: Kick animations now properly trigger game logic when they complete
 - **Death Effects System**: Added support for particle effects and splash effects on death
 - **Particle Emitters System**: Added support for creating and managing persistent particle emitters
+- **Animation Event System**: Added support for triggering actions when specific animations complete
+- **Sound Effects System**: Added support for playing sound effects during animations
+- **Simplified JSON Schema**: Moved properties like bloodColor to top-level for easier editing
 - **Clean Implementation**: Simple and maintainable solution that follows existing patterns

@@ -47,6 +47,15 @@ The following sprites were migrated using the particle emitters system:
 
 1. **BlacksmithSprite** - Forge particle emitter
 
+## Sprites Using Event Handlers and Sound System
+
+The following sprites were migrated using the enhanced event handler system with sound capabilities:
+
+1. **BlacksmithSprite** - Plays "snd_evoke" sound during idle animation with particle effects
+2. **DM300Sprite** - Particle effects on death animation
+3. **YogSprite** - Splash effect on death animation
+4. **LarvaSprite** - Splash effect on death animation
+
 ## Migration Status
 
 - ✅ GooSprite - Migrated to JSON with extras
@@ -54,10 +63,10 @@ The following sprites were migrated using the particle emitters system:
 - ✅ SeniorSprite - Migrated to JSON with extras and proper callback handling
 - ✅ SheepSprite - Migrated to JSON with standard animations
 - ✅ RatSprite - Example provided in migration guide
-- ✅ LarvaSprite - Migrated to JSON with death effects
-- ✅ DM300Sprite - Migrated to JSON with death effects
-- ✅ YogSprite - Migrated to JSON with death effects
-- ✅ BlacksmithSprite - Migrated to JSON with particle emitters
+- ✅ LarvaSprite - Migrated to JSON with death effects and splash
+- ✅ DM300Sprite - Migrated to JSON with death effects and particles
+- ✅ YogSprite - Migrated to JSON with death effects and splash
+- ✅ BlacksmithSprite - Migrated to JSON with particle emitters, sounds, and event handlers
 - ⬜ Others - Pending migration
 
 To migrate any of these sprites, follow the process outlined in `sprite_migration.md`.

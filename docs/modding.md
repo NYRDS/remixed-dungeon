@@ -694,7 +694,27 @@ Sprite configuration files are located in `spritesDesc/` directory and define ho
   "run"    : { "fps" : 15, "looped" : true,     "frames" : [0,1,1,0,2,2] },
   "attack" : { "fps" : 20, "looped" : false,    "frames" : [3,4,5,6] },
   "die"    : { "fps" : 20, "looped" : false,    "frames" : [7,8,9,10] },
-  "bloodColor": "0xffd500"
+  "bloodColor": "0xffd500",
+  
+  "eventHandlers": {
+    "onComplete": [
+      {
+        "animation": "idle",
+        "actions": [
+          {
+            "action": "emitParticles",
+            "particleType": "Speck.WOOL",
+            "count": 3
+          },
+          {
+            "action": "playSound",
+            "sound": "snd_evoke",
+            "volume": 0.2
+          }
+        ]
+      }
+    ]
+  }
 }
 ```
 
@@ -706,6 +726,26 @@ Sprite configuration files are located in `spritesDesc/` directory and define ho
 - `looped`: Whether the animation loops
 - `frames`: Array of frame indices to use
 - `bloodColor`: Color of blood particles when mob is damaged
+- `eventHandlers`: Defines actions to execute when certain events occur
+  - `onComplete`: Actions to execute when an animation completes
+    - `animation`: The name of the animation that triggers this action
+    - `actions`: List of actions to perform when the animation completes
+      - `emitParticles`: Emit particle effects
+        - `particleType`: Type of particles to emit (Speck.HEALING, Speck.STAR, etc.)
+        - `count`: Number of particles to emit
+      - `splash`: Create a splash effect
+        - `color`: Color of the splash effect
+        - `count`: Number of splash particles
+      - `playSound`: Play a sound effect
+        - `sound`: Name of the sound file to play
+        - `volume`: Volume level (0.0 to 1.0)
+- `extras`: Additional animations beyond the standard ones
+  - Format: `"animationName": { "fps": X, "looped": true/false, "frames": [...] }`
+- `particleEmitters`: Define particle emitters that persist with the sprite
+  - `type`: Type of emitter ("Emitter")
+  - `particleType`: Type of particles to emit
+  - `position`: Position offset for the emitter (x, y)
+  - `autoKill`: Whether the emitter automatically stops when animation stops
 
 ### Level Configuration Files
 
