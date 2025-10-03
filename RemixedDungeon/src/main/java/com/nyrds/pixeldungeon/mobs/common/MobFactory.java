@@ -96,7 +96,6 @@ import com.watabou.pixeldungeon.actors.mobs.Tengu;
 import com.watabou.pixeldungeon.actors.mobs.Thief;
 import com.watabou.pixeldungeon.actors.mobs.Warlock;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
-import com.watabou.pixeldungeon.actors.mobs.Yog;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
@@ -188,7 +187,6 @@ public class MobFactory {
 		registerMobClass(Eye.class);
 		registerMobClass(Scorpio.class);
 		registerMobClass(Acidic.class);
-		registerMobClass(Yog.class);
 		registerMobClass(Larva.class);
 		registerMobClass(BurningFist.class);
 		registerMobClass(RottingFist.class);

@@ -739,6 +739,13 @@ Sprite configuration files are located in `spritesDesc/` directory and define ho
       - `playSound`: Play a sound effect
         - `sound`: Name of the sound file to play
         - `volume`: Volume level (0.0 to 1.0)
+      - `ripple`: Create a water ripple effect
+        - No additional parameters needed
+      - `cameraShake`: Shake the camera
+        - `intensity`: Strength of the shake (default: 4)
+        - `duration`: Duration of the shake in seconds (default: 0.2)
+      - `killAndErase`: Remove the sprite immediately
+        - No additional parameters needed
 - `extras`: Additional animations beyond the standard ones
   - Format: `"animationName": { "fps": X, "looped": true/false, "frames": [...] }`
 - `particleEmitters`: Define particle emitters that persist with the sprite
@@ -746,6 +753,10 @@ Sprite configuration files are located in `spritesDesc/` directory and define ho
   - `particleType`: Type of particles to emit
   - `position`: Position offset for the emitter (x, y)
   - `autoKill`: Whether the emitter automatically stops when animation stops
+- `alpha`: Set transparency level (0.0 = fully transparent, 1.0 = fully opaque)
+- `blendMode`: Set OpenGL blending mode
+  - `srcAlphaOne`: Blending mode that uses alpha as source and one as destination
+  - `srcAlphaOneMinusAlpha`: Blending mode that uses alpha as source and one minus alpha as destination
 
 ### Level Configuration Files
 

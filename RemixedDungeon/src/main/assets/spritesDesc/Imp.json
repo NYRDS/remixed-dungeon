@@ -1,0 +1,31 @@
+{
+  "texture": "imp.png",
+  "width": 12,
+  "height": 14,
+  "idle": { "fps": 10, "looped": true, "frames": [0, 1, 2, 3, 0, 1, 2, 3, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 3, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4] },
+  "attack": { "fps": 10, "looped": true, "frames": [0] },
+  "run": { "fps": 20, "looped": true, "frames": [0] },
+  "die": { "fps": 10, "looped": false, "frames": [0, 3, 2, 1, 0, 3, 2, 1, 0] },
+  
+  "alpha": 0.4,
+  
+  "eventHandlers": {
+    "onComplete": [
+      {
+        "animation": "die",
+        "actions": [
+          {
+            "action": "emitParticles",
+            "particleType": "Speck.WOOL",
+            "count": 15
+          },
+          {
+            "action": "killAndErase"
+          }
+        ]
+      }
+    ]
+  },
+  
+  "bloodColor": "0xFFFFFF"
+}

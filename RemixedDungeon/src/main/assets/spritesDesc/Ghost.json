@@ -1,0 +1,32 @@
+{
+  "texture": "ghost.png",
+  "width": 14,
+  "height": 15,
+  "idle": { "fps": 5, "looped": true, "frames": [0, 1] },
+  "run": { "fps": 10, "looped": true, "frames": [0, 1] },
+  "die": { "fps": 20, "looped": false, "frames": [0] },
+  
+  "blendMode": "srcAlphaOne",
+  
+  "eventHandlers": {
+    "onComplete": [
+      {
+        "animation": "die",
+        "actions": [
+          {
+            "action": "emitParticles",
+            "particleType": "Speck.LIGHT",
+            "count": 4
+          },
+          {
+            "action": "emitParticles",
+            "particleType": "Speck.SHAFT",
+            "count": 3
+          }
+        ]
+      }
+    ]
+  },
+  
+  "bloodColor": "0xFFFFFF"
+}

@@ -21,6 +21,21 @@
       "fps" : 9,
       "looped" : false,
       "frames" : [7,8,9]
+   },
+
+   "eventHandlers": {
+      "onComplete": [
+         {
+            "animation": "die",
+            "actions": [
+               {
+                  "action": "splash",
+                  "color": "0xFFFF0000",
+                  "count": 12
+               }
+            ]
+         }
+      ]
    }
 }
 
