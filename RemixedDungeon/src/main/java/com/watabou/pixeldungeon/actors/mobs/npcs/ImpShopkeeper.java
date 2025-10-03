@@ -3,13 +3,12 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.CharUtils;
-import com.watabou.pixeldungeon.sprites.ImpSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class ImpShopkeeper extends Shopkeeper {
 
     {
-        spriteClass = ImpSprite.class;
+        spriteClass = "spritesDesc/Imp.json";
     }
 
     private boolean seenBefore = false;

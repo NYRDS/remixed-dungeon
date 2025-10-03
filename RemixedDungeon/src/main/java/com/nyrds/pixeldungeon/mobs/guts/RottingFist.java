@@ -17,7 +17,6 @@ import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
-import com.watabou.pixeldungeon.sprites.RottingFistSprite;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
@@ -27,7 +26,7 @@ public class RottingFist extends Mob {
     private static final int REGENERATION = 10;
 
     {
-        spriteClass = RottingFistSprite.class;
+        spriteClass = "spritesDesc/RottingFist.json";
 
         hp(ht(500));
         baseDefenseSkill = 25;

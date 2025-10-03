@@ -4,11 +4,7 @@ This document lists all mob sprites that are currently implemented in Java rathe
 
 ## Currently Java-Implemented Sprites
 
-1. **GhostSprite** - `GhostSprite.java`
-2. **ImpSprite** - `ImpSprite.java`
-3. **PiranhaSprite** - `PiranhaSprite.java`
-4. **RottingFistSprite** - `RottingFistSprite.java`
-5. **ShopkeeperSprite** - `ShopkeeperSprite.java`
+1. **ShopkeeperSprite** - `ShopkeeperSprite.java`
 
 ## JSON-Implemented Sprites
 
@@ -22,7 +18,11 @@ The following sprites have been migrated to JSON format:
 6. **LarvaSprite** - Uses `spritesDesc/Larva.json` with death effects
 7. **DM300Sprite** - Uses `spritesDesc/DM300.json` with death effects
 8. **YogSprite** - Uses `spritesDesc/Yog.json` with death effects
-9. **BlacksmithSprite** - Uses `spritesDesc/Blacksmith.json` with particle emitters
+9. **BlacksmithSprite** - Uses `spritesDesc/Blacksmith.json` with particle emitters, sounds, and event handlers
+10. **ImpSprite** - Uses `spritesDesc/Imp.json` with alpha transparency and killAndErase
+11. **PiranhaSprite** - Uses `spritesDesc/Piranha.json` with ripple effect on attack
+12. **RottingFistSprite** - Uses `spritesDesc/RottingFist.json` with camera shake effect
+13. **GhostSprite** - Uses `spritesDesc/Ghost.json` with blend modes
 
 ## Sprites Using Simple Extras Migration
 
@@ -66,7 +66,11 @@ The following sprites were migrated using the enhanced event handler system with
 - ✅ LarvaSprite - Migrated to JSON with death effects and splash
 - ✅ DM300Sprite - Migrated to JSON with death effects and particles
 - ✅ YogSprite - Migrated to JSON with death effects and splash
-- ✅ BlacksmithSprite - Migrated to JSON with particle emitters, sounds, and event handlers
+- ✅ BlacksmithSprite - Migrated to JSON with particle emitters, sounds, and event handlers (Java class removed)
+- ✅ ImpSprite - Migrated to JSON with alpha transparency and killAndErase (Java class removed)
+- ✅ PiranhaSprite - Migrated to JSON with ripple effect (Java class removed)
+- ✅ RottingFistSprite - Migrated to JSON with camera shake effect (Java class removed)
+- ✅ GhostSprite - Migrated to JSON with blend modes (Java class removed)
 - ⬜ Others - Pending migration
 
 To migrate any of these sprites, follow the process outlined in `sprite_migration.md`.

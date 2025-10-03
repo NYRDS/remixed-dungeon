@@ -34,7 +34,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.FetidRatSprite;
-import com.watabou.pixeldungeon.sprites.GhostSprite;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.pixeldungeon.windows.WndSadGhost;
 import com.watabou.utils.Bundle;
@@ -45,7 +44,7 @@ import org.jetbrains.annotations.NotNull;
 public class Ghost extends NPC {
 
 	{
-		spriteClass = GhostSprite.class;
+		spriteClass = "spritesDesc/Ghost.json";
 		
 		flying = true;
 		

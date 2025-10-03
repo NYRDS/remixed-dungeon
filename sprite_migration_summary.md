@@ -2,7 +2,7 @@
 
 ## Overview
 
-Successfully migrated 8 mob sprites from Java implementations to JSON definitions using the extras system, death effects system, and particle emitters system:
+Successfully migrated 8 mob sprites from Java implementations to JSON definitions using the extras system, death effects system, and particle emitters system, plus additional enhancements:
 
 1. **GooSprite** - Custom `pump` animation
 2. **MonkSprite** - Custom `kick` animation with 50% probability
@@ -25,6 +25,10 @@ Successfully migrated 8 mob sprites from Java implementations to JSON definition
 6. `assets/spritesDesc/DM300.json` - Includes death particle effects
 7. `assets/spritesDesc/Yog.json` - Includes death splash effect
 8. `assets/spritesDesc/Blacksmith.json` - Includes particle emitters
+9. `assets/spritesDesc/Ghost.json` - Shows blend mode usage
+10. `assets/spritesDesc/Imp.json` - Shows alpha transparency and killAndErase action
+11. `assets/spritesDesc/Piranha.json` - Shows ripple effect action
+12. `assets/spritesDesc/RottingFist.json` - Shows camera shake effect
 
 ### Mob Class Updates
 
@@ -34,7 +38,7 @@ Successfully migrated 8 mob sprites from Java implementations to JSON definition
 4. **WandOfFlock.java** - Changed `spriteClass` from `SheepSprite.class` to `"spritesDesc/Sheep.json"`
 5. **Yog.Larva** - Changed `spriteClass` from `LarvaSprite.class` to `"spritesDesc/Larva.json"`
 6. **DM300.java** - Changed `spriteClass` from `DM300Sprite.class` to `"spritesDesc/DM300.json"`
-7. **Yog.java** - Changed `spriteClass` from `YogSprite.class` to `"spritesDesc/Yog.json"`
+7. **Yog.java** - Class completely removed from the game
 8. **Blacksmith.java** - Changed `spriteClass` from `BlacksmithSprite.class` to `"spritesDesc/Blacksmith.json"`
 
 ### Core System Enhancement
@@ -46,6 +50,7 @@ Successfully migrated 8 mob sprites from Java implementations to JSON definition
 5. **MobSpriteDef.java** - Enhanced event handling system to support multiple animation-based actions with simplified condition checking
 6. **MobSpriteDef.java** - Added sound playback support in event handlers with volume control
 7. **MobSpriteDef.java** - Flattened sprite properties (moved bloodColor to top-level instead of nested in properties)
+8. **MobSpriteDef.java** - Added support for alpha transparency, blend modes, and various new action types (ripple, cameraShake, killAndErase)
 
 ### Import Statements Removed
 
@@ -54,7 +59,7 @@ Removed import statements for the Java sprite classes from:
 2. `Goo.java`
 3. `Senior.java`
 4. `Monk.java`
-5. `Yog.java`
+5. `Yog.java` (completely removed)
 6. `DM300.java`
 7. `Blacksmith.java`
 
@@ -69,10 +74,14 @@ Removed the following Java sprite files:
 6. `DM300Sprite.java`
 7. `YogSprite.java`
 8. `BlacksmithSprite.java`
+9. `ImpSprite.java`
+10. `PiranhaSprite.java`
+11. `RottingFistSprite.java`
+12. `GhostSprite.java`
 
 ## Benefits
 
-1. **Reduced Java Code** - Eliminated 8 Java sprite classes
+1. **Reduced Java Code** - Eliminated 12 Java sprite classes
 2. **Improved Moddability** - Sprites can now be modified without recompilation
 3. **Consistent System** - All sprites now use the same JSON-based approach
 4. **Backward Compatibility** - Existing functionality preserved
@@ -83,6 +92,7 @@ Removed the following Java sprite files:
 9. **Animation Event Handling** - Sprites can trigger actions when specific animations complete
 10. **Sound Effects Support** - Sprites can play sound effects during animations
 11. **Simplified JSON Structure** - Reduced nesting of properties for easier editing
+12. **Advanced Effects Support** - Added support for alpha transparency, blending modes, and special actions (ripple, camera shake, killAndErase)
 
 ## Testing
 
@@ -93,11 +103,7 @@ The changes were successfully tested with:
 ## Remaining Sprites
 
 The following sprites still use Java implementations due to complex behaviors:
-1. **GhostSprite** - Custom drawing, particle effects
-2. **ImpSprite** - Alpha transparency, particle effects
-3. **PiranhaSprite** - Water ripple effects
-4. **RottingFistSprite** - Physics-based animations
-5. **ShopkeeperSprite** - Particle emitters
+1. **ShopkeeperSprite** - Complex particle effects with physics
 
 These sprites require more complex features that are not supported by the simple extras system and may need the extended JSON schema approach for full migration.
 
@@ -110,4 +116,5 @@ These sprites require more complex features that are not supported by the simple
 - **Animation Event System**: Added support for triggering actions when specific animations complete
 - **Sound Effects System**: Added support for playing sound effects during animations
 - **Simplified JSON Schema**: Moved properties like bloodColor to top-level for easier editing
+- **Advanced Effects**: Added support for alpha transparency, blending modes, ripple effects, camera shake, and killAndErase functionality
 - **Clean Implementation**: Simple and maintainable solution that follows existing patterns

@@ -12,15 +12,13 @@ import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.sprites.PiranhaSprite;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Piranha extends Mob {
 	
 	public Piranha() {
 		carcassChance = 0;
-		spriteClass = PiranhaSprite.class;
+		spriteClass = "spritesDesc/Piranha.json";
 
 		walkingType = WalkingType.WATER;
 

@@ -20,7 +20,6 @@ import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.levels.CityLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ImpSprite;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndImp;
 import com.watabou.pixeldungeon.windows.WndQuest;
@@ -32,7 +31,7 @@ import org.jetbrains.annotations.NotNull;
 public class Imp extends NPC {
 
 	public Imp() {
-		spriteClass = ImpSprite.class;
+		spriteClass = "spritesDesc/Imp.json";
 	}
 
 	private boolean seenBefore = false;
