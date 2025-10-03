@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.sprites;
 import com.nyrds.pixeldungeon.effects.ISpriteEffect;
 import com.nyrds.pixeldungeon.effects.ZapEffect;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.watabou.gltextures.TextureCache;
@@ -41,7 +42,7 @@ public class MobSpriteDef extends MobSprite {
 	private static final String PROPERTIES = "properties";
 	
 	private int      bloodColor;
-	private JSONArray deathEffects;
+	private JSONArray onCompleteEffects;
 	private JSONObject particleEmitters;
 	private final Map<String, Emitter> emitterMap = new HashMap<>();
 
@@ -62,9 +63,9 @@ public class MobSpriteDef extends MobSprite {
 
 	private final String name;
 	private String deathEffect;
-	private Set<String> spriteEffects = new HashSet<>();
+	private final Set<String> spriteEffects = new HashSet<>();
 
-	private Set<ISpriteEffect> effects = new HashSet<>();
+	private final Set<ISpriteEffect> effects = new HashSet<>();
 
 	public MobSpriteDef(String defName, int kind) {
 		super();
@@ -136,7 +137,7 @@ public class MobSpriteDef extends MobSprite {
 			if(json.has(EVENT_HANDLERS)) {
 				JSONObject eventHandlers = json.getJSONObject(EVENT_HANDLERS);
 				if(eventHandlers.has("onComplete")) {
-					deathEffects = eventHandlers.getJSONArray("onComplete");
+					onCompleteEffects = eventHandlers.getJSONArray("onComplete");
 				}
 			}
 
@@ -259,7 +260,6 @@ public class MobSpriteDef extends MobSprite {
 		return bloodColor;
 	}
 
-
 	@Override
 	public float visualHeight() {
 		return visualHeight * charScale;
@@ -282,34 +282,25 @@ public class MobSpriteDef extends MobSprite {
 	
 	@Override
 	public void onComplete(Animation anim) {
-		if (anim == die && deathEffects != null) {
-			// Handle death effects from JSON definition
-			handleEventActions(deathEffects);
+		if(isVisible() && onCompleteEffects!=null) {
+			handleEventActions(anim, onCompleteEffects);
 		}
 		super.onComplete(anim);
 	}
 	
-	private void handleEventActions(JSONArray actions) {
+	private void handleEventActions(Animation anim,JSONArray actions) {
 		try {
 			for (int i = 0; i < actions.length(); i++) {
 				JSONObject effect = actions.getJSONObject(i);
-				
-				// Check if condition matches (animation is "die")
-				if (effect.has("condition")) {
-					JSONObject condition = effect.getJSONObject("condition");
-					if (condition.has("animation") && !"die".equals(condition.getString("animation"))) {
-						continue; // Skip if condition doesn't match
+				val aName = effect.getString("animation");
+				if (aName.equals(anim.name)) {
+					if (effect.has("actions")) {
+						JSONArray actionArray = effect.getJSONArray("actions");
+						executeActions(actionArray);
 					}
-				}
-				
-				// Execute actions
-				if (effect.has("actions")) {
-					JSONArray actionArray = effect.getJSONArray("actions");
-					executeActions(actionArray);
 				}
 			}
 		} catch (Exception e) {
-			// Log error using EventCollector but don't crash
 			EventCollector.logException(e);
 		}
 	}
@@ -333,11 +324,11 @@ public class MobSpriteDef extends MobSprite {
 					int splashCount = action.getInt("count");
 					Splash.at(center(), color, splashCount);
 					break;
-					
-				case "createParticleEmitter":
-					String emitterId = action.getString("id");
-					String effectName = action.getString("effect");
-					createParticleEmitter(emitterId, effectName);
+
+				case "playSound":
+					String soundName = action.getString("sound");
+					float volume = action.optFloat("volume", 1);
+					Sample.INSTANCE.play(soundName, volume);
 					break;
 			}
 		}

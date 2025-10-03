@@ -116,7 +116,7 @@ public class JsonHelper {
         JSONObject jsonAnim = root.getJSONObject(animKind);
 
         Animation anim = new Animation((float) jsonAnim.getDouble("fps"), jsonAnim.getBoolean("looped"));
-
+        anim.name = animKind;
         JSONArray jsonFrames = jsonAnim.getJSONArray("frames");
 
         List<Integer> framesSeq = new ArrayList<>(jsonFrames.length());

@@ -11,8 +11,6 @@
   "extras": {
     "pump": { "fps": 20, "looped": true, "frames": [0, 1] }
   },
-  
-  "properties": {
-    "bloodColor": "0xFF000000"
-  }
+
+  "bloodColor": "0xFF000000"
 }

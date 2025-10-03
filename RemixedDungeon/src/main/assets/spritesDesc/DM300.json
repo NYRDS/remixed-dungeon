@@ -10,7 +10,7 @@
   "eventHandlers": {
     "onComplete": [
       {
-        "condition": { "animation": "die" },
+        "animation": "die",
         "actions": [
           {
             "action": "emitParticles",
@@ -21,8 +21,5 @@
       }
     ]
   },
-  
-  "properties": {
-    "bloodColor": "0xFFFFFF88"
-  }
+  "bloodColor": "0xFFFFFF88"
 }

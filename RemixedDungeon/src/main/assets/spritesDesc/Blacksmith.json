@@ -1,8 +1,9 @@
 {
-  "texture": "troll.png",
+  "texture": "blacksmith.png",
   "width": 13,
   "height": 16,
   "idle": { "fps": 15, "looped": true, "frames": [0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 3] },
+  "attack": { "fps": 15, "looped": true, "frames": [0] },
   "run": { "fps": 20, "looped": true, "frames": [0] },
   "die": { "fps": 20, "looped": false, "frames": [0] },
   
@@ -18,7 +19,7 @@
   "eventHandlers": {
     "onComplete": [
       {
-        "condition": { "animation": "idle", "visible": true },
+        "animation": "idle",
         "actions": [
           {
             "action": "emitParticles",
@@ -27,26 +28,11 @@
           },
           {
             "action": "playSound",
-            "sound": "SND_EVOKE",
+            "sound": "snd_evoke",
             "volume": 0.2
           }
         ]
       }
-    ],
-    "onLink": [
-      {
-        "actions": [
-          {
-            "action": "createParticleEmitter",
-            "id": "forge",
-            "effect": "forge"
-          }
-        ]
-      }
     ]
-  },
-  
-  "properties": {
-    "attack": "idle"
   }
 }
