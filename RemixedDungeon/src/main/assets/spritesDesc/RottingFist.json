@@ -1,5 +1,5 @@
 {
-  "texture": "rotting.png",
+  "texture": "rotting_fist.png",
   "width": 24,
   "height": 17,
   "idle": { "fps": 2, "looped": true, "frames": [0, 0, 1] },

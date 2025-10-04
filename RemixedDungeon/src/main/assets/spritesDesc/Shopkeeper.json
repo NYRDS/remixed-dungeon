@@ -1,5 +1,5 @@
 {
-  "texture": "keeper.png",
+  "texture": "shopkeeper.png",
   "width": 14,
   "height": 14,
   "idle": { "fps": 10, "looped": true, "frames": [1, 1, 1, 1, 1, 0, 0, 0, 0] },

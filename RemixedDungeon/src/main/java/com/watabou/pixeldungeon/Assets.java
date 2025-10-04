@@ -35,28 +35,8 @@ public class Assets {
 
     public static final String SURFACE = "ui/surface.png";
 
-    public static final String FIREBALL = "ui/fireball.png";
     public static final String SPECKS   = "effects/specks.png";
     public static final String EFFECTS  = "effects/effects.png";
-
-    public static final String RAT       = "rat.png";
-    public static final String GNOLL     = "gnoll.png";
-    public static final String GOO       = "goo.png";
-    public static final String SKELETON  = "skeleton.png";
-    public static final String TENGU     = "tengu.png";
-    public static final String SHEEP     = "sheep.png";
-    public static final String KEEPER    = "shopkeeper.png";
-    public static final String DM300     = "dm300.png";
-    public static final String MONK      = "monk.png";
-    public static final String STATUE    = "statue.png";
-    public static final String PIRANHA   = "piranha.png";
-    public static final String ROTTING   = "rotting_fist.png";
-    public static final String YOG       = "yog.png";
-    public static final String LARVA     = "larva.png";
-    public static final String GHOST     = "ghost.png";
-    public static final String MAKER     = "wandmaker.png";
-    public static final String TROLL     = "blacksmith.png";
-    public static final String IMP       = "demon.png";
 
     public static final String ITEMS  = "items.png";
     public static final String PLANTS = "plants.png";
@@ -102,7 +82,6 @@ public class Assets {
     public static final String SPELL_ICONS = "spell_icons.png";
 
     public static final String FONTS1X  = "ui/font1x.png";
-    public static final String FONTS25X = "ui/font25x.png";
 
     public static final String THEME = "theme";
     public static final String TUNE  = "game";
