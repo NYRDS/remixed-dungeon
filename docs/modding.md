@@ -746,17 +746,29 @@ Sprite configuration files are located in `spritesDesc/` directory and define ho
         - `duration`: Duration of the shake in seconds (default: 0.2)
       - `killAndErase`: Remove the sprite immediately
         - No additional parameters needed
+      - `shopkeeperCoin`: Create a physics-based coin particle effect like the shopkeeper's coin animation
+        - `color`: Color of the coin particle (default: "0xFFFF00")
+        - `size`: Size of the particle (default: 1.0)
+        - `lifespan`: How long the particle appears (default: 0.5)
+        - `speedY`: Initial vertical speed (default: -40.0)
+        - `accY`: Vertical acceleration (gravity effect, default: 160.0)
+        - `offsetX`: X offset from sprite position (default: 13.0)
+        - `offsetY`: Y offset from sprite position (default: 7.0)
 - `extras`: Additional animations beyond the standard ones
   - Format: `"animationName": { "fps": X, "looped": true/false, "frames": [...] }`
 - `particleEmitters`: Define particle emitters that persist with the sprite
   - `type`: Type of emitter ("Emitter")
-  - `particleType`: Type of particles to emit
+  - `particleType`: Type of particles to emit (e.g., "Speck.PARALYSIS", "Speck.WOOL", etc.)
   - `position`: Position offset for the emitter (x, y)
   - `autoKill`: Whether the emitter automatically stops when animation stops
+  - `pour`: Whether the emitter continuously pours particles (boolean, default: false)
+  - `interval`: Interval in seconds between poured particles (when pour=true, default: 1.0)
 - `alpha`: Set transparency level (0.0 = fully transparent, 1.0 = fully opaque)
 - `blendMode`: Set OpenGL blending mode
   - `srcAlphaOne`: Blending mode that uses alpha as source and one as destination
   - `srcAlphaOneMinusAlpha`: Blending mode that uses alpha as source and one minus alpha as destination
+
+For complete examples of advanced sprite configurations, see `docs/advanced_sprite_examples.md`.
 
 ### Level Configuration Files
 
