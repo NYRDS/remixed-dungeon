@@ -33,7 +33,7 @@ import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.FetidRatSprite;
+
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.pixeldungeon.windows.WndSadGhost;
 import com.watabou.utils.Bundle;
@@ -330,7 +330,7 @@ public class Ghost extends NPC {
 	public static class FetidRat extends Mob {
 
 		public FetidRat() {
-			spriteClass = FetidRatSprite.class;
+			spriteClass = "spritesDesc/FetidRat.json";
 			
 			hp(ht(15));
 			baseDefenseSkill = 5;

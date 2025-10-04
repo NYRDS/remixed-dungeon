@@ -78,6 +78,9 @@ Removed the following Java sprite files:
 10. `PiranhaSprite.java`
 11. `RottingFistSprite.java`
 12. `GhostSprite.java`
+13. `ShopkeeperSprite.java`
+14. `FetidRatSprite.java`
+15. `RatSprite.java`
 
 ## Benefits
 
@@ -93,6 +96,7 @@ Removed the following Java sprite files:
 10. **Sound Effects Support** - Sprites can play sound effects during animations
 11. **Simplified JSON Structure** - Reduced nesting of properties for easier editing
 12. **Advanced Effects Support** - Added support for alpha transparency, blending modes, and special actions (ripple, camera shake, killAndErase)
+13. **Dynamic Particle Effects** - Added support for physics-based particle effects (shopkeeperCoin) with custom behavior
 
 ## Testing
 

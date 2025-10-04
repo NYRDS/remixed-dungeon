@@ -11,6 +11,7 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.particles.Emitter;
+import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Splash;
@@ -49,6 +50,7 @@ public class MobSpriteDef extends MobSprite {
 
     private float alpha = 1.0f; // Default to fully opaque
     private String blendMode; // For OpenGL blending modes
+    private PixelParticle coinParticle; // For shopkeeper coin effect
 
     private int framesInRow;
     private int kind;
@@ -340,7 +342,7 @@ public class MobSpriteDef extends MobSprite {
 
                 case "playSound":
                     String soundName = action.getString("sound");
-                    float volume = action.optFloat("volume", 1);
+                    float volume = (float) action.optDouble("volume", 1.0);
                     Sample.INSTANCE.play(soundName, volume);
                     break;
 
@@ -358,6 +360,18 @@ public class MobSpriteDef extends MobSprite {
 
                 case "killAndErase":
                     killAndErase();
+                    break;
+                    
+                case "shopkeeperCoin":
+                    int coinColor = (int) Long.decode(action.optString("color", "0xFFFF00")).longValue();
+                    float coinSize = (float) action.optDouble("size", 1.0f);
+                    float coinLifespan = (float) action.optDouble("lifespan", 0.5f);
+                    float coinSpeedY = (float) action.optDouble("speedY", -40.0f);
+                    float coinAccY = (float) action.optDouble("accY", 160.0f);
+                    float coinOffsetX = (float) action.optDouble("offsetX", 13.0f);
+                    float coinOffsetY = (float) action.optDouble("offsetY", 7.0f);
+                    
+                    createShopkeeperCoin(coinColor, coinSize, coinLifespan, coinSpeedY, coinAccY, coinOffsetX, coinOffsetY);
                     break;
             }
         }
@@ -428,6 +442,28 @@ public class MobSpriteDef extends MobSprite {
         }
     }
 
+    private void createShopkeeperCoin(int color, float size, float lifespan, float speedY, float accY, float offsetX, float offsetY) {
+        // Create or reuse existing coin particle
+        if (coinParticle == null) {
+            coinParticle = new PixelParticle() {
+                @Override
+                public void reset(float x, float y, int color, float size, float lifespan) {
+                    super.reset(x, y, color, size, lifespan);
+                    setIsometricShift(true);
+                }
+            };
+            GameScene.addToMobLayer(coinParticle);
+        }
+
+        // Position based on sprite flip state and offsets
+        float coinX = getX() + (flipHorizontal ? 0 : offsetX);
+        float coinY = getY() + offsetY;
+
+        coinParticle.reset(coinX, coinY, color, size, lifespan);
+        coinParticle.speed.y = speedY;
+        coinParticle.acc.y = accY;
+    }
+
     private void createParticleEmitters() {
         if (particleEmitters != null) {
             try {
@@ -451,6 +487,14 @@ public class MobSpriteDef extends MobSprite {
                             emitter.pos(getX() + x, getY() + y);
                         } else {
                             emitter.pos(this);
+                        }
+
+                        // Check if this is a pouring emitter (like Fetid Rat's paralysis cloud)
+                        if (emitterConfig.optBoolean("pour", false)) {
+                            String particleType = emitterConfig.optString("particleType", "Speck.WOOL");
+                            int particleTypeId = getParticleTypeId(particleType);
+                            float interval = (float) emitterConfig.optDouble("interval", 1.0);
+                            emitter.pour(Speck.factory(particleTypeId), interval);
                         }
 
                         // Add to game scene

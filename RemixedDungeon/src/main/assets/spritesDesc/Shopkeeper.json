@@ -1,0 +1,29 @@
+{
+  "texture": "keeper.png",
+  "width": 14,
+  "height": 14,
+  "idle": { "fps": 10, "looped": true, "frames": [1, 1, 1, 1, 1, 0, 0, 0, 0] },
+  "run": { "fps": 10, "looped": true, "frames": [1, 1, 1, 1, 1, 0, 0, 0, 0] },
+  "attack": { "fps": 10, "looped": true, "frames": [1, 1, 1, 1, 1, 0, 0, 0, 0] },
+  "die": { "fps": 10, "looped": true, "frames": [1, 1, 1, 1, 1, 0, 0, 0, 0] },
+  
+  "eventHandlers": {
+    "onComplete": [
+      {
+        "animation": "idle",
+        "actions": [
+          {
+            "action": "shopkeeperCoin",
+            "color": "0xFFFF00",
+            "size": 1,
+            "lifespan": 0.5,
+            "speedY": -40,
+            "accY": 160,
+            "offsetX": 13,
+            "offsetY": 7
+          }
+        ]
+      }
+    ]
+  }
+}

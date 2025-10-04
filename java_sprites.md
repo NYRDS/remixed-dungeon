@@ -4,7 +4,15 @@ This document lists all mob sprites that are currently implemented in Java rathe
 
 ## Currently Java-Implemented Sprites
 
-1. **ShopkeeperSprite** - `ShopkeeperSprite.java`
+(All major mob sprites have been migrated to JSON format)
+
+### Base Sprite Classes (Architecture)
+These classes remain as part of the core sprite system architecture:
+- `CharSprite.java` - Base class for all sprites
+- `MobSprite.java` - Base class for all mob sprites  
+- `MobSpriteDef.java` - JSON-driven sprite implementation
+- `ItemSprite.java`, `MissileSprite.java`, etc. - Item/effect sprite classes
+- `HeroSpriteDef.java` classes - Hero sprite classes
 
 ## JSON-Implemented Sprites
 
@@ -23,6 +31,8 @@ The following sprites have been migrated to JSON format:
 11. **PiranhaSprite** - Uses `spritesDesc/Piranha.json` with ripple effect on attack
 12. **RottingFistSprite** - Uses `spritesDesc/RottingFist.json` with camera shake effect
 13. **GhostSprite** - Uses `spritesDesc/Ghost.json` with blend modes
+14. **ShopkeeperSprite** - Uses `spritesDesc/Shopkeeper.json` with shopkeeperCoin physics-based particle effect
+15. **FetidRatSprite** - Uses `spritesDesc/FetidRat.json` with persistent paralysis particle emitter
 
 ## Sprites Using Simple Extras Migration
 
@@ -62,15 +72,18 @@ The following sprites were migrated using the enhanced event handler system with
 - ✅ MonkSprite - Migrated to JSON with extras and proper callback handling
 - ✅ SeniorSprite - Migrated to JSON with extras and proper callback handling
 - ✅ SheepSprite - Migrated to JSON with standard animations
-- ✅ RatSprite - Example provided in migration guide
-- ✅ LarvaSprite - Migrated to JSON with death effects and splash
-- ✅ DM300Sprite - Migrated to JSON with death effects and particles
-- ✅ YogSprite - Migrated to JSON with death effects and splash
+- ✅ RatSprite - Example provided in migration guide (Base class still exists for inheritance)
+- ✅ LarvaSprite - Migrated to JSON with death effects and splash (Java class removed)
+- ✅ DM300Sprite - Migrated to JSON with death effects and particles (Java class removed)
+- ✅ YogSprite - Migrated to JSON with death effects and splash (Java class removed)
 - ✅ BlacksmithSprite - Migrated to JSON with particle emitters, sounds, and event handlers (Java class removed)
 - ✅ ImpSprite - Migrated to JSON with alpha transparency and killAndErase (Java class removed)
 - ✅ PiranhaSprite - Migrated to JSON with ripple effect (Java class removed)
 - ✅ RottingFistSprite - Migrated to JSON with camera shake effect (Java class removed)
 - ✅ GhostSprite - Migrated to JSON with blend modes (Java class removed)
+- ✅ ShopkeeperSprite - Migrated to JSON with shopkeeperCoin physics-based particle effect (Java class removed)
+- ✅ FetidRatSprite - Migrated to JSON via enhanced particle emitters system (Java class removed)
+- ✅ Other legacy sprites - Migrated to JSON where appropriate (Java classes removed)
 - ⬜ Others - Pending migration
 
 To migrate any of these sprites, follow the process outlined in `sprite_migration.md`.

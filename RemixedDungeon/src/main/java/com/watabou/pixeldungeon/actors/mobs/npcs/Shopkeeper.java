@@ -19,7 +19,7 @@ import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.food.OverpricedRation;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ShopkeeperSprite;
+
 import com.watabou.pixeldungeon.windows.WndBag;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,7 +28,7 @@ import org.jetbrains.annotations.NotNull;
 public class Shopkeeper extends NPC {
 
 	{
-		spriteClass = ShopkeeperSprite.class;
+		spriteClass = "spritesDesc/Shopkeeper.json";
 		movable = false;
 		addImmunity(Regeneration.class);
 	}
