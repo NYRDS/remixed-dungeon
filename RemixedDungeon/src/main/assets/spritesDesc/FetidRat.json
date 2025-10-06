@@ -9,11 +9,8 @@
   
   "particleEmitters": {
     "paralysisCloud": {
-      "type": "Emitter",
       "particleType": "Speck.PARALYSIS",
-      "pour": true,
-      "interval": 0.7,
-      "autoKill": false
+      "interval": 0.7
     }
   }
 }

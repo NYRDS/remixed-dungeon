@@ -6,16 +6,7 @@
   "attack": { "fps": 15, "looped": true, "frames": [0] },
   "run": { "fps": 20, "looped": true, "frames": [0] },
   "die": { "fps": 20, "looped": false, "frames": [0] },
-  
-  "particleEmitters": {
-    "forge": {
-      "type": "Emitter",
-      "particleType": "Speck.FORGE",
-      "position": { "x": 7, "y": 12 },
-      "autoKill": false
-    }
-  },
-  
+
   "eventHandlers": {
     "onComplete": [
       {

@@ -437,7 +437,6 @@ public class MobSpriteDef extends MobSprite {
     }
 
     private void createShopkeeperCoin(int color, float size, float lifespan, float speedY, float accY, float offsetX, float offsetY) {
-        // Create or reuse existing coin particle
         if (coinParticle == null) {
             coinParticle = new PixelParticle() {
                 @Override
@@ -449,7 +448,6 @@ public class MobSpriteDef extends MobSprite {
             GameScene.addToMobLayer(coinParticle);
         }
 
-        // Position based on sprite flip state and offsets
         float coinX = getX() + (flipHorizontal ? 0 : offsetX);
         float coinY = getY() + offsetY;
 
@@ -466,40 +464,29 @@ public class MobSpriteDef extends MobSprite {
                     String emitterId = keys.next();
                     JSONObject emitterConfig = particleEmitters.getJSONObject(emitterId);
 
-                    String type = emitterConfig.getString("type");
-                    if ("Emitter".equals(type)) {
-                        Emitter emitter = new Emitter();
+                    Emitter emitter = new Emitter();
 
-                        // Set emitter properties
-                        emitter.autoKill = emitterConfig.optBoolean("autoKill", true);
+                    emitter.autoKill = false;
 
-                        // Set position if specified
-                        if (emitterConfig.has("position")) {
-                            JSONObject position = emitterConfig.getJSONObject("position");
-                            float x = (float) position.optDouble("x", 0);
-                            float y = (float) position.optDouble("y", 0);
-                            emitter.pos(getX() + x, getY() + y);
-                        } else {
-                            emitter.pos(this);
-                        }
-
-                        // Check if this is a pouring emitter (like Fetid Rat's paralysis cloud)
-                        if (emitterConfig.optBoolean("pour", false)) {
-                            String particleType = emitterConfig.optString("particleType", "Speck.WOOL");
-                            int particleTypeId = getParticleTypeId(particleType);
-                            float interval = (float) emitterConfig.optDouble("interval", 1.0);
-                            emitter.pour(Speck.factory(particleTypeId), interval);
-                        }
-
-                        // Add to game scene
-                        GameScene.addToMobLayer(emitter);
-
-                        // Store reference
-                        emitterMap.put(emitterId, emitter);
+                    if (emitterConfig.has("position")) {
+                        JSONObject position = emitterConfig.getJSONObject("position");
+                        float x = (float) position.optDouble("x", 0);
+                        float y = (float) position.optDouble("y", 0);
+                        emitter.pos(getX() + x, getY() + y);
+                    } else {
+                        emitter.pos(this);
                     }
+
+                    String particleType = emitterConfig.optString("particleType", "Speck.WOOL");
+                    int particleTypeId = getParticleTypeId(particleType);
+                    float interval = (float) emitterConfig.optDouble("interval", 1.0);
+                    emitter.pour(Speck.factory(particleTypeId), interval);
+
+                    GameScene.addToMobLayer(emitter);
+
+                    emitterMap.put(emitterId, emitter);
                 }
             } catch (Exception e) {
-                // Log error using EventCollector but don't crash
                 EventCollector.logException(e);
             }
         }
