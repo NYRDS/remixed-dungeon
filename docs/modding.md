@@ -728,7 +728,7 @@ Sprite configuration files are located in `spritesDesc/` directory and define ho
 - `bloodColor`: Color of blood particles when mob is damaged
 - `eventHandlers`: Defines actions to execute when certain events occur
   - `onComplete`: Actions to execute when an animation completes
-    - `animation`: The name of the animation that triggers this action
+    - `animation`: The name of the animation that triggers this action (e.g., "idle", "attack", "die", "run", or custom animation names)
     - `actions`: List of actions to perform when the animation completes
       - `emitParticles`: Emit particle effects
         - `particleType`: Type of particles to emit (Speck.HEALING, Speck.STAR, etc.)
@@ -757,18 +757,179 @@ Sprite configuration files are located in `spritesDesc/` directory and define ho
 - `extras`: Additional animations beyond the standard ones
   - Format: `"animationName": { "fps": X, "looped": true/false, "frames": [...] }`
 - `particleEmitters`: Define particle emitters that persist with the sprite
-  - `type`: Type of emitter ("Emitter")
   - `particleType`: Type of particles to emit (e.g., "Speck.PARALYSIS", "Speck.WOOL", etc.)
   - `position`: Position offset for the emitter (x, y)
-  - `autoKill`: Whether the emitter automatically stops when animation stops
-  - `pour`: Whether the emitter continuously pours particles (boolean, default: false)
-  - `interval`: Interval in seconds between poured particles (when pour=true, default: 1.0)
+  - `interval`: Interval in seconds between poured particles (default: 1.0)
+
+**Important Notes about Particle Emitters:**
+- All particle emitters now pour continuously by default (no need for "pour" parameter)
+- All particle emitters have autoKill=false by default (they persist for the sprite's lifetime)
+- The "type" and "autoKill" parameters are no longer used in JSON descriptors
 - `alpha`: Set transparency level (0.0 = fully transparent, 1.0 = fully opaque)
 - `blendMode`: Set OpenGL blending mode
   - `srcAlphaOne`: Blending mode that uses alpha as source and one as destination
   - `srcAlphaOneMinusAlpha`: Blending mode that uses alpha as source and one minus alpha as destination
 
+**Alpha and Blend Mode Examples:**
+
+Semi-transparent sprite:
+```json
+{
+  "texture": "imp.png",
+  "width": 12,
+  "height": 14,
+  "idle": { "fps": 10, "looped": true, "frames": [0, 1, 2, 3] },
+  "alpha": 0.4
+}
+```
+
+Sprite with additive blending:
+```json
+{
+  "texture": "ghost.png",
+  "width": 14,
+  "height": 15,
+  "idle": { "fps": 5, "looped": true, "frames": [0, 1] },
+  "blendMode": "srcAlphaOne",
+  "alpha": 0.6
+}
+```
+
 For complete examples of advanced sprite configurations, see `docs/advanced_sprite_examples.md`.
+
+
+### Particle Emitter System
+
+The particle emitter system allows sprites to emit effects continuously or on demand. Particle emitters are defined in the `particleEmitters` section of the sprite configuration and can be either persistent or event-triggered.
+
+#### Persistent Particle Emitters
+
+Persistent particle emitters are active for the entire lifetime of the sprite unless configured otherwise. Here's an example:
+
+```json
+{
+  "texture": "rat.png",
+  "width": 16,
+  "height": 15,
+  "idle": { "fps": 2, "looped": true, "frames": [0,0,0,1] },
+  "run": { "fps": 14, "looped": true, "frames": [6,7,8,9,10] },
+  "attack": { "fps": 11, "looped": false, "frames": [2,3,4,5,0] },
+  "die": { "fps": 11, "looped": false, "frames": [11,12,13,14] },
+  
+  "particleEmitters": {
+    "paralysisCloud": {
+      "particleType": "Speck.PARALYSIS",
+      "interval": 0.7,
+      
+    }
+  }
+}
+```
+
+**Persistent Emitter Parameters:**
+- `particleType`: The type of particle to emit (e.g., "Speck.PARALYSIS", "Speck.WOOL", etc.)
+- `interval`: Time in seconds between particle emissions (default: 1.0)
+- `position`: Optional offset position for the emitter { "x": X, "y": Y }
+
+### Physics-Based Particle Effects
+
+Physics-based particle effects create animated particles with realistic movement, gravity, and other physical properties.
+
+#### ShopkeeperCoin Effect
+
+The `shopkeeperCoin` effect creates a physics-based coin animation that occurs during specific animations, similar to the Shopkeeper's coin-tossing effect. This effect includes gravity and realistic movement physics.
+
+**Parameters:**
+- `action`: Must be "shopkeeperCoin"
+- `color`: Color of the coin particle (default: "0xFFFF00")
+- `size`: Size of the particle (default: 1.0)
+- `lifespan`: How long the particle appears (default: 0.5)
+- `speedY`: Initial vertical speed (default: -40.0)
+- `accY`: Vertical acceleration (gravity effect, default: 160.0)
+- `offsetX`: X offset from sprite position (default: 13.0)
+- `offsetY`: Y offset from sprite position (default: 7.0)
+
+**Example:**
+```json
+{
+  "texture": "keeper.png",
+  "width": 14,
+  "height": 14,
+  "idle": { "fps": 10, "looped": true, "frames": [1, 1, 1, 1, 1, 0, 0, 0, 0] },
+  "run": { "fps": 10, "looped": true, "frames": [1, 1, 1, 1, 1, 0, 0, 0, 0] },
+  "attack": { "fps": 10, "looped": true, "frames": [1, 1, 1, 1, 1, 0, 0, 0, 0] },
+  "die": { "fps": 10, "looped": true, "frames": [1, 1, 1, 1, 1, 0, 0, 0, 0] },
+  
+  "eventHandlers": {
+    "onComplete": [
+      {
+        "animation": "idle",
+        "actions": [
+          {
+            "action": "shopkeeperCoin",
+            "color": "0xFFFF00",
+            "size": 1,
+            "lifespan": 0.5,
+            "speedY": -40,
+            "accY": 160,
+            "offsetX": 13,
+            "offsetY": 7
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+### Event Handler System
+
+The event handler system has been redesigned to use a more flexible animation-based trigger system. Instead of hardcoded conditions, events are now triggered by specific animation completions. This allows for more precise control over when effects occur. Each event handler can specify which animation must complete to trigger the associated actions.
+
+Example of multiple event handlers for different animations:
+```json
+{
+  "eventHandlers": {
+    "onComplete": [
+      {
+        "animation": "attack",
+        "actions": [
+          {
+            "action": "cameraShake",
+            "intensity": 5,
+            "duration": 0.3
+          }
+        ]
+      },
+      {
+        "animation": "die",
+        "actions": [
+          {
+            "action": "splash",
+            "color": "0xFF0000FF",
+            "count": 12
+          },
+          {
+            "action": "emitParticles",
+            "particleType": "Speck.STAR",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "animation": "idle",
+        "actions": [
+          {
+            "action": "playSound",
+            "sound": "snd_evoke",
+            "volume": 0.2
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 
 ### Level Configuration Files
 

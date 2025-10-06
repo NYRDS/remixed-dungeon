@@ -4,7 +4,7 @@ This document provides examples of advanced sprite configuration features that w
 
 ## Persistent Pouring Particle Emitter (Fetid Rat Example)
 
-This example shows how to create a sprite with a persistent particle emitter that continuously pours particles, similar to the Fetid Rat's paralysis gas effect:
+This example shows how to create a sprite with a persistent particle emitter that continuously pours particles, similar to the Fetid Rat's paralysis gas effect. All particle emitters now continuously pour by default.
 
 ```json
 {
@@ -18,20 +18,22 @@ This example shows how to create a sprite with a persistent particle emitter tha
   
   "particleEmitters": {
     "paralysisCloud": {
-      "type": "Emitter",
       "particleType": "Speck.PARALYSIS",
-      "pour": true,
-      "interval": 0.7,
-      "autoKill": false
+      "interval": 0.7
     }
   }
 }
 ```
 
 **Parameters:**
-- `pour`: Set to `true` to enable continuous particle pouring
+- `particleType`: Type of particles to emit (e.g., "Speck.PARALYSIS", "Speck.WOOL", etc.)
 - `interval`: Time in seconds between particle emissions (default: 1.0)
-- `autoKill`: Set to `false` to keep the emitter active throughout the sprite's lifetime
+- `position`: Optional position offset for the emitter { "x": X, "y": Y }
+
+**Important Notes:**
+- All particle emitters now pour continuously by default (no need for "pour" parameter)
+- All particle emitters have autoKill=false by default (they persist for the sprite's lifetime)
+- The "type" and "autoKill" parameters are no longer used in JSON descriptors
 
 ## Physics-Based Coin Animation (Shopkeeper Example)
 
@@ -77,6 +79,181 @@ This example shows how to create a sprite with a physics-based coin animation th
 - `accY`: Vertical acceleration (gravity effect, default: 160.0)
 - `offsetX`: X offset from sprite position (default: 13.0)
 - `offsetY`: Y offset from sprite position (default: 7.0)
+
+## Water Ripple Effect (Piranha Example)
+
+This example shows how to create a sprite that triggers a water ripple effect when performing certain animations, similar to the Piranha's attack effect:
+
+```json
+{
+  "texture": "piranha.png",
+  "width": 12,
+  "height": 16,
+  "idle": { "fps": 8, "looped": true, "frames": [0, 1, 2, 1] },
+  "run": { "fps": 20, "looped": true, "frames": [0, 1, 2, 1] },
+  "attack": { "fps": 20, "looped": false, "frames": [3, 4, 5, 6, 7, 8, 9, 10, 11] },
+  "die": { "fps": 4, "looped": false, "frames": [12, 13, 14] },
+  
+  "eventHandlers": {
+    "onComplete": [
+      {
+        "animation": "attack",
+        "actions": [
+          {
+            "action": "ripple"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+**Parameters:**
+- `action`: Must be "ripple" to trigger water ripple effect
+- No additional parameters needed
+
+## Camera Shake Effect (Rotting Fist Example)
+
+This example shows how to create a sprite that triggers a camera shake effect during specific animations, like the Rotting Fist's attack:
+
+```json
+{
+  "texture": "rotting_fist.png",
+  "width": 24,
+  "height": 17,
+  "idle": { "fps": 2, "looped": true, "frames": [0, 0, 1] },
+  "run": { "fps": 3, "looped": true, "frames": [0, 1] },
+  "attack": { "fps": 2, "looped": false, "frames": [0] },
+  "die": { "fps": 10, "looped": false, "frames": [0, 2, 3, 4] },
+  
+  "eventHandlers": {
+    "onComplete": [
+      {
+        "animation": "attack",
+        "actions": [
+          {
+            "action": "cameraShake",
+            "intensity": 4,
+            "duration": 0.2
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+**cameraShake Parameters:**
+- `intensity`: Strength of the shake (default: 4)
+- `duration`: Duration of the shake in seconds (default: 0.2)
+
+## Immediate Removal Effect (Imp Example)
+
+This example shows how to create a sprite that removes itself immediately upon certain animations, like the Imp's death sequence:
+
+```json
+{
+  "texture": "demon.png",
+  "width": 12,
+  "height": 14,
+  "idle": { "fps": 10, "looped": true, "frames": [0, 1, 2, 3, 0, 1, 2, 3, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 3, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4] },
+  "attack": { "fps": 10, "looped": true, "frames": [0] },
+  "run": { "fps": 20, "looped": true, "frames": [0] },
+  "die": { "fps": 10, "looped": false, "frames": [0, 3, 2, 1, 0, 3, 2, 1, 0] },
+  
+  "alpha": 0.4,
+  
+  "eventHandlers": {
+    "onComplete": [
+      {
+        "animation": "die",
+        "actions": [
+          {
+            "action": "emitParticles",
+            "particleType": "Speck.WOOL",
+            "count": 15
+          },
+          {
+            "action": "killAndErase"
+          }
+        ]
+      }
+    ]
+  },
+  
+  "bloodColor": "0xFFFFFF"
+}
+```
+
+**killAndErase Parameters:**
+- No additional parameters needed
+- Immediately removes the sprite from the game world
+
+## Alpha Transparency and Blending (Ghost and Imp Examples)
+
+These examples show how to use transparency and blending effects for special visual appearances:
+
+### Semi-Transparent Sprite (Imp):
+```json
+{
+  "texture": "demon.png",
+  "width": 12,
+  "height": 14,
+  "alpha": 0.4,
+  "idle": { "fps": 10, "looped": true, "frames": [0, 1, 2, 3] },
+  "die": { "fps": 10, "looped": false, "frames": [0, 3, 2, 1, 0] },
+  
+  "eventHandlers": {
+    "onComplete": [
+      {
+        "animation": "die",
+        "actions": [
+          {
+            "action": "killAndErase"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+### Additive Blending Sprite (Ghost):
+```json
+{
+  "texture": "ghost.png",
+  "width": 14,
+  "height": 15,
+  "idle": { "fps": 5, "looped": true, "frames": [0, 1] },
+  "run": { "fps": 10, "looped": true, "frames": [0, 1] },
+  "die": { "fps": 20, "looped": false, "frames": [0] },
+  
+  "blendMode": "srcAlphaOne",
+  
+  "eventHandlers": {
+    "onComplete": [
+      {
+        "animation": "die",
+        "actions": [
+          {
+            "action": "emitParticles",
+            "particleType": "Speck.LIGHT",
+            "count": 4
+          },
+          {
+            "action": "emitParticles",
+            "particleType": "Speck.SHAFT",
+            "count": 3
+          }
+        ]
+      }
+    ]
+  },
+  
+  "bloodColor": "0xFFFFFF"
+}
+```
 
 ## Other Advanced Features
 
