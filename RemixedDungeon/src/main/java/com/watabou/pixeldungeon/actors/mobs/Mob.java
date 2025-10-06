@@ -65,7 +65,7 @@ public abstract class Mob extends Char {
     private static final float SPLIT_DELAY = 1f;
     public static final String LOOT = "loot";
 
-    protected Object spriteClass;
+    protected String spriteClass;
 
     @Packable(defaultValue = "1")
     public int expForKill = 1;
@@ -170,14 +170,8 @@ public abstract class Mob extends Char {
     @SneakyThrows
     public CharSprite newSprite() {
 
-        if (spriteClass instanceof Class) {
-            CharSprite sprite = (CharSprite) ((Class<?>) spriteClass).newInstance();
-            sprite.selectKind(getKind());
-            return sprite;
-        }
-
-        if (spriteClass instanceof String) {
-            return new MobSpriteDef((String) spriteClass, getKind());
+        if (spriteClass!= null && !spriteClass.isEmpty()) {
+            return new MobSpriteDef(spriteClass, getKind());
         }
 
         String descName = "spritesDesc/" + getEntityKind() + ".json";

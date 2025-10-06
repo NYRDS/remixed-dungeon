@@ -9,6 +9,7 @@ import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Animation;
+import com.watabou.noosa.Camera;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.PixelParticle;
@@ -17,7 +18,6 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.noosa.Camera;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -347,9 +347,7 @@ public class MobSpriteDef extends MobSprite {
                     break;
 
                 case "ripple":
-                    ch.ifPresent(chr -> {
-                        GameScene.ripple(chr.getPos());
-                    });
+                    ch.ifPresent(chr -> GameScene.ripple(chr.getPos()));
                     break;
 
                 case "cameraShake":
