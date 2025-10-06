@@ -175,9 +175,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
     public void showStatus(int color, String text) {
         if (getVisible()) {
             ch.ifPresent(
-                    chr -> {
-                            SystemFloatingText.show(getX() + width * charScale * 0.5f, getY(), chr.getPos(), text, color);
-                    }
+                    chr -> SystemFloatingText.show(getX() + width * charScale * 0.5f, getY(), chr.getPos(), text, color)
             );
         }
     }

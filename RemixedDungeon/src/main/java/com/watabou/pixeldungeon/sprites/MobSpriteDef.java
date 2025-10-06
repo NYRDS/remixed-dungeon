@@ -127,22 +127,18 @@ public class MobSpriteDef extends MobSprite {
                 bloodColor = Long.decode((String) _bloodColor).intValue();
             }
 
-            // Parse alpha
             if (json.has("alpha")) {
                 alpha = (float) json.optDouble("alpha", 1.0f);
             }
 
-            // Parse blendMode
             if (json.has("blendMode")) {
                 blendMode = json.getString("blendMode");
             }
 
-            // Parse particle emitters
             if (json.has(PARTICLE_EMITTERS)) {
                 particleEmitters = json.getJSONObject(PARTICLE_EMITTERS);
             }
 
-            // Parse death effects from event handlers
             if (json.has(EVENT_HANDLERS)) {
                 JSONObject eventHandlers = json.getJSONObject(EVENT_HANDLERS);
                 if (eventHandlers.has("onComplete")) {
