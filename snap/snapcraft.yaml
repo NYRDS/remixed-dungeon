@@ -1,0 +1,108 @@
+name: remixed-dungeon
+version: '32.3.alpha.11'
+summary: Remixed Dungeon - A classic roguelike dungeon crawler game
+description: |
+  Remixed Dungeon is a classic roguelike dungeon crawler game with pixel graphics.
+  It's a fork of the famous Pixel Dungeon featuring English, Russian and many more localizations.
+  This is the desktop version of the game.
+
+base: core22
+grade: stable
+confinement: strict
+
+architectures:
+  - build-on: amd64
+
+parts:
+  remixed-dungeon:
+    plugin: dump
+    source: .
+    override-build: |
+      set -e
+      # Install Python dependencies
+      pip3 install lxml
+      
+      # Create snap directory structure
+      mkdir -p $SNAPCRAFT_PART_INSTALL/bin
+      mkdir -p $SNAPCRAFT_PART_INSTALL/data
+      
+      # Build the application using the project's gradlew
+      # Java is provided by the build-packages
+      ./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:shadowJar --no-daemon
+      
+      # Copy the built JAR file - find the correct one based on actual build output
+      cp RemixedDungeonDesktop/build/libs/RemixedDungeonDesktop.jar $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon.jar
+      
+      # Copy assets and other necessary files
+      mkdir -p $SNAPCRAFT_PART_INSTALL/data/mods/Remixed
+      cp -r RemixedDungeonDesktop/src/desktop/assets/* $SNAPCRAFT_PART_INSTALL/data/mods/Remixed/
+      cp -r RemixedDungeonDesktop/src/desktop/d_assets/* $SNAPCRAFT_PART_INSTALL/data/mods/Remixed/
+      cp -r RemixedDungeonDesktop/src/desktop/l10ns/* $SNAPCRAFT_PART_INSTALL/data/mods/Remixed/
+      
+      # Create the wrapper script
+      mkdir -p $SNAPCRAFT_PART_INSTALL/bin
+      echo '#!/bin/bash' > $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '# Wrapper script to launch Remixed Dungeon' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '# Set up the environment' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo 'export ASSETS_DIR=\"$SNAP/data\"' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '# Find the JAR file' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo 'JAR_FILE=$(find $SNAP/bin -name \"RemixedDungeon*.jar\" -type f)' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo 'if [ -z \"$JAR_FILE\" ]; then' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '  echo \"Error: Could not find Remixed Dungeon JAR file\"' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '  exit 1' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo 'fi' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '# Launch the application with proper JVM options' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo 'exec java \\\\' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '  --add-opens java.base/java.util=ALL-UNNAMED \\\\' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '  -Dassets.dir=\"$SNAP/data\" \\\\' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '  -Duser.home=\"$SNAP_USER_DATA\" \\\\' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '  -jar \"$JAR_FILE\" \\\\' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      echo '  \"$@\"' >> $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+      
+      chmod +x $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
+    build-packages:
+      - openjdk-17-jdk-headless
+      - python3
+      - python3-pip
+      - python3-lxml
+      - wget
+      - unzip
+      - curl
+    stage-packages:
+      - openjdk-17-jre-headless
+      - libasound2
+      - libgtk-3-0
+      - libgl1
+      - libglu1-mesa
+      - libopenal1
+      - libflac12t64
+      - libvorbisfile3
+      - libudev1
+      - libfreetype6
+      - libfontconfig1
+    prime:
+      - bin/
+      - data/
+
+apps:
+  remixed-dungeon:
+    command: desktop-launch $SNAP/bin/remixed-dungeon-wrapper.sh
+    extensions: [gnome]
+    plugs:
+      - desktop
+      - wayland
+      - x11
+      - opengl
+      - audio-playback
+      - network
+      - home
+      - removable-media
+    environment:
+      DISPLAY: $DISPLAY
+      WAYLAND_DISPLAY: $WAYLAND_DISPLAY
+      XDG_CURRENT_DESKTOP: $XDG_CURRENT_DESKTOP
+      XDG_SESSION_DESKTOP: $XDG_SESSION_DESKTOP
