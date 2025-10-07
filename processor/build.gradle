@@ -1,15 +1,15 @@
 apply plugin: 'java'
 
 dependencies {
-    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
-    compileOnly 'com.google.auto.service:auto-service:1.0-rc6'
+    annotationProcessor 'com.google.auto.service:auto-service:1.1.1'
+    compileOnly 'com.google.auto.service:auto-service:1.1.1'
 
     implementation project(path: ':annotation')
     implementation 'com.google.guava:guava:32.0.1-jre'
     implementation 'com.squareup:javapoet:1.11.1'
 
-    annotationProcessor 'org.projectlombok:lombok:1.18.30'
-    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.42'
+    compileOnly 'org.projectlombok:lombok:1.18.42'
 }
 
 java {

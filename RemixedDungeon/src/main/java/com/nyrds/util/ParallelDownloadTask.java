@@ -9,7 +9,13 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.security.cert.X509Certificate;
 import java.util.concurrent.atomic.AtomicBoolean;
+
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 public class ParallelDownloadTask implements Runnable {
 
@@ -65,7 +71,14 @@ public class ParallelDownloadTask implements Runnable {
             URL urlObj = new URL(url);
             File file = new File(m_downloadTo + ".tmp" + index);
 
-            HttpURLConnection ucon = HttpConnectionFactory.create(urlObj);
+            HttpURLConnection ucon;
+
+            ucon = HttpConnectionFactory.create(urlObj);
+
+            if (ucon instanceof HttpsURLConnection) {
+                trustAllHosts((HttpsURLConnection) ucon);
+            }
+
             ucon.setReadTimeout(10000);
             ucon.setInstanceFollowRedirects(true);
             ucon.connect();
@@ -116,5 +129,33 @@ public class ParallelDownloadTask implements Runnable {
             GLog.debug("Exception downloading from " + url + ": " + e.getMessage());
             EventCollector.logException(new ModError("Downloading from " + url, e));
         }
+    }
+
+    private static void trustAllHosts(HttpsURLConnection connection) {
+        TrustManager[] trustAllCerts = new TrustManager[]{new X509TrustManager() {
+            public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                return new java.security.cert.X509Certificate[]{};
+            }
+
+            @Override
+            public void checkClientTrusted(X509Certificate[] chain, String authType) {
+                GLog.debug("checkClientTrusted");
+            }
+
+            @Override
+            public void checkServerTrusted(X509Certificate[] chain, String authType) {
+                GLog.debug("checkServerTrusted");
+            }
+        }};
+
+        try {
+            SSLContext sc = SSLContext.getInstance("TLS");
+            sc.init(null, trustAllCerts, new java.security.SecureRandom());
+            connection.setSSLSocketFactory(sc.getSocketFactory());
+        } catch (Exception e) {
+            GLog.debug("Failed to install trust all certs manager", e);
+        }
+
+        connection.setHostnameVerifier((hostname, session) -> true);
     }
 }

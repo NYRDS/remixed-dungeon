@@ -77,9 +77,7 @@ public class WndModsDisclaimer extends WndOptions {
                 modsList();
                 break;
             case 1:
-                GameLoop.pushUiTask(() -> {
-                    GameLoop.addToScene(new WndLocalModInstall());
-                });
+                GameLoop.pushUiTask(() -> GameLoop.addToScene(new WndLocalModInstall()));
                 break;
         }
     }

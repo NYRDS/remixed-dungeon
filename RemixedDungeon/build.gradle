@@ -141,11 +141,11 @@ dependencies {
     implementation 'info.guardianproject.netcipher:netcipher:2.1.0'
     implementation 'org.hjson:hjson:3.1.0'
     implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices
-    implementation 'org.jetbrains:annotations:24.1.0'
+    implementation 'org.jetbrains:annotations:26.0.2-1'
     implementation  'androidx.appcompat:appcompat:1.6.1' //don't upgrade will break build
 
-    annotationProcessor 'org.projectlombok:lombok:1.18.40'
-    compileOnly 'org.projectlombok:lombok:1.18.40'
+    annotationProcessor 'org.projectlombok:lombok:1.18.42'
+    compileOnly 'org.projectlombok:lombok:1.18.42'
 
     implementation 'org.nanohttpd:nanohttpd:2.3.1'
 
@@ -199,7 +199,7 @@ dependencies {
     ruStoreImplementation 'ru.rustore.sdk:billingclient:9.1.0'
 
 
-    googlePlayImplementation 'com.google.android.gms:play-services-base:18.8.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-base:18.9.0'
     googlePlayImplementation 'com.google.android.gms:play-services-auth:21.4.0'
     googlePlayImplementation "com.google.android.gms:play-services-games:24.0.0"
     googlePlayImplementation 'com.google.android.gms:play-services-ads:24.6.0'
@@ -207,7 +207,7 @@ dependencies {
 
     googlePlayImplementation 'com.android.billingclient:billing:7.1.1'
 
-    googlePlayImplementation platform('com.google.firebase:firebase-bom:34.2.0')
+    googlePlayImplementation platform('com.google.firebase:firebase-bom:34.3.0')
 
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'
