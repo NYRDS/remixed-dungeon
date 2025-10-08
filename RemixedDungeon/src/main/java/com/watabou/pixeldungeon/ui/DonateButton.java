@@ -61,10 +61,10 @@ public class DonateButton extends ImageButton {
 
 	@Override
 	protected void onClick() {
-		if (RemixedDungeon.canDonate()) {
+		//if (RemixedDungeon.canDonate()) {
 			parentWnd.add(new WndDonate());
-		} else {
-			parentWnd.add(new WndCryptoDonate());
-		}
+		//} else {
+		//	parentWnd.add(new WndCryptoDonate());
+		//}
 	}
 }

@@ -272,12 +272,12 @@ public class TitleScene extends PixelScene {
         float cl = (float) Math.sin(time) * 0.5f + 0.5f;
         if (!donationAdded) {
 
-            //if (RemixedDungeon.canDonate()) {
+            if (RemixedDungeon.canDonate()) {
                 add(pleaseSupport);
                 add(btnDonate);
-           // } else {
-                //btnDonate.enable(false);
-            //}
+            } else {
+                btnDonate.enable(false);
+            }
 
             donationAdded = true;
         } else {
