@@ -13,6 +13,8 @@ import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import org.jetbrains.annotations.NotNull;
+
 import lombok.Setter;
 
 public class ItemSlot extends Button {
@@ -116,8 +118,8 @@ public class ItemSlot extends Button {
         }
     }
 
-    public void item(Item item) {
-        if (item == null) {
+    public void item(@NotNull Item item) {
+        if (!item.valid()) {
             setActive(false);
 
             icon.setVisible(false);

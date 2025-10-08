@@ -11,6 +11,7 @@ import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.nyrds.platform.input.Keys;
 import com.nyrds.platform.util.StringsManager;
@@ -32,11 +33,12 @@ import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import lombok.Getter;
 
 public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.Listener {
 
@@ -47,7 +49,9 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     @SuppressLint("UseSparseArrays")
     private static final Map<Integer, Item> qsStorage = new HashMap<>();
 
-    private Item quickslotItem;
+    @NotNull
+    @Getter
+    private Item quickslotItem = ItemsList.DUMMY;
 
     private ItemSlot slot;
     
@@ -107,7 +111,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
                     } else {
                         lastItem = quickslotItem;
                     }
-                    if (quickslotItem != null) {
+                    if (quickslotItem.valid()) {
 
                         if (!Dungeon.hero.isAlive()) {
                             return;
@@ -184,8 +188,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
             return;
         }
 
-        // If there's an item in the slot, trigger the itemSlot's onClick instead
-        if (quickslotItem != null) {
+        if (quickslotItem.valid()) {
             slot.simulateClick();
             return;
         }
@@ -207,7 +210,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         return true;
     }
 
-    private void item(@Nullable Item item) {
+    private void item(@NotNull Item item) {
         slot.item(item);
         enableSlot();
     }
@@ -223,7 +226,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
 
     private void enableSlot() {
 
-        slot.enable(quickslotItem != null && quickslotItem.usableByHero());
+        slot.enable(quickslotItem.valid() && quickslotItem.usableByHero());
     }
 
     private void useTargeting() {
@@ -253,11 +256,11 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     }
 
     private void refreshSelf() {
-        if(quickslotItem != null && !(quickslotItem instanceof Spell.SpellItem)) {
+        if(quickslotItem.valid() && !(quickslotItem instanceof Spell.SpellItem)) {
             Item item;
 
             Belongings belongings = hero.getBelongings();
-            if(quickslotItem.quantity()>0) {
+            if(quickslotItem.valid()) {
                 item = belongings.checkItem(quickslotItem);
             } else {
                 item = hero.getItem(quickslotItem.getEntityKind());
@@ -323,26 +326,26 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         qsStorage.clear();
     }
 
-    private void quickslotItem(Item quickslotItem) {
+    private void quickslotItem(Item _quickslotItem) {
 
-        if (this.quickslotItem != null) {
-            this.quickslotItem.setQuickSlotIndex(-1);
+        if (quickslotItem.valid()) {
+            quickslotItem.setQuickSlotIndex(-1);
         }
 
-        if (quickslotItem != null) {
+        if (_quickslotItem.valid()) {
 
-            int oldQsIndex = quickslotItem.getQuickSlotIndex();
+            int oldQsIndex = _quickslotItem.getQuickSlotIndex();
             if (oldQsIndex >= 0 && oldQsIndex < slots.size()) {
-                slots.get(oldQsIndex).quickslotItem(null);
+                slots.get(oldQsIndex).quickslotItem(ItemsList.DUMMY);
                 slots.get(oldQsIndex).refreshSelf();
             }
 
 
-            quickslotItem.setQuickSlotIndex(index);
+            _quickslotItem.setQuickSlotIndex(index);
         }
 
-        qsStorage.put(index, quickslotItem);
-        this.quickslotItem = quickslotItem;
+        qsStorage.put(index, _quickslotItem);
+        quickslotItem = _quickslotItem;
     }
 
     public static void save(Bundle bundle) {
@@ -436,10 +439,6 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         }
         
         layout(); // Re-layout to ensure proper positioning
-    }
-
-    public Item getQuickslotItem() {
-        return quickslotItem;
     }
 
     @Override

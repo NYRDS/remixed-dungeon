@@ -278,7 +278,7 @@ public class WndBag extends WndTabbed {
 		//int margin = stuff.getOwner() instanceof Hero ?  4 :  5;
 		int margin = 5;
 		while (count - margin < container.getSize()) {
-			placeItem( null );
+			placeItem( ItemsList.DUMMY );
 		}
 
 		// Gold

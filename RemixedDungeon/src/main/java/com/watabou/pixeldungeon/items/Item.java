@@ -788,7 +788,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     }
 
     public boolean valid() {
-        return true;
+        return quantity > 0;
     }
 
     //former IChaosItem
