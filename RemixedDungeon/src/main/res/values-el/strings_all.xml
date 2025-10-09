@@ -2972,4 +2972,29 @@ remix.32\n
     -- Τα εξατομικευμένα αντικείμενα μπορούν να εκτελούν ενέργειες ενώ είναι σε σωρούς\n
     - Διορθώσεις σφαλμάτων\n</string>
   <string name="WndInstallingMod_deleting_file">Διαγράφεται: %s</string>
+  <string name="Badges_ThisIsSparta">Εδώ είναι Σπάρτη!!!</string>
+  <string name="WndSettings_FpsLimit">Όριο FPS</string>
+  <string name="StartScene_ContinueLatest">Συνέχισε το τελευταίο σου παιχνίδι ή επίλεξε ένα από τα αποθηκευμένα</string>
+  <string name="StartScene_ChooseFromSlot">Επιλογή αποθηκευμένου</string>
+  <string name="AboutScene_SourceCode">Λήψη πηγαίου κώδικα του Remixed Dungeon:</string>
+  <string name="HeroClass_Priest">Ιερέας</string>
+  <string name="HeroClass_Doctor">Γιατρός Επιδημιών</string>
+  <string name="StartScene_ComingSoon">Έρχεται σύντομα</string>
+  <string name="AC_Dissect">Τεμαχισμός</string>
+  <string name="HeroClass_PlagueDoctorPerks_0">Οι Γιατροί Επιδημιών εξάγουν τοξικούς αδένες, σάπια όργανα, θραύσματα οστών και βδελυγρή ουσία από σκοτωμένους εχθρούς. Το αίμα συλλέγεται σταδιακά και χρησιμοποιείται αλχημικά.</string>
+  <string name="HeroClass_PlagueDoctorPerks_1">Ξεκινά με μια Μάσκα Επιδημιών (ανοσία σε όλα τα αέρια) και ένα Πριόνι Οστών. Τα κρίσιμα χτυπήματα πετούν επιπλέον κομμάτια, και το πριόνι προκαλεί +50% ζημιά σε παραλυμένους εχθρούς.</string>
+  <string name="HeroClass_PlagueDoctorPerks_2">Τα φίλτρα παραλυτικού και τοξικού αερίου είναι εξ αρχής αναγνωρισμένα.</string>
+  <string name="HeroClass_PlagueDoctorPerks_3">Οι εχθροί που εξοντώνονται από τοξικό αέριο γίνονται τοξική ομίχλη, αναπληρώνοντάς σου 1 ζωή ανά επηρεασμένο εχθρό.</string>
+  <string name="HeroClass_PlagueDoctorPerks_4">Οι Γιατροί Επιδημιών έχουν πολύ χαμηλότερη ακρίβεια χωρίς το πριόνι οστών και δεν μπορούν να χρησιμοποιήσουν όπλα απόστασης.</string>
+  <string name="BoneSaw_Name">Πριόνι Οστών</string>
+  <string name="BoneSaw_Info">Ένα χειρουργικό πριόνι ακριβείας σχεδιασμένο για ταχύτατο τεμαχισμό. Η ζημιά και η ταχύτητα επίθεσής του μεγαλώνουν μαζί με την ικανότητα του Γιατρού Επιδημιών. Τα κρίσιμα χτυπήματα βγάζουν περισσότερα μέλη από τους εχθρούς, και είναι εξαιρετικά αποτελεσματικό εναντίον παραλυμένων εχθρών.</string>
+  <string name="Accuracy_Decreased">Πώς να το χρησιμοποιήσω αυτό (%s); Λάθος εργαλείο στα λάθος χέρια!</string>
+  <string name="Accuracy_DecreasedDoctor">Κάθε χτύπημα με αυτό το όπλο (%s) επιφέρει την ατέλεια. Το πριόνι οστών θεραπεύει... αυτό μολύνει.</string>
+  <string name="Accuracy_DecreasedDoctorBareHands">Τα γυμνά χέρια προσβάλλουν την τεχνική μου. Χωρίς την κόψη του πριονιού οστών, το σημάδι μου είναι σκέτο χάος.</string>
+  <string name="AttackDelay_Increased">Δεν μπορώ να το χρησιμοποιήσω αυτό (%s) έτσι. Αργά χτυπήματα, βαριές αναπνοές...</string>
+  <string name="Mob_GoingTo">Έφυγα!</string>
+  <string name="Mob_Attacking">%s; Πες ότι εξοντώθηκε ήδη!</string>
+  <string name="BuffParam_Cooldown">Χρόνος αναπλήρωσης: %.2f</string>
+  <string name="Challenges_Names_9">Αμνησία</string>
+  <string name="Challenges_Descriptions_9">Η τελευταία «θεραπεία» του γιατρού της πανούκλας σού κατέστρεψε τη χωρική σου μνήμη. Δεν θυμάσαι τίποτα έξω από το οπτικό σου πεδίο.</string>
 </resources>
