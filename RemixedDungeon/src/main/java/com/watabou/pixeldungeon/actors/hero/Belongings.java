@@ -44,21 +44,19 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import lombok.Getter;
 
 
 public class Belongings implements Iterable<Item>, Bundlable {
 
     public static final int BACKPACK_SIZE = 18;
 
+    @Getter
     private Item selectedItem = ItemsList.DUMMY;
 
     private final Char owner;
 
     public final Bag backpack;
-
-    public Item getSelectedItem() {
-        return selectedItem;
-    }
 
     public void setSelectedItem(@NotNull Item selectedItem) {
         this.selectedItem = selectedItem;
@@ -123,6 +121,50 @@ public class Belongings implements Iterable<Item>, Bundlable {
                 ring2 = item;
                 break;
         }
+    }
+
+    public void clear() {
+        // Unequip all equipped items
+        if (weapon != ItemsList.DUMMY) {
+            weapon.deactivate(owner);
+            weapon.setOwner(CharsList.DUMMY);
+            weapon = ItemsList.DUMMY;
+        }
+        
+        if (leftHand != ItemsList.DUMMY) {
+            leftHand.deactivate(owner);
+            leftHand.setOwner(CharsList.DUMMY);
+            leftHand = ItemsList.DUMMY;
+        }
+        
+        if (armor != ItemsList.DUMMY) {
+            armor.deactivate(owner);
+            armor.setOwner(CharsList.DUMMY);
+            armor = ItemsList.DUMMY;
+        }
+        
+        if (ring1 != ItemsList.DUMMY) {
+            ring1.deactivate(owner);
+            ring1.setOwner(CharsList.DUMMY);
+            ring1 = ItemsList.DUMMY;
+        }
+        
+        if (ring2 != ItemsList.DUMMY) {
+            ring2.deactivate(owner);
+            ring2.setOwner(CharsList.DUMMY);
+            ring2 = ItemsList.DUMMY;
+        }
+
+        // Clear the maps and sets tracking equipped items
+        usedSlots.clear();
+        activatedItems.clear();
+        blockedSlots.clear();
+
+        // Clear the backpack
+        backpack.clear();
+
+        // Reset selected item
+        selectedItem = ItemsList.DUMMY;
     }
 
     public enum Slot {

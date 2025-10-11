@@ -170,6 +170,7 @@ public class Carcass extends Item implements Doom {
             pet.setUndead(true);
             pet.hp(1); //it's alive!
             pet.heal(pet.ht() * caster.skillLevel() / 10);
+            pet.getBelongings().clear();
             if (byMagic) {
                 pet.heal(pet.ht());
             }
