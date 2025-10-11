@@ -10,6 +10,7 @@ import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.WndDifficultyOptions;
 import com.nyrds.pixeldungeon.windows.WndLocalModInstall;
+import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.AndroidSAF;
 import com.nyrds.platform.util.StringsManager;
@@ -33,6 +34,7 @@ import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.FacilitaionButton;
 import com.watabou.pixeldungeon.ui.GameButton;
 import com.watabou.pixeldungeon.ui.IconButton;
+import com.watabou.pixeldungeon.ui.Toast;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndClass;
 import com.watabou.pixeldungeon.windows.WndOptions;
@@ -139,6 +141,7 @@ public class StartScene extends PixelScene {
         int usableClasses = 0;
 
         shields.clear();
+
         for (HeroClass cl : HeroClass.values()) {
             if (cl.allowed()) {
                 usableClasses++;
@@ -224,6 +227,23 @@ public class StartScene extends PixelScene {
             }
         }
 
+        if (shields.isEmpty()) {
+            btnLoad.setVisible(false);
+            btnNewGame.setVisible(false);
+            var toast = new Toast("Something _really wrong_\nwith _InitHeroes.json_ in this mod\nplease check it") {
+                @Override
+                protected void onClose() {
+                    Game.shutdown();
+                }
+            };
+            toast.measure();
+            toast.setPos((Camera.main.width  - toast.width())/2, height/2);
+
+            GameLoop.addToScene(toast);
+
+            return;
+        }
+
         if (curShield == null) {
             updateShield(shields.get(0));
         }
@@ -245,7 +265,7 @@ public class StartScene extends PixelScene {
                 + (BUTTON_HEIGHT - unlock.height()) / 2;
 
         unlock.hardlight(0xFFFF00);
-        unlock.setX(PixelScene.align(Camera.main.width / 2 - unlock.width() / 2));
+        unlock.setX(PixelScene.align(Camera.main.width / 2.f - unlock.width() / 2));
         unlock.setY(PixelScene.align(pos));
 
         unlock.setVisible(true);

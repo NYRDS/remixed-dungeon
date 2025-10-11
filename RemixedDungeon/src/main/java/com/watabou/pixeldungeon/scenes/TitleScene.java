@@ -238,18 +238,16 @@ public class TitleScene extends PixelScene {
 
         if(Utils.isAndroid()) {
             if (AndroidSAF.mBaseSrcPath != null) {
-                GameLoop.pushUiTask(() -> WndLocalModInstall.onDirectoryPicked());
+                GameLoop.pushUiTask(WndLocalModInstall::onDirectoryPicked);
             }
 
             if (AndroidSAF.mBaseDstPath != null) {
-                GameLoop.pushUiTask(() -> WndModInfo.onDirectoryPicked());
+                GameLoop.pushUiTask(WndModInfo::onDirectoryPicked);
             }
 
 
             if (Game.instance() instanceof InstallMod) {
-                GameLoop.pushUiTask(() -> {
-                    ((InstallMod) Game.instance()).installMod();
-                });
+                GameLoop.pushUiTask(() -> ((InstallMod) Game.instance()).installMod());
             }
         }
 
