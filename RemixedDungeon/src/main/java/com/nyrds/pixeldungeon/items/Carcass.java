@@ -168,6 +168,7 @@ public class Carcass extends Item implements Doom {
             pet.regenSprite();
             pet.assignNextId();
             pet.setUndead(true);
+            pet.lvl(caster.skillLevel());
             pet.hp(1); //it's alive!
             pet.heal(pet.ht() * caster.skillLevel() / 10);
             pet.getBelongings().clear();
@@ -202,6 +203,6 @@ public class Carcass extends Item implements Doom {
 
     @Override
     public int price() {
-        return src.ht() / 6 + src.lvl() - 1;
+        return src.ht() / 6  * quantity();
     }
 }
