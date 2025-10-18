@@ -178,12 +178,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     protected CharSprite sprite;
 
+    @Getter
     protected WalkingType walkingType = WalkingType.NORMAL;
 
     private int HT;
     private int HP;
 
     protected float baseSpeed = 1;
+    @Getter
     protected boolean movable = true;
 
     public boolean paralysed = false;
@@ -455,7 +457,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             effectiveDamage = enemy.defenseProc(this, effectiveDamage);
             enemy.damage(effectiveDamage, this);
 
-            if(effectiveDamage > 0) {
+            if (effectiveDamage > 0) {
                 for (Item item : getBelongings()) {
                     if (item.isEquipped(this)) {
                         item.ownerDoesDamage(effectiveDamage);
@@ -472,7 +474,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
                 enemySprite.bloodBurstA(mySprite.center(), effectiveDamage);
                 enemySprite.flash();
 
-                if (!enemy.isAlive() && enemy != Dungeon.hero ) {
+                if (!enemy.isAlive() && enemy != Dungeon.hero) {
                     GLog.i(StringsManager.getVars(R.array.Char_Defeat)[getGender()], getName(), enemy.getName_objective());
                 }
             }
@@ -548,7 +550,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         int bonus = bf[0];
 
-        float evasion =  (float) Math.pow(1.2, bonus);
+        float evasion = (float) Math.pow(1.2, bonus);
         if (paralysed) {
             evasion /= 2;
         }
@@ -873,7 +875,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         float hasteLevel = bf[0];
 
-        return Util.clamp((float) Math.pow(1.1f, -hasteLevel), 0.25f, 4.f );
+        return Util.clamp((float) Math.pow(1.1f, -hasteLevel), 0.25f, 4.f);
     }
 
     @Override
@@ -1104,7 +1106,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         getScript().run("onMove", step);
-        getSprite().move( getPos(), step );
+        getSprite().move(getPos(), step);
 
         placeTo(step);
     }
@@ -1118,7 +1120,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void onAttackComplete() {
-        if(isAlive()) {
+        if (isAlive()) {
             Char enemy = getEnemy();
 
             if (enemy.valid()) {
@@ -1236,7 +1238,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         forEachBuff(b -> ret.addAll(b.immunities(this)));
 
 
-
         return ret;
     }
 
@@ -1249,7 +1250,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     private void updateSprite(CharSprite sprite) {
-        if(!isOnStage()) {
+        if (!isOnStage()) {
             sprite = DummySprite.instance;
         } else {
             if (level().cellValid(getPos())) {
@@ -1311,7 +1312,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             updateSprite(sprite);
         }
 
-        if(sprite.getParent() == null) {
+        if (sprite.getParent() == null) {
             sprite = DummySprite.instance;
         }
 
@@ -1376,10 +1377,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         freeCell(this);
         this.pos = pos;
         occupyCell(this);
-    }
-
-    public boolean isMovable() {
-        return movable;
     }
 
     public boolean collect(@NotNull Item item) {
@@ -1539,6 +1536,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
         return nearest;
     }
+
     public abstract boolean getCloser(final int cell, boolean ignorePets);
 
     public boolean getCloser(final int cell) {
@@ -1628,7 +1626,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         if (lo != null && !lo.push(this)) {
             lo.bump(this);
-            if(lo.nonPassable(this)) {
+            if (lo.nonPassable(this)) {
                 return false;
             }
         }
@@ -2099,7 +2097,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public abstract void resurrect();
-    public void resurrect(Char parent) {}
+
+    public void resurrect(Char parent) {
+    }
 
 
     public void setSubClass(HeroSubClass subClass) {
@@ -2214,10 +2214,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return Utils.genderFromString(StringsManager.maybeId(getClassDef().optString("gender", getEntityKind() + "_Gender")));
     }
 
-    public WalkingType getWalkingType() {
-        return this.walkingType;
-    }
-
     public LuaScript getScript() {
         if (script == null) {
             script = new LuaScript("scripts/mobs/" + getEntityKind(), DEFAULT_MOB_SCRIPT, this);
@@ -2301,7 +2297,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Override
     protected void useCell() {
-        if(level().cellValid(getPos())) {
+        if (level().cellValid(getPos())) {
             Actor.occupyCell(this);
             if (hasSprite() && !sprite.isMoving) {
                 sprite.place(getPos());
