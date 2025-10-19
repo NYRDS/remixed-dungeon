@@ -86,18 +86,46 @@ tasks.register('generateBuildConfig') {
     def version_code = project.ext.version_code
     doLast {
         def debug = false
+        if (project.hasProperty('debug')) {
+            debug = project.property('debug').toString().toBoolean()
+        } else {
+            debug = gradle.startParameter.taskNames.any { it.toLowerCase().contains('debug') }
+        }
         def buildConfigFile = new File("${projectDir}/src/generated/java/com/nyrds/pixeldungeon/ml/BuildConfig.java")
         buildConfigFile.parentFile.mkdirs()
         buildConfigFile.text = """
         package com.nyrds.pixeldungeon.ml;
 
         public class BuildConfig {
-            public static final boolean DEBUG = ${debug};
+            public static boolean DEBUG = ${debug};
             public static final String SAVES_PATH = "./saves/";
             public static final String FLAVOR_platform = "desktop";
             public static final String FLAVOR_market = "vkplay";
             public static final String VERSION_NAME = "${version}";
             public static final int VERSION_CODE = ${version_code};
+            
+            public static void init(String[] args) {
+                // Check command line arguments for debug flags
+                if (args != null) {
+                    for (String arg : args) {
+                        if (arg != null && (arg.equalsIgnoreCase("--debug") || arg.equalsIgnoreCase("-debug") || 
+                                           arg.equalsIgnoreCase("--debug=true") || arg.equalsIgnoreCase("-Ddebug=true"))) {
+                            DEBUG = true;
+                            return;
+                        }
+                        if (arg != null && (arg.equalsIgnoreCase("--debug=false") || arg.equalsIgnoreCase("-Ddebug=false"))) {
+                            DEBUG = false;
+                            return;
+                        }
+                    }
+                }
+                
+                // Check system properties as fallback
+                String debugProp = System.getProperty("debug");
+                if (debugProp != null) {
+                    DEBUG = Boolean.parseBoolean(debugProp);
+                }
+            }
         }
         """
     }

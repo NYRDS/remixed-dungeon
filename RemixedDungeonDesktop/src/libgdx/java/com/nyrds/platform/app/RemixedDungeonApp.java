@@ -24,6 +24,9 @@ public class RemixedDungeonApp {
     public static void main(String[] args){
         savedArgs = args;
 
+        // Initialize BuildConfig with command line arguments
+        BuildConfig.init(args);
+
         if(!BuildConfig.DEBUG) {
             Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> {
 
@@ -62,11 +65,11 @@ public class RemixedDungeonApp {
         cfg.setBackBufferConfig(8, 8, 8, 8, 16, 0, 0);
         cfg.setForegroundFPS(60);
 
-        //if(BuildConfig.DEBUG) {
+        if(BuildConfig.DEBUG) {
             cfg.setWindowedMode(800,480);
-        //} else {
-        //    cfg.setFullscreenMode(Lwjgl3ApplicationConfiguration.getDisplayMode());
-        //}
+        } else {
+            cfg.setFullscreenMode(Lwjgl3ApplicationConfiguration.getDisplayMode());
+        }
         cfg.enableGLDebugOutput(true, System.err);
 
 
