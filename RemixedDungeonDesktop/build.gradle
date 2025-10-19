@@ -60,11 +60,11 @@ tasks.register('quickModTest', JavaExec) {
     dependsOn classes
     mainClass = 'com.nyrds.pixeldungeon.desktop.DesktopQuickModTest'
     classpath = sourceSets.main.runtimeClasspath
-    
+
     if (project.hasProperty('args')) {
         args project.args.split(',')
     }
-    
+
     jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
 }
 
@@ -237,7 +237,7 @@ tasks.register('minimizeJdks') {
             exec {
                 commandLine "${jdkDownloadDir}/linux/jdk-17.0.14+7/bin/jlink",
                         '--module-path', "${jdkDir}/jmods",
-                        '--add-modules', 'java.base,java.compiler,java.desktop,java.scripting,java.sql,jdk.unsupported',
+                        '--add-modules', 'java.base,java.compiler,java.desktop,java.scripting,java.sql,jdk.unsupported,jdk.crypto.ec',
                         '--output', minimizedJdkDir,
                         '--strip-debug',
                         '--no-header-files',
