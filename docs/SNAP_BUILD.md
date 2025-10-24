@@ -33,7 +33,22 @@ Ensure you're in the root directory of the Remixed Dungeon project:
 cd /path/to/remixed-dungeon
 ```
 
-### Step 2: Build the Snap Package
+### Step 2: Update Version (Optional)
+
+The snap version is typically taken from the `version.properties` file. 
+If you want to ensure the snap uses the latest version from `version.properties`, 
+run the update script first:
+
+```bash
+snap/update_version.sh
+```
+
+Note: If you don't run this script, the snap will use the version currently 
+set in `snap/snapcraft.yaml` (which may be different from `version.properties`).
+
+The update script is located at `snap/local/update_version.sh`.
+
+### Step 3: Build the Snap Package
 
 Run the following command to build the snap:
 
@@ -44,7 +59,7 @@ snapcraft
 This will:
 1. Build the Remixed Dungeon desktop application using Gradle
 2. Package all necessary assets and dependencies
-3. Create a runnable snap package
+3. Create a runnable snap package with the version from snapcraft.yaml
 
 ### Step 3: Install the Built Snap (for testing)
 
@@ -158,8 +173,12 @@ These are placed in the user's data directory when the application runs.
 
 ## Wrapper Script
 
-The snap uses a wrapper script that:
+The snap uses a wrapper script located at `snap/local/wrapper.sh` that:
 - Sets the proper Java environment
-- Configures JVM options needed for the game
+- Configures JVM options needed for the game  
 - Sets the assets directory to the snap's data location
 - Launches the application JAR
+
+This script is copied to the snap during the build process, replacing the previous approach where the script was embedded directly in the snapcraft.yaml file.
+
+Note: Files in the `snap/local` directory are ignored by snapcraft and can be used for storing helper scripts and other non-snapcraft related files.
