@@ -25,6 +25,7 @@ These systems work together to provide maximum flexibility while maintaining com
 12. [Common Patterns](#common-patterns)
 13. [API Reference](#api-reference)
 14. [Best Practices](#best-practices)
+15. [Text Formatting](#text-formatting)
 
 ## Scripting Architecture
 
@@ -74,6 +75,13 @@ Customize mob behavior, combat abilities, and interactions.
 - `loadData(_, str)`: Deserialize custom data from save games
 - `storeData(data)`: Store temporary data
 - `restoreData()`: Retrieve temporary data
+
+### Text Formatting in Mob Descriptions
+Text color formatting can be used in any text including mob descriptions using the syntax `[color:text]`:
+- `[green:text]` - Green text
+- `[yellow:text]` - Yellow text
+- `[#ff0000:text]` - Red text using hex code
+- Multiple color formats can be combined in a single text string
 
 ### Example
 ```lua
@@ -177,6 +185,13 @@ Create custom items with unique behaviors.
 - `storeData(data)`: Store temporary data
 - `restoreData()`: Retrieve temporary data
 
+### Text Formatting in Item Descriptions
+Text color formatting can be used in any text including item descriptions using the syntax `[color:text]`:
+- `[green:text]` - Green text
+- `[yellow:text]` - Yellow text
+- `[#ff0000:text]` - Red text using hex code
+- Multiple color formats can be combined in a single text string
+
 ### Example
 ```lua
 local RPD = require "scripts/lib/commonClasses"
@@ -224,6 +239,13 @@ Create custom spells for magic systems.
 - `castOnCell(self, spell, chr, cell)`: Handle cell-targeted spell casting
 - `castOnChar(self, spell, caster, target)`: Handle character-targeted spell casting
 
+### Text Formatting in Spell Descriptions
+Text color formatting can be used in any text including spell descriptions using the syntax `[color:text]`:
+- `[green:text]` - Green text
+- `[yellow:text]` - Yellow text
+- `[#ff0000:text]` - Red text using hex code
+- Multiple color formats can be combined in a single text string
+
 ### Example
 ```lua
 local RPD = require "scripts/lib/commonClasses"
@@ -249,6 +271,57 @@ return spell.init{
             local heal = target:ht() / 5. * caster:skillLevel()
             target:heal(math.max(1, heal), caster)
         end
+        return true
+    end
+}
+```
+
+### Spell with Item Selection Example
+Here's a practical example showing how to create a spell that uses item selection, similar to CurseItem.lua:
+
+```lua
+local RPD = require "scripts/lib/commonClasses"
+local itemSelector = require "scripts/lib/itemSelector"
+local spell = require "scripts/lib/spell"
+
+return spell.init{
+    desc = function()
+        return {
+            image = 0,
+            imageFile = "spellsIcons/necromancy.png",
+            name = "Curse Item",
+            info = "Select an [green:item] from your [yellow:backpack] to [#ff0000:curse] it.",
+            magicAffinity = "Necromancy",
+            targetingType = "self",  -- Self-targeted spells use the 'cast' method
+            level = 1,
+            castTime = 0,           -- Instant cast
+            spellCost = 3,          -- MP cost
+            cooldown = 5            -- Turns until spell can be cast again
+        }
+    end,
+    
+    cast = function(self, spell, chr)
+        -- Show item selection window with custom filtering
+        itemSelector.selectItem(function(item, selector)
+            if item then
+                -- Check if the item is already cursed
+                if item:isCursed() then
+                    RPD.glog("That item is already cursed!")
+                else
+                    -- Curse the selected item
+                    item:setCursed(true)
+                    item:setCursedKnown(true)
+                    RPD.glog("You have cursed your " .. item:name() .. "!")
+                    
+                    -- Apply visual and audio effects
+                    RPD.zapEffect(chr:getPos(), chr:getPos(), "ShadowParticle")
+                    RPD.playSound("snd_cursed.mp3")
+                end
+            else
+                RPD.glog("You decided not to curse anything.")
+            end
+        end, RPD.BackpackMode.ALL, "Select an item to curse")
+        
         return true
     end
 }
@@ -546,6 +619,11 @@ return mob.init({
 Here's a complete example of how to create a spell that allows players to curse an item:
 
 ```lua
+--
+-- Test spell to demonstrate item selection functionality
+-- This spell allows the player to select an item from their backpack and curse it
+--
+
 local RPD = require "scripts/lib/commonClasses"
 local itemSelector = require "scripts/lib/itemSelector"
 local spell = require "scripts/lib/spell"
@@ -553,10 +631,10 @@ local spell = require "scripts/lib/spell"
 return spell.init{
     desc = function()
         return {
-            image = 0,
+            image = 0,  -- Using a generic spell icon
             imageFile = "spellsIcons/necromancy.png",
             name = "Curse Item",
-            info = "Select an item from your backpack to curse it.",
+            info = "Select an [green:item] from your [yellow:backpack] to [#ff0000:curse] it.",
             magicAffinity = "Necromancy",
             targetingType = "self",
             level = 1,
@@ -577,6 +655,7 @@ return spell.init{
                     -- Curse the selected item
                     item:setCursed(true)
                     item:setCursedKnown(true)
+
                     RPD.glog("You have cursed your " .. item:name() .. "!")
                     
                     -- Apply a visual effect
@@ -819,8 +898,7 @@ Persistent particle emitters are active for the entire lifetime of the sprite un
   "particleEmitters": {
     "paralysisCloud": {
       "particleType": "Speck.PARALYSIS",
-      "interval": 0.7,
-      
+      "interval": 0.7
     }
   }
 }
@@ -1138,6 +1216,50 @@ RPD.GameScene:show(wnd)
 - `RPD.chooseOption(handler, title, text, ...)`: Present options to the player
 - `RPD.zapEffect(from, to, zapEffect)`: Create visual effects for attacks
 - `RPD.speckEffectFactory(particleType, evolutionType)`: Create particle effects
+
+### Text Formatting
+- Text can be formatted with colors using the syntax `[color:text]` where color is the name of the color or a hex code:
+  - `[green:text]` - Green text
+  - `[yellow:text]` - Yellow text  
+  - `[#ff0000:text]` - Red text using hex code
+  - `[#0000ff:text]` - Blue text using hex code
+  - Other supported color names include: red, blue, cyan, magenta, orange, purple, etc.
+- This formatting can be used in any text throughout the game including spell descriptions, item info, mob descriptions, UI messages, quest text, and any other displayed text
+
+## Text Formatting
+
+### Purpose
+Any text in the game can be formatted with colors to make it more visually appealing and informative. This includes spell descriptions, item info, mob descriptions, UI messages, quest text, and any other text displayed in the game.
+
+### Syntax
+Text can be formatted using the syntax `[color:text]` where color is either a named color or a hex code:
+- Named colors: `[green:text]`, `[red:text]`, `[blue:text]`, `[yellow:text]`, etc.
+- Hex colors: `[#ff0000:text]`, `[#00ff00:text]`, `[#0000ff:text]`, etc.
+
+### Examples
+```lua
+-- In spell descriptions
+info = "Select an [green:item] from your [yellow:backpack] to [#ff0000:curse] it."
+
+-- In item descriptions  
+info = "A [blue:mystical] [green:potion] that restores [red:health] and [yellow:magic]."
+
+-- In mob descriptions
+description = "A [red:ferocious] [purple:beast] with [orange:glowing] eyes."
+
+-- In game messages
+RPD.glog("You found a [yellow:shiny] [green:emerald]!")
+
+-- In quest or story text
+"Your [blue:quest] is to find the [red:ancient] [purple:artifact]."
+```
+
+### Common Use Cases
+- Highlighting important information in any text
+- Color-coding different types of information
+- Making text more visually appealing and easier to read
+- Creating emphasis for specific words or phrases
+- Improving user experience by making text more scannable
 
 ## Best Practices
 
