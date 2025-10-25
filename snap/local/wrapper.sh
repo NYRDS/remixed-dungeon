@@ -14,9 +14,8 @@ if [ -z "$JAR_FILE" ]; then
   exit 1
 fi
 
-# Set the JAVA_HOME to the bundled JRE within the snap
-export JAVA_HOME=$SNAP/usr/lib/jvm/java-17-openjdk-amd64
-export PATH=$JAVA_HOME/bin:$PATH
+# Use the system Java from the snap's stage packages
+export PATH=$SNAP/usr/lib/jvm/default-java/bin:$PATH
 
 exec java \
   --add-opens java.base/java.util=ALL-UNNAMED \

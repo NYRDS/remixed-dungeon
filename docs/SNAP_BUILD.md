@@ -40,7 +40,7 @@ If you want to ensure the snap uses the latest version from `version.properties`
 run the update script first:
 
 ```bash
-snap/update_version.sh
+snap/local/update_version.sh
 ```
 
 Note: If you don't run this script, the snap will use the version currently 
@@ -180,5 +180,7 @@ The snap uses a wrapper script located at `snap/local/wrapper.sh` that:
 - Launches the application JAR
 
 This script is copied to the snap during the build process, replacing the previous approach where the script was embedded directly in the snapcraft.yaml file.
+
+The wrapper script has been updated to use the default Java path from the snap's stage packages for better compatibility.
 
 Note: Files in the `snap/local` directory are ignored by snapcraft and can be used for storing helper scripts and other non-snapcraft related files.

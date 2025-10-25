@@ -5,8 +5,8 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -161,7 +161,7 @@ public abstract class SystemTextBase extends Text {
             try {
                 long color = Long.parseLong(colorStr.substring(1), 16);
                 if (colorStr.length() == 7) { // #RRGGBB
-                    return (int) (0xFF000000 | color);
+                    return (int) (0xFF000000L | color);
                 } else if (colorStr.length() == 9) { // #AARRGGBB
                     return (int) color;
                 }

@@ -13,7 +13,7 @@ return spell.init{
             image = 0,  -- Using a generic spell icon
             imageFile = "spellsIcons/necromancy.png",
             name = "Curse Item",
-            info = "Select an item from your backpack to curse it.",
+            info = "Select an [green:item] from your [yellow:backpack] to [#ff0000:curse] it.",
             magicAffinity = "Necromancy",
             targetingType = "self",
             level = 1,
