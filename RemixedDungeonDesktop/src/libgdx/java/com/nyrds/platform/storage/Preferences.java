@@ -20,11 +20,30 @@ public enum Preferences {
 	private final Map<String, Boolean> boolCache = new HashMap<>();
 	private final Map<String, Double> doubleCache = new HashMap<>();
 
-	private final File preferencesFile = new File("preferences.hjson");
+	private final File preferencesFile = getPreferencesFile();
 	private JsonObject preferencesJson;
 
 	Preferences() {
 		loadPreferences();
+	}
+
+	private static File getPreferencesFile() {
+		// Check if SNAP_USER_DATA is available via user.home system property
+		String snapUserData = System.getProperty("user.home");
+		if (snapUserData != null && !snapUserData.isEmpty()) {
+			// Use a specific subdirectory for Remixed Dungeon data in user's home
+			String userDataPath = snapUserData + File.separator + ".local" + File.separator + "share" + 
+								  File.separator + "remixed-dungeon";
+			// Ensure the directory exists
+			File userDataDir = new File(userDataPath);
+			if (!userDataDir.exists()) {
+				userDataDir.mkdirs();
+			}
+			return new File(userDataPath, "preferences.hjson");
+		}
+		
+		// Fallback to the original relative path behavior
+		return new File("preferences.hjson");
 	}
 
 	private void loadPreferences() {

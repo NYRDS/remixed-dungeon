@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.PUtil;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -48,8 +49,11 @@ public class RemixedDungeonApp {
             });
 
             try {
-                System.setOut(new PrintStream(new FileOutputStream("stdout.log")));
-                System.setErr(new PrintStream(new FileOutputStream("stderr.log")));
+                String logPath = getUserDataPath();
+                // Ensure the directory exists
+                new File(logPath).mkdirs();
+                System.setOut(new PrintStream(new FileOutputStream(logPath + "stdout.log")));
+                System.setErr(new PrintStream(new FileOutputStream(logPath + "stderr.log")));
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -133,5 +137,20 @@ public class RemixedDungeonApp {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private static String getUserDataPath() {
+        // Check if SNAP_USER_DATA is available via user.home system property
+        String snapUserData = System.getProperty("user.home");
+        if (snapUserData != null && !snapUserData.isEmpty()) {
+            // Use a specific subdirectory for Remixed Dungeon data in user's home
+            return snapUserData + System.getProperty("file.separator") + ".local" + 
+                   System.getProperty("file.separator") + "share" + 
+                   System.getProperty("file.separator") + "remixed-dungeon" + 
+                   System.getProperty("file.separator");
+        }
+
+        // Fallback to the original relative path behavior
+        return "";
     }
 }
