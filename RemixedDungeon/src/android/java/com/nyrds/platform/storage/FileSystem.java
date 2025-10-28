@@ -40,11 +40,9 @@ public class FileSystem {
     static public File[] listExternalStorage() {
 
         File storageDir = getExternalStorageFile(".");
-        if (storageDir != null) {
-            File[] ret = storageDir.listFiles();
-            if (ret != null) {
-                return ret;
-            }
+        File[] ret = storageDir.listFiles();
+        if (ret != null) {
+            return ret;
         }
 
         return new File[0];
