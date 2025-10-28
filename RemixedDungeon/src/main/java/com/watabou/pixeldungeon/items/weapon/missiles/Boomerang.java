@@ -79,10 +79,22 @@ public class Boomerang extends MissileWeapon {
 		((MissileSprite) owner.getSprite().getParent()
 				.recycle(MissileSprite.class)).reset(from, owner.getPos(),
 				this, ()-> {
+					// First, return the item to its original inventory slot if it was equipped
 					if (throwSlot != null && throwSlot != Belongings.Slot.NONE) {
 						owner.getBelongings().setItemForSlot(this, throwSlot);
 					} else {
 						owner.collect(this);
+					}
+					
+					// Then, if it was in a quickslot, place it back in the quickslot as well
+					int qsIndex = getQuickSlotIndex();
+					if (qsIndex >= 0) {
+						Item quickslotItem = QuickSlot.getEarlyLoadItem(qsIndex);
+						if (quickslotItem == null || quickslotItem == this) {
+							// Quickslot is available, set the boomerang back to it
+							QuickSlot.selectItem(this, qsIndex);
+						}
+						// If quickslot is occupied by another item, just leave it in the inventory
 					}
 					QuickSlot.refresh(owner);
 				});
