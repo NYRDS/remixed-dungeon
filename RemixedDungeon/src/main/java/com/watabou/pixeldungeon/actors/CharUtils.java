@@ -155,12 +155,9 @@ public class CharUtils {
         return true;
     }
 
-    public static void teleportRandom(@NotNull Char ch) {
+
+    public static void teleportRandomForce(@NotNull Char ch) {
         Level level = ch.level();
-        if (level.isBossLevel() || !ch.isMovable()) {
-            GLog.w(Utils.format(R.string.ScrollOfTeleportation_NoTeleport2, ch.getName_objective()));
-            return;
-        }
 
         int pos = level.randomRespawnCell();
 
@@ -172,6 +169,16 @@ public class CharUtils {
             ch.observe();
             GLog.i(Utils.format(R.string.ScrollOfTeleportation_Teleport2, ch.getName_objective()));
         }
+    }
+
+    public static void teleportRandom(@NotNull Char ch) {
+        Level level = ch.level();
+        if (level.isBossLevel() || !ch.isMovable()) {
+            GLog.w(Utils.format(R.string.ScrollOfTeleportation_NoTeleport2, ch.getName_objective()));
+            return;
+        }
+
+        teleportRandomForce(ch);
     }
 
     public static boolean hit(@NotNull Char attacker, Char defender, boolean magic) {

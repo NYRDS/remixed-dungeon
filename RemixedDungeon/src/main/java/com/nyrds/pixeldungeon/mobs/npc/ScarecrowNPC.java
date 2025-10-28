@@ -8,6 +8,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -38,7 +39,7 @@ public class ScarecrowNPC extends ImmortalNPC {
 			Item item = hero.getBelongings().getItem(Candy.class);
 			if (item != null && item.quantity() == 5) {
 
-				item.removeItemFrom(Dungeon.hero);
+				item.removeItemFrom(hero);
 
 				Item reward = new PumpkinPie();
 				reward.quantity(5);
@@ -48,11 +49,13 @@ public class ScarecrowNPC extends ImmortalNPC {
                 GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.ScarecrowNPC_Quest_End)));
 			} else {
                 GameScene.show(new WndQuest(this, StringsManager.getVar(R.string.ScarecrowNPC_Quest_Reminder)));
+
+				CharUtils.teleportRandomForce(this);
 			}
 
 		} else {
             String txtQuestStart = StringsManager.getVar(R.string.ScarecrowNPC_Quest_Start_Male);
-			if (Dungeon.hero.getGender() == Utils.FEMININE) {
+			if (hero.getGender() == Utils.FEMININE) {
                 txtQuestStart = StringsManager.getVar(R.string.ScarecrowNPC_Quest_Start_Female);
 			}
 			GameScene.show(new WndQuest(this, txtQuestStart));

@@ -424,7 +424,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         GameLoop.addToScene(prompt);
     }
 
-        public void setHotKey(int keyCode) {
+    public void setHotKey(int keyCode) {
         // First call the parent method to set up the hotkey functionality
         super.setHotKey(keyCode);
         
@@ -440,6 +440,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         
         layout(); // Re-layout to ensure proper positioning
     }
+
 
     @Override
     public void update() {

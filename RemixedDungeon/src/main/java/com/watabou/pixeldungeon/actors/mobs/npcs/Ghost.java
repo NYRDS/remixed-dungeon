@@ -16,6 +16,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -24,8 +25,6 @@ import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.effects.CellEmitter;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.items.quest.RatSkull;
@@ -33,7 +32,6 @@ import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.SewerLevel;
 import com.watabou.pixeldungeon.scenes.GameScene;
-
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.pixeldungeon.windows.WndSadGhost;
 import com.watabou.utils.Bundle;
@@ -137,23 +135,8 @@ public class Ghost extends NPC {
 				GameScene.show( new WndSadGhost( this, item ) );
 			} else {
                 GameScene.show( new WndQuest( this, Quest.alternative ? StringsManager.getVar(R.string.Ghost_Rat2) : StringsManager.getVar(R.string.Ghost_Rose2)) );
-				
-				int newPos = -1;
-				for (int i=0; i < 10; i++) {
-					newPos = Dungeon.level.randomRespawnCell();
-					if (newPos != -1) {
-						break;
-					}
-				}
-				if (newPos != -1) {
-					
-					Actor.freeCell( this );
-					
-					CellEmitter.get( getPos() ).start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
-					setPos(newPos);
-					getSprite().place( getPos() );
-					getSprite().setVisible(Dungeon.isCellVisible(getPos()));
-				}
+
+				CharUtils.teleportRandomForce(this);
 			}
 			
 		} else {
