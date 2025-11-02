@@ -38,6 +38,7 @@ class WebServerHtml {
         }
         msg += "<p><a href=\"/list\">📁 Browse Files</a></p>";
         msg += "<p><a href=\"/upload?path=\">📤 Upload Files</a></p>";
+        msg += "<p><a href=\"/log\">📜 Download Game Log</a></p>";
         msg += "</body></html>";
         return msg;
     }
@@ -49,7 +50,7 @@ class WebServerHtml {
         StringBuilder msg = new StringBuilder("<html><body>");
         msg.append(defaultHead());
         msg.append("<h1>File Browser</h1>");
-        msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/upload?path=\">📤 Upload Files</a></p>");
+        msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/upload?path=\">📤 Upload Files</a> | <a href=\"/log\">📜 Download Game Log</a></p>");
         msg.append("<h2>Files in Active Mod: ").append(ModdingMode.activeMod()).append("</h2>");
         listDir(msg, "");
         msg.append("</body></html>");
@@ -64,8 +65,8 @@ class WebServerHtml {
         StringBuilder msg = new StringBuilder("<html><body>");
         msg.append(defaultHead());
         msg.append("<h1>Directory: ").append(directoryPath.isEmpty() ? "/" : directoryPath).append("</h1>");
-        msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a> | <a href=\"/upload?path=");
-        String encodedPath = "";
+        msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a> | <a href=\"/log\">📜 Download Game Log</a> | <a href=\"/upload?path=");
+        String encodedPath;
         try {
             encodedPath = java.net.URLEncoder.encode(directoryPath, "UTF-8");
             GLog.debug("Encoded directory path for upload link: '" + encodedPath + "' from original: '" + directoryPath + "'");
@@ -113,7 +114,7 @@ class WebServerHtml {
                 uploadPath += "/";
             }
             GLog.debug("Generating upload link for directory in serveFs: '" + uploadPath + "'");
-            String encodedUploadPath = "";
+            String encodedUploadPath;
             try {
                 encodedUploadPath = java.net.URLEncoder.encode(uploadPath, "UTF-8");
                 GLog.debug("Encoded upload path in serveFs: '" + encodedUploadPath + "' from original: '" + uploadPath + "'");
@@ -151,7 +152,7 @@ class WebServerHtml {
         StringBuilder msg = new StringBuilder("<html><body>");
         msg.append(defaultHead());
         msg.append("<h1>File Upload</h1>");
-        msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a></p>");
+        msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a> | <a href=\"/log\">📜 Download Game Log</a></p>");
         
         if (message != null && !message.isEmpty()) {
             if (message.startsWith("ERROR:")) {
@@ -194,7 +195,7 @@ class WebServerHtml {
         StringBuilder msg = new StringBuilder("<html><body>");
         msg.append(defaultHead());
         msg.append("<h1>Not Found</h1>");
-        msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a> | <a href=\"/upload\">📤 Upload Files</a></p>");
+        msg.append("<p><a href=\"/\">🏠 Home</a> | <a href=\"/list\">📁 File Browser</a> | <a href=\"/log\">📜 Download Game Log</a> | <a href=\"/upload\">📤 Upload Files</a></p>");
         msg.append("<p>The requested file or directory was not found.</p>");
         msg.append("</body></html>");
         return msg.toString();
@@ -316,7 +317,7 @@ class WebServerHtml {
             uploadPath += "/";
         }
         GLog.debug("Generating upload link for directory: '" + uploadPath + "'");
-        String encodedUploadPath = "";
+        String encodedUploadPath;
         try {
             encodedUploadPath = java.net.URLEncoder.encode(uploadPath, "UTF-8");
             GLog.debug("Encoded upload path: '" + encodedUploadPath + "' from original: '" + uploadPath + "'");

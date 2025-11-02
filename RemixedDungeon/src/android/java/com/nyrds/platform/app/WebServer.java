@@ -1,15 +1,11 @@
 package com.nyrds.platform.app;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.game.Game;
-import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.Assets;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.scenes.AboutScene;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -77,7 +73,7 @@ public class WebServer extends NanoHTTPD {
             super.start();
             started = true;
             // Notify AboutScene to refresh the WebServer link
-            GameLoop.pushUiTask(() -> AboutScene.refreshWebServerLink());
+            GameLoop.pushUiTask(AboutScene::refreshWebServerLink);
         }
     }
 
@@ -301,6 +297,10 @@ public class WebServer extends NanoHTTPD {
                 GLog.debug("Final upload path: '" + path + "'");
                 return newFixedLengthResponse(Response.Status.OK, "text/html", WebServerHtml.serveUploadForm("", path));
             }
+            
+            if(uri.equals("/log")) {
+                return serveLog();
+            }
 
             if(uri.startsWith("/fs/")) {
                 return serveFs(uri.substring(4));
@@ -312,5 +312,32 @@ public class WebServer extends NanoHTTPD {
         }
 
         return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", "Not Found");
+    }
+    
+    /**
+     * Serve the game log file for download
+     */
+    private Response serveLog() {
+        try {
+            // Get the log file
+            File logFile = FileSystem.getExternalStorageFile("RePdLogFile.log");
+            
+            if (!logFile.exists()) {
+                return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", WebServerHtml.serveNotFound());
+            }
+            
+            // Open the file as an input stream
+            java.io.FileInputStream fis = new java.io.FileInputStream(logFile);
+            
+            // Create response with appropriate headers for file download
+            Response response = newFixedLengthResponse(Response.Status.OK, "text/plain", fis, logFile.length());
+            response.addHeader("Content-Disposition", "attachment; filename=\"RePdLogFile.log\"");
+            return response;
+            
+        } catch (Exception e) {
+            GLog.debug("Error serving log file: " + e.getMessage());
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html", 
+                WebServerHtml.serveUploadForm("ERROR: Failed to serve log file - " + e.getMessage(), ""));
+        }
     }
 }
