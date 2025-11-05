@@ -106,7 +106,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
         tfTitle.maxWidth(maxW);
         add(tfTitle);
 
-        if (!_saving && Game.instance().playGames.isConnected()) {
+        if (!_saving && Game.instance().playGamesAdapter.isConnected()) {
             SimpleButton refreshBtn = getRefreshBtn(WIDTH, tfTitle);
             add(refreshBtn);
         }
@@ -148,7 +148,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
 
                 buttons.add(btn);
 
-                if (Game.instance().playGames.isConnected()) {
+                if (Game.instance().playGamesAdapter.isConnected()) {
 
                     final String[] slotsDir = {SaveUtils.buildSlotFromTag(slotNameFromIndex(index), difficulty),
                             slotNameFromIndexAndMod(index),
@@ -162,7 +162,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
 
                         if ((_saving && (options[index] != null))
                                 || (!_saving
-                                && Game.instance().playGames.haveSnapshot(snapshotId)
+                                && Game.instance().playGamesAdapter.haveSnapshot(snapshotId)
                         )) {
                             Icons icon = _saving ? Icons.BTN_SYNC_OUT : Icons.BTN_SYNC_IN;
                             SimpleButton syncBtn = new SyncButton(icon, saveSnapshotId, modernSlotDir, heroClass, snapshotId);
@@ -249,7 +249,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
                 };
 
                 GameLoop.addToScene(refreshing);
-                Game.instance().playGames.loadSnapshots(() -> GameLoop.pushUiTask(() -> {
+                Game.instance().playGamesAdapter.loadSnapshots(() -> GameLoop.pushUiTask(() -> {
                     refreshing.hide();
                     refreshWindow();
                 }));
@@ -419,14 +419,14 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
         protected void onClick() {
 
             if (_saving) {
-                boolean res = Game.instance().playGames.packFilesToSnapshot(saveSnapshotId,
+                boolean res = Game.instance().playGamesAdapter.packFilesToSnapshot(saveSnapshotId,
                         FileSystem.getInternalStorageFile(modernSlotDir),
                         pathname -> SaveUtils.isRelatedTo(
                                 pathname.getPath(),
                                 heroClass));
                 showActionResult(res);
             } else {
-                Game.instance().playGames.unpackSnapshotTo(snapshotId,
+                Game.instance().playGamesAdapter.unpackSnapshotTo(snapshotId,
                         FileSystem.getInternalStorageFile(modernSlotDir),
                         res -> GameLoop.pushUiTask(() -> showActionResult(res)));
             }

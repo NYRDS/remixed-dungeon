@@ -11,14 +11,13 @@ import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingFlowParams;
 import com.android.billingclient.api.BillingResult;
 import com.android.billingclient.api.ConsumeResponseListener;
+import com.android.billingclient.api.PendingPurchasesParams;
+import com.android.billingclient.api.ProductDetails;
 import com.android.billingclient.api.Purchase;
-import com.android.billingclient.api.PurchaseHistoryRecord;
-import com.android.billingclient.api.PurchaseHistoryResponseListener;
 import com.android.billingclient.api.PurchasesResponseListener;
 import com.android.billingclient.api.PurchasesUpdatedListener;
+import com.android.billingclient.api.QueryProductDetailsParams;
 import com.android.billingclient.api.QueryPurchasesParams;
-import com.android.billingclient.api.SkuDetails;
-import com.android.billingclient.api.SkuDetailsParams;
 import com.nyrds.market.GoogleIapCheck;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
@@ -33,6 +32,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -40,22 +40,21 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
 
-
-
-public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResponseListener, ConsumeResponseListener {
+public class IapAdapter implements PurchasesUpdatedListener, ConsumeResponseListener {
 
     private final Map<String, Purchase> mPurchases = new HashMap<>();
     private final BillingClient mBillingClient;
     private boolean mIsServiceConnected;
     private final IPurchasesUpdated mPurchasesUpdatedListener;
-    private Map<String, SkuDetails> mSkuDetails = new HashMap<>();
+    private Map<String, ProductDetails> mSkuDetails = new HashMap<>();
     private boolean mIsServiceConnecting;
 
     private final ConcurrentLinkedQueue<Runnable> mRequests = new ConcurrentLinkedQueue<>();
 
     public IapAdapter(Context context, IPurchasesUpdated purchasesUpdatedListener) {
         mBillingClient = BillingClient.newBuilder(context)
-                .enablePendingPurchases()
+                .enableAutoServiceReconnection()
+                .enablePendingPurchases(PendingPurchasesParams.newBuilder().enableOneTimeProducts().build())
                 .setListener(this)
                 .build();
         mPurchasesUpdatedListener = purchasesUpdatedListener;
@@ -63,15 +62,23 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
 
     public void querySkuList(final List<String> skuList) {
         Runnable queryRequest = () -> {
-            SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
-            params.setSkusList(skuList).setType(BillingClient.SkuType.INAPP);
-            mBillingClient.querySkuDetailsAsync(params.build(),
-                    (billingResult, list) -> {
-                        if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
-                                && list != null) {
+            List<QueryProductDetailsParams.Product> productList = new ArrayList<>();
+            for (String sku : skuList) {
+                productList.add(QueryProductDetailsParams.Product.newBuilder()
+                        .setProductId(sku)
+                        .setProductType(BillingClient.ProductType.INAPP)
+                        .build());
+            }
+            QueryProductDetailsParams params = QueryProductDetailsParams.newBuilder()
+                    .setProductList(productList)
+                    .build();
+            mBillingClient.queryProductDetailsAsync(params,
+                    (billingResult, queryProductDetailsResult) -> {
+                        List<ProductDetails> list = queryProductDetailsResult.getProductDetailsList();
+                        if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                             mSkuDetails = new HashMap<>();
-                            for (SkuDetails skuDetails : list) {
-                                mSkuDetails.put(skuDetails.getSku().toLowerCase(Locale.ROOT), skuDetails);
+                            for (ProductDetails productDetails : list) {
+                                mSkuDetails.put(productDetails.getProductId().toLowerCase(Locale.ROOT), productDetails);
                             }
                         }
                     });
@@ -80,23 +87,35 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
     }
 
     public void doPurchase(final String skuId) {
-        if(mSkuDetails.containsKey(skuId)) {
-            var sku = mSkuDetails.get(skuId);
+        if (mSkuDetails.containsKey(skuId.toLowerCase(Locale.ROOT))) {
+            ProductDetails productDetails = mSkuDetails.get(skuId.toLowerCase(Locale.ROOT));
+            String offerToken = "";
+            List<ProductDetails.OneTimePurchaseOfferDetails> offerDetailsList = productDetails.getOneTimePurchaseOfferDetailsList();
+            if (!offerDetailsList.isEmpty()) {
+                offerToken = offerDetailsList.get(0).getOfferToken();
+            }
 
+            String finalOfferToken = offerToken;
             Runnable purchaseFlowRequest = () -> {
                 try {
+                    List<BillingFlowParams.ProductDetailsParams> productDetailsParamsList = new ArrayList<>();
+                    productDetailsParamsList.add(BillingFlowParams.ProductDetailsParams.newBuilder()
+                            .setProductDetails(productDetails)
+                            .setOfferToken(finalOfferToken)
+                            .build());
+
                     BillingFlowParams purchaseParams = BillingFlowParams.newBuilder()
-                            .setSkuDetails(sku)
+                            .setProductDetailsParamsList(productDetailsParamsList)
                             .build();
                     mBillingClient.launchBillingFlow(Game.instance(), purchaseParams);
-                } catch (Throwable e) { //because backward compatibility isn't a thing for Google
+                } catch (Throwable e) { // for backward compatibility
                     EventCollector.logException(e, "GoogleIap.doPurchase");
                 }
             };
 
             executeServiceRequest(purchaseFlowRequest);
         } else {
-            EventCollector.logException("No sku: |"+ skuId+"|");
+            EventCollector.logException("No sku: |" + skuId + "|");
         }
     }
 
@@ -105,8 +124,6 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
             EventCollector.logException("bad signature");
             return;
         }
-        //GLog.w("purchase: %s",purchase.toString());
-        //mBillingClient.consumeAsync(purchase.getPurchaseToken(),this);
         if (purchase.getPurchaseState() == Purchase.PurchaseState.PURCHASED) {
 
             // Acknowledge the purchase if it hasn't already been acknowledged.
@@ -115,21 +132,19 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
                         AcknowledgePurchaseParams.newBuilder()
                                 .setPurchaseToken(purchase.getPurchaseToken())
                                 .build();
-                mBillingClient.acknowledgePurchase(acknowledgePurchaseParams, billingResult -> {
-                    EventCollector.logEvent("billing_result",
-                            billingResult.getResponseCode()
-                            + "->"
-                            + billingResult.getDebugMessage());
-                });
+                mBillingClient.acknowledgePurchase(acknowledgePurchaseParams, billingResult -> EventCollector.logEvent("billing_result",
+                        billingResult.getResponseCode()
+                                + "->"
+                                + billingResult.getDebugMessage()));
             }
 
-            for(var sku: purchase.getSkus()) {
-                mPurchases.put(sku.toLowerCase(Locale.ROOT), purchase);
+            for (var product : purchase.getProducts()) {
+                mPurchases.put(product.toLowerCase(Locale.ROOT), purchase);
 
                 String orderId = purchase.getOrderId();
                 String purchaseData = purchase.getOrderId() + ","
                         + purchase.getPackageName() + ","
-                        + sku + ","
+                        + product + ","
                         + purchase.getPurchaseToken();
                 if (!Preferences.INSTANCE.getBoolean(orderId, false)) {
                     EventCollector.logEvent("iap_data", purchaseData);
@@ -137,26 +152,19 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
                 }
             }
         }
-
     }
 
     public void queryPurchases() {
         Runnable queryToExecute = () -> {
-            //Purchase.PurchasesResult result = mBillingClient.queryPurchases(BillingClient.SkuType.INAPP);
-            //onPurchasesUpdated(result.getBillingResult(), result.getPurchasesList());
-
-            mBillingClient.queryPurchasesAsync(
-                    QueryPurchasesParams.newBuilder()
-                            .setProductType(BillingClient.ProductType.INAPP)
-                            .build(),
-                    new PurchasesResponseListener() {
-                        public void onQueryPurchasesResponse(@NotNull BillingResult billingResult, List purchases) {
-                            onPurchasesUpdated(billingResult, purchases);
-                        }
-                    }
-            );
-
-            mBillingClient.queryPurchaseHistoryAsync(BillingClient.SkuType.INAPP, this);
+            QueryPurchasesParams params = QueryPurchasesParams.newBuilder()
+                    .setProductType(BillingClient.ProductType.INAPP)
+                    .build();
+            mBillingClient.queryPurchasesAsync(params, new PurchasesResponseListener() {
+                @Override
+                public void onQueryPurchasesResponse(@NotNull BillingResult billingResult, @NotNull List<Purchase> purchases) {
+                    onPurchasesUpdated(billingResult, purchases);
+                }
+            });
         };
 
         executeServiceRequest(queryToExecute);
@@ -200,7 +208,6 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
                 startServiceConnection();
             }
         });
-
     }
 
     private boolean verifySignature(String signedData, String signature) {
@@ -220,11 +227,14 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
     public String getSkuPrice(@NotNull String sku) {
         String skuLowerCase = sku.toLowerCase(Locale.ROOT);
         if (mSkuDetails.containsKey(skuLowerCase)) {
-            return mSkuDetails.get(skuLowerCase).getPrice();
-        } else {
-            //EventCollector.logException(sku); //Yeah, this happens a lot...
-            return Utils.EMPTY_STRING;
+            ProductDetails productDetails = mSkuDetails.get(skuLowerCase);
+            List<ProductDetails.OneTimePurchaseOfferDetails> offerDetailsList = productDetails.getOneTimePurchaseOfferDetailsList();
+            if (!offerDetailsList.isEmpty()) {
+                return offerDetailsList.get(0).getFormattedPrice();
+            }
         }
+        //EventCollector.logException(sku); //Yeah, this happens a lot...
+        return Utils.EMPTY_STRING;
     }
 
     private Executor getExecutor() {
@@ -235,18 +245,9 @@ public class IapAdapter implements PurchasesUpdatedListener, PurchaseHistoryResp
         return mIsServiceConnected && !mIsServiceConnecting;
     }
 
-
     @Override
     public void onConsumeResponse(BillingResult billingResult, @NotNull String s) {
         GLog.w("consumed: %d %s", billingResult.getDebugMessage(), s);
-    }
-
-    @Override
-    public void onPurchaseHistoryResponse(BillingResult billingResult, List<PurchaseHistoryRecord> list) {
-        if (billingResult.getResponseCode() != BillingClient.BillingResponseCode.OK) {
-            EventCollector.logException("queryPurchasesHistory" + billingResult.getDebugMessage());
-        }
-
     }
 
     @Override

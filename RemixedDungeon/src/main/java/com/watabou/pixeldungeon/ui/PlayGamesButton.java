@@ -14,7 +14,7 @@ public class PlayGamesButton extends ImageButton {
 	}
 
 	private void updateStatus() {
-		if (Game.instance().playGames.isConnected()) {
+		if (Game.instance().playGamesAdapter.isConnected()) {
 			image.brightness(1.5f);
 		} else {
 			image.brightness(0.5f);

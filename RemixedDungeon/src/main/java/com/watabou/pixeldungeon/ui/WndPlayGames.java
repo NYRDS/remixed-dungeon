@@ -2,7 +2,7 @@ package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.PlayGames;
+import com.nyrds.pixeldungeon.support.PlayGamesAdapter;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
@@ -23,7 +23,7 @@ public class WndPlayGames extends Window {
 
     public WndPlayGames() {
 
-        boolean playGamesConnected = Game.instance().playGames.isConnected();
+        boolean playGamesConnected = Game.instance().playGamesAdapter.isConnected();
         resizeLimited(120);
 
         Text listTitle = PixelScene.createMultiline(R.string.WndPlayGames_Title, GuiProperties.mediumTitleFontSize());
@@ -38,7 +38,7 @@ public class WndPlayGames extends Window {
 
         CheckBox usePlayGames = new CheckBox(StringsManager.getVar(R.string.WndPlayGames_Use),
                 Preferences.INSTANCE.getBoolean(CommonPrefs.KEY_USE_PLAY_GAMES, false)
-                && Game.instance().playGames.isConnected()
+                && Game.instance().playGamesAdapter.isConnected()
                 )
         {
             @Override
@@ -46,10 +46,10 @@ public class WndPlayGames extends Window {
                 super.checked(value);
 
                 if (value) {
-                    Game.instance().playGames.connectExplicit();
+                    Game.instance().playGamesAdapter.connectExplicit();
                     GameLoop.addToScene(new WndMessage(StringsManager.getVar(R.string.WndPlayGames_Connecting)));
                 } else {
-                    Game.instance().playGames.disconnect();
+                    Game.instance().playGamesAdapter.disconnect();
                 }
 
                 hide();
@@ -67,7 +67,7 @@ public class WndPlayGames extends Window {
             @Override
             protected void onClick() {
                 super.onClick();
-                Game.instance().playGames.showBadges();
+                Game.instance().playGamesAdapter.showBadges();
             }
         });
 
@@ -75,7 +75,7 @@ public class WndPlayGames extends Window {
             @Override
             protected void onClick() {
                 super.onClick();
-                Game.instance().playGames.showLeaderboard();
+                Game.instance().playGamesAdapter.showLeaderboard();
             }
         });
 
@@ -83,7 +83,7 @@ public class WndPlayGames extends Window {
             @Override
             protected void onClick() {
                 super.onClick();
-                Game.instance().playGames.backupProgress(new ResultHandler());
+                Game.instance().playGamesAdapter.backupProgress(new ResultHandler());
             }
         });
 
@@ -91,18 +91,18 @@ public class WndPlayGames extends Window {
             @Override
             protected void onClick() {
                 super.onClick();
-                Game.instance().playGames.restoreProgress(new ResultHandler());
+                Game.instance().playGamesAdapter.restoreProgress(new ResultHandler());
             }
         });
-
+/*
         addButton(new RedButton(R.string.WndSettings_RecordVideo) {
             @Override
             protected void onClick() {
                 super.onClick();
-                Game.instance().playGames.showVideoOverlay();
+                Game.instance().playGamesAdapter.showVideoOverlay();
             }
         });
-
+*/
         resize(width, y);
     }
 
@@ -112,7 +112,7 @@ public class WndPlayGames extends Window {
         y += btn.height();
     }
 
-    public static class ResultHandler implements PlayGames.IResult {
+    public static class ResultHandler implements PlayGamesAdapter.IResult {
 
         private final WndMessage working;
         ResultHandler() {

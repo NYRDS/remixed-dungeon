@@ -30,7 +30,7 @@ import androidx.core.content.PermissionChecker;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.nyrds.pixeldungeon.support.PlayGames;
+import com.nyrds.pixeldungeon.support.PlayGamesAdapter;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.audio.MusicManager;
@@ -69,7 +69,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
     @SuppressLint("StaticFieldLeak")
     private static Game instance;
 
-    public PlayGames playGames;
+    public PlayGamesAdapter playGamesAdapter;
     public Iap iap;
     public Executor serviceExecutor = new ReportingExecutor();
 

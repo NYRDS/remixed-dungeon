@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.support.PlayGames;
+import com.nyrds.pixeldungeon.support.PlayGamesAdapter;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.WndLocalModInstall;
 import com.nyrds.platform.EventCollector;
@@ -160,7 +160,7 @@ public class TitleScene extends PixelScene {
             leftGroup.add(new PremiumPrefsButton());
         }
 
-        if (PlayGames.usable()) {
+        if (PlayGamesAdapter.usable()) {
             leftGroup.add(new PlayGamesButton());
         }
 

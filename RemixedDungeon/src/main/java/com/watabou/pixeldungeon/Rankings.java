@@ -94,7 +94,7 @@ public enum Rankings {
 		EventCollector.logEvent("gameover", resDesc);
 
 		if (ModdingBase.inRemixed()){
-			Game.instance().playGames.submitScores(GameLoop.getDifficulty(), rec.score);
+			Game.instance().playGamesAdapter.submitScores(GameLoop.getDifficulty(), rec.score);
 		}
 
 		String gameFile = Utils.format( DETAILS_FILE, SystemTime.now() );
