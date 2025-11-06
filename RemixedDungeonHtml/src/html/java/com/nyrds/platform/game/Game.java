@@ -38,6 +38,7 @@ public class Game implements ApplicationListener, InputProcessor {
     protected GameLoop gameLoop;
     public Iap iap = new Iap();
     public PlayGames playGames = new PlayGames();
+    public PlayGames playGamesAdapter = playGames; // For compatibility with main source code that expects PlayGamesAdapter
     
     private final Map<Integer, Long> keyDownTimes = new HashMap<>();
     private static final long AUTO_FIRE_INTERVAL = 250;

@@ -18,7 +18,7 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.support.AdsUtils;
 import com.nyrds.pixeldungeon.support.EuConsent;
-import com.nyrds.pixeldungeon.support.PlayGames;
+import com.nyrds.pixeldungeon.support.PlayGamesAdapter;
 import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.storage.AndroidSAF;
@@ -91,7 +91,7 @@ public class RemixedDungeon extends Game {
 		isDev = GameLoop.version.contains("in_dev");
 		
 		EuConsent.check(this);
-		playGames = new PlayGames();
+		playGamesAdapter = new PlayGamesAdapter();
     }
 
 	@Override
@@ -118,7 +118,7 @@ public class RemixedDungeon extends Game {
 		Sample.INSTANCE.enable(GamePreferences.soundFx());
 
 		if (Preferences.INSTANCE.getBoolean(Preferences.KEY_USE_PLAY_GAMES, false)) {
-			playGames.connect();
+			playGamesAdapter.connect();
 		}
 
 		AdsUtils.initRewardVideo();
@@ -143,7 +143,7 @@ public class RemixedDungeon extends Game {
 
 		GLog.debug("onActivityResult(" + requestCode + "," + resultCode + "," + data +" "+extras);
 
-		if(playGames.onActivityResult(requestCode, resultCode, data)) {
+		if(playGamesAdapter.onActivityResult(requestCode, resultCode, data)) {
 			return;
 		}
 

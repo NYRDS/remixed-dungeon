@@ -193,21 +193,22 @@ dependencies {
         exclude group: "org.bidon", module: "yandex-adapter"
     }
 
-    googlePlayImplementation 'com.yandex.android:mobileads:7.16.0'
+    googlePlayImplementation 'com.yandex.android:mobileads:7.16.1'
 
-    ruStoreImplementation 'com.yandex.android:mobileads:7.16.0'
+    ruStoreImplementation 'com.yandex.android:mobileads:7.16.1'
     ruStoreImplementation 'ru.rustore.sdk:billingclient:9.1.0'
+
 
 
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.9.0'
     googlePlayImplementation 'com.google.android.gms:play-services-auth:21.4.0'
-    googlePlayImplementation "com.google.android.gms:play-services-games:24.0.0"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:24.6.0'
+    googlePlayImplementation "com.google.android.gms:play-services-games-v2:21.0.0"
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:24.7.0'
 
 
-    googlePlayImplementation 'com.android.billingclient:billing:7.1.1'
+    googlePlayImplementation 'com.android.billingclient:billing:8.0.0'
 
-    googlePlayImplementation platform('com.google.firebase:firebase-bom:34.3.0')
+    googlePlayImplementation platform('com.google.firebase:firebase-bom:34.5.0')
 
     googlePlayImplementation 'com.google.firebase:firebase-analytics'
     googlePlayImplementation 'com.google.firebase:firebase-crashlytics'

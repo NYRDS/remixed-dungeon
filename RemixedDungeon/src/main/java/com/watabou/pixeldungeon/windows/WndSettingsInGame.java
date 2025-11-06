@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndInGameUiSettings;
-import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.CommonPrefs;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;
@@ -52,18 +51,18 @@ public class WndSettingsInGame extends WndMenuCommon {
                 WndSettingsInGame.this.add(new WndInGameUiSettings());
             }
         });
-
-        if (Game.instance().playGames.isConnected()) {
+/*
+        if (Game.instance().playGamesAdapter.isConnected()) {
             menuItems.add(new MenuButton(R.string.WndSettings_RecordVideo) {
                 @Override
                 protected void onClick() {
                     super.onClick();
-                    Game.instance().playGames.showVideoOverlay();
+                    Game.instance().playGamesAdapter.showVideoOverlay();
 
                 }
             });
         }
-
+*/
         menuItems.add(new MenuCheckBox(R.string.WndSettingsInGame_GameLog, GLog.enabled) {
             @Override
             protected void onClick() {

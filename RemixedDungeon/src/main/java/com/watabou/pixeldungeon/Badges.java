@@ -984,7 +984,7 @@ public class Badges {
 				return;
 			}
 
-			Game.instance().playGames.unlockAchievement(achievementCode);
+			Game.instance().playGamesAdapter.unlockAchievement(achievementCode);
 		}
 	}
 
