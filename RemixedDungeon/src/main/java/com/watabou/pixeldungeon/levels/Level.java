@@ -1201,7 +1201,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		if(!cellValid(cell)) {
-			EventCollector.logException("trying to do animated drop "+item.getEntityKind()+" on invalid cell "+String.valueOf(cell));
+			EventCollector.logException("trying to do animated drop "+item.getEntityKind()+" on invalid cell "+ cell);
 			return;
 		}
 
