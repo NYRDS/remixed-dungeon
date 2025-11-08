@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
 import java.io.File;
 import java.io.FileFilter;
 
-public class PlayGames {
+public class PlayGamesAdapter {
     public static boolean usable() {
         return false;
     }

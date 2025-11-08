@@ -15,11 +15,25 @@ if [ -z "$JAR_FILE" ]; then
 fi
 
 # Use the system Java from the snap's stage packages
-export PATH=$SNAP/usr/lib/jvm/default-java/bin:$PATH
+export PATH=$SNAP/usr/lib/jvm/java-17-openjdk-amd64/bin:$PATH
+
+# Audio environment setup for ALSA
+export ALSA_PCM_CARD=0
+export ALSA_PCM_DEVICE=0
+export PULSE_SERVER="unix:/run/user/$(id -u)/pulse/native"
+
+# Try to set up ALSA configuration if available
+if [ -f "/usr/share/alsa/alsa.conf" ]; then
+    export ALSA_CONFIG_PATH="/usr/share/alsa/alsa.conf"
+fi
 
 exec java \
   --add-opens java.base/java.util=ALL-UNNAMED \
   -Dassets.dir="$SNAP/data" \
   -Duser.home="$SNAP_USER_DATA" \
+  -Djava.library.path="$SNAP/usr/lib/x86_64-linux-gnu:$SNAP/usr/lib/jni:$SNAP/usr/lib/jvm/java-17-openjdk-amd64/lib" \
+  -Djavax.sound.sampled.AudioSystem.provider="com.sun.media.sound.DirectAudioDeviceProvider" \
+  -Dsun.java2d.opengl=true \
+  -Dsun.java2d.xrender=true \
   -jar "$JAR_FILE" \
   "$@"

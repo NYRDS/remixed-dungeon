@@ -57,6 +57,8 @@ public class FileSystem {
 
 	private static String[] getAllResPaths() {
 		return new String[]{
+				"data/mods/" + ModdingBase.activeMod() + "/",
+				"data/mods/Remixed/",
 				"mods/" + ModdingBase.activeMod() + "/",
 				"mods/Remixed/",
 				"../assets/",
@@ -91,6 +93,7 @@ public class FileSystem {
 	static public @NotNull FileHandle getInternalStorageFileHandleBase(String fileName) {
 		FileHandle fileHandle = null;
 		for(String path : new String[] {
+				"data/mods/Remixed/",
 				"mods/Remixed/",
 				"../assets/",
 				"../d_assets/",
@@ -126,7 +129,7 @@ public class FileSystem {
 
 	@NotNull
 	static public File[] listExternalStorage() {
-		File storageDir = Gdx.files.internal("mods/").file();
+		File storageDir = Gdx.files.internal(getUserDataPath("mods/") + File.separator).file();
 
 		File[] ret = storageDir.listFiles();
 		if(ret != null) {
@@ -139,7 +142,7 @@ public class FileSystem {
 
 	//Will be used for saves only
 	static public OutputStream getOutputStream(String filename) throws FileNotFoundException {
-		filename = SAVES_PATH + filename;
+		filename = getUserDataPath(SAVES_PATH) + filename;
 
 		FileHandle fileHandle = Gdx.files.local(filename);
 		if(!fileHandle.parent().exists()) {
@@ -150,12 +153,12 @@ public class FileSystem {
 	}
 
 	static public InputStream getInputStream(String filename) throws FileNotFoundException {
-		filename = SAVES_PATH + filename;
+		filename = getUserDataPath(SAVES_PATH) + filename;
 		return new FileInputStream(Gdx.files.local(filename).file());
 	}
 
 	static public File getExternalStorageFile(String fileName) {
-		return Gdx.files.internal("mods/"+fileName).file();
+		return Gdx.files.internal(getUserDataPath("mods/") + File.separator + fileName).file();
 	}
 
 	static public String getExternalStorageFileName(String fname) {
@@ -274,5 +277,19 @@ public class FileSystem {
 	public static void reinitAllCaches() {
 		reinitFileCache();
 		reinitModCache();
+	}
+
+	public static String getUserDataPath(String subPath) {
+		// Check if SNAP_USER_DATA is available via user.home system property
+		String snapUserData = System.getProperty("user.home");
+		if (snapUserData != null && !snapUserData.isEmpty()) {
+			// Ensure we're not using the actual home directory but a subdirectory for safety
+			// Use a specific subdirectory for Remixed Dungeon data
+			return snapUserData + File.separator + ".local" + File.separator + "share" + 
+				   File.separator + "remixed-dungeon" + File.separator + subPath;
+		}
+		
+		// Fallback to the original relative path behavior
+		return subPath;
 	}
 }

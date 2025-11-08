@@ -29,8 +29,10 @@ public class DesktopQuickModTest {
     
     private static void clearLogFile() {
         try {
-            // Define the log file path
-            String logFilePath = "mods/RePdLogFile.log";
+            // Define the log file path using user data directory
+            String userDataPath = getUserDataPath();
+            new File(userDataPath).mkdirs(); // Ensure directory exists
+            String logFilePath = userDataPath + "mods/RePdLogFile.log";
             
             // Create the file if it doesn't exist
             File logFile = new File(logFilePath);
@@ -46,5 +48,20 @@ public class DesktopQuickModTest {
         } catch (IOException e) {
             System.err.println("Failed to clear log file: " + e.getMessage());
         }
+    }
+    
+    private static String getUserDataPath() {
+        // Check if SNAP_USER_DATA is available via user.home system property
+        String snapUserData = System.getProperty("user.home");
+        if (snapUserData != null && !snapUserData.isEmpty()) {
+            // Use a specific subdirectory for Remixed Dungeon data in user's home
+            return snapUserData + System.getProperty("file.separator") + ".local" + 
+                   System.getProperty("file.separator") + "share" + 
+                   System.getProperty("file.separator") + "remixed-dungeon" + 
+                   System.getProperty("file.separator");
+        }
+
+        // Fallback to the original relative path behavior
+        return "";
     }
 }

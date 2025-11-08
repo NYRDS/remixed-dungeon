@@ -13,8 +13,42 @@ confinement: strict
 architectures:
   - build-on: amd64
 
+# New: Layouts to bind ALSA configs and plugins to expected paths
+layout:
+  /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib:
+    bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib
+  /usr/share/alsa:
+    bind: $SNAP/usr/share/alsa
+
 parts:
+  # New: ALSA mixin part for audio routing and config handling
+  alsa-mixin:
+    plugin: dump
+    source: https://github.com/diddlesnaps/snapcraft-alsa.git
+    source-subdir: snapcraft-assets
+    build-packages:
+      - libasound2-dev
+    stage-packages:
+      - libasound2
+      - libasound2-plugins
+      - yad
+    stage:
+      - etc/asound.conf
+      - snap/command-chain/alsa-launch
+      - usr/bin/yad*
+      - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib
+      - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/libasound*
+      - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/libdnsfile*
+      - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/libFLAC*
+      - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/libjack*
+      - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/libpulse*
+      - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/libsamplerate*
+      - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/libspeex*
+      - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/libvorbis*
+      - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio
+
   remixed-dungeon:
+    after: [alsa-mixin]  # New: Ensure this part runs after alsa-mixin
     plugin: dump
     source: .
     override-build: |
@@ -29,7 +63,7 @@ parts:
       ./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:shadowJar --no-daemon
       
       # Copy the built JAR file - find the correct one based on actual build output
-      cp RemixedDungeonDesktop/build/libs/RemixedDungeonDesktop.jar $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon.jar
+      cp RemixedDungeonDesktop/build/libs/RemixedDungeon.jar $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon.jar
       
       # Copy assets and other necessary files
       mkdir -p $SNAPCRAFT_PART_INSTALL/data/mods/Remixed
@@ -50,7 +84,7 @@ parts:
       - curl
     stage-packages:
       - openjdk-17-jre-headless
-      - libasound2
+      - libasound2  # Already present, but ensure it's not removed
       - libgtk-3-0
       - libgl1
       - libglu1-mesa
@@ -67,6 +101,7 @@ parts:
 
 apps:
   remixed-dungeon:
+    command-chain: ["snap/command-chain/alsa-launch"]  # New: Use ALSA launch chain for audio init
     command: bin/remixed-dungeon-wrapper.sh
     plugs:
       - desktop
@@ -77,8 +112,9 @@ apps:
       - network
       - home
       - removable-media
+      - alsa  # New: Optional, but recommended for fallback direct ALSA access
+      - audio-record  # New: Optional, if recording is needed (unlikely for this game)
     environment:
       DISPLAY: $DISPLAY
       WAYLAND_DISPLAY: $WAYLAND_DISPLAY
       XDG_CURRENT_DESKTOP: $XDG_CURRENT_DESKTOP
-      XDG_SESSION_DESKTOP: $XDG_SESSION_DESKTOP

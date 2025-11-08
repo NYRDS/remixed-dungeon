@@ -1,10 +1,9 @@
 package com.nyrds.platform.storage;
 
-import static com.nyrds.pixeldungeon.ml.BuildConfig.SAVES_PATH;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.util.ModdingBase;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
@@ -26,7 +25,7 @@ public class SaveUtils {
 	private static final String AUTO_SAVE = "autoSave";
 
 	static FileHandle local(String filename) {
-		return Gdx.files.local(SAVES_PATH + File.separator + filename);
+		return Gdx.files.local(FileSystem.getUserDataPath(BuildConfig.SAVES_PATH) + File.separator + filename);
 	}
 
 	static private boolean hasClassTag(HeroClass cl, String fname) {
