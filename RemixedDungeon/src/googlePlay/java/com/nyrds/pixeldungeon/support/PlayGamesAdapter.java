@@ -85,6 +85,7 @@ public class PlayGamesAdapter {
 				onConnected();
 			} else {
 				connecting = false;
+
 				handleSignInFailure(task.getException());
 				int failCount = Preferences.INSTANCE.getInt(Preferences.KEY_PLAY_GAMES_CONNECT_FAILURES, 0);
 				failCount++;
@@ -393,7 +394,11 @@ public class PlayGamesAdapter {
 		*/
 	}
 
-	private void handleSignInFailure(Exception e) {
+	private void handleSignInFailure(@Nullable Exception e) {
+		if(e == null) {
+			EventCollector.logException(new Exception("Something gone wrong while signing in"));
+		}
+
 		if (e instanceof ResolvableApiException) {
 			try {
 				((ResolvableApiException) e).startResolutionForResult(Game.instance(), RC_SIGN_IN);
