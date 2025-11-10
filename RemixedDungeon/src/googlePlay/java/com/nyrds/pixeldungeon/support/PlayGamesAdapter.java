@@ -397,6 +397,7 @@ public class PlayGamesAdapter {
 	private void handleSignInFailure(@Nullable Exception e) {
 		if(e == null) {
 			EventCollector.logException(new Exception("Something gone wrong while signing in"));
+			return;
 		}
 
 		if (e instanceof ResolvableApiException) {
