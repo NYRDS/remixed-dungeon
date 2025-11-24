@@ -66,6 +66,12 @@ public class Monk extends Mob {
 		}
 	}
 
+	public void die(@NotNull NamedEntityKind cause) {
+		Imp.Quest.process( this );
+
+		super.die( cause );
+	}
+
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
 		

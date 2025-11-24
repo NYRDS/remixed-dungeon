@@ -251,6 +251,10 @@ public class MobSpriteDef extends MobSprite {
             eff.die();
         }
 
+        for (Emitter emitter : emitterMap.values()) {
+            emitter.killAndErase();
+        }
+
         super.die();
     }
 
@@ -468,14 +472,7 @@ public class MobSpriteDef extends MobSprite {
 
                     emitter.autoKill = false;
 
-                    if (emitterConfig.has("position")) {
-                        JSONObject position = emitterConfig.getJSONObject("position");
-                        float x = (float) position.optDouble("x", 0);
-                        float y = (float) position.optDouble("y", 0);
-                        emitter.pos(getX() + x, getY() + y);
-                    } else {
-                        emitter.pos(this);
-                    }
+                    emitter.pos(this);
 
                     String particleType = emitterConfig.optString("particleType", "Speck.WOOL");
                     int particleTypeId = getParticleTypeId(particleType);

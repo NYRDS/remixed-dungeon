@@ -191,11 +191,7 @@ public class CharUtils {
         boolean hit = (magic ? acuRoll * 2 : acuRoll) >= defRoll;
 
         if (ModQuirks.mobLeveling) {
-            if (hit && attacker instanceof Mob) {
-                attacker.earnExp(1);
-            }
-
-            if (!hit && defender instanceof Mob) {
+            if (!hit && defender instanceof Mob && !defender.isPet()) {
                 defender.earnExp(1);
             }
         }

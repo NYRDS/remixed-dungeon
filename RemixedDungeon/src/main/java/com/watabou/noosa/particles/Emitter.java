@@ -56,12 +56,6 @@ public class Emitter extends Group {
 		y = target.y;
 	}
 
-	public void pos( Visual target, float ix, float iy, float width, float height ) {
-		this.target = target;
-		x = target.x;
-		y = target.y;
-	}
-
 	public void burst( Factory factory, int quantity ) {
 		start( factory, 0, quantity );
 	}
