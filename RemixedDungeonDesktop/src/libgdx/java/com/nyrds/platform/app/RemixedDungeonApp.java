@@ -19,6 +19,8 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import com.nyrds.platform.app.WebServer;
+
 public class RemixedDungeonApp {
     private static String[] savedArgs = new String[0];
 
@@ -27,6 +29,37 @@ public class RemixedDungeonApp {
 
         // Initialize BuildConfig with command line arguments
         BuildConfig.init(args);
+
+        // Check for web server parameter and start if requested
+        int webServerPort = -1;
+        for (String arg : args) {
+            if (arg != null) {
+                if (arg.startsWith("--webserver=") || arg.startsWith("-webserver=")) {
+                    try {
+                        String portStr = arg.split("=")[1];
+                        webServerPort = Integer.parseInt(portStr);
+                    } catch (Exception e) {
+                        System.err.println("Invalid web server port: " + arg);
+                    }
+                } else if (arg.equals("--webserver") || arg.equals("-webserver")) {
+                    webServerPort = 8080; // default port
+                }
+            }
+        }
+
+        // Start WebServer if requested, but don't block the main game
+        if (webServerPort > 0) {
+            try {
+                WebServer server = new WebServer(webServerPort);
+                server.start();
+                System.out.println("WebServer started on port: " + webServerPort);
+                System.out.println("Access at: " + WebServer.getServerAddress());
+                System.out.println("Game will continue to run alongside the WebServer.");
+            } catch (Exception e) {
+                System.err.println("Failed to start WebServer: " + e.getMessage());
+                e.printStackTrace();
+            }
+        }
 
         if(!BuildConfig.DEBUG) {
             Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> {

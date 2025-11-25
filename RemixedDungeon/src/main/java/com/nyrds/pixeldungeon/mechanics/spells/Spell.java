@@ -180,7 +180,7 @@ public class Spell implements NamedEntityKind {
 
     public int spellCost() {
         if(spellCost==0) {
-            ModError.doReport("Spell cost for "+ getEntityKind() + "must be > 1", new Exception("spell cost is 0"));
+            ModError.doReport("Spell cost for "+ getEntityKind() + " must be > 1", new Exception("spell cost is 0"));
             spellCost = 1;
         }
         return spellCost;

@@ -97,6 +97,22 @@ The WebServer properly handles directory detection for both the main "Remixed" m
 2. For third-party mods, directories are detected by checking the file system
 3. This ensures both mod types display their directory structure correctly in the web interface
 
+### JSON Editor Integration
+
+The WebServer now includes a JSON editor feature that allows users to edit JSON files directly in the browser:
+
+1. **New Endpoints**:
+   - `/edit-json?file=path/to/file.json` - Serves the JSON editor page for the specified file
+   - `/api/save-json` - Handles saving JSON content back to the device
+
+2. **File Browser Integration**: JSON files in the file browser now show both a download link and an "(edit)" link, allowing users to quickly access the editor
+
+3. **Technology Used**: The feature uses vanilla-jsoneditor loaded from CDN to provide a rich visual editing experience
+
+4. **Security**: JSON editing is restricted to non-Remixed mods and includes the same directory traversal protections as other functionality
+
+5. **Implementation**: The editor page is generated dynamically by the `WebServerHtml.serveJsonEditor()` method, which embeds the necessary JavaScript code to load and save files
+
 ## Use Cases
 
 ### Mod Development
@@ -119,6 +135,14 @@ Advanced users can use the WebServer to:
 - Examine game logs and configuration files
 - Backup important game data
 - Diagnose mod-related issues
+
+### JSON Editing
+
+With the addition of the JSON editor feature, users can now:
+- Edit JSON files directly in the browser using a visual editor
+- Make changes to game configurations, item definitions, and other JSON-based mod files
+- Save changes back to the device immediately
+- Access both the edit interface and traditional download/upload functionality from the file browser
 
 ## Limitations
 
