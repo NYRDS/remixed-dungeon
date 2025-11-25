@@ -253,7 +253,7 @@ public class WebServer extends NanoHTTPD {
     public Response serve(IHTTPSession session) {
         String uri = session.getUri();
         GLog.debug("WebServer: " + uri);
-        
+
         if (session.getMethod() == Method.GET) {
             if (uri.equals("/")) {
                 return newFixedLengthResponse(Response.Status.OK, "text/html", WebServerHtml.serveRoot());
@@ -262,16 +262,16 @@ public class WebServer extends NanoHTTPD {
             if(uri.startsWith("/list")) {
                 return newFixedLengthResponse(Response.Status.OK, "text/html", WebServerHtml.serveList());
             }
-            
+
             if(uri.startsWith("/upload")) {
                 // Extract path from query parameters if present
                 String path = "";
                 GLog.debug("Upload URI: " + uri);
-                
+
                 // Try to get query parameters
                 String query = session.getQueryParameterString();
                 GLog.debug("Query parameter string: " + query);
-                
+
                 // Parse query parameters manually
                 if (query != null && !query.isEmpty()) {
                     // Split by & to get parameter pairs
@@ -293,11 +293,50 @@ public class WebServer extends NanoHTTPD {
                         }
                     }
                 }
-                
+
                 GLog.debug("Final upload path: '" + path + "'");
                 return newFixedLengthResponse(Response.Status.OK, "text/html", WebServerHtml.serveUploadForm("", path));
             }
-            
+
+            if(uri.startsWith("/edit-json")) {
+                // Extract file path from query parameters
+                String filePath = "";
+                GLog.debug("Edit JSON URI: " + uri);
+
+                // Try to get query parameters
+                String query = session.getQueryParameterString();
+                GLog.debug("Query parameter string: " + query);
+
+                // Parse query parameters manually
+                if (query != null && !query.isEmpty()) {
+                    // Split by & to get parameter pairs
+                    String[] params = query.split("&");
+                    for (String param : params) {
+                        if (param.startsWith("file=")) {
+                            filePath = param.substring(5); // Remove "file=" prefix
+                            // URL decode the path
+                            try {
+                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                            } catch (Exception e) {
+                                // If decoding fails, use the path as is
+                            }
+                            // Ensure path is not null
+                            if (filePath == null) {
+                                filePath = "";
+                            }
+                            break;
+                        }
+                    }
+                }
+
+                GLog.debug("File to edit: '" + filePath + "'");
+                if (!filePath.isEmpty()) {
+                    return newFixedLengthResponse(Response.Status.OK, "text/html", WebServerHtml.serveJsonEditor(filePath));
+                } else {
+                    return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html", WebServerHtml.serveNotFound());
+                }
+            }
+
             if(uri.equals("/log")) {
                 return serveLog();
             }
@@ -309,11 +348,165 @@ public class WebServer extends NanoHTTPD {
             if(uri.startsWith("/upload")) {
                 return handleFileUpload(session);
             }
+
+            if(uri.startsWith("/api/save-json")) {
+                return handleJsonSave(session);
+            }
         }
 
         return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", "Not Found");
     }
     
+    /**
+     * Handle saving JSON content to a file
+     */
+    private Response handleJsonSave(IHTTPSession session) {
+        try {
+            GLog.debug("Handling JSON save request");
+
+            // Use the same approach as file upload, but for raw JSON data
+            Map<String, String> files = new java.util.HashMap<>();
+
+            // This will parse the body and handle both form data and raw data
+            // The raw JSON will be available in files.get("postData") for application/json
+            session.parseBody(files);
+
+            // Try to get the raw JSON from postData
+            String jsonString = files.get("postData");
+
+            // If postData is null, the content may be in the input stream directly
+            // This can happen with raw application/json requests
+            if (jsonString == null || jsonString.isEmpty()) {
+                // Get query parameters in case the data was sent as query parameters
+                // (less likely for large JSON but possible for small payloads)
+                String body = session.getQueryParameterString();
+                if (body != null && !body.isEmpty()) {
+                    jsonString = java.net.URLDecoder.decode(body, "UTF-8");
+                }
+            }
+
+            // If still null, try to read from the input stream directly, but carefully
+            if (jsonString == null || jsonString.isEmpty()) {
+                GLog.debug("Reading JSON from input stream");
+                java.util.Map<String, java.util.List<String>> parms = session.getParameters();
+
+                // If parameters exist, check if we have JSON in parameters
+                // This is unlikely but possible depending on how client sends data
+                if (!parms.isEmpty()) {
+                    for (java.util.Map.Entry<String, java.util.List<String>> entry : parms.entrySet()) {
+                        // Look for JSON-like strings in parameters
+                        for (String value : entry.getValue()) {
+                            if (value.startsWith("{") && value.endsWith("}")) {
+                                jsonString = value;
+                                break;
+                            }
+                        }
+                        if (jsonString != null) break;
+                    }
+                }
+
+                // If still not found, try direct input stream reading as last resort
+                if (jsonString == null || jsonString.isEmpty()) {
+                    try {
+                        // Create a smaller buffer and read with timeout
+                        byte[] buffer = new byte[4096];
+                        java.io.InputStream inputStream = session.getInputStream();
+
+                        // Mark and reset approach to avoid issues with already-read streams
+                        if (inputStream.markSupported()) {
+                            inputStream.mark(4096);
+                            int bytesRead = inputStream.read(buffer);
+                            if (bytesRead > 0) {
+                                jsonString = new String(buffer, 0, bytesRead, "UTF-8");
+                            } else {
+                                inputStream.reset(); // Reset to marked position
+                            }
+                        }
+                    } catch (Exception e) {
+                        GLog.debug("Error reading from input stream: " + e.getMessage());
+                    }
+                }
+            }
+
+            if (jsonString == null || jsonString.isEmpty()) {
+                GLog.debug("No JSON data found in request");
+                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Empty request body\"}");
+            }
+
+            GLog.debug("Received JSON: " + jsonString.substring(0, Math.min(200, jsonString.length())) + "...");
+
+            // Parse the JSON to extract filePath and content
+            org.json.JSONObject jsonData = new org.json.JSONObject(jsonString);
+            String filePath = jsonData.getString("filePath");
+            String content = jsonData.getString("content");
+
+            GLog.debug("Saving JSON to: " + filePath);
+
+            // Check if we're trying to save to the main Remixed mod
+            if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
+                GLog.debug("Save blocked - attempt to save to main 'Remixed' mod");
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
+                    "{\"error\":\"Save to the main 'Remixed' mod is disabled for security reasons.\"}");
+            }
+
+            // Validate that the file path is within the allowed mod directory
+            if (filePath.contains("../") || filePath.startsWith("../")) {
+                GLog.debug("Directory traversal attempt detected: " + filePath);
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
+                    "{\"error\":\"Directory traversal is not allowed.\"}");
+            }
+
+            // Validate JSON content
+            try {
+                new org.json.JSONObject(content);
+            } catch (org.json.JSONException e) {
+                GLog.debug("Invalid JSON content: " + e.getMessage());
+                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Invalid JSON content: " + e.getMessage() + "\"}");
+            }
+
+            // Create the full path for the file
+            String fullPath = ModdingMode.activeMod() + "/" + filePath;
+            GLog.debug("Full file path: " + fullPath);
+
+            // Create the file
+            File destFile = FileSystem.getExternalStorageFile(fullPath);
+            GLog.debug("Destination file path: " + destFile.getAbsolutePath());
+
+            // Create directories if needed
+            File destDir = destFile.getParentFile();
+            GLog.debug("Destination directory: " + (destDir != null ? destDir.getAbsolutePath() : "null"));
+            if (destDir != null && !destDir.exists()) {
+                GLog.debug("Creating destination directory");
+                destDir.mkdirs();
+            }
+
+            // Write the content to the file
+            GLog.debug("Writing JSON content to file");
+            try (java.io.FileOutputStream fos = new java.io.FileOutputStream(destFile)) {
+                fos.write(content.getBytes("UTF-8"));
+            }
+
+            GLog.debug("=== JSON SAVE COMPLETED SUCCESSFULLY ===");
+            return newFixedLengthResponse(Response.Status.OK, "application/json",
+                "{\"success\":true, \"message\":\"File saved successfully to: " + fullPath + "\"}");
+
+        } catch (org.json.JSONException e) {
+            GLog.debug("=== JSON PARSING ERROR ===");
+            GLog.debug("JSON parsing error: " + e.getMessage());
+            e.printStackTrace();
+            return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
+                "{\"error\":\"Invalid JSON format in request: " + e.getMessage() + "\"}");
+        } catch (Exception e) {
+            GLog.debug("=== JSON SAVE FAILED ===");
+            GLog.debug("JSON save error: " + e.getMessage());
+            e.printStackTrace(); // Log the full stack trace for debugging
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
+                "{\"error\":\"Failed to save JSON file: " + e.getMessage() + "\"}");
+        }
+    }
+
     /**
      * Serve the game log file for download
      */
@@ -321,22 +514,22 @@ public class WebServer extends NanoHTTPD {
         try {
             // Get the log file
             File logFile = FileSystem.getExternalStorageFile("RePdLogFile.log");
-            
+
             if (!logFile.exists()) {
                 return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", WebServerHtml.serveNotFound());
             }
-            
+
             // Open the file as an input stream
             java.io.FileInputStream fis = new java.io.FileInputStream(logFile);
-            
+
             // Create response with appropriate headers for file download
             Response response = newFixedLengthResponse(Response.Status.OK, "text/plain", fis, logFile.length());
             response.addHeader("Content-Disposition", "attachment; filename=\"RePdLogFile.log\"");
             return response;
-            
+
         } catch (Exception e) {
             GLog.debug("Error serving log file: " + e.getMessage());
-            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html", 
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html",
                 WebServerHtml.serveUploadForm("ERROR: Failed to serve log file - " + e.getMessage(), ""));
         }
     }

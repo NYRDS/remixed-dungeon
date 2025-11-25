@@ -23,7 +23,23 @@ class WebServerHtml {
     public static String defaultHead() {
         return "<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><style>body { font-family: Arial, sans-serif; margin: 20px; } input, select, button { margin: 5px; padding: 5px; } .upload-form { background: #f0f0f0; padding: 15px; border-radius: 5px; margin: 10px 0; } .file-list { margin: 10px 0; } .error { color: red; } .success { color: green; } a { text-decoration: none; color: #007bff; } a:hover { text-decoration: underline; }</style></head>";
     }
-    
+
+    /**
+     * Escape string for use in JavaScript
+     */
+    private static String javaScriptEscape(String str) {
+        if (str == null) {
+            return "";
+        }
+        return str.replace("\\", "\\\\")
+                  .replace("\"", "\\\"")
+                  .replace("'", "\\'")
+                  .replace("\n", "\\n")
+                  .replace("\r", "\\r")
+                  .replace("\t", "\\t")
+                  .replace("</", "<\\/"); // Prevent breaking out of script tags
+    }
+
     /**
      * Generate the root page HTML
      */
@@ -133,10 +149,22 @@ class WebServerHtml {
             }
             // Then list files
             for (String name : files) {
-                msg.append(Utils.format("<p>📄 <a href=\"/fs/%s%s\">%s</a></p>", 
-                    directoryPath.isEmpty() ? name : directoryPath + "/" + name,
-                    "",  // Empty string to complete the format
-                    name));
+                String fullPath = directoryPath.isEmpty() ? name : directoryPath + "/" + name;
+                if (name.toLowerCase().endsWith(".json")) {
+                    // For JSON files, add both download and edit links
+                    String encodedPath2;
+                    try {
+                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                    } catch (Exception e) {
+                        encodedPath2 = fullPath; // Fallback if encoding fails
+                    }
+                    msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>",
+                        fullPath, name, encodedPath2));
+                } else {
+                    // For non-JSON files, just show download link
+                    msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>",
+                        fullPath, name));
+                }
             }
             msg.append("</div>");
         }
@@ -188,6 +216,180 @@ class WebServerHtml {
         return msg.toString();
     }
     
+    /**
+     * Generate the JSON editor page HTML
+     */
+    public static String serveJsonEditor(String filePath) {
+        StringBuilder msg = new StringBuilder("<html><body>");
+        msg.append("<meta charset=\"UTF-8\">");
+        msg.append("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
+        msg.append("<title>Remixed Dungeon JSON Editor</title>");
+        msg.append("<style>");
+        msg.append("body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }");
+        msg.append(".header { background: white; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }");
+        msg.append(".header a { text-decoration: none; color: #007bff; margin-right: 15px; }");
+        msg.append(".header a:hover { text-decoration: underline; }");
+        msg.append(".nav-links { margin-bottom: 20px; }");
+        msg.append(".json-editor-container { background: white; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }");
+        msg.append("#editor { height: 60vh; border: 1px solid #ddd; border-radius: 4px; overflow: hidden; }");
+        msg.append(".save-btn { margin-top: 15px; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }");
+        msg.append(".save-btn:hover { background: #0056b3; }");
+        msg.append(".save-btn:disabled { background: #ccc; cursor: not-allowed; }");
+        msg.append(".file-info { margin-bottom: 15px; padding: 10px; background: #e9ecef; border-radius: 4px; }");
+        msg.append(".status-message { margin-top: 10px; padding: 10px; border-radius: 4px; display: none; }");
+        msg.append(".success { background: #d4edda; color: #155724; display: block; }");
+        msg.append(".error { background: #f8d7da; color: #721c24; display: block; }");
+        msg.append("</style>");
+
+        // Header with navigation links
+        msg.append("<div class=\"header\">");
+        msg.append("<h1>Remixed Dungeon JSON Editor</h1>");
+        msg.append("<div class=\"nav-links\">");
+        msg.append("<a href=\"/\">🏠 Home</a> | ");
+        msg.append("<a href=\"/list\">📁 File Browser</a> | ");
+        msg.append("<a href=\"/log\">📜 Download Game Log</a> | ");
+        String uploadPath = filePath.contains("/") ? filePath.substring(0, filePath.lastIndexOf("/")) : "";
+        msg.append("<a href=\"/upload?path=").append(uploadPath).append("\">📤 Upload Files</a>");
+        msg.append("</div>");
+        msg.append("</div>");
+
+        // File information
+        msg.append("<div class=\"file-info\">");
+        msg.append("<strong>Editing:</strong> <span id=\"current-file-path\">").append(filePath).append("</span>");
+        msg.append("</div>");
+
+        // Status message container
+        msg.append("<div class=\"status-message\" id=\"status-message\"></div>");
+
+        // JSON editor container
+        msg.append("<div class=\"json-editor-container\">");
+        msg.append("<div id=\"editor\"></div>");
+        msg.append("<button id=\"save-btn\" class=\"save-btn\" disabled>💾 Save Changes</button>");
+        msg.append("</div>");
+
+        // JavaScript for the JSON editor
+        msg.append("<script type=\"module\">");
+        msg.append("import { createJSONEditor } from 'https://unpkg.com/vanilla-jsoneditor/standalone.js';");
+
+        msg.append("\nconst filePath = \"").append(javaScriptEscape(filePath)).append("\";");  // Properly escape the file path
+
+        // Fetch the JSON content from the server
+        msg.append("\nlet currentContent = null;");
+
+        msg.append("\nasync function loadJsonFile() {");
+        msg.append("\n  try {");
+        msg.append("\n    const encodedFilePath = encodeURIComponent(filePath);");
+        msg.append("\n    const response = await fetch('/fs/' + encodedFilePath);");
+        msg.append("\n    if (!response.ok) {");
+        msg.append("\n      throw new Error(`Failed to load file: ${response.status} ${response.statusText}`);");
+        msg.append("\n    }");
+
+        msg.append("\n    const textContent = await response.text();");
+
+        // Try to parse as JSON
+        msg.append("\n    try {");
+        msg.append("\n      currentContent = JSON.parse(textContent);");
+        msg.append("\n    } catch (parseError) {");
+        msg.append("\n      // If not valid JSON, show error");
+        msg.append("\n      throw new Error(`File is not valid JSON: ${parseError.message}`);");
+        msg.append("\n    }");
+
+        // Initialize the editor with the loaded content
+        msg.append("\n    const editor = createJSONEditor({");
+        msg.append("\n      target: document.getElementById('editor'),");
+        msg.append("\n      props: {");
+        msg.append("\n        content: {");
+        msg.append("\n          json: currentContent");
+        msg.append("\n        },");
+        msg.append("\n        onChange: (updatedContent, previousContent, { contentErrors }) => {");
+        msg.append("\n          console.log('Data updated:', updatedContent.json);");
+        msg.append("\n          // Enable save button when content changes");
+        msg.append("\n          document.getElementById('save-btn').disabled = false;");
+        msg.append("\n        }");
+        msg.append("\n      }");
+        msg.append("\n    });");
+
+        msg.append("\n    return editor;");
+        msg.append("\n  } catch (error) {");
+        msg.append("\n    document.getElementById('current-file-path').textContent = `Error loading: ${filePath}`;");
+        msg.append("\n    document.getElementById('status-message').textContent = `Error: ${error.message}`;");
+        msg.append("\n    document.getElementById('status-message').className = 'status-message error';");
+        msg.append("\n    document.getElementById('status-message').style.display = 'block';");
+        msg.append("\n    document.getElementById('save-btn').disabled = true;");
+        msg.append("\n    throw error;");
+        msg.append("\n  }");
+        msg.append("\n}");
+
+        // Save the edited JSON back to the server
+        msg.append("\nasync function saveJsonFile(editor) {");
+        msg.append("\n  try {");
+        msg.append("\n    const content = editor.get();");
+        msg.append("\n    const jsonContent = JSON.stringify(content.json, null, 2);");
+
+        msg.append("\n    const response = await fetch('/api/save-json', {");
+        msg.append("\n      method: 'POST',");
+        msg.append("\n      headers: {");
+        msg.append("\n        'Content-Type': 'application/json'");
+        msg.append("\n      },");
+        msg.append("\n      body: JSON.stringify({");
+        msg.append("\n        filePath: filePath,");
+        msg.append("\n        content: jsonContent");
+        msg.append("\n      })");
+        msg.append("\n    });");
+
+        msg.append("\n    if (!response.ok) {");
+        msg.append("\n      throw new Error(`Failed to save file: ${response.status} ${response.statusText}`);");
+        msg.append("\n    }");
+
+        // Show success message
+        msg.append("\n    const result = await response.json();");
+        msg.append("\n    if (result.success) {");
+        msg.append("\n      document.getElementById('status-message').textContent = result.message;");
+        msg.append("\n      document.getElementById('status-message').className = 'status-message success';");
+        msg.append("\n      document.getElementById('status-message').style.display = 'block';");
+        msg.append("\n      ");
+        msg.append("\n      // Disable save button after saving");
+        msg.append("\n      document.getElementById('save-btn').disabled = true;");
+        msg.append("\n      ");
+        msg.append("\n      // Update current content");
+        msg.append("\n      currentContent = content.json;");
+        msg.append("\n    } else {");
+        msg.append("\n      throw new Error(result.error);");
+        msg.append("\n    }");
+        msg.append("\n  } catch (error) {");
+        msg.append("\n    document.getElementById('status-message').textContent = `Error saving file: ${error.message}`;");
+        msg.append("\n    document.getElementById('status-message').className = 'status-message error';");
+        msg.append("\n    document.getElementById('status-message').style.display = 'block';");
+        msg.append("\n    console.error('Save error:', error);");
+        msg.append("\n  }");
+        msg.append("\n}");
+
+        // Initialize the editor
+        msg.append("\nlet editorInstance = null;");
+        msg.append("\nloadJsonFile()");
+        msg.append("\n  .then(editor => {");
+        msg.append("\n    editorInstance = editor;");
+        msg.append("\n    document.getElementById('status-message').textContent = `Loaded file: ${filePath}`;");
+        msg.append("\n    document.getElementById('status-message').className = 'status-message success';");
+        msg.append("\n    document.getElementById('status-message').style.display = 'block';");
+        msg.append("\n  })");
+        msg.append("\n  .catch(error => {");
+        msg.append("\n    console.error('Failed to initialize editor:', error);");
+        msg.append("\n  });");
+
+        // Set up save button event
+        msg.append("\ndocument.getElementById('save-btn').addEventListener('click', () => {");
+        msg.append("\n  if (editorInstance) {");
+        msg.append("\n    saveJsonFile(editorInstance);");
+        msg.append("\n  }");
+        msg.append("\n});");
+
+        msg.append("\n</script>");
+        msg.append("</body></html>");
+
+        return msg.toString();
+    }
+
     /**
      * Generate the "Not Found" error page HTML
      */
@@ -343,9 +545,35 @@ class WebServerHtml {
         for (String name : files) {
             // File
             if(path.isEmpty()) {
-                msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", name, name));
+                if (name.toLowerCase().endsWith(".json")) {
+                    // For JSON files, add both download and edit links
+                    String encodedPath1;
+                    try {
+                        encodedPath1 = java.net.URLEncoder.encode(name, "UTF-8");
+                    } catch (Exception e) {
+                        encodedPath1 = name; // Fallback if encoding fails
+                    }
+                    msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>", name, name, encodedPath1));
+                } else {
+                    // For non-JSON files, just show download link
+                    msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", name, name));
+                }
             } else {
-                msg.append(Utils.format("<p>📄 <a href=\"/fs/%s%s\">%s%s</a></p>", path, name, path, name));
+                if (name.toLowerCase().endsWith(".json")) {
+                    // For JSON files, add both download and edit links
+                    String fullPath = path + "/" + name;
+                    String encodedPath;
+                    try {
+                        encodedPath = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                    } catch (Exception e) {
+                        encodedPath = fullPath; // Fallback if encoding fails
+                    }
+                    msg.append(Utils.format("<p>📄 <a href=\"/fs/%s%s\">%s%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>",
+                        path, name, path, name, encodedPath));
+                } else {
+                    // For non-JSON files, just show download link
+                    msg.append(Utils.format("<p>📄 <a href=\"/fs/%s%s\">%s%s</a></p>", path, name, path, name));
+                }
             }
         }
         msg.append("</div>");
