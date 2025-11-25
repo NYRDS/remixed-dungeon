@@ -101,7 +101,9 @@ public class GameLoop {
     }
 
     static public void pushUiTask(Runnable task) {
-        instance().uiTasks.add(task);
+        if(instance()!= null) { // for headless mode
+            instance().uiTasks.add(task);
+        }
     }
 
     static public Future<?> stepExecute(Runnable task) {

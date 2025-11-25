@@ -20,75 +20,27 @@ import java.util.Map;
 
 import fi.iki.elonen.NanoHTTPD;
 
-public class WebServer extends NanoHTTPD {
-    private static WebServer instance = null;
-    private String serverAddress = null;
-    private boolean started = false;
-    
-    public static boolean isRunning() {
-        return instance != null && instance.started;
-    }
-    
-    public static String getServerAddress() {
-        if (instance != null && instance.serverAddress != null) {
-            return instance.serverAddress;
-        }
-        return "http://localhost:8080"; // Default address
-    }
-
+public class WebServer extends BaseWebServer {
     public WebServer(int port) {
         super(port);
-        instance = this;
-        
-        // Try to get the IP address
-        try {
-            for (NetworkInterface networkInterface : Collections.list(NetworkInterface.getNetworkInterfaces())) {
-                Enumeration<InetAddress> addrs = networkInterface.getInetAddresses();
-                while (addrs.hasMoreElements()) {
-                    InetAddress addr = addrs.nextElement();
-                    // Skip loopback addresses
-                    if (!addr.isLoopbackAddress() && addr.getHostAddress().indexOf(':') == -1) {
-                        serverAddress = "http://" + addr.getHostAddress() + ":" + port;
-                        GLog.debug("WebServer address: " + serverAddress);
-                        break;
-                    }
-                }
-                if (serverAddress != null) {
-                    break;
-                }
-            }
-        } catch (SocketException e) {
-            GLog.debug("Failed to get IP address: " + e.getMessage());
-        }
-        
-        // Fallback to localhost
-        if (serverAddress == null) {
-            serverAddress = "http://localhost:" + port;
-        }
     }
     
     @Override
-    public void start() throws IOException {
-        if (!started) {
-            super.start();
-            started = true;
-            // Notify AboutScene to refresh the WebServer link
-            GameLoop.pushUiTask(AboutScene::refreshWebServerLink);
-        }
+    protected void onServerStarted() {
+        // Notify AboutScene to refresh the WebServer link
+        GameLoop.pushUiTask(AboutScene::refreshWebServerLink);
     }
 
-    /**
-     * Check if a path represents a directory for the current mod
-     */
-    private boolean isDirectory(String path) {
+    @Override
+    protected boolean isDirectory(String path) {
         GLog.debug("Checking if path is directory: '" + path + "'");
-        
+
         // Special case: empty path or "/" represents the root directory
         if (path.isEmpty() || path.equals("/")) {
             GLog.debug("Path is root directory, returning true");
             return true;
         }
-        
+
         // For Remixed mod, check assets
         if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
             try {
@@ -104,7 +56,7 @@ public class WebServer extends NanoHTTPD {
             }
             GLog.debug("Path '" + path + "' is not a directory in assets");
             return false;
-        } 
+        }
         // For other mods, check file system
         else {
             File modFile = FileSystem.getExternalStorageFile(ModdingMode.activeMod() + "/" + path);
@@ -114,137 +66,67 @@ public class WebServer extends NanoHTTPD {
         }
     }
 
-    private Response serveFs(String file) {
-        GLog.debug("serveFs called with file: '" + file + "'");
-        
-        // Remove trailing slash for directory checking (if present)
-        String cleanPath = file;
-        if (cleanPath.endsWith("/")) {
-            cleanPath = cleanPath.substring(0, cleanPath.length() - 1);
-            GLog.debug("Cleaned path from '" + file + "' to '" + cleanPath + "'");
+    @Override
+    protected String[] listDirectoryContents(String path) {
+        GLog.debug("Listing contents of directory: '" + path + "'");
+
+        // For Remixed mod, get contents from assets
+        if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
+            try {
+                String[] result = Assets.listAssets(path);
+                GLog.debug("Found " + (result != null ? result.length : 0) + " items in assets directory");
+                return result;
+            } catch (Exception e) {
+                GLog.debug("Failed to list assets for directory: " + path + " - " + e.getMessage());
+                return null;
+            }
         }
-        
-        // Handle directory requests
-        if (isDirectory(cleanPath)) {
-            GLog.debug("Serving directory: " + cleanPath);
-            String html = WebServerHtml.generateDirectoryListing(cleanPath);
-            return newFixedLengthResponse(Response.Status.OK, "text/html", html);
-        }
-        // Handle file download requests
-        else if(ModdingMode.isResourceExist(file)) {
-            GLog.debug("Serving file: " + file);
-            InputStream fis = ModdingMode.getInputStream(file);
-            Response response = newChunkedResponse(Response.Status.OK, "application/octet-stream", fis);
-            response.addHeader("Content-Disposition", "attachment; filename=\"" + file + "\"");
-            return response;
-        } else {
-            // File or directory doesn't exist
-            GLog.debug("File or directory not found: " + file);
-            String html = WebServerHtml.serveNotFound();
-            return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", html);
+        // For other mods, get contents from file system
+        else {
+            File modFile = FileSystem.getExternalStorageFile(ModdingMode.activeMod() + "/" + path);
+            if (modFile.exists()) {
+                String[] result = modFile.list();
+                GLog.debug("Found " + (result != null ? result.length : 0) + " items in filesystem directory");
+                return result;
+            }
+            GLog.debug("Filesystem directory does not exist: " + modFile.getAbsolutePath());
+            return null;
         }
     }
-    
 
-    
-    private Response handleFileUpload(IHTTPSession session) {
-        try {
-            GLog.debug("=== STARTING FILE UPLOAD PROCESS ===");
-            GLog.debug("Handling file upload, URI: " + session.getUri());
-            
-            // Check if we're trying to upload to the main Remixed mod
-            if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
-                GLog.debug("Upload blocked - attempt to upload to main 'Remixed' mod");
-                return newFixedLengthResponse(Response.Status.FORBIDDEN, "text/html", 
-                    WebServerHtml.serveUploadForm("ERROR: Upload to the main 'Remixed' mod is disabled for security reasons.", ""));
-            }
-            
-            Map<String, String> files = new java.util.HashMap<>();
-            session.parseBody(files);
-            
-            // Get the uploaded file
-            String filename = session.getParameters().get("file").get(0);
-            GLog.debug("Uploaded filename: " + filename);
-            
-            String path = "";
-            
-            // Try to get path from parameters
-            if (session.getParameters().containsKey("path")) {
-                path = session.getParameters().get("path").get(0);
-                GLog.debug("Raw upload path from form parameter: '" + path + "'");
-            } else {
-                GLog.debug("No path parameter found in form submission");
-            }
-            
-            // Handle null paths
-            if (path == null) {
-                path = "";
-                GLog.debug("Path was null, setting to empty string");
-            }
-            
-            // Sanitize the path
-            path = path.replace("..", ""); // Prevent directory traversal
-            path = path.replace("//", "/"); // Normalize path separators
-            
-            // Ensure path ends with / if not empty
-            if (!path.isEmpty() && !path.endsWith("/")) {
-                path += "/";
-            }
-            
-            GLog.debug("Final sanitized upload path: '" + path + "'");
-            
-            // Create the full path for the file
-            String fullPath = ModdingMode.activeMod() + "/" + path + filename;
-            GLog.debug("Full file path: " + fullPath);
-            
-            // Get the temporary uploaded file
-            String tempFilePath = files.get("file");
-            GLog.debug("Temp file path: " + tempFilePath);
-            if (tempFilePath == null) {
-                GLog.debug("No temp file found");
-                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html", 
-                    WebServerHtml.serveUploadForm("ERROR: No file uploaded.", path));
-            }
-            
-            // Move the file to the correct location
-            File tempFile = new File(tempFilePath);
-            File destFile = FileSystem.getExternalStorageFile(fullPath);
-            GLog.debug("Destination file path: " + destFile.getAbsolutePath());
-            
-            // Create directories if needed
-            File destDir = destFile.getParentFile();
-            GLog.debug("Destination directory: " + (destDir != null ? destDir.getAbsolutePath() : "null"));
-            if (destDir != null && !destDir.exists()) {
-                GLog.debug("Creating destination directory");
-                destDir.mkdirs();
-            }
-            
-            // Copy the file
-            GLog.debug("Copying file from temp to destination");
-            try (FileOutputStream fos = new FileOutputStream(destFile)) {
-                byte[] buffer = new byte[4096];
-                int bytesRead;
-                try (InputStream is = new java.io.FileInputStream(tempFile)) {
-                    while ((bytesRead = is.read(buffer)) != -1) {
-                        fos.write(buffer, 0, bytesRead);
-                    }
+    @Override
+    protected boolean isDirectoryItem(String parentPath, String itemName) {
+        GLog.debug("Checking if item '" + itemName + "' in directory '" + parentPath + "' is a directory");
+
+        // For Remixed mod, check assets
+        if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
+            try {
+                String assetPath = (parentPath.isEmpty() ? "" : parentPath + "/") + itemName;
+                String[] assetList = Assets.listAssets(assetPath);
+                if (assetList != null && assetList.length > 0) {
+                    GLog.debug("Item '" + itemName + "' is a directory in assets");
+                    return true;
                 }
+            } catch (Exception e) {
+                GLog.debug("Failed to check if asset is directory: " + itemName + " - " + e.getMessage());
             }
-            
-            // Delete the temporary file
-            GLog.debug("Deleting temporary file");
-            tempFile.delete();
-            
-            GLog.debug("=== FILE UPLOAD COMPLETED SUCCESSFULLY ===");
-            return newFixedLengthResponse(Response.Status.OK, "text/html", 
-                WebServerHtml.serveUploadForm("File uploaded successfully to: " + fullPath, path));
-                
-        } catch (Exception e) {
-            GLog.debug("=== FILE UPLOAD FAILED ===");
-            GLog.debug("Upload error: " + e.getMessage());
-            e.printStackTrace(); // Log the full stack trace for debugging
-            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html", 
-                WebServerHtml.serveUploadForm("ERROR: Failed to upload file - " + e.getMessage(), ""));
+            GLog.debug("Item '" + itemName + "' is not a directory in assets");
+            return false;
+        }
+        // For other mods, check file system
+        else {
+            // For Android, check file system
+            // Construct the full path properly: ModName/parentPath/itemName
+            String fullPath = ModdingMode.activeMod();
+            if (!parentPath.isEmpty()) {
+                fullPath += "/" + parentPath;
+            }
+            fullPath += "/" + itemName;
+
+            File itemFile = FileSystem.getExternalStorageFile(fullPath);
+            boolean result = itemFile.isDirectory();
+            GLog.debug("Item '" + itemName + "' (full path: " + fullPath + ") is " + (result ? "" : "not ") + "a directory in filesystem");
+            return result;
         }
     }
 
@@ -256,11 +138,11 @@ public class WebServer extends NanoHTTPD {
 
         if (session.getMethod() == Method.GET) {
             if (uri.equals("/")) {
-                return newFixedLengthResponse(Response.Status.OK, "text/html", WebServerHtml.serveRoot());
+                return newFixedLengthResponse(Response.Status.OK, "text/html", serveRoot());
             }
 
             if(uri.startsWith("/list")) {
-                return newFixedLengthResponse(Response.Status.OK, "text/html", WebServerHtml.serveList());
+                return newFixedLengthResponse(Response.Status.OK, "text/html", serveList());
             }
 
             if(uri.startsWith("/upload")) {
@@ -295,7 +177,7 @@ public class WebServer extends NanoHTTPD {
                 }
 
                 GLog.debug("Final upload path: '" + path + "'");
-                return newFixedLengthResponse(Response.Status.OK, "text/html", WebServerHtml.serveUploadForm("", path));
+                return newFixedLengthResponse(Response.Status.OK, "text/html", serveUploadForm("", path));
             }
 
             if(uri.startsWith("/edit-json")) {
@@ -331,9 +213,9 @@ public class WebServer extends NanoHTTPD {
 
                 GLog.debug("File to edit: '" + filePath + "'");
                 if (!filePath.isEmpty()) {
-                    return newFixedLengthResponse(Response.Status.OK, "text/html", WebServerHtml.serveJsonEditor(filePath));
+                    return newFixedLengthResponse(Response.Status.OK, "text/html", serveJsonEditor(filePath));
                 } else {
-                    return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html", WebServerHtml.serveNotFound());
+                    return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html", serveNotFound());
                 }
             }
 
@@ -354,183 +236,7 @@ public class WebServer extends NanoHTTPD {
             }
         }
 
-        return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", "Not Found");
+        return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", serveNotFound());
     }
     
-    /**
-     * Handle saving JSON content to a file
-     */
-    private Response handleJsonSave(IHTTPSession session) {
-        try {
-            GLog.debug("Handling JSON save request");
-
-            // Use the same approach as file upload, but for raw JSON data
-            Map<String, String> files = new java.util.HashMap<>();
-
-            // This will parse the body and handle both form data and raw data
-            // The raw JSON will be available in files.get("postData") for application/json
-            session.parseBody(files);
-
-            // Try to get the raw JSON from postData
-            String jsonString = files.get("postData");
-
-            // If postData is null, the content may be in the input stream directly
-            // This can happen with raw application/json requests
-            if (jsonString == null || jsonString.isEmpty()) {
-                // Get query parameters in case the data was sent as query parameters
-                // (less likely for large JSON but possible for small payloads)
-                String body = session.getQueryParameterString();
-                if (body != null && !body.isEmpty()) {
-                    jsonString = java.net.URLDecoder.decode(body, "UTF-8");
-                }
-            }
-
-            // If still null, try to read from the input stream directly, but carefully
-            if (jsonString == null || jsonString.isEmpty()) {
-                GLog.debug("Reading JSON from input stream");
-                java.util.Map<String, java.util.List<String>> parms = session.getParameters();
-
-                // If parameters exist, check if we have JSON in parameters
-                // This is unlikely but possible depending on how client sends data
-                if (!parms.isEmpty()) {
-                    for (java.util.Map.Entry<String, java.util.List<String>> entry : parms.entrySet()) {
-                        // Look for JSON-like strings in parameters
-                        for (String value : entry.getValue()) {
-                            if (value.startsWith("{") && value.endsWith("}")) {
-                                jsonString = value;
-                                break;
-                            }
-                        }
-                        if (jsonString != null) break;
-                    }
-                }
-
-                // If still not found, try direct input stream reading as last resort
-                if (jsonString == null || jsonString.isEmpty()) {
-                    try {
-                        // Create a smaller buffer and read with timeout
-                        byte[] buffer = new byte[4096];
-                        java.io.InputStream inputStream = session.getInputStream();
-
-                        // Mark and reset approach to avoid issues with already-read streams
-                        if (inputStream.markSupported()) {
-                            inputStream.mark(4096);
-                            int bytesRead = inputStream.read(buffer);
-                            if (bytesRead > 0) {
-                                jsonString = new String(buffer, 0, bytesRead, "UTF-8");
-                            } else {
-                                inputStream.reset(); // Reset to marked position
-                            }
-                        }
-                    } catch (Exception e) {
-                        GLog.debug("Error reading from input stream: " + e.getMessage());
-                    }
-                }
-            }
-
-            if (jsonString == null || jsonString.isEmpty()) {
-                GLog.debug("No JSON data found in request");
-                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
-                    "{\"error\":\"Empty request body\"}");
-            }
-
-            GLog.debug("Received JSON: " + jsonString.substring(0, Math.min(200, jsonString.length())) + "...");
-
-            // Parse the JSON to extract filePath and content
-            org.json.JSONObject jsonData = new org.json.JSONObject(jsonString);
-            String filePath = jsonData.getString("filePath");
-            String content = jsonData.getString("content");
-
-            GLog.debug("Saving JSON to: " + filePath);
-
-            // Check if we're trying to save to the main Remixed mod
-            if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
-                GLog.debug("Save blocked - attempt to save to main 'Remixed' mod");
-                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
-                    "{\"error\":\"Save to the main 'Remixed' mod is disabled for security reasons.\"}");
-            }
-
-            // Validate that the file path is within the allowed mod directory
-            if (filePath.contains("../") || filePath.startsWith("../")) {
-                GLog.debug("Directory traversal attempt detected: " + filePath);
-                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
-                    "{\"error\":\"Directory traversal is not allowed.\"}");
-            }
-
-            // Validate JSON content
-            try {
-                new org.json.JSONObject(content);
-            } catch (org.json.JSONException e) {
-                GLog.debug("Invalid JSON content: " + e.getMessage());
-                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
-                    "{\"error\":\"Invalid JSON content: " + e.getMessage() + "\"}");
-            }
-
-            // Create the full path for the file
-            String fullPath = ModdingMode.activeMod() + "/" + filePath;
-            GLog.debug("Full file path: " + fullPath);
-
-            // Create the file
-            File destFile = FileSystem.getExternalStorageFile(fullPath);
-            GLog.debug("Destination file path: " + destFile.getAbsolutePath());
-
-            // Create directories if needed
-            File destDir = destFile.getParentFile();
-            GLog.debug("Destination directory: " + (destDir != null ? destDir.getAbsolutePath() : "null"));
-            if (destDir != null && !destDir.exists()) {
-                GLog.debug("Creating destination directory");
-                destDir.mkdirs();
-            }
-
-            // Write the content to the file
-            GLog.debug("Writing JSON content to file");
-            try (java.io.FileOutputStream fos = new java.io.FileOutputStream(destFile)) {
-                fos.write(content.getBytes("UTF-8"));
-            }
-
-            GLog.debug("=== JSON SAVE COMPLETED SUCCESSFULLY ===");
-            return newFixedLengthResponse(Response.Status.OK, "application/json",
-                "{\"success\":true, \"message\":\"File saved successfully to: " + fullPath + "\"}");
-
-        } catch (org.json.JSONException e) {
-            GLog.debug("=== JSON PARSING ERROR ===");
-            GLog.debug("JSON parsing error: " + e.getMessage());
-            e.printStackTrace();
-            return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
-                "{\"error\":\"Invalid JSON format in request: " + e.getMessage() + "\"}");
-        } catch (Exception e) {
-            GLog.debug("=== JSON SAVE FAILED ===");
-            GLog.debug("JSON save error: " + e.getMessage());
-            e.printStackTrace(); // Log the full stack trace for debugging
-            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
-                "{\"error\":\"Failed to save JSON file: " + e.getMessage() + "\"}");
-        }
-    }
-
-    /**
-     * Serve the game log file for download
-     */
-    private Response serveLog() {
-        try {
-            // Get the log file
-            File logFile = FileSystem.getExternalStorageFile("RePdLogFile.log");
-
-            if (!logFile.exists()) {
-                return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", WebServerHtml.serveNotFound());
-            }
-
-            // Open the file as an input stream
-            java.io.FileInputStream fis = new java.io.FileInputStream(logFile);
-
-            // Create response with appropriate headers for file download
-            Response response = newFixedLengthResponse(Response.Status.OK, "text/plain", fis, logFile.length());
-            response.addHeader("Content-Disposition", "attachment; filename=\"RePdLogFile.log\"");
-            return response;
-
-        } catch (Exception e) {
-            GLog.debug("Error serving log file: " + e.getMessage());
-            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html",
-                WebServerHtml.serveUploadForm("ERROR: Failed to serve log file - " + e.getMessage(), ""));
-        }
-    }
 }

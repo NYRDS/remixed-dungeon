@@ -22,9 +22,11 @@ class WebServerHtml {
      */
     private static String loadTemplate(String templateName) {
         try {
-            return Assets.loadAssetAsString("html/" + templateName);
+            java.io.InputStream inputStream = ModdingMode.getInputStream("html/" + templateName);
+            java.util.Scanner scanner = new java.util.Scanner(inputStream, "UTF-8").useDelimiter("\\A");
+            return scanner.hasNext() ? scanner.next() : "";
         } catch (Exception e) {
-            GLog.error("Failed to load template: " + templateName + ", error: " + e.getMessage());
+            GLog.w("Failed to load template: " + templateName + ", error: " + e.getMessage());
             return "<html><body><h1>Template Error</h1><p>Failed to load template: " + templateName + "</p></body></html>";
         }
     }
