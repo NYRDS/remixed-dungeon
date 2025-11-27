@@ -199,10 +199,10 @@ For desktop development, the WebServer can be run as a standalone application wi
 ./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:runWebServer
 ```
 
-This will start the server on port 8082 by default with the Remixed mod enabled. You can customize the server settings using the args parameter:
+This will start the server on port 8082 by default with the Remixed mod enabled. You can customize the server settings using the --args parameter:
 
 ```bash
-./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:runWebServer -Pargs="--webserver=8080 --mod=Remixed"
+./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:runWebServer --args="--webserver=8080 --mod=Remixed"
 ```
 
 When running the standalone server, you'll need to access it at `http://localhost:[port]/` (e.g., `http://localhost:8082/`).
