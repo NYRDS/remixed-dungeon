@@ -94,7 +94,8 @@ tasks.register('runWebServer', JavaExec) {
 
     // Set default arguments if not provided
     if (project.hasProperty('args')) {
-        args project.args.split(',')
+        // When using --args, Gradle passes the arguments properly
+        args project.property('args').toString().split(' ') as List<String>
     } else {
         args = ['--webserver=8082', '--mod=Remixed']
     }
