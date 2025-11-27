@@ -99,12 +99,63 @@ public class WebServer extends BaseWebServer {
     public String serveList() {
         String template = loadTemplate("list_template.html");
 
-        // We need to generate directory contents dynamically
+        // We need to generate directory contents dynamically (for root directory "")
         StringBuilder dirContent = new StringBuilder();
-        listDir(dirContent, "");
+
+        // List directory contents with directories first (same logic as generateDirectoryListing)
+        String[] contents = listDirectoryContents("");
+
+        if (contents != null) {
+            // Separate directories and files
+            java.util.List<String> directories = new java.util.ArrayList<>();
+            java.util.List<String> files = new java.util.ArrayList<>();
+
+            for (String name : contents) {
+                if (isDirectoryItem("", name)) {
+                    directories.add(name);
+                } else {
+                    files.add(name);
+                }
+            }
+
+            // Sort directories and files separately
+            java.util.Collections.sort(directories);
+            java.util.Collections.sort(files);
+
+
+            // List directories first
+            for (String name : directories) {
+                String fullPath = name; // For root, path is just the name
+                dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>", fullPath, name));
+            }
+            // Then list files
+            for (String name : files) {
+                String fullPath = name; // For root, path is just the name
+                if (name.toLowerCase().endsWith(".json")) {
+                    // For JSON files, add both download and edit links
+                    String encodedPath2;
+                    try {
+                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                    } catch (Exception e) {
+                        encodedPath2 = fullPath; // Fallback if encoding fails
+                    }
+                    dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>", fullPath, name, encodedPath2));
+                } else {
+                    // For non-JSON files, just show download link
+                    dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", fullPath, name));
+                }
+            }
+        }
 
         java.util.Map<String, String> replacements = new java.util.HashMap<>();
         replacements.put("MOD_NAME", ModdingMode.activeMod());
+
+        // For the root directory, use empty string for upload path
+        try {
+            replacements.put("ENCODED_UPLOAD_PATH", java.net.URLEncoder.encode("", "UTF-8"));
+        } catch (Exception e) {
+            replacements.put("ENCODED_UPLOAD_PATH", ""); // Fallback if encoding fails
+        }
         replacements.put("DIRECTORY_CONTENTS", dirContent.toString());
 
         return replacePlaceholders(template, replacements);
@@ -128,18 +179,72 @@ public class WebServer extends BaseWebServer {
             upOneLevelLink = "<p><a href=\"/list\">..</a></p>";
         }
 
-        StringBuilder dirContent = new StringBuilder();
-        listDir(dirContent, directoryPath);
+        // Generate directory listing content
+        StringBuilder dirListing = new StringBuilder();
+
+        // List directory contents with directories first
+        String[] contents = listDirectoryContents(directoryPath);
+
+        if (contents != null) {
+            // Separate directories and files
+            java.util.List<String> directories = new java.util.ArrayList<>();
+            java.util.List<String> files = new java.util.ArrayList<>();
+
+            for (String name : contents) {
+                if (isDirectoryItem(directoryPath, name)) {
+                    directories.add(name);
+                } else {
+                    files.add(name);
+                }
+            }
+
+            // Sort directories and files separately
+            java.util.Collections.sort(directories);
+            java.util.Collections.sort(files);
+
+
+            // List directories first
+            for (String name : directories) {
+                String fullPath = directoryPath.isEmpty() ? name : directoryPath + "/" + name;
+                dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>",
+                    fullPath, name));
+            }
+            // Then list files
+            for (String name : files) {
+                String fullPath = directoryPath.isEmpty() ? name : directoryPath + "/" + name;
+                if (name.toLowerCase().endsWith(".json")) {
+                    // For JSON files, add both download and edit links
+                    String encodedPath2;
+                    try {
+                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                    } catch (Exception e) {
+                        encodedPath2 = fullPath; // Fallback if encoding fails
+                    }
+                    dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>",
+                        fullPath, name, encodedPath2));
+                } else {
+                    // For non-JSON files, just show download link
+                    dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>",
+                        fullPath, name));
+                }
+            }
+        }
 
         java.util.Map<String, String> replacements = new java.util.HashMap<>();
         replacements.put("DIRECTORY_PATH", directoryPath.isEmpty() ? "/" : directoryPath);
+
+        // For the template's upload link in header, use the directory path with potential slash added
+        String templateUploadPath = directoryPath.isEmpty() ? "" : directoryPath;
+        if (!templateUploadPath.endsWith("/") && !templateUploadPath.isEmpty()) {
+            templateUploadPath += "/";
+        }
         try {
-            replacements.put("ENCODED_UPLOAD_PATH", java.net.URLEncoder.encode(directoryPath, "UTF-8"));
+            replacements.put("ENCODED_UPLOAD_PATH", java.net.URLEncoder.encode(templateUploadPath, "UTF-8"));
         } catch (Exception e) {
-            replacements.put("ENCODED_UPLOAD_PATH", directoryPath); // Fallback if encoding fails
+            replacements.put("ENCODED_UPLOAD_PATH", templateUploadPath); // Fallback if encoding fails
         }
         replacements.put("UP_ONE_LEVEL_LINK", upOneLevelLink);
-        replacements.put("DIRECTORY_LISTING", dirContent.toString());
+        replacements.put("DIRECTORY_LISTING", dirListing.toString());
 
         return replacePlaceholders(template, replacements);
     }
@@ -220,25 +325,25 @@ public class WebServer extends BaseWebServer {
                 return true;
             });
 
-            // Filter the resources to only include those that are in the current path (not subdirectories)
+            GLog.debug("ModdingMode.listResources returned " + (resourceList != null ? resourceList.size() : 0) + " items for path: '" + path + "'");
+
+            // ModdingMode.listResources returns direct child names, so no path prefix filtering is needed
+            // Filter the resources to only include direct children, not nested items
             java.util.List<String> filteredList = new java.util.ArrayList<>();
-            String currentPath = path.isEmpty() ? "" : path + "/";
 
             for (String resource : resourceList) {
-                if (resource.startsWith(currentPath)) {
-                    String relativePath = resource.substring(currentPath.length());
-                    // Only include direct children, not nested items
-                    if (!relativePath.contains("/")) {
-                        filteredList.add(relativePath);
-                    }
+                // Only include direct children, not nested items
+                if (!resource.contains("/")) {
+                    filteredList.add(resource);
                 }
             }
 
-            GLog.debug("Found " + filteredList.size() + " items in directory: '" + path + "'");
+            GLog.debug("After filtering for direct children, found " + filteredList.size() + " items in directory: '" + path + "'");
 
             return filteredList.toArray(new String[0]);
         } catch (Exception e) {
             GLog.debug("Error listing directory contents: " + e.getMessage());
+            e.printStackTrace();
             // Fallback to file system method
             File modFile = FileSystem.getExternalStorageFile(ModdingMode.activeMod() + "/" + path);
             if (modFile.exists()) {
@@ -422,7 +527,9 @@ public class WebServer extends BaseWebServer {
                 return serveFs(uri.substring(4));
             }
 
-            if(uri.startsWith("/debug-list/")) {
+            if(uri.equals("/debug-list")) {
+                return serveDebugList("");
+            } else if(uri.startsWith("/debug-list/")) {
                 String path = uri.substring(12); // "/debug-list/".length() = 12
                 return serveDebugList(path);
             }
@@ -530,19 +637,15 @@ public class WebServer extends BaseWebServer {
                 response.append("<p>Resource list is null</p>");
             }
 
-            // Also show what our filtering logic would return
-            response.append("<h2>Filtering Logic Results:</h2>");
+            // Also show what our filtering logic would return (updated)
+            response.append("<h2>Filtering Logic Results (Fixed):</h2>");
             if (resourceList != null) {
                 java.util.List<String> filteredList = new java.util.ArrayList<>();
-                String currentPath = path.isEmpty() ? "" : path + "/";
 
                 for (String resource : resourceList) {
-                    if (resource.startsWith(currentPath)) {
-                        String relativePath = resource.substring(currentPath.length());
-                        // Only include direct children, not nested items
-                        if (!relativePath.contains("/")) {
-                            filteredList.add(relativePath);
-                        }
+                    // Only include direct children, not nested items
+                    if (!resource.contains("/")) {
+                        filteredList.add(resource);
                     }
                 }
 

@@ -151,25 +151,25 @@ public class FilesystemAccess {
             // Get all resources from the mod that start with the given path
             java.util.List<String> resourceList = ModdingMode.listResources(path, (dir, name) -> true);
 
-            // Filter the resources to only include those that are in the current path (not subdirectories)
+            GLog.debug("ModdingMode.listResources returned " + (resourceList != null ? resourceList.size() : 0) + " items for path: '" + path + "'");
+
+            // ModdingMode.listResources returns direct child names, so no path prefix filtering is needed
+            // Filter the resources to only include direct children, not nested items
             List<String> filteredList = new ArrayList<>();
-            String currentPath = path.isEmpty() ? "" : path + "/";
 
             for (String resource : resourceList) {
-                if (resource.startsWith(currentPath)) {
-                    String relativePath = resource.substring(currentPath.length());
-                    // Only include direct children, not nested items
-                    if (!relativePath.contains("/")) {
-                        filteredList.add(relativePath);
-                    }
+                // Only include direct children, not nested items
+                if (!resource.contains("/")) {
+                    filteredList.add(resource);
                 }
             }
 
-            GLog.debug("Found " + filteredList.size() + " items in directory: '" + path + "'");
+            GLog.debug("After filtering for direct children, found " + filteredList.size() + " items in directory: '" + path + "'");
 
             return filteredList.toArray(new String[0]);
         } catch (Exception e) {
             GLog.debug("Error listing directory contents: " + e.getMessage());
+            e.printStackTrace();
             return null;
         }
     }
