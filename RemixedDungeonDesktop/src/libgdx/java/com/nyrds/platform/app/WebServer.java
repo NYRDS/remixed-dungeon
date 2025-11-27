@@ -421,6 +421,11 @@ public class WebServer extends BaseWebServer {
             if(uri.startsWith("/fs/")) {
                 return serveFs(uri.substring(4));
             }
+
+            if(uri.startsWith("/debug-list/")) {
+                String path = uri.substring(12); // "/debug-list/".length() = 12
+                return serveDebugList(path);
+            }
         } else if (session.getMethod() == Method.POST) {
             if(uri.startsWith("/upload")) {
                 return handleFileUpload(session);
@@ -498,6 +503,64 @@ public class WebServer extends BaseWebServer {
         }
     }
 
+    /**
+     * Debug endpoint to test ModdingMode.listResources directly
+     */
+    protected Response serveDebugList(String path) {
+        GLog.debug("serveDebugList called with path: '" + path + "'");
 
+        try {
+            java.util.List<String> resourceList = ModdingMode.listResources(path, (dir, name) -> {
+                // Include all items in the directory
+                return true;
+            });
+
+            StringBuilder response = new StringBuilder();
+            response.append("<h1>Debug List Resources for Path: '").append(path).append("'</h1>");
+            response.append("<p>Active mod: ").append(ModdingMode.activeMod()).append("</p>");
+
+            if (resourceList != null) {
+                response.append("<p>Total resources found: ").append(resourceList.size()).append("</p>");
+                response.append("<ul>");
+                for (String resource : resourceList) {
+                    response.append("<li>").append(resource).append("</li>");
+                }
+                response.append("</ul>");
+            } else {
+                response.append("<p>Resource list is null</p>");
+            }
+
+            // Also show what our filtering logic would return
+            response.append("<h2>Filtering Logic Results:</h2>");
+            if (resourceList != null) {
+                java.util.List<String> filteredList = new java.util.ArrayList<>();
+                String currentPath = path.isEmpty() ? "" : path + "/";
+
+                for (String resource : resourceList) {
+                    if (resource.startsWith(currentPath)) {
+                        String relativePath = resource.substring(currentPath.length());
+                        // Only include direct children, not nested items
+                        if (!relativePath.contains("/")) {
+                            filteredList.add(relativePath);
+                        }
+                    }
+                }
+
+                response.append("<p>After filtering for direct children: ").append(filteredList.size()).append("</p>");
+                response.append("<ul>");
+                for (String item : filteredList) {
+                    response.append("<li>").append(item).append("</li>");
+                }
+                response.append("</ul>");
+            }
+
+            return newFixedLengthResponse(Response.Status.OK, "text/html", response.toString());
+        } catch (Exception e) {
+            GLog.debug("Error in serveDebugList: " + e.getMessage());
+            e.printStackTrace();
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html",
+                "<h1>Error in serveDebugList</h1><p>" + e.getMessage() + "</p>");
+        }
+    }
 
 }
