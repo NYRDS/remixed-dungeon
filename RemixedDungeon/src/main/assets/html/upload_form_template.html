@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        input, select, button { margin: 5px; padding: 5px; }
+        .upload-form { background: #f0f0f0; padding: 15px; border-radius: 5px; margin: 10px 0; }
+        .file-list { margin: 10px 0; }
+        .error { color: red; }
+        .success { color: green; }
+        a { text-decoration: none; color: #007bff; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>File Upload</h1>
+    <p><a href="/">🏠 Home</a> | <a href="/list">📁 File Browser</a> | <a href="/log">📜 Download Game Log</a></p>
+    
+    {{MESSAGE_DIV}}
+    
+    {{UPLOAD_FORM_CONTENT}}
+</body>
+</html>

@@ -113,6 +113,22 @@ The WebServer now includes a JSON editor feature that allows users to edit JSON 
 
 5. **Implementation**: The editor page is generated dynamically by the `WebServerHtml.serveJsonEditor()` method, which embeds the necessary JavaScript code to load and save files
 
+### PNG Editor and Preview Integration
+
+The WebServer now includes PNG editing and preview features that allow users to view and edit image files:
+
+1. **New Endpoints**:
+   - `/preview-image?file=path/to/image.png` - Serves a styled preview page for image files
+   - `/edit-png?file=path/to/image.png` - Redirects to the PixelCraft editor with the image pre-loaded
+
+2. **File Browser Integration**: PNG, JPG, and JPEG files in the file browser now show with a 🖼️ icon and both "(preview)" and "(edit)" links, allowing users to quickly access preview and editing functionality
+
+3. **Preview Page Features**: The preview page includes image display with responsive styling, controls for editing the image in PixelCraft, downloading the image, or returning to the directory listing
+
+4. **PixelCraft Integration**: The edit functionality integrates with the existing PixelCraft editor implementation, allowing users to modify images and save them directly back to their mod
+
+5. **Implementation**: Both preview and editor pages are generated dynamically with proper error handling and URL encoding for safe parameter handling
+
 ## Use Cases
 
 ### Mod Development
@@ -143,6 +159,19 @@ With the addition of the JSON editor feature, users can now:
 - Make changes to game configurations, item definitions, and other JSON-based mod files
 - Save changes back to the device immediately
 - Access both the edit interface and traditional download/upload functionality from the file browser
+
+### PNG Editing and Preview
+
+With the addition of the PNG editor and preview features, users can now:
+- Preview PNG, JPG, and JPEG images directly in the browser
+- Edit image files using the integrated PixelCraft pixel art editor
+- Access both preview and editing functionality directly from the file browser
+- New endpoints:
+  - `/preview-image?file=path/to/image.png` - Serves a styled preview page for image files
+  - `/edit-png?file=path/to/image.png` - Redirects to PixelCraft editor with the image pre-loaded
+- Image files in the directory listing now show with a 🖼️ icon and both "preview" and "edit" links
+- The preview page includes controls to edit the image, download it, or return to the directory listing
+- The edit functionality integrates with the existing PixelCraft editor implementation, allowing users to modify images and save them directly back to their mod
 
 ## Limitations
 

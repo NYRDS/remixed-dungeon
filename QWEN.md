@@ -190,6 +190,17 @@ Documentation of the cross-platform bitmap manipulation interface:
 Documentation of the Android-only web server for mod file management:
 - [WebServer Functionality](docs/WebServer.md) - Detailed documentation of web server features and implementation
 
+### PNG Editing and Preview Features
+Recent addition of comprehensive PNG editing and preview functionality:
+- **PNG Preview**: View PNG files directly in browser with styled preview page
+- **PNG Editing**: Edit PNG files using integrated PixelCraft pixel art editor
+- **Directory Integration**: PNG/JPG/JPEG files display with preview/edit links (`🖼️ filename.png (preview) (edit)`)
+- **Endpoints**:
+  - `/preview-image?file=path/to/image.png` - Preview image with controls
+  - `/edit-png?file=path/to/image.png` - Edit image in PixelCraft editor
+- **PixelCraft Integration**: Full integration with external PixelCraft editor for advanced pixel art creation
+- **Cross-Platform**: Implemented for both Android and Desktop web server versions
+
 ## Repository Map
 For a detailed map of the repository structure and architecture, see [REPO_MAP.md](REPO_MAP.md).
 

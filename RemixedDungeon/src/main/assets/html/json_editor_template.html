@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remixed Dungeon JSON Editor</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .header { background: white; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .header a { text-decoration: none; color: #007bff; margin-right: 15px; }
+        .header a:hover { text-decoration: underline; }
+        .nav-links { margin-bottom: 20px; }
+        .json-editor-container { background: white; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        #editor { height: 60vh; border: 1px solid #ddd; border-radius: 4px; overflow: hidden; }
+        .save-btn { margin-top: 15px; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        .save-btn:hover { background: #0056b3; }
+        .save-btn:disabled { background: #ccc; cursor: not-allowed; }
+        .file-info { margin-bottom: 15px; padding: 10px; background: #e9ecef; border-radius: 4px; }
+        .status-message { margin-top: 10px; padding: 10px; border-radius: 4px; display: none; }
+        .success { background: #d4edda; color: #155724; display: block; }
+        .error { background: #f8d7da; color: #721c24; display: block; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Remixed Dungeon JSON Editor</h1>
+        <div class="nav-links">
+            <a href="/">🏠 Home</a> | 
+            <a href="/list">📁 File Browser</a> | 
+            <a href="/log">📜 Download Game Log</a> | 
+            <a href="/upload?path={{UPLOAD_PATH}}">📤 Upload Files</a>
+        </div>
+    </div>
+
+    <div class="file-info">
+        <strong>Editing:</strong> <span id="current-file-path">{{FILE_PATH}}</span>
+    </div>
+
+    <div class="status-message" id="status-message"></div>
+
+    <div class="json-editor-container">
+        <div id="editor"></div>
+        <button id="save-btn" class="save-btn" disabled>💾 Save Changes</button>
+    </div>
+
+    <script type="module">
+        import { createJSONEditor } from 'https://unpkg.com/vanilla-jsoneditor/standalone.js';
+
+        const filePath = "{{ESCAPED_FILE_PATH}}";
+
+        let currentContent = null;
+
+        async function loadJsonFile() {
+            try {
+                const encodedFilePath = encodeURIComponent(filePath);
+                const response = await fetch('/raw/' + encodedFilePath);
+                if (!response.ok) {
+                    throw new Error(`Failed to load file: ${response.status} ${response.statusText}`);
+                }
+
+                const textContent = await response.text();
+
+                try {
+                    currentContent = JSON.parse(textContent);
+                } catch (parseError) {
+                    throw new Error(`File is not valid JSON: ${parseError.message}`);
+                }
+
+                const editor = createJSONEditor({
+                    target: document.getElementById('editor'),
+                    props: {
+                        content: {
+                            json: currentContent
+                        },
+                        onChange: (updatedContent, previousContent, { contentErrors }) => {
+                            console.log('Data updated:', updatedContent.json);
+                            document.getElementById('save-btn').disabled = false;
+                        }
+                    }
+                });
+
+                return editor;
+            } catch (error) {
+                document.getElementById('current-file-path').textContent = `Error loading: ${filePath}`;
+                document.getElementById('status-message').textContent = `Error: ${error.message}`;
+                document.getElementById('status-message').className = 'status-message error';
+                document.getElementById('status-message').style.display = 'block';
+                document.getElementById('save-btn').disabled = true;
+                throw error;
+            }
+        }
+
+        async function saveJsonFile(editor) {
+            try {
+                const content = editor.get();
+                const jsonContent = JSON.stringify(content.json, null, 2);
+
+                const response = await fetch('/api/save-json', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        filePath: filePath,
+                        content: jsonContent
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Failed to save file: ${response.status} ${response.statusText}`);
+                }
+
+                const result = await response.json();
+                if (result.success) {
+                    document.getElementById('status-message').textContent = result.message;
+                    document.getElementById('status-message').className = 'status-message success';
+                    document.getElementById('status-message').style.display = 'block';
+                    
+                    document.getElementById('save-btn').disabled = true;
+                    
+                    currentContent = content.json;
+                } else {
+                    throw new Error(result.error);
+                }
+            } catch (error) {
+                document.getElementById('status-message').textContent = `Error saving file: ${error.message}`;
+                document.getElementById('status-message').className = 'status-message error';
+                document.getElementById('status-message').style.display = 'block';
+                console.error('Save error:', error);
+            }
+        }
+
+        let editorInstance = null;
+        loadJsonFile()
+            .then(editor => {
+                editorInstance = editor;
+                document.getElementById('status-message').textContent = `Loaded file: ${filePath}`;
+                document.getElementById('status-message').className = 'status-message success';
+                document.getElementById('status-message').style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Failed to initialize editor:', error);
+            });
+
+        document.getElementById('save-btn').addEventListener('click', () => {
+            if (editorInstance) {
+                saveJsonFile(editorInstance);
+            }
+        });
+    </script>
+</body>
+</html>

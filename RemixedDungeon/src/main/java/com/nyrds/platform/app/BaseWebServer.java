@@ -196,6 +196,16 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     }
                     dirListing.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>)</p>",
                         fullPath, name, encodedPath2));
+                } else if (name.toLowerCase().endsWith(".png") || name.toLowerCase().endsWith(".jpg") || name.toLowerCase().endsWith(".jpeg")) {
+                    // For image files, add download, preview, and edit links
+                    String encodedPath2;
+                    try {
+                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                    } catch (Exception e) {
+                        encodedPath2 = fullPath; // Fallback if encoding fails
+                    }
+                    dirListing.append(Utils.format("<p>🖼️ <a href=\"/fs/%s\">%s</a> (<a href=\"/preview-image?file=%s\">preview</a>) (<a href=\"/edit-png?file=%s\">edit</a>)</p>",
+                        fullPath, name, encodedPath2, encodedPath2));
                 } else {
                     // For non-JSON files, just show download link
                     dirListing.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>",
@@ -622,7 +632,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
             // Reinitialize the mod cache to reflect the newly uploaded file
             GLog.debug("Reinitializing mod cache after file upload");
-            FileSystem.reinitModCache();
+            // FileSystem.reinitModCache(); // Not available on Android platform
 
             GLog.debug("=== FILE UPLOAD COMPLETED SUCCESSFULLY ===");
             return newFixedLengthResponse(Response.Status.OK, "text/html", serveUploadForm("File uploaded successfully to: " + fullPath, path));
@@ -766,7 +776,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
             // Reinitialize the mod cache to reflect the newly saved file
             GLog.debug("Reinitializing mod cache after JSON save");
-            FileSystem.reinitModCache();
+            // FileSystem.reinitModCache(); // Not available on Android platform
 
             GLog.debug("=== JSON SAVE COMPLETED SUCCESSFULLY ===");
             return newFixedLengthResponse(Response.Status.OK, "application/json",
@@ -902,13 +912,13 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
             // Write the content to the file
             GLog.debug("Writing Lua content to file");
-            try (java.io.FileOutputStream fos = java.io.FileOutputStream(destFile)) {
+            try (java.io.FileOutputStream fos = new java.io.FileOutputStream(destFile)) {
                 fos.write(content.getBytes("UTF-8"));
             }
 
             // Reinitialize the mod cache to reflect the newly saved file
             GLog.debug("Reinitializing mod cache after Lua save");
-            FileSystem.reinitModCache();
+            // FileSystem.reinitModCache(); // Not available on Android platform
 
             GLog.debug("=== LUA SAVE COMPLETED SUCCESSFULLY ===");
             return newFixedLengthResponse(Response.Status.OK, "application/json",

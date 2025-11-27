@@ -140,6 +140,15 @@ public class WebServer extends BaseWebServer {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
                     dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>", fullPath, name, encodedPath2));
+                } else if (name.toLowerCase().endsWith(".png") || name.toLowerCase().endsWith(".jpg") || name.toLowerCase().endsWith(".jpeg")) {
+                    // For image files, add download, preview, and edit links
+                    String encodedPath2;
+                    try {
+                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                    } catch (Exception e) {
+                        encodedPath2 = fullPath; // Fallback if encoding fails
+                    }
+                    dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>🖼️ <a href=\"/fs/%s\">%s</a> (<a href=\"/preview-image?file=%s\">preview</a>) (<a href=\"/edit-png?file=%s\">edit</a>)</p>", fullPath, name, encodedPath2, encodedPath2));
                 } else {
                     // For non-JSON files, just show download link
                     dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", fullPath, name));
@@ -222,6 +231,16 @@ public class WebServer extends BaseWebServer {
                     }
                     dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>",
                         fullPath, name, encodedPath2));
+                } else if (name.toLowerCase().endsWith(".png") || name.toLowerCase().endsWith(".jpg") || name.toLowerCase().endsWith(".jpeg")) {
+                    // For image files, add download, preview, and edit links
+                    String encodedPath2;
+                    try {
+                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                    } catch (Exception e) {
+                        encodedPath2 = fullPath; // Fallback if encoding fails
+                    }
+                    dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>🖼️ <a href=\"/fs/%s\">%s</a> (<a href=\"/preview-image?file=%s\">preview</a>) (<a href=\"/edit-png?file=%s\">edit</a>)</p>",
+                        fullPath, name, encodedPath2, encodedPath2));
                 } else {
                     // For non-JSON files, just show download link
                     dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>",
@@ -558,6 +577,84 @@ public class WebServer extends BaseWebServer {
                 }
             }
 
+            if(uri.startsWith("/preview-image")) {
+                // Extract file path from query parameters
+                String filePath = "";
+                GLog.debug("Preview image URI: " + uri);
+
+                // Try to get query parameters
+                String query = session.getQueryParameterString();
+                GLog.debug("Query parameter string: " + query);
+
+                // Parse query parameters manually
+                if (query != null && !query.isEmpty()) {
+                    // Split by & to get parameter pairs
+                    String[] params = query.split("&");
+                    for (String param : params) {
+                        if (param.startsWith("file=")) {
+                            filePath = param.substring(5); // Remove "file=" prefix
+                            // URL decode the path
+                            try {
+                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                            } catch (Exception e) {
+                                // If decoding fails, use the path as is
+                            }
+                            // Ensure path is not null
+                            if (filePath == null) {
+                                filePath = "";
+                            }
+                            break;
+                        }
+                    }
+                }
+
+                GLog.debug("Image to preview: '" + filePath + "'");
+                if (!filePath.isEmpty()) {
+                    return serveImagePreview(filePath);
+                } else {
+                    return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html", serveNotFound());
+                }
+            }
+
+            if(uri.startsWith("/edit-png")) {
+                // Extract file path from query parameters
+                String filePath = "";
+                GLog.debug("Edit PNG URI: " + uri);
+
+                // Try to get query parameters
+                String query = session.getQueryParameterString();
+                GLog.debug("Query parameter string: " + query);
+
+                // Parse query parameters manually
+                if (query != null && !query.isEmpty()) {
+                    // Split by & to get parameter pairs
+                    String[] params = query.split("&");
+                    for (String param : params) {
+                        if (param.startsWith("file=")) {
+                            filePath = param.substring(5); // Remove "file=" prefix
+                            // URL decode the path
+                            try {
+                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                            } catch (Exception e) {
+                                // If decoding fails, use the path as is
+                            }
+                            // Ensure path is not null
+                            if (filePath == null) {
+                                filePath = "";
+                            }
+                            break;
+                        }
+                    }
+                }
+
+                GLog.debug("PNG file to edit: '" + filePath + "'");
+                if (!filePath.isEmpty()) {
+                    return servePngEditor(filePath);
+                } else {
+                    return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html", serveNotFound());
+                }
+            }
+
             if(uri.equals("/log")) {
                 return serveLog();
             }
@@ -737,6 +834,123 @@ public class WebServer extends BaseWebServer {
             e.printStackTrace();
             return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html",
                 "<h1>Error in serveDebugList</h1><p>" + e.getMessage() + "</p>");
+        }
+    }
+
+    /**
+     * Serve Lua editor page (similar to JSON editor)
+     */
+    public String serveLuaEditor(String filePath) {
+        String template = loadTemplate("lua_editor_template.html");
+
+        String uploadPath = filePath.contains("/") ? filePath.substring(0, filePath.lastIndexOf("/")) : "";
+
+        java.util.Map<String, String> replacements = new java.util.HashMap<>();
+        replacements.put("UPLOAD_PATH", uploadPath);
+        replacements.put("FILE_PATH", filePath);
+        replacements.put("ESCAPED_FILE_PATH", javaScriptEscape(filePath));
+
+        return replacePlaceholders(template, replacements);
+    }
+
+    /**
+     * Serve image preview page
+     */
+    protected Response serveImagePreview(String filePath) {
+        try {
+            GLog.debug("Serving image preview for: " + filePath);
+
+            // Verify that the file exists and is an image
+            if (!filePath.toLowerCase().endsWith(".png") &&
+                !filePath.toLowerCase().endsWith(".jpg") &&
+                !filePath.toLowerCase().endsWith(".jpeg")) {
+                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html",
+                    "<html><body><h1>Invalid image file</h1></body></html>");
+            }
+
+            // Create an HTML page to display the image
+            String encodedFilePath = java.net.URLEncoder.encode(filePath, "UTF-8");
+            String html = String.format(
+                "<!DOCTYPE html>" +
+                "<html>" +
+                "<head>" +
+                "    <title>Image Preview - %s</title>" +
+                "    <style>" +
+                "        body { font-family: Arial, sans-serif; margin: 20px; background: #f0f0f0; }" +
+                "        .container { background: white; padding: 20px; border-radius: 8px; max-width: 800px; margin: 0 auto; }" +
+                "        .image-container { text-align: center; margin: 20px 0; }" +
+                "        img { max-width: 100%%; height: auto; border: 1px solid #ccc; }" +
+                "        .controls { text-align: center; margin: 20px 0; }" +
+                "        .controls a { margin: 0 10px; padding: 10px 15px; background: #4CAF50; color: white; text-decoration: none; border-radius: 4px; }" +
+                "        .controls a:hover { background: #45a049; }" +
+                "    </style>" +
+                "</head>" +
+                "<body>" +
+                "    <div class='container'>" +
+                "        <h1>Preview: %s</h1>" +
+                "        <div class='image-container'>" +
+                "            <img src='/fs/%s' alt='%s'>" +
+                "        </div>" +
+                "        <div class='controls'>" +
+                "            <a href='/edit-png?file=%s'>Edit with PixelCraft</a>" +
+                "            <a href='/fs/%s?download=true'>Download</a>" +
+                "            <a href='/list'>Back to directory</a>" +
+                "        </div>" +
+                "    </div>" +
+                "</body>" +
+                "</html>",
+                filePath, filePath, filePath, filePath, encodedFilePath, filePath);
+
+            return newFixedLengthResponse(Response.Status.OK, "text/html", html);
+
+        } catch (Exception e) {
+            GLog.debug("Error serving image preview: " + e.getMessage());
+            e.printStackTrace();
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html",
+                "<html><body><h1>Error serving image preview</h1></body></html>");
+        }
+    }
+
+    /**
+     * Serve PNG editor page (redirects to PixelCraft with the image loaded)
+     */
+    protected Response servePngEditor(String filePath) {
+        try {
+            GLog.debug("Serving PNG editor for: " + filePath);
+
+            // Verify that the file exists and is an image
+            if (!filePath.toLowerCase().endsWith(".png") &&
+                !filePath.toLowerCase().endsWith(".jpg") &&
+                !filePath.toLowerCase().endsWith(".jpeg")) {
+                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html",
+                    "<html><body><h1>Invalid image file</h1></body></html>");
+            }
+
+            // Redirect to PixelCraft with the edit_file parameter
+            String encodedFilePath = java.net.URLEncoder.encode(filePath, "UTF-8");
+            String pixelCraftUrl = "/web/pixelcraft/?edit_file=" + encodedFilePath;
+
+            // Create a redirect page
+            String html = String.format(
+                "<!DOCTYPE html>" +
+                "<html>" +
+                "<head>" +
+                "    <meta http-equiv='refresh' content='0; url=%s'>" +
+                "    <title>Redirecting to PixelCraft Editor</title>" +
+                "</head>" +
+                "<body>" +
+                "    <p>If you are not redirected to PixelCraft automatically, <a href='%s'>click here</a>.</p>" +
+                "</body>" +
+                "</html>",
+                pixelCraftUrl, pixelCraftUrl);
+
+            return newFixedLengthResponse(Response.Status.OK, "text/html", html);
+
+        } catch (Exception e) {
+            GLog.debug("Error serving PNG editor: " + e.getMessage());
+            e.printStackTrace();
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html",
+                "<html><body><h1>Error serving PNG editor</h1></body></html>");
         }
     }
 
