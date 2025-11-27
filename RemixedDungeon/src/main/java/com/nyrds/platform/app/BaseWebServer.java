@@ -194,8 +194,8 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
-                    dirListing.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>)</p>",
-                        fullPath, name, encodedPath2));
+                    dirListing.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>",
+                        fullPath, name, encodedPath2, fullPath));
                 } else if (name.toLowerCase().endsWith(".png") || name.toLowerCase().endsWith(".jpg") || name.toLowerCase().endsWith(".jpeg")) {
                     // For image files, add download, preview, and edit links
                     String encodedPath2;
@@ -503,23 +503,12 @@ public abstract class BaseWebServer extends NanoHTTPD {
             } else {
                 GLog.debug("Serving file: " + file);
                 try {
-                    // Check if it's a Lua file, redirect to Lua editor
-                    if (file.toLowerCase().endsWith(".lua")) {
-                        String html = serveLuaEditor(file);
-                        return newFixedLengthResponse(Response.Status.OK, "text/html", html);
-                    }
-                    // Check if it's a JSON file, redirect to JSON editor
-                    else if (file.toLowerCase().endsWith(".json")) {
-                        String html = serveJsonEditor(file);
-                        return newFixedLengthResponse(Response.Status.OK, "text/html", html);
-                    }
-                    // For other files, serve as download
-                    else {
-                        InputStream fis = ModdingMode.getInputStream(file);
-                        Response response = newChunkedResponse(Response.Status.OK, "application/octet-stream", fis);
-                        response.addHeader("Content-Disposition", "attachment; filename=\"" + file + "\"");
-                        return response;
-                    }
+                    // For all other files, serve as download (this is the default for non-JSON/Lua files)
+                    // Actual download parameter handling will be done in the actual serve method that receives the session
+                    InputStream fis = ModdingMode.getInputStream(file);
+                    Response response = newChunkedResponse(Response.Status.OK, "application/octet-stream", fis);
+                    response.addHeader("Content-Disposition", "attachment; filename=\"" + file + "\"");
+                    return response;
                 } catch (Exception e) {
                     GLog.w("Error serving file " + file + ": " + e.getMessage());
                     // If it's a directory causing the error, serve it as a directory instead

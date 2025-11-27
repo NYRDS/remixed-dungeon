@@ -140,6 +140,15 @@ public class WebServer extends BaseWebServer {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
                     dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>", fullPath, name, encodedPath2));
+                } else if (name.toLowerCase().endsWith(".lua")) {
+                    // For Lua files, add both download and edit links
+                    String encodedPath2;
+                    try {
+                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                    } catch (Exception e) {
+                        encodedPath2 = fullPath; // Fallback if encoding fails
+                    }
+                    dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>", fullPath, name, encodedPath2, fullPath));
                 } else if (name.toLowerCase().endsWith(".png") || name.toLowerCase().endsWith(".jpg") || name.toLowerCase().endsWith(".jpeg")) {
                     // For image files, add download, preview, and edit links
                     String encodedPath2;
@@ -150,7 +159,7 @@ public class WebServer extends BaseWebServer {
                     }
                     dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>🖼️ <a href=\"/fs/%s\">%s</a> (<a href=\"/preview-image?file=%s\">preview</a>) (<a href=\"/edit-png?file=%s\">edit</a>)</p>", fullPath, name, encodedPath2, encodedPath2));
                 } else {
-                    // For non-JSON files, just show download link
+                    // For other files, just show download link
                     dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", fullPath, name));
                 }
             }
@@ -231,6 +240,16 @@ public class WebServer extends BaseWebServer {
                     }
                     dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>",
                         fullPath, name, encodedPath2));
+                } else if (name.toLowerCase().endsWith(".lua")) {
+                    // For Lua files, add both download and edit links
+                    String encodedPath2;
+                    try {
+                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                    } catch (Exception e) {
+                        encodedPath2 = fullPath; // Fallback if encoding fails
+                    }
+                    dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>",
+                        fullPath, name, encodedPath2, fullPath));
                 } else if (name.toLowerCase().endsWith(".png") || name.toLowerCase().endsWith(".jpg") || name.toLowerCase().endsWith(".jpeg")) {
                     // For image files, add download, preview, and edit links
                     String encodedPath2;
@@ -242,7 +261,7 @@ public class WebServer extends BaseWebServer {
                     dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>🖼️ <a href=\"/fs/%s\">%s</a> (<a href=\"/preview-image?file=%s\">preview</a>) (<a href=\"/edit-png?file=%s\">edit</a>)</p>",
                         fullPath, name, encodedPath2, encodedPath2));
                 } else {
-                    // For non-JSON files, just show download link
+                    // For other files, just show download link
                     dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>",
                         fullPath, name));
                 }
