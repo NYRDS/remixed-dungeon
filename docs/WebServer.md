@@ -69,7 +69,7 @@ Key implementation details:
 
 The WebServer implementation can be found in:
 - `/RemixedDungeon/src/android/java/com/nyrds/platform/app/WebServer.java` (Android implementation)
-- `/RemixedDungeonDesktop/src/libgdx/java/com/nyrds/platform/app/WebServer.java` (Desktop placeholder)
+- `/RemixedDungeonDesktop/src/libgdx/java/com/nyrds/platform/app/WebServer.java` (Desktop implementation)
 
 ### Recent Refactoring Improvements
 
@@ -190,3 +190,19 @@ To access the WebServer once it's running:
 4. Use the web interface to browse and manage files
 
 Note: The WebServer is not enabled in official builds by default, but can be enabled through the hidden button method described above. This design choice balances accessibility for developers with security for general users.
+
+## Running the Standalone Web Server
+
+For desktop development, the WebServer can be run as a standalone application with the following Gradle command:
+
+```bash
+./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:runWebServer
+```
+
+This will start the server on port 8082 by default with the Remixed mod enabled. You can customize the server settings using the args parameter:
+
+```bash
+./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:runWebServer -Pargs="--webserver=8080 --mod=Remixed"
+```
+
+When running the standalone server, you'll need to access it at `http://localhost:[port]/` (e.g., `http://localhost:8082/`).

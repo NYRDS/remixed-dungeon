@@ -86,6 +86,25 @@ tasks.register('quickModTest', JavaExec) {
     jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
 }
 
+// Add a task for running the Web Server
+tasks.register('runWebServer', JavaExec) {
+    dependsOn classes
+    mainClass = 'com.nyrds.platform.app.WebServerApp'
+    classpath = sourceSets.main.runtimeClasspath
+
+    // Set default arguments if not provided
+    if (project.hasProperty('args')) {
+        args project.args.split(',')
+    } else {
+        args = ['--webserver=8082', '--mod=Remixed']
+    }
+
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+
+    // Set working directory to rundir to ensure proper asset access
+    workingDir = file('src/desktop/rundir')
+}
+
 tasks.withType(JavaExec).configureEach {
     jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
 }
