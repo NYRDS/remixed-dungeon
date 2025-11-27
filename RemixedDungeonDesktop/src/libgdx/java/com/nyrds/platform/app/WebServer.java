@@ -43,9 +43,8 @@ public class WebServer extends BaseWebServer {
     // Template loading and replacement methods for desktop
     private String loadTemplate(String templateName) {
         try {
-            // For desktop, use class loader to load the template from resources
-            // The templates are located in assets/html/ in the jar file
-            java.io.InputStream inputStream = getClass().getClassLoader().getResourceAsStream("assets/html/" + templateName);
+            // Use the new FilesystemAccess abstraction to get the input stream
+            java.io.InputStream inputStream = FilesystemAccess.getInputStream("html/" + templateName);
 
             if (inputStream != null) {
                 StringBuilder content = new StringBuilder();
@@ -57,22 +56,9 @@ public class WebServer extends BaseWebServer {
                 }
                 return content.toString();
             } else {
-                // Try to load via ModdingMode as fallback (may work for mod files)
-                inputStream = ModdingMode.getInputStream("html/" + templateName);
-                if (inputStream != null) {
-                    StringBuilder content = new StringBuilder();
-                    try (java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(inputStream))) {
-                        String line;
-                        while ((line = reader.readLine()) != null) {
-                            content.append(line).append("\n");
-                        }
-                    }
-                    return content.toString();
-                } else {
-                    GLog.w("Template not found: " + templateName + " via class loader or modding mode");
-                    // Provide a default template for error cases
-                    return "<!DOCTYPE html><html><head><title>Template Error</title></head><body><h1>Template Error</h1><p>Template not found: " + templateName + "</p></body></html>";
-                }
+                GLog.w("Template not found: " + templateName);
+                // Provide a default template for error cases
+                return "<!DOCTYPE html><html><head><title>Template Error</title></head><body><h1>Template Error</h1><p>Template not found: " + templateName + "</p></body></html>";
             }
         } catch (Exception e) {
             GLog.w("Failed to load template: " + templateName + ", error: " + e.getMessage());
@@ -173,7 +159,7 @@ public class WebServer extends BaseWebServer {
                 messageDiv = "<div class=\"success\">" + message + "</div>";
             }
         }
-        replacements.put("MESSAGE", messageDiv);
+        replacements.put("MESSAGE_DIV", messageDiv);
 
         // Prepare form action and path display
         String formAction = "/upload";
