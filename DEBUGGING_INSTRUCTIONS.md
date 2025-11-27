@@ -33,6 +33,43 @@ The WebServer directory listing issue has been successfully resolved:
 - ✅ Debug endpoint `/debug-list/scripts` now shows 15 resources found and 15 after filtering (instead of 0)
 - ✅ All existing functionality preserved (JSON editing, file downloads, etc.)
 
+## New Lua Editor Functionality
+
+The WebServer now includes comprehensive Lua editing capabilities:
+
+### Features
+- ✅ Lua files open in dedicated web-based editor with syntax highlighting via Ace Editor
+- ✅ Lua auto-format functionality included
+- ✅ Save functionality for Lua files with proper error handling
+- ✅ Separate edit and download links in directory listings
+- ✅ `/raw/` endpoint for efficient content loading by editors
+- ✅ Download parameter support (`?download=1`) for direct file downloads
+- ✅ Consistent implementation for both JSON and Lua editors
+- ✅ Full support for both Android and Desktop WebServer implementations
+
+### Endpoints
+- `/edit-lua?file=path/to/file.lua` - Open Lua editor for specific file
+- `/api/save-lua` - Save Lua file content (POST request)
+- `/raw/path/to/file.lua` - Get raw file content without redirects
+- `/fs/path/to/file.lua?download=1` - Force file download
+
+### Directory Listing Format
+Lua and JSON files now show as:
+```
+📄 filename.lua (edit) (download)
+```
+Where:
+- Main link opens the editor
+- Edit link also opens the editor (for consistency)
+- Download link forces direct file download
+
+### Editor Features
+- Lua syntax highlighting through Ace Editor
+- Auto-format button with custom Lua formatter
+- Save button to persist changes
+- Back to directory button
+- Error handling for file operations
+
 ## Quick Test Commands
 
 ```bash

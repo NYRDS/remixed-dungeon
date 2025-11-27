@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lua Mod Editor - {{FILE_PATH}}</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        #toolbar {
+            padding: 10px;
+            background: #2d2d2d;
+            border-bottom: 1px solid #3e3e3e;
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 8px 16px;
+            background: #0e639c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 2px;
+        }
+        button:hover { background: #1177bb; }
+        #editor { 
+            flex-grow: 1; 
+            font-size: 16px; /* Better for mobile readability */
+        }
+    </style>
+</head>
+<body>
+
+<div id="toolbar">
+    <button onclick="formatLua()">✨ Auto Format</button>
+    <button onclick="saveCode()">💾 Save</button>
+    <button onclick="location.href='/fs/{{UPLOAD_PATH}}/'">◄ Back to Directory</button>
+</div>
+
+<!-- The Editor Container -->
+<div id="editor">-- Welcome to the Lua Mod Editor!</div>
+
+<!-- 1. Load Ace Editor from CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.7/ace.min.js"></script>
+
+<script>
+    // 2. Initialize Editor
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai"); // Dark theme
+    editor.session.setMode("ace/mode/lua"); // Lua Syntax
+    
+    // Editor Options for Mobile/Game Embeds
+    editor.setOptions({
+        fontSize: "14pt",          // Larger font for mobile
+        showPrintMargin: false,    // Hide the vertical line
+        wrap: true,                // Wrap long lines
+        tabSize: 4,
+        useSoftTabs: true
+    });
+
+    // Load the file content when the page loads
+    window.onload = function() {
+        loadFileContent();
+    };
+
+    function loadFileContent() {
+        fetch('/raw/{{FILE_PATH}}')
+            .then(response => response.text())
+            .then(content => {
+                editor.setValue(content);
+                editor.clearSelection(); // Deselect everything
+                console.log("File content loaded");
+            })
+            .catch(error => {
+                console.error('Error loading file:', error);
+                editor.setValue("-- Error loading file: " + error.message);
+            });
+    }
+
+    // 3. Simple Lua Auto-Formatter (No NPM Dependencies)
+    function formatLua() {
+        var code = editor.getValue();
+        
+        // Split into lines
+        var lines = code.split('\n');
+        var indentLevel = 0;
+        var formatted = [];
+        var indentString = "    "; // 4 spaces
+
+        // Regex patterns to detect indentation changes
+        // "Keywords that start a block"
+        var increaseIndent = /^\s*(function|if|repeat|while|do|local\s+function|for)\b|{\s*$/;
+        // "Keywords that end a block"
+        var decreaseIndent = /^\s*(end|until|\})\b/;
+        // "Keywords that decrease THEN increase (dedent-indent)"
+        var dedentIndent = /^\s*(else|elseif)\b/;
+
+        for (var i = 0; i < lines.length; i++) {
+            var line = lines[i].trim();
+            
+            // Check for decrease *before* printing the line (so 'end' lines up correctly)
+            if (decreaseIndent.test(line) || dedentIndent.test(line)) {
+                if (indentLevel > 0) indentLevel--;
+            }
+
+            // Create the indented line
+            var currentIndent = "";
+            for (var j = 0; j < indentLevel; j++) currentIndent += indentString;
+            formatted.push(currentIndent + line);
+
+            // Check for increase *after* printing (so the next line is indented)
+            if (increaseIndent.test(line) || dedentIndent.test(line)) {
+                indentLevel++;
+            }
+        }
+
+        // Apply formatted text back to editor
+        editor.setValue(formatted.join('\n'));
+        editor.clearSelection(); // Deselect everything
+    }
+
+    function saveCode() {
+        var luaCode = editor.getValue();
+        console.log("Saving code to: {{FILE_PATH}}");
+        
+        // Prepare data to send to server
+        var data = {
+            filePath: "{{FILE_PATH}}",
+            content: luaCode
+        };
+
+        fetch('/api/save-lua', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                alert("File saved successfully!");
+            } else {
+                alert("Error saving file: " + (result.error || "Unknown error"));
+            }
+        })
+        .catch(error => {
+            console.error('Save error:', error);
+            alert("Error saving file: " + error.message);
+        });
+    }
+</script>
+
+</body>
+</html>

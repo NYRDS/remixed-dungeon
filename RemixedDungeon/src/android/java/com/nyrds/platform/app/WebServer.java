@@ -219,12 +219,82 @@ public class WebServer extends BaseWebServer {
                 }
             }
 
+            if(uri.startsWith("/edit-lua")) {
+                // Extract file path from query parameters
+                String filePath = "";
+                GLog.debug("Edit Lua URI: " + uri);
+
+                // Try to get query parameters
+                String query = session.getQueryParameterString();
+                GLog.debug("Query parameter string: " + query);
+
+                // Parse query parameters manually
+                if (query != null && !query.isEmpty()) {
+                    // Split by & to get parameter pairs
+                    String[] params = query.split("&");
+                    for (String param : params) {
+                        if (param.startsWith("file=")) {
+                            filePath = param.substring(5); // Remove "file=" prefix
+                            // URL decode the path
+                            try {
+                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                            } catch (Exception e) {
+                                // If decoding fails, use the path as is
+                            }
+                            // Ensure path is not null
+                            if (filePath == null) {
+                                filePath = "";
+                            }
+                            break;
+                        }
+                    }
+                }
+
+                GLog.debug("Lua file to edit: '" + filePath + "'");
+                if (!filePath.isEmpty()) {
+                    return newFixedLengthResponse(Response.Status.OK, "text/html", serveLuaEditor(filePath));
+                } else {
+                    return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html", serveNotFound());
+                }
+            }
+
             if(uri.equals("/log")) {
                 return serveLog();
             }
 
             if(uri.startsWith("/fs/")) {
-                return serveFs(uri.substring(4));
+                // Check for download parameter
+                String file = uri.substring(4);
+                String downloadParam = session.getParameters().get("download") != null ?
+                    session.getParameters().get("download").get(0) : null;
+
+                if ("true".equals(downloadParam) || "1".equals(downloadParam)) {
+                    // Force download of file regardless of type
+                    try {
+                        InputStream fis = ModdingMode.getInputStream(file);
+                        Response response = newChunkedResponse(Response.Status.OK, "application/octet-stream", fis);
+                        response.addHeader("Content-Disposition", "attachment; filename=\"" + file + "\"");
+                        return response;
+                    } catch (Exception e) {
+                        GLog.w("Error serving raw file " + file + ": " + e.getMessage());
+                        return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", serveNotFound());
+                    }
+                }
+
+                return serveFs(file);
+            }
+
+            if(uri.startsWith("/raw/")) {
+                // Handle raw file content requests (for editor content loading)
+                String file = uri.substring(5); // "/raw/".length() = 5
+                try {
+                    InputStream fis = ModdingMode.getInputStream(file);
+                    Response response = newChunkedResponse(Response.Status.OK, "application/octet-stream", fis);
+                    return response;
+                } catch (Exception e) {
+                    GLog.w("Error serving raw file " + file + ": " + e.getMessage());
+                    return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", serveNotFound());
+                }
             }
         } else if (session.getMethod() == Method.POST) {
             if(uri.startsWith("/upload")) {

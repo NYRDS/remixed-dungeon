@@ -94,3 +94,13 @@ Through the debug endpoint, we determined:
 - ✅ All existing functionality continues to work (JSON editing, file downloads, etc.)
 - ✅ Duplicate upload links issue also fixed (now has reasonable single upload links in header and content area)
 - ✅ Debug endpoint shows correct filtering results (15 resources found for scripts, after filtering shows 15 instead of 0)
+
+## Additional Feature Enhancement - Lua Editor Added
+- ✅ Lua files now open in dedicated editor with Lua syntax highlighting via Ace Editor
+- ✅ Lua editor includes auto-format functionality
+- ✅ Lua editor allows saving changes back to server
+- ✅ Lua editor loads actual file content via new /raw/ endpoint
+- ✅ Directory listings now show separate edit and download links for Lua files
+- ✅ JSON editor also updated to use /raw/ endpoint for consistency
+- ✅ Download parameter (?download=1) added for direct file downloads
+- ✅ Full implementation for both Android and Desktop WebServer
