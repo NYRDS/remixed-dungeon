@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PixelCraft: A Pixel Art Editor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="PixelCraft: A Pixel Art Editor" />
+<meta property="og:description" content="A pixel Art & Animation Creation Tool Built using HTML5 Canvas. It is a Progressive Web App (PWA) with offline compatibility. It is mobile-friendly and is very easy to use." />
+<meta name="keywords" content="PixelCraft, pixel-art" />
+<meta name="news_keywords" content="PixelCraft, pixel-art" />
+<meta name="language" content="English">
+<meta property="og:url" content="https://rgab1508.github.io/PixelCraft/" />
+<meta property="og:site_name" content="PixelCraft" />
+<meta property="article:tag" content="PixelCraft" />
+<meta property="article:tag" content="pixel-art" />
+<meta property="article:published_time" content="2020-04-22T08:34:48+00:00" />
+<meta property="article:modified_time" content="2020-04-22T08:34:51+00:00" />
+<meta property="og:updated_time" content="2020-04-22T08:34:51+00:00" />
+<meta property="og:image" content="https://rgab1508.github.io/PixelCraft/images/overview.png" />
+<meta property="og:image:secure_url" content="https://rgab1508.github.io/PixelCraft/images/overview.png" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="445" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="A pixel Art & Animation Creation Tool Built using HTML5 Canvas. It is a Progressive Web App (PWA) with offline compatibility. It is mobile-friendly and is very easy to use." />
+<meta name="twitter:title" content="PixelCraft: A Pixel Art Editor" />
+<meta name="twitter:image" content="https://rgab1508.github.io/PixelCraft/images/overview.png" />
+<link rel="shortcut icon" type="image/png" href="icons/logo.png"/>
+<link rel="stylesheet" type="text/css" href="global.css" />
+<link rel="manifest" href="manifest.json">
+<script src="https://kit.fontawesome.com/473e8f3a80.js" crossorigin="anonymous"></script>
+<script src="lib/Matrix.js" async></script>
+<script src="lib/Shapes.js" async></script>
+<script src="lib/Transformation.js" async></script>
+<script src="lib/gif.js"></script>
+<script src="Canvas.js"></script>
+</head>
+<body>
+    <div class="menubtn">&#9776;</div>
+    <ul class="menu">
+      <li onclick="newProject()">New</li>
+      <li onclick="board.save()">Save image</li>
+      <li onclick="board.renderGIF()">Save GIF</li>
+      <li onclick="showColorSettings()">Color Settings</li>
+      <li id="install-pwa-btn" class="display-none" onclick="install()">Install PWA</li>
+      <li><a href="https://github.com/rgab1508/PixelCraft" target="_blank"><i class="fab fa-github"></i>Github</a></li>
+    </ul>
+    <div id="popup">
+      <h3>Select the Dimensions Of the grid</h3>
+      <input type="text" id="width" value="16">X<input type="text" id="height" value="16">
+      <button id="close">OK</button>
+    </div>
+    <div id="frames" onblur="Frames.close()" tabindex="0">
+    <div class="btn" style="left: 10px;" onclick="document.querySelector('#frames #gallery').scrollLeft-=100;"><i class="fa fa-chevron-left"></i></div>
+    <div class="btn" style="right: 10px;" onclick="document.querySelector('#frames #gallery').scrollLeft+=100;"><i class="fa fa-chevron-right"></i></div>
+    <div id="gallery"></div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div id="toolbar">
+      <span class="item" onclick="board.setmode(0)" style="background-color: grey;"><i class="fas fa-pencil-alt"></i></span>
+      <span class="item" onclick="board.setmode(1)"><i class="fas fa-eraser"></i></span>
+      <span class="item" onclick="board.setmode(2)"><i class="fas fa-fill"></i></span>
+      <span class="item" onclick="board.setmode(3)"><i class="fas fa-slash"></i></span>
+      <span class="item" onclick="board.setmode(4)"><i class="far fa-circle"></i></span>
+      <span class="item" onclick="board.setmode(5)"><i class="far fa-circle" style="transform: rotateX(45deg);"></i></span>
+      <span class="item" onclick="board.addFrame()"><i class="fas fa-plus"></i></span>
+      <span class="item" onclick="board.undo()"><i class="fas fa-undo"></i></span>
+      <span class="item" onclick="board.redo()"><i class="fas fa-redo"></i></span>
+      <span class="item" onclick="board.clear()"><i class="fas fa-trash"></i></span>
+      <span class="item" onclick="board.addImage()"><i class="fa fa-upload"></i></span>
+      <span class="item" onclick="Frames.open()"><i class="fas fa-eye"></i></span>
+    </div>
+    <div id="palette"></div>
+    <div id="color-settings-popup" style="display: none;">
+      <span onclick="document.getElementById('color-settings-popup').style.display = 'none';" class="close"><i class="fas fa-times" ></i></span>
+      <div class="color-palette"></div>
+      <div class="button-grp">
+        <button>Load Colors</button>
+        <button onclick="exportColors()">Export Colors</button>
+        <button>Save palette</button>
+      </div>
+    </div>
+    <script type="text/javascript">
+
+    // override of finishRendering of gif.js
+GIF.prototype.finishRendering = function() {
+  var data, frame, i, image, j, k, l, len, len1, len2, len3, offset, page, ref, ref1, ref2;
+  len = 0;
+  ref = this.imageParts;
+  for (j = 0,
+  len1 = ref.length; j < len1; j++) {
+      frame = ref[j];
+      len += (frame.data.length - 1) * frame.pageSize + frame.cursor
+  }
+  len += frame.pageSize - frame.cursor;
+  this.log("rendering finished - filesize " + Math.round(len / 1e3) + "kb");
+  data = new Uint8Array(len);
+  offset = 0;
+  ref1 = this.imageParts;
+  for (k = 0,
+  len2 = ref1.length; k < len2; k++) {
+      frame = ref1[k];
+      ref2 = frame.data;
+      for (i = l = 0,
+      len3 = ref2.length; l < len3; i = ++l) {
+          page = ref2[i];
+          data.set(page, offset);
+          if (i === frame.data.length - 1) {
+              offset += frame.cursor
+          } else {
+              offset += frame.pageSize
+          }
+      }
+  }
+  image = new Blob([data],{
+      type: "image/gif"
+  });
+  this.running = false; // *this is the new part*
+  return this.emit("finished", image, data)
+};
+
+var Tool = {
+  "pen": 0,
+  "eraser": 1,
+  "fillBucket": 2,
+  "line": 3,
+  "circle": 4,
+  "ellipse": 5,
+  "addFrame": 6,
+  "undo": 7,
+  "redo": 8,
+  "clearCanvas": 9
+};
+var tools = [true, false, false, false, false, false];
+var lc = [];
+
+
+
+class Popup {
+  constructor(s) {
+    this.s = s;
+    document.querySelector(this.s).style.display = "block";
+    document.querySelector(this.s).style.transform = "translate(-50%,-50%) scale(1,1)";
+  }
+  close() {
+    document.querySelector(this.s).style.transform = "translate(-50%,-50%) scale(0,0)";
+  }
+}
+
+class Frames {
+  static open() {
+  	document.querySelector("#frames").style.display = "block";
+    document.querySelector("#frames").style.transform = "translate(-50%,-50%) scale(1,1)";
+    document.querySelector("#frames").focus();
+    document.querySelector("#frames #gallery").innerHTML="";
+    for (var frame of board.frames) document.querySelector("#frames #gallery").appendChild(frame[0]);
+    document.querySelectorAll("#frames #gallery img").forEach((x,i) => {
+    	x.onclick = (e) => {
+    		board.loadFrame(i);
+    		Frames.close();
+    	};
+    	x.oncontextmenu = (e) => {
+    		e.preventDefault();
+    		var del_confirmation = confirm("Delete?");
+    		if (del_confirmation) {
+    			board.deleteFrame(i);
+    			Frames.open();
+    		}
+    	};
+    });
+  }
+  static close() {
+    document.querySelector("#frames").style.transform = "translate(-50%,-50%) scale(0,0)";
+  }
+}
+
+function createPalette (ele) {
+  ele.innerHTML = window.colors.map(x => (
+    `<div class="item" style="background-color: rgb(${x[0]},${x[1]},${x[2]})" ></div>`
+  )).join("\n");
+}
+
+function showColorSettings (e) {
+  document.querySelector("#color-settings-popup").style.display = "block";
+  createPalette(document.querySelector('#color-settings-popup > div.color-palette'))
+}
+
+function exportColors() {
+  let csvContent = "data:text/csv;charset=utf-8," ;
+  csvContent += window.colors.join("\n");
+  
+  console.log(csvContent)
+  let encodedUri = encodeURI(csvContent);
+  let link = document.createElement("a");
+  link.setAttribute("href", encodedUri);
+  link.setAttribute("download", "colors.csv");
+  document.body.appendChild(link);
+
+  link.click();
+}
+
+window.onload = function () {
+  let canvasData = localStorage.getItem('pc-canvas-data');
+  if(canvasData){
+    data = JSON.parse(canvasData);
+    // console.log(data);
+    window.colors = data.colors;
+    if(window.board == undefined){
+      window.board = new Canvas(data.width, data.height);
+    }
+    
+    let img = new Image();
+    img.setAttribute('src', data.url);
+    img.addEventListener("load", function () {
+        window.board.ctx.drawImage(img, 0, 0);
+    });
+    /*
+    window.board.frames = JSON.parse(data.frames).map(frame=>{
+      let img = new Image();
+      img.src = frame[0]
+      return [img, frame[1]]
+    });
+    
+    for(let f in data.frames){
+      let c = document.createElement('canvas');
+      c.width = data.width;
+      c.height = data.height;
+      let c_ctx = c.getContext('2d');
+      c_ctx.drawImage(f[0], 0, 0);
+      window.board.addFrame(c.toDataURL());
+    }
+   */ 
+    
+    window.board.steps = data.steps;
+    window.board.redo_arr = data.redo_arr;
+    window.board.setcolor(data.currColor);
+    window.gif = new GIF({
+      workers: 2,
+      quality: 10,
+      width: 10 * window.board.width,
+      height: 10 * window.board.height
+    });
+    window.gif.on('finished', function (blob) {
+      var url = URL.createObjectURL(blob);
+      var link = document.createElement('a');
+      link.download = 'canvas.gif';
+      link.href = url;
+      link.click();
+    });
+  }
+  else {
+    newProject();
+  }
+
+  // Initialize colors if they haven't been set by newProject (e.g. when loading an image)
+  if (typeof window.colors === 'undefined') {
+    window.colors = [
+      [0, 0, 0, 255],
+      [127, 127, 127, 255],
+      [136, 0, 21, 255],
+      [237, 28, 36, 255],
+      [255, 127, 39, 255],
+      [255, 242, 0, 255],
+      [34, 177, 36, 255],
+      [0, 162, 232, 255],
+      [63, 72, 204, 255],
+      [163, 73, 164, 255],
+      [255, 255, 255, 255],
+      [195, 195, 195, 255],
+      [185, 122, 87, 255],
+      [255, 174, 201, 255],
+      [255, 201, 14, 255],
+      [239, 228, 176, 255],
+      [181, 230, 29, 255],
+      [153, 217, 234, 255],
+      [112, 146, 190, 255],
+      [200, 191, 231, 255]
+    ];
+  }
+
+  let paletteDiv = document.querySelector("#palette");
+  paletteDiv.innerHTML = window.colors.map(x =>
+    `<div class="item" style="background-color: rgb(${x[0]},${x[1]},${x[2]})" onclick="board.setcolor([${x}]);act(this);" oncontextmenu="board.setcolor([${x}]);act(this);board.ctx.globalAlpha=+prompt('Transparency(0-1)?')"></div>`
+  ).join("\n");
+
+  // paletteDiv.innerHTML += '<div class="btn" ><i class="fa fa-upload"></i></div>';
+
+  document.querySelector("#palette").addEventListener("contextmenu",e=>e.preventDefault());
+}
+
+document.querySelector("#close").onclick = function () {
+  var width = +document.querySelector("#width").value;
+  var height = +document.querySelector("#height").value;
+  if(window.board == undefined){
+    // Create the new Canvas object
+    var newBoard = new Canvas(width, height);
+    // Set it to the global window.board variable for compatibility with PixelCraft code
+    window.board = newBoard;
+
+    // Call our new callback to set up the remixed functionality
+    if (window.remixedOnBoardReady) {
+      window.remixedOnBoardReady(newBoard);
+    } else {
+      console.log("remixedOnBoardReady function not available");
+    }
+  }
+
+  // Access the board object (either from window.board or the new one we created)
+  var actualBoard = window.board;
+
+  actualBoard.canvas.width = 10 * width;//display each pixel in 10 by 10pxs
+  actualBoard.canvas.height = 10 * height;
+  actualBoard.width = width;//Dimentions of x pixels
+  actualBoard.height = height;//Dimentions of Y pixels
+  actualBoard.canvas.style.display = "block";
+  actualBoard.canvas.style.height = Math.floor((height / width) * actualBoard.canvas.clientWidth) + "px";
+  actualBoard.w = +actualBoard.canvas.width;
+  actualBoard.h = +actualBoard.canvas.height;
+  actualBoard.ctx = actualBoard.canvas.getContext("2d");
+  actualBoard.ctx.fillStyle = "white";
+  actualBoard.ctx.globalAlpha = 1;
+  actualBoard.ctx.fillRect(0, 0, actualBoard.w, actualBoard.h);
+  actualBoard.data = [...Array(actualBoard.width)].map(e => Array(actualBoard.height).fill([255, 255, 255, 255]));
+  actualBoard.steps = [];
+  actualBoard.redo_arr = [];
+  actualBoard.frames = [];
+
+  actualBoard.setcolor([0, 0, 0, 255]);
+  window.dim.close();
+  window.gif = new GIF({
+    workers: 2,
+    quality: 10,
+    width: 10 * actualBoard.width,
+    height: 10 * actualBoard.height
+  });
+  window.gif.on('finished', function (blob) {
+    var url = URL.createObjectURL(blob);
+    var link = document.createElement('a');
+    link.download = 'canvas.gif';
+    link.href = url;
+    link.click();
+  });
+
+  console.log("Board creation complete, properties set");
+  // After board is created, the remixedOnBoardReady callback handles
+  // creating the save button and checking for image import
+}
+
+document.querySelector(".menubtn").onclick = function () {
+  document.querySelector(".menu").style.display = document.querySelector(".menu").style.display != "block" ? "block" : "none";
+}
+
+function newProject(){
+  // Check if we're supposed to load an image instead of starting a new project
+  const urlParams = new URLSearchParams(window.location.search);
+  const imageKey = urlParams.get('edit_file');
+
+  if (imageKey && window.remixedCheckForImport) {
+    // We're loading an image, so don't show the dimension dialog
+    console.log("newProject: Image load requested via edit_file parameter, skipping dimension dialog");
+    // The image loading will be handled automatically by the remixed integration
+    // which will create a board with the correct dimensions
+    return;
+  }
+
+  // Original behavior - show dimension dialog for new projects
+  document.querySelector(".menu").style.display = "none";
+  localStorage.removeItem('pc-canvas-data');
+  window.dim = new Popup("#popup");
+  window.colors = [
+    [0, 0, 0, 255],
+    [127, 127, 127, 255],
+    [136, 0, 21, 255],
+    [237, 28, 36, 255],
+    [255, 127, 39, 255],
+    [255, 242, 0, 255],
+    [34, 177, 36, 255],
+    [0, 162, 232, 255],
+    [63, 72, 204, 255],
+    [163, 73, 164, 255],
+    [255, 255, 255, 255],
+    [195, 195, 195, 255],
+    [185, 122, 87, 255],
+    [255, 174, 201, 255],
+    [255, 201, 14, 255],
+    [239, 228, 176, 255],
+    [181, 230, 29, 255],
+    [153, 217, 234, 255],
+    [112, 146, 190, 255],
+    [200, 191, 231, 255]
+  ];
+}
+function filler(x, y, cc) {
+  if (x >= 0 && x < board.width && y >= 0 && y < board.height) {
+    if (JSON.stringify(board.data[x][y]) == JSON.stringify(cc) && JSON.stringify(board.data[x][y]) != JSON.stringify(board.color)) {
+      board.draw(x, y);
+      filler(x + 1, y, cc);
+      filler(x, y + 1, cc);
+      filler(x - 1, y, cc);
+      filler(x, y - 1, cc);
+    }
+  }
+}
+
+function act(clr) {
+  document.querySelectorAll("#palette .item").forEach(x => {x.style.boxShadow = ""; x.style.border = "";});
+  clr.style.boxShadow = "10px 10px 10px 10px rgba(0,0,0,0.5)";
+  clr.style.border = `1px white solid`;
+}
+
+// window.onbeforeunload = function () {
+//   board.saveInLocal();
+//   return "Data will be lost if you leave the page, are you sure?";
+// };	
+
+var scope = {
+  scope: './'
+};
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register(
+    'sw.js',
+    scope
+  ).then(function(serviceWorker) {
+    console.log('successful');
+  }).catch(function(error) {
+    alert("error");
+  });
+} else {
+  console.log('unavailable');
+}
+
+var msg;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  msg = e;
+  // Shows the install button only when the app is installable
+  document.querySelector("#install-pwa-btn").classList.remove("display-none");
+});
+
+function install() {
+  msg.prompt();
+  msg.userChoice.then((choiceResult) => {
+    if (choiceResult.outcome === 'accepted') {
+      // Hides the install button
+      document.querySelector("#install-pwa-btn").classList.add("display-none");
+    }
+  });
+}
+
+window.onerror = function (errorMsg, url, lineNumber) {
+  alert('Error: ' + errorMsg + ' Script: ' + url + ' Line: ' + lineNumber);
+}
+
+// INTEGRATION SCRIPT FOR REMIXED DUNGEON
+console.log("Remixed Dungeon integration: Basic log test");
+(function() {
+    console.log("Remixed Dungeon integration starting...");
+
+    // ==========================================
+    // CONFIGURATION
+    // ==========================================
+    const SAVE_ENDPOINT = "/api/save_texture"; // Your Java Server Endpoint
+
+    // Store the board reference directly
+    let remixedBoard = null;
+    console.log("Remixed board reference initialized as null");
+
+    // ==========================================
+    // 1. CREATE THE SAVE BUTTON
+    // ==========================================
+    let saveBtn = null;
+
+    function createSaveButton() {
+        console.log("createSaveButton called, saveBtn exists:", !!saveBtn);
+        if (saveBtn) return; // Don't create multiple buttons
+
+        saveBtn = document.createElement("button");
+        saveBtn.innerText = "SAVE TO MOD";
+
+        // Mobile-friendly styling (Floating Bottom-Right)
+        Object.assign(saveBtn.style, {
+            position: "fixed",
+            bottom: "20px",
+            right: "20px",
+            zIndex: "9999",
+            padding: "15px 20px",
+            background: "#4CAF50", // Green
+            color: "white",
+            border: "none",
+            borderRadius: "50px",
+            fontSize: "16px",
+            fontWeight: "bold",
+            boxShadow: "04px 6px rgba(0,0,0,0.3)",
+            cursor: "pointer"
+        });
+
+        saveBtn.onclick = uploadTexture;
+        document.body.appendChild(saveBtn);
+        console.log("Save button created and added to page");
+    }
+
+    // ==========================================
+    // 2. THE SAVE LOGIC
+    // ==========================================
+    function uploadTexture() {
+        console.log("uploadTexture called");
+        // Check if PixelCraft board is properly initialized
+        if (!remixedBoard || !document.getElementById("canvas")) {
+            console.log("uploadTexture: Board or canvas not ready");
+            alert("PixelCraft is still loading. Please wait a moment and try again.");
+            return;
+        }
+
+        // PixelCraft draws everything to a canvas with ID 'canvas'
+        const mainCanvas = document.getElementById("canvas");
+
+        if (!mainCanvas) {
+            console.log("uploadTexture: Canvas element not found");
+            alert("Error: Canvas not found!");
+            return;
+        }
+
+        // Convert to Base64
+        const dataURL = mainCanvas.toDataURL("image/png");
+        const base64Content = dataURL.split(',')[1]; // Remove header
+
+        // Get filename (Optional: check if you passed ?filename=player.png in URL)
+        const urlParams = new URLSearchParams(window.location.search);
+        const filename = urlParams.get('filename') || "new_sprite.png";
+
+        if (saveBtn) {
+            saveBtn.innerText = "Saving...";
+            console.log("Set save button text to 'Saving...'");
+        }
+
+        // POST to Java Server
+        fetch(SAVE_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: filename,
+                image: base64Content
+            })
+        })
+        .then(response => {
+            console.log("Save response received, ok:", response.ok, "status:", response.status);
+            if (response.ok) {
+                alert("Saved: " + filename);
+            } else {
+                alert("Server Error: " + response.status);
+            }
+        })
+        .catch(error => {
+            console.log("Save error:", error);
+            alert("Network Error");
+            console.error(error);
+        })
+        .finally(() => {
+            if (saveBtn) {
+                saveBtn.innerText = "SAVE TO MOD";
+                console.log("Reset save button text to 'SAVE TO MOD'");
+            }
+        });
+    }
+
+    // ==========================================
+    // 3. THE LOAD LOGIC (Auto-load from Server)
+    // ==========================================
+    // This allows you to open the editor like: /pixelcraft/index.html?load_image=DATA_URL
+
+    function createBoardForImage(img) {
+        console.log("createBoardForImage called with image dimensions:", img.width, "x", img.height);
+
+        // Create the canvas board with image dimensions
+        var width = img.width;
+        var height = img.height;
+
+        console.log("Creating board with dimensions:", width, "x", height);
+
+        // Create the canvas board with image dimensions
+        var newBoard = new Canvas(width, height);
+
+        // Set it to the global window.board variable for compatibility with PixelCraft code
+        window.board = newBoard;
+        console.log("Window.board has been set");
+
+        // Call our callback to set up the remixed functionality
+        console.log("About to call remixedOnBoardReady. Function exists:", typeof window.remixedOnBoardReady);
+        if (window.remixedOnBoardReady) {
+            window.remixedOnBoardReady(newBoard);
+            console.log("remixedOnBoardReady called, current remixedBoard value:", remixedBoard);
+        } else {
+            console.log("remixedOnBoardReady function not available");
+        }
+
+        // The Canvas constructor already sets up the canvas properties,
+        // so the board is ready to use
+
+        // First, ensure the image data is properly loaded into the internal board data
+        // Create a temporary canvas to ensure proper pixel extraction
+        const tempCanvas = document.createElement('canvas');
+        tempCanvas.width = img.width;
+        tempCanvas.height = img.height;
+        const tempCtx = tempCanvas.getContext('2d');
+        tempCtx.drawImage(img, 0, 0);
+
+        // Get the pixel data from the temporary canvas
+        const imgData = tempCtx.getImageData(0, 0, tempCanvas.width, tempCanvas.height);
+        const pixelData = imgData.data;
+
+        console.log("Loading image data into board internal data array");
+
+        let pixelsChanged = 0;
+        // Update the board's internal data array
+        for (let x = 0; x < newBoard.width; x++) {
+            for (let y = 0; y < newBoard.height; y++) {
+                // Calculate the index in the pixel data array
+                const pixelIndex = (y * tempCanvas.width + x) * 4;
+
+                // Extract RGBA values
+                const r = pixelData[pixelIndex];
+                const g = pixelData[pixelIndex + 1];
+                const b = pixelData[pixelIndex + 2];
+                const a = pixelData[pixelIndex + 3];
+
+                // Update the board's internal data
+                newBoard.data[x][y] = [r, g, b, a];
+
+                // Only count if the pixel is different from default white
+                if (!(r === 255 && g === 255 && b === 255 && a === 255)) {
+                    pixelsChanged++;
+                }
+            }
+        }
+
+        console.log("Board internal data updated from image");
+        console.log("Image metrics - Dimensions:", width + "x" + height, "Non-white pixels:", pixelsChanged);
+
+        // Now update the visual canvas to reflect the internal data
+        // We need to draw each pixel individually to ensure it shows at the right scale
+        newBoard.ctx.imageSmoothingEnabled = false;
+        for (let x = 0; x < newBoard.width; x++) {
+            for (let y = 0; y < newBoard.height; y++) {
+                const pixel = newBoard.data[x][y];
+                if (pixel && pixel.length >= 4) {
+                    newBoard.ctx.fillStyle = `rgba(${pixel[0]}, ${pixel[1]}, ${pixel[2]}, ${pixel[3] / 255})`;
+                    // Calculate the position considering the 10x scale
+                    const rectX = Math.floor(x * (newBoard.w / newBoard.width));
+                    const rectY = Math.floor(y * (newBoard.h / newBoard.height));
+                    const rectWidth = Math.floor(newBoard.w / newBoard.width);
+                    const rectHeight = Math.floor(newBoard.h / newBoard.height);
+
+                    newBoard.ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
+                }
+            }
+        }
+
+        console.log("Visual canvas updated to reflect internal data");
+
+        // Override the save function to ensure original resolution is maintained
+        newBoard.save = function() {
+            // Create a temporary canvas with original pixel dimensions
+            const tempCanvas = document.createElement('canvas');
+            tempCanvas.width = this.width;  // Original width (e.g., 256)
+            tempCanvas.height = this.height; // Original height (e.g., 16)
+            const tempCtx = tempCanvas.getContext('2d');
+
+            // Set the proper scaling to draw each pixel correctly
+            tempCtx.imageSmoothingEnabled = false;
+
+            // Draw each pixel from the board data array at 1:1 scale
+            for (let x = 0; x < this.width; x++) {
+                for (let y = 0; y < this.height; y++) {
+                    const pixel = this.data[x][y];
+                    if (pixel && pixel.length >= 4) {
+                        tempCtx.fillStyle = `rgba(${pixel[0]}, ${pixel[1]}, ${pixel[2]}, ${pixel[3] / 255})`;
+                        tempCtx.fillRect(x, y, 1, 1);
+                    }
+                }
+            }
+
+            // Convert to Blob with original dimensions
+            tempCanvas.toBlob(function (blob) {
+                var url = URL.createObjectURL(blob);
+                var link = document.createElement("a");
+                link.download = "edited_image.png";
+                link.href = url;
+                link.click();
+            });
+        };
+    }
+
+    function checkForImport() {
+        console.log("checkForImport called");
+        const urlParams = new URLSearchParams(window.location.search);
+        const imageKey = urlParams.get('edit_file');
+        console.log("checkForImport: Found imageKey:", imageKey);
+
+        if (imageKey) {
+            console.log("checkForImport: Attempting to load image:", imageKey);
+            // Fetch the image data from your server
+            fetch("/api/get_texture?file=" + imageKey)
+            .then(res => {
+                console.log("checkForImport: Fetch response received, ok:", res.ok, "status:", res.status);
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+                return res.json(); // Changed from .blob() to .json() since API returns JSON
+            })
+            .then(data => {
+                console.log("checkForImport: JSON response received:", data);
+
+                // Extract the base64 image data from the JSON response
+                if (!data.image) {
+                    throw new Error("No image data in response");
+                }
+
+                // Convert base64 to binary data
+                const binaryData = atob(data.image);
+                const array = new Uint8Array(binaryData.length);
+                for (let i = 0; i < binaryData.length; i++) {
+                    array[i] = binaryData.charCodeAt(i);
+                }
+
+                // Create a blob from the binary data
+                const blob = new Blob([array], { type: 'image/png' });
+
+                console.log("checkForImport: Created image blob from base64 data, type:", blob.type, "size:", blob.size);
+
+                const img = new Image();
+
+                // Pre-create the board before the image loads to ensure it's ready when the image finishes loading
+                if (!window.board) {
+                    console.log("No board exists, will create one when image loads");
+                    // This will be handled in the onload
+                }
+
+                // Set up error handler first
+                img.onerror = function(error) {
+                    console.error("checkForImport: Error loading image:", error);
+                    console.error("Image src:", this.src);
+                    console.error("Image readyState:", this.readyState);
+                    console.error("Image naturalWidth:", this.naturalWidth);
+                    console.error("Image naturalHeight:", this.naturalHeight);
+
+                    // Additional logging to debug the board state
+                    console.log("Remixed board at error time:", remixedBoard);
+                    if (remixedBoard) {
+                        console.log("Remixed board canvas:", remixedBoard.canvas);
+                        console.log("Remixed board ctx:", remixedBoard.ctx);
+                    }
+                    console.log("Canvas element by ID:", document.getElementById("canvas"));
+                    console.log("Canvas element context:", document.getElementById("canvas") && document.getElementById("canvas").getContext("2d"));
+                };
+
+                img.onload = function() {
+                    console.log("checkForImport: Image loaded, dimensions:", img.width, "x", img.height);
+                    console.log("checkForImport: Remixed board before processing:", remixedBoard);
+                    console.log("checkForImport: Window board before processing:", window.board);
+
+                    // If no board exists yet, create one based on image dimensions
+                    if (!window.board) {
+                        console.log("No board exists, creating one based on image dimensions");
+                        createBoardForImage(img);
+                        console.log("After createBoardForImage - remixed board:", remixedBoard, "window.board:", window.board);
+                    } else {
+                        // Board already exists (user might have entered dimensions manually or via another process)
+                        console.log("Board already exists, loading image to existing board");
+
+                        // PixelCraft specific: We need to draw this onto the canvas
+                        // and update its internal grid state.
+                        const canvas = document.getElementById("canvas");
+                        if (canvas) {
+                            const ctx = canvas.getContext("2d");
+                            if (ctx) {
+                                // Clear the canvas first
+                                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                                // Draw the image to the canvas
+                                ctx.drawImage(img, 0, 0);
+                                console.log("checkForImport: Image drawn to canvas");
+
+                                // Update the internal PixelCraft grid data to match the image
+                                // We need to access the actual board object to update its data array
+                                if (remixedBoard && remixedBoard.data &&
+                                    remixedBoard.width && remixedBoard.height) {
+
+                                    console.log("checkForImport: Updating internal board data from image");
+
+                                    // Create a temporary canvas to get image pixel data
+                                    const tempCanvas = document.createElement('canvas');
+                                    tempCanvas.width = img.width;
+                                    tempCanvas.height = img.height;
+                                    const tempCtx = tempCanvas.getContext('2d');
+                                    tempCtx.drawImage(img, 0, 0);
+
+                                    // Get the pixel data from the image
+                                    const imgData = tempCtx.getImageData(0, 0, tempCanvas.width, tempCanvas.height);
+                                    const pixelData = imgData.data;
+
+                                    // Calculate the scale if the image dimensions are different from the board
+                                    const scaleX = img.width / remixedBoard.width;
+                                    const scaleY = img.height / remixedBoard.height;
+
+                                    console.log(`checkForImport: Image dimensions: ${img.width}x${img.height}, Board dimensions: ${remixedBoard.width}x${remixedBoard.height}`);
+                                    console.log(`checkForImport: Scale factors: scaleX=${scaleX}, scaleY=${scaleY}`);
+
+                                    // Update the board's internal data array
+                                    for (let x = 0; x < remixedBoard.width; x++) {
+                                        for (let y = 0; y < remixedBoard.height; y++) {
+                                            // Map board coordinates to image coordinates
+                                            const imgX = Math.floor(x * scaleX);
+                                            const imgY = Math.floor(y * scaleY);
+
+                                            // Ensure we don't go out of bounds
+                                            if (imgX < imgData.width && imgY < imgData.height) {
+                                                const pixelIndex = (imgY * imgData.width + imgX) * 4;
+
+                                                // Extract RGBA values
+                                                const r = pixelData[pixelIndex];
+                                                const g = pixelData[pixelIndex + 1];
+                                                const b = pixelData[pixelIndex + 2];
+                                                const a = pixelData[pixelIndex + 3];
+
+                                                // Update the board's internal data
+                                                remixedBoard.data[x][y] = [r, g, b, a];
+                                            }
+                                        }
+                                    }
+
+                                    console.log("checkForImport: Internal board data updated from image");
+                                } else {
+                                    console.log("checkForImport: Board not ready for internal data update, will be visual only");
+                                }
+                            } else {
+                                console.error("Canvas context not available when drawing image");
+                            }
+                        } else {
+                            console.error("Canvas element not found when loading image");
+                        }
+                    }
+                };
+                img.src = URL.createObjectURL(blob);
+                console.log("checkForImport: Set image source to blob URL:", img.src);
+            })
+            .catch(error => {
+                console.error("checkForImport: Error in image loading process:", error);
+            });
+        } else {
+            console.log("checkForImport: No image key found in URL parameters");
+        }
+    }
+
+    // Function to be called when the board is ready
+    function onBoardReady(board) {
+        console.log("onBoardReady called with board:", board);
+        remixedBoard = board;
+        console.log("onBoardReady: remixedBoard has been set to:", remixedBoard);
+
+        // Now that board is ready, create the save button and check for import
+        createSaveButton();
+        // Don't call checkForImport here as it might cause recursion
+        // The original checkForImport was already triggered by the auto-check
+    }
+
+    // Make functions available globally so PixelCraft's original code can use them
+    window.remixedOnBoardReady = onBoardReady;
+    window.remixedCheckForImport = checkForImport;
+    console.log("Global remixed functions made available");
+
+    // Make checkForImport available globally so it can be called from other places
+    window.checkForImport = checkForImport;
+    console.log("Global checkForImport function set");
+
+    // No need for waitForPixelCraftAndLoad since we're using callback approach
+
+    // Automatically check for image import when script loads
+    // This will create a board based on image dimensions if an edit_file parameter is provided
+    setTimeout(function() {
+        console.log("Automatically checking for image import after page load");
+        checkForImport();
+    }, 100);  // Small delay to ensure environment is ready
+
+})();
+    </script>
+  </body>
+</html>
