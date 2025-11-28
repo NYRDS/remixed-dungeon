@@ -20,7 +20,7 @@ remixed-dungeon/
 │   │   ├── market_none/            # No-market flavor
 │   │   └── generated/              # Generated sources
 │   └── build.gradle                # Desktop module build configuration
-├── RemixedDungeonHtml/             # HTML5/WebGL application module (using TeaVM)
+├── RemixedDungeonHtml/             # HTML5/WebGL application module (using TeaVM - work in progress)
 │   ├── src/
 │   │   ├── html/                   # HTML5-specific sources
 │   │   │   └── java/               # Java sources (TeaVM-specific implementations)
@@ -28,6 +28,11 @@ remixed-dungeon/
 │   │   ├── main/                   # Main webapp resources
 │   │   └── market_none/            # No-market flavor
 │   └── build.gradle                # HTML module build configuration (TeaVM plugin setup)
+├── snap/                           # Snap packaging configuration
+│   ├── snapcraft.yaml              # Snap build configuration
+│   └── local/                      # Snap helper scripts
+│       ├── wrapper.sh              # Wrapper script for snap execution
+│       └── update_version.sh       # Version update script
 ├── annotation/                     # Annotation definitions
 ├── processor/                      # Annotation processor
 ├── json_clone/                     # JSON cloning utilities
@@ -151,6 +156,10 @@ remixed-dungeon/
 #### Analytics (`com.nyrds.platform`)
 - `EventCollector`: Analytics and error reporting
 
+#### Platform Support (`com.nyrds.pixeldungeon.support`)
+- `PlayGamesAdapter`: Interface for platform-specific game services (Google Play Games, etc.)
+  - No-op implementation exists for market_none flavor (desktop/vanilla versions)
+
 ### 5. Modding System
 
 #### Mod Management (`com.nyrds.util`)
@@ -208,6 +217,9 @@ Features:
 
 ### Web Server Documentation
 - `docs/WebServer.md`: Web server functionality for mod management
+
+### Snap Build Documentation
+- `docs/SNAP_BUILD.md`: Snap build configuration and packaging instructions
 
 ## Resources
 
