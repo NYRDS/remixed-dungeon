@@ -700,6 +700,46 @@ public class WebServer extends BaseWebServer {
                 return serveFs(file);
             }
 
+            // Handle PixelCraft editor requests
+            if(uri.startsWith("/web/pixelcraft/")) {
+                // Extract the specific file path after /web/pixelcraft/
+                String file = uri.substring("/web/pixelcraft/".length());
+                if (file.isEmpty()) {
+                    file = "index.html"; // Default to index.html if no specific file requested
+                }
+
+                try {
+                    // Try to get the file from assets/web/pixelcraft/
+                    InputStream fis = ModdingMode.getInputStream("web/pixelcraft/" + file);
+
+                    // Determine the content type based on file extension
+                    String mimeType = "application/octet-stream";
+                    if (file.endsWith(".html")) {
+                        mimeType = "text/html";
+                    } else if (file.endsWith(".css")) {
+                        mimeType = "text/css";
+                    } else if (file.endsWith(".js")) {
+                        mimeType = "application/javascript";
+                    } else if (file.endsWith(".png")) {
+                        mimeType = "image/png";
+                    } else if (file.endsWith(".jpg") || file.endsWith(".jpeg")) {
+                        mimeType = "image/jpeg";
+                    } else if (file.endsWith(".gif")) {
+                        mimeType = "image/gif";
+                    } else if (file.endsWith(".json")) {
+                        mimeType = "application/json";
+                    } else if (file.endsWith(".txt")) {
+                        mimeType = "text/plain";
+                    }
+
+                    Response response = newChunkedResponse(Response.Status.OK, mimeType, fis);
+                    return response;
+                } catch (Exception e) {
+                    GLog.w("Error serving PixelCraft file " + file + ": " + e.getMessage());
+                    return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", serveNotFound());
+                }
+            }
+
             if(uri.startsWith("/raw/")) {
                 // Handle raw file content requests (for editor content loading)
                 String file = uri.substring(5); // "/raw/".length() = 5
@@ -730,6 +770,43 @@ public class WebServer extends BaseWebServer {
 
             if(uri.startsWith("/api/save-lua")) {
                 return handleLuaSave(session);
+            }
+
+            if (uri.equals("/api/save_texture") && session.getMethod() == Method.POST) {
+                return handleTextureSave(session);
+            }
+        }
+
+        // Add handling for GET requests to the texture API
+        if (session.getMethod() == Method.GET) {
+            if (uri.startsWith("/api/get_texture")) {
+                // Extract file path from query parameters
+                String filePath = "";
+                String query = session.getQueryParameterString();
+
+                if (query != null && !query.isEmpty()) {
+                    String[] params = query.split("&");
+                    for (String param : params) {
+                        if (param.startsWith("file=")) {
+                            filePath = param.substring(5); // Remove "file=" prefix
+                            try {
+                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                            } catch (Exception e) {
+                                // If decoding fails, use the path as is
+                            }
+                            if (filePath == null) {
+                                filePath = "";
+                            }
+                            break;
+                        }
+                    }
+                }
+
+                if (!filePath.isEmpty()) {
+                    return handleTextureGet(filePath);
+                } else {
+                    return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html", serveNotFound());
+                }
             }
         }
 
@@ -970,6 +1047,206 @@ public class WebServer extends BaseWebServer {
             e.printStackTrace();
             return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html",
                 "<html><body><h1>Error serving PNG editor</h1></body></html>");
+        }
+    }
+
+    /**
+     * Handle saving texture content from PixelCraft editor
+     */
+    protected Response handleTextureSave(IHTTPSession session) {
+        try {
+            GLog.debug("Handling texture save request");
+
+            // Use the same approach as JSON save, but for texture data
+            Map<String, String> files = new java.util.HashMap<>();
+
+            // This will parse the body and handle both form data and raw data
+            session.parseBody(files);
+
+            // Try to get the raw texture data from postData
+            String jsonString = files.get("postData");
+
+            // If postData is null, the content may be in the input stream directly
+            if (jsonString == null || jsonString.isEmpty()) {
+                // Get query parameters in case the data was sent as query parameters
+                String body = session.getQueryParameterString();
+                if (body != null && !body.isEmpty()) {
+                    jsonString = java.net.URLDecoder.decode(body, "UTF-8");
+                }
+            }
+
+            // If still null, try to read from the input stream directly
+            if (jsonString == null || jsonString.isEmpty()) {
+                GLog.debug("Reading texture data from input stream");
+                java.util.Map<String, java.util.List<String>> parms = session.getParameters();
+
+                // If parameters exist, check if we have JSON in parameters
+                if (!parms.isEmpty()) {
+                    for (java.util.Map.Entry<String, java.util.List<String>> entry : parms.entrySet()) {
+                        // Look for JSON-like strings in parameters
+                        for (String value : entry.getValue()) {
+                            if (value.startsWith("{") && value.endsWith("}")) {
+                                jsonString = value;
+                                break;
+                            }
+                        }
+                        if (jsonString != null) break;
+                    }
+                }
+
+                // If still not found, try direct input stream reading as last resort
+                if (jsonString == null || jsonString.isEmpty()) {
+                    try {
+                        // Create a buffer and read with timeout
+                        byte[] buffer = new byte[8192]; // Increased buffer size for image data
+                        java.io.InputStream inputStream = session.getInputStream();
+
+                        // Mark and reset approach to avoid issues with already-read streams
+                        if (inputStream.markSupported()) {
+                            inputStream.mark(8192);
+                            int bytesRead = inputStream.read(buffer);
+                            if (bytesRead > 0) {
+                                jsonString = new String(buffer, 0, bytesRead, "UTF-8");
+                            } else {
+                                inputStream.reset(); // Reset to marked position
+                            }
+                        }
+                    } catch (Exception e) {
+                        GLog.debug("Error reading from input stream: " + e.getMessage());
+                    }
+                }
+            }
+
+            if (jsonString == null || jsonString.isEmpty()) {
+                GLog.debug("No texture data found in request");
+                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Empty request body\"}");
+            }
+
+            GLog.debug("Received texture data (length): " + jsonString.length());
+
+            // Parse the JSON to extract filename and image content
+            org.json.JSONObject jsonData = new org.json.JSONObject(jsonString);
+            String filename = jsonData.getString("name");
+            String base64Content = jsonData.getString("image");
+
+            GLog.debug("Saving texture to: " + filename);
+
+            // Check if we're trying to save to the main Remixed mod
+            if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
+                GLog.debug("Save blocked - attempt to save to main 'Remixed' mod");
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
+                    "{\"error\":\"Save to the main 'Remixed' mod is disabled for security reasons.\"}");
+            }
+
+            // Validate that the file path is within the allowed mod directory
+            if (filename.contains("../") || filename.startsWith("../")) {
+                GLog.debug("Directory traversal attempt detected: " + filename);
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
+                    "{\"error\":\"Directory traversal is not allowed.\"}");
+            }
+
+            // Create the full path for the file
+            String fullPath = ModdingMode.activeMod() + "/" + filename;
+            GLog.debug("Full file path: " + fullPath);
+
+            // Decode the base64 content using Java's built-in Base64 decoder
+            byte[] imageBytes = java.util.Base64.getDecoder().decode(base64Content);
+
+            // Create the file
+            File destFile = FileSystem.getExternalStorageFile(fullPath);
+            GLog.debug("Destination file path: " + destFile.getAbsolutePath());
+
+            // Create directories if needed
+            File destDir = destFile.getParentFile();
+            GLog.debug("Destination directory: " + (destDir != null ? destDir.getAbsolutePath() : "null"));
+            if (destDir != null && !destDir.exists()) {
+                GLog.debug("Creating destination directory");
+                destDir.mkdirs();
+            }
+
+            // Write the content to the file
+            GLog.debug("Writing texture content to file");
+            try (java.io.FileOutputStream fos = new java.io.FileOutputStream(destFile)) {
+                fos.write(imageBytes);
+            }
+
+            // Since we're on desktop, this is the place to trigger cache refresh if needed
+            GLog.debug("=== TEXTURE SAVE COMPLETED SUCCESSFULLY ===");
+            return newFixedLengthResponse(Response.Status.OK, "application/json",
+                "{\"success\":true, \"message\":\"File saved successfully to: " + fullPath + "\"}");
+
+        } catch (org.json.JSONException e) {
+            GLog.debug("=== JSON PARSING ERROR ===");
+            GLog.debug("JSON parsing error: " + e.getMessage());
+            e.printStackTrace();
+            return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
+                "{\"error\":\"Invalid JSON format in request: " + e.getMessage() + "\"}");
+        } catch (Exception e) {
+            GLog.debug("=== TEXTURE SAVE FAILED ===");
+            GLog.debug("Texture save error: " + e.getMessage());
+            e.printStackTrace(); // Log the full stack trace for debugging
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
+                "{\"error\":\"Failed to save texture file: " + e.getMessage() + "\"}");
+        }
+    }
+
+    /**
+     * Handle getting texture content for PixelCraft editor
+     */
+    protected Response handleTextureGet(String filePath) {
+        try {
+            GLog.debug("Handling texture get request for: " + filePath);
+
+            // Create the full path for the file
+            String fullPath = ModdingMode.activeMod() + "/" + filePath;
+            GLog.debug("Full file path: " + fullPath);
+
+            // First, check if the file exists in the mod directory
+            File textureFile = FileSystem.getExternalStorageFile(fullPath);
+
+            byte[] fileBytes;
+            if (textureFile.exists()) {
+                // File exists in mod directory, read from there
+                fileBytes = new byte[(int) textureFile.length()];
+                try (java.io.FileInputStream fis = new java.io.FileInputStream(textureFile)) {
+                    fis.read(fileBytes);
+                }
+            } else {
+                // File doesn't exist in mod directory, try to read from assets via ModdingMode
+                try (java.io.InputStream fis = ModdingMode.getInputStream(filePath)) {
+                    if (fis == null) {
+                        GLog.debug("Texture file does not exist in mod directory or assets: " + fullPath);
+                        return newFixedLengthResponse(Response.Status.NOT_FOUND, "application/json",
+                            "{\"error\":\"File not found: " + filePath + "\"}");
+                    }
+
+                    // Read all bytes from input stream
+                    java.io.ByteArrayOutputStream buffer = new java.io.ByteArrayOutputStream();
+                    int nRead;
+                    byte[] data = new byte[1024];
+                    while ((nRead = fis.read(data, 0, data.length)) != -1) {
+                        buffer.write(data, 0, nRead);
+                    }
+                    fileBytes = buffer.toByteArray();
+                }
+            }
+
+            // Encode to base64 using Java's built-in Base64 encoder
+            String base64Content = java.util.Base64.getEncoder().encodeToString(fileBytes);
+
+            // Create a JSON response with the base64 content
+            String jsonResponse = "{\"name\":\"" + filePath + "\",\"image\":\"" + base64Content + "\"}";
+
+            GLog.debug("=== TEXTURE GET COMPLETED SUCCESSFULLY ===");
+            return newFixedLengthResponse(Response.Status.OK, "application/json", jsonResponse);
+
+        } catch (Exception e) {
+            GLog.debug("=== TEXTURE GET FAILED ===");
+            GLog.debug("Texture get error: " + e.getMessage());
+            e.printStackTrace(); // Log the full stack trace for debugging
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
+                "{\"error\":\"Failed to get texture file: " + e.getMessage() + "\"}");
         }
     }
 
