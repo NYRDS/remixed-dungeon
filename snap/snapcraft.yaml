@@ -1,5 +1,5 @@
 name: remixed-dungeon
-version: '32.3.alpha.16'
+version: '32.3.alpha.19'
 summary: Remixed Dungeon - A classic roguelike dungeon crawler game
 description: |
   Remixed Dungeon is a classic roguelike dungeon crawler game with pixel graphics.
@@ -117,4 +117,3 @@ apps:
     environment:
       DISPLAY: $DISPLAY
       WAYLAND_DISPLAY: $WAYLAND_DISPLAY
-      XDG_CURRENT_DESKTOP: $XDG_CURRENT_DESKTOP
