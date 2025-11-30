@@ -119,7 +119,7 @@ The PixelCraft editor has been successfully enhanced with improved image loading
 ### Enhanced Features:
 - **Skip Dimension Dialog**: When loading an image via `?edit_file=filename.png`, the dimension dialog is skipped
 - **Auto-Board Creation**: Board is automatically created with dimensions matching the loaded image
-- **Proper Pixel Data Sync**: Internal grid data and visual canvas are properly synchronized
+- **Proper Pixel Data Sync**: Internal grid data and visual canvas properly synchronized
 - **Correct Resolution Saving**: Save functionality creates images at original resolution, not zoomed-up display resolution
 
 ### Endpoints Used:
@@ -133,6 +133,33 @@ The PixelCraft editor has been successfully enhanced with improved image loading
 3. **Data Synchronization**: Internal board data and visual canvas properly synchronized
 4. **Save Override**: Save functionality overridden to maintain original resolution
 5. **Event Handling**: Proper handling of image loading and board initialization sequence
+
+## PixelCraft Editor Scrollable and Zoomable Canvas Enhancement
+
+### Current Status:
+The PixelCraft canvas has been enhanced with scrollable and zoomable functionality:
+
+- ✅ **Scrollable Canvas**: Canvas container now supports scrolling when zoomed in
+- ✅ **Zoom Controls**: Added UI controls with + and - buttons to adjust zoom level
+- ✅ **Mouse Wheel Zoom**: Support for zooming with mouse wheel
+- ✅ **Double-Click Reset**: Double-click resets zoom to 100%
+- ✅ **Coordinate Mapping**: Drawing coordinates properly calculated regardless of zoom or scroll position
+- ✅ **Zoom Range**: Supports zoom levels from 25% to 1000%
+- ✅ **Visual Feedback**: Clear zoom percentage display
+
+### Enhanced Features:
+- **Scrollable Container**: Canvas wrapped in scrollable container with `overflow: auto`
+- **Zoom Controls**: Added controls UI with zoom in (+), zoom out (-), and percentage display
+- **Coordinate Accuracy**: Mouse/touch events properly translated to canvas grid positions accounting for zoom and scroll
+- **Visual Indicators**: Zoom level percentage displayed in real-time
+- **Responsive Design**: Works on both desktop and mobile interfaces
+
+### Technical Implementation:
+1. **HTML Structure**: Added canvas-container with scrollable wrapper and zoom controls
+2. **CSS Styling**: Proper positioning for zoom controls and scrollable container
+3. **JavaScript Logic**: Updated coordinate calculations in all mouse/touch event handlers
+4. **Event Handling**: Added zoom functionality with proper coordinate adjustments
+5. **Pixel Accuracy**: Drawing remains accurate at all zoom levels and scroll positions
 
 ## Quick Test Commands
 

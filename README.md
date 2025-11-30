@@ -35,8 +35,8 @@ Remixed Dungeon in [Google Play](https://play.google.com/store/apps/details?id=c
 # Build the HTML version
 ./gradlew :RemixedDungeonHtml:build
 
-# Attempt to compile TeaVM (currently fails with NullPointerException)
-./gradlew :RemixedDungeonHtml:generateJavaScript  # Currently fails
+# Generate JavaScript using TeaVM (work in progress with recent improvements)
+./gradlew :RemixedDungeonHtml:generateJavaScript  # Work in progress
 ```
 
 [Проект по переводу Remixed Dungeon](https://www.transifex.com/projects/p/remixed-dungeon/)

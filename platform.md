@@ -150,7 +150,7 @@ The desktop version uses LibGDX as the platform abstraction layer:
 ### Web
 
 The web version uses TeaVM with LibGDX backend (Work in Progress):
-- TeaVM 0.12.3 for Java-to-JavaScript transpilation
+- TeaVM 0.13.0-SNAPSHOT for Java-to-JavaScript transpilation
 - LibGDX TeaVM backend for graphics, audio, and input
 - Single-threaded execution model
 - Browser localStorage for persistence
@@ -199,7 +199,7 @@ To add support for a new platform:
 ## Current Status
 
 ### Web Platform Implementation Status
-The web platform using TeaVM is currently under development and not yet compilable. The build process currently fails with a NullPointerException during the JavaScript generation phase. Work is ongoing to resolve compilation issues and enable browser-based deployment.
+The web platform using TeaVM is currently under development. While the build process previously failed with a NullPointerException, recent improvements including reflection configuration via ReflectionConfig.enableReflectionForDebugging() have been implemented to address compilation issues. Work is ongoing to resolve remaining compilation issues and enable browser-based deployment.
 
 ## Benefits
 
