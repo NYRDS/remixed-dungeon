@@ -152,7 +152,7 @@ The web version is intended to use TeaVM to compile Java code to JavaScript:
 ```bash
 # Using the HTML-specific settings file
 ./gradlew -c settings.html.gradle :RemixedDungeonHtml:build
-./gradlew -c settings.html.gradle :RemixedDungeonHtml:generateJavaScript  # Currently fails with NullPointerException
+./gradlew -c settings.html.gradle :RemixedDungeonHtml:generateJavaScript  # Work in progress with recent improvements
 ```
 
 ## Project Links

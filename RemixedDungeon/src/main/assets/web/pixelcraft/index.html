@@ -54,7 +54,16 @@
     <div class="btn" style="right: 10px;" onclick="document.querySelector('#frames #gallery').scrollLeft+=100;"><i class="fa fa-chevron-right"></i></div>
     <div id="gallery"></div>
     </div>
-    <canvas id="canvas"></canvas>
+    <div id="canvas-container">
+        <div id="canvas-container-wrapper">
+            <div id="zoom-controls">
+                <button id="zoom-in">+</button>
+                <span id="zoom-level">100%</span>
+                <button id="zoom-out">-</button>
+            </div>
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
     <div id="toolbar">
       <span class="item" onclick="board.setmode(0)" style="background-color: grey;"><i class="fas fa-pencil-alt"></i></span>
       <span class="item" onclick="board.setmode(1)"><i class="fas fa-eraser"></i></span>
@@ -312,6 +321,8 @@ document.querySelector("#close").onclick = function () {
   actualBoard.width = width;//Dimentions of x pixels
   actualBoard.height = height;//Dimentions of Y pixels
   actualBoard.canvas.style.display = "block";
+  // Show the canvas container instead of directly showing the canvas
+  document.getElementById('canvas-container').style.display = "block";
   actualBoard.canvas.style.height = Math.floor((height / width) * actualBoard.canvas.clientWidth) + "px";
   actualBoard.w = +actualBoard.canvas.width;
   actualBoard.h = +actualBoard.canvas.height;
@@ -449,6 +460,81 @@ function install() {
 window.onerror = function (errorMsg, url, lineNumber) {
   alert('Error: ' + errorMsg + ' Script: ' + url + ' Line: ' + lineNumber);
 }
+
+// Canvas zoom and scroll functionality
+let zoomLevel = 1; // 1 = 100%, 2 = 200%, etc.
+
+// Function to update canvas zoom
+function updateCanvasZoom() {
+    const canvas = document.getElementById('canvas');
+    if (canvas) {
+        canvas.style.transform = `scale(${zoomLevel})`;
+
+        // Update zoom level display
+        document.getElementById('zoom-level').textContent = `${Math.round(zoomLevel * 100)}%`;
+    }
+}
+
+// Zoom in function
+function zoomIn() {
+    // Limit zoom to reasonable levels
+    if (zoomLevel < 10) {
+        zoomLevel += 0.25;
+        updateCanvasZoom();
+    }
+}
+
+// Zoom out function
+function zoomOut() {
+    // Minimum zoom level
+    if (zoomLevel > 0.25) {
+        zoomLevel -= 0.25;
+        updateCanvasZoom();
+    }
+}
+
+// Reset zoom to 100%
+function resetZoom() {
+    zoomLevel = 1;
+    updateCanvasZoom();
+}
+
+// Add event listeners for zoom buttons
+document.addEventListener('DOMContentLoaded', function() {
+    const zoomInBtn = document.getElementById('zoom-in');
+    const zoomOutBtn = document.getElementById('zoom-out');
+
+    if (zoomInBtn) {
+        zoomInBtn.addEventListener('click', zoomIn);
+    }
+
+    if (zoomOutBtn) {
+        zoomOutBtn.addEventListener('click', zoomOut);
+    }
+
+    // Add mousewheel zoom support
+    let canvasContainer = document.getElementById('canvas-container');
+    if (canvasContainer) {
+        canvasContainer.addEventListener('wheel', function(e) {
+            e.preventDefault(); // Prevent default scroll behavior
+
+            if (e.deltaY < 0) {
+                zoomIn();
+            } else {
+                zoomOut();
+            }
+        });
+    }
+
+    // Add double click to reset zoom
+    if (canvasContainer) {
+        canvasContainer.addEventListener('dblclick', function(e) {
+            if (e.target.id === 'canvas') {
+                resetZoom();
+            }
+        });
+    }
+});
 
 // INTEGRATION SCRIPT FOR REMIXED DUNGEON
 console.log("Remixed Dungeon integration: Basic log test");
@@ -655,6 +741,9 @@ console.log("Remixed Dungeon integration: Basic log test");
         }
 
         console.log("Visual canvas updated to reflect internal data");
+
+        // Show the canvas container
+        document.getElementById('canvas-container').style.display = 'block';
 
         // Override the save function to ensure original resolution is maintained
         newBoard.save = function() {

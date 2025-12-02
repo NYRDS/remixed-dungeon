@@ -29,7 +29,7 @@ The Android module uses Gradle product flavors to support different markets:
 
 #### Flavor Dimensions
 - **platform**: `android` (currently the only platform flavor)
-- **market**: `googlePlay`, `fdroid`, `ruStore`, `huawei` (planned)
+- **market**: `googlePlay`, `fdroid`, `ruStore`, `huawei` (partially implemented but commented out)
 
 #### Market Implementations
 
@@ -51,8 +51,8 @@ The Android module uses Gradle product flavors to support different markets:
    - Limited analytics capabilities
    - Russian market specific features
 
-4. **Huawei** (Planned)
-   - Intended to use Huawei HMS services
+4. **Huawei** (Partially implemented but commented out)
+   - Uses Huawei HMS services (implementation available but currently commented out)
    - Huawei AppGallery specific features
    - Currently commented out in build configuration
 
@@ -144,4 +144,4 @@ The web module uses TeaVM for Java-to-JavaScript compilation, though currently n
 The web platform using TeaVM is currently under development and not yet compilable. The build process currently fails with a NullPointerException during the JavaScript generation phase.
 
 ### Huawei Support
-Huawei market support is planned but currently commented out in the build configuration.
+Huawei market support was partially implemented but is currently commented out in the build configuration.

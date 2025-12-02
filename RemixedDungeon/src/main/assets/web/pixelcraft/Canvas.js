@@ -27,11 +27,25 @@ class Canvas {
 
     this.canvas.addEventListener("mousemove", (e) => {
       if (this.active) {
-        var rect = this.canvas.getBoundingClientRect();
-        var x = e.clientX - rect.left;
-        var y = e.clientY - rect.top;
-        x = Math.floor((this.width * x) / this.canvas.clientWidth);
-        y = Math.floor((this.height * y) / this.canvas.clientHeight);
+        var container = this.canvas.parentNode.parentNode; // canvas -> canvas-container-wrapper -> canvas-container
+
+        // Calculate mouse position relative to the container
+        var containerRect = container.getBoundingClientRect();
+        var mouseX = e.clientX - containerRect.left;
+        var mouseY = e.clientY - containerRect.top;
+
+        // Adjust for container scroll position
+        mouseX += container.scrollLeft;
+        mouseY += container.scrollTop;
+
+        // Account for zoom level
+        mouseX /= window.zoomLevel || 1;
+        mouseY /= window.zoomLevel || 1;
+
+        // Convert to grid coordinates based on the original canvas size (not display size)
+        var x = Math.floor((this.width * mouseX) / this.canvas.width);
+        var y = Math.floor((this.height * mouseY) / this.canvas.height);
+
         if (tools[Tool.pen]) {
           var p = new Point(x, y);
           if (!p.equals(this.previous_point)) {
@@ -45,11 +59,25 @@ class Canvas {
     });
 
     this.canvas.addEventListener("touchmove", (e) => {
-      var rect = this.canvas.getBoundingClientRect();
-      var x = e.touches[0].clientX - rect.left;
-      var y = e.touches[0].clientY - rect.top;
-      x = Math.floor((this.width * x) / this.canvas.clientWidth);
-      y = Math.floor((this.height * y) / this.canvas.clientHeight);
+      var container = this.canvas.parentNode.parentNode; // canvas -> canvas-container-wrapper -> canvas-container
+
+      // Calculate touch position relative to the container
+      var containerRect = container.getBoundingClientRect();
+      var touchX = e.touches[0].clientX - containerRect.left;
+      var touchY = e.touches[0].clientY - containerRect.top;
+
+      // Adjust for container scroll position
+      touchX += container.scrollLeft;
+      touchY += container.scrollTop;
+
+      // Account for zoom level
+      touchX /= window.zoomLevel || 1;
+      touchY /= window.zoomLevel || 1;
+
+      // Convert to grid coordinates based on the original canvas size (not display size)
+      var x = Math.floor((this.width * touchX) / this.canvas.width);
+      var y = Math.floor((this.height * touchY) / this.canvas.height);
+
       if (tools[Tool.pen]) {
         var p = new Point(x, y);
         if (!p.equals(this.previous_point)) {
@@ -77,11 +105,25 @@ class Canvas {
         return; // Don't re-paint the last point in a streak
       }
 
-      var rect = this.canvas.getBoundingClientRect();
-      var x = e.clientX - rect.left;
-      var y = e.clientY - rect.top;
-      x = Math.floor((this.width * x) / this.canvas.clientWidth);
-      y = Math.floor((this.height * y) / this.canvas.clientHeight);
+      var container = this.canvas.parentNode.parentNode; // canvas -> canvas-container-wrapper -> canvas-container
+
+      // Calculate mouse position relative to the container
+      var containerRect = container.getBoundingClientRect();
+      var mouseX = e.clientX - containerRect.left;
+      var mouseY = e.clientY - containerRect.top;
+
+      // Adjust for container scroll position
+      mouseX += container.scrollLeft;
+      mouseY += container.scrollTop;
+
+      // Account for zoom level
+      mouseX /= window.zoomLevel || 1;
+      mouseY /= window.zoomLevel || 1;
+
+      // Convert to grid coordinates based on the original canvas size (not display size)
+      var x = Math.floor((this.width * mouseX) / this.canvas.width);
+      var y = Math.floor((this.height * mouseY) / this.canvas.height);
+
       if (tools[Tool.fillBucket]) {
         filler(x, y, this.data[x][y]);
       } else if (tools[Tool.eraser]) {
