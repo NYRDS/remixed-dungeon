@@ -86,6 +86,24 @@ tasks.register('quickModTest', JavaExec) {
     jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
 }
 
+// Add a task for running the game with a specific mod for a given number of turns
+tasks.register('runModForTurns', JavaExec) {
+    dependsOn classes
+    mainClass = 'com.nyrds.pixeldungeon.desktop.RunModForTurnsLauncher'
+    classpath = sourceSets.main.runtimeClasspath
+
+    // Default values
+    def modName = project.hasProperty('mod') ? project.property('mod') : 'Remixed'
+    def turns = project.hasProperty('turns') ? project.property('turns') : '0'  // 0 means run indefinitely
+
+    args = ["--mod", modName, "--turns", turns.toString()]
+
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+
+    // Set working directory to rundir to ensure proper asset access
+    workingDir = file('src/desktop/rundir')
+}
+
 // Add a task for running the Web Server
 tasks.register('runWebServer', JavaExec) {
     dependsOn classes
