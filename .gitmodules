@@ -1,0 +1,3 @@
+[submodule "wiki-data"]
+	path = wiki-data
+	url = git@github.com:NYRDS/wiki-data.git
