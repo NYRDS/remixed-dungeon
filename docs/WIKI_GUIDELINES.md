@@ -496,9 +496,156 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 - A record of all merged files and their new locations is maintained for historical reference
 - Links from outside sources should be updated to reflect the new naming convention
 
+## Additional Sources of Truth Discovered
+
+### Class Unlock Requirements
+- **Location**: `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/scenes/StartScene.java`
+- **Key Information**:
+  - `huntressUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_3)` - Huntress unlocked by defeating 3rd boss (DM300)
+  - `elfUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4)` - Elf unlocked by defeating 4th boss (The King)
+  - `gnollUnlocked = Badges.isUnlocked(Badges.Badge.GNOLL_UNLOCKED)` - Gnoll unlocked by healing Gnoll Brute at town priest
+  - Boss unlock badges are validated in `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/Badges.java`
+
+### Monster Spawning and Level Configuration
+- **Location**: `RemixedDungeon/src/main/assets/levelsDesc/Bestiary.json`
+- **Key Information**: Defines which monsters appear on which levels and their spawn weights/rates
+  - Example: `"CavesLevel": {"11":{"Bat":1,"Brute":0.2}}` - Shows Gnoll Brutes spawn in Caves levels 11-14
+  - `"SewerBossLevel": {"any":{"Goo":1}}` - Goo is the sewer boss
+  - `"PrisonBossLevel": {"any":{"Tengu":1}}` - Tengu is the prison boss
+  - `"CavesBossLevel": {"any":{"DM300":1}}` - DM300 is the caves boss, etc.
+
+### Class Unlock Validation
+- **Location**: `RemixedDungeon/src/main/java/com/nyrds/pixeldungeon/windows/WndPriest.java`
+- **Key Information**:
+  - `Badges.validateGnollUnlocked()` is called when healing a Gnoll Brute NPC
+  - Brute healing mechanism: "if(patient.getEntityKind().equals("Brute")) { Badges.validateGnollUnlocked(); }"
+
+### Class-Specific Perks and Mechanics
+- **Location**: `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/HeroClass.java`
+- **Key Information**:
+  - Each class has unique mechanics in methods like `attackSkillBonus()`, `allowed()`, etc.
+  - The `allowed()` method checks `initHeroes.has(name())` to determine if class is available
+  - Special mechanics like Doctor's accuracy penalty when not using Bone Saw
+
+## Hero Class and Subclass Previews
+
+To maintain consistency and completeness in documentation of hero classes and subclasses, a script has been created to generate preview content for wiki pages.
+
+### Hero Class Previews
+- All hero classes (Warrior, Mage, Rogue, Huntress, Elf, Necromancer, Gnoll, Priest, Doctor) have dedicated wiki pages
+- Use the `generate_hero_previews.py` script to extract information from source code and generate preview content
+- Each hero class page should include:
+  - Description of the class's unique characteristics
+  - Starting equipment and stats
+  - Special abilities and mechanics
+  - Sprite information where applicable
+
+### Hero Subclass Previews
+- All hero subclasses (Gladiator, Berserker, Warlock, BattleMage, Assassin, FreeRunner, Sniper, Warden, Scout, Shaman, Lich, WitchDoctor, Guardian) have dedicated wiki pages
+- Subclasses are mastery paths available for specific hero classes
+- Each subclass page should include:
+  - Description of the subclass's unique abilities
+  - Which base class it belongs to
+  - How to unlock the subclass (typically via Tome of Mastery)
+  - Special mechanics and gameplay changes
+
+### Generating Previews
+The `generate_hero_previews.py` script extracts information by:
+- Parsing `HeroClass.java` and `HeroSubClass.java` enums to identify all classes/subclasses
+- Reading `initHeroes.json` to get starting equipment and stats for classes
+- Using predefined descriptions for subclasses based on in-game mechanics
+
+To generate previews:
+```bash
+python generate_hero_previews.py
+```
+
+This creates preview files in the `hero_previews/` directory that can be used as templates for wiki pages.
+
+## Spell Documentation and Automated Generation
+
+### Spell Wiki Pages Structure
+
+Spell documentation in the wiki follows the same general structure as other entity pages but includes specific sections relevant to spell mechanics:
+
+#### Standard Spell Page Sections
+- **Title**: Using the `_spell` suffix (e.g., `healing_spell.txt`, `ignite_spell.txt`)
+- **Image**: Spell icon at the top of the page using `{{ rpd:images:spell_name_icon.png|Spell Name Icon }}`
+- **Description**: Detailed explanation of the spell's effect based on source code analysis
+- **Stats**: Magic affinity, targeting type, level, mana cost, and special effects
+- **Usage**: Specific applications of the spell in gameplay
+- **Classes**: Which classes typically have access to this spell affinity
+- **Strategy**: Advanced tips for using the spell effectively
+- **Data Validation**: Information about source code references and verification
+- **Source Code**: Direct links to the relevant Java or Lua files
+- **See Also**: Related spells and mechanics
+- **Tags**: Appropriate categorization tags
+
+### Spell Content Verification
+
+Spell pages must include verification information to ensure accuracy:
+
+#### Content Verification Section
+Each spell page includes a "Content Verification" section that provides:
+- Information source (Java Class or Lua Script)
+- Stats verification status (extracted directly from spell class properties)
+- Effect descriptions source (code analysis and string resources)
+- Last updated date and source file name
+
+#### Source Code References
+Each spell page links directly to the relevant source code file on GitHub, allowing readers to verify information and understand implementation details.
+
+### Automated Spell Documentation Generation
+
+The `generate_spell_wiki.py` script automates the creation of spell documentation from source code:
+
+#### Java Spell Processing
+- Located in `com.nyrds.pixeldungeon.mechanics.spells/`
+- Extracts properties like magic affinity, targeting type, level, and mana cost from constructor
+- Analyzes `cast()` method to determine special effects
+- Uses string resources for descriptions where available
+
+#### Lua Spell Processing
+- Located in `RemixedDungeon/src/main/assets/scripts/spells/`
+- Reads spell properties from the `desc` function in each Lua file
+- Extracts name, targeting type, magic affinity, level, and mana cost
+- Uses string resources for descriptions via the 'info' parameter
+
+#### Image Generation
+The `generate_spell_images.py` script automatically creates preview images for spells by:
+- Mapping spell classes to appropriate icon files from `spellsIcons/` directory
+- Resizing images to appropriate dimensions for wiki display
+- Naming images according to the pattern `spell_name_icon.png`
+
+### Generating Spell Documentation
+
+To generate or update spell documentation:
+```bash
+python generate_spell_wiki.py
+python generate_spell_images.py
+```
+
+This creates or updates spell pages in the `generated_spell_wiki/` directory and spell icon images in the `generated_spell_images/wiki_images/` directory.
+
+### Spell Affinity Categories
+
+The wiki recognizes multiple spell affinity categories which should be linked appropriately:
+- Common: General-purpose spells (e.g., Town Portal, Magic Torch)
+- Elemental: Fire, ice, and nature-based spells (e.g., Ignite, Root Spell)
+- Necromancy: Undead and death-related spells (e.g., Raise Dead, Exhumation)
+- Combat: Offensive and defensive spells (e.g., Smash, Die Hard)
+- Rogue: Stealth and agility spells (e.g., Backstab, Haste)
+- Witchcraft: Magic and manipulation spells (e.g., Lightning Bolt, Roar)
+- Huntress: Nature and charm spells (e.g., Calm, Charm)
+- Elf: Natural magic spells (e.g., Magic Arrow, Sprout)
+- Priest: Healing and sanctity spells (e.g., Heal, Order)
+
 ## Maintaining Consistency
 
 - Keep the wiki updated with each game release
 - Create new pages for new content in each update
 - Use the visualization tools to identify disconnected parts of the wiki
+- Update spell documentation when game mechanics change
+- Maintain accurate source code references for all spell information
+- Use the automated generation tools to keep spell information current
 - Encourage community contributions by providing clear documentation on where information can be found
