@@ -640,6 +640,78 @@ The wiki recognizes multiple spell affinity categories which should be linked ap
 - Elf: Natural magic spells (e.g., Magic Arrow, Sprout)
 - Priest: Healing and sanctity spells (e.g., Heal, Order)
 
+## Item Sprite Generation and Management
+
+### Understanding Item Sprite System
+
+The Remixed Dungeon game uses a sprite sheet system for managing item images:
+
+#### Main Items Sprite Sheet
+- Located at `RemixedDungeon/src/main/assets/items.png` (256x256 pixels in 16x16 grid)
+- Additional specialized sheets for different categories like `items/armor.png`, `items/potions.png`, etc.
+- Each individual sprite is 16x16 pixels
+
+#### Java-Based Mapping
+- `ItemSpriteSheet.java` contains constants that map each item image to an index
+- Each item class in the Java code references these constants via the `image` field
+- Example: `image = ItemSpriteSheet.ANKH;`
+
+#### Runtime Processing
+- The game engine automatically extracts individual sprites from sheets at runtime
+- Sprites are positioned in the sheet based on their index
+- Extracted sprites are scaled using nearest-neighbor interpolation
+
+### Item Sprite Extraction for Wiki
+
+#### Automatic Extraction Process
+The project includes Python scripts in the root directory for extracting item sprites:
+
+- `extract_item_sprites.py` - Extracts from the main items.png sheet
+- `extract_all_item_sprites.py` - Extracts from multiple specialized sheets
+- `extract_custom_item_sprites.py` - Extracts items with special configurations
+- `extract_mob_sprites.py` - Extracts mob sprites with 8x scaling
+
+#### Extraction Workflow
+1. Parse Java files to identify item classes and their image indices
+2. Locate the appropriate sprite sheet based on the image index
+3. Extract the 16x16 pixel sprite from the sheet at the calculated position
+4. Scale the sprite using nearest-neighbor interpolation (typically 8x for wiki)
+5. Save the individual sprite in the wiki media directory
+6. Update wiki pages to include the extracted sprite reference
+
+#### Naming Convention
+- Extracted sprites follow the format: `{itemname}_sprite.png`
+- In wiki pages, use: `{{ rpd:images:ITEMNAME_sprite.png|Alt Text }}`
+- For centering in DokuWiki: `{{ rpd:images:image.png|Alt Text }}` (with spaces)
+
+#### Image Quality Settings
+- Use nearest-neighbor scaling to preserve pixel art quality
+- Scale factor of 8x for optimal visibility in wiki pages
+- Maintain square aspect ratio (16x16 original becomes 128x128)
+
+### Custom Sprite Configurations
+
+Some items and mobs use advanced sprite configurations defined in JSON files in `RemixedDungeon/src/main/assets/spritesDesc/`:
+
+#### Advanced Features
+- Particle emitters (e.g., for Fetid Rat's gas effect)
+- Event handlers (e.g., Shopkeeper coin toss effect)
+- Water ripple effects (e.g., for Piranha)
+- Camera shake effects (e.g., for Rotting Fist)
+- Immediate removal effects (e.g., for Imp)
+
+#### JSON Configuration Format
+```json
+{
+  "texture": "filename.png",
+  "width": 16,
+  "height": 16,
+  "idle": { "fps": 2, "looped": true, "frames": [0,0,0,1] },
+  "run": { "fps": 14, "looped": true, "frames": [6,7,8,9,10] },
+  "particleEmitters": { /* particle configuration */ }
+}
+```
+
 ## Maintaining Consistency
 
 - Keep the wiki updated with each game release
@@ -648,4 +720,7 @@ The wiki recognizes multiple spell affinity categories which should be linked ap
 - Update spell documentation when game mechanics change
 - Maintain accurate source code references for all spell information
 - Use the automated generation tools to keep spell information current
+- Extract and update item sprites when new items are added
+- Use consistent naming conventions for all extracted sprites
+- Ensure all wiki pages have appropriately sized and positioned images
 - Encourage community contributions by providing clear documentation on where information can be found
