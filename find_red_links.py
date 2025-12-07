@@ -253,6 +253,11 @@ def generate_dot_graph(page_links: Dict[str, List[Tuple[str, str]]], output_file
     all_pages = existing_pages | all_targets
     red_links_set = all_targets - existing_pages
 
+    # Helper function to safely escape DOT strings
+    def escape_dot_string(s):
+        # Escape quotes and backslashes, which are special in DOT
+        return s.replace('\\', '\\\\').replace('"', '\\"')
+
     with open(output_file, 'w') as f:
         f.write("digraph WikiMap {\n")
         f.write("  rankdir=LR;\n")  # Left to right layout
@@ -260,10 +265,11 @@ def generate_dot_graph(page_links: Dict[str, List[Tuple[str, str]]], output_file
 
         # Write all nodes
         for page in sorted(all_pages):
+            escaped_page = escape_dot_string(page)
             if page in red_links_set:
-                f.write(f'  "{page}" [color=red, style=filled, fillcolor=lightpink];\n')
+                f.write(f'  "{escaped_page}" [color=red, style=filled, fillcolor=lightpink];\n')
             else:
-                f.write(f'  "{page}" [color=black];\n')
+                f.write(f'  "{escaped_page}" [color=black];\n')
 
         f.write("\n")
 
@@ -273,10 +279,14 @@ def generate_dot_graph(page_links: Dict[str, List[Tuple[str, str]]], output_file
                 if show_red_links_only and target not in red_links_set:
                     continue  # Skip non-red links if showing red links only
 
+                escaped_source = escape_dot_string(source_page)
+                escaped_target = escape_dot_string(target)
+                escaped_label = escape_dot_string(display_text)
+
                 if target in red_links_set:
-                    f.write(f'  "{source_page}" -> "{target}" [color=red, label="{display_text}"];\n')
+                    f.write(f'  "{escaped_source}" -> "{escaped_target}" [color=red, label="{escaped_label}"];\n')
                 else:
-                    f.write(f'  "{source_page}" -> "{target}" [label="{display_text}"];\n')
+                    f.write(f'  "{escaped_source}" -> "{escaped_target}" [label="{escaped_label}"];\n')
 
         f.write("}\n")
 
