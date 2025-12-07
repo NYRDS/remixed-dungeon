@@ -122,6 +122,28 @@ The Remixed Dungeon wiki (located in the `wiki-data` submodule) can be significa
 - **Location**: `RemixedDungeon/src/main/assets/data/`
 - **Files**: Various JSON files containing game configuration data
 
+#### Resource Strings
+- **Location**: `RemixedDungeon/src/main/res/values/`
+- **Files**: `strings-all.xml` - Main string resources with game text, descriptions, and labels that can be used for wiki content
+
+#### JSON-based Content
+- **Location**: `RemixedDungeon/src/main/assets/data/`
+- **Files**: JSON configuration files defining:
+  - Item properties and behavior
+  - Mob stats and abilities
+  - Level layouts and features
+  - Special event configurations
+  - Shop inventory and prices
+
+#### Lua Scripting Content
+- **Location**: `RemixedDungeon/src/main/assets/data/lua/`
+- **Files**: Lua scripts that define:
+  - Custom game mechanics
+  - Special event behaviors
+  - Dynamic content generation
+  - Scripted interactions and dialogues
+  - Advanced item functions not available in Java base code
+
 ## Tools for Information Extraction
 
 ### 1. Code Analysis Tools
@@ -185,17 +207,34 @@ The Remixed Dungeon wiki (located in the `wiki-data` submodule) can be significa
 
 ## Useful Commands
 
-### Finding Relevant Classes
+### Finding Relevant Classes and Resources
 ```bash
 # Find all item classes
 find RemixedDungeon/src/main/java -name "*.java" -exec grep -l "extends Item" {} \;
 
-# Find all mob classes  
+# Find all mob classes
+find RemixedDungeon/src/main/java -name "*.java" -exec grep -l "extends Mob" {} \;
+
 # Find all buff classes
 find RemixedDungeon/src/main/java -name "*.java" -exec grep -l "extends Buff" {} \;
 
 # Find methods related to specific mechanics
 grep -r "hunger" RemixedDungeon/src/main/java/
+
+# Find resource strings
+find RemixedDungeon/src/main/res -name "*.xml" -exec grep -l "string" {} \;
+
+# Find JSON configuration files
+find RemixedDungeon/src/main/assets/data -name "*.json" -type f
+
+# Find Lua script files
+find RemixedDungeon/src/main/assets/data -name "*.lua" -type f
+
+# Search inside JSON files for specific content
+grep -r "itemName" RemixedDungeon/src/main/assets/data/
+
+# Search inside Lua files for specific mechanics
+grep -r "function" RemixedDungeon/src/main/assets/data/lua/
 ```
 
 ### Running Wiki Analysis Tools
