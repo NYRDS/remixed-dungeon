@@ -240,7 +240,7 @@ different entity types should use different naming conventions:
 
 ### Adding Mob/Character Sprites
 - To add a mob sprite to a wiki page, use the centered format with original size: `{{ rpd:images:mob_name_sprite.png|Alt Text }}`
-- The script `extract_mob_sprites.py` automatically generates scaled 8x sprites with nearest-neighbor filtering
+- The script `tools/py-tools/extract_mob_sprites.py` automatically generates scaled 8x sprites with nearest-neighbor filtering
 - Generated images are saved in `wiki-data/media/rpd/images/` with the naming convention `{mob_name}_sprite.png`
 - For centered display, add spaces around the image reference: `{{ rpd:images:image.png|Alt Text }}`
 - For original image size (no scaling), omit the size parameter entirely
@@ -533,7 +533,7 @@ To maintain consistency and completeness in documentation of hero classes and su
 
 ### Hero Class Previews
 - All hero classes (Warrior, Mage, Rogue, Huntress, Elf, Necromancer, Gnoll, Priest, Doctor) have dedicated wiki pages
-- Use the `generate_hero_previews.py` script to extract information from source code and generate preview content
+- Use the `tools/py-tools/generate_hero_previews.py` script to extract information from source code and generate preview content
 - Each hero class page should include:
   - Description of the class's unique characteristics
   - Starting equipment and stats
@@ -550,14 +550,14 @@ To maintain consistency and completeness in documentation of hero classes and su
   - Special mechanics and gameplay changes
 
 ### Generating Previews
-The `generate_hero_previews.py` script extracts information by:
+The `tools/py-tools/generate_hero_previews.py` script extracts information by:
 - Parsing `HeroClass.java` and `HeroSubClass.java` enums to identify all classes/subclasses
 - Reading `initHeroes.json` to get starting equipment and stats for classes
 - Using predefined descriptions for subclasses based on in-game mechanics
 
 To generate previews:
 ```bash
-python generate_hero_previews.py
+python tools/py-tools/generate_hero_previews.py
 ```
 
 This creates preview files in the `hero_previews/` directory that can be used as templates for wiki pages.
@@ -597,7 +597,7 @@ Each spell page links directly to the relevant source code file on GitHub, allow
 
 ### Automated Spell Documentation Generation
 
-The `generate_spell_wiki.py` script automates the creation of spell documentation from source code:
+The `tools/py-tools/generate_spell_wiki.py` script automates the creation of spell documentation from source code:
 
 #### Java Spell Processing
 - Located in `com.nyrds.pixeldungeon.mechanics.spells/`
@@ -612,7 +612,7 @@ The `generate_spell_wiki.py` script automates the creation of spell documentatio
 - Uses string resources for descriptions via the 'info' parameter
 
 #### Image Generation
-The `generate_spell_images.py` script automatically creates preview images for spells by:
+The `tools/py-tools/generate_spell_images.py` script automatically creates preview images for spells by:
 - Mapping spell classes to appropriate icon files from `spellsIcons/` directory
 - Resizing images to appropriate dimensions for wiki display
 - Naming images according to the pattern `spell_name_icon.png`
@@ -621,8 +621,8 @@ The `generate_spell_images.py` script automatically creates preview images for s
 
 To generate or update spell documentation:
 ```bash
-python generate_spell_wiki.py
-python generate_spell_images.py
+python tools/py-tools/generate_spell_wiki.py
+python tools/py-tools/generate_spell_images.py
 ```
 
 This creates or updates spell pages in the `generated_spell_wiki/` directory and spell icon images in the `generated_spell_images/wiki_images/` directory.
@@ -664,7 +664,7 @@ The Remixed Dungeon game uses a sprite sheet system for managing item images:
 ### Item Sprite Extraction for Wiki
 
 #### Automatic Extraction Process
-The project includes Python scripts in the root directory for extracting item sprites:
+The project includes Python scripts in the `tools/py-tools/` directory for extracting item sprites:
 
 - `extract_item_sprites.py` - Extracts from the main items.png sheet
 - `extract_all_item_sprites.py` - Extracts from multiple specialized sheets
