@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 """
-Script to analyze wiki data: find red links, build wiki map, and generate DOT graphs.
+Script to analyze wiki data: find red links, missing images, build wiki map, and generate DOT graphs.
 
 This script can:
 1. Find and report red links (links to non-existent pages)
-2. Build a complete wiki map showing all page relationships
-3. Generate DOT graph files for visualization with Graphviz
+2. Find and report missing images (images referenced but not found in media)
+3. Build a complete wiki map showing all page relationships
+4. Generate DOT graph files for visualization with Graphviz
 
 Usage Examples:
     # Find only red links (original functionality)
     python find_red_links.py --output red-links
+
+    # Find missing images
+    python find_red_links.py --output missing-images
 
     # Build complete wiki map
     python find_red_links.py --output wiki-map
@@ -24,6 +28,7 @@ Usage Examples:
     python find_red_links.py --output all
 
 Wiki link format: [[target|display_text]] or [[target]]
+Wiki image format: {{namespace:images:image_name.png|alt_text}} or {{namespace:images:image_name.png}}
 Special namespaces like 'wiki:' and 'doku>' are ignored as they are not actual pages.
 Relative links starting with ':' like ':start' and ':sidebar' are also ignored.
 Special namespaces like 'playground:' and 'some:' are also ignored.
@@ -66,6 +71,43 @@ def extract_wiki_links(content: str) -> List[Tuple[str, str]]:
     return links
 
 
+def extract_wiki_images(content: str) -> List[Tuple[str, str]]:
+    """
+    Extract wiki image references from content.
+
+    Returns a list of tuples (image_path, alt_text) where image_path is the
+    path to the image in the format namespace:images:image_name.png format.
+    """
+    # Pattern to match {{namespace:images:image_name.png|alt_text}} or {{namespace:images:image_name.png}}
+    # Handles both with and without alt text
+    pattern = r'\{\{([^\}]+)\}\}'
+
+    images = []
+    for match in re.finditer(pattern, content):
+        image_content = match.group(1)
+        if '|' in image_content:
+            path, alt_text = image_content.split('|', 1)
+            path = path.strip()
+            alt_text = alt_text.strip()
+        else:
+            path = image_content.strip()
+            alt_text = path.split('/')[-1]  # Use filename as alt text if not provided
+
+        # Only consider it an image if it has the namespace:images: pattern
+        if ':' in path and 'images:' in path:
+            # Format: namespace:images:image_name.png -> namespace:image_name.png
+            # For comparison with media files
+            parts = path.split(':')
+            if len(parts) >= 2 and parts[1].startswith('images/'):
+                # Convert to path relative to media directory
+                namespace = parts[0]
+                image_file = parts[1].split('/', 1)[1]  # Get the actual image filename
+                full_path = f"{namespace}/{image_file}"
+                images.append((full_path, alt_text))
+
+    return images
+
+
 def get_existing_pages(pages_dir: Path) -> Set[str]:
     """
     Get a set of all existing wiki pages by scanning the pages directory.
@@ -105,6 +147,39 @@ def get_existing_pages(pages_dir: Path) -> Set[str]:
     return existing_pages
 
 
+def get_existing_images(media_dir: Path) -> Set[str]:
+    """
+    Get a set of all existing images by scanning the media directory.
+    """
+    existing_images = set()
+
+    for root, dirs, files in os.walk(media_dir):
+        for file in files:
+            if file.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.svg', '.bmp', '.webp')):
+                file_path = Path(root) / file
+                # Convert file path to image reference format
+                # e.g., media/rpd/images/amulet_sprite.png -> rpd/amulet_sprite.png
+                # e.g., media/images/start.png -> /start.png (root namespace)
+
+                # Get relative path from media directory
+                rel_path = file_path.relative_to(media_dir)
+
+                # Convert to image reference name
+                parts = rel_path.parts
+                if len(parts) >= 2:
+                    # Namespaced image like rpd/images/amulet_sprite.png -> rpd/amulet_sprite.png
+                    namespace = parts[0]
+                    image_file = parts[-1]  # Last part is the image filename
+                    image_name = f"{namespace}/{image_file}"
+                elif len(parts) == 1:
+                    # Root-level image like images/start.png -> /start.png (no namespace)
+                    image_name = f"/{parts[0]}"
+
+                existing_images.add(image_name)
+
+    return existing_images
+
+
 def resolve_wiki_link(link_target: str, current_namespace: str = None) -> str:
     """
     Resolve a wiki link target to an actual page name.
@@ -137,23 +212,33 @@ def resolve_wiki_link(link_target: str, current_namespace: str = None) -> str:
     return link_target
 
 
-def build_wiki_map(wiki_data_dir: Path) -> Tuple[Dict[str, List[Tuple[str, str]]], List[Tuple[str, str, str]], Set[str]]:
+def build_wiki_map(wiki_data_dir: Path) -> Tuple[Dict[str, List[Tuple[str, str]]], List[Tuple[str, str, str]], Set[str], List[Tuple[str, str, str]], Set[str]]:
     """
-    Build a complete wiki map showing all page relationships.
+    Build a complete wiki map showing all page relationships and image references.
 
     Returns:
     - Dictionary mapping page names to lists of (target, display_text) tuples
     - List of red links (page_path, link_target, display_text)
     - Set of all existing pages
+    - List of missing images (page_path, image_path, alt_text)
+    - Set of all existing images
     """
     pages_dir = wiki_data_dir / 'pages'
+    media_dir = wiki_data_dir / 'media'
+
     if not pages_dir.exists():
         print(f"Error: Pages directory {pages_dir} does not exist")
-        return {}, [], set()
+        return {}, [], set(), [], set()
+
+    if not media_dir.exists():
+        print(f"Error: Media directory {media_dir} does not exist")
+        return {}, [], set(), [], set()
 
     existing_pages = get_existing_pages(pages_dir)
+    existing_images = get_existing_images(media_dir)
     page_links = defaultdict(list)  # Maps page_path to list of (target, display_text) tuples
     red_links = []
+    missing_images = []
 
     # Walk through all .txt files in the pages directory
     for root, dirs, files in os.walk(pages_dir):
@@ -193,6 +278,9 @@ def build_wiki_map(wiki_data_dir: Path) -> Tuple[Dict[str, List[Tuple[str, str]]
                 # Extract links from the content
                 links = extract_wiki_links(content)
 
+                # Extract images from the content
+                images = extract_wiki_images(content)
+
                 for target, display_text in links:
                     # Skip special namespaces like wiki: and doku>
                     if target.startswith(('wiki:', 'doku>')):
@@ -229,7 +317,14 @@ def build_wiki_map(wiki_data_dir: Path) -> Tuple[Dict[str, List[Tuple[str, str]]
                         # This is a red link
                         red_links.append((str(file_path), resolved_target, display_text))
 
-    return dict(page_links), red_links, existing_pages
+                # Process images from the content
+                for image_path, alt_text in images:
+                    # Check if the image exists in the media directory
+                    if image_path not in existing_images:
+                        # This is a missing image
+                        missing_images.append((str(file_path), image_path, alt_text))
+
+    return dict(page_links), red_links, existing_pages, missing_images, existing_images
 
 
 def generate_dot_graph(page_links: Dict[str, List[Tuple[str, str]]], output_file: str, show_red_links_only: bool = False):
@@ -321,15 +416,25 @@ def find_red_links(wiki_data_dir: Path) -> List[Tuple[str, str, str]]:
 
     Returns a list of tuples (page_path, link_target, display_text) for red links.
     """
-    page_links, red_links, _ = build_wiki_map(wiki_data_dir)
+    page_links, red_links, _, _, _ = build_wiki_map(wiki_data_dir)
     return red_links
 
 
+def find_missing_images(wiki_data_dir: Path) -> List[Tuple[str, str, str]]:
+    """
+    Find all missing images in the wiki data.
+
+    Returns a list of tuples (page_path, image_path, alt_text) for missing images.
+    """
+    _, _, _, missing_images, _ = build_wiki_map(wiki_data_dir)
+    return missing_images
+
+
 def main():
-    parser = argparse.ArgumentParser(description="Analyze wiki data to find red links and build wiki map")
+    parser = argparse.ArgumentParser(description="Analyze wiki data to find red links, missing images and build wiki map")
     parser.add_argument("--dir", default="wiki-data", help="Wiki data directory (default: wiki-data)")
-    parser.add_argument("--output", choices=["red-links", "wiki-map", "dot", "all"], default="red-links",
-                       help="Output format: red-links (default), wiki-map, dot (graphviz), or all")
+    parser.add_argument("--output", choices=["red-links", "missing-images", "wiki-map", "dot", "all"], default="red-links",
+                       help="Output format: red-links (default), missing-images, wiki-map, dot (graphviz), or all")
     parser.add_argument("--graph-file", default="wiki_map.dot", help="Output file for DOT graph (default: wiki_map.dot)")
     parser.add_argument("--red-only", action="store_true", help="In DOT output, show only red links")
 
@@ -342,7 +447,7 @@ def main():
         return
 
     print(f"Analyzing wiki data in {wiki_data_dir}...")
-    page_links, red_links, existing_pages = build_wiki_map(wiki_data_dir)
+    page_links, red_links, existing_pages, missing_images, existing_images = build_wiki_map(wiki_data_dir)
 
     if args.output in ["red-links", "all"]:
         print(f"\nFound {len(red_links)} red links:")
@@ -362,14 +467,33 @@ def main():
         if not red_links:
             print("\nNo red links found! All wiki links point to existing pages.")
 
+    if args.output in ["missing-images", "all"]:
+        print(f"\nFound {len(missing_images)} missing images:")
+        print("-" * 80)
+
+        # Group by source page for better readability
+        from collections import defaultdict
+        grouped = defaultdict(list)
+        for page_path, image_path, alt_text in missing_images:
+            grouped[page_path].append((image_path, alt_text))
+
+        for page_path, images in grouped.items():
+            print(f"\nFrom {page_path}:")
+            for image_path, alt_text in images:
+                print(f"  -> {{rpd:images:{image_path}|{alt_text}}} -> Image '{image_path}' does not exist")
+
+        if not missing_images:
+            print("\nNo missing images found! All wiki image references point to existing images.")
+
     if args.output in ["wiki-map", "all"]:
         print_wiki_map(page_links, existing_pages)
 
     if args.output in ["dot", "all"]:
         generate_dot_graph(page_links, args.graph_file, show_red_links_only=args.red_only)
 
-    print(f"\nChecked against {len(existing_pages)} existing pages.")
+    print(f"\nChecked against {len(existing_pages)} existing pages and {len(existing_images)} existing images.")
     print(f"Wiki map contains {len(page_links)} pages with {sum(len(links) for links in page_links.values())} total links.")
+    print(f"Found {len(missing_images)} missing images from {len(set(p[0] for p in missing_images))} different pages.")
 
 
 if __name__ == "__main__":
