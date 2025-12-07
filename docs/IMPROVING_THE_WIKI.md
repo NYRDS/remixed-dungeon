@@ -126,23 +126,58 @@ The Remixed Dungeon wiki (located in the `wiki-data` submodule) can be significa
 - **Location**: `RemixedDungeon/src/main/res/values/`
 - **Files**: `strings-all.xml` - Main string resources with game text, descriptions, and labels that can be used for wiki content
 
+#### Asset Configuration Files
+- **Location**: `RemixedDungeon/src/main/assets/`
+- **Key directories**:
+  - `levelObjects/` - JSON files defining interactive objects like chests, statues, barricades, etc.
+  - `mobs/` - Mob sprite images and related configurations
+  - `items/` - Item sprite images and related configurations
+  - `scripts/` - Lua scripts defining custom game content
+  - `effects/` - Visual effect configurations
+  - `fonts/` - Font definitions
+  - `sounds/` - Sound asset configurations
+  - `tilemapDesc/`, `tilesets/` - Level tilemap configurations
+  - `levelsDesc/` - Level description files
+  - `mobsDesc/` - Mob description configurations
+  - `spritesDesc/` - Sprite description configurations
+
 #### JSON-based Content
-- **Location**: `RemixedDungeon/src/main/assets/data/`
-- **Files**: JSON configuration files defining:
-  - Item properties and behavior
-  - Mob stats and abilities
+- **Location**: Various directories in `RemixedDungeon/src/main/assets/`
+- **Files**: 220+ JSON files distributed across asset directories defining:
+  - Level objects (chests, statues, barricades, etc.) in `levelObjects/`
+  - Item properties and metadata
+  - Mob configurations and stats
   - Level layouts and features
   - Special event configurations
   - Shop inventory and prices
+  - Game mechanics parameters
 
 #### Lua Scripting Content
-- **Location**: `RemixedDungeon/src/main/assets/data/lua/`
+- **Location**: `RemixedDungeon/src/main/assets/scripts/`
+- **Key directories**:
+  - `actors/` - Actor behavior scripts
+  - `ai/` - AI behavior scripts
+  - `buffs/` - Status effect scripts
+  - `items/` - Custom item functionality
+  - `lib/` - Utility libraries
+  - `mobs/` - Custom mob behaviors
+  - `npc/` - NPC scripts (Bard.lua, Innkeeper.lua, PlagueDoctor.lua, etc.)
+  - `objects/` - Level objects and features
+  - `services/` - Game services
+  - `spells/` - Spell mechanics
+  - `startup/` - Initialization scripts
+  - `stats/` - Equipment stats (shields.lua, etc.)
+  - `stuff/` - Various game components
+  - `traps/` - Trap mechanics
+  - `userServices/` - User service implementations
 - **Files**: Lua scripts that define:
   - Custom game mechanics
   - Special event behaviors
   - Dynamic content generation
   - Scripted interactions and dialogues
   - Advanced item functions not available in Java base code
+  - NPC behaviors and dialogue
+  - Custom mob AI and mechanics
 
 ## Tools for Information Extraction
 
@@ -224,17 +259,27 @@ grep -r "hunger" RemixedDungeon/src/main/java/
 # Find resource strings
 find RemixedDungeon/src/main/res -name "*.xml" -exec grep -l "string" {} \;
 
-# Find JSON configuration files
-find RemixedDungeon/src/main/assets/data -name "*.json" -type f
+# Find JSON configuration files (220+ files across asset directories)
+find RemixedDungeon/src/main/assets -name "*.json" -type f
 
-# Find Lua script files
-find RemixedDungeon/src/main/assets/data -name "*.lua" -type f
+# Find Lua script files (in scripts/ directory)
+find RemixedDungeon/src/main/assets/scripts -name "*.lua" -type f
 
-# Search inside JSON files for specific content
-grep -r "itemName" RemixedDungeon/src/main/assets/data/
+# Search inside JSON files for specific content (e.g., in levelObjects/)
+grep -r "chest" RemixedDungeon/src/main/assets/levelObjects/
 
 # Search inside Lua files for specific mechanics
-grep -r "function" RemixedDungeon/src/main/assets/data/lua/
+grep -r "function" RemixedDungeon/src/main/assets/scripts/
+
+# List all asset directories to understand the structure
+ls -la RemixedDungeon/src/main/assets/
+
+# Find specific JSON files by category
+find RemixedDungeon/src/main/assets/levelObjects -name "*.json" -type f
+find RemixedDungeon/src/main/assets/scripts -name "*.lua" -type f
+
+# Find sprite images for visual references
+find RemixedDungeon/src/main/assets -name "*.png" -type f | grep -i "mob\|item"
 ```
 
 ### Running Wiki Analysis Tools
