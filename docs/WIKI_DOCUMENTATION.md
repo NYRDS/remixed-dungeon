@@ -233,8 +233,14 @@ To avoid confusion between similar entity names (e.g., a mob and hero subclass b
 - **Files**: `strings_*.json` - Localized game text that can be used for game descriptions
 
 #### Item and Mob Configuration
-- **Location**: `RemixedDungeon/src/main/assets/data/`
-- **Files**: Various JSON files containing game configuration data
+- **Location**: Various JSON files in `RemixedDungeon/src/main/assets/`
+- **Files**:
+  - `hero/initHeroes.json` - Hero class starting equipment, stats, and special properties
+  - `levelsDesc/Bestiary.json` - Monster spawn rates and level placement
+  - `levelsDesc/` directory - Level-specific configuration files
+  - `mobsDesc/` directory - Mob-specific configuration files
+  - `spritesDesc/` directory - Sprite animation and effect configurations
+  - `levelObjects/` directory - Interactive objects configuration
 
 #### Resource Strings
 - **Location**: `RemixedDungeon/src/main/res/values/`
@@ -302,9 +308,11 @@ To maintain consistency and completeness in documentation of hero classes and su
 - Use the `tools/py-tools/generate_hero_previews.py` script to extract information from source code and generate preview content
 - Each hero class page should include:
   - Description of the class's unique characteristics
-  - Starting equipment and stats
+  - Starting equipment and stats (from initHeroes.json)
   - Special abilities and mechanics
   - Sprite information where applicable
+  - Magic affinity (Combat, Elemental, Rogue, Huntress, Elf, Necromancy, Witchcraft, Priest, PlagueDoctor)
+  - Any class-specific mechanics (forbidden actions, friendly mobs, immunities, etc.)
 
 ### Hero Subclass Previews
 - All hero subclasses (Gladiator, Berserker, Warlock, BattleMage, Assassin, FreeRunner, Sniper, Warden, Scout, Shaman, Lich, WitchDoctor, Guardian) have dedicated wiki pages
@@ -312,8 +320,9 @@ To maintain consistency and completeness in documentation of hero classes and su
 - Each subclass page should include:
   - Description of the subclass's unique abilities
   - Which base class it belongs to
-  - How to unlock the subclass (typically via Tome of Mastery)
+  - How to unlock the subclass (typically via Tome of Mastery after Boss #2)
   - Special mechanics and gameplay changes
+  - Special armor obtained via ArmorKit (GladiatorArmor, BerserkArmor, WarlockArmor, BattleMageArmor, etc.) - these are special armors obtained by using the ArmorKit (found in City level, dropped by King boss) on any regular armor, which transforms it into the class-specific armor
 
 ### Generating Previews
 The `tools/py-tools/generate_hero_previews.py` script extracts information by:
@@ -405,6 +414,7 @@ The wiki recognizes multiple spell affinity categories which should be linked ap
 - Huntress: Nature and charm spells (e.g., Calm, Charm)
 - Elf: Natural magic spells (e.g., Magic Arrow, Sprout)
 - Priest: Healing and sanctity spells (e.g., Heal, Order)
+- PlagueDoctor: Disease and toxic spells (e.g., Plague, GasBomb)
 
 ## Item Sprite Generation and Management
 
@@ -483,31 +493,69 @@ Some items and mobs use advanced sprite configurations defined in JSON files in 
 ### Class Unlock Requirements
 - **Location**: `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/scenes/StartScene.java`
 - **Key Information**:
-  - `huntressUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_3)` - Huntress unlocked by defeating 3rd boss (DM300)
-  - `elfUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4)` - Elf unlocked by defeating 4th boss (The King)
-  - `gnollUnlocked = Badges.isUnlocked(Badges.Badge.GNOLL_UNLOCKED)` - Gnoll unlocked by healing Gnoll Brute at town priest
+  - `huntressUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_3) || (GamePreferences.donated() >= 1)` - Huntress unlocked by defeating 3rd boss (DM300) or by donating 1+
+  - `elfUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4) || (GamePreferences.donated() >= 2)` - Elf unlocked by defeating 4th boss (The King) or by donating 2+
+  - `gnollUnlocked = Badges.isUnlocked(Badges.Badge.GNOLL_UNLOCKED) || (GamePreferences.donated() >= 3)` - Gnoll unlocked by healing Gnoll Brute at town priest or by donating 3+
   - Boss unlock badges are validated in `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/Badges.java`
+  - Additional classes: Doctor and Priest have "Coming Soon" status and are not yet unlocked through gameplay
+
+### Hero Classes and Subclasses
+- **Available Classes** (9 total): Warrior, Mage, Rogue, Huntress, Elf, Necromancer, Gnoll, Priest, Doctor
+- **Location**: `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/HeroClass.java`
+- **Starting Properties**: Defined in `RemixedDungeon/src/main/assets/hero/initHeroes.json`
+  - **Common properties**: Cloth armor, 100 gold, 10 STR, 20 HP, 10 skill points
+  - **Warrior**: ShortSword, 11 STR, PotionOfStrength, BodyArmor spell, Combat affinity
+  - **Mage**: WandOfMagicMissile, ScrollOfIdentify, WindGust spell, 15 SP, Elemental affinity
+  - **Rogue**: RingOfShadows +1, ScrollOfMagicMapping, Cloak spell, Rogue affinity
+  - **Huntress**: Boomerang, ShootInEye spell, 15 HP, Huntress affinity
+  - **Elf**: ElvenBow +1, 20 CommonArrows, ElvenDagger, MagicArrow spell, immunity to Roots, 9 STR, 15 HP, Elf affinity
+  - **Necromancer**: NecromancerRobe, SkeletonKey for level 7, SummonDeathling spell, 15 HP, Necromancy affinity
+  - **Gnoll**: GnollTamahawk, NoItem armor (starts with no armor), 8 Darts, Roar spell, high STR (15) low HP (5), Witchcraft affinity
+  - **Priest**: ScrollOfRemoveCurse, Priest affinity
+  - **Doctor**: Various potions (Healing, ToxicGas, ParalyticGas), PlagueDoctor affinity
+
+### Hero Subclasses
+- **Available Subclasses** (13 total): Gladiator, Berserker, Warlock, BattleMage, Assassin, FreeRunner, Sniper, Warden, Scout, Shaman, Lich, WitchDoctor, Guardian
+- **Location**: `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/HeroSubClass.java`
+- **Unlocking**: Via Tome of Mastery after boss #2 (Tengu) is defeated
+  - **Warrior subclasses**: Gladiator, Berserker
+  - **Mage subclasses**: Warlock, BattleMage
+  - **Rogue subclasses**: Assassin, FreeRunner
+  - **Huntress subclasses**: Sniper, Warden
+  - **Elf subclasses**: Scout, Shaman
+  - **Necromancer subclasses**: Lich, WitchDoctor
+  - **Gnoll subclasses**: Guardian
 
 ### Monster Spawning and Level Configuration
 - **Location**: `RemixedDungeon/src/main/assets/levelsDesc/Bestiary.json`
 - **Key Information**: Defines which monsters appear on which levels and their spawn weights/rates
-  - Example: `"CavesLevel": {"11":{"Bat":1,"Brute":0.2}}` - Shows Gnoll Brutes spawn in Caves levels 11-14
-  - `"SewerBossLevel": {"any":{"Goo":1}}` - Goo is the sewer boss
-  - `"PrisonBossLevel": {"any":{"Tengu":1}}` - Tengu is the prison boss
-  - `"CavesBossLevel": {"any":{"DM300":1}}` - DM300 is the caves boss, etc.
+  - **Sewer Level**: Snail (level 1), Rat/Gnoll/Crab (level 3), etc.
+  - **Prison Level**: Skeleton/Thief/Swarm/Shaman (level 6-9), Tengu boss
+  - **Caves Level**: Bat/Gnoll Brute (level 11-14), DM300 boss
+  - **City Level**: FireElemental/Monk/Warlock (level 16-19), The King boss
+  - **Halls Level**: Succubus/Eye/Scorpio/Acidic (level 22-24), Yog boss
+  - **Guts Level**: SuspiciousRat/ZombieGnoll/Worm (level 26-30)
+  - **Spider Level**: SpiderServant/SpiderExploding/SpiderMind (level 6s-10s)
+  - **Necro Level**: Zombie/Skeleton/EnslavedSoul (level necro1-necro4), Lich boss
+  - **Ice Caves Level**: Kobold/ColdSpirit/IceElemental (level ice1-ice4), IceGuardianCore boss
 
 ### Class Unlock Validation
 - **Location**: `RemixedDungeon/src/main/java/com/nyrds/pixeldungeon/windows/WndPriest.java`
 - **Key Information**:
   - `Badges.validateGnollUnlocked()` is called when healing a Gnoll Brute NPC
-  - Brute healing mechanism: "if(patient.getEntityKind().equals("Brute")) { Badges.validateGnollUnlocked(); }"
+  - Brute healing mechanism: `if(patient.getEntityKind().equals("Brute")) { Badges.validateGnollUnlocked(); }`
+  - Unlocking also possible via donations (1+ for Huntress, 2+ for Elf, 3+ for Gnoll)
 
 ### Class-Specific Perks and Mechanics
 - **Location**: `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/HeroClass.java`
 - **Key Information**:
   - Each class has unique mechanics in methods like `attackSkillBonus()`, `allowed()`, etc.
   - The `allowed()` method checks `initHeroes.has(name())` to determine if class is available
-  - Special mechanics like Doctor's accuracy penalty when not using Bone Saw
+  - Special mechanics like Doctor's accuracy penalty when not using Bone Saw (5% chance to receive accuracy penalty, -5 to attack skill)
+  - Hero classes have different dew bonus: Huntress and Elf get +1 dew bonus
+  - Elf class has natural haste (hasteLevel = 1)
+  - Gnoll class has forbidden actions (Scroll_ACRead, TomeOfMastery_ACRead, Stylus_ACInscribe)
+  - Gnoll class has friendly mobs (Gnoll, Shaman, Brute, Shielded, ShamanElder)
 
 ## Tools for Information Extraction
 
@@ -564,11 +612,22 @@ Some items and mobs use advanced sprite configurations defined in JSON files in 
 - Document combat calculations and formulas
 - Explain level generation algorithms and special rooms
 - Cover buff/debuff stacking rules and interactions
+- Detail the hunger system and food mechanics
+- Explain the talent system for heroes
+- Document the difficulty system and scaling
+- Detail the magic affinity system and spell mechanics
+- Explain the quickslot system and item management
+- Cover the enchantment and glyph mechanics for weapons and armor
+- Detail the trap mechanics and identification system
 
 ### 4. Balance Information
 - Extract numerical values for balancing purposes
 - Document how scaling works with level progression
 - Include information about probability and chance mechanics
+- Detail the dungeon level depth mechanics (how stats scale with dungeon level)
+- Explain mob stat scaling and special ability chances
+- Document item drop rates and rarity calculations
+- Cover the relationship between strength, weight and equipment penalties
 
 ## Useful Commands
 
@@ -610,6 +669,12 @@ find RemixedDungeon/src/main/assets/scripts -name "*.lua" -type f
 
 # Find sprite images for visual references
 find RemixedDungeon/src/main/assets -name "*.png" -type f | grep -i "mob\|item"
+
+# Find specific configuration files
+find RemixedDungeon/src/main/assets/hero -name "initHeroes.json" -type f
+find RemixedDungeon/src/main/assets/levelsDesc -name "Bestiary.json" -type f
+find RemixedDungeon/src/main/assets/mobsDesc -name "*.json" -type f
+find RemixedDungeon/src/main/assets/spritesDesc -name "*.json" -type f
 ```
 
 ### Running Wiki Analysis Tools
@@ -625,16 +690,29 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 - Run `find_red_links.py` regularly to identify broken links
 - Address any red links immediately by creating missing pages or correcting link targets
 - Audit for duplicate content and merge as needed
+- Regularly validate that all image references are properly formatted and exist
+- Ensure all pages follow the naming conventions consistently
 
 ### Content Verification
 - Cross-reference all game information with actual game code and string resources
 - When documenting mechanics, use information extracted directly from source code
 - Update wiki content when game mechanics change in new versions
+- Verify specific numeric values, formulas, and game mechanics against current code
+- Use the automated scripts (generate_hero_previews.py, generate_spell_wiki.py, etc.) to ensure accuracy of class and spell information
 
 ### Review Process
 - Before adding new content, verify that a page doesn't already exist under a different naming convention
 - Ensure all new pages follow the lowercase naming standard
 - Update related pages to link to new content appropriately
+- Verify that all source code references point to actual files in the repository
+- Check that all game mechanics are described accurately with reference to specific classes or config files
+
+### Automated Checks
+- Run the generation scripts periodically to check for inconsistencies
+- Use `grep` to find all references to specific game elements and ensure consistency across wiki pages
+- Check that all class-specific mechanics are documented (e.g., Doctor's accuracy penalty, Gnoll's forbidden actions, etc.)
+- Verify that all hero subclasses and their special mechanics are correctly documented
+- Ensure spell affinities match the actual magicAffinity values in code or initHeroes.json
 
 ## Migration Guidelines
 
@@ -700,6 +778,7 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
   - **ruStore**: Minimal logging implementation with basic functionality
   - **Desktop**: Stub with basic logging and file output
   - **Web**: Console-based logging implementation
+- **Additional Note**: The project also uses donation thresholds as alternative unlock mechanisms for some hero classes in addition to badge requirements
 
 ### UI Composition System
 - **Documentation Coverage**: The documentation accurately describes the inheritance hierarchy from Gizmo to specific UI components, layout containers (VBox, HBox) with proper examples, interface-based design (IPlaceable), and UI patterns and best practices.
@@ -708,6 +787,11 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 ### Overlay System
 - **Documentation Coverage**: The documentation accurately describes source set hierarchy and precedence order, overlay patterns (Interface-based, Class Replacement, Stub Implementation), and build system integration with Gradle.
 - **Code Verification**: Overlay system works as described with Android using Gradle flavors with source set precedence and Desktop using source sets from multiple directories.
+
+### Hero Class and Subclass Information
+- **Documentation Coverage**: The documentation now accurately reflects 9 hero classes (Warrior, Mage, Rogue, Huntress, Elf, Necromancer, Gnoll, Priest, Doctor) and 13 subclasses
+- **Code Verification**: All starting equipment, stats, and special mechanics match the initHeroes.json configuration; subclass-specific armor (ClassArmor) is obtained by using the ArmorKit item (dropped by King boss) on any regular armor, not given as starting equipment
+- **Additional Note**: Some classes (Doctor, Priest) have "Coming Soon" status and are not yet unlocked through gameplay
 
 ## Maintaining Consistency
 
@@ -719,4 +803,5 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 - Use the automated generation tools to keep spell information current
 - Extract and update item sprites when new items are added
 - Use consistent naming conventions for all extracted sprites
+- Include detailed class-specific mechanics (forbidden actions, friendly mobs, immunities, etc.)
 - Ensure all wiki pages have appropriately sized and positioned images
