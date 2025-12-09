@@ -21,6 +21,10 @@ Always include references to the source code when documenting game mechanics, as
 - Example: `chaos_armor.txt`, `air_elemental.txt`, `potion_of_healing.txt`
 - No capitalized filenames are allowed (e.g., no `Chaos_Armor.txt`, `Air_Elemental.txt`)
 
+### Workflow and Collaboration Rules
+- **Pull repo and analyze diff before attempting any changes**: Always pull the latest changes from the repository and analyze the diff to understand what has changed before making any modifications to wiki files. This prevents merge conflicts and ensures consistency with recent updates.
+- Always commit and push your updates after making changes to wiki files to ensure your contributions are preserved and shared with the community.
+
 ### Conversion Strategy
 - CamelCase names should be converted to snake_case (e.g., `TheSoulbringer` → `the_soulbringer`)
 - Proper names should follow the same rule (e.g., `ArcaneStylus` → `arcane_stylus`)
