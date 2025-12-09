@@ -1,0 +1,23 @@
+{{tag> rpd hero_subclass lich }}
+
+This subclass is available for the following class(es): NECROMANCER.
+
+====== Lich ======
+
+===== Description =====
+The Lich is a mastery path available for certain hero classes in Remixed Dungeon. This subclass offers specialized abilities and mechanics.
+
+===== Abilities =====
+The Lich subclass provides unique abilities and bonuses:
+
+  * Immunities: Paralysis, ToxicGas, Terror, Death, Amok, Blindness, Sleep, Poison, Vertigo, Bleeding
+
+The Lich transforms from a Necromancer after achieving mastery, gaining powerful undead abilities.
+
+===== Unlocking =====
+The Lich subclass is unlocked by achieving Mastery with the appropriate class by using the Tome of Mastery. This is typically done by reaching level 10 with the base class.
+
+{{tag> rpd hero_subclass lich }}
+
+===== Sprite Information =====
+The LICH subclass uses the same sprite system as its base class, with visual differences potentially appearing in some custom assets.

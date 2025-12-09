@@ -1,0 +1,22 @@
+{{tag> rpd hero_subclass gladiator }}
+
+This subclass is available for the following class(es): WARRIOR.
+
+====== Gladiator ======
+
+===== Description =====
+The Gladiator is a mastery path available for certain hero classes in Remixed Dungeon. This subclass offers specialized abilities and mechanics.
+
+===== Abilities =====
+The Gladiator subclass provides unique abilities and bonuses:
+
+
+The Gladiator gains combo attacks when using melee weapons, building up a combo that increases damage.
+
+===== Unlocking =====
+The Gladiator subclass is unlocked by achieving Mastery with the appropriate class by using the Tome of Mastery. This is typically done by reaching level 10 with the base class.
+
+{{tag> rpd hero_subclass gladiator }}
+
+===== Sprite Information =====
+The GLADIATOR subclass uses the same sprite system as its base class, with visual differences potentially appearing in some custom assets.

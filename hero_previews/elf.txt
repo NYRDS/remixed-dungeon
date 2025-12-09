@@ -1,0 +1,38 @@
+====== Elf ======
+
+===== Description =====
+The Elf is one of the starting hero classes in Remixed Dungeon. This class has unique abilities and starting equipment that set it apart from other classes.
+
+===== Starting Equipment =====
+  * Weapon: ElvenBow (+1) [Identified]
+  * Item: CommonArrow x20 [Identified]
+  * Item: ElvenDagger [Identified]
+
+===== Stats =====
+  * Starting Strength: 9
+  * Starting HP: 15
+  * Magic Affinity: Elf
+
+===== Quickslot =====
+  * Quickslot 1: CommonArrow
+  * Quickslot 2: Spell - MagicArrow
+
+===== Resistances/Immunities =====
+  * Immunities: Roots
+
+===== Special Abilities =====
+The Elf has special abilities and mechanics unique to this class. For more information, see the game mechanics.
+
+{{tag> rpd hero_class elf }}
+
+===== Sprite Information =====
+The ELF sprite (with no subclass) is constructed using the modern sprite system with multiple layers:
+
+  * Head: hero_modern/head/ELF_NONE.png
+  * Body: hero_modern/body/[body_type].png (based on class/subclass)
+  * Hair: hero_modern/head/hair/ELF_NONE_HAIR.png (if applicable)
+  * Facial Hair: hero_modern/head/facial_hair/ELF_NONE_FACIAL_HAIR.png (if applicable)
+  * Armor: hero_modern/armor/[armor_visual_name].png
+  * Accessories: hero_modern/accessories/[accessory_visual_name].png (if applicable)
+
+The sprite system combines multiple layers to create the final hero appearance, with different layers for body parts, equipment, and accessories.

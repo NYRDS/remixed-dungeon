@@ -1,0 +1,35 @@
+====== Gnoll ======
+
+===== Description =====
+The Gnoll is one of the starting hero classes in Remixed Dungeon. This class has unique abilities and starting equipment that set it apart from other classes.
+
+===== Starting Equipment =====
+  * Weapon: GnollTamahawk [Identified]
+  * Armor: NoItem
+  * Item: Dart x8 [Identified]
+
+===== Stats =====
+  * Starting Strength: 15
+  * Starting HP: 5
+  * Magic Affinity: Witchcraft
+
+===== Quickslot =====
+  * Quickslot 1: Dart
+  * Quickslot 2: Spell - Roar
+
+===== Special Abilities =====
+The Gnoll has special abilities and mechanics unique to this class. For more information, see the game mechanics.
+
+{{tag> rpd hero_class gnoll }}
+
+===== Sprite Information =====
+The GNOLL sprite (with no subclass) is constructed using the modern sprite system with multiple layers:
+
+  * Head: hero_modern/head/GNOLL_NONE.png
+  * Body: hero_modern/body/[body_type].png (based on class/subclass)
+  * Hair: hero_modern/head/hair/GNOLL_NONE_HAIR.png (if applicable)
+  * Facial Hair: hero_modern/head/facial_hair/GNOLL_NONE_FACIAL_HAIR.png (if applicable)
+  * Armor: hero_modern/armor/[armor_visual_name].png
+  * Accessories: hero_modern/accessories/[accessory_visual_name].png (if applicable)
+
+The sprite system combines multiple layers to create the final hero appearance, with different layers for body parts, equipment, and accessories.

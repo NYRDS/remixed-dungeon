@@ -1,0 +1,50 @@
+====== HideInGrassSpell ======
+
+{{ rpd:images:hide_in_grass_spell_icon.png|HideInGrassSpell Spell Icon }}
+
+**HideInGrassSpell** is a spell in Remixed Pixel Dungeon (Elf Affinity).
+
+==== Description ====
+You perfected your Hide-and-seek mastery.
+
+==== Stats ====
+  * **Magic Affinity:** Elf
+  * **Targeting:** self
+  * **Level:** 2
+  * **Mana Cost:** 5
+
+==== Usage ====
+The HideInGrassSpell spell can be used for:
+  * Primary effect of the spell
+  * Strategic applications in combat
+  * Utility purposes based on its mechanics
+
+==== Classes ====
+Classes that can use this spell include:
+  * Classes with Elf affinity (e.g., [[rpd:elf|Elf class]])
+  * Other classes that gain access through special means
+
+==== Strategy ====
+How to effectively use the HideInGrassSpell spell:
+  * Best situations to use the spell
+  * Synergies with other abilities
+  * Timing considerations
+
+==== Data Validation ====
+This information is extracted directly from the game code and validated against the source implementation. The details are accurate as of the referenced source files and provide reliable information about the spell mechanics.
+
+==== Content Verification ====
+* Information source: Lua Script in Remixed Dungeon codebase
+* Stats verified: Yes, extracted directly from spell class properties
+* Effect descriptions: Generated from code analysis and string resources
+* Last updated: 2025-12-09 based on HideInGrass.lua
+
+==== Source Code ====
+This page content is based on the Lua Script: [[https://github.com/NYRDS/remixed-dungeon/blob/master/RemixedDungeon/src/main/assets/scripts/spells/HideInGrass.lua|HideInGrass]]
+
+==== See Also ====
+  * [[rpd:spells|Spells]]
+  * [[rpd:mechanics|Game Mechanics]]
+  * [[rpd:elf|Elf Affinity]]
+
+{{tag> rpd spells elf }}

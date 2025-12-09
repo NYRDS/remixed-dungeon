@@ -1,0 +1,30 @@
+====== Necromancer ======
+
+===== Description =====
+The Necromancer is one of the starting hero classes in Remixed Dungeon. This class has unique abilities and starting equipment that set it apart from other classes.
+
+===== Starting Equipment =====
+  * Armor: NecromancerRobe [Identified]
+  * Item: SkeletonKey
+  * Starting HP: 15
+  * Magic Affinity: Necromancy
+
+===== Quickslot =====
+  * Quickslot 1: Spell - SummonDeathling
+
+===== Special Abilities =====
+The Necromancer has special abilities and mechanics unique to this class. For more information, see the game mechanics.
+
+{{tag> rpd hero_class necromancer }}
+
+===== Sprite Information =====
+The NECROMANCER sprite (with no subclass) is constructed using the modern sprite system with multiple layers:
+
+  * Head: hero_modern/head/NECROMANCER_NONE.png
+  * Body: hero_modern/body/[body_type].png (based on class/subclass)
+  * Hair: hero_modern/head/hair/NECROMANCER_NONE_HAIR.png (if applicable)
+  * Facial Hair: hero_modern/head/facial_hair/NECROMANCER_NONE_FACIAL_HAIR.png (if applicable)
+  * Armor: hero_modern/armor/[armor_visual_name].png
+  * Accessories: hero_modern/accessories/[accessory_visual_name].png (if applicable)
+
+The sprite system combines multiple layers to create the final hero appearance, with different layers for body parts, equipment, and accessories.

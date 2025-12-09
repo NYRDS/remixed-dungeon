@@ -1,0 +1,22 @@
+{{tag> rpd hero_subclass battlemage }}
+
+This subclass is available for the following class(es): MAGE.
+
+====== Battlemage ======
+
+===== Description =====
+The Battlemage is a mastery path available for certain hero classes in Remixed Dungeon. This subclass offers specialized abilities and mechanics.
+
+===== Abilities =====
+The Battlemage subclass provides unique abilities and bonuses:
+
+
+The Battle Mage charges their wand with each hit when using a wand and melee weapon together, and gains bonus damage based on wand charges.
+
+===== Unlocking =====
+The Battlemage subclass is unlocked by achieving Mastery with the appropriate class by using the Tome of Mastery. This is typically done by reaching level 10 with the base class.
+
+{{tag> rpd hero_subclass battlemage }}
+
+===== Sprite Information =====
+The BATTLEMAGE subclass uses the same sprite system as its base class, with visual differences potentially appearing in some custom assets.
