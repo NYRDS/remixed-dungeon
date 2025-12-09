@@ -190,6 +190,10 @@ Documentation of the cross-platform bitmap manipulation interface:
 Documentation of the Android-only web server for mod file management:
 - [WebServer Functionality](docs/WebServer.md) - Detailed documentation of web server features and implementation
 
+### Wiki Documentation
+Comprehensive documentation for maintaining and improving the Remixed Dungeon wiki:
+- [Wiki Documentation](docs/WIKI_DOCUMENTATION.md) - Complete guide to wiki maintenance, content creation, and automated tools
+
 ### PNG Editing and Preview Features
 Recent addition of comprehensive PNG editing and preview functionality:
 - **PNG Preview**: View PNG files directly in browser with styled preview page
