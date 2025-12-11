@@ -446,10 +446,10 @@ The Remixed Dungeon game uses a sprite sheet system for managing item images:
 #### Automatic Extraction Process
 The project includes Python scripts in the `tools/py-tools/` directory for extracting item sprites:
 
-- `extract_item_sprites.py` - Extracts from the main items.png sheet
-- `extract_all_item_sprites.py` - Extracts from multiple specialized sheets
-- `extract_custom_item_sprites.py` - Extracts items with special configurations
-- `extract_mob_sprites.py` - Extracts mob sprites with 8x scaling
+- `tools/py-tools/extract_item_sprites.py` - Extracts from the main items.png sheet
+- `tools/py-tools/extract_all_item_sprites.py` - Extracts from multiple specialized sheets
+- `tools/py-tools/extract_custom_item_sprites.py` - Extracts items with special configurations
+- `tools/py-tools/extract_mob_sprites.py` - Extracts mob sprites with 8x scaling
 
 #### Extraction Workflow
 1. Parse Java files to identify item classes and their image indices
@@ -564,7 +564,7 @@ Some items and mobs use advanced sprite configurations defined in JSON files in 
 ## Tools for Information Extraction
 
 ### 1. Code Analysis Tools
-- Use the `find_red_links.py` script to identify gaps in wiki coverage
+- Use the `tools/py-tools/find_red_links.py` script to identify gaps in wiki coverage
 - Generate code maps to understand relationships between game elements
 - Use static analysis to identify all subclasses of important classes (e.g., all items inherit from Item)
 
@@ -596,7 +596,7 @@ Some items and mobs use advanced sprite configurations defined in JSON files in 
 - Describe interactions between different systems
 
 ### 4. Maintenance
-- Use the `find_red_links.py` script regularly to identify missing pages
+- Use the `tools/py-tools/find_red_links.py` script regularly to identify missing pages
 - Update wiki content when game code is updated
 - Create visual aids (like the generated wiki map) to show relationships
 
@@ -684,14 +684,14 @@ find RemixedDungeon/src/main/assets/spritesDesc -name "*.json" -type f
 ### Running Wiki Analysis Tools
 ```bash
 # Generate wiki map
-python find_red_links.py --output all
+python tools/py-tools/find_red_links.py --output all
 dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 ```
 
 ## Quality Assurance
 
 ### Regular Maintenance
-- Run `find_red_links.py` regularly to identify broken links
+- Run `tools/py-tools/find_red_links.py` regularly to identify broken links
 - Address any red links immediately by creating missing pages or correcting link targets
 - Audit for duplicate content and merge as needed
 - Regularly validate that all image references are properly formatted and exist
@@ -702,7 +702,7 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 - When documenting mechanics, use information extracted directly from source code
 - Update wiki content when game mechanics change in new versions
 - Verify specific numeric values, formulas, and game mechanics against current code
-- Use the automated scripts (generate_hero_previews.py, generate_spell_wiki.py, etc.) to ensure accuracy of class and spell information
+- Use the automated scripts (tools/py-tools/generate_hero_previews.py, tools/py-tools/generate_spell_wiki.py, etc.) to ensure accuracy of class and spell information
 
 ### Review Process
 - Before adding new content, verify that a page doesn't already exist under a different naming convention
@@ -741,12 +741,12 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 ## Tools and Automation
 
 ### Script Usage
-- Use `find_red_links.py` to periodically scan for broken or incorrect links
+- Use `tools/py-tools/find_red_links.py` to periodically scan for broken or incorrect links
 - Use the merge script to handle any future duplicate files that may be created
 - Implement automated checking in development workflow to catch naming convention violations
 
 ### Verification Steps
-1. Before committing wiki changes, run `find_red_links.py --output red-links`
+1. Before committing wiki changes, run `tools/py-tools/find_red_links.py --output red-links`
 2. Verify all new links point to existing lowercase files
 3. Ensure no capitalized files are being created
 4. Check that merged content doesn't introduce duplicate information within pages
@@ -816,7 +816,7 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 The original spell icon extraction system was incorrectly minifying entire sprite sheets to a small size instead of extracting individual spell icons. This resulted in all spells from a particular sheet appearing with the same, incorrect, minified image.
 
 ### Root Cause
-The `generate_spell_images.py` script was using the ImageMagick `convert` command with `-resize` to shrink the entire sprite sheet, rather than extracting individual sprites at their proper positions using the `-crop` command.
+The `tools/py-tools/generate_spell_images.py` script was using the ImageMagick `convert` command with `-resize` to shrink the entire sprite sheet, rather than extracting individual sprites at their proper positions using the `-crop` command.
 
 ### Resolution
 The script was updated to:
