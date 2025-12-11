@@ -743,6 +743,7 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 ### Script Usage
 - Use `tools/py-tools/find_red_links.py` to periodically scan for broken or incorrect links
 - Use the merge script to handle any future duplicate files that may be created
+- Use `pick_random_wiki_pages.sh` to randomly select wiki pages for review or editing
 - Implement automated checking in development workflow to catch naming convention violations
 
 ### Verification Steps
@@ -750,6 +751,12 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 2. Verify all new links point to existing lowercase files
 3. Ensure no capitalized files are being created
 4. Check that merged content doesn't introduce duplicate information within pages
+
+### Random Wiki Page Selection
+- Use the `pick_random_wiki_pages.sh` script to randomly select wiki pages for review
+- Run with optional argument for number of pages (defaults to 5): `./pick_random_wiki_pages.sh 3`
+- Useful for identifying pages that need updates or quality checks
+- Helps with rotating focus across the wiki content to ensure overall quality
 
 ## Exception and Special Cases
 
