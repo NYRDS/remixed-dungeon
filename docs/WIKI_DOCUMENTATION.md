@@ -219,11 +219,11 @@ To avoid confusion between similar entity names (e.g., a mob and hero subclass b
 ### 4. Modding Support (RemixedDungeon/src/main/java/)
 
 #### Custom Content Creation
-- **Location**: `com/nyrds/mod/`
-- **Key files**:
-  - `ModData.java` - Mod data structure
-  - `ModManager.java` - Mod loading and management
-  - `Custom*` classes - Custom content implementations
+- **Location**: `com/nyrds/pixeldungeon/` and subdirectories
+- **Key directories**:
+  - `items/`, `mobs/`, `levels/`, `ai/`, `effects/`, `utils/` - Various custom content implementations
+  - `mechanics/` - Custom mechanics including spells
+  - `support/` - Mod support utilities
 
 #### Content Generation
 - **Location**: `com/nyrds/pixeldungeon/items/`, `com/nyrds/pixeldungeon/mobs/`
@@ -810,23 +810,3 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 - Include detailed class-specific mechanics (forbidden actions, friendly mobs, immunities, etc.)
 - Ensure all wiki pages have appropriately sized and positioned images
 
-## Spell Icon Extraction Fix
-
-### Issue Description
-The original spell icon extraction system was incorrectly minifying entire sprite sheets to a small size instead of extracting individual spell icons. This resulted in all spells from a particular sheet appearing with the same, incorrect, minified image.
-
-### Root Cause
-The `tools/py-tools/generate_spell_images.py` script was using the ImageMagick `convert` command with `-resize` to shrink the entire sprite sheet, rather than extracting individual sprites at their proper positions using the `-crop` command.
-
-### Resolution
-The script was updated to:
-1. Analyze both Java and Lua spell definitions to determine the correct image index and sprite sheet for each spell
-2. Calculate the pixel position of each icon within its sprite sheet based on the index
-3. Use the ImageMagick `-crop` command to extract individual 16x16 sprites: `convert 'sheet.png' -crop 16x16+x+y 'icon.png'`
-4. Map each spell to its correct sprite sheet and position according to the actual game source code
-
-### Verification
-After the fix, each spell now displays its correct individual icon as defined in the game source code:
-- Java spells (e.g., Healing.java, Ignite.java) use indices from their class definitions
-- Lua spells (e.g., Heal.lua, Cloak.lua) use indices and sprite sheets from their desc functions
-- Icons are now properly extracted at their native 16x16 resolution and can be scaled appropriately for wiki display
