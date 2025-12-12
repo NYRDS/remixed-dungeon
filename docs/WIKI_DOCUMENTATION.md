@@ -790,6 +790,35 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 - Verify that all hero subclasses and their special mechanics are correctly documented
 - Ensure spell affinities match the actual magicAffinity values in code or initHeroes.json
 
+## Additional Wiki Improvement Tools
+
+The project includes additional scripts to help maintain and improve wiki quality that complement the existing tools:
+
+### 1. Backlinks Tracking (Enhanced `find_red_links.py`)
+- **Location**: `tools/py-tools/find_red_links.py` (enhanced with backlinks option)
+- **Purpose**: Identifies which wiki pages link to each other, creating backlinks reports
+- **Usage**: Run `python tools/py-tools/find_red_links.py --output backlinks` from the project root
+- **Specific Page Usage**: Run `python tools/py-tools/find_red_links.py --output backlinks --page "page_name"` to see only backlinks to a specific page
+- **Benefit**: Helps maintain navigation consistency by showing which pages link to each target page
+- **Output**: Lists each page and the pages linking to it directly to console
+- **Note**: The functionality has been integrated into the more comprehensive `find_red_links.py` tool which is the recommended approach.
+
+### 2. Potential Link Suggestions (`wiki_potential_links.py`)
+- **Location**: `tools/py-tools/wiki_potential_links.py`
+- **Purpose**: Identifies pages that might want to link to the current page based on semantic similarity
+- **Usage**: Run `python tools/py-tools/wiki_potential_links.py` from the project root
+- **Benefit**: Suggests potential internal links to improve wiki navigation and connectivity
+- **Output**: Lists potential linking pages for each wiki page, saved to `wiki_potential_links_report.txt`
+
+### 3. Redirect Page Detection (`wiki_redirects.py`)
+- **Location**: `tools/py-tools/wiki_redirects.py`
+- **Purpose**: Identifies redirect pages and potential redirects based on naming conventions
+- **Usage**: Run `python tools/py-tools/wiki_redirects.py` from the project root
+- **Benefit**: Finds potential redirects between pages with similar naming (e.g., `lich_mob` and `lich`)
+- **Output**: Lists explicit redirects, duplicate content, and potential redirects, saved to `wiki_redirects_report.txt`
+
+These tools help automate wiki maintenance by identifying linking patterns and potential improvements that would be difficult to track manually. The enhanced `find_red_links.py` now provides multiple analysis functions in a single tool to reduce duplication.
+
 ## Migration Guidelines
 
 ### For Existing Content

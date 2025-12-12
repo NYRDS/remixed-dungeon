@@ -8,7 +8,7 @@ This directory contains Python scripts that are useful for maintaining and devel
 - `generate_spell_wiki.py` - Generates or updates spell documentation from source code
 - `generate_spell_images.py` - Creates preview images for spells
 - `generate_hero_previews.py` - Generates preview content for hero classes and subclasses
-- `find_red_links.py` - Finds broken links in wiki content
+- `find_red_links.py` - Finds broken links, generates backlinks reports, and identifies missing images in wiki content
 - `update_links.py` - Updates links in wiki content
 - `update_links_specific.py` - Updates specific links in wiki content
 
