@@ -34,7 +34,8 @@ public class Larva extends Mob {
     final String [] imago = {
         "Scorpio",
         "Worm",
-        "Eye"
+        "Eye",
+        "Scorpio"
     };
 
     @Override
