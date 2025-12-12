@@ -905,6 +905,23 @@ These tools help automate wiki maintenance by identifying linking patterns and p
 - **Code Verification**: All starting equipment, stats, and special mechanics match the initHeroes.json configuration; subclass-specific armor (ClassArmor) is obtained by using the ArmorKit item (dropped by King boss) on any regular armor, not given as starting equipment
 - **Additional Note**: Some classes (Doctor, Priest) have "Coming Soon" status and are not yet unlocked through gameplay
 
+### Hero Class to Subclass Mapping
+- **Mapping Location**: The official mapping between hero classes and their available subclasses is defined in `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/windows/WndClass.java` in the MasteryTab class
+- **Available Mappings**:
+  - **Warrior**: Gladiator, Berserker
+  - **Mage**: BattleMage, Warlock
+  - **Rogue**: FreeRunner, Assassin
+  - **Huntress**: Sniper, Warden
+  - **Elf**: Scout, Shaman
+  - **Necromancer**: Lich
+  - **Gnoll**: Guardian, WitchDoctor
+  - **Priest**: (no subclasses defined yet)
+  - **Doctor**: (no subclasses defined yet)
+- **Special Notes**:
+  - The Tome of Mastery normally provides subclass choices for all classes except Necromancer and Gnoll
+  - Special items like Tengu Liver provide subclass choices for classes normally excluded from Tome of Mastery (e.g., Tengu Liver for Gnoll class)
+  - The game doesn't validate if a player selects an inappropriate subclass for their hero class (though it's unlikely to occur through normal gameplay)
+
 ## Maintaining Consistency
 
 - Keep the wiki updated with each game release
