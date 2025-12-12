@@ -817,3 +817,47 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 - Include detailed class-specific mechanics (forbidden actions, friendly mobs, immunities, etc.)
 - Ensure all wiki pages have appropriately sized and positioned images
 
+## Recommended Wiki Maintenance Workflow
+
+When updating and maintaining wiki pages, follow this systematic workflow to ensure accuracy and consistency:
+
+### 1. Preparation
+- Pull the latest changes from the repository: `git pull origin master`
+- Read the latest changes in the codebase to understand recent updates
+- Review the current WIKI_DOCUMENTATION.md to refresh yourself on standards
+
+### 2. Page Selection
+- Use the `pick_random_wiki_pages.sh` script to randomly select wiki pages for review: `./pick_random_wiki_pages.sh [number_of_pages]`
+- Alternatively, select pages that correspond to recently updated game features
+
+### 3. Verification Against Code
+- For each selected wiki page, locate the corresponding game entity in the codebase:
+  - Java classes in `RemixedDungeon/src/main/java/`
+  - Lua scripts in `RemixedDungeon/src/main/assets/scripts/`
+  - JSON configuration files in `RemixedDungeon/src/main/assets/`
+  - String resources in `RemixedDungeon/src/main/res/values/strings_all.xml`
+- Verify all game mechanics, stats, and properties described in the wiki against the actual implementation
+- Identify any discrepancies or outdated information
+- Check for completely incorrect information (like items that don't exist in the code)
+
+### 4. Wiki Improvement
+- Remove any incorrect information found during verification
+- Add missing information based on code analysis
+- Wikify content by adding appropriate internal links in the format `[[rpd:page_name|Display Text]]`
+- Check and update backlinks to maintain navigation consistency
+- Add or update source code references to GitHub files
+- Include specific numerical values and mechanics as documented in the source code
+- Follow the established formatting and style guidelines
+
+### 5. Commit and Push Changes
+- Review changes to wiki pages for accuracy and completeness
+- Commit changes to the wiki-data submodule with descriptive commit messages
+- Push the updated wiki pages to the remote repository
+- Verify that all changes are properly reflected on the wiki
+
+### 6. Ongoing Maintenance
+- Regularly repeat this workflow to maintain accuracy over time
+- Use automated tools like `find_red_links.py` to identify broken links
+- Update the documentation itself when new patterns or procedures emerge
+- Keep the workflow updated based on lessons learned during maintenance
+
