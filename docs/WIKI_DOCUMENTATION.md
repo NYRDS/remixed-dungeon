@@ -124,6 +124,78 @@ To avoid confusion between similar entity names (e.g., a mob and hero subclass b
 - Maintain consistent image sizing across similar page types
 - For non-sprite images, use descriptive filenames in snake_case format
 
+## DokuWiki Syntax Guide
+
+For proper wiki maintenance, here's the DokuWiki syntax that should be used in wiki pages:
+
+### Headers
+DokuWiki uses multiple equal signs to create headers of different levels:
+```
+====== Level 1 Header ======
+===== Level 2 Header =====
+==== Level 3 Header ====
+=== Level 4 Header ===
+== Level 5 Header ==
+= Level 6 Header =
+```
+
+### Text Formatting
+- **Bold**: `**bold text**` - This will appear as **bold text**
+- *Italic*: `//italic text//` - This will appear as //italic text//
+- Underline: `__underlined text__` - This will appear as __underlined text__
+- Monospace: `''monospace text''` - This will appear as ''monospace text''
+- Combined: `**//__''all together''__//**` - This will appear as **//__''all together''__//**
+- Subscript: `<sub>subscript</sub>` - This will appear as <sub>subscript</sub>
+- Superscript: `<sup>superscript</sup>` - This will appear as <sup>superscript</sup>
+- Deleted: `<del>deleted text</del>` - This will appear as <del>deleted text</del>
+
+### Lists
+- Unordered lists use asterisks with different levels of indentation:
+```
+  * Level 1 item
+  * Another level 1 item
+    * Level 2 item
+      * Level 3 item
+```
+- Ordered lists use numbers with periods:
+```
+  1. Level 1 item
+  2. Another level 1 item
+    1. Level 2 item
+      1. Level 3 item
+```
+
+### Links
+- External links: Either just type the URL like `https://www.google.com` or use the format `[[https://www.google.com|Link Text]]`
+- Internal links: `[[wiki_page_name|Display Text]]`
+- Email links: `[[mailto:email@example.com|Email Me]]`
+- Footnotes: `This is a sentence with a footnote((This is the footnote content))`
+
+### Images
+- Basic image: `{{image.png}}`
+- Image with title: `{{image.png|This is a title}}`
+- Resized image: `{{image.png?64}}` (resizes to 64 pixels)
+- Centered image: `{{ image.png }}` (with spaces around the image reference)
+
+### Tables
+Tables in DokuWiki are created using carets and pipes:
+```
+^ Heading 1 ^ Heading 2 ^ Heading 3 ^
+| Cell 1    | Cell 2    | Cell 3    |
+| Cell 4    | Cell 5    | Cell 6    |
+^ Heading 4 | Cell 7    | Cell 8    |
+```
+
+### Code Blocks
+- For code blocks without syntax highlighting: `<code>your code here</code>`
+- For code blocks with syntax highlighting: `<code java>your Java code here</code>`
+- The language name (java in this example) can be replaced with other supported languages
+
+### Other Useful Elements
+- Horizontal rule: Four or more dashes `----`
+- Force newline: `\\`
+- Prevent formatting: `<nowiki>**text**</nowiki>`
+
 ## Key Information Sources in Game Code
 
 ### 1. Core Game Classes (RemixedDungeon/src/main/java/)
@@ -860,4 +932,3 @@ When updating and maintaining wiki pages, follow this systematic workflow to ens
 - Use automated tools like `find_red_links.py` to identify broken links
 - Update the documentation itself when new patterns or procedures emerge
 - Keep the workflow updated based on lessons learned during maintenance
-
