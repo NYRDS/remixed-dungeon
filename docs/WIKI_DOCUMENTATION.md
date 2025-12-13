@@ -375,6 +375,12 @@ Tables in DokuWiki are created using carets and pipes:
   - NPC behaviors and dialogue
   - Custom mob AI and mechanics
 
+### Limitations and Capabilities of JSON vs Lua/Java for Game Entities
+- **Can be defined with JSON only**: Mobs, sprites, level objects, and some basic mechanics can be defined using JSON configuration files
+- **Require Lua or Java implementation**: Items, buffs, and spells require actual code implementation in either Lua scripts or Java classes
+- **Preference for modding**: Lua scripting is preferred for modding over Java implementation due to easier distribution and loading
+- **Modding reference**: For detailed modding information, see the modding documentation in `docs/PLATFORM_MARKET_STRUCTURE.md` and `docs/PLATFORM_OVERLAY_SYSTEM.md`
+
 ## Hero Class and Subclass Previews
 
 To maintain consistency and completeness in documentation of hero classes and subclasses, a script has been created to generate preview content for wiki pages.
