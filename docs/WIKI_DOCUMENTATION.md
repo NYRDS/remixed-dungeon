@@ -837,8 +837,9 @@ The project includes additional scripts to help maintain and improve wiki qualit
   - Dry run (no changes): `python tools/py-tools/wiki_page_rename.py old_name new_name --dry-run`
 - **Benefit**: Ensures consistency when renaming pages by updating all links automatically
 - **Features**:
-  - Updates both `[[rpd:page_name|Display Text]]` and `[[page_name|Display Text]]` format links
-  - Updates links without display text: `[[rpd:page_name]]` and `[[page_name]]`
+  - Updates namespace links: `[[namespace:old_name|Display Text]]` -> `[[namespace:new_name|Display Text]]` (works with any namespace like `rpd:`, `wiki:`, `custom:`, etc.)
+  - Updates regular links: `[[old_name|Display Text]]` -> `[[new_name|Display Text]]`
+  - Updates links without display text: `[[namespace:old_name]]` and `[[old_name]]`
   - Uses word boundaries to avoid partial matches in longer page names (e.g., won't change `boss_old_name` when renaming `old_name`)
   - Dry run mode to preview changes before making them
   - Reports exactly which pages will be updated and how many links will be changed

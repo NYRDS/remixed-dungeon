@@ -63,27 +63,28 @@ def update_links_in_page(page_path: str, old_name: str, new_name: str) -> int:
     original_content = content
 
     # Count the number of replacements that will be made
-    old_rpd_with_text_pattern = rf'\[\[rpd:{re.escape(old_name)}\|[^\]]+\]\]'
-    old_rpd_without_text_pattern = rf'\[\[rpd:{re.escape(old_name)}\]\]'
+    old_namespace_with_text_pattern = rf'\[\[[a-zA-Z0-9_]+:{re.escape(old_name)}\|[^\]]+\]\]'
+    old_namespace_without_text_pattern = rf'\[\[[a-zA-Z0-9_]+:{re.escape(old_name)}\]\]'
     old_regular_with_text_pattern = rf'\[\[{re.escape(old_name)}\|[^\]]+\]\]'
     old_regular_without_text_pattern = rf'(?<!\w)\[\[{re.escape(old_name)}\]\](?!\w)'
 
-    count_rpd_with_text = len(re.findall(old_rpd_with_text_pattern, content, re.IGNORECASE))
-    count_rpd_without_text = len(re.findall(old_rpd_without_text_pattern, content, re.IGNORECASE))
+    count_namespace_with_text = len(re.findall(old_namespace_with_text_pattern, content, re.IGNORECASE))
+    count_namespace_without_text = len(re.findall(old_namespace_without_text_pattern, content, re.IGNORECASE))
     count_regular_with_text = len(re.findall(old_regular_with_text_pattern, content, re.IGNORECASE))
     count_regular_without_text = len(re.findall(old_regular_without_text_pattern, content, re.IGNORECASE))
 
-    total_changes = (count_rpd_with_text + count_rpd_without_text +
+    total_changes = (count_namespace_with_text + count_namespace_without_text +
                      count_regular_with_text + count_regular_without_text)
 
-    # Update rpd: links with display text (e.g. [[rpd:old_name|Text]] -> [[rpd:new_name|Text]])
-    pattern1 = rf'\[\[rpd:{re.escape(old_name)}(\|[^\]]+?)\]\]'
-    replacement1 = f'[[rpd:{new_name}\\1]]'
+    # Update namespace: links with display text (e.g. [[namespace:old_name|Text]] -> [[namespace:new_name|Text]])
+    # This handles rpd: and any other namespace
+    pattern1 = rf'\[\[([a-zA-Z0-9_]+:){re.escape(old_name)}(\|[^\]]+?)\]\]'
+    replacement1 = f'[[\\g<1>{new_name}\\2]]'
     content = re.sub(pattern1, replacement1, content, flags=re.IGNORECASE)
 
-    # Update rpd: links without display text (e.g. [[rpd:old_name]] -> [[rpd:new_name]])
-    pattern2 = rf'\[\[rpd:{re.escape(old_name)}\]\]'
-    replacement2 = f'[[rpd:{new_name}]]'
+    # Update namespace: links without display text (e.g. [[namespace:old_name]] -> [[namespace:new_name]])
+    pattern2 = rf'\[\[([a-zA-Z0-9_]+:){re.escape(old_name)}\]\]'
+    replacement2 = f'[[\\g<1>{new_name}]]'
     content = re.sub(pattern2, replacement2, content, flags=re.IGNORECASE)
 
     # Update regular links with display text (e.g. [[old_name|Text]] -> [[new_name|Text]])
