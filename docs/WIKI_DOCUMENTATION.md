@@ -956,6 +956,66 @@ These tools help automate wiki maintenance by identifying linking patterns and p
   - Special items like Tengu Liver provide subclass choices for classes normally excluded from Tome of Mastery (e.g., Tengu Liver for Gnoll class)
   - The game doesn't validate if a player selects an inappropriate subclass for their hero class (though it's unlikely to occur through normal gameplay)
 
+### Custom Items Implementation
+- **Documentation Coverage**: Custom items are implemented via Lua scripts in `scripts/items/` directory, not through JSON configuration as some wiki pages might suggest
+- **Code Verification**: The `CustomItem.java` class serves as the base for all Lua-scripted items
+  - Items are defined by Lua scripts that extend the item library via `require "scripts/lib/item"`
+  - The `desc()` function in Lua returns item properties (image, name, info, price, etc.)
+  - Item behaviors are handled through Lua API methods like `execute`, `attackProc`, `defenceProc`, etc.
+- **Key Location**: `RemixedDungeon/src/main/java/com/nyrds/pixeldungeon/items/CustomItem.java`
+
+### Custom Mobs Implementation
+- **Documentation Coverage**: Custom mobs are implemented using JSON configuration files in `mobsDesc/` directory with optional Lua behavior scripts
+- **Code Verification**: The `CustomMob.java` class handles JSON-defined mob properties
+  - JSON files define mob stats like HP, damage, speed, etc.
+  - Lua scripts provide custom behaviors via the mob library `require "scripts/lib/mob"`
+  - The `scriptFile` property in JSON links to Lua scripts in `scripts/mobs/` directory
+- **Key Location**: `RemixedDungeon/src/main/java/com/nyrds/pixeldungeon/mobs/common/CustomMob.java`
+
+### Key Code References for Wiki Maintenance
+When maintaining wiki pages, these are important code locations to reference for accuracy:
+
+#### Core Game Classes
+- **Hero System**: `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/`
+  - `Hero.java` - Main hero character logic
+  - `HeroClass.java` - Available hero classes and their characteristics
+  - `HeroSubClass.java` - Hero mastery/subclass definitions
+- **Items**: `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/items/`
+  - `Item.java` - Base item class
+  - `Weapon.java`, `Armor.java` - Equipment base classes
+  - `Potion.java`, `Scroll.java`, `Ring.java` - Consumable item classes
+- **Mobs**: `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/`
+  - `Mob.java` - Base mob class with common properties
+  - Individual mob classes (e.g., `Skeleton.java`, `Thief.java`)
+- **Spells**: `RemixedDungeon/src/main/java/com/nyrds/pixeldungeon/mechanics/spells/`
+  - Spell definitions with magic affinity, targeting, etc.
+- **Buffs/Debuffs**: `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/buffs/`
+  - Status effects with detailed mechanics
+- **Game Mechanics**: `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/mechanics/`
+  - Combat, damage calculations, special mechanics
+
+#### Configuration Files
+- **Hero Starting Stats**: `RemixedDungeon/src/main/assets/hero/initHeroes.json`
+  - Starting equipment, stats, and special properties for each hero class
+- **Mob Spawning**: `RemixedDungeon/src/main/assets/levelsDesc/Bestiary.json`
+  - Defines which monsters appear on which levels and their spawn weights/rates
+- **Sprites**: `RemixedDungeon/src/main/assets/spritesDesc/`
+  - Sprite animation and effect configurations
+- **Level Objects**: `RemixedDungeon/src/main/assets/levelObjects/`
+  - Interactive objects configuration (chests, statues, barricades, etc.)
+
+#### String Resources
+- **Game Text**: `RemixedDungeon/src/main/res/values/strings-all.xml`
+  - Main string resources with game text, descriptions, and labels
+- **Localized Strings**: `RemixedDungeon/src/main/assets/l10ns/strings_*.json`
+  - Localized game text that can be used for game descriptions
+
+#### Lua Scripts
+- **Item Scripts**: `RemixedDungeon/src/main/assets/scripts/items/`
+- **Mob Scripts**: `RemixedDungeon/src/main/assets/scripts/mobs/`
+- **Spell Scripts**: `RemixedDungeon/src/main/assets/scripts/spells/`
+- **Library Scripts**: `RemixedDungeon/src/main/assets/scripts/lib/`
+
 ## Maintaining Consistency
 
 - Keep the wiki updated with each game release
@@ -986,7 +1046,7 @@ When updating and maintaining wiki pages, follow this systematic workflow to ens
 - For each selected wiki page, locate the corresponding game entity in the codebase:
   - Java classes in `RemixedDungeon/src/main/java/`
   - Lua scripts in `RemixedDungeon/src/main/assets/scripts/`
-  - JSON configuration files in `RemixedDungeon/src/main/assets/`
+  - JSON configuration files in `RemixedDungeon/src/main/assets/` (specifically `mobsDesc/`, `spritesDesc/`, `levelObjects/`, etc.)
   - String resources in `RemixedDungeon/src/main/res/values/strings_all.xml`
 - Verify all game mechanics, stats, and properties described in the wiki against the actual implementation
 - Identify any discrepancies or outdated information
