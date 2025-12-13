@@ -265,7 +265,7 @@ The sprite system combines multiple layers to create the final hero appearance, 
 
 def main():
     # Define paths
-    base_path = Path('/home/mike/StudioProjects/remixed-dungeon')
+    base_path = Path('.')
     hero_class_file = base_path / 'RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/HeroClass.java'
     hero_subclass_file = base_path / 'RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/HeroSubClass.java'
     init_heroes_file = base_path / 'RemixedDungeon/src/main/assets/hero/initHeroes.json'

@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-Script to analyze wiki data: find red links, missing images, build wiki map, and generate DOT graphs.
+Script to analyze wiki data: find red links, missing images, build wiki map, generate backlinks, and generate DOT graphs.
 
 This script can:
 1. Find and report red links (links to non-existent pages)
 2. Find and report missing images (images referenced but not found in media)
 3. Build a complete wiki map showing all page relationships
-4. Generate DOT graph files for visualization with Graphviz
+4. Generate backlinks showing which pages link to each page
+5. Generate DOT graph files for visualization with Graphviz
 
 Usage Examples:
     # Find only red links (original functionality)
@@ -17,6 +18,12 @@ Usage Examples:
 
     # Build complete wiki map
     python find_red_links.py --output wiki-map
+
+    # Generate backlinks showing which pages link to each page
+    python find_red_links.py --output backlinks
+
+    # Generate backlinks for a specific page only
+    python find_red_links.py --output backlinks --page "rpd:warrior"
 
     # Generate DOT graph file
     python find_red_links.py --output dot
@@ -327,6 +334,64 @@ def build_wiki_map(wiki_data_dir: Path) -> Tuple[Dict[str, List[Tuple[str, str]]
     return dict(page_links), red_links, existing_pages, missing_images, existing_images
 
 
+def generate_backlinks(page_links: Dict[str, List[Tuple[str, str]]], existing_pages: Set[str], target_page: str = None):
+    """
+    Generate backlinks - show which pages link to each page.
+
+    Args:
+        page_links: Dictionary mapping page names to lists of (target, display_text) tuples
+        existing_pages: Set of all existing pages
+        target_page: Optional specific page to show backlinks for (if None, shows all pages)
+    """
+    # Create a mapping from target pages to pages that link to them
+    backlinks = {}
+
+    # Initialize backlinks for all existing pages
+    for page in existing_pages:
+        backlinks[page] = set()
+
+    # Go through each source page and its links
+    for source_page, links in page_links.items():
+        for target, display_text in links:
+            # Add the source page to the backlinks of the target page
+            if target in backlinks:
+                backlinks[target].add(source_page)
+            else:
+                # If the target page doesn't exist, ensure it's in the backlinks map anyway
+                if target not in backlinks:
+                    backlinks[target] = set()
+                backlinks[target].add(source_page)
+
+    if target_page:
+        # Show backlinks for only the specific target page
+        print(f"\nBacklinks for page '{target_page}':")
+        print("=" * 80)
+
+        if target_page in backlinks:
+            linking_pages = sorted(backlinks[target_page])
+            if linking_pages:
+                print(f"\n'{target_page}' is linked from:")
+                for linker in linking_pages:
+                    print(f"  - {linker}")
+            else:
+                print(f"\n'{target_page}' has no backlinks")
+        else:
+            print(f"\n'{target_page}' does not exist in the wiki")
+    else:
+        # Show backlinks for all pages (original behavior)
+        print(f"\nBacklinks for {len(backlinks)} pages:")
+        print("=" * 80)
+
+        for page in sorted(backlinks.keys()):
+            linking_pages = sorted(backlinks[page])
+            if linking_pages:
+                print(f"\n'{page}' is linked from:")
+                for linker in linking_pages:
+                    print(f"  - {linker}")
+            else:
+                print(f"\n'{page}' has no backlinks")
+
+
 def generate_dot_graph(page_links: Dict[str, List[Tuple[str, str]]], output_file: str, show_red_links_only: bool = False):
     """
     Generate a DOT graph file from the wiki map.
@@ -433,10 +498,11 @@ def find_missing_images(wiki_data_dir: Path) -> List[Tuple[str, str, str]]:
 def main():
     parser = argparse.ArgumentParser(description="Analyze wiki data to find red links, missing images and build wiki map")
     parser.add_argument("--dir", default="wiki-data", help="Wiki data directory (default: wiki-data)")
-    parser.add_argument("--output", choices=["red-links", "missing-images", "wiki-map", "dot", "all"], default="red-links",
-                       help="Output format: red-links (default), missing-images, wiki-map, dot (graphviz), or all")
+    parser.add_argument("--output", choices=["red-links", "missing-images", "wiki-map", "dot", "backlinks", "all"], default="red-links",
+                       help="Output format: red-links (default), missing-images, wiki-map, dot (graphviz), backlinks, or all")
     parser.add_argument("--graph-file", default="wiki_map.dot", help="Output file for DOT graph (default: wiki_map.dot)")
     parser.add_argument("--red-only", action="store_true", help="In DOT output, show only red links")
+    parser.add_argument("--page", help="Specific page to analyze (for backlinks, shows only backlinks to this page)")
 
     args = parser.parse_args()
 
@@ -487,6 +553,9 @@ def main():
 
     if args.output in ["wiki-map", "all"]:
         print_wiki_map(page_links, existing_pages)
+
+    if args.output in ["backlinks", "all"]:
+        generate_backlinks(page_links, existing_pages, args.page)
 
     if args.output in ["dot", "all"]:
         generate_dot_graph(page_links, args.graph_file, show_red_links_only=args.red_only)

@@ -190,6 +190,10 @@ Documentation of the cross-platform bitmap manipulation interface:
 Documentation of the Android-only web server for mod file management:
 - [WebServer Functionality](docs/WebServer.md) - Detailed documentation of web server features and implementation
 
+### Wiki Documentation
+Comprehensive documentation for maintaining and improving the Remixed Dungeon wiki:
+- [Wiki Documentation](docs/WIKI_DOCUMENTATION.md) - Complete guide to wiki maintenance, content creation, and automated tools
+
 ### PNG Editing and Preview Features
 Recent addition of comprehensive PNG editing and preview functionality:
 - **PNG Preview**: View PNG files directly in browser with styled preview page
@@ -200,6 +204,20 @@ Recent addition of comprehensive PNG editing and preview functionality:
   - `/edit-png?file=path/to/image.png` - Edit image in PixelCraft editor
 - **PixelCraft Integration**: Full integration with external PixelCraft editor for advanced pixel art creation
 - **Cross-Platform**: Implemented for both Android and Desktop web server versions
+
+### Wiki Documentation System
+The project includes a comprehensive wiki documentation system with automated tools for content verification:
+- **Wiki Location**: The wiki content is stored in the `wiki-data` submodule
+- **Format**: Uses DokuWiki syntax and conventions
+- **Naming Convention**: All pages use lowercase names with underscores (snake_case)
+- **Entity Namespace Separation**: Different entity types use different naming patterns:
+  - Mobs: `name_mob.txt` (e.g., `shaman_mob.txt`)
+  - Hero classes: `class_name.txt` (e.g., `warrior.txt`)
+  - Hero subclasses: `subclass_name.txt` (e.g., `shaman.txt` for elf subclass)
+  - Items: `item_name.txt` (e.g., `potion_of_healing.txt`)
+  - Spells: `spell_name_spell.txt` (e.g., `healing_spell.txt`)
+- **Automated Tools**: Scripts for generating content from source code, finding broken links, and verifying information accuracy
+- **Verification Strategy**: Information should be verified against Java code, Lua scripts, JSON configuration files, and string resources
 
 ## Repository Map
 For a detailed map of the repository structure and architecture, see [REPO_MAP.md](REPO_MAP.md).

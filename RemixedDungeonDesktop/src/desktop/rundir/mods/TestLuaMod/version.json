@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "name": "Test Lua Mod",
+  "author": "NYRDS",
+  "description": "A test mod with Lua scripts for testing purposes.",
+  "url": "https://github.com/NYRDS/remixed-dungeon",
+  "hr_version": "1",
+  "rpd_version": 1
+}

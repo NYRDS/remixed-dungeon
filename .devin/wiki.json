@@ -1,0 +1,128 @@
+{
+  "repo_notes": [
+    {
+      "content": "Remixed Dungeon is a classic roguelike game with pixel graphics and a simple interface. It's a fork of the famous Pixel Dungeon game featuring English, Russian, and many more localizations. The game is available on multiple platforms including Android, desktop, and web browsers. The project uses a sophisticated modding system combining Lua scripting and JSON configuration to allow extensive customization without modifying core Java code.",
+      "author": "Repository Documentation System"
+    },
+    {
+      "content": "The modding system uses two complementary approaches: Lua Scripting for dynamic behavior customization (mobs, items, spells, traps, etc.) and JSON Configuration for static property definition (mob stats, level layouts, sprite animations, etc.). These systems work together to provide maximum flexibility while maintaining compatibility with the base game. Lua scripts use the RPD library to interface with Java game objects and provide methods to customize behavior.",
+      "author": "Repository Documentation System"
+    },
+    {
+      "content": "The project implements a platform abstraction layer allowing the game to run on multiple platforms (Android, Desktop, Web) while sharing the majority of game code. The core modding files are located in assets/scripts/ (for Lua files) and various JSON configuration directories. Key modding locations include: scripts/ directory with subdirectories for actors, ai, buffs, items, mobs, npc, objects, spells, traps; and JSON configuration in levelsDesc/, mobsDesc/, spritesDesc/, levelObjects/, hero/, among others.",
+      "author": "Repository Documentation System"
+    }
+  ],
+  "pages": [
+    {
+      "title": "Remixed Dungeon Game Overview",
+      "purpose": "Provide a comprehensive overview of the Remixed Dungeon game, its features, and its position as a fork of Pixel Dungeon.",
+      "parent": null,
+      "page_notes": [
+        {
+          "content": "Reference README.md for basic game description, supported platforms, and distribution channels. Highlight the game's localization support and multi-platform availability.",
+          "author": "Game Documentation Team"
+        }
+      ]
+    },
+    {
+      "title": "Lua Scripting System",
+      "purpose": "Document the Lua scripting architecture that enables modding in Remixed Dungeon.",
+      "parent": "Modding Systems",
+      "page_notes": [
+        {
+          "content": "Cover the Lua-Java integration through LuaScript.java and LuaEngine.java. Explain the RPD library that exposes Java classes to Lua, and how scripts are loaded as either module scripts or instance scripts.",
+          "author": "Modding Documentation Team"
+        }
+      ]
+    },
+    {
+      "title": "JSON Configuration Files",
+      "purpose": "Detail how JSON files are used to configure game elements in Remixed Dungeon.",
+      "parent": "Modding Systems",
+      "page_notes": [
+        {
+          "content": "Explain how JSON files in various directories define mob stats, level layouts, sprite animations, level objects, and other game properties. Include information about mob configuration files, sprite configurations, level definitions, and treasury files.",
+          "author": "Modding Documentation Team"
+        }
+      ]
+    },
+    {
+      "title": "Mob Scripting with Lua",
+      "purpose": "Provide instructions on creating custom mobs using Lua scripts.",
+      "parent": "Lua Scripting",
+      "page_notes": [
+        {
+          "content": "Reference the mob.lua library and key methods like onSpawn, onDie, onAttackProc, onDefenceProc, onAct, etc. Include examples from the modding documentation and explain text formatting in mob descriptions.",
+          "author": "Modding Documentation Team"
+        }
+      ]
+    },
+    {
+      "title": "Item Scripting with Lua",
+      "purpose": "Document how to create custom items with unique behaviors using Lua.",
+      "parent": "Lua Scripting",
+      "page_notes": [
+        {
+          "content": "Cover the item.lua library and key methods including desc, execute, actions, onThrow, etc. Include examples of custom items and explain how to handle item interactions and data persistence.",
+          "author": "Modding Documentation Team"
+        }
+      ]
+    },
+    {
+      "title": "Spell Scripting with Lua",
+      "purpose": "Explain how to create custom spells for the magic systems using Lua.",
+      "parent": "Lua Scripting",
+      "page_notes": [
+        {
+          "content": "Detail the spell.lua library and methods like desc, cast, castOnCell, castOnChar. Include examples of spells with different targeting types and explain item selection within spells using itemSelector.lua.",
+          "author": "Modding Documentation Team"
+        }
+      ]
+    },
+    {
+      "title": "Level and Sprite Configuration",
+      "purpose": "Document how to create custom levels and configure sprites using JSON files.",
+      "parent": "JSON Configuration",
+      "page_notes": [
+        {
+          "content": "Cover level configuration files (Dungeon.json, Bestiary.json, etc.) and sprite configuration files. Explain animation definitions, event handlers, particle emitters, and physics-based effects in sprite configurations.",
+          "author": "Modding Documentation Team"
+        }
+      ]
+    },
+    {
+      "title": "Platform Abstraction Layer",
+      "purpose": "Explain the platform abstraction system that allows the game to run on Android, Desktop, and Web.",
+      "parent": "Technical Architecture",
+      "page_notes": [
+        {
+          "content": "Reference platform.md documentation covering the architecture, key abstraction components (Game lifecycle, Audio, Storage, Preferences, etc.), build system configuration, and implementation patterns used in the project.",
+          "author": "Technical Documentation Team"
+        }
+      ]
+    },
+    {
+      "title": "Modding Best Practices",
+      "purpose": "Provide guidelines for creating quality mods that integrate well with the game.",
+      "parent": "Modding Systems",
+      "page_notes": [
+        {
+          "content": "Include best practices from the modding documentation like using provided libraries, handling errors gracefully, storing data appropriately, following naming conventions, testing thoroughly, and respecting game balance.",
+          "author": "Modding Documentation Team"
+        }
+      ]
+    },
+    {
+      "title": "API Reference",
+      "purpose": "Document the available APIs and utilities for modding, particularly the RPD library.",
+      "parent": "Modding Systems",
+      "page_notes": [
+        {
+          "content": "Detail the components of the RPD library including game systems (Dungeon, GameScene, MobFactory, etc.), utility functions (affectBuff, playSound, setAi, etc.), and UI effects. Include information about text formatting capabilities.",
+          "author": "Modding Documentation Team"
+        }
+      ]
+    }
+  ]
+}
