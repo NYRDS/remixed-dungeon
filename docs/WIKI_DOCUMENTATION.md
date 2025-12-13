@@ -828,6 +828,22 @@ The project includes additional scripts to help maintain and improve wiki qualit
 - **Benefit**: Finds potential redirects between pages with similar naming (e.g., `lich_mob` and `lich`)
 - **Output**: Lists explicit redirects, duplicate content, and potential redirects, saved to `wiki_redirects_report.txt`
 
+### 4. Wiki Page Rename Tool (`wiki_page_rename.py`)
+- **Location**: `tools/py-tools/wiki_page_rename.py`
+- **Purpose**: Renames wiki pages and updates all internal links to the renamed page throughout the wiki
+- **Usage**:
+  - Basic rename: `python tools/py-tools/wiki_page_rename.py old_name new_name`
+  - With custom wiki directory: `python tools/py-tools/wiki_page_rename.py old_name new_name --wiki-dir /path/to/wiki`
+  - Dry run (no changes): `python tools/py-tools/wiki_page_rename.py old_name new_name --dry-run`
+- **Benefit**: Ensures consistency when renaming pages by updating all links automatically
+- **Features**:
+  - Updates both `[[rpd:page_name|Display Text]]` and `[[page_name|Display Text]]` format links
+  - Updates links without display text: `[[rpd:page_name]]` and `[[page_name]]`
+  - Uses word boundaries to avoid partial matches in longer page names (e.g., won't change `boss_old_name` when renaming `old_name`)
+  - Dry run mode to preview changes before making them
+  - Reports exactly which pages will be updated and how many links will be changed
+- **Safety**: Performs checks to ensure the old page exists and new page name doesn't conflict with existing pages
+
 These tools help automate wiki maintenance by identifying linking patterns and potential improvements that would be difficult to track manually. The enhanced `find_red_links.py` now provides multiple analysis functions in a single tool to reduce duplication.
 
 ## Migration Guidelines
