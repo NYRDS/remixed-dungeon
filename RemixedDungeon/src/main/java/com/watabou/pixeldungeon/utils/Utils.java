@@ -194,6 +194,10 @@ public class Utils {
         //noinspection ConstantValue
         return BuildConfig.FLAVOR_platform.equals(PLATFORM_ANDROID);
     }
+
+    public static boolean isRussianLanguage() {
+        return "ru".equals(com.nyrds.pixeldungeon.game.GamePreferences.uiLanguage());
+    }
     
     public static class SpuriousReturn implements InterstitialPoint {
 

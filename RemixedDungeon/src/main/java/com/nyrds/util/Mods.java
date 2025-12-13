@@ -4,6 +4,7 @@ import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -114,7 +115,7 @@ public class Mods {
             ret.name = "Remixed";
             ret.description = "Remixed Dungeon without any mods";
             ret.author = "NYRDS";
-            ret.url = "https://wiki.nyrds.net";
+            ret.url = Utils.isRussianLanguage() ? "https://ruwiki.nyrds.net" : "https://wiki.nyrds.net";
             return ret;
         }
 

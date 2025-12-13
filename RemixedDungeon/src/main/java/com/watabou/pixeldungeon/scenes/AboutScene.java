@@ -164,7 +164,10 @@ public class AboutScene extends PixelScene {
         Text email = createTouchEmail(StringsManager.getVar(R.string.AboutScene_Mail), text);
 
         Text visit = createText(StringsManager.getVar(R.string.AboutScene_OurSite), email);
-        Text site  = createTouchLink(R.string.AboutScene_OurSite, StringsManager.getVar(R.string.AboutScene_Lnk), visit);
+        String wikiUrl = Utils.isRussianLanguage()
+            ? StringsManager.getVar(R.string.AboutScene_Lnk_Ru)
+            : StringsManager.getVar(R.string.AboutScene_Lnk);
+        Text site  = createTouchLink(R.string.AboutScene_OurSite, wikiUrl, visit);
 		
 		Text trn = createText(getTRN(), site);
 		Text getCode = createText(StringsManager.getVar(R.string.AboutScene_SourceCode), trn);

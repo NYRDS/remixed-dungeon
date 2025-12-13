@@ -34,6 +34,7 @@
     <string name="AboutScene_Thanks_Names" translatable="false">rodriformiga for PD i18n code</string>
 
     <string name="AboutScene_Lnk" translatable="false">https://wiki.nyrds.net/</string>
+    <string name="AboutScene_Lnk_Ru" translatable="false">https://ruwiki.nyrds.net/</string>
     <string name="AboutScene_Mail" translatable="false">nyrdsofficial@gmail.com</string>
 
 
