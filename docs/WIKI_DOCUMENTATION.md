@@ -112,8 +112,9 @@ To avoid confusion between similar entity names (e.g., a mob and hero subclass b
 
 ### Adding Mob/Character Sprites
 - To add a mob sprite to a wiki page, use the centered format with original size: `{{ rpd:images:mob_name_sprite.png|Alt Text }}`
-- The script `tools/py-tools/extract_mob_sprites.py` automatically generates scaled 8x sprites with nearest-neighbor filtering
-- Generated images are saved in `wiki-data/media/rpd/images/` with the naming convention `{mob_name}_sprite.png`
+- Enhanced sprites for wiki use are created using `tools/py-tools/scale_sprites_for_wiki.py` which scales and frames raw game sprites with nearest-neighbor filtering
+- The script enhances sprites from the `sprites/` directory (generated via FactorySpriteGenerator Gradle task) for better wiki visualization
+- Enhanced images are saved in `wiki-data/media/rpd/images/` with the naming convention `{mob_name}_sprite.png`
 - For centered display, add spaces around the image reference: `{{ rpd:images:image.png|Alt Text }}`
 - For original image size (no scaling), omit the size parameter entirely
 
@@ -254,7 +255,38 @@ Tables in DokuWiki are created using carets and pipes:
   - `Invisibility.java` - Invisibility mechanics
   - `Regeneration.java` - Health regeneration
 
-### 2. Sprites and Visual Assets (RemixedDungeon/src/main/java/)
+### 2. Automatically Generated Sprites and Entities (sprites/ and entities/ directories)
+
+#### Pre-generated Sprite Directory
+- **Location**: `sprites/` (created by `FactorySpriteGenerator` task)
+- **Content**: Pre-generated sprite images for all game entities that can be enhanced for wiki use
+- **Sprite types**:
+  - **Mobs**: Files named `mob_[EntityName].png` (e.g., `mob_Skeleton.png`, `mob_Tengu.png`)
+  - **Items**: Files named `item_[EntityName].png` (e.g., `item_ScrollOfIdentify.png`, `item_RingOfMight.png`)
+  - **Spells**: Files named `spell_[SpellName].png` (e.g., `spell_Heal.png`, `spell_MagicTorch.png`)
+  - **Buffs**: Files named `buff_[BuffName].png` (e.g., `buff_Healing.png`, `buff_Burning.png`)
+  - **Hero classes**: Files named `hero_[HeroClassName].png` (e.g., `hero_WARRIOR.png`, `hero_MAGE.png`)
+  - **Hero subclasses**: Files named `hero_subclass_[HeroSubClassName].png` (e.g., `hero_subclass_GLADIATOR.png`, `hero_subclass_WARLOCK.png`)
+  - **Hero class+subclass combinations**: Files named `hero_[HeroClassName]_[HeroSubClassName].png` (e.g., `hero_WARRIOR_GLADIATOR.png`, `hero_MAGE_WARLOCK.png`)
+- **Tools for working with sprites**:
+  - **`tools/py-tools/scale_sprites_for_wiki.py`**: Enhances sprites with scaling, background, and frame for better wiki visualization
+  - **Usage**: `python tools/py-tools/scale_sprites_for_wiki.py -i sprites/ -o wiki-sprites/`
+- **Generation command**: `./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:generateSpritesFromFactories`
+
+#### Entity Lists Directory
+- **Location**: `entities/` (created by `FactorySpriteGenerator` task)
+- **Content**: Generated text files containing lists of all game entities
+- **Files**:
+  - **mobs.txt**: Complete list of all mob entity names
+  - **items.txt**: Complete list of all item entity names
+  - **spells.txt**: Complete list of all spell names
+  - **buffs.txt**: Complete list of all buff names
+- **Tools for working with entities**:
+  - **`tools/py-tools/find_red_links.py`**: Uses entity lists to identify gaps in wiki coverage
+  - **`tools/py-tools/wiki_potential_links_optimized.py`**: Cross-references entity names with wiki content to identify potential links
+- **Usage**: These files serve as authoritative source lists for entity names and can be used to verify wiki coverage
+
+### 3. Sprites and Visual Assets (RemixedDungeon/src/main/java/)
 
 #### Character Sprites
 - **Location**: `com/watabou/pixeldungeon/sprites/`
@@ -270,7 +302,7 @@ Tables in DokuWiki are created using carets and pipes:
   - `Wound.java` - Damage display effects
   - `EmoIcon.java` - Status icons
 
-### 3. UI and Screens (RemixedDungeon/src/main/java/)
+### 4. UI and Screens (RemixedDungeon/src/main/java/)
 
 #### Game Interface
 - **Location**: `com/watabou/pixeldungeon/ui/`
@@ -288,7 +320,7 @@ Tables in DokuWiki are created using carets and pipes:
   - `WndHero.java` - Hero information window
   - `WndInfoItem.java` - Detailed item information
 
-### 4. Modding Support (RemixedDungeon/src/main/java/)
+### 5. Modding Support (RemixedDungeon/src/main/java/)
 
 #### Custom Content Creation
 - **Location**: `com/nyrds/pixeldungeon/` and subdirectories
@@ -302,7 +334,7 @@ Tables in DokuWiki are created using carets and pipes:
 - **Key files**:
   - Various custom item and mob implementations
 
-### 5. Game Configuration and Data
+### 6. Game Configuration and Data
 
 #### Localized Strings
 - **Location**: `RemixedDungeon/src/main/assets/l10ns/`
@@ -375,7 +407,7 @@ Tables in DokuWiki are created using carets and pipes:
   - NPC behaviors and dialogue
   - Custom mob AI and mechanics
 
-### Limitations and Capabilities of JSON vs Lua/Java for Game Entities
+#### Limitations and Capabilities of JSON vs Lua/Java for Game Entities
 - **Can be defined with JSON only**: Mobs, sprites, level objects, and some basic mechanics can be defined using JSON configuration files
 - **Require Lua or Java implementation**: Items, buffs, and spells require actual code implementation in either Lua scripts or Java classes
 - **Preference for modding**: Lua scripting is preferred for modding over Java implementation due to easier distribution and loading
@@ -519,33 +551,34 @@ The Remixed Dungeon game uses a sprite sheet system for managing item images:
 - Sprites are positioned in the sheet based on their index
 - Extracted sprites are scaled using nearest-neighbor interpolation
 
-### Item Sprite Extraction for Wiki
+### Sprite Enhancement for Wiki Visualization
 
-#### Automatic Extraction Process
-The project includes Python scripts in the `tools/py-tools/` directory for extracting item sprites:
+#### Enhanced Sprite Scaling and Framing
+- `tools/py-tools/scale_sprites_for_wiki.py` - Enhances raw sprites from the `sprites/` directory for better wiki visualization
+  - **Note**: This tool works with sprites generated by the FactorySpriteGenerator Gradle task (`./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:generateSpritesFromFactories`) which creates raw game sprites in the `sprites/` directory
+  - Scales sprites 8x using nearest neighbor interpolation
+  - Extends canvas by 1 transparent pixel in each direction before scaling (to prevent edge artifacts)
+  - Adds a background and frame for better visualization
+  - Preserves transparency
+  - Processes all supported image formats in the input directory
+  - Usage: `python tools/py-tools/scale_sprites_for_wiki.py -i sprites/ -o wiki-sprites/`
+  - Additional options:
+    - `-s, --scale`: Scale factor (default: 8)
+    - `-c, --canvas-extension`: Number of transparent pixels to add in each direction before scaling (default: 1)
+    - `--bg-color`: Background color as R G B values (default: 240 240 240)
+    - `--frame-color`: Frame color as R G B values (default: 100 100 100)
 
-- `tools/py-tools/extract_item_sprites.py` - Extracts from the main items.png sheet
-- `tools/py-tools/extract_all_item_sprites.py` - Extracts from multiple specialized sheets
-- `tools/py-tools/extract_custom_item_sprites.py` - Extracts items with special configurations
-- `tools/py-tools/extract_mob_sprites.py` - Extracts mob sprites with 8x scaling
-
-#### Extraction Workflow
-1. Parse Java files to identify item classes and their image indices
-2. Locate the appropriate sprite sheet based on the image index
-3. Extract the 16x16 pixel sprite from the sheet at the calculated position
-4. Scale the sprite using nearest-neighbor interpolation (typically 8x for wiki)
-5. Save the individual sprite in the wiki media directory
-6. Update wiki pages to include the extracted sprite reference
-
-#### Naming Convention
-- Extracted sprites follow the format: `{itemname}_sprite.png`
-- In wiki pages, use: `{{ rpd:images:ITEMNAME_sprite.png|Alt Text }}`
-- For centering in DokuWiki: `{{ rpd:images:image.png|Alt Text }}` (with spaces)
-
-#### Image Quality Settings
+#### Image Quality Settings for Wiki Display
 - Use nearest-neighbor scaling to preserve pixel art quality
 - Scale factor of 8x for optimal visibility in wiki pages
 - Maintain square aspect ratio (16x16 original becomes 128x128)
+- Add background and frame to enhance visual presentation in wiki context
+- Preserve transparency to maintain visual fidelity of game sprites
+
+#### Naming Convention
+- Enhanced sprites follow the format: `{itemname}_sprite.png`
+- In wiki pages, use: `{{ rpd:images:ITEMNAME_sprite.png|Alt Text }}`
+- For centering in DokuWiki: `{{ rpd:images:image.png|Alt Text }}` (with spaces)
 
 ### Custom Sprite Configurations
 
