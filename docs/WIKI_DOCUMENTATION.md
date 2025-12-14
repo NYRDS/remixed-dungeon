@@ -829,23 +829,30 @@ The project includes additional scripts to help maintain and improve wiki qualit
 - **Output**: Lists each page and the pages linking to it directly to console
 - **Note**: The functionality has been integrated into the more comprehensive `find_red_links.py` tool which is the recommended approach.
 
-### 2. Potential Link Suggestions (`wiki_potential_links_optimized.py`)
-- **Location**: `tools/py-tools/wiki_potential_links_optimized.py`
-- **Purpose**: Identifies pages that might want to link to the current page based on semantic similarity
+### 2. Potential Link and Duplicate Detection (`wiki_potential_links_and_duplicates.py`)
+- **Location**: `tools/py-tools/wiki_potential_links_and_duplicates.py`
+- **Purpose**: Identifies pages that might want to link to the current page based on semantic similarity AND detects potential duplicate pages
 - **Performance**: Optimized version runs ~14x faster than the original script (from ~12 minutes to ~50 seconds)
 - **Usage**:
-  - Analyze all pages: `python tools/py-tools/wiki_potential_links_optimized.py`
-  - Analyze specific page: `python tools/py-tools/wiki_potential_links_optimized.py --target-page start`
-  - Analyze random pages: `python tools/py-tools/wiki_potential_links_optimized.py --random-pages 5`
-  - Custom threshold: `python tools/py-tools/wiki_potential_links_optimized.py --threshold 0.5`
-  - Custom output: `python tools/py-tools/wiki_potential_links_optimized.py --output-file my_report.txt`
-- **Benefit**: Suggests potential internal links to improve wiki navigation and connectivity
-- **Output**: Lists potential linking pages for each wiki page, saved to `wiki_potential_links_report_optimized.txt`
+  - Analyze all pages for links and duplicates: `python tools/py-tools/wiki_potential_links_and_duplicates.py`
+  - Analyze specific page: `python tools/py-tools/wiki_potential_links_and_duplicates.py --target-page start`
+  - Analyze only for potential links: `python tools/py-tools/wiki_potential_links_and_duplicates.py --analysis links`
+  - Analyze only for duplicates: `python tools/py-tools/wiki_potential_links_and_duplicates.py --analysis duplicates`
+  - Analyze random pages: `python tools/py-tools/wiki_potential_links_and_duplicates.py --random-pages 5`
+  - Custom threshold: `python tools/py-tools/wiki_potential_links_and_duplicates.py --threshold 0.5`
+  - Custom duplicate threshold: `python tools/py-tools/wiki_potential_links_and_duplicates.py --dup-threshold 0.6`
+  - Custom output: `python tools/py-tools/wiki_potential_links_and_duplicates.py --output-file my_report.txt`
+- **Benefit**: Suggests potential internal links to improve wiki navigation and connectivity AND identifies potential duplicate content that could be merged or better organized
+- **Output**: Comprehensive report with potential linking pages and potential duplicates, saved to `wiki_analysis_report.txt` by default
 - **Features**:
+  - **Potential links detection**: Identifies pages that might want to link to each other based on name and content similarity
+  - **Duplicate detection**: Uses two methods to identify potential duplicates:
+    - Content-based: Compares page content using Jaccard similarity to identify pages with similar content
+    - Naming pattern: Identifies pages with similar names when normalized (e.g., "raise_dead" vs "raise_dead_spell")
   - Duplicate prevention: Prevents duplicate page names from appearing multiple times in results
-  - Flexible analysis: Analyze specific pages, random samples, or all pages
+  - Flexible analysis: Analyze links, duplicates, or both; analyze specific pages, random samples, or all pages
   - Performance optimized: Caching and efficient algorithms for fast processing
-  - Configurable threshold: Adjust similarity threshold for different results
+  - Configurable thresholds: Adjust similarity thresholds for different results
 
 ### 3. Redirect Page Detection (`wiki_redirects.py`)
 - **Location**: `tools/py-tools/wiki_redirects.py`
