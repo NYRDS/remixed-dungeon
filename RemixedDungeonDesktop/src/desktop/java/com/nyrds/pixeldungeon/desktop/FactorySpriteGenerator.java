@@ -59,6 +59,8 @@ public class FactorySpriteGenerator extends QuickModTest {
         // Run the sprite generation after the game has been initialized
         generateAllMobsSpritesFromFactory();
         generateAllItemsSpritesFromFactory();
+        generateAllSpellsSpritesFromFactory();
+        generateAllBuffsIconsFromFactory();
 
         // Reset to default behavior after generation
         SmartTexture.setAutoDisposeBitmapData(true);
@@ -195,6 +197,122 @@ public class FactorySpriteGenerator extends QuickModTest {
         }
 
         return null;
+    }
+
+    private void generateAllSpellsSpritesFromFactory() {
+        GLog.i("Starting to generate sprites for all spells from factory...");
+
+        int successCount = 0;
+        int errorCount = 0;
+
+        // Get all registered spell names from the SpellFactory
+        java.util.List<String> spellNames = (java.util.List<String>) com.nyrds.pixeldungeon.mechanics.spells.SpellFactory.getAllSpells();
+
+        for(String spellName : spellNames) {
+            try {
+                // Create an instance of the spell
+                com.nyrds.pixeldungeon.mechanics.spells.Spell spell = com.nyrds.pixeldungeon.mechanics.spells.SpellFactory.getSpellByName(spellName);
+
+                if (spell != null) {
+                    // Use the spell's itemForSlot to access the image data
+                    com.nyrds.pixeldungeon.mechanics.spells.Spell.SpellItem spellItem = spell.itemForSlot();
+
+                    if (spellItem != null) {
+                        // Get the spell's image data from the spell item
+                        String imageFile = spellItem.imageFile();
+                        int imageIndex = spellItem.image();
+
+                        if (imageFile != null && imageIndex >= 0) {
+                            // Get the source bitmap from the image file
+                            BitmapData sourceBmp = com.nyrds.util.ModdingMode.getBitmapData(imageFile);
+
+                            if (sourceBmp != null) {
+                                // Spell sprites are typically 16x16 pixels
+                                final int SPRITE_SIZE = 16;
+
+                                // Calculate the position in the texture atlas based on the image index
+                                int texWidth = sourceBmp.getWidth();
+                                int cols = texWidth / SPRITE_SIZE;
+
+                                int frameX = (imageIndex % cols) * SPRITE_SIZE;
+                                int frameY = (imageIndex / cols) * SPRITE_SIZE;
+
+                                // Create BitmapData for the specific frame
+                                BitmapData result = BitmapData.createBitmap(SPRITE_SIZE, SPRITE_SIZE);
+                                if (result != null) {
+                                    result.eraseColor(0x00000000); // Clear with transparent color before rendering
+                                    result.copyRect(sourceBmp, frameX, frameY, SPRITE_SIZE, SPRITE_SIZE, 0, 0);
+                                    String fileName = "../../../../sprites/spell_" + spellName + ".png";
+                                    result.savePng(fileName);
+                                    GLog.i("Saved spell sprite: %s", fileName);
+                                    successCount++;
+                                } else {
+                                    GLog.w("Failed to create result BitmapData for spell: %s", spellName);
+                                }
+                            } else {
+                                GLog.w("Failed to load source bitmap for spell: %s from file: %s", spellName, imageFile);
+                            }
+                        } else {
+                            GLog.w("Spell has null image file or negative image index: %s", spellName);
+                        }
+                    } else {
+                        GLog.w("Spell item is null for spell: %s", spellName);
+                    }
+                } else {
+                    GLog.w("Spell is null for name: %s", spellName);
+                }
+            } catch (Exception e) {
+                GLog.w("Error creating or saving spell sprite for %s: %s", spellName, e.getMessage());
+                errorCount++;
+            }
+        }
+
+        GLog.i("Spell sprite generation completed. Success: %d, Errors: %d", successCount, errorCount);
+    }
+
+    private void generateAllBuffsIconsFromFactory() {
+        GLog.i("Starting to generate icons for all buffs from factory...");
+
+        int successCount = 0;
+        int errorCount = 0;
+
+        // Get all registered buff names from the BuffFactory
+        java.util.Set<String> buffNames = com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory.getAllBuffsNames();
+
+        for(String buffName : buffNames) {
+            try {
+                // Create an instance of the buff
+                com.watabou.pixeldungeon.actors.buffs.Buff buff = com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory.getBuffByName(buffName);
+
+                if (buff != null) {
+                    // Get the buff's small icon
+                    com.watabou.noosa.Image icon = buff.smallIcon();
+
+                    if (icon != null) {
+                        // Extract the actual bitmap data from the icon
+                        BitmapData bitmap = extractBitmapDataFromImage(icon);
+                        if (bitmap != null) {
+                            String fileName = "../../../../sprites/buff_" + buffName + ".png";
+                            // Save the icon image to a file
+                            bitmap.savePng(fileName);
+                            GLog.i("Saved buff icon: %s", fileName);
+                            successCount++;
+                        } else {
+                            GLog.w("Failed to extract BitmapData for buff icon: %s", buffName);
+                        }
+                    } else {
+                        GLog.w("Small icon is null for buff: %s", buffName);
+                    }
+                } else {
+                    GLog.w("Buff is null for name: %s", buffName);
+                }
+            } catch (Exception e) {
+                GLog.w("Error creating or saving buff icon for %s: %s", buffName, e.getMessage());
+                errorCount++;
+            }
+        }
+
+        GLog.i("Buff icon generation completed. Success: %d, Errors: %d", successCount, errorCount);
     }
 
     // Helper method to generate a deterministic color based on the entity name
