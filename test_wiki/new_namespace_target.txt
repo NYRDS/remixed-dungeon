@@ -1,0 +1,3 @@
+====== Namespace Target ======
+
+This is the page with a namespace that will be renamed.

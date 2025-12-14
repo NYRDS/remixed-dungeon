@@ -1,0 +1,2992 @@
+Wiki Potential Links and Duplicates Report
+================================================================================
+
+POTENTIAL LINKS
+----------------------------------------
+
+Pages that may want to link to 'chaos_armor':
+  - chaos_bow (score: 1.06, name similarity: 0.55, keyword similarity: 0.56)
+  - chaos_set (score: 1.05, name similarity: 0.55, keyword similarity: 0.25)
+  - chaos_crystal (score: 1.04, name similarity: 0.54, keyword similarity: 0.18)
+  - chaos (score: 0.95, name similarity: 0.45, keyword similarity: 0.22)
+  - armor (score: 0.86, name similarity: 0.36, keyword similarity: 0.18)
+
+Pages that may want to link to 'raise_dead':
+  - raise_dead_spell (score: 0.94, name similarity: 0.44, keyword similarity: 0.40)
+  - exhumation_spell (score: 0.88, name similarity: 0.31, keyword similarity: 0.38)
+  - spell_affinities (score: 0.81, name similarity: 0.31, keyword similarity: 0.12)
+  - exhumation (score: 0.80, name similarity: 0.30, keyword similarity: 0.21)
+  - necromancy (score: 0.80, name similarity: 0.30, keyword similarity: 0.25)
+
+Pages that may want to link to 'spidermindamber':
+  - spiderservant (score: 1.03, name similarity: 0.53, keyword similarity: 0.04)
+  - spidermind (score: 1.03, name similarity: 0.53, keyword similarity: 0.03)
+  - spiderelite (score: 0.90, name similarity: 0.40, keyword similarity: 0.04)
+  - modding_quick_reference (score: 0.76, name similarity: 0.26, keyword similarity: 0.01)
+  - townsfolknpc (score: 0.67, name similarity: 0.20, keyword similarity: 0.67)
+
+Pages that may want to link to 'freerunner_armor':
+  - assassin_armor (score: 0.96, name similarity: 0.38, keyword similarity: 0.96)
+  - armor_kit (score: 0.81, name similarity: 0.31, keyword similarity: 0.18)
+  - freerunner (score: 0.81, name similarity: 0.31, keyword similarity: 0.14)
+  - gladiator_armor (score: 0.72, name similarity: 0.31, keyword similarity: 0.72)
+  - scout_armor (score: 0.69, name similarity: 0.38, keyword similarity: 0.69)
+
+Pages that may want to link to 'shadow_lord':
+  - shadowlord (score: 1.23, name similarity: 0.73, keyword similarity: 0.37)
+  - crystal_mob (score: 1.05, name similarity: 0.55, keyword similarity: 0.22)
+  - halls (score: 0.86, name similarity: 0.36, keyword similarity: 0.14)
+  - crystal (score: 0.86, name similarity: 0.36, keyword similarity: 0.23)
+  - chaos_sword (score: 0.73, name similarity: 0.73, keyword similarity: 0.09)
+
+Pages that may want to link to 'challenges':
+  - changelog (score: 1.20, name similarity: 0.70, keyword similarity: 0.08)
+  - necropolis (score: 1.00, name similarity: 0.50, keyword similarity: 0.11)
+  - halls (score: 0.90, name similarity: 0.40, keyword similarity: 0.10)
+  - caves (score: 0.90, name similarity: 0.40, keyword similarity: 0.10)
+  - ice_caves (score: 0.90, name similarity: 0.40, keyword similarity: 0.09)
+
+Pages that may want to link to 'spider_armor':
+  - items (score: 0.83, name similarity: 0.33, keyword similarity: 0.04)
+  - armor (score: 0.83, name similarity: 0.33, keyword similarity: 0.04)
+  - spider_charm (score: 0.75, name similarity: 0.75, keyword similarity: 0.08)
+  - sniper_armor (score: 0.75, name similarity: 0.75, keyword similarity: 0.05)
+  - priest_armor (score: 0.75, name similarity: 0.75, keyword similarity: 0.05)
+
+Pages that may want to link to 'faq':
+  - start (score: 0.70, name similarity: 0.20, keyword similarity: 0.16)
+  - fanart (score: 0.33, name similarity: 0.33, keyword similarity: 0.00)
+  - rat (score: 0.33, name similarity: 0.33, keyword similarity: 0.06)
+  - elf (score: 0.33, name similarity: 0.33, keyword similarity: 0.09)
+  - bat (score: 0.33, name similarity: 0.33, keyword similarity: 0.06)
+
+Pages that may want to link to 'rat_king_crown':
+  - rat_king (score: 1.07, name similarity: 0.57, keyword similarity: 0.23)
+  - items (score: 0.64, name similarity: 0.14, keyword similarity: 0.06)
+  - 6_tier_weapons (score: 0.57, name similarity: 0.57, keyword similarity: 0.01)
+  - ring_of_haste (score: 0.57, name similarity: 0.57, keyword similarity: 0.22)
+  - townguardnpc (score: 0.57, name similarity: 0.57, keyword similarity: 0.03)
+
+Pages that may want to link to 'modding_ui_elements':
+  - mods (score: 0.71, name similarity: 0.21, keyword similarity: 0.09)
+  - summon_deathling (score: 0.63, name similarity: 0.63, keyword similarity: 0.06)
+  - barmannpc (score: 0.61, name similarity: 0.11, keyword similarity: 0.06)
+  - modding_custom_levels (score: 0.57, name similarity: 0.57, keyword similarity: 0.09)
+  - modding_custom_items (score: 0.55, name similarity: 0.55, keyword similarity: 0.08)
+
+Pages that may want to link to 'ankh':
+  - artifacts (score: 0.71, name similarity: 0.11, keyword similarity: 0.21)
+  - monk (score: 0.50, name similarity: 0.50, keyword similarity: 0.17)
+  - shaman (score: 0.50, name similarity: 0.50, keyword similarity: 0.17)
+  - king (score: 0.50, name similarity: 0.50, keyword similarity: 0.12)
+  - mana (score: 0.50, name similarity: 0.50, keyword similarity: 0.12)
+
+Pages that may want to link to 'firebloom_seed':
+  - swifthunter_seed (score: 0.73, name similarity: 0.44, keyword similarity: 0.73)
+  - seeds (score: 0.71, name similarity: 0.21, keyword similarity: 0.16)
+  - ignite (score: 0.64, name similarity: 0.14, keyword similarity: 0.10)
+  - spider_armor (score: 0.57, name similarity: 0.57, keyword similarity: 0.06)
+  - kobold_icemancer (score: 0.56, name similarity: 0.56, keyword similarity: 0.14)
+
+Pages that may want to link to 'scroll_of_curse':
+  - vertigo (score: 0.70, name similarity: 0.20, keyword similarity: 0.05)
+  - items (score: 0.63, name similarity: 0.13, keyword similarity: 0.06)
+  - hero_subclasses (score: 0.53, name similarity: 0.53, keyword similarity: 0.03)
+  - scroll_of_upgrade (score: 0.53, name similarity: 0.53, keyword similarity: 0.07)
+  - firebloom_seed (score: 0.47, name similarity: 0.47, keyword similarity: 0.04)
+
+Pages that may want to link to 'cloak_spell':
+  - hide_in_grass_spell (score: 1.16, name similarity: 0.32, keyword similarity: 0.66)
+  - cloak (score: 0.95, name similarity: 0.45, keyword similarity: 0.34)
+  - rogue (score: 0.68, name similarity: 0.18, keyword similarity: 0.18)
+  - charm_spell (score: 0.64, name similarity: 0.64, keyword similarity: 0.47)
+  - soul_reaper (score: 0.64, name similarity: 0.64, keyword similarity: 0.09)
+
+Pages that may want to link to 'shadow':
+  - shadowlord (score: 1.10, name similarity: 0.60, keyword similarity: 0.11)
+  - shadow_lord (score: 1.05, name similarity: 0.55, keyword similarity: 0.11)
+  - halls (score: 1.00, name similarity: 0.50, keyword similarity: 0.07)
+  - start (score: 0.83, name similarity: 0.33, keyword similarity: 0.04)
+  - changelog (score: 0.83, name similarity: 0.33, keyword similarity: 0.03)
+
+Pages that may want to link to 'modding_getting_started':
+  - version_json (score: 0.80, name similarity: 0.30, keyword similarity: 0.10)
+  - mods (score: 0.71, name similarity: 0.17, keyword similarity: 0.21)
+  - barmannpc (score: 0.67, name similarity: 0.17, keyword similarity: 0.10)
+  - summon_deathling (score: 0.48, name similarity: 0.48, keyword similarity: 0.09)
+  - modding_ui_elements (score: 0.43, name similarity: 0.43, keyword similarity: 0.10)
+
+Pages that may want to link to 'larva':
+  - worm (score: 0.78, name similarity: 0.20, keyword similarity: 0.28)
+  - yogseye (score: 0.69, name similarity: 0.00, keyword similarity: 0.19)
+  - guts (score: 0.64, name similarity: 0.00, keyword similarity: 0.14)
+  - glaive (score: 0.50, name similarity: 0.50, keyword similarity: 0.16)
+  - warlock (score: 0.43, name similarity: 0.43, keyword similarity: 0.24)
+
+Pages that may want to link to 'huntress':
+  - sniper (score: 1.00, name similarity: 0.50, keyword similarity: 0.17)
+  - newbies (score: 0.88, name similarity: 0.38, keyword similarity: 0.18)
+  - throwing_weapons (score: 0.88, name similarity: 0.38, keyword similarity: 0.19)
+  - warden (score: 0.88, name similarity: 0.38, keyword similarity: 0.23)
+  - charm_spell (score: 0.86, name similarity: 0.36, keyword similarity: 0.13)
+
+Pages that may want to link to 'ice_key':
+  - items (score: 0.79, name similarity: 0.29, keyword similarity: 0.10)
+  - cagedkobold (score: 0.77, name similarity: 0.27, keyword similarity: 0.14)
+  - ice_caves (score: 0.44, name similarity: 0.44, keyword similarity: 0.17)
+  - city (score: 0.43, name similarity: 0.43, keyword similarity: 0.07)
+  - lich_mob (score: 0.38, name similarity: 0.38, keyword similarity: 0.07)
+
+Pages that may want to link to 'fanart':
+  - ration (score: 0.67, name similarity: 0.67, keyword similarity: 0.01)
+  - dart (score: 0.50, name similarity: 0.50, keyword similarity: 0.01)
+  - rat_king (score: 0.50, name similarity: 0.50, keyword similarity: 0.01)
+  - bandit (score: 0.50, name similarity: 0.50, keyword similarity: 0.05)
+  - rats (score: 0.50, name similarity: 0.50, keyword similarity: 0.01)
+
+Pages that may want to link to 'fan_stories':
+  - ring_of_haste (score: 0.77, name similarity: 0.77, keyword similarity: 0.02)
+  - sniper_armor (score: 0.67, name similarity: 0.67, keyword similarity: 0.03)
+  - priest_armor (score: 0.67, name similarity: 0.67, keyword similarity: 0.03)
+  - 6_tier_weapons (score: 0.64, name similarity: 0.64, keyword similarity: 0.00)
+  - spirit_of_pain (score: 0.64, name similarity: 0.64, keyword similarity: 0.02)
+
+Pages that may want to link to 'modding_custom_levels':
+  - mods (score: 0.69, name similarity: 0.19, keyword similarity: 0.16)
+  - modding_ui_elements (score: 0.57, name similarity: 0.57, keyword similarity: 0.09)
+  - summon_deathling (score: 0.57, name similarity: 0.57, keyword similarity: 0.06)
+  - modding_custom_items (score: 0.57, name similarity: 0.57, keyword similarity: 0.21)
+  - modding_custom_mobs (score: 0.52, name similarity: 0.52, keyword similarity: 0.20)
+
+Pages that may want to link to 'exhumation':
+  - exhumation_spell (score: 1.12, name similarity: 0.62, keyword similarity: 0.25)
+  - necromancy (score: 1.00, name similarity: 0.50, keyword similarity: 0.13)
+  - changelog (score: 1.00, name similarity: 0.50, keyword similarity: 0.06)
+  - necromancer (score: 0.95, name similarity: 0.45, keyword similarity: 0.16)
+  - spell_affinities (score: 0.81, name similarity: 0.31, keyword similarity: 0.13)
+
+Pages that may want to link to 'paralysis':
+  - stun (score: 1.10, name similarity: 0.11, keyword similarity: 0.60)
+  - yogsbrain (score: 1.06, name similarity: 0.56, keyword similarity: 0.18)
+  - crystal (score: 1.06, name similarity: 0.56, keyword similarity: 0.20)
+  - slow (score: 0.96, name similarity: 0.22, keyword similarity: 0.46)
+  - crystal_mob (score: 0.95, name similarity: 0.45, keyword similarity: 0.19)
+
+Pages that may want to link to 'curse_item_spell':
+  - calm_spell (score: 0.82, name similarity: 0.44, keyword similarity: 0.82)
+  - charm_spell (score: 0.80, name similarity: 0.50, keyword similarity: 0.80)
+  - nature_armor_spell (score: 0.79, name similarity: 0.50, keyword similarity: 0.79)
+  - lightning_bolt_spell (score: 0.78, name similarity: 0.35, keyword similarity: 0.78)
+  - freeze_globe_spell (score: 0.77, name similarity: 0.33, keyword similarity: 0.77)
+
+Pages that may want to link to 'water_elemental':
+  - waterelemental (score: 1.03, name similarity: 0.53, keyword similarity: 0.07)
+  - airelemental (score: 0.97, name similarity: 0.47, keyword similarity: 0.23)
+  - iceelemental (score: 0.90, name similarity: 0.40, keyword similarity: 0.26)
+  - elementals (score: 0.90, name similarity: 0.40, keyword similarity: 0.27)
+  - air_elemental (score: 0.53, name similarity: 0.53, keyword similarity: 0.20)
+
+Pages that may want to link to 'tome_of_knowledge':
+  - mana_potion (score: 0.79, name similarity: 0.29, keyword similarity: 0.26)
+  - townsfolkmovienpc (score: 0.53, name similarity: 0.53, keyword similarity: 0.03)
+  - summon_deathling (score: 0.53, name similarity: 0.53, keyword similarity: 0.14)
+  - gnoll_tomahawk (score: 0.53, name similarity: 0.53, keyword similarity: 0.10)
+  - ring_of_elements (score: 0.53, name similarity: 0.53, keyword similarity: 0.12)
+
+Pages that may want to link to '6_tier_weapons':
+  - throwing_weapons (score: 0.69, name similarity: 0.69, keyword similarity: 0.02)
+  - kunai_throw_spell (score: 0.65, name similarity: 0.65, keyword similarity: 0.01)
+  - fan_stories (score: 0.64, name similarity: 0.64, keyword similarity: 0.00)
+  - ring_of_haste (score: 0.64, name similarity: 0.64, keyword similarity: 0.01)
+  - spirit_of_pain (score: 0.64, name similarity: 0.64, keyword similarity: 0.02)
+
+Pages that may want to link to 'townsfolknpc':
+  - town (score: 0.83, name similarity: 0.33, keyword similarity: 0.02)
+  - spidermindamber (score: 0.67, name similarity: 0.20, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.59, keyword similarity: 0.67)
+  - yogsheart (score: 0.67, name similarity: 0.25, keyword similarity: 0.67)
+
+Pages that may want to link to 'witchdoctor':
+  - witch_doctor (score: 1.17, name similarity: 0.67, keyword similarity: 0.08)
+  - witchdoctor_armor (score: 0.97, name similarity: 0.47, keyword similarity: 0.14)
+  - plague_doctor (score: 0.88, name similarity: 0.38, keyword similarity: 0.15)
+  - armor_kit (score: 0.86, name similarity: 0.36, keyword similarity: 0.19)
+  - necromancer (score: 0.77, name similarity: 0.27, keyword similarity: 0.21)
+
+Pages that may want to link to 'chaos_staff':
+  - chaos_set (score: 1.14, name similarity: 0.64, keyword similarity: 0.23)
+  - chaos_armor (score: 1.05, name similarity: 0.55, keyword similarity: 0.22)
+  - chaos_bow (score: 1.05, name similarity: 0.55, keyword similarity: 0.20)
+  - chaos_crystal (score: 1.04, name similarity: 0.54, keyword similarity: 0.14)
+  - chaos (score: 0.95, name similarity: 0.45, keyword similarity: 0.14)
+
+Pages that may want to link to 'newbies':
+  - bone_saw (score: 0.62, name similarity: 0.62, keyword similarity: 0.13)
+  - enemies (score: 0.57, name similarity: 0.57, keyword similarity: 0.06)
+  - moisten (score: 0.57, name similarity: 0.57, keyword similarity: 0.08)
+  - weapons (score: 0.57, name similarity: 0.57, keyword similarity: 0.15)
+  - senior (score: 0.57, name similarity: 0.57, keyword similarity: 0.01)
+
+Pages that may want to link to 'shielded':
+  - enemies (score: 0.88, name similarity: 0.38, keyword similarity: 0.08)
+  - shields (score: 0.75, name similarity: 0.75, keyword similarity: 0.17)
+  - gnoll (score: 0.62, name similarity: 0.12, keyword similarity: 0.12)
+  - deathling (score: 0.56, name similarity: 0.56, keyword similarity: 0.14)
+  - deepsnail (score: 0.56, name similarity: 0.56, keyword similarity: 0.05)
+
+Pages that may want to link to 'dart':
+  - tiled (score: 0.90, name similarity: 0.40, keyword similarity: 0.09)
+  - throwing_weapons (score: 0.78, name similarity: 0.19, keyword similarity: 0.28)
+  - rats (score: 0.75, name similarity: 0.75, keyword similarity: 0.18)
+  - rat (score: 0.75, name similarity: 0.75, keyword similarity: 0.12)
+  - gnoll (score: 0.73, name similarity: 0.00, keyword similarity: 0.23)
+
+Pages that may want to link to 'vertigo':
+  - spiderelite (score: 0.86, name similarity: 0.36, keyword similarity: 0.13)
+  - kusarigama (score: 0.80, name similarity: 0.30, keyword similarity: 0.18)
+  - enslaved_soul (score: 0.73, name similarity: 0.23, keyword similarity: 0.21)
+  - modding_quick_reference (score: 0.72, name similarity: 0.22, keyword similarity: 0.12)
+  - lich (score: 0.71, name similarity: 0.14, keyword similarity: 0.21)
+
+Pages that may want to link to 'accuracy':
+  - plague_doctor (score: 0.81, name similarity: 0.31, keyword similarity: 0.17)
+  - kusarigama (score: 0.80, name similarity: 0.30, keyword similarity: 0.17)
+  - huntress (score: 0.75, name similarity: 0.25, keyword similarity: 0.14)
+  - range (score: 0.75, name similarity: 0.25, keyword similarity: 0.20)
+  - wraith (score: 0.75, name similarity: 0.25, keyword similarity: 0.17)
+
+Pages that may want to link to 'halls':
+  - challenges (score: 0.90, name similarity: 0.40, keyword similarity: 0.10)
+  - shadow_lord (score: 0.86, name similarity: 0.36, keyword similarity: 0.14)
+  - wraith (score: 0.83, name similarity: 0.33, keyword similarity: 0.11)
+  - changelog (score: 0.83, name similarity: 0.33, keyword similarity: 0.05)
+  - skeleton (score: 0.75, name similarity: 0.25, keyword similarity: 0.12)
+
+Pages that may want to link to 'gold':
+  - gnoll (score: 1.10, name similarity: 0.60, keyword similarity: 0.10)
+  - rogue (score: 0.90, name similarity: 0.40, keyword similarity: 0.08)
+  - gold_statue (score: 0.86, name similarity: 0.36, keyword similarity: 0.12)
+  - changelog (score: 0.83, name similarity: 0.33, keyword similarity: 0.05)
+  - gnoll_mob (score: 0.83, name similarity: 0.33, keyword similarity: 0.08)
+
+Pages that may want to link to 'lich_mob':
+  - lich (score: 1.00, name similarity: 0.50, keyword similarity: 0.09)
+  - necropolis (score: 0.90, name similarity: 0.40, keyword similarity: 0.12)
+  - the_soulbringer (score: 0.90, name similarity: 0.40, keyword similarity: 0.11)
+  - undead_mobs (score: 0.86, name similarity: 0.36, keyword similarity: 0.12)
+  - black_skull (score: 0.86, name similarity: 0.36, keyword similarity: 0.10)
+
+Pages that may want to link to 'necromancer':
+  - necromancy (score: 1.14, name similarity: 0.64, keyword similarity: 0.30)
+  - necrotism (score: 1.05, name similarity: 0.55, keyword similarity: 0.19)
+  - necromancernpc (score: 1.00, name similarity: 0.50, keyword similarity: 0.19)
+  - azuterron_npc (score: 0.96, name similarity: 0.46, keyword similarity: 0.11)
+  - exhumation (score: 0.95, name similarity: 0.45, keyword similarity: 0.16)
+
+Pages that may want to link to 'gnoll_zombie':
+  - zombie (score: 1.00, name similarity: 0.50, keyword similarity: 0.25)
+  - prison (score: 0.75, name similarity: 0.25, keyword similarity: 0.10)
+  - belongings (score: 0.58, name similarity: 0.58, keyword similarity: 0.09)
+  - gnoll_brute (score: 0.58, name similarity: 0.58, keyword similarity: 0.21)
+  - snail_mob (score: 0.58, name similarity: 0.58, keyword similarity: 0.20)
+
+Pages that may want to link to 'dm300':
+  - mobs (score: 0.70, name similarity: 0.20, keyword similarity: 0.10)
+  - toxic_gas (score: 0.67, name similarity: 0.00, keyword similarity: 0.17)
+  - skeleton_key (score: 0.66, name similarity: 0.00, keyword similarity: 0.16)
+  - caves (score: 0.65, name similarity: 0.00, keyword similarity: 0.15)
+  - bosses (score: 0.65, name similarity: 0.00, keyword similarity: 0.15)
+
+Pages that may want to link to 'combo':
+  - gladiator (score: 0.90, name similarity: 0.11, keyword similarity: 0.40)
+  - rogue (score: 0.70, name similarity: 0.20, keyword similarity: 0.18)
+  - combat (score: 0.67, name similarity: 0.67, keyword similarity: 0.11)
+  - mobs (score: 0.60, name similarity: 0.60, keyword similarity: 0.08)
+  - lich_mob (score: 0.50, name similarity: 0.50, keyword similarity: 0.07)
+
+Pages that may want to link to 'waterelemental':
+  - water_elemental (score: 1.03, name similarity: 0.53, keyword similarity: 0.07)
+  - airelemental (score: 1.00, name similarity: 0.50, keyword similarity: 0.04)
+  - iceelemental (score: 0.93, name similarity: 0.43, keyword similarity: 0.04)
+  - elementals (score: 0.93, name similarity: 0.43, keyword similarity: 0.05)
+  - fireelemental (score: 0.50, name similarity: 0.50, keyword similarity: 0.03)
+
+Pages that may want to link to 'innkeepernpc':
+  - spidermindamber (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.35, keyword similarity: 0.67)
+  - yogsheart (score: 0.67, name similarity: 0.17, keyword similarity: 0.67)
+  - bandit (score: 0.67, name similarity: 0.17, keyword similarity: 0.67)
+
+Pages that may want to link to 'json_configs':
+  - ring_of_frost (score: 0.54, name similarity: 0.54, keyword similarity: 0.06)
+  - ring_of_haste (score: 0.54, name similarity: 0.54, keyword similarity: 0.10)
+  - fan_stories (score: 0.50, name similarity: 0.50, keyword similarity: 0.02)
+  - version_json (score: 0.50, name similarity: 0.50, keyword similarity: 0.13)
+  - toxic_gas (score: 0.50, name similarity: 0.50, keyword similarity: 0.09)
+
+Pages that may want to link to 'monk':
+  - imp (score: 0.75, name similarity: 0.25, keyword similarity: 0.23)
+  - terror (score: 0.70, name similarity: 0.17, keyword similarity: 0.20)
+  - city (score: 0.59, name similarity: 0.00, keyword similarity: 0.09)
+  - ankh (score: 0.50, name similarity: 0.50, keyword similarity: 0.17)
+  - mobs (score: 0.50, name similarity: 0.50, keyword similarity: 0.10)
+
+Pages that may want to link to 'townsfolkmovienpc':
+  - town (score: 0.74, name similarity: 0.24, keyword similarity: 0.02)
+  - spidermindamber (score: 0.67, name similarity: 0.35, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.59, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.35, keyword similarity: 0.67)
+  - yogsheart (score: 0.67, name similarity: 0.24, keyword similarity: 0.67)
+
+Pages that may want to link to 'charm_spell':
+  - priest (score: 0.86, name similarity: 0.36, keyword similarity: 0.21)
+  - calm_spell (score: 0.83, name similarity: 0.73, keyword similarity: 0.83)
+  - curse_item_spell (score: 0.80, name similarity: 0.50, keyword similarity: 0.80)
+  - magic_arrow_spell (score: 0.79, name similarity: 0.53, keyword similarity: 0.79)
+  - sprout_spell (score: 0.78, name similarity: 0.50, keyword similarity: 0.78)
+
+Pages that may want to link to 'necropolis':
+  - runicskull (score: 1.10, name similarity: 0.60, keyword similarity: 0.16)
+  - soul_reaper (score: 1.05, name similarity: 0.55, keyword similarity: 0.16)
+  - necromancy (score: 1.00, name similarity: 0.50, keyword similarity: 0.26)
+  - explodingskull (score: 1.00, name similarity: 0.50, keyword similarity: 0.15)
+  - changelog (score: 1.00, name similarity: 0.50, keyword similarity: 0.07)
+
+Pages that may want to link to 'gnoll':
+  - changelog (score: 0.94, name similarity: 0.44, keyword similarity: 0.09)
+  - gnoll_mob (score: 0.94, name similarity: 0.44, keyword similarity: 0.12)
+  - king (score: 0.90, name similarity: 0.40, keyword similarity: 0.14)
+  - tengu (score: 0.90, name similarity: 0.40, keyword similarity: 0.15)
+  - gnoll_brute (score: 0.86, name similarity: 0.36, keyword similarity: 0.25)
+
+Pages that may want to link to 'iceelemental':
+  - ice_elemental (score: 1.12, name similarity: 0.62, keyword similarity: 0.41)
+  - fireelemental (score: 1.04, name similarity: 0.54, keyword similarity: 0.31)
+  - water_elemental (score: 0.90, name similarity: 0.40, keyword similarity: 0.26)
+  - enemies (score: 0.83, name similarity: 0.33, keyword similarity: 0.08)
+  - toxic_gas (score: 0.83, name similarity: 0.33, keyword similarity: 0.19)
+
+Pages that may want to link to 'scroll_of_domination':
+  - items (score: 0.70, name similarity: 0.20, keyword similarity: 0.12)
+  - scroll_of_identify (score: 0.55, name similarity: 0.55, keyword similarity: 0.23)
+  - candle_of_visions (score: 0.50, name similarity: 0.50, keyword similarity: 0.12)
+  - magic_torch_spell (score: 0.50, name similarity: 0.50, keyword similarity: 0.23)
+  - mods_limitations (score: 0.50, name similarity: 0.50, keyword similarity: 0.09)
+
+Pages that may want to link to 'armor_kit':
+  - gladiator (score: 1.06, name similarity: 0.56, keyword similarity: 0.28)
+  - sniper_armor (score: 1.00, name similarity: 0.50, keyword similarity: 0.29)
+  - berserk_armor (score: 0.96, name similarity: 0.46, keyword similarity: 0.27)
+  - class_armor (score: 0.95, name similarity: 0.45, keyword similarity: 0.24)
+  - armor (score: 0.94, name similarity: 0.44, keyword similarity: 0.21)
+
+Pages that may want to link to 'blank_scroll':
+  - arcane_stylus (score: 1.04, name similarity: 0.54, keyword similarity: 0.24)
+  - scroll (score: 0.92, name similarity: 0.42, keyword similarity: 0.19)
+  - start (score: 0.75, name similarity: 0.25, keyword similarity: 0.08)
+  - moisten (score: 0.75, name similarity: 0.25, keyword similarity: 0.14)
+  - crystal_mob (score: 0.67, name similarity: 0.67, keyword similarity: 0.12)
+
+Pages that may want to link to 'swifthunter_seed':
+  - firebloom_seed (score: 0.73, name similarity: 0.44, keyword similarity: 0.73)
+  - seeds (score: 0.69, name similarity: 0.19, keyword similarity: 0.15)
+  - kunai_throw_spell (score: 0.59, name similarity: 0.59, keyword similarity: 0.09)
+  - ring_of_haste (score: 0.56, name similarity: 0.56, keyword similarity: 0.08)
+  - summon_deathling (score: 0.56, name similarity: 0.56, keyword similarity: 0.07)
+
+Pages that may want to link to 'sub_levels':
+  - ice_caves (score: 0.90, name similarity: 0.40, keyword similarity: 0.22)
+  - necropolis (score: 0.80, name similarity: 0.30, keyword similarity: 0.17)
+  - dungeon (score: 0.73, name similarity: 0.20, keyword similarity: 0.23)
+  - enemies (score: 0.70, name similarity: 0.20, keyword similarity: 0.14)
+  - mechanics (score: 0.70, name similarity: 0.20, keyword similarity: 0.15)
+
+Pages that may want to link to 'azuterron_npc':
+  - azuterronnpc (score: 1.27, name similarity: 0.77, keyword similarity: 0.21)
+  - treacherous_spirit (score: 1.00, name similarity: 0.50, keyword similarity: 0.24)
+  - treacherousspirit (score: 0.97, name similarity: 0.47, keyword similarity: 0.15)
+  - heart_of_darkness (score: 0.91, name similarity: 0.41, keyword similarity: 0.15)
+  - stranger (score: 0.88, name similarity: 0.38, keyword similarity: 0.24)
+
+Pages that may want to link to 'items':
+  - moisten (score: 1.21, name similarity: 0.71, keyword similarity: 0.08)
+  - priest (score: 1.17, name similarity: 0.67, keyword similarity: 0.08)
+  - thief (score: 1.10, name similarity: 0.60, keyword similarity: 0.04)
+  - haste (score: 1.10, name similarity: 0.60, keyword similarity: 0.07)
+  - ignite (score: 1.00, name similarity: 0.50, keyword similarity: 0.07)
+
+Pages that may want to link to 'rings':
+  - yogsbrain (score: 1.06, name similarity: 0.56, keyword similarity: 0.09)
+  - poison (score: 1.00, name similarity: 0.50, keyword similarity: 0.10)
+  - ignite (score: 1.00, name similarity: 0.50, keyword similarity: 0.10)
+  - spideregg (score: 0.94, name similarity: 0.44, keyword similarity: 0.08)
+  - vertigo (score: 0.93, name similarity: 0.43, keyword similarity: 0.12)
+
+Pages that may want to link to 'necromancernpc':
+  - necromancer (score: 1.00, name similarity: 0.50, keyword similarity: 0.19)
+  - necromancy (score: 1.00, name similarity: 0.50, keyword similarity: 0.28)
+  - necropolis (score: 0.93, name similarity: 0.43, keyword similarity: 0.25)
+  - azuterron_npc (score: 0.50, name similarity: 0.50, keyword similarity: 0.13)
+  - mercenarynpc (score: 0.50, name similarity: 0.50, keyword similarity: 0.04)
+
+Pages that may want to link to 'healing_spell':
+  - spells (score: 0.81, name similarity: 0.31, keyword similarity: 0.16)
+  - mage (score: 0.73, name similarity: 0.23, keyword similarity: 0.19)
+  - heal_spell (score: 0.66, name similarity: 0.54, keyword similarity: 0.66)
+  - ring_of_haste (score: 0.62, name similarity: 0.62, keyword similarity: 0.19)
+  - ignite_spell (score: 0.62, name similarity: 0.62, keyword similarity: 0.30)
+
+Pages that may want to link to 'rat_king':
+  - rat_king_crown (score: 1.07, name similarity: 0.57, keyword similarity: 0.23)
+  - changelog (score: 0.83, name similarity: 0.33, keyword similarity: 0.07)
+  - items (score: 0.75, name similarity: 0.25, keyword similarity: 0.07)
+  - dark_knight (score: 0.73, name similarity: 0.73, keyword similarity: 0.03)
+  - armor_kit (score: 0.67, name similarity: 0.67, keyword similarity: 0.21)
+
+Pages that may want to link to 'candle_of_visions':
+  - cagedkobold (score: 0.85, name similarity: 0.35, keyword similarity: 0.13)
+  - ice_key (score: 0.74, name similarity: 0.24, keyword similarity: 0.14)
+  - items (score: 0.68, name similarity: 0.18, keyword similarity: 0.05)
+  - scroll_of_identify (score: 0.56, name similarity: 0.56, keyword similarity: 0.19)
+  - townsfolkmovienpc (score: 0.53, name similarity: 0.53, keyword similarity: 0.03)
+
+Pages that may want to link to 'yogsheart':
+  - yogsbrain (score: 1.17, name similarity: 0.67, keyword similarity: 0.03)
+  - yogseye (score: 1.06, name similarity: 0.56, keyword similarity: 0.03)
+  - yog (score: 0.83, name similarity: 0.33, keyword similarity: 0.04)
+  - yogsteeth (score: 0.78, name similarity: 0.78, keyword similarity: 0.58)
+  - yogs_teeth (score: 0.70, name similarity: 0.70, keyword similarity: 0.03)
+
+Pages that may want to link to 'bandit':
+  - prison (score: 0.83, name similarity: 0.33, keyword similarity: 0.03)
+  - thief (score: 0.83, name similarity: 0.33, keyword similarity: 0.02)
+  - modding_custom_mobs (score: 0.76, name similarity: 0.26, keyword similarity: 0.01)
+  - spidermindamber (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.17, keyword similarity: 0.67)
+
+Pages that may want to link to 'ballistica':
+  - warlock_mob (score: 0.86, name similarity: 0.36, keyword similarity: 0.19)
+  - ignite_spell (score: 0.83, name similarity: 0.33, keyword similarity: 0.25)
+  - kusarigama (score: 0.80, name similarity: 0.30, keyword similarity: 0.20)
+  - shaman_mob (score: 0.80, name similarity: 0.30, keyword similarity: 0.16)
+  - blacksmith (score: 0.70, name similarity: 0.70, keyword similarity: 0.01)
+
+Pages that may want to link to 'hide_in_grass_spell':
+  - cloak_spell (score: 1.16, name similarity: 0.32, keyword similarity: 0.66)
+  - cloak (score: 0.81, name similarity: 0.11, keyword similarity: 0.31)
+  - healing_spell (score: 0.53, name similarity: 0.53, keyword similarity: 0.45)
+  - die_hard_spell (score: 0.53, name similarity: 0.53, keyword similarity: 0.47)
+  - magic_torch_spell (score: 0.53, name similarity: 0.53, keyword similarity: 0.44)
+
+Pages that may want to link to 'wandmaker':
+  - wands (score: 0.94, name similarity: 0.44, keyword similarity: 0.15)
+  - arts_by_sergey_andreev (score: 0.73, name similarity: 0.23, keyword similarity: 0.03)
+  - warden (score: 0.67, name similarity: 0.67, keyword similarity: 0.15)
+  - shops (score: 0.61, name similarity: 0.00, keyword similarity: 0.11)
+  - npcs (score: 0.61, name similarity: 0.11, keyword similarity: 0.10)
+
+Pages that may want to link to 'yogsbrain':
+  - toxic_gas (score: 1.06, name similarity: 0.56, keyword similarity: 0.17)
+  - yogseye (score: 0.94, name similarity: 0.44, keyword similarity: 0.30)
+  - yog (score: 0.83, name similarity: 0.33, keyword similarity: 0.21)
+  - yogsheart (score: 0.67, name similarity: 0.67, keyword similarity: 0.03)
+  - snail_mob (score: 0.67, name similarity: 0.67, keyword similarity: 0.21)
+
+Pages that may want to link to 'rats':
+  - rat (score: 1.25, name similarity: 0.75, keyword similarity: 0.19)
+  - guts (score: 1.00, name similarity: 0.50, keyword similarity: 0.15)
+  - pseudorat (score: 0.94, name similarity: 0.44, keyword similarity: 0.03)
+  - items (score: 0.90, name similarity: 0.40, keyword similarity: 0.09)
+  - rat_king (score: 0.88, name similarity: 0.38, keyword similarity: 0.21)
+
+Pages that may want to link to 'hero_subclasses':
+  - bosses (score: 0.77, name similarity: 0.27, keyword similarity: 0.21)
+  - freerunner (score: 0.70, name similarity: 0.20, keyword similarity: 0.19)
+  - lich (score: 0.70, name similarity: 0.20, keyword similarity: 0.18)
+  - the_soulbringer (score: 0.60, name similarity: 0.60, keyword similarity: 0.14)
+  - scroll_of_curse (score: 0.53, name similarity: 0.53, keyword similarity: 0.03)
+
+Pages that may want to link to 'city':
+  - lich (score: 1.00, name similarity: 0.50, keyword similarity: 0.06)
+  - tiled (score: 0.90, name similarity: 0.40, keyword similarity: 0.06)
+  - king (score: 0.75, name similarity: 0.25, keyword similarity: 0.16)
+  - yog (score: 0.75, name similarity: 0.25, keyword similarity: 0.11)
+  - imp (score: 0.75, name similarity: 0.25, keyword similarity: 0.08)
+
+Pages that may want to link to 'bishopnpc':
+  - necropolis (score: 0.60, name similarity: 0.60, keyword similarity: 0.09)
+  - lich_mob (score: 0.56, name similarity: 0.56, keyword similarity: 0.09)
+  - yogsbrain (score: 0.56, name similarity: 0.56, keyword similarity: 0.10)
+  - snail_mob (score: 0.56, name similarity: 0.56, keyword similarity: 0.12)
+  - necrotism (score: 0.56, name similarity: 0.56, keyword similarity: 0.07)
+
+Pages that may want to link to 'possess_spell':
+  - necromancy (score: 0.67, name similarity: 0.15, keyword similarity: 0.17)
+  - cloak_spell (score: 0.46, name similarity: 0.46, keyword similarity: 0.29)
+  - root_spell (score: 0.46, name similarity: 0.46, keyword similarity: 0.26)
+  - sprout_spell (score: 0.46, name similarity: 0.46, keyword similarity: 0.28)
+  - soul_reaper (score: 0.46, name similarity: 0.46, keyword similarity: 0.09)
+
+Pages that may want to link to 'artifacts':
+  - ring_of_frost (score: 0.88, name similarity: 0.38, keyword similarity: 0.09)
+  - chaos_crystal (score: 0.88, name similarity: 0.38, keyword similarity: 0.15)
+  - rat_king_crown (score: 0.86, name similarity: 0.36, keyword similarity: 0.18)
+  - customizations (score: 0.86, name similarity: 0.36, keyword similarity: 0.13)
+  - items (score: 0.83, name similarity: 0.33, keyword similarity: 0.11)
+
+Pages that may want to link to 'priest':
+  - priest_armor (score: 1.00, name similarity: 0.50, keyword similarity: 0.27)
+  - spells (score: 1.00, name similarity: 0.50, keyword similarity: 0.15)
+  - sniper (score: 0.83, name similarity: 0.83, keyword similarity: 0.11)
+  - spell_affinities (score: 0.81, name similarity: 0.31, keyword similarity: 0.18)
+  - healing_spell (score: 0.81, name similarity: 0.31, keyword similarity: 0.21)
+
+Pages that may want to link to 'dark_sacrifice':
+  - dark_sacrifice_spell (score: 1.00, name similarity: 0.50, keyword similarity: 0.20)
+  - necromancer (score: 0.79, name similarity: 0.29, keyword similarity: 0.18)
+  - necromancy (score: 0.79, name similarity: 0.29, keyword similarity: 0.14)
+  - spider_charm (score: 0.57, name similarity: 0.57, keyword similarity: 0.09)
+  - raise_dead (score: 0.50, name similarity: 0.50, keyword similarity: 0.20)
+
+Pages that may want to link to 'ring_of_frost':
+  - ring_of_haste (score: 0.69, name similarity: 0.69, keyword similarity: 0.17)
+  - fan_stories (score: 0.62, name similarity: 0.62, keyword similarity: 0.04)
+  - rottingfist (score: 0.62, name similarity: 0.62, keyword similarity: 0.05)
+  - spirit_of_pain (score: 0.57, name similarity: 0.57, keyword similarity: 0.13)
+  - ring_of_elements (score: 0.56, name similarity: 0.56, keyword similarity: 0.17)
+
+Pages that may want to link to 'spidernest':
+  - spider_egg (score: 1.10, name similarity: 0.60, keyword similarity: 0.13)
+  - spiders (score: 1.10, name similarity: 0.60, keyword similarity: 0.13)
+  - spider_queen (score: 1.08, name similarity: 0.58, keyword similarity: 0.14)
+  - kusarigama (score: 0.80, name similarity: 0.30, keyword similarity: 0.19)
+  - dungeon (score: 0.80, name similarity: 0.30, keyword similarity: 0.15)
+
+Pages that may want to link to 'arcane_stylus':
+  - scroll_of_weapon_upgrade (score: 1.04, name similarity: 0.38, keyword similarity: 0.54)
+  - blank_scroll (score: 1.04, name similarity: 0.54, keyword similarity: 0.24)
+  - cloth_armor (score: 0.96, name similarity: 0.46, keyword similarity: 0.28)
+  - enchantment (score: 0.88, name similarity: 0.38, keyword similarity: 0.26)
+  - scroll (score: 0.81, name similarity: 0.31, keyword similarity: 0.30)
+
+Pages that may want to link to 'iceguardiancore':
+  - iceguardian (score: 1.10, name similarity: 0.60, keyword similarity: 0.57)
+  - ice_guardian_core (score: 1.09, name similarity: 0.59, keyword similarity: 0.23)
+  - toxic_gas (score: 0.83, name similarity: 0.33, keyword similarity: 0.13)
+  - ice_key (score: 0.79, name similarity: 0.20, keyword similarity: 0.29)
+  - ice_caves (score: 0.77, name similarity: 0.27, keyword similarity: 0.15)
+
+Pages that may want to link to 'root_spell':
+  - spells (score: 0.90, name similarity: 0.40, keyword similarity: 0.13)
+  - spell_affinities (score: 0.88, name similarity: 0.38, keyword similarity: 0.13)
+  - roar_spell (score: 0.70, name similarity: 0.70, keyword similarity: 0.32)
+  - mage (score: 0.69, name similarity: 0.10, keyword similarity: 0.19)
+  - sprout_spell (score: 0.67, name similarity: 0.67, keyword similarity: 0.34)
+
+Pages that may want to link to 'scroll':
+  - scrolls (score: 1.21, name similarity: 0.71, keyword similarity: 0.30)
+  - crystal (score: 1.07, name similarity: 0.57, keyword similarity: 0.17)
+  - chaos (score: 1.00, name similarity: 0.50, keyword similarity: 0.12)
+  - crystal_mob (score: 0.95, name similarity: 0.45, keyword similarity: 0.17)
+  - blank_scroll (score: 0.92, name similarity: 0.42, keyword similarity: 0.19)
+
+Pages that may want to link to 'guardian_armor':
+  - guardian (score: 1.00, name similarity: 0.50, keyword similarity: 0.16)
+  - armor_kit (score: 0.93, name similarity: 0.43, keyword similarity: 0.28)
+  - scroll_of_domination (score: 0.90, name similarity: 0.40, keyword similarity: 0.20)
+  - class_armor (score: 0.86, name similarity: 0.36, keyword similarity: 0.23)
+  - summon_deathling (score: 0.56, name similarity: 0.56, keyword similarity: 0.17)
+
+Pages that may want to link to 'ring_of_haste':
+  - haste_spell (score: 0.96, name similarity: 0.46, keyword similarity: 0.23)
+  - rings (score: 0.88, name similarity: 0.38, keyword similarity: 0.17)
+  - haste (score: 0.88, name similarity: 0.38, keyword similarity: 0.33)
+  - fan_stories (score: 0.77, name similarity: 0.77, keyword similarity: 0.02)
+  - ring_of_frost (score: 0.69, name similarity: 0.69, keyword similarity: 0.17)
+
+Pages that may want to link to 'crystal_mob':
+  - shadow_lord (score: 1.05, name similarity: 0.55, keyword similarity: 0.22)
+  - shadowlord (score: 0.95, name similarity: 0.45, keyword similarity: 0.21)
+  - class_armor (score: 0.73, name similarity: 0.73, keyword similarity: 0.15)
+  - warlock_mob (score: 0.73, name similarity: 0.73, keyword similarity: 0.23)
+  - cloth_armor (score: 0.73, name similarity: 0.73, keyword similarity: 0.17)
+
+Pages that may want to link to 'scroll_of_weapon_upgrade':
+  - scroll_of_upgrade (score: 1.04, name similarity: 0.54, keyword similarity: 0.44)
+  - arcane_stylus (score: 1.04, name similarity: 0.38, keyword similarity: 0.54)
+  - scroll (score: 0.86, name similarity: 0.21, keyword similarity: 0.36)
+  - enchantment (score: 0.86, name similarity: 0.17, keyword similarity: 0.36)
+  - shadow_lord (score: 0.83, name similarity: 0.33, keyword similarity: 0.17)
+
+Pages that may want to link to 'necromancy':
+  - necromancer (score: 1.14, name similarity: 0.64, keyword similarity: 0.30)
+  - necrotism (score: 1.10, name similarity: 0.60, keyword similarity: 0.14)
+  - exhumation (score: 1.00, name similarity: 0.50, keyword similarity: 0.13)
+  - necropolis (score: 1.00, name similarity: 0.50, keyword similarity: 0.26)
+  - necromancernpc (score: 1.00, name similarity: 0.50, keyword similarity: 0.28)
+
+Pages that may want to link to 'necromancer_robe':
+  - necromancer_armor (score: 0.97, name similarity: 0.47, keyword similarity: 0.22)
+  - necromancer (score: 0.94, name similarity: 0.44, keyword similarity: 0.23)
+  - necromancy (score: 0.94, name similarity: 0.44, keyword similarity: 0.16)
+  - deathling (score: 0.72, name similarity: 0.19, keyword similarity: 0.22)
+  - kobold_icemancer (score: 0.56, name similarity: 0.56, keyword similarity: 0.12)
+
+Pages that may want to link to 'playable_class':
+  - hero_subclasses (score: 0.97, name similarity: 0.47, keyword similarity: 0.25)
+  - plague_doctor (score: 0.93, name similarity: 0.43, keyword similarity: 0.16)
+  - spell_affinities (score: 0.88, name similarity: 0.38, keyword similarity: 0.18)
+  - black_skull_of_mastery (score: 0.86, name similarity: 0.36, keyword similarity: 0.16)
+  - battle_mage (score: 0.86, name similarity: 0.36, keyword similarity: 0.11)
+
+Pages that may want to link to 'lightning_bolt_spell':
+  - spell_affinities (score: 0.90, name similarity: 0.40, keyword similarity: 0.13)
+  - curse_item_spell (score: 0.78, name similarity: 0.35, keyword similarity: 0.78)
+  - calm_spell (score: 0.78, name similarity: 0.25, keyword similarity: 0.78)
+  - charm_spell (score: 0.77, name similarity: 0.30, keyword similarity: 0.77)
+  - magic_arrow_spell (score: 0.74, name similarity: 0.40, keyword similarity: 0.74)
+
+Pages that may want to link to 'battle_mage':
+  - battle_mage_armor (score: 0.97, name similarity: 0.47, keyword similarity: 0.14)
+  - armor_kit (score: 0.86, name similarity: 0.36, keyword similarity: 0.24)
+  - mage (score: 0.86, name similarity: 0.36, keyword similarity: 0.25)
+  - hero_subclasses (score: 0.83, name similarity: 0.33, keyword similarity: 0.23)
+  - tome_of_mastery (score: 0.83, name similarity: 0.33, keyword similarity: 0.22)
+
+Pages that may want to link to 'terror':
+  - skeleton (score: 0.88, name similarity: 0.38, keyword similarity: 0.14)
+  - wraith (score: 0.83, name similarity: 0.33, keyword similarity: 0.16)
+  - roar_spell (score: 0.80, name similarity: 0.30, keyword similarity: 0.19)
+  - yogseye (score: 0.79, name similarity: 0.29, keyword similarity: 0.18)
+  - scrolls (score: 0.79, name similarity: 0.29, keyword similarity: 0.14)
+
+Pages that may want to link to 'invisibility':
+  - cloak (score: 0.78, name similarity: 0.08, keyword similarity: 0.28)
+  - cloak_spell (score: 0.75, name similarity: 0.17, keyword similarity: 0.25)
+  - scroll_of_domination (score: 0.75, name similarity: 0.25, keyword similarity: 0.19)
+  - potion (score: 0.75, name similarity: 0.25, keyword similarity: 0.16)
+  - scroll_of_remove_curse (score: 0.75, name similarity: 0.14, keyword similarity: 0.25)
+
+Pages that may want to link to 'sprout_spell':
+  - spell_affinities (score: 0.88, name similarity: 0.38, keyword similarity: 0.14)
+  - dash_spell (score: 0.79, name similarity: 0.42, keyword similarity: 0.79)
+  - charm_spell (score: 0.78, name similarity: 0.50, keyword similarity: 0.78)
+  - calm_spell (score: 0.76, name similarity: 0.42, keyword similarity: 0.76)
+  - curse_item_spell (score: 0.75, name similarity: 0.50, keyword similarity: 0.75)
+
+Pages that may want to link to 'kusarigama':
+  - vertigo (score: 0.80, name similarity: 0.30, keyword similarity: 0.18)
+  - items (score: 0.80, name similarity: 0.30, keyword similarity: 0.07)
+  - start (score: 0.80, name similarity: 0.30, keyword similarity: 0.11)
+  - range (score: 0.80, name similarity: 0.30, keyword similarity: 0.23)
+  - spider_nest (score: 0.77, name similarity: 0.27, keyword similarity: 0.17)
+
+Pages that may want to link to 'modding_non_java_techniques':
+  - mods (score: 0.70, name similarity: 0.15, keyword similarity: 0.20)
+  - modding_custom_levels (score: 0.48, name similarity: 0.48, keyword similarity: 0.24)
+  - summon_deathling (score: 0.48, name similarity: 0.48, keyword similarity: 0.08)
+  - modding_custom_items (score: 0.44, name similarity: 0.44, keyword similarity: 0.25)
+  - modding_ui_elements (score: 0.41, name similarity: 0.41, keyword similarity: 0.11)
+
+Pages that may want to link to 'airelemental':
+  - fireelemental (score: 1.12, name similarity: 0.62, keyword similarity: 0.27)
+  - iceelemental (score: 1.08, name similarity: 0.58, keyword similarity: 0.25)
+  - elementals (score: 1.00, name similarity: 0.50, keyword similarity: 0.28)
+  - stun (score: 0.67, name similarity: 0.17, keyword similarity: 0.16)
+  - air_elemental (score: 0.62, name similarity: 0.62, keyword similarity: 0.28)
+
+Pages that may want to link to 'artificernpc':
+  - fan_stories (score: 0.58, name similarity: 0.58, keyword similarity: 0.05)
+  - servantnpc (score: 0.58, name similarity: 0.58, keyword similarity: 0.06)
+  - azuterronnpc (score: 0.58, name similarity: 0.58, keyword similarity: 0.15)
+  - azuterron_npc (score: 0.54, name similarity: 0.54, keyword similarity: 0.09)
+  - ring_of_haste (score: 0.54, name similarity: 0.54, keyword similarity: 0.17)
+
+Pages that may want to link to 'die_hard_spell':
+  - spell_affinities (score: 0.94, name similarity: 0.44, keyword similarity: 0.14)
+  - spider_charm (score: 0.64, name similarity: 0.64, keyword similarity: 0.11)
+  - spider_armor (score: 0.57, name similarity: 0.57, keyword similarity: 0.03)
+  - charm_spell (score: 0.57, name similarity: 0.57, keyword similarity: 0.51)
+  - healing_spell (score: 0.57, name similarity: 0.57, keyword similarity: 0.51)
+
+Pages that may want to link to 'magic_arrow_spell':
+  - spell_affinities (score: 0.91, name similarity: 0.41, keyword similarity: 0.14)
+  - charm_spell (score: 0.79, name similarity: 0.53, keyword similarity: 0.79)
+  - calm_spell (score: 0.77, name similarity: 0.47, keyword similarity: 0.77)
+  - curse_item_spell (score: 0.76, name similarity: 0.53, keyword similarity: 0.76)
+  - nature_armor_spell (score: 0.76, name similarity: 0.50, keyword similarity: 0.76)
+
+Pages that may want to link to 'freerunner':
+  - freerunner_armor (score: 0.81, name similarity: 0.31, keyword similarity: 0.14)
+  - rogue (score: 0.80, name similarity: 0.30, keyword similarity: 0.25)
+  - armor_kit (score: 0.74, name similarity: 0.10, keyword similarity: 0.24)
+  - tome_of_mastery (score: 0.72, name similarity: 0.20, keyword similarity: 0.22)
+  - hero_subclasses (score: 0.70, name similarity: 0.20, keyword similarity: 0.19)
+
+Pages that may want to link to 'start':
+  - dart (score: 1.10, name similarity: 0.60, keyword similarity: 0.09)
+  - priest (score: 1.00, name similarity: 0.50, keyword similarity: 0.11)
+  - stranger (score: 1.00, name similarity: 0.50, keyword similarity: 0.06)
+  - artifacts (score: 0.94, name similarity: 0.44, keyword similarity: 0.10)
+  - larva (score: 0.90, name similarity: 0.40, keyword similarity: 0.10)
+
+Pages that may want to link to 'townguardnpc':
+  - town (score: 0.83, name similarity: 0.33, keyword similarity: 0.02)
+  - plague_doctor (score: 0.69, name similarity: 0.69, keyword similarity: 0.01)
+  - spidermindamber (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.50, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+
+Pages that may want to link to 'dungeon':
+  - rogue (score: 1.07, name similarity: 0.57, keyword similarity: 0.10)
+  - tengu (score: 1.07, name similarity: 0.57, keyword similarity: 0.09)
+  - undead (score: 1.07, name similarity: 0.57, keyword similarity: 0.09)
+  - bleeding (score: 1.00, name similarity: 0.50, keyword similarity: 0.13)
+  - hedgehog (score: 1.00, name similarity: 0.50, keyword similarity: 0.08)
+
+Pages that may want to link to 'ration':
+  - albino_rat (score: 1.10, name similarity: 0.60, keyword similarity: 0.13)
+  - vertigo (score: 1.07, name similarity: 0.57, keyword similarity: 0.10)
+  - warrior (score: 1.07, name similarity: 0.57, keyword similarity: 0.13)
+  - yogsbrain (score: 1.06, name similarity: 0.56, keyword similarity: 0.09)
+  - necrotism (score: 1.06, name similarity: 0.56, keyword similarity: 0.10)
+
+Pages that may want to link to 'bows_and_arrows':
+  - start (score: 0.70, name similarity: 0.20, keyword similarity: 0.11)
+  - items (score: 0.59, name similarity: 0.07, keyword similarity: 0.09)
+  - shadow_lord (score: 0.47, name similarity: 0.47, keyword similarity: 0.10)
+  - 6_tier_weapons (score: 0.47, name similarity: 0.47, keyword similarity: 0.04)
+  - blank_scroll (score: 0.47, name similarity: 0.47, keyword similarity: 0.13)
+
+Pages that may want to link to 'magic_torch_spell':
+  - magic_torch (score: 1.09, name similarity: 0.59, keyword similarity: 0.06)
+  - spell_affinities (score: 0.97, name similarity: 0.47, keyword similarity: 0.15)
+  - freeze_globe_spell (score: 0.78, name similarity: 0.44, keyword similarity: 0.78)
+  - curse_item_spell (score: 0.75, name similarity: 0.59, keyword similarity: 0.75)
+  - charm_spell (score: 0.74, name similarity: 0.59, keyword similarity: 0.74)
+
+Pages that may want to link to 'elementals':
+  - iceelemental (score: 1.00, name similarity: 0.50, keyword similarity: 0.30)
+  - airelemental (score: 1.00, name similarity: 0.50, keyword similarity: 0.28)
+  - fireelemental (score: 0.96, name similarity: 0.46, keyword similarity: 0.32)
+  - air_elemental (score: 0.96, name similarity: 0.46, keyword similarity: 0.17)
+  - ice_elemental (score: 0.96, name similarity: 0.46, keyword similarity: 0.25)
+
+Pages that may want to link to 'shops':
+  - npcs (score: 0.90, name similarity: 0.40, keyword similarity: 0.18)
+  - scroll (score: 0.83, name similarity: 0.33, keyword similarity: 0.15)
+  - potion (score: 0.83, name similarity: 0.33, keyword similarity: 0.14)
+  - spell_book (score: 0.80, name similarity: 0.30, keyword similarity: 0.11)
+  - scrolls (score: 0.79, name similarity: 0.29, keyword similarity: 0.14)
+
+Pages that may want to link to 'gold_statue':
+  - revived_statue (score: 1.14, name similarity: 0.50, keyword similarity: 0.64)
+  - armored_statue (score: 1.07, name similarity: 0.57, keyword similarity: 0.29)
+  - plague_doctor (score: 0.69, name similarity: 0.69, keyword similarity: 0.13)
+  - enemies (score: 0.68, name similarity: 0.18, keyword similarity: 0.09)
+  - soul_reaper (score: 0.64, name similarity: 0.64, keyword similarity: 0.10)
+
+Pages that may want to link to 'range':
+  - stranger (score: 1.12, name similarity: 0.62, keyword similarity: 0.11)
+  - tengu (score: 1.10, name similarity: 0.60, keyword similarity: 0.12)
+  - mage (score: 1.10, name similarity: 0.60, keyword similarity: 0.13)
+  - boomerang (score: 1.06, name similarity: 0.56, keyword similarity: 0.13)
+  - glaive (score: 1.00, name similarity: 0.50, keyword similarity: 0.17)
+
+Pages that may want to link to 'exhumation_spell':
+  - spell_affinities (score: 1.06, name similarity: 0.56, keyword similarity: 0.13)
+  - possess_spell (score: 0.88, name similarity: 0.38, keyword similarity: 0.27)
+  - necromancy (score: 0.81, name similarity: 0.31, keyword similarity: 0.27)
+  - summon_deathling (score: 0.75, name similarity: 0.75, keyword similarity: 0.26)
+  - kunai_throw_spell (score: 0.71, name similarity: 0.71, keyword similarity: 0.45)
+
+Pages that may want to link to 'zombie':
+  - gnoll_zombie (score: 1.00, name similarity: 0.50, keyword similarity: 0.25)
+  - enemies (score: 0.93, name similarity: 0.43, keyword similarity: 0.08)
+  - undead_mobs (score: 0.86, name similarity: 0.36, keyword similarity: 0.15)
+  - poison (score: 0.83, name similarity: 0.33, keyword similarity: 0.12)
+  - prison (score: 0.83, name similarity: 0.33, keyword similarity: 0.14)
+
+Pages that may want to link to 'tome_of_mastery':
+  - black_skull_of_mastery (score: 0.99, name similarity: 0.45, keyword similarity: 0.49)
+  - hero_subclasses (score: 0.90, name similarity: 0.40, keyword similarity: 0.34)
+  - necromancy (score: 0.90, name similarity: 0.40, keyword similarity: 0.19)
+  - warden_armor (score: 0.90, name similarity: 0.40, keyword similarity: 0.23)
+  - soul_reaper (score: 0.90, name similarity: 0.40, keyword similarity: 0.17)
+
+Pages that may want to link to 'acidic':
+  - bleeding (score: 0.75, name similarity: 0.25, keyword similarity: 0.02)
+  - spidermindamber (score: 0.67, name similarity: 0.20, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.08, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.17, keyword similarity: 0.67)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.12, keyword similarity: 0.67)
+
+Pages that may want to link to 'common_arrow':
+  - elf (score: 0.69, name similarity: 0.00, keyword similarity: 0.19)
+  - warden_armor (score: 0.58, name similarity: 0.58, keyword similarity: 0.19)
+  - warlock_mob (score: 0.58, name similarity: 0.58, keyword similarity: 0.20)
+  - warlock_armor (score: 0.54, name similarity: 0.54, keyword similarity: 0.13)
+  - chaos_armor (score: 0.50, name similarity: 0.50, keyword similarity: 0.18)
+
+Pages that may want to link to 'scout':
+  - scout_armor (score: 0.95, name similarity: 0.45, keyword similarity: 0.18)
+  - hero_subclasses (score: 0.77, name similarity: 0.27, keyword similarity: 0.20)
+  - armor_kit (score: 0.72, name similarity: 0.22, keyword similarity: 0.15)
+  - elf (score: 0.72, name similarity: 0.00, keyword similarity: 0.22)
+  - gnoll (score: 0.70, name similarity: 0.20, keyword similarity: 0.15)
+
+Pages that may want to link to 'piranha':
+  - paralysis (score: 0.94, name similarity: 0.44, keyword similarity: 0.02)
+  - toxic_gas (score: 0.72, name similarity: 0.22, keyword similarity: 0.02)
+  - spidermindamber (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.17, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+
+Pages that may want to link to 'death_knight':
+  - deathknight (score: 1.25, name similarity: 0.75, keyword similarity: 0.04)
+  - undead_mobs (score: 0.92, name similarity: 0.42, keyword similarity: 0.11)
+  - enslaved_soul (score: 0.88, name similarity: 0.38, keyword similarity: 0.20)
+  - dread_knight (score: 0.83, name similarity: 0.83, keyword similarity: 0.29)
+  - undead (score: 0.83, name similarity: 0.33, keyword similarity: 0.16)
+
+Pages that may want to link to 'class_armor':
+  - sniper_armor (score: 1.00, name similarity: 0.50, keyword similarity: 0.24)
+  - doctor_armor (score: 1.00, name similarity: 0.50, keyword similarity: 0.14)
+  - priest_armor (score: 1.00, name similarity: 0.50, keyword similarity: 0.15)
+  - hero_subclasses (score: 0.97, name similarity: 0.47, keyword similarity: 0.16)
+  - armor_kit (score: 0.95, name similarity: 0.45, keyword similarity: 0.24)
+
+Pages that may want to link to 'bleeding':
+  - newbies (score: 1.00, name similarity: 0.50, keyword similarity: 0.13)
+  - albino_rat (score: 0.90, name similarity: 0.40, keyword similarity: 0.18)
+  - zombie (score: 0.88, name similarity: 0.38, keyword similarity: 0.13)
+  - undead (score: 0.88, name similarity: 0.38, keyword similarity: 0.15)
+  - skeleton (score: 0.88, name similarity: 0.38, keyword similarity: 0.14)
+
+Pages that may want to link to 'warden_armor':
+  - warden (score: 1.00, name similarity: 0.50, keyword similarity: 0.27)
+  - armor_kit (score: 0.92, name similarity: 0.42, keyword similarity: 0.26)
+  - spider_armor (score: 0.58, name similarity: 0.58, keyword similarity: 0.06)
+  - wandmaker (score: 0.58, name similarity: 0.58, keyword similarity: 0.12)
+  - common_arrow (score: 0.58, name similarity: 0.58, keyword similarity: 0.19)
+
+Pages that may want to link to 'spider_queen':
+  - spiderqueen (score: 1.25, name similarity: 0.75, keyword similarity: 0.02)
+  - spider_nest (score: 1.17, name similarity: 0.67, keyword similarity: 0.17)
+  - spider_egg (score: 1.08, name similarity: 0.58, keyword similarity: 0.16)
+  - spideregg (score: 1.00, name similarity: 0.50, keyword similarity: 0.11)
+  - spiders (score: 1.00, name similarity: 0.50, keyword similarity: 0.13)
+
+Pages that may want to link to 'blackrat':
+  - rats (score: 0.88, name similarity: 0.38, keyword similarity: 0.03)
+  - changelog (score: 0.83, name similarity: 0.33, keyword similarity: 0.01)
+  - blackcat (score: 0.75, name similarity: 0.75, keyword similarity: 0.67)
+  - spidermindamber (score: 0.67, name similarity: 0.20, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+
+Pages that may want to link to 'soul_reaper':
+  - necropolis (score: 1.05, name similarity: 0.55, keyword similarity: 0.16)
+  - obsidian_skull (score: 0.99, name similarity: 0.43, keyword similarity: 0.49)
+  - roar_spell (score: 0.73, name similarity: 0.73, keyword similarity: 0.08)
+  - sprout_spell (score: 0.67, name similarity: 0.67, keyword similarity: 0.10)
+  - cloak_spell (score: 0.64, name similarity: 0.64, keyword similarity: 0.09)
+
+Pages that may want to link to 'modding_custom_mobs':
+  - mods (score: 0.71, name similarity: 0.21, keyword similarity: 0.14)
+  - modding_custom_items (score: 0.55, name similarity: 0.55, keyword similarity: 0.28)
+  - modding_ui_elements (score: 0.53, name similarity: 0.53, keyword similarity: 0.07)
+  - summon_deathling (score: 0.53, name similarity: 0.53, keyword similarity: 0.09)
+  - modding_custom_levels (score: 0.52, name similarity: 0.52, keyword similarity: 0.20)
+
+Pages that may want to link to 'bee':
+  - magic_torch (score: 1.05, name similarity: 0.00, keyword similarity: 0.55)
+  - zombie (score: 0.83, name similarity: 0.33, keyword similarity: 0.03)
+  - newbies (score: 0.79, name similarity: 0.29, keyword similarity: 0.03)
+  - bee_mob (score: 0.79, name similarity: 0.29, keyword similarity: 0.03)
+  - beehive (score: 0.79, name similarity: 0.29, keyword similarity: 0.03)
+
+Pages that may want to link to 'black_skull_of_mastery':
+  - tome_of_mastery (score: 0.99, name similarity: 0.45, keyword similarity: 0.49)
+  - soul_reaper (score: 0.86, name similarity: 0.36, keyword similarity: 0.28)
+  - black_skull (score: 0.86, name similarity: 0.36, keyword similarity: 0.25)
+  - necromancer (score: 0.77, name similarity: 0.27, keyword similarity: 0.21)
+  - necropolis (score: 0.77, name similarity: 0.27, keyword similarity: 0.22)
+
+Pages that may want to link to 'raise_dead_spell':
+  - raise_dead (score: 0.94, name similarity: 0.44, keyword similarity: 0.40)
+  - exhumation_spell (score: 0.94, name similarity: 0.44, keyword similarity: 0.31)
+  - spell_affinities (score: 0.94, name similarity: 0.44, keyword similarity: 0.12)
+  - possess_spell (score: 0.81, name similarity: 0.31, keyword similarity: 0.30)
+  - necromancy (score: 0.69, name similarity: 0.19, keyword similarity: 0.19)
+
+Pages that may want to link to 'explodingskull':
+  - exploding_skull (score: 1.30, name similarity: 0.80, keyword similarity: 0.20)
+  - necropolis (score: 1.00, name similarity: 0.50, keyword similarity: 0.15)
+  - enslaved_soul (score: 1.00, name similarity: 0.50, keyword similarity: 0.23)
+  - undead_mobs (score: 0.93, name similarity: 0.43, keyword similarity: 0.10)
+  - enemies (score: 0.79, name similarity: 0.29, keyword similarity: 0.10)
+
+Pages that may want to link to 'treacherous_spirit':
+  - treacherousspirit (score: 1.11, name similarity: 0.61, keyword similarity: 0.25)
+  - azuterron_npc (score: 1.00, name similarity: 0.50, keyword similarity: 0.24)
+  - spirit_of_pain (score: 0.94, name similarity: 0.44, keyword similarity: 0.18)
+  - heart_of_darkness (score: 0.94, name similarity: 0.44, keyword similarity: 0.20)
+  - azuterronnpc (score: 0.94, name similarity: 0.44, keyword similarity: 0.15)
+
+Pages that may want to link to 'drunkardnpc':
+  - townguardnpc (score: 0.58, name similarity: 0.58, keyword similarity: 0.05)
+  - bard_npc (score: 0.55, name similarity: 0.55, keyword similarity: 0.15)
+  - iceguardian (score: 0.55, name similarity: 0.55, keyword similarity: 0.09)
+  - azuterronnpc (score: 0.50, name similarity: 0.50, keyword similarity: 0.13)
+  - plaguedoctornpc (score: 0.47, name similarity: 0.47, keyword similarity: 0.10)
+
+Pages that may want to link to 'earthroot_seed':
+  - earth_elemental (score: 0.90, name similarity: 0.40, keyword similarity: 0.08)
+  - earthelemental (score: 0.86, name similarity: 0.36, keyword similarity: 0.11)
+  - elementals (score: 0.79, name similarity: 0.29, keyword similarity: 0.10)
+  - seeds (score: 0.71, name similarity: 0.21, keyword similarity: 0.15)
+  - ring_of_haste (score: 0.57, name similarity: 0.57, keyword similarity: 0.09)
+
+Pages that may want to link to 'potion_of_frost':
+  - potion (score: 0.83, name similarity: 0.33, keyword similarity: 0.11)
+  - water_elemental (score: 0.77, name similarity: 0.27, keyword similarity: 0.10)
+  - elementals (score: 0.70, name similarity: 0.20, keyword similarity: 0.10)
+  - spirit_of_pain (score: 0.60, name similarity: 0.60, keyword similarity: 0.10)
+  - fan_stories (score: 0.53, name similarity: 0.53, keyword similarity: 0.06)
+
+Pages that may want to link to 'version_json':
+  - mods (score: 0.67, name similarity: 0.17, keyword similarity: 0.12)
+  - fan_stories (score: 0.58, name similarity: 0.58, keyword similarity: 0.03)
+  - sniper_armor (score: 0.58, name similarity: 0.58, keyword similarity: 0.17)
+  - ring_of_haste (score: 0.54, name similarity: 0.54, keyword similarity: 0.14)
+  - spider_armor (score: 0.50, name similarity: 0.50, keyword similarity: 0.03)
+
+Pages that may want to link to 'fireelemental':
+  - iceelemental (score: 1.04, name similarity: 0.54, keyword similarity: 0.31)
+  - ice_elemental (score: 1.04, name similarity: 0.54, keyword similarity: 0.29)
+  - elementals (score: 0.96, name similarity: 0.46, keyword similarity: 0.32)
+  - ignite (score: 0.81, name similarity: 0.31, keyword similarity: 0.23)
+  - burning (score: 0.77, name similarity: 0.23, keyword similarity: 0.27)
+
+Pages that may want to link to 'dual_wielding':
+  - mechanics (score: 0.81, name similarity: 0.31, keyword similarity: 0.18)
+  - shields (score: 0.81, name similarity: 0.31, keyword similarity: 0.29)
+  - pixel_dungeon (score: 0.62, name similarity: 0.62, keyword similarity: 0.06)
+  - wind_gust_spell (score: 0.60, name similarity: 0.60, keyword similarity: 0.12)
+  - summon_deathling (score: 0.56, name similarity: 0.56, keyword similarity: 0.12)
+
+Pages that may want to link to 'calm_spell':
+  - spell_affinities (score: 0.88, name similarity: 0.38, keyword similarity: 0.14)
+  - charm_spell (score: 0.83, name similarity: 0.73, keyword similarity: 0.83)
+  - curse_item_spell (score: 0.82, name similarity: 0.44, keyword similarity: 0.82)
+  - priest (score: 0.80, name similarity: 0.30, keyword similarity: 0.20)
+  - lightning_bolt_spell (score: 0.78, name similarity: 0.25, keyword similarity: 0.78)
+
+Pages that may want to link to 'bee_mob':
+  - beehive (score: 0.94, name similarity: 0.29, keyword similarity: 0.44)
+  - newbies (score: 0.79, name similarity: 0.29, keyword similarity: 0.11)
+  - bee (score: 0.79, name similarity: 0.29, keyword similarity: 0.03)
+  - zombie (score: 0.57, name similarity: 0.57, keyword similarity: 0.17)
+  - lich_mob (score: 0.50, name similarity: 0.50, keyword similarity: 0.10)
+
+Pages that may want to link to 'belongings':
+  - changelog (score: 1.00, name similarity: 0.50, keyword similarity: 0.04)
+  - equipment (score: 0.80, name similarity: 0.30, keyword similarity: 0.26)
+  - artifacts (score: 0.70, name similarity: 0.20, keyword similarity: 0.17)
+  - ankh (score: 0.64, name similarity: 0.10, keyword similarity: 0.14)
+  - necropolis (score: 0.60, name similarity: 0.60, keyword similarity: 0.09)
+
+Pages that may want to link to 'treacherousspirit':
+  - treacherous_spirit (score: 1.11, name similarity: 0.61, keyword similarity: 0.25)
+  - azuterron_npc (score: 0.97, name similarity: 0.47, keyword similarity: 0.15)
+  - azuterronnpc (score: 0.97, name similarity: 0.47, keyword similarity: 0.25)
+  - spirit_of_pain (score: 0.91, name similarity: 0.41, keyword similarity: 0.29)
+  - heart_of_darkness (score: 0.91, name similarity: 0.41, keyword similarity: 0.16)
+
+Pages that may want to link to 'potion_of_strength':
+  - potion (score: 0.78, name similarity: 0.28, keyword similarity: 0.15)
+  - ring_of_haste (score: 0.61, name similarity: 0.61, keyword similarity: 0.26)
+  - throwing_weapons (score: 0.61, name similarity: 0.61, keyword similarity: 0.13)
+  - magic_torch_spell (score: 0.56, name similarity: 0.56, keyword similarity: 0.18)
+  - kunai_throw_spell (score: 0.56, name similarity: 0.56, keyword similarity: 0.18)
+
+Pages that may want to link to 'gnoll_brute':
+  - healer_npc (score: 0.95, name similarity: 0.45, keyword similarity: 0.37)
+  - gnoll_tomahawk (score: 0.93, name similarity: 0.43, keyword similarity: 0.18)
+  - gnoll (score: 0.86, name similarity: 0.36, keyword similarity: 0.25)
+  - tome_of_mastery (score: 0.83, name similarity: 0.33, keyword similarity: 0.29)
+  - playable_class (score: 0.79, name similarity: 0.29, keyword similarity: 0.12)
+
+Pages that may want to link to 'warlock':
+  - warlock_mob (score: 1.14, name similarity: 0.64, keyword similarity: 0.29)
+  - warlock_armor (score: 1.04, name similarity: 0.54, keyword similarity: 0.14)
+  - armor_kit (score: 0.94, name similarity: 0.44, keyword similarity: 0.25)
+  - changelog (score: 0.94, name similarity: 0.44, keyword similarity: 0.06)
+  - armor (score: 0.93, name similarity: 0.43, keyword similarity: 0.16)
+
+Pages that may want to link to 'enemies':
+  - moisten (score: 1.21, name similarity: 0.71, keyword similarity: 0.06)
+  - newbies (score: 1.07, name similarity: 0.57, keyword similarity: 0.06)
+  - items (score: 1.07, name similarity: 0.57, keyword similarity: 0.09)
+  - sniper (score: 1.07, name similarity: 0.57, keyword similarity: 0.08)
+  - necrotism (score: 1.06, name similarity: 0.56, keyword similarity: 0.05)
+
+Pages that may want to link to 'shaman_armor':
+  - class_armor (score: 1.00, name similarity: 0.50, keyword similarity: 0.18)
+  - armor_kit (score: 0.92, name similarity: 0.42, keyword similarity: 0.28)
+  - shaman (score: 0.92, name similarity: 0.42, keyword similarity: 0.24)
+  - chaos_armor (score: 0.58, name similarity: 0.58, keyword similarity: 0.17)
+  - sniper_armor (score: 0.58, name similarity: 0.58, keyword similarity: 0.35)
+
+Pages that may want to link to 'potion_of_paralytic_gas':
+  - potion_of_toxic_gas (score: 0.98, name similarity: 0.48, keyword similarity: 0.32)
+  - plague_doctor (score: 0.89, name similarity: 0.39, keyword similarity: 0.21)
+  - paralysis (score: 0.80, name similarity: 0.30, keyword similarity: 0.20)
+  - potion (score: 0.72, name similarity: 0.22, keyword similarity: 0.18)
+  - doctor (score: 0.70, name similarity: 0.17, keyword similarity: 0.20)
+
+Pages that may want to link to 'spiderexploding':
+  - spiderservant (score: 0.97, name similarity: 0.47, keyword similarity: 0.04)
+  - spider_nest (score: 0.97, name similarity: 0.47, keyword similarity: 0.02)
+  - modding_quick_reference (score: 0.80, name similarity: 0.30, keyword similarity: 0.01)
+  - spidermindamber (score: 0.67, name similarity: 0.47, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+
+Pages that may want to link to 'spider_charm':
+  - spider_nest (score: 1.08, name similarity: 0.58, keyword similarity: 0.11)
+  - spiderservant (score: 1.04, name similarity: 0.54, keyword similarity: 0.09)
+  - items (score: 0.83, name similarity: 0.33, keyword similarity: 0.06)
+  - spider_armor (score: 0.75, name similarity: 0.75, keyword similarity: 0.08)
+  - charm_spell (score: 0.75, name similarity: 0.75, keyword similarity: 0.13)
+
+Pages that may want to link to 'mods_limitations':
+  - mods (score: 0.75, name similarity: 0.25, keyword similarity: 0.21)
+  - summon_deathling (score: 0.62, name similarity: 0.62, keyword similarity: 0.09)
+  - exhumation_spell (score: 0.56, name similarity: 0.56, keyword similarity: 0.09)
+  - scroll_of_domination (score: 0.50, name similarity: 0.50, keyword similarity: 0.09)
+  - gladiator_armor (score: 0.50, name similarity: 0.50, keyword similarity: 0.06)
+
+Pages that may want to link to 'glaive':
+  - changelog (score: 0.94, name similarity: 0.44, keyword similarity: 0.08)
+  - vertigo (score: 0.57, name similarity: 0.57, keyword similarity: 0.15)
+  - deathling (score: 0.56, name similarity: 0.56, keyword similarity: 0.19)
+  - larva (score: 0.50, name similarity: 0.50, keyword similarity: 0.16)
+  - range (score: 0.50, name similarity: 0.50, keyword similarity: 0.17)
+
+Pages that may want to link to 'spirit_of_pain':
+  - treacherous_spirit (score: 0.94, name similarity: 0.44, keyword similarity: 0.18)
+  - azuterronnpc (score: 0.93, name similarity: 0.43, keyword similarity: 0.19)
+  - treacherousspirit (score: 0.91, name similarity: 0.41, keyword similarity: 0.29)
+  - undead (score: 0.71, name similarity: 0.14, keyword similarity: 0.21)
+  - fan_stories (score: 0.64, name similarity: 0.64, keyword similarity: 0.02)
+
+Pages that may want to link to 'enslaved_soul':
+  - undead_mobs (score: 1.12, name similarity: 0.62, keyword similarity: 0.14)
+  - necropolis (score: 0.88, name similarity: 0.38, keyword similarity: 0.20)
+  - undead (score: 0.88, name similarity: 0.38, keyword similarity: 0.18)
+  - necromancy (score: 0.81, name similarity: 0.31, keyword similarity: 0.17)
+  - vertigo (score: 0.73, name similarity: 0.23, keyword similarity: 0.21)
+
+Pages that may want to link to 'golem':
+  - king (score: 0.70, name similarity: 0.20, keyword similarity: 0.03)
+  - imp (score: 0.70, name similarity: 0.20, keyword similarity: 0.04)
+  - spidermindamber (score: 0.67, name similarity: 0.13, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.17, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.08, keyword similarity: 0.67)
+
+Pages that may want to link to 'coldspirit':
+  - cold_spirit (score: 0.82, name similarity: 0.82, keyword similarity: 0.03)
+  - ice_caves (score: 0.80, name similarity: 0.30, keyword similarity: 0.02)
+  - necropolis (score: 0.70, name similarity: 0.70, keyword similarity: 0.01)
+  - enemies (score: 0.70, name similarity: 0.20, keyword similarity: 0.02)
+  - spiderelite (score: 0.64, name similarity: 0.64, keyword similarity: 0.03)
+
+Pages that may want to link to 'gladiator_armor':
+  - gladiator (score: 1.03, name similarity: 0.53, keyword similarity: 0.13)
+  - armor_kit (score: 0.97, name similarity: 0.47, keyword similarity: 0.18)
+  - armor (score: 0.77, name similarity: 0.27, keyword similarity: 0.09)
+  - assassin_armor (score: 0.74, name similarity: 0.40, keyword similarity: 0.74)
+  - freerunner_armor (score: 0.72, name similarity: 0.31, keyword similarity: 0.72)
+
+Pages that may want to link to 'spell_book':
+  - spells (score: 0.90, name similarity: 0.40, keyword similarity: 0.13)
+  - wind_gust_spell (score: 0.83, name similarity: 0.33, keyword similarity: 0.23)
+  - scrolls (score: 0.80, name similarity: 0.30, keyword similarity: 0.14)
+  - tome_of_knowledge (score: 0.79, name similarity: 0.29, keyword similarity: 0.18)
+  - mana_potion (score: 0.77, name similarity: 0.27, keyword similarity: 0.26)
+
+Pages that may want to link to 'blacksmith':
+  - armor_kit (score: 1.00, name similarity: 0.50, keyword similarity: 0.03)
+  - caves (score: 0.80, name similarity: 0.30, keyword similarity: 0.03)
+  - ballistica (score: 0.70, name similarity: 0.70, keyword similarity: 0.01)
+  - spidermindamber (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.42, keyword similarity: 0.67)
+
+Pages that may want to link to 'snail_mob':
+  - shaman_mob (score: 0.70, name similarity: 0.70, keyword similarity: 0.21)
+  - albino_rat (score: 0.70, name similarity: 0.70, keyword similarity: 0.26)
+  - lich_mob (score: 0.67, name similarity: 0.67, keyword similarity: 0.12)
+  - yogsbrain (score: 0.67, name similarity: 0.67, keyword similarity: 0.21)
+  - albino (score: 0.67, name similarity: 0.67, keyword similarity: 0.03)
+
+Pages that may want to link to 'sacrificial_sword':
+  - scroll_of_domination (score: 1.00, name similarity: 0.50, keyword similarity: 0.11)
+  - necromancy (score: 0.74, name similarity: 0.24, keyword similarity: 0.12)
+  - items (score: 0.62, name similarity: 0.12, keyword similarity: 0.07)
+  - candle_of_visions (score: 0.53, name similarity: 0.53, keyword similarity: 0.13)
+  - magic_arrow_spell (score: 0.53, name similarity: 0.53, keyword similarity: 0.11)
+
+Pages that may want to link to 'necrotism':
+  - necropolis (score: 1.20, name similarity: 0.70, keyword similarity: 0.14)
+  - mechanics (score: 1.17, name similarity: 0.67, keyword similarity: 0.08)
+  - necromancy (score: 1.10, name similarity: 0.60, keyword similarity: 0.14)
+  - necromancer (score: 1.05, name similarity: 0.55, keyword similarity: 0.19)
+  - class_armor (score: 0.95, name similarity: 0.45, keyword similarity: 0.14)
+
+Pages that may want to link to 'roar_spell':
+  - spell_affinities (score: 0.88, name similarity: 0.38, keyword similarity: 0.14)
+  - soul_reaper (score: 0.73, name similarity: 0.73, keyword similarity: 0.08)
+  - gnoll (score: 0.70, name similarity: 0.20, keyword similarity: 0.17)
+  - root_spell (score: 0.70, name similarity: 0.70, keyword similarity: 0.32)
+  - cloak_spell (score: 0.64, name similarity: 0.64, keyword similarity: 0.32)
+
+Pages that may want to link to 'warlock_mob':
+  - crystal_mob (score: 0.73, name similarity: 0.73, keyword similarity: 0.23)
+  - warlock_armor (score: 0.69, name similarity: 0.69, keyword similarity: 0.10)
+  - blank_scroll (score: 0.67, name similarity: 0.67, keyword similarity: 0.13)
+  - class_armor (score: 0.64, name similarity: 0.64, keyword similarity: 0.16)
+  - warlock (score: 0.64, name similarity: 0.64, keyword similarity: 0.29)
+
+Pages that may want to link to 'kobold_icemancer':
+  - koboldicemancer (score: 1.25, name similarity: 0.75, keyword similarity: 0.03)
+  - iceguardiancore (score: 1.00, name similarity: 0.50, keyword similarity: 0.17)
+  - iceguardian (score: 0.94, name similarity: 0.44, keyword similarity: 0.20)
+  - ice_caves (score: 0.81, name similarity: 0.31, keyword similarity: 0.21)
+  - enemies (score: 0.75, name similarity: 0.25, keyword similarity: 0.12)
+
+Pages that may want to link to 'rogue':
+  - changelog (score: 0.83, name similarity: 0.33, keyword similarity: 0.08)
+  - pixel_dungeon (score: 0.81, name similarity: 0.31, keyword similarity: 0.07)
+  - necromancy (score: 0.80, name similarity: 0.30, keyword similarity: 0.15)
+  - freerunner (score: 0.80, name similarity: 0.30, keyword similarity: 0.25)
+  - hero_subclasses (score: 0.77, name similarity: 0.27, keyword similarity: 0.15)
+
+Pages that may want to link to 'summon_deathling':
+  - exhumation (score: 1.06, name similarity: 0.56, keyword similarity: 0.15)
+  - deathling (score: 1.06, name similarity: 0.56, keyword similarity: 0.25)
+  - raise_dead (score: 0.88, name similarity: 0.38, keyword similarity: 0.25)
+  - dark_sacrifice (score: 0.88, name similarity: 0.38, keyword similarity: 0.18)
+  - necromancer_robe (score: 0.88, name similarity: 0.38, keyword similarity: 0.23)
+
+Pages that may want to link to 'mercenarynpc':
+  - spidermindamber (score: 0.67, name similarity: 0.40, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.25, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.42, keyword similarity: 0.67)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.29, keyword similarity: 0.67)
+  - yogsheart (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+
+Pages that may want to link to 'caves':
+  - ice_caves (score: 1.06, name similarity: 0.56, keyword similarity: 0.12)
+  - bosses (score: 0.83, name similarity: 0.33, keyword similarity: 0.09)
+  - changelog (score: 0.83, name similarity: 0.33, keyword similarity: 0.08)
+  - necropolis (score: 0.80, name similarity: 0.30, keyword similarity: 0.15)
+  - sub_levels (score: 0.80, name similarity: 0.30, keyword similarity: 0.12)
+
+Pages that may want to link to 'potion_of_toxic_gas':
+  - potion_of_paralytic_gas (score: 0.98, name similarity: 0.48, keyword similarity: 0.32)
+  - toxic_gas (score: 0.97, name similarity: 0.47, keyword similarity: 0.26)
+  - modding_custom_mobs (score: 0.92, name similarity: 0.42, keyword similarity: 0.11)
+  - plague_doctor (score: 0.87, name similarity: 0.37, keyword similarity: 0.17)
+  - potion (score: 0.76, name similarity: 0.26, keyword similarity: 0.16)
+
+Pages that may want to link to 'christmas_turkey':
+  - magic_torch_spell (score: 0.59, name similarity: 0.59, keyword similarity: 0.18)
+  - kunai_throw_spell (score: 0.59, name similarity: 0.59, keyword similarity: 0.15)
+  - curse_item_spell (score: 0.56, name similarity: 0.56, keyword similarity: 0.17)
+  - arcane_stylus (score: 0.56, name similarity: 0.56, keyword similarity: 0.17)
+  - exhumation_spell (score: 0.56, name similarity: 0.56, keyword similarity: 0.13)
+
+Pages that may want to link to 'giant_rat_skull':
+  - rats (score: 0.77, name similarity: 0.27, keyword similarity: 0.20)
+  - items (score: 0.70, name similarity: 0.20, keyword similarity: 0.07)
+  - the_soulbringer (score: 0.60, name similarity: 0.60, keyword similarity: 0.12)
+  - kunai_throw_spell (score: 0.59, name similarity: 0.59, keyword similarity: 0.15)
+  - summon_deathling (score: 0.56, name similarity: 0.56, keyword similarity: 0.14)
+
+Pages that may want to link to 'assassin_armor':
+  - freerunner_armor (score: 0.96, name similarity: 0.38, keyword similarity: 0.96)
+  - armor_kit (score: 0.93, name similarity: 0.43, keyword similarity: 0.18)
+  - assassin (score: 0.79, name similarity: 0.29, keyword similarity: 0.17)
+  - gladiator_armor (score: 0.74, name similarity: 0.40, keyword similarity: 0.74)
+  - scout_armor (score: 0.70, name similarity: 0.43, keyword similarity: 0.70)
+
+Pages that may want to link to 'albino':
+  - albino_rat (score: 1.10, name similarity: 0.60, keyword similarity: 0.03)
+  - changelog (score: 0.94, name similarity: 0.44, keyword similarity: 0.01)
+  - spidermindamber (score: 0.67, name similarity: 0.27, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.25, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.17, keyword similarity: 0.67)
+
+Pages that may want to link to 'plaguedoctornpc':
+  - plague_doctor (score: 0.73, name similarity: 0.73, keyword similarity: 0.10)
+  - townguardnpc (score: 0.67, name similarity: 0.67, keyword similarity: 0.05)
+  - azuterron_npc (score: 0.60, name similarity: 0.60, keyword similarity: 0.12)
+  - iceguardiancore (score: 0.60, name similarity: 0.60, keyword similarity: 0.09)
+  - azuterronnpc (score: 0.60, name similarity: 0.60, keyword similarity: 0.13)
+
+Pages that may want to link to 'heal_spell':
+  - spell_affinities (score: 0.88, name similarity: 0.38, keyword similarity: 0.16)
+  - priest (score: 0.80, name similarity: 0.30, keyword similarity: 0.22)
+  - charm_spell (score: 0.75, name similarity: 0.64, keyword similarity: 0.75)
+  - magic_arrow_spell (score: 0.73, name similarity: 0.35, keyword similarity: 0.73)
+  - curse_item_spell (score: 0.73, name similarity: 0.31, keyword similarity: 0.73)
+
+Pages that may want to link to 'witchdoctor_armor':
+  - witchdoctor (score: 0.97, name similarity: 0.47, keyword similarity: 0.14)
+  - armor_kit (score: 0.91, name similarity: 0.41, keyword similarity: 0.19)
+  - scout_armor (score: 0.91, name similarity: 0.41, keyword similarity: 0.91)
+  - class_armor (score: 0.85, name similarity: 0.35, keyword similarity: 0.12)
+  - warlock_armor (score: 0.70, name similarity: 0.41, keyword similarity: 0.70)
+
+Pages that may want to link to 'cold_spirit':
+  - coldspirit (score: 1.32, name similarity: 0.82, keyword similarity: 0.03)
+  - ice_caves (score: 0.86, name similarity: 0.36, keyword similarity: 0.13)
+  - lua_scripts (score: 0.73, name similarity: 0.73, keyword similarity: 0.06)
+  - corpse_dust (score: 0.73, name similarity: 0.73, keyword similarity: 0.05)
+  - enemies (score: 0.68, name similarity: 0.18, keyword similarity: 0.10)
+
+Pages that may want to link to 'moisten':
+  - potion_of_strength (score: 0.83, name similarity: 0.33, keyword similarity: 0.11)
+  - changelog (score: 0.83, name similarity: 0.33, keyword similarity: 0.05)
+  - start (score: 0.79, name similarity: 0.29, keyword similarity: 0.12)
+  - necrotism (score: 0.78, name similarity: 0.78, keyword similarity: 0.11)
+  - common_arrow (score: 0.75, name similarity: 0.25, keyword similarity: 0.13)
+
+Pages that may want to link to 'obsidian_skull':
+  - soul_reaper (score: 0.99, name similarity: 0.43, keyword similarity: 0.49)
+  - exploding_skull (score: 0.60, name similarity: 0.60, keyword similarity: 0.12)
+  - blank_scroll (score: 0.57, name similarity: 0.57, keyword similarity: 0.09)
+  - explodingskull (score: 0.57, name similarity: 0.57, keyword similarity: 0.15)
+  - enslaved_soul (score: 0.57, name similarity: 0.57, keyword similarity: 0.11)
+
+Pages that may want to link to 'goo':
+  - rogue (score: 0.90, name similarity: 0.40, keyword similarity: 0.16)
+  - dm300 (score: 0.87, name similarity: 0.00, keyword similarity: 0.37)
+  - dungeon (score: 0.79, name similarity: 0.29, keyword similarity: 0.13)
+  - mobs (score: 0.75, name similarity: 0.25, keyword similarity: 0.09)
+  - mods (score: 0.75, name similarity: 0.25, keyword similarity: 0.13)
+
+Pages that may want to link to 'order_spell':
+  - priest (score: 0.86, name similarity: 0.36, keyword similarity: 0.17)
+  - spell_affinities (score: 0.81, name similarity: 0.31, keyword similarity: 0.13)
+  - root_spell (score: 0.64, name similarity: 0.64, keyword similarity: 0.30)
+  - soul_reaper (score: 0.64, name similarity: 0.64, keyword similarity: 0.10)
+  - roar_spell (score: 0.64, name similarity: 0.64, keyword similarity: 0.29)
+
+Pages that may want to link to 'bone_saw':
+  - weapons (score: 1.25, name similarity: 0.75, keyword similarity: 0.23)
+  - plague_doctor (score: 0.81, name similarity: 0.31, keyword similarity: 0.13)
+  - accuracy (score: 0.72, name similarity: 0.12, keyword similarity: 0.22)
+  - snail_mob (score: 0.67, name similarity: 0.67, keyword similarity: 0.19)
+  - chaos_bow (score: 0.67, name similarity: 0.67, keyword similarity: 0.14)
+
+Pages that may want to link to 'eye':
+  - larva (score: 0.84, name similarity: 0.00, keyword similarity: 0.34)
+  - yog (score: 0.83, name similarity: 0.33, keyword similarity: 0.20)
+  - ring_of_elements (score: 0.79, name similarity: 0.06, keyword similarity: 0.29)
+  - yogseye (score: 0.79, name similarity: 0.29, keyword similarity: 0.26)
+  - treacherousspirit (score: 0.77, name similarity: 0.06, keyword similarity: 0.27)
+
+Pages that may want to link to 'cloth_armor':
+  - leather_armor (score: 1.12, name similarity: 0.62, keyword similarity: 0.24)
+  - armor (score: 0.86, name similarity: 0.36, keyword similarity: 0.24)
+  - crystal_mob (score: 0.73, name similarity: 0.73, keyword similarity: 0.17)
+  - magic_torch (score: 0.73, name similarity: 0.73, keyword similarity: 0.02)
+  - gothic_armor (score: 0.67, name similarity: 0.67, keyword similarity: 0.05)
+
+Pages that may want to link to 'ice_guardian_core':
+  - iceguardiancore (score: 1.09, name similarity: 0.59, keyword similarity: 0.23)
+  - iceguardian (score: 1.03, name similarity: 0.53, keyword similarity: 0.21)
+  - toxic_gas (score: 0.85, name similarity: 0.35, keyword similarity: 0.11)
+  - ice_caves (score: 0.79, name similarity: 0.29, keyword similarity: 0.19)
+  - ice_key (score: 0.74, name similarity: 0.24, keyword similarity: 0.19)
+
+Pages that may want to link to 'crab':
+  - rats (score: 1.00, name similarity: 0.50, keyword similarity: 0.21)
+  - caves (score: 0.90, name similarity: 0.40, keyword similarity: 0.10)
+  - faq (score: 0.75, name similarity: 0.25, keyword similarity: 0.07)
+  - sewers (score: 0.67, name similarity: 0.17, keyword similarity: 0.14)
+  - summon_beast_spell (score: 0.66, name similarity: 0.11, keyword similarity: 0.16)
+
+Pages that may want to link to 'blackcat':
+  - blackrat (score: 0.75, name similarity: 0.75, keyword similarity: 0.67)
+  - spidermindamber (score: 0.67, name similarity: 0.13, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.17, keyword similarity: 0.67)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.24, keyword similarity: 0.67)
+
+Pages that may want to link to 'necromancer_armor':
+  - necromancer_robe (score: 0.97, name similarity: 0.47, keyword similarity: 0.22)
+  - necromancer (score: 0.91, name similarity: 0.41, keyword similarity: 0.19)
+  - necromancy (score: 0.91, name similarity: 0.41, keyword similarity: 0.16)
+  - class_armor (score: 0.85, name similarity: 0.35, keyword similarity: 0.17)
+  - necrotism (score: 0.85, name similarity: 0.35, keyword similarity: 0.27)
+
+Pages that may want to link to 'yogs_teeth':
+  - yogsteeth (score: 1.20, name similarity: 0.70, keyword similarity: 0.03)
+  - yogseye (score: 1.00, name similarity: 0.50, keyword similarity: 0.10)
+  - toxic_gas (score: 1.00, name similarity: 0.50, keyword similarity: 0.06)
+  - yogsbrain (score: 0.90, name similarity: 0.40, keyword similarity: 0.09)
+  - yog (score: 0.80, name similarity: 0.30, keyword similarity: 0.11)
+
+Pages that may want to link to 'wooden_bow':
+  - weapons (score: 0.90, name similarity: 0.40, keyword similarity: 0.06)
+  - bone_saw (score: 0.60, name similarity: 0.60, keyword similarity: 0.05)
+  - undead_mobs (score: 0.55, name similarity: 0.55, keyword similarity: 0.07)
+  - warden_armor (score: 0.50, name similarity: 0.50, keyword similarity: 0.04)
+  - lloyds_beacon (score: 0.46, name similarity: 0.46, keyword similarity: 0.06)
+
+Pages that may want to link to 'yogseye':
+  - yog (score: 0.93, name similarity: 0.43, keyword similarity: 0.24)
+  - yogsheart (score: 0.56, name similarity: 0.56, keyword similarity: 0.03)
+  - yogsteeth (score: 0.56, name similarity: 0.56, keyword similarity: 0.02)
+  - yogs_teeth (score: 0.50, name similarity: 0.50, keyword similarity: 0.10)
+  - yogsbrain (score: 0.44, name similarity: 0.44, keyword similarity: 0.30)
+
+Pages that may want to link to 'dash_spell':
+  - sprout_spell (score: 0.79, name similarity: 0.42, keyword similarity: 0.79)
+  - magic_arrow_spell (score: 0.75, name similarity: 0.35, keyword similarity: 0.75)
+  - charm_spell (score: 0.74, name similarity: 0.64, keyword similarity: 0.74)
+  - smash_spell (score: 0.74, name similarity: 0.64, keyword similarity: 0.74)
+  - backstab_spell (score: 0.73, name similarity: 0.43, keyword similarity: 0.73)
+
+Pages that may want to link to 'healer_npc':
+  - healernpc (score: 1.30, name similarity: 0.80, keyword similarity: 0.04)
+  - gnoll_brute (score: 0.95, name similarity: 0.45, keyword similarity: 0.37)
+  - npcs (score: 0.80, name similarity: 0.30, keyword similarity: 0.15)
+  - tome_of_mastery (score: 0.78, name similarity: 0.27, keyword similarity: 0.28)
+  - charm_spell (score: 0.73, name similarity: 0.73, keyword similarity: 0.15)
+
+Pages that may want to link to 'sheep':
+  - changelog (score: 0.72, name similarity: 0.22, keyword similarity: 0.01)
+  - spidermindamber (score: 0.67, name similarity: 0.20, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.17, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.17, keyword similarity: 0.67)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.18, keyword similarity: 0.67)
+
+Pages that may want to link to 'mechanics':
+  - necrotism (score: 1.17, name similarity: 0.67, keyword similarity: 0.08)
+  - challenges (score: 1.10, name similarity: 0.60, keyword similarity: 0.12)
+  - exhumation (score: 1.10, name similarity: 0.60, keyword similarity: 0.07)
+  - bishopnpc (score: 1.06, name similarity: 0.56, keyword similarity: 0.08)
+  - snail_mob (score: 1.06, name similarity: 0.56, keyword similarity: 0.07)
+
+Pages that may want to link to 'mobs':
+  - mods (score: 1.25, name similarity: 0.75, keyword similarity: 0.07)
+  - monk (score: 1.00, name similarity: 0.50, keyword similarity: 0.10)
+  - zombie (score: 1.00, name similarity: 0.50, keyword similarity: 0.09)
+  - slow (score: 1.00, name similarity: 0.50, keyword similarity: 0.11)
+  - bosses (score: 1.00, name similarity: 0.50, keyword similarity: 0.22)
+
+Pages that may want to link to 'heart_of_darkness':
+  - treacherous_spirit (score: 0.94, name similarity: 0.44, keyword similarity: 0.20)
+  - azuterron_npc (score: 0.91, name similarity: 0.41, keyword similarity: 0.15)
+  - treacherousspirit (score: 0.91, name similarity: 0.41, keyword similarity: 0.16)
+  - stranger (score: 0.85, name similarity: 0.35, keyword similarity: 0.15)
+  - azuterronnpc (score: 0.85, name similarity: 0.35, keyword similarity: 0.14)
+
+Pages that may want to link to 'spiderelite':
+  - spidermind (score: 1.05, name similarity: 0.55, keyword similarity: 0.32)
+  - spiderservant (score: 1.04, name similarity: 0.54, keyword similarity: 0.20)
+  - modding_quick_reference (score: 0.67, name similarity: 0.17, keyword similarity: 0.11)
+  - spidernest (score: 0.64, name similarity: 0.64, keyword similarity: 0.19)
+  - coldspirit (score: 0.64, name similarity: 0.64, keyword similarity: 0.03)
+
+Pages that may want to link to 'wraith':
+  - shadowlord (score: 0.90, name similarity: 0.40, keyword similarity: 0.13)
+  - shadow_lord (score: 0.86, name similarity: 0.36, keyword similarity: 0.17)
+  - zombie (score: 0.81, name similarity: 0.17, keyword similarity: 0.31)
+  - exhumation_spell (score: 0.75, name similarity: 0.25, keyword similarity: 0.09)
+  - undead (score: 0.73, name similarity: 0.17, keyword similarity: 0.23)
+
+Pages that may want to link to 'pixel_dungeon':
+  - explodingskull (score: 1.21, name similarity: 0.71, keyword similarity: 0.06)
+  - wind_gust_spell (score: 1.10, name similarity: 0.60, keyword similarity: 0.08)
+  - summon_deathling (score: 1.06, name similarity: 0.56, keyword similarity: 0.08)
+  - gnoll_zombie (score: 1.04, name similarity: 0.54, keyword similarity: 0.07)
+  - gold_statue (score: 1.04, name similarity: 0.54, keyword similarity: 0.08)
+
+Pages that may want to link to 'differences':
+  - scroll_of_upgrade (score: 0.85, name similarity: 0.35, keyword similarity: 0.07)
+  - start (score: 0.68, name similarity: 0.18, keyword similarity: 0.13)
+  - fan_stories (score: 0.55, name similarity: 0.55, keyword similarity: 0.06)
+  - necropolis (score: 0.55, name similarity: 0.55, keyword similarity: 0.05)
+  - spidernest (score: 0.55, name similarity: 0.55, keyword similarity: 0.04)
+
+Pages that may want to link to 'weapons':
+  - bone_saw (score: 1.25, name similarity: 0.75, keyword similarity: 0.23)
+  - newbies (score: 1.07, name similarity: 0.57, keyword similarity: 0.15)
+  - sniper (score: 1.07, name similarity: 0.57, keyword similarity: 0.10)
+  - 6_tier_weapons (score: 1.00, name similarity: 0.50, keyword similarity: 0.04)
+  - sniper_armor (score: 1.00, name similarity: 0.50, keyword similarity: 0.17)
+
+Pages that may want to link to 'kunai_throw_spell':
+  - magic_arrow_spell (score: 0.76, name similarity: 0.59, keyword similarity: 0.76)
+  - backstab_spell (score: 0.75, name similarity: 0.47, keyword similarity: 0.75)
+  - curse_item_spell (score: 0.74, name similarity: 0.53, keyword similarity: 0.74)
+  - smash_spell (score: 0.73, name similarity: 0.41, keyword similarity: 0.73)
+  - charm_spell (score: 0.72, name similarity: 0.47, keyword similarity: 0.72)
+
+Pages that may want to link to 'sniper_armor':
+  - armor_kit (score: 1.00, name similarity: 0.50, keyword similarity: 0.29)
+  - sniper (score: 1.00, name similarity: 0.50, keyword similarity: 0.15)
+  - spider_armor (score: 0.75, name similarity: 0.75, keyword similarity: 0.05)
+  - priest_armor (score: 0.75, name similarity: 0.75, keyword similarity: 0.22)
+  - fan_stories (score: 0.67, name similarity: 0.67, keyword similarity: 0.03)
+
+Pages that may want to link to 'mimicpie':
+  - pasty_mimic (score: 0.86, name similarity: 0.36, keyword similarity: 0.02)
+  - spidermindamber (score: 0.67, name similarity: 0.27, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.17, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.29, keyword similarity: 0.67)
+
+Pages that may want to link to 'senior':
+  - prison (score: 0.83, name similarity: 0.83, keyword similarity: 0.02)
+  - sniper (score: 0.83, name similarity: 0.83, keyword similarity: 0.05)
+  - monk (score: 0.83, name similarity: 0.33, keyword similarity: 0.04)
+  - moisten (score: 0.71, name similarity: 0.71, keyword similarity: 0.02)
+  - spinner (score: 0.71, name similarity: 0.71, keyword similarity: 0.67)
+
+Pages that may want to link to 'regeneration':
+  - changelog (score: 0.92, name similarity: 0.42, keyword similarity: 0.06)
+  - challenges (score: 0.83, name similarity: 0.33, keyword similarity: 0.13)
+  - rings (score: 0.83, name similarity: 0.33, keyword similarity: 0.13)
+  - skill_points (score: 0.83, name similarity: 0.33, keyword similarity: 0.15)
+  - die_hard_spell (score: 0.79, name similarity: 0.29, keyword similarity: 0.21)
+
+Pages that may want to link to 'ring_of_stone_blood':
+  - items (score: 0.71, name similarity: 0.21, keyword similarity: 0.06)
+  - start (score: 0.66, name similarity: 0.16, keyword similarity: 0.10)
+  - the_soulbringer (score: 0.58, name similarity: 0.58, keyword similarity: 0.11)
+  - scroll_of_identify (score: 0.58, name similarity: 0.58, keyword similarity: 0.14)
+  - ring_of_elements (score: 0.58, name similarity: 0.58, keyword similarity: 0.12)
+
+Pages that may want to link to 'cloak':
+  - cloak_spell (score: 0.95, name similarity: 0.45, keyword similarity: 0.34)
+  - changelog (score: 0.94, name similarity: 0.44, keyword similarity: 0.04)
+  - hide_in_grass_spell (score: 0.81, name similarity: 0.11, keyword similarity: 0.31)
+  - skill_points (score: 0.75, name similarity: 0.25, keyword similarity: 0.11)
+  - warlock (score: 0.71, name similarity: 0.71, keyword similarity: 0.15)
+
+Pages that may want to link to 'bard_npc':
+  - barmannpc (score: 0.67, name similarity: 0.67, keyword similarity: 0.19)
+  - bellanpc (score: 0.62, name similarity: 0.62, keyword similarity: 0.05)
+  - healer_npc (score: 0.60, name similarity: 0.60, keyword similarity: 0.16)
+  - healernpc (score: 0.56, name similarity: 0.56, keyword similarity: 0.05)
+  - drunkardnpc (score: 0.55, name similarity: 0.55, keyword similarity: 0.15)
+
+Pages that may want to link to 'spiderservant':
+  - spider_nest (score: 1.12, name similarity: 0.62, keyword similarity: 0.13)
+  - spider_egg (score: 0.96, name similarity: 0.46, keyword similarity: 0.09)
+  - spiders (score: 0.96, name similarity: 0.46, keyword similarity: 0.07)
+  - poison (score: 0.81, name similarity: 0.31, keyword similarity: 0.18)
+  - modding_quick_reference (score: 0.72, name similarity: 0.22, keyword similarity: 0.10)
+
+Pages that may want to link to 'revived_statue':
+  - gold_statue (score: 1.14, name similarity: 0.50, keyword similarity: 0.64)
+  - armored_statue (score: 1.07, name similarity: 0.57, keyword similarity: 0.27)
+  - spiderservant (score: 0.57, name similarity: 0.57, keyword similarity: 0.16)
+  - unsorted_arts (score: 0.57, name similarity: 0.57, keyword similarity: 0.00)
+  - raise_dead (score: 0.50, name similarity: 0.50, keyword similarity: 0.15)
+
+Pages that may want to link to 'servantnpc':
+  - spidermindamber (score: 0.67, name similarity: 0.40, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.42, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.42, keyword similarity: 0.67)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.41, keyword similarity: 0.67)
+  - yogsheart (score: 0.67, name similarity: 0.50, keyword similarity: 0.67)
+
+Pages that may want to link to 'haste_spell':
+  - haste (score: 0.95, name similarity: 0.45, keyword similarity: 0.26)
+  - spell_affinities (score: 0.94, name similarity: 0.44, keyword similarity: 0.12)
+  - charm_spell (score: 0.64, name similarity: 0.64, keyword similarity: 0.33)
+  - heal_spell (score: 0.64, name similarity: 0.64, keyword similarity: 0.33)
+  - dash_spell (score: 0.64, name similarity: 0.64, keyword similarity: 0.32)
+
+Pages that may want to link to 'battle_mage_armor':
+  - battle_mage (score: 0.97, name similarity: 0.47, keyword similarity: 0.14)
+  - warlock_armor (score: 0.97, name similarity: 0.35, keyword similarity: 0.97)
+  - armor_kit (score: 0.85, name similarity: 0.35, keyword similarity: 0.19)
+  - scout_armor (score: 0.72, name similarity: 0.35, keyword similarity: 0.72)
+  - witchdoctor_armor (score: 0.70, name similarity: 0.35, keyword similarity: 0.70)
+
+Pages that may want to link to 'cagedkobold':
+  - changelog (score: 1.05, name similarity: 0.55, keyword similarity: 0.08)
+  - ice_key (score: 0.77, name similarity: 0.27, keyword similarity: 0.14)
+  - cloak_spell (score: 0.55, name similarity: 0.55, keyword similarity: 0.11)
+  - gold_statue (score: 0.55, name similarity: 0.55, keyword similarity: 0.10)
+  - warlock_mob (score: 0.55, name similarity: 0.55, keyword similarity: 0.08)
+
+Pages that may want to link to 'spideregg':
+  - spiders (score: 1.17, name similarity: 0.67, keyword similarity: 0.12)
+  - spidernest (score: 1.10, name similarity: 0.60, keyword similarity: 0.32)
+  - spider_nest (score: 1.05, name similarity: 0.55, keyword similarity: 0.13)
+  - spider_egg (score: 0.70, name similarity: 0.70, keyword similarity: 0.11)
+  - spiderguard (score: 0.64, name similarity: 0.64, keyword similarity: 0.02)
+
+Pages that may want to link to 'shamanelder':
+  - shaman_mob (score: 0.95, name similarity: 0.45, keyword similarity: 0.03)
+  - spell_book (score: 0.77, name similarity: 0.27, keyword similarity: 0.02)
+  - gnoll (score: 0.68, name similarity: 0.18, keyword similarity: 0.02)
+  - spidermindamber (score: 0.67, name similarity: 0.47, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.25, keyword similarity: 0.67)
+
+Pages that may want to link to 'chaos_set':
+  - chaos_bow (score: 1.17, name similarity: 0.67, keyword similarity: 0.23)
+  - chaos_shield (score: 1.08, name similarity: 0.58, keyword similarity: 0.16)
+  - chaos_armor (score: 1.05, name similarity: 0.55, keyword similarity: 0.25)
+  - chaos_crystal (score: 1.04, name similarity: 0.54, keyword similarity: 0.22)
+  - yogsheart (score: 0.67, name similarity: 0.67, keyword similarity: 0.02)
+
+Pages that may want to link to 'wind_gust':
+  - wind_gust_spell (score: 1.10, name similarity: 0.60, keyword similarity: 0.26)
+  - elementals (score: 0.80, name similarity: 0.30, keyword similarity: 0.10)
+  - airelemental (score: 0.75, name similarity: 0.25, keyword similarity: 0.11)
+  - mage (score: 0.64, name similarity: 0.11, keyword similarity: 0.14)
+  - spells (score: 0.64, name similarity: 0.11, keyword similarity: 0.14)
+
+Pages that may want to link to 'chaos_shield':
+  - chaos_set (score: 1.08, name similarity: 0.58, keyword similarity: 0.16)
+  - chaos_crystal (score: 1.04, name similarity: 0.54, keyword similarity: 0.22)
+  - chaos_armor (score: 1.00, name similarity: 0.50, keyword similarity: 0.19)
+  - chaos_bow (score: 1.00, name similarity: 0.50, keyword similarity: 0.17)
+  - shields (score: 1.00, name similarity: 0.50, keyword similarity: 0.24)
+
+Pages that may want to link to 'air_elemental':
+  - airelemental (score: 1.12, name similarity: 0.62, keyword similarity: 0.28)
+  - fireelemental (score: 1.12, name similarity: 0.62, keyword similarity: 0.20)
+  - iceelemental (score: 1.04, name similarity: 0.54, keyword similarity: 0.20)
+  - elementals (score: 0.96, name similarity: 0.46, keyword similarity: 0.17)
+  - stun (score: 0.65, name similarity: 0.15, keyword similarity: 0.13)
+
+Pages that may want to link to 'fetidrat':
+  - rats (score: 0.88, name similarity: 0.38, keyword similarity: 0.03)
+  - paralysis (score: 0.83, name similarity: 0.33, keyword similarity: 0.02)
+  - giant_rat_skull (score: 0.77, name similarity: 0.27, keyword similarity: 0.04)
+  - spidermindamber (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.17, keyword similarity: 0.67)
+
+Pages that may want to link to 'undead_mobs':
+  - dreadknight (score: 0.86, name similarity: 0.36, keyword similarity: 0.09)
+  - stun (score: 0.77, name similarity: 0.27, keyword similarity: 0.11)
+  - paralysis (score: 0.68, name similarity: 0.18, keyword similarity: 0.11)
+  - slow (score: 0.68, name similarity: 0.18, keyword similarity: 0.12)
+  - gold_statue (score: 0.64, name similarity: 0.64, keyword similarity: 0.12)
+
+Pages that may want to link to 'slow':
+  - wands (score: 0.90, name similarity: 0.40, keyword similarity: 0.11)
+  - snail_mob (score: 0.83, name similarity: 0.33, keyword similarity: 0.19)
+  - poison (score: 0.83, name similarity: 0.33, keyword similarity: 0.24)
+  - iceelemental (score: 0.79, name similarity: 0.08, keyword similarity: 0.29)
+  - moisten (score: 0.79, name similarity: 0.29, keyword similarity: 0.10)
+
+Pages that may want to link to 'stranger':
+  - azuterronnpc (score: 0.92, name similarity: 0.42, keyword similarity: 0.38)
+  - azuterron_npc (score: 0.88, name similarity: 0.38, keyword similarity: 0.24)
+  - enemies (score: 0.88, name similarity: 0.38, keyword similarity: 0.08)
+  - heart_of_darkness (score: 0.85, name similarity: 0.35, keyword similarity: 0.15)
+  - treacherous_spirit (score: 0.78, name similarity: 0.28, keyword similarity: 0.18)
+
+Pages that may want to link to 'barmannpc':
+  - bard_npc (score: 0.67, name similarity: 0.67, keyword similarity: 0.19)
+  - bellanpc (score: 0.56, name similarity: 0.56, keyword similarity: 0.04)
+  - healernpc (score: 0.56, name similarity: 0.56, keyword similarity: 0.04)
+  - boomerang (score: 0.56, name similarity: 0.56, keyword similarity: 0.09)
+  - necromancy (score: 0.50, name similarity: 0.50, keyword similarity: 0.12)
+
+Pages that may want to link to 'mods_possibilities':
+  - firebloom_seed (score: 0.50, name similarity: 0.50, keyword similarity: 0.05)
+  - magic_torch_spell (score: 0.50, name similarity: 0.50, keyword similarity: 0.11)
+  - exhumation_spell (score: 0.50, name similarity: 0.50, keyword similarity: 0.09)
+  - summon_deathling (score: 0.50, name similarity: 0.50, keyword similarity: 0.08)
+  - equipment_slots (score: 0.50, name similarity: 0.50, keyword similarity: 0.12)
+
+Pages that may want to link to 'sociologistnpc':
+  - spidermindamber (score: 0.67, name similarity: 0.27, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.50, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.29, keyword similarity: 0.67)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.47, keyword similarity: 0.67)
+  - yogsheart (score: 0.67, name similarity: 0.29, keyword similarity: 0.67)
+
+Pages that may want to link to 'runicskull':
+  - necropolis (score: 1.10, name similarity: 0.60, keyword similarity: 0.16)
+  - lua_scripts (score: 0.55, name similarity: 0.55, keyword similarity: 0.11)
+  - blank_scroll (score: 0.50, name similarity: 0.50, keyword similarity: 0.11)
+  - kusarigama (score: 0.50, name similarity: 0.50, keyword similarity: 0.17)
+  - coldspirit (score: 0.50, name similarity: 0.50, keyword similarity: 0.03)
+
+Pages that may want to link to 'shaman':
+  - shaman_mob (score: 1.00, name similarity: 0.50, keyword similarity: 0.19)
+  - shamanelder (score: 0.95, name similarity: 0.45, keyword similarity: 0.03)
+  - shaman_armor (score: 0.92, name similarity: 0.42, keyword similarity: 0.24)
+  - prison (score: 0.83, name similarity: 0.33, keyword similarity: 0.06)
+  - class_armor (score: 0.77, name similarity: 0.27, keyword similarity: 0.16)
+
+Pages that may want to link to 'the_soulbringer':
+  - items (score: 0.77, name similarity: 0.27, keyword similarity: 0.07)
+  - summon_deathling (score: 0.69, name similarity: 0.69, keyword similarity: 0.13)
+  - ring_of_haste (score: 0.67, name similarity: 0.67, keyword similarity: 0.12)
+  - gnoll_brute (score: 0.67, name similarity: 0.67, keyword similarity: 0.08)
+  - kunai_throw_spell (score: 0.65, name similarity: 0.65, keyword similarity: 0.11)
+
+Pages that may want to link to 'combat':
+  - combo (score: 1.17, name similarity: 0.67, keyword similarity: 0.11)
+  - crystal_mob (score: 1.05, name similarity: 0.55, keyword similarity: 0.16)
+  - zombie (score: 1.00, name similarity: 0.50, keyword similarity: 0.12)
+  - mobs (score: 1.00, name similarity: 0.50, keyword similarity: 0.09)
+  - cloak (score: 1.00, name similarity: 0.50, keyword similarity: 0.13)
+
+Pages that may want to link to 'scroll_of_upgrade':
+  - scroll_of_weapon_upgrade (score: 1.04, name similarity: 0.54, keyword similarity: 0.44)
+  - cloth_armor (score: 0.85, name similarity: 0.35, keyword similarity: 0.27)
+  - scroll (score: 0.83, name similarity: 0.29, keyword similarity: 0.33)
+  - short_sword (score: 0.80, name similarity: 0.29, keyword similarity: 0.30)
+  - scrolls (score: 0.79, name similarity: 0.29, keyword similarity: 0.15)
+
+Pages that may want to link to 'doctor_armor':
+  - plague_doctor (score: 1.04, name similarity: 0.54, keyword similarity: 0.17)
+  - armor_kit (score: 1.00, name similarity: 0.50, keyword similarity: 0.14)
+  - class_armor (score: 1.00, name similarity: 0.50, keyword similarity: 0.14)
+  - witchdoctor (score: 0.92, name similarity: 0.42, keyword similarity: 0.13)
+  - crystal_mob (score: 0.58, name similarity: 0.58, keyword similarity: 0.11)
+
+Pages that may want to link to 'priest_armor':
+  - priest (score: 1.00, name similarity: 0.50, keyword similarity: 0.27)
+  - class_armor (score: 1.00, name similarity: 0.50, keyword similarity: 0.15)
+  - spider_armor (score: 0.75, name similarity: 0.75, keyword similarity: 0.05)
+  - sniper_armor (score: 0.75, name similarity: 0.75, keyword similarity: 0.22)
+  - fan_stories (score: 0.67, name similarity: 0.67, keyword similarity: 0.03)
+
+Pages that may want to link to 'lua_scripts':
+  - cold_spirit (score: 0.73, name similarity: 0.73, keyword similarity: 0.06)
+  - charm_spell (score: 0.64, name similarity: 0.64, keyword similarity: 0.18)
+  - crystal_mob (score: 0.64, name similarity: 0.64, keyword similarity: 0.08)
+  - soul_reaper (score: 0.64, name similarity: 0.64, keyword similarity: 0.07)
+  - coldspirit (score: 0.64, name similarity: 0.64, keyword similarity: 0.03)
+
+Pages that may want to link to 'mods':
+  - mods_limitations (score: 0.75, name similarity: 0.25, keyword similarity: 0.21)
+  - mobs (score: 0.75, name similarity: 0.75, keyword similarity: 0.07)
+  - mods_possibilities (score: 0.72, name similarity: 0.22, keyword similarity: 0.21)
+  - customizations (score: 0.71, name similarity: 0.21, keyword similarity: 0.15)
+  - modding_getting_started (score: 0.71, name similarity: 0.17, keyword similarity: 0.21)
+
+Pages that may want to link to 'king':
+  - monk (score: 1.00, name similarity: 0.50, keyword similarity: 0.16)
+  - rat_king (score: 1.00, name similarity: 0.50, keyword similarity: 0.14)
+  - gnoll (score: 0.90, name similarity: 0.40, keyword similarity: 0.14)
+  - range (score: 0.90, name similarity: 0.40, keyword similarity: 0.11)
+  - bleeding (score: 0.88, name similarity: 0.38, keyword similarity: 0.11)
+
+Pages that may want to link to 'mana':
+  - skill_points (score: 1.03, name similarity: 0.08, keyword similarity: 0.53)
+  - shaman (score: 1.00, name similarity: 0.50, keyword similarity: 0.09)
+  - mage (score: 1.00, name similarity: 0.50, keyword similarity: 0.16)
+  - wands (score: 0.90, name similarity: 0.40, keyword similarity: 0.14)
+  - ration (score: 0.83, name similarity: 0.33, keyword similarity: 0.13)
+
+Pages that may want to link to 'black_skull':
+  - obsidian_skull (score: 1.00, name similarity: 0.50, keyword similarity: 0.29)
+  - soul_reaper (score: 0.95, name similarity: 0.45, keyword similarity: 0.24)
+  - undead_mobs (score: 0.95, name similarity: 0.45, keyword similarity: 0.11)
+  - black_skull_of_mastery (score: 0.86, name similarity: 0.36, keyword similarity: 0.25)
+  - necropolis (score: 0.77, name similarity: 0.27, keyword similarity: 0.20)
+
+Pages that may want to link to 'scroll_of_identify':
+  - modding_custom_levels (score: 0.98, name similarity: 0.48, keyword similarity: 0.09)
+  - scroll (score: 0.82, name similarity: 0.28, keyword similarity: 0.32)
+  - scrolls (score: 0.78, name similarity: 0.28, keyword similarity: 0.18)
+  - ring_of_stone_blood (score: 0.58, name similarity: 0.58, keyword similarity: 0.14)
+  - candle_of_visions (score: 0.56, name similarity: 0.56, keyword similarity: 0.19)
+
+Pages that may want to link to 'burningfist':
+  - yogsbrain (score: 1.05, name similarity: 0.55, keyword similarity: 0.03)
+  - burning (score: 1.05, name similarity: 0.55, keyword similarity: 0.01)
+  - ring_of_elements (score: 0.94, name similarity: 0.44, keyword similarity: 0.03)
+  - toxic_gas (score: 0.86, name similarity: 0.36, keyword similarity: 0.02)
+  - yogseye (score: 0.68, name similarity: 0.18, keyword similarity: 0.03)
+
+Pages that may want to link to 'tiled':
+  - mods_possibilities (score: 0.78, name similarity: 0.28, keyword similarity: 0.09)
+  - mods_limitations (score: 0.75, name similarity: 0.25, keyword similarity: 0.10)
+  - modding_custom_levels (score: 0.74, name similarity: 0.24, keyword similarity: 0.14)
+  - changelog (score: 0.72, name similarity: 0.22, keyword similarity: 0.11)
+  - mods (score: 0.70, name similarity: 0.20, keyword similarity: 0.17)
+
+Pages that may want to link to 'librariannpc':
+  - necropolis (score: 0.50, name similarity: 0.50, keyword similarity: 0.19)
+  - blank_scroll (score: 0.50, name similarity: 0.50, keyword similarity: 0.12)
+  - artificernpc (score: 0.50, name similarity: 0.50, keyword similarity: 0.25)
+  - healer_npc (score: 0.50, name similarity: 0.50, keyword similarity: 0.19)
+  - bard_npc (score: 0.50, name similarity: 0.50, keyword similarity: 0.22)
+
+Pages that may want to link to 'gnoll_tomahawk':
+  - tomahawk (score: 1.00, name similarity: 0.50, keyword similarity: 0.30)
+  - gnoll (score: 0.79, name similarity: 0.29, keyword similarity: 0.23)
+  - rat_king_crown (score: 0.57, name similarity: 0.57, keyword similarity: 0.19)
+  - summon_deathling (score: 0.56, name similarity: 0.56, keyword similarity: 0.17)
+  - tome_of_knowledge (score: 0.53, name similarity: 0.53, keyword similarity: 0.10)
+
+Pages that may want to link to 'corpse_dust':
+  - necromancy (score: 0.86, name similarity: 0.36, keyword similarity: 0.05)
+  - items (score: 0.77, name similarity: 0.27, keyword similarity: 0.04)
+  - wandmaker (score: 0.77, name similarity: 0.27, keyword similarity: 0.08)
+  - cold_spirit (score: 0.73, name similarity: 0.73, keyword similarity: 0.05)
+  - pseudorat (score: 0.73, name similarity: 0.73, keyword similarity: 0.00)
+
+Pages that may want to link to 'poison':
+  - moisten (score: 1.07, name similarity: 0.57, keyword similarity: 0.11)
+  - newbies (score: 0.93, name similarity: 0.43, keyword similarity: 0.13)
+  - spiders (score: 0.93, name similarity: 0.43, keyword similarity: 0.09)
+  - skeleton (score: 0.88, name similarity: 0.38, keyword similarity: 0.11)
+  - prison (score: 0.83, name similarity: 0.83, keyword similarity: 0.10)
+
+Pages that may want to link to 'yog':
+  - yogseye (score: 0.93, name similarity: 0.43, keyword similarity: 0.24)
+  - yogsheart (score: 0.83, name similarity: 0.33, keyword similarity: 0.04)
+  - yogsbrain (score: 0.83, name similarity: 0.33, keyword similarity: 0.21)
+  - yogsteeth (score: 0.83, name similarity: 0.33, keyword similarity: 0.04)
+  - yogs_teeth (score: 0.80, name similarity: 0.30, keyword similarity: 0.11)
+
+Pages that may want to link to 'arts_by_yuila_kozlova':
+  - black_skull_of_mastery (score: 0.50, name similarity: 0.50, keyword similarity: 0.02)
+  - kunai_throw_spell (score: 0.48, name similarity: 0.48, keyword similarity: 0.02)
+  - crystal_mob (score: 0.43, name similarity: 0.43, keyword similarity: 0.01)
+  - christmas_turkey (score: 0.43, name similarity: 0.43, keyword similarity: 0.02)
+  - giant_rat_skull (score: 0.43, name similarity: 0.43, keyword similarity: 0.03)
+
+Pages that may want to link to 'lloyds_beacon':
+  - blank_scroll (score: 0.62, name similarity: 0.62, keyword similarity: 0.11)
+  - arcane_stylus (score: 0.62, name similarity: 0.62, keyword similarity: 0.19)
+  - crystal_mob (score: 0.62, name similarity: 0.62, keyword similarity: 0.13)
+  - enslaved_soul (score: 0.62, name similarity: 0.62, keyword similarity: 0.19)
+  - chaos_shield (score: 0.62, name similarity: 0.62, keyword similarity: 0.10)
+
+Pages that may want to link to 'skeleton_key':
+  - necropolis (score: 0.92, name similarity: 0.42, keyword similarity: 0.22)
+  - necromancy (score: 0.83, name similarity: 0.33, keyword similarity: 0.15)
+  - yogseye (score: 0.83, name similarity: 0.33, keyword similarity: 0.17)
+  - bosses (score: 0.82, name similarity: 0.25, keyword similarity: 0.32)
+  - necromancer_armor (score: 0.74, name similarity: 0.24, keyword similarity: 0.16)
+
+Pages that may want to link to 'guts':
+  - rats (score: 1.00, name similarity: 0.50, keyword similarity: 0.15)
+  - stranger (score: 0.88, name similarity: 0.38, keyword similarity: 0.12)
+  - dungeon (score: 0.79, name similarity: 0.29, keyword similarity: 0.10)
+  - yogseye (score: 0.79, name similarity: 0.29, keyword similarity: 0.11)
+  - mods (score: 0.75, name similarity: 0.25, keyword similarity: 0.09)
+
+Pages that may want to link to 'journal':
+  - azuterronnpc (score: 0.92, name similarity: 0.42, keyword similarity: 0.11)
+  - azuterron_npc (score: 0.88, name similarity: 0.38, keyword similarity: 0.12)
+  - cagedkobold (score: 0.77, name similarity: 0.27, keyword similarity: 0.10)
+  - jarofsouls (score: 0.60, name similarity: 0.60, keyword similarity: 0.10)
+  - ration (score: 0.57, name similarity: 0.57, keyword similarity: 0.12)
+
+Pages that may want to link to 'shaman_mob':
+  - snail_mob (score: 0.70, name similarity: 0.70, keyword similarity: 0.21)
+  - undead_mobs (score: 0.64, name similarity: 0.64, keyword similarity: 0.09)
+  - bone_saw (score: 0.60, name similarity: 0.60, keyword similarity: 0.20)
+  - chaos_bow (score: 0.60, name similarity: 0.60, keyword similarity: 0.11)
+  - shaman_armor (score: 0.58, name similarity: 0.58, keyword similarity: 0.19)
+
+Pages that may want to link to 'skill_points':
+  - mana (score: 1.03, name similarity: 0.08, keyword similarity: 0.53)
+  - townsfolknpc (score: 0.58, name similarity: 0.58, keyword similarity: 0.02)
+  - cold_spirit (score: 0.58, name similarity: 0.58, keyword similarity: 0.08)
+  - skeleton_key (score: 0.58, name similarity: 0.58, keyword similarity: 0.10)
+  - ignite_spell (score: 0.58, name similarity: 0.58, keyword similarity: 0.16)
+
+Pages that may want to link to 'mimicamulet':
+  - spidermindamber (score: 0.67, name similarity: 0.27, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.25, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.25, keyword similarity: 0.67)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.35, keyword similarity: 0.67)
+  - yogsheart (score: 0.67, name similarity: 0.27, keyword similarity: 0.67)
+
+Pages that may want to link to 'shadowlord':
+  - shadow_lord (score: 1.23, name similarity: 0.73, keyword similarity: 0.37)
+  - crystal_mob (score: 0.95, name similarity: 0.45, keyword similarity: 0.21)
+  - halls (score: 0.90, name similarity: 0.40, keyword similarity: 0.08)
+  - crystal (score: 0.90, name similarity: 0.40, keyword similarity: 0.24)
+  - dungeon (score: 0.70, name similarity: 0.20, keyword similarity: 0.11)
+
+Pages that may want to link to 'pasty':
+  - start (score: 1.10, name similarity: 0.60, keyword similarity: 0.04)
+  - pasty_mimic (score: 0.95, name similarity: 0.45, keyword similarity: 0.09)
+  - paralysis (score: 0.94, name similarity: 0.44, keyword similarity: 0.05)
+  - stun (score: 0.90, name similarity: 0.40, keyword similarity: 0.07)
+  - ration (score: 0.83, name similarity: 0.33, keyword similarity: 0.25)
+
+Pages that may want to link to 'witch_doctor':
+  - witchdoctor (score: 1.17, name similarity: 0.67, keyword similarity: 0.08)
+  - witchdoctor_armor (score: 1.03, name similarity: 0.53, keyword similarity: 0.10)
+  - plague_doctor (score: 0.96, name similarity: 0.46, keyword similarity: 0.03)
+  - armor_kit (score: 0.92, name similarity: 0.42, keyword similarity: 0.08)
+  - hero_subclasses (score: 0.83, name similarity: 0.33, keyword similarity: 0.09)
+
+Pages that may want to link to 'wands':
+  - shaman (score: 1.00, name similarity: 0.50, keyword similarity: 0.10)
+  - wandmaker (score: 0.94, name similarity: 0.44, keyword similarity: 0.15)
+  - range (score: 0.90, name similarity: 0.40, keyword similarity: 0.15)
+  - challenges (score: 0.80, name similarity: 0.30, keyword similarity: 0.08)
+  - crystal (score: 0.79, name similarity: 0.29, keyword similarity: 0.13)
+
+Pages that may want to link to 'chaos_sword':
+  - chaos_armor (score: 1.14, name similarity: 0.64, keyword similarity: 0.14)
+  - chaos_bow (score: 1.14, name similarity: 0.64, keyword similarity: 0.14)
+  - chaos_set (score: 1.05, name similarity: 0.55, keyword similarity: 0.16)
+  - chaos_crystal (score: 1.04, name similarity: 0.54, keyword similarity: 0.13)
+  - chaos (score: 0.95, name similarity: 0.45, keyword similarity: 0.16)
+
+Pages that may want to link to 'pseudorat':
+  - suspiciousrat (score: 1.04, name similarity: 0.54, keyword similarity: 0.04)
+  - rats (score: 0.94, name similarity: 0.44, keyword similarity: 0.03)
+  - corpse_dust (score: 0.73, name similarity: 0.73, keyword similarity: 0.00)
+  - spidermindamber (score: 0.67, name similarity: 0.40, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+
+Pages that may want to link to 'spiderqueen':
+  - spider_nest (score: 1.14, name similarity: 0.64, keyword similarity: 0.02)
+  - spideregg (score: 1.05, name similarity: 0.55, keyword similarity: 0.02)
+  - spider_egg (score: 1.05, name similarity: 0.55, keyword similarity: 0.03)
+  - spiders (score: 1.05, name similarity: 0.55, keyword similarity: 0.01)
+  - spider_queen_carapace (score: 0.93, name similarity: 0.43, keyword similarity: 0.05)
+
+Pages that may want to link to 'dreadknight':
+  - dread_knight (score: 1.33, name similarity: 0.83, keyword similarity: 0.17)
+  - necropolis (score: 0.86, name similarity: 0.36, keyword similarity: 0.15)
+  - necromancy (score: 0.86, name similarity: 0.36, keyword similarity: 0.24)
+  - undead_mobs (score: 0.86, name similarity: 0.36, keyword similarity: 0.09)
+  - undead (score: 0.86, name similarity: 0.36, keyword similarity: 0.15)
+
+Pages that may want to link to 'equipment_slots':
+  - ring_of_haste (score: 0.97, name similarity: 0.47, keyword similarity: 0.12)
+  - dual_wielding (score: 0.90, name similarity: 0.40, keyword similarity: 0.31)
+  - chaos_shield (score: 0.90, name similarity: 0.40, keyword similarity: 0.24)
+  - mechanics (score: 0.83, name similarity: 0.33, keyword similarity: 0.23)
+  - shields (score: 0.78, name similarity: 0.27, keyword similarity: 0.28)
+
+Pages that may want to link to 'town':
+  - gnoll (score: 0.90, name similarity: 0.40, keyword similarity: 0.12)
+  - townsfolknpc (score: 0.83, name similarity: 0.33, keyword similarity: 0.02)
+  - townguardnpc (score: 0.83, name similarity: 0.33, keyword similarity: 0.02)
+  - dungeon (score: 0.79, name similarity: 0.29, keyword similarity: 0.13)
+  - journal (score: 0.79, name similarity: 0.29, keyword similarity: 0.13)
+
+Pages that may want to link to 'plate_armor':
+  - armor (score: 0.86, name similarity: 0.36, keyword similarity: 0.16)
+  - priest_armor (score: 0.67, name similarity: 0.67, keyword similarity: 0.20)
+  - charm_spell (score: 0.64, name similarity: 0.64, keyword similarity: 0.19)
+  - root_spell (score: 0.64, name similarity: 0.64, keyword similarity: 0.19)
+  - crystal_mob (score: 0.64, name similarity: 0.64, keyword similarity: 0.13)
+
+Pages that may want to link to 'dark_sacrifice_spell':
+  - necromancy (score: 0.73, name similarity: 0.20, keyword similarity: 0.23)
+  - magic_arrow_spell (score: 0.52, name similarity: 0.45, keyword similarity: 0.52)
+  - backstab_spell (score: 0.52, name similarity: 0.40, keyword similarity: 0.52)
+  - curse_item_spell (score: 0.51, name similarity: 0.40, keyword similarity: 0.51)
+  - smash_spell (score: 0.51, name similarity: 0.30, keyword similarity: 0.51)
+
+Pages that may want to link to 'shoot_in_eye_spell':
+  - spell_affinities (score: 0.94, name similarity: 0.44, keyword similarity: 0.14)
+  - magic_arrow_spell (score: 0.58, name similarity: 0.39, keyword similarity: 0.58)
+  - smash_spell (score: 0.56, name similarity: 0.33, keyword similarity: 0.56)
+  - charm_spell (score: 0.56, name similarity: 0.33, keyword similarity: 0.56)
+  - backstab_spell (score: 0.56, name similarity: 0.33, keyword similarity: 0.56)
+
+Pages that may want to link to 'kobold':
+  - cagedkobold (score: 0.95, name similarity: 0.45, keyword similarity: 0.11)
+  - koboldicemancer (score: 0.83, name similarity: 0.33, keyword similarity: 0.06)
+  - kobold_icemancer (score: 0.81, name similarity: 0.31, keyword similarity: 0.26)
+  - changelog (score: 0.72, name similarity: 0.22, keyword similarity: 0.03)
+  - ice_key (score: 0.64, name similarity: 0.14, keyword similarity: 0.09)
+
+Pages that may want to link to 'modding_platform_abstraction':
+  - mods (score: 0.64, name similarity: 0.14, keyword similarity: 0.13)
+  - scroll_of_domination (score: 0.46, name similarity: 0.46, keyword similarity: 0.11)
+  - potion_of_paralytic_gas (score: 0.46, name similarity: 0.46, keyword similarity: 0.08)
+  - scroll_of_weapon_upgrade (score: 0.43, name similarity: 0.43, keyword similarity: 0.11)
+  - magic_torch_spell (score: 0.43, name similarity: 0.43, keyword similarity: 0.09)
+
+Pages that may want to link to 'exploding_skull':
+  - explodingskull (score: 1.30, name similarity: 0.80, keyword similarity: 0.20)
+  - enslaved_soul (score: 1.03, name similarity: 0.53, keyword similarity: 0.20)
+  - necropolis (score: 0.97, name similarity: 0.47, keyword similarity: 0.10)
+  - undead_mobs (score: 0.97, name similarity: 0.47, keyword similarity: 0.15)
+  - enemies (score: 0.77, name similarity: 0.27, keyword similarity: 0.09)
+
+Pages that may want to link to 'earth_elemental':
+  - earthelemental (score: 1.03, name similarity: 0.53, keyword similarity: 0.45)
+  - airelemental (score: 0.97, name similarity: 0.47, keyword similarity: 0.25)
+  - fireelemental (score: 0.97, name similarity: 0.47, keyword similarity: 0.24)
+  - iceelemental (score: 0.90, name similarity: 0.40, keyword similarity: 0.33)
+  - elementals (score: 0.90, name similarity: 0.40, keyword similarity: 0.29)
+
+Pages that may want to link to 'bosses':
+  - mobs (score: 1.00, name similarity: 0.50, keyword similarity: 0.22)
+  - yogseye (score: 0.93, name similarity: 0.43, keyword similarity: 0.12)
+  - yogsbrain (score: 0.83, name similarity: 0.33, keyword similarity: 0.14)
+  - priest (score: 0.83, name similarity: 0.33, keyword similarity: 0.14)
+  - combat (score: 0.83, name similarity: 0.33, keyword similarity: 0.12)
+
+Pages that may want to link to 'backstab_spell':
+  - spell_affinities (score: 0.94, name similarity: 0.44, keyword similarity: 0.15)
+  - kunai_throw_spell (score: 0.75, name similarity: 0.47, keyword similarity: 0.75)
+  - magic_arrow_spell (score: 0.75, name similarity: 0.41, keyword similarity: 0.75)
+  - smash_spell (score: 0.75, name similarity: 0.43, keyword similarity: 0.75)
+  - curse_item_spell (score: 0.74, name similarity: 0.44, keyword similarity: 0.74)
+
+Pages that may want to link to 'rat':
+  - dart (score: 1.25, name similarity: 0.75, keyword similarity: 0.12)
+  - rats (score: 1.25, name similarity: 0.75, keyword similarity: 0.19)
+  - bat (score: 1.17, name similarity: 0.67, keyword similarity: 0.34)
+  - ration (score: 1.00, name similarity: 0.50, keyword similarity: 0.15)
+  - crab (score: 1.00, name similarity: 0.50, keyword similarity: 0.20)
+
+Pages that may want to link to 'unsorted_arts':
+  - armored_statue (score: 0.64, name similarity: 0.64, keyword similarity: 0.01)
+  - fan_stories (score: 0.62, name similarity: 0.62, keyword similarity: 0.00)
+  - azuterron_npc (score: 0.62, name similarity: 0.62, keyword similarity: 0.00)
+  - arcane_stylus (score: 0.62, name similarity: 0.62, keyword similarity: 0.01)
+  - ring_of_haste (score: 0.62, name similarity: 0.62, keyword similarity: 0.01)
+
+Pages that may want to link to 'npcs':
+  - bishopnpc (score: 0.94, name similarity: 0.44, keyword similarity: 0.16)
+  - shops (score: 0.90, name similarity: 0.40, keyword similarity: 0.18)
+  - servantnpc (score: 0.90, name similarity: 0.40, keyword similarity: 0.01)
+  - bard_npc (score: 0.88, name similarity: 0.38, keyword similarity: 0.10)
+  - bellanpc (score: 0.88, name similarity: 0.38, keyword similarity: 0.01)
+
+Pages that may want to link to 'deathknight':
+  - death_knight (score: 1.25, name similarity: 0.75, keyword similarity: 0.04)
+  - undead_mobs (score: 0.86, name similarity: 0.36, keyword similarity: 0.01)
+  - undead (score: 0.86, name similarity: 0.36, keyword similarity: 0.02)
+  - dreadknight (score: 0.82, name similarity: 0.82, keyword similarity: 0.03)
+  - enslaved_soul (score: 0.81, name similarity: 0.31, keyword similarity: 0.04)
+
+Pages that may want to link to 'chaos':
+  - chaos_set (score: 1.06, name similarity: 0.56, keyword similarity: 0.24)
+  - chaos_bow (score: 1.06, name similarity: 0.56, keyword similarity: 0.22)
+  - chaos_armor (score: 0.95, name similarity: 0.45, keyword similarity: 0.22)
+  - chaos_staff (score: 0.95, name similarity: 0.45, keyword similarity: 0.14)
+  - chaos_sword (score: 0.95, name similarity: 0.45, keyword similarity: 0.16)
+
+Pages that may want to link to 'scale_armor':
+  - plate_armor (score: 1.14, name similarity: 0.64, keyword similarity: 0.43)
+  - armor (score: 0.86, name similarity: 0.36, keyword similarity: 0.16)
+  - charm_spell (score: 0.73, name similarity: 0.73, keyword similarity: 0.19)
+  - crystal_mob (score: 0.73, name similarity: 0.73, keyword similarity: 0.15)
+  - class_armor (score: 0.73, name similarity: 0.73, keyword similarity: 0.11)
+
+Pages that may want to link to 'elf':
+  - faq (score: 0.83, name similarity: 0.33, keyword similarity: 0.09)
+  - spells (score: 0.83, name similarity: 0.33, keyword similarity: 0.12)
+  - shaman (score: 0.74, name similarity: 0.00, keyword similarity: 0.24)
+  - changelog (score: 0.72, name similarity: 0.22, keyword similarity: 0.09)
+  - scout (score: 0.72, name similarity: 0.00, keyword similarity: 0.22)
+
+Pages that may want to link to 'scrolls':
+  - scroll (score: 1.21, name similarity: 0.71, keyword similarity: 0.30)
+  - blank_scroll (score: 0.92, name similarity: 0.42, keyword similarity: 0.13)
+  - chaos_crystal (score: 0.88, name similarity: 0.38, keyword similarity: 0.13)
+  - cloth_armor (score: 0.86, name similarity: 0.36, keyword similarity: 0.12)
+  - changelog (score: 0.83, name similarity: 0.33, keyword similarity: 0.04)
+
+Pages that may want to link to 'spider_nest':
+  - spidernest (score: 1.23, name similarity: 0.73, keyword similarity: 0.15)
+  - spider_queen (score: 1.17, name similarity: 0.67, keyword similarity: 0.17)
+  - spider_egg (score: 1.14, name similarity: 0.64, keyword similarity: 0.20)
+  - spiders (score: 1.05, name similarity: 0.55, keyword similarity: 0.17)
+  - kusarigama (score: 0.77, name similarity: 0.27, keyword similarity: 0.17)
+
+Pages that may want to link to 'spinner':
+  - poison (score: 1.07, name similarity: 0.57, keyword similarity: 0.02)
+  - sniper (score: 0.86, name similarity: 0.86, keyword similarity: 0.05)
+  - summon_beast_spell (score: 0.72, name similarity: 0.22, keyword similarity: 0.03)
+  - priest (score: 0.71, name similarity: 0.71, keyword similarity: 0.02)
+  - senior (score: 0.71, name similarity: 0.71, keyword similarity: 0.67)
+
+Pages that may want to link to 'rotten_food':
+  - ration (score: 0.86, name similarity: 0.36, keyword similarity: 0.18)
+  - moisten (score: 0.86, name similarity: 0.36, keyword similarity: 0.19)
+  - toxic_gas (score: 0.77, name similarity: 0.27, keyword similarity: 0.14)
+  - items (score: 0.68, name similarity: 0.18, keyword similarity: 0.05)
+  - start (score: 0.68, name similarity: 0.18, keyword similarity: 0.10)
+
+Pages that may want to link to 'spiderguard':
+  - spiderelite (score: 1.05, name similarity: 0.55, keyword similarity: 0.04)
+  - spider_nest (score: 1.05, name similarity: 0.55, keyword similarity: 0.02)
+  - spiderservant (score: 1.04, name similarity: 0.54, keyword similarity: 0.04)
+  - modding_quick_reference (score: 0.76, name similarity: 0.26, keyword similarity: 0.01)
+  - spidermindamber (score: 0.67, name similarity: 0.47, keyword similarity: 0.67)
+
+Pages that may want to link to 'worm':
+  - larva (score: 0.78, name similarity: 0.20, keyword similarity: 0.28)
+  - rats (score: 0.75, name similarity: 0.25, keyword similarity: 0.21)
+  - poison (score: 0.70, name similarity: 0.17, keyword similarity: 0.20)
+  - summon_beast_spell (score: 0.69, name similarity: 0.11, keyword similarity: 0.19)
+  - armor (score: 0.60, name similarity: 0.60, keyword similarity: 0.14)
+
+Pages that may want to link to 'customizations':
+  - mechanics (score: 0.93, name similarity: 0.43, keyword similarity: 0.14)
+  - challenges (score: 0.79, name similarity: 0.29, keyword similarity: 0.12)
+  - changelog (score: 0.79, name similarity: 0.29, keyword similarity: 0.05)
+  - exhumation (score: 0.50, name similarity: 0.50, keyword similarity: 0.10)
+  - azuterron_npc (score: 0.50, name similarity: 0.50, keyword similarity: 0.05)
+
+Pages that may want to link to 'short_sword':
+  - weapons (score: 0.77, name similarity: 0.27, keyword similarity: 0.24)
+  - warrior (score: 0.77, name similarity: 0.27, keyword similarity: 0.18)
+  - modding_getting_started (score: 0.76, name similarity: 0.26, keyword similarity: 0.10)
+  - boomerang (score: 0.69, name similarity: 0.18, keyword similarity: 0.19)
+  - modding_quick_reference (score: 0.67, name similarity: 0.17, keyword similarity: 0.09)
+
+Pages that may want to link to 'throwing_weapons':
+  - gnoll_tomahawk (score: 1.00, name similarity: 0.50, keyword similarity: 0.18)
+  - weapons (score: 0.94, name similarity: 0.44, keyword similarity: 0.22)
+  - range (score: 0.81, name similarity: 0.31, keyword similarity: 0.25)
+  - tomahawk (score: 0.81, name similarity: 0.31, keyword similarity: 0.24)
+  - dart (score: 0.78, name similarity: 0.19, keyword similarity: 0.28)
+
+Pages that may want to link to 'prison':
+  - necropolis (score: 1.10, name similarity: 0.60, keyword similarity: 0.13)
+  - spiders (score: 1.07, name similarity: 0.57, keyword similarity: 0.09)
+  - npcs (score: 1.00, name similarity: 0.50, keyword similarity: 0.09)
+  - newbies (score: 0.93, name similarity: 0.43, keyword similarity: 0.11)
+  - skeleton (score: 0.88, name similarity: 0.38, keyword similarity: 0.13)
+
+Pages that may want to link to 'albino_rat':
+  - rats (score: 0.80, name similarity: 0.30, keyword similarity: 0.23)
+  - snail_mob (score: 0.70, name similarity: 0.70, keyword similarity: 0.26)
+  - sewers (score: 0.66, name similarity: 0.10, keyword similarity: 0.16)
+  - fan_stories (score: 0.64, name similarity: 0.64, keyword similarity: 0.02)
+  - crystal_mob (score: 0.64, name similarity: 0.64, keyword similarity: 0.18)
+
+Pages that may want to link to 'warrior':
+  - armor_kit (score: 0.94, name similarity: 0.44, keyword similarity: 0.15)
+  - gladiator (score: 0.94, name similarity: 0.44, keyword similarity: 0.14)
+  - paralysis (score: 0.83, name similarity: 0.33, keyword similarity: 0.12)
+  - necromancy (score: 0.80, name similarity: 0.30, keyword similarity: 0.12)
+  - sacrificial_sword (score: 0.79, name similarity: 0.29, keyword similarity: 0.11)
+
+Pages that may want to link to 'spells':
+  - priest (score: 1.00, name similarity: 0.50, keyword similarity: 0.15)
+  - root_spell (score: 0.90, name similarity: 0.40, keyword similarity: 0.13)
+  - calm_spell (score: 0.90, name similarity: 0.40, keyword similarity: 0.14)
+  - spell_book (score: 0.90, name similarity: 0.40, keyword similarity: 0.13)
+  - roar_spell (score: 0.90, name similarity: 0.40, keyword similarity: 0.12)
+
+Pages that may want to link to 'jarofsouls':
+  - necropolis (score: 0.90, name similarity: 0.40, keyword similarity: 0.21)
+  - artifacts (score: 0.90, name similarity: 0.40, keyword similarity: 0.21)
+  - journal (score: 0.60, name similarity: 0.60, keyword similarity: 0.10)
+  - soul_reaper (score: 0.55, name similarity: 0.55, keyword similarity: 0.11)
+  - roar_spell (score: 0.50, name similarity: 0.50, keyword similarity: 0.18)
+
+Pages that may want to link to 'bellanpc':
+  - spidermindamber (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.29, keyword similarity: 0.67)
+  - yogsheart (score: 0.67, name similarity: 0.22, keyword similarity: 0.67)
+
+Pages that may want to link to 'spider_egg':
+  - spideregg (score: 1.20, name similarity: 0.70, keyword similarity: 0.11)
+  - spider_nest (score: 1.14, name similarity: 0.64, keyword similarity: 0.20)
+  - spidernest (score: 1.10, name similarity: 0.60, keyword similarity: 0.13)
+  - spiders (score: 1.10, name similarity: 0.60, keyword similarity: 0.16)
+  - spiderguard (score: 0.64, name similarity: 0.64, keyword similarity: 0.03)
+
+Pages that may want to link to 'arts_by_artemij_nesterov':
+  - modding_getting_started (score: 0.42, name similarity: 0.42, keyword similarity: 0.00)
+  - black_skull_of_mastery (score: 0.42, name similarity: 0.42, keyword similarity: 0.01)
+  - arts_by_yuila_kozlova (score: 0.42, name similarity: 0.42, keyword similarity: 0.25)
+  - arts_by_sergey_andreev (score: 0.42, name similarity: 0.42, keyword similarity: 0.27)
+  - modding_non_java_techniques (score: 0.41, name similarity: 0.41, keyword similarity: 0.00)
+
+Pages that may want to link to 'spiders':
+  - spideregg (score: 1.17, name similarity: 0.67, keyword similarity: 0.12)
+  - spidernest (score: 1.10, name similarity: 0.60, keyword similarity: 0.13)
+  - spider_egg (score: 1.10, name similarity: 0.60, keyword similarity: 0.16)
+  - spidermind (score: 1.10, name similarity: 0.60, keyword similarity: 0.12)
+  - spiderelite (score: 1.05, name similarity: 0.55, keyword similarity: 0.12)
+
+Pages that may want to link to 'yogsteeth':
+  - yogseye (score: 1.06, name similarity: 0.56, keyword similarity: 0.02)
+  - yogsbrain (score: 0.94, name similarity: 0.44, keyword similarity: 0.03)
+  - toxic_gas (score: 0.94, name similarity: 0.44, keyword similarity: 0.02)
+  - yog (score: 0.83, name similarity: 0.33, keyword similarity: 0.04)
+  - yogsheart (score: 0.78, name similarity: 0.78, keyword similarity: 0.58)
+
+Pages that may want to link to 'equipment':
+  - necrotism (score: 1.06, name similarity: 0.56, keyword similarity: 0.12)
+  - equipment_slots (score: 1.03, name similarity: 0.53, keyword similarity: 0.18)
+  - spider_queen (score: 1.00, name similarity: 0.50, keyword similarity: 0.12)
+  - huntress (score: 0.94, name similarity: 0.44, keyword similarity: 0.12)
+  - priest (score: 0.94, name similarity: 0.44, keyword similarity: 0.11)
+
+Pages that may want to link to 'freeze_globe':
+  - freeze_globe_spell (score: 1.00, name similarity: 0.50, keyword similarity: 0.26)
+  - spell_affinities (score: 0.75, name similarity: 0.25, keyword similarity: 0.15)
+  - spells (score: 0.67, name similarity: 0.17, keyword similarity: 0.15)
+  - mage (score: 0.67, name similarity: 0.17, keyword similarity: 0.14)
+  - gnoll_zombie (score: 0.58, name similarity: 0.58, keyword similarity: 0.12)
+
+Pages that may want to link to 'toxic_gas':
+  - chaos_staff (score: 1.05, name similarity: 0.55, keyword similarity: 0.14)
+  - potion_of_toxic_gas (score: 0.97, name similarity: 0.47, keyword similarity: 0.26)
+  - plague_doctor (score: 0.96, name similarity: 0.46, keyword similarity: 0.15)
+  - ring_of_elements (score: 0.88, name similarity: 0.38, keyword similarity: 0.17)
+  - modding_custom_mobs (score: 0.87, name similarity: 0.37, keyword similarity: 0.11)
+
+Pages that may want to link to 'tengu':
+  - dungeon (score: 1.07, name similarity: 0.57, keyword similarity: 0.09)
+  - tengu_liver (score: 0.95, name similarity: 0.45, keyword similarity: 0.12)
+  - items (score: 0.90, name similarity: 0.40, keyword similarity: 0.04)
+  - scout (score: 0.90, name similarity: 0.40, keyword similarity: 0.13)
+  - guardian (score: 0.88, name similarity: 0.38, keyword similarity: 0.09)
+
+Pages that may want to link to 'scroll_of_remove_curse':
+  - scroll (score: 0.86, name similarity: 0.23, keyword similarity: 0.36)
+  - status_effects (score: 0.77, name similarity: 0.27, keyword similarity: 0.15)
+  - scrolls (score: 0.73, name similarity: 0.23, keyword similarity: 0.17)
+  - priest (score: 0.70, name similarity: 0.14, keyword similarity: 0.20)
+  - imp (score: 0.68, name similarity: 0.05, keyword similarity: 0.18)
+
+Pages that may want to link to 'dread_knight':
+  - dreadknight (score: 1.33, name similarity: 0.83, keyword similarity: 0.17)
+  - undead_mobs (score: 0.92, name similarity: 0.42, keyword similarity: 0.16)
+  - enslaved_soul (score: 0.88, name similarity: 0.38, keyword similarity: 0.17)
+  - death_knight (score: 0.83, name similarity: 0.83, keyword similarity: 0.29)
+  - dark_knight (score: 0.83, name similarity: 0.83, keyword similarity: 0.05)
+
+Pages that may want to link to 'sniper':
+  - huntress (score: 1.00, name similarity: 0.50, keyword similarity: 0.17)
+  - sniper_armor (score: 1.00, name similarity: 0.50, keyword similarity: 0.15)
+  - warden (score: 1.00, name similarity: 0.50, keyword similarity: 0.20)
+  - spinner (score: 0.86, name similarity: 0.86, keyword similarity: 0.05)
+  - priest (score: 0.83, name similarity: 0.83, keyword similarity: 0.11)
+
+Pages that may want to link to 'arts_by_sergey_andreev':
+  - arts_by_artemij_nesterov (score: 0.42, name similarity: 0.42, keyword similarity: 0.27)
+  - ring_of_stone_blood (score: 0.41, name similarity: 0.41, keyword similarity: 0.01)
+  - modding_getting_started (score: 0.39, name similarity: 0.39, keyword similarity: 0.01)
+  - modding_custom_levels (score: 0.36, name similarity: 0.36, keyword similarity: 0.01)
+  - hide_in_grass_spell (score: 0.36, name similarity: 0.36, keyword similarity: 0.01)
+
+Pages that may want to link to 'mana_potion':
+  - skill_points (score: 1.00, name similarity: 0.50, keyword similarity: 0.22)
+  - potion (score: 0.95, name similarity: 0.45, keyword similarity: 0.14)
+  - tome_of_knowledge (score: 0.79, name similarity: 0.29, keyword similarity: 0.26)
+  - mana (score: 0.77, name similarity: 0.27, keyword similarity: 0.23)
+  - sniper_armor (score: 0.58, name similarity: 0.58, keyword similarity: 0.21)
+
+Pages that may want to link to 'body_armor_spell':
+  - spell_affinities (score: 0.88, name similarity: 0.38, keyword similarity: 0.14)
+  - spider_armor (score: 0.56, name similarity: 0.56, keyword similarity: 0.04)
+  - firebloom_seed (score: 0.56, name similarity: 0.56, keyword similarity: 0.05)
+  - crystal_mob (score: 0.56, name similarity: 0.56, keyword similarity: 0.15)
+  - kobold_icemancer (score: 0.56, name similarity: 0.56, keyword similarity: 0.11)
+
+Pages that may want to link to 'localization':
+  - changelog (score: 0.92, name similarity: 0.42, keyword similarity: 0.05)
+  - mods_limitations (score: 0.88, name similarity: 0.38, keyword similarity: 0.05)
+  - modding_non_java_techniques (score: 0.72, name similarity: 0.22, keyword similarity: 0.07)
+  - mods_possibilities (score: 0.72, name similarity: 0.22, keyword similarity: 0.06)
+  - modding_getting_started (score: 0.72, name similarity: 0.22, keyword similarity: 0.07)
+
+Pages that may want to link to 'armor':
+  - combat (score: 1.00, name similarity: 0.50, keyword similarity: 0.14)
+  - armor_kit (score: 0.94, name similarity: 0.44, keyword similarity: 0.21)
+  - warlock (score: 0.93, name similarity: 0.43, keyword similarity: 0.16)
+  - warrior (score: 0.93, name similarity: 0.43, keyword similarity: 0.12)
+  - combo (score: 0.90, name similarity: 0.40, keyword similarity: 0.18)
+
+Pages that may want to link to 'seeds':
+  - warden (score: 0.83, name similarity: 0.33, keyword similarity: 0.13)
+  - differences (score: 0.77, name similarity: 0.27, keyword similarity: 0.08)
+  - huntress (score: 0.75, name similarity: 0.25, keyword similarity: 0.10)
+  - firebloom_seed (score: 0.71, name similarity: 0.21, keyword similarity: 0.16)
+  - earthroot_seed (score: 0.71, name similarity: 0.21, keyword similarity: 0.15)
+
+Pages that may want to link to 'ignite':
+  - ignite_spell (score: 0.92, name similarity: 0.42, keyword similarity: 0.36)
+  - mage (score: 0.83, name similarity: 0.33, keyword similarity: 0.18)
+  - elementals (score: 0.80, name similarity: 0.30, keyword similarity: 0.27)
+  - spell_affinities (score: 0.75, name similarity: 0.25, keyword similarity: 0.13)
+  - battle_mage_armor (score: 0.68, name similarity: 0.18, keyword similarity: 0.12)
+
+Pages that may want to link to 'wind_gust_spell':
+  - airelemental (score: 0.83, name similarity: 0.33, keyword similarity: 0.25)
+  - elementals (score: 0.83, name similarity: 0.33, keyword similarity: 0.28)
+  - exploding_skull (score: 0.67, name similarity: 0.67, keyword similarity: 0.12)
+  - summon_deathling (score: 0.62, name similarity: 0.62, keyword similarity: 0.30)
+  - explodingskull (score: 0.60, name similarity: 0.60, keyword similarity: 0.15)
+
+Pages that may want to link to 'leather_armor':
+  - cloth_armor (score: 1.12, name similarity: 0.62, keyword similarity: 0.24)
+  - mail_armor (score: 1.05, name similarity: 0.46, keyword similarity: 0.55)
+  - armor (score: 0.81, name similarity: 0.31, keyword similarity: 0.15)
+  - plate_armor (score: 0.62, name similarity: 0.62, keyword similarity: 0.39)
+  - charm_spell (score: 0.54, name similarity: 0.54, keyword similarity: 0.18)
+
+Pages that may want to link to 'spider_queen_carapace':
+  - spider_queen (score: 0.48, name similarity: 0.48, keyword similarity: 0.13)
+  - hide_in_grass_spell (score: 0.43, name similarity: 0.43, keyword similarity: 0.14)
+  - treacherous_spirit (score: 0.43, name similarity: 0.43, keyword similarity: 0.10)
+  - spider_charm (score: 0.43, name similarity: 0.43, keyword similarity: 0.11)
+  - ice_guardian_core (score: 0.43, name similarity: 0.43, keyword similarity: 0.15)
+
+Pages that may want to link to 'changelog':
+  - challenges (score: 1.20, name similarity: 0.70, keyword similarity: 0.08)
+  - spider_charm (score: 0.83, name similarity: 0.33, keyword similarity: 0.04)
+  - deathling (score: 0.67, name similarity: 0.67, keyword similarity: 0.09)
+  - healernpc (score: 0.67, name similarity: 0.67, keyword similarity: 0.01)
+  - start (score: 0.61, name similarity: 0.11, keyword similarity: 0.11)
+
+Pages that may want to link to 'frozen_carpaccio':
+  - iceguardian (score: 0.88, name similarity: 0.38, keyword similarity: 0.23)
+  - ice_elemental (score: 0.88, name similarity: 0.38, keyword similarity: 0.24)
+  - iceelemental (score: 0.81, name similarity: 0.31, keyword similarity: 0.26)
+  - azuterron_npc (score: 0.56, name similarity: 0.56, keyword similarity: 0.08)
+  - fan_stories (score: 0.50, name similarity: 0.50, keyword similarity: 0.02)
+
+Pages that may want to link to 'sewers':
+  - warden (score: 1.00, name similarity: 0.50, keyword similarity: 0.14)
+  - newbies (score: 0.93, name similarity: 0.43, keyword similarity: 0.12)
+  - rats (score: 0.83, name similarity: 0.33, keyword similarity: 0.19)
+  - start (score: 0.83, name similarity: 0.33, keyword similarity: 0.09)
+  - prison (score: 0.83, name similarity: 0.33, keyword similarity: 0.19)
+
+Pages that may want to link to 'tomahawk':
+  - gnoll_tomahawk (score: 1.00, name similarity: 0.50, keyword similarity: 0.30)
+  - weapons (score: 0.88, name similarity: 0.38, keyword similarity: 0.21)
+  - changelog (score: 0.83, name similarity: 0.33, keyword similarity: 0.05)
+  - throwing_weapons (score: 0.81, name similarity: 0.31, keyword similarity: 0.24)
+  - gnoll (score: 0.70, name similarity: 0.12, keyword similarity: 0.20)
+
+Pages that may want to link to 'burning':
+  - yogsbrain (score: 1.06, name similarity: 0.56, keyword similarity: 0.18)
+  - burningfist (score: 1.05, name similarity: 0.55, keyword similarity: 0.01)
+  - bleeding (score: 1.00, name similarity: 0.50, keyword similarity: 0.47)
+  - newbies (score: 0.93, name similarity: 0.43, keyword similarity: 0.12)
+  - ignite (score: 0.93, name similarity: 0.43, keyword similarity: 0.32)
+
+Pages that may want to link to 'dried_rose':
+  - items (score: 0.80, name similarity: 0.30, keyword similarity: 0.07)
+  - artifacts (score: 0.80, name similarity: 0.30, keyword similarity: 0.21)
+  - giant_rat_skull (score: 0.78, name similarity: 0.27, keyword similarity: 0.28)
+  - raise_dead (score: 0.60, name similarity: 0.60, keyword similarity: 0.18)
+  - spider_egg (score: 0.60, name similarity: 0.60, keyword similarity: 0.08)
+
+Pages that may want to link to 'buffs':
+  - status_effects (score: 1.24, name similarity: 0.21, keyword similarity: 0.74)
+  - stun (score: 0.90, name similarity: 0.40, keyword similarity: 0.16)
+  - burning (score: 0.79, name similarity: 0.29, keyword similarity: 0.17)
+  - regeneration (score: 0.73, name similarity: 0.00, keyword similarity: 0.23)
+  - invisibility (score: 0.72, name similarity: 0.17, keyword similarity: 0.22)
+
+Pages that may want to link to 'nature_armor_spell':
+  - curse_item_spell (score: 0.79, name similarity: 0.50, keyword similarity: 0.79)
+  - charm_spell (score: 0.78, name similarity: 0.44, keyword similarity: 0.78)
+  - calm_spell (score: 0.77, name similarity: 0.39, keyword similarity: 0.77)
+  - magic_arrow_spell (score: 0.76, name similarity: 0.50, keyword similarity: 0.76)
+  - lightning_bolt_spell (score: 0.74, name similarity: 0.40, keyword similarity: 0.74)
+
+Pages that may want to link to 'mage':
+  - golem (score: 1.10, name similarity: 0.60, keyword similarity: 0.02)
+  - glaive (score: 1.00, name similarity: 0.50, keyword similarity: 0.17)
+  - mana (score: 1.00, name similarity: 0.50, keyword similarity: 0.16)
+  - nightmare (score: 0.94, name similarity: 0.44, keyword similarity: 0.13)
+  - boomerang (score: 0.94, name similarity: 0.44, keyword similarity: 0.14)
+
+Pages that may want to link to 'beehive':
+  - bee_mob (score: 0.94, name similarity: 0.29, keyword similarity: 0.44)
+  - newbies (score: 0.43, name similarity: 0.43, keyword similarity: 0.12)
+  - vertigo (score: 0.43, name similarity: 0.43, keyword similarity: 0.16)
+  - zombie (score: 0.43, name similarity: 0.43, keyword similarity: 0.15)
+  - glaive (score: 0.43, name similarity: 0.43, keyword similarity: 0.17)
+
+Pages that may want to link to 'bat':
+  - dart (score: 1.00, name similarity: 0.50, keyword similarity: 0.14)
+  - combat (score: 1.00, name similarity: 0.50, keyword similarity: 0.13)
+  - haste (score: 0.90, name similarity: 0.40, keyword similarity: 0.14)
+  - wraith (score: 0.83, name similarity: 0.33, keyword similarity: 0.22)
+  - ballistica (score: 0.80, name similarity: 0.30, keyword similarity: 0.07)
+
+Pages that may want to link to 'rottingfist':
+  - yogsbrain (score: 1.05, name similarity: 0.55, keyword similarity: 0.03)
+  - toxic_gas (score: 0.95, name similarity: 0.45, keyword similarity: 0.02)
+  - yogseye (score: 0.77, name similarity: 0.27, keyword similarity: 0.03)
+  - spidermindamber (score: 0.67, name similarity: 0.27, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.42, keyword similarity: 0.67)
+
+Pages that may want to link to 'town_portal_spell':
+  - spell_affinities (score: 0.97, name similarity: 0.47, keyword similarity: 0.13)
+  - curse_item_spell (score: 0.76, name similarity: 0.41, keyword similarity: 0.76)
+  - charm_spell (score: 0.75, name similarity: 0.41, keyword similarity: 0.75)
+  - calm_spell (score: 0.74, name similarity: 0.35, keyword similarity: 0.74)
+  - magic_arrow_spell (score: 0.73, name similarity: 0.53, keyword similarity: 0.73)
+
+Pages that may want to link to 'nightmare':
+  - yogsbrain (score: 1.06, name similarity: 0.56, keyword similarity: 0.24)
+  - deathling (score: 0.78, name similarity: 0.78, keyword similarity: 0.25)
+  - dreadknight (score: 0.73, name similarity: 0.73, keyword similarity: 0.20)
+  - exhumation (score: 0.70, name similarity: 0.70, keyword similarity: 0.09)
+  - rat_king (score: 0.67, name similarity: 0.67, keyword similarity: 0.18)
+
+Pages that may want to link to 'stun':
+  - paralysis (score: 1.10, name similarity: 0.11, keyword similarity: 0.60)
+  - huntress (score: 1.00, name similarity: 0.50, keyword similarity: 0.13)
+  - wands (score: 0.90, name similarity: 0.40, keyword similarity: 0.11)
+  - stranger (score: 0.88, name similarity: 0.38, keyword similarity: 0.16)
+  - elementals (score: 0.80, name similarity: 0.30, keyword similarity: 0.23)
+
+Pages that may want to link to 'deathling':
+  - exhumation (score: 1.10, name similarity: 0.60, keyword similarity: 0.17)
+  - summon_deathling (score: 1.06, name similarity: 0.56, keyword similarity: 0.25)
+  - undead (score: 0.94, name similarity: 0.44, keyword similarity: 0.19)
+  - raise_dead (score: 0.90, name similarity: 0.40, keyword similarity: 0.20)
+  - undead_mobs (score: 0.86, name similarity: 0.36, keyword similarity: 0.14)
+
+Pages that may want to link to 'healernpc':
+  - healer_npc (score: 1.30, name similarity: 0.80, keyword similarity: 0.04)
+  - gnoll_brute (score: 0.86, name similarity: 0.36, keyword similarity: 0.03)
+  - npcs (score: 0.83, name similarity: 0.33, keyword similarity: 0.01)
+  - gnoll (score: 0.72, name similarity: 0.22, keyword similarity: 0.02)
+  - tome_of_mastery (score: 0.70, name similarity: 0.20, keyword similarity: 0.02)
+
+Pages that may want to link to 'gothic_armor':
+  - magic_torch (score: 0.83, name similarity: 0.83, keyword similarity: 0.03)
+  - armor (score: 0.83, name similarity: 0.33, keyword similarity: 0.03)
+  - items (score: 0.75, name similarity: 0.25, keyword similarity: 0.04)
+  - cloth_armor (score: 0.67, name similarity: 0.67, keyword similarity: 0.05)
+  - ring_of_haste (score: 0.62, name similarity: 0.62, keyword similarity: 0.03)
+
+Pages that may want to link to 'gnoll_mob':
+  - gnoll_brute (score: 1.05, name similarity: 0.55, keyword similarity: 0.17)
+  - gnoll (score: 0.94, name similarity: 0.44, keyword similarity: 0.12)
+  - snail_mob (score: 0.67, name similarity: 0.67, keyword similarity: 0.13)
+  - gnoll_zombie (score: 0.58, name similarity: 0.58, keyword similarity: 0.19)
+  - lich_mob (score: 0.56, name similarity: 0.56, keyword similarity: 0.17)
+
+Pages that may want to link to 'ignite_spell':
+  - spell_affinities (score: 1.00, name similarity: 0.50, keyword similarity: 0.14)
+  - ignite (score: 0.92, name similarity: 0.42, keyword similarity: 0.36)
+  - healing_spell (score: 0.62, name similarity: 0.62, keyword similarity: 0.30)
+  - wind_gust_spell (score: 0.60, name similarity: 0.60, keyword similarity: 0.33)
+  - skill_points (score: 0.58, name similarity: 0.58, keyword similarity: 0.16)
+
+Pages that may want to link to 'berserker':
+  - berserk_armor (score: 0.88, name similarity: 0.38, keyword similarity: 0.13)
+  - hero_subclasses (score: 0.77, name similarity: 0.27, keyword similarity: 0.18)
+  - armor_kit (score: 0.72, name similarity: 0.22, keyword similarity: 0.12)
+  - tome_of_mastery (score: 0.70, name similarity: 0.20, keyword similarity: 0.13)
+  - combo (score: 0.61, name similarity: 0.11, keyword similarity: 0.11)
+
+Pages that may want to link to 'potion_of_healing':
+  - regeneration (score: 0.91, name similarity: 0.41, keyword similarity: 0.24)
+  - modding_custom_mobs (score: 0.82, name similarity: 0.32, keyword similarity: 0.10)
+  - bleeding (score: 0.79, name similarity: 0.29, keyword similarity: 0.20)
+  - potion (score: 0.79, name similarity: 0.29, keyword similarity: 0.17)
+  - status_effects (score: 0.79, name similarity: 0.29, keyword similarity: 0.14)
+
+Pages that may want to link to 'berserk_armor':
+  - berserker (score: 0.88, name similarity: 0.38, keyword similarity: 0.13)
+  - armor (score: 0.81, name similarity: 0.31, keyword similarity: 0.18)
+  - spider_armor (score: 0.54, name similarity: 0.54, keyword similarity: 0.05)
+  - blank_scroll (score: 0.54, name similarity: 0.54, keyword similarity: 0.12)
+  - crystal_mob (score: 0.54, name similarity: 0.54, keyword similarity: 0.17)
+
+Pages that may want to link to 'scout_armor':
+  - armor_kit (score: 1.05, name similarity: 0.55, keyword similarity: 0.18)
+  - scout (score: 0.95, name similarity: 0.45, keyword similarity: 0.18)
+  - witchdoctor_armor (score: 0.91, name similarity: 0.41, keyword similarity: 0.91)
+  - crystal_mob (score: 0.73, name similarity: 0.73, keyword similarity: 0.09)
+  - warlock_armor (score: 0.73, name similarity: 0.46, keyword similarity: 0.73)
+
+Pages that may want to link to 'undead':
+  - dungeon (score: 1.07, name similarity: 0.57, keyword similarity: 0.09)
+  - undead_mobs (score: 0.95, name similarity: 0.45, keyword similarity: 0.32)
+  - deathling (score: 0.94, name similarity: 0.44, keyword similarity: 0.19)
+  - exhumation (score: 0.90, name similarity: 0.40, keyword similarity: 0.09)
+  - enslaved_soul (score: 0.88, name similarity: 0.38, keyword similarity: 0.18)
+
+Pages that may want to link to 'modding_custom_items':
+  - mods (score: 0.70, name similarity: 0.20, keyword similarity: 0.16)
+  - modding_custom_levels (score: 0.57, name similarity: 0.57, keyword similarity: 0.21)
+  - modding_ui_elements (score: 0.55, name similarity: 0.55, keyword similarity: 0.08)
+  - modding_custom_mobs (score: 0.55, name similarity: 0.55, keyword similarity: 0.28)
+  - summon_deathling (score: 0.55, name similarity: 0.55, keyword similarity: 0.10)
+
+Pages that may want to link to 'armored_statue':
+  - gold_statue (score: 1.07, name similarity: 0.57, keyword similarity: 0.29)
+  - revived_statue (score: 1.07, name similarity: 0.57, keyword similarity: 0.27)
+  - enemies (score: 0.71, name similarity: 0.21, keyword similarity: 0.10)
+  - unsorted_arts (score: 0.64, name similarity: 0.64, keyword similarity: 0.01)
+  - spider_armor (score: 0.57, name similarity: 0.57, keyword similarity: 0.03)
+
+Pages that may want to link to 'swarm':
+  - sewers (score: 1.00, name similarity: 0.50, keyword similarity: 0.02)
+  - spideregg (score: 0.72, name similarity: 0.22, keyword similarity: 0.03)
+  - challenges (score: 0.70, name similarity: 0.20, keyword similarity: 0.02)
+  - spidermindamber (score: 0.67, name similarity: 0.27, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.17, keyword similarity: 0.67)
+
+Pages that may want to link to 'roots':
+  - root_spell (score: 0.90, name similarity: 0.40, keyword similarity: 0.26)
+  - worm (score: 0.90, name similarity: 0.40, keyword similarity: 0.23)
+  - levitation (score: 0.89, name similarity: 0.20, keyword similarity: 0.39)
+  - sprout_spell (score: 0.83, name similarity: 0.33, keyword similarity: 0.23)
+  - class_armor (score: 0.77, name similarity: 0.27, keyword similarity: 0.17)
+
+Pages that may want to link to 'gladiator':
+  - armor_kit (score: 1.06, name similarity: 0.56, keyword similarity: 0.28)
+  - gladiator_armor (score: 1.03, name similarity: 0.53, keyword similarity: 0.13)
+  - warrior (score: 0.94, name similarity: 0.44, keyword similarity: 0.14)
+  - changelog (score: 0.94, name similarity: 0.44, keyword similarity: 0.05)
+  - combo (score: 0.90, name similarity: 0.11, keyword similarity: 0.40)
+
+Pages that may want to link to 'modding_quick_reference':
+  - version_json (score: 0.76, name similarity: 0.26, keyword similarity: 0.09)
+  - mods (score: 0.66, name similarity: 0.13, keyword similarity: 0.16)
+  - modding_custom_levels (score: 0.43, name similarity: 0.43, keyword similarity: 0.19)
+  - kobold_icemancer (score: 0.43, name similarity: 0.43, keyword similarity: 0.04)
+  - ice_guardian_core (score: 0.43, name similarity: 0.43, keyword similarity: 0.07)
+
+Pages that may want to link to 'magic_torch':
+  - magic_torch_spell (score: 1.09, name similarity: 0.59, keyword similarity: 0.06)
+  - gothic_armor (score: 0.83, name similarity: 0.83, keyword similarity: 0.03)
+  - mage (score: 0.77, name similarity: 0.27, keyword similarity: 0.04)
+  - spell_affinities (score: 0.75, name similarity: 0.25, keyword similarity: 0.05)
+  - cloth_armor (score: 0.73, name similarity: 0.73, keyword similarity: 0.02)
+
+Pages that may want to link to 'thief':
+  - city (score: 0.90, name similarity: 0.40, keyword similarity: 0.10)
+  - rogue (score: 0.70, name similarity: 0.20, keyword similarity: 0.18)
+  - prison (score: 0.67, name similarity: 0.17, keyword similarity: 0.10)
+  - sewers (score: 0.67, name similarity: 0.17, keyword similarity: 0.14)
+  - bows_and_arrows (score: 0.60, name similarity: 0.00, keyword similarity: 0.10)
+
+Pages that may want to link to 'boomerang':
+  - range (score: 1.06, name similarity: 0.56, keyword similarity: 0.13)
+  - weapons (score: 0.94, name similarity: 0.44, keyword similarity: 0.17)
+  - throwing_weapons (score: 0.88, name similarity: 0.38, keyword similarity: 0.21)
+  - huntress (score: 0.83, name similarity: 0.33, keyword similarity: 0.15)
+  - newbies (score: 0.83, name similarity: 0.33, keyword similarity: 0.11)
+
+Pages that may want to link to 'mail_armor':
+  - scale_armor (score: 1.18, name similarity: 0.55, keyword similarity: 0.68)
+  - armor (score: 0.90, name similarity: 0.40, keyword similarity: 0.14)
+  - armor_kit (score: 0.60, name similarity: 0.60, keyword similarity: 0.16)
+  - snail_mob (score: 0.60, name similarity: 0.60, keyword similarity: 0.18)
+  - albino_rat (score: 0.60, name similarity: 0.60, keyword similarity: 0.18)
+
+Pages that may want to link to 'spidermind':
+  - spider_nest (score: 1.14, name similarity: 0.64, keyword similarity: 0.14)
+  - spiderelite (score: 1.05, name similarity: 0.55, keyword similarity: 0.32)
+  - spiderservant (score: 1.04, name similarity: 0.54, keyword similarity: 0.21)
+  - spidermindamber (score: 1.03, name similarity: 0.53, keyword similarity: 0.03)
+  - poison (score: 0.90, name similarity: 0.40, keyword similarity: 0.16)
+
+Pages that may want to link to 'enchantment':
+  - glyph (score: 1.02, name similarity: 0.09, keyword similarity: 0.52)
+  - chaos_set (score: 0.95, name similarity: 0.45, keyword similarity: 0.17)
+  - changelog (score: 0.95, name similarity: 0.45, keyword similarity: 0.08)
+  - arcane_stylus (score: 0.88, name similarity: 0.38, keyword similarity: 0.26)
+  - equipment (score: 0.86, name similarity: 0.36, keyword similarity: 0.15)
+
+Pages that may want to link to 'suspiciousrat':
+  - rats (score: 0.81, name similarity: 0.31, keyword similarity: 0.25)
+  - guts (score: 0.73, name similarity: 0.23, keyword similarity: 0.15)
+  - lua_scripts (score: 0.62, name similarity: 0.62, keyword similarity: 0.10)
+  - azuterron_npc (score: 0.54, name similarity: 0.54, keyword similarity: 0.14)
+  - townguardnpc (score: 0.54, name similarity: 0.54, keyword similarity: 0.03)
+
+Pages that may want to link to 'imp':
+  - priest (score: 0.83, name similarity: 0.33, keyword similarity: 0.16)
+  - zombie (score: 0.83, name similarity: 0.33, keyword similarity: 0.12)
+  - poison (score: 0.83, name similarity: 0.33, keyword similarity: 0.18)
+  - equipment (score: 0.83, name similarity: 0.33, keyword similarity: 0.09)
+  - mana_potion (score: 0.77, name similarity: 0.27, keyword similarity: 0.16)
+
+Pages that may want to link to 'tengu_liver':
+  - the_soulbringer (score: 1.10, name similarity: 0.60, keyword similarity: 0.16)
+  - freerunner (score: 0.86, name similarity: 0.36, keyword similarity: 0.24)
+  - items (score: 0.77, name similarity: 0.27, keyword similarity: 0.08)
+  - gnoll_brute (score: 0.73, name similarity: 0.73, keyword similarity: 0.22)
+  - dread_knight (score: 0.58, name similarity: 0.58, keyword similarity: 0.10)
+
+Pages that may want to link to 'levitation':
+  - airelemental (score: 1.00, name similarity: 0.50, keyword similarity: 0.19)
+  - elementals (score: 1.00, name similarity: 0.50, keyword similarity: 0.19)
+  - moisten (score: 1.00, name similarity: 0.50, keyword similarity: 0.08)
+  - changelog (score: 1.00, name similarity: 0.50, keyword similarity: 0.06)
+  - air_elemental (score: 0.96, name similarity: 0.46, keyword similarity: 0.12)
+
+Pages that may want to link to 'iceguardian':
+  - iceguardiancore (score: 1.10, name similarity: 0.60, keyword similarity: 0.57)
+  - ice_guardian_core (score: 1.03, name similarity: 0.53, keyword similarity: 0.21)
+  - frozen_carpaccio (score: 0.88, name similarity: 0.38, keyword similarity: 0.23)
+  - toxic_gas (score: 0.86, name similarity: 0.36, keyword similarity: 0.14)
+  - ice_caves (score: 0.86, name similarity: 0.36, keyword similarity: 0.17)
+
+Pages that may want to link to 'inquirernpc':
+  - spiderqueen (score: 0.64, name similarity: 0.64, keyword similarity: 0.04)
+  - spider_queen (score: 0.58, name similarity: 0.58, keyword similarity: 0.07)
+  - necropolis (score: 0.55, name similarity: 0.55, keyword similarity: 0.16)
+  - equipment (score: 0.55, name similarity: 0.55, keyword similarity: 0.09)
+  - iceguardian (score: 0.55, name similarity: 0.55, keyword similarity: 0.21)
+
+Pages that may want to link to 'servicemannpc':
+  - spider_charm (score: 0.62, name similarity: 0.62, keyword similarity: 0.13)
+  - sniper_armor (score: 0.62, name similarity: 0.62, keyword similarity: 0.19)
+  - spiderservant (score: 0.62, name similarity: 0.62, keyword similarity: 0.15)
+  - servantnpc (score: 0.62, name similarity: 0.62, keyword similarity: 0.05)
+  - spider_armor (score: 0.54, name similarity: 0.54, keyword similarity: 0.03)
+
+Pages that may want to link to 'ring_of_elements':
+  - toxic_gas (score: 0.88, name similarity: 0.38, keyword similarity: 0.17)
+  - rings (score: 0.81, name similarity: 0.31, keyword similarity: 0.18)
+  - bleeding (score: 0.81, name similarity: 0.31, keyword similarity: 0.23)
+  - slow (score: 0.77, name similarity: 0.19, keyword similarity: 0.27)
+  - paralysis (score: 0.75, name similarity: 0.25, keyword similarity: 0.20)
+
+Pages that may want to link to 'potion_of_levitation':
+  - levitation (score: 0.90, name similarity: 0.40, keyword similarity: 0.17)
+  - air_elemental (score: 0.85, name similarity: 0.35, keyword similarity: 0.10)
+  - airelemental (score: 0.80, name similarity: 0.30, keyword similarity: 0.07)
+  - elementals (score: 0.75, name similarity: 0.25, keyword similarity: 0.07)
+  - potion (score: 0.75, name similarity: 0.25, keyword similarity: 0.09)
+
+Pages that may want to link to 'haste':
+  - haste_spell (score: 0.95, name similarity: 0.45, keyword similarity: 0.26)
+  - ring_of_haste (score: 0.88, name similarity: 0.38, keyword similarity: 0.33)
+  - spells (score: 0.83, name similarity: 0.33, keyword similarity: 0.11)
+  - status_effects (score: 0.79, name similarity: 0.29, keyword similarity: 0.21)
+  - slow (score: 0.78, name similarity: 0.20, keyword similarity: 0.28)
+
+Pages that may want to link to 'koboldicemancer':
+  - iceguardiancore (score: 1.03, name similarity: 0.53, keyword similarity: 0.03)
+  - iceguardian (score: 0.97, name similarity: 0.47, keyword similarity: 0.04)
+  - enemies (score: 0.77, name similarity: 0.27, keyword similarity: 0.02)
+  - ice_caves (score: 0.77, name similarity: 0.27, keyword similarity: 0.02)
+  - kobold_icemancer (score: 0.75, name similarity: 0.75, keyword similarity: 0.03)
+
+Pages that may want to link to 'potion':
+  - poison (score: 1.17, name similarity: 0.67, keyword similarity: 0.12)
+  - moisten (score: 1.07, name similarity: 0.57, keyword similarity: 0.14)
+  - town (score: 1.00, name similarity: 0.50, keyword similarity: 0.11)
+  - mana_potion (score: 0.95, name similarity: 0.45, keyword similarity: 0.14)
+  - skill_points (score: 0.92, name similarity: 0.42, keyword similarity: 0.18)
+
+Pages that may want to link to 'codex':
+  - mods (score: 0.90, name similarity: 0.40, keyword similarity: 0.06)
+  - changelog (score: 0.83, name similarity: 0.33, keyword similarity: 0.02)
+  - items (score: 0.70, name similarity: 0.20, keyword similarity: 0.07)
+  - librariannpc (score: 0.61, name similarity: 0.08, keyword similarity: 0.11)
+  - doctor (score: 0.50, name similarity: 0.50, keyword similarity: 0.10)
+
+Pages that may want to link to 'chaos_bow':
+  - chaos_set (score: 1.17, name similarity: 0.67, keyword similarity: 0.23)
+  - chaos_armor (score: 1.06, name similarity: 0.55, keyword similarity: 0.56)
+  - chaos (score: 1.06, name similarity: 0.56, keyword similarity: 0.22)
+  - chaos_crystal (score: 0.96, name similarity: 0.46, keyword similarity: 0.16)
+  - weapons (score: 0.94, name similarity: 0.44, keyword similarity: 0.17)
+
+Pages that may want to link to 'azuterronnpc':
+  - azuterron_npc (score: 1.27, name similarity: 0.77, keyword similarity: 0.21)
+  - treacherousspirit (score: 0.97, name similarity: 0.47, keyword similarity: 0.25)
+  - treacherous_spirit (score: 0.94, name similarity: 0.44, keyword similarity: 0.15)
+  - stranger (score: 0.92, name similarity: 0.42, keyword similarity: 0.38)
+  - heart_of_darkness (score: 0.85, name similarity: 0.35, keyword similarity: 0.14)
+
+Pages that may want to link to 'glyph':
+  - enchantment (score: 1.02, name similarity: 0.09, keyword similarity: 0.52)
+  - changelog (score: 0.83, name similarity: 0.33, keyword similarity: 0.07)
+  - scroll_of_weapon_upgrade (score: 0.82, name similarity: 0.12, keyword similarity: 0.32)
+  - arcane_stylus (score: 0.77, name similarity: 0.15, keyword similarity: 0.27)
+  - cloth_armor (score: 0.73, name similarity: 0.18, keyword similarity: 0.23)
+
+Pages that may want to link to 'pasty_mimic':
+  - paralysis (score: 0.95, name similarity: 0.45, keyword similarity: 0.18)
+  - start (score: 0.77, name similarity: 0.27, keyword similarity: 0.10)
+  - stun (score: 0.72, name similarity: 0.18, keyword similarity: 0.22)
+  - slow (score: 0.69, name similarity: 0.09, keyword similarity: 0.19)
+  - crystal_mob (score: 0.64, name similarity: 0.64, keyword similarity: 0.27)
+
+Pages that may want to link to 'succubus':
+  - spidermindamber (score: 0.67, name similarity: 0.13, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.17, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.08, keyword similarity: 0.67)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.12, keyword similarity: 0.67)
+  - yogsheart (score: 0.67, name similarity: 0.11, keyword similarity: 0.67)
+
+Pages that may want to link to 'doctor':
+  - witchdoctor (score: 0.95, name similarity: 0.45, keyword similarity: 0.18)
+  - doctor_armor (score: 0.92, name similarity: 0.42, keyword similarity: 0.25)
+  - witch_doctor (score: 0.92, name similarity: 0.42, keyword similarity: 0.06)
+  - plague_doctor (score: 0.88, name similarity: 0.38, keyword similarity: 0.30)
+  - armor_kit (score: 0.83, name similarity: 0.33, keyword similarity: 0.15)
+
+Pages that may want to link to 'lich':
+  - lich_mob (score: 1.00, name similarity: 0.50, keyword similarity: 0.09)
+  - changelog (score: 0.83, name similarity: 0.33, keyword similarity: 0.07)
+  - necromancer (score: 0.80, name similarity: 0.09, keyword similarity: 0.30)
+  - necropolis (score: 0.80, name similarity: 0.30, keyword similarity: 0.18)
+  - runicskull (score: 0.80, name similarity: 0.30, keyword similarity: 0.21)
+
+Pages that may want to link to 'hedgehog':
+  - enemies (score: 0.62, name similarity: 0.12, keyword similarity: 0.08)
+  - pasty (score: 0.59, name similarity: 0.00, keyword similarity: 0.09)
+  - start (score: 0.57, name similarity: 0.00, keyword similarity: 0.07)
+  - dungeon (score: 0.50, name similarity: 0.50, keyword similarity: 0.08)
+  - yogsheart (score: 0.44, name similarity: 0.44, keyword similarity: 0.04)
+
+Pages that may want to link to 'brute':
+  - gnoll_brute (score: 0.95, name similarity: 0.45, keyword similarity: 0.16)
+  - gnoll_mob (score: 0.75, name similarity: 0.11, keyword similarity: 0.25)
+  - tome_of_mastery (score: 0.70, name similarity: 0.20, keyword similarity: 0.06)
+  - caves (score: 0.70, name similarity: 0.20, keyword similarity: 0.07)
+  - healer_npc (score: 0.70, name similarity: 0.20, keyword similarity: 0.09)
+
+Pages that may want to link to 'scarecrownpc':
+  - spidermindamber (score: 0.67, name similarity: 0.40, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.50, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.42, keyword similarity: 0.67)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.41, keyword similarity: 0.67)
+  - yogsheart (score: 0.67, name similarity: 0.42, keyword similarity: 0.67)
+
+Pages that may want to link to 'dark_knight':
+  - dread_knight (score: 0.83, name similarity: 0.83, keyword similarity: 0.05)
+  - dreadknight (score: 0.82, name similarity: 0.82, keyword similarity: 0.03)
+  - death_knight (score: 0.75, name similarity: 0.75, keyword similarity: 0.03)
+  - rat_king (score: 0.73, name similarity: 0.73, keyword similarity: 0.03)
+  - deathknight (score: 0.73, name similarity: 0.73, keyword similarity: 0.00)
+
+Pages that may want to link to 'scorpio':
+  - worm (score: 0.79, name similarity: 0.29, keyword similarity: 0.03)
+  - prison (score: 0.71, name similarity: 0.71, keyword similarity: 0.02)
+  - spidermindamber (score: 0.67, name similarity: 0.27, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+
+Pages that may want to link to 'warden':
+  - warden_armor (score: 1.00, name similarity: 0.50, keyword similarity: 0.27)
+  - huntress (score: 0.88, name similarity: 0.38, keyword similarity: 0.23)
+  - tengu (score: 0.83, name similarity: 0.33, keyword similarity: 0.13)
+  - changelog (score: 0.83, name similarity: 0.33, keyword similarity: 0.07)
+  - tome_of_mastery (score: 0.74, name similarity: 0.20, keyword similarity: 0.24)
+
+Pages that may want to link to 'crystal':
+  - crystal_mob (score: 1.19, name similarity: 0.64, keyword similarity: 0.69)
+  - chaos_crystal (score: 1.04, name similarity: 0.54, keyword similarity: 0.14)
+  - chaos_set (score: 0.94, name similarity: 0.44, keyword similarity: 0.15)
+  - toxic_gas (score: 0.94, name similarity: 0.44, keyword similarity: 0.17)
+  - chaos (score: 0.93, name similarity: 0.43, keyword similarity: 0.15)
+
+Pages that may want to link to 'plague_doctor':
+  - plaguedoctornpc (score: 1.23, name similarity: 0.73, keyword similarity: 0.10)
+  - roar_spell (score: 1.04, name similarity: 0.54, keyword similarity: 0.11)
+  - healing_spell (score: 0.96, name similarity: 0.46, keyword similarity: 0.11)
+  - playable_class (score: 0.93, name similarity: 0.43, keyword similarity: 0.16)
+  - tome_of_knowledge (score: 0.91, name similarity: 0.41, keyword similarity: 0.13)
+
+Pages that may want to link to 'skeleton':
+  - skeleton_key (score: 1.08, name similarity: 0.58, keyword similarity: 0.12)
+  - necropolis (score: 1.00, name similarity: 0.50, keyword similarity: 0.11)
+  - changelog (score: 0.94, name similarity: 0.44, keyword similarity: 0.05)
+  - runicskull (score: 0.90, name similarity: 0.40, keyword similarity: 0.15)
+  - enslaved_soul (score: 0.88, name similarity: 0.38, keyword similarity: 0.17)
+
+Pages that may want to link to 'freeze_globe_spell':
+  - spell_affinities (score: 0.83, name similarity: 0.33, keyword similarity: 0.14)
+  - magic_torch_spell (score: 0.78, name similarity: 0.44, keyword similarity: 0.78)
+  - curse_item_spell (score: 0.77, name similarity: 0.33, keyword similarity: 0.77)
+  - calm_spell (score: 0.77, name similarity: 0.28, keyword similarity: 0.77)
+  - charm_spell (score: 0.76, name similarity: 0.33, keyword similarity: 0.76)
+
+Pages that may want to link to 'townsfolksilentnpc':
+  - town (score: 0.72, name similarity: 0.22, keyword similarity: 0.11)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.67, keyword similarity: 0.04)
+  - townsfolknpc (score: 0.56, name similarity: 0.56, keyword similarity: 0.04)
+  - kunai_throw_spell (score: 0.56, name similarity: 0.56, keyword similarity: 0.16)
+  - scroll_of_identify (score: 0.50, name similarity: 0.50, keyword similarity: 0.13)
+
+Pages that may want to link to 'ice_elemental':
+  - iceelemental (score: 1.12, name similarity: 0.62, keyword similarity: 0.41)
+  - fireelemental (score: 1.04, name similarity: 0.54, keyword similarity: 0.29)
+  - water_elemental (score: 0.97, name similarity: 0.47, keyword similarity: 0.28)
+  - toxic_gas (score: 0.88, name similarity: 0.38, keyword similarity: 0.19)
+  - ice_caves (score: 0.88, name similarity: 0.38, keyword similarity: 0.17)
+
+Pages that may want to link to 'shields':
+  - shielded (score: 1.25, name similarity: 0.75, keyword similarity: 0.17)
+  - chaos_shield (score: 1.00, name similarity: 0.50, keyword similarity: 0.24)
+  - mechanics (score: 0.94, name similarity: 0.44, keyword similarity: 0.17)
+  - items (score: 0.93, name similarity: 0.43, keyword similarity: 0.07)
+  - summon_deathling (score: 0.88, name similarity: 0.38, keyword similarity: 0.11)
+
+Pages that may want to link to 'warlock_armor':
+  - warlock (score: 1.04, name similarity: 0.54, keyword similarity: 0.14)
+  - battle_mage_armor (score: 0.97, name similarity: 0.35, keyword similarity: 0.97)
+  - armor_kit (score: 0.96, name similarity: 0.46, keyword similarity: 0.19)
+  - armor (score: 0.81, name similarity: 0.31, keyword similarity: 0.10)
+  - changelog (score: 0.81, name similarity: 0.31, keyword similarity: 0.04)
+
+Pages that may want to link to 'ghost':
+  - rats (score: 0.90, name similarity: 0.40, keyword similarity: 0.03)
+  - wraith (score: 0.83, name similarity: 0.33, keyword similarity: 0.04)
+  - cold_spirit (score: 0.77, name similarity: 0.27, keyword similarity: 0.03)
+  - artifacts (score: 0.72, name similarity: 0.22, keyword similarity: 0.02)
+  - giant_rat_skull (score: 0.70, name similarity: 0.20, keyword similarity: 0.04)
+
+Pages that may want to link to 'spell_affinities':
+  - exhumation_spell (score: 1.06, name similarity: 0.56, keyword similarity: 0.13)
+  - healing_spell (score: 1.00, name similarity: 0.50, keyword similarity: 0.14)
+  - summon_deathling (score: 1.00, name similarity: 0.50, keyword similarity: 0.14)
+  - wind_gust_spell (score: 1.00, name similarity: 0.50, keyword similarity: 0.14)
+  - ignite_spell (score: 1.00, name similarity: 0.50, keyword similarity: 0.14)
+
+Pages that may want to link to 'summon_beast_spell':
+  - worm (score: 0.69, name similarity: 0.11, keyword similarity: 0.19)
+  - exhumation_spell (score: 0.61, name similarity: 0.61, keyword similarity: 0.35)
+  - nature_armor_spell (score: 0.61, name similarity: 0.61, keyword similarity: 0.43)
+  - summon_deathling (score: 0.56, name similarity: 0.56, keyword similarity: 0.29)
+  - kunai_throw_spell (score: 0.56, name similarity: 0.56, keyword similarity: 0.41)
+
+Pages that may want to link to 'earthelemental':
+  - earth_elemental (score: 1.03, name similarity: 0.53, keyword similarity: 0.45)
+  - airelemental (score: 1.00, name similarity: 0.50, keyword similarity: 0.24)
+  - fireelemental (score: 1.00, name similarity: 0.50, keyword similarity: 0.25)
+  - iceelemental (score: 0.93, name similarity: 0.43, keyword similarity: 0.33)
+  - elementals (score: 0.93, name similarity: 0.43, keyword similarity: 0.29)
+
+Pages that may want to link to 'test_spell':
+  - root_spell (score: 0.60, name similarity: 0.60, keyword similarity: 0.24)
+  - haste_spell (score: 0.55, name similarity: 0.55, keyword similarity: 0.26)
+  - sprout_spell (score: 0.50, name similarity: 0.50, keyword similarity: 0.30)
+  - calm_spell (score: 0.50, name similarity: 0.50, keyword similarity: 0.31)
+  - spell_book (score: 0.50, name similarity: 0.50, keyword similarity: 0.18)
+
+Pages that may want to link to 'mimic':
+  - mimicpie (score: 1.17, name similarity: 0.38, keyword similarity: 0.67)
+  - mimicamulet (score: 1.17, name similarity: 0.27, keyword similarity: 0.67)
+  - enemies (score: 0.79, name similarity: 0.29, keyword similarity: 0.03)
+  - pasty_mimic (score: 0.77, name similarity: 0.27, keyword similarity: 0.02)
+  - toxic_gas (score: 0.72, name similarity: 0.22, keyword similarity: 0.02)
+
+Pages that may want to link to 'assassin':
+  - assassin_armor (score: 0.79, name similarity: 0.29, keyword similarity: 0.17)
+  - armor_kit (score: 0.72, name similarity: 0.22, keyword similarity: 0.14)
+  - hero_subclasses (score: 0.69, name similarity: 0.13, keyword similarity: 0.19)
+  - rogue (score: 0.66, name similarity: 0.00, keyword similarity: 0.16)
+  - tome_of_mastery (score: 0.63, name similarity: 0.13, keyword similarity: 0.13)
+
+Pages that may want to link to 'chaos_crystal':
+  - chaos_armor (score: 1.04, name similarity: 0.54, keyword similarity: 0.18)
+  - chaos_staff (score: 1.04, name similarity: 0.54, keyword similarity: 0.14)
+  - chaos_set (score: 1.04, name similarity: 0.54, keyword similarity: 0.22)
+  - chaos_bow (score: 0.96, name similarity: 0.46, keyword similarity: 0.16)
+  - chaos (score: 0.88, name similarity: 0.38, keyword similarity: 0.20)
+
+Pages that may want to link to 'ice_caves':
+  - caves (score: 1.06, name similarity: 0.56, keyword similarity: 0.12)
+  - ice_key (score: 0.94, name similarity: 0.44, keyword similarity: 0.17)
+  - necropolis (score: 0.90, name similarity: 0.40, keyword similarity: 0.29)
+  - sub_levels (score: 0.90, name similarity: 0.40, keyword similarity: 0.22)
+  - cold_spirit (score: 0.86, name similarity: 0.36, keyword similarity: 0.13)
+
+Pages that may want to link to 'fortunetellernpc':
+  - spidermindamber (score: 0.67, name similarity: 0.25, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.44, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.31, keyword similarity: 0.67)
+  - townsfolkmovienpc (score: 0.67, name similarity: 0.47, keyword similarity: 0.67)
+  - yogsheart (score: 0.67, name similarity: 0.25, keyword similarity: 0.67)
+
+Pages that may want to link to 'guardian':
+  - iceguardian (score: 1.14, name similarity: 0.64, keyword similarity: 0.09)
+  - guardian_armor (score: 1.00, name similarity: 0.50, keyword similarity: 0.16)
+  - dungeon (score: 1.00, name similarity: 0.50, keyword similarity: 0.06)
+  - iceguardiancore (score: 0.97, name similarity: 0.47, keyword similarity: 0.09)
+  - tengu_liver (score: 0.95, name similarity: 0.45, keyword similarity: 0.20)
+
+Pages that may want to link to 'smash_spell':
+  - spell_affinities (score: 0.88, name similarity: 0.38, keyword similarity: 0.14)
+  - magic_arrow_spell (score: 0.76, name similarity: 0.41, keyword similarity: 0.76)
+  - backstab_spell (score: 0.75, name similarity: 0.43, keyword similarity: 0.75)
+  - curse_item_spell (score: 0.75, name similarity: 0.38, keyword similarity: 0.75)
+  - calm_spell (score: 0.75, name similarity: 0.64, keyword similarity: 0.75)
+
+Pages that may want to link to 'shopkeeper':
+  - shops (score: 0.90, name similarity: 0.40, keyword similarity: 0.03)
+  - azuterronnpc (score: 0.83, name similarity: 0.33, keyword similarity: 0.04)
+  - stranger (score: 0.80, name similarity: 0.30, keyword similarity: 0.04)
+  - changelog (score: 0.80, name similarity: 0.30, keyword similarity: 0.01)
+  - npcs (score: 0.70, name similarity: 0.20, keyword similarity: 0.02)
+
+Pages that may want to link to 'status_effects':
+  - buffs (score: 1.24, name similarity: 0.21, keyword similarity: 0.74)
+  - potion_of_healing (score: 0.79, name similarity: 0.29, keyword similarity: 0.14)
+  - haste (score: 0.79, name similarity: 0.29, keyword similarity: 0.21)
+  - accuracy (score: 0.71, name similarity: 0.21, keyword similarity: 0.15)
+  - regeneration (score: 0.71, name similarity: 0.21, keyword similarity: 0.21)
+
+Pages that may want to link to 'deepsnail':
+  - snail_mob (score: 1.06, name similarity: 0.56, keyword similarity: 0.03)
+  - sewers (score: 0.72, name similarity: 0.22, keyword similarity: 0.02)
+  - spidermindamber (score: 0.67, name similarity: 0.47, keyword similarity: 0.67)
+  - townsfolknpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+  - innkeepernpc (score: 0.67, name similarity: 0.33, keyword similarity: 0.67)
+
+Pages that may want to link to 'hero_layers':
+  - shadow_lord (score: 0.64, name similarity: 0.64, keyword similarity: 0.00)
+  - charm_spell (score: 0.64, name similarity: 0.64, keyword similarity: 0.00)
+  - yogsheart (score: 0.64, name similarity: 0.64, keyword similarity: 0.04)
+  - crystal_mob (score: 0.64, name similarity: 0.64, keyword similarity: 0.00)
+  - soul_reaper (score: 0.64, name similarity: 0.64, keyword similarity: 0.00)
+
+
+
+POTENTIAL DUPLICATES (Content-Based)
+----------------------------------------
+
+Potential Duplicates:
+  Page 1: charm_spell
+  Page 2: calm_spell
+  Name Similarity: 0.73
+  Content Similarity: 0.83
+  Content Overlap: 0.80
+  Combined Similarity: 0.78
+
+Potential Duplicates:
+  Page 1: charm_spell
+  Page 2: smash_spell
+  Name Similarity: 0.73
+  Content Similarity: 0.74
+  Content Overlap: 0.70
+  Combined Similarity: 0.73
+
+Potential Duplicates:
+  Page 1: magic_arrow_spell
+  Page 2: magic_torch_spell
+  Name Similarity: 0.71
+  Content Similarity: 0.70
+  Content Overlap: 0.69
+  Combined Similarity: 0.70
+
+Potential Duplicates:
+  Page 1: charm_spell
+  Page 2: heal_spell
+  Name Similarity: 0.64
+  Content Similarity: 0.75
+  Content Overlap: 0.63
+  Combined Similarity: 0.69
+
+Potential Duplicates:
+  Page 1: calm_spell
+  Page 2: smash_spell
+  Name Similarity: 0.64
+  Content Similarity: 0.75
+  Content Overlap: 0.69
+  Combined Similarity: 0.69
+
+Potential Duplicates:
+  Page 1: charm_spell
+  Page 2: dash_spell
+  Name Similarity: 0.64
+  Content Similarity: 0.74
+  Content Overlap: 0.72
+  Combined Similarity: 0.69
+
+Potential Duplicates:
+  Page 1: dash_spell
+  Page 2: smash_spell
+  Name Similarity: 0.64
+  Content Similarity: 0.74
+  Content Overlap: 0.71
+  Combined Similarity: 0.69
+
+Potential Duplicates:
+  Page 1: kunai_throw_spell
+  Page 2: town_portal_spell
+  Name Similarity: 0.65
+  Content Similarity: 0.71
+  Content Overlap: 0.66
+  Combined Similarity: 0.68
+
+Potential Duplicates:
+  Page 1: magic_arrow_spell
+  Page 2: kunai_throw_spell
+  Name Similarity: 0.59
+  Content Similarity: 0.76
+  Content Overlap: 0.72
+  Combined Similarity: 0.67
+
+Potential Duplicates:
+  Page 1: curse_item_spell
+  Page 2: magic_torch_spell
+  Name Similarity: 0.59
+  Content Similarity: 0.75
+  Content Overlap: 0.71
+  Combined Similarity: 0.67
+
+
+
+POTENTIAL DUPLICATES (Naming Pattern)
+----------------------------------------
+
+Normalized name: raisedead
+  Original names: raise_dead, raise_dead_spell
+  Count: 2
+
+Normalized name: shadowlord
+  Original names: shadow_lord, shadowlord
+  Count: 2
+
+Normalized name: cloak
+  Original names: cloak_spell, cloak
+  Count: 2
+
+Normalized name: exhumation
+  Original names: exhumation, exhumation_spell
+  Count: 2
+
+Normalized name: waterelemental
+  Original names: water_elemental, waterelemental
+  Count: 2
+
+Normalized name: witchdoctor
+  Original names: witchdoctor, witch_doctor
+  Count: 2
+
+Normalized name: lich
+  Original names: lich_mob, lich
+  Count: 2
+
+Normalized name: gnoll
+  Original names: gnoll, gnoll_mob
+  Count: 2
+
+Normalized name: iceelemental
+  Original names: iceelemental, ice_elemental
+  Count: 2
+
+Normalized name: azuterronnpc
+  Original names: azuterron_npc, azuterronnpc
+  Count: 2
+

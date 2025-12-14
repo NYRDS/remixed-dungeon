@@ -1,0 +1,5 @@
+====== Old Page Name ======
+
+This is the old page that will be renamed.
+
+It has links too: [[rpd:another_page|Another Page]] and [[test_page|Test Page]].

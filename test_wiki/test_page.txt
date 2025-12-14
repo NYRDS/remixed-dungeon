@@ -1,0 +1,11 @@
+====== Test Page ======
+
+This is a test page content.
+
+It has links to other pages like [[rpd:new_page_name|Old Page]] and [[new_page_name|Another Link to Old Page]].
+
+And a link without text: [[rpd:new_page_name]] and [[new_page_name]].
+
+Some other unrelated links: [[rpd:other_page|Other Page]] and [[unrelated_page|Unrelated]].
+
+A partial match that should NOT be changed: [[boss_old_page_name|Boss link]].

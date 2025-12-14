@@ -1,0 +1,17 @@
+====== Namespace Test Page ======
+
+This page has links with different namespaces.
+
+Link to our target page:
+- [[rpd:new_namespace_target|RPD Target]]
+- [[wiki:new_namespace_target|Wiki Target]]
+- [[custom:new_namespace_target|Custom Target]]
+
+Regular links:
+- [[new_namespace_target|Regular Target]]
+- [[new_namespace_target|Another Regular]]
+
+Other links that should not be changed:
+- [[rpd:other_page|Other]]
+- [[prefix_namespace_target|Prefix should not change]]
+- [[namespace_target_suffix|Suffix should not change]]

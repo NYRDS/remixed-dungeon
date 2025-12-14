@@ -1,0 +1,16 @@
+====== Another Test Page ======
+
+This page has various types of links.
+
+Link to our target page: [[rpd:new_final_name|Target Page]].
+Another format: [[new_final_name|TP]].
+Without text: [[rpd:new_final_name]] and [[new_final_name]].
+
+Some other links: [[rpd:another_page|Another]] and [[different_page|Diff]].
+
+Edge cases that should NOT change:
+- [[prefix_target_page|Prefix link]]
+- [[target_page_suffix|Suffix link]]
+- [[prefix_target_page_suffix|Prefix and suffix link]]
+
+A page with similar name: [[boss_target_mob|Boss Mob]].
