@@ -30,24 +30,28 @@ Always include references to the source code when documenting game mechanics, as
 - Proper names should follow the same rule (e.g., `ArcaneStylus` → `arcane_stylus`)
 
 ### Entity Namespace Separation
-To avoid confusion between similar entity names (e.g., a mob and hero subclass both named "Shaman"), different entity types should use different naming conventions:
+To avoid confusion between similar entity names (e.g., a mob and hero subclass both named "Shaman"), different entity types should use different naming conventions. When an entity can exist in multiple forms (e.g., Lich as both a boss mob and a hero subclass), it's important to distinguish these clearly.
 
 #### Mobs (Monsters/Enemies)
 - Pages for dungeon mobs and enemies should use `_mob` suffix
 - Example: `shaman_mob.txt`, `lich_mob.txt`, `gnoll_mob.txt`
 - Current exceptions like `lich_mob.txt` and `crystal_mob.txt` should be maintained
+- Boss entities that also serve as unlock mechanisms for subclasses should be clearly identified as mobs with the `_mob` suffix
 
 #### Hero Classes
-- Pages for main playable classes use simple names
-- Example: `warrior.txt`, `mage.txt`, `rogue.txt`, `elf.txt`
+- Pages for main playable classes use `_class` suffix
+- Example: `warrior_class.txt`, `mage_class.txt`, `rogue_class.txt`, `elf_class.txt`, `necromancer_class.txt`
+- Hero class pages should use the hero's class sprite, not NPC sprites (e.g., use `hero_NECROMANCER.png` not `mob_NecromancerNPC.png`)
 
 #### Hero Subclasses
-- Pages for mastery paths or subclasses can use simple names within context
-- Example: `shaman.txt` (Shaman subclass for Elf class), `scout.txt` (Scout subclass for Elf class)
+- Pages for mastery paths or subclasses use `_subclass` suffix
+- Example: `shaman_subclass.txt` (Shaman subclass for Elf class), `scout_subclass.txt` (Scout subclass for Elf class), `lich_subclass.txt` (Lich subclass for Necromancer class)
+- Subclass pages should use the appropriate hero subclass sprite (e.g., use `hero_NECROMANCER_LICH.png` for the Lich subclass, not `mob_Lich.png`)
+- When a subclass shares a name with a mob, ensure the subclass page clearly indicates it's a subclass and the mob page uses the `_mob` suffix
 
 #### Items
-- All items follow the standard format without special suffixes
-- Example: `wooden_bow.txt`, `potion_of_healing.txt`, `ring_of_frost.txt`
+- All items follow the `_item` format with `_item` suffix
+- Example: `wooden_bow_item.txt`, `potion_of_healing_item.txt`, `ring_of_frost_item.txt`, `short_sword_item.txt`, `ankh_item.txt`, `scroll_of_identify_item.txt`
 
 #### Spells
 - All spells use `_spell` suffix to distinguish from items with similar names
@@ -55,12 +59,61 @@ To avoid confusion between similar entity names (e.g., a mob and hero subclass b
 - When an item and spell share similar names (e.g., a healing potion and healing spell), use the suffix to differentiate
 
 #### NPCs
-- Non-player characters follow standard format
-- Example: `shopkeeper.txt`, `wandmaker.txt`, `ghost.txt`
+- Non-player characters use `_npc` suffix
+- Example: `shopkeeper_npc.txt`, `wandmaker_npc.txt`, `ghost_npc.txt`, `necromancer_npc.txt`
 
-#### Other Entities
-- Levels, mechanics, and other game elements follow standard format
-- Example: `sewers.txt`, `combat.txt`, `mechanics.txt`
+#### Levels
+- Level pages use `_level` suffix
+- Example: `sewers_level.txt`, `prison_level.txt`, `caves_level.txt`, `necropolis_level.txt`
+
+#### Game Mechanics
+- Mechanics pages use `_mechanic` suffix
+- Example: `combat_mechanic.txt`, `enchantments_mechanic.txt`, `alchemy_mechanic.txt`
+
+#### Skills and Talents
+- Skills and talents use `_skill` or `_talent` suffix
+- Example: `berserker_rage_skill.txt`, `armor_proficiency_talent.txt`, `dual_wielding_talent.txt`
+
+#### Buffs and Debuffs
+- Buffs and debuffs use `_buff` suffix
+- Example: `poison_buff.txt`, `invisibility_buff.txt`, `fury_buff.txt`, `paralysis_buff.txt`
+
+#### Traps
+- Traps use `_trap` suffix
+- Example: `poison_trap.txt`, `alarm_trap.txt`, `dart_trap.txt`, `fire_trap.txt`
+
+#### Scripts
+- Scripts use `_script` suffix
+- Example: `heal_script.txt`, `ignite_script.txt`, `mobs/init_script.txt`
+
+#### Configuration Files
+- Configuration files use `_config` suffix
+- Example: `hero_stats_config.txt`, `mob_spawn_config.txt`
+
+#### Quests
+- Quests use `_quest` suffix
+- Example: `alchemy_quest.txt`, `impossible_quest.txt`
+
+#### Distinguishing Similar Entities
+When entities share the same name across different types (like the Lich boss and Lich subclass):
+
+1. **Clear Naming**: Use the suffix conventions mentioned above (`_mob` for mobs, `_class` for classes, `_subclass` for subclasses, `_spell` for spells, `_item` for items, `_npc` for NPCs, etc.) to distinguish between entity types
+
+2. **Correct Sprites**: Each entity type should use the appropriate sprite that matches its in-game representation:
+   - Hero classes: Use hero class sprites (e.g., `hero_NECROMANCER.png`)
+   - Hero subclasses: Use hero subclass sprites (e.g., `hero_NECROMANCER_LICH.png`)
+   - Mobs/Bosses: Use mob sprites (e.g., `mob_Lich.png` → `lich_sprite.png`)
+   - NPCs: Use NPC sprites (e.g., `mob_NecromancerNPC.png` → `necromancernpc_sprite.png`)
+
+3. **Contextual Clarity**: In the content, make it clear what type of entity is being described:
+   - For mobs: "The **Lich** is a powerful undead boss enemy..."
+   - For subclasses: "The **Lich** is a hero subclass for the Necromancer class..."
+   - For NPCs: "The **Necromancer** is a special non-player character found in..."
+
+4. **Cross-References**: When entities are related, link them appropriately:
+   - The Lich subclass page should link to the Lich mob page: `[[rpd:lich_mob|Lich (Mob)]]`
+   - The Lich mob page should link to the Lich subclass: `[[rpd:lich_subclass|Lich (Subclass)]]`
+   - The Necromancer class page should reference the NPC: `[[rpd:necromancer_npc|Necromancer NPC]]`
 
 ### Content Organization
 - Each wiki page should have exactly one file in the correct lowercase naming format
