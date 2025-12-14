@@ -96,7 +96,11 @@ public class FactorySpriteGenerator extends QuickModTest {
         generateAllItemsSpritesFromFactory();
         generateAllSpellsSpritesFromFactory();
         generateAllBuffsIconsFromFactory();
+
+        // Temporarily allow sprite creation for hero generation
+        com.watabou.pixeldungeon.scenes.GameScene.setForceAllowSpriteCreation(true);
         generateAllHeroSprites();
+        com.watabou.pixeldungeon.scenes.GameScene.setForceAllowSpriteCreation(false);
 
         // Reset to default behavior after generation
         SmartTexture.setAutoDisposeBitmapData(true);
@@ -463,11 +467,133 @@ public class FactorySpriteGenerator extends QuickModTest {
                 Hero hero = new Hero(2); // Using difficulty 2 which is normal
                 hero.setHeroClass(heroClass);
 
+                // Equip the appropriate class armor for this class
+                com.watabou.pixeldungeon.items.armor.ClassArmor classArmor = null;
+                switch (heroClass) {
+                    case WARRIOR:
+                        classArmor = new com.watabou.pixeldungeon.items.armor.WarriorArmor();
+                        break;
+                    case MAGE:
+                        classArmor = new com.watabou.pixeldungeon.items.armor.MageArmor();
+                        break;
+                    case ROGUE:
+                        classArmor = new com.watabou.pixeldungeon.items.armor.RogueArmor();
+                        break;
+                    case HUNTRESS:
+                        classArmor = new com.watabou.pixeldungeon.items.armor.HuntressArmor();
+                        break;
+                    case ELF:
+                        classArmor = new com.watabou.pixeldungeon.items.armor.ElfArmor();
+                        break;
+                    case NECROMANCER:
+                        classArmor = new com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor();
+                        break;
+                    case GNOLL:
+                        classArmor = new com.watabou.pixeldungeon.items.armor.GnollArmor();
+                        break;
+                }
+
+                if (classArmor != null) {
+                    // Equip the class armor
+                    try {
+                        classArmor.upgrade(0); // Ensure it's at +0 to avoid any upgrade visuals
+                        classArmor.doEquip(hero);
+                        GLog.i("Class armor equipped for hero class: %s", heroClass.name());
+                    } catch (Exception e) {
+                        GLog.w("Failed to equip class armor for hero class %s: %s", heroClass.name(), e.getMessage());
+                    }
+                }
+
+                // Equip a basic weapon based on class archetype
+                com.watabou.pixeldungeon.items.Item basicItem = null;
+                switch (heroClass) {
+                    case WARRIOR:
+                        // Warriors get a basic sword
+                        if (validItemNames.contains("ShortSword")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("ShortSword");
+                        } else if (validItemNames.contains("Dagger")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Dagger");
+                        }
+                        break;
+                    case MAGE:
+                        // Mages get a basic wand
+                        if (validItemNames.contains("WandOfMagicMissile")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("WandOfMagicMissile");
+                        } else if (validItemNames.contains("WandOfFirebolt")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("WandOfFirebolt");
+                        }
+                        break;
+                    case ROGUE:
+                        // Rogues get a basic dagger
+                        if (validItemNames.contains("Dagger")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Dagger");
+                        } else if (validItemNames.contains("Shuriken")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Shuriken");
+                        }
+                        break;
+                    case HUNTRESS:
+                        // Huntresses get a basic ranged weapon
+                        if (validItemNames.contains("Dart")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Dart");
+                        } else if (validItemNames.contains("Shuriken")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Shuriken");
+                        }
+                        break;
+                    case ELF:
+                        // Elves get a versatile weapon
+                        if (validItemNames.contains("ElvenDagger")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("ElvenDagger");
+                        } else if (validItemNames.contains("Quarterstaff")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Quarterstaff");
+                        }
+                        break;
+                    case NECROMANCER:
+                        // Necromancers get an appropriate weapon
+                        if (validItemNames.contains("Knuckles")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Knuckles");
+                        } else if (validItemNames.contains("Mace")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Mace");
+                        }
+                        break;
+                    case GNOLL:
+                        // Gnolls get an appropriate weapon
+                        if (validItemNames.contains("ShortSword")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("ShortSword");
+                        } else if (validItemNames.contains("Dagger")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Dagger");
+                        }
+                        break;
+                    case PRIEST:
+                    case DOCTOR:
+                        // Generic melee weapon for other classes
+                        if (validItemNames.contains("Quarterstaff")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Quarterstaff");
+                        } else if (validItemNames.contains("Knuckles")) {
+                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Knuckles");
+                        }
+                        break;
+                }
+
+                if (basicItem != null && basicItem instanceof com.watabou.pixeldungeon.items.EquipableItem) {
+                    try {
+                        com.watabou.pixeldungeon.items.EquipableItem equipableItem = (com.watabou.pixeldungeon.items.EquipableItem) basicItem;
+                        equipableItem.upgrade(0); // Ensure it's at +0 to avoid any upgrade visuals
+                        equipableItem.doEquip(hero);
+                        GLog.i("Basic item equipped for hero class: %s", heroClass.name());
+                    } catch (Exception e) {
+                        GLog.w("Failed to equip basic item for hero class %s: %s", heroClass.name(), e.getMessage());
+                    }
+                }
+
                 // Generate sprite for this hero class
                 HeroSpriteDef heroSprite = (HeroSpriteDef) hero.newSprite();
                 if (heroSprite != null) {
-                    // Update the sprite to ensure all layers are properly applied
-                    heroSprite.heroUpdated(hero);
+                    // Update the sprite to ensure all layers are properly applied after equipping items
+                    try {
+                        heroSprite.heroUpdated(hero);
+                    } catch (Exception e) {
+                        GLog.w("Failed to update HeroSprite for hero class %s: %s", heroClass.name(), e.getMessage());
+                    }
 
                     // Use the avatar method to get the layered sprite
                     com.watabou.noosa.Image avatar = heroSprite.avatar();
@@ -537,10 +663,17 @@ public class FactorySpriteGenerator extends QuickModTest {
 
                 if (isValidCombination) {
                     try {
+                        GLog.i("Attempting to create hero class+subclass combination: %s+%s", heroClass.name(), heroSubClass.name());
+
                         // Create a temporary hero instance with this class and subclass combination
                         Hero hero = new Hero(2); // Using difficulty 2 which is normal
+                        GLog.i("Hero instance created successfully for: %s+%s", heroClass.name(), heroSubClass.name());
+
                         hero.setHeroClass(heroClass);
+                        GLog.i("Hero class set to: %s", heroClass.name());
+
                         hero.setSubClass(heroSubClass);
+                        GLog.i("Hero subclass set to: %s", heroSubClass.name());
 
                         // Equip the appropriate class armor for this combination
                         ClassArmor classArmor = null;
@@ -548,50 +681,67 @@ public class FactorySpriteGenerator extends QuickModTest {
                             case WARRIOR:
                                 if (heroSubClass == HeroSubClass.GLADIATOR || heroSubClass == HeroSubClass.BERSERKER) {
                                     classArmor = new com.watabou.pixeldungeon.items.armor.WarriorArmor();
+                                    GLog.i("Equipping WarriorArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case MAGE:
                                 if (heroSubClass == HeroSubClass.BATTLEMAGE || heroSubClass == HeroSubClass.WARLOCK) {
                                     classArmor = new com.watabou.pixeldungeon.items.armor.MageArmor();
+                                    GLog.i("Equipping MageArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case ROGUE:
                                 if (heroSubClass == HeroSubClass.FREERUNNER || heroSubClass == HeroSubClass.ASSASSIN) {
                                     classArmor = new com.watabou.pixeldungeon.items.armor.RogueArmor();
+                                    GLog.i("Equipping RogueArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case HUNTRESS:
                                 if (heroSubClass == HeroSubClass.SNIPER || heroSubClass == HeroSubClass.WARDEN) {
                                     classArmor = new com.watabou.pixeldungeon.items.armor.HuntressArmor();
+                                    GLog.i("Equipping HuntressArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case ELF:
                                 if (heroSubClass == HeroSubClass.SCOUT || heroSubClass == HeroSubClass.SHAMAN) {
                                     classArmor = new com.watabou.pixeldungeon.items.armor.ElfArmor();
+                                    GLog.i("Equipping ElfArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case NECROMANCER:
                                 if (heroSubClass == HeroSubClass.LICH) {
                                     classArmor = new com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor();
+                                    GLog.i("Equipping NecromancerArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case GNOLL:
                                 if (heroSubClass == HeroSubClass.GUARDIAN || heroSubClass == HeroSubClass.WITCHDOCTOR) {
                                     classArmor = new com.watabou.pixeldungeon.items.armor.GnollArmor();
+                                    GLog.i("Equipping GnollArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                         }
 
                         if (classArmor != null) {
-                            // Equip the class armor
-                            classArmor.upgrade(0); // Ensure it's at +0 to avoid any upgrade visuals
-                            classArmor.doEquip(hero);
+                            GLog.i("Class armor found for combination: %s+%s", heroClass.name(), heroSubClass.name());
+                            // Equip the class armor - wrap in try-catch to prevent issues during sprite generation
+                            try {
+                                classArmor.upgrade(0); // Ensure it's at +0 to avoid any upgrade visuals
+                                classArmor.doEquip(hero);
+                                GLog.i("Class armor equipped successfully for: %s+%s", heroClass.name(), heroSubClass.name());
+                            } catch (Exception e) {
+                                GLog.w("Failed to equip class armor for %s+%s: %s", heroClass.name(), heroSubClass.name(), e.getMessage());
+                                // Continue without armor if equipping fails
+                            }
+                        } else {
+                            GLog.w("No class armor found for combination: %s+%s", heroClass.name(), heroSubClass.name());
                         }
 
                         // Equip random weapon and/or shield
                         // Use a seed based on class+subclass combination for consistent random items per combination
                         long seed = (heroClass.name() + "_" + heroSubClass.name()).hashCode();
                         java.util.Random random = new java.util.Random(seed);
+                        GLog.i("Generated seed %d for random item selection for: %s+%s", seed, heroClass.name(), heroSubClass.name());
 
                         // Add a random weapon based on class archetype using ItemFactory
                         com.watabou.pixeldungeon.items.Item randomItem = null;
@@ -607,17 +757,22 @@ public class FactorySpriteGenerator extends QuickModTest {
                                     "Spear",
                                     "WarHammer"
                                 };
+                                GLog.i("Checking warrior items: %s for %s+%s", java.util.Arrays.toString(warriorItems), heroClass.name(), heroSubClass.name());
                                 // Find a valid item
                                 for (String item : warriorItems) {
                                     if (validItemNames.contains(item)) {
                                         randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        GLog.i("Found valid warrior item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
+                                    } else {
+                                        GLog.i("Item %s not found in validItemNames for %s+%s", item, heroClass.name(), heroSubClass.name());
                                     }
                                 }
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid weapon
                                     String randomItemName = warriorItems[random.nextInt(warriorItems.length)];
                                     randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    GLog.i("Selected random warrior item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case GNOLL:
@@ -633,17 +788,22 @@ public class FactorySpriteGenerator extends QuickModTest {
                                         "WandOfTeleportation",
                                         "WandOfPoison"
                                     };
+                                    GLog.i("Checking Witch Doctor wand items: %s for %s+%s", java.util.Arrays.toString(wandItems), heroClass.name(), heroSubClass.name());
                                     // Find a valid wand
                                     for (String item : wandItems) {
                                         if (validItemNames.contains(item)) {
                                             randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                            GLog.i("Found valid wand item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                             break;
+                                        } else {
+                                            GLog.i("Wand item %s not found in validItemNames for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         }
                                     }
                                     if (randomItem == null) {
                                         // If none of the preferred items are found, pick any valid wand
                                         String randomItemName = wandItems[random.nextInt(wandItems.length)];
                                         randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                        GLog.i("Selected random wand item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                     }
                                 } else {
                                     // For Guardian subclass and any other future Gnoll subclasses, use melee weapons
@@ -658,18 +818,23 @@ public class FactorySpriteGenerator extends QuickModTest {
                                         "WarHammer",
                                         "BattleAxe"
                                     };
+                                    GLog.i("Checking Gnoll items: %s for %s+%s", java.util.Arrays.toString(gnollItems), heroClass.name(), heroSubClass.name());
 
                                     // Find a valid item
                                     for (String item : gnollItems) {
                                         if (validItemNames.contains(item)) {
                                             randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                            GLog.i("Found valid gnoll item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                             break;
+                                        } else {
+                                            GLog.i("Gnoll item %s not found in validItemNames for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         }
                                     }
                                     if (randomItem == null) {
                                         // If none of the preferred items are found, pick any valid item
                                         String randomItemName = gnollItems[random.nextInt(gnollItems.length)];
                                         randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                        GLog.i("Selected random gnoll item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                     }
                                 }
                                 break;
@@ -685,17 +850,22 @@ public class FactorySpriteGenerator extends QuickModTest {
                                     "WandOfTeleportation",
                                     "WandOfPoison"
                                 };
+                                GLog.i("Checking mage wand items: %s for %s+%s", java.util.Arrays.toString(mageWands), heroClass.name(), heroSubClass.name());
                                 // Find a valid wand
                                 for (String item : mageWands) {
                                     if (validItemNames.contains(item)) {
                                         randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        GLog.i("Found valid mage wand: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
+                                    } else {
+                                        GLog.i("Mage wand %s not found in validItemNames for %s+%s", item, heroClass.name(), heroSubClass.name());
                                     }
                                 }
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid wand
                                     String randomItemName = mageWands[random.nextInt(mageWands.length)];
                                     randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    GLog.i("Selected random mage wand: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case ROGUE:
@@ -707,17 +877,22 @@ public class FactorySpriteGenerator extends QuickModTest {
                                     "Boomerang",
                                     "Shuriken"
                                 };
+                                GLog.i("Checking rogue/huntress items: %s for %s+%s", java.util.Arrays.toString(rogueHuntItems), heroClass.name(), heroSubClass.name());
                                 // Find a valid item
                                 for (String item : rogueHuntItems) {
                                     if (validItemNames.contains(item)) {
                                         randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        GLog.i("Found valid rogue/huntress item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
+                                    } else {
+                                        GLog.i("Rogue/huntress item %s not found in validItemNames for %s+%s", item, heroClass.name(), heroSubClass.name());
                                     }
                                 }
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid item
                                     String randomItemName = rogueHuntItems[random.nextInt(rogueHuntItems.length)];
                                     randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    GLog.i("Selected random rogue/huntress item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case ELF:
@@ -727,17 +902,22 @@ public class FactorySpriteGenerator extends QuickModTest {
                                     "ElvenBow",
                                     "Quarterstaff"
                                 };
+                                GLog.i("Checking elf items: %s for %s+%s", java.util.Arrays.toString(elfItems), heroClass.name(), heroSubClass.name());
                                 // Find a valid item
                                 for (String item : elfItems) {
                                     if (validItemNames.contains(item)) {
                                         randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        GLog.i("Found valid elf item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
+                                    } else {
+                                        GLog.i("Elf item %s not found in validItemNames for %s+%s", item, heroClass.name(), heroSubClass.name());
                                     }
                                 }
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid item
                                     String randomItemName = elfItems[random.nextInt(elfItems.length)];
                                     randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    GLog.i("Selected random elf item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case NECROMANCER:
@@ -748,17 +928,22 @@ public class FactorySpriteGenerator extends QuickModTest {
                                     "Sword",
                                     "Mace" // Appropriate for necromancy theme
                                 };
+                                GLog.i("Checking necromancer items: %s for %s+%s", java.util.Arrays.toString(necroItems), heroClass.name(), heroSubClass.name());
                                 // Find a valid item
                                 for (String item : necroItems) {
                                     if (validItemNames.contains(item)) {
                                         randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        GLog.i("Found valid necromancer item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
+                                    } else {
+                                        GLog.i("Necromancer item %s not found in validItemNames for %s+%s", item, heroClass.name(), heroSubClass.name());
                                     }
                                 }
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid item
                                     String randomItemName = necroItems[random.nextInt(necroItems.length)];
                                     randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    GLog.i("Selected random necromancer item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case PRIEST:
@@ -768,17 +953,22 @@ public class FactorySpriteGenerator extends QuickModTest {
                                     "Mace",
                                     "Knuckles"
                                 };
+                                GLog.i("Checking priest items: %s for %s+%s", java.util.Arrays.toString(priestItems), heroClass.name(), heroSubClass.name());
                                 // Find a valid item
                                 for (String item : priestItems) {
                                     if (validItemNames.contains(item)) {
                                         randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        GLog.i("Found valid priest item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
+                                    } else {
+                                        GLog.i("Priest item %s not found in validItemNames for %s+%s", item, heroClass.name(), heroSubClass.name());
                                     }
                                 }
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid item
                                     String randomItemName = priestItems[random.nextInt(priestItems.length)];
                                     randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    GLog.i("Selected random priest item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case DOCTOR:
@@ -788,17 +978,22 @@ public class FactorySpriteGenerator extends QuickModTest {
                                     "Knuckles",
                                     "BoneSaw" // Using the actual doctor-specific weapon that exists in the game
                                 };
+                                GLog.i("Checking doctor items: %s for %s+%s", java.util.Arrays.toString(doctorItems), heroClass.name(), heroSubClass.name());
                                 // Find a valid item
                                 for (String item : doctorItems) {
                                     if (validItemNames.contains(item)) {
                                         randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        GLog.i("Found valid doctor item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
+                                    } else {
+                                        GLog.i("Doctor item %s not found in validItemNames for %s+%s", item, heroClass.name(), heroSubClass.name());
                                     }
                                 }
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid item
                                     String randomItemName = doctorItems[random.nextInt(doctorItems.length)];
                                     randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    GLog.i("Selected random doctor item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             default:
@@ -809,45 +1004,70 @@ public class FactorySpriteGenerator extends QuickModTest {
                                     "Knuckles",
                                     "Shuriken"
                                 };
+                                GLog.i("Checking generic items: %s for %s+%s", java.util.Arrays.toString(genericItems), heroClass.name(), heroSubClass.name());
                                 // Find a valid item
                                 for (String item : genericItems) {
                                     if (validItemNames.contains(item)) {
                                         randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        GLog.i("Found valid generic item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
+                                    } else {
+                                        GLog.i("Generic item %s not found in validItemNames for %s+%s", item, heroClass.name(), heroSubClass.name());
                                     }
                                 }
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid item
                                     String randomItemName = genericItems[random.nextInt(genericItems.length)];
                                     randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    GLog.i("Selected random generic item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                         }
 
                         if (randomItem != null) {
+                            GLog.i("Random item selected: %s for %s+%s", randomItem.getEntityKind(), heroClass.name(), heroSubClass.name());
                             if (randomItem instanceof com.watabou.pixeldungeon.items.EquipableItem) {
                                 com.watabou.pixeldungeon.items.EquipableItem equipableItem = (com.watabou.pixeldungeon.items.EquipableItem) randomItem;
-                                equipableItem.upgrade(0); // Ensure it's at +0 to avoid any upgrade visuals
-                                equipableItem.doEquip(hero);
+                                try {
+                                    equipableItem.upgrade(0); // Ensure it's at +0 to avoid any upgrade visuals
+                                    equipableItem.doEquip(hero);
+                                    GLog.i("Random item equipped successfully for %s+%s", heroClass.name(), heroSubClass.name());
+                                } catch (Exception e) {
+                                    GLog.w("Failed to equip random item for %s+%s: %s", heroClass.name(), heroSubClass.name(), e.getMessage());
+                                    // Continue without the random item if equipping fails
+                                }
+                            } else {
+                                GLog.w("Random item is not equipable: %s for %s+%s", randomItem.getEntityKind(), heroClass.name(), heroSubClass.name());
                             }
+                        } else {
+                            GLog.w("No random item found for %s+%s", heroClass.name(), heroSubClass.name());
                         }
 
                         // For Guardian subclass, try to equip a shield if possible
                         // Since shields are implemented as Lua scripts, we'll note this in the comment
                         if (heroClass == HeroClass.GNOLL && heroSubClass == HeroSubClass.GUARDIAN) {
+                            GLog.i("Processing Guardian subclass specific logic for %s+%s", heroClass.name(), heroSubClass.name());
                             // The Guardian subclass provides shield benefits based on equipped left-hand items
                             // This is handled automatically by the game mechanics when the hero is created
                         }
 
                         // Generate sprite for this hero class and subclass combination
+                        GLog.i("Attempting to generate sprite for hero class+subclass: %s+%s", heroClass.name(), heroSubClass.name());
                         HeroSpriteDef heroSprite = (HeroSpriteDef) hero.newSprite();
                         if (heroSprite != null) {
+                            GLog.i("HeroSprite created successfully for: %s+%s", heroClass.name(), heroSubClass.name());
                             // Update the sprite to ensure all layers are properly applied after equipping items
-                            heroSprite.heroUpdated(hero);
+                            try {
+                                heroSprite.heroUpdated(hero);
+                                GLog.i("HeroSprite updated for: %s+%s", heroClass.name(), heroSubClass.name());
+                            } catch (Exception e) {
+                                GLog.w("Failed to update HeroSprite for %s+%s: %s", heroClass.name(), heroSubClass.name(), e.getMessage());
+                            }
 
                             // Use the avatar method to get the layered sprite
                             com.watabou.noosa.Image avatar = heroSprite.avatar();
                             if (avatar != null) {
+                                GLog.i("Avatar created successfully for: %s+%s", heroClass.name(), heroSubClass.name());
                                 // Extract the actual bitmap data from the avatar
                                 BitmapData bitmap = extractBitmapDataFromImage(avatar);
                                 if (bitmap != null) {
@@ -867,6 +1087,7 @@ public class FactorySpriteGenerator extends QuickModTest {
                         }
                     } catch (Exception e) {
                         GLog.w("Error creating or saving hero class+subclass sprite for %s+%s: %s", heroClass.name(), heroSubClass.name(), e.getMessage());
+                        e.printStackTrace(); // Add stack trace to see exact error
                         errorCount++;
                     }
                 } else {

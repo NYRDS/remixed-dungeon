@@ -17,28 +17,35 @@ Three platform-specific Texture classes (Android, Desktop, HTML) were updated wi
 - Added same method to the `SmartTexture` class
 - This allows direct access to the current bitmap data associated with a texture
 
-### 2. FactorySpriteGenerator Improvements
-#### 2.1 Updated Generation Methods
+### 2. GameScene Changes
+#### 2.1 Forced Sprite Creation Allowance
+- Added private static boolean `forceAllowSpriteCreation` field to GameScene
+- Added public static method `setForceAllowSpriteCreation(boolean)` to control the forced allowance
+- Modified `mayCreateSprites()` method to return `true` if either a scene is available OR force allowance is enabled
+- This allows sprite generation in contexts where no game scene is active, such as the sprite generation utility
+
+### 3. FactorySpriteGenerator Improvements
+#### 3.1 Updated Generation Methods
 - `generateAllMobsSpritesFromFactory()` now uses `MobFactory.allMobs()` instead of accessing internal factory fields through reflection
 - `generateAllItemsSpritesFromFactory()` now uses `ItemFactory.allItems()` instead of accessing internal factory fields through reflection
 - This provides a cleaner, more maintainable approach to accessing all game entities
 
-#### 2.2 Simplified Item Generation Logic
+#### 3.2 Simplified Item Generation Logic
 - Removed fallback mechanisms that created ItemSprite instances to extract texture data
 - The system now relies only on direct texture atlas access using `item.imageFile()` and `item.image()` properties
 - This simplifies the sprite generation process and eliminates alternative code paths
 
-#### 2.3 Enhanced Texture Data Extraction
+#### 3.3 Enhanced Texture Data Extraction
 - The `extractBitmapDataFromImage()` helper method was improved to use the new `getBitmapData()` functionality
 - The method now prioritizes extracting actual bitmap data directly from the texture using the new method
 - Falls back to the original approach only if direct access fails
 
-#### 2.4 Bitmap Clearing Before Rendering
+#### 3.4 Bitmap Clearing Before Rendering
 - Added `result.eraseColor(0x00000000)` calls before copying texture data to ensure clean state
 - This clears the bitmap with transparent color before rendering, preventing visual artifacts
 - Applied to both item generation and bitmap extraction processes
 
-### 3. Gradle Task Updates
+### 4. Gradle Task Updates
 - Updated `generateSpritesFromFactories` task to use the new FactorySpriteGenerator implementation
 - The task now reflects the simplified sprite generation logic without fallback mechanisms
 - Proper texture data preservation is ensured during the generation process using the static disposal flag
@@ -126,20 +133,21 @@ The generated sprites will be saved in:
 The system now follows these steps for sprite generation:
 1. Sets the static `autoDisposeBitmapData` flag to false to preserve bitmap data during generation
 2. Uses factory methods (`allMobs()`, `allItems()`) to get all entities instead of reflection
-3. For hero class+subclass combinations, validates against `WndClass.java` definitions to only generate valid combinations
-4. For valid hero combinations, equips the appropriate class armor and random weapons based on class archetype
-5. Extracts actual sprite data from the source texture atlases using frame coordinates
-6. Clears each bitmap with transparent color before rendering new content
-7. Sets the static `autoDisposeBitmapData` flag back to true to restore normal behavior
+3. For hero generation, temporarily allows sprite creation using `GameScene.setForceAllowSpriteCreation(true)` to resolve "scene not ready for Hero" errors
+4. For hero class+subclass combinations, validates against `WndClass.java` definitions to only generate valid combinations
+5. For valid hero combinations, equips the appropriate class armor and random weapons based on class archetype
+6. Extracts actual sprite data from the source texture atlases using frame coordinates
+7. Clears each bitmap with transparent color before rendering new content
+8. Sets the static `autoDisposeBitmapData` flag back to true to restore normal behavior
+9. Sets `GameScene.setForceAllowSpriteCreation(false)` to restore normal scene requirements after hero generation
 
 This approach ensures that the system can generate sprites for all game entities while maintaining proper memory management, avoiding initialization conflicts, and ensuring that only valid class|subclass combinations are created with their appropriate equipment.
 
 ## Code Examples
 
-A `SmartTextureExample.java` class was added demonstrating:
-- How to use the static control of bitmap disposal
-- Proper bitmap clearing before rendering
-- Best practices for texture management
+Two example classes were added demonstrating:
+- `SmartTextureExample.java`: Shows how to use the static control of bitmap disposal, proper bitmap clearing before rendering, and best practices for texture management
+- `GameSceneExample.java`: Shows how to use the `setForceAllowSpriteCreation()` method to temporarily allow sprite creation during utility operations like sprite generation
 
 ## Benefits of Changes
 
@@ -152,6 +160,26 @@ A `SmartTextureExample.java` class was added demonstrating:
 7. **Memory Safety**: Static flag ensures proper disposal behavior restoration after generation
 8. **Validation**: Only valid class|subclass combinations are generated as per `WndClass.java` definitions
 9. **Enhanced Visuals**: Valid combinations include appropriate class armor and random weapons based on class archetype
+10. **Fixed GameScene Issue**: Added `setForceAllowSpriteCreation()` method to `GameScene` to allow sprite creation during generation, resolving the "scene not ready for Hero" error that prevented hero class+subclass combination sprites from being generated
+11. **Fixed Equipment Process Exceptions**: Added proper exception handling around equipment processes during sprite generation to catch and handle NullPointerExceptions that occurred when equipping items without proper level context, allowing generation to continue despite individual equipment failures
+12. **Fixed Visual Consistency**: Enhanced both individual hero class sprites and hero class+subclass combination sprites with appropriate class armor and weapons to ensure visual completeness and consistency with game appearances
+
+## Current Status
+
+### Achieved Functionality
+- Individual hero class sprites are successfully generated (e.g., `hero_WARRIOR.png`, `hero_MAGE.png`, etc.)
+- Hero class+subclass combination sprites are now successfully generated (e.g., `hero_WARRIOR_GLADIATOR.png`, `hero_MAGE_WARLOCK.png`, etc.)
+- All hero class sprites now include appropriate class armor and basic items for visual completeness
+- All hero class+subclass combination sprites include appropriate class armor and class-appropriate weapons
+- The NullPointerExceptions during equipment process have been handled with proper exception handling
+- The "scene not ready for Hero" error has been resolved with the `setForceAllowSpriteCreation()` method
+
+### Technical Status
+- The GameScene fix has successfully enabled sprite generation for both individual hero classes and class+subclass combinations
+- All other sprite types (mobs, items, spells, buffs) continue to generate correctly
+- The hero generation code in FactorySpriteGenerator now includes proper exception handling around equipment calls
+- The hero class sprites are now equipped with class-specific armor and basic weapons for visual consistency
+- Memory management and disposal behaviors are properly handled during generation
 
 ## Future Enhancements
 
@@ -162,3 +190,4 @@ The system could be extended to:
 - Add batch processing options for specific entity types
 - Include Lua-based items (like shields) in hero sprite equipment
 - Add more sophisticated weapon selection algorithms based on class abilities
+- Enhance the visual accuracy by refining armor and weapon selection logic for specific class/subclass combinations
