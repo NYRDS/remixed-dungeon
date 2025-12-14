@@ -53,11 +53,35 @@ public class SmartTexture extends Texture {
 		super.bitmap( bitmap );
 	}
 
+	/**
+	 * Set whether bitmap data should be automatically disposed after being uploaded as a texture
+	 * @param autoDispose True to dispose after upload (default), false to preserve bitmap data
+	 */
+	public static void setAutoDisposeBitmapData(boolean autoDispose) {
+		Texture.setAutoDisposeBitmapData(autoDispose);
+	}
+
+	/**
+	 * Get whether bitmap data is automatically disposed after being uploaded as a texture
+	 * @return True if bitmap data is disposed after upload, false otherwise
+	 */
+	public static boolean getAutoDisposeBitmapData() {
+		return Texture.getAutoDisposeBitmapData();
+	}
+
 	public RectF uvRect( int left, int top, int right, int bottom ) {
 		return new RectF(
 				(float)left / width,
 				(float)top	/ height,
 				(float)right / width,
 				(float)bottom / height );
+	}
+
+	/**
+	 * Get the bitmap data associated with this texture
+	 * @return The bitmap data, or null if it's not available
+	 */
+	public BitmapData getBitmapData() {
+		return this.bitmapData;
 	}
 }

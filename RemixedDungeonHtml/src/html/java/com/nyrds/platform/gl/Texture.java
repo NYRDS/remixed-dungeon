@@ -24,7 +24,7 @@ public class Texture {
     static private final int[] bound = new int[32];
     static private int active = 0;
 
-    private Pixmap pixmap;
+    protected Pixmap pixmap;
     private boolean recode;
     private int minFilter = LINEAR;
     private int maxFilter = LINEAR;
@@ -35,6 +35,9 @@ public class Texture {
     private int height;
     private byte[] bytePixels;
     private boolean dataDirty = false;
+
+    // Static flag to control whether bitmap data should be disposed after upload
+    private static boolean autoDisposeBitmapData = true;
 
     public Texture() {
         // Texture generation is deferred until bind() is called
@@ -92,7 +95,7 @@ public class Texture {
             if (pixmap != null) {
                 int w = pixmap.getWidth();
                 int h = pixmap.getHeight();
-                
+
                 // For now, we'll just upload the pixmap directly
                 Gdx.gl20.glTexImage2D(
                     Gdx.gl20.GL_TEXTURE_2D,
@@ -104,8 +107,10 @@ public class Texture {
                     pixmap.getGLFormat(),
                     pixmap.getGLType(),
                     pixmap.getPixels());
-                
-                pixmap.dispose(); // Dispose of the pixmap after uploading
+
+                if (autoDisposeBitmapData) {
+                    pixmap.dispose(); // Dispose of the pixmap after uploading if needed
+                }
                 pixmap = null;
             } else if (pixels != null) {
                 uploadPixels(pixels, width, height);
@@ -201,6 +206,35 @@ public class Texture {
         this.dataDirty = true;
     }
 
-    protected void bitmap(BitmapData bitmap) {
+    /**
+     * Get the bitmap data associated with this texture
+     * @return The bitmap data, or null if it's not available
+     */
+    public BitmapData getBitmapData() {
+        if (this.pixmap != null) {
+            return new BitmapData(this.pixmap);
+        }
+        return null;
+    }
+
+    public void bitmap(BitmapData bitmap) {
+        this.pixmap = bitmap.getPixmap();
+        this.dataDirty = true;
+    }
+
+    /**
+     * Set whether bitmap data should be automatically disposed after being uploaded as a texture
+     * @param autoDispose True to dispose after upload (default), false to preserve bitmap data
+     */
+    public static void setAutoDisposeBitmapData(boolean autoDispose) {
+        autoDisposeBitmapData = autoDispose;
+    }
+
+    /**
+     * Get whether bitmap data is automatically disposed after being uploaded as a texture
+     * @return True if bitmap data is disposed after upload, false otherwise
+     */
+    public static boolean getAutoDisposeBitmapData() {
+        return autoDisposeBitmapData;
     }
 }

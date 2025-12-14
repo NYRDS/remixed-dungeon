@@ -20,7 +20,7 @@ public class Texture {
 	static private final int[] bound = new int[32];
 	static private int active = 0;
 
-	private BitmapData bitmapData;
+	protected BitmapData bitmapData;
 	private boolean recode;
 	private int minFilter = LINEAR;
 	private int maxFilter = LINEAR;
@@ -31,6 +31,9 @@ public class Texture {
 	private int height;
 	private byte[] bytePixels;
 	private boolean dataDirty = false;
+
+	// Static flag to control whether bitmap data should be disposed after upload
+	private static boolean autoDisposeBitmapData = true;
 
 	public Texture() {
 		// Texture generation is deferred until bind() is called
@@ -75,7 +78,9 @@ public class Texture {
 				int h = bitmapData.getHeight();
 				int[] pixels = new int[w * h];
 				bitmapData.getAllPixels(pixels);
-				bitmapData.dispose();
+				if (autoDisposeBitmapData) {
+					bitmapData.dispose();
+				}
 
 				final int as = 0;
 				final int rs = 8;
@@ -178,6 +183,22 @@ public class Texture {
 		this.dataDirty = true;
 	}
 
+	/**
+	 * Set whether bitmap data should be automatically disposed after being uploaded as a texture
+	 * @param autoDispose True to dispose after upload (default), false to preserve bitmap data
+	 */
+	public static void setAutoDisposeBitmapData(boolean autoDispose) {
+		autoDisposeBitmapData = autoDispose;
+	}
+
+	/**
+	 * Get whether bitmap data is automatically disposed after being uploaded as a texture
+	 * @return True if bitmap data is disposed after upload, false otherwise
+	 */
+	public static boolean getAutoDisposeBitmapData() {
+		return autoDisposeBitmapData;
+	}
+
 	public void pixels(int w, int h, int[] pixels) {
 		this.width = w;
 		this.height = h;
@@ -194,5 +215,13 @@ public class Texture {
 		this.pixels = null; // Clear pixel data
 		this.bitmapData = null; // Clear bitmap data
 		this.dataDirty = true;
+	}
+
+	/**
+	 * Get the bitmap data associated with this texture
+	 * @return The bitmap data, or null if it's not available
+	 */
+	public BitmapData getBitmapData() {
+		return this.bitmapData;
 	}
 }

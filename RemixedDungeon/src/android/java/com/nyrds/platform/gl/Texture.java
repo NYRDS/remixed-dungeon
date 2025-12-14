@@ -19,7 +19,10 @@ public class Texture {
 
     protected int id = -1; // -1 indicates that the texture has not been generated yet
 
-    private BitmapData bitmapData;
+    // Static flag to control whether bitmap data should be disposed after upload
+    private static boolean autoDisposeBitmapData = true;
+
+    protected BitmapData bitmapData;
     private int minFilter = LINEAR;
     private int maxFilter = LINEAR;
     private int wrapS = CLAMP;
@@ -67,7 +70,10 @@ public class Texture {
         if (dataDirty) {
             if (bitmapData != null) {
                 GLUtils.texImage2D(GLES20.GL_TEXTURE_2D, 0, bitmapData.bmp, 0);
-                bitmapData = null; // Clear the bitmap data after uploading
+                if (autoDisposeBitmapData) {
+                    bitmapData.dispose(); // Dispose the bitmap data after uploading
+                }
+                bitmapData = null; // Clear the reference to avoid re-uploading
             } else if (pixels != null) {
                 uploadPixels(pixels, width, height);
                 pixels = null; // Clear the pixel data after uploading
@@ -143,6 +149,22 @@ public class Texture {
         this.dataDirty = true;
     }
 
+    /**
+     * Set whether bitmap data should be automatically disposed after being uploaded as a texture
+     * @param autoDispose True to dispose after upload (default), false to preserve bitmap data
+     */
+    public static void setAutoDisposeBitmapData(boolean autoDispose) {
+        autoDisposeBitmapData = autoDispose;
+    }
+
+    /**
+     * Get whether bitmap data is automatically disposed after being uploaded as a texture
+     * @return True if bitmap data is disposed after upload, false otherwise
+     */
+    public static boolean getAutoDisposeBitmapData() {
+        return autoDisposeBitmapData;
+    }
+
     public void pixels(int w, int h, int[] pixels) {
         this.width = w;
         this.height = h;
@@ -150,5 +172,13 @@ public class Texture {
         this.bytePixels = null; // Clear byte pixel data
         this.bitmapData = null; // Clear bitmap data
         this.dataDirty = true;
+    }
+
+    /**
+     * Get the bitmap data associated with this texture
+     * @return The bitmap data, or null if it's not available
+     */
+    public BitmapData getBitmapData() {
+        return this.bitmapData;
     }
 }

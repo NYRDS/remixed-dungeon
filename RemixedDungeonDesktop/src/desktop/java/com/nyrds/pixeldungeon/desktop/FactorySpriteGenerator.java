@@ -6,13 +6,20 @@ import com.nyrds.platform.game.QuickModTest;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.gfx.BitmapData;
+import com.watabou.gltextures.SmartTexture;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.potions.Potion;
+import com.watabou.pixeldungeon.items.rings.Ring;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
+import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * A utility class to generate sprite images for ALL mobs and items using the factory systems
@@ -38,17 +45,23 @@ public class FactorySpriteGenerator extends QuickModTest {
         // Initialize the static handlers that are required for item creation
         // This mimics part of what happens in Dungeon.init()
         try {
-            com.watabou.pixeldungeon.items.wands.Wand.initWoods();
-            com.watabou.pixeldungeon.items.rings.Ring.initGems();
-            com.watabou.pixeldungeon.items.scrolls.Scroll.initLabels();
-            com.watabou.pixeldungeon.items.potions.Potion.initColors();
+            Wand.initWoods();
+            Ring.initGems();
+            Scroll.initLabels();
+            Potion.initColors();
         } catch (Exception e) {
             GLog.w("Error initializing static handlers: %s", e.getMessage());
         }
 
+        // Set texture to preserve bitmap data during sprite generation so we can extract actual sprite data
+        SmartTexture.setAutoDisposeBitmapData(false);
+
         // Run the sprite generation after the game has been initialized
         generateAllMobsSpritesFromFactory();
         generateAllItemsSpritesFromFactory();
+
+        // Reset to default behavior after generation
+        SmartTexture.setAutoDisposeBitmapData(true);
 
         // Exit the application after generating sprites
         System.exit(0);
@@ -60,57 +73,37 @@ public class FactorySpriteGenerator extends QuickModTest {
         int successCount = 0;
         int errorCount = 0;
 
-        // Access the factory's internal map to get class names
-        java.lang.reflect.Field mobsListField = null;
-        try {
-            mobsListField = com.nyrds.pixeldungeon.mobs.common.MobFactory.class.getDeclaredField("mMobsList");
-            mobsListField.setAccessible(true);
+        // Use the proper public factory method instead of reflection
+        java.util.List<Mob> mobs = MobFactory.allMobs();
 
-            @SuppressWarnings("unchecked")
-            java.util.Map<String, Class<? extends com.watabou.pixeldungeon.actors.mobs.Mob>> mobsMap =
-                (java.util.Map<String, Class<? extends com.watabou.pixeldungeon.actors.mobs.Mob>>) mobsListField.get(null);
-
-            for(String mobClass : mobsMap.keySet()) {
-                try {
-                    Class<? extends com.watabou.pixeldungeon.actors.mobs.Mob> clazz = mobsMap.get(mobClass);
-
-                    // Skip CustomMob class as it's a wrapper for JSON-defined mobs
-                    if (clazz == com.nyrds.pixeldungeon.mobs.common.CustomMob.class) {
-                        continue;
-                    }
-
-                    // Try to create the mob using the factory's mobByName method inside a try-catch
-                    com.watabou.pixeldungeon.actors.mobs.Mob mob =
-                        com.nyrds.pixeldungeon.mobs.common.MobFactory.mobByName(mobClass);
-
-                    // Get the mob's sprite avatar
-                    com.watabou.noosa.Image avatar = mob.newSprite().avatar();
+        for(Mob mob : mobs) {
+            try {
+                MobSpriteDef mobSprite = (MobSpriteDef) mob.newSprite();
+                if (mobSprite != null) {
+                    // Use the avatar method to get the base sprite
+                    com.watabou.noosa.Image avatar = mobSprite.avatar();
                     if (avatar != null) {
-                        // Create a BitmapData object (16x16 pixels, standard sprite size)
-                        // Using standard sprite size of 16x16 from ItemSprite.SIZE
-                        BitmapData bitmap = new BitmapData(16, 16);
+                        // Extract the actual bitmap data from the avatar
+                        BitmapData bitmap = extractBitmapDataFromImage(avatar);
                         if (bitmap != null) {
-                            // Fill the image with a unique color based on the mob name
-                            int color = getDeterministicColor(mob.getEntityKind());
-                            bitmap.clear(color);
                             String fileName = "../../../../sprites/mob_" + mob.getEntityKind() + ".png";
                             // Save the sprite image to a file
                             bitmap.savePng(fileName);
                             GLog.i("Saved mob sprite: %s", fileName);
                             successCount++;
                         } else {
-                            GLog.w("Failed to create BitmapData for mob: %s", mob.getEntityKind());
+                            GLog.w("Failed to extract BitmapData for mob: %s", mob.getEntityKind());
                         }
                     } else {
                         GLog.w("Avatar is null for mob: %s", mob.getEntityKind());
                     }
-                } catch (Exception e) {
-                    GLog.w("Error creating or saving mob sprite for %s: %s", mobClass, e.getMessage());
-                    errorCount++;
+                } else {
+                    GLog.w("MobSprite is null for mob: %s", mob.getEntityKind());
                 }
+            } catch (Exception e) {
+                GLog.w("Error creating or saving mob sprite for %s: %s", mob.getEntityKind(), e.getMessage());
+                errorCount++;
             }
-        } catch (Exception e) {
-            GLog.w("Error accessing MobFactory internal map: %s", e.getMessage());
         }
 
         GLog.i("Mob sprite generation completed. Success: %d, Errors: %d", successCount, errorCount);
@@ -122,59 +115,86 @@ public class FactorySpriteGenerator extends QuickModTest {
         int successCount = 0;
         int errorCount = 0;
 
-        // Access the factory's internal map to get class names
-        java.lang.reflect.Field itemsListField = null;
-        try {
-            itemsListField = com.nyrds.pixeldungeon.items.common.ItemFactory.class.getDeclaredField("mItemsList");
-            itemsListField.setAccessible(true);
+        // Use the proper public factory method instead of reflection
+        java.util.List<Item> items = com.nyrds.pixeldungeon.items.common.ItemFactory.allItems();
 
-            @SuppressWarnings("unchecked")
-            java.util.Map<String, Class<? extends com.watabou.pixeldungeon.items.Item>> itemsMap =
-                (java.util.Map<String, Class<? extends com.watabou.pixeldungeon.items.Item>>) itemsListField.get(null);
+        for(Item item : items) {
+            try {
 
-            for(String itemClass : itemsMap.keySet()) {
-                try {
-                    Class<? extends com.watabou.pixeldungeon.items.Item> clazz = itemsMap.get(itemClass);
+                    // Instead of creating ItemSprite and extracting from it (which might have effects),
+                    // get the image data directly from the item properties
+                    String imageFile = item.imageFile();
+                    int imageIndex = item.image();
 
-                    // Skip CustomItem class as it's a wrapper for Lua-defined items
-                    if (clazz == com.nyrds.pixeldungeon.items.CustomItem.class) {
-                        continue;
-                    }
+                    if (imageFile != null && imageIndex >= 0) {
+                        // Get the source bitmap from the image file
+                        BitmapData sourceBmp = com.nyrds.util.ModdingMode.getBitmapData(imageFile);
 
-                    // Try to create the item using the factory's itemByName method inside a try-catch
-                    com.watabou.pixeldungeon.items.Item item =
-                        com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(itemClass);
+                        // Item sprites are typically 16x16 pixels based on ItemSprite.SIZE
+                        final int SPRITE_SIZE = 16;
 
-                    com.watabou.pixeldungeon.sprites.ItemSprite itemSprite = new com.watabou.pixeldungeon.sprites.ItemSprite(item);
-                    if (itemSprite != null) {
-                        // Create BitmapData from the texture information
-                        // We'll create a basic square image with a specific color for each item type
-                        BitmapData bitmap = new BitmapData(16, 16); // Standard sprite size
-                        if (bitmap != null) {
-                            // Fill the image with a unique color based on the item name
-                            int color = getDeterministicColor(item.getEntityKind());
-                            bitmap.clear(color);
+                        // Calculate the position in the texture atlas based on the image index
+                        int texWidth = sourceBmp.getWidth();
+                        int cols = texWidth / SPRITE_SIZE;
+
+                        int frameX = (imageIndex % cols) * SPRITE_SIZE;
+                        int frameY = (imageIndex / cols) * SPRITE_SIZE;
+
+                        // Create BitmapData for the specific frame
+                        BitmapData result = BitmapData.createBitmap(SPRITE_SIZE, SPRITE_SIZE);
+                        if (result != null) {
+                            result.eraseColor(0x00000000); // Clear with transparent color before rendering
+                            result.copyRect(sourceBmp, frameX, frameY, SPRITE_SIZE, SPRITE_SIZE, 0, 0);
                             String fileName = "../../../../sprites/item_" + item.getEntityKind() + ".png";
-                            // Save the sprite image to a file
-                            bitmap.savePng(fileName);
+                            result.savePng(fileName);
                             GLog.i("Saved item sprite: %s", fileName);
                             successCount++;
                         } else {
-                            GLog.w("Failed to create BitmapData for item: %s", item.getEntityKind());
+                            GLog.w("Failed to create result BitmapData for item: %s", item.getEntityKind());
                         }
-                    } else {
-                        GLog.w("ItemSprite is null for item: %s", item.getEntityKind());
                     }
-                } catch (Exception e) {
-                    GLog.w("Error creating or saving item sprite for %s: %s", itemClass, e.getMessage());
+            } catch (Exception e) {
+                    GLog.w("Error creating or saving item sprite for %s: %s", item.getEntityKind(), e.getMessage());
                     errorCount++;
-                }
             }
-        } catch (Exception e) {
-            GLog.w("Error accessing ItemFactory internal map: %s", e.getMessage());
         }
 
         GLog.i("Item sprite generation completed. Success: %d, Errors: %d", successCount, errorCount);
+    }
+
+    // Helper method to extract bitmap data from an image/sprite by accessing the source texture directly
+    // This accesses the original texture atlas and extracts the specific frame region
+    private BitmapData extractBitmapDataFromImage(com.watabou.noosa.Image image) {
+        if (image == null || image.texture == null) {
+            return null;
+        }
+
+        // First try to get the bitmap data directly from the texture using the new method
+        SmartTexture smartTexture = image.texture;
+        BitmapData textureBitmap = smartTexture.getBitmapData();
+
+        if (textureBitmap != null) {
+            // Calculate the actual pixel coordinates in the texture
+            com.nyrds.platform.compatibility.RectF frame = image.frame();
+            int srcWidth = smartTexture.width;
+            int srcHeight = smartTexture.height;
+
+            int x = (int) (frame.left * srcWidth);
+            int y = (int) (frame.top * srcHeight);
+            int width = (int) (frame.width() * srcWidth);
+            int height = (int) (frame.height() * srcHeight);
+
+            // Create a new BitmapData with the size of the sprite
+            BitmapData result = BitmapData.createBitmap(width, height);
+            if (result != null) {
+                result.eraseColor(0x00000000); // Clear with transparent color before rendering
+                // Copy the relevant portion of the source texture to the result bitmap
+                result.copyRect(textureBitmap, x, y, width, height, 0, 0);
+                return result;
+            }
+        }
+
+        return null;
     }
 
     // Helper method to generate a deterministic color based on the entity name
