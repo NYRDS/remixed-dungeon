@@ -806,8 +806,14 @@ public class GameScene extends PixelScene {
         }
     }
 
+    private static boolean forceAllowSpriteCreation = false;
+
+    public static void setForceAllowSpriteCreation(boolean allow) {
+        forceAllowSpriteCreation = allow;
+    }
+
     public static boolean mayCreateSprites() {
-        return scene != null;
+        return scene != null || forceAllowSpriteCreation;
     }
 
     public static boolean isSceneReady() {

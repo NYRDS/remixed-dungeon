@@ -438,18 +438,6 @@ To maintain consistency and completeness in documentation of hero classes and su
   - Special mechanics and gameplay changes
   - Special armor obtained via ArmorKit (GladiatorArmor, BerserkArmor, WarlockArmor, BattleMageArmor, etc.) - these are special armors obtained by using the ArmorKit (found in City level, dropped by King boss) on any regular armor, which transforms it into the class-specific armor
 
-### Generating Previews
-The `tools/py-tools/generate_hero_previews.py` script extracts information by:
-- Parsing `HeroClass.java` and `HeroSubClass.java` enums to identify all classes/subclasses
-- Reading `initHeroes.json` to get starting equipment and stats for classes
-- Using predefined descriptions for subclasses based on in-game mechanics
-
-To generate previews:
-```bash
-python tools/py-tools/generate_hero_previews.py
-```
-
-This creates preview files in the `hero_previews/` directory that can be used as templates for wiki pages.
 
 ## Spell Documentation and Automated Generation
 
@@ -511,7 +499,6 @@ The `tools/py-tools/generate_spell_images.py` script automatically creates previ
 To generate or update spell documentation:
 ```bash
 python tools/py-tools/generate_spell_wiki.py
-python tools/py-tools/generate_spell_images.py
 ```
 
 This creates or updates spell pages in the `generated_spell_wiki/` directory and spell icon images in the `generated_spell_images/wiki_images/` directory.

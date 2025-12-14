@@ -13,6 +13,7 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.Ring;
@@ -52,9 +53,12 @@ import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * A utility class to generate sprite images for ALL mobs and items using the factory systems
@@ -98,9 +102,9 @@ public class FactorySpriteGenerator extends QuickModTest {
         generateAllBuffsIconsFromFactory();
 
         // Temporarily allow sprite creation for hero generation
-        com.watabou.pixeldungeon.scenes.GameScene.setForceAllowSpriteCreation(true);
+        GameScene.setForceAllowSpriteCreation(true);
         generateAllHeroSprites();
-        com.watabou.pixeldungeon.scenes.GameScene.setForceAllowSpriteCreation(false);
+        GameScene.setForceAllowSpriteCreation(false);
 
         // Reset to default behavior after generation
         SmartTexture.setAutoDisposeBitmapData(true);
@@ -119,14 +123,14 @@ public class FactorySpriteGenerator extends QuickModTest {
         int errorCount = 0;
 
         // Use the proper public factory method instead of reflection
-        java.util.List<Mob> mobs = MobFactory.allMobs();
+        List<Mob> mobs = MobFactory.allMobs();
 
         for(Mob mob : mobs) {
             try {
                 MobSpriteDef mobSprite = (MobSpriteDef) mob.newSprite();
                 if (mobSprite != null) {
                     // Use the avatar method to get the base sprite
-                    com.watabou.noosa.Image avatar = mobSprite.avatar();
+                    Image avatar = mobSprite.avatar();
                     if (avatar != null) {
                         // Extract the actual bitmap data from the avatar
                         BitmapData bitmap = extractBitmapDataFromImage(avatar);
@@ -161,7 +165,7 @@ public class FactorySpriteGenerator extends QuickModTest {
         int errorCount = 0;
 
         // Use the proper public factory method instead of reflection
-        java.util.List<Item> items = com.nyrds.pixeldungeon.items.common.ItemFactory.allItems();
+        List<Item> items = ItemFactory.allItems();
 
         for(Item item : items) {
             try {
@@ -209,7 +213,7 @@ public class FactorySpriteGenerator extends QuickModTest {
 
     // Helper method to extract bitmap data from an image/sprite by accessing the source texture directly
     // This accesses the original texture atlas and extracts the specific frame region
-    private BitmapData extractBitmapDataFromImage(com.watabou.noosa.Image image) {
+    private BitmapData extractBitmapDataFromImage(Image image) {
         if (image == null || image.texture == null) {
             return null;
         }
@@ -295,7 +299,7 @@ public class FactorySpriteGenerator extends QuickModTest {
             if (layers != null) {
                 for (int i = 0; i < layers.size(); i++) {
                     com.nyrds.platform.gl.Texture layer = layers.get(i);
-                    com.watabou.gltextures.SmartTexture layerSmartTexture = (com.watabou.gltextures.SmartTexture) layer;
+                    SmartTexture layerSmartTexture = (SmartTexture) layer;
                     BitmapData layerBitmap = layerSmartTexture.getBitmapData();
 
                     if (layerBitmap != null) {
@@ -319,7 +323,7 @@ public class FactorySpriteGenerator extends QuickModTest {
         int errorCount = 0;
 
         // Get all registered spell names from the SpellFactory
-        java.util.List<String> spellNames = (java.util.List<String>) com.nyrds.pixeldungeon.mechanics.spells.SpellFactory.getAllSpells();
+        List<String> spellNames = (List<String>) com.nyrds.pixeldungeon.mechanics.spells.SpellFactory.getAllSpells();
 
         for(String spellName : spellNames) {
             try {
@@ -390,7 +394,7 @@ public class FactorySpriteGenerator extends QuickModTest {
         int errorCount = 0;
 
         // Get all registered buff names from the BuffFactory
-        java.util.Set<String> buffNames = com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory.getAllBuffsNames();
+        Set<String> buffNames = com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory.getAllBuffsNames();
 
         for(String buffName : buffNames) {
             try {
@@ -398,23 +402,48 @@ public class FactorySpriteGenerator extends QuickModTest {
                 com.watabou.pixeldungeon.actors.buffs.Buff buff = com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory.getBuffByName(buffName);
 
                 if (buff != null) {
-                    // Get the buff's small icon
-                    com.watabou.noosa.Image icon = buff.smallIcon();
+                    // Get the buff's large icon using textureLarge and icon index
+                    try {
+                        com.watabou.gltextures.SmartTexture icons = com.watabou.gltextures.TextureCache.get(buff.textureLarge());
+                        com.watabou.noosa.TextureFilm film = com.watabou.gltextures.TextureCache.getFilm(icons, 16, 16);
+                        int index = buff.icon();
 
-                    if (icon != null) {
-                        // Extract the actual bitmap data from the icon
-                        BitmapData bitmap = extractBitmapDataFromImage(icon);
-                        if (bitmap != null) {
-                            String fileName = "../../../../sprites/buff_" + buffName + ".png";
-                            // Save the icon image to a file
-                            bitmap.savePng(fileName);
-                            GLog.i("Saved buff icon: %s", fileName);
-                            successCount++;
+                        if (index != com.watabou.pixeldungeon.ui.BuffIndicator.NONE) {
+                            Image icon = new Image(icons);
+                            icon.frame(film.get(index));
+
+                            if (icon != null) {
+                                // Extract the actual bitmap data from the icon
+                                BitmapData bitmap = extractBitmapDataFromImage(icon);
+                                if (bitmap != null) {
+                                    String fileName = "../../../../sprites/buff_" + buffName + ".png";
+                                    // Save the icon image to a file
+                                    bitmap.savePng(fileName);
+                                    GLog.i("Saved buff large icon: %s", fileName);
+                                    successCount++;
+                                } else {
+                                    GLog.w("Failed to extract BitmapData for buff large icon: %s", buffName);
+                                }
+                            } else {
+                                GLog.w("Large icon is null for buff: %s", buffName);
+                            }
                         } else {
-                            GLog.w("Failed to extract BitmapData for buff icon: %s", buffName);
+                            GLog.w("No valid icon index for buff: %s", buffName);
                         }
-                    } else {
-                        GLog.w("Small icon is null for buff: %s", buffName);
+                    } catch (Exception e) {
+                        GLog.w("Error creating large icon for buff %s: %s", buffName, e.getMessage());
+
+                        // Fallback to small icon if large icon creation fails
+                        Image fallbackIcon = buff.smallIcon();
+                        if (fallbackIcon != null) {
+                            BitmapData bitmap = extractBitmapDataFromImage(fallbackIcon);
+                            if (bitmap != null) {
+                                String fileName = "../../../../sprites/buff_" + buffName + ".png";
+                                bitmap.savePng(fileName);
+                                GLog.i("Saved buff icon (fallback) for: %s", fileName);
+                                successCount++;
+                            }
+                        }
                     }
                 } else {
                     GLog.w("Buff is null for name: %s", buffName);
@@ -468,7 +497,7 @@ public class FactorySpriteGenerator extends QuickModTest {
                 hero.setHeroClass(heroClass);
 
                 // Equip the appropriate class armor for this class
-                com.watabou.pixeldungeon.items.armor.ClassArmor classArmor = null;
+                ClassArmor classArmor = null;
                 switch (heroClass) {
                     case WARRIOR:
                         classArmor = new com.watabou.pixeldungeon.items.armor.WarriorArmor();
@@ -505,7 +534,7 @@ public class FactorySpriteGenerator extends QuickModTest {
                 }
 
                 // Equip a basic weapon based on class archetype
-                com.watabou.pixeldungeon.items.Item basicItem = null;
+                Item basicItem = null;
                 switch (heroClass) {
                     case WARRIOR:
                         // Warriors get a basic sword
@@ -574,9 +603,9 @@ public class FactorySpriteGenerator extends QuickModTest {
                         break;
                 }
 
-                if (basicItem != null && basicItem instanceof com.watabou.pixeldungeon.items.EquipableItem) {
+                if (basicItem != null && basicItem instanceof EquipableItem) {
                     try {
-                        com.watabou.pixeldungeon.items.EquipableItem equipableItem = (com.watabou.pixeldungeon.items.EquipableItem) basicItem;
+                        EquipableItem equipableItem = (EquipableItem) basicItem;
                         equipableItem.upgrade(0); // Ensure it's at +0 to avoid any upgrade visuals
                         equipableItem.doEquip(hero);
                         GLog.i("Basic item equipped for hero class: %s", heroClass.name());
@@ -596,7 +625,7 @@ public class FactorySpriteGenerator extends QuickModTest {
                     }
 
                     // Use the avatar method to get the layered sprite
-                    com.watabou.noosa.Image avatar = heroSprite.avatar();
+                    Image avatar = heroSprite.avatar();
                     if (avatar != null) {
                         // Extract the actual bitmap data from the avatar
                         BitmapData bitmap = extractBitmapDataFromImage(avatar);
@@ -744,7 +773,7 @@ public class FactorySpriteGenerator extends QuickModTest {
                         GLog.i("Generated seed %d for random item selection for: %s+%s", seed, heroClass.name(), heroSubClass.name());
 
                         // Add a random weapon based on class archetype using ItemFactory
-                        com.watabou.pixeldungeon.items.Item randomItem = null;
+                        Item randomItem = null;
                         switch (heroClass) {
                             case WARRIOR:
                                 // Warriors get melee weapons
@@ -1026,8 +1055,8 @@ public class FactorySpriteGenerator extends QuickModTest {
 
                         if (randomItem != null) {
                             GLog.i("Random item selected: %s for %s+%s", randomItem.getEntityKind(), heroClass.name(), heroSubClass.name());
-                            if (randomItem instanceof com.watabou.pixeldungeon.items.EquipableItem) {
-                                com.watabou.pixeldungeon.items.EquipableItem equipableItem = (com.watabou.pixeldungeon.items.EquipableItem) randomItem;
+                            if (randomItem instanceof EquipableItem) {
+                                EquipableItem equipableItem = (EquipableItem) randomItem;
                                 try {
                                     equipableItem.upgrade(0); // Ensure it's at +0 to avoid any upgrade visuals
                                     equipableItem.doEquip(hero);
@@ -1065,7 +1094,7 @@ public class FactorySpriteGenerator extends QuickModTest {
                             }
 
                             // Use the avatar method to get the layered sprite
-                            com.watabou.noosa.Image avatar = heroSprite.avatar();
+                            Image avatar = heroSprite.avatar();
                             if (avatar != null) {
                                 GLog.i("Avatar created successfully for: %s+%s", heroClass.name(), heroSubClass.name());
                                 // Extract the actual bitmap data from the avatar
@@ -1116,12 +1145,12 @@ public class FactorySpriteGenerator extends QuickModTest {
 
         // Generate list of all mobs
         try {
-            java.util.List<com.watabou.pixeldungeon.actors.mobs.Mob> mobs = com.nyrds.pixeldungeon.mobs.common.MobFactory.allMobs();
-            java.util.Set<String> uniqueMobNames = new java.util.HashSet<>();
-            for (com.watabou.pixeldungeon.actors.mobs.Mob mob : mobs) {
+            List<Mob> mobs = com.nyrds.pixeldungeon.mobs.common.MobFactory.allMobs();
+            Set<String> uniqueMobNames = new java.util.HashSet<>();
+            for (Mob mob : mobs) {
                 uniqueMobNames.add(mob.getEntityKind());
             }
-            java.util.List<String> mobNames = new java.util.ArrayList<>(uniqueMobNames);
+            List<String> mobNames = new java.util.ArrayList<>(uniqueMobNames);
             java.util.Collections.sort(mobNames);
             writeEntityListToFile(mobNames, "mobs.txt");
         } catch (Exception e) {
@@ -1130,12 +1159,12 @@ public class FactorySpriteGenerator extends QuickModTest {
 
         // Generate list of all items
         try {
-            java.util.List<com.watabou.pixeldungeon.items.Item> items = com.nyrds.pixeldungeon.items.common.ItemFactory.allItems();
-            java.util.Set<String> uniqueItemNames = new java.util.HashSet<>();
-            for (com.watabou.pixeldungeon.items.Item item : items) {
+            List<Item> items = com.nyrds.pixeldungeon.items.common.ItemFactory.allItems();
+            Set<String> uniqueItemNames = new java.util.HashSet<>();
+            for (Item item : items) {
                 uniqueItemNames.add(item.getEntityKind());
             }
-            java.util.List<String> itemNames = new java.util.ArrayList<>(uniqueItemNames);
+            List<String> itemNames = new java.util.ArrayList<>(uniqueItemNames);
             java.util.Collections.sort(itemNames);
             writeEntityListToFile(itemNames, "items.txt");
         } catch (Exception e) {
@@ -1144,9 +1173,9 @@ public class FactorySpriteGenerator extends QuickModTest {
 
         // Generate list of all spells
         try {
-            java.util.List<String> allSpellNames = (java.util.List<String>) com.nyrds.pixeldungeon.mechanics.spells.SpellFactory.getAllSpells();
-            java.util.Set<String> uniqueSpellNames = new java.util.HashSet<>(allSpellNames);
-            java.util.List<String> spellNames = new java.util.ArrayList<>(uniqueSpellNames);
+            List<String> allSpellNames = (List<String>) com.nyrds.pixeldungeon.mechanics.spells.SpellFactory.getAllSpells();
+            Set<String> uniqueSpellNames = new java.util.HashSet<>(allSpellNames);
+            List<String> spellNames = new java.util.ArrayList<>(uniqueSpellNames);
             java.util.Collections.sort(spellNames);
             writeEntityListToFile(spellNames, "spells.txt");
         } catch (Exception e) {
@@ -1155,9 +1184,9 @@ public class FactorySpriteGenerator extends QuickModTest {
 
         // Generate list of all buffs
         try {
-            java.util.Set<String> allBuffNames = com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory.getAllBuffsNames();
-            java.util.Set<String> uniqueBuffNames = new java.util.HashSet<>(allBuffNames);
-            java.util.List<String> buffNames = new java.util.ArrayList<>(uniqueBuffNames);
+            Set<String> allBuffNames = com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory.getAllBuffsNames();
+            Set<String> uniqueBuffNames = new java.util.HashSet<>(allBuffNames);
+            List<String> buffNames = new java.util.ArrayList<>(uniqueBuffNames);
             java.util.Collections.sort(buffNames);
             writeEntityListToFile(buffNames, "buffs.txt");
         } catch (Exception e) {
@@ -1167,7 +1196,7 @@ public class FactorySpriteGenerator extends QuickModTest {
         GLog.i("Entity list generation completed.");
     }
 
-    private void writeEntityListToFile(java.util.List<String> entityNames, String fileName) {
+    private void writeEntityListToFile(List<String> entityNames, String fileName) {
         try {
             // Sort the list for better readability
             java.util.Collections.sort(entityNames);
