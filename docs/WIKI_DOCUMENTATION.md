@@ -413,13 +413,12 @@ Tables in DokuWiki are created using carets and pipes:
 - **Preference for modding**: Lua scripting is preferred for modding over Java implementation due to easier distribution and loading
 - **Modding reference**: For detailed modding information, see `docs/modding.md` which provides comprehensive guides for creating custom content
 
-## Hero Class and Subclass Previews
+## Hero Class and Subclass Pages
 
 To maintain consistency and completeness in documentation of hero classes and subclasses, a script has been created to generate preview content for wiki pages.
 
-### Hero Class Previews
+### Hero Class Pages
 - All hero classes (Warrior, Mage, Rogue, Huntress, Elf, Necromancer, Gnoll, Priest, Doctor) have dedicated wiki pages
-- Use the `tools/py-tools/generate_hero_previews.py` script to extract information from source code and generate preview content
 - Each hero class page should include:
   - Description of the class's unique characteristics
   - Starting equipment and stats (from initHeroes.json)
@@ -428,7 +427,7 @@ To maintain consistency and completeness in documentation of hero classes and su
   - Magic affinity (Combat, Elemental, Rogue, Huntress, Elf, Necromancy, Witchcraft, Priest, PlagueDoctor)
   - Any class-specific mechanics (forbidden actions, friendly mobs, immunities, etc.)
 
-### Hero Subclass Previews
+### Hero Subclass Pages
 - All hero subclasses (Gladiator, Berserker, Warlock, BattleMage, Assassin, FreeRunner, Sniper, Warden, Scout, Shaman, Lich, WitchDoctor, Guardian) have dedicated wiki pages
 - Subclasses are mastery paths available for specific hero classes
 - Each subclass page should include:
@@ -800,7 +799,6 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 - When documenting mechanics, use information extracted directly from source code
 - Update wiki content when game mechanics change in new versions
 - Verify specific numeric values, formulas, and game mechanics against current code
-- Use the automated scripts (tools/py-tools/generate_hero_previews.py, tools/py-tools/generate_spell_wiki.py, etc.) to ensure accuracy of class and spell information
 
 ### Review Process
 - Before adding new content, verify that a page doesn't already exist under a different naming convention
