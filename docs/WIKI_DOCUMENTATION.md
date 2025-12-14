@@ -260,6 +260,7 @@ Tables in DokuWiki are created using carets and pipes:
 #### Pre-generated Sprite Directory
 - **Location**: `sprites/` (created by `FactorySpriteGenerator` task)
 - **Content**: Pre-generated sprite images for all game entities that can be enhanced for wiki use
+- **Important Note**: The sprites directory and its contents are pre-generated because the Gradle build system required for the FactorySpriteGenerator task may not be available in all environments. These files should be generated in development environments and committed to the repository for use in environments without Gradle.
 - **Sprite types**:
   - **Mobs**: Files named `mob_[EntityName].png` (e.g., `mob_Skeleton.png`, `mob_Tengu.png`)
   - **Items**: Files named `item_[EntityName].png` (e.g., `item_ScrollOfIdentify.png`, `item_RingOfMight.png`)
@@ -276,6 +277,7 @@ Tables in DokuWiki are created using carets and pipes:
 #### Entity Lists Directory
 - **Location**: `entities/` (created by `FactorySpriteGenerator` task)
 - **Content**: Generated text files containing lists of all game entities
+- **Important Note**: Like the sprites directory, the entities directory is also pre-generated because the Gradle build system required for the FactorySpriteGenerator task may not be available in all environments. These files should be generated in development environments and committed to the repository for use in environments without Gradle.
 - **Files**:
   - **mobs.txt**: Complete list of all mob entity names
   - **items.txt**: Complete list of all item entity names
@@ -473,8 +475,6 @@ Each spell page links directly to the relevant source code file on GitHub, allow
 
 ### Automated Spell Documentation Generation
 
-The `tools/py-tools/generate_spell_wiki.py` script automates the creation of spell documentation from source code:
-
 #### Java Spell Processing
 - Located in `com.nyrds.pixeldungeon.mechanics.spells/`
 - Extracts properties like magic affinity, targeting type, level, and mana cost from constructor
@@ -486,21 +486,6 @@ The `tools/py-tools/generate_spell_wiki.py` script automates the creation of spe
 - Reads spell properties from the `desc` function in each Lua file
 - Extracts name, targeting type, magic affinity, level, and mana cost
 - Uses string resources for descriptions via the 'info' parameter
-
-#### Image Generation
-The `tools/py-tools/generate_spell_images.py` script automatically creates preview images for spells by:
-- Mapping spell classes to appropriate icon files from `spellsIcons/` directory
-- Resizing images to appropriate dimensions for wiki display
-- Naming images according to the pattern `spell_name_icon.png`
-
-### Generating Spell Documentation
-
-To generate or update spell documentation:
-```bash
-python tools/py-tools/generate_spell_wiki.py
-```
-
-This creates or updates spell pages in the `generated_spell_wiki/` directory and spell icon images in the `generated_spell_images/wiki_images/` directory.
 
 ### Spell Affinity Categories
 
