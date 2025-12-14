@@ -28,10 +28,19 @@ public class HeadlessTurnLimitedGame extends QuickModTest {
     private Thread turnCheckThread;
 
     private String modName;
+    private String levelClass;
 
     public HeadlessTurnLimitedGame(String modName, int maxTurns) {
         this.modName = modName;
         this.maxTurns = maxTurns;
+    }
+
+    public void setLevelClass(String levelClass) {
+        this.levelClass = levelClass;
+    }
+
+    public String getLevelClass() {
+        return this.levelClass;
     }
 
     @Override
@@ -41,6 +50,83 @@ public class HeadlessTurnLimitedGame extends QuickModTest {
         // Set scene mode to run levels test and select the mod after LibGDX is initialized
         Scene.setMode(Scene.LEVELS_TEST);
         ModdingMode.selectMod(modName);
+
+        // Wait for the game to be fully initialized before proceeding
+        GameLoop.pushUiTask(() -> {
+            try {
+                // Try to initialize the dungeon properly
+                com.watabou.pixeldungeon.Dungeon.init();
+            } catch (Exception e) {
+                GLog.w("Error initializing dungeon: %s", e.getMessage());
+                // Continue anyway to try sprite generation
+            }
+
+            // If a specific level class is provided, initialize the dungeon with that level
+            if (levelClass != null) {
+                try {
+                    // Initialize the dungeon with the custom level
+                    Class<?> levelClazz = Class.forName(levelClass);
+                    if (com.watabou.pixeldungeon.levels.Level.class.isAssignableFrom(levelClazz)) {
+                        java.lang.reflect.Constructor<?> constructor = levelClazz.getConstructor();
+                        com.watabou.pixeldungeon.levels.Level level =
+                            (com.watabou.pixeldungeon.levels.Level) constructor.newInstance();
+
+                        // Check if it's a TestLevel - if so, we'll handle it differently to avoid full initialization
+                        if (levelClass.equals("com.nyrds.pixeldungeon.levels.TestLevel")) {
+                            // Create the sprites directory if it doesn't exist
+                            try {
+                                java.io.File spritesDir = new java.io.File("../../../../sprites/");
+                                if (!spritesDir.exists()) {
+                                    spritesDir.mkdirs();
+                                    GLog.i("Created sprites directory at: %s", spritesDir.getAbsolutePath());
+                                }
+                            } catch (Exception e) {
+                                GLog.w("Error creating sprites directory: %s", e.getMessage());
+                            }
+
+                            // Directly run the sprite generation without full level initialization
+                            // This avoids the issue where Level.create() tries to initialize all items
+                            GLog.i("Running TestLevel sprite generation directly");
+
+                            // Since TestLevel is a specific type of level that we control,
+                            // we can directly call its methods without full dungeon setup
+                            com.nyrds.pixeldungeon.levels.TestLevel testLevel = (com.nyrds.pixeldungeon.levels.TestLevel) level;
+
+                            // Call the methods that generate sprites directly
+                            testLevel.generateMobSprites();
+                            testLevel.generateItemSprites();
+
+                            GLog.i("TestLevel sprite generation completed");
+
+                            // Exit immediately after sprite generation since we're done
+                            Thread exitThread = new Thread(() -> {
+                                try {
+                                    Thread.sleep(2000); // Wait longer to ensure file operations complete
+                                    System.exit(0);
+                                } catch (InterruptedException e) {
+                                    Thread.currentThread().interrupt();
+                                }
+                            });
+                            exitThread.start();
+                        } else {
+                            // For other level types, do the standard initialization
+                            com.watabou.pixeldungeon.Dungeon.level = level;
+                            level.create();
+
+                            // Initialize hero and other dungeon state for our test level
+                            if (com.watabou.pixeldungeon.Dungeon.hero == null) {
+                                com.watabou.pixeldungeon.Dungeon.hero = new com.watabou.pixeldungeon.actors.hero.Hero(com.nyrds.pixeldungeon.game.GameLoop.getDifficulty());
+                            }
+
+                            GLog.i("Initialized custom level: %s", levelClass);
+                        }
+                    }
+                } catch (Exception e) {
+                    GLog.w("Could not create level of class %s: %s", levelClass, e.getMessage());
+                    e.printStackTrace();
+                }
+            }
+        });
 
         // Start the turn checking thread when the game is created
         startTurnChecking();

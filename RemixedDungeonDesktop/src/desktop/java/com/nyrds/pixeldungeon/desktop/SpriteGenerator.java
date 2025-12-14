@@ -22,6 +22,29 @@ public class SpriteGenerator extends QuickModTest {
     @Override
     public void create() {
         super.create();
+
+        // Create the sprites directory if it doesn't exist
+        try {
+            java.io.File spritesDir = new java.io.File("../../../../sprites/");
+            if (!spritesDir.exists()) {
+                spritesDir.mkdirs();
+                GLog.i("Created sprites directory at: %s", spritesDir.getAbsolutePath());
+            }
+        } catch (Exception e) {
+            GLog.w("Error creating sprites directory: %s", e.getMessage());
+        }
+
+        // Initialize the static handlers that are required for item creation
+        // This mimics part of what happens in Dungeon.init()
+        try {
+            com.watabou.pixeldungeon.items.wands.Wand.initWoods();
+            com.watabou.pixeldungeon.items.rings.Ring.initGems();
+            com.watabou.pixeldungeon.items.scrolls.Scroll.initLabels();
+            com.watabou.pixeldungeon.items.potions.Potion.initColors();
+        } catch (Exception e) {
+            GLog.w("Error initializing static handlers: %s", e.getMessage());
+        }
+
         // Run the sprite generation after the game has been initialized
         generateAllMobsSprites();
         generateAllItemsSprites();
@@ -45,7 +68,7 @@ public class SpriteGenerator extends QuickModTest {
                         // Fill the image with a unique color based on the mob name
                         int color = getDeterministicColor(mob.getEntityKind());
                         bitmap.clear(color);
-                        String fileName = "mob_" + mob.getEntityKind() + ".png";
+                        String fileName = "../../../../sprites/mob_" + mob.getEntityKind() + ".png";
                         // Save the sprite image to a file
                         bitmap.savePng(fileName);
                         GLog.i("Saved mob sprite: %s", fileName);
@@ -71,7 +94,7 @@ public class SpriteGenerator extends QuickModTest {
                         // Fill the image with a unique color based on the item name
                         int color = getDeterministicColor(item.getEntityKind());
                         bitmap.clear(color);
-                        String fileName = "item_" + item.getEntityKind() + ".png";
+                        String fileName = "../../../../sprites/item_" + item.getEntityKind() + ".png";
                         // Save the sprite image to a file
                         bitmap.savePng(fileName);
                         GLog.i("Saved item sprite: %s", fileName);

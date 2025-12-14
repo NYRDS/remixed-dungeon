@@ -105,7 +105,7 @@ public class TestLevel extends RegularLevel {
 							// Fill the image with a unique color based on the mob name
 							int color = getDeterministicColor(mob.getEntityKind());
 							bitmap.clear(color);
-							String fileName = "sprites/mob_" + mob.getEntityKind() + ".png";
+							String fileName = "../../../../sprites/mob_" + mob.getEntityKind() + ".png";
 							// Save the sprite image to a file
 							bitmap.savePng(fileName);
 							GLog.i("Saved mob sprite: %s", fileName);
@@ -169,7 +169,7 @@ public class TestLevel extends RegularLevel {
 							// Fill the image with a unique color based on the item name
 							int color = getDeterministicColor(item.getEntityKind());
 							bitmap.clear(color);
-							String fileName = "sprites/item_" + item.getEntityKind() + ".png";
+							String fileName = "../../../../sprites/item_" + item.getEntityKind() + ".png";
 							// Save the sprite image to a file
 							bitmap.savePng(fileName);
 							GLog.i("Saved item sprite: %s", fileName);
