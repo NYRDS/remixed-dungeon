@@ -417,21 +417,6 @@ tasks.register('packageWinX64', Zip) {
     }
 }
 
-// Add a task to generate all mob and item images using TestLevel
-tasks.register('generateSprites', JavaExec) {
-    dependsOn classes
-    mainClass = 'com.nyrds.pixeldungeon.desktop.RunModForTurnsLauncher'
-    classpath = sourceSets.main.runtimeClasspath
-
-    // Use specific level class to generate sprites
-    args = ['--mod', 'Remixed', '--turns', '1', '--levelClass', 'com.nyrds.pixeldungeon.levels.TestLevel']
-
-    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
-
-    // Set working directory to rundir to ensure proper asset access
-    workingDir = file('src/desktop/rundir')
-}
-
 // Add a direct task to generate all mob and item images using SpriteGenerator
 tasks.register('generateSpritesDirect', JavaExec) {
     dependsOn classes

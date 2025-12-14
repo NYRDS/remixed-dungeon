@@ -73,35 +73,24 @@ public class HeadlessTurnLimitedGame extends QuickModTest {
 
                         // Check if it's a TestLevel - if so, we'll handle it differently to avoid full initialization
                         if (levelClass.equals("com.nyrds.pixeldungeon.levels.TestLevel")) {
-                            // Create the sprites directory if it doesn't exist
-                            try {
-                                java.io.File spritesDir = new java.io.File("../../../../sprites/");
-                                if (!spritesDir.exists()) {
-                                    spritesDir.mkdirs();
-                                    GLog.i("Created sprites directory at: %s", spritesDir.getAbsolutePath());
-                                }
-                            } catch (Exception e) {
-                                GLog.w("Error creating sprites directory: %s", e.getMessage());
+                            // TestLevel no longer has sprite generation methods, so we'll just initialize it normally
+                            GLog.i("TestLevel selected but no longer has sprite generation functionality");
+
+                            // Initialize the dungeon with the custom level
+                            com.watabou.pixeldungeon.Dungeon.level = level;
+                            level.create();
+
+                            // Initialize hero and other dungeon state for our test level
+                            if (com.watabou.pixeldungeon.Dungeon.hero == null) {
+                                com.watabou.pixeldungeon.Dungeon.hero = new com.watabou.pixeldungeon.actors.hero.Hero(com.nyrds.pixeldungeon.game.GameLoop.getDifficulty());
                             }
 
-                            // Directly run the sprite generation without full level initialization
-                            // This avoids the issue where Level.create() tries to initialize all items
-                            GLog.i("Running TestLevel sprite generation directly");
+                            GLog.i("Initialized TestLevel: %s", levelClass);
 
-                            // Since TestLevel is a specific type of level that we control,
-                            // we can directly call its methods without full dungeon setup
-                            com.nyrds.pixeldungeon.levels.TestLevel testLevel = (com.nyrds.pixeldungeon.levels.TestLevel) level;
-
-                            // Call the methods that generate sprites directly
-                            testLevel.generateMobSprites();
-                            testLevel.generateItemSprites();
-
-                            GLog.i("TestLevel sprite generation completed");
-
-                            // Exit immediately after sprite generation since we're done
+                            // Exit immediately since TestLevel no longer has sprite generation functionality
                             Thread exitThread = new Thread(() -> {
                                 try {
-                                    Thread.sleep(2000); // Wait longer to ensure file operations complete
+                                    Thread.sleep(2000); // Wait to ensure initialization complete
                                     System.exit(0);
                                 } catch (InterruptedException e) {
                                     Thread.currentThread().interrupt();
