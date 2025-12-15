@@ -1206,6 +1206,7 @@ When updating and maintaining wiki pages, follow this systematic workflow to ens
 - Verify all game mechanics, stats, and properties described in the wiki against the actual implementation
 - Identify any discrepancies or outdated information
 - Check for completely incorrect information (like items that don't exist in the code)
+- When verifying entity behavior, don't only check the entity definition - also check entity usages and mentions in Java, Lua code, and JSON configurations to understand the complete behavior and context
 
 ### 4. Wiki Improvement
 - Remove any incorrect information found during verification
