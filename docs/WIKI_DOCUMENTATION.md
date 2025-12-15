@@ -8,11 +8,24 @@ When creating wiki content, it's important to verify information against all cod
 - **Java code**: The main game logic is implemented in Java files in `RemixedDungeon/src/main/java/`
 - **Lua code**: Custom game mechanics and behaviors are implemented in Lua scripts in `RemixedDungeon/src/main/assets/scripts/`
 - **JSON configuration files**: Game data, levels, objects, and other configurations are defined in various JSON files across the `RemixedDungeon/src/main/assets/` directory
+- **String resources**: Localized game text is stored in string resource files, with Russian strings specifically in `RemixedDungeon/src/main/res/values-ru/strings_all.xml` which serves as the source of truth for Russian wiki pages
 
 Always include references to the source code when documenting game mechanics, as this allows other contributors to verify and update information as the game evolves. For example:
 - Reference Java classes like `com/watabou/pixeldungeon/actors/mobs/Skeleton.java`
 - Reference Lua scripts like `RemixedDungeon/src/main/assets/scripts/spells/heal.lua`
 - Reference JSON configuration files like `RemixedDungeon/src/main/assets/levelsDesc/Bestiary.json`
+
+## Russian Localization
+
+The Remixed Dungeon game has Russian localization available in the string resource files. When creating or updating Russian wiki pages, use `RemixedDungeon/src/main/res/values-ru/strings_all.xml` as the authoritative source for text content. This file contains all localized Russian strings used in the game including:
+
+- Item names and descriptions
+- Mob names and descriptions
+- Spell and ability text
+- UI messages and prompts
+- Game mechanics descriptions
+
+For Russian wiki pages located in the `wiki-data/pages/ru/` directory, ensure consistency with the official Russian translation provided in this file. This ensures that wiki content matches the in-game experience for Russian-speaking players.
 
 ## Wiki Maintenance Rules
 
