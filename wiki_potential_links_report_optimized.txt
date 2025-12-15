@@ -708,10 +708,10 @@ Pages that may want to link to 'coldspirit':
 
 Pages that may want to link to 'spell_book':
   - spells (score: 0.90, name similarity: 0.40, keyword similarity: 0.10)
+  - lua_scripts (score: 0.86, name similarity: 0.36, keyword similarity: 0.12)
   - magic_arrow_spell (score: 0.85, name similarity: 0.35, keyword similarity: 0.25)
   - wind_gust_spell (score: 0.83, name similarity: 0.33, keyword similarity: 0.23)
   - tome_of_knowledge (score: 0.79, name similarity: 0.29, keyword similarity: 0.18)
-  - mana_potion (score: 0.77, name similarity: 0.27, keyword similarity: 0.26)
 
 Pages that may want to link to 'frozen_arrow':
   - curare_arrow (score: 1.00, name similarity: 0.50, keyword similarity: 1.00)
