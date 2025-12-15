@@ -103,6 +103,24 @@ To avoid confusion between similar entity names (e.g., a mob and hero subclass b
 - Configuration files use `_config` suffix
 - Example: `hero_stats_config.txt`, `mob_spawn_config.txt`
 
+#### Modding Configuration Files and Lua Libraries
+It is worth creating wiki pages dedicated to important JSON configuration files and Lua libraries that are usable by modders, as these serve as key resources for custom content creation:
+
+**Important JSON Config Files for Modders:**
+- `levelsDesc/Bestiary.json` - Defines monster spawn rates and level placement
+- `mobsDesc/` directory - Individual mob configuration files
+- `levelObjects/` - Interactive objects like chests, statues, barricades
+- `spritesDesc/` - Sprite animation and effect configurations
+- `hero/initHeroes.json` - Hero class starting equipment and stats
+- Various other JSON files across the `assets/` directory that define game mechanics
+
+**Lua Libraries for Modders:**
+- Scripts in `RemixedDungeon/src/main/assets/scripts/` directory provide examples of moddable functionality
+- Core Lua libraries that facilitate custom item, mob, spell, and game mechanic implementations
+- These should have dedicated documentation pages for modders to reference
+
+Creating dedicated wiki pages for these important configuration files and Lua libraries will greatly benefit the modding community by providing clear documentation on how to extend and modify the game.
+
 #### Quests
 - Quests use `_quest` suffix
 - Example: `alchemy_quest.txt`, `impossible_quest.txt`
