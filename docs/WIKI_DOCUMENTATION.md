@@ -10,6 +10,13 @@ When creating wiki content, it's important to verify information against all cod
 - **JSON configuration files**: Game data, levels, objects, and other configurations are defined in various JSON files across the `RemixedDungeon/src/main/assets/` directory
 - **String resources**: Localized game text is stored in string resource files, with Russian strings specifically in `RemixedDungeon/src/main/res/values-ru/strings_all.xml` which serves as the source of truth for Russian wiki pages
 
+### Python Script Execution
+- When running Python tools for wiki maintenance, use `python3` instead of `python` to ensure compatibility with Python 3.x codebase:
+  - `python3 tools/py-tools/find_red_links.py`
+  - `python3 tools/py-tools/scale_sprites_for_wiki.py`
+  - `python3 tools/py-tools/check_broken_images.py`
+  - And other Python scripts in the tools/py-tools directory
+
 Always include references to the source code when documenting game mechanics, as this allows other contributors to verify and update information as the game evolves. For example:
 - Reference Java classes like `com/watabou/pixeldungeon/actors/mobs/Skeleton.java`
 - Reference Lua scripts like `RemixedDungeon/src/main/assets/scripts/spells/heal.lua`
@@ -219,12 +226,14 @@ The raw sprites in the input directory (`sprites/`) follow these naming patterns
 - Processed sprites are stored in the `wiki-data/media/rpd/images/` directory in the wiki-data submodule
 
 #### Wiki Integration Naming
-For wiki page integration, the sprites are referenced with specific patterns:
-- For most entities: `{{ rpd:images:mob_[MobName].png|Alt Text }}` (e.g., `{{ rpd:images:mob_Tengu.png|Tengu }}`)
-- For items: `{{ rpd:images:item_[ItemName].png|Alt Text }}` (e.g., `{{ rpd:images:item_Ankh.png|Ankh }}`)
-- For spells: `{{ rpd:images:spell_[SpellName].png|Alt Text }}` (e.g., `{{ rpd:images:spell_Heal.png|Heal Spell }}`)
-- For buffs: `{{ rpd:images:buff_[BuffName].png|Alt Text }}` (e.g., `{{ rpd:images:buff_Burning.png|Burning }}`)
-- For heroes: `{{ rpd:images:hero_[ClassName]_[Subclass].png|Alt Text }}` (e.g., `{{ rpd:images:hero_WARRIOR_GLADIATOR.png|Warrior Gladiator }}`)
+For wiki page integration, the sprites are referenced with specific patterns based on the naming scheme produced by the sprite generation and scaling steps:
+- For most entities: `{{ rpd:images:[mobName]_sprite.png|Alt Text }}` (e.g., `{{ rpd:images:tengu_sprite.png|Tengu }}`)
+- For items: `{{ rpd:images:[itemName]_item.png|Alt Text }}` (e.g., `{{ rpd:images:ankh_item.png|Ankh }}`)
+- For spells: `{{ rpd:images:[spellName]_spell.png|Alt Text }}` (e.g., `{{ rpd:images:heal_spell.png|Heal Spell }}`)
+- For buffs: `{{ rpd:images:[buffName]_buff.png|Alt Text }}` (e.g., `{{ rpd:images:burning_buff.png|Burning }}`)
+- For heroes: `{{ rpd:images:hero_[className]_[subclass].png|Alt Text }}` (e.g., `{{ rpd:images:hero_WARRIOR_GLADIATOR.png|Warrior Gladiator }}`)
+
+The original game sprite files use the format `mob_[Name].png`, `item_[Name].png`, etc., but after processing by `scale_sprites_for_wiki.py`, they are renamed to the format used in the wiki integration (e.g., `tengu_sprite.png`, `ankh_item.png`).
 
 #### Special Processing Parameters
 - **Scaling**: Images are scaled up by a factor of 8 (default) using nearest neighbor interpolation to maintain pixel art quality
@@ -390,7 +399,7 @@ Tables in DokuWiki are created using carets and pipes:
   - **Hero class+subclass combinations**: Files named `hero_[HeroClassName]_[HeroSubClassName].png` (e.g., `hero_WARRIOR_GLADIATOR.png`, `hero_MAGE_WARLOCK.png`)
 - **Tools for working with sprites**:
   - **`tools/py-tools/scale_sprites_for_wiki.py`**: Enhances sprites with scaling, background, and frame for better wiki visualization (processed sprites are available in the wiki-data submodule)
-  - **Usage**: `python tools/py-tools/scale_sprites_for_wiki.py -i sprites/ -o wiki-data/media/rpd/images/`
+  - **Usage**: `python3 tools/py-tools/scale_sprites_for_wiki.py -i sprites/ -o wiki-data/media/rpd/images/`
 - **Generation command**: `./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:generateSpritesFromFactories`
 
 #### Entity Lists Directory
@@ -651,7 +660,7 @@ The Remixed Dungeon game uses a sprite sheet system for managing item images:
   - Adds a background and frame for better visualization
   - Preserves transparency
   - Processes all supported image formats in the input directory
-  - Usage: `python tools/py-tools/scale_sprites_for_wiki.py -i sprites/ -o wiki-data/media/rpd/images/`
+  - Usage: `python3 tools/py-tools/scale_sprites_for_wiki.py -i sprites/ -o wiki-data/media/rpd/images/`
   - Additional options:
     - `-s, --scale`: Scale factor (default: 8)
     - `-c, --canvas-extension`: Number of transparent pixels to add in each direction before scaling (default: 1)
@@ -885,7 +894,7 @@ find RemixedDungeon/src/main/assets/spritesDesc -name "*.json" -type f
 ### Running Wiki Analysis Tools
 ```bash
 # Generate wiki map
-python tools/py-tools/find_red_links.py --output all
+python3 tools/py-tools/find_red_links.py --output all
 dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 ```
 
@@ -925,8 +934,8 @@ The project includes additional scripts to help maintain and improve wiki qualit
 ### 1. Backlinks Tracking (Enhanced `find_red_links.py`)
 - **Location**: `tools/py-tools/find_red_links.py` (enhanced with backlinks option)
 - **Purpose**: Identifies which wiki pages link to each other, creating backlinks reports
-- **Usage**: Run `python tools/py-tools/find_red_links.py --output backlinks` from the project root
-- **Specific Page Usage**: Run `python tools/py-tools/find_red_links.py --output backlinks --page "page_name"` to see only backlinks to a specific page
+- **Usage**: Run `python3 tools/py-tools/find_red_links.py --output backlinks` from the project root
+- **Specific Page Usage**: Run `python3 tools/py-tools/find_red_links.py --output backlinks --page "page_name"` to see only backlinks to a specific page
 - **Benefit**: Helps maintain navigation consistency by showing which pages link to each target page
 - **Output**: Lists each page and the pages linking to it directly to console
 - **Note**: The functionality has been integrated into the more comprehensive `find_red_links.py` tool which is the recommended approach.
@@ -936,14 +945,14 @@ The project includes additional scripts to help maintain and improve wiki qualit
 - **Purpose**: Identifies pages that might want to link to the current page based on semantic similarity AND detects potential duplicate pages
 - **Performance**: Optimized version runs ~14x faster than the original script (from ~12 minutes to ~50 seconds)
 - **Usage**:
-  - Analyze all pages for links and duplicates: `python tools/py-tools/wiki_potential_links_and_duplicates.py`
-  - Analyze specific page: `python tools/py-tools/wiki_potential_links_and_duplicates.py --target-page start`
-  - Analyze only for potential links: `python tools/py-tools/wiki_potential_links_and_duplicates.py --analysis links`
-  - Analyze only for duplicates: `python tools/py-tools/wiki_potential_links_and_duplicates.py --analysis duplicates`
-  - Analyze random pages: `python tools/py-tools/wiki_potential_links_and_duplicates.py --random-pages 5`
-  - Custom threshold: `python tools/py-tools/wiki_potential_links_and_duplicates.py --threshold 0.5`
-  - Custom duplicate threshold: `python tools/py-tools/wiki_potential_links_and_duplicates.py --dup-threshold 0.6`
-  - Custom output: `python tools/py-tools/wiki_potential_links_and_duplicates.py --output-file my_report.txt`
+  - Analyze all pages for links and duplicates: `python3 tools/py-tools/wiki_potential_links_and_duplicates.py`
+  - Analyze specific page: `python3 tools/py-tools/wiki_potential_links_and_duplicates.py --target-page start`
+  - Analyze only for potential links: `python3 tools/py-tools/wiki_potential_links_and_duplicates.py --analysis links`
+  - Analyze only for duplicates: `python3 tools/py-tools/wiki_potential_links_and_duplicates.py --analysis duplicates`
+  - Analyze random pages: `python3 tools/py-tools/wiki_potential_links_and_duplicates.py --random-pages 5`
+  - Custom threshold: `python3 tools/py-tools/wiki_potential_links_and_duplicates.py --threshold 0.5`
+  - Custom duplicate threshold: `python3 tools/py-tools/wiki_potential_links_and_duplicates.py --dup-threshold 0.6`
+  - Custom output: `python3 tools/py-tools/wiki_potential_links_and_duplicates.py --output-file my_report.txt`
 - **Benefit**: Suggests potential internal links to improve wiki navigation and connectivity AND identifies potential duplicate content that could be merged or better organized
 - **Output**: Comprehensive report with potential linking pages and potential duplicates, saved to `wiki_analysis_report.txt` by default
 - **Features**:
@@ -959,7 +968,7 @@ The project includes additional scripts to help maintain and improve wiki qualit
 ### 3. Redirect Page Detection (`wiki_redirects.py`)
 - **Location**: `tools/py-tools/wiki_redirects.py`
 - **Purpose**: Identifies redirect pages and potential redirects based on naming conventions
-- **Usage**: Run `python tools/py-tools/wiki_redirects.py` from the project root
+- **Usage**: Run `python3 tools/py-tools/wiki_redirects.py` from the project root
 - **Benefit**: Finds potential redirects between pages with similar naming (e.g., `lich_mob` and `lich`)
 - **Output**: Lists explicit redirects, duplicate content, and potential redirects, saved to `wiki_redirects_report.txt`
 
@@ -967,9 +976,9 @@ The project includes additional scripts to help maintain and improve wiki qualit
 - **Location**: `tools/py-tools/wiki_page_rename.py`
 - **Purpose**: Renames wiki pages and updates all internal links to the renamed page throughout the wiki
 - **Usage**:
-  - Basic rename: `python tools/py-tools/wiki_page_rename.py old_name new_name`
-  - With custom wiki directory: `python tools/py-tools/wiki_page_rename.py old_name new_name --wiki-dir /path/to/wiki`
-  - Dry run (no changes): `python tools/py-tools/wiki_page_rename.py old_name new_name --dry-run`
+  - Basic rename: `python3 tools/py-tools/wiki_page_rename.py old_name new_name`
+  - With custom wiki directory: `python3 tools/py-tools/wiki_page_rename.py old_name new_name --wiki-dir /path/to/wiki`
+  - Dry run (no changes): `python3 tools/py-tools/wiki_page_rename.py old_name new_name --dry-run`
 - **Benefit**: Ensures consistency when renaming pages by updating all links automatically
 - **Features**:
   - Updates namespace links: `[[namespace:old_name|Display Text]]` -> `[[namespace:new_name|Display Text]]` (works with any namespace like `rpd:`, `wiki:`, `custom:`, etc.)
@@ -1158,6 +1167,22 @@ When maintaining wiki pages, these are important code locations to reference for
 - Include detailed class-specific mechanics (forbidden actions, friendly mobs, immunities, etc.)
 - Ensure all wiki pages have appropriately sized and positioned images
 
+## Image Generation and Scaling Guidelines
+
+Sprite generation and scaling steps should only be executed when images are definitely missing from wiki-data/media, to avoid unnecessary processing:
+
+### When to Generate and Scale Sprites
+- Only when adding new wiki pages that require sprites not already present in `wiki-data/media/rpd/images/`
+- When new game content (mobs, items, spells, etc.) has been added to the game that needs wiki documentation
+- Run the following commands only when you confirm specific sprites are missing:
+  - Generate raw sprites: `./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:generateSpritesFromFactories`
+  - Scale sprites for wiki: `python3 tools/py-tools/scale_sprites_for_wiki.py -i sprites/ -o wiki-data/media/rpd/images/`
+
+### Image Naming Conventions
+- The sprite generation process creates files in the format: `mob_[Name].png`, `item_[Name].png`, etc.
+- The scaling process converts these to wiki-friendly names: `[name]_sprite.png`, `[name]_item.png`, etc.
+- Use the appropriate naming based on the entity type in your wiki pages as described in the "Wiki Integration Naming" section above
+
 ## Recommended Wiki Maintenance Workflow
 
 When updating and maintaining wiki pages, follow this systematic workflow to ensure accuracy and consistency:
@@ -1166,6 +1191,7 @@ When updating and maintaining wiki pages, follow this systematic workflow to ens
 - Pull the latest changes from the repository: `git pull origin master`
 - Read the latest changes in the codebase to understand recent updates
 - Review the current WIKI_DOCUMENTATION.md to refresh yourself on standards
+- Note: Avoid performing unused image cleanup as a standard part of wiki improvement, as this may remove images that are legitimately in use
 
 ### 2. Page Selection
 - Use the `pick_random_wiki_pages.sh` script to randomly select wiki pages for review: `./pick_random_wiki_pages.sh [number_of_pages]`
