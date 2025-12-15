@@ -226,14 +226,14 @@ The raw sprites in the input directory (`sprites/`) follow these naming patterns
 - Processed sprites are stored in the `wiki-data/media/rpd/images/` directory in the wiki-data submodule
 
 #### Wiki Integration Naming
-For wiki page integration, the sprites are referenced with specific patterns based on the naming scheme produced by the sprite generation and scaling steps:
-- For most entities: `{{ rpd:images:[mobName]_sprite.png|Alt Text }}` (e.g., `{{ rpd:images:tengu_sprite.png|Tengu }}`)
-- For items: `{{ rpd:images:[itemName]_item.png|Alt Text }}` (e.g., `{{ rpd:images:ankh_item.png|Ankh }}`)
-- For spells: `{{ rpd:images:[spellName]_spell.png|Alt Text }}` (e.g., `{{ rpd:images:heal_spell.png|Heal Spell }}`)
-- For buffs: `{{ rpd:images:[buffName]_buff.png|Alt Text }}` (e.g., `{{ rpd:images:burning_buff.png|Burning }}`)
-- For heroes: `{{ rpd:images:hero_[className]_[subclass].png|Alt Text }}` (e.g., `{{ rpd:images:hero_WARRIOR_GLADIATOR.png|Warrior Gladiator }}`)
+For wiki page integration, the sprites are referenced with specific patterns:
+- For most entities: `{{ rpd:images:mob_[MobName].png|Alt Text }}` (e.g., `{{ rpd:images:mob_Tengu.png|Tengu }}`)
+- For items: `{{ rpd:images:item_[ItemName].png|Alt Text }}` (e.g., `{{ rpd:images:item_Ankh.png|Ankh }}`)
+- For spells: `{{ rpd:images:spell_[SpellName].png|Alt Text }}` (e.g., `{{ rpd:images:spell_Heal.png|Heal Spell }}`)
+- For buffs: `{{ rpd:images:buff_[BuffName].png|Alt Text }}` (e.g., `{{ rpd:images:buff_Burning.png|Burning }}`)
+- For heroes: `{{ rpd:images:hero_[ClassName]_[Subclass].png|Alt Text }}` (e.g., `{{ rpd:images:hero_WARRIOR_GLADIATOR.png|Warrior Gladiator }}`)
 
-The original game sprite files use the format `mob_[Name].png`, `item_[Name].png`, etc., but after processing by `scale_sprites_for_wiki.py`, they are renamed to the format used in the wiki integration (e.g., `tengu_sprite.png`, `ankh_item.png`).
+The processed sprites maintain the exact same filename as input sprites with additional processing (scaling, background, and frame).
 
 #### Special Processing Parameters
 - **Scaling**: Images are scaled up by a factor of 8 (default) using nearest neighbor interpolation to maintain pixel art quality
@@ -1180,7 +1180,7 @@ Sprite generation and scaling steps should only be executed when images are defi
 
 ### Image Naming Conventions
 - The sprite generation process creates files in the format: `mob_[Name].png`, `item_[Name].png`, etc.
-- The scaling process converts these to wiki-friendly names: `[name]_sprite.png`, `[name]_item.png`, etc.
+- The scaling process maintains the same names but enhances them: `mob_[Name].png` remains `mob_[Name].png` but with scaling, background, and frame
 - Use the appropriate naming based on the entity type in your wiki pages as described in the "Wiki Integration Naming" section above
 
 ## Recommended Wiki Maintenance Workflow
