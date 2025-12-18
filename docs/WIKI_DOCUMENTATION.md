@@ -997,6 +997,18 @@ The project includes additional scripts to help maintain and improve wiki qualit
   - Reports exactly which pages will be updated and how many links will be changed
 - **Safety**: Performs checks to ensure the old page exists and new page name doesn't conflict with existing pages
 
+### 5. Missing mr: Namespace Pages Detection (`list_missing_mr_pages.py`)
+- **Location**: `tools/py-tools/list_missing_mr_pages.py`
+- **Purpose**: Identifies which mr: namespace pages are missing based on the actual entity lists in the `entities/` directory
+- **Usage**: Run `python3 tools/py-tools/list_missing_mr_pages.py` from the project root
+- **Benefit**: Helps maintain a complete set of machine-readable reference pages containing raw code facts, configuration excerpts, and source code references for all game entities
+- **Output**: Comprehensive report with all missing mr: pages by entity type (mobs, items, buffs, spells) and a simple list for easy processing
+- **Features**:
+  - **Entity type detection**: Correctly identifies which pages are missing for each entity type (mobs, items, buffs, spells)
+  - **Name normalization**: Converts Java/CamelCase entity names to appropriate snake_case formats for wiki pages (e.g., `Dreamweed.Seed` becomes `mr:dreamweed_seed_item`)
+  - **Comprehensive listing**: Generates both categorized and flat lists of missing pages
+  - **Future maintenance**: When mr: namespace pages are created, continues to track any additional missing pages as new entities are added to the game
+
 These tools help automate wiki maintenance by identifying linking patterns and potential improvements that would be difficult to track manually. The enhanced `find_red_links.py` now provides multiple analysis functions in a single tool to reduce duplication.
 
 ## Migration Guidelines
