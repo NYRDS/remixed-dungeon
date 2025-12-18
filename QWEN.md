@@ -236,6 +236,13 @@ For a detailed map of the repository structure and architecture, see [REPO_MAP.m
 - Enhanced logging for easier debugging
 - Updated documentation to reflect the latest implementation
 
+### MR Namespace Creation
+- Created the mr: namespace (machine-readable/metadata reference) for AI and automated tools
+- Implemented a comprehensive system for creating reference pages containing raw facts, code fragments, configuration excerpts, and string resource references
+- Developed a script to identify missing mr: namespace pages based on entity lists
+- Created example pages for different entity types (mob, item, spell, buff)
+- Established naming conventions following the pattern: {entity_name}_{type} (e.g., skeleton_mob, ankh_item, heal_spell, burning_buff)
+
 ## Qwen Added Memories
 - Key files: Hero.java (hero character logic) at RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/hero/Hero.java, CharSprite.java (character sprite rendering) at RemixedDungeon/src/main/java/com/watabou/pixeldungeon/sprites/CharSprite.java, Actor.java (actor system) at RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/Actor.java
 - Coding convention: Avoid using full class paths like java.util.List and instead use an import and short class name like List
