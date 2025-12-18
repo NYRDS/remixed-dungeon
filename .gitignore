@@ -39,3 +39,24 @@ proguard/
 prime
 stage
 snap-inspect
+
+# Localization files (user-generated)
+RemixedDungeonDesktop/src/desktop/l10ns/strings_*.json
+
+# Runtime directory and user preferences
+RemixedDungeonDesktop/src/desktop/rundir/
+
+# Generated Java files
+RemixedDungeonDesktop/src/generated/
+
+# Temporary files and reports
+*.tmp
+*.log
+wiki_duplicate_report.txt
+wiki_redirects_report.txt
+
+# Tools
+tools/py-tools/
+
+# LibGDX generated files
+RemixedDungeonDesktop/src/libgdx/java/com/nyrds/pixeldungeon/ml/
