@@ -54,3 +54,8 @@ RemixedDungeonDesktop/src/generated/
 *.log
 wiki_duplicate_report.txt
 wiki_redirects_report.txt
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
