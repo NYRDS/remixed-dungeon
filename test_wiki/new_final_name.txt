@@ -1,5 +1,0 @@
-====== Target Page ======
-
-This is the page that will be renamed.
-
-It has some links too: [[rpd:another_test|Another Test]] and [[test_page|Test Page]].
