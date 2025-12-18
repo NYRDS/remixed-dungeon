@@ -1009,6 +1009,20 @@ The project includes additional scripts to help maintain and improve wiki qualit
   - **Comprehensive listing**: Generates both categorized and flat lists of missing pages
   - **Future maintenance**: When mr: namespace pages are created, continues to track any additional missing pages as new entities are added to the game
 
+### 6. mr: Link Validation (`check_mr_links.py`)
+- **Location**: `tools/py-tools/check_mr_links.py`
+- **Purpose**: Verifies that all file references in mr namespace pages point to actual existing files in the codebase
+- **Usage**: Run `python3 tools/py-tools/check_mr_links.py` from the project root
+- **Benefit**: Ensures that mr namespace pages contain accurate and up-to-date references to source code files
+- **Features**:
+  - **Local file checking**: Verifies that local file paths referenced in mr pages actually exist in the project
+  - **Remote URL checking**: Verifies that GitHub URLs referenced in mr pages are accessible
+  - **Comprehensive scanning**: Checks all links within all mr namespace pages (.txt files in wiki-data/pages/mr/)
+  - **Detailed reporting**: Reports both valid and broken links, with a summary of the validation results
+  - **Error status**: Returns error code 1 if broken links are found, 0 if all links are valid
+  - **Verbose output**: Shows detailed status for each link being checked
+- **Output**: Summary showing total valid/broken links, and detailed list of any broken links found
+
 These tools help automate wiki maintenance by identifying linking patterns and potential improvements that would be difficult to track manually. The enhanced `find_red_links.py` now provides multiple analysis functions in a single tool to reduce duplication.
 
 ## Migration Guidelines
@@ -1221,35 +1235,56 @@ Pages in the mr: namespace contain only:
 
 ### Format
 mr: namespace pages should follow this structure:
-```
+
 ====== Entity Name - Code References ======
 
 ===== Java Classes =====
-- [[https://github.com/NYRDS/remixed-dungeon/blob/master/RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Skeleton.java|Skeleton.java]]
-- [[https://github.com/NYRDS/remixed-dungeon/blob/master/RemixedDungeon/src/main/java/com/watabou/pixeldungeon/sprites/SkeletonSprite.java|SkeletonSprite.java]]
+  * [[https://github.com/NYRDS/remixed-dungeon/blob/master/RemixedDungeon/src/main/java/com/watabou/pixeldungeon/actors/mobs/Skeleton.java|Skeleton.java]]
+  * [[https://github.com/NYRDS/remixed-dungeon/blob/master/RemixedDungeon/src/main/java/com/watabou/pixeldungeon/sprites/SkeletonSprite.java|SkeletonSprite.java]]
+
+===== JSON Configuration =====
+  * Include JSON configuration if the entity is implemented via JSON; otherwise, state: "This entity is implemented in Java, no JSON configuration exists"
+  * For JSON configuration, include relevant fields like entityKind, HP, damage, accuracy, evasion, loot, lootChance, etc. as appropriate for the entity type
+  * Use DokuWiki code blocks for JSON: ''<code json>'' and ''</code>''
+
+===== String Resources =====
+  * Include actual string resources from the values/strings_all.xml file for this entity
+  * Include names, descriptions, and other relevant strings
+  * Use DokuWiki code blocks for XML: ''<code xml>'' and ''</code>''
+
+===== Lua Scripts =====
+  * Include Lua script reference if the entity uses Lua scripts; otherwise, state: "This entity is implemented in Java, no Lua script exists"
+
+Example with existing configuration:
+====== Example Entity - Code References ======
+
+===== Java Classes =====
+  * [[https://github.com/NYRDS/remixed-dungeon/blob/master/RemixedDungeon/src/main/java/com/example/ExampleEntity.java|ExampleEntity.java]]
 
 ===== JSON Configuration =====
 ''<code json>''
 {
-  "entityKind": "Skeleton",
-  "HP": "15",
-  "damage": "5-10",
-  "accuracy": "10",
-  "evasion": "5",
-  "loot": "SkeletonKey",
-  "lootChance": 0.1
+  "entityKind": "ExampleEntity",
+  "HP": "20",
+  "damage": "5-10"
 }
 ''</code>''
 
 ===== String Resources =====
 ''<code xml>''
-<string name="skeleton_name">Skeleton</string>
-<string name="skeleton_desc">These dwellers in the dungeon are skeletons of unlucky adventurers and inhabitants of the city, animated by emanations of evil magic from the depths below.</string>
+<string name="example_entity_name">Example Entity</string>
+<string name="example_entity_desc">An example entity for demonstration.</string>
 ''</code>''
 
 ===== Lua Scripts =====
-- [[https://github.com/NYRDS/remixed-dungeon/blob/master/RemixedDungeon/src/main/assets/scripts/mobs/skeleton.lua|skeleton.lua]]
-```
+  * [[https://github.com/NYRDS/remixed-dungeon/blob/master/RemixedDungeon/src/main/assets/scripts/exampleEntity.lua|exampleEntity.lua]]
+
+### Content Rules
+- **Code fragments only**: mr: pages should contain only direct excerpts from Java, Lua, JSON configuration files, and string resources related to the described entity
+- **No transformations**: Converting code from one format to another (e.g., converting Java or Lua code to JSON configuration format) is not allowed - only include the actual code as it exists in the source files
+- **Accurate representation**: It is acceptable to have missing information that will be added later, but it is unacceptable to include incorrect or hallucinated information
+- **Empty sections**: It is acceptable to have empty sections if a particular type of resource (e.g., Lua script, JSON config) does not exist for the entity
+- **Selective referencing**: Not all entities need to have references in all possible code sources (Java, Lua, JSON, string resources) - include only what actually exists for each specific entity
 
 ### Verification Requirements
 All pages in the mr: namespace must be regularly verified against:
@@ -1301,13 +1336,20 @@ When updating and maintaining wiki pages, follow this systematic workflow to ens
 - Include specific numerical values and mechanics as documented in the source code
 - Follow the established formatting and style guidelines
 
-### 5. Commit and Push Changes
+### 5. Link Validation
+- Use the automated script `check_mr_links.py` to verify that all file references in mr namespace pages point to actual existing files:
+  - Run from project root: `python3 tools/py-tools/check_mr_links.py`
+  - The script checks both local file paths and GitHub URLs mentioned in mr namespace pages
+  - It reports broken links that need to be fixed
+  - The script will return an error code if broken links are found
+
+### 6. Commit and Push Changes
 - Review changes to wiki pages for accuracy and completeness
 - Commit changes to the wiki-data submodule with descriptive commit messages
 - Push the updated wiki pages to the remote repository
 - Verify that all changes are properly reflected on the wiki
 
-### 6. Ongoing Maintenance
+### 7. Ongoing Maintenance
 - Regularly repeat this workflow to maintain accuracy over time
 - Use automated tools like `find_red_links.py` to identify broken links
 - Update the documentation itself when new patterns or procedures emerge
