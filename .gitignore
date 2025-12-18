@@ -54,9 +54,3 @@ RemixedDungeonDesktop/src/generated/
 *.log
 wiki_duplicate_report.txt
 wiki_redirects_report.txt
-
-# Tools
-tools/py-tools/
-
-# LibGDX generated files
-RemixedDungeonDesktop/src/libgdx/java/com/nyrds/pixeldungeon/ml/
