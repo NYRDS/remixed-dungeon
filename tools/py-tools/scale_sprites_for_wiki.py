@@ -12,8 +12,83 @@ import argparse
 import os
 from PIL import Image
 
+try:
+    import numpy as np
+    HAS_NUMPY = True
+except ImportError:
+    HAS_NUMPY = False
 
-def upscale_and_enhance_sprite(input_path, output_path, scale_factor=8, bg_color=(240, 240, 240), frame_color=(100, 100, 100), canvas_extension=1):
+
+def find_bounding_box(img):
+    """
+    Find the minimal bounding rectangle containing all non-transparent pixels.
+
+    Args:
+        img (PIL.Image): Input image with transparency
+
+    Returns:
+        tuple: (left, top, right, bottom) coordinates of the bounding box,
+               or (0, 0, 0, 0) if no non-transparent pixels are found
+    """
+    # Convert to RGBA if not already
+    if img.mode != 'RGBA':
+        img = img.convert('RGBA')
+
+    # Use numpy if available for better performance
+    if HAS_NUMPY:
+        # Convert image to numpy array
+        img_array = np.array(img)
+
+        # Get alpha channel (4th channel in RGBA)
+        alpha_channel = img_array[:, :, 3]
+
+        # Find rows and columns that have non-transparent pixels
+        non_transparent_rows = np.any(alpha_channel > 0, axis=1)
+        non_transparent_cols = np.any(alpha_channel > 0, axis=0)
+
+        # Find the indices of these rows and columns
+        row_indices = np.where(non_transparent_rows)[0]
+        col_indices = np.where(non_transparent_cols)[0]
+
+        # If no non-transparent pixels are found, return empty bounding box
+        if len(row_indices) == 0 or len(col_indices) == 0:
+            return (0, 0, 0, 0)
+
+        # Get the bounding box coordinates
+        top, bottom = row_indices[0], row_indices[-1] + 1
+        left, right = col_indices[0], col_indices[-1] + 1
+
+        return (left, top, right, bottom)
+    else:
+        # Fallback to original implementation using PIL directly
+        # Get the image data
+        img_data = img.getdata()
+        width, height = img.size
+
+        # Find the minimal and maximal coordinates of non-transparent pixels
+        min_x, max_x = width, -1
+        min_y, max_y = height, -1
+
+        for y in range(height):
+            for x in range(width):
+                # Get the alpha value of the pixel
+                alpha = img_data[y * width + x][3]
+
+                # If the pixel is not transparent
+                if alpha > 0:
+                    min_x = min(min_x, x)
+                    max_x = max(max_x, x)
+                    min_y = min(min_y, y)
+                    max_y = max(max_y, y)
+
+        # If no non-transparent pixels were found, return the original dimensions
+        if min_x == width:
+            return (0, 0, 0, 0)
+
+        return (min_x, min_y, max_x + 1, max_y + 1)
+
+
+def upscale_and_enhance_sprite(input_path, output_path, scale_factor=8, bg_color=(240, 240, 240), frame_color=(100, 100, 100), canvas_extension=1, clip_to_content=True):
     """
     Upscale a sprite with nearest neighbor interpolation and add background/frame.
 
@@ -24,6 +99,7 @@ def upscale_and_enhance_sprite(input_path, output_path, scale_factor=8, bg_color
         bg_color (tuple): RGB color for the background (default: light gray)
         frame_color (tuple): RGB color for the frame (default: dark gray)
         canvas_extension (int): Number of transparent pixels to add in each direction before scaling (default: 1)
+        clip_to_content (bool): Whether to clip to minimal rectangle of non-transparent pixels (default: True)
     """
     # Open the input image
     img = Image.open(input_path)
@@ -34,6 +110,15 @@ def upscale_and_enhance_sprite(input_path, output_path, scale_factor=8, bg_color
 
     # Get original dimensions
     orig_width, orig_height = img.size
+
+    # Clip to minimal bounding rectangle if requested
+    if clip_to_content:
+        bbox = find_bounding_box(img)
+        if bbox != (0, 0, 0, 0):  # If non-transparent pixels were found
+            left, top, right, bottom = bbox
+            img = img.crop((left, top, right, bottom))
+            # Update dimensions after cropping
+            orig_width, orig_height = img.size
 
     # Extend the canvas by adding transparent pixels in each direction before scaling
     if canvas_extension > 0:
@@ -80,7 +165,7 @@ def upscale_and_enhance_sprite(input_path, output_path, scale_factor=8, bg_color
     final_img.save(output_path)
 
 
-def process_sprites_directory(input_dir, output_dir, scale_factor=8, canvas_extension=1):
+def process_sprites_directory(input_dir, output_dir, scale_factor=8, canvas_extension=1, clip_to_content=True):
     """
     Process all sprites in the input directory and save enhanced versions to output directory.
 
@@ -89,6 +174,7 @@ def process_sprites_directory(input_dir, output_dir, scale_factor=8, canvas_exte
         output_dir (str): Directory where enhanced sprites will be saved
         scale_factor (int): Factor by which to scale the sprites
         canvas_extension (int): Number of transparent pixels to add in each direction before scaling
+        clip_to_content (bool): Whether to clip to minimal rectangle of non-transparent pixels (default: True)
     """
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
@@ -103,7 +189,7 @@ def process_sprites_directory(input_dir, output_dir, scale_factor=8, canvas_exte
             output_path = os.path.join(output_dir, filename)
 
             print(f"Processing: {filename}")
-            upscale_and_enhance_sprite(input_path, output_path, scale_factor, canvas_extension=canvas_extension)
+            upscale_and_enhance_sprite(input_path, output_path, scale_factor, canvas_extension=canvas_extension, clip_to_content=clip_to_content)
             print(f"Saved: {output_path}")
 
 
@@ -117,6 +203,7 @@ Examples:
   %(prog)s -i sprites/ -o wiki-sprites/ -s 10  # Scale 10x instead of 8x
   %(prog)s -i sprites/ -o wiki-sprites/ -c 2  # Extend canvas by 2 pixels before scaling
   %(prog)s -i sprites/mobs/ -o wiki-mobs/   # Process only mob sprites
+  %(prog)s -i sprites/ -o wiki-sprites/ --no-clip  # Disable content clipping
         """
     )
     parser.add_argument('-i', '--input', required=True, help='Input directory containing raw sprites')
@@ -128,6 +215,8 @@ Examples:
                        help='Background color as R G B values (0-255 each, default: 240 240 240)')
     parser.add_argument('--frame-color', nargs=3, type=int, default=[100, 100, 100],
                        help='Frame color as R G B values (0-255 each, default: 100 100 100)')
+    parser.add_argument('--no-clip', action='store_false', dest='clip_to_content',
+                       help='Disable clipping to minimal rectangle of non-transparent pixels (default: clipping is enabled)')
 
     args = parser.parse_args()
 
@@ -140,7 +229,7 @@ Examples:
     bg_color_tuple = tuple(args.bg_color)
     frame_color_tuple = tuple(args.frame_color)
 
-    process_sprites_directory(args.input, args.output, args.scale, args.canvas_extension)
+    process_sprites_directory(args.input, args.output, args.scale, args.canvas_extension, args.clip_to_content)
 
 
 if __name__ == "__main__":
@@ -151,5 +240,12 @@ if __name__ == "__main__":
         print("Error: Pillow library is not installed.")
         print("Install it with: pip install Pillow")
         exit(1)
-    
+
+    # Check if NumPy is available
+    try:
+        import numpy as np
+    except ImportError:
+        print("Warning: NumPy library is not installed. Performance will be reduced.")
+        print("For better performance, install it with: pip install numpy")
+
     main()
