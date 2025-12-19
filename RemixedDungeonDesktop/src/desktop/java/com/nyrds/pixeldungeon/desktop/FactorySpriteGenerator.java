@@ -435,24 +435,26 @@ public class FactorySpriteGenerator extends QuickModTest {
                     // Get the source bitmap from the texture file
                     BitmapData sourceBmp = ModdingMode.getBitmapData(textureFile);
 
-                    // Level object sprites are typically 16x16 pixels
-                    final int SPRITE_SIZE = 16;
+                    // Get the actual sprite dimensions from the level object
+                    int spriteWidth = levelObject.getSpriteXS();
+                    int spriteHeight = levelObject.getSpriteYS();
 
                     // Calculate the position in the texture atlas based on the image index
+                    // Use the actual sprite width to determine columns
                     int texWidth = sourceBmp.getWidth();
-                    int cols = texWidth / SPRITE_SIZE;
+                    int cols = texWidth / spriteWidth;
 
-                    int frameX = (imageIndex % cols) * SPRITE_SIZE;
-                    int frameY = (imageIndex / cols) * SPRITE_SIZE;
+                    int frameX = (imageIndex % cols) * spriteWidth;
+                    int frameY = (imageIndex / cols) * spriteHeight;
 
-                    // Create BitmapData for the specific frame
-                    BitmapData result = BitmapData.createBitmap(SPRITE_SIZE, SPRITE_SIZE);
+                    // Create BitmapData for the specific frame using actual dimensions
+                    BitmapData result = BitmapData.createBitmap(spriteWidth, spriteHeight);
                     if (result != null) {
                         result.eraseColor(0x00000000); // Clear with transparent color before rendering
-                        result.copyRect(sourceBmp, frameX, frameY, SPRITE_SIZE, SPRITE_SIZE, 0, 0);
+                        result.copyRect(sourceBmp, frameX, frameY, spriteWidth, spriteHeight, 0, 0);
                         String fileName = "../../../../sprites/levelObject_" + levelObject.getEntityKind() + ".png";
                         result.savePng(fileName);
-                        GLog.i("Saved level object sprite: %s", fileName);
+                        GLog.i("Saved level object sprite: %s (size: %dx%d)", fileName, spriteWidth, spriteHeight);
                         successCount++;
                     } else {
                         GLog.w("Failed to create result BitmapData for level object: %s", levelObject.getEntityKind());
