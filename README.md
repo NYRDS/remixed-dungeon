@@ -13,7 +13,7 @@ This is fork of Famous Pixel Dungeon featuring English, Russian and many more lo
 
 Remixed Dungeon in [Google Play](https://play.google.com/store/apps/details?id=com.nyrds.pixeldungeon.ml&referrer=utm_source%3Dgithub%26utm_content%3Dreadme)
 
-[Remixed Dungeon translation project](https://www.transifex.com/projects/p/remixed-dungeon/)
+[Remixed Dungeon translation project](https://app.transifex.com/nyrds/remixed-dungeon/)
 
 [Facebook](https://www.facebook.com/RemixedDungeon)
 [VK](https://vk.com/pixel_dungeon_remix)
