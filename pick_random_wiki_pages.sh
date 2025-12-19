@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Remixed Dungeon Wiki Random Page Picker
-# Selects a few random wiki pages for review or editing
+# Selects a few random wiki pages from the entire wiki for review or editing
 
 set -e  # Exit on any error
 
@@ -37,11 +37,11 @@ print_info() {
 
 # Function to pick random wiki pages
 pick_random_wiki_pages() {
-    local wiki_dir="./wiki-data/pages/rpd"
+    local wiki_dir="./wiki-data/pages"
     local num_pages=${1:-5}  # Default to 5 pages if not specified
-    
-    print_info "Picking $num_pages random wiki pages from $wiki_dir..."
-    
+
+    print_info "Picking $num_pages random wiki pages from the entire wiki ($wiki_dir)..."
+
     # Find all .txt files in the wiki directory, excluding images directory
     local all_pages=()
     while IFS= read -r -d '' file; do
@@ -66,40 +66,40 @@ pick_random_wiki_pages() {
     # Select random pages
     print_info "Randomly selected wiki pages:"
     local selected_count=0
-    local selected_pages=()
-    
+    local selected_full_paths=()
+
     # Create array of indices
     local indices=()
     for ((i=0; i<total_pages; i++)); do
         indices[$i]=$i
     done
-    
+
     # Shuffle the indices array using Fisher-Yates algorithm
     for ((i=total_pages-1; i>0; i--)); do
         # Generate random index
         local j=$((RANDOM % (i+1)))
-        
+
         # Swap elements at i and j
         local temp=${indices[$i]}
         indices[$i]=${indices[$j]}
         indices[$j]=$temp
     done
-    
+
     # Select the first num_pages indices
     for ((i=0; i<num_pages; i++)); do
         local random_index=${indices[$i]}
         local page_path=${all_pages[$random_index]}
         local page_name=$(basename "$page_path")
-        selected_pages+=("$page_name")
         echo "  $page_name"
+        selected_full_paths+=("$page_path")
     done
-    
+
     print_success "$num_pages random wiki pages selected successfully!"
-    
+
     # Option to show full paths
     print_info "Full paths to selected pages:"
-    for page in "${selected_pages[@]}"; do
-        echo "  $wiki_dir/$page"
+    for path in "${selected_full_paths[@]}"; do
+        echo "  $path"
     done
 }
 
