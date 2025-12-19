@@ -39,7 +39,7 @@ Remixed Dungeon in [Google Play](https://play.google.com/store/apps/details?id=c
 ./gradlew :RemixedDungeonHtml:generateJavaScript  # Work in progress
 ```
 
-[Проект по переводу Remixed Dungeon](https://www.transifex.com/projects/p/remixed-dungeon/)
+[Проект по переводу Remixed Dungeon](https://app.transifex.com/nyrds/remixed-dungeon/)
 
 [Facebook](https://www.facebook.com/RemixedDungeon)
 [VK](https://vk.com/pixel_dungeon_remix)
