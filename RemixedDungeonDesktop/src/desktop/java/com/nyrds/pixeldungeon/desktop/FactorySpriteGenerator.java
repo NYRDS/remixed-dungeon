@@ -74,6 +74,14 @@ public class FactorySpriteGenerator extends QuickModTest {
         // Set texture to preserve bitmap data during sprite generation so we can extract actual sprite data
         SmartTexture.setAutoDisposeBitmapData(false);
 
+        // Initialize Lua engine to make sure it can find resource files
+        try {
+            // Access the LuaEngine to ensure it's initialized with proper resource finder
+            com.nyrds.lua.LuaEngine.call("print"); // Just a simple call to ensure initialization
+        } catch (Exception e) {
+            GLog.w("Error initializing Lua engine: %s", e.getMessage());
+        }
+
         // Run the sprite generation after the game has been initialized
         generateAllMobsSpritesFromFactory();
         generateAllItemsSpritesFromFactory();
