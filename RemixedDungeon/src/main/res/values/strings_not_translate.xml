@@ -38,7 +38,7 @@
     <string name="AboutScene_Mail" translatable="false">nyrdsofficial@gmail.com</string>
 
 
-    <string name="WndSelectLanguage_TranslationLink" translatable="false">https://www.transifex.com/nyrds/remixed-dungeon/</string>
+    <string name="WndSelectLanguage_TranslationLink" translatable="false">https://app.transifex.com/nyrds/remixed-dungeon/</string>
 
 
     <!-- I needed that for testing-->
