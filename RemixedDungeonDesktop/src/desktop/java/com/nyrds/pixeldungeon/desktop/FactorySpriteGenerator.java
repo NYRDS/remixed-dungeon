@@ -2,62 +2,41 @@ package com.nyrds.pixeldungeon.desktop;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
-import com.nyrds.platform.game.QuickModTest;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
+import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.platform.game.QuickModTest;
 import com.nyrds.platform.gfx.BitmapData;
+
+import com.nyrds.platform.gl.Texture;
+import com.nyrds.util.ModdingMode;
 import com.watabou.gltextures.SmartTexture;
+import com.watabou.gltextures.TextureCache;
+
+import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.TextureFilm;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.EquipableItem;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
-// Note: There's no WandOfBlastWave in the game, using alternatives
-import com.watabou.pixeldungeon.items.wands.WandOfDisintegration;
-import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
-import com.watabou.pixeldungeon.items.wands.WandOfLightning;
-import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
-import com.watabou.pixeldungeon.items.wands.WandOfRegrowth;
-import com.watabou.pixeldungeon.items.wands.WandOfSlowness;
-import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
-import com.watabou.pixeldungeon.items.wands.WandOfPoison;
-import com.watabou.pixeldungeon.items.wands.WandOfAmok;
-import com.watabou.pixeldungeon.items.wands.WandOfFlock;
-import com.watabou.pixeldungeon.items.wands.SimpleWand;
-import com.watabou.pixeldungeon.items.weapon.Weapon;
-import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
-import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
-import com.watabou.pixeldungeon.items.weapon.melee.Mace;
-import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
-import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
-import com.watabou.pixeldungeon.items.weapon.melee.Spear;
-import com.watabou.pixeldungeon.items.weapon.melee.WarHammer;
-import com.watabou.pixeldungeon.items.weapon.melee.Quarterstaff;
-import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
-import com.watabou.pixeldungeon.items.weapon.melee.Longsword;
-import com.watabou.pixeldungeon.items.weapon.melee.Sword;
-import com.watabou.pixeldungeon.items.weapon.melee.BattleAxe;
-import com.nyrds.pixeldungeon.items.common.ElvenDagger;
-import com.nyrds.pixeldungeon.items.common.ElvenBow;
-import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
-import com.watabou.pixeldungeon.items.weapon.missiles.Shuriken;
-// Note: Shields are implemented in Lua, not as Java classes, so we'll skip shield implementation for now
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.ui.BuffIndicator;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -100,6 +79,7 @@ public class FactorySpriteGenerator extends QuickModTest {
         generateAllItemsSpritesFromFactory();
         generateAllSpellsSpritesFromFactory();
         generateAllBuffsIconsFromFactory();
+        generateAllLevelObjectsSpritesFromFactory();
 
         // Temporarily allow sprite creation for hero generation
         GameScene.setForceAllowSpriteCreation(true);
@@ -219,8 +199,8 @@ public class FactorySpriteGenerator extends QuickModTest {
         }
 
         // Special handling for CompositeTextureImage to render all layers
-        if (image instanceof com.watabou.noosa.CompositeTextureImage) {
-            return extractBitmapDataFromCompositeImage((com.watabou.noosa.CompositeTextureImage) image);
+        if (image instanceof CompositeTextureImage) {
+            return extractBitmapDataFromCompositeImage((CompositeTextureImage) image);
         }
 
         // First try to get the bitmap data directly from the texture using the new method
@@ -252,7 +232,7 @@ public class FactorySpriteGenerator extends QuickModTest {
     }
 
     // Special method to extract bitmap data from CompositeTextureImage which has multiple texture layers
-    private BitmapData extractBitmapDataFromCompositeImage(com.watabou.noosa.CompositeTextureImage image) {
+    private BitmapData extractBitmapDataFromCompositeImage(CompositeTextureImage image) {
         if (image == null) {
             return null;
         }
@@ -284,21 +264,19 @@ public class FactorySpriteGenerator extends QuickModTest {
         result.eraseColor(0x00000000); // Clear with transparent color
 
         // Copy the base texture
-        if (baseBitmap != null) {
-            result.copyRect(baseBitmap, x, y, width, height, 0, 0);
-        }
+        result.copyRect(baseBitmap, x, y, width, height, 0, 0);
 
         // Now composite each additional layer on top
         // This requires reflection to access the private mLayers field in CompositeTextureImage
         try {
-            java.lang.reflect.Field layersField = com.watabou.noosa.CompositeTextureImage.class.getDeclaredField("mLayers");
+            java.lang.reflect.Field layersField = CompositeTextureImage.class.getDeclaredField("mLayers");
             layersField.setAccessible(true);
-            java.util.ArrayList<com.nyrds.platform.gl.Texture> layers =
-                (java.util.ArrayList<com.nyrds.platform.gl.Texture>) layersField.get(image);
+            ArrayList<Texture> layers =
+                (ArrayList<Texture>) layersField.get(image);
 
             if (layers != null) {
                 for (int i = 0; i < layers.size(); i++) {
-                    com.nyrds.platform.gl.Texture layer = layers.get(i);
+                    Texture layer = layers.get(i);
                     SmartTexture layerSmartTexture = (SmartTexture) layer;
                     BitmapData layerBitmap = layerSmartTexture.getBitmapData();
 
@@ -323,60 +301,48 @@ public class FactorySpriteGenerator extends QuickModTest {
         int errorCount = 0;
 
         // Get all registered spell names from the SpellFactory
-        List<String> spellNames = (List<String>) com.nyrds.pixeldungeon.mechanics.spells.SpellFactory.getAllSpells();
+        List<String> spellNames = SpellFactory.getAllSpells();
 
         for(String spellName : spellNames) {
             try {
                 // Create an instance of the spell
-                com.nyrds.pixeldungeon.mechanics.spells.Spell spell = com.nyrds.pixeldungeon.mechanics.spells.SpellFactory.getSpellByName(spellName);
+                Spell spell = SpellFactory.getSpellByName(spellName);
 
-                if (spell != null) {
-                    // Use the spell's itemForSlot to access the image data
-                    com.nyrds.pixeldungeon.mechanics.spells.Spell.SpellItem spellItem = spell.itemForSlot();
+                // Use the spell's itemForSlot to access the image data
+                Spell.SpellItem spellItem = spell.itemForSlot();
 
-                    if (spellItem != null) {
-                        // Get the spell's image data from the spell item
-                        String imageFile = spellItem.imageFile();
-                        int imageIndex = spellItem.image();
+                // Get the spell's image data from the spell item
+                String imageFile = spellItem.imageFile();
+                int imageIndex = spellItem.image();
 
-                        if (imageFile != null && imageIndex >= 0) {
-                            // Get the source bitmap from the image file
-                            BitmapData sourceBmp = com.nyrds.util.ModdingMode.getBitmapData(imageFile);
+                if (imageFile != null && imageIndex >= 0) {
+                    // Get the source bitmap from the image file
+                    BitmapData sourceBmp = ModdingMode.getBitmapData(imageFile);
 
-                            if (sourceBmp != null) {
-                                // Spell sprites are typically 16x16 pixels
-                                final int SPRITE_SIZE = 16;
+                    // Spell sprites are typically 16x16 pixels
+                    final int SPRITE_SIZE = 16;
 
-                                // Calculate the position in the texture atlas based on the image index
-                                int texWidth = sourceBmp.getWidth();
-                                int cols = texWidth / SPRITE_SIZE;
+                    // Calculate the position in the texture atlas based on the image index
+                    int texWidth = sourceBmp.getWidth();
+                    int cols = texWidth / SPRITE_SIZE;
 
-                                int frameX = (imageIndex % cols) * SPRITE_SIZE;
-                                int frameY = (imageIndex / cols) * SPRITE_SIZE;
+                    int frameX = (imageIndex % cols) * SPRITE_SIZE;
+                    int frameY = (imageIndex / cols) * SPRITE_SIZE;
 
-                                // Create BitmapData for the specific frame
-                                BitmapData result = BitmapData.createBitmap(SPRITE_SIZE, SPRITE_SIZE);
-                                if (result != null) {
-                                    result.eraseColor(0x00000000); // Clear with transparent color before rendering
-                                    result.copyRect(sourceBmp, frameX, frameY, SPRITE_SIZE, SPRITE_SIZE, 0, 0);
-                                    String fileName = "../../../../sprites/spell_" + spellName + ".png";
-                                    result.savePng(fileName);
-                                    GLog.i("Saved spell sprite: %s", fileName);
-                                    successCount++;
-                                } else {
-                                    GLog.w("Failed to create result BitmapData for spell: %s", spellName);
-                                }
-                            } else {
-                                GLog.w("Failed to load source bitmap for spell: %s from file: %s", spellName, imageFile);
-                            }
-                        } else {
-                            GLog.w("Spell has null image file or negative image index: %s", spellName);
-                        }
+                    // Create BitmapData for the specific frame
+                    BitmapData result = BitmapData.createBitmap(SPRITE_SIZE, SPRITE_SIZE);
+                    if (result != null) {
+                        result.eraseColor(0x00000000); // Clear with transparent color before rendering
+                        result.copyRect(sourceBmp, frameX, frameY, SPRITE_SIZE, SPRITE_SIZE, 0, 0);
+                        String fileName = "../../../../sprites/spell_" + spellName + ".png";
+                        result.savePng(fileName);
+                        GLog.i("Saved spell sprite: %s", fileName);
+                        successCount++;
                     } else {
-                        GLog.w("Spell item is null for spell: %s", spellName);
+                        GLog.w("Failed to create result BitmapData for spell: %s", spellName);
                     }
                 } else {
-                    GLog.w("Spell is null for name: %s", spellName);
+                    GLog.w("Spell has null image file or negative image index: %s", spellName);
                 }
             } catch (Exception e) {
                 GLog.w("Error creating or saving spell sprite for %s: %s", spellName, e.getMessage());
@@ -394,59 +360,51 @@ public class FactorySpriteGenerator extends QuickModTest {
         int errorCount = 0;
 
         // Get all registered buff names from the BuffFactory
-        Set<String> buffNames = com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory.getAllBuffsNames();
+        Set<String> buffNames = BuffFactory.getAllBuffsNames();
 
         for(String buffName : buffNames) {
             try {
                 // Create an instance of the buff
-                com.watabou.pixeldungeon.actors.buffs.Buff buff = com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory.getBuffByName(buffName);
+                Buff buff = BuffFactory.getBuffByName(buffName);
 
-                if (buff != null) {
-                    // Get the buff's large icon using textureLarge and icon index
-                    try {
-                        com.watabou.gltextures.SmartTexture icons = com.watabou.gltextures.TextureCache.get(buff.textureLarge());
-                        com.watabou.noosa.TextureFilm film = com.watabou.gltextures.TextureCache.getFilm(icons, 16, 16);
-                        int index = buff.icon();
+                // Get the buff's large icon using textureLarge and icon index
+                try {
+                    SmartTexture icons = TextureCache.get(buff.textureLarge());
+                    TextureFilm film = TextureCache.getFilm(icons, 16, 16);
+                    int index = buff.icon();
 
-                        if (index != com.watabou.pixeldungeon.ui.BuffIndicator.NONE) {
-                            Image icon = new Image(icons);
-                            icon.frame(film.get(index));
+                    if (index != com.watabou.pixeldungeon.ui.BuffIndicator.NONE) {
+                        Image icon = new Image(icons);
+                        icon.frame(film.get(index));
 
-                            if (icon != null) {
-                                // Extract the actual bitmap data from the icon
-                                BitmapData bitmap = extractBitmapDataFromImage(icon);
-                                if (bitmap != null) {
-                                    String fileName = "../../../../sprites/buff_" + buffName + ".png";
-                                    // Save the icon image to a file
-                                    bitmap.savePng(fileName);
-                                    GLog.i("Saved buff large icon: %s", fileName);
-                                    successCount++;
-                                } else {
-                                    GLog.w("Failed to extract BitmapData for buff large icon: %s", buffName);
-                                }
-                            } else {
-                                GLog.w("Large icon is null for buff: %s", buffName);
-                            }
+                        // Extract the actual bitmap data from the icon
+                        BitmapData bitmap = extractBitmapDataFromImage(icon);
+                        if (bitmap != null) {
+                            String fileName = "../../../../sprites/buff_" + buffName + ".png";
+                            // Save the icon image to a file
+                            bitmap.savePng(fileName);
+                            GLog.i("Saved buff large icon: %s", fileName);
+                            successCount++;
                         } else {
-                            GLog.w("No valid icon index for buff: %s", buffName);
+                            GLog.w("Failed to extract BitmapData for buff large icon: %s", buffName);
                         }
-                    } catch (Exception e) {
-                        GLog.w("Error creating large icon for buff %s: %s", buffName, e.getMessage());
+                    } else {
+                        GLog.w("No valid icon index for buff: %s", buffName);
+                    }
+                } catch (Exception e) {
+                    GLog.w("Error creating large icon for buff %s: %s", buffName, e.getMessage());
 
-                        // Fallback to small icon if large icon creation fails
-                        Image fallbackIcon = buff.smallIcon();
-                        if (fallbackIcon != null) {
-                            BitmapData bitmap = extractBitmapDataFromImage(fallbackIcon);
-                            if (bitmap != null) {
-                                String fileName = "../../../../sprites/buff_" + buffName + ".png";
-                                bitmap.savePng(fileName);
-                                GLog.i("Saved buff icon (fallback) for: %s", fileName);
-                                successCount++;
-                            }
+                    // Fallback to small icon if large icon creation fails
+                    Image fallbackIcon = buff.smallIcon();
+                    if (fallbackIcon != null) {
+                        BitmapData bitmap = extractBitmapDataFromImage(fallbackIcon);
+                        if (bitmap != null) {
+                            String fileName = "../../../../sprites/buff_" + buffName + ".png";
+                            bitmap.savePng(fileName);
+                            GLog.i("Saved buff icon (fallback) for: %s", fileName);
+                            successCount++;
                         }
                     }
-                } else {
-                    GLog.w("Buff is null for name: %s", buffName);
                 }
             } catch (Exception e) {
                 GLog.w("Error creating or saving buff icon for %s: %s", buffName, e.getMessage());
@@ -457,17 +415,58 @@ public class FactorySpriteGenerator extends QuickModTest {
         GLog.i("Buff icon generation completed. Success: %d, Errors: %d", successCount, errorCount);
     }
 
-    // Helper method to generate a deterministic color based on the entity name
-    private int getDeterministicColor(String entityName) {
-        // Create a hash-based color for each entity
-        int hash = entityName.hashCode();
-        int r = (hash & 0xFF);
-        int g = ((hash >> 8) & 0xFF);
-        int b = ((hash >> 16) & 0xFF);
-        int a = 255; // Fully opaque
+    private void generateAllLevelObjectsSpritesFromFactory() {
+        GLog.i("Starting to generate sprites for all level objects from factory...");
 
-        // Convert ARGB to the platform-specific format (RGBA) for BitmapData
-        return BitmapData.color((a << 24) | (r << 16) | (g << 8) | b);
+        int successCount = 0;
+        int errorCount = 0;
+
+        // Use the new public factory method to get all level objects
+        List<com.nyrds.pixeldungeon.levels.objects.LevelObject> levelObjects =
+            com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.allLevelObjects();
+
+        for(com.nyrds.pixeldungeon.levels.objects.LevelObject levelObject : levelObjects) {
+            try {
+                // Get the image data directly from the level object properties
+                String textureFile = levelObject.getTextureFile();
+                int imageIndex = levelObject.image();
+
+                if (textureFile != null && imageIndex >= 0) {
+                    // Get the source bitmap from the texture file
+                    BitmapData sourceBmp = ModdingMode.getBitmapData(textureFile);
+
+                    // Level object sprites are typically 16x16 pixels
+                    final int SPRITE_SIZE = 16;
+
+                    // Calculate the position in the texture atlas based on the image index
+                    int texWidth = sourceBmp.getWidth();
+                    int cols = texWidth / SPRITE_SIZE;
+
+                    int frameX = (imageIndex % cols) * SPRITE_SIZE;
+                    int frameY = (imageIndex / cols) * SPRITE_SIZE;
+
+                    // Create BitmapData for the specific frame
+                    BitmapData result = BitmapData.createBitmap(SPRITE_SIZE, SPRITE_SIZE);
+                    if (result != null) {
+                        result.eraseColor(0x00000000); // Clear with transparent color before rendering
+                        result.copyRect(sourceBmp, frameX, frameY, SPRITE_SIZE, SPRITE_SIZE, 0, 0);
+                        String fileName = "../../../../sprites/levelObject_" + levelObject.getEntityKind() + ".png";
+                        result.savePng(fileName);
+                        GLog.i("Saved level object sprite: %s", fileName);
+                        successCount++;
+                    } else {
+                        GLog.w("Failed to create result BitmapData for level object: %s", levelObject.getEntityKind());
+                    }
+                } else {
+                    GLog.w("Level object has null texture file or negative image index: %s", levelObject.getEntityKind());
+                }
+            } catch (Exception e) {
+                GLog.w("Error creating or saving level object sprite for %s: %s", levelObject.getEntityKind(), e.getMessage());
+                errorCount++;
+            }
+        }
+
+        GLog.i("Level object sprite generation completed. Success: %d, Errors: %d", successCount, errorCount);
     }
 
     private void generateAllHeroSprites() {
@@ -603,7 +602,7 @@ public class FactorySpriteGenerator extends QuickModTest {
                         break;
                 }
 
-                if (basicItem != null && basicItem instanceof EquipableItem) {
+                if (basicItem instanceof EquipableItem) {
                     try {
                         EquipableItem equipableItem = (EquipableItem) basicItem;
                         equipableItem.upgrade(0); // Ensure it's at +0 to avoid any upgrade visuals
@@ -1173,7 +1172,7 @@ public class FactorySpriteGenerator extends QuickModTest {
 
         // Generate list of all spells
         try {
-            List<String> allSpellNames = (List<String>) com.nyrds.pixeldungeon.mechanics.spells.SpellFactory.getAllSpells();
+            List<String> allSpellNames = SpellFactory.getAllSpells();
             Set<String> uniqueSpellNames = new java.util.HashSet<>(allSpellNames);
             List<String> spellNames = new java.util.ArrayList<>(uniqueSpellNames);
             java.util.Collections.sort(spellNames);
@@ -1184,13 +1183,28 @@ public class FactorySpriteGenerator extends QuickModTest {
 
         // Generate list of all buffs
         try {
-            Set<String> allBuffNames = com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory.getAllBuffsNames();
+            Set<String> allBuffNames = BuffFactory.getAllBuffsNames();
             Set<String> uniqueBuffNames = new java.util.HashSet<>(allBuffNames);
             List<String> buffNames = new java.util.ArrayList<>(uniqueBuffNames);
             java.util.Collections.sort(buffNames);
             writeEntityListToFile(buffNames, "buffs.txt");
         } catch (Exception e) {
             GLog.w("Error generating buff list: %s", e.getMessage());
+        }
+
+        // Generate list of all level objects
+        try {
+            List<com.nyrds.pixeldungeon.levels.objects.LevelObject> levelObjects =
+                com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.allLevelObjects();
+            Set<String> uniqueLevelObjectNames = new java.util.HashSet<>();
+            for (com.nyrds.pixeldungeon.levels.objects.LevelObject levelObject : levelObjects) {
+                uniqueLevelObjectNames.add(levelObject.getEntityKind());
+            }
+            List<String> levelObjectNames = new java.util.ArrayList<>(uniqueLevelObjectNames);
+            java.util.Collections.sort(levelObjectNames);
+            writeEntityListToFile(levelObjectNames, "levelObjects.txt");
+        } catch (Exception e) {
+            GLog.w("Error generating level object list: %s", e.getMessage());
         }
 
         GLog.i("Entity list generation completed.");

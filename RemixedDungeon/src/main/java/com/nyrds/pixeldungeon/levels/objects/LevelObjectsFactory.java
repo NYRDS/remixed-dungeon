@@ -19,7 +19,9 @@ import com.watabou.pixeldungeon.utils.Utils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import lombok.SneakyThrows;
 
@@ -135,6 +137,16 @@ public class LevelObjectsFactory {
 		} else {
 			throw new ModError(Utils.format("Unknown object: [%s]",objectClassName));
 		}
+	}
+
+	public static List<LevelObject> allLevelObjects() {
+		List<LevelObject> objects = new ArrayList<>();
+
+		for(String objectClass : mObjectsList.keySet()) {
+			objects.add(objectByName(objectClass));
+		}
+
+		return objects;
 	}
 
 }
