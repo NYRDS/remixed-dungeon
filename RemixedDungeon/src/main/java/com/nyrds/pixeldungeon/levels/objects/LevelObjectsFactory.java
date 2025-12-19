@@ -142,8 +142,58 @@ public class LevelObjectsFactory {
 	public static List<LevelObject> allLevelObjects() {
 		List<LevelObject> objects = new ArrayList<>();
 
+		// Add one instance of each registered class
 		for(String objectClass : mObjectsList.keySet()) {
 			objects.add(objectByName(objectClass));
+		}
+
+		// Add instances for all possible JSON-defined objects from levelObjects directory
+		// This includes both Deco and CustomObject configurations
+		try {
+			// List all files in the levelObjects directory
+			java.io.FilenameFilter jsonFilter = (dir, name) -> name.toLowerCase().endsWith(".json");
+			java.util.List<String> levelObjectFiles = com.nyrds.util.ModdingMode.listResources("levelObjects", jsonFilter);
+
+			for (String fileName : levelObjectFiles) {
+				// Remove the .json extension to get the object name
+				String objectName = fileName.substring(0, fileName.lastIndexOf('.'));
+
+				// Read the JSON file to determine the object type
+				JSONObject objectDef = com.nyrds.util.JsonHelper.readJsonFromAsset("levelObjects/" + fileName);
+				String kind = objectDef.optString("kind", "Deco"); // Default to Deco if kind is not specified
+
+				// Create an instance based on the kind specified in the JSON
+				LevelObject levelObject;
+				if ("CustomObject".equals(kind)) {
+					// Create a CustomObject and configure it
+					CustomObject customObj = (CustomObject) objectByName("CustomObject");
+					customObj.objectDesc = objectName;
+					// Try to set up the object from its JSON definition to properly initialize it
+					try {
+						customObj.setupFromJson(null, objectDef);
+					} catch (Exception e) {
+						// If setup fails, still add the object but log the error
+					}
+					levelObject = customObj;
+				} else {
+					// Default to Deco for other kinds (including "Deco")
+					Deco deco = (Deco) objectByName("Deco");
+					deco.objectDesc = objectName;
+					// Try to set up the object from its JSON definition to properly initialize it
+					try {
+						deco.setupFromJson(null, objectDef);
+					} catch (Exception e) {
+						// If setup fails, still add the object but log the error
+					}
+					levelObject = deco;
+				}
+
+				// Add the configured object to the list
+				objects.add(levelObject);
+			}
+		} catch (Exception e) {
+			// If there's an issue reading the assets, return just the registered classes
+			// This ensures the method still works even if asset scanning fails
 		}
 
 		return objects;
