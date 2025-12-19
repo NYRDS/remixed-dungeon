@@ -11,7 +11,7 @@ When creating wiki content, it's important to verify information against all cod
 - **String resources**: Localized game text is stored in string resource files, with Russian strings specifically in `RemixedDungeon/src/main/res/values-ru/strings_all.xml` which serves as the source of truth for Russian wiki pages
 
 ### Python Script Execution
-- When running Python tools for wiki maintenance, use `python3` instead of `python` to ensure compatibility with Python 3.x codebase:
+- When running Python tools for wiki maintenance, use `python3`:
   - `python3 tools/py-tools/find_red_links.py`
   - `python3 tools/py-tools/scale_sprites_for_wiki.py`
   - `python3 tools/py-tools/check_broken_images.py`
@@ -38,7 +38,7 @@ For Russian wiki pages located in the `wiki-data/pages/ru/` directory, ensure co
 
 ### File Naming Convention
 - All wiki page files must use lowercase names with underscores separating words
-- Example: `chaos_armor.txt`, `air_elemental.txt`, `potion_of_healing.txt`
+- Example: `chaos_armor_item.txt`, `air_elemental_mob.txt`, `potion_of_healing_item.txt`
 - No capitalized filenames are allowed (e.g., no `Chaos_Armor.txt`, `Air_Elemental.txt`)
 
 ### Workflow and Collaboration Rules
@@ -46,8 +46,8 @@ For Russian wiki pages located in the `wiki-data/pages/ru/` directory, ensure co
 - Always commit and push your updates after making changes to wiki files to ensure your contributions are preserved and shared with the community.
 
 ### Conversion Strategy
-- CamelCase names should be converted to snake_case (e.g., `TheSoulbringer` → `the_soulbringer`)
-- Proper names should follow the same rule (e.g., `ArcaneStylus` → `arcane_stylus`)
+- CamelCase names should be converted to snake_case (e.g., `TheSoulbringer` → `the_soulbringer_item`)
+- Proper names should follow the same rule (e.g., `ArcaneStylus` → `arcane_stylus_item`)
 
 ### Entity Namespace Separation
 To avoid confusion between similar entity names (e.g., a mob and hero subclass both named "Shaman"), different entity types should use different naming conventions. When an entity can exist in multiple forms (e.g., Lich as both a boss mob and a hero subclass), it's important to distinguish these clearly.
@@ -166,7 +166,7 @@ When entities share the same name across different types (like the Lich boss and
 ### Information Accuracy
 - All game data (stats, mechanics, effects, drop rates) must be verified against source code
 - Include specific numerical values rather than vague descriptions
-- When documenting items, include durability, usage restrictions, and exact effects
+- When documenting items, include stats, usage restrictions, and exact effects
 - For mobs, document HP, damage, special abilities, resistances, and drop tables
 
 ### Comprehensive Coverage
@@ -177,7 +177,7 @@ When entities share the same name across different types (like the Lich boss and
 
 ### Formatting and Style
 - Use bullet points for lists of properties, effects, or characteristics
-- Include code-style references when mentioning other game elements (e.g., `[[rpd:sword|Sword]]`)
+- Include code-style references when mentioning other game elements (e.g., `[[rpd:sword_item|Sword]]`)
 - Present information in order of importance to the player
 - Provide examples where helpful for understanding complex mechanics
 
@@ -199,13 +199,18 @@ When entities share the same name across different types (like the Lich boss and
 - Use descriptive display text that clarifies the link's purpose
 - Maintain consistent terminology across linked pages
 
+### Code References
+- **Avoid using the code: namespace for links** as it creates numerous red links in the wiki
+- Instead of `[[code:RemixedDungeon/src/main/java/com/example/Example.java|Example.java]]`, link directly to the GitHub repository using the format: `[[https://github.com/NYRDS/remixed-dungeon/blob/master/RemixedDungeon/src/main/java/com/example/Example.java|Example.java]]`
+- This ensures all code references remain accessible and prevents broken links in the wiki
+
 ## Image Standards
 
 ### Adding Mob/Character Sprites
-- To add a mob sprite to a wiki page, use the centered format with original size: `{{ rpd:images:mob_name_sprite.png|Alt Text }}`
+- To add a mob sprite to a wiki page, use the centered format with original size: `{{ rpd:images:mob_[MobName].png|Alt Text }}`
 - Enhanced sprites for wiki use are pre-generated using `tools/py-tools/scale_sprites_for_wiki.py` which scales and frames raw game sprites with nearest-neighbor filtering
 - The processed sprites are available in the `wiki-data/media/rpd/images/` directory and ready to use in wiki pages
-- Enhanced images follow the naming convention `{mob_name}_sprite.png` (for mobs), `{item_name}_item.png` (for items), and similar patterns for other entity types
+- Enhanced images follow the same naming convention as input sprites with additional processing (scaling, background, and frame applied)
 - For centered display, add spaces around the image reference: `{{ rpd:images:image.png|Alt Text }}`
 - For original image size (no scaling), omit the size parameter entirely
 
@@ -344,7 +349,7 @@ When creating wiki content, reference these sources of truth for accurate inform
   - `HeroClass.java` - Available hero classes and their characteristics
   - `HeroAction.java` - Hero actions and behaviors
   - `Belongings.java` - Hero inventory and equipment system
-  - `Talent.java` - Hero talents and progression system
+
 
 #### Enemies/Mobs (Monsters)
 - **Location**: `com/watabou/pixeldungeon/actors/mobs/`
@@ -352,7 +357,7 @@ When creating wiki content, reference these sources of truth for accurate inform
   - `Mob.java` - Base mob class with common properties
   - `Skeleton.java`, `Thief.java`, `Gnoll.java`, etc. - Individual enemy implementations
   - `Boss.java` - Boss mob definitions and mechanics
-  - `Elemental.java`, `Demon.java` - Enemy subtypes with specific mechanics
+  - `Elemental.java`, `Rat.java` - Enemy subtypes with specific mechanics
 
 #### Items and Equipment
 - **Location**: `com/watabou/pixeldungeon/items/`
@@ -360,7 +365,7 @@ When creating wiki content, reference these sources of truth for accurate inform
   - `Item.java` - Base item class
   - `Weapon.java`, `Armor.java` - Equipment base classes
   - `Potion.java`, `Scroll.java`, `Ring.java` - Consumable items
-  - `weapon/melee/`, `weapon/magic/` - Specific weapon types
+  - `weapon/melee/`,  - Specific weapon types
   - `armor/glyphs/` - Armor enchantments
   - `artifacts/` - Special artifacts with unique mechanics
 
@@ -378,7 +383,6 @@ When creating wiki content, reference these sources of truth for accurate inform
 #### Game Mechanics
 - **Location**: `com/watabou/pixeldungeon/mechanics/`
 - **Key files**:
-  - `BlastWave.java` - Blast mechanics
   - `Chasm.java` - Chasm falling mechanics
   - `Element.java` - Damage element types and resistances
 
@@ -751,15 +755,6 @@ Some items and mobs use advanced sprite configurations defined in JSON files in 
 ### Monster Spawning and Level Configuration
 - **Location**: `RemixedDungeon/src/main/assets/levelsDesc/Bestiary.json`
 - **Key Information**: Defines which monsters appear on which levels and their spawn weights/rates
-  - **Sewer Level**: Snail (level 1), Rat/Gnoll/Crab (level 3), etc.
-  - **Prison Level**: Skeleton/Thief/Swarm/Shaman (level 6-9), Tengu boss
-  - **Caves Level**: Bat/Gnoll Brute (level 11-14), DM300 boss
-  - **City Level**: FireElemental/Monk/Warlock (level 16-19), The King boss
-  - **Halls Level**: Succubus/Eye/Scorpio/Acidic (level 22-24), Yog boss
-  - **Guts Level**: SuspiciousRat/ZombieGnoll/Worm (level 26-30)
-  - **Spider Level**: SpiderServant/SpiderExploding/SpiderMind (level 6s-10s)
-  - **Necro Level**: Zombie/Skeleton/EnslavedSoul (level necro1-necro4), Lich boss
-  - **Ice Caves Level**: Kobold/ColdSpirit/IceElemental (level ice1-ice4), IceGuardianCore boss
 
 ### Class Unlock Validation
 - **Location**: `RemixedDungeon/src/main/java/com/nyrds/pixeldungeon/windows/WndPriest.java`
@@ -821,9 +816,8 @@ Some items and mobs use advanced sprite configurations defined in JSON files in 
 ## Specific Areas for Improvement
 
 ### 1. Item Mechanics
-- Extract damage ranges, durability, and special effects from weapon and armor classes
+- Extract damage ranges, stats, and special effects from weapon and armor classes
 - Document all potion, scroll, and ring effects
-- Include information about item synergies and combinations
 
 ### 2. Mob Behavior
 - Document AI patterns and decision-making processes
@@ -1179,8 +1173,6 @@ When maintaining wiki pages, these are important code locations to reference for
 #### String Resources
 - **Game Text**: `RemixedDungeon/src/main/res/values/strings-all.xml`
   - Main string resources with game text, descriptions, and labels
-- **Localized Strings**: `RemixedDungeon/src/main/assets/l10ns/strings_*.json`
-  - Localized game text that can be used for game descriptions
 
 #### Lua Scripts
 - **Item Scripts**: `RemixedDungeon/src/main/assets/scripts/items/`
@@ -1289,14 +1281,14 @@ Example with existing configuration:
   * [[mr:related_item_item|Related Item (Item)]]
 
 ### Content Rules
-- **Code fragments only**: mr: pages should contain only direct excerpts from Java, Lua, JSON configuration files, and string resources related to the described entity
+- **Code fragments only**: mr pages should contain only direct excerpts from Java, Lua, JSON configuration files, and string resources related to the described entity
 - **No transformations**: Converting code from one format to another (e.g., converting Java or Lua code to JSON configuration format) is not allowed - only include the actual code as it exists in the source files
 - **Accurate representation**: It is acceptable to have missing information that will be added later, but it is unacceptable to include incorrect or hallucinated information
 - **Empty sections**: It is acceptable to have empty sections if a particular type of resource (e.g., Lua script, JSON config) does not exist for the entity
 - **Selective referencing**: Not all entities need to have references in all possible code sources (Java, Lua, JSON, string resources) - include only what actually exists for each specific entity
 
 ### Verification Requirements
-All pages in the mr: namespace must be regularly verified against:
+All pages in the mr namespace must be regularly verified against:
 - The actual Java code in the repository
 - The current JSON configuration files
 - The relevant string resource files
@@ -1305,10 +1297,10 @@ All pages in the mr: namespace must be regularly verified against:
 - The actual entities list, which can be found in the `entities/` directory (generated by the FactorySpriteGenerator task)
 
 ### Usage Instructions
-- When creating human-targeted wiki pages, authors should reference the corresponding mr: namespace page for accurate technical information
-- AI tools should use mr: namespace pages as a primary source of factual data
-- All information in mr: pages should be verified as current and accurate before using for human-facing content
-- When the game updates, mr: namespace pages should be checked first to identify how the raw data has changed
+- When creating human-targeted wiki pages, authors should reference the corresponding mr namespace page for accurate technical information
+- AI tools should use mr namespace pages as a primary source of factual data
+- All information in mr pages should be verified as current and accurate before using for human-facing content
+- When the game updates, mr namespace pages should be checked first to identify how the raw data has changed
 
 ## Recommended Wiki Maintenance Workflow
 
@@ -1318,7 +1310,7 @@ When updating and maintaining wiki pages, follow this systematic workflow to ens
 - Pull the latest changes from the repository: `git pull origin master`
 - Read the latest changes in the codebase to understand recent updates
 - Review the current WIKI_DOCUMENTATION.md to refresh yourself on standards
-- Check the mr: namespace pages for the entities you're updating to ensure you have accurate, current information
+- Check the mr namespace pages for the entities you're updating to ensure you have accurate, current information
 - Note: Avoid performing unused image cleanup as a standard part of wiki improvement, as this may remove images that are legitimately in use
 
 ### 2. Page Selection
