@@ -193,13 +193,24 @@ def get_entity_type_and_name(filename):
     """
     import re
     # Match patterns like: mob_Tengu.png, item_Ankh.png, spell_Heal.png, etc.
-    pattern = r'^(mob|item|spell|buff|hero|npc|level|config|mechanic|skill|talent|trap|script)_([^.]+)\.(.+)$'
+    # Also handle levelObject_EntityName.png format
+    pattern = r'^(mob|item|spell|buff|hero|npc|level|config|mechanic|skill|talent|trap|script|level_object)_([^.]+)\.(.+)$'
     match = re.match(pattern, filename)
 
     if match:
         entity_type = match.group(1)
         entity_name = match.group(2)
         extension = match.group(3)
+        return entity_type, entity_name, extension
+
+    # Handle the levelObject naming convention (without underscore)
+    level_object_pattern = r'^(levelObject)_([^.]+)\.(.+)$'
+    level_object_match = re.match(level_object_pattern, filename)
+
+    if level_object_match:
+        entity_type = 'level_object'  # Convert to the underscore format for consistency
+        entity_name = level_object_match.group(2)
+        extension = level_object_match.group(3)
         return entity_type, entity_name, extension
 
     return None, None, None

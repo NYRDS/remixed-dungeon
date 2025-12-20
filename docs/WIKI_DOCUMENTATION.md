@@ -106,6 +106,14 @@ To avoid confusion between similar entity names (e.g., a mob and hero subclass b
 - Scripts use `_script` suffix
 - Example: `heal_script.txt`, `ignite_script.txt`, `mobs/init_script.txt`
 
+#### Level Objects
+- Level objects use `_level_object` suffix
+- Example: `pedestal_level_object.txt`, `statue_level_object.txt`, `well_level_object.txt`, `barricade_level_object.txt`, `trap_fire_level_object.txt`
+- Level objects are interactive or decorative elements that can be placed on dungeon levels
+- They include: pedestals, statues, barricades, wells, pots, traps, and other environmental features
+- These are configured through JSON files in the `levelObjects/` directory
+- Some level objects have custom behaviors implemented in Lua scripts in the `scripts/objects/` directory
+
 #### Configuration Files
 - Configuration files use `_config` suffix
 - Example: `hero_stats_config.txt`, `mob_spawn_config.txt`
@@ -224,6 +232,7 @@ The raw sprites in the input directory (`sprites/`) follow these naming patterns
 - **Spells**: `spell_[SpellName].png` (e.g., `spell_Heal.png`, `spell_MagicTorch.png`, `spell_Ignite.png`)
 - **Buffs/Status Effects**: `buff_[BuffName].png` (e.g., `buff_Burning.png`, `buff_Poison.png`, `buff_Invisibility.png`)
 - **Hero Classes/Sprites**: `hero_[ClassName].png` or `hero_[Class]_[Subclass].png` (e.g., `hero_WARRIOR.png`, `hero_WARRIOR_GLADIATOR.png`)
+- **Level Objects**: `levelObject_[ObjectName].png` (e.g., `levelObject_Pedestal.png`, `levelObject_Statue.png`, `levelObject_Well.png`, `levelObject_FireTrap.png`)
 
 #### Output Sprite Naming
 - The processed sprites maintain the exact same filename as input sprites with additional processing
@@ -239,8 +248,9 @@ For wiki page integration, the sprites follow the same naming convention as page
 - For heroes: `{{ rpd:images:[hero_name]_hero.png|Alt Text }}` (e.g., `{{ rpd:images:warrior_gladiator_hero.png|Warrior Gladiator }}`)
 - For NPCs: `{{ rpd:images:[npc_name]_npc.png|Alt Text }}` (e.g., `{{ rpd:images:shopkeeper_npc.png|Shopkeeper }}`)
 - For levels: `{{ rpd:images:[level_name]_level.png|Alt Text }}` (e.g., `{{ rpd:images:sewers_level.png|Sewers Level }}`)
+- For level objects: `{{ rpd:images:[object_name]_level_object.png|Alt Text }}` (e.g., `{{ rpd:images:pedestal_level_object.png|Pedestal }}`, `{{ rpd:images:fire_trap_level_object.png|Fire Trap }}`)
 
-The processed sprites are automatically renamed to match the page naming scheme during processing (e.g., `mob_Tengu.png` becomes `tengu_mob.png`).
+The processed sprites are automatically renamed to match the page naming scheme during processing (e.g., `mob_Tengu.png` becomes `tengu_mob.png`, `levelObject_Pedestal.png` becomes `pedestal_level_object.png`).
 
 #### Special Processing Parameters
 - **Scaling**: Images are scaled up by a factor of 8 (default) using nearest neighbor interpolation to maintain pixel art quality
@@ -259,7 +269,7 @@ The processed sprites are automatically renamed to match the page naming scheme 
 - Store all new images in the appropriate subdirectory within `wiki-data/media/rpd/images/`
 - Maintain consistent image sizing across similar page types
 - For non-sprite images, use descriptive filenames in snake_case format
-- Align image names with corresponding page names using the same entity type suffixes (_mob, _item, _spell, _buff, _npc, _hero, etc.)
+- Align image names with corresponding page names using the same entity type suffixes (_mob, _item, _spell, _buff, _npc, _hero, _level_object, etc.)
 
 ## DokuWiki Syntax Guide
 
@@ -389,6 +399,17 @@ When creating wiki content, reference these sources of truth for accurate inform
   - `Chasm.java` - Chasm falling mechanics
   - `Element.java` - Damage element types and resistances
 
+#### Level Objects
+- **Location**: `com/nyrds/pixeldungeon/levels/objects/`
+- **Key files**:
+  - `LevelObject.java` - Base class for all level objects
+  - `LevelObjectsFactory.java` - Factory for creating level objects
+  - `Deco.java` - Decorative objects that enhance visual appearance of levels
+  - `CustomObject.java` - Lua-scripted objects with complex behaviors
+  - `Trap.java` - Trap objects that trigger effects when activated
+  - `scripts/objects/` directory - Lua scripts for custom object behaviors (e.g., pedestal.lua, statue.lua, well.lua)
+  - `levelObjects/` directory - JSON configuration files for level objects (e.g., pedestal.json, statue.json, well.json)
+
 #### Buffs and Debuffs
 - **Location**: `com/watabou/pixeldungeon/buffs/`
 - **Key files**:
@@ -412,6 +433,7 @@ When creating wiki content, reference these sources of truth for accurate inform
   - **Hero classes**: Files named `hero_[HeroClassName].png` (e.g., `hero_WARRIOR.png`, `hero_MAGE.png`)
   - **Hero subclasses**: Files named `hero_subclass_[HeroSubClassName].png` (e.g., `hero_subclass_GLADIATOR.png`, `hero_subclass_WARLOCK.png`)
   - **Hero class+subclass combinations**: Files named `hero_[HeroClassName]_[HeroSubClassName].png` (e.g., `hero_WARRIOR_GLADIATOR.png`, `hero_MAGE_WARLOCK.png`)
+  - **Level objects**: Files named `levelObject_[EntityName].png` (e.g., `levelObject_Pedestal.png`, `levelObject_Statue.png`, `levelObject_Well.png`, `levelObject_FireTrap.png`)
 - **Tools for working with sprites**:
   - **`tools/py-tools/scale_sprites_for_wiki.py`**: Enhances sprites with scaling, background, and frame for better wiki visualization (processed sprites are available in the wiki-data submodule)
   - **Usage**: `python3 tools/py-tools/scale_sprites_for_wiki.py -i sprites/ -o wiki-data/media/rpd/images/`
@@ -426,6 +448,7 @@ When creating wiki content, reference these sources of truth for accurate inform
   - **items.txt**: Complete list of all item entity names
   - **spells.txt**: Complete list of all spell names
   - **buffs.txt**: Complete list of all buff names
+  - **levelObjects.txt**: Complete list of all level object names
 - **Tools for working with entities**:
   - **`tools/py-tools/find_red_links.py`**: Uses entity lists to identify gaps in wiki coverage
   - **`tools/py-tools/wiki_potential_links_optimized.py`**: Cross-references entity names with wiki content to identify potential links
