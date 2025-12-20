@@ -165,6 +165,71 @@ def upscale_and_enhance_sprite(input_path, output_path, scale_factor=8, bg_color
     final_img.save(output_path)
 
 
+def convert_camel_case_to_snake_case(name):
+    """
+    Convert CamelCase name to snake_case.
+
+    Args:
+        name (str): The CamelCase name to convert
+
+    Returns:
+        str: The snake_case name
+    """
+    import re
+    # Handle special cases where there are multiple uppercase letters together
+    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
+    return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower()
+
+
+def get_entity_type_and_name(filename):
+    """
+    Extract entity type and name from the current filename format.
+
+    Args:
+        filename (str): The current filename (e.g., 'mob_Tengu.png')
+
+    Returns:
+        tuple: (entity_type, entity_name) or (None, None) if format doesn't match
+    """
+    import re
+    # Match patterns like: mob_Tengu.png, item_Ankh.png, spell_Heal.png, etc.
+    pattern = r'^(mob|item|spell|buff|hero|npc|level|config|mechanic|skill|talent|trap|script)_([^.]+)\.(.+)$'
+    match = re.match(pattern, filename)
+
+    if match:
+        entity_type = match.group(1)
+        entity_name = match.group(2)
+        extension = match.group(3)
+        return entity_type, entity_name, extension
+
+    return None, None, None
+
+
+def get_new_image_name(filename):
+    """
+    Generate the new image name based on the page naming convention.
+
+    Args:
+        filename (str): The current filename (e.g., 'mob_Tengu.png')
+
+    Returns:
+        str: The new filename (e.g., 'tengu_mob.png') or None if format doesn't match
+    """
+    entity_type, entity_name, extension = get_entity_type_and_name(filename)
+
+    if entity_type is None:
+        return filename  # Return original name if format doesn't match known patterns
+
+    # Convert the entity name from CamelCase to snake_case
+    snake_case_name = convert_camel_case_to_snake_case(entity_name)
+
+    # Create the new filename following the page naming convention
+    # For example: tengu_mob.png, ankh_item.png, heal_spell.png
+    new_name = f"{snake_case_name}_{entity_type}.{extension}"
+
+    return new_name
+
+
 def process_sprites_directory(input_dir, output_dir, scale_factor=8, canvas_extension=1, clip_to_content=True):
     """
     Process all sprites in the input directory and save enhanced versions to output directory.
@@ -186,9 +251,12 @@ def process_sprites_directory(input_dir, output_dir, scale_factor=8, canvas_exte
     for filename in os.listdir(input_dir):
         if filename.lower().endswith(supported_formats):
             input_path = os.path.join(input_dir, filename)
-            output_path = os.path.join(output_dir, filename)
 
-            print(f"Processing: {filename}")
+            # Generate new filename that matches page naming convention
+            new_filename = get_new_image_name(filename)
+            output_path = os.path.join(output_dir, new_filename)
+
+            print(f"Processing: {filename} -> {new_filename}")
             upscale_and_enhance_sprite(input_path, output_path, scale_factor, canvas_extension=canvas_extension, clip_to_content=clip_to_content)
             print(f"Saved: {output_path}")
 
