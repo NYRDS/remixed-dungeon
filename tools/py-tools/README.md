@@ -17,7 +17,10 @@ This directory contains Python scripts that are useful for maintaining and devel
 - `extract_all_item_sprites.py` - Extracts items from multiple specialized sheets
 - `extract_custom_item_sprites.py` - Extracts items with special configurations
 - `extract_mob_sprites.py` - Extracts mob sprites with 8x scaling
+- `scale_sprites_for_wiki.py` - Enhances sprites with scaling, background, and frame for better wiki visualization (processed sprites are available in the wiki-data submodule)
+- `rename_images_for_wiki.py` - Renames processed wiki images to match the page naming convention (snake_case with entity type suffixes)
 - `check_unused_images.py` - Checks for unused image assets
+- `check_page_image_naming.py` - Checks if properly named wiki pages have properly named images
 
 ### File Management and Validation
 - `categorize_unused.py` - Categorizes unused files
@@ -30,3 +33,8 @@ This directory contains Python scripts that are useful for maintaining and devel
 ## Usage Notes
 
 Most of these scripts were originally located in the root directory and have been organized here for better project structure. They are referenced in the wiki documentation and serve specific purposes in maintaining the Remixed Dungeon project.
+
+### Image Naming Convention Update
+The `scale_sprites_for_wiki.py` script has been updated to generate images with names that match the page naming convention. This ensures that image names follow the snake_case format with entity type suffixes (e.g., tengu_mob.png, ankh_item.png, heal_spell.png) to match corresponding wiki page names (e.g., tengu_mob.txt, ankh_item.txt, heal_spell.txt).
+
+The `rename_images_for_wiki.py` script can be used to rename existing images to match the new naming convention.

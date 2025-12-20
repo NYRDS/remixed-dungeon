@@ -207,7 +207,7 @@ When entities share the same name across different types (like the Lich boss and
 ## Image Standards
 
 ### Adding Mob/Character Sprites
-- To add a mob sprite to a wiki page, use the centered format with original size: `{{ rpd:images:mob_[MobName].png|Alt Text }}`
+- To add a mob sprite to a wiki page, use the centered format with original size: `{{ rpd:images:[mob_name].png|Alt Text }}`
 - Enhanced sprites for wiki use are pre-generated using `tools/py-tools/scale_sprites_for_wiki.py` which scales and frames raw game sprites with nearest-neighbor filtering
 - The processed sprites are available in the `wiki-data/media/rpd/images/` directory and ready to use in wiki pages
 - Enhanced images follow the same naming convention as input sprites with additional processing (scaling, background, and frame applied)
@@ -215,7 +215,7 @@ When entities share the same name across different types (like the Lich boss and
 - For original image size (no scaling), omit the size parameter entirely
 
 ### Image Naming Scheme and Processing Pipeline
-The `scale_sprites_for_wiki.py` script follows a specific naming scheme when processing game sprites:
+The `scale_sprites_for_wiki.py` script follows a specific naming scheme when processing game sprites to align with the page naming convention:
 
 #### Input Sprite Naming Convention
 The raw sprites in the input directory (`sprites/`) follow these naming patterns:
@@ -231,14 +231,16 @@ The raw sprites in the input directory (`sprites/`) follow these naming patterns
 - Processed sprites are stored in the `wiki-data/media/rpd/images/` directory in the wiki-data submodule
 
 #### Wiki Integration Naming
-For wiki page integration, the sprites are referenced with specific patterns:
-- For most entities: `{{ rpd:images:mob_[MobName].png|Alt Text }}` (e.g., `{{ rpd:images:mob_Tengu.png|Tengu }}`)
-- For items: `{{ rpd:images:item_[ItemName].png|Alt Text }}` (e.g., `{{ rpd:images:item_Ankh.png|Ankh }}`)
-- For spells: `{{ rpd:images:spell_[SpellName].png|Alt Text }}` (e.g., `{{ rpd:images:spell_Heal.png|Heal Spell }}`)
-- For buffs: `{{ rpd:images:buff_[BuffName].png|Alt Text }}` (e.g., `{{ rpd:images:buff_Burning.png|Burning }}`)
-- For heroes: `{{ rpd:images:hero_[ClassName]_[Subclass].png|Alt Text }}` (e.g., `{{ rpd:images:hero_WARRIOR_GLADIATOR.png|Warrior Gladiator }}`)
+For wiki page integration, the sprites follow the same naming convention as page names using snake_case:
+- For most entities: `{{ rpd:images:[entity_name]_mob.png|Alt Text }}` (e.g., `{{ rpd:images:tengu_mob.png|Tengu }}`)
+- For items: `{{ rpd:images:[item_name]_item.png|Alt Text }}` (e.g., `{{ rpd:images:ankh_item.png|Ankh }}`)
+- For spells: `{{ rpd:images:[spell_name]_spell.png|Alt Text }}` (e.g., `{{ rpd:images:heal_spell.png|Heal Spell }}`)
+- For buffs: `{{ rpd:images:[buff_name]_buff.png|Alt Text }}` (e.g., `{{ rpd:images:burning_buff.png|Burning }}`)
+- For heroes: `{{ rpd:images:[hero_name]_hero.png|Alt Text }}` (e.g., `{{ rpd:images:warrior_gladiator_hero.png|Warrior Gladiator }}`)
+- For NPCs: `{{ rpd:images:[npc_name]_npc.png|Alt Text }}` (e.g., `{{ rpd:images:shopkeeper_npc.png|Shopkeeper }}`)
+- For levels: `{{ rpd:images:[level_name]_level.png|Alt Text }}` (e.g., `{{ rpd:images:sewers_level.png|Sewers Level }}`)
 
-The processed sprites maintain the exact same filename as input sprites with additional processing (scaling, background, and frame).
+The processed sprites are automatically renamed to match the page naming scheme during processing (e.g., `mob_Tengu.png` becomes `tengu_mob.png`).
 
 #### Special Processing Parameters
 - **Scaling**: Images are scaled up by a factor of 8 (default) using nearest neighbor interpolation to maintain pixel art quality
@@ -257,6 +259,7 @@ The processed sprites maintain the exact same filename as input sprites with add
 - Store all new images in the appropriate subdirectory within `wiki-data/media/rpd/images/`
 - Maintain consistent image sizing across similar page types
 - For non-sprite images, use descriptive filenames in snake_case format
+- Align image names with corresponding page names using the same entity type suffixes (_mob, _item, _spell, _buff, _npc, _hero, etc.)
 
 ## DokuWiki Syntax Guide
 
@@ -588,7 +591,7 @@ Spell documentation in the wiki follows the same general structure as other enti
 
 #### Standard Spell Page Sections
 - **Title**: Using the `_spell` suffix (e.g., `healing_spell.txt`, `ignite_spell.txt`)
-- **Image**: Spell icon at the top of the page using `{{ rpd:images:spell_name_icon.png|Spell Name Icon }}`
+- **Image**: Spell icon at the top of the page using `{{ rpd:images:spell_name_spell.png|Spell Name Icon }}`
 - **Description**: Detailed explanation of the spell's effect based on source code analysis
 - **Stats**: Magic affinity, targeting type, level, mana cost, and special effects
 - **Usage**: Specific applications of the spell in gameplay
@@ -671,6 +674,7 @@ The Remixed Dungeon game uses a sprite sheet system for managing item images:
   - Extends canvas by 1 transparent pixel in each direction before scaling (to prevent edge artifacts)
   - Adds a background and frame for better visualization
   - Preserves transparency
+  - Automatically renames sprites to match the page naming convention (e.g., `mob_Tengu.png` becomes `tengu_mob.png`)
   - Processes all supported image formats in the input directory
   - Usage: `python3 tools/py-tools/scale_sprites_for_wiki.py -i sprites/ -o wiki-data/media/rpd/images/`
   - Additional options:
@@ -687,8 +691,8 @@ The Remixed Dungeon game uses a sprite sheet system for managing item images:
 - Preserve transparency to maintain visual fidelity of game sprites
 
 #### Naming Convention
-- Enhanced sprites follow the format: `{itemname}_sprite.png`
-- In wiki pages, use: `{{ rpd:images:ITEMNAME_sprite.png|Alt Text }}`
+- Enhanced sprites follow the format: `{entity_name}_{entity_type}.png` (e.g., `tengu_mob.png`, `ankh_item.png`, `heal_spell.png`)
+- In wiki pages, use: `{{ rpd:images:entity_name_entity_type.png|Alt Text }}` (matching the page naming scheme)
 - For centering in DokuWiki: `{{ rpd:images:image.png|Alt Text }}` (with spaces)
 
 ### Custom Sprite Configurations
