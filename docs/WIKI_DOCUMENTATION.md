@@ -1001,7 +1001,24 @@ The project includes additional scripts to help maintain and improve wiki qualit
 - **Benefit**: Finds potential redirects between pages with similar naming (e.g., `lich_mob` and `lich`)
 - **Output**: Lists explicit redirects, duplicate content, and potential redirects, saved to `wiki_redirects_report.txt`
 
-### 4. Wiki Page Rename Tool (`wiki_page_rename.py`)
+### 4. Automatic Redirect Page Fixer (`fix_wiki_redirects.py`)
+- **Location**: `tools/py-tools/fix_wiki_redirects.py`
+- **Purpose**: Detects redirect pages (e.g., warrior -> warrior_class), automatically fixes links in all wiki pages, and deletes the redirect pages
+- **Usage**:
+  - Dry run: `python3 tools/py-tools/fix_wiki_redirects.py --dry-run`
+  - Apply changes: `python3 tools/py-tools/fix_wiki_redirects.py`
+  - With custom wiki directory: `python3 tools/py-tools/fix_wiki_redirects.py --wiki-dir /path/to/wiki`
+- **Benefit**: Automatically resolves redirect patterns by updating links and removing redirect pages
+- **Features**:
+  - Updates links in the format `[[namespace:old_name|Display Text]]` to `[[namespace:new_name|Display Text]]`
+  - Updates links in the format `[[old_name|Display Text]]` to `[[new_name|Display Text]]`
+  - Preserves display text in links
+  - Handles multiple naming convention patterns (e.g., `warrior` → `warrior_class`, `shaman` → `shaman_mob`)
+  - Prevents duplicate processing of the same redirect
+  - Provides detailed output of changes made
+  - Supports dry-run mode to preview changes before making them
+
+### 5. Wiki Page Rename Tool (`wiki_page_rename.py`)
 - **Location**: `tools/py-tools/wiki_page_rename.py`
 - **Purpose**: Renames wiki pages and updates all internal links to the renamed page throughout the wiki
 - **Usage**:
@@ -1018,7 +1035,7 @@ The project includes additional scripts to help maintain and improve wiki qualit
   - Reports exactly which pages will be updated and how many links will be changed
 - **Safety**: Performs checks to ensure the old page exists and new page name doesn't conflict with existing pages
 
-### 5. Missing mr: Namespace Pages Detection (`list_missing_mr_pages.py`)
+### 6. Missing mr: Namespace Pages Detection (`list_missing_mr_pages.py`)
 - **Location**: `tools/py-tools/list_missing_mr_pages.py`
 - **Purpose**: Identifies which mr: namespace pages are missing based on the actual entity lists in the `entities/` directory
 - **Usage**: Run `python3 tools/py-tools/list_missing_mr_pages.py` from the project root
@@ -1030,7 +1047,7 @@ The project includes additional scripts to help maintain and improve wiki qualit
   - **Comprehensive listing**: Generates both categorized and flat lists of missing pages
   - **Future maintenance**: When mr: namespace pages are created, continues to track any additional missing pages as new entities are added to the game
 
-### 6. mr: Link Validation (`check_mr_links.py`)
+### 7. mr: Link Validation (`check_mr_links.py`)
 - **Location**: `tools/py-tools/check_mr_links.py`
 - **Purpose**: Verifies that all file references in mr namespace pages point to actual existing files in the codebase
 - **Usage**: Run `python3 tools/py-tools/check_mr_links.py` from the project root
