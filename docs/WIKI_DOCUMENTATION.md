@@ -1003,12 +1003,12 @@ The project includes additional scripts to help maintain and improve wiki qualit
 
 ### 4. Automatic Redirect Page Fixer (`fix_wiki_redirects.py`)
 - **Location**: `tools/py-tools/fix_wiki_redirects.py`
-- **Purpose**: Detects redirect pages (e.g., warrior -> warrior_class), automatically fixes links in all wiki pages, and deletes the redirect pages
+- **Purpose**: Detects redirect pages (e.g., warrior -> warrior_class), automatically fixes links in all wiki pages
 - **Usage**:
   - Dry run: `python3 tools/py-tools/fix_wiki_redirects.py --dry-run`
   - Apply changes: `python3 tools/py-tools/fix_wiki_redirects.py`
   - With custom wiki directory: `python3 tools/py-tools/fix_wiki_redirects.py --wiki-dir /path/to/wiki`
-- **Benefit**: Automatically resolves redirect patterns by updating links and removing redirect pages
+- **Benefit**: Automatically resolves redirect patterns by updating links to follow the wiki's naming conventions
 - **Features**:
   - Updates links in the format `[[namespace:old_name|Display Text]]` to `[[namespace:new_name|Display Text]]`
   - Updates links in the format `[[old_name|Display Text]]` to `[[new_name|Display Text]]`
@@ -1033,9 +1033,23 @@ The project includes additional scripts to help maintain and improve wiki qualit
   - Uses word boundaries to avoid partial matches in longer page names (e.g., won't change `boss_old_name` when renaming `old_name`)
   - Dry run mode to preview changes before making them
   - Reports exactly which pages will be updated and how many links will be changed
+
+### 6. Remove Redirect Pages (`remove_redirect_pages.py`)
+- **Location**: `tools/py-tools/remove_redirect_pages.py`
+- **Purpose**: Identifies and removes redirect pages after all links have been updated to follow the wiki's naming conventions
+- **Usage**:
+  - Dry run: `python3 tools/py-tools/remove_redirect_pages.py --dry-run`
+  - Apply changes: `python3 tools/py-tools/remove_redirect_pages.py`
+- **Benefit**: Cleans up the wiki by removing redundant redirect pages that have both base name and suffixed versions (e.g., removes `warrior.txt` when `warrior_class.txt` exists)
+- **Features**:
+  - Identifies pages that have both base name and suffixed versions (e.g., `warrior` and `warrior_class`)
+  - Checks if the base name page contains redirect indicators in its content
+  - Removes only the pages that are actual redirects, preserving pages that are not redirects
+  - Provides detailed output of which pages are marked for removal
+  - Supports dry-run mode to preview changes before making them
 - **Safety**: Performs checks to ensure the old page exists and new page name doesn't conflict with existing pages
 
-### 6. Missing mr: Namespace Pages Detection (`list_missing_mr_pages.py`)
+### 7. Missing mr: Namespace Pages Detection (`list_missing_mr_pages.py`)
 - **Location**: `tools/py-tools/list_missing_mr_pages.py`
 - **Purpose**: Identifies which mr: namespace pages are missing based on the actual entity lists in the `entities/` directory
 - **Usage**: Run `python3 tools/py-tools/list_missing_mr_pages.py` from the project root
@@ -1047,7 +1061,7 @@ The project includes additional scripts to help maintain and improve wiki qualit
   - **Comprehensive listing**: Generates both categorized and flat lists of missing pages
   - **Future maintenance**: When mr: namespace pages are created, continues to track any additional missing pages as new entities are added to the game
 
-### 7. mr: Link Validation (`check_mr_links.py`)
+### 8. mr: Link Validation (`check_mr_links.py`)
 - **Location**: `tools/py-tools/check_mr_links.py`
 - **Purpose**: Verifies that all file references in mr namespace pages point to actual existing files in the codebase
 - **Usage**: Run `python3 tools/py-tools/check_mr_links.py` from the project root
