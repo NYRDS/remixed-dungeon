@@ -7,14 +7,12 @@ import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.platform.game.QuickModTest;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.gfx.BitmapData;
-
 import com.nyrds.platform.gl.Texture;
 import com.nyrds.util.ModdingMode;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
-
 import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
@@ -43,7 +41,7 @@ import java.util.Set;
  * A utility class to generate sprite images for ALL mobs and items using the factory systems
  * This will attempt to generate sprites for all registered entities in the game
  */
-public class FactorySpriteGenerator extends QuickModTest {
+public class FactorySpriteGenerator extends RemixedDungeon {
 
     @Override
     public void create() {
@@ -126,7 +124,7 @@ public class FactorySpriteGenerator extends QuickModTest {
                             String fileName = "../../../../sprites/mob_" + mob.getEntityKind() + ".png";
                             // Save the sprite image to a file
                             bitmap.savePng(fileName);
-                            GLog.i("Saved mob sprite: %s", fileName);
+                            // GLog.i("Saved mob sprite: %s", fileName); // Silence successful save logging
                             successCount++;
                         } else {
                             GLog.w("Failed to extract BitmapData for mob: %s", mob.getEntityKind());
@@ -184,7 +182,7 @@ public class FactorySpriteGenerator extends QuickModTest {
                             result.copyRect(sourceBmp, frameX, frameY, SPRITE_SIZE, SPRITE_SIZE, 0, 0);
                             String fileName = "../../../../sprites/item_" + item.getEntityKind() + ".png";
                             result.savePng(fileName);
-                            GLog.i("Saved item sprite: %s", fileName);
+                            // GLog.i("Saved item sprite: %s", fileName); // Silence successful save logging
                             successCount++;
                         } else {
                             GLog.w("Failed to create result BitmapData for item: %s", item.getEntityKind());
@@ -344,7 +342,7 @@ public class FactorySpriteGenerator extends QuickModTest {
                         result.copyRect(sourceBmp, frameX, frameY, SPRITE_SIZE, SPRITE_SIZE, 0, 0);
                         String fileName = "../../../../sprites/spell_" + spellName + ".png";
                         result.savePng(fileName);
-                        GLog.i("Saved spell sprite: %s", fileName);
+                        // GLog.i("Saved spell sprite: %s", fileName); // Silence successful save logging
                         successCount++;
                     } else {
                         GLog.w("Failed to create result BitmapData for spell: %s", spellName);
@@ -391,7 +389,7 @@ public class FactorySpriteGenerator extends QuickModTest {
                             String fileName = "../../../../sprites/buff_" + buffName + ".png";
                             // Save the icon image to a file
                             bitmap.savePng(fileName);
-                            GLog.i("Saved buff large icon: %s", fileName);
+                            // GLog.i("Saved buff large icon: %s", fileName); // Silence successful save logging
                             successCount++;
                         } else {
                             GLog.w("Failed to extract BitmapData for buff large icon: %s", buffName);
@@ -409,7 +407,7 @@ public class FactorySpriteGenerator extends QuickModTest {
                         if (bitmap != null) {
                             String fileName = "../../../../sprites/buff_" + buffName + ".png";
                             bitmap.savePng(fileName);
-                            GLog.i("Saved buff icon (fallback) for: %s", fileName);
+                            // GLog.i("Saved buff icon (fallback) for: %s", fileName); // Silence successful save logging
                             successCount++;
                         }
                     }
@@ -429,54 +427,185 @@ public class FactorySpriteGenerator extends QuickModTest {
         int successCount = 0;
         int errorCount = 0;
 
-        // Use the new public factory method to get all level objects
-        List<com.nyrds.pixeldungeon.levels.objects.LevelObject> levelObjects =
-            com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.allLevelObjects();
+        // Create a minimal mock level to provide context for LevelObjects that need it
+        com.watabou.pixeldungeon.levels.Level mockLevel = createMockLevel();
 
-        for(com.nyrds.pixeldungeon.levels.objects.LevelObject levelObject : levelObjects) {
-            try {
-                // Get the image data directly from the level object properties
-                String textureFile = levelObject.getTextureFile();
-                int imageIndex = levelObject.image();
+        // Temporarily set the Dungeon level to our mock level for proper initialization
+        // This must be done BEFORE calling allLevelObjects() to ensure Lua scripts have a level context
+        com.watabou.pixeldungeon.Dungeon.level = mockLevel;
 
-                if (textureFile != null && imageIndex >= 0) {
-                    // Get the source bitmap from the texture file
-                    BitmapData sourceBmp = ModdingMode.getBitmapData(textureFile);
+        try {
+            // Use the new public factory method to get all level objects
+            List<com.nyrds.pixeldungeon.levels.objects.LevelObject> levelObjects =
+                com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.allLevelObjects();
 
-                    // Get the actual sprite dimensions from the level object
-                    int spriteWidth = levelObject.getSpriteXS();
-                    int spriteHeight = levelObject.getSpriteYS();
+            for(com.nyrds.pixeldungeon.levels.objects.LevelObject levelObject : levelObjects) {
+                try {
+                    String textureFile = null;
+                    int imageIndex = -1;
 
-                    // Calculate the position in the texture atlas based on the image index
-                    // Use the actual sprite width to determine columns
-                    int texWidth = sourceBmp.getWidth();
-                    int cols = texWidth / spriteWidth;
-
-                    int frameX = (imageIndex % cols) * spriteWidth;
-                    int frameY = (imageIndex / cols) * spriteHeight;
-
-                    // Create BitmapData for the specific frame using actual dimensions
-                    BitmapData result = BitmapData.createBitmap(spriteWidth, spriteHeight);
-                    if (result != null) {
-                        result.eraseColor(0x00000000); // Clear with transparent color before rendering
-                        result.copyRect(sourceBmp, frameX, frameY, spriteWidth, spriteHeight, 0, 0);
-                        String fileName = "../../../../sprites/levelObject_" + levelObject.getEntityKind() + ".png";
-                        result.savePng(fileName);
-                        GLog.i("Saved level object sprite: %s (size: %dx%d)", fileName, spriteWidth, spriteHeight);
-                        successCount++;
-                    } else {
-                        GLog.w("Failed to create result BitmapData for level object: %s", levelObject.getEntityKind());
+                    // Get the image data directly from the level object properties
+                    // Wrap these calls in try-catch to handle Lua script errors gracefully
+                    GLog.i("Attempting to get texture file for level object: %s", levelObject.getEntityKind());
+                    try {
+                        textureFile = levelObject.getTextureFile();
+                        GLog.i("Successfully got texture file for %s: %s", levelObject.getEntityKind(), textureFile);
+                    } catch (Exception e) {
+                        GLog.w("Error getting texture file for level object %s: %s", levelObject.getEntityKind(), e.getMessage());
                     }
-                } else {
-                    GLog.w("Level object has null texture file or negative image index: %s", levelObject.getEntityKind());
+
+                    GLog.i("Attempting to get image index for level object: %s", levelObject.getEntityKind());
+                    try {
+                        imageIndex = levelObject.image();
+                        GLog.i("Successfully got image index for %s: %d", levelObject.getEntityKind(), imageIndex);
+                    } catch (Exception e) {
+                        GLog.w("Error getting image index for level object %s: %s", levelObject.getEntityKind(), e.getMessage());
+                    }
+
+                    if (textureFile != null && imageIndex >= 0) {
+                        // Get the source bitmap from the texture file
+                        BitmapData sourceBmp = ModdingMode.getBitmapData(textureFile);
+
+                        if (sourceBmp != null) {
+                            // Get the actual sprite dimensions from the level object
+                            int spriteWidth = 0;
+                            int spriteHeight = 0;
+
+                            try {
+                                spriteWidth = levelObject.getSpriteXS();
+                                spriteHeight = levelObject.getSpriteYS();
+                                GLog.i("Successfully got sprite dimensions for %s: %dx%d", levelObject.getEntityKind(), spriteWidth, spriteHeight);
+                            } catch (Exception e) {
+                                GLog.w("Error getting sprite dimensions for level object %s: %s", levelObject.getEntityKind(), e.getMessage());
+                                // Use default sprite size if we can't get the dimensions
+                                spriteWidth = 16;
+                                spriteHeight = 16;
+                            }
+
+                            // Calculate the position in the texture atlas based on the image index
+                            // Use the actual sprite width to determine columns
+                            int texWidth = sourceBmp.getWidth();
+                            if (texWidth > 0 && spriteWidth > 0) { // Avoid division by zero
+                                int cols = texWidth / spriteWidth;
+
+                                int frameX = (imageIndex % cols) * spriteWidth;
+                                int frameY = (imageIndex / cols) * spriteHeight;
+
+                                // Create BitmapData for the specific frame using actual dimensions
+                                BitmapData result = BitmapData.createBitmap(spriteWidth, spriteHeight);
+                                if (result != null) {
+                                    result.eraseColor(0x00000000); // Clear with transparent color before rendering
+                                    result.copyRect(sourceBmp, frameX, frameY, spriteWidth, spriteHeight, 0, 0);
+                                    String fileName = "../../../../sprites/levelObject_" + levelObject.getEntityKind() + ".png";
+                                    result.savePng(fileName);
+                                    // GLog.i("Saved level object sprite: %s (size: %dx%d)", fileName, spriteWidth, spriteHeight); // Silence successful save logging
+                                    successCount++;
+                                } else {
+                                    GLog.w("Failed to create result BitmapData for level object: %s", levelObject.getEntityKind());
+                                }
+                            } else {
+                                GLog.w("Invalid texture width (%d) or sprite width (%d) for level object: %s", texWidth, spriteWidth, levelObject.getEntityKind());
+                            }
+                        } else {
+                            GLog.w("Failed to get source bitmap for level object: %s (texture file: %s)", levelObject.getEntityKind(), textureFile);
+                        }
+                    } else {
+                        GLog.w("Level object has null texture file or negative image index: %s (textureFile: %s, imageIndex: %d)",
+                               levelObject.getEntityKind(), textureFile, imageIndex);
+                    }
+                } catch (Exception e) {
+                    GLog.w("Error creating or saving level object sprite for %s: %s", levelObject.getEntityKind(), e.getMessage());
+                    e.printStackTrace(); // Add stack trace to see exact error
+                    errorCount++;
                 }
-            } catch (Exception e) {
-                GLog.w("Error creating or saving level object sprite for %s: %s", levelObject.getEntityKind(), e.getMessage());
-                errorCount++;
             }
+        } finally {
+            // Always reset the Dungeon level to null after generation
+            com.watabou.pixeldungeon.Dungeon.level = null;
         }
 
         GLog.i("Level object sprite generation completed. Success: %d, Errors: %d", successCount, errorCount);
+    }
+
+    // Helper method to create a minimal mock level for LevelObject initialization
+    private com.watabou.pixeldungeon.levels.Level createMockLevel() {
+        // Create a minimal level implementation to satisfy LevelObject requirements
+        // This creates a level with minimal data needed for sprite generation
+        com.watabou.pixeldungeon.levels.Room mockRoom = new com.watabou.pixeldungeon.levels.Room();
+        mockRoom.set(0, 0, 10, 10); // Set a basic room area
+
+        com.watabou.pixeldungeon.levels.Level mockLevel = new com.watabou.pixeldungeon.levels.CavesLevel();
+
+        // Initialize essential level fields
+        try {
+            // Use reflection to set required fields
+            java.lang.reflect.Field roomField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("rooms");
+            roomField.setAccessible(true);
+            java.util.ArrayList<com.watabou.pixeldungeon.levels.Room> rooms = new java.util.ArrayList<>();
+            rooms.add(mockRoom);
+            roomField.set(mockLevel, rooms);
+
+            // Set other essential fields
+            java.lang.reflect.Field widthField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("width");
+            widthField.setAccessible(true);
+            widthField.set(mockLevel, 10);
+
+            java.lang.reflect.Field heightField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("height");
+            heightField.setAccessible(true);
+            heightField.set(mockLevel, 10);
+
+            // Set level dimensions
+            java.lang.reflect.Field lengthField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("length");
+            lengthField.setAccessible(true);
+            lengthField.set(mockLevel, 10 * 10); // width * height
+
+            // Initialize other needed fields
+            java.lang.reflect.Field mapField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("map");
+            mapField.setAccessible(true);
+            byte[] map = new byte[10 * 10];
+            java.util.Arrays.fill(map, (byte) com.watabou.pixeldungeon.levels.Terrain.WALL);
+            mapField.set(mockLevel, map);
+
+            java.lang.reflect.Field passableField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("passable");
+            passableField.setAccessible(true);
+            boolean[] passable = new boolean[10 * 10];
+            java.util.Arrays.fill(passable, false);
+            passableField.set(mockLevel, passable);
+
+            java.lang.reflect.Field visibleField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("visible");
+            visibleField.setAccessible(true);
+            boolean[] visible = new boolean[10 * 10];
+            java.util.Arrays.fill(visible, true);
+            visibleField.set(mockLevel, visible);
+
+            java.lang.reflect.Field heroFOVField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("heroFOV");
+            heroFOVField.setAccessible(true);
+            boolean[] heroFOV = new boolean[10 * 10];
+            java.util.Arrays.fill(heroFOV, true);
+            heroFOVField.set(mockLevel, heroFOV);
+
+            // Set mobs, heaps, and other collections
+            java.lang.reflect.Field mobsField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("mobs");
+            mobsField.setAccessible(true);
+            mobsField.set(mockLevel, new java.util.ArrayList<>());
+
+            java.lang.reflect.Field heapsField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("heaps");
+            heapsField.setAccessible(true);
+            heapsField.set(mockLevel, new java.util.ArrayList<>());
+
+            java.lang.reflect.Field blobsField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("blobs");
+            blobsField.setAccessible(true);
+            blobsField.set(mockLevel, new java.util.HashMap<>());
+
+            java.lang.reflect.Field levelIdField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("levelId");
+            levelIdField.setAccessible(true);
+            levelIdField.set(mockLevel, 0);
+
+        } catch (Exception e) {
+            GLog.w("Error setting mock level fields: %s", e.getMessage());
+        }
+
+        return mockLevel;
     }
 
     private void generateAllHeroSprites() {
@@ -642,7 +771,7 @@ public class FactorySpriteGenerator extends QuickModTest {
                             String fileName = "../../../../sprites/hero_" + heroClass.name() + ".png";
                             // Save the sprite image to a file
                             bitmap.savePng(fileName);
-                            GLog.i("Saved hero class sprite: %s", fileName);
+                            // GLog.i("Saved hero class sprite: %s", fileName); // Silence successful save logging
                             successCount++;
                         } else {
                             GLog.w("Failed to extract BitmapData for hero class: %s", heroClass.name());
@@ -1112,7 +1241,7 @@ public class FactorySpriteGenerator extends QuickModTest {
                                     String fileName = "../../../../sprites/hero_" + heroClass.name() + "_" + heroSubClass.name() + ".png";
                                     // Save the sprite image to a file
                                     bitmap.savePng(fileName);
-                                    GLog.i("Saved hero class+subclass sprite: %s", fileName);
+                                    // GLog.i("Saved hero class+subclass sprite: %s", fileName); // Silence successful save logging
                                     successCount++;
                                 } else {
                                     GLog.w("Failed to extract BitmapData for hero class+subclass: %s+%s", heroClass.name(), heroSubClass.name());
@@ -1208,13 +1337,21 @@ public class FactorySpriteGenerator extends QuickModTest {
                 com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.allLevelObjects();
             Set<String> uniqueLevelObjectNames = new java.util.HashSet<>();
             for (com.nyrds.pixeldungeon.levels.objects.LevelObject levelObject : levelObjects) {
-                uniqueLevelObjectNames.add(levelObject.getEntityKind());
+                String entityKind = levelObject.getEntityKind();
+                // Only add non-null and non-empty entity kinds
+                if (entityKind != null && !entityKind.isEmpty()) {
+                    uniqueLevelObjectNames.add(entityKind);
+                } else {
+                    GLog.w("Found level object with null or empty entity kind: %s", levelObject.getClass().getSimpleName());
+                }
             }
             List<String> levelObjectNames = new java.util.ArrayList<>(uniqueLevelObjectNames);
             java.util.Collections.sort(levelObjectNames);
             writeEntityListToFile(levelObjectNames, "levelObjects.txt");
+            GLog.i("Successfully generated level object list with %d entries", levelObjectNames.size());
         } catch (Exception e) {
             GLog.w("Error generating level object list: %s", e.getMessage());
+            e.printStackTrace(); // Add stack trace to help debug the issue
         }
 
         GLog.i("Entity list generation completed.");

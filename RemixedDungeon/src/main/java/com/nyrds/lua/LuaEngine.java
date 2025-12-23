@@ -169,7 +169,15 @@ public class LuaEngine implements ResourceFinder {
 
 	@Override
 	public InputStream findResource(String filename) {
-		return new BOMInputStream(ModdingMode.getInputStream(filename));
+		GLog.i("LuaEngine: Attempting to find resource: %s", filename);
+		InputStream result = null;
+		try {
+			result = ModdingMode.getInputStream(filename);
+            GLog.i("LuaEngine: Successfully found resource: %s", filename);
+        } catch (Exception e) {
+			GLog.w("LuaEngine: Exception while finding resource %s: %s", filename, e.getMessage());
+		}
+		return new BOMInputStream(result);
 	}
 
 	static public void forEach(@NotNull LuaValue arg, LuaEntryAction action) {

@@ -4,7 +4,9 @@ import com.nyrds.LuaInterface;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModError;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
+import com.watabou.pixeldungeon.levels.DeadEndLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Dreamweed;
 import com.watabou.pixeldungeon.plants.Earthroot;
@@ -19,6 +21,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.FilenameFilter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -149,28 +152,31 @@ public class LevelObjectsFactory {
 
 		// Add instances for all possible JSON-defined objects from levelObjects directory
 		// This includes both Deco and CustomObject configurations
+		Level level = new DeadEndLevel();
+		level.create();
 		try {
 			// List all files in the levelObjects directory
-			java.io.FilenameFilter jsonFilter = (dir, name) -> name.toLowerCase().endsWith(".json");
-			java.util.List<String> levelObjectFiles = com.nyrds.util.ModdingMode.listResources("levelObjects", jsonFilter);
+			FilenameFilter jsonFilter = (dir, name) -> name.toLowerCase().endsWith(".json");
+			List<String> levelObjectFiles = ModdingMode.listResources("levelObjects", jsonFilter);
 
 			for (String fileName : levelObjectFiles) {
 				// Remove the .json extension to get the object name
 				String objectName = fileName.substring(0, fileName.lastIndexOf('.'));
 
 				// Read the JSON file to determine the object type
-				JSONObject objectDef = com.nyrds.util.JsonHelper.readJsonFromAsset("levelObjects/" + fileName);
+				JSONObject objectDef = JsonHelper.readJsonFromAsset("levelObjects/" + fileName);
 				String kind = objectDef.optString("kind", "Deco"); // Default to Deco if kind is not specified
 
 				// Create an instance based on the kind specified in the JSON
 				LevelObject levelObject;
 				if ("CustomObject".equals(kind)) {
 					// Create a CustomObject and configure it
-					CustomObject customObj = (CustomObject) objectByName("CustomObject");
+					CustomObject customObj = new CustomObject();
+					customObj.setPos(level.cell(2, 2)); // Set a default position
 					customObj.objectDesc = objectName;
 					// Try to set up the object from its JSON definition to properly initialize it
 					try {
-						customObj.setupFromJson(null, objectDef);
+						customObj.setupFromJson(level, objectDef);
 					} catch (Exception e) {
 						// If setup fails, still add the object but log the error
 					}
@@ -181,7 +187,7 @@ public class LevelObjectsFactory {
 					deco.objectDesc = objectName;
 					// Try to set up the object from its JSON definition to properly initialize it
 					try {
-						deco.setupFromJson(null, objectDef);
+						deco.setupFromJson(level, objectDef);
 					} catch (Exception e) {
 						// If setup fails, still add the object but log the error
 					}

@@ -167,18 +167,33 @@ def upscale_and_enhance_sprite(input_path, output_path, scale_factor=8, bg_color
 
 def convert_camel_case_to_snake_case(name):
     """
-    Convert CamelCase name to snake_case.
+    Convert CamelCase or ALLCAPS name to snake_case.
 
     Args:
-        name (str): The CamelCase name to convert
+        name (str): The CamelCase or ALLCAPS name to convert
 
     Returns:
         str: The snake_case name
     """
     import re
+
+    # If the name is already in snake_case format (contains underscores), just return lowercase
+    if '_' in name:
+        return name.lower()
+
+    # Check if the entire name is in ALLCAPS (with no lowercase letters)
+    if name.isupper():
+        return name.lower()
+
+    # Handle CamelCase patterns
     # Handle special cases where there are multiple uppercase letters together
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
-    return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower()
+    s2 = re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1)
+
+    # Handle consecutive uppercase letters followed by lowercase (e.g., "HTMLParser" -> "HTML_Parser")
+    s3 = re.sub('([A-Z]+)([A-Z][a-z])', r'\1_\2', s2)
+
+    return s3.lower()
 
 
 def get_entity_type_and_name(filename):
