@@ -152,6 +152,45 @@ public class LevelObjectsFactory {
             objects.add(objectByName(objectClass));
         }
 
+        // Add all trap variants
+        String[] trapKinds = {
+            FIRE_TRAP, TOXIC_TRAP, PARALYTIC_TRAP, POISON_TRAP,
+            ALARM_TRAP, LIGHTNING_TRAP, GRIPPING_TRAP, SUMMONING_TRAP
+        };
+
+        for (String trapKind : trapKinds) {
+            Trap trap = (Trap) objectByName("Trap");
+            trap.kind = trapKind;
+            trap.setPos(levelContext.cell(1, 1)); // Set a default position
+            trap.uses = 1;
+            trap.targetCell = trap.getPos();
+            trap.activatedByItem = true;
+            trap.activatedByMob = true;
+            objects.add(trap);
+        }
+
+        // Add script traps
+        try {
+            FilenameFilter luaFilter = (dir, name) -> name.toLowerCase().endsWith(".lua");
+            List<String> scriptTrapFiles = ModdingMode.listResources("scripts/traps", luaFilter);
+
+            for (String fileName : scriptTrapFiles) {
+                String scriptName = fileName.substring(0, fileName.lastIndexOf('.'));
+
+                Trap scriptTrap = (Trap) objectByName("Trap");
+                scriptTrap.kind = "scriptFile";
+                scriptTrap.script = "traps/" + scriptName; // Path to the Lua script
+                scriptTrap.setPos(levelContext.cell(1, 2)); // Set a default position
+                scriptTrap.uses = 1;
+                scriptTrap.targetCell = scriptTrap.getPos();
+                scriptTrap.activatedByItem = true;
+                scriptTrap.activatedByMob = true;
+                objects.add(scriptTrap);
+            }
+        } catch (Exception e) {
+            EventCollector.logException(e);
+        }
+
         try {
             FilenameFilter jsonFilter = (dir, name) -> name.toLowerCase().endsWith(".json");
             List<String> levelObjectFiles = ModdingMode.listResources("levelObjects", jsonFilter);

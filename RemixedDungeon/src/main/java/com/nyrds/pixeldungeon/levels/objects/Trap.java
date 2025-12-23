@@ -255,6 +255,10 @@ public class Trap extends LevelObject {
 
 	@Override
 	public String getEntityKind() {
+		// For script traps, return the script name as the entity kind to distinguish different script traps
+		if ("scriptFile".equals(kind) && script != null) {
+			return script.replace("/", "_"); // Replace path separator with underscore for safe filenames
+		}
 		return kind;
 	}
 
