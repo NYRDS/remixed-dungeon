@@ -3,10 +3,15 @@ package com.nyrds.pixeldungeon.desktop;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+
+import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
@@ -16,6 +21,7 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.CompositeTextureImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -23,19 +29,34 @@ import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
+
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
+import com.watabou.pixeldungeon.items.armor.ElfArmor;
+import com.watabou.pixeldungeon.items.armor.GnollArmor;
+import com.watabou.pixeldungeon.items.armor.HuntressArmor;
+import com.watabou.pixeldungeon.items.armor.MageArmor;
+import com.watabou.pixeldungeon.items.armor.RogueArmor;
+import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.levels.DeadEndLevel;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
+import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
+
 
 /**
  * A utility class to generate sprite images for ALL mobs and items using the factory systems
@@ -43,6 +64,7 @@ import java.util.Set;
  */
 public class FactorySpriteGenerator extends RemixedDungeon {
 
+    Level level;
     @Override
     public void create() {
         super.create();
@@ -68,7 +90,10 @@ public class FactorySpriteGenerator extends RemixedDungeon {
         } catch (Exception e) {
             GLog.w("Error initializing static handlers: %s", e.getMessage());
         }
-
+    
+        level = new DeadEndLevel();
+        level.create();
+        
         // Set texture to preserve bitmap data during sprite generation so we can extract actual sprite data
         SmartTexture.setAutoDisposeBitmapData(false);
 
@@ -272,26 +297,20 @@ public class FactorySpriteGenerator extends RemixedDungeon {
         // Copy the base texture
         result.copyRect(baseBitmap, x, y, width, height, 0, 0);
 
-        // Now composite each additional layer on top
-        // This requires reflection to access the private mLayers field in CompositeTextureImage
-        try {
-            java.lang.reflect.Field layersField = CompositeTextureImage.class.getDeclaredField("mLayers");
-            layersField.setAccessible(true);
-            ArrayList<Texture> layers =
-                (ArrayList<Texture>) layersField.get(image);
+       try {
+            ArrayList<Texture> layers = image.getLayers();
+            
+            for (int i = 0; i < layers.size(); i++) {
+                Texture layer = layers.get(i);
+                SmartTexture layerSmartTexture = (SmartTexture) layer;
+                BitmapData layerBitmap = layerSmartTexture.getBitmapData();
 
-            if (layers != null) {
-                for (int i = 0; i < layers.size(); i++) {
-                    Texture layer = layers.get(i);
-                    SmartTexture layerSmartTexture = (SmartTexture) layer;
-                    BitmapData layerBitmap = layerSmartTexture.getBitmapData();
-
-                    if (layerBitmap != null) {
-                        // Copy this layer onto the result bitmap
-                        result.copyRect(layerBitmap, x, y, width, height, 0, 0);
-                    }
+                if (layerBitmap != null) {
+                    // Copy this layer onto the result bitmap
+                    result.copyRect(layerBitmap, x, y, width, height, 0, 0);
                 }
             }
+            
         } catch (Exception e) {
             GLog.w("Error extracting layers from CompositeTextureImage: %s", e.getMessage());
             // If reflection fails, just return the base bitmap
@@ -379,7 +398,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                     TextureFilm film = TextureCache.getFilm(icons, 16, 16);
                     int index = buff.icon();
 
-                    if (index != com.watabou.pixeldungeon.ui.BuffIndicator.NONE) {
+                    if (index != BuffIndicator.NONE) {
                         Image icon = new Image(icons);
                         icon.frame(film.get(index));
 
@@ -427,19 +446,14 @@ public class FactorySpriteGenerator extends RemixedDungeon {
         int successCount = 0;
         int errorCount = 0;
 
-        // Create a minimal mock level to provide context for LevelObjects that need it
-        com.watabou.pixeldungeon.levels.Level mockLevel = createMockLevel();
-
-        // Temporarily set the Dungeon level to our mock level for proper initialization
-        // This must be done BEFORE calling allLevelObjects() to ensure Lua scripts have a level context
-        com.watabou.pixeldungeon.Dungeon.level = mockLevel;
+        Dungeon.level = level;
 
         try {
-            // Use the new public factory method to get all level objects
-            List<com.nyrds.pixeldungeon.levels.objects.LevelObject> levelObjects =
-                com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.allLevelObjects();
+            // Use the new public factory method to get all level objects with the mock level context
+            List<LevelObject> levelObjects =
+                LevelObjectsFactory.allLevelObjects(level);
 
-            for(com.nyrds.pixeldungeon.levels.objects.LevelObject levelObject : levelObjects) {
+            for(LevelObject levelObject : levelObjects) {
                 try {
                     String textureFile = null;
                     int imageIndex = -1;
@@ -466,48 +480,44 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                         // Get the source bitmap from the texture file
                         BitmapData sourceBmp = ModdingMode.getBitmapData(textureFile);
 
-                        if (sourceBmp != null) {
-                            // Get the actual sprite dimensions from the level object
-                            int spriteWidth = 0;
-                            int spriteHeight = 0;
+                        // Get the actual sprite dimensions from the level object
+                        int spriteWidth;
+                        int spriteHeight;
 
-                            try {
-                                spriteWidth = levelObject.getSpriteXS();
-                                spriteHeight = levelObject.getSpriteYS();
-                                GLog.i("Successfully got sprite dimensions for %s: %dx%d", levelObject.getEntityKind(), spriteWidth, spriteHeight);
-                            } catch (Exception e) {
-                                GLog.w("Error getting sprite dimensions for level object %s: %s", levelObject.getEntityKind(), e.getMessage());
-                                // Use default sprite size if we can't get the dimensions
-                                spriteWidth = 16;
-                                spriteHeight = 16;
-                            }
+                        try {
+                            spriteWidth = levelObject.getSpriteXS();
+                            spriteHeight = levelObject.getSpriteYS();
+                            GLog.i("Successfully got sprite dimensions for %s: %dx%d", levelObject.getEntityKind(), spriteWidth, spriteHeight);
+                        } catch (Exception e) {
+                            GLog.w("Error getting sprite dimensions for level object %s: %s", levelObject.getEntityKind(), e.getMessage());
+                            // Use default sprite size if we can't get the dimensions
+                            spriteWidth = 16;
+                            spriteHeight = 16;
+                        }
 
-                            // Calculate the position in the texture atlas based on the image index
-                            // Use the actual sprite width to determine columns
-                            int texWidth = sourceBmp.getWidth();
-                            if (texWidth > 0 && spriteWidth > 0) { // Avoid division by zero
-                                int cols = texWidth / spriteWidth;
+                        // Calculate the position in the texture atlas based on the image index
+                        // Use the actual sprite width to determine columns
+                        int texWidth = sourceBmp.getWidth();
+                        if (texWidth > 0 && spriteWidth > 0) { // Avoid division by zero
+                            int cols = texWidth / spriteWidth;
 
-                                int frameX = (imageIndex % cols) * spriteWidth;
-                                int frameY = (imageIndex / cols) * spriteHeight;
+                            int frameX = (imageIndex % cols) * spriteWidth;
+                            int frameY = (imageIndex / cols) * spriteHeight;
 
-                                // Create BitmapData for the specific frame using actual dimensions
-                                BitmapData result = BitmapData.createBitmap(spriteWidth, spriteHeight);
-                                if (result != null) {
-                                    result.eraseColor(0x00000000); // Clear with transparent color before rendering
-                                    result.copyRect(sourceBmp, frameX, frameY, spriteWidth, spriteHeight, 0, 0);
-                                    String fileName = "../../../../sprites/levelObject_" + levelObject.getEntityKind() + ".png";
-                                    result.savePng(fileName);
-                                    // GLog.i("Saved level object sprite: %s (size: %dx%d)", fileName, spriteWidth, spriteHeight); // Silence successful save logging
-                                    successCount++;
-                                } else {
-                                    GLog.w("Failed to create result BitmapData for level object: %s", levelObject.getEntityKind());
-                                }
+                            // Create BitmapData for the specific frame using actual dimensions
+                            BitmapData result = BitmapData.createBitmap(spriteWidth, spriteHeight);
+                            if (result != null) {
+                                result.eraseColor(0x00000000); // Clear with transparent color before rendering
+                                result.copyRect(sourceBmp, frameX, frameY, spriteWidth, spriteHeight, 0, 0);
+                                String fileName = "../../../../sprites/levelObject_" + levelObject.getEntityKind() + ".png";
+                                result.savePng(fileName);
+                                // GLog.i("Saved level object sprite: %s (size: %dx%d)", fileName, spriteWidth, spriteHeight); // Silence successful save logging
+                                successCount++;
                             } else {
-                                GLog.w("Invalid texture width (%d) or sprite width (%d) for level object: %s", texWidth, spriteWidth, levelObject.getEntityKind());
+                                GLog.w("Failed to create result BitmapData for level object: %s", levelObject.getEntityKind());
                             }
                         } else {
-                            GLog.w("Failed to get source bitmap for level object: %s (texture file: %s)", levelObject.getEntityKind(), textureFile);
+                            GLog.w("Invalid texture width (%d) or sprite width (%d) for level object: %s", texWidth, spriteWidth, levelObject.getEntityKind());
                         }
                     } else {
                         GLog.w("Level object has null texture file or negative image index: %s (textureFile: %s, imageIndex: %d)",
@@ -515,107 +525,26 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                     }
                 } catch (Exception e) {
                     GLog.w("Error creating or saving level object sprite for %s: %s", levelObject.getEntityKind(), e.getMessage());
-                    e.printStackTrace(); // Add stack trace to see exact error
+                    EventCollector.logException(e);
                     errorCount++;
                 }
             }
         } finally {
             // Always reset the Dungeon level to null after generation
-            com.watabou.pixeldungeon.Dungeon.level = null;
+            Dungeon.level = null;
         }
 
         GLog.i("Level object sprite generation completed. Success: %d, Errors: %d", successCount, errorCount);
     }
-
-    // Helper method to create a minimal mock level for LevelObject initialization
-    private com.watabou.pixeldungeon.levels.Level createMockLevel() {
-        // Create a minimal level implementation to satisfy LevelObject requirements
-        // This creates a level with minimal data needed for sprite generation
-        com.watabou.pixeldungeon.levels.Room mockRoom = new com.watabou.pixeldungeon.levels.Room();
-        mockRoom.set(0, 0, 10, 10); // Set a basic room area
-
-        com.watabou.pixeldungeon.levels.Level mockLevel = new com.watabou.pixeldungeon.levels.CavesLevel();
-
-        // Initialize essential level fields
-        try {
-            // Use reflection to set required fields
-            java.lang.reflect.Field roomField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("rooms");
-            roomField.setAccessible(true);
-            java.util.ArrayList<com.watabou.pixeldungeon.levels.Room> rooms = new java.util.ArrayList<>();
-            rooms.add(mockRoom);
-            roomField.set(mockLevel, rooms);
-
-            // Set other essential fields
-            java.lang.reflect.Field widthField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("width");
-            widthField.setAccessible(true);
-            widthField.set(mockLevel, 10);
-
-            java.lang.reflect.Field heightField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("height");
-            heightField.setAccessible(true);
-            heightField.set(mockLevel, 10);
-
-            // Set level dimensions
-            java.lang.reflect.Field lengthField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("length");
-            lengthField.setAccessible(true);
-            lengthField.set(mockLevel, 10 * 10); // width * height
-
-            // Initialize other needed fields
-            java.lang.reflect.Field mapField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("map");
-            mapField.setAccessible(true);
-            byte[] map = new byte[10 * 10];
-            java.util.Arrays.fill(map, (byte) com.watabou.pixeldungeon.levels.Terrain.WALL);
-            mapField.set(mockLevel, map);
-
-            java.lang.reflect.Field passableField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("passable");
-            passableField.setAccessible(true);
-            boolean[] passable = new boolean[10 * 10];
-            java.util.Arrays.fill(passable, false);
-            passableField.set(mockLevel, passable);
-
-            java.lang.reflect.Field visibleField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("visible");
-            visibleField.setAccessible(true);
-            boolean[] visible = new boolean[10 * 10];
-            java.util.Arrays.fill(visible, true);
-            visibleField.set(mockLevel, visible);
-
-            java.lang.reflect.Field heroFOVField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("heroFOV");
-            heroFOVField.setAccessible(true);
-            boolean[] heroFOV = new boolean[10 * 10];
-            java.util.Arrays.fill(heroFOV, true);
-            heroFOVField.set(mockLevel, heroFOV);
-
-            // Set mobs, heaps, and other collections
-            java.lang.reflect.Field mobsField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("mobs");
-            mobsField.setAccessible(true);
-            mobsField.set(mockLevel, new java.util.ArrayList<>());
-
-            java.lang.reflect.Field heapsField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("heaps");
-            heapsField.setAccessible(true);
-            heapsField.set(mockLevel, new java.util.ArrayList<>());
-
-            java.lang.reflect.Field blobsField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("blobs");
-            blobsField.setAccessible(true);
-            blobsField.set(mockLevel, new java.util.HashMap<>());
-
-            java.lang.reflect.Field levelIdField = com.watabou.pixeldungeon.levels.Level.class.getDeclaredField("levelId");
-            levelIdField.setAccessible(true);
-            levelIdField.set(mockLevel, 0);
-
-        } catch (Exception e) {
-            GLog.w("Error setting mock level fields: %s", e.getMessage());
-        }
-
-        return mockLevel;
-    }
-
+    
     private void generateAllHeroSprites() {
         GLog.i("Starting to generate sprites for all hero classes and subclasses...");
 
         // Initialize item validation by getting all valid items
-        java.util.Set<String> validItemNames = new java.util.HashSet<>();
+        Set<String> validItemNames = new HashSet<>();
         try {
-            java.util.List<com.watabou.pixeldungeon.items.Item> allItems = com.nyrds.pixeldungeon.items.common.ItemFactory.allItems();
-            for (com.watabou.pixeldungeon.items.Item item : allItems) {
+            List<Item> allItems = ItemFactory.allItems();
+            for (Item item : allItems) {
                 validItemNames.add(item.getEntityKind());
             }
         } catch (Exception e) {
@@ -638,25 +567,25 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                 ClassArmor classArmor = null;
                 switch (heroClass) {
                     case WARRIOR:
-                        classArmor = new com.watabou.pixeldungeon.items.armor.WarriorArmor();
+                        classArmor = new WarriorArmor();
                         break;
                     case MAGE:
-                        classArmor = new com.watabou.pixeldungeon.items.armor.MageArmor();
+                        classArmor = new MageArmor();
                         break;
                     case ROGUE:
-                        classArmor = new com.watabou.pixeldungeon.items.armor.RogueArmor();
+                        classArmor = new RogueArmor();
                         break;
                     case HUNTRESS:
-                        classArmor = new com.watabou.pixeldungeon.items.armor.HuntressArmor();
+                        classArmor = new HuntressArmor();
                         break;
                     case ELF:
-                        classArmor = new com.watabou.pixeldungeon.items.armor.ElfArmor();
+                        classArmor = new ElfArmor();
                         break;
                     case NECROMANCER:
-                        classArmor = new com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor();
+                        classArmor = new NecromancerArmor();
                         break;
                     case GNOLL:
-                        classArmor = new com.watabou.pixeldungeon.items.armor.GnollArmor();
+                        classArmor = new GnollArmor();
                         break;
                 }
 
@@ -677,66 +606,66 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                     case WARRIOR:
                         // Warriors get a basic sword
                         if (validItemNames.contains("ShortSword")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("ShortSword");
+                            basicItem = ItemFactory.itemByName("ShortSword");
                         } else if (validItemNames.contains("Dagger")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Dagger");
+                            basicItem = ItemFactory.itemByName("Dagger");
                         }
                         break;
                     case MAGE:
                         // Mages get a basic wand
                         if (validItemNames.contains("WandOfMagicMissile")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("WandOfMagicMissile");
+                            basicItem = ItemFactory.itemByName("WandOfMagicMissile");
                         } else if (validItemNames.contains("WandOfFirebolt")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("WandOfFirebolt");
+                            basicItem = ItemFactory.itemByName("WandOfFirebolt");
                         }
                         break;
                     case ROGUE:
                         // Rogues get a basic dagger
                         if (validItemNames.contains("Dagger")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Dagger");
+                            basicItem = ItemFactory.itemByName("Dagger");
                         } else if (validItemNames.contains("Shuriken")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Shuriken");
+                            basicItem = ItemFactory.itemByName("Shuriken");
                         }
                         break;
                     case HUNTRESS:
                         // Huntresses get a basic ranged weapon
                         if (validItemNames.contains("Dart")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Dart");
+                            basicItem = ItemFactory.itemByName("Dart");
                         } else if (validItemNames.contains("Shuriken")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Shuriken");
+                            basicItem = ItemFactory.itemByName("Shuriken");
                         }
                         break;
                     case ELF:
                         // Elves get a versatile weapon
                         if (validItemNames.contains("ElvenDagger")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("ElvenDagger");
+                            basicItem = ItemFactory.itemByName("ElvenDagger");
                         } else if (validItemNames.contains("Quarterstaff")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Quarterstaff");
+                            basicItem = ItemFactory.itemByName("Quarterstaff");
                         }
                         break;
                     case NECROMANCER:
                         // Necromancers get an appropriate weapon
                         if (validItemNames.contains("Knuckles")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Knuckles");
+                            basicItem = ItemFactory.itemByName("Knuckles");
                         } else if (validItemNames.contains("Mace")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Mace");
+                            basicItem = ItemFactory.itemByName("Mace");
                         }
                         break;
                     case GNOLL:
                         // Gnolls get an appropriate weapon
                         if (validItemNames.contains("ShortSword")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("ShortSword");
+                            basicItem = ItemFactory.itemByName("ShortSword");
                         } else if (validItemNames.contains("Dagger")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Dagger");
+                            basicItem = ItemFactory.itemByName("Dagger");
                         }
                         break;
                     case PRIEST:
                     case DOCTOR:
                         // Generic melee weapon for other classes
                         if (validItemNames.contains("Quarterstaff")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Quarterstaff");
+                            basicItem = ItemFactory.itemByName("Quarterstaff");
                         } else if (validItemNames.contains("Knuckles")) {
-                            basicItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("Knuckles");
+                            basicItem = ItemFactory.itemByName("Knuckles");
                         }
                         break;
                 }
@@ -824,7 +753,6 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                     case PRIEST:
                     case DOCTOR:
                         // These classes currently have no subclasses
-                        isValidCombination = false;
                         break;
                 }
 
@@ -847,43 +775,43 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                         switch (heroClass) {
                             case WARRIOR:
                                 if (heroSubClass == HeroSubClass.GLADIATOR || heroSubClass == HeroSubClass.BERSERKER) {
-                                    classArmor = new com.watabou.pixeldungeon.items.armor.WarriorArmor();
+                                    classArmor = new WarriorArmor();
                                     GLog.i("Equipping WarriorArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case MAGE:
                                 if (heroSubClass == HeroSubClass.BATTLEMAGE || heroSubClass == HeroSubClass.WARLOCK) {
-                                    classArmor = new com.watabou.pixeldungeon.items.armor.MageArmor();
+                                    classArmor = new MageArmor();
                                     GLog.i("Equipping MageArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case ROGUE:
                                 if (heroSubClass == HeroSubClass.FREERUNNER || heroSubClass == HeroSubClass.ASSASSIN) {
-                                    classArmor = new com.watabou.pixeldungeon.items.armor.RogueArmor();
+                                    classArmor = new RogueArmor();
                                     GLog.i("Equipping RogueArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case HUNTRESS:
                                 if (heroSubClass == HeroSubClass.SNIPER || heroSubClass == HeroSubClass.WARDEN) {
-                                    classArmor = new com.watabou.pixeldungeon.items.armor.HuntressArmor();
+                                    classArmor = new HuntressArmor();
                                     GLog.i("Equipping HuntressArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case ELF:
                                 if (heroSubClass == HeroSubClass.SCOUT || heroSubClass == HeroSubClass.SHAMAN) {
-                                    classArmor = new com.watabou.pixeldungeon.items.armor.ElfArmor();
+                                    classArmor = new ElfArmor();
                                     GLog.i("Equipping ElfArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case NECROMANCER:
                                 if (heroSubClass == HeroSubClass.LICH) {
-                                    classArmor = new com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor();
+                                    classArmor = new NecromancerArmor();
                                     GLog.i("Equipping NecromancerArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case GNOLL:
                                 if (heroSubClass == HeroSubClass.GUARDIAN || heroSubClass == HeroSubClass.WITCHDOCTOR) {
-                                    classArmor = new com.watabou.pixeldungeon.items.armor.GnollArmor();
+                                    classArmor = new GnollArmor();
                                     GLog.i("Equipping GnollArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
@@ -907,7 +835,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                         // Equip random weapon and/or shield
                         // Use a seed based on class+subclass combination for consistent random items per combination
                         long seed = (heroClass.name() + "_" + heroSubClass.name()).hashCode();
-                        java.util.Random random = new java.util.Random(seed);
+                        Random random = new Random(seed);
                         GLog.i("Generated seed %d for random item selection for: %s+%s", seed, heroClass.name(), heroSubClass.name());
 
                         // Add a random weapon based on class archetype using ItemFactory
@@ -924,11 +852,11 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                     "Spear",
                                     "WarHammer"
                                 };
-                                GLog.i("Checking warrior items: %s for %s+%s", java.util.Arrays.toString(warriorItems), heroClass.name(), heroSubClass.name());
+                                GLog.i("Checking warrior items: %s for %s+%s", Arrays.toString(warriorItems), heroClass.name(), heroSubClass.name());
                                 // Find a valid item
                                 for (String item : warriorItems) {
                                     if (validItemNames.contains(item)) {
-                                        randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        randomItem = ItemFactory.itemByName(item);
                                         GLog.i("Found valid warrior item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
                                     } else {
@@ -938,7 +866,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid weapon
                                     String randomItemName = warriorItems[random.nextInt(warriorItems.length)];
-                                    randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    randomItem = ItemFactory.itemByName(randomItemName);
                                     GLog.i("Selected random warrior item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
@@ -955,11 +883,11 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                         "WandOfTeleportation",
                                         "WandOfPoison"
                                     };
-                                    GLog.i("Checking Witch Doctor wand items: %s for %s+%s", java.util.Arrays.toString(wandItems), heroClass.name(), heroSubClass.name());
+                                    GLog.i("Checking Witch Doctor wand items: %s for %s+%s", Arrays.toString(wandItems), heroClass.name(), heroSubClass.name());
                                     // Find a valid wand
                                     for (String item : wandItems) {
                                         if (validItemNames.contains(item)) {
-                                            randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                            randomItem = ItemFactory.itemByName(item);
                                             GLog.i("Found valid wand item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                             break;
                                         } else {
@@ -969,7 +897,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                     if (randomItem == null) {
                                         // If none of the preferred items are found, pick any valid wand
                                         String randomItemName = wandItems[random.nextInt(wandItems.length)];
-                                        randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                        randomItem = ItemFactory.itemByName(randomItemName);
                                         GLog.i("Selected random wand item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                     }
                                 } else {
@@ -985,12 +913,12 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                         "WarHammer",
                                         "BattleAxe"
                                     };
-                                    GLog.i("Checking Gnoll items: %s for %s+%s", java.util.Arrays.toString(gnollItems), heroClass.name(), heroSubClass.name());
+                                    GLog.i("Checking Gnoll items: %s for %s+%s", Arrays.toString(gnollItems), heroClass.name(), heroSubClass.name());
 
                                     // Find a valid item
                                     for (String item : gnollItems) {
                                         if (validItemNames.contains(item)) {
-                                            randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                            randomItem = ItemFactory.itemByName(item);
                                             GLog.i("Found valid gnoll item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                             break;
                                         } else {
@@ -1000,7 +928,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                     if (randomItem == null) {
                                         // If none of the preferred items are found, pick any valid item
                                         String randomItemName = gnollItems[random.nextInt(gnollItems.length)];
-                                        randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                        randomItem = ItemFactory.itemByName(randomItemName);
                                         GLog.i("Selected random gnoll item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                     }
                                 }
@@ -1017,11 +945,11 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                     "WandOfTeleportation",
                                     "WandOfPoison"
                                 };
-                                GLog.i("Checking mage wand items: %s for %s+%s", java.util.Arrays.toString(mageWands), heroClass.name(), heroSubClass.name());
+                                GLog.i("Checking mage wand items: %s for %s+%s", Arrays.toString(mageWands), heroClass.name(), heroSubClass.name());
                                 // Find a valid wand
                                 for (String item : mageWands) {
                                     if (validItemNames.contains(item)) {
-                                        randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        randomItem = ItemFactory.itemByName(item);
                                         GLog.i("Found valid mage wand: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
                                     } else {
@@ -1031,7 +959,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid wand
                                     String randomItemName = mageWands[random.nextInt(mageWands.length)];
-                                    randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    randomItem = ItemFactory.itemByName(randomItemName);
                                     GLog.i("Selected random mage wand: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
@@ -1044,11 +972,11 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                     "Boomerang",
                                     "Shuriken"
                                 };
-                                GLog.i("Checking rogue/huntress items: %s for %s+%s", java.util.Arrays.toString(rogueHuntItems), heroClass.name(), heroSubClass.name());
+                                GLog.i("Checking rogue/huntress items: %s for %s+%s", Arrays.toString(rogueHuntItems), heroClass.name(), heroSubClass.name());
                                 // Find a valid item
                                 for (String item : rogueHuntItems) {
                                     if (validItemNames.contains(item)) {
-                                        randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        randomItem = ItemFactory.itemByName(item);
                                         GLog.i("Found valid rogue/huntress item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
                                     } else {
@@ -1058,7 +986,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid item
                                     String randomItemName = rogueHuntItems[random.nextInt(rogueHuntItems.length)];
-                                    randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    randomItem = ItemFactory.itemByName(randomItemName);
                                     GLog.i("Selected random rogue/huntress item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
@@ -1069,11 +997,11 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                     "ElvenBow",
                                     "Quarterstaff"
                                 };
-                                GLog.i("Checking elf items: %s for %s+%s", java.util.Arrays.toString(elfItems), heroClass.name(), heroSubClass.name());
+                                GLog.i("Checking elf items: %s for %s+%s", Arrays.toString(elfItems), heroClass.name(), heroSubClass.name());
                                 // Find a valid item
                                 for (String item : elfItems) {
                                     if (validItemNames.contains(item)) {
-                                        randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        randomItem = ItemFactory.itemByName(item);
                                         GLog.i("Found valid elf item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
                                     } else {
@@ -1083,7 +1011,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid item
                                     String randomItemName = elfItems[random.nextInt(elfItems.length)];
-                                    randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    randomItem = ItemFactory.itemByName(randomItemName);
                                     GLog.i("Selected random elf item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
@@ -1095,11 +1023,11 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                     "Sword",
                                     "Mace" // Appropriate for necromancy theme
                                 };
-                                GLog.i("Checking necromancer items: %s for %s+%s", java.util.Arrays.toString(necroItems), heroClass.name(), heroSubClass.name());
+                                GLog.i("Checking necromancer items: %s for %s+%s", Arrays.toString(necroItems), heroClass.name(), heroSubClass.name());
                                 // Find a valid item
                                 for (String item : necroItems) {
                                     if (validItemNames.contains(item)) {
-                                        randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        randomItem = ItemFactory.itemByName(item);
                                         GLog.i("Found valid necromancer item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
                                     } else {
@@ -1109,7 +1037,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid item
                                     String randomItemName = necroItems[random.nextInt(necroItems.length)];
-                                    randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    randomItem = ItemFactory.itemByName(randomItemName);
                                     GLog.i("Selected random necromancer item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
@@ -1120,11 +1048,11 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                     "Mace",
                                     "Knuckles"
                                 };
-                                GLog.i("Checking priest items: %s for %s+%s", java.util.Arrays.toString(priestItems), heroClass.name(), heroSubClass.name());
+                                GLog.i("Checking priest items: %s for %s+%s", Arrays.toString(priestItems), heroClass.name(), heroSubClass.name());
                                 // Find a valid item
                                 for (String item : priestItems) {
                                     if (validItemNames.contains(item)) {
-                                        randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        randomItem = ItemFactory.itemByName(item);
                                         GLog.i("Found valid priest item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
                                     } else {
@@ -1134,7 +1062,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid item
                                     String randomItemName = priestItems[random.nextInt(priestItems.length)];
-                                    randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    randomItem = ItemFactory.itemByName(randomItemName);
                                     GLog.i("Selected random priest item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
@@ -1145,11 +1073,11 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                     "Knuckles",
                                     "BoneSaw" // Using the actual doctor-specific weapon that exists in the game
                                 };
-                                GLog.i("Checking doctor items: %s for %s+%s", java.util.Arrays.toString(doctorItems), heroClass.name(), heroSubClass.name());
+                                GLog.i("Checking doctor items: %s for %s+%s", Arrays.toString(doctorItems), heroClass.name(), heroSubClass.name());
                                 // Find a valid item
                                 for (String item : doctorItems) {
                                     if (validItemNames.contains(item)) {
-                                        randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        randomItem = ItemFactory.itemByName(item);
                                         GLog.i("Found valid doctor item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
                                     } else {
@@ -1159,7 +1087,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid item
                                     String randomItemName = doctorItems[random.nextInt(doctorItems.length)];
-                                    randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    randomItem = ItemFactory.itemByName(randomItemName);
                                     GLog.i("Selected random doctor item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
@@ -1171,11 +1099,11 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                     "Knuckles",
                                     "Shuriken"
                                 };
-                                GLog.i("Checking generic items: %s for %s+%s", java.util.Arrays.toString(genericItems), heroClass.name(), heroSubClass.name());
+                                GLog.i("Checking generic items: %s for %s+%s", Arrays.toString(genericItems), heroClass.name(), heroSubClass.name());
                                 // Find a valid item
                                 for (String item : genericItems) {
                                     if (validItemNames.contains(item)) {
-                                        randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(item);
+                                        randomItem = ItemFactory.itemByName(item);
                                         GLog.i("Found valid generic item: %s for %s+%s", item, heroClass.name(), heroSubClass.name());
                                         break;
                                     } else {
@@ -1185,7 +1113,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                                 if (randomItem == null) {
                                     // If none of the preferred items are found, pick any valid item
                                     String randomItemName = genericItems[random.nextInt(genericItems.length)];
-                                    randomItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(randomItemName);
+                                    randomItem = ItemFactory.itemByName(randomItemName);
                                     GLog.i("Selected random generic item: %s for %s+%s", randomItemName, heroClass.name(), heroSubClass.name());
                                 }
                                 break;
@@ -1254,7 +1182,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                         }
                     } catch (Exception e) {
                         GLog.w("Error creating or saving hero class+subclass sprite for %s+%s: %s", heroClass.name(), heroSubClass.name(), e.getMessage());
-                        e.printStackTrace(); // Add stack trace to see exact error
+                        EventCollector.logException(e);
                         errorCount++;
                     }
                 } else {
@@ -1284,12 +1212,12 @@ public class FactorySpriteGenerator extends RemixedDungeon {
         // Generate list of all mobs
         try {
             List<Mob> mobs = com.nyrds.pixeldungeon.mobs.common.MobFactory.allMobs();
-            Set<String> uniqueMobNames = new java.util.HashSet<>();
+            Set<String> uniqueMobNames = new HashSet<>();
             for (Mob mob : mobs) {
                 uniqueMobNames.add(mob.getEntityKind());
             }
-            List<String> mobNames = new java.util.ArrayList<>(uniqueMobNames);
-            java.util.Collections.sort(mobNames);
+            List<String> mobNames = new ArrayList<>(uniqueMobNames);
+            Collections.sort(mobNames);
             writeEntityListToFile(mobNames, "mobs.txt");
         } catch (Exception e) {
             GLog.w("Error generating mob list: %s", e.getMessage());
@@ -1297,13 +1225,13 @@ public class FactorySpriteGenerator extends RemixedDungeon {
 
         // Generate list of all items
         try {
-            List<Item> items = com.nyrds.pixeldungeon.items.common.ItemFactory.allItems();
-            Set<String> uniqueItemNames = new java.util.HashSet<>();
+            List<Item> items = ItemFactory.allItems();
+            Set<String> uniqueItemNames = new HashSet<>();
             for (Item item : items) {
                 uniqueItemNames.add(item.getEntityKind());
             }
-            List<String> itemNames = new java.util.ArrayList<>(uniqueItemNames);
-            java.util.Collections.sort(itemNames);
+            List<String> itemNames = new ArrayList<>(uniqueItemNames);
+            Collections.sort(itemNames);
             writeEntityListToFile(itemNames, "items.txt");
         } catch (Exception e) {
             GLog.w("Error generating item list: %s", e.getMessage());
@@ -1312,9 +1240,9 @@ public class FactorySpriteGenerator extends RemixedDungeon {
         // Generate list of all spells
         try {
             List<String> allSpellNames = SpellFactory.getAllSpells();
-            Set<String> uniqueSpellNames = new java.util.HashSet<>(allSpellNames);
-            List<String> spellNames = new java.util.ArrayList<>(uniqueSpellNames);
-            java.util.Collections.sort(spellNames);
+            Set<String> uniqueSpellNames = new HashSet<>(allSpellNames);
+            List<String> spellNames = new ArrayList<>(uniqueSpellNames);
+            Collections.sort(spellNames);
             writeEntityListToFile(spellNames, "spells.txt");
         } catch (Exception e) {
             GLog.w("Error generating spell list: %s", e.getMessage());
@@ -1323,20 +1251,21 @@ public class FactorySpriteGenerator extends RemixedDungeon {
         // Generate list of all buffs
         try {
             Set<String> allBuffNames = BuffFactory.getAllBuffsNames();
-            Set<String> uniqueBuffNames = new java.util.HashSet<>(allBuffNames);
-            List<String> buffNames = new java.util.ArrayList<>(uniqueBuffNames);
-            java.util.Collections.sort(buffNames);
+            Set<String> uniqueBuffNames = new HashSet<>(allBuffNames);
+            List<String> buffNames = new ArrayList<>(uniqueBuffNames);
+            Collections.sort(buffNames);
             writeEntityListToFile(buffNames, "buffs.txt");
         } catch (Exception e) {
             GLog.w("Error generating buff list: %s", e.getMessage());
         }
 
-        // Generate list of all level objects
+
         try {
-            List<com.nyrds.pixeldungeon.levels.objects.LevelObject> levelObjects =
-                com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.allLevelObjects();
-            Set<String> uniqueLevelObjectNames = new java.util.HashSet<>();
-            for (com.nyrds.pixeldungeon.levels.objects.LevelObject levelObject : levelObjects) {
+
+            List<LevelObject> levelObjects =
+                LevelObjectsFactory.allLevelObjects(level);
+            Set<String> uniqueLevelObjectNames = new HashSet<>();
+            for (LevelObject levelObject : levelObjects) {
                 String entityKind = levelObject.getEntityKind();
                 // Only add non-null and non-empty entity kinds
                 if (entityKind != null && !entityKind.isEmpty()) {
@@ -1345,13 +1274,13 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                     GLog.w("Found level object with null or empty entity kind: %s", levelObject.getClass().getSimpleName());
                 }
             }
-            List<String> levelObjectNames = new java.util.ArrayList<>(uniqueLevelObjectNames);
-            java.util.Collections.sort(levelObjectNames);
+            List<String> levelObjectNames = new ArrayList<>(uniqueLevelObjectNames);
+            Collections.sort(levelObjectNames);
             writeEntityListToFile(levelObjectNames, "levelObjects.txt");
             GLog.i("Successfully generated level object list with %d entries", levelObjectNames.size());
         } catch (Exception e) {
             GLog.w("Error generating level object list: %s", e.getMessage());
-            e.printStackTrace(); // Add stack trace to help debug the issue
+            EventCollector.logException(e);
         }
 
         GLog.i("Entity list generation completed.");
@@ -1360,7 +1289,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
     private void writeEntityListToFile(List<String> entityNames, String fileName) {
         try {
             // Sort the list for better readability
-            java.util.Collections.sort(entityNames);
+            Collections.sort(entityNames);
 
             // Create entities directory if not exists
             java.io.File entitiesDir = new java.io.File("../../../../entities/");
