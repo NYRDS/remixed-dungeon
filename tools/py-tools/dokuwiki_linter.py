@@ -90,10 +90,40 @@ class DokuWikiLinter:
 
             # Check if link contains uppercase letters in the page name part (before | or end)
             page_part = link.split('|')[0] if '|' in link else link
-            # Remove namespace if present
-            if ':' in page_part:
-                namespace, page_name = page_part.split(':', 1)
-                if namespace != 'rpd' and not namespace.startswith('mr'):
+            # Check for namespace using both : and > as separators
+            # Use the first occurrence of either separator
+            colon_pos = page_part.find(':')
+            gt_pos = page_part.find('>')
+
+            namespace_pos = -1
+            separator_char = None
+
+            # Find the first separator
+            if colon_pos != -1 and gt_pos != -1:
+                # Both exist, use the first one
+                if colon_pos < gt_pos:
+                    namespace_pos = colon_pos
+                    separator_char = ':'
+                else:
+                    namespace_pos = gt_pos
+                    separator_char = '>'
+            elif colon_pos != -1:
+                namespace_pos = colon_pos
+                separator_char = ':'
+            elif gt_pos != -1:
+                namespace_pos = gt_pos
+                separator_char = '>'
+
+            if namespace_pos != -1:
+                namespace = page_part[:namespace_pos]
+                page_name = page_part[namespace_pos + 1:]
+
+                # Standard namespaces in Remixed Dungeon wiki
+                standard_namespaces = ['rpd', 'ru', 'code', 'playground', 'doku', 'wiki', 'wp']
+                is_standard = (namespace in standard_namespaces or
+                              namespace.startswith('mr'))
+
+                if not is_standard:
                     self.warnings.append(f"Non-standard namespace in link: {link}")
                 page_part = page_name
             else:
@@ -255,9 +285,26 @@ class DokuWikiLinter:
         for tag in tags:
             if not tag_pattern.match(tag):
                 # Check if it's a more complex tag with spaces between tags
-                tag_content = tag[7:-2]  # Remove {{tag> and }}
+                tag_content = tag[6:-2]  # Remove {{tag> and }}
                 individual_tags = [t.strip() for t in tag_content.split()]
-                valid = all(re.match(r'^[a-z0-9_]+$', t) for t in individual_tags if t)
+
+                # Validate each individual tag
+                valid = True
+                for t in individual_tags:
+                    if t:
+                        # Check for standard tags (lowercase, numbers, underscores, hyphens, Cyrillic)
+                        if re.match(r'^[a-z0-9_\u0400-\u04FF-]+$', t):
+                            continue
+                        # Check for allowed namespace formats: rpd, ru:rpd, ru:*, etc.
+                        elif t == 'rpd' or t.startswith('ru:'):
+                            continue
+                        # Check for internal DokuWiki format with leading colon like :rpd
+                        elif t.startswith(':') and (t[1:] == 'rpd' or t[1:].startswith('ru:')):
+                            continue
+                        else:
+                            valid = False
+                            break
+
                 if not valid:
                     self.warnings.append(f"Tag format may not follow standards: {tag}")
 
