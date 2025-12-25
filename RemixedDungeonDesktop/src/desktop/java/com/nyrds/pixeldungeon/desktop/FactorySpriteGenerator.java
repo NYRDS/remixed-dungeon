@@ -1283,6 +1283,19 @@ public class FactorySpriteGenerator extends RemixedDungeon {
             EventCollector.logException(e);
         }
 
+        // Generate list of all blobs
+        try {
+            List<String> allBlobNames = getAllBlobNames();
+            Set<String> uniqueBlobNames = new HashSet<>(allBlobNames);
+            List<String> blobNames = new ArrayList<>(uniqueBlobNames);
+            Collections.sort(blobNames);
+            writeEntityListToFile(blobNames, "blobs.txt");
+            GLog.i("Successfully generated blob list with %d entries", blobNames.size());
+        } catch (Exception e) {
+            GLog.w("Error generating blob list: %s", e.getMessage());
+            EventCollector.logException(e);
+        }
+
         GLog.i("Entity list generation completed.");
     }
 
@@ -1309,6 +1322,48 @@ public class FactorySpriteGenerator extends RemixedDungeon {
         } catch (Exception e) {
             GLog.w("Error writing entity list to file %s: %s", fileName, e.getMessage());
         }
+    }
+
+    private List<String> getAllBlobNames() {
+        List<String> blobNames = new ArrayList<>();
+
+        // Add known Blob classes by name to avoid complex reflection
+        // This list is based on the classes that extend Blob in the game
+        String[] blobClasses = {
+            "ToxicGas",
+            "ConfusionGas",
+            "Darkness",
+            "Alchemy",
+            "Fire",
+            "Regrowth",
+            "Web",
+            "WellWater",
+            "ParalyticGas",
+            "LiquidFlame",
+            "Foliage",
+            "WaterOfHealth",
+            "WaterOfTransmutation",
+            "WaterOfAwareness"
+            // Note: Freezing doesn't extend Blob, it's just a utility class
+        };
+
+        // Try to instantiate each blob class to get its entity kind
+        for (String blobClassName : blobClasses) {
+            try {
+                Class<?> blobClass = Class.forName("com.watabou.pixeldungeon.actors.blobs." + blobClassName);
+                if (com.watabou.pixeldungeon.actors.blobs.Blob.class.isAssignableFrom(blobClass)) {
+                    com.watabou.pixeldungeon.actors.blobs.Blob blobInstance =
+                        (com.watabou.pixeldungeon.actors.blobs.Blob) blobClass.newInstance();
+                    blobNames.add(blobInstance.getEntityKind());
+                }
+            } catch (ClassNotFoundException e) {
+                GLog.w("Blob class not found: %s", blobClassName);
+            } catch (Exception e) {
+                GLog.w("Error instantiating blob class %s: %s", blobClassName, e.getMessage());
+            }
+        }
+
+        return blobNames;
     }
 
     public static void main(String[] args) {

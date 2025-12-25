@@ -1,0 +1,14 @@
+Alchemy
+ConfusionGas
+Darkness
+Fire
+Foliage
+LiquidFlame
+ParalyticGas
+Regrowth
+ToxicGas
+WaterOfAwareness
+WaterOfHealth
+WaterOfTransmutation
+Web
+WellWater
