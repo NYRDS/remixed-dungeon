@@ -12,14 +12,13 @@ echo
 while true; do
     # Print current time and run the command
 
-    git checkout master
-    git pull origin master
-
     git clean -xfd
     git reset --hard
 
     cd wiki-data || { echo "Failed to change to wiki-data directory"; exit 1; }
 
+    git clean -xfd
+    git reset --hard
     git checkout master
     git pull origin master
 
