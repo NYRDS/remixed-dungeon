@@ -157,9 +157,12 @@ class DokuWikiLinter:
             after_next = lines[i+2].strip() if i+2 < len(lines) else ""
 
             # If we have content on current and next lines (but not after that, which means it's already a paragraph break)
+            # Also exclude preformatted text (lines starting with spaces) from this check
             if (current_line and next_line and
                 not current_line.startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----')) and
-                not next_line.startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----'))):
+                not next_line.startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----')) and
+                not lines[i].startswith(' ') and  # Exclude preformatted text (starts with space)
+                not lines[i+1].startswith(' ')):   # Exclude preformatted text (starts with space)
 
                 # This is a single newline between content lines that should probably be a paragraph break
                 self.warnings.append(f"Possible missing paragraph break at line {i+1}-{i+2}, consider adding an extra newline")
@@ -192,11 +195,14 @@ class DokuWikiLinter:
             new_lines.append(current_line)
 
             # Check if we have a next line and both current and next are content lines
+            # Also exclude preformatted text (lines starting with spaces) from this fix
             if (i + 1 < len(lines) and
                 current_line.strip() and
                 lines[i+1].strip() and
                 not current_line.strip().startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----')) and
-                not lines[i+1].strip().startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----'))):
+                not lines[i+1].strip().startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----')) and
+                not lines[i].startswith(' ') and    # Exclude preformatted text (starts with space)
+                not lines[i+1].startswith(' ')):    # Exclude preformatted text (starts with space)
 
                 # Add an extra newline to create a proper paragraph break
                 new_lines.append('')
@@ -318,11 +324,14 @@ class DokuWikiLinter:
             new_lines.append(current_line)
 
             # Check if we have a next line and both current and next are content lines
+            # Also exclude preformatted text (lines starting with spaces) from this fix
             if (i + 1 < len(lines) and
                 current_line.strip() and
                 lines[i+1].strip() and
                 not current_line.strip().startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----')) and
-                not lines[i+1].strip().startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----'))):
+                not lines[i+1].strip().startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----')) and
+                not lines[i].startswith(' ') and    # Exclude preformatted text (starts with space)
+                not lines[i+1].startswith(' ')):    # Exclude preformatted text (starts with space)
 
                 # Add an extra newline to create a proper paragraph break
                 new_lines.append('')
