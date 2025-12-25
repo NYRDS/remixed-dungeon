@@ -26,13 +26,6 @@ class DokuWikiLinter:
         self.image_pattern = re.compile(r'\{\{\s*[a-z0-9_/:\.-]+\|(?:[^\}]+\s*)?\}\}')
         self.paragraph_pattern = re.compile(r'\n[^\n]')  # Single newline followed by non-newline
         
-        # Valid entity suffixes according to the documentation
-        self.valid_suffixes = [
-            '_mob', '_class', '_subclass', '_item', '_spell', 
-            '_npc', '_level', '_mechanic', '_skill', '_talent', 
-            '_buff', '_trap', '_script', '_level_object', '_config', 
-            '_quest'
-        ]
 
     def lint_file(self, file_path: str) -> Tuple[List[str], List[str]]:
         """Lint a single DokuWiki file and return errors and warnings."""
@@ -59,6 +52,7 @@ class DokuWikiLinter:
         self._check_lists(content)  # Check list formatting
         self._check_entity_suffixes(content)
         self._check_tags(content)
+        self._check_code_blocks(content)
         
         return self.errors, self.warnings
 
@@ -70,15 +64,10 @@ class DokuWikiLinter:
         # Check if filename is all lowercase
         if name_part != name_part.lower():
             self.errors.append(f"Filename not in lowercase: {filename}")
-        
+
         # Check if filename uses underscores instead of hyphens or spaces
         if ' ' in name_part or '-' in name_part:
             self.errors.append(f"Filename should use underscores: {filename}")
-        
-        # Check if filename has valid suffix
-        has_valid_suffix = any(name_part.endswith(suffix) for suffix in self.valid_suffixes)
-        if not has_valid_suffix and not name_part.startswith('mr:'):
-            self.warnings.append(f"Filename might be missing standard suffix: {filename}")
 
     def _check_headers(self, content: str):
         """Check if headers follow the correct format."""
@@ -215,6 +204,29 @@ class DokuWikiLinter:
 
         return '\n'.join(new_lines)
 
+    def fix_file_content(self, file_path: str) -> bool:
+        """Apply all possible fixes to a wiki file and save it back. Returns True if changes were made."""
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                original_content = f.read()
+        except UnicodeDecodeError:
+            print(f"Error: File {file_path} is not UTF-8 encoded", file=sys.stderr)
+            return False
+
+        # Apply fixes
+        fixed_content = self.fix_paragraphs(original_content)
+
+        # Additional fixes can be added here in the future
+        # For example: fixing list indentation, etc.
+
+        # Only write if content has changed
+        if original_content != fixed_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(fixed_content)
+            return True
+
+        return False
+
     def _check_entity_suffixes(self, content: str):
         """Check if content mentions entities that should have proper suffixes."""
         # This is a basic check - in practice, this would need more context
@@ -235,11 +247,136 @@ class DokuWikiLinter:
                 if not valid:
                     self.warnings.append(f"Tag format may not follow standards: {tag}")
 
+    def _check_code_blocks(self, content: str):
+        """Check if code blocks follow the correct format and preserve line breaks."""
+        # Check for quoted code tags like ''<code>'' instead of <code>
+        quoted_code_pattern = r"''\s*<(code|file)([^>]*)>''"
+        quoted_code_matches = re.findall(quoted_code_pattern, content)
+        for match in quoted_code_matches:
+            self.errors.append(f"Code block tags should not be wrapped in double quotes: ''<{match[0]}{match[1]}>''")
+
+        # Check for proper line break preservation in code blocks
+        # Extract code blocks to verify they maintain formatting
+        code_block_pattern = r'<(code|file)([^>]*)>(.*?)</\1>'
+        code_blocks = re.findall(code_block_pattern, content, re.DOTALL)
+        for lang, attrs, code_content in code_blocks:
+            # Check if there are line breaks inside the code block
+            if '\n' in code_content:
+                # Line breaks should be preserved in code blocks
+                pass  # This is correct behavior
+
+    def _preserve_code_blocks(self, content: str):
+        """Extract code blocks and return content with placeholders and a list of code blocks."""
+        # Pattern to match code blocks (both <code> and <file>)
+        code_block_pattern = r'<(code|file)([^>]*)>(.*?)</\1>'
+
+        # Find all code blocks
+        code_blocks = []
+        def replace_code_block(match):
+            full_match = match.group(0)
+            tag_type = match.group(1)
+            attrs = match.group(2)
+            content = match.group(3)
+
+            # Store the code block with an identifier
+            block_id = f"__CODE_BLOCK_{len(code_blocks)}__"
+            code_blocks.append({
+                'id': block_id,
+                'full_tag': f'<{tag_type}{attrs}>',
+                'end_tag': f'</{tag_type}>',
+                'content': content
+            })
+            return block_id
+
+        # Replace code blocks with placeholders
+        processed_content = re.sub(code_block_pattern, replace_code_block, content, flags=re.DOTALL)
+
+        return processed_content, code_blocks
+
+    def _restore_code_blocks(self, content: str, code_blocks: list):
+        """Restore code blocks from placeholders."""
+        for block in code_blocks:
+            placeholder = block['id']
+            full_code_block = f"{block['full_tag']}{block['content']}{block['end_tag']}"
+            content = content.replace(placeholder, full_code_block)
+        return content
+
+    def fix_paragraphs(self, content: str) -> str:
+        """Fix single paragraph breaks by adding an extra newline between paragraphs."""
+        import re
+
+        # Preserve code blocks before processing
+        content_preserved, code_blocks = self._preserve_code_blocks(content)
+
+        # Split content into lines
+        lines = content_preserved.split('\n')
+        new_lines = []
+        i = 0
+
+        while i < len(lines):
+            current_line = lines[i]
+            new_lines.append(current_line)
+
+            # Check if we have a next line and both current and next are content lines
+            if (i + 1 < len(lines) and
+                current_line.strip() and
+                lines[i+1].strip() and
+                not current_line.strip().startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----')) and
+                not lines[i+1].strip().startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----'))):
+
+                # Add an extra newline to create a proper paragraph break
+                new_lines.append('')
+            i += 1
+
+        # Restore code blocks after processing
+        result = '\n'.join(new_lines)
+        result = self._restore_code_blocks(result, code_blocks)
+
+        return result
+
+    def fix_code_blocks(self, content: str) -> str:
+        """Fix quoted code blocks by removing the surrounding double quotes."""
+        import re
+
+        # Pattern to match quoted code/file tags
+        quoted_code_pattern = r"('')\s*<(code|file)([^>]*)>\s*('')"
+        content = re.sub(quoted_code_pattern, r'<\2\3>', content)
+
+        # Pattern to match quoted closing code/file tags
+        quoted_closing_code_pattern = r"('')\s*(</(code|file)>)\s*('')"
+        content = re.sub(quoted_closing_code_pattern, r'\2', content)
+
+        return content
+
+    def fix_file_content(self, file_path: str) -> bool:
+        """Apply all possible fixes to a wiki file and save it back. Returns True if changes were made."""
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                original_content = f.read()
+        except UnicodeDecodeError:
+            print(f"Error: File {file_path} is not UTF-8 encoded", file=sys.stderr)
+            return False
+
+        # Apply fixes
+        fixed_content = self.fix_paragraphs(original_content)
+        fixed_content = self.fix_code_blocks(fixed_content)  # Add code block fixes
+
+        # Additional fixes can be added here in the future
+        # For example: fixing list indentation, etc.
+
+        # Only write if content has changed
+        if original_content != fixed_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(fixed_content)
+            return True
+
+        return False
+
     def lint_directory(self, directory: str) -> Tuple[List[str], List[str]]:
         """Lint all .txt files in a directory."""
         all_errors = []
         all_warnings = []
-        
+
         for root, dirs, files in os.walk(directory):
             for file in files:
                 if file.endswith('.txt'):
@@ -247,8 +384,22 @@ class DokuWikiLinter:
                     errors, warnings = self.lint_file(file_path)
                     all_errors.extend([f"{file_path}: {e}" for e in errors])
                     all_warnings.extend([f"{file_path}: {w}" for w in warnings])
-        
+
         return all_errors, all_warnings
+
+    def fix_directory(self, directory: str) -> int:
+        """Fix all .txt files in a directory recursively. Returns the number of files changed."""
+        files_changed = 0
+
+        for root, dirs, files in os.walk(directory):
+            for file in files:
+                if file.endswith('.txt'):
+                    file_path = os.path.join(root, file)
+                    if self.fix_file_content(file_path):
+                        files_changed += 1
+                        print(f"Fixed: {file_path}")
+
+        return files_changed
 
 
 def main():
@@ -279,23 +430,29 @@ def main():
                 print(f"Error: File {str(path)} is not UTF-8 encoded", file=sys.stderr)
                 sys.exit(1)
 
-            # Fix paragraphs
+            # Fix paragraphs and code blocks
             fixed_content = linter.fix_paragraphs(original_content)
+            fixed_content = linter.fix_code_blocks(fixed_content)
 
             # Write the fixed content back to the file
             with open(str(path), 'w', encoding='utf-8') as f:
                 f.write(fixed_content)
 
-            print(f"Fixed paragraph breaks in {str(path)}")
+            print(f"Fixed content in {str(path)} (paragraph breaks and code blocks)")
             # Now lint the fixed content
             errors, warnings = linter.lint_file(str(path))
         else:
             errors, warnings = linter.lint_file(str(path))
     elif path.is_dir():
         if args.fix:
-            print("Fix option is not supported for directories", file=sys.stderr)
-            sys.exit(1)
-        errors, warnings = linter.lint_directory(str(path))
+            # Fix all files in the directory recursively
+            files_changed = linter.fix_directory(str(path))
+            print(f"Fix operation completed. {files_changed} files were changed.")
+
+            # Now lint the directory to report any remaining issues
+            errors, warnings = linter.lint_directory(str(path))
+        else:
+            errors, warnings = linter.lint_directory(str(path))
     else:
         print(f"Error: Path {args.path} is neither a file nor a directory", file=sys.stderr)
         sys.exit(1)

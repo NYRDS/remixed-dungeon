@@ -1084,6 +1084,7 @@ The project includes additional scripts to help maintain and improve wiki qualit
   - Lint a single file: `python3 tools/py-tools/dokuwiki_linter.py path/to/wiki_page.txt`
   - Lint a directory: `python3 tools/py-tools/dokuwiki_linter.py path/to/wiki/directory`
   - Fix trivial issues: `python3 tools/py-tools/dokuwiki_linter.py path/to/wiki_page.txt --fix`
+  - Fix all files in a directory recursively: `python3 tools/py-tools/dokuwiki_linter.py path/to/wiki/directory --fix`
   - With JSON output: `python3 tools/py-tools/dokuwiki_linter.py path/to/wiki_page.txt --format json`
 - **Benefit**: Ensures wiki pages follow proper formatting, naming conventions, and structural standards
 - **Features**:
