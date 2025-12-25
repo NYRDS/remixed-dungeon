@@ -146,23 +146,25 @@ class DokuWikiLinter:
 
     def _check_paragraphs(self, content: str):
         """Check if paragraphs use proper double newlines."""
+        # Preserve code blocks before processing
+        content_preserved, code_blocks = self._preserve_code_blocks(content)
+
         # DokuWiki treats single newlines as spaces, so for paragraph breaks,
         # we need double newlines (which means two consecutive \n characters)
         # Find places where there's a single newline between content lines
-        lines = content.split('\n')
+        lines = content_preserved.split('\n')
         i = 0
-        while i < len(lines) - 2:  # Need at least 2 more lines to check
+        while i < len(lines) - 1:  # Need at least 1 more line to check
             current_line = lines[i].strip()
             next_line = lines[i+1].strip()
-            after_next = lines[i+2].strip() if i+2 < len(lines) else ""
 
-            # If we have content on current and next lines (but not after that, which means it's already a paragraph break)
-            # Also exclude preformatted text (lines starting with spaces) from this check
+            # If we have content on current and next lines
+            # Also exclude preformatted text (lines starting with spaces) and special DokuWiki elements from this check
             if (current_line and next_line and
-                not current_line.startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----')) and
-                not next_line.startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----')) and
-                not lines[i].startswith(' ') and  # Exclude preformatted text (starts with space)
-                not lines[i+1].startswith(' ')):   # Exclude preformatted text (starts with space)
+                not current_line.startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----', '!!', '***', '__', '//', '''''', '""')) and
+                not next_line.startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----', '!!', '***', '__', '//', '''''', '""')) and
+                not lines[i].startswith(('  ', '\t')) and  # Exclude preformatted text (starts with 2+ spaces or tab)
+                not lines[i+1].startswith(('  ', '\t'))):   # Exclude preformatted text (starts with 2+ spaces or tab)
 
                 # This is a single newline between content lines that should probably be a paragraph break
                 self.warnings.append(f"Possible missing paragraph break at line {i+1}-{i+2}, consider adding an extra newline")
@@ -174,12 +176,18 @@ class DokuWikiLinter:
         for i, line in enumerate(lines, 1):
             # Check for list items that are not properly indented
             # In DokuWiki, list items need to be indented to be recognized as lists
-            if line.lstrip().startswith('* ') and not line.startswith('  *'):
-                # Single * without proper indentation (should be at least 2 spaces)
-                self.errors.append(f"List item not properly indented at line {i}: '{line.strip()}'. List items should start with at least 2 spaces before the '*'.")
-            elif line.lstrip().startswith('- ') and not line.startswith('  -'):
-                # Single - without proper indentation (should be at least 2 spaces)
-                self.errors.append(f"List item not properly indented at line {i}: '{line.strip()}'. List items should start with at least 2 spaces before the '-'.")
+            if line.lstrip().startswith('* '):
+                # Count leading spaces to determine if indentation is sufficient
+                leading_spaces = len(line) - len(line.lstrip())
+                if leading_spaces < 2:
+                    # Single * without proper indentation (should be at least 2 spaces)
+                    self.errors.append(f"List item not properly indented at line {i}: '{line.strip()}'. List items should start with at least 2 spaces before the '*'.")
+            elif line.lstrip().startswith('- '):
+                # Count leading spaces to determine if indentation is sufficient
+                leading_spaces = len(line) - len(line.lstrip())
+                if leading_spaces < 2:
+                    # Single - without proper indentation (should be at least 2 spaces)
+                    self.errors.append(f"List item not properly indented at line {i}: '{line.strip()}'. List items should start with at least 2 spaces before the '-'.")
 
     def fix_paragraphs(self, content: str) -> str:
         """Fix single paragraph breaks by adding an extra newline between paragraphs."""
@@ -324,18 +332,65 @@ class DokuWikiLinter:
             new_lines.append(current_line)
 
             # Check if we have a next line and both current and next are content lines
-            # Also exclude preformatted text (lines starting with spaces) from this fix
+            # Also exclude preformatted text (lines starting with spaces) and special DokuWiki elements from this fix
             if (i + 1 < len(lines) and
-                current_line.strip() and
-                lines[i+1].strip() and
-                not current_line.strip().startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----')) and
-                not lines[i+1].strip().startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----')) and
-                not lines[i].startswith(' ') and    # Exclude preformatted text (starts with space)
-                not lines[i+1].startswith(' ')):    # Exclude preformatted text (starts with space)
+                current_line.strip() and  # Current line is not empty
+                lines[i+1].strip() and    # Next line is not empty
+                # Check that neither line is a special DokuWiki element
+                not current_line.strip().startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----', '!!', '***', '__', '//', '''''', '""')) and
+                not lines[i+1].strip().startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----', '!!', '***', '__', '//', '''''', '""')) and
+                # Exclude preformatted text (lines starting with 2+ spaces or tab)
+                not current_line.startswith(('  ', '\t')) and
+                not lines[i+1].startswith(('  ', '\t'))):
 
                 # Add an extra newline to create a proper paragraph break
                 new_lines.append('')
             i += 1
+
+        # Restore code blocks after processing
+        result = '\n'.join(new_lines)
+        result = self._restore_code_blocks(result, code_blocks)
+
+        return result
+
+    def fix_lists(self, content: str) -> str:
+        """Fix list indentation by ensuring list items start with at least 2 spaces without reducing existing indentation."""
+        import re
+
+        # Preserve code blocks before processing
+        content_preserved, code_blocks = self._preserve_code_blocks(content)
+
+        # Split content into lines
+        lines = content_preserved.split('\n')
+        new_lines = []
+
+        for line in lines:
+            # Check for list items that start with * or - but don't have at least 2 leading spaces
+            if line.lstrip().startswith('* '):
+                # Count leading spaces to determine if indentation is sufficient
+                leading_spaces = len(line) - len(line.lstrip())
+                if leading_spaces < 2:
+                    # List item doesn't have at least 2 leading spaces, add minimum indentation
+                    content_part = line.lstrip()  # Get content without leading spaces
+                    new_line = '  ' + content_part  # Add minimum 2 spaces
+                    new_lines.append(new_line)
+                else:
+                    # Line already has sufficient indentation, preserve it
+                    new_lines.append(line)
+            elif line.lstrip().startswith('- '):
+                # Count leading spaces to determine if indentation is sufficient
+                leading_spaces = len(line) - len(line.lstrip())
+                if leading_spaces < 2:
+                    # List item doesn't have at least 2 leading spaces, add minimum indentation
+                    content_part = line.lstrip()  # Get content without leading spaces
+                    new_line = '  ' + content_part  # Add minimum 2 spaces
+                    new_lines.append(new_line)
+                else:
+                    # Line already has sufficient indentation, preserve it
+                    new_lines.append(line)
+            else:
+                # Line is not a list item needing fix
+                new_lines.append(line)
 
         # Restore code blocks after processing
         result = '\n'.join(new_lines)
@@ -368,10 +423,10 @@ class DokuWikiLinter:
 
         # Apply fixes
         fixed_content = self.fix_paragraphs(original_content)
+        fixed_content = self.fix_lists(fixed_content)  # Add list fixes
         fixed_content = self.fix_code_blocks(fixed_content)  # Add code block fixes
 
         # Additional fixes can be added here in the future
-        # For example: fixing list indentation, etc.
 
         # Only write if content has changed
         if original_content != fixed_content:
@@ -439,15 +494,16 @@ def main():
                 print(f"Error: File {str(path)} is not UTF-8 encoded", file=sys.stderr)
                 sys.exit(1)
 
-            # Fix paragraphs and code blocks
+            # Apply all fixes
             fixed_content = linter.fix_paragraphs(original_content)
+            fixed_content = linter.fix_lists(fixed_content)  # Add list fixes
             fixed_content = linter.fix_code_blocks(fixed_content)
 
             # Write the fixed content back to the file
             with open(str(path), 'w', encoding='utf-8') as f:
                 f.write(fixed_content)
 
-            print(f"Fixed content in {str(path)} (paragraph breaks and code blocks)")
+            print(f"Fixed content in {str(path)} (paragraph breaks, list indents, and code blocks)")
             # Now lint the fixed content
             errors, warnings = linter.lint_file(str(path))
         else:
