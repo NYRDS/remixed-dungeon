@@ -96,6 +96,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
 
+import lombok.Setter;
+
 
 public class GameScene extends PixelScene {
 
@@ -806,11 +808,8 @@ public class GameScene extends PixelScene {
         }
     }
 
+    @Setter
     private static boolean forceAllowSpriteCreation = false;
-
-    public static void setForceAllowSpriteCreation(boolean allow) {
-        forceAllowSpriteCreation = allow;
-    }
 
     public static boolean mayCreateSprites() {
         return scene != null || forceAllowSpriteCreation;

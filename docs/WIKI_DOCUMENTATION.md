@@ -15,6 +15,7 @@ When creating wiki content, it's important to verify information against all cod
   - `python3 tools/py-tools/find_red_links.py`
   - `python3 tools/py-tools/scale_sprites_for_wiki.py`
   - `python3 tools/py-tools/check_broken_images.py`
+  - `python3 tools/py-tools/dokuwiki_linter.py`
   - And other Python scripts in the tools/py-tools directory
 
 Always include references to the source code when documenting game mechanics, as this allows other contributors to verify and update information as the game evolves. For example:
@@ -347,6 +348,7 @@ Tables in DokuWiki are created using carets and pipes:
 - Horizontal rule: Four or more dashes `----`
 - Force newline: `\\`
 - Prevent formatting: `<nowiki>**text**</nowiki>`
+- Paragraph breaks: Remember that a single newline won't create a newline in the rendered text; always use double newline when new paragraphs are required
 
 ## Key Information Sources in Game Code
 
@@ -1080,7 +1082,30 @@ The project includes additional scripts to help maintain and improve wiki qualit
   - **Verbose output**: Shows detailed status for each link being checked
 - **Output**: Summary showing total valid/broken links, and detailed list of any broken links found
 
-### 9. Language Link Consistency Checker (`check_language_links.py`)
+### 9. DokuWiki Linter (`dokuwiki_linter.py`)
+- **Location**: `tools/py-tools/dokuwiki_linter.py`
+- **Purpose**: Validates DokuWiki pages against the standards defined in WIKI_DOCUMENTATION.md for the Remixed Dungeon project
+- **Usage**:
+  - Lint a single file: `python3 tools/py-tools/dokuwiki_linter.py path/to/wiki_page.txt`
+  - Lint a directory: `python3 tools/py-tools/dokuwiki_linter.py path/to/wiki/directory`
+  - Fix trivial issues: `python3 tools/py-tools/dokuwiki_linter.py path/to/wiki_page.txt --fix`
+  - Fix all files in a directory recursively: `python3 tools/py-tools/dokuwiki_linter.py path/to/wiki/directory --fix`
+  - With JSON output: `python3 tools/py-tools/dokuwiki_linter.py path/to/wiki_page.txt --format json`
+- **Benefit**: Ensures wiki pages follow proper formatting, naming conventions, and structural standards
+- **Features**:
+  - **Filename validation**: Checks that filenames are lowercase with underscores and use proper suffixes (_mob, _item, _spell, etc.)
+  - **Header validation**: Verifies headers follow the format `====== Page Title ======`
+  - **Link validation**: Checks internal links use lowercase names with proper namespace
+  - **Image validation**: Validates image names follow lowercase convention and proper format
+  - **Image existence check**: Verifies that referenced images actually exist in the wiki-data/media directory
+  - **Tag validation**: Ensures tags follow the correct format `{{tag> ... }}`
+  - **Paragraph validation**: Checks for proper paragraph breaks and formatting
+  - **List validation**: Checks that list items are properly indented (with at least 2 spaces before * or -)
+  - **Fix functionality**: Can automatically fix trivial issues like paragraph breaks
+  - **Entity suffix validation**: Verifies proper suffixes are used for different entity types
+- **Output**: Lists errors and warnings found in the wiki pages, with exit code 1 if errors are found
+
+### 10. Language Link Consistency Checker (`check_language_links.py`)
 - **Location**: `tools/py-tools/check_language_links.py`
 - **Purpose**: Verifies that all internal links on a wiki page are in the same language as the page itself, with the exception of language links to the same page in other languages which should be placed at the bottom of the page
 - **Usage**:
@@ -1120,6 +1145,7 @@ These tools help automate wiki maintenance by identifying linking patterns and p
 - Use `tools/py-tools/find_red_links.py` to periodically scan for broken or incorrect links
 - Use the merge script to handle any future duplicate files that may be created
 - Use `pick_random_wiki_pages.sh` to randomly select wiki pages for review or editing
+- Use `tools/py-tools/dokuwiki_linter.py` to validate wiki pages against documentation standards
 - Implement automated checking in development workflow to catch naming convention violations
 
 ### Verification Steps

@@ -14,17 +14,26 @@ import com.watabou.utils.Bundle;
 
 import java.util.Arrays;
 
+import lombok.Getter;
+import lombok.Setter;
 import lombok.SneakyThrows;
 
 public class Blob extends Actor implements NamedEntityKind {
 
-	private int volume;
+    //GLog.debug("%s blob %d", getEntityKind(), volume);
+    @Setter
+    @Getter
+    private int volume;
 
 	public    int[] cur;
 	protected int[] off;
 
-	static private int width;
-	static private int height;
+	@Getter
+    @Setter
+    static private int width;
+	@Getter
+    @Setter
+    static private int height;
 
 	public BlobEmitter emitter;
 
@@ -183,7 +192,6 @@ public class Blob extends Actor implements NamedEntityKind {
 		return null;
 	}
 
-	@SuppressWarnings("unchecked")
 	@SneakyThrows
 	public static <T extends Blob> T seed(int cell, int amount, Class<T> type) {
 		return seed(Dungeon.level, cell, amount, type);
@@ -203,23 +211,7 @@ public class Blob extends Actor implements NamedEntityKind {
 		return gas;
 	}
 
-	public static void setWidth(int val) {
-		width = val;
-	}
-
-	public static void setHeight(int val) {
-		height = val;
-	}
-
-	public static int getWidth() {
-		return width;
-	}
-
-	public static int getHeight() {
-		return height;
-	}
-
-	public static int getLength() {
+    public static int getLength() {
 		return width * height;
 	}
 
@@ -239,12 +231,4 @@ public class Blob extends Actor implements NamedEntityKind {
 		}
 	}
 
-	public int getVolume() {
-		return volume;
-	}
-
-	public void setVolume(int volume) {
-		//GLog.debug("%s blob %d", getEntityKind(), volume);
-		this.volume = volume;
-	}
 }

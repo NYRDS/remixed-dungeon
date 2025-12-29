@@ -11,8 +11,19 @@ echo
 
 while true; do
     # Print current time and run the command
+
     git clean -xfd
     git reset --hard
+
+    cd wiki-data || { echo "Failed to change to wiki-data directory"; exit 1; }
+
+    git clean -xfd
+    git reset --hard
+    git checkout master
+    git pull origin master
+
+    cd ..
+
     echo "[$(date)] Running command: $COMMAND"
     eval 'time $COMMAND'
 
@@ -22,6 +33,40 @@ while true; do
         echo "[$(date)] Command failed with exit status: $CMD_STATUS"
     else
         echo "[$(date)] Command completed successfully"
+
+        # Change to wiki-data directory
+        cd wiki-data || { echo "Failed to change to wiki-data directory"; exit 1; }
+
+        # Run the dokuwiki linter with fix mode
+        echo "[$(date)] Running dokuwiki linter with fix mode..."
+        python3 ../tools/py-tools/dokuwiki_linter.py . --fix
+
+        # Check for changes in git
+        if [[ -n $(git status --porcelain) ]]; then
+            echo "[$(date)] Changes detected, committing and pushing..."
+
+            # Add all changes
+            git add .
+
+            # Commit with a descriptive message
+            git commit -m "Auto-fix: Apply dokuwiki linter fixes
+
+            Automated commit to apply fixes from dokuwiki linter."
+
+            # Push changes to the current branch
+            git push origin HEAD
+
+            if [ $? -eq 0 ]; then
+                echo "[$(date)] Changes committed and pushed successfully"
+            else
+                echo "[$(date)] Failed to push changes"
+            fi
+        else
+            echo "[$(date)] No changes detected after linting"
+        fi
+
+        # Return to the original directory
+        cd ..
     fi
 
     echo "[$(date)] Sleeping for 1 hour (3600 seconds)..."

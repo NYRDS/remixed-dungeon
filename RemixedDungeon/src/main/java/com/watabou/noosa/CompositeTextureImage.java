@@ -43,4 +43,8 @@ public class CompositeTextureImage extends Image {
 	public void clearLayers() {
 		mLayers.clear();
 	}
+
+	public ArrayList<Texture> getLayers() {
+		return mLayers;
+	}
 }

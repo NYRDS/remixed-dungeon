@@ -672,11 +672,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public int defenseProc(Char enemy, int baseDamage) {
         int dr = defenceRoll(enemy);
 
-        if (!enemySeen && enemy.getSubClass() == HeroSubClass.ASSASSIN) {
-            baseDamage += Random.Int(1, baseDamage);
-            Wound.hit(this);
-        }
-
         final int[] damage = {baseDamage - dr};
 
         forEachBuff(b -> damage[0] = b.defenceProc(this, enemy, damage[0]));

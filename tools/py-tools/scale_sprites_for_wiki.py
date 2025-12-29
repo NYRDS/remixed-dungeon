@@ -167,18 +167,70 @@ def upscale_and_enhance_sprite(input_path, output_path, scale_factor=8, bg_color
 
 def convert_camel_case_to_snake_case(name):
     """
-    Convert CamelCase name to snake_case.
+    Convert CamelCase or ALLCAPS name to snake_case.
 
     Args:
-        name (str): The CamelCase name to convert
+        name (str): The CamelCase or ALLCAPS name to convert
 
     Returns:
         str: The snake_case name
     """
     import re
+
+    # Handle names with dots by splitting on dots and converting each part
+    if '.' in name:
+        parts = name.split('.')
+        converted_parts = [convert_single_part(part) for part in parts]
+        return '_'.join(converted_parts).lower()
+
+    # If the name is already in snake_case format (contains underscores), just return lowercase
+    if '_' in name:
+        return name.lower()
+
+    # Check if the entire name is in ALLCAPS (with no lowercase letters)
+    if name.isupper():
+        return name.lower()
+
+    # Handle CamelCase patterns
     # Handle special cases where there are multiple uppercase letters together
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
-    return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower()
+    s2 = re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1)
+
+    # Handle consecutive uppercase letters followed by lowercase (e.g., "HTMLParser" -> "HTML_Parser")
+    s3 = re.sub('([A-Z]+)([A-Z][a-z])', r'\1_\2', s2)
+
+    return s3.lower()
+
+
+def convert_single_part(part):
+    """
+    Convert a single CamelCase part to snake_case.
+
+    Args:
+        part (str): A single CamelCase part to convert
+
+    Returns:
+        str: The snake_case part
+    """
+    import re
+
+    # If the part is already in snake_case format (contains underscores), just return it
+    if '_' in part:
+        return part
+
+    # Check if the entire part is in ALLCAPS (with no lowercase letters)
+    if part.isupper():
+        return part
+
+    # Handle CamelCase patterns
+    # Handle special cases where there are multiple uppercase letters together
+    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', part)
+    s2 = re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1)
+
+    # Handle consecutive uppercase letters followed by lowercase (e.g., "HTMLParser" -> "HTML_Parser")
+    s3 = re.sub('([A-Z]+)([A-Z][a-z])', r'\1_\2', s2)
+
+    return s3
 
 
 def get_entity_type_and_name(filename):
@@ -186,7 +238,7 @@ def get_entity_type_and_name(filename):
     Extract entity type and name from the current filename format.
 
     Args:
-        filename (str): The current filename (e.g., 'mob_Tengu.png')
+        filename (str): The current filename (e.g., 'mob_Tengu.png', 'item_Sorrowmoss.Seed.png')
 
     Returns:
         tuple: (entity_type, entity_name) or (None, None) if format doesn't match
@@ -194,7 +246,8 @@ def get_entity_type_and_name(filename):
     import re
     # Match patterns like: mob_Tengu.png, item_Ankh.png, spell_Heal.png, etc.
     # Also handle levelObject_EntityName.png format
-    pattern = r'^(mob|item|spell|buff|hero|npc|level|config|mechanic|skill|talent|trap|script|level_object)_([^.]+)\.(.+)$'
+    # Updated to handle entity names with dots: item_Sorrowmoss.Seed.png -> item, Sorrowmoss.Seed, png
+    pattern = r'^(mob|item|spell|buff|hero|npc|level|config|mechanic|skill|talent|trap|script|level_object)_(.+)\.(\w+)$'
     match = re.match(pattern, filename)
 
     if match:
@@ -204,7 +257,7 @@ def get_entity_type_and_name(filename):
         return entity_type, entity_name, extension
 
     # Handle the levelObject naming convention (without underscore)
-    level_object_pattern = r'^(levelObject)_([^.]+)\.(.+)$'
+    level_object_pattern = r'^(levelObject)_(.+)\.(\w+)$'
     level_object_match = re.match(level_object_pattern, filename)
 
     if level_object_match:
