@@ -202,6 +202,11 @@ When entities share the same name across different types (like the Lich boss and
 - For same-namespace links, use: `[[page_name|Display Text]]`
 - Avoid linking to capitalized file names that no longer exist
 
+### Language Consistency
+- All internal links on a page should lead to pages in the same language
+- The only exception is links to the same page in other languages, which should be placed at the bottom of the page
+- For example, a Russian wiki page may link to English versions of the same content at the bottom of the page, but not within the main content
+
 ### Cross-references
 - When linking to related pages, ensure the target page exists in lowercase format
 - Use descriptive display text that clarifies the link's purpose
@@ -1074,6 +1079,18 @@ The project includes additional scripts to help maintain and improve wiki qualit
   - **Error status**: Returns error code 1 if broken links are found, 0 if all links are valid
   - **Verbose output**: Shows detailed status for each link being checked
 - **Output**: Summary showing total valid/broken links, and detailed list of any broken links found
+
+### 9. Language Link Consistency Checker (`check_language_links.py`)
+- **Location**: `tools/py-tools/check_language_links.py`
+- **Purpose**: Verifies that all internal links on a wiki page are in the same language as the page itself, with the exception of language links to the same page in other languages which should be placed at the bottom of the page
+- **Usage**:
+  - Check all pages: `python3 tools/py-tools/check_language_links.py`
+  - Check specific language pages: `python3 tools/py-tools/check_language_links.py --language ru`
+  - Check specific page: `python3 tools/py-tools/check_language_links.py --page ru:rpd:warrior_mob`
+  - Check with verbose output: `python3 tools/py-tools/check_language_links.py --verbose`
+- **Language Detection**: The script assumes `ru:` as Russian and treats the absence of a language code at the top level as English
+- **Benefit**: Ensures language consistency across the wiki, preventing users from being unexpectedly redirected to content in a different language
+- **Output**: Reports any language consistency violations found, including the page name, target link, line number, and violation type
 
 These tools help automate wiki maintenance by identifying linking patterns and potential improvements that would be difficult to track manually. The enhanced `find_red_links.py` now provides multiple analysis functions in a single tool to reduce duplication.
 
