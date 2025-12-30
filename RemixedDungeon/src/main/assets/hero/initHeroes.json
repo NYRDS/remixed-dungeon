@@ -221,6 +221,15 @@
     "magicAffinity": "Priest"
   },
   "DOCTOR": {
+    "weapon": {
+      "kind": "BoneSaw",
+      "identified": true
+    },
+    "items": [
+      {
+        "kind": "PlagueDoctorMask"
+      }
+    ],
     "knownItems": [
       {
         "kind": "PotionOfHealing"

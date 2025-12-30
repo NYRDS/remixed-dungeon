@@ -9,6 +9,7 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Doom;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Heap;
@@ -51,7 +52,7 @@ public class ToxicGas extends Blob implements Doom {
 	
 	private void poison( int pos ) {
 		int levelDamage = 5 + Dungeon.depth * 5;
-		
+
 		Char ch = Actor.findChar( pos );
 		if (ch != null) {
 			int damage = (ch.ht() + levelDamage) / 40;
@@ -60,8 +61,17 @@ public class ToxicGas extends Blob implements Doom {
 			}
 			
 			ch.damage( damage, this );
+			Char hero = Dungeon.hero;
+
+			// Check if the character died from this toxic gas damage and if the hero is a Doctor
+			if (!ch.isAlive() && ch != hero) {
+				// If the hero is a Doctor class, heal them for 1 HP per enemy killed by toxic gas
+				if (hero.getHeroClass() == HeroClass.DOCTOR) {
+					hero.heal(1);
+				}
+			}
 		}
-		
+
 		Heap heap = Dungeon.level.getHeap( pos );
 		if (heap != null) {
 			heap.poison();

@@ -73,6 +73,7 @@ import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Wound;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
@@ -452,11 +453,24 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
             int dmg = damageRoll();
 
+            // Check for critical hit - when attack roll significantly exceeds defense roll
+            boolean isCriticalHit = checkCriticalHit(enemy);
+
+            // Apply critical hit bonus if applicable
+            if (isCriticalHit) {
+                dmg = (int) (dmg * 1.5f); // 50% damage bonus for critical hits
+            }
+
             int effectiveDamage = Math.max(dmg, 0);
 
             effectiveDamage = attackProc(enemy, effectiveDamage);
             effectiveDamage = enemy.defenseProc(this, effectiveDamage);
             enemy.damage(effectiveDamage, this);
+
+            // Handle critical hit effects for Doctor class
+            if (isCriticalHit &&  this.getHeroClass() == HeroClass.DOCTOR) {
+                dropExtraParts(enemy);
+            }
 
             if (effectiveDamage > 0) {
                 for (Item item : getBelongings()) {
@@ -2325,5 +2339,38 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public WndBag.Mode buyMode(Char chr) {
         return (WndBag.Mode) getScript().run("_buyMode", chr).optuserdata(WndBag.Mode.class, WndBag.Mode.ALL);
+    }
+
+    // Check if this attack is a critical hit based on the difference between attack and defense rolls
+    private boolean checkCriticalHit(Char enemy) {
+        // Calculate attack and defense skills
+        int attackSkill = attackSkill(enemy);
+        int defenseSkill = enemy.defenseSkill(this);
+
+        // Calculate the rolls that were used for the hit check
+        float acuRoll = Random.Float(attackSkill);
+        float defRoll = Random.Float(defenseSkill);
+
+        // A critical hit occurs when the attack roll significantly exceeds the defense roll
+        // This is a simplified approach - a critical hit when the attack roll is more than 1.5x the defense roll
+        return acuRoll > defRoll * 2f;
+    }
+
+    // Drop extra parts when the Doctor scores a critical hit
+    private void dropExtraParts(Char enemy) {
+        // Create random harvestable items to drop
+        String[] harvestItems = {"ToxicGland", "RottenOrgan", "BoneShard", "VileEssence"};
+        String randomItem = Random.element(harvestItems);
+
+        try {
+            Item item = ItemFactory.itemByName(randomItem);
+            if (item.valid()) {
+                level().animatedDrop(item, enemy.getPos());
+
+            }
+        } catch (Exception e) {
+            // If the item doesn't exist, skip dropping it
+            GLog.debug("Could not create harvest item: " + randomItem);
+        }
     }
 }

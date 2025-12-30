@@ -50,6 +50,11 @@ return item.init{
 
     attackProc        = function(self, item, attacker, defender, damage)
         RPD.affectBuff(defender,"Bleeding",3)
+
+        if defender.paralysed and attacker:getHeroClass():getEntityKind() == "DOCTOR" then
+            return damage * 1.5  -- 50% damage bonus against paralyzed foes
+        end
+
         return damage
     end,
 
