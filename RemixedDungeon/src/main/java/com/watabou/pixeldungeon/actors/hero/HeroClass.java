@@ -70,7 +70,7 @@ import lombok.SneakyThrows;
 import lombok.val;
 
 
-public enum HeroClass implements CharModifier {
+public enum HeroClass implements CharModifier, NamedEntityKind {
 
     NONE(null, ClassArmor.class),
     WARRIOR(R.string.HeroClass_War, WarriorArmor.class),
@@ -486,5 +486,10 @@ public enum HeroClass implements CharModifier {
             return 1;
         }
         return 0;
+    }
+
+    @Override
+    public String getEntityKind() {
+        return name();
     }
 }
