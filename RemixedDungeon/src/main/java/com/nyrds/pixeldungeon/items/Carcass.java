@@ -19,6 +19,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Wound;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Sungrass;
@@ -143,9 +144,48 @@ public class Carcass extends Item implements Doom {
             chr.heal(src.ht()/10, this);
 
         } else if (action.equals(AC_DISSECT)) {
-            Wound.hit(getPos());
+            dissect(chr);
         } else {
             super._execute(chr, action);
+        }
+    }
+
+    private void dissect(Char chr) {
+        var heap = getHeap();
+        if (heap == null) {
+            GLog.i("The dissection fails.");
+            return;
+        }
+
+        Wound.hit(heap.pos);
+
+        // Create random harvestable items to drop
+        String[] harvestItems = {"ToxicGland", "RottenOrgan", "BoneShard", "VileEssence"};
+
+        // Determine how many items to get based on the source mob's HP (higher HP = more items)
+        int itemCount = Math.max(1, src.ht() / 20); // At least 1, scales with mob HP
+
+        int itemsObtained = 0;
+        for (int i = 0; i < itemCount; i++) {
+            String randomItem = harvestItems[(int)(Math.random() * harvestItems.length)];
+
+            try {
+                Item item = ItemFactory.itemByName(randomItem);
+                if (item.valid()) {
+                    chr.level().animatedDrop(item, heap.pos);
+                    itemsObtained++;
+                }
+            } catch (Exception e) {
+                // If there's an error creating the item, continue to the next iteration
+                continue;
+            }
+        }
+
+        if (itemsObtained > 0) {
+            String itemText = itemsObtained == 1 ? "item" : "items";
+            GLog.i(Utils.format(R.string.Carcass_DissectResult, src.getName(), itemsObtained, itemText));
+        } else {
+            GLog.i(Utils.format(R.string.Carcass_DissectFailed, src.getName()));
         }
     }
 
