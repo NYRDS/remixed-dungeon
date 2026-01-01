@@ -28,9 +28,9 @@ Always include references to the source code when documenting game mechanics, as
 - Reference Lua scripts like `RemixedDungeon/src/main/assets/scripts/spells/heal.lua`
 - Reference JSON configuration files like `RemixedDungeon/src/main/assets/levelsDesc/Bestiary.json`
 
-## Russian Localization
+## Localization for Multiple Languages
 
-The Remixed Dungeon game has Russian localization available in the string resource files. When creating or updating Russian wiki pages, use `RemixedDungeon/src/main/res/values-ru/strings_all.xml` as the authoritative source for text content. This file contains all localized Russian strings used in the game including:
+The Remixed Dungeon game has localization available in multiple languages in the string resource files. When creating or updating wiki pages for a specific language, use the corresponding `strings_all.xml` file as the authoritative source for text content. These files contain all localized strings used in the game including:
 
 - Item names and descriptions
 - Mob names and descriptions
@@ -38,7 +38,60 @@ The Remixed Dungeon game has Russian localization available in the string resour
 - UI messages and prompts
 - Game mechanics descriptions
 
-For Russian wiki pages located in the `wiki-data/pages/ru/` directory, ensure consistency with the official Russian translation provided in this file. This ensures that wiki content matches the in-game experience for Russian-speaking players.
+### Available Languages and Their String Resource Files
+
+**Chinese (Simplified)**: `RemixedDungeon/src/main/res/values-zh-rCN/strings_all.xml`
+For Chinese wiki pages located in the `wiki-data/pages/cn/` directory, ensure consistency with the official Chinese translation provided in this file.
+
+**Chinese (Traditional)**: `RemixedDungeon/src/main/res/values-zh-rTW/strings_all.xml`
+For Traditional Chinese wiki pages located in the `wiki-data/pages/zh/` directory, ensure consistency with the official Traditional Chinese translation provided in this file.
+
+**Russian**: `RemixedDungeon/src/main/res/values-ru/strings_all.xml`
+For Russian wiki pages located in the `wiki-data/pages/ru/` directory, ensure consistency with the official Russian translation provided in this file.
+
+**Spanish**: `RemixedDungeon/src/main/res/values-es/strings_all.xml`
+For Spanish wiki pages located in the `wiki-data/pages/es/` directory, ensure consistency with the official Spanish translation provided in this file.
+
+**French**: `RemixedDungeon/src/main/res/values-fr/strings_all.xml`
+For French wiki pages located in the `wiki-data/pages/fr/` directory, ensure consistency with the official French translation provided in this file.
+
+**German**: `RemixedDungeon/src/main/res/values-de/strings_all.xml`
+For German wiki pages located in the `wiki-data/pages/de/` directory, ensure consistency with the official German translation provided in this file.
+
+**Portuguese (Brazilian)**: `RemixedDungeon/src/main/res/values-pt-rBR/strings_all.xml`
+For Portuguese wiki pages located in the `wiki-data/pages/pt/` directory, ensure consistency with the official Brazilian Portuguese translation provided in this file.
+
+**Italian**: `RemixedDungeon/src/main/res/values-it/strings_all.xml`
+For Italian wiki pages located in the `wiki-data/pages/it/` directory, ensure consistency with the official Italian translation provided in this file.
+
+**Japanese**: `RemixedDungeon/src/main/res/values-ja/strings_all.xml`
+For Japanese wiki pages located in the `wiki-data/pages/ja/` directory, ensure consistency with the official Japanese translation provided in this file.
+
+**Korean**: `RemixedDungeon/src/main/res/values-ko/strings_all.xml`
+For Korean wiki pages located in the `wiki-data/pages/ko/` directory, ensure consistency with the official Korean translation provided in this file.
+
+**Polish**: `RemixedDungeon/src/main/res/values-pl/strings_all.xml`
+For Polish wiki pages located in the `wiki-data/pages/pl/` directory, ensure consistency with the official Polish translation provided in this file.
+
+**Ukrainian**: `RemixedDungeon/src/main/res/values-uk/strings_all.xml`
+For Ukrainian wiki pages located in the `wiki-data/pages/uk/` directory, ensure consistency with the official Ukrainian translation provided in this file.
+
+**Hungarian**: `RemixedDungeon/src/main/res/values-hu/strings_all.xml`
+For Hungarian wiki pages located in the `wiki-data/pages/hu/` directory, ensure consistency with the official Hungarian translation provided in this file.
+
+**Turkish**: `RemixedDungeon/src/main/res/values-tr/strings_all.xml`
+For Turkish wiki pages located in the `wiki-data/pages/tr/` directory, ensure consistency with the official Turkish translation provided in this file.
+
+**Indonesian**: `RemixedDungeon/src/main/res/values-in/strings_all.xml`
+For Indonesian wiki pages located in the `wiki-data/pages/id/` directory, ensure consistency with the official Indonesian translation provided in this file.
+
+**Malay**: `RemixedDungeon/src/main/res/values-ms/strings_all.xml`
+For Malay wiki pages located in the `wiki-data/pages/ms/` directory, ensure consistency with the official Malay translation provided in this file.
+
+**Greek**: `RemixedDungeon/src/main/res/values-el/strings_all.xml`
+For Greek wiki pages located in the `wiki-data/pages/el/` directory, ensure consistency with the official Greek translation provided in this file.
+
+Using the appropriate string resource file for each language ensures that wiki content matches the in-game experience for speakers of that language.
 
 ## Wiki Maintenance Rules
 
