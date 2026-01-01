@@ -1,6 +1,6 @@
 Bu açık kaynaklı piksel grafikli roguelike bir oyundur
 
-Uzun zaman önce küçük bir kasaba varmış. Mutlu bir hayat süren kasaba halkı o kadar fakirmiş ki hiçbiri tatil için ayıracak para bulamıyormuş. Ama herkesin tüm umutlarını yitirdiği gün, bir mucize gerçekleşmiş. Kasabanın zemini şiddetli bir şekilde sarsılmış ve on binlerce hilkat garibesini gün yüzüne çıkarmış. O güden itibaren hayatta kalan tüm kasaba halkı daima mutlu yaşamış. Neden mi? Çünkü zindan her türlü kahramanın ve maceracının dikkatini çekmiş. Masumları korumuşlar ve ciddi miktarlarda para harcayarak kasabanın ekonomisini güçlendirmişler.
+Uzun zaman önce küçük bir kasaba varmış. Mutlu bir hayat süren kasaba halkı o kadar fakirmiş ki hiçbiri tatil için ayıracak para bulamıyormuş. Ama herkesin tüm umutlarını yitirdiği gün, bir mucize gerçekleşmiş. Kasabanın zemini şiddetli bir şekilde sarsılmış ve on binlerce hilkat garibesini gün yüzüne çıkarmış. O günden itibaren hayatta kalan tüm kasaba halkı daima mutlu yaşamış. Neden mi? Çünkü zindan her türlü kahramanın ve maceracının dikkatini çekmiş. Masumları korumuşlar ve ciddi miktarlarda para harcayarak kasabanın ekonomisini güçlendirmişler.
 Ve kasaba, can vermiş maceracıların ve zavallı ruhlarının dolup taştığı bu zindanın tepesinde durdukça, zenginliğine zenginlik katmaya devam edecek.
 
 Oyun özellikleri:
