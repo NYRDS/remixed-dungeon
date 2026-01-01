@@ -1493,7 +1493,14 @@ When updating and maintaining wiki pages, follow this systematic workflow to ens
 - Push the updated wiki pages to the remote repository
 - Verify that all changes are properly reflected on the wiki
 
-### 7. Ongoing Maintenance
+### 7. Creating Pages in Other Languages
+- When creating wiki pages in languages other than English, use the English pages as the first step and reference them for structure and content
+- Translate the content from the English version while adapting it to the target language's cultural context and linguistic nuances
+- Ensure all game mechanics, stats, and technical information remain accurate during translation
+- Follow the same formatting and structural guidelines as the English pages
+- Use the appropriate string resource files for the target language (see "Localization for Multiple Languages" section)
+
+### 8. Ongoing Maintenance
 - Regularly repeat this workflow to maintain accuracy over time
 - Use automated tools like `find_red_links.py` to identify broken links
 - Update the documentation itself when new patterns or procedures emerge
