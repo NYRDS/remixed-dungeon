@@ -30,14 +30,14 @@ def find_unused_images_improved(wiki_data_dir):
             content = file_path.read_text(encoding='utf-8', errors='ignore')
             
             # Find all image references in wiki format
-            # Pattern 1: {{ rpd:images:image_name.png|... }}
-            matches1 = re.findall(r'\{\{\s*rpd:images:([^\s|}]+)', content)
-            
-            # Pattern 2: {{rpd:images:image_name.png|...}} (without spaces)
-            matches2 = re.findall(r'\{\{rpd:images:([^\s|}]+)', content)
-            
-            # Pattern 3: {{ rpd:images:image_name.png}} (without alt text)
-            matches3 = re.findall(r'\{\{\s*rpd:images:([^\s}]+)', content)
+            # Pattern 1: {{ rpd:images:image_name.png|... }}, {{ ru:rpd:images:image_name.png|... }}, {{ cn:rpd:images:image_name.png|... }}, {{ es:rpd:images:image_name.png|... }}, {{ pt:rpd:images:image_name.png|... }}
+            matches1 = re.findall(r'\{\{\s*(?:[a-zA-Z0-9_]+:)*rpd:images:([^\s|}]+)', content)
+
+            # Pattern 2: {{rpd:images:image_name.png|...}} (without spaces), {{ru:rpd:images:image_name.png|...}}, {{es:rpd:images:image_name.png|...}}, {{pt:rpd:images:image_name.png|...}}
+            matches2 = re.findall(r'\{\{(?:[a-zA-Z0-9_]+:)*rpd:images:([^\s|}]+)', content)
+
+            # Pattern 3: {{ rpd:images:image_name.png}} (without alt text), {{ ru:rpd:images:image_name.png}}, {{ es:rpd:images:image_name.png}}, {{ pt:rpd:images:image_name.png}}
+            matches3 = re.findall(r'\{\{\s*(?:[a-zA-Z0-9_]+:)*rpd:images:([^\s}]+)', content)
             
             # Combine all matches
             all_matches = matches1 + matches2 + matches3
@@ -63,8 +63,8 @@ def find_unused_images_improved(wiki_data_dir):
     return list(unused_images)
 
 def main():
-    wiki_data_dir = "/home/mike/StudioProjects/remixed-dungeon_fix/wiki-data"
-    
+    wiki_data_dir = "wiki-data"
+
     print("Looking for unused image files (improved detection)...")
     unused_images = find_unused_images_improved(wiki_data_dir)
     

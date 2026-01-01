@@ -10,6 +10,18 @@ When creating wiki content, it's important to verify information against all cod
 - **JSON configuration files**: Game data, levels, objects, and other configurations are defined in various JSON files across the `RemixedDungeon/src/main/assets/` directory
 - **String resources**: Localized game text is stored in string resource files, with Russian strings specifically in `RemixedDungeon/src/main/res/values-ru/strings_all.xml` which serves as the source of truth for Russian wiki pages
 
+## Wiki Namespace Structure
+
+The Remixed Dungeon wiki uses a namespace system to organize content by language and content type. The primary namespace for English content is `en:rpd:` which contains all English Remixed Dungeon game documentation.
+
+### Namespace Migration (Historical Context)
+- **Previous Structure**: Content was originally stored in the `rpd:` namespace (e.g., `rpd:warrior_class.txt`, `rpd:potion_of_healing_item.txt`)
+- **Current Structure**: All English content has been moved to the `en:rpd:` namespace (e.g., `en:rpd:warrior_class.txt`, `en:rpd:potion_of_healing_item.txt`)
+- **Images**: All game sprites and images remain in the `media:rpd:images:` namespace and are referenced from pages using `{{ rpd:images:image_name.png|Alt Text }}` syntax
+- **Migration Date**: All rpd: pages were moved to en:rpd: namespace in December 2025
+- **Link Updates**: All internal wiki links were automatically updated to point to the new en:rpd: namespace locations
+- **Backward Compatibility**: Old rpd: namespace links no longer exist; all content should now be accessed through the en:rpd: namespace
+
 ### Python Script Execution
 - When running Python tools for wiki maintenance, use `python3`:
   - `python3 tools/py-tools/find_red_links.py`
@@ -158,9 +170,9 @@ When entities share the same name across different types (like the Lich boss and
    - For NPCs: "The **Necromancer** is a special non-player character found in..."
 
 4. **Cross-References**: When entities are related, link them appropriately:
-   - The Lich subclass page should link to the Lich mob page: `[[rpd:lich_mob|Lich (Mob)]]`
-   - The Lich mob page should link to the Lich subclass: `[[rpd:lich_subclass|Lich (Subclass)]]`
-   - The Necromancer class page should reference the NPC: `[[rpd:necromancer_npc|Necromancer NPC]]`
+   - The Lich subclass page should link to the Lich mob page: `[[en:rpd:lich_mob|Lich (Mob)]]`
+   - The Lich mob page should link to the Lich subclass: `[[en:rpd:lich_subclass|Lich (Subclass)]]`
+   - The Necromancer class page should reference the NPC: `[[en:rpd:necromancer_npc|Necromancer NPC]]`
 
 ### Content Organization
 - Each wiki page should have exactly one file in the correct lowercase naming format
@@ -186,7 +198,7 @@ When entities share the same name across different types (like the Lich boss and
 
 ### Formatting and Style
 - Use bullet points for lists of properties, effects, or characteristics
-- Include code-style references when mentioning other game elements (e.g., `[[rpd:sword_item|Sword]]`)
+- Include code-style references when mentioning other game elements (e.g., `[[en:rpd:sword_item|Sword]]`)
 - Present information in order of importance to the player
 - Provide examples where helpful for understanding complex mechanics
 
@@ -199,7 +211,7 @@ When entities share the same name across different types (like the Lich boss and
 ## Internal Linking Standards
 
 ### Link Format
-- All internal links must use lowercase page names in the format: `[[rpd:page_name|Display Text]]`
+- All internal links must use lowercase page names in the format: `[[en:rpd:page_name|Display Text]]`
 - For same-namespace links, use: `[[page_name|Display Text]]`
 - Avoid linking to capitalized file names that no longer exist
 
@@ -320,7 +332,7 @@ DokuWiki uses multiple equal signs to create headers of different levels:
 
 ### Links
 - External links: Either just type the URL like `https://www.google.com` or use the format `[[https://www.google.com|Link Text]]`
-- Internal links: `[[wiki_page_name|Display Text]]`
+- Internal links: `[[wiki_page_name|Display Text]]` or `[[en:rpd:page_name|Display Text]]` for Remixed Dungeon content
 - Email links: `[[mailto:email@example.com|Email Me]]`
 - Footnotes: `This is a sentence with a footnote((This is the footnote content))`
 
@@ -814,6 +826,7 @@ Some items and mobs use advanced sprite configurations defined in JSON files in 
 - Use the `tools/py-tools/find_red_links.py` script to identify gaps in wiki coverage
 - Generate code maps to understand relationships between game elements
 - Use static analysis to identify all subclasses of important classes (e.g., all items inherit from Item)
+- Note that the find_red_links.py script now identifies links to the new `en:rpd:` namespace rather than the old `rpd:` namespace
 
 ### 2. Class Hierarchy Analysis
 - Identify all subclasses of base classes like `Item`, `Mob`, `Buff`, etc.
@@ -942,6 +955,7 @@ dot -Tpng fixed_wiki_map.dot -o wiki_map.png
 - Audit for duplicate content and merge as needed
 - Regularly validate that all image references are properly formatted and exist
 - Ensure all pages follow the naming conventions consistently
+- Note that the find_red_links.py script now checks for links to the new `en:rpd:` namespace rather than the old `rpd:` namespace
 
 ### Content Verification
 - Cross-reference all game information with actual game code and string resources
@@ -1353,6 +1367,10 @@ mr: namespace pages should follow this structure:
   * Include links to related mr namespace pages that connect to this entity (e.g., subclass linked to parent class, item linked to related spell, mob linked to related quest, etc.)
   * Format: [[mr:entity_name_type|Related Entity Name]]
 
+### Human-Readable Page Links
+- When creating human-readable wiki pages in the en:rpd: namespace, link to the corresponding mr: namespace page for technical details
+- Format: [[mr:entity_name_type|Technical Details]]
+
 Example with existing configuration:
 ====== Example Entity - Code References ======
 
@@ -1432,7 +1450,7 @@ When updating and maintaining wiki pages, follow this systematic workflow to ens
 ### 4. Wiki Improvement
 - Remove any incorrect information found during verification
 - Add missing information based on code analysis
-- Wikify content by adding appropriate internal links in the format `[[rpd:page_name|Display Text]]`
+- Wikify content by adding appropriate internal links in the format `[[en:rpd:page_name|Display Text]]`
 - Check and update backlinks to maintain navigation consistency
 - Add or update source code references to GitHub files
 - Include specific numerical values and mechanics as documented in the source code

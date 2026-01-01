@@ -163,7 +163,7 @@ def find_redirect_pages_by_naming_convention(wiki_dir):
     return redirect_patterns
 
 
-def update_links_in_page(page_path, old_page_name, new_page_name, namespace="rpd"):
+def update_links_in_page(page_path, old_page_name, new_page_name, namespace=None):
     """Update all links from old_page_name to new_page_name in a specific wiki page."""
     with open(page_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -171,12 +171,17 @@ def update_links_in_page(page_path, old_page_name, new_page_name, namespace="rpd
     # Define the patterns to match links to the old page name
     # This handles both [[namespace:old_name|Display Text]] and [[namespace:old_name]] formats
     # Using word boundaries to avoid partial matches in longer page names
-    patterns = [
-        # Matches [[namespace:old_name|Display Text]] or [[namespace:old_name]]
-        rf'\[\[({namespace}:)?{re.escape(old_page_name)}(\|[^[\]]*)?\]\]',
-        # Matches [[old_name|Display Text]] or [[old_name]] (without explicit namespace)
-        rf'\[\[{re.escape(old_page_name)}(\|[^[\]]*)?\]\]'
-    ]
+    patterns = []
+
+    if namespace:
+        # If namespace is specified, match only that namespace
+        patterns.append(rf'\[\[({namespace}:){re.escape(old_page_name)}(\|[^[\]]*)?\]\]')
+    else:
+        # If no namespace specified, match any namespace or no namespace
+        patterns.append(rf'\[\[([a-zA-Z0-9_]+:)?{re.escape(old_page_name)}(\|[^[\]]*)?\]\]')
+
+    # Always match links without namespace
+    patterns.append(rf'\[\[{re.escape(old_page_name)}(\|[^[\]]*)?\]\]')
 
     updated_content = content
     links_updated = 0
@@ -190,15 +195,17 @@ def update_links_in_page(page_path, old_page_name, new_page_name, namespace="rpd
         def replace_link(match):
             full_match = match.group(0)
             # Extract the namespace part if present
-            has_namespace = match.group(1) is not None
+            namespace_match = match.group(1) if match.group(1) else None
             # Extract the display text if present
             display_text_match = match.group(2) if match.group(2) else None
 
-            if has_namespace:
+            if namespace_match:
+                # Extract the actual namespace part (without the colon)
+                actual_namespace = namespace_match[:-1]  # Remove the colon
                 if display_text_match:
-                    return f'[[{namespace}:{new_page_name}{display_text_match}]]'
+                    return f'[[{actual_namespace}:{new_page_name}{display_text_match}]]'
                 else:
-                    return f'[[{namespace}:{new_page_name}]]'
+                    return f'[[{actual_namespace}:{new_page_name}]]'
             else:
                 if display_text_match:
                     return f'[[{new_page_name}{display_text_match}]]'

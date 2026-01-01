@@ -119,7 +119,7 @@ class DokuWikiLinter:
                 page_name = page_part[namespace_pos + 1:]
 
                 # Standard namespaces in Remixed Dungeon wiki
-                standard_namespaces = ['rpd', 'ru', 'code', 'playground', 'doku', 'wiki', 'wp']
+                standard_namespaces = ['rpd', 'ru', 'cn', 'es', 'pt', 'code', 'playground', 'doku', 'wiki', 'wp']
                 is_standard = (namespace in standard_namespaces or
                               namespace.startswith('mr'))
 
@@ -295,11 +295,11 @@ class DokuWikiLinter:
                         # Check for standard tags (lowercase, numbers, underscores, hyphens, Cyrillic)
                         if re.match(r'^[a-z0-9_\u0400-\u04FF-]+$', t):
                             continue
-                        # Check for allowed namespace formats: rpd, ru:rpd, ru:*, etc.
-                        elif t == 'rpd' or t.startswith('ru:'):
+                        # Check for allowed namespace formats: rpd, ru:rpd, cn:rpd, es:rpd, pt:rpd, ru:*, cn:*, es:*, pt:*, etc.
+                        elif t == 'rpd' or t.startswith('ru:') or t.startswith('cn:') or t.startswith('es:') or t.startswith('pt:'):
                             continue
                         # Check for internal DokuWiki format with leading colon like :rpd
-                        elif t.startswith(':') and (t[1:] == 'rpd' or t[1:].startswith('ru:')):
+                        elif t.startswith(':') and (t[1:] == 'rpd' or t[1:].startswith('ru:') or t[1:].startswith('cn:') or t[1:].startswith('es:') or t[1:].startswith('pt:')):
                             continue
                         else:
                             valid = False

@@ -30,8 +30,8 @@ def find_unused_images(wiki_data_dir):
             content = file_path.read_text(encoding='utf-8', errors='ignore')
             
             # Find all image references in wiki format
-            # Looking for patterns like {{ rpd:images:image_name.png|... }}
-            matches = re.findall(r'{{\s*rpd:images:([^|}]+)', content)
+            # Looking for patterns like {{ rpd:images:image_name.png|... }}, {{ ru:rpd:images:image_name.png|... }}, {{ cn:rpd:images:image_name.png|... }}
+            matches = re.findall(r'{{\s*(?:[a-zA-Z0-9_]+:)*rpd:images:([^|}]+)', content)
             
             for match in matches:
                 image_name = match.strip()
@@ -67,9 +67,12 @@ def find_unused_pages(wiki_data_dir):
             page_ref = str(rel_path).replace('.txt', '').replace(os.sep, ':')
             all_pages.add(page_ref)
             
-            # Also add with 'rpd:' prefix if it's in the rpd namespace
-            if page_ref.startswith('rpd:'):
-                all_pages.add(page_ref[4:])  # Without rpd: prefix
+            # Also add with namespace prefix if it's in a namespace (rpd, ru:rpd, cn:rpd, es:rpd, pt:rpd, etc.)
+            if ':' in page_ref:
+                # For multi-level namespaces like ru:rpd:page, cn:rpd:page, es:rpd:page, pt:rpd:page
+                parts = page_ref.split(':', 1)
+                if parts[0] in ['rpd', 'ru', 'cn', 'es', 'pt']:  # Add other language namespaces as needed
+                    all_pages.add(parts[1])  # Without namespace: prefix
     
     print(f"Found {len(all_pages)} total pages")
     
@@ -101,7 +104,13 @@ def find_unused_pages(wiki_data_dir):
     # Some links might be to non-wiki pages, so filter to only actual pages
     actual_linked = set()
     for link in linked_pages:
-        if link in all_pages or f"rpd:{link}" in all_pages:
+        # Check if the link exists as-is or with common namespace prefixes
+        if (link in all_pages or
+            f"rpd:{link}" in all_pages or
+            f"ru:{link}" in all_pages or
+            f"cn:{link}" in all_pages or
+            f"es:{link}" in all_pages or
+            f"pt:{link}" in all_pages):
             actual_linked.add(link)
     
     print(f"Found {len(actual_linked)} referenced pages that exist")
@@ -124,22 +133,22 @@ def find_unused_pages(wiki_data_dir):
     return actual_unlinked_pages
 
 def main():
-    wiki_data_dir = "/home/mike/StudioProjects/remixed-dungeon_fix/wiki-data"
-    
+    wiki_data_dir = "wiki-data"
+
     print("Looking for unused image files...")
     unused_images = find_unused_images(wiki_data_dir)
-    
+
     print("\n" + "="*60 + "\n")
-    
+
     print("Looking for unlinked pages...")
     unlinked_pages = find_unused_pages(wiki_data_dir)
-    
+
     print("\n" + "="*60 + "\n")
-    
+
     print(f"SUMMARY:")
     print(f"Unused images: {len(unused_images)}")
     print(f"Unlinked pages: {len(unlinked_pages)}")
-    
+
     return unused_images, unlinked_pages
 
 if __name__ == "__main__":
