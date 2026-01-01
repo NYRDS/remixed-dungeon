@@ -14,13 +14,6 @@ When creating wiki content, it's important to verify information against all cod
 
 The Remixed Dungeon wiki uses a namespace system to organize content by language and content type. The primary namespace for English content is `en:rpd:` which contains all English Remixed Dungeon game documentation.
 
-### Namespace Migration (Historical Context)
-- **Previous Structure**: Content was originally stored in the `rpd:` namespace (e.g., `rpd:warrior_class.txt`, `rpd:potion_of_healing_item.txt`)
-- **Current Structure**: All English content has been moved to the `en:rpd:` namespace (e.g., `en:rpd:warrior_class.txt`, `en:rpd:potion_of_healing_item.txt`)
-- **Images**: All game sprites and images remain in the `media:rpd:images:` namespace and are referenced from pages using `{{ rpd:images:image_name.png|Alt Text }}` syntax
-- **Migration Date**: All rpd: pages were moved to en:rpd: namespace in December 2025
-- **Link Updates**: All internal wiki links were automatically updated to point to the new en:rpd: namespace locations
-- **Backward Compatibility**: Old rpd: namespace links no longer exist; all content should now be accessed through the en:rpd: namespace
 
 ### Python Script Execution
 - When running Python tools for wiki maintenance, use `python3`:
@@ -1133,25 +1126,6 @@ The project includes additional scripts to help maintain and improve wiki qualit
 
 These tools help automate wiki maintenance by identifying linking patterns and potential improvements that would be difficult to track manually. The enhanced `find_red_links.py` now provides multiple analysis functions in a single tool to reduce duplication.
 
-## Migration Guidelines
-
-### For Existing Content
-- All capitalized files were merged into their lowercase counterparts during the migration
-- Any remaining capitalized files should be removed after confirming content was properly merged
-- Links pointing to capitalized file names have been updated to lowercase equivalents
-
-### For Naming Conflicts
-- Existing pages with ambiguous names should be evaluated for potential confusion
-- If a page exists for a hero subclass or class but shows mob sprite (like `shaman.txt`), consider:
-  - Creating separate page for the mob (e.g., `shaman_mob.txt`)
-  - Updating existing page to focus on hero class/subclass content
-  - Updating links to point to the appropriate page for each context
-
-### For New Content
-- Create all new pages using the lowercase naming convention
-- When creating content that references existing pages, use the correct lowercase link format
-- Follow the entity namespace separation guidelines to avoid future conflicts
-- If you find old capitalized links still in code or documentation, update them to lowercase format
 
 ## Tools and Automation
 
@@ -1191,9 +1165,6 @@ These tools help automate wiki maintenance by identifying linking patterns and p
 - Code reviewers should verify wiki changes adhere to these standards
 - Automated checks should be run as part of the build process where possible
 
-### Migration Tracking
-- A record of all merged files and their new locations is maintained for historical reference
-- Links from outside sources should be updated to reflect the new naming convention
 
 ## Verification of Wiki Documentation Against Code
 
