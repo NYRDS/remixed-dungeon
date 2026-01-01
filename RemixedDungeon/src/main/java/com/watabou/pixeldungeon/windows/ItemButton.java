@@ -118,6 +118,17 @@ class ItemButton extends ItemSlot {
                     case CARCASS:
                         enableItem=(item instanceof Carcass);
                         break;
+                    case ENTITY_NAMES:
+                        if (wndBag.getEntityNames() != null) {
+                            String itemEntityKind = item.getEntityKind();
+                            for (String entityName : wndBag.getEntityNames()) {
+                                if (itemEntityKind.equals(entityName)) {
+                                    enableItem = true;
+                                    break;
+                                }
+                            }
+                        }
+                        break;
                 }
                 enable(enableItem);
             }

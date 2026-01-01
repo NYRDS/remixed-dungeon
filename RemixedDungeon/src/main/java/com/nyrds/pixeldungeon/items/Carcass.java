@@ -20,12 +20,15 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.sprites.DummySprite;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndBag;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -144,7 +147,11 @@ public class Carcass extends Item implements Doom {
             chr.heal(src.ht()/10, this);
 
         } else if (action.equals(AC_DISSECT)) {
-            dissect(chr);
+            if (Dungeon.level.adjacent(chr.getPos(), getPos())) {
+                dissect(chr);
+            } else {
+                GLog.i("You need to be closer to dissect the carcass.");
+            }
         } else {
             super._execute(chr, action);
         }
@@ -187,6 +194,16 @@ public class Carcass extends Item implements Doom {
         } else {
             GLog.i(Utils.format(R.string.Carcass_DissectFailed, src.getName()));
         }
+    }
+
+    public static void selectItemByEntityNames(Char selector, String[] entityNames, WndBag.Listener callback) {
+        GameScene.selectItem(
+            selector,
+            callback,
+            WndBag.Mode.ENTITY_NAMES,
+            "Select an item",
+            entityNames
+        );
     }
 
     @LuaInterface

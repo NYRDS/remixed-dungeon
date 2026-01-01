@@ -1050,9 +1050,14 @@ public class GameScene extends PixelScene {
     }
 
     public static WndBag selectItem(Char selector, WndBag.Listener listener, WndBag.Mode mode, String title) {
+        selectItem(selector, listener, mode, title, null);
+        return WndBag.getInstance();
+    }
+
+    public static WndBag selectItem(Char selector, WndBag.Listener listener, WndBag.Mode mode, String title, String[] entityNames) {
         cancelCellSelector();
 
-        WndBag wnd = WndBag.lastBag(selector, listener, mode, title);
+        WndBag wnd = WndBag.lastBag(selector, listener, mode, title, entityNames);
         scene.add(wnd);
 
         return wnd;

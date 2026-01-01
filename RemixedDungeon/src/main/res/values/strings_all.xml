@@ -3020,5 +3020,17 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Mob_Attacking">Count this %s as dead!</string>
   <string name="BuffParam_Cooldown">Cooldown: %.2f</string>
   <string name="Challenges_Names_9">Amnesia</string>
-  <string name="Challenges_Descriptions_9">The Plague Doctor’s latest ’cure’ scrubbed your spatial memory. You can’t remember anything out of your direct sight.</string>
+  <string name="Challenges_Descriptions_9">The Plague Doctor\'s latest \'cure\' scrubbed your spatial memory. You can\'t remember anything out of your direct sight.</string>
+
+  <string name="ToxicGland_Name">Toxic Gland</string>
+  <string name="ToxicGland_Info">A toxic gland harvested from a defeated enemy. These glands are filled with potent toxins and can be used in alchemical processes.</string>
+  <string name="RottenOrgan_Name">Rotten Organ</string>
+  <string name="RottenOrgan_Info">A decomposing organ harvested from a defeated enemy. Despite its putrid state, it contains valuable compounds for alchemical processes.</string>
+  <string name="BoneShard_Name">Bone Shard</string>
+  <string name="BoneShard_Info">A sharp shard of bone harvested from a defeated enemy. These shards are surprisingly durable and useful in crafting.</string>
+  <string name="VileEssence_Name">Vile Essence</string>
+  <string name="VileEssence_Info">A concentrated essence of corruption harvested from a defeated enemy. This dark substance pulses with malevolent energy and is highly valued in alchemical processes.</string>
+  <string name="Carcass_DissectMessage">You dissect the carcass and obtain a %s.</string>
+  <string name="Carcass_DissectResult" formatted="false">From the %s you obtain %d harvest %s.</string>
+  <string name="Carcass_DissectFailed">You dissect the %s but find nothing of value.</string>
 </resources>

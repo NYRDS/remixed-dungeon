@@ -57,7 +57,8 @@ public class WndBag extends WndTabbed {
 		UPGRADABLE_WEAPON,
 		FOR_BUY,
 		ARROWS,
-		CARCASS
+		CARCASS,
+		ENTITY_NAMES
 	}
 
 	private static final int COLS_P	= 4;
@@ -74,6 +75,11 @@ public class WndBag extends WndTabbed {
 	@Getter
     private final Mode mode;
 	private final String title;
+	private final String[] entityNames;
+
+	public String[] getEntityNames() {
+		return entityNames;
+	}
 
 	protected int count;
 	protected int col;
@@ -93,19 +99,24 @@ public class WndBag extends WndTabbed {
 	private final Belongings stuff;
 
 	public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title) {
-		
+		this(stuff, bag, listener, mode, title, null);
+	}
+
+	public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title, String[] entityNames) {
+
 		super();
 
 		stuff.getOwner().interrupt();
 
 		nCols = RemixedDungeon.landscape() ? COLS_L : COLS_P;
 		nRows = (Belongings.BACKPACK_SIZE + 4 + 1) / nCols + ((Belongings.BACKPACK_SIZE + 4 + 1) % nCols > 0 ? 1 : 0);
-		
+
 		this.listener = listener;
 		this.mode = mode;
 		this.title = title;
+		this.entityNames = entityNames;
 		this.stuff = stuff;
-		
+
 		lastMode = mode;
 
 		if(bag==null) {
@@ -127,8 +138,8 @@ public class WndBag extends WndTabbed {
 		add( txtTitle );
 
 		placeItems( bag );
-		
-		resize( 
+
+		resize(
 			panelWidth,
 			(int) (SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + titleBottom + SLOT_MARGIN) );
 
@@ -167,27 +178,31 @@ public class WndBag extends WndTabbed {
 	}
 
 	public static WndBag lastBag(@NotNull Char owner, Listener listener, Mode mode, String title ) {
+		return lastBag(owner, listener, mode, title, null);
+	}
+
+	public static WndBag lastBag(@NotNull Char owner, Listener listener, Mode mode, String title, String[] entityNames) {
 
 		Belongings belongings = owner.getBelongings();
 
-		if (mode == lastMode && lastBag != null && 
+		if (mode == lastMode && lastBag != null &&
 			belongings.backpack.contains( lastBag )) {
-			
-			return new WndBag(belongings, lastBag, listener, mode, title );
-			
+
+			return new WndBag(belongings, lastBag, listener, mode, title, entityNames);
+
 		} else {
 			switch (mode) {
 				case WAND:
-					return new WndBag(belongings, belongings.getItem(WandHolster.class), listener, mode, title );
+					return new WndBag(belongings, belongings.getItem(WandHolster.class), listener, mode, title, entityNames);
 
 				case SEED:
-					return new WndBag(belongings, belongings.getItem(SeedPouch.class), listener, mode, title );
+					return new WndBag(belongings, belongings.getItem(SeedPouch.class), listener, mode, title, entityNames);
 
 				case ARROWS:
-					return new WndBag(belongings, belongings.getItem(Quiver.class), listener, mode, title );
+					return new WndBag(belongings, belongings.getItem(Quiver.class), listener, mode, title, entityNames);
 
 				default:
-					return new WndBag(belongings, belongings.backpack, listener, mode, title );
+					return new WndBag(belongings, belongings.backpack, listener, mode, title, entityNames);
 			}
 		}
 	}
