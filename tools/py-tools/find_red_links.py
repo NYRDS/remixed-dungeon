@@ -541,7 +541,7 @@ def main():
     parser = argparse.ArgumentParser(description="Analyze wiki data to find red links, missing images and build wiki map")
     parser.add_argument("--dir", default="wiki-data", help="Wiki data directory (default: wiki-data)")
     parser.add_argument("--output", choices=["red-links", "missing-images", "wiki-map", "dot", "backlinks", "all", "similar"],
-                       default="red-links", help="Output format: red-links (default), missing-images, wiki-map, dot (graphviz), backlinks, similar, or all")
+                       default="similar", help="Output format: similar (default), red-links, missing-images, wiki-map, dot (graphviz), backlinks, or all")
     parser.add_argument("--graph-file", default="wiki_map.dot", help="Output file for DOT graph (default: wiki_map.dot)")
     parser.add_argument("--red-only", action="store_true", help="In DOT output, show only red links")
     parser.add_argument("--page", help="Specific page to analyze (for backlinks, shows only backlinks to this page)")
