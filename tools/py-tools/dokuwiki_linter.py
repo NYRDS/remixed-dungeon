@@ -119,9 +119,13 @@ class DokuWikiLinter:
                 page_name = page_part[namespace_pos + 1:]
 
                 # Standard namespaces in Remixed Dungeon wiki
-                standard_namespaces = ['rpd', 'ru', 'cn', 'es', 'pt', 'code', 'playground', 'doku', 'wiki', 'wp']
+                standard_namespaces = ['rpd', 'ru', 'cn', 'es', 'pt', 'code', 'playground', 'doku', 'wiki', 'wp', 'en', 'zh-rCN', 'zh-rTW', 'fr', 'de', 'pt-rBR', 'it', 'ja', 'ko', 'pl', 'uk', 'hu', 'tr', 'in', 'ms', 'el']
                 is_standard = (namespace in standard_namespaces or
-                              namespace.startswith('mr'))
+                              namespace.startswith('mr') or
+                              (namespace == 'en' and page_name.startswith('rpd:')) or
+                              (namespace == 'zh-rCN') or
+                              (namespace == 'zh-rTW') or
+                              (namespace == 'pt-rBR'))
 
                 if not is_standard:
                     self.warnings.append(f"Non-standard namespace in link: {link}")
@@ -295,11 +299,11 @@ class DokuWikiLinter:
                         # Check for standard tags (lowercase, numbers, underscores, hyphens, Cyrillic)
                         if re.match(r'^[a-z0-9_\u0400-\u04FF-]+$', t):
                             continue
-                        # Check for allowed namespace formats: rpd, ru:rpd, cn:rpd, es:rpd, pt:rpd, ru:*, cn:*, es:*, pt:*, etc.
-                        elif t == 'rpd' or t.startswith('ru:') or t.startswith('cn:') or t.startswith('es:') or t.startswith('pt:'):
+                        # Check for allowed namespace formats: rpd, ru:rpd, cn:rpd, es:rpd, pt:rpd, en:rpd, ru:*, cn:*, es:*, pt:*, etc.
+                        elif t == 'rpd' or t.startswith('ru:') or t.startswith('cn:') or t.startswith('es:') or t.startswith('pt:') or t.startswith('en:') or t.startswith('zh-rCN:') or t.startswith('zh-rTW:') or t.startswith('fr:') or t.startswith('de:') or t.startswith('pt-rBR:') or t.startswith('it:') or t.startswith('ja:') or t.startswith('ko:') or t.startswith('pl:') or t.startswith('uk:') or t.startswith('hu:') or t.startswith('tr:') or t.startswith('in:') or t.startswith('ms:') or t.startswith('el:'):
                             continue
                         # Check for internal DokuWiki format with leading colon like :rpd
-                        elif t.startswith(':') and (t[1:] == 'rpd' or t[1:].startswith('ru:') or t[1:].startswith('cn:') or t[1:].startswith('es:') or t[1:].startswith('pt:')):
+                        elif t.startswith(':') and (t[1:] == 'rpd' or t[1:].startswith('ru:') or t[1:].startswith('cn:') or t[1:].startswith('es:') or t[1:].startswith('pt:') or t[1:].startswith('en:') or t[1:].startswith('zh-rCN:') or t[1:].startswith('zh-rTW:') or t[1:].startswith('fr:') or t[1:].startswith('de:') or t[1:].startswith('pt-rBR:') or t[1:].startswith('it:') or t[1:].startswith('ja:') or t[1:].startswith('ko:') or t[1:].startswith('pl:') or t[1:].startswith('uk:') or t[1:].startswith('hu:') or t[1:].startswith('tr:') or t[1:].startswith('in:') or t[1:].startswith('ms:') or t[1:].startswith('el:')):
                             continue
                         else:
                             valid = False
