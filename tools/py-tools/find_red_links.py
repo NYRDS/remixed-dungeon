@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Script to analyze wiki data: find red links, missing images, build wiki map, generate backlinks, and generate DOT graphs.
+Script to analyze wiki data: find red links, missing images, build wiki map, generate backlinks,
+and find pages with names similar to missing links.
 
 This script can:
 1. Find and report red links (links to non-existent pages)
@@ -8,6 +9,7 @@ This script can:
 3. Build a complete wiki map showing all page relationships
 4. Generate backlinks showing which pages link to each page
 5. Generate DOT graph files for visualization with Graphviz
+6. Find pages with names similar to missing links
 
 Usage Examples:
     # Find only red links (original functionality)
@@ -34,6 +36,9 @@ Usage Examples:
     # Show everything
     python find_red_links.py --output all
 
+    # Find pages with names similar to missing links
+    python find_red_links.py --output similar
+
 Wiki link format: [[target|display_text]] or [[target]]
 Wiki image format: {{namespace:images:image_name.png|alt_text}} or {{namespace:images:image_name.png}}
 Special namespaces like 'wiki:' and 'doku>' are ignored as they are not actual pages.
@@ -47,6 +52,7 @@ import argparse
 from pathlib import Path
 from typing import Set, List, Tuple, Dict, Any
 from collections import defaultdict
+from difflib import SequenceMatcher
 
 
 def extract_wiki_links(content: str) -> List[Tuple[str, str]]:
@@ -495,14 +501,51 @@ def find_missing_images(wiki_data_dir: Path) -> List[Tuple[str, str, str]]:
     return missing_images
 
 
+def find_similar_pages(red_links: List[Tuple[str, str, str]], existing_pages: Set[str], similarity_threshold: float = 0.6) -> Dict[str, List[str]]:
+    """
+    Find pages with names similar to missing links.
+
+    Args:
+        red_links: List of red links (page_path, link_target, display_text)
+        existing_pages: Set of all existing pages
+        similarity_threshold: Minimum similarity ratio (0-1) to consider a match
+
+    Returns:
+        Dictionary mapping missing page names to lists of similar existing page names
+    """
+    similar_pages = {}
+
+    # Get unique missing page names from red links
+    missing_page_names = set()
+    for _, link_target, _ in red_links:
+        missing_page_names.add(link_target)
+
+    # For each missing page, find similar existing pages
+    for missing_page in missing_page_names:
+        similar = []
+        for existing_page in existing_pages:
+            # Calculate similarity ratio between missing page and existing page
+            similarity = SequenceMatcher(None, missing_page.lower(), existing_page.lower()).ratio()
+            if similarity >= similarity_threshold:
+                similar.append((existing_page, similarity))
+
+        # Sort by similarity (highest first) and store in the dictionary
+        if similar:
+            similar.sort(key=lambda x: x[1], reverse=True)
+            similar_pages[missing_page] = [page for page, _ in similar]
+
+    return similar_pages
+
+
 def main():
     parser = argparse.ArgumentParser(description="Analyze wiki data to find red links, missing images and build wiki map")
     parser.add_argument("--dir", default="wiki-data", help="Wiki data directory (default: wiki-data)")
-    parser.add_argument("--output", choices=["red-links", "missing-images", "wiki-map", "dot", "backlinks", "all"], default="red-links",
-                       help="Output format: red-links (default), missing-images, wiki-map, dot (graphviz), backlinks, or all")
+    parser.add_argument("--output", choices=["red-links", "missing-images", "wiki-map", "dot", "backlinks", "all", "similar"],
+                       default="red-links", help="Output format: red-links (default), missing-images, wiki-map, dot (graphviz), backlinks, similar, or all")
     parser.add_argument("--graph-file", default="wiki_map.dot", help="Output file for DOT graph (default: wiki_map.dot)")
     parser.add_argument("--red-only", action="store_true", help="In DOT output, show only red links")
     parser.add_argument("--page", help="Specific page to analyze (for backlinks, shows only backlinks to this page)")
+    parser.add_argument("--similarity-threshold", type=float, default=0.6, help="Minimum similarity ratio (0-1) to consider a match (default: 0.6)")
 
     args = parser.parse_args()
 
@@ -559,6 +602,33 @@ def main():
 
     if args.output in ["dot", "all"]:
         generate_dot_graph(page_links, args.graph_file, show_red_links_only=args.red_only)
+
+    if args.output in ["similar", "all"]:
+        print(f"\nFinding pages similar to missing links (threshold: {args.similarity_threshold}):")
+        print("-" * 80)
+
+        # Count occurrences of each missing page in red links
+        missing_page_counts = {}
+        for _, link_target, _ in red_links:
+            missing_page_counts[link_target] = missing_page_counts.get(link_target, 0) + 1
+
+        similar_pages = find_similar_pages(red_links, existing_pages, args.similarity_threshold)
+
+        if similar_pages:
+            print(f"\nFound similar pages for {len(similar_pages)} missing links:")
+
+            # Sort missing pages by count in descending order
+            sorted_missing_pages = sorted(similar_pages.keys(),
+                                        key=lambda x: missing_page_counts.get(x, 0),
+                                        reverse=True)
+
+            for missing_page in sorted_missing_pages:
+                print(f"\nMissing page: '{missing_page}' (referenced {missing_page_counts.get(missing_page, 0)} times)")
+                print("  Similar existing pages:")
+                for similar_page in similar_pages[missing_page][:5]:  # Show top 5 matches
+                    print(f"    - {similar_page}")
+        else:
+            print("\nNo similar pages found for missing links.")
 
     print(f"\nChecked against {len(existing_pages)} existing pages and {len(existing_images)} existing images.")
     print(f"Wiki map contains {len(page_links)} pages with {sum(len(links) for links in page_links.values())} total links.")
