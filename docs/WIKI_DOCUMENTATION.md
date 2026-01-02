@@ -873,6 +873,7 @@ Some items and mobs use advanced sprite configurations defined in JSON files in 
 - Generate code maps to understand relationships between game elements
 - Use static analysis to identify all subclasses of important classes (e.g., all items inherit from Item)
 - Note that the find_red_links.py script now identifies links to the new `en:rpd:` namespace rather than the old `rpd:` namespace
+- The script now has a `--output similar` mode that finds pages with names similar to missing links using fuzzy string matching and sorts results by link frequency (default mode)
 
 ### 2. Class Hierarchy Analysis
 - Identify all subclasses of base classes like `Item`, `Mob`, `Buff`, etc.
@@ -1142,7 +1143,35 @@ The project includes additional scripts to help maintain and improve wiki qualit
   - **Verbose output**: Shows detailed status for each link being checked
 - **Output**: Summary showing total valid/broken links, and detailed list of any broken links found
 
-### 9. DokuWiki Linter (`dokuwiki_linter.py`)
+### 9. Enhanced Red Links Finder (`find_red_links.py`)
+- **Location**: `tools/py-tools/find_red_links.py`
+- **Purpose**: Comprehensive tool for analyzing wiki data, finding red links (broken links), missing images, building wiki maps, generating backlinks, and finding pages with names similar to missing links
+- **Usage**:
+  - Find similar pages to missing links (default): `python3 tools/py-tools/find_red_links.py`
+  - Find similar pages to missing links: `python3 tools/py-tools/find_red_links.py --output similar`
+  - Find only red links: `python3 tools/py-tools/find_red_links.py --output red-links`
+  - Find missing images: `python3 tools/py-tools/find_red_links.py --output missing-images`
+  - Build complete wiki map: `python3 tools/py-tools/find_red_links.py --output wiki-map`
+  - Generate backlinks: `python3 tools/py-tools/find_red_links.py --output backlinks`
+  - Generate backlinks for specific page: `python3 tools/py-tools/find_red_links.py --output backlinks --page "rpd:warrior"`
+  - Generate DOT graph: `python3 tools/py-tools/find_red_links.py --output dot`
+  - Generate DOT graph with only red links: `python3 tools/py-tools/find_red_links.py --output dot --red-only`
+  - Show everything: `python3 tools/py-tools/find_red_links.py --output all`
+  - Custom similarity threshold: `python3 tools/py-tools/find_red_links.py --output similar --similarity-threshold 0.7`
+- **Benefit**: Helps maintain wiki quality by identifying broken links, missing content, and suggesting potential replacements for missing pages
+- **Features**:
+  - **Red links detection**: Identifies links to non-existent pages
+  - **Missing images detection**: Identifies image references that don't exist in media directory
+  - **Wiki mapping**: Builds complete map of all page relationships
+  - **Backlinks generation**: Shows which pages link to each page
+  - **DOT graph generation**: Creates visual graph files for visualization with Graphviz
+  - **Similar pages detection**: Uses fuzzy string matching to find pages with names similar to missing links
+  - **Frequency sorting**: Results are sorted by how frequently each missing page is referenced (default mode)
+  - **Customizable similarity**: Adjustable threshold for determining how similar pages need to be to be considered matches
+- **Output**: Comprehensive reports with detailed information about wiki structure and missing content
+- **Default mode**: The `--output similar` mode is now the default, helping identify potential replacements for broken links
+
+### 10. DokuWiki Linter (`dokuwiki_linter.py`)
 - **Location**: `tools/py-tools/dokuwiki_linter.py`
 - **Purpose**: Validates DokuWiki pages against the standards defined in WIKI_DOCUMENTATION.md for the Remixed Dungeon project
 - **Usage**:
@@ -1165,7 +1194,21 @@ The project includes additional scripts to help maintain and improve wiki qualit
   - **Entity suffix validation**: Verifies proper suffixes are used for different entity types
 - **Output**: Lists errors and warnings found in the wiki pages, with exit code 1 if errors are found
 
-### 10. Language Link Consistency Checker (`check_language_links.py`)
+### 11. mr: Link Validation (`check_mr_links.py`)
+- **Location**: `tools/py-tools/check_mr_links.py`
+- **Purpose**: Verifies that all file references in mr namespace pages point to actual existing files in the codebase
+- **Usage**: Run `python3 tools/py-tools/check_mr_links.py` from the project root
+- **Benefit**: Ensures that mr namespace pages contain accurate and up-to-date references to source code files
+- **Features**:
+  - **Local file checking**: Verifies that local file paths referenced in mr pages actually exist in the project
+  - **Remote URL checking**: Verifies that GitHub URLs referenced in mr pages are accessible
+  - **Comprehensive scanning**: Checks all links within all mr namespace pages (.txt files in wiki-data/pages/mr/)
+  - **Detailed reporting**: Reports both valid and broken links, with a summary of the validation results
+  - **Error status**: Returns error code 1 if broken links are found, 0 if all links are valid
+  - **Verbose output**: Shows detailed status for each link being checked
+- **Output**: Summary showing total valid/broken links, and detailed list of any broken links found
+
+### 12. Language Link Consistency Checker (`check_language_links.py`)
 - **Location**: `tools/py-tools/check_language_links.py`
 - **Purpose**: Verifies that all internal links on a wiki page are in the same language as the page itself, with the exception of language links to the same page in other languages which should be placed at the bottom of the page
 - **Usage**:
@@ -1177,7 +1220,7 @@ The project includes additional scripts to help maintain and improve wiki qualit
 - **Benefit**: Ensures language consistency across the wiki, preventing users from being unexpectedly redirected to content in a different language
 - **Output**: Reports any language consistency violations found, including the page name, target link, line number, and violation type
 
-These tools help automate wiki maintenance by identifying linking patterns and potential improvements that would be difficult to track manually. The enhanced `find_red_links.py` now provides multiple analysis functions in a single tool to reduce duplication.
+These tools help automate wiki maintenance by identifying linking patterns and potential improvements that would be difficult to track manually. The enhanced `find_red_links.py` now provides multiple analysis functions in a single tool to reduce duplication, with the `--output similar` mode as the default to help identify potential replacements for broken links.
 
 
 ## Tools and Automation
