@@ -512,6 +512,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="DriedRose_Name">bunga mawar kering</string>
     <string name="Drink_ACDrink">MINUM</string>
     <string name="Drink_Message">Minuman tersebut menyegarkan!</string>
+    <string name="Drunkard_Phrase_3">Minum ini rasa cam tanah</string>
     <string name="Dungeon_DeadEnd">Apa awak buat di sini?!</string>
     <string name="Dungeon_NoTips">Teks ini tidak dapat ditafsirkan...</string>
     <string name="Dungeon_Tips_0">Jangan pandang remeh kekuatan yang anda miliki, gunakan senjata dan perisai yang anda mampu.</string>
@@ -576,6 +577,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Fadeleaf_Desc">Menyentuh Daun Lenyap akan pindahkan sesiapa sahaja ke lokasi secara rawak dalam aras yang sama</string>
     <string name="Fadeleaf_Name">Daun Lenyap</string>
     <string name="FetidRat_Desc">Tikus marsupial ini lebih besar berbanding tikus biasa. Bau pun busuk.</string>
+    <string name="FetidRat_Gender">feminine</string>
     <string name="FetidRat_Name">tikus kohong</string>
     <string name="FetidRat_Name_Objective">tikus kohong</string>
     <string name="Fez_Info">Hiasan kepala yang dibentuk seperti kon yang diperbuat dari bulu biri-biri merah, dengan rumbai di atasnya. Tidak sesekali, menjadikan dunia ini 3-dimensi.</string>
@@ -2387,4 +2389,6 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 </resources>
