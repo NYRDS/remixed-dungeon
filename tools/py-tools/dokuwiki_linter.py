@@ -293,8 +293,8 @@ class DokuWikiLinter:
                 valid = True
                 for t in individual_tags:
                     if t:
-                        # Check for standard tags (lowercase, numbers, underscores, hyphens, Cyrillic)
-                        if re.match(r'^[a-z0-9_\u0400-\u04FF-]+$', t):
+                        # Check for standard tags (lowercase, numbers, underscores, hyphens, Cyrillic, Chinese, Japanese, Korean, Latin Extended, etc.)
+                        if re.match(r'^[a-z0-9_\u00C0-\u017F\u0100-\u024F\u0400-\u04FF\u4e00-\u9fff\u3040-\u309f\u30a0-\u30ff\uac00-\ud7af-]+$', t):
                             continue
                         # Check for allowed namespace formats: rpd, ru:rpd, cn:rpd, es:rpd, pt:rpd, en:rpd, ru:*, cn:*, es:*, pt:*, etc.
                         elif t == 'rpd' or t.startswith('ru:') or t.startswith('cn:') or t.startswith('es:') or t.startswith('pt:') or t.startswith('en:') or t.startswith('zh:') or t.startswith('fr:') or t.startswith('de:') or t.startswith('it:') or t.startswith('ja:') or t.startswith('ko:') or t.startswith('pl:') or t.startswith('uk:') or t.startswith('hu:') or t.startswith('tr:') or t.startswith('in:') or t.startswith('ms:') or t.startswith('el:'):
@@ -490,9 +490,21 @@ class DokuWikiLinter:
         all_warnings = []
 
         for root, dirs, files in os.walk(directory):
+            # Skip the wiki namespace directory
+            if 'wiki' in dirs:
+                dirs.remove('wiki')  # Don't recurse into wiki directory
+
+            # Check if the current root path contains wiki namespace (in any position)
+            normalized_root = root.replace('\\', '/')
+            if '/wiki/' in normalized_root or normalized_root.endswith('/wiki') or normalized_root.endswith('/pages/wiki'):
+                continue
+
             for file in files:
                 if file.endswith('.txt'):
                     file_path = os.path.join(root, file)
+                    # Skip files in wiki namespace by checking the path
+                    if '/wiki/' in file_path.replace('\\', '/') or file_path.endswith('/wiki') or '/pages/wiki/' in file_path.replace('\\', '/'):
+                        continue
                     errors, warnings = self.lint_file(file_path)
                     all_errors.extend([f"{file_path}: {e}" for e in errors])
                     all_warnings.extend([f"{file_path}: {w}" for w in warnings])
@@ -504,9 +516,21 @@ class DokuWikiLinter:
         files_changed = 0
 
         for root, dirs, files in os.walk(directory):
+            # Skip the wiki namespace directory
+            if 'wiki' in dirs:
+                dirs.remove('wiki')  # Don't recurse into wiki directory
+
+            # Check if the current root path contains wiki namespace (in any position)
+            normalized_root = root.replace('\\', '/')
+            if '/wiki/' in normalized_root or normalized_root.endswith('/wiki') or normalized_root.endswith('/pages/wiki'):
+                continue
+
             for file in files:
                 if file.endswith('.txt'):
                     file_path = os.path.join(root, file)
+                    # Skip files in wiki namespace by checking the path
+                    if '/wiki/' in file_path.replace('\\', '/') or file_path.endswith('/wiki') or '/pages/wiki/' in file_path.replace('\\', '/'):
+                        continue
                     if self.fix_file_content(file_path):
                         files_changed += 1
                         print(f"Fixed: {file_path}")

@@ -227,6 +227,7 @@ When entities share the same name across different types (like the Lich boss and
 - Use consistent heading formats: `====== Page Title ======`
 - Organize content with clear sections using `==== Section Title ====`
 - Include relevant tags at the bottom: `{{tag> rpd items}}` or `{{tag> rpd mobs}}`
+  - Tags can be in the page's language (e.g., `{{tag> rpd 增益 战斗 遗物 嗜血 狂怒}}` for Chinese pages, `{{tag> rpd itens artefatos missão amaldiçoados }}` for Portuguese pages)
 
 ## Content Quality Standards
 
