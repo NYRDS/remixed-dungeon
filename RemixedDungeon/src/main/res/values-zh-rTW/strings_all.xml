@@ -514,6 +514,7 @@
   <string name="CorpseDust_Name">屍塵</string>
   <string name="CorpseDust_Info">在外觀上這團屍塵和普通灰塵球差不多。而您卻能夠感受到其中潛伏著一股充滿惡意的魔力。盡快脫手為上策。</string>
   <string name="CorpseDust_Info2">也許因為帶著它讓您感到了焦慮和憤怒。</string>
+  <string name="Carcass_Devoured">你已經吞食了%s的屍體！</string>
   <string name="DarkGold_Name">暗金礦</string>
   <string name="DarkGold_Info">這種金屬名中的暗並非源於其色澤(它看起來和普通金子一樣)，而是因為它會在陽光下熔化，令其在地表上毫無用處。</string>
   <string name="DriedRose_Name">乾枯玫瑰</string>
