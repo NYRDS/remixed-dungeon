@@ -1506,6 +1506,7 @@ Potrebbe bruciare?</string>
     <string name="SpiderNest_Name">ragno bozzolo</string>
     <string name="SpiderNest_Name_Objective">ragno bozzolo</string>
     <string name="SpiderQueen_Desc">Un corpo di una bella donna incrociato con un\'orribile ragno.Ogni essere vivente di questo covo è il suo servo. Rispondere a questa straordinaria donna può rivelarsi un\'esperienza mortale. Perché tu sei un trasgressore</string>
+    <string name="SpiderQueen_DieInfo">La Regina Ragno è stata sconfitta! Ora dovrei tornare al livello 5 e continuare il mio viaggio verso gli Abissi.</string>
     <string name="SpiderQueen_Name">Ragno regina</string>
     <string name="SpiderQueen_Name_Objective">Ragno regina</string>
     <string name="SpiderServant_Desc">I ragni soldato sembrano essere le unità più numerose del meandro dei ragni. Nati per proteggere il territorio, i soldati chelicera hanno sviluppato ghiandole velenifere per avvelenare i loro nemici. </string>
@@ -2109,5 +2110,6 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 </resources>
