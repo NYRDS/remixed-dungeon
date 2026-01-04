@@ -3,7 +3,7 @@
 # Script to perform timed runs for translation tasks with 1-hour sleep intervals
 
 # Hardcoded command to run
-COMMAND="qwen -y 'read @docs/TRANSLATION_TASK.md, pull repo master, identify few random missing strings in random languages (use tools/select_random_missing_string.py), find their context using tools/find_string_usage.py, translate them properly based on English reference and code context, add translations to appropriate strings_all.xml files, verify consistency with existing translations, commit your changes, push it. Focus on maintaining consistency with existing translations, proper grammar, and cultural appropriateness for target languages.'"
+COMMAND="qwen -y 'read @docs/TRANSLATION_TASK.md, pull repo master, identify few random missing strings in random languages (use tools/select_random_missing_string.py), find their context using tools/find_string_usage.py, translate them properly based on English reference and code context, add translations to appropriate strings_all.xml files, verify consistency with existing translations, also select few random strings and ensure it consistency among all languages, commit your changes, push it. Focus on maintaining consistency with existing translations, proper grammar, and cultural appropriateness for target languages.'"
 
 echo "Will run the translation command, sleep for 1 hour, and repeat indefinitely."
 echo "Press Ctrl+C to stop."
