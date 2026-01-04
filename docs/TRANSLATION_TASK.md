@@ -14,7 +14,7 @@ Localization files are organized in the Android resource directory structure:
 - `RemixedDungeon/src/main/res/values-es/strings_all.xml` - Spanish strings
 - `RemixedDungeon/src/main/res/values-[lang-code]/strings_all.xml` - Other language strings
 
-Each language-specific directory follows the Android resource naming convention where `lang-code` is the ISO language code (e.g., `ru`, `es`, `fr`, `pt-rBR` for Brazilian Portuguese).
+Each language-specific directory follows the Android resource naming convention where `lang-code` is the ISO language code (e.g., `ru`, `es`, `fr`) or Android-specific format (e.g., `pt-rBR` for Brazilian Portuguese, `zh-rTW` for Traditional Chinese, `zh-rCN` for Simplified Chinese). The 'r' prefix is Android's convention for country/region-specific variants.
 
 ## Available Localization Tools
 
@@ -42,11 +42,21 @@ Each language-specific directory follows the Android resource naming convention 
   - Updates existing strings if they already exist in the file
   - Sorts strings alphabetically by name (unless `--no-sort` is specified)
   - Provides proper XML formatting
+  - Supports both standard and Android resource language code formats (e.g., 'pt-BR', 'pt-rBR', 'zh-rTW')
 
 ### 5. check_random_string_translation.py
 - **Purpose**: Selects a random string ID and checks its translations across all languages
 - **Usage**: `python3 tools/check_random_string_translation.py <project_base_path>`
 - **Output**: Shows the translation of a randomly selected string across all available languages
+
+### 6. validate_translations.py
+- **Purpose**: Validates that translated strings are properly formatted and saved in XML files
+- **Usage**: `python3 tools/validate_translations.py <project_base_path>`
+- **Features**:
+  - Checks for malformed XML
+  - Validates gender values (must be feminine, masculine, or neuter)
+  - Checks for unescaped special characters
+  - Provides validation report for all localization files
 
 ## Identifying Missing Strings
 
@@ -306,6 +316,23 @@ After adding translations:
 2. **Check context:** Make sure the translation makes sense in the game UI
 3. **Test in game:** If possible, test the translation in the actual game
 4. **Consistency check:** Ensure the translation is consistent with other similar strings
+5. **Run validation:** Use the validation script to check for common issues: `python3 tools/validate_translations.py /path/to/remixed-dungeon`
+
+## Common Issues and Solutions
+
+### Language Code Format Issues
+- **Problem**: Android uses specific resource naming conventions like `zh-rTW` (with 'r' prefix) rather than standard formats like `zh-TW`
+- **Solution**: The `insert_translated_string.py` tool now supports both formats: standard (`pt-BR`) and Android-specific (`pt-rBR`, `zh-rTW`)
+
+### Gender Value Issues
+- **Problem**: Gender values must be in English and lowercase: `feminine`, `masculine`, `neuter`
+- **Solution**: The validation script will catch non-compliant gender values and report them
+- **Example**: `Spear_Gender` with value "中性" (Chinese for "neutral") should be "neuter"
+- **Example**: `MercenaryNPC_Gender` with value "maskulin" (Indonesian for "masculine") should be "masculine"
+
+### Special Character Issues
+- **Problem**: Unescaped special characters like ampersands (&) can break XML parsing
+- **Solution**: Use proper XML entities (`&amp;` instead of `&`, `&quot;` instead of `"`, etc.)
 
 ## Common String Patterns
 

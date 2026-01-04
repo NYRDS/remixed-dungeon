@@ -121,8 +121,9 @@ def main():
         sort_strings = False
 
     # Validate language code format
-    if not re.match(r'^[a-z]{2,3}(?:-[A-Z]{2})?$', lang_code):
-        print(f"Invalid language code format: {lang_code}. Expected format: 'ru', 'es', 'pt-BR', etc.")
+    # Support both standard format (e.g., 'pt-BR') and Android resource format (e.g., 'pt-rBR', 'zh-rTW')
+    if not re.match(r'^[a-z]{2,3}(?:-[A-Z]{2}|-[a-z][A-Z]{2})?$', lang_code):
+        print(f"Invalid language code format: {lang_code}. Expected format: 'ru', 'es', 'pt-BR', 'pt-rBR', 'zh-rTW', etc.")
         sys.exit(1)
 
     # Path to the target localization file
