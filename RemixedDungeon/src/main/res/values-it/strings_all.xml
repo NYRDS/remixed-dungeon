@@ -256,6 +256,7 @@
     <string name="Challenges_Names_3">terra sterile</string>
     <string name="Challenges_Names_4">Swarm intelligence</string>
     <string name="Challenges_Names_5">nel buio</string>
+    <string name="Challenges_Names_6">Rune Proibite</string>
     <string name="ChaosArmor_Info">Le placche rosso sangue di questa armatura sono tenute insieme con catene rosse oscure. Irradia energia del Caos quando la tocchi. </string>
     <string name="ChaosArmor_Name">Armatura del caos. </string>
     <string name="ChaosBow_Info">Un terribile arco colmo con il potere del Caos. Ogni freccia scoccata porterà un pezzo di energia del Caos al bersaglio. Ma se manchi il bersaglio...puoi vedere come  </string>
@@ -2110,6 +2111,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 </resources>

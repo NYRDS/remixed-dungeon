@@ -1842,6 +1842,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SpiderMindAmber_Name">laba-laba amber</string>
     <string name="SpiderMindAmber_Name_Objective">laba-laba amber</string>
     <string name="SpiderMind_Desc">Laba-laba yang kelihatan lemah ini memiliki kekuatan mental yang unik, yang memperbolehkan mereka untuk mengontrol seluruh koloni. Laba-laba-Psi dapat mengontrol semua makhluk hidup, tapi laba-laba ini agak penakut.</string>
+    <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">Laba-laba-Psi</string>
     <string name="SpiderMind_Name_Objective">Laba-laba-Psi</string>
     <string name="SpiderNest_Desc">Kepompong ini terbuat dari sutra tertipis dan benda ini menutupi sesuatu yang hidup.</string>
@@ -2699,4 +2700,5 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 </resources>
