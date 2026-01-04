@@ -240,6 +240,7 @@
   <string name="WandOfTeleportation_Info">这根法杖释放的能量会将目标生物传送到当前层的随机位置。</string>
   <string name="WandOfTeleportation_Info1">%1$s将%2$s传送到了其他地方</string>
   <string name="WandOfTeleportation_Info2">什么事也没有发生</string>
+  <string name="Spear_Gender">中性</string>
   <string name="WndPortal_Title">传送门</string>
   <string name="WndPortal_Info">此传送门能带你回到镇上，但它看起来不太稳定，可能过了一段时间之后便不会运作。\n你要使用它吗？</string>
   <string name="WndPortal_Info_Return">此传送门会带你回到地牢中。\n你要使用它吗？</string>
@@ -254,6 +255,7 @@
   <string name="PortalExit_Desc_SpiderNest">蜘蛛巢穴</string>
   <string name="PortalExit_Desc_Necropolis">死灵都市</string>
   <string name="PortalExit_Desc_IceCaves">霜冻洞穴</string>
+  <string name="PlagueDoctorQuest_5_1_InProgress">*他的思绪飘忽，声音越来越小，几乎成了耳语。* 带两只活的魅魔给我……活着的。她们的……力量……令人着迷。</string>
   <string name="DevourBuff_Name">吞噬</string>
   <string name="DevourBuff_Info"/>
   <string name="StoneBloodBuff_Name">石中血</string>

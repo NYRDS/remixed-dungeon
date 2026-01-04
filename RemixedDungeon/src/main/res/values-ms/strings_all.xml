@@ -1414,6 +1414,10 @@
   <string name="PlagueDoctorNPC_Quest_End">Bagus bagus, terima kasih, saya harap kulit ini dapat memberi petunjuk ada penyakit di dalamnya. Sampel sebelum ini tidak memberi apa-apa bukti. Jadi saya buat ini untuk awak semasa menunggu sampel baharu tiba.</string>
   <string name="PlagueDoctorNPC_After_Quest">Saya buktikan, Saya buktikan kepada mereka semua!</string>
   <string name="Journal_PlagueDoctorNPC">Doktor wabak</string>
+  <string name="MercenaryNPC_Name">askar upahan</string>
+  <string name="MercenaryNPC_Name_Objective">askar upahan</string>
+  <string name="MercenaryNPC_Gender">maskulin</string>
+  <string name="MercenaryNPC_Desc">Lelaki yang kelihatan kuat.</string>
   <string name="TownsfolkMovieNPC_Name">penduduk pekan</string>
   <string name="TownsfolkMovieNPC_Name_Objective">penduduk pekan</string>
   <string name="TownsfolkMovieNPC_Desc">Orang tempatan. Walaupun nampak macam biasa, tetapi pakaiannya kelihatan mahal.</string>
