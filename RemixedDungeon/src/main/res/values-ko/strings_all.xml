@@ -264,6 +264,7 @@
     <string name="Candy_Warning_2">당신은 정말 많은 사탕을 먹었고, 당신의 배가 많은 사탕때문에 아픕니다.</string>
     <string name="Capotain_Info">길이가 길고 챙이 좁은 모자다. 대부분 청교도들이 쓰는 모자이지만, 굳이 그것에 연연할 필요는 없다. 무슨 이유인지 \&quot;솔로몬\&quot;이라는 이름표가 붙어있다.</string>
     <string name="Capotain_Name">카포텡</string>
+    <string name="Carcass_DissectFailed">%s을(를) 해부했지만 아무것도 얻지 못했다.</string>
     <string name="Caves_TileDescBookshelf">동굴에 책장이 대체 왜 필요한 거지?</string>
     <string name="Caves_TileDescDeco">어떤 광물의 광맥이 벽에 보인다. 금인가?</string>
     <string name="Caves_TileDescEntrance">사다리는 위를 향하고 있다.</string>
@@ -2303,6 +2304,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

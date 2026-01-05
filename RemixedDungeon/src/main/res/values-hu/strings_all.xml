@@ -16,6 +16,7 @@
     <string name="AboutScene_Translation">Fordította:</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901</string>
     <string name="AboutScene_Txt_Intro">A NYRDS által készített Remixed Dungeon a Watabou eredeti, Pixel Dungeon nevű játéka alapján készült.</string>
+    <string name="Accuracy_Decreased">Miért gondoltam, hogy használhatok egy %s? Rossz eszköz, rossz kezek!</string>
     <string name="Acidic_Desc">Ez a hatalmas pókszerű démoni teremtmény mindenképpen kerüli a közelharcot, messziről bénító fogazott tüskéket lő.</string>
     <string name="Acidic_Name">savas skorpió</string>
     <string name="Acidic_Name_Objective">savas skorpiót</string>
@@ -1203,6 +1204,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="PlagueDoctorNPC_After_Quest">Megmutatom nekik, Megmutatom nekik mind!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Még mindig itt vagy? Tessék! Tedd ezt el.</string>
     <string name="PlagueDoctorNPC_Desc">Ennek a púpos hátú alaknak az egész teste egy bőrből készült kezeslábasban van. Ráadásul keserű gyógyszer és ... hagymaszagot áraszt.</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">pestis doktor</string>
     <string name="PlagueDoctorNPC_Name_Objective">pestis doktor</string>
     <string name="PlagueDoctorNPC_Quest_End">Ó, köszönöm! Remélem ebben találok mintát a fertőzésre. Az eddig gyűjtöttek teljesen ártalmatlanok voltak. Nesze, ezt neked készítettem amíg vártam rád.</string>
@@ -2413,6 +2415,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 </resources>

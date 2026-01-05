@@ -1,5 +1,6 @@
 <resources>
     <string name="AC_Devour">Obur</string>
+    <string name="AC_Dissect">Parçala</string>
     <string name="AC_Necromancy">Ölüçağırma</string>
     <string name="Abilities_Common">Yaygın Büyüler</string>
     <string name="Abilities_Default">Uzmanlık</string>
@@ -2784,4 +2785,5 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 </resources>

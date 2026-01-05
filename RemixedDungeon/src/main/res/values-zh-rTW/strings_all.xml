@@ -1644,6 +1644,7 @@
     <string name="ShieldStrTemplate">盾牌的佩戴者應至少具有%1$d力量才能正常的使用它。</string>
     <string name="Shielded_Defense">格擋</string>
     <string name="Shielded_Desc">暴徒是豺狼人中體型最為巨大，最為強壯，最為堅韌的。當受到嚴重的傷害時，他們會變得狂暴，對他們的敵人造成大量傷害。這個豺狼暴徒舉著一面巨型盾牌！</string>
+    <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">持盾暴徒</string>
     <string name="Shielded_Name_Objective">持盾暴徒</string>
     <string name="Shopkeeper_Buy">選擇要購買的物品</string>
@@ -2184,6 +2185,7 @@
     <string name="WndSettings_InGameUiSettings">用戶界面設置</string>
     <string name="WndSettings_Music">音樂</string>
     <string name="WndSettings_Quickslots">快捷欄</string>
+    <string name="WndSettings_RecordVideo">視頻錄製</string>
     <string name="WndSettings_ScaleUp">平滑界面</string>
     <string name="WndSettings_SecondQuickslot">第二快捷欄</string>
     <string name="WndSettings_SelectLanguage">選擇語言</string>
@@ -2488,5 +2490,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 </resources>

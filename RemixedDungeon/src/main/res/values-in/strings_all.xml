@@ -1847,6 +1847,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SpiderMind_Name">Laba-laba-Psi</string>
     <string name="SpiderMind_Name_Objective">Laba-laba-Psi</string>
     <string name="SpiderNest_Desc">Kepompong ini terbuat dari sutra tertipis dan benda ini menutupi sesuatu yang hidup.</string>
+    <string name="SpiderNest_Gender">neuter</string>
     <string name="SpiderNest_Name">kepompong laba-laba</string>
     <string name="SpiderNest_Name_Objective">kepompong laba-laba</string>
     <string name="SpiderQueenCarapace_Info">Pecahan karapas Ratu Laba-laba. Anda dapat melihat sepotong kelenjar laba-laba di dalamnya, tampak hampir seperti hidup.</string>
@@ -2701,6 +2702,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 </resources>
