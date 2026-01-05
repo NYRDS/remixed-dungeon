@@ -506,6 +506,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="DarkSacrifice_Self">Für die Geißel!</string>
     <string name="DarkVeilBuff_Name">Dunkler Schleier</string>
     <string name="Darkness_Info">Sieht aus als ob Stücke ewiger Dunkelheit in der Luft schweben</string>
+    <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">Diese kleinen Metallspitzen sind für eine stabile Flugbahn gefertigt und piksen den Gegner gewaltig.</string>
     <string name="Dart_Name">Pfeil</string>
     <string name="DashSpell_Info">Laufe in eine bestimmte Richtung, bei Kontakt mit Gegnern wird ihnen Schaden zugefügt und es wird sie verstümmeln.</string>
@@ -2585,5 +2586,6 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 </resources>

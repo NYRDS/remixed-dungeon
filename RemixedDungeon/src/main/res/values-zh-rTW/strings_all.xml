@@ -2437,6 +2437,7 @@
     <string name="town_deco_sofa_name">超爽的沙發</string>
     <string name="town_deco_stakes_desc">這些削尖的圓木看起來十分可怕，但事實上，它們本身是沒什麼作用的。</string>
     <string name="town_deco_stakes_name">木樁</string>
+    <string name="town_deco_statue_water_name">天使雕像</string>
     <string name="town_deco_stock_desc">這裏儲存著食物，還有一堆帶有各種各樣顏色的物品。</string>
     <string name="town_deco_stock_name">貯備</string>
     <string name="town_deco_stone_wall_broken_desc">老舊的石墻，看起來狀況很差</string>
@@ -2487,4 +2488,5 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 </resources>
