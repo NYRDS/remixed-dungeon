@@ -539,6 +539,7 @@
     <string name="DriedRose_Name">乾枯玫瑰</string>
     <string name="Drink_ACDrink">飲用</string>
     <string name="Drink_Message">清爽的飲品！</string>
+    <string name="Drunkard_Phrase_1">再多點酒！</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_DeadEnd">你來這做什麼？！</string>
     <string name="Dungeon_NoTips">這些文字無法辨認...</string>
@@ -2490,6 +2491,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

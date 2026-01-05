@@ -489,6 +489,7 @@
     <string name="Combo_Combo">%d连击！</string>
     <string name="CommonArrow_Info">带有铁箭头的木质箭，很常见。</string>
     <string name="CommonArrow_Name">箭矢</string>
+    <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">与木制弓弩相比，这种加强型弓弩被证明是一种更有效的工具。</string>
     <string name="CompositeCrossbow_Name">复合弩</string>
     <string name="CompoundBow_Info">用复合弓射出的箭能造成大量伤害并且更加精准，只是速度比木弓差些。</string>
@@ -1345,6 +1346,7 @@
     <string name="Pasty_Info">这是块正宗康沃尔馅饼，里面填满了传统的牛肉和土豆馅料。</string>
     <string name="Pasty_Name">馅饼</string>
     <string name="Pickaxe_ACMine">挖矿</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">这确实是件巨大又可靠的掘石工具。应该也能当武器用。</string>
     <string name="Pickaxe_Name">铁镐</string>
     <string name="Pickaxe_NoVein">你周围没有暗金脉可挖</string>
@@ -2724,6 +2726,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 </resources>
