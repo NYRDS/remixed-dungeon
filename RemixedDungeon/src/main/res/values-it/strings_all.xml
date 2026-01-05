@@ -1991,6 +1991,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="deco_candle_desc">Grande candela</string>
     <string name="deco_candle_name">Candela</string>
     <string name="gdpr_choose">Fai la tua scelta</string>
+    <string name="gdpr_text">Remixed Dungeon personalizza la tua esperienza pubblicitaria utilizzando Admob e Appodeal (ulteriori fornitori di annunci). I fornitori di annunci e i loro partner possono raccogliere ed elaborare dati personali come identificatori del dispositivo, dati demografici e di interesse per fornire un'esperienza pubblicitaria personalizzata per te. Acconsentendo a questa esperienza pubblicitaria migliorata, vedrai annunci che i fornitori di annunci e i loro partner ritengono più pertinenti per te.\n\nAccettando, confermi di avere più di 16 anni e di volere un'esperienza pubblicitaria personalizzata.\n\n</string>
     <string name="town_deco_INN_sign_desc">Pare che ci sia una locanda in quell\'edificio</string>
     <string name="town_deco_INN_sign_name">Insegna della Locanda</string>
     <string name="town_deco_armoronhanger_desc">Qualche tipo di armatura sull\'appendiabiti.</string>
@@ -2113,6 +2114,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

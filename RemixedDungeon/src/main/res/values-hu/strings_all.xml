@@ -1431,6 +1431,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="Ring_Info3b">és mivel átkozott, nem áll módodban levenni azt.</string>
     <string name="Ring_Info4">%1$s \n\nÚgy érzed valami féle rosszindulatú varázslat lakozik a(z) %2$sban/ben.</string>
     <string name="Ring_Name">%s gyűrű</string>
+    <string name="Roar_Name">Üvöltés</string>
     <string name="RogueArmor_ACSpecial">FÜSTBOMBA</string>
     <string name="RogueArmor_Desc">Ezt a ruhát viselve a tolvaj végrehajthat egy úgynevezett füstbomba trükköt, de valódi robbanószert nem igényel. Megvakítja az ellenfeleket, akik őt láthatnák, és oldalra veti magát.</string>
     <string name="RogueArmor_Fov">Csak látótávolságon belül, egy üres helyre tudsz ugrani.</string>
@@ -2411,4 +2412,5 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 </resources>

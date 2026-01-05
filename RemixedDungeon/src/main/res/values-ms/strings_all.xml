@@ -443,6 +443,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Crystal_Desc">Ada kristal bersinaran terapung di udara. Berkemungkinan ia terisi dengan kuasa ajaib yang kuat.</string>
     <string name="Crystal_Name">Kristal terapung</string>
     <string name="Crystal_Name_Objective">Kristal terapung</string>
+    <string name="CurareDart_Gender">masculine</string>
     <string name="CurareDart_Info">Damak kecil ini tidak menghasilkan kecederaan yang ketara, tetapi ia boleh melumpuhkan sasaran dan menyebabkan dia tidak dapat bergerak dalam satu tempoh masa.</string>
     <string name="CurareDart_Name">damak kurare</string>
     <string name="DM300_Desc">Mesin ini dicipta oleh Orang kerdil beberapa abad yang lalu. Kemudian, Orang kerdil mula menggantikan mesin dengan golem, keunsuran dan juga setan. Lama-kelamaan ketamadunan mereka semakin merosot. DM-300 dan mesin serupa dengannya adalah jenis yang kerap digunakan untuk pembinaan dan perlombongan, dan dalam beberapa situasi, untuk pertahanan bandar.</string>
@@ -2390,6 +2391,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
