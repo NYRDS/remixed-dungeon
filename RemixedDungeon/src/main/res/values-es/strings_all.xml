@@ -1164,6 +1164,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Luck_Name_0">%s con suerte</string>
     <string name="Luck_Name_1">%s con suerte</string>
     <string name="Luck_Name_2">%s con suerte</string>
+    <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">El extremo de metal de este arma inflige un daño considerable.</string>
     <string name="Mace_Name">maza</string>
     <string name="MageArmor_ACSpecial">TIERRA FUNDIDA</string>
@@ -2725,6 +2726,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 </resources>
