@@ -1438,6 +1438,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Rapportez moi %d peaux de rat.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Est-ce seulement croyable ? Ces imbéciles n\'ont toujours pas compris à quel point ce foutu égoût est dangereux. Comme si les gardes et les aventuriers pouvaient les protéger de tout. Hah! Aucune arme ne pourra empêcher une maladie de s\'étendre. Mais j\'ai besoin d\'une preuve. Vous pouvez m\'aider ? Rapportez-moi %d peaux de rat, pour mes tests additionnels.\n</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Est-ce seulement croyable ? Ces imbéciles n\'ont toujours pas compris à quel point ce foutu égoût est dangereux. Comme si les gardes et les aventuriers pouvaient les protéger de tout. Hah! Aucune arme ne pourra empêcher une maladie de s\'étendre. Mais j\'ai besoin d\'une preuve. Vous pouvez m\'aider ? Rapportez-moi %d peaux de rat, pour mes tests additionnels.\n</string>
+    <string name="PlagueDoctorQuest_2_2_InProgress">_Deux graines de soleil_ . Leurs pétales dorés recèlent un pouvoir que je cherche à comprendre. Trouvez-les, et que leur essence soit révélée !</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Achoo ! Les Nains ! Ces obstinés habitants des profondeurs, obsédés par les gemmes et l'or. Mais ce sont les _Sorcières Naines_ que je convoite... leur magie tordue, alimentée par les abysses mêmes qu'ils habitent. Cinq, j'ai besoin de cinq de ces âmes flétries ! Leurs corps recèlent la clé pour comprendre un certain... phénomène. Quelque chose à propos de la canalisation des énergies arcaniques à travers la terre elle-même. Je crois que je suis proche d'une percée, mais j'ai besoin de leur essence, de leur magie corrompue ! *Il tousse violemment dans son mouchoir, une tache sombre s'étalant sur le tissu délicat*</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Récupérez cinq _Kobolds Icemancers_ morts ! Leurs corps gelés contiennent la clé permettant de découvrir les secrets de leur magie glaçante !</string>
     <string name="PlagueDoctor_Desc">Cet homme bossu est complètement recouvert de cuir. Il sent très fort les préparations médicinales et... l\'aïl ?</string>
@@ -2870,6 +2871,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

@@ -301,6 +301,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Candy_Warning_2">Jetzt hattest du wirklich zu viel. Dein Magen schmerzt, weil du so viele Süßigkeiten gegessen hast.</string>
     <string name="Capotain_Info">Ein hochgekrönter, schmalkrempiger Hut. Er wird normalerweise mit Puritanern in Verbindung gebracht, aber du musst nicht religiös sein, um ihn tragen zu können. Aus irgendeinem Grund hat er eine Plakette mit dem Namen \&quot;Solomon\&quot;.</string>
     <string name="Capotain_Name">Capotain</string>
+    <string name="Carcass_Kick">Dieses %s ist völlig tot, keinen Grund es zu treten.</string>
     <string name="Caves_TileDescBookshelf">Wer braucht denn ein Bücherregal in einer Höhle?</string>
     <string name="Caves_TileDescDeco">Eine Erzader ist in der Wand sichtbar. Gold?</string>
     <string name="Caves_TileDescEntrance">Die Leiter führt nach oben auf eine höhere Ebene.</string>
@@ -2586,6 +2587,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 </resources>

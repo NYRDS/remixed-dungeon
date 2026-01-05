@@ -195,6 +195,7 @@
     <string name="Barrel_Pumpkin_Name">calabaza</string>
     <string name="Bat_Defense">esquivado</string>
     <string name="Bat_Desc">Estos enérgicos y tenaces habitantes de los techos de las cuevas pueden derrotar a enemigos mucho mayores que ellos, ya que se curan vida con cada ataque consecutivo.</string>
+    <string name="Bat_Gender">neuter</string>
     <string name="Bat_Name">murciélago vampiro</string>
     <string name="Bat_Name_Objective">murciélago vampiro</string>
     <string name="BattleAxe_Info">El peso de la enorme cabeza de metal de este hacha de batalla añade fuerza considerable en cada golpe.</string>
@@ -2724,5 +2725,6 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 </resources>
