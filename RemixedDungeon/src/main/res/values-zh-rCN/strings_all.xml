@@ -1864,6 +1864,7 @@
     <string name="SpiderMindAmber_Name">琥珀蜘蛛</string>
     <string name="SpiderMindAmber_Name_Objective">琥珀蜘蛛</string>
     <string name="SpiderMind_Desc">这些看似弱小的蜘蛛掌握着独一无二的精神力量，使它们能够掌控一个群体。灵能蜘蛛能够掌控所有活着的生物，但是它们身体相当脆弱。</string>
+    <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">灵能催眠蜘蛛</string>
     <string name="SpiderMind_Name_Objective">灵能催眠蜘蛛</string>
     <string name="SpiderNest_Desc">这个茧是由最细的丝线织成的，其中藏着一些活着的东西。</string>
@@ -2723,5 +2724,6 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 </resources>

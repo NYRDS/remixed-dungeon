@@ -1680,6 +1680,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="StartScene_New">Permainan Baharu</string>
     <string name="StartScene_No">Tidak, kembali ke menu utama</string>
     <string name="StartScene_Really">Anda pasti mahu mulakan permainan baharu?</string>
+    <string name="StartScene_Unlock">Untuk membuka kelas watak ini, bunuh bos DM-300 dengan kelas lain</string>
     <string name="StartScene_UnlockGnoll">Untuk membuka kelas ini anda mesti pujuk paderi pekan supaya sembuhkan Gnoll Ganas.</string>
     <string name="StartScene_UnlockNecromancer">Untuk membuka kelas karakter ini, bunuh Lich dengan lain-lain kelas.</string>
     <string name="StartScene_Warning">Kemajuan permainan semasa anda akan dipadamkan.</string>
@@ -2389,6 +2390,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 </resources>

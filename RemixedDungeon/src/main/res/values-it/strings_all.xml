@@ -1514,6 +1514,7 @@ Potrebbe bruciare?</string>
     <string name="SpiderServant_Name">ragno soldato </string>
     <string name="SpiderServant_Name_Objective">ragno soldato </string>
     <string name="Spinner_Desc">Questi ragni furiosi verdastri provano ad evitare il combattimento diretto, preferendo aspettare a distanza mentre le loro vittime, impigliate nella ragnatela, muoiono lentamente a cause del loro morso velenoso. </string>
+    <string name="Spinner_Gender">masculine</string>
     <string name="Spinner_Name">Filatore della caverna</string>
     <string name="Spinner_Name_Objective">Filatore della caverna</string>
     <string name="SpiritOfPain_Desc">Scheggia di tenebra vivente.</string>
@@ -2111,6 +2112,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
