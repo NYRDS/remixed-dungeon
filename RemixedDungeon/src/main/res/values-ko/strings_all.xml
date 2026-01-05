@@ -1002,6 +1002,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MageArmor_Desc">이 화려한 로브를 입고있는 마법사는 용암 분출 주문을 사용할 수 있다; 시야 내 모든 적에게 불을 붙이고 움직일 수 없게 한다.</string>
     <string name="MageArmor_Name">마법사의 로브</string>
     <string name="MageArmor_NotMage">이 갑옷은 마법사만 착용 가능하다</string>
+    <string name="MagicArrow_Info">오래된 마법 화살. 탄약이 떨어졌을 때의 좋은 선택이다.</string>
     <string name="MagicTorch_Info">어두운 던전에서 빛을 밝힙니다.</string>
     <string name="MagicTorch_Name">마법 횃불</string>
     <string name="MailArmor_Desc">갑옷을 단단하면서도 유연하게 하기 위하여 쇠사슬을 엮어 만들었다.</string>
@@ -2302,6 +2303,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 </resources>
