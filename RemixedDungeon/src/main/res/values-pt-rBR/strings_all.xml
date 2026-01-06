@@ -1349,6 +1349,7 @@ Parede
     <string name="PlagueDoctorNPC_Quest_Reminder">Traga-me %d peles de rato.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Você acredita nisso?! Esses idiotas ainda não perceberam o quão perigoso esse maldito esgoto é! Guardas e aventureiros não podem proteger a cidade contra nada. Hah! Nenhuma arma pode parar a propagação da doença. Mas eu preciso de provas, você pode me ajudar? Traga-me %d peles de rato, para que eu possa fazer alguns testes adicionais.\n</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Você acredita nisso?! Esses idiotas ainda não perceberam o quão perigoso esse maldito esgoto é! Guardas e aventureiros não podem proteger a cidade contra nada. Hah! Nenhuma arma pode parar a propagação da doença. Mas eu preciso de provas, você pode me ajudar? Traga-me %d peles de rato, para que eu possa fazer alguns testes adicionais.\n</string>
+    <string name="PlagueDoctorQuest_1_1_InProgress">Traga-me _cinco ratos mortos_! Cada rato que você me trouxer nos aproxima mais do entendimento dessa praga horrível.</string>
     <string name="PlagueDoctor_Desc">Este homem corcunda está totalmente vestido com couro. Ele tem cheiro forte de medicamentos e... alho?</string>
 
     <string name="PlagueDoctor_Name">médico da praga</string>
@@ -2702,4 +2703,5 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 </resources>

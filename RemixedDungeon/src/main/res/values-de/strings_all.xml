@@ -318,6 +318,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Challenges_Names_5">In die Dunkelheit</string>
     <string name="Challenges_Names_6">Verbotene Runen</string>
     <string name="Challenges_Names_7">Pazifismus</string>
+    <string name="ChampionOfFireBuff_Info">Mit dem Zorn der Flammen erfüllt, verstärkt dieses Merkmal die Wildheit und Kampfkraft der Kreatur. Der Feuerchampion tritt als furchteinflößender Gegner hervor, entfesselt verheerende Angriffe, die seine Feinde in lodernde Flammen hüllen und Schrecken in alle einflößen, die es wagen, ihm entgegenzutreten.</string>
     <string name="ChaosArmor_Info">Die blutroten Platten dieser Rüstung sind mit dunkelroten Ketten verbunden. Sie strahlt chaotische Energie aus, wenn du sie berührst.</string>
     <string name="ChaosArmor_Name">Chaosrüstung</string>
     <string name="ChaosBow_Info">Ein fürchterlicher Bogen, gefüllt mit der Kraft des Chaos. Ein Teil des Chaos wird mit jedem abgefeuerten Pfeil zu seinem Opfer getragen. Wenn man jedoch verfehlt...</string>
@@ -2588,6 +2589,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
