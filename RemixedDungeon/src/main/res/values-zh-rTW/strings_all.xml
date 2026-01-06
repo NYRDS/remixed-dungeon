@@ -298,6 +298,7 @@
     <string name="Caves_TileGrass">熒光苔蘚</string>
     <string name="Caves_TileHighGrass">熒光蘑菇</string>
     <string name="Caves_TileWater">冰冷刺骨的水。</string>
+    <string name="Challenges_Descriptions_7">你已習慣了擁有和使用武器在道德上是不正確的事實，但除此之外，你還能如何抵禦在下面遊蕩的怪物呢？</string>
     <string name="Challenges_Names_0">縮餐節食</string>
     <string name="Challenges_Names_1">信念護體</string>
     <string name="Challenges_Names_2">恐藥病癖</string>
@@ -2491,6 +2492,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

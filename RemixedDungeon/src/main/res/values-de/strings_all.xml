@@ -523,6 +523,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="Deathling_Desc">Der Untote ist die Seele eines Toten Helden, die genug Pech gehabt hat, um von einem Nekromanten beschwört zu werden.</string>
     <string name="Deathling_Name">Untoter</string>
     <string name="Deathling_Name_Objective">Untoter</string>
+    <string name="DeferedDamageBuff_Name">Verzögerter Schaden (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s hat dich getötet...</string>
     <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">Verschlingen</string>
@@ -2587,6 +2588,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

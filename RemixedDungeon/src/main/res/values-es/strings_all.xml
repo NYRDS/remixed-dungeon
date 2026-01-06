@@ -1865,6 +1865,7 @@ otro lugar del nivel.</string>
     <string name="SpiderGuard_Name">guardián arácnido</string>
     <string name="SpiderGuard_Name_Objective">guardian arácnido</string>
     <string name="SpiderMindAmber_Desc">Las arañas ámbar son criaturas misteriosas y raras que poseen poderes psíquicos parecidos a los de una psico-araña, pero son más resistentes que sus hermanas normales. El nombre \&quot;ámbar\&quot; es por el color de sus gigantes sacos cerebrales, que revela a sus víctimas, cuando los golpea con sus poderes.</string>
+    <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name">arañas ámbar</string>
     <string name="SpiderMindAmber_Name_Objective">arañas ámbar</string>
     <string name="SpiderMind_Desc">Estas, aparentemente frágiles, arañas poseen poderes mentales únicos, lo que les permite controlar toda la colonia. Las psico-arañas pueden controlas cualquier criatura, pero son bastante cobardes.</string>
@@ -2726,6 +2727,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

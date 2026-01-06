@@ -1343,6 +1343,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="MoongraceBuff_Name">Mana paradisiaque</string>
     <string name="Moongrace_Desc">Ces plantes grandissent par petit nombre, et sont connues pour être une source naturel de magie.</string>
     <string name="Moongrace_Name">Grâcelune</string>
+    <string name="Movement_Speed">Vitesse de déplacement</string>
     <string name="Multiplicity_Txt">%s de multiplicité</string>
     <string name="Mushroom_Eat_Message">Quel goût insolite, ce champignon !</string>
     <string name="MysteryMeat_Info">Mangez à vos risques et périls !</string>
@@ -2871,6 +2872,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
