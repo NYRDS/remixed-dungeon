@@ -2040,6 +2040,8 @@
     <string name="VertigoBuff_Info">天旋地转的感觉让你都走不直了！</string>
     <string name="VertigoBuff_Name">眩晕</string>
     <string name="View_Distance">视野距离</string>
+    <string name="VileEssence_Info">从被击败的敌人身上提取的浓缩腐化精华。这种黑暗物质充满了恶意能量，在炼金术中极具价值。</string>
+    <string name="VileEssence_Name">邪恶精华</string>
     <string name="Viscosity_Status">延缓 %d 点伤害</string>
     <string name="Viscosity_Txt">粘稠之%s</string>
     <string name="WandHolster_Info">这个精致的法杖套是用一种珍稀动物的皮毛制成的。它最多可以放进 %d 支法杖</string>
@@ -2726,6 +2728,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
