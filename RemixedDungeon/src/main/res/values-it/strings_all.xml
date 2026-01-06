@@ -73,6 +73,7 @@
     <string name="ArmoredStatue_Name">statua animata</string>
     <string name="ArmoredStatue_Name_Objective">statua animata</string>
     <string name="Artifact_Limit">Puoi indossare solo 2 anelli alla volta.</string>
+    <string name="Attack_Range">Distanza di attacco</string>
     <string name="AzuterronNPC_Desc">Una misteriosa figura avvolta da una nebbia nera.</string>
     <string name="AzuterronNPC_Name">Sconosciuto</string>
     <string name="AzuterronNPC_Name_Objective">Sconosciuto</string>
@@ -2119,6 +2120,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
