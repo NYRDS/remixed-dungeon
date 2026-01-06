@@ -471,6 +471,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DewVial_Name">이슬병</string>
     <string name="Dewdrop_Info">수정처럼 맑은 이슬입니다.</string>
     <string name="Dewdrop_Name">이슬</string>
+    <string name="DieHardBuff_Name">죽을 때까지</string>
     <string name="Displacement_Txt">이동의 %s</string>
     <string name="DogeMask_Info">유명한 DOGE로 변장하고 싶습니까? 당신의  기회가 바로 지금 여기 있습니다!\n 정말 마스크! 많은 변장! 와!</string>
     <string name="DogeMask_Name">DOGE 가면</string>
@@ -2305,6 +2306,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

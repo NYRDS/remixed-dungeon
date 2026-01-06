@@ -18,6 +18,7 @@
     <string name="AboutScene_Txt_Intro">A NYRDS által készített Remixed Dungeon a Watabou eredeti, Pixel Dungeon nevű játéka alapján készült.</string>
     <string name="Accuracy_Decreased">Miért gondoltam, hogy használhatok egy %s? Rossz eszköz, rossz kezek!</string>
     <string name="Acidic_Desc">Ez a hatalmas pókszerű démoni teremtmény mindenképpen kerüli a közelharcot, messziről bénító fogazott tüskéket lő.</string>
+    <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">savas skorpió</string>
     <string name="Acidic_Name_Objective">savas skorpiót</string>
     <string name="Affection_Txt">Csábító %s</string>
@@ -2416,6 +2417,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
