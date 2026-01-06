@@ -362,6 +362,7 @@
     <string name="ChaosHelmet_Name">Casco del caos</string>
     <string name="ChaosStaff_Info">¡Una vara imbuida por el Poder del Caos! ¿Qué otra cosa puede soñar o temer un mago?</string>
     <string name="ChaosStaff_Name">vara de caos</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">La hoja de la espada está compuesta de puro caos, y a veces vibra. En esta espada hay almacenado un gran poder, capaz de cortar por la mitad casi cualquier cosa. Sin embargo, se necesita mucha habilidad para hacer frente a las poderosas fuerzas de este arma.</string>
     <string name="ChaosSword_Name">espada de caos</string>
     <string name="CharAction_Charm">encanto</string>
@@ -2728,6 +2729,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

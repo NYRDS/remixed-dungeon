@@ -1290,6 +1290,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
 </string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Kannst du es glauben? Diese Idioten haben noch nicht erkannt, wie gefährlich diese verdammten Abwasserkanäle sind! Wie Wachen und Abenteurer die Stadt vor allem schützen können. Hah! Keine Waffe kann die Ausbreitung der Krankheit verhindern. Aber ich brauche Beweise, kannst du mir helfen? Bring mir %d Rattenhäute, damit ich zusätzliche Tests machen kann.\n
 </string>
+    <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, Sie sind zurückgekehrt! _Fünf tote Ratten_, perfekt! Ihre Felle werden für meine Forschung entscheidend sein. Und wie versprochen, für Ihren tapferen Einsatz habe ich Ihnen aus ihren eigenen Fellen diese Rüstung gefertigt. Sie ist mit einem Hauch der Pest versehen, aber keine Sorge! Sie ist kontrolliert, sie schützt! Jetzt gehen Sie! Beschützen Sie die Stadt!</string>
     <string name="PlagueDoctor_Desc">Dieser bucklige Mann ist komplett mit Leder bezogen. Er riecht stark nach Medikamenten und ... Knoblauch?</string>
 
     <string name="PlagueDoctor_Name">Virendoktor</string>
@@ -2589,6 +2590,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

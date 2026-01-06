@@ -327,6 +327,7 @@
     <string name="ChaosCrystal_Use">使用</string>
     <string name="ChaosHelmet_Info">血紅色的頭盔是混沌戰士的基本象徵。</string>
     <string name="ChaosHelmet_Name">混沌頭盔</string>
+    <string name="ChaosShield_desc">混沌護盾是將混沌水晶與普通盾牌融合的結果，使其在成功格擋時隨機產生混亂效果。</string>
     <string name="ChaosStaff_Info">與混沌之力融合的法杖，不就是眾法師或敬或畏之物嗎？</string>
     <string name="ChaosStaff_Name">混沌法杖</string>
     <string name="ChaosSword_Info">混亂為刃，力量蘊內。刀身發顫，砍山分洪，力無不逮。唯有強者，方能使用。</string>
@@ -2492,6 +2493,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
