@@ -171,6 +171,7 @@
     <string name="Badges_StrengthAttained4">Отримано 19 очок сили</string>
     <string name="Badges_StrengthAttained5">21 одиниць сили набрано</string>
     <string name="Badges_Supporter">Дякуємо за підтримку!</string>
+    <string name="Badges_ThisIsSparta">Це Спарта!!!</string>
     <string name="Badges_Victory">Отримано Амулет Ендора </string>
     <string name="Badges_VictoryAll">Отримано Амулет Ендора кожним класом</string>
     <string name="Badges_Yasd">Смерть від вогню, отрути, токсичного газу та голоду</string>
@@ -2574,6 +2575,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 </resources>

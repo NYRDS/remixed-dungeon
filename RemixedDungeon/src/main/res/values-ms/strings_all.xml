@@ -558,6 +558,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ElvenDagger_Info">Senjata ini diperbuat dari aloi logam istimewa, menjadikannya lebih ringan berbanding pisau biasa.</string>
     <string name="ElvenDagger_Name">pisau bunian</string>
     <string name="EncumbranceBuff_CharAct_4">Saya kekurangan kekuatan untuk menggunakan %s secara sepenuhnya.</string>
+    <string name="EncumbranceBuff_Info">Tiada kekuatan yang cukup untuk menggunakan %s secara efektif.</string>
     <string name="EnslavedSoul_Desc">Anda dapat melihat penjelmaan hantu ini. Kadangkala seakan-akan tengkorak, kemudian muncul wajah tetapi rupa sengsara dan terseksa.</string>
     <string name="EnslavedSoul_Name">roh hamba</string>
     <string name="EnslavedSoul_Name_Objective">roh hamba</string>
@@ -2395,6 +2396,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
