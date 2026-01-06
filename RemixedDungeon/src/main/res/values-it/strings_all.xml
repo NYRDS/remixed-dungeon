@@ -16,6 +16,7 @@
     <string name="AboutScene_Thanks">Ringraziamenti speciali:</string>
     <string name="AboutScene_Translation">Tradotto da:</string>
     <string name="Acidic_Desc">Queste creature demoniche simili ad aracnidi evitano i combattimenti ravvicinati ad ogni costo, lanciando punte paralizzanti da lunghe distanze.</string>
+    <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">scorpione acido</string>
     <string name="Acidic_Name_Objective">scorpione acido</string>
     <string name="Affection_Txt">%s dell\'affetto</string>
@@ -1018,6 +1019,7 @@ Potrebbe bruciare?</string>
     <string name="MysteryMeat_Info4">ti sei rimpinzato.</string>
     <string name="MysteryMeat_Message">Quel cibo assaggiato...è strano</string>
     <string name="MysteryMeat_Name">Carne Misteriosa</string>
+    <string name="NatureArmorSpell_Name">Armatura della Natura</string>
     <string name="NecromancerArmor_Info">Questa armatura permetterà ad un Negromante di evocare fino a 2 Gregari della Morte al costo di 5 anime l\'uno. Questi servitori non-morti seguiranno il loro padrone ed attaccheranno i suoi nemici. I gregari della Morte diverranno più forti ad ogni livello dell\'eroe.</string>
     <string name="NecromancerArmor_Info2">Indossare quest\'armatura permette al negromante di usare l\'abilità \&quot;Necrotismo\&quot;, che spargerà una piaga magica che potrebbe infettare ogni creatura nelle vicinanze, che sia morta o viva.</string>
     <string name="NecromancerArmor_Name">Armatura d\'ossa</string>
@@ -2117,6 +2119,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

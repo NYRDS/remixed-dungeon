@@ -454,6 +454,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="DM300_Name_Objective">DM-300</string>
     <string name="Dagger_Info">Sejenis pisau logam biasa dan mempunyai hulu kayu yang telah lusuh.</string>
     <string name="Dagger_Name">pisau</string>
+    <string name="Damage_Reduction">Pengurangan kerosakan</string>
     <string name="DarkGold_Info">Logam ini disebut gelap bukan kerana warnanya (ia tiada beza dengan emas biasa), tetapi ia menjadi cair dibawah sinaran matahari, oleh itu tidak bernilai di luar sana.</string>
     <string name="DarkGold_Name">bijih emas gelap</string>
     <string name="DarkSacrifice_Hint">Pilih pengikut setia anda untuk dikorbankan!</string>
@@ -2396,6 +2397,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

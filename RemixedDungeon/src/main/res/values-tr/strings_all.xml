@@ -1819,6 +1819,7 @@ seviyenin başka bir yeri.</string>
     <string name="Shopkeeper_text">Yerel Piksel-Dükkân şubesine hoş geldiniz.\nSize nasıl yardımcı olabilirim?</string>
     <string name="Shopkeeper_title">Dükkân</string>
     <string name="ShortSword_ACReforge">DÖV</string>
+    <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">Gerçekten kısa, bir hançerden birkaç santim daha uzundur herhalde.</string>
     <string name="ShortSword_Name">kısa kılıç</string>
     <string name="ShortSword_NotBoomerang">Bumerang\'ı bu şekilde yükseltemezsin</string>
@@ -2787,6 +2788,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
