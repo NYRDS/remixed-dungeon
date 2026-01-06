@@ -29,6 +29,15 @@ public class WndInGameMenu extends WndMenuCommon {
 			return;
 		}
 
+		// Add alchemy button for regular gameplay
+		menuItems.add(new MenuButton("Alchemy") {
+			@Override
+			protected void onClick() {
+				super.onClick();
+				GameScene.show(new WndAlchemy());
+			}
+		});
+
 		if (BuildConfig.DEBUG) {
 			menuItems.add(new MenuButton("AlchemyTest") {
 				@Override

@@ -1,0 +1,20 @@
+{
+  "recipes": [
+    {
+      "input": ["Sungrass.Seed", "Sungrass.Seed", "DewVial"],
+      "output": "PotionOfHealing"
+    },
+    {
+      "input": ["Firebloom.Seed", "MysteryMeat"],
+      "output": "PotionOfLiquidFlame"
+    },
+    {
+      "input": ["Icecap.Seed", "Dewdrop"],
+      "output": "PotionOfFrost"
+    },
+    {
+      "input": ["Sorrowmoss.Seed", "CorpseDust"],
+      "output": "PotionOfToxicGas"
+    }
+  ]
+}

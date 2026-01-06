@@ -124,6 +124,18 @@ tasks.register('runWebServer', JavaExec) {
     workingDir = file('src/desktop/rundir')
 }
 
+// Add a task for running the Alchemy Window
+tasks.register('runAlchemyWindow', JavaExec) {
+    dependsOn classes
+    mainClass = 'com.nyrds.pixeldungeon.desktop.AlchemyWindowLauncher'
+    classpath = sourceSets.main.runtimeClasspath
+
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+
+    // Set working directory to rundir to ensure proper asset access
+    workingDir = file('src/desktop/rundir')
+}
+
 tasks.withType(JavaExec).configureEach {
     jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
 }
