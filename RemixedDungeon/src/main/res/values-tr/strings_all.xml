@@ -2516,6 +2516,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="YogsBrain_Name">yog\'un beyni</string>
     <string name="YogsBrain_Name_Objective">Yog\'un beyni</string>
     <string name="YogsEye_Desc">Eski Tanrının gözü, ebedi nefret ile dolu olarak senin içinden ruhuna doğru baktığını hissedebilirsin</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">yog\'un gözü</string>
     <string name="YogsEye_Name_Objective">Yog\'un gözü</string>
     <string name="YogsHeart_Desc">Yüzyıllar boyunca insanlar sadece gerçekten kalpsiz yaratıkların saf kötülük eylemlerinde bulunabileceğine inandılar. Oysa işte karşınızda, Eski Tanrı\'nın kendisine ait, kocaman atan bir kalp duruyor.</string>
@@ -2786,6 +2787,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 </resources>

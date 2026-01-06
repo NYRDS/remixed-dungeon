@@ -1168,6 +1168,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
 </string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">하! 믿을수 있겠어?! 저 멍청이들은 아직도 이 빌어먹을 하수구가 얼마나 위험한지 깨닫지 못하고 있어! 모험가들과 경비원들이 마을을 어떤 것이든 막아낼 수 있다고 믿나 봐. 하! 역병이 퍼지는 것을 막을 무기는 없어. 하지만 나는 증거가 필요해. 나를 도와줄수 있겠어? 내가 추가적인 실험을 할 수 있게 %d개의 쥐 가죽을 가져와 줘.
 </string>
+    <string name="PlagueDoctorQuest_1_2_Epilogue">아하… 훌륭하다! _달팽이_의 그 비밀이 달빛 아래에서 꽃잎처럼 서서히 펼쳐지는구나. 정말 방대한 정보로구나! 하지만 말이 맞네, _50 골드_라니 그다지 어울리는 보상은 아니지. *광적으로 웃음을 터뜨린다*.</string>
     <string name="PlagueDoctor_Desc">이 곱추 남성은 가죽으로 둘러쌓여 있고, 강한 약냄새가..아니, 마늘 냄새도 나는 것 같다?</string>
 
     <string name="PlagueDoctor_Name">역병 의사</string>
@@ -2304,6 +2305,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
