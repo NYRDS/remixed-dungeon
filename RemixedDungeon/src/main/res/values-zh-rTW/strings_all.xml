@@ -1225,6 +1225,7 @@
     <string name="OverpricedRation_Info">這看起來就是一份普通的口糧，雖然小了一些</string>
     <string name="OverpricedRation_Message">這份食物吃起來還不錯。</string>
     <string name="OverpricedRation_Name">小包口糧</string>
+    <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">這支箭已被塗上麻痺毒藥。</string>
     <string name="ParalysisArrow_Name">麻痺箭</string>
     <string name="Paralysis_Name_0">重擊%s</string>
@@ -2499,6 +2500,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -1314,6 +1314,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="OverpricedRation_Info">Terlihat sama seperti ransum makanan standar tapi lebih kecil.</string>
     <string name="OverpricedRation_Message">Makanan itu terasa lumayan.</string>
     <string name="OverpricedRation_Name">ransum makanan mahal</string>
+    <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Anak panah ini dilapisi curare.</string>
     <string name="ParalysisArrow_Name">anak panah melumpuhkan</string>
     <string name="ParalysisBuff_Info">Benar-benar lumpuh!</string>
@@ -2704,6 +2705,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

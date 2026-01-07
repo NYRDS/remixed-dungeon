@@ -1337,6 +1337,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="OverpricedRation_Info">Es exactamente igual que una ración de comida, pero más pequeña.</string>
     <string name="OverpricedRation_Message">Esa comida estaba buena.</string>
     <string name="OverpricedRation_Name">ración de comida demasiado cara</string>
+    <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Esta flecha está empapada en curare.</string>
     <string name="ParalysisArrow_Name">flecha paralizante</string>
     <string name="ParalysisBuff_Info">¡Completamente paralizado!</string>
@@ -2731,6 +2732,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -249,6 +249,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="BodyArmorBuff_Name">Test Páncélzat</string>
     <string name="BodyArmorSpell_Info">Aktiválja a fenntartott izomerőt, ami ideiglenesen erősebbé fog tenni, így jelentősen megnő a páncélod a gyorsaságod ellenében.</string>
     <string name="BodyArmorSpell_Name">Test Páncélzat</string>
+    <string name="BoneShard_Info">Egy éles csontszilánk, amit egy legyőzött ellenségből nyertek. Ezek a szilánkok meglepően tartósak és hasznosak bármilyen barkácsolásban.</string>
     <string name="Boomerang_Info">Ellenség felé hajítás után ez a meghajlított fából készült dobófegyver visszatér a gazdájához.</string>
     <string name="Boomerang_Name">boomeráng</string>
     <string name="Bounce_Txt">Pattanó %s</string>
@@ -1184,6 +1185,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="OverpricedRation_Info">Úgy néz ki mint a normális étel adag csak kisebb.</string>
     <string name="OverpricedRation_Message">Ez jó volt!</string>
     <string name="OverpricedRation_Name">méregdrága készletek</string>
+    <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Ezt a nyílvesszőt méreg borítja.</string>
     <string name="ParalysisArrow_Name">bénító nyíl</string>
     <string name="Paralysis_Name_0">Kábító %s</string>
@@ -2422,6 +2424,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

@@ -1,5 +1,6 @@
 <resources>
     <string name="AC_Devour">포식</string>
+    <string name="AC_Kick">차기</string>
     <string name="AC_Necromancy">강령술</string>
     <string name="Abilities_Common">보통 마법</string>
     <string name="Abilities_Default">마스터리</string>
@@ -1151,6 +1152,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="OverpricedRation_Info">일반적인 비상 식량과 똑같이 생겼지만 크기가 좀 더 작습니다.</string>
     <string name="OverpricedRation_Message">맛이 좋습니다.</string>
     <string name="OverpricedRation_Name">비싼 비상 식량</string>
+    <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">이 화살은 쿠라레 독이 칠해져 있다.</string>
     <string name="ParalysisArrow_Name">마비 화살</string>
     <string name="ParalysisBuff_Name">마비됨</string>
@@ -2323,6 +2325,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 

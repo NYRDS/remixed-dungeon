@@ -1259,6 +1259,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="OverpricedRation_Info">Es sieht genauso aus wie eine normale Essensration, nur kleiner.</string>
     <string name="OverpricedRation_Message">Das Essen hat gut geschmeckt.</string>
     <string name="OverpricedRation_Name">Überteuerte Essensration</string>
+    <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Dieser Pfeil ist mit Curare beschichtet.</string>
     <string name="ParalysisArrow_Name">Lähmender Pfeil</string>
     <string name="ParalysisBuff_Info">Komplett gelähmt!</string>
@@ -2595,6 +2596,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

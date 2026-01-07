@@ -1378,6 +1378,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="OverpricedRation_Info">見た目は標準的な糧食にそっくりだが、もっと小さい。</string>
     <string name="OverpricedRation_Message">味はまあまあだった。</string>
     <string name="OverpricedRation_Name">高品質な糧食</string>
+    <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">この矢にはクラーレが塗られている。</string>
     <string name="ParalysisArrow_Name">麻痺の矢</string>
     <string name="ParalysisBuff_Info">完全に麻痺している！</string>
@@ -2850,4 +2851,5 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 </resources>
