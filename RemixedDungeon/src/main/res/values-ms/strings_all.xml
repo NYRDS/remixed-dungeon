@@ -2015,6 +2015,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndInfoItem_Skeleton">Tulang manusia</string>
     <string name="WndInfoItem_Tomb">Makam</string>
     <string name="WndInfoItem_WontKnow">Anda tidak tahu apa-apa di dalamnya sehinggalah anda membukanya!</string>
+    <string name="WndInstallingMod_deleting_file">Memadam %s</string>
     <string name="WndJournal_Levels">Aras</string>
     <string name="WndJournal_Logbook">Buku Log</string>
     <string name="WndJournal_Title">Jurnal</string>
@@ -2404,6 +2405,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

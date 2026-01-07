@@ -462,6 +462,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="Codex_Story_8">Glyphe der Zähigkeit - Der Held erhält einen negativen Effekt, der eine Verzögerung des erhaltenen Schadens bewirkt. Dieser führt dazu, dass der Held in jeder Runde 1 Schadenspunkt erleidet anstatt den vollen Schaden auf einmal zu bekommen.</string>
     <string name="Codex_Story_9">Glyphe der Versetzung - Immer wenn der Held Schaden erleidet, besteht die Chance, dass er an einen zufälligen anderen Ort in Sichtweite teleportiert wird. Diese Glyphe funktioniert nicht in Boss-Ebenen.</string>
     <string name="ColdSpirit_Desc">Eine kalte Seele ist die Erscheinung von Kälte in ihrer reinsten Form. Sie sind gedankenlose Schalen, erschaffen durch Magie, verhält sich nach dem Willen des Erschaffers, oder nach Grundlegenden Instinkten und Reflexen.</string>
+    <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name">kalte Seele</string>
     <string name="ColdSpirit_Name_Objective">kalte Seele</string>
     <string name="ComboBuff_Info">Der nächste Angriff wird ein Comboangriff.</string>
@@ -1274,6 +1275,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Pickaxe_Info">Dies ist ein großes und stabiles Werkzeug, um Steine zu zerbrechen. Es kann auch als Waffe genutzt werden.</string>
     <string name="Pickaxe_Name">Spitzhacke</string>
     <string name="Pickaxe_NoVein">Es gibt keine Goldader in der Nähe.</string>
+    <string name="Pickaxe_NothingToMine">Hier gibt es nichts zu schürfen!</string>
     <string name="Piercing_Name_0">Durchdringender %s</string>
     <string name="Piercing_Name_1">Durchdringender %s</string>
     <string name="Piercing_Name_2">Durchdringender %s</string>
@@ -2157,6 +2159,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndInfoItem_Skeleton">Skelettierte Überreste</string>
     <string name="WndInfoItem_Tomb">Grab</string>
     <string name="WndInfoItem_WontKnow">Du wirst erst wissen was darin ist, wenn du es geöffnet hast!</string>
+    <string name="WndInstallingMod_deleting_file">Lösche %s</string>
     <string name="WndJournal_Levels">Levels</string>
     <string name="WndJournal_Logbook">Logbuch</string>
     <string name="WndJournal_Title">Logbuch</string>
@@ -2596,6 +2599,9 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
 
 
 

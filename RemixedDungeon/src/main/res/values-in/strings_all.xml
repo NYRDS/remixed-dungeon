@@ -2255,6 +2255,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndInfoItem_Skeleton">Tulang belulang</string>
     <string name="WndInfoItem_Tomb">Kuburan</string>
     <string name="WndInfoItem_WontKnow">Anda tidak akan tahu apa di dalamnya sampai Anda membukanya!</string>
+    <string name="WndInstallingMod_deleting_file">Menghapus %s</string>
     <string name="WndJournal_Levels">Level</string>
     <string name="WndJournal_Logbook">Buku catatan</string>
     <string name="WndJournal_Title">Jurnal</string>
@@ -2705,6 +2706,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

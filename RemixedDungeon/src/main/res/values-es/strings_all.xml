@@ -483,6 +483,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Codex_Story_8">Glifo de Viscosidad - El héroe obtiene la desventaja de daño diferido, el héroe recibe 1 de daño por turno, en lugar de recibir todo el daño de golpe.</string>
     <string name="Codex_Story_9">Glifo de Desplazamiento - Cuando el héroe es golpeado es posible que sea transportado a una ubicación visible aleatoria. Este glifo no funciona en los niveles de los jefes..</string>
     <string name="ColdSpirit_Desc">Un espíritu helado es una manifestación del frío, en una forma pura. Son un cascarón sin voluntad, creados con magia. Actuando bajo la voluntad de su creador con instintos básicos y reflejos.</string>
+    <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name">espíritu helado</string>
     <string name="ColdSpirit_Name_Objective">espíritu helado</string>
     <string name="ComboBuff_Info">El siguiente ataque será un ataque combinado.</string>
@@ -2281,6 +2282,7 @@ otro lugar del nivel.</string>
     <string name="WndInfoItem_Skeleton">Restos de huesos</string>
     <string name="WndInfoItem_Tomb">Tumba</string>
     <string name="WndInfoItem_WontKnow">¡No sabrás lo que hay dentro hasta que lo abras!</string>
+    <string name="WndInstallingMod_deleting_file">Eliminando %s</string>
     <string name="WndJournal_Levels">Niveles</string>
     <string name="WndJournal_Logbook">Diario de registros</string>
     <string name="WndJournal_Title">Diario</string>
@@ -2732,6 +2734,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

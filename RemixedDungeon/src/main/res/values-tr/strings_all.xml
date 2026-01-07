@@ -1827,6 +1827,7 @@ seviyenin başka bir yeri.</string>
     <string name="ShortSword_NotBoomerang">Bumerang\'ı bu şekilde yükseltemezsin</string>
     <string name="ShortSword_Reforged">kısa kılıcı döverek ,%s nesnesini yükseltin</string>
     <string name="ShortSword_Select">Geliştirmek için silah seç</string>
+    <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Jilet gibi keskin bıçaklara sahip yıldız şeklindeki metal parçaları hedeflerine önemli hasar verir. Çok yüksek hızda fırlatılabilirler.</string>
     <string name="Shuriken_Name">shuriken (Ninja Yıldızı)</string>
     <string name="SkeletonKey_Info">Çok ağırbaşlı duruyor. Bununla önemli bir kapıyı açabilirsin.</string>
@@ -2336,6 +2337,7 @@ remix.30.1\n
     <string name="WndInfoItem_Skeleton">İskelet Kalıntısı</string>
     <string name="WndInfoItem_Tomb">Mezar</string>
     <string name="WndInfoItem_WontKnow">Açmadan içinde ne olduğunu bilemezsin!</string>
+    <string name="WndInstallingMod_deleting_file">Siliniyor %s</string>
     <string name="WndJournal_Levels">Seviyeler</string>
     <string name="WndJournal_Logbook">Kayıt defteri</string>
     <string name="WndJournal_Title">Dergi</string>
@@ -2790,6 +2792,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 

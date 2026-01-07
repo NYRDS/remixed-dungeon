@@ -439,6 +439,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="Codex_Story_8">Viszkozitás Írásjele - A Hős kap egy sebzés elhalasztás modosítót. Körönként 1 sebzést fog szenvedni ahelyett hogy egy összegben kerülne levonásra az egész</string>
     <string name="Codex_Story_9">Áthelyezés Írásjele - Minden alkalommal amikor a Hőst ütés éri esély van arra hogy elteleportál egy látható véletlenszerű helyre. Ez a főnök szinteken nem működik</string>
     <string name="ColdSpirit_Desc">A fagyszellem a hideg megtestesülése, a legtisztább formában. Mivel egy agyatlan kásája a mágikus energiának, vagy a megidézője parancsait követi, vagy alapösztönöket követ.</string>
+    <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name">fagyott lélek</string>
     <string name="ColdSpirit_Name_Objective">fagyott lélek</string>
     <string name="ComboBuff_Name">Kombó</string>
@@ -1182,6 +1183,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="Nightmare_Name_Objective">rémálom</string>
     <string name="No_Valid_Cell">Nincs megfelelő mező a közelben.</string>
     <string name="Ooze_Death">%s megölt téged...</string>
+    <string name="Order_Resist">Méltóságtalan!</string>
     <string name="OverpricedRation_Info">Úgy néz ki mint a normális étel adag csak kisebb.</string>
     <string name="OverpricedRation_Message">Ez jó volt!</string>
     <string name="OverpricedRation_Name">méregdrága készletek</string>
@@ -2048,6 +2050,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndInfoItem_Skeleton">Csontváz maradványok</string>
     <string name="WndInfoItem_Tomb">Sír</string>
     <string name="WndInfoItem_WontKnow">Nem tudod, hogy mi van benne amíg ki nem nyitod!</string>
+    <string name="WndInstallingMod_deleting_file">Törlés: %s</string>
     <string name="WndJournal_Levels">Szintek</string>
     <string name="WndJournal_Logbook">Eseménynapló</string>
     <string name="WndJournal_Title">Napló</string>
@@ -2424,6 +2427,9 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
 
 
 

@@ -2255,6 +2255,7 @@ remix.31.1\n
     <string name="WndInfoItem_Skeleton">Restos de Esqueletos</string>
     <string name="WndInfoItem_Tomb">Tumba</string>
     <string name="WndInfoItem_WontKnow">Você não vai saber o que há dentro até abri-lo!</string>
+    <string name="WndInstallingMod_deleting_file">Apagando %s</string>
     <string name="WndJournal_Levels">Levels</string>
     <string name="WndJournal_Logbook">LogBook</string>
     <string name="WndJournal_Title">Diário</string>
@@ -2706,6 +2707,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

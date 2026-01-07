@@ -2098,6 +2098,7 @@
     <string name="WndInfoItem_Skeleton">骸骨</string>
     <string name="WndInfoItem_Tomb">墳墓</string>
     <string name="WndInfoItem_WontKnow">直至打開一刻，方曉裏面為何物！</string>
+    <string name="WndInstallingMod_deleting_file">正在刪除 %s</string>
     <string name="WndJournal_Levels">特殊地點</string>
     <string name="WndJournal_Logbook">地牢樓層日誌</string>
     <string name="WndJournal_Title">探險日誌</string>
@@ -2500,6 +2501,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
