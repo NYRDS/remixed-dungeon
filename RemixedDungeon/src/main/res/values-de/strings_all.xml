@@ -1281,6 +1281,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Piranha_Name_Objective">Riesiger Piranha</string>
     <string name="PirateSet_Info">Arr! Hälst du dich für einen Matrosen oder für ein verdammtes Landei!? Ich hoffe du bist keins, das Zeug ist nur für Piraten, sag ich dir...Arr!</string>
     <string name="PirateSet_Name">Piratenset</string>
+    <string name="PlagueDoctorMaskHood_Info">Ein geschnitzter Ebenholzschädel, dessen hohle Augenhöhlen mit dem unwirklichen Schimmer von Amethyststeinen glühen. Jeder Atemzug, den Sie tun, flüstert durch ein Labyrinth aus Röhren und Filtern und trägt den Duft starker Kräuter und Gewürze mit sich, die den Verfall überdecken, der an Ihnen haftet. Doch es ist nicht nur die Maske. Ein schwerer Kuttenschober aus samtenem Mitternachtsblau hüllt Ihr Gesicht und Ihren Kopf in Schatten. Der Kapuzen, wie der Flügel einer Raben, fließt Ihren Rücken hinab, seine Ränder mit einer Fransen aus knochenweißer Spitze besetzt, ein unheimlich schöner Kontrast. Zusammen schaffen Maske und Kapuze eine gespenstische Erscheinung, ein düsteres Zeugnis des unendlichen Kampfes gegen die Kräfte des Verfalls.</string>
     <string name="PlagueDoctorNPC_After_Quest">Ich werd\'s ihnen zeigen. Ihnen allen!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Du bist immernoch da? Hier! Nimm das.</string>
     <string name="PlagueDoctorNPC_Desc">Dieser bucklige Mann ist komplett mit Leder bezogen. Er riecht stark nach Medikamenten und ... Knoblauch?</string>
@@ -1693,6 +1694,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="Sheep_Name">Schaf</string>
     <string name="Sheep_Name_Objective">Schaf</string>
     <string name="ShieldBuffNotReady_Name">Schild ist nicht bereit</string>
+    <string name="ShieldBuffReady_Name">Schild ist bereit</string>
     <string name="ShieldInfoTemplate">Dieser Schild blockiert bis zu %1$d des eingehenden Schadens. Mit einer Chance von %2$d %% . Es wird %3$3.1f Sekunden dauern, um sich nach erfolgreicher Blockade zu erholen.</string>
     <string name="ShieldStrTemplate">Träger von diesem Schild sollten mindestens %1$dPunkt Stärke besitzen, um ihn richtig zu benutzen.</string>
     <string name="ShieldWeaponInfo">Bei Verwendung als Waffe verursacht dieser Schild durchschnittlich %1$dSchaden.</string>
@@ -2593,6 +2595,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 
