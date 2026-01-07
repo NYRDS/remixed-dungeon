@@ -335,6 +335,7 @@
     <string name="ClassArmor_NotEquipped">Devi indossare questa armatura per usare il suo potere speciale!</string>
     <string name="Claymore_Info">Questa spada enorme dovrebbe essere in grado di aprirti un varco ovunque.</string>
     <string name="Claymore_Name">Claymore</string>
+    <string name="CloakSpell_EnemiesNearby">Non puoi nasconderti nell'ombra mentre i nemici sono vicini.</string>
     <string name="ClothArmor_Desc">Questa armatura leggera offre una protezione base.</string>
     <string name="ClothArmor_Name">armatura in stoffa</string>
     <string name="Codex_ACRead">LEGGI</string>
@@ -501,6 +502,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="ElfArmor_Desc">Con l\'aiuto di questo mantello, l\'elfo può evocare le forze della natura stessa. L\'erba alta crescerà in un lampo, anche attraverso la roccia solida, immobilizzando tutti i nemici in vista.</string>
     <string name="ElfArmor_Name">Mantello elfico</string>
     <string name="ElfArmor_NotElf">Solo gli elfi possono usare questa armatura!</string>
+    <string name="ElvenDagger_Info">Questa arma è fatta di una speciale lega metallica, rendendola molto più leggera rispetto a un pugnale normale.</string>
     <string name="EnslavedSoul_Desc">Puoi quasi vedere attraverso questa apparizione spiritica. Nonostante sembri uno scheletro, a volte, per mezzo secondo, compare un volto invece... un volto colmo di sofferenza e tormento.</string>
     <string name="EnslavedSoul_Name">anima incatenata</string>
     <string name="EnslavedSoul_Name_Objective">anima incatenata</string>
@@ -812,6 +814,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Journal_Garden">Giardino</string>
     <string name="Journal_Ghost">Fantasma triste</string>
     <string name="Journal_Imp">Diavoletto ambizioso</string>
+    <string name="Journal_PlagueDoctorNPC">Dottore della peste</string>
     <string name="Journal_Statue">Statua Animata</string>
     <string name="Journal_Troll">Fabbro troll</string>
     <string name="Journal_Wandmaker">Vecchio fabbricante di bacchette</string>
@@ -2121,6 +2124,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 

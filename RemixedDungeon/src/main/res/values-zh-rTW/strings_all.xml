@@ -170,6 +170,7 @@
     <string name="Bandit_Desc">地牢的深處總是各式罪犯的藏身之地。不是所有人都能在漫長的歲月中保持清醒的神智，在很久以前，這些瘋狂的小偷和強盜就已經忘記了自己是誰，為什麼要偷東西。這個強盜看起來在他的匕首上塗了什麼東西！</string>
     <string name="Bandit_Name">瘋狂強盜</string>
     <string name="Bandit_Name_Objective">瘋狂強盜</string>
+    <string name="BardNPC_Gender">masculine</string>
     <string name="BarkskinBuff_Name">樹膚</string>
     <string name="Barrel_Desc">一個簡單的木桶，你可以從中聞到油味。而且這玩意非常輕，你可以輕易推動它。</string>
     <string name="Barrel_Name">油筒</string>
@@ -177,6 +178,7 @@
     <string name="Barrel_Pumpkin_Name">南瓜</string>
     <string name="Bat_Defense">回避</string>
     <string name="Bat_Desc">這些敏捷且堅韌的洞穴穹頂居民能夠通過每次成功的攻擊來恢復自己的生命，從而打敗比它們強大的對手。</string>
+    <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">吸血蝙蝠</string>
     <string name="Bat_Name_Objective">吸血蝙蝠</string>
     <string name="BattleAxe_Info">這把有著巨大鋼製頭部的戰斧能將龐大的力量傾註在每次揮擊之中。</string>
@@ -2494,6 +2496,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
