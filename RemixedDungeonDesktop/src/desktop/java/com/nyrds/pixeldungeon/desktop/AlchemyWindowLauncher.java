@@ -1,18 +1,72 @@
 package com.nyrds.pixeldungeon.desktop;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.nyrds.platform.game.RemixedDungeon;
-import com.nyrds.pixeldungeon.windows.WndAlchemy;
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.scenes.TitleScene;
+import com.nyrds.pixeldungeon.windows.WndAlchemy;
+import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.potions.Potion;
+import com.watabou.pixeldungeon.utils.GLog;
 
-public class AlchemyWindowLauncher {
+public class AlchemyWindowLauncher extends RemixedDungeon {
+
+    // A simple scene to host the alchemy window
+    public static class AlchemyScene extends PixelScene {
+        private float elapsedTime = 0f;
+
+        @Override
+        public void create() {
+            super.create();
+
+            // Add the alchemy window to this scene
+            try {
+                add(new WndAlchemy());
+            } catch (Exception e) {
+                GLog.w("Error creating alchemy window: " + e.getMessage());
+                e.printStackTrace();
+            }
+
+            fadeIn();
+        }
+
+        @Override
+        public void update() {
+            super.update();
+
+            // Track elapsed time and exit after 30 seconds
+            elapsedTime += com.nyrds.pixeldungeon.game.GameLoop.elapsed;
+            if (elapsedTime >= 30f) {
+                Gdx.app.exit();
+            }
+        }
+    }
+
+    @Override
+    public void create() {
+        super.create();
+
+        // Initialize static handlers that are required for item creation
+        // Following the same pattern as FactorySpriteGenerator
+        try {
+            // Initialize static handlers that are required for item creation
+            // This mimics part of what happens in Dungeon.init()
+            // This must happen AFTER the framework is initialized to avoid null Gdx.files
+            Wand.initWoods();
+            Ring.initGems();
+            Scroll.initLabels();
+            Potion.initColors();
+        } catch (Exception e) {
+            GLog.w("Error initializing static handlers: " + e.getMessage());
+        }
+
+        // Switch to AlchemyScene shortly after start
+        RemixedDungeon.switchNoFade(AlchemyScene.class);
+    }
 
     public static void main(String[] args) {
         // Configure the application
@@ -22,39 +76,7 @@ public class AlchemyWindowLauncher {
         config.useVsync(true);
         config.setForegroundFPS(60);
 
-        // Create and start the application with a custom game instance
-        new Lwjgl3Application(new RemixedDungeon() {
-            @Override
-            public void create() {
-                super.create();
-                // Switch to TitleScene first to ensure proper initialization
-                GameLoop.switchScene(TitleScene.class);
-
-                // Schedule the alchemy window to be shown after the game is initialized
-                Thread delayedWindowOpener = new Thread(() -> {
-                    try {
-                        Thread.sleep(2000); // Wait 2 seconds for game to fully initialize
-
-                        // Initialize static handlers that are required for item creation
-                        // This mimics part of what happens in Dungeon.init()
-                        try {
-                            Wand.initWoods();
-                            Ring.initGems();
-                            Scroll.initLabels();
-                            Potion.initColors();
-                        } catch (Exception e) {
-                            System.out.println("Error initializing static handlers: " + e.getMessage());
-                        }
-
-                        // Show the alchemy window
-                        GameScene.show(new WndAlchemy());
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                });
-
-                delayedWindowOpener.start();
-            }
-        }, config);
+        // Create and start the application with the AlchemyWindowLauncher instance
+        new Lwjgl3Application(new AlchemyWindowLauncher(), config);
     }
 }
