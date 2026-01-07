@@ -16,7 +16,7 @@ public class RedImageButton extends RedButton {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         super.layout();
 
         icon.setX(x + (width - icon.width()) / 2);

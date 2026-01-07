@@ -12,6 +12,7 @@ import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.TouchArea;
+import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.utils.Signal;
@@ -104,6 +105,12 @@ public class Window extends Group implements Signal.Listener<Key>, IWindow {
 		camera.resize( (int) chrome.width, (int) chrome.height);
 		camera.x = (int)(GameLoop.width - camera.screenWidth()) / 2;
 		camera.y = (int)(GameLoop.height - camera.screenHeight()) / 2;
+
+		for(var member: members) {
+			if(member instanceof Component) {
+				((Component) member).layout();
+			}
+		}
 	}
 	
 	public void hide() {

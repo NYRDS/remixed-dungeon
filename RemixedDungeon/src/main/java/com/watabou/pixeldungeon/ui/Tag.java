@@ -33,7 +33,7 @@ public class Tag extends Button {
 	}
 	
 	@Override
-	protected void layout() {
+    public void layout() {
 		
 		super.layout();
 		

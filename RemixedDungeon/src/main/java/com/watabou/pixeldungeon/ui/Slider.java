@@ -135,7 +135,7 @@ public abstract class Slider extends Component {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
 
         if (title.width() > 0.7f*width){
             String titleText = title.text();

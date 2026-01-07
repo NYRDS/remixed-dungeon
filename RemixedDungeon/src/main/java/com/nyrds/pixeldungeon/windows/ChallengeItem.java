@@ -109,7 +109,7 @@ public class ChallengeItem extends Component {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         box.setPos(x + GAP,y + GAP);
         bg.setX(x);
         bg.setY(y);

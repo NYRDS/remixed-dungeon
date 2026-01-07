@@ -155,7 +155,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         super.layout();
 
         slot.fill(this);

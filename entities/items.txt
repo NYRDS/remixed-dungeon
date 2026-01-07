@@ -12,6 +12,7 @@ BlackSkull
 BlackSkullOfMastery
 BlankScroll
 BoneSaw
+BoneShard
 Boomerang
 CandleOfMindVision
 Candy
@@ -139,6 +140,7 @@ RogueArmor
 Rotberry.Seed
 RottenFish
 RottenMeat
+RottenOrgan
 RottenPasty
 RottenPumpkinPie
 RottenRation
@@ -188,6 +190,8 @@ TomeOfKnowledge
 TomeOfMastery
 Torch
 ToughShield
+ToxicGland
+VileEssence
 WandHolster
 WandOfAmok
 WandOfAvalanche

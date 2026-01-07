@@ -37,7 +37,7 @@ class SpellButton extends Button {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         super.layout();
         bg.setX(x);
         bg.setY(y);

@@ -91,7 +91,7 @@ public class Toolbar extends Component {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
 
         toolbar.removeAll();
         toolbar.destroy();

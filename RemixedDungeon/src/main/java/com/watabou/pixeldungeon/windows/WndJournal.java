@@ -88,7 +88,7 @@ public class WndJournal extends WndTabbed {
         }
 
         @Override
-        protected void layout() {
+        public void layout() {
             icon.setX(width - icon.width);
 
             depth.setX(icon.getX() - 1 - depth.width());
@@ -125,7 +125,7 @@ public class WndJournal extends WndTabbed {
         }
 
         @Override
-        protected void layout() {
+        public void layout() {
             logEntry.setY(PixelScene.align(y));
         }
     }

@@ -172,7 +172,7 @@ public class StatusPane extends Component {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         shield.size(width, shield.height);
 
         avatar.setX(PixelScene.align(camera(), shield.getX() + 15 - avatar.width / 2));

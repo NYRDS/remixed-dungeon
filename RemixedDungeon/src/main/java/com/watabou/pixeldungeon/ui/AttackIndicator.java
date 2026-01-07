@@ -42,7 +42,7 @@ public class AttackIndicator extends Tag {
 	}
 	
 	@Override
-	protected void layout() {
+    public void layout() {
 		super.layout();
 		
 		if (sprite != null) {

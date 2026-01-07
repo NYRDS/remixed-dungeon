@@ -89,7 +89,7 @@ public class ClassShield extends Button {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
 
         super.layout();
 

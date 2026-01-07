@@ -22,7 +22,7 @@ public class Tab extends Button {
 	protected NinePatch bg;
 	
 	@Override
-	protected void layout() {
+    public void layout() {
 		super.layout();
 		
 		if (bg != null) {

@@ -50,7 +50,7 @@ public class CharTitle extends Component {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
 
         image.setX(0 - image.visualOffsetX());
         image.setY(Math.max(0, name.height() + Window.GAP + BAR_HEIGHT - image.visualHeight()) - image.visualOffsetY());

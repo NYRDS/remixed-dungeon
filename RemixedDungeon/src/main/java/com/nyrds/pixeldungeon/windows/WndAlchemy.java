@@ -2,20 +2,14 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.util.GuiProperties;
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.ItemSlot;
+import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.ui.RedButton;
-import com.nyrds.pixeldungeon.windows.HBox;
-import com.nyrds.pixeldungeon.windows.VBox;
-import com.watabou.utils.GameMath;
 
 import java.util.List;
 import java.util.Map;
@@ -30,12 +24,13 @@ public class WndAlchemy extends Window {
     private static final int SLOT_SIZE = 24;
     private static final int MARGIN = 2;
     private static final int TITLE_COLOR = 0xFFFF44;
+    private final VBox mainLayout;
 
     public WndAlchemy() {
         super();
 
         // Main layout
-        VBox mainLayout = new VBox();
+        mainLayout = new VBox();
         mainLayout.setRect(0, 0, WIDTH, 0);
         add(mainLayout);
 
@@ -51,7 +46,7 @@ public class WndAlchemy extends Window {
         recipesContainer.setGap(2);
 
         Map<List<String>, String> allRecipes = AlchemyRecipes.getAllRecipes();
-        if (allRecipes != null && !allRecipes.isEmpty()) {
+        if (!allRecipes.isEmpty()) {
             for (Entry<List<String>, String> recipeEntry : allRecipes.entrySet()) {
                 HBox recipeRow = new HBox(WIDTH - 2 * MARGIN);
                 recipeRow.setGap(2);
@@ -59,6 +54,7 @@ public class WndAlchemy extends Window {
                 // Add input ingredients as text
                 for (String input : recipeEntry.getKey()) {
                     // Try to create item if possible, otherwise just show text
+                    String substring = input.substring(0, Math.min(input.length(), 6));
                     try {
                         Item dummyItem = ItemFactory.itemByName(input);
                         if (dummyItem != null) {
@@ -67,13 +63,13 @@ public class WndAlchemy extends Window {
                             recipeRow.add(inputSlot);
                         } else {
                             // If item creation fails, show text representation
-                            Text inputText = PixelScene.createText(input.substring(0, Math.min(input.length(), 6)), GuiProperties.smallFontSize());
+                            Text inputText = PixelScene.createText(substring, GuiProperties.smallFontSize());
                             inputText.hardlight(TITLE_COLOR);
                             recipeRow.add(inputText);
                         }
                     } catch (Exception e) {
                         // Show text representation if item creation fails
-                        Text inputText = PixelScene.createText(input.substring(0, Math.min(input.length(), 6)), GuiProperties.smallFontSize());
+                        Text inputText = PixelScene.createText(substring, GuiProperties.smallFontSize());
                         inputText.hardlight(TITLE_COLOR);
                         recipeRow.add(inputText);
                     }
@@ -133,5 +129,9 @@ public class WndAlchemy extends Window {
         // Update the layout
         mainLayout.layout();
         resize(WIDTH, (int) mainLayout.bottom() + 2);
+        //mainLayout.layout();
+
     }
+
+
 }

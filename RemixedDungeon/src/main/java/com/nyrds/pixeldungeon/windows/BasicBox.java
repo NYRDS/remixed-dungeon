@@ -55,7 +55,8 @@ public abstract class BasicBox extends Component{
     protected abstract void _measure();
 
     @Override
-    protected void layout() {
+    public void layout() {
+        dirty = true;
         super.layout();
         measure();
         //GLog.i("layout : %s",getClass().getSimpleName());

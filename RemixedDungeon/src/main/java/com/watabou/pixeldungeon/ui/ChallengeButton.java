@@ -35,7 +35,7 @@ public class ChallengeButton extends Button {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
 
         super.layout();
 

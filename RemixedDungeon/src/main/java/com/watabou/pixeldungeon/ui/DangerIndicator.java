@@ -45,7 +45,7 @@ public class DangerIndicator extends Tag {
 	}
 	
 	@Override
-	protected void layout() {
+    public void layout() {
 		super.layout();
 		
 		icon.setX(right() - 10);

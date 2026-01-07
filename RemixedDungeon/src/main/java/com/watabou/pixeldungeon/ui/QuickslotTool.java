@@ -24,7 +24,7 @@ class QuickslotTool extends Tool {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         super.layout();
         slot.setRect(base.getX(), base.getY(), base.width(), base.height());
     }

@@ -127,7 +127,7 @@ public class HBox extends BasicBox {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         switch (align) {
 
             case Left:

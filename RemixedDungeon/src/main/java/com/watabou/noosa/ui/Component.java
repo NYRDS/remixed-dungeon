@@ -121,7 +121,7 @@ public class Component extends Group implements IPlaceable {
 	protected void createChildren() {	
 	}
 	
-	protected void layout() {
+	public void layout() {
 		measure();
 	}
 

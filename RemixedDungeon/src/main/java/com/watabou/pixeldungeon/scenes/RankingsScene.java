@@ -301,7 +301,7 @@ public class RankingsScene extends PixelScene {
         }
 
         @Override
-        protected void layout() {
+        public void layout() {
 
             super.layout();
 

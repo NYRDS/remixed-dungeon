@@ -55,7 +55,7 @@ class ItemButton extends ItemSlot {
     }
     
     @Override
-    protected void layout() {
+    public void layout() {
         bg.setX(x);
         bg.setY(y);
         

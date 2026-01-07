@@ -15,7 +15,7 @@ public class IconButton extends RedButton {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         super.layout();
         if (icon != null) {
             float margin = (height - text.baseLine()) / 2;

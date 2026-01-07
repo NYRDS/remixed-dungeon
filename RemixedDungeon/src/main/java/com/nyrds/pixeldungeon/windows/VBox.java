@@ -131,7 +131,7 @@ public class VBox extends BasicBox {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         switch (align) {
 
             case Top:
