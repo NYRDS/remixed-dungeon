@@ -2449,6 +2449,7 @@ remix.31.1\n
     <string name="ZombieMask_Info">Alguma vez você já quis ser um herói morto-vivo, que falhou em sua missão repetidamente? Bem, essa é sua chance.</string>
     <string name="ZombieMask_Name">Máscara de zumbi</string>
     <string name="Zombie_Desc">Calabouço é um lugar perigoso e muitos aventureiros morreram aqui. Mas os mais azarados de todos encontraram seu fim em Necropolis, e agora eles estão condenados a vagar nesses salões na forma de corpos apodres.</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">zumbi</string>
     <string name="Zombie_Name_Objective">zumbi</string>
     <string name="deco_candle_desc">Vela grande</string>
@@ -2704,6 +2705,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 </resources>
