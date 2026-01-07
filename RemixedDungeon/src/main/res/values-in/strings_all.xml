@@ -2009,6 +2009,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="TreacherousSpirit_Name_Objective">Roh pengkhianat</string>
     <string name="Undead_Defense">tertahan</string>
     <string name="Undead_Desc">Mayat hidup kurcaci ini, dihidupkan oleh kemauan dari Raja Kurcaci, dulunya anggota dari makhamahnya. Mereka terlihat sebagai tulang belulang dengan rambut palsu yang menarik perhatian.</string>
+    <string name="Undead_Gender">masculine</string>
     <string name="Undead_Name">mayat hidup kurcaci</string>
     <string name="Undead_Name_Objective">mayat hidup kurcaci</string>
     <string name="Ushanka_Info">Topi ushanka hangat dan nyaman dengan bintang merah yang keren. Sebuah teman yang tepat untuk seorang kamrad yang bertarung melawan dungeon dingin yang jahat.</string>
@@ -2706,6 +2707,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

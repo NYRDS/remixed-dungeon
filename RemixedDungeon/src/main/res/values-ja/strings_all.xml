@@ -2573,6 +2573,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="WrnExperimental_realtime">リアルタイム! モードが有効: これはリアルタイム ローグライクです。素早くタップしないと死にます。インベントリを確認したいですか? 下水道のカニがあなたの内臓をチェックしている間に確認できるといいですね。</string>
     <string name="WrnExperimental_title">実験的なオプションが有効になりました！</string>
     <string name="Yog_Desc">ヨグ＝ゼーヴァは混沌の領域からやってきた強力な存在で、古の神である。100年前、古代のドワーフたちは悪魔の軍勢との戦いにかろうじて勝利したが、神そのものを殺すことはできなかった。しかし、その代わりに、彼らはヨグ＝ゼーヴァを自分たちの都市の地下に閉じ込めた。もう二度と立ち上がれないと信じて。</string>
+    <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">希望など幻想だ...</string>
     <string name="Yog_Name">ヨグ＝ゼーヴァ</string>
@@ -2851,6 +2852,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 </resources>
