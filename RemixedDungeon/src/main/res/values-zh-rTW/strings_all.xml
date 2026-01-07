@@ -1868,6 +1868,7 @@
     <string name="TownsfolkSilentNPC_Name_Objective">城鎮居民</string>
     <string name="ToxicGas_Info">綠色毒氣在該處飄浮著。</string>
     <string name="ToxicGas_Info1">您被吸入的毒氣殺死了……</string>
+    <string name="ToxicGland_Info">從被擊敗的敵人身上獲得的劇毒腺體。這些腺體充滿了強效毒素，可用於煉金術工藝。</string>
     <string name="TrapWnd_Step">您當真要踏上此陷阱？您可能會因此失命。</string>
     <string name="TrapWnd_Title">陷阱</string>
     <string name="TreacherousSpirit_Desc">這個巨大的怪物看起來像是一片有生命的黑暗之雲。它無眼瞼的眼睛凝視這你，隨著你的每個動作而顫動。</string>
@@ -2496,6 +2497,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
