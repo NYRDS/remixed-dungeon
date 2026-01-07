@@ -269,6 +269,7 @@
     <string name="CagedKobold_Name">kobold terkurung</string>
     <string name="CagedKobold_Name_Objective">kobold terkurung</string>
     <string name="CagedKobold_Quest_End">Oh, terima kasih, terima kasih banyak-banyak! Macamana kamu jumpa kunci ini? Kamu...kamu berjaya musnahkan senjata tu?! Hebat! tahu tak, aku akan bantu kamu, dan aku tahu langkah terbaik ialah mengikut kamu buat masa ini. Kobold terkurung bertukar menjadi lilin</string>
+    <string name="Calm_Info">Di sini ada banyak makhluk yang marah, mari kita bantu mereka.</string>
     <string name="CandleOfMindVision_Info">Rupanya seperti lilin biasa, anda tidak menjangka ia boleh ditemui dalam kurungan bawah tanah ini. Yang peliknya lilin ini berasa suam bila dipegang walaupun belum lagi dinyalakan.</string>
     <string name="CandleOfMindVision_Info_Exhausted">Lilin telah habis dibakar, ia tidak dapat lagi menerangi sekitar, Nampaknya anda tidak dapat guna ia lagi.</string>
     <string name="CandleOfMindVision_Info_Lighted">Lilin bercahaya sebaik sahaja anda keluarkan dari beg galas anda. Nyalaan berwarna ungu, dan ketika anda melihat nyalaan lilin tersebut ada raksaksa berhampiran dapat dilihat.</string>
@@ -2400,6 +2401,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
