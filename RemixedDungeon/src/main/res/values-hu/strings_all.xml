@@ -730,6 +730,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Hedgehog_Info4">Fogadd el ezt a pitét</string>
     <string name="Hedgehog_Name">sündisznó</string>
     <string name="HeroClass_Elf">tünde</string>
+    <string name="HeroClass_ElfPerks_0">Az Elfek 15 Életerőponttal és 9 Erőponttal kezdenek.</string>
     <string name="HeroClass_ElfPerks_1">A Tündék immunisak a lekötözésre.</string>
     <string name="HeroClass_ElfPerks_2">A Tündék egy fejleszthető íjjal és egy rakász nyílvesszővel kezdenek.</string>
     <string name="HeroClass_ElfPerks_3">A Tündék kimagaslóan képzettek az íjhasználatban és rendkívül mozgékonyak.</string>
@@ -2421,6 +2422,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
