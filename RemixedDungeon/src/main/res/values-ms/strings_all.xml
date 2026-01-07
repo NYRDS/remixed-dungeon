@@ -1153,6 +1153,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Necromancy_SoulsCountLabel">Roh</string>
     <string name="Necromancy_SummonDeathlingName">Panggil Makhluk Kematian</string>
     <string name="Necromancy_Title">Necromancy</string>
+    <string name="NecrotismBuff_Info">Tanda kematian itu sendiri, bau busuk yang mempengaruhi orang-orang di sekitar dan menyebabkan mereka mengalami nasib yang sama.</string>
     <string name="NecrotismBuff_Name">Necrotisma</string>
     <string name="Necrotism_ACSpecial">NECROTISMA</string>
     <string name="Necrotism_Death">Anda mati disebabkan necrostima...</string>
@@ -2401,6 +2402,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

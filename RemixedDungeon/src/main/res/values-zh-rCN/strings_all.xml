@@ -2132,6 +2132,7 @@
     <string name="WarHammer_Info">没有多少生物可以承受这种武器的碾压，但只有少数强者才可以精通它。</string>
     <string name="WarHammer_Name">战锤</string>
     <string name="Warlock_Desc">当矮人们的兴趣由工程转向奥术时，城市中的权力开始被术士掌握。他们最开始研究元素魔法，但不久就转为研究恶魔学和死灵术。</string>
+    <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">%s的暗影箭杀死了你……</string>
     <string name="Warlock_Name">矮人术士</string>
     <string name="Warlock_Name_Objective">矮人术士</string>
@@ -2731,6 +2732,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
