@@ -1371,6 +1371,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="Pickaxe_Info">Bu büyük ve sağlam araç ile kayaları kırabilirsin.Bir silah olarakta kullanılabilir.</string>
     <string name="Pickaxe_Name">kazma</string>
     <string name="Pickaxe_NoVein">Yakında kazılacak bir kara altın damarı yok</string>
+    <string name="Pickaxe_NothingToMine">Burada kazılacak bir şey yok!</string>
     <string name="Piercing_Name_0">Delici %s</string>
     <string name="Piercing_Name_1">Delici %s</string>
     <string name="Piercing_Name_2">Delici %s</string>
@@ -2789,6 +2790,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

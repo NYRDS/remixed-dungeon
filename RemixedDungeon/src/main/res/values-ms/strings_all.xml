@@ -2098,6 +2098,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndSaveSlotSelect_dontLike">Tidak suka iklan yang mengganggu? Dialu-alukan membuat sumbangan, ia akan dikeluarkan. Buat Selama-lamanya.</string>
     <string name="WndSelectLanguage_ImproveTranslation">Sila bantu menambahbaik terjemahan Remixed Dungeon</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Klik di sini untuk menyertai pasukan terjemahan Remixed Dungeon</string>
+    <string name="WndSettingsInGame_GameLog">Log permainan</string>
     <string name="WndSettings_ActionButtonSize">Saiz butang tindakan</string>
     <string name="WndSettings_Brightness">Kecerahan</string>
     <string name="WndSettings_ClassicFont">Fon Klasik</string>
@@ -2399,6 +2400,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
