@@ -603,6 +603,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Golem_Desc">I nani provarono a combinare la loro conoscenza nei meccanismi con il loro nuovo potere di fusione degli elementi, Hanno usato spiriti della terra come \&quot;anima\&quot; per i corpi meccanici dei golem, che furono creduti come i più controllabili. Nonostante questo, il più piccolo errore nel rituale potrebbe causare un esplosione.</string>
     <string name="Golem_Name">golem</string>
     <string name="Golem_Name_Objective">Golem</string>
+    <string name="Goo_Desc">Poco si sa sul Goo. È molto probabile che non sia nemmeno una creatura, ma piuttosto un conglomerato di sostanze delle fognature che hanno acquisito i rudimenti della libera volontà. In ogni caso, è evidente che qui c'è al lavoro una magia oscura.</string>
     <string name="Goo_Info1">Goo si sta pompando!</string>
     <string name="Goo_Info2">glurp... glurp...</string>
     <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -1851,6 +1852,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndLibrary_Levels_Btn">Dungeon</string>
     <string name="WndLibrary_Mobs_Btn">Mostri</string>
     <string name="WndMovieTheatre_Watch">guarda un annuncio</string>
+    <string name="WndPlayGames_BackupProgress">Salvare la progressione del gioco</string>
     <string name="WndPlayGames_Connecting">Connessione a Google Play Games, prego attendere</string>
     <string name="WndPlayGames_Show_Badges">Mostra badges</string>
     <string name="WndPlayGames_Show_Error">Operazione fallita... Qualcosa è andato storto...</string>
@@ -2126,6 +2128,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

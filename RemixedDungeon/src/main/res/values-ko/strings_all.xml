@@ -274,12 +274,25 @@
     <string name="Caves_TileHighGrass">형광 버섯</string>
     <string name="Caves_TileWater">한기가 들 정도로 차가운 물.</string>
     <string name="Challenges_Descriptions_0">음식과 물은 이미 오래 전에 썩어서, 모든 모험가들을 두려움과 배고픔으로 인한 죽음에 대한 생각으로 미치게 만들었습니다. 여러분의 식단이 여러분을 충분히 오래도록 도와줄 수 있나요?</string>
+    <string name="Challenges_Descriptions_1">공격이 최고의 방어이다. 이러한 가르침을 따르며 던전으로 모험을 떠납니다. 믿음이 당신의 몸을 지키는 가장 강력한 수호자가 될 것입니다.</string>
+    <string name="Challenges_Descriptions_2">일반적인 몸의 자연 재생을 따르는 사람으로서, 당신은 항상 치유 효과가 있는 물약을 경계해 왔습니다. 조심하는 것이 후회하지 않는 것입니다!</string>
+    <string name="Challenges_Descriptions_3">던전 주변의 땅은 오랫동안 악의에 감염되어 다양한 약초와 식물의 씨앗이 자라지 못하게 하고 있습니다. 이 황폐한 땅에서 마지막 식물이 사라질 때까지 얼마나 걸릴지 아무도 모릅니다.</string>
+    <string name="Challenges_Descriptions_4">던전에 있는 모든 생물의 마음 속에 악한 존재가 숨어 있어, 서로에게 일어나는 사건들을 인식하게 만듭니다.</string>
+    <string name="Challenges_Descriptions_5">악과 함께 온 첫 번째 것은 밀도 높고 뚫을 수 없는 안개로, 끝없는 던전의 통로를 명확하게 탐색하는 것을 거의 불가능하게 만듭니다.</string>
+    <string name="Challenges_Descriptions_6">룬 읽기의 고대 예술은 던전이나 주변에 들어온 두루마리에 저주가 내려졌기 때문에 어떤 대가를 치르더라도 금지되고 회피됩니다.</string>
+    <string name="Challenges_Descriptions_7">무기를 소유하고 사용하는 것이 도덕적으로 옳지 않다는 사실에 익숙해졌지만, 아래에서 배회하는 생물들로부터 당신을 지킬 수 있는 다른 방법이 있을까요?</string>
+    <string name="Challenges_Descriptions_8">여행은 어둡고 위험한 마을 하수도에서 시작됩니다. 지상으로 가는 길은 막혀 있습니다. 상황을 더 어렵게 만들기 위해 던전 안에서 찾은 장비만 사용할 수 있습니다. 제한된 자원과 장비로 생존은 당신의 기술과 전략에 달려 있습니다.</string>
+    <string name="Challenges_Descriptions_9">전염병 의사의 최신 '치료제'가 당신의 공간 기억을 지워버렸습니다. 당신은 직접 보지 않는 것에 대해 아무것도 기억할 수 없습니다.</string>
     <string name="Challenges_Names_0">다이어트 중</string>
     <string name="Challenges_Names_1">믿음이 나의 방패라</string>
     <string name="Challenges_Names_2">의약공포증</string>
     <string name="Challenges_Names_3">황무지</string>
     <string name="Challenges_Names_4">집단 지성</string>
     <string name="Challenges_Names_5">어둠 속으로</string>
+    <string name="Challenges_Names_6">금지된 룬</string>
+    <string name="Challenges_Names_7">평화주의</string>
+    <string name="Challenges_Names_8">도시 없음</string>
+    <string name="Challenges_Names_9">기억 상실</string>
     <string name="ChampionOfWaterBuff_Info">물의 챔피언은 바다의 불굴의 힘을 구현하여 생물의 회복력과 인내력을 향상시킨다. 결과적으로 이는 끊임없는 공격을 견뎌내며 역경에 맞서는 불굴의 수호자가 될 수 있는 강인한 적이 된다.</string>
     <string name="ChaosArmor_Info">이 갑옷의 붉은 피의 금속판은 검고 붉은 사슬로 얽혀있습니다. 이것을 만질 때 마다 혼돈스러운 기운이 악화됩니다.</string>
     <string name="ChaosArmor_Name">혼돈 갑옷</string>
@@ -2310,6 +2323,20 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

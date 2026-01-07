@@ -896,6 +896,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="HeroClass_NecromancerPerks_2">Les Nécromanciens commencent avec une robe de Nécromancien unique, qui fournit 1 point de mana pour chaque créature tuée.</string>
     <string name="HeroClass_NecromancerPerks_3">Les Nécromanciens commencent avec une Clé Squelette de l\'étage 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Les Potions de soins sont identifiées dès le début.</string>
+    <string name="HeroClass_None">commun</string>
     <string name="HeroClass_Rog">voleur</string>
     <string name="HeroClass_RogPerks_0">Les voleurs commencent avec un anneau des ténèbres +1.</string>
     <string name="HeroClass_RogPerks_1">Les voleurs identifient le type d\'un anneau en l\'équipant.</string>
@@ -2873,6 +2874,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
