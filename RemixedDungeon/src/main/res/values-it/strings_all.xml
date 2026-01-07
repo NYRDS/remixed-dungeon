@@ -110,6 +110,7 @@
     <string name="Badges_GoldColleted4">7500 monete raccolte</string>
     <string name="Badges_GrimWepon">Mostro ucciso da un\'arma Grim</string>
     <string name="Badges_HappyEnd">Lieto fine</string>
+    <string name="Badges_Ice_Guardian_Slain">Guardiano del ghiaccio ucciso</string>
     <string name="Badges_Immured">Morte da imprigionamento</string>
     <string name="Badges_Info1">Medaglie ottenute: %s</string>
     <string name="Badges_Info2">Nuova super medaglia: %s</string>
@@ -2128,6 +2129,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

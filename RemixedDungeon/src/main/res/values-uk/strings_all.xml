@@ -2192,6 +2192,7 @@
     <string name="WndInfoItem_Skeleton">Рештки скелета</string>
     <string name="WndInfoItem_Tomb">Гробниця</string>
     <string name="WndInfoItem_WontKnow">Ти не дізнаєшся, що всередині, доки не відкриєш!</string>
+    <string name="WndInstallingMod_skipping_file">Пропускаємо %s</string>
     <string name="WndJournal_Levels">Рівні</string>
     <string name="WndJournal_Logbook">Формуляр</string>
     <string name="WndJournal_Title">Журнал</string>
@@ -2576,6 +2577,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
