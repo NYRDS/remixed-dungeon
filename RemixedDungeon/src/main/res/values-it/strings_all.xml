@@ -1007,6 +1007,8 @@ Potrebbe bruciare?</string>
     <string name="Mob_StaHuntingStatus">Questo %s sta cacciando.</string>
     <string name="Mob_StaPassiveStatus">Questo %s è passivo.</string>
     <string name="Mob_StaSleepingStatus">Questo %s sta dormendo.</string>
+    <string name="Mob_StaTerrorStatus">Questo %1 è inorridito</string>
+    <string name="Mob_StaTerrorStatus2">Questo %1 è inorridito da %2</string>
     <string name="Mob_StaWanderingStatus">Questo %s sta girovagando.</string>
     <string name="ModsButton_SelectMod">Seleziona modifica</string>
     <string name="Mods_AuthorEmail">Email autore:</string>
@@ -1341,6 +1343,7 @@ Potrebbe bruciare?</string>
     <string name="SantaHat_Name">Cappello da Babbo Natale</string>
     <string name="ScaleArmor_Desc">Le scaglie metalliche cucite su una veste di pelle creano un\'armatura flessibile ma protettiva.</string>
     <string name="ScaleArmor_Name">armatura a scaglie</string>
+    <string name="ScarecrowNPC_Name_Objective">spaventapasseri</string>
     <string name="ScarecrowNPC_Quest_Start_Male">Perché ciao ragazzone, come stai?\nHo qualcosa di emozionante per te!\n\nOh quanto sarei grato,\nSe andassi a raccogliere un po' di caramelle per me!\n\n</string>
     <string name="Scorpio_Desc">Queste creature demoniche simili ad aracnidi evitano i combattimenti ravvicinati ad ogni costo, lanciando punte paralizzanti da lunghe distanze.</string>
     <string name="Scorpio_Name">Scorpione</string>
@@ -2132,6 +2135,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 

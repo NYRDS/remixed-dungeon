@@ -2248,6 +2248,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_library_sign_name">도서관 표지판</string>
     <string name="town_deco_locked_door_desc">저 문 뒤에는 어떤 세계가 있을까요?</string>
     <string name="town_deco_locked_door_name">잠긴 문</string>
+    <string name="town_deco_magenta_carpet_desc">이 카펫의 자홍색 빛은 지역 와인에 대한 생각을 떠올리게 합니다.</string>
     <string name="town_deco_magenta_carpet_name">카펫</string>
     <string name="town_deco_medicine_desc">플라스크와 의약재들은 이 선반에 조심스럽게 놓여야 합니다.</string>
     <string name="town_deco_medicine_name">약</string>
@@ -2326,6 +2327,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
