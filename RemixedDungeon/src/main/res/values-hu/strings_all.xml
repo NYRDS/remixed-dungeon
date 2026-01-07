@@ -1705,6 +1705,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="SpiritOfPain_Desc">Az élő sötétség egy szilánkja.</string>
     <string name="SpiritOfPain_Name">fájdalom lelke</string>
     <string name="SpiritOfPain_Name_Objective">fájdalom lelke</string>
+    <string name="StartScene_ContinueLatest">Folytassa legutóbbi játékát, vagy válasszon egy mentési helyet</string>
     <string name="StartScene_Depth">Mélység: %1$d\nSzint: %2$d</string>
     <string name="StartScene_DifficultyEasy">Könnyű (hirdetésekkel)</string>
     <string name="StartScene_DifficultyEasyNoAds">Könnyű</string>
@@ -2419,6 +2420,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
