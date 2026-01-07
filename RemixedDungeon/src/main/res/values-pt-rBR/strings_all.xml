@@ -2003,6 +2003,7 @@ outro local do nível.</string>
     <string name="TownsfolkSilentNPC_Name_Objective">cidadão</string>
     <string name="ToxicGas_Info">Uma nuvem de esverdeada de gás tóxico está pairando aqui</string>
     <string name="ToxicGas_Info1">Você morreu por causa do gás tóxico ..</string>
+    <string name="ToxicGland_Info">Uma glândula tóxica colhida de um inimigo derrotado. Essas glândulas são preenchidas com toxinas potentes e podem ser usadas em processos alquímicos.</string>
     <string name="TrapWnd_Step">Você realmente quer pisar nesta armadilha? Provavelmente, você vai morrer.</string>
     <string name="TrapWnd_Title">Armadilha</string>
     <string name="TreacherousSpirit_Desc">Esta criatura monstruosa parece uma nuvem de pura escuridão. Seus olhos arregalados lhe encaram, pulsando à cada movimento seu.</string>
@@ -2703,5 +2704,6 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 </resources>

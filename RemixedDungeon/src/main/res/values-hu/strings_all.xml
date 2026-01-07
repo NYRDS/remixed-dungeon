@@ -1142,6 +1142,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="MysteryMeat_Info4">Felpuffadtál</string>
     <string name="MysteryMeat_Message">Az íze... fura.</string>
     <string name="MysteryMeat_Name">titokzatos hús</string>
+    <string name="NatureArmorSpell_Info">Az ősi fajok kemények is lehetnek, különösen amikor maga az anya természet védelmezi őket.</string>
     <string name="NecromancerArmor_Info">Ezzel a páncéllal a Nekromata akár 2 Halállényt is megidézhet, egyenként 5 lélekért. Ezek az élőhalott szolgák követik mesterük és megtámadják ellenségeit. A Halállények egyre erősödnek a hős szintjével együtt.</string>
     <string name="NecromancerArmor_Info2">Ezt a páncélt hordva a nekromata \&quot;Nekrotizmus\&quot; képességet kap, amivel varázspestist szórhat szét, megfertőzhet lényeket a környezetében, élőt és halottat.</string>
     <string name="NecromancerArmor_Name">Csont páncél</string>
@@ -2418,6 +2419,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
