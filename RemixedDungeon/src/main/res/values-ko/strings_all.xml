@@ -2005,6 +2005,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndLibrary_Items_Btn">아이템</string>
     <string name="WndLibrary_Levels_Btn">던전</string>
     <string name="WndLibrary_Mobs_Btn">몬스터</string>
+    <string name="WndLocalModInstall_pick">모드 디렉토리 선택</string>
     <string name="WndModSelect_ReallyDelete">정말로 삭제하시겠습니까?</string>
     <string name="WndModsDisclaimer_title">MOD</string>
     <string name="WndMovieTheatre_Bye">언제든지 돌아오세요!</string>
@@ -2325,6 +2326,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
