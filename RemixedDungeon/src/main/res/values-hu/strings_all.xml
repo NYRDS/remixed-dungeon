@@ -1580,6 +1580,7 @@ egy másik helyre a szinten. </string>
     <string name="Senior_Desc">Ezek a szerzetesek fanatikusok, akik arra szentelték az életüket hogy a városuk titkait védjék minden idegentől. Nem használnak semmilyen fegyvert vagy páncélt, kizárolag a pusztakezes harcra támaszkodnak. Ez a szerzetes különösen arra specializálódott hogy az ellenfelét mozgásképtelenné tegye.</string>
     <string name="Senior_Name">idősebb szerzetes</string>
     <string name="Senior_Name_Objective">idősebb szerzetes</string>
+    <string name="ServantNPC_Name">fogadóslány</string>
     <string name="ServiceManNPC_Desc">Egy átlagos dolgozó az itteni intézményből.</string>
     <string name="ServiceManNPC_Limit">Sajnálom, de minden kalandor csak %d filmet nézhet meg összesen</string>
     <string name="ServiceManNPC_Limit_Reached">Elnézésedet kérem, de elérted a limitet. De később szolgálatodra leszünk újra, minden egyes hősi szintemelkedésedkor!</string>
@@ -2420,6 +2421,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

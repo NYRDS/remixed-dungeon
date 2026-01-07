@@ -540,6 +540,7 @@
     <string name="DashSpell_OnSelf">我现在不能使用冲撞。</string>
     <string name="DashSpell_TooFar">我冲不了那么远。</string>
     <string name="DeathKnight_Desc">乍一看这是一位穿着厚重盔甲的魁梧战士，但他带着灿烂笑容的骷髅脸出卖了他。背弃自己誓言的骑士灵魂的出现形式即为死亡骑士。作为诅咒，他们会永远游荡于这片土地上，在战斗中寻找能洗刷自己污名的方法，杀死无辜的人，将他们曾发誓要保护的东西抛之脑后。</string>
+    <string name="DeathKnight_Gender">masculine</string>
     <string name="DeathKnight_Name">死亡骑士</string>
     <string name="DeathKnight_Name_Objective">死亡骑士</string>
     <string name="Death_Name_0">冷酷%s</string>
@@ -2730,6 +2731,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
