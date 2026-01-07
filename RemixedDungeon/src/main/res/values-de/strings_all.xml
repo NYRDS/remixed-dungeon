@@ -2311,6 +2311,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
 Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer gewöhnlichen Waffe zu treffen.</string>
     <string name="Wraith_Name">Geist</string>
     <string name="Wraith_Name_Objective">Geist</string>
+    <string name="WrnExperimental_hint">Falls diese seltsame und verworrene Welt zu grausam für dich ist, deaktiviere bitte diese Optionen über Startbildschirm-&gt;Optionen-&gt;Gameplay-Menü und starte ein neues Spiel oder lade einen anderen Speicherstand.</string>
     <string name="Yog_Desc">Yog-Dzewa ist eine alte Gottheit, ein mächtiges Wesen aus dem Reich des Chaos. Ein Jahrhundert zuvor konnten die alten Zwerge den Krieg gegen seine Armeen von Dämonen endlich gewinnen, waren aber nicht in der Lage, die Gottheit selbst zu töten. Stattdessen haben sie ihn in den Hallen unter ihrer Stadt eingesperrt, daran glaubend, dass er zu schwach sei, sich jemals wieder zu erheben</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">Hoffnung ist eine Illusion...</string>
@@ -2590,6 +2591,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
