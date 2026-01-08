@@ -2348,6 +2348,7 @@ remix.30.1\n
     <string name="WndLibrary_Items_Btn">Eşyalar</string>
     <string name="WndLibrary_Levels_Btn">Zindan</string>
     <string name="WndLibrary_Mobs_Btn">Canavarlar</string>
+    <string name="WndLocalModInstall_text">Modu yüklemek için dizin seçin.</string>
     <string name="WndModInstall_InstallingMod">Mod yükleniyor</string>
     <string name="WndModInstall_PleaseUpdate">Bu modu yüklemeden önce lütfen Remixed Dungeon\'ı güncelleyin</string>
     <string name="WndModInstall_Version">versiyon</string>
@@ -2793,6 +2794,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
