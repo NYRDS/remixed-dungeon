@@ -1067,6 +1067,7 @@ Potrebbe bruciare?</string>
     <string name="Nightmare_Name">incubo</string>
     <string name="Nightmare_Name_Objective">incubo</string>
     <string name="Ooze_Death">%s ti ha ucciso...</string>
+    <string name="Order_Info">Con la giusta concentrazione, i tuoi ordini sono quasi impossibili da rifiutare.</string>
     <string name="OverpricedRation_Info">Sembra esattamente come una razione standard di cibo ma più piccola.</string>
     <string name="OverpricedRation_Message">questo cibo è gustoso.</string>
     <string name="OverpricedRation_Name">razione di cibo sovrapprezzata</string>
@@ -2137,6 +2138,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

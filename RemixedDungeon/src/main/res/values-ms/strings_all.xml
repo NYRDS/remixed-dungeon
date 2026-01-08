@@ -1357,6 +1357,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="RawFish_Info">Ikan mentah, makanlah tetapi tanggung risiko sendiri</string>
     <string name="RawFish_Name">ikan mentah</string>
     <string name="RawFish_Taste">Berbau ikan!</string>
+    <string name="RegenerationBuff_Info">Fungsi untuk regenerasi semula secara semula jadi adalah dalam bentuk peningkatan untuk memudahkan segala-galanya.</string>
     <string name="RemixedPixelDungeonApp_sendCrash">Permainan kami mengalami kerosakan...\n Mohon Maaf.\nSila hantar laporan kerosakan supaya kami dapat membaikinya.</string>
     <string name="ResultDescriptions_Bleeding">Berdarah hingga mati pada aras %d</string>
     <string name="ResultDescriptions_Boss">Dibunuh oleh %1$s pada aras %2$d</string>
@@ -2405,6 +2406,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

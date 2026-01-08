@@ -1091,6 +1091,8 @@
     <string name="MailArmor_Name">鏈甲</string>
     <string name="ManaPotion_Info">這種藥水將恢復您的精神能量。</string>
     <string name="ManaPotion_Name">瑪那藥水</string>
+    <string name="ManaRegenerationBuff_Info">魔力恢復的功能以增益效果的形式呈現，讓事情變得更簡單。</string>
+    <string name="ManaRegenerationBuff_Name">魔力回復</string>
     <string name="ManaShieldBuff_Name">魔法屏障</string>
     <string name="Mana_Cost">瑪那消耗：</string>
     <string name="Mana_Title">瑪那</string>
@@ -2503,6 +2505,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
