@@ -1703,6 +1703,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="ShieldWeaponInfo">Bei Verwendung als Waffe verursacht dieser Schild durchschnittlich %1$dSchaden.</string>
     <string name="Shielded_Defense">abgeblockt</string>
     <string name="Shielded_Desc">Schläger sind die größten, stärksten und zähesten unter den Gnollen. Wenn sie ernsthaft verletzt sind, fallen sie in einen Berserkerzustand und fügen ihren Feinden sogar noch mehr Schaden zu. Dieser Schläger trägt einen riesigen Schild bei sich!</string>
+    <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">Schildschläger</string>
     <string name="Shielded_Name_Objective">Schildschläger</string>
     <string name="ShootInEye_Info">Nutze deine außergewöhnliche Treffsicherheit, um dem Feind direkt ins Auge zu schießen Wenn er welche hat, natürlich.</string>
@@ -2599,6 +2600,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

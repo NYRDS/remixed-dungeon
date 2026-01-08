@@ -1759,6 +1759,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ShieldWeaponInfo">Saat digunakan sebagai senjata, perisai ini rata-rata akan menimbulkan %1$d kerusakan.</string>
     <string name="Shielded_Defense">tertahan</string>
     <string name="Shielded_Desc">Gnoll besar adalah yang terbesar, terkuat dan tertangguh dari gnoll lainnya. Saat sedikit terluka, mereka akan mengamuk, menyebabkan serangan lebih besar ke musuh mereka. Gnoll besar yang ini menggunakan perisai raksasa.</string>
+    <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">gnoll berperisai</string>
     <string name="Shielded_Name_Objective">gnoll berperisai</string>
     <string name="ShootInEye_Info">Gunakan keahlian menembak Anda yang luar biasa untuk menembak musuh tepat di mata, jika dia memilikinya, tentu saja.</string>
@@ -2708,6 +2709,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
