@@ -79,6 +79,7 @@
     <string name="Armor_Info8">あなたは %s に潜んでいる邪悪な魔力を感じることが出来る。</string>
     <string name="Armor_ToString">%1$s :%2$d</string>
     <string name="ArmoredStatue_Desc">誰も、これが普通の彫像だと思い始めることさえできない。赤く光る目だけでなく、誰もこんなものに実際の「%s」を付けないという事実がそうさせるのだ。</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">生ける彫像</string>
     <string name="ArmoredStatue_Name_Objective">生ける彫像</string>
     <string name="Artifact_Limit">一度に着用できるアーティファクトは2つまで。</string>
@@ -2852,6 +2853,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

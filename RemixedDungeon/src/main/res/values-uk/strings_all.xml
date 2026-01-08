@@ -1473,6 +1473,7 @@
     <string name="RawFish_Info">Сира риба, їж на свій ризик</string>
     <string name="RawFish_Name">сира риба</string>
     <string name="RawFish_Taste">Рибка!</string>
+    <string name="RegenerationBuff_Name">Природна регенерація</string>
     <string name="RemixedPixelDungeonApp_sendCrash">Наша гра перервалася...\n Вибачте.\nБудь ласка, надішліть звіт, аби допомогти виправити це.</string>
     <string name="ResultDescriptions_Bleeding">Стік кров\'ю на рівні %d</string>
     <string name="ResultDescriptions_Boss">Вбитий босом \&quot;%1$s\&quot; на %2$d рівні</string>
@@ -2578,6 +2579,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
