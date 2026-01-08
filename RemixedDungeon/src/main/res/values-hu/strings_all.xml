@@ -1624,6 +1624,7 @@ egy másik helyre a szinten. </string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">páncélos nehézfiú</string>
     <string name="Shielded_Name_Objective">páncélos nehézfiú</string>
+    <string name="ShootInEye_Name">Szembe lő</string>
     <string name="Shopkeeper_Buy">Válaszd ki, mit akarsz megvenni.</string>
     <string name="Shopkeeper_BuyPrompt">Lássuk a készleted</string>
     <string name="Shopkeeper_Desc">Ez a fickó sokkal inkább elinne egy városi boltba ami a kereskedő negyedben van mintsem a kazamatában. Az árai megmagyarázzák hogy miért itt akar üzletelni.</string>
@@ -2324,6 +2325,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_identifier_sign_desc">Úgy tűnik van egy jövendőmondó az épület belsejében.</string>
     <string name="town_deco_identifier_sign_name">Mágikus gömb tábla</string>
     <string name="town_deco_inn_bed_name">Ágy</string>
+    <string name="town_deco_ladder_name">Létra</string>
     <string name="town_deco_library_books_desc">Még mindig jobb, mint a könyvek a kazamatából.</string>
     <string name="town_deco_library_books_name">Olvasnivaló</string>
     <string name="town_deco_library_sign_desc">Úgy tűnik van egy könyvtár az épület belsejében.</string>
@@ -2430,6 +2432,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
