@@ -356,6 +356,7 @@
     <string name="ChaosHelmet_Name">Capacete do Caos</string>
     <string name="ChaosStaff_Info">Uma varinha possuída pelo Poder do Caos! O que mais um mago pode sonhar em ter?</string>
     <string name="ChaosStaff_Name">Vara do Caos</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">A lâmina da espada é feita de puro caos e às vezes ela vibra intensamente. Um grande poder está guardado dentro da arma, que pode cortar pela metade qualquer coisa. Porém é necessário uma grande habilidade para usar a poderosa força desta arma.</string>
     <string name="ChaosSword_Name">Espada do Caos</string>
     <string name="CharAction_Charm">charme</string>
@@ -2709,6 +2710,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

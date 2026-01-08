@@ -284,6 +284,7 @@
     <string name="Brute_Name">гнолл громила</string>
     <string name="Brute_Name_Objective">гнолла громилу</string>
     <string name="Brute_StaEnraged">розлючений</string>
+    <string name="BuffParam_Cooldown">Перезарядка: %.2f</string>
     <string name="BurningBuff_Name">У вогні</string>
     <string name="BurningFist_Desc">Вогняний кулак старого бога</string>
     <string name="BurningFist_Gender">masculine</string>
@@ -2579,6 +2580,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
