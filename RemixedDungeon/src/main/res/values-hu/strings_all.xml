@@ -1804,6 +1804,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Torch_Name">fáklya</string>
     <string name="ToughShield_name">Bőrrel Megerősített Pajzs</string>
     <string name="TownGuardNPC_Desc">Egy átlagos város őr</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">Menj tovább.</string>
     <string name="TownGuardNPC_Message2">Köszönhetően az olyan kalandoroknak, mint te, itt fenn béke van.</string>
     <string name="TownGuardNPC_Message3">Most asszed, hogy túl sok őr van it, he? Hát azé\', me\' ez egy az egyetlen város egy bazinagy szörnnyel teli katakombával, vagy nem? De.</string>
@@ -2432,6 +2433,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

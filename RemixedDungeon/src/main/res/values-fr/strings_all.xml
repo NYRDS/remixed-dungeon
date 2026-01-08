@@ -298,6 +298,7 @@
     <string name="Brute_Name">gnoll brutal</string>
     <string name="Brute_Name_Objective">gnoll brutal</string>
     <string name="Brute_StaEnraged">enragé</string>
+    <string name="BuffParam_Cooldown">Rechargement : %.2f</string>
     <string name="BurningBuff_Info">Le corps est englouti dans des flammes déchaînées !</string>
     <string name="BurningBuff_Name">Brûlé</string>
     <string name="BurningFist_Desc">Poing ardent du dieu ancien</string>
@@ -2876,6 +2877,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

@@ -249,6 +249,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Bishop_title">Biskup</string>
     <string name="BlackCat_AiStatus"> Kot wykonuje zwyczajne kocie czynności</string>
     <string name="BlackCat_Desc">to jest czarny kot</string>
+    <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Name">Czarny kot</string>
     <string name="BlackCat_Name_Objective">kot</string>
     <string name="BlackCat_Phrases_0">Prych</string>
@@ -2994,4 +2995,5 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 </resources>
