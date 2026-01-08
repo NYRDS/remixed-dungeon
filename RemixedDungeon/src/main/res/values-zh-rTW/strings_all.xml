@@ -645,6 +645,7 @@
     <string name="FrostArrow_Name">寒霜箭</string>
     <string name="FrostAuraBuff_Name">寒冰護罩
 </string>
+    <string name="FrostBuff_Info">被冰凍住，完全無法進行任何行動。</string>
     <string name="FrostBuff_Name">冰凍</string>
     <string name="Frost_Shatter">寒鋒令%s瓶碎裂了！</string>
     <string name="FrozenCarpaccio_Info">這是份冰凍生肉片。它只能切成薄片取食，但是令人意外的美味。</string>
@@ -2501,6 +2502,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

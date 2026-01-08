@@ -172,6 +172,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Badges_StrengthAttained4">Mendapat 19 poin kekuatan</string>
     <string name="Badges_StrengthAttained5">21 poin Kekuatan tercapai</string>
     <string name="Badges_Supporter">Terima kasih atas bantuan anda!</string>
+    <string name="Badges_ThisIsSparta">Inilah Sparta!!!</string>
     <string name="Badges_Victory">Mendapat Jimat Yendor</string>
     <string name="Badges_VictoryAll">Jimat Yendor diperoleh oleh semua kelas</string>
     <string name="Badges_Yasd">Mati karena api, ramuan, gas beracun &amp; kelaparan</string>
@@ -2707,6 +2708,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
