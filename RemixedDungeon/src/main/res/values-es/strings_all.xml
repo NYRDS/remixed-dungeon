@@ -510,6 +510,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="CrippleBuff_Info">El cuerpo está lisiado, pero la lucha continúa.</string>
     <string name="CrippleBuff_Name">Lisiado</string>
     <string name="Crystal_Desc">Un gran cristal brillante flotando en el aire. Probablemente contenga una poderosa magia.</string>
+    <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">cristal flotante</string>
     <string name="Crystal_Name_Objective">cristal flotante</string>
     <string name="CurareDart_Info">Estos pequeños dardos no hacen mucho daño, pero pueden paralizar al objetivo dejándolo indefenso y sin movimiento por algún tiempo.</string>
@@ -2735,6 +2736,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

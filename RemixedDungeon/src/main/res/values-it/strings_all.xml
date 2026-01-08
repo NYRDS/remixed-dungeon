@@ -161,6 +161,7 @@
     <string name="Bat_Name_Objective">pipistrello vampiro</string>
     <string name="BattleAxe_Info">un enorme elmo d\'acciaio di questa battaglia mette un notevole peso alle spalle ad ogni colpo</string>
     <string name="BattleAxe_Name">ascia da battaglia</string>
+    <string name="Bee_Desc">Nonostante le loro piccole dimensioni, le api tendono a proteggere ferocemente il loro alveare. Tuttavia, non vivono a lungo.</string>
     <string name="Belongings_Name">zaino</string>
     <string name="BishopNPC_Desc">Vescovo della Santa Chiesa del Signore delle Profondità</string>
     <string name="BishopNPC_Name">Vescovo</string>
@@ -2140,6 +2141,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

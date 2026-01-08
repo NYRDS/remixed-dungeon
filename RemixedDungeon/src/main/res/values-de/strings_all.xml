@@ -631,6 +631,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Fadeleaf_Desc">Das berühren eines Verblassenden Blattes, teleportiert irgendeine Kreatur an einen zufälligen Platz der aktuellen Ebene.</string>
     <string name="Fadeleaf_Name">Verblassendes Blatt</string>
     <string name="FetidRat_Desc">Diese Beutelratte ist viel größer als normal. Sie wird von einer fauligen Aura umgeben.</string>
+    <string name="FetidRat_Gender">feminine</string>
     <string name="FetidRat_Name">stinkende Ratte</string>
     <string name="FetidRat_Name_Objective">stinkende Ratte</string>
     <string name="Fez_Info">Es ist ein Filzschmuck in Form eines Kegelstumpfes aus rotem Filz, an dessen Spitze eine Quaste befestigt ist. Und nein, es macht die Welt nicht 3D.</string>
@@ -2602,6 +2603,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
