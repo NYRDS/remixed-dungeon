@@ -629,6 +629,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Halls_TileHighGrass">Fungo di fuoco</string>
     <string name="Halls_TileStatue">Pilastro</string>
     <string name="Halls_TileWater">Lava fredda</string>
+    <string name="Heal_Info">Un incantesimo piuttosto utile nel Dungeon, vero?</string>
     <string name="HealerNPC_Message1">Trattamento gratis per ogni avventuriero!</string>
     <string name="HealerNPC_Message2">Torna pure ogniqualvolta ti senti male o sei affamato!</string>
     <string name="HealerNPC_Name">prete di paese</string>
@@ -2136,6 +2137,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

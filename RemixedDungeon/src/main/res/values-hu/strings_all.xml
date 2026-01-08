@@ -1209,6 +1209,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="PirateSet_Info">Arr! Van elég merszed csatlakozni hozzánk? Vagy te is csak egy szárazföldi patkány vagy? Remélem nem, mert ez csakis kalózoknak való, mármint.. Arr!</string>
     <string name="PirateSet_Name">Kalóz Szett</string>
     <string name="PlagueDoctorMaskHood_Info">Egy faragott ébenfa koponya, üres szemgödrök ragyognak az ametisztkövek éteri csillogásával. Minden lélegzetvétel, amit teszel, susogva halad át egy útvesztőn belüli csöveken és szűrőkön, hordozva az erős fűszerek és fűszernövények illatát, amelyek elmaszkolják a romlottságot, ami hozzád tapad. De ez nem csupán a maszk. Egy nehéz, éjfekete bársony csuklya takarja el arcodat és fejedet az árnyékban. A csuklya, mint egy holló szárnya, leomlik a hátadra, széleit csontfehér hímzett díszekkel díszítik, ami hátborzongatóan szép kontrasztot jelent. Együtt a maszk és a csuklya egy szellemképet hoz létre, egy komor vallomást a romlás elleni véget nem érő harcról.</string>
+    <string name="PlagueDoctorMask_Name">Morbus doktor maszk</string>
     <string name="PlagueDoctorNPC_After_Quest">Megmutatom nekik, Megmutatom nekik mind!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Még mindig itt vagy? Tessék! Tedd ezt el.</string>
     <string name="PlagueDoctorNPC_Desc">Ennek a púpos hátú alaknak az egész teste egy bőrből készült kezeslábasban van. Ráadásul keserű gyógyszer és ... hagymaszagot áraszt.</string>
@@ -2427,6 +2428,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

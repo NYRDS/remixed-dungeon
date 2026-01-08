@@ -1686,6 +1686,7 @@
     <string name="SmashSpell_Info">向上躍起，進行落地猛擊，暫時震暈周圍敵人，同時造成物理傷害。</string>
     <string name="SmashSpell_Name">猛劈</string>
     <string name="SmashSpell_NeedWeapon">我需要一個武器來完成這個行動。</string>
+    <string name="Snail_Gender">masculine</string>
     <string name="SociologistNPC_AlreadyTaken">你已經反饋過了。請稍後再來</string>
     <string name="SociologistNPC_Desc">這位調研員專門收集你對這款混合地牢的意見和建議</string>
     <string name="SociologistNPC_DownloadError">抱歉，崩潰了，請稍後再試</string>
@@ -2502,6 +2503,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
